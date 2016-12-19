@@ -1,0 +1,94 @@
+---
+title: "map::generic_container (STL/CLR) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "cliext::map::generic_container"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "generic_container 成员 [STL/CLR]"
+ms.assetid: fba16c90-475c-4c06-9b1b-f2c015f0d801
+caps.latest.revision: 14
+caps.handback.revision: 12
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# map::generic_container (STL/CLR)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+泛型接口的类型容器中。  
+  
+## 语法  
+  
+```  
+typedef Microsoft::VisualC::StlClr::  
+    ITree<GKey, GValue>  
+    generic_container;  
+```  
+  
+## 备注  
+ 类型说明了此模板容器类的泛型接口。  
+  
+## 示例  
+  
+```  
+// cliext_map_generic_container.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Mymap::generic_container^ gc1 = %c1;   
+    for each (Mymap::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// modify generic and display original   
+    gc1->insert(Mymap::make_value(L'd', 4));   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// modify original and display generic   
+    c1.insert(Mymap::make_value(L'e', 5));   
+    for each (Mymap::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+  **\[a 1\] \[b 2\] \[c 3\]**  
+ **\[a 1\] \[b 2\] \[c 3\]**  
+ **\[a 1\] \[b 2\] \[c 3\] \[d 4\]**  
+ **\[a 1\] \[b 2\] \[c 3\] \[d 4\] \[e 5\]**   
+## 要求  
+ **页眉：** \<\/cliext 映射\>  
+  
+ **命名空间：** cliext  
+  
+## 请参阅  
+ [map](../dotnet/map-stl-clr.md)   
+ [map::generic\_iterator](../dotnet/map-generic-iterator-stl-clr.md)

@@ -1,0 +1,28 @@
+---
+title: "编译器警告（等级 1）CS1697 | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1697"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1697"
+ms.assetid: 0cd931b7-f358-4ff0-b441-27668645d7d5
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 编译器警告（等级 1）CS1697
+为“file name”提供了不同的校验和值  
+  
+ 为给定文件指定了一个以上的校验和。 当一个项目中有一个以上的同名文件时，调试器会使用校验和值确定调试哪个文件。 大多数用户不会遇到此错误，但是如果你正在编写生成代码的应用程序，则可能会偶然遇到此错误。 若要解决此错误，请确保对任何给定代码文件仅生成一次校验和。

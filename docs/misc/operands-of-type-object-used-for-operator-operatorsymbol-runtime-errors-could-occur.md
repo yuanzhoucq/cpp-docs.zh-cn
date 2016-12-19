@@ -1,0 +1,38 @@
+---
+title: "对运算符“&lt;operatorsymbol&gt;”使用了 Object 类型的操作数；可能会发生运行时错误 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/17/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "BC42019"
+  - "vbc42019"
+helpviewer_keywords: 
+  - "BC42019"
+ms.assetid: f61944ba-863b-4a82-aae4-249bda52ec8d
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# 对运算符“&lt;operatorsymbol&gt;”使用了 Object 类型的操作数；可能会发生运行时错误
+表达式使用了某个运算符，为此运算符一个或两个操作数属于[Object 数据类型](../Topic/Object%20Data%20Type.md)。  
+  
+ 当变量或表达式的计算结果为 `Object` 时，编译器必须执行*后期绑定*，这将导致在运行时产生额外的操作。 它还使应用程序易于发生潜在的运行时错误。 例如，假设将 <xref:System.Windows.Forms.Form> 分配给 `Object` 变量，然后尝试将其与[\/ 运算符](../Topic/-%20Operator%20\(Visual%20Basic\)3.md) 一起使用。 如果这样做，运行时会引发 <xref:System.InvalidCastException>，因为 Visual Basic 不能将 <xref:System.Windows.Forms.Form> 对象转换为数字值。  
+  
+ 默认情况下，此消息是一个警告。 有关隐藏警告或将警告视为错误的信息，请参见 [在 Visual Basic 中配置警告](../Topic/Configuring%20Warnings%20in%20Visual%20Basic.md)。  
+  
+ **错误 ID：**BC42019  
+  
+### 更正此错误  
+  
+-   如果可能，排列操作数以计算运算符为其进行定义的数据类型。  
+  
+## 请参阅  
+ [算术运算符 \(Visual Basic\)](../Topic/Arithmetic%20Operators%20in%20Visual%20Basic.md)

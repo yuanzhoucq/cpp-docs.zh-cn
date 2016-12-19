@@ -1,0 +1,47 @@
+---
+title: "使用数目可变的参数调用 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "... 省略号"
+  - "参数 [C++], 函数"
+  - "参数 [C++], 数目可变的"
+  - "省略号 (...), 数目可变的参数"
+  - "函数调用, 参数"
+  - "函数调用, 数目可变的参数"
+  - "STDARGS.H"
+  - "VARARGS.H"
+ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# 使用数目可变的参数调用
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+部分参数列表可由省略号表示法（一个逗号后跟三个句号 \(**, ...**\)）终止，以指示可能有多个参数传递给函数，但没有有关这些参数的详细信息。  对此类参数不执行类型检查。  省略号表示法前面必须至少有一个参数，并且省略号表示法必须是参数列表中的最后一个标记。  如果没有省略号表示法，当函数收到除参数列表中声明的参数以外的参数时，该函数的行为是不确定的。  
+  
+ 若要调用具有可变数量的参数的函数，只需在函数调用中指定任意数量的参数即可。  一个示例是 C 运行库中的 `printf` 函数。  函数调用必须包含参数列表或参数类型列表中声明的每个类型名称的一个参数。  
+  
+ 除非指定 `__fastcall` 调用约定，否则函数调用中指定的所有参数都将位于堆栈上。  为函数声明的形参的数量决定了从堆栈获取和分配给形参的实参的数量。  您负责从堆栈中检索任何其他参数和确定应存在的参数数量。  STDARG.H 文件包含 ANSI 样式宏，该宏用于访问采用可变数量的参数的函数的参数。  此外，VARARGS.H 中的 XENIX 样式宏仍受支持。  
+  
+ 以下示例声明用于调用可变数量的参数的函数：  
+  
+```  
+int average( int first, ...);  
+```  
+  
+## 请参阅  
+ [函数调用](../c-language/function-calls.md)

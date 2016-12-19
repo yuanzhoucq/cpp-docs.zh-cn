@@ -1,0 +1,129 @@
+---
+title: "_CrtSetBreakAlloc | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_CrtSetBreakAlloc"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "CrtSetBreakAlloc"
+  - "_CrtSetBreakAlloc"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "_CrtSetBreakAlloc 函数"
+  - "CrtSetBreakAlloc 函数"
+ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
+caps.latest.revision: 12
+caps.handback.revision: 12
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# _CrtSetBreakAlloc
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+在指定的对象分配序号上设置断点（仅限调试版本）。  
+  
+## 语法  
+  
+```  
+  
+long _CrtSetBreakAlloc(     long lBreakAlloc  );  
+```  
+  
+#### 参数  
+ *lBreakAlloc*  
+ 为其设置断点的分配序号。  
+  
+## 返回值  
+ 返回之前设置了断点的对象分配序号。  
+  
+## 备注  
+ `_CrtSetBreakAlloc` 允许应用程序通过在内存分配的特定点上中断并重新跟踪该请求的源，来执行内存泄露检测。  该函数使用在堆中分配它时分配到内存块的有序对象分配序号。  未定义 [\_DEBUG](../../c-runtime-library/debug.md) 时，将在预处理过程中删除对 `_CrtSetBreakAlloc` 的调用。  
+  
+ 对象分配序号存储在 Crtdbg.h 中定义的 **\_CrtMemBlockHeader** 结构的 *lRequest* 字段中。  当其中一个调试转储函数报告有关某个内存块的信息时，该编号将括在大括号中，例如 {36}。  
+  
+ 有关如何将 `_CrtSetBreakAlloc` 与其他内存管理函数一起使用的详细信息，请参阅[跟踪堆分配请求](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Track_Heap_Allocation_Requests)。  有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT 调试堆详细信息](../Topic/CRT%20Debug%20Heap%20Details.md)。  
+  
+## 要求  
+  
+|例程|必需的标头|  
+|--------|-----------|  
+|`_CrtSetBreakAlloc`|\<crtdbg.h\>|  
+  
+ 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+  
+## 库  
+ 仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
+  
+## 示例  
+  
+```  
+// crt_setbrkal.c  
+// compile with: -D_DEBUG /MTd -Od -Zi -W3 /c /link -verbose:lib -debug  
+  
+/*  
+ * In this program, a call is made to the _CrtSetBreakAlloc routine  
+ * to verify that the debugger halts program execution when it reaches  
+ * a specified allocation number.  
+ */  
+  
+#include <malloc.h>  
+#include <crtdbg.h>  
+  
+int main( )  
+{  
+        long allocReqNum;  
+        char *my_pointer;  
+  
+        /*   
+         * Allocate "my_pointer" for the first  
+         * time and ensure that it gets allocated correctly  
+         */  
+        my_pointer = malloc(10);  
+        _CrtIsMemoryBlock(my_pointer, 10, &allocReqNum, NULL, NULL);  
+  
+        /*   
+         * Set a breakpoint on the allocation request  
+         * number for "my_pointer"  
+         */  
+        _CrtSetBreakAlloc(allocReqNum+2);  
+  
+        /*   
+         * Alternate freeing and reallocating "my_pointer"  
+         * to verify that the debugger halts program execution  
+         * when it reaches the allocation request  
+         */  
+        free(my_pointer);  
+        my_pointer = malloc(10);  
+        free(my_pointer);  
+        my_pointer = malloc(10);  
+        free(my_pointer);  
+}  
+```  
+  
+## .NET Framework 等效项  
+ 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+  
+## 请参阅  
+ [调试例程](../../c-runtime-library/debug-routines.md)

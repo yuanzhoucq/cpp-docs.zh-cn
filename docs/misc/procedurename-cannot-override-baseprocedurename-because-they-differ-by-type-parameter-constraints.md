@@ -1,0 +1,42 @@
+---
+title: "“&lt;procedurename&gt;”无法重写“&lt;baseprocedurename&gt;”，因为它们在类型形参约束上存在差异 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/16/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "BC32077"
+  - "vbc32077"
+helpviewer_keywords: 
+  - "BC32077"
+ms.assetid: 9be1a88d-c1a4-4f12-8e72-74abb2be565d
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# “&lt;procedurename&gt;”无法重写“&lt;baseprocedurename&gt;”，因为它们在类型形参约束上存在差异
+泛型过程尝试重写泛型基类过程，但是它们对于类型形参具有不同的约束列表。  
+  
+ 要重写基类过程，重写过程必须不仅与基类过程的完整签名匹配，还要与过程的访问级别和每个参数的传递机制匹配。  
+  
+ 要重写泛型基类过程，重写过程还必须与类型形参的数量和每个参数的约束列表匹配。  
+  
+ 有关重新要求要求的详细信息，请参见 [Overrides](../Topic/Overrides%20\(Visual%20Basic\).md)。  
+  
+ **错误 ID：**BC32077  
+  
+### 更正此错误  
+  
+-   如果要重写基类过程，请修改类型形参约束以便与基类过程的这些约束完全匹配。  
+  
+-   如果类型形参约束必须保留为原样，则不能重写基类过程。 从声明中删除 `Overrides` 关键字。  
+  
+## 请参阅  
+ [Visual Basic 中的泛型类型](../Topic/Generic%20Types%20in%20Visual%20Basic%20\(Visual%20Basic\).md)

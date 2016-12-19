@@ -1,0 +1,66 @@
+---
+title: "参数传递和命名约定 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "参数传递 [C++], 约定"
+  - "参数 [C++], 命名"
+  - "参数 [C++], 传递"
+  - "参数 [C++], 扩大"
+  - "编码约定, 参数"
+  - "约定 [C++], 参数名称"
+  - "命名规则 [C++], 参数"
+  - "传递参数, 约定"
+  - "寄存器, 返回值"
+  - "thiscall 关键字 [C++]"
+ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
+caps.latest.revision: 9
+caps.handback.revision: 9
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# 参数传递和命名约定
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+**Microsoft 专用**  
+  
+ 利用 Visual C\+\+ 编译器，您可以指定用于传递参数的约定并返回函数与调用方之间的值。  并非所有约定都在所有支持的平台上可用，某些约定使用平台特定的实现。  在大多数情况下，将忽略在特定平台上指定不支持的约定的关键字或编译器开关，并将使用平台默认约定。  
+  
+ 在 x86 平台上，所有参数在传递时都将加宽到 32 位。  返回值也将加宽到 32 位，并将通过 EAX 寄存器返回，但在 EDX:EAX 寄存器对中返回的 8 字节结构除外。  更大的结构将在 EAX 寄存器中作为指向隐藏返回结构的指针返回。  参数将从右到左推送到堆栈中。  不是 POD 的结构不会在寄存器中返回。  
+  
+ 编译器将生成 prolog 和 epilog 代码来保存并还原 ESI、EDI、EBX 和 EBP 寄存器（如果在函数中使用了它们）。  
+  
+> [!NOTE]
+>  当结构、联合或类由值从函数返回时，类型的所有定义需要相同，否则程序可能在运行时失败。  
+  
+ 有关如何定义自己的函数 prolog 和 epilog 代码的信息，请参阅[裸函数调用](../cpp/naked-function-calls.md)。  
+  
+ 有关面向 x64 平台的代码中的默认调用约定的信息，请参阅 [x64 调用约定概述](../build/overview-of-x64-calling-conventions.md)。  有关面向 ARM 平台的代码中的调用约定问题的信息，请参阅[Visual C\+\+ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)。  
+  
+ Visual C\/C\+\+ 编译器支持下列调用约定。  
+  
+|关键字|堆栈清理|参数传递|  
+|---------|----------|----------|  
+|[\_\_cdecl](../cpp/cdecl.md)|调用方|在堆栈上按相反顺序推送参数（从右到左）|  
+|[\_\_clrcall](../cpp/clrcall.md)|无|按顺序将参数加载到 CLR 表达式堆栈上（从左到右）。|  
+|[\_\_stdcall](../cpp/stdcall.md)|被调用方|在堆栈上按相反顺序推送参数（从右到左）|  
+|[\_\_fastcall](../cpp/fastcall.md)|被调用方|存储在寄存器中，然后在堆栈上推送|  
+|[\_\_thiscall](../cpp/thiscall.md)|被调用方|在堆栈上推送；存储在 ECX 中的 **this** 指针|  
+|[\_\_vectorcall](../cpp/vectorcall.md)|被调用方|存储在寄存器中，然后按相反顺序在堆栈上推送（从右到左）|  
+  
+ 有关相关信息，请参阅[过时的调用约定](../cpp/obsolete-calling-conventions.md)。  
+  
+ **结束 Microsoft 专用**  
+  
+## 请参阅  
+ [调用约定](../cpp/calling-conventions.md)

@@ -1,0 +1,42 @@
+---
+title: "错误 C1020 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "C1020"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C1020"
+ms.assetid: 42f429e2-5e3b-4086-a10d-b99e032e51c5
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 错误 C1020
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+意外的 \#endif  
+  
+ `#endif` 指令有没有匹配的 `#if`、`#ifdef` 或 `#ifndef` 指令。 确保每个 `#endif` 具有匹配的指令。  
+  
+ 下面的示例生成 C1020：  
+  
+```  
+// C1020.cpp #endif     // C1020  
+```  
+  
+ 可能的解决方法：  
+  
+```  
+// C1020b.cpp // compile with: /c #if 1 #endif  
+```

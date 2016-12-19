@@ -1,0 +1,35 @@
+---
+title: "“&lt;method1&gt;”和“&lt;method2&gt;”不能相互重载，因为它们的差异仅在于可选参数 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/16/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vbc30300"
+  - "bc30300"
+helpviewer_keywords: 
+  - "BC30300"
+ms.assetid: adb44ceb-57a0-4123-8fd8-7eb83c3f601f
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# “&lt;method1&gt;”和“&lt;method2&gt;”不能相互重载，因为它们的差异仅在于可选参数
+已尝试使用与前者区别仅在于可选参数的另一种方法重载某种方法。 具有可选参数的方法相当于两个重载方法，其中一个有可选参数，而另一个没有。 因此，无法使用对应其中任一方法的参数列表来重载方法。  
+  
+ **错误 ID：**BC30300  
+  
+### 更正此错误  
+  
+-   确保这两种方法的区别不仅在于可选参数。  
+  
+## 请参阅  
+ [过程重载](../Topic/Procedure%20Overloading%20\(Visual%20Basic\).md)   
+ [重载过程注意事项](../Topic/Considerations%20in%20Overloading%20Procedures%20\(Visual%20Basic\).md)
