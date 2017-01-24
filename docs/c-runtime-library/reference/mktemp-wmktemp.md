@@ -1,0 +1,228 @@
+---
+title: "_mktemp、_wmktemp | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_wmktemp"
+  - "_mktemp"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-stdio-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "_tmktemp"
+  - "wmktemp"
+  - "tmktemp"
+  - "_wmktemp"
+  - "_mktemp"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "_mktemp 函数"
+  - "_tmktemp 函数"
+  - "_wmktemp 函数"
+  - "文件 [C++], 临时"
+  - "mktemp 函数"
+  - "临时文件 [C++]"
+  - "tmktemp 函数"
+  - "wmktemp 函数"
+ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
+caps.latest.revision: 25
+caps.handback.revision: 23
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# _mktemp、_wmktemp
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+创建唯一的文件名。  提供这些函数的更多安全版本；请参见 [\_mktemp\_s、\_wmktemp\_s](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md)。  
+  
+## 语法  
+  
+```  
+char *_mktemp(  
+   char *template   
+);  
+wchar_t *_wmktemp(  
+   wchar_t *template   
+);  
+template <size_t size>  
+char *_mktemp(  
+   char (&template)[size]  
+); // C++ only  
+template <size_t size>  
+wchar_t *_wmktemp(  
+   wchar_t (&template)[size]  
+); // C++ only  
+```  
+  
+#### 参数  
+ `template`  
+ 文件名模式。  
+  
+## 返回值  
+ 这些函数均返回指向重建模板的指针。  函数返回 `NULL`，如果 `template`格式有误或者没有更多由模板创建的唯一名称。  
+  
+## 备注  
+ `_mktemp` 函数通过修改 `template` 参数创建唯一的文件名。  `_mktemp` 自动处理合适的多字节字符串参数，通过运行时系统根据当前使用的多字节代码页识别多字节字符序列.  `_wsetlocale_wmktemp`  是 `_mktemp`  的宽字符版本，`_wmktemp` 参数和 的返回值都是宽字符字符串。  `_wmktemp` 和 `_mktemp` 具有相同的行为，但 `_wmktemp` 不处理多字节字符字符串。  
+  
+### 一般文本例程映射  
+  
+|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
+|----------------|----------------------------|----------------|-------------------|  
+|`_tmktemp`|`_mktemp`|`_mktemp`|`_wmktemp`|  
+  
+ `template` 参数包含窗体 `base`XXXXXX，`base` 是新的文件名部分来提供，并且每个X为 `_mktemp`提供的字符的占位符。  `template` 中的每个占位符字符必须是大写 X。  `_mktemp` 保留 `base` 并替换字母表的第一个尾随 X。  `_mktemp` 用五位数值替换以下跟踪 X's;此值是一个调用进程唯一标示符，或在多线程程序中，调用线程。  
+  
+ 对 `_mktemp` 的每次成功的调用修改 `template`。  在每一个后来调用的相同进程或线程的有和 `template`一样的参数，`_mktemp` 检查文件名匹配以前的调用 `_mktemp` 返回的名称。  如果给定名称的文件不存在， `_mktemp` 返回名称。  如果文件存在所有先前返回的名字，`_mktemp` 通过替换字母创建一个新名字。先前返回名字与下一个可用小写字母，按顺序，从“a”到“z”。  例如，如果 `base`：  
+  
+```  
+fn  
+```  
+  
+ 而 `_mktemp` 提供五位数的值为 12345，则返回的名称为：  
+  
+```  
+fna12345  
+```  
+  
+ 如果该名称用于创建文件 FNA12345，且此文件保存，调用从相同的进程或线程返回名字使和 `base` `template` 的是：  
+  
+```  
+fnb12345  
+```  
+  
+ 如果 FNA12345 不存在，再一次返回下一个名字：  
+  
+```  
+fna12345  
+```  
+  
+ `_mktemp` 可以从任何给定的基本和模板特定值的所有组合创建最多 26 个唯一的文件名。  因此，FNZ12345是最后唯一文件名`_mktemp` 可为`base`和 `template`在实例中创建值。  
+  
+ 失败，`errno` 被设置。  如果 `template` 有无效的格式 \(例如，低于6个X\)，`errno` 将设置为 `EINVAL`。  如果 `_mktemp` 无法创建一个唯一名称，因为所有26种可能的文件名已存在，则 `_mktemp` 模板设置为空字符串并且返回 `EEXIST`。  
+  
+ 在 C\+\+ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。  有关更多信息，请参见[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+  
+## 要求  
+  
+|例程|必需的标头|  
+|--------|-----------|  
+|`_mktemp`|\<io.h\>|  
+|`_wmktemp`|\<io.h\> or \<wchar.h\>|  
+  
+ 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+  
+## 示例  
+  
+```  
+// crt_mktemp.c  
+// compile with: /W3  
+/* The program uses _mktemp to create  
+ * unique filenames. It opens each filename  
+ * to ensure that the next name is unique.  
+ */  
+  
+#include <io.h>  
+#include <string.h>  
+#include <stdio.h>  
+#include <errno.h>  
+  
+char *template = "fnXXXXXX";  
+char *result;  
+char names[27][9];  
+  
+int main( void )  
+{  
+   int i;  
+   FILE *fp;  
+  
+   for( i = 0; i < 27; i++ )  
+   {  
+      strcpy_s( names[i], sizeof( names[i] ), template );  
+      /* Attempt to find a unique filename: */  
+      result = _mktemp( names[i] );  // C4996  
+      // Note: _mktemp is deprecated; consider using _mktemp_s instead  
+      if( result == NULL )  
+      {  
+         printf( "Problem creating the template\n" );  
+         if (errno == EINVAL)  
+         {  
+             printf( "Bad parameter\n");  
+         }  
+         else if (errno == EEXIST)  
+         {  
+             printf( "Out of unique filenames\n");   
+         }  
+      }  
+      else  
+      {  
+         fopen_s( &fp, result, "w" );  
+         if( fp != NULL )  
+            printf( "Unique filename is %s\n", result );  
+         else  
+            printf( "Cannot open %s\n", result );  
+         fclose( fp );  
+      }  
+   }  
+}  
+```  
+  
+  **唯一的文件名是 fna03912**  
+**唯一的文件名是 fnb03912**  
+**唯一的文件名是 fnc03912**  
+**唯一的文件名是 fnd03912**  
+**唯一的文件名是 fne03912**  
+**唯一的文件名是 fnf03912**  
+**唯一的文件名是 fng03912**  
+**唯一的文件名是 fnh03912**  
+**唯一的文件名是 fni03912**  
+**唯一的文件名是 fnj03912**  
+**唯一的文件名是 fnk03912**  
+**唯一的文件名是 fnl03912**  
+**唯一的文件名是 fnm03912**  
+**唯一的文件名是 fnn03912**  
+**唯一的文件名是 fno03912**  
+**唯一的文件名是 fnp03912**  
+**唯一的文件名是 fnq03912**  
+**唯一的文件名是 fnr03912**  
+**唯一的文件名是 fns03912**  
+**唯一的文件名是 fnt03912**  
+**唯一的文件名是 fnu03912**  
+**唯一的文件名是 fnv03912**  
+**唯一的文件名是 fnw03912**  
+**唯一的文件名是 fnx03912**  
+**唯一的文件名是 fny03912**  
+**唯一的文件名是 fnz03912**  
+**创建模板的问题**  
+**从唯一文件名。**   
+## .NET Framework 等效项  
+ 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+  
+## 请参阅  
+ [文件处理](../../c-runtime-library/file-handling.md)   
+ [fopen、\_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [\_getpid](../../c-runtime-library/reference/getpid.md)   
+ [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [\_tempnam、\_wtempnam、tmpnam、\_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
+ [tmpfile](../../c-runtime-library/reference/tmpfile.md)

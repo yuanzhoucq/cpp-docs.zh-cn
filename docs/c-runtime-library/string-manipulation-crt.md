@@ -1,0 +1,84 @@
+---
+title: "字符串操作 (CRT) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "c.strings"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "操作字符串"
+  - "字符串操作"
+  - "字符串 [C++], 操作"
+ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
+caps.latest.revision: 11
+caps.handback.revision: 11
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 字符串操作 (CRT)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+这些实例运行以 null 作为终止符的单字节字符、宽字符和多字节字符字符串。  使用缓冲处理实例，如 [缓冲区处理](../c-runtime-library/buffer-manipulation.md) 所描述，与不以 null 字符结束的字符数组一起使用。  
+  
+### 字符串处理实例  
+  
+|例程|用途|.NET Framework 等效项|  
+|--------|--------|------------------------|  
+|[strcoll、wcscoll、\_mbscoll、\_strcoll\_l、\_wcscoll\_l、\_mbscoll\_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md), [\_stricoll、\_wcsicoll、\_mbsicoll、\_stricoll\_l、\_wcsicoll\_l、\_mbsicoll\_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md), [\_strncoll、\_wcsncoll、\_mbsncoll、\_strncoll\_l、\_wcsncoll\_l、\_mbsncoll\_l](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md), [\_strnicoll、\_wcsnicoll、\_mbsnicoll、\_strnicoll\_l、\_wcsnicoll\_l、\_mbsnicoll\_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|使用代码页信息 \(`_mbsicoll` 和 `_mbsnicoll` 区分大小写\)比较两个字节字符串|[\<caps:sentence id\="tgt9" sentenceid\="221de71c6aa4394b187757120c16b9d9" class\="tgtSentence"\>System::String::Compare\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)|  
+|[\_strdec、\_wcsdec、\_mbsdec、\_mbsdec\_l](../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)|将字符串指针后移一个字符|不适用。  若要调用标准 C 函数，请使用 `PInvoke`。  有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。|  
+|[\_strinc、\_wcsinc、\_mbsinc、\_mbsinc\_l](../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)|将字符串指针前移一个字符|不适用。|  
+|[\_mbsnbcat、\_mbsnbcat\_l](../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md), [\_mbsnbcat\_s、\_mbsnbcat\_s\_l](../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)|至多追加一个字符的第一个`n` 字节到另一个字符|不适用。|  
+|[\_mbsnbcmp、\_mbsnbcmp\_l](../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)|比较两个字符串的第一个 `n` 字节|不适用。|  
+|[\_strncnt、\_wcsncnt、\_mbsnbcnt、\_mbsnbcnt\_l、\_mbsnccnt、\_mbsnccnt\_l](../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)|在提供的字符数内，返回字符字节数|不适用。|  
+|[\_mbsnbcpy、\_mbsnbcpy\_l](../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md), [\_mbsnbcpy\_s、\_mbsnbcpy\_s\_l](../c-runtime-library/reference/mbsnbcpy-s-mbsnbcpy-s-l.md)|复制字符串的 `n` 字节|不适用。|  
+|[\_mbsnbicmp、\_mbsnbicmp\_l](../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)|比较两个字符串的 `n` 字节，忽略大小写|不适用。|  
+|[\_mbsnbset、\_mbsnbset\_l](../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)|将字节字符串的第一个 `n` 字节设置为指定的字符|不适用。|  
+|[\_strncnt、\_wcsncnt、\_mbsnbcnt、\_mbsnbcnt\_l、\_mbsnccnt、\_mbsnccnt\_l](../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)|返回在提供的字节数内的字符数|不适用。|  
+|[\_strnextc、\_wcsnextc、\_mbsnextc、\_mbsnextc\_l](../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)|查找字符串的下一个字符|不适用。|  
+|[\_strninc、\_wcsninc、\_mbsninc、\_mbsninc\_l](../c-runtime-library/reference/strninc-wcsninc-mbsninc-mbsninc-l.md)|通过`n` 字符提升字符串指针|不适用。|  
+|[\_strspnp、\_wcsspnp、\_mbsspnp、\_mbsspnp\_l](../c-runtime-library/reference/strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)|返回指向不在另一个特定字符串的给定字符串的第一个字符|不适用。|  
+|[\_scprintf、\_scprintf\_l、\_scwprintf、\_scwprintf\_l](../c-runtime-library/reference/scprintf-scprintf-l-scwprintf-scwprintf-l.md)|返回在一个格式化的字符串的字符数|不适用。|  
+|[\_snscanf、\_snscanf\_l、\_snwscanf、\_snwscanf\_l](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md), [\_snscanf\_s、\_snscanf\_s\_l、\_snwscanf\_s、\_snwscanf\_s\_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|读取从标准输入流的一个指定长度的格式化数据。|不适用。|  
+|[sscanf、\_sscanf\_l、swscanf、\_swscanf\_l](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md), [sscanf\_s、\_sscanf\_s\_l、swscanf\_s、\_swscanf\_s\_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|读取从标准输入流的一个指定长度的格式化数据。|不适用。|  
+|[sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), [sprintf\_s、\_sprintf\_s\_l、swprintf\_s、\_swprintf\_s\_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md), [\_sprintf\_p, \_sprintf\_p\_l, \_swprintf\_p, \_swprintf\_p\_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|将格式化数据写入字符串|[\<caps:sentence id\="tgt48" sentenceid\="9f4314cc2d4615fae34c6519595955a3" class\="tgtSentence"\>System::String::Format\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)|  
+|[strcat、wcscat、\_mbscat](../c-runtime-library/reference/strcat-wcscat-mbscat.md), [strcat\_s、wcscat\_s、\_mbscat\_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)|将一个字符串追加到另一个字符串|[\<caps:sentence id\="tgt51" sentenceid\="54a85648ba9bbc9249b4a45f78119b38" class\="tgtSentence"\>System::String::Concat\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)|  
+|[strchr、wcschr、\_mbschr、\_mbschr\_l](../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)|查找在字符串中第一个与指定字符相同的字符|[\<caps:sentence id\="tgt53" sentenceid\="244acb5002580ee670df50c22281eb91" class\="tgtSentence"\>System::String::IndexOf\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.indexof.aspx)|  
+|[strcmp、wcscmp、\_mbscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|比较两个字符串|[\<caps:sentence id\="tgt55" sentenceid\="95fdf5e7de9eb36de52f3b3b5253048a" class\="tgtSentence"\>System::String::CompareOrdinal\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.compareordinal.aspx)|  
+|[strcoll、wcscoll、\_mbscoll、\_strcoll\_l、\_wcscoll\_l、\_mbscoll\_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md), [\_stricoll、\_wcsicoll、\_mbsicoll、\_stricoll\_l、\_wcsicoll\_l、\_mbsicoll\_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md), [\_strncoll、\_wcsncoll、\_mbsncoll、\_strncoll\_l、\_wcsncoll\_l、\_mbsncoll\_l](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md), [\_strnicoll、\_wcsnicoll、\_mbsnicoll、\_strnicoll\_l、\_wcsnicoll\_l、\_mbsnicoll\_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|使用当前区域设置代码页信息 \(`_stricoll`、`_wcsicoll`、`_strnicoll`和 `_wcsnicoll` 区分大小写\)比较两个字符串|[\<caps:sentence id\="tgt58" sentenceid\="221de71c6aa4394b187757120c16b9d9" class\="tgtSentence"\>System::String::Compare\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)|  
+|[strcpy、wcscpy、\_mbscpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md), [strcpy\_s、wcscpy\_s、\_mbscpy\_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)|将一个字符串复制给另一个|[\<caps:sentence id\="tgt61" sentenceid\="f5a3fb18f08d1999f430e3d825efcbdc" class\="tgtSentence"\>System::String::Copy\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)|  
+|[strcspn、wcscspn、\_mbscspn、\_mbscspn\_l](../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)|查找字符串中与指定的字符集中第一个匹配项的字符|[\<caps:sentence id\="tgt63" sentenceid\="0b2f8097d603cd3712c14cd01c33b894" class\="tgtSentence"\>System::String::IndexOfAny\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.indexofany.aspx)|  
+|[\_strdup、\_wcsdup、\_mbsdup](../c-runtime-library/reference/strdup-wcsdup-mbsdup.md), [\_strdup\_dbg、\_wcsdup\_dbg](../c-runtime-library/reference/strdup-dbg-wcsdup-dbg.md)|重复字符串|[\<caps:sentence id\="tgt66" sentenceid\="74a4ca1462af4bfed5950888b5c554e1" class\="tgtSentence"\>System::String::Clone\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.clone.aspx)|  
+|[strerror、\_strerror、\_wcserror、\_\_wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md), [strerror\_s、\_strerror\_s、\_wcserror\_s、\_\_wcserror\_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|将错误号映射到消息字符串|[\<caps:sentence id\="tgt69" sentenceid\="88d19195d901d49336f54c620261141b" class\="tgtSentence"\>System::Exception::Message\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.exception.message.aspx)|  
+|[strftime、wcsftime、\_strftime\_l、\_wcsftime\_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|日期和时间格式化字符串|[\<caps:sentence id\="tgt71" sentenceid\="ed8e24ad5c647dc4efa4fbe1e9bbc5e3" class\="tgtSentence"\>System::Convert::ToString\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)|  
+|[\_stricmp、\_wcsicmp、\_mbsicmp、\_stricmp\_l、\_wcsicmp\_l、\_mbsicmp\_l](../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)|比较两个字符串不需要考虑用例|[\<caps:sentence id\="tgt73" sentenceid\="221de71c6aa4394b187757120c16b9d9" class\="tgtSentence"\>System::String::Compare\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)|  
+|[strlen、wcslen、\_mbslen、\_mbslen\_l、\_mbstrlen、\_mbstrlen\_l](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md), [strnlen、strnlen\_s、wcsnlen、wcsnlen\_s、\_mbsnlen、\_mbsnlen\_l、\_mbstrnlen、\_mbstrnlen\_l](../c-runtime-library/reference/strnlen-strnlen-s.md)|字符串的查找长度|[\<caps:sentence id\="tgt76" sentenceid\="f2ebdd4144549baf4b1f8bb968902dd1" class\="tgtSentence"\>System::String::Length\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)|  
+|[\_strlwr、\_wcslwr、\_mbslwr、\_strlwr\_l、\_wcslwr\_l、\_mbslwr\_l](../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md), [\_strlwr\_s、\_strlwr\_s\_l、\_mbslwr\_s、\_mbslwr\_s\_l、\_wcslwr\_s、\_wcslwr\_s\_l](../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)|将字符串转换为小写字母。|[\<caps:sentence id\="tgt79" sentenceid\="067c0d5e10b0facda111402483f5cd3a" class\="tgtSentence"\>System::String::ToLower\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)|  
+|[strncat、\_strncat\_l、wcsncat、\_wcsncat\_l、\_mbsncat、\_mbsncat\_l](../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md), [strncat\_s、\_strncat\_s\_l、wcsncat\_s、\_wcsncat\_s\_l、\_mbsncat\_s、\_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)|给字符串追加字符|[\<caps:sentence id\="tgt82" sentenceid\="54a85648ba9bbc9249b4a45f78119b38" class\="tgtSentence"\>System::String::Concat\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)|  
+|[strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|比较两个字符串的字符|[\<caps:sentence id\="tgt84" sentenceid\="221de71c6aa4394b187757120c16b9d9" class\="tgtSentence"\>System::String::Compare\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)|  
+|[strncpy、\_strncpy\_l、wcsncpy、\_wcsncpy\_l、\_mbsncpy、\_mbsncpy\_l](../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md), [strncpy\_s、\_strncpy\_s\_l、wcsncpy\_s、\_wcsncpy\_s\_l、\_mbsncpy\_s、\_mbsncpy\_s\_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)|将一个字符串的字符复制给另一个。|[\<caps:sentence id\="tgt87" sentenceid\="f5a3fb18f08d1999f430e3d825efcbdc" class\="tgtSentence"\>System::String::Copy\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)|  
+|[\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)|不考虑大小写比较两个字符串的字符|[\<caps:sentence id\="tgt89" sentenceid\="221de71c6aa4394b187757120c16b9d9" class\="tgtSentence"\>System::String::Compare\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)|  
+|[\_strnset、\_strnset\_l、\_wcsnset、\_wcsnset\_l、\_mbsnset、\_mbsnset\_l](../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)|将字符串的第一个 `n` 字节设置为指定的字符|[\<caps:sentence id\="tgt91" sentenceid\="af881a08937ce79e3ab6c81a947c8e64" class\="tgtSentence"\>System::String::Replace\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.replace.aspx)|  
+|[strpbrk、wcspbrk、\_mbspbrk、\_mbspbrk\_l](../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)|查找在另一个字符串中，从字符串中字符第一个的匹配项|[\<caps:sentence id\="tgt93" sentenceid\="0b2f8097d603cd3712c14cd01c33b894" class\="tgtSentence"\>System::String::IndexOfAny\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.indexofany.aspx)|  
+|[strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)|查找字符串中给定字符的最后一个匹配项|[\<caps:sentence id\="tgt95" sentenceid\="c1c2c031e9cb9ab6208134eeb6135056" class\="tgtSentence"\>System::String::LastIndexOf\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.lastindexof.aspx)|  
+|[\_strrev、\_wcsrev、\_mbsrev、\_mbsrev\_l](../c-runtime-library/reference/strrev-wcsrev-mbsrev-mbsrev-l.md)|反转字符串|不适用。|  
+|[\_strset、\_strset\_l、\_wcsset、\_wcsset\_l、\_mbsset、\_mbsset\_l](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|将字符串的所有字符设置为指定的字符|不适用。|  
+|[strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)|查找在另一个字符串未找到的字符的字符串的第一个匹配项|不适用。|  
+|[strstr、wcsstr、\_mbsstr、\_mbsstr\_l](../c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l.md)|查找在另一个字符串的指定字符串第一个匹配项|[\<caps:sentence id\="tgt103" sentenceid\="244acb5002580ee670df50c22281eb91" class\="tgtSentence"\>System::String::IndexOf\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.indexof.aspx)|  
+|[strtok、\_strtok\_l、wcstok、\_wcstok\_l、\_mbstok、\_mbstok\_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md), [strtok\_s、\_strtok\_s\_l、wcstok\_s、\_wcstok\_s\_l、\_mbstok\_s、\_mbstok\_s\_l](../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)|查找在字符串中的下一个标记|不适用。|  
+|[\_strupr、\_strupr\_l、\_mbsupr、\_mbsupr\_l、\_wcsupr\_l、\_wcsupr](../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md), [\_strupr\_s、\_strupr\_s\_l、\_mbsupr\_s、\_mbsupr\_s\_l、\_wcsupr\_s、\_wcsupr\_s\_l](../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)|将字符串转换为大写字母|[\<caps:sentence id\="tgt109" sentenceid\="86a1b4a5abf74ef908414687bc4c78df" class\="tgtSentence"\>System::String::ToUpper\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.toupper.aspx)|  
+|[strxfrm、wcsxfrm、\_strxfrm\_l、\_wcsxfrm\_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|将字符串转换为适于指定区域的形式|不适用。|  
+|[vsprintf、\_vsprintf\_l、vswprintf、\_vswprintf\_l、\_\_vswprintf\_l](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf\_s、\_vsprintf\_s\_l、vswprintf\_s、\_vswprintf\_s\_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md), [\_vsprintf\_p、\_vsprintf\_p\_l、\_vswprintf\_p、\_vswprintf\_p\_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|编写使用指针参数列表的格式化输出|[\<caps:sentence id\="tgt114" sentenceid\="9f4314cc2d4615fae34c6519595955a3" class\="tgtSentence"\>System::String::Format\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)|  
+|[vsnprintf、\_vsnprintf、\_vsnprintf\_l、\_vsnwprintf、\_vsnwprintf\_l](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf\_s、\_vsnprintf\_s、\_vsnprintf\_s\_l、\_vsnwprintf\_s、\_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|编写使用指针参数列表的格式化输出|[\<caps:sentence id\="tgt117" sentenceid\="9f4314cc2d4615fae34c6519595955a3" class\="tgtSentence"\>System::String::Format\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.string.format.aspx)|  
+  
+## 请参阅  
+ [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

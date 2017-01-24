@@ -1,0 +1,39 @@
+---
+title: "编译器错误 C2710 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2710"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2710"
+ms.assetid: a2a6bb5b-86ad-4a6c-acd0-e2bef8464e0e
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 编译器错误 C2710
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+“construct”:“\_\_declspec\(modifier\)”只能应用于返回指针的函数  
+  
+ 返回值为指针的函数是可应用 `modifier` 的唯一构造。  
+  
+ 下面的示例生成 C2710：  
+  
+```  
+// C2710.cpp  
+__declspec(restrict) void f();   // C2710  
+// try the following line instead  
+__declspec(restrict) int * g();  
+```

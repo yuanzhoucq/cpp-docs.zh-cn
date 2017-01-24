@@ -1,0 +1,34 @@
+---
+title: "编译器错误 CS1620 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/16/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CS1620"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "CS1620"
+ms.assetid: 13933976-218a-4fe2-8fde-5b9af522e2e5
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# 编译器错误 CS1620
+参数“number”必须使用关键字“keyword”传递  
+  
+ 如果将参数传递到采用 [ref](../Topic/ref%20\(C%23%20Reference\).md) 或 [out](../Topic/out%20\(C%23%20Reference\).md) 参数的函数，并且在调用时不包含 `ref` 或 `out` 关键字，或包括了错误的关键字，则都会发生此错误。 错误文本指示要使用的相应关键字，以及导致失败的参数。  
+  
+ 下面的示例生成 CS1620：  
+  
+```  
+// CS1620.cs class C { void f(ref int i) {} public static void Main() { int x = 1; f(out x);  // CS1620 – f takes a ref parameter, not an out parameter // Try this line instead: // f(ref x); } }  
+```

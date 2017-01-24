@@ -1,0 +1,71 @@
+---
+title: "return 语句 (C++) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+f1_keywords: 
+  - "return"
+  - "return_cpp"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "return 关键字 [C++]"
+  - "return 关键字 [C++], 语法"
+ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# return 语句 (C++)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+终止函数的执行并返回对调用函数的控制（或对操作系统的控制，如果您从 `main` 函数转移控制）。  紧接在调用之后在调用函数中恢复执行。  
+  
+## 语法  
+  
+```  
+return [expression];  
+```  
+  
+## 备注  
+ `expression` 子句（如果存在）将转换为函数声明中指定的类型，就像正在执行初始化一样。  从该类型的表达式到 `return` 类型的函数的转换会创建临时对象。  有关如何以及何时创建临时对象的详细信息，请参阅[临时对象](../cpp/temporary-objects.md)。  
+  
+ `expression` 子句的值将返回调用函数。  如果省略该表达式，则函数的返回值是不确定的。  构造函数和析构函数以及类型为 `void` `` 的函数无法在 `return` 语句中指定表达式。  所有其他类型的函数必须在 `return` 语句中指定表达式。  
+  
+ 当控制流退出封闭函数定义的块时，结果将与执行不带表达式的 `return` 语句所获得的结果一样。  这对于声明为返回值的函数无效。  
+  
+ 一个函数可以包含任意数量的 `return` 语句。  
+  
+ 以下示例将一个表达式与 `return` 语句一起使用来获取两个整数中的最大者。  
+  
+## 示例  
+  
+```  
+// return_statement2.cpp  
+#include <stdio.h>  
+  
+int max ( int a, int b )  
+{  
+   return ( a > b ? a : b );  
+}  
+  
+int main()  
+{  
+    int nOne = 5;  
+    int nTwo = 7;  
+  
+    printf_s("\n%d is bigger\n", max( nOne, nTwo ));  
+}  
+```  
+  
+## 请参阅  
+ [跳转语句](../cpp/jump-statements-cpp.md)   
+ [C\+\+ 关键字](../cpp/keywords-cpp.md)

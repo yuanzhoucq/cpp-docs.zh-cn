@@ -1,0 +1,36 @@
+---
+title: "&lt;method&gt;“&lt;methodname1&gt;”必须声明为“Overloads”，因为另一个“&lt;methodname2&gt;”已声明为“Overloads” | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/17/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vbc31409"
+  - "bc31409"
+helpviewer_keywords: 
+  - "BC31409"
+ms.assetid: 27813b4e-056d-45af-969e-76e8c1ee6737
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# &lt;method&gt;“&lt;methodname1&gt;”必须声明为“Overloads”，因为另一个“&lt;methodname2&gt;”已声明为“Overloads”
+另一个具有相同名称的属性或方法使用 `Overloads` 修饰符声明。  
+  
+ **错误 ID：**BC31409  
+  
+### 更正此错误  
+  
+1.  将 `Overloads` 修饰符添加到属性或方法。  
+  
+2.  从所有具有相同名称的属性或方法中删除 `Overloads` 修饰符。  
+  
+## 请参阅  
+ [Overloads](../Topic/Overloads%20\(Visual%20Basic\).md)

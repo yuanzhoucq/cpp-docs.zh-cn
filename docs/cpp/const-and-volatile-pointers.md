@@ -1,0 +1,138 @@
+---
+title: "固定和可变指针 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "const 关键字 [C++], 可变指针"
+  - "指针, 和 const"
+  - "指针, 和 volatile"
+  - "volatile 关键字 [C++], 和指针"
+ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
+caps.latest.revision: 10
+caps.handback.revision: 10
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# 固定和可变指针
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+[const](../cpp/const-cpp.md) 和 [volatile](../cpp/volatile-cpp.md) 关键字用于更改处理指针的方式。  **const** 关键字指定指针在初始化后无法修改；此后指针将受到保护，防止进行修改。  
+  
+ `volatile` 关键字指定与后跟的名称关联的值可由用户应用程序中的操作以外的操作修改。  因此，`volatile` 关键字对于声明共享内存中可由多个进程访问的对象或用于与中断服务例程通信的全局数据区域很有用。  
+  
+ 如果某个名称被声明为 `volatile`，则每当程序访问该名称时，编译器都会重新加载内存中的值。  这将显著减少可能的优化。  但是，当对象的状态可能意外更改时，这是保证可预见的程序性能的唯一方法。  
+  
+ 若要将指针指向的对象声明为 **const** 或 `volatile`，请使用以下形式的声明：  
+  
+```  
+const char *cpch;  
+volatile char *vpch;  
+```  
+  
+ 若要将指针的值（即指针中存储的实际地址）声明为 **const** 或 `volatile`，请使用以下形式的声明：  
+  
+```  
+char * const pchc;  
+char * volatile pchv;  
+```  
+  
+ C\+\+ 语言会阻止将允许修改声明为 **const** 的对象或指针的赋值。  此类赋值会移除用来声明对象或指针的信息，从而违反原始声明的意图。  请考虑以下声明：  
+  
+```  
+const char cch = 'A';  
+char ch = 'B';  
+```  
+  
+ 假定前面声明了两个对象（**const char** 类型的 `cch` 和 **char** 类型的 `ch`），以下声明\/初始化将是有效的：  
+  
+```  
+const char *pch1 = &cch;  
+const char *const pch4 = &cch;  
+const char *pch5 = &ch;  
+char *pch6 = &ch;  
+char *const pch7 = &ch;  
+const char *const pch8 = &ch;  
+```  
+  
+ 以下声明\/初始化存在错误。  
+  
+```  
+char *pch2 = &cch;   // Error  
+char *const pch3 = &cch;   // Error  
+```  
+  
+ `pch2` 的声明声明了一个可以用来修改常量对象的指针，因此不允许使用。  `pch3` 的声明指定 `pointer` 是常量，而不是对象；与不允许使用 `pch2` 的原因相同，也不允许使用该声明。  
+  
+ 以下八个赋值显示了通过指针进行的赋值以及对前面的声明的指针值的更改；现在，假设 `pch1` 到 `pch8` 的初始化是正确的。  
+  
+```  
+*pch1 = 'A';  // Error: object declared const  
+pch1 = &ch;   // OK: pointer not declared const  
+*pch2 = 'A';  // OK: normal pointer  
+pch2 = &ch;   // OK: normal pointer  
+*pch3 = 'A';  // OK: object not declared const  
+pch3 = &ch;   // Error: pointer declared const  
+*pch4 = 'A';  // Error: object declared const  
+pch4 = &ch;   // Error: pointer declared const  
+```  
+  
+ 声明为 `volatile` 或 **const** 和 `volatile` 的组合的指针遵循相同的规则。  
+  
+ 指向 **const** 对象的指针通常用于函数声明中，如下所示：  
+  
+```  
+errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );  
+```  
+  
+ 前面的语句声明了函数 [strcpy\_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中，三个参数中的两个是指向 `char` 的类型指针。  由于参数是按引用而不是按值传递的，因此，如果未将 `strSource` 声明为 **const**，则该函数可以自由修改 `strDestination` 和 `strSource`。  将 `strSource` 声明为 **const** 可向调用方保证调用的函数无法更改 `strSource`。  
+  
+> [!NOTE]
+>  由于存在从 *typename* **\*** 到 **const** *typename* **\*** 的标准转换，因此将 **char \*** 类型的参数传递到 [strcpy\_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) 是合法的。  但是，反之则不行；不存在从对象或指针中移除 **const** 特性的隐式转换。  
+  
+ 给定类型的 **const** 指针可以分配给同一类型的指针。  但是，非 **const** 类型的指针不能赋给 **const** 指针。  以下代码显示了正确和错误的赋值：  
+  
+```  
+// const_pointer.cpp  
+int *const cpObject = 0;  
+int *pObject;  
+  
+int main() {  
+pObject = cpObject;  
+cpObject = pObject;   // C3892  
+}  
+```  
+  
+ 以下示例显示了当有指针指向某个指向对象的指针时如何将对象声明为 const。  
+  
+```  
+// const_pointer2.cpp  
+struct X {  
+   X(int i) : m_i(i) { }  
+   int m_i;  
+};  
+  
+int main() {  
+   // correct  
+   const X cx(10);  
+   const X * pcx = &cx;  
+   const X ** ppcx = &pcx;  
+  
+   // also correct  
+   X const cx2(20);  
+   X const * pcx2 = &cx2;  
+   X const ** ppcx2 = &pcx2;  
+}  
+```  
+  
+## 请参阅  
+ [指针](../cpp/pointers-cpp.md)

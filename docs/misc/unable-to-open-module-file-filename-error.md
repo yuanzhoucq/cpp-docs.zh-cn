@@ -1,0 +1,34 @@
+---
+title: "无法打开模块文件“&lt;文件名称&gt;”：&lt;错误&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "10/29/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vbc31007"
+  - "bc31007"
+helpviewer_keywords: 
+  - "BC31007"
+ms.assetid: eba76bf8-93e9-4709-87e0-0cb9ade868a5
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# 无法打开模块文件“&lt;文件名称&gt;”：&lt;错误&gt;
+无法打开包含此项目模块的文件。  
+  
+ **错误 ID：**BC31007  
+  
+### 更正此错误  
+  
+1.  验证文件是否处于指定位置，并且未被另一个应用程序锁定。  
+  
+## 请参阅  
+ [Visual Studio 和 Visual C\# 中的文件类型和文件扩展名](http://msdn.microsoft.com/zh-cn/f793852c-da06-4d52-a826-65f635844772)

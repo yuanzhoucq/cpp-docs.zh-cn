@@ -1,0 +1,58 @@
+---
+title: "is_standard_layout 类 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "std.tr1.is_standard_layout"
+  - "std::tr1::is_standard_layout"
+  - "is_standard_layout"
+  - "std.is_standard_layout"
+  - "std::is_standard_layout"
+  - "type_traits/std::is_standard_layout"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "is_standard_layout 类 [TR1]"
+  - "is_standard_layout"
+ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
+caps.latest.revision: 16
+caps.handback.revision: 6
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# is_standard_layout 类
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+测试类型是否为标准布局。  
+  
+## 语法  
+  
+```  
+template<class Ty>  
+    struct is_standard_layout;  
+```  
+  
+#### 参数  
+  
+|参数|描述|  
+|--------|--------|  
+|`Ty`|要查询的类型|  
+  
+## 备注  
+ 如果类型 `Ty` 是具有内存中成员对象的标准布局的类，则此类型谓词的实例为 true；否则为 false。  
+  
+## 要求  
+ **标头：**\<type\_traits\>  
+  
+ **命名空间:** std  
+  
+## 请参阅  
+ [\<type\_traits\>](../standard-library/type-traits.md)

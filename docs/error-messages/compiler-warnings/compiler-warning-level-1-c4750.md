@@ -1,0 +1,50 @@
+---
+title: "编译器警告（等级 1）C4750 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "C4750"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C4750"
+ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
+caps.latest.revision: 5
+caps.handback.revision: 5
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 编译器警告（等级 1）C4750
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+“identifier”：函数 with \_alloca\(\) 内嵌到循环中  
+  
+ “identifier”函数在循环内强制进行 [\_alloca](../../c-runtime-library/reference/alloca.md) 函数的内联扩展，这在执行此循环时会引起堆栈溢出。  
+  
+### 更正此错误  
+  
+1.  确保“identifier”函数未使用 [\_\_forceinline](../../misc/inline-inline-forceinline.md) 说明符进行修改。  
+  
+2.  确保“identifier”函数不包含内含在循环中的函数 [\_alloca](../../c-runtime-library/reference/alloca.md)。  
+  
+3.  不要指定 [\/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)、[\/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)、[\/Ox](../../build/reference/ox-full-optimization.md) 或 [\/Og](../../build/reference/og-global-optimizations.md) 编译开关。  
+  
+4.  请将 [\_alloca](../../c-runtime-library/reference/alloca.md) 函数置于会捕获堆栈溢出的 [try\-except 语句](../../cpp/try-except-statement.md)。  
+  
+## 示例  
+ 下面的代码示例在循环中调用 `MyFunction`，并且 `MyFunction` 调用 `_alloca` 函数。`__forceinline` 修饰符导致 `_alloca` 函数内联扩展。  
+  
+```  
+// c4750.cpp // compile with: /O2 /W1 /c #include <intrin.h> char * volatile newstr; __forceinline void myFunction(void) // C4750 warning { // The _alloca function does not require a __try/__except // block because the example uses compiler option /c. newstr = (char * volatile) _alloca(1000); } int main(void) { for (int i=0; i<50000; i++) myFunction(); return 0; }  
+```  
+  
+## 请参阅  
+ [\_alloca](../../c-runtime-library/reference/alloca.md)
