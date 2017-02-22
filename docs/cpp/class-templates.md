@@ -1,8 +1,7 @@
 ---
 title: "类模板 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "模板, 类模板"
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
 caps.latest.revision: 13
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 类模板
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

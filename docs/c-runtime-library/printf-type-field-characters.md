@@ -1,8 +1,7 @@
 ---
 title: "printf 类型字段字符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,16 +18,15 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "printf 函数, 格式规范字段"
   - "printf 函数, 类型字段字符"
 ms.assetid: 699cb438-cd14-402e-9f81-c7a32acc3317
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # printf 类型字段字符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

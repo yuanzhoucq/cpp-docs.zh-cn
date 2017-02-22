@@ -1,8 +1,7 @@
 ---
 title: "为向导创建的文件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "图标, 删除"
 ms.assetid: 7f0e393c-395e-491b-add2-904cf8838e81
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 为向导创建的文件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

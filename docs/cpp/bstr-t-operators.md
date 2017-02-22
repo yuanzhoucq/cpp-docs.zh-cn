@@ -1,8 +1,7 @@
 ---
 title: "_bstr_t 运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "_bstr_t 类, 运算符"
 ms.assetid: 9f76364c-a552-418f-b71b-468f015c5ac9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _bstr_t 运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

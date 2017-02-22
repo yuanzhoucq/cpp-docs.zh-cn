@@ -1,8 +1,7 @@
 ---
 title: "/Ox（完全优化） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Ox 编译器选项 [C++]"
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /Ox（完全优化）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

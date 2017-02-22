@@ -1,8 +1,7 @@
 ---
 title: "如何：为模板类创建消息映射 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "模板类, 创建消息映射"
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 如何：为模板类创建消息映射
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

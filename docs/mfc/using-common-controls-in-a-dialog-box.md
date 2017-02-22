@@ -1,8 +1,7 @@
 ---
 title: "在对话框中使用公共控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows 公共控件 [C++], 在对话框中"
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 在对话框中使用公共控件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

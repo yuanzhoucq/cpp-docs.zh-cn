@@ -1,8 +1,7 @@
 ---
 title: "调用特定应用程序域中的函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "函数 [C++], 在特定应用程序域中调用"
 ms.assetid: e1f59b39-8ffe-4a03-8e40-99593ce18d57
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 调用特定应用程序域中的函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

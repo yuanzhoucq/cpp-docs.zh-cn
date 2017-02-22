@@ -1,8 +1,7 @@
 ---
 title: "less 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "less 函数"
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
 caps.latest.revision: 24
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # less 结构
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

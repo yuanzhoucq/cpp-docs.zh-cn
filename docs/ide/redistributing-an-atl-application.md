@@ -1,8 +1,7 @@
 ---
 title: "重新分发 ATL 应用程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "重新分发 OLE DB 模板"
 ms.assetid: 9a696b22-2345-43ec-826b-be7cb8cfd676
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 重新分发 ATL 应用程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

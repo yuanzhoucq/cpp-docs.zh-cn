@@ -1,8 +1,7 @@
 ---
 title: "ASP，ATL Active Server Page 组件向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ATL Active Server Page 组件向导，ASP"
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ASP，ATL Active Server Page 组件向导
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

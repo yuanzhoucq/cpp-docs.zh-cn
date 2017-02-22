@@ -1,8 +1,7 @@
 ---
 title: "/Zc:auto（推导变量类型） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Zc 编译器选项 (C++)"
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /Zc:auto（推导变量类型）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

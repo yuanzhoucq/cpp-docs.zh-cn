@@ -1,8 +1,7 @@
 ---
 title: "IDBCreateSessionImpl 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "IDBCreateSessionImpl 类"
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # IDBCreateSessionImpl 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

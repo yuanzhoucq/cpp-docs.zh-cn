@@ -1,8 +1,7 @@
 ---
 title: "使用提取运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "运算符 [C++], 提取"
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用提取运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

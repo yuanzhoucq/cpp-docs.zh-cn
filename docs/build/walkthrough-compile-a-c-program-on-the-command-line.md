@@ -1,16 +1,13 @@
 ---
 title: "演练：在命令行上编译 C 程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
 helpviewer_keywords: 
   - "C 程序编译 [C++]"
   - "命令行应用程序 [C++], C 程序"
@@ -18,10 +15,10 @@ helpviewer_keywords:
   - "Visual C, 编译"
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 caps.latest.revision: 46
-caps.handback.revision: 31
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # 演练：在命令行上编译 C 程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

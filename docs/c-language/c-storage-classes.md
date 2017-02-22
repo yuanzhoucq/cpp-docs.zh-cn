@@ -1,8 +1,7 @@
 ---
 title: "C 存储类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "生存期, 变量"
   - "说明符, 存储类"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "存储持续时间"
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # C 存储类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

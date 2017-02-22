@@ -1,8 +1,7 @@
 ---
 title: "链接器工具错误 LNK1196 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK1196"
 ms.assetid: d0c6859b-85aa-45cc-9f5f-fc1f7070ab5a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 链接器工具错误 LNK1196
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

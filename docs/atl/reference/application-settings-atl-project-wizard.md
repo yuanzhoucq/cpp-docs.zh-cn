@@ -1,8 +1,7 @@
 ---
 title: "应用程序设置，ATL 项目向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ATL 项目向导，应用程序设置"
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
 caps.latest.revision: 17
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 应用程序设置，ATL 项目向导
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

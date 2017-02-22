@@ -1,8 +1,7 @@
 ---
 title: "树控件图像列表 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "树控件, 图像列表"
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 树控件图像列表
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

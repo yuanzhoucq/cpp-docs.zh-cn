@@ -1,8 +1,7 @@
 ---
 title: "accelerator 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "accelerator 类"
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # accelerator 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

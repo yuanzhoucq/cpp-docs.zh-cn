@@ -1,8 +1,7 @@
 ---
 title: "MFC 使用的样式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "窗口样式, 在 MFC 中"
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # MFC 使用的样式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

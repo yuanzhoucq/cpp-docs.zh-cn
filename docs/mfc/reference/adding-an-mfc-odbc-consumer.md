@@ -1,8 +1,7 @@
 ---
 title: "添加 MFC ODBC 使用者 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "MFC ODBC 使用者"
 ms.assetid: 2dc97909-1f7e-43ee-9d47-99e612727058
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 添加 MFC ODBC 使用者
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

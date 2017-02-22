@@ -1,8 +1,7 @@
 ---
 title: "系统调用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.system"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "系统调用"
   - "Windows [C++], 系统调用"
 ms.assetid: 0255f2ec-a5a0-487e-8b09-9dad001d81ed
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 系统调用
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

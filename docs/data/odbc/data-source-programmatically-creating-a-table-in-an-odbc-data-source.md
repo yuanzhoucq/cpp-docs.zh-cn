@@ -1,8 +1,7 @@
 ---
 title: "数据源：以编程方式在 ODBC 数据源中创建表 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "表 [C++], 以编程方式创建"
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 数据源：以编程方式在 ODBC 数据源中创建表
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

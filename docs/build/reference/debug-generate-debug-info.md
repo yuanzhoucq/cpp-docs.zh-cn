@@ -1,8 +1,7 @@
 ---
 title: "/DEBUG（生成调试信息） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,11 +25,11 @@ helpviewer_keywords:
   - "pdb 文件, 生成调试信息"
   - "程序数据库 [C++]"
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 11
-caps.handback.revision: 10
+caps.latest.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /DEBUG（生成调试信息）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

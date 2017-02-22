@@ -1,8 +1,7 @@
 ---
 title: "ANSI C 遵从性 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "Ansi"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI [C++], C 标准"
   - "兼容性 [C++], ANSI C"
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "下划线, 前导"
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ANSI C 遵从性
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

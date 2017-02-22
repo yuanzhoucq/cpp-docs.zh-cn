@@ -1,8 +1,7 @@
 ---
 title: "/PROFILE（性能工具分析器） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "-PROFILE 链接器选项"
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /PROFILE（性能工具分析器）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

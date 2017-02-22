@@ -1,8 +1,7 @@
 ---
 title: "优化最佳做法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "优化, 最佳做法"
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 优化最佳做法
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

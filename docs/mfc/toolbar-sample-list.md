@@ -1,8 +1,7 @@
 ---
 title: "工具栏示例列表 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "示例应用程序 [MFC], 工具栏"
 ms.assetid: 61310e4e-3df7-47c2-8b10-7c6cb45c5d1b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 工具栏示例列表
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 4）C4460 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4460"
 ms.assetid: c97ac1c9-598d-479e-bfff-c993690c4f3d
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 编译器警告（等级 4）C4460
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

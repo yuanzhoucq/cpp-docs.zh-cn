@@ -1,8 +1,7 @@
 ---
 title: "Internet 上的 ActiveX 控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "OLE 控件 [C++], 升级到 ActiveX"
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Internet 上的 ActiveX 控件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

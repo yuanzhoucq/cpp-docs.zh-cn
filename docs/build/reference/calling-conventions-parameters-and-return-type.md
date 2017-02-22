@@ -1,8 +1,7 @@
 ---
 title: "调用约定、参数和返回类型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Helper 函数, 返回类型"
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 调用约定、参数和返回类型
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

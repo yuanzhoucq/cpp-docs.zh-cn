@@ -1,8 +1,7 @@
 ---
 title: "Microsoft 扩展 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Microsoft C/C++ 扩展"
 ms.assetid: 68654516-24ef-4f33-aae2-175f86cc1979
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Microsoft 扩展
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

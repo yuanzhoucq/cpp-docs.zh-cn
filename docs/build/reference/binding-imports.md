@@ -1,8 +1,7 @@
 ---
 title: "绑定导入 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "DELAY:NOBIND 链接器选项"
 ms.assetid: bb766038-deb1-41b1-bcbc-29a30e8c1e2a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 绑定导入
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

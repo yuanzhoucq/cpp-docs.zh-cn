@@ -1,8 +1,7 @@
 ---
 title: "使用一个存储过程返回的多个结果集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "存储过程, 返回结果集"
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用一个存储过程返回的多个结果集
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

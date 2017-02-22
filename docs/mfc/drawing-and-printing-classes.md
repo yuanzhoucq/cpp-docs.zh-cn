@@ -1,8 +1,7 @@
 ---
 title: "绘制和打印类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "打印类"
 ms.assetid: 2781c599-a038-462a-98ca-634b07ee22b0
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 绘制和打印类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

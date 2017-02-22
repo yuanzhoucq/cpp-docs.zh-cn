@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 4）C4127 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4127"
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 编译器警告（等级 4）C4127
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "DCOM 历史记录 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "远程自动化, DCOM"
 ms.assetid: c21aa0ea-1396-4b52-b77f-88fb0fdd2a5c
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # DCOM 历史记录
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

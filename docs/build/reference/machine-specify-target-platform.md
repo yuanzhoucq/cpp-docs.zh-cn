@@ -1,8 +1,7 @@
 ---
 title: "/MACHINE（指定目标平台） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "目标平台"
 ms.assetid: 8d41bf4b-7e53-4ab9-9085-d852b08d31c2
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /MACHINE（指定目标平台）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

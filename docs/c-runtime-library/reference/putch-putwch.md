@@ -1,8 +1,7 @@
 ---
 title: "_putch、_putwch | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_putwch"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_putch 函数"
   - "_putwch 函数"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "putwch 函数"
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _putch、_putwch
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

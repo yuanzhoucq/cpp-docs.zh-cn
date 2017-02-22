@@ -1,8 +1,7 @@
 ---
 title: "MFC 和 ATL 共享的类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "共享的类类"
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # MFC 和 ATL 共享的类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

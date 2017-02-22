@@ -1,8 +1,7 @@
 ---
 title: "一元算术运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "! 运算符, 一元算术运算符"
   - "~ 运算符, 二进制求补运算符"
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "一元运算符"
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 一元算术运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "MFC 中的属性表和属性页 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "选项卡对话框"
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # MFC 中的属性表和属性页
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

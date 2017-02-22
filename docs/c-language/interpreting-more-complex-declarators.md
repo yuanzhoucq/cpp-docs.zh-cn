@@ -1,8 +1,7 @@
 ---
 title: "解释复杂声明符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "复杂声明符"
   - "解释复杂声明符"
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 解释复杂声明符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

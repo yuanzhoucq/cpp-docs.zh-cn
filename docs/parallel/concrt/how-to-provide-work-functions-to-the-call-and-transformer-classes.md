@@ -1,8 +1,7 @@
 ---
 title: "如何：为 call 和 transformer 类提供工作函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "使用 call 类 [并发运行时]"
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 如何：为 call 和 transformer 类提供工作函数
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

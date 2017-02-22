@@ -1,8 +1,7 @@
 ---
 title: "自动化服务器：对象生存期问题 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "服务器, 最大化的生存期"
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 自动化服务器：对象生存期问题
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

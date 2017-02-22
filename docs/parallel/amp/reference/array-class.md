@@ -1,8 +1,7 @@
 ---
 title: "array 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "array 类"
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
 caps.latest.revision: 31
-caps.handback.revision: 31
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # array 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

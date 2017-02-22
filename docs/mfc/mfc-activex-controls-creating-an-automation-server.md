@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控件：创建自动化服务器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC ActiveX 控件 [C++], 自动化服务器"
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # MFC ActiveX 控件：创建自动化服务器
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

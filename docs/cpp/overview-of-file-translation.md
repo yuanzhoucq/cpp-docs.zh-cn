@@ -1,8 +1,7 @@
 ---
 title: "文件转换概述 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "翻译阶段"
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 文件转换概述
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

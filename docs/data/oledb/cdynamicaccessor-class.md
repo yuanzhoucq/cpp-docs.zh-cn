@@ -1,8 +1,7 @@
 ---
 title: "CDynamicAccessor 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CDynamicAccessor 类"
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CDynamicAccessor 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

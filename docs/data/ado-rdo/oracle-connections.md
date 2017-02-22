@@ -1,8 +1,7 @@
 ---
 title: "Oracle 连接 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Oracle 数据库 [C++], 连接"
 ms.assetid: d317e763-44aa-47c9-abe8-261d513d894f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Oracle 连接
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

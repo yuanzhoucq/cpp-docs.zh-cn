@@ -1,8 +1,7 @@
 ---
 title: "异常：构造函数中的异常 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "引发异常, 在构造函数中"
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 异常：构造函数中的异常
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

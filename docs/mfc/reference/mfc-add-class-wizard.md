@@ -1,8 +1,7 @@
 ---
 title: "MFC 添加类向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "向导 [MFC]"
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
 caps.latest.revision: 16
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # MFC 添加类向导
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

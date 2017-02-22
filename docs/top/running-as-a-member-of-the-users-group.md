@@ -1,32 +1,6 @@
 ---
-title: "作为用户组的成员运行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PRJ0050"
-  - "VCD0047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "用户组 [C++]"
-  - "安全性[C++], 用户组"
-  - "Windows 帐户 [C++]"
-  - "非管理员用户 [C++]"
-  - "用户帐户 [C++]"
-  - "管理员（不以此角色运行）[C++]"
-ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 17
+redirect_url: /cpp/security/running-as-a-member-of-the-users-group
 caps.handback.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
 ---
 # 作为用户组的成员运行
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

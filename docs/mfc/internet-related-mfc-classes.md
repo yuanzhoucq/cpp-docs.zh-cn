@@ -1,8 +1,7 @@
 ---
 title: "与 Internet 相关的 MFC 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "MFC, Internet 类"
 ms.assetid: e50c6b39-4b65-4b8a-8101-8934d0780723
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 与 Internet 相关的 MFC 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

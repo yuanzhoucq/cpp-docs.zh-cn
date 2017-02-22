@@ -1,8 +1,7 @@
 ---
 title: "“颜色”窗口（图标的图像编辑器） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "颜色指示符"
 ms.assetid: 1d9b6c16-bf1d-4488-a19b-5d6fe601846a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # “颜色”窗口（图标的图像编辑器）
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

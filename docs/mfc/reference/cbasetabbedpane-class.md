@@ -1,8 +1,7 @@
 ---
 title: "CBaseTabbedPane 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CBaseTabbedPane 类"
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 caps.latest.revision: 26
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # CBaseTabbedPane 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

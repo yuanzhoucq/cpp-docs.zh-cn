@@ -1,8 +1,7 @@
 ---
 title: "命令传送 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "命令传送"
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 命令传送
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

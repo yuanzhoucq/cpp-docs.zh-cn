@@ -1,8 +1,7 @@
 ---
 title: "按字母顺序列出内部函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "intrinsics, alphabetical list"
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 按字母顺序列出内部函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

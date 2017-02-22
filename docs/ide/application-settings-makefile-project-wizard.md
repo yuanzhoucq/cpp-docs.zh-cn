@@ -1,8 +1,7 @@
 ---
 title: "应用程序设置，生成文件项目向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "生成文件项目向导，应用程序设置"
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 应用程序设置，生成文件项目向导
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

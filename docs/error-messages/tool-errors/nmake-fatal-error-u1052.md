@@ -1,8 +1,7 @@
 ---
 title: "NMAKE 错误 U1052 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U1052"
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # NMAKE 错误 U1052
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

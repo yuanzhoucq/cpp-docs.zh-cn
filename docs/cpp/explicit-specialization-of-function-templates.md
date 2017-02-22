@@ -1,8 +1,7 @@
 ---
 title: "函数模板的显式专用化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "函数模板的专用化"
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 函数模板的显式专用化
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

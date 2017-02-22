@@ -1,8 +1,7 @@
 ---
 title: "事件处理程序向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "事件处理程序向导 [C++]"
 ms.assetid: af8e1835-94b1-4d9a-b353-c519e011d3a1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 事件处理程序向导
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

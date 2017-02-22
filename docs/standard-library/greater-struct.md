@@ -1,8 +1,7 @@
 ---
 title: "greater 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "greater 函数"
 ms.assetid: ebc348e1-edcd-466b-b21a-db95bd8f9079
 caps.latest.revision: 22
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # greater 结构
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

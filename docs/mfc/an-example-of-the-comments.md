@@ -1,8 +1,7 @@
 ---
 title: "注释示例 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC 源文件, 注释示例"
 ms.assetid: eb8ddea2-74de-4d5c-93d6-596f7c5e58a7
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 注释示例
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

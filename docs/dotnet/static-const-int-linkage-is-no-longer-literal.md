@@ -1,8 +1,7 @@
 ---
 title: "静态 Const Int 链接不再是文本的 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "文本特性 [C++]"
 ms.assetid: d2a5e3d2-ffb0-4b61-8114-bec5993a1195
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 静态 Const Int 链接不再是文本的
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

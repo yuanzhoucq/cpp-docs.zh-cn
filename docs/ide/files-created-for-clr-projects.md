@@ -1,8 +1,7 @@
 ---
 title: "为 CLR 项目创建的文件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Visual C++ 项目, CLR 编程"
 ms.assetid: 59ae9020-5f26-4ad0-bbdd-97c2e2023a20
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 为 CLR 项目创建的文件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

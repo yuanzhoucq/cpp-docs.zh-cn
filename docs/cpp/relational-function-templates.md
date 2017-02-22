@@ -1,8 +1,7 @@
 ---
 title: "关系函数模板 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "关系函数模板"
 ms.assetid: 57893a51-9adb-41fc-941d-2ca97687db2a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 关系函数模板
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

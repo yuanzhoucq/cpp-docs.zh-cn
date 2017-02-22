@@ -1,8 +1,7 @@
 ---
 title: "TN061：ON_NOTIFY 和 WM_NOTIFY 消息 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "WM_NOTIFY 消息"
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN061：ON_NOTIFY 和 WM_NOTIFY 消息
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

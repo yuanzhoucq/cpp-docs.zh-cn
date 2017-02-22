@@ -1,8 +1,7 @@
 ---
 title: "键盘和鼠标自定义 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "键盘和鼠标自定义（MFC 扩展）"
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
 caps.latest.revision: 23
-caps.handback.revision: 19
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # 键盘和鼠标自定义
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

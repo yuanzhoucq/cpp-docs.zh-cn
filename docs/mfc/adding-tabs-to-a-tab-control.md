@@ -1,8 +1,7 @@
 ---
 title: "向选项卡控件添加选项卡 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "选项卡, 添加到 CTabCtrl 类"
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 向选项卡控件添加选项卡
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

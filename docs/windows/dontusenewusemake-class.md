@@ -1,8 +1,7 @@
 ---
 title: "DontUseNewUseMake 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DontUseNewUseMake 类"
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # DontUseNewUseMake 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

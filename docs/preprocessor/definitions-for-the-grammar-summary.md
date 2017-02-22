@@ -1,8 +1,7 @@
 ---
 title: "语法摘要的定义 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "预处理器"
   - "预处理器, 定义"
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 语法摘要的定义
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

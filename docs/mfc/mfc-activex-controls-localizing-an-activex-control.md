@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控件：本地化 ActiveX 控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "MFC ActiveX 控件, 本地化"
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
 caps.latest.revision: 12
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # MFC ActiveX 控件：本地化 ActiveX 控件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

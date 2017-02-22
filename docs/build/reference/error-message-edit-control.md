@@ -1,8 +1,7 @@
 ---
 title: "“错误消息”编辑控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "“错误消息”编辑控件"
 ms.assetid: 79320694-c30e-4c37-bb94-6cb36c32d4e6
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # “错误消息”编辑控件
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

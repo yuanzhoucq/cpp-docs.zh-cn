@@ -1,8 +1,7 @@
 ---
 title: "添加属性页（ATL 教程，第 6 部分） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
 caps.latest.revision: 15
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 添加属性页（ATL 教程，第 6 部分）
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

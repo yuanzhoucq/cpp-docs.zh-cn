@@ -1,8 +1,7 @@
 ---
 title: "使用 exit 或 return | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "return 关键字 [C++], 用于程序终止"
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 使用 exit 或 return
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

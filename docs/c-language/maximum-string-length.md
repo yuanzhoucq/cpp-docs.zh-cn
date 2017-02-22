@@ -1,8 +1,7 @@
 ---
 title: "最大字符串长度 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "长度, 字符串"
   - "最大字符串长度"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "字符串 [C++], length"
 ms.assetid: 99a80e4a-6212-47b7-a6bd-bdf99bd44928
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 最大字符串长度
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

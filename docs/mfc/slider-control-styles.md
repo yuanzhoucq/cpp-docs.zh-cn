@@ -1,8 +1,7 @@
 ---
 title: "滑块控件样式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "样式, 滑块控件"
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 滑块控件样式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

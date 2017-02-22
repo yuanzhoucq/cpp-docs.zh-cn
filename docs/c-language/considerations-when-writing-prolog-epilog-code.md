@@ -1,8 +1,7 @@
 ---
 title: "编写 Prolog/Epilog 代码时的注意事项 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__LOCAL_SIZE 常量"
   - "布局, 堆栈帧"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "堆栈, 堆栈帧布局"
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 编写 Prolog/Epilog 代码时的注意事项
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

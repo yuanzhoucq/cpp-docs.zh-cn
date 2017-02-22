@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 WRL 激活和使用 Windows 运行时组件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 如何：使用 WRL 激活和使用 Windows 运行时组件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

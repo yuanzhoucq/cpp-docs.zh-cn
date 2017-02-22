@@ -1,8 +1,7 @@
 ---
 title: "安装 ATL 数据库支持 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "数据库 [C++], 安装数据库支持"
 ms.assetid: 76bf8abb-bdf0-4798-b5ff-ebde8dbaabd4
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 安装 ATL 数据库支持
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

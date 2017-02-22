@@ -1,8 +1,7 @@
 ---
 title: "/analyze（代码分析） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-C 编译器选项 [C++]"
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # /analyze（代码分析）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

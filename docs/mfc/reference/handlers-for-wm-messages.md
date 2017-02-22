@@ -1,8 +1,7 @@
 ---
 title: "WM_ 消息的处理程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "WM_ 消息"
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # WM_ 消息的处理程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

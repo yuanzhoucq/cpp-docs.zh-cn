@@ -1,8 +1,7 @@
 ---
 title: "对话框数据交换 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "用户输入, 从 MFC 对话框检索"
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 对话框数据交换
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

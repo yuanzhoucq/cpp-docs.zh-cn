@@ -1,8 +1,7 @@
 ---
 title: "is_enum 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_enum"
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
 caps.latest.revision: 19
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # is_enum 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

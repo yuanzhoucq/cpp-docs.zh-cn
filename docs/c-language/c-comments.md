@@ -1,8 +1,7 @@
 ---
 title: "C 注释 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "/* */ 注释分隔符"
   - "代码注释, C 代码"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "注释, 编制代码文档"
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # C 注释
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

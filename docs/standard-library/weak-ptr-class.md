@@ -1,8 +1,7 @@
 ---
 title: "weak_ptr 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "weak_ptr 类 [TR1]"
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
 caps.latest.revision: 22
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # weak_ptr 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

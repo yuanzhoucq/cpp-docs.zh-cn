@@ -1,8 +1,7 @@
 ---
 title: "如何：确定映像为本机映像还是 CLR 映像 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "图像 [C++], CLR 验证"
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 如何：确定映像为本机映像还是 CLR 映像
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

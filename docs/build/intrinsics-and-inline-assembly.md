@@ -1,8 +1,7 @@
 ---
 title: "内部和内联程序集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 8affd4bb-279d-46f3-851f-8be0a9c5ed3f
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 内部和内联程序集
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

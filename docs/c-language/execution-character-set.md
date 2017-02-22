@@ -1,8 +1,7 @@
 ---
 title: "执行字符集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "字符集 [C++], 执行和源"
   - "执行字符集 [C++]"
   - "源字符集 [C++]"
 ms.assetid: 39ffbb55-11c1-4b6d-a105-327c0fceb449
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 执行字符集
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ArgTraitsHelper 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ArgTraitsHelper 结构"
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ArgTraitsHelper 结构
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

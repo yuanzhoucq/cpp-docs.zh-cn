@@ -1,8 +1,7 @@
 ---
 title: "Implements 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Implements 结构"
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Implements 结构
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

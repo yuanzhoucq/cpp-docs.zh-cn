@@ -1,8 +1,7 @@
 ---
 title: "/cgthreads（代码生成线程） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-cgthreads 编译器选项 (C++)"
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /cgthreads（代码生成线程）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

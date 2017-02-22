@@ -1,8 +1,7 @@
 ---
 title: "引发软件异常 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "结构化异常处理, 作为异常的错误"
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 引发软件异常
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

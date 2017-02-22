@@ -1,8 +1,7 @@
 ---
 title: "Module::ReleaseNotifier::ReleaseNotifier 构造函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ReleaseNotifier, 构造函数"
 ms.assetid: 889a3c9a-2366-44a1-ba7d-a59c1885e7f3
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Module::ReleaseNotifier::ReleaseNotifier 构造函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

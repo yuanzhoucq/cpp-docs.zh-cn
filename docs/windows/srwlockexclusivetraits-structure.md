@@ -1,8 +1,7 @@
 ---
 title: "SRWLockExclusiveTraits 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SRWLockExclusiveTraits 结构"
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # SRWLockExclusiveTraits 结构
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

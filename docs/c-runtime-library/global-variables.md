@@ -1,8 +1,7 @@
 ---
 title: "全局变量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.variables"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "全局变量"
   - "全局变量, Microsoft 运行库"
   - "变量, 全局"
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 全局变量
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

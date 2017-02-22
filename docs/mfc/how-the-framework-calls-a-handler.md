@@ -1,8 +1,7 @@
 ---
 title: "框架如何调用处理程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC, 命令传送"
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 框架如何调用处理程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

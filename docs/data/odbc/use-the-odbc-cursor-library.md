@@ -1,8 +1,7 @@
 ---
 title: "使用 ODBC 游标库 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "ODBC 游标库 [ODBC], 禁用"
 ms.assetid: e89e41c4-78fd-4cb6-821f-4fb090f4b08b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 使用 ODBC 游标库
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

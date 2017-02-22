@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 4）C4242 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4242"
 ms.assetid: 8df742e1-fbf1-42f3-8e93-c0e1c222dc7e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 编译器警告（等级 4）C4242
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

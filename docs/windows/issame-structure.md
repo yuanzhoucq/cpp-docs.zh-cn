@@ -1,8 +1,7 @@
 ---
 title: "IsSame 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IsSame 结构"
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # IsSame 结构
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

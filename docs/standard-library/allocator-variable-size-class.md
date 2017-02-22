@@ -1,8 +1,7 @@
 ---
 title: "allocator_variable_size 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "allocator_variable_size 类"
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
 caps.latest.revision: 16
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # allocator_variable_size 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

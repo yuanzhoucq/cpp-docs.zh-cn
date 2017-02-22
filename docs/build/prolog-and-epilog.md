@@ -1,8 +1,7 @@
 ---
 title: "保护现场和恢复现场 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 保护现场和恢复现场
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 combinable 提高性能 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "使用 combinable 提高并行性能 [并发运行时]"
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
 caps.latest.revision: 17
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 如何：使用 combinable 提高性能
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

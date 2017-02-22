@@ -1,8 +1,7 @@
 ---
 title: "_CRTDBG_MAP_ALLOC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,17 +13,16 @@ f1_keywords:
   - "_CRTDBG_MAP_ALLOC"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_CRTDBG_MAP_ALLOC 宏"
   - "内存分配, 在调试版本中"
   - "CRTDBG_MAP_ALLOC 宏"
 ms.assetid: 435242b8-caea-4063-b765-4a608200312b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _CRTDBG_MAP_ALLOC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

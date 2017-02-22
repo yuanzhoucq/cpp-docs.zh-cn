@@ -1,8 +1,7 @@
 ---
 title: "使用 C 和 Win32 进行多线程编程 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows API [C++], 多线程处理"
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 使用 C 和 Win32 进行多线程编程
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "按配置文件优化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "按配置文件优化"
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # 按配置文件优化
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

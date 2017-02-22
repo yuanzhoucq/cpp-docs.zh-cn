@@ -1,8 +1,7 @@
 ---
 title: "单字节和多字节字符集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.character.multibyte"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "字符集 [C++], 多字节"
   - "字符集 [C++], 单字节"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "SBCS（单字节字符集）"
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 单字节和多字节字符集
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

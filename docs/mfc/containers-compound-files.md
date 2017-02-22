@@ -1,8 +1,7 @@
 ---
 title: "容器：复合文件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "标准化文件结构的复合文件"
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 容器：复合文件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

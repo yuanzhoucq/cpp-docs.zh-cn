@@ -1,8 +1,7 @@
 ---
 title: "binder1st 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "binder1st 类"
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
 caps.latest.revision: 22
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # binder1st 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

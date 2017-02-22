@@ -1,8 +1,7 @@
 ---
 title: "shared_future 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
 caps.latest.revision: 13
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # shared_future 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

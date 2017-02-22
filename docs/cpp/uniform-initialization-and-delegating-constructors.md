@@ -1,8 +1,7 @@
 ---
 title: "统一安装和委派构造函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # 统一安装和委派构造函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

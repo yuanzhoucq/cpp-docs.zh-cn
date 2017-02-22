@@ -1,8 +1,7 @@
 ---
 title: "/F（设置堆栈大小） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "堆栈, 设置大小"
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /F（设置堆栈大小）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

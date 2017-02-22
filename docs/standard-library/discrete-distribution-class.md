@@ -1,8 +1,7 @@
 ---
 title: "discrete_distribution 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "discrete_distribution 类"
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
 caps.latest.revision: 21
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # discrete_distribution 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

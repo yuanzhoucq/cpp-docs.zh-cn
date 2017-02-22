@@ -1,8 +1,7 @@
 ---
 title: "C 运行时错误 R6002 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "R6002"
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
 caps.latest.revision: 10
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # C 运行时错误 R6002
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

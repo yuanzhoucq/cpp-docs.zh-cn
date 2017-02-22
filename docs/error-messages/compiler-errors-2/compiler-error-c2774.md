@@ -1,8 +1,7 @@
 ---
 title: "编译器错误 C2774 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2774"
 ms.assetid: 10f428c6-7f49-489a-92ba-6ef978b7caaf
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 编译器错误 C2774
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

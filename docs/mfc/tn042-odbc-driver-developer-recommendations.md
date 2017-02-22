@@ -1,8 +1,7 @@
 ---
 title: "TN042：ODBC 驱动程序开发人员建议 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "TN042"
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN042：ODBC 驱动程序开发人员建议
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

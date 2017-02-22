@@ -1,8 +1,7 @@
 ---
 title: "国际化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.international"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "国际应用程序, 运行时例程"
   - "国际化例程"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "本地化, 例程用于"
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 国际化
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

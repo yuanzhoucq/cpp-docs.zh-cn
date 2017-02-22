@@ -1,8 +1,7 @@
 ---
 title: "演练：在启用 COM 的应用程序中使用并发运行时 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "COM, 与并发运行时一起使用"
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 演练：在启用 COM 的应用程序中使用并发运行时
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

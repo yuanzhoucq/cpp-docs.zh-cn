@@ -1,8 +1,7 @@
 ---
 title: "参数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "参数 [C++], 函数"
   - "函数参数"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "函数 [C], 参数"
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 参数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

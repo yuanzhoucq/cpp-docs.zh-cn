@@ -1,8 +1,7 @@
 ---
 title: "context_self_unblock 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "context_self_unblock 类"
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # context_self_unblock 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

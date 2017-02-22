@@ -1,8 +1,7 @@
 ---
 title: "/ASSEMBLYDEBUG（添加 DebuggableAttribute） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-ASSEMBLYDEBUG 链接器选项"
 ms.assetid: 94443af3-470c-41d7-83a0-7434563d7982
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /ASSEMBLYDEBUG（添加 DebuggableAttribute）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

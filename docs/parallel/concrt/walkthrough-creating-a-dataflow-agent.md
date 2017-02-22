@@ -1,8 +1,7 @@
 ---
 title: "演练：创建数据流代理 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "数据流代理, 创建 [并发运行时]"
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 演练：创建数据流代理
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

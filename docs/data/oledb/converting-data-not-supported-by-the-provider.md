@@ -1,8 +1,7 @@
 ---
 title: "转换不受提供程序支持的数据 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "OLE DB 提供程序模板, 不支持的数据类型"
 ms.assetid: f495e50f-530a-4fab-ab54-e0c359785845
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 转换不受提供程序支持的数据
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

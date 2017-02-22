@@ -1,8 +1,7 @@
 ---
 title: "添加成员函数向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "添加成员函数向导 [C++]"
 ms.assetid: 13b6defc-faa6-4d57-83db-9dd854cbea3d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 添加成员函数向导
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

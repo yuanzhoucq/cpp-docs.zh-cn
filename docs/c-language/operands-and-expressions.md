@@ -1,8 +1,7 @@
 ---
 title: "操作数和表达式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "表达式 [C++], 语法"
   - "操作数"
   - "操作数, 定义"
 ms.assetid: 8453b095-a017-4c70-9a64-e3b2bd1e35e5
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 操作数和表达式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

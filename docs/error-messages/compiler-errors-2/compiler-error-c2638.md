@@ -1,8 +1,7 @@
 ---
 title: "编译器错误 C2638 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2638"
 ms.assetid: 9d4275e8-406d-455e-afee-3a37799230e0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 编译器错误 C2638
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "消息传递函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "消息传递函数"
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
 caps.latest.revision: 23
-caps.handback.revision: 22
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # 消息传递函数
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

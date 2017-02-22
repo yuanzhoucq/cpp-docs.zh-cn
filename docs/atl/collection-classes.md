@@ -1,8 +1,7 @@
 ---
 title: "集合类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "集合类"
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 集合类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

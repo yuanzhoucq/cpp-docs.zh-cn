@@ -1,8 +1,7 @@
 ---
 title: "密封虚函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "虚函数, 密封"
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 密封虚函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "localeconv | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,17 +26,16 @@ f1_keywords:
   - "localeconv"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "lconv 类型"
   - "localeconv 函数"
   - "区域设置, 获取相关信息"
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # localeconv
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

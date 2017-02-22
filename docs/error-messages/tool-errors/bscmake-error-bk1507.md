@@ -1,8 +1,7 @@
 ---
 title: "BSCMAKE 错误 BK1507 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BK1507"
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # BSCMAKE 错误 BK1507
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

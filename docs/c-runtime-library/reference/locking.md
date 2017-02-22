@@ -1,8 +1,7 @@
 ---
 title: "_locking | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "_locking"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_locking 函数"
   - "字节 [C++], 锁定文件"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "locking 函数"
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _locking
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

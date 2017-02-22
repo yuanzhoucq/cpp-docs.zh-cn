@@ -1,8 +1,7 @@
 ---
 title: "_spawnle、_wspawnle | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_wspawnle"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "spawnle 函数"
   - "进程，正在创建"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "_spawnle 函数"
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _spawnle、_wspawnle
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "访问集合的所有成员 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "循环结构, 循环访问集合"
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 访问集合的所有成员
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

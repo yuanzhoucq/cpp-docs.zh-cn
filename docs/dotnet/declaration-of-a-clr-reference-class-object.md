@@ -1,8 +1,7 @@
 ---
 title: "CLR 引用类对象的声明 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "类型 [C++], 引用类型"
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # CLR 引用类对象的声明
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

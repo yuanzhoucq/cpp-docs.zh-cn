@@ -1,8 +1,7 @@
 ---
 title: "内联程序集中的 MASM 宏指令 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MASM (Microsoft Macro Assembler), 内联程序集宏指令"
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 内联程序集中的 MASM 宏指令
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

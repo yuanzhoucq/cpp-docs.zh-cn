@@ -1,8 +1,7 @@
 ---
 title: "LIB 引用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "静态库, 设置 IDE 选项"
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # LIB 引用
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

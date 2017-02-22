@@ -1,8 +1,7 @@
 ---
 title: "将并发运行时与其他并发模型进行比较 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "并发运行时, 与其他模型比较"
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 将并发运行时与其他并发模型进行比较
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

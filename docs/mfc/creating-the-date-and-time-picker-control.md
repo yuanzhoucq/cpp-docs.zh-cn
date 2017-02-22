@@ -1,8 +1,7 @@
 ---
 title: "创建日期和时间选择器控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "DateTimePicker 控件 [MFC], 创建"
 ms.assetid: 764ec2fb-98cd-478b-a5f2-d63f0bb12279
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 创建日期和时间选择器控件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

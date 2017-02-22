@@ -1,8 +1,7 @@
 ---
 title: "快捷键的 Key 属性 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Key 属性"
 ms.assetid: d1570cd9-b414-4cd6-96bd-47c38281eaca
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 快捷键的 Key 属性
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

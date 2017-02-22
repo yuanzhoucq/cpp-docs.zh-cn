@@ -1,8 +1,7 @@
 ---
 title: "如何：在已完成的任务之间选择 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "已完成的任务，在 [并发运行时] 中选择"
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
 caps.latest.revision: 17
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 如何：在已完成的任务之间选择
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

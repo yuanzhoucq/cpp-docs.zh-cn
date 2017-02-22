@@ -1,8 +1,7 @@
 ---
 title: "在 OLE DB 中支持事务 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "事务 [C++], OLE DB 支持"
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 在 OLE DB 中支持事务
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

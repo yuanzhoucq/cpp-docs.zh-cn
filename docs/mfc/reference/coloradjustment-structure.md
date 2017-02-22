@@ -1,8 +1,7 @@
 ---
 title: "COLORADJUSTMENT 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "COLORADJUSTMENT 结构"
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # COLORADJUSTMENT 结构
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

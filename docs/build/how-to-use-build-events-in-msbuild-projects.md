@@ -1,8 +1,7 @@
 ---
 title: "如何：在 MSBuild 项目中使用生成事件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild (c++), 如何：在项目中使用生成事件"
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # 如何：在 MSBuild 项目中使用生成事件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

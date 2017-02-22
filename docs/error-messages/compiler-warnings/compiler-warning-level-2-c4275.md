@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 2）C4275 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4275"
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 编译器警告（等级 2）C4275
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

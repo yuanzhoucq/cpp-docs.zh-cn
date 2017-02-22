@@ -1,8 +1,7 @@
 ---
 title: "输入/输出流 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "流 I/O"
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
 caps.latest.revision: 11
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 输入/输出流
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

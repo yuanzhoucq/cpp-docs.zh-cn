@@ -1,8 +1,7 @@
 ---
 title: "使用 __declspec(dllexport) 从 DLL 导出 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "名称 [C++], DLL 导出"
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 使用 __declspec(dllexport) 从 DLL 导出
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

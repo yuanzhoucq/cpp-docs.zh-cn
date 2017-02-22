@@ -1,8 +1,7 @@
 ---
 title: "数学错误 M6203 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "M6203"
 ms.assetid: bd7fdd1c-83e4-4d6a-901e-10a0308bf5be
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 数学错误 M6203
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

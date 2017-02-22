@@ -1,8 +1,7 @@
 ---
 title: "map 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "map 类"
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 caps.latest.revision: 27
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # map 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

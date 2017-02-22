@@ -1,8 +1,7 @@
 ---
 title: "IRowsetNotifyCP 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "IRowsetNotifyCP 类"
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # IRowsetNotifyCP 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "improper_scheduler_detach 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "improper_scheduler_detach 类"
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # improper_scheduler_detach 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

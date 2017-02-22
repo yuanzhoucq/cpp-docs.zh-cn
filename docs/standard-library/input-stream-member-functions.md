@@ -1,8 +1,7 @@
 ---
 title: "输入流成员函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "输入流, 成员函数"
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 输入流成员函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

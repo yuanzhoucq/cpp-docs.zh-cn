@@ -1,8 +1,7 @@
 ---
 title: "/MANIFESTDEPENDENCY（指定清单依赖项） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-MANIFESTDEPENDENCY 链接器选项"
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /MANIFESTDEPENDENCY（指定清单依赖项）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

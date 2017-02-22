@@ -1,8 +1,7 @@
 ---
 title: "sizeof 运算符 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "sizeof"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "sizeof 运算符"
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # sizeof 运算符 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

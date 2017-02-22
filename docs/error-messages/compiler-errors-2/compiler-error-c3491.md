@@ -1,8 +1,7 @@
 ---
 title: "编译器错误 C3491 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3491"
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编译器错误 C3491
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

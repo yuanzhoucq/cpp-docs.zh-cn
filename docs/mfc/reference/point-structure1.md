@@ -1,8 +1,7 @@
 ---
-title: "POINT 结构 | Microsoft Docs"
+title: "点结构&amp;1; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "POINT 结构"
 ms.assetid: 965736d8-4e53-41b6-9b8b-6961992dd21f
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # POINT 结构
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

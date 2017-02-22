@@ -1,8 +1,7 @@
 ---
 title: "文件读取/写入访问常量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.constants.file"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "用于文件读取/写入的访问常量"
   - "常量 [C++], 文件特性"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "写入访问常量"
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 文件读取/写入访问常量
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

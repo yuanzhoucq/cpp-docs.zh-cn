@@ -1,8 +1,7 @@
 ---
 title: "如何：创建使用特定计划程序策略的代理 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "创建使用特定策略的代理 [并发运行时]"
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 如何：创建使用特定计划程序策略的代理
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "原始伪操作 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 4def1a0e-ec28-4736-91fb-fac95fba1f36
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 原始伪操作
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

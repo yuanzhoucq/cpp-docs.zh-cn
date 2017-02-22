@@ -1,8 +1,7 @@
 ---
 title: "文件特性常量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,7 +23,6 @@ f1_keywords:
   - "A_ARCH"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_A_ARCH 常量"
   - "_A_HIDDEN 常量"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "文件 [C++], 文件特性常量"
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 文件特性常量
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

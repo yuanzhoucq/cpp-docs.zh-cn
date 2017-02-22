@@ -1,8 +1,7 @@
 ---
 title: "将消息映射到函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Windows 消息 [C++], 添加消息处理程序"
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 将消息映射到函数
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

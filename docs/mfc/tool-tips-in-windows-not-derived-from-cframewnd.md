@@ -1,8 +1,7 @@
 ---
 title: "Windows 中不是从 CFrameWnd 派生的工具提示 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "TTN_NEEDTEXT 消息"
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Windows 中不是从 CFrameWnd 派生的工具提示
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

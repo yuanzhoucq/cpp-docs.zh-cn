@@ -1,8 +1,7 @@
 ---
 title: "toascii __toascii | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "ctype/__toascii"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "toascii 函数"
   - "字符串转换为 ASCII 字符"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "ASCII 字符，将转换为"
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # toascii __toascii
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

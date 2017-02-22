@@ -1,8 +1,7 @@
 ---
 title: "/MANIFESTUAC（将 UAC 信息嵌入到清单中） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "-MANIFESTUAC 链接器选项"
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /MANIFESTUAC（将 UAC 信息嵌入到清单中）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

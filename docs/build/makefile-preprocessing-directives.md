@@ -1,8 +1,7 @@
 ---
 title: "生成文件预处理指令 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -50,10 +49,10 @@ helpviewer_keywords:
   - "UNDEF 指令"
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 生成文件预处理指令
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

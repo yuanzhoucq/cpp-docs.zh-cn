@@ -1,8 +1,7 @@
 ---
 title: "链接器选项 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "链接器 [C++], 列出的选项"
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
 caps.latest.revision: 37
-caps.handback.revision: 35
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # 链接器选项
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

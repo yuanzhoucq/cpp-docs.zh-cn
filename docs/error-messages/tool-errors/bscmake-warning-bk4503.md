@@ -1,8 +1,7 @@
 ---
 title: "BSCMAKE 警告 BK4503 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BK4503"
 ms.assetid: 68abcf23-6987-4bc5-9745-8b65d2578bbc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # BSCMAKE 警告 BK4503
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

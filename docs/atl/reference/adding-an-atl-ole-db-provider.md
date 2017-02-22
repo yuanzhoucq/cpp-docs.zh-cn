@@ -1,8 +1,7 @@
 ---
 title: "添加 ATL OLE DB 提供程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB, 添加 ATL OLE DB 提供程序到项目"
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 添加 ATL OLE DB 提供程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

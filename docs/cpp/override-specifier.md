@@ -1,8 +1,7 @@
 ---
 title: "override 说明符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "override 标识符"
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # override 说明符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

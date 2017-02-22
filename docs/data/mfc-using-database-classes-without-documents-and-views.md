@@ -1,8 +1,7 @@
 ---
 title: "MFC：不结合文档和视图使用数据库类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "用户界面 [C++], 绘图信息"
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # MFC：不结合文档和视图使用数据库类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

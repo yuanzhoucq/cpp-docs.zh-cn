@@ -1,8 +1,7 @@
 ---
 title: "处理选项卡控件通知消息 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "选项卡控件, 处理通知"
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 处理选项卡控件通知消息
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

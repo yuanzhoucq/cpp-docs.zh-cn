@@ -1,8 +1,7 @@
 ---
 title: "演练：调整现有代码以使用轻量级任务 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "轻量级任务, 使用 [并发运行时]"
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 演练：调整现有代码以使用轻量级任务
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

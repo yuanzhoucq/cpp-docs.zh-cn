@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 1）C4533 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4533"
 ms.assetid: 359fecda-d540-46e5-b214-dbabe9ef50d2
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编译器警告（等级 1）C4533
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

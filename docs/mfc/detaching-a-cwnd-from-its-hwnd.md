@@ -1,8 +1,7 @@
 ---
 title: "将 CWnd 从其 HWND 中分离出来 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "从 CWnd 移除 HWND"
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 将 CWnd 从其 HWND 中分离出来
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

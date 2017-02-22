@@ -1,8 +1,7 @@
 ---
 title: "CRecordView 和 CDaoRecordView 的对话框数据交换函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "ODBC [C++], 对话框数据交换 (DDX) 支持"
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 caps.latest.revision: 13
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # CRecordView 和 CDaoRecordView 的对话框数据交换函数
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

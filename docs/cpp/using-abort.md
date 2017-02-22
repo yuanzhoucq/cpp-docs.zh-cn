@@ -1,8 +1,7 @@
 ---
 title: "使用 abort | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "abort 函数"
 ms.assetid: 3ba39b78-ef74-4a8d-8dee-2d62442de174
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 使用 abort
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

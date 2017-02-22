@@ -1,8 +1,7 @@
 ---
 title: "多线程 C 程序示例 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 多线程 C 程序示例
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

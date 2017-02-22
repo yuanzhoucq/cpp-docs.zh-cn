@@ -1,8 +1,7 @@
 ---
 title: "WeakRef::WeakRef 构造函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "WeakRef, 构造函数"
 ms.assetid: 589f87e0-8dcc-4e82-aab2-f2f66f1ec47c
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # WeakRef::WeakRef 构造函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

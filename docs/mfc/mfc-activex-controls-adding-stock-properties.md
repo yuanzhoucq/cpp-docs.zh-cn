@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控件：添加常用属性 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "属性 [MFC], 添加常用"
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC ActiveX 控件：添加常用属性
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

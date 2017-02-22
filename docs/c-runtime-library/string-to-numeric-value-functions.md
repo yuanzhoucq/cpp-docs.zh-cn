@@ -1,8 +1,7 @@
 ---
 title: "字符串到数值函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,16 +21,15 @@ f1_keywords:
   - "_tcstoi64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "分析, 数值字符串"
   - "字符串转换, 到数值"
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 字符串到数值函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

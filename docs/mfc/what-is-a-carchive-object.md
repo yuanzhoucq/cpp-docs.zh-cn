@@ -1,8 +1,7 @@
 ---
 title: "什么是 CArchive 对象 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CArchive 类, 关于 CArchive 类"
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 什么是 CArchive 对象
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

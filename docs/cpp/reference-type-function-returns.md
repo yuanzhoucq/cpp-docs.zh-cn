@@ -1,8 +1,7 @@
 ---
 title: "引用类型函数返回 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "函数 [C++], 返回类型"
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 引用类型函数返回
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

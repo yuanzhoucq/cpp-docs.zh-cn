@@ -1,8 +1,7 @@
 ---
 title: "“资源”属性页 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "“资源”属性页"
 ms.assetid: dade2f6b-c51f-4c33-9023-41956ae4b5f6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # “资源”属性页
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

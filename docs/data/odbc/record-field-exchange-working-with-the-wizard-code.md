@@ -1,8 +1,7 @@
 ---
 title: "记录字段交换：使用向导代码 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "Unicode, 带有数据库类"
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 记录字段交换：使用向导代码
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

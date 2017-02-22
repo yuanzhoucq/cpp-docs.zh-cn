@@ -1,8 +1,7 @@
 ---
 title: "_RTC_GetErrDesc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "_RTC_GetErrDesc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "运行时错误"
   - "_RTC_GetErrDesc 函数"
   - "RTC_GetErrDesc 函数"
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _RTC_GetErrDesc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "属性声明 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "property 关键字 [C++]"
 ms.assetid: de169378-a8b8-49f4-a586-76bffc9b5c9f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 属性声明
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

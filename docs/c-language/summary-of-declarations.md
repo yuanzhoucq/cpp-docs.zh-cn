@@ -1,8 +1,7 @@
 ---
 title: "声明摘要 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 声明摘要
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

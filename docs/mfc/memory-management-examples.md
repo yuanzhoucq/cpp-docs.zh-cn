@@ -1,8 +1,7 @@
 ---
 title: "内存管理：示例 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "类型 [C++], 内存分配"
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 内存管理：示例
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

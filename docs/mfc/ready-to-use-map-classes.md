@@ -1,8 +1,7 @@
 ---
 title: "随时可用的映射类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "映射类"
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 随时可用的映射类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

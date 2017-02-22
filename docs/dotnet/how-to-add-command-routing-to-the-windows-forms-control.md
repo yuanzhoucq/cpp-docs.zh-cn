@@ -1,8 +1,7 @@
 ---
 title: "如何：向 Windows 窗体控件添加命令传送 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Windows 窗体控件 [c + +]，命令路由"
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 如何：向 Windows 窗体控件添加命令传送
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

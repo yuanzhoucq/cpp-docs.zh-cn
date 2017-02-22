@@ -1,8 +1,7 @@
 ---
 title: "分配和取消分配窗口内存 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "窗口对象, 释放内存"
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 分配和取消分配窗口内存
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

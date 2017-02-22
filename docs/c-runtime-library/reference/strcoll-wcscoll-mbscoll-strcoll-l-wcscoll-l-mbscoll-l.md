@@ -1,8 +1,7 @@
 ---
 title: "strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,7 +36,6 @@ f1_keywords:
   - "_ftcscoll"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "代码页, 用于字符串比较"
   - "mbscoll 函数"
@@ -55,10 +53,10 @@ helpviewer_keywords:
   - "字符串 [C++], 按代码页进行比较"
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

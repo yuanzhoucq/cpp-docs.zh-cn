@@ -1,8 +1,7 @@
 ---
 title: "NMAKE 错误 U1099 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U1099"
 ms.assetid: 6688a805-43e6-4247-a2d0-14be082f0b13
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # NMAKE 错误 U1099
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "C 复合赋值 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "赋值运算符, 复合"
   - "复合赋值运算符"
   - "运算符 [C], 分配"
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # C 复合赋值
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

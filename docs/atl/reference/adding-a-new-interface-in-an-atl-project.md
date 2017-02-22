@@ -1,8 +1,7 @@
 ---
 title: "在 ATL 项目中添加新接口 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "接口, 添加到 ATL 对象"
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 在 ATL 项目中添加新接口
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

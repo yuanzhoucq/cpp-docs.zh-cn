@@ -1,8 +1,7 @@
 ---
 title: "数据源：确定数据源的架构 (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "架构 [C++], 数据源"
 ms.assetid: 17284acb-eb10-4f27-9944-ad1d973c0b05
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 数据源：确定数据源的架构 (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

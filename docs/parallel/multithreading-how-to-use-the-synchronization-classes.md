@@ -1,8 +1,7 @@
 ---
 title: "多线程处理：如何使用同步类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "线程安全类 [C++]"
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 多线程处理：如何使用同步类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

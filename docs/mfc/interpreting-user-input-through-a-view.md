@@ -1,8 +1,7 @@
 ---
 title: "通过视图解释用户输入 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "视图, 用户界面和输入"
 ms.assetid: f0302a70-661f-4781-8fe7-78f082bef2a5
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 通过视图解释用户输入
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

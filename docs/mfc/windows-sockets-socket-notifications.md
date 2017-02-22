@@ -1,8 +1,7 @@
 ---
 title: "Windows 套接字：套接字通知 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows 套接字 [C++], 通知"
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Windows 套接字：套接字通知
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

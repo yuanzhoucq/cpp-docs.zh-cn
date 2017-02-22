@@ -1,8 +1,7 @@
 ---
 title: "支持通知 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "行集合, 事件通知"
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 支持通知
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

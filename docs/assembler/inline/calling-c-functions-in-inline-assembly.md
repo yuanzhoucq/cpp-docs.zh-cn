@@ -1,8 +1,7 @@
 ---
-title: "调用内联程序集内的 C 函数 | Microsoft Docs"
+title: "调用内联程序集内的 C++ 函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,17 @@ dev_langs:
   - "C++"
 helpviewer_keywords: 
   - "__asm 关键字 [C++], 调用函数"
-  - "函数调用, C 函数"
+  - "函数调用, C++ 函数"
   - "函数调用, 在内联程序集中"
-  - "函数 [C], 在内联程序集中调用"
+  - "函数 [C++], 在内联程序集中调用"
   - "内联程序集, 调用函数"
-  - "Visual C, 函数"
+  - "Visual C++, 函数"
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 调用内联程序集内的 C 函数
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

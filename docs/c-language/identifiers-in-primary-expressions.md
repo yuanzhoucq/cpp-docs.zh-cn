@@ -1,8 +1,7 @@
 ---
 title: "主要表达式中的标识符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "标识符, 指定对象"
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 主要表达式中的标识符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

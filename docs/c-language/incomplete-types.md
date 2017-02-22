@@ -1,8 +1,7 @@
 ---
 title: "不完整类型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "数组 [C], 不完整类型"
   - "不完整类型"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "void 关键字 [C], 不完整"
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 不完整类型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

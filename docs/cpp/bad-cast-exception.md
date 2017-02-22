@@ -1,8 +1,7 @@
 ---
 title: "bad_cast 异常 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "异常, bad_cast"
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # bad_cast 异常
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

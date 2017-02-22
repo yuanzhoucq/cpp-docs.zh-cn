@@ -1,8 +1,7 @@
 ---
 title: "声明基于新控件类的变量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "变量, 控件类"
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 声明基于新控件类的变量
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

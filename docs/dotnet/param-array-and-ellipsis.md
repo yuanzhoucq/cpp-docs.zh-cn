@@ -1,8 +1,7 @@
 ---
 title: "参数数组和省略号 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "函数重载, 参数匹配"
 ms.assetid: 492e3f6c-1c4c-4e0c-a358-72f2d39c30be
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 参数数组和省略号
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

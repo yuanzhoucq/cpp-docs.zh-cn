@@ -1,8 +1,7 @@
 ---
 title: "跳过序列化机制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "序列化 [C++], 框架的角色"
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 跳过序列化机制
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

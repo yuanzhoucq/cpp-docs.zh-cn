@@ -1,8 +1,7 @@
 ---
 title: "编译器错误 C3737 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C3737"
 ms.assetid: ca2aeb23-2491-4ccb-8838-884abf7065c8
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 编译器错误 C3737
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

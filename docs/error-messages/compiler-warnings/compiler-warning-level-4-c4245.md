@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 4）C4245 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4245"
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 编译器警告（等级 4）C4245
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

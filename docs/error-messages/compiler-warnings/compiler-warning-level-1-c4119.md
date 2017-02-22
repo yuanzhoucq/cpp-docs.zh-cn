@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 1）C4119 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4119"
 ms.assetid: 0052ce92-033a-4dce-a11e-b7388f4f5c2b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编译器警告（等级 1）C4119
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

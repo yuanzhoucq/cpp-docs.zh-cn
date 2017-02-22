@@ -1,8 +1,7 @@
 ---
 title: "AsyncBase::FireCompletion 方法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "FireCompletion 方法"
 ms.assetid: b5e29d6d-52e7-4148-a7f3-a313b1359819
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # AsyncBase::FireCompletion 方法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

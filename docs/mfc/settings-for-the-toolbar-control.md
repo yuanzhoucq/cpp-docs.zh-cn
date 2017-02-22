@@ -1,8 +1,7 @@
 ---
 title: "工具栏控件的设置 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "工具栏控件 [MFC], 关于工具栏控件"
 ms.assetid: 025ba920-b3ee-4d82-9367-e652cd7875b9
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 工具栏控件的设置
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "C 类型说明符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "说明符, 类型"
   - "类型说明符, C"
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # C 类型说明符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

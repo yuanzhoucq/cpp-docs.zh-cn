@@ -1,8 +1,7 @@
 ---
 title: "C 加法运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "+ 运算符, 加法运算符"
   - "加法运算符"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "常用算术转换"
 ms.assetid: bb8ac205-b061-41fc-8dd4-dab87c8b900c
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C 加法运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

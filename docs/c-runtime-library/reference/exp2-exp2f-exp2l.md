@@ -1,8 +1,7 @@
 ---
 title: "exp2、 exp2f、 exp2l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "exp2l"
   - "math/exp2l"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "exp2 函数"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "exp2l 函数"
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # exp2、 exp2f、 exp2l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

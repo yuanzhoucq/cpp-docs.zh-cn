@@ -1,8 +1,7 @@
 ---
 title: "CancelTransitionPolicy 枚举 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CancelTransitionPolicy 枚举"
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # CancelTransitionPolicy 枚举
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

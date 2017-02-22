@@ -1,8 +1,7 @@
 ---
-title: "_fcvt | Microsoft Docs"
+title: "fcvt | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,22 +24,17 @@ apilocation:
   - "api-ms-win-crt-convert-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_fcvt"
+  - "fcvt"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_fcvt 函数"
-  - "转换浮点, 为字符串"
   - "fcvt 函数"
-  - "浮点函数"
-  - "浮点函数, 将数字转换为字符串"
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _fcvt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

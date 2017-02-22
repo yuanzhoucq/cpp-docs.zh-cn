@@ -1,8 +1,7 @@
 ---
 title: "异常：检查异常内容 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "try-catch 异常处理, MFC 函数异常"
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 异常：检查异常内容
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

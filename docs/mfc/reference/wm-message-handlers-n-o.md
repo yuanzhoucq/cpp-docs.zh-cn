@@ -1,8 +1,7 @@
 ---
 title: "WM_ 消息处理程序：N - O | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -48,10 +47,10 @@ helpviewer_keywords:
   - "WM_ 消息"
 ms.assetid: 4efd1cda-b642-4e8b-89e8-73255fa70d77
 caps.latest.revision: 17
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # WM_ 消息处理程序：N - O
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

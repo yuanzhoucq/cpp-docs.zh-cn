@@ -1,8 +1,7 @@
 ---
 title: "用于记录滚动的命令处理程序（MFC 数据访问） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "滚动记录"
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 用于记录滚动的命令处理程序（MFC 数据访问）
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

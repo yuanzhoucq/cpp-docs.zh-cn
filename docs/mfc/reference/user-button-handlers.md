@@ -1,8 +1,7 @@
 ---
 title: "用户按钮处理程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "用户按钮"
 ms.assetid: 410ea968-478f-4806-b7b8-5d7c8dc2bf42
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 用户按钮处理程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

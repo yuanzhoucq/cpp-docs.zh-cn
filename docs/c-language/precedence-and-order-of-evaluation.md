@@ -1,8 +1,7 @@
 ---
 title: "计算的优先级和顺序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "运算符的关联性 [C++]"
   - "数据绑定 [C++], 运算符优先级"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "优先级 [C++], 运算符"
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 计算的优先级和顺序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

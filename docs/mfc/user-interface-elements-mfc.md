@@ -1,8 +1,7 @@
 ---
 title: "用户界面元素 (MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "用户界面, 创建"
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 用户界面元素 (MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

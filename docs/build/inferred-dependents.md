@@ -1,8 +1,7 @@
 ---
 title: "推导出的依赖项 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE 中推断出的依赖项"
 ms.assetid: 9303045c-69b3-4f35-bffc-19d5cd6ea3c3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 推导出的依赖项
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

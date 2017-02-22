@@ -1,8 +1,7 @@
 ---
 title: "自行编写无参数的操控器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "操控器"
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 自行编写无参数的操控器
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

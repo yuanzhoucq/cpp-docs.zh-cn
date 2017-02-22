@@ -1,8 +1,7 @@
 ---
 title: "tuple_element 类 &lt;tuple&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "tuple_element 类 <tuple> (TR1)"
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # tuple_element 类 &lt;tuple&gt;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

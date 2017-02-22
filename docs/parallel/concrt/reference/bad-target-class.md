@@ -1,8 +1,7 @@
 ---
 title: "bad_target 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "bad_target 类"
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # bad_target 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

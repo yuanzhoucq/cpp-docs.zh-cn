@@ -1,8 +1,7 @@
 ---
 title: "将字符串读入 OLE DB 提供程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "OLE DB 提供程序, 读入字符串"
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 将字符串读入 OLE DB 提供程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

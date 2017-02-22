@@ -1,8 +1,7 @@
 ---
 title: "/Z7、/Zi、/ZI（调试信息格式） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,10 +35,10 @@ helpviewer_keywords:
   - "-Z7 编译器选项 [C++]"
 ms.assetid: ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8
 caps.latest.revision: 21
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # /Z7、/Zi、/ZI（调试信息格式）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

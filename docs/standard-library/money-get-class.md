@@ -1,8 +1,7 @@
 ---
 title: "money_get 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "money_get 类"
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # money_get 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "记录集：动态绑定数据列 (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "记录集 [C++], 绑定数据"
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 记录集：动态绑定数据列 (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

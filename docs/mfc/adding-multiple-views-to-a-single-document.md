@@ -1,8 +1,7 @@
 ---
 title: "向单个文档添加多个视图 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "视图, SDI 应用程序"
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 向单个文档添加多个视图
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

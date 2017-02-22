@@ -1,8 +1,7 @@
 ---
 title: "针对函数的依赖于参数的名称 (Koenig) 查找 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Koenig 查找"
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 针对函数的依赖于参数的名称 (Koenig) 查找
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

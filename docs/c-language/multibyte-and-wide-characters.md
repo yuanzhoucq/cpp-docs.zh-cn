@@ -1,8 +1,7 @@
 ---
 title: "多字节和宽字符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "字符代码 [C++], 多字节"
   - "字符代码 [C++], 宽"
@@ -26,10 +24,10 @@ helpviewer_keywords:
   - "宽字符 [C++]"
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 多字节和宽字符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

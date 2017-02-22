@@ -1,8 +1,7 @@
 ---
 title: "raise | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "Raise"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "程序 [C++], 向正在执行的程序发送信号"
   - "raise 函数"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "信号, 发生到正在执行的程序"
 ms.assetid: a3ccd3ad-f68f-4a7b-a005-c3ebfb217e8b
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # raise
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

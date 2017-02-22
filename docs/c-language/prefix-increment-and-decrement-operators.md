@@ -1,8 +1,7 @@
 ---
 title: "前缀增量和减量运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "减量运算符"
   - "减量运算符, 语法"
   - "增量运算符, 类型"
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 前缀增量和减量运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

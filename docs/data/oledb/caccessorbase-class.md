@@ -1,8 +1,7 @@
 ---
 title: "CAccessorBase 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CAccessorBase 类"
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CAccessorBase 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

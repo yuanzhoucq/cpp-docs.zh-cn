@@ -1,8 +1,7 @@
 ---
 title: "外部链接 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "外部链接"
   - "外部链接, 关于外部链接"
   - "链接 [C++], 外部"
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 外部链接
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

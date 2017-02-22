@@ -1,8 +1,7 @@
 ---
 title: "/DEBUGTYPE（调试信息选项） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-DEBUGTYPE 链接器选项"
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # /DEBUGTYPE（调试信息选项）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

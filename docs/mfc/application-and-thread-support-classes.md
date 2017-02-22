@@ -1,8 +1,7 @@
 ---
 title: "应用程序和线程支持类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "线程处理 [MFC]"
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 应用程序和线程支持类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

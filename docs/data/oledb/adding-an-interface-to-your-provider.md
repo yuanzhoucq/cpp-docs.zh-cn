@@ -1,8 +1,7 @@
 ---
 title: "将接口添加到提供程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "OLE DB 提供程序模板, 对象接口"
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 将接口添加到提供程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

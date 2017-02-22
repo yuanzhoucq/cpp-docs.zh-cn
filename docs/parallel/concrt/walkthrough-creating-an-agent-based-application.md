@@ -1,8 +1,7 @@
 ---
 title: "演练：创建基于代理的应用程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "agent 类，示例"
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
 caps.latest.revision: 24
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 演练：创建基于代理的应用程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

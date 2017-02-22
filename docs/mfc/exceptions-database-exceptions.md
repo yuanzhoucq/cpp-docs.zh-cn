@@ -1,8 +1,7 @@
 ---
 title: "异常：数据库异常 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "ODBC 异常 [C++]"
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 异常：数据库异常
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

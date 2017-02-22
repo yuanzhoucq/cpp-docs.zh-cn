@@ -1,8 +1,7 @@
 ---
 title: "类型和存储 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 7fe008b2-520f-4b71-8cb5-35fd513146ce
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 类型和存储
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

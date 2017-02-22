@@ -1,8 +1,7 @@
 ---
 title: "帮助菜单合并 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "帮助，对于活动文档容器"
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 帮助菜单合并
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

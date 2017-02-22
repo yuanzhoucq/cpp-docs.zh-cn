@@ -1,8 +1,7 @@
 ---
 title: "如何：编写 parallel_for 循环 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "parallel_for 函数, 示例"
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 如何：编写 parallel_for 循环
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

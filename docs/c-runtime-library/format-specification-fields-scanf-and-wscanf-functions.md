@@ -1,8 +1,7 @@
 ---
 title: "格式规范字段：scanf 和 wscanf 函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,7 +21,6 @@ f1_keywords:
   - "scanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "宽度, scanf 函数中的规范"
   - "scanf 格式规范"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "类型字段"
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 格式规范字段：scanf 和 wscanf 函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "创建控制台应用程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "控制台应用程序, Win32"
 ms.assetid: aedfb6b3-ca1f-4e8e-8439-1b680810ee47
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 创建控制台应用程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

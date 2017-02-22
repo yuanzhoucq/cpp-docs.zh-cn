@@ -1,8 +1,7 @@
 ---
 title: "支持使用 wmain | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "wWinMain 函数"
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 支持使用 wmain
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

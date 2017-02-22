@@ -1,8 +1,7 @@
 ---
 title: "在 __asm 块中使用运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "方括号 [ ], __asm 块"
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 在 __asm 块中使用运算符
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

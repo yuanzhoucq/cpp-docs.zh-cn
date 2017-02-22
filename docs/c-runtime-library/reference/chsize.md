@@ -1,8 +1,7 @@
 ---
 title: "_chsize | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "_chsize"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_chsize 函数"
   - "chsize 函数"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "大小, 更改文件"
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _chsize
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

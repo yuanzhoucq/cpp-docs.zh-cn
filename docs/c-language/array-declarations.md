@@ -1,8 +1,7 @@
 ---
 title: "数组声明 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "数组 [C++], 声明"
   - "声明数组"
   - "多维数组"
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 数组声明
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

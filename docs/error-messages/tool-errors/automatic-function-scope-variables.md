@@ -1,8 +1,7 @@
 ---
 title: "自动（函数范围）变量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "变量, 自动"
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 自动（函数范围）变量
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

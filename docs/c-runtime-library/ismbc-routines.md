@@ -1,8 +1,7 @@
 ---
 title: "_ismbc 例程 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,16 +21,15 @@ f1_keywords:
   - "_ismbc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbc 例程"
   - "ismbc 例程"
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _ismbc 例程
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

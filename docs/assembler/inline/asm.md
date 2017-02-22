@@ -1,8 +1,7 @@
 ---
 title: "__asm | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "__asm 关键字 [C++], 与 asm 块"
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # __asm
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

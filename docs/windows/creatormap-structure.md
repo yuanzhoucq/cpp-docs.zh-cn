@@ -1,8 +1,7 @@
 ---
 title: "CreatorMap 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CreatorMap 结构"
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CreatorMap 结构
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

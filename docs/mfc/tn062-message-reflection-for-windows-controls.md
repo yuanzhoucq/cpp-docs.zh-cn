@@ -1,8 +1,7 @@
 ---
 title: "TN062：Windows 控件的消息反射 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,10 +37,10 @@ helpviewer_keywords:
   - "WM_NOTIFY 消息"
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # TN062：Windows 控件的消息反射
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

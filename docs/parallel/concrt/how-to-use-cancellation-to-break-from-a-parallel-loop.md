@@ -1,8 +1,7 @@
 ---
 title: "如何：使用取消中断 Parallel 循环 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "编写并行搜索算法 [并发运行时]"
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
 caps.latest.revision: 19
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 如何：使用取消中断 Parallel 循环
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

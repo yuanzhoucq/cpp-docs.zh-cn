@@ -1,8 +1,7 @@
 ---
 title: "命令传送类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC, 命令传送"
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 命令传送类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

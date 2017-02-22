@@ -1,8 +1,7 @@
 ---
 title: "说明符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "说明符, 在声明中"
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 说明符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

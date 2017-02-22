@@ -1,8 +1,7 @@
 ---
 title: "MDI 选项卡式组 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "选项卡式组"
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
 caps.latest.revision: 18
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # MDI 选项卡式组
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

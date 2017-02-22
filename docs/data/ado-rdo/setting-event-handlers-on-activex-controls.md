@@ -1,8 +1,7 @@
 ---
 title: "设置 ActiveX 控件的事件处理程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "事件 [C++], ActiveX 控件"
 ms.assetid: c076386f-c78b-4dc9-9201-a544252d5337
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 设置 ActiveX 控件的事件处理程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

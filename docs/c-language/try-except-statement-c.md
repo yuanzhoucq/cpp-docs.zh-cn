@@ -1,8 +1,7 @@
 ---
 title: "try-except 语句 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,7 +17,6 @@ f1_keywords:
   - "__try_cpp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__except 关键字 [C]"
   - "__except 关键字 [C], 在 try-except 中"
@@ -29,10 +27,10 @@ helpviewer_keywords:
   - "try-except 关键字 [C]"
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # try-except 语句 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

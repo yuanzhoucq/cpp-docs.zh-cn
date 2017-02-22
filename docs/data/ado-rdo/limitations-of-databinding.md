@@ -1,8 +1,7 @@
 ---
 title: "数据绑定的限制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "数据绑定 [C++], Visual C++ 中的限制"
 ms.assetid: 376d7738-5252-4caa-adda-a5486ab2a2a2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 数据绑定的限制
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

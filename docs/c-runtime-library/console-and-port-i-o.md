@@ -1,8 +1,7 @@
 ---
 title: "控制台和端口 I/O | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "I/O [CRT], 控制台"
   - "I/O [CRT], 端口"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "例程, 控制台和端口 I/O"
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 控制台和端口 I/O
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

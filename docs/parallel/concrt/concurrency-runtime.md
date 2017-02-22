@@ -1,8 +1,7 @@
 ---
 title: "并发运行时 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "并发运行时"
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
 caps.latest.revision: 40
-caps.handback.revision: 39
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 39
 ---
 # 并发运行时
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

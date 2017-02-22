@@ -1,8 +1,7 @@
 ---
 title: "Microsoft::WRL::Wrappers::Details 命名空间 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "Details 命名空间"
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Microsoft::WRL::Wrappers::Details 命名空间
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_status87, _statusfp, _statusfp2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "statusfp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "浮点函数, 获取状态字"
   - "浮点数字, 状态字"
@@ -50,10 +48,10 @@ helpviewer_keywords:
   - "状态字"
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _status87, _statusfp, _statusfp2
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "如何：在数据管道中使用转换器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "在数据管线中使用转换器 [并发运行时]"
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 如何：在数据管道中使用转换器
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "演练：从用户界面线程中移除工作 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "用户界面线程, 移除工作 [并发运行时]"
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
 caps.latest.revision: 14
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 演练：从用户界面线程中移除工作
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

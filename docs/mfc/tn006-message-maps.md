@@ -1,8 +1,7 @@
 ---
 title: "TN006：消息映射 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "Windows 消息 [C++], 消息映射"
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
 caps.latest.revision: 16
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # TN006：消息映射
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

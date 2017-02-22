@@ -1,8 +1,7 @@
 ---
 title: "Win32 应用程序向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Win32 项目向导"
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Win32 应用程序向导
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

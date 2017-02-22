@@ -1,8 +1,7 @@
 ---
 title: "CRowset 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CRowset 类"
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # CRowset 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

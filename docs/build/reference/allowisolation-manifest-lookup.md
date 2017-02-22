@@ -1,8 +1,7 @@
 ---
 title: "/ALLOWISOLATION（清单查找） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-ALLOWISOLATION 链接器选项"
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /ALLOWISOLATION（清单查找）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

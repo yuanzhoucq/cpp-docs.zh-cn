@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 2）C4653 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4653"
 ms.assetid: 90ec3317-3d39-4b4c-bcd1-97e7c799e1b6
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 编译器警告（等级 2）C4653
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

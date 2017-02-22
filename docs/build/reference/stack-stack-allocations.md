@@ -1,8 +1,7 @@
 ---
 title: "/STACK（堆栈分配） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "堆栈, 设置大小"
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # /STACK（堆栈分配）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "内部 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,16 +13,15 @@ f1_keywords:
   - "vc-pragma.intrinsic"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "内部杂注"
   - "杂注, 内部"
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 内部
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

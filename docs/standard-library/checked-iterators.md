@@ -1,8 +1,7 @@
 ---
 title: "经过检查的迭代器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "安全标准 C++ 库"
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
 caps.latest.revision: 30
-caps.handback.revision: 29
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # 经过检查的迭代器
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

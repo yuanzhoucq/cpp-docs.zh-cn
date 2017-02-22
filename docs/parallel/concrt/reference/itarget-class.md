@@ -1,8 +1,7 @@
 ---
 title: "ITarget 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ITarget 类"
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
 caps.latest.revision: 22
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # ITarget 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

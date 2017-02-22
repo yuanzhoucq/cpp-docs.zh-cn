@@ -1,8 +1,7 @@
 ---
 title: "浮点协处理器和调用约定 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "浮点数字, 协处理器"
 ms.assetid: 3cc6615a-b308-4cf7-9570-83e192a832b3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 浮点协处理器和调用约定
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

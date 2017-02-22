@@ -1,8 +1,7 @@
 ---
 title: "生存期和可见性摘要 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "生存期, 和可见性"
   - "可见性, 标识符"
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 生存期和可见性摘要
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

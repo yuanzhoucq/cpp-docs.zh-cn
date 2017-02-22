@@ -1,8 +1,7 @@
 ---
 title: "支持多字节字符集 (MBCS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "多字节字符 [C++]"
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 支持多字节字符集 (MBCS)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

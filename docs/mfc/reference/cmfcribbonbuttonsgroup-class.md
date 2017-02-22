@@ -1,8 +1,7 @@
 ---
 title: "CMFCRibbonButtonsGroup 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCRibbonButtonsGroup 类"
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
 caps.latest.revision: 34
-caps.handback.revision: 22
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # CMFCRibbonButtonsGroup 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

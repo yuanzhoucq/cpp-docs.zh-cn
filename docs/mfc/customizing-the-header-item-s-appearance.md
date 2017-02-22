@@ -1,8 +1,7 @@
 ---
 title: "自定义标题项的外观 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "标题控件, 项的自定义"
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 自定义标题项的外观
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

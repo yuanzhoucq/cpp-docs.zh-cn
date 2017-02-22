@@ -1,8 +1,7 @@
 ---
 title: "销毁框架窗口 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "窗口 [C++], 销毁"
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 销毁框架窗口
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

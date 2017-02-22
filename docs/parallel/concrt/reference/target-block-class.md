@@ -1,8 +1,7 @@
 ---
 title: "target_block 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "target_block 类"
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
 caps.latest.revision: 21
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # target_block 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

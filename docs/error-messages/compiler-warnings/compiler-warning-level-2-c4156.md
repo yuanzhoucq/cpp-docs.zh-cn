@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 2）C4156 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4156"
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编译器警告（等级 2）C4156
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

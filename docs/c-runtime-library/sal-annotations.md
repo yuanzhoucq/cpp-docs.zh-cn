@@ -1,8 +1,7 @@
 ---
 title: "SAL 批注 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__bcount 批注"
   - "__checkreturn 批注"
@@ -59,10 +57,10 @@ helpviewer_keywords:
   - "z 批注"
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # SAL 批注
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

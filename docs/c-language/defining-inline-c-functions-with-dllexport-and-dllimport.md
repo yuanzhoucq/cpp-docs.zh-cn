@@ -1,8 +1,7 @@
 ---
 title: "定义带有 dllexport 和 dllimport 的内联 C 函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport 特性 [C++]"
   - "dllexport 特性 [C++], 内联函数"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "内联函数 [C++], 带有 dllexport 和 dllimport"
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 定义带有 dllexport 和 dllimport 的内联 C 函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

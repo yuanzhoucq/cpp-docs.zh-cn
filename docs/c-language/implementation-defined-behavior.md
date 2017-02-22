@@ -1,8 +1,7 @@
 ---
 title: "实现定义的行为 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI [C++], C 标准"
   - "实现定义的行为"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "Visual C, Microsoft C 的可移植性"
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 实现定义的行为
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

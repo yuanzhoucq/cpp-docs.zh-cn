@@ -1,8 +1,7 @@
 ---
 title: "重写提供程序服务默认值 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "服务提供程序 [OLE DB]"
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 重写提供程序服务默认值
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

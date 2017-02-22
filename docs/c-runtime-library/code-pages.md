@@ -1,8 +1,7 @@
 ---
 title: "代码页 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.international"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI [C++], 代码页"
   - "字符集 [C++], 代码页"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "系统默认的代码页"
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 代码页
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

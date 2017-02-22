@@ -1,8 +1,7 @@
 ---
 title: "模块定义语句的规则 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "模块定义文件, 语句语法"
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 模块定义语句的规则
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

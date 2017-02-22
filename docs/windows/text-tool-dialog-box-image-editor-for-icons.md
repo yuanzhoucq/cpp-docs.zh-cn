@@ -1,8 +1,7 @@
 ---
 title: "“文本工具”对话框（图标的图像编辑器） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "vc.editors.texttool"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "文本，添加到图像"
   - "“文本工具”对话框"
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # “文本工具”对话框（图标的图像编辑器）
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

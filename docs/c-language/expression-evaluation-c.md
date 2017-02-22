@@ -1,8 +1,7 @@
 ---
 title: "表达式计算 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "表达式计算"
   - "表达式 [C++], 计算"
 ms.assetid: 9493f8cc-64a2-4284-9aaf-26eec11c4f40
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 表达式计算 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

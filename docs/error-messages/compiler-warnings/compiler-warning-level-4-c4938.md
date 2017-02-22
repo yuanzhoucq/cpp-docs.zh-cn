@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 4）C4938 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4938"
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 编译器警告（等级 4）C4938
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

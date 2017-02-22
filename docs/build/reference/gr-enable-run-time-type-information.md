@@ -1,8 +1,7 @@
 ---
 title: "/GR（启用运行时类型信息） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "RTTI 编译器选项"
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # /GR（启用运行时类型信息）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

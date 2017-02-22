@@ -1,8 +1,7 @@
 ---
 title: "Windows 套接字：使用存档的套接字的示例 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows 套接字 [C++], 使用存档"
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Windows 套接字：使用存档的套接字的示例
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

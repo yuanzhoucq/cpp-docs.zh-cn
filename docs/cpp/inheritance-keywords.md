@@ -1,8 +1,7 @@
 ---
 title: "继承关键字 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "关键字 [C++], 继承关键字"
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 继承关键字
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

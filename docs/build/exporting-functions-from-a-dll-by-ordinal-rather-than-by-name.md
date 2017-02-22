@@ -1,8 +1,7 @@
 ---
 title: "按序号而不是按名称从 DLL 导出函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "序号导出 [C++]"
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 按序号而不是按名称从 DLL 导出函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
