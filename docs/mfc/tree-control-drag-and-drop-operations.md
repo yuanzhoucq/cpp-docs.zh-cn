@@ -1,8 +1,7 @@
 ---
 title: "树控件拖放操作 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "树控件, 拖放操作"
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 树控件拖放操作
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

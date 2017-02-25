@@ -1,8 +1,7 @@
 ---
 title: "从公共控件接收通知 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "WM_NOTIFY 消息"
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 从公共控件接收通知
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

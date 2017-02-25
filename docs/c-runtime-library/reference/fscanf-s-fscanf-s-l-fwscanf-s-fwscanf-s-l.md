@@ -1,8 +1,7 @@
 ---
 title: "fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "fwscanf_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fscanf_s_l 函数"
   - "_ftscanf_s 函数"
@@ -52,10 +50,10 @@ helpviewer_keywords:
   - "流 [C++], 读取格式化数据自"
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
 caps.latest.revision: 28
-caps.handback.revision: 26
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

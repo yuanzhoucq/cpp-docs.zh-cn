@@ -1,8 +1,7 @@
 ---
 title: "附加终止注意事项 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "退出应用程序"
 ms.assetid: acbe2332-9d8a-4a58-a471-dd652a837384
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 附加终止注意事项
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

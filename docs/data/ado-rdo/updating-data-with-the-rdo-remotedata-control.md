@@ -1,8 +1,7 @@
 ---
 title: "使用 RDO RemoteData 控件更新数据 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "RemoteData 控件, 更新数据"
 ms.assetid: abb4175f-612e-4645-905e-c0fa918b0fd7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用 RDO RemoteData 控件更新数据
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

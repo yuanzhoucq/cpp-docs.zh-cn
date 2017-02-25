@@ -1,8 +1,7 @@
 ---
 title: "如何：在本机类型中保存对值类型的引用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "本机类型中的值类型引用"
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 如何：在本机类型中保存对值类型的引用
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

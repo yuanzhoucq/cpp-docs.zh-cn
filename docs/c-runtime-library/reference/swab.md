@@ -1,8 +1,7 @@
 ---
 title: "_swab | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "stdlib/_swab"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_swab 函数"
   - "字节, 交换"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "交换字节"
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
 caps.latest.revision: 18
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # _swab
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

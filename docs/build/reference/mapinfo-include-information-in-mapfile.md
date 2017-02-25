@@ -1,8 +1,7 @@
 ---
 title: "/MAPINFO（包含映射文件中的信息） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-MAPINFO 链接器选项"
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /MAPINFO（包含映射文件中的信息）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

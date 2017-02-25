@@ -1,8 +1,7 @@
 ---
 title: "运行 NMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "目标, 生成"
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 运行 NMAKE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

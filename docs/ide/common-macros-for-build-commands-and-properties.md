@@ -1,8 +1,7 @@
 ---
 title: "用于生成命令和属性的宏 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -103,10 +102,10 @@ helpviewer_keywords:
   - "WebDeployRoot 宏 $(WebDeployRoot)"
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
 caps.latest.revision: 22
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 用于生成命令和属性的宏
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

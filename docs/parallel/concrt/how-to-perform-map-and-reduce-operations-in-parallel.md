@@ -1,8 +1,7 @@
 ---
 title: "如何：并行执行映射和减少操作 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "parallel_reduce 函数例如"
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 如何：并行执行映射和减少操作
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

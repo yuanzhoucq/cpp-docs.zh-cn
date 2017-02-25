@@ -1,8 +1,7 @@
 ---
 title: "准备用于运行调试可执行文件的测试计算机 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "调试可执行文件, 准备测试计算机以运行"
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 准备用于运行调试可执行文件的测试计算机
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

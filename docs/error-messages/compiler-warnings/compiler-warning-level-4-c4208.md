@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 4）C4208 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4208"
 ms.assetid: 5cb0a36e-3fb5-422f-a5f9-e40b70776c27
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 编译器警告（等级 4）C4208
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

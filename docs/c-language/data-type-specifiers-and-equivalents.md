@@ -1,8 +1,7 @@
 ---
 title: "数据类型说明符和等效项 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "数据类型 [C++], 等效"
   - "数据类型 [C++], 说明符"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "零扩展"
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 数据类型说明符和等效项
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

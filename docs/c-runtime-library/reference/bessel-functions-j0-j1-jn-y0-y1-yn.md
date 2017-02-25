@@ -1,8 +1,7 @@
 ---
 title: "贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -39,7 +38,6 @@ f1_keywords:
   - "_yn"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "贝塞尔函数"
   - "_j0 函数"
@@ -50,10 +48,10 @@ helpviewer_keywords:
   - "_yn 函数"
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "向空的 Win32 应用程序添加文件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "项目 [C++], 添加项"
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 向空的 Win32 应用程序添加文件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

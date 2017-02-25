@@ -1,8 +1,7 @@
 ---
 title: "设置月历控件的日状态 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "月历控件, 日状态信息"
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 设置月历控件的日状态
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

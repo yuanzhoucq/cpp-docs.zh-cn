@@ -1,8 +1,7 @@
 ---
 title: "对于异常处理程序的限制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "限制, 异常处理程序"
 ms.assetid: 31d63524-0e8c-419f-b87c-061f4c0ea470
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 对于异常处理程序的限制
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "激活：谓词 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "谓词"
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 激活：谓词
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

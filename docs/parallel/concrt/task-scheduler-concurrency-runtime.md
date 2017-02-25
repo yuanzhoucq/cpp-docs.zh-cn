@@ -1,8 +1,7 @@
 ---
 title: "任务计划程序（并发运行时） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "wait 函数 [并发运行时]"
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
 caps.latest.revision: 42
-caps.handback.revision: 41
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # 任务计划程序（并发运行时）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

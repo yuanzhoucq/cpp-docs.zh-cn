@@ -1,8 +1,7 @@
 ---
 title: "标准对话框数据验证例程 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "标准对话框, 数据验证例程"
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
 caps.latest.revision: 13
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 标准对话框数据验证例程
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

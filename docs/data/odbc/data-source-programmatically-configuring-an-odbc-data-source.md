@@ -1,8 +1,7 @@
 ---
 title: "数据源：以编程方式配置 ODBC 数据源 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "SQLConfigDataSource 方法示例"
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 数据源：以编程方式配置 ODBC 数据源
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

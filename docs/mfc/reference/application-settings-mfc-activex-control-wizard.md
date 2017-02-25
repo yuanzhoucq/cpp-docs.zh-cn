@@ -1,8 +1,7 @@
 ---
 title: "应用程序设置, MFC ActiveX 控件向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC ActiveX 控件向导, 应用程序设置"
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 应用程序设置, MFC ActiveX 控件向导
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

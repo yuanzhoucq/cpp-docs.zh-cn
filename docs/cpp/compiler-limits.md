@@ -1,8 +1,7 @@
 ---
 title: "编译器限制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "cl.exe 编译器, 对语言构造的限制"
 ms.assetid: f1fa59c6-55b4-414b-80c5-3df72952160d
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 编译器限制
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

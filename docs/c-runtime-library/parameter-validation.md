@@ -1,8 +1,7 @@
 ---
 title: "参数验证 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "参数, 验证"
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
 caps.latest.revision: 9
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 参数验证
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

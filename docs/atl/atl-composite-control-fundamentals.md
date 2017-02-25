@@ -1,8 +1,7 @@
 ---
 title: "ATL 复合控件基础知识 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "复合控件, 关于复合控件"
 ms.assetid: 2ac78cdd-1ec4-4d78-871c-1bcc23b5253e
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ATL 复合控件基础知识
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

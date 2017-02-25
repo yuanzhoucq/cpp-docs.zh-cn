@@ -1,8 +1,7 @@
 ---
 title: "并行模式库 (PPL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "并行模式库 (PPL)"
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # 并行模式库 (PPL)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

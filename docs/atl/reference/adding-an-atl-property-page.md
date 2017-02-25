@@ -1,8 +1,7 @@
 ---
 title: "添加 ATL 属性页 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "属性页, 添加"
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 添加 ATL 属性页
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

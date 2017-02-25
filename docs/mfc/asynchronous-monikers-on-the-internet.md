@@ -1,8 +1,7 @@
 ---
 title: "Internet 上的异步名字对象 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Web 应用程序 [C++], 异步"
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Internet 上的异步名字对象
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

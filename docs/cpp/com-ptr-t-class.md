@@ -1,8 +1,7 @@
 ---
 title: "_com_ptr_t 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "_com_ptr_t 类"
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _com_ptr_t 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

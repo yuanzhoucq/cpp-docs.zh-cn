@@ -1,8 +1,7 @@
 ---
 title: "MFC 应用程序向导的复合文档支持 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # MFC 应用程序向导的复合文档支持
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

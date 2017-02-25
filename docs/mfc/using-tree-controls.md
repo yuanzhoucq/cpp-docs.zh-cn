@@ -1,8 +1,7 @@
 ---
 title: "使用树控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "树控件, 关于树控件"
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 使用树控件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "LINK 输入文件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "资源 [C++], 链接器文件"
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # LINK 输入文件
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

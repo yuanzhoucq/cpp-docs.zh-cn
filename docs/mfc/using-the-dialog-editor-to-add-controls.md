@@ -1,8 +1,7 @@
 ---
 title: "使用对话框编辑器添加控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows 公共控件 [C++], 添加"
 ms.assetid: d3f9f994-7e54-4656-a545-42c204557c36
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 使用对话框编辑器添加控件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

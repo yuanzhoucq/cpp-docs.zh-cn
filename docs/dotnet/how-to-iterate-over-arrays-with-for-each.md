@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 for each 循环访问数组 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "数组 [C++], 与每个交互"
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 如何：使用 for each 循环访问数组
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

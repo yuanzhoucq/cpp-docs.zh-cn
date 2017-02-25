@@ -1,8 +1,7 @@
 ---
 title: "添加 ATL 控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "控件 [ATL], 添加到项目"
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 添加 ATL 控件
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/GT（支持纤程安全的线程本地存储区） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "线程本地存储区"
 ms.assetid: 071fec79-c701-432b-9970-457344133159
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /GT（支持纤程安全的线程本地存储区）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

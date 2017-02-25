@@ -1,8 +1,7 @@
 ---
 title: "binomial_distribution 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "binomial_distribution 类 [TR1]"
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
 caps.latest.revision: 22
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # binomial_distribution 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

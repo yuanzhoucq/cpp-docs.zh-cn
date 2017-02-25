@@ -1,8 +1,7 @@
 ---
 title: "回调项和回调掩码 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "CListCtrl 类, 回调项和回调掩码"
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 回调项和回调掩码
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "编译器选项 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "x64 Visual C++ 编译器"
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 编译器选项
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

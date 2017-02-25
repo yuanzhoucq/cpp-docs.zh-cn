@@ -1,8 +1,7 @@
 ---
 title: "强制转换运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "强制转换运算符"
   - "运算符 [C++], 强制转换"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "类型转换, 强制转换运算符"
 ms.assetid: 43b90bbd-39ef-43e6-ae5d-e8a67a01de40
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 强制转换运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "失败挂钩 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "DLL 的延迟加载, 失败挂钩"
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 失败挂钩
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

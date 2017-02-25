@@ -1,8 +1,7 @@
 ---
 title: "从对话框对象检索数据 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "用户输入 [C++], 从 MFC 对话框检索"
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 从对话框对象检索数据
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

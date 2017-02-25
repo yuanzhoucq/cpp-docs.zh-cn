@@ -1,8 +1,7 @@
 ---
-title: "_getpid | Microsoft Docs"
+title: "getpid | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,20 +24,17 @@ apilocation:
   - "api-ms-win-crt-runtime-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_getpid"
+  - "getpid"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "getpid 函数"
-  - "_getpid 函数"
-  - "进程标识号"
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _getpid
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

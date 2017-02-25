@@ -1,8 +1,7 @@
 ---
 title: "/vmm、/vms、/vmv（通用表示形式） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "-vmv 编译器选项 [C++]"
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /vmm、/vms、/vmv（通用表示形式）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

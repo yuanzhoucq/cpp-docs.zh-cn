@@ -1,8 +1,7 @@
 ---
 title: "使用插入运算符并控制格式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "insertion 运算符"
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用插入运算符并控制格式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

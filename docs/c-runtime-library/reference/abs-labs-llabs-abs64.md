@@ -1,8 +1,7 @@
 ---
 title: "abs、 labs、 llabs、 _abs64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -39,7 +38,6 @@ f1_keywords:
   - "cmath/abs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "绝对值"
   - "abs 函数"
@@ -48,10 +46,10 @@ helpviewer_keywords:
   - "计算绝对值"
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # abs、 labs、 llabs、 _abs64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

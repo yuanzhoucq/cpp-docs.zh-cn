@@ -1,8 +1,7 @@
 ---
 title: "C 常量表达式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "常量表达式"
   - "常量表达式, 语法"
   - "表达式 [C++], 常量"
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # C 常量表达式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控件：优化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "无窗口 MFC ActiveX 控件"
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # MFC ActiveX 控件：优化
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

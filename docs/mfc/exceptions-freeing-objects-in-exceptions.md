@@ -1,8 +1,7 @@
 ---
 title: "异常：释放异常中的对象 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "try-catch 异常处理, 销毁对象"
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 异常：释放异常中的对象
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

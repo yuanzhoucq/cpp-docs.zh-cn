@@ -1,8 +1,7 @@
 ---
 title: "显式链接 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "显式链接 [C++]"
 ms.assetid: 1e13d960-a195-4e6d-9864-7d8f3a701f4b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 显式链接
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

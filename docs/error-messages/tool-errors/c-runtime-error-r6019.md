@@ -1,8 +1,7 @@
 ---
 title: "C 运行时错误 R6019 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "R6019"
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
 caps.latest.revision: 7
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # C 运行时错误 R6019
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

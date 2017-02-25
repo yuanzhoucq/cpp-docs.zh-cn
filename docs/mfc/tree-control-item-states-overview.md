@@ -1,8 +1,7 @@
 ---
 title: "树控件项状态概述 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "树控件, 项状态概述"
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 树控件项状态概述
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

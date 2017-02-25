@@ -1,8 +1,7 @@
 ---
 title: "剪贴板：复制和粘贴数据 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "剪贴板, 粘贴"
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 剪贴板：复制和粘贴数据
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

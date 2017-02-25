@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 combinable 来组合集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "使用 combinable 组合集 [并发运行时]"
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
 caps.latest.revision: 14
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 如何：使用 combinable 来组合集
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

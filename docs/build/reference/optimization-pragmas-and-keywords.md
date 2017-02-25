@@ -1,8 +1,7 @@
 ---
 title: "优化杂注和关键字 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "杂注, 用于优化"
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 优化杂注和关键字
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

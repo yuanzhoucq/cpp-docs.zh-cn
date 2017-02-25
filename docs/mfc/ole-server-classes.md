@@ -1,8 +1,7 @@
 ---
 title: "OLE 服务器类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "OLE 服务器文档"
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # OLE 服务器类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

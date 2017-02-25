@@ -1,8 +1,7 @@
 ---
 title: "处理反射消息 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "反映的消息, 处理"
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 处理反射消息
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

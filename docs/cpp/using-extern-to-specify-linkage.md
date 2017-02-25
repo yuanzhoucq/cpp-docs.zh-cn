@@ -1,8 +1,7 @@
 ---
 title: "使用 extern 指定链接 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "外部链接, extern 修饰符"
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 使用 extern 指定链接
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

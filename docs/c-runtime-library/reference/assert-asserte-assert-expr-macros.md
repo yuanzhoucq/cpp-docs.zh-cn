@@ -1,8 +1,7 @@
 ---
 title: "_ASSERT、_ASSERTE、_ASSERT_EXPR 宏 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "_ASSERT_EXPR"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "调试 [CRT], 使用宏"
   - "_ASSERTE 宏"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "_ASSERT_EXPR 宏"
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # _ASSERT、_ASSERTE、_ASSERT_EXPR 宏
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

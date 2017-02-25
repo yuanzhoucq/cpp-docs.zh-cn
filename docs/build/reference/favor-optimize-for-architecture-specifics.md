@@ -1,8 +1,7 @@
 ---
 title: "/favor（针对体系结构详细信息优化） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "/favor 编译器选项 [C++]"
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
 caps.latest.revision: 31
-caps.handback.revision: 31
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # /favor（针对体系结构详细信息优化）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

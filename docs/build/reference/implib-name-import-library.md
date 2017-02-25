@@ -1,8 +1,7 @@
 ---
 title: "/IMPLIB（命名导入库） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "导入库, 重写默认名称"
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /IMPLIB（命名导入库）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

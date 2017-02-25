@@ -1,8 +1,7 @@
 ---
 title: "不通过代码向导对控件进行类型安全的访问 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "对话框, 访问控件"
 ms.assetid: 325b4927-d49b-42b4-8e0b-fc84f31fb059
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 不通过代码向导对控件进行类型安全的访问
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

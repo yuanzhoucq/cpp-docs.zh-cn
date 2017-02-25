@@ -1,8 +1,7 @@
 ---
 title: "生成浏览信息文件：概述 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "bsc 文件, 关于 bsc 文件"
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 生成浏览信息文件：概述
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

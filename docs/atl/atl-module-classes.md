@@ -1,8 +1,7 @@
 ---
 title: "ATL Module 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "module 类"
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # ATL Module 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

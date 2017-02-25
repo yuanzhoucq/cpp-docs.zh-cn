@@ -1,8 +1,7 @@
 ---
 title: "_variant_t 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "VARIANT 对象, COM 封装"
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # _variant_t 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

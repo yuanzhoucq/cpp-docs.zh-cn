@@ -1,8 +1,7 @@
 ---
 title: "iostreams 约定 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "标准 C++ 库, iostreams"
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
 caps.latest.revision: 10
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # iostreams 约定
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

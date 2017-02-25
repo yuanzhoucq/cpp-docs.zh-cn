@@ -1,8 +1,7 @@
 ---
 title: "编译器错误 C2937 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2937"
 ms.assetid: 95671ca3-79f7-4b56-a5f2-a92296da1629
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 编译器错误 C2937
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

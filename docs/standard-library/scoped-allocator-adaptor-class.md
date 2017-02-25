@@ -1,8 +1,7 @@
 ---
 title: "scoped_allocator_adaptor 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "scoped_allocator_adaptor 类"
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 caps.latest.revision: 10
-caps.handback.revision: 1
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # scoped_allocator_adaptor 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

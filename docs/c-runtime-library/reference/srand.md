@@ -1,8 +1,7 @@
 ---
 title: "srand | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "srand"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "数字, 伪随机"
   - "数字, 随机"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "起点, 设置随机"
 ms.assetid: 7bf56dc5-5692-4182-a3c1-18af98d2dd1a
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # srand
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

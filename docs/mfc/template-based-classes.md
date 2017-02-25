@@ -1,8 +1,7 @@
 ---
 title: "基于模板的类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,10 +32,10 @@ helpviewer_keywords:
   - "类型安全集合"
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 基于模板的类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "使用应用程序向导创建桌面项目 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Visual C++ 项目, 创建"
 ms.assetid: 090c6423-deb8-4a00-817d-337eb5644544
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 使用应用程序向导创建桌面项目
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

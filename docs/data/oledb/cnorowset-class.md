@@ -1,8 +1,7 @@
 ---
 title: "CNoRowset 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CNoRowset 类"
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CNoRowset 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

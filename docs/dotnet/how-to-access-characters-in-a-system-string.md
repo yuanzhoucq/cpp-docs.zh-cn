@@ -1,8 +1,7 @@
 ---
 title: "如何：访问 System::String 中的字符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "字符串 [C++], 访问字符"
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 如何：访问 System::String 中的字符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

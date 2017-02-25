@@ -1,8 +1,7 @@
 ---
 title: "路径字段限制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,7 +16,6 @@ f1_keywords:
   - "_MAX_DRIVE"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_MAX_DIR 常量"
   - "_MAX_DRIVE 常量"
@@ -32,10 +30,10 @@ helpviewer_keywords:
   - "路径, 最大限制"
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 路径字段限制
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

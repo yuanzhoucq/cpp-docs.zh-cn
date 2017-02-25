@@ -1,8 +1,7 @@
 ---
 title: "调用示例：函数原型和调用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "示例 [C++], 调用约定"
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 调用示例：函数原型和调用
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

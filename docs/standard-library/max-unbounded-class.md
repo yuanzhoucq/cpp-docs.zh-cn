@@ -1,8 +1,7 @@
 ---
 title: "max_unbounded 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "max_unbounded 类"
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # max_unbounded 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

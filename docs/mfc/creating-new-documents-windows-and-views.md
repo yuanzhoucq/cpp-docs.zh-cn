@@ -1,8 +1,7 @@
 ---
 title: "创建新文档、窗口和视图 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,10 +34,10 @@ helpviewer_keywords:
   - "窗口 [C++], MDI"
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 创建新文档、窗口和视图
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

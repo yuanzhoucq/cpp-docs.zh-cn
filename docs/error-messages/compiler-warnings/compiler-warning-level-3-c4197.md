@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 3）C4197 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4197"
 ms.assetid: f766feef-82b0-4d81-8a65-33628c7db196
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 编译器警告（等级 3）C4197
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

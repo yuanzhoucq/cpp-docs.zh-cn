@@ -1,8 +1,7 @@
 ---
 title: "算法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "标准 C++ 库, 算法"
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
 caps.latest.revision: 10
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 算法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 PInvoke 从托管代码调用本机 DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "平台调用 [C++], 调用本机 DLL"
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 如何：使用 PInvoke 从托管代码调用本机 DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

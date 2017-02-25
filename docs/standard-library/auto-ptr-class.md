@@ -1,8 +1,7 @@
 ---
 title: "auto_ptr 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "auto_ptr 类"
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
 caps.latest.revision: 26
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # auto_ptr 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

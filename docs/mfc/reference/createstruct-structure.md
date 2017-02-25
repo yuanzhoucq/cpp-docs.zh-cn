@@ -1,8 +1,7 @@
 ---
 title: "CREATESTRUCT 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CREATESTRUCT 结构"
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
 caps.latest.revision: 14
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # CREATESTRUCT 结构
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

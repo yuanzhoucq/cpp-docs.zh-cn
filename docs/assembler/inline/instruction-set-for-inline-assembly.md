@@ -1,8 +1,7 @@
 ---
 title: "内联程序集的指令集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "指令集 [C++], 内联程序集"
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 内联程序集的指令集
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

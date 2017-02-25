@@ -1,8 +1,7 @@
 ---
 title: "TN020：ID 命名和编号约定 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "TN020"
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # TN020：ID 命名和编号约定
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

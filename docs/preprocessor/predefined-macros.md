@@ -1,8 +1,7 @@
 ---
 title: "预定义的宏 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -78,7 +77,6 @@ f1_keywords:
   - "__func__"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "时间戳，预处理器宏"
   - "cl.exe 编译器版本号"
@@ -154,10 +152,10 @@ helpviewer_keywords:
   - "__func__ 标识符"
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
 caps.latest.revision: 75
-caps.handback.revision: 75
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 75
 ---
 # 预定义的宏
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 1）C4678 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4678"
 ms.assetid: 0c588f34-595d-4e5c-9470-8723fca2cc06
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 编译器警告（等级 1）C4678
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

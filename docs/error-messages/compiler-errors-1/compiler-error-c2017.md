@@ -1,8 +1,7 @@
 ---
 title: "编译器错误 C2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2017"
 ms.assetid: 1083eed9-9906-4a97-883c-54e52d7e82cd
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 编译器错误 C2017
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

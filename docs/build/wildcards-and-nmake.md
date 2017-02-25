@@ -1,8 +1,7 @@
 ---
 title: "通配符和 NMAKE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "通配符, 展开"
 ms.assetid: 8f5d4b2a-8fa7-46a9-92ac-c8185c99239b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 通配符和 NMAKE
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

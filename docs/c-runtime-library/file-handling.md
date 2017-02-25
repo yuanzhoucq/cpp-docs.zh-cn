@@ -1,8 +1,7 @@
 ---
 title: "文件处理 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.files"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "文件 [C++], 处理"
   - "文件 [C++], 操作"
   - "文件 [C++], 打开"
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 文件处理
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

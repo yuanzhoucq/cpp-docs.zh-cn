@@ -1,8 +1,7 @@
 ---
 title: "创建提供程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "OLE DB 提供程序, 创建"
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 创建提供程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

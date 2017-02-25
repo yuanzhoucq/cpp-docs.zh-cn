@@ -1,8 +1,7 @@
 ---
 title: "is、isw 例程 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,16 +21,15 @@ f1_keywords:
   - "is"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "is 例程"
   - "isw 例程"
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # is、isw 例程
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

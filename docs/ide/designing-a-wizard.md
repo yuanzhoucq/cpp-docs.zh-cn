@@ -1,8 +1,7 @@
 ---
 title: "设计向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "向导 [C++], 自定义"
 ms.assetid: a7c0be7e-9297-4fed-83e3-5645c896d56b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 设计向导
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

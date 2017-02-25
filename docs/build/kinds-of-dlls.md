@@ -1,8 +1,7 @@
 ---
 title: "DLL 类型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC DLL [C++], 类型"
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # DLL 类型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

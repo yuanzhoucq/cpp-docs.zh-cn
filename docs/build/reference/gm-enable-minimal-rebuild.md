@@ -1,8 +1,7 @@
 ---
 title: "/Gm（启用最小重新生成） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "最小重新生成"
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /Gm（启用最小重新生成）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

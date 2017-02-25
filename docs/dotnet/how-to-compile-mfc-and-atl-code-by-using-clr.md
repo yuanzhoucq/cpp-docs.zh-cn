@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 /clr 编译 MFC 和 ATL 代码 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "规则 DLL [D++], /clr 编译器选项"
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 如何：使用 /clr 编译 MFC 和 ATL 代码
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

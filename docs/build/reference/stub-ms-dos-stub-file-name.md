@@ -1,8 +1,7 @@
 ---
 title: "/STUB（MS-DOS 存根 (stub) 文件名） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "Windows API [C++], 附加 MS-DOS stub 程序"
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /STUB（MS-DOS 存根 (stub) 文件名）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

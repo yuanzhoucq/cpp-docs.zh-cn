@@ -1,8 +1,7 @@
 ---
 title: "部署示例 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "示例 [C++], 部署"
 ms.assetid: a2904fea-2703-48dc-881b-5bfc1f11b67f
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 部署示例
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

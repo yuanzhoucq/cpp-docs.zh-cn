@@ -1,8 +1,7 @@
 ---
 title: "/DLL（生成 DLL） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "导出 DLL [C++], 指定导出"
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /DLL（生成 DLL）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

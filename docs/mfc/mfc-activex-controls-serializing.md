@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控件：序列化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "wVerMinor 全局常量"
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC ActiveX 控件：序列化
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "range_error 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "range_error 类"
 ms.assetid: 8afb3e88-fc49-4213-b096-ed63d7aea37c
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # range_error 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "性能和诊断中心的按配置文件优化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 性能和诊断中心的按配置文件优化
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

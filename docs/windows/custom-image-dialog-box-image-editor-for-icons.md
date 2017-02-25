@@ -1,8 +1,7 @@
 ---
 title: "“自定义图像”对话框（图标的图像编辑器） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "“自定义图像”对话框"
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
 caps.latest.revision: 8
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # “自定义图像”对话框（图标的图像编辑器）
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

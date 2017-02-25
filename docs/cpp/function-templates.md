@@ -1,8 +1,7 @@
 ---
 title: "函数模板 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "模板, 函数"
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 函数模板
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

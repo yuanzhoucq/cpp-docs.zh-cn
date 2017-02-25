@@ -1,8 +1,7 @@
 ---
 title: "应用程序信息和管理 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "应用程序 [MFC], 管理"
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 caps.latest.revision: 17
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 应用程序信息和管理
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "开发您自己的 Helper 函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Helper 函数"
 ms.assetid: a845429d-68b1-4e14-aa88-f3f5343bd490
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 开发您自己的 Helper 函数
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

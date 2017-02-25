@@ -1,8 +1,7 @@
 ---
 title: "为提供程序启用或禁用服务 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "服务提供程序 [OLE DB]"
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 为提供程序启用或禁用服务
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

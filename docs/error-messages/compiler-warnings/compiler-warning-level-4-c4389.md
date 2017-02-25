@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 4）C4389 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4389"
 ms.assetid: fc0e3a8e-f766-437c-b7f1-e61abb2a8765
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编译器警告（等级 4）C4389
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

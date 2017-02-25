@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 parallel_invoke 来执行并行操作 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "并行调用多个函数 [并发运行时]"
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
 caps.latest.revision: 18
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 如何：使用 parallel_invoke 来执行并行操作
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

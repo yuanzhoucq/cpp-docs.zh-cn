@@ -1,8 +1,7 @@
 ---
 title: "/DRIVER（Windows NT 内核模式驱动程序） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "内核模式驱动程序"
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /DRIVER（Windows NT 内核模式驱动程序）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

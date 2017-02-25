@@ -1,8 +1,7 @@
 ---
 title: "RDO 数据绑定 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RDO [C++], 数据绑定 ActiveX 控件"
 ms.assetid: ba42e410-4eb4-4a80-a7ed-f7f68881b2bc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # RDO 数据绑定
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

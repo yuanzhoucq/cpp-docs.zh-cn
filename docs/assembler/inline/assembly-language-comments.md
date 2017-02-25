@@ -1,8 +1,7 @@
 ---
 title: "汇编语言注释 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "宏 [C++], 汇编语言"
 ms.assetid: 0dc10850-77f5-426e-9dab-185ea28e06e4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 汇编语言注释
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

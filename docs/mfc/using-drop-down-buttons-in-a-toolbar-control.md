@@ -1,8 +1,7 @@
 ---
 title: "使用工具栏控件中的下拉按钮 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "工具栏 [C++], 下拉按钮"
 ms.assetid: b859f758-d2f6-40d9-9c26-0ff61993b9b2
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 使用工具栏控件中的下拉按钮
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

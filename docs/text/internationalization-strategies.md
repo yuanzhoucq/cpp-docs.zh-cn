@@ -1,8 +1,7 @@
 ---
 title: "国际化策略 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "Windows API [C++], 国际编程策略"
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 国际化策略
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "自动化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "方法 [MFC], 自动化"
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
 caps.latest.revision: 13
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 自动化
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

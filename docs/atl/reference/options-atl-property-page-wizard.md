@@ -1,8 +1,7 @@
 ---
 title: "选项，ATL 属性页向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ATL 属性页向导，选项"
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 选项，ATL 属性页向导
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

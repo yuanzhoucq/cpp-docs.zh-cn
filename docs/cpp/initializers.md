@@ -1,8 +1,7 @@
 ---
 title: "初始值设定项 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "初始化数组, 初始值设定项"
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 初始值设定项
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

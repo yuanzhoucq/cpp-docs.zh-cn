@@ -1,8 +1,7 @@
 ---
 title: "特殊 CWinApp 服务 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,10 +40,10 @@ helpviewer_keywords:
   - "shell, 注册文件类型"
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
 caps.latest.revision: 10
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 特殊 CWinApp 服务
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

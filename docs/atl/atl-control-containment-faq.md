@@ -1,8 +1,7 @@
 ---
 title: "ATL 控件包含常见问题 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "使用 ATL 承载控件"
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
 caps.latest.revision: 15
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # ATL 控件包含常见问题
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

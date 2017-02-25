@@ -1,8 +1,7 @@
 ---
 title: "CL 选项的顺序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "cl.exe 编译器, 设置选项"
 ms.assetid: 300908ce-ae00-4b45-964b-e4e69ff6777b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CL 选项的顺序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

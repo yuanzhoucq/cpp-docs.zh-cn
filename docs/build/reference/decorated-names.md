@@ -1,8 +1,7 @@
 ---
 title: "修饰名 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "名称 [C++], 修饰"
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 修饰名
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

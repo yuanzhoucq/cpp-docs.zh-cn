@@ -1,8 +1,7 @@
 ---
 title: "如何：迁移到 /clr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "升级 Visual C++ 应用程序, /clr 编译器选项"
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 caps.latest.revision: 37
-caps.handback.revision: 37
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # 如何：迁移到 /clr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

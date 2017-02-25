@@ -1,8 +1,7 @@
 ---
 title: "对 Rebar 控件使用对话栏 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "WS_EX_TRANSPARENT 样式"
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 对 Rebar 控件使用对话栏
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

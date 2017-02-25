@@ -1,8 +1,7 @@
 ---
 title: "Win32 Internet 扩展 (WinInet) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "WinInet 类, 关于 WinInet 类"
 ms.assetid: f8c80f0b-ce14-4f0d-a3cf-4f7d8c5cca59
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Win32 Internet 扩展 (WinInet)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

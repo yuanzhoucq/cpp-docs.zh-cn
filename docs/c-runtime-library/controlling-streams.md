@@ -1,8 +1,7 @@
 ---
 title: "控制流 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "Controlling Streams"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "控制流"
   - "流"
   - "流, 控制"
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 控制流
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

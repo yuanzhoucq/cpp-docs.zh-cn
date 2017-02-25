@@ -1,8 +1,7 @@
 ---
 title: "流的定义 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "流 [C++], 在 iostream 类中"
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 流的定义
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

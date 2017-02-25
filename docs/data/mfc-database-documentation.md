@@ -1,8 +1,7 @@
 ---
 title: "MFC 数据库文档 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "ODBC [C++], MFC"
 ms.assetid: bb120282-cd0d-4bf4-a27c-93b3501fb3a0
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # MFC 数据库文档
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

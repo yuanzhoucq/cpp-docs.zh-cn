@@ -1,8 +1,7 @@
 ---
 title: "特定于语言的处理程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 6503e0cd-2d3a-4330-a925-8bed8c27c2be
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 特定于语言的处理程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

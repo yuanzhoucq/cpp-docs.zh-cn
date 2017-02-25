@@ -1,8 +1,7 @@
 ---
 title: "兼容性 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "兼容性"
   - "兼容性, C 运行库"
   - "CRT, 兼容性"
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 兼容性
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

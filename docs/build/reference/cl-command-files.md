@@ -1,8 +1,7 @@
 ---
 title: "CL 命令文件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "命令文件, CL 编译器"
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # CL 命令文件
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

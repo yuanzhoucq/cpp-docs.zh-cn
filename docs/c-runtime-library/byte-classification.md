@@ -1,8 +1,7 @@
 ---
 title: "字节分类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.types.bytes"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "字节分类例程"
   - "字节, 测试"
   - "代码页 932"
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 字节分类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

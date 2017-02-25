@@ -1,8 +1,7 @@
 ---
 title: "派生消息映射 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "消息, 路由"
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 派生消息映射
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

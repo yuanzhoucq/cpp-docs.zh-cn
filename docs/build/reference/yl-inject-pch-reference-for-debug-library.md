@@ -1,8 +1,7 @@
 ---
 title: "/Yl（为调试库插入 PCH 引用） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-Yl 编译器选项 [C++]"
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # /Yl（为调试库插入 PCH 引用）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

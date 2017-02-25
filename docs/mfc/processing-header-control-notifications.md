@@ -1,8 +1,7 @@
 ---
 title: "处理标题控件通知 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "通知, 针对 CHeaderCtrl 的处理"
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 处理标题控件通知
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "项目生成错误 PRJ0031 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PRJ0031"
 ms.assetid: b42435c6-e570-4f8e-9ad5-12a7ea69ccb2
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 项目生成错误 PRJ0031
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

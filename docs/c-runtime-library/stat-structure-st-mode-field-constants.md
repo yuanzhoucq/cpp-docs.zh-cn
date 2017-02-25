@@ -1,8 +1,7 @@
 ---
 title: "_stat 结构 st_mode 字段常量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,7 +25,6 @@ f1_keywords:
   - "_S_IFREG"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_S_IEXEC 常量"
   - "_S_IFCHR 常量"
@@ -47,10 +45,10 @@ helpviewer_keywords:
   - "stat 结构, 常量"
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _stat 结构 st_mode 字段常量
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

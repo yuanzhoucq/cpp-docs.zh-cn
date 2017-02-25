@@ -1,8 +1,7 @@
 ---
 title: "结构、样式、回调和消息映射 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "样式, MFC"
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 结构、样式、回调和消息映射
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

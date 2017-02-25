@@ -1,8 +1,7 @@
 ---
 title: "/Zc:implicitNoexcept（隐式异常说明符） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-Zc:implicitNoexcept"
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /Zc:implicitNoexcept（隐式异常说明符）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

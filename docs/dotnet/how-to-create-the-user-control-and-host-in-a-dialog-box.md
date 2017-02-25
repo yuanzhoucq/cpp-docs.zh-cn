@@ -1,8 +1,7 @@
 ---
 title: "如何：创建用户控件并将它承载在对话框中 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Windows 窗体 [C++], MFC 支持"
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # 如何：创建用户控件并将它承载在对话框中
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

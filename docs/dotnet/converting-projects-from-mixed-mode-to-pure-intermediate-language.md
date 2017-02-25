@@ -1,8 +1,7 @@
 ---
 title: "将项目从混合模式转换为纯中间语言项目 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "项目 [C++], 转换到中间语言"
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 将项目从混合模式转换为纯中间语言项目
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CConstantTransition 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CConstantTransition 类"
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
 caps.latest.revision: 17
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # CConstantTransition 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

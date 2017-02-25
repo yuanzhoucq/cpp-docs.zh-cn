@@ -1,8 +1,7 @@
 ---
 title: "/Zc:forScope（强制 for 循环范围中的一致性） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Zc 编译器选项 [C++]"
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # /Zc:forScope（强制 for 循环范围中的一致性）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

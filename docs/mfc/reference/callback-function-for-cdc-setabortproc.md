@@ -1,8 +1,7 @@
 ---
 title: "Callback Function for CDC::SetAbortProc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "回调函数, 对于 CDC::SetAbortProc"
 ms.assetid: daa36d5d-15de-40fc-8d37-a865d06c4710
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Callback Function for CDC::SetAbortProc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

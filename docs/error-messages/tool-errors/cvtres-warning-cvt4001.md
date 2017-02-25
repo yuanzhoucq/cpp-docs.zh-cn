@@ -1,8 +1,7 @@
 ---
 title: "CVTRES 警告 CVT4001 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CVT4001"
 ms.assetid: 39c13bc2-92fa-4d79-8171-039b27329dcc
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # CVTRES 警告 CVT4001
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

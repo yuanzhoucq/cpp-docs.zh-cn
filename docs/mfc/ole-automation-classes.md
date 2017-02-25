@@ -1,8 +1,7 @@
 ---
 title: "OLE 自动化类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "OLE 自动化, 类"
 ms.assetid: 96e5372b-ff8a-4da1-933b-4d9bbf4dceb3
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # OLE 自动化类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

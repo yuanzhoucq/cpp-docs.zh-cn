@@ -1,8 +1,7 @@
 ---
 title: "控件条 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "工具栏 [C++], 控件条"
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 控件条
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "与 Rich Edit 控件相关的类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "Rich Edit 控件, 类相关于"
 ms.assetid: 4b31c2cc-6ea1-4146-b7c5-b0b5b419f14d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 与 Rich Edit 控件相关的类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

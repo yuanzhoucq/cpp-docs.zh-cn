@@ -1,8 +1,7 @@
 ---
 title: "ATL 数据库类（OLE DB 模板） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB 模板 [C++], ATL 数据库类"
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # ATL 数据库类（OLE DB 模板）
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

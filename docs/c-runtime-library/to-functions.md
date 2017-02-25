@@ -1,8 +1,7 @@
 ---
 title: "to 函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "To"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "大小写, 转换"
   - "字符, 转换"
@@ -32,10 +30,10 @@ helpviewer_keywords:
   - "大写, 转换字符串"
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # to 函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

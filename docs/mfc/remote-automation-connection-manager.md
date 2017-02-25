@@ -1,8 +1,7 @@
 ---
 title: "远程自动化连接管理器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "远程自动化, 配置客户端和服务器计算机"
 ms.assetid: 562eb7bc-f95c-46ad-ac97-f0dfa98362af
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 远程自动化连接管理器
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

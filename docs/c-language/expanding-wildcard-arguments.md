@@ -1,8 +1,7 @@
 ---
 title: "扩展通配符参数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "星号通配符"
   - "扩展通配符参数"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "通配符, 展开"
 ms.assetid: 80a11c4b-0199-420e-a342-cf1d803be5bc
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 扩展通配符参数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

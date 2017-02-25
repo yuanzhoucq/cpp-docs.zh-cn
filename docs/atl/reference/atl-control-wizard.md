@@ -1,8 +1,7 @@
 ---
 title: "ATL 控件向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "控件 [ATL], 添加到项目"
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
 caps.latest.revision: 17
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # ATL 控件向导
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

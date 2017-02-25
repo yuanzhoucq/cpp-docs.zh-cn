@@ -1,8 +1,7 @@
 ---
 title: "多线程处理：编程提示 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "Windows 句柄映射 [C++]"
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 多线程处理：编程提示
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

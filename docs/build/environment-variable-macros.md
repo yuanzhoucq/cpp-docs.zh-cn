@@ -1,8 +1,7 @@
 ---
 title: "环境变量宏 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NMAKE 程序, 环境变量宏"
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 环境变量宏
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

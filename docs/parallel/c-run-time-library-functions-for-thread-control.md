@@ -1,8 +1,7 @@
 ---
 title: "线程控制的 C 运行库函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "线程处理 [C++], 控制线程"
 ms.assetid: 39d0529c-c392-4c6f-94f5-105d1e8054e4
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 线程控制的 C 运行库函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

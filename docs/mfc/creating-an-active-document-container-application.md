@@ -1,8 +1,7 @@
 ---
 title: "创建活动文档容器应用程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "MFC COM [C++], 活动文档包容"
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 创建活动文档容器应用程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

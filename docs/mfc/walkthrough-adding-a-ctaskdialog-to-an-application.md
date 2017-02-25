@@ -1,8 +1,7 @@
 ---
 title: "演练：向应用程序添加 CTaskDialog | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "演练 [C++], 对话框"
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
 caps.latest.revision: 6
-caps.handback.revision: 2
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # 演练：向应用程序添加 CTaskDialog
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

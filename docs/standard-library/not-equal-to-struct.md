@@ -1,8 +1,7 @@
 ---
 title: "not_equal_to 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "not_equal_to 结构"
 ms.assetid: 333fce09-4f51-44e0-ba26-533bccffd485
 caps.latest.revision: 19
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # not_equal_to 结构
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

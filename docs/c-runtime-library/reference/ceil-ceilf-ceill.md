@@ -1,8 +1,7 @@
 ---
 title: "ceil、ceilf、ceill | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "ceill"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "计算值的上限"
   - "ceil 函数"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "ceill 函数"
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # ceil、ceilf、ceill
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

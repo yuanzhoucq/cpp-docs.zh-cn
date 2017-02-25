@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 2 和等级 3）C4008 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4008"
 ms.assetid: fb45e535-cb68-4743-80e9-a6e34cfffeca
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编译器警告（等级 2 和等级 3）C4008
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

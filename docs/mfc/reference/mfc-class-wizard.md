@@ -1,8 +1,7 @@
 ---
 title: "MFC 类向导 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "向导 (MFC)"
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # MFC 类向导
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

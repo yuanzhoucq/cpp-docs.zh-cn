@@ -1,8 +1,7 @@
 ---
 title: "DontUseNewUseMake::operator new 运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "operator new 运算符"
 ms.assetid: 6af07a0d-2271-430c-9d9b-5a4223fed049
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # DontUseNewUseMake::operator new 运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

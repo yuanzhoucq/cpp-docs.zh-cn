@@ -1,8 +1,7 @@
 ---
 title: "Windows 套接字：数据报套接字 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows 套接字 [C++], 数据报"
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Windows 套接字：数据报套接字
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

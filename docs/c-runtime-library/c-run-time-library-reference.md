@@ -1,8 +1,7 @@
 ---
 title: "C 运行时库参考 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.runtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "CRT"
   - "CRT, 参考"
   - "运行库"
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # C 运行时库参考
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

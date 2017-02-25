@@ -1,8 +1,7 @@
 ---
 title: "从 DLL 导出 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "函数 [C++], 导出"
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 从 DLL 导出
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

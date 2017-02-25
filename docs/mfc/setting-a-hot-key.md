@@ -1,8 +1,7 @@
 ---
 title: "设置热键 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "键盘快捷键 [C++], 热键"
 ms.assetid: 6f3bc141-e346-4dce-9ca7-3e6b2c453f3f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 设置热键
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "数据类型映射 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "_TEXT"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_T 类型"
   - "_TCHAR 类型"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "TXCHAR 类型"
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 数据类型映射
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

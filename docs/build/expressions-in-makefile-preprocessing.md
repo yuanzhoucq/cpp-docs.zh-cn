@@ -1,8 +1,7 @@
 ---
 title: "生成文件预处理中的表达式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "预处理生成文件"
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 生成文件预处理中的表达式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

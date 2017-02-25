@@ -1,8 +1,7 @@
 ---
 title: "_InterlockedCompareExchangePointer 内部函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,10 +34,10 @@ helpviewer_keywords:
   - "InterlockedCompareExchangePointer_rel 内部函数"
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _InterlockedCompareExchangePointer 内部函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "HTML 文件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "向导 [C++], 自定义向导的用户界面"
 ms.assetid: 3b6ed080-6560-418b-b908-d84d71bdf145
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # HTML 文件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "条件表达式运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "条件运算符"
   - "表达式 [C++], 条件"
   - "运算符 [C++], 条件"
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 条件表达式运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

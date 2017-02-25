@@ -1,8 +1,7 @@
 ---
 title: "控制的转移 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "控制流, 传输控制"
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 控制的转移
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

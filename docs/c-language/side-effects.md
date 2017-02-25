@@ -1,8 +1,7 @@
 ---
 title: "副作用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "表达式计算, 副作用"
   - "表达式计算中的副作用"
 ms.assetid: d9b3004a-830e-43a0-bea5-8989d501d670
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 副作用
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

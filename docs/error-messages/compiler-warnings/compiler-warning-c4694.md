@@ -1,8 +1,7 @@
 ---
 title: "编译器警告 C4694 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4694"
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # 编译器警告 C4694
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

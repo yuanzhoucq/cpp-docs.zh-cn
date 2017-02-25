@@ -1,8 +1,7 @@
 ---
 title: "赋值运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -47,10 +46,10 @@ helpviewer_keywords:
   - "xor_eq 运算符"
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 赋值运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

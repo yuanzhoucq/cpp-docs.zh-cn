@@ -1,8 +1,7 @@
 ---
 title: "EVEN 和 ALIGN 指令 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "NOP（无操作指令）"
 ms.assetid: 7357ab2d-4a5c-43ca-accb-a5f21cdfcde5
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # EVEN 和 ALIGN 指令
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

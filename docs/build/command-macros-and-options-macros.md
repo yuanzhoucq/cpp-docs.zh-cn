@@ -1,8 +1,7 @@
 ---
 title: "命令宏和选项宏 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "options 宏"
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 命令宏和选项宏
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

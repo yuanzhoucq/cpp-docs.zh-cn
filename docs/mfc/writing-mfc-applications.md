@@ -1,8 +1,7 @@
 ---
 title: "编写 MFC 应用程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/16/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MFC [C++], Internet 应用程序"
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编写 MFC 应用程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

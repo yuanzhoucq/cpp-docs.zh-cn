@@ -1,8 +1,7 @@
 ---
 title: "Rich Edit 控件中的字符格式设置 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Rich Edit 控件, 字符格式设置"
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Rich Edit 控件中的字符格式设置
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

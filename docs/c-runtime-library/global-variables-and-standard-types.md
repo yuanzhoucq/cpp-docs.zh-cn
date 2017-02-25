@@ -1,8 +1,7 @@
 ---
 title: "全局变量和标准类型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.variables"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "全局变量, CRT"
   - "标准类型"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "类型 [CRT]"
 ms.assetid: 8f8bad6f-2b78-4068-a0dc-77d58d978920
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 全局变量和标准类型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

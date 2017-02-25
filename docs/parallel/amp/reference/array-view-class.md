@@ -1,8 +1,7 @@
 ---
 title: "array_view 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "array_view 类"
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # array_view 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

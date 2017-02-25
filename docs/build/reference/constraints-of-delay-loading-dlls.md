@@ -1,8 +1,7 @@
 ---
 title: "延迟加载 DLL 的约束 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL [C++], 约束"
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 延迟加载 DLL 的约束
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

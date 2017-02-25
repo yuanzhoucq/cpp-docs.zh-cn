@@ -1,8 +1,7 @@
 ---
 title: "对 ANSI 的支持 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/09/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC [C++], ANSI 支持"
 ms.assetid: f98440ad-90fc-42f5-bf74-975cd793c49c
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 对 ANSI 的支持
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "消息处理和映射 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC, 消息"
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 消息处理和映射
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

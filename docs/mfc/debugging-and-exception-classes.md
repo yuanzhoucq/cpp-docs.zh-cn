@@ -1,8 +1,7 @@
 ---
 title: "调试和异常类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "调试 [MFC], 异常类"
 ms.assetid: 0d158efd-2e62-452e-9d2a-d3c30dfee7f9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 调试和异常类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

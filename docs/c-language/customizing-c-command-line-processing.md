@@ -1,8 +1,7 @@
 ---
 title: "自定义 C 命令行处理 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_exec 函数"
   - "_setargv 函数"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "禁止显示环境处理"
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 自定义 C 命令行处理
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

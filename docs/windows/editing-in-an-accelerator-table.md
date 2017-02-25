@@ -1,8 +1,7 @@
 ---
 title: "在快捷键对应表中编辑 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "编辑快捷键对应表中的键盘快捷键 [c + +]"
 ms.assetid: 545b650b-4f26-4b20-8431-d942548443bd
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 在快捷键对应表中编辑
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

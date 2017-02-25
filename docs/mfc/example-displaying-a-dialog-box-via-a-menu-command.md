@@ -1,8 +1,7 @@
 ---
 title: "示例：通过菜单命令显示对话框 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "无模式对话框, 显示"
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 示例：通过菜单命令显示对话框
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

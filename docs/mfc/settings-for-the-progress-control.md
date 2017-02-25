@@ -1,8 +1,7 @@
 ---
 title: "进度控件的设置 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "进度控件 [C++], 设置"
 ms.assetid: f4616e91-74fa-4000-ba0d-d3ddc0ee075b
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 进度控件的设置
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

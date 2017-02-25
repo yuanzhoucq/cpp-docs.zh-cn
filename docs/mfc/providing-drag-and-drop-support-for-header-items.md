@@ -1,8 +1,7 @@
 ---
 title: "为标题项提供拖放支持 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "标题控件中的标题项"
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 为标题项提供拖放支持
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

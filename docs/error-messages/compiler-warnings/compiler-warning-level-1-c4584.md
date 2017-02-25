@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 1）C4584 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4584"
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编译器警告（等级 1）C4584
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

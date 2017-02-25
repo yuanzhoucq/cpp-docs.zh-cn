@@ -1,8 +1,7 @@
 ---
 title: "/O 选项（优化代码） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "性能, cle.exe 编译器"
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /O 选项（优化代码）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

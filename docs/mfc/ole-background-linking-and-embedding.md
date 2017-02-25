@@ -1,8 +1,7 @@
 ---
 title: "OLE 后台：链接和嵌入 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "OLE, 链接项"
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # OLE 后台：链接和嵌入
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

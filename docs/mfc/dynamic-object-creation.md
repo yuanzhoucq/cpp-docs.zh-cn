@@ -1,8 +1,7 @@
 ---
 title: "动态对象创建 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "对象 [C++], 在运行时动态地创建"
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 动态对象创建
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

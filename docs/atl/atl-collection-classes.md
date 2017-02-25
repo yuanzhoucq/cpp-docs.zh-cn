@@ -1,8 +1,7 @@
 ---
 title: "ATL 集合类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "traits 类"
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
 caps.latest.revision: 14
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # ATL 集合类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

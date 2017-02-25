@@ -1,8 +1,7 @@
 ---
 title: "tiled_extent 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
 caps.latest.revision: 9
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # tiled_extent 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

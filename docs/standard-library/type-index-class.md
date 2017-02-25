@@ -1,8 +1,7 @@
 ---
 title: "type_index 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "type_index 类"
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
 caps.latest.revision: 14
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # type_index 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "关于选择函数和宏的建议 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.functions"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "函数 [CRT], vs. 宏"
   - "宏, vs. 函数"
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 关于选择函数和宏的建议
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

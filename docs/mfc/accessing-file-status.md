@@ -1,8 +1,7 @@
 ---
 title: "访问文件状态 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "文件的状态"
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 访问文件状态
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

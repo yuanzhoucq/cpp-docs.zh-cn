@@ -1,8 +1,7 @@
 ---
 title: "如何：对生成文件项目启用 IntelliSense | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "生成文件项目, IntelliSense"
 ms.assetid: 9443f453-f18f-4f12-a9a1-ef9dbf8b188f
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 如何：对生成文件项目启用 IntelliSense
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

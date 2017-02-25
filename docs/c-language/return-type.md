@@ -1,8 +1,7 @@
 ---
 title: "返回类型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "数据类型 [C++], 函数返回类型"
   - "函数返回类型"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "返回值 [C++], Function 过程"
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 返回类型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

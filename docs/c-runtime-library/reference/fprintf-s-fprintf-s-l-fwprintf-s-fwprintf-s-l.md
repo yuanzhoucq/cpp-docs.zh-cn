@@ -1,8 +1,7 @@
 ---
 title: "fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "fwprintf_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fprintf_s_l 函数"
   - "_ftprintf_s 函数"
@@ -47,10 +45,10 @@ helpviewer_keywords:
   - "将格式化的数据打印到流"
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

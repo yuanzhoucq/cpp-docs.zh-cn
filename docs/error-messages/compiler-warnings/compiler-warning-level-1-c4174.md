@@ -1,8 +1,7 @@
 ---
 title: "编译器警告（等级 1）C4174 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4174"
 ms.assetid: 63301e51-24bc-43c4-bb11-252f7d513e9e
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 编译器警告（等级 1）C4174
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "strcoll 函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "strcoll"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "代码页, 用于字符串比较"
   - "strcoll 函数"
@@ -29,10 +27,10 @@ helpviewer_keywords:
   - "字符串 [C++], 按代码页进行比较"
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # strcoll 函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

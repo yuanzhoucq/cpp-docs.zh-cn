@@ -1,8 +1,7 @@
 ---
 title: "资源编译器警告 RC4002 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC4002"
 ms.assetid: a157bc55-1a75-4337-aee4-e2ba61ff8cfa
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 资源编译器警告 RC4002
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

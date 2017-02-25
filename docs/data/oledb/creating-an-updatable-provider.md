@@ -1,8 +1,7 @@
 ---
 title: "创建可更新的提供程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB 提供程序, 可更新的"
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 创建可更新的提供程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

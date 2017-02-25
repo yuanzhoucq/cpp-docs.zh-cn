@@ -1,8 +1,7 @@
 ---
 title: "创建发行版本时遇到的常见问题 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "意外的代码生成"
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 创建发行版本时遇到的常见问题
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

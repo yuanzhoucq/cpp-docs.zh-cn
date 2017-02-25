@@ -1,8 +1,7 @@
 ---
 title: "编译器错误 C2298 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2298"
 ms.assetid: eb0120ad-c850-4bdd-911d-0361229cc859
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 编译器错误 C2298
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

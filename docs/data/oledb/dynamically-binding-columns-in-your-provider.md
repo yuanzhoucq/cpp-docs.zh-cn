@@ -1,8 +1,7 @@
 ---
 title: "在提供程序中动态绑定列 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "提供程序 [C++], 动态列绑定"
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 在提供程序中动态绑定列
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

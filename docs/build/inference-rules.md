@@ -1,8 +1,7 @@
 ---
 title: "推理规则 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "规则, 推理"
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 推理规则
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

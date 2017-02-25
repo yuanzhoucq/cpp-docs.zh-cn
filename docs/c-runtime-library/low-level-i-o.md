@@ -1,8 +1,7 @@
 ---
 title: "低级别 I/O | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.io"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "文件句柄 [C++]"
   - "文件句柄 [C++], I/O 函数"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "低级别 I/O 例程"
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 低级别 I/O
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

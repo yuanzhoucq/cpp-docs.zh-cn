@@ -1,8 +1,7 @@
 ---
 title: "x86 内部函数列表 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "内部函数, x86"
 ms.assetid: cd50666a-0f46-4ba1-8308-3a4d3fa43be5
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # x86 内部函数列表
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

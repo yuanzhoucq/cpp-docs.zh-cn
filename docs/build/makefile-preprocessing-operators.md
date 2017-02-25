@@ -1,8 +1,7 @@
 ---
 title: "生成文件预处理运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "预处理 NMAKE 生成文件运算符"
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 生成文件预处理运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

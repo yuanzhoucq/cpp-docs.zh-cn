@@ -1,8 +1,7 @@
 ---
-title: "Allocators | Microsoft Docs"
+title: "&lt;allocators&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -12,14 +11,13 @@ ms.topic: "article"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "分配器"
-  - "标准 C++ 库, 分配器"
+  - "allocators 标头"
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Allocators
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "LOGBRUSH 结构 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LOGBRUSH 结构"
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # LOGBRUSH 结构
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

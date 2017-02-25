@@ -1,8 +1,7 @@
 ---
 title: "CDBPropSet 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CDBPropSet 类"
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # CDBPropSet 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

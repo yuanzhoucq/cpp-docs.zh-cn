@@ -1,8 +1,7 @@
 ---
 title: "连接到数据源 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "ODBC 数据源 [C++], 连接"
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 连接到数据源
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

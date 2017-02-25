@@ -1,8 +1,7 @@
 ---
 title: "点指令 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE 程序, 点指令"
 ms.assetid: ab35da65-30b6-48b7-87d6-61503d7faf9f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 点指令
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

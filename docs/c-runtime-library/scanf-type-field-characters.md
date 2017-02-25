@@ -1,8 +1,7 @@
 ---
 title: "scanf 类型字段字符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,15 +20,14 @@ f1_keywords:
   - "scanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "scanf 函数, 类型字段字符"
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # scanf 类型字段字符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

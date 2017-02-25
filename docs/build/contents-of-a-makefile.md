@@ -1,8 +1,7 @@
 ---
 title: "生成文件的内容 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "生成文件, 内容"
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 生成文件的内容
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "标准对话框数据交换例程 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "标准对话框, 数据交换例程"
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
 caps.latest.revision: 13
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 标准对话框数据交换例程
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

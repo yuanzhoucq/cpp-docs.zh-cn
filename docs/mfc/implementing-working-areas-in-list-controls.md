@@ -1,8 +1,7 @@
 ---
 title: "实现列表控件中的工作区域 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "列表控件中的工作区域"
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 实现列表控件中的工作区域
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

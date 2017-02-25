@@ -1,8 +1,7 @@
 ---
 title: "显示或隐藏对话框编辑器工具栏 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "对话框编辑器，显示或隐藏工具栏"
 ms.assetid: 93c255e1-90eb-48b6-8602-450acda75bed
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 显示或隐藏对话框编辑器工具栏
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

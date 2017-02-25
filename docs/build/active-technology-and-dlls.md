@@ -1,8 +1,7 @@
 ---
 title: "Active 技术和 DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "MFC DLL [C++], Active 技术"
 ms.assetid: 3ed27f8d-164a-4562-ad61-9f2333404cc7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Active 技术和 DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

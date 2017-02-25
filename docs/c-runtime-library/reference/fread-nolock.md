@@ -1,8 +1,7 @@
 ---
 title: "_fread_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "fread_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fread_nolock 函数"
   - "数据 [C++], 从输入流中读取"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "流 [C++], 读取数据自"
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _fread_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "命令修饰符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE 程序, 命令修饰符"
 ms.assetid: b661c432-210f-4f05-bc56-744a46e0fc0b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 命令修饰符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "数据类型常量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -50,7 +49,6 @@ f1_keywords:
   - "UINT_MAX"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_DBL_RADIX 常量"
   - "_DBL_ROUNDS 常量"
@@ -98,10 +96,10 @@ helpviewer_keywords:
   - "USHRT_MAX 常量"
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 数据类型常量
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

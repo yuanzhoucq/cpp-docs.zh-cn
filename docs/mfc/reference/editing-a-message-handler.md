@@ -1,8 +1,7 @@
 ---
 title: "编辑消息处理程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "消息处理, 编辑处理程序"
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 编辑消息处理程序
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

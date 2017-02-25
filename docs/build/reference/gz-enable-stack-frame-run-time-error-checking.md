@@ -1,8 +1,7 @@
 ---
 title: "/GZ（启用堆栈帧运行时错误检查） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "发行版本错误"
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /GZ（启用堆栈帧运行时错误检查）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

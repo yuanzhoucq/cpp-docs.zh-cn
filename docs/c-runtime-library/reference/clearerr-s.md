@@ -1,8 +1,7 @@
 ---
 title: "clearerr_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "clearerr_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "clearerr_s 函数"
   - "针对流的错误指示器"
   - "重置流错误指示器"
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # clearerr_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

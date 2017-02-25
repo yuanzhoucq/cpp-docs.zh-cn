@@ -1,8 +1,7 @@
 ---
 title: "显式卸载延迟加载的 DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "DLL 的延迟加载, 卸载"
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 显式卸载延迟加载的 DLL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

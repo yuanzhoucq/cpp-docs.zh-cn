@@ -1,8 +1,7 @@
 ---
 title: "NMAKE 警告 U4011 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U4011"
 ms.assetid: e8244514-eba6-4285-8853-7baeefdcd8a4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # NMAKE 警告 U4011
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

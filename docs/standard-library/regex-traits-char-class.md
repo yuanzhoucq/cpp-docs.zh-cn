@@ -1,8 +1,7 @@
 ---
 title: "regex_traits &lt; char &gt; 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "regex_traits < char > 类 [TR1]"
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
 caps.latest.revision: 17
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # regex_traits &lt; char &gt; 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

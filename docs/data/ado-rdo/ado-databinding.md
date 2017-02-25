@@ -1,8 +1,7 @@
 ---
 title: "ADO 数据绑定 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "数据绑定 [C++], ADO"
 ms.assetid: b7e9be06-ba40-42aa-b5ba-a8dc95382cbe
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ADO 数据绑定
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

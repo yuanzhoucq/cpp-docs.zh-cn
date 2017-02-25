@@ -1,8 +1,7 @@
 ---
 title: "输入流 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "读取数据 [C++], 从输入流"
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
 caps.latest.revision: 11
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 输入流
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

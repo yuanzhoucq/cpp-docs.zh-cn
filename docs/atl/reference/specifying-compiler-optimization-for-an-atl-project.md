@@ -1,8 +1,7 @@
 ---
 title: "为 ATL 项目指定编译器优化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "ATL_NO_VTABLE 宏"
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 为 ATL 项目指定编译器优化
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

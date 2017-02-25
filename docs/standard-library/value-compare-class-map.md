@@ -1,8 +1,7 @@
 ---
 title: "value_compare 类 (&lt;map&gt;) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "value_compare 类"
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
 caps.latest.revision: 21
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # value_compare 类 (&lt;map&gt;)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

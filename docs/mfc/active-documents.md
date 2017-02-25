@@ -1,8 +1,7 @@
 ---
 title: "活动文档 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "视图 [C++], 活动文档"
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 活动文档
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

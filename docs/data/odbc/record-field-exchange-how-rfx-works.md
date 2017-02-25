@@ -1,8 +1,7 @@
 ---
 title: "记录字段交换：RFX 的工作方式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "滚动 [C++], RFX"
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 记录字段交换：RFX 的工作方式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

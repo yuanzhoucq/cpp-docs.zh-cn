@@ -1,8 +1,7 @@
 ---
 title: "格式规范语法：printf 和 wprintf 函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +20,6 @@ f1_keywords:
   - "wprintf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "标志指令 printf 函数"
   - "printf 函数的格式规范字段"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "类型字段, printf 函数"
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 格式规范语法：printf 和 wprintf 函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

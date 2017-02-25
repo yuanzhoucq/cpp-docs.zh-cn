@@ -1,8 +1,7 @@
 ---
 title: "/Ob（内联函数展开） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,10 +34,10 @@ helpviewer_keywords:
   - "only __inline 编译器选项 [C++]"
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /Ob（内联函数展开）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "在内联程序集中使用和保留寄存器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "寄存器, 内联程序集"
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 在内联程序集中使用和保留寄存器
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

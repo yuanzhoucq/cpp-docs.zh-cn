@@ -1,8 +1,7 @@
 ---
 title: "make_signed 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "make_signed"
 ms.assetid: 686247c0-247c-496b-9b1b-ba9dcd633621
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # make_signed 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

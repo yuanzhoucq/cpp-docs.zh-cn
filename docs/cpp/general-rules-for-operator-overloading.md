@@ -1,8 +1,7 @@
 ---
 title: "运算符重载的一般规则 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "运算符重载, 规则"
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 运算符重载的一般规则
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_exec、_wexec 函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -40,7 +39,6 @@ f1_keywords:
   - "_wexec"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_exec 函数"
   - "_texecl 函数"
@@ -65,10 +63,10 @@ helpviewer_keywords:
   - "wexec 函数"
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _exec、_wexec 函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

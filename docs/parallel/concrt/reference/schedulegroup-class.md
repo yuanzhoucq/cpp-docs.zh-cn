@@ -1,8 +1,7 @@
 ---
 title: "ScheduleGroup 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ScheduleGroup 类"
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 caps.latest.revision: 20
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # ScheduleGroup 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

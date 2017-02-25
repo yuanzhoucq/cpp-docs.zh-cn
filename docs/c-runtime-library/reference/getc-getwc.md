@@ -1,8 +1,7 @@
 ---
 title: "getc、getwc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "getc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_gettc 函数"
   - "字符, 读取"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "流, 读取字符自"
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # getc、getwc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

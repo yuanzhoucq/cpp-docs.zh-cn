@@ -1,8 +1,7 @@
 ---
 title: "_InterlockedExchangePointer 内部函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "InterlockedExchangePointer_acq 内部函数"
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _InterlockedExchangePointer 内部函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

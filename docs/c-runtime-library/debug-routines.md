@@ -1,8 +1,7 @@
 ---
 title: "调试例程 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.debug"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "调试 [CRT], 使用宏"
   - "宏, 使用...进行调试"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "调试 [CRT]，运行时例程"
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 调试例程
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

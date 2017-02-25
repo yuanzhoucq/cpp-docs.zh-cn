@@ -1,8 +1,7 @@
 ---
 title: "标准 Windows 消息的处理程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows 消息 [C++], 处理程序"
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 标准 Windows 消息的处理程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

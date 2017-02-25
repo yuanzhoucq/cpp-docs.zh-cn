@@ -1,8 +1,7 @@
 ---
 title: "CD2DRadialGradientBrush 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CD2DRadialGradientBrush 类"
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
 caps.latest.revision: 17
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # CD2DRadialGradientBrush 类
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

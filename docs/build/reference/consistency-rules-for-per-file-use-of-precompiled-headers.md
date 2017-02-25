@@ -1,8 +1,7 @@
 ---
 title: "按文件使用预编译头的一致性规则 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "预编译的头文件, 一致性规则"
 ms.assetid: afd49365-48bc-41f4-b700-fe8297b944a1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 按文件使用预编译头的一致性规则
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

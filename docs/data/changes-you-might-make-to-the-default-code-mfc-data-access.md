@@ -1,8 +1,7 @@
 ---
 title: "可以对默认代码做的更改（MFC 数据访问） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "记录视图 [C++], 自定义默认代码"
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 可以对默认代码做的更改（MFC 数据访问）
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

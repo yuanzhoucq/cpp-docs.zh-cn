@@ -1,8 +1,7 @@
 ---
 title: "容器中的 RDO 数据控件承载模型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "RemoteData 控件, 承载模型"
 ms.assetid: ca598bac-9fef-40e6-b6cd-03d817e16b2e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 容器中的 RDO 数据控件承载模型
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

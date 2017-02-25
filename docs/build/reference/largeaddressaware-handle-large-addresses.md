@@ -1,8 +1,7 @@
 ---
 title: "/LARGEADDRESSAWARE（处理大地址） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-LARGEADDRESSAWARE 链接器选项"
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /LARGEADDRESSAWARE（处理大地址）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

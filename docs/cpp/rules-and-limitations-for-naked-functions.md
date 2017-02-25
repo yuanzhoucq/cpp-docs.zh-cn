@@ -1,8 +1,7 @@
 ---
 title: "针对 Naked 函数的规则和限制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "naked 函数"
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 针对 Naked 函数的规则和限制
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

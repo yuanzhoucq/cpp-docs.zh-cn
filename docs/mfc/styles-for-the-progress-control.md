@@ -1,8 +1,7 @@
 ---
 title: "进度控件的样式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "进度控件 [C++], 样式"
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 进度控件的样式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

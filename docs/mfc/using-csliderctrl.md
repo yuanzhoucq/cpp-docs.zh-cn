@@ -1,8 +1,7 @@
 ---
 title: "使用 CSliderCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "滑块控件, using"
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 使用 CSliderCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "如何：在状态栏中显示命令信息 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "状态栏, 消息区域"
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 如何：在状态栏中显示命令信息
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "目标 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "目标, 在 NMAKE 中指定"
 ms.assetid: 826ee849-4278-4c6e-97c3-79a2b5fe6463
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 目标
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

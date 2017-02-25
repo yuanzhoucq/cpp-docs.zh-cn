@@ -1,8 +1,7 @@
 ---
 title: "括号中的表达式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "表达式计算, 计算顺序"
   - "表达式 [C++], 计算"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "括号, 表达式"
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 括号中的表达式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

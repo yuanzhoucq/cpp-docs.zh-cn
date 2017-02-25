@@ -1,8 +1,7 @@
 ---
 title: "用户定义的工具 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "用户定义的工具（MFC 扩展）"
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
 caps.latest.revision: 18
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 用户定义的工具
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "C 逻辑运算符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "&& 运算符"
   - "|| 运算符"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "短路计算"
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C 逻辑运算符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

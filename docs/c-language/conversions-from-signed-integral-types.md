@@ -1,8 +1,7 @@
 ---
 title: "从带符号的整型转换 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "转换 [C++], 整数"
   - "数据类型转换 [C++], 有符号和无符号整数"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "类型转换 [C++], 有符号和无符号整数"
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 从带符号的整型转换
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "定义所有者描述的选项卡 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "选项卡, 所有者描述的"
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 定义所有者描述的选项卡
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

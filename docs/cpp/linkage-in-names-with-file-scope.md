@@ -1,8 +1,7 @@
 ---
 title: "具有文件范围的名称中的链接 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "静态变量, 外部声明"
 ms.assetid: 38d3fa5e-1861-466e-a590-84b86f7b184e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 具有文件范围的名称中的链接
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

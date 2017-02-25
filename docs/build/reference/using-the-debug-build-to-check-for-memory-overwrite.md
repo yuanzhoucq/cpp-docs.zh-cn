@@ -1,8 +1,7 @@
 ---
 title: "使用调试版本检查内存改写 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "内存, 改写"
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用调试版本检查内存改写
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

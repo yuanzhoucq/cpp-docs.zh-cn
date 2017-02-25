@@ -1,8 +1,7 @@
 ---
 title: "简单一般文本项目 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_TCHAR 类型"
   - "映射, TCHAR.H 数据类型"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "TCHAR.H 数据类型, 映射"
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 简单一般文本项目
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

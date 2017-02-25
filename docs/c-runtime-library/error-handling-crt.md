@@ -1,8 +1,7 @@
 ---
 title: "错误处理 (CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.errors"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "错误处理, C 例程"
   - "错误处理, 库例程"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "测试, 用于程序错误"
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 错误处理 (CRT)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

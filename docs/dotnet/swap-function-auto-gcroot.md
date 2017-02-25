@@ -1,8 +1,7 @@
 ---
 title: "swap 函数 (auto_gcroot) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "swap 函数"
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # swap 函数 (auto_gcroot)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

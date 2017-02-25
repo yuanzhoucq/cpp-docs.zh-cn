@@ -1,8 +1,7 @@
 ---
 title: "ato，_atol_l，_wtol，_wtol_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,7 +36,6 @@ f1_keywords:
   - "_wtol_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tstol 函数"
   - "atol 函数"
@@ -55,10 +53,10 @@ helpviewer_keywords:
   - "_wtol 函数"
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 caps.latest.revision: 22
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # ato，_atol_l，_wtol，_wtol_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

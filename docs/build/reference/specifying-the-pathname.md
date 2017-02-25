@@ -1,8 +1,7 @@
 ---
 title: "指定路径名 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "输出文件, 指定路径名"
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 指定路径名
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

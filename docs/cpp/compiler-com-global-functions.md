@@ -1,8 +1,7 @@
 ---
 title: "编译器 COM 全局函数 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "COM, 编译器支持"
 ms.assetid: 74449d26-50a2-47c7-b175-7cf2cf83533e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 编译器 COM 全局函数
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

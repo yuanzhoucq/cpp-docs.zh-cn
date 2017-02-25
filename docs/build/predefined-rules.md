@@ -1,8 +1,7 @@
 ---
 title: "预定义的规则 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NMAKE 中的预定义规则"
 ms.assetid: 638cdc3f-4aba-4b4f-96e3-ad65b0364f12
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 预定义的规则
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

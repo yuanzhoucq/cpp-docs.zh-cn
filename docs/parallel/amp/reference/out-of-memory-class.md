@@ -1,8 +1,7 @@
 ---
 title: "out_of_memory 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "out_of_memory 类"
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # out_of_memory 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

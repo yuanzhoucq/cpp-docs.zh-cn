@@ -1,8 +1,7 @@
 ---
 title: "C 标识符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "标识符"
   - "标识符, C"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "symbols, 区分大小写"
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # C 标识符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

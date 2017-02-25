@@ -1,8 +1,7 @@
 ---
 title: "标点和特殊字符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "# 预处理器运算符"
   - "字符, 特殊"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "特殊字符"
 ms.assetid: e239633e-36f6-4967-939c-bf2799323778
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 标点和特殊字符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

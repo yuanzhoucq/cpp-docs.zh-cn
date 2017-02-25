@@ -1,8 +1,7 @@
 ---
 title: "确定要使用的访问器类型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "行集合 [C++], 数据类型"
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 确定要使用的访问器类型
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "使用 DLL 的优点 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "链接 [C++], 动态与静态"
 ms.assetid: 8956c8ee-e7b3-446f-a0c6-462381747690
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 使用 DLL 的优点
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

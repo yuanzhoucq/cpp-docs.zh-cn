@@ -1,8 +1,7 @@
 ---
 title: "简单变量声明 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "声明变量, 简单"
   - "非类型化变量"
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 简单变量声明
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

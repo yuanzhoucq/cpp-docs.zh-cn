@@ -1,8 +1,7 @@
 ---
 title: "对话框的生命周期 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "无模式对话框, 生命周期"
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 对话框的生命周期
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

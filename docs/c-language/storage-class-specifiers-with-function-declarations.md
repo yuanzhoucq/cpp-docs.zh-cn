@@ -1,8 +1,7 @@
 ---
 title: "具有函数声明的存储类说明符 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "声明函数, 说明符"
   - "外部声明"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "说明符, 函数"
 ms.assetid: 801d7df2-efa9-4924-a725-274a5654cfd4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 具有函数声明的存储类说明符
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

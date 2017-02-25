@@ -1,8 +1,7 @@
 ---
 title: "HEAPSIZE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "HEAPSIZE .def 文件语句"
 ms.assetid: 3c4d3117-491d-41e6-a693-648b3a35eeb9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # HEAPSIZE
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

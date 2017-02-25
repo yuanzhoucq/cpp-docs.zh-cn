@@ -1,8 +1,7 @@
 ---
 title: "事务：在记录集中执行事务 (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "事务, 更新记录集"
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 事务：在记录集中执行事务 (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

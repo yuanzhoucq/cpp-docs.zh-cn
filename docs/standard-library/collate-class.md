@@ -1,8 +1,7 @@
 ---
 title: "collate 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "collate 类"
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 caps.latest.revision: 18
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # collate 类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/NOENTRY（无入口点） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "纯资源 DLL [C++], 创建"
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /NOENTRY（无入口点）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

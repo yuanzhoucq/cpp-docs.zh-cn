@@ -1,8 +1,7 @@
 ---
 title: "创建月历控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "月历控件, 创建"
 ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 创建月历控件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

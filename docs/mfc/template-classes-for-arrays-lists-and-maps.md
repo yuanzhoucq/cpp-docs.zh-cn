@@ -1,8 +1,7 @@
 ---
 title: "数组、列表和映射的模板类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "模板类, 对于数组/列表和映射"
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 数组、列表和映射的模板类
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "标准类型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -65,7 +64,6 @@ f1_keywords:
   - "_CRT_ALLOC_HOOK"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__finddata64_t 类型"
   - "__stat64 类型"
@@ -147,10 +145,10 @@ helpviewer_keywords:
   - "wint_t 类型"
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # 标准类型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

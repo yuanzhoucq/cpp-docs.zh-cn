@@ -1,8 +1,7 @@
 ---
 title: "/Fo（对象文件名） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "对象文件, 命名"
 ms.assetid: 0e6d593e-4e7f-4990-9e6e-92e1dcbcf6e6
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /Fo（对象文件名）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "unsupported_feature 类 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "unsupported_feature 类"
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # unsupported_feature 类
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

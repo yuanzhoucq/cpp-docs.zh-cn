@@ -1,8 +1,7 @@
 ---
 title: "MFC 桌面应用程序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,11 +18,11 @@ helpviewer_keywords:
   - "库, MFC"
   - "MFC, 关于 MFC"
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-caps.latest.revision: 26
-caps.handback.revision: 19
+caps.latest.revision: 25
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # MFC 桌面应用程序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

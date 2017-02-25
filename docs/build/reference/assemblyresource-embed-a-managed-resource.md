@@ -1,8 +1,7 @@
 ---
 title: "/ASSEMBLYRESOURCE（嵌入托管资源） | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-ASSEMBLYRESOURCE 链接器选项"
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /ASSEMBLYRESOURCE（嵌入托管资源）
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

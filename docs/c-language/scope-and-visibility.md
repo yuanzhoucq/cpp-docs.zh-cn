@@ -1,8 +1,7 @@
 ---
 title: "范围和可见性 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "文件范围 [C++]"
   - "范围, 等级"
   - "可见性"
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 范围和可见性
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

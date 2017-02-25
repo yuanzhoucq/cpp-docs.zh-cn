@@ -1,8 +1,7 @@
 ---
 title: "转储延迟加载的导入 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "导入（延迟加载）"
 ms.assetid: f766acf4-9df8-4b85-8cf6-0be3ffc4c124
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 转储延迟加载的导入
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

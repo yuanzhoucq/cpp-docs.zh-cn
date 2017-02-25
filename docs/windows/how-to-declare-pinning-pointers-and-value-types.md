@@ -1,8 +1,7 @@
 ---
 title: "如何：声明钉住指针和值类型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "值类型, 声明"
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 如何：声明钉住指针和值类型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

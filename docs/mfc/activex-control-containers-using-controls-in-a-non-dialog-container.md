@@ -1,8 +1,7 @@
 ---
 title: "ActiveX 控件容器：使用非对话框容器中的控件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CreateControl 方法"
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ActiveX 控件容器：使用非对话框容器中的控件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

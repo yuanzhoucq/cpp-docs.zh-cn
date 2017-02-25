@@ -1,8 +1,7 @@
 ---
 title: "MFC 数据库应用程序中的文件菜单 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "数据库应用程序 [C++]，“文件”菜单命令"
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # MFC 数据库应用程序中的文件菜单
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

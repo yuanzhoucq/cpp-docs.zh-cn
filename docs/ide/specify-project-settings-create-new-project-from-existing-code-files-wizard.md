@@ -1,8 +1,7 @@
 ---
 title: "“从现有代码文件创建新项目”向导 -&gt;“指定项目设置” | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "“从现有代码文件创建新项目”向导，项目设置"
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # “从现有代码文件创建新项目”向导 -&gt;“指定项目设置”
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

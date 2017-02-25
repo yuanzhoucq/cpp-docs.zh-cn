@@ -1,8 +1,7 @@
 ---
 title: "用户记录 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "用户记录, OLE DB 使用者模板"
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 用户记录
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
