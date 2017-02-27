@@ -1,98 +1,114 @@
 ---
-title: "_spawn, _wspawn 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcrt.dll"
-  - "msvcr120.dll"
-  - "msvcr100.dll"
-  - "msvcr90.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_spawn"
-  - "_tspawnlp"
-  - "_tspawnlpe"
-  - "_tspawnve"
-  - "_tspawnvp"
-  - "_tspawnvpe"
-  - "_tspawnl"
-  - "spawn"
-  - "_tspawnv"
-  - "_tspawnle"
-  - "wspawn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tspawnve 函数"
-  - "_spawn 函数"
-  - "_tspawnlpe 函数"
-  - "tspawnvpe 函数"
-  - "进程，正在创建"
-  - "tspawnve 函数"
-  - "_tspawnvp 函数"
-  - "spawn 函数"
-  - "tspawnl 函数"
-  - "tspawnlp 函数"
-  - "_tspawnvpe 函数"
-  - "_tspawnl 函数"
-  - "tspawnvp 函数"
-  - "tspawnv 函数"
-  - "进程，正在执行全新"
-  - "_tspawnv 函数"
-  - "tspawnle 函数"
-  - "进程创建"
-  - "_tspawnlp 函数"
-  - "tspawnlpe 函数"
-  - "_tspawnle 函数"
+title: "_spawn、_wspawn 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr80.dll
+- msvcr110_clr0400.dll
+- msvcr110.dll
+- msvcrt.dll
+- msvcr120.dll
+- msvcr100.dll
+- msvcr90.dll
+apitype: DLLExport
+f1_keywords:
+- _spawn
+- _tspawnlp
+- _tspawnlpe
+- _tspawnve
+- _tspawnvp
+- _tspawnvpe
+- _tspawnl
+- spawn
+- _tspawnv
+- _tspawnle
+- wspawn
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tspawnve function
+- _spawn functions
+- _tspawnlpe function
+- tspawnvpe function
+- processes, creating
+- tspawnve function
+- _tspawnvp function
+- spawn functions
+- tspawnl function
+- tspawnlp function
+- _tspawnvpe function
+- _tspawnl function
+- tspawnvp function
+- tspawnv function
+- processes, executing new
+- _tspawnv function
+- tspawnle function
+- process creation
+- _tspawnlp function
+- tspawnlpe function
+- _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _spawn, _wspawn 函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 1794395cd9e6684788458aad424336efbc421c0a
 
-每个 `_spawn` 函数创建并执行更新过程：  
+---
+# <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函数
+每个 `_spawn` 函数将创建并执行一个新进程：  
   
 |||  
 |-|-|  
-|[\_spawnl、\_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[\_spawnv、\_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|  
-|[\_spawnle、\_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[\_spawnve、\_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|  
-|[\_spawnlp、\_wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[\_spawnvp、\_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|  
-|[\_spawnlpe、\_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[\_spawnvpe、\_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|  
+|[_spawnl、_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv、_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|  
+|[_spawnle、_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve、_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|  
+|[_spawnlp、_wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp、_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|  
+|[_spawnlpe、_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe、_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|  
   
- 函数名结尾处的字母确定变体。  
+ 函数名称的结尾字母确定变体。  
   
  `e`  
- `envp`指向环境设置的数组指针，传递给新进程。  
+指向环境设置的指针的数组  `envp` 将传递给新进程。  
   
  `l`  
- 命令行声明被独自传送到 `_spawn` 函数.  当对更新过程的参数事先知道时通常使用该后缀。  
+ 将命令行参数单独传递给 `_spawn` 函数。 一般将在预先知道新进程的一些参数时使用此后缀。  
   
  `p`  
- 这些函数使用 `PATH` 环境变量查找要执行的文件。  
+ `PATH` 环境变量用于查找要执行的文件。  
   
  `v`  
- `argv`,命令行声明的数组指针被传递给 `_spawn`函数。  当对更新过程的参数是可变时使用该后缀。  
+指向命令行参数的指针的数组  `argv` 将传递给 `_spawn` 函数。 一般在新进程的一些参数可变时使用此后缀。  
   
-## 备注  
- `_spawn` 函数每个都创建并执行更新过程。  它们自动处理合适的多字节字符串参数，根据当前使用的多字节代码页识别多字节字符序列.  `_wspawn` 函数是 `_spawn` 函数的宽字符版本；不处理多字节字符字符串。  否则，`_wspawn` 函数具有相同的行为与其 `_spawn` 对等。  
+## <a name="remarks"></a>备注  
+ 每个 `_spawn` 函数都将创建并执行一个新进程。 它们将根据情况自动处理多字节字符串参数，根据当前正在使用中的多字节代码页识别多字节字符序列。 `_wspawn` 函数是 `_spawn` 函数的宽字符版本；它们不处理多字节字符串。 否则，`_wspawn` 函数的行为将与其 `_spawn` 对等函数的一致。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tspawnl`|`_spawnl`|`_spawnl`|`_wspawnl`|  
 |`_tspawnle`|`_spawnle`|`_spawnle`|`_wspawnle`|  
 |`_tspawnlp`|`_spawnlp`|`_spawnlp`|`_wspawnlp`|  
@@ -102,63 +118,63 @@ caps.handback.revision: 24
 |`_tspawnvp`|`_spawnvp`|`_spawnvp`|`_wspawnvp`|  
 |`_tspawnvpe`|`_spawnvpe`|`_spawnvpe`|`_wspawnvpe`|  
   
- 足够的内存必须可用提供用于加载和执行更新过程。  `mode` 参数以确定调用进程执行的操作在 `_spawn`的期间及之中。  以下 `mode` 的值在 Process.h 定义：  
+ 加载和执行新进程必须有足够的内存可用。 `mode` 参数确定调用进程在 `_spawn` 之前以及期间将执行的操作。 `mode` 的下列值是在 Process.h 中定义的：  
   
  `_P_OVERLAY`  
- 为更新覆盖一过程调用的过程，使用调用进程 \(作用与 `_exec` 调用相同\)。  
+ 使用新进程覆盖调用进程，销毁调用进程（效果与 `_exec` 调用相同）。  
   
  `_P_WAIT`  
- 挂起的调用线程，直至执行过程的更新完成 \(同步 `_spawn`\)。  
+ 在新进程执行完成之前挂起调用线程（同步 `_spawn`）。  
   
- `_P_NOWAIT` 或  `_P_NOWAITO`  
- 继续在更新过程 \(异步 `_spawn`\) 的同时执行一个名为的进程。  
+ `_P_NOWAIT` 或 `_P_NOWAITO`  
+ 继续与新进程一起并发执行调用进程（异步 `_spawn`）。  
   
  `_P_DETACH`  
- 继续执行调用进程；更新过程在后台运行没有到控制台或键盘的访问权限。  调用 `_cwait` 更新过程失败 \(异步 `_spawn`\)。  
+ 继续执行调用进程；新进程将在后台运行，而且不会访问控制台或键盘。 针对新进程调用 `_cwait` 将失败（异步 `_spawn`）。  
   
- `cmdname` 执行参数指定的文件，当更新过程，并可以指定完整路径 \(从根\)，一部分路径 \(从当前工作目录\)，或文件名。  如果 `cmdname` 没有文件扩展名,在 \(.\)期间不结束，`_spawn` 函数先尝试 .com 文件扩展然后 .exe 文件扩展名、.bat 文件扩展名和最后 .cmd 文件扩展名。  
+ `cmdname` 参数指定将作为新进程执行的文件，并可以指定完整路径（从根）、部分路径（从当前工作目录）或仅指定文件名。 如果 `cmdname` 没有文件扩展名或不是以句点 (.) 结尾的，则 `_spawn` 函数将先依次尝试 .com 文件扩展名、.exe 文件扩展名、.bat 文件扩展名和 .cmd 文件扩展名。  
   
- 如果 `cmdname` 具有文件扩展名，因此，只有使用该扩展。  如果 `cmdname` 在一段时期中结束, `_spawn` 函数不用文件扩展名搜索 `cmdname`。  `_spawnlp`, `_spawnlpe`, `_spawnvp` 和  `_spawnvpe` 搜索 `cmdname` \(使用相同步骤\) 在目录中由环境变量 `PATH`指定 .  
+ 如果 `cmdname` 具有文件扩展名，则仅使用该扩展名。 如果 `cmdname` 以句点结尾，则 `_spawn` 调用将搜索不带文件扩展名的 `cmdname`。 `_spawnlp`、`_spawnlpe`、`_spawnvp` 和 `_spawnvpe` 函数将在 `PATH` 环境变量指定的目录中搜索 `cmdname`（使用相同过程）。  
   
- 如果 `cmdname` 包含一个驱动器符或任何斜线\(即如果这是相对路径\), `_spawn` 只对指定文件调用搜索; 路径没有搜索.  
+ 如果 `cmdname` 包含驱动器名或任何斜线（即，如果它是相对路径），则 `_spawn` 调用将仅搜索指定文件；不会执行路径搜索。  
   
- 以前，其中数组大小为零。成功；函数 `errno` 当前行为是将 `errno` 触动越过在未成功，根据 C 标准。  如果需要模拟这一旧行为，调整 `errno` 为零在调用这些函数前面。  
-  
-> [!NOTE]
->  要确保正确的覆盖初始化和终止，请勿使用 `setjmp` 或 `longjmp` 函数进入或离开覆盖例程。  
-  
-## 为过程的参数  
- 若要将参数传递以更新过程，请提供一个或多个字符串指针，`_spawn` 调用中参数。  这些字符串形式指定的进程的参数列表。  窗体更新过程的字符串的默认长度参数列表不能超过 1024 个字节。  终止 null 字符 \(“\\0 ”\) 每个字符串不包含在计数中，但是空格字符 \(自动插入分隔参数\) 包括在其中。  
+ 以前，这些函数中部分函数在成功时将 `errno` 设置为零；当前行为是在成功时保持不改动 `errno`，如 C 标准所指定。 如果需要模拟这一旧行为，请在调用这些函数之前将 `errno` 设置为零。  
   
 > [!NOTE]
->  内嵌空格的字符串可能会导致意外的行为; 例如传递 `_spawn` 字符串 `"hi there"` 会导致新进程中获取两个参数, `"hi"` 和 `"there"`.  如果此语句的目的是让进程打开名为“hi there”的文件，这个进程将失败。  您可以通过引用字符串避免这种情况: `"\"hi there\""`.  
+>  若要确保正确覆盖初始化和终止，请勿使用 `setjmp` 或 `longjmp` 函数进入或离开覆盖例程。  
+  
+## <a name="arguments-for-the-spawned-process"></a>生成进程的参数  
+ 若要将参数传递给新进程，请在 `_spawn` 调用中将一个或多个指向字符串的指针作为参数提供。 这些字符串构成了生成进程的参数列表。 构成新进程参数列表的字符串的组合长度不得超过 1024 个字节。 每个字符串的终止 null 字符 (“\0”) 不包含在计数中，但是空格字符（自动插入以分隔参数）包括在内。  
+  
+> [!NOTE]
+>  嵌入字符串中的空格可能导致意外行为；例如，将字符串 `_spawn` 传递给 `"hi there"` 会导致新进程获得两个参数：`"hi"` 和 `"there"`。 如果想要让新进程打开名为“hi there”的文件，则该进程将失败。 你可以通过引用字符串 `"\"hi there\""` 来避免此问题。  
   
 > [!IMPORTANT]
->  没有明确检查内容前不要将用户输入传递到 `_spawn` .  `_spawn` 会导致 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) 调用，所以请记住不合格的路径名可能会导致潜在的安全漏洞.  
+>  如果没有显式地检查其内容，请不要将用户输入传递给 `_spawn`。 `_spawn` 将导致调用 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425)，因此请牢记，未限定的路径名称可能会导致潜在的安全漏洞。  
   
- 可以将参数作为指针不同参数 \( `_spawnl`、`_spawnle`、`_spawnlp`和 `_spawnlpe`\) 或作为一组指针 \( `_spawnv`、`_spawnve`、`_spawnvp`和 `_spawnvpe`\)。  必须将至少一个参数、`arg0` 或 `argv`\[0\] 到指定的进程。  按照约定，因为您将键入对命令行，此参数是程序的名称。  \(其他值不会导致错误。\)  
+ 您可以将参数指针作为不同的参数传递（在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中）或作为指针数组传递（在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中）。 您必须至少将一个参数 `arg0` 或 `argv`[0] 传递到生成进程。 按照约定，此参数是程序的名称，因为您将在命令行上键入该名称。 不同的值不会生成错误。  
   
- `_spawnl`、`_spawnle`、`_spawnlp`和 `_spawnlpe` 的参数数量调用，通常在预先知道的情况使用。  `arg0` 参数通常是指向 `cmdname`的指针。  参数`arg1` 通过指向字符串的 `argn`指针形成新的参数列表。  在 `argn` 之后，必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
+ 一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
   
- 在参数数目可变。更新过程时，`_spawnv`、`_spawnve`、`_spawnvp`和 `_spawnvpe` 调用是有用的。  指针参数被当作一个数组传递, `argv`*.*参数 `argv`\[0\] 通常是一个指向实际模式中的路径或保护模式中的程序的指针， `argv`\[1\] 通过 `argv`\[`n`\] 是指向形成新的参数列表的字符串的指针。  参数 `argv`\[`n` \+1\] 必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
+ `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv`* 传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
   
-## 指定进程的环境  
- 当调用 `_spawn` 时 空文件在新进程中继续为空.  在 `_spawnl`, `_spawnlp`, `_spawnv` 和 `_spawnvp` 调用中, 新进程继承调用进程的环境。  可以使用 `_spawnle`、`_spawnlpe`、`_spawnve`和 `_spawnvpe` 通过调用传递环境设置列表更新环境修改过程的 `envp` 参数。  `envp` 一个字符指针数组，该数组中的每个元素（除了最后一个元素）指向一个空结束的字符串，用于定义一个环境变量.  这样一个字符串通常有窗体 `NAME`\=`value` 当 `NAME` 是环境变量的名字且 `value` 是以该变量被设置的字符串值.\(注意 `value` 不括在双引号中。\)`envp` 的最后一个元素应为 `NULL`.  当 `envp` 是 `NULL`时, 引发的进程继承父进程的环境变量.  
+## <a name="environment-of-the-spawned-process"></a>生成进程的环境  
+ 调用 `_spawn` 时打开的文件在新进程中仍处于打开状态。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 调用中，新进程将继承调用进程的环境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 调用更改新进程的环境，方式为通过 `envp` 参数传递环境设置的列表。 参数 `envp` 是字符指针的数组，其中每个元素（除了最后一个元素）均指向一个定义环境变量的不以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value` 并未括在双引号中。）`envp` 数组的最后一个元素应该是 `NULL`。 当 `envp` 本身为 `NULL` 时，生成进程将继承父进程的环境设置。  
   
- `_spawn` 函数可为更新过程传递关于文件打开的所有信息，包括特定模式。  此信息在实模式将 `C_FILE_INFO` 输入环境中。  启动代码通常处理此输入然后删除该环境。  但是，`_spawn`，则函数提供非 C 进程，此输入保持在环境中。  因为环境在实模式的信息传递，二进制格式打印环境本输入的定义字符串显示映射字符。  它不应具有影响行为的其他效果。  在内核模式，环境信息传递，文本形式而不包含映射字符。  
+ `_spawn` 函数可将所有有关打开的文件（包括转换模式）的信息传递到新进程。 此信息将在实模式下通过环境中的 `C_FILE_INFO` 条目传递。 启动代码通常会处理此条目，然后将其从环境中删除。 但是，如果 `_spawn` 函数生成一个非 C 进程，则此条目仍将保留在环境中。 打印环境将在此条目的定义字符串中显示图形字符，因为环境信息在实模式下是以二进制格式传递的。 它不应对正常操作具有任何其他影响。 在保护模式下，环境信息是以文本形式传递的，因此不包含图形字符。  
   
- 你必须明确清除 \(using `fflush` 或 `_flushall`\) 或在 `_spawn` 函数调用前关闭任一流.  
+ 在调用 `fflush` 函数之前，您必须显式刷新（使用 `_flushall` 或 `_spawn`）或关闭任何流。  
   
- 调用更新创建的过程到例程 `_spawn` 不会保留此设置。  而默认的生成处理状态重置信号设置。  
+ 通过调用 `_spawn` 例程创建的新进程不会保留任何信号设置。 而生成进程会将信号设置重置为默认值。  
   
-## 将输出重定向  
- 如果调用从 DLL 或 GUI 应用程序的 `_spawn` \) 并希望重定向输出到管道，您有两个选择：  
+## <a name="redirecting-output"></a>重定向输出  
+ 如果从 DLL 或 GUI 应用程序调用 `_spawn` 并希望将输出重定向至管道，则您具有两个选择：  
   
--   使用 Win32 API 创建管道，然后调用 [AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944)，在结构和 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425)启动调用的句柄值。  
+-   使用 Win32 API 创建管道，然后调用 [AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944)，在启动结构中设置句柄值，然后调用 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425)。  
   
--   调用会创建管道的 [\_popen、\_wpopen](../c-runtime-library/reference/popen-wpopen.md) 和调用应用使用 **cmd.exe \/c** \(或 **command.exe \/c**\)。  
+-   调用 [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md) 以创建管道，并使用 **cmd.exe /c**（或 **command.exe /c**）调用应用。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_spawn.c  
@@ -236,16 +252,24 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-  **子进程输出**  
-**from SPAWN\!**   
-## 请参阅  
+```Output  
+child process output  
+from SPAWN!  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../c-runtime-library/process-and-environment-control.md)   
  [abort](../c-runtime-library/reference/abort.md)   
  [atexit](../c-runtime-library/reference/atexit.md)   
- [\_exec、\_wexec 函数](../c-runtime-library/exec-wexec-functions.md)   
- [exit, \_Exit, \_exit](../c-runtime-library/reference/exit-exit-exit.md)   
- [\_flushall](../c-runtime-library/reference/flushall.md)   
- [\_getmbcp](../c-runtime-library/reference/getmbcp.md)   
- [\_onexit、\_onexit\_m](../c-runtime-library/reference/onexit-onexit-m.md)   
- [\_setmbcp](../c-runtime-library/reference/setmbcp.md)   
- [system、\_wsystem](../c-runtime-library/reference/system-wsystem.md)
+ [_exec、_wexec 函数](../c-runtime-library/exec-wexec-functions.md)   
+ [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)   
+ [_flushall](../c-runtime-library/reference/flushall.md)   
+ [_getmbcp](../c-runtime-library/reference/getmbcp.md)   
+ [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
+ [_setmbcp](../c-runtime-library/reference/setmbcp.md)   
+ [system、_wsystem](../c-runtime-library/reference/system-wsystem.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+
