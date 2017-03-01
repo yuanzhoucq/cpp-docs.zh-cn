@@ -1,72 +1,98 @@
 ---
 title: "输出文件流成员函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "输出流, 成员函数"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 输出文件流成员函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
+ms.lasthandoff: 02/24/2017
 
-输出流成员函数有三种类型：操控与等效的代码执行未经授权格式化的写入操作的那些修改，则流状态且没有等效的操控器或运算符插入的那些以及  对于顺序，格式化输出，可能仅使用运算符插入和移动。  对于用于随机访问磁盘二进制输出，则使用其他成员函数，有或没有将运算符插入。  
+---
+# <a name="output-file-stream-member-functions"></a>输出文件流成员函数
+输出流成员函数具有三种类型：等效于操控器的类型、执行未格式化的写操作的类型，以及其他修改流状态且不具有等效的操控器或插入运算符的类型。 对于连续的格式化输出，可仅使用插入运算符和操控器。 对于随机访问二进制磁盘输出，在无论是否具有插入运算符，都可使用其他成员函数。  
   
-## 输出流打开的函数  
- 若要使用输出文件流 \([ofstream](../Topic/ofstream.md)\)，则必须将该流与构造函数或 **打开** 函数的一个特定磁盘文件。  如果使用 **打开** 函数，可以重新使用一系列文件相同的流对象。  在任何情况下，描述文件的参数相同。  
+## <a name="the-open-function-for-output-streams"></a>输出流的 open 函数  
+ 若要使用输出文件流 ([ofstream](../standard-library/basic-ofstream-class.md))，则必须将该流与构造函数中的特定磁盘文件或 **open** 函数相关联。 如果使用 **open** 函数，则可以重复使用具有一系列文件的同一流对象。 在任一情况下，描述该文件的参数是相同的。  
   
- 在打开文件与输出流时，通常指定 **open\_mode** 标志。  可以组合这些标志，按位定义为 `ios` 类的枚举器，与或 \(&#124;\) 运算符。  为枚举器的列表参见 [ios\_base::openmode](../Topic/ios_base::openmode.md)。  
+ 当打开与输出流关联的文件时，通常会指定 **open_mode** 标志。 可以将在 `ios` 类中定义为枚举器的这些标志与按位 OR ( &#124; ) 运算符合并。 有关枚举器的列表，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode)。  
   
- 以下三种常见情况的输出流涉及模式选项：  
+ 三种常见的输出流情况涉及模式选项：  
   
--   创建文件。  如果该文件已经存在，会删除旧版本。  
+-   创建文件。 如果该文件已存在，将删除旧版本。  
   
-    ```  
-    ostream ofile( "FILENAME" );  // Default is ios::out  
-    ofstream ofile( "FILENAME", ios::out ); // Equivalent to above  
-    ```  
-  
--   将日志追加到现有文件或创建一个，如果它不存在。  
-  
-    ```  
-    ofstream ofile( "FILENAME", ios::app );  
-    ```  
-  
--   打开两个文件中，一次一个，在相同流。  
-  
-    ```  
-    ofstream ofile();  
-    ofile.open( "FILE1", ios::in );  
-    // Do some output  
-    ofile.close(); // FILE1 closed  
-    ofile.open( "FILE2", ios::in );  
-    // Do some more output  
-    ofile.close(); // FILE2 closed  
-    // When ofile goes out of scope it is destroyed.  
-    ```  
-  
-## 放置的函数  
- **put** 函数编写字符到输出流。  以下两个语句相同的默认方式，但第二个受流的格式参数的影响：  
-  
-```  
-cout.put( 'A' ); // Exactly one character written  
-cout << 'A'; // Format arguments 'width' and 'fill' apply   
+ ```  
+    ostream ofile("FILENAME");
+// Default is ios::out  
+    ofstream ofile("FILENAME", ios::out);
+
+// Equivalent to above  
 ```  
   
-## 编写函数  
- **write** 函数写入内存块为输出文件流。  长度参数指定编写的字节数。  此示例为创建输出文件流和写入 `Date` 配置的二进制值。它：  
+-   将记录追加到现有文件，或者如果文件尚不存在，创建一个文件。  
+  
+ ```  
+    ofstream ofile("FILENAME", ios::app);
+```  
+  
+-   在同一个流中打开两个文件，一次打开一个。  
+  
+ ```  
+    ofstream ofile();
+ofile.open("FILE1",
+    ios::in);
+// Do some output  
+    ofile.close();
+
+// FILE1 closed  
+    ofile.open("FILE2",
+    ios::in);
+// Do some more output  
+    ofile.close();
+
+// FILE2 closed  // When ofile goes out of scope it is destroyed.  
+```  
+  
+## <a name="the-put-function"></a>put 函数  
+ **put** 函数将一个字符写入到输出流。 默认情况下，以下两个语句相同，但第二个受流的格式化参数的影响：  
+  
+```  
+cout.put('A');
+
+// Exactly one character written  
+cout <<'A'; // Format arguments 'width' and 'fill' apply   
+```  
+  
+## <a name="the-write-function"></a>write 函数  
+ **write** 函数将内存块写入到输出文件流。 长度参数指定写入的字节数。 此示例可创建输出文件流，并向其写入 `Date` 结构的二进制值：  
   
 ```  
 // write_function.cpp  
@@ -87,53 +113,55 @@ int main( )
 }  
 ```  
   
- **write** 函数不停止，当到达空字符，因此，整个一结构层编写。  函数采用两个参数：`char` 指针和写入的计数字符。  请注意所需转换为 **char\***，在结构对象的地址。  
+ 当 **write** 函数达到空字符时，该函数不会停止，因此，将写入完整的类结构。 该函数采用两个参数：一个 `char` 指针和一个要写入的字符计数。 在对结构对象寻址之前，请注意需要强制转换为 **char\***。  
   
-## seekp 和 tellp 函数  
- 输出文件流指向位置保留数据将写入接下来的内部指针。  `seekp` 成员函数将此指针和行为提供随机访问磁盘文件输出。  `tellp` 成员函数返回文件位置。  有关使用内容等效于 `seekp` 和 `tellp`的示例，请参见 [seekg 和 tellg 函数](../standard-library/input-stream-member-functions.md)。  
+## <a name="the-seekp-and-tellp-functions"></a>seekp 和 tellp 函数  
+ 输出文件流保留指向下一次写入数据的位置的内部指针。 `seekp` 成员函数将设置此指针，从而提供随机访问磁盘文件输出。 `tellp` 成员函数将返回文件位置。 有关使用与 `seekp` 和 `tellp` 等效的输入流的示例，请参阅 [seekg 和 tellg 函数](../standard-library/input-stream-member-functions.md)。  
   
-## 输出流中接近的函数  
- **关闭** 成员函数关闭磁盘文件与输出文件流。  必须关闭文件完成所有磁盘输出。  如有必要，`ofstream` 析构函数中关闭您的文件，但是，您可以使用 **关闭** 函数是否需要打开相同的流对象的其他文件。  
+## <a name="the-close-function-for-output-streams"></a>输出流的 close 函数  
+ **close** 成员函数将关闭与输出文件流关联的磁盘文件。 若要完成所有磁盘输出，则必须关闭该文件。 如有必要，`ofstream` 析构函数将关闭该文件，但如果需要打开相同流对象的另一个文件，则可以使用 **close** 函数。  
   
- 在构造函数或 **打开** 成员函数。文件，打开输出流析构函数会自动关闭流的文件。  如果您经过构造函数已打开文件的文件说明符使用或 **附加** 成员函数，则必须显式关闭文件。  
+ 仅当构造函数或 **open** 成员函数打开该文件时，输出流析构函数会自动关闭流的文件。 如果向构造函数传递已打开文件的文件描述符，或使用 **attach** 成员函数，则必须显式关闭该文件。  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a> 处理函数的错误  
- 请使用这些成员函数测试错误，在写入流时：  
+##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a>错误处理函数  
+ 使用这些成员函数来测试写入流时是否出现错误：  
   
-|功能|返回值|  
-|--------|---------|  
-|[错误](../Topic/basic_ios::bad.md)|如果一个具有不可恢复的错误，将返回 **true**。|  
-|[失败](../Topic/basic_ios::fail.md)|返回 **true**，如果一个具有不可恢复的错误或一“预期的条件”，例如转换错误，或者，如果未找到该文件。  处理在调用后继续。通常为零的参数的 **清除**。|  
-|[好](../Topic/basic_ios::good.md)|返回 **true**，如果没有错误状态 \(不可恢复或\)，并且文件尾未设置任何标志。|  
-|[eof](../Topic/basic_ios::eof.md)|返回在该文件的条件的 **true**。|  
-|[clear](../Topic/basic_ios::clear.md)|为内部错误状态。  如果调用具有默认参数，就会清除所有错误位。|  
-|[rdstate](../Topic/basic_ios::rdstate.md)|返回当前错误状态。|  
+|函数|返回值|  
+|--------------|------------------|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|如果存在不可恢复的错误，则返回 **true**。|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果出现不可恢复的错误或“预期”条件（例如出现转换错误），或者如果找不到该文件，则返回 **true**。 在使用填零参数调用 **clear** 后，通常可以恢复处理。|  
+|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|如果没有任何错误条件（不可恢复的或其他的条件），且未设置文件结束标志，则返回 **true**。|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|在文件结尾时返回 **true**。|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|返回当前错误状态。|  
   
- \#\#\#\!运算符重载执行函数和 **失败** 函数相同。  因此表达式：  
+ 重载 **!** 运算符以执行与 **fail** 函数相同的函数。 因此表达式：  
   
 ```  
-if( !cout)...  
+if(!cout)...  
 ```  
   
  等效于：  
   
 ```  
-if( cout.fail() )...  
+if(cout.fail())...  
 ```  
   
- **void\*\(\)** 运算符是重载 \#\#\#\!运算符的相反；因此表达式：  
+ 将 **void\*()** 运算符重载为 **!** 运算符 的反义词；因此表达式：  
   
 ```  
-if( cout)...  
+if(cout)...  
 ```  
   
- 等于于：  
+ 等效于：  
   
 ```  
-if( !cout.fail() )...  
+if(!cout.fail())...  
 ```  
   
- 因为它不测试文件尾，**void\*\(\)** 运算符与 **good** 将不再等效的。  
+ **void\*()** 运算符并不等同于 **good**，因为它不会测试文件结尾。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [输出流](../standard-library/output-streams.md)
+
+

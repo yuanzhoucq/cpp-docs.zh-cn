@@ -1,79 +1,95 @@
 ---
-title: "_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnbcnt_l"
-  - "_mbsnccnt"
-  - "_wcsncnt"
-  - "_strncnt"
-  - "_mbsnccnt_l"
-  - "_mbsnbcnt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbsnbcnt"
-  - "wcsncnt"
-  - "_tcsnbcnt"
-  - "_mbsnccnt"
-  - "_ftcsnbcnt"
-  - "mbsnbcnt"
-  - "strncnt"
-  - "mbsnbcnt_l"
-  - "mbsnccnt_l"
-  - "mbsnccnt"
-  - "_strncnt"
-  - "_wcsncnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnbcnt 函数"
-  - "_mbsnbcnt_l 函数"
-  - "_mbsnccnt 函数"
-  - "_mbsnccnt_l 函数"
-  - "_strncnt 函数"
-  - "_tcsnbcnt 函数"
-  - "_wcsncnt 函数"
-  - "mbsnbcnt 函数"
-  - "mbsnbcnt_l 函数"
-  - "mbsnccnt 函数"
-  - "mbsnccnt_l 函数"
-  - "strncnt 函数"
-  - "tcsnbcnt 函数"
-  - "wcsncnt 函数"
+title: "_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnbcnt_l
+- _mbsnccnt
+- _wcsncnt
+- _strncnt
+- _mbsnccnt_l
+- _mbsnbcnt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbsnbcnt
+- wcsncnt
+- _tcsnbcnt
+- _mbsnccnt
+- _ftcsnbcnt
+- mbsnbcnt
+- strncnt
+- mbsnbcnt_l
+- mbsnccnt_l
+- mbsnccnt
+- _strncnt
+- _wcsncnt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strncnt function
+- _mbsnbcnt function
+- _mbsnbcnt_l function
+- _mbsnccnt_l function
+- mbsnbcnt_l function
+- mbsnbcnt function
+- tcsnbcnt function
+- mbsnccnt_l function
+- strncnt function
+- _tcsnbcnt function
+- mbsnccnt function
+- wcsncnt function
+- _mbsnccnt function
+- _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: de740ec295489829d236e2249f92ef98de655ad0
+ms.lasthandoff: 02/24/2017
 
-在指定的计数中返回字符书或字节数。  
+---
+# <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
+返回指定计数内的字符数或字节数。  
   
 > [!IMPORTANT]
->  `_mbsnbcnt`, `_mbsnbcnt_l`, `_mbsnccnt`, `_mbsnccnt_l`不能用于在 Windows 运行时中执行的应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  `_mbsnbcnt`、`_mbsnbcnt_l`、`_mbsnccnt` 和 `_mbsnccnt_l` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_t _strncnt(  
@@ -105,54 +121,54 @@ size_t _mbsnccnt_l(
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `str`  
- 要修改的字符串。  
+ 要检查的字符串。  
   
  `count`  
- 在 `str`中检查字符数和字节数。  
+ 要在 `str` 中检查的字符数或字节数。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- `_mbsnbcnt` 和 `_mbsnbcnt_l` 返回在 `str`多字节字符中第一个 `count` 找到字节数。  `_mbsnccnt` 和 `_mbsnccnt_l` 返回在 `str`多字节字符中第一个 `count` 找到字节数。  如果NULL在 `str` 检查完成之前，他们会在NULL字符之前返回找到的字节或者字符的数量。  如果 `str` 小于 `count`的 字符或字节数，它们返回该字符串的字符或字节数  如果 `count` 小于零，则返回 0。  在早期版本中，这些函数具有类型 `int` 的返回值而不是 `size_t`。  
+## <a name="return-value"></a>返回值  
+ `_mbsnbcnt` 和 `_mbsnbcnt_l` 返回在 `str` 的前 `count` 个多字节字符中找到的字节数。 `_mbsnccnt` 和 `_mbsnccnt_l` 返回在 `str` 的前 `count` 个字节中找到的字符数。 如果在完成 `str` 的检查之前遇到 NULL 字符，则它们返回在此 NULL 字符之前找到的字节数或字符数。 如果 `str` 包含的字符或字节少于 `count` 个，则它们返回字符串中的字符数或字节数。 如果 `count` 小于零，则它们返回 0。 在以前的版本中，这些函数的返回值类型为 `int`，而不是 `size_t`。  
   
- `_strncnt` 在单字节字符字符串 `str`的第一个 `count` 字节返回字符数。  `_wcsncnt` 在宽字符串 `str`的第一个宽字符`count`返回字符的数量。  
+ `_strncnt` 返回单字节字符串 `str` 的前 `count` 个字节中的字符数。 `_wcsncnt` 返回宽字符字符串 `str` 的前 `count` 个宽字符中的字符数。  
   
-## 备注  
- `_mbsnbcnt` 和 `_mbsnbcnt_l` 返回在 `str`多字节字符中第一个 `count` 找到字节数。  `_mbsnbcnt` 和 `_mbsnbcnt_l` 替换 `mtob`，因此应在 `mtob`位置。  
+## <a name="remarks"></a>备注  
+ `_mbsnbcnt` 和 `_mbsnbcnt_l` 计数在 `str` 的前 `count` 个多字节字符中找到的字节数。 `_mbsnbcnt` 和 `_mbsnbcnt_l` 替换 `mtob`，而且应该用于代替 `mtob`。  
   
- `_mbsnccnt` 和 `_mbsnccnt_l` 返回在 `str`多字节字符中第一个 `count` 找到字节数。  如果 `_mbsnccnt` 和 `_mbsnccnt_l` 在双字节字符的第二个字节会遇到 null，第一个字节也视为空且不包含在返回的计数值。  `_mbsnccnt` 和 `_mbsnccnt_l` 替换 `btom`，因此应在 `btom`位置。  
+ `_mbsnccnt` 和 `_mbsnccnt_l` 计数在 `str` 的前 `count` 个字节中找到的字符数。 如果 `_mbsnccnt` 和 `_mbsnccnt_l` 在双字节字符的第二个字节中遇到一个 NULL，则第一个字节也被视为 NULL，并且不包括在返回的计数值中。 `_mbsnccnt` 和 `_mbsnccnt_l` 替换 `btom`，而且应该用于代替 `btom`。  
   
- 如果 `str` 是空指针或是 `count` 为 0，这些函数调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述，`errno` 设置为 `EINVAL`，函数返回 0。  
+ 如果 `str` 是空指针，或者 `count` 是 0，则这些函数调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述，`errno` 设置为 `EINVAL`，且函数返回 0。  
   
- 输出值受区域设置的 `LC_CTYPE` 类设置影响；有关更多信息，请参见 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|--------|----------------------------|----------------|-------------------|  
+|例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|-------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnbcnt`|`_strncnt`|`_mbsnbcnt`|`_wcsncnt`|  
 |`_tcsnccnt`|`_strncnt`|`_mbsnbcnt`|`n/a`|  
 |`_wcsncnt`|`n/a`|`n/a`|`_mbsnbcnt`|  
 |`_wcsncnt`|`n/a`|`n/a`|`_mbsnccnt`|  
 |`n/a`|`n/a`|`_mbsnbcnt_l`|`_mbsnccnt_l`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_mbsnbcnt`|\<mbstring.h\>|  
-|`_mbsnbcnt_l`|\<mbstring.h\>|  
-|`_mbsnccnt`|\<mbstring.h\>|  
-|`_mbsnccnt_l`|\<mbstring.h\>|  
-|`_strncnt`|\<tchar.h\>|  
-|`_wcsncnt`|\<tchar.h\>|  
+|-------------|---------------------|  
+|`_mbsnbcnt`|\<mbstring.h>|  
+|`_mbsnbcnt_l`|\<mbstring.h>|  
+|`_mbsnccnt`|\<mbstring.h>|  
+|`_mbsnccnt_l`|\<mbstring.h>|  
+|`_strncnt`|\<tchar.h>|  
+|`_wcsncnt`|\<tchar.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_mbsnbcnt.c  
@@ -173,17 +189,17 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 The first 10 characters are single-byte.  
 ```  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbcat、\_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)
+ [_mbsnbcat、_mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)

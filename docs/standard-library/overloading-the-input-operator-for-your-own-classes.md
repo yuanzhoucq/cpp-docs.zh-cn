@@ -1,41 +1,58 @@
 ---
 title: "为自己的类重载 &gt;&gt; 运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "运算符 >>, 针对您自己的类进行重载"
-  - "operator>>"
-  - "operator>>, 针对您自己的类进行重载"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator>>
+- operator>>, overloading for your own classes
+- operator >>, overloading for your own classes
 ms.assetid: 40dab4e0-3f97-4745-9cc8-b86e740fa246
 caps.latest.revision: 8
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 为自己的类重载 &gt;&gt; 运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4ac48927cc0b68dc958a09ee541c41895f11f86b
+ms.lasthandoff: 02/24/2017
 
-输入流针对标准类型使用提取 \(`>>`\) 运算符。  您可以编写的类似运算符提取自己的类型；成功取决于精确使用空白。  
+---
+# <a name="overloading-the-gtgt-operator-for-your-own-classes"></a>为自己的类重载 &gt;&gt; 运算符
+输出流使用标准类型的提取 (`>>`) 运算符。 你可以为自己的类型编写相似的提取运算符；成功与否取决于对空格的精确使用。  
   
- 这是从早期运算符的示例显示的 `Date` 的类：  
+ 下面是前文中列举的 `Date` 类的一个提取运算符示例：  
   
 ```  
-istream& operator>> ( istream& is, Date& dt )  
+istream& operator>> (istream& is, Date& dt)  
 {  
-   is >> dt.mo >> dt.da >> dt.yr;  
-   return is;  
+    is>> dt.mo>> dt.da>> dt.yr;  
+    return is;  
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [输入流](../standard-library/input-streams.md)
+
+

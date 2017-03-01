@@ -1,63 +1,142 @@
 ---
 title: "piecewise_constant_distribution 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.piecewise_constant_distribution"
-  - "tr1.piecewise_constant_distribution"
-  - "tr1::piecewise_constant_distribution"
-  - "std::tr1::piecewise_constant_distribution"
-  - "random/std::tr1::piecewise_constant_distribution"
-  - "piecewise_constant_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "piecewise_constant_distribution 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- piecewise_constant_distribution
+- std::piecewise_constant_distribution
+- random/std::piecewise_constant_distribution
+- std::piecewise_constant_distribution::reset
+- random/std::piecewise_constant_distribution::reset
+- std::piecewise_constant_distribution::intervals
+- random/std::piecewise_constant_distribution::intervals
+- std::piecewise_constant_distribution::densities
+- random/std::piecewise_constant_distribution::densities
+- std::piecewise_constant_distribution::param
+- random/std::piecewise_constant_distribution::param
+- std::piecewise_constant_distribution::min
+- random/std::piecewise_constant_distribution::min
+- std::piecewise_constant_distribution::max
+- random/std::piecewise_constant_distribution::max
+- std::piecewise_constant_distribution::operator()
+- random/std::piecewise_constant_distribution::operator()
+- std::piecewise_constant_distribution::param_type
+- random/std::piecewise_constant_distribution::param_type
+- std::piecewise_constant_distribution::param_type::intervals
+- random/std::piecewise_constant_distribution::param_type::intervals
+- std::piecewise_constant_distribution::param_type::densities
+- random/std::piecewise_constant_distribution::param_type::densities
+- std::piecewise_constant_distribution::param_type::operator==
+- random/std::piecewise_constant_distribution::param_type::operator==
+- std::piecewise_constant_distribution::param_type::operator!=
+- random/std::piecewise_constant_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- piecewise_constant_distribution class
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# piecewise_constant_distribution 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 51fe6674bd7d538a3d3948f000497f70105de8d7
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 类
 生成包含以等概率分布在每个区间中的不等宽区间的分段常数分布。  
   
-## 语法  
-  
+## <a name="syntax"></a>语法  
 ```  
-template<class RealType = double> class piecewise_constant_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructor and reset functions     piecewise_constant_distribution();     template<class InputIteratorI, class InputIteratorW>     piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI, InputIteratorW firstW);     template<class UnaryOperation>     piecewise_constant_distribution(initializer_list<RealType> intervals, UnaryOperation weightfunc);     template<class UnaryOperation>     piecewise_constant_distribution(size_t count, RealType xmin, RealType xmax, UnaryOperation weightfunc);     explicit piecewise_constant_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     vector<result_type> intervals() const;     vector<result_type> densities() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class RealType = double>  
+class piecewise_constant_distribution  
+   {  
+public:  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+   
+   // constructor and reset functions  
+   piecewise_constant_distribution();
+   template <class InputIteratorI, class InputIteratorW>  
+   piecewise_constant_distribution(
+       InputIteratorI firstI, InputIteratorI lastI, InputIteratorW firstW);
+   template <class UnaryOperation>  
+   piecewise_constant_distribution(
+      initializer_list<result_type> intervals, UnaryOperation weightfunc);
+   template <class UnaryOperation>  
+   piecewise_constant_distribution(
+      size_t count, result_type xmin, result_type xmax, UnaryOperation weightfunc);
+   explicit piecewise_constant_distribution(const param_type& parm);
+   void reset();
+
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   vector<result_type> intervals() const;
+   vector<result_type> densities() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+
+### <a name="parameters"></a>参数  
+*RealType*  
+浮点结果类型，默认为 `double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
   
-#### 参数  
- `RealType`  
- 浮点结果类型，默认为 `double`。  有关可能的类型，请参阅 [\<random\>](../standard-library/random.md)。  
+## <a name="remarks"></a>备注  
+此示例分布包含以等概率分布在每个区间中的不等宽区间。 有关其他采样分布的信息，请参阅 [piecewise_linear_distribution 类](../standard-library/piecewise-linear-distribution-class.md)和 [discrete_distribution](../standard-library/discrete-distribution-class.md)。  
   
-## 备注  
- 此示例分布包含以等概率分布在每个区间中的不等宽区间。  有关其他示例分布的信息，请参阅 [piecewise\_linear\_distribution 类](../standard-library/piecewise-linear-distribution-class.md) 和 [discrete\_distribution](../standard-library/discrete-distribution-class.md)。  
-  
- 下表链接到有关各个成员的文章：  
+下表链接到有关各个成员的文章：  
   
 ||||  
 |-|-|-|  
-|[piecewise\_constant\_distribution::piecewise\_constant\_distribution](../Topic/piecewise_constant_distribution::piecewise_constant_distribution.md)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
-|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[piecewise\_constant\_distribution::param\_type](../Topic/piecewise_constant_distribution::param_type.md)|  
+|[piecewise_constant_distribution::piecewise_constant_distribution](#piecewise_constant_distribution__piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
+|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[piecewise_constant_distribution::param_type](#piecewise_constant_distribution__param_type)|  
   
- 属性函数 `intervals()` 将返回 `vector<RealType>` 以及分布的存储区间集。  
+属性函数 `intervals()` 将返回 `vector<result_type>` 以及分布的存储区间集。  
   
- 属性函数 `densities()` 将返回 `vector<RealType>` 以及每个区间集的存储密度，根据构造函数参数中提供的权重计算存储密度。  
+属性函数 `densities()` 将返回 `vector<result_type>` 以及每个区间集的存储密度，根据构造函数参数中提供的权重计算存储密度。  
   
- 有关分布类及其成员的详细信息，请参阅 [\<random\>](../standard-library/random.md)。  
+属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。  
+
+`min()` 和 `max()` 成员函数将分别返回最小可能结果和最大可能结果。  
   
-## 示例  
+`reset()` 成员函数将放弃所有缓存的值，使下一个对 `operator()` 的调用的结果不取决于在调用之前从引擎获得的任何值。  
+  
+`operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
+  
+若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
+  
+## <a name="example"></a>示例  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -130,40 +209,166 @@ int main()
   
 ```  
   
-## 输出  
-  **使用 CTRL\-Z 跳过数据输入并使用默认值运行。  输入示例计数的整数值：100**  
-**min\(\) \=\= 0**  
-**max\(\) \=\= 15**  
-**区间（索引：区间）：**  
- **0:   0.0000000000**  
- **1:   1.0000000000**  
- **2:   6.0000000000**  
- **3:  15.0000000000**  
-**密度（索引：密度）：**  
- **0:   0.0625000000**  
- **1:   0.0625000000**  
- **2:   0.0694444444**  
-**100 个示例的分布：**  
- **0\-1 :::::::**  
- **1\-2 ::::::**  
- **2\-3 :::::**  
- **3\-4 ::::::**  
- **4\-5 :::::::**  
- **5\-6 ::::::**  
- **6\-7 :::**  
- **7\-8 ::::::::::**  
- **8\-9 ::::::**  
- **9\-10 ::::::::::::**  
- **10\-11 :::::**  
- **11\-12 ::::::**  
- **12\-13 :::::::::**  
- **13\-14 ::::**  
-**14\-15 ::::::::**    
-## 要求  
- **标头：**\<random\>  
+```Output  
+Use CTRL-Z to bypass data entry and run using default values.
+Enter an integer value for the sample count: 100
+min() == 0
+max() == 15
+intervals (index: interval):
+          0:   0.0000000000          
+          1:   1.0000000000          
+          2:   6.0000000000          
+          3:  15.0000000000
+densities (index: density):
+          0:   0.0625000000          
+          1:   0.0625000000          
+          2:   0.0694444444
+Distribution for 100 samples:
+    0-1 :::::::    
+    1-2 ::::::    
+    2-3 :::::    
+    3-4 ::::::    
+    4-5 :::::::    
+    5-6 ::::::    
+    6-7 :::    
+    7-8 ::::::::::    
+    8-9 ::::::    
+    9-10 ::::::::::::   
+    10-11 :::::   
+    11-12 ::::::   
+    12-13 :::::::::   
+    13-14 ::::   
+    14-15 ::::::::  
+```  
   
- **命名空间:** std  
+## <a name="requirements"></a>要求  
+ **标头：**\<random>  
   
-## 请参阅  
- [\<random\>](../standard-library/random.md)   
- [piecewise\_linear\_distribution](../standard-library/piecewise-linear-distribution-class.md)
+ **命名空间：** std  
+  
+##  <a name="a-namepiecewiseconstantdistributionpiecewiseconstantdistributiona--piecewiseconstantdistributionpiecewiseconstantdistribution"></a><a name="piecewise_constant_distribution__piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
+构造分布。  
+  
+```  
+// default constructor  
+piecewise_constant_distribution();
+ 
+// constructs using a range of intervals, [firstI, lastI), with  
+// matching weights starting at firstW  
+template <class InputIteratorI, class InputIteratorW>  
+piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI, InputIteratorW firstW);
+ 
+// constructs using an initializer list for range of intervals,  
+// with weights generated by function weightfunc  
+template <class UnaryOperation>  
+piecewise_constant_distribution(initializer_list<RealType>  
+intervals, UnaryOperation weightfunc);
+ 
+// constructs using an initializer list for range of count intervals,  
+// distributed uniformly over [xmin,xmax] with weights generated by function weightfunc  
+template <class UnaryOperation>  
+piecewise_constant_distribution(size_t count, RealType xmin, RealType xmax, UnaryOperation weightfunc);
+ 
+// constructs from an existing param_type structure  
+explicit piecewise_constant_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>参数  
+ `firstI`  
+ 分布范围中第一个元素的输入迭代器。  
+  
+ `lastI`  
+ 分布范围中最后一个元素的输入迭代器。  
+  
+ `firstW`  
+ 权重范围中第一个元素的输入迭代器。  
+  
+ `intervals`  
+ 具有分布区间的 [initializer_list](../cpp/initializers.md)。  
+  
+ `count`  
+ 分布范围中的元素数。  
+  
+ `xmin`  
+ 分布范围中的最低值。  
+  
+ `xmax`  
+ 分布范围中的最高值。 必须大于 `xmin`。  
+  
+ `weightfunc`  
+ 表示分布的概率函数的对象。 参数和返回值都必须可转换为 `double`。  
+  
+ `parm`  
+ 用于构造分布的参数结构。  
+  
+### <a name="remarks"></a>备注  
+默认构造函数将设置存储参数，以便存在一个概率密度为 1 的 0 到 1 的区间。  
+  
+迭代器范围构造函数  
+```  
+template <class InputIteratorI, class InputIteratorW>  
+piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,  
+    InputIteratorW firstW);
+```  
+  
+使用序列 [`firstI`，`lastI`) 上迭代器中的区间和以 `firstW` 开始的匹配权重序列来构造分布对象。  
+  
+初始值设定项列表构造函数  
+```  
+template <class UnaryOperation>  
+piecewise_constant_distribution(initializer_list<result_type>  
+intervals,   
+    UnaryOperation weightfunc);
+```  
+  
+使用初始值设定项列表 `intervals` 中的区间和从函数 `weightfunc` 中生成的权重来构造分布对象。  
+  
+定义为以下内容的构造函数  
+```  
+template <class UnaryOperation>  
+piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,  
+    UnaryOperation weightfunc);
+```  
+  
+使用在 [`xmin,xmax`] 上均匀分布的 `count` 区间来构造分布对象，从而根据函数 `weightfunc` 分配每个区间权重，`weightfunc` 必须接受一个参数并包含一个返回值，两者都可转换为 `double`。 **前提条件：**`xmin < xmax`  
+  
+定义为以下内容的构造函数  
+```  
+explicit piecewise_constant_distribution(const param_type& parm);
+```  
+  
+通过将 `parm` 用作存储的参数结构，构造分布对象。  
+  
+##  <a name="a-namepiecewiseconstantdistributionparamtypea--piecewiseconstantdistributionparamtype"></a><a name="piecewise_constant_distribution__param_type"></a>  piecewise_constant_distribution::param_type  
+存储分布的所有参数。  
+  
+```    
+struct param_type {  
+   typedef piecewise_constant_distribution<result_type> distribution_type;  
+   param_type();
+   template <class IterI, class IterW>  
+   param_type(IterI firstI, IterI lastI, IterW firstW);
+   template <class UnaryOperation>  
+   param_type(size_t count, result_type xmin, result_type xmax, UnaryOperation weightfunc);
+   std::vector<result_type> densities() const;
+   std::vector<result_type> intervals() const;
+     
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>参数  
+请参阅 [piecewise_constant_distribution](#piecewise_constant_distribution__piecewise_constant_distribution) 的构造函数参数。  
+  
+### <a name="remarks"></a>备注  
+ **前置条件：**`xmin < xmax`  
+  
+在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
+  
+## <a name="see-also"></a>另请参阅  
+[\<random>](../standard-library/random.md)   
+[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)
+
+
+
