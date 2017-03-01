@@ -1,32 +1,49 @@
 ---
-title: "MFC 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, 类"
-  - "类 [C++], MFC"
+title: "MFC 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, classes
+- classes [C++], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
 caps.latest.revision: 33
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 35
----
-# MFC 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 4e63a2eed54968087fd32e1cb8d7754e99ad033c
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="mfc-classes"></a>MFC 类
 下面列出的类包含在 Microsoft 基础类 (MFC) 库中。  
   
 > [!TIP]
->  璝惠 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) 和 MFC 与 ATL 编程共有的其他类请参阅 [MFC 和 ATL 共享的类](../../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)。  
+>  璝惠[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)和其他类所共有的 MFC 和 ATL 编程中，请参阅[类共享的 MFC 和 ATL](../../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)。  
   
 > [!IMPORTANT]
 >  MFC 类及其成员无法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中执行的应用程序中使用。  
@@ -96,7 +113,7 @@ caps.handback.revision: 35
  表示 Windows 套接字，即网络通信终结点。  
   
  [CAutoHideDockSite 类](../../mfc/reference/cautohidedocksite-class.md)  
- 扩展 [CDockSite 类](../../mfc/reference/cdocksite-class.md) 实现自动隐藏停靠窗格。  
+ 扩展[CDockSite 类](../../mfc/reference/cdocksite-class.md)来实现自动隐藏停靠窗格。  
   
  [CBaseKeyFrame 类](../../mfc/reference/cbasekeyframe-class.md)  
  实现关键帧的基本功能。  
@@ -105,7 +122,7 @@ caps.handback.revision: 35
  所有窗格的基类。  
   
  [CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)  
- 扩展的功能 [CDockablePane 类](../../mfc/reference/cdockablepane-class.md) 以支持创建选项卡式窗口。  
+ 扩展功能的[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)以支持创建选项卡式窗口。  
   
  [CBaseTransition 类](../../mfc/reference/cbasetransition-class.md)  
  表示基本转换。  
@@ -117,7 +134,7 @@ caps.handback.revision: 35
  创建使用位图图像而非文本进行标记的按钮控件。  
   
  [CBitmapRenderTarget 类](../../mfc/reference/cbitmaprendertarget-class.md)  
- `ID2D1BitmapRenderTarget` 的包装器。  
+ `ID2D1BitmapRenderTarget`的包装器。  
   
  [CBrush 类](../../mfc/reference/cbrush-class.md)  
  封装一个 Windows 图形设备接口 (GDI) 画笔。  
@@ -135,13 +152,13 @@ caps.handback.revision: 35
  提供 Windows 检查表框功能。  
   
  [CClientDC 类](../../mfc/reference/cclientdc-class.md)  
- 处理 Windows 函数的调用 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) 在构造时和 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) 在析构时。  
+ 处理 Windows 函数 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) （在构造时）和 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) （在析构时）的调用。  
   
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)  
  用于 Microsoft 基础类库消息映射体系结构的基类。  
   
  [CCmdUI 类](../../mfc/reference/ccmdui-class.md)  
- 只能在 `ON_UPDATE_COMMAND_UI` 派生的类的 `CCmdTarget` 处理程序中使用。  
+ 只能在 `ON_UPDATE_COMMAND_UI` 派生的类的 `CCmdTarget`处理程序中使用。  
   
  [CColorDialog 类](../../mfc/reference/ccolordialog-class.md)  
  允许将颜色选择对话框合并到应用程序。  
@@ -168,7 +185,7 @@ caps.handback.revision: 35
  管理快捷菜单（也称为上下文菜单）。  
   
  [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)  
- 基类的控件条类 [CStatusBar 类](../../mfc/reference/cstatusbar-class.md), ，[CToolBar 类](../../mfc/reference/ctoolbar-class.md), ，[CDialogBar 类](../../mfc/reference/cdialogbar-class.md), ，[CReBar 类](../../mfc/reference/crebar-class.md), ，和 [COleResizeBar 类](../../mfc/reference/coleresizebar-class.md)。  
+ 控件条类的基类[CStatusBar 类](../../mfc/reference/cstatusbar-class.md)， [CToolBar 类](../../mfc/reference/ctoolbar-class.md)， [CDialogBar 类](../../mfc/reference/cdialogbar-class.md)， [CReBar 类](../../mfc/reference/crebar-class.md)，和[COleResizeBar 类](../../mfc/reference/coleresizebar-class.md)。  
   
  [CCriticalSection 类](../../mfc/reference/ccriticalsection-class.md)  
  表示一个“临界区”，即一次支持一个线程访问资源或代码段的同步对象。  
@@ -186,76 +203,76 @@ caps.handback.revision: 35
  实现自定义转换。  
   
  [CD2DBitmap 类](../../mfc/reference/cd2dbitmap-class.md)  
- `ID2D1Bitmap` 的包装器。  
+ `ID2D1Bitmap`的包装器。  
   
  [CD2DBitmapBrush 类](../../mfc/reference/cd2dbitmapbrush-class.md)  
- `ID2D1BitmapBrush` 的包装器。  
+ `ID2D1BitmapBrush`的包装器。  
   
  [CD2DBrush 类](../../mfc/reference/cd2dbrush-class.md)  
- `ID2D1Brush` 的包装器。  
+ `ID2D1Brush`的包装器。  
   
  [CD2DBrushProperties 类](../../mfc/reference/cd2dbrushproperties-class.md)  
- `D2D1_BRUSH_PROPERTIES` 的包装器。  
+ `D2D1_BRUSH_PROPERTIES`的包装器。  
   
  [CD2DEllipse 类](../../mfc/reference/cd2dellipse-class.md)  
- `D2D1_BRUSH_PROPERTIES` 的包装器。  
+ `D2D1_BRUSH_PROPERTIES`的包装器。  
   
  [CD2DGeometry 类](../../mfc/reference/cd2dgeometry-class.md)  
- `ID2D1Geometry` 的包装器。  
+ `ID2D1Geometry`的包装器。  
   
  [CD2DGeometrySink 类](../../mfc/reference/cd2dgeometrysink-class.md)  
- `ID2D1GeometrySink` 的包装器。  
+ `ID2D1GeometrySink`的包装器。  
   
  [CD2DGradientBrush 类](../../mfc/reference/cd2dgradientbrush-class.md)  
  `CD2DLinearGradientBrush` 和 `CD2DRadialGradientBrush` 类的基类。  
   
  [CD2DLayer 类](../../mfc/reference/cd2dlayer-class.md)  
- `ID2D1Layer` 的包装器。  
+ `ID2D1Layer`的包装器。  
   
  [CD2DLinearGradientBrush 类](../../mfc/reference/cd2dlineargradientbrush-class.md)  
- `ID2D1LinearGradientBrush` 的包装器。  
+ `ID2D1LinearGradientBrush`的包装器。  
   
  [CD2DMesh 类](../../mfc/reference/cd2dmesh-class.md)  
- `ID2D1Mesh` 的包装器。  
+ `ID2D1Mesh`的包装器。  
   
  [CD2DPathGeometry 类](../../mfc/reference/cd2dpathgeometry-class.md)  
- `ID2D1PathGeometry` 的包装器。  
+ `ID2D1PathGeometry`的包装器。  
   
  [CD2DPointF 类](../../mfc/reference/cd2dpointf-class.md)  
- `D2D1_POINT_2F` 的包装器。  
+ `D2D1_POINT_2F`的包装器。  
   
  [CD2DPointU 类](../../mfc/reference/cd2dpointu-class.md)  
- `D2D1_POINT_2U` 的包装器。  
+ `D2D1_POINT_2U`的包装器。  
   
  [CD2DRadialGradientBrush 类](../../mfc/reference/cd2dradialgradientbrush-class.md)  
- `ID2D1RadialGradientBrush` 的包装器。  
+ `ID2D1RadialGradientBrush`的包装器。  
   
  [CD2DRectF 类](../../mfc/reference/cd2drectf-class.md)  
- `D2D1_RECT_F` 的包装器。  
+ `D2D1_RECT_F`的包装器。  
   
  [CD2DRectU 类](../../mfc/reference/cd2drectu-class.md)  
- `D2D1_RECT_U` 的包装器。  
+ `D2D1_RECT_U`的包装器。  
   
  [CD2DResource 类](../../mfc/reference/cd2dresource-class.md)  
  为创建和管理 `D2D` 资源（例如画笔、层和文本）提供接口的抽象类。  
   
  [CD2DRoundedRect 类](../../mfc/reference/cd2droundedrect-class.md)  
- `D2D1_ROUNDED_RECT` 的包装器。  
+ `D2D1_ROUNDED_RECT`的包装器。  
   
  [CD2DSizeF 类](../../mfc/reference/cd2dsizef-class.md)  
- `D2D1_SIZE_F` 的包装器。  
+ `D2D1_SIZE_F`的包装器。  
   
  [CD2DSizeU 类](../../mfc/reference/cd2dsizeu-class.md)  
- `D2D1_SIZE_U` 的包装器。  
+ `D2D1_SIZE_U`的包装器。  
   
  [CD2DSolidColorBrush 类](../../mfc/reference/cd2dsolidcolorbrush-class.md)  
- `ID2D1SolidColorBrush` 的包装器。  
+ `ID2D1SolidColorBrush`的包装器。  
   
  [CD2DTextFormat 类](../../mfc/reference/cd2dtextformat-class.md)  
- `IDWriteTextFormat` 的包装器。  
+ `IDWriteTextFormat`的包装器。  
   
  [CD2DTextLayout 类](../../mfc/reference/cd2dtextlayout-class.md)  
- `IDWriteTextLayout` 的包装器。  
+ `IDWriteTextLayout`的包装器。  
   
  [CDaoDatabase 类](../../mfc/reference/cdaodatabase-class.md)  
  表示与数据库的连接，通过此连接可操作数据。  
@@ -306,7 +323,7 @@ caps.handback.revision: 35
  定义设备上下文对象的类。  
   
  [CDCRenderTarget 类](../../mfc/reference/cdcrendertarget-class.md)  
- `ID2D1DCRenderTarget` 的包装器。  
+ `ID2D1DCRenderTarget`的包装器。  
   
  [CDHtmlDialog 类](../../mfc/reference/cdhtmldialog-class.md)  
  用于创建使用 HTML 而非对话框资源来实现用户界面的对话框。  
@@ -330,7 +347,7 @@ caps.handback.revision: 35
  实现可在停靠站点停靠或包含在选项卡式窗格中的窗格。  
   
  [CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)  
- 为 `CWnd` 派生窗格提供停靠支持。  
+ 为 `CWnd`派生窗格提供停靠支持。  
   
  [CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)  
  实现用于控制主框架窗口中停靠布局的核心功能。  
@@ -339,13 +356,13 @@ caps.handback.revision: 35
  管理位于停靠站点中同一水平或垂直行（列）的窗格的列表。  
   
  [CDockSite 类](../../mfc/reference/cdocksite-class.md)  
- 提供用于排列派生自的窗格的功能 [CPane 类](../../mfc/reference/cpane-class.md) 成的行集。  
+ 提供用于排列派生自的窗格的功能[CPane 类](../../mfc/reference/cpane-class.md)成个行集。  
   
  [CDockState 类](../../mfc/reference/cdockstate-class.md)  
  在永久性内存（文件）中加载、卸载或清除一个或多个停靠控件条状态的序列化 `CObject` 类。  
   
  [CDocObjectServer 类](../../mfc/reference/cdocobjectserver-class.md)  
- 实现将常规 `COleDocument` 服务器接入完整 DocObject 服务器所需的其他 OLE 接口：`IOleDocument`、`IOleDocumentView`、`IOleCommandTarget` 和 `IPrint`。  
+ 实现将常规 `COleDocument` 服务器接入完整 DocObject 服务器所需的其他 OLE 接口： `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`和 `IPrint`。  
   
  [CDocObjectServerItem 类](../../mfc/reference/cdocobjectserveritem-class.md)  
  实现特别针对 DocObject 服务器的 OLE 服务器谓词。  
@@ -357,7 +374,7 @@ caps.handback.revision: 35
  提供用户定义文档类的基本功能。  
   
  [CDragListBox 类](../../mfc/reference/cdraglistbox-class.md)  
- 除提供 Windows 列表框功能外，`CDragListBox` 类还让用户可在列表框内移动文件名等列表框项。  
+ 除提供 Windows 列表框功能外， `CDragListBox` 类还让用户可在列表框内移动文件名等列表框项。  
   
  [CDrawingManager 类](../../mfc/reference/cdrawingmanager-class.md)  
  实现复杂的绘图算法。  
@@ -393,7 +410,7 @@ caps.handback.revision: 35
  表示与文件相关的异常条件。  
   
  [CFileFind 类](../../mfc/reference/cfilefind-class.md)  
- 执行本地文件搜索和是为基类 [CGopherFileFind 类](../../mfc/reference/cgopherfilefind-class.md) 和 [CFtpFileFind 类](../../mfc/reference/cftpfilefind-class.md), ，执行 Internet 文件搜索。  
+ 执行本地文件搜索和是类的基类[CGopherFileFind 类](../../mfc/reference/cgopherfilefind-class.md)和[CFtpFileFind 类](../../mfc/reference/cftpfilefind-class.md)，执行 Internet 文件搜索。  
   
  [CFindReplaceDialog 类](../../mfc/reference/cfindreplacedialog-class.md)  
  允许在应用程序中实现标准字符串“查找/替换”对话框。  
@@ -416,8 +433,8 @@ caps.handback.revision: 35
  [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)  
  提供 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。  
   
- [CFrameWndEx 类](../../mfc/reference/cframewndex-class.md)  
- 实现 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。 它扩展 [CFrameWnd 类](../../mfc/reference/cframewnd-class.md) 类。  
+ [Cframewndex 由类](../../mfc/reference/cframewndex-class.md)  
+ 实现 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。 它扩展[CFrameWnd 类](../../mfc/reference/cframewnd-class.md)类。  
   
  [CFtpConnection 类](../../mfc/reference/cftpconnection-class.md)  
  管理与 Internet 服务器的 FTP 连接，并支持直接操作此服务器上的目录与文件。  
@@ -438,7 +455,7 @@ caps.handback.revision: 35
  辅助 Gopher 服务器的 Internet 文件搜索。  
   
  [CGopherLocator 类](../../mfc/reference/cgopherlocator-class.md)  
- 从 gopher 服务器获取 gopher"定位器"，确定定位器的类型，并使定位器可用于 [CGopherFileFind 类](../../mfc/reference/cgopherfilefind-class.md)。  
+ 从 gopher 服务器获取 gopher"定位器"，确定定位器的类型，并使定位器可用于[CGopherFileFind 类](../../mfc/reference/cgopherfilefind-class.md)。  
   
  [CHeaderCtrl 类](../../mfc/reference/cheaderctrl-class.md)  
  提供 Windows 公共标头控件的功能。  
@@ -453,12 +470,12 @@ caps.handback.revision: 35
  表示 HTML 编辑组件。  
   
  [CHtmlEditDoc 类](../../mfc/reference/chtmleditdoc-class.md)  
- 与 [CHtmlEditView 类](../../mfc/reference/chtmleditview-class.md), ，提供 MFC 文档视图体系结构上下文中的 WebBrowser 编辑平台功能。  
+ 与[CHtmlEditView 类](../../mfc/reference/chtmleditview-class.md)，提供了 MFC 文档视图体系结构的上下文中的 web 浏览器编辑平台功能。  
   
  [CHtmlEditView 类](../../mfc/reference/chtmleditview-class.md)  
  提供 MFC 文档/视图体系结构上下文中的 Web 浏览器编辑平台功能。  
   
- [CHtmlView 类](../../mfc/reference/chtmlview-class.md)  
+ [由 CHtmlView 类](../../mfc/reference/chtmlview-class.md)  
  提供 MFC 文档/视图体系结构上下文中的 Web 浏览器控件功能。  
   
  [CHttpConnection 类](../../mfc/reference/chttpconnection-class.md)  
@@ -468,7 +485,7 @@ caps.handback.revision: 35
  提供请求和读取 HTTP 服务器上文件的功能。  
   
  [CHwndRenderTarget 类](../../mfc/reference/chwndrendertarget-class.md)  
- `ID2D1HwndRenderTarget` 的包装器。  
+ `ID2D1HwndRenderTarget`的包装器。  
   
  [CImageList 类](../../mfc/reference/cimagelist-class.md)  
  提供 Windows 公共图像列表控件的功能。  
@@ -525,7 +542,7 @@ caps.handback.revision: 35
  封装显示一组项的“列表视图控件”功能，每一项均包含一个图标（来自图像列表）和标签。  
   
  [CListView 类](../../mfc/reference/clistview-class.md)  
- 简化了使用列表控件和 [CListCtrl 类](../../mfc/reference/clistctrl-class.md), ，封装列表控件功能，带有 MFC 文档视图体系结构的类。  
+ 简化了使用列表控件和[CListCtrl 类](../../mfc/reference/clistctrl-class.md)，封装列表控件功能，与 MFC 文档视图体系结构的类。  
   
  [CLongBinary 类](../../mfc/reference/clongbinary-class.md)  
  简化对数据库中超大二进制数据对象（经常称作 BLOB，即“二进制大对象”）的使用。  
@@ -558,19 +575,19 @@ caps.handback.revision: 35
  提供 Windows 多文档界面 (MDI) 子窗口功能，并提供管理窗口的成员。  
   
  [CMDIChildWndEx 类](../../mfc/reference/cmdichildwndex-class.md)  
- 提供 Windows 多文档界面 (MDI) 子窗口功能。 它扩展的功能 [CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)。 当 MDI 应用程序使用特定 MFC 类时，框架需要此类。  
+ 提供 Windows 多文档界面 (MDI) 子窗口功能。 扩展功能的[CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)。 当 MDI 应用程序使用特定 MFC 类时，框架需要此类。  
   
  [CMDIFrameWnd 类](../../mfc/reference/cmdiframewnd-class.md)  
  提供 Windows 多文档界面 (MDI) 框架窗口功能，并提供管理窗口的成员。  
   
  [CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)  
- 扩展的功能 [CFrameWnd 类](../../mfc/reference/cframewnd-class.md), ，Windows 多文档界面 (MDI) 框架窗口。  
+ 扩展功能的[CFrameWnd 类](../../mfc/reference/cframewnd-class.md)，Windows 多文档界面 (MDI) 框架窗口。  
   
  [CMDITabInfo 类](../../mfc/reference/cmditabinfo-class.md)  
- 用于将参数传递给 [cmdiframewndex:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#cmdiframewndex__enablemditabbedgroups) 方法。 设置此类的成员以控制 MDI 选项卡式组的行为。  
+ 用于将参数传递给[CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)方法。 设置此类的成员以控制 MDI 选项卡式组的行为。  
   
  [CMemFile 类](../../mfc/reference/cmemfile-class.md)  
-  [CFile 类](../../mfc/reference/cfile-class.md)-派生支持内存文件的类。  
+ [CFile 类](../../mfc/reference/cfile-class.md)的派生类，支持内存文件。  
   
  [CMemoryException 类](../../mfc/reference/cmemoryexception-class.md)  
  表示内存不足异常条件。  
@@ -588,16 +605,16 @@ caps.handback.revision: 35
  实现虚拟键映射和格式设置的帮助器类。  
   
  [CMFCAcceleratorKeyAssignCtrl 类](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)  
- 扩展 [CEdit 类](../../mfc/reference/cedit-class.md) 以支持额外的系统按钮，如 ALT、 CONTROL 和 SHIFT。  
+ 扩展[CEdit 类](../../mfc/reference/cedit-class.md)以支持额外的系统按钮，例如 ALT、 CONTROL 和 SHIFT。  
   
  [CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)  
- 用于显示或隐藏按钮 [CDockablePane 类](../../mfc/reference/cdockablepane-class.md) 配置为隐藏。  
+ 显示或隐藏的按钮[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)，它配置为隐藏。  
   
  [CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)  
  实现选项卡式窗口的基本功能。  
   
  [CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)  
- 将功能添加到 [CButton 类](../../mfc/reference/cbutton-class.md) 如对齐按钮文本、 组合按钮文本和图像、 选择光标以及指定工具提示的类。  
+ 将功能添加到[CButton 类](../../mfc/reference/cbutton-class.md)如对齐按钮文本、 组合按钮文本和图像、 选择光标以及指定工具提示的类。  
   
  [CMFCCaptionBar 类](../../mfc/reference/cmfccaptionbar-class.md)  
  可以显示三个元素（按钮、文本标签和位图）的控制条。 它一次只能显示一种类型的一个元素。 你可以将每个元素与控件进行左对齐、右对齐或居中对齐。 你还可将平面或 3D 样式应用于标题栏的顶部和底部边界。  
@@ -609,7 +626,7 @@ caps.handback.revision: 35
  表示停靠控件条，在此控件条上可选择文档或应用程序中的颜色。  
   
  [CMFCColorButton 类](../../mfc/reference/cmfccolorbutton-class.md)  
-  `CMFCColorButton` 和 [CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md) 类一起用于实现颜色选取器控件。  
+ `CMFCColorButton`和[CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)类一起用于实现颜色选取器控件。  
   
  [CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)  
  表示颜色选择对话框。  
@@ -621,13 +638,13 @@ caps.handback.revision: 35
  提供用于选择颜色的控件功能。  
   
  [CMFCDesktopAlertDialog 类](../../mfc/reference/cmfcdesktopalertdialog-class.md)  
- 一起使用 [CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md) 在弹出窗口中显示自定义对话框。  
+ 综合使用[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)在弹出窗口中显示一个自定义对话框。  
   
  [CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)  
  实现显示在屏幕上以向用户通知事件的无模式对话框的功能。  
   
  [CMFCDesktopAlertWndInfo 类](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)  
- 与使用 [CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)。 它指定在桌面警报窗口弹出时显示的控件。  
+ 与使用[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)。 它指定在桌面警报窗口弹出时显示的控件。  
   
  [CMFCDragFrameImpl 类](../../mfc/reference/cmfcdragframeimpl-class.md)  
  绘制当用户在标准停靠模式下拖动窗格时显示的拖动矩形。  
@@ -636,7 +653,7 @@ caps.handback.revision: 35
  当用户按住顶层工具栏按钮时显示的工具栏。  
   
  [CMFCDropDownToolbarButton 类](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
- 一种工具栏按钮，单击时其行为类似于常规按钮。 但是，它将打开一个下拉工具栏 ([CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md) 如果用户按下并按住工具栏按钮。  
+ 一种工具栏按钮，单击时其行为类似于常规按钮。 但是，它将打开一个下拉工具栏 ([CMFCDropDownToolBar 类](../../mfc/reference/cmfcdropdowntoolbar-class.md)如果用户按下并按住工具栏按钮。  
   
  [CMFCDynamicLayout 类](../../mfc/reference/cmfcdynamiclayout-class.md)  
  指定窗口中的控件如何随着用户重设窗口大小而移动和重设大小。  
@@ -666,7 +683,7 @@ caps.handback.revision: 35
  单击按钮时，将按钮显示为超链接并调用链接的目标。  
   
  [CMFCListCtrl 类](../../mfc/reference/cmfclistctrl-class.md)  
- 扩展的功能 [CListCtrl 类](../../mfc/reference/clistctrl-class.md) 通过支持的高级标头控件功能的类 [CMFCHeaderCtrl 类](../../mfc/reference/cmfcheaderctrl-class.md)。  
+ 扩展功能的[CListCtrl 类](../../mfc/reference/clistctrl-class.md)通过支持的高级标头控件功能的类[CMFCHeaderCtrl 类](../../mfc/reference/cmfcheaderctrl-class.md)。  
   
  [CMFCMaskedEdit 类](../../mfc/reference/cmfcmaskededit-class.md)  
  支持掩码编辑控件，此控件利用掩码验证用户输入，并根据模板显示验证的结果。  
@@ -678,13 +695,13 @@ caps.handback.revision: 35
  在用户菜单选项上显示弹出菜单和报表的按钮。  
   
  [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)  
- 具有的可视外观的选项卡式的窗格 **导航窗格中** 在 Microsoft Outlook 2000 或 Outlook 2003。  `CMFCOutlookBar` 对象包含 [CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 对象和一系列选项卡。 选项卡可以是 [CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md) 对象或 `CWnd`-派生的对象。 对于用户，Outlook 栏显示为一系列按钮和一个显示区域。 用户单击按钮时，将显示相应控件或按钮窗格。  
+ 在 Microsoft Outlook 2000 或 Outlook 2003 中具有 **“导航窗格”** 可视外观的选项卡式窗格。 `CMFCOutlookBar`对象包含[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)对象和一系列选项卡。 这些选项卡可以[CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)对象或`CWnd`-派生的对象。 对于用户，Outlook 栏显示为一系列按钮和一个显示区域。 用户单击按钮时，将显示相应控件或按钮窗格。  
   
  [CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)  
- 派生的控件 [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md) ，可以插入到 Outlook 栏 ([CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md))。 Outlook 栏窗格包含一列大按钮。 如果按钮列表大于窗格，用户可以上下滚动按钮列表。 当用户将 Outlook 栏中的一个窗格与 Outlook 栏分离时，此窗格可以浮动或停靠在主框架窗口中。  
+ 派生的控件[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)，可以插入到 Outlook 栏 ([CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md))。 Outlook 栏窗格包含一列大按钮。 如果按钮列表大于窗格，用户可以上下滚动按钮列表。 当用户将 Outlook 栏中的一个窗格与 Outlook 栏分离时，此窗格可以浮动或停靠在主框架窗口中。  
   
  [CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)  
- 具有的可视外观的选项卡控件 **导航窗格中** Microsoft Outlook 中。  
+ 在 Microsoft Outlook 中具有 **“导航窗格”** 可视外观的选项卡控件。  
   
  [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)  
  实现 Windows 弹出菜单功能，并通过添加可拖曳菜单和工具提示等功能进行扩展。  
@@ -698,7 +715,7 @@ caps.handback.revision: 35
  [CMFCPropertyGridColorProperty 类](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)  
  支持用于打开颜色选择对话框的属性列表控件项。  
   
- [CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)  
+ [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)  
  支持可以按字母或分层顺序显示属性的可编辑属性网格控件。  
   
  [CMFCPropertyGridFileProperty 类](../../mfc/reference/cmfcpropertygridfileproperty-class.md)  
@@ -719,11 +736,11 @@ caps.handback.revision: 35
  [CMFCReBar 类](../../mfc/reference/cmfcrebar-class.md)  
  提供 Rebar 控件的布局、持久性和状态信息的控件条。  
   
- [CMFCRibbonApplicationButton 类](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
- 实现位于应用程序窗口左上角的特殊按钮。 单击时，此按钮将打开一个菜单，通常包含公共 **文件** 命令，如 **打开**, ，**保存**, ，和 **退出**。  
+ [而 CMFCRibbonApplicationButton 类](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
+ 实现位于应用程序窗口左上角的特殊按钮。 单击此按钮将打开一个菜单，其中通常包含公共的 **“文件”** 命令，如 **“打开”**、 **“保存”**和 **“退出”**。  
   
  [CMFCRibbonBaseElement 类](../../mfc/reference/cmfcribbonbaseelement-class.md)  
- 基类可以将添加到的所有元素 [CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)。 功能区元素的示例包括功能区按钮、功能区复选框和功能区组合框。  
+ 您可以将其添加到的所有元素的基类[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)。 功能区元素的示例包括功能区按钮、功能区复选框和功能区组合框。  
   
  [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)  
  实现可放置在功能区栏元素（例如面板、快速访问工具栏和弹出菜单）上的按钮。  
@@ -732,7 +749,7 @@ caps.handback.revision: 35
  允许将一系列功能区按钮组织到组中。 组中的所有按钮在水平位置上直接彼此相邻并位于边框中。  
   
  [CMFCRibbonCategory 类](../../mfc/reference/cmfcribboncategory-class.md)  
- 实现包含一组功能区选项卡 [CMFCRibbonPanel 类](../../mfc/reference/cmfcribbonpanel-class.md)。  
+ 实现包含一组功能区选项卡[CMFCRibbonPanel 类](../../mfc/reference/cmfcribbonpanel-class.md)。  
   
  [CMFCRibbonCheckBox 类](../../mfc/reference/cmfcribboncheckbox-class.md)  
  实现可添加到功能区面板、快速访问工具栏或弹出菜单的复选框。  
@@ -765,7 +782,7 @@ caps.handback.revision: 35
  实现位于功能区上的超链接。 当单击此超链接时，可以打开网页。  
   
  [CMFCRibbonMainPanel 类](../../mfc/reference/cmfcribbonmainpanel-class.md)  
- 实现在单击时显示的功能区面板 [CMFCRibbonApplicationButton 类](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。  
+ 实现在单击时显示的功能区面板[而 CMFCRibbonApplicationButton 类](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。  
   
  [CMFCRibbonMiniToolBar 类](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
  实现上下文快捷工具栏。  
@@ -792,13 +809,13 @@ caps.handback.revision: 35
  提供 Windows 列表控件功能，并通过包含显示 Shell 项列表的功能进行扩展。  
   
  [CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)  
- 扩展 [CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md) 通过显示 Shell 项的层次结构的功能。  
+ 扩展[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)通过显示 Shell 项的层次结构的功能。  
   
  [CMFCSpinButtonCtrl 类](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
  支持绘制数值调节钮控件的可视管理器。  
   
  [CMFCStatusBar 类](../../mfc/reference/cmfcstatusbar-class.md)  
- 实现类似于 `CStatusBar` 类的状态栏。 但是，`CMFCStatusBar` 类具有 `CStatusBar` 类未提供的功能，例如显示图像、动画和进度栏的功能，以及对鼠标双击作出响应的功能。  
+ 实现类似于 `CStatusBar` 类的状态栏。 但是， `CMFCStatusBar` 类具有 `CStatusBar` 类未提供的功能，例如显示图像、动画和进度栏的功能，以及对鼠标双击作出响应的功能。  
   
  [CMFCTabCtrl 类](../../mfc/reference/cmfctabctrl-class.md)  
  提供选项卡控件的功能。 选项卡控件在其顶部或底部显示具有平面或三维选项卡的可停靠窗口。 选项卡可以显示文本和图像，并可在处于活动状态时更改颜色。  
@@ -810,34 +827,34 @@ caps.handback.revision: 35
  实现可单击项目（任务）的列表。  
   
  [CMFCTasksPaneTask 类](../../mfc/reference/cmfctaskspanetask-class.md)  
- 表示任务窗格控件任务的帮助器类 ([CMFCTasksPane 类](../../mfc/reference/cmfctaskspane-class.md))。 任务对象表示任务组中的项 ([CMFCTasksPaneTaskGroup 类](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每个任务可具有在用户单击任务和显示在任务名称左侧的图标时框架所执行的命令。  
+ 表示为任务窗格控件任务的帮助器类 ([CMFCTasksPane 类](../../mfc/reference/cmfctaskspane-class.md))。 任务对象表示任务组中的项 ([CMFCTasksPaneTaskGroup 类](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每个任务可具有在用户单击任务和显示在任务名称左侧的图标时框架所执行的命令。  
   
  [CMFCTasksPaneTaskGroup 类](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
- 使用的帮助器类 [CMFCTasksPane 类](../../mfc/reference/cmfctaskspane-class.md) 控件。 类型的对象 `CMFCTasksPaneTaskGroup` 表示 *任务组*。 任务组是框架在具有折叠按钮的单独框中显示的项列表。 此框可具有一个可选标题（组名）。 如果一个组处于折叠状态，则任务列表不可见。  
+ 所使用的帮助器类[CMFCTasksPane 类](../../mfc/reference/cmfctaskspane-class.md)控件。 `CMFCTasksPaneTaskGroup` 类型的对象表示一个任务组 。 任务组是框架在具有折叠按钮的单独框中显示的项列表。 此框可具有一个可选标题（组名）。 如果一个组处于折叠状态，则任务列表不可见。  
   
  [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)  
- 类似于 [CToolBar 类](../../mfc/reference/ctoolbar-class.md), ，但为用户界面功能提供额外支持。 其中包括平面工具栏、有热图的工具栏、大图标、页导航按钮、锁定的工具栏、Rebar 控件、图像下的文本、背景图像和选项卡式工具栏。 `CMFCToolBar` 类还包含内置支持，用户可对工具栏和菜单、工具栏和菜单之间的拖放、组合框按钮、编辑框按钮、颜色选取器和汇总按钮进行自定义。  
+ 类似于[CToolBar 类](../../mfc/reference/ctoolbar-class.md)，但用户界面功能为提供额外支持。 其中包括平面工具栏、有热图的工具栏、大图标、页导航按钮、锁定的工具栏、Rebar 控件、图像下的文本、背景图像和选项卡式工具栏。 `CMFCToolBar` 类还包含内置支持，用户可对工具栏和菜单、工具栏和菜单之间的拖放、组合框按钮、编辑框按钮、颜色选取器和汇总按钮进行自定义。  
   
  [CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)  
  管理从应用程序资源或文件中加载的工具栏图像。  
   
  [CMFCToolBarInfo 类](../../mfc/reference/cmfctoolbarinfo-class.md)  
- 包含处于不同状态的工具栏图像的资源 ID。 `CMFCToolBarInfo` 是用作参数的帮助器类 [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#cmfctoolbar__loadtoolbarex) 方法。  
+ 包含处于不同状态的工具栏图像的资源 ID。 `CMFCToolBarInfo`是用作参数的帮助器类[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  
   
  [CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  包含一个弹出菜单的工具栏按钮。  
   
  [CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)  
- 无模式选项卡对话框 ([CPropertySheet 类](../../mfc/reference/cpropertysheet-class.md))，使用户能够自定义工具栏、 菜单、 键盘快捷键、 用户定义的工具和应用程序中的视觉样式。 通常情况下，用户访问此对话框中通过选择 **自定义** 从 **工具** 菜单。  
+ 无模式选项卡对话框 ([CPropertySheet 类](../../mfc/reference/cpropertysheet-class.md))，它使用户能够自定义工具栏、 菜单、 键盘快捷方式、 用户定义的工具和应用程序中的视觉样式。 通常，用户可从 **“工具”** 菜单中选择 **“自定义”** 来访问此对话框。  
   
  [CMFCToolTipCtrl 类](../../mfc/reference/cmfctooltipctrl-class.md)  
- 扩展工具提示实现基于 [CToolTipCtrl 类](../../mfc/reference/ctooltipctrl-class.md)。 基于 `CMFCToolTipCtrl` 类的工具提示可显示图标、标签和说明。 可以使用渐变填充、自定义文本和边框颜色、粗体文本、圆角或气球样式来自定义可视外观。  
+ 扩展工具提示实现基于[CToolTipCtrl 类](../../mfc/reference/ctooltipctrl-class.md)。 基于 `CMFCToolTipCtrl` 类的工具提示可显示图标、标签和说明。 可以使用渐变填充、自定义文本和边框颜色、粗体文本、圆角或气球样式来自定义可视外观。  
   
  [CMFCToolTipInfo 类](../../mfc/reference/cmfctooltipinfo-class.md)  
  存储有关工具提示视觉外观的信息。  
   
  [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)  
- 提供在全局级别更改应用程序外观的支持。 `CMFCVisualManager` 类与说明如何绘制应用程序中 GUI 控件的类一起使用，且使用一致样式。 这些其他类称为视觉管理器，从 `CMFCBaseVisualManager` 继承而来。  
+ 提供在全局级别更改应用程序外观的支持。 `CMFCVisualManager` 类与说明如何绘制应用程序中 GUI 控件的类一起使用，且使用一致样式。 这些其他类称为视觉管理器，从 `CMFCBaseVisualManager`继承而来。  
   
  [CMFCVisualManagerOffice2003 类](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)  
  向应用程序提供 Microsoft Office 2003 外观。  
@@ -861,13 +878,13 @@ caps.handback.revision: 35
  表示通常在浮动工具条周围出现的半高框架窗口。  
   
  [CMonikerFile 类](../../mfc/reference/cmonikerfile-class.md)  
- 表示数据的流 ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 通过名为 [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
+ 表示由[IMoniker](http://msdn.microsoft.com/library/windows/desktop/aa380034)命名的数据流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/ms679705))。  
   
  [CMonthCalCtrl 类](../../mfc/reference/cmonthcalctrl-class.md)  
  封装月历控件的功能。  
   
  [CMouseManager 类](../../mfc/reference/cmousemanager-class.md)  
- 允许将不同命令关联与特定用户 [CView 类](../../mfc/reference/cview-class.md) 当用户在视图内双击对象。  
+ 允许将不同的命令关联与特定用户[CView 类](../../mfc/reference/cview-class.md)对象当用户在视图内双击。  
   
  [CMultiDocTemplate 类](../../mfc/reference/cmultidoctemplate-class.md)  
  定义实现多文档界面 (MDI) 的文档模板。  
@@ -879,7 +896,7 @@ caps.handback.revision: 35
  多页对话框按顺序显示多个 HTML 页并处理每页中的事件。  
   
  [CMultiPaneFrameWnd 类](../../mfc/reference/cmultipaneframewnd-class.md)  
- 扩展 [CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 而不是控件条的单个嵌入句柄 `CMultiPaneFrameWnd` 包含 [CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md) 对象，它使用户能够将一个停靠 `CMultiPaneFrameWnd` 到另一个、 动态地创建多个浮动选项卡式窗口。  
+ 扩展[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 而不是控件条的单个嵌入句柄`CMultiPaneFrameWnd`包含[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象，它使用户能够将一个停靠`CMultiPaneFrameWnd`到另一个并动态地创建多个浮动的选项卡式窗口。  
   
  [CMutex 类](../../mfc/reference/cmutex-class.md)  
  表示一个 mutex，是一个允许一个线程以互相排斥的方式访问一个资源的同步对象。  
@@ -915,7 +932,7 @@ caps.handback.revision: 35
  定义 OLE 项的容器接口。  
   
  [COleCmdUI 类](../../mfc/reference/colecmdui-class.md)  
- 实现 MFC 方法以更新与应用程序的 `IOleCommandTarget` 驱动功能相关的用户界面对象的状态。  
+ 实现 MFC 方法以更新与应用程序的 `IOleCommandTarget`驱动功能相关的用户界面对象的状态。  
   
  [COleControl 类](../../mfc/reference/colecontrol-class.md)  
  用于开发 OLE 控件的重要基类。  
@@ -930,7 +947,7 @@ caps.handback.revision: 35
  提供自定义客户端控件接口支持。  
   
  [COleConvertDialog 类](../../mfc/reference/coleconvertdialog-class.md)  
- 有关详细信息，请参阅 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) 结构 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 有关详细信息，请参阅[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
  [COleCurrency 类](../../mfc/reference/colecurrency-class.md)  
  封装 OLE 自动化的 `CURRENCY` 数据类型。  
@@ -975,7 +992,7 @@ caps.handback.revision: 35
  应用程序就地编辑窗口的基。  
   
  [COleIPFrameWndEx 类](../../mfc/reference/coleipframewndex-class.md)  
- 实现支持 MFC 的 OLE 容器。 你必须从你的应用程序的派生就地框架窗口类 `COleIPFrameWndEx` 类，而不是派生从 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) 类。  
+ 实现支持 MFC 的 OLE 容器。 必须为您的应用程序中派生就地框架窗口类`COleIPFrameWndEx`类，而不是从它派生[COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类。  
   
  [COleLinkingDoc 类](../../mfc/reference/colelinkingdoc-class.md)  
  支持链接到所包含的嵌入项的 OLE 容器文档的基类。  
@@ -1020,7 +1037,7 @@ caps.handback.revision: 35
  用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。  
   
  [COleVariant 类](../../mfc/reference/colevariant-class.md)  
- 封装 [VARIANT](http://msdn.microsoft.com/zh-cn/e305240e-9e11-4006-98cc-26f4932d2118) 数据类型。  
+ 封装[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)数据类型。  
   
  [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` 类用于包装 Windows 页导航控件，可以滚动此控件以查看所包含的不适合包含窗口的窗口。  
@@ -1029,16 +1046,16 @@ caps.handback.revision: 35
  封装由 Windows 公共 OLE“页面设置”对话框提供的服务以及对于设置和修改打印边距的额外支持。  
   
  [CPaintDC 类](../../mfc/reference/cpaintdc-class.md)  
- 设备上下文类派生自 [CDC 类](../../mfc/reference/cdc-class.md)。  
+ 设备上下文类派生自[Cdc](../../mfc/reference/cdc-class.md)。  
   
  [CPalette 类](../../mfc/reference/cpalette-class.md)  
  封装一个 Windows 调色板。  
   
  [CPane 类](../../mfc/reference/cpane-class.md)  
- 增强了的 [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)。 如果你要升级现有 MFC 项目，则需要用 `CControlBar` 替换 `CPane` 的所有匹配项。  
+ 增强的[CControlBar 类](../../mfc/reference/ccontrolbar-class.md)。 如果你要升级现有 MFC 项目，则需要用 `CControlBar` 替换 `CPane`的所有匹配项。  
   
  [CPaneContainer 类](../../mfc/reference/cpanecontainer-class.md)  
- MFC 实现的停靠模型的基本组件。 此类对象存储指向两个停靠窗格或两个 `CPaneContainer.` 实例的指针。它还存储分隔窗格（或容器）的分隔线的指针。 通过嵌套容器内部的容器，框架可以生成表示复杂停靠布局的二叉树。 二进制树的根存储在 [CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md) 对象。  
+ MFC 实现的停靠模型的基本组件。 此类对象存储指向两个停靠窗格或两个 `CPaneContainer.` 实例的指针。它还存储分隔窗格（或容器）的分隔线的指针。 通过嵌套容器内部的容器，框架可以生成表示复杂停靠布局的二叉树。 二进制树的根存储在[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象。  
   
  [CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)  
  管理当前停靠布局的存储和显示。  
@@ -1095,7 +1112,7 @@ caps.handback.revision: 35
  封装 Rebar 控件的功能，此控件是一个子窗口容器。  
   
  [CRecentDockSiteInfo 类](../../mfc/reference/crecentdocksiteinfo-class.md)  
- 存储最近状态信息的帮助器类 [CPane 类](../../mfc/reference/cpane-class.md)。  
+ 帮助器类，它存储有关的最新状态信息[CPane 类](../../mfc/reference/cpane-class.md)。  
   
  [CRecentFileList 类](../../mfc/reference/crecentfilelist-class.md)  
  支持最近使用的 (MRU) 文件列表的控件。  
@@ -1107,13 +1124,13 @@ caps.handback.revision: 35
  显示控件中数据库记录的视图。  
   
  [CRect 类](../../atl-mfc-shared/reference/crect-class.md)  
- 类似于 Windows [RECT 结构](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-US)。  
+ 类似于 Windows [RECT 结构](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)。  
   
  [CRectTracker 类](../../mfc/reference/crecttracker-class.md)  
  使项目以不同方式显示、移动和调整大小。  
   
  [CRenderTarget 类](../../mfc/reference/crendertarget-class.md)  
- `ID2D1RenderTarget` 的包装器。  
+ `ID2D1RenderTarget`的包装器。  
   
  [CResourceException 类](../../mfc/reference/cresourceexception-class.md)  
  当 Windows 无法找到或分配请求的资源时生成。  
@@ -1125,22 +1142,22 @@ caps.handback.revision: 35
  封装一个 Windows 图形设备接口 (GDI) 区域。  
   
  [CRichEditCntrItem 类](../../mfc/reference/cricheditcntritem-class.md)  
- 与 [CRichEditView 类](../../mfc/reference/cricheditview-class.md) 和 [CRichEditDoc 类](../../mfc/reference/cricheditdoc-class.md), ，提供 MFC 文档视图体系结构上下文中 rich edit 控件的功能。  
+ 与[CRichEditView 类](../../mfc/reference/cricheditview-class.md)和[CRichEditDoc 类](../../mfc/reference/cricheditdoc-class.md)，提供 MFC 文档视图体系结构的上下文中 rich edit 控件的功能。  
   
  [CRichEditCtrl 类](../../mfc/reference/cricheditctrl-class.md)  
  提供 Rich Edit 控件功能。  
   
  [CRichEditDoc 类](../../mfc/reference/cricheditdoc-class.md)  
- 与 [CRichEditView 类](../../mfc/reference/cricheditview-class.md) 和 [CRichEditCntrItem 类](../../mfc/reference/cricheditcntritem-class.md), ，提供 MFC 文档视图体系结构上下文中 rich edit 控件的功能。  
+ 与[CRichEditView 类](../../mfc/reference/cricheditview-class.md)和[CRichEditCntrItem 类](../../mfc/reference/cricheditcntritem-class.md)，提供 MFC 文档视图体系结构的上下文中 rich edit 控件的功能。  
   
  [CRichEditView 类](../../mfc/reference/cricheditview-class.md)  
- 与 [CRichEditDoc 类](../../mfc/reference/cricheditdoc-class.md) 和 [CRichEditCntrItem 类](../../mfc/reference/cricheditcntritem-class.md), ，提供 MFC 文档视图体系结构上下文中 rich edit 控件的功能。  
+ 与[CRichEditDoc 类](../../mfc/reference/cricheditdoc-class.md)和[CRichEditCntrItem 类](../../mfc/reference/cricheditcntritem-class.md)，提供 MFC 文档视图体系结构的上下文中 rich edit 控件的功能。  
   
  [CScrollBar 类](../../mfc/reference/cscrollbar-class.md)  
  提供 Windows 滚动条控件功能。  
   
  [CScrollView 类](../../mfc/reference/cscrollview-class.md)  
- A [CView 类](../../mfc/reference/cview-class.md) 带滚动功能。  
+ 一个[CView 类](../../mfc/reference/cview-class.md)带滚动功能。  
   
  [CSemaphore 类](../../mfc/reference/csemaphore-class.md)  
  表示一个“信号量”，此信号量为一个同步对象，允许一个或多个进程中有限数量的线程访问指定资源，并保持当前访问指定资源的线程数的计数。  
@@ -1149,10 +1166,10 @@ caps.handback.revision: 35
  包装 Windows API 函数，提供用于访问注册表的面向对象的接口。  
   
  [CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)  
- 可用于创建的实例的帮助器类 [CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
+ 可以使用创建的实例的帮助器类[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
   
  [CSharedFile 类](../../mfc/reference/csharedfile-class.md)  
-  [CMemFile 类](../../mfc/reference/cmemfile-class.md)-支持的派生的类共享内存文件。  
+ [CMemFile 类](../../mfc/reference/cmemfile-class.md)-支持的派生的类共享内存文件。  
   
  [CShellManager 类](../../mfc/reference/cshellmanager-class.md)  
  实现可使你使用指向标识符列表 (PIDL) 的指针的几种方法。  
@@ -1173,7 +1190,7 @@ caps.handback.revision: 35
  封装其幅度由动画变量的初始速度决定的正弦速度转换。  
   
  [CSize 类](../../atl-mfc-shared/reference/csize-class.md)  
- 类似于 Windows [大小](http://msdn.microsoft.com/library/windows/desktop/dd145106) 结构，实现相对坐标或位置。  
+ 类似于实现相对坐标或位置的 Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 结构。  
   
  [CSliderCtrl 类](../../mfc/reference/csliderctrl-class.md)  
  提供 Windows 公共滑块控件的功能。  
@@ -1185,7 +1202,7 @@ caps.handback.revision: 35
  封装平稳停止转换。  
   
  [CSocket 类](../../mfc/reference/csocket-class.md)  
- 从 `CAsyncSocket` 派生，表示 Windows 套接字 API 的高级别抽象。  
+ 从 `CAsyncSocket`派生，表示 Windows 套接字 API 的高级别抽象。  
   
  [CSocketFile 类](../../mfc/reference/csocketfile-class.md)  
  用于通过 Windows 套接字在网络中发送和接收数据的 `CFile` 对象。  
@@ -1199,7 +1216,7 @@ caps.handback.revision: 35
  [CSplitterWnd 类](../../mfc/reference/csplitterwnd-class.md)  
  提供拆分窗口功能，此窗口包含多个窗格。  
   
- [CSplitterWndEx 类](../Topic/CSplitterWndEx%20Class.md)  
+ [CSplitterWndEx 类](csplitterwndex-class.md)  
  表示自定义拆分窗口。  
   
  [CStatic 类](../../mfc/reference/cstatic-class.md)  
@@ -1212,7 +1229,7 @@ caps.handback.revision: 35
  提供 Windows 公共状态栏控件的功能。  
   
  [CStdioFile 类](../../mfc/reference/cstdiofile-class.md)  
- 表示 C 运行时流文件，并由运行时函数打开 [fopen、 _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
+ 表示由运行时函数打开的 C 运行时流文件[fopen、 _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
   
  [CStringArray 类](../../mfc/reference/cstringarray-class.md)  
  支持 `CString` 对象数组。  
@@ -1230,7 +1247,7 @@ caps.handback.revision: 35
  提供 Windows 公共选项卡控件的功能。  
   
  [CTabView 类](../../mfc/reference/ctabview-class.md)  
- 简化了使用选项卡控件类 ([CTabView 类](../../mfc/reference/ctabview-class.md)) 中使用 MFC 文档/视图体系结构的应用程序。  
+ 简化了选项卡控件类的使用 ([CTabView 类](../../mfc/reference/ctabview-class.md)) 中使用 MFC 文档/视图体系结构的应用程序。  
   
  [CTaskDialog 类](../../mfc/reference/ctaskdialog-class.md)  
  功能类似于消息框，但可向用户显示额外信息的弹出对话框。 `CTaskDialog` 还包括从用户那里收集信息的功能。  
@@ -1251,16 +1268,16 @@ caps.handback.revision: 35
  提供 Windows 公共树视图控件的功能。  
   
  [CTreeView 类](../../mfc/reference/ctreeview-class.md)  
- 简化了使用树控件 and 的 [CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md), ，封装树控件功能，带有 MFC 文档视图体系结构的类。  
+ 简化了使用树控件和[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)，封装树控件功能，与 MFC 文档视图体系结构的类。  
   
  [CTypedPtrArray 类](../../mfc/reference/ctypedptrarray-class.md)  
- 为 `CPtrArray` 类或 `CObArray` 类的对象提供安全类型“包装器”。  
+ 为 `CPtrArray` 类或 `CObArray`类的对象提供安全类型“包装器”。  
   
  [CTypedPtrList 类](../../mfc/reference/ctypedptrlist-class.md)  
- 为 `CPtrList` 类的对象提供安全类型“包装器”。  
+ 为 `CPtrList`类的对象提供安全类型“包装器”。  
   
  [CTypedPtrMap 类](../../mfc/reference/ctypedptrmap-class.md)  
- 为 `CMapPtrToPtr`、`CMapPtrToWord`、`CMapWordToPtr` 和 `CMapStringToPtr` 指针映射类的对象提供安全类型“包装器”。  
+ 为 `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`和 `CMapStringToPtr`指针映射类的对象提供安全类型“包装器”。  
   
  [CUIntArray 类](../../mfc/reference/cuintarray-class.md)  
  支持无符号整数数组。  
@@ -1269,10 +1286,10 @@ caps.handback.revision: 35
  引发后将终止最终用户操作。  
   
  [CUserTool 类](../../mfc/reference/cusertool-class.md)  
- 运行外部应用程序的菜单项。  **工具** 选项卡 **自定义** 对话框 ([CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 允许用户添加用户工具，并指定名称、 命令、 自变量和为每个用户工具的初始目录。  
+ 运行外部应用程序的菜单项。 **工具**的选项卡上**自定义**对话框中 ([CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 使用户可以添加用户工具，并指定名称、 命令、 参数以及为每个用户工具的初始目录。  
   
  [CUserToolsManager 类](../../mfc/reference/cusertoolsmanager-class.md)  
- 保持的集合 [CUserTool 类](../../mfc/reference/cusertool-class.md) 应用程序中的对象。 用户工具是运行外部应用程序的菜单项。 `CUserToolsManager` 对象使用户或开发人员能够将新的用户工具添加到应用程序中。 它支持与用户工具关联的命令的执行，并将与用户工具相关的信息保存到 Windows 注册表中。  
+ 集合进行维护[CUserTool 类](../../mfc/reference/cusertool-class.md)应用程序中的对象。 用户工具是运行外部应用程序的菜单项。 `CUserToolsManager` 对象使用户或开发人员能够将新的用户工具添加到应用程序中。 它支持与用户工具关联的命令的执行，并将与用户工具相关的信息保存到 Windows 注册表中。  
   
  [CView 类](../../mfc/reference/cview-class.md)  
  提供用户定义视图类的基本功能。  
@@ -1290,7 +1307,7 @@ caps.handback.revision: 35
  处理应用程序状态，将此状态保存到注册表，从注册表加载此状态，初始化应用程序管理器，并将链接提供到同样的应用程序管理器。  
   
  [CWindowDC 类](../../mfc/reference/cwindowdc-class.md)  
- 从 `CDC` 派生。  
+ 从 `CDC`派生。  
   
  [CWinFormsControl 类](../../mfc/reference/cwinformscontrol-class.md)  
  提供用于承载 Windows 窗体控件的基本功能。  
@@ -1313,6 +1330,7 @@ caps.handback.revision: 35
 ## <a name="related-sections"></a>相关章节  
  [MFC 桌面应用程序](../../mfc/mfc-desktop-applications.md)  
  包含与构成 MFC 库的类、全局函数、全局变量和宏相关的主题的链接。
+
 
 
 

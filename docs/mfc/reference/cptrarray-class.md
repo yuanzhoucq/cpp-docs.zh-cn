@@ -1,103 +1,120 @@
 ---
-title: "CPtrArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CPtrArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], generic"
-  - "CPtrArray class"
-  - "generic arrays"
+title: "CPtrArray 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CPtrArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++], generic
+- CPtrArray class
+- generic arrays
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CPtrArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: d0cfa1ec60a6657403b3170c118ddc701946e308
+ms.lasthandoff: 02/24/2017
 
-支持一些无效的指针。  
+---
+# <a name="cptrarray-class"></a>CPtrArray 类
+支持 void 指针数组。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CPtrArray : public CObject  
 ```  
   
-## 成员  
- `CPtrArray` 的成员函数类似于选件类 [CObArray](../../mfc/reference/cobarray-class.md)的成员函数。  因此相似性，可以使用 `CObArray` 引用成员函数特定的文档。  无论在何处参见 `CObject` 指针作为函数参数或返回值，请替换指向 `void`。  
+## <a name="members"></a>成员  
+ 成员函数`CPtrArray`类似于类的成员函数[CObArray](../../mfc/reference/cobarray-class.md)。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论您在何处找到作为函数参数的 `CObject` 或返回值，都将替换指向 `void` 的指针。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
- 例如，转换  
+ 例如，转换为  
   
  `void* CPtrArray::GetAt( int <nIndex> ) const;`  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|构造一个空数组。|  
+  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[CObArray::CObArray](../Topic/CObArray::CObArray.md)|构造一个空数组。|  
+|----------|-----------------|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|将另一个数组追加到该数组中；根据需要扩展该数组。|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|将另一个数组复制到该数组；根据需要扩展该数组。|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|在该数组中返回对元素指针的临时引用。|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|若高于当前的上限，则将释放所有未使用的内存。|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|返回给定索引位置处的值。|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|获取此数组中的元素数。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|允许访问该数组中的元素。 可以是`NULL`。|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|获取此数组中的元素数。|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|返回最大的有效索引。|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引处插入一个元素（或另一个数组中的所有元素）。|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|确定数组是否为空。|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|从此数组中移除所有元素。|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引处的元素。|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|设置给定索引的值；不允许对该数组进行扩展。|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|设置给定索引的值；根据需要扩展该数组。|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|设置要在该数组中包含的元素数。|  
   
-### 公共方法  
+### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
-|--------|--------|  
-|[CObArray::Add](../Topic/CObArray::Add.md)|将元素添加到数组的结尾;如果需要，增长数组。|  
-|[CObArray::Append](../Topic/CObArray::Append.md)|追加另一个数组传递给数组;如果需要，增长数组。|  
-|[CObArray::Copy](../Topic/CObArray::Copy.md)|复制另一个数组传递给数组;如果需要，增长数组。|  
-|[CObArray::ElementAt](../Topic/CObArray::ElementAt.md)|返回临时对数组中的元素指针。|  
-|[CObArray::FreeExtra](../Topic/CObArray::FreeExtra.md)|释放在当前上限的任何未使用的内存。|  
-|[CObArray::GetAt](../Topic/CObArray::GetAt.md)|返回值在给定索引。|  
-|[CObArray::GetCount](../Topic/CObArray::GetCount.md)|获取元素的数目该数组中的。|  
-|[CObArray::GetData](../Topic/CObArray::GetData.md)|允许对组件的访问该数组。  可以为 `NULL`。|  
-|[CObArray::GetSize](../Topic/CObArray::GetSize.md)|获取元素的数目该数组中的。|  
-|[CObArray::GetUpperBound](../Topic/CObArray::GetUpperBound.md)|返回最大的有效的索引。|  
-|[CObArray::InsertAt](../Topic/CObArray::InsertAt.md)|插入元素\(或在其他元素中的所有元素数组\)在指定的索引。|  
-|[CObArray::IsEmpty](../Topic/CObArray::IsEmpty.md)|确定数组是否为空。|  
-|[CObArray::RemoveAll](../Topic/CObArray::RemoveAll.md)|从此数组中移除所有元素。|  
-|[CObArray::RemoveAt](../Topic/CObArray::RemoveAt.md)|移除元素在一个枚举索引。|  
-|[CObArray::SetAt](../Topic/CObArray::SetAt.md)|为特定的索引值;不允许的数组增大。|  
-|[CObArray::SetAtGrow](../Topic/CObArray::SetAtGrow.md)|为特定的索引值;如果需要，增长数组。|  
-|[CObArray::SetSize](../Topic/CObArray::SetSize.md)|设置该数组将包含的元素的数目。|  
+|名称|描述|  
+|----------|-----------------|  
+|[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|  
   
-### 公共运算符  
-  
-|名称|说明|  
-|--------|--------|  
-|[CObArray::operator](../Topic/CObArray::operator.md)|设置或获取元素位于指定索引处。|  
-  
-## 备注  
- `CPtrArray` 合并 `IMPLEMENT_DYNAMIC` 宏支持运行时类型访问和转储到 `CDumpContext` 对象。  如果需要各个指针数组元素转储，必须将转储上下文的深度为1或更大。  
+## <a name="remarks"></a>备注  
+ `CPtrArray` 合并 `IMPLEMENT_DYNAMIC` 宏来支持运行时类型访问和转储到 `CDumpContext` 对象。 如果需要单个指针数组中元素的转储，必须将转储上下文的深度设置为 1 或更高。  
   
 > [!NOTE]
->  在使用数组之前，请使用 `SetSize` 建立它的大小并将其分配的内存。  如果不使用 `SetSize`，将元素添加到的数组使其最频繁分配和复制。  常见的重新分配和复制是低效的，并且可能产生内存碎片。  
+>  在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。  
   
- 无法对指针数组。  
+ 指针数组无法序列化。  
   
- 当指针数组删除，或者，如果移除元素，因此，只有这些引用移除的指针，而不是实体。  
+ 当删除指针数组时，或移除其元素时，只有指针均被删除，未引用的实体。  
   
- 有关使用 `CPtrArray`的更多信息，请参见文章 [集合](../../mfc/collections.md)。  
+ 有关详细信息使用`CPtrArray`，请参阅文章[集合](../../mfc/collections.md)。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrArray`  
   
-## 要求  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxcoll.h  
   
-## 请参阅  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>另请参阅  
+ [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
- [CObArray Class](../../mfc/reference/cobarray-class.md)
+ [CObArray 类](../../mfc/reference/cobarray-class.md)
+

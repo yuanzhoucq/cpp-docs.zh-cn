@@ -1,77 +1,95 @@
 ---
-title: "消息映射 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "消息映射 [C++], MFC"
-  - "消息 [C++], Windows"
-  - "MFC [C++], 消息"
-  - "Windows 消息 [C++], 消息映射"
+title: "消息映射 (MFC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- message maps [C++], MFC
+- Windows messages [C++], message maps
+- messages [C++], Windows
+- MFC [C++], messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 消息映射 (MFC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: bb31d35e221c9f5d06dc34408bed500b4a18b077
+ms.lasthandoff: 02/24/2017
 
-这个部分的饮用列出了所有的[message mapping macros](../../mfc/reference/message-map-macros-mfc.md)和所有的[CWnd](../../mfc/reference/cwnd-class.md)消息，映射的实例与函数实例一致。  
+---
+# <a name="message-maps-mfc"></a>消息映射 (MFC)
+该引用本部分列出了所有[消息映射宏](../../mfc/reference/message-map-macros-mfc.md)和全部[CWnd](../../mfc/reference/cwnd-class.md)消息映射条目以及相应的成员函数原型︰  
   
 |类别|说明|  
-|--------|--------|  
-|[WM\_COMMAND消息处理程序](../../mfc/reference/wm-command-message-handler.md)|控件**WM\_COMMAND**信息由用户菜单选项或用户菜单访问键生成。|  
-|[子窗口通知消息处理程序](../../mfc/reference/child-window-notification-message-handlers.md)|处理来自子窗口的通知消息。|  
-|[WM\_消息处理程序](../../mfc/reference/handlers-for-wm-messages.md)|处理**WM\_**消息，例如`WM_PAINT`。|  
-|[由用户定义的消息处理程序](../../mfc/reference/user-defined-handlers.md)|处理用户定义的消息。|  
+|--------------|-----------------|  
+|[WM_COMMAND 消息处理程序](../../mfc/reference/wm-command-message-handler.md)|处理**WM_COMMAND**在用户菜单选项或菜单访问键产生的消息。|  
+|[子窗口通知消息处理程序](../../mfc/reference/child-window-notification-message-handlers.md)|处理从子窗口通知消息。|  
+|[WM_ 消息处理程序](../../mfc/reference/handlers-for-wm-messages.md)|处理**WM_**消息，如`WM_PAINT`。|  
+|[用户定义消息处理程序](../../mfc/reference/user-defined-handlers.md)|处理用户定义的消息。|  
   
- （在引用中使用的术语和公约的例子请参见[How to Use the Message Map Cross\-Reference](../../mfc/reference/how-to-use-the-message-map-cross-reference.md)。）  
+ (有关术语和本参考中使用的约定的说明，请参阅[如何使用消息映射交叉引用](../../mfc/reference/how-to-use-the-message-map-cross-reference.md)。)  
   
- 因为 windows 是面向消息操作系统，Windows环境下编程的一大部分参与消息处理。  每次使用诸如击键或鼠标单击时，信息会发送到应用程序，然后必须处理事件。  
+ 由于 Windows 是面向消息的系统的操作系统，对 Windows 环境进行编程的大部分内容涉及消息处理。 每次事件如击键或鼠标单击时，一条消息发送到应用程序，然后，必须处理该事件。  
   
- Microsoft 基础类库提供基于消息编程的编程模型优化。  在此模型中，“消息映射”用于指定哪些函数用于为特定的类处理多种消息。  消息映射包含一个或多个宏用于指定哪些函数处理哪些消息。  例如，一个消息映射包括一个`ON_COMMAND`宏，会像这样：  
+ Microsoft 基础类库提供了针对基于消息的编程优化的编程模型。 在此模型中，"消息映射"用于指定哪些函数将处理特定的事件类的各种消息。 消息映射包含一个或多个指定的消息将由哪些函数处理的宏。 例如，一个消息映射包含`ON_COMMAND`宏可能如下所示︰  
   
- [!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/CPP/message-maps-mfc_1.cpp)]  
+ [!code-cpp[NVC_MFCMessageMaps #&16;](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]  
   
- `ON_COMMAND`宏用于处理由菜单、按钮、和加速键生成的命令消息。  [Macros](../../mfc/reference/message-map-macros-mfc.md)可用于映射如下的：  
+ `ON_COMMAND`宏用于处理生成的菜单、 按钮和快捷键的命令消息。 [宏](../../mfc/reference/message-map-macros-mfc.md)包含可映射以下︰  
   
-## Windows消息  
+## <a name="windows-messages"></a>Windows 消息  
   
 -   控件通知  
   
 -   用户定义的消息  
   
-## 命令消息  
+## <a name="command-messages"></a>命令消息  
   
--   注册用户定义消息  
+-   已注册的用户定义的消息  
   
 -   用户界面更新消息  
   
-## 消息的范围  
+## <a name="ranges-of-messages"></a>范围的消息  
   
 -   命令  
   
--   更新处理程序消息  
+-   更新处理程序的消息  
   
 -   控件通知  
   
- 虽然消息映射宏很重要，但您通常不会直接使用它们。  这是因为当你使用消息关联消息处理函数时，属性窗口在源文件自动创建消息映射项。  任何时候你需要编辑或添加消息映射项，可以使用属性窗口。  
+ 尽管消息映射宏很重要，但您通常不必直接使用它们。 这是因为属性窗口，自动创建消息映射条目在源文件中时用于将消息处理函数与消息相关联。 无论的何时想要编辑或添加消息映射条目时，您可以使用属性窗口。  
   
 > [!NOTE]
->  属性窗口不支持消息映射排序。  必须自己编写这些消息映射项。  
+>  属性窗口不支持消息映射范围。 您必须自己编写这些消息映射条目。  
   
- 但是，消息映射是Microsoft 基础类库的重要组成部分。  您应了解他们做了什么，并且文档是为他们提供的。  
+ 但是，消息映射是 Microsoft 基础类库的一个重要部分。 您应该了解它们的功能，并为它们提供文档。  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+

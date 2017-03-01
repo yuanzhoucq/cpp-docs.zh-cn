@@ -1,46 +1,62 @@
 ---
-title: "链接器工具警告 LNK4227 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4227"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4227"
+title: "链接器工具警告 LNK4227 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK4227
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 链接器工具警告 LNK4227
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: ee566318c7d19159f9a2c084d348b5010a65e2de
+ms.lasthandoff: 02/24/2017
 
-元数据操作警告 \(HRESULT\) : warning\_message  
+---
+# <a name="linker-tools-warning-lnk4227"></a>链接器工具警告 LNK4227
+元数据操作警告 (HRESULT): warning_message  
   
- 链接器在合并时检测出元数据差异：  
+合并时，链接器检测到元数据之间的差异︰  
   
--   含当前正生成的程序集的一个或多个引用的程序集。  
+-   一个或多个引用的程序集与当前正在生成的程序集。  
   
--   编译中的一个或多个源代码文件。  
+-   一个或多个源代码文件编译中。  
   
- 例如，如果具有两个同名的全局函数，但是声明的参数信息不同（声明在所有 compiland 中都不一致），则可能导致 LNK4227。  在各个 .obj 文件上使用 ildasm.exe \/TEXT \/METADATA `object_file`，您应该看到类型的不一致性。  
+例如，可能只有两个具有相同名称但不同声明的参数信息的全局函数引起 LNK4227 （声明并非在所有 compiland 中保持一致）。 使用 ildasm.exe /TEXT /METADATA`object_file`上每个.obj 文件，您应会看到类型有何不同。  
   
- LNK4227 还报告由其他工具引发的问题。  例如 al.exe，请参见 [Al.exe 工具错误和警告](http://msdn.microsoft.com/zh-cn/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)。  
+LNK4227 还报告由其他工具的问题。 例如，al.exe;请参阅[Al.exe 工具错误和警告](http://msdn.microsoft.com/en-us/7f125d49-0a03-47a6-9ba9-d61a679a7d4b)。  
   
- 必须修复元数据问题才能解决此警告。  
+若要解决此警告，必须修复的元数据问题。  
   
- 例如，在对引用的程序集进行签名时（不同于引用它的程序集），将生成 LNK4227。  
+例如，如果引用的程序集进行签名以不同的方式比引用它的程序集，将生成 LNK4227。  
   
- 下面的示例生成 LNK4227：  
+下面的示例生成 LNK4227:  
   
 ```  
 // LNK4227.cpp  
@@ -52,7 +68,7 @@ using namespace System::Reflection;
 int main() {}  
 ```  
   
- 然后，  
+ 然后  
   
 ```  
 // LNK4227b.cpp  
@@ -69,38 +85,9 @@ ref class MyClass
 };  
 ```  
   
- 下面的示例生成 LNK4227：  
+在格式不正确的版本号传递给程序集属性时，还会生成 LNK4227。  * 表示法是特定于与 AssemblyVersionAttribute。  若要解决此警告，只能使用数字 AssemblyVersionAttribute 以外的版本属性中。  
   
-```  
-// LNK4227c.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System::Reflection;  
-  
-[assembly:AssemblyDelaySignAttribute(false)];  
-  
-int main() {}  
-```  
-  
- 然后，  
-  
-```  
-// LNK4227d.cpp  
-// compile with: /clr:oldSyntax LNK4227c.cpp /FeLNK4227d.exe  
-#using <mscorlib.dll>  
-using namespace System::Reflection;  
-using namespace System::Runtime::CompilerServices;  
-  
-[assembly:AssemblyDelaySignAttribute(true)];  
-  
-__gc class MyClass  
-{  
-};  
-```  
-  
- 版本号以错误格式传递给程序集特性时，也可能生成 LNK4227。“\*”表示法是特定于 AssemblyVersionAttribute 的。若要消除此警告，请仅使用版本特性（除 AssemblyVersionAttribute 之外）中的数字。  
-  
- 下面的示例生成 LNK4227：  
+下面的示例生成 LNK4227:  
   
 ```  
 // LNK4227e.cpp  

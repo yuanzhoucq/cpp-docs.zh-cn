@@ -1,63 +1,80 @@
 ---
-title: "MINMAXINFO 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MINMAXINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MINMAXINFO 结构"
+title: "MINMAXINFO 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MINMAXINFO
+dev_langs:
+- C++
+helpviewer_keywords:
+- MINMAXINFO structure
 ms.assetid: be6fb578-f98a-4581-9ada-be9df308ed2f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MINMAXINFO 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 772416bdac3c72f55644fa31aef23ba76a14e606
+ms.lasthandoff: 02/24/2017
 
-`MINMAXINFO` 结构包含有关该窗口的最大大小的信息和位置及其最小和最大次数跟踪范围。  
+---
+# <a name="minmaxinfo-structure"></a>MINMAXINFO 结构
+`MINMAXINFO`结构包含一个窗口最大化的大小、 位置和其最小值和最大跟踪大小有关的信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      typedef struct tagMINMAXINFO {  
-   POINT ptReserved;  
-   POINT ptMaxSize;  
-   POINT ptMaxPosition;  
-   POINT ptMinTrackSize;  
-   POINT ptMaxTrackSize;  
+typedef struct tagMINMAXINFO {  
+    POINT ptReserved;  
+    POINT ptMaxSize;  
+    POINT ptMaxPosition;  
+    POINT ptMinTrackSize;  
+    POINT ptMaxTrackSize;  
 } MINMAXINFO;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *ptReserved*  
  保留以供内部使用。  
   
  *ptMaxSize*  
- 最大化指定的宽度 \(point.x\) 和"最大化的高度 \(point.y\) 窗口。  
+ 指定最大化的宽度 (point.x) 和最大化 (point.y) 窗口的高度。  
   
  `ptMaxPosition`  
- 最大化窗口的指定 \(point.x\) 左侧的位置和最大化窗口的大小 \(point.y\) 顶部的位置。  
+ 指定的最大化窗口 (point.x) 的左侧位置和最大化窗口 (point.y) 的顶部的位置。  
   
  *ptMinTrackSize*  
- 指定最小宽度和最小 point.x 跟踪 \(\) 的高度 \(point.y\) 的跟踪窗口。  
+ 指定的最小跟踪宽度 (point.x) 和的最小跟踪窗口的高度 (point.y)。  
   
  *ptMaxTrackSize*  
- 指定最大跟踪宽度 \(point.x\) 和最大跟踪的高度 \(point.y\) 窗口。  
+ 指定跟踪宽度 (point.x) 的最大值和跟踪窗口的高度 (point.y) 的最大值。  
   
-## 要求  
- **页眉：** 指令  
+## <a name="requirements"></a>要求  
+ **标头：** winuser.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnGetMinMaxInfo](../Topic/CWnd::OnGetMinMaxInfo.md)
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)
+
+

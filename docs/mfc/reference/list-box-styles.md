@@ -1,95 +1,113 @@
 ---
-title: "列表框样式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LBS_STANDARD"
-  - "LBS_NODATA"
-  - "LBS_OWNERDRAWVARIABLE"
-  - "LBS_EXTENDEDSEL"
-  - "LBS_USETABSTOPS"
-  - "LBS_WANTKEYBOARDINPUT"
-  - "LBS_NOTIFY"
-  - "LBS_DISABLENOSCROLL"
-  - "LBS_HASSTRINGS"
-  - "LBS_NOREDRAW"
-  - "LBS_NOSEL"
-  - "LBS_NOINTEGRALHEIGHT"
-  - "LBS_MULTICOLUMN"
-  - "LBS_SORT"
-  - "LBS_MULTIPLESEL"
-  - "LBS_OWNERDRAWFIXED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LBS_DISABLENOSCROLL 常量"
-  - "LBS_EXTENDEDSEL 常量"
-  - "LBS_HASSTRINGS 常量"
-  - "LBS_MULTICOLUMN 常量"
-  - "LBS_MULTIPLESEL 常量"
-  - "LBS_NODATA 常量"
-  - "LBS_NOINTEGRALHEIGHT 常量"
-  - "LBS_NOREDRAW 常量"
-  - "LBS_NOSEL 常量"
-  - "LBS_NOTIFY 常量"
-  - "LBS_OWNERDRAWFIXED 常量"
-  - "LBS_OWNERDRAWVARIABLE 常量"
-  - "LBS_SORT 常量"
-  - "LBS_STANDARD 常量"
-  - "LBS_USETABSTOPS 常量"
-  - "LBS_WANTKEYBOARDINPUT 常量"
-  - "列表框, 样式"
+title: "列表框样式 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LBS_STANDARD
+- LBS_NODATA
+- LBS_OWNERDRAWVARIABLE
+- LBS_EXTENDEDSEL
+- LBS_USETABSTOPS
+- LBS_WANTKEYBOARDINPUT
+- LBS_NOTIFY
+- LBS_DISABLENOSCROLL
+- LBS_HASSTRINGS
+- LBS_NOREDRAW
+- LBS_NOSEL
+- LBS_NOINTEGRALHEIGHT
+- LBS_MULTICOLUMN
+- LBS_SORT
+- LBS_MULTIPLESEL
+- LBS_OWNERDRAWFIXED
+dev_langs:
+- C++
+helpviewer_keywords:
+- LBS_NOSEL constant
+- LBS_NOREDRAW constant
+- LBS_HASSTRINGS constant
+- LBS_OWNERDRAWFIXED constant
+- LBS_WANTKEYBOARDINPUT constant
+- LBS_STANDARD constant
+- LBS_MULTIPLESEL constant
+- LBS_OWNERDRAWVARIABLE constant
+- LBS_DISABLENOSCROLL constant
+- LBS_NODATA constant
+- list boxes, styles
+- LBS_EXTENDEDSEL constant
+- LBS_MULTICOLUMN constant
+- LBS_NOTIFY constant
+- LBS_USETABSTOPS constant
+- LBS_NOINTEGRALHEIGHT constant
+- LBS_SORT constant
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 列表框样式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 8e038e5cef50bd15df85c9d7f8b213b54ed03825
+ms.lasthandoff: 02/24/2017
 
--   当列表框不包含足够的项滚动时，**LBS\_DISABLENOSCROLL** 列表框显示一个禁用的垂直滚动条。  若无此样式，当列表框不包含足够的项时，滚动条将隐藏。  
+---
+# <a name="list-box-styles"></a>列表框样式
+-   **LBS_DISABLENOSCROLL**列表框中显示一个禁用的垂直滚动条列表框中不包含足够的项，以向下滚动。 如果不使用此样式，则当列表框未包含足够的项时，将会隐藏滚动条。  
   
--   使用 Shift 键和鼠标或特定组合键**LBS\_EXTENDEDSEL**，用户可以选择多个项。  
+-   **LBS_EXTENDEDSEL**用户可以选择多个项目使用 SHIFT 键和鼠标或特定组合键。  
   
--   **LBS\_HASSTRINGS** 指定包含字符串的项所有者描述列表框。  列表框保留内存和字符串的指针，该应用程序可使用 `GetText` 成员函数检索文本特定项的。  
+-   **LBS_HASSTRINGS**指定一个所有者描述列表框，其中包含由字符串构成的项。 列表框保留字符串的内存和指针，以便应用程序可使用 `GetText` 成员函数检索特定项的文本。  
   
--   **LBS\_MULTICOLUMN** 指定水平滚动的多列列表框。  `SetColumnWidth` 成员函数将列的宽度。  
+-   **LBS_MULTICOLUMN**指定水平滚动的多列的列表框。 `SetColumnWidth` 成员函数将设置列的宽度。  
   
--   每次用户单击或双击字符串，选择**LBS\_MULTIPLESEL** 字符串之间切换。  任意数量的字符串进行选择。  
+-   **LBS_MULTIPLESEL**每次用户单击或双击字符串时，将切换字符串选择。 可以选择任意数量的字符串。  
   
--   **LBS\_NODATA** 指定无数据列表框。  当计数，列表中将多项一次，指定此样式。  无数据列表框还必须具有 **LBS\_OWNERDRAWFIXED** ，样式，但无法具有 **LBS\_SORT** 或 **LBS\_HASSTRINGS** 样式。  
+-   **LBS_NODATA**指定无数据列表框。 当列表框中的项数超出一千时，请指定此样式。 无数据列表框还必须具有**LBS_OWNERDRAWFIXED**样式，但不是能有**LBS_SORT**或**LBS_HASSTRINGS**样式。  
   
-     由数据类似于列表框的所有者描述列表框，但不包含字符串或位图数据的项。  命令添加，插入或删除项始终忽略任何指定项数据；请求始终失败查找在列表框内的字符串。  当必须绘制时，系统发送 `WM_DRAWITEM` 消息。项所有者窗口。  `DRAWITEMSTRUCT` 结构的 itemID 成员将用 `WM_DRAWITEM` 消息指定要绘制项的行号。  无数据列表框不发送 `WM_DELETEITEM` 消息。  
+     无数据列表框类似于所有者描述的列表框，但它不包含项的字符串或位图数据。 用于添加、插入或删除项的命令始终会忽略任何给定的项数据；在列表框内查找字符串的请求始终会失败。 必须绘制某个项时，系统会向所有者窗口发送 `WM_DRAWITEM` 消息。 随 `DRAWITEMSTRUCT` 消息传递的 `WM_DRAWITEM` 结构的 itemID 成员将指定要绘制的项的行号。 无数据列表框不发送 `WM_DELETEITEM` 消息。  
   
--   在创建列表框，**LBS\_NOINTEGRALHEIGHT** 列表框的尺寸正确应用程序指定的范围。  通常，窗口大小列表框，使列表框部分不显示项。  
+-   **LBS_NOINTEGRALHEIGHT**列表框的大小是完全创建列表框时，应用程序所指定的大小。 通常，Windows 会调整列表框的大小，以使列表框不会只显示部分项。  
   
--   当更改时，**LBS\_NOREDRAW** 列表框显示未更新。  此样式可通过发送 **WM\_SETREDRAW** 消息随时更改。  
+-   **LBS_NOREDRAW**进行更改时，不会更新列表框中显示。 通过发送，可以随时更改此样式**WM_SETREDRAW**消息。  
   
--   **LBS\_NOSEL** 指定列表框包含中查看，但不会选择的项。  
+-   **LBS_NOSEL**指定列表框包含可查看但未选中的项。  
   
--   **LBS\_NOTIFY** 父窗口接收输入消息，每当用户单击或双击字符串。  
+-   **LBS_NOTIFY**每当用户单击或双击某个字符串时，父窗口接收到输入的消息。  
   
--   **LBS\_OWNERDRAWFIXED** 列表框的所有者负责绘制其内容运行；在列表框项的是同一高度。  
+-   **LBS_OWNERDRAWFIXED**列表框的所有者负责绘制其内容; 列表框中的项的高度相同。  
   
--   **LBS\_OWNERDRAWVARIABLE** 列表框的所有者负责绘制其内容运行；在列表框项的高度是可变的。  
+-   **LBS_OWNERDRAWVARIABLE**列表框的所有者负责绘制其内容; 列表框中的项高度。  
   
--   在列表框的**LBS\_SORT**字符串按字母顺序排序。  
+-   **LBS_SORT**列表框中的字符串按字母顺序排序。  
   
--   在列表框的**LBS\_STANDARD** 字符串按字母顺序排序，并且，父窗口接收输入消息，每当用户单击或双击字符串。  列表框中包含在任何范围。  
+-   **LBS_STANDARD**列表框中的字符串按字母顺序排列，并且每当用户单击或双击某个字符串时，父窗口接收到输入的消息。 列表框包含各边的边框。  
   
--   当绘制制表符字符串时，使能识别并展开制表符。**LBS\_USETABSTOPS** 列表框  默认选项卡位置 32 是对话框单位。对话框单位 \(A 是一个水平或垂直距离。  水平的对话框单位相等到当前基本宽度对话框单位的四分之一。  对话框单位计算基于当前基础系统字体的高度和宽度。  **GetDialogBaseUnits** Windows 函数返回在像素的当前基本单元对话框。）不应使用此样式与 **LBS\_OWNERDRAWFIXED**。  
+-   **LBS_USETABSTOPS**允许列表框来识别并展开制表符，在绘制其字符串时。 默认制表符位置是 32 个对话框单位。 （对话框单位是一个水平或垂直的距离。 一个水平对话框单位等于当前对话框基本宽度单位的四分之一。 对话框基本单位根据当前系统字体的高度和宽度计算。 **GetDialogBaseUnits** Windows 函数以像素为单位返回当前对话框基本单位。)此样式不应使用与**LBS_OWNERDRAWFIXED**。  
   
--   **LBS\_WANTKEYBOARDINPUT** 列表框的所有者接收 `WM_VKEYTOITEM` 或 `WM_CHARTOITEM` 消息，只要用户按键，当列表框具有输入焦点时。  这允许您的应用程序处理在执行特定类型。  
+-   **LBS_WANTKEYBOARDINPUT**列表框的所有者将会收到`WM_VKEYTOITEM`或`WM_CHARTOITEM`消息时，只要用户按键当列表框具有输入焦点。 这允许应用程序对键盘输入执行特殊处理。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [MFC 使用的样式](../../mfc/reference/styles-used-by-mfc.md)   
- [CListBox::Create](../Topic/CListBox::Create.md)   
- [List Box Styles](http://msdn.microsoft.com/library/windows/desktop/bb775149)
+ [CListBox::Create](../../mfc/reference/clistbox-class.md#create)   
+ [列表框样式](http://msdn.microsoft.com/library/windows/desktop/bb775149)
+
+

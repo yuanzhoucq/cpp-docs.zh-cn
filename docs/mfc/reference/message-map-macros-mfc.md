@@ -1,68 +1,87 @@
 ---
-title: "消息映射宏 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "划分 Windows 消息"
-  - "消息映射宏"
-  - "消息映射范围"
-  - "消息映射宏"
-  - "消息映射 [C++], 声明和划分"
-  - "消息映射 [C++], 宏"
-  - "范围, 消息映射"
-  - "Windows 消息 [C++], 声明"
+title: "消息映射宏 (MFC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- message map macros
+- Windows messages [C++], declaration
+- demarcating Windows messages
+- message maps [C++], macros
+- message maps [C++], declaration and demarcation
+- message mapping macros
+- ranges, message map
+- message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 消息映射宏 (MFC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: f890e0675be58c8e20e313bea54b4145e2ce0bf3
+ms.lasthandoff: 02/24/2017
 
-为了支持 MFC 提供消息映射，下面的宏：  
+---
+# <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
+为了支持消息映射，MFC 提供了以下宏：  
   
-### 声明将宏和消息映射  
-  
-|||  
-|-|-|  
-|[DECLARE\_MESSAGE\_MAP](../Topic/DECLARE_MESSAGE_MAP.md)|消息声明映射在类消息映射到函数 \(必须在类中声明\)。|  
-|[BEGIN\_MESSAGE\_MAP](../Topic/BEGIN_MESSAGE_MAP.md)|启动消息映射的定义 \(必须在类中实现。\)|  
-|[END\_MESSAGE\_MAP](../Topic/END_MESSAGE_MAP.md)|结束消息映射的定义 \(必须在类中实现。\)|  
-  
-### 消息映射宏  
+### <a name="message-map-declaration-and-demarcation-macros"></a>消息映射声明和分界宏  
   
 |||  
 |-|-|  
-|[ON\_COMMAND](../Topic/ON_COMMAND.md)|指示函数将指定的命令处理消息。|  
-|[ON\_CONTROL](../Topic/ON_CONTROL.md)|指示函数将处理指定的控件通知消息。|  
-|[ON\_MESSAGE](../Topic/ON_MESSAGE.md)|指示函数将处理的用户定义消息。|  
-|[ON\_OLECMD](../Topic/ON_OLECMD.md)|指示函数将从处理 DocObject 或其容器的菜单命令。|  
-|[ON\_REGISTERED\_MESSAGE](../Topic/ON_REGISTERED_MESSAGE.md)|指示函数将处理的用户定义消息。|  
-|[ON\_REGISTERED\_THREAD\_MESSAGE](../Topic/ON_REGISTERED_THREAD_MESSAGE.md)|指示函数将处理已注册的用户定义消息，则您有一个 `CWinThread` 类。|  
-|[ON\_THREAD\_MESSAGE](../Topic/ON_THREAD_MESSAGE.md)|指示函数将处理已注册的用户定义消息，则您有一个 `CWinThread` 类。|  
-|[ON\_UPDATE\_COMMAND\_UI](../Topic/ON_UPDATE_COMMAND_UI.md)|指示处理函数将指定的用户界面更新命令消息。|  
+|[DECLARE_MESSAGE_MAP](http://msdn.microsoft.com/library/c225e7e0-a81b-495c-97f9-3e0aa1f65036)|声明将在类中使用消息映射来将消息映射到函数（必须在类声明中使用）。|  
+|[BEGIN_MESSAGE_MAP](http://msdn.microsoft.com/library/d9201e18-04e0-4639-9810-f15768627fc2)|开始消息映射的定义（必须在类实现中使用）。|  
+|[END_MESSAGE_MAP](http://msdn.microsoft.com/library/40f611f1-a3b4-4097-b683-091bf7cfab8b)|结束消息映射的定义（必须在类实现中使用）。|  
   
-### 消息将范围映射宏  
+### <a name="message-mapping-macros"></a>消息映射宏  
   
 |||  
 |-|-|  
-|[ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md)|指示哪一个函数来处理前面两参数命令 ID 指定的范围传递给宏。|  
-|[ON\_UPDATE\_COMMAND\_UI\_RANGE](../Topic/ON_UPDATE_COMMAND_UI_RANGE.md)|指示哪一个函数来处理前面两参数命令 ID 指定的范围传递给宏。|  
-|[ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md)|指示函数将从处理在第二个和第三个参数指定控件 ID 范围的通知给宏。  第一个参数是一控件通知消息，例如 **BN\_CLICKED**。|  
+|[ON_COMMAND](http://msdn.microsoft.com/library/f24f8bda-2cf4-49d5-aa3d-6f2e6bb003f2)|指示哪个函数将处理指定的命令消息。|  
+|[ON_CONTROL](http://msdn.microsoft.com/library/2cb7ebdf-296b-4606-b191-3449835003db)|指示哪个函数将处理指定的控件通知消息。|  
+|[ON_MESSAGE](http://msdn.microsoft.com/library/e2faeb13-9f6e-4c0d-9f6d-b2e141a0db1e)|指示哪个函数将处理用户定义的消息。|  
+|[ON_OLECMD](http://msdn.microsoft.com/library/6c86327c-3d48-42ac-9dae-e0ccd3a81793)|指示哪个函数将处理 DocObject 或其容器中的菜单命令。|  
+|[ON_REGISTERED_MESSAGE](http://msdn.microsoft.com/library/93c1c068-ae8c-4e04-8a60-a603800ab57d)|指示哪个函数将处理已注册的用户定义消息。|  
+|[ON_REGISTERED_THREAD_MESSAGE](http://msdn.microsoft.com/library/3f598bc2-b2f0-410f-8ba0-7714502170f3)|指示哪个函数将在您具有 `CWinThread` 类时处理已注册的用户定义消息。|  
+|[ON_THREAD_MESSAGE](http://msdn.microsoft.com/library/f718f47a-d5b1-4514-914b-e3fe2d919003)|指示哪个函数将在您具有 `CWinThread` 类时处理用户定义的消息。|  
+|[ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4)|指示哪个函数将处理指定的用户界面更新命令消息。|  
   
- 有关消息的更多信息，将声明和消息映射宏和消息映射宏，请参见 [消息映射](../../mfc/reference/message-maps-mfc.md) 和 [和消息映射处理主题](../../mfc/message-handling-and-mapping.md)。  有关消息映射范围的更多信息，请参见 [消息映射范围的处理程序](../../mfc/handlers-for-message-map-ranges.md)。  
+### <a name="message-map-range-macros"></a>消息映射范围宏  
   
-## 请参阅  
+|||  
+|-|-|  
+|[ON_COMMAND_RANGE](http://msdn.microsoft.com/library/c52719fc-dd6e-48c9-af79-383f48d608e0)|指示哪个函数将处理在宏的前两个参数中指定的命令 ID 的范围。|  
+|[ON_UPDATE_COMMAND_UI_RANGE](http://msdn.microsoft.com/library/b7105bf1-44ad-4b00-b947-31478f964729)|指示哪个更新处理程序将处理在宏的前两个参数中指定的命令 ID 的范围。|  
+|[ON_CONTROL_RANGE](http://msdn.microsoft.com/library/46f0e1bb-569b-4b8b-9b80-89701d1cd7fd)|指示哪个函数将处理来自在宏的第二个和第三个参数中指定的控件 ID 的范围的通知。 第一个参数是控件通知消息，如**BN_CLICKED**。|  
+  
+ 消息映射、 消息映射声明和分界宏和消息映射宏的详细信息，请参阅[消息映射](../../mfc/reference/message-maps-mfc.md)和[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。 有关消息映射范围的详细信息，请参阅[消息映射范围的处理程序](../../mfc/handlers-for-message-map-ranges.md)。  
+  
+## <a name="see-also"></a>另请参阅  
  [消息映射](../../mfc/reference/message-maps-mfc.md)
+
+
+

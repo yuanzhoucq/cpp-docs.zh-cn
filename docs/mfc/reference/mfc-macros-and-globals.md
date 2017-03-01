@@ -1,43 +1,59 @@
 ---
-title: "MFC 宏和全局函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.macros"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Afx 命名约定"
-  - "全局函数"
-  - "全局函数, MFC"
-  - "全局变量, MFC"
-  - "宏"
-  - "宏, MFC"
-  - "MFC, 全局函数和变量"
-  - "MFC, 宏"
+title: "MFC 宏和全局 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.macros
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, global functions and variables
+- MFC, macros
+- global functions, MFC
+- macros, MFC
+- global functions
+- global variables, MFC
+- Afx naming convention
+- macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# MFC 宏和全局函数
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: d26b374e233326ac5acc97486edc8d38e6bf5d81
+ms.openlocfilehash: 75db28c7be1ab497ba9656136d22b114b488c4ae
+ms.lasthandoff: 02/24/2017
 
-基于基础选件类库可分为两个主要部分：\(1\) MFC 选件类和 \(2\) 宏和全局变量。  如果函数或变量不是选件类的成员，则它是全局函数或变量。  
+---
+# <a name="mfc-macros-and-globals"></a>MFC 宏和全局函数
+Microsoft 基础类库可以分为两个主要部分: （1） 的 MFC 类和 （2） 宏和全局。 如果函数或变量不是类的成员，则全局函数或变量。  
   
- MFC 库和活动模板库 \(ATL\) 共享字符串翻译宏。  有关更多信息，请参见 ATL 文档中的[String Conversion Macros](../../atl/reference/string-conversion-macros.md)。  
+ MFC 库和活动模板库 (ATL) 共享字符串转换宏。 有关详细信息，请参阅[字符串转换宏](../../atl/reference/string-conversion-macros.md)ATL 文档中。  
   
- MFC 宏和 globals 提供了以下类别的功能。  
+ MFC 宏和全局函数提供了下列类别中的功能。  
   
-## 常规 MFC  
+## <a name="general-mfc"></a>常规 MFC  
   
 -   [数据类型](../../mfc/reference/data-types-mfc.md)  
   
@@ -55,47 +71,48 @@ caps.handback.revision: 19
   
 -   [应用程序信息和管理](../../mfc/reference/application-information-and-management.md)  
   
--   [标准命令和窗口 ID](../../mfc/reference/standard-command-and-window-ids.md)  
+-   [标准命令和窗口 Id](../../mfc/reference/standard-command-and-window-ids.md)  
   
 -   [集合类帮助器](../../mfc/reference/collection-class-helpers.md)  
   
 -   [灰色和抖色位图函数](../../mfc/reference/gray-and-dithered-bitmap-functions.md)  
   
--   [标准对话框数据交换（DDX）常式](../../mfc/reference/standard-dialog-data-exchange-routines.md)  
+-   [标准对话框数据交换 (DDX) 例程](../../mfc/reference/standard-dialog-data-exchange-routines.md)  
   
--   [标准对话框数据验证（DDV）例程](../../mfc/reference/standard-dialog-data-validation-routines.md)  
+-   [标准对话框数据验证 (DDV) 例程](../../mfc/reference/standard-dialog-data-validation-routines.md)  
   
 -   [AFX 消息](../../mfc/reference/afx-messages.md)  
   
 -   [工具栏控件样式](../../mfc/reference/toolbar-control-styles.md)  
   
--   [CMFCImagePaintArea::IMAGE\_EDIT\_MODE 枚举](../../mfc/reference/cmfcimagepaintarea-image-edit-mode-enumeration.md)  
+-   [Cmfcimagepaintarea:: Image_edit_mode 枚举](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
+
   
-## 数据库  
+## <a name="database"></a>数据库  
   
--   MFC ODBC类[Record Field Exchange \(RFX\) 函数](../../mfc/reference/record-field-exchange-functions.md) 和 [Bulk Record Field Exchange \(bulk RFX\) 函数](../../mfc/reference/record-field-exchange-functions.md)  
+-   [记录字段交换 (RFX) 函数](../../mfc/reference/record-field-exchange-functions.md)和[批量记录字段交换 (bulk RFX) 函数](../../mfc/reference/record-field-exchange-functions.md)MFC ODBC 类  
   
--   [Record field exchange \(DFX\) functions](../../mfc/reference/record-field-exchange-functions.md)的MFC DAO类  
+-   [记录字段交换 (DFX) 函数](../../mfc/reference/record-field-exchange-functions.md)MFC DAO 类  
   
--   [Dialog data exchange \(DDX\)函数为CRecordView的和CDaoRecordView](../../mfc/reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md)（MFC ODBC和DAO类）  
+-   [CRecordView 和 CDaoRecordView 的对话框数据交换 (DDX) 函数](../../mfc/reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md)（MFC ODBC 和 DAO 类）  
   
--   [对于OLE控件对话框数据交换（DDX）函数](../../mfc/reference/dialog-data-exchange-functions-for-ole-controls.md)  
+-   [OLE 控件的对话框数据交换 (DDX) 函数](../../mfc/reference/dialog-data-exchange-functions-for-ole-controls.md)  
   
--   [宏和全局性为帮助在调用开放式数据库连接 \(odbc\) API 直接函数](../../mfc/reference/database-macros-and-globals.md)  
+-   [宏和全局函数来帮助进行直接调用开放式数据库连接 (ODBC) API 函数](../../mfc/reference/database-macros-and-globals.md)  
   
 -   [DAO 数据库引擎初始化和终止](../../mfc/reference/dao-database-engine-initialization-and-termination.md)  
   
-## Internet  
+## <a name="internet"></a>Internet  
   
 -   [Internet URL 分析全局函数](../../mfc/reference/internet-url-parsing-globals.md)  
   
-## DHTML\/DHTML 事件映射  
+## <a name="dhtml--dhtml-event-maps"></a>DHTML / DHTML 事件映射  
   
--   [DHTML 对话框数据交换 \(ddx\)帮助程序宏](../../mfc/reference/ddx-dhtml-helper-macros.md)  
+-   [DHTML 对话框数据交换 (DDX) 帮助器宏](../../mfc/reference/ddx-dhtml-helper-macros.md)  
   
 -   [DHTML 事件映射](../../mfc/reference/dhtml-event-maps.md)  
   
-## OLE  
+## <a name="ole"></a>OLE  
   
 -   [OLE 初始化](../../mfc/reference/ole-initialization.md)  
   
@@ -103,9 +120,9 @@ caps.handback.revision: 19
   
 -   [调度映射](../../mfc/reference/dispatch-maps.md)  
   
- 此外，MFC提供了一个名为[AfxEnableControlContainer](../Topic/AfxEnableControlContainer.md)，使任何OLE容器使用MFC 4.0完全支持嵌入式OLE控件开发。  
+ 此外，MFC 提供了一个名为函数[AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b)启用使用 MFC 4.0，若要完全支持开发的任何 OLE 容器嵌入 OLE 控件。  
   
-## OLE 控件  
+## <a name="ole-controls"></a>OLE 控件  
   
 -   [变量参数类型常量](../../mfc/reference/variant-parameter-type-constants.md)  
   
@@ -125,10 +142,14 @@ caps.handback.revision: 19
   
 -   [OLE 控件的持久性](../../mfc/reference/persistence-of-ole-controls.md)  
   
- 本节的第一部分简要探讨了每一个类并使用功能的简要说明来列出 globals 和宏在类别中。  在这后面是MFC库中全局函数、全局变量和宏的声明。  
+ 本部分的第一部分简要介绍了每一个先前的类别并列出的全局函数和宏的位置中的类别，以及功能的简短说明。 以下是全局函数、 全局变量和宏 MFC 库中的说明。  
   
 > [!NOTE]
->  许多全局函数以前缀“Afx”开头但某些不是这样的，例如，某些对话框数据交换 \(DDX\) 功能和许多数据库功能，则不遵循此约定。  所有全局变量从“afx”开头为前缀。  宏不以任何特殊前缀开头，但是，它们用大写字母编写。  
+>  许多全局函数以前缀"Afx"开头，但某些，例如，对话框数据交换 (DDX) 函数和许多数据库的功能，请遵循此约定。 所有全局变量的"afx"开头，作为前缀。 宏不以任何特殊前缀开头，但它们以大写首字母。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [类概述](../../mfc/class-library-overview.md)
+
+
+
+

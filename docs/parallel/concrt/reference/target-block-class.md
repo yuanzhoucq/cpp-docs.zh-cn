@@ -1,100 +1,364 @@
 ---
-title: "target_block 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::target_block"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "target_block 类"
+title: "target_block 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::target_block
+dev_langs:
+- C++
+helpviewer_keywords:
+- target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# target_block 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 0137e95d0d5015fd2e8d18d85388c16ab25a2e9c
+ms.lasthandoff: 02/24/2017
 
-`target_block` 类是一个抽象基类，提供基本链接管理功能和仅限于目标的块的错误检查。  
+---
+# <a name="targetblock-class"></a>target_block 类
+`target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template<class _SourceLinkRegistry, class _MessageProcessorType = ordered_message_processor<typename _SourceLinkRegistry::type::source_type>>
+class target_block : public ITarget<typename _SourceLinkRegistry::type::source_type>;
 ```  
-template<  
-   class _SourceLinkRegistry,  
-   class _MessageProcessorType = ordered_message_processor<typename _SourceLinkRegistry::type::source_type>  
->  
-class target_block : public ITarget<typename _SourceLinkRegistry::type::source_type>;  
-```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_SourceLinkRegistry`  
- 要用于保存源链接的链接注册表。  
+ 要用于保存源链接链接注册表。  
   
  `_MessageProcessorType`  
- 用于消息处理的处理器类型。  
+ 用于处理邮件的处理器类型。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
-  
-|名称|说明|  
-|--------|--------|  
-|`source_iterator`|用于此 `target_block` 对象的 `source_link_manager` 的迭代器类型。|  
-  
-### 公共构造函数  
+### <a name="public-typedefs"></a>公共 Typedef  
   
 |名称|说明|  
-|--------|--------|  
-|[target\_block::target\_block 构造函数](../Topic/target_block::target_block%20Constructor.md)|构造 `target_block` 对象。|  
-|[target\_block::~target\_block 析构函数](../Topic/target_block::~target_block%20Destructor.md)|销毁 `target_block` 对象。|  
+|----------|-----------------|  
+|`source_iterator`|有关迭代器的类型`source_link_manager`此`target_block`对象。|  
   
-### 公共方法  
-  
-|名称|说明|  
-|--------|--------|  
-|[target\_block::propagate 方法](../Topic/target_block::propagate%20Method.md)|将消息从源块异步传递到此目标块中。|  
-|[target\_block::send 方法](../Topic/target_block::send%20Method.md)|将消息从源块同步传递到此目标块中。|  
-  
-### 受保护的方法  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
-|[target\_block::async\_send 方法](../Topic/target_block::async_send%20Method.md)|异步发送一条消息以进行处理。|  
-|[target\_block::decline\_incoming\_messages 方法](../Topic/target_block::decline_incoming_messages%20Method.md)|指示新消息应该拒绝的块。|  
-|[target\_block::enable\_batched\_processing 方法](../Topic/target_block::enable_batched_processing%20Method.md)|启动该块批处理。|  
-|[target\_block::initialize\_target 方法](../Topic/target_block::initialize_target%20Method.md)|初始化基本对象。  特别地，`message_processor` 对象需要进行初始化。|  
-|[target\_block::link\_source 方法](../Topic/target_block::link_source%20Method.md)|将指定源块链接到此 `target_block` 对象。|  
-|[target\_block::process\_input\_messages 方法](../Topic/target_block::process_input_messages%20Method.md)|处理接收作为输入的消息。|  
-|[target\_block::process\_message 方法](../Topic/target_block::process_message%20Method.md)|当在派生类中重写时，处理由该 `target_block` 对象接受的消息。|  
-|[target\_block::propagate\_message 方法](../Topic/target_block::propagate_message%20Method.md)|在派生类中重写后，该方法异步地将消息从 `ISource` 块传递至该 `target_block` 对象。  在由源块调用时，其由 `propagate` 方法调用。|  
-|[target\_block::register\_filter 方法](../Topic/target_block::register_filter%20Method.md)|注册将在接收到的每条消息上调用的筛选器方法。|  
-|[target\_block::remove\_sources 方法](../Topic/target_block::remove_sources%20Method.md)|在等待未完成的异步发送操作完成后，断开所有源链接。|  
-|[target\_block::send\_message 方法](../Topic/target_block::send_message%20Method.md)|在派生类中重写后，该方法同步地将消息从 `ISource` 块传递至该 `target_block` 对象。  在由源块调用时，其由 `send` 方法调用。|  
-|[target\_block::sync\_send 方法](../Topic/target_block::sync_send%20Method.md)|同步发送一条消息以进行处理。|  
-|[target\_block::unlink\_source 方法](../Topic/target_block::unlink_source%20Method.md)|与来自该 `target_block` 对象的指定的源块不同。|  
-|[target\_block::unlink\_sources 方法](../Topic/target_block::unlink_sources%20Method.md)|与来自该 `target_block` 对象的所有源块取消链接。（重写 [ITarget::unlink\_sources](../Topic/ITarget::unlink_sources%20Method.md)。）|  
-|[target\_block::wait\_for\_async\_sends 方法](../Topic/target_block::wait_for_async_sends%20Method.md)|等待所有异常传播完成。|  
+|----------|-----------------|  
+|[target_block 构造函数](#ctor)|构造 `target_block` 对象。|  
+|[~ target_block 析构函数](#dtor)|销毁`target_block`对象。|  
   
-## 继承层次结构  
- [ITarget](../../../parallel/concrt/reference/itarget-class.md)  
+### <a name="public-methods"></a>公共方法  
+  
+|名称|说明|  
+|----------|-----------------|  
+|[propagate 方法](#propagate)|消息源块以异步方式传递到此目标块中。|  
+|[send 方法](#send)|消息源块以同步方式传递到此目标块中。|  
+  
+### <a name="protected-methods"></a>受保护的方法  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[async_send 方法](#async_send)|以异步方式发送邮件以进行处理。|  
+|[decline_incoming_messages 方法](#decline_incoming_messages)|指示到块应拒绝新消息。|  
+|[enable_batched_processing 方法](#enable_batched_processing)|启用该块的批处理。|  
+|[initialize_target 方法](#initialize_target)|初始化基对象。 具体而言，`message_processor`对象需要将其初始化。|  
+|[link_source 方法](#link_source)|指定的源块链接至该`target_block`对象。|  
+|[process_input_messages 方法](#process_input_messages)|处理作为输入接收的消息。|  
+|[process_message 方法](#process_message)|在派生类中重写时，处理由该 `target_block` 对象接受的消息。|  
+|[propagate_message 方法](#propagate_message)|当在派生类中重写此方法以异步方式将消息传递从`ISource`至此块`target_block`对象。 由调用`propagate`方法时由源块调用。|  
+|[register_filter 方法](#register_filter)|注册将在收到每个消息中调用的筛选器方法。|  
+|[remove_sources 方法](#remove_sources)|在等待未完成的异步发送操作完成后取消所有源的都链接。|  
+|[send_message 方法](#send_message)|当在派生类中重写此方法以同步方式将消息传递从`ISource`至此块`target_block`对象。 由调用`send`方法时由源块调用。|  
+|[sync_send 方法](#sync_send)|以同步方式发送邮件以进行处理。|  
+|[unlink_source 方法](#unlink_source)|取消链接指定的源块与该`target_block`对象。|  
+|[unlink_sources 方法](#unlink_sources)|断开所有源块与该都链接`target_block`对象。 (重写[itarget:: Unlink_sources](itarget-class.md#unlink_sources)。)|  
+|[wait_for_async_sends 方法](#wait_for_async_sends)|等待所有异步传播完成。|  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
+ [ITarget](itarget-class.md)  
   
  `target_block`  
   
-## 要求  
- **标头：**agents.h  
+## <a name="requirements"></a>要求  
+ **标头：** agents.h  
   
- **命名空间：**并发  
+ **命名空间：** 并发  
   
-## 请参阅  
- [concurrency 命名空间](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [ITarget 类](../../../parallel/concrt/reference/itarget-class.md)
+##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+
+ 以异步方式发送邮件以进行处理。  
+  
+```
+void async_send(_Inout_opt_ message<_Source_type>* _PMessage);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PMessage`  
+ 指向要发送的消息的指针。  
+  
+##  <a name="a-namedeclineincomingmessagesa-declineincomingmessages"></a><a name="decline_incoming_messages"></a>decline_incoming_messages 
+
+ 指示到块应拒绝新消息。  
+  
+```
+void decline_incoming_messages();
+```  
+  
+### <a name="remarks"></a>备注  
+ 若要确保析构时拒绝新消息的析构函数调用此方法。  
+  
+##  <a name="a-nameenablebatchedprocessinga-enablebatchedprocessing"></a><a name="enable_batched_processing"></a>enable_batched_processing 
+
+ 启用该块的批处理。  
+  
+```
+void enable_batched_processing();
+```  
+  
+##  <a name="a-nameinitializetargeta-initializetarget"></a><a name="initialize_target"></a>initialize_target 
+
+ 初始化基对象。 具体而言，`message_processor`对象需要将其初始化。  
+  
+```
+void initialize_target(
+    _Inout_opt_ Scheduler* _PScheduler = NULL,
+    _Inout_opt_ ScheduleGroup* _PScheduleGroup = NULL);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PScheduler`  
+ 要用于计划任务计划程序。  
+  
+ `_PScheduleGroup`  
+ 要用于计划任务的计划组。  
+  
+##  <a name="a-namelinksourcea-linksource"></a><a name="link_source"></a>link_source 
+
+ 指定的源块链接至该`target_block`对象。  
+  
+```
+virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PSource`  
+ 一个指向`ISource`相链接的块。  
+  
+### <a name="remarks"></a>备注  
+ 不应直接调用此函数`target_block`对象。 应连接在一起使用的块`link_target`方法`ISource`块，将调用`link_source`相应目标系统上的方法。  
+  
+##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+
+ 处理作为输入接收的消息。  
+  
+```
+virtual void process_input_messages(_Inout_ message<_Source_type>* _PMessage);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PMessage`  
+  
+##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+
+ 在派生类中重写时，处理由该 `target_block` 对象接受的消息。  
+  
+```
+virtual void process_message(message<_Source_type> *);
+```  
+  
+##  <a name="a-namepropagatea-propagate"></a><a name="propagate"></a>传播 
+
+ 消息源块以异步方式传递到此目标块中。  
+  
+```
+virtual message_status propagate(
+    _Inout_opt_ message<_Source_type>* _PMessage,
+    _Inout_opt_ ISource<_Source_type>* _PSource);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PMessage`  
+ 指向 `message` 对象的指针。  
+  
+ `_PSource`  
+ 指向提供消息的源块的指针。  
+  
+### <a name="return-value"></a>返回值  
+ 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
+  
+### <a name="remarks"></a>备注  
+ 该方法将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)异常如果`_PMessage`或`_PSource`参数是`NULL`。  
+  
+##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+
+ 当在派生类中重写此方法以异步方式将消息传递从`ISource`至此块`target_block`对象。 由调用`propagate`方法时由源块调用。  
+  
+```
+virtual message_status propagate_message(
+    _Inout_ message<_Source_type>* _PMessage,
+    _Inout_ ISource<_Source_type>* _PSource) = 0;
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PMessage`  
+ 指向 `message` 对象的指针。  
+  
+ `_PSource`  
+ 指向提供消息的源块的指针。  
+  
+### <a name="return-value"></a>返回值  
+ 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
+  
+##  <a name="a-nameregisterfiltera-registerfilter"></a><a name="register_filter"></a>register_filter 
+
+ 注册将在收到每个消息中调用的筛选器方法。  
+  
+```
+void register_filter(filter_method const& _Filter);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Filter`  
+ 筛选器方法中。  
+  
+##  <a name="a-nameremovesourcesa-removesources"></a><a name="remove_sources"></a>remove_sources 
+
+ 在等待未完成的异步发送操作完成后取消所有源的都链接。  
+  
+```
+void remove_sources();
+```  
+  
+### <a name="remarks"></a>备注  
+ 所有目标块应都调用此例程以在其析构函数中的源中删除。  
+  
+##  <a name="a-namesenda-send"></a><a name="send"></a>发送 
+
+ 消息源块以同步方式传递到此目标块中。  
+  
+```
+virtual message_status send(
+    _Inout_ message<_Source_type>* _PMessage,
+    _Inout_ ISource<_Source_type>* _PSource);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PMessage`  
+ 指向 `message` 对象的指针。  
+  
+ `_PSource`  
+ 指向提供消息的源块的指针。  
+  
+### <a name="return-value"></a>返回值  
+ 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
+  
+### <a name="remarks"></a>备注  
+ 该方法将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)异常如果`_PMessage`或`_PSource`参数是`NULL`。  
+  
+ 使用`send`消息初始化外并传播在网络中的消息的方法是危险的可能导致死锁。  
+  
+ 当`send`返回时，该消息是已被接受，并传输到目标块后，或它已被拒绝的目标。  
+  
+##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+
+ 当在派生类中重写此方法以同步方式将消息传递从`ISource`至此块`target_block`对象。 由调用`send`方法时由源块调用。  
+  
+```
+virtual message_status send_message(
+    _Inout_ message<_Source_type> *,
+    _Inout_ ISource<_Source_type> *);
+```  
+  
+### <a name="return-value"></a>返回值  
+ 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，返回此块`declined`除非由派生类中重写。  
+  
+##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+
+ 以同步方式发送邮件以进行处理。  
+  
+```
+void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PMessage`  
+ 指向要发送的消息的指针。  
+  
+##  <a name="a-namectora-targetblock"></a><a name="ctor"></a>target_block 
+
+ 构造 `target_block` 对象。  
+  
+```
+target_block();
+```  
+  
+##  <a name="a-namedtora-targetblock"></a><a name="dtor"></a>~ target_block 
+
+ 销毁`target_block`对象。  
+  
+```
+virtual ~target_block();
+```  
+  
+##  <a name="a-nameunlinksourcea-unlinksource"></a><a name="unlink_source"></a>unlink_source 
+
+ 取消链接指定的源块与该`target_block`对象。  
+  
+```
+virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_PSource`  
+ 一个指向`ISource`要取消链接的块。  
+  
+##  <a name="a-nameunlinksourcesa-unlinksources"></a><a name="unlink_sources"></a>unlink_sources 
+
+ 断开所有源块与该都链接`target_block`对象。  
+  
+```
+virtual void unlink_sources();
+```  
+  
+##  <a name="a-namewaitforasyncsendsa-waitforasyncsends"></a><a name="wait_for_async_sends"></a>wait_for_async_sends 
+
+ 等待所有异步传播完成。  
+  
+```
+void wait_for_async_sends();
+```  
+  
+### <a name="remarks"></a>备注  
+ 消息块析构函数使用此方法以确保所有异步操作有时间完成，然后再销毁块。  
+  
+## <a name="see-also"></a>另请参阅  
+ [并发 Namespace](concurrency-namespace.md)   
+ [ITarget 类](itarget-class.md)
+

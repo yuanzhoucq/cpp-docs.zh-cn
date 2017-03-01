@@ -1,40 +1,57 @@
 ---
-title: "编译器错误 C2143 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2143"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2143"
+title: "编译器错误 C2143 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2143
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# 编译器错误 C2143
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.lasthandoff: 02/24/2017
 
-语法错误 : “token2”前缺少“token1”  
+---
+# <a name="compiler-error-c2143"></a>编译器错误 C2143
+语法错误︰ 缺少 token1 之前 token2  
   
- 编译器需要特定的标记（即空白以外的语言元素），但发现了另一个标记。  
+ 编译器需要特定的标记 （即，空白区域以外的语言元素），但发现另一个标记。  
   
- 有关在使用函数 try 块时出现的该错误的信息，请参见[知识库文章 241706](http://support.microsoft.com/kb/241706)。  
+ 有关此错误的信息时它在使用 try 函数块时出现，请参阅[知识库文章 241706](http://support.microsoft.com/kb/241706)。  
   
- 检查 [C\+\+ 语言参考](../../cpp/cpp-language-reference.md)以确定语法不正确的代码位置。  由于编译器在遇到导致问题的行后可能会报告该错误，因此请检查该错误前面的几行代码。  
+ 检查[c + + 语言参考](../../cpp/cpp-language-reference.md)来确定代码是语法不正确。 由于在遇到导致问题的行之后，编译器可能会报告此错误，检查该错误前面几个代码行。  
   
- C2143 可能在不同情况下发生。  
+ 在不同情况下可能发生 C2143。  
   
- 它可发生在此示例中，则可以限定名称时的运算符 \(`::`、`->`和 `.`\) 必须后跟 `template`关键字：  
+ 可限定名称（`::`、`->` 和 `.`）的运算符后面必须跟有关键字 `template` 时可能发生，如下例所示：  
   
 ```cpp  
 class MyClass  
@@ -47,7 +64,7 @@ class MyClass
   
 ```  
   
- 默认情况下，C\+\+假设 `Ty::PutFuncType` 不是模板；因此，下面的 `<` 解释为小于号。必须显式告诉编译器 `PutFuncType` 是通过模板，以便可以正确分析尖括号。  若要更正此错误，请使用上依赖类型名称的 `template` 关键字，如下所示：  
+ 默认情况下，C++ 会假定 `Ty::PutFuncType` 不是模板；因此，后面的 `<` 解释为小于号。  必须显式告知编译器 `PutFuncType` 是模板，以便其正确分析尖括号。 若要更正此错误，请在依赖类型的名称上使用 `template` 关键字，如下所示：  
   
 ```cpp  
 class MyClass  
@@ -60,7 +77,7 @@ class MyClass
   
 ```  
   
- 在使用 **\/clr** 并且 `using` 指令有语法错误时触发C2143 ：  
+ 可能发生 C2143 时**/clr**使用和`using`指令有语法错误︰  
   
 ```cpp  
 // C2143a.cpp  
@@ -69,7 +86,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- 在通过使用 CLR 语法而不使用 **\/clr** 尝试编译源代码文件时它也会发生：  
+ 当您尝试编译源代码文件，方法是使用 CLR 语法而不使用它也会发生**/clr**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -83,7 +100,7 @@ int main() {
 }  
 ```  
   
- 跟在 `if` 语句后的第一个非空白字符必须是左括号。  编译器无法翻译任何其他内容：  
+ 跟在 `if` 语句后的第一个非空白字符必须是左括号。 编译器将无法转换任何其他操作︰  
   
 ```cpp  
 // C2143c.cpp  
@@ -98,9 +115,9 @@ int main() {
 }  
 ```  
   
- 在检测到错误的行上或紧靠该行的上面某行中缺少右大括号、圆括号或分号时，C2143可能发生：  
+ 在检测到错误的行上或紧靠该行的上面某行中缺少右大括号、圆括号或分号时，可能发生 C2143：  
   
-```caml  
+```cpp  
 // C2143d.cpp  
 // compile with: /c  
 class X {  
@@ -109,7 +126,7 @@ class X {
 } x;  
 ```  
   
- 或者，当在类声明中存在无效的标记时：  
+ 或者类声明中存在无效的标记时：  
   
 ```cpp  
 // C2143e.cpp  
@@ -121,7 +138,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- 或者当一个标签未附加到语句时。  如果必须单独放置标签（如放置在复合语句的末尾），则将其附加到 null 语句中：  
+ 或者一个标签未附加到语句时。 如果您必须自行放置一个标签，例如，在复合语句的末尾将其附加到一个 null 语句︰  
   
 ```cpp  
 // C2143f.cpp  
@@ -135,7 +152,7 @@ void func1() {
 }  
 ```  
   
- 当对标准 C\+\+ 库中的类型进行一次非限定调用时，错误也会发生：  
+ 在 c + + 标准库类型进行非限定的调用时，可能发生错误︰  
   
 ```cpp  
 // C2143g.cpp  
@@ -145,7 +162,7 @@ static vector<char> bad;   // C2143
 static std::vector<char> good;   // OK  
 ```  
   
- 或者具有缺失的 `typename` 关键字：  
+ 或者缺失 `typename` 关键字：  
   
 ```cpp  
 // C2143h.cpp  
@@ -164,7 +181,7 @@ X<T>::Y X<T>::memFunc() {   // C2143
 }  
 ```  
   
- 或者如果尝试定义显式实例化：  
+ 或者尝试定义显式实例化：  
   
 ```cpp  
 // C2143i.cpp  
@@ -177,9 +194,9 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- 在 C 程序中，必须在函数的开头声明变量，且不能在函数执行非声明指令后声明变量。  
+ 在 C 程序中，必须将变量声明该函数的开头并后执行该函数的非声明说明不能声明。  
   
-```c  
+```C  
 // C2143j.c  
 int main()   
 {  
@@ -187,5 +204,5 @@ int main()
     i++;  
     int j = 0; // C2143  
 }  
-  
-```
+```  
+
