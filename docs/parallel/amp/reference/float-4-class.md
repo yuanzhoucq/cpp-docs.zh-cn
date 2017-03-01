@@ -1,613 +1,707 @@
 ---
-title: "float_4 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wyxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bgra"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::r"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::brga"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::operator/="
-  - "amp_short_vectors/Concurrency::graphics::float_4::agrb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rag"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gbr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zxwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zwx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zwyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rbag"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zxyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::abrg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xwz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ragb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rgba"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zywx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zwxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wyzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zyxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gar"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_w"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ywx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::operator="
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ra"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::grab"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zywx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::w"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_ywxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yzwx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rabg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_ywx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zwyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rbg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yxzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::a"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ba"
-  - "amp_short_vectors/Concurrency::graphics::float_4::operator+="
-  - "amp_short_vectors/Concurrency::graphics::float_4::brag"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yzxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yxwz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ab"
-  - "amp_short_vectors/Concurrency::graphics::float_4"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gabr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::operator-"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zwyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_x"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wzxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gbar"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zxwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yxzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xzyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::operator*="
-  - "amp_short_vectors/Concurrency::graphics::float_4::yxwz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xywz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::arb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wyxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yzwx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zwxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wyxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gab"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xyzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rbga"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bagr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wzxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::agb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::brg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zxyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::arg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::g"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yzxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gba"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ywzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_z"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xwyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::grba"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zwxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::garb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rba"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xzwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zxwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::abgr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wxzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::agbr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ar"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bra"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::argb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::abr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wyzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xywz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xwzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::b"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ywz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rga"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ga"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_y"
-  - "amp_short_vectors/Concurrency::graphics::float_4::agr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wzxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::arbg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gbra"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wxzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bgr"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wxyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_ywx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wzyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xzyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::barg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_ywzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wxyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zyxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zywx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::operator-="
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_y"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wyzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bgar"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xzyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yxzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xyzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::abg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::x"
-  - "amp_short_vectors/Concurrency::graphics::float_4::gra"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bag"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xwz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xwyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xwzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wxzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xzwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::operator--"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xwz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zwx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bar"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zxyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wzyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_w"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_ywz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_ywzx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zwx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yzwx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yzxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::bga"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ywxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_wxy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_wyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::yzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::grb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::operator++"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xwyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::br"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_zxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rgab"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xzw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zyw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_ywz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::zx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wxyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xzwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rab"
-  - "amp_short_vectors/Concurrency::graphics::float_4::ag"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xwy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xywz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_xyz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::y"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rg"
-  - "amp_short_vectors/Concurrency::graphics::float_4::wzyx"
-  - "amp_short_vectors/Concurrency::graphics::float_4::z"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_ywxz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yxwz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::rgb"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_zyxw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_yz"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_yw"
-  - "amp_short_vectors/Concurrency::graphics::float_4::xwzy"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_x"
-  - "amp_short_vectors/Concurrency::graphics::float_4::get_z"
-  - "amp_short_vectors/Concurrency::graphics::float_4::set_xyzw"
-dev_langs: 
-  - "C++"
+title: "float_4 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
+- amp_short_vectors/Concurrency::graphics::float_4::zxw
+- amp_short_vectors/Concurrency::graphics::float_4::bgra
+- amp_short_vectors/Concurrency::graphics::float_4::get_xz
+- amp_short_vectors/Concurrency::graphics::float_4::get_yxw
+- amp_short_vectors/Concurrency::graphics::float_4::r
+- amp_short_vectors/Concurrency::graphics::float_4::set_wzx
+- amp_short_vectors/Concurrency::graphics::float_4::brga
+- amp_short_vectors/Concurrency::graphics::float_4::get_xyw
+- amp_short_vectors/Concurrency::graphics::float_4::gr
+- amp_short_vectors/Concurrency::graphics::float_4::operator/=
+- amp_short_vectors/Concurrency::graphics::float_4::agrb
+- amp_short_vectors/Concurrency::graphics::float_4::set_wxz
+- amp_short_vectors/Concurrency::graphics::float_4::get_wzy
+- amp_short_vectors/Concurrency::graphics::float_4::rag
+- amp_short_vectors/Concurrency::graphics::float_4::yzx
+- amp_short_vectors/Concurrency::graphics::float_4::gbr
+- amp_short_vectors/Concurrency::graphics::float_4::set_zxwy
+- amp_short_vectors/Concurrency::graphics::float_4::wx
+- amp_short_vectors/Concurrency::graphics::float_4::zwx
+- amp_short_vectors/Concurrency::graphics::float_4::zwyx
+- amp_short_vectors/Concurrency::graphics::float_4::wxy
+- amp_short_vectors/Concurrency::graphics::float_4::set_wyx
+- amp_short_vectors/Concurrency::graphics::float_4::set_zyx
+- amp_short_vectors/Concurrency::graphics::float_4::set_yz
+- amp_short_vectors/Concurrency::graphics::float_4::rbag
+- amp_short_vectors/Concurrency::graphics::float_4::rb
+- amp_short_vectors/Concurrency::graphics::float_4::get_zxyw
+- amp_short_vectors/Concurrency::graphics::float_4::xz
+- amp_short_vectors/Concurrency::graphics::float_4::get_zy
+- amp_short_vectors/Concurrency::graphics::float_4::abrg
+- amp_short_vectors/Concurrency::graphics::float_4::bg
+- amp_short_vectors/Concurrency::graphics::float_4::xwy
+- amp_short_vectors/Concurrency::graphics::float_4::get_xwz
+- amp_short_vectors/Concurrency::graphics::float_4::ragb
+- amp_short_vectors/Concurrency::graphics::float_4::wzx
+- amp_short_vectors/Concurrency::graphics::float_4::rgba
+- amp_short_vectors/Concurrency::graphics::float_4::set_zyw
+- amp_short_vectors/Concurrency::graphics::float_4::get_zw
+- amp_short_vectors/Concurrency::graphics::float_4::zywx
+- amp_short_vectors/Concurrency::graphics::float_4::set_zwxy
+- amp_short_vectors/Concurrency::graphics::float_4::set_wyzx
+- amp_short_vectors/Concurrency::graphics::float_4::zyxw
+- amp_short_vectors/Concurrency::graphics::float_4::yw
+- amp_short_vectors/Concurrency::graphics::float_4::set_xw
+- amp_short_vectors/Concurrency::graphics::float_4::gar
+- amp_short_vectors/Concurrency::graphics::float_4::get_yzx
+- amp_short_vectors/Concurrency::graphics::float_4::get_w
+- amp_short_vectors/Concurrency::graphics::float_4::wzy
+- amp_short_vectors/Concurrency::graphics::float_4::ywx
+- amp_short_vectors/Concurrency::graphics::float_4::get_zx
+- amp_short_vectors/Concurrency::graphics::float_4::operator=
+- amp_short_vectors/Concurrency::graphics::float_4::set_wx
+- amp_short_vectors/Concurrency::graphics::float_4::get_zyx
+- amp_short_vectors/Concurrency::graphics::float_4::ra
+- amp_short_vectors/Concurrency::graphics::float_4::zy
+- amp_short_vectors/Concurrency::graphics::float_4::grab
+- amp_short_vectors/Concurrency::graphics::float_4::get_xwy
+- amp_short_vectors/Concurrency::graphics::float_4::get_yw
+- amp_short_vectors/Concurrency::graphics::float_4::set_xyz
+- amp_short_vectors/Concurrency::graphics::float_4::get_zywx
+- amp_short_vectors/Concurrency::graphics::float_4::w
+- amp_short_vectors/Concurrency::graphics::float_4::get_ywxz
+- amp_short_vectors/Concurrency::graphics::float_4::xy
+- amp_short_vectors/Concurrency::graphics::float_4::yzwx
+- amp_short_vectors/Concurrency::graphics::float_4::rabg
+- amp_short_vectors/Concurrency::graphics::float_4::get_ywx
+- amp_short_vectors/Concurrency::graphics::float_4::get_zwyx
+- amp_short_vectors/Concurrency::graphics::float_4::rbg
+- amp_short_vectors/Concurrency::graphics::float_4::get_yxzw
+- amp_short_vectors/Concurrency::graphics::float_4::a
+- amp_short_vectors/Concurrency::graphics::float_4::ba
+- amp_short_vectors/Concurrency::graphics::float_4::operator+=
+- amp_short_vectors/Concurrency::graphics::float_4::brag
+- amp_short_vectors/Concurrency::graphics::float_4::yxz
+- amp_short_vectors/Concurrency::graphics::float_4::get_yzxw
+- amp_short_vectors/Concurrency::graphics::float_4::set_xyw
+- amp_short_vectors/Concurrency::graphics::float_4::set_yxwz
+- amp_short_vectors/Concurrency::graphics::float_4::ab
+- amp_short_vectors/Concurrency::graphics::float_4
+- amp_short_vectors/Concurrency::graphics::float_4::set_wz
+- amp_short_vectors/Concurrency::graphics::float_4::gabr
+- amp_short_vectors/Concurrency::graphics::float_4::operator-
+- amp_short_vectors/Concurrency::graphics::float_4::set_zwyx
+- amp_short_vectors/Concurrency::graphics::float_4::set_zxy
+- amp_short_vectors/Concurrency::graphics::float_4::set_x
+- amp_short_vectors/Concurrency::graphics::float_4::get_wzxy
+- amp_short_vectors/Concurrency::graphics::float_4::gbar
+- amp_short_vectors/Concurrency::graphics::float_4::gb
+- amp_short_vectors/Concurrency::graphics::float_4::zxwy
+- amp_short_vectors/Concurrency::graphics::float_4::yxzw
+- amp_short_vectors/Concurrency::graphics::float_4::get_wxz
+- amp_short_vectors/Concurrency::graphics::float_4::zyx
+- amp_short_vectors/Concurrency::graphics::float_4::xzyw
+- amp_short_vectors/Concurrency::graphics::float_4::operator*=
+- amp_short_vectors/Concurrency::graphics::float_4::yxwz
+- amp_short_vectors/Concurrency::graphics::float_4::xywz
+- amp_short_vectors/Concurrency::graphics::float_4::arb
+- amp_short_vectors/Concurrency::graphics::float_4::get_yzw
+- amp_short_vectors/Concurrency::graphics::float_4::wyxz
+- amp_short_vectors/Concurrency::graphics::float_4::get_yzwx
+- amp_short_vectors/Concurrency::graphics::float_4::wy
+- amp_short_vectors/Concurrency::graphics::float_4::zwxy
+- amp_short_vectors/Concurrency::graphics::float_4::set_wyz
+- amp_short_vectors/Concurrency::graphics::float_4::set_wyxz
+- amp_short_vectors/Concurrency::graphics::float_4::gab
+- amp_short_vectors/Concurrency::graphics::float_4::get_xyzw
+- amp_short_vectors/Concurrency::graphics::float_4::get_wyz
+- amp_short_vectors/Concurrency::graphics::float_4::rbga
+- amp_short_vectors/Concurrency::graphics::float_4::bagr
+- amp_short_vectors/Concurrency::graphics::float_4::xyz
+- amp_short_vectors/Concurrency::graphics::float_4::set_wzxy
+- amp_short_vectors/Concurrency::graphics::float_4::agb
+- amp_short_vectors/Concurrency::graphics::float_4::brg
+- amp_short_vectors/Concurrency::graphics::float_4::zxyw
+- amp_short_vectors/Concurrency::graphics::float_4::arg
+- amp_short_vectors/Concurrency::graphics::float_4::g
+- amp_short_vectors/Concurrency::graphics::float_4::get_zxy
+- amp_short_vectors/Concurrency::graphics::float_4::set_yzxw
+- amp_short_vectors/Concurrency::graphics::float_4::set_yzx
+- amp_short_vectors/Concurrency::graphics::float_4::gba
+- amp_short_vectors/Concurrency::graphics::float_4::ywzx
+- amp_short_vectors/Concurrency::graphics::float_4::get_wx
+- amp_short_vectors/Concurrency::graphics::float_4::set_z
+- amp_short_vectors/Concurrency::graphics::float_4::set_xwyz
+- amp_short_vectors/Concurrency::graphics::float_4::grba
+- amp_short_vectors/Concurrency::graphics::float_4::yxw
+- amp_short_vectors/Concurrency::graphics::float_4::set_zw
+- amp_short_vectors/Concurrency::graphics::float_4::get_yx
+- amp_short_vectors/Concurrency::graphics::float_4::get_zwxy
+- amp_short_vectors/Concurrency::graphics::float_4::get_wz
+- amp_short_vectors/Concurrency::graphics::float_4::garb
+- amp_short_vectors/Concurrency::graphics::float_4::set_yxw
+- amp_short_vectors/Concurrency::graphics::float_4::rba
+- amp_short_vectors/Concurrency::graphics::float_4::xzwy
+- amp_short_vectors/Concurrency::graphics::float_4::get_zxwy
+- amp_short_vectors/Concurrency::graphics::float_4::zw
+- amp_short_vectors/Concurrency::graphics::float_4::abgr
+- amp_short_vectors/Concurrency::graphics::float_4::set_wxzy
+- amp_short_vectors/Concurrency::graphics::float_4::wz
+- amp_short_vectors/Concurrency::graphics::float_4::agbr
+- amp_short_vectors/Concurrency::graphics::float_4::ar
+- amp_short_vectors/Concurrency::graphics::float_4::bra
+- amp_short_vectors/Concurrency::graphics::float_4::zxy
+- amp_short_vectors/Concurrency::graphics::float_4::set_wy
+- amp_short_vectors/Concurrency::graphics::float_4::argb
+- amp_short_vectors/Concurrency::graphics::float_4::abr
+- amp_short_vectors/Concurrency::graphics::float_4::get_wyzx
+- amp_short_vectors/Concurrency::graphics::float_4::set_xywz
+- amp_short_vectors/Concurrency::graphics::float_4::get_xwzy
+- amp_short_vectors/Concurrency::graphics::float_4::b
+- amp_short_vectors/Concurrency::graphics::float_4::ywz
+- amp_short_vectors/Concurrency::graphics::float_4::wxz
+- amp_short_vectors/Concurrency::graphics::float_4::rga
+- amp_short_vectors/Concurrency::graphics::float_4::set_zx
+- amp_short_vectors/Concurrency::graphics::float_4::ga
+- amp_short_vectors/Concurrency::graphics::float_4::get_y
+- amp_short_vectors/Concurrency::graphics::float_4::agr
+- amp_short_vectors/Concurrency::graphics::float_4::wzxy
+- amp_short_vectors/Concurrency::graphics::float_4::set_xzy
+- amp_short_vectors/Concurrency::graphics::float_4::arbg
+- amp_short_vectors/Concurrency::graphics::float_4::gbra
+- amp_short_vectors/Concurrency::graphics::float_4::set_xy
+- amp_short_vectors/Concurrency::graphics::float_4::yx
+- amp_short_vectors/Concurrency::graphics::float_4::set_yxz
+- amp_short_vectors/Concurrency::graphics::float_4::wxzy
+- amp_short_vectors/Concurrency::graphics::float_4::bgr
+- amp_short_vectors/Concurrency::graphics::float_4::get_wxyz
+- amp_short_vectors/Concurrency::graphics::float_4::xyw
+- amp_short_vectors/Concurrency::graphics::float_4::set_ywx
+- amp_short_vectors/Concurrency::graphics::float_4::get_wzyx
+- amp_short_vectors/Concurrency::graphics::float_4::wyx
+- amp_short_vectors/Concurrency::graphics::float_4::get_xzyw
+- amp_short_vectors/Concurrency::graphics::float_4::get_zwy
+- amp_short_vectors/Concurrency::graphics::float_4::get_wzx
+- amp_short_vectors/Concurrency::graphics::float_4::barg
+- amp_short_vectors/Concurrency::graphics::float_4::get_ywzx
+- amp_short_vectors/Concurrency::graphics::float_4::set_wxyz
+- amp_short_vectors/Concurrency::graphics::float_4::get_wxy
+- amp_short_vectors/Concurrency::graphics::float_4::set_zyxw
+- amp_short_vectors/Concurrency::graphics::float_4::set_zywx
+- amp_short_vectors/Concurrency::graphics::float_4::operator-=
+- amp_short_vectors/Concurrency::graphics::float_4::set_y
+- amp_short_vectors/Concurrency::graphics::float_4::wyzx
+- amp_short_vectors/Concurrency::graphics::float_4::bgar
+- amp_short_vectors/Concurrency::graphics::float_4::set_yx
+- amp_short_vectors/Concurrency::graphics::float_4::set_xzyw
+- amp_short_vectors/Concurrency::graphics::float_4::set_yxzw
+- amp_short_vectors/Concurrency::graphics::float_4::xyzw
+- amp_short_vectors/Concurrency::graphics::float_4::abg
+- amp_short_vectors/Concurrency::graphics::float_4::x
+- amp_short_vectors/Concurrency::graphics::float_4::gra
+- amp_short_vectors/Concurrency::graphics::float_4::get_zyw
+- amp_short_vectors/Concurrency::graphics::float_4::set_xz
+- amp_short_vectors/Concurrency::graphics::float_4::get_xw
+- amp_short_vectors/Concurrency::graphics::float_4::bag
+- amp_short_vectors/Concurrency::graphics::float_4::xwz
+- amp_short_vectors/Concurrency::graphics::float_4::get_xwyz
+- amp_short_vectors/Concurrency::graphics::float_4::get_zxw
+- amp_short_vectors/Concurrency::graphics::float_4::set_xwzy
+- amp_short_vectors/Concurrency::graphics::float_4::get_wxzy
+- amp_short_vectors/Concurrency::graphics::float_4::get_xzwy
+- amp_short_vectors/Concurrency::graphics::float_4::get_xzw
+- amp_short_vectors/Concurrency::graphics::float_4::get_xzy
+- amp_short_vectors/Concurrency::graphics::float_4::set_yzw
+- amp_short_vectors/Concurrency::graphics::float_4::zwy
+- amp_short_vectors/Concurrency::graphics::float_4::operator--
+- amp_short_vectors/Concurrency::graphics::float_4::set_xzw
+- amp_short_vectors/Concurrency::graphics::float_4::get_wy
+- amp_short_vectors/Concurrency::graphics::float_4::xzy
+- amp_short_vectors/Concurrency::graphics::float_4::set_zy
+- amp_short_vectors/Concurrency::graphics::float_4::set_xwz
+- amp_short_vectors/Concurrency::graphics::float_4::set_zwx
+- amp_short_vectors/Concurrency::graphics::float_4::bar
+- amp_short_vectors/Concurrency::graphics::float_4::set_wzy
+- amp_short_vectors/Concurrency::graphics::float_4::set_zxyw
+- amp_short_vectors/Concurrency::graphics::float_4::set_wzyx
+- amp_short_vectors/Concurrency::graphics::float_4::set_w
+- amp_short_vectors/Concurrency::graphics::float_4::get_yxz
+- amp_short_vectors/Concurrency::graphics::float_4::get_ywz
+- amp_short_vectors/Concurrency::graphics::float_4::set_ywzx
+- amp_short_vectors/Concurrency::graphics::float_4::get_zwx
+- amp_short_vectors/Concurrency::graphics::float_4::set_zwy
+- amp_short_vectors/Concurrency::graphics::float_4::set_yzwx
+- amp_short_vectors/Concurrency::graphics::float_4::wyz
+- amp_short_vectors/Concurrency::graphics::float_4::yzxw
+- amp_short_vectors/Concurrency::graphics::float_4::yz
+- amp_short_vectors/Concurrency::graphics::float_4::xw
+- amp_short_vectors/Concurrency::graphics::float_4::bga
+- amp_short_vectors/Concurrency::graphics::float_4::ywxz
+- amp_short_vectors/Concurrency::graphics::float_4::set_wxy
+- amp_short_vectors/Concurrency::graphics::float_4::get_wyx
+- amp_short_vectors/Concurrency::graphics::float_4::yzw
+- amp_short_vectors/Concurrency::graphics::float_4::grb
+- amp_short_vectors/Concurrency::graphics::float_4::operator++
+- amp_short_vectors/Concurrency::graphics::float_4::xwyz
+- amp_short_vectors/Concurrency::graphics::float_4::br
+- amp_short_vectors/Concurrency::graphics::float_4::set_zxw
+- amp_short_vectors/Concurrency::graphics::float_4::rgab
+- amp_short_vectors/Concurrency::graphics::float_4::get_xy
+- amp_short_vectors/Concurrency::graphics::float_4::xzw
+- amp_short_vectors/Concurrency::graphics::float_4::zyw
+- amp_short_vectors/Concurrency::graphics::float_4::set_ywz
+- amp_short_vectors/Concurrency::graphics::float_4::zx
+- amp_short_vectors/Concurrency::graphics::float_4::wxyz
+- amp_short_vectors/Concurrency::graphics::float_4::set_xzwy
+- amp_short_vectors/Concurrency::graphics::float_4::rab
+- amp_short_vectors/Concurrency::graphics::float_4::ag
+- amp_short_vectors/Concurrency::graphics::float_4::set_xwy
+- amp_short_vectors/Concurrency::graphics::float_4::get_xywz
+- amp_short_vectors/Concurrency::graphics::float_4::get_xyz
+- amp_short_vectors/Concurrency::graphics::float_4::y
+- amp_short_vectors/Concurrency::graphics::float_4::rg
+- amp_short_vectors/Concurrency::graphics::float_4::wzyx
+- amp_short_vectors/Concurrency::graphics::float_4::z
+- amp_short_vectors/Concurrency::graphics::float_4::set_ywxz
+- amp_short_vectors/Concurrency::graphics::float_4::get_yxwz
+- amp_short_vectors/Concurrency::graphics::float_4::rgb
+- amp_short_vectors/Concurrency::graphics::float_4::get_zyxw
+- amp_short_vectors/Concurrency::graphics::float_4::get_yz
+- amp_short_vectors/Concurrency::graphics::float_4::set_yw
+- amp_short_vectors/Concurrency::graphics::float_4::xwzy
+- amp_short_vectors/Concurrency::graphics::float_4::get_x
+- amp_short_vectors/Concurrency::graphics::float_4::get_z
+- amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
+dev_langs:
+- C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# float_4 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 8294aa587c750a21de7d7ebda18e1927a1feccc1
+ms.lasthandoff: 02/24/2017
 
-表示四个浮动短矢量。  
+---
+# <a name="float4-class"></a>float_4 类
+表示四个浮点型值的短矢量。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class float_4;  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedefs  
+### <a name="public-typedefs"></a>公共 Typedef  
   
 |名称|描述|  
-|--------|--------|  
+|----------|-----------------|  
 |`value_type`||  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|描述|  
-|--------|--------|  
-|[float\_4::float\_4 构造函数](../Topic/float_4::float_4%20Constructor.md)|已重载。  默认构造函数，初始化 0 的所有元素。|  
+|----------|-----------------|  
+|[float_4 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
-### 公共方法  
-  
-|名称|描述|  
-|--------|--------|  
-|float\_4::get\_w 方法||  
-|float\_4::get\_wx 方法||  
-|float\_4::get\_wxy 方法||  
-|float\_4::get\_wxyz 方法||  
-|float\_4::get\_wxz 方法||  
-|float\_4::get\_wxzy 方法||  
-|float\_4::get\_wy 方法||  
-|float\_4::get\_wyx 方法||  
-|float\_4::get\_wyxz 方法||  
-|float\_4::get\_wyz 方法||  
-|float\_4::get\_wyzx 方法||  
-|float\_4::get\_wz 方法||  
-|float\_4::get\_wzx 方法||  
-|float\_4::get\_wzxy 方法||  
-|float\_4::get\_wzy 方法||  
-|float\_4::get\_wzyx 方法||  
-|float\_4::get\_x 方法||  
-|float\_4::get\_xw 方法||  
-|float\_4::get\_xwy 方法||  
-|float\_4::get\_xwyz 方法||  
-|float\_4::get\_xwz 方法||  
-|float\_4::get\_xwzy 方法||  
-|float\_4::get\_xy 方法||  
-|float\_4::get\_xyw 方法||  
-|float\_4::get\_xywz 方法||  
-|float\_4::get\_xyz 方法||  
-|float\_4::get\_xyzw 方法||  
-|float\_4::get\_xz 方法||  
-|float\_4::get\_xzw 方法||  
-|float\_4::get\_xzwy 方法||  
-|float\_4::get\_xzy 方法||  
-|float\_4::get\_xzyw 方法||  
-|float\_4::get\_y 方法||  
-|float\_4::get\_yw 方法||  
-|float\_4::get\_ywx 方法||  
-|float\_4::get\_ywxz 方法||  
-|float\_4::get\_ywz 方法||  
-|float\_4::get\_ywzx 方法||  
-|float\_4::get\_yx 方法||  
-|float\_4::get\_yxw 方法||  
-|float\_4::get\_yxwz 方法||  
-|float\_4::get\_yxz 方法||  
-|float\_4::get\_yxzw 方法||  
-|float\_4::get\_yz 方法||  
-|float\_4::get\_yzw 方法||  
-|float\_4::get\_yzwx 方法||  
-|float\_4::get\_yzx 方法||  
-|float\_4::get\_yzxw 方法||  
-|float\_4::get\_z 方法||  
-|float\_4::get\_zw 方法||  
-|float\_4::get\_zwx 方法||  
-|float\_4::get\_zwxy 方法||  
-|float\_4::get\_zwy 方法||  
-|float\_4::get\_zwyx 方法||  
-|float\_4::get\_zx 方法||  
-|float\_4::get\_zxw 方法||  
-|float\_4::get\_zxwy 方法||  
-|float\_4::get\_zxy 方法||  
-|float\_4::get\_zxyw 方法||  
-|float\_4::get\_zy 方法||  
-|float\_4::get\_zyw 方法||  
-|float\_4::get\_zywx 方法||  
-|float\_4::get\_zyx 方法||  
-|float\_4::get\_zyxw 方法||  
-|float\_4::ref\_a 方法||  
-|float\_4::ref\_b 方法||  
-|float\_4::ref\_g 方法||  
-|float\_4::ref\_r 方法||  
-|float\_4::ref\_w 方法||  
-|float\_4::ref\_x 方法||  
-|float\_4::ref\_y 方法||  
-|float\_4::ref\_z 方法||  
-|float\_4::set\_w 方法||  
-|float\_4::set\_wx 方法||  
-|float\_4::set\_wxy 方法||  
-|float\_4::set\_wxyz 方法||  
-|float\_4::set\_wxz 方法||  
-|float\_4::set\_wxzy 方法||  
-|float\_4::set\_wy 方法||  
-|float\_4::set\_wyx 方法||  
-|float\_4::set\_wyxz 方法||  
-|float\_4::set\_wyz 方法||  
-|float\_4::set\_wyzx 方法||  
-|float\_4::set\_wz 方法||  
-|float\_4::set\_wzx 方法||  
-|float\_4::set\_wzxy 方法||  
-|float\_4::set\_wzy 方法||  
-|float\_4::set\_wzyx 方法||  
-|float\_4::set\_x 方法||  
-|float\_4::set\_xw 方法||  
-|float\_4::set\_xwy 方法||  
-|float\_4::set\_xwyz 方法||  
-|float\_4::set\_xwz 方法||  
-|float\_4::set\_xwzy 方法||  
-|float\_4::set\_xy 方法||  
-|float\_4::set\_xyw 方法||  
-|float\_4::set\_xywz 方法||  
-|float\_4::set\_xyz 方法||  
-|float\_4::set\_xyzw 方法||  
-|float\_4::set\_xz 方法||  
-|float\_4::set\_xzw 方法||  
-|float\_4::set\_xzwy 方法||  
-|float\_4::set\_xzy 方法||  
-|float\_4::set\_xzyw 方法||  
-|float\_4::set\_y 方法||  
-|float\_4::set\_yw 方法||  
-|float\_4::set\_ywx 方法||  
-|float\_4::set\_ywxz 方法||  
-|float\_4::set\_ywz 方法||  
-|float\_4::set\_ywzx 方法||  
-|float\_4::set\_yx 方法||  
-|float\_4::set\_yxw 方法||  
-|float\_4::set\_yxwz 方法||  
-|float\_4::set\_yxz 方法||  
-|float\_4::set\_yxzw 方法||  
-|float\_4::set\_yz 方法||  
-|float\_4::set\_yzw 方法||  
-|float\_4::set\_yzwx 方法||  
-|float\_4::set\_yzx 方法||  
-|float\_4::set\_yzxw 方法||  
-|float\_4::set\_z 方法||  
-|float\_4::set\_zw 方法||  
-|float\_4::set\_zwx 方法||  
-|float\_4::set\_zwxy 方法||  
-|float\_4::set\_zwy 方法||  
-|float\_4::set\_zwyx 方法||  
-|float\_4::set\_zx 方法||  
-|float\_4::set\_zxw 方法||  
-|float\_4::set\_zxwy 方法||  
-|float\_4::set\_zxy 方法||  
-|float\_4::set\_zxyw 方法||  
-|float\_4::set\_zy 方法||  
-|float\_4::set\_zyw 方法||  
-|float\_4::set\_zywx 方法||  
-|float\_4::set\_zyx 方法||  
-|float\_4::set\_zyxw 方法||  
-  
-### 公共运算符  
+### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
-|--------|--------|  
-|float\_4::operator\-运算符||  
-|float\_4::operator\-\-运算符||  
-|float\_4::operator\*\=运算符||  
-|float\_4::operator\/\=运算符||  
-|float\_4::operator\+\+运算符||  
-|float\_4::operator\+\=运算符||  
-|float\_4::operator\=运算符||  
-|float\_4::operator\-\=运算符||  
+|----------|-----------------|  
+|float_4::get_w 方法||  
+|float_4::get_wx 方法||  
+|float_4::get_wxy 方法||  
+|float_4::get_wxyz 方法||  
+|float_4::get_wxz 方法||  
+|float_4::get_wxzy 方法||  
+|float_4::get_wy 方法||  
+|float_4::get_wyx 方法||  
+|float_4::get_wyxz 方法||  
+|float_4::get_wyz 方法||  
+|float_4::get_wyzx 方法||  
+|float_4::get_wz 方法||  
+|float_4::get_wzx 方法||  
+|float_4::get_wzxy 方法||  
+|float_4::get_wzy 方法||  
+|float_4::get_wzyx 方法||  
+|float_4::get_x 方法||  
+|float_4::get_xw 方法||  
+|float_4::get_xwy 方法||  
+|float_4::get_xwyz 方法||  
+|float_4::get_xwz 方法||  
+|float_4::get_xwzy 方法||  
+|float_4::get_xy 方法||  
+|float_4::get_xyw 方法||  
+|float_4::get_xywz 方法||  
+|float_4::get_xyz 方法||  
+|float_4::get_xyzw 方法||  
+|float_4::get_xz 方法||  
+|float_4::get_xzw 方法||  
+|float_4::get_xzwy 方法||  
+|float_4::get_xzy 方法||  
+|float_4::get_xzyw 方法||  
+|float_4::get_y 方法||  
+|float_4::get_yw 方法||  
+|float_4::get_ywx 方法||  
+|float_4::get_ywxz 方法||  
+|float_4::get_ywz 方法||  
+|float_4::get_ywzx 方法||  
+|float_4::get_yx 方法||  
+|float_4::get_yxw 方法||  
+|float_4::get_yxwz 方法||  
+|float_4::get_yxz 方法||  
+|float_4::get_yxzw 方法||  
+|float_4::get_yz 方法||  
+|float_4::get_yzw 方法||  
+|float_4::get_yzwx 方法||  
+|float_4::get_yzx 方法||  
+|float_4::get_yzxw 方法||  
+|float_4::get_z 方法||  
+|float_4::get_zw 方法||  
+|float_4::get_zwx 方法||  
+|float_4::get_zwxy 方法||  
+|float_4::get_zwy 方法||  
+|float_4::get_zwyx 方法||  
+|float_4::get_zx 方法||  
+|float_4::get_zxw 方法||  
+|float_4::get_zxwy 方法||  
+|float_4::get_zxy 方法||  
+|float_4::get_zxyw 方法||  
+|float_4::get_zy 方法||  
+|float_4::get_zyw 方法||  
+|float_4::get_zywx 方法||  
+|float_4::get_zyx 方法||  
+|float_4::get_zyxw 方法||  
+|float_4::ref_a 方法||  
+|float_4::ref_b 方法||  
+|float_4::ref_g 方法||  
+|float_4::ref_r 方法||  
+|float_4::ref_w 方法||  
+|float_4::ref_x 方法||  
+|float_4::ref_y 方法||  
+|float_4::ref_z 方法||  
+|float_4::set_w 方法||  
+|float_4::set_wx 方法||  
+|float_4::set_wxy 方法||  
+|float_4::set_wxyz 方法||  
+|float_4::set_wxz 方法||  
+|float_4::set_wxzy 方法||  
+|float_4::set_wy 方法||  
+|float_4::set_wyx 方法||  
+|float_4::set_wyxz 方法||  
+|float_4::set_wyz 方法||  
+|float_4::set_wyzx 方法||  
+|float_4::set_wz 方法||  
+|float_4::set_wzx 方法||  
+|float_4::set_wzxy 方法||  
+|float_4::set_wzy 方法||  
+|float_4::set_wzyx 方法||  
+|float_4::set_x 方法||  
+|float_4::set_xw 方法||  
+|float_4::set_xwy 方法||  
+|float_4::set_xwyz 方法||  
+|float_4::set_xwz 方法||  
+|float_4::set_xwzy 方法||  
+|float_4::set_xy 方法||  
+|float_4::set_xyw 方法||  
+|float_4::set_xywz 方法||  
+|float_4::set_xyz 方法||  
+|float_4::set_xyzw 方法||  
+|float_4::set_xz 方法||  
+|float_4::set_xzw 方法||  
+|float_4::set_xzwy 方法||  
+|float_4::set_xzy 方法||  
+|float_4::set_xzyw 方法||  
+|float_4::set_y 方法||  
+|float_4::set_yw 方法||  
+|float_4::set_ywx 方法||  
+|float_4::set_ywxz 方法||  
+|float_4::set_ywz 方法||  
+|float_4::set_ywzx 方法||  
+|float_4::set_yx 方法||  
+|float_4::set_yxw 方法||  
+|float_4::set_yxwz 方法||  
+|float_4::set_yxz 方法||  
+|float_4::set_yxzw 方法||  
+|float_4::set_yz 方法||  
+|float_4::set_yzw 方法||  
+|float_4::set_yzwx 方法||  
+|float_4::set_yzx 方法||  
+|float_4::set_yzxw 方法||  
+|float_4::set_z 方法||  
+|float_4::set_zw 方法||  
+|float_4::set_zwx 方法||  
+|float_4::set_zwxy 方法||  
+|float_4::set_zwy 方法||  
+|float_4::set_zwyx 方法||  
+|float_4::set_zx 方法||  
+|float_4::set_zxw 方法||  
+|float_4::set_zxwy 方法||  
+|float_4::set_zxy 方法||  
+|float_4::set_zxyw 方法||  
+|float_4::set_zy 方法||  
+|float_4::set_zyw 方法||  
+|float_4::set_zywx 方法||  
+|float_4::set_zyx 方法||  
+|float_4::set_zyxw 方法||  
   
-### 公共常量  
+### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
-|--------|--------|  
-|[float\_4::size 常量](../Topic/float_4::size%20Constant.md)||  
+|----------|-----------------|  
+|float_4::operator 运算符||  
+|float_4::operator-运算符||  
+|float_4::operator * = 运算符||  
+|float_4::operator / = 运算符||  
+|float_4::operator + + 运算符||  
+|float_4::operator + = 运算符||  
+|float_4::operator = 运算符||  
+|float_4::operator-= 运算符||  
   
-### 公共数据成员  
+### <a name="public-constants"></a>公共常量  
+  
+|名称|说明|  
+|----------|-----------------|  
+|[大小常量](#float_4__size)||  
+  
+### <a name="public-data-members"></a>公共数据成员  
   
 |名称|描述|  
-|--------|--------|  
-|float\_4::a 常数数据成员。||  
-|float\_4::ab 数据成员||  
-|float\_4::abg 数据成员||  
-|float\_4::abgr 数据成员||  
-|float\_4::abr 数据成员||  
-|float\_4::abrg 数据成员||  
-|float\_4::ag 数据成员||  
-|float\_4::agb 数据成员||  
-|float\_4::agbr 数据成员||  
-|float\_4::agr 数据成员||  
-|float\_4::agrb 数据成员||  
-|float\_4::ar 数据成员||  
-|float\_4::arb 数据成员||  
-|float\_4::arbg 数据成员||  
-|float\_4::arg 数据成员||  
-|float\_4::argb 数据成员||  
-|float\_4::b 常数数据成员。||  
-|float\_4::ba 数据成员||  
-|float\_4::bag 数据成员||  
-|float\_4::bagr 数据成员||  
-|float\_4::bar 数据成员||  
-|float\_4::barg 数据成员||  
-|float\_4::bg 数据成员||  
-|float\_4::bga 数据成员||  
-|float\_4::bgar 数据成员||  
-|float\_4::bgr 数据成员||  
-|float\_4::bgra 数据成员||  
-|float\_4::br 数据成员||  
-|float\_4::bra 数据成员||  
-|float\_4::brag 数据成员||  
-|float\_4::brg 数据成员||  
-|float\_4::brga 数据成员||  
-|float\_4::g 常数数据成员。||  
-|float\_4::ga 数据成员||  
-|float\_4::gab 数据成员||  
-|float\_4::gabr 数据成员||  
-|float\_4::gar 数据成员||  
-|float\_4::garb 数据成员||  
-|float\_4::gb 数据成员||  
-|float\_4::gba 数据成员||  
-|float\_4::gbar 数据成员||  
-|float\_4::gbr 数据成员||  
-|float\_4::gbra 数据成员||  
-|float\_4::gr 数据成员||  
-|float\_4::gra 数据成员||  
-|float\_4::grab 数据成员||  
-|float\_4::grb 数据成员||  
-|float\_4::grba 数据成员||  
-|float\_4::r 常数数据成员。||  
-|float\_4::ra 数据成员||  
-|float\_4::rab 数据成员||  
-|float\_4::rabg 数据成员||  
-|float\_4::rag 数据成员||  
-|float\_4::ragb 数据成员||  
-|float\_4::rb 数据成员||  
-|float\_4::rba 数据成员||  
-|float\_4::rbag 数据成员||  
-|float\_4::rbg 数据成员||  
-|float\_4::rbga 数据成员||  
-|float\_4::rg 数据成员||  
-|float\_4::rga 数据成员||  
-|float\_4::rgab 数据成员||  
-|float\_4::rgb 数据成员||  
-|float\_4::rgba 数据成员||  
-|float\_4::w 常数数据成员。||  
-|float\_4::wx 数据成员||  
-|float\_4::wxy 数据成员||  
-|float\_4::wxyz 数据成员||  
-|float\_4::wxz 数据成员||  
-|float\_4::wxzy 数据成员||  
-|float\_4::wy 数据成员||  
-|float\_4::wyx 数据成员||  
-|float\_4::wyxz 数据成员||  
-|float\_4::wyz 数据成员||  
-|float\_4::wyzx 数据成员||  
-|float\_4::wz 数据成员||  
-|float\_4::wyx 数据成员||  
-|float\_4::wzxy 数据成员||  
-|float\_4::wzy 数据成员||  
-|float\_4::wzyx 数据成员||  
-|float\_4::x 常数数据成员。||  
-|float\_4::xw 数据成员||  
-|float\_4::xwy 数据成员||  
-|float\_4::xwyz 数据成员||  
-|float\_4::xwz 数据成员||  
-|float\_4::xwzy 数据成员||  
-|float\_4::xy 数据成员||  
-|float\_4::xyw 数据成员||  
-|float\_4::xywz 数据成员||  
-|float\_4::xyz 数据成员||  
-|float\_4::xyzw 数据成员||  
-|float\_4::xz 数据成员||  
-|float\_4::xzw 数据成员||  
-|float\_4::xzwy 数据成员||  
-|float\_4::xzy 数据成员||  
-|float\_4::xzyw 数据成员||  
-|float\_4::y 常数数据成员。||  
-|float\_4::yw 数据成员||  
-|float\_4::ywx 数据成员||  
-|float\_4::ywxz 数据成员||  
-|float\_4::ywz 数据成员||  
-|float\_4::ywzx 数据成员||  
-|float\_4::yx 数据成员||  
-|float\_4::yxw 数据成员||  
-|float\_4::yxw 数据成员||  
-|float\_4::yxz 数据成员||  
-|float\_4::yxzw 数据成员||  
-|float\_4::yz 数据成员||  
-|float\_4::yzw 数据成员||  
-|float\_4::yzwx 数据成员||  
-|float\_4::yzx 数据成员||  
-|float\_4::yzxw 数据成员||  
-|float\_4::z 常数数据成员。||  
-|float\_4::zw 数据成员||  
-|float\_4::zwx 数据成员||  
-|float\_4::zwxy 数据成员||  
-|float\_4::zwy 数据成员||  
-|float\_4::zwyx 数据成员||  
-|float\_4::zx 数据成员||  
-|float\_4::zxw 数据成员||  
-|float\_4::zxwy 数据成员||  
-|float\_4::zxy 数据成员||  
-|float\_4::zxyw 数据成员||  
-|float\_4::zy 数据成员||  
-|float\_4::zyw 数据成员||  
-|float\_4::zywx 数据成员||  
-|float\_4::zyx 数据成员||  
-|float\_4::zyxw 数据成员||  
+|----------|-----------------|  
+|float_4::a 数据成员||  
+|float_4::ab 数据成员||  
+|float_4::abg 数据成员||  
+|float_4::abgr 数据成员||  
+|float_4::abr 数据成员||  
+|float_4::abrg 数据成员||  
+|float_4::ag 数据成员||  
+|float_4::agb 数据成员||  
+|float_4::agbr 数据成员||  
+|float_4::agr 数据成员||  
+|float_4::agrb 数据成员||  
+|float_4::ar 数据成员||  
+|float_4::arb 数据成员||  
+|float_4::arbg 数据成员||  
+|float_4::arg 数据成员||  
+|float_4::argb 数据成员||  
+|float_4::b 数据成员||  
+|float_4::ba 数据成员||  
+|float_4::bag 数据成员||  
+|float_4::bagr 数据成员||  
+|float_4::bar 数据成员||  
+|float_4::barg 数据成员||  
+|float_4::bg 数据成员||  
+|float_4::bga 数据成员||  
+|float_4::bgar 数据成员||  
+|float_4::bgr 数据成员||  
+|float_4::bgra 数据成员||  
+|float_4::br 数据成员||  
+|float_4::bra 数据成员||  
+|float_4::brag 数据成员||  
+|float_4::brg 数据成员||  
+|float_4::brga 数据成员||  
+|float_4::g 数据成员||  
+|float_4::ga 数据成员||  
+|float_4::gab 数据成员||  
+|float_4::gabr 数据成员||  
+|float_4::gar 数据成员||  
+|float_4::garb 数据成员||  
+|float_4::gb 数据成员||  
+|float_4::gba 数据成员||  
+|float_4::gbar 数据成员||  
+|float_4::gbr 数据成员||  
+|float_4::gbra 数据成员||  
+|float_4::gr 数据成员||  
+|float_4::gra 数据成员||  
+|float_4::grab 数据成员||  
+|float_4::grb 数据成员||  
+|float_4::grba 数据成员||  
+|float_4::r 数据成员||  
+|float_4::ra 数据成员||  
+|float_4::rab 数据成员||  
+|float_4::rabg 数据成员||  
+|float_4::rag 数据成员||  
+|float_4::ragb 数据成员||  
+|float_4::rb 数据成员||  
+|float_4::rba 数据成员||  
+|float_4::rbag 数据成员||  
+|float_4::rbg 数据成员||  
+|float_4::rbga 数据成员||  
+|float_4::rg 数据成员||  
+|float_4::rga 数据成员||  
+|float_4::rgab 数据成员||  
+|float_4::rgb 数据成员||  
+|float_4::rgba 数据成员||  
+|float_4::w 数据成员||  
+|float_4::wx 数据成员||  
+|float_4::wxy 数据成员||  
+|float_4::wxyz 数据成员||  
+|float_4::wxz 数据成员||  
+|float_4::wxzy 数据成员||  
+|float_4::wy 数据成员||  
+|float_4::wyx 数据成员||  
+|float_4::wyxz 数据成员||  
+|float_4::wyz 数据成员||  
+|float_4::wyzx 数据成员||  
+|float_4::wz 数据成员||  
+|float_4::wzx 数据成员||  
+|float_4::wzxy 数据成员||  
+|float_4::wzy 数据成员||  
+|float_4::wzyx 数据成员||  
+|float_4::x 数据成员||  
+|float_4::xw 数据成员||  
+|float_4::xwy 数据成员||  
+|float_4::xwyz 数据成员||  
+|float_4::xwz 数据成员||  
+|float_4::xwzy 数据成员||  
+|float_4::xy 数据成员||  
+|float_4::xyw 数据成员||  
+|float_4::xywz 数据成员||  
+|float_4::xyz 数据成员||  
+|float_4::xyzw 数据成员||  
+|float_4::xz 数据成员||  
+|float_4::xzw 数据成员||  
+|float_4::xzwy 数据成员||  
+|float_4::xzy 数据成员||  
+|float_4::xzyw 数据成员||  
+|float_4::y 数据成员||  
+|float_4::yw 数据成员||  
+|float_4::ywx 数据成员||  
+|float_4::ywxz 数据成员||  
+|float_4::ywz 数据成员||  
+|float_4::ywzx 数据成员||  
+|float_4::yx 数据成员||  
+|float_4::yxw 数据成员||  
+|float_4::yxwz 数据成员||  
+|float_4::yxz 数据成员||  
+|float_4::yxzw 数据成员||  
+|float_4::yz 数据成员||  
+|float_4::yzw 数据成员||  
+|float_4::yzwx 数据成员||  
+|float_4::yzx 数据成员||  
+|float_4::yzxw 数据成员||  
+|float_4::z 数据成员||  
+|float_4::zw 数据成员||  
+|float_4::zwx 数据成员||  
+|float_4::zwxy 数据成员||  
+|float_4::zwy 数据成员||  
+|float_4::zwyx 数据成员||  
+|float_4::zx 数据成员||  
+|float_4::zxw 数据成员||  
+|float_4::zxwy 数据成员||  
+|float_4::zxy 数据成员||  
+|float_4::zxyw 数据成员||  
+|float_4::zy 数据成员||  
+|float_4::zyw 数据成员||  
+|float_4::zywx 数据成员||  
+|float_4::zyx 数据成员||  
+|float_4::zyxw 数据成员||  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `float_4`  
   
-## 要求  
- **页眉：**amp\_short\_vectors.h  
+## <a name="requirements"></a>要求  
+ **标头︰** amp_short_vectors.h  
   
- **命名空间：**Concurrency::graphics  
+ **Namespace:** concurrency:: graphics  
   
-## 请参阅  
- [Concurrency::graphics 命名空间](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-float4"></a><a name="ctor"></a>float_4 
+
+ 默认构造函数，将初始化为 0 的所有元素。  
+  
+```  
+float_4() restrict(amp,
+    cpu);
+
+ 
+float_4(
+    float _V0,  
+    float _V1,  
+    float _V2,  
+    float _V3) restrict(amp,
+    cpu);
+
+ 
+float_4(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+float_4(
+    const float_4& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_4(
+    const uint_4& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_4(
+    const int_4& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_4(
+    const unorm_4& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_4(
+    const norm_4& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline float_4(
+    const double_4& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_V0`  
+ 要初始化元素 0 的值。  
+  
+ `_V1`  
+ 要初始化元素 1 的值。  
+  
+ `_V2`  
+ 要初始化元素 2 的值。  
+  
+ `_V3`  
+ 要初始化元素 3 的值。  
+  
+ `_V`  
+ 用于初始化值。  
+  
+ `_Other`  
+ 用于初始化的对象。  
+  
+##  <a name="a-namefloat4sizea-size"></a><a name="float_4__size"></a>大小 
+
+```  
+static const int size = 4;  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+

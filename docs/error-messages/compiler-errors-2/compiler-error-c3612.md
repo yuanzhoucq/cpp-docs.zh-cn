@@ -1,36 +1,53 @@
 ---
-title: "编译器错误 C3612 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3612"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3612"
+title: "编译器错误 C3612 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3612
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 编译器错误 C3612
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: fa36c033cf311538e1d77ce37b2d3e4a3936b7d7
+ms.lasthandoff: 02/24/2017
 
-“type”: 密封类不能是抽象的  
+---
+# <a name="compiler-error-c3612"></a>编译器错误 C3612
+type︰ 一个密封的类不能是抽象  
   
- 默认情况下使用 `value`（或 [\_\_value](../../misc/value.md)）定义的类型为密封类型，并且类在实现其基类的所有方法之前为抽象类。  密封的抽象类既不可以是基类，也不可被实例化。  
+通过使用定义的类型`value`默认情况下，都密封的而类是抽象，除非它实现了其基类的所有方法。 密封的抽象类可以既不是一个基类，也可以将它实例化。  
   
- 有关详细信息，请参阅[类和结构 \(托管\)](../../windows/classes-and-structs-cpp-component-extensions.md)。  
+有关详细信息，请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)。  
   
- 下面的示例生成 C3612：  
+## <a name="example"></a>示例  
+下面的示例生成 C3612:  
   
 ```  
 // C3612.cpp  

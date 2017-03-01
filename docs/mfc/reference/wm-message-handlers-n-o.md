@@ -1,88 +1,106 @@
 ---
-title: "WM_ 消息处理程序：N - O | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_WM_NCHITTEST"
-  - "ON_WM_NCLBUTTONDOWN"
-  - "ON_WM_NCCALCSIZE"
-  - "ON_WM_NCLBUTTONUP"
-  - "ON_WM_NCPAINT"
-  - "ON_WM_NCMBUTTONUP"
-  - "ON_WM_NCCREATE"
-  - "ON_WM_NCACTIVATE"
-  - "ON_WM_NCMOUSEMOVE"
-  - "ON_WM_NCRBUTTONDBLCLK"
-  - "ON_WM_NCLBUTTONDBLCLK"
-  - "ON_WM_NCDESTROY"
-  - "ON_WM_NCMBUTTONDBLCLK"
-  - "ON_WM_NCRBUTTONDOWN"
-  - "ON_WM_NCRBUTTONUP"
-  - "ON_WM_NCMBUTTONDOWN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ON_WM_NCACTIVATE"
-  - "ON_WM_NCCALCSIZE"
-  - "ON_WM_NCCREATE"
-  - "ON_WM_NCDESTROY"
-  - "ON_WM_NCHITTEST"
-  - "ON_WM_NCLBUTTONDBLCLK"
-  - "ON_WM_NCLBUTTONDOWN"
-  - "ON_WM_NCLBUTTONUP"
-  - "ON_WM_NCMBUTTONDBLCLK"
-  - "ON_WM_NCMBUTTONDOWN"
-  - "ON_WM_NCMBUTTONUP"
-  - "ON_WM_NCMOUSEMOVE"
-  - "ON_WM_NCPAINT"
-  - "ON_WM_NCRBUTTONDBLCLK"
-  - "ON_WM_NCRBUTTONDOWN"
-  - "ON_WM_NCRBUTTONUP"
-  - "WM_ 消息"
+title: "WM_ 消息处理程序︰ N-O |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_WM_NCHITTEST
+- ON_WM_NCLBUTTONDOWN
+- ON_WM_NCCALCSIZE
+- ON_WM_NCLBUTTONUP
+- ON_WM_NCPAINT
+- ON_WM_NCMBUTTONUP
+- ON_WM_NCCREATE
+- ON_WM_NCACTIVATE
+- ON_WM_NCMOUSEMOVE
+- ON_WM_NCRBUTTONDBLCLK
+- ON_WM_NCLBUTTONDBLCLK
+- ON_WM_NCDESTROY
+- ON_WM_NCMBUTTONDBLCLK
+- ON_WM_NCRBUTTONDOWN
+- ON_WM_NCRBUTTONUP
+- ON_WM_NCMBUTTONDOWN
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_WM_NCCALCSIZE
+- ON_WM_NCMBUTTONDOWN
+- ON_WM_NCRBUTTONDBLCLK
+- ON_WM_NCMBUTTONDBLCLK
+- ON_WM_NCLBUTTONDBLCLK
+- ON_WM_NCDESTROY
+- ON_WM_NCRBUTTONDOWN
+- ON_WM_NCLBUTTONDOWN
+- ON_WM_NCCREATE
+- ON_WM_NCRBUTTONUP
+- ON_WM_NCLBUTTONUP
+- ON_WM_NCPAINT
+- ON_WM_NCACTIVATE
+- ON_WM_NCHITTEST
+- ON_WM_NCMOUSEMOVE
+- ON_WM_NCMBUTTONUP
+- WM_ messages
 ms.assetid: 4efd1cda-b642-4e8b-89e8-73255fa70d77
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# WM_ 消息处理程序：N - O
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: f1e2a3a42c105e5f0e6d0fca714c5cd4d1216f2f
+ms.lasthandoff: 02/24/2017
 
-左侧下图的映射条目对应于右侧的函数原型：  
+---
+# <a name="wm-message-handlers-n---o"></a>WM_ 消息处理程序：N - O
+下面左侧的映射条目对应于右侧的函数原型：  
   
-|映射项|函数原型|  
-|---------|----------|  
-|ON\_WM\_NCACTIVATE\(\)|afx\_msg BOOL BOOL \( [OnNcActivate](../Topic/CWnd::OnNcActivate.md)\);|  
-|ON\_WM\_NCCALCSIZE\(\)|[OnNcCalcSize](../Topic/CWnd::OnNcCalcSize.md)afx\_msg 无效 \(NCCALCSIZE\_PARAMS BOOL，FAR\*\);|  
-|ON\_WM\_NCCREATE\(\)|afx\_msg BOOL [OnNcCreate](../Topic/CWnd::OnNcCreate.md)\(LPCREATESTRUCT\);|  
-|ON\_WM\_NCDESTROY\(\)|afx\_msg void [OnNcDestroy](../Topic/CWnd::OnNcDestroy.md)\(\);|  
-|ON\_WM\_NCHITTEST\(\)|afx\_msg LRESULT [OnNcHitTest](../Topic/CWnd::OnNcHitTest.md)\(CPoint\);|  
-|ON\_WM\_NCLBUTTONDBLCLK\(\)|[OnNcLButtonDblClk](../Topic/CWnd::OnNcLButtonDblClk.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCLBUTTONDOWN\(\)|[OnNcLButtonDown](../Topic/CWnd::OnNcLButtonDown.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCLBUTTONUP\(\)|[OnNcLButtonUp](../Topic/CWnd::OnNcLButtonUp.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCMBUTTONDBLCLK\(\)|[OnNcLButtonDblClk](../Topic/CWnd::OnNcMButtonDblClk.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCMBUTTONDOWN\(\)|[OnNcLButtonDown](../Topic/CWnd::OnNcMButtonDown.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCMBUTTONUP\(\)|[OnNcLButtonUp](../Topic/CWnd::OnNcMButtonUp.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCMOUSEHOVER\(\)|[OnNcMouseHover](../Topic/CWnd::OnNcMouseHover.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCMOUSELEAVE\(\)|afx\_msg 无效 \(\); [OnNcMouseLeave](../Topic/CWnd::OnNcMouseLeave.md)|  
-|ON\_WM\_NCMOUSEMOVE\(\)|[OnNcMouseMove](../Topic/CWnd::OnNcMouseMove.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCPAINT\(\)|afx\_msg 无效 \(\); [OnNcPaint](../Topic/CWnd::OnNcPaint.md)|  
-|ON\_WM\_NCRBUTTONDBLCLK\(\)|[OnNcLButtonDblClk](../Topic/CWnd::OnNcRButtonDblClk.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCRBUTTONDOWN\(\)|[OnNcLButtonDown](../Topic/CWnd::OnNcRButtonDown.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCRBUTTONUP\(\)|[OnNcLButtonUp](../Topic/CWnd::OnNcRButtonUp.md)afx\_msg 无效 \(UINT，CPoint\);|  
-|ON\_WM\_NCLBUTTONDBLCLK\(\)|无效 [OnNcXButtonDblClk](../Topic/CWnd::OnNcXButtonDblClk.md)\(短，UINT，CPoint\);|  
-|ON\_WM\_NCLBUTTONDOWN\(\)|无效 afx\_msg [OnNcXButtonDown](../Topic/CWnd::OnNcXButtonDown.md)\(短，UINT，CPoint\);|  
-|ON\_WM\_NCLBUTTONUP\(\)|无效 afx\_msg [OnNcXButtonUp](../Topic/CWnd::OnNcXButtonUp.md)\(短，UINT，CPoint\);|  
-|ON\_WM\_NEXTMENU\(\)|[OnNextMenu](../Topic/CWnd::OnNextMenu.md)afx\_msg 无效 \(UINT，LPMDINEXTMENU\);|  
-|ON\_WM\_NOTIFYFORMAT\(\)|afx\_msg UINT [OnNotifyFormat](../Topic/CWnd::OnNotifyFormat.md)\(CWnd\*，UINT\);|  
+|映射条目|函数原型|  
+|---------------|------------------------|  
+|ON_WM_NCACTIVATE()|afx_msg BOOL [OnNcActivate](../../mfc/reference/cwnd-class.md#onncactivate)(BOOL);|  
+|ON_WM_NCCALCSIZE()|afx_msg void [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)（BOOL、 NCCALCSIZE_PARAMS 远处 *）|  
+|ON_WM_NCCREATE()|afx_msg BOOL [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)(LPCREATESTRUCT);|  
+|ON_WM_NCDESTROY()|afx_msg void [OnNcDestroy](../../mfc/reference/cwnd-class.md#onncdestroy)（);|  
+|ON_WM_NCHITTEST()|afx_msg LRESULT [OnNcHitTest](../../mfc/reference/cwnd-class.md#onnchittest)(CPoint);|  
+|ON_WM_NCLBUTTONDBLCLK()|afx_msg void [OnNcLButtonDblClk](../../mfc/reference/cwnd-class.md#onnclbuttondblclk)（UINT、 CPoint）|  
+|ON_WM_NCLBUTTONDOWN()|afx_msg void [OnNcLButtonDown](../../mfc/reference/cwnd-class.md#onnclbuttondown)（UINT、 CPoint）|  
+|ON_WM_NCLBUTTONUP()|afx_msg void [OnNcLButtonUp](../../mfc/reference/cwnd-class.md#onnclbuttonup)（UINT、 CPoint）|  
+|ON_WM_NCMBUTTONDBLCLK()|afx_msg void [OnNcMButtonDblClk](../../mfc/reference/cwnd-class.md#onncmbuttondblclk)（UINT、 CPoint）|  
+|ON_WM_NCMBUTTONDOWN()|afx_msg void [OnNcMButtonDown](../../mfc/reference/cwnd-class.md#onncmbuttondown)（UINT、 CPoint）|  
+|ON_WM_NCMBUTTONUP()|afx_msg void [OnNcMButtonUp](../../mfc/reference/cwnd-class.md#onncmbuttonup)（UINT、 CPoint）|  
+|ON_WM_NCMOUSEHOVER()|afx_msg void [OnNcMouseHover](../../mfc/reference/cwnd-class.md#onncmousehover)（UINT、 CPoint）|  
+|ON_WM_NCMOUSELEAVE()|afx_msg void [OnNcMouseLeave](../../mfc/reference/cwnd-class.md#onncmouseleave)（);|  
+|ON_WM_NCMOUSEMOVE()|afx_msg void [OnNcMouseMove](../../mfc/reference/cwnd-class.md#onncmousemove)（UINT、 CPoint）|  
+|ON_WM_NCPAINT()|afx_msg void [OnNcPaint](../../mfc/reference/cwnd-class.md#onncpaint)（);|  
+|ON_WM_NCRBUTTONDBLCLK()|afx_msg void [OnNcRButtonDblClk](../../mfc/reference/cwnd-class.md#onncrbuttondblclk)（UINT、 CPoint）|  
+|ON_WM_NCRBUTTONDOWN()|afx_msg void [OnNcRButtonDown](../../mfc/reference/cwnd-class.md#onncrbuttondown)（UINT、 CPoint）|  
+|ON_WM_NCRBUTTONUP()|afx_msg void [OnNcRButtonUp](../../mfc/reference/cwnd-class.md#onncrbuttonup)（UINT、 CPoint）|  
+|ON_WM_NCXBUTTONDBLCLK()|void [OnNcXButtonDblClk](../../mfc/reference/cwnd-class.md#onncxbuttondblclk)(short，UINT、 CPoint);|  
+|ON_WM_NCXBUTTONDOWN()|afx_msg void [OnNcXButtonDown](../../mfc/reference/cwnd-class.md#onncxbuttondown)(short，UINT、 CPoint);|  
+|ON_WM_NCXBUTTONUP()|afx_msg void [OnNcXButtonUp](../../mfc/reference/cwnd-class.md#onncxbuttonup)(short，UINT、 CPoint);|  
+|ON_WM_NEXTMENU()|afx_msg void [OnNextMenu](../../mfc/reference/cwnd-class.md#onnextmenu)（UINT、 LPMDINEXTMENU）|  
+|ON_WM_NOTIFYFORMAT()|afx_msg UINT [OnNotifyFormat](../../mfc/reference/cwnd-class.md#onnotifyformat)CWnd * (UINT）;|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [消息映射](../../mfc/reference/message-maps-mfc.md)   
- [WM\_ 消息的处理程序](../../mfc/reference/handlers-for-wm-messages.md)
+ [WM_ 消息处理程序](../../mfc/reference/handlers-for-wm-messages.md)
+
+

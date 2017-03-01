@@ -1,64 +1,80 @@
 ---
-title: "COleResizeBar Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "COleResizeBar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COleResizeBar class"
-  - "control bars, 调整大小"
-  - "in-place items"
-  - "in-place items, 调整大小"
-  - "OLE items, 调整大小"
-  - "resizing in-place OLE items"
+title: "COleResizeBar 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- COleResizeBar
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE items, resizing
+- in-place items
+- in-place items, resizing
+- resizing in-place OLE items
+- control bars, resizing
+- COleResizeBar class
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# COleResizeBar Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 99ba53c771d018b8c69c5951703b9d6f7b4afe9b
+ms.lasthandoff: 02/24/2017
 
-的控件条的类型支持调整就地OLE项。  
+---
+# <a name="coleresizebar-class"></a>COleResizeBar 类
+支持调整现有 OLE 项的控件条类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class COleResizeBar : public CControlBar  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
-  
-|名称|说明|  
-|--------|--------|  
-|[COleResizeBar::COleResizeBar](../Topic/COleResizeBar::COleResizeBar.md)|构造 `COleResizeBar` 对象。|  
-  
-### 公共方法  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
-|[COleResizeBar::Create](../Topic/COleResizeBar::Create.md)|创建和初始化一Windows子窗口并将它设置为 `COleResizeBar` 对象。|  
+|----------|-----------------|  
+|[COleResizeBar::COleResizeBar](#coleresizebar)|构造 `COleResizeBar` 对象。|  
   
-## 备注  
- 在使用一个阴影框的 [CRectTracker](../../mfc/reference/crecttracker-class.md) 和外部大小调整句柄，`COleResizeBar` 对象显示。  
+### <a name="public-methods"></a>公共方法  
   
- `COleResizeBar` 对象通常是框架窗口对象的嵌入成员从 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) 选件类派生的。  
+|名称|说明|  
+|----------|-----------------|  
+|[COleResizeBar::Create](#create)|创建和初始化 Windows 子窗口，并将关联到`COleResizeBar`对象。|  
   
- 有关更多信息，请参见文章 [启动](../../mfc/activation-cpp.md)。  
+## <a name="remarks"></a>备注  
+ `COleResizeBar`对象显示为[CRectTracker](../../mfc/reference/crecttracker-class.md)具有阴影边框和外部调整大小图柄。  
   
-## 继承层次结构  
+ `COleResizeBar`对象是从派生的框架窗口对象的通常嵌入的成员[COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类。  
+  
+ 有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)。  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -69,11 +85,45 @@ class COleResizeBar : public CControlBar
   
  `COleResizeBar`  
   
-## 要求  
- **Header:** afxole.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxole.h  
   
-## 请参阅  
- [MFC示例SUPERPAD](../../top/visual-cpp-samples.md)   
- [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+##  <a name="a-namecoleresizebara--coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+ 构造 `COleResizeBar` 对象。  
+  
+```  
+COleResizeBar();
+```  
+  
+### <a name="remarks"></a>备注  
+ 调用**创建**创建重设大小条对象。  
+  
+##  <a name="a-namecreatea--coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Create  
+ 创建一个子窗口，并将其与关联`COleResizeBar`对象。  
+  
+```  
+virtual BOOL Create(
+    CWnd* pParentWnd,  
+    DWORD dwStyle = WS_CHILD | WS_VISIBLE,  
+    UINT nID = AFX_IDW_RESIZE_BAR);
+```  
+  
+### <a name="parameters"></a>参数  
+ `pParentWnd`  
+ 调整大小条的父级窗口的指针。  
+  
+ `dwStyle`  
+ 指定[窗口样式](../../mfc/reference/window-styles.md)属性。  
+  
+ `nID`  
+ 调整大小条子窗口 id。  
+  
+### <a name="return-value"></a>返回值  
+ 调整大小条; 如果已为非零否则为 0。  
+  
+## <a name="see-also"></a>另请参阅  
+ [MFC 示例 SUPERPAD](../../visual-cpp-samples.md)   
+ [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleServerDoc Class](../../mfc/reference/coleserverdoc-class.md)
+ [COleServerDoc 类](../../mfc/reference/coleserverdoc-class.md)
+

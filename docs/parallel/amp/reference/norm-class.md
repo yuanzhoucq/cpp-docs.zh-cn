@@ -1,64 +1,129 @@
 ---
-title: "norm 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::norm"
-dev_langs: 
-  - "C++"
+title: "norm 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::norm
+dev_langs:
+- C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# norm 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 8ff5a99136a75d17d914783496205f1dd1eb4a06
+ms.lasthandoff: 02/24/2017
 
-表示一个规范数。  每个元素都是\[\- 1.0f，1.0f\]范围内的浮点数字。  
+---
+# <a name="norm-class"></a>norm 类
+表示范数。 每个元素是一个浮点数，范围内的 [-1.0 f、 1.0 f]。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class norm;  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
-  
-|名称|说明|  
-|--------|--------|  
-|[norm::norm 构造函数](../Topic/norm::norm%20Constructor.md)|已重载。  默认构造函数。  初始化为 0.0f。|  
-  
-### 公共运算符  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
-|规范：运算符\-运算符||  
-|规范:：运算符\-\-运算符||  
-|规范：操作符 浮点运算符|转换运算符  规范数转换为浮点值。|  
-|规范：操作符\*\-运算符||  
-|规范：操作符\/\=运算符||  
-|规范：操作符\+\+运算符||  
-|规范：操作符\+\=运算符||  
-|规范：操作符\=运算符||  
-|规范：操作符\-\=运算符||  
+|----------|-----------------|  
+|[norm 构造函数](#ctor)|已重载。 默认构造函数。 初始化为 0.0f。|  
   
-## 继承层次结构  
+### <a name="public-operators"></a>公共运算符  
+  
+|名称|描述|  
+|----------|-----------------|  
+|norm::operator 运算符||  
+|norm::operator-运算符||  
+|norm::operator float 运算符|转换运算符。 将标准数字转换为浮点值。|  
+|norm::operator * = 运算符||  
+|norm::operator / = 运算符||  
+|norm::operator + + 运算符||  
+|norm::operator + = 运算符||  
+|norm::operator = 运算符||  
+|norm::operator-= 运算符||  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `norm`  
   
-## 要求  
- **页眉：**amp\_short\_vectors.h  
+## <a name="requirements"></a>要求  
+ **标头︰** amp_short_vectors.h  
   
- **命名空间：**Concurrency::graphics  
+ **Namespace:** concurrency:: graphics  
   
-## 请参阅  
- [Concurrency::graphics 命名空间](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-norm"></a><a name="ctor"></a>norm 
+
+ 默认构造函数。 初始化为 0.0f。  
+  
+```  
+norm(
+    void) restrict(amp,
+    cpu);
+
+ 
+explicit norm(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+explicit norm(
+    unsigned int _V) restrict(amp,
+    cpu);
+
+ 
+explicit norm(
+    int _V) restrict(amp,
+    cpu);
+
+ 
+explicit norm(
+    double _V) restrict(amp,
+    cpu);
+
+ 
+norm(
+    const norm& _Other) restrict(amp,
+    cpu);
+
+ 
+norm(
+    const unorm& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_V`  
+ 用来初始化的值。  
+  
+ `_Other`  
+ 用于初始化的对象。  
+  
+## <a name="see-also"></a>另请参阅  
+ [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+

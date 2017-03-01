@@ -1,34 +1,51 @@
 ---
-title: "编译器错误 C3830 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3830"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3830"
+title: "编译器错误 C3830 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3830
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3830
 ms.assetid: c9798f88-5001-4067-9fb1-09957ddc6fa8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3830
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 970a3f032ac367ec24cb5b036e3f3723732da754
+ms.lasthandoff: 02/24/2017
 
-“type1”: 无法从“type2”继承，值类型只能从接口类继承  
+---
+# <a name="compiler-error-c3830"></a>编译器错误 C3830
+type1︰ 不能从 type2，值类型只能继承自接口的类继承  
   
- 值类型不能继承基类。有关详细信息，请参阅[类和结构 \(托管\)](../../windows/classes-and-structs-cpp-component-extensions.md)。  
+ 值类型不能继承的基类。  有关详细信息，请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md)。  
   
- 下面的示例生成 C3830：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C3830:  
   
 ```  
 // C3830a.cpp  
@@ -49,17 +66,4 @@ public:
    virtual void i(){}  
 };  
 ```  
-  
- **C\+\+ 托管扩展**  
-  
- `__value` 类型不能继承基类。  
-  
- 下面的示例生成 C3830：  
-  
-```  
-// C3830b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-__value struct v : public System::Object {};   // C3830  
-__value struct w {};   // OK  
-```
+

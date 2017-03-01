@@ -1,97 +1,238 @@
 ---
-title: "CSmartDockingInfo Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CSmartDockingInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSmartDockingInfo class"
+title: "CSmartDockingInfo 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CSmartDockingInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSmartDockingInfo class
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
 caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# CSmartDockingInfo Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 9ae735b202299d26b98ec763f65c3f8772d9b914
+ms.lasthandoff: 02/24/2017
 
-定义智能标记停靠外观。  
+---
+# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 类
+定义智能停靠标记的外观。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CSmartDockingInfo : public CObject  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
+|----------|-----------------|  
 |`CSmartDockingInfo::CSmartDockingInfo`|默认构造函数。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[CSmartDockingInfo::CopyTo](../Topic/CSmartDockingInfo::CopyTo.md)|复制当前智能停靠的信息参数到提供的 [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) 对象。|  
+|----------|-----------------|  
+|[CSmartDockingInfo::CopyTo](#copyto)|将当前智能停靠信息参数复制到提供[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)对象。|  
   
-### 数据成员  
+### <a name="data-members"></a>数据成员  
   
-|名称|说明|  
-|--------|--------|  
-|[CSmartDockingInfo::m\_bUseThemeColorInShading](../Topic/CSmartDockingInfo::m_bUseThemeColorInShading.md)|指定是否使用当前主题颜色框架时显示智能标记停靠。|  
-|[CSmartDockingInfo::m\_clrBaseBackground](../Topic/CSmartDockingInfo::m_clrBaseBackground.md)|指定智能标记停靠的基本背景色。|  
-|[CSmartDockingInfo::m\_clrToneDest](../Topic/CSmartDockingInfo::m_clrToneDest.md)|指定替换在智能标记停靠位图的 `m_clrToneSrc` 的颜色。|  
-|[CSmartDockingInfo::m\_clrToneSrc](../Topic/CSmartDockingInfo::m_clrToneSrc.md)|指定智能标记停靠位图的颜色。|  
-|[CSmartDockingInfo::m\_clrTransparent](../Topic/CSmartDockingInfo::m_clrTransparent.md)|但透明时，指定智能标记停靠位图的颜色。|  
-|[CSmartDockingInfo::m\_nCentralGroupOffset](../Topic/CSmartDockingInfo::m_nCentralGroupOffset.md)|指定智能标记停靠的中心组的偏移量中心组矩形的边界。|  
-|[CSmartDockingInfo::m\_sizeTotal](../Topic/CSmartDockingInfo::m_sizeTotal.md)|在组中指定所有智能标记停靠的总大小。|  
-|[CSmartDockingInfo::m\_uiMarkerBmpResID](../Topic/CSmartDockingInfo::m_uiMarkerBmpResID.md)|定义框架为智能标记停靠使用未显示位图的资源ID。|  
-|[CSmartDockingInfo::m\_uiMarkerLightBmpResID](../Topic/CSmartDockingInfo::m_uiMarkerLightBmpResID.md)|定义框架为智能标记停靠使用显示位图的资源ID。|  
+|名称|描述|  
+|----------|-----------------|  
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|指定是否使用当前的主题颜色时，框架显示智能停靠标记。|  
+|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|指定智能停靠标记的基本的背景的色。|  
+|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|指定将替换的颜色`m_clrToneSrc`智能停靠标记位图中。|  
+|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|指定的智能停靠标记位图的颜色。|  
+|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|指定的智能停靠标记位图的颜色时是透明的。|  
+|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|指定从中心小组矩形的边界的智能停靠标记的中央组偏移量。|  
+|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|指定组中的所有智能停靠标记的总大小。|  
+|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|定义的框架用于不突出显示的智能停靠标记的位图的资源 Id。|  
+|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|定义的框架用于智能停靠标记突出显示的位图的资源 Id。|  
   
-## 备注  
- 内部结构处理智能标记停靠。  下图显示了标准智能标记:停靠  
+## <a name="remarks"></a>备注  
+ Framework 句柄的内部智能停靠标记。 下图显示标准智能停靠标记︰  
   
- ![标准智能停靠标记](../../mfc/reference/media/nextsdmarkers.png "nextSDmarkers")  
+ ![标准智能停靠标记](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
   
- 在此图中，图像在左侧显示没有停靠到启用的选项的中央组智能标记停靠。  图像将在中间显示一个右边缘智能标记停靠。  在右侧图像显示具有停靠到启用的选项的中央组智能标记停靠。  中心组智能标记停靠有一个母版位图和五个智能标记停靠位图。  
+ 在此图中，在左侧的图像显示不具有停靠到启用了选项卡上的中央组智能停靠标记。 在中间的图像显示右边缘的智能停靠标记。 在右侧的图像显示停靠到启用了一个选项卡具有一个中央组智能停靠标记。 中央组智能停靠标记有一个主位图和五个智能停靠标记位图。  
   
- 您可以自定义智能标记停靠的以下参数:  
+ 您可以自定义智能停靠标记的以下参数︰  
   
--   颜色。  例如，您可以将任何用户定义的颜色替换标记的蓝色在该图中的。  
+-   颜色。 例如，您可以使用任何用户定义的颜色替换在图中标记的蓝色颜色。  
   
 -   透明度颜色。  
   
--   一种的停靠标记的偏移量在中心组中从边框的边框。  
+-   从边框的边框的中央的组中的智能停靠标记的偏移量。  
   
--   委托中心组的主要位图。  
+-   用于表示中央组的主位图。  
   
--   表示规则和显示的智能标记停靠的位图。  
+-   表示正则和突出显示的位图智能停靠标记。  
   
- 下图显示自定义智能标记停靠的示例:  
+ 下图显示具有自定义智能停靠标记的示例︰  
   
- ![自定义智能停靠标记](../../mfc/reference/media/nextsdmarkerscustom.png "nextSDmarkersCustom")  
+ ![自定义智能停靠标记](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## 要求  
- **标头:** afxDockingManager.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxDockingManager.h  
   
-## 请参阅  
+##  <a name="a-namecopytoa--csmartdockinginfocopyto"></a><a name="copyto"></a>CSmartDockingInfo::CopyTo  
+ 将当前智能停靠参数复制到提供[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)对象。  
+  
+```  
+void CopyTo(CSmartDockingInfo& params);
+```  
+  
+### <a name="parameters"></a>参数  
+ [out] `params`  
+ 类型的对象`CSmartDockingInfo`并且填充了当前智能停靠参数。  
+  
+##  <a name="a-namembusethemecolorinshadinga--csmartdockinginfombusethemecolorinshading"></a><a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+ 指定是否使用当前的主题颜色时，框架显示智能停靠标记。  
+  
+```  
+BOOL m_bUseThemeColorInShading;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果`TRUE`，标记使用当前的主题颜色绘制; 否则使用一种淡蓝色颜色绘制标记。  
+  
+ 默认值为 `FALSE`。  
+  
+##  <a name="a-namemclrbasebackgrounda--csmartdockinginfomclrbasebackground"></a><a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+ 指定智能停靠标记的基本的背景的色。  
+  
+```  
+COLORREF m_clrBaseBackground;  
+```  
+  
+##  <a name="a-namemclrtonedesta--csmartdockinginfomclrtonedest"></a><a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+ 指定将替换的颜色`m_clrToneSrc`智能停靠标记位图中。  
+  
+```  
+COLORREF m_clrToneDest;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 设置此值以编程方式更改标记位图的颜色。 例如，如果您想要更改的颜色随该框架提供的标准标记，将此值设置为所需的颜色。 默认情况下， [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)设置为 RGB （61、 123、 241） （略带蓝色颜色）。  
+  
+ 若要更改自定义标记的颜色，您必须同时指定`m_clrToneDest`和`m_clrToneSrc`。  
+  
+##  <a name="a-namemclrtonesrca--csmartdockinginfomclrtonesrc"></a><a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+ 指定的智能停靠标记位图的颜色。  
+  
+```  
+COLORREF m_clrToneSrc;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 仅当你想要将自定义位图的颜色替换为另一种颜色时，才设置此值。 不需要设置此值，如果您要更改一种标准 （框架提供） 的颜色标记。  
+  
+ 使用`(COLORREF)-1`将智能停靠组的成员保留为空。  
+  
+##  <a name="a-namemclrtransparenta--csmartdockinginfomclrtransparent"></a><a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+ 指定的智能停靠标记位图的颜色时是透明的。  
+  
+```  
+COLORREF m_clrTransparent;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 在停靠组中显示自定义标记和自定义位图时，必须设置此值。  
+  
+##  <a name="a-namemncentralgroupoffseta--csmartdockinginfomncentralgroupoffset"></a><a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+ 指定中央智能停靠标记的组和中央组合矩形的边界之间的偏移量。  
+  
+```  
+int m_nCentralGroupOffset;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果您想要更改自定义标记和中央智能停靠标记的组的边界之间的默认偏移量，请指定此值。 默认偏移量为 5 个像素。  
+  
+##  <a name="a-namemsizetotala--csmartdockinginfomsizetotal"></a><a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+ 指定将在中央组包含所有智能停靠标记的边框的总大小。  
+  
+```  
+CSize m_sizeTotal;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 设置`m_sizeTotal`到中央组标记的边框的大小。 您需要指定此值，如果您正在使用的自定义位图标记。  
+  
+##  <a name="a-namemuimarkerbmpresida--csmartdockinginfomuimarkerbmpresid"></a><a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+ 定义的用于非突出显示自定义智能停靠标记的位图的资源 Id。  
+  
+```  
+UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];  
+```  
+  
+### <a name="remarks"></a>备注  
+ 使用的资源 Id 表示智能停靠标记的位图来填充此数组。 `AFX_SD_MARKERS_NUM`当前定义为 5。 如下所示填充数组︰  
+  
+ `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
+  
+ `params.m_uiMarkerBmpResID[1] = IDB_MARKER_RIGHT;`  
+  
+ `params.m_uiMarkerBmpResID[2] = IDB_MARKER_TOP;`  
+  
+ `params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;`  
+  
+ `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
+  
+##  <a name="a-namemuimarkerlightbmpresida--csmartdockinginfomuimarkerlightbmpresid"></a><a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+ 定义的用于突出显示的自定义智能停靠标记的位图的资源 Id。  
+  
+```  
+UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];  
+```  
+  
+### <a name="remarks"></a>备注  
+ 使用的资源 Id 表示突出显示的智能停靠标记的位图来填充此数组。 `AFX_SD_MARKERS_NUM`当前定义为 5。 如下所示填充数组︰  
+  
+ `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
+  
+ `params.m_uiMarkerLightBmpResID[1] = IDB_MARKER_RIGHT_LIGHT;`  
+  
+ `params.m_uiMarkerLightBmpResID[2] = IDB_MARKER_TOP_LIGHT;`  
+  
+ `params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;`  
+  
+ `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
+  
+## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
- [CObject Class](../../mfc/reference/cobject-class.md)
+ [CObject 类](../../mfc/reference/cobject-class.md)
+

@@ -1,63 +1,82 @@
 ---
-title: "DEVNAMES 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEVNAMES"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DEVNAMES"
+title: "DEVNAMES 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DEVNAMES
+dev_langs:
+- C++
+helpviewer_keywords:
+- DEVNAMES
 ms.assetid: aac97f60-2169-471a-ba5d-c0baed9eed9a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# DEVNAMES 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 698a338c94dfa402dd51fa4f683b92a5d30cc0cd
+ms.lasthandoff: 02/24/2017
 
-`DEVNAMES` 结构包含标识驱动程序、设备和输出端口名称打印机的字符串。  
+---
+# <a name="devnames-structure"></a>DEVNAMES 结构
+`DEVNAMES` 结构包含标识打印机的驱动程序、设备和输出端口名称的字符串。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      typedef struct tagDEVNAMES { /* dvnm */  
+typedef struct tagDEVNAMES { /* dvnm */  
     WORD wDriverOffset;  
     WORD wDeviceOffset;  
     WORD wOutputOffset;  
-    WORD wDefault;  
-    /* driver, device, and port-name strings follow wDefault */  
+    WORD wDefault; */* driver,
+    device,
+    and port-name strings follow wDefault */  
 } DEVNAMES;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *wDriverOffset*  
- \(\) 在输入\/输出字符指定偏移量。包含文件名的 null 终止的字符串 \(不带扩展名\) 的设备驱动程序。  在输入时，此字符串对话框中用于确定打印机最初显示。  
+ （输入/输出）指定字符相对于包含设备驱动程序文件名（无扩展名）的不以 null 结尾的字符串的偏移量。 对于输入，此字符串用于确定打印机最初显示在对话框中。  
   
  *wDeviceOffset*  
- \(输入\/输出\)字符指定偏移量。包含设备名称的 null 终止的字符串 \(最多 32 字节 \(空\)。  此字符串绑定相同于 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 结构的 **dmDeviceName** 成员中。  
+ （输入/输出）指定字符相对于包含设备名称的以 null 结尾的字符串（最大值为包含 null 的 32 个字节）的偏移量。 此字符串必须等于**dmDeviceName**的成员[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构。  
   
  *wOutputOffset*  
- \(\) 在输入\/输出字符指定偏移量为 DOS 包含设备名称实际数据输出介质的 null 终止的字符串 \(输出 NANP 端口\)。  
+ （输入/输出）指定字符相对于包含物理输出媒体（输出端口）的 DOS 设备名称的以 null 结尾的字符串的偏移量。  
   
- *默认*  
- 指定在 `DEVNAMES` 配置包含的字符串标识是否默认打印机。  此字符串用于验证默认打印机未自上打印操作更改。  在输入时，如果 **DN\_DEFAULTPRN** 标志设置，`DEVNAMES` 结构的其他值是根据当前默认打印机进行。  如果其中任一字符串不匹配，则会显示警告消息通知用户的文档可能需要重新设置。  在输出时，**wDefault** 成员更改时，才设置打印对话框中显示，并且用户选择"确定"按钮。  如果默认打印机，选择 **DN\_DEFAULTPRN** 标志设置。  如果一台特定选择打印机，未设置任何标志。  此成员的其他 BITS 保留为内部使用过程由打印对话框。  
+ *wDefault*  
+ 指定 `DEVNAMES` 结构中包含的字符串是否标识默认打印机。 此字符串用于验证默认打印机自上次打印操作以来是否更改。 对于输入，如果**DN_DEFAULTPRN**设置了标志，其他值`DEVNAMES`针对当前默认打印机检查结构。 如果任意字符串不匹配，则将显示警告消息，通知用户文档可能需要重新设置格式。 在输出时， **wDefault**成员已更改时，才显示打印设置对话框中，并且用户选择确定按钮。 **DN_DEFAULTPRN**如果选择默认打印机设置标志。 如果选择特定打印机，则将不会设置此标志。 此成员的所有其他位将保留供“打印对话框”过程内部使用。  
   
-## 备注  
- **PrintDlg** 函数使用这些字符串初始化系统定义的打印对话框的成员。  当用户关闭对话框时，有关选择打印机的信息返回此结构。  
+## <a name="remarks"></a>备注  
+ **PrintDlg**函数使用这些字符串初始化系统定义打印对话框中的成员。 当用户关闭对话框后，此结构中将返回有关选定打印机的信息。  
   
-## 要求  
- **页眉：** commdlg.h  
+## <a name="requirements"></a>要求  
+ **标头︰** commdlg.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPrintDialog::CreatePrinterDC](../Topic/CPrintDialog::CreatePrinterDC.md)
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CPrintDialog::CreatePrinterDC](../../mfc/reference/cprintdialog-class.md#createprinterdc)
+
+
+

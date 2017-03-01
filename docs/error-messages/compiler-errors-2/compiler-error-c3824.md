@@ -1,34 +1,51 @@
 ---
-title: "编译器错误 C3824 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3824"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3824"
+title: "编译器错误 C3824 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3824
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3824
 ms.assetid: b6c6adf1-0a29-401c-a06e-616fd50d4c37
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C3824
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 546edbeccfee84e91018d0801f0c1ebc7a53a537
+ms.lasthandoff: 02/24/2017
 
-“member”: 此类型不能出现在此上下文中\(函数参数、返回类型或静态成员\)  
+---
+# <a name="compiler-error-c3824"></a>编译器错误 C3824
+member︰ 此类不能出现在此上下文中 （函数参数、 返回类型或静态成员）  
   
- 固定指针不能是函数参数、返回类型或声明的 `static`。  
+ 钉住指针不能为函数参数、 返回类型，或声明`static`。  
   
- 下面的示例生成 C3824：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C3824:  
   
 ```  
 // C3824a.cpp  
@@ -38,22 +55,4 @@ void func() {
    pin_ptr<int> b; // OK  
 }  
 ```  
-  
- **C\+\+ 托管扩展**  
-  
- 不能将使用 `__pin` 关键字声明的局部指针声明为 `static`，并且不能是内部指针。  
-  
- 下面的示例生成 C3824：  
-  
-```  
-// C3824b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-  
-__gc struct A {};  
-  
-void func() {  
-   static A __pin* a;   // C3824  
-   A __pin* b;   // OK  
-}  
-```
+

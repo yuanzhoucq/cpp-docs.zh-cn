@@ -1,77 +1,159 @@
 ---
-title: "network_link_registry 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::network_link_registry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "network_link_registry 类"
+title: "network_link_registry 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::network_link_registry
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# network_link_registry 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 8b39ab676db0072d279ee4058693769ef6f7eb3f
+ms.lasthandoff: 02/24/2017
 
-`network_link_registry` 的抽象基类管理源和目标块之间的链接。  
+---
+# <a name="networklinkregistry-class"></a>network_link_registry 类
+`network_link_registry` 抽象基类管理源块和目标块之间的链接。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template<class _Block>
+class network_link_registry;
 ```  
-template<  
-   class _Block  
->  
-class network_link_registry;  
-```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_Block`  
- `network_link_registry` 中存储的块数据类型。  
+ 块数据类型存储在`network_link_registry`。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedefs  
-  
-|名称|说明|  
-|--------|--------|  
-|`const_pointer`|一个类型，提供指向 `network_link_registry` 对象中 `const` 元素的指针。|  
-|`const_reference`|提供对存储在 `network_link_registry` 对象中的 `const` 元素的引用从而读取和执行 const 操作的类型。|  
-|`iterator`|提供可读取或修改 `network_link_registry` 对象中的任意元素的迭代器的类型。|  
-|`type`|表示存储在 `network_link_registry` 对象中的块类型的类型。|  
-  
-### 公共方法  
+### <a name="public-typedefs"></a>公共 Typedef  
   
 |名称|说明|  
-|--------|--------|  
-|[network\_link\_registry::add 方法](../Topic/network_link_registry::add%20Method.md)|在派生类中重写时，向 `network_link_registry` 对象中添加一个链接。|  
-|[network\_link\_registry::begin 方法](../Topic/network_link_registry::begin%20Method.md)|当在派生类中重写时，将迭代器返回至 `network_link_registry` 对象中的第一元素。|  
-|[network\_link\_registry::contains 方法](../Topic/network_link_registry::contains%20Method.md)|在派生类中重写时，为指定的块搜索 `network_link_registry` 对象。|  
-|[network\_link\_registry::count 方法](../Topic/network_link_registry::count%20Method.md)|在派生类中重写时，返回 `network_link_registry` 对象中的项目数。|  
-|[network\_link\_registry::remove 方法](../Topic/network_link_registry::remove%20Method.md)|在派生类中重写时，从 `network_link_registry` 对象中移除指定块。|  
+|----------|-----------------|  
+|`const_pointer`|提供指向的指针的类型`const`中的元素`network_link_registry`对象。|  
+|`const_reference`|提供对引用的类型`const`元素存储在`network_link_registry`用于读取和执行 const 操作的对象。|  
+|`iterator`|提供的迭代器的类型可读取或修改中的任何元素`network_link_registry`对象。|  
+|`type`|一种表示存储在的块类型`network_link_registry`对象。|  
   
-## 备注  
- `network link registry` 对并发访问是不安全的。  
+### <a name="public-methods"></a>公共方法  
   
-## 继承层次结构  
+|名称|描述|  
+|----------|-----------------|  
+|[添加方法](#add)|当在派生类中重写，将添加一个指向`network_link_registry`对象。|  
+|[begin 方法](#begin)|当在派生类中重写时返回的第一个元素的迭代器`network_link_registry`对象。|  
+|[包含方法](#contains)|当在派生类中重写时搜索`network_link_registry`对象指定块。|  
+|[count 方法](#count)|当在派生类中重写返回中的项数`network_link_registry`对象。|  
+|[remove 方法](#remove)|如果在派生类中重写，将删除从指定的块`network_link_registry`对象。|  
+  
+## <a name="remarks"></a>备注  
+ `network link registry`不是安全的并发访问。  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `network_link_registry`  
   
-## 要求  
- **标头：**agents.h  
+## <a name="requirements"></a>要求  
+ **标头：** agents.h  
   
- **命名空间:** 并发  
+ **命名空间：** 并发  
   
-## 请参阅  
- [concurrency 命名空间](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [single\_link\_registry 类](../../../parallel/concrt/reference/single-link-registry-class.md)   
- [multi\_link\_registry 类](../../../parallel/concrt/reference/multi-link-registry-class.md)
+##  <a name="a-nameadda-add"></a><a name="add"></a>添加 
+
+ 当在派生类中重写，将添加一个指向`network_link_registry`对象。  
+  
+```
+virtual void add(_EType _Link) = 0;
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Link`  
+ 指向要添加的块的指针。  
+  
+##  <a name="a-namebegina-begin"></a><a name="begin"></a>开始 
+
+ 当在派生类中重写时返回的第一个元素的迭代器`network_link_registry`对象。  
+  
+```
+virtual iterator begin() = 0;
+```  
+  
+### <a name="return-value"></a>返回值  
+ 发现的第一个元素的迭代器`network_link_registry`对象。  
+  
+### <a name="remarks"></a>备注  
+ 迭代器的最终状态由`NULL`链接。  
+  
+##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>包含 
+
+ 当在派生类中重写时搜索`network_link_registry`对象指定块。  
+  
+```
+virtual bool contains(_EType _Link) = 0;
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Link`  
+ 在对进行搜索块的指针`network_link_registry`对象。  
+  
+### <a name="return-value"></a>返回值  
+ `true`如果找到了指定块，`false`否则为。  
+  
+##  <a name="a-namecounta-count"></a><a name="count"></a>计数 
+
+ 当在派生类中重写返回中的项数`network_link_registry`对象。  
+  
+```
+virtual size_t count() = 0;
+```  
+  
+### <a name="return-value"></a>返回值  
+ 中的项数`network_link_registry`对象。  
+  
+##  <a name="a-nameremovea-remove"></a><a name="remove"></a>删除 
+
+ 如果在派生类中重写，将删除从指定的块`network_link_registry`对象。  
+  
+```
+virtual bool remove(_EType _Link) = 0;
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Link`  
+ 指向块被删除，如果找到。  
+  
+### <a name="return-value"></a>返回值  
+ `true`如果找到该链接并将其删除，`false`否则为。  
+  
+## <a name="see-also"></a>另请参阅  
+ [并发 Namespace](concurrency-namespace.md)   
+ [single_link_registry 类](single-link-registry-class.md)   
+ [multi_link_registry 类](multi-link-registry-class.md)
+

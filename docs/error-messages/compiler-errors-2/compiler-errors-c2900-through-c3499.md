@@ -1,26 +1,42 @@
 ---
-title: "编译器错误s C2900 Through C3499 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "编译器错误 C2900 到 C3499 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# 编译器错误s C2900 Through C3499
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: be14b38a2d4220436c4dd2fc62355a438a0c7b6e
+ms.lasthandoff: 02/24/2017
 
-文档的此部分中的文章包含有关 Visual C\+\+ 编译器错误的子部分的信息。  可在此处访问信息，或者在 Visual Studio 中的“输出”窗口中选择错误号，然后选择 F1 键。  
+---
+# <a name="compiler-errors-c2900-through-c3499"></a>编译器错误 C2900 到 C3499
+文档的此部分中的文章包含有关 Visual C++ 编译器错误的子部分的信息。 可在此处访问信息，或者在 Visual Studio 中的“输出”  窗口中选择错误号，然后选择 F1 键。  
   
  [编译器错误 C2906](../../error-messages/compiler-errors-2/compiler-error-c2906.md)  
   
@@ -36,11 +52,11 @@ caps.handback.revision: 16
   
  [编译器错误 C2918](../../error-messages/compiler-errors-2/compiler-error-c2918.md)  
   
- [Compiler Error C2919](../../error-messages/compiler-errors-2/compiler-error-c2919.md)  
+ [编译器错误 C2919](../../error-messages/compiler-errors-2/compiler-error-c2919.md)  
   
- [Compiler Error C2920](../../error-messages/compiler-errors-2/compiler-error-c2920.md)  
+ [编译器错误 C2920](../../error-messages/compiler-errors-2/compiler-error-c2920.md)  
   
- [编译器错误 C2921](../../error-messages/compiler-errors-2/compiler-errors-c2900-through-c3499.md)  
+ [编译器错误 C2921](../../error-messages/compiler-errors-2/compiler-error-c2921.md)  
   
  [编译器错误 C2947](../../error-messages/compiler-errors-2/compiler-error-c2947.md)  
   
@@ -53,6 +69,8 @@ caps.handback.revision: 16
  [编译器错误 C2958](../../error-messages/compiler-errors-2/compiler-error-c2958.md)  
   
  [编译器错误 C2959](../../error-messages/compiler-errors-2/compiler-error-c2959.md)  
+  
+ [编译器错误 C2962](../../error-messages/compiler-errors-2/compiler-error-c2962.md)  
   
  [编译器错误 C2970](../../error-messages/compiler-errors-2/compiler-error-c2970.md)  
   
@@ -94,7 +112,7 @@ caps.handback.revision: 16
   
  [编译器错误 C3083](../../error-messages/compiler-errors-2/compiler-error-c3083.md)  
   
- [Compiler Error C3099](../../error-messages/compiler-errors-2/compiler-error-c3099.md)  
+ [编译器错误 C3099](../../error-messages/compiler-errors-2/compiler-error-c3099.md)  
   
  [编译器错误 C3101](../../error-messages/compiler-errors-2/compiler-error-c3101.md)  
   
@@ -122,8 +140,6 @@ caps.handback.revision: 16
   
  [编译器错误 C3174](../../error-messages/compiler-errors-2/compiler-error-c3174.md)  
   
- [编译器错误 C3186](../../error-messages/compiler-errors-2/compiler-error-c3186.md)  
-  
  [编译器错误 C3187](../../error-messages/compiler-errors-2/compiler-error-c3187.md)  
   
  [编译器错误 C3200](../../error-messages/compiler-errors-2/compiler-error-c3200.md)  
@@ -132,7 +148,7 @@ caps.handback.revision: 16
   
  [编译器错误 C3203](../../error-messages/compiler-errors-2/compiler-error-c3203.md)  
   
- [Compiler Error C3209](../../error-messages/compiler-errors-2/compiler-error-c3209.md)  
+ [编译器错误 C3209](../../error-messages/compiler-errors-2/compiler-error-c3209.md)  
   
  [编译器错误 C3210](../../error-messages/compiler-errors-2/compiler-error-c3210.md)  
   
@@ -150,7 +166,7 @@ caps.handback.revision: 16
   
  [编译器错误 C3241](../../error-messages/compiler-errors-2/compiler-error-c3241.md)  
   
- [Compiler Error C3252](../../error-messages/compiler-errors-2/compiler-error-c3252.md)  
+ [编译器错误 C3252](../../error-messages/compiler-errors-2/compiler-error-c3252.md)  
   
  [编译器错误 C3253](../../error-messages/compiler-errors-2/compiler-error-c3253.md)  
   
@@ -166,15 +182,15 @@ caps.handback.revision: 16
   
  [编译器错误 C3277](../../error-messages/compiler-errors-2/compiler-error-c3277.md)  
   
- [Compiler Error C3278](../../error-messages/compiler-errors-2/compiler-error-c3278.md)  
+ [编译器错误 C3278](../../error-messages/compiler-errors-2/compiler-error-c3278.md)  
   
- [Compiler Error C3282](../../error-messages/compiler-errors-2/compiler-error-c3282.md)  
+ [编译器错误 C3282](../../error-messages/compiler-errors-2/compiler-error-c3282.md)  
   
  [编译器错误 C3288](../../error-messages/compiler-errors-2/compiler-error-c3288.md)  
   
  [编译器错误 C3352](../../error-messages/compiler-errors-2/compiler-error-c3352.md)  
   
- [Compiler Error C3353](../../error-messages/compiler-errors-2/compiler-error-c3353.md)  
+ [编译器错误 C3353](../../error-messages/compiler-errors-2/compiler-error-c3353.md)  
   
  [编译器错误 C3364](../../error-messages/compiler-errors-2/compiler-error-c3364.md)  
   
@@ -186,9 +202,9 @@ caps.handback.revision: 16
   
  [编译器错误 C3381](../../error-messages/compiler-errors-2/compiler-error-c3381.md)  
   
- [Compiler Error C3386](../../error-messages/compiler-errors-2/compiler-error-c3386.md)  
+ [编译器错误 C3386](../../error-messages/compiler-errors-2/compiler-error-c3386.md)  
   
- [Compiler Error C3387](../../error-messages/compiler-errors-2/compiler-error-c3387.md)  
+ [编译器错误 C3387](../../error-messages/compiler-errors-2/compiler-error-c3387.md)  
   
  [编译器错误 C3389](../../error-messages/compiler-errors-2/compiler-error-c3389.md)  
   
@@ -202,14 +218,14 @@ caps.handback.revision: 16
   
  [编译器错误 C3417](../../error-messages/compiler-errors-2/compiler-error-c3417.md)  
   
- [Compiler Error C3450](../../error-messages/compiler-errors-2/compiler-error-c3450.md)  
+ [编译器错误 C3450](../../error-messages/compiler-errors-2/compiler-error-c3450.md)  
   
  [编译器错误 C3451](../../error-messages/compiler-errors-2/compiler-error-c3451.md)  
   
- [Compiler Error C3456](../../error-messages/compiler-errors-2/compiler-error-c3456.md)  
+ [编译器错误 C3456](../../error-messages/compiler-errors-2/compiler-error-c3456.md)  
   
  [编译器错误 C3466](../../error-messages/compiler-errors-2/compiler-error-c3466.md)  
   
  [编译器错误 C3487](../../error-messages/compiler-errors-2/compiler-error-c3487.md)  
   
- [Compiler Error C3498](../../error-messages/compiler-errors-2/compiler-error-c3498.md)
+ [编译器错误 C3498](../../error-messages/compiler-errors-2/compiler-error-c3498.md)

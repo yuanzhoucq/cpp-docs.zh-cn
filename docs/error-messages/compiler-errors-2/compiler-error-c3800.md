@@ -1,51 +1,48 @@
 ---
-title: "编译器错误 C3800 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3800"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3800"
+title: "编译器错误 C3800 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3800
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3800
 ms.assetid: c653240a-b6db-4437-8d65-fa58f0e6fcf4
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3800
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 9b90ceab3c7bd6a1132506e306c0e399f0542ab1
+ms.lasthandoff: 02/24/2017
 
-“declaration”: 不能混合属性和事件  
+---
+# <a name="compiler-error-c3800"></a>编译器错误 C3800
+declaration︰ 不能混合属性和事件  
   
- 不能将一个构造声明为既是属性又是事件。  
+ 不能声明为一个属性和事件的构造。  
   
- 只有使用 **\/clr:oldSyntax** 才可能出现 C3800 错误。  
-  
- 下面的示例生成 C3800：  
-  
-```  
-// C3800.cpp  
-// compile with: /clr:oldSyntax  
-#using "mscorlib.dll"  
-  
-__delegate void MyDel();  
-public __gc struct S  
-{  
-   __property __event void set_E(MyDel*)  
-   {  
-   }   // C3800  
-};  
-  
-int main()  
-{  
-}  
-```
+ C3800 才可使用已过时的编译器选项连接**/clr:oldSyntax**。  
+

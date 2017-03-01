@@ -1,72 +1,88 @@
 ---
-title: "CPaneDialog Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CPaneDialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPaneDialog class"
-  - "CPaneDialog constructor"
-  - "CPaneDialog::CreateObject method"
-  - "CPaneDialog::OnEraseBkgnd method"
-  - "CPaneDialog::OnLButtonDblClk method"
-  - "CPaneDialog::OnLButtonDown method"
-  - "CPaneDialog::OnUpdateCmdUI method"
-  - "CPaneDialog::OnWindowPosChanging method"
+title: "CPaneDialog 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CPaneDialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPaneDialog::OnLButtonDblClk method
+- CPaneDialog::OnLButtonDown method
+- CPaneDialog::CreateObject method
+- CPaneDialog::OnUpdateCmdUI method
+- CPaneDialog constructor
+- CPaneDialog::OnEraseBkgnd method
+- CPaneDialog class
+- CPaneDialog::OnWindowPosChanging method
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
 caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# CPaneDialog Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 85c7e338382758dd809fb770c5ab14860e362da8
+ms.lasthandoff: 02/24/2017
 
-`CPaneDialog` 选件类支持无模式，停靠对话框。  
+---
+# <a name="cpanedialog-class"></a>CPaneDialog 类
+`CPaneDialog`类支持无模式可停靠对话框。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CPaneDialog : public CDockablePane  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
+|----------|-----------------|  
 |`CPaneDialog::CPaneDialog`|默认构造函数。|  
 |`CPaneDialog::~CPaneDialog`|析构函数。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[CPaneDialog::Create](../Topic/CPaneDialog::Create.md)|创建可停靠对话框并将它附加到 `CPaneDialog` 对象。|  
-|`CPaneDialog::CreateObject`|用于由框架创建此选件类类型动态实例。|  
-|`CPaneDialog::GetThisClass`|用于由框架获取指向与此选件类类型的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 对象。|  
-|[CPaneDialog::HandleInitDialog](../Topic/CPaneDialog::HandleInitDialog.md)|处理 [WM\_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) 消息。  （重新定义 `CBasePane::HandleInitDialog`。）|  
-|`CPaneDialog::OnEraseBkgnd`|处理 [WM\_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) 消息。  （重新定义 [CWnd::OnEraseBkgnd](../Topic/CWnd::OnEraseBkgnd.md)。）|  
-|`CPaneDialog::OnLButtonDblClk`|处理 [WM\_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) 消息。  （重新定义 [CWnd::OnLButtonDblClk](../Topic/CWnd::OnLButtonDblClk.md)。）|  
-|`CPaneDialog::OnLButtonDown`|处理 [WM\_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) 消息。  （重新定义 [CWnd::OnLButtonDown](../Topic/CWnd::OnLButtonDown.md)。）|  
-|`CPaneDialog::OnUpdateCmdUI`|调用由框架更新该对话框的窗口。  （重写 [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/zh-cn/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。）|  
-|`CPaneDialog::OnWindowPosChanging`|处理 [WM\_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) 消息。  （重新定义 [CWnd::OnWindowPosChanging](../Topic/CWnd::OnWindowPosChanging.md)。）|  
-|[CPaneDialog::SetOccDialogInfo](../Topic/CPaneDialog::SetOccDialogInfo.md)|为OLE控件容器的对话框指定模板。|  
+|----------|-----------------|  
+|[CPaneDialog::Create](#create)|创建可停靠对话框中，并将其附加到`CPaneDialog`对象。|  
+|`CPaneDialog::CreateObject`|由框架用于创建此类类型的动态实例。|  
+|`CPaneDialog::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。 (将重新定义`CBasePane::HandleInitDialog`。)|  
+|`CPaneDialog::OnEraseBkgnd`|处理[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息。 (将重新定义[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)。)|  
+|`CPaneDialog::OnLButtonDblClk`|处理[需知道 WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606)消息。 (将重新定义[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk)。)|  
+|`CPaneDialog::OnLButtonDown`|处理[WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607)消息。 (将重新定义[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)。)|  
+|`CPaneDialog::OnUpdateCmdUI`|由框架来更新对话框窗口调用。 (重写[CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
+|`CPaneDialog::OnWindowPosChanging`|处理[WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653)消息。 (将重新定义[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)。)|  
+|[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|指定是 OLE 控件容器的对话框模板。|  
   
-## 备注  
- 构造在两个步骤的一 `CPaneDialog` 对象。  首先，构造在您的代码的对象。  接下来，调用 [CPaneDialog::Create](../Topic/CPaneDialog::Create.md)。  必须指定有效的资源模板名称或模板ID和通过指针到父窗口。  否则，创建过程将失败。  对话框必须指定WS\_CHILD和WS\_VISIBLE样式。  建议您还可以指定WS\_CLIPCHILDREN和WS\_CLIPSIBLINGS样式。  有关更多信息，请参见 [窗口样式](../../mfc/reference/window-styles.md)。  
+## <a name="remarks"></a>备注  
+ 构造`CPaneDialog`两个步骤中的对象。 首先，构建您的代码中的对象。 其次，调用[CPaneDialog::Create](#create)。 必须指定有效的资源模板名称或模板 ID，并将指针传递到父窗口。 否则，在创建过程将失败。 对话框中必须指定的 WS_CHILD 和 WS_VISIBLE 样式。 我们建议你同时指定 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS 样式。 有关详细信息，请参阅[窗口样式](window-styles.md)。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -81,11 +97,131 @@ class CPaneDialog : public CDockablePane
   
  [CPaneDialog](../../mfc/reference/cpanedialog-class.md)  
   
-## 要求  
- **标头:** afxpanedialog.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxpanedialog.h  
   
-## 请参阅  
+##  <a name="a-namecreatea--cpanedialogcreate"></a><a name="create"></a>CPaneDialog::Create  
+ 创建停靠的对话框中，并将其附加到`CPaneDialog`对象。  
+  
+```  
+BOOL Create(
+    LPCTSTR lpszWindowName,  
+    CWnd* pParentWnd,  
+    BOOL bHasGripper,  
+    LPCTSTR lpszTemplateName,  
+    UINT nStyle,  
+    UINT nID,  
+    DWORD dwTabbedStyle= AFX_CBRS_REGULAR_TABS,  
+    DWORD dwControlBarStyle=AFX_DEFAULT_DOCKING_PANE_STYLE);
+
+ 
+BOOL Create(
+    LPCTSTR lpszWindowName,  
+    CWnd* pParentWnd,  
+    BOOL bHasGripper,  
+    UINT nIDTemplate,  
+    UINT nStyle,  
+    UINT nID);
+
+ 
+BOOL Create(
+    CWnd* pParentWnd,  
+    LPCTSTR lpszTemplateName,  
+    UINT nStyle,  
+    UINT nID);
+
+ 
+BOOL Create(
+    CWnd* pParentWnd,  
+    UINT nIDTemplate,  
+    UINT nStyle,  
+    UINT nID);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `lpszWindowName`  
+ 停靠对话框中的名称。  
+  
+ [in] `pParentWnd`  
+ 指向父窗口。  
+  
+ [in] `bHasGripper`  
+ `TRUE`若要创建停靠对话框中，用标题 （控制手柄）;否则为`FALSE`。  
+  
+ [in] `lpszTemplateName`  
+ 资源对话框模板的名称。  
+  
+ [in] `nStyle`  
+ 窗口样式。  
+  
+ [in] `nID`  
+ 控件 id。  
+  
+ [in] `nIDTemplate`  
+ 对话框模板资源 ID。  
+  
+ [in] `dwTabbedStyle`  
+ 当用户将另一个控件窗格拖动到此控件窗格标题上时结果的选项卡式窗口的样式。 默认值为 `AFX_CBRS_REGULAR_TABS`。 有关详细信息，请参阅备注部分的[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
+  
+ [in] `dwControlBarStyle`  
+ 其他样式特性。 默认值为 `AFX_DEFAULT_DOCKING_PANE_STYLE`。 有关详细信息，请参阅备注部分的[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果此方法成功，则否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+  
+### <a name="example"></a>示例  
+ 下面的示例演示如何使用`Create`中的方法`CPaneDialog`类。 此示例摘自[设置窗格大小示例](../../visual-cpp-samples.md)。  
+  
+ [!code-cpp[NVC_MFC_SetPaneSize #&2;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
+[!code-cpp[NVC_MFC_SetPaneSize #&3;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
+  
+##  <a name="a-namehandleinitdialoga--cpanedialoghandleinitdialog"></a><a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
+ 处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。  
+  
+```  
+afx_msg LRESULT HandleInitDialog(
+    WPARAM wParam,  
+    LPARAM lParam);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `wParam`  
+ 要接收的默认键盘焦点的控件的句柄。  
+  
+ [in] `lParam`  
+ 指定附加的初始化数据。  
+  
+### <a name="return-value"></a>返回值  
+ 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。 此外，`TRUE`将键盘焦点设置为指定的控件`wParam`参数;`FALSE`可防止设置默认键盘焦点。  
+  
+### <a name="remarks"></a>备注  
+ 该框架使用此方法来初始化控件和对话框中的外观。 然后再显示对话框中，框架将调用此方法。  
+  
+##  <a name="a-namesetoccdialoginfoa--cpanedialogsetoccdialoginfo"></a><a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
+ 指定是 OLE 控件容器的对话框模板。  
+  
+```  
+virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pOccDialogInfo`  
+ 到对话框模板用于创建对话框对象的指针。 此参数的值随后传递到[COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)方法。  
+  
+### <a name="return-value"></a>返回值  
+ 总是为 `TRUE`。  
+  
+### <a name="remarks"></a>备注  
+ 此方法支持[COccManager](../../mfc/reference/coccmanager-class.md)类，该类管理 OLE 控件站点和 ActiveX 控件。 _AFX_OCC_DIALOG_INFO 结构 afxocc.h 标头文件中定义。  
+  
+## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
- [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)   
  [窗口样式](../../mfc/reference/window-styles.md)
+
+
+
+

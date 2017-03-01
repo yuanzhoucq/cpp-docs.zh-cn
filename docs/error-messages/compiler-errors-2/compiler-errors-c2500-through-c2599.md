@@ -1,26 +1,42 @@
 ---
-title: "编译器错误s C2500 Through C2599 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "编译器错误 C2500 到 C2599 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 编译器错误s C2500 Through C2599
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: bdce46b08d44226c3dedef076528d7e46d39365c
+ms.lasthandoff: 02/24/2017
 
-文档的此部分中的文章包含有关 Visual C\+\+ 编译器错误的子部分的信息。  可在此处访问信息，或者在 Visual Studio 中的“输出”窗口中选择错误号，然后选择 F1 键。  
+---
+# <a name="compiler-errors-c2500-through-c2599"></a>编译器错误 C2500 到 C2599
+文档的此部分中的文章包含有关 Visual C++ 编译器错误的子部分的信息。 可在此处访问信息，或者在 Visual Studio 中的“输出”  窗口中选择错误号，然后选择 F1 键。  
   
  [编译器错误 C2500](../../error-messages/compiler-errors-2/compiler-error-c2500.md)  
   
@@ -76,8 +92,6 @@ caps.handback.revision: 15
   
  [编译器错误 C2535](../../error-messages/compiler-errors-2/compiler-error-c2535.md)  
   
- [编译器错误 C2536](../Topic/Compiler%20Error%20C2536.md)  
-  
  [编译器错误 C2537](../../error-messages/compiler-errors-2/compiler-error-c2537.md)  
   
  [编译器错误 C2540](../../error-messages/compiler-errors-2/compiler-error-c2540.md)  
@@ -113,8 +127,6 @@ caps.handback.revision: 15
  [编译器错误 C2562](../../error-messages/compiler-errors-2/compiler-error-c2562.md)  
   
  [编译器错误 C2563](../../error-messages/compiler-errors-2/compiler-error-c2563.md)  
-  
- [编译器错误 C2564](../Topic/Compiler%20Error%20C2564.md)  
   
  [编译器错误 C2566](../../error-messages/compiler-errors-2/compiler-error-c2566.md)  
   

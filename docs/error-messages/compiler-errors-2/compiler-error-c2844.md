@@ -1,36 +1,52 @@
 ---
-title: "编译器错误 C2844 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2844"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2844"
+title: "编译器错误 C2844 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2844
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2844
 ms.assetid: dcaf4cd2-21b0-4280-ae42-0a706c524d83
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2844
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: c6bfb80408e058d22977ff068c9a0c21d5353a90
+ms.lasthandoff: 02/24/2017
 
-“member”: 不能是接口“interface”的成员  
+---
+# <a name="compiler-error-c2844"></a>编译器错误 C2844
+member︰ 不能为接口的成员  
   
- [接口类](../../windows/interface-class-cpp-component-extensions.md) 无法包含数据成员，除非它也是一个属性。  
+ [接口类](../../windows/interface-class-cpp-component-extensions.md)不能包含数据成员，除非它也是一个属性。  
   
- 接口中不允许除属性或成员函数以外的任何内容。  此外，也不允许构造函数、析构函数和运算符。  
+ 属性或成员函数之外的任何不允许在接口中。 此外，不允许的构造函数、 析构函数和运算符。  
   
- 下面的示例生成 C2844：  
+ 下面的示例生成 C2844:  
   
 ```  
 // C2844a.cpp  
@@ -41,16 +57,4 @@ public interface class IFace {
    // property int Size;  
 };  
 ```  
-  
- 下面的示例生成 C2844：  
-  
-```  
-// C2844b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-__gc __interface IFace {  
-   int i;   // C2844  
-   // try the following line instead  
-   // __property int Size { get; set; };  
-};  
-```
+
