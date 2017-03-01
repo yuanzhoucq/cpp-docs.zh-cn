@@ -15,7 +15,7 @@ translation.priority.ht:
 - zh-tw
 translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d5a8a9270e514163ddbfd7defd83a486e2110bb8
+ms.openlocfilehash: 46f2ebc7d5f0add47b4d0b1503b5813286ccb8fb
 
 ---
-Visual Studio 2008
+Windows NT 4.0

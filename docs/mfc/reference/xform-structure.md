@@ -1,36 +1,51 @@
 ---
-title: "XFORM 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "XFORM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "XFORM 结构"
+title: "XFORM 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- XFORM
+dev_langs:
+- C++
+helpviewer_keywords:
+- XFORM structure
 ms.assetid: 4fb4ef5b-05d2-4884-82d1-1cb8f7be6302
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# XFORM 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 2d23b3838f1e2dcabb2affb96fa6f18942581ff8
+ms.lasthandoff: 02/24/2017
 
-`XFORM` 结构都有以下形式：  
+---
+# <a name="xform-structure"></a>XFORM 结构
+`XFORM`结构具有以下形式︰  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      typedef struct  tagXFORM {  /* xfrm */  
+typedef struct  tagXFORM {  /* xfrm */  
     FLOAT eM11;  
     FLOAT eM12;  
     FLOAT eM21;  
@@ -40,19 +55,21 @@ caps.handback.revision: 12
 } XFORM;  
 ```  
   
-## 备注  
- `XFORM` 结构指定世界空间对页空间转换。  **eDx** 和 **eDy** 成员指定水平和垂直转换，组件。  下表根据操作查看如何使用其他成员，例如：  
+## <a name="remarks"></a>备注  
+ `XFORM`结构指定页面空间转换到世界空间。 **EDx**和**eDy**成员分别指定水平和垂直转换组件。 下表显示如何使用其他成员，具体取决于该操作︰  
   
-|Operation|eM11|eM12|eM21|eM22|  
+|操作|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|旋转角度余弦值|旋转角度余弦值|旋转角度负正弦值|旋转角度余弦值|  
-|**缩放**|水平缩放组件|Nothing|Nothing|垂直缩放组件|  
-|**剪切**|Nothing|水平的大于率性常数|垂直于率性常数|Nothing|  
-|**反射**|水平的反射组件|Nothing|Nothing|垂直的反射组件|  
+|`Rotation`|旋转角度的余弦值|旋转角度的正弦值|负旋转角度的正弦值|旋转角度的余弦值|  
+|**缩放**|水平缩放的组件|Nothing|Nothing|垂直缩放分量|  
+|**倾斜对象**|Nothing|水平比例常量|垂直比例常量|Nothing|  
+|**反射**|水平反射组件|Nothing|Nothing|垂直反射组件|  
   
-## 要求  
- "头部：" wingdi.h  
+## <a name="requirements"></a>要求  
+ **标头︰** wingdi.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRgn::CreateFromData](../Topic/CRgn::CreateFromData.md)
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)
+
+

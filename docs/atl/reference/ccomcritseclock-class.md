@@ -1,70 +1,134 @@
 ---
-title: "CComCritSecLock Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComCritSecLock"
-  - "ATL.CComCritSecLock<TLock>"
-  - "ATL::CComCritSecLock<TLock>"
-  - "ATL.CComCritSecLock"
-  - "CComCritSecLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComCritSecLock class"
+title: "CComCritSecLock 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComCritSecLock
+- ATL.CComCritSecLock<TLock>
+- ATL::CComCritSecLock<TLock>
+- ATL.CComCritSecLock
+- CComCritSecLock
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComCritSecLock Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 71b9ab8b11adc946656c2192c2f0f06555ef1254
+ms.lasthandoff: 02/24/2017
 
-此选件类为锁定和取消锁定临界区对象的方法。  
+---
+# <a name="ccomcritseclock-class"></a>CComCritSecLock 类
+此类提供用于锁定和解锁的关键部分对象的方法。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template<class TLock> class CComCritSecLock
 ```  
   
-      template<  
-   class TLock  
-> class CComCritSecLock  
-```  
-  
-#### 参数  
+#### <a name="parameters"></a>参数  
  *TLock*  
- 要锁定和取消锁定的对象。  
+ 要进行锁定和解锁的对象。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
-|--------|--------|  
-|[CComCritSecLock::CComCritSecLock](../Topic/CComCritSecLock::CComCritSecLock.md)|构造函数。|  
-|[CComCritSecLock::~CComCritSecLock](../Topic/CComCritSecLock::~CComCritSecLock.md)|该析构函数。|  
+|名称|说明|  
+|----------|-----------------|  
+|[CComCritSecLock::CComCritSecLock](#ctor)|构造函数。|  
+|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|析构函数。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
-|--------|--------|  
-|[CComCritSecLock::Lock](../Topic/CComCritSecLock::Lock.md)|调用此方法锁定临界区对象。|  
-|[CComCritSecLock::Unlock](../Topic/CComCritSecLock::Unlock.md)|调用此方法以打开临界区对象。|  
+|名称|说明|  
+|----------|-----------------|  
+|[CComCritSecLock::Lock](#lock)|调用此方法以锁定关键部分对象。|  
+|[CComCritSecLock::Unlock](#unlock)|调用此方法以解除锁定关键部分对象。|  
   
-## 备注  
- 使用此选件类用于锁定和取消锁定该对象的一种较为安全的方法与具有 [CComCriticalSection选件类](../../atl/reference/ccomcriticalsection-class.md) 或 [CComAutoCriticalSection选件类](../../atl/reference/ccomautocriticalsection-class.md)。  
+## <a name="remarks"></a>备注  
+ 此类用于锁定和解锁对象更安全的方式比与[CComCriticalSection 类](../../atl/reference/ccomcriticalsection-class.md)或[CComAutoCriticalSection 类](../../atl/reference/ccomautocriticalsection-class.md)。  
   
-## 要求  
- **Header:** atlbase.h  
+## <a name="requirements"></a>要求  
+ **标头︰** atlbase.h  
   
-## 请参阅  
- [CComCriticalSection Class](../../atl/reference/ccomcriticalsection-class.md)   
- [CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md)
+##  <a name="a-namectora--ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+ 构造函数。  
+  
+```
+CComCritSecLock(TLock& cs, bool bInitialLock = true);
+```  
+  
+### <a name="parameters"></a>参数  
+ *cs*  
+ 关键部分对象。  
+  
+ `bInitialLock`  
+ 初始的锁定状态︰ **true**方式锁定。  
+  
+### <a name="remarks"></a>备注  
+ 初始化关键部分对象。  
+  
+##  <a name="a-namedtora--ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+ 析构函数。  
+  
+```
+~CComCritSecLock() throw();
+```  
+  
+### <a name="remarks"></a>备注  
+ 解除锁定关键部分对象。  
+  
+##  <a name="a-namelocka--ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock  
+ 调用此方法以锁定关键部分对象。  
+  
+```
+HRESULT Lock() throw();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 如果对象成功锁定，则为 S_OK 返回或失败的错误 HRESULT。  
+  
+### <a name="remarks"></a>备注  
+ 如果该对象已被锁定，则断言会错误在调试版本中。  
+  
+##  <a name="a-nameunlocka--ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock  
+ 调用此方法以解除锁定关键部分对象。  
+  
+```
+void Unlock() throw();
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果该对象已被解锁，则断言会错误在调试版本中。  
+  
+## <a name="see-also"></a>另请参阅  
+ [CComCriticalSection 类](../../atl/reference/ccomcriticalsection-class.md)   
+ [CComAutoCriticalSection 类](../../atl/reference/ccomautocriticalsection-class.md)
+
