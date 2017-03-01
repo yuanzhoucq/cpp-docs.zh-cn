@@ -1,53 +1,69 @@
 ---
-title: "_pclose | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_pclose"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_pclose"
-  - "pclose"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_pclose 函数"
-  - "pclose 函数"
-  - "管道, 关闭"
+title: "_pclose | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _pclose
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _pclose
+- pclose
+dev_langs:
+- C++
+helpviewer_keywords:
+- _pclose function
+- pclose function
+- pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _pclose
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 33826176b57dbc26c023e0556993ade7dc3e9cfd
+ms.lasthandoff: 02/24/2017
 
-等待一个新的命令处理器并在关联的管道中关闭流。  
+---
+# <a name="pclose"></a>_pclose
+等待新命令处理器并关闭关联管道上的流。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -56,33 +72,33 @@ FILE *stream
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `stream`  
- 从上一个`_popen`的调用中返回值。  
+ 上一次调用 `_popen` 的返回值。  
   
-## 返回值  
- 如果发生错误，则返回停止的命令处理器的退出状态或– 1。  返回值的格式与`_cwait`相同，除了低字节和高字节部分要交换。  如果流是 **NULL**，`_pclose` 设置 `errno` 到 `EINVAL` 并返回 \-1。  
+## <a name="return-value"></a>返回值  
+ 返回终止命令处理器的退出状态，如果发生错误，则返回 -1。 除了交换低位字节和高位字节外，返回值的格式与 `_cwait` 的格式相同。 如果流是 **NULL**，则 `_pclose` 将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
- 有关这些内容以及其他错误代码的详细信息，请参阅 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `_pclose`函数查找由相关`_popen`调用的命令处理器\(Cmd.exe\)的过程ID，在新的命令处理器中执行 [\_cwait](../../c-runtime-library/reference/cwait.md) 调用，然后关闭在关联管道的流。  
+## <a name="remarks"></a>备注  
+ `_pclose` 函数查找由相关联的 `_popen` 调用启动的命令处理器 (Cmd.exe) 的进程 ID，在新命令处理器上执行 [_cwait](../../c-runtime-library/reference/cwait.md) 调用，并关闭相关管道上的流。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_pclose`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_pclose`|\<stdio.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
- [\_pipe](../../c-runtime-library/reference/pipe.md)   
- [\_popen、\_wpopen](../../c-runtime-library/reference/popen-wpopen.md)
+ [_pipe](../../c-runtime-library/reference/pipe.md)   
+ [_popen、_wpopen](../../c-runtime-library/reference/popen-wpopen.md)

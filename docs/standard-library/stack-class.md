@@ -1,32 +1,48 @@
 ---
 title: "stack 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::stack"
-  - "std.stack"
-  - "stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "堆栈上，堆栈类"
-  - "stack 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::stack
+- std.stack
+- stack
+dev_langs:
+- C++
+helpviewer_keywords:
+- stack, stack class
+- stack class
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# stack 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 81467a48b08fab628da94b217c2925010f3118fe
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="stack-class"></a>stack 类
 一种模板容器适配器类，它提供了功能的限制，限制对最近添加到某些基础容器类型的元素的访问。 当清楚仅在容器上执行堆栈操作很重要时，会使用堆栈类。  
   
 ## <a name="syntax"></a>语法  
@@ -41,26 +57,26 @@ class stack
  要存储在堆栈中的元素数据类型。  
   
  `Container`  
- 用来实现堆栈的基础容器的类型。 默认值是类 `deque`*\< 类型>*。  
+ 用来实现堆栈的基础容器的类型。 默认值为 `deque`*\<Type>* 类。  
   
 ## <a name="remarks"></a>备注  
- 类的元素 **类型** 中的第一个模板规定堆栈对象的参数的代名词 [value_type](#stack__value_type) 必须与基础容器类中的元素的类型相匹配 **容器** 规定的第二个模板参数。  **类型** 必须是可赋值，，，因此很可能将复制该类型的对象并将值分配给该类型的变量。  
+ 堆栈对象的第一个模板参数中规定的 **Type** 类的元素与 [value_type](#stack__value_type) 同义，并且必须与第二个模板参数规定的基础容器类 **Container** 中的元素类型相匹配。 **Type** 必须是可赋值的，这样才能复制该类型的对象并为该类型的变量赋值。  
   
- 用于堆栈的适当基础容器类包括 [e q u e](../standard-library/deque-class.md), ，[list 类](../standard-library/list-class.md), ，和 [vector 类](../standard-library/vector-class.md), ，或任何其他支持的操作的序列容器 **回**, ，`push_back`, ，和 `pop_back`。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。  
+ 适合堆栈的基础容器类包括 [deque](../standard-library/deque-class.md)、[list class](../standard-library/list-class.md) 和 [vector class](../standard-library/vector-class.md) 或者支持 **back** 操作（`push_back` 和 `pop_back`）的任何其他序列容器。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。  
   
- 堆栈的对象相等性比较当且仅当类的元素 **类型** 可比较相等性，很少-比可比较当且仅当类的元素 **类型** 小于-比可比较。  
+ 当且仅当 **Type** 类的元素可进行相等比较时，堆栈对象才可进行相等比较，当且仅当 **Type** 类的元素可进行小于比较时，堆栈对象才可进行小于比较。  
   
 -   堆栈类支持后进先出 (LIFO) 数据结构。 可以在脑海中将其类比为一摞盘子。 元素（盘子）只能从堆栈顶部（基容器末尾的最后一个元素）插入、检查或删除。 限制仅访问顶部元素是使用堆栈类的原因。  
   
--    [Queue 类](../standard-library/queue-class.md) 支持先入先出 (FIFO) 的数据结构。 可以在脑海中将其类比为排队等候银行柜员的人。 元素（人）可从行的后部添加，并且可以从行的前部删除。 行的前部和后部都可以插入。 以这种方式限制仅访问前部和后部元素是使用队列类的原因。  
+-   [queue class](../standard-library/queue-class.md) 支持先进先出 (FIFO) 数据结构。 可以在脑海中将其类比为排队等候银行柜员的人。 元素（人）可从行的后部添加，并且可以从行的前部删除。 行的前部和后部都可以插入。 以这种方式限制仅访问前部和后部元素是使用队列类的原因。  
   
--    [Priority_queue 类](../standard-library/priority-queue-class.md) 其元素进行排序，以便最大的元素始终位于顶部的位置。 它支持元素的插入以及顶部元素的检查和删除。 可以在脑海中将其类比为按年龄、身高或其他标准排队的人。  
+-   [priority_queue 类](../standard-library/priority-queue-class.md)将对其元素进行排序，以便最大的元素始终位于顶部位置。 它支持元素的插入以及顶部元素的检查和删除。 可以在脑海中将其类比为按年龄、身高或其他标准排队的人。  
   
 ### <a name="constructors"></a>构造函数  
   
 |||  
 |-|-|  
-|[堆栈](#stack__stack)|构造一个空的或者是基容器对象副本的 `stack`。|  
+|[stack](#stack__stack)|构造一个空的或者是基容器对象副本的 `stack`。|  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -74,45 +90,45 @@ class stack
   
 |||  
 |-|-|  
-|[为空](#stack__empty)|测试 `stack` 是否为空。|  
+|[empty](#stack__empty)|测试 `stack` 是否为空。|  
 |[pop](#stack__pop)|从 `stack` 的顶部删除元素。|  
-|[推送](#stack__push)|将元素添加到 `stack` 顶部。|  
-|[大小](#stack__size)|返回 `stack` 中的元素数量。|  
-|[返回页首](#stack__top)|返回对 `stack` 顶部元素的引用。|  
+|[push](#stack__push)|将元素添加到 `stack` 顶部。|  
+|[size](#stack__size)|返回 `stack` 中的元素数量。|  
+|[top](#stack__top)|返回对 `stack` 顶部元素的引用。|  
   
 ## <a name="requirements"></a>要求  
- **标头︰** \< 堆栈>  
+ **标头：** \<堆栈>  
   
  **命名空间：** std  
   
-##  <a name="a-namestackcontainertypea-stackcontainertype"></a><a name="stack__container_type"></a>  stack:: container_type  
- 提供基本的容器为满足一种。  
+##  <a name="a-namestackcontainertypea--stackcontainertype"></a><a name="stack__container_type"></a>  stack::container_type  
+ 一种类型，它提供将调整的基容器。  
   
 ```  
 typedef Container container_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 类型是模板参数 `Container` 的同义词。 所有三个 STL 序列容器类 — vector 类、 list 类和默认类 deque — 满足的要求，用作堆栈对象的基础容器。 此外可能使用满足这些要求的用户定义的类型。  
+ 该类型是模板参数 `Container` 的同义词。 三个 C++ 标准库序列容器类 - 矢量类、列表类和默认的类 deque - 满足用作堆栈对象的基容器的要求。 也可能使用满足要求的用户定义的类型。  
   
- 有关详细信息 `Container`, ，请参阅备注部分的 [stack 类](../standard-library/stack-class.md) 主题。  
+ 有关 `Container` 的详细信息，请参阅 [stack 类](../standard-library/stack-class.md)主题的“备注”部分。  
   
 ### <a name="example"></a>示例  
-  请参阅示例 [stack:: stack](#stack__stack) 以举例说明如何声明和使用 `container_type`。  
+  有关如何声明和使用 `container_type` 的示例，请参阅 [stack::stack](#stack__stack) 的示例。  
   
-##  <a name="a-namestackemptya-stackempty"></a><a name="stack__empty"></a>  stack:: empty  
- 如果某个叠是空的测试。  
+##  <a name="a-namestackemptya--stackempty"></a><a name="stack__empty"></a>  stack::empty  
+ 测试堆栈是否为空。  
   
 ```  
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- **true** 如果堆栈为空，则为 **false** 如果堆栈为空。  
+ 如果堆栈为空，则为 **true**；如果堆栈不为空，则为 **false**。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // stack_empty.cpp  
 // compile with: /EHsc  
 #include <stack>  
@@ -143,19 +159,19 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="a-namestackpopa-stackpop"></a><a name="stack__pop"></a>  stack:: pop  
- 从堆栈的顶部移除的元素。  
+##  <a name="a-namestackpopa--stackpop"></a><a name="stack__pop"></a>  stack::pop  
+ 从堆栈的顶部删除元素。  
   
 ```  
 void pop();
 ```  
   
 ### <a name="remarks"></a>备注  
- 堆栈必须为非空要应用的成员函数。 堆栈的顶部是所占用的最新添加的元素的位置，并且是容器末尾处的最后一个元素。  
+ 堆栈必须为非空才能应用成员函数。 堆栈顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // stack_pop.cpp  
 // compile with: /EHsc  
 #include <stack>  
@@ -197,8 +213,8 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="a-namestackpusha-stackpush"></a><a name="stack__push"></a>  stack:: push  
- 将元素添加到堆栈的顶端。  
+##  <a name="a-namestackpusha--stackpush"></a><a name="stack__push"></a>  stack::push  
+ 在堆栈的末尾处添加一个元素。  
   
 ```  
 void push(const Type& val);
@@ -209,11 +225,11 @@ void push(const Type& val);
  添加到堆栈顶部的元素。  
   
 ### <a name="remarks"></a>备注  
- 堆栈的顶部是所占用的最新添加的元素的位置，并且是容器末尾处的最后一个元素。  
+ 堆栈顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // stack_push.cpp  
 // compile with: /EHsc  
 #include <stack>  
@@ -243,8 +259,8 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="a-namestacksizea-stacksize"></a><a name="stack__size"></a>  stack:: size  
- 返回对堆栈中的元素数。  
+##  <a name="a-namestacksizea--stacksize"></a><a name="stack__size"></a>  stack::size  
+ 返回堆栈中元素数。  
   
 ```  
 size_type size() const;
@@ -255,7 +271,7 @@ size_type size() const;
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // stack_size.cpp  
 // compile with: /EHsc  
 #include <stack>  
@@ -282,21 +298,21 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="a-namestacksizetypea-stacksizetype"></a><a name="stack__size_type"></a>  stack:: size_type  
- 无符号的整数类型，可以表示在堆栈中的元素的数目。  
+##  <a name="a-namestacksizetypea--stacksizetype"></a><a name="stack__size_type"></a>  stack::size_type  
+ 一种无符号整数类型，此类型可表示堆栈中的元素数。  
   
 ```  
 typedef typename Container::size_type size_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 类型为同义词 `size_type` 基适配的容器由堆栈。  
+ 类型为堆栈采用的基容器的 `size_type` 的同义词。  
   
 ### <a name="example"></a>示例  
-  请参阅示例 [大小](#stack__size) 以举例说明如何声明和使用 `size_type`。  
+  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#stack__size) 的示例。  
   
-##  <a name="a-namestackstacka-stackstack"></a><a name="stack__stack"></a>  stack:: stack  
- 构造空的或者是一份基本容器类的堆栈。  
+##  <a name="a-namestackstacka--stackstack"></a><a name="stack__stack"></a>  stack::stack  
+ 构造一个空的堆栈或者是基容器类副本的堆栈。  
   
 ```  
 stack();
@@ -306,11 +322,11 @@ explicit stack(const container_type& right);
   
 ### <a name="parameters"></a>参数  
  ` right`  
- 构造的堆栈的要成为副本的容器。  
+ 所构造堆栈要成为其副本的矢量。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // stack_stack.cpp  
 // compile with: /EHsc  
 #include <stack>  
@@ -347,8 +363,8 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="a-namestacktopa-stacktop"></a><a name="stack__top"></a>  stack:: top  
- 返回对堆栈顶部的元素的引用。  
+##  <a name="a-namestacktopa--stacktop"></a><a name="stack__top"></a>  stack::top  
+ 返回对堆栈顶部元素的引用。  
   
 ```  
 reference top();
@@ -357,16 +373,16 @@ const_reference top() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 对堆栈顶部的容器中的最后一个元素的引用。  
+ 对堆栈顶部容器中的最后一个元素的引用。  
   
 ### <a name="remarks"></a>备注  
- 堆栈必须为非空要应用的成员函数。 堆栈的顶部是所占用的最新添加的元素的位置，并且是容器末尾处的最后一个元素。  
+ 堆栈必须为非空才能应用成员函数。 堆栈顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。  
   
- 如果返回值为 **顶部** 分配给 `const_reference`, ，堆栈对象不能修改。 如果返回值为 **顶部** 分配给 **引用**, ，可以修改堆栈对象。  
+ 如果 **top** 的返回值赋给了 `const_reference`，则不能修改堆栈对象。 如果 **top** 的返回值赋给了 **reference**，则不能修改堆栈对象。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // stack_top.cpp  
 // compile with: /EHsc  
 #include <stack>  
@@ -395,19 +411,19 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="a-namestackvaluetypea-stackvaluetype"></a><a name="stack__value_type"></a>  stack:: value_type  
- 一种表示存储为元素在堆栈中的对象的类型的类型。  
+##  <a name="a-namestackvaluetypea--stackvaluetype"></a><a name="stack__value_type"></a>  stack::value_type  
+ 一种类型，它表示存储为堆栈中元素的对象类型。  
   
 ```  
 typedef typename Container::value_type value_type;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 类型为同义词 `value_type` 基适配的容器由堆栈。  
+ 类型为堆栈采用的基容器的 `value_type` 的同义词。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // stack_value_type.cpp  
 // compile with: /EHsc  
 #include <stack>  
@@ -435,6 +451,7 @@ The element at the top of the stack is 69.
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [标准模板库](../misc/standard-template-library.md)
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+
 

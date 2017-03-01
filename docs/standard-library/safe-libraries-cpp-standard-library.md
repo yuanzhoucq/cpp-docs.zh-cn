@@ -1,56 +1,74 @@
 ---
 title: "安全库：C++ 标准库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_SCL_SECURE_NO_DEPRECATE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "安全库"
-  - "安全库，标准 C++ 库"
-  - "安全标准 C++ 库"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _SCL_SECURE_NO_DEPRECATE
+dev_langs:
+- C++
+helpviewer_keywords:
+- Safe Libraries
+- Safe Libraries, C++ Standard Library
+- Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
 caps.latest.revision: 10
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 安全库：C++ 标准库
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 704101f267c1d63ffc5def918f031bfc9b257e67
+ms.lasthandoff: 02/24/2017
 
-已对随附于 Visual C\+\+ 的库（包括标准 C\+\+ 库）实施了多项功能增强以使它们更加安全。  
+---
+# <a name="safe-libraries-c-standard-library"></a>安全库：C++ 标准库
+已对随附于 Visual C++ 的库（包括 C++ 标准库）实施了多项功能增强以使它们更加安全。  
   
- 已将标准 C\+\+ 库中的多个方法确定为具有潜在的不安全性，因为它们可能导致缓冲区溢出或其他代码缺陷。 建议不要使用这些方法，已创建了更安全的新方法来替代这些方法。 这些新方法均以 `_s` 结尾。  
+ 已将 C++ 标准库中的多个方法确定为具有潜在的不安全性，因为它们可能导致缓冲区溢出或其他代码缺陷。 建议不要使用这些方法，已创建了更安全的新方法来替代这些方法。 这些新方法均以 `_s`结尾。  
   
- 还实施了多项功能增强以提升迭代器和算法的安全性。 有关详细信息，请参阅 [经过检查的迭代器](../standard-library/checked-iterators.md)、[调试迭代器支持](../standard-library/debug-iterator-support.md) 和 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)。  
+ 还实施了多项功能增强以提升迭代器和算法的安全性。 有关详细信息，请参阅 [Checked Iterators](../standard-library/checked-iterators.md)、 [Debug Iterator Support](../standard-library/debug-iterator-support.md) 和 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)。  
   
-## 备注  
- 下表列出了可能不安全的标准 C\+\+ 库方法，以及更安全的等效方法：  
+## <a name="remarks"></a>备注  
+ 下表列出了可能不安全的 C++ 标准库方法，以及更安全的等效方法：  
   
 |可能不安全的方法|更安全的等效方法|  
-|--------------|--------------|  
-|[basic\_string::copy](../Topic/basic_string::copy.md)|[basic\_string::\_Copy\_s](../Topic/basic_string::_Copy_s.md)|  
-|[char\_traits::copy](../Topic/char_traits::copy.md)|[char\_traits::\_Copy\_s](../Topic/char_traits::_Copy_s.md)|  
+|-------------------------------|----------------------|  
+|[basic_string::copy](../standard-library/basic-string-class.md#basic_string__copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#basic_string___copy_s)|  
+|[char_traits::copy](../standard-library/char-traits-struct.md#char_traits__copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#char_traits___copy_s)|  
   
- 如果调用以上任何一种潜在不安全的方法或如果错误使用迭代器，则编译器将生成 [编译器警告（等级 3）C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 有关如何禁用这些警告的信息，请参阅 [\_SCL\_SECURE\_NO\_WARNINGS](../standard-library/scl-secure-no-warnings.md)。  
+ 如果调用以上任何一种潜在不安全的方法或如果错误使用迭代器，则编译器将生成[编译器警告（3 级）C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 有关如何禁用这些警告的信息，请参阅 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)。  
   
-## 本节内容  
- [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)  
+## <a name="in-this-section"></a>本节内容  
+ [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)  
   
- [\_SCL\_SECURE\_NO\_WARNINGS](../standard-library/scl-secure-no-warnings.md)  
+ [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)  
   
  [经过检查的迭代器](../standard-library/checked-iterators.md)  
   
  [调试迭代器支持](../standard-library/debug-iterator-support.md)  
   
-## 请参阅  
- [STL 概述](../standard-library/cpp-standard-library-overview.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
+
+

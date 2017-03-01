@@ -1,51 +1,68 @@
 ---
-title: "_realloc_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_realloc_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_realloc_dbg"
-  - "realloc_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "重新分配内存块"
-  - "realloc_dbg 函数"
-  - "内存块, 重新分配"
-  - "内存, 重新分配"
-  - "_realloc_dbg 函数"
+title: "_realloc_dbg | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _realloc_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _realloc_dbg
+- realloc_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- reallocating memory blocks
+- realloc_dbg function
+- memory blocks, reallocating
+- memory, reallocating
+- _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _realloc_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 80dade4b6e288e80e37c7354fe73d4776227f401
+ms.lasthandoff: 02/24/2017
 
-通过对块进行移动和\/或调整大小（仅限调试版本），重新分配在堆中内存的指定块。  
+---
+# <a name="reallocdbg"></a>_realloc_dbg
+通过移动和/或调整块的大小重新分配一个指定堆上的内存块（仅限调试版本）。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void *_realloc_dbg(  
@@ -57,53 +74,53 @@ void *_realloc_dbg(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `userData`  
- 以前指定内存块的指针。  
+ 指向之前分配的内存块的指针。  
   
  `newSize`  
- 为重新分配的块请求大小\(以字节为单位\)。  
+ 重新分配块的请求大小（字节）。  
   
  `blockType`  
- 为重新分配的块请求类型：`_CLIENT_BLOCK` or `_NORMAL_BLOCK`。  
+ 重新分配块的请求类型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
   
  `filename`  
- 指向请求 `realloc` 操作或为空的源文件的名称的指针。  
+ 指向已请求 `realloc` 操作的源文件名的指针或 NULL。  
   
  `linenumber`  
- 在请求 `realloc` 操作或为空的源文件中的行号。  
+ 请求 `realloc` 操作所在的源文件中的行数或 NULL。  
   
- `filename` 和 `linenumber` 的参数只有在 `_realloc_dbg` 被明确调用或[\_CRTDBG\_MAP\_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)预处理器被持续定义时才有效。  
+ 仅当已显式调用 `_realloc_dbg` 或已定义 [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) 预处理器常量时，才可使用 `filename` 和 `linenumber` 参数。  
   
-## 返回值  
- 成功完成后，此函数返回指向重新分配内存块的用户部分的指针，调用新的处理程序函数或返回空。  对于返回行为的完整描述，请参阅下面的备注部分。  有关如何使用新的处理函数的详细信息，请参阅 [realloc](../../c-runtime-library/reference/realloc.md) 函数。  
+## <a name="return-value"></a>返回值  
+ 成功完成时，此函数将返回指向重新分配的内存块的用户部分的指针、调用新处理程序函数，或者返回 NULL。 有关返回行为的完整说明，请参阅以下“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [realloc](../../c-runtime-library/reference/realloc.md) 函数。  
   
-## 备注  
- `_realloc_dbg` 是  [realloc](../../c-runtime-library/reference/realloc.md) 函数的一种调试版本。  当 [\_DEBUG](../../c-runtime-library/debug.md) 未定义时，每次减少调用`_realloc_dbg` 而去调用 `realloc`。   `realloc` 和 `_realloc_dbg` 在基堆中重新分配内存块，但是 `_realloc_dbg` 提供一些调试特征：块中用户部分任意侧的缓冲区测试是否泄漏，块类型参数跟踪特定的分配类型，并且`filename`\/`linenumber` 信息决定分配请求的来源。  
+## <a name="remarks"></a>备注  
+ `_realloc_dbg` 是 [realloc](../../c-runtime-library/reference/realloc.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_realloc_dbg` 的调用都会减少到对 `realloc` 的调用。 `realloc` 和 `_realloc_dbg` 都可重新分配基堆中的内存块，但是 `_realloc_dbg` 还包含几种调试功能：用于测试泄漏的块的用户部分两侧的缓冲区、用于跟踪特定分配类型的块类型参数，以及用于确定分配请求的源的 `filename`/`linenumber` 信息。  
   
- `_realloc_dbg` 重新分配比请求的`newSize` 稍微更多空间的内存块。  `newSize`可能比初始分配的内存块大小更多或者更少。  通过调试堆管理器来连接调试内存块并且提供应用程序调试头信息和重写缓冲区来使用额外的空间。  重新分配可能会导致移动在堆中原来的内存块到不同的位置，以及改变内存块的大小。  如果移动内存块，则原始块的内容将被覆盖。  
+ `_realloc_dbg` 将使用比请求的 `newSize` 稍多的空间重新分配指定的内存块。 `newSize` 可能会大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 如果移动内存块，将覆盖原始块中的内容。  
   
- 如果内存分配失败，或者需要的内存数量（包括之前提到的开销）超过 `_HEAP_MAXREQ`，那么 `_realloc_dbg` 设置 `errno` 为 `ENOMEM`。  有关这和其他错误代码的信息，请参阅 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如果内存分配失败，或者如果所需的内存量（包括之前提到过的开销）超过 `_realloc_dbg`，则 `errno` 将 `ENOMEM` 设置为 `_HEAP_MAXREQ`。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
- 有关在调试版本中的基位置堆中内存如何分配，初始化和管理的详细信息，请参阅 [CRT 调试堆详细信息](../Topic/CRT%20Debug%20Heap%20Details.md)。  有关分配块的类型以及它们是如何使用的信息，请参阅 [调试堆中的块类型](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)。  有关调用一个标准的堆函数及其调试版本在应用程序的调试版本之间的差异，请参阅[堆分配函数的“Debug”版本](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md)。  
+ 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_realloc_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_realloc_dbg`|\<crtdbg.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
   
-## 示例  
- 请参阅 [\_msize\_dbg](../../c-runtime-library/reference/msize-dbg.md) 主题中的示例。  
+## <a name="example"></a>示例  
+ 请参阅 [_msize_dbg](../../c-runtime-library/reference/msize-dbg.md) 主题中的示例。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

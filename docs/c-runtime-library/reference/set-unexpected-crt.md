@@ -1,48 +1,64 @@
 ---
-title: "set_unexpected (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "set_unexpected"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_unexpected"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "异常处理, 终止"
-  - "set_unexpected 函数"
-  - "unexpected 函数"
+title: "set_unexpected (CRT) | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- set_unexpected
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- set_unexpected
+dev_langs:
+- C++
+helpviewer_keywords:
+- set_unexpected function
+- unexpected function
+- exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# set_unexpected (CRT)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 97be545243fb4ef60bff8b8244ca9fd943b25cd6
+ms.lasthandoff: 02/24/2017
 
-安装你自己的通过 `unexpected` 被调用的终端函数。  
+---
+# <a name="setunexpected-crt"></a>set_unexpected (CRT)
+安装要由 `unexpected` 调用的自身的终止函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 unexpected_function set_unexpected(  
@@ -50,45 +66,45 @@ unexpected_function set_unexpected(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `unexpFunction`  
- 编写的用于替换 `unexpected` 的函数的指针。  
+ 指向为替换 `unexpected` 函数而编写的函数的指针。  
   
-## 返回值  
- 返回指向由 `_set_unexpected` 注册的前终端函数，以便前面的函数之后可能还原。  如果以前尚未设置函数，返回值可用于还原默认行为；此值可能为 NULL。  
+## <a name="return-value"></a>返回值  
+ 返回指向由 `_set_unexpected` 注册的上一个终止函数的指针，以便稍后能还原上一个函数。 如果之前尚未设置函数，则返回值可用于还原默认行为；此值可能为 NULL。  
   
-## 备注  
- `set_unexpected` 函数安装 `unexpFunction` 作为 `unexpected`调用的函数。  在当前 C\+\+异常处理实现中不使用`unexpected`。  `unexpected_function` type定义为指向用户定义的异常函数的指针，`unexpFunction` 返回 `void` 自定义 `unexpFunction` 函数不应返回到调用方。  
+## <a name="remarks"></a>备注  
+ `set_unexpected` 函数安装 `unexpFunction` 作为由 `unexpected` 调用的函数。 不会在当前 C++ 异常处理实现中使用 `unexpected`。 在 EH.H 中将 `unexpected_function` 类型定义为指向用户定义的意外函数的指针，则 `unexpFunction` 返回 `void`。 自定义的 `unexpFunction` 函数不应返回到其调用方。  
   
 ```  
 typedef void ( *unexpected_function )( );  
 ```  
   
- `unexpected` 默认调用 `terminate`。  通过编写您自己终止函数和通过你的函数作为它的参数来调用 `set_unexpected` 来更改此默认行为。  `unexpected` 调用指定为 `set_unexpected` 的参数的最后一个函数。  
+ 默认情况下，`unexpected` 调用 `terminate`。 你可以通过以下方式更改此默认行为：编写自己的终止函数并调用 `set_unexpected`（将该函数的名称作为其参数）。 `unexpected` 调用作为 `set_unexpected` 的参数提供的最后一个函数。  
   
- 与通过调用`set_terminate`安装的自定义终端函数不同，异常可能从`unexpFunction`中被抛出。  
+ 与通过对 `set_terminate` 的调用所安装的自定义终止函数不同，可能会从 `unexpFunction` 中引发异常。  
   
- 在多线程环境中，每个线程都是单独维护异常函数。  每个新线程需要安装自己意外的函数。  因此，每个线程都负责自己意外处理。  
+ 在多线程环境中，单独为每个线程维护意外函数。 每个新线程都需要安装它自己的意外函数。 因此，每个线程都负责它自己的意外处理。  
   
- 在当前的 C\+\+ 异常处理 Microsoft 实现中，`unexpected` 调用 `terminate` 默认调用,从不被异常处理的运行库调用。  调用 `unexpected` 而不是 `terminate`没有特定的优势。  
+ 在当前 C++ 异常处理的 Microsoft 实现中，`unexpected` 默认调用 `terminate`，且始终不由异常处理运行时库进行调用。 调用 `unexpected` 而不是 `terminate` 并没有特别的优势。  
   
- 所有的动态链接DLLs 或 EXEs 有单`set_unexpected`，即使您调用`set_unexpected`处理程序可能会被另一个替代，或者您用另外的DLL 或 EXE替代处理程序。  
+ 存在适用于所有动态链接的 DLL 或 EXE 的单个 `set_unexpected` 处理程序；即使你调用 `set_unexpected`，你的处理程序也可能会替换为另一个处理程序，或者你也要使用另一个 DLL 或 EXE 替换处理程序集。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`set_unexpected`|\<eh.h\>|  
+|-------------|---------------------|  
+|`set_unexpected`|\<eh.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [异常处理例程](../../c-runtime-library/exception-handling-routines.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [\_get\_unexpected](../../c-runtime-library/reference/get-unexpected.md)   
- [set\_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
+ [_get_unexpected](../../c-runtime-library/reference/get-unexpected.md)   
+ [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
  [terminate](../../c-runtime-library/reference/terminate-crt.md)   
  [unexpected](../../c-runtime-library/reference/unexpected-crt.md)

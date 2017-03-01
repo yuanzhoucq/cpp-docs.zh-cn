@@ -1,74 +1,228 @@
 ---
-title: "reader_writer_lock 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::reader_writer_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reader_writer_lock 类"
+title: "reader_writer_lock 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::reader_writer_lock
+dev_langs:
+- C++
+helpviewer_keywords:
+- reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# reader_writer_lock 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: d5d2fde890b0836621fcd1db5bb87b1933bb2a04
+ms.lasthandoff: 02/24/2017
 
-只能本地旋转的基于编写器首选队列的读取器\-编写器锁。  锁授予对编写器的先进先出 \(FIFO\) 访问，并使读取器在编写器在持续负载的情况下停止。  
+---
+# <a name="readerwriterlock-class"></a>reader_writer_lock 类
+具有仅限本地旋转的基于编写器首选队列的读取器-编写器锁。 锁授予对编写器的先进先出 (FIFO) 访问权限，并在出现编写器持续负载的情况下停止读取器。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class reader_writer_lock;
 ```  
-class reader_writer_lock;  
-```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共类  
+### <a name="public-classes"></a>公共类  
   
 |名称|说明|  
-|--------|--------|  
-|[reader\_writer\_lock::scoped\_lock 类](../Topic/reader_writer_lock::scoped_lock%20Class.md)|可用于获取 `reader_writer_lock` 锁定对象用作编写器的异常安全 RAII 包装。|  
-|[reader\_writer\_lock::scoped\_lock\_read 类](../Topic/reader_writer_lock::scoped_lock_read%20Class.md)|可用于获取 `reader_writer_lock` 锁定对象用作读取器的异常安全 RAII 包装。|  
+|----------|-----------------|  
+|[reader_writer_lock:: scoped_lock 类](#scoped_lock_class)|异常安全 RAII 包装可用于获取`reader_writer_lock`作为编写器锁的对象。|  
+|[reader_writer_lock:: scoped_lock_read 类](#scoped_lock_read_class)|异常安全 RAII 包装可用于获取`reader_writer_lock`锁定对象用作一个读取器。|  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
-|[reader\_writer\_lock::reader\_writer\_lock 构造函数](../Topic/reader_writer_lock::reader_writer_lock%20Constructor.md)|构造新的 `reader_writer_lock` 对象。|  
-|[reader\_writer\_lock::~reader\_writer\_lock 析构函数](../Topic/reader_writer_lock::~reader_writer_lock%20Destructor.md)|销毁 `reader_writer_lock` 对象。|  
+|名称|描述|  
+|----------|-----------------|  
+|[reader_writer_lock 构造函数](#ctor)|构造一个新`reader_writer_lock`对象。|  
+|[~ reader_writer_lock 析构函数](#dtor)|销毁`reader_writer_lock`对象。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[reader\_writer\_lock::lock 方法](../Topic/reader_writer_lock::lock%20Method.md)|获取读取器\-编写器锁，用作编写器。|  
-|[reader\_writer\_lock::lock\_read 方法](../Topic/reader_writer_lock::lock_read%20Method.md)|获取读取器\-编写器锁，用作读取器。  如果有编写器，活动的读取器必须等待直到这些编写器完成。  读取器只注册感兴趣锁定并等待编写器释放它。|  
-|[reader\_writer\_lock::try\_lock 方法](../Topic/reader_writer_lock::try_lock%20Method.md)|尝试将读取器\-编写器锁获取为一个不阻塞的编写器。|  
-|[reader\_writer\_lock::try\_lock\_read 方法](../Topic/reader_writer_lock::try_lock_read%20Method.md)|尝试将读取器\-编写器锁获取为一个不阻塞的读取器。|  
-|[reader\_writer\_lock::unlock 方法](../Topic/reader_writer_lock::unlock%20Method.md)|根据锁定读取器\-编写器锁的读取器和编写器进行解锁。|  
+|名称|描述|  
+|----------|-----------------|  
+|[lock 方法](#lock)|获取读取器 / 编写器锁，用作一个编写器。|  
+|[lock_read 方法](#lock_read)|获取读取器 / 编写器锁，用作一个读取器。 如果有编写器，活动的读取器必须等待，直到它们完成。 读取器只需注册感兴趣的锁，并等待编写器将其释放。|  
+|[try_lock 方法](#try_lock)|尝试获取作为编写器读取器 / 编写器锁，而无需阻止。|  
+|[try_lock_read 方法](#try_lock_read)|尝试获取为读取器读取器 / 编写器锁，而不会阻止。|  
+|[unlock 方法](#unlock)|解除锁定根据它、 读取器或编写器锁定的读取器 / 编写器锁。|  
   
-## 备注  
- 有关更多信息，请参见 [同步数据结构](../../../parallel/concrt/synchronization-data-structures.md)。  
+## <a name="remarks"></a>备注  
+ 有关详细信息，请参阅[同步数据结构](../../../parallel/concrt/synchronization-data-structures.md)。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `reader_writer_lock`  
   
-## 要求  
- **标头：**concrt.h  
+## <a name="requirements"></a>要求  
+ **标头︰** concrt.h  
   
- **命名空间:** 并发  
+ **命名空间：** 并发  
   
-## 请参阅  
- [concurrency 命名空间](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [critical\_section 类](../../../parallel/concrt/reference/critical-section-class.md)
+##  <a name="a-namelocka-lock"></a><a name="lock"></a>锁 
+
+ 获取读取器 / 编写器锁，用作一个编写器。  
+  
+```
+void lock();
+```  
+  
+### <a name="remarks"></a>备注  
+ 通常是更安全，以利用[scoped_lock](#scoped_lock_class)构造来获取和释放`reader_writer_lock`引发异常的撰稿人对象安全的方式。  
+  
+ 在编写器尝试获取锁后，在编写器成功获取和释放该锁之前任何将来的读取器都将阻塞。 此锁定偏爱编写器且不会停止在编写器连续负载下的读取器。  
+  
+ 编写器链接在一起，以便编写器退出锁释放行中的下一步编写器。  
+  
+ 如果通过调用上下文中，已持有此锁[improper_lock](improper-lock-class.md)将会引发异常。  
+  
+##  <a name="a-namelockreada-lockread"></a><a name="lock_read"></a>lock_read 
+
+ 获取读取器 / 编写器锁，用作一个读取器。 如果有编写器，活动的读取器必须等待，直到它们完成。 读取器只需注册感兴趣的锁，并等待编写器将其释放。  
+  
+```
+void lock_read();
+```  
+  
+### <a name="remarks"></a>备注  
+ 通常是更安全，以利用[scoped_lock_read](#scoped_lock_read_class)构造来获取和释放`reader_writer_lock`对象作为一个读取器引发异常安全的方式。  
+  
+ 如果有正在等待锁的编写器，则读取器将等待，直到在行中的所有编写器已获取并释放该锁。 此锁定偏爱编写器且不会停止在编写器连续负载下的读取器。  
+  
+##  <a name="a-namectora-readerwriterlock"></a><a name="ctor"></a>reader_writer_lock 
+
+ 构造一个新`reader_writer_lock`对象。  
+  
+```
+reader_writer_lock();
+```  
+  
+##  <a name="a-namedtora-readerwriterlock"></a><a name="dtor"></a>~ reader_writer_lock 
+
+ 销毁`reader_writer_lock`对象。  
+  
+```
+~reader_writer_lock();
+```  
+  
+### <a name="remarks"></a>备注  
+ 预计在析构函数运行时不再持有锁。 允许读取器编写器锁与锁定析构仍保留会导致未定义的行为。  
+  
+##  <a name="a-namescopedlockclassa--readerwriterlockscopedlock-class"></a><a name="scoped_lock_class"></a>reader_writer_lock:: scoped_lock 类  
+ 异常安全 RAII 包装可用于获取`reader_writer_lock`作为编写器锁的对象。  
+  
+```
+class scoped_lock;
+``` 
+## <a name="a-namescopedlockctora-scopedlockscopedlock"></a><a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+
+构造`scoped_lock`对象，并获取`reader_writer_lock`传入的对象`_Reader_writer_lock`作为编写器的参数。 如果由另一个线程持有此锁，则此调用将阻塞。  
+  
+  
+```
+explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
+```  
+  
+#### <a name="parameters"></a>参数  
+ `_Reader_writer_lock`  
+ `reader_writer_lock`对象获取的撰稿人。  
+  
+## <a name="a-namescopedlockdtora-scopedlockscopedlock"></a><a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+
+销毁`reader_writer_lock`对象并释放其构造函数中提供的锁。   
+
+```
+~scoped_lock();
+```  
+  
+##  <a name="a-namescopedlockreadclassa--readerwriterlockscopedlockread-class"></a><a name="scoped_lock_read_class"></a>reader_writer_lock:: scoped_lock_read 类  
+ 异常安全 RAII 包装可用于获取`reader_writer_lock`锁定对象用作一个读取器。  
+  
+```
+class scoped_lock_read;
+```  
+  
+##  <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+
+ 尝试获取作为编写器读取器 / 编写器锁，而无需阻止。  
+
+## <a name="a-namescopedlockreadctora-scopedlockreadscopedlockread"></a><a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
+
+构造`scoped_lock_read`对象，并获取`reader_writer_lock`传入的对象`_Reader_writer_lock`参数作为一个读取器。 如果由作为编写器的另一个线程持有锁或有挂起的编写器，此调用将阻塞。  
+  
+```
+explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
+```  
+  
+#### <a name="parameters"></a>参数  
+ `_Reader_writer_lock`  
+ `reader_writer_lock`要获取作为读取器对象。  
+  
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read 析构函数
+销毁`scoped_lock_read`对象并释放其构造函数中提供的锁。  
+
+```
+~scoped_lock_read();
+```  
+  
+## <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+
+```
+bool try_lock();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 如果已获取锁，则这`true`; 否则为值`false`。  
+  
+##  <a name="a-nametrylockreada-trylockread"></a><a name="try_lock_read"></a>try_lock_read 
+
+ 尝试获取为读取器读取器 / 编写器锁，而不会阻止。  
+  
+```
+bool try_lock_read();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 如果已获取锁，则这`true`; 否则为值`false`。  
+  
+##  <a name="a-nameunlocka-unlock"></a><a name="unlock"></a>解除锁定 
+
+ 解除锁定根据它、 读取器或编写器锁定的读取器 / 编写器锁。  
+  
+```
+void unlock();
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果有正在等待锁的编写器，释放锁会始终转到按 FIFO 顺序的下一步编写器。 此锁定偏爱编写器且不会停止在编写器连续负载下的读取器。  
+  
+## <a name="see-also"></a>另请参阅  
+ [并发 Namespace](concurrency-namespace.md)   
+ [critical_section 类](critical-section-class.md)
+

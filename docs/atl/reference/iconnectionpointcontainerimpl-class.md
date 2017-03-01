@@ -1,78 +1,112 @@
 ---
-title: "IConnectionPointContainerImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::IConnectionPointContainerImpl"
-  - "ATL.IConnectionPointContainerImpl"
-  - "ATL.IConnectionPointContainerImpl<T>"
-  - "IConnectionPointContainerImpl"
-  - "ATL::IConnectionPointContainerImpl<T>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "connectable objects"
-  - "连接点 [C++], container"
-  - "IConnectionPointContainerImpl class"
+title: "IConnectionPointContainerImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::IConnectionPointContainerImpl
+- ATL.IConnectionPointContainerImpl
+- ATL.IConnectionPointContainerImpl<T>
+- IConnectionPointContainerImpl
+- ATL::IConnectionPointContainerImpl<T>
+dev_langs:
+- C++
+helpviewer_keywords:
+- connectable objects
+- connection points [C++], container
+- IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# IConnectionPointContainerImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 81a68cae1d961f2846c1a807432f22ae92ca3b89
+ms.lasthandoff: 02/24/2017
 
-此选件类实现连接点容器管理 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) 对象的集合。  
+---
+# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl 类
+此类实现连接点容器，用来管理一组[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template<class T>  
+class ATL_NO_VTABLE IConnectionPointContainerImpl 
+   : public IConnectionPointContainer
 ```  
   
-      template<  
-   class T   
->  
-class ATL_NO_VTABLE IConnectionPointContainerImpl :   
-   public IConnectionPointContainer  
-```  
-  
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 您的选件类，从派生 `IConnectionPointContainerImpl`。  
+ 您的类，派生自`IConnectionPointContainerImpl`。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
-|--------|--------|  
-|[IConnectionPointContainerImpl::EnumConnectionPoints](../Topic/IConnectionPointContainerImpl::EnumConnectionPoints.md)|在可连接的对象创建枚举数循环访问连接点支持。|  
-|[IConnectionPointContainerImpl::FindConnectionPoint](../Topic/IConnectionPointContainerImpl::FindConnectionPoint.md)|检索接口指针。支持指定的IID的连接点。|  
+|----------|-----------------|  
+|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|创建一个枚举器循环访问可连接对象中所支持的连接点。|  
+|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|检索支持指定的 IID 与连接点的接口指针。|  
   
-## 备注  
- `IConnectionPointContainerImpl` 实现连接点容器管理 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) 对象的集合。  `IConnectionPointContainerImpl` 提供客户端可以调用检索有关可连接对象的更多信息的两个方法:  
+## <a name="remarks"></a>备注  
+ `IConnectionPointContainerImpl`实现连接点容器，用来管理一组[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)对象。 `IConnectionPointContainerImpl`提供客户端可以调用来检索有关可连接对象的详细信息的两种方法︰  
   
--   `EnumConnectionPoints` 允许客户端确定输出接口对象支持。  
+- `EnumConnectionPoints`允许客户端，以确定对象支持的传出接口。  
   
--   `FindConnectionPoint` 允许客户端确定对象是否支持给定的输出接口。  
+- `FindConnectionPoint`允许客户端，以确定对象是否支持特定的传出接口。  
   
- 有关如何使用的信息在ATL连接点，请参见一 [连接点](../../atl/atl-connection-points.md)文章。  
+ 使用 ATL 中的连接点的信息，请参阅文章[连接点](../../atl/atl-connection-points.md)。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IConnectionPointContainer`  
   
  `IConnectionPointContainerImpl`  
   
-## 要求  
- **Header:** atlcom.h  
+## <a name="requirements"></a>要求  
+ **标头︰** atlcom.h  
   
-## 请参阅  
+##  <a name="a-nameenumconnectionpointsa--iconnectionpointcontainerimplenumconnectionpoints"></a><a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
+ 创建一个枚举器循环访问可连接对象中所支持的连接点。  
+  
+```
+STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
+```  
+  
+### <a name="remarks"></a>备注  
+ 请参阅[IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-namefindconnectionpointa--iconnectionpointcontainerimplfindconnectionpoint"></a><a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
+ 检索支持指定的 IID 与连接点的接口指针。  
+  
+```
+STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
+```  
+  
+### <a name="remarks"></a>备注  
+ 请参阅[IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+## <a name="see-also"></a>另请参阅  
  [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)   
- [Class Overview](../../atl/atl-class-overview.md)
+ [类概述](../../atl/atl-class-overview.md)
+

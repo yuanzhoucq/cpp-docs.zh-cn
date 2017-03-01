@@ -1,89 +1,109 @@
 ---
-title: "&lt;system_error&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<system_error>"
-  - "std::<system_error>"
-  - "<system_error>"
-  - "system_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "system_error 标头"
+title: '&lt;system_error&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<system_error>
+- std::<system_error>
+- <system_error>
+- system_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# &lt;system_error&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: ad53550cce165587057910e3cd4c77427fb1cd55
+ms.lasthandoff: 02/24/2017
 
-包含标头定义异常类 `system_error` 和处理的低系统错误相关模板的 `<system_error>`。  
+---
+# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+包括定义异常类 `system_error` 的标头 `<system_error>` 以及处理低级别系统错误的相关模板。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #include <system_error>  
 ```  
   
-### 对象  
+### <a name="objects"></a>对象  
   
 |||  
 |-|-|  
-|[generic\_category](../Topic/generic_category.md)|表示一般错误的类别。|  
-|[system\_category](../Topic/system_category.md)|表示低系统溢出引起的错误的类别。|  
+|[generic_category](../standard-library/system-error-functions.md#generic_category)|表示一般错误的类别。|  
+|[system_category](../standard-library/system-error-functions.md#system_category)|表示因低级别系统溢出而引起的错误类别。|  
   
-### Typedef  
-  
-|||  
-|-|-|  
-|[generic\_errno](../Topic/generic_errno.md)|表示枚举的所有错误代码宏提供符号的类型由 `<errno.h>`中的 Posix 定义。|  
-  
-### 函数  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[make\_error\_code](../Topic/make_error_code.md)|创建一个 `error_code` 对象。|  
-|[make\_error\_condition](../Topic/make_error_condition.md)|创建一个 `error_condition` 对象。|  
+|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|一种表示枚举的类型，用于为所有由 `<errno.h>` 中的 Posix 定义的错误代码宏提供符号名称。|  
   
-### 运算符  
-  
-|||  
-|-|-|  
-|[运算符\=\=](../Topic/operator==%20\(%3Csystem_error%3E\).md)|测试，如果运算符左侧的对象与右侧的对象相等。|  
-|[运算符\!\=](../Topic/operator!=%20\(%3Csystem_error%3E\).md)|测试，如果运算符左侧的对象与右侧的对象不等于。|  
-|[operator\<](../Topic/operator%3C%20\(%3Csystem_error%3E\).md)|测试，如果对象比为比较传入的对象较少。|  
-  
-### 枚举  
+### <a name="functions"></a>函数  
   
 |||  
 |-|-|  
-|[errc](../Topic/errc%20Enumeration.md)|提供在`<errno.h>`由Posix定义的为错误代码的符号名。|  
+|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|创建一个 `error_code` 对象。|  
+|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|创建一个 `error_condition` 对象。|  
   
-### 类和结构  
+### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[error\_category](../standard-library/error-category-class.md)|描述错误类别表示代码的抽象基，为对象。|  
-|[error\_code](../standard-library/error-code-class.md)|表示为实现特定的低系统错误。|  
-|[error\_condition](../standard-library/error-condition-class.md)|表示用户定义的错误代码。|  
-|[is\_error\_code\_enum](../standard-library/is-error-code-enum-class.md)|表示测试枚举类型的谓词。[error\_code 类](../standard-library/error-code-class.md)|  
-|[is\_error\_condition\_enum](../standard-library/is-error-condition-enum-class.md)|表示测试枚举类型的谓词。[error\_condition 类](../standard-library/error-condition-class.md)|  
-|[system\_error](../standard-library/system-error-class.md)|所有表示引发的异常的基类。报告一个低系统溢出。|  
+|[operator==](../standard-library/system-error-operators.md#operator_eq_eq)|测试运算符左侧的对象是否等于右侧的对象。|  
+|[operator!=](../standard-library/system-error-operators.md#operator_neq)|测试运算符左侧的对象是否不等于右侧的对象。|  
+|[operator<](../standard-library/system-error-operators.md#operator_lt_)|测试一个对象是否小于要比较的传入对象。|  
   
-## 要求  
- **标头:** \<system\_error\>  
+### <a name="enumerations"></a>枚举  
   
- **命名空间:**  std  
+|||  
+|-|-|  
+|[errc](../standard-library/system-error-enums.md#errc_enumeration)|为 `<errno.h>` 中的 Posix 定义的所有错误代码宏提供符号名称。|  
   
-## 请参阅  
+### <a name="classes-and-structs"></a>类和结构  
+  
+|||  
+|-|-|  
+|[error_category](../standard-library/error-category-class.md)|表示描述错误代码类别的对象的抽象、公用基。|  
+|[error_code](../standard-library/error-code-class.md)|表示特定于实现的低级别系统错误。|  
+|[error_condition](../standard-library/error-condition-class.md)|表示用户定义的错误代码。|  
+|[is_error_code_enum](../standard-library/is-error-code-enum-class.md)|表示测试 [error_code](../standard-library/error-code-class.md) 枚举的类型谓词。|  
+|[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|表示测试 [error_condition Class](../standard-library/error-condition-class.md) 枚举的类型谓词。|  
+|[system_error](../standard-library/system-error-class.md)|表示为报告低级别系统溢出而引发的所有异常的基类。|  
+  
+## <a name="requirements"></a>要求  
+ **标头：**\<system_error>  
+  
+ **命名空间：** std  
+  
+## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

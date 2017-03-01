@@ -1,51 +1,67 @@
 ---
-title: "_setmaxstdio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_setmaxstdio"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setmaxstdio"
-  - "_setmaxstdio"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_setmaxstdio 函数"
-  - "最大打开文件数"
-  - "打开文件, 最大"
-  - "setmaxstdio 函数"
+title: "_setmaxstdio | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _setmaxstdio
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setmaxstdio
+- _setmaxstdio
+dev_langs:
+- C++
+helpviewer_keywords:
+- maximum open files
+- _setmaxstdio function
+- setmaxstdio function
+- open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _setmaxstdio
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7947bb8de34b5e80321ddacf03e4606a53b5dc90
+ms.lasthandoff: 02/24/2017
 
-设置同时打开文件的数量最大数目级别的 `stdio`。  
+---
+# <a name="setmaxstdio"></a>_setmaxstdio
+设置在 `stdio` 级别同时打开的最大文件数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _setmaxstdio(  
@@ -53,40 +69,40 @@ int _setmaxstdio(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `newmax`  
- 设置同时打开文件的数量最大数目级别的 `stdio`。  
+ 在 `stdio` 级别同时打开的新的最大文件数。  
   
-## 返回值  
- 如果成功，则返回 `newmax`；否则返回 。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则返回 `newmax`；否则返回 –1。  
   
- 如果 `newmax` 小于 `_IOB_ENTRIES` 或更大然后处理的最大数字中的可用操作系统无效参数，处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果执行允许继续，这个函数返回 \-1并设定`errno` 到 `EINVAL` 。  
+ 如果 `newmax` 小于 `_IOB_ENTRIES` 或大于操作系统中可用的句柄的最大数量，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 -1 并将 `errno` 设置为 `EINVAL`。  
   
- 有关这些内容以及其他错误代码的详细信息，请参阅 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `_setmaxstdio` 功能转换可能同时是打开 `stdio` 级别的文件个数的最大值。  
+## <a name="remarks"></a>备注  
+ `_setmaxstdio` 函数将更改可能在 `stdio` 级别同时打开的最大文件数。  
   
- C 运行时现在 I\/O 支持在 Win32 平台的多个打开文件比以前的版本。  2,048 文件可以同时处于打开 [级别的用于 lowio](../../c-runtime-library/low-level-i-o.md) \(即打开并访问通过 `_open`、`_read`，`_write`，依此类推 I\/O 功能系列\)。  512 文件可以同时处于打开 [级别的用于 lowio](../../c-runtime-library/stream-i-o.md) \(即打开并访问通过 `fopen`、`fgetc`，`fputc`，依此类推 I\/O 功能系列\)。  512 打开文件限制在 `stdio` 级别中增加到最大 2,048 通过 `_setmaxstdio` 函数。  
+ 相比早期版本，现在 C 运行时 I/O 在 Win32 平台上支持更多的打开文件。 在 [lowio 级别](../../c-runtime-library/low-level-i-o.md)最多可同时打开 2,048 个文件（即，通过 `_open`、`_read`、`_write` 等 I/O 函数系列打开和访问）。 在 [stdio 级别](../../c-runtime-library/stream-i-o.md)最多可同时打开 512 个文件（即，通过 `fopen`、`fgetc`、`fputc` 等函数系列打开和访问）。 在 `stdio` 级别 512 个打开文件的限制可通过 `_setmaxstdio` 函数增加到最多 2,048 个。  
   
- 由于 `stdio`级的函数，如 `fopen`，生成函数放在 `lowio` 顶部，最多 2,048 是使用 C 运行库访问同时打开的文件个数的强烈上限。  
+ 因为诸如 `fopen` 的 `stdio` 级别的函数是基于 `lowio` 函数生成的，2,048 的最大值是通过 C 运行时库访问的同时打开文件数的硬上限。  
   
 > [!NOTE]
->  此上限可能是使之超越由特定 Win32 平台和配置支持。  
+>  此上限可能会超过特定 Win32 平台和配置所支持的文件数。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_setmaxstdio`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_setmaxstdio`|\<stdio.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
- 请参见 [\_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md) 的示例,有关使用 `_setmaxstdio`。  
+## <a name="example"></a>示例  
+ 请参阅 [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md) 了解使用 `_setmaxstdio` 的示例。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)

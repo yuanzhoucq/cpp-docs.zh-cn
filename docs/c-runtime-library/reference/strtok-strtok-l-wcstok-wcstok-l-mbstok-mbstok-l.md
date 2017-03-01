@@ -1,74 +1,90 @@
 ---
-title: "strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbstok_l"
-  - "_mbstok"
-  - "wcstok"
-  - "_mbstok"
-  - "strtok"
-  - "_wcstok_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbstok"
-  - "strtok"
-  - "_tcstok"
-  - "wcstok"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbstok 函数"
-  - "_mbstok_l 函数"
-  - "_strtok_l 函数"
-  - "_tcstok 函数"
-  - "_tcstok_l 函数"
-  - "_wcstok_l 函数"
-  - "mbstok 函数"
-  - "mbstok_l 函数"
-  - "字符串 [C++], 搜索"
-  - "strtok 函数"
-  - "strtok_l 函数"
-  - "tcstok 函数"
-  - "tcstok_l 函数"
-  - "标记, 在字符串中查找"
-  - "wcstok 函数"
-  - "wcstok_l 函数"
+title: "strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbstok_l
+- _mbstok
+- wcstok
+- _mbstok
+- strtok
+- _wcstok_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbstok
+- strtok
+- _tcstok
+- wcstok
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbstok_l function
+- strings [C++], searching
+- tcstok function
+- _tcstok function
+- _strtok_l function
+- strtok function
+- mbstok function
+- wcstok_l function
+- _mbstok function
+- tcstok_l function
+- tokens, finding in strings
+- _mbstok_l function
+- wcstok function
+- _wcstok_l function
+- _tcstok_l function
+- strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
 caps.latest.revision: 34
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 34
----
-# strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
+ms.lasthandoff: 02/24/2017
 
-通过使用当前区域设置或通过的区域设置，查找在字符串中的下一个标记。  有关这些函数的更多安全版本，请参见 [strtok\_s、\_strtok\_s\_l、wcstok\_s、\_wcstok\_s\_l、\_mbstok\_s、\_mbstok\_s\_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)。  
+---
+# <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
+通过使用当前区域设置或传入的指定区域设置，查找在字符串中的下一个标记。 提供这些函数的更多安全版本；请参阅 [strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)。  
   
 > [!IMPORTANT]
->  `_mbstok` 和 `_mbstok_l` 不能在 Windows 运行时执行的应用程序中使用。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  `_mbstok` 和 `_mbstok_l` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 char *strtok(  
@@ -90,50 +106,50 @@ unsigned char *_mbstok(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `strToken`  
- 字符串包含一个标记或一个以上的标记。  
+ 包含一个或多个标记的字符串。  
   
  `strDelimit`  
- 分隔符的设置。  
+ 分隔符字符组。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 返回在 `strToken`中指向下一个标记的指针。  当未找到其他标记时，它们返回 `NULL` 。  通过为返回标记后出现的第一个分隔符替换 `NULL` 字符，每个调用修改 `strToken` 。  
+## <a name="return-value"></a>返回值  
+ 返回 `strToken` 中找到的指向下一个标记的指针。 它们在未找到更多标记时返回 `NULL`。 每次调用都会修改 `strToken`，方法是通过在标记返回后，为出现的第一个分隔符替换 `NULL` 字符。  
   
-## 备注  
- `strtok` 函数来查找在 `strToken`的下一个标记。  `strDelimit`中字符的设置指定标记分隔符，该标记分隔符可能在当前调用的 `strToken` 中找到。  `wcstok` 和 `_mbstok` 是宽字符，属于 `strtok` 的多节字字符版本。  参数和 `wcstok` 的返回值是宽字符字符串；`_mbstok` 的参数和返回值为多字节字符字符串。  否则这三个函数否则具有相同行为。  
+## <a name="remarks"></a>备注  
+ `strtok` 函数查找 `strToken` 中的下一个标记。 `strDelimit` 中的字符组指定在当前调用上的 `strToken` 中找到的可能的标记分隔符。 `wcstok` 和 `_mbstok` 分别是 `strtok` 的宽字符及多字节字符版本。 `wcstok` 的参数和返回值是宽字符字符串；而 `_mbstok` 的则是多字节字符字符串。 否则这三个函数否则具有相同行为。  
   
 > [!IMPORTANT]
->  这些函数会引起由缓冲区溢出问题带来的潜在威胁。  缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。  有关更多信息，请参见[避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
+>  这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- 在第一次调用 `strtok` 时，函数跳过前导分隔符并返回指向在 `strToken`的第一个标记的指针，以空字符终止标记。  通过一系列 `strtok` 的调用，多个标记将被从 `strToken` 的其余部分拆开。  每个 `strtok`调用通过插入 null 字符在该调用返回 `token` 之后修改`strToken`。  若要读取 `strToken`的下一个标记，请调用带有一个 `NULL` 值的 `strtok` `strToken` 参数。  `NULL` `strToken` 参数引起 `strtok` 搜索修改的 `strToken`中的下一个标记。  `strDelimit` 参数可以接收从一个调用到下一个的任何值，以便分隔符的设置可以更改。  
+ 首次调用 `strtok` 时，函数跳过前导分隔符并返回指向 `strToken` 中的第一个标记的指针，终止空字符的标记。 通过对 `strtok` 的一系列调用，可以从 `strToken` 的其余部分中分离出更多标记。 每次调用 `strtok` 都会修改 `strToken`，方法是在通过调用返回 `token` 后插入空字符。 若要读取来自 `strToken` 的下一个标记，请使用 `strToken` 参数的 `NULL` 值调用 `strtok`。 `NULL``strToken` 参数使 `strtok` 在修改的 `strToken` 中搜索下一个标记。 `strDelimit` 实参可以采用从第一个调用到下一个调用的任何值，以使分隔符集有所不同。  
   
- 输出值受区域设置的 `LC_CTYPE` 类设置影响；有关更多信息，请参见 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
 > [!NOTE]
->  每个函数为了解析字符串为记号使用一个线程局部静态变量。  因此，多个线程能够同时调用这些函数，而不会有意外的效果。  但是，在单线程中，交错调用这些函数很可能导致数据损坏和不正确的结果。  当分析不同的字符串，在开始分析下一个之前完成一个字符串的分析。  同时，请注意潜在的危险，当调用来自循环的这些函数中的某一个时，该循环中另一个函数被调用。  如果另外的函数停止使用这些函数中的某一个，一个交错的顺序调用将发生，触发数据损坏。  
+>  每个函数均使用线程本地静态变量，以将字符串分析为标记。 因此，多线程可以同时调用这些函数，不会产生不良影响。 但是，在单个线程内，对任一这些函数的交替调用很可能导致数据损坏和结果不准确。 解析不同的字符串时，在解析完一个字符串后再开始解析下一个字符串。 此外，请注意，从调用其他函数的循环内调用其中任一函数可能引发潜在危险。 如果其他函数最终使用这些函数之一，则导致调用交错的序列，从而触发数据损坏。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstok`|`strtok`|`_mbstok`|`wcstok`|  
 |`_tcstok`|`_strtok_l`|`_mbstok_l`|`_wcstok_l`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`strtok`|\<string.h\>|  
-|`wcstok`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbstok`, `_mbstok_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strtok`|\<string.h>|  
+|`wcstok`|\<string.h> 或 \<wchar.h>|  
+|`_mbstok`, `_mbstok_l`|\<mbstring.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_strtok.c  
@@ -167,21 +183,24 @@ int main( void )
 }  
 ```  
   
-  **标记：**  
- **A**  
- **string**  
- **的**  
- **标记**  
- **和**   
- **一些**  
- **more**  
- **标记**   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Tokens:  
+ A  
+ string  
+ of  
+ tokens  
+ and  
+ some  
+ more  
+ tokens  
+```  
   
-## 请参阅  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn、wcscspn、\_mbscspn、\_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strcspn、wcscspn、_mbscspn、_mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

@@ -1,55 +1,89 @@
 ---
-title: "invalid_link_target 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::invalid_link_target"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invalid_link_target 类"
+title: "invalid_link_target 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::invalid_link_target
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# invalid_link_target 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: da613342099cff27b52cfbbe4de941259c6ae073
+ms.lasthandoff: 02/24/2017
 
-介绍异常引发此类，在消息的 `link_target` 方法阻止调用，而消息块无法与目标链接。  这可能超出消息块是允许或尝试用一个源两次链接特定目标链接数的结果。  
+---
+# <a name="invalidlinktarget-class"></a>invalid_link_target 类
+此类描述调用消息块的 `link_target` 方法且消息块无法链接到目标时引发的异常。 这可能是因为超出消息块允许的链接数或两次尝试将特定目标链接到同一源。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class invalid_link_target : public std::exception;
 ```  
-class invalid_link_target : public std::exception;  
-```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
-|[invalid\_link\_target::invalid\_link\_target 构造函数](../Topic/invalid_link_target::invalid_link_target%20Constructor.md)|已重载。  构造 `invalid_link_target` 对象。|  
+|名称|描述|  
+|----------|-----------------|  
+|[invalid_link_target 构造函数](#ctor)|已重载。 构造 `invalid_link_target` 对象。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
   
  `invalid_link_target`  
   
-## 要求  
- **标头：**concrt.h  
+## <a name="requirements"></a>要求  
+ **标头︰** concrt.h  
   
- **命名空间:** 并发  
+ **命名空间：** 并发  
   
-## 请参阅  
- [concurrency 命名空间](../../../parallel/concrt/reference/concurrency-namespace.md)   
+##  <a name="a-namectora-invalidlinktarget"></a><a name="ctor"></a>invalid_link_target 
+
+ 构造 `invalid_link_target` 对象。  
+  
+```
+explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
+
+invalid_link_target() throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Message`  
+ 错误的描述性消息。  
+  
+## <a name="see-also"></a>另请参阅  
+ [并发 Namespace](concurrency-namespace.md)   
  [异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)
+
+
+
+

@@ -1,64 +1,140 @@
 ---
-title: "ICommandUI Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ICommandUI"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandUI interface"
+title: "ICommandUI 界面 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ICommandUI
+dev_langs:
+- C++
+helpviewer_keywords:
+- ICommandUI interface
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# ICommandUI Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 1db6b3fa58639140322816c37103566353b15633
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="icommandui-interface"></a>ICommandUI 接口
 管理用户界面命令。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 interface class ICommandUI  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[ICommandUI::Check](../Topic/ICommandUI::Check.md)|将此命令的用户界面项到相应的复选状态。|  
-|[ICommandUI::ContinueRouting](../Topic/ICommandUI::ContinueRouting.md)|调用命令传送结构继续路由在处理程序中链的当前消息。|  
-|[ICommandUI::Enabled](../Topic/ICommandUI::Enabled.md)|启用或禁用此命令的用户界面项。|  
-|[ICommandUI::ID](../Topic/ICommandUI::ID.md)|获取 `ICommandUI` 对象表示的用户界面对象的ID。|  
-|[ICommandUI::Index](../Topic/ICommandUI::Index.md)|获取 `ICommandUI` 对象表示的用户界面对象的索引。|  
-|[ICommandUI::Radio](../Topic/ICommandUI::Radio.md)|将此命令的用户界面项到相应的复选状态。|  
-|[ICommandUI::Text](../Topic/ICommandUI::Text.md)|设置用户界面项的文本此命令的。|  
+|名称|描述|  
+|----------|-----------------|  
+|[icommandui__Check](#check)|将此命令的用户界面项设置为相应的复选状态。|  
+|[ICommandUI::ContinueRouting](#continuerouting)|告知命令路由机制，继续传送当前消息的处理程序链的下方。|  
+|[ICommandUI::Enabled](#enabled)|启用或禁用此命令的用户界面项。|  
+|[ICommandUI::ID](#id)|获取所表示的用户界面对象的 ID`ICommandUI`对象。|  
+|[ICommandUI::Index](#index)|获取所表示的用户界面对象的索引`ICommandUI`对象。|  
+|[ICommandUI::Radio](#radio)|将此命令的用户界面项设置为相应的复选状态。|  
+|[ICommandUI::Text](#text)|设置此命令的用户界面项的文本。|  
   
-## 备注  
- 此接口提供管理用户界面命令的方法和属性。  `ICommandUI` 类似于 [CCmdUI Class](../../mfc/reference/ccmdui-class.md)，除此之外，`ICommandUI` 配合.NET组件交互操作的MFC应用程序。  
+## <a name="remarks"></a>备注  
+ 此接口提供方法和属性，管理用户界面命令。 `ICommandUI`类似于[CCmdUI 类](../../mfc/reference/ccmdui-class.md)，只不过`ICommandUI`用于 MFC 应用程序与.NET 组件进行互操作。  
   
- `ICommandUI` 在 `ON_UPDATE_COMMAND_UI` 处理程序在 [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)派生类中使用。  当应用程序的用户活动\(选择或单击时\)菜单，每个菜单项显示为启用或禁用。  每个菜单命令的目标通过实现 `ON_UPDATE_COMMAND_UI` 处理程序提供此信息。  对于每个在应用程序的命令用户界面对象，请使用"属性"窗口创建每个处理程序的消息映射项和函数原型。  
+ `ICommandUI`在中使用`ON_UPDATE_COMMAND_UI`中的处理程序[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)的派生类。 当应用程序的用户激活 （选择或单击） 菜单上，每个菜单项将显示为已启用或禁用。 每个菜单命令的目标提供此信息通过实现`ON_UPDATE_COMMAND_UI`处理程序。 对于每个应用程序中的命令用户界面对象，使用属性窗口来创建消息映射项和每个处理程序的函数原型。  
   
- 有关 `ICommandUI` 接口方式的更多信息用于命令传送，请参见 [如何：向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。  
+ 有关详细信息如何`ICommandUI`接口使用在命令路由，请参阅[如何︰ 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。  
   
- 有关使用Windows窗体的更多信息，请参见 [在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+ 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
- 有关用户界面命令方式的更多信息在MFC管理，请参见 [CCmdUI Class](../../mfc/reference/ccmdui-class.md)。  
+ 在 MFC 中如何管理用户界面命令的详细信息，请参阅[CCmdUI 类](../../mfc/reference/ccmdui-class.md)。  
   
-## 要求  
- **标头:** afxwinforms.h \(定义程序集中atlmfc \\ lib \\ mfcmifc80.dll\)  
+## <a name="a-namechecka-icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+将此命令的用户界面项设置为相应的复选状态。
+```
+property UICheckState Check;
+```
+## <a name="remarks"></a>备注  
+此属性将此命令的用户界面项设置为相应的复选状态。 将检查设置为以下值︰  
+- 0 不选取  
+- 1 检查  
+- 不确定设置&2;  
+
+## <a name="a-namecontinueroutinga-icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting   
+告知命令路由机制，继续传送当前消息的处理程序链的下方。
+```
+void ContinueRouting();
+```
+## <a name="remarks"></a>备注
+这是一个高级的成员函数，应使用结合的 ON_COMMAND_EX 处理程序，则返回 FALSE。 有关详细信息，请参阅技术注意 TN006︰ 消息映射。
+
+## <a name="a-nameenableda-icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled 
+启用或禁用此命令的用户界面项。
+```
+property bool Enabled;
+```
+## <a name="remarks"></a>备注
+此属性启用或禁用此命令的用户界面项。 将已启用对设置为 true 以启用该项目，为 false，则将其禁用。
+
+## <a name="a-nameida-icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+获取此 ICommandUI 对象所表示的用户界面对象的 ID。
+```
+property unsigned int ID;
+```
+## <a name="remarks"></a>备注
+此属性获取菜单项、 工具栏按钮或由 ICommandUI 对象代表其他用户界面对象的 ID （句柄）。
+
+## <a name="a-nameindexa-icommanduiindex"></a><a name="index"></a>ICommandUI::Index   
+获取此 ICommandUI 对象所表示的用户界面对象的索引。
+```
+property unsigned int Index;
+```
+## <a name="remarks"></a>备注
+此属性获取菜单项、 工具栏按钮或由 ICommandUI 对象代表其他用户界面对象的索引 （句柄）。
+
+## <a name="a-nameradioa-icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio 
+将此命令的用户界面项设置为相应的复选状态。
+```
+property bool Radio;
+```
+## <a name="remarks"></a>备注
+此属性将此命令的用户界面项设置为相应的复选状态。 将广播到设置为 true 以启用项;否则为 FALSE。
+
+## <a name="a-nametexta-icommanduitext"></a><a name="text"></a>ICommandUI::Text 
+设置此命令的用户界面项的文本。
+```
+property String^ Text;
+```
+## <a name="remarks"></a>备注
+此属性设置为此命令的用户界面项的文本。 将文本设置为文本字符串句柄。
+
+## <a name="requirements"></a>要求  
+ **标头︰** afxwinforms.h (在程序集 atlmfc\lib\mfcmifc80.dll 中定义)  
   
-## 请参阅  
- [CCmdUI Class](../../mfc/reference/ccmdui-class.md)
+## <a name="see-also"></a>另请参阅  
+ [CCmdUI 类](../../mfc/reference/ccmdui-class.md)
+

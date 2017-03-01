@@ -1,79 +1,130 @@
 ---
-title: "IQuickActivateImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::IQuickActivateImpl"
-  - "ATL::IQuickActivateImpl<T>"
-  - "ATL.IQuickActivateImpl"
-  - "ATL.IQuickActivateImpl<T>"
-  - "IQuickActivateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "activating ATL controls"
-  - "控件 [ATL], 激活"
-  - "IQuickActivate ATL implementation"
-  - "IQuickActivateImpl class"
+title: "IQuickActivateImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::IQuickActivateImpl
+- ATL::IQuickActivateImpl<T>
+- ATL.IQuickActivateImpl
+- ATL.IQuickActivateImpl<T>
+- IQuickActivateImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- activating ATL controls
+- controls [ATL], activating
+- IQuickActivateImpl class
+- IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# IQuickActivateImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 4f6b75da64efa12e43fa160c57da4291acae03ca
+ms.lasthandoff: 02/24/2017
 
-此选件类组合容器的控件初始化为一个调用。  
+---
+# <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 类
+此类可将合并到一个调用容器的控件初始化。  
   
 > [!IMPORTANT]
->  此选件类及其成员不能在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]执行的应用程序。  
+>  该类及其成员无法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中执行的应用程序中使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template <class T>  
+class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ```  
   
-      template<   
-class T   
->  
-class ATL_NO_VTABLE IQuickActivateImpl :  
-public IQuickActivate  
-```  
-  
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 您的选件类，从派生 `IQuickActivateImpl`。  
+ 您的类，派生自`IQuickActivateImpl`。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[IQuickActivateImpl::GetContentExtent](../Topic/IQuickActivateImpl::GetContentExtent.md)|检索正在运行的控件的当前显示范围。|  
-|[IQuickActivateImpl::QuickActivate](../Topic/IQuickActivateImpl::QuickActivate.md)|执行加载的控件的快速初始化。|  
-|[IQuickActivateImpl::SetContentExtent](../Topic/IQuickActivateImpl::SetContentExtent.md)|请注意控件要显示空间容器分配给它。|  
+|----------|-----------------|  
+|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|检索当前显示为正在运行的控件的大小。|  
+|[IQuickActivateImpl::QuickActivate](#quickactivate)|执行快速初始化控件正在加载。|  
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|通知控件容器有分配给它的显示空间。|  
   
-## 备注  
- [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146) 界面帮助容器避免延迟，在加载控件将在单个时的初始化调用。  `QuickActivate` 方法允许容器通过指向存储指针为所有接口需要的 [QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630) 结构。  在回，控件通过指针保存指向其自己的接口，容器使用的 [QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721) 结构。  选件类 `IQuickActivateImpl` 提供 **IQuickActivate** 的默认实现并将信息发送实现 **IUnknown** 到转储计算机进行编译。  
+## <a name="remarks"></a>备注  
+ [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146)界面可帮助避免出现延迟，在通过组合的单个调用中的初始化加载控件时的容器。 `QuickActivate`方法允许将指针传递至容器[QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630)需要的所有接口控件都包含指针的结构。 返回时，该控件将通过返回一个指向[QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721)包含它自己由容器使用的接口指针的结构。 类`IQuickActivateImpl`提供的默认实现**IQuickActivate**并实现**IUnknown**中调试设备信息发送给转储生成。  
   
- **相关文章** [ATL教程](../../atl/active-template-library-atl-tutorial.md)，[创建ATL项目](../../atl/reference/creating-an-atl-project.md)  
+ **相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)，[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IQuickActivate`  
   
  `IQuickActivateImpl`  
   
-## 要求  
- **Header:** atlctl.h  
+## <a name="requirements"></a>要求  
+ **标头︰** atlctl.h  
   
-## 请参阅  
- [CComControl Class](../../atl/reference/ccomcontrol-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namegetcontentextenta--iquickactivateimplgetcontentextent"></a><a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
+ 检索当前显示为正在运行的控件的大小。  
+  
+```
+STDMETHOD(GetContentExtent)(LPSIZEL pSize);
+```  
+  
+### <a name="remarks"></a>备注  
+ 大小是完全呈现控件，以 himetric 为单位指定。  
+  
+ 请参阅[IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-namequickactivatea--iquickactivateimplquickactivate"></a><a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
+ 执行快速初始化控件正在加载。  
+  
+```
+STDMETHOD(QuickActivate)(
+    QACONTAINER* pQACont,
+    QACONTROL* pQACtrl);
+```  
+  
+### <a name="remarks"></a>备注  
+ 该结构包含该控件和一些环境属性的值所需的接口指针。 返回时，该控件将传递一个指向[QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721)结构，其中包含指向它自己的容器，它需要的接口和其他状态信息。  
+  
+ 请参阅[IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-namesetcontentextenta--iquickactivateimplsetcontentextent"></a><a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
+ 通知控件容器有分配给它的显示空间。  
+  
+```
+STDMETHOD(SetContentExtent)(LPSIZEL pSize);
+```  
+  
+### <a name="remarks"></a>备注  
+ 以 himetric 为单位指定大小。  
+  
+ 请参阅[IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+## <a name="see-also"></a>另请参阅  
+ [CComControl 类](../../atl/reference/ccomcontrol-class.md)   
+ [类概述](../../atl/atl-class-overview.md)
+
