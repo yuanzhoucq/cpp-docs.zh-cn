@@ -1,75 +1,174 @@
 ---
-title: "CComApartment Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComApartment"
-  - "CComApartment"
-  - "ATL.CComApartment"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "apartments in ATL EXE modules"
-  - "CComApartment class"
+title: "CComApartment 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComApartment
+- CComApartment
+- ATL.CComApartment
+dev_langs:
+- C++
+helpviewer_keywords:
+- apartments in ATL EXE modules
+- CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CComApartment Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 9359e2ab8c4a84ab66441e3eb8cfd39520fd4e8d
+ms.lasthandoff: 02/24/2017
 
-此选件类提供用于管理在一个线程池的EXE模块的一个单元支持。  
+---
+# <a name="ccomapartment-class"></a>CComApartment 类
+此类提供对管理线程放入池中 EXE 模块中的单元的支持。  
   
 > [!IMPORTANT]
->  此选件类及其成员不能在Windows运行时执行的应用程序。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类及其成员。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class CComApartment
 ```  
   
-class CComApartment  
+## <a name="members"></a>成员  
   
+### <a name="public-constructors"></a>公共构造函数  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CComApartment::CComApartment](#ccomapartment)|构造函数。|  
+  
+### <a name="public-methods"></a>公共方法  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CComApartment::Apartment](#apartment)|标记线程的起始地址。|  
+|[CComApartment::GetLockCount](#getlockcount)|返回线程的当前锁计数。|  
+|[CComApartment::Lock](#lock)|线程的锁计数递增&1;。|  
+|[CComApartment::Unlock](#unlock)|减少线程的锁计数。|  
+  
+### <a name="public-data-members"></a>公共数据成员  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CComApartment::m_dwThreadID](#m_dwthreadid)|包含线程的标识符。|  
+|[CComApartment::m_hThread](#m_hthread)|包含线程的句柄。|  
+|[CComApartment::m_nLockCnt](#m_nlockcnt)|包含线程的当前锁计数。|  
+  
+## <a name="remarks"></a>备注  
+ `CComApartment`通过使用[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)来管理线程放入池中 EXE 模块中的某个单元。 `CComApartment`提供了用于递增和递减该锁的方法在线程上进行计数。  
+  
+## <a name="requirements"></a>要求  
+ **标头︰** atlbase.h  
+  
+##  <a name="a-nameapartmenta--ccomapartmentapartment"></a><a name="apartment"></a>CComApartment::Apartment  
+ 标记线程的起始地址。  
+  
+```
+DWORD Apartment();
 ```  
   
-## 成员  
+### <a name="return-value"></a>返回值  
+ 始终为 0。  
   
-### 公共构造函数  
+### <a name="remarks"></a>备注  
+ 自动设置期间[CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init)。  
   
-|名称|说明|  
-|--------|--------|  
-|[CComApartment::CComApartment](../Topic/CComApartment::CComApartment.md)|构造函数。|  
+##  <a name="a-nameccomapartmenta--ccomapartmentccomapartment"></a><a name="ccomapartment"></a>CComApartment::CComApartment  
+ 构造函数。  
   
-### 公共方法  
+```
+CComApartment();
+```  
   
-|名称|说明|  
-|--------|--------|  
-|[CComApartment::Apartment](../Topic/CComApartment::Apartment.md)|标记线程的起始地址。|  
-|[CComApartment::GetLockCount](../Topic/CComApartment::GetLockCount.md)|返回线程的当前锁计数。|  
-|[CComApartment::Lock](../Topic/CComApartment::Lock.md)|增加线程的锁计数。|  
-|[CComApartment::Unlock](../Topic/CComApartment::Unlock.md)|递减线程的锁计数。|  
+### <a name="remarks"></a>备注  
+ 初始化`CComApartment`数据成员[m_nLockCnt](#m_nlockcnt)和[m_hThread](#m_hthread)。  
   
-### 公共数据成员  
+##  <a name="a-namegetlockcounta--ccomapartmentgetlockcount"></a><a name="getlockcount"></a>CComApartment::GetLockCount  
+ 返回线程的当前锁计数。  
   
-|名称|说明|  
-|--------|--------|  
-|[CComApartment::m\_dwThreadID](../Topic/CComApartment::m_dwThreadID.md)|包含的线程的标识符。|  
-|[CComApartment::m\_hThread](../Topic/CComApartment::m_hThread.md)|包含线程的句柄。|  
-|[CComApartment::m\_nLockCnt](../Topic/CComApartment::m_nLockCnt.md)|包含线程的当前锁计数。|  
+```
+LONG GetLockCount();
+```  
   
-## 备注  
- [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) 用于`CComApartment` 管理在一个线程池的EXE模块的一个单元。  `CComApartment` 为递增和递减锁计数的方法在线程。  
+### <a name="return-value"></a>返回值  
+ 该线程锁上的锁计数。  
   
-## 要求  
- **Header:** atlbase.h  
+##  <a name="a-namelocka--ccomapartmentlock"></a><a name="lock"></a>CComApartment::Lock  
+ 线程的锁计数递增&1;。  
   
-## 请参阅  
- [Class Overview](../../atl/atl-class-overview.md)
+```
+LONG Lock();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 可能是有用的诊断或测试一个值。  
+  
+### <a name="remarks"></a>备注  
+ 由调用[CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)。  
+  
+ 在线程上的锁计数用于统计目的。  
+  
+##  <a name="a-namemdwthreadida--ccomapartmentmdwthreadid"></a><a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+ 包含线程的标识符。  
+  
+```
+DWORD m_dwThreadID;
+```  
+  
+##  <a name="a-namemhthreada--ccomapartmentmhthread"></a><a name="m_hthread"></a>CComApartment::m_hThread  
+ 包含线程的句柄。  
+  
+```
+HANDLE m_hThread;
+```  
+  
+##  <a name="a-namemnlockcnta--ccomapartmentmnlockcnt"></a><a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+ 包含线程的当前锁计数。  
+  
+```
+LONG m_nLockCnt;
+```  
+  
+##  <a name="a-nameunlocka--ccomapartmentunlock"></a><a name="unlock"></a>CComApartment::Unlock  
+ 减少线程的锁计数。  
+  
+```
+LONG Unlock();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 可能是有用的诊断或测试一个值。  
+  
+### <a name="remarks"></a>备注  
+ 由调用[CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock)。  
+  
+ 在线程上的锁计数用于统计目的。  
+  
+## <a name="see-also"></a>另请参阅  
+ [类概述](../../atl/atl-class-overview.md)
+

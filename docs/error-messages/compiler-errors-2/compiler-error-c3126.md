@@ -1,34 +1,50 @@
 ---
-title: "编译器错误 C3126 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3126"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3126"
+title: "编译器错误 C3126 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3126
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3126
 ms.assetid: e72658a3-5d85-4a31-89a4-dbc3d475973d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3126
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 619760ac4696f7cf083015216f0c940b207e0372
+ms.lasthandoff: 02/24/2017
 
-不能定义联合“union”\(在托管类型“type”内\)  
+---
+# <a name="compiler-error-c3126"></a>编译器错误 C3126
+不能定义联合内托管类型 type 的联合  
   
- 不能在托管类型内定义联合。  
+ 联合不能在托管类型中定义。  
   
- 下面的示例生成 C3126：  
+ 下面的示例生成 C3126:  
   
 ```  
 // C3126_2.cpp  
@@ -42,20 +58,4 @@ ref class Test
    };  
 };  
 ```  
-  
- 下面的示例生成 C3126：  
-  
-```  
-// C3126.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-  
-__gc class Test  
-{  
-   union x  
-   {   // C3126  
-      int a;  
-      int b;  
-   };  
-};  
-```
+

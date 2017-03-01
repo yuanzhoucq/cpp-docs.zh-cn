@@ -1,36 +1,52 @@
 ---
-title: "编译器错误 C3379 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3379"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3379"
+title: "编译器错误 C3379 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3379
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C3379
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.lasthandoff: 02/24/2017
 
-“class”: 嵌套类不能将程序集访问说明符作为声明的一部分  
+---
+# <a name="compiler-error-c3379"></a>编译器错误 C3379
+class︰ 嵌套的类不能将作为其声明的一部分的程序集访问说明符  
   
- 应用于托管类型（如类或结构）时，[public](../../cpp/public-cpp.md) 和 [private](../../cpp/private-cpp.md) 关键字指示该类是否将通过程序集元数据公开。  `public` 或 `private` 不能应用于嵌套类，嵌套类将继承对封闭类的程序集访问。  
+ 当应用于托管类型，如类或结构，[公共](../../cpp/public-cpp.md)和[专用](../../cpp/private-cpp.md)关键字指示是否将程序集元数据通过公开的类。 `public`或`private`不能应用于嵌套类，该类将继承在封闭类的程序集访问权限。  
   
- 与 [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) 一起使用时，`ref` 和 `value` 关键字指示该类是托管类（请参见 [类和结构 \(托管\)](../../windows/classes-and-structs-cpp-component-extensions.md)）。  
+ 与一起使用时[/clr](../../build/reference/clr-common-language-runtime-compilation.md)、`ref`和`value`关键字表示该类托管 (请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md))。  
   
- 下面的示例生成 C3379：  
+ 下面的示例生成 C3379:  
   
 ```  
 // C3379a.cpp  
@@ -58,32 +74,4 @@ int main() {
    Console::WriteLine(myBA->ii);  
 }  
 ```  
-  
- 下面的示例生成 C3379：  
-  
-```  
-// C3379b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-public __gc class A {  
-public:  
-   static int i = 9;  
-  
-   public __gc class BA {   // C3379  
-   // try the following line instead  
-   // __gc class BA {  
-   public:  
-      static int ii = 8;  
-   };  
-};  
-  
-int main() {  
-  
-   A *myA = new A;  
-   Console::WriteLine(myA->i);  
-  
-   A::BA *myBA = new A::BA;  
-   Console::WriteLine(myBA->ii);  
-}  
-```
+

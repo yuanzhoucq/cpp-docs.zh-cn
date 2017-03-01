@@ -1,38 +1,54 @@
 ---
-title: "编译器错误 C3104 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3104"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3104"
+title: "编译器错误 C3104 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3104
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 编译器错误 C3104
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3104"></a>编译器错误 C3104
 特性参数非法  
   
- 为特性指定了无效参数。  
+ 指定属性的参数无效。  
   
- 有关更多信息，请参见[特性参数类型](../../windows/attribute-parameter-types-cpp-component-extensions.md)。  
+ 请参阅[特性参数类型](../../windows/attribute-parameter-types-cpp-component-extensions.md)有关详细信息。  
   
- 为 Visual C\+\+ 2005 执行的编译器一致性工作会导致生成此错误：向自定义特性传递托管数组时，数组类型不再从聚合初始化列表推导。  现在，编译器要求指定数组类型以及初始值设定项列表。  
+ 为 Visual c + + 2005年执行的编译器一致性工作可以导致此错误︰ 时将托管的数组传递给自定义特性，该数组的类型不能再从聚合初始化列表推导。 现在，编译器要求您指定的数组初始值设定项列表的类型。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3104。  
   
 ```  
@@ -52,7 +68,7 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3104。  
   
 ```  
@@ -79,27 +95,4 @@ ref class B {};
 [A(0)]  
 ref class B {};  
 ```  
-  
-## 示例  
- 下面的示例生成 C3104。  
-  
-```  
-// C3104c.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-  
-[ attribute(Class) ]  
-public __gc class AnotherAttr {  
-public:  
-   AnotherAttr(Object* arr __gc[]) : var0(arr) {}  
-   Object* var1 __gc[];  
-   Object* var0 __gc[];  
-};  
-  
-[ AnotherAttr( { __box(3.14159), S"pi" }, var1 = { S"a", S"b" } ) ]   // C3104  
-public __gc class Class1 {};  
-  
-// OK  
-[ AnotherAttr( new Object * __gc[] {__box(3.14159), S"pi" }, var1 = new Object * __gc[] { S"a", S"b" } ) ]  
-public __gc class Class2 {};  
-```
+

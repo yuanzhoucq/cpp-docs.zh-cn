@@ -1,100 +1,159 @@
 ---
-title: "CW2CWEX 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CW2CWEX"
-  - "ATL::CW2CWEX"
-  - "ATL.CW2CWEX"
-  - "ATL.CW2CWEX<t_nBufferLength>"
-  - "ATL::CW2CWEX<t_nBufferLength>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CW2CWEX 类"
+title: "CW2CWEX 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CW2CWEX
+- ATL::CW2CWEX
+- ATL.CW2CWEX
+- ATL.CW2CWEX<t_nBufferLength>
+- ATL::CW2CWEX<t_nBufferLength>
+dev_langs:
+- C++
+helpviewer_keywords:
+- CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CW2CWEX 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: a85b67a58553dada36f4472ea0683e18bc775493
+ms.lasthandoff: 02/24/2017
 
-字符串翻译宏 `CW2CTEX` 和 `CT2CWEX`和typedef使用此选件类 `CW2W`。  
+---
+# <a name="cw2cwex-class"></a>CW2CWEX 类
+此类由字符串转换宏`CW2CTEX`和`CT2CWEX`，和 typedef `CW2W`。  
   
 > [!IMPORTANT]
->  此选件类及其成员不能在Windows运行时执行的应用程序。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类及其成员。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template<int t_nBufferLength = 128>  
+class CW2CWEX
 ```  
   
-      template<  
-int t_nBufferLength= 128  
->  
-class CW2CWEX  
-```  
-  
-#### 参数  
+#### <a name="parameters"></a>参数  
  `t_nBufferLength`  
- 用于的缓冲区的大小将过程。  默认长度为128个字节。  
+ 在转换过程中所用的缓冲区的大小。 默认长度为 128 个字节。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
-  
-|名称|说明|  
-|--------|--------|  
-|[CW2CWEX::CW2CWEX](../Topic/CW2CWEX::CW2CWEX.md)|构造函数。|  
-|[CW2CWEX::~CW2CWEX](../Topic/CW2CWEX::~CW2CWEX.md)|该析构函数。|  
-  
-### 公共运算符  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
-|[CW2CWEX::operator LPCWSTR](../Topic/CW2CWEX::operator%20LPCWSTR.md)|转换运算符。|  
+|----------|-----------------|  
+|[CW2CWEX::CW2CWEX](#cw2cwex)|构造函数。|  
+|[CW2CWEX:: ~ CW2CWEX](#dtor)|析构函数。|  
   
-### 公共数据成员  
+### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
-|--------|--------|  
-|[CW2CWEX::m\_psz](../Topic/CW2CWEX::m_psz.md)|存储源字符串的数据成员。|  
+|名称|描述|  
+|----------|-----------------|  
+|[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|转换运算符。|  
   
-## 备注  
- 除非需要额外功能，使用 `CW2CTEX`，`CT2CWEX`或 `CW2W` 在您的代码。  
+### <a name="public-data-members"></a>公共数据成员  
   
- 此选件类是安全使用在循环并不会溢出堆栈。  默认情况下，ATL转换选件类和宏来转换使用当前线程的ANSI代码页。  
+|名称|描述|  
+|----------|-----------------|  
+|[CW2CWEX::m_psz](#m_psz)|将源字符串存储的数据成员。|  
   
- 下面的宏基于此选件类:  
+## <a name="remarks"></a>备注  
+ 除非需要额外功能，则使用`CW2CTEX`， `CT2CWEX`，或`CW2W`在代码中。  
   
--   `CW2CTEX`  
+ 此类是在循环中安全使用，不会溢出堆栈。 默认情况下，ATL 转换类和宏用于当前线程的 ANSI 代码页转换。  
   
--   `CT2CWEX`  
+ 下列宏基于此类︰  
   
- 下面的typedef基于此选件类:  
+- `CW2CTEX`  
   
--   `CW2W`  
+- `CT2CWEX`  
   
- 有关这些讨论的文本翻译宏，请参见 [ATL和MFC字符串翻译宏](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)。  
+ 下面的 typedef 基于此类︰  
   
-## 示例  
- 为使用基于这些字符串翻译宏参见 [ATL和MFC字符串翻译宏](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)。  
+- `CW2W`  
   
-## 要求  
- **Header:** atlconv.h  
+ 这些文本转换宏的讨论，请参阅[ATL 和 MFC 字符串转换宏](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)。  
   
-## 请参阅  
+## <a name="example"></a>示例  
+ 请参阅[ATL 和 MFC 字符串转换宏](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)有关使用这些字符串转换宏的示例。  
+  
+## <a name="requirements"></a>要求  
+ **标头︰** atlconv.h  
+  
+##  <a name="a-namecw2cwexa--cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+ 构造函数。  
+  
+```
+CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2CWEX(LPCWSTR psz) throw(...);
+```  
+  
+### <a name="parameters"></a>参数  
+ `psz`  
+ 要转换的文本字符串。  
+  
+ `nCodePage`  
+ 代码页中。 不使用此类中。  
+  
+### <a name="remarks"></a>备注  
+ 分配在转换过程中所用的缓冲区。  
+  
+##  <a name="a-namedtora--cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
+ 析构函数。  
+  
+```
+~CW2CWEX() throw();
+```  
+  
+### <a name="remarks"></a>备注  
+ 释放分配的缓冲区。  
+  
+##  <a name="a-namempsza--cw2cwexmpsz"></a><a name="m_psz"></a>CW2CWEX::m_psz  
+ 将源字符串存储的数据成员。  
+  
+```
+LPCWSTR m_psz;
+```  
+  
+##  <a name="a-nameoperatorlpcwstra--cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
+ 转换运算符。  
+  
+```  
+operator LPCWSTR() const throw();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 返回将文本字符串作为类型**LPCWSTR。**  
+  
+## <a name="see-also"></a>另请参阅  
  [CA2AEX 类](../../atl/reference/ca2aex-class.md)   
  [CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
  [CA2WEX 类](../../atl/reference/ca2wex-class.md)   
  [CW2AEX 类](../../atl/reference/cw2aex-class.md)   
  [CW2WEX 类](../../atl/reference/cw2wex-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+ [类概述](../../atl/atl-class-overview.md)
+

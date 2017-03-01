@@ -1,36 +1,52 @@
 ---
-title: "编译器错误 C2976 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2976"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2976"
+title: "编译器错误 C2976 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2976
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2976
 ms.assetid: d9bf9836-325e-4f72-a7e3-a67cf19d32e7
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2976
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: d691eba50403819e1a468b850995f4ae55a3731f
+ms.lasthandoff: 02/24/2017
 
-“identifier”: 类型参数太少  
+---
+# <a name="compiler-error-c2976"></a>编译器错误 C2976
+identifier︰ 类型参数太少  
   
- 泛型或模板缺少一个或多个实参。  检查泛型声明或模板声明以查找正确的参数数目。  
+ Generic 或 template 缺少一个或多个实际参数。 检查泛型或模板声明，以查找正确的参数数目。  
   
- 此错误可能是由于 STL 组件中缺少模板参数而引起的。  
+ 可以通过 c + + 标准库组件中缺少模板参数导致此错误。  
   
- 下面的示例生成 C2976：  
+ 下面的示例生成 C2976:  
   
 ```  
 // C2976.cpp  
@@ -44,7 +60,7 @@ int main() {
 }  
 ```  
   
- 使用以下泛型时也可能发生 C2976 错误：  
+ 使用泛型时，也可能发生 C2976:  
   
 ```  
 // C2976b.cpp  

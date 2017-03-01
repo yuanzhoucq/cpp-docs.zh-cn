@@ -1,79 +1,191 @@
 ---
-title: "CHandle Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CHandle"
-  - "ATL::CHandle"
-  - "CHandle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHandle class"
+title: "CHandle 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CHandle
+- ATL::CHandle
+- CHandle
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CHandle Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: bbc0703ae5eaab01c0819be7e378509c7dc579ef
+ms.lasthandoff: 02/24/2017
 
-此选件类提供创建和使用处理对象。  
+---
+# <a name="chandle-class"></a>CHandle 类
+此类提供用于创建和使用句柄对象的方法。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class CHandle
 ```  
   
-class CHandle  
+## <a name="members"></a>成员  
   
-```  
-  
-## 成员  
-  
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
-|[CHandle::CHandle](../Topic/CHandle::CHandle.md)|构造函数。|  
-|[CHandle::~CHandle](../Topic/CHandle::~CHandle.md)|该析构函数。|  
+|----------|-----------------|  
+|[CHandle::CHandle](#chandle)|构造函数。|  
+|[CHandle:: ~ CHandle](#dtor)|析构函数。|  
   
-### 公共方法  
-  
-|名称|说明|  
-|--------|--------|  
-|[CHandle::Attach](../Topic/CHandle::Attach.md)|调用此方法附加到现有处理的 `CHandle` 对象。|  
-|[CHandle::Close](../Topic/CHandle::Close.md)|调用此方法关闭 `CHandle` 对象。|  
-|[CHandle::Detach](../Topic/CHandle::Detach.md)|调用此方法分离 `CHandle` 对象的句柄。|  
-  
-### 公共运算符  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[CHandle::operator HANDLE](../Topic/CHandle::operator%20HANDLE.md)|返回存储句柄的值。|  
-|[CHandle::operator \=](../Topic/CHandle::operator%20=.md)|赋值运算符。|  
+|----------|-----------------|  
+|[CHandle::Attach](#attach)|调用此方法可将附加`CHandle`对象传递给现有的句柄。|  
+|[CHandle::Close](#close)|调用此方法来关闭`CHandle`对象。|  
+|[CHandle::Detach](#detach)|调用此方法以分离的句柄从`CHandle`对象。|  
   
-### 公共数据成员  
+### <a name="public-operators"></a>公共运算符  
   
 |名称|说明|  
-|--------|--------|  
-|[CHandle::m\_h](../Topic/CHandle::m_h.md)|存储句柄的成员变量。|  
+|----------|-----------------|  
+|[CHandle::operator 句柄](#operator_handle)|返回存储句柄的值。|  
+|[CHandle::operator =](#operator_eq)|赋值运算符。|  
   
-## 备注  
- 可以使用 `CHandle` 对象，当需要处理:主要区别在于 `CHandle` 对象将被自动删除。  
+### <a name="public-data-members"></a>公共数据成员  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CHandle::m_h](#m_h)|成员变量，用于存储句柄。|  
+  
+## <a name="remarks"></a>备注  
+ 一个`CHandle`需要一个句柄时，可以使用对象︰ 主要区别在于`CHandle`自动删除的对象。  
   
 > [!NOTE]
->  而其他使用INVALID\_HANDLE\_VALUE，某些API函数将使用NULL为空或无效处理。  `CHandle` 仅使用NULL，并会将INVALID\_HANDLE\_VALUE作为实际处理。  如果调用可返回INVALID\_HANDLE\_VALUE API，您应检查此值在调用 [CHandle::Attach](../Topic/CHandle::Attach.md) 或通过之前对 `CHandle` 构造函数和通过NULL。  
+>  某些 API 函数将使用空值为空或无效的句柄，而其他人使用 INVALID_HANDLE_VALUE。 `CHandle`仅使用 NULL 并将它们 INVALID_HANDLE_VALUE 视为实际句柄。 如果调用可返回 INVALID_HANDLE_VALUE 的 API，则应检查此值之前，先调用[CHandle::Attach](#attach)或将其传递给`CHandle`构造函数中，而是传递 NULL。  
   
-## 要求  
- **Header:** atlbase.h  
+## <a name="requirements"></a>要求  
+ **标头︰** atlbase.h  
   
-## 请参阅  
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameattacha--chandleattach"></a><a name="attach"></a>CHandle::Attach  
+ 调用此方法可将附加`CHandle`对象传递给现有的句柄。  
+  
+```
+void Attach(HANDLE h) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `h`  
+ `CHandle`将获得句柄所有权`h`。  
+  
+### <a name="remarks"></a>备注  
+ 将分配`CHandle`对象传递给`h`处理。 在调试生成中 ATLASSERT 如果将会引发`h`为 NULL。 不其他句柄的有效性进行检查。  
+  
+##  <a name="a-namechandlea--chandlechandle"></a><a name="chandle"></a>CHandle::CHandle  
+ 构造函数。  
+  
+```
+CHandle() throw();
+CHandle(CHandle& h) throw();
+explicit CHandle(HANDLE h) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `h`  
+ 现有的句柄或`CHandle`。  
+  
+### <a name="remarks"></a>备注  
+ 创建一个新`CHandle`对象时，可以选择使用现有句柄或`CHandle`对象。  
+  
+##  <a name="a-namedtora--chandlechandle"></a><a name="dtor"></a>CHandle:: ~ CHandle  
+ 析构函数。  
+  
+```
+~CHandle() throw();
+```  
+  
+### <a name="remarks"></a>备注  
+ 释放`CHandle`对象通过调用[CHandle::Close](#close)。  
+  
+##  <a name="a-nameclosea--chandleclose"></a><a name="close"></a>CHandle::Close  
+ 调用此方法来关闭`CHandle`对象。  
+  
+```
+void Close() throw();
+```  
+  
+### <a name="remarks"></a>备注  
+ 关闭打开的对象句柄。 如果句柄为 NULL，这将是如果**关闭**并且尚未调用，ATLASSERT 将会引发在调试生成中。  
+  
+##  <a name="a-namedetacha--chandledetach"></a><a name="detach"></a>CHandle::Detach  
+ 调用此方法以分离的句柄从`CHandle`对象。  
+  
+```
+HANDLE Detach() throw();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 返回要分离的句柄。  
+  
+### <a name="remarks"></a>备注  
+ 释放该句柄的所有权。  
+  
+##  <a name="a-namemha--chandlemh"></a><a name="m_h"></a>CHandle::m_h  
+ 成员变量，用于存储句柄。  
+  
+```
+HANDLE m_h;
+```  
+  
+##  <a name="a-nameoperatoreqa--chandleoperator-"></a><a name="operator_eq"></a>CHandle::operator =  
+ 赋值运算符中。  
+  
+```
+CHandle& operator=(CHandle& h) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `h`  
+ `CHandle`将获得句柄所有权`h`。  
+  
+### <a name="return-value"></a>返回值  
+ 返回对新的引用`CHandle`对象。  
+  
+### <a name="remarks"></a>备注  
+ 如果`CHandle`对象当前包含一个句柄，它将被关闭。 `CHandle`对象中传递将具有其句柄引用设置为 NULL。 这样可确保两个`CHandle`对象永远不会将包含相同的活动句柄。  
+  
+##  <a name="a-nameoperatorhandlea--chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::operator 句柄  
+ 返回存储句柄的值。  
+  
+```  
+operator HANDLE() const throw();
+```  
+  
+### <a name="remarks"></a>备注  
+ 返回的值存储在[CHandle::m_h](#m_h)。  
+  
+## <a name="see-also"></a>另请参阅  
+ [类概述](../../atl/atl-class-overview.md)
+
