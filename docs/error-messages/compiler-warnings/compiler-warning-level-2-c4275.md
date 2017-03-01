@@ -1,50 +1,66 @@
 ---
-title: "编译器警告（等级 2）C4275 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4275"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4275"
+title: "编译器警告 （等级 2） C4275 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4275
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 编译器警告（等级 2）C4275
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 873a96d4595b75ff6b9567500723c32d7ba5bd2b
+ms.lasthandoff: 02/24/2017
 
-非 DLL 接口类键“identifier”作为 DLL 接口类键“identifier”的基使用  
+---
+# <a name="compiler-warning-level-2-c4275"></a>编译器警告（等级 2）C4275
+非 – DLL 接口 classkey identifier 用作基本 DLL 接口 classkey identifier  
   
- 导出的类是从未导出的类派生的。  
+ 导出的类被派生自不导出的类。  
   
- 要在使用 [\_\_declspec\(dllexport\)](../../cpp/dllexport-dllimport.md) 导出类时使数据损坏的可能性降到最小，请确保：  
+ 若要在导出具有的类时，数据损坏的可能性降到最低[__declspec （dllexport)](../../cpp/dllexport-dllimport.md)，确保︰  
   
--   所有静态数据都是通过从 DLL 导出的函数进行访问的。  
+-   通过从 DLL 导出的函数访问所有静态数据。  
   
--   类的任何内联方法都不能修改静态数据。  
+-   您的类的任何内联的方法可以不修改静态数据。  
   
--   类的所有内联方法都不使用 CRT 函数或其他使用静态数据的库函数。  
+-   您的类的任何内联的方法使用 CRT 函数，或使用静态数据的其他库函数。  
   
--   内联类函数都不使用 CRT 函数或其他库函数（例如，可从中访问静态数据的库函数）。  
+-   没有内联的类函数使用 CRT 函数或其他库的功能，其中，例如，访问静态数据。  
   
--   如果 EXE 和 DLL 中的实例化具有静态数据差异时，类的任何方法（无论是否为内联）都不能使用类型。  
+-   您的类的任何方法 (而不考虑内联) 可以使用类型其中 EXE 和 DLL 中的实例化具有静态数据差异。  
   
- 通过定义一个 DLL 可以避免导出类，该 DLL 定义一个具有虚函数的类，您可以调用这些函数对该类型的对象进行实例化和删除。然后在该类型上调用虚函数即可。  
+ 您可以避免通过定义一个 DLL，它定义了一个类具有虚函数和函数您可以调用来实例化并删除对象类型的导出类。  您可以然后只需调用虚函数的类型。  
   
- 有关导出模板的更多信息，请 [http:\/\/support.microsoft.com\/default.aspx?scid\=KB;EN\-US;168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)参见。  
+ 导出模板的详细信息，请参阅[从中查看EN-US;&16895;8](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。  
   
- 如果要从标准 C\+\+ 库中的类型派生，并且要编译调试版本 \(**\/MTd**\)，而且编译器错误消息引用 \_Container\_base，则在 Visual C\+\+ 中可以忽略 C4275。  
+ 如果从 c + + 标准库，编译调试版本中的类型派生，可以在 Visual c + + 中忽略 C4275 (**/MTd**)，其中编译器错误消息是指 _Container_base。  
   
 ```  
 // C4275.cpp  

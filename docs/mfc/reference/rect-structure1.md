@@ -1,46 +1,61 @@
 ---
-title: "RECT 结构&amp;1; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LPRECT"
-  - "RECT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RECT 结构"
-  - "LPRECT 结构"
+title: "RECT 结构&1; |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LPRECT
+- RECT
+dev_langs:
+- C++
+helpviewer_keywords:
+- RECT structure
+- LPRECT structure
 ms.assetid: 1b3160de-64e9-40d1-89eb-af3e0fd6acf0
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# RECT 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: bc91b22f291f23ed396a054b0c929410718286a3
+ms.lasthandoff: 02/24/2017
 
-`RECT`结构定义矩形左上角和右下角的坐标。  
+---
+# <a name="rect-structure1"></a>RECT 结构&1;
+`RECT` 结构定义矩形左上角和右下角的坐标。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      typedef struct tagRECT {   
-   LONG left;  
-   LONG top;  
-   LONG right;  
-   LONG bottom;  
+typedef struct tagRECT {  
+    LONG left;  
+    LONG top;  
+    LONG right;  
+    LONG bottom;  
 } RECT;  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
  `left`  
  指定矩形左上角的 x 坐标。  
   
@@ -53,12 +68,13 @@ caps.handback.revision: 14
  `bottom`  
  指定矩形右下角的 y 坐标。  
   
-## 示例  
- [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/CPP/rect-structure1_1.cpp)]  
+## <a name="example"></a>示例  
+ [!code-cpp[NVC_MFC_Utilities #&38;](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  
   
-## 要求  
- **标头:** windef.h  
+## <a name="requirements"></a>要求  
+ **标头︰** windef.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRect Class](../../atl-mfc-shared/reference/crect-class.md)
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CRect 类](../../atl-mfc-shared/reference/crect-class.md)
+

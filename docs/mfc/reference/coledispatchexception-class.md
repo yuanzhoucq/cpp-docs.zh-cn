@@ -1,72 +1,142 @@
 ---
-title: "COleDispatchException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "COleDispatchException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自动化, 异常"
-  - "COleDispatchException class"
-  - "异常, OLE"
-  - "OLE exceptions, to IDispatch interface"
+title: "COleDispatchException 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- COleDispatchException
+dev_langs:
+- C++
+helpviewer_keywords:
+- COleDispatchException class
+- Automation, exceptions
+- exceptions, OLE
+- OLE exceptions, to IDispatch interface
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# COleDispatchException Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 0071e57b6c8f6bec73712186e8ff8baa9bfcc165
+ms.lasthandoff: 02/24/2017
 
-处理异常特定于OLE `IDispatch` 接口，必须是OLE自动化的重要组成部分。  
+---
+# <a name="coledispatchexception-class"></a>COleDispatchException 类
+处理特定于 OLE `IDispatch` 接口的异常，此接口是 OLE 自动化的重要组成部分。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class COleDispatchException : public CException  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共数据成员  
+### <a name="public-data-members"></a>公共数据成员  
   
 |名称|说明|  
-|--------|--------|  
-|[COleDispatchException::m\_dwHelpContext](../Topic/COleDispatchException::m_dwHelpContext.md)|错误的帮助上下文。|  
-|[COleDispatchException::m\_strDescription](../Topic/COleDispatchException::m_strDescription.md)|口头错误说明。|  
-|[COleDispatchException::m\_strHelpFile](../Topic/COleDispatchException::m_strHelpFile.md)|使用的帮助文件与 `m_dwHelpContext`。|  
-|[COleDispatchException::m\_strSource](../Topic/COleDispatchException::m_strSource.md)|生成异常的应用程序。|  
-|[COleDispatchException::m\_wCode](../Topic/COleDispatchException::m_wCode.md)|`IDispatch`特定的错误代码。|  
+|----------|-----------------|  
+|[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|错误的帮助上下文。|  
+|[COleDispatchException::m_strDescription](#m_strdescription)|口头错误说明。|  
+|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|帮助文件中使用`m_dwHelpContext`。|  
+|[COleDispatchException::m_strSource](#m_strsource)|生成异常的应用程序。|  
+|[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-特定错误代码。|  
   
-## 备注  
- 与 `CException` 基类派生的其他异常选件类，`COleDispatchException` 可用于 **THROW**、 `THROW_LAST`、 **TRY**、 **"CATCH"**、 `AND_CATCH`和 `END_CATCH` 宏。  
+## <a name="remarks"></a>备注  
+ 像其他异常类派生自`CException`基类，`COleDispatchException`可以与使用**引发**， `THROW_LAST`，**尝试**，**捕获**， `AND_CATCH`，和`END_CATCH`宏。  
   
- 通常，应调用 [AfxThrowOleDispatchException](../Topic/AfxThrowOleDispatchException.md) 创建并引发 `COleDispatchException` 对象。  
+ 一般情况下，应调用[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)创建并引发`COleDispatchException`对象。  
   
- 有关异常的更多信息，请参见位于 [异常处理\(MFC\)](../../mfc/exception-handling-in-mfc.md) 和 [异常:OLE异常](../../mfc/exceptions-ole-exceptions.md)。  
+ 有关异常的详细信息，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[异常︰ OLE 异常](../../mfc/exceptions-ole-exceptions.md)。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `COleDispatchException`  
   
-## 要求  
- **Header:** afxdisp.h  
+## <a name="requirements"></a>要求  
+ **标头：** afxdisp.h  
   
-## 请参阅  
- [MFC示例CALCDRIV](../../top/visual-cpp-samples.md)   
- [CException Class](../../mfc/reference/cexception-class.md)   
+##  <a name="a-namemdwhelpcontexta--coledispatchexceptionmdwhelpcontext"></a><a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
+ 标识应用程序的帮助中的帮助上下文 (。HLP) 文件。  
+  
+```  
+DWORD m_dwHelpContext;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 此成员将由该函数[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)时将引发异常。  
+  
+### <a name="example"></a>示例  
+  请参阅示例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
+  
+##  <a name="a-namemstrdescriptiona--coledispatchexceptionmstrdescription"></a><a name="m_strdescription"></a>COleDispatchException::m_strDescription  
+ 包含一个口头错误说明，如"磁盘已满。"  
+  
+```  
+CString m_strDescription;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 此成员将由该函数[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)时将引发异常。  
+  
+### <a name="example"></a>示例  
+  请参阅示例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
+  
+##  <a name="a-namemstrhelpfilea--coledispatchexceptionmstrhelpfile"></a><a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
+ 框架填充应用程序的帮助文件的名称与此字符串中。  
+  
+```  
+CString m_strHelpFile;  
+```  
+  
+##  <a name="a-namemstrsourcea--coledispatchexceptionmstrsource"></a><a name="m_strsource"></a>COleDispatchException::m_strSource  
+ 框架填充的应用程序生成了异常的名称与此字符串中。  
+  
+```  
+CString m_strSource;  
+```  
+  
+### <a name="example"></a>示例  
+  请参阅示例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
+  
+##  <a name="a-namemwcodea--coledispatchexceptionmwcode"></a><a name="m_wcode"></a>COleDispatchException::m_wCode  
+ 包含特定于您的应用程序的错误代码。  
+  
+```  
+WORD m_wCode;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 此成员将由该函数[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)时将引发异常。  
+  
+## <a name="see-also"></a>另请参阅  
+ [MFC 示例 CALCDRIV](../../visual-cpp-samples.md)   
+ [CException 类](../../mfc/reference/cexception-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleDispatchDriver Class](../../mfc/reference/coledispatchdriver-class.md)   
- [COleException Class](../../mfc/reference/coleexception-class.md)
+ [COleDispatchDriver 类](../../mfc/reference/coledispatchdriver-class.md)   
+ [COleException 类](../../mfc/reference/coleexception-class.md)
+

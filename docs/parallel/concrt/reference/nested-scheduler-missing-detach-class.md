@@ -1,60 +1,89 @@
 ---
-title: "nested_scheduler_missing_detach 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::nested_scheduler_missing_detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nested_scheduler_missing_detach 类"
+title: "nested_scheduler_missing_detach 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::nested_scheduler_missing_detach
+dev_langs:
+- C++
+helpviewer_keywords:
+- nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# nested_scheduler_missing_detach 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 0079fea0b157e194947931f88d1cb500167cb6e2
+ms.lasthandoff: 02/24/2017
 
-此类描述并发运行时检测到您忽略在通过 `Scheduler` 对象的 `Attach` 方法在附加至第二计划程序的上下文上调用 `CurrentScheduler::Detach` 方法时抛出的异常。  
+---
+# <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 类
+此类描述并发运行时检测到你没有在通过 `Scheduler` 对象的 `Attach` 方法附加到第二个计划程序的上下文中调用 `CurrentScheduler::Detach` 方法时引发的异常。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class nested_scheduler_missing_detach : public std::exception;
 ```  
-class nested_scheduler_missing_detach : public std::exception;  
-```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
-|[nested\_scheduler\_missing\_detach::nested\_scheduler\_missing\_detach 构造函数](../Topic/nested_scheduler_missing_detach::nested_scheduler_missing_detach%20Constructor.md)|已重载。  构造 `nested_scheduler_missing_detach` 对象。|  
+|名称|描述|  
+|----------|-----------------|  
+|[nested_scheduler_missing_detach 构造函数](#ctor)|已重载。 构造 `nested_scheduler_missing_detach` 对象。|  
   
-## 备注  
- 仅当在另一个计划程序中嵌套计划程序，方法为在已由另一计划程序拥有或连接至另一计划程序的上下文中调用 `Scheduler` 对象的 `Attach` 方法时，才会引发该异常。  并发运行时在可以检测到有助于查找问题的方案时引发此异常。  并非每个实例忘记调用 `CurrentScheduler::Detach` 方法都一定会引发此异常。  
+## <a name="remarks"></a>备注  
+ 仅当在另一个计划程序中嵌套计划程序，方法为在已由另一计划程序拥有或连接至另一计划程序的上下文中调用 `Attach` 对象的 `Scheduler` 方法时，才会引发该异常。 并发运行时引发此异常时它可以检测方案，以帮助找到问题所在。 不是每个实例忘记调用`CurrentScheduler::Detach`方法肯定会引发此异常。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
   
  `nested_scheduler_missing_detach`  
   
-## 要求  
- **标头：**concrt.h  
+## <a name="requirements"></a>要求  
+ **标头︰** concrt.h  
   
- **命名空间：**并发  
+ **命名空间：** 并发  
   
-## 请参阅  
- [concurrency 命名空间](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Scheduler 类](../../../parallel/concrt/reference/scheduler-class.md)   
- [CurrentScheduler::Detach 方法](../Topic/CurrentScheduler::Detach%20Method.md)   
- [Scheduler::Attach 方法](../Topic/Scheduler::Attach%20Method.md)
+##  <a name="a-namectora-nestedschedulermissingdetach"></a><a name="ctor"></a>nested_scheduler_missing_detach 
+
+ 构造 `nested_scheduler_missing_detach` 对象。  
+  
+```
+explicit _CRTIMP nested_scheduler_missing_detach(_In_z_ const char* _Message) throw();
+
+nested_scheduler_missing_detach() throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Message`  
+ 错误的描述性消息。  
+  
+## <a name="see-also"></a>另请参阅  
+ [并发 Namespace](concurrency-namespace.md)   
+ [Scheduler 类](scheduler-class.md)
+

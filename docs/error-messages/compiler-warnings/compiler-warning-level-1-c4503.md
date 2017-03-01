@@ -1,38 +1,54 @@
 ---
-title: "编译器警告（等级 1）C4503 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4503"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4503"
+title: "编译器警告 （等级 1） C4503 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4503
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器警告（等级 1）C4503
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: f999fcb73860bfd2fabb3484e78f313a32240dee
+ms.lasthandoff: 02/24/2017
 
-“identifier”: 修饰名的长度超出限制，名称被截断  
+---
+# <a name="compiler-warning-level-1-c4503"></a>编译器警告（等级 1）C4503
+identifier︰ 修饰名的长度超过了，名称被截断  
   
- 修饰名的长度超出编译器限制 \(4096\)，被截断了。  若要避免出现此警告和截断，请减少所使用的参数数目或标识符的名称长度。  
+ 修饰的名的长度超出编译器限制 (4096)，且已被截断。 若要避免此警告和截断，减少参数的数目或使用标识符的名称长度。  
   
- 发出此警告的一种情况是当代码重复包含专用于模板的模板时。例如，映射的映射（来自标准 C\+\+ 库）。在这种情况下，可以将您的 typedef 设置为一个包含映射的类型（例如，结构）。  
+ 一种情况会发出此警告时您的代码包含模板上专用化模板重复。  例如，映射 （从 c + + 标准库） 的映射。  在这种情况下，可以增强您的 typedef 设置包含该映射的类型 （例如，结构）。  
   
- 不过，您可能决定不重构自己的代码。可以发布生成 C4503 的应用程序，但如果收到关于截断符号的链接时错误，确定错误中符号的类型将更加困难。调试也将更加困难；调试器将符号名称映射到类型名称也会有困难。但是，程序的正确性不受截断名称的影响。  
+ 但是，您可能会决定不重构你的代码。  可以提供的应用程序生成 C4503，但如果在截断符号链接时错误，它将会更加难以确定的错误中的符号的类型。  调试将也会更加困难;调试器还将有难度就越大映射的符号名称，键入名称。  正确的程序，但是，不受截断的名称。  
   
- 下面的示例生成 C4503：  
+ 下面的示例生成 C4503:  
   
 ```  
 // C4503.cpp  
@@ -50,7 +66,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;  
 ```  
   
- 下面的示例显示了一种通过重写代码来解决 C4503 的方法：  
+ 下面的示例演示一种重写代码以解决 c4503 的方法︰  
   
 ```  
 // C4503b.cpp  
