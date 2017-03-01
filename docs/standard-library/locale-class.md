@@ -1,32 +1,48 @@
 ---
 title: "locale 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xlocale/std::locale"
-  - "std::locale"
-  - "std.locale"
-  - "locale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "locale 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocale/std::locale
+- std::locale
+- std.locale
+- locale
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale class
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# locale 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: c32deb2524dc56925d3235c170f6ff0219c1b28c
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="locale-class"></a>locale 类
 一种描述区域设置对象的类，此对象用于将特定于文化的信息封装为一组 facet 以共同定义特定本地化环境。  
   
 ## <a name="syntax"></a>语法  
@@ -36,7 +52,7 @@ class locale;
 ```  
   
 ## <a name="remarks"></a>备注  
- Facet 是指向派生类中的类对象的指针 [方面](#facet_class) ，其窗体的公共对象︰  
+ facet 是指向派生自 [facet](#facet_class) 类的类对象的指针，该类具有以下格式的公共对象：  
   
 ```  
 static locale::id id;  
@@ -44,7 +60,7 @@ static locale::id id;
   
  可以定义这些 facet 的开放式集。 还可以构建指定任意个 facet 的区域设置对象。  
   
- 这些 facet 的预定义的组表示 [区域设置类别](#locale__category) 传统上被管理的标准 C 库中由该函数 `setlocale`。  
+ 这些 facet 的预定义组表示传统上在标准 C 库中由函数 `setlocale` 管理的[区域设置类别](#locale__category)。  
   
  类别 collate (LC_COLLATE) 包括以下 facet：  
   
@@ -108,7 +124,7 @@ messages<wchar_t>
   
  其中某些预定义的 facet 由 iostreams 类使用，用来控制数值与文本序列的相互转换。  
   
- 类的区域设置的对象还将区域设置名称存储为类的对象 [字符串](../Topic/%3Cstring%3E%20typedefs.md#string)。 使用无效的区域设置名称构造区域设置 facet 或区域设置对象，将引发类的对象 [runtime_error](../standard-library/runtime-error-class.md)。 如果区域设置对象无法确定 C 样式区域设置与此对象表示的区域设置完全对应，则存储的区域设置名称为 `"*"`。 否则，您可以建立匹配的区域设置用于区域设置对象的标准的 C 库内 `_Loc`, ，通过调用 `setlocale`(LC_ALL `,` `_Loc`。 [名称](#locale__name)`().c_str()`)。  
+ locale 类的对象还将区域设置名称存储为[字符串](../standard-library/string-typedefs.md#string)类的对象。 若使用无效区域设置名称构造区域设置 facet 或区域设置对象，将引发 [runtime_error](../standard-library/runtime-error-class.md) 类的对象。 如果区域设置对象无法确定 C 样式区域设置与此对象表示的区域设置完全对应，则存储的区域设置名称为 `"*"`。 如果能够确定，可以在标准 C 库中 `Loc`通过调用 `setlocale`(LC_ALL `,` `Loc`. [name](#locale__name)`().c_str()`)。  
   
  在此实现中，还可以调用静态成员函数：  
   
@@ -116,13 +132,13 @@ messages<wchar_t>
 static locale empty();
 ```  
   
- 构造不包含 facet 的区域设置对象。 它也是透明的区域设置;如果模板函数 [has_facet](../Topic/%3Clocale%3E%20functions.md#has_facet) 和 [use_facet](../Topic/%3Clocale%3E%20functions.md#use_facet) 找不到请求的 facet 在透明区域设置中，他们查阅首先全局区域设置，然后，如果此为透明，经典区域设置。 因此，你可以编写：  
+ 构造不包含 facet 的区域设置对象。 这也是透明区域设置；如果模板函数 [has_facet](../standard-library/locale-functions.md#has_facet) 和 [use_facet](../standard-library/locale-functions.md#use_facet) 在透明区域设置中找不到请求的 facet，将先参考全局区域设置，如果此为透明区域设置，则将再参考经典区域设置。 因此，你可以编写：  
   
 ```  
 cout.imbue(locale::empty());
 ```  
   
- 后续插入到 [cout](../Topic/%3Ciostream%3E%20functions.md#cout) 间接通过全局区域设置的当前状态。 你还可以编写：  
+对 [cout](../standard-library/iostream.md#cout) 的后续插入通过全局区域设置的当前状态调整。 你还可以编写：  
   
 ```  
 locale loc(locale::empty(),
@@ -138,49 +154,49 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[区域设置](#locale__locale)|创建区域设置、区域设置副本，或其中的 facet 或类别替换为其他区域设置中的 facet 类别的区域设置副本。|  
+|[locale](#locale__locale)|创建区域设置、区域设置副本，或其中的 facet 或类别替换为其他区域设置中的 facet 类别的区域设置副本。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[类别](#locale__category)|一种整数类型，此类型提供位掩码值以表示标准 facet 系列。|  
+|[category](#locale__category)|一种整数类型，此类型提供位掩码值以表示标准 facet 系列。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[组合](#locale__combine)|将指定区域设置中的 facet 插入到目标区域设置。|  
-|[名称](#locale__name)|返回存储的区域设置名称。|  
+|[combine](#locale__combine)|将指定区域设置中的 facet 插入到目标区域设置。|  
+|[name](#locale__name)|返回存储的区域设置名称。|  
   
 ### <a name="static-functions"></a>静态函数  
   
 |||  
 |-|-|  
-|[经典](#locale__classic)|此静态成员函数返回表示经典 C 区域设置的区域设置对象。|  
-|[全局](#locale__global)|重置程序的默认区域设置。|  
+|[classic](#locale__classic)|此静态成员函数返回表示经典 C 区域设置的区域设置对象。|  
+|[global](#locale__global)|重置程序的默认区域设置。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[运算符 ！ =](#locale__operator_neq)|测试两个区域设置是否不相等。|  
-|[operator （)](#locale__operator__)|比较两个 `basic_string` 对象。|  
-|[运算符 = =](#locale__operator_eq_eq)|测试两个区域设置是否相等。|  
+|[operator!=](#locale__operator_neq)|测试两个区域设置是否不相等。|  
+|[operator( )](#locale__operator__)|比较两个 `basic_string` 对象。|  
+|[operator==](#locale__operator_eq_eq)|测试两个区域设置是否相等。|  
   
 ### <a name="classes"></a>类  
   
 |||  
 |-|-|  
-|[方面](#facet_class)|一种类，此类用作所有区域设置 facet 的基类。|  
+|[facet](#facet_class)|一种类，此类用作所有区域设置 facet 的基类。|  
 |[id](#id_class)|成员类提供用作索引以查找区域设置中的 facet 的唯一 facet 标识。|  
   
 ## <a name="requirements"></a>要求  
- **标头︰** \< 区域设置>  
+ **标头：**\<locale>  
   
  **命名空间：** std  
   
-##  <a name="a-namelocalecategorya-localecategory"></a><a name="locale__category"></a>  locale:: category  
+##  <a name="a-namelocalecategorya--localecategory"></a><a name="locale__category"></a>locale::category  
  一种整数类型，此类型提供位掩码值以表示标准 facet 系列。  
   
 ```  
@@ -196,29 +212,29 @@ static const int none = 0;
 ```  
   
 ### <a name="remarks"></a>备注  
- 类型为同义词 `int` 可表示的一组非重复元素的位掩码类型键入类的区域设置的本地或可用于表示任何相应的 C 区域设置类别。 元素为︰  
+ 该类型为类型 `int` 的同义词，可表示类区域设置的本地位掩码类型的一组非重复元素，或可用于表示任何对应的 C 区域设置类别。 这些元素为：  
   
-- **逐份打印**, ，分别对应于 C 类别 LC_COLLATE  
+- **collate**，对应于 C 类 LC_COLLATE  
   
-- **ctype**, ，分别对应于 C 类别 LC_CTYPE  
+- **ctype**，对应于 C 类 LC_CTYPE  
   
-- **货币**, ，分别对应于 C 类别 LC_MONETARY  
+- **monetary**，对应于 C 类 LC_MONETARY  
   
-- **数值**, ，分别对应于 C 类别 LC_NUMERIC  
+- **numeric**，对应于 C 类 LC_NUMERIC  
   
-- **时间**, ，分别对应于 C 类别 LC_TIME  
+- **time**，对应于 C 类 LC_TIME  
   
-- **消息**, ，分别对应于 Posix 类别 LC_MESSAGES  
+- **messages**，对应于 Posix 类 LC_MESSAGES  
   
- 此外，两个有用的值是︰  
+ 另外，还有两个有用的值，如下所示：  
   
-- **无**, ，分别对应于无 C 类别  
+- **none**，不对应任何 C 类  
   
-- **所有**, ，分别对应于所有类别 LC_ALL C 联合  
+- **all**，对应于所有 C 类 LC_ALL  
   
- 您可以通过使用表示类别的任意组 `OR` 两个常数，如下所示 **货币** &#124; **时间**。  
+ 可以通过将 `OR` 与这些常量配合使用来表示任意一组类别，如类别 **monetary** &#124; **time**。  
   
-##  <a name="a-namelocaleclassica-localeclassic"></a><a name="locale__classic"></a>  locale:: classic  
+##  <a name="a-namelocaleclassica--localeclassic"></a><a name="locale__classic"></a>locale::classic  
  此静态成员函数返回表示经典 C 区域设置的区域设置对象。  
   
 ```  
@@ -226,14 +242,14 @@ static const locale& classic();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 对 C 区域设置的引用。  
+ C 区域设置的引用。  
   
 ### <a name="remarks"></a>备注  
- 经典 C 区域设置是美国英语 ASCII 隐式不国际化的程序中使用标准 C 库中的区域设置。  
+ 经典 C 区域设置为美国。在尚未国际化的程序中隐式使用的标准 C 库中的英语 ASCII 区域设置。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // locale_classic.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -270,24 +286,24 @@ The previous locale was classic.
 The current locale is not classic.  
 ```  
   
-##  <a name="a-namelocalecombinea-localecombine"></a><a name="locale__combine"></a>  locale:: combine  
+##  <a name="a-namelocalecombinea--localecombine"></a><a name="locale__combine"></a>locale::combine  
  将指定区域设置中的 facet 插入到目标区域设置。  
   
 ```  
 template <class Facet>  
-locale combine(const locale& _Loc) const;
+locale combine(const locale& Loc) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Loc`  
- 包含要插入到目标区域设置 facet 的区域设置。  
+ `Loc`  
+ 包含要插入到目标区域设置的 facet 的区域设置。  
   
 ### <a name="return-value"></a>返回值  
- 成员函数将返回在替换或添加到的区域设置对象 **\*这** 方面 `Facet` 中列出 `_Loc`。  
+ 该成员函数将返回一个区域设置对象，该对象在 `Loc` 中列出的 **\*this** the facet `Facet` 中进行替换或添加到其中。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // locale_combine.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -315,32 +331,41 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namefacetclassa-facet-class"></a><a name="facet_class"></a>  facet 类  
+##  <a name="a-namefacetclassa--facet-class"></a><a name="facet_class"></a>facet 类  
  一种类，此类用作所有区域设置 facet 的基类。  
-  
-类方面 {保护︰ 显式方面 (size_t _Refs = 0); 虚拟 ~ facet(); 私有︰ facet(const facet&) / / 未定义 void 运算符 =(const facet&) / / 未定义};  
-  
+
+```    
+class facet { 
+protected:    
+    explicit facet(size_t _Refs = 0);
+   virtual ~facet();
+private:    
+   facet(const facet&)
+   // not defined void operator=(const facet&)
+     // not defined    
+};  
+```  
 ### <a name="remarks"></a>备注  
- 请注意不能复制或分配类方面的对象。 可以构造和销毁对象派生自类 `locale::facet` ，但不是适当的基类的对象。 通常情况下，构造一个对象 `_Myfac` 源自方面，如下所示构造区域设置、 时 **localeloc**( `locale::classic`（)、 **新**`_Myfac`);  
+ 请注意，不能复制或分配类 facet 的对象。 可以构造和销毁派生自类 `locale::facet` 的对象，但不能构造和销毁适当的基类对象。 通常情况下，构造区域设置时将构造一个派生自 facet 的对象 `_Myfac`，如 **localeloc**( `locale::classic`( ), **new**`_Myfac`)；  
   
- 在这种情况下，基类方面的构造函数应具有零 `_Refs` 参数。 当不再需要对象时，将删除它。 因此，提供非零 _ *Refs* 仅在极少情况下，您负责该对象的生存期中的参数。  
+ 在这种情况下，基类 facet 的构造函数应具有一个零 `_Refs` 自变量。 当不再需要该对象时，将把它删除。 因此，仅在负责该对象的生存期这样极少数情况下提供非零 _ *Refs* 自变量。  
   
-##  <a name="a-namelocaleglobala-localeglobal"></a><a name="locale__global"></a>  locale:: global  
- 重置程序的默认区域设置。 这对于 C 和 c + + 将影响全局区域设置。  
+##  <a name="a-namelocaleglobala--localeglobal"></a><a name="locale__global"></a>locale::global  
+ 重置程序的默认区域设置。 这将影响 C 和 C++ 的全局区域设置。  
   
 ```  
-static locale global(const locale& _Loc);
+static locale global(const locale& Loc);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Loc`  
+ `Loc`  
  要由该程序用作默认区域设置的区域设置。  
   
 ### <a name="return-value"></a>返回值  
- 上一个区域设置默认区域设置被重置之前。  
+ 重置默认区域设置之前的上一个区域设置。  
   
 ### <a name="remarks"></a>备注  
- 在程序启动时，全局区域设置是经典区域设置相同。  `global()` 函数调用 `setlocale( LC_ALL, loc.name. c_str())` 建立标准 C 库中匹配的区域设置。  
+ 在程序启动时，全局区域设置与经典区域设置相同。 `global()` 函数调用 `setlocale( LC_ALL, loc.name. c_str())` 以在标准 C 库中建立匹配的区域设置。  
   
 ### <a name="example"></a>示例  
   
@@ -370,84 +395,68 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="a-nameidclassa-id-class"></a><a name="id_class"></a>  id 类  
+##  <a name="a-nameidclassa--id-class"></a><a name="id_class"></a>  id 类  
  成员类提供用作索引以查找区域设置中的 facet 的唯一 facet 标识。  
   
-类 id {保护︰ id （）; private: id(const id&) / / 未定义 void 运算符 =(const id&) / / 未定义};  
+class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
   
 ### <a name="remarks"></a>备注  
- 成员类描述所需的每个唯一的区域设置 facet，静态成员对象。 请注意，不能复制或分配类的对象 **id**。  
+ 该成员类描述每个唯一区域设置 facet 所需的静态成员对象。 请注意，不能复制或分配类 **id** 的对象。  
   
-##  <a name="a-namelocalelocalea-localelocale"></a><a name="locale__locale"></a>  locale:: locale  
+##  <a name="a-namelocalelocalea--localelocale"></a><a name="locale__locale"></a>locale::locale  
  创建区域设置、区域设置副本，或其中的 facet 或类别替换为其他区域设置中的 facet 类别的区域设置副本。  
   
 ```  
 locale();
 
-explicit locale(
-    const char* _Locname,  
-    category _Cat = all);
-
-explicit locale(
-    const string& _Locname);
-
-locale(
-    const locale& _Loc);
-
-locale(
-    const locale& _Loc,   
-    const locale& _Other,  
-    category _Cat);
-
-locale(
-    const locale& _Loc,   
-    const char* _Locname,  
-    category _Cat);
+explicit locale(const char* Locname, category Cat = all);
+explicit locale(const string& Locname);
+locale( const locale& Loc);
+locale(const locale& Loc, const locale& Other, category Cat);
+locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>  
-locale(
- const locale& _Loc,   
-    const Facet* _Fac);
+locale(const locale& Loc, const Facet* Fac);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_Locname`  
+ `Locname`  
  区域设置的名称。  
   
- `_Loc`  
- 在构造新的区域设置要复制的区域设置。  
+ `Loc`  
+ 要进行复制以便用于构造新区域设置的区域设置。  
   
- `_Other`  
- 从中选择一种类别的区域设置。  
+ `Other`  
+ 要从中选择一种类别的区域设置。  
   
- `_Cat`  
- 要替换成构造区域设置的类别。  
+ `Cat`  
+ 要替换为构造的区域设置的类别。  
   
- `_Fac`  
- 要替换成构造区域设置 facet。  
+ `Fac`  
+ 要替换为构造的区域设置的 facet。  
   
 ### <a name="remarks"></a>备注  
- 第一个构造函数初始化要与全局区域设置匹配的对象。 第二个和第三个构造函数初始化的所有区域设置类别具有与区域设置名称保持一致的行为 `_Locname`。 剩余的构造函数复制 `_Loc`, ，与所示的异常︰  
+ 第一个构造函数将初始化该对象，以便匹配全局构造函数。 第二和第三个构造函数初始化所有区域设置类别，以便具有与区域设置名称 `Locname` 一致的行为。 剩余的构造函数将复制 `Loc`，并出现以下异常：  
   
- `locale(const locale& _Loc, const locale& _Other, category _Cat);`  
+ `locale(const locale& Loc, const locale& Other, category Cat);`  
   
- 可以替换 `_Other` 这些方面与 C 类别对应的是哪一个 C （& a) `_Cat` 为非零值。  
+ 从 `Other` 替换对应于类别 C 的 facet，其 C 和 `Cat` 为非零值。  
   
- `locale(const locale& _Loc, const char* _Locname, category _Cat);`  
+ `locale(const locale& Loc, const char* Locname, category Cat);`  
   
- `locale(const locale& _Loc, const string& _Locname, category _Cat);`  
+ `locale(const locale& Loc, const string& Locname, category Cat);`  
   
- 可以替换 `locale(_Locname, _All)` 这些方面与 C 类别对应的是哪一个 C （& a) `_Cat`为非零值。  
+ 从 `locale(Locname, _All)` 替换对应于类别 C 的 facet，其 C 和 `Cat` 为非零值。  
   
- `template<class Facet> locale(const locale& _Loc, Facet* _Fac);`  
+ `template<class Facet> locale(const locale& Loc, Facet* Fac);`  
   
- 在替换 （或将添加到） `_Loc` 方面 `_Fac`, ，如果 `_Fac` 不是 null 指针。  
+ 如果 `Fac` 不是空指针，则在 `Loc` 中替换（或添加到）facet `Fac`。  
   
- 如果区域设置名称 `_Locname` 为 null 指针或无效，该函数将引发 [runtime_error](../standard-library/runtime-error-class.md)。  
+ 如果区域设置名称 `Locname` 为空指针或无效，则该函数将引发 [runtime_error](../standard-library/runtime-error-class.md)。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // locale_locale.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -485,7 +494,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namelocalenamea-localename"></a><a name="locale__name"></a>  locale:: name  
+##  <a name="a-namelocalenamea--localename"></a><a name="locale__name"></a>locale::name  
  返回存储的区域设置名称。  
   
 ```  
@@ -493,11 +502,11 @@ string name() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 字符串，它提供的区域设置名称。  
+ 一个字符串，它提供区域设置的名称。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // locale_name.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -522,7 +531,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.  
 ```  
   
-##  <a name="a-namelocaleoperatorneqa-localeoperator"></a><a name="locale__operator_neq"></a>  locale:: operator ！ =  
+##  <a name="a-namelocaleoperatorneqa--localeoperator"></a><a name="locale__operator_neq"></a>locale::operator!=  
  测试两个区域设置是否不相等。  
   
 ```  
@@ -534,14 +543,14 @@ bool operator!=(const locale& right) const;
  要测试不相等的区域设置之一。  
   
 ### <a name="return-value"></a>返回值  
- 一个布尔值，则 **true** 如果区域设置不是相同的区域设置; 的副本 **false** 如果区域设置相同的区域设置的副本。  
+ 如果区域设置不是相同区域设置的副本，则是为 **true** 的布尔值；如果区域设置是相同区域设置的副本，则是为 **false** 的布尔值。  
   
 ### <a name="remarks"></a>备注  
- 如果它们是相同的区域设置，如果有一份另一个，或者它们具有相同的名称，两个区域设置相等。  
+ 如果两个区域设置是相同的区域设置，或一个区域设置是另一个的副本，又或者它们具有相同的名称，则这两个区域设置相等。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // locale_op_ne.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -579,7 +588,7 @@ locales loc1 (German_Germany.1252) and
  loc3 (English_United States.1252) are not equal.  
 ```  
   
-##  <a name="a-namelocaleoperatora-localeoperator"></a><a name="locale__operator__"></a>  locale:: operator （)  
+##  <a name="a-namelocaleoperatora--localeoperator"></a><a name="locale__operator__"></a>locale::operator()  
  比较两个 `basic_string` 对象。  
   
 ```  
@@ -597,16 +606,16 @@ bool operator()(
  右侧的字符串。  
   
 ### <a name="return-value"></a>返回值  
- 成员函数将返回︰  
+ 此成员函数返回：  
   
--   如果小于第二个序列号比较的第一个序列，则为 – 1。  
+-   如果第一个序列小于第二个序列，则为 –1。  
   
--   如果第二个序列的第一个序列小于比较 + 1。  
+-   如果第一个序列大于第二个序列，则为 +1。  
   
--   如果序列相等，则为 0。  
+-   如果两个序列相等，则为&0;。  
   
 ### <a name="remarks"></a>备注  
- 成员函数有效执行操作︰  
+ 该成员函数有效执行以下操作：  
   
 ```  
 const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
@@ -614,11 +623,11 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) <0);
 ```  
   
- 因此，您可以使用的区域设置对象作为函数对象。  
+ 因此，可以将区域设置对象用作函数对象。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // locale_op_compare.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -647,7 +656,7 @@ int main( )
 0  
 ```  
   
-##  <a name="a-namelocaleoperatoreqeqa-localeoperator"></a><a name="locale__operator_eq_eq"></a>  locale:: operator = =  
+##  <a name="a-namelocaleoperatoreqeqa--localeoperator"></a><a name="locale__operator_eq_eq"></a>locale::operator==  
  测试两个区域设置是否相等。  
   
 ```  
@@ -659,14 +668,14 @@ bool operator==(const locale& right) const;
  要测试相等的区域设置之一。  
   
 ### <a name="return-value"></a>返回值  
- 一个布尔值，则 **true** 如果区域设置相同的区域设置; 的副本 **false** 如果区域设置不是相同的区域设置的副本。  
+ 如果区域设置是相同区域设置的副本，则是为 **true** 的布尔值；如果区域设置不是相同区域设置的副本，则是为 **false** 的布尔值。  
   
 ### <a name="remarks"></a>备注  
- 如果它们是相同的区域设置，如果有一份另一个，或者它们具有相同的名称，两个区域设置相等。  
+ 如果两个区域设置是相同的区域设置，或一个区域设置是另一个的副本，又或者它们具有相同的名称，则这两个区域设置相等。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // locale_op_eq.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -709,8 +718,9 @@ locales loc1 (German_Germany.1252)
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [\< 区域设置>](../standard-library/locale.md)   
+ [<locale>](../standard-library/locale.md)   
  [代码页](../c-runtime-library/code-pages.md)   
- [区域设置名称、 语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
+ [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
