@@ -1,53 +1,86 @@
 ---
-title: "affinity_partitioner 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::affinity_partitioner"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "affinity_partitioner 类"
+title: "affinity_partitioner 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::affinity_partitioner
+dev_langs:
+- C++
+helpviewer_keywords:
+- affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# affinity_partitioner 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 92da56fd5b84537c2fa01a252dfee202c729cc96
+ms.lasthandoff: 02/24/2017
 
-`affinity_partitioner` 类类似于 `static_partitioner` 类，但是，它按映射 subranges 其选择提高缓存关联到辅助线程。  它可以显着提高性能，当循环重新实现在设置时的相同数据和数据放入缓存。  请注意必须使用同一 `affinity_partitioner` 对象与执行中的特定数据并行循环的后续迭代，受益于数据位置。  
+---
+# <a name="affinitypartitioner-class"></a>affinity_partitioner 类
+`affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class affinity_partitioner;
 ```  
-class affinity_partitioner;  
-```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
-|[affinity\_partitioner::affinity\_partitioner 构造函数](../Topic/affinity_partitioner::affinity_partitioner%20Constructor.md)|构造 `affinity_partitioner` 对象。|  
-|[affinity\_partitioner::~affinity\_partitioner 析构函数](../Topic/affinity_partitioner::~affinity_partitioner%20Destructor.md)|销毁一个 `affinity_partitioner` 对象。|  
+|名称|描述|  
+|----------|-----------------|  
+|[affinity_partitioner 构造函数](#ctor)|构造 `affinity_partitioner` 对象。|  
+|[~ affinity_partitioner 析构函数](#dtor)|销毁`affinity_partitioner`对象。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `affinity_partitioner`  
   
-## 要求  
- **标头：**ppl.h  
+## <a name="requirements"></a>要求  
+ **标头︰** ppl.h  
   
- **命名空间:** 并发  
+ **命名空间：** 并发  
   
-## 请参阅  
- [concurrency 命名空间](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-affinitypartitioner"></a><a name="dtor"></a>~ affinity_partitioner 
+
+ 销毁`affinity_partitioner`对象。  
+  
+```
+~affinity_partitioner();
+```  
+  
+##  <a name="a-namectora-affinitypartitioner"></a><a name="ctor"></a>affinity_partitioner 
+
+ 构造 `affinity_partitioner` 对象。  
+  
+```
+affinity_partitioner();
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [并发 Namespace](concurrency-namespace.md)
+

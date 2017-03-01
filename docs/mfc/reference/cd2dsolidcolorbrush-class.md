@@ -1,73 +1,89 @@
 ---
-title: "CD2DSolidColorBrush 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CD2DSolidColorBrush"
-  - "afxrendertarget/CD2DSolidColorBrush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DSolidColorBrush 类"
+title: "CD2DSolidColorBrush 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CD2DSolidColorBrush
+- afxrendertarget/CD2DSolidColorBrush
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DSolidColorBrush class
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# CD2DSolidColorBrush 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 5b6cbd6a6a5557f5ea23c0556a4b87011b510411
+ms.lasthandoff: 02/24/2017
 
-ID2D1SolidColorBrush 的包装。  
+---
+# <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush 类
+ID2D1SolidColorBrush 包装器。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CD2DSolidColorBrush : public CD2DBrush;  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
-|[CD2DSolidColorBrush::CD2DSolidColorBrush](../Topic/CD2DSolidColorBrush::CD2DSolidColorBrush.md)|已重载。  构造 CD2DSolidColorBrush 对象。|  
-|[CD2DSolidColorBrush::~CD2DSolidColorBrush](../Topic/CD2DSolidColorBrush::~CD2DSolidColorBrush.md)|该析构函数。  当 D2D 实心画笔对象被销毁时调用。|  
+|名称|描述|  
+|----------|-----------------|  
+|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|已重载。 构造 CD2DSolidColorBrush 对象。|  
+|[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|析构函数。 当 D2D 实心画笔对象被销毁时调用。|  
   
-### 公共方法  
-  
-|名称|说明|  
-|--------|--------|  
-|[CD2DSolidColorBrush::Attach](../Topic/CD2DSolidColorBrush::Attach.md)|将现有的资源接口附加到该对象|  
-|[CD2DSolidColorBrush::Create](../Topic/CD2DSolidColorBrush::Create.md)|创建 CD2DSolidColorBrush。  （重写 [CD2DResource::Create](../Topic/CD2DResource::Create.md)。）|  
-|[CD2DSolidColorBrush::Destroy](../Topic/CD2DSolidColorBrush::Destroy.md)|销毁 CD2DSolidColorBrush 对象。  （重写 [CD2DBrush::Destroy](../Topic/CD2DBrush::Destroy.md)。）|  
-|[CD2DSolidColorBrush::Detach](../Topic/CD2DSolidColorBrush::Detach.md)|将资源接口从该对象分离|  
-|[CD2DSolidColorBrush::Get](../Topic/CD2DSolidColorBrush::Get.md)|返回 ID2D1SolidColorBrush 接口|  
-|[CD2DSolidColorBrush::GetColor](../Topic/CD2DSolidColorBrush::GetColor.md)|检索该纯色画笔的颜色|  
-|[CD2DSolidColorBrush::SetColor](../Topic/CD2DSolidColorBrush::SetColor.md)|指定此纯色画笔的颜色|  
-  
-### 公共运算符  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush\*](../Topic/CD2DSolidColorBrush::operator%20ID2D1SolidColorBrush*.md)|返回 ID2D1SolidColorBrush 接口|  
+|----------|-----------------|  
+|[CD2DSolidColorBrush::Attach](#attach)|附加现有的资源的对象的接口|  
+|[CD2DSolidColorBrush::Create](#create)|创建 CD2DSolidColorBrush。 (重写[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
+|[CD2DSolidColorBrush::Destroy](#destroy)|销毁 CD2DSolidColorBrush 对象。 (重写[CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy)。)|  
+|[CD2DSolidColorBrush::Detach](#detach)|分离对象中的资源接口|  
+|[CD2DSolidColorBrush::Get](#get)|返回 ID2D1SolidColorBrush 接口|  
+|[CD2DSolidColorBrush::GetColor](#getcolor)|检索纯色画笔的颜色|  
+|[CD2DSolidColorBrush::SetColor](#setcolor)|指定此纯色画笔的颜色|  
   
-### 受保护的数据成员  
+### <a name="public-operators"></a>公共运算符  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|返回 ID2D1SolidColorBrush 接口|  
+  
+### <a name="protected-data-members"></a>受保护的数据成员  
   
 |名称|说明|  
-|--------|--------|  
-|[CD2DSolidColorBrush::m\_colorSolid](../Topic/CD2DSolidColorBrush::m_colorSolid.md)|画笔纯色。|  
-|[CD2DSolidColorBrush::m\_pSolidColorBrush](../Topic/CD2DSolidColorBrush::m_pSolidColorBrush.md)|存储指向 ID2D1SolidColorBrush 对象的指针。|  
+|----------|-----------------|  
+|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|实心画笔的颜色。|  
+|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|存储指向 ID2D1SolidColorBrush 对象的指针。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -76,8 +92,148 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
  [CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)  
   
-## 要求  
- **标头：** afxrendertarget.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxrendertarget.h  
   
-## 请参阅  
+##  <a name="a-namedtorcd2dsolidcolorbrusha--cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
+ 析构函数。 当 D2D 实心画笔对象被销毁时调用。  
+  
+```  
+virtual ~CD2DSolidColorBrush();
+```  
+  
+##  <a name="a-nameattacha--cd2dsolidcolorbrushattach"></a><a name="attach"></a>CD2DSolidColorBrush::Attach  
+ 附加现有的资源的对象的接口  
+  
+```  
+void Attach(ID2D1SolidColorBrush* pResource);
+```  
+  
+### <a name="parameters"></a>参数  
+ `pResource`  
+ 现有资源的接口。 不能为 NULL  
+  
+##  <a name="a-namecd2dsolidcolorbrusha--cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
+ 构造 CD2DSolidColorBrush 对象。  
+  
+```  
+CD2DSolidColorBrush(
+    CRenderTarget* pParentTarget,  
+    D2D1_COLOR_F color,  
+    CD2DBrushProperties* pBrushProperties = NULL,  
+    BOOL bAutoDestroy = TRUE);
+
+ 
+CD2DSolidColorBrush(
+    CRenderTarget* pParentTarget,  
+    COLORREF color,  
+    int nAlpha = 255,  
+    CD2DBrushProperties* pBrushProperties = NULL,  
+    BOOL bAutoDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ `pParentTarget`  
+ 指向该呈现器目标的指针。  
+  
+ `color`  
+ 画笔的颜色红、 绿、 蓝方和 alpha 值。  
+  
+ `pBrushProperties`  
+ 一个指向不透明度和画笔的转换。  
+  
+ `bAutoDestroy`  
+ 指示所有者 (pParentTarget) 将销毁该对象。  
+  
+ `nAlpha`  
+ 画笔的颜色的不透明度。  
+  
+##  <a name="a-namecreatea--cd2dsolidcolorbrushcreate"></a><a name="create"></a>CD2DSolidColorBrush::Create  
+ 创建 CD2DSolidColorBrush。  
+  
+```  
+virtual HRESULT Create(CRenderTarget* pRenderTarget);
+```  
+  
+### <a name="parameters"></a>参数  
+ `pRenderTarget`  
+ 指向该呈现器目标的指针。  
+  
+### <a name="return-value"></a>返回值  
+ 如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
+  
+##  <a name="a-namedestroya--cd2dsolidcolorbrushdestroy"></a><a name="destroy"></a>CD2DSolidColorBrush::Destroy  
+ 销毁 CD2DSolidColorBrush 对象。  
+  
+```  
+virtual void Destroy();
+```  
+  
+##  <a name="a-namedetacha--cd2dsolidcolorbrushdetach"></a><a name="detach"></a>CD2DSolidColorBrush::Detach  
+ 分离对象中的资源接口  
+  
+```  
+ID2D1SolidColorBrush* Detach();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 指向已分离的资源接口指针。  
+  
+##  <a name="a-namegeta--cd2dsolidcolorbrushget"></a><a name="get"></a>CD2DSolidColorBrush::Get  
+ 返回 ID2D1SolidColorBrush 接口  
+  
+```  
+ID2D1SolidColorBrush* Get();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 指向 ID2D1SolidColorBrush 接口或者如果对象尚未初始化为 NULL 指针。  
+  
+##  <a name="a-namegetcolora--cd2dsolidcolorbrushgetcolor"></a><a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
+ 检索纯色画笔的颜色  
+  
+```  
+D2D1_COLOR_F GetColor() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 此纯色画笔的颜色  
+  
+##  <a name="a-namemcolorsolida--cd2dsolidcolorbrushmcolorsolid"></a><a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
+ 实心画笔的颜色。  
+  
+```  
+D2D1_COLOR_F m_colorSolid;  
+```  
+  
+##  <a name="a-namempsolidcolorbrusha--cd2dsolidcolorbrushmpsolidcolorbrush"></a><a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
+ 存储指向 ID2D1SolidColorBrush 对象的指针。  
+  
+```  
+ID2D1SolidColorBrush* m_pSolidColorBrush;  
+```  
+  
+##  <a name="a-nameoperatorid2d1solidcolorbrushstara--cd2dsolidcolorbrushoperator-id2d1solidcolorbrush"></a><a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush *  
+ 返回 ID2D1SolidColorBrush 接口  
+  
+```  
+operator ID2D1SolidColorBrush*();
+```   
+  
+### <a name="return-value"></a>返回值  
+ 指向 ID2D1SolidColorBrush 接口或者如果对象尚未初始化为 NULL 指针。  
+  
+##  <a name="a-namesetcolora--cd2dsolidcolorbrushsetcolor"></a><a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
+ 指定此纯色画笔的颜色  
+  
+```  
+void SetColor(D2D1_COLOR_F color);
+```  
+  
+### <a name="parameters"></a>参数  
+ `color`  
+ 此纯色画笔的颜色  
+  
+## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
+

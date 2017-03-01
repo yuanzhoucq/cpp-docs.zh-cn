@@ -1,168 +1,185 @@
 ---
-title: "CDaoFieldInfo 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoFieldInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoFieldInfo 结构"
-  - "DAO（数据访问对象）, 字段集合"
+title: "CDaoFieldInfo 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoFieldInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), Fields collection
+- CDaoFieldInfo structure
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoFieldInfo 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 15db0c56480dfefb9fc8806c08596e37c7d38eb2
+ms.lasthandoff: 02/24/2017
 
-`CDaoFieldInfo` 结构包含有关数据访问对象（DAO）定义的字段对象的信息 。  
+---
+# <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 结构
+`CDaoFieldInfo`结构包含有关数据访问对象 (DAO) 定义的字段对象的信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      struct CDaoFieldInfo  
+struct CDaoFieldInfo  
 {  
-   CString m_strName;           // Primary  
-   short m_nType;               // Primary  
-   long m_lSize;                // Primary  
-   long m_lAttributes;          // Primary  
-   short m_nOrdinalPosition;    // Secondary  
-   BOOL m_bRequired;            // Secondary  
-   BOOL m_bAllowZeroLength;     // Secondary  
-   long m_lCollatingOrder;      // Secondary  
-   CString m_strForeignName;    // Secondary  
-   CString m_strSourceField;    // Secondary  
-   CString m_strSourceTable;    // Secondary  
-   CString m_strValidationRule; // All  
-   CString m_strValidationText; // All  
-   CString m_strDefaultValue;   // All  
+    CString m_strName;           // Primary  
+    short m_nType;               // Primary  
+    long m_lSize;                // Primary  
+    long m_lAttributes;          // Primary  
+    short m_nOrdinalPosition;    // Secondary  
+    BOOL m_bRequired;            // Secondary  
+    BOOL m_bAllowZeroLength;     // Secondary  
+    long m_lCollatingOrder;      // Secondary  
+    CString m_strForeignName;    // Secondary  
+    CString m_strSourceField;    // Secondary  
+    CString m_strSourceTable;    // Secondary  
+    CString m_strValidationRule; // All  
+    CString m_strValidationText; // All  
+    CString m_strDefaultValue;   // All  
 };  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `m_strName`  
- 唯一命名字段对象。  有关详细信息，请参见主题“名称属性”在DAO 帮助中。  
+ 唯一地命名字段对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
  `m_nType`  
- 指示字段的数据类型的值。  有关详细信息，请参见主题“类型属性”在DAO 帮助中。  此属性的值可以是下列值之一。  
+ 一个值，指示该字段的数据类型。 有关详细信息，请参阅主题 DAO 帮助中的"类型属性"。 此属性的值可以是以下项之一︰  
   
--   为或不是的**dbBoolean**，然后 **TRUE**\/**FALSE**相同  
+- **dbBoolean** Yes/No 相同**TRUE**/**FALSE**  
   
--   **dbByte** Byte  
+- **dbByte**字节  
   
--   **dbInteger** Short  
+- **dbInteger**短  
   
--   **dbLong** Long  
+- **dbLong**长  
   
--   货币**dbCurrency**;请参见 [COleCurrency](../../mfc/reference/colecurrency-class.md)MFC 类  
+- **dbCurrency**货币，请参阅 MFC 类[COleCurrency](../../mfc/reference/colecurrency-class.md)  
   
--   **dbSingle** Single  
+- **dbSingle**单个  
   
--   **dbDouble** Double  
+- **dbDouble** Double  
   
--   **dbDate**日期\/时间请参见 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)MFC 类  
+- **dbDate**日期/时间，请参阅 MFC 类[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)  
   
--   **dbText**文本请参见 [CString](../../atl-mfc-shared/reference/cstringt-class.md)MFC 类  
+- **dbText**文本; 请参阅 MFC 类[CString](../../atl-mfc-shared/reference/cstringt-class.md)  
   
--   **dbLongBinary** 长二进制 \(OLE 对象\);因为 `CByteArray` 更丰富、更易于使用，则可能需要改用 [CByteArray](../../mfc/reference/cbytearray-class.md) MFC 类而不是 `CLongBinary` 类。  
+- **dbLongBinary**长二进制 （OLE 对象）; 您可能想要使用的 MFC 类[CByteArray](../../mfc/reference/cbytearray-class.md)而不是类`CLongBinary`作为`CByteArray`更丰富、 更容易使用。  
   
--   Text;**dbMemo**参见 MFC `CString`类  
+- **dbMemo**备注，请参阅 MFC 类`CString`  
   
--   **dbGUID** 全局唯一标识符 \(GUID\)\/全局唯一标识符用于远程过程调用。  有关更多信息，请参见本主题中 DAO 帮助中的“类型属性”。  
+- **dbGUID**全局唯一标识符/通用唯一标识符用于远程过程调用。 有关详细信息，请参阅主题 DAO 帮助中的"类型属性"。  
   
 > [!NOTE]
->  不要为二进制数据使用 String 数据类型。  这让数据通过 Unicode\/ANSI 转换层，从而增加的开销以及可能意外的转换。  
+>  不要使用字符串数据类型为二进制数据。 这将导致您的数据以通过 Unicode/ANSI 转换层，从而提高了系统开销和可能是意外的转换。  
   
- *m\_lSize*  
- 指示最大大小，以字节中，DAO 字段对象包含文本或固定字段对象包含文本或数字值。  有关详细信息，请参见主题“大小属性”在DAO 帮助中。  大小可以是下列值之一：  
+ *m_lSize*  
+ 一个值，指示最大大小 （字节） 包含文本或包含文本或数字值的字段对象的固定的大小的 DAO 字段对象。 有关详细信息，请参阅主题 DAO 帮助中的"大小属性"。 大小可以是下列值之一︰  
   
-|类型|大小\(字节\)|说明|  
-|--------|--------------|--------|  
-|**dbBoolean**|1 个字节|Yes\/No \(same as True\/False\)|  
-|**dbByte**|1|Byte|  
-|**dbInteger**|2|Integer|  
+|类型|大小(字节)|说明|  
+|----------|--------------------|-----------------|  
+|**dbBoolean**|1 个字节|是/否 （等同于 True/False）|  
+|**dbByte**|1|字节|  
+|**dbInteger**|2|整数|  
 |**dbLong**|4|Long|  
-|**dbCurrency**|8|Currency \([COleCurrency](../../mfc/reference/colecurrency-class.md)\)|  
+|**dbCurrency**|8|货币 ([COleCurrency](../../mfc/reference/colecurrency-class.md))|  
 |**dbSingle**|4|Single|  
 |**dbDouble**|8|Double|  
-|**dbDate**|8|日期\/时间 \([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)\)|  
-|**dbText**|1 \- 255|Text \([CString](../../atl-mfc-shared/reference/cstringt-class.md)\)|  
-|**dbLongBinary**|0|长二进制 \(OLE 对象；[CByteArray](../../mfc/reference/cbytearray-class.md);使用而非 `CLongBinary`\)|  
-|**dbMemo**|0|Memo \([CString](../../atl-mfc-shared/reference/cstringt-class.md)\)|  
-|**dbGUID**|16|dbGUID 全局唯一标识符 \(GUID\)\/全局唯一标识符用于远程过程调用。|  
+|**dbDate**|8|日期/时间 ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
+|**dbText**|1 - 255|文本 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
+|**dbLongBinary**|0|长二进制文件 （OLE 对象;[CByteArray](../../mfc/reference/cbytearray-class.md); 而不是使用`CLongBinary`)|  
+|**dbMemo**|0|备注 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
+|**dbGUID**|16|是全局唯一标识符/通用唯一标识符用于远程过程调用。|  
   
  `m_lAttributes`  
- 指定记录集、querydef 对象、tabledef 或索引字段包含的对象的特性。  返回的值可以是这些常量的总和，使用 C\+\+ 创建一种按位或 \(  **&#124;**\) operator:  
+ 指定的字段对象 tabledef、 记录集、 querydef 或索引对象包含的特性。 返回的值可以是两个常数，使用 c + + 创建的按位 OR sum (**|**) 运算符︰  
   
--   **dbFixedField** 字段长度修复 \(数字字段的默认值\)。  
+- **dbFixedField**字段大小固定的 （默认值为数值字段）。  
   
--   **dbVariableField** 字段长度是可变 \(纯文本字段\)。  
+- **dbVariableField**字段大小是变量 （仅适用于文本字段）。  
   
--   **dbAutoIncrField** 用于新记录的字段值会自动递增到无法更改的单个长的整数。  仅支持使用 Microsoft Jet 数据库表。  
+- **dbAutoIncrField**新记录的字段值自动递增到一个唯一的长整数，它不能更改。 仅支持 Microsoft Jet 数据库表。  
   
--   **dbUpdatableField** 字段值可以更改。  
+- **dbUpdatableField**可更改字段值。  
   
--   **dbDescending** 字段在停止存储 \(Z \(或 100 \- 0\) 排序顺序 \(仅应用于索引对象的字段集合的字段对象；在 MFC 中，索引对象在 tabledef 包含对象\)。  如果省略了该常数，字段中登高 \(A\-Z 或 0 \- 100\) 排序 \(默认\) 排序。  
+- **dbDescending**对字段进行排序以降序 (Z-A 或 100-0) （仅适用于字段对象字段集合中的索引对象; 在 MFC 中，对象本身包含在 tabledef 对象的索引） 的顺序。 如果省略此常量，该字段按升序 (A-Z 或 0-100) 顺序 （默认值）。  
   
- 当检查此属性时，将可以使用 C\+\+ 位与运算符 \(**&**\) 测试特定特性。  当为多个属性时，可以通过将适当的常数将它们用按位或 \(  **&#124;**\) operator.  有关详细信息，请参见主题“属性 属性”在DAO 帮助中。  
+ 在检查此属性的设置时，您可以使用 c + + 按位-和运算符 (**&**) 若要测试对特定的属性。 在设置多个属性时，可以将这些组合与位或组合的相应常量 (**|**) 运算符。 有关详细信息，请参阅主题 DAO 帮助中的"特性属性"。  
   
- *m\_nOrdinalPosition*  
- 指定数字顺序需要字段的值是显示的 DAO 字段对象表示相对于其他字段。  可以使用 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)设置了此属性。  有关详细信息，请参见主题“定序位置 属性”在DAO 帮助中。  
+ *m_nOrdinalPosition*  
+ 一个值，指定要在其中 DAO field 对象代表要显示相对于其他域的域的数字顺序。 您可以设置此属性与[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。 有关详细信息，请参阅主题 DAO 帮助中的"OrdinalPosition 属性"。  
   
  `m_bRequired`  
- 指示 DAO 字段对象是否需要一个非空值。  如果此属性 **TRUE**，字段不允许空值。  如果设置为 **FALSE**，AllowZeroLength 和字段可能包含与 ValidationRule 属性指定的条件的空值并设置值。  有关详细信息，请参见主题“需要的属性”在DAO 帮助中。  可以设置一 tabledef 的此属性与 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)。  
+ 指示是否 DAO field 对象需要非 Null 值。 如果此属性为**TRUE**，该字段不允许 Null 值。 如果所需的设置为**FALSE**，该字段只能包含 Null 值，以及满足由填和 ValidationRule 属性设置指定的条件的值。 有关详细信息，请参阅主题 DAO 帮助中的"所需属性"。 您可以为设置此属性与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- *m\_bAllowZeroLength*  
- 一个空字符串 \(""\) DAO 字段是否为对象的一个有效值。文本或备忘录数据类型。  如果此属性 **TRUE**，空字符串是有效值。  可以将此属性设置为 **FALSE** 不确保可以使用空字符串设置的字段值。  有关详细信息，请参见主题“AllowZeroLength 属性”在DAO 帮助中。  可以设置一 tabledef 的此属性与 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)。  
+ *m_bAllowZeroLength*  
+ 指示是否为空字符串 ("") 数据类型为文本或 Memo DAO 字段将是有效值。 如果此属性为**TRUE**，空字符串是有效的值。 可以将此属性设置为**FALSE**以确保您不能使用空字符串来设置字段的值。 有关详细信息，请参阅主题 DAO 帮助中的"允许空字符串属性"。 您可以为设置此属性与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  `m_lCollatingOrder`  
- 文本中指定用于字符串比较或排序的排序顺序的序列。  有关详细信息，请参见主题“自定义 Windows 数据访问的注册表设置”DAO 帮助。  对于返回可能值的列表，请参见 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 结构的 **m\_lCollatingOrder** 成员中。  可以设置一 tabledef 的此属性与 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)。  
+ 用于字符串比较或排序的文本中指定的排序顺序的序列。 有关详细信息，请参阅"自定义 Windows 注册表设置为数据访问"DAO 帮助中的主题。 返回的可能值的列表，请参阅**m_lCollatingOrder**的成员[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)结构。 您可以为设置此属性与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  `m_strForeignName`  
- 该关系，DAO 外表中指定对象名称字段在主表中对应的字段的值。  有关详细信息，请参见主题“ForeignNam 属性”在DAO 帮助中。  
+ 一个值，在关系中，指定对应于主表中一个字段的外部表中的 DAO 字段对象的名称。 有关详细信息，请参阅主题 DAO 帮助中的"ForeignName 属性"。  
   
- *m\_strSourceField*  
- 指示是初始数据源tabledef 或 querydef 对象、记录集包含的 DAO 字段对象字段的名称。  此属性指示原始字段与字段对象。  例如，您可能使用此属性确保的初始数据源。名称与字段名称无关的基础是在表中查询字段。  有关详细信息，请参见主题“SourceField，SourceTable 属性”DAO 帮助。  可以设置一 tabledef 的此属性与 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)。  
+ *m_strSourceField*  
+ 指示 tabledef、 记录集或 querydef 对象包含的 DAO 字段对象的数据的原始源的字段的名称。 此属性指示与字段对象相关联的原始字段名称。 例如，可以使用此属性以确定其名称为与基础表中的字段的名称不相关的查询字段中的数据的原始源。 有关详细信息，请参阅 DAO 帮助中的主题"SourceField，SourceTable 属性"。 您可以为设置此属性与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- *m\_strSourceTable*  
- 指示是初始数据源tabledef 或 querydef 对象、记录集包含的 DAO 字段对象字段的名称。  此属性指示原始字段与字段对象。  例如，您可能使用此属性确保的初始数据源。名称与字段名称无关的基础是在表中查询字段。  有关详细信息，请参见主题“SourceField，SourceTable 属性”DAO 帮助。  可以设置一 tabledef 的此属性与 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)。  
+ *m_strSourceTable*  
+ 指示 tabledef、 记录集或 querydef 对象包含的 DAO 字段对象的数据的原始源的表的名称。 此属性指示与字段对象相关联的原始表名称。 例如，可以使用此属性以确定其名称为与基础表中的字段的名称不相关的查询字段中的数据的原始源。 有关详细信息，请参阅 DAO 帮助中的主题"SourceField，SourceTable 属性"。 您可以为设置此属性与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  `m_strValidationRule`  
- 在字段验证数据的值，更改或添加到表。  有关详细信息，请参见主题“ValidationRule属性”在DAO 帮助中。  可以设置一 tabledef 的此属性与 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)。  
+ 一个值，因为它已更改或添加到表验证字段中的数据。 有关详细信息，请参阅主题 DAO 帮助中的"有效性规则属性"。 您可以为设置此属性与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- 有关 tabledefs 的相关信息，请参见 [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) 结构的 **m\_strValidationRule** 成员中。  
+ Tabledefs 的相关信息，请参阅**m_strValidationRule**的成员[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)结构。  
   
  `m_strValidationText`  
- 指定消息文本应用程序显示的值，则对象 ValidationRule DAO 字段的值不符合指定属性设置的验证规则。  有关详细信息，请参见主题“ValidationText属性”在DAO 帮助中。  可以设置一 tabledef 的此属性与 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)。  
+ 一个值，指定您的应用程序显示如果 DAO 字段对象的值不符合验证规则 ValidationRule 属性设置指定的消息的文本。 有关详细信息，请参阅主题 DAO 帮助中的"有效性文本属性"。 您可以为设置此属性与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- *m\_strDefaultValue*  
- DAO 字段对象的默认值。  当新记录时创建，DefaultValue 属性设置自动进入，当字段的值。  有关详细信息，请参见主题“DefaultValue属性”在DAO 帮助中。  可以设置一 tabledef 的此属性与 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md)。  
+ *m_strDefaultValue*  
+ DAO field 对象的默认值。 创建一条新记录时，DefaultValue 属性设置为自动输入作为值为该字段。 有关详细信息，请参阅主题 DAO 帮助中的"默认值属性"。 您可以为设置此属性与 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
-## 备注  
- 主键，二级键和所有上面的引用指示信息如何由 `GetFieldInfo` 成员函数返回类[CDaoTableDef](../Topic/CDaoTableDef::GetFieldInfo.md), [CDaoQueryDef](../Topic/CDaoQueryDef::GetFieldInfo.md), 以及[CDaoRecordset](../Topic/CDaoRecordset::GetFieldInfo.md).  
+## <a name="remarks"></a>备注  
+ 对主、 辅助数据库，并且所有上面引用指示如何通过返回的信息`GetFieldInfo`类中的成员函数[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)， [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)，和[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)。  
   
- 字段对象不被 MFC 类表示。  相反，基于下面类的 MFC 对象的 DAO 字段对象包含对象的集合：[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。  这些类提供成员函数访问索引信息各个项，也可同时用 `GetFieldInfo`对象访问它们，通过调用包含对象的 `CDaoFieldInfo` 成员函数。  
+ Field 对象不由 MFC 类表示。 相反，下面的类的 MFC 对象的 DAO 对象包含字段对象的集合︰ [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)， [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)，和[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 这些类提供成员函数来访问字段的信息，一些单个项或可以访问它们同时与`CDaoFieldInfo`对象通过调用`GetFieldInfo`包含对象的成员函数。  
   
- 除了其检查对象的属性使用外，您还可以使用 `CDaoFieldInfo` 构造中创建的新字段的输入参数 tabledef 的。  更简单的选项用于此任务，都可用，但是，如果您希望更细致的控制，可以使用 [CDaoTableDef::CreateField](../Topic/CDaoTableDef::CreateField.md) 采用 `CDaoFieldInfo` 参数的版本。  
+ 除了其用于检查对象属性，还可以使用`CDaoFieldInfo`构造在 tabledef 对象中创建新的字段的输入的参数。 更简单的选项都可用于此任务中，但如果您想更精细的控制，您可以使用的版本[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)采用`CDaoFieldInfo`参数。  
   
- `GetFieldInfo` 成员函数中的信息包含字段\) \(类在 `CDaoFieldInfo` 结构存储。  调用字段集合字段对象存储包含对象的 `GetFieldInfo` 成员函数中。  `CDaoFieldInfo` 还定义了函数调试版本的 `Dump` 成员。  您可以使用`Dump` 显示`CDaoFieldInfo`对象的内容。  
+ 检索的信息`GetFieldInfo`（的包含字段的类） 的成员函数存储在`CDaoFieldInfo`结构。 调用`GetFieldInfo`field 对象存储在其字段集合中的包含对象的成员函数。 `CDaoFieldInfo`此外定义了`Dump`成员函数在调试生成。 您可以使用`Dump`转储的内容`CDaoFieldInfo`对象。  
   
-## 要求  
- **头文件：** afxdao.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxdao.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef::GetFieldInfo](../Topic/CDaoTableDef::GetFieldInfo.md)   
- [CDaoRecordset::GetFieldInfo](../Topic/CDaoRecordset::GetFieldInfo.md)   
- [CDaoQueryDef::GetFieldInfo](../Topic/CDaoQueryDef::GetFieldInfo.md)
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)   
+ [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)   
+ [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+
+

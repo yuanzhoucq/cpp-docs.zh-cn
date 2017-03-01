@@ -1,62 +1,78 @@
 ---
-title: "CListView Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CListView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListView class"
-  - "视图, and common controls"
+title: "CListView 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CListView
+dev_langs:
+- C++
+helpviewer_keywords:
+- views, and common controls
+- CListView class
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CListView Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: ebf6c93aa6d88d1942af4ecb9e3373fa57d84b65
+ms.lasthandoff: 02/24/2017
 
-简化对列表控件中使用和对 [CListCtrl](../../mfc/reference/clistctrl-class.md)，封装列表控件的功能选件类，在MFC文档的视图结构。  
+---
+# <a name="clistview-class"></a>CListView 类
+简化了使用列表控件和[CListCtrl](../../mfc/reference/clistctrl-class.md)，封装列表控件功能，与 MFC 文档视图体系结构的类。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CListView : public CCtrlView  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
-  
-|名称|说明|  
-|--------|--------|  
-|[CListView::CListView](../Topic/CListView::CListView.md)|构造 `CListView` 对象。|  
-  
-### 公共方法  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
-|[CListView::GetListCtrl](../Topic/CListView::GetListCtrl.md)|返回列表控件与视图。|  
+|----------|-----------------|  
+|[CListView::CListView](#clistview)|构造 `CListView` 对象。|  
   
-### 受保护的方法  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[CListView::RemoveImageList](../Topic/CListView::RemoveImageList.md)|中移除指定的图像从列表视图中列出。|  
+|----------|-----------------|  
+|[CListView::GetListCtrl](#getlistctrl)|返回与视图关联的列表控件。|  
   
-## 备注  
- 有关此结构的更多信息，请对引用的 [CView](../../mfc/reference/cview-class.md) 选件类和交叉引用请参见概述存在。  
+### <a name="protected-methods"></a>受保护的方法  
   
-## 继承层次结构  
+|名称|说明|  
+|----------|-----------------|  
+|[CListView::RemoveImageList](#removeimagelist)|从列表视图中移除指定的图像列表。|  
+  
+## <a name="remarks"></a>备注  
+ 这种体系结构的详细信息，请参阅概述[CView](../../mfc/reference/cview-class.md)类和引用存在交叉引用。  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -69,11 +85,43 @@ class CListView : public CCtrlView
   
  `CListView`  
   
-## 要求  
- **Header:** afxcview.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxcview.h  
   
-## 请参阅  
- [MFC示例ROWLIST](../../top/visual-cpp-samples.md)   
- [CCtrlView Class](../../mfc/reference/cctrlview-class.md)   
+##  <a name="a-nameclistviewa--clistviewclistview"></a><a name="clistview"></a>CListView::CListView  
+ 构造 `CListView` 对象。  
+  
+```  
+CListView();
+```  
+  
+##  <a name="a-namegetlistctrla--clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl  
+ 调用该成员函数以获取对列表控件与视图关联的引用。  
+  
+```  
+CListCtrl& GetListCtrl() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 对列表控件与视图关联的引用。  
+  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCListView #&7;](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
+  
+##  <a name="a-nameremoveimagelista--clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList  
+ 从列表视图中移除指定的图像列表。  
+  
+```  
+void RemoveImageList(int nImageList);
+```  
+  
+### <a name="parameters"></a>参数  
+ `nImageList`  
+ 要删除的图像的从零开始的索引。  
+  
+## <a name="see-also"></a>另请参阅  
+ [MFC 示例 ROWLIST](../../visual-cpp-samples.md)   
+ [CCtrlView 类](../../mfc/reference/cctrlview-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
- [CCtrlView Class](../../mfc/reference/cctrlview-class.md)
+ [CCtrlView 类](../../mfc/reference/cctrlview-class.md)
+

@@ -1,60 +1,76 @@
 ---
-title: "CDaoRelationFieldInfo 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoRelationFieldInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoRelationFieldInfo 结构"
-  - "DAO（数据访问对象）, 关系集合"
+title: "CDaoRelationFieldInfo 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoRelationFieldInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), Relations collection
+- CDaoRelationFieldInfo structure
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoRelationFieldInfo 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 23d7497502f611cf2311e574556186dc5f7c7d3d
+ms.lasthandoff: 02/24/2017
 
-“CDaoRelationFieldInfo”  结构包含数据访问对象\(DAO\)的关系定义的字段的信息。  
+---
+# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo 结构
+`CDaoRelationFieldInfo`结构包含有关数据访问对象 (DAO) 的方式定义的关系中的字段信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      struct CDaoRelationFieldInfo  
+struct CDaoRelationFieldInfo  
 {  
-   CString m_strName;           // Primary  
-   CString m_strForeignName;    // Primary  
+    CString m_strName;           // Primary  
+    CString m_strForeignName;    // Primary  
 };  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `m_strName`  
- 在关系的主表中的字段名称。  
+ 主表中的关系的字段的名称。  
   
  `m_strForeignName`  
- 在关系的外键表中的字段名称。  
+ 外的关系的表中字段的名称。  
   
-## 备注  
- DAO 关系对象在主键表中指定字段和外键表中的字段定义关系。  在上面结构定义中对主键的引用指示信息如何在通过获取 `CDaoDatabase` 类的 [GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md) 成员函数中调用 [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) 对象的 `m_pFieldInfos` 成员中返回。  
+## <a name="remarks"></a>备注  
+ DAO 关系对象的主表和外部表中定义该关系的字段中指定的字段。 对主以上结构定义中引用所指示如何在返回的信息`m_pFieldInfos`的成员[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)获取通过调用对象[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)类的成员函数`CDaoDatabase`。  
   
- 关系对象和关系字段对象不有 MFC 类表示。  相反，在 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 类的基本的 MFC DAO 对象下的 DAO 对象包含关系对象的集合，称为关系集合。  反过来说，每个关系对象包含关系字段对象的集合。  每个关系字段对象关联主键表中一个一个字段与外键表中一个字段。  一起考虑，关系字段对象在，每个表中定义字段的一组，一起来定义关系。  `CDaoDatabase` 允许您通过调用 `GetRelationInfo` 成员函数访问关系对象与 `CDaoRelationInfo` 对象。  `CDaoRelationInfo` 对象，然后，它具有数据成员，即 `m_pFieldInfos`，指向 `CDaoRelationFieldInfo` 对象的数组。  
+ 不由 MFC 类表示关系的对象和关系字段对象。 相反，DAO 对象类的基础 MFC 对象[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)包含称为关系集合的关系对象的集合。 每个关系对象，包含关系字段对象的集合。 每个关系 field 对象与外部表中的字段关联的主表中的字段。 合起来看，关系字段对象定义一组字段在每个表中，它们共同定义该关系。 `CDaoDatabase`使您能够访问具有关系对象`CDaoRelationInfo`对象通过调用`GetRelationInfo`成员函数。 `CDaoRelationInfo`对象，然后，有一个数据成员， `m_pFieldInfos`，，它指向的数组`CDaoRelationFieldInfo`对象。  
   
- 调用存储您感兴趣的关系对象关系集合容器 `CDaoDatabase` 对象的 [GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md) 成员函数。  然后访问 [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) 对象的 `m_pFieldInfos` 成员。  `CDaoRelationFieldInfo` 还定义了函数调试版本的 `Dump` 成员。  您可以使用`Dump` 显示`CDaoRelationFieldInfo`对象的内容。  
+ 调用[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成员函数包含`CDaoDatabase`中它的集合是的关系存储您感兴趣的关系对象的对象。 然后，访问`m_pFieldInfos`的成员[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)对象。 `CDaoRelationFieldInfo`此外定义了`Dump`成员函数在调试生成。 您可以使用`Dump`转储的内容`CDaoRelationFieldInfo`对象。  
   
-## 要求  
- **头文件：** afxdao.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxdao.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoRelationInfo 结构](../../mfc/reference/cdaorelationinfo-structure.md)
+

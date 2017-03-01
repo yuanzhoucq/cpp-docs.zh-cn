@@ -1,113 +1,121 @@
 ---
-title: "CDaoTableDefInfo 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoTableDefInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoTableDefInfo 结构"
-  - "DAO（数据访问对象）, TableDefs 集合"
+title: "CDaoTableDefInfo 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoTableDefInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoTableDefInfo structure
+- DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoTableDefInfo 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 4d1ac5ca00f98f8c34332ce2eb1a180ab715e6ba
+ms.lasthandoff: 02/24/2017
 
-`CDaoTableDefInfo` 结构包含有关用于数据访问对象 tabledef \(DAO\) 定义的对象的信息。  
+---
+# <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 结构
+`CDaoTableDefInfo`结构包含有关 tabledef 对象定义的数据访问对象 (DAO) 的信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      struct CDaoTableDefInfo  
+struct CDaoTableDefInfo  
 {  
-   CString m_strName;               // Primary  
-   BOOL m_bUpdatable;               // Primary  
-   long m_lAttributes;              // Primary  
-   COleDateTime m_dateCreated;      // Secondary  
-   COleDateTime m_dateLastUpdated;  // Secondary  
-   CString m_strSrcTableName;       // Secondary  
-   CString m_strConnect;            // Secondary  
-   CString m_strValidationRule;     // All  
-   CString m_strValidationText;     // All  
-   long m_lRecordCount;             // All  
+    CString m_strName;               // Primary  
+    BOOL m_bUpdatable;               // Primary  
+    long m_lAttributes;              // Primary  
+    COleDateTime m_dateCreated;      // Secondary  
+    COleDateTime m_dateLastUpdated;  // Secondary  
+    CString m_strSrcTableName;       // Secondary  
+    CString m_strConnect;            // Secondary  
+    CString m_strValidationRule;     // All  
+    CString m_strValidationText;     // All  
+    long m_lRecordCount;             // All  
 };  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `m_strName`  
- 唯一命名 tabledef 对象。  若要直接检索此属性的值，调用 [GetName](../Topic/CDaoTableDef::GetName.md) tabledef 对象的成员函数。  有关更多信息，请参见主题“属性名称”DAO 帮助。  
+ 唯一地命名 tabledef 对象。 若要直接检索此属性的值，请调用 tabledef 对象[GetName](../../mfc/reference/cdaotabledef-class.md#getname)成员函数。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
   
  `m_bUpdatable`  
- 指示进行更改是否可对表。  快速确定表是否是可更新中打开表的 `CDaoTableDef` 对象并调用对象的成员函数。[CanUpdate](../Topic/CDaoTableDef::CanUpdate.md) `CanUpdate` 始终返回非零 \(**TRUE**\) 新生成 tabledef 对象和 0 \(**FALSE**\) 连接的 tabledef 对象。  新 tabledef 只有对象可追加到当前用户具有写入权限的数据库。  如果表中只包含 nonupdatable 字段，`CanUpdate` 返回 0。  在一个或多个字段是可更新的，则 `CanUpdate` 返回非零值。  您只能编辑可更新的字段。  有关更多信息，请参见主题“可更新的属性”DAO 帮助。  
+ 指示是否可以对表进行更改。 若要确定表是否为可更新的快速方法是打开`CDaoTableDef`表对象并调用该对象的[CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate)成员函数。 `CanUpdate`始终返回非零值 (**TRUE**) 新建的 tabledef 对象以及 0 (**FALSE**) 附加的 tabledef 对象。 可以仅针对当前用户对其具有写入权限的数据库追加新 tabledef 对象。 如果表包含不可更新字段， `CanUpdate` ，则返回 0。 在一个或多个字段都是可更新的、`CanUpdate`返回非零值。 您可以编辑可更新的字段。 有关详细信息，请参阅主题 DAO 帮助中的"可更新属性"。  
   
  `m_lAttributes`  
- 指定 tabledef 对象表示表的特性。  若要检索、tabledef 的当前属性，请调用成员函数。[GetAttributes](../Topic/CDaoTableDef::GetAttributes.md) 返回的值可以是这些长常数的组合 \(使用按位或 \(  **&#124;**\) 运算符：  
+ 指定 tabledef 对象所代表的表格的特性。 若要检索 tabledef 对象的当前属性，请调用其[GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes)成员函数。 返回的值可以是这些长常量的组合 (使用按位 OR (**|**) 运算符):  
   
--   使用 Microsoft Jet 数据库引擎的数据库的\)**dbAttachExclusive**，指示表用于独占使用打开的连接的表。  
+- **dbAttachExclusive**对于使用 Microsoft Jet 数据库引擎的数据库，指示该表已附加的表打开以供独占使用。  
   
--   使用 Microsoft Jet 数据库引擎的数据库的\)**dbAttachSavePWD**，指示用户 ID 和密码的连接表中保存的连接信息。  
+- **dbAttachSavePWD**对于使用 Microsoft Jet 数据库引擎的数据库，该值指示用户 ID 和附加表的密码将与连接信息一起保存。  
   
--   **dbSystemObject** 表指示是 Microsoft Jet 数据库引擎提供的系统表。（只读。）  
+- **dbSystemObject**指示表是由 Microsoft Jet 数据库引擎提供的系统表。 （只读。）  
   
--   **dbHiddenObject** 表指示是 Microsoft Jet 数据库引擎提供的一个隐藏窗体 \(用于临时使用\)。（只读。）  
+- **dbHiddenObject**指示表是由 Microsoft Jet 数据库引擎 （供临时使用） 提供的隐藏的表。 （只读。）  
   
--   指示**dbAttachedTable** 表是从非 ODBC 数据库的连接的冲突表，例如数据库。  
+- **dbAttachedTable**指示表是从非 ODBC 数据库，如 Paradox 数据库附加的表。  
   
--   **dbAttachedODBC** 表是一个 ODBC 数据库的连接的表，例如 Microsoft SQL Server。  
+- **dbAttachedODBC**指示表是附加从 ODBC 数据库，如 Microsoft SQL Server 表。  
   
  `m_dateCreated`  
- 表创建日期和时间。  直接检索表创建日期，调用 `CDaoTableDef` 对象的函数 [GetDateCreated](../Topic/CDaoTableDef::GetDateCreated.md) 成员与表。  请参见下面的说明。更多信息。  有关相关信息，请参见主题“DateCreated，LastUpdated 属性”DAO 帮助。  
+ 日期和时间创建表中。 若要直接检索表的创建的日期，请调用[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成员函数`CDaoTableDef`与该表关联的对象。 有关详细信息，请参阅下面的注释。 有关相关信息，请参阅 DAO 帮助中的主题"DateCreated，上次更新属性"。  
   
  `m_dateLastUpdated`  
- 进行的最近更改的日期和时间对表的设计。  直接检索表是最新更新的日期，请调用 `CDaoTableDef` 对象的函数 [GetDateLastUpdated](../Topic/CDaoTableDef::GetDateLastUpdated.md) 成员与表。  请参见下面的说明。更多信息。  有关相关信息，请参见主题“DateCreated，LastUpdated 属性”DAO 帮助。  
+ 日期和时间对表的设计所做的最新更改。 若要直接检索表的上次更新的日期，请调用[GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated)成员函数`CDaoTableDef`与该表关联的对象。 有关详细信息，请参阅下面的注释。 有关相关信息，请参阅 DAO 帮助中的主题"DateCreated，上次更新属性"。  
   
- *m\_strSrcTableName*  
- 指定连接表的名称，如果有\)。  直接检索源表名称，请调用 `CDaoTableDef` 对象的函数 [GetSourceTableName](../Topic/CDaoTableDef::GetSourceTableName.md) 成员与表。  
+ *m_strSrcTableName*  
+ 如果有的话，请指定附加表的名称。 若要直接检索源表名称，请调用[GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename)成员函数`CDaoTableDef`与该表关联的对象。  
   
  `m_strConnect`  
- 提供有关源打开数据库中的信息。  通过调用 `CDaoTableDef` 对象的函数 [GetConnect](../Topic/CDaoTableDef::GetConnect.md) 成员检查该属性。  有关的更多信息请连接字符串，请参见 `GetConnect`。  
+ 提供有关源的打开的数据库的信息。 您可以检查此属性通过调用[GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)成员函数的您`CDaoTableDef`对象。 有关详细信息将连接字符串，请参阅`GetConnect`。  
   
  `m_strValidationRule`  
- 验证在 tabledef 的数据的值字段，从而更改或添加到表。  验证为使用 Microsoft Jet 数据库引擎的数据库。仅支持。  直接检索验证规则，请调用 `CDaoTableDef` 对象的函数 [GetValidationRule](../Topic/CDaoTableDef::GetValidationRule.md) 成员与表。  有关相关信息，请参见主题“ValidationRule 属性”DAO 帮助。  
+ 一个值，验证 tabledef 字段中的数据，如更改或添加到表。 仅用于使用 Microsoft Jet 数据库引擎的数据库支持验证。 若要直接检索验证规则，请调用[GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule)成员函数`CDaoTableDef`与该表关联的对象。 有关相关信息，请参阅主题 DAO 帮助中的"有效性规则属性"。  
   
  `m_strValidationText`  
- 指定消息文本应用程序应该显示的值，如果属性指定 ValidationRule 的验证规则是不够的。  有关相关信息，请参见主题“ValidationText 属性”DAO 帮助。  
+ 一个值，指定如果 ValidationRule 属性所指定的验证规则不满足您的应用程序应显示的消息的文本。 有关相关信息，请参阅主题 DAO 帮助中的"有效性文本属性"。  
   
- *m\_lRecordCount*  
- 在 tabledef 对象访问记录数。  此属性为只读。  直接检索记录数量，请调用 `CDaoTableDef` 对象的成员函数。[GetRecordCount](../Topic/CDaoTableDef::GetRecordCount.md) `GetRecordCount` 的文档进一步介绍记录数量。  如果表包含大量记录，请注意将检索此计数的，这是一个耗时的操作。  
+ *m_lRecordCount*  
+ 访问 tabledef 对象中的记录数。 此属性设置为只读。 若要直接检索的记录数，请调用[GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount)成员函数`CDaoTableDef`对象。 文档`GetRecordCount`介绍进一步的记录数。 请注意，检索此计数可以耗时的操作是否表包含多个记录。  
   
-## 备注  
- tabledef 是 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)类对象。  为 Main，附属的引用和所有的指示信息如何通过类 `CDaoDatabase`中的 [GetTableDefInfo](../Topic/CDaoDatabase::GetTableDefInfo.md) 成员函数返回。  
+## <a name="remarks"></a>备注  
+ Tabledef 是类的对象[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)。 对主、 辅助数据库，并且所有上面引用指示如何通过返回的信息[GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)类中的成员函数`CDaoDatabase`。  
   
- [CDaoDatabase::GetTableDefInfo](../Topic/CDaoDatabase::GetTableDefInfo.md) 成员函数检索的信息在 `CDaoTableDefInfo` 结构存储。  调用集合 TableDefs tabledef 对象存储 `CDaoDatabase` 对象的 `GetTableDefInfo` 成员函数中。  `CDaoTableDefInfo` 还定义了函数调试版本的 `Dump` 成员。  可以使用 `Dump` 转储 `CDaoTableDefInfo` 对象的内容。  
+ 检索的信息[cdaodatabase:: Gettabledefinfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)成员函数存储在`CDaoTableDefInfo`结构。 调用`GetTableDefInfo`成员函数`CDaoDatabase`tabledef 对象存储在其 TableDefs 集合对象。 `CDaoTableDefInfo`此外定义了`Dump`成员函数在调试生成。 您可以使用`Dump`转储的内容`CDaoTableDefInfo`对象。  
   
- 日期和时间设置从基表创建或之前更新计算机的派生。  在多用户环境中，用户应直接从文件的服务器获得这些设置以避免在 DateCreated 和属性设置 LastUpdated 的变体。  
+ 日期和时间设置均源自的计算机在其创建或上次更新时间的基础表。 在多用户环境中，用户应该会看到这些直接从文件服务器的设置，以避免发生 DateCreated 差异以及上次更新的属性设置。  
   
-## 要求  
- **页眉：** afxdao.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxdao.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoTableDef::CanUpdate](../Topic/CDaoTableDef::CanUpdate.md)   
- [CDaoTableDef::GetAttributes](../Topic/CDaoTableDef::GetAttributes.md)   
- [CDaoTableDef::GetDateCreated](../Topic/CDaoTableDef::GetDateCreated.md)   
- [CDaoTableDef::GetDateLastUpdated](../Topic/CDaoTableDef::GetDateLastUpdated.md)   
- [CDaoTableDef::GetRecordCount](../Topic/CDaoTableDef::GetRecordCount.md)   
- [CDaoTableDef::GetSourceTableName](../Topic/CDaoTableDef::GetSourceTableName.md)   
- [CDaoTableDef::GetValidationRule](../Topic/CDaoTableDef::GetValidationRule.md)   
- [CDaoTableDef::GetValidationText](../Topic/CDaoTableDef::GetValidationText.md)
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoTableDef 类](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoDatabase 类](../../mfc/reference/cdaodatabase-class.md)
+

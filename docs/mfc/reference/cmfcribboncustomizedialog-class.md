@@ -1,69 +1,85 @@
 ---
-title: "CMFCRibbonCustomizeDialog Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "GetThisClass"
-  - "CMFCRibbonCustomizeDialog"
-  - "~CMFCRibbonCustomizeDialog"
-  - "CMFCRibbonCustomizeDialog::GetThisClass"
-  - "CMFCRibbonCustomizeDialog.~CMFCRibbonCustomizeDialog"
-  - "CMFCRibbonCustomizeDialog.GetThisClass"
-  - "CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~CMFCRibbonCustomizeDialog destructor"
-  - "CMFCRibbonCustomizeDialog class"
-  - "CMFCRibbonCustomizeDialog class, 析构函数"
-  - "GetThisClass method"
+title: "CMFCRibbonCustomizeDialog 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- GetThisClass
+- CMFCRibbonCustomizeDialog
+- ~CMFCRibbonCustomizeDialog
+- CMFCRibbonCustomizeDialog::GetThisClass
+- CMFCRibbonCustomizeDialog.~CMFCRibbonCustomizeDialog
+- CMFCRibbonCustomizeDialog.GetThisClass
+- CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonCustomizeDialog class
+- CMFCRibbonCustomizeDialog class, destructor
+- ~CMFCRibbonCustomizeDialog destructor
+- GetThisClass method
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CMFCRibbonCustomizeDialog Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: d27247f89901adad1778313cdde6fe206a569f0d
+ms.lasthandoff: 02/24/2017
 
-显示功能区 **自定义** 页。  
+---
+# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog 类
+显示功能区**自定义**页。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CMFCRibbonCustomizeDialog : public CMFCPropertySheet  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](../Topic/CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog.md)|构造 `CMFCRibbonCustomizeDialog` 对象。|  
+|----------|-----------------|  
+|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|构造 `CMFCRibbonCustomizeDialog` 对象。|  
 |`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|析构函数。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|`CMFCRibbonCustomizeDialog::GetThisClass`|用于由框架获取指向与此选件类类型的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 对象。|  
+|----------|-----------------|  
+|`CMFCRibbonCustomizeDialog::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
   
-## 备注  
- MFC自动实例化此选件类，如果不处理AFX\_WM\_ON\_RIBBON\_CUSTOMIZE消息，或者，如果返回0从消息处理程序。  
+## <a name="remarks"></a>备注  
+ 如果不处理 AFX_WM_ON_RIBBON_CUSTOMIZE 消息，或者如果您从消息处理程序返回 0，MFC 自动实例化此类。  
   
- 如果在应用程序中使用此选件类公开功能区 **自定义** 对话框，请将其实例化并调用 `DoModal` 方法。  
+ 如果想要使用此类应用程序中显示功能区**自定义**对话框框中，只是其实例化并调用`DoModal`方法。  
   
- 由于此选件类从 [CMFCPropertySheet Class](../../mfc/reference/cmfcpropertysheet-class.md)派生，使用 `CMFCPropertySheet` API，可以将自定义页。  
+ 由于此类派生自[CMFCPropertySheet 类](../../mfc/reference/cmfcpropertysheet-class.md)，您可以通过添加自定义页`CMFCPropertySheet`API。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -76,9 +92,34 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
  [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)  
   
-## 要求  
- **标头:** afxribboncustomizedialog.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxribboncustomizedialog.h  
   
-## 请参阅  
+##  <a name="a-namecmfcribboncustomizedialoga--cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
+ 构造 `CMFCRibbonCustomizeDialog` 对象。  
+  
+```  
+CMFCRibbonCustomizeDialog(
+    CWnd* pWndParent,  
+    CMFCRibbonBar* pRibbon);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pWndParent`  
+ 指向父窗口 （通常主框架） 的指针。  
+  
+ [in] `pRibbon`  
+ 一个指向`CMFCRibbonBar`那就是进行自定义。  
+  
+### <a name="example"></a>示例  
+ 下面的示例演示如何构造`CMFCRibbonCustomizeDialog`对象。  
+  
+ [!code-cpp[NVC_MFC_RibbonApp #&18;](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
+  
+### <a name="remarks"></a>备注  
+ 构造函数实例化[CMFCRibbonCustomizePropertyPage 类](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)对象，并将其添加到属性页的集合。  
+  
+## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)
+

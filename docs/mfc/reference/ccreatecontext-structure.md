@@ -1,79 +1,97 @@
 ---
-title: "CCreateContext Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CCreateContext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCreateContext structure"
+title: "CCreateContext 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CCreateContext
+dev_langs:
+- C++
+helpviewer_keywords:
+- CCreateContext structure
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CCreateContext Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 231f2e44e085d27a2b2cbf289adf7b0521471b0e
+ms.lasthandoff: 02/24/2017
 
-框架使用 `CCreateContext` 结构，在创建与文档框架窗口和视图时。  
+---
+# <a name="ccreatecontext-structure"></a>CCreateContext 结构
+框架将使用`CCreateContext`结构，在创建框架窗口以及与文档相关联的视图时。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 struct CCreateContext  
 ```  
   
-## 备注  
- `CCreateContext` 是结构，并没有基类。  
+## <a name="remarks"></a>备注  
+ `CCreateContext`是一种结构，并且没有基类的类。  
   
- 在创建窗口时，此结构的值中的信息连接文档的元素到其数据视图。  如果重写创建过程中，您只需 `CCreateContext`。  
+ 创建一个窗口时，此结构中的值提供用来将文档的组件连接到其数据的视图的信息。 只需使用`CCreateContext`如果您要重写创建过程的部分。  
   
- `CCreateContext` 结构包含指向文档、框架窗口、视图和文档模板。  它还包含标识视图的类型创建的指向 `CRuntimeClass`。  运行时选件类信息和当前文件指针使用动态创建新视图。  下表建议如何以及何时可以使用每个 `CCreateContext` 成员:  
+ 一个`CCreateContext`结构包含文档、 框架窗口、 视图和文档模板的指针。 它还包含一个指向`CRuntimeClass`，它标识要创建的视图类型。 运行时类信息和当前文档指针用于动态创建一个新的视图。 下表建议如何以及何时每个`CCreateContext`可能使用成员︰  
   
-|成员|类型|将针对|  
-|--------|--------|---------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|创建的新视图的`CRuntimeClass`。|  
-|`m_pCurrentDoc`|`CDocument*`|现有文档与新的视图。|  
-|`m_pNewDocTemplate`|`CDocTemplate*`|文档模板与新的MDI框架窗口的创建。|  
-|`m_pLastView`|`CView*`|附加视图进行建模的原始视图中，在拆分窗口视图中创建或第二个视图的创建文档中的。|  
-|`m_pCurrentFrame`|`CFrameWnd*`|其他框架窗口进行建模的框架窗口，在第二个框架窗口中创建文档中的。|  
+|成员|类型|它是什么|  
+|------------|----------|--------------------|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`要创建的新视图。|  
+|`m_pCurrentDoc`|`CDocument*`|要与新视图相关联的现有文档。|  
+|`m_pNewDocTemplate`|`CDocTemplate*`|文档模板创建新的 MDI 框架窗口相关联。|  
+|`m_pLastView`|`CView*`|原始视图在其的其他视图进行建模，如下所示的拆分器的窗口视图创建或上一个文档的第二个视图的创建。|  
+|`m_pCurrentFrame`|`CFrameWnd*`|框架窗口在其其他框架窗口进行建模，如下所示对文档的第二个框架窗口的创建。|  
   
- 当文档模板创建文档及其关联的元素时，它将验证 `CCreateContext` 结构中存储的信息。  例如，不应使用不存在创建视图文档。  
+ 当文档模板创建文档和其相关的组件时，它验证中存储的信息`CCreateContext`结构。 例如，不应为不存在的文档创建一个视图。  
   
 > [!NOTE]
->  所有在 `CCreateContext` 的指针是可选的，可以为 `NULL`，如果未指定或未知。  
+>  中的指针的所有`CCreateContext`是可选的可以是`NULL`如果未指定或未知。  
   
- 功能下面列出的“并查看的成员使用`CCreateContext` ”。如果您计划中重写这些属性，请参考这些函数的声明特定的信息。  
+ `CCreateContext`下面列出的成员函数使用"另请参阅。" 如果您打算对其进行覆盖，请查阅这些函数的说明的特定信息。  
   
- 这是一些通用准则:  
+ 下面是几个一般原则︰  
   
--   当通过，因为windows创建的参数，在 `CWnd::Create`，`CFrameWnd::Create`和 `CFrameWnd::LoadFrame`，创建上下文指定应连接的窗口。  对于大多数窗口，整个结构是可选的，并且 `NULL` 指针可以通过。  
+-   如下所示为窗口创建的参数传递时`CWnd::Create`， `CFrameWnd::Create`，和`CFrameWnd::LoadFrame`，创建上下文指定应连接新的窗口。 对于大多数 windows，整个结构都是可选和`NULL`可以将指针传递。  
   
--   对于可重写的成员函数，例如 `CFrameWnd::OnCreateClient`，`CCreateContext` 参数是可选的。  
+-   对于可重写成员函数，如`CFrameWnd::OnCreateClient`、`CCreateContext`参数是可选的。  
   
--   对于视图创建涉及的成员函数时，必须提供足够的信息来创建视图。  例如，在拆分窗口的第一个视图，必须提供视图选件类信息，并且当前文件。  
+-   对于所涉及的成员函数在视图创建过程中，您必须提供足够的信息来创建视图。 例如，对于拆分器窗口中的第一个视图，您必须提供视图类信息和当前文档。  
   
- 通常，因此，如果使用框架默认，您可以忽略 `CCreateContext`。  如果尝试更高级的修改，Microsoft基础类库选件源代码或示例程序，例如VIEWEX中，将引导您完成。  如果忘记一个必选参数，结构断言将告知您要忘记了。  
+ 一般情况下，如果您使用 framework 默认值，则可以忽略`CCreateContext`。 如果你尝试更高级的修改，Microsoft 基础类库的源代码或示例程序，如 VIEWEX，将指导您。 不要忘记了所需的参数，如果框架断言将告诉您忘记了。  
   
- 有关 `CCreateContext`的更多信息，请参见MFC示例 [VIEWEX](../../top/visual-cpp-samples.md)。  
+ 有关详细信息`CCreateContext`，请参阅 MFC 示例[VIEWEX](../../visual-cpp-samples.md)。  
   
-## 要求  
- **标头:** afxext.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxext.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
- [CFrameWnd::Create](../Topic/CFrameWnd::Create.md)   
- [CFrameWnd::LoadFrame](../Topic/CFrameWnd::LoadFrame.md)   
- [CFrameWnd::OnCreateClient](../Topic/CFrameWnd::OnCreateClient.md)   
- [CSplitterWnd::Create](../Topic/CSplitterWnd::Create.md)   
- [CSplitterWnd::CreateView](../Topic/CSplitterWnd::CreateView.md)   
- [CWnd::Create](../Topic/CWnd::Create.md)
+ [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)   
+ [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)   
+ [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)   
+ [CSplitterWnd::Create](../../mfc/reference/csplitterwnd-class.md#create)   
+ [CSplitterWnd::CreateView](../../mfc/reference/csplitterwnd-class.md#createview)   
+ [Cwnd:: Create](../../mfc/reference/cwnd-class.md#create)
+
+

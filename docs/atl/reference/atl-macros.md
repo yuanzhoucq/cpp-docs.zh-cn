@@ -1,92 +1,109 @@
 ---
-title: "ATL 宏 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, 宏"
-  - "宏, ATL"
+title: "ATL 宏 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL, macros
+- macros, ATL
 ms.assetid: 788bd803-e7dc-4dc5-9e8d-31649471415b
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# ATL 宏
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 04df63d36c1ac8dbcb93c3f9503d97decad994f8
+ms.lasthandoff: 02/24/2017
 
-若要按类别查找ATL宏，请参见下列主题。  
+---
+# <a name="atl-macros"></a>ATL 宏
+若要按类别查找 ATL 宏，请参阅以下主题。  
   
- [摘要任务和选件类工厂宏](../../atl/reference/aggregation-and-class-factory-macros.md)  
- 提供控件的摘要方式和声明选件类工厂。  
+ [聚合和类工厂宏](../../atl/reference/aggregation-and-class-factory-macros.md)  
+ 提供控制聚合的并声明类工厂的方法。  
   
  [类别宏](../../atl/reference/category-macros.md)  
  定义类别映射。  
   
- [COM映射宏](../../atl/reference/com-map-macros.md)  
- 定义COM接口映射。  
+ [COM 映射宏](../../atl/reference/com-map-macros.md)  
+ 定义 COM 接口映射。  
   
  [编译器选项宏](../../atl/reference/compiler-options-macros.md)  
- 控件特定编译器功能。  
+ 控制特定的编译器功能。  
   
  [复合控件宏](../../atl/reference/composite-control-macros.md)  
- 定义事件接收器映射和项。  
+ 定义事件接收器映射和条目。  
   
  [连接点宏](../../atl/reference/connection-point-macros.md)  
- 定义连接点映射和项。  
+ 定义连接点映射和条目。  
   
- [调试和错误报告宏](../../atl/reference/debugging-and-error-reporting-macros.md)  
- 提供有用的调试和跟踪功能。  
+ [调试和错误报告的宏](../../atl/reference/debugging-and-error-reporting-macros.md)  
+ 提供有用的调试和跟踪工具。  
   
  [异常处理宏](../../atl/reference/exception-handling-macros.md)  
- 可以通过用于异常处理支持。  
+ 为异常处理提供支持。  
   
  [消息映射宏](../../atl/reference/message-map-macros-atl.md)  
- 定义消息映射和项。  
+ 定义消息映射和条目。  
   
  [对象映射宏](../../atl/reference/object-map-macros.md)  
- 定义对象映射和项。  
+ 定义对象映射和条目。  
   
  [对象状态宏](../../atl/reference/object-status-macros.md)  
- 设置属于ActiveX控件的标志。  
+ 设置属于 ActiveX 控件的标志。  
   
  [属性映射宏](../../atl/reference/property-map-macros.md)  
- 定义属性映射和项。  
+ 定义属性映射和条目。  
   
- [注册表数据交换的宏](../../atl/reference/registry-data-exchange-macros.md)  
- 执行注册表数据交换的操作。  
+ [注册表数据 Exchange 宏](../../atl/reference/registry-data-exchange-macros.md)  
+ 执行注册表数据交换操作。  
   
  [注册表宏](../../atl/reference/registry-macros.md)  
- 定义有用的类型库和注册表结构。  
+ 定义有用类型库和注册表设施。  
   
  [服务映射宏](../../atl/reference/service-map-macros.md)  
- 定义服务映射和项。  
+ 定义服务映射和条目。  
   
  [管理单元对象宏](../../atl/reference/snap-in-object-macros.md)  
- 可以通过为管理单元扩展支持。  
+ 为管理单元扩展提供支持。  
   
- [字符串翻译宏](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)  
- 提供字符串转换函数。  
+ [字符串转换宏](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)  
+ 提供的字符串转换功能。  
   
- [windows选件类宏](../../atl/reference/window-class-macros.md)  
- 定义窗口选件类实用工具。  
+ [窗口类宏](../../atl/reference/window-class-macros.md)  
+ 定义窗口类实用程序。  
   
- [Windows消息宏](../../atl/reference/windows-messages-macros.md)  
- 向前windows消息。  
+ [Windows 消息宏](../../atl/reference/windows-messages-macros.md)  
+ 将窗口消息转发。  
   
-## 请参阅  
- [ATL Macros Alphabetical Reference](../Topic/ATL%20Macros%20Alphabetical%20Reference.md)   
- [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)   
+## <a name="see-also"></a>另请参阅  
+
+ [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)   
  [函数](../../atl/reference/atl-functions.md)   
- [Global Variables](../../atl/reference/atl-global-variables.md)   
+ [全局变量](../../atl/reference/atl-global-variables.md)   
  [结构](../../atl/reference/atl-structures.md)   
- [Typedefs](../../atl/reference/atl-typedefs.md)   
+ [类型定义](../../atl/reference/atl-typedefs.md)   
  [类](../../atl/reference/atl-classes.md)
+

@@ -1,53 +1,97 @@
 ---
-title: "CD2DEllipse 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxrendertarget/CD2DEllipse"
-  - "CD2DEllipse"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DEllipse 类"
+title: "CD2DEllipse 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CD2DEllipse
+- CD2DEllipse
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DEllipse class
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# CD2DEllipse 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c083a46e0576df7bb42fa8c4402aba320dba851c
+ms.lasthandoff: 02/24/2017
 
-`D2D1_ELLIPSE`的包装。  
+---
+# <a name="cd2dellipse-class"></a>CD2DEllipse 类
+`D2D1_ELLIPSE` 的包装器。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CD2DEllipse : public D2D1_ELLIPSE;  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|说明|  
-|--------|--------|  
-|[CD2DEllipse::CD2DEllipse](../Topic/CD2DEllipse::CD2DEllipse.md)|已重载。  构造一 `D2D1_ELLIPSE` 对象的一 `CD2DEllipse` 对象。|  
+|----------|-----------------|  
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|已重载。 构造`CD2DEllipse`对象从`D2D1_ELLIPSE`对象。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `D2D1_ELLIPSE`  
   
- [CD2DEllipse](../../mfc/reference/cd2dellipse-class.md)  
+ `CD2DEllipse`  
   
-## 要求  
- **标头：** afxrendertarget.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxrendertarget.h  
   
-## 请参阅  
+##  <a name="a-namecd2dellipsea--cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse  
+ 构造 CD2DEllipse 对象从 CD2DRectF 对象。  
+  
+```  
+CD2DEllipse(const CD2DRectF& rect);  
+CD2DEllipse(const D2D1_ELLIPSE& ellipse);  
+  CD2DEllipse(const D2D1_ELLIPSE* ellipse);
+
+ 
+CD2DEllipse(
+    const CD2DPointF& ptCenter,  
+    const CD2DSizeF& sizeRadius);
+```  
+  
+### <a name="parameters"></a>参数  
+ `rect`  
+ 源矩形  
+  
+ `ellipse`  
+ 源椭圆  
+  
+ `ptCenter`  
+ 椭圆的中心点。  
+  
+ `sizeRadius`  
+ X radius 和 Y 轴的椭圆的半径。  
+  
+## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
+

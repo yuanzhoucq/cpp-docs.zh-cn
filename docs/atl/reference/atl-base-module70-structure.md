@@ -1,80 +1,101 @@
 ---
-title: "_ATL_BASE_MODULE70 Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::_ATL_BASE_MODULE70"
-  - "ATL._ATL_BASE_MODULE70"
-  - "_ATL_BASE_MODULE70"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_BASE_MODULE70 structure"
-  - "ATL_BASE_MODULE70 structure"
+title: "_ATL_BASE_MODULE70 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::_ATL_BASE_MODULE70
+- ATL._ATL_BASE_MODULE70
+- _ATL_BASE_MODULE70
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL_BASE_MODULE70 structure
+- _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _ATL_BASE_MODULE70 Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
+ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.lasthandoff: 02/24/2017
 
-通过使用ATL的任何项目。  
+---
+# <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 结构
+使用的任何项目都使用 atl。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+struct _ATL_BASE_MODULE70 {
+    UINT cbSize;
+    HINSTANCE m_hInst;
+    HINSTANCE m_hInstResource;
+    bool m_bNT5orWin98;
+    DWORD dwAtlBuildVer;
+    GUID* pguidVer;
+    CRITICAL_SECTION m_csResource;
+    CSimpleArray<HINSTANCE> m_rgResourceInstance;
+};
 ```  
   
-      struct _ATL_BASE_MODULE70{  
-   UINT cbSize;  
-   HINSTANCE m_hInst;  
-   HINSTANCE m_hInstResource;  
-   bool m_bNT5orWin98;  
-   DWORD dwAtlBuildVer;  
-   GUID* pguidVer;  
-   CRITICAL_SECTION m_csResource;  
-   CSimpleArray<HINSTANCE> m_rgResourceInstance;  
-};  
-```  
-  
-## 成员  
+## <a name="members"></a>成员  
  `cbSize`  
- 结构的大小，用于控制。  
+ 用于版本控制的结构的大小。  
   
  `m_hInst`  
- 此模块的 **hInstance** \(exe或dll）。  
+ **HInstance**此模块 （exe 或 dll）。  
   
  `m_hInstResource`  
- 默认实例资源句柄。  
+ 默认实例的资源句柄。  
   
- **m\_bNT5orWin98**  
- 操作系统版本信息。  在内部使用由ATL。  
+ **m_bNT5orWin98**  
+ 操作系统版本信息。 Atl。 在内部使用  
   
  **dwAtlBuildVer**  
- 存储ATL的版本。  当前0x0700。  
+ 存储的版本 atl。 当前 0x0700。  
   
  **pguidVer**  
- ATL的内部GUID。  
+ ATL 的内部 GUID。  
   
- **m\_csResource**  
- 用于同步对 **m\_rgResourceInstance** 数组的访问。  在内部使用由ATL。  
+ **m_csResource**  
+ 用于同步对**m_rgResourceInstance**数组。 Atl。 在内部使用  
   
- **m\_rgResourceInstance**  
- 用于的数组搜索在ATL了解的所有资源实例的资源。  在内部使用由ATL。  
+ **m_rgResourceInstance**  
+ 用于搜索 ATL 的感知的所有资源实例中的资源的数组。 Atl。 在内部使用  
   
-## 备注  
- [\_ATL\_BASE\_MODULE](../Topic/_ATL_BASE_MODULE.md) 定义为 `_ATL_BASE_MODULE70`typedef。  
+## <a name="remarks"></a>备注  
+ [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)定义的 typedef 为`_ATL_BASE_MODULE70`。  
   
-## 要求  
- **Header:** atlcore.h  
+## <a name="requirements"></a>要求  
+ **标头︰** atlcore.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构](../../atl/reference/atl-structures.md)
+
+
+
+
+
+

@@ -1,53 +1,69 @@
 ---
-title: "CMFCImageEditorPaletteBar Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCImageEditorPaletteBar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCImageEditorPaletteBar class"
+title: "CMFCImageEditorPaletteBar 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCImageEditorPaletteBar
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCImageEditorPaletteBar class
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CMFCImageEditorPaletteBar Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f6b987a27b43d713835a71dd5c31587020f23f2f
+ms.lasthandoff: 02/24/2017
 
-提供调色板栏功能到图像编辑器对话框。  
+---
+# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar 类
+提供到图像编辑器对话框的调色板评级功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CMFCImageEditorPaletteBar : public CMFCToolBar  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
 |||  
 |-|-|  
-|名称|说明|  
-|[CMFCImageEditorPaletteBar::GetRowHeight](../Topic/CMFCImageEditorPaletteBar::GetRowHeight.md)|返回高度工具栏按钮。  （重写 [CMFCToolBar::GetRowHeight](../Topic/CMFCToolBar::GetRowHeight.md)。）|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](../Topic/CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable.md)|定位工具栏是否可以显示扩展的边框的按钮。  （重写 [CMFCToolBar::IsButtonExtraSizeAvailable](../Topic/CMFCToolBar::IsButtonExtraSizeAvailable.md)。）|  
+|名称|描述|  
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|返回工具栏按钮的高度。 (重写[CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight)。)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|确定工具栏上是否可以显示已扩展边框的按钮。 (重写[CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)。)|  
   
-### 备注  
- 此类不适于在您的代码中直接使用。  
+### <a name="remarks"></a>备注  
+ 此类不应在代码中直接使用。  
   
- 框架使用此选件类显示在图像编辑器对话框的一个调色板条。  有关图像编辑器对话框的更多信息，请参见 [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)。  
+ 框架使用此类以显示调色板栏，在图像编辑器对话框中。 图像编辑器对话框中的详细信息，请参阅[CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -64,10 +80,31 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
   
  [CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)  
   
-## 要求  
- **标头:** afximageeditordialog.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afximageeditordialog.h  
   
-## 请参阅  
+##  <a name="a-namegetrowheighta--cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
+ 返回工具栏按钮的高度。  
+  
+```  
+virtual int GetRowHeight() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 在工具栏上的每个按钮的高度。  
+  
+##  <a name="a-nameisbuttonextrasizeavailablea--cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+ 确定工具栏上是否可以显示已扩展边框的按钮。  
+  
+```  
+virtual BOOL IsButtonExtraSizeAvailable() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 此方法返回 `FALSE`。  
+  
+## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
- [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
+ [CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)
+
