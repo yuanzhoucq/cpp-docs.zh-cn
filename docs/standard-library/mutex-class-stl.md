@@ -1,58 +1,138 @@
 ---
-title: "mutex 类 (STL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mutex/std::mutex"
-dev_langs: 
-  - "C++"
+title: "mutex 类（C++ 标准库）| Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mutex/std::mutex
+dev_langs:
+- C++
 ms.assetid: 7999d055-f74f-4303-810f-8d3c9cde2f69
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# mutex 类 (STL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ff3e7e71c678ffc9bdead79ec56ad94f8e297a16
+ms.lasthandoff: 02/24/2017
 
-表示一个 *mutex 类型*。  此类型对象可用于强制在程序内的互斥。  
+---
+# <a name="mutex-class-c-standard-library"></a>mutex 类（C++ 标准库）
+表示互斥体类型。 此类型的对象可用于强制程序内的互斥。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class mutex;
 ```  
-class mutex;  
+  
+## <a name="members"></a>成员  
+  
+### <a name="public-constructors"></a>公共构造函数  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[mutex::mutex 构造函数](#mutex__mutex_constructor)|构造 `mutex` 对象。|  
+|[mutex::~mutex 析构函数](#mutex___dtormutex_destructor)|释放由 `mutex` 对象使用的任何资源。|  
+  
+### <a name="public-methods"></a>公共方法  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[mutex::lock 方法](#mutex__lock_method)|阻止调用线程，直到线程获取 `mutex` 的所有权。|  
+|[mutex::native_handle 方法](#mutex__native_handle_method)|返回表示 mutex 句柄的特定于实现的类型。|  
+|[mutex::try_lock 方法](#mutex__try_lock_method)|在不阻止的情况下尝试获取 `mutex` 的所有权。|  
+|[mutex::unlock 方法](#mutex__unlock_method)|释放 `mutex` 的所有权。|  
+  
+## <a name="requirements"></a>要求  
+ **标头：**mutex  
+  
+ **命名空间：** std  
+  
+##  <a name="a-namemutexlockmethoda--mutexlock-method"></a><a name="mutex__lock_method"></a>  mutex::lock 方法  
+ 阻止调用线程，直到线程获取 `mutex` 的所有权。  
+  
+```cpp  
+void lock();
 ```  
   
-## 成员  
+### <a name="remarks"></a>备注  
+ 如果调用线程已拥有 `mutex`，则该行为不确定。  
   
-### 公共构造函数  
+##  <a name="a-namemutexmutexconstructora--mutexmutex-constructor"></a><a name="mutex__mutex_constructor"></a>  mutex::mutex 构造函数  
+ 构造未锁定的 `mutex` 对象。  
   
-|Name|说明|  
-|----------|--------|  
-|[mutex::mutex 构造函数 \(STL\)](../Topic/mutex::mutex%20Constructor%20\(STL\).md)|构造 `mutex` 对象。|  
-|[mutex::~mutex 析构函数 \(STL\)](../Topic/mutex::~mutex%20Destructor%20\(STL\).md)|释放由该`mutex` 对象使用的任何资源。|  
+```cpp  
+constexpr mutex() noexcept;
+```  
   
-### 公共方法  
+##  <a name="a-namemutexdtormutexdestructora--mutexmutex-destructor"></a><a name="mutex___dtormutex_destructor"></a>  mutex::~mutex 析构函数  
+ 释放由 `mutex` 对象使用的任何资源。  
   
-|Name|说明|  
-|----------|--------|  
-|[mutex::lock 方法 \(STL\)](../Topic/mutex::lock%20Method%20\(STL\).md)|阻止调用线程，直到线程获取 `mutex` 的所有权。|  
-|[mutex::native\_handle 方法 \(STL\)](../Topic/mutex::native_handle%20Method%20\(STL\).md)|返回表示互斥句柄的特殊类型的实现。|  
-|[mutex::try\_lock 方法 \(STL\)](../Topic/mutex::try_lock%20Method%20\(STL\).md)|在不阻止的情况下尝试获取 `mutex` 的所有权。|  
-|[mutex::unlock 方法 \(STL\)](../Topic/mutex::unlock%20Method%20\(STL\).md)|释放 `mutex` 的所有权。|  
+```cpp  
+~mutex();
+```  
   
-## 要求  
- **标头:** mutex  
+### <a name="remarks"></a>备注  
+ 如果当析构函数运行时对象被锁定，则该行为不确定。  
   
- **命名空间:** std  
+##  <a name="a-namemutexnativehandlemethoda--mutexnativehandle-method"></a><a name="mutex__native_handle_method"></a>  mutex::native_handle 方法  
+ 返回表示 mutex 句柄的特定于实现的类型。 可以特定于实现的方式使用互斥体句柄。  
   
-## 请参阅  
+```
+native_handle_type native_handle();
+```  
+  
+### <a name="return-value"></a>返回值  
+ `native_handle_type` 定义为 `Concurrency::critical_section *`，其强制转换为 `void *`。  
+  
+##  <a name="a-namemutextrylockmethoda--mutextrylock-method"></a><a name="mutex__try_lock_method"></a>  mutex::try_lock 方法  
+ 在不阻止的情况下尝试获取 `mutex` 的所有权。  
+  
+```cpp  
+bool try_lock();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 如果此方法成功获取 `true` 的所有权，则为 `mutex`；否则为 `false`。  
+  
+### <a name="remarks"></a>备注  
+ 如果调用线程已拥有 `mutex`，则该行为不确定。  
+  
+##  <a name="a-namemutexunlockmethoda--mutexunlock-method"></a><a name="mutex__unlock_method"></a>mutex::unlock 方法  
+ 释放 `mutex` 的所有权。  
+  
+```cpp  
+void unlock();
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果调用的线程不拥有 `mutex`，则该行为不确定。  
+  
+## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex\>](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
+
+
+
+

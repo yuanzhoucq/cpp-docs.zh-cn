@@ -1,50 +1,66 @@
 ---
-title: "wcrtomb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcrtomb"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcrtomb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字符, 转换"
-  - "多字节字符"
-  - "wcrtomb 函数"
-  - "宽字符, 转换"
+title: "wcrtomb | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcrtomb
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcrtomb
+dev_langs:
+- C++
+helpviewer_keywords:
+- wide characters, converting
+- wcrtomb function
+- multibyte characters
+- characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# wcrtomb
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 853295a50158caa92ed9370b6267e4e623f7d790
+ms.lasthandoff: 02/24/2017
 
-将宽字符转换为它的多字节字符形式。  提供该函数的一个更安全版本；请参阅 [wcrtomb\_s](../../c-runtime-library/reference/wcrtomb-s.md)。  
+---
+# <a name="wcrtomb"></a>wcrtomb
+将宽字符转换为多字节字符表示形式。 此函数有一个更安全的版本；请参阅 [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_t wcrtomb(  
@@ -60,32 +76,32 @@ size_t wcrtomb(
 ); // C++ only  
 ```  
   
-#### 参数  
- \[out\] `mbchar`  
+#### <a name="parameters"></a>参数  
+ [out] `mbchar`  
  生成的多字节转换字符。  
   
- \[in\] `wchar`  
+ [in] `wchar`  
  要转换的宽字符。  
   
- \[in\] `mbstate`  
+ [in] `mbstate`  
  指向 `mbstate_t` 对象的指针。  
   
-## 返回值  
- 返回需要的字节数表示转换的多字节字符，否则如果出错返回a\-1。  
+## <a name="return-value"></a>返回值  
+ 返回表示已转换多字节字符所需的字节数，如果发生错误则为 -1。  
   
-## 备注  
- `wcrtomb` 函数将一个宽字符转换为，在特定转换状态开始，包括`mbstate`，从在 `wchar` 包括的值，到通过 `mbchar` 地址形式。  返回值是表示对应的多字节字符所需的字节数，但是它不会返回大于 `MB_CUR_MAX` 的。  
+## <a name="remarks"></a>备注  
+ 从 `mbstate` 中包含的指定转换状态开始，`wcrtomb` 函数将 `wchar` 的宽字符值转换为 `mbchar` 表示的地址。 返回值为表示相应多字节字符所需的字节数，但该返回值不会超过 `MB_CUR_MAX` 字节。  
   
- 如果 `mbstate` 为 null，则使用包含 `mbchar` 转换状态的内部 `mbstate_t` 对象。  如果字符序列 `wchar` 没有一个对应的多字节字符形式，则返回 a\-1并且将`errno` 设置为 `EILSEQ`。  
+ 如果 `mbstate` 为 null，则会使用包含 `mbchar` 转换状态的内部 `mbstate_t` 对象。 如果字符序列 `wchar` 不具有相应的多字节字符表示形式，则返回 -1 且将 `errno` 设置为 `EILSEQ`。  
   
- `wcrtomb` 函数重启不同于 [wctomb、\_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) 。  转换状态存储在 `mbstate` 随后调用相同或其他可重新启动的函数。  当混淆重启和非重启函数的使用时，则结果未定义。  例如，如果随后调用 `wcsrtombs` 而不是 `wcstombs`，则应用程序应使用 `wcsrlen` 而不是 `wcsnlen`。  
+ `wcrtomb` 函数的可重启性不同于 [wctomb、_wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)。 转换状态存储在 `mbstate` 中，以便后续调用相同的或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用 `wcsrlen`（而非 `wcsnlen`）的后续调用，则应用程序应使用 `wcsrtombs`，而非 `wcstombs`。  
   
- 在 C\+\+ 中，该函数具有模板重载，以调用该函数的更新、更安全副本。  有关更多信息，请参见[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，此函数具有一个调用此函数的更新、更安全副本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
   
-## 异常  
- `wcrtomb` 函数是多线程安全的，只要当函数正在执行和 `mbstate` 为空时，在当前线程中无函数调用 `setlocale`。  
+## <a name="exceptions"></a>异常  
+ 只要当前线程中的函数都不调用 `setlocale`、此函数正在执行且 `mbstate` 是 null，`wcrtomb` 函数就是多线程安全的。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_wcrtomb.c  
@@ -124,17 +140,20 @@ int main( void )
 }  
 ```  
   
-  **相应的宽字符 “Q” 被转换到 ”Q “ 多字节字符。**   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+The corresponding wide character "Q" was converted to the "Q" multibyte character.  
+```  
   
-## 要求  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`wcrtomb`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wcrtomb`|\<wchar.h>|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

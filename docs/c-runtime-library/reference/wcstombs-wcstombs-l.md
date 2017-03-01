@@ -1,55 +1,71 @@
 ---
-title: "wcstombs、_wcstombs_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcstombs"
-  - "_wcstombs_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcstombs"
-  - "_wcstombs_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wcstombs_l 函数"
-  - "字符, 转换"
-  - "字符串转换, 多字节字符串"
-  - "字符串转换, 宽字符"
-  - "wcstombs 函数"
-  - "wcstombs_l 函数"
-  - "宽字符, 转换"
+title: "wcstombs、_wcstombs_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcstombs
+- _wcstombs_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcstombs
+- _wcstombs_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wcstombs_l function
+- wcstombs function
+- string conversion, wide characters
+- wide characters, converting
+- wcstombs_l function
+- characters, converting
+- string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# wcstombs、_wcstombs_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
+ms.lasthandoff: 02/24/2017
 
-将多字节字符序列转换为对应的宽字符序列。  提供这些函数的更多安全版本；请参见 [wcstombs\_s、\_wcstombs\_s\_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)。  
+---
+# <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
+将宽字符序列转换为对应的多字节字符序列。 提供这些函数的更多安全版本；请参阅 [wcstombs_s、_wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_t wcstombs(  
@@ -78,46 +94,46 @@ size_t _wcstombs_l(
 ); // C++ only  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `mbstr`  
  多字节字符序列的地址。  
   
  `wcstr`  
- 宽字节字符序列的地址。  
+ 宽字符序列的地址。  
   
  `count`  
- 输出在多字节字符串可存储最大字节数。  
+ 多字节输出字符串可以存储的最大字节数。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 如果 `wcstombs` 成功转换多字节字符串，则返回字节数写入输出的多字节字符串，包括终端 `NULL` （任何）。  如果 `mbstr` 参数为 `NULL`，则 `wcstombs` 返回在目标字符串的字符串所需的大小。  如果 `wcstombs` 遇到无法转换为多字节的宽字符，则返回 \-1 ，强制转换成`size_t` 并将 `errno` 设置为 `EILSEQ`。  
+## <a name="return-value"></a>返回值  
+ 如果 `wcstombs` 成功转换多字节字符串，将返回多字节输出字符串中写入的字节数，不包括终止 `NULL`（如果有）。 如果 `mbstr` 参数为 `NULL`，则 `wcstombs` 会返回目标字符串所需的大小（以字节为单位）。 如果 `wcstombs` 遇到无法转换为多字节字符的宽字符，将会把 -1 强制转换为类型 `size_t`，并将 `errno` 设置为 `EILSEQ`。  
   
-## 备注  
- `wcstombs` 函数将宽字符串通过 `wcstr` 指向一致的多字节字符并将结果存储在 `mbstr` 数组中。  `count` 参数即指示可以存储在输出的多字节字符串的最大字节数 \(即 `mbstr` 的大小\)。  通常，当转换字符串时不知道需要多少字节。  一些宽字符在输出字符串只需要一个字节；其他需要两个。  如果在输入字符串的每个宽字符有多字节输出字符串的两字节 \(包括 `NULL`\)，确保结果适应。  
+## <a name="remarks"></a>备注  
+ `wcstombs` 函数将 `wcstr` 指向的宽字符字符串转换为相应的多字节字符，并将转换结果存储到 `mbstr` 数组中。 `count` 参数指明多字节输出字符串可以存储的最大字节数（也就是 `mbstr` 的大小）。 一般情况下，转换宽字符字符串时不会知道需要多少个字节。 某些宽字符在输出字符串中仅占一个字节；其他的字符则占两个。 如果输入字符串每个宽字符的多字节输出字符串存在两个字节（包括宽字符 `NULL`），要确保结果可以将其容纳。  
   
- 如果 `wcstombs` 遇到空宽字符字符 \(L' \\ 0 '\) 或之前，或者当 `count` 发生，则将其转换为 8 位 0 并停止。  因此，只有在转换期间 `wcstombs` 遇到宽字节 null 字符，在 `mbstr` 的多字符字符串以 null 结尾。  如果由 `wcstr` 与 `mbstr` 指向的序列重叠，`wcstombs` 行为是未定义的。  
+ 如果 `wcstombs` 在 `count` 出现前或出现时遇到宽字符 null 字符 (L'\0')，则它将该字符转换为 8 位 0 并停止操作。 因此，只有当 `wcstombs` 在转换期间遇到宽字符 null 字符时，`mbstr` 处的多字节字符串才以 null 结尾。 如果 `wcstr` 和 `mbstr` 指向的序列重叠，则 `wcstombs` 的行为没有定义。  
   
- 如果 `mbstr` 参数为 `NULL`，则 `wcstombs` 返回在目标字符串的字符串所需的大小。  
+ 如果 `mbstr` 参数为 `NULL`，则 `wcstombs` 会返回目标字符串所需的大小（以字节为单位）。  
   
- `wcstombs`验证其参数。  如果 `wcstr` 为 `NULL`，或者如果 `count` 大于`INT_MAX`，此函数调用的参数无效处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 所述。  如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL`并返回 \-1。  
+ `wcstombs` 会验证其参数。 如果 `wcstr` 为 `NULL`，或如果 `count` 优于 `INT_MAX`，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
- `wcstombs`使用区域设置相关行为的当前区域设置；和`_wcstombs_l` 相同，但它将使用传递的区域设置。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ `wcstombs` 将当前区域设置用于任何与区域设置相关的行为；`_wcstombs_l` 与此相同，只不过它使用传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
- 在 C\+\+ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。  有关更多信息，请参见[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`wcstombs`|\<stdlib.h\>|  
-|`_wcstombs_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`wcstombs`|\<stdlib.h>|  
+|`_wcstombs_l`|\<stdlib.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
- 此程序阐述 `wcstombs` 函数的行为。  
+## <a name="example"></a>示例  
+ 本程序演示 `wcstombs` 函数的行为。  
   
 ```  
 // crt_wcstombs.c  
@@ -151,17 +167,20 @@ int main( void )
 }  
 ```  
   
-  **转换宽字符字符串为：**  
- **已转换的字符：2**  
- **Multibyte 字符：Hello，world。**   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Convert wide-character string:  
+   Characters converted: 13  
+    Multibyte character: Hello, world.  
+```  
   
-## 请参阅  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [区域设置](../../c-runtime-library/locale.md)   
- [\_mbclen、mblen、\_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs、\_mbstowcs\_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc、\_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb、\_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [_mbclen、mblen、_mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs、_mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc、_mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wctomb、_wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

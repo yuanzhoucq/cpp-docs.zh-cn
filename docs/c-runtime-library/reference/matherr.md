@@ -1,48 +1,64 @@
 ---
-title: "_matherr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_matherr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_matherr"
-  - "matherr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_matherr 函数"
-  - "matherr 函数"
+title: "_matherr | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _matherr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _matherr
+- matherr
+dev_langs:
+- C++
+helpviewer_keywords:
+- _matherr function
+- matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _matherr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bd2ab4ac1c6772a06a2da6ac15f7f4b29f83c120
+ms.lasthandoff: 02/24/2017
 
-数学错误处理。  
+---
+# <a name="matherr"></a>_matherr
+处理数学错误。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -51,70 +67,70 @@ caps.handback.revision: 11
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *except*  
- 指向包含消息信息的结构的指针。  
+ 指向包含错误信息的结构的指针。  
   
-## 返回值  
- **matherr** 返回0表示错误或返回非零值表示成功。  如果\_**matherr** 返回 0，错误消息可能显示，并且 `errno` 设置为适当的错误值。  如果\_**matherr** 返回一个非零值，错误消息不会显示，并且不更改 `errno`。  
+## <a name="return-value"></a>返回值  
+ _**matherr** 将返回 0 指示错误，或返回非零值指示成功。 如果 \_**matherr** 返回 0，则可能显示错误消息，并且 `errno` 将设置为适当的错误值。 如果 \_**matherr** 返回非零值，则将不会显示错误消息，并且 `errno` 将保持不变。  
   
- 有关这些属性和其他的更多信息返回代码示例，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- 数学库的浮点函数生成\_的**matherr** 函数处理错误。  这些函数调用\_**matherr**，在检测到错误。  
+## <a name="remarks"></a>备注  
+ _**matherr** 函数将处理数学库的浮点函数生成的错误。 检测到错误时这些函数将调用 \_**matherr**。  
   
- 对于特定错误处理，可以提供的\_**matherr**不同的定义。  如果使用 C 运行库 \(Msvcr90.dll\) 的动态链接的版本，则可以用用户定义的版本替换在客户端执行的默认**matherr** \_例程。  但是，您不能替换在的 DLL Msvcr90.dll 客户端的默认 `_matherr` 实例。  
+ 对于特定错误处理，可以为 _**matherr** 提供不同定义。 如果你使用 C 运行库 (Msvcr90.dll) 的动态链接版本，则可以将客户端可执行文件中的默认 \_**matherr** 例程替换为用户定义的版本。 但是，您不能替换 Msvcr90.dll 的 DLL 客户端中的默认 `_matherr` 例程。  
   
- 当错误在算术例程时，**matherr** 调用\_与 **\_exception** 类型结构的指针 \(定义在 Math.h\) 作为参数。  该**\_exception**结构包含以下元素：  
+ 如果数学例程中出错，则将使用作为自变量的指向 **_exception** 类型结构（在 Math.h 中定义）的指针调用 _**matherr**。 **_exception** 结构包含下列元素。  
   
  **int type**  
  异常类型。  
   
  **char \*name**  
- 错误函数的名称。  
+ 出错函数的名称。  
   
- **double arg1**，**arg2**  
- 指向函数的第一个和第二个参数 \(如果有\)。  
+ **double arg1**、**arg2**  
+ 函数的第一个和第二个自变量（如果有）。  
   
  **double retval**  
- 由函数返回的值。  
+ 函数返回的值。  
   
- **类型** 指定数学错误类型。  它是下列值之一，在 Math.h 定义。  
+ **type** 指定数学错误的类型。 它是下列在 Math.h 中定义的值之一。  
   
  `_DOMAIN`  
- 域参数错误。  
+ 自变量域错误。  
   
  `_SING`  
- 奇点参数。  
+ 自变量奇点。  
   
  `_OVERFLOW`  
- 溢出范围错误都。  
+ 溢出范围错误。  
   
  `_PLOSS`  
- 重要部分丢失。  
+ 基数部分丢失。  
   
  `_TLOSS`  
- 发生全部有效位丢失。  
+ 基数全部丢失。  
   
  `_UNDERFLOW`  
- 结果太小而无法表示。目前不支持此属性。  
+ 结果太小无法表示。 （目前不支持此条件。）  
   
- 结构成员 **name** 是指向包含导致错误函数名的 null 终止的字符串。  结构成员 **arg1** 和 **arg2** 指定导致错误值。\(如果只有一个参数为，它在 **arg1**中。\)  
+ 结构成员 **name** 是指针，指向包含导致错误的函数名称的以 null 结尾的字符串。 结构成员 **arg1** 和 **arg2** 指定导致错误的值。 （如果只提供一个参数，则它将存储在 **arg1** 中。）  
   
- 给定的默认返回值为 **retval\(V\)**。  如果更改返回值，所以必须指定错误是否实际发生了  
+ 给定错误的默认返回值为 **retval**。 如果更改返回值，则必须指定是否实际出现了错误。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_matherr`|\<math.h\>|  
+|-------------|---------------------|  
+|`_matherr`|\<math.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_matherr.c  
@@ -168,7 +184,7 @@ int _matherr( struct _exception *except )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 Special: using absolute value: log: _DOMAIN error  
@@ -178,9 +194,8 @@ log10( -5.0 ) = 6.989700e-001
 Normal: log( 0.0 ) = -1.#INF00e+000  
 ```  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
- [长双精度](../../misc/long-double.md)

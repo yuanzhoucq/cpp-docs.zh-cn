@@ -1,76 +1,78 @@
 ---
 title: "money_base 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "locale/std::money_base"
-  - "money_base"
-  - "std::money_base"
-  - "std.money_base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "money_base 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- locale/std::money_base
+- money_base
+- std::money_base
+- std.money_base
+dev_langs:
+- C++
+helpviewer_keywords:
+- money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# money_base 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4af0f51a820fc0011285b6c5a690f496e8fd4afe
+ms.lasthandoff: 02/24/2017
 
-类描述了枚举和一结构模板共有类的所有专用化。[moneypunct](../standard-library/moneypunct-class.md)  
+---
+# <a name="moneybase-class"></a>money_base 类
+此类会描述常用于所有模板类 [moneypunct](../standard-library/moneypunct-class.md) 专用化的枚举和结构。  
   
-## 语法  
-  
-```  
-struct money_base : public locale::facet  
-{  
-    enum  
-    {  
-        symbol = '$',  
-        sign = '+',  
-        space = ' ',  
-        value = 'v',  
-        none = 'x'  
-    };  
-    typedef int part;  
-    struct pattern  
-    {  
-        char field[_PATTERN_FIELD_SIZE];  
-    };  
-    money_base(  
-        size_t _Refs = 0  
-    );  
-    ~money_base();  
+## <a name="syntax"></a>语法  
+```    
+struct pattern
+{
+   char field[_PATTERN_FIELD_SIZE];
 };  
 ```  
+## <a name="remarks"></a>备注  
+ 枚举 **part** 描述结构模式中数组字段元素中的可能值。 **part** 的值为：  
   
-## 备注  
- 枚举在 **part** 数组字段的元素描述可能值结构模式。  **part** 值为：  
+- **none** - 用于匹配零个或多个空格，或不生成任何内容。  
   
--   匹配零个或多个空格的**none** 或生成。  
+- **sign** - 用于匹配或生成正负号。  
   
--   匹配或生成带有正负号的**sign**。  
+- **space** - 用于匹配零个或多个空格，或生成空格。  
   
--   匹配零个或多个空格或**空间** 生成的空间。  
+- **symbol** - 用于匹配或生成货币符号。  
   
--   生成匹配或货币符号的**符号**。  
+- **value** - 用于匹配或生成货币值。  
   
--   匹配或包含一个货币值的**值**。  
+## <a name="requirements"></a>要求  
+ **标头：**\<locale>  
   
-## 要求  
- **页眉：** \<区域设置\>  
+ **命名空间：** std  
   
- **命名空间:**  std  
-  
-## 请参阅  
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

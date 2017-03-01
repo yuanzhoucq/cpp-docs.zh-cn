@@ -1,71 +1,82 @@
 ---
-title: "integral_constant 类，bool_constant 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.integral_constant"
-  - "integral_constant"
-  - "std::tr1::integral_constant"
-  - "std.integral_constant"
-  - "std::integral_constant"
-  - "type_traits/std::integral_constant"
-  - "std.bool_constant"
-  - "std::bool_constant"
-  - "type_traits/std::bool_constant"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "integral_constant 类 [TR1]"
-  - "integral_constant"
-  - "bool_constant"
+title: "integral_constant 类、bool_constant 类 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- integral_constant
+- std::integral_constant
+- type_traits/std::integral_constant
+- XTR1COMMON/std::integral_constant
+- bool_constant
+- std::bool_constant
+- type_traits/std::bool_constant
+- XTR1COMMON/std::bool_constant
+dev_langs:
+- C++
+helpviewer_keywords:
+- integral_constant class
+- integral_constant
+- bool_constant
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# integral_constant 类，bool_constant 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
+ms.openlocfilehash: 6c71c3571e19c57b13c827bbb84e347e3ff26b01
+ms.lasthandoff: 02/24/2017
 
-从类型和值设置整型常量。  
+---
+# <a name="integralconstant-class-boolconstant-class"></a>integral_constant 类、bool_constant 类
+从类型和值生成整型常量。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
-template <class T, T v>  
-    struct integral_constant {  
-        static constexpr T value = v;  
-        typedef T value_type;  
-        typedef integral_constant<T, v> type;  
-        constexpr operator value_type() const noexcept { return (value); }  
-        constexpr value_type operator()() const noexcept { return (value); }  
-    };  
+```
+template<class T, T v>
+struct integral_constant {  
+   static constexpr T value = v;  
+   typedef T value_type;  
+   typedef integral_constant<T, v> type;  
+   constexpr operator value_type() const noexcept;  
+   constexpr value_type operator()() const noexcept;  
+   };  
+```
   
-template <bool v>  
-    using bool_constant = integral_constant<bool, v>;  
+### <a name="parameters"></a>参数  
+*T*  
+常量的类型。  
   
-```  
+*v*  
+常量的值。  
   
-#### 参数  
- `T`  
- 常量的类型。  
+## <a name="remarks"></a>备注  
+使用整型类型 *T* 和该类型的值 *v* 进行专用化的 `integral_constant` 模板类表示一个对象，该对象保留该整型类型的常量以及指定的值。 名为 `type` 的成员是生成的模板专用化类型的别名，`value` 成员具有用于创建此专用化的值 *v*。  
   
- `v`  
- 常量的值。  
+`bool_constant` 模板类是将 `bool` 用作 *T* 参数的 `integral_constant` 的显式部分专用化。  
   
-## 备注  
- `integral_constant` 模板类，当带整型专用化 `T` 和值 `v` 的该类型表示包含指定的值与该整型类型的常量的对象。 名为的成员 `type` 是生成的模板专用化类型的别名和 `value` 成员将具有的值 `v` 用于创建专用化。  
-  
- `bool_constant` 模板类是显式的部分专用化 `integral_constant` ，它使用 `bool` 作为 `T` 参数。  
-  
-## 示例  
+## <a name="example"></a>示例  
   
 ```cpp  
 // std__type_traits__integral_constant.cpp   
@@ -86,15 +97,19 @@ int main()
 ```  
   
 ```Output  
-integral_constant < int，5 > = = 5 integral_constant < bool false > = = false  
+integral_constant<int, 5> == 5  
+integral_constant<bool, false> == false  
 ```  
   
-## 要求  
- **标头：**\<type\_traits\>  
+## <a name="requirements"></a>要求  
+
+**标头：**\<type_traits>
   
- **命名空间:** std  
+**命名空间：** std  
   
-## 请参阅  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [false\_type Typedef](../Topic/false_type%20Typedef.md)   
- [true\_type Typedef](../Topic/true_type%20Typedef.md)
+## <a name="see-also"></a>另请参阅  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [false_type Typedef](../standard-library/type-traits-typedefs.md#false_type_typedef)   
+ [true_type Typedef](../standard-library/type-traits-typedefs.md#true_type_typedef)
+
+

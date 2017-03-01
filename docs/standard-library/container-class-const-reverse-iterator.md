@@ -1,42 +1,58 @@
 ---
-title: "Container Class::const_reverse_iterator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reverse_iterator 方法"
+title: "Container Class::const_reverse_iterator | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_reverse_iterator method
 ms.assetid: ceac84d5-a40f-4bbf-81e0-a96aa2bd8ee8
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Container Class::const_reverse_iterator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 5d175c73a850fd82d289b8615c6a10898e9de326
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="container-classconstreverseiterator"></a>Container Class::const_reverse_iterator
 > [!NOTE]
->  本主题介绍 Visual C\+\+ 文档作为使用标准 C\+\+ 库的容器的非运行的示例。  有关更多信息，请参见 [STL 容器](../standard-library/stl-containers.md)。  
+>  本主题位于 Visual C++ 文档内，作为在 C++ 标准库内使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。  
   
- 描述可能作为常数进行反向迭代数。为控制序列的对象。  
+ 描述一个对象，可充当受控序列的常量反向迭代器。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
+ 
 typedef T8 const_reverse_iterator;  
-  
 ```  
   
-## 备注  
- 它介绍为此处未指定类型的 **T8** \(通常 [reverse\_iterator](../standard-library/container-class-reverse-iterator.md) \<[const\_iterator](../standard-library/container-class-const-iterator.md)`>`\) 的同义词。  
+## <a name="remarks"></a>备注  
+ 此处它被描述为未指定类型 **T8** 的同义词（通常为 [reverse_iterator](../standard-library/container-class-reverse-iterator.md) <[const_iterator](../standard-library/container-class-const-iterator.md)`>`)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Sample Container 类](../standard-library/sample-container-class.md)
+

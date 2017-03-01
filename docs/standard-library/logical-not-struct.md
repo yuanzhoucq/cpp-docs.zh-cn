@@ -1,70 +1,84 @@
 ---
 title: "logical_not 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.logical_not"
-  - "logical_not"
-  - "xfunctional/std::logical_not"
-  - "std::logical_not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_not 类"
-  - "logical_not 结构"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.logical_not
+- logical_not
+- xfunctional/std::logical_not
+- std::logical_not
+dev_langs:
+- C++
+helpviewer_keywords:
+- logical_not class
+- logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# logical_not 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 2f84361ba71a50601349542797840e2d45ffad21
+ms.lasthandoff: 02/24/2017
 
-预定义在参数上执行逻辑非操作 运算\(`operator!`\)的函数对象。  
+---
+# <a name="logicalnot-struct"></a>logical_not 结构
+对其自变量执行逻辑“非”运算 (`operator!`) 的预定义函数对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template <class Type = void>
+struct logical_not : public unary_function<Type, bool>  
+{
+    bool operator()(const Type& Left) const;
+};
+
+// specialized transparent functor for operator!
+template <>
+struct logical_not<void>  
+{
+  template <class Type>
+  auto operator()(Type&& Left) const`
+     -> decltype(!std::forward<Type>(Left));
+ };
 ```  
-template<class Type = void>  
-   struct logical_not : public unary_function<Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left  
-      ) const;  
-   };  
   
-// specialized transparent functor for operator!  
-template<>  
-   struct logical_not<void>  
-   {  
-      template<class Type>  
-      auto operator()(Type&& Left) const  
-         -> decltype(!std::forward<Type>(Left));  
-   };  
-  
-```  
-  
-#### 参数  
+#### <a name="parameters"></a>参数  
  `Type`  
- 任何支持`operator!` 使用指定或者推导类型的操作数的类型。  
+ 支持 `operator!` 接受指定或推断类型的操作数的任何类型。  
   
  `Left`  
- 逻辑"非"运算的操作数。  未指定的模版需要类型`Type`的左值引用参数。  专有模版确实完美地继承了推断类型`Type`的左值和右值引用参数。  
+ 逻辑“非”运算的操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `Type` 的左值和右值引用参数。  
   
-## 返回值  
- `!` `Left`的结果。  拥有通过`operator!`返回的类型的专有模版确实完美地遵循了结果。  
+## <a name="return-value"></a>返回值  
+ `!``Left` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator!` 返回的类型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // functional_logical_not.cpp  
 // compile with: /EHsc  
 #include <deque>  
@@ -99,17 +113,23 @@ int main( )
       cout << *iter2 << " ";  
    cout << ")" << endl;  
 }  
+/* Output:  
+Original deque:  
+ d1 = ( false true false true false true false )  
+The deque with its values negated is:  
+ d2 = ( true false true false true false true )  
+ */  
 ```  
   
-  **原始双端队列：**  
- **d1 \= \( false true false true false true false \)**  
-**The deque with its values negated is:**  
- **d2 \= \( true false true false true false true \)**   
-## 要求  
- **标头：** \<起作用的\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<functional>  
   
- **命名空间:**  std  
+ **命名空间：** std  
   
-## 请参阅  
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [标准模板库](../misc/standard-template-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+
