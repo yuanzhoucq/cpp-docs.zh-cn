@@ -1,42 +1,58 @@
 ---
-title: "Container Class::reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reference 方法"
+title: "Container Class::reference | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- reference method
 ms.assetid: ab85a9fb-c628-4761-9a5f-a0231fad7690
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Container Class::reference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 513e1622aa88c10e2a0293ba3dc914b668e08953
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="container-classreference"></a>Container Class::reference
 > [!NOTE]
->  本主题介绍 Visual C\+\+ 文档作为使用标准 C\+\+ 库的容器的非运行的示例。  有关更多信息，请参见 [STL 容器](../standard-library/stl-containers.md)。  
+>  该主题位于 Visual C++ 文档内，作为在 C++ 标准库内使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。  
   
- 描述可以充当对控制序列的元素的引用的对象。  
+ 描述可用作受控序列元素的引用的对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
+ 
 typedef T2 reference;  
-  
 ```  
   
-## 备注  
- 它介绍为此处未指定类型的 **T2** \(通常是 **Alloc::reference**的同义词。\)  类型 **引用** 对象可以转换为对象类型。[const\_reference](../standard-library/container-class-const-reference.md)  
+## <a name="remarks"></a>备注  
+ 此处它被描述为未指定类型 **T2** 的同义词（通常为 **Alloc::reference**）。 **引用**类型的对象可被转换为 [const_reference](../standard-library/container-class-const-reference.md) 类型的对象。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Sample Container 类](../standard-library/sample-container-class.md)
+

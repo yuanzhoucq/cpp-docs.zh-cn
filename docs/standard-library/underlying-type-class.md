@@ -1,53 +1,73 @@
 ---
 title: "underlying_type 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "underlying_type"
-  - "std.underlying_type"
-  - "std::underlying_type"
-  - "type_traits/std::underlying_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "underlying_type"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- underlying_type
+- std.underlying_type
+- std::underlying_type
+- type_traits/std::underlying_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# underlying_type 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 95012fdeb3ac78d5e1cc76e03ed851a0b9701f5e
+ms.lasthandoff: 02/24/2017
 
-生成枚举类型的基础整数的类型。  
+---
+# <a name="underlyingtype-class"></a>underlying_type 类
+生成枚举类型的基础整型类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
+```
 template <class T>  
-    struct underlying_type;  
+struct underlying_type;
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
  要修改的类型。  
   
-## 备注  
- `type` 模板类的成员 typedef 名称的基础整数类型 `T`, ，当 `T` 是枚举类型，否则没有任何成员 typedef `type`。  
+## <a name="remarks"></a>备注  
+ 如果 `T` 是一个枚举类型，则模板类的 `type` 成员 typedef 将为 `T` 的基础整型类型命名，否则没有任何成员 typedef `type`。  
   
-## 要求  
- **标头：**\<type\_traits\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<type_traits>  
   
- **命名空间:** std  
+ **命名空间：** std  
   
-## 请参阅  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>另请参阅  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

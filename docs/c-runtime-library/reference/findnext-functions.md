@@ -1,120 +1,135 @@
 ---
-title: "_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wfindnext"
-  - "_findnext"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "findnext"
-  - "_wfindnext32i64"
-  - "_tfindnext64i32"
-  - "findnext32"
-  - "findnext32i64"
-  - "wfindnext64i32"
-  - "_wfindnext"
-  - "tfindnext64"
-  - "findnexti64"
-  - "_findnexti64"
-  - "_tfindnexti64"
-  - "_findnext64i32"
-  - "tfindnexti64"
-  - "tfindnext32"
-  - "_wfindnext64i32"
-  - "findnext64i32"
-  - "_findnext"
-  - "_tfindnext32i64"
-  - "_wfindnext64"
-  - "wfindnext"
-  - "wfindnext32"
-  - "tfindnext32i64"
-  - "_findnext64"
-  - "_tfindnext64"
-  - "_wfindnext32"
-  - "findnext64"
-  - "_findnext32i64"
-  - "tfindnext"
-  - "wfindnexti64"
-  - "tfindnext64i32"
-  - "_tfindnext32"
-  - "wfindnext32i64"
-  - "wfindnext64"
-  - "_wfindnexti64"
-  - "_tfindnext"
-  - "_findnext32"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_wfindnexti64 函数"
-  - "_tfindnext32 函数"
-  - "wfindnexti64 函数"
-  - "_wfindnext32i64 函数"
-  - "findnext32i64 函数"
-  - "tfindnext64i32 函数"
-  - "_tfindnext64i32 函数"
-  - "_findnext 函数"
-  - "findnext64i32 函数"
-  - "_tfindnext 函数"
-  - "findnext32 函数"
-  - "tfindnext32 函数"
-  - "_findnext32 函数"
-  - "_tfindnext32i64 函数"
-  - "_wfindnext 函数"
-  - "tfindnext 函数"
-  - "_findnext64 函数"
-  - "findnext64 函数"
-  - "_findnext64i32 函数"
-  - "wfindnext32i64 函数"
-  - "findnext 函数"
-  - "wfindnext32 函数"
-  - "_wfindnext64i32 函数"
-  - "findnexti64 函数"
-  - "_wfindnext64 函数"
-  - "_findnext32i64 函数"
-  - "_findnexti64 函数"
-  - "_tfindnext64 函数"
-  - "wfindnext64i32 函数"
-  - "tfindnexti64 函数"
-  - "wfindnext64 函数"
-  - "wfindnext 函数"
-  - "tfindnext64 函数"
-  - "_wfindnext32 函数"
-  - "tfindnext32i64 函数"
-  - "_tfindnexti64 函数"
+title: "_findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wfindnext
+- _findnext
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- findnext
+- _wfindnext32i64
+- _tfindnext64i32
+- findnext32
+- findnext32i64
+- wfindnext64i32
+- _wfindnext
+- tfindnext64
+- findnexti64
+- _findnexti64
+- _tfindnexti64
+- _findnext64i32
+- tfindnexti64
+- tfindnext32
+- _wfindnext64i32
+- findnext64i32
+- _findnext
+- _tfindnext32i64
+- _wfindnext64
+- wfindnext
+- wfindnext32
+- tfindnext32i64
+- _findnext64
+- _tfindnext64
+- _wfindnext32
+- findnext64
+- _findnext32i64
+- tfindnext
+- wfindnexti64
+- tfindnext64i32
+- _tfindnext32
+- wfindnext32i64
+- wfindnext64
+- _wfindnexti64
+- _tfindnext
+- _findnext32
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wfindnexti64 function
+- _tfindnext32 function
+- wfindnexti64 function
+- _wfindnext32i64 function
+- findnext32i64 function
+- tfindnext64i32 function
+- _tfindnext64i32 function
+- _findnext function
+- findnext64i32 function
+- _tfindnext function
+- findnext32 function
+- tfindnext32 function
+- _findnext32 function
+- _tfindnext32i64 function
+- _wfindnext function
+- tfindnext function
+- _findnext64 function
+- findnext64 function
+- _findnext64i32 function
+- wfindnext32i64 function
+- findnext function
+- wfindnext32 function
+- _wfindnext64i32 function
+- findnexti64 function
+- _wfindnext64 function
+- _findnext32i64 function
+- _findnexti64 function
+- _tfindnext64 function
+- wfindnext64i32 function
+- tfindnexti64 function
+- wfindnext64 function
+- wfindnext function
+- tfindnext64 function
+- _wfindnext32 function
+- tfindnext32i64 function
+- _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e1a79f5859d35b324b4469918bf1107da32f651c
+ms.lasthandoff: 02/24/2017
 
-如果有，则查找下一名称，对比之前调用[\_findfirst](../../c-runtime-library/reference/findfirst-functions.md)的`filespec` 参数，然后修改 `fileinfo` 结构的内容。  
+---
+# <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
+查找下一个匹配以前的 [_findfirst](../../c-runtime-library/reference/findfirst-functions.md) 调用中的 `filespec` 参数的名称，然后相应更改 `fileinfo` 结构内容。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _findnext(  
@@ -167,53 +182,53 @@ int _wfindnext64i32(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `handle`  
- 搜索句柄返回上一调用到 `_findfirst`。  
+ 搜索由以前调用 `_findfirst` 返回的句柄。  
   
  `fileinfo`  
  文件信息缓冲区。  
   
-## 返回值  
- 如果成功，则返回 0 。  否则，返回 \-1 并设置指示失败的特性值为 `errno`。  在下表中显示可能的错误代码。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则返回 0。 否则返回 –&1;，并将 `errno` 设置为一个指示失败性质的值。 下表中显示了可能的错误代码。  
   
  `EINVAL`  
- 无效参数 `fileinfo` 为`NULL`。  或者，操作系统返回无法预料的错误。  
+ 无效参数：`fileinfo` 为 `NULL`。 或者，操作系统返回了意外错误。  
   
  `ENOENT`  
- 没有更多的匹配文件可以找到。  
+ 找不到更多匹配的文件。  
   
  `ENOMEM`  
- 没有足够的内存或文件名长度超过 `MAX_PATH`。  
+ 内存不足或文件名称长度超出 `MAX_PATH`。  
   
- 如果传递的是无效参数，则这些函数调用无效参数处理程序，正如 [参数验证](../../c-runtime-library/parameter-validation.md) 所述。  
+ 如果传入了无效参数，这些函数则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。  
   
-## 备注  
- 在完成使用 `_findfirst` 或 `_findnext` 函数后（或任何变量），必须调用 [\_findclose](../../c-runtime-library/reference/findclose.md)。  这将释放在你的应用程序中使用这些函数的资源。  
+## <a name="remarks"></a>备注  
+ 使用完 `_findfirst` 或 `_findnext` 函数（或任何变体）之后，必须调用 [_findclose](../../c-runtime-library/reference/findclose.md)。 这将释放应用程序中这些函数所使用的资源。  
   
- 带有 `w` 前缀的这些函数变量是宽字符版本；否则，它们与对应的单字节函数相同。  
+ 这些具有 `w` 前缀函数的变体都是宽字符版本；否则，它们与相应的单字节函数完全相同。  
   
- 这些函数的变量支持 32 位或 64 位时间类型和 32 位或 64 位文件大小。  第一个数字后缀 \(`32` 或 `64`\) 指示使用的时间类型的大小；第二个后缀要么是 `i32` 要么是 `i64`，指示文件大小是否表示为 32 位或 64 位整数。  有关哪些版本支持 32 位和 64 位时间类型和文件大小的详细信息，请参阅下表。  使用 64 位时间类型的变量允许文件创建日期表示为 23:59:59, December 31, 3000, UTC；因而使用 32 位时间类型只通过 19:14:07 January 18, 2038, UTC 表示日期。  1970 年 1 月 1 日 00:00:00，是所有这些函数的下限的日期范围。  
+ 这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件大小。 第一个数字后缀（`32` 或 `64`）表示所用时间类型的大小；第二个后缀是 `i32` 或 `i64`，表示以 32 位还是 64 位整数表示文件大小。 有关支持 32 位和 64 位时间类型及文件大小的版本的信息，请参阅下表。 使用 64 位时间类型的变体允许文件创建日期最大表示为 3000 年 12 月 31 日 23:59:59，UTC；那些使用 32 位时间类型的变体只能表示截至 2038 年 1 月 18 日 23:59:59，UTC 之前的日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。  
   
- 除非出于特定原因需要使用显式指定时间范围的版本，使用 `_findnext` 或 `_wfindnext`，或者，如果需要支持大于3 GB的文件大小，请使用 `_findnexti64` 或 `_wfindnexti64`。  所有这些函数使用 64 位时间类型。  在以前版本的中，这些函数使用了 32 位时类型。  如果这是应用程序的重大更改，您可能定义 `_USE_32BIT_TIME_T` 获取旧行为。  如果定义 `_USE_32BIT_TIME_T` ，`_findnext`、`_finnexti64` 和它们对应的 Unicode 版本使用 32 位时间。  
+ 除非有特定原因要使用显式指定时间大小的版本，否则请使用 `_findnext` 或 `_wfindnext`；如果需要支持大于 3 GB 的文件大小，请使用 `_findnexti64` 或 `_wfindnexti64`。 所有这些函数均使用 64 位时间类型。 在早期版本中，这些函数使用 32 位时间类型。 如果这是某个应用程序的一项重大更改，可以定义 `_USE_32BIT_TIME_T` 以获取旧行为。 如果已定义 `_USE_32BIT_TIME_T`，则 `_findnext`、`_finnexti64`，及其对应的 Unicode 版本将使用 32 位时间。  
   
-### \_findnext 的时间类型和文件长度键入变量  
+### <a name="time-type-and-file-length-type-variations-of-findnext"></a>_findnext 的时间类型和文件长度类型变体  
   
 |函数|已定义 `_USE_32BIT_TIME_T`？|时间类型|文件长度类型|  
-|--------|------------------------------|----------|------------|  
+|---------------|----------------------------------|---------------|----------------------|  
 |`_findnext`, `_wfindnext`|未定义|64 位|32 位|  
 |`_findnext`, `_wfindnext`|已定义|32 位|32 位|  
-|`_findnext32`, `_wfindnext32`|不受定义宏影响|32 位|32 位|  
-|`_findnext64`, `_wfindnext64`|不受定义宏影响|64 位|64 位|  
+|`_findnext32`, `_wfindnext32`|不受宏定义影响|32 位|32 位|  
+|`_findnext64`, `_wfindnext64`|不受宏定义影响|64 位|64 位|  
 |`_findnexti64`, `_wfindnexti64`|未定义|64 位|64 位|  
 |`_findnexti64`, `_wfindnexti64`|已定义|32 位|64 位|  
-|`_findnext32i64`, `_wfindnext32i64`|不受定义宏影响|32 位|64 位|  
-|`_findnext64i32`, `_wfindnext64i32`|不受定义宏影响|64 位|32 位|  
+|`_findnext32i64`, `_wfindnext32i64`|不受宏定义影响|32 位|64 位|  
+|`_findnext64i32`, `_wfindnext64i32`|不受宏定义影响|64 位|32 位|  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tfindnext`|`_findnext`|`_findnext`|`_wfindnext`|  
 |`_tfindnext32`|`_findnext32`|`_findnext32`|`_wfindnext32`|  
 |`_tfindnext64`|`_findnext64`|`_findnext64`|`_wfindnext64`|  
@@ -221,31 +236,31 @@ int _wfindnext64i32(
 |`_tfindnext32i64`|`_findnext32i64`|`_findnext32i64`|`_wfindnext32i64`|  
 |`_tfindnext64i32`|`_findnext64i32`|`_findnext64i32`|`_wfindnext64i32`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`_findnext`|\<io.h\>|  
-|`_findnext32`|\<io.h\>|  
-|`_findnext64`|\<io.h\>|  
-|`_findnexti64`|\<io.h\>|  
-|`_findnext32i64`|\<io.h\>|  
-|`_findnext64i32`|\<io.h\>|  
-|`_wfindnext`|\<io.h\> or \<wchar.h\>|  
-|`_wfindnext32`|\<io.h\> or \<wchar.h\>|  
-|`_wfindnext64`|\<io.h\> or \<wchar.h\>|  
-|`_wfindnexti64`|\<io.h\> or \<wchar.h\>|  
-|`_wfindnext32i64`|\<io.h\> or \<wchar.h\>|  
-|`_wfindnext64i32`|\<io.h\> or \<wchar.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`_findnext`|\<io.h>|  
+|`_findnext32`|\<io.h>|  
+|`_findnext64`|\<io.h>|  
+|`_findnexti64`|\<io.h>|  
+|`_findnext32i64`|\<io.h>|  
+|`_findnext64i32`|\<io.h>|  
+|`_wfindnext`|\<io.h> 或 \<wchar.h>|  
+|`_wfindnext32`|\<io.h> 或 \<wchar.h>|  
+|`_wfindnext64`|\<io.h> 或 \<wchar.h>|  
+|`_wfindnexti64`|\<io.h> 或 \<wchar.h>|  
+|`_wfindnext32i64`|\<io.h> 或 \<wchar.h>|  
+|`_wfindnext64i32`|\<io.h> 或 \<wchar.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [系统调用](../../c-runtime-library/system-calls.md)   
  [文件名搜索函数](../../c-runtime-library/filename-search-functions.md)

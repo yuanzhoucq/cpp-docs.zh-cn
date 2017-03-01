@@ -1,39 +1,55 @@
 ---
-title: "Container Class::empty | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 方法"
+title: "Container Class::empty | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- empty method
 ms.assetid: 2055418d-3c42-4d28-a7db-111586119ed9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Container Class::empty
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: fbe3f5d3ec97d8e98b6869158431fd16621a5fb5
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="container-classempty"></a>Container Class::empty
 > [!NOTE]
->  本主题介绍 Visual C\+\+ 文档作为使用标准 C\+\+ 库的容器的非运行的示例。  有关更多信息，请参见 [STL 容器](../standard-library/stl-containers.md)。  
+>  本主题位于 Visual C++ 文档内，作为在 C++ 标准库内使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。  
   
- 返回一个空序列控件的 **true** 。  
+ 对于空的受控序列，该成员函数返回 **true**。  
   
-## 语法  
-  
-```  
-  
-bool empty( ) const;  
+## <a name="syntax"></a>语法  
   
 ```  
+ 
+bool empty() const;
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Sample Container 类](../standard-library/sample-container-class.md)
+

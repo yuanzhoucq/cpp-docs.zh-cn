@@ -1,69 +1,85 @@
 ---
-title: "_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbckata"
-  - "_ismbchira_l"
-  - "_ismbchira"
-  - "_ismbckata_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ismbckata_l"
-  - "_ismbckata_l"
-  - "ismbckata"
-  - "ismbchira"
-  - "_ismbckata"
-  - "ismbchira_l"
-  - "_ismbchira_l"
-  - "_ismbchira"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ismbchira 函数"
-  - "_ismbchira_l 函数"
-  - "_ismbckata 函数"
-  - "_ismbckata_l 函数"
-  - "平假名"
-  - "ismbchira 函数"
-  - "ismbchira_l 函数"
-  - "ismbckata 函数"
-  - "ismbdkata_l 函数"
-  - "片假名"
+title: "_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbckata
+- _ismbchira_l
+- _ismbchira
+- _ismbckata_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ismbckata_l
+- _ismbckata_l
+- ismbckata
+- ismbchira
+- _ismbckata
+- ismbchira_l
+- _ismbchira_l
+- _ismbchira
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ismbckata function
+- _ismbchira function
+- _ismbckata_l function
+- Katakana
+- ismbchira function
+- _ismbchira_l function
+- ismbchira_l function
+- ismbdkata_l function
+- Hiragana
+- ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d4832edb810f480236b020ebfe5d620ce7eb8355
+ms.lasthandoff: 02/24/2017
 
-**代码页 932 个特定函数**  
+---
+# <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
+**代码页 932 特定函数**  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _ismbchira(  
@@ -82,47 +98,47 @@ int _ismbckata_l(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `c`  
  要测试的字符。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。  如果`c` \<\= 255，且存在相应的 `_ismbb` 实例 \(例如，`_ismbcalnum` 对应于 `_ismbbalnum`\)，则结果是相应的 `_ismbb` 实例的返回值。  
+## <a name="return-value"></a>返回值  
+ 其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果 `c`<= 255 且存在相应的 `_ismbb` 例程（例如，`_ismbcalnum` 对应于 `_ismbbalnum`），则结果是相应的 `_ismbb` 例程的返回值。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中每个函数都针对给定的条件测试给定的多字节字符。  
   
- 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递区域设置而不是其与区域设置相关的行为的当前区域设置。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递区域设置而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-|例程|测试条件 \(代码页 932 只\)|  
-|--------|------------------------|  
-|`_ismbchira`|双字节平假名：0x829F\=\<`c`\<\=0x82F1。|  
-|`_ismbchira_l`|双字节平假名：0x829F\=\<`c`\<\=0x82F1。|  
-|`_ismbckata`|双字节片假名：0x8340\=\<`c`\<\=0x8396。|  
-|`_ismbckata_l`|双字节片假名：0x8340\=\<`c`\<\=0x8396。|  
+|例程|测试条件（仅代码页 932）|  
+|-------------|-------------------------------------------|  
+|`_ismbchira`|双字节平假名：0x829F<=`c`<=0x82F1。|  
+|`_ismbchira_l`|双字节平假名：0x829F<=`c`<=0x82F1。|  
+|`_ismbckata`|双字节片假名：0x8340<=`c`<=0x8396。|  
+|`_ismbckata_l`|双字节片假名：0x8340<=`c`<=0x8396。|  
   
- **尾代码页 932 特定**  
+ **END 特定于代码页 932 **  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_ismbchira`|\<mbstring.h\>|  
-|`_ismbchira_l`|\<mbstring.h\>|  
-|`_ismbckata`|\<mbstring.h\>|  
-|`_ismbckata_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_ismbchira`|\<mbstring.h>|  
+|`_ismbchira_l`|\<mbstring.h>|  
+|`_ismbckata`|\<mbstring.h>|  
+|`_ismbckata_l`|\<mbstring.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   
- [\_ismbc 例程](../../c-runtime-library/ismbc-routines.md)   
+ [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)   
  [is、isw 例程](../../c-runtime-library/is-isw-routines.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

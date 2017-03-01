@@ -1,56 +1,77 @@
 ---
-title: "cwait | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cwait"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-process-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cwait"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cwait 函数"
+title: "_cwait | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cwait
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-process-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _cwait
+dev_langs:
+- C++
+helpviewer_keywords:
+- cwait function
+- _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _cwait
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9f58035cc3e3159dc8bb54860e3c8e7454f35b51
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cwait"></a>_cwait
 请等待，直到另一个进程终止。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中执行的应用程序。  有关详细信息，请参阅 [\/ZW 不支持 CRT 函数](http://msdn.microsoft.com/zh-cn/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-intptr_t _cwait(     int *termstat,    intptr_t procHandle,    int action  );  
+intptr_t _cwait(   
+   int *termstat,  
+   intptr_t procHandle,  
+   int action   
+);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `termstat`  
  指向将存储指定进程的结果代码的缓冲区的指针或 NULL。  
   
@@ -60,37 +81,38 @@ intptr_t _cwait(     int *termstat,    intptr_t procHandle,    int action  );
  `action`  
  NULL：Windows 操作系统应用程序将忽略它；对于其他应用程序：要在 `procHandle` 上执行的操作代码。  
   
-## 返回值  
- 成功完成指定的进程后，将返回指定进程的句柄并将 `termstat` 设置为由该指定的进程返回的结果代码。  否则，返回 –1 并设置 `errno`，如下所示。  
+## <a name="return-value"></a>返回值  
+ 成功完成指定的进程后，将返回指定进程的句柄并将 `termstat` 设置为由该指定的进程返回的结果代码。 否则，返回 –1 并设置 `errno`，如下所示。  
   
 |值|描述|  
-|-------|--------|  
-|`ECHILD`|指定进程未退出、`procHandle` 无效，或者对 [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) 或 [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) API 的调用失败。|  
+|-----------|-----------------|  
+|`ECHILD`|指定的进程不存在、`procHandle` 无效或调用 [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) 或 [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) API 失败。|  
 |`EINVAL`|`action` 无效。|  
   
- 有关这些属性和其他的更多信息返回代码示例，请参见 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码及其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `_cwait` 函数等待由 `procHandle` 提供的指定进程的进程 ID 终止。  传递给 `_cwait` 的 `procHandle` 的值应该是由对创建指定进程的 [\_spawn](../../c-runtime-library/spawn-wspawn-functions.md) 函数的调用返回的值。  如果进程 ID 在调用 `_cwait` 前终止，则 `_cwait` 将立即返回。  任何进程都可使用 `_cwait` 等待任何其他已知的存在有效句柄 \(`procHandle`\) 的进程。  
+## <a name="remarks"></a>备注  
+ `_cwait` 函数等待由 `procHandle` 提供的指定进程的进程 ID 终止。 传递给 `_cwait` 的 `procHandle` 的值应该是由对创建指定进程的 [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) 函数的调用返回的值。 如果进程 ID 在调用 `_cwait` 前终止，则 `_cwait` 将立即返回。 任何进程都可使用 `_cwait` 等待任何其他已知的存在有效句柄 (`procHandle`) 的进程。  
   
- `termstat` 指向将存储指定进程的返回代码的缓冲区。  `termstat` 的值指示是否通过调用 Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API 正常终止了指定进程。  如果指定进程调用 `exit` 或 `_exit`、从 `main` 中返回，或到达 `main` 的末尾，则将在内部调用 `ExitProcess`。  有关通过 `termstat` 传递回来的值的详细信息，请参阅 [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)。  如果使用 `termstat` 的 NULL 值调用 `_cwait`，则不会存储指定进程的返回代码。  
+ `termstat` 指向将存储指定进程的返回代码的缓冲区。 `termstat` 的值指示是否通过调用 Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API 正常终止了指定进程。 如果指定进程调用 `ExitProcess` 或 `exit`、从 `_exit` 中返回，或到达 `main` 的末尾，则将在内部调用 `main`。 有关通过 `termstat` 传回的值的详细信息，请参阅 [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)。 如果使用 `_cwait` 的 NULL 值调用 `termstat`，则不会存储指定进程的返回代码。  
   
  因为这些环境中没有实现父子关系，因此 Windows 操作系统会忽略 `action` 参数。  
   
- 除非 `procHandle` 是 \-1 或 \-2（当前进程或线程的句柄），否则将关闭句柄。  因此，在这种情况下，请不要使用返回的句柄。  
+ 除非 `procHandle` 是 -1 或 -2（当前进程或线程的句柄），否则将关闭句柄。 因此，在这种情况下，请不要使用返回的句柄。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_cwait`|\<process.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_cwait`|\<process.h>|\<errno.h>|  
   
- 有关更多兼容性信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
-// crt_cwait.c  
+  
+      // crt_cwait.c  
 // compile with: /c  
 // This program launches several processes and waits  
 // for a specified process to finish.  
@@ -146,10 +168,18 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-  **你好，爸爸。  我是 Ann。  到这里来，Ann。  谢谢你，Ann。  你好，爸爸。  我是 Beth。  你好，爸爸。  我是 Carl。  你好，爸爸。  我是 Dave。**    
-## .NET Framework 等效项  
+```Output  
+Hi, Dad. It's Ann.  
+Come here, Ann.  
+Thank you, Ann.  
+Hi, Dad. It's Beth.  
+Hi, Dad. It's Carl.  
+Hi, Dad. It's Dave.  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
  [System::Diagnostics::Process::WaitForExit](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.waitforexit.aspx)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
- [\_spawn, \_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)
+ [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)

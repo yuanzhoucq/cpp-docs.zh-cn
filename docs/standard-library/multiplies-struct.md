@@ -1,75 +1,87 @@
 ---
 title: "multiplies 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::multiplies"
-  - "multiplies"
-  - "xfunctional/std::multiplies"
-  - "std.multiplies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "multiplies 类"
-  - "multiplies 结构"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::multiplies
+- multiplies
+- xfunctional/std::multiplies
+- std.multiplies
+dev_langs:
+- C++
+helpviewer_keywords:
+- multiplies class
+- multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# multiplies 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 10f5a34631f713218873d508e41a793b7851bf7c
+ms.lasthandoff: 02/24/2017
 
-预定义在参数上执行二进制和运算\(二进制`operator*`\)的函数对象。  
+---
+# <a name="multiplies-struct"></a>multiplies 结构
+对其自变量执行乘法运算（二元 `operator*`）的预定义函数对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
-template<class Type = void>  
-   struct multiplies : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator*  
-template<>  
-   struct multiplies<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            * std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct multiplies : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator*
+template <>
+struct multiplies<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left) * std::forward<U>(Right));
+ };
 ```  
   
-#### 参数  
- `Type`, `Type1`, `Type2`  
- 支持二进制`operator*` 使用指定或者推导类型的操作数的类型。  
+#### <a name="parameters"></a>参数  
+ `Type`, `T`, `U`  
+ 支持二元 `operator*` 接受指定或推断类型的操作数的类型。  
   
  `Left`  
- 获取多元运算的左操作数。  未指定的模版需要类型`Type`的左值引用参数。  专有模版确实完美地继承了推断类型`Type1`的左值和右值引用参数。  
+ 乘法运算的左操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `T` 的左值和右值引用参数。  
   
  `Right`  
- 获取二元运算的右操作数。  未指定的模版需要类型`Type`的左值引用参数。  专有模版确实完美地继承了推断类型`Type2`的左值和右值引用参数。  
+ 乘法运算的右操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `U` 的左值和右值引用参数。  
   
-## 返回值  
- `Left` `*` `Right` 的结果。  拥有通过`operator*`返回的类型的专有模版确实完美地遵循了结果。  
+## <a name="return-value"></a>返回值  
+ `Left``*``Right` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator*` 返回的类型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // functional_multiplies.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -115,17 +127,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( 2 4 6 8 10 12 )  
+The vector v2 = ( 3 6 9 12 15 18 )  
+The element-wise products of vectors V1 & v2  
+ are: ( 6 24 54 96 150 216 )  
+*\  
 ```  
   
-  **向量 v1 \= \( 2 4 6 8 10 12 \)**  
-**The vector v2 \= \( 3 6 9 12 15 18 \)**  
-**向量V1 & v2逐元素产品**  
- **为：\( 6 24 54 96 150 216 \)**   
-## 要求  
- **标头：** \<起作用的\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<functional>  
   
- **命名空间:**  std  
+ **命名空间：** std  
   
-## 请参阅  
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [标准模板库](../misc/standard-template-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

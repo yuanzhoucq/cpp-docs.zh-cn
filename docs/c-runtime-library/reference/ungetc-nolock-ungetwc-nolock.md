@@ -1,58 +1,74 @@
 ---
-title: "_ungetc_nolock、_ungetwc_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ungetwc_nolock"
-  - "_ungetc_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ungettc_nolock"
-  - "ungetwc_nolock"
-  - "ungetc_nolock"
-  - "_ungetc_nolock"
-  - "_ungetwc_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ungetc_nolock 函数"
-  - "_ungettc_nolock 函数"
-  - "_ungetwc_nolock 函数"
-  - "字符, 推送回流"
-  - "ungetc_nolock 函数"
-  - "ungettc_nolock 函数"
-  - "ungetwc_nolock 函数"
+title: "_ungetc_nolock、_ungetwc_nolock | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ungetwc_nolock
+- _ungetc_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ungettc_nolock
+- ungetwc_nolock
+- ungetc_nolock
+- _ungetc_nolock
+- _ungetwc_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ungettc_nolock function
+- _ungetwc_nolock function
+- characters, pushing back onto stream
+- _ungetc_nolock function
+- ungetwc_nolock function
+- ungettc_nolock function
+- ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _ungetc_nolock、_ungetwc_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
+ms.lasthandoff: 02/24/2017
 
-将一个字符推入流中。  
+---
+# <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock、_ungetwc_nolock
+将字符重新推送到流上。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _ungetc_nolock(  
@@ -65,40 +81,40 @@ wint_t _ungetwc_nolock(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `c`  
- 要推出的字符。  
+ 要推送的字符。  
   
  `stream`  
  指向 `FILE` 结构的指针。  
   
-## 返回值  
- 如果成功，这些函数都返回一个字符参数 `c`*。*如果 `c` 不能推回，或者未读取字符，输入流未更改，并且 `_ungetc_nolock` 返回 `EOF`; `_ungetwc_nolock` 返回 `WEOF`。  如果 `stream` 为 `NULL`，返回 `EOF` 或 `WEOF`，并且 `errno` 设置为 `EINVAL`。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则其中每个函数都会返回字符参数 `c`*。* 如果无法推送回 `c` 或未读取任何字符，则输入流不改变且 `_ungetc_nolock` 返回 `EOF`；`_ungetwc_nolock` 返回 `WEOF`。 如果 `stream` 为 `NULL`，则将返回 `EOF` 或 `WEOF`，并且 `errno` 将设置为 `EINVAL`。  
   
- 有关这些属性和其他错误代码的信息，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- 这些函数分别为 `ungetc` 和 `ungetwc`的非锁定版本。  除了它们不由其他线程干扰保护，`_nolock` 后缀的版本相同。  它们可能更快，因为它们不会产生锁定其他线程的开销。  仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。  
+## <a name="remarks"></a>备注  
+ 这些函数是 `ungetc` 和 `ungetwc` 的非锁定版本。 带 `_nolock` 后缀的版本相同，只不过它们可能受到其他线程的影响。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义的 \_UNICODE & 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|-------------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ungettc_nolock`|`_ungetc_nolock`|`_ungetc_nolock`|`_ungetwc_nolock`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_ungetc_nolock`|\<stdio.h\>|  
-|`_ungetwc_nolock`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_ungetc_nolock`|\<stdio.h>|  
+|`_ungetwc_nolock`|\<stdio.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)   
  [putc、putwc](../../c-runtime-library/reference/putc-putwc.md)

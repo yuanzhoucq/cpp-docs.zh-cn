@@ -1,69 +1,85 @@
 ---
-title: "_fpreset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpreset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fpreset"
-  - "fpreset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpreset 函数"
-  - "浮点数字, 重置数学包"
-  - "fpreset 函数"
+title: "_fpreset | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpreset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fpreset
+- fpreset
+dev_langs:
+- C++
+helpviewer_keywords:
+- fpreset function
+- floating-point numbers, resetting math package
+- _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _fpreset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 0d5bf6ef97700e010a6565eccf7087a613adf9c3
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fpreset"></a>_fpreset
 重置浮点包。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void _fpreset( void );  
 ```  
   
-## 备注  
- `_fpreset` 函数初始化浮点运算包。  `_fpreset` 通常与 `signal`、`system`、`_exec` 或 `_spawn` 函数一起使用。  如果程序捕获`signal`浮点错误信号 \(`SIGFPE`\)，则可以通过调用 `_fpreset` 并使用 `longjmp`，从浮点错误安全恢复。  
+## <a name="remarks"></a>备注  
+ `_fpreset` 函数重新初始化浮点数学包。 `_fpreset` 通常与 `signal`、`system`，或 `_exec` 或 `_spawn` 函数一同使用。 如果某个程序捕获带 `signal` 的浮点错误信号 (`SIGFPE`)，它可以通过调用 `_fpreset` 和使用 `longjmp` 安全地从浮点错误中恢复。  
   
- 当使用 [\/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md) 或 `/clr:pure` 编译时，这些函数被丢弃，因为公共语言运行时 \(CLR\) 仅支持默认值浮点精度。  
+ 使用编译时，此函数已弃用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)因为公共语言运行时仅支持默认浮点精度。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`_fpreset`|\<float.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`_fpreset`|\<float.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_fpreset.c  
@@ -172,11 +188,14 @@ void fpcheck( void )
 }  
 ```  
   
-  **Dividing    5 by    0...**  
-**Error 131: Divide by zero**   
-## 请参阅  
+```Output  
+Dividing    5 by    0...  
+Error 131: Divide by zero  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
- [\_exec、\_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)   
+ [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)   
  [signal](../../c-runtime-library/reference/signal.md)   
- [\_spawn, \_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system、\_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [system、_wsystem](../../c-runtime-library/reference/system-wsystem.md)

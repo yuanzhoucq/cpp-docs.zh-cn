@@ -1,52 +1,68 @@
 ---
 title: "is_default_constructible 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_default_constructible"
-  - "std.is_default_constructible"
-  - "std::is_default_constructible"
-  - "type_traits/std::is_default_constructible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_default_constructible"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_default_constructible
+- std.is_default_constructible
+- std::is_default_constructible
+- type_traits/std::is_default_constructible
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# is_default_constructible 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e3542b828eb6c9f67ee21660875ee401f043888e
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isdefaultconstructible-class"></a>is_default_constructible 类
 测试类型是否具有默认构造函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-template<class Ty>  
-    struct is_default_constructible;  
+template <class Ty>  
+struct is_default_constructible;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
  要查询的类型。  
   
-## 备注  
- 如果类型 `T` 是具有默认构造函数的类类型，则类型谓词的实例为 true，否则为 false。 这等效于谓词 `is_constructible<T>`。 类型 `T` 必须是一个完整类型、`void` 或未知绑定的数组。  
+## <a name="remarks"></a>备注  
+ 如果类型 `T` 是具有默认构造函数的类类型，则类型谓词的实例为 true，否则为 false。 这等效于谓词 `is_constructible<T>`。 类型 `T` 必须是一个完整类型、 `void`或未知绑定的数组。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```cpp  
-  
 #include <type_traits>   
 #include <iostream>   
   
@@ -75,13 +91,16 @@ int main()
 ```  
   
 ```Output  
-is_default_constructible<Simple> == true is_default_constructible<Simple2> == false  
+is_default_constructible<Simple> == true  
+is_default_constructible<Simple2> == false  
 ```  
   
-## 要求  
- **标头：**\<type\_traits\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<type_traits>  
   
- **命名空间:** std  
+ **命名空间：** std  
   
-## 请参阅  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>另请参阅  
+ [<type_traits>](../standard-library/type-traits.md)
+
+

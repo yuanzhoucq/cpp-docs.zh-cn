@@ -1,55 +1,72 @@
 ---
-title: "_dupenv_s_dbg、_wdupenv_s_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_dupenv_s_dbg"
-  - "_wdupenv_s_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tdupenv_s_dbg"
-  - "_dupenv_s_dbg"
-  - "_wdupenv_s_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tdupenv_s_dbg 函数"
-  - "dupenv_s_dbg 函数"
-  - "_wdupenv_s_dbg 函数"
-  - "环境变量"
-  - "tdupenv_s_dbg 函数"
-  - "wdupenv_s_dbg 函数"
-  - "_dupenv_s_dbg 函数"
+title: "_dupenv_s_dbg、_wdupenv_s_dbg | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _dupenv_s_dbg
+- _wdupenv_s_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _tdupenv_s_dbg
+- _dupenv_s_dbg
+- _wdupenv_s_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tdupenv_s_dbg function
+- dupenv_s_dbg function
+- _wdupenv_s_dbg function
+- environment variables
+- tdupenv_s_dbg function
+- wdupenv_s_dbg function
+- _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _dupenv_s_dbg、_wdupenv_s_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bfe2abe691a3f82b261f36f7581c4284aa1f6624
+ms.lasthandoff: 02/24/2017
 
-从当前环境获取值。[\_dupenv\_s、\_wdupenv\_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) 版本分配内存给 [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md) 来附加调试信息。  
+---
+# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
+从当前环境中获取值。  [_dupenv_s、_wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) 的版本，使用 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) 来分配内存，以提供其他调试信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 errno_t _dupenv_s_dbg(  
@@ -70,53 +87,54 @@ errno_t _wdupenv_s_dbg(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `buffer`  
- 存储变量值的缓冲区。  
+ 用于存储变量值的缓冲区。  
   
  `numberOfElements`  
- `buffer`的大小。  
+ 
+          `buffer` 的大小。  
   
  `varname`  
- 环境变量名  
+ 环境变量名称。  
   
  `blockType`  
- 内存块的请求类型的：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
+ 内存块的请求类型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
   
  `filename`  
- 源文件名或 `NULL`的指针。  
+ 指向源文件名称的指针或 `NULL`。  
   
  `linenumber`  
- 源文件或 `NULL` 的行号。  
+ 源文件中的行号或 `NULL`。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  如果成功，则为零；如果失败，则为错误代码。  
   
- 如果 `buffer` 或 `varname` 是 `NULL`，这些函数验证他们的参数；调用无效参数处理程序,如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许继续执行，则函数将 `errno` 设置为 `EINVAL`，并返回 `EINVAL`。  
+ 这些函数将验证其参数；如果 `buffer` 或 `varname` 是 `NULL`，则调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将 `errno` 设置为 `EINVAL` 并返回 `EINVAL`。  
   
- 如果这些函数不能分配足够的内存，这些设置 `buffer` 到 `NULL` 和设置 `numberOfElements` 为 0，并返回 `ENOMEM`。  
+ 如果这些函数无法分配足够的内存，则它们会将 `buffer` 设置为 `NULL` 并将 `numberOfElements` 设置为 0，然后返回 `ENOMEM`。  
   
-## 备注  
- `_dupenv_s_dbg` 和 `_wdupenv_s_dbg`函数与 `_dupenv_s` 和 `_wdupenv_s`相同，除了当 `_DEBUG` 被定义时，这些函数使用[malloc](../../c-runtime-library/reference/malloc.md)，[\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md) 的调试版本来给环境变量的值分配内存。  有关如何使用 `_malloc_dbg` 的调试特点的信息，请参见 [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
+## <a name="remarks"></a>备注  
+ `_dupenv_s_dbg` 和 `_wdupenv_s_dbg` 函数与 `_dupenv_s` 和 `_wdupenv_s` 完全相同，只是当定义 `_DEBUG` 时，这些函数将使用 [malloc](../../c-runtime-library/reference/malloc.md) 和 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) 的调试版本来为环境变量的值分配内存。 有关 `_malloc_dbg` 调试功能的信息，请参阅 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
   
- 在许多情况下您不需要显式调用这些函数。  相反，你可以定义 `_CRTDBG_MAP_ALLOC` 标记。  当 `_CRTDBG_MAP_ALLOC` 被定义，调用 `_dupenv_s` 和 `_wdupenv_s` 重新绘制 `_dupenv_s_dbg` 和 `_wdupenv_s_dbg`，分别，`blockType` 设置到  `_NORMAL_BLOCK`。  因此，你不用显示的调用这些函数除非你想标记堆块为 `_CLIENT_BLOCK`。  关于块类的详细信息，请参阅 [调试堆中的块类型](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)。  
+ 在大多数情况下，无需显式调用这些函数。 可以改为定义标志 `_CRTDBG_MAP_ALLOC`。 定义 `_CRTDBG_MAP_ALLOC` 后，对 `_dupenv_s` 和 `_wdupenv_s` 的调用将分别重新映射到 `_dupenv_s_dbg` 和 `_wdupenv_s_dbg`，同时会将 `blockType` 设置为 `_NORMAL_BLOCK`。 因此，无需显式调用这些函数，除非你希望将堆块标记为 `_CLIENT_BLOCK`。 有关块类型的详细信息，请参阅[调试堆中的块类型](/visualstudio/debugger/crt-debug-heap-details)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tdupenv_s_dbg`|`_dupenv_s_dbg`|`_dupenv_s_dbg`|`_wdupenv_s_dbg`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_dupenv_s_dbg`|\<crtdbg.h\>|  
-|`_wdupenv_s_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_dupenv_s_dbg`|\<crtdbg.h>|  
+|`_wdupenv_s_dbg`|\<crtdbg.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_dupenv_s_dbg.c  
@@ -140,18 +158,18 @@ int main( void )
 }  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
   
 ```  
 pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
 nonexistentvariable = (null)  
 ```  
   
-## .NET Framework 等效项  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
  [System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [环境常量](../../c-runtime-library/environmental-constants.md)   
- [getenv\_s、\_wgetenv\_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [\_putenv\_s、\_wputenv\_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)
+ [getenv_s、_wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
+ [_putenv_s、_wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)

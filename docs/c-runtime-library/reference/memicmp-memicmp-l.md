@@ -1,53 +1,69 @@
 ---
-title: "_memicmp、_memicmp_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_memicmp_l"
-  - "_memicmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_memicmp"
-  - "memicmp_l"
-  - "_memicmp_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_memicmp 函数"
-  - "_memicmp_l 函数"
-  - "memicmp 函数"
-  - "memicmp_l 函数"
+title: "_memicmp、_memicmp_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _memicmp_l
+- _memicmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _memicmp
+- memicmp_l
+- _memicmp_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- memicmp function
+- _memicmp function
+- memicmp_l function
+- _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _memicmp、_memicmp_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e7547d6ff0e62e8bc4c449d55c5f06f1c9349092
+ms.lasthandoff: 02/24/2017
 
-比较两个缓冲区的字符 \(不区分大小写\)。  
+---
+# <a name="memicmp-memicmpl"></a>_memicmp、_memicmp_l
+比较两个缓冲区中的字符（不区分大小写）。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _memicmp(  
@@ -63,7 +79,7 @@ int _memicmp_l(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `buf1`  
  第一个缓冲区。  
   
@@ -71,38 +87,38 @@ int _memicmp_l(
  第二个缓冲区。  
   
  `count`  
- 字符数量  
+ 字符数。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 返回值表示缓冲区之间的关系。  
+## <a name="return-value"></a>返回值  
+ 返回值指示缓冲区之间的关系。  
   
-|返回值|第一个字节 buf1 关系和 buf2|  
-|---------|-------------------------|  
-|\< 0|`buf1` 小于 `buf2`|  
+|返回值|buf1 和 buf2 的第一个计数字节的关系|  
+|------------------|--------------------------------------------------------|  
+|< 0|`buf1` 小于 `buf2`。|  
 |0|`buf1` 等于 `buf2`。|  
-|\> 0|`buf1` 大于 `buf2`。|  
-|`_NLSCMPERROR`|发生错误。|  
+|> 0|`buf1` 大于 `buf2`。|  
+|`_NLSCMPERROR`|出现了错误。|  
   
-## 备注  
- `_memicmp` 函数的字节比较两字节缓冲区 `buf1` 和 `buf2` 中的第一个 `count` 字符。  该比较不区分大小写。  
+## <a name="remarks"></a>备注  
+ `_memicmp` 函数逐字节地比较两字节缓冲区 `count` 和 `buf1` 中的第一个 `buf2` 字符。 该比较不区分大小写。  
   
- 如果 `buf1` 或 `buf2`都 是空指针，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 所述。  如果允许执行继续，则该函数返回 `_NLSCMPERROR` 并将 `errno` 设置为 `EINVAL`。  
+ 如果 `buf1` 或 `buf2` 为 null 指针，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回 `_NLSCMPERROR`，并且将 `errno` 设置为 `EINVAL`。  
   
- `_memicmp`使用相关行为的当前区域设置；和`_memicmp_l` 相同，但它将使用传递的区域设置。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ `_memicmp` 将当前区域设置用于与区域设置相关的行为；`_memicmp_l` 也是一样，只不过它使用传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_memicmp`|\<memory.h\> 或 \<string.h\>|  
-|`_memicmp_l`|\<memory.h\> 或 \<string.h\>|  
+|-------------|---------------------|  
+|`_memicmp`|\<memory.h> 或 \<string.h>|  
+|`_memicmp_l`|\<memory.h> 或 \<string.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_memicmp.c  
@@ -132,17 +148,20 @@ int main( void )
 }  
 ```  
   
-  **比较“不能理解”到“人员世界卫生组织将 NOT 了解 FROM”的用户**  
-**先与第二个相等。**   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'  
+First is equal to second.  
+```  
   
-## 请参阅  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另请参阅  
  [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr、wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset、wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [\_stricmp、\_wcsicmp、\_mbsicmp、\_stricmp\_l、\_wcsicmp\_l、\_mbsicmp\_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
+ [_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)

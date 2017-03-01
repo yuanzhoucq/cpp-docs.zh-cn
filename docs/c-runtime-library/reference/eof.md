@@ -1,52 +1,68 @@
 ---
-title: "_eof | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_eof"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_eof"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_eof 函数"
-  - "文件结尾"
-  - "文件结尾, 测试"
-  - "eof 函数"
-  - "文件 [C++], 结束"
-  - "测试, 用于文件结尾"
+title: "_eof | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _eof
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _eof
+dev_langs:
+- C++
+helpviewer_keywords:
+- eof function
+- end of file, testing for
+- _eof function
+- files [C++], end of
+- testing, for end-of-file
+- end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _eof
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 454e4870f63d5a66c67f493e065c328bdb72837e
+ms.lasthandoff: 02/24/2017
 
-文件结尾的测试（EOF）  
+---
+# <a name="eof"></a>_eof
+测试文件尾 (EOF)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _eof(   
@@ -54,25 +70,25 @@ int _eof(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fd`  
- 引用开启文件的描述符。  
+ 引用打开的文件的文件说明符。  
   
-## 返回值  
- `_eof` 返回 1，则当前位置的文件结束，或者 0，如果它不是。  返回值 \- 1 指示错误；在这种情况下，的参数无效处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许继续执行，`errno` 设置为 `EBADF`，则指示无效的文件说明符。  
+## <a name="return-value"></a>返回值  
+ 如果当前位置是文件尾，则 `_eof` 返回 1；否则返回 0。 返回 –1 值表示错误；在此示例中，调用了无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `errno` 将设置为指示无效文件说明符的 `EBADF`。  
   
-## 备注  
- `_eof` 函数确定文件的末尾与 `fd` 是否已到达。  
+## <a name="remarks"></a>备注  
+ `_eof` 函数确定是否已到达与 `fd` 关联的文件的结尾。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_eof`|\<io.h\>|\<errno.h\>|  
+|函数|必需的标头|可选标头|  
+|--------------|---------------------|---------------------|  
+|`_eof`|\<io.h>|\<errno.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_eof.c  
@@ -112,25 +128,25 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_eof.txt  
+## <a name="input-crteoftxt"></a>输入：crt_eof.txt  
   
 ```  
 This file contains some text.  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 Number of bytes read = 29  
 ```  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误处理](../../c-runtime-library/error-handling-crt.md)   
- [低级别 I\/O](../../c-runtime-library/low-level-i-o.md)   
+ [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [feof](../../c-runtime-library/reference/feof.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror、\_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror、_wperror](../../c-runtime-library/reference/perror-wperror.md)

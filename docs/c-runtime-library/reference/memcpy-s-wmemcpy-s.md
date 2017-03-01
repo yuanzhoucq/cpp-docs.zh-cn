@@ -1,50 +1,66 @@
 ---
-title: "memcpy_s、wmemcpy_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "memcpy_s"
-  - "wmemcpy_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wmemcpy_s"
-  - "memcpy_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memcpy_s 函数"
-  - "wmemcpy_s 函数"
+title: "memcpy_s、wmemcpy_s | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- memcpy_s
+- wmemcpy_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wmemcpy_s
+- memcpy_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- memcpy_s function
+- wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# memcpy_s、wmemcpy_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 38381578b8a8bd66c857d26d12a775f2af702611
+ms.lasthandoff: 02/24/2017
 
-在缓冲区之间复制字节。 一些版本 [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) 因安全性增强中所述 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)。  
+---
+# <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
+在缓冲区之间复制字节。 如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) 具有安全增强功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 errno_t memcpy_s(  
@@ -61,12 +77,12 @@ errno_t wmemcpy_s(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `dest`  
  新缓冲区。  
   
  `destSize`  
- 目标缓冲区，以字节为单位 memcpy\_s 和 wmemcpy\_s 的宽字符 \(wchar\_t\) 的大小。  
+ 目标缓冲区的大小，memcpy_s 以字节为单位），wmemcpy_s 以宽字符 (wchar_t) 为单位。  
   
  `src`  
  从中进行复制操作的缓冲区。  
@@ -74,32 +90,33 @@ errno_t wmemcpy_s(
  `count`  
  要复制的字符数。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  如果成功，则为零；如果失败，则为错误代码。  
   
-### 错误条件  
+### <a name="error-conditions"></a>错误条件  
   
-|`dest`|`destSize`|`src`|返回值|`dest` 的内容|  
-|------------|----------------|-----------|---------|----------------|  
-|`NULL`|any|any|`EINVAL`|未修改|  
-|any|any|`NULL`|`EINVAL`|`dest` 归零|  
-|any|\< `count`|any|`ERANGE`|`dest` 归零|  
+|`dest`|`destSize`|`src`|`count`|返回值|`dest` 的内容|  
+|------------|----------------|-----------|---|------------------|------------------------|  
+|any|任何|任何|0|0|未修改|  
+|`NULL`|任何|任何|非零|`EINVAL`|未修改|  
+|任何|任何|`NULL`|非零|`EINVAL`|`dest` 已清零|  
+|任何|< `count`|任何|非零|`ERANGE`|`dest` 已清零|  
   
-## 备注  
+## <a name="remarks"></a>备注  
  `memcpy_s` 从 `count` 中将 `src` 个字节复制到 `dest` 中；`wmemcpy_s` 复制 `count` 个宽字符（两个字节）。 如果源和目标重叠，则 `memcpy_s` 的行为是未定义的。 使用 `memmove_s` 处理重叠区域。  
   
- 这些函数验证其参数。 如果 `dest` 或 `src` 是 null 指针，或 `destSize` 小于 `count`, ，这些函数将调用无效参数处理程序，如中所述 [参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数将返回 `EINVAL` 并将 `errno` 设置为 `EINVAL`。  
+ 这些函数验证其参数。 如果 `count` 为非零，并且 `dest` 或 `src` 是 null 指针，或者 `destSize` 小于 `count`，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `EINVAL` 或 `ERANGE` 并将 `errno` 设置为返回值。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`memcpy_s`|\<memory.h\> 或 \<string.h\>|  
-|`wmemcpy_s`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memcpy_s`|\<memory.h> 或 \<string.h>|  
+|`wmemcpy_s`|\<wchar.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_memcpy_s.c  
@@ -139,16 +156,16 @@ int main()
 0 1 4 9 16 25 36 49 64 81   
 ```  
   
-## .NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr、wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memmove、wmemmove](../../c-runtime-library/reference/memmove-wmemmove.md)   
  [memset、wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcpy、wcscpy、\_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy、\_strncpy\_l、wcsncpy、\_wcsncpy\_l、\_mbsncpy、\_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [strncpy\_s、\_strncpy\_s\_l、wcsncpy\_s、\_wcsncpy\_s\_l、\_mbsncpy\_s、\_mbsncpy\_s\_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
+ [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)

@@ -1,81 +1,212 @@
 ---
-title: "initializer_list Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "initializer_list 类 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 1f2c0ff4-5636-4f79-b008-e75426e3d2ab
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# initializer_list Class
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 2ac3e7fa456e5d3ff04bc5d974c87a9cbb055fea
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="initializerlist-class"></a>initializer_list 类
 提供访问元素数组的权限，其中数组的每个成员均具有指定的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```cpp  
-template<  
-    class Type >  
-    class initializer_list  
+```  
+template <class Type>  
+class initializer_list
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
   
-|参数|描述|  
-|--------|--------|  
-|`_Elem`|要在 `initializer_list` 中存储的元素数据类型。|  
-|`_First`|指向 `initializer_list` 的第一个元素的指针。|  
-|`_Last`|指向 `initializer_list` 的最后一个元素的指针。|  
+|参数|说明|  
+|---------------|-----------------|  
+|`Type`|要在 `initializer_list` 中存储的元素数据类型。|  
+
   
-## 备注  
+## <a name="remarks"></a>备注  
  使用大括号内的初始值设定项列表可构造 `initializer_list`。  
   
 ```cpp  
 initializer_list<int> i1{ 1, 2, 3, 4 };  
 ```  
   
- 每当函数签名需要 `initializer_list` 时，编译器将具有同类元素的大括号内的初始值设定项列表转换为 `initializer_list`。  有关使用 `initializer_list` 的详细信息，请参阅[统一安装和委派构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)  
+ 每当函数签名需要 `initializer_list` 时，编译器将具有同类元素的大括号内的初始值设定项列表转换为 `initializer_list`。 有关使用 `initializer_list` 的详细信息，请参阅[统一初始化和委托构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)  
   
-### 构造函数  
-  
-|||  
-|-|-|  
-|[initializer\_list](../Topic/forward_list::forward_list.md)|构造 `initializer_list` 类型的对象。|  
-  
-### Typedef  
+### <a name="constructors"></a>构造函数  
   
 |||  
 |-|-|  
-|value\_type|`initializer_list` 中元素的类型。|  
+|[initializer_list](../standard-library/forward-list-class.md#forward_list__forward_list)|构造 `initializer_list` 类型的对象。|  
+  
+### <a name="typedefs"></a>Typedef  
+  
+|||  
+|-|-|  
+|value_type|`initializer_list` 中元素的类型。|  
 |引用|一个类型，它提供对 `initializer_list` 中元素的引用。|  
-|const\_reference|一个类型，它提供对 `initializer_list` 中元素的常量引用。|  
-|size\_type|一个类型，它表示 `initializer_list` 中元素的数目。|  
+|const_reference|一个类型，它提供对 `initializer_list` 中元素的常量引用。|  
+|size_type|一个类型，它表示 `initializer_list` 中元素的数目。|  
 |iterator|一个类型，它为 `initializer_list` 提供迭代器。|  
-|const\_iterator|一个类型，它为 `initializer_list` 提供常量迭代器。|  
+|const_iterator|一个类型，它为 `initializer_list` 提供常量迭代器。|  
   
-### 成员函数  
+### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[begin](../Topic/initializer_list::begin.md)|返回指向 `initializer_list` 中第一个元素的指针。|  
-|[end](../Topic/initializer_list::end.md)|返回指向 `initializer_list` 中最后一个元素之后的元素的指针。|  
-|[size](../Topic/initializer_list::size.md)|返回 `initializer_list` 中的元素数量。|  
+|[begin](#initializer_list__begin)|返回指向 `initializer_list` 中第一个元素的指针。|  
+|[end](#initializer_list__end)|返回指向 `initializer_list` 中最后一个元素之后的元素的指针。|  
+|[size](#initializer_list__size)|返回 `initializer_list` 中的元素数量。|  
   
-## 要求  
- **标头：**\<initializer\_list\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<initializer_list>  
   
- **命名空间:** std  
+ **命名空间：** std  
   
-## 请参阅  
- [\<forward\_list\>](../standard-library/forward-list.md)
+##  <a name="a-nameinitializerlistbegina--initializerlistbegin"></a><a name="initializer_list__begin"></a>initializer_list::begin  
+ 返回指向 `initializer_list` 中第一个元素的指针。  
+  
+```  
+constexpr const InputIterator* begin() const noexcept;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 指向 `initializer_list` 的第一个元素的指针。 如果列表为空，该指针对于列表的开头和末尾都相同。  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameinitializerlistenda--initializerlistend"></a><a name="initializer_list__end"></a>initializer_list::end  
+ 返回指向 `initializer list` 中最后一个元素之后的元素的指针。  
+  
+```  
+constexpr const InputIterator* end() const noexcept;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 指向列表中最后一个元素之后的元素的指针。 如果列表为空，则指向列表中第一个元素的指针也为空。  
+  
+##  <a name="a-nameinitializerlistinitializerlista--initializerlistinitializerlist"></a><a name="initializer_list__initializer_list"></a>initializer_list::initializer_list  
+ 构造 `initializer_list` 类型的对象。  
+  
+```  
+constexpr initializer_list() noexcept;
+initializer_list(const InputIterator First, const InputIterator Last);
+```  
+  
+### <a name="parameters"></a>参数  
+  
+|参数|说明|  
+|---------------|-----------------|  
+|`First`|要复制的范围元素中的第一个元素的位置。|  
+|`Last`|要复制的元素范围以外的第一个元素的位置。|  
+  
+### <a name="remarks"></a>备注  
+ `initializer_list` 基于指定类型的对象数组。 复制`initializer_list` 会创建指向相同对象的列表的第二个实例；但不会复制基础对象。  
+  
+### <a name="example"></a>示例  
+  
+```cpp  
+// initializer_list_class.cpp  
+// compile with: /EHsc  
+#include <initializer_list>  
+#include <iostream>  
+  
+int main()  
+{  
+    using namespace std;  
+    // Create an empty initializer_list c0  
+    initializer_list <int> c0;  
+  
+    // Create an initializer_list c1 with 1 element  
+    initializer_list <int> c1{ 3 };  
+  
+    // Create an initializer_list c2 with 5 elements   
+    initializer_list <int> c2{ 5, 4, 3, 2, 1 };  
+  
+    // Create a copy, initializer_list c3, of initializer_list c2  
+    initializer_list <int> c3(c2);  
+  
+    // Create a initializer_list c4 by copying the range c3[ first,  last)  
+    const int* c3_ptr = c3.begin();  
+    c3_ptr++;  
+    c3_ptr++;  
+    initializer_list <int> c4(c3.begin(), c3_ptr);  
+  
+    // Move initializer_list c4 to initializer_list c5  
+    initializer_list <int> c5(move(c4));  
+  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c2 =";  
+    for (auto c : c2)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c3 =";  
+    for (auto c : c3)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c4 =";  
+    for (auto c : c4)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c5 =";  
+    for (auto c : c5)  
+        cout << " " << c;  
+    cout << endl;  
+}  
+```  
+  
+```Output  
+c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4  
+```  
+  
+##  <a name="a-nameinitializerlistsizea--initializerlistsize"></a><a name="initializer_list__size"></a>initializer_list::size  
+ 返回列表中元素的数目。  
+  
+```  
+constexpr size_t size() const noexcept;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 列表中元素的数目。  
+  
+### <a name="remarks"></a>备注  
+  
+## <a name="see-also"></a>另请参阅  
+ [<forward_list>](../standard-library/forward-list.md)
+
+

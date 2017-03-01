@@ -1,78 +1,94 @@
 ---
-title: "_get_pgmptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_pgmptr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "get_pgmptr"
-  - "_get_pgmptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_pgmptr 函数"
-  - "_pgmptr 全局变量"
-  - "get_pgmptr 函数"
-  - "pgmptr 全局变量"
+title: "_get_pgmptr | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_pgmptr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- get_pgmptr
+- _get_pgmptr
+dev_langs:
+- C++
+helpviewer_keywords:
+- get_pgmptr function
+- _get_pgmptr function
+- pgmptr global variable
+- _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _get_pgmptr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f119e7680f53f37a75b5e2e54263094e1b48a402
+ms.lasthandoff: 02/24/2017
 
-获取`_pgmptr`全局误差变量的当前值。  
+---
+# <a name="getpgmptr"></a>_get_pgmptr
+获取 `_pgmptr` 全局变量的当前值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-errno_t _get_pgmptr(   
-   char **pValue   
+errno_t _get_pgmptr(   
+   char **pValue   
 );  
 ```  
   
-#### 参数  
- \[out\] `pValue`  
- 用的字符串的指针填充当前 `_pgmptr` 变量的值。  
+#### <a name="parameters"></a>参数  
+ [out] `pValue`  
+ 指向要填充 `_pgmptr` 变量当前值的字符串的指针。  
   
-## 返回值  
- 如果成功，返回零；如果失败，则为错误代码。  如果 `pValue` 为 `NULL`，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许执行继续，则该函数设置 `errno` 为 `EINVAL` 并返回 `EINVAL`。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则返回零；如果失败，则返回错误代码。 如果 `pValue` 为 `NULL`，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 `EINVAL`。  
   
-## 备注  
- 全局 `_pgmptr`变量包含完整路径。可执行的与进程。  有关详细信息，请参阅[\_pgmptr、\_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。  
+## <a name="remarks"></a>备注  
+ `_pgmptr` 全局变量包含通向与该过程关联的可执行文件的完整路径。 有关详细信息，请参阅 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_get_pgmptr`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_get_pgmptr`|\<stdlib.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework Equivalent  
- 不适用。  若要调用标准 C 函数，请使用 `PInvoke`。  有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
- [\_get\_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)
+## <a name="see-also"></a>另请参阅  
+ [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)

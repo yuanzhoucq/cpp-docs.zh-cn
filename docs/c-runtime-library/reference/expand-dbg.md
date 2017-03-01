@@ -1,49 +1,66 @@
 ---
-title: "_expand_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_expand_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "expand_dbg"
-  - "_expand_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "内存块，更改大小"
-  - "expand_dbg 函数"
-  - "_expand_dbg 函数"
+title: "_expand_dbg | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _expand_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- expand_dbg
+- _expand_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks, changing size
+- expand_dbg function
+- _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _expand_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 18cf0578ea136ea6c84bb351b4bc087f3282910b
+ms.lasthandoff: 02/24/2017
 
-通过展开或收缩块调整指定的块在堆中的内存 \(只有调试版本\)。  
+---
+# <a name="expanddbg"></a>_expand_dbg
+通过展开或收缩块调整指定堆的内存块大小（仅限调试版本）。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void *_expand_dbg(   
@@ -55,50 +72,50 @@ void *_expand_dbg(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `userData`  
- 以前指定内存块的指针。  
+ 指向之前分配的内存块的指针。  
   
  `newSize`  
- 请求块的新的大小 \(以字节为单位\)。  
+ 请求块的新大小（以字节为单位）。  
   
  `blockType`  
- 重置大小块的请求类型：`_CLIENT_BLOCK`  或 `_NORMAL_BLOCK`。  
+ 已调整大小的块的请求类型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
   
  `filename`  
- 需要额外操作或者`NULL`的源文件的名称的指针。  
+ 指向已请求扩展操作的源文件名的指针或 `NULL`。  
   
  `linenumber`  
- 在请求的扩展操作数或 `NULL` 的源文件中的行号。  
+ 请求扩展操作所在的源文件中的行数或 `NULL`。  
   
- `filename` 和 `linenumber` 的参数只有在 `_expand_dbg` 被明确调用或[\_CRTDBG\_MAP\_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)预处理器被持续定义时才有效。  
+ 仅当已显式调用 `_expand_dbg` 或已定义 [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) 预处理器常量时，才可使用 `filename` 和 `linenumber` 参数。  
   
-## 返回值  
- 当编译成功，`_expand_dbg` 返回一个重置内存块的指针。  由于内存不会移动，该地址与用户数据一样。  如果错误发生或者内存不能分配请求的块，它返回`NULL`。  如果错误发生，`errno` 返回关于故障错误的操作系统的信息。  有关 `errno`的更多信息，请参见[errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+## <a name="return-value"></a>返回值  
+ 成功完成后，`_expand_dbg` 返回指向已调整大小的内存块的指针。 因为内存未移动，所以地址与 userData 相同。 如果发生错误，或块无法扩展到所请求的大小，则返回 `NULL`。 如果发生错误，则显示 `errno`，其中包括操作系统有关错误原因的信息。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `_expand_dbg` 函数是 \_[expand](../../c-runtime-library/reference/expand.md) 函数的调试版本。  当 [\_DEBUG](../../c-runtime-library/debug.md) 未定义时，每次减少调用 `_expand_dbg`  而去调用 `_expand`。   `_expand`  和 `_expand_dbg`  在基堆中重置内存块，但是 `_expand_dbg` 提供一些调试特征：块中用户部分任意侧的缓冲区测试是否泄漏，块类型参数跟踪特定的分配类型，并且`filename`\/`linenumber` 信息决定分配请求的来源。  
+## <a name="remarks"></a>备注  
+ `_expand_dbg` 函数是 [expand](../../c-runtime-library/reference/expand.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_expand_dbg` 的调用都会减少到对 `_expand` 的调用。 `_expand` 和 `_expand_dbg` 都可调整基堆中的内存块的大小，但是 `_expand_dbg` 还包含几种调试功能：用于测试泄漏的块的用户部分两侧的缓冲区、用于跟踪特定分配类型的块类型参数，以及用于确定分配请求的源的 `filename`/`linenumber` 信息。  
   
- `_expand_dbg` 重置比请求的`newSize` 稍微更多空间的内存块。  `newSize`可能比初始分配的内存块大小更多或者更少。  通过调试堆管理器来连接调试内存块并且提供应用程序调试头信息和重写缓冲区来使用额外的空间。  调整大小完成是通过或扩展或缩短原始存储区域。  `_expand_dbg` 不能移动内存块，和 [\_realloc\_dbg](../../c-runtime-library/reference/realloc-dbg.md) 函数一样。  
+ `_expand_dbg` 将使用比请求的 `newSize` 稍多的空间调整指定的内存块的大小。 `newSize` 可能会大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 通过扩展或收缩原始内存块完成调整大小。 `_expand_dbg` 不移动内存块，[_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md) 函数也是如此。  
   
- 当 `newSize` 比原始的块还要大，说明内存块被扩展了。  在扩展时，如果内存块不能扩展到请求的大小，`NULL` 被返回。  当 `newSize` 比原始的块还要小，说明内存块被收缩了知道新的大小被获得。  
+ `newSize` 超过原始块大小时，将对内存块进行扩展。 扩展期间，如果内存块无法扩展到容纳所请求大小的大小，则返回 `NULL`。 `newSize` 小于原始块大小时，对内存块进行收缩，直至获取新的大小。  
   
- 有关在调试版本中的基位置堆中内存如何分配，初始化和管理的详细信息，请参阅 [CRT 调试堆详细信息](../Topic/CRT%20Debug%20Heap%20Details.md)。  有关分配块的类型以及它们是如何使用的信息，请参阅 [调试堆中的块类型](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)。  有关调用一个标准的堆函数及其调试版本在应用程序的调试版本之间的差异，请参阅[堆分配函数的“Debug”版本](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md)。  
+ 有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。  
   
- 此函数验证其参数。  如果 `memblock` 是无效的指针，或者大小比 `_HEAP_MAXREQ` 大，则函数调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。  如果允许执行继续，`errno`设置为`EINVAL`，并且函数返回`NULL`。  
+ 此函数验证其参数。 如果 `memblock` 为空指针，或如果其大小超过 `_HEAP_MAXREQ`，则此函数调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `NULL`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_expand_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_expand_dbg`|\<crtdbg.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
- 仅限 [C 运行时](../../c-runtime-library/crt-library-features.md)的调试版本。  
+## <a name="libraries"></a>库  
+ 仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_expand_dbg.c  
@@ -146,14 +163,17 @@ int main( void )
 }  
 ```  
   
-  **在\_malloc\_dbg 40 后的块的的大小：160**  
-**在\_malloc\_dbg 1 后的块的的大小：164**   
-## Comment  
- 该程序的输出取决于您的计算机的扩展的所有部分的能力。  如果所有的部分都是展开的，输出反映在输出部分。  
+```Output  
+Size of block after _malloc_dbg of 40 longs: 160  
+Size of block after _expand_dbg of 1 more long: 164  
+```  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="comment"></a>注释  
+ 此程序的输出取决于你的计算机扩展所有部分的能力。 如果对所有部分都进行了扩展，则会在输出部分反映该输出。  
   
-## 请参阅  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

@@ -1,58 +1,71 @@
 ---
-title: "extent 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.extent"
-  - "extent"
-  - "std::tr1::extent"
-  - "std.extent"
-  - "std::extent"
-  - "type_traits/std::extent"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extent 类 [TR1]"
-  - "extent"
+title: "extent 类 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- extent
+- std::extent
+- type_traits/std::extent
+dev_langs:
+- C++
+helpviewer_keywords:
+- extent class
+- extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# extent 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 23cf8230cd5b8adb7975ec21a249d9efc4d66c71
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="extent-class"></a>extent 类
 获取数组维度。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-template<class Ty, unsigned I = 0>  
-    struct extent;  
+template <class Ty, unsigned I = 0>  
+struct extent;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `Ty`  
  要查询的类型。  
   
  `I`  
  绑定到查询的数组。  
   
-## 备注  
- 如果 `Ty` 是至少具有 `I` 维度的数组类型，则类型查询保留在由 `I` 指定的维度中的元素数。  如果 `Ty` 不是数组类型或它的级别小于 `I`，或者如果 `I` 为零且 `Ty` 属于类型“`U` 的未知绑定的数组”，则类型查询保留值 0。  
+## <a name="remarks"></a>备注  
+ 如果 `Ty` 是至少具有 `I` 维度的数组类型，则类型查询保留在由 `I` 指定的维度中的元素数。 如果 `Ty` 不是数组类型或它的级别小于 `I`，或者如果 `I` 为零且 `Ty` 属于类型“`U` 的未知绑定的数组”，则类型查询保留值 0。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
-// std_tr1__type_traits__extent.cpp   
+```cpp  
+// std__type_traits__extent.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -69,14 +82,18 @@ int main()
   
 ```  
   
-  **extent 0 \=\= 5**  
-**extent 1 \=\= 10**   
-## 要求  
- **标头：**\<type\_traits\>  
+```Output  
+extent 0 == 5  
+extent 1 == 10  
+```  
   
- **命名空间:** std  
+## <a name="requirements"></a>要求  
+ **标头：**\<type_traits>  
   
-## 请参阅  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [remove\_all\_extents 类](../standard-library/remove-all-extents-class.md)   
- [remove\_extent 类](../standard-library/remove-extent-class.md)
+ **命名空间：** std  
+  
+## <a name="see-also"></a>另请参阅  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [remove_all_extents 类](../standard-library/remove-all-extents-class.md)   
+ [remove_extent 类](../standard-library/remove-extent-class.md)
+

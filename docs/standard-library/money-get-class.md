@@ -1,32 +1,48 @@
 ---
 title: "money_get 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xlocmon/std::money_get"
-  - "money_get"
-  - "std.money_get"
-  - "std::money_get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "money_get 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xlocmon/std::money_get
+- money_get
+- std.money_get
+- std::money_get
+dev_langs:
+- C++
+helpviewer_keywords:
+- money_get class
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# money_get 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: f9e122dbeb68fb4ed33d9e652af21c1b9474e3a5
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="moneyget-class"></a>money_get 类
 此模板类描述可用作区域设置 facet 的对象，此对象用于控制 `CharType` 类型序列到货币值的转换。  
   
 ## <a name="syntax"></a>语法  
@@ -44,7 +60,7 @@ class money_get : public locale::facet;
  获取函数从中读取其输入的迭代器类型。  
   
 ## <a name="remarks"></a>备注  
- 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 第一次尝试访问其存储的值中存储唯一正值中的 **id。**  
+ 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **ID** 中存储唯一正值。  
   
 ### <a name="constructors"></a>构造函数  
   
@@ -65,14 +81,14 @@ class money_get : public locale::facet;
 |||  
 |-|-|  
 |[do_get](#money_get__do_get)|一种虚拟函数，通过调用此函数可从表示货币值的字符序列提取数值。|  
-|[获取](#money_get__get)|从表示货币值的字符序列提取数值。|  
+|[get](#money_get__get)|从表示货币值的字符序列提取数值。|  
   
 ## <a name="requirements"></a>要求  
- **标头︰** \< 区域设置>  
+ **标头：**\<locale>  
   
  **命名空间：** std  
   
-##  <a name="a-namemoneygetchartypea-moneygetchartype"></a><a name="money_get__char_type"></a>  money_get:: char_type  
+##  <a name="a-namemoneygetchartypea--moneygetchartype"></a><a name="money_get__char_type"></a>  money_get::char_type  
  一种类型，此类型用于描述区域设置使用的字符。  
   
 ```
@@ -80,130 +96,130 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 类型是模板参数的同义词 **CharType**。  
+ 该类型是模板参数 **CharType** 的同义词。  
   
-##  <a name="a-namemoneygetdogeta-moneygetdoget"></a><a name="money_get__do_get"></a>  money_get:: do_get  
- 虚函数调用以从表示货币值的字符序列提取数值。  
+##  <a name="a-namemoneygetdogeta--moneygetdoget"></a><a name="money_get__do_get"></a>money_get::do_get  
+ 一种虚拟函数，通过调用此函数可从表示货币值的字符序列提取数值。  
   
 ```
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    bool _Intl,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    bool Intl,
+    ios_base& Iosbase,
+    ios_base::iostate& State,
     long double& val) const virtual iter_type do_get(iter_type first,
     iter_type last,
-    bool _Intl,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    bool Intl,
+    ios_base& Iosbase,
+    ios_base::iostate& State,
     string_type& val) const
 ```  
   
 ### <a name="parameters"></a>参数  
  `first`  
- 发现会在待转换的序列开头的输入迭代器。  
+ 确定待转换序列开头位置的输入迭代器。  
   
  `last`  
- 输入迭代器定址要转换的序列的末尾。  
+ 确定待转换序列末尾位置的输入迭代器。  
   
- `_Intl`  
- 一个布尔值，该值指示在序列中预期的货币符号的类型︰ **true** 如果国际， **false** 如果国内。  
+ `Intl`  
+ 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。  
   
- `_Iosbase`  
- 一种格式标志的时设定，表示货币符号是可选的;否则，它是必需的。  
+ `Iosbase`  
+ 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。  
   
- `_State`  
- 设置用于根据操作成功与否的流状态的相应位掩码元素。  
+ `State`  
+ 根据操作是否成功，设置流状态的相应位掩码元素。  
   
  `val`  
- 一个字符串，存储的已转换的序列。  
+ 存储已转换序列的字符串。  
   
 ### <a name="return-value"></a>返回值  
- 发现超出货币输入字段的第一个元素的输入迭代器。  
+ 发现第一个超出货币输入字段的元素的输入迭代器。  
   
 ### <a name="remarks"></a>备注  
- 第一个受保护的虚拟成员函数会尝试匹配序列中的第一个位置开始的连续元素 [ `first`, ，`last`) 之前就已经取得了一套完整，nonempty 货币输入字段。 如果成功，它将转换此字段为一系列的一个或多个十进制数字，跟负号 （可选） ( `–`)，用于表示量，并将存储中的结果 [string_type](#money_get__string_type) 对象 `val`。 它将返回指定货币输入字段之外的第一个元素的迭代器。 否则，该函数存储在一个空序列 `val` 并设置 `ios_base::failbit` 中 `_State`。 它将返回指定任何前缀的有效货币输入字段之外的第一个元素的迭代器。 在任一情况下，如果返回的值等于 `last`, ，该函数设置 `ios_base::eofbit` 中 `_State`。  
+ 第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功，它会将此字段转换为一个包含一个或多个十进制数字的序列（数字前可带负号 ( `–`)），以表示数额，并将结果存储于 [string_type](#money_get__string_type) 对象 `val`。 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则，函数将在 `val` 中存储空的序列，并在 `State` 中设置 `ios_base::failbit`。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。  
   
- 第二个受保护的虚拟成员函数的行为与第一个相同之处在于如果成功转换为类型的值 （可选） 有符号的数字序列 `long double` ，并将存储中的对应值 `val`。  
+ 第二个受保护的虚拟成员函数的行为与第一个相同，只不过如果成功，它会将选择性签名的数字序列转换为 `long double` 类型的值，并将该值存储于 `val`。  
   
- 货币输入字段的格式由 [区域设置 facet，](../standard-library/locale-class.md#facet_class)**预计完成成本** 有效调用所返回 [use_facet](../Topic/%3Clocale%3E%20functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, ，**intl**>> ( **iosbase**。 [getloc](../standard-library/ios-base-class.md#ios_base__getloc))。  
+ 货币输入字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class)**fac** 决定，而后者又有有效调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#ios_base__getloc)) 返回。  
   
  尤其是在下列情况下：  
   
-- **预计完成成本**。 [neg_format](../standard-library/moneypunct-class.md#moneypunct__neg_format) 确定字段的组件发生的顺序。  
+- **fac**. [neg_format](../standard-library/moneypunct-class.md#moneypunct__neg_format) 确定字段的组件出现的顺序。  
   
-- **预计完成成本**。 [curr_symbol](../standard-library/moneypunct-class.md#moneypunct__curr_symbol) 确定构成货币符号的元素序列。  
+- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#moneypunct__curr_symbol) 确定构成货币符号的元素的序列。  
   
-- **预计完成成本**。 [positive_sign](../standard-library/moneypunct-class.md#moneypunct__positive_sign) 确定构成一个正号的元素序列。  
+- **fac**. [positive_sign](../standard-library/moneypunct-class.md#moneypunct__positive_sign) 确定构成正号的元素的序列。  
   
-- **预计完成成本**。 [negative_sign](../standard-library/moneypunct-class.md#moneypunct__negative_sign) 确定构成负号的元素序列。  
+- **fac**. [negative_sign](../standard-library/moneypunct-class.md#moneypunct__negative_sign) 确定构成负号的元素的序列。  
   
-- **预计完成成本**。 [分组](../standard-library/moneypunct-class.md#moneypunct__grouping) 确定位数如何分组到任何小数点左侧。  
+- **fac**. [grouping](../standard-library/moneypunct-class.md#moneypunct__grouping) 确定如何对任何小数点左侧的数字进行分组。  
   
-- **预计完成成本**。 [thousands_sep](../standard-library/moneypunct-class.md#moneypunct__thousands_sep) 确定任何小数点左边数字进行分组的元素。  
+- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#moneypunct__thousands_sep) 确定将任何小数点左侧的数字进行分组的元素。  
   
-- **预计完成成本**。 [decimal_point](../standard-library/moneypunct-class.md#moneypunct__decimal_point) 确定将整数位与小数位分隔的元素。  
+- **fac**. [decimal_point](../standard-library/moneypunct-class.md#moneypunct__decimal_point) 确定从小数位分隔整数位的元素。  
   
-- **预计完成成本**。 [frac_digits](../standard-library/moneypunct-class.md#moneypunct__frac_digits) 确定任何小数点右侧的相当多数字个数。 分析多个小数位数不是为调用与货币金额时 `frac_digits`, ，`do_get` 将停止分析后最多占用 `frac_digits` 字符。  
+- **fac**. [frac_digits](../standard-library/moneypunct-class.md#moneypunct__frac_digits) 确定任何小数点右侧的有效位数。 分析货币金额时，若其小数位比 `frac_digits` 调用的小数位还多，`do_get` 将在占用最多 `frac_digits` 字符后停止分析。  
   
- 如果登录字符串 ( **预计完成成本**。 `negative_sign` 或 **预计完成成本**。 `positive_sign`) 具有多个元素，只将第一个元素，其中匹配等于元素 **money_base::sign** 将出现在格式模式 ( **预计完成成本**。 `neg_format`). 剩余的所有元素相都匹配货币输入字段的末尾。 如果两个字符串包含货币输入字段中的下一个元素匹配的第一个元素，登录字符串均为空，并且符号为正。  
+ 如果符号字符串（**fac**. `negative_sign` 或 **fac**. `positive_sign`）具有多个元素，仅第一个元素会在等于 **money_base::sign** 的元素在 ( **fac**. `neg_format`) 格式模式中出现的位置匹配。 剩余所有元素在货币输入字段的末尾匹配。 如果两个字符串都没有第一个元素匹配货币输入字段中的下一个元素，则将符号字符串视为空，且符号为正。  
   
- 如果 **iosbase**。 [标志](../standard-library/ios-base-class.md#ios_base__flags) & [showbase](../Topic/%3Cios%3E%20functions.md#showbase) 不为零，该字符串 **预计完成成本**。 `curr_symbol` 必须匹配 where 等于元素 **money_base::symbol** 将出现在格式模式。 否则为如果 **money_base::symbol** 出现在格式模式中，结束和签名字符串的任何元素都将不保留要匹配，如果未找到匹配的货币符号。 否则，（可选） 匹配的货币符号。  
+ 如果 **iosbase**. [flags](../standard-library/ios-base-class.md#ios_base__flags) & [showbase](../standard-library/ios-functions.md#showbase) 不为零，则字符串 **fac**. `curr_symbol` 必须在等于 **money_base::symbol** 的元素在此格式模式中出现的位置匹配。 否则，如果 **money_base::symbol** 出现在此格式模式末尾，或如果没有符号字符串的元素要进行匹配，则不会匹配货币符号。 否则，将选择性地匹配货币符号。  
   
- 如果没有实例 **预计完成成本**。 `thousands_sep` 发生货币输入字段的值部分中 (其中等于元素 **money_base::value** 将出现在格式模式)，没有分组限制。 否则，任何分组约束强加 **预计完成成本**。 **分组** 强制执行。 请注意，所产生的数字序列表示一个整数，其低序位 **预计完成成本**。 `frac_digits` 小数位数是小数点右侧。  
+ 如果 **fac**. `thousands_sep` 的任何实例都不出现在货币输入字段的值部分（等于 **money_base::value** 的元素在格式模式中出现的位置），则不会采用分组约束。 否则，会强制执行 **fac**. **grouping** 采用的任何分组约束。 请注意，所产生的数字序列表示一个整数，其低位 **fac**. `frac_digits` 十进制数字应位于小数点右侧。  
   
- 匹配任意空白区域，等于元素 **money_base::space** 出现在格式模式中，如果出现以外的格式模式的末尾。 否则，不匹配任何内部空格。 元素 *ch* 被视为空白区域，如果 [use_facet](../Topic/%3Clocale%3E%20functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**>> ( **iosbase**。 [getloc](../standard-library/ios-base-class.md#ios_base__getloc))。 [是](../standard-library/ctype-class.md#ctype__is)( **ctype_base::space**, ，*ch*) 是 **true**。  
+ 如果等于 **money_base::space** 的元素未在格式模式的末尾出现，而是在格式模式中出现，则匹配任意空格。 否则，不匹配任何内部空格。 将元素 *ch* 视为空格，前提是 [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#ios_base__getloc))。 [is](../standard-library/ctype-class.md#ctype__is)( **ctype_base::space**, *ch*) 为 **true**）。  
   
 ### <a name="example"></a>示例  
-  请参阅示例 [获取](#money_get__get), ，后者调用 `do_get`。  
+  请参阅 [get](#money_get__get) 的示例，它调用 `do_get`。  
   
-##  <a name="a-namemoneygetgeta-moneygetget"></a><a name="money_get__get"></a>  money_get:: get  
+##  <a name="a-namemoneygetgeta--moneygetget"></a><a name="money_get__get"></a>money_get::get  
  从表示货币值的字符序列提取数值。  
   
 ```
 iter_type get(iter_type first,
     iter_type last,
-    bool _Intl,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    bool Intl,
+    ios_base& Iosbase,
+    ios_base::iostate& State,
     long double& val) const;
 
 iter_type get(iter_type first,
     iter_type last,
-    bool _Intl,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    bool Intl,
+    ios_base& Iosbase,
+    ios_base::iostate& State,
     string_type& val) const;
 ```  
   
 ### <a name="parameters"></a>参数  
  `first`  
- 发现会在待转换的序列开头的输入迭代器。  
+ 确定待转换序列开头位置的输入迭代器。  
   
  `last`  
- 输入迭代器定址要转换的序列的末尾。  
+ 确定待转换序列末尾位置的输入迭代器。  
   
- `_Intl`  
- 一个布尔值，该值指示在序列中预期的货币符号的类型︰ **true** 如果国际， **false** 如果国内。  
+ `Intl`  
+ 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。  
   
- `_Iosbase`  
- 一种格式标志的时设定，表示货币符号是可选的;否则，它是必需  
+ `Iosbase`  
+ 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项  
   
- `_State`  
- 设置用于根据操作是否成功的流状态的相应位掩码元素。  
+ `State`  
+ 根据操作是否成功，设置流状态的相应位掩码元素。  
   
  `val`  
- 一个字符串，存储的已转换的序列。  
+ 存储已转换序列的字符串。  
   
 ### <a name="return-value"></a>返回值  
- 发现超出货币输入字段的第一个元素的输入迭代器。  
+ 发现第一个超出货币输入字段的元素的输入迭代器。  
   
 ### <a name="remarks"></a>备注  
- 两个成员函数返回 [do_get](#money_get__do_get)( `first``,` `last``,` `_Intl`, ，`_Iosbase`, ，`_State`, ，`val`)。  
+ 两个成员函数都返回 [do_get](#money_get__do_get)( `first``,` `last``,` `Intl`, `Iosbase`, `State`, `val`)。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // money_get_get.cpp  
 // compile with: /EHsc  
 #include <locale>  
@@ -250,7 +266,7 @@ int main( )
 };  
 ```  
   
-##  <a name="a-namemoneygetitertypea-moneygetitertype"></a><a name="money_get__iter_type"></a>  money_get:: iter_type  
+##  <a name="a-namemoneygetitertypea--moneygetitertype"></a><a name="money_get__iter_type"></a>money_get::iter_type  
  一种类型，此类型描述输入迭代器。  
   
 ```
@@ -258,9 +274,9 @@ typedef InputIterator iter_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 类型是模板参数的同义词 **InputIterator**。  
+ 该类型是模板参数 **InputIterator** 的同义词。  
   
-##  <a name="a-namemoneygetmoneygeta-moneygetmoneyget"></a><a name="money_get__money_get"></a>  money_get:: money_get  
+##  <a name="a-namemoneygetmoneygeta--moneygetmoneyget"></a><a name="money_get__money_get"></a>money_get::money_get  
  用于从表示货币值的序列中提取数值的 `money_get` 类型对象的构造函数。  
   
 ```
@@ -269,35 +285,36 @@ explicit money_get(size_t _Refs = 0);
   
 ### <a name="parameters"></a>参数  
  `_Refs`  
- 用来指定对象的内存管理的类型的整数值。  
+ 用于指定对象的内存管理类型的整数值。  
   
 ### <a name="remarks"></a>备注  
- 可能的值 `_Refs` 参数和其重要性都是︰  
+ `_Refs` 参数可能的值及其含义：  
   
--   0: 对象的生存期由包含它的区域设置。  
+-   0：对象的生存期由包含该对象的区域设置管理。  
   
--   1︰ 必须手动管理对象的生存期。  
+-   1：必须手动管理对象的生存期。  
   
--   \> 0︰ 未定义这些值。  
+-   \>0：未定义这些值。  
   
- 由于保护析构函数，是可能的没有直接的示例。  
+ 由于该析构函数受到保护，可能没有直接的示例。  
   
- 构造函数初始化与与其基对象 **区域设置::**[方面](../standard-library/locale-class.md#facet_class)( **_***Refs*)。  
+ 构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( **_***Refs*) 初始化其基对象。  
   
-##  <a name="a-namemoneygetstringtypea-moneygetstringtype"></a><a name="money_get__string_type"></a>  money_get:: string_type  
- 该类型描述包含类型的字符的字符串 **CharType**。  
+##  <a name="a-namemoneygetstringtypea--moneygetstringtype"></a><a name="money_get__string_type"></a>  money_get::string_type  
+ 一种类型，此类型描述包含 **CharType** 类型字符的字符串。  
   
 ```
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类型描述模板类的专用化 [basic_string](../standard-library/basic-string-class.md)。  
+ 此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类专用化。  
   
 ## <a name="see-also"></a>另请参阅  
- [\< 区域设置>](../standard-library/locale.md)   
+ [\<区域设置>](../standard-library/locale.md)   
  [facet 类](../standard-library/locale-class.md#facet_class)   
- [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
 
 

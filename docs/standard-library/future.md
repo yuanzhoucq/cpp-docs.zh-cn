@@ -1,92 +1,113 @@
 ---
-title: "&lt;future&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<future>"
-dev_langs: 
-  - "C++"
+title: '&lt;future&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <future>
+dev_langs:
+- C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# &lt;future&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
+ms.lasthandoff: 02/24/2017
 
-包含标准标头\<future\> 来定义能够简化运行函数的模版类和支持模版—可能分离线程—并且复查结果。  结果为任何函数或异常由函数返回发出的值，但没有捕获在函数。  
+---
+# <a name="ltfuturegt"></a>&lt;future&gt;
+包含标准标头 \<future>，以定义模板类和支持模板，它们可简化（可能在单独线程中的）函数运行并检索其结果。 结果可以是由函数返回的值或由函数发出但函数中未捕获的异常。  
   
- 此标头使用并发运行时 \(ConcRT\)，以便可以与其他 ConcRT framework 一起使用它。  有关ConcRT的详细信息，请参阅[并发运行时](../parallel/concrt/concurrency-runtime.md)。  
+ 此标头使用并发运行时 (ConcRT)，以便可将其与其他 ConcRT 机制一起使用。 有关 ConcRT 的详细信息，请参阅[并发运行时](../parallel/concrt/concurrency-runtime.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
 #include <future>  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  在代码中使用 **\/clr**或者**\/clr:pure**来编译,标头是被锁定的。  
+>  在使用编译的代码中**/clr**，此标头被阻止。  
   
- *异步提供程序*存储了函数调用的结果。  *异步返回对象*用来取回函数调用的结果。   *联系异步状态*提供了异步提供程序和更多返回的异步对象之间的交流。  
+ 异步提供程序存储函数调用的结果。 异步返回对象用于检索函数调用的结果。 关联异步状态提供一个异步提供程序和一个或多个异步返回对象之间的通信。  
   
- 程序不直接创建任何关联的异步状态对象。  程序创建一个异步提供程序，每当控件需要一个，并从已经创建异步返回对象与提供程序共享其关联的异步状态。  异步提供程序和异步返回对象管理保存这些共享关联的异步状态的对象。  当引用关联的异步状态释放它，该元素包含该关联的异步状态的对象销毁的最后一个对象。  
+ 程序不会直接创建任何关联异步状态对象。 程序在需要异步提供程序时会创建一个异步提供程序，且随之会创建一个与提供程序共享其关联异步状态的异步返回对象。 异步提供程序和异步返回对象管理保留其共享关联异步状态的对象。 最后一个引用关联异步状态的对象释放状态时，则保留关联异步状态的对象会被销毁。  
   
- 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会是 *ready*。  
+ 不具有关联异步状态的异步提供程序或异步返回对象即为空。  
   
- 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会是 *ready*。  
+ 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。  
   
- 模版函数`async` 和模版类`promise`和`packaged_task`是异步程序提供者。  模板类`future`和 `shared_future` 描述了异步返回对象。  
+ 模板函数 `async` 以及模板类 `promise` 和 `packaged_task` 是异步提供程序。 模板类 `future` 和 `shared_future` 描述异步返回对象。  
   
- 每一个模版类`promise`, `future`,和`shared_future` has a specialization for the type 有特定的类型`void`并且通过引用为存储和检索部分值。  这些专用化与母版仅针对模板不同于存储和检索返回值的函数的签名和语义。  
+ `promise`、`future` 和 `shared_future` 每个模板类都具有一个类型 `void` 的专用化和一个用于按引用存储和检索值的部分专用化。 这些专用化与主模板的唯一区别是用于存储和检索返回值的函数的签名和语义。  
   
- 模版类 `future` 和`shared_future`从来不在各自的析构函数中上锁，除非为了保持向后兼容：与其他futures不同的是，对于`future`—或者最后的`shared_future`—这是由`std::async`开始的任务，假如任务没有完成那么析构函数便会上锁；也是就是假如线程仍没有`.get()`或 `.wait()` 并且任务依旧运行，那么便会上锁。  在最初的版本标准中，以下的可用性没有被增加到`std::async`的描述中：“\[注意：假如future从std::async从本地范围中移除，其他使用future的代码必须注意到析构函数可能会锁起对于共享的状态。—结束注意\]"其它的例子，`future`和`shared_future`析构函数是必要的并且保证从不上锁。  
+ 除保留后向兼容性的情况外，模板类 `future` 和 `shared_future` 从不会在其析构函数中阻塞：不同于其他所有 future，对于附加到以 `std::async` 开始的任务的 `future`（或最后一个 `shared_future`），如果任务尚未完成，则析构函数会阻塞；即，如果此线程尚未调用 `.get()` 或 `.wait()` 且任务仍在运行，则此析构函数会阻塞。 如下可用性注释已添加到草案标准中 `std::async` 的描述中：“[注意：如果将从 std::async 获取的 future 移出本地范围外，则使用此 future 的其他代码必须意识到此 future 的析构函数可能阻塞，直到共享状态变为准备就绪。—尾注]”在其他所有情况下，需要使用 `future` 和 `shared_future` 析构函数，且需保证其永不阻塞。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 类  
+### <a name="classes"></a>类  
   
-|Name|说明|  
-|----------|--------|  
+|名称|描述|  
+|----------|-----------------|  
 |[future 类](../standard-library/future-class.md)|描述异步返回对象。|  
-|[future\_error 类](../standard-library/future-error-class.md)|描述一个能够管理`future`对象并且能够由类型方法抛出的异常对象。|  
-|[packaged\_task 类](../standard-library/packaged-task-class.md)|描述异步程序提供者是一个调用包装器并且调用签名为 `Ty(ArgTypes...)`。  除了予考虑结果之外，其关联的异步状态保留其可调用对象的副本。|  
-|[promise 类](../standard-library/promise-class.md)|描述一个异步提供程序。|  
-|[shared\_future 类](../standard-library/shared-future-class.md)|描述异步返回对象。  与`future` 对象对比，一个异步程序提供者能够与任何`shared_future` 对象相联系。|  
+|[future_error 类](../standard-library/future-error-class.md)|描述可由管理 `future` 对象的类型方法引发的异常对象。|  
+|[packaged_task 类](../standard-library/packaged-task-class.md)|描述作为调用包装器且其调用签名为 `Ty(ArgTypes...)` 的异步提供程序。 除可能的结果外，其关联异步状态还保留可调用对象的副本。|  
+|[promise 类](../standard-library/promise-class.md)|描述异步提供程序。|  
+|[shared_future 类](../standard-library/shared-future-class.md)|描述异步返回对象。 相较于 `future` 对象，异步提供程序可与任意数量的 `shared_future` 对象关联。|  
   
-### 结构  
+### <a name="structures"></a>结构  
   
-|Name|说明|  
-|----------|--------|  
-|[is\_error\_code\_enum 结构](../standard-library/is-error-code-enum-structure.md)|专业化表明了`future_errc`是合适存储`error_code`。|  
-|[uses\_allocator 结构](../standard-library/uses-allocator-structure.md)|专用化总是真的。|  
+|名称|描述|  
+|----------|-----------------|  
+|[is_error_code_enum 结构](../standard-library/is-error-code-enum-structure.md)|指示 `future_errc` 适合存储 `error_code` 的专用化。|  
+|[uses_allocator 结构](../standard-library/uses-allocator-structure.md)|始终保持 true 的专用化。|  
   
-### 函数  
+### <a name="functions"></a>函数  
   
-|Name|说明|  
-|----------|--------|  
-|[async 函数](../Topic/async%20Function.md)|表示一个异步提供程序.|  
-|[future\_category 函数](../Topic/future_category%20Function.md)|返回`error_category`对象的引用错误的特征与`future`对象相联系。|  
-|[make\_error\_code 函数](../Topic/make_error_code%20Function.md)|创建`error_code`有描述 `future` 错误的`error_category` 对象。|  
-|[make\_error\_condition 函数](../Topic/make_error_condition%20Function.md)|创建`error_condition`有描述 `future` 错误的`error_category` 对象。|  
-|[swap 函数 \(\<future\>\)](../Topic/swap%20Function%20\(%3Cfuture%3E\).md)|如果对象有关联的异步状态，则为 `promise`；否则为 。|  
+|名称|说明|  
+|----------|-----------------|  
+|[async 函数](../standard-library/future-functions.md#async_function)|表示一个异步提供程序。|  
+|[future_category 函数](../standard-library/future-functions.md#future_category_function)|返回一个描述与 `future` 对象相关联错误的 `error_category` 对象的引用。|  
+|[make_error_code 函数](../standard-library/future-functions.md#make_error_code_function)|创建具有 `error_category` 对象（此对象描述 `future` 错误的特点）的 `error_code`。|  
+|[make_error_condition 函数](../standard-library/future-functions.md#make_error_condition_function)|创建具有 `error_category` 对象（此对象描述 `future` 错误的特点）的 `error_condition`。|  
+|[swap 函数](../standard-library/future-functions.md#swap_function)|将一个 `promise` 对象的关联异步状态与另一对象的关联异步状态交换。|  
   
-### 枚举  
+### <a name="enumerations"></a>枚举  
   
-|Name|说明|  
-|----------|--------|  
-|[future\_errc 枚举](../Topic/future_errc%20Enumeration.md)|提供由`future_error`类支持的符号名错误 。|  
-|[future\_status 枚举](../Topic/future_status%20Enumeration.md)|提供符号名对于一个可以返回计时等待函数原因。|  
-|[launch 枚举](../Topic/launch%20Enumeration.md)|呈现了一个描述模版函数`async`的可能模式的位掩码类型。|  
+|名称|描述|  
+|----------|-----------------|  
+|[future_errc 枚举](../standard-library/future-enums.md#future_errc_enumeration)|为 `future_error` 类报告的错误提供符号名称。|  
+|[future_status 枚举](../standard-library/future-enums.md#future_status_enumeration)|为计时等待函数可返回的原因提供符号名称。|  
+|[launch 枚举](../standard-library/future-enums.md#launch_enumeration)|表示描述模板函数 `async` 的可能模式的位掩码类型。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

@@ -1,95 +1,112 @@
 ---
-title: "abort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "abort"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "Abort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "abort 函数"
-  - "中止当前进程"
-  - "进程, 正在中止"
+title: "abort | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- abort
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- Abort
+dev_langs:
+- C++
+helpviewer_keywords:
+- aborting current process
+- abort function
+- processes, aborting
 ms.assetid: a797783b-40ed-4bdb-a2cd-14ffede39e8a
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# abort
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 98633c2575d7447292562e024dc2c5e9e3207d06
+ms.lasthandoff: 02/24/2017
 
-中止当前进程并返回错误代码。  
+---
+# <a name="abort"></a>abort
+中止当前进程，并返回错误代码。  
   
 > [!NOTE]
->  不要使用此方法关闭 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序，除非在测试或调试方案中。  根据 [Windows 8 应用程序证书要求](http://go.microsoft.com/fwlink/?LinkId=262889)，禁止以编程或 UI 方式关闭 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序。  有关详情，请参阅[应用程序生命周期（Windows 应用商店应用）](http://go.microsoft.com/fwlink/?LinkId=262853)。  
+>  不要使用此方法关闭 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序，除非在测试或调试方案中。 根据 [Windows 8 应用认证要求](http://go.microsoft.com/fwlink/?LinkId=262889)，禁止以编程或 UI 方式关闭 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用。 有关详细信息，请参阅[应用程序生命周期（Windows 应用商店应用）](http://go.microsoft.com/fwlink/?LinkId=262853)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void abort( void );  
 ```  
   
-## 返回值  
- `abort` 并不向调用进程返回控件。  默认情况下，它会检查是否有中止信号处理程序，如果设置了，它就会引发 `SIGABRT`。  然后，`abort` 终止当前进程并将退出代码返回到父进程。  
+## <a name="return-value"></a>返回值  
+ `abort` 不会将控制权限返回给调用的进程。 默认情况下，它检查中止信号处理程序，如果设置了 `SIGABRT`，则对其进行提升。 然后，`abort` 终止当前进程，并向父进程返回退出代码。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  **Microsoft 专用**  
   
- 默认情况下，当使用调试运行时库生成应用程序时，`abort` 例程会在引发 `SIGABRT` 前显示错误消息。  对于在控制台模式中运行的控制台应用程序，该消息将发送到 `STDERR`。  窗口模式下运行的 Windows 桌面应用程序和控制台在消息框中显示消息。  若要取消消息，请使用 [\_set\_abort\_behavior](../../c-runtime-library/reference/set-abort-behavior.md) 清除 `_WRITE_ABORT_MSG` 标志。  显示的消息取决于运行时使用的环境版本。  对于使用 Visual C\+\+ 的最新版本而生成的应用程序，消息类似于：  
+ 默认情况下，当使用调试运行时库构建应用程序时，`abort` 例程在 `SIGABRT` 得到提升之前显示错误消息。 对于在控制台模式下运行的控制台应用程序，该消息发送到 `STDERR`。 以窗口模式运行的 Windows 桌面应用程序和控制台应用程序在消息框中显示此消息。 要取消该消息，请使用 [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md) 来清除 `_WRITE_ABORT_MSG` 标志。 所显示的消息取决于使用的运行时环境的版本。 对于使用最新版本的 Visual C ++ 构建的应用程序，该消息类似于：  
   
  `R6010`  
   
  `- abort() has been called`  
   
- 在 C 运行库的早期版本中，此消息显示为：  
+ 在以前版本的 C 运行时库中，该消息显示为：  
   
  “`This application has requested the Runtime to terminate it in an unusual way. Please contact the application's support team for more information.`”  
   
- 在调试模式下编译程序时，消息框显示“中止”、“重试”或“忽略”选项。  如果用户选择“中止”，程序会立即停止并返回为 3 的退出代码。  如果用户选择“重试”，将调用调试器进行实时调试（如果可用）。  如果用户选择“忽略”，`abort` 将继续正常进程。  
+ 当程序在调试模式下编译时，消息框显示“**中止**”、“**重试**”或“**忽略**”选项。 如果用户选择“**中止**”，该程序立即终止并返回退出代码 3。 如果用户选择“**重试**”，将调用调试器进行实时调试（如果可用）。 如果用户选择“**忽略**”，`abort` 将继续正常处理。  
   
- 在发布和调试版本中，`abort` 将检查是否已设置中止信号处理程序。  如果设置了非默认的通知处理程序，`abort` 将调用 `raise(SIGABRT)`。  使用[信号](../../c-runtime-library/reference/signal.md)功能可关联中止信号处理函数与 `SIGABRT` 信号。  您可执行自定义操作（例如，清理资源或记录信息），并在处理函数中用您自己的错误代码终止应用程序。  如果未定义自定义信号处理程序，`abort` 则不会引发 `SIGABRT` 信号。  
+ 在零售和调试版本中，`abort` 接着检查是否设置了中止信号处理程序。 如果设置了非默认信号处理程序，`abort` 将调用 `raise(SIGABRT)`。 使用 [signal](../../c-runtime-library/reference/signal.md) 函数将中止信号处理程序函数与 `SIGABRT` 信号相关联。 你可以执行自定义操作，例如清除资源或日志信息，并在处理程序函数中使用自己的错误代码终止应用程序。 如果未定义任何自定义信号处理程序，则 `abort` 不会提升 `SIGABRT` 信号。  
   
- 默认情况下，在桌面或控制台应用程序的飞调试生成中，`abort` 然后调用 Windows 错误报告机制 \(Dr。  Watson\) 向 Microsoft 报告失败。  此行为可通过调用 `_set_abort_behavior` 和设置或者屏蔽 `_CALL_REPORTFAULT` 标志启用或禁用。  设置标志后，Windows 显示一个带有诸如“出现问题导致程序停止正常工作”的文本的消息框。用户可以选择“调用”按钮来调用一个调试器，或者选择“关闭程序”按钮停止具有操作系统定义为错误代码的应用程序。  
+ 默认情况下，在桌面或控制台应用程序的非调试版本中，`abort` 会调用 Windows 错误报告机制 (Dr.Watson) 来向 Microsoft 报告故障。 调用 `_set_abort_behavior` 并设置或过滤 `_CALL_REPORTFAULT` 标志可启用或禁用此行为。 设置该标志时，Windows 将显示一个消息框，其中包含类似“出现了一个问题，导致程序无法正常工作”的文本。 用户可以选择使用“**调试**”按钮调用调试器，或选择“**关闭程序**”按钮以终止带有操作系统定义的错误代码的应用程序。  
   
- 如果未调用 Windows 错误报告处理程序，则 `abort` 将调用 [\_exit](../../c-runtime-library/reference/exit-exit-exit.md) 以终止进程（显示退出代码 3），并将控件返回到父进程或操作系统中。  `_exit` 不刷新流缓冲区也不执行 `atexit`\/`_onexit` 处理。  
+ 如果未调用 Windows 错误报告处理程序，则 `abort` 将调用 [_exit](../../c-runtime-library/reference/exit-exit-exit.md) 以终止具有退出代码 3 的进程，并将控制权限返回给父进程或操作系统。 `_exit` 不刷新流缓冲区或执行 `atexit`/`_onexit` 处理。  
   
- 有关 CRT 调试的更多信息，请参阅 [CRT 调试方法](../Topic/CRT%20Debugging%20Techniques.md)。  
+ 有关 CRT 调试的详细信息，请参阅 [CRT 调试技术](/visualstudio/debugger/crt-debugging-techniques)。  
   
  **结束 Microsoft 专用**  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`abort`|\<process.h\> 或 \<stdlib.h\>|  
+|-------------|---------------------|  
+|`abort`|\<process.h> 或 \<stdlib.h>|  
   
-## 示例  
- 如果尝试失败，以下程序尝试打开文件并中止。  
+## <a name="example"></a>示例  
+ 下面的程序尝试打开一个文件，如果该尝试失败，则中止。  
   
-```c  
+```C  
 // crt_abort.c  
 // compile with: /TC  
 // This program demonstrates the use of  
@@ -117,18 +134,21 @@ int main( void )
 }  
 ```  
   
-  **无法打开文件：该文件或目录不存在**   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关详细信息，请参阅 [平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+File could not be opened: No such file or directory  
+```  
   
-## 请参阅  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另请参阅  
  [使用 abort](../../cpp/using-abort.md)   
  [abort 函数](../../c-language/abort-function-c.md)   
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
- [\_exec、\_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)   
+ [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [raise](../../c-runtime-library/reference/raise.md)   
  [signal](../../c-runtime-library/reference/signal.md)   
- [\_spawn, \_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)   
- [\_DEBUG](../../c-runtime-library/debug.md)   
- [\_set\_abort\_behavior](../../c-runtime-library/reference/set-abort-behavior.md)
+ [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [_DEBUG](../../c-runtime-library/debug.md)   
+ [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md)

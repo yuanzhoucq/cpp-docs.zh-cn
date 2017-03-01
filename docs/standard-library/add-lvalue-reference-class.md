@@ -1,54 +1,70 @@
 ---
-title: "add_lvalue_reference 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::add_lvalue_reference"
-  - "add_lvalue_reference"
-  - "type_traits/std::add_lvalue_reference"
-  - "std.add_lvalue_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "add_lvalue_reference"
+title: "add_lvalue_reference 类 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::add_lvalue_reference
+- add_lvalue_reference
+- type_traits/std::add_lvalue_reference
+- std.add_lvalue_reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# add_lvalue_reference 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: a201572ed85d5bcf15435743ac0f8db8f08ede4b
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="addlvaluereference-class"></a>add_lvalue_reference 类
 从类型设置对类型的引用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-template<class T>  
-    struct add_lvalue_reference;  
-  
-template<class T>  
-    using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;  
+template <class T>  
+struct add_lvalue_reference;  
+ 
+template <class T>  
+using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
  要修改的类型。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  如果 `T` 为 lvalue 引用，则类型修饰符的实例将保留修改后的类型 `T`，否则 `T&`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
@@ -65,12 +81,16 @@ int main()
 }  
 ```  
   
-  **add\_lvalue\_reference\_t\<int\> \=\= int**   
-## 要求  
- **标头：**\<type\_traits\>  
+```Output  
+add_lvalue_reference_t<int> == int  
+```  
   
- **命名空间:** std  
+## <a name="requirements"></a>要求  
+ **标头：**\<type_traits>  
   
-## 请参阅  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [remove\_reference 类](../standard-library/remove-reference-class.md)
+ **命名空间：** std  
+  
+## <a name="see-also"></a>另请参阅  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [remove_reference 类](../standard-library/remove-reference-class.md)
+

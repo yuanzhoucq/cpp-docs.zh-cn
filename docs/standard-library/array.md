@@ -1,63 +1,83 @@
 ---
-title: "&lt;array&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<array>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array 标头 [TR1]"
+title: "&lt;array&gt; | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <array>
+dev_langs:
+- C++
+helpviewer_keywords:
+- array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# &lt;array&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
+ms.lasthandoff: 02/24/2017
 
-定义容器模板类 `array` 和几个支持的模板。  
+---
+# <a name="ltarraygt"></a>&lt;array&gt;
+定义容器模板类 `array` 和几个支持模板。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #include <array>  
 ```  
   
-### 类  
+### <a name="classes"></a>类  
   
 |||  
 |-|-|  
-|[array](../standard-library/array-class-stl.md)|定长存储元素序列。|  
-|[tuple\_element](../standard-library/tuple-element-class-array.md)|包装数组元素的类型。|  
-|[tuple\_size](../standard-library/tuple-size-class-array.md)|包装数组元素的范围。|  
+|[array](../standard-library/array-class-stl.md)|存储元素的固定长度序列。|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|包装数组元素的类型。|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|包装数组元素的大小。|  
   
-### 运算符  
-  
-|||  
-|-|-|  
-|[运算符\=\=](../Topic/operator==%20%3Carray%3E.md)|数组，等于比较|  
-|[运算符\!\=](../Topic/operator!=%20%3Carray%3E.md)|数组不等于比较，|  
-|[operator\<](../Topic/operator%3C%20%3Carray%3E.md)|小于比较数组，|  
-|[运算符\>\=](../Topic/operator%3E=%20%3Carray%3E.md)|数组比较，大于或等于|  
-|[operator\>](../Topic/operator%3E%20%3Carray%3E.md)|比较，大于数组|  
-|[运算符\<\=](../Topic/operator%3C=%20%3Carray%3E.md)|数组，低于或等于比较|  
-  
-### 函数  
+### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[get](../Topic/get%20Function%20%3Carray%3E.md)|获取指定的数组元素。|  
-|[swap](../Topic/swap%20Function%20%3Carray%3E.md)|交换数组内容与其他数组内容。|  
+|[operator==](../standard-library/array-operators.md#operator_eq_eq)|数组比较，等于|  
+|[operator!=](../standard-library/array-operators.md#operator_neq)|数组比较，不等于|  
+|[operator\<](../standard-library/array-operators.md#operator_lt_)|数组比较，小于|  
+|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|数组比较，大于或等于|  
+|[operator>](../standard-library/array-operators.md#operator_gt_)|数组比较，大于|  
+|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|数组的比较，小于或等于|  
   
-## 请参阅  
- [\<tuple\>](../standard-library/tuple.md)   
+### <a name="functions"></a>函数  
+  
+|||  
+|-|-|  
+|[get](../standard-library/array-functions.md#get_function)|获取指定的数组元素。|  
+|[swap](../standard-library/array-functions.md#swap_function)|将一个数组的内容与另一个数组的内容进行交换。|  
+  
+## <a name="see-also"></a>另请参阅  
+ [\<tuple>](../standard-library/tuple.md)   
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

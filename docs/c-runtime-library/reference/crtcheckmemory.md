@@ -1,88 +1,105 @@
 ---
-title: "_CrtCheckMemory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtCheckMemory"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtCheckMemory"
-  - "_CrtCheckMemory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtCheckMemory 函数"
-  - "CrtCheckMemory 函数"
+title: "_CrtCheckMemory | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtCheckMemory
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtCheckMemory
+- _CrtCheckMemory
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtCheckMemory function
+- CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtCheckMemory
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5563d618b0056de285f66cf428cbcfc6a717ce55
+ms.lasthandoff: 02/24/2017
 
-确定分配在调试堆得内存块的完整性\(仅限调试版本\)。  
+---
+# <a name="crtcheckmemory"></a>_CrtCheckMemory
+确认在调试堆中分配的内存块的完整性（仅限调试版）。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 int _CrtCheckMemory( void );  
 ```  
   
-## 返回值  
- 如果成功，则 `_CrtCheckMemory` 返回 TRUE；否则函数返回 FALSE。  
+## <a name="return-value"></a>返回值  
+ 如果成功，`_CrtCheckMemory` 返回 TRUE；否则，函数返回 FALSE。  
   
-## 备注  
- `_CrtCheckMemory` 函数通过验证基本堆和检查每个内存块来确定调试堆管理器分配的内存。  如果在基础堆、调试头信息或是重写缓冲区中遇到错误或是内存不一致，则 `_CrtCheckMemory` 生成描述错误情况信息的调试报告。  当 [\_DEBUG](../../c-runtime-library/debug.md) 未定义时，在预处理期间移除对 `_CrtCheckMemory` 的调用。  
+## <a name="remarks"></a>备注  
+ `_CrtCheckMemory` 函数通过验证基础基堆并检查每个内存块来验证由调试堆管理器分配的内存。 如果在基础基堆、调试标头信息或覆盖缓冲区中遇到错误或内存不一致，`_CrtCheckMemory` 将生成调试报告，其中包括描述错误条件的信息。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，会在预处理过程中删除对 `_CrtCheckMemory` 的调用。  
   
- 通过使用[\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 设置[\_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)标志的位字段来控制`_CrtCheckMemory` 的行为。  打开 **\_CRTDBG\_CHECK\_ALWAYS\_DF** 位字段导致每次请求内存分配操作就调用 `_CrtCheckMemory` 。  虽然此方法会减慢执行，但是有利于快速查看错误。  关闭 **\_CRTDBG\_ALLOC\_MEM\_DF** 位字段导致 `_CrtCheckMemory` 不能核实堆并且立即返回 **TRUE**。  
+ 可使用 [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函数设置 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 标志的位字段来控制 `_CrtCheckMemory` 的行为。 启用 **_CRTDBG_CHECK_ALWAYS_DF** 位字段将导致每次请求内存分配操作时调用 `_CrtCheckMemory`。 尽管此方法减慢了执行速度，但它对快速捕获错误很有用。 禁用 **_CRTDBG_ALLOC_MEM_DF** 位字段会导致 `_CrtCheckMemory` 不验证堆并立即返回 **TRUE**。  
   
- 因为函数返回 **TRUE** 或 **FALSE**， 所以能传递一个[\_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏命令来创建一个简单的调试错误处理机制。  如果在堆检测到损坏，下面的示例会造成断言失败：  
+ 因为此函数返回 **TRUE** 或 **FALSE**，因此可将它传递到其中一个 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏，以创建一种简单的调试错误处理机制。 在堆中检测到损坏时，下面的示例将导致断言失败：  
   
 ```  
 _ASSERTE( _CrtCheckMemory( ) );  
 ```  
   
- 有关`_CrtCheckMemory` 可用在其它调试函数中的详细信息, 请参阅[堆状态报告函数](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Heap_State_Reporting_Functions).  对于内存管理和调试堆的概述，请参阅 [CRT 调试堆详细信息](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ 有关如何将 `_CrtCheckMemory` 与其他调试函数一起使用的详细信息，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。 有关内存管理和调试堆的概述，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_CrtCheckMemory`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtCheckMemory`|\<crtdbg.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
   
-## 示例  
- 对于如何使用 `_CrtCheckMemory` 的例子，请参阅 [crt\_dbg1](http://msdn.microsoft.com/zh-cn/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
+## <a name="example"></a>示例  
+ 有关如何使用 `_CrtCheckMemory` 的示例，请参阅 [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
   
-## .NET Framework 等效项  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
  [System::Diagnostics::PerformanceCounter](https://msdn.microsoft.com/en-us/library/system.diagnostics.performancecounter.aspx)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   
- [\_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
- [\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)
+ [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
+ [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)

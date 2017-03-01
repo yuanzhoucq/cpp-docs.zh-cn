@@ -1,51 +1,67 @@
 ---
-title: "mbtowc、_mbtowc_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbtowc"
-  - "_mbtowc_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbtowc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbtowc_l 函数"
-  - "mbtowc 函数"
-  - "mbtowc_l 函数"
+title: "mbtowc、_mbtowc_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbtowc
+- _mbtowc_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbtowc
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbtowc function
+- _mbtowc_l function
+- mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# mbtowc、_mbtowc_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 40fe628e045d8aa8930560ba8ab88a9e203022e3
+ms.lasthandoff: 02/24/2017
 
-将多字节字符转换为相应的宽字符  
+---
+# <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
+将多字节字符转换为相应的宽字符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int mbtowc(  
@@ -61,38 +77,38 @@ int _mbtowc_l(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *wchar*  
- 宽字符 \( `wchar_t`类型\) 的地址。  
+ 宽字符的地址（类型 `wchar_t`）。  
   
  `mbchar`  
- 多字节字符的字节序列的地址。  
+ 字节（多字节字符）序列的地址。  
   
  *count*  
- 检查字节数。  
+ 要检查的字节数。  
   
- *Locale — 区域设置*  
+ *locale*  
  要使用的区域设置。  
   
-## 返回值  
- 如果 **mbchar** 不为 **NULL**，并且，如果 `mbchar` 指向有效窗体的多字节字符的对象，`mbtowc` 在多字节字符的字节长度返回。  如果 `mbchar` 是 **NULL** 或它指向的对象是宽字符字符 \(L' \\ 0 '\) 中，函数返回 0。  如果 `mbchar` 所指向的对象不能构成在第一  字符内的有效字节字符， 返回– 1。  
+## <a name="return-value"></a>返回值  
+ 如果 **mbchar** 不是 **NULL** 并且如果 `mbchar` 指向的对象构成了有效的多字节字符，则 `mbtowc` 返回多字节字符的长度（以字节为单位）。 如果 `mbchar` 是 **NULL** 或其指向的对象是宽字符空字符 (L'\0')，则此函数返回 0。 如果 `mbchar` 指向的对象未构成前 *count* 个字符内的有效多字节字符，则返回 –1。  
   
-## 备注  
- `mbtowc` 函数转换 *次数* 或低字节指向的 `mbchar`，因此，如果 `mbchar` 不为 **NULL**，则对相应的宽字符。  `mbtowc` 存储发生的宽字符在 *wchar，* 因此，如果 *wchar* 不是 **NULL**。  `mbtowc` 大于 `MB_CUR_MAX` 字节不检查更多。 `mbtowc` 为区域设置相关行为使用当前区域设置；`_mbtowc_l` 相同，但它将使用的区域设置。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+## <a name="remarks"></a>备注  
+ 如果 `mbchar` 不是 **NULL**，则 `mbtowc` 函数将 `mbchar` 指向的 *count* 个或更少的字节转换为相应的宽字符。 如果 *wchar* 不是 **NULL**，则 `mbtowc` 将生成的宽字符存储在 *wchar* 中。 `mbtowc` 检查的字节数不超过 `MB_CUR_MAX`。 `mbtowc` 将当前区域设置用于与区域设置相关的行为；`_mbtowc_l` 也是一样，只不过它使用传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`mbtowc`|\<stdlib.h\>|  
-|**\_mbtowc\_l**|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`mbtowc`|\<stdlib.h>|  
+|**_mbtowc_l**|\<stdlib.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_mbtowc.c  
@@ -132,7 +148,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 Convert a wide character to multibyte character:  
@@ -151,14 +167,14 @@ Attempt to convert a NULL pointer to a wide character:
   Bytes converted: 0  
 ```  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen、mblen、\_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [wcstombs、\_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb、\_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)
+ [_mbclen、mblen、_mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [wcstombs、_wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wctomb、_wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)

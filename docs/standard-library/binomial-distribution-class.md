@@ -1,65 +1,136 @@
 ---
-title: "binomial_distribution 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::binomial_distribution"
-  - "std.tr1.binomial_distribution"
-  - "tr1::binomial_distribution"
-  - "random/std::tr1::binomial_distribution"
-  - "tr1.binomial_distribution"
-  - "binomial_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binomial_distribution 类"
-  - "binomial_distribution 类 [TR1]"
+title: "binomial_distribution 类 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- binomial_distribution
+- std::binomial_distribution
+- random/std::binomial_distribution
+- std::binomial_distribution::reset
+- random/std::binomial_distribution::reset
+- std::binomial_distribution::p
+- random/std::binomial_distribution::p
+- std::binomial_distribution::t
+- random/std::binomial_distribution::t
+- std::binomial_distribution::param
+- random/std::binomial_distribution::param
+- std::binomial_distribution::min
+- random/std::binomial_distribution::min
+- std::binomial_distribution::max
+- random/std::binomial_distribution::max
+- std::binomial_distribution::operator()
+- random/std::binomial_distribution::operator()
+- std::binomial_distribution::param_type
+- random/std::binomial_distribution::param_type
+- std::binomial_distribution::param_type::p
+- random/std::binomial_distribution::param_type::p
+- std::binomial_distribution::param_type::t
+- random/std::binomial_distribution::param_type::t
+- std::binomial_distribution::param_type::operator==
+- random/std::binomial_distribution::param_type::operator==
+- std::binomial_distribution::param_type::operator!=
+- random/std::binomial_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- binomial_distribution class
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# binomial_distribution 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8b334da1953b67965c95c8c61e9426d9020132ed
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="binomialdistribution-class"></a>binomial_distribution 类
 生成二项式分布。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-template<class IntType = int> class binomial_distribution { public:     // types     typedef IntType result_type;     struct param_type;     // constructors and reset functions     explicit binomial_distribution(IntType t = 1, double p = 0.5);     explicit binomial_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     IntType t() const;     double p() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template<class IntType = int>
+class binomial_distribution  
+   {  
+public:  
+   // types  
+   typedef IntType result_type;  
+   struct param_type;  
+   
+   // constructors and reset functions  
+   explicit binomial_distribution(result_type t = 1, double p = 0.5);
+   explicit binomial_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   result_type t() const;
+   double p() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+#### <a name="parameters"></a>参数  
+*IntType*  
+整数结果类型，默认为 `int`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
   
-#### 参数  
- `IntType`  
- 整数结果类型，默认为 `int`。  有关可能的类型，请参阅 [\<random\>](../standard-library/random.md)。  
-  
-## 备注  
- 如果未根据二项式分布离散型概率函数提供和分布任何类型，则模板类将描述产生用户指定的整型值或 `int` 型值的分布。  下表链接到有关各个成员的文章。  
+*URNG* 均匀随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
+
+## <a name="remarks"></a>备注  
+如果未根据二项式分布离散型概率函数提供和分布任何类型，则模板类将描述产生用户指定的整型值或 `int` 型值的分布。 下表链接到有关各个成员的文章。  
   
 ||||  
 |-|-|-|  
-|[binomial\_distribution::binomial\_distribution](../Topic/binomial_distribution::binomial_distribution.md)|`binomial_distribution::t`|`binomial_distribution::param`|  
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[binomial\_distribution::param\_type](../Topic/binomial_distribution::param_type.md)|  
+|[binomial_distribution::binomial_distribution](#binomial_distribution__binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|  
+|`binomial_distribution::operator()`|`binomial_distribution::p`|[binomial_distribution::param_type](#binomial_distribution__param_type)|  
   
- 属性成员 `t()` 和 `p()` 将分别返回当前存储的分布参数值 `t` 和 `p`。  
+属性成员 `t()` 和 `p()` 将分别返回当前存储的分布参数值 `t` 和 `p`。  
   
- 有关分布类及其成员的详细信息，请参阅 [\<random\>](../standard-library/random.md)。  
+属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。  
+
+`min()` 和 `max()` 成员函数将分别返回最小可能结果和最大可能结果。  
   
- 有关二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[二项式分布](http://go.microsoft.com/fwlink/?LinkId=398469)。  
+`reset()` 成员函数将放弃所有缓存的值，使下一个对 `operator()` 的调用的结果不取决于在调用之前从引擎获得的任何值。  
   
-## 示例  
+`operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
+  
+有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+  
+有关二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[二项式分步](http://go.microsoft.com/fwlink/LinkId=398469)。  
+  
+## <a name="example"></a>示例  
   
 ```cpp  
- // compile with: /EHsc /W4  
+// compile with: /EHsc /W4  
 #include <random>   
 #include <iostream>  
 #include <iomanip>  
@@ -111,15 +182,14 @@ int main()
 }  
 ```  
   
-## 输出  
- 首次运行：  
+首次运行：  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter an integer value for t distribution (where 0 <= t): 22  
 Enter a double value for p distribution (where 0.0 <= p <= 1.0): .25  
 Enter an integer value for a sample count: 100  
-  
+ 
 p == 0.25  
 t == 22  
 Histogram for 100 samples:  
@@ -132,19 +202,18 @@ Histogram for 100 samples:
     7 :::::::::::::  
     8 ::::::  
     9 ::::::  
-   11 :  
-   12 :  
-  
+    11 :  
+    12 :  
 ```  
   
- 第二次运行：  
+第二次运行：  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter an integer value for t distribution (where 0 <= t): 22  
 Enter a double value for p distribution (where 0.0 <= p <= 1.0): .5  
 Enter an integer value for a sample count: 100  
-  
+ 
 p == 0.5  
 t == 22  
 Histogram for 100 samples:  
@@ -152,42 +221,100 @@ Histogram for 100 samples:
     7 ::  
     8 :::::::::  
     9 ::::::::::  
-   10 ::::::::::::::::  
-   11 :::::::::::::::::::  
-   12 :::::::::::  
-   13 :::::::::::::  
-   14 :::::::::::::::  
-   15 ::  
-   16 ::  
-  
+    10 ::::::::::::::::  
+    11 :::::::::::::::::::  
+    12 :::::::::::  
+    13 :::::::::::::  
+    14 :::::::::::::::  
+    15 ::  
+    16 ::  
 ```  
   
- 第三次运行：  
+第三次运行：  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter an integer value for t distribution (where 0 <= t): 22  
 Enter a double value for p distribution (where 0.0 <= p <= 1.0): .75  
 Enter an integer value for a sample count: 100  
-  
+ 
 p == 0.75  
 t == 22  
 Histogram for 100 samples:  
-   13 ::::  
-   14 :::::::::::  
-   15 :::::::::::::::  
-   16 :::::::::::::::::::::  
-   17 ::::::::::::::  
-   18 :::::::::::::::::  
-   19 :::::::::::  
-   20 ::::::  
-   21 :  
+    13 ::::  
+    14 :::::::::::  
+    15 :::::::::::::::  
+    16 :::::::::::::::::::::  
+    17 ::::::::::::::  
+    18 :::::::::::::::::  
+    19 :::::::::::  
+    20 ::::::  
+    21 :  
 ```  
   
-## 要求  
- **标头：**\<random\>  
+## <a name="requirements"></a>要求  
+**标头：**\<random>  
   
- **命名空间:** std  
+**命名空间：** std  
   
-## 请参阅  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namebinomialdistributionbinomialdistributiona--binomialdistributionbinomialdistribution"></a><a name="binomial_distribution__binomial_distribution"></a>  binomial_distribution::binomial_distribution  
+构造分布。  
+  
+```  
+explicit binomial_distribution(result_type t = 1, double p = 0.5);
+explicit binomial_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>参数  
+*t*  
+`t` 分布参数。  
+  
+*p*  
+`p` 分布参数。  
+  
+*parm*  
+用于构造分布的 `param_type` 结构。  
+  
+### <a name="remarks"></a>备注  
+**前置条件：**`0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`  
+  
+第一个构造函数将构造一个其存储的 `p` 值保留值 *p*，并且其存储的 `t` 值保留值 *t* 的对象。  
+  
+第二个构造函数将构造一个从 *parm* 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
+  
+##  <a name="a-namebinomialdistributionparamtypea--binomialdistributionparamtype"></a><a name="binomial_distribution__param_type"></a>  binomial_distribution::param_type  
+存储分布的所有参数。  
+  
+```cpp  
+struct param_type {  
+   typedef binomial_distribution<result_type> distribution_type;  
+   param_type(result_type t = 1, double p = 0.5);
+   result_type t() const;
+   double p() const;
+   .....  
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+  
+### <a name="parameters"></a>参数  
+*t*  
+`t` 分布参数。  
+  
+*p*  
+`p` 分布参数。  
+  
+*right*  
+ 要与它进行比较的 `param_type` 对象。  
+  
+### <a name="remarks"></a>备注  
+**前置条件：**`0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`  
+  
+在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
+  
+## <a name="see-also"></a>另请参阅  
+ [\<random>](../standard-library/random.md)
+
+
+
+

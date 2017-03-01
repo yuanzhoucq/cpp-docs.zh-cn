@@ -1,71 +1,81 @@
 ---
 title: "unary_negate 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unary_negate"
-  - "std::unary_negate"
-  - "std.unary_negate"
-  - "xfunctional/std::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unary_negate
+- std::unary_negate
+- std.unary_negate
+- xfunctional/std::unary_negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# unary_negate 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 078ee71844b0ac5cd02b182287a7a6db6caa04db
+ms.lasthandoff: 02/24/2017
 
-提供消除一个指定的一元函数的返回值的成员函数的模板选件类。  
+---
+# <a name="unarynegate-class"></a>unary_negate 类
+一种模板类，用于提供成员函数，对指定一元函数的返回值进行求反。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template <class Predicate>
+class unary_negate
+    : public unaryFunction<typename Predicate::argument_type, bool>
+{
+public:
+    explicit unary_negate(const Predicate& Func);
+    bool operator()(const typename Predicate::argument_type& left) const;
+};
 ```  
   
-   template<class Predicate>  
-class unary_negate  
-   : public unary_function<  
-      typename Predicate::argument_type,  
-      bool>   
-{  
-public:  
-explicit unary_negate(  
-   const Predicate& _Func  
-);  
-bool operator()(  
-   const typename Predicate::argument_type& _Left ) const;  
-};  
-```  
+#### <a name="parameters"></a>参数  
+ `Func`  
+ 要求反的一元函数。  
   
-#### 参数  
- `_Func`  
- 将一元求反的函数。  
+ `left`  
+ 要求反的一元函数的操作数。  
   
- `_Left`  
- 将一元求反的函数的操作数。  
+## <a name="return-value"></a>返回值  
+ 一元函数的求反运算。  
   
-## 返回值  
- 一元求反的函数。  
+## <a name="remarks"></a>备注  
+ 此模板类存储 _ Func 一元函数对象的副本。 它将其成员函数 `operator()` 定义为返回 **!**\_ Func(left)。  
   
-## 备注  
- 模板类存储一元函数对象\_Func 的副本*。*它定义了其成员函数 `operator()` 返回\_Func 为 \#\#\#\!*\(\_Left\)。*  
+ 很少直接使用 `unary_negate` 的构造函数。 Helper 函数 [not1](../standard-library/functional-functions.md#not1_function) 可提供更简单的方法，用于声明和使用 **unary_negator** 适配器谓词。  
   
- 直接很少使用 `unary_negate` 构造函数。  帮助程序函数 [not1](../Topic/not1%20Function.md) 提供了一种简便的方式声明和使用 **unary\_negator** 适配器谓词。  
+## <a name="example"></a>示例  
   
-## 示例  
-  
-```  
+```cpp  
 // functional_unary_negate.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -108,16 +118,22 @@ int main()
     cout << "The number of elements in v1 not greater than 10 is: "  
          << result2 << "." << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 5 10 15 20 25 30 35 )  
+The number of elements in v1 greater than 10 is: 5.  
+The number of elements in v1 not greater than 10 is: 3.  
+*/  
 ```  
   
-  **矢量 v1 \= \(0 5 10 15 20 25 30 35\)**  
-**元素的数目。大于 v1 的大于 10 是：5.**  
-**元素的数目。不大于 v1 的大于 10 是：3.**   
-## 要求  
- **标头：** \<起作用的\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<functional>  
   
- **命名空间:**  std  
+ **命名空间：** std  
   
-## 请参阅  
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [标准模板库](../misc/standard-template-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

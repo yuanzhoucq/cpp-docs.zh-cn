@@ -1,83 +1,95 @@
 ---
-title: "binder2nd 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.binder2nd"
-  - "binder2nd"
-  - "xfunctional/std::binder2nd"
-  - "std::binder2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder2nd 类"
+title: "binder2nd 类 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.binder2nd
+- binder2nd
+- xfunctional/std::binder2nd
+- std::binder2nd
+dev_langs:
+- C++
+helpviewer_keywords:
+- binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# binder2nd 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: f19b476ae903c915d4231621c39a88bf70b08685
+ms.lasthandoff: 02/24/2017
 
-模板类提供一个构造函数，通过将二元函数的第二个参数绑定到指定值，将二元函数对象转换成一个一元函数对象。  
+---
+# <a name="binder2nd-class"></a>binder2nd 类
+一种模板类，用于提供构造函数，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
-template<class Operation>  
-   class binder2nd  
-      : public unary_function <  
-         typename Operation::first_argument_type,  
-         typename Operation::result_type>   
-   {  
-   public:  
-   typedef typename Operation::argument_type argument_type;  
-   typedef typename Operation::result_type result_type;  
-   binder2nd(  
-      const Operation& _Func,  
-      const typename Operation::second_argument_type& _Right  
-   );  
-   result_type operator()(  
-      const argument_type& _Left  
-   ) const;  
-   result_type operator()(  
-      argument_type& _Left  
-   ) const;  
-   protected:  
-   Operation op;  
-   typename Operation::second_argument_type value;  
-   };  
+```
+template <class Operation>
+class binder2nd
+    : public unaryFunction <typename Operation::first_argument_type,
+    typename Operation::result_type>
+{
+public:
+    typedef typename Operation::argument_type argument_type;
+    typedef typename Operation::result_type result_type;
+    binder2nd(
+        const Operation& Func,
+        const typename Operation::second_argument_type& right);
+
+    result_type operator()(const argument_type& left) const;
+    result_type operator()(argument_type& left) const;
+
+protected:
+    Operation op;
+    typename Operation::second_argument_type value;
+};
 ```  
   
-#### 参数  
- `_Func`  
- 要平移的二进制函数对象。一元函数对象。  
+#### <a name="parameters"></a>参数  
+ `Func`  
+ 要转换为一元函数对象的二元函数对象。  
   
- `_Right`  
- 二进制函数对象将绑定第二个参数的值。  
+ `right`  
+ 要将二元函数对象的第二个参数绑定到的值。  
   
- `_Left`  
- 适应的二进制对象相对于第二个参数中的固定值参数的值。  
+ `left`  
+ 改编的二元对象将其与第二个参数进行比较的参数值。  
   
-## 返回值  
- 产生的二进制对象绑定函数的第二个参数为 `_Right.`值的一元函数对象  
+## <a name="return-value"></a>返回值  
+ 将二元函数对象的第二参数绑定到值 `right.` 生成的一元函数对象  
   
-## 备注  
- 模板类存储二进制\_Func 函数对象的副本。**op**中 `_Right` 复制到 **值**。  它定义了其成员函数 `operator()` 为`_Left`，返回 **op**\( **值**\)。  
+## <a name="remarks"></a>备注  
+ 此模板类将二元函数对象 _ *Func* 的副本存储在 **op** 中，并将 `right` 的副本存储在 **value** 中。 它将其成员函数 `operator()` 定义为返回 **op**( `left`, **value**)。  
   
- 如果 `_Func` 为类型 **操作** 对象，并 c 为常数，则 [bind2nd](../Topic/bind2nd%20Function.md) \( `_Func`，`c` \) 的 `binder2nd` 类构造函数**操作**\>`binder2nd`\<\( `_Func`，`c` \) 等效的、更方便。  
+ 如果 `Func` 是 **Operation** 类型的对象且 c 是常量，则 [bind2nd](../standard-library/functional-functions.md#bind2nd_function) ( `Func`, `c` ) 等效于 `binder2nd` 类构造函数 `binder2nd`\< **Operation**> ( `Func`, `c` ) 且更为方便。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // functional_binder2nd.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -118,16 +130,22 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "  
          << result2 << "." << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+The number of elements in v1 less than 10 is: 2.  
+*/  
 ```  
   
-  **The vector v1 \= \( 0 5 10 15 20 25 \)**  
-**元素的数目。大于 v1 的大于 10 是：3.**  
-**元素的数目。v1 的小于 10:2.**   
-## 要求  
- **标头：** \<起作用的\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<functional>  
   
- **命名空间:**  std  
+ **命名空间：** std  
   
-## 请参阅  
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [标准模板库](../misc/standard-template-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

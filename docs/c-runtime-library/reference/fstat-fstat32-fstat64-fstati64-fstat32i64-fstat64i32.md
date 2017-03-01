@@ -1,75 +1,91 @@
 ---
-title: "_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fstat32"
-  - "_fstat64"
-  - "_fstati64"
-  - "_fstat"
-  - "_fstat64i32"
-  - "_fstat32i64"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstat32i64"
-  - "fstat"
-  - "fstat64i32"
-  - "_fstat64"
-  - "_fstati64"
-  - "fstat64"
-  - "_fstat32"
-  - "fstat32i64"
-  - "fstati64"
-  - "_fstat"
-  - "fstat32"
-  - "_fstat64i32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstat64 函数"
-  - "fstati64 函数"
-  - "_fstat64i32 函数"
-  - "_fstat32i64 函数"
-  - "_fstat32 函数"
-  - "文件信息"
-  - "fstat64i32 函数"
-  - "fstat32 函数"
-  - "fstat 函数"
-  - "fstat64 函数"
-  - "_fstat 函数"
-  - "_fstati64 函数"
-  - "fstat32i64 函数"
+title: "_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fstat32
+- _fstat64
+- _fstati64
+- _fstat
+- _fstat64i32
+- _fstat32i64
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstat32i64
+- fstat
+- fstat64i32
+- _fstat64
+- _fstati64
+- fstat64
+- _fstat32
+- fstat32i64
+- fstati64
+- _fstat
+- fstat32
+- _fstat64i32
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fstat64 function
+- fstati64 function
+- _fstat64i32 function
+- _fstat32i64 function
+- _fstat32 function
+- file information
+- fstat64i32 function
+- fstat32 function
+- fstat function
+- fstat64 function
+- _fstat function
+- _fstati64 function
+- fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
+ms.lasthandoff: 02/24/2017
 
-获取有关打开的文件的信息。  
+---
+# <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
+获取有关打开文件的信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _fstat(   
@@ -98,57 +114,57 @@ int _fstat64i32(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fd`  
  打开文件的文件描述符。  
   
  `buffer`  
- 指向要存储结果的结构的指针。  
+ 指向存储结果的结构的指针。  
   
-## 返回值  
- 如果获取文件状态信息，则返回 0。 返回值 –1 指示错误。 如果文件说明符无效或 `buffer` 是 `NULL`, ，则调用无效参数处理程序，如中所述 [参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 `errno` 设置为 `EBADF`, 、 对于无效的文件说明符，或为 `EINVAL`, ，如果 `buffer` 是 `NULL`。  
+## <a name="return-value"></a>返回值  
+ 如果获取到文件状态信息，则返回 0。 返回值 –1 指示错误。 如果文件描述符无效或 `buffer` 是 `NULL`，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，在出现无效文件描述符的情况下，则将 `errno` 设置为 `EBADF`，或者如果 `buffer` 是 `NULL`，则设置为 `EINVAL`。  
   
-## 备注  
- `_fstat` 函数可获取有关关联的打开文件的信息 `fd` 并将其存储在由指向结构 `buffer`。`_stat` SYS\\Stat.h、 中定义的结构包含以下字段。  
+## <a name="remarks"></a>备注  
+ `_fstat` 函数可获取有关与 `fd` 关联的打开文件的信息，并将其存储在 `buffer` 指向的结构中。 SYS\Stat.h 中定义的 `_stat` 结构包含下列字段。  
   
  `st_atime`  
- 最后一个文件访问时间。  
+ 上次文件访问的时间。  
   
  `st_ctime`  
- 创建文件的时间。  
+ 文件的创建时间。  
   
  `st_dev`  
- 如果某一设备， `fd`; 否则为 0。  
+ 如果是设备，则为 `fd`；否则为 0。  
   
  `st_mode`  
- 文件模式信息的位掩码。`_S_IFCHR` 如果位将设置 `fd` 指的是一种设备。`_S_IFREG` 如果位将设置 `fd` 指的是一个普通的文件。 读\/写位将设置根据文件的权限模式。`_S_IFCHR` 和 SYS\\Stat.h 中定义了其他常量。  
+ 文件模式信息的位掩码。 如果 `fd` 指的是设备，则设置 `_S_IFCHR` 位。 如果 `fd` 指的是普通文件，则设置 `_S_IFREG` 位。 将根据文件的权限模式设置读/写位。 在 SYS\Stat.h 中定义 `_S_IFCHR` 和其他常量。  
   
  `st_mtime`  
- 文件的上次修改时间。  
+ 上次进行文件修改的时间。  
   
  `st_nlink`  
  在非 NTFS 文件系统上始终为 1。  
   
  `st_rdev`  
- 如果某一设备， `fd`; 否则为 0。  
+ 如果是设备，则为 `fd`；否则为 0。  
   
  `st_size`  
- 以字节为单位的文件的大小。  
+ 文件的大小（以字节为单位）。  
   
- 如果 `fd` 指的是一种设备， `st_atime`, ，`st_ctime`, ，`st_mtime`, ，和 `st_size` 字段不是有意义。  
+ 如果 `fd` 指的是设备，`st_atime`、`st_ctime`、`st_mtime` 和 `st_size` 字段无意义。  
   
- 因为 Stat.h 使用 [\_dev\_t](../../c-runtime-library/standard-types.md) 键入，Types.h 中定义，则必须在代码中包括 Types.h Stat.h 之前。  
+ 因为 Stat.h 使用 Types.h 中定义的 [_dev_t](../../c-runtime-library/standard-types.md) 类型，所以必须在代码中的 Stat.h 之前包含 Types.h。  
   
- `_fstat64`, 它使用 `__stat64` 结构，请允许文件创建日期来向上表示通过 23:59:59，3000 年 12 月 31 日，UTC; 而其他函数只表示 23:59:59 2038 年 1 月 18 日，UTC 日期。 午夜 1970 年 1 月 1 日，是所有这些函数的日期范围的下限。  
+ 使用 `__stat64` 结构的 `_fstat64` 允许文件创建日期最大表示为 3000 年 12 月 31 日 23:59:59，UTC；而其他函数只能表示截至 2038 年 1 月 18 日 23:59:59，UTC 之前的日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。  
   
- 这些函数的变体支持 32 位或 64 位时间类型和 32 位或 64 位文件长度。 第一个数字后缀（`32` 或 `64`）表示所用时间类型的大小；第二个后缀是 `i32` 或 `i64`，表示以 32 位还是 64 位整数表示文件大小。  
+ 这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀（`32` 或 `64`）表示所用时间类型的大小；第二个后缀是 `i32` 或 `i64`，表示以 32 位还是 64 位整数表示文件大小。  
   
- `_fstat` 等效于 `_fstat64i32`, ，和 `struct``_stat` 包含 64 位时间。 也是如此除非 `_USE_32BIT_TIME_T` 定义，这种情况下这一旧行为中有效，则是 `_fstat` 使用 32 位时而和 `struct``_stat` 包含 32 位时间。 同样适用于 `_fstati64`。  
+ `_fstat` 与 `_fstat64i32` 等效，`struct``_stat` 包含 64 位时间。 除非定义了 `_USE_32BIT_TIME_T`，这种情况下旧行为有效；`_fstat` 使用 32 位时间，`struct``_stat` 包含 32 位时间。 这一点也适用于 `_fstati64`。  
   
-### \_stat 时间类型和文件长度类型变体  
+### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 时间类型和文件长度类型变体  
   
-|函数|已定义 \_USE\_32BIT\_TIME\_T？|时间类型|文件长度类型|  
-|--------|--------------------------------|----------|------------|  
+|函数|已定义 _USE_32BIT_TIME_T？|时间类型|文件长度类型|  
+|---------------|------------------------------------|---------------|----------------------|  
 |`_fstat`|未定义|64 位|32 位|  
 |`_fstat`|已定义|32 位|32 位|  
 |`_fstat32`|不受宏定义影响|32 位|32 位|  
@@ -158,20 +174,20 @@ int _fstat64i32(
 |`_fstat32i64`|不受宏定义影响|32 位|64 位|  
 |`_fstat64i32`|不受宏定义影响|64 位|32 位|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
-|--------|-----------|  
-|`_fstat`|\<.h \> 和 \< sys\/types.h \>|  
-|`_fstat32`|\<.h \> 和 \< sys\/types.h \>|  
-|`_fstat64`|\<.h \> 和 \< sys\/types.h \>|  
-|`_fstati64`|\<.h \> 和 \< sys\/types.h \>|  
-|`_fstat32i64`|\<.h \> 和 \< sys\/types.h \>|  
-|`_fstat64i32`|\<.h \> 和 \< sys\/types.h \>|  
+|--------------|---------------------|  
+|`_fstat`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstat32`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstat64`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstati64`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstat32i64`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstat64i32`|\<sys/stat.h> 和 \<sys/types.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_fstat.c  
@@ -232,15 +248,16 @@ int main( void )
 ```  
   
 ```Output  
-文件大小︰ 16 次修改︰ 星期三 5 月 7 日 15:25:11 2003年  
+File size     : 16  
+Time modified : Wed May 07 15:25:11 2003  
 ```  
   
-## .NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [\_access、\_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [\_chmod、\_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_filelength、\_filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
- [\_stat、\_wstat 函数](../../c-runtime-library/reference/stat-functions.md)
+ [_access、_waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_filelength、_filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
+ [_stat、_wstat 函数](../../c-runtime-library/reference/stat-functions.md)
