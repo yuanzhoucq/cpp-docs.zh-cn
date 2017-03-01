@@ -1,36 +1,52 @@
 ---
-title: "&lt; 向量 &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<vector>"
-  - "std.<vector>"
-  - "std::<vector>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vector 标头"
+title: '&lt;vector&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <vector>
+- std.<vector>
+- std::<vector>
+dev_langs:
+- C++
+helpviewer_keywords:
+- vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# &lt; 向量 &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 99aa5d5df1367dfb6e6f6c0b9333783240a12690
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ltvectorgt"></a>&lt;vector&gt;
 定义容器模板类矢量和几个支持模板。  
   
  `vector` 是将给定类型的元素组织到线性序列中的容器。 它使用户可以快速随机访问任何元素，并动态添加到序列和动态从序列中删除。 `vector` 是随机访问性能超出限制时的首选序列容器。  
   
- 有关类详细信息 `vector`, ，请参阅 [vector 类](../standard-library/vector-class.md)。 璝惠专用化 `vector<bool>`, ，请参阅 [向量 \< bool> 类](../standard-library/vector-bool-class.md)。  
+ 有关类 `vector` 的详细信息，请参阅 [vector 类](../standard-library/vector-class.md)。 有关专业化 `vector<bool>` 的信息，请参阅 [vector\<bool> 类](../standard-library/vector-bool-class.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -99,12 +115,12 @@ void swap (
   
 |||  
 |-|-|  
-|[运算符 ！=](../Topic/%3Cvector%3E%20operators.md#operator_neq)|测试运算符左侧的向量对象是否等于右侧的向量对象。|  
-|[运算符 <](../Topic/%3Cvector%3E%20operators.md#operator_lt_)|测试运算符左侧的向量对象是否小于右侧的向量对象。|  
-|[运算符 \< =](../Topic/%3Cvector%3E%20operators.md#operator_lt__eq)|测试运算符左侧的向量对象是否小于或等于右侧的向量对象。|  
-|[运算符 = =](../Topic/%3Cvector%3E%20operators.md#operator_eq_eq)|测试运算符左侧的向量对象是否等于右侧的向量对象。|  
-|[运算符 >](../Topic/%3Cvector%3E%20operators.md#operator_gt_)|测试运算符左侧的向量对象是否大于右侧的向量对象。|  
-|[运算符 > =](../Topic/%3Cvector%3E%20operators.md#operator_gt__eq)|测试运算符左侧的向量对象是否大于或等于右侧的向量对象。|  
+|[operator! =](../standard-library/vector-operators.md#operator_neq)|测试运算符左侧的向量对象是否等于右侧的向量对象。|  
+|[operator<](../standard-library/vector-operators.md#operator_lt_)|测试运算符左侧的向量对象是否小于右侧的向量对象。|  
+|[operator\<=](../standard-library/vector-operators.md#operator_lt__eq)|测试运算符左侧的向量对象是否小于或等于右侧的向量对象。|  
+|[operator==](../standard-library/vector-operators.md#operator_eq_eq)|测试运算符左侧的向量对象是否等于右侧的向量对象。|  
+|[operator>](../standard-library/vector-operators.md#operator_gt_)|测试运算符左侧的向量对象是否大于右侧的向量对象。|  
+|[operator>=](../standard-library/vector-operators.md#operator_gt__eq)|测试运算符左侧的向量对象是否大于或等于右侧的向量对象。|  
   
 ### <a name="classes"></a>类  
   
@@ -116,15 +132,16 @@ void swap (
   
 |||  
 |-|-|  
-|[向量 \< bool> 类](../standard-library/vector-bool-class.md)|模板类向量的一个完全专有化，针对类型 `bool` 的元素，且带有专有化所使用的基本类型的分配器。|  
+|[vector\<bool> 类](../standard-library/vector-bool-class.md)|模板类向量的一个完全专有化，针对类型 `bool` 的元素，且带有专有化所使用的基本类型的分配器。|  
   
 ## <a name="requirements"></a>要求  
- **标头︰** \< 向量>  
+ **标头：**\<vector>  
   
- **Namespace:** std  
+ **命名空间：** std  
   
-## <a name="see-also"></a>请参阅  
- [标头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [标准模板库](../misc/standard-template-library.md)
+## <a name="see-also"></a>另请参阅  
+ [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+
 

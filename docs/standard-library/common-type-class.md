@@ -1,68 +1,80 @@
 ---
-title: "common_type 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.common_type"
-  - "common_type"
-  - "std::tr1::common_type"
-  - "std.common_type"
-  - "std::common_type"
-  - "type_traits/std::common_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "common_type 类 [TR1]"
-  - "common_type"
+title: "common_type 类 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- common_type
+- std::common_type
+- type_traits/std::common_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- common_type class
+- common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# common_type 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 9166035a7de5414f23149354f0c8fb658f4a30fe
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="commontype-class"></a>common_type 类
 确定一个或多个类型的通用类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
-  
+```
 template <class... T>  
-   struct common_type;  
-  
+struct common_type;
+
 template <class T>  
-   struct common_type<T> {  
-      typedef typename decay<T>::type type;  
-};  
-  
+struct common_type<T> {
+    typedef typename decay<T>::type type;
+};
+
 template <class T, class U>  
-   struct common_type<T, U> {  
-      typedef typename decay<decltype(true ?  declval<T>() :  
-         declval<U>())>::type type;  
-};  
-  
+struct common_type<T, U> {
+    typedef typename decay<decltype(true declval<T>() :
+    declval<U>())>::type type;
+};
+
 template <class T, class U, class... V>  
-   struct common_type<T, U, V...> {  
-      typedef typename common_type<typename common_type<T, U>::type, V...>::type type;  
-};  
+struct common_type<T, U, V...> {
+    typedef typename common_type<typename common_type<T, U>::type, V...>::type type;
+};
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  状态为[已完成类型](../c-language/incomplete-types.md)或无效的类型列表。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  `type` 成员是参数列表中所有类型都可以转换为的通用类型。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的程序演示一些正确使用方案并测试结果。  
   
 ```cpp  
@@ -104,33 +116,36 @@ int main()
 }  
 ```  
   
-## 输出  
+## <a name="output"></a>输出  
   
+```
+Test for typedefs of common_type int
+NumericType: true
+FloatType: false
+ModifiedIntType: true
+ClassType: false
+---------------------------
+Test for typedefs of common_type double
+NumericType: false
+FloatType: true
+ModifiedIntType: false
+ClassType: false
+---------------------------
+Test for typedefs of common_type Base
+NumericType: false
+FloatType: false
+ModifiedIntType: false
+ClassType: true
 ```  
-Test for typedefs of common_type int  
-NumericType: true  
-FloatType: false  
-ModifiedIntType: true  
-ClassType: false  
----------------------------  
-Test for typedefs of common_type double  
-NumericType: false  
-FloatType: true  
-ModifiedIntType: false  
-ClassType: false  
----------------------------  
-Test for typedefs of common_type Base  
-NumericType: false  
-FloatType: false  
-ModifiedIntType: false  
-ClassType: true  
   
-```  
+## <a name="requirements"></a>要求  
+ **标头：**\<type_traits>  
   
-## 要求  
- **标头：**\<type\_traits\>  
+ **命名空间：** std  
   
- **命名空间:** std  
-  
-## 请参阅  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>另请参阅  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

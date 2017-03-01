@@ -1,53 +1,69 @@
 ---
-title: "_resetstkoflw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_resetstkoflw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "resetstkoflw"
-  - "_resetstkoflw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_resetstkoflw 函数"
-  - "resetstkoflw 函数"
-  - "堆栈溢出"
-  - "堆栈, 恢复"
+title: "_resetstkoflw |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _resetstkoflw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- resetstkoflw
+- _resetstkoflw
+dev_langs:
+- C++
+helpviewer_keywords:
+- resetstkoflw function
+- stack overflow
+- stack, recovering
+- _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _resetstkoflw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
+ms.lasthandoff: 02/24/2017
 
-从堆栈溢出还原。  
+---
+# <a name="resetstkoflw"></a>_resetstkoflw
+从堆栈溢出恢复。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -55,68 +71,68 @@ int _resetstkoflw ( void );
   
 ```  
   
-## 返回值  
- 函数成功为非零，失败为零。  
+## <a name="return-value"></a>返回值  
+ 如果函数成功，则为非零值；如果失败，则为&0;。  
   
-## 备注  
- `_resetstkoflw` 函数可以将系统从堆栈溢出的情况恢复为正常，从而使程序得以继续运行，而不会由于出现异常错误而失败。  如果未调用 `_resetstkoflw` 函数，则在上一个异常后不会显示保护页。  当下次发生堆栈溢出时，根本不会显示异常，进程将在没有任何警告的情况下终止。  
+## <a name="remarks"></a>备注  
+ `_resetstkoflw` 函数将从堆栈溢出条件中恢复，让程序继续执行，而不会出现致命异常错误。 如果未调用 `_resetstkoflw` 函数，则在前一个异常后不会显示保护页。 下次发生堆栈溢出时，将不会有任何异常，且进程会在无警告的情况下终止。  
   
- 如果应用程序中的线程导致 **EXCEPTION\_STACK\_OVERFLOW** 异常，该线程使他的栈处于危险状态。  与其他异常相反的是例如 **EXCEPTION\_ACCESS\_VIOLATION** 或 **EXCEPTION\_INT\_DIVIDE\_BY\_ZERO**，这些栈不会被破坏。  当程序首先加载时，堆栈设置为一个非常小的值。  堆栈然后增大在需要时调整线程的需要。  这是通过在当前栈的结尾放置一个PAGE\_GUARD 页面来实现的。  有关更多信息，请参见[创建安全页](http://msdn.microsoft.com/library/windows/desktop/aa366549)。  
+ 如果应用程序中的线程导致 **EXCEPTION_STACK_OVERFLOW** 异常，则该线程的堆栈将处于损坏状态。 这与其他异常（如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO**）不同，在那些异常中，堆栈是未损坏的。 首次加载程序时，堆栈将设置为任意的较小的值。 然后，堆栈会根据需要增长以满足线程的需求。 这将通过在当前堆栈的结尾处放置一个带 PAGE_GUARD 访问权的页面来实现。 有关更多信息，请参见[创建保护页](http://msdn.microsoft.com/library/windows/desktop/aa366549)。  
   
- 当代码导致堆栈指针指向本页中的一个地址，则会发生异常，并且该系统进行以下三个操作：  
+ 当代码导致堆栈指针指向此页上的一个地址时，会发生异常，并且系统将执行以下三个操作：  
   
--   移除在显示保护页的 PAGE\_GUARD 保护，以便线程可以读取和写入数据到内存中。  
+-   移除保护页上的 PAGE_GUARD 保护，以便线程可在内存中读取和写入数据。  
   
--   定位在一页的最后面分配一个新的保护页。  
+-   分配一个新的保护页，新的页位于最后一个保护页的下方。  
   
 -   重新运行引发异常的命令。  
   
- 这样，系统会为线程自动增加堆栈大小。  进程中的每个线程都具有最大堆栈大小。  堆栈大小设置在生成时 [\/STACK（堆栈分配）](../../build/reference/stack-stack-allocations.md)，或者跟项目的 .def 文件中 [STACKSIZE](../../build/reference/stacksize.md) 报表中。  
+ 通过这种方式，系统可以自动增大线程的堆栈大小。 进程中的每个线程都具有最大堆栈大小。 堆栈大小在编译时由 [/STACK（堆栈分配）](../../build/reference/stack-stack-allocations.md)设置，或由项目的 .def 文件中的 [STACKSIZE](../../build/reference/stacksize.md) 语句设置。  
   
- 当超过最大堆栈大小时，系统将进行以下三个操作：  
+ 当超过最大堆栈大小时，系统将执行以下三个操作：  
   
--   在安全也移除PAGE\_GUARD保护，如先前所描述的。  
+-   在保护页上移除 PAGE_GUARD 保护，如前所述。  
   
--   尝试在最后一个页下分配新显示保护页。  然而，由于超过了栈的最大范围，所以会失败。  
+-   尝试在最后一个保护页的下方分配新的保护页。 不过，此操作会因超过了最大堆栈大小而导致失败。  
   
 -   引发异常，以便线程可以在异常块中处理它。  
   
- 请注意，在这个店，堆栈再也没有保护页。  下次程序始终增大堆栈的末尾，应具有显示保护页、程序编写在堆栈尾以外的和导致访问冲突。  
+ 请注意，此时堆栈不再具有保护页。 当程序下一次将堆栈增大到堆栈结尾（此处应有一个保护页）时，程序将在堆栈结尾之外写入并导致访问冲突。  
   
- 调用 `_resetstkoflw` 还原保护页，只要以堆栈溢出异常后完成。  此功能可从 `__except` 的主体内调用块或 **\_\_except** 块的外部。  但是，应用时有一些限制。  `_resetstkoflw`从来不会从以下调用：  
+ 只要在出现堆栈溢出异常后执行恢复，就会调用 `_resetstkoflw` 来还原保护页。 可从 `__except` 块的主体内部或 **__except** 块的外部调用该函数。 但是，对于何时使用该函数有一些限制。 绝不会从以下位置调用 `_resetstkoflw`：  
   
 -   筛选器表达式。  
   
--   筛选函数。  
+-   筛选器函数。  
   
--   从筛选器函数调用的函数。  
+-   从一个筛选器函数调用的函数。  
   
 -   **catch** 块。  
   
 -   `__finally` 块。  
   
- 在这些点，堆栈完全不会展开。  
+ 在这些点上，堆栈尚未充分展开。  
   
- 堆栈溢出异常生成，因为结构化异常，而不是 C\+\+ 异常，因此，`_resetstkoflw` 没有用在普通的 **捕获** 块，因为它将不捕获溢出异常。  然而，如果 [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) 用于实现 C\+\+ 引发一个异常的结构化异常转换器 \(在第二个示例中所示\)，堆栈溢出异常会导致可以由 c. c\+\+ catch 处理块的 c. c\+\+ 异常。  
+ 堆栈溢出异常是作为结构化异常而非 C++ 异常生成的，因此，`_resetstkoflw` 在普通 **catch** 块中没有作用，因为它不会捕获堆栈溢出异常。 但是，如果使用 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) 来实现引发 C++ 异常的结构化异常转换器（如第二个示例所示），则堆栈溢出异常会导致可由 C++ catch 块处理的 C++ 异常。  
   
- 调用从结构化异常转换器函数引发的异常达到 c. c\+\+ 捕获的 **\_resetstkoflw** 块是不安全的。  在这种情况下，堆栈空间不会释放，并且堆栈指针没有在执行 catch 块外将重置，直到块，因此，即使析构函数为所有可损坏的对象调用，在 catch 块之前。  不应调用此函数，直到堆栈空间被释放，并重置堆栈指针。  因此，应在退出 catch 块之后调用它将阻止。  为可能的 ACE 堆栈空间应使用 catch 块，因为在自身发生尝试从前面的堆栈溢出还原 catch 的堆栈溢出块不可退回的，并且可能导致程序停止响应，在执行 catch 块中的溢出块触发器本身由同一 catch 处理块的异常。  
+ 在 C++ catch 块中调用 **_resetstkoflw** 是不安全的，因为这是从通过结构化的异常转换器函数引发的异常到达的。 在这种情况下，不会释放堆栈空间，并且堆栈指针只有在 catch 块之外才会重置，即使已先于 catch 块对任何易损坏的对象调用析构函数。 在释放堆栈空间并且已重置堆栈指针之前，不应调用此函数。 因此，仅在退出 catch 块之后才调用它。 catch 块中应尽可能少地使用堆栈空间，因为在 catch 块自行尝试从上一个堆栈溢出中恢复时出现的堆栈溢出是不可恢复的，并且在 catch 块中的溢出触发其本身由同一个 catch 处理的异常时可能会导致程序停止响应。  
   
- 具有 **\_resetstkoflw** 在正确的位置可能失败的情况，即使使用，如 **\_\_except** 块。  如果为，则在展开堆栈后，仍不留下的足够的堆栈空间执行 **\_resetstkoflw** 不写入堆栈的最后一页，**\_resetstkoflw** 无法重新设置堆栈的最后一页，因为显示保护页并返回 0，指示失败。  因此，此功能安全的用法应包括检查返回值而不是假定。  
+ 在某些情况下，即使在正确的位置（例如，在 **__except** 块中）使用 **_resetstkoflw**，它也会失败。 甚至在展开堆栈后，如果仍未留下足够的堆栈空间来执行 **_resetstkoflw**，而且未写入到堆栈的最后一页，则 **_resetstkoflw** 无法将堆栈的最后一页重置为保护页并且将返回 0（这指示失败）。 因此，此函数的安全用法应包括检查返回值而不是假定可安全使用堆栈。  
   
- 结构化异常处理将不捕获 `STATUS_STACK_OVERFLOW` 异常，则应用程序编译 `/clr` 或 `/clr:pure` \(请参见 [\/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)\)。  
+ 将不会捕获结构化的异常处理`STATUS_STACK_OVERFLOW`使用编译的应用程序时出现异常`/clr`(请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md))。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_resetstkoflw`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_resetstkoflw`|\<malloc.h>|  
   
- 有关更多兼容性信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
- **Libraries:** 的所有版本 [CRT 库功能](../../c-runtime-library/crt-library-features.md).  
+ **库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
- 下面的示例演示`_resetstkoflw`函数的推荐用法。  
+## <a name="example"></a>示例  
+ 以下示例说明了 `_resetstkoflw` 函数的推荐用法。  
   
 ```  
 // crt_resetstkoflw.c  
@@ -185,16 +201,16 @@ int main(int ac)
 }  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
  没有程序参数：  
   
 ```  
 loop #1  
 ```  
   
- 程序停止响应，而无需执行进一步迭代。  
+ 程序停止响应，而不执行进一步的迭代。  
   
- 包含程序参数：  
+ 具有程序参数：  
   
 ```  
 loop #1  
@@ -219,10 +235,10 @@ loop #10
 resetting stack overflow  
 ```  
   
-### 描述  
- 下面的示例在结构化异常转换为 C\+\+ 异常的程序显示给 `_resetstkoflw` 的推荐使用。  
+### <a name="description"></a>描述  
+ 以下示例说明了 `_resetstkoflw` 在结构化异常转换为 C++ 异常的程序中的推荐用法。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // crt_resetstkoflw2.cpp  
@@ -304,7 +320,7 @@ int main ( )
 }  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
   
 ```  
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  
@@ -312,8 +328,8 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
- [\_alloca](../../c-runtime-library/reference/alloca.md)
+## <a name="see-also"></a>另请参阅  
+ [_alloca](../../c-runtime-library/reference/alloca.md)

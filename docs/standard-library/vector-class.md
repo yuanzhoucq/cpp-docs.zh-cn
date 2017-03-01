@@ -1,32 +1,48 @@
 ---
 title: "vector 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::vector"
-  - "vector"
-  - "std.vector"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vector 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::vector
+- vector
+- std.vector
+dev_langs:
+- C++
+helpviewer_keywords:
+- vector class
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# vector 类 1
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 2a2235788f548dbe40625999935cdf396107cbd6
+ms.lasthandoff: 02/24/2017
 
-STL vector 类是序列容器的一个模板类，这些容器将给定类型的元素以线性排列方式进行排列，并且允许快速随机访问任何元素。 它们应是随机访问性能最佳时的首选序列容器。  
+---
+# <a name="vector-class"></a>vector 类
+C++ 标准库 vector 类是序列容器的一个模板类，这些容器将给定类型的元素以线性排列方式进行排列，并且允许快速随机访问任何元素。 它们应是随机访问性能最佳时的首选序列容器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,16 +56,16 @@ class vector
  要存储在矢量中的元素数据类型  
   
  `Allocator`  
- 表示所存储分配器对象的类型，该分配器对象封装有关矢量的内存分配和解除分配的详细信息。 此参数为可选，默认值是 **分配器***\< 类型>。*  
+ 表示所存储分配器对象的类型，该分配器对象封装有关矢量的内存分配和解除分配的详细信息。 此参数是可选自变量，默认值为 **allocator***\<Type>*。  
   
 ## <a name="remarks"></a>备注  
- 向量允许在序列末尾插入和删除常量事件。 若要在矢量中间插入或删除元素，则需要线性时间。 性能 [deque 类](../standard-library/deque-class.md) 容器更胜一筹插入和删除的开头和结尾的一系列而言。  [List 类](../standard-library/list-class.md) 容器更胜一筹插入和删除序列内任何位置上的而言。  
+ 向量允许在序列末尾插入和删除常量事件。 若要在矢量中间插入或删除元素，则需要线性时间。 就在序列开头和末尾进行插入和删除而言，[deque 类](../standard-library/deque-class.md)容器的性能更胜一筹。 就在序列任何位置进行插入和删除而言，[list 类](../standard-library/list-class.md)容器更胜一筹。  
   
  当成员函数必须将矢量对象中所含序列增加到超过其当前存储容量时，将进行矢量重新分配。 其他的插入和删除均可能改变序列中的各个存储地址。 在所有此类情况下，指向序列更改部分的迭代器或引用将变为无效。 如果未进行重新分配，则只有插入/删除点前的迭代器和引用保持有效。  
   
-  [向量 \< bool> 类](../standard-library/vector-bool-class.md) 完全专用化的模板类向量的元素的布尔类型与所使用的专用化的基础类型的分配器。  
+ [vector\<bool> 类](../standard-library/vector-bool-class.md)是一种模板类矢量的完全专用化，针对类型 bool 的元素，且带有专用化所使用的基础类型的分配器。  
   
-  [向量 \< bool> 引用类](../standard-library/vector-bool-class.md#vector_lt_bool_gt___reference_class) 是嵌套的类，其对象能够提供对向量中的元素 （一位） 的引用 \< bool> 对象。  
+ [vector\<bool> reference 类](../standard-library/vector-bool-class.md#vector_lt_bool_gt___reference_class)是一个嵌套类，其对象能够提供对 vector\<bool> 对象内的元素（单个位）的引用。  
   
 ## <a name="members"></a>成员  
   
@@ -57,7 +73,7 @@ class vector
   
 |||  
 |-|-|  
-|[向量](#vector__vector)|构造一个向量，它具有特定大小、具有特定值的元素、具有特定 `allocator`，或将其构造成某个其它向量的副本。|  
+|[vector](#vector__vector)|构造一个向量，它具有特定大小、具有特定值的元素、具有特定 `allocator`，或将其构造成某个其它向量的副本。|  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -69,9 +85,9 @@ class vector
 |[const_reference](#vector__const_reference)|一个类型，它提供对存储于矢量中供读取和执行 `const` 操作的 `const` 元素的引用。|  
 |[const_reverse_iterator](#vector__const_reverse_iterator)|一个类型，它提供可读取矢量中任何 `const` 元素的随机访问迭代器。|  
 |[difference_type](#vector__difference_type)|一个类型，它提供矢量中两个元素的址间的差异。|  
-|[迭代器](#vector__iterator)|一个类型，它提供可读取或修改向量中任何元素的随机访问迭代器。|  
-|[指针](#vector__pointer)|一个类型，提供指向向量中元素的指针。|  
-|[引用](#vector__reference)|一个类型，它提供对向量中存储的元素的引用。|  
+|[iterator](#vector__iterator)|一个类型，它提供可读取或修改向量中任何元素的随机访问迭代器。|  
+|[pointer](#vector__pointer)|一个类型，提供指向向量中元素的指针。|  
+|[reference](#vector__reference)|一个类型，它提供对向量中存储的元素的引用。|  
 |[reverse_iterator](#vector__reverse_iterator)|一个类型，它提供可读取或修改反向矢量中的任意元素的随机访问迭代器。|  
 |[size_type](#vector__size_type)|一个类型，它计算矢量中的元素数目。|  
 |[value_type](#vector__value_type)|一个类型，它代表向量中存储的数据类型。|  
@@ -80,49 +96,49 @@ class vector
   
 |||  
 |-|-|  
-|[分配](#vector__assign)|清除矢量并将指定的元素复制到该空矢量。|  
-|[在](#vector__at)|返回对矢量中指定位置的元素的引用。|  
-|[返回](#vector__back)|返回对向量中最后一个元素的引用。|  
-|[开始](#vector__begin)|对该向量中第一个元素返回随机访问迭代器。|  
-|[容量](#vector__capacity)|返回在不分配更多的存储的情况下向量可以包含的元素数。|  
+|[assign](#vector__assign)|清除矢量并将指定的元素复制到该空矢量。|  
+|[at](#vector__at)|返回对矢量中指定位置的元素的引用。|  
+|[back](#vector__back)|返回对向量中最后一个元素的引用。|  
+|[begin](#vector__begin)|对该向量中第一个元素返回随机访问迭代器。|  
+|[capacity](#vector__capacity)|返回在不分配更多的存储的情况下向量可以包含的元素数。|  
 |[cbegin](#vector__cbegin)|返回指向向量中第一个元素的随机访问常量迭代器。|  
 |[cend](#vector__cend)|返回一个随机访问常量迭代器，它指向刚超过矢量末尾的位置。|  
 |[crbegin](#vector__crbegin)|返回一个指向反向矢量中第一个元素的常量迭代器。|  
 |[crend](#vector__crend)|返回一个指向反向矢量末尾的常量迭代器。|  
-|[清除](#vector__clear)|清除向量的元素。|  
-|[数据](#vector__data)|返回指向向量中第一个元素的指针。|  
+|[clear](#vector__clear)|清除向量的元素。|  
+|[data](#vector__data)|返回指向向量中第一个元素的指针。|  
 |[emplace](#vector__emplace)|将就地构造的元素插入到指定位置的向量中。|  
 |[emplace_back](#vector__emplace_back)|将一个就地构造的元素添加到向量末尾。|  
-|[为空](#vector__empty)|测试矢量容器是否为空。|  
-|[结束](#vector__end)|返回指向矢量末尾的随机访问迭代器。|  
-|[擦除](#vector__erase)|从指定位置删除向量中的一个元素或一系列元素。|  
-|[前端](#vector__front)|返回对向量中第一个元素的引用。|  
+|[empty](#vector__empty)|测试矢量容器是否为空。|  
+|[end](#vector__end)|返回指向矢量末尾的随机访问迭代器。|  
+|[erase](#vector__erase)|从指定位置删除向量中的一个元素或一系列元素。|  
+|[front](#vector__front)|返回对向量中第一个元素的引用。|  
 |[get_allocator](#vector__get_allocator)|将对象返回到矢量使用的 `allocator` 类。|  
-|[插入](#vector__insert)|将一个元素或多个元素插入到指定位置的向量中。|  
+|[insert](#vector__insert)|将一个元素或多个元素插入到指定位置的向量中。|  
 |[max_size](#vector__max_size)|返回向量的最大长度。|  
 |[pop_back](#vector__pop_back)|删除矢量末尾处的元素。|  
 |[push_back](#vector__push_back)|在矢量末尾处添加一个元素。|  
 |[rbegin](#vector__rbegin)|返回指向反向向量中第一个元素的迭代器。|  
 |[rend](#vector__rend)|返回一个指向反向矢量末尾的迭代器。|  
-|[保留](#vector__reserve)|保留向量对象的最小存储长度。|  
-|[调整大小](#vector__resize)|为矢量指定新的大小。|  
+|[reserve](#vector__reserve)|保留向量对象的最小存储长度。|  
+|[resize](#vector__resize)|为矢量指定新的大小。|  
 |[shrink_to_fit](#vector__shrink_to_fit)|放弃额外容量。|  
-|[大小](#vector__size)|返回向量中的元素数量。|  
-|[交换](#vector__swap)|交换两个向量的元素。|  
+|[size](#vector__size)|返回向量中的元素数量。|  
+|[swap](#vector__swap)|交换两个向量的元素。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[运算符 &#91; &#93;](#vector__operator_at)|返回对指定位置的矢量元素的引用。|  
-|[运算符 =](#vector__operator_eq)|用另一个向量的副本替换该向量中的元素。|  
+|[operator[]](#vector__operator_at)|返回对指定位置的矢量元素的引用。|  
+|[operator=](#vector__operator_eq)|用另一个向量的副本替换该向量中的元素。|  
   
 ## <a name="requirements"></a>要求  
- **标头︰** \< 向量>  
+ **标头：**\<vector>  
   
  **命名空间：** std  
   
-##  <a name="a-namevectorallocatortypea-vectorallocatortype"></a><a name="vector__allocator_type"></a>  vector:: allocator_type  
+##  <a name="a-namevectorallocatortypea--vectorallocatortype"></a><a name="vector__allocator_type"></a>vector::allocator_type  
  一个类型，它代表向量对象的分配器类。  
   
 ```  
@@ -130,26 +146,20 @@ typedef Allocator allocator_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- `allocator_type` 是模板参数的同义词 **分配器。**  
+ `allocator_type` 是模板参数 **Allocator** 的同义词。  
   
 ### <a name="example"></a>示例  
-  请参阅示例 [get_allocator](#vector__get_allocator) 有关的示例，使用 `allocator_type`。  
+  有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#vector__get_allocator) 的示例。  
   
-##  <a name="a-namevectorassigna-vectorassign"></a><a name="vector__assign"></a>  vector:: assign  
+##  <a name="a-namevectorassigna--vectorassign"></a><a name="vector__assign"></a>vector::assign  
  清除矢量并将指定的元素复制到该空矢量。  
   
 ```  
-void assign(
-    size_type Count,  
-    const Type& Val);
-
-void assign(
-    initializer_list<Type> IList);
+void assign(size_type Count, const Type& Val);
+void assign(initializer_list<Type> IList);
 
 template <class InputIterator>  
-void assign(
-    InputIterator First,  
-    InputIterator Last);
+void assign(InputIterator First, InputIterator Last);
 ```  
   
 ### <a name="parameters"></a>参数  
@@ -173,7 +183,7 @@ void assign(
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 / vector_assign.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -219,7 +229,7 @@ int main()
   
 ```  
   
-##  <a name="a-namevectorata-vectorat"></a><a name="vector__at"></a>  vector:: at  
+##  <a name="a-namevectorata--vectorat"></a><a name="vector__at"></a>vector::at  
  返回对矢量中指定位置的元素的引用。  
   
 ```  
@@ -233,14 +243,14 @@ const_reference at(size_type _Pos) const;
  要在矢量中引用的元素的下标或位置编号。  
   
 ### <a name="return-value"></a>返回值  
- 对自变量中的下标元素的引用。 如果 `_Off` 大于该向量中的大小 **在** 将引发异常。  
+ 对自变量中的下标元素的引用。 如果 `_Off` 大于矢量的大小，那么 **at** 会引发异常。  
   
 ### <a name="remarks"></a>备注  
- 如果返回值为 **在** 分配给 `const_reference`, ，无法修改矢量对象。 如果返回值为 **在** 分配给 **引用**, ，可以修改矢量对象。  
+ 如果将 **at** 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 **at** 的返回值分配给 **reference**，则可对矢量对象进行修改。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_at.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -266,7 +276,7 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="a-namevectorbacka-vectorback"></a><a name="vector__back"></a>  vector:: back  
+##  <a name="a-namevectorbacka--vectorback"></a><a name="vector__back"></a>vector::back  
  返回对向量中最后一个元素的引用。  
   
 ```  
@@ -279,13 +289,13 @@ const_reference back() const;
  向量的最后一个元素。 如果向量为空，则返回值不确定。  
   
 ### <a name="remarks"></a>备注  
- 如果返回值为 **回** 分配给 `const_reference`, ，无法修改矢量对象。 如果返回值为 **回** 分配给 **引用**, ，可以修改矢量对象。  
+ 如果将 **back** 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 **back** 的返回值分配给 **reference**，则可对矢量对象进行修改。  
   
- 使用 _SECURE_SCL 1 编译时，如果试图访问空向量中的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。  
+ 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_back.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -307,7 +317,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namevectorbegina-vectorbegin"></a><a name="vector__begin"></a>  vector:: begin  
+##  <a name="a-namevectorbegina--vectorbegin"></a><a name="vector__begin"></a>vector::begin  
  对该向量中第一个元素返回随机访问迭代器。  
   
 ```  
@@ -318,14 +328,14 @@ iterator begin();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 发现的第一个元素的随机访问迭代器 `vector` 或之后的位置为空 `vector`。 您应始终比较返回的值与 [vector:: end](#vector__end) 以确保其有效。  
+ 发现 `vector` 中第一个元素或空 `vector` 之后的位置的随机访问迭代器。 应始终将返回的值与 [vector::end](#vector__end) 进行比较以确保其有效。  
   
 ### <a name="remarks"></a>备注  
- 如果返回值为 `begin` 分配给 [vector:: const_iterator](#vector__const_iterator), 、 `vector` 对象不能修改。 如果返回值为 `begin` 分配给 [vector:: iterator](#vector__iterator), 、 `vector` 可以修改对象。  
+ 如果将 `begin` 的返回值分配给 [vector::const_iterator](#vector__const_iterator)，则无法修改 `vector` 对象。 如果将 `begin` 的返回值分配给 [vector::iterator](#vector__iterator)，则无法修改 `vector` 对象。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_begin.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -368,7 +378,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2  
 ```  
   
-##  <a name="a-namevectorcapacitya-vectorcapacity"></a><a name="vector__capacity"></a>  vector:: capacity  
+##  <a name="a-namevectorcapacitya--vectorcapacity"></a><a name="vector__capacity"></a>vector::capacity  
  返回在不分配更多的存储的情况下向量可以包含的元素数。  
   
 ```  
@@ -379,11 +389,11 @@ size_type capacity() const;
  分配给该向量的当前存储长度。  
   
 ### <a name="remarks"></a>备注  
- 成员函数 [调整大小](#vector__resize) 将会更高效分配足够内存时以适应它。 使用成员函数 [保留](#vector__reserve) 来指定分配的内存量。  
+ 如果为成员函数 [resize](#vector__resize) 分配了足够的内存，它将更高效。 使用成员函数 [reserve](#vector__reserve) 指定分配的内存量。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_capacity.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -409,7 +419,7 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.  
 ```  
   
-##  <a name="a-namevectorcbegina-vectorcbegin"></a><a name="vector__cbegin"></a>  vector:: cbegin  
+##  <a name="a-namevectorcbegina--vectorcbegin"></a><a name="vector__cbegin"></a>vector::cbegin  
  返回确定范围中第一个元素地址的 `const` 迭代器。  
   
 ```  
@@ -422,10 +432,9 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>备注  
  由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 通常情况下，结合使用 [自动](../cpp/auto-cpp.md) 类型推导关键字，如下面的示例中所示。 在示例中，请考虑 `Container` 的可修改 (非 `const`) 容器支持任何种类的 `begin()` 和 `cbegin()`。  
+ 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在该示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非 `const`）的容器。  
   
 ```cpp  
- 
 auto i1 = Container.begin();
 // i1 is Container<T>::iterator   
 auto i2 = Container.cbegin();
@@ -433,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namevectorcenda-vectorcend"></a><a name="vector__cend"></a>  vector:: cend  
+##  <a name="a-namevectorcenda--vectorcend"></a><a name="vector__cend"></a>vector::cend  
  返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
   
 ```  
@@ -446,10 +455,9 @@ const_iterator cend() const;
 ### <a name="remarks"></a>备注  
  `cend` 用于测试迭代器是否超过了其范围的末尾。  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 通常情况下，结合使用 [自动](../cpp/auto-cpp.md) 类型推导关键字，如下面的示例中所示。 在示例中，请考虑 `Container` 的可修改 (非 `const`) 容器支持任何种类的 `end()` 和 `cend()`。  
+ 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的 (non- `const`) 任何类型的容器。  
   
 ```cpp  
- 
 auto i1 = Container.end();
 // i1 is Container<T>::iterator   
 auto i2 = Container.cend();
@@ -459,7 +467,7 @@ auto i2 = Container.cend();
   
  不应对 `cend` 返回的值取消引用。  
   
-##  <a name="a-namevectorcleara-vectorclear"></a><a name="vector__clear"></a>  vector:: clear  
+##  <a name="a-namevectorcleara--vectorclear"></a><a name="vector__clear"></a>vector::clear  
  清除向量的元素。  
   
 ```  
@@ -468,7 +476,7 @@ void clear();
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_clear.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -494,8 +502,8 @@ The size of v1 is 3
 The size of v1 after clearing is 0  
 ```  
   
-##  <a name="a-namevectorconstiteratora-vectorconstiterator"></a><a name="vector__const_iterator"></a>  vector:: const_iterator  
- 读取的类型提供的随机访问迭代器可 **const** 向量中的元素。  
+##  <a name="a-namevectorconstiteratora--vectorconstiterator"></a><a name="vector__const_iterator"></a>vector::const_iterator  
+ 一个类型，它提供可读取矢量中 **const** 元素的随机访问迭代器。  
   
 ```  
 typedef implementation-defined const_iterator;  
@@ -505,10 +513,10 @@ typedef implementation-defined const_iterator;
  `const_iterator` 类型不能用于修改元素的值。  
   
 ### <a name="example"></a>示例  
-  请参阅示例 [回](#vector__back) 有关的示例，使用 `const_iterator`。  
+  有关使用 `const_iterator` 的示例，请参阅 [back](#vector__back) 的示例。  
   
-##  <a name="a-namevectorconstpointera-vectorconstpointer"></a><a name="vector__const_pointer"></a>  vector:: const_pointer  
- 提供指向的指针的类型 **const** 向量中的元素。  
+##  <a name="a-namevectorconstpointera--vectorconstpointer"></a><a name="vector__const_pointer"></a>vector::const_pointer  
+ 一个类型，它提供指向矢量中 **const** 元素的指针。  
   
 ```  
 typedef typename Allocator::const_pointer const_pointer;  
@@ -517,10 +525,10 @@ typedef typename Allocator::const_pointer const_pointer;
 ### <a name="remarks"></a>备注  
  `const_pointer` 类型不能用于修改元素的值。  
   
-  [迭代器](#vector__iterator) 更常用于访问向量元素。  
+ [iterator](#vector__iterator) 更常用于访问矢量元素。  
   
-##  <a name="a-namevectorconstreferencea-vectorconstreference"></a><a name="vector__const_reference"></a>  vector:: const_reference  
- 提供对引用的类型 **const** 元素存储在向量中用来读取和执行 **const** 操作。  
+##  <a name="a-namevectorconstreferencea--vectorconstreference"></a><a name="vector__const_reference"></a>vector::const_reference  
+ 一种类型，此类型提供对用于读取和执行 **const** 操作的矢量中存储的 **const** 元素的引用。  
   
 ```  
 typedef typename Allocator::const_reference const_reference;  
@@ -531,7 +539,7 @@ typedef typename Allocator::const_reference const_reference;
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_const_ref.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -561,20 +569,20 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="a-namevectorconstreverseiteratora-vectorconstreverseiterator"></a><a name="vector__const_reverse_iterator"></a>  vector:: const_reverse_iterator  
- 一种提供随机访问迭代器可读取任何 **const** 向量中的元素。  
+##  <a name="a-namevectorconstreverseiteratora--vectorconstreverseiterator"></a><a name="vector__const_reverse_iterator"></a>vector::const_reverse_iterator  
+ 一个类型，它提供可读取矢量中任何 **const** 元素的随机访问迭代器。  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 一种类型 `const_reverse_iterator` 无法修改元素的值，用于循环访问向量按相反的顺序。  
+ `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问矢量。  
   
 ### <a name="example"></a>示例  
-  请参阅 [rbegin](#vector__rbegin) 以举例说明如何声明和使用迭代器。  
+  有关如何声明和使用迭代器的示例，请参阅 [rbegin](#vector__rbegin)。  
   
-##  <a name="a-namevectorcrbegina-vectorcrbegin"></a><a name="vector__crbegin"></a>  vector:: crbegin  
+##  <a name="a-namevectorcrbegina--vectorcrbegin"></a><a name="vector__crbegin"></a>vector::crbegin  
  返回一个指向反向矢量中第一个元素的常量迭代器。  
   
 ```  
@@ -582,14 +590,14 @@ const_reverse_iterator crbegin() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个常量反向随机访问迭代器定址反向的第一个元素 [向量](../standard-library/vector-class.md) 或发现曾是非反向的最后一个元素 `vector`。  
+ 发现反向[矢量](../standard-library/vector-class.md)中的第一个元素或发现曾是非反向 `vector` 中的最后一个元素的常量反向双向迭代器。  
   
 ### <a name="remarks"></a>备注  
  返回值为 `crbegin` 时，无法修改 `vector` 对象。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_crbegin.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -620,20 +628,20 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.  
 ```  
   
-##  <a name="a-namevectorcrenda-vectorcrend"></a><a name="vector__crend"></a>  vector:: crend  
- 返回发现反向向量中的最后一个元素之后的位置的常量迭代器。  
+##  <a name="a-namevectorcrenda--vectorcrend"></a><a name="vector__crend"></a>vector::crend  
+ 返回一个常量迭代器，此迭代器用于发现反向矢量中最后一个元素之后的位置。  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个常量反向随机访问迭代器，此迭代中发现反向最后一个元素之后的位置 [向量](../standard-library/vector-class.md) (在非反向之前的第一个元素的位置 `vector`)。  
+ 用于寻址反向[矢量](../standard-library/vector-class.md)中最后一个元素之后的位置（非反向 `vector` 中第一个元素之前的位置）的常量反向随机存取迭代器。  
   
 ### <a name="remarks"></a>备注  
- `crend` 使用与反向 `vector` 就像 [vector:: cend](#vector__cend) 与使用 `vector`。  
+ `crend` 用于反向 `vector`，正如 [vector::cend](#vector__cend) 用于 `vector` 一样。  
   
- 返回值为 `crend` （适当递减）， `vector` 对象不能修改。  
+ 由于使用 `crend` 的返回值（适当递减），因此不能修改 `vector` 对象。  
   
  `crend` 可用于测试反向迭代器是否已到达其 `vector` 的末尾。  
   
@@ -641,7 +649,7 @@ const_reverse_iterator crend() const;
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_crend.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -666,7 +674,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namevectordataa-vectordata"></a><a name="vector__data"></a>  vector:: data  
+##  <a name="a-namevectordataa--vectordata"></a><a name="vector__data"></a>vector::data  
  返回指向向量中第一个元素的指针。  
   
 ```  
@@ -677,11 +685,11 @@ pointer data();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 中的第一个元素的指针 [向量](../standard-library/vector-class.md) 或之后的位置为空 `vector`。  
+ 一个指针，它指向[矢量](../standard-library/vector-class.md)中第一个元素或紧随空 `vector` 后的位置。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_data.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -721,7 +729,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2  
 ```  
   
-##  <a name="a-namevectordifferencetypea-vectordifferencetype"></a><a name="vector__difference_type"></a>  vector:: difference_type  
+##  <a name="a-namevectordifferencetypea--vectordifferencetype"></a><a name="vector__difference_type"></a>vector::difference_type  
  一个类型，它提供引用同一向量中元素的两个迭代器之间的差异。  
   
 ```  
@@ -729,13 +737,13 @@ typedef typename Allocator::difference_type difference_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 一个 `difference_type` 可以也被描述为两个指针之间的元素数目因为指向元素的指针包含它的地址。  
+ `difference_type` 也可以被描述为两个指针之间的元素数，因为指向一个元素的指针包含其地址。  
   
-  [迭代器](#vector__iterator) 更常用于访问向量元素。  
+ [iterator](#vector__iterator) 更常用于访问矢量元素。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_diff_type.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -776,7 +784,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.  
 ```  
   
-##  <a name="a-namevectoremplacea-vectoremplace"></a><a name="vector__emplace"></a>  vector:: emplace  
+##  <a name="a-namevectoremplacea--vectoremplace"></a><a name="vector__emplace"></a>vector::emplace  
  将就地构造的元素插入到指定位置的向量中。  
   
 ```  
@@ -789,19 +797,19 @@ iterator emplace(
   
 |||  
 |-|-|  
-|参数|描述|  
-|`_Where`|中的位置 [向量](../standard-library/vector-class.md) 插入的第一个元素的位置。|  
+|参数|说明|  
+|`_Where`|[矢量](../standard-library/vector-class.md)中插入第一个元素的位置。|  
 |` val`|插入到 `vector` 中的元素的值。|  
   
 ### <a name="return-value"></a>返回值  
  该函数将返回一个指向 `vector` 中新元素的插入位置的迭代器。  
   
 ### <a name="remarks"></a>备注  
- 任何插入操作可以产生巨额费用，请参阅 [vector 类](../standard-library/vector-class.md) 有关的讨论 `vector` 性能。  
+ 任何插入操作都可能产生巨额费用，请参阅 [vector 类](../standard-library/vector-class.md)，了解有关 `vector` 性能的讨论。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_emplace.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -841,7 +849,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30  
 ```  
   
-##  <a name="a-namevectoremplacebacka-vectoremplaceback"></a><a name="vector__emplace_back"></a>  vector:: emplace_back  
+##  <a name="a-namevectoremplacebacka--vectoremplaceback"></a><a name="vector__emplace_back"></a>vector::emplace_back  
  将一个就地构造的元素添加到向量末尾。  
   
 ```  
@@ -858,7 +866,6 @@ void emplace_back(Types&&... _Args);
 ### <a name="example"></a>示例  
   
 ```cpp  
-  
 #include <vector>  
 struct obj  
 {  
@@ -873,19 +880,19 @@ int main()
   
 ```  
   
-##  <a name="a-namevectoremptya-vectorempty"></a><a name="vector__empty"></a>  vector:: empty  
- 测试是否有该向量为空。  
+##  <a name="a-namevectoremptya--vectorempty"></a><a name="vector__empty"></a>vector::empty  
+ 测试矢量是否为空。  
   
 ```  
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- **true** 如果向量为空，则为 **false** 如果矢量不为空。  
+ 如果矢量为空，则为 **true**；如果矢量不为空，则为 **false**。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_empty.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -909,7 +916,7 @@ int main( )
 The vector is not empty.  
 ```  
   
-##  <a name="a-namevectorenda-vectorend"></a><a name="vector__end"></a>  vector:: end  
+##  <a name="a-namevectorenda--vectorend"></a><a name="vector__end"></a>vector::end  
  返回超过末尾迭代器。  
   
 ```  
@@ -922,11 +929,11 @@ const_iterator end() const;
  向量的超过末尾迭代器。 如果该向量为空，则 `vector::end() == vector::begin()`。  
   
 ### <a name="remarks"></a>备注  
- 如果返回值为 **结束** 分配给类型的变量 `const_iterator`, ，无法修改矢量对象。 如果返回值为 **结束** 分配给类型的变量 **迭代器**, ，可以修改矢量对象。  
+ 如果将 **end** 的返回值分配给 `const_iterator` 类型的变量，则无法修改矢量对象。 如果将 **end** 的返回值分配给 **iterator** 类型的变量，则可以修改矢量对象。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_end.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -950,7 +957,7 @@ int main( )
 2  
 ```  
   
-##  <a name="a-namevectorerasea-vectorerase"></a><a name="vector__erase"></a>  vector:: erase  
+##  <a name="a-namevectorerasea--vectorerase"></a><a name="vector__erase"></a>vector::erase  
  从指定位置删除向量中的一个元素或一系列元素。  
   
 ```  
@@ -976,7 +983,7 @@ iterator erase(
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_erase.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1019,7 +1026,7 @@ v1 = 20 30 40 50
 v1 = 20 50  
 ```  
   
-##  <a name="a-namevectorfronta-vectorfront"></a><a name="vector__front"></a>  vector:: front  
+##  <a name="a-namevectorfronta--vectorfront"></a><a name="vector__front"></a>vector::front  
  返回对向量中第一个元素的引用。  
   
 ```  
@@ -1032,13 +1039,13 @@ const_reference front() const;
  对向量对象中第一个元素的引用。 如果向量为空，则返回值不确定。  
   
 ### <a name="remarks"></a>备注  
- 如果将 `front` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果返回值为 `front` 分配给 **引用**, ，可以修改矢量对象。  
+ 如果将 `front` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 `front` 的返回值分配给 **reference**，则可以修改矢量对象。  
   
- 使用 _SECURE_SCL 1 编译时，如果试图访问空向量中的元素，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。  
+ 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空矢量中的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_front.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1062,8 +1069,8 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namevectorgetallocatora-vectorgetallocator"></a><a name="vector__get_allocator"></a>  vector:: get_allocator  
- 返回用于构造向量的分配器对象的副本。  
+##  <a name="a-namevectorgetallocatora--vectorgetallocator"></a><a name="vector__get_allocator"></a>vector::get_allocator  
+ 返回用于构造矢量的分配器对象的一个副本。  
   
 ```  
 Allocator get_allocator() const;
@@ -1073,11 +1080,11 @@ Allocator get_allocator() const;
  向量所使用的分配器。  
   
 ### <a name="remarks"></a>备注  
- Vector 类的分配器指定类管理存储的方式。 STL 容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。  
+ 矢量类的分配器指定类管理存储的方式。 C++ 标准库容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_get_allocator.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1098,7 +1105,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namevectorinserta-vectorinsert"></a><a name="vector__insert"></a>  vector:: insert  
+##  <a name="a-namevectorinserta--vectorinsert"></a><a name="vector__insert"></a>vector::insert  
  将一个、多个或一系列元素插入到指定位置的向量中。  
   
 ```  
@@ -1128,20 +1135,20 @@ void insert(
 |-|-|  
 |参数|描述|  
 |`_Where`|向量中插入第一个元素的位置。|  
-|` val`|插入到向量中的元素的值。|  
-|` count`|插入向量中的元素数目。|  
-|` first`|要复制的范围元素中的第一个元素的位置。|  
-|` last`|要复制的元素范围以外的第一个元素的位置。|  
+|`val`|插入到向量中的元素的值。|  
+|`count`|插入向量中的元素数目。|  
+|`first`|要复制的范围元素中的第一个元素的位置。|  
+|`last`|要复制的元素范围以外的第一个元素的位置。|  
   
 ### <a name="return-value"></a>返回值  
  前两个 `insert` 函数返回一个指定新元素插入到向量的位置的迭代器。  
   
 ### <a name="remarks"></a>备注  
- 任何插入操作可以产生巨额费用，请参阅 [vector 类](../standard-library/vector-class.md) 有关的讨论 `vector` 性能。  
+ 前提是，`first` 和 `last` 一定不能是矢量中的迭代器，或行为不可确定。 任何插入操作都可能产生巨额费用，请参阅 [vector 类](../standard-library/vector-class.md)，了解有关 `vector` 性能的讨论。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_insert.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1203,7 +1210,7 @@ v1 = 10 50 50 40 50 50 50 50 20 30
 vv1[0] = 10 50 50 40 50 50 50 50 20 30  
 ```  
   
-##  <a name="a-namevectoriteratora-vectoriterator"></a><a name="vector__iterator"></a>  vector:: iterator  
+##  <a name="a-namevectoriteratora--vectoriterator"></a><a name="vector__iterator"></a>vector::iterator  
  一个类型，它提供可读取或修改向量中任何元素的随机访问迭代器。  
   
 ```  
@@ -1211,12 +1218,12 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>备注  
- 一种类型 **迭代器** 可以用于修改元素的值。  
+ **iterator** 类型可用于修改元素的值。  
   
 ### <a name="example"></a>示例  
-  请参阅示例 [开始](#vector__begin)。  
+  请参阅 [begin](#vector__begin) 的示例。  
   
-##  <a name="a-namevectormaxsizea-vectormaxsize"></a><a name="vector__max_size"></a>  vector:: max_size  
+##  <a name="a-namevectormaxsizea--vectormaxsize"></a><a name="vector__max_size"></a>vector::max_size  
  返回向量的最大长度。  
   
 ```  
@@ -1228,7 +1235,7 @@ size_type max_size() const;
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_max_size.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1245,7 +1252,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namevectoroperatorata-vectoroperator"></a><a name="vector__operator_at"></a>  vector:: operator]  
+##  <a name="a-namevectoroperatorata--vectoroperator"></a><a name="vector__operator_at"></a>vector::operator[]  
  返回对指定位置的矢量元素的引用。  
   
 ```  
@@ -1267,7 +1274,7 @@ const_reference operator[](size_type Pos) const;
 ### <a name="remarks"></a>备注  
  如果将 `operator[]` 的返回值分配给 `const_reference`，则无法修改矢量对象。 如果将 `operator[]` 的返回值分配给引用，则可以修改矢量对象。  
   
- 使用 _SECURE_SCL 1 编译时 (使用控制 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md))，如果您尝试访问矢量边界以外的元素将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md) 。  
+ 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问矢量边界之外的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -1290,7 +1297,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namevectoroperatoreqa-vectoroperator"></a><a name="vector__operator_eq"></a>  vector:: operator =  
+##  <a name="a-namevectoroperatoreqa--vectoroperator"></a><a name="vector__operator_eq"></a>vector::operator=  
  用另一个向量的副本替换该向量中的元素。  
   
 ```  
@@ -1303,15 +1310,15 @@ vector& operator=(vector&& right);
   
 |||  
 |-|-|  
-|参数|描述|  
-|` right`| [向量](../standard-library/vector-class.md) 复制到 `vector`。|  
+|参数|说明|  
+|` right`|要复制到 `vector` 中的[矢量](../standard-library/vector-class.md)。|  
   
 ### <a name="remarks"></a>备注  
  清除 `vector` 中的任何现有元素后，`operator=` 会将 ` right` 的内容复制或移动到 `vector`。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_operator_as.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1350,7 +1357,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namevectorpointera-vectorpointer"></a><a name="vector__pointer"></a>  vector:: pointer  
+##  <a name="a-namevectorpointera--vectorpointer"></a><a name="vector__pointer"></a>vector::pointer  
  一个类型，提供指向向量中元素的指针。  
   
 ```  
@@ -1358,11 +1365,11 @@ typedef typename Allocator::pointer pointer;
 ```  
   
 ### <a name="remarks"></a>备注  
- 一种类型 **指针** 可以用于修改元素的值。  
+ **pointer** 类型可用于修改元素的值。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_pointer.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1390,7 +1397,7 @@ int main( )
 44  
 ```  
   
-##  <a name="a-namevectorpopbacka-vectorpopback"></a><a name="vector__pop_back"></a>  vector:: pop_back  
+##  <a name="a-namevectorpopbacka--vectorpopback"></a><a name="vector__pop_back"></a>vector::pop_back  
  删除矢量末尾处的元素。  
   
 ```  
@@ -1398,9 +1405,9 @@ void pop_back();
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关代码示例，请参阅 [vector:: push_back （)](#vector__push_back)。  
+ 有关代码示例，请参阅 [vector::push_back()](#vector__push_back)。  
   
-##  <a name="a-namevectorpushbacka-vectorpushback"></a><a name="vector__push_back"></a>  vector:: push_back  
+##  <a name="a-namevectorpushbacka--vectorpushback"></a><a name="vector__push_back"></a>vector::push_back  
  在矢量末尾处添加一个元素。  
   
 ```  
@@ -1454,24 +1461,23 @@ int main()
 }  
 ```  
   
-##  <a name="a-namevectorrbegina-vectorrbegin"></a><a name="vector__rbegin"></a>  vector:: rbegin  
+##  <a name="a-namevectorrbegina--vectorrbegin"></a><a name="vector__rbegin"></a>vector::rbegin  
  返回指向反向向量中第一个元素的迭代器。  
   
 ```  
 reverse_iterator rbegin();
-
 const_reverse_iterator rbegin() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 反向随机访问迭代器寻址反向向量中的第一个元素或发现曾非反向向量中的最后一个元素。  
+ 发现反向矢量中的第一个元素或发现曾是非反向矢量中的最后一个元素的反向双向迭代器。  
   
 ### <a name="remarks"></a>备注  
- 如果将 `rbegin` 的返回值分配给 `const_reverse_iterator`，则无法修改矢量对象。 如果返回值为 `rbegin` 分配给 `reverse_iterator`, ，可以修改矢量对象。  
+ 如果将 `rbegin` 的返回值分配给 `const_reverse_iterator`，则无法修改矢量对象。 如果将 `rbegin` 的返回值分配给 `reverse_iterator`，则可以修改矢量对象。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_rbegin.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1502,7 +1508,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.  
 ```  
   
-##  <a name="a-namevectorreferencea-vectorreference"></a><a name="vector__reference"></a>  vector:: reference  
+##  <a name="a-namevectorreferencea--vectorreference"></a><a name="vector__reference"></a>vector::reference  
  一个类型，它提供对向量中存储的元素的引用。  
   
 ```  
@@ -1510,32 +1516,31 @@ typedef typename Allocator::reference reference;
 ```  
   
 ### <a name="example"></a>示例  
-  请参阅 [在](#vector__at) 以举例说明如何使用 **引用** 在 vector 类。  
+  有关如何使用矢量类中的 **reference** 的示例，请参阅 [at](#vector__at)。  
   
-##  <a name="a-namevectorrenda-vectorrend"></a><a name="vector__rend"></a>  vector:: rend  
- 返回发现反向向量中的最后一个元素之后的位置的迭代器。  
+##  <a name="a-namevectorrenda--vectorrend"></a><a name="vector__rend"></a>vector::rend  
+ 返回一个迭代器，此迭代器用于发现反向矢量中最后一个元素之后的位置。  
   
 ```  
 const_reverse_iterator rend() const;
-
 reverse_iterator rend();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个反向随机访问迭代器，此迭代之后反向向量 （非反向向量中第一个元素之前的位置） 中的最后一个元素的位置。  
+ 用于发现反向矢量中最后一个元素之后的位置（非反向矢量中第一个元素之前的位置）的反向随机访问迭代器。  
   
 ### <a name="remarks"></a>备注  
- `rend` 与一个反向向量一起使用一样 [结束](#vector__end) 与一个向量一起使用。  
+ `rend` 用于反向矢量，正如 [end](#vector__end) 用于矢量一样。  
   
- 如果返回值为 `rend` 分配给 `const_reverse_iterator`, ，则无法修改矢量对象。 如果返回值为 `rend` 分配给 `reverse_iterator`, ，则可以修改矢量对象。  
+ 如果将 `rend` 的返回值分配给 `const_reverse_iterator`，则无法修改矢量对象。 如果将 `rend` 的返回值分配给 `reverse_iterator`，则可以修改矢量对象。  
   
- `rend` 可以用于测试反向迭代器是否已到达其向量末尾。  
+ `rend` 可用于测试反向迭代器是否已到达其矢量末尾。  
   
  不应对 `rend` 返回的值取消引用。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_rend.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1560,7 +1565,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namevectorreservea-vectorreserve"></a><a name="vector__reserve"></a>  vector:: reserve  
+##  <a name="a-namevectorreservea--vectorreserve"></a><a name="vector__reserve"></a>vector::reserve  
  为向量对象保留最小的存储长度，必要时为其分配空间。  
   
 ```  
@@ -1573,7 +1578,7 @@ void reserve(size_type count);
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_reserve.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1599,12 +1604,11 @@ Current capacity of v1 = 1
 Current capacity of v1 = 20  
 ```  
   
-##  <a name="a-namevectorresizea-vectorresize"></a><a name="vector__resize"></a>  vector:: resize  
+##  <a name="a-namevectorresizea--vectorresize"></a><a name="vector__resize"></a>vector::resize  
  为矢量指定新的大小。  
   
 ```  
 void resize(size_type Newsize);
-
 void resize(size_type Newsize, Type Val);
 ```  
   
@@ -1618,7 +1622,7 @@ void resize(size_type Newsize, Type Val);
 ### <a name="remarks"></a>备注  
  如果容器的大小小于请求的大小 `Newsize`，那么会在矢量中添加元素，直到该容器达到请求的大小。 如果容器的大小大于请求的大小，最接近容器末尾的元素将被删除，直到该容器达到大小 `Newsize`。 如果容器的当前大小与请求的大小相同，则不采取任何操作。  
   
- [大小](#vector__size) 反映向量的当前大小。  
+ [size](#vector__size) 表示矢量的当前大小。  
   
 ### <a name="example"></a>示例  
   
@@ -1651,7 +1655,7 @@ void resize(size_type Newsize, Type Val);
 //////////////////////////////////////////////////////////////////////  
   
 // The debugger cannot handle symbols more than 255 characters long.  
-// STL often creates symbols longer than that.  
+// The C++ Standard Library often creates symbols longer than that.  
 // The warning can be disabled:  
 //#pragma warning(disable:4786)  
   
@@ -1726,7 +1730,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-namevectorreverseiteratora-vectorreverseiterator"></a><a name="vector__reverse_iterator"></a>  vector:: reverse_iterator  
+##  <a name="a-namevectorreverseiteratora--vectorreverseiterator"></a><a name="vector__reverse_iterator"></a>vector::reverse_iterator  
  一个类型，它提供可读取或修改反向矢量中的任意元素的随机访问迭代器。  
   
 ```  
@@ -1737,9 +1741,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
  `reverse_iterator` 类型用于反向循环访问向量。  
   
 ### <a name="example"></a>示例  
-  请参阅示例 [rbegin](#vector__rbegin)。  
+  请参阅 [rbegin](#vector__rbegin) 的示例。  
   
-##  <a name="a-namevectorshrinktofita-vectorshrinktofit"></a><a name="vector__shrink_to_fit"></a>  vector:: shrink_to_fit  
+##  <a name="a-namevectorshrinktofita--vectorshrinktofit"></a><a name="vector__shrink_to_fit"></a>vector::shrink_to_fit  
  放弃额外容量。  
   
 ```  
@@ -1748,7 +1752,7 @@ void shrink_to_fit();
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_shrink_to_fit.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1778,7 +1782,7 @@ Current capacity of v1 = 20
 Current capacity of v1 = 1  
 ```  
   
-##  <a name="a-namevectorsizea-vectorsize"></a><a name="vector__size"></a>  vector:: size  
+##  <a name="a-namevectorsizea--vectorsize"></a><a name="vector__size"></a>vector::size  
  返回向量中的元素数量。  
   
 ```  
@@ -1790,7 +1794,7 @@ size_type size() const;
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_size.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1817,7 +1821,7 @@ Vector length is 1.
 Vector length is now 2.  
 ```  
   
-##  <a name="a-namevectorsizetypea-vectorsizetype"></a><a name="vector__size_type"></a>  vector:: size_type  
+##  <a name="a-namevectorsizetypea--vectorsizetype"></a><a name="vector__size_type"></a>vector::size_type  
  一个类型，它计算矢量中的元素数目。  
   
 ```  
@@ -1825,9 +1829,9 @@ typedef typename Allocator::size_type size_type;
 ```  
   
 ### <a name="example"></a>示例  
-  请参阅示例 [容量](#vector__capacity)。  
+  请参阅 [capacity](#vector__capacity) 的示例。  
   
-##  <a name="a-namevectorswapa-vectorswap"></a><a name="vector__swap"></a>  vector:: swap  
+##  <a name="a-namevectorswapa--vectorswap"></a><a name="vector__swap"></a>vector::swap  
  交换两个向量的元素。  
   
 ```  
@@ -1848,7 +1852,7 @@ friend void swap(
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_swap.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1885,7 +1889,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3  
 ```  
   
-##  <a name="a-namevectorvaluetypea-vectorvaluetype"></a><a name="vector__value_type"></a>  vector:: value_type  
+##  <a name="a-namevectorvaluetypea--vectorvaluetype"></a><a name="vector__value_type"></a>vector::value_type  
  一个类型，它代表向量中存储的数据类型。  
   
 ```  
@@ -1893,11 +1897,11 @@ typedef typename Allocator::value_type value_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- `value_type` 是模板参数的同义词 **类型**。  
+ `value_type` 是模板参数 **Type** 的同义词。  
   
 ### <a name="example"></a>示例  
   
-```  
+```cpp  
 // vector_value_type.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -1916,47 +1920,24 @@ int main( )
 44  
 ```  
   
-##  <a name="a-namevectorvectora-vectorvector"></a><a name="vector__vector"></a>  vector:: vector  
+##  <a name="a-namevectorvectora--vectorvector"></a><a name="vector__vector"></a>vector::vector  
  构造一个具有以下特性的矢量：特定大小、特定值的元素、特定分配器或作为其他矢量的全部或部分副本。  
   
 ```  
 vector();
+explicit vector(const Allocator& Al);
+explicit vector(size_type Count);
+vector(size_type Count, const Type& Val);
+vector(size_type Count, const Type& Val, const Allocator& Al);
 
-explicit vector(
-    const Allocator& Al);
-
-explicit vector(
-    size_type Count);
-
-vector(
-    size_type Count,  
-    const Type& Val);
-
-vector(
-    size_type Count,  
-    const Type& Val,  
-    const Allocator& Al);
-
-vector(
-    const vector& Right);
-
-vector(
-    vector&& Right);
-
-vector(
-    initializer_list<Type> IList,  
-    const _Allocator& Al);
+vector(const vector& Right);
+vector(vector&& Right);
+vector(initializer_list<Type> IList, const _Allocator& Al);
 
 template <class InputIterator>  
-vector(
- InputIterator First,  
-    InputIterator Last);
-
+vector(InputIterator First, InputIterator Last);
 template <class InputIterator>  
-vector(
- InputIterator First,  
-    InputIterator Last,  
-    const Allocator& Al);
+vector(InputIterator First, InputIterator Last, const Allocator& Al);
 ```  
   
 ### <a name="parameters"></a>参数  
@@ -1964,7 +1945,7 @@ vector(
 |||  
 |-|-|  
 |参数|描述|  
-|`Al`|要用于此对象的分配器类。 [get_allocator](#vector__get_allocator) 返回该对象的分配器类。|  
+|`Al`|要用于此对象的分配器类。 [get_allocator](#vector__get_allocator) 返回对象的分配器类。|  
 |`Count`|构造的矢量中的元素数。|  
 |`Val`|构造的矢量中的元素值。|  
 |`Right`|要成为副本的构造的矢量中的矢量。|  
@@ -1973,13 +1954,13 @@ vector(
 |`IList`|包含要复制的元素的 initializer_list。|  
   
 ### <a name="remarks"></a>备注  
- 所有构造函数都会存储一个分配器对象 ( `Al`) 并初始化此矢量。  
+ 所有构造函数都存储分配器对象 (`Al`) 并初始化此矢量。  
   
- 前两个构造函数指定一个空初始矢量。 第二个显式指定的分配器类型 ( `Al`) 使用。  
+ 前两个构造函数指定一个空初始矢量。 第二个构造函数显式指定要使用的分配器类型 (`Al`)。  
   
- 第三个构造函数指定的指定数量的重复 ( `Count`) 的元素的默认值为类 `Type`。  
+ 第三个构造函数指定特定数目 (`Count`) 的元素的重复，这些元素具有类 `Type` 的默认值。  
   
- 第四个和第五个构造函数指定的重复 ( `Count`) 值的元素 `Val`。  
+ 第四个和第五个构造函数指定 (`Count`) 元素的重复，元素的值为 `Val`。  
   
  第六个构造函数指定矢量 `Right` 的副本。  
   
@@ -1987,7 +1968,7 @@ vector(
   
  第八个构造函数使用 initializer_list 指定元素。  
   
- 第九个和第十个构造函数复制范围 [ `First`, ，`Last`) 的一个向量。  
+ 第九个和第十个构造函数复制矢量的范围（`First`、`Last`）。  
   
 ### <a name="example"></a>示例  
   
@@ -2086,6 +2067,7 @@ v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [标准模板库](../misc/standard-template-library.md)
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+
 

@@ -1,53 +1,73 @@
 ---
 title: "is_trivially_copyable 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "is_trivially_copyable"
-  - "std.is_trivially_copyable"
-  - "std::is_trivially_copyable"
-  - "type_traits/std::is_trivially_copyable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_trivially_copyable"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- is_trivially_copyable
+- std.is_trivially_copyable
+- std::is_trivially_copyable
+- type_traits/std::is_trivially_copyable
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_trivially_copyable
 ms.assetid: 89a53bf8-036c-4108-91e1-fe34adbde8b3
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# is_trivially_copyable 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3e154db9981558eeef6c802a0e9538bdb04a8f9c
+ms.lasthandoff: 02/24/2017
 
-测试类型是否是完全复制的类型。  
+---
+# <a name="istriviallycopyable-class"></a>is_trivially_copyable 类
+测试类型是否为普通复制类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template <class T>
+struct is_trivially_copyable;
 ```  
-template<class T>  
-    struct is_trivially_copyable;  
-```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
  要查询的类型。  
   
-## 备注  
- 如果类型谓词的实例将为 true 类型 `T` 是完全复制类型，否则为 false。 完全复制的类型具有任何非普通的复制操作、 移动操作或析构函数。 通常情况下，复制操作将被视为不重要，如果它可以实现为按位复制。 内置类型和完全复制类型的数组是完全复制。  
+## <a name="remarks"></a>备注  
+ 如果类型 `T` 是普通复制类型，则类型谓词的实例为 true；否则为 false。 普通复制类型不具有任何重要的复制操作、移动操作或析构函数。 一般而言，如果复制操作可作为按位复制实现，则可将其视为普通复制。 内置类型和普通复制类型数组都可进行普通复制。  
   
-## 要求  
- **标头：**\<type\_traits\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<type_traits>  
   
- **命名空间:** std  
+ **命名空间：** std  
   
-## 请参阅  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>另请参阅  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

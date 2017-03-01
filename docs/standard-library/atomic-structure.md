@@ -1,80 +1,95 @@
 ---
-title: "atomic 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic/std::atomic"
-dev_langs: 
-  - "C++"
+title: "atomic 结构 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- atomic/std::atomic
+dev_langs:
+- C++
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# atomic 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 03665af409892b087bcc8a0858513f1f96f0c41d
+ms.lasthandoff: 02/24/2017
 
-描述对类型 `Ty`的存储值的基本操作的对象。  
+---
+# <a name="atomic-structure"></a>atomic 结构
+描述对类型 `Ty` 的存储值执行原子操作的对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template <class Ty>
+struct atomic;
 ```  
-template <class Ty>  
-struct atomic;  
-```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|Name|说明|  
-|----------|--------|  
-|[atomic::atomic 构造函数](../Topic/atomic::atomic%20Constructor.md)|构造一个基对象。|  
+|名称|说明|  
+|----------|-----------------|  
+|[atomic::atomic 构造函数](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|构造一个原子对象。|  
   
-### 公共运算符  
+### <a name="public-operators"></a>公共运算符  
   
-|Name|说明|  
-|----------|--------|  
-|[atomic::operator Ty 运算符](../Topic/atomic::operator%20Ty%20Operator.md)|读取并返回该存储的值。\([atomic::load 方法](../Topic/atomic::load%20Method.md)\)|  
-|[atomic::operator\= 运算符](../Topic/atomic::operator=%20Operator.md)|使用指定值替换存储的值。\([atomic::store 方法](../Topic/atomic::store%20Method.md)\)|  
-|||  
-|[atomic::operator\+\+ Operator](../Topic/atomic::operator++%20Operator.md)|递增存储的值。  仅使用由整型和指针专用化。|  
-|[atomic::operator\+\= 运算符](../Topic/atomic::operator+=%20Operator.md)|为存储值添加指定值。  仅使用由整型和指针专用化。|  
-|[atomic::operator\-\- 运算符](../Topic/atomic::operator--%20Operator.md)|递减存储的值。  仅使用由整型和指针专用化。|  
-|[atomic::operator\-\= 运算符](../Topic/atomic::operator-=%20Operator.md)|从存储的值减去指定的值。  仅使用由整型和指针专用化。|  
-|[atomic::operator&\= 运算符](../Topic/atomic::operator&=%20Operator.md)|对指定的值执行按位`and` 运算并存储该值 。  只使用完整的专业化。|  
-|[atomic::operator&#124;\= 运算符](../Topic/atomic::operator%7C=%20Operator.md)|对指定的值执行按位`or` 运算并存储该值 。  只使用完整的专业化。|  
-|[atomic::operator^\= 运算符](../Topic/atomic::operator%5E=%20Operator.md)|对指定的值执行按位`exclusive or` 运算并存储该值 。  只使用完整的专业化。|  
+|名称|说明|  
+|----------|-----------------|  
+|[atomic::operator Ty 运算符](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|读取并返回存储的值。 ([atomic::load 方法](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[atomic::operator= 运算符](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|使用指定值替换存储值。 ([atomic::store 方法](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[atomic::operator++ 运算符](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|增加存储值。 仅由整型和指针专用化使用。|  
+|[atomic::operator+= 运算符](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|将指定的值添加到存储值。 仅由整型和指针专用化使用。|  
+|[atomic::operator-- 运算符](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|减小存储值。 仅由整型和指针专用化使用。|  
+|[atomic::operator-= 运算符](http://msdn.microsoft.com/Library/902d0d9f-88fd-4500-aa2d-1e50f443e77c)|从存储值减去指定的值。 仅由整型和指针专用化使用。|  
+|[atomic::operator&= 运算符](http://msdn.microsoft.com/Library/90e730ac-12e1-4abb-98f5-4eadd6861a89)|对指定值和存储值执行按位 `and`。 仅由整型专用化使用。|  
+|[atomic::operator&#124;= 运算符](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|对指定值和存储值执行按位 `or`。 仅由整型专用化使用。|  
+|[atomic::operator^= 运算符](http://msdn.microsoft.com/Library/f2a4da9d-67e8-4249-9161-9998e72a33c2)|对指定值和存储值执行按位 `exclusive or`。 仅由整型专用化使用。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|Name|说明|  
-|----------|--------|  
-|[atomic::compare\_exchange\_strong 方法](../Topic/atomic::compare_exchange_strong%20Method.md)|对 `this` 执行`atomic_compare_and_exchange` 操作并返回结果。|  
-|[atomic::compare\_exchange\_weak 方法](../Topic/atomic::compare_exchange_weak%20Method.md)|对 `this` 执行`weak_atomic_compare_and_exchange` 操作并返回结果。|  
-|[atomic::fetch\_add 方法](../Topic/atomic::fetch_add%20Method.md)|为存储值添加指定值。|  
-|[atomic::fetch\_and 方法](../Topic/atomic::fetch_and%20Method.md)|对指定的值执行按位`and` 运算并存储该值 。|  
-|[atomic::fetch\_or 方法](../Topic/atomic::fetch_or%20Method.md)|对指定的值执行按位`or` 运算并存储该值 。|  
-|[atomic::fetch\_sub 方法](../Topic/atomic::fetch_sub%20Method.md)|从存储的值减去指定的值。|  
-|[atomic::fetch\_xor 方法](../Topic/atomic::fetch_xor%20Method.md)|对指定的值执行按位`exclusive or` 运算并存储该值 。|  
-|[atomic::is\_lock\_free 方法](../Topic/atomic::is_lock_free%20Method.md)|指定在 `this` 的基本操作是否 *任意的锁*。  如果该类型的基本操作不使用锁，基类型是 *任意的锁*。|  
-|[atomic::load 方法](../Topic/atomic::load%20Method.md)|读取并返回该存储的值。|  
-|[atomic::store 方法](../Topic/atomic::store%20Method.md)|使用指定值替换存储的值。|  
+|名称|描述|  
+|----------|-----------------|  
+|[atomic::compare_exchange_strong 方法](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|对 `this` 执行 `atomic_compare_and_exchange` 操作并返回结果。|  
+|[atomic::compare_exchange_weak 方法](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|对 `this` 执行 `weak_atomic_compare_and_exchange` 操作并返回结果。|  
+|[atomic::fetch_add 方法](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|将指定的值添加到存储值。|  
+|[atomic::fetch_and 方法](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|对指定值和存储值执行按位 `and`。|  
+|[atomic::fetch_or 方法](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|对指定值和存储值执行按位 `or`。|  
+|[atomic::fetch_sub 方法](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|从存储值减去指定的值。|  
+|[atomic::fetch_xor 方法](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|对指定值和存储值执行按位 `exclusive or`。|  
+|[atomic::is_lock_free 方法](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|指定 `this` 上的原子操作是否为*无锁*。 如果对类型执行的原子操作都没有使用锁，则原子类型为*无锁*。|  
+|[atomic::load 方法](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|读取并返回存储的值。|  
+|[atomic::store 方法](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|使用指定值替换存储值。|  
   
-## 备注  
- 该类型 `Ty` 必须为 *常用地可复制*。  即使用 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 复制其字节必须生成与原始对象相等的有效 `Ty` 对象。  `compare_exchange_weak` 和 `compare_exchange_strong` 成员函数使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 确定两个 `Ty` 值是否相等。  这些功能将不使用 `Ty`\-定义的 `operator==`。  `atomic` 的成员函数使用 `memcpy` 复制类型 `Ty`的值。  
+## <a name="remarks"></a>备注  
+ 类型 `Ty` 必须*完全可复制*。 即，使用 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 复制其字节必须生成一个与原始对象相等的有效 `Ty` 对象。 `compare_exchange_weak` 和 `compare_exchange_strong` 成员函数使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 来确定两个`Ty` 值是否相等。 这些函数将不会使用 `Ty`-defined `operator==`。 `atomic` 的成员函数使用 `memcpy` 复制类型 `Ty` 的值。  
   
- 部分专用化，`atomic<Ty *>`，为所有指针类型存在。  从该文件中专用化允许向托管指针值增加或减少一个偏移。  算术运算采用类型 `ptrdiff_t` 的参数并根据 `Ty` 的大小使其与普通的地址算法一致。  
+ 部分专用化 `atomic<Ty *>`，对所有指针类型都存在。 通过专用化可将偏移量添加到托管的指针值或者从其中减去该偏移量。 该算术运算采用类型为 `ptrdiff_t` 的参数，并根据 `Ty` 的大小调整该参数，以与普通地址算术保持一致。  
   
- 专用化为除 `bool`的每个整型存在。  每个专用化对于基本算术和逻辑操作提供了一组丰富的方法。  
+ 对于除 `bool` 之外的每个整型类型都均存在专用化。 每个专用化为原子算术和逻辑运算提供了一组丰富的方法。  
   
 ||||  
 |-|-|-|  
@@ -84,13 +99,17 @@ struct atomic;
 |`atomic<unsigned int>`|`atomic<long>`|`atomic<unsigned long>`|  
 |`atomic<long long>`|`atomic<unsigned long long>`|  
   
- 集成专用化从相应的 `atomic_``integral` 类型派生。  例如，`atomic<unsigned int>` 派生自 `atomic_uint`。  
+ 整型专用化派生自相应的 `atomic_``integral` 类型。 例如，`atomic<unsigned int>` 派生自 `atomic_uint`。  
   
-## 要求  
- **标头：**原子  
+## <a name="requirements"></a>要求  
+ **标头：**atomic  
   
- **命名空间:** std  
+ **命名空间：** std  
   
-## 请参阅  
- [\<atomic\>](../standard-library/atomic.md)   
+## <a name="see-also"></a>另请参阅  
+ [\<atomic>](../standard-library/atomic.md)   
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

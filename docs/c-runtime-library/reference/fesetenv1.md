@@ -1,49 +1,65 @@
 ---
-title: "fesetenv1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fesetenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fesetenv"
-  - "fenv/fesetenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fesetenv 函数"
+title: "fesetenv1 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fesetenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fesetenv
+- fenv/fesetenv
+dev_langs:
+- C++
+helpviewer_keywords:
+- fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# fesetenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 40e20a2c6a3f3c22b9206ce078146b44bb841f68
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fesetenv"></a>fesetenv
 设置当前的浮点环境。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int fesetenv(  
@@ -52,29 +68,29 @@ int fesetenv(
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `penv`  
- 指向 `fenv_t` 对象，其中包含浮点环境作为集通过调用 [fegetenv](../Topic/fegetenv2.md) 或 [feholdexcept](../Topic/feholdexcept1.md)。 此外可以通过使用 FE\_DFL\_ENV 宏指定默认启动浮点环境。  
+ 指向 `fenv_t` 对象的指针，其中包含通过调用 [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) 或 [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9) 设置的浮点环境。 此外，也可以通过使用 FE_DFL_ENV 宏指定默认启动浮点环境。  
   
-## 返回值  
- 如果环境已成功设置，则返回 0。 否则，返回一个非零值。  
+## <a name="return-value"></a>返回值  
+ 如果已成功设置环境，则返回 0。        否则，返回一个非零值。  
   
-## 备注  
- `fesetenv` 函数将设置从存储中的值的当前浮点环境 `fenv_t` 指向对象 `penv`。 浮点点环境是状态标志和影响浮点计算的控件模式的组。 这包括舍入模式和浮点异常的状态标志。 如果 `penv` 不是 FE\_DFL\_ENV 或不指向有效 `fenv_t` 对象，后续的行为是不确定。  
+## <a name="remarks"></a>备注  
+ `fesetenv` 函数将从存储在由 `penv` 指向的 `fenv_t` 对象中的值设置当前浮点环境。 浮点环境是一系列影响浮点计算的状态标志和控件模式。 这包括舍入模式和浮点异常的状态标志。  如果 `penv` 不是 FE_DFL_ENV 或未指向有效的 `fenv_t` 对象，则不定义后续行为。  
   
- 对此函数调用设置的异常中的状态标志 `penv` 对象，但它不会引发这些异常。  
+ 对此函数的调用设置 `penv` 对象中的异常状态标志，但它不会引发这些异常。  
   
- 若要使用此功能，必须关闭无法通过使用阻止的访问的浮点优化 `#pragma fenv_access(on)` 指令在调用前。 有关详细信息，请参阅[fenv\_access](../../preprocessor/fenv-access.md)。  
+ 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|函数|C 标头|C\+\+ 标头|  
-|--------|----------|--------------|  
-|`fesetenv`|\<fenv.h\>|\<cfenv\>|  
+|函数|C 标头|C++ 标头|  
+|--------------|--------------|------------------|  
+|`fesetenv`|\<fenv.h>|\<cfenv>|  
   
- 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   

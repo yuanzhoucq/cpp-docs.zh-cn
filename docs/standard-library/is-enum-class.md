@@ -1,55 +1,68 @@
 ---
 title: "is_enum 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_enum"
-  - "std.tr1.is_enum"
-  - "std::tr1::is_enum"
-  - "std.is_enum"
-  - "std::is_enum"
-  - "type_traits/std::is_enum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_enum 类 [TR1]"
-  - "is_enum"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_enum
+- std::is_enum
+- type_traits/std::is_enum
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_enum class
+- is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_enum 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 1e57d67f920b6742c8ba6b732675c00a8b0df992
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isenum-class"></a>is_enum 类
 测试类型是否为枚举。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-template<class Ty>  
-    struct is_enum;  
+template <class Ty>  
+struct is_enum;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `Ty`  
  要查询的类型。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  如果类型 `Ty` 是枚举类型或枚举类型的 `cv-qualified` 形式，则类型谓词的实例保留为 true，否则保留为 false。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
-// std_tr1__type_traits__is_enum.cpp   
+```cpp  
+// std__type_traits__is_enum.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -76,14 +89,18 @@ int main()
   
 ```  
   
-  **is\_enum\<trivial\> \=\= false**  
-**is\_enum\<color\> \=\= true**  
-**is\_enum\<int\> \=\= false**   
-## 要求  
- **标头：**\<type\_traits\>  
+```Output  
+is_enum<trivial> == false  
+is_enum<color> == true  
+is_enum<int> == false  
+```  
   
- **命名空间:** std  
+## <a name="requirements"></a>要求  
+ **标头：**\<type_traits>  
   
-## 请参阅  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_integral 类](../standard-library/is-integral-class.md)
+ **命名空间：** std  
+  
+## <a name="see-also"></a>另请参阅  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_integral 类](../standard-library/is-integral-class.md)
+

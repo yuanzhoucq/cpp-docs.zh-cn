@@ -1,70 +1,86 @@
 ---
-title: "va_arg、va_copy、va_end、va_start | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "va_arg"
-  - "va_end"
-  - "va_copy"
-  - "va_start"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "va_arg"
-  - "va_start"
-  - "va_list"
-  - "va_alist"
-  - "va_dcl"
-  - "va_copy"
-  - "va_end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "变量自变量列表访问"
-  - "va_start 宏"
-  - "va_arg 宏"
-  - "va_end 宏"
-  - "参数 [c + +]，自变量列表"
-  - "va_list 宏"
-  - "va_dcl 宏"
-  - "va_alist 宏"
-  - "va_copy 宏"
+title: "va_arg、va_copy、va_end、va_start | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- va_arg
+- va_end
+- va_copy
+- va_start
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- va_arg
+- va_start
+- va_list
+- va_alist
+- va_dcl
+- va_copy
+- va_end
+dev_langs:
+- C++
+helpviewer_keywords:
+- variable argument lists, accessing
+- va_start macro
+- va_arg macro
+- va_end macro
+- arguments [C++], argument lists
+- va_list macro
+- va_dcl macro
+- va_alist macro
+- va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# va_arg、va_copy、va_end、va_start
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 5caea89460070402fc8dc5b38912e290d4c5798d
+ms.lasthandoff: 02/24/2017
 
-访问变量自变量列表。  
+---
+# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg、va_copy、va_end、va_start
+访问变量参数列表。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      type va_arg(  
+type va_arg(  
    va_list arg_ptr,  
    type   
-);void va_copy(  
+);
+void va_copy(  
    va_list dest,  
    va_list src  
 ); // (ISO C99 and later)  
@@ -77,47 +93,47 @@ void va_start(
 ); // (ANSI C89 and later)  
 void va_start(  
    arg_ptr   
-);  // (Pre-ANSI C89 standardization version)  
+);  // (deprecated Pre-ANSI C89 standardization version)  
 ```  
   
 #### <a name="parameters"></a>参数  
  `type`  
- 要检索的参数的类型。  
+ 要检索的参数类型。  
   
  `arg_ptr`  
  指向参数列表的指针。  
   
  `dest`  
- 自变量从初始化列表的指针 `src`  
+ 指向要从 `src` 中初始化的参数列表的指针  
   
  `src`  
- 指向要将复制到自变量的初始化列表 `dest`。  
+ 指向要复制到 `dest` 的参数初始化列表的指针。  
   
  `prev_param`  
- 之前的第一个可选参数的参数。  
+ 位于第一个可选实参之前的形参。  
   
 ## <a name="return-value"></a>返回值  
- `va_arg` 返回当前的自变量。 `va_copy`, `va_start` 和 `va_end` 不返回值。  
+ `va_arg` 返回当前参数。 `va_copy`、`va_start`、和 `va_end` 不返回值。  
   
 ## <a name="remarks"></a>备注  
-  `va_arg`, ，`va_copy`, ，`va_end`, ，和 `va_start` 宏提供可移植的方式时该函数采用数目可变的参数访问函数的自变量。 有两个版本的宏︰ STDARG 中定义的宏。H 符合 ISO C99 标准;在 VARARGS 中定义的宏。H 已弃用，但将保留用于向后兼容性在 ANSI C89 标准之前编写的代码。  
+ 函数采用可变数量的参数时，`va_arg`、`va_copy`、`va_end`、和 `va_start` 宏提供了可移植的方法来访问传递到函数的参数。 有两种版本的宏：STDARG.H 中定义的宏符合 ISO C99 标准；弃用了 VARARGS.H 中定义的宏但是将其保留以保证与写于 ANSI C89 标准之前的代码的后向兼容性。  
   
- 这些宏将假定该函数采用固定的数量的跟可选的参数个数可变的所需参数。 所需的参数声明为函数的普通参数，并且可以通过参数名称。 通过在 STDARG 宏访问的可选自变量。H （或 VARARGS。已在 ANSI C89 标准之前编写的代码，H)，这将指针设置为第一个可选参数在参数列表中，从列表中，检索自变量和自变量处理完成时重置指针。  
+ 这些宏假定函数采用固定数量的必需参数，后面是可变数量的可选参数。 将必需参数声明为函数的普通参数，且可通过参数名称访问它们。 可选参数可通过 STDARG.H 中的宏访问（对于在 ANSI C89 标准之前编写的代码，通过 VARARGS.H），其将指针设置为参数列表中的第一个可选参数、检索列表中的参数并在参数处理完成后重置指针。  
   
- C 标准宏，STDARG 中定义。H，使用方式如下︰  
+ STDARG.H 中定义的 C 标准宏使用方法如下：  
   
--   `va_start` 设置 `arg_ptr` 到传递给函数的参数列表中第一个可选参数。 自变量 `arg_ptr` 必须具有 `va_list` 类型。 自变量 `prev_param` 是所需的参数列表中紧跟第一个可选参数的参数的名称。 如果 `prev_param` 声明使用寄存器存储类，则该宏的行为是不确定。 `va_start` 必须使用之前 `va_arg` 首次使用。  
+-   `va_start` 将 `arg_ptr` 设置为传递到此函数的参数列表中的第一个可选参数。 参数 `arg_ptr` 必须拥有 `va_list` 类型。 参数 `prev_param` 是紧跟在参数列表中的第一个可选参数之前的必需参数的名称。 如果 `prev_param` 使用注册存储类声明，则不定义宏的行为。 在首次使用 `va_arg` 前必须使用 `va_start`。  
   
--   `va_arg` 检索一个值的 `type` 从给定的位置 `arg_ptr`, ，、 增量 `arg_ptr` 若要使用的大小指向列表中的下一步参数 `type` 确定下一个参数从何处开始。 `va_arg` 可以是用于任意次数函数中，从列表中检索自变量。  
+-   `va_arg` 从 `arg_ptr` 指定的位置中检索 `type` 的值，并增加 `arg_ptr` 以通过使用 `type` 的大小来确定下一个参数的开始位置，来指向列表中的下一个参数。 可以在函数中使用 `va_arg` 任意次，以检索列表中的参数。  
   
--   `va_copy` 在其当前状态生成的参数列表的副本。  `src` 参数必须已使用初始化 `va_start`; 它可能已使用的更新 `va_arg` 调用，但必须不已重置与 `va_end`。 通过检索下一个参数 `va_arg` 从 `dest` 从检索到的下一步自变量相同 `src`。  
+-   `va_copy` 复制当前转态下的参数列表。 `src` 参数必须已使用 `va_start` 进行初始化；可以使用 `va_arg` 调用进行过更新，但是不能使用 `va_end` 进行过重置。 `va_arg` 从 `dest` 中检索到的下一个参数与从 `src` 中检索到的下一个参数相同。  
   
--   检索所有自变量后， `va_end` 重置到指针 **NULL**。 `va_end` 必须对使用初始化每个自变量列表调用 `va_start` 或 `va_copy` 函数返回之前。  
+-   检索所有参数后，`va_end` 将指针重置为 **NULL**。 在函数返回前必须在已使用 `va_start` 或 `va_copy` 初始化的各个参数列表上调用 `va_end`。  
   
 > [!NOTE]
->  VARARGS 中的宏。H 被否决，并且是仅为保留向后与 ANSI C89 标准之前编写的代码兼容。 在所有其他情况下，在 STDARGS 中使用的宏。H。  
+>  VARARGS.H 中的宏已弃用，将其保留只为保证与写于 ANSI C89 标准之前的代码的后向兼容性。 在所有其他情况下，请使用 STDARGS.H 中的宏。  
   
- 它们使用的编译时 [/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md), ，使用这些宏的程序可能生成意外的结果，由于本机和公共语言运行时 (CLR) 类型系统之间的差异。 请考虑此程序︰  
+ 它们使用 [/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)编译时，使用这些宏的程序可能会因为本机和公共语言运行时 (CLR) 类型系统之间的差异而生成意外的结果。 考虑此程序：  
   
 ```  
 #include <stdio.h>  
@@ -138,6 +154,8 @@ void testit (int i, ...)
         char *s = va_arg(argptr, char*);  
         printf("%s\n", s);  
     }  
+
+    va_end(argptr);  
 }  
   
 int main()  
@@ -147,7 +165,7 @@ int main()
 }  
 ```  
   
- 请注意， `testit` 第二个参数可以是以下之一应 `int` 或 `char*`。 传递的自变量是 0xffffffff ( `unsigned int`, ，而不 `int`) 和 `NULL` (实际 `int`, ，而不 `char*`)。 对于本机代码编译的程序时，它将生成此输出︰  
+ 请注意 `testit` 预计其第二个参数为 `int` 或 `char*`。 正在传递的参数为 0xffffffff（`unsigned int`，不是 `int`）和 `NULL`（实际是 `int`，不是 `char*`）。 为本机代码编译程序后，其生成以下输出：  
   
 ```Output  
 -1  
@@ -155,23 +173,13 @@ int main()
 (null)  
 ```  
   
- 但是，程序编译使用 **/clr: pure**, ，类型不匹配会导致它生成异常。 解决方案是使用显式强制转换︰  
-  
-```  
-int main()  
-{  
-   testit( 0, (int)0xFFFFFFFF ); // cast unsigned to int  
-   testit( 1, (char*)NULL );     // cast int to char*  
-}  
-```  
-  
 ## <a name="requirements"></a>要求  
- **标头︰** \<.h > 和 \< g.h >  
+ **标头：** \<stdio.h> 和 \<stdarg.h>  
   
- **不推荐使用的标头︰** \< varargs.h >  
+ **弃用的标头：** \<varargs.h>  
   
 ## <a name="libraries"></a>库  
- 所有版本的 [C 运行时库](../../c-runtime-library/crt-library-features.md)。  
+ [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
 ## <a name="example"></a>示例  
   
@@ -246,6 +254,6 @@ Deviation is: 0.000000
 ## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
  [System::ParamArrayAttribute 类](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx)  
   
-## <a name="see-also"></a>请参阅  
- [自变量访问](../../c-runtime-library/argument-access.md)   
- [vfprintf、 _vfprintf_l、 vfwprintf、 _vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
+## <a name="see-also"></a>另请参阅  
+ [参数访问](../../c-runtime-library/argument-access.md)   
+ [vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)

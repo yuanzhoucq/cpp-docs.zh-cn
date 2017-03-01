@@ -1,68 +1,85 @@
 ---
 title: "使用 C++ 库标头 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "标头"
-  - "标头, 在 C++ include 指令中进行命名"
-  - "标头, 标准 C++ 库"
-  - "INCLUDE 指令"
-  - "library 标头"
-  - "标准 C++ 库, 标头"
-  - "C++ 中的标准标头"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- headers, naming in C++ include directive
+- standard header in C++
+- headers
+- INCLUDE directive
+- headers, C++ Standard Library
+- library headers
+- C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
 caps.latest.revision: 10
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 使用 C++ 库标头
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 69a20e17403e755031466f269b932a4b14aa523b
+ms.lasthandoff: 02/24/2017
 
-在包含一个标准标头的内容通过命名在包含一个指令。  
+---
+# <a name="using-c-library-headers"></a>使用 C++ 库标头
+通过在 Include 指令中为其命名，可包括标准标头的内容。  
   
 ```  
-#include <iostream>   // include I/O facilities  
+#include <iostream>// include I/O facilities  
 ```  
   
- 可以包含以任何顺序的标准头，标准标头多次，或者定义同一宏或相同的两个或更多标准标头键入。  不包括在声明中的标准头。  不要定义与关键字相同，则包含一个标准标头中的宏。  
+ 可按任何顺序包括标准标头，可多次包括一个标准标头，或包括用于定义相同宏或相同类型的两个或多个标准标头。 声明内不能包括标准标头。 包括标准标头之前，不能定义具有与关键字相同名称的宏。  
   
- 用 . \+\+ 需要定义需要类型的库头包括任何其他 C\+\+ 库头。\(C\+\+ 库头，但是，所有在翻译单元始终包括显式需要，您唯恐错误有关猜测其实际依赖关系，这些依赖关系。\)标准 C 头包括从另一标准头。  一个标准标头声明或定义为描述实体的仅文档中。  
+ 如果 C++ 库标头包括任何其他 C++ 库标头，则需要定义所需的类型。 （但是，始终显式包括转换单元中所需的任何 C++ 库标头，以免弄错其实际依赖项。）标准 C 标头不能包括另一标准标头。 标准标头仅声明或定义此文档中描述的相关实体。  
   
- 每个函数在库中。一个标准标头声明。  不同于标准 C 中，提供一个标准标头不遮掩的宏。名称和的函数声明和获得相同的效果相同的函数。  有关应用蒙板的宏的更多信息，请参见 [C\+\+ 库约定](../standard-library/cpp-library-conventions.md)。  
+ 库中的每个函数都在标准标头中声明。 与在标准 C 中不同，如果一个屏蔽宏包含与屏蔽函数声明及实现相同效果的函数相同的名称，则标准标头不提供此屏蔽宏。 若要深入了解屏蔽宏，请参阅 [C++ 库约定](../standard-library/cpp-library-conventions.md)。  
   
- 除 `operator delete` 和 `operator new` 之外的所有名称。C\+\+ 库头中定义 `std` 命名空间，也在 `std` 命名空间内作为嵌套的命名空间。  您引用名称 `cin`，例如，为 `std::cin`。  注释，但是宏名称，不会被命名空间限定的，因此，您始终写入 `__STD_COMPLEX`，没有命名空间限定符。  
+ 除 C++ 库标头中的 `operator delete` 和 `operator new` 以外的所有名称都在 `std` 命名空间中定义，或者在 `std` 命名空间内的嵌套命名空间中定义。 例如，将名称 `cin` 引用为 `std::cin`。 但是请注意，该宏名称不受命名空间限定，因此你始终需要写入不带命名空间限定符的 `__STD_COMPLEX`。  
   
- 在某些环境转换，包括". C\+\+ 库头可以、在 `std` 命名空间声明的外部名称到全局命名空间，与每个单独的 `using` 名称声明。  否则，标头不引入任何库名到当前命名空间。  
+ 在某些转换环境中（包括 C++ 库标头），可将在 `std` 的命名空间中声明的外部名称提升至全局命名空间中，其中每个名称都包含单个 `using` 声明。 否则，标头不能将任何库名称引入当前命名空间中。  
   
- C\+\+ 标准要求 C 标准标头声明命名空间中 `std`的所有外部名称，然后将它们粘贴、与单个 `using` 声明的每个全局命名空间的名称。  但是，在某些环境转换包含 C 标准标头没有命名空间声明，声明所有名称直接在全局命名空间。  因此，最可移植的情况下处理命名空间将遵循两条规则：  
+ C++ 标准要求 C 标准标头对命名空间 `std` 中的所有外部名称进行声明，然后将它们提升至全局命名空间中，其中每个名称都包含单个 `using` 声明。 但在某些转换环境中，C 标准标头不包含命名空间声明，所有名称都直接在全局命名空间中进行声明。 因此，用于处理命名空间的可移植性最高的方法将遵循以下两种规则：  
   
--   确保声明在命名空间 `std` 中 \<stdlib.h，例如\>，包括标题 cstdlib \<传统上声明的外部名称。\>  知道名称在全局命名空间可能会声明。  
+-   例如，若要在命名空间 `std` 中肯定声明过去在 \<stdlib.h> 中声明的外部名称，则需包括标头 \<cstdlib>。 此名称也可能在全局命名空间中声明。  
   
--   确保声明位于全局命名空间中 \<stdlib.h 声明的外部名称，包括\>标题 stdlib.h \<直接\>。  知道名称在命名空间 `std`可能会声明。  
+-   若要在全局命名空间中肯定声明已在 \<stdlib.h> 中声明的外部名称，请直接包括标头 \<stdlib.h>。 此名称也可能在命名空间 `std` 中声明。  
   
- 因而，如果要调用 `std::abort` 导致异常终结，应包括 \<cstdlib\>。  如果要调用 `abort`时，应包括 \<stdlib.h。\>  
+ 因此，如果想要调用 `std::abort` 以产生异常终止，则应包括 \<cstdlib>。 如果想要调用 `abort`，则应包括 \<stdlib.h>。  
   
- 或者，您可以编写声明：  
+ 此外，还可以编写以下声明：  
   
 ```  
 using namespace std;  
 ```  
   
- 要将名称传入任何库当前命名空间。  如果立即在所有此声明之后编写包括指令，则、名称到全局命名空间。  其后可以忽略在翻译单元的余数的命名空间考虑。  还避免跨不同的翻译。环境之间的大多数差异。  
+ 这会将所有库名称引入当前命名空间。 如果在所有 Include 指令之后立即编写此声明，则会将这些名称提升至全局命名空间中。 随后可忽略转换单元的余数中的命名空间注意事项。 同时可避免不同转换环境之间产生的最大不同。  
   
- 除非明确指示，否则您不能定义名称在 `std` 命名空间，也在 `std` 命名空间内的嵌套命名空间，程序内。  
+ 除非明确指定，否则在你的程序中，可能不能在 `std` 命名空间中定义名称，或不能在 `std` 命名空间内的嵌套命名空间中定义名称。  
   
-## 请参阅  
- [STL 概述](../standard-library/cpp-standard-library-overview.md)   
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)   
+ [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

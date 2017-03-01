@@ -1,47 +1,63 @@
 ---
-title: "_ismbbblank、_ismbbblank_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbbblank_l"
-  - "_ismbbblank"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-dev_langs: 
-  - "C++"
+title: "_ismbbblank、_ismbbblank_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbbblank_l
+- _ismbbblank
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+dev_langs:
+- C++
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _ismbbblank、_ismbbblank_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 748dd47c43ae2f07a7a6b0d828775c4122062b6c
+ms.lasthandoff: 02/24/2017
 
-确定指定的多节字符是否为空字符。  
+---
+# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank、_ismbbblank_l
+确定指定的多字节字符是否为空白字符。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _ismbbblank(  
@@ -53,28 +69,28 @@ int _ismbbblank_l(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `c`  
  要测试的整数。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 如果 `c` 表示空格字符 \(0x20\)、水平制表符 \(0x09\) 或用于分隔 `isspace` 为真的文本行内的字的区域设置特定字符，`_ismbbblank` 返回非零值；否则，返回 0。  `_ismbbblank` 对与区域设置相关的所有行为使用当前区域设置。  `_ismbbblank_l` 相同，除非改为使用传递的区域设置。  有关详细信息，请参阅 [区域设置](../../c-runtime-library/locale.md)。  
+## <a name="return-value"></a>返回值  
+ 如果 `c` 表示空格 (0x20) 字符、水平制表 (0x09) 符或用于在文本行中分隔单词的一个特定于区域设置的字符，且对于这些字符 `isspace` 为 true；则 `_ismbbblank` 返回非零值，否则返回 0。 `_ismbbblank` 对依赖于区域设置的任何行为使用当前区域设置。 `_ismbbblank_l` 具有相同的效果，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_ismbbblank`|\<mbctype.h\>|  
-|`_ismbbblank_l`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_ismbbblank`|\<mbctype.h>|  
+|`_ismbbblank_l`|\<mbctype.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   
- [\_ismbb 例程](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)

@@ -1,112 +1,129 @@
 ---
-title: "_RPT、_RPTF、_RPTW、_RPTFW 宏 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "RPT3"
-  - "RPTF4"
-  - "_RPT4"
-  - "RPT1"
-  - "_RPTF0"
-  - "RPTF3"
-  - "_RPTF4"
-  - "RPTF1"
-  - "RPT4"
-  - "_RPT1"
-  - "_RPT0"
-  - "RPT0"
-  - "_RPTF2"
-  - "RPTF0"
-  - "_RPT3"
-  - "_RPT2"
-  - "_RPTF3"
-  - "RPT2"
-  - "_RPTF1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "调试 [CRT], 使用宏"
-  - "_RPTW3 宏"
-  - "_RPT0 宏"
-  - "RPTW4 宏"
-  - "_RPTF3 宏"
-  - "_RPTW4 宏"
-  - "RPTF4 宏"
-  - "RPTFW2 宏"
-  - "RPTW 宏"
-  - "RPT1 宏"
-  - "_RPTF 宏"
-  - "RPTFW3 宏"
-  - "_RPTW0 宏"
-  - "_RPTF0 宏"
-  - "宏, 使用...进行调试"
-  - "_RPTW2 宏"
-  - "RPTF3 宏"
-  - "RPT3 宏"
-  - "RPT0 宏"
-  - "_RPT 宏"
-  - "RPTW3 宏"
-  - "_RPTFW 宏"
-  - "调试报告宏"
-  - "RPTF 宏"
-  - "RPT 宏"
-  - "_RPTW 宏"
-  - "RPTF2 宏"
-  - "_RPTF1 宏"
-  - "_RPT1 宏"
-  - "_RPT4 宏"
-  - "_RPTFW2 宏"
-  - "_RPTFW1 宏"
-  - "RPTF0 宏"
-  - "_RPT2 宏"
-  - "RPTFW 宏"
-  - "_RPTW1 宏"
-  - "_RPTFW0 宏"
-  - "RPT4 宏"
-  - "_RPT3 宏"
-  - "_RPTFW3 宏"
-  - "_RPTF4 宏"
-  - "_RPTFW4 宏"
-  - "_RPTF2 宏"
-  - "RPTW0 宏"
-  - "RPTFW4 宏"
-  - "RPTFW0 宏"
-  - "RPTW2 宏"
-  - "RPTF1 宏"
-  - "RPT2 宏"
-  - "RPTFW1 宏"
-  - "RPTW1 宏"
+title: "_RPT、_RPTF、_RPTW、_RPTFW 宏 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- RPT3
+- RPTF4
+- _RPT4
+- RPT1
+- _RPTF0
+- RPTF3
+- _RPTF4
+- RPTF1
+- RPT4
+- _RPT1
+- _RPT0
+- RPT0
+- _RPTF2
+- RPTF0
+- _RPT3
+- _RPT2
+- _RPTF3
+- RPT2
+- _RPTF1
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging [CRT], using macros
+- _RPTW3 macro
+- _RPT0 macro
+- RPTW4 macro
+- _RPTF3 macro
+- _RPTW4 macro
+- RPTF4 macro
+- RPTFW2 macro
+- RPTW macros
+- RPT1 macro
+- _RPTF macros
+- RPTFW3 macro
+- _RPTW0 macro
+- _RPTF0 macro
+- macros, debugging with
+- _RPTW2 macro
+- RPTF3 macro
+- RPT3 macro
+- RPT0 macro
+- _RPT macros
+- RPTW3 macro
+- _RPTFW macros
+- debug reporting macros
+- RPTF macros
+- RPT macros
+- _RPTW macros
+- RPTF2 macro
+- _RPTF1 macro
+- _RPT1 macro
+- _RPT4 macro
+- _RPTFW2 macro
+- _RPTFW1 macro
+- RPTF0 macro
+- _RPT2 macro
+- RPTFW macros
+- _RPTW1 macro
+- _RPTFW0 macro
+- RPT4 macro
+- _RPT3 macro
+- _RPTFW3 macro
+- _RPTF4 macro
+- _RPTFW4 macro
+- _RPTF2 macro
+- RPTW0 macro
+- RPTFW4 macro
+- RPTFW0 macro
+- RPTW2 macro
+- RPTF1 macro
+- RPT2 macro
+- RPTFW1 macro
+- RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _RPT、_RPTF、_RPTW、_RPTFW 宏
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
+ms.lasthandoff: 02/24/2017
 
-通过生成调试报告来跟踪应用程序的进度 \(调试仅版本\)。  注意 *n* `args` 中指定参数的数目，也可以是 0，1，2，3，4 或 5。  
+---
+# <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 宏
+通过生成调试报告跟踪应用程序的进程（仅限调试版本）。 请注意，*n* 指定 `args` 中的参数个数，它可以是 0、1、2、3、4 或 5。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -134,60 +151,60 @@ _RPTFWn(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `reportType`  
- 报表类型：`_CRT_WARN`、`_CRT_ERROR`或 `_CRT_ASSERT`。  
+ 报告类型：`_CRT_WARN`、`_CRT_ERROR` 或 `_CRT_ASSERT`。  
   
  `format`  
- 指针用来创建用户信息格式控制串。  
+ 用于创建用户消息的格式控件字符串。  
   
  `args`  
- `format`使用的替换参数。  
+ 由 `format` 使用的替换参数。  
   
-## 备注  
- 所有这些宏接受 `reportType`和 `format`参数。  此外，它们还可能占用四个附加参数，由数后追加宏名。  例如，`_RPT0` 和 `_RPTF0` 都不采用附加参数，`_RPT1`，`_RPTF1` 采用 `arg1`，`_RPT2`，并且 `_RPTF2` 的接受 `arg1` 和 `arg2`，依此类推。  
+## <a name="remarks"></a>备注  
+ 所有这些宏均采用 `reportType` 和 `format` 参数。 此外，它们还可能需最多四个附加参数，由追加到宏名称的数字表示。 例如，`_RPT0` 和 `_RPTF0` 不采用附加参数，`_RPT1` 和 `_RPTF1` 采用 `arg1`，`_RPT2` 和 `_RPTF2` 采用 `arg1` 和 `arg2` 等。  
   
- 因为它们可用于调试过程中，跟踪应用程序的进度。`_RPT` 和 `_RPTF` 宏类似于 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函数。  但是，在 `#ifdef` 语句，因为它们在应用程序的零售版本，不需要将这些宏调用阻止它们比 `printf` 灵活。  使用 [\_DEBUG](../../c-runtime-library/debug.md) 宏，此灵活性实现；，当 `_DEBUG` 标志后，`_RPT` 和 `_RPTF` 宏才可用。  如果未定义 `_DEBUG` 时，在预处理期间，这些宏的调用中移除。  
+ `_RPT` 和 `_RPTF` 宏类似于 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函数，因为它们可用于跟踪调试过程中的应用程序的进度。 不过，这些宏比 `printf` 更为灵活，因为它们无需包含在 `#ifdef` 语句中，以防止在零售版本的应用程序中调用它们。 这种灵活性是通过使用 [_DEBUG](../../c-runtime-library/debug.md) 宏实现的；`_RPT` 和 `_RPTF` 宏仅在定义了 `_DEBUG` 标志时可用。 未定义 `_DEBUG` 时，会在预处理过程中删除对这些宏的调用。  
   
- `_RPTW` 和 `_RPTFW` 宏。这些宏宽字符版本。  它们与 `wprintf` 并采用字符串作为参数。  
+ `_RPTW` 和 `_RPTFW` 宏是这些宏的宽字符版本。 它们类似于 `wprintf` 并将宽字符字符串用作参数。  
   
- `_RPT` 宏调用 [\_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函数生成的用户消息的调试报告。  `_RPTW` 宏调用 `_CrtDbgReportW` 函数生成使用宽字符相同的报告。  除了用户消息外，`_RPTF` 和 `_RPTFW` 宏创建利用报告宏调用的源文件和行号的调试报告。  用户消息通过重写 `arg`\[*n*\] 的参数创建到 `format` 字符串，可以使用 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函数定义的规则相同。  
+ `_RPT` 宏调用 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函数，生成包含用户消息的调试报告。 `_RPTW` 宏调用 `_CrtDbgReportW` 函数，生成具有宽字符的同一个报告。 除了用户消息以外，`_RPTF` 和 `_RPTFW` 宏还将创建包含调用报告宏所在的源文件和行号的调试报告。 通过使用由 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函数定义的相同规则将 `arg`[*n* 参数替换为 `format` 字符串，以创建用户消息。  
   
- `_CrtDbgReport` 或 `_CrtDbgReportW` 生成调试报告并确定根据当前报表模式和文件的其目标定义为 `reportType`。  [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 和 [\_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 函数用于定义各报表类型的目标。  
+ `_CrtDbgReport` 或 `_CrtDbgReportW` 会基于当前报告模式以及为 `reportType` 定义的文件，生成调试报告并确定其目标。 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 和 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 函数用于为每种报告类型定义目标。  
   
- 如果 `_RPT` 宏调用，并且 `_CrtSetReportMode` 和 `_CrtSetReportFile` 没有调用，如下消息显示。  
+ 如果调用 `_RPT` 宏，但不调用 `_CrtSetReportMode` 或 `_CrtSetReportFile`，则显示以下消息。  
   
 |报告类型|输出目标|  
-|----------|----------|  
-|`_CRT_WARN`|警告文本不会显示。|  
-|`_CRT_ERROR`|弹出消息随即显示。  同样，就如同 `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` 指定。|  
+|-----------------|------------------------|  
+|`_CRT_WARN`|不显示警告文本。|  
+|`_CRT_ERROR`|弹出窗口。 如果指定了 `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);`，则相同。|  
 |`_CRT_ASSERT`|与 `_CRT_ERROR` 相同。|  
   
- 当目标为调试消息窗口时，并且用户选择 **重试** 按钮，则返回 `_CrtDbgReport` 或 `_CrtDbgReportW`，1 会导致这些宏，启动调试器，然后调试实时 \(JIT\) 启用条件下。  有关使用这些宏的更多信息作为调试错误处理机制，请参见 [使用验证或报告的宏](../Topic/Macros%20for%20Reporting.md)。  
+ 当目标是调试消息窗口且用户选择“**重试**” 按钮时，`_CrtDbgReport` 或 `_CrtDbgReportW` 返回 1，从而使这些宏启动调试器（前提是启用了实时 (JIT) 调试）。 有关将这些宏用作调试错误处理机制的详细信息，请参阅[使用宏进行验证和报告](/visualstudio/debugger/macros-for-reporting)。  
   
- 生成调试报告的其他两宏存在。  只有在表达式参数的计算结果为 false 时，[\_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏，但是，生成报告。  [\_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 是完全相同，`_ASSERT`，但包括不合格的表达式在生成的报告。  
+ 另外还有其他两个生成调试报告的宏： [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏，但仅在其表达式参数计算结果为 FALSE 时生成报告； [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏，与 `_ASSERT` 非常类似，但会在生成的报告中包含失败的表达式。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |宏|必需的标头|  
-|-------|-----------|  
-|`_RPT` 宏|\<CRTDBG.H\>|  
-|`_RPTF` 宏|\<CRTDBG.H\>|  
-|`_RPTW` 宏|\<CRTDBG.H\>|  
-|`_RPTFW` 宏|\<CRTDBG.H\>|  
+|-----------|---------------------|  
+|`_RPT` 宏|\<crtdbg.h>|  
+|`_RPTF` 宏|\<crtdbg.h>|  
+|`_RPTW` 宏|\<crtdbg.h>|  
+|`_RPTFW` 宏|\<crtdbg.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
   
- 虽然是宏并包括 Crtdbg.h 获取，应用程序必须与调试库链接之一，因为这些宏调用其他运行时函数。  
+ 虽然这些是宏并且可通过包含 Crtdbg.h 来使用，但应用程序必须链接其中的一个调试库，因为这些宏会调用其他运行时函数。  
   
-## 示例  
- 参见 [\_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 主题中的示例。  
+## <a name="example"></a>示例  
+ 请参阅 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 主题中的示例。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)

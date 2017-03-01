@@ -1,71 +1,87 @@
 ---
-title: "_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsspnp"
-  - "_wcsspnp"
-  - "_mbsspnp_l"
-  - "_strspnp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsspnp"
-  - "_mbsspnp"
-  - "strspnp"
-  - "_ftcsspnp"
-  - "_mbsspnp_l"
-  - "wcsspnp"
-  - "mbsspnp_l"
-  - "_wcsspnp"
-  - "_strspnp"
-  - "mbsspnp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsspnp 函数"
-  - "_mbsspnp_l 函数"
-  - "_strspnp 函数"
-  - "_tcsspnp 函数"
-  - "_wcsspnp 函数"
-  - "mbsspnp 函数"
-  - "mbsspnp_l 函数"
-  - "strspnp 函数"
-  - "tcsspnp 函数"
-  - "wcsspnp 函数"
+title: "_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsspnp
+- _wcsspnp
+- _mbsspnp_l
+- _strspnp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsspnp
+- _mbsspnp
+- strspnp
+- _ftcsspnp
+- _mbsspnp_l
+- wcsspnp
+- mbsspnp_l
+- _wcsspnp
+- _strspnp
+- mbsspnp
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strspnp function
+- _wcsspnp function
+- _mbsspnp_l function
+- strspnp function
+- mbsspnp function
+- wcsspnp function
+- _mbsspnp function
+- mbsspnp_l function
+- _tcsspnp function
+- tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0943a0b30643a6dff3d47508f9a514e3e0d441ff
+ms.lasthandoff: 02/24/2017
 
-返回一个指向给定的字符串而不是另一个给定的字符串的第一个字符的指针。  
+---
+# <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
+返回指向给定字符串（不在另一个给定字符串）中的第一个字符的指针。  
   
 > [!IMPORTANT]
->  `_mbsspnp` 和 `_mbsspnp_l` 不能用于在 Windows 运行时中执行的应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  `_mbsspnp` 和 `_mbsspnp_l` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 char *_strspnp(  
@@ -88,7 +104,7 @@ unsigned char *_mbsspnp_l(
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `str`  
  要搜索的 null 终止的字符串。  
   
@@ -98,35 +114,35 @@ unsigned char *_mbsspnp_l(
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- `_strspnp`、`_wcsspnp`和 `_mbsspnp` 返回指向不属于将 `charset`的字符。`str` 的第一个字符*。*如果 `str` 完全由从`charset`而来的字符，每一个函数会返回 `NULL`。对于其中每个实例，没有任何返回值保留指示错误。  
+## <a name="return-value"></a>返回值  
+ `_strspnp`、`_wcsspnp` 和 `_mbsspnp` 返回指向 `str`（不属于 `charset` 中的字符集）中的第一个字符的指针。 如果 `str` 包含 `charset` 中的所有字符，则每个函数将返回 `NULL`。 对于这些例程，都不会保留返回值来指示错误。  
   
-## 备注  
- `_mbsspnp` 函数返回一个指针指向多字符，它是`str` 的第一个字符。它不属于`charset`的字符集。  `_mbsspnp` 根据当前正在使用的[多字节代码页](../../c-runtime-library/code-pages.md) 识别多字节字符序列。  搜索不包括终止空字符。  
+## <a name="remarks"></a>备注  
+ `_mbsspnp` 函数返回指向 `str`（不属于 `charset` 中的字符集）中第一个字符的多字节字符的指针。 `_mbsspnp` 根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。 搜索不包括结尾的 null 字符。  
   
- 如果 `str` 或 `charset`都 是空指针，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 所述。  如果允许执行继续，则该函数返回 `NULL` 并将 `errno` 设置为 `EINVAL`。  
+ 如果 `str` 或 `charset` 为空指针，则此函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回 `NULL`，并且将 `errno` 设置为 `EINVAL`。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsspnp`|`_strspnp`|`_mbsspnp`|`_wcsspnp`|  
   
- `_strspnp` 和`_wcsspnp` 是单字节字符，且是 `_mbsspnp` 的宽字符版本。  `_strspnp` 和 `_wcsspnp` 与 `_mbsspnp`行为相同 ;否则，它们仅用于提供映射不应为任何其他原因使用。  有关详细信息，请参阅 [使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md) 和 [一般文本映射](../../c-runtime-library/generic-text-mappings.md)。  
+ `_strspnp` 和 `_wcsspnp` 是 `_mbsspnp` 的单字节字符及宽字符版本。 否则 `_strspnp` 和 `_wcsspnp` 与 `_mbsspnp` 的行为相同；它们仅提供用于此映射，不应用于其他任何目的。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。  
   
- `_mbsspnp_l`  相同，除非使用传递的区域设置。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ `_mbsspnp_l` 是相同的，只不过它改用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_mbsspnp`|\<mbstring.h\>|  
-|`_strspnp`|\<tchar.h\>|  
-|`_wcsspnp`|\<tchar.h\>|  
+|-------------|---------------------|  
+|`_mbsspnp`|\<mbstring.h>|  
+|`_strspnp`|\<tchar.h>|  
+|`_wcsspnp`|\<tchar.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_mbsspnp.c  
@@ -142,22 +158,22 @@ int main( void ) {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 abbage  
 ```  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [strncat\_s、\_strncat\_s\_l、wcsncat\_s、\_wcsncat\_s\_l、\_mbsncat\_s、\_mbsncat\_s\_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
- [strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy\_s、\_strncpy\_s\_l、wcsncpy\_s、\_wcsncpy\_s\_l、\_mbsncpy\_s、\_mbsncpy\_s\_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
+ [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
+ [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
+ [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)

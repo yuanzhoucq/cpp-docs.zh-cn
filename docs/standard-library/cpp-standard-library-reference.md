@@ -1,51 +1,59 @@
 ---
-title: "C++ 标准库参考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "库, 标准 C++"
-  - "标准 C++ 库"
-  - "标准 C++ 库, reference"
-  - "模板库"
+title: "C++ 标准库参考 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, reference
+- C++ Standard Library
+- template libraries
+- libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
 caps.latest.revision: 19
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C++ 标准库参考
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 73761e1f2d4eed0e12ab42d0f1b3a6dec0d66b10
+ms.lasthandoff: 02/24/2017
 
-C\+\+ 程序可以从此标准 C\+\+ 库的一致性实现中调用大量函数。  这些函数执行重要服务（如输入和输出），并提供常用操作的高效实现。  
+---
+# <a name="c-standard-library-reference"></a>C++ 标准库参考
+C++ 程序可以从符合标准的 C++ 标准库实现中调用大量函数。 这些函数执行重要服务（如输入和输出），并提供常用操作的高效实现。  
   
- 有关 Visual C\+\+ 运行时库的详细信息，请参阅 [CRT 库功能](../c-runtime-library/crt-library-features.md)。  
+ 有关 Visual C++ 运行时库的详细信息，请参阅 [CRT 库功能](../c-runtime-library/crt-library-features.md)。  
   
-## 本节内容  
- [STL 概述](../standard-library/cpp-standard-library-overview.md)  
- 提供标准 C\+\+ 库的 Microsoft 实现的概述。  
+## <a name="in-this-section"></a>本节内容  
+ [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)  
+ 提供 Microsoft 实现 C++ 标准库的概述。  
   
  [iostream 编程](../standard-library/iostream-programming.md)  
  提供 iostream 编程的概述。  
   
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)  
- 提供指向参考主题的链接，这些主题讨论了具有代码示例的标准 C\+\+ 库头文件。  
+ 提供指向参考主题的链接，这些主题讨论了具有代码示例的 C++ 标准库头文件。  
   
-## 相关章节  
- [Visual C\+\+ 参考](http://msdn.microsoft.com/zh-cn/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- 提供指向主题的链接，这些主题介绍了 C 和 C\+\+ 语言参考、随 Visual C\+\+ 提供的库、Visual C\+\+ 扩展性对象模型以及 Microsoft Macro Assembler \(MASM\)。  
-  
- [NIB: Samples Included in Visual C\+\+](http://msdn.microsoft.com/zh-cn/c9ec56b3-2bbd-49b4-8a4c-9ed4b78b7a84)  
- 提供一些代码示例链接，演示 Visual C\+\+ 的功能，以及它支持的库和技术。  
-  
-## 请参阅  
- [Visual C\+\+ 类库](http://msdn.microsoft.com/zh-cn/fec23c40-10c0-4857-9cdc-33a3b99b30ae)
+
+

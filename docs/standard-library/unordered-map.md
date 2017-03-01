@@ -1,55 +1,72 @@
 ---
-title: "&lt;unordered_map&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<unordered_map>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unordered_map 标头 [TR1]"
+title: '&lt;unordered_map&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <unordered_map>
+dev_langs:
+- C++
+helpviewer_keywords:
+- unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt;unordered_map&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
+ms.openlocfilehash: 4a90e1c2db038980309e98aed5fb0802dcb5a594
+ms.lasthandoff: 02/24/2017
 
-容器定义模板类和 [unordered\_map](../standard-library/unordered-map-class.md)[unordered\_multimap](../standard-library/unordered-multimap-class.md) 及其支持的模板。  
+---
+# <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
+定义容器模板类 [unordered_map](../standard-library/unordered-map-class.md) 和 [unordered_multimap](../standard-library/unordered-multimap-class.md) 及其支持的模板。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #include <unordered_map>  
 ```  
   
-### 类  
+### <a name="classes"></a>类  
   
 |||  
 |-|-|  
-|[unordered\_map 类](../standard-library/unordered-map-class.md)|{，}存储键映射对哈希表。|  
-|[unordered\_multimap 类](../standard-library/unordered-multimap-class.md)|{，}存储键映射对哈希表。|  
+|[unordered_map 类](../standard-library/unordered-map-class.md)|存储 {key, mapped} 对的哈希表。|  
+|[unordered_multimap 类](../standard-library/unordered-multimap-class.md)|存储 {key, mapped} 对的哈希表。|  
   
-### 函数  
+### <a name="functions"></a>函数  
   
 |||  
 |-|-|  
-|[operator\!\= \(unordered\_map\)](../Topic/operator!=%20\(unordered_map\).md)|测试，如果运算符左侧的 unordered\_map 对象与右侧的 unordered\_map 对象不等于。|  
-|[operator\=\= \(unordered\_map\)](../Topic/operator==%20\(unordered_map\).md)|测试，如果运算符左侧的 unordered\_map 对象与右侧的 unordered\_map 对象相等。|  
-|[swap 函数 \(unordered\_map\)](../Topic/swap%20Function%20\(unordered_map\).md)|交换两个映射。|  
-|[operator\!\= \(unordered\_multimap\)](../Topic/operator!=%20\(unordered_multimap\).md)|测试，如果运算符左侧的 unordered\_multimap 对象与右侧的 unordered\_multimap 对象不等于。|  
-|[operator\=\= \(unordered\_multimap\)](../Topic/operator==%20\(unordered_multimap\).md)|测试，如果运算符左侧的 unordered\_multimap 对象与右侧的 unordered\_multimap 对象相等。|  
-|[swap 函数 \(unordered\_multimap\)](../Topic/swap%20Function%20\(unordered_multimap\).md)|交换两 multimaps。|  
+|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|测试位于运算符左侧的 unordered_map 对象是否与位于右侧的 unordered_map 对象不相等。|  
+|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|测试位于运算符左侧的 unordered_map 对象是否与位于右侧的 unordered_map 对象相等。|  
+|[swap 函数 (unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|交换两个映射。|  
+|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|测试位于运算符左侧的 unordered_multimap 对象是否与位于右侧的 unordered_multimap 对象不相等。|  
+|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|测试位于运算符左侧的 unordered_multimap 对象是否与位于右侧的 unordered_multimap 对象相等。|  
+|[swap 函数 (unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|交换两个多重映射。|  
   
-## 请参阅  
- [unordered\_multiset 类](../standard-library/unordered-multiset-class.md)   
- [unordered\_set 类](../standard-library/unordered-set-class.md)
+## <a name="see-also"></a>另请参阅  
+ [unordered_multiset 类](../standard-library/unordered-multiset-class.md)   
+ [unordered_set 类](../standard-library/unordered-set-class.md)
+

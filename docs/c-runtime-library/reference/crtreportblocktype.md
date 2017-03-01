@@ -1,52 +1,69 @@
 ---
-title: "_CrtReportBlockType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtReportBlockType"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtReportBlockType"
-  - "CrtReportBlockType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtReportBlockType 函数"
-  - "BLOCK_SUBTYPE 宏"
-  - "_CrtReportBlockType 函数"
-  - "_BLOCK_TYPE 宏"
-  - "_BLOCK_SUBTYPE 宏"
-  - "BLOCK_TYPE 宏"
+title: "_CrtReportBlockType | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtReportBlockType
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtReportBlockType
+- CrtReportBlockType
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtReportBlockType function
+- BLOCK_SUBTYPE macro
+- _CrtReportBlockType function
+- _BLOCK_TYPE macro
+- _BLOCK_SUBTYPE macro
+- BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtReportBlockType
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 79724d6f719c3c482e25622ffbaa636f98517cdc
+ms.lasthandoff: 02/24/2017
 
-返回与给定的调试堆块的指针相关联的块类型\/子类型。  
+---
+# <a name="crtreportblocktype"></a>_CrtReportBlockType
+返回与给定调试堆块指针相关联的块类型/子类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -55,30 +72,30 @@ caps.handback.revision: 12
 };  
 ```  
   
-#### 参数  
- *p块*  
- 指针指向一个有效的调试堆块。  
+#### <a name="parameters"></a>参数  
+ *pBlock*  
+ 指向有效调试堆块的指针。  
   
-## 返回值  
- 当传递一个有效的调试堆指针时， `_CrtReportBlockType` 函数返回块类型和 `int` 形式的子类型。  当传递一个无效指针时，该函数返回 \-1。  
+## <a name="return-value"></a>返回值  
+ 当传递有效的调试堆指针时，`_CrtReportBlockType` 函数以`int` 形式返回块类型和子类型。 当传递了无效的指针时，该函数返回 -1。  
   
-## 备注  
- 要通过`_CrtReportBlockType` 提取该类型和子类型，返回值请使用宏命令 **\_BLOCK\_TYPE** 和 **\_BLOCK\_SUBTYPE** （在Crtdbg.h都有定义）。  
+## <a name="remarks"></a>备注  
+ 要提取 `_CrtReportBlockType` 返回的类型和子类型，请对返回值使用 **_BLOCK_TYPE** 和 **_BLOCK_SUBTYPE** 宏（两者均在 Crtdbg.h 中定义）。  
   
- 有关分配块的类型以及它们是如何使用的信息，请参阅 [调试堆上的块类型](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)。  
+ 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_CrtReportBlockType`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtReportBlockType`|\<crtdbg.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_crtreportblocktype.cpp  
@@ -118,7 +135,7 @@ int main(void)
 }  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
   
 ```  
 Dumper found block at 00314F78: type 4, subtype 3  
@@ -137,8 +154,8 @@ crt_crtreportblocktype.cpp(27) : {52} normal block at 0x00314EC8, 10 bytes long.
 Object dump complete.  
 ```  
   
-## 请参阅  
- [\_CrtDoForAllClientObjects](../../c-runtime-library/reference/crtdoforallclientobjects.md)   
- [\_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md)   
- [\_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)   
- [\_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md)
+## <a name="see-also"></a>另请参阅  
+ [_CrtDoForAllClientObjects](../../c-runtime-library/reference/crtdoforallclientobjects.md)   
+ [_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md)   
+ [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md)   
+ [_CrtDumpMemoryLeaks](../../c-runtime-library/reference/crtdumpmemoryleaks.md)

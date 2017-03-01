@@ -1,72 +1,88 @@
 ---
-title: "strstr、wcsstr、_mbsstr、_mbsstr_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsstr"
-  - "wcsstr"
-  - "_mbsstr_l"
-  - "strstr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstrstr"
-  - "_ftcsstr"
-  - "strstr"
-  - "wcsstr"
-  - "_mbsstr"
-  - "_tcsstr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrstr 函数"
-  - "_ftcsstr 函数"
-  - "_mbsstr 函数"
-  - "_mbsstr_l 函数"
-  - "_tcsstr 函数"
-  - "fstrstr 函数"
-  - "ftcsstr 函数"
-  - "mbsstr 函数"
-  - "mbsstr_l 函数"
-  - "字符串 [C++], 搜索"
-  - "strstr 函数"
-  - "子字符串, 查找"
-  - "tcsstr 函数"
-  - "wcsstr 函数"
+title: "strstr、wcsstr、_mbsstr、_mbsstr_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsstr
+- wcsstr
+- _mbsstr_l
+- strstr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstrstr
+- _ftcsstr
+- strstr
+- wcsstr
+- _mbsstr
+- _tcsstr
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], searching
+- mbsstr function
+- _ftcsstr function
+- ftcsstr function
+- fstrstr function
+- _tcsstr function
+- substrings, finding
+- mbsstr_l function
+- tcsstr function
+- _mbsstr function
+- wcsstr function
+- _fstrstr function
+- _mbsstr_l function
+- strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# strstr、wcsstr、_mbsstr、_mbsstr_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 0402f647be21541222fe215760715eea1dee39d9
+ms.lasthandoff: 02/24/2017
 
-返回指向在字符串的一个搜索字符串的第一个匹配项。  
+---
+# <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
+返回指向字符串中的搜索字符串的第一个匹配项的指针。  
   
 > [!IMPORTANT]
->  `_mbsstr` 和 `_mbsstr_l` 不能用于在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. 中执行应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  `_mbsstr` 和 `_mbsstr_l` 无法用于在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 char *strstr(  
@@ -122,50 +138,51 @@ const unsigned char *_mbsstr_l(
 ); // C++ only  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `str`  
  要搜索的 null 终止的字符串。  
   
  `strSearch`  
- 要搜索 null 终止的字符串。  
+ 要搜索的以 null 结尾的字符串。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 如果 `strSearch` 未出现在 `str`，则返回指向 `strSearch` 的第一个匹配项在 `str`的指针或 `NULL`指针。  如果 `strSearch` 指向长度为零的字符串，则函数返回 `str`。  
+## <a name="return-value"></a>返回值  
+ 如果 `strSearch` 未出现在 `str` 中，则返回指向 `NULL` 中的 `strSearch` 的第一个匹配项的指针，或返回 `str`。 如果 `strSearch` 指向长度为零的字符串，则函数返回 `str`。  
   
-## 备注  
- `strstr` 函数返回指向 `strSearch` 第一个匹配项 `str`的指针。  搜索不包括终止空字符。  `wcsstr` 是 `strstr` 的宽字符版本；`_mbsstr` 是多字节字符版本。  参数和 `wcsstr` 的返回值是宽字符字符串；`_mbsstr` 的参数和返回值为多字节字符字符串。  `_mbsstr`验证其参数。  如果 `str` 或 `strSearch` 为 `NULL`，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。  如果允许执行继续，则将 `_mbsstr`将 `errno` 设置为 `EINVAL`，并且返回0。  `strstr` 和 `wcsstr` 不验证其参数。  否则这三个函数否则具有相同行为。  
+## <a name="remarks"></a>备注  
+ `strstr` 函数返回指向 `strSearch` 中的 `str` 的第一个匹配项的指针。 搜索不包括结尾的 null 字符。 `wcsstr` 是宽字符版本的 `strstr`；`_mbsstr` 是多字节字符版本。 `wcsstr` 的参数和返回值是宽字符字符串；而 `_mbsstr` 的则是多字节字符字符串。 `_mbsstr` 会验证其参数。 如果 `str` 或 `strSearch` 为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `_mbsstr` 将 `errno` 设置为 `EINVAL`，并返回 0。 `strstr` 和 `wcsstr` 不会验证其参数。 否则这三个函数否则具有相同行为。  
   
 > [!IMPORTANT]
->  这些功能可能会招致从一个缓冲区溢出问题的威胁。  缓冲区溢出问题可用来攻击系统，因为它们允许执行任意的代码，这可能导致权限的非确保提升。  有关更多信息，请参见[避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
+>  这些函数可能从缓冲区溢出问题引发威胁。 缓冲区溢出问题可用来攻击系统，因为它们可能允许执行任意代码，这可能导致没有保证的权限提升。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- 在 C 中，这些函数采用第一个参数的一个 `const` 指针。  在 C\+\+ 中，有两个重载可用。  采用指向 `const` 的指针的重载返回指向 `const` 的指针；采用指向非`const` 的版本的指针返回指向非`const` 的指针。  如果这些函数的 `const` 和非`const` 版本可用，则会定义宏 \_CONST\_CORRECT\_OVERLOADS。  如果这两个 C\+\+ 重载都需要非 `const` 行为，请定义符号 \_CONST\_RETURN。  
+ 在 C 中，这些函数采用第一个参数的一个 `const` 指针。 在 C++ 中，有两个重载可用。 采用指向 `const` 的指针的重载返回指向 `const` 的指针；采用指向非`const` 的版本的指针返回指向非`const` 的指针。 如果这些函数的 `const` 和非`const` 版本可用，则会定义宏 _CONST_CORRECT_OVERLOADS。 如果这两个 C++ 重载都需要非 `const` 行为，请定义符号 _CONST_RETURN。  
   
- 输出值受 `LC_CTYPE` 区域\-分类设置的影响；有关更多信息，请参见 [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  这些不带 `_l` 后缀的函数版本对任何区域设置相关行为使用当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传入的区域设置。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 输出值受 `LC_CTYPE` 的区域设置类别设置的影响；有关详细信息，请参阅 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本将当前区域设置用于此依赖于区域设置的行为；带有 `_l` 后缀的版本与之相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|  
-|**无**|**无**|`_mbsstr_l`|**无**|  
+|**不适用**|**不适用**|`_mbsstr_l`|**不适用**|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`strstr`|\<string.h\>|  
-|`wcsstr`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbsstr`, `_mbsstr_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strstr`|\<string.h>|  
+|`wcsstr`|\<string.h> 或 \<wchar.h>|  
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
-// crt_strstr.c  
+  
+      // crt_strstr.c  
   
 #include <string.h>  
 #include <stdio.h>  
@@ -190,21 +207,25 @@ int main( void )
 }  
 ```  
   
-  **要搜索的字符串。**  
- **敏捷的棕色狗跳过了懒惰的狐狸。**  
- **1         2         3         4         5**  
- **12345678901234567890123456789012345678901234567890**  
-**延迟发现位置 36**   
-## .NET Framework 等效项  
+```Output  
+String to be searched:  
+   The quick brown dog jumps over the lazy fox  
+            1         2         3         4         5  
+   12345678901234567890123456789012345678901234567890  
+  
+lazy found at position 36  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
  [System::String::IndexOf](https://msdn.microsoft.com/en-us/library/system.string.indexof.aspx)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn、wcscspn、\_mbscspn、\_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strcmp、wcscmp、\_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strpbrk、wcspbrk、\_mbspbrk、\_mbspbrk\_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
- [strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [basic\_string::find](../Topic/basic_string::find.md)
+ [strcspn、wcscspn、_mbscspn、_mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
+ [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
+ [basic_string::find](http://msdn.microsoft.com/Library/e8254589-ae65-4414-b28f-54ba8f544656)

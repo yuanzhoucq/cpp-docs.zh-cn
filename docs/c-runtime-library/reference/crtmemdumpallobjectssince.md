@@ -1,48 +1,65 @@
 ---
-title: "_CrtMemDumpAllObjectsSince | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtMemDumpAllObjectsSince"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtMemDumpAllObjectsSince"
-  - "_CrtMemDumpAllObjectsSince"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtMemDumpAllObjectsSince 函数"
-  - "CrtMemDumpAllObjectsSince 函数"
+title: "_CrtMemDumpAllObjectsSince | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtMemDumpAllObjectsSince
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtMemDumpAllObjectsSince
+- _CrtMemDumpAllObjectsSince
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtMemDumpAllObjectsSince function
+- CrtMemDumpAllObjectsSince function
 ms.assetid: c48a447a-e6bb-475c-9271-a3021182a0dc
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _CrtMemDumpAllObjectsSince
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e94e06d8a1c597b0b7353dee9ae9b2988e1e7b26
+ms.lasthandoff: 02/24/2017
 
-从程序执行的开始或从指定的堆状态（仅限调试版本）转储关于在堆中对象的信息。  
+---
+# <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
+从程序开始执行或从指定的堆状态转储堆中对象的信息（仅限调试版本）。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -51,36 +68,36 @@ caps.handback.revision: 11
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `state`  
- 指向堆状态开始转储或为 **NULL** 的指针。  
+ 指向开始从其转储的堆状态的指针，或 **NULL**。  
   
-## 备注  
- `_CrtMemDumpAllObjectsSince` 函数转储分配在堆中对象的调试头信息到用户可读的表格中。  转储信息可以被应用程序跟踪配置和检测内存问题使用。  当 [\_DEBUG](../../c-runtime-library/debug.md) 未定义时，在预处理期间移除对 `_CrtMemDumpAllObjectsSince` 的调用。  
+## <a name="remarks"></a>备注  
+ `_CrtMemDumpAllObjectsSince` 函数以用户可读的形式转储堆中分配的对象的调试标头信息。 应用程序可以使用转储信息来跟踪分配并检测内存问题。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，会在预处理过程中删除对 `_CrtMemDumpAllObjectsSince` 的调用。  
   
- `_CrtMemDumpAllObjectsSince` 使用`state` 参数的值来确定哪里开始转储操作。  从指定的堆状态开始转储，`state` 参数必须是在调用`_CrtMemDumpAllObjectsSince` 之前，指向由 [\_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) 填充的 **\_CrtMemState** 结构的指针。  当 `state` 为 **NULL** 时，该函数从项目执行起开始转储。  
+ `_CrtMemDumpAllObjectsSince` 使用 `state` 参数的值确定启动转储操作的位置。 要从指定堆状态开始转储，`state` 参数必须是指向 **_CrtMemState** 结构的指针，此结构在调用 `_CrtMemDumpAllObjectsSince` 前已由 [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) 填充。 当 `state` 为 **NULL** 时，该函数从程序开始执行时即开始转储。  
   
- 如果应用程序通过调用 [\_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md) 安装一个转储挂钩函数，那么每次 `_CrtMemDumpAllObjectsSince` 转储关于块的 `_CLIENT_BLOCK` 类型的信息，则也调用应用程序提供的转储函数。  默认情况下，内部 C 运行时块 \(`_CRT_BLOCK`\) 不包括内存转储操作。  [\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函数可以用来打开**\_crtDbgFlag** 的 `_CRTDBG_CHECK_CRT_DF` 位用来包含这些块。  此外，被标记为释放或忽略的块（**\_FREE\_BLOCK**、**\_IGNORE\_BLOCK**）不包括在内存转储中。  
+ 如果应用程序通过调用 [_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md) 安装了转储挂钩函数，那么每次 `_CrtMemDumpAllObjectsSince` 转储有关 `_CLIENT_BLOCK` 块类型的信息时，它都会调用应用程序提供的转储函数。 默认情况下，内存转储操作不包含内部 C 运行时块 (`_CRT_BLOCK`)。 [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函数可用于打开 **_crtDbgFlag** 的 `_CRTDBG_CHECK_CRT_DF` 位，以将这些块包括在内。 此外，标记为已释放或已忽略的块（**_FREE_BLOCK**、**_IGNORE_BLOCK**）不包括在内存转储中。  
   
- 有关堆状态函数的详细信息和 `_CrtMemState`结构，请参见 [堆状态报告函数](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Heap_State_Reporting_Functions)。  有关在调试版本中的基位置堆中内存如何分配，初始化和管理的详细信息，请参见 [CRT 调试堆详细信息](../Topic/CRT%20Debug%20Heap%20Details.md)。  
+ 有关堆状态函数和 `_CrtMemState` 结构的详细信息，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|**\_CrtMemDumpAll\-ObjectsSince**|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|**_CrtMemDumpAll-ObjectsSince**|\<crtdbg.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
   
-## 示例  
- 对于如何使用 `_CrtMemDumpAllObjectsSince` 的例子，请参阅 [crt\_dbg2](http://msdn.microsoft.com/zh-cn/21e1346a-6a17-4f57-b275-c76813089167)。  
+## <a name="example"></a>示例  
+ 有关如何使用 `_CrtMemDumpAllObjectsSince` 的示例，请参阅 [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)。  
   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
+ 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   
- [\_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)
+ [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)

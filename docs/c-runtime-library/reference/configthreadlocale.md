@@ -1,52 +1,68 @@
 ---
-title: "_configthreadlocale | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_configthreadlocale"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-locale-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_configthreadlocale"
-  - "configthreadlocale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_configthreadlocale 函数"
-  - "configthreadlocale 函数"
-  - "区域设置, 每线程"
-  - "每线程区域设置"
-  - "线程区域设置"
+title: "_configthreadlocale | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _configthreadlocale
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-locale-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _configthreadlocale
+- configthreadlocale
+dev_langs:
+- C++
+helpviewer_keywords:
+- configthreadlocale function
+- locales, per-thread
+- _configthreadlocale function
+- per-thread locale
+- thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _configthreadlocale
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
+ms.lasthandoff: 02/24/2017
 
-配置每个线程区域设置选项。  
+---
+# <a name="configthreadlocale"></a>_configthreadlocale
+配置每个线程的区域设置选项。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _configthreadlocale(  
@@ -54,49 +70,49 @@ int _configthreadlocale(
 );  
 ```  
   
-#### 参数  
+### <a name="parameters"></a>参数  
  `type`  
- 要设置的选项。  选项中的一个列在下面的表中。  
+ 要设置的选项。 其中一个选项已在下表中列出。  
   
-## 返回值  
- 上述每个线程区域设置状态 \(`_DISABLE_PER_THREAD_LOCALE` 或 `_ENABLE_PER_THREAD_LOCALE`\)，或者失败时为\-1。  
+## <a name="return-value"></a>返回值  
+ 以前的每个线程的区域设置状态（`_DISABLE_PER_THREAD_LOCALE` 或 `_ENABLE_PER_THREAD_LOCALE`），在失败时为 -1。  
   
-## 备注  
- `_configurethreadlocale` 函数用于控制使用线程的特定区域设置。  使用以下选项之一指定或确定每个线程区域设置状态：  
+## <a name="remarks"></a>备注  
+ `_configurethreadlocale` 函数用于控制特定于线程的区域设置的使用。 请使用以下选项之一指定或确定每个线程的区域设置状态：  
   
  `_ENABLE_PER_THREAD_LOCALE`  
- 使当前线程使用线程特定区域设置。  线程随后调用 `setlocale` 只影响线程自己的区域设置。  
+ 使当前线程使用特定于线程的区域设置。 此线程中对 `setlocale` 的后续调用只会影响线程自己的区域设置。  
   
  `_DISABLE_PER_THREAD_LOCALE`  
- 使当前线程使用全局区域设置。  使用全局区域设置，线程后续调用 `setlocale` 影响其他线程。  
+ 使当前线程使用全局区域设置。 此线程中对 `setlocale` 的后续调用会影响其他使用全局区域设置的线程。  
   
  `0`  
- 为特定的线程检索当前设置。  
+ 检索此特定线程的当前设置。  
   
- 这些功能会影响 `setlocale`、`_tsetlocale`、`_wsetlocale`、`_beginthread`和 `_beginthreadex`的行为。  如果另一个方法用于创建线程，区域设置对这些线程没有影响。  
+ 这些函数将影响的行为`setlocale`， `_tsetlocale`，和`_wsetlocale`。 当每个线程区域设置是已禁用，任何后续调用`setlocale`或`_wsetlocale`更改使用全局区域设置的所有线程的区域设置。 当每个线程的区域设置都已启用时，`setlocale` 或 `_wsetlocale` 只会影响当前线程的区域设置。  
   
- 在每个线程区域设置禁用时，任何后续调用 `setlocale` 或 `_wsetlocale` 更改所有线程区域设置。  在每个线程区域设置启用时，`setlocale` 或 `_wsetlocale` 仅影响当前线程的区域设置。  
+ 如果使用了 `_configurethreadlocale` 来启用每个线程的区域设置，则建议您在此后立即调用 `setlocale` 或 `_wsetlocale` 来设置该线程的首选区域设置。  
   
- 如果使用 `_configurethreadlocale` 启用每个线程区域设置，我们建议您调用 `setlocale` 或 `_wsetlocale` 设置该线程的首选区域设置。  
+ 如果 `type` 不是表中列出的值之一，此函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
- 如果 `type` 不是在表中列出的某个值，此函数调用的无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。  如果继续执行，这个函数设置`errno`为`EINVAL` 并返回\-1。  
-  
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_configthreadlocale`|\<locale.h\>|  
+|-------------|---------------------|  
+|`_configthreadlocale`|\<locale.h>|  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // crt_configthreadlocale.cpp  
 //   
 // This program demonstrates the use of _configthreadlocale when  
-// using is two independent threads.  
+// using two independent threads.  
 //  
+// Compile by using: cl /EHsc /W4 crt_configthreadlocale.cpp 
   
 #include <locale.h>  
+#include <mbctype.h>  
 #include <process.h>  
 #include <windows.h>  
 #include <stdio.h>  
@@ -129,12 +145,14 @@ int get_time(unsigned char* str)
   
 // This thread sets its locale to German  
 // and prints the time.  
-unsigned __stdcall SecondThreadFunc( void* pArguments )  
+unsigned __stdcall SecondThreadFunc( void* /*pArguments*/ )  
 {  
     unsigned char str[BUFF_SIZE];  
   
+    _configthreadlocale(_ENABLE_PER_THREAD_LOCALE);  
+
     // Set the thread code page  
-    _setmbcp(_MB_CP_ANSI)  
+    _setmbcp(_MB_CP_ANSI);  
   
     // Set the thread locale  
     printf("The thread locale is now set to %s.\n",  
@@ -158,8 +176,8 @@ int main()
     unsigned        threadID;  
     unsigned char   str[BUFF_SIZE];  
   
-    // Configure per-thread locale to cause all subsequently created   
-    // threads to have their own locale.  
+    // Enable per-thread locale causes all subsequent locale   
+    // setting changes in this thread to only affect this thread.  
     _configthreadlocale(_ENABLE_PER_THREAD_LOCALE);  
   
     // Retrieve the time string from the helper function  
@@ -181,18 +199,20 @@ int main()
   
     // Destroy the thread object.  
     CloseHandle( hThread );  
-}  
+} 
 ```  
   
-  **线程区域设置现在设置为 English\_United States.1252。**  
-**在英国区域设置中时间为：'Wednesday, May 12, 2004'**  
-**线程区域设置现在设置为 German\_Germany.1252。**  
-**在德国区域设置中时间为：“Mittwoch，12。  Mai 2004 "**    
-## .NET Framework 等效项  
- 不适用。但是，请参见 [使用 CurrentCulture 属性](http://msdn.microsoft.com/zh-cn/3156042d-6082-4205-90b4-c917ae6a3ba6)。  
+```Output  
+The thread locale is now set to English_United States.1252.  
+The time in English locale is: 'Wednesday, May 12, 2004'  
   
-## 请参阅  
- [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_beginthread、\_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
+The thread locale is now set to German_Germany.1252.  
+The time in German locale is: 'Mittwoch, 12. Mai 2004'  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_beginthread、_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [区域设置](../../c-runtime-library/locale.md)   
- [多线程和区域设置](../../parallel/multithreading-and-locales.md)
+ [多线程和区域设置](../../parallel/multithreading-and-locales.md)  
+
