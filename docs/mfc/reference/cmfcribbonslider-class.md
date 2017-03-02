@@ -1,84 +1,253 @@
 ---
-title: "CMFCRibbonSlider Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCRibbonSlider"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCRibbonSlider class"
+title: "CMFCRibbonSlider 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCRibbonSlider
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonSlider class
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
 caps.latest.revision: 43
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 45
----
-# CMFCRibbonSlider Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 9f05ae7d0f3e1775a3321928867471749e11e679
+ms.lasthandoff: 02/24/2017
 
-`CMFCRibbonSlider` 选件类实现可以添加到功能区栏或功能区状态栏的滑块控件。  功能区滑块控件类似于出现在Office 2007应用程序的缩放滑块。  
+---
+# <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 类
+`CMFCRibbonSlider`类实现可以将添加到功能区栏或功能区状态栏的滑块控件。 功能区滑块控件类似于显示在 Office 2007 应用程序中的缩放滑块。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CMFCRibbonSlider : public CMFCRibbonBaseElement  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|构造并初始化功能区滑块控件。|  
+  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[CMFCRibbonSlider::CMFCRibbonSlider](../Topic/CMFCRibbonSlider::CMFCRibbonSlider.md)|构造和初始化功能区滑块控件。|  
+|----------|-----------------|  
+|[CMFCRibbonSlider::GetPos](#getpos)|返回当前滑块控件的位置。|  
+|[CMFCRibbonSlider::GetRangeMax](#getrangemax)|返回滑块的最大值。|  
+|[CMFCRibbonSlider::GetRangeMin](#getrangemin)|返回滑块的最小值。|  
+|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|返回功能区元素的常规大小。 (重写[CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|  
+|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|返回缩放增量滑块控件的大小。|  
+|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|指定滑块是否有缩放按钮。|  
+|[CMFCRibbonSlider::OnDraw](#ondraw)|由框架调用以绘制功能区元素。 (重写[CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|  
+|[CMFCRibbonSlider::SetPos](#setpos)|设置滑块控件的当前位置。|  
+|[CMFCRibbonSlider::SetRange](#setrange)|通过设置最小和最大值指定滑块控件的范围。|  
+|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|显示或隐藏缩放按钮。|  
+|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|将滑块控件的缩放增量大小设置。|  
   
-### 公共方法  
+## <a name="remarks"></a>备注  
+ 您可以使用`SetRange`方法来配置缩放增量滑块的范围。 您可以通过设置滑块的当前位置`SetPos`方法。  
   
-|名称|说明|  
-|--------|--------|  
-|[CMFCRibbonSlider::GetPos](../Topic/CMFCRibbonSlider::GetPos.md)|返回滑块控件的当前位置。|  
-|[CMFCRibbonSlider::GetRangeMax](../Topic/CMFCRibbonSlider::GetRangeMax.md)|返回滑块的最大值。|  
-|[CMFCRibbonSlider::GetRangeMin](../Topic/CMFCRibbonSlider::GetRangeMin.md)|返回滑块的最小值。|  
-|[CMFCRibbonSlider::GetRegularSize](../Topic/CMFCRibbonSlider::GetRegularSize.md)|返回功能区元素的常规大小。  （重写 [CMFCRibbonBaseElement::GetRegularSize](../Topic/CMFCRibbonBaseElement::GetRegularSize.md)。）|  
-|[CMFCRibbonSlider::GetZoomIncrement](../Topic/CMFCRibbonSlider::GetZoomIncrement.md)|返回缩放增加的大小滑块控件的。|  
-|[CMFCRibbonSlider::HasZoomButtons](../Topic/CMFCRibbonSlider::HasZoomButtons.md)|指定滑块是否具有缩放按钮。|  
-|[CMFCRibbonSlider::OnDraw](../Topic/CMFCRibbonSlider::OnDraw.md)|调用由框架绘制功能区元素。  （重写 [CMFCRibbonBaseElement::OnDraw](../Topic/CMFCRibbonBaseElement::OnDraw.md)。）|  
-|[CMFCRibbonSlider::SetPos](../Topic/CMFCRibbonSlider::SetPos.md)|设置滑块控件的当前位置。|  
-|[CMFCRibbonSlider::SetRange](../Topic/CMFCRibbonSlider::SetRange.md)|通过设置最小值和最大值指定滑块控件的大小。|  
-|[CMFCRibbonSlider::SetZoomButtons](../Topic/CMFCRibbonSlider::SetZoomButtons.md)|显示或隐藏缩放按钮。|  
-|[CMFCRibbonSlider::SetZoomIncrement](../Topic/CMFCRibbonSlider::SetZoomIncrement.md)|设置缩放增加的大小滑块控件的。|  
+ 可以通过使用在左侧和右侧的滑块控件的内容显示循环缩放按钮`SetZoomButtons`方法。 默认情况下，滑块处于水平方向、 左的缩放按钮显示负号和右缩放按钮将显示一个加号。  
   
-## 备注  
- 可以使用 `SetRange` 方案配置缩放增加的大小滑块的。  使用 `SetPos` 方法，可以设置滑块的当前位置。  
+ `SetZoomIncrement`方法定义增量加上或减去从当前位置，当用户单击缩放按钮。  
   
- 使用 `SetZoomButtons` 方法，可以显示在滑块控件的左右两侧均循环的缩放按钮。  默认情况下，滑块是水平的，左缩放按钮显示一个减号，并正确的缩放按钮显示加号。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用各种方法`CMFCRibbonSlider`类来设置滑块的属性。 该示例演示如何构造`CMFCRibbonSlider`对象、 显示缩放按钮、 设置滑块控件的当前位置和设置滑块控件的值的范围。  
   
- 当用户单击按钮时，缩放 `SetZoomIncrement` 方法定义增量添加或从当前位置减去。  
+ [!code-cpp[NVC_MFC_RibbonApp #&12;](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]  
   
-## 示例  
- 下面的示例在 `CMFCRibbonSlider` 选件类演示如何使用各种方法设置滑块的属性。  此示例演示如何构造 `CMFCRibbonSlider` 对象，显示缩放按钮，将滑块控件的当前位置，并将值的范围滑块控件的。  
-  
- [!code-cpp[NVC_MFC_RibbonApp#12](../../mfc/reference/codesnippet/CPP/cmfcribbonslider-class_1.cpp)]  
-  
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)  
   
-## 要求  
- **标头:** afxribbonslider.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxribbonslider.h  
   
-## 请参阅  
+##  <a name="a-namecmfcribbonslidera--cmfcribbonslidercmfcribbonslider"></a><a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
+ 构造一个功能区滑块。  
+  
+```  
+CMFCRibbonSlider(
+    UINT nID,  
+    int nWidth=100);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nID`  
+ 滑块 id。  
+  
+ [in]。 `nWidth`  
+ 滑块宽度 （像素）。  
+  
+### <a name="remarks"></a>备注  
+ 构造是一个功能区滑块`nWidth`像素宽面板类别添加滑块位置中。 默认情况下，滑块为水平方向。  
+  
+##  <a name="a-namegetposa--cmfcribbonslidergetpos"></a><a name="getpos"></a>CMFCRibbonSlider::GetPos  
+ 返回当前滑块控件的位置。  
+  
+```  
+int GetPos() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 滑块控件，这是滑块的位置相对于开头的当前位置。  
+  
+##  <a name="a-namegetrangemaxa--cmfcribbonslidergetrangemax"></a><a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
+ 获取滑块可以行驶的滑块控件的滑块的最大增量。  
+  
+```  
+int GetRangeMax() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 该滑块可以行驶的滑块控件滑块的最大的增量。  
+  
+##  <a name="a-namegetrangemina--cmfcribbonslidergetrangemin"></a><a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
+ 返回该滑块可以行驶的滑块控件的最小增量。  
+  
+```  
+int GetRangeMin() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 最小，递增该滑块可以行驶的滑块控件。  
+  
+##  <a name="a-namegetregularsizea--cmfcribbonslidergetregularsize"></a><a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CSize GetRegularSize(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pDC`  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namegetzoomincrementa--cmfcribbonslidergetzoomincrement"></a><a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
+ 获取滑块控件的缩放增量。  
+  
+```  
+int GetZoomIncrement() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 滑块控件的缩放增量。  
+  
+##  <a name="a-namehaszoombuttonsa--cmfcribbonsliderhaszoombuttons"></a><a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
+ 指定滑块是否有缩放按钮。  
+  
+```  
+BOOL HasZoomButtons() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果该滑块有缩放按钮;`FALSE`否则为。  
+  
+##  <a name="a-nameondrawa--cmfcribbonsliderondraw"></a><a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnDraw(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pDC`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namesetposa--cmfcribbonslidersetpos"></a><a name="setpos"></a>CMFCRibbonSlider::SetPos  
+ 设置滑块控件的当前位置。  
+  
+```  
+void SetPos(
+    int nPos,  
+    BOOL bRedraw=TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nPos`  
+ 指定要设置滑块的位置。 位置是相对于滑块的开头。  
+  
+ [in] `bRedraw`  
+ 如果`TRUE`，滑块将重绘。  
+  
+##  <a name="a-namesetrangea--cmfcribbonslidersetrange"></a><a name="setrange"></a>CMFCRibbonSlider::SetRange  
+ 设置滑块控件的值的范围。  
+  
+```  
+void SetRange(
+    int nMin,  
+    int nMax);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nMin`  
+ 指定滑块控件的最小值。  
+  
+ [in] `nMax`  
+ 指定滑块控件的最大值。  
+  
+### <a name="remarks"></a>备注  
+ 通过设置最小和最大值中指定的滑块控件的值的范围。  
+  
+##  <a name="a-namesetzoombuttonsa--cmfcribbonslidersetzoombuttons"></a><a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
+ 显示或隐藏缩放按钮。  
+  
+```  
+void SetZoomButtons(BOOL bSet=TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in]。 `bSet`  
+ `TRUE`若要显示缩放按钮;`FALSE`隐藏它们。  
+  
+##  <a name="a-namesetzoomincrementa--cmfcribbonslidersetzoomincrement"></a><a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
+ 设置滑块控件的缩放增量。  
+  
+```  
+void SetZoomIncrement(int nZoomIncrement);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nZoomIncrement`  
+ 指定滑块控件的缩放增量。  
+  
+## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)
+ [CMFCRibbonBaseElement 类](../../mfc/reference/cmfcribbonbaseelement-class.md)
+

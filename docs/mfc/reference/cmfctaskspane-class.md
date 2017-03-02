@@ -1,151 +1,167 @@
 ---
-title: "CMFCTasksPane Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCTasksPane"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCTasksPane class"
+title: "CMFCTasksPane 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCTasksPane
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCTasksPane class
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# CMFCTasksPane Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 2eb41c24b60bcaea7eadc361c23d5c2273217919
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cmfctaskspane-class"></a>CMFCTasksPane 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
  `CMFCTasksPane` 类实现可点击项（任务）的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CMFCTasksPane : public CDockablePane  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
-|[CMFCTasksPane::CMFCTasksPane](../Topic/CMFCTasksPane::CMFCTasksPane.md)|构造 `CMFCTasksPane` 对象。|  
+|名称|描述|  
+|----------|-----------------|  
+|[CMFCTasksPane::CMFCTasksPane](#cmfctaskspane)|构造 `CMFCTasksPane` 对象。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[CMFCTasksPane::AddGroup](../Topic/CMFCTasksPane::AddGroup.md)|将新任务组添加到任务窗格控件。|  
-|[CMFCTasksPane::AddLabel](../Topic/CMFCTasksPane::AddLabel.md)|将新的静态标签添加到指定任务组中。|  
-|[CMFCTasksPane::AddMRUFilesList](../Topic/CMFCTasksPane::AddMRUFilesList.md)|将由最近使用的 \(MRU\) 文件列表指定的任务添加到一个组中。|  
-|[CMFCTasksPane::AddPage](../Topic/CMFCTasksPane::AddPage.md)|将新页面添加到任务窗格。|  
-|[CMFCTasksPane::AddSeparator](../Topic/CMFCTasksPane::AddSeparator.md)||  
-|[CMFCTasksPane::AddTask](../Topic/CMFCTasksPane::AddTask.md)|将新任务添加到指定的任务组。|  
-|[CMFCTasksPane::AddWindow](../Topic/CMFCTasksPane::AddWindow.md)|将子窗口添加到任务窗格。|  
-|[CMFCTasksPane::CollapseAllGroups](../Topic/CMFCTasksPane::CollapseAllGroups.md)||  
-|[CMFCTasksPane::CollapseGroup](../Topic/CMFCTasksPane::CollapseGroup.md)|以编程方式折叠组。|  
-|[CMFCTasksPane::CreateDefaultMiniframe](../Topic/CMFCTasksPane::CreateDefaultMiniframe.md)|（重写 [CPane::CreateDefaultMiniframe](../Topic/CPane::CreateDefaultMiniframe.md)。）|  
-|[CMFCTasksPane::CreateMenu](../Topic/CMFCTasksPane::CreateMenu.md)|由框架调用，以便为**“其他任务窗格”**菜单按钮创建菜单。|  
-|[CMFCTasksPane::EnableAnimation](../Topic/CMFCTasksPane::EnableAnimation.md)|启用或禁用折叠或展开任务组时的动画。|  
-|[CMFCTasksPane::EnableGroupCollapse](../Topic/CMFCTasksPane::EnableGroupCollapse.md)|指定是否可以折叠任务组。|  
-|[CMFCTasksPane::EnableHistoryMenuButtons](../Topic/CMFCTasksPane::EnableHistoryMenuButtons.md)|启用或禁用**“下一步”**和**“上一步”**导航按钮中的下拉菜单。|  
-|[CMFCTasksPane::EnableNavigationToolbar](../Topic/CMFCTasksPane::EnableNavigationToolbar.md)|启用或禁用导航工具栏。|  
-|[CMFCTasksPane::EnableOffsetCustomControls](../Topic/CMFCTasksPane::EnableOffsetCustomControls.md)||  
-|[CMFCTasksPane::EnableScrollButtons](../Topic/CMFCTasksPane::EnableScrollButtons.md)|启用滚动按钮，而不是滚动条。|  
-|[CMFCTasksPane::EnableWrapLabels](../Topic/CMFCTasksPane::EnableWrapLabels.md)|启用或禁用标签的自动换行。|  
-|[CMFCTasksPane::EnableWrapTasks](../Topic/CMFCTasksPane::EnableWrapTasks.md)|启用或禁用任务的自动换行。|  
-|[CMFCTasksPane::GetActivePage](../Topic/CMFCTasksPane::GetActivePage.md)|返回活动页的从零开始的索引。|  
-|[CMFCTasksPane::GetGroupCaptionHeight](../Topic/CMFCTasksPane::GetGroupCaptionHeight.md)|返回的组标题的高度。|  
-|[CMFCTasksPane::GetGroupCaptionHorzOffset](../Topic/CMFCTasksPane::GetGroupCaptionHorzOffset.md)|返回组标题相对于任务窗格的左边缘和右边缘的当前偏移量。|  
-|[CMFCTasksPane::GetGroupCaptionVertOffset](../Topic/CMFCTasksPane::GetGroupCaptionVertOffset.md)|返回组标题相对于任务窗格的上边缘和下边缘的当前偏移量。|  
-|[CMFCTasksPane::GetGroupCount](../Topic/CMFCTasksPane::GetGroupCount.md)|返回组的总数。|  
-|[CMFCTasksPane::GetGroupLocation](../Topic/CMFCTasksPane::GetGroupLocation.md)|返回给定组的内部组索引。|  
-|[CMFCTasksPane::GetGroupVertOffset](../Topic/CMFCTasksPane::GetGroupVertOffset.md)|返回组的垂直偏移量。|  
-|[CMFCTasksPane::GetHorzMargin](../Topic/CMFCTasksPane::GetHorzMargin.md)|返回任务窗格和工作区边缘之间的水平间距。|  
-|[CMFCTasksPane::GetNextPages](../Topic/CMFCTasksPane::GetNextPages.md)||  
-|[CMFCTasksPane::GetPageByGroup](../Topic/CMFCTasksPane::GetPageByGroup.md)|检索指定组的页索引。|  
-|[CMFCTasksPane::GetPagesCount](../Topic/CMFCTasksPane::GetPagesCount.md)|返回页数。|  
-|[CMFCTasksPane::GetPreviousPages](../Topic/CMFCTasksPane::GetPreviousPages.md)||  
-|[CMFCTasksPane::GetScrollBarCtrl](../Topic/CMFCTasksPane::GetScrollBarCtrl.md)|（重写 [CWnd::GetScrollBarCtrl](../Topic/CWnd::GetScrollBarCtrl.md)。）|  
-|[CMFCTasksPane::GetTask](../Topic/CMFCTasksPane::GetTask.md)|检索任务。|  
-|[CMFCTasksPane::GetTaskCount](../Topic/CMFCTasksPane::GetTaskCount.md)|返回指定组中任务项的数量。|  
-|[CMFCTasksPane::GetTaskGroup](../Topic/CMFCTasksPane::GetTaskGroup.md)|返回给定组索引的任务组。|  
-|[CMFCTasksPane::GetTaskLocation](../Topic/CMFCTasksPane::GetTaskLocation.md)|返回给定任务的组和索引。|  
-|[CMFCTasksPane::GetTasksHorzOffset](../Topic/CMFCTasksPane::GetTasksHorzOffset.md)|返回任务相对于其父组的左边缘和右边缘的水平偏移量。|  
-|[CMFCTasksPane::GetTasksIconHorzOffset](../Topic/CMFCTasksPane::GetTasksIconHorzOffset.md)||  
-|[CMFCTasksPane::GetTasksIconVertOffset](../Topic/CMFCTasksPane::GetTasksIconVertOffset.md)||  
-|[CMFCTasksPane::GetVertMargin](../Topic/CMFCTasksPane::GetVertMargin.md)|返回任务窗格和工作区边缘之间的垂直间距。|  
-|[CMFCTasksPane::IsAccessibilityCompatible](../Topic/CMFCTasksPane::IsAccessibilityCompatible.md)|（重写 `CDockablePane::IsAccessibilityCompatible`。）|  
-|[CMFCTasksPane::IsAnimationEnabled](../Topic/CMFCTasksPane::IsAnimationEnabled.md)|指示动画是否已启用。|  
-|[CMFCTasksPane::IsBackButtonEnabled](../Topic/CMFCTasksPane::IsBackButtonEnabled.md)|指示“返回”按钮是否已启用。|  
-|[CMFCTasksPane::IsForwardButtonEnabled](../Topic/CMFCTasksPane::IsForwardButtonEnabled.md)|指示“前进”按钮是否已启用。|  
-|[CMFCTasksPane::IsGroupCollapseEnabled](../Topic/CMFCTasksPane::IsGroupCollapseEnabled.md)||  
-|[CMFCTasksPane::IsHistoryMenuButtonsEnabled](../Topic/CMFCTasksPane::IsHistoryMenuButtonsEnabled.md)|指示**“下一步”**和**“上一步”**导航按钮是否具有下拉菜单。|  
-|[CMFCTasksPane::IsNavigationToolbarEnabled](../Topic/CMFCTasksPane::IsNavigationToolbarEnabled.md)|指示导航工具栏是否已启用。|  
-|[CMFCTasksPane::IsToolBox](../Topic/CMFCTasksPane::IsToolBox.md)||  
-|[CMFCTasksPane::IsWrapLabelsEnabled](../Topic/CMFCTasksPane::IsWrapLabelsEnabled.md)|指示任务窗格是否在标签中换行。|  
-|[CMFCTasksPane::IsWrapTasksEnabled](../Topic/CMFCTasksPane::IsWrapTasksEnabled.md)|指示任务窗格是否在任务中换行。|  
-|[CMFCTasksPane::LoadState](../Topic/CMFCTasksPane::LoadState.md)|（重写 [CDockablePane::LoadState](http://msdn.microsoft.com/zh-cn/96110136-4f46-4764-8a76-3b4abaf77917)。）|  
-|[CMFCTasksPane::OnCancel](../Topic/CMFCTasksPane::OnCancel.md)||  
-|[CMFCTasksPane::OnClickTask](../Topic/CMFCTasksPane::OnClickTask.md)|当用户单击任务窗格中的项时，由框架调用。|  
-|[CMFCTasksPane::OnOK](../Topic/CMFCTasksPane::OnOK.md)||  
-|[CMFCTasksPane::OnPressBackButton](../Topic/CMFCTasksPane::OnPressBackButton.md)|当用户单击“后退”按钮时，由框架调用。|  
-|[CMFCTasksPane::OnPressForwardButton](../Topic/CMFCTasksPane::OnPressForwardButton.md)|当用户单击“前进”导航按钮时，由框架调用。|  
-|[CMFCTasksPane::OnPressHomeButton](../Topic/CMFCTasksPane::OnPressHomeButton.md)|当用户单击“主页”导航按钮时，由框架调用|  
-|[CMFCTasksPane::OnPressOtherButton](../Topic/CMFCTasksPane::OnPressOtherButton.md)||  
-|[CMFCTasksPane::OnSetAccData](../Topic/CMFCTasksPane::OnSetAccData.md)|（重写 [CBasePane::OnSetAccData](../Topic/CBasePane::OnSetAccData.md)。）|  
-|[CMFCTasksPane::OnUpdateCmdUI](../Topic/CMFCTasksPane::OnUpdateCmdUI.md)|（重写 [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/zh-cn/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。）|  
-|[CMFCTasksPane::PreTranslateMessage](../Topic/CMFCTasksPane::PreTranslateMessage.md)|（重写 [CDockablePane::PreTranslateMessage](http://msdn.microsoft.com/zh-cn/49a242cc-b158-400e-9e01-0345ec9c3ffd)。）|  
-|[CMFCTasksPane::RecalcLayout](../Topic/CMFCTasksPane::RecalcLayout.md)|（重写 [CPane::RecalcLayout](../Topic/CPane::RecalcLayout.md)。）|  
-|[CMFCTasksPane::RemoveAllGroups](../Topic/CMFCTasksPane::RemoveAllGroups.md)|删除指定页上的所有组。|  
-|[CMFCTasksPane::RemoveAllPages](../Topic/CMFCTasksPane::RemoveAllPages.md)|从任务窗格中删除所有页，除默认（第一）页除外。|  
-|[CMFCTasksPane::RemoveAllTasks](../Topic/CMFCTasksPane::RemoveAllTasks.md)|从组中删除所有任务。|  
-|[CMFCTasksPane::RemoveGroup](../Topic/CMFCTasksPane::RemoveGroup.md)|删除组。|  
-|[CMFCTasksPane::RemovePage](../Topic/CMFCTasksPane::RemovePage.md)|从任务窗格删除指定页。|  
-|[CMFCTasksPane::RemoveTask](../Topic/CMFCTasksPane::RemoveTask.md)|从任务组删除任务。|  
-|[CMFCTasksPane::SaveState](../Topic/CMFCTasksPane::SaveState.md)|（重写 [CDockablePane::SaveState](http://msdn.microsoft.com/zh-cn/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。）|  
-|[CMFCTasksPane::Serialize](../Topic/CMFCTasksPane::Serialize.md)|（重写 [CDockablePane::Serialize](http://msdn.microsoft.com/zh-cn/09787e59-e446-4e76-894b-206d303dcfd6)。）|  
-|[CMFCTasksPane::SetActivePage](../Topic/CMFCTasksPane::SetActivePage.md)|在任务窗格中激活指定页。|  
-|[CMFCTasksPane::SetCaption](../Topic/CMFCTasksPane::SetCaption.md)|设置任务窗格的标题名称。|  
-|[CMFCTasksPane::SetGroupCaptionHeight](../Topic/CMFCTasksPane::SetGroupCaptionHeight.md)|设置组标题的高度。|  
-|[CMFCTasksPane::SetGroupCaptionHorzOffset](../Topic/CMFCTasksPane::SetGroupCaptionHorzOffset.md)|设置组标题的水平偏移量。|  
-|[CMFCTasksPane::SetGroupCaptionVertOffset](../Topic/CMFCTasksPane::SetGroupCaptionVertOffset.md)|设置组标题的垂直偏移量。|  
-|[CMFCTasksPane::SetGroupName](../Topic/CMFCTasksPane::SetGroupName.md)|设置组名称。|  
-|[CMFCTasksPane::SetGroupTextColor](../Topic/CMFCTasksPane::SetGroupTextColor.md)|设置组标题的文本颜色。|  
-|[CMFCTasksPane::SetGroupVertOffset](../Topic/CMFCTasksPane::SetGroupVertOffset.md)|设置组的垂直偏移量。|  
-|[CMFCTasksPane::SetHorzMargin](../Topic/CMFCTasksPane::SetHorzMargin.md)|设置任务窗格和工作区边缘之间的水平间距。|  
-|[CMFCTasksPane::SetIconsList](../Topic/CMFCTasksPane::SetIconsList.md)|设置与任务关联的图像列表。|  
-|[CMFCTasksPane::SetPageCaption](../Topic/CMFCTasksPane::SetPageCaption.md)|设置任务窗格页的标题文本。|  
-|[CMFCTasksPane::SetTaskName](../Topic/CMFCTasksPane::SetTaskName.md)|设置任务的名称。|  
-|[CMFCTasksPane::SetTasksIconHorzOffset](../Topic/CMFCTasksPane::SetTasksIconHorzOffset.md)||  
-|[CMFCTasksPane::SetTasksIconVertOffset](../Topic/CMFCTasksPane::SetTasksIconVertOffset.md)||  
-|[CMFCTasksPane::SetTaskTextColor](../Topic/CMFCTasksPane::SetTaskTextColor.md)|设置任务的文本颜色。|  
-|[CMFCTasksPane::SetTasksHorzOffset](../Topic/CMFCTasksPane::SetTasksHorzOffset.md)|设置任务相对于其父组的左边缘和右边缘的水平偏移量。|  
-|[CMFCTasksPane::SetVertMargin](../Topic/CMFCTasksPane::SetVertMargin.md)|设置任务窗格和工作区边缘之间的垂直间距。|  
-|[CMFCTasksPane::SetWindowHeight](../Topic/CMFCTasksPane::SetWindowHeight.md)|设置窗口的高度。|  
-|[CMFCTasksPane::ShowCommandMessageString](../Topic/CMFCTasksPane::ShowCommandMessageString.md)||  
-|[CMFCTasksPane::ShowTask](../Topic/CMFCTasksPane::ShowTask.md)|显示或隐藏任务。|  
-|[CMFCTasksPane::ShowTaskByCmdId](../Topic/CMFCTasksPane::ShowTaskByCmdId.md)|基于任务的命令 ID 显示或隐藏任务。|  
-|[CMFCTasksPane::Update](../Topic/CMFCTasksPane::Update.md)|更新属于任务窗格的 GUI 元素。|  
+|名称|描述|  
+|----------|-----------------|  
+|[CMFCTasksPane::AddGroup](#addgroup)|将新任务组添加到任务窗格控件。|  
+|[CMFCTasksPane::AddLabel](#addlabel)|将新的静态标签添加到指定任务组中。|  
+|[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)|将由最近使用的 (MRU) 文件列表指定的任务添加到一个组中。|  
+|[CMFCTasksPane::AddPage](#addpage)|将新页面添加到任务窗格。|  
+|[CMFCTasksPane::AddSeparator](#addseparator)||  
+|[CMFCTasksPane::AddTask](#addtask)|将新任务添加到指定的任务组。|  
+|[CMFCTasksPane::AddWindow](#addwindow)|将子窗口添加到任务窗格。|  
+|[CMFCTasksPane::CollapseAllGroups](#collapseallgroups)||  
+|[CMFCTasksPane::CollapseGroup](#collapsegroup)|以编程方式折叠组。|  
+|[CMFCTasksPane::CreateDefaultMiniframe](#createdefaultminiframe)|(重写[CPane::CreateDefaultMiniframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)。)|  
+|[CMFCTasksPane::CreateMenu](#createmenu)|由框架调用以创建菜单**其他任务窗格**菜单按钮。|  
+|[CMFCTasksPane::EnableAnimation](#enableanimation)|启用或禁用折叠或展开任务组时的动画。|  
+|[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)|指定是否可以折叠任务组。|  
+|[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|启用或禁用中的下拉列表菜单**下一步**和**上一步**导航按钮。|  
+|[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|启用或禁用导航工具栏。|  
+|[CMFCTasksPane::EnableOffsetCustomControls](#enableoffsetcustomcontrols)||  
+|[CMFCTasksPane::EnableScrollButtons](#enablescrollbuttons)|启用滚动按钮，而不是滚动条。|  
+|[CMFCTasksPane::EnableWrapLabels](#enablewraplabels)|启用或禁用标签的自动换行。|  
+|[CMFCTasksPane::EnableWrapTasks](#enablewraptasks)|启用或禁用任务的自动换行。|  
+|[CMFCTasksPane::GetActivePage](#getactivepage)|返回活动页的从零开始的索引。|  
+|[CMFCTasksPane::GetGroupCaptionHeight](#getgroupcaptionheight)|返回的组标题的高度。|  
+|[CMFCTasksPane::GetGroupCaptionHorzOffset](#getgroupcaptionhorzoffset)|返回组标题相对于任务窗格的左边缘和右边缘的当前偏移量。|  
+|[CMFCTasksPane::GetGroupCaptionVertOffset](#getgroupcaptionvertoffset)|返回组标题相对于任务窗格的上边缘和下边缘的当前偏移量。|  
+|[CMFCTasksPane::GetGroupCount](#getgroupcount)|返回组的总数。|  
+|[CMFCTasksPane::GetGroupLocation](#getgrouplocation)|返回给定组的内部组索引。|  
+|[CMFCTasksPane::GetGroupVertOffset](#getgroupvertoffset)|返回组的垂直偏移量。|  
+|[CMFCTasksPane::GetHorzMargin](#gethorzmargin)|返回任务窗格和工作区边缘之间的水平间距。|  
+|[CMFCTasksPane::GetNextPages](#getnextpages)||  
+|[CMFCTasksPane::GetPageByGroup](#getpagebygroup)|检索指定组的页索引。|  
+|[CMFCTasksPane::GetPagesCount](#getpagescount)|返回页数。|  
+|[CMFCTasksPane::GetPreviousPages](#getpreviouspages)||  
+|[CMFCTasksPane::GetScrollBarCtrl](#getscrollbarctrl)|(重写[CWnd::GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl)。)|  
+|[CMFCTasksPane::GetTask](#gettask)|检索任务。|  
+|[CMFCTasksPane::GetTaskCount](#gettaskcount)|返回指定组中任务项的数量。|  
+|[CMFCTasksPane::GetTaskGroup](#gettaskgroup)|返回给定组索引的任务组。|  
+|[CMFCTasksPane::GetTaskLocation](#gettasklocation)|返回给定任务的组和索引。|  
+|[CMFCTasksPane::GetTasksHorzOffset](#gettaskshorzoffset)|返回任务相对于其父组的左边缘和右边缘的水平偏移量。|  
+|[CMFCTasksPane::GetTasksIconHorzOffset](#gettasksiconhorzoffset)||  
+|[CMFCTasksPane::GetTasksIconVertOffset](#gettasksiconvertoffset)||  
+|[CMFCTasksPane::GetVertMargin](#getvertmargin)|返回任务窗格和工作区边缘之间的垂直间距。|  
+|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|（重写 `CDockablePane::IsAccessibilityCompatible`。）|  
+|[CMFCTasksPane::IsAnimationEnabled](#isanimationenabled)|指示动画是否已启用。|  
+|[CMFCTasksPane::IsBackButtonEnabled](#isbackbuttonenabled)|指示“返回”按钮是否已启用。|  
+|[CMFCTasksPane::IsForwardButtonEnabled](#isforwardbuttonenabled)|指示“前进”按钮是否已启用。|  
+|[CMFCTasksPane::IsGroupCollapseEnabled](#isgroupcollapseenabled)||  
+|[CMFCTasksPane::IsHistoryMenuButtonsEnabled](#ishistorymenubuttonsenabled)|指示是否**下一步**和**上一步**导航按钮都有下拉菜单。|  
+|[CMFCTasksPane::IsNavigationToolbarEnabled](#isnavigationtoolbarenabled)|指示导航工具栏是否已启用。|  
+|[CMFCTasksPane::IsToolBox](#istoolbox)||  
+|[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|指示任务窗格是否在标签中换行。|  
+|[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|指示任务窗格是否在任务中换行。|  
+|[CMFCTasksPane::LoadState](#loadstate)|(重写[cdockablepane:: Loadstate](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
+|[CMFCTasksPane::OnCancel](#oncancel)||  
+|[CMFCTasksPane::OnClickTask](#onclicktask)|当用户单击任务窗格中的项时，由框架调用。|  
+|[CMFCTasksPane::OnOK](#onok)||  
+|[CMFCTasksPane::OnPressBackButton](#onpressbackbutton)|当用户单击“后退”按钮时，由框架调用。|  
+|[CMFCTasksPane::OnPressForwardButton](#onpressforwardbutton)|当用户单击“前进”导航按钮时，由框架调用。|  
+|[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|当用户单击“主页”导航按钮时，由框架调用|  
+|[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
+|[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(重写[CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata)。)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(重写[CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(重写[CDockablePane::PreTranslateMessage](http://msdn.microsoft.com/en-us/49a242cc-b158-400e-9e01-0345ec9c3ffd)。)|  
+|[CMFCTasksPane::RecalcLayout](#recalclayout)|(重写[CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout)。)|  
+|[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|删除指定页上的所有组。|  
+|[CMFCTasksPane::RemoveAllPages](#removeallpages)|从任务窗格中删除所有页，除默认（第一）页除外。|  
+|[CMFCTasksPane::RemoveAllTasks](#removealltasks)|从组中删除所有任务。|  
+|[CMFCTasksPane::RemoveGroup](#removegroup)|删除组。|  
+|[CMFCTasksPane::RemovePage](#removepage)|从任务窗格删除指定页。|  
+|[CMFCTasksPane::RemoveTask](#removetask)|从任务组删除任务。|  
+|[CMFCTasksPane::SaveState](#savestate)|(重写[cdockablepane:: Savestate](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。)|  
+|[CMFCTasksPane::Serialize](#serialize)|(重写[CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6)。)|  
+|[CMFCTasksPane::SetActivePage](#setactivepage)|在任务窗格中激活指定页。|  
+|[CMFCTasksPane::SetCaption](#setcaption)|设置任务窗格的标题名称。|  
+|[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|设置组标题的高度。|  
+|[CMFCTasksPane::SetGroupCaptionHorzOffset](#setgroupcaptionhorzoffset)|设置组标题的水平偏移量。|  
+|[CMFCTasksPane::SetGroupCaptionVertOffset](#setgroupcaptionvertoffset)|设置组标题的垂直偏移量。|  
+|[CMFCTasksPane::SetGroupName](#setgroupname)|设置组名称。|  
+|[CMFCTasksPane::SetGroupTextColor](#setgrouptextcolor)|设置组标题的文本颜色。|  
+|[CMFCTasksPane::SetGroupVertOffset](#setgroupvertoffset)|设置组的垂直偏移量。|  
+|[CMFCTasksPane::SetHorzMargin](#sethorzmargin)|设置任务窗格和工作区边缘之间的水平间距。|  
+|[CMFCTasksPane::SetIconsList](#seticonslist)|设置与任务关联的图像列表。|  
+|[CMFCTasksPane::SetPageCaption](#setpagecaption)|设置任务窗格页的标题文本。|  
+|[CMFCTasksPane::SetTaskName](#settaskname)|设置任务的名称。|  
+|[CMFCTasksPane::SetTasksIconHorzOffset](#settasksiconhorzoffset)||  
+|[CMFCTasksPane::SetTasksIconVertOffset](#settasksiconvertoffset)||  
+|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|设置任务的文本颜色。|  
+|[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|设置任务相对于其父组的左边缘和右边缘的水平偏移量。|  
+|[CMFCTasksPane::SetVertMargin](#setvertmargin)|设置任务窗格和工作区边缘之间的垂直间距。|  
+|[CMFCTasksPane::SetWindowHeight](#setwindowheight)|设置窗口的高度。|  
+|[CMFCTasksPane::ShowCommandMessageString](#showcommandmessagestring)||  
+|[CMFCTasksPane::ShowTask](#showtask)|显示或隐藏任务。|  
+|[CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid)|基于任务的命令 ID 显示或隐藏任务。|  
+|[CMFCTasksPane::Update](#update)|更新属于任务窗格的 GUI 元素。|  
   
-### 受保护的方法  
+### <a name="protected-methods"></a>受保护的方法  
   
-|名称|说明|  
-|--------|--------|  
-|[CMFCTasksPane::OnActivateTasksPanePage](../Topic/CMFCTasksPane::OnActivateTasksPanePage.md)|激活新的任务窗格页时，由框架调用。|  
+|名称|描述|  
+|----------|-----------------|  
+|[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|激活新的任务窗格页时，由框架调用。|  
   
-## 备注  
+## <a name="remarks"></a>备注  
  `CMFCTasksPane` 类实现下列功能：  
   
 -   可以对项进行分组，并且每个项分组均可具有关联的标题。  
@@ -154,47 +170,1560 @@ class CMFCTasksPane : public CDockablePane
   
 -   可以向任务窗格中的每个项分配一个图标。  
   
--   可将单个项与在用户单击该项时执行的任务 ID 关联。  单击时，`WM_COMMAND` 消息会发送给任务窗格控件的所有者。  
+-   可将单个项与在用户单击该项时执行的任务 ID 关联。 单击时，`WM_COMMAND` 消息会发送给任务窗格控件的所有者。  
   
  若要在应用程序中使用 `CMFCTasksPane` 控件，请执行以下步骤：  
   
 1.  将 `CMFCTasksPane` 对象嵌入主框架窗口类。  
   
-2.  处理 `WM_CREATE` 消息时，请调用 `Create` 方法。  可以使用常规 [CControlBar](../../mfc/reference/ccontrolbar-class.md) 样式。  有关详细信息，请参阅`CControlBar::Create`。  
+2.  处理 `WM_CREATE` 消息时，请调用 `Create` 方法。 您可以使用常规[CControlBar](../../mfc/reference/ccontrolbar-class.md)样式。 有关更多信息，请参见`CControlBar::Create`。  
   
-3.  调用 [CMFCTasksPane::AddGroup](../Topic/CMFCTasksPane::AddGroup.md) 方法以添加不同的组。  
+3.  调用[CMFCTasksPane::AddGroup](#addgroup)方法来添加不同的组。  
   
-4.  调用 [CMFCTasksPane::AddTask](../Topic/CMFCTasksPane::AddTask.md)、[CMFCTasksPane::AddLabel](../Topic/CMFCTasksPane::AddLabel.md) 或 [CMFCTasksPane::AddMRUFilesList](../Topic/CMFCTasksPane::AddMRUFilesList.md) 成员函数，以便将新的项（任务）添加到每个组。  
+4.  调用[CMFCTasksPane::AddTask](#addtask)， [CMFCTasksPane::AddLabel](#addlabel)或[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)成员函数以向每个组添加新项 （任务）。  
   
-5.  调用 [CMFCTasksPane::EnableGroupCollapse](../Topic/CMFCTasksPane::EnableGroupCollapse.md) 以指定是否可以折叠项组。  
+5.  调用[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)来指定是否可以折叠项组。  
   
- 下图显示了一个典型的任务窗格控件。  第一组是*特殊*组，其标题是较深的颜色。  第三组处于折叠状态。  最后一组与任务窗格的底部对齐且没有标题，而且组中的最后一个任务是一个简单的标签：  
+ 下图显示了一个典型的任务窗格控件。 第一个组是*特殊*组和它的标题是较深的颜色。 第三组处于折叠状态。 最后一组与任务窗格的底部对齐且没有标题，而且组中的最后一个任务是一个简单的标签：  
   
- ![任务窗格示例](../../mfc/reference/media/nexttaskpane.png "NextTaskPane")  
+ ![任务窗格示例](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")  
   
- 可以通过调整各种边距和偏移量来自定义任务窗格的外观。  下图阐明这些变量的含义：  
+ 可以通过调整各种边距和偏移量来自定义任务窗格的外观。 下图阐明这些变量的含义：  
   
- ![自定义任务组](../../mfc/reference/media/nexttaskgrpcustom.png "NextTaskGrpCustom")  
+ ![自定义任务组](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")  
   
-## 示例  
- 下面的示例演示如何构造 `CMFCTasksPane` 对象和在 `CMFCTasksPane` 类中使用各种方法。  该示例显示如何启用任务组的折叠、在**“下一步”**和**“上一步”**导航按钮上启用下拉菜单、启用滚动按钮代替滚动条、为标签中的文本启用自动换行、设置任务窗格的标题名称、设置组标题的文本颜色以及设置水平和垂直边距。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何构造 `CMFCTasksPane` 对象和在 `CMFCTasksPane` 类中使用各种方法。 该示例演示如何启用任务组的折叠，请在启用下拉列表菜单**下一步**和**上一步**导航按钮启用而不是一个滚动条的滚动按钮，启用 word 标签中文本的包装，设置任务窗格中的标题名称、 设置组标题的文本颜色以及设置的水平和垂直边距。  
   
- [!code-cpp[NVC_MFC_RibbonApp#28](../../mfc/reference/codesnippet/CPP/cmfctaskspane-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp #&28;](../../mfc/reference/codesnippet/cpp/cmfctaskspane-class_1.cpp)]  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
- [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)  
+ `CMFCTasksPane`  
   
-## 要求  
- **标头：**afxTasksPane.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxTasksPane.h  
   
-## 请参阅  
+##  <a name="a-nameaddgroupa--cmfctaskspaneaddgroup"></a><a name="addgroup"></a>CMFCTasksPane::AddGroup  
+ 将新任务组添加到任务窗格控件。  
+  
+```  
+int AddGroup(
+    int nPageIdx,  
+    LPCTSTR lpszGroupName,  
+    BOOL bBottomLocation = FALSE,  
+    BOOL bSpecial = FALSE,  
+    HICON hIcon = NULL);
+
+ 
+int AddGroup(
+    LPCTSTR lpszGroupName,  
+    BOOL bBottomLocation = FALSE,  
+    BOOL bSpecial = FALSE,  
+    HICON hIcon = NULL);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nPageIdx`  
+ 指定的从零开始的页索引。  
+  
+ [in] `lpszGroupName`  
+ 指定组的名称。  
+  
+ [in] `bBottomLocation`  
+ `TRUE`若要在任务窗格控件; 底部创建组否则为`FALSE`。  
+  
+ [in] `bSpecial`  
+ `TRUE`若要将标记作为此组*特殊*组; 否则为`FALSE`。 有关特殊组的详细信息，请参阅备注部分的`CMFCTasksPane`。  
+  
+ [in] `hIcon`  
+ 指定要在组标题中显示的图标。  
+  
+### <a name="return-value"></a>返回值  
+ 类维护的组的内部列表中组的从零开始的索引。  
+  
+### <a name="remarks"></a>备注  
+ 调用此方法来创建一组任务，并将该组添加到任务窗格控件。  
+  
+ 在任务窗格控件顶部或底部，框架将显示任务组。 框架可以显示在底部; 只有一个组必须将上一次添加此组。  
+  
+##  <a name="a-nameaddlabela--cmfctaskspaneaddlabel"></a><a name="addlabel"></a>CMFCTasksPane::AddLabel  
+ 将标签添加到指定的任务组。  
+  
+```  
+int AddLabel(
+    int nGroup,  
+    LPCTSTR lpszLabelName,  
+    int nTaskIcon = -1,  
+    BOOL bIsBold = FALSE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定添加了标签的组的索引。  
+  
+ [in] `lpszLabelName`  
+ 指定标签的名称。  
+  
+ [in] `nTaskIcon`  
+ 指定要显示该标签旁边的图标。 框架将存储映像的列表中的图标。 此参数是该列表中的索引。  
+  
+ [in] `bIsBold`  
+ `TRUE`若要显示为粗体文本; 显示标签否则为`FALSE`。  
+  
+### <a name="return-value"></a>返回值  
+ 标签添加的组的从零开始的索引或由指定的组时为-1`nGroup`不存在。  
+  
+### <a name="remarks"></a>备注  
+ 该框架将以不同方式处理任务和标签。 当用户单击任务时，该框架将执行命令。 当用户单击的标签上时，不执行任何命令。 有关详细信息，请参阅[CMFCTasksPane::AddTask](#addtask)。  
+  
+##  <a name="a-nameaddmrufileslista--cmfctaskspaneaddmrufileslist"></a><a name="addmrufileslist"></a>CMFCTasksPane::AddMRUFilesList  
+ 将添加到组存储在最近使用过的 (MRU) 文件列表中每个文件的任务。  
+  
+```  
+int AddMRUFilesList(
+    int nGroup,  
+    int nMaxFiles = 4);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定组的索引。 此方法将 MRU 文件列表添加到此参数指定的组。  
+  
+ [in] `nMaxFiles`  
+ 指定要在 MRU 文件列表中显示文件的数。  
+  
+### <a name="return-value"></a>返回值  
+ MRU 文件列表添加的组的从零开始的索引或由指定的组时为-1`nGroup`不存在。  
+  
+##  <a name="a-nameaddpagea--cmfctaskspaneaddpage"></a><a name="addpage"></a>CMFCTasksPane::AddPage  
+ 向任务窗格中添加页。  
+  
+```  
+int AddPage(LPCTSTR lpszPageLabel);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `lpszPageLabel`  
+ 指定页上的标签。  
+  
+### <a name="return-value"></a>返回值  
+ 新页面的从零开始的索引。  
+  
+##  <a name="a-nameaddseparatora--cmfctaskspaneaddseparator"></a><a name="addseparator"></a>CMFCTasksPane::AddSeparator  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+int AddSeparator(int nGroup);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameaddtaska--cmfctaskspaneaddtask"></a><a name="addtask"></a>CMFCTasksPane::AddTask  
+ 将任务添加到指定的任务组。  
+  
+```  
+int AddTask(
+    int nGroup,  
+    LPCTSTR lpszTaskName,  
+    int nTaskIcon = -1,  
+    UINT uiCommandID = 0,  
+    DWORD dwUserData = 0);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定任务会添加的组索引。  
+  
+ [in] `lpszTaskName`  
+ 指定任务的名称。  
+  
+ [in] `nTaskIcon`  
+ 指定要显示的任务旁的图标。 框架将存储映像的列表中的图标。 此参数是该列表中的索引。  
+  
+ [in] `uiCommandID`  
+ 指定要在用户单击该任务时执行的命令的命令 ID。 该任务将被视为一个标签，如果`uiCommandID`为 0。  
+  
+ [in] `dwUserData`  
+ 指定要与任务关联的用户定义数据。  
+  
+### <a name="return-value"></a>返回值  
+ 该任务添加的组的从零开始的索引或由指定的组时为-1`nGroup`不存在。  
+  
+##  <a name="a-nameaddwindowa--cmfctaskspaneaddwindow"></a><a name="addwindow"></a>CMFCTasksPane::AddWindow  
+ 将子窗口添加到任务窗格。  
+  
+```  
+int AddWindow(
+    int nGroup,  
+    HWND hwndTask,  
+    int nWndHeight,  
+    BOOL bAutoDestroyWindow = FALSE,  
+    DWORD dwUserData = 0);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定窗口中的添加位置的组索引。  
+  
+ [in] `hwndTask`  
+ 指定要添加的窗口句柄。  
+  
+ [in] `nWndHeight`  
+ 指定窗口的高度。  
+  
+ [in] `bAutoDestroyWindow`  
+ `TRUE`若要删除该任务; 时销毁该窗口否则为`FALSE`。  
+  
+ [in] `dwUserData`  
+ 指定与任务关联的用户定义数据。  
+  
+### <a name="return-value"></a>返回值  
+ 窗口中添加的组的从零开始的索引或由指定的组时为-1`nGroup`不存在。  
+  
+### <a name="remarks"></a>备注  
+ 调用此方法以将控件添加到任务窗格。 例如，可以添加一个编辑控件的功能类似的搜索栏。  
+  
+##  <a name="a-namecmfctaskspanea--cmfctaskspanecmfctaskspane"></a><a name="cmfctaskspane"></a>CMFCTasksPane::CMFCTasksPane  
+ 构造[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)对象。  
+  
+```  
+CMFCTasksPane();
+```  
+  
+##  <a name="a-namecollapseallgroupsa--cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void CollapseAllGroups(BOOL bCollapse = TRUE);
+
+ 
+void CollapseAllGroups(
+    int nPageIdx,  
+    BOOL bCollapse);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bCollapse`  
+ [in] `nPageIdx`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namecollapsegroupa--cmfctaskspanecollapsegroup"></a><a name="collapsegroup"></a>CMFCTasksPane::CollapseGroup  
+ 折叠或展开一个组。  
+  
+```  
+BOOL CollapseGroup(
+    CMFCTasksPaneTaskGroup* pGroup,  
+    BOOL bCollapse = TRUE);
+
+ 
+BOOL CollapseGroup(
+    int nGroup,  
+    BOOL bCollapse = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pGroup`  
+ 指定要折叠的组。  
+  
+ [in] `bCollapse`  
+ `TRUE`若要折叠相应的组;`FALSE`以展开该组。  
+  
+ [in] `nGroup`  
+ 指定要折叠的组的内部列表中的组的从零开始索引。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果组折叠或展开成功，则否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 折叠的组不会显示仅分组的标题;隐藏的任务列表。  
+  
+##  <a name="a-namecreatedefaultminiframea--cmfctaskspanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `rectInitial`  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namecreatemenua--cmfctaskspanecreatemenu"></a><a name="createmenu"></a>CMFCTasksPane::CreateMenu  
+ 创建用户单击时，将显示一个菜单**其他任务窗格**菜单按钮。  
+  
+```  
+HMENU CreateMenu() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 指向新建菜单的句柄。  
+  
+### <a name="remarks"></a>备注  
+ 重写此方法在派生类以自定义任务窗格中的菜单中。  
+  
+ 此方法创建的弹出菜单包含的任务窗格中的页的列表。 该菜单显示的活动页面旁边的复选标记。  
+  
+##  <a name="a-nameenableanimationa--cmfctaskspaneenableanimation"></a><a name="enableanimation"></a>CMFCTasksPane::EnableAnimation  
+ 启用或禁用时发生的任务组展开或折叠动画。  
+  
+```  
+void EnableAnimation(BOOL bEnable = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bEnable`  
+ `TRUE`若要启用的任务时出现的动画，组将会展开或折叠;否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，当任务组展开或折叠时出现的动画处于启用状态。  
+  
+##  <a name="a-nameenablegroupcollapsea--cmfctaskspaneenablegroupcollapse"></a><a name="enablegroupcollapse"></a>CMFCTasksPane::EnableGroupCollapse  
+ 指定用户是否可以折叠任务组。  
+  
+```  
+void EnableGroupCollapse(BOOL bEnable);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bEnable`  
+ `TRUE`如果用户可以折叠任务组;否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 处于折叠状态的任务组将显示仅分组的标题;隐藏的任务列表。  
+  
+##  <a name="a-nameenablehistorymenubuttonsa--cmfctaskspaneenablehistorymenubuttons"></a><a name="enablehistorymenubuttons"></a>CMFCTasksPane::EnableHistoryMenuButtons  
+ 则在启用下拉菜单**下一步**和**上一步**导航按钮。  
+  
+```  
+void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bEnable`  
+ `TRUE`若要启用在下拉列表菜单**下一步**和**上一步**导航按钮; 否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，在下拉列表菜单**下一步**和**上一步**按钮被禁用。  
+  
+ 菜单包含该用户所使用的任务页的历史记录。  
+  
+##  <a name="a-nameenablenavigationtoolbara--cmfctaskspaneenablenavigationtoolbar"></a><a name="enablenavigationtoolbar"></a>CMFCTasksPane::EnableNavigationToolbar  
+ 启用或禁用导航工具栏。  
+  
+```  
+void EnableNavigationToolbar(
+    BOOL bEnable = TRUE,  
+    UINT uiToolbarBmpRes = 0,  
+    CSize sizeToolbarImage = CSize(0,
+    0),  
+    CSize sizeToolbarButton = CSize(0,
+    0));
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bEnable`  
+ `TRUE`若要启用的导航工具栏中;否则为`FALSE`。  
+  
+ [in] `uiToolbarBmpRes`  
+ 指定包含要在工具栏上显示的图像的位图的资源 ID。  
+  
+ [in] `sizeToolbarImage`  
+ 指定的工具栏图像的大小。  
+  
+ [in] `sizeToolbarButton`  
+ 指定工具栏按钮的大小。  
+  
+### <a name="remarks"></a>备注  
+ 导航工具栏是一个框架顶部的任务窗格中显示的工具栏。 导航工具栏包含**回**，**向前**，和**主页**导航按钮和菜单按钮，其中包含可用页的列表。  
+  
+ 默认情况下，框架不显示导航工具栏。 如果未显示导航工具栏上，导航按钮位于标题的停靠栏上。  
+  
+##  <a name="a-nameenableoffsetcustomcontrolsa--cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void EnableOffsetCustomControls(BOOL bEnable);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bEnable`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameenablescrollbuttonsa--cmfctaskspaneenablescrollbuttons"></a><a name="enablescrollbuttons"></a>CMFCTasksPane::EnableScrollButtons  
+ 启用向下滚动而不是一个滚动条的按钮。  
+  
+```  
+void EnableScrollButtons(BOOL bEnable = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bEnable`  
+ `TRUE`若要在任务窗格中而不是一个滚动条; 中显示滚动按钮否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，框架的任务窗格中显示滚动按钮。  
+  
+##  <a name="a-nameenablewraplabelsa--cmfctaskspaneenablewraplabels"></a><a name="enablewraplabels"></a>CMFCTasksPane::EnableWrapLabels  
+ 启用或禁用在标签文本的自动换行。  
+  
+```  
+void EnableWrapLabels(BOOL bEnable = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bEnable`  
+ `TRUE`在任务窗格中; 显示的标签文本换行否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，框架不文本不换行标签中。 启用自动换行后，在标签文本可以出现在多个行。 该标签可以包括如换标记行`\n`和下划线标记`&`。  
+  
+##  <a name="a-nameenablewraptasksa--cmfctaskspaneenablewraptasks"></a><a name="enablewraptasks"></a>CMFCTasksPane::EnableWrapTasks  
+ 启用或禁用的任务中的文本的自动换行。  
+  
+```  
+void EnableWrapTasks(BOOL bEnable = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bEnable`  
+ `TRUE`若要将任务封装在任务窗格中;否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，禁用任务的自动换行。  
+  
+##  <a name="a-namegetactivepagea--cmfctaskspanegetactivepage"></a><a name="getactivepage"></a>CMFCTasksPane::GetActivePage  
+ 返回活动页的从零开始的索引。  
+  
+```  
+int GetActivePage() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 活动页的从零开始的索引。  
+  
+##  <a name="a-namegetgroupcaptionheighta--cmfctaskspanegetgroupcaptionheight"></a><a name="getgroupcaptionheight"></a>CMFCTasksPane::GetGroupCaptionHeight  
+ 返回组标题的高度。  
+  
+```  
+int GetGroupCaptionHeight() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 分组的标题，以像素为单位的高度。  
+  
+##  <a name="a-namegetgroupcaptionhorzoffseta--cmfctaskspanegetgroupcaptionhorzoffset"></a><a name="getgroupcaptionhorzoffset"></a>CMFCTasksPane::GetGroupCaptionHorzOffset  
+ 返回组标题的水平偏移量。  
+  
+```  
+int GetGroupCaptionHorzOffset() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 一个组标题的水平偏移量。 水平偏移量是以像素为单位，从任务窗格中的左或向右边缘的距离。  
+  
+##  <a name="a-namegetgroupcaptionvertoffseta--cmfctaskspanegetgroupcaptionvertoffset"></a><a name="getgroupcaptionvertoffset"></a>CMFCTasksPane::GetGroupCaptionVertOffset  
+ 返回组标题的垂直偏移量。  
+  
+```  
+int GetGroupCaptionVertOffset() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 一个组标题从任务窗格中的顶部和底部边缘的垂直偏移量。  
+  
+### <a name="remarks"></a>备注  
+ 垂直偏移量的默认值为 7 的像素。  
+  
+##  <a name="a-namegetgroupcounta--cmfctaskspanegetgroupcount"></a><a name="getgroupcount"></a>CMFCTasksPane::GetGroupCount  
+ 返回组的总数。  
+  
+```  
+int GetGroupCount() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 在任务窗格中的组的总数。  
+  
+##  <a name="a-namegetgrouplocationa--cmfctaskspanegetgrouplocation"></a><a name="getgrouplocation"></a>CMFCTasksPane::GetGroupLocation  
+ 返回指定的组的内部组类的索引。  
+  
+```  
+BOOL GetGroupLocation(
+    CMFCTasksPaneTaskGroup* pGroup,  
+    int& nGroup) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pGroup`  
+ 指定检索其位置的任务组。  
+  
+ [out] `nGroup`  
+ 包含任务组的从零开始的索引。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果任务组; 如果未找到否则为`FALSE`。  
+  
+##  <a name="a-namegetgroupvertoffseta--cmfctaskspanegetgroupvertoffset"></a><a name="getgroupvertoffset"></a>CMFCTasksPane::GetGroupVertOffset  
+ 返回组的垂直偏移量。  
+  
+```  
+int GetGroupVertOffset() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 一个组，以像素为单位的垂直偏移量。  
+  
+##  <a name="a-namegethorzmargina--cmfctaskspanegethorzmargin"></a><a name="gethorzmargin"></a>CMFCTasksPane::GetHorzMargin  
+ 返回一个任务窗格和工作区的边缘之间的水平间距。  
+  
+```  
+int GetHorzMargin() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 任务窗格和工作区的边缘之间的水平间距。  
+  
+### <a name="remarks"></a>备注  
+ 任务窗格和工作区的边缘之间的默认间距是 12 像素。  
+  
+##  <a name="a-namegetnextpagesa--cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void GetNextPages(CStringList& lstNextPages) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `lstNextPages`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namegetpagebygroupa--cmfctaskspanegetpagebygroup"></a><a name="getpagebygroup"></a>CMFCTasksPane::GetPageByGroup  
+ 检索指定组的页索引。  
+  
+```  
+BOOL GetPageByGroup(
+    int nGroup,  
+    int& nPage) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定的任务组的从零开始的索引。  
+  
+ [out] `nPage`  
+ 包含指定的组的页索引。 如果任务组只包含一个默认页，则返回的值为 0。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果组`nGroup`存在; 否则为`FALSE`。  
+  
+##  <a name="a-namegetpagescounta--cmfctaskspanegetpagescount"></a><a name="getpagescount"></a>CMFCTasksPane::GetPagesCount  
+ 返回页数。  
+  
+```  
+int GetPagesCount() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 在任务窗格中的页的数目。  
+  
+##  <a name="a-namegetpreviouspagesa--cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void GetPreviousPages(CStringList& lstPrevPages) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `lstPrevPages`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namegetscrollbarctrla--cmfctaskspanegetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CScrollBar* GetScrollBarCtrl(int nBar) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nBar`  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namegettaska--cmfctaskspanegettask"></a><a name="gettask"></a>CMFCTasksPane::GetTask  
+ 检索任务。  
+  
+```  
+CMFCTasksPaneTask* GetTask(
+    int nGroup,  
+    int nTask) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定组中包含的任务的从零开始的索引。  
+  
+ [in] `nTask`  
+ 通过指定的列表中指定的任务的从零开始索引`nGroup`。  
+  
+### <a name="return-value"></a>返回值  
+ 指定索引处的任务。  
+  
+##  <a name="a-namegettaskcounta--cmfctaskspanegettaskcount"></a><a name="gettaskcount"></a>CMFCTasksPane::GetTaskCount  
+ 返回在指定的组的任务数。  
+  
+```  
+int GetTaskCount(int nGroup) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定的任务组的索引。  
+  
+### <a name="return-value"></a>返回值  
+ 中指定的组或 0 的任务数`nGroup`无效。  
+  
+##  <a name="a-namegettaskgroupa--cmfctaskspanegettaskgroup"></a><a name="gettaskgroup"></a>CMFCTasksPane::GetTaskGroup  
+ 返回一个指定的组的索引的任务组。  
+  
+```  
+CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定要检索的组的从零开始索引。  
+  
+### <a name="return-value"></a>返回值  
+ 任务组的指定索引处。  
+  
+##  <a name="a-namegettasklocationa--cmfctaskspanegettasklocation"></a><a name="gettasklocation"></a>CMFCTasksPane::GetTaskLocation  
+ 返回的组和指定的任务的索引。  
+  
+```  
+BOOL GetTaskLocation(
+    UINT uiCommandID,  
+    int& nGroup,  
+    int& nTask) const;  
+  
+BOOL GetTaskLocation(
+    HWND hwndTask,  
+    int& nGroup,  
+    int& nTask) const;  
+  
+BOOL GetTaskLocation(
+    CMFCTasksPaneTask* pTask,  
+    int& nGroup,  
+    int& nTask) const;  
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `uiCommandID`  
+ 指定要查找该任务的命令 ID。  
+  
+ [out] `nGroup`  
+ 包含任务的组索引。  
+  
+ [out] `nTask`  
+ 包含任务组中的任务的索引。  
+  
+ [in] `hwndTask`  
+ 指定与任务关联的窗口。  
+  
+ [in] `pTask`  
+ 指定要查找的任务。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果任务位置; 如果未找到`FALSE`如果指定的任务不存在。  
+  
+### <a name="remarks"></a>备注  
+ 此方法检索的组索引和指定的任务的任务索引。 如果该方法返回`FALSE`，`nGroup`和`nTask`设置为-1。  
+  
+##  <a name="a-namegettaskshorzoffseta--cmfctaskspanegettaskshorzoffset"></a><a name="gettaskshorzoffset"></a>CMFCTasksPane::GetTasksHorzOffset  
+ 返回任务的水平偏移量。  
+  
+```  
+int GetTasksHorzOffset() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 执行的任务及其父组的左、 右边缘的水平偏移量。  
+  
+### <a name="remarks"></a>备注  
+ 任务的默认水平偏移量为 12 像素。  
+  
+##  <a name="a-namegettasksiconhorzoffseta--cmfctaskspanegettasksiconhorzoffset"></a><a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+int GetTasksIconHorzOffset() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namegettasksiconvertoffseta--cmfctaskspanegettasksiconvertoffset"></a><a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+int GetTasksIconVertOffset() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namegetvertmargina--cmfctaskspanegetvertmargin"></a><a name="getvertmargin"></a>CMFCTasksPane::GetVertMargin  
+ 返回一个任务窗格工作区的边缘之间的垂直边距。  
+  
+```  
+int GetVertMargin() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 任务窗格中的工作区的边缘之间的垂直间距。  
+  
+### <a name="remarks"></a>备注  
+ 垂直边距是任务窗格和工作区的边缘之间的空间。 垂直边距的默认值为 12 像素。  
+  
+##  <a name="a-nameisaccessibilitycompatiblea--cmfctaskspaneisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsAccessibilityCompatible();
+```  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameisanimationenableda--cmfctaskspaneisanimationenabled"></a><a name="isanimationenabled"></a>CMFCTasksPane::IsAnimationEnabled  
+ 指示动画是否已启用。  
+  
+```  
+BOOL IsAnimationEnabled() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果启用，用户可以展开或折叠组时出现的动画，则否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 调用[CMFCTasksPane::EnableAnimation](#enableanimation)启用或禁用动画。  
+  
+##  <a name="a-nameisbackbuttonenableda--cmfctaskspaneisbackbuttonenabled"></a><a name="isbackbuttonenabled"></a>CMFCTasksPane::IsBackButtonEnabled  
+ 指示“返回”按钮是否已启用。  
+  
+```  
+BOOL IsBackButtonEnabled() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果启用了后退按钮;否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 当用户单击后退按钮时，框架将显示以前的任务页。  
+  
+##  <a name="a-nameisforwardbuttonenableda--cmfctaskspaneisforwardbuttonenabled"></a><a name="isforwardbuttonenabled"></a>CMFCTasksPane::IsForwardButtonEnabled  
+ 指示“前进”按钮是否已启用。  
+  
+```  
+BOOL IsForwardButtonEnabled() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果启用了前进按钮;否则为`FALSE`。  
+  
+### <a name="remarks"></a>备注  
+ 前进按钮使前进导航历史记录中的任务页。  
+  
+##  <a name="a-nameisgroupcollapseenableda--cmfctaskspaneisgroupcollapseenabled"></a><a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL IsGroupCollapseEnabled() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameishistorymenubuttonsenableda--cmfctaskspaneishistorymenubuttonsenabled"></a><a name="ishistorymenubuttonsenabled"></a>CMFCTasksPane::IsHistoryMenuButtonsEnabled  
+ 指示是否**下一步**和**上一步**导航按钮都有下拉菜单。  
+  
+```  
+BOOL IsHistoryMenuButtonsEnabled() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果**下一步**和**上一步**导航按钮都有下拉菜单; 否则为`FALSE`。  
+  
+##  <a name="a-nameisnavigationtoolbarenableda--cmfctaskspaneisnavigationtoolbarenabled"></a><a name="isnavigationtoolbarenabled"></a>CMFCTasksPane::IsNavigationToolbarEnabled  
+ 指示导航工具栏是否已启用。  
+  
+```  
+BOOL IsNavigationToolbarEnabled() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果启用了导航工具栏;否则为`FALSE`。  
+  
+##  <a name="a-nameistoolboxa--cmfctaskspaneistoolbox"></a><a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL IsToolBox() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameiswraplabelsenableda--cmfctaskspaneiswraplabelsenabled"></a><a name="iswraplabelsenabled"></a>CMFCTasksPane::IsWrapLabelsEnabled  
+ 指示任务窗格是否在标签中换行。  
+  
+```  
+BOOL IsWrapLabelsEnabled() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果包装标签中的单词;，否则为`FALSE`。  
+  
+##  <a name="a-nameiswraptasksenableda--cmfctaskspaneiswraptasksenabled"></a><a name="iswraptasksenabled"></a>CMFCTasksPane::IsWrapTasksEnabled  
+ 指定是否在 framework 包装任务字符串。  
+  
+```  
+BOOL IsWrapTasksEnabled() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果包装任务字符串;，否则为`FALSE`。  
+  
+##  <a name="a-nameloadstatea--cmfctaskspaneloadstate"></a><a name="loadstate"></a>CMFCTasksPane::LoadState  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL LoadState(
+    LPCTSTR lpszProfileName = NULL,  
+    int nIndex = -1,  
+    UINT uiID = (UINT) -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `lpszProfileName`  
+ [in] `nIndex`  
+ [in] `uiID`  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameonactivatetaskspanepagea--cmfctaskspaneonactivatetaskspanepage"></a><a name="onactivatetaskspanepage"></a>CMFCTasksPane::OnActivateTasksPanePage  
+ 使任务窗格中的页面处于活动状态时由框架调用。  
+  
+```  
+virtual void OnActivateTasksPanePage();
+```  
+  
+### <a name="remarks"></a>备注  
+ 重写此方法在派生类自定义任务窗格中的页面的外观。  
+  
+##  <a name="a-nameoncancela--cmfctaskspaneoncancel"></a><a name="oncancel"></a>CMFCTasksPane::OnCancel  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnCancel();
+```  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameonclicktaska--cmfctaskspaneonclicktask"></a><a name="onclicktask"></a>CMFCTasksPane::OnClickTask  
+ 当用户单击任务窗格中的项时，由框架调用。  
+  
+```  
+virtual void OnClickTask(
+    int nGroupNumber,  
+    int nTaskNumber,  
+    UINT uiCommandID,  
+    DWORD dwUserData);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroupNumber`  
+ 指定包含被单击的任务的组的从零开始索引。  
+  
+ [in] `nTaskNumber`  
+ 指定被单击的任务的从零开始的索引。  
+  
+ [in] `uiCommandID`  
+ 指定与任务关联的命令 ID。  
+  
+ [in] `dwUserData`  
+ 包含与被单击的任务相关联的用户定义的数据。  
+  
+### <a name="remarks"></a>备注  
+ 当用户单击任务，框架将调用此方法。 默认情况下，框架将检查与被单击的任务相关联的命令 ID 和，如果不为零，将发送`WM_COMMAND`任务窗格控件的所有者的消息。  
+  
+ 重写此方法在派生类来单击某个任务时执行自定义代码。  
+  
+##  <a name="a-nameonoka--cmfctaskspaneonok"></a><a name="onok"></a>CMFCTasksPane::OnOK  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnOK();
+```  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameonpressbackbuttona--cmfctaskspaneonpressbackbutton"></a><a name="onpressbackbutton"></a>CMFCTasksPane::OnPressBackButton  
+ 当用户单击“后退”按钮时，由框架调用。  
+  
+```  
+virtual void OnPressBackButton();
+```  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，框架显示以前查看过的页。  
+  
+ 重写此方法在派生类来执行自定义代码，当用户单击后退按钮。  
+  
+##  <a name="a-nameonpressforwardbuttona--cmfctaskspaneonpressforwardbutton"></a><a name="onpressforwardbutton"></a>CMFCTasksPane::OnPressForwardButton  
+ 当用户单击“前进”导航按钮时，由框架调用。  
+  
+```  
+virtual void OnPressForwardButton();
+```  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，框架将显示在用户单击前查看页**回**按钮。  
+  
+ 重写此方法在派生类来执行自定义代码，当用户单击前进按钮。  
+  
+##  <a name="a-nameonpresshomebuttona--cmfctaskspaneonpresshomebutton"></a><a name="onpresshomebutton"></a>CMFCTasksPane::OnPressHomeButton  
+ 由框架调用，当用户单击主导航按钮。  
+  
+```  
+virtual void OnPressHomeButton();
+```  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，框架显示任务组的默认页面。  
+  
+ 重写此方法在派生类来执行自定义代码，当用户单击主导航按钮。  
+  
+##  <a name="a-nameonpressotherbuttona--cmfctaskspaneonpressotherbutton"></a><a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnPressOtherButton(
+    CMFCCaptionMenuButton* pbtn,  
+    CWnd* pWndOwner);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pbtn`  
+ [in] `pWndOwner`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameonsetaccdataa--cmfctaskspaneonsetaccdata"></a><a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL OnSetAccData(long lVal);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `lVal`  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameonupdatecmduia--cmfctaskspaneonupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnUpdateCmdUI(
+    CFrameWnd* pTarget,  
+    BOOL bDisableIfNoHndler);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pTarget`  
+ [in] `bDisableIfNoHndler`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namepretranslatemessagea--cmfctaskspanepretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL PreTranslateMessage(MSG* pMsg);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `pMsg`  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namerecalclayouta--cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void RecalcLayout(BOOL bRedraw = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `bRedraw`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameremoveallgroupsa--cmfctaskspaneremoveallgroups"></a><a name="removeallgroups"></a>CMFCTasksPane::RemoveAllGroups  
+ 删除指定页上的所有组。  
+  
+```  
+void RemoveAllGroups(int nPageIdx = 0);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nPageIdx`  
+ 指定的页的从零开始的索引。  
+  
+### <a name="remarks"></a>备注  
+ 删除指定的页面上的所有组`nPageIdx`，或如果没有默认页的所有组。  
+  
+##  <a name="a-nameremoveallpagesa--cmfctaskspaneremoveallpages"></a><a name="removeallpages"></a>CMFCTasksPane::RemoveAllPages  
+ 从任务窗格中删除所有页，除默认（第一）页除外。  
+  
+```  
+void RemoveAllPages();
+```  
+  
+##  <a name="a-nameremovealltasksa--cmfctaskspaneremovealltasks"></a><a name="removealltasks"></a>CMFCTasksPane::RemoveAllTasks  
+ 从指定的组中删除所有任务。  
+  
+```  
+void RemoveAllTasks(int nGroup);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定的组的从零开始的索引。  
+  
+##  <a name="a-nameremovegroupa--cmfctaskspaneremovegroup"></a><a name="removegroup"></a>CMFCTasksPane::RemoveGroup  
+ 删除组。  
+  
+```  
+void RemoveGroup(int nGroup);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定要删除的组的从零开始索引。  
+  
+### <a name="remarks"></a>备注  
+ 此方法中删除单个组。 若要删除的所有组，请调用[CMFCTasksPane::RemoveAllGroups](#removeallgroups)相反。  
+  
+ 当框架删除某个组时，所有任务和与之关联的 windows 用户会被都销毁。  
+  
+##  <a name="a-nameremovepagea--cmfctaskspaneremovepage"></a><a name="removepage"></a>CMFCTasksPane::RemovePage  
+ 从任务窗格删除指定页。  
+  
+```  
+void RemovePage(int nPageIdx);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nPageIdx`  
+ 指定要删除的页的从零开始的索引。  
+  
+##  <a name="a-nameremovetaska--cmfctaskspaneremovetask"></a><a name="removetask"></a>CMFCTasksPane::RemoveTask  
+ 从任务组删除任务。  
+  
+```  
+BOOL RemoveTask(
+    int nGroup,  
+    int nTask,  
+    BOOL bRedraw = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定包含要删除的任务的任务组的从零开始索引。  
+  
+ [in] `nTask`  
+ 指定要删除的任务的从零开始的索引。  
+  
+ [in] `bRedraw`  
+ `TRUE`若要重绘任务窗格中;否则为`FALSE`。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果该函数成功，则`FALSE`如果`nGroup`或`nTask`无效。  
+  
+##  <a name="a-namesavestatea--cmfctaskspanesavestate"></a><a name="savestate"></a>CMFCTasksPane::SaveState  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL SaveState(
+    LPCTSTR lpszProfileName = NULL,  
+    int nIndex = -1,  
+    UINT uiID = (UINT) -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `lpszProfileName`  
+ [in] `nIndex`  
+ [in] `uiID`  
+  
+### <a name="return-value"></a>返回值  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameserializea--cmfctaskspaneserialize"></a><a name="serialize"></a>CMFCTasksPane::Serialize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void Serialize(CArchive& ar);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `ar`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namesetactivepagea--cmfctaskspanesetactivepage"></a><a name="setactivepage"></a>CMFCTasksPane::SetActivePage  
+ 使任务窗格中的指定的页处于活动状态。  
+  
+```  
+void SetActivePage(int nPageIdx);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nPageIdx`  
+ 指定要显示的页面的从零开始索引。  
+  
+### <a name="remarks"></a>备注  
+ 如果此方法会断言`nPageIdx`无效。  
+  
+##  <a name="a-namesetcaptiona--cmfctaskspanesetcaption"></a><a name="setcaption"></a>CMFCTasksPane::SetCaption  
+ 设置任务窗格的标题名称。  
+  
+```  
+void SetCaption(LPCTSTR lpszName);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `lpszName`  
+ 指定的标题名称。  
+  
+### <a name="remarks"></a>备注  
+ 如果任务窗格中有多个页，默认页具有使用此函数设置的标题。  
+  
+##  <a name="a-namesetgroupcaptionheighta--cmfctaskspanesetgroupcaptionheight"></a><a name="setgroupcaptionheight"></a>CMFCTasksPane::SetGroupCaptionHeight  
+ 设置组标题的高度。  
+  
+```  
+void SetGroupCaptionHeight(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+ 指定的标题高度。  
+  
+### <a name="remarks"></a>备注  
+ 调用此方法以自定义任务窗格中元素的边距。  
+  
+ 如果`n`为-1，该框架使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 默认标题高度为 25 像素。  
+  
+##  <a name="a-namesetgroupcaptionhorzoffseta--cmfctaskspanesetgroupcaptionhorzoffset"></a><a name="setgroupcaptionhorzoffset"></a>CMFCTasksPane::SetGroupCaptionHorzOffset  
+ 设置组标题的水平偏移量。  
+  
+```  
+void SetGroupCaptionHorzOffset(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+ 指定的组标题的水平偏移量。  
+  
+##  <a name="a-namesetgroupcaptionvertoffseta--cmfctaskspanesetgroupcaptionvertoffset"></a><a name="setgroupcaptionvertoffset"></a>CMFCTasksPane::SetGroupCaptionVertOffset  
+ 设置组标题的垂直偏移量。  
+  
+```  
+void SetGroupCaptionVertOffset(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+ 指定的垂直偏移量，以像素为单位的组标题。  
+  
+##  <a name="a-namesetgroupnamea--cmfctaskspanesetgroupname"></a><a name="setgroupname"></a>CMFCTasksPane::SetGroupName  
+ 设置组名称。  
+  
+```  
+BOOL SetGroupName(
+    int nGroup,  
+    LPCTSTR lpszGroupName);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定的组的从零开始的索引。  
+  
+ [in] `lpszGroupName`  
+ 指定组的名称。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果已成功设置组名称;否则为`FALSE`。  
+  
+##  <a name="a-namesetgrouptextcolora--cmfctaskspanesetgrouptextcolor"></a><a name="setgrouptextcolor"></a>CMFCTasksPane::SetGroupTextColor  
+ 设置组标题的文本颜色。  
+  
+```  
+BOOL SetGroupTextColor(
+    int nGroup,  
+    COLORREF color,  
+    COLORREF colorHot = (COLORREF)-1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定的组的从零开始的索引。  
+  
+ [in] `color`  
+ 指定的文本颜色。  
+  
+ [in] `colorHot`  
+ 指定突出显示的组的文本颜色。 如果为-1，则使用默认突出显示颜色。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果已成功更改组的文本颜色。否则为`FALSE`。  
+  
+##  <a name="a-namesetgroupvertoffseta--cmfctaskspanesetgroupvertoffset"></a><a name="setgroupvertoffset"></a>CMFCTasksPane::SetGroupVertOffset  
+ 设置组的垂直偏移量。  
+  
+```  
+void SetGroupVertOffset(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+ 指定的垂直偏移量。  
+  
+### <a name="remarks"></a>备注  
+ 垂直偏移量是任务组和任务窗格中的边框之间的距离。  
+  
+ 调用此方法以自定义任务窗格中元素的边距。 如果`n`为-1，该框架使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 默认偏移量为 15 个像素。  
+  
+##  <a name="a-namesethorzmargina--cmfctaskspanesethorzmargin"></a><a name="sethorzmargin"></a>CMFCTasksPane::SetHorzMargin  
+ 将水平边距设置。  
+  
+```  
+void SetHorzMargin(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+ 以像素为单位指定边距。  
+  
+### <a name="remarks"></a>备注  
+ 水平边距是任务窗格和工作区的顶部或底部边缘之间的距离。  
+  
+ 如果 n 为-1，并且该框架使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneHorzMargin`)。 默认的水平边距为 12 个像素。  
+  
+##  <a name="a-nameseticonslista--cmfctaskspaneseticonslist"></a><a name="seticonslist"></a>CMFCTasksPane::SetIconsList  
+ 设置图像列表。  
+  
+```  
+BOOL SetIconsList(
+    UINT uiImageListResID,  
+    int cx,  
+    COLORREF clrTransparent = RGB(255, 0, 255));  
+  
+void SetIconsList(HIMAGELIST hIcons);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `uiImageListResID`  
+ 指定的图像列表的资源 ID。  
+  
+ [in] `cx`  
+ 图像列表中的指定图标的大小。  
+  
+ [in] `clrTransparent`  
+ 指定透明颜色。  
+  
+ [in] `hIcons`  
+ 指定包含任务窗格中的图标的图像列表。  
+  
+### <a name="remarks"></a>备注  
+ 框架将存储在图像列表中的图标。 任务将与存储在该列表中的图标关联。  
+  
+ 此方法将图像列表与任务窗格控件相关联。 若要设置任务的图标，当您调用[CMFCTasksPane::AddTask](#addtask)，请设置`nTaskIcon`到此图像列表中的适当的从零开始索引。  
+  
+##  <a name="a-namesetpagecaptiona--cmfctaskspanesetpagecaption"></a><a name="setpagecaption"></a>CMFCTasksPane::SetPageCaption  
+ 设置任务窗格页的标题文本。  
+  
+```  
+void SetPageCaption(
+    int nPageIdx,  
+    LPCTSTR lpszName);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nPageIdx`  
+ 指定的页的从零开始的索引。  
+  
+ [in] `lpszName`  
+ 指定要在页中显示的标题文本。  
+  
+### <a name="remarks"></a>备注  
+ 如果任务窗格中有多个页，默认页具有使用此方法设置的标题。  
+  
+##  <a name="a-namesettasknamea--cmfctaskspanesettaskname"></a><a name="settaskname"></a>CMFCTasksPane::SetTaskName  
+ 设置任务的名称。  
+  
+```  
+BOOL SetTaskName(
+    int nGroup,  
+    int nTask,  
+    LPCTSTR lpszTaskName);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定的任务组的从零开始的索引。  
+  
+ [in] `nTask`  
+ 指定任务的从零开始索引。  
+  
+ [in] `lpszTaskName`  
+ 指定任务名称。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果已成功设置的任务名称;否则为`FALSE`。  
+  
+##  <a name="a-namesettaskshorzoffseta--cmfctaskspanesettaskshorzoffset"></a><a name="settaskshorzoffset"></a>CMFCTasksPane::SetTasksHorzOffset  
+ 设置任务的水平偏移量。  
+  
+```  
+void SetTasksHorzOffset(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+ 指定的水平偏移量。  
+  
+### <a name="remarks"></a>备注  
+ 水平偏移量是以像素为单位，从一组左、 右边缘的距离。  
+  
+ 如果`n`为-1，此方法将返回的值设置的水平偏移量`CMFCVisualManager::GetTasksPaneTaskHorzOffset`方法。  
+  
+ 默认的水平偏移量为 12 像素。  
+  
+##  <a name="a-namesettasksiconhorzoffseta--cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void SetTasksIconHorzOffset(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namesettasksiconvertoffseta--cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void SetTasksIconVertOffset(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namesettasktextcolora--cmfctaskspanesettasktextcolor"></a><a name="settasktextcolor"></a>CMFCTasksPane::SetTaskTextColor  
+ 设置任务的文本颜色。  
+  
+```  
+BOOL SetTaskTextColor(
+    int nGroup,  
+    int nTask,  
+    COLORREF color,  
+    COLORREF colorHot = (COLORREF)-1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定包含任务的任务组的从零开始索引。  
+  
+ [in] `nTask`  
+ 指定任务的从零开始索引。  
+  
+ [in] `color`  
+ 指定任务的文本颜色。  
+  
+ [in] `colorHot`  
+ 指定突出显示的组的文本颜色。 如果为-1，则此方法使用默认突出显示颜色。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果成功地设置该任务的文本颜色。否则为`FALSE`。  
+  
+##  <a name="a-namesetvertmargina--cmfctaskspanesetvertmargin"></a><a name="setvertmargin"></a>CMFCTasksPane::SetVertMargin  
+ 将垂直边距设置。  
+  
+```  
+void SetVertMargin(int n = -1);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `n`  
+ 指定的垂直边距设置。  
+  
+### <a name="remarks"></a>备注  
+ 垂直边距是任务窗格和工作区的垂直边缘之间的距离。  
+  
+ 如果`n`为-1，该框架使用视觉管理器确定的边距值 ( `CMFCVisualManager::GetTasksPaneVertMargin`)。 默认边距为 12 个像素。  
+  
+##  <a name="a-namesetwindowheighta--cmfctaskspanesetwindowheight"></a><a name="setwindowheight"></a>CMFCTasksPane::SetWindowHeight  
+ 设置窗口控件的高度。  
+  
+```  
+BOOL SetWindowHeight(
+    int nGroup,  
+    HWND hwndTask,  
+    int nWndHeight);
+
+ 
+BOOL SetWindowHeight(
+    HWND hwndTask,  
+    int nWndHeight);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定包含窗口控件的组的从零开始索引。  
+  
+ [in] `hwndTask`  
+ 指定窗口控件的句柄。  
+  
+ [in] `nWndHeight`  
+ 指定要设置的高度。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果已成功设置窗口控件的高度;`FALSE`如果`nGroup`无效或者，如果`hwndTask`不存在。  
+  
+### <a name="remarks"></a>备注  
+ 调用[CMFCTasksPane::AddWindow](#addwindow)添加与窗口控件的任务。  
+  
+##  <a name="a-nameshowcommandmessagestringa--cmfctaskspaneshowcommandmessagestring"></a><a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void ShowCommandMessageString(UINT uiCmdId);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `uiCmdId`  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-nameshowtaska--cmfctaskspaneshowtask"></a><a name="showtask"></a>CMFCTasksPane::ShowTask  
+ 显示或隐藏任务。  
+  
+```  
+BOOL ShowTask(
+    int nGroup,  
+    int nTask,  
+    BOOL bShow = TRUE,  
+    BOOL bRedraw = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `nGroup`  
+ 指定的组的从零开始的索引。  
+  
+ [in] `nTask`  
+ 指定要显示或隐藏的任务的从零开始的索引。  
+  
+ [in] `bShow`  
+ `TRUE`若要显示任务;`FALSE`来隐藏该任务。  
+  
+ [in] `bRedraw`  
+ `TRUE`若要重绘任务窗格中;否则为`FALSE`。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果任务成功显示或隐藏; 隐藏。，`FALSE`如果指定的组或任务不存在。  
+  
+### <a name="remarks"></a>备注  
+ 使用[CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid)以显示或隐藏某任务基于其命令 id。  
+  
+##  <a name="a-nameshowtaskbycmdida--cmfctaskspaneshowtaskbycmdid"></a><a name="showtaskbycmdid"></a>CMFCTasksPane::ShowTaskByCmdId  
+ 基于任务的命令 ID 显示或隐藏任务。  
+  
+```  
+BOOL ShowTaskByCmdId(
+    UINT uiCommandID,  
+    BOOL bShow = TRUE,  
+    BOOL bRedraw = TRUE);
+```  
+  
+### <a name="parameters"></a>参数  
+ [in] `uiCommandID`  
+ 指定要显示或隐藏该任务的命令 ID。  
+  
+ [in] `bShow`  
+ `TRUE`若要显示任务;`FALSE`来隐藏该任务。  
+  
+ [in] `bRedraw`  
+ `TRUE`若要重绘任务窗格中;否则为`FALSE`。  
+  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果任务成功显示或隐藏; 隐藏。，`FALSE`如果不存在具有指定的命令 ID 的任务。  
+  
+### <a name="remarks"></a>备注  
+ 使用[CMFCTasksPane::ShowTask](#showtask)以显示或隐藏某任务基于其命令 id。  
+  
+##  <a name="a-nameupdatea--cmfctaskspaneupdate"></a><a name="update"></a>CMFCTasksPane::Update  
+ 刷新所有任务窗格中的控件。  
+  
+```  
+virtual void Update();
+```  
+  
+### <a name="remarks"></a>备注  
+ 此方法更新任务窗格标题、 调整的滚动条、 重新定位所有任务和重绘所有任务窗格控件。  
+  
+ 重写此方法在派生类时要执行自定义代码在框架刷新任务窗格。  
+  
+## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
- [CMFCTasksPaneTaskGroup Class](../../mfc/reference/cmfctaskspanetaskgroup-class.md)   
- [CMFCTasksPaneTask Class](../../mfc/reference/cmfctaskspanetask-class.md)   
+ [CMFCTasksPaneTaskGroup 类](../../mfc/reference/cmfctaskspanetaskgroup-class.md)   
+ [CMFCTasksPaneTask 类](../../mfc/reference/cmfctaskspanetask-class.md)   
  [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)   
- [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)
+ [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)
+
