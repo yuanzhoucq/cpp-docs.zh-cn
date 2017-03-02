@@ -1,61 +1,132 @@
 ---
-title: "cancellation_token_registration 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pplcancellation_token/concurrency::cancellation_token_registration"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cancellation_token_registration 类"
+title: "cancellation_token_registration 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pplcancellation_token/concurrency::cancellation_token_registration
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# cancellation_token_registration 类
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 72c317bb95b646a3a97b361ac3248f015cd0f29a
+ms.lasthandoff: 02/24/2017
 
-`cancellation_token_registration` 类表示来自 `cancellation_token` 的回调通知。  如果 `cancellation_token` 上的 `register` 方法用于接收取消何时发生的通知，系统就会将 `cancellation_token_registration` 对象作为回调的句柄返回，让调用方可以请求不再通过使用 `deregister` 方法实现的特定回调。  
+---
+# <a name="cancellationtokenregistration-class"></a>cancellation_token_registration 类
+`cancellation_token_registration` 类表示来自 `cancellation_token` 的回调通知。 如果 `register` 上的 `cancellation_token` 方法用于接收何时进行取消的通知，则系统就会将 `cancellation_token_registration` 对象作为回调的句柄返回，以便调用方可以请求特定回调，而不再通过使用 `deregister` 方法来实现。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class cancellation_token_registration;
 ```  
-class cancellation_token_registration;  
-```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
-|--------|--------|  
-|[cancellation\_token\_registration::cancellation\_token\_registration 构造函数](../Topic/cancellation_token_registration::cancellation_token_registration%20Constructor.md)||  
-|[cancellation\_token\_registration::~cancellation\_token\_registration 析构函数](../Topic/cancellation_token_registration::~cancellation_token_registration%20Destructor.md)||  
+|名称|说明|  
+|----------|-----------------|  
+|[cancellation_token_registration 构造函数](#ctor)||  
+|[~ cancellation_token_registration 析构函数](#dtor)||  
   
-### 公共运算符  
+### <a name="public-operators"></a>公共运算符  
   
-|名称|描述|  
-|--------|--------|  
-|[cancellation\_token\_registration::operator\!\= 运算符](../Topic/cancellation_token_registration::operator!=%20Operator.md)||  
-|[cancellation\_token\_registration::operator\= 运算符](../Topic/cancellation_token_registration::operator=%20Operator.md)||  
-|[cancellation\_token\_registration::operator\=\= 运算符](../Topic/cancellation_token_registration::operator==%20Operator.md)||  
+|名称|说明|  
+|----------|-----------------|  
+|[运算符 ！ = 运算符](#operator_neq)||  
+|[运算符 = 运算符](#operator_eq)||  
+|[运算符 = = 运算符](#operator_eq_eq)||  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `cancellation_token_registration`  
   
-## 要求  
- **标头：**pplcancellation\_token.h  
+## <a name="requirements"></a>要求  
+ **标头︰** pplcancellation_token.h  
   
- **命名空间：**并发  
+ **命名空间：** 并发  
   
-## 请参阅  
- [concurrency 命名空间](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-cancellationtokenregistration"></a><a name="dtor"></a>~ cancellation_token_registration 
+
+```
+~cancellation_token_registration();
+```  
+  
+##  <a name="a-namectora-cancellationtokenregistration"></a><a name="ctor"></a>cancellation_token_registration 
+
+```
+cancellation_token_registration();
+
+cancellation_token_registration(const cancellation_token_registration& _Src);
+
+cancellation_token_registration(cancellation_token_registration&& _Src);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Src`  
+  
+##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>运算符 ！ = 
+
+```
+bool operator!= (const cancellation_token_registration& _Rhs) const;
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Rhs`  
+  
+### <a name="return-value"></a>返回值  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+
+```
+cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
+
+cancellation_token_registration& operator= (cancellation_token_registration&& _Src);
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Src`  
+  
+### <a name="return-value"></a>返回值  
+  
+##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>运算符 = = 
+
+```
+bool operator== (const cancellation_token_registration& _Rhs) const;
+```  
+  
+### <a name="parameters"></a>参数  
+ `_Rhs`  
+  
+### <a name="return-value"></a>返回值  
+  
+## <a name="see-also"></a>另请参阅  
+ [并发 Namespace](concurrency-namespace.md)
+

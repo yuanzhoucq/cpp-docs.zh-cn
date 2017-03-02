@@ -1,33 +1,61 @@
 ---
-title: "C 运行时错误 R6018 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6018"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6018"
+title: "C 运行时错误 R6018 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- R6018
+dev_langs:
+- C++
+helpviewer_keywords:
+- R6018
 ms.assetid: f6dd40d1-a119-4d8b-b39e-97350ea23349
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# C 运行时错误 R6018
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
+ms.openlocfilehash: 07aa2d06b990f0eed1f089b677e55c4d2e78a01e
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="c-runtime-error-r6018"></a>C 运行时错误 R6018
 意外的堆错误  
   
- 程序在执行内存管理操作时遇到意外错误。  
+> [!NOTE]
+>  如果在运行应用程序时遇到此错误消息，该应用程序关闭，因为它具有内部问题。 有多种原因引起此错误，但通常由应用程序的代码中有缺陷。  
+>   
+>  可以尝试以下步骤来修复此错误：  
+>   
+>  -   使用**应用程序和功能**或**程序和功能**页**控制面板**修复或重新安装该程序。  
+> -   检查**Windows Update**中**控制面板**为软件更新。  
+> -   检查应用程序的更新版本。 如果问题仍然存在，请与应用程序供应商联系。  
   
- 如果程序不小心改变了运行时堆数据，通常会发生该错误。  但该错误也可由运行时或操作系统代码中的内部错误引起。  
+ **程序员提供的的信息**  
   
- 如果您的编译器可提供包含 `_heapchk` 和 `_heapwalk` 的库，则您可使用这些函数诊断该错误。
+ 该程序在执行内存管理操作时遇到意外的错误。  
+  
+ 如果程序无意中改变了运行时堆数据，通常会出现此错误。 但是，它可以也可能导致由运行时或操作系统代码中出现内部错误。  
+  
+ 若要解决此问题，检查在代码中的堆损坏错误。 有关详细信息和示例，请参阅[CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。 接下来，检查您的应用程序的部署使用最新可再发行组件。 有关信息，请参阅[Visual c + + 中的部署](../../ide/deployment-in-visual-cpp.md)。

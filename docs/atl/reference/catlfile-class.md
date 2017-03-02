@@ -1,85 +1,417 @@
 ---
-title: "CAtlFile Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CAtlFile"
-  - "ATL::CAtlFile"
-  - "ATL.CAtlFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAtlFile class"
+title: "CAtlFile 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CAtlFile
+- ATL::CAtlFile
+- ATL.CAtlFile
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CAtlFile Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 5ba8aa0bc5544d8d541fecb87e2eb0108c2c5ebd
+ms.lasthandoff: 02/24/2017
 
-此选件类文件中处理API的Windows周围提供一个瘦包装。  
+---
+# <a name="catlfile-class"></a>CAtlFile 类
+此类提供的窗口周围的瘦包装文件处理 API。  
   
 > [!IMPORTANT]
->  此选件类及其成员不能在Windows运行时执行的应用程序。  
+>  不能在 Windows 运行时中执行的应用程序中使用此类及其成员。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class CAtlFile : public CHandle
 ```  
   
-class CAtlFile : public CHandle  
-```  
+## <a name="members"></a>成员  
   
-## 成员  
+### <a name="public-constructors"></a>公共构造函数  
   
-### 公共构造函数  
+|名称|描述|  
+|----------|-----------------|  
+|[CAtlFile::CAtlFile](#catlfile)|构造函数。|  
   
-|名称|说明|  
-|--------|--------|  
-|[CAtlFile::CAtlFile](../Topic/CAtlFile::CAtlFile.md)|构造函数。|  
-  
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
-|--------|--------|  
-|[CAtlFile::Create](../Topic/CAtlFile::Create.md)|调用此方法创建或打开文件。|  
-|[CAtlFile::Flush](../Topic/CAtlFile::Flush.md)|调用此方法清除文件的缓冲区并使所有缓冲区的数据写入文件。|  
-|[CAtlFile::GetOverlappedResult](../Topic/CAtlFile::GetOverlappedResult.md)|调用此方法捕获重叠的操作的结果在文件中。|  
-|[CAtlFile::GetPosition](../Topic/CAtlFile::GetPosition.md)|调用此方法获取当前文件指针位置从文件。|  
-|[CAtlFile::GetSize](../Topic/CAtlFile::GetSize.md)|调用此方法获取范围在文件的字节。|  
-|[CAtlFile::LockRange](../Topic/CAtlFile::LockRange.md)|调用此方法锁定文件中的一个区域阻止其他从访问进行处理。|  
-|[CAtlFile::Read](../Topic/CAtlFile::Read.md)|调用此方法读取数据从启动在该位置的文件由文件指针。|  
-|[CAtlFile::Seek](../Topic/CAtlFile::Seek.md)|调用此方法移动文件的指针。|  
-|[CAtlFile::SetSize](../Topic/CAtlFile::SetSize.md)|调用此方法设置文件的大小。|  
-|[CAtlFile::UnlockRange](../Topic/CAtlFile::UnlockRange.md)|调用此方法以打开文件的区域。|  
-|[CAtlFile::Write](../Topic/CAtlFile::Write.md)|调用此方法将数据写入启动在该位置的文件由文件指针。|  
+|----------|-----------------|  
+|[CAtlFile::Create](#create)|调用此方法以创建或打开文件。|  
+|[CAtlFile::Flush](#flush)|调用此方法来清除该文件的缓冲区并导致所有缓冲的数据写入到文件。|  
+|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|调用此方法来获取对该文件将重叠的操作的结果。|  
+|[CAtlFile::GetPosition](#getposition)|调用此方法以从文件中获取当前的文件指针位置。|  
+|[CAtlFile::GetSize](#getsize)|调用此方法可获取以字节为单位的文件的大小。|  
+|[CAtlFile::LockRange](#lockrange)|调用此方法以锁定以防止其他进程访问它的文件中的一个区域。|  
+|[CAtlFile::Read](#read)|调用此方法以从文件从文件指针指示的位置开始读取数据。|  
+|[CAtlFile::Seek](#seek)|调用此方法来移动该文件的文件指针。|  
+|[CAtlFile::SetSize](#setsize)|调用此方法以设置文件的大小。|  
+|[CAtlFile::UnlockRange](#unlockrange)|调用此方法以解锁该文件的区域。|  
+|[CAtlFile::Write](#write)|调用此方法将数据写入该文件从文件指针指示的位置开始。|  
   
-### 受保护的数据成员  
+### <a name="protected-data-members"></a>受保护的数据成员  
   
 |名称|说明|  
-|--------|--------|  
-|[CAtlFile::m\_pTM](../Topic/CAtlFile::m_pTM.md)|为 `CAtlTransactionManager` 对象的指针|  
+|----------|-----------------|  
+|[CAtlFile::m_pTM](#m_ptm)|指向`CAtlTransactionManager`对象|  
   
-## 备注  
- 比Windows API提供需要使用此选件类文件时，在处理需要时是相对简单，但是，更多抽象，而不包括MFC依赖项。  
+## <a name="remarks"></a>备注  
+ 文件处理需求相对比较简单，但不是 Windows API 提供了更多抽象是必需的而不包括 MFC 依赖关系时，请使用此类。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CHandle](../../atl/reference/chandle-class.md)  
   
  `CAtlFile`  
   
-## 要求  
- **Header:** atlfile.h  
+## <a name="requirements"></a>要求  
+ **标头︰** atlfile.h  
   
-## 请参阅  
- [marquee示例](../../top/visual-cpp-samples.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [CHandle Class](../../atl/reference/chandle-class.md)
+##  <a name="a-namecatlfilea--catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile::CAtlFile  
+ 构造函数。  
+  
+```
+CAtlFile() throw();
+CAtlFile(CAtlTransactionManager* pTM = NULL) throw();
+CAtlFile(CAtlFile& file) throw();
+explicit CAtlFile(HANDLE hFile) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `file`  
+ 文件对象。  
+  
+ `hFile`  
+ 文件句柄。  
+  
+ `pTM`  
+ 指向 CAtlTransactionManager 对象的指针  
+  
+### <a name="remarks"></a>备注  
+ 复制构造函数将从原始传输的文件句柄所有权`CAtlFile`对象传递给新构造的对象。  
+  
+##  <a name="a-namecreatea--catlfilecreate"></a><a name="create"></a>CAtlFile::Create  
+ 调用此方法以创建或打开文件。  
+  
+```
+HRESULT Create(
+    LPCTSTR szFilename,
+    DWORD dwDesiredAccess,
+    DWORD dwShareMode,
+    DWORD dwCreationDisposition,
+    DWORD dwFlagsAndAttributes = FILE_ATTRIBUTE_NORMAL,
+    LPSECURITY_ATTRIBUTES lpsa = NULL,
+    HANDLE hTemplateFile = NULL) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ *szFilename*  
+ 文件名。  
+  
+ `dwDesiredAccess`  
+ 所需的访问。 请参阅`dwDesiredAccess`中[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+ `dwShareMode`  
+ 共享模式。 请参阅`dwShareMode`中**CreateFile**。  
+  
+ `dwCreationDisposition`  
+ 创建处置。 请参阅`dwCreationDisposition`中**CreateFile**。  
+  
+ `dwFlagsAndAttributes`  
+ 标志和属性。 请参阅`dwFlagsAndAttributes`中**CreateFile**。  
+  
+ `lpsa`  
+ 中的安全特性。 请参阅*lpSecurityAttributes*中**CreateFile**。  
+  
+ `hTemplateFile`  
+ 模板文件中。 请参阅`hTemplateFile`中**CreateFile**。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858)用于创建或打开该文件。  
+  
+##  <a name="a-nameflusha--catlfileflush"></a><a name="flush"></a>CAtlFile::Flush  
+ 调用此方法来清除该文件的缓冲区并导致所有缓冲的数据写入到文件。  
+  
+```
+HRESULT Flush() throw();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439)将缓冲的数据刷新到该文件。  
+  
+##  <a name="a-namegetoverlappedresulta--catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+ 调用此方法来获取对该文件将重叠的操作的结果。  
+  
+```
+HRESULT GetOverlappedResult(
+    LPOVERLAPPED pOverlapped,
+    DWORD& dwBytesTransferred,
+    BOOL bWait) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `pOverlapped`  
+ 重叠的结构。 请参阅`lpOverlapped`中[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+ *dwBytesTransferred*  
+ 传送的字节数。 请参阅*lpNumberOfBytesTransferred*中`GetOverlappedResult`。  
+  
+ `bWait`  
+ 等待选项。 See `bWait` in `GetOverlappedResult`.  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209)来获取对该文件将重叠的操作的结果。  
+  
+##  <a name="a-namegetpositiona--catlfilegetposition"></a><a name="getposition"></a>CAtlFile::GetPosition  
+ 调用此方法以获取当前的文件指针位置。  
+  
+```
+HRESULT GetPosition(ULONGLONG& nPos) const throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `nPos`  
+ 以字节为单位位置。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)来获取当前的文件指针位置。  
+  
+##  <a name="a-namegetsizea--catlfilegetsize"></a><a name="getsize"></a>CAtlFile::GetSize  
+ 调用此方法可获取以字节为单位的文件的大小。  
+  
+```
+HRESULT GetSize(ULONGLONG& nLen) const throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `nLen`  
+ 在文件中的字节数。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955)可获取以字节为单位的文件的大小。  
+  
+##  <a name="a-namelockrangea--catlfilelockrange"></a><a name="lockrange"></a>CAtlFile::LockRange  
+ 调用此方法以锁定以防止其他进程访问它的文件中的一个区域。  
+  
+```
+HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `nPos`  
+ 锁应该开始的位置的文件中的位置。  
+  
+ `nCount`  
+ 要锁定的字节范围的长度。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[锁定文件](http://msdn.microsoft.com/library/windows/desktop/aa365202)锁定该文件中的一个区域。 锁定文件中的字节将阻止其他进程访问这些字节。 您可以锁定多个区域一个文件，但没有重叠区域允许。 如果解除锁定某一区域，使用[CAtlFile::UnlockRange](#unlockrange)，字节范围必须精确对应以前锁定的区域。 `LockRange`不会合并相邻区域;如果有两种锁定的区域相邻，您必须单独将每个解锁。  
+  
+##  <a name="a-namemptma--catlfilemptm"></a><a name="m_ptm"></a>CAtlFile::m_pTM  
+ 指向 `CAtlTransactionManager` 对象的指针。  
+  
+```
+CAtlTransactionManager* m_pTM;
+```  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="a-namereada--catlfileread"></a><a name="read"></a>CAtlFile::Read  
+ 调用此方法以从文件从文件指针指示的位置开始读取数据。  
+  
+```
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize) throw();
+
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize,
+    DWORD& nBytesRead) throw();
+
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize,
+    LPOVERLAPPED pOverlapped) throw();
+
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize,
+    LPOVERLAPPED pOverlapped,
+    LPOVERLAPPED_COMPLETION_ROUTINE pfnCompletionRoutine) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `pBuffer`  
+ 指向将接收从文件中读取的数据的缓冲区的指针。  
+  
+ `nBufSize`  
+ 缓冲区大小（以字节为单位）。  
+  
+ `nBytesRead`  
+ 读取的字节数。  
+  
+ `pOverlapped`  
+ 重叠的结构。 请参阅`lpOverlapped`中[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+ `pfnCompletionRoutine`  
+ 完成例程。 请参阅*lpCompletionRoutine*中[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 前三个窗体调用[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467)，最后一个[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)从文件读取数据。 使用[CAtlFile::Seek](#seek)来移动文件指针。  
+  
+##  <a name="a-nameseeka--catlfileseek"></a><a name="seek"></a>CAtlFile::Seek  
+ 调用此方法来移动该文件的文件指针。  
+  
+```
+HRESULT Seek(
+    LONGLONG nOffset,
+    DWORD dwFrom = FILE_CURRENT) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `nOffset`  
+ 从给定的起始点的偏移量`dwFrom`。  
+  
+ `dwFrom`  
+ 起始点 （FILE_BEGIN、 FILE_CURRENT 或 FILE_END）。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)来移动文件指针。  
+  
+##  <a name="a-namesetsizea--catlfilesetsize"></a><a name="setsize"></a>CAtlFile::SetSize  
+ 调用此方法以设置文件的大小。  
+  
+```
+HRESULT SetSize(ULONGLONG nNewLen) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `nNewLen`  
+ 新的长度以字节为单位的文件。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)和[SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531)设置文件的大小。 返回时，文件指针位于文件末尾。  
+  
+##  <a name="a-nameunlockrangea--catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile::UnlockRange  
+ 调用此方法以解锁该文件的区域。  
+  
+```
+HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `nPos`  
+ 解锁应开始的位置的文件中的位置。  
+  
+ `nCount`  
+ 要解锁的字节范围的长度。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 调用[UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715)解锁该文件的区域。  
+  
+##  <a name="a-namewritea--catlfilewrite"></a><a name="write"></a>CAtlFile::Write  
+ 调用此方法将数据写入该文件从文件指针指示的位置开始。  
+  
+```
+HRESULT Write(
+    LPCVOID pBuffer,
+    DWORD nBufSize,
+    LPOVERLAPPED pOverlapped,
+    LPOVERLAPPED_COMPLETION_ROUTINE pfnCompletionRoutine) throw();
+
+HRESULT Write(
+    LPCVOID pBuffer,
+    DWORD nBufSize,
+    DWORD* pnBytesWritten = NULL) throw();
+
+HRESULT Write(
+    LPCVOID pBuffer,
+    DWORD nBufSize,
+    LPOVERLAPPED pOverlapped) throw();
+```  
+  
+### <a name="parameters"></a>参数  
+ `pBuffer`  
+ 包含要写入到文件的数据的缓冲区。  
+  
+ `nBufSize`  
+ 要从缓冲区传输的字节数。  
+  
+ `pOverlapped`  
+ 重叠的结构。 请参阅`lpOverlapped`中[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+ `pfnCompletionRoutine`  
+ 完成例程。 请参阅*lpCompletionRoutine*中[WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+ `pnBytesWritten`  
+ 写入的字节数。  
+  
+### <a name="return-value"></a>返回值  
+ 返回`S_OK`成功，则错误`HRESULT`失败。  
+  
+### <a name="remarks"></a>备注  
+ 前三个窗体调用[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747)，最后一个调用[WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748)将数据写入该文件。 使用[CAtlFile::Seek](#seek)来移动文件指针。  
+  
+## <a name="see-also"></a>另请参阅  
+ [字幕示例](../../visual-cpp-samples.md)   
+ [类概述](../../atl/atl-class-overview.md)   
+ [CHandle 类](../../atl/reference/chandle-class.md)
+
