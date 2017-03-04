@@ -3,6 +3,7 @@
 # [Microsoft 基础类 (MFC)](../mfc/TOC.md)
 # [ATL 和 MFC 共享类](../atl-mfc-shared/TOC.md)
 # [适用于运行时平台的组件扩展](component-extensions-for-runtime-platforms.md)
+## [C++/CX](../cppcx/TOC.md)
 ## [跟踪引用运算符（C++ 组件扩展）](tracking-reference-operator-cpp-component-extensions.md)
 ## [对象句柄运算符 (^)（C++ 组件扩展）](handle-to-object-operator-hat-cpp-component-extensions.md)
 ## [abstract（C++ 组件扩展）](abstract-cpp-component-extensions.md)
