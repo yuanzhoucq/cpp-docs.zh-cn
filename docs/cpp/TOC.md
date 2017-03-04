@@ -238,7 +238,7 @@
 #### [混合使用 C（结构化）和 C++ 异常](mixing-c-structured-and-cpp-exceptions.md)
 ##### [使用 setjmp-longjmp](using-setjmp-longjmp.md)
 ##### [异常处理差异](exception-handling-differences.md)
-### [结构化异常处理 (C-C++)](structured-exception-handling-c-cpp.md)
+### [结构化异常处理 (C/C++)](structured-exception-handling-c-cpp.md)
 #### [编写异常处理程序](writing-an-exception-handler.md)
 ##### [try-except 语句](try-except-statement.md)
 ##### [编写异常筛选器](writing-an-exception-filter.md)

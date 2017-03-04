@@ -1,4 +1,4 @@
-# [C-C++ 生成错误](c-cpp-build-errors.md)
+# [C/C++ 生成错误](c-cpp-build-errors.md)
 # [编译器错误 C999 - C1999](compiler-fatal-errors-c999-through-c1999.md)
 ## [错误 C999](fatal-error-c999.md)
 ## [错误 C1001](fatal-error-c1001.md)
