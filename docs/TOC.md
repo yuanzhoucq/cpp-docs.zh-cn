@@ -1,6 +1,7 @@
 # [Visual Studio 2017 RC 中的 Visual C++](visual-cpp-in-visual-studio.md)
 # [Visual Studio 2017 RC 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)
 # [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)
+## [Visual C/C++ 语言合规性](c-cpp-language-conformance.md)
 # [支持的平台 (Visual C++)](supported-platforms-visual-cpp.md)
 # [C 语言](c-language/c-language-reference.md)
 # [C++ 语言](cpp/cpp-language-reference.md)
