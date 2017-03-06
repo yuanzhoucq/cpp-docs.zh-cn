@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5ac891241f29df515864c01fc449197f39bbaedd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 56b8b5c3574a7a53a4e259412b1b1326973bcac9
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ctime-class"></a>CTime 类
@@ -61,7 +61,7 @@ class CTime
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CTime::Format](#format)|将转换`CTime`为格式化的字符串对象 — 根据本地时区。|  
 |[CTime::FormatGmt](#formatgmt)|将转换`CTime`为格式化的字符串对象 — 基于 UTC。|  
@@ -106,7 +106,7 @@ class CTime
  有关使用`CTime`，请参阅文章[日期和时间](../../atl-mfc-shared/date-and-time.md)，和[时间管理](../../c-runtime-library/time-management.md)运行时库参考中。  
   
 > [!NOTE]
->  `CTime`结构从 MFC 7.1 更改为 MFC 8.0。 如果序列化`CTime`结构通过使用`operator <<`在 MFC 8.0 或更高版本下，生成的文件不能读取较早版本的 MFC。  
+>  `CTime`结构从 MFC 7.1 更改为 MFC 8.0。 如果序列化`CTime`结构通过`operator <<`在 MFC 8.0 或更高版本下，生成的文件不能读取较早版本的 MFC。  
   
 ## <a name="requirements"></a>要求  
  **标头︰** atltime.h  
@@ -183,9 +183,9 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>备注  
  下面描述了每个构造函数︰  
   
-- **CTime （);**构造未初始化`CTime`对象。 此构造函数允许您定义`CTime`对象数组。 应初始化此类阵列与之前使用的有效时间。  
+- **CTime();**构造未初始化`CTime`对象。 此构造函数允许您定义`CTime`对象数组。 应初始化此类阵列与之前使用的有效时间。  
   
-- **CTime (const CTime.);**构造`CTime`从另一个对象`CTime`值。  
+- **CTime (const CTime <);**构造`CTime`从另一个对象`CTime`值。  
   
 - **CTime (__time64_t);**构造`CTime`对象从**__time64_t**类型。 此构造函数需要 UTC 时间，并存储结果之前，将结果转换为本地时间。  
   
@@ -202,11 +202,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      此构造函数生成相应的转换为 UTC。 Microsoft 基础类库的调试版本断言，如果一个或多个时间组件超出范围。 您必须验证之前调用的参数。 此构造函数需要本地时间。  
   
-- `CTime`( **WORD, WORD** ) **;**构造`CTime`中指定的 MS-DOS 日期和时间值的对象。 此构造函数需要本地时间。  
+- **CTime （WORD、 字）;**构造`CTime`中指定的 MS-DOS 日期和时间值的对象。 此构造函数需要本地时间。  
   
-- `CTime`( **const SYSTEMTIME&** ) **;**构造`CTime`对象从`SYSTEMTIME`结构。 此构造函数需要本地时间。  
+- **CTime (const SYSTEMTIME.);**构造`CTime`对象从`SYSTEMTIME`结构。 此构造函数需要本地时间。  
   
-- `CTime`( **const FILETIME&** ) **;**构造`CTime`对象从`FILETIME`结构。 您最有可能不会使用`CTime``FILETIME`直接初始化。 如果您使用`CFile`对象操作文件，`CFile::GetStatus`为你通过检索文件时间戳`CTime`初始化对象，`FILETIME`结构。 此构造函数采用的时间基于 UTC，并自动将的值转换为本地时间，然后再将存储结果。  
+- **CTime (const FILETIME.);**构造`CTime`对象从`FILETIME`结构。 您最有可能不会使用`CTime FILETIME`直接初始化。 如果您使用`CFile`对象操作文件，`CFile::GetStatus`为你通过检索文件时间戳`CTime`初始化对象，`FILETIME`结构。 此构造函数采用的时间基于 UTC，并自动将的值转换为本地时间，然后再将存储结果。  
   
     > [!NOTE]
     >  构造函数使用**DBTIMESTAMP**参数包含 OLEDB.h 时才可用。  
