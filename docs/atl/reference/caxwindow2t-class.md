@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: deed13f7e44246eca1e9d3d138f73d0f540dc0b1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: a0724b0ea8922d1f39d8cf7ccd630068c32ea3ac
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 类
@@ -81,7 +81,7 @@ template <class TBase = CWindow>
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAxWindow2T::operator =](#operator_eq)|将分配`HWND`到某个现有`CAxWindow2T`对象。|  
   
@@ -133,7 +133,7 @@ HWND Create(
 ```  
   
 ### <a name="remarks"></a>备注  
- `CAxWindow2T::Create`调用[CWindow::Create](../../atl/reference/cwindow-class.md#create)与`LPCTSTR``lpstrWndClass`参数设置为窗口提供的类的控件承载 ( **AtlAxWinLic80**)。  
+ `CAxWindow2T::Create`调用[CWindow::Create](../../atl/reference/cwindow-class.md#create)与`LPCTSTR lpstrWndClass`参数设置为窗口提供的类的控件承载 ( **AtlAxWinLic80**)。  
   
  请参阅`CWindow::Create`有关参数和返回值的说明。  
   

@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 718aac826916b977eec4fb8400da81b5e32d4afa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: dd14e5c941da5383dce19e9f7f539bfb9909759f
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 类
@@ -56,7 +56,7 @@ class CComMultiThreadModelNoCS
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|引用类[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。|  
 |[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|引用类`CComFakeCriticalSection`。|  
@@ -70,7 +70,7 @@ class CComMultiThreadModelNoCS
 |[CComMultiThreadModelNoCS::Increment](#increment)|（静态）指定变量的值递增以线程安全的方式。|  
   
 ## <a name="remarks"></a>备注  
- `CComMultiThreadModelNoCS`类似于[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) ，因为它提供了线程安全方式递增和递减的变量。 但是，当引用的关键部分类通过`CComMultiThreadModelNoCS`，等方法`Lock`和`Unlock`将不执行任何操作。  
+ `CComMultiThreadModelNoCS`类似于[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) ，因为它提供了线程安全方式递增和递减的变量。 但是，当引用通过一个关键部分类`CComMultiThreadModelNoCS`，等方法`Lock`和`Unlock`将不执行任何操作。  
   
  通常，您可以使用`CComMultiThreadModelNoCS`通过`ThreadModelNoCS``typedef`名称。 这`typedef`中定义`CComMultiThreadModelNoCS`， `CComMultiThreadModel`，和[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)。  
   

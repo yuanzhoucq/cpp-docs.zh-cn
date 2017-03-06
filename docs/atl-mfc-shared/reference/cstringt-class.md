@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT 类
@@ -99,7 +99,7 @@ public CSimpleStringT<BaseType,
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CStringT::AllocSysString](#allocsysstring)|分配`BSTR`从`CStringT`数据。|  
 |[CStringT::AnsiToOem](#ansitooem)|可以从 OEM 字符集中的 ANSI 字符集的就地转换。|  
@@ -207,7 +207,7 @@ public CSimpleStringT<BaseType,
 ## <a name="cstringt-predefined-types"></a>CStringT 预定义的类型  
  因为`CStringT`使用模板参数来定义字符类型 (任一[wchar_t](../../c-runtime-library/standard-types.md)或[char](../../c-runtime-library/standard-types.md)) 支持，方法参数类型可以是复杂的时段。 若要简化此问题，一组预定义的类型定义和使用在整个`CStringT`类。 下表列出了各种类型︰  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |`XCHAR`|单个字符 (要么`wchar_t`或`char`) 具有相同的字符类型，作为`CStringT`对象。|  
 |**YCHAR**|单个字符 (要么`wchar_t`或`char`) 相反的字符类型，作为`CStringT`对象。|  
@@ -650,7 +650,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage`尝试为新格式的字符串分配系统内存。 如果此尝试失败，是自动引发内存异常。  
   
- 每次插入必须具有相应的参数以下`pszFormat`或`nFormatID`参数。 消息文本中的动态设置消息格式才支持几个转义序列。 有关详细信息，请参阅 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) ，此功能在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 每次插入必须具有相应的参数以下`pszFormat`或`nFormatID`参数。 消息文本中的动态设置消息的格式支持多个转义序列。 有关详细信息，请参阅 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) ，此功能在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&118;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -1223,7 +1223,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
  字符替换`chOld`。  
   
 ### <a name="return-value"></a>返回值  
- 如果未更改字符串，则返回被替换字符或子字符串，则为零的实例数。  
+ 如果字符串未发生更改时，请返回被替换字符或子字符串，则为零的实例数。  
   
 ### <a name="remarks"></a>备注  
  `Replace`可以更改的字符串长度，因为`pszNew`和`pszOld`旧子字符串的多个副本可以变为新并不一定要相同长度。 此函数将执行区分大小写的匹配项。  
@@ -1301,7 +1301,7 @@ BSTR SetSysString(BSTR* pbstr) const;
  新字符串。  
   
 ### <a name="remarks"></a>备注  
- 具体取决于内容`CStringT`对象、 的值`BSTR`所引用的`pbstr`可更改。 该函数将引发`CMemoryException`如果内存不足，无法存在。  
+ 具体取决于内容`CStringT`对象、 的值`BSTR`所引用的`pbstr`可以更改。 该函数将引发`CMemoryException`如果内存不足，无法存在。  
   
  此函数通常用于更改用于自动化通过引用传递的字符串值。  
   
@@ -1340,7 +1340,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  字符串解释为一组字符。  
   
 ### <a name="return-value"></a>返回值  
- 包含在字符串中的字符的子字符串`pszCharSet`，从字符串中的第一个字符开始和结束时将不在字符串中找到的字符`pszCharSet.``SpanIncluding`如果字符串中的第一个字符不在指定的集，则返回空的子字符串。  
+ 包含在字符串中的字符的子字符串`pszCharSet`，从字符串中的第一个字符开始和结束时将不在字符串中找到的字符`pszCharSet`。 `SpanIncluding`如果在字符串中的第一个字符不在指定的集，则返回空的子字符串。  
   
 ### <a name="remarks"></a>备注  
  如果该字符串的第一个字符不在的字符集，然后`SpanIncluding`返回一个空字符串。 否则，它将返回集中的连续字符的序列。  

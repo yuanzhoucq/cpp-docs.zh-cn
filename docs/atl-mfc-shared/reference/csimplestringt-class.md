@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 791b9ec18cc71fe19f633c12afdc48c835c2bf14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: e273aff69b9c8dbea4fb829798b2e9d58351b9dd
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 类
@@ -69,14 +69,14 @@ class CSimpleStringT
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CSimpleStringT::PCXSTR](#pcxstr)|指向常量字符串的指针。|  
 |[CSimpleStringT::PXSTR](#pxstr)|指向字符串的指针。|  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CSimpleStringT::CSimpleStringT](#ctor)|构造`CSimpleStringT`对象以各种方式。|  
 |[CSimpleStringT:: ~ CSimpleStringT](#dtor)|析构函数。|  
@@ -269,7 +269,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  构造一个新`CSimpleStringT`对象。 因为构造函数将输入的数据复制到新的已分配存储，可能会导致内存异常。  
   
 ### <a name="example"></a>示例  
- 下面的示例演示如何使用`CSimpleStringT::CSimpleStringT`使用 ATL `typedef``CSimpleString`。 `CSimpleString`是常用的类模板专用化`CSimpleStringT`。  
+ 下面的示例演示如何使用`CSimpleStringT::CSimpleStringT`使用 ATL `typedef` `CSimpleString`。 `CSimpleString`是常用的类模板专用化`CSimpleStringT`。  
   
 ```cpp  
 CSimpleString s1(pMgr);
@@ -436,7 +436,7 @@ s.ReleaseBuffer();
 ```
   
 ##  <a name="a-namegetbuffersetlengtha--csimplestringtgetbuffersetlength"></a><a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength  
-将指针返回到的内部字符缓冲区`CSimpleStringT`对象，截断或不断增加其长度，如有必要以与中指定的长度完全匹配`nLength`。  
+将指针返回到的内部字符缓冲区`CSimpleStringT`对象，截断或不断增加其长度，如有必要完全匹配工作中指定的长度`nLength`。  
   
 ### <a name="syntax"></a>语法  
   
