@@ -12,7 +12,6 @@
 ### [字节和宽流](byte-and-wide-streams.md)
 ### [控制流](controlling-streams.md)
 ### [流状态](stream-states.md)
-## [格式化输入和输出](formatted-input-and-output.md)
 ## [关于选择函数和宏的建议](recommendations-for-choosing-between-functions-and-macros.md)
 ## [类型检查 (CRT)](type-checking-crt.md)
 ## [方向标志](direction-flag.md)
@@ -171,7 +170,6 @@
 # [函数系列概述](function-family-overviews.md)
 ## [_exec、_wexec 函数](exec-wexec-functions.md)
 ## [文件名搜索函数](filename-search-functions.md)
-## [标志指令](flag-directives.md)
 ## [格式规范语法：printf 和 wprintf 函数](format-specification-syntax-printf-and-wprintf-functions.md)
 ## [格式规范字段：scanf 和 wscanf 函数](format-specification-fields-scanf-and-wscanf-functions.md)
 ## [is、isw 例程](is-isw-routines.md)
@@ -181,13 +179,9 @@
 ## [operator new (CRT)](operator-new-crt.md)
 ## [operator delete(CRT)](delete-operator-crt.md)
 ## [operator delete (CRT)](operator-delete-crt.md)
-## [精度规范](precision-specification.md)
-## [printf 类型字段字符](printf-type-field-characters.md)
-## [printf 宽度规范](printf-width-specification.md)
 ## [printf_p 位置参数](printf-p-positional-parameters.md)
 ## [scanf 类型字段字符](scanf-type-field-characters.md)
 ## [scanf 宽度规范](scanf-width-specification.md)
-## [大小规范](size-specification.md)
 ## [_spawn、_wspawn 函数](spawn-wspawn-functions.md)
 ## [strcoll 函数](strcoll-functions.md)
 ## [字符串到数值函数](string-to-numeric-value-functions.md)
@@ -207,7 +201,3 @@
 ## [_set_output_format](set-output-format.md)
 ## [_unlock](unlock.md)
 # [按字母顺序的函数参考](reference/TOC.md)
-
-<!--HONumber=Feb17_HO4-->
-
-
