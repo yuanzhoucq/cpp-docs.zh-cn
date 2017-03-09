@@ -1,137 +1,52 @@
 ---
-title: "operator new(CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr110_clr0400.dll"
-  - "msvcr100.dll"
-  - "msvcr120.dll"
-  - "msvcr110.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "new[]"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "operator new[]"
-  - "vector new"
+title: operator new(CRT) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr100.dll
+- msvcr120.dll
+- msvcr110.dll
+- msvcr80.dll
+- msvcr90.dll
+apitype: DLLExport
+f1_keywords:
+- new[]
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator new[]
+- vector new
 ms.assetid: 79682f85-6889-40f6-b8f7-9eed5176ea35
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# operator new(CRT)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5ea64941fb80c6fb3b974967e36671ad37e33a90
+ms.lasthandoff: 02/24/2017
 
-从堆中分配内存块。  
-  
-## 语法  
-  
-```  
-  
-      void *__cdecl operator new[](size_t count);  
-void *__cdecl operator new[] (  
-   size_t count,   
-   void * object  
-) throw();  
-void *__cdecl operator new[] (  
-   size_t count,   
-   const std::nothrow_t&  
-) throw();  
-```  
-  
-#### 参数  
- *count*  
- 分配的大小。  
-  
- *object*  
- 指向创建对象的内存块的指针。  
-  
-## 返回值  
- 指向新分配内存的最小字节地址的指针。  
-  
-## 备注  
- 与标量新的窗体 \([new 运算符](../c-runtime-library/operator-new-crt.md)\) 对比之下，`operator new` 的窗体称为矢量新。  
-  
- 此运算符的第一形式被称为 nonplacement 形式。  此运算符的第二个窗体称为放置窗体，并且此运算符第三个窗体是未抛出的放置窗体。  
-  
- 运算符的第一个形式由编译器定义的，并且不需要在程序中包含 new.h。  
-  
- [operator delete&#91;&#93;](../Topic/operator%20delete\(%3Cnew%3E\).md) 使用新的运算符释放已分配的内存。  
-  
- 可以配置 `operator new[]` 是否返回空或在失败时抛出异常。  请参见 [有关更多new和delete运算符信息](../cpp/new-and-delete-operators.md) 。  
-  
- 在抛出异常或未抛出操作下，CRT`operator new` 行为类似于在标准 C\+\+ 库中的 [operator new&#91;&#93;](../Topic/operator%20new\(%3Cnew%3E\).md) 。  
-  
-## 要求  
-  
-|例程|必需的标头|  
-|--------|-----------|  
-|`new[]`|\<new.h\>|  
-  
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../c-runtime-library/compatibility.md)。  
-  
-## 库  
- [C 运行时库](../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## 示例  
- 下面演示如何使用矢量，`operator new`的未放置窗体。  
-  
-```  
-// crt_new4.cpp  
-#include <stdio.h>  
-int main() {  
-   int * k = new int[10];  
-   k[0] = 21;  
-   printf("%d\n", k[0]);  
-   delete [] k;  
-}  
-```  
-  
- 下面演示如何使用矢量，`operator new`的放置窗体。  
-  
-```  
-// crt_new5.cpp  
-#include <stdio.h>  
-#include <new.h>  
-int main() {  
-   int * i = new int[10];  
-   i[0] = 21;  
-   printf("%d\n", i[0]);  
-   // initialize existing memory (i) with, in this case, int[[10]  
-   int * j = new(i) int[10];   // placement vector new  
-   printf("%d\n", j[0]);  
-   j[0] = 22;  
-   printf("%d\n", i[0]);  
-   delete [] i;   // or, could have deleted [] j   
-}  
-```  
-  
- 下面演示如何使用矢量，`operator new`的放置窗体，未抛出窗体。  
-  
-```  
-// crt_new6.cpp  
-#include <stdio.h>  
-#include <new.h>  
-int main() {  
-   int * k = new(std::nothrow) int[10];  
-   k[0] = 21;  
-   printf("%d\n", k[0]);  
-   delete [] k;  
-}  
-```  
-  
-## 请参阅  
- [内存分配](../c-runtime-library/memory-allocation.md)
+---
+# <a name="operator-newcrt"></a>operator new(CRT)
+从 Visual Studio 2013 开始，通用 C 运行时 (UCRT) 便不再支持特定于 C++ 的 operator new 和 operator delete 函数。 它们现在是 C++ 标准库的一部分。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../cpp/new-and-delete-operators.md)和 [new 运算符](../cpp/new-operator-cpp.md)。 
