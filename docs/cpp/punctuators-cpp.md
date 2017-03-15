@@ -1,0 +1,52 @@
+---
+title: "C++ 标点符号 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+f1_keywords: 
+  - ";"
+  - ","
+  - "{"
+  - "}"
+  - "("
+  - ")"
+  - "["
+  - "]"
+  - "!"
+  - "%"
+  - "^"
+  - "*"
+  - """
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "标点符号"
+ms.assetid: 1521564c-a977-488a-9490-068079897592
+caps.latest.revision: 6
+caps.handback.revision: 6
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# C++ 标点符号
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+在 C\+\+ 中，标点符号相对于编译器来说具有语法意义和语义含义，但是它们本身不会指定一个产生数值的操作。  某些标点符号（单独或组合）也可以是 C\+\+ 运算符或对预处理器很重要。  
+  
+ 以下任意字符都被视为标点符号：  
+  
+```  
+! % ^ & * ( ) – + = { } | ~  
+[ ] \ ; ' : " < > ? , . / #  
+```  
+  
+ 标点符号 **\[ \]**、 **\( \)** 和 **{ }** 必须成对出现在[转换阶段](../preprocessor/phases-of-translation.md) 4 后。  
+  
+## 请参阅  
+ [词法约定](../cpp/lexical-conventions.md)

@@ -1,0 +1,95 @@
+---
+title: _ITERATOR_DEBUG_LEVEL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _ITERATOR_DEBUG_LEVEL
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ITERATOR_DEBUG_LEVEL
+ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
+caps.latest.revision: 6
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
+ms.openlocfilehash: d5f89f871f60827d894aa414e12b52f0c5f7ef38
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
+`_ITERATOR_DEBUG_LEVEL` 宏控制是否启用[经过检查的迭代器](../standard-library/checked-iterators.md)和[调试迭代器支持](../standard-library/debug-iterator-support.md)。 该宏取代并合并了较旧的宏 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 的功能。  
+  
+## <a name="macro-values"></a>宏值  
+下表总结了 `_ITERATOR_DEBUG_LEVEL` 宏的可能值。  
+  
+|编译模式|宏值|描述|  
+|----------------------|----------------|-----------------|  
+|**调试**|||  
+||0|禁用经过检查的迭代器，并禁用迭代器调试。|  
+||1|启用经过检查的迭代器，禁用迭代器调试。|  
+||2（默认值）|启用迭代器调试；经过检查的迭代器不相关。|  
+|**发布**|||  
+||0（默认值）|禁用经过检查的迭代器。|  
+||1|启用经过检查的迭代器；迭代器调试不相关。|  
+  
+在发布模式下，如果将 `_ITERATOR_DEBUG_LEVEL` 指定为 2，则编译器会生成一个错误。  
+  
+## <a name="remarks"></a>备注  
+`_ITERATOR_DEBUG_LEVEL` 宏控制是否启用[经过检查的迭代器](../standard-library/checked-iterators.md)，在调试模式下，此宏控制是否启用[调试迭代器支持](../standard-library/debug-iterator-support.md)。 如果将 `_ITERATOR_DEBUG_LEVEL` 定义为 1 或 2，检查迭代器可确保容器的边界不被覆盖。 如果 `_ITERATOR_DEBUG_LEVEL` 为 0，则迭代器未经过检查。 如果 `_ITERATOR_DEBUG_LEVEL` 定义为 1，任何迭代器的非安全使用都会导致运行时错误，并且程序会终止。 如果 `_ITERATOR_DEBUG_LEVEL` 定义为 2，迭代器的非安全使用会导致出现断言和一个可用以中断调试器的运行时错误对话框。 
+
+因为宏 `_ITERATOR_DEBUG_LEVEL` 支持类似于宏 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 的功能，所以在某些特定情况下可能不确定应使用哪个宏和宏值。 为避免混淆，建议仅使用 `_ITERATOR_DEBUG_LEVEL` 宏。 此表介绍了现有代码中用于 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 的各种值的等效 `_ITERATOR_DEBUG_LEVEL` 宏值。  
+  
+|**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
+|---|---|---|
+|0（发布默认值）|0（已禁用）|0（已禁用）|
+|1|1（已启用）|0（已禁用）|
+|2（调试默认值）|（不相关）|1（在调试模式中启用）|
+  
+有关如何禁用经过检查的迭代器的警告信息，请参阅 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)。  
+  
+### <a name="example"></a>示例  
+  
+若要为 `_ITERATOR_DEBUG_LEVEL` 宏指定值，请使用 [/D](../build/reference/d-preprocessor-definitions.md) 编译器选项在命令行上对其进行定义，或在将 C++ 标准库标头包含在源文件前使用 `#define`。 例如，在命令行中，若要在调试模式下编译 *sample.cpp* 并使用调试迭代器支持，则可指定 `_ITERATOR_DEBUG_LEVEL` 宏定义：  
+  
+`cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`  
+  
+在源文件中，请在定义迭代器的任何标准库标头前指定宏。  
+  
+```cpp  
+// sample.cpp  
+  
+#define _ITERATOR_DEBUG_LEVEL 1  
+  
+#include <vector>  
+  
+// ...
+```  
+  
+## <a name="see-also"></a>另请参阅  
+[经过检查的迭代器](../standard-library/checked-iterators.md)   
+[调试迭代器支持](../standard-library/debug-iterator-support.md)   
+[安全库：C++ 标准库](../standard-library/safe-libraries-cpp-standard-library.md)
+

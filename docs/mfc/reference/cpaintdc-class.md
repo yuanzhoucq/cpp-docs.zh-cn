@@ -1,0 +1,144 @@
+---
+title: "CPaintDC 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CPaintDC
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnPaint handler
+- WM_PAINT message
+- CPaintDC class
+ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
+caps.latest.revision: 22
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b781db7d4a6676e6fc6ad5df7553b9c9a0154ab9
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="cpaintdc-class"></a>CPaintDC 类
+设备上下文类派生自[CDC](../../mfc/reference/cdc-class.md)。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+class CPaintDC : public CDC  
+```  
+  
+## <a name="members"></a>成员  
+  
+### <a name="public-constructors"></a>公共构造函数  
+  
+|名称|说明|  
+|----------|-----------------|  
+|[CPaintDC::CPaintDC](#cpaintdc)|构造`CPaintDC`连接到指定[CWnd](../../mfc/reference/cwnd-class.md)。|  
+  
+### <a name="public-data-members"></a>公共数据成员  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CPaintDC::m_ps](#m_ps)|包含[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)用于进行绘制的工作区。|  
+  
+### <a name="protected-data-members"></a>受保护的数据成员  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[CPaintDC::m_hWnd](#m_hwnd)|`HWND`此`CPaintDC`附加对象。|  
+  
+## <a name="remarks"></a>备注  
+ 它执行[CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint)在构造时和[CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)在析构时。  
+  
+ 一个`CPaintDC`响应时，可以只使用对象[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息时，通常在您`OnPaint`消息处理程序成员函数。  
+  
+ 有关详细信息使用`CPaintDC`，请参阅[设备上下文](../../mfc/device-contexts.md)。  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CDC](../../mfc/reference/cdc-class.md)  
+  
+ `CPaintDC`  
+  
+## <a name="requirements"></a>要求  
+ **标头:** afxwin.h  
+  
+##  <a name="a-namecpaintdca--cpaintdccpaintdc"></a><a name="cpaintdc"></a>CPaintDC::CPaintDC  
+ 构造`CPaintDC`对象的绘制，将准备好应用程序窗口，并将存储[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构中[m_ps](#m_ps)成员变量。  
+  
+```  
+explicit CPaintDC(CWnd* pWnd);
+```  
+  
+### <a name="parameters"></a>参数  
+ `pWnd`  
+ 指向`CWnd`对象传递给该`CPaintDC`对象所属。  
+  
+### <a name="remarks"></a>备注  
+ 异常 (类型的`CResourceException`) 如果则会引发 Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)调用将失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 您的应用程序都可用在 Windows 下任何给定时间的五个常见显示上下文争用。  
+  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCDocView #&97;](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
+  
+##  <a name="a-namemhwnda--cpaintdcmhwnd"></a><a name="m_hwnd"></a>CPaintDC::m_hWnd  
+ `HWND`此`CPaintDC`附加对象。  
+  
+```  
+HWND m_hWnd;  
+```  
+  
+### <a name="remarks"></a>备注  
+ `m_hWnd`是一个受保护的类型变量`HWND`。  
+  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCDocView #&98;](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
+  
+##  <a name="a-namempsa--cpaintdcmps"></a><a name="m_ps"></a>CPaintDC::m_ps  
+ `m_ps`是类型的公共成员变量[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)。  
+  
+```  
+PAINTSTRUCT m_ps;  
+```  
+  
+### <a name="remarks"></a>备注  
+ 它是`PAINTSTRUCT`，传递给并通过填写[CWnd::BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint)。  
+  
+ `PAINTSTRUCT`包含应用程序用来绘制与关联的窗口的工作区的信息`CPaintDC`对象。  
+  
+ 请注意，您可以访问的设备上下文句柄通过`PAINTSTRUCT`。 但是，可以访问的句柄更直接通过`m_hDC`成员变量，`CPaintDC`继承自`CDC`。  
+  
+### <a name="example"></a>示例  
+  请参阅示例[CPaintDC::m_hWnd](#m_hwnd)。  
+  
+## <a name="see-also"></a>另请参阅  
+ [MFC 示例 MDI](../../visual-cpp-samples.md)   
+ [CDC 类](../../mfc/reference/cdc-class.md)   
+ [层次结构图](../../mfc/hierarchy-chart.md)
+
+
+
+

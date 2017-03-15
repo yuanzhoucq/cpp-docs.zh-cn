@@ -1,0 +1,69 @@
+---
+title: "并行模式库 (PPL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "并行模式库 (PPL)"
+ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
+caps.latest.revision: 27
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+caps.handback.revision: 27
+---
+# 并行模式库 (PPL)
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+并行模式库 (PPL) 提供命令式编程模型，以促进开发并发应用程序的可扩展性和易用性。 PPL 构建在并发运行时的计划和资源管理组件上。 通过提供并行作用于数据的泛型安全算法和容器，提高应用程序代码与基础线程机制之间的抽象级别。 使用 PPL 还可以开发通过为共享状态提供替代方案实现缩放的应用程序。  
+  
+ PPL 提供以下功能：  
+  
+- *任务并行*︰ 一种机制，在 threadpool Windows 来并行执行多个工作项 （任务） 的工作原理  
+  
+- *并行算法*︰ 在并发运行时执行操作的基础上从事并行中的数据集合的泛型算法  
+  
+- *并行容器和对象*︰ 提供对其元素的安全并发访问的泛型容器类型  
+  
+## <a name="example"></a>示例  
+ PPL 提供类似于标准模板库 (STL) 的编程模型。 下面的示例展示 PPL 的多种功能。 串行和并行计算若干 Fibonacci 数字。 这两种计算都作用于 [std:: array](../../standard-library/array-class-stl.md) 对象。 示例还控制台输出了进行两种计算所需的时间。  
+  
+ 串行版本使用 STL [for_each](../Topic/for_each.md) 算法遍历数组并将存储中的结果 [std:: vector](../../standard-library/vector-class.md) 对象。 并行版本执行相同的任务，但使用的是 PPL [concurrency:: parallel_for_each](../Topic/parallel_for_each%20Function.md) 算法，并将存储中的结果 [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 对象。 `concurrent_vector` 类可以使每个循环迭代并发添加元素，而无需同步对容器的写访问。  
+  
+ 由于 `parallel_for_each` 并发操作，因此本示例的并行版本必须排列 `concurrent_vector` 对象的顺序才能生成与串行版本相同的结果。  
+  
+ 注意，示例使用 naïve 方法来计算 Fibonacci 数字；然而，这种方法却说明了并发运行时是如何提高长计算性能的。  
+  
+ [!code-cpp[concrt-parallel-fibonacci#1](../../parallel/concrt/codesnippet/CPP/parallel-patterns-library-ppl_1.cpp)]  
+  
+ 以下是具有四个处理器的计算机的输出示例。  
+  
+```Output  
+serial time: 9250 ms  
+parallel time: 5726 ms  
+ 
+fib(24): 46368  
+fib(26): 121393  
+fib(41): 165580141  
+fib(42): 267914296  
+```  
+  
+ 完成每个循环迭代所需的时间各不相同。 `parallel_for_each` 的性能由最后完成的操作决定。 因此，本示例的串行版本与并行版本不会有线性的性能提高。  
+  
+## <a name="related-topics"></a>相关主题  
+  
+|标题|描述|  
+|-----------|-----------------|  
+|[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|描述 PPL 中任务和任务组的角色。|  
+|[并行算法](../../parallel/concrt/parallel-algorithms.md)|描述如何使用并行算法，如 `parallel_for` 和 `parallel_for_each`。|  
+|[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)|描述 PPL 提供的各种并行容器和对象。|  
+|[取消](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation_in_the_ppl)|说明如何取消并行算法当前正在执行的工作。|  
+|[并发运行时](../../parallel/concrt/concurrency-runtime.md)|描述可以简化并发编程并包含相关主题链接的并发运行时。|
+

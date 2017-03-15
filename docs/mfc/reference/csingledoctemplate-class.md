@@ -1,0 +1,149 @@
+---
+title: "CSingleDocTemplate 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CSingleDocTemplate
+dev_langs:
+- C++
+helpviewer_keywords:
+- templates, SDI
+- document templates, single
+- single document interface (SDI), applications
+- CSingleDocTemplate class
+ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
+caps.latest.revision: 23
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: 78e288dd958e73495a8d513d7fe3427ccc956a61
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="csingledoctemplate-class"></a>CSingleDocTemplate 类
+定义实现单文档界面 (SDI) 的文档模板。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+class CSingleDocTemplate : public CDocTemplate  
+```  
+  
+## <a name="members"></a>成员  
+  
+### <a name="public-constructors"></a>公共构造函数  
+  
+|名称|说明|  
+|----------|-----------------|  
+|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|构造 `CSingleDocTemplate` 对象。|  
+  
+## <a name="remarks"></a>备注  
+ SDI 应用程序中使用的主框架窗口来显示文档;一次只能有一个文档可以是打开的。  
+  
+ 文档模板定义了三种类型的类之间的关系︰  
+  
+-   一个文档类，该类派生自**CDocument**。  
+  
+-   视图类，该类显示上面列出的文档类中的数据。 可派生自此类，从`CView`， `CScrollView`， `CFormView`，或`CEditView`。 (您还可以使用`CEditView`直接。)  
+  
+-   框架窗口类，包含的视图。 对于 SDI 文档模板，可以派生自此类，从`CFrameWnd`; 如果不需要自定义行为的主框架窗口中，您可以使用`CFrameWnd`直接而不用派生您自己的类。  
+  
+ SDI 应用程序中通常支持一种类型的文档，因此它必须只有一个`CSingleDocTemplate`对象。 一次只能有一个文档可以是打开的。  
+  
+ 您不必调用任何成员函数`CSingleDocTemplate`除外构造函数。 Framework 句柄`CSingleDocTemplate`内部对象。  
+  
+ 有关详细信息使用`CSingleDocTemplate`，请参阅[文档模板和文档/视图创建过程](../../mfc/document-templates-and-the-document-view-creation-process.md)。  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
+  
+ [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)  
+  
+ `CSingleDocTemplate`  
+  
+## <a name="requirements"></a>要求  
+ **标头:** afxwin.h  
+  
+##  <a name="a-namecsingledoctemplatea--csingledoctemplatecsingledoctemplate"></a><a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate  
+ 构造 `CSingleDocTemplate` 对象。  
+  
+```  
+CSingleDocTemplate(
+    UINT nIDResource,  
+    CRuntimeClass* pDocClass,  
+    CRuntimeClass* pFrameClass,  
+    CRuntimeClass* pViewClass);
+```  
+  
+### <a name="parameters"></a>参数  
+ `nIDResource`  
+ 指定与文档类型一起使用的资源的 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
+  
+ 字符串资源都包括达七个 \n 字符分隔的子字符串 （不含一个子字符串时，需要 '\n' 字符用作占位符; 但是，不需要尾随的 '\n' 字符）;这些子字符串说明了文档类型。 子字符串的信息，请参阅[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 应用程序的资源文件中可以找到该字符串资源。 例如:   
+  
+ `// MYCALC.RC`  
+  
+ `STRINGTABLE PRELOAD DISCARDABLE`  
+  
+ `BEGIN`  
+  
+ `IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"`  
+  
+ `END`  
+  
+ 您可以编辑使用字符串编辑器; 此字符串整个字符串不是作为七个不同的项作为单个条目在字符串编辑器中，将出现。  
+  
+ 有关这些资源类型的详细信息，请参阅[字符串编辑器](../../windows/string-editor.md)。  
+  
+ `pDocClass`  
+ 指向`CRuntimeClass`文档类的对象。 此类是**CDocument**的派生类定义来表示你的文档。  
+  
+ `pFrameClass`  
+ 指向`CRuntimeClass`的框架窗口类的对象。 此类可以是`CFrameWnd`-派生的类，也可以是`CFrameWnd`本身如果希望为您的主框架窗口默认行为。  
+  
+ `pViewClass`  
+ 指向`CRuntimeClass`视图类的对象。 此类是`CView`的派生类定义以显示您的文档。  
+  
+### <a name="remarks"></a>备注  
+ 动态分配`CSingleDocTemplate`对象，并将其传递给`CWinApp::AddDocTemplate`从`InitInstance`应用程序类的成员函数。  
+  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCDocViewSDI #&13;](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
+  
+ [!code-cpp[NVC_MFCDocViewSDI #&14;](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  
+  
+## <a name="see-also"></a>另请参阅  
+ [MFC 示例 DOCKTOOL](../../visual-cpp-samples.md)   
+ [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)   
+ [层次结构图](../../mfc/hierarchy-chart.md)   
+ [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)   
+ [CDocument 类](../../mfc/reference/cdocument-class.md)   
+ [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)   
+ [CMultiDocTemplate 类](../../mfc/reference/cmultidoctemplate-class.md)   
+ [CView 类](../../mfc/reference/cview-class.md)   
+ [CWinApp 类](../../mfc/reference/cwinapp-class.md)
+

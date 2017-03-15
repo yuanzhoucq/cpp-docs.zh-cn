@@ -1,0 +1,237 @@
+---
+title: "Visual Studio 中 Visual C++ 的新增功能 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/16/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 39648d170fc189168d5f199fff8b3c2012456b82
+ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
+
+---
+
+# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新增功能
+
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 向 Visual C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中的 250 多个 bug 和已报告问题，其中很多是客户通过 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") 提交的。 感谢你报告 bug！  有关整个 Visual Studio 中新增功能的详细信息，请访问 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中的新增功能](https://go.microsoft.com/fwlink/?linkid=834481)。
+
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中编译器和工具的版本号是 14.10.24629。 
+
+
+## <a name="c-compiler"></a>C++ 编译器
+
+### <a name="c-conformance-improvements"></a>C++ 的符合性改进
+在此版本中，我们更新了 C++ 编译器和标准库，不仅增强了对 C++11 和 C++14 功能的支持，还初步提出了对预期推出的特定 C++17 标准功能的支持。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)。
+
+### <a name="new-compiler-switches"></a>新的编译器开关  
+
+ -**/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [Standards version switches in the compiler](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/standards-version-switches-in-the-compiler)（编译器中的标准版本开关）。 大多数新的草案标准功能由 /std:c++lates 开关保护。 
+
+-[/permissive-](build/reference/permissive-standards-conformance.md)：启用所有严格标准符合性编译器选项，并禁用大部分特定于 Microsoft 的编译器扩展（但也有一些除外，例如 __declspec(dllimport)）。 （默认情况下为关，但在未来的某个时刻将默认为开。）
+
+-[/diagnostics](build/reference/diagnostics-compiler-diagnostic-options.md)：启用显示行号、行号和列，或行号和列及脱字号（位于诊断错误或警告所在代码行的下方）。
+
+-[/debug:fastlink](build/reference/debug-generate-debug-info.md)：  
+通过避免将所有调试信息复制到 PDB 文件，实现最高达 30％ 更快的增量链接时间（与Visual Studio 2015 相比）。 PDB 文件改为指向用于创建可执行文件的对象和库文件的调试信息。 请参阅 [Faster C++ build cycle in VS “15” with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)（使用 /Debug:fastlink 在 VS “15” 中获得更快的生成周期）和 [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)（在 Visual Studio 中加速 C++ 生成的建议）。
+
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 允许结合使用 /sdl 和 /await。 删除了协同程序的 /RTC 限制。 
+
+### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen、安全性、诊断和版本控制
+此版本在优化、代码生成、工具集版本控制和诊断方面做出了若干改进。 显著改进包括：  
+
+- 改进了循环的代码生成：支持常量整数除法的自动矢量化，优化了 memset 模式的识别。
+- 提高了代码安全性：改进了缓冲区溢出编辑器诊断的显示，/guard:cf 现可保护生成转移表的切换语句。
+- 版本控制：内置预处理器宏_MSC_VER 的值现在会在每次 Visual C++ 工具集更新时单调更新。 有关详细信息，请参阅 [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)（Visual C++ 编译器版本）。
+- 新工具集布局：编译器和相关生成工具在开发计算机上有了新的位置和目录结构。 新布局支持并行安装多个版本的编译器。 有关详细信息，请参阅 [Visual Studio “15” 中的编译器工具布局](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/)。
+- 改进了诊断：输出窗口现在会显示发生错误的列。 有关详细信息，请参阅 [C++ compiler diagnostics improvements in VS “15” Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/)（VS “15” 预览版 5 中的 C++ 编译器诊断改进）。
+
+## <a name="c-libraries"></a>C++ 库
+
+### <a name="standard-library-improvements"></a>标准库改进：
+
+* 对 basic_string _ITERATOR_DEBUG_LEVEL != 0 诊断进行了小幅改进。 在字符串机制中进行 IDL 检查现在将报告触发该检查的特定行为。 例如，现在会收到“无法取消引用字符串迭代器，因为其已超出范围（例如末尾迭代器）”，而不是“字符串迭代器不可取消引用”。
+* 性能改进：basic_string::find(char) 重载仅调用 traits::find 一次。 以前会将此操作实施为针对长度为 1 的字符串的常规字符串搜索。
+* 性能改进：basic_string::operator== 现会在比较字符串内容之前检查字符串的大小。
+* 性能改进：删除了 basic_string 中编译器优化程序难以分析的控制耦合。 解决了 VSO# 262848“<string>：reserve() 执行了过多操作”。 请注意，对于所有短字符串，调用 reserve 后即使不执行任何操作仍会耗用资源。
+* 我们添加了 \<any\>、\<string_view\>、apply()、make_from_tuple()。
+* 对 std:: vector 进行了全面改进以提高正确性和性能：现可按标准版的要求正确处理插入/定位期间的别名化，在标准版需要时可通过 move_if_noexcept() 和其他逻辑提供强大的异常保障，并且插入/定位执行的元素操作减少。
+* 现在 C++ 标准库会避免取消引用 null 复杂精致指针。
+* 增添了 \<optional\>、\<variant\>、shared_ptr::weak_type 和 \<cstdalign\>。
+* 在 min/max/minmax(initializer_list) 和 min_element/max_element/minmax_element() 中启用了 C++14 constexpr。
+* 改进了 weak_ptr::lock() 性能。
+* 修复了 std::promise 的移动赋值运算符，该运算符之前可导致代码永久受阻。
+* 修复了编译器错误，将 atomic\<T \*\> 隐式转换为 T \*。
+* pointer_traits\<Ptr\> 现可正确检测 Ptr::rebind\<U\>。
+* 修复了 move_iterator 减法运算符中缺少的 const 限定符。
+* 针对需要 propagate_on_container_copy_assignment 和 propagate_on_container_move_assignment 的有状态用户定义的分配器，修复了无提示的错误代码生成。
+* atomic\<T\> 现可容忍重载的 operator&()。
+* 为提高编译器吞吐量，C++ 标准库标头现不会包含非必需编译器内部函数的声明。
+* 略微改进了针对错误的 bind() 调用的编译器诊断。
+* 将 std::string/std::wstring 的移动构造函数的性能提升了超过 3 倍
+
+### <a name="open-source-library-support"></a>开源库支持  
+Vcpkg 是一款开源命令行工具，能极大简化在 Visual Studio 中获取和生成开源 C++ 静态库和 DLLS 的过程。 有关详细信息，请参阅 [Vcpkg updates: Static linking is now available](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/)（Vcpkg 更新：现支持静态链接）。
+
+### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0  
+CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细信息，请参阅 [CppRestSDK 2.9.0 is available on GitHub](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/)（GitHub 上提供了 CppRestSDK 2.9.0）。
+
+### <a name="atl"></a>ATL
+* 另外进行了另一组名称查找符合性修复
+* 现有的移动构造函数和移动赋值运算符现已正确地标记为非引发
+* 取消禁止有关 atlstr.h 中本地静态变量的线程安全初始化的有效警告 C4640
+* 在 [使用 ATL 和生成 DLL] 时，本地静态变量的线程安全初始化会在 XP 工具集中自动关闭。 这种情况不会再出现。 如果需要关闭线程安全初始化，则可以在项目设置中添加 /Zc:threadSafeInit-。 
+
+## <a name="c-ide"></a>C++ IDE
+
+### <a name="intellisense"></a>Intellisense  
+* 现在默认使用全新的基于 SQLite 的数据库引擎。 这将提高数据库操作（如“转到定义”和“查找所有引用”）的速度，并将极大地缩短初始解决方案分析时间。 设置已移至“工具”>“选项”>“文本编辑器”>“C/C++”>“高级”下（之前位于...“C/C++”>“实验”下）。
+
+* 我们改进了不使用预编译标头的项目和文件的 IntelliSense 性能 - 为当前文件中的标头创建自动预编译标头。
+
+* 还为错误列表中的 IntelliSense 错误添加了错误筛选和帮助。 单击错误列现在允许进行筛选。 此外，单击特定错误或按 F1 将启动错误消息的联机搜索。
+
+  ![错误列表](media/ErrorList1.png "错误列表")
+
+  ![筛选的错误列表](media/ErrorList2.png "筛选的错误列表")
+
+* 增添了按类型筛选“成员列表”项的功能。
+
+  ![成员列表筛选](media/mlfiltering.png "成员列表筛选")
+
+* 添了新的实验性预测 IntelliSense 功能，此功能可根据上下文筛选成员列表中的所示内容。 请参阅 [C++ IntelliSense Improvements – Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)（C++ IntelliSense 改进 - IntelliSense 和筛选）
+
+* 即使在复杂基本代码中，“查找所有引用”(Shift+F12) 现在也可帮助轻松进行查找。 它提供高级分组、筛选、排序、在结果中搜索以及（适用于某些语言的）着色，以便你清楚了解自己的引用。 对于 C++ 而言，新的UI 包括有关是否要从变量读取或向其写入的信息。
+
+* _**RC 中的新增功能**_已将“点到箭头”IntelliSense 功能从实验级提升为高级，且现在为默认启用。 编辑器功能“展开作用域”和“展开优先级”也已从实验级提升为高级。
+
+* _**RC 中的新增功能**_实验性的重构功能“更改签名”和“提取函数”现默认可用。
+
+* _**RC 中的新增功能**_我们启用了用于 C++ 项目的新实验性功能“快速项目加载”。 下次打开 C++ 项目时，加载速度将更快，并且越来越快！
+
+其中一些功能与其他语言通用，有些则特定于 C++。 有关这些新增功能的详细信息，请参阅[发布 Visual Studio “15”](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/)。 
+
+### <a name="support-for-non-msbuild-projects-with-open-folder"></a>支持包含“打开文件夹”的非 MSBuild 项目
+Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含源代码的文件夹中进行编码、生成和调试，而无需创建任何解决方案或项目。 这使得新手使用 Visual Studio 变得异常简单，即使你的项目不是基于 MSBuild。 使用“打开文件夹”，可获得 Visual Studio 为 MSBuild 所提供的强大代码理解、编辑、生成和调试功能。 有关详细信息，请参阅 [Bring your C++ codebase to Visual Studio with “Open Folder”](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/)（使用“打开文件夹”向 Visual Studio 引入 C++ 基本代码）。
+
+* _**RC 中的新增功能**_改进了“打开文件夹”体验。     
+可通过以下 json 文件自定义体验：
+  -    使用 CppProperties.json 可自定义 IntelliSense 和浏览体验。
+  -    使用 Tasks.json 可自定义生成步骤。 
+  -    使用 Launch.json 可自定义调试体验。
+
+### <a name="cmake-support-via-open-folder"></a>通过“打开文件夹”支持 CMake
+Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/)（Visual Studio 中的 CMake 支持）。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
+
+* _**RC 中的新增功能**_无需在根文件夹中创建 CppProperties.json 文件，C++ IntelliSense 便可正常工作。 此外，我们增添了一个新的下拉列表，允许用户在分别由 CMake 和 CppProperties.json 文件提供的配置之间轻松切换。
+
+* _**RC 中的新增功能**_通过 CMakeLists.txt 文件所在的同一文件夹中的 CMakeSettings.json 文件提供进一步的配置支持。
+
+  ![Cmake 打开文件夹](media/cmake_cpp.png "CMake 打开文件夹")
+
+
+## <a name="c-installation-workloads"></a>C++ 安装工作负荷 
+
+### <a name="windows-desktop-development-with-c"></a>使用 C++ 的 Windows 桌面开发：  
+现提供原始 C++ 工作流的更细化的安装体验。 我们添加了可选组件，使你能够仅安装所需工具。  请注意，在安装程序用户界面中列出的组件的安装大小的指示并不准确，而且它低估了整个大小。  
+
+### <a name="linux-development-with-c"></a>使用 C++ 的 Linux 开发：  
+热门扩展“[用于 Linux 开发的 Visual C++](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e)”现已纳入 Visual Studio。 此安装提供开发和调试运行在 Linux 环境中的 C++ 应用程序所需的一切信息。  
+
+### <a name="game-development-with-c"></a>使用 C++ 的游戏开发：  
+以 DirectX 或 Cocos2d 为后盾，利用 C++ 的强大功能构建专业游戏。  
+
+### <a name="mobile-development-with-c-android-and-ios"></a>使用 C++ 的移动开发（Android 和 iOS）：  
+现可利用 Visual Studio 创建和调试面向 Android 和 iOS 的移动应用。  
+
+### <a name="universal-windows-apps"></a>通用 Windows 应用：  
+C++ 是通用 Windows 应用工作负荷的可选组件。  
+
+## <a name="new-options-for-c-on-universal-windows-platform"></a>通用 Windows 平台上 C++ 的新选项
+现在，你拥有了为通用 Windows 平台和 Windows 应用商店编写和打包 C++ 应用程序的新选项：可使用 Desktop App Converter 打包现有的桌面应用程序，用于通过 Windows 应用商店部署。 有关详细信息，请参阅 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)（在 Centennial 项目中使用 Visual C++ 运行时）和 [Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)（使用桌面桥将桌面应用引入通用 Windows 平台 (UWP)）。
+
+在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它使你可以使用任何符合兼容的 C++ 编译器创作和使用 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [GitHub 上提供的 C++/WinR](https://moderncpp.com/)。
+
+
+## <a name="clangc2-platform-toolset"></a>Clang/C2 平台工具集
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 附带的 Clang/C2 工具集现在支持 /bigobj 开关，这对生成大项目来说至关重要。 它还在编译器的前端和后端进行了多项重要的 bug 修复。
+
+## <a name="c-code-analysis"></a>C++ 代码分析
+
+用于强制执行 [C++ 核心准则](https://github.com/isocpp/CppCoreGuidelines) 的 C++ 核心检查器现已通过 Visual Studio 分发。 只需在项目“属性”页的“代码分析扩展”对话框中启动检查器，即会在运行代码分析时包含扩展。 
+
+![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 属性页") 
+
+## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
+
+Visual Studio 图形诊断是一套工具，用于记录、分析 Direct3D 应用中的渲染和性能问题。 可对在 Windows 电脑上、在 Windows 设备模拟器中或在远程电脑或设备上本地运行的应用使用图形诊断功能。
+
+* **顶点和几何着色的输入和输出：**查看顶点着色和几何着色的输入和输出一直以来是最渴求的功能之一，工具中现已支持此功能。 只需在“管道阶段”视图中选择“VS”或“GS”阶段，即可在下面的表中开始检查其输入和输出。
+
+  ![着色器的输入/输出](media/io-shaders.png)
+
+* **在对象表中搜索和筛选：**提供一种快捷简单的方法来查找所需资源。
+
+  ![搜索](media/search.png)
+   
+* **资源历史记录：**这种新视图提供了一种简化的方式，以在渲染捕获的帧期间使用资源时查看该资源的整个修改历史记录。 若要调用任何资源的历史记录，只需单击任意资源超链接旁边的时钟图标。
+
+  ![资源历史记录](media/resource-history.png)
+
+  这将显示新的资源历史记录工具窗口，它由资源的更改历史记录所填充。
+
+  ![资源历史记录更改](media/resource-history-change.png)
+
+  请注意，如果在捕获帧时启用了完整调用堆栈捕获（“Visual Studio”>“工具”>“选项”>“图形诊断”），则可在你的 Visual Studio 项目中对每个更改事件的上下文进行快速推导和检查。  
+
+* **API 统计信息**：在帧中查看 API 使用情况的高级摘要。 这样可以轻松发现那些你未意识到正在调用的，或调用太多次的调用。 可在 Visual Studio 图形分析器中通过“视图”>“API 统计信息”使用此窗口。
+
+  ![API 统计信息](media/api-stats.png)
+
+* **内存统计信息：**查看驱动程序为你在帧中所创建的资源分配了多少内存。 可在 Visual Studio 图形分析器中通过“视图”>“内存统计信息”使用此窗口。 通过右键单击并选择“全部复制”，可将数据复制到 CSV 文件，以便在电子表格中查看。
+
+  ![内存统计信息](media/memory-stats.png)
+ 
+* **框架验证：**新的错误和警告列表提供了一种简单的方式，以导航到基于潜在问题（由 Direct3D 调试层检测）的事件列表。 在 Visual Studio 图形分析器中单击“视图”->“帧验证”，可打开该窗口。 然后单击“运行验证”，以开始分析。 这可能耗费数分钟时间，具体取决于帧的复杂性。
+
+  ![帧验证](media/frame-validation.png)
+ 
+* **对 D3D12 的帧分析：**使用帧分析来分析具有定向“假设”试验的绘图调用性能。 切换至“帧分析”选项卡，然后运行分析以查看报告。 有关详细信息，请观看 [GoingNative 25: Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)（GoingNative 25：Visual Studio 图形帧分析）视频。
+
+  ![帧分析](media/frame-analysis.png)
+
+* **GPU 使用情况改进：**使用 GPU 视图或 Windows Performance Analyzer (WPA) 工具，打开通过 Visual Studio GPU 使用情况探查器获取的跟踪，以便获取更详细的分析。 如果安装了 Windows Performance Toolkit，则在会话概述的右下方将有两个超链接，一个指向 WPA，另一个指向 GPU 视图。
+
+  ![GPU 使用情况](media/gpu-usage.png)
+ 
+  通过此链接在 GPU 视图中打开的跟踪支持在 VS 和 GPU 视图之间的时间线中进行同步缩放和平移。 VS 中的复选框用于控制是否启用同步。 
+
+  ![GPU 视图](media/gpu-view.png) 
+
+
+ 
+
+
+<!--HONumber=Feb17_HO4-->
+
+

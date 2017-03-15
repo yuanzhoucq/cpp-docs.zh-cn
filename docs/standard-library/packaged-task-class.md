@@ -1,0 +1,231 @@
+---
+title: "packaged_task 类 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- future/std::packaged_task
+dev_langs:
+- C++
+ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
+caps.latest.revision: 9
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
+ms.openlocfilehash: a54b1c9788ef60f63aafafc9125b09c449fde1b0
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="packagedtask-class"></a>packaged_task 类
+描述异步提供程序，它是调用签名为 `Ty(ArgTypes...)` 的调用包装器。 除可能的结果外，其关联异步状态还保留可调用对象的副本。  
+  
+## <a name="syntax"></a>语法  
+  
+```
+template <class>
+class packaged_task;
+```  
+  
+## <a name="members"></a>成员  
+  
+### <a name="public-constructors"></a>公共构造函数  
+  
+|名称|说明|  
+|----------|-----------------|  
+|[packaged_task::packaged_task 构造函数](#packaged_task__packaged_task_constructor)|构造 `packaged_task` 对象。|  
+|[packaged_task::~packaged_task 析构函数](#packaged_task___dtorpackaged_task_destructor)|销毁 `packaged_task` 对象。|  
+  
+### <a name="public-methods"></a>公共方法  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[packaged_task::get_future](#packaged_task__get_future_method)|返回具有相同关联异步状态的 [future](../standard-library/future-class.md) 对象。|  
+|[packaged_task::make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)|调用存储在关联异步状态中的可调用的对象，并以原子方式存储返回值。|  
+|[packaged_task::reset](#packaged_task__reset_method)|替换关联异步状态。|  
+|[packaged_task::swap](#packaged_task__swap_method)|将关联异步状态与指定对象的状态交换。|  
+|[packaged_task::valid](#packaged_task__valid_method)|指定对象是否具有关联异步状态。|  
+  
+### <a name="public-operators"></a>公共运算符  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[packaged_task::operator=](#packaged_task__operator_eq)|从指定对象传输关联异步状态。|  
+|[packaged_task::operator()](#packaged_task__operator__)|调用存储在关联异步状态中的可调用的对象，以原子方式存储返回值，并将其状态设置为就绪。|  
+|[packaged_task::operator bool](#packaged_task__operator_bool)|指定对象是否具有关联异步状态。|  
+  
+## <a name="requirements"></a>要求  
+ **标头：**future  
+  
+ **命名空间：** std  
+  
+##  <a name="a-namepackagedtaskgetfuturemethoda--packagedtaskgetfuture"></a><a name="packaged_task__get_future_method"></a>packaged_task::get_future  
+ 返回具有相同关联异步状态的 `future<Ty>` 类型的对象。  
+  
+```
+future<Ty> get_future();
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果 `packaged_task` 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
+  
+ 如果已为具有相同关联异步状态的 `packaged_task` 对象调用此方法，则此方法将引发具有错误代码 `future_already_retrieved` 的 `future_error`。  
+  
+##  <a name="a-namepackagedtaskmakereadyatthreadexitmethoda--packagedtaskmakereadyatthreadexit"></a><a name="packaged_task__make_ready_at_thread_exit_method"></a>packaged_task::make_ready_at_thread_exit  
+ 调用存储在关联异步状态中的可调用的对象，并以原子方式存储返回值。  
+  
+```
+void make_ready_at_thread_exit(ArgTypes... args);
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果 `packaged_task` 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
+  
+ 如果已为具有相同的关联异步状态的 `packaged_task` 对象调用此方法或 [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+  
+ 否则，此运算符会调用 `INVOKE(fn, args..., Ty)`，其中 *fn* 是存储在关联异步状态中的可调用的对象。 将任何返回值作为关联异步状态的返回结果以原子方式存储。  
+  
+ 与 [packaged_task::operator()](#packaged_task__operator__) 相反，在正在调用的线程中的所有线程本地对象被销毁前不会将关联的异步状态设置为 `ready`。 通常，在关联的异步状态上受阻的线程会受到阻止，直到正在调用的线程退出。  
+  
+##  <a name="a-namepackagedtaskoperatoreqa--packagedtaskoperator"></a><a name="packaged_task__operator_eq"></a>packaged_task::operator=  
+ 从指定的对象传输关联异步状态。  
+  
+```
+packaged_task& operator=(packaged_task&& Right);
+```  
+  
+### <a name="parameters"></a>参数  
+ `Right`  
+ 一个 `packaged_task` 对象。  
+  
+### <a name="return-value"></a>返回值  
+ `*this`  
+  
+### <a name="remarks"></a>备注  
+ 操作后，`Right` 不再具有关联异步状态。  
+  
+##  <a name="a-namepackagedtaskoperatora--packagedtaskoperator"></a><a name="packaged_task__operator__"></a>packaged_task::operator()  
+ 调用存储在关联异步状态中的可调用的对象，以原子方式存储返回值，并将其状态设置为就绪。  
+  
+```
+void operator()(ArgTypes... args);
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果 `packaged_task` 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
+  
+ 如果已为具有相同的关联异步状态的 `packaged_task` 对象调用此方法或 [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+  
+ 否则，此运算符会调用 `INVOKE(fn, args..., Ty)`，其中 *fn* 是存储在关联异步状态中的可调用的对象。 将任何返回值作为关联异步状态的返回结果以原子方式存储，且状态设置为就绪。 结果，不再阻止在关联的异步状态上受阻的任何线程。  
+  
+##  <a name="a-namepackagedtaskoperatorboola--packagedtaskoperator-bool"></a><a name="packaged_task__operator_bool"></a>packaged_task::operator bool  
+ 指定对象是否具有 `associated asynchronous state`。  
+  
+```
+operator bool() const noexcept;
+```  
+  
+### <a name="return-value"></a>返回值  
+ 如果对象有关联的异步状态，则为 `true`；否则为 `false`。  
+  
+##  <a name="a-namepackagedtaskpackagedtaskconstructora--packagedtaskpackagedtask-constructor"></a><a name="packaged_task__packaged_task_constructor"></a>  packaged_task::packaged_task 构造函数  
+ 构造 `packaged_task` 对象。  
+  
+```
+packaged_task() noexcept;
+packaged_task(packaged_task&& Right) noexcept;
+template <class Fn>
+   explicit packaged_task(Fn&& fn);
+
+template <class Fn, class Alloc>
+   explicit packaged_task(
+      allocator_arg_t, const Alloc& alloc, Fn&& fn);
+```  
+  
+### <a name="parameters"></a>参数  
+ `Right`  
+ 一个 `packaged_task` 对象。  
+  
+ `alloc`  
+ 内存分配器。 有关详细信息，请参阅 [\<allocators>](../standard-library/allocators-header.md)。  
+  
+ `fn`  
+ 一个函数对象。  
+  
+### <a name="remarks"></a>备注  
+ 第一个构造函数构造没有关联异步状态的 `packaged_task` 对象。  
+  
+ 第二个构造函数构造 `packaged_task` 对象并从 `Right` 传输关联异步状态。 操作后，`Right` 不再具有关联异步状态。  
+  
+ 第三个构造函数构造 `packaged_task` 对象，该对象具有存储在其关联异步状态中的 `fn` 的副本。  
+  
+ 第四个构造函数构造 `packaged_task` 对象（该对象具有存储在其关联异步状态中的 `fn` 的副本）并使用 `alloc` 分配内存。  
+  
+##  <a name="a-namepackagedtaskdtorpackagedtaskdestructora--packagedtaskpackagedtask-destructor"></a><a name="packaged_task___dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task 析构函数  
+ 销毁 `packaged_task` 对象。  
+  
+```
+~packaged_task();
+```  
+  
+### <a name="remarks"></a>备注  
+ 如果关联异步状态未就绪，则析构函数将存储具有错误代码 `broken_promise` 的 [future_error](../standard-library/future-error-class.md) 异常作为关联异步状态中的结果，并且不再阻止在关联异步状态上受阻的任何线程。  
+  
+##  <a name="a-namepackagedtaskresetmethoda--packagedtaskreset"></a><a name="packaged_task__reset_method"></a>packaged_task::reset  
+ 使用新的关联异步状态替换现有的关联异步状态。  
+  
+```
+void reset();
+```  
+  
+### <a name="remarks"></a>备注  
+ 实际上，此方法将执行 `*this = packaged_task(move(fn))`，其中 *fn* 是存储在此对象的关联异步状态中的函数对象。 因此，将清除该对象的状态，且可像在新构造的对象上一样调用 [get_future](#packaged_task__get_future_method)、[operator()](#packaged_task__operator__) 和 [make_ready_at_thread_exit](#packaged_task__make_ready_at_thread_exit_method)。  
+  
+##  <a name="a-namepackagedtaskswapmethoda--packagedtaskswap"></a><a name="packaged_task__swap_method"></a>  packaged_task::swap  
+ 将关联异步状态与指定对象的状态交换。  
+  
+```
+void swap(packaged_task& Right) noexcept;
+```  
+  
+### <a name="parameters"></a>参数  
+ `Right`  
+ 一个 `packaged_task` 对象。  
+  
+##  <a name="a-namepackagedtaskvalidmethoda--packagedtaskvalid"></a><a name="packaged_task__valid_method"></a>  packaged_task::valid  
+ 指定对象是否具有 `associated asynchronous state`。  
+  
+```
+bool valid() const;
+```  
+  
+### <a name="return-value"></a>返回值  
+ 如果对象有关联的异步状态，则为 `true`；否则为 `false`。  
+  
+## <a name="see-also"></a>另请参阅  
+ [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+ [\<future>](../standard-library/future.md)
+
+
+
+

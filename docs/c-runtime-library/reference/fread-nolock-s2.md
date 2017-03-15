@@ -1,0 +1,92 @@
+---
+title: "_fread_nolock_s2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "cpp"
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "_fread_nolock_s"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-stdio-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "_fread_nolock_s"
+  - "stdio/_fread_nolock_s"
+dev_langs: 
+  - "C++"
+ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
+caps.latest.revision: 3
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+caps.handback.revision: 3
+---
+# _fread_nolock_s
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+读取流中的数据，而不锁定其他线程。 此版本的 [fread\_nolock](../../c-runtime-library/reference/fread-nolock.md) 带有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md) 中所述。  
+  
+## 语法  
+  
+```  
+size_t _fread_nolock_s(   
+   void *buffer,  
+   size_t bufferSize,  
+   size_t elementSize,  
+   size_t elementCount,  
+   FILE *stream   
+);  
+```  
+  
+#### 参数  
+ `buffer`  
+ 数据的存储位置。  
+  
+ `bufferSize`  
+ 目标缓冲区的大小（以字节为单位）。  
+  
+ `elementSize`  
+ 要读取的项的大小（以字节为单位）。  
+  
+ `elementCount`  
+ 要读取的项的最大数量。  
+  
+ `stream`  
+ 指向 `FILE` 结构的指针。  
+  
+## 返回值  
+ 请参阅 [fread\_s](../../c-runtime-library/reference/fread-s.md)。  
+  
+## 备注  
+ 此函数为 `fread_s` 的非锁定版本。 它与 `fread_s` 相同，只不过它可能受到其他线程的影响。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。  
+  
+## 要求  
+  
+|函数|必需的标头|  
+|--------|-----------|  
+|`_fread_nolock_s`|C: \<stdio.h\>; C\+\+: \<cstdio\> 或 \<stdio.h\>|  
+  
+ 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+  
+## .NET Framework 等效项  
+ [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
+  
+## 请参阅  
+ [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+ [fwrite](../../c-runtime-library/reference/fwrite.md)   
+ [\_read](../../c-runtime-library/reference/read.md)
