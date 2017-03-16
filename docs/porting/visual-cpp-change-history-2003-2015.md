@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
@@ -58,9 +59,9 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 4.  [并发运行时重大更改](#BK_ConcRT)  
   
-## <a name="a-namevc2015a-visual-c-2015-conformance-changes"></a><a name="VC_2015"></a>Visual C++ 2015 符合性更改  
+## <a name="VC_2015"></a>Visual C++ 2015 符合性更改  
   
-###  <a name="a-namebkcrta-c-runtime-library-crt"></a><a name="BK_CRT"></a>C 运行时库 (CRT)  
+###  <a name="BK_CRT"></a>C 运行时库 (CRT)  
   
 #### <a name="general-changes"></a>常规更改  
   
@@ -180,7 +181,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **%A 和 %a 精度** 在早期版本的库中，%A 和 %a 格式说明符的默认精度是 6。 为了符合 C 标准，现在默认精度为 13。  
   
-     这是使用带 %A 或 %a 的格式字符串的任一函数输出中的运行时行为更改。 在旧版本行为中，使用 %A 说明符的输出可能是“1.1A2B3Cp+111”。 现在相同值的输出是“1.1A2B3C4D5E6F7p+111”。 若要获取旧版本行为，则可以指定精度（例如，%.6A）。 请参阅[精度规范](../c-runtime-library/precision-specification.md)。  
+     这是使用带 %A 或 %a 的格式字符串的任一函数输出中的运行时行为更改。 在旧版本行为中，使用 %A 说明符的输出可能是“1.1A2B3Cp+111”。 现在相同值的输出是“1.1A2B3C4D5E6F7p+111”。 若要获取旧版本行为，则可以指定精度（例如，%.6A）。 请参阅[精度规范](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)。  
   
 -   **%F 说明符** 现在支持 %F 格式/转换说明符。 它在功能上等效于 %f 格式说明符，但使用大写字母形式进行格式设置的无穷大和 Nan 除外。  
   
@@ -252,7 +253,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **CLOCKS_PER_SEC** 现在，CLOCKS_PER_SEC 宏根据 C 语言要求扩展为整数类型 clock_t。  
   
-####  <a name="a-namebkstla-c-standard-library"></a><a name="BK_STL"></a>C++ 标准库  
+####  <a name="BK_STL"></a>C++ 标准库  
  为了实现新的优化和调试检查，C++ 标准库的 Visual Studio 实现特意破坏了连续两个版本之间的二进制兼容性。 因此，在使用 C++ 标准库时，使用不同版本编译的对象文件和静态库不能混合在同一二进制文件（EXE 或 DLL）中，并且不能在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 这样混合会发出关于 _MSC_VER 不匹配的链接器错误。 （_MSC_VER 是包含编译器主版本的宏，例如，Visual Studio 2013 的 1800。）此检查无法检测 DLL 混合，也无法检测涉及 Visual C++ 2008 或早期版本的混合。  
   
 -   **C++ 标准库包含文件** 对 C++ 标准库标头中的包含结构进行了一些更改。 允许 C++ 标准库标头以未指定的方式相互包含。 一般情况下，编写代码应根据 C++ 标准，谨慎包括需要的所有标头，而不是依赖于哪些 C++ 标准库标头包含哪些其他 C++ 标准库标头。 这使得代码可跨版本和平台进行移植。 至少更改 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 的两个标头才会影响用户代码。 首先，\<string> 不再包括 \<iterator>。 第二，\<tuple> 现在用于声明 std::array 但不包括所有 \<array>，这可能中断代码通过以下代码构造的组合：代码具有名为“array”的变量、你具有 using 指令“using namespace std;”，和你包括了含有 \<tuple> 的 C++ 标准库标头（如 \<functional>），其现在用于声明 std::array。  
@@ -315,13 +316,13 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **launch::any 和 launch::sync 策略** The nonstandard launch::any 和 launch::sync 策略 were removed. 对于 launch::any，请使用 launch:async | launch:deferred。 对于 launch::sync，请使用 launch::deferred。 请参阅 [launch 枚举](../standard-library/future-enums.md#launch_enumeration)。  
   
-####  <a name="a-namebkmfca-mfc-and-atl"></a><a name="BK_MFC"></a>MFC 和 ATL  
+####  <a name="BK_MFC"></a>MFC 和 ATL  
   
 -   **Microsoft 基础类 (MFC)** 由于其尺寸大不再包含在 Visual Studio 的“典型”安装中。 若要安装 MFC，请在 Visual Studio 2015 安装程序中选择自定义安装选项。 如果你已安装 Visual Studio 2015，可以通过重新运行 Visual Studio 安装程序，选择自定义安装选项，并选择 Microsoft 基础类来安装 MFC。 可从控制面板、程序和功能，或从安装媒体重新运行 Visual Studio 安装程序。  
   
      Visual C++ 可再发行组件包仍包含此库。  
   
-####  <a name="a-namebkconcrta-concurrency-runtime"></a><a name="BK_ConcRT"></a>并发运行时  
+####  <a name="BK_ConcRT"></a>并发运行时  
   
 -   **与 concurrency::Context::Yield 冲突的 Windows.h 中的 Yield 宏** 并发运行时之前使用 #undef 来取消定义 Yield 宏，以避免 Windows.h h 中定义的 Yield 宏和 concurrency::Context::Yield 函数之间的冲突。 已删除此 #undef，并添加了新的非冲突等效 API 调用 [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution)。 若要解决与 Yield 的冲突，可以改为更新代码以调用 YieldExecution 函数，或在调用站点用括号将 Yield 函数名括起来，如下例所示：  
   
@@ -346,7 +347,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   [更新 3 中的符合性改进](#VS_Update3)  
   
-###  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a>Visual C++ 2015 中的符合性改进  
+###  <a name="VS_RTM"></a>Visual C++ 2015 中的符合性改进  
   
 -   /Zc:forScope- 选项  
   
@@ -861,7 +862,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 和 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]中，如果该类具有用户定义的移动构造函数，但没有用户定义的复制构造函数，则编译器生成类的复制构造函数。 在 Dev14 中，此隐式生成的复制构造函数也标记为“= delete”。  
   
-###  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>更新 1 中的符合性改进  
+###  <a name="VS_Update1"></a>更新 1 中的符合性改进  
   
 -   **私有虚拟基类和间接继承**  
   
@@ -1408,7 +1409,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
     ```  
   
-###  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a>更新 2 中的符合性改进  
+###  <a name="VS_Update2"></a>更新 2 中的符合性改进  
   
 -   **可能会因对表达式 SFINAE 的部分支持而发出其他警告和错误**  
   
@@ -1693,7 +1694,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      修复以这种方式编写的代码可能需要将运算符定义从头文件移动到相应的源文件中。  
   
-###  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>更新 3 中的符合性改进  
+###  <a name="VS_Update3"></a>更新 3 中的符合性改进  
   
 -   **现在，std::is_convertable 可以检测自我赋值**（标准库）  
   
@@ -2793,8 +2794,3 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 ## <a name="see-also"></a>另请参阅  
 [Visual Studio 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
