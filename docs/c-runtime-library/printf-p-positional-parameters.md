@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 75b4ad98b67e0e1d5063711c7a40d68fda581d50
-ms.openlocfilehash: 26784cb38c68df644b64f591313bda2e57edc239
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: daa9739dd5feb47a3c2f5396fdbc2e63c77896db
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="printfp-positional-parameters"></a>printf_p 位置参数
@@ -169,6 +169,4 @@ ghi abc def
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [printf 类型字段字符](../c-runtime-library/printf-type-field-characters.md)   
- [printf 宽度规范](../c-runtime-library/printf-width-specification.md)   
- [精度规范](../c-runtime-library/precision-specification.md)
+ [格式规范语法：printf 和 wprintf 函数](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)
