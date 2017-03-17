@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServer
+- AFXDOCOB/CDocObjectServer
+- AFXDOCOB/CDocObjectServer::CDocObjectServer
+- AFXDOCOB/CDocObjectServer::ActivateDocObject
+- AFXDOCOB/CDocObjectServer::OnActivateView
+- AFXDOCOB/CDocObjectServer::OnApplyViewState
+- AFXDOCOB/CDocObjectServer::OnSaveViewState
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +104,7 @@ class CDocObjectServer : public CCmdTarget
 ## <a name="requirements"></a>要求  
  **标头︰** afxdocob.h  
   
-##  <a name="a-nameactivatedocobjecta--cdocobjectserveractivatedocobject"></a><a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
+##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
  调用此函数可将文档对象服务器激活 （但不是显示）。  
   
 ```  
@@ -110,7 +116,7 @@ void ActivateDocObject();
   
  在一起，`ActivateDocObject`和`OnActivateView`激活并显示 DocObject 视图。 DocObject 激活不同于其他类型的 OLE 就地激活。 DocObject 激活将绕过显示就地阴影边框和对象 （如大小调整控点） 的修饰，将忽略对象扩展盘区功能，并绘制而不是在该矩形 （如在正常的就地激活） 的外部绘制它们的视图矩形中的滚动条。  
   
-##  <a name="a-namecdocobjectservera--cdocobjectservercdocobjectserver"></a><a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
+##  <a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
  构造并初始化一个 `CDocObjectServer` 对象。  
   
 ```  
@@ -129,7 +135,7 @@ explicit CDocObjectServer(
 ### <a name="remarks"></a>备注  
  当 DocObject 处于活动状态时，客户端站点 OLE 接口 ( `IOleDocumentSite`) 是什么使 DocObject 服务器与它的客户端 （容器） 进行通信。 当激活 DocObject 服务器时，它首先检查该容器实现`IOleDocumentSite`接口。 如果是这样， [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver)调用以查看该容器是否支持 DocObjects。 默认情况下，`GetDocObjectServer`返回**NULL**。 必须重写`COleServerDoc::GetDocObjectServer`用于构造新`CDocObjectServer`对象或派生您自己的情况下，使用指向指针的对象`COleServerDoc`容器并将其`IOleDocumentSite`接口作为构造函数的参数。  
   
-##  <a name="a-nameonactivateviewa--cdocobjectserveronactivateview"></a><a name="onactivateview"></a>CDocObjectServer::OnActivateView  
+##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
  调用此函数可显示 DocObject 视图。  
   
 ```  
@@ -142,7 +148,7 @@ virtual HRESULT OnActivateView();
 ### <a name="remarks"></a>备注  
  此函数创建的就地框架窗口、 绘制在视图中的滚动条、 设置服务器与其容器与共享、 添加框架控件、 设置活动的对象，则最后显示的就地框架窗口和将焦点设置的菜单。  
   
-##  <a name="a-nameonapplyviewstatea--cdocobjectserveronapplyviewstate"></a><a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
+##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
  重写此函数以还原 DocObject 视图的状态。  
   
 ```  
@@ -158,7 +164,7 @@ virtual void OnApplyViewState(CArchive& ar);
   
  您可以使用`OnSaveViewState`来存储持久性信息特定于您的视图状态。 如果重写`OnSaveViewState`来存储信息，您需要重写`OnApplyViewState`读取该信息并将其应用于您的视图中，新激活时。  
   
-##  <a name="a-nameonsaveviewstatea--cdocobjectserveronsaveviewstate"></a><a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
+##  <a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
  重写此函数可保存 DocObject 视图有关的额外状态信息。  
   
 ```  

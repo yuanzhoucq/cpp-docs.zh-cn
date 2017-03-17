@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRectTracker
+- AFXEXT/CRectTracker
+- AFXEXT/CRectTracker::CRectTracker
+- AFXEXT/CRectTracker::AdjustRect
+- AFXEXT/CRectTracker::Draw
+- AFXEXT/CRectTracker::DrawTrackerRect
+- AFXEXT/CRectTracker::GetHandleMask
+- AFXEXT/CRectTracker::GetTrueRect
+- AFXEXT/CRectTracker::HitTest
+- AFXEXT/CRectTracker::NormalizeHit
+- AFXEXT/CRectTracker::OnChangedRect
+- AFXEXT/CRectTracker::SetCursor
+- AFXEXT/CRectTracker::Track
+- AFXEXT/CRectTracker::TrackRubberBand
+- AFXEXT/CRectTracker::m_nHandleSize
+- AFXEXT/CRectTracker::m_nStyle
+- AFXEXT/CRectTracker::m_rect
+- AFXEXT/CRectTracker::m_sizeMin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +117,7 @@ class CRectTracker
 ## <a name="requirements"></a>要求  
  **标头︰** afxext.h  
   
-##  <a name="a-nameadjustrecta--crecttrackeradjustrect"></a><a name="adjustrect"></a>CRectTracker::AdjustRect  
+##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
  通过使用重设大小句柄调整跟踪矩形的大小时，由框架调用。  
   
 ```  
@@ -123,7 +140,7 @@ virtual void AdjustRect(
   
  不直接支持的特殊功能`CRectTracker`，如对齐网格或保持纵横比，可以实现通过重写此函数。  
   
-##  <a name="a-namecrecttrackera--crecttrackercrecttracker"></a><a name="crecttracker"></a>CRectTracker::CRectTracker  
+##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
  创建并初始化`CRectTracker`对象。  
   
 ```  
@@ -157,7 +174,7 @@ CRectTracker(
 ### <a name="remarks"></a>备注  
  默认构造函数初始化`CRectTracker`对象的值从`lpSrcRect`并初始化其他大小为系统默认值。 如果不带任何参数，创建该对象`m_rect`和`m_nStyle`数据成员是未初始化。  
   
-##  <a name="a-namedrawa--crecttrackerdraw"></a><a name="draw"></a>CRectTracker::Draw  
+##  <a name="draw"></a>CRectTracker::Draw  
  调用此函数可绘制矩形的外部直线和内部区域。  
   
 ```  
@@ -171,7 +188,7 @@ void Draw(CDC* pDC) const;
 ### <a name="remarks"></a>备注  
  跟踪器样式确定如何完成绘图。 请参阅的构造函数`CRectTracker`有关详细信息的可用样式。  
   
-##  <a name="a-namedrawtrackerrecta--crecttrackerdrawtrackerrect"></a><a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
+##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
  每当已更改跟踪器的位置由框架调用内而`Track`或`TrackRubberBand`成员函数。  
   
 ```  
@@ -200,7 +217,7 @@ virtual void DrawTrackerRect(
   
  重写此函数可在跟踪操作过程中提供不同的反馈。  
   
-##  <a name="a-namegethandlemaska--crecttrackergethandlemask"></a><a name="gethandlemask"></a>CRectTracker::GetHandleMask  
+##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
  框架调用此成员函数以检索掩码矩形的大小调整图柄。  
   
 ```  
@@ -221,7 +238,7 @@ virtual UINT GetHandleMask() const;
   
  重写该成员函数以隐藏或显示所指示的大小调整图柄。  
   
-##  <a name="a-namegettruerecta--crecttrackergettruerect"></a><a name="gettruerect"></a>CRectTracker::GetTrueRect  
+##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
  调用此函数可检索该矩形的坐标。  
   
 ```  
@@ -235,7 +252,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="remarks"></a>备注  
  矩形的尺寸包括的高度和宽度的外边框上任何调整大小图柄。 在返回时，`lpTrueRect`始终是在设备坐标的规范化的矩形。  
   
-##  <a name="a-namehittesta--crecttrackerhittest"></a><a name="hittest"></a>CRectTracker::HitTest  
+##  <a name="hittest"></a>CRectTracker::HitTest  
  调用此函数可了解用户是否具有抓取重设大小句柄。  
   
 ```  
@@ -269,7 +286,7 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="a-namemnhandlesizea--crecttrackermnhandlesize"></a><a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
+##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
  大小，以像素为单位的`CRectTracker`调整大小图柄。  
   
 ```  
@@ -279,14 +296,14 @@ int m_nHandleSize;
 ### <a name="remarks"></a>备注  
  初始化使用默认系统值。  
   
-##  <a name="a-namemrecta--crecttrackermrect"></a><a name="m_rect"></a>Crecttracker:: M_rect  
+##  <a name="m_rect"></a>Crecttracker:: M_rect  
  在工作区坐标 （像素） 的矩形的当前位置。  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="a-namemsizemina--crecttrackermsizemin"></a><a name="m_sizemin"></a>CRectTracker::m_sizeMin  
+##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
  矩形的最小大小。  
   
 ```  
@@ -296,7 +313,7 @@ CSize m_sizeMin;
 ### <a name="remarks"></a>备注  
  这两个默认值， **cx**和**cy**，计算出的边框宽度的默认系统值。 此数据成员仅供`AdjustRect`成员函数。  
   
-##  <a name="a-namemnstylea--crecttrackermnstyle"></a><a name="m_nstyle"></a>CRectTracker::m_nStyle  
+##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
  当前样式的矩形。  
   
 ```  
@@ -306,7 +323,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>备注  
  请参阅[CRectTracker::CRectTracker](#crecttracker)有关可能的样式的列表。  
   
-##  <a name="a-namenormalizehita--crecttrackernormalizehit"></a><a name="normalizehit"></a>CRectTracker::NormalizeHit  
+##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
  调用此函数将转换可能倒排的句柄。  
   
 ```  
@@ -323,7 +340,7 @@ int NormalizeHit(int nHandle) const;
 ### <a name="remarks"></a>备注  
  当`CRectTracker::Track`或`CRectTracker::TrackRubberBand`调用与反转允许，则可能要在 x 轴和 / 或 y 轴，反转的矩形。 在此情况下，`HitTest`将返回还反转矩形方面的句柄。 这是不适合于绘制光标反馈，因为反馈取决于矩形，不会被修改的矩形数据结构的部分的屏幕位置。  
   
-##  <a name="a-nameonchangedrecta--crecttrackeronchangedrect"></a><a name="onchangedrect"></a>CRectTracker::OnChangedRect  
+##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
  跟踪器矩形已更改的调用过程时由框架调用`Track`。  
   
 ```  
@@ -339,7 +356,7 @@ virtual void OnChangedRect(const CRect& rectOld);
   
  当您想要调整大小矩形后执行任何操作时，重写此函数。  
   
-##  <a name="a-namesetcursora--crecttrackersetcursor"></a><a name="setcursor"></a>CRectTracker::SetCursor  
+##  <a name="setcursor"></a>CRectTracker::SetCursor  
  调用此函数时它正在通过更改光标形状`CRectTracker`对象的区域。  
   
 ```  
@@ -361,7 +378,7 @@ BOOL SetCursor(
 ### <a name="remarks"></a>备注  
  调用该函数从在您处理的窗口函数内部`WM_SETCURSOR`消息 (通常`OnSetCursor`)。  
   
-##  <a name="a-nametracka--crecttrackertrack"></a><a name="track"></a>CRectTracker::Track  
+##  <a name="track"></a>CRectTracker::Track  
  调用此函数可显示用户界面，用于调整大小矩形。  
   
 ```  
@@ -395,7 +412,7 @@ BOOL Track(
   
  如果`bAllowInvert`是**TRUE**，跟踪矩形可以反转 x 轴或 y 轴上。  
   
-##  <a name="a-nametrackrubberbanda--crecttrackertrackrubberband"></a><a name="trackrubberband"></a>Crecttracker:: Trackrubberband  
+##  <a name="trackrubberband"></a>Crecttracker:: Trackrubberband  
  调用此函数可执行橡皮筋选择。  
   
 ```  

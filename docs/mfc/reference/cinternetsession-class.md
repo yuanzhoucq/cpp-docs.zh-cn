@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetSession
+- AFXINET/CInternetSession
+- AFXINET/CInternetSession::CInternetSession
+- AFXINET/CInternetSession::Close
+- AFXINET/CInternetSession::EnableStatusCallback
+- AFXINET/CInternetSession::GetContext
+- AFXINET/CInternetSession::GetCookie
+- AFXINET/CInternetSession::GetCookieLength
+- AFXINET/CInternetSession::GetFtpConnection
+- AFXINET/CInternetSession::GetGopherConnection
+- AFXINET/CInternetSession::GetHttpConnection
+- AFXINET/CInternetSession::OnStatusCallback
+- AFXINET/CInternetSession::OpenURL
+- AFXINET/CInternetSession::SetCookie
+- AFXINET/CInternetSession::SetOption
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +124,7 @@ class CInternetSession : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxinet.h  
   
-##  <a name="a-namecinternetsessiona--cinternetsessioncinternetsession"></a><a name="cinternetsession"></a>CInternetSession::CInternetSession  
+##  <a name="cinternetsession"></a>CInternetSession::CInternetSession  
  当调用此成员函数`CInternetSession`创建对象。  
   
 ```  
@@ -162,7 +176,7 @@ CInternetSession(
 ### <a name="example"></a>示例  
   请参阅示例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="a-nameclosea--cinternetsessionclose"></a><a name="close"></a>CInternetSession::Close  
+##  <a name="close"></a>CInternetSession::Close  
  调用此成员函数，您的应用程序使用完`CInternetSession`对象。  
   
 ```  
@@ -172,7 +186,7 @@ virtual void Close();
 ### <a name="example"></a>示例  
   请参阅示例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="a-nameenablestatuscallbacka--cinternetsessionenablestatuscallback"></a><a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
+##  <a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
  调用该成员函数以启用状态回调。  
   
 ```  
@@ -195,7 +209,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
   
  若要以异步方式处理的任何操作，必须创建你自己的线程，或使用无需 MFC WinInet 函数中。  
   
-##  <a name="a-namegetcontexta--cinternetsessiongetcontext"></a><a name="getcontext"></a>CInternetSession::GetContext  
+##  <a name="getcontext"></a>CInternetSession::GetContext  
  调用该成员函数以获取特定的应用程序会话上下文值。  
   
 ```  
@@ -210,7 +224,7 @@ DWORD_PTR GetContext() const;
   
  有关异步操作的详细信息，请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)。  
   
-##  <a name="a-namegetcookiea--cinternetsessiongetcookie"></a><a name="getcookie"></a>CInternetSession::GetCookie  
+##  <a name="getcookie"></a>CInternetSession::GetCookie  
  此成员函数实现的 Win32 函数的行为[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -250,7 +264,7 @@ static BOOL GetCookie(
 ### <a name="remarks"></a>备注  
  在第二个重载中，MFC 将 cookie 数据检索到所提供`CString`对象。  
   
-##  <a name="a-namegetcookielengtha--cinternetsessiongetcookielength"></a><a name="getcookielength"></a>CInternetSession::GetCookieLength  
+##  <a name="getcookielength"></a>CInternetSession::GetCookieLength  
  调用该成员函数以获取存储在缓冲区中的 cookie 的长度。  
   
 ```  
@@ -272,7 +286,7 @@ static DWORD GetCookieLength(
 ### <a name="remarks"></a>备注  
  使用此值[GetCookie](#getcookie)。  
   
-##  <a name="a-namegetftpconnectiona--cinternetsessiongetftpconnection"></a><a name="getftpconnection"></a>Cinternetsession:: Getftpconnection  
+##  <a name="getftpconnection"></a>Cinternetsession:: Getftpconnection  
  调用此成员函数以建立 FTP 连接并获得一个指向`CFtpConnection`对象。  
   
 ```  
@@ -316,7 +330,7 @@ CFtpConnection* GetFtpConnection(
 ### <a name="example"></a>示例  
   请参阅示例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="a-namegetgopherconnectiona--cinternetsessiongetgopherconnection"></a><a name="getgopherconnection"></a>Cinternetsession:: Getgopherconnection  
+##  <a name="getgopherconnection"></a>Cinternetsession:: Getgopherconnection  
  调用此成员函数建立新的 gopher 连接，获取一个指向`CGopherConnection`对象。  
   
 ```  
@@ -346,7 +360,7 @@ CGopherConnection* GetGopherConnection(
 ### <a name="remarks"></a>备注  
  `GetGopherConnection`连接到 gopher 服务器，并创建并返回一个指向`CGopherConnection`对象。 它不执行任何服务器上的特定操作。 如果您想要读取或写入数据，例如，必须执行这些操作作为独立的步骤。 请参见类[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)， [CGopherFile](../../mfc/reference/cgopherfile-class.md)，和[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)有关搜索文件，打开文件、 和读取或写入文件。 有关浏览 FTP 站点的信息，请参阅成员函数[OpenURL](#openurl)。 请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)中执行常见 gopher 连接任务步骤。  
   
-##  <a name="a-namegethttpconnectiona--cinternetsessiongethttpconnection"></a><a name="gethttpconnection"></a>Cinternetsession:: Gethttpconnection  
+##  <a name="gethttpconnection"></a>Cinternetsession:: Gethttpconnection  
  调用此成员函数以建立 HTTP 连接并获得一个指向`CHttpConnection`对象。  
   
 ```  
@@ -387,7 +401,7 @@ CHttpConnection* GetHttpConnection(
 ### <a name="remarks"></a>备注  
  `GetHttpConnection`连接到 HTTP 服务器，并创建并返回一个指向`CHttpConnection`对象。 它不执行任何服务器上的特定操作。 如果您想要查询 HTTP 标头，例如，必须执行此操作作为一个单独的步骤。 请参见类[CHttpConnection](../../mfc/reference/chttpconnection-class.md)和[CHttpFile](../../mfc/reference/chttpfile-class.md)有关操作的信息可以通过使用 HTTP 服务器的连接执行。 有关浏览 HTTP 站点的信息，请参阅成员函数[OpenURL](#openurl)。 请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)中执行常见的 HTTP 连接任务步骤。  
   
-##  <a name="a-nameonstatuscallbacka--cinternetsessiononstatuscallback"></a><a name="onstatuscallback"></a>CInternetSession::OnStatusCallback  
+##  <a name="onstatuscallback"></a>CInternetSession::OnStatusCallback  
  此成员函数是由框架调用以启用状态回调，并且操作处于挂起状态更新的状态。  
   
 ```  
@@ -440,7 +454,7 @@ virtual void OnStatusCallback(
   
  有关异步操作的详细信息，请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)。  
   
-##  <a name="a-nameopenurla--cinternetsessionopenurl"></a><a name="openurl"></a>Cinternetsession:: Openurl  
+##  <a name="openurl"></a>Cinternetsession:: Openurl  
  调用此成员函数将指定的请求发送到 HTTP 服务器，并允许客户端可以指定其他 RFC822 MIME 或随请求一起发送的 HTTP 标头。  
   
 ```  
@@ -501,14 +515,14 @@ CStdioFile* OpenURL(
   
  若要使用特定于连接的 (即，特定于协议的) 函数，如对文件进行写入，您必须打开的会话，然后打开特定类型的连接，然后使用该连接在所需的模式中打开一个文件。 请参阅`CInternetConnection`有关特定于连接的函数的详细信息。  
   
-##  <a name="a-nameoperatorhinterneta--cinternetsessionoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
+##  <a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
  使用此运算符将获取当前的 Internet 会话的 Windows 句柄。  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="a-namesetcookiea--cinternetsessionsetcookie"></a><a name="setcookie"></a>CInternetSession::SetCookie  
+##  <a name="setcookie"></a>CInternetSession::SetCookie  
  为指定的 URL 将设置一个 cookie。  
   
 ```  
@@ -534,7 +548,7 @@ static BOOL SetCookie(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetoptiona--cinternetsessionsetoption"></a><a name="setoption"></a>CInternetSession::SetOption  
+##  <a name="setoption"></a>CInternetSession::SetOption  
  调用该成员函数以设置 Internet 会话选项。  
   
 ```  

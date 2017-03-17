@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>operator==   
+##  <a name="operator_eq_eq"></a>operator==   
  确定指定的参数是否相等。  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>返回值  
  `true`如果元组相等，则否则为`false`。  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>operator!=   
+##  <a name="operator_neq"></a>operator!=   
  确定指定的参数是否不相等。  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>返回值  
  `true`如果元组是否不相等;否则为`false`。  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+   
+##  <a name="operator_add"></a>  operator+   
 
  计算指定的参数的 component-wise 和。  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>返回值  
  在指定的参数 component-wise 之和。  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>operator-   
+##  <a name="operator-"></a>operator-   
 
  计算指定的参数之间的 component-wise 差异。  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>返回值  
  在指定的参数之间的 component-wise 差异。  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*   
+##  <a name="operator_star"></a>  operator*   
 
  计算指定的参数的 component-wise 积。  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  在指定的参数 component-wise 产品。  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a>  operator/   
+##  <a name="operator_div"></a>  operator/   
  计算指定的参数的 component-wise 商。  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>返回值  
  在指定的参数 component-wise 商。  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a>operator%   
+##  <a name="operator_mod"></a>operator%   
 
  计算的第二个指定的参数的第一个指定参数的模数。  
   

@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandUI
+- AFXWINFORMS/ICommandUI
+- AFXWINFORMS/icommandui__Check
+- AFXWINFORMS/ICommandUI::ContinueRouting
+- AFXWINFORMS/ICommandUI::Enabled
+- AFXWINFORMS/ICommandUI::ID
+- AFXWINFORMS/ICommandUI::Index
+- AFXWINFORMS/ICommandUI::Radio
+- AFXWINFORMS/ICommandUI::Text
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +81,7 @@ interface class ICommandUI
   
  在 MFC 中如何管理用户界面命令的详细信息，请参阅[CCmdUI 类](../../mfc/reference/ccmdui-class.md)。  
   
-## <a name="a-namechecka-icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+## <a name="check"></a>ICommandUI::Check  
 将此命令的用户界面项设置为相应的复选状态。
 ```
 property UICheckState Check;
@@ -84,7 +92,7 @@ property UICheckState Check;
 - 1 检查  
 - 不确定设置&2;  
 
-## <a name="a-namecontinueroutinga-icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting   
+## <a name="continuerouting"></a>ICommandUI::ContinueRouting   
 告知命令路由机制，继续传送当前消息的处理程序链的下方。
 ```
 void ContinueRouting();
@@ -92,7 +100,7 @@ void ContinueRouting();
 ## <a name="remarks"></a>备注
 这是一个高级的成员函数，应使用结合的 ON_COMMAND_EX 处理程序，则返回 FALSE。 有关详细信息，请参阅技术注意 TN006︰ 消息映射。
 
-## <a name="a-nameenableda-icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled 
+## <a name="enabled"></a>ICommandUI::Enabled 
 启用或禁用此命令的用户界面项。
 ```
 property bool Enabled;
@@ -100,7 +108,7 @@ property bool Enabled;
 ## <a name="remarks"></a>备注
 此属性启用或禁用此命令的用户界面项。 将已启用对设置为 true 以启用该项目，为 false，则将其禁用。
 
-## <a name="a-nameida-icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+## <a name="id"></a>ICommandUI::ID  
 获取此 ICommandUI 对象所表示的用户界面对象的 ID。
 ```
 property unsigned int ID;
@@ -108,7 +116,7 @@ property unsigned int ID;
 ## <a name="remarks"></a>备注
 此属性获取菜单项、 工具栏按钮或由 ICommandUI 对象代表其他用户界面对象的 ID （句柄）。
 
-## <a name="a-nameindexa-icommanduiindex"></a><a name="index"></a>ICommandUI::Index   
+## <a name="index"></a>ICommandUI::Index   
 获取此 ICommandUI 对象所表示的用户界面对象的索引。
 ```
 property unsigned int Index;
@@ -116,7 +124,7 @@ property unsigned int Index;
 ## <a name="remarks"></a>备注
 此属性获取菜单项、 工具栏按钮或由 ICommandUI 对象代表其他用户界面对象的索引 （句柄）。
 
-## <a name="a-nameradioa-icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio 
+## <a name="radio"></a>ICommandUI::Radio 
 将此命令的用户界面项设置为相应的复选状态。
 ```
 property bool Radio;
@@ -124,7 +132,7 @@ property bool Radio;
 ## <a name="remarks"></a>备注
 此属性将此命令的用户界面项设置为相应的复选状态。 将广播到设置为 true 以启用项;否则为 FALSE。
 
-## <a name="a-nametexta-icommanduitext"></a><a name="text"></a>ICommandUI::Text 
+## <a name="text"></a>ICommandUI::Text 
 设置此命令的用户界面项的文本。
 ```
 property String^ Text;

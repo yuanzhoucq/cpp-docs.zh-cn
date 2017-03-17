@@ -10,6 +10,31 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRect
+- ATLTYPES/ATL::CRect
+- ATLTYPES/ATL::CRect::CRect
+- ATLTYPES/ATL::CRect::BottomRight
+- ATLTYPES/ATL::CRect::CenterPoint
+- ATLTYPES/ATL::CRect::CopyRect
+- ATLTYPES/ATL::CRect::DeflateRect
+- ATLTYPES/ATL::CRect::EqualRect
+- ATLTYPES/ATL::CRect::Height
+- ATLTYPES/ATL::CRect::InflateRect
+- ATLTYPES/ATL::CRect::IntersectRect
+- ATLTYPES/ATL::CRect::IsRectEmpty
+- ATLTYPES/ATL::CRect::IsRectNull
+- ATLTYPES/ATL::CRect::MoveToX
+- ATLTYPES/ATL::CRect::MoveToXY
+- ATLTYPES/ATL::CRect::MoveToY
+- ATLTYPES/ATL::CRect::NormalizeRect
+- ATLTYPES/ATL::CRect::OffsetRect
+- ATLTYPES/ATL::CRect::PtInRect
+- ATLTYPES/ATL::CRect::SetRect
+- ATLTYPES/ATL::CRect::SetRectEmpty
+- ATLTYPES/ATL::CRect::Size
+- ATLTYPES/ATL::CRect::SubtractRect
+- ATLTYPES/ATL::CRect::TopLeft
+- ATLTYPES/ATL::CRect::UnionRect
+- ATLTYPES/ATL::CRect::Width
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -129,7 +154,7 @@ class CRect : public tagRECT
 ## <a name="requirements"></a>要求  
  **标头︰** atltypes.h  
   
-##  <a name="a-namebottomrighta--crectbottomright"></a><a name="bottomright"></a>CRect::BottomRight  
+##  <a name="bottomright"></a>CRect::BottomRight  
  作为引用返回坐标[CPoint](cpoint-class.md)中包含的对象`CRect`。  
   
 ```  
@@ -168,7 +193,7 @@ rect2.BottomRight() = ptLow;
    ASSERT(rect2 == CRect(10, 10, 180, 180));   
 ```
   
-##  <a name="a-namecenterpointa--crectcenterpoint"></a><a name="centerpoint"></a>CRect::CenterPoint 
+##  <a name="centerpoint"></a>CRect::CenterPoint 
  计算的中心点`CRect`通过加上向左和右值并除以两个，并添加顶部和底部值除以两个。  
   
 ```  
@@ -229,7 +254,7 @@ void CMyDlg::OnPaint()
 }
 ```
   
-##  <a name="a-namecopyrecta--crectcopyrect"></a><a name="copyrect"></a>CRect::CopyRect  
+##  <a name="copyrect"></a>CRect::CopyRect  
  副本`lpSrcRect`到矩形`CRect`。  
   
 ```  
@@ -262,7 +287,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
   
-##  <a name="a-namecrecta--crectcrect"></a><a name="crect"></a>CRect::CRect  
+##  <a name="crect"></a>CRect::CRect  
  构造 `CRect` 对象。  
   
 ```  
@@ -348,7 +373,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  ASSERT(rect5 == rect4);  
 ```
   
-##  <a name="a-namedeflaterecta--crectdeflaterect"></a><a name="deflaterect"></a>CRect::DeflateRect  
+##  <a name="deflaterect"></a>CRect::DeflateRect  
  `DeflateRect`压缩`CRect`通过向其中心移动侧面。  
   
 ```  
@@ -402,7 +427,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
    ASSERT(rect2.top == 12 && rect2.bottom == 46);   
 ```
   
-##  <a name="a-nameequalrecta--crectequalrect"></a><a name="equalrect"></a>CRect::EqualRect  
+##  <a name="equalrect"></a>CRect::EqualRect  
  确定是否`CRect`是否等同于给定的矩形。  
   
 ```  
@@ -437,7 +462,7 @@ ASSERT(rect1.EqualRect(rect2));
  ASSERT(rect1.EqualRect(&test));  
 ```
 
-##  <a name="a-nameheighta--crectheight"></a><a name="height"></a>CRect::Height  
+##  <a name="height"></a>CRect::Height  
  计算的高度`CRect`通过减去从最低值位于顶部的值。  
   
 ```  
@@ -467,7 +492,7 @@ int nHt = rect.Height();
 ```
 
   
-##  <a name="a-nameinflaterecta--crectinflaterect"></a><a name="inflaterect"></a>CRect::InflateRect  
+##  <a name="inflaterect"></a>CRect::InflateRect  
  `InflateRect`放大`CRect`通过侧面抛弃其中心。  
   
 ```  
@@ -516,7 +541,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  ASSERT(rect == CRect(-50, -200, 350, 500));  
 ```
   
-##  <a name="a-nameintersectrecta--crectintersectrect"></a><a name="intersectrect"></a>CRect::IntersectRect  
+##  <a name="intersectrect"></a>CRect::IntersectRect  
  使`CRect`等于两个现有矩形的交集。  
   
 ```  
@@ -559,7 +584,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
  ASSERT(rectInter2 == CRect(125, 75, 150, 95));  
 ```
   
-##  <a name="a-nameisrectemptya--crectisrectempty"></a><a name="isrectempty"></a>CRect::IsRectEmpty  
+##  <a name="isrectempty"></a>CRect::IsRectEmpty  
  确定是否`CRect`为空。  
   
 ```  
@@ -590,7 +615,7 @@ CRect rectEmpty(35, 35, 35, 35);
 ```
 
   
-##  <a name="a-nameisrectnulla--crectisrectnull"></a><a name="isrectnull"></a>CRect::IsRectNull  
+##  <a name="isrectnull"></a>CRect::IsRectNull  
  确定是否底部上、 左和右值`CRect`完全等于 0。  
   
 ```  
@@ -619,7 +644,7 @@ ASSERT(rectNone.IsRectNull());
  ASSERT(!rectNotNull.IsRectNull());  
 ```
   
-##  <a name="a-namemovetoxa--crectmovetox"></a><a name="movetox"></a>CRect::MoveToX  
+##  <a name="movetox"></a>CRect::MoveToX  
  调用此函数可将该矩形移到指定的绝对 x 坐标*x*。  
   
 ```  
@@ -643,7 +668,7 @@ rect.MoveToX(10);
    ASSERT(rect == CRect(10, 0, 110, 100));   
 ```
   
-##  <a name="a-namemovetoxya--crectmovetoxy"></a><a name="movetoxy"></a>CRect::MoveToXY  
+##  <a name="movetoxy"></a>CRect::MoveToXY  
  调用此函数以移动到绝对 x 坐标和 y 坐标指定的矩形。  
   
 ```  
@@ -674,7 +699,7 @@ void MoveToXY(POINT point) throw();
 ```
 
   
-##  <a name="a-namemovetoya--crectmovetoy"></a><a name="movetoy"></a>CRect::MoveToY  
+##  <a name="movetoy"></a>CRect::MoveToY  
  调用此函数可将该矩形移到指定的绝对 y 轴坐标*y*。  
   
 ```  
@@ -698,7 +723,7 @@ void MoveToY(int y) throw();
 ```
 
   
-##  <a name="a-namenormalizerecta--crectnormalizerect"></a><a name="normalizerect"></a>Crect:: Normalizerect  
+##  <a name="normalizerect"></a>Crect:: Normalizerect  
  规范化`CRect`，以便为正数，高度和宽度。  
   
 ```  
@@ -724,7 +749,7 @@ rect1.NormalizeRect();
  ASSERT(rect1 == rect2);  
 ```
   
-##  <a name="a-nameoffsetrecta--crectoffsetrect"></a><a name="offsetrect"></a>CRect::OffsetRect  
+##  <a name="offsetrect"></a>CRect::OffsetRect  
  将移动`CRect`由指定的偏移量。  
   
 ```  
@@ -763,7 +788,7 @@ void OffsetRect(SIZE size) throw();
 ```
 
   
-##  <a name="a-nameoperatorlpcrecta--crectoperator-lpcrect-converts-a-crect-to-an-lpcrectmfcreferencedata-types-mfcmd"></a><a name="operator_lpcrect"></a>CRect::operator LPCRECT 转换`CRect`到[LPCRECT](../../mfc/reference/data-types-mfc.md)。  
+##  <a name="operator_lpcrect"></a>CRect::operator LPCRECT 转换`CRect`到[LPCRECT](../../mfc/reference/data-types-mfc.md)。  
 
   
 ```  
@@ -774,7 +799,7 @@ operator LPCRECT() const throw();
  当使用此函数时，您不需要的地址 (**&**) 运算符。 在传递时，此运算符将可自动用于`CRect`对象传递给需要的函数**LPCRECT**。  
   
 
-##  <a name="a-nameoperatorlprecta--crectoperator-lprect"></a><a name="operator_lprect"></a>CRect::operator LPRECT  
+##  <a name="operator_lprect"></a>CRect::operator LPRECT  
  将转换`CRect`到[LPRECT](../../mfc/reference/data-types-mfc.md)。  
 
   
@@ -788,7 +813,7 @@ operator LPRECT() throw();
 ### <a name="example"></a>示例  
  请参阅示例[CRect::operator LPCRECT](#operator_lpcrect)。  
   
-##  <a name="a-nameoperatoreqa--crectoperator-"></a><a name="operator_eq"></a>CRect::operator =  
+##  <a name="operator_eq"></a>CRect::operator =  
  将分配*srcRect*到`CRect`。  
   
 ```  
@@ -813,7 +838,7 @@ void operator=(const RECT& srcRect) throw();
 ```
 
   
-##  <a name="a-nameoperatoreqeqa--crectoperator-"></a><a name="operator_eq_eq"></a>CRect::operator = =  
+##  <a name="operator_eq_eq"></a>CRect::operator = =  
  确定是否`rect`是否等同于`CRect`通过比较其左上角和右下角的坐标。  
   
 ```  
@@ -855,7 +880,7 @@ ASSERT(rect1 == rect2);
 ```
 
   
-##  <a name="a-nameoperatorneqa--crectoperator-"></a><a name="operator_neq"></a>CRect::operator ！ =  
+##  <a name="operator_neq"></a>CRect::operator ！ =  
  确定是否`rect`是否不等于`CRect`通过比较其左上角和右下角的坐标。  
   
 ```  
@@ -896,7 +921,7 @@ ASSERT(rect1 != rect3);
  ASSERT(rect3 != test);  
 ```
   
-##  <a name="a-nameoperatoraddeqa--crectoperator-"></a><a name="operator_add_eq"></a>CRect::operator + =  
+##  <a name="operator_add_eq"></a>CRect::operator + =  
  前两个重载移动`CRect`由指定的偏移量。  
   
 ```  
@@ -935,7 +960,7 @@ void operator+=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rect2);   
 ```
   
-##  <a name="a-nameoperator-eqa--crectoperator--"></a><a name="operator_-_eq"></a>CRect::operator =  
+##  <a name="operator_-_eq"></a>CRect::operator =  
  前两个重载移动`CRect`由指定的偏移量。  
   
 ```  
@@ -974,7 +999,7 @@ void operator-=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rectResult);   
 ```
   
-##  <a name="a-nameoperatorampeqa--crectoperator-amp"></a><a name="operator_amp_eq"></a>CRect::operator&amp;=  
+##  <a name="operator_amp_eq"></a>CRect::operator&amp;=  
  集`CRect`相等的交集`CRect`和`rect`。  
   
 ```  
@@ -994,7 +1019,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="example"></a>示例  
  请参阅示例[CRect::IntersectRect](#intersectrect)。  
   
-##  <a name="a-nameoperatororeqa--crectoperator-124"></a><a name="operator_or_eq"></a>CRect::operator | =  
+##  <a name="operator_or_eq"></a>CRect::operator | =  
  集`CRect`等于的并集`CRect`和`rect`。  
   
 ```  
@@ -1027,7 +1052,7 @@ void operator|=(const RECT& rect) throw();
 ```
 
   
-##  <a name="a-nameoperatoradda--crectoperator-"></a><a name="operator_add"></a>CRect::operator +  
+##  <a name="operator_add"></a>CRect::operator +  
  前两个重载均返回`CRect`对象，它等于`CRect`移置开指定的偏移量。  
   
 ```  
@@ -1066,7 +1091,7 @@ CRect operator+(SIZE size) const throw();
 ```
 
   
-##  <a name="a-nameoperator-a--crectoperator--"></a><a name="operator_-"></a>CRect::operator-  
+##  <a name="operator_-"></a>CRect::operator-  
  前两个重载均返回`CRect`对象，它等于`CRect`移置开指定的偏移量。  
   
 ```  
@@ -1105,7 +1130,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```
 
   
-##  <a name="a-nameoperatorampa--crectoperator-amp"></a><a name="operator_amp"></a>CRect::operator&amp;  
+##  <a name="operator_amp"></a>CRect::operator&amp;  
  返回`CRect`即的交集`CRect`和*rect2*。  
   
 ```  
@@ -1137,7 +1162,7 @@ CRect operator&(const RECT& rect2) const throw();
 ```
 
   
-##  <a name="a-nameoperatorora--crectoperator-124"></a><a name="operator_or"></a>CRect::operator |  
+##  <a name="operator_or"></a>CRect::operator |  
  返回`CRect`即的并集`CRect`和*rect2*。  
   
 ```   
@@ -1175,7 +1200,7 @@ rect2) const throw();
 ```
 
   
-##  <a name="a-nameptinrecta--crectptinrect"></a><a name="ptinrect"></a>CRect::PtInRect  
+##  <a name="ptinrect"></a>CRect::PtInRect  
  确定指定的点是否位于内`CRect`。  
   
 ```   
@@ -1222,7 +1247,7 @@ BOOL PtInRect(POINT point) const throw();
  ASSERT(rect.PtInRect(pt));  
 ```
   
-##  <a name="a-namesetrecta--crectsetrect"></a><a name="setrect"></a>CRect::SetRect  
+##  <a name="setrect"></a>CRect::SetRect  
  设置的尺寸`CRect`为指定的坐标。  
   
 ```   
@@ -1254,7 +1279,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
   
-##  <a name="a-namesetrectemptya--crectsetrectempty"></a><a name="setrectempty"></a>CRect::SetRectEmpty  
+##  <a name="setrectempty"></a>CRect::SetRectEmpty  
  使`CRect`通过将所有坐标都设置为零的空矩形。  
   
 ```  
@@ -1270,7 +1295,7 @@ rect.SetRectEmpty();
 ASSERT(rect.IsRectEmpty());  
 ```
   
-##  <a name="a-namesizea--crectsize"></a><a name="size"></a>CRect::SIZE 
+##  <a name="size"></a>CRect::SIZE 
  `cx`和`cy`成员的返回值包含高度和宽度`CRect`。  
   
 ```  
@@ -1293,7 +1318,7 @@ CSize Size() const throw();
  ASSERT(sz.cx == 40 && sz.cy == 40);  
 ```
 
-##  <a name="a-namesubtractrecta--crectsubtractrect"></a><a name="subtractrect"></a>CRect::SubtractRect  
+##  <a name="subtractrect"></a>CRect::SubtractRect  
  使的尺寸**CRect**等于减去`lpRectSrc2`从`lpRectSrc1`。  
   
 ```  
@@ -1355,7 +1380,7 @@ CRect   rectResult(10, 10, 50, 100);
    ASSERT(rectResult == rectOut);   
 ```
   
-##  <a name="a-nametoplefta--crecttopleft"></a><a name="topleft"></a>CRect::TopLeft  
+##  <a name="topleft"></a>CRect::TopLeft  
  作为引用返回坐标[CPoint](cpoint-class.md)中包含的对象`CRect`。  
   
 ```  
@@ -1372,7 +1397,7 @@ const CPoint& TopLeft() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[CRect::CenterPoint](#centerpoint)。  
   
-##  <a name="a-nameunionrecta--crectunionrect"></a><a name="unionrect"></a>CRect::UnionRect  
+##  <a name="unionrect"></a>CRect::UnionRect  
  使的尺寸`CRect`等于两个源矩形的并集。  
   
 ```  
@@ -1408,7 +1433,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
    ASSERT(rectResult == rect3);   
 ```
  
-##  <a name="a-namewidtha--crectwidth"></a><a name="width"></a>CRect::Width  
+##  <a name="width"></a>CRect::Width  
  计算的宽度`CRect`通过减去右值的左的值。  
   
 ```  

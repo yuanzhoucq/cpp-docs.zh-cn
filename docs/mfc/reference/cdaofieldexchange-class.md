@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoFieldExchange
+- AFXDAO/CDaoFieldExchange
+- AFXDAO/CDaoFieldExchange::IsValidOperation
+- AFXDAO/CDaoFieldExchange::SetFieldType
+- AFXDAO/CDaoFieldExchange::m_nOperation
+- AFXDAO/CDaoFieldExchange::m_prs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +102,7 @@ class CDaoFieldExchange
 ## <a name="requirements"></a>要求  
  **标头︰** afxdao.h  
   
-##  <a name="a-nameisvalidoperationa--cdaofieldexchangeisvalidoperation"></a><a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
+##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
  如果您编写您自己 DFX 函数，请调用`IsValidOperation`您确定是否可以针对特定字段数据成员类型执行当前操作的函数的开头 ( **CDaoFieldExchange::outputColumn**或**CDaoFieldExchange::param**)。  
   
 ```  
@@ -112,7 +117,7 @@ BOOL IsValidOperation();
   
  编写自定义 DFX 例程的其他信息，请参阅[技术注意 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)。  
   
-##  <a name="a-namemnoperationa--cdaofieldexchangemnoperation"></a><a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
+##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
  标识要对执行的操作[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与字段 exchange 对象相关联的对象。  
   
 ### <a name="remarks"></a>备注  
@@ -141,12 +146,12 @@ BOOL IsValidOperation();
 |**DumpField**|转储字段的内容 （仅限调试）。|  
 |**MaxDFXOperation**|用于输入检查。|  
   
-##  <a name="a-namemprsa--cdaofieldexchangemprs"></a><a name="m_prs"></a>CDaoFieldExchange::m_prs  
+##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
  包含一个指向[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与关联对象`CDaoFieldExchange`对象。  
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetfieldtypea--cdaofieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
  调用`SetFieldType`中您`CDaoRecordset`类的`DoFieldExchange`重写。  
   
 ```  

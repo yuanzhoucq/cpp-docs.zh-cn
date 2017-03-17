@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoVectorPtrElementTraits<T>
-- ATL.CAutoVectorPtrElementTraits
-- ATL.CAutoVectorPtrElementTraits<T>
-- ATL::CAutoVectorPtrElementTraits
 - CAutoVectorPtrElementTraits
+- ATLCOLL/ATL::CAutoVectorPtrElementTraits
+- ATLCOLL/ATL::CAutoVectorPtrElementTraits::INARGTYPE
+- ATLCOLL/ATL::CAutoVectorPtrElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,14 +86,14 @@ class CAutoVectorPtrElementTraits :
 ## <a name="requirements"></a>要求  
  **标头︰** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
  要用于将元素添加到集合类对象的数据类型。  
   
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
  要用于从集合类对象中检索元素的数据类型。  
   
 ```

@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComQIPtr
-- ATL::CComQIPtr
 - CComQIPtr
+- ATLCOMCLI/ATL::CComQIPtr
+- ATLCOMCLI/ATL::CComQIPtr::CComQIPtr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +85,7 @@ class CComQIPtr: public CComPtr<T>
 ## <a name="requirements"></a>要求  
  **标头︰** atlcomcli.h  
   
-##  <a name="a-nameccomqiptra--ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
+##  <a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
  构造函数。  
   
 ```
@@ -105,7 +105,7 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
  `piid`  
  指向的指针的 IID `T`。  
   
-##  <a name="a-nameoperatoreqa--ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::operator =  
+##  <a name="operator_eq"></a>CComQIPtr::operator =  
  赋值运算符中。  
   
 ```

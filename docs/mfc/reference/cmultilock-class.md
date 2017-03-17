@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiLock
+- AFXMT/CMultiLock
+- AFXMT/CMultiLock::CMultiLock
+- AFXMT/CMultiLock::IsLocked
+- AFXMT/CMultiLock::Lock
+- AFXMT/CMultiLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +87,7 @@ class CMultiLock
 ## <a name="requirements"></a>要求  
  **标头︰** afxmt.h  
   
-##  <a name="a-namecmultilocka--cmultilockcmultilock"></a><a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
  构造**CMultiLock**对象。  
   
 ```  
@@ -105,7 +110,7 @@ CMultiLock(
 ### <a name="remarks"></a>备注  
  在创建的同步对象等待数组后调用此函数。 它通常从内部调用的线程必须等待一个同步对象变得可用。  
   
-##  <a name="a-nameislockeda--cmultilockislocked"></a><a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>CMultiLock::IsLocked  
  确定指定的对象是否为非终止 （不可用）。  
   
 ```  
@@ -119,7 +124,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>返回值  
  如果指定的对象被锁定，则非零值否则为 0。  
   
-##  <a name="a-namelocka--cmultilocklock"></a><a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>CMultiLock::Lock  
  调用此函数可获取对一个或多个由提供给同步对象控制的资源访问权限**CMultiLock**构造函数。  
   
 ```  
@@ -163,7 +168,7 @@ DWORD Lock(
   
  如果`Lock`不能立即返回，它将等待中指定的毫秒数不超过*dwTimeOut*在返回之前的参数。 如果*dwTimeOut*是**无限**，`Lock`直到获得对象的访问权限或在指定了一个条件，将不会返回`dwWakeMask`已满足。 否则为如果`Lock`是诱使受害者的同步对象，它将返回成功; 如果不是，它将返回失败。  
   
-##  <a name="a-nameunlocka--cmultilockunlock"></a><a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>CMultiLock::Unlock  
  释放同步对象归`CMultiLock`。  
   
 ```  

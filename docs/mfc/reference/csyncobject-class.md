@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSyncObject
+- AFXMT/CSyncObject
+- AFXMT/CSyncObject::CSyncObject
+- AFXMT/CSyncObject::Lock
+- AFXMT/CSyncObject::Unlock
+- AFXMT/CSyncObject::m_hObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxmt.h  
   
-##  <a name="a-namecsyncobjecta--csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
  构造使用提供的名称的同步对象。  
   
 ```  
@@ -101,7 +106,7 @@ virtual ~CSyncObject();
  `pstrName`  
  对象的名称。 如果**NULL**， *pstrName*将为 null。  
   
-##  <a name="a-namelocka--csyncobjectlock"></a><a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>CSyncObject::Lock  
  调用此函数可获取对同步对象控制的资源访问权限。  
   
 ```  
@@ -118,14 +123,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>备注  
  如果同步对象发出信号，`Lock`将立即成功返回，并在线程现在拥有对象。 如果同步对象是非终止状态 （不可用）`Lock`将等待要接收信号最中指定的毫秒数的同步对象*dwTimeOut*参数。 如果没有未在指定的时间量，接收信号的同步对象`Lock`返回失败。  
   
-##  <a name="a-namemhobjecta--csyncobjectmhobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>CSyncObject::m_hObject  
  基础同步对象的句柄。  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="a-nameoperatorhandlea--csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::operator 句柄  
+##  <a name="operator_handle"></a>CSyncObject::operator 句柄  
  使用此运算符将获取的句柄`CSyncObject`对象。  
   
 ```  
@@ -138,7 +143,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>备注  
  该句柄可用于直接调用 Windows Api。  
   
-##  <a name="a-nameunlocka--csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>CSyncObject::Unlock  
  声明`Unlock`不带任何参数是一个纯虚拟函数，并且必须由派生自的所有类重写`CSyncObject`。  
   
 ```  

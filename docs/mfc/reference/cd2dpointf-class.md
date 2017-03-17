@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DPointF
 - CD2DPointF
+- AFXRENDERTARGET/CD2DPointF
+- AFXRENDERTARGET/CD2DPointF::CD2DPointF
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +72,7 @@ class CD2DPointF : public D2D1_POINT_2F;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-namecd2dpointfa--cd2dpointfcd2dpointf"></a><a name="cd2dpointf"></a>CD2DPointF::CD2DPointF  
+##  <a name="cd2dpointf"></a>CD2DPointF::CD2DPointF  
  构造 CD2DPointF 对象从 CPoint 对象。  
   
 ```  
@@ -91,7 +92,7 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
  `fY`  
  源 Y  
   
-##  <a name="a-nameoperatorcpointa--cd2dpointfoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointF::operator CPoint  
+##  <a name="operator_cpoint"></a>CD2DPointF::operator CPoint  
  将 CD2DPointF 转换成 CPoint 对象。  
   
 ```  

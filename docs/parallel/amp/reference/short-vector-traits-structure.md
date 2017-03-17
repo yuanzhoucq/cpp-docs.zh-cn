@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::short_vector_traits
+- short_vector_traits
+- AMP_SHORT_VECTORS/short_vector_traits
+- AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
+- AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 dev_langs:
 - C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
@@ -129,13 +132,13 @@ struct short_vector_traits<double_4>;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora--shortvectortraitsshortvectortraits-constructor"></a><a name="ctor"></a>short_vector_traits:: short_vector_traits 构造函数  
+##  <a name="ctor"></a>short_vector_traits:: short_vector_traits 构造函数  
   
 ```  
 short_vector_traits();
 ```  
   
-##  <a name="a-namesizea--shortvectortraitssize-constant"></a><a name="size"></a>short_vector_traits:: size 常量  
+##  <a name="size"></a>short_vector_traits:: size 常量  
   
 ```  
 static int const size = 1;  

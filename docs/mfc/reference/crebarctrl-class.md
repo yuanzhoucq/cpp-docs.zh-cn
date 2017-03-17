@@ -10,6 +10,53 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CReBarCtrl
+- AFXCMN/CReBarCtrl
+- AFXCMN/CReBarCtrl::CReBarCtrl
+- AFXCMN/CReBarCtrl::BeginDrag
+- AFXCMN/CReBarCtrl::Create
+- AFXCMN/CReBarCtrl::CreateEx
+- AFXCMN/CReBarCtrl::DeleteBand
+- AFXCMN/CReBarCtrl::DragMove
+- AFXCMN/CReBarCtrl::EndDrag
+- AFXCMN/CReBarCtrl::GetBandBorders
+- AFXCMN/CReBarCtrl::GetBandCount
+- AFXCMN/CReBarCtrl::GetBandInfo
+- AFXCMN/CReBarCtrl::GetBandMargins
+- AFXCMN/CReBarCtrl::GetBarHeight
+- AFXCMN/CReBarCtrl::GetBarInfo
+- AFXCMN/CReBarCtrl::GetBkColor
+- AFXCMN/CReBarCtrl::GetColorScheme
+- AFXCMN/CReBarCtrl::GetDropTarget
+- AFXCMN/CReBarCtrl::GetExtendedStyle
+- AFXCMN/CReBarCtrl::GetImageList
+- AFXCMN/CReBarCtrl::GetPalette
+- AFXCMN/CReBarCtrl::GetRect
+- AFXCMN/CReBarCtrl::GetRowCount
+- AFXCMN/CReBarCtrl::GetRowHeight
+- AFXCMN/CReBarCtrl::GetTextColor
+- AFXCMN/CReBarCtrl::GetToolTips
+- AFXCMN/CReBarCtrl::HitTest
+- AFXCMN/CReBarCtrl::IDToIndex
+- AFXCMN/CReBarCtrl::InsertBand
+- AFXCMN/CReBarCtrl::MaximizeBand
+- AFXCMN/CReBarCtrl::MinimizeBand
+- AFXCMN/CReBarCtrl::MoveBand
+- AFXCMN/CReBarCtrl::PushChevron
+- AFXCMN/CReBarCtrl::RestoreBand
+- AFXCMN/CReBarCtrl::SetBandInfo
+- AFXCMN/CReBarCtrl::SetBandWidth
+- AFXCMN/CReBarCtrl::SetBarInfo
+- AFXCMN/CReBarCtrl::SetBkColor
+- AFXCMN/CReBarCtrl::SetColorScheme
+- AFXCMN/CReBarCtrl::SetExtendedStyle
+- AFXCMN/CReBarCtrl::SetImageList
+- AFXCMN/CReBarCtrl::SetOwner
+- AFXCMN/CReBarCtrl::SetPalette
+- AFXCMN/CReBarCtrl::SetTextColor
+- AFXCMN/CReBarCtrl::SetToolTips
+- AFXCMN/CReBarCtrl::SetWindowTheme
+- AFXCMN/CReBarCtrl::ShowBand
+- AFXCMN/CReBarCtrl::SizeToRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -150,7 +197,7 @@ class CReBarCtrl : public CWnd
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="a-namebegindraga--crebarctrlbegindrag"></a><a name="begindrag"></a>CReBarCtrl::BeginDrag  
+##  <a name="begindrag"></a>CReBarCtrl::BeginDrag  
  实现的行为的 Win32 消息[RB_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774429)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -166,7 +213,7 @@ void BeginDrag(
  `dwPos`  
  一个`DWORD`值，该值包含起始鼠标坐标。 水平坐标包含在 LOWORD 并且 HIWORD 中包含的垂直坐标。 如果您通过`(DWORD)-1`，rebar 控件将使用上一次调用控件的线程的鼠标位置**GetMessage**或**PeekMessage**。  
   
-##  <a name="a-namecreatea--crebarctrlcreate"></a><a name="create"></a>CReBarCtrl::Create  
+##  <a name="create"></a>CReBarCtrl::Create  
  创建 rebar 控件并将其附加到`CReBarCtrl`对象。  
   
 ```  
@@ -205,7 +252,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&3;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_1.cpp)]  
   
-##  <a name="a-namecreateexa--crebarctrlcreateex"></a><a name="createex"></a>CReBarCtrl::CreateEx  
+##  <a name="createex"></a>CReBarCtrl::CreateEx  
  创建控件 （子窗口），并将其与相关联`CReBarCtrl`对象。  
   
 ```  
@@ -239,7 +286,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  使用`CreateEx`而不是[创建](#create)应用扩展的窗口样式、 指定的 Windows 扩展的样式前言**WS_EX_**。  
   
-##  <a name="a-namecrebarctrla--crebarctrlcrebarctrl"></a><a name="crebarctrl"></a>CReBarCtrl::CReBarCtrl  
+##  <a name="crebarctrl"></a>CReBarCtrl::CReBarCtrl  
  创建一个 `CReBarCtrl` 对象。  
   
 ```  
@@ -249,7 +296,7 @@ CReBarCtrl();
 ### <a name="example"></a>示例  
   请参阅示例[CReBarCtrl::Create](#create)。  
   
-##  <a name="a-namedeletebanda--crebarctrldeleteband"></a><a name="deleteband"></a>CReBarCtrl::DeleteBand  
+##  <a name="deleteband"></a>CReBarCtrl::DeleteBand  
  实现的行为的 Win32 消息[RB_DELETEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774431)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -266,7 +313,7 @@ BOOL DeleteBand(UINT uBand);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&4;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_2.cpp)]  
   
-##  <a name="a-namedragmovea--crebarctrldragmove"></a><a name="dragmove"></a>CReBarCtrl::DragMove  
+##  <a name="dragmove"></a>CReBarCtrl::DragMove  
  实现的行为的 Win32 消息[RB_DRAGMOVE](https://msdn.microsoft.com/library/bb774433.aspx)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -277,14 +324,14 @@ void DragMove(DWORD dwPos = (DWORD)-1);
  `dwPos`  
  一个`DWORD`值，该值包含新的鼠标坐标。 水平坐标包含在 LOWORD 并且 HIWORD 中包含的垂直坐标。 如果您通过`(DWORD)-1`，rebar 控件将使用上一次调用控件的线程的鼠标位置**GetMessage**或**PeekMessage**。  
   
-##  <a name="a-nameenddraga--crebarctrlenddrag"></a><a name="enddrag"></a>CReBarCtrl::EndDrag  
+##  <a name="enddrag"></a>CReBarCtrl::EndDrag  
  实现的行为的 Win32 消息[RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
 void EndDrag();
 ```  
   
-##  <a name="a-namegetbandbordersa--crebarctrlgetbandborders"></a><a name="getbandborders"></a>CReBarCtrl::GetBandBorders  
+##  <a name="getbandborders"></a>CReBarCtrl::GetBandBorders  
  实现的行为的 Win32 消息[RB_GETBANDBORDERS](http://msdn.microsoft.com/library/windows/desktop/bb774437)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -300,7 +347,7 @@ void GetBandBorders(
  `prc`  
  一个指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它将收到带边框。 如果 rebar 控件具有**RBS_BANDBORDERS**样式，此结构的每个成员将收到的像素数，在相应的一端带，构成边框。 如果 rebar 控件不具有**RBS_BANDBORDERS**样式，仅此结构的左侧的成员收到有效信息。 Rebar 控件样式的说明，请参阅[Rebar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb774377)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbandcounta--crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl::GetBandCount  
+##  <a name="getbandcount"></a>CReBarCtrl::GetBandCount  
  实现的行为的 Win32 消息[RB_GETBANDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774439)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -310,7 +357,7 @@ UINT GetBandCount() const;
 ### <a name="return-value"></a>返回值  
  分配给控件的带区的数目。  
   
-##  <a name="a-namegetbandinfoa--crebarctrlgetbandinfo"></a><a name="getbandinfo"></a>CReBarCtrl::GetBandInfo  
+##  <a name="getbandinfo"></a>CReBarCtrl::GetBandInfo  
  实现的行为的 Win32 消息[RB_GETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774451)中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -329,7 +376,7 @@ BOOL GetBandInfo(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namegetbandmarginsa--crebarctrlgetbandmargins"></a><a name="getbandmargins"></a>CReBarCtrl::GetBandMargins  
+##  <a name="getbandmargins"></a>CReBarCtrl::GetBandMargins  
  检索的带区的边距。  
   
 ```  
@@ -343,7 +390,7 @@ void GetBandMargins(PMARGINS pMargins);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[RB_GETBANDMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb774453)消息，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbarheighta--crebarctrlgetbarheight"></a><a name="getbarheight"></a>CReBarCtrl::GetBarHeight  
+##  <a name="getbarheight"></a>CReBarCtrl::GetBarHeight  
  检索 rebar 栏的高度。  
   
 ```  
@@ -353,7 +400,7 @@ UINT GetBarHeight() const;
 ### <a name="return-value"></a>返回值  
  表示高度 （像素），该控件的值。  
   
-##  <a name="a-namegetbarinfoa--crebarctrlgetbarinfo"></a><a name="getbarinfo"></a>CReBarCtrl::GetBarInfo  
+##  <a name="getbarinfo"></a>CReBarCtrl::GetBarInfo  
  实现的行为的 Win32 消息[RB_GETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774457)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -367,7 +414,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namegetbkcolora--crebarctrlgetbkcolor"></a><a name="getbkcolor"></a>CReBarCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CReBarCtrl::GetBkColor  
  实现的行为的 Win32 消息[RB_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774459)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -377,7 +424,7 @@ COLORREF GetBkColor() const;
 ### <a name="return-value"></a>返回值  
  一个**COLORREF**值，该值表示当前的默认背景色。  
   
-##  <a name="a-namegetcolorschemea--crebarctrlgetcolorscheme"></a><a name="getcolorscheme"></a>CReBarCtrl::GetColorScheme  
+##  <a name="getcolorscheme"></a>CReBarCtrl::GetColorScheme  
  检索[要添加的配色](http://msdn.microsoft.com/library/windows/desktop/bb775502)rebar 控件的结构。  
   
 ```  
@@ -394,7 +441,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ### <a name="remarks"></a>备注  
  **要添加的配色**结构包括按钮突出显示颜色和按钮阴影颜色。  
   
-##  <a name="a-namegetdroptargeta--crebarctrlgetdroptarget"></a><a name="getdroptarget"></a>CReBarCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>CReBarCtrl::GetDropTarget  
  实现的行为的 Win32 消息[RB_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb774463)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -404,7 +451,7 @@ IDropTarget* GetDropTarget() const;
 ### <a name="return-value"></a>返回值  
  一个指向[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)接口。  
   
-##  <a name="a-namegetextendedstylea--crebarctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CReBarCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CReBarCtrl::GetExtendedStyle  
  获取当前的 rebar 控件的扩展的样式。  
   
 ```  
@@ -417,7 +464,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetimagelista--crebarctrlgetimagelist"></a><a name="getimagelist"></a>CReBarCtrl::GetImageList  
+##  <a name="getimagelist"></a>CReBarCtrl::GetImageList  
  获取`CImageList`与 rebar 控件关联的对象。  
   
 ```  
@@ -430,7 +477,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>备注  
  此成员函数使用大小和掩码信息存储在[REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395)结构，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetpalettea--crebarctrlgetpalette"></a><a name="getpalette"></a>CReBarCtrl::GetPalette  
+##  <a name="getpalette"></a>CReBarCtrl::GetPalette  
  检索 rebar 控件的当前调色板。  
   
 ```  
@@ -446,7 +493,7 @@ CPalette* GetPalette() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&5;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_3.cpp)]  
   
-##  <a name="a-namegetrecta--crebarctrlgetrect"></a><a name="getrect"></a>CReBarCtrl::GetRect  
+##  <a name="getrect"></a>CReBarCtrl::GetRect  
  实现的行为的 Win32 消息[RB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb774469)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -468,7 +515,7 @@ BOOL GetRect(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&6;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_4.cpp)]  
   
-##  <a name="a-namegetrowcounta--crebarctrlgetrowcount"></a><a name="getrowcount"></a>CReBarCtrl::GetRowCount  
+##  <a name="getrowcount"></a>CReBarCtrl::GetRowCount  
  实现的行为的 Win32 消息[RB_GETROWCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774471)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -481,7 +528,7 @@ UINT GetRowCount() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&7;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_5.cpp)]  
   
-##  <a name="a-namegetrowheighta--crebarctrlgetrowheight"></a><a name="getrowheight"></a>CReBarCtrl::GetRowHeight  
+##  <a name="getrowheight"></a>CReBarCtrl::GetRowHeight  
  实现的行为的 Win32 消息[RB_GETROWHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb774473)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -498,7 +545,7 @@ UINT GetRowHeight(UINT uRow) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&8;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_6.cpp)]  
   
-##  <a name="a-namegettextcolora--crebarctrlgettextcolor"></a><a name="gettextcolor"></a>CReBarCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>CReBarCtrl::GetTextColor  
  实现的行为的 Win32 消息[RB_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774475)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -508,7 +555,7 @@ COLORREF GetTextColor() const;
 ### <a name="return-value"></a>返回值  
  一个**COLORREF**值，该值表示当前的默认文本颜色。  
   
-##  <a name="a-namegettooltipsa--crebarctrlgettooltips"></a><a name="gettooltips"></a>CReBarCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CReBarCtrl::GetToolTips  
  实现的行为的 Win32 消息[RB_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb774477)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -521,7 +568,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="remarks"></a>备注  
  请注意，MFC 实现`GetToolTips`返回一个指向`CToolTipCtrl`，而不是以`HWND`。  
   
-##  <a name="a-namehittesta--crebarctrlhittest"></a><a name="hittest"></a>CReBarCtrl::HitTest  
+##  <a name="hittest"></a>CReBarCtrl::HitTest  
  实现的行为的 Win32 消息[RB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb774494)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -535,7 +582,7 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="return-value"></a>返回值  
  在给定的时间，则为-1 点处没有 rebar 带区时带内从零开始索引。  
   
-##  <a name="a-nameidtoindexa--crebarctrlidtoindex"></a><a name="idtoindex"></a>CReBarCtrl::IDToIndex  
+##  <a name="idtoindex"></a>CReBarCtrl::IDToIndex  
  实现的行为的 Win32 消息[RB_IDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774496)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -549,7 +596,7 @@ int IDToIndex(UINT uBandID) const;
 ### <a name="return-value"></a>返回值  
  如果成功，相应的索引从零开始的带外或否则为-1。 如果存在重复带索引，则返回第一个。  
   
-##  <a name="a-nameinsertbanda--crebarctrlinsertband"></a><a name="insertband"></a>Crebarctrl:: Insertband  
+##  <a name="insertband"></a>Crebarctrl:: Insertband  
  实现的行为的 Win32 消息[RB_INSERTBAND](http://msdn.microsoft.com/library/windows/desktop/bb774498)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -571,7 +618,7 @@ BOOL InsertBand(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&9;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_7.cpp)]  
   
-##  <a name="a-namemaximizebanda--crebarctrlmaximizeband"></a><a name="maximizeband"></a>CReBarCtrl::MaximizeBand  
+##  <a name="maximizeband"></a>CReBarCtrl::MaximizeBand  
  调整到最大尺寸 rebar 控件中的带。  
   
 ```  
@@ -588,7 +635,7 @@ void MaximizeBand(UINT uBand);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&10;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_8.cpp)]  
   
-##  <a name="a-nameminimizebanda--crebarctrlminimizeband"></a><a name="minimizeband"></a>CReBarCtrl::MinimizeBand  
+##  <a name="minimizeband"></a>CReBarCtrl::MinimizeBand  
  大小调整回其最小大小的 rebar 控件中的带。  
   
 ```  
@@ -605,7 +652,7 @@ void MinimizeBand(UINT uBand);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&11;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_9.cpp)]  
   
-##  <a name="a-namemovebanda--crebarctrlmoveband"></a><a name="moveband"></a>CReBarCtrl::MoveBand  
+##  <a name="moveband"></a>CReBarCtrl::MoveBand  
  实现的行为的 Win32 消息[RB_MOVEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774504)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -624,7 +671,7 @@ BOOL MoveBand(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namepushchevrona--crebarctrlpushchevron"></a><a name="pushchevron"></a>CReBarCtrl::PushChevron  
+##  <a name="pushchevron"></a>CReBarCtrl::PushChevron  
  实现的行为的 Win32 消息[RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -640,7 +687,7 @@ void PushChevron(
  `lAppValue`  
  应用程序定义的 32 位值。 请参阅`lAppValue`中[RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namerestorebanda--crebarctrlrestoreband"></a><a name="restoreband"></a>CReBarCtrl::RestoreBand  
+##  <a name="restoreband"></a>CReBarCtrl::RestoreBand  
  大小调整回其理想大小 rebar 控件中的带。  
   
 ```  
@@ -657,7 +704,7 @@ void RestoreBand(UINT uBand);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&12;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_10.cpp)]  
   
-##  <a name="a-namesetbandinfoa--crebarctrlsetbandinfo"></a><a name="setbandinfo"></a>CReBarCtrl::SetBandInfo  
+##  <a name="setbandinfo"></a>CReBarCtrl::SetBandInfo  
  实现的行为的 Win32 消息[RB_SETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774508)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -679,7 +726,7 @@ BOOL SetBandInfo(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&13;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_11.cpp)]  
   
-##  <a name="a-namesetbandwidtha--crebarctrlsetbandwidth"></a><a name="setbandwidth"></a>CReBarCtrl::SetBandWidth  
+##  <a name="setbandwidth"></a>CReBarCtrl::SetBandWidth  
  对于当前的 rebar 控件中设置指定的停靠带区的宽度。  
   
 ```  
@@ -711,7 +758,7 @@ BOOL SetBandWidth(
   
  [!code-cpp[NVC_MFC_CReBarCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_13.cpp)]  
   
-##  <a name="a-namesetbarinfoa--crebarctrlsetbarinfo"></a><a name="setbarinfo"></a>CReBarCtrl::SetBarInfo  
+##  <a name="setbarinfo"></a>CReBarCtrl::SetBarInfo  
  实现的行为的 Win32 消息[RB_SETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774513)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -728,7 +775,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&14;](../../mfc/reference/codesnippet/cpp/crebarctrl-class_14.cpp)]  
   
-##  <a name="a-namesetbkcolora--crebarctrlsetbkcolor"></a><a name="setbkcolor"></a>CReBarCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CReBarCtrl::SetBkColor  
  实现的行为的 Win32 消息[RB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774515)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -745,7 +792,7 @@ COLORREF SetBkColor(COLORREF clr);
 ### <a name="remarks"></a>备注  
  请参阅此主题有关何时可以设置背景色，以及如何将默认设置的详细信息。  
   
-##  <a name="a-namesetcolorschemea--crebarctrlsetcolorscheme"></a><a name="setcolorscheme"></a>CReBarCtrl::SetColorScheme  
+##  <a name="setcolorscheme"></a>CReBarCtrl::SetColorScheme  
  在 rebar 控件上设置按钮的配色方案。  
   
 ```  
@@ -759,7 +806,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 ### <a name="remarks"></a>备注  
  **要添加的配色**结构包括按钮突出显示颜色和按钮阴影颜色。  
   
-##  <a name="a-namesetextendedstylea--crebarctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CReBarCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CReBarCtrl::SetExtendedStyle  
  设置当前的 rebar 控件的扩展的样式。  
   
 ```  
@@ -781,7 +828,7 @@ DWORD SetExtendedStyle(
 ### <a name="remarks"></a>备注  
  此方法可发送[RB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774519)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetimagelista--crebarctrlsetimagelist"></a><a name="setimagelist"></a>CReBarCtrl::SetImageList  
+##  <a name="setimagelist"></a>CReBarCtrl::SetImageList  
  将图像列表分配到 rebar 控件。  
   
 ```  
@@ -795,7 +842,7 @@ BOOL SetImageList(CImageList* pImageList);
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namesetownera--crebarctrlsetowner"></a><a name="setowner"></a>CReBarCtrl::SetOwner  
+##  <a name="setowner"></a>CReBarCtrl::SetOwner  
  实现的行为的 Win32 消息[RB_SETPARENT](http://msdn.microsoft.com/library/windows/desktop/bb774522)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -815,7 +862,7 @@ CWnd* SetOwner(CWnd* pWnd);
 > [!NOTE]
 >  此成员函数不会更改实际创建控件; 时设置的父级而是会向您指定的窗口发送通知消息。  
   
-##  <a name="a-namesetpalettea--crebarctrlsetpalette"></a><a name="setpalette"></a>CReBarCtrl::SetPalette  
+##  <a name="setpalette"></a>CReBarCtrl::SetPalette  
  实现的行为的 Win32 消息[RB_SETPALETTE](http://msdn.microsoft.com/library/windows/desktop/bb774520)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -832,7 +879,7 @@ CPalette* SetPalette(HPALETTE hPal);
 ### <a name="remarks"></a>备注  
  请注意，此成员函数使用`CPalette`对象作为其返回值，而不是以`HPALETTE`。  
   
-##  <a name="a-namesettextcolora--crebarctrlsettextcolor"></a><a name="settextcolor"></a>CReBarCtrl::SetTextColor  
+##  <a name="settextcolor"></a>CReBarCtrl::SetTextColor  
  实现的行为的 Win32 消息[RB_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774524)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -849,7 +896,7 @@ COLORREF SetTextColor(COLORREF clr);
 ### <a name="remarks"></a>备注  
  它提供以支持在 rebar 控件中的文本颜色的灵活性。  
   
-##  <a name="a-namesettooltipsa--crebarctrlsettooltips"></a><a name="settooltips"></a>CReBarCtrl::SetToolTips  
+##  <a name="settooltips"></a>CReBarCtrl::SetToolTips  
  将工具提示控件与 rebar 控件相关联。  
   
 ```  
@@ -863,7 +910,7 @@ void SetToolTips(CToolTipCtrl* pToolTip);
 ### <a name="remarks"></a>备注  
  您必须销毁`CToolTipCtrl`对象完成此操作使用它。  
   
-##  <a name="a-namesetwindowthemea--crebarctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CReBarCtrl::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CReBarCtrl::SetWindowTheme  
  设置 rebar 控件的视觉样式。  
   
 ```  
@@ -880,7 +927,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[RB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb774530)消息，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameshowbanda--crebarctrlshowband"></a><a name="showband"></a>CReBarCtrl::ShowBand  
+##  <a name="showband"></a>CReBarCtrl::ShowBand  
  实现的行为的 Win32 消息[RB_SHOWBAND](http://msdn.microsoft.com/library/windows/desktop/bb774532)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -899,7 +946,7 @@ BOOL ShowBand(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namesizetorecta--crebarctrlsizetorect"></a><a name="sizetorect"></a>CReBarCtrl::SizeToRect  
+##  <a name="sizetorect"></a>CReBarCtrl::SizeToRect  
  实现的行为的 Win32 消息[RB_SIZETORECT](http://msdn.microsoft.com/library/windows/desktop/bb774534)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  

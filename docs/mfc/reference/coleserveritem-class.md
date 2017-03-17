@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleServerItem
+- AFXOLE/COleServerItem
+- AFXOLE/COleServerItem::COleServerItem
+- AFXOLE/COleServerItem::AddOtherClipboardData
+- AFXOLE/COleServerItem::CopyToClipboard
+- AFXOLE/COleServerItem::DoDragDrop
+- AFXOLE/COleServerItem::GetClipboardData
+- AFXOLE/COleServerItem::GetDocument
+- AFXOLE/COleServerItem::GetEmbedSourceData
+- AFXOLE/COleServerItem::GetItemName
+- AFXOLE/COleServerItem::GetLinkSourceData
+- AFXOLE/COleServerItem::GetObjectDescriptorData
+- AFXOLE/COleServerItem::IsConnected
+- AFXOLE/COleServerItem::IsLinkedItem
+- AFXOLE/COleServerItem::NotifyChanged
+- AFXOLE/COleServerItem::OnDoVerb
+- AFXOLE/COleServerItem::OnDraw
+- AFXOLE/COleServerItem::OnDrawEx
+- AFXOLE/COleServerItem::OnGetClipboardData
+- AFXOLE/COleServerItem::OnGetExtent
+- AFXOLE/COleServerItem::OnInitFromData
+- AFXOLE/COleServerItem::OnQueryUpdateItems
+- AFXOLE/COleServerItem::OnRenderData
+- AFXOLE/COleServerItem::OnRenderFileData
+- AFXOLE/COleServerItem::OnRenderGlobalData
+- AFXOLE/COleServerItem::OnSetColorScheme
+- AFXOLE/COleServerItem::OnSetData
+- AFXOLE/COleServerItem::OnSetExtent
+- AFXOLE/COleServerItem::OnUpdate
+- AFXOLE/COleServerItem::OnUpdateItems
+- AFXOLE/COleServerItem::SetItemName
+- AFXOLE/COleServerItem::GetDataSource
+- AFXOLE/COleServerItem::OnHide
+- AFXOLE/COleServerItem::OnOpen
+- AFXOLE/COleServerItem::OnShow
+- AFXOLE/COleServerItem::m_sizeExtent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -129,7 +164,7 @@ class COleServerItem : public CDocItem
 ## <a name="requirements"></a>要求  
  **标头︰** afxole.h  
   
-##  <a name="a-nameaddotherclipboarddataa--coleserveritemaddotherclipboarddata"></a><a name="addotherclipboarddata"></a>COleServerItem::AddOtherClipboardData  
+##  <a name="addotherclipboarddata"></a>COleServerItem::AddOtherClipboardData  
  调用此函数可将 OLE 项的演示文稿和转换格式放入指定`COleDataSource`对象。  
   
 ```  
@@ -143,7 +178,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ### <a name="remarks"></a>备注  
  您必须实现[OnDraw](#ondraw)成员函数可提供项目的显示格式 （图元文件图片）。 若要支持其他转换格式，注册它们使用[COleDataSource](../../mfc/reference/coledatasource-class.md)舱ン[GetDataSource](#getdatasource)并重写[OnRenderData](#onrenderdata)成员函数以提供您想要支持的格式中的数据。  
   
-##  <a name="a-namecoleserveritema--coleserveritemcoleserveritem"></a><a name="coleserveritem"></a>COleServerItem::COleServerItem  
+##  <a name="coleserveritem"></a>COleServerItem::COleServerItem  
  构造`COleServerItem`对象，并将其添加到服务器文档的文档项的集合。  
   
 ```  
@@ -159,7 +194,7 @@ COleServerItem(
  `bAutoDelete`  
  该标志指明链接到该发布时是否可以删除该对象。 将此设置为**FALSE**如果`COleServerItem`对象是文档的数据，您必须删除的组成部分。 将此设置为**TRUE**如果对象是用来标识在可以删除由框架的文档的数据中的范围的辅助结构。  
   
-##  <a name="a-namecopytoclipboarda--coleserveritemcopytoclipboard"></a><a name="copytoclipboard"></a>COleServerItem::CopyToClipboard  
+##  <a name="copytoclipboard"></a>COleServerItem::CopyToClipboard  
  调用此函数可将 OLE 项复制到剪贴板。  
   
 ```  
@@ -173,7 +208,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ### <a name="remarks"></a>备注  
  该函数使用[OnGetClipboardData](#ongetclipboarddata)成员函数来创建[COleDataSource](../../mfc/reference/coledatasource-class.md)对象，其中包含所支持的格式中的 OLE 项的数据。 该函数将放置`COleDataSource`上使用剪贴板对象[COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard)函数。 `COleDataSource`对象包括项的本机数据以及其表示形式`CF_METAFILEPICT`格式，以及您选择支持任何转换格式的数据。 您必须实现[Serialize](../../mfc/reference/cobject-class.md#serialize)和[OnDraw](#ondraw)有关此成员函数以起作用。  
   
-##  <a name="a-namedodragdropa--coleserveritemdodragdrop"></a><a name="dodragdrop"></a>COleServerItem::DoDragDrop  
+##  <a name="dodragdrop"></a>COleServerItem::DoDragDrop  
  调用`DoDragDrop`成员函数来执行拖放操作。  
   
 ```  
@@ -217,7 +252,7 @@ DROPEFFECT DoDragDrop(
   
  用于详细了解如何拖动延迟信息存储在注册表或。INI 文件，请参阅[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetclipboarddataa--coleserveritemgetclipboarddata"></a><a name="getclipboarddata"></a>COleServerItem::GetClipboardData  
+##  <a name="getclipboarddata"></a>COleServerItem::GetClipboardData  
  调用此函数以填充指定[COleDataSource](../../mfc/reference/coledatasource-class.md)对象将复制到剪贴板中，如果您调用的所有数据[CopyToClipboard](#copytoclipboard) (如果调用，还会传输相同的数据[DoDragDrop](#dodragdrop))。  
   
 ```  
@@ -246,7 +281,7 @@ void GetClipboardData(
   
  重写此函数，如果您想要将格式放入`COleDataSource`对象之前还是之后提供的这些格式`CopyToClipboard`。  
   
-##  <a name="a-namegetdatasourcea--coleserveritemgetdatasource"></a><a name="getdatasource"></a>COleServerItem::GetDataSource  
+##  <a name="getdatasource"></a>COleServerItem::GetDataSource  
  调用此函数可获取[COleDataSource](../../mfc/reference/coledatasource-class.md)用来存储服务器应用程序支持的转换格式的对象。  
   
 ```  
@@ -259,7 +294,7 @@ COleDataSource* GetDataSource();
 ### <a name="remarks"></a>备注  
  如果您希望服务器应用程序提供数据传输过程中的各种格式的数据操作，注册这些格式与`COleDataSource`此函数返回的对象。 例如，如果您想要提供**CF_TEXT** OLE 项的剪贴板或拖放操作的表示形式，将注册带格式`COleDataSource`此函数返回时，对象，然后重写**OnRenderXxxData**成员函数以提供数据。  
   
-##  <a name="a-namegetdocumenta--coleserveritemgetdocument"></a><a name="getdocument"></a>COleServerItem::GetDocument  
+##  <a name="getdocument"></a>COleServerItem::GetDocument  
  调用此函数可获取指向包含该项目的文档的指针。  
   
 ```  
@@ -272,7 +307,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>备注  
  这将允许访问服务器文档作为参数传递到`COleServerItem`构造函数。  
   
-##  <a name="a-namegetembedsourcedataa--coleserveritemgetembedsourcedata"></a><a name="getembedsourcedata"></a>COleServerItem::GetEmbedSourceData  
+##  <a name="getembedsourcedata"></a>COleServerItem::GetEmbedSourceData  
  调用此函数可获取**CF_EMBEDSOURCE** OLE 项的数据。  
   
 ```  
@@ -290,7 +325,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
   
  有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitemnamea--coleserveritemgetitemname"></a><a name="getitemname"></a>COleServerItem::GetItemName  
+##  <a name="getitemname"></a>COleServerItem::GetItemName  
  调用此函数可获取项的名称。  
   
 ```  
@@ -303,7 +338,7 @@ const CString& GetItemName() const;
 ### <a name="remarks"></a>备注  
  通常仅为链接项调用此函数。  
   
-##  <a name="a-namegetlinksourcedataa--coleserveritemgetlinksourcedata"></a><a name="getlinksourcedata"></a>COleServerItem::GetLinkSourceData  
+##  <a name="getlinksourcedata"></a>COleServerItem::GetLinkSourceData  
  调用此函数可获取`CF_LINKSOURCE`OLE 项的数据。  
   
 ```  
@@ -324,7 +359,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
  有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetobjectdescriptordataa--coleserveritemgetobjectdescriptordata"></a><a name="getobjectdescriptordata"></a>COleServerItem::GetObjectDescriptorData  
+##  <a name="getobjectdescriptordata"></a>COleServerItem::GetObjectDescriptorData  
  调用此函数可获取**CF_OBJECTDESCRIPTOR** OLE 项的数据。  
   
 ```  
@@ -349,7 +384,7 @@ void GetObjectDescriptorData(
   
  有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisconnecteda--coleserveritemisconnected"></a><a name="isconnected"></a>COleServerItem::IsConnected  
+##  <a name="isconnected"></a>COleServerItem::IsConnected  
  调用此函数，以查看是否已连接 OLE 项。  
   
 ```  
@@ -362,7 +397,7 @@ BOOL IsConnected() const;
 ### <a name="remarks"></a>备注  
  OLE 项被视为连接如果一个或多个容器具有对项的引用。 项会连接的引用计数大于 0 或是否嵌入的项。  
   
-##  <a name="a-nameislinkeditema--coleserveritemislinkeditem"></a><a name="islinkeditem"></a>COleServerItem::IsLinkedItem  
+##  <a name="islinkeditem"></a>COleServerItem::IsLinkedItem  
  调用此函数可查看 OLE 项是否链接的项。  
   
 ```  
@@ -377,7 +412,7 @@ BOOL IsLinkedItem() const;
   
  很普遍链接和嵌入项使用同一个类。 `IsLinkedItem`使您可以链接的项的行为与嵌入项不同，但代码很多时候是公共。  
   
-##  <a name="a-namemsizeextenta--coleserveritemmsizeextent"></a><a name="m_sizeextent"></a>COleServerItem::m_sizeExtent  
+##  <a name="m_sizeextent"></a>COleServerItem::m_sizeExtent  
  此成员将告知服务器多少对象是在容器文档中可见。  
   
 ```  
@@ -387,7 +422,7 @@ CSize m_sizeExtent;
 ### <a name="remarks"></a>备注  
  默认实现[OnSetExtent](#onsetextent)设置此成员。  
   
-##  <a name="a-namenotifychangeda--coleserveritemnotifychanged"></a><a name="notifychanged"></a>COleServerItem::NotifyChanged  
+##  <a name="notifychanged"></a>COleServerItem::NotifyChanged  
  更改链接的项目后，请调用此函数。  
   
 ```  
@@ -409,7 +444,7 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ### <a name="remarks"></a>备注  
  如果容器项与自动链接到文档链接，该项目将更新以反映所做的更改。 在容器应用程序中使用 Microsoft 基础类库编写[COleClientItem::OnChange](../../mfc/reference/coleclientitem-class.md#onchange)在响应中调用。  
   
-##  <a name="a-nameondoverba--coleserveritemondoverb"></a><a name="ondoverb"></a>COleServerItem::OnDoVerb  
+##  <a name="ondoverb"></a>COleServerItem::OnDoVerb  
  由框架来执行指定的谓词调用。  
   
 ```  
@@ -437,7 +472,7 @@ virtual void OnDoVerb(LONG iVerb);
   
  有关详细信息，请参阅[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameondrawa--coleserveritemondraw"></a><a name="ondraw"></a>Coleserveritem:: Ondraw  
+##  <a name="ondraw"></a>Coleserveritem:: Ondraw  
  由框架调用，以将 OLE 项呈现到 metafile 中。  
   
 ```  
@@ -459,7 +494,7 @@ virtual BOOL OnDraw(
 ### <a name="remarks"></a>备注  
  OLE 项的图元文件表示用于在容器应用程序中显示的项。 如果容器应用程序使用 Microsoft 基础类库编写的通过使用图元文件[绘制](../../mfc/reference/coleclientitem-class.md#draw)相应成员函数[COleClientItem](../../mfc/reference/coleclientitem-class.md)对象。 没有默认实现。 必须重写此函数可绘制到指定的设备上下文的项。  
   
-##  <a name="a-nameondrawexa--coleserveritemondrawex"></a><a name="ondrawex"></a>COleServerItem::OnDrawEx  
+##  <a name="ondrawex"></a>COleServerItem::OnDrawEx  
  由框架，用于所有绘图调用。  
   
 ```  
@@ -495,7 +530,7 @@ virtual BOOL OnDrawEx(
   
  重写此函数而不提供方面的演示文稿数据`DVASPECT_CONTENT`，如`DVASPECT_ICON`或`DVASPECT_THUMBNAIL`。  
   
-##  <a name="a-nameongetclipboarddataa--coleserveritemongetclipboarddata"></a><a name="ongetclipboarddata"></a>COleServerItem::OnGetClipboardData  
+##  <a name="ongetclipboarddata"></a>COleServerItem::OnGetClipboardData  
  由框架调用以获取`COleDataSource`对象，其中包含通过调用将被放到剪贴板的所有数据[CopyToClipboard](#copytoclipboard)成员函数。  
   
 ```  
@@ -521,7 +556,7 @@ virtual COleDataSource* OnGetClipboardData(
 ### <a name="remarks"></a>备注  
  此函数的默认实现调用[GetClipboardData](#getclipboarddata)。  
   
-##  <a name="a-nameongetextenta--coleserveritemongetextent"></a><a name="ongetextent"></a>COleServerItem::OnGetExtent  
+##  <a name="ongetextent"></a>COleServerItem::OnGetExtent  
  由框架调用以检索大小， **HIMETRIC**单位 OLE 项。  
   
 ```  
@@ -551,7 +586,7 @@ virtual BOOL OnGetExtent(
 ### <a name="remarks"></a>备注  
  如果容器应用程序使用 Microsoft 基础类库编写的此函数时调用[GetExtent](../../mfc/reference/coleclientitem-class.md#getextent)相应成员函数`COleClientItem`调用对象。 默认实现不执行任何操作。 您必须自己实现它。 如果你想要在处理请求的 OLE 项的大小会进行特殊处理，重写此函数。  
   
-##  <a name="a-nameonhidea--coleserveritemonhide"></a><a name="onhide"></a>COleServerItem::OnHide  
+##  <a name="onhide"></a>COleServerItem::OnHide  
  由框架可以隐藏 OLE 项调用。  
   
 ```  
@@ -561,7 +596,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>备注  
  默认值调用**COleServerDoc::OnShowDocument (FALSE)**。 该函数还通知容器 OLE 项已被隐藏。 如果您想要隐藏 OLE 项时执行特殊处理，重写此函数。  
   
-##  <a name="a-nameoninitfromdataa--coleserveritemoninitfromdata"></a><a name="oninitfromdata"></a>COleServerItem::OnInitFromData  
+##  <a name="oninitfromdata"></a>COleServerItem::OnInitFromData  
  由框架调用以初始化 OLE 项使用的内容`pDataObject`。  
   
 ```  
@@ -585,7 +620,7 @@ virtual BOOL OnInitFromData(
   
  有关详细信息，请参阅[IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonopena--coleserveritemonopen"></a><a name="onopen"></a>COleServerItem::OnOpen  
+##  <a name="onopen"></a>COleServerItem::OnOpen  
  由框架显示 OLE 项显示在单独实例的服务器应用程序，而不是就地调用。  
   
 ```  
@@ -599,7 +634,7 @@ virtual void OnOpen();
   
  有关详细信息，请参阅[IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonqueryupdateitemsa--coleserveritemonqueryupdateitems"></a><a name="onqueryupdateitems"></a>COleServerItem::OnQueryUpdateItems  
+##  <a name="onqueryupdateitems"></a>COleServerItem::OnQueryUpdateItems  
  由框架来确定当前的服务器文档中的任何链接的项是否已过时的调用。  
   
 ```  
@@ -612,7 +647,7 @@ virtual BOOL OnQueryUpdateItems();
 ### <a name="remarks"></a>备注  
  如果已更改其源文档，但链接的项目尚未更新以反映在文档中的更改，项已过期。  
   
-##  <a name="a-nameonrenderdataa--coleserveritemonrenderdata"></a><a name="onrenderdata"></a>COleServerItem::OnRenderData  
+##  <a name="onrenderdata"></a>COleServerItem::OnRenderData  
  由框架用于检索指定的格式数据调用。  
   
 ```  
@@ -640,7 +675,7 @@ virtual BOOL OnRenderData(
   
  有关详细信息，请参阅[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)， [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)， [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)，和[TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonrenderfiledataa--coleserveritemonrenderfiledata"></a><a name="onrenderfiledata"></a>COleServerItem::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>COleServerItem::OnRenderFileData  
  由框架来检索指定格式的数据文件的存储介质时调用。  
   
 ```  
@@ -666,7 +701,7 @@ virtual BOOL OnRenderFileData(
   
  有关详细信息，请参阅[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonrenderglobaldataa--coleserveritemonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleServerItem::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>COleServerItem::OnRenderGlobalData  
  由框架来检索指定格式的数据在指定的存储介质全局内存时调用。  
   
 ```  
@@ -694,7 +729,7 @@ virtual BOOL OnRenderGlobalData(
   
  有关详细信息，请参阅[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonsetcolorschemea--coleserveritemonsetcolorscheme"></a><a name="onsetcolorscheme"></a>COleServerItem::OnSetColorScheme  
+##  <a name="onsetcolorscheme"></a>COleServerItem::OnSetColorScheme  
  由框架，以指定在编辑 OLE 项时要使用的颜色调色板调用。  
   
 ```  
@@ -713,7 +748,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
   
  有关详细信息，请参阅[IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonsetdataa--coleserveritemonsetdata"></a><a name="onsetdata"></a>COleServerItem::OnSetData  
+##  <a name="onsetdata"></a>COleServerItem::OnSetData  
  由 OLE 项的数据替换为指定的数据连接的框架调用。  
   
 ```  
@@ -743,7 +778,7 @@ virtual BOOL OnSetData(
   
  有关详细信息，请参阅[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)， [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)，和[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonsetextenta--coleserveritemonsetextent"></a><a name="onsetextent"></a>COleServerItem::OnSetExtent  
+##  <a name="onsetextent"></a>COleServerItem::OnSetExtent  
  由框架以通知 OLE 该项多少空间可供其在容器文档中调用。  
   
 ```  
@@ -773,7 +808,7 @@ virtual BOOL OnSetExtent(
 ### <a name="remarks"></a>备注  
  如果容器应用程序使用 Microsoft 基础类库编写的此函数时调用[SetExtent](../../mfc/reference/coleclientitem-class.md#setextent)相应成员函数`COleClientItem`调用对象。 默认实现将设置[m_sizeExtent](#m_sizeextent)为指定大小的成员如果`nDrawAspect`是`DVASPECT_CONTENT`; 否则返回 0。 重写此函数以执行特殊处理，当您更改的项的大小。  
   
-##  <a name="a-nameonshowa--coleserveritemonshow"></a><a name="onshow"></a>COleServerItem::OnShow  
+##  <a name="onshow"></a>COleServerItem::OnShow  
  由框架来指示要就地显示 OLE 项的服务器应用程序调用。  
   
 ```  
@@ -785,7 +820,7 @@ virtual void OnShow();
   
  如果你想要显示一个 OLE 项时执行特殊处理，重写此函数。  
   
-##  <a name="a-nameonupdatea--coleserveritemonupdate"></a><a name="onupdate"></a>COleServerItem::OnUpdate  
+##  <a name="onupdate"></a>COleServerItem::OnUpdate  
  在修改的项时，由框架调用。  
   
 ```  
@@ -820,7 +855,7 @@ virtual void OnUpdate(
 ### <a name="remarks"></a>备注  
  默认实现调用[NotifyChanged](#notifychanged)，而不管当时提示或发件人。  
   
-##  <a name="a-nameonupdateitemsa--coleserveritemonupdateitems"></a><a name="onupdateitems"></a>COleServerItem::OnUpdateItems  
+##  <a name="onupdateitems"></a>COleServerItem::OnUpdateItems  
  由框架来更新服务器文档中的所有项调用。  
   
 ```  
@@ -830,7 +865,7 @@ virtual void OnUpdateItems();
 ### <a name="remarks"></a>备注  
  默认实现调用[UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)所有`COleClientItem`文档中的对象。  
   
-##  <a name="a-namesetitemnamea--coleserveritemsetitemname"></a><a name="setitemname"></a>COleServerItem::SetItemName  
+##  <a name="setitemname"></a>COleServerItem::SetItemName  
  当创建某个链接的项可将其名称设置时，请调用此函数。  
   
 ```  

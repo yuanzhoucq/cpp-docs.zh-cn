@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComControl
+- ATLCTL/ATL::CComControl
+- ATLCTL/ATL::CComControl::CComControl
+- ATLCTL/ATL::CComControl::ControlQueryInterface
+- ATLCTL/ATL::CComControl::CreateControlWindow
+- ATLCTL/ATL::CComControl::FireOnChanged
+- ATLCTL/ATL::CComControl::FireOnRequestEdit
+- ATLCTL/ATL::CComControl::MessageBox
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +108,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ## <a name="requirements"></a>要求  
  **标头︰** atlctl.h  
   
-##  <a name="a-nameccomcontrola--ccomcontrolccomcontrol"></a><a name="ccomcontrol"></a>CComControl::CComControl  
+##  <a name="ccomcontrol"></a>CComControl::CComControl  
  构造函数。  
   
 ```
@@ -111,7 +118,7 @@ CComControl();
 ### <a name="remarks"></a>备注  
  调用[CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase)构造函数，并传递`m_hWnd`数据成员通过继承[CWindowImpl](../../atl/reference/cwindowimpl-class.md)。  
   
-##  <a name="a-namecontrolqueryinterfacea--ccomcontrolcontrolqueryinterface"></a><a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
  检索指向所请求的接口的指针。  
   
 ```
@@ -131,7 +138,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM&#15;](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
-##  <a name="a-namecreatecontrolwindowa--ccomcontrolcreatecontrolwindow"></a><a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
  默认情况下，通过调用创建该控件的窗口`CWindowImpl::Create`。  
   
 ```
@@ -151,7 +158,7 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM&#16;](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
-##  <a name="a-namefireonchangeda--ccomcontrolfireonchanged"></a><a name="fireonchanged"></a>CComControl::FireOnChanged  
+##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
  通知已更改的控件属性的容器的接收器。  
   
 ```
@@ -173,7 +180,7 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM&#17;](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
-##  <a name="a-namefireonrequestedita--ccomcontrolfireonrequestedit"></a><a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
  控件属性将要更改以及如何继续执行，该对象要求接收器通知容器的接收器。  
   
 ```
@@ -196,7 +203,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM&#18;](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
-##  <a name="a-namemessageboxa--ccomcontrolmessagebox"></a><a name="messagebox"></a>CComControl::MessageBox  
+##  <a name="messagebox"></a>CComControl::MessageBox  
  调用此方法来创建、 显示和操作一个消息框。  
   
 ```

@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAdapt
-- ATL.CAdapt<T>
-- ATL::CAdapt
-- ATL::CAdapt<T>
 - CAdapt
+- ATLCOMCLI/ATL::CAdapt
+- ATLCOMCLI/ATL::CAdapt::CAdapt
+- ATLCOMCLI/ATL::CAdapt::m_T
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +96,7 @@ class CAdapt
 ## <a name="requirements"></a>要求  
  **标头︰** atlcomcli.h  
   
-##  <a name="a-namecadapta--cadaptcadapt"></a><a name="cadapt"></a>CAdapt::CAdapt  
+##  <a name="cadapt"></a>CAdapt::CAdapt  
  构造函数允许要进行构造，从已适配类型的对象复制或从另一个适配器对象进行复制的默认的适配器对象。  
   
 ```
@@ -115,7 +114,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
  *rSrCA*  
  一个适配器对象，其包含的数据应要复制 （或移动） 到新构造的适配器的对象。  
   
-##  <a name="a-namemta--cadaptmt"></a><a name="m_t"></a>CAdapt::m_T  
+##  <a name="m_t"></a>CAdapt::m_T  
  包含正在适配的数据。  
   
 ```
@@ -125,7 +124,7 @@ T m_T;
 ### <a name="remarks"></a>备注  
  这**公共**数据成员可以直接或间接使用访问[运算符 const T.](#operator_const_t_amp)和[运算符 T.](#operator_t_amp)。  
   
-##  <a name="a-nameoperatorconsttampa--cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
+##  <a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
  返回**const**引用[m_T](#m_t)成员，使该适配器对象，就好像类型的对象视作`T`。  
   
 ```  
@@ -135,7 +134,7 @@ operator const T&() const;
 ### <a name="return-value"></a>返回值  
  一个**const**引用`m_T`。  
   
-##  <a name="a-nameoperatortampa--cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt::operator T&amp;  
+##  <a name="operator_t_amp"></a>CAdapt::operator T&amp;  
  返回对[m_T](#m_t)成员，使该适配器对象，就好像类型的对象视作`T`。  
   
 ```  
@@ -145,7 +144,7 @@ operator T&();
 ### <a name="return-value"></a>返回值  
  对引用`m_T`。  
   
-##  <a name="a-nameoperatorlta--cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt::operator&lt;  
+##  <a name="operator_lt"></a>CAdapt::operator&lt;  
  将与已适配类型的对象进行比较[m_T](#m_t)。  
   
 ```
@@ -159,7 +158,7 @@ bool operator<(const T& rSrc) const;
 ### <a name="return-value"></a>返回值  
  之间的比较结果`m_T`和`rSrc`。  
   
-##  <a name="a-nameoperatoreqa--cadaptoperator-"></a><a name="operator_eq"></a>CAdapt::operator =  
+##  <a name="operator_eq"></a>CAdapt::operator =  
  赋值运算符将该参数分配`rSrc`，到的数据成员[m_T](#m_t) ，并返回当前的适配器对象。  
   
 ```
@@ -178,7 +177,7 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ### <a name="return-value"></a>返回值  
  对当前对象的引用。  
   
-##  <a name="a-nameoperatoreqeqa--cadaptoperator-"></a><a name="operator_eq_eq"></a>CAdapt::operator = =  
+##  <a name="operator_eq_eq"></a>CAdapt::operator = =  
  将与已适配类型的对象进行比较[m_T](#m_t)。  
   
 ```

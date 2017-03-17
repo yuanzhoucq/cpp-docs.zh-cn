@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlAutoThreadModuleT
-- ATL::CAtlAutoThreadModuleT
 - CAtlAutoThreadModuleT
+- ATLBASE/ATL::CAtlAutoThreadModuleT
+- ATLBASE/ATL::CAtlAutoThreadModuleT::GetDefaultThreads
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +88,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
-##  <a name="a-namegetdefaultthreadsa--catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
  此静态函数动态计算并返回最大对于 EXE 模块，基于处理器的数量的线程数。  
   
 ```

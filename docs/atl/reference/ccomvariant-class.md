@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComVariant
-- ATL::CComVariant
 - CComVariant
+- ATLCOMCLI/ATL::CComVariant
+- ATLCOMCLI/ATL::CComVariant::CComVariant
+- ATLCOMCLI/ATL::CComVariant::Attach
+- ATLCOMCLI/ATL::CComVariant::ChangeType
+- ATLCOMCLI/ATL::CComVariant::Clear
+- ATLCOMCLI/ATL::CComVariant::Copy
+- ATLCOMCLI/ATL::CComVariant::CopyTo
+- ATLCOMCLI/ATL::CComVariant::Detach
+- ATLCOMCLI/ATL::CComVariant::GetSize
+- ATLCOMCLI/ATL::CComVariant::ReadFromStream
+- ATLCOMCLI/ATL::CComVariant::SetByRef
+- ATLCOMCLI/ATL::CComVariant::WriteToStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +110,7 @@ class CComVariant : public tagVARIANT
 ## <a name="requirements"></a>要求  
  **标头︰** atlcomcli.h  
   
-##  <a name="a-nameattacha--ccomvariantattach"></a><a name="attach"></a>CComVariant::Attach  
+##  <a name="attach"></a>CComVariant::Attach  
  安全地清除的当前内容`CComVariant`对象，请将复制的内容`pSrc`到此对象，然后设置变体类型的`pSrc`到`VT_EMPTY`。  
   
 ```
@@ -117,7 +127,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="remarks"></a>备注  
  所保存的数据的所有权`pSrc`转移到`CComVariant`对象。  
   
-##  <a name="a-nameccomvarianta--ccomvariantccomvariant"></a><a name="ccomvariant"></a>CComVariant::CComVariant  
+##  <a name="ccomvariant"></a>CComVariant::CComVariant  
  每个构造函数会处理的安全初始化`CComVariant`对象通过调用`VariantInit`Win32 函数或通过设置对象的值和根据传递的参数的类型。  
   
 ```
@@ -185,7 +195,7 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="remarks"></a>备注  
  通过调用的析构函数管理清理[CComVariant::Clear](#clear)。  
   
-##  <a name="a-namedtora--ccomvariantccomvariant"></a><a name="dtor"></a>CComVariant:: ~ CComVariant  
+##  <a name="dtor"></a>CComVariant:: ~ CComVariant  
  析构函数。  
   
 ```
@@ -195,7 +205,7 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="remarks"></a>备注  
  此方法通过调用管理清理[CComVariant::Clear](#clear)。  
   
-##  <a name="a-namechangetypea--ccomvariantchangetype"></a><a name="changetype"></a>CComVariant::ChangeType  
+##  <a name="changetype"></a>CComVariant::ChangeType  
  将转换`CComVariant`对象传递给新的类型。  
   
 ```
@@ -215,7 +225,7 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 ### <a name="remarks"></a>备注  
  如果传递的值`pSrc`，`ChangeType`将使用此**VARIANT**作为转换的源。 否则为`CComVariant`对象将成为源。  
   
-##  <a name="a-namecleara--ccomvariantclear"></a><a name="clear"></a>CComVariant::Clear  
+##  <a name="clear"></a>CComVariant::Clear  
  清除`CComVariant`对象通过调用`VariantClear`Win32 函数。  
   
 ```
@@ -228,7 +238,7 @@ HRESULT Clear();
 ### <a name="remarks"></a>备注  
  析构函数自动调用**清除**。  
   
-##  <a name="a-namecopya--ccomvariantcopy"></a><a name="copy"></a>CComVariant::Copy  
+##  <a name="copy"></a>CComVariant::Copy  
  释放`CComVariant`对象，然后将其分配一份指定**VARIANT**。  
   
 ```
@@ -242,7 +252,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namecopytoa--ccomvariantcopyto"></a><a name="copyto"></a>CComVariant::CopyTo  
+##  <a name="copyto"></a>CComVariant::CopyTo  
  中的内容复制`CComVariant`对象。  
   
 ```
@@ -259,7 +269,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 ### <a name="remarks"></a>备注  
  **CComVariant**对象的类型必须是`VT_BSTR`。  
   
-##  <a name="a-namedetacha--ccomvariantdetach"></a><a name="detach"></a>CComVariant::Detach  
+##  <a name="detach"></a>CComVariant::Detach  
  分离基础**VARIANT**从`CComVariant`对象，并将该对象的类型设置为`VT_EMPTY`。  
   
 ```
@@ -276,7 +286,7 @@ HRESULT Detach(VARIANT* pDest);
 ### <a name="remarks"></a>备注  
  请注意，内容`VARIANT`所引用的`pDest`自动将所赋的值和类型调用前清除**CComVariant**对象。  
   
-##  <a name="a-namegetsizea--ccomvariantgetsize"></a><a name="getsize"></a>CComVariant::GetSize  
+##  <a name="getsize"></a>CComVariant::GetSize  
  对于简单的固定大小`VARIANT`s，此方法返回`sizeof`基础数据类型加上`sizeof(VARTYPE)`。  
   
 ```
@@ -293,7 +303,7 @@ ULONG GetSize() const;
   
  此方法返回的大小与使用的字节数的数目匹配[CComVariant::WriteToStream](#writetostream)成功的情况下。  
   
-##  <a name="a-nameoperatoreqa--ccomvariantoperator-"></a><a name="operator_eq"></a>CComVariant::operator =  
+##  <a name="operator_eq"></a>CComVariant::operator =  
  将分配一个值，并相应类型设置为`CComVariant`对象。  
   
 ```
@@ -354,7 +364,7 @@ CComVariant& operator=(char cSrc) throw();
  `cSrc`  
  [in]要分配给 char`CComVariant`对象。 一种`CComVariant`对象将被**VT_I1**。  
   
-##  <a name="a-nameoperatoreqeqa--ccomvariantoperator-"></a><a name="operator_eq_eq"></a>CComVariant::operator = =  
+##  <a name="operator_eq_eq"></a>CComVariant::operator = =  
  指示是否`CComVariant`对象等于指定**VARIANT**。  
   
 ```
@@ -366,7 +376,7 @@ bool operator==(const VARIANT& varSrc) const throw();
   
  该运算符只变体类型的值进行比较。 它将比较字符串、 整数和浮点型的点，但不是数组或记录。  
   
-##  <a name="a-nameoperatorneqa--ccomvariantoperator-"></a><a name="operator_neq"></a>CComVariant::operator ！ =  
+##  <a name="operator_neq"></a>CComVariant::operator ！ =  
  指示是否`CComVariant`对象不等于指定**VARIANT**。  
   
 ```
@@ -378,7 +388,7 @@ bool operator!=(const VARIANT& varSrc) const throw();
   
  该运算符只变体类型的值进行比较。 它将比较字符串、 整数和浮点型的点，但不是数组或记录。  
   
-##  <a name="a-nameoperatorlta--ccomvariantoperator-lt"></a><a name="operator_lt"></a>CComVariant::operator&lt;  
+##  <a name="operator_lt"></a>CComVariant::operator&lt;  
  指示是否`CComVariant`对象是早于指定**VARIANT**。  
   
 ```
@@ -388,7 +398,7 @@ bool operator<(const VARIANT& varSrc) const throw();
 ### <a name="remarks"></a>备注  
  返回**true**如果的值`CComVariant`对象小于的值*varSrc*。 否则为**false**。 该运算符使用用户的默认区域设置来执行比较。  
   
-##  <a name="a-nameoperatorgta--ccomvariantoperator-gt"></a><a name="operator_gt"></a>CComVariant::operator&gt;  
+##  <a name="operator_gt"></a>CComVariant::operator&gt;  
  指示是否`CComVariant`对象是否大于指定**VARIANT**。  
   
 ```
@@ -398,7 +408,7 @@ bool operator>(const VARIANT& varSrc) const throw();
 ### <a name="remarks"></a>备注  
  返回**true**如果的值`CComVariant`对象参数的值大于*varSrc*。 否则为**false**。 该运算符使用用户的默认区域设置来执行比较。  
   
-##  <a name="a-namereadfromstreama--ccomvariantreadfromstream"></a><a name="readfromstream"></a>CComVariant::ReadFromStream  
+##  <a name="readfromstream"></a>CComVariant::ReadFromStream  
  设置基础**VARIANT**到**VARIANT**包含在指定的流。  
   
 ```
@@ -415,7 +425,7 @@ HRESULT ReadFromStream(IStream* pStream);
 ### <a name="remarks"></a>备注  
  **ReadToStream**要求对以前调用[WriteToStream](#writetostream)。  
   
-##  <a name="a-namesetbyrefa--ccomvariantsetbyref"></a><a name="setbyref"></a>CComVariant::SetByRef  
+##  <a name="setbyref"></a>CComVariant::SetByRef  
  初始化`CComVariant`对象并设置**vt**成员**VT_BYREF**。  
   
 ```
@@ -435,7 +445,7 @@ void SetByRef(T* pT) throw();
   
  [!code-cpp[NVC_ATL_Utilities #&76;](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]  
   
-##  <a name="a-namewritetostreama--ccomvariantwritetostream"></a><a name="writetostream"></a>CComVariant::WriteToStream  
+##  <a name="writetostream"></a>CComVariant::WriteToStream  
  将保存基础**VARIANT**到流。  
   
 ```

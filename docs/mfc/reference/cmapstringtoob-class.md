@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMapStringToOb
+- AFXCOLL/CMapStringToOb
+- AFXCOLL/CMapStringToOb::CMapStringToOb
+- AFXCOLL/CMapStringToOb::GetCount
+- AFXCOLL/CMapStringToOb::GetHashTableSize
+- AFXCOLL/CMapStringToOb::GetNextAssoc
+- AFXCOLL/CMapStringToOb::GetSize
+- AFXCOLL/CMapStringToOb::GetStartPosition
+- AFXCOLL/CMapStringToOb::HashKey
+- AFXCOLL/CMapStringToOb::InitHashTable
+- AFXCOLL/CMapStringToOb::IsEmpty
+- AFXCOLL/CMapStringToOb::Lookup
+- AFXCOLL/CMapStringToOb::LookupKey
+- AFXCOLL/CMapStringToOb::RemoveAll
+- AFXCOLL/CMapStringToOb::RemoveKey
+- AFXCOLL/CMapStringToOb::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +118,7 @@ class CMapStringToOb : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxcoll.h  
   
-##  <a name="a-namecmapstringtooba--cmapstringtoobcmapstringtoob"></a><a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
+##  <a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
  构造一个空`CString`到`CObject*`映射。  
   
 ```  
@@ -133,7 +148,7 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
   
  请参阅[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)可以列出`CAge`集合的所有示例中使用的类。  
   
-##  <a name="a-namegetcounta--cmapstringtoobgetcount"></a><a name="getcount"></a>CMapStringToOb::GetCount  
+##  <a name="getcount"></a>CMapStringToOb::GetCount  
  确定在映射中的元素数量。  
   
 ```  
@@ -160,7 +175,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections #&64;](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
   
-##  <a name="a-namegethashtablesizea--cmapstringtoobgethashtablesize"></a><a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
  确定当前的哈希表中的元素数。  
   
 ```  
@@ -182,7 +197,7 @@ UINT GetHashTableSize() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT GetHashTableSize （) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT GetHashTableSize （) const;**|  
   
-##  <a name="a-namegetnextassoca--cmapstringtoobgetnextassoc"></a><a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
+##  <a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
  检索处的地图元素*rNextPosition*，然后更新*rNextPosition*来指代映射中的下一个元素。  
   
 ```  
@@ -239,7 +254,7 @@ void GetNextAssoc(
   
  `Bart : a CAge at $45D4 13`  
   
-##  <a name="a-namegetsizea--cmapstringtoobgetsize"></a><a name="getsize"></a>CMapStringToOb::GetSize  
+##  <a name="getsize"></a>CMapStringToOb::GetSize  
  返回地图元素的数。  
   
 ```  
@@ -266,7 +281,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&67;](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapstringtoobgetstartposition"></a><a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
+##  <a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
  通过返回启动映射迭代**位置**值，可以传递给`GetNextAssoc`调用。  
   
 ```  
@@ -293,7 +308,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>示例  
  请参阅示例[CMapStringToOb::GetNextAssoc](#getnextassoc)。  
   
-##  <a name="a-namehashkeya--cmapstringtoobhashkey"></a><a name="hashkey"></a>CMapStringToOb::HashKey  
+##  <a name="hashkey"></a>CMapStringToOb::HashKey  
  计算指定的键的哈希值。  
   
 ```  
@@ -319,7 +334,7 @@ UINT HashKey(LPCTSTR key) const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (WORD** `key` **) 常量;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT HashKey (WORD** `key` **) 常量;**|  
   
-##  <a name="a-nameinithashtablea--cmapstringtoobinithashtable"></a><a name="inithashtable"></a>CMapStringToOb::InitHashTable  
+##  <a name="inithashtable"></a>CMapStringToOb::InitHashTable  
  初始化哈希表。  
   
 ```  
@@ -349,7 +364,7 @@ void InitHashTable(
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void InitHashTable (UINT** `hashSize` **，BOOL** `bAllocNow` **= TRUE);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **，BOOL** `bAllocNow` **= TRUE);**|  
   
-##  <a name="a-nameisemptya--cmapstringtoobisempty"></a><a name="isempty"></a>CMapStringToOb::IsEmpty  
+##  <a name="isempty"></a>CMapStringToOb::IsEmpty  
  确定是否映射为空。  
   
 ```  
@@ -374,7 +389,7 @@ BOOL IsEmpty() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL IsEmpty （) 常量;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL IsEmpty （) 常量;**|  
   
-##  <a name="a-namelookupa--cmapstringtooblookup"></a><a name="lookup"></a>CMapStringToOb::Lookup  
+##  <a name="lookup"></a>CMapStringToOb::Lookup  
  返回`CObject`指针基于`CString`值。  
   
 ```  
@@ -412,7 +427,7 @@ BOOL Lookup(
   
  [!code-cpp[NVC_MFCCollections #&68;](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
   
-##  <a name="a-namelookupkeya--cmapstringtooblookupkey"></a><a name="lookupkey"></a>CMapStringToOb::LookupKey  
+##  <a name="lookupkey"></a>CMapStringToOb::LookupKey  
  返回与指定的键值关联的键的引用。  
   
 ```  
@@ -441,7 +456,7 @@ BOOL LookupKey(
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **，LPCTSTR &** `rKey` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **，LPCTSTR &** `rKey` **) const;**|  
   
-##  <a name="a-nameoperatorata--cmapstringtooboperator--"></a><a name="operator_at"></a>CMapStringToOb::operator]  
+##  <a name="operator_at"></a>CMapStringToOb::operator]  
  方便代替`SetAt`成员函数。  
   
 ```  
@@ -480,7 +495,7 @@ CObject*& operator[ ](lpctstr key);
   
  `[Bart] = a CAge at $497E 13`  
   
-##  <a name="a-nameremovealla--cmapstringtoobremoveall"></a><a name="removeall"></a>CMapStringToOb::RemoveAll  
+##  <a name="removeall"></a>CMapStringToOb::RemoveAll  
  从该映射中移除所有元素，并销毁`CString`密钥对象。  
   
 ```  
@@ -508,7 +523,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections #&69;](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
   
-##  <a name="a-nameremovekeya--cmapstringtoobremovekey"></a><a name="removekey"></a>CMapStringToOb::RemoveKey  
+##  <a name="removekey"></a>CMapStringToOb::RemoveKey  
  查找与提供的键; 与对应的映射项然后，如果找到该键，则移除的项。  
   
 ```  
@@ -551,7 +566,7 @@ BOOL RemoveKey(LPCTSTR key);
   
  `[Bart] = a CAge at $4634 13`  
   
-##  <a name="a-namesetata--cmapstringtoobsetat"></a><a name="setat"></a>CMapStringToOb::SetAt  
+##  <a name="setat"></a>CMapStringToOb::SetAt  
  主要方法在地图中插入一个元素。  
   
 ```  

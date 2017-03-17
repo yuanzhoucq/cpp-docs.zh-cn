@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAsyncSocket
+- AFXSOCK/CAsyncSocket
+- AFXSOCK/CAsyncSocket::CAsyncSocket
+- AFXSOCK/CAsyncSocket::Accept
+- AFXSOCK/CAsyncSocket::AsyncSelect
+- AFXSOCK/CAsyncSocket::Attach
+- AFXSOCK/CAsyncSocket::Bind
+- AFXSOCK/CAsyncSocket::Close
+- AFXSOCK/CAsyncSocket::Connect
+- AFXSOCK/CAsyncSocket::Create
+- AFXSOCK/CAsyncSocket::Detach
+- AFXSOCK/CAsyncSocket::FromHandle
+- AFXSOCK/CAsyncSocket::GetLastError
+- AFXSOCK/CAsyncSocket::GetPeerName
+- AFXSOCK/CAsyncSocket::GetPeerNameEx
+- AFXSOCK/CAsyncSocket::GetSockName
+- AFXSOCK/CAsyncSocket::GetSockNameEx
+- AFXSOCK/CAsyncSocket::GetSockOpt
+- AFXSOCK/CAsyncSocket::IOCtl
+- AFXSOCK/CAsyncSocket::Listen
+- AFXSOCK/CAsyncSocket::Receive
+- AFXSOCK/CAsyncSocket::ReceiveFrom
+- AFXSOCK/CAsyncSocket::ReceiveFromEx
+- AFXSOCK/CAsyncSocket::Send
+- AFXSOCK/CAsyncSocket::SendTo
+- AFXSOCK/CAsyncSocket::SendToEx
+- AFXSOCK/CAsyncSocket::SetSockOpt
+- AFXSOCK/CAsyncSocket::ShutDown
+- AFXSOCK/CASyncSocket::Socket
+- AFXSOCK/CAsyncSocket::OnAccept
+- AFXSOCK/CAsyncSocket::OnClose
+- AFXSOCK/CAsyncSocket::OnConnect
+- AFXSOCK/CAsyncSocket::OnOutOfBandData
+- AFXSOCK/CAsyncSocket::OnReceive
+- AFXSOCK/CAsyncSocket::OnSend
+- AFXSOCK/CAsyncSocket::m_hSocket
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -136,7 +171,7 @@ class CAsyncSocket : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxsock.h  
   
-##  <a name="a-nameaccepta--casyncsocketaccept"></a><a name="accept"></a>CAsyncSocket::Accept  
+##  <a name="accept"></a>CAsyncSocket::Accept  
  调用该成员函数以接受套接字上的连接。  
   
 ```  
@@ -184,7 +219,7 @@ virtual BOOL Accept(
   
  参数`lpSockAddr`是填充连接套接字时，该地址的结果参数，因为识别通信层。 **接受**用于基于连接的套接字类型如**SOCK_STREAM**。  
   
-##  <a name="a-nameasyncselecta--casyncsocketasyncselect"></a><a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
+##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
  调用该成员函数以请求为套接字的事件通知。  
   
 ```  
@@ -221,7 +256,7 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 ### <a name="remarks"></a>备注  
  此函数用于指定哪些 MFC 回调通知函数将调用为套接字。 `AsyncSelect`自动将此套接字设置为非锁定模式。 有关详细信息，请参阅文章[Windows 套接字︰ 套接字通知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="a-nameattacha--casyncsocketattach"></a><a name="attach"></a>CAsyncSocket::Attach  
+##  <a name="attach"></a>CAsyncSocket::Attach  
  调用此成员函数可将附加`hSocket`的句柄`CAsyncSocket`对象。  
   
 ```  
@@ -254,7 +289,7 @@ BOOL Attach(
 ### <a name="remarks"></a>备注  
  **套接字**句柄存储在该对象的[m_hSocket](#m_hsocket)数据成员。  
   
-##  <a name="a-namebinda--casyncsocketbind"></a><a name="bind"></a>CAsyncSocket::Bind  
+##  <a name="bind"></a>CAsyncSocket::Bind  
  调用该成员函数以将本地地址与套接字相关联。  
   
 ```  
@@ -305,7 +340,7 @@ BOOL Bind (
 ### <a name="remarks"></a>备注  
  之前未连接的数据报或流套接字上使用此例程后续**连接**或`Listen`调用。 它可以接受连接请求之前，侦听服务器套接字必须选择一个端口号，并将它已知对 Windows 套接字通过调用**绑定**。 **将绑定**通过将本地名称分配给未命名的套接字建立套接字的本地关联 （主机地址/端口号）。  
   
-##  <a name="a-namecasyncsocketa--casyncsocketcasyncsocket"></a><a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
+##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
  构造一个空的套接字对象。  
   
 ```  
@@ -315,7 +350,7 @@ CAsyncSocket();
 ### <a name="remarks"></a>备注  
  构造该对象，则必须调用其**创建**成员函数来创建**套接字**数据结构，并将其地址的绑定。 (在服务器端的 Windows 套接字通信，当侦听套接字创建要在中使用的套接字**接受**调用时，不要调用**创建**对于此套接字。)  
   
-##  <a name="a-nameclosea--casyncsocketclose"></a><a name="close"></a>CAsyncSocket::Close  
+##  <a name="close"></a>CAsyncSocket::Close  
  关闭套接字。  
   
 ```  
@@ -327,7 +362,7 @@ virtual void Close();
   
  有关`CAsyncSocket`，但不是能为`CSocket`的语义**关闭**受套接字选项**SO_LINGER**和**SO_DONTLINGER**。 有关详细信息，请参见成员函数`GetSockOpt`。  
   
-##  <a name="a-nameconnecta--casyncsocketconnect"></a><a name="connect"></a>CAsyncSocket::Connect  
+##  <a name="connect"></a>CAsyncSocket::Connect  
  调用此成员函数来建立与未连接的流或数据报套接字连接。  
   
 ```  
@@ -398,7 +433,7 @@ BOOL Connect(
   
  数据报套接字 (类型**SOCK_DGRAM**)，默认目标设置，它将在后续使用**发送**和**接收**调用。  
   
-##  <a name="a-namecreatea--casyncsocketcreate"></a><a name="create"></a>CAsyncSocket::Create  
+##  <a name="create"></a>CAsyncSocket::Create  
  调用**创建**后构造套接字对象创建 Windows 套接字并将其附加的成员函数。  
   
 ```  
@@ -470,14 +505,14 @@ BOOL Create(
   
  有关流和数据报套接字的详细信息，请参阅文章[Windows 套接字︰ 背景](../../mfc/windows-sockets-background.md)和[Windows 套接字︰ 端口和套接字地址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
   
-##  <a name="a-namedetacha--casyncsocketdetach"></a><a name="detach"></a>CAsyncSocket::Detach  
+##  <a name="detach"></a>CAsyncSocket::Detach  
  调用此成员函数以分离**套接字**以处理`m_hSocket`数据成员从`CAsyncSocket`对象并设置`m_hSocket`到**NULL**。  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="a-namefromhandlea--casyncsocketfromhandle"></a><a name="fromhandle"></a>CAsyncSocket::FromHandle  
+##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
  返回一个指向`CAsyncSocket`对象。  
   
 ```  
@@ -494,7 +529,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="remarks"></a>备注  
  在给定**套接字**处理，如果`CAsyncSocket`对象未附加到该句柄，成员函数将返回**NULL**。  
   
-##  <a name="a-namegetlasterrora--casyncsocketgetlasterror"></a><a name="getlasterror"></a>CAsyncSocket::GetLastError  
+##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
  调用该成员函数以获取有关失败的最后一个操作的错误状态。  
   
 ```  
@@ -509,7 +544,7 @@ static int PASCAL GetLastError();
   
  有关错误代码的详细信息，请参阅[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
   
-##  <a name="a-namegetpeernamea--casyncsocketgetpeername"></a><a name="getpeername"></a>CAsyncSocket::GetPeerName  
+##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
  调用该成员函数以获取此套接字连接到的对等方套接字地址。  
   
 ```  
@@ -554,7 +589,7 @@ BOOL GetPeerName(
 ### <a name="remarks"></a>备注  
  若要处理 IPv6 地址，使用[CAsyncSocket::GetPeerNameEx](#getpeernameex)。  
   
-##  <a name="a-namegetpeernameexa--casyncsocketgetpeernameex"></a><a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
+##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
  调用该成员函数以获取此套接字是连接 （句柄 IPv6 地址） 的对等方套接字地址。  
   
 ```  
@@ -588,7 +623,7 @@ BOOL GetPeerNameEx(
 ### <a name="remarks"></a>备注  
  此函数相当于[CAsyncSocket::GetPeerName](#getpeername)之处在于它可以处理 IPv6 地址也较旧的协议。  
   
-##  <a name="a-namegetsocknamea--casyncsocketgetsockname"></a><a name="getsockname"></a>CAsyncSocket::GetSockName  
+##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
  调用此成员函数可获取套接字的本地名称。  
   
 ```  
@@ -635,7 +670,7 @@ BOOL GetSockName(
   
  若要处理 IPv6 地址，使用[CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="a-namegetsocknameexa--casyncsocketgetsocknameex"></a><a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
+##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
  调用此成员函数可获取套接字 （句柄 IPv6 地址） 的本地名称。  
   
 ```  
@@ -671,7 +706,7 @@ BOOL GetSockNameEx(
   
  此调用时尤其有用**连接**已拨通而无需这样做**绑定**第一次; 此调用将提供通过它可以确定已由系统设置的本地关联的唯一方法。  
   
-##  <a name="a-namegetsockopta--casyncsocketgetsockopt"></a><a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
+##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
  调用此成员函数以检索套接字选项。  
   
 ```  
@@ -745,7 +780,7 @@ BOOL GetSockOpt(
   
  调用`GetSockOpt`使用不受支持的选项将导致的错误代码为**WSAENOPROTOOPT**从重返回`GetLastError`。  
   
-##  <a name="a-nameioctla--casyncsocketioctl"></a><a name="ioctl"></a>CAsyncSocket::IOCtl  
+##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
  调用此成员函数可控制套接字的模式。  
   
 ```  
@@ -785,7 +820,7 @@ BOOL IOCtl(
   
  此函数是子集**ioctl()**当用在 Berkeley 套接字。 特别是，没有命令等效于**FIOASYNC**，尽管**SIOCATMARK**是只套接字级别命令这受支持。  
   
-##  <a name="a-namelistena--casyncsocketlisten"></a><a name="listen"></a>CAsyncSocket::Listen  
+##  <a name="listen"></a>CAsyncSocket::Listen  
  调用该成员函数以侦听传入连接请求。  
   
 ```  
@@ -826,14 +861,14 @@ BOOL Listen(int nConnectionBacklog = 5);
   
  `Listen`尝试继续正常工作理性时没有可用的端口 （描述符）。 之前该队列为空，它将接受连接。 如果端口可用后，稍后调用`Listen`或**接受**将重新填充队列向当前或最近"积压工作中，"如果可能，并重新开始侦听传入连接。  
   
-##  <a name="a-namemhsocketa--casyncsocketmhsocket"></a><a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
+##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
  包含**套接字**处理为套接字封装由此`CAsyncSocket`对象。  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="a-nameonaccepta--casyncsocketonaccept"></a><a name="onaccept"></a>CAsyncSocket::OnAccept  
+##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
  由框架调用以通知它可以通过调用接受挂起的连接请求的侦听套接字[接受](#accept)成员函数。  
   
 ```  
@@ -851,7 +886,7 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[Windows 套接字︰ 套接字通知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="a-nameonclosea--casyncsocketonclose"></a><a name="onclose"></a>CAsyncSocket::OnClose  
+##  <a name="onclose"></a>CAsyncSocket::OnClose  
  由框架来通知此套接字已连接套接字已由其进程关闭调用。  
   
 ```  
@@ -873,7 +908,7 @@ virtual void OnClose(int nErrorCode);
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[Windows 套接字︰ 套接字通知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="a-nameonconnecta--casyncsocketonconnect"></a><a name="onconnect"></a>CAsyncSocket::OnConnect  
+##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
  由框架来通知此连接的套接字完成其连接尝试是否成功或错误地调用。  
   
 ```  
@@ -924,7 +959,7 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAsyncSocket #&1;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="a-nameonoutofbanddataa--casyncsocketonoutofbanddata"></a><a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
+##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
  由框架用于通知的接收套接字上发送的套接字有要发送的带外数据调用。  
   
 ```  
@@ -944,7 +979,7 @@ virtual void OnOutOfBandData(int nErrorCode);
   
  MFC 支持带外数据，但类的用户`CAsyncSocket`我们建议您不要使用它。 更简便的方法是创建第二个套接字来传递此类数据。 有关带外数据的详细信息，请参阅[Windows 套接字︰ 套接字通知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="a-nameonreceivea--casyncsocketonreceive"></a><a name="onreceive"></a>CAsyncSocket::OnReceive  
+##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
  由框架调用以通知此套接字可以通过调用检索到的缓冲区中没有数据**接收**成员函数。  
   
 ```  
@@ -965,7 +1000,7 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAsyncSocket #&2;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="a-nameonsenda--casyncsocketonsend"></a><a name="onsend"></a>CAsyncSocket::OnSend  
+##  <a name="onsend"></a>CAsyncSocket::OnSend  
  由框架调用以通知套接字，它现在可通过调用来发送数据**发送**成员函数。  
   
 ```  
@@ -986,7 +1021,7 @@ virtual void OnSend(int nErrorCode);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAsyncSocket #&3;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="a-nameoperatoreqa--casyncsocketoperator-"></a><a name="operator_eq"></a>CAsyncSocket::operator =  
+##  <a name="operator_eq"></a>CAsyncSocket::operator =  
  将一个新值赋给`CAsyncSocket`对象。  
   
 ```  
@@ -1000,7 +1035,7 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="remarks"></a>备注  
  调用此函数可复制现有`CAsyncSocket`对象传递给另一个`CAsyncSocket`对象。  
   
-##  <a name="a-nameoperatorsocketa--casyncsocketoperator-socket"></a><a name="operator_socket"></a>CAsyncSocket::operator 套接字  
+##  <a name="operator_socket"></a>CAsyncSocket::operator 套接字  
  使用此运算符可检索**套接字**的 handle`CAsyncSocket`对象。  
   
 ```  
@@ -1013,7 +1048,7 @@ operator SOCKET() const;
 ### <a name="remarks"></a>备注  
  该句柄可用于直接调用 Windows Api。  
   
-##  <a name="a-namereceivea--casyncsocketreceive"></a><a name="receive"></a>CAsyncSocket::Receive  
+##  <a name="receive"></a>CAsyncSocket::Receive  
  调用该成员函数以从套接字接收数据。  
   
 ```  
@@ -1078,7 +1113,7 @@ virtual int Receive(
 ### <a name="example"></a>示例  
   请参阅示例[CAsyncSocket::OnReceive](#onreceive)。  
   
-##  <a name="a-namereceivefroma--casyncsocketreceivefrom"></a><a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
+##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
  调用此成员函数来接收数据报和存储中的源地址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)结构中或在`rSocketAddress`。  
   
 ```  
@@ -1166,7 +1201,7 @@ int ReceiveFrom(
   
  如果套接字类型**SOCK_STREAM** ，远程端已经正常，关闭该连接`ReceiveFrom`将立即完成并接收到的 0 字节。  
   
-##  <a name="a-namereceivefromexa--casyncsocketreceivefromex"></a><a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
+##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
  调用此成员函数来接收数据报和存储中的源地址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)结构中或在`rSocketAddress`（处理 IPv6 地址）。  
   
 ```  
@@ -1240,7 +1275,7 @@ int ReceiveFromEx(
   
  如果套接字类型**SOCK_STREAM** ，远程端已经正常，关闭该连接`ReceiveFromEx`将立即完成并接收到的 0 字节。  
   
-##  <a name="a-namesenda--casyncsocketsend"></a><a name="send"></a>CAsyncSocket::Send  
+##  <a name="send"></a>CAsyncSocket::Send  
  调用该成员函数以在连接的套接字上发送数据。  
   
 ```  
@@ -1309,7 +1344,7 @@ virtual int Send(
 ### <a name="example"></a>示例  
   请参阅示例[CAsyncSocket::OnSend](#onsend)。  
   
-##  <a name="a-namesendtoa--casyncsocketsendto"></a><a name="sendto"></a>CAsyncSocket::SendTo  
+##  <a name="sendto"></a>CAsyncSocket::SendTo  
  调用该成员函数以将数据发送到特定目标。  
   
 ```  
@@ -1409,7 +1444,7 @@ int SendTo(
   
  若要处理 IPv6 地址，使用[CAsyncSocket::SendToEx](#sendtoex)。  
   
-##  <a name="a-namesendtoexa--casyncsocketsendtoex"></a><a name="sendtoex"></a>CAsyncSocket::SendToEx  
+##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
  调用该成员函数以将数据发送到特定目标 （句柄 IPv6 地址）。  
   
 ```  
@@ -1495,7 +1530,7 @@ int SendToEx(
   
  若要发送广播 (上**SOCK_DGRAM**仅) 中的地址`lpSockAddr`参数应使用专用的 IP 地址构造**INADDR_BROADCAST** （Windows 套接字标头文件 WINSOCK 中定义。H） 一起使用的目标的端口号。 或者，如果`lpszHostAddress`参数是**NULL**，套接字被配置为广播。 通常建议不要对广播数据报超出其大小从该处所出现的碎片，这表明数据报 （不包括标头） 的数据部分不应超过 512 个字节。  
   
-##  <a name="a-namesetsockopta--casyncsocketsetsockopt"></a><a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
+##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
  调用该成员函数以设置套接字选项。  
   
 ```  
@@ -1586,7 +1621,7 @@ BOOL SetSockOpt(
 |**SO_TYPE**|`int`|套接字类型。|  
 |**IP_OPTIONS**||在 IP 标头中设置选项字段。|  
   
-##  <a name="a-nameshutdowna--casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket::ShutDown  
+##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
  调用该成员函数以禁用发送时，收到，或两者的套接字上。  
   
 ```  
@@ -1628,7 +1663,7 @@ BOOL ShutDown(int nHow = sends);
 ### <a name="example"></a>示例  
   请参阅示例[CAsyncSocket::OnReceive](#onreceive)。  
   
-##  <a name="a-namesocketa--casyncsocketsocket"></a><a name="socket"></a>CASyncSocket::Socket  
+##  <a name="socket"></a>CASyncSocket::Socket  
  分配套接字句柄。  
   
 ```  

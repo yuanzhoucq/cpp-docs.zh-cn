@@ -10,6 +10,34 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFile
+- AFX/CFile
+- AFX/CFile::CFile
+- AFX/CFile::Abort
+- AFX/CFile::Close
+- AFX/CFile::Duplicate
+- AFX/CFile::Flush
+- AFX/CFile::GetFileName
+- AFX/CFile::GetFilePath
+- AFX/CFile::GetFileTitle
+- AFX/CFile::GetLength
+- AFX/CFile::GetPosition
+- AFX/CFile::GetStatus
+- AFX/CFile::LockRange
+- AFX/CFile::Open
+- AFX/CFile::Read
+- AFX/CFile::Remove
+- AFX/CFile::Rename
+- AFX/CFile::Seek
+- AFX/CFile::SeekToBegin
+- AFX/CFile::SeekToEnd
+- AFX/CFile::SetFilePath
+- AFX/CFile::SetLength
+- AFX/CFile::SetStatus
+- AFX/CFile::UnlockRange
+- AFX/CFile::Write
+- AFX/CFile::hFileNull
+- AFX/CFile::m_hFile
+- AFX/CFile::m_pTM
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -124,7 +152,7 @@ class CFile : public CObject
 ## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="a-nameaborta--cfileabort"></a><a name="abort"></a>Cfile:: Abort  
+##  <a name="abort"></a>Cfile:: Abort  
  关闭与此对象关联的文件并使该文件进行读取或写入不可用。  
   
 ```  
@@ -141,7 +169,7 @@ virtual void Abort();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&5;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
   
-##  <a name="a-namecfilea--cfilecfile"></a><a name="cfile"></a>CFile::CFile  
+##  <a name="cfile"></a>CFile::CFile  
  构造并初始化一个 `CFile` 对象。  
   
 ```  
@@ -237,7 +265,7 @@ CAtlTransactionManager* pTM);
   
  [!code-cpp[NVC_MFCFiles #&4;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]  
   
-##  <a name="a-nameclosea--cfileclose"></a><a name="close"></a>CFile::Close  
+##  <a name="close"></a>CFile::Close  
  关闭与此对象关联的文件并使该文件进行读取或写入不可用。  
   
 ```  
@@ -252,7 +280,7 @@ virtual void Close();
 ### <a name="example"></a>示例  
  请参阅示例[CFile::CFile](#cfile)。  
   
-##  <a name="a-nameduplicatea--cfileduplicate"></a><a name="duplicate"></a>CFile::Duplicate  
+##  <a name="duplicate"></a>CFile::Duplicate  
  构造一个重复`CFile`对于给定的文件的对象。  
   
 ```  
@@ -265,7 +293,7 @@ virtual CFile* Duplicate() const;
 ### <a name="remarks"></a>备注  
  这等效于 C 运行时函数`_dup`。  
   
-##  <a name="a-nameflusha--cfileflush"></a><a name="flush"></a>CFile::Flush  
+##  <a name="flush"></a>CFile::Flush  
  强制写入到该文件将文件缓冲区中剩余的所有数据。  
   
 ```  
@@ -278,7 +306,7 @@ virtual void Flush();
 ### <a name="example"></a>示例  
  请参阅示例[CFile::SetFilePath](#setfilepath)。  
   
-##  <a name="a-namegetfilenamea--cfilegetfilename"></a><a name="getfilename"></a>CFile::GetFileName  
+##  <a name="getfilename"></a>CFile::GetFileName  
  调用该成员函数以检索指定文件的名称。  
   
 ```  
@@ -298,7 +326,7 @@ virtual CString GetFileName() const;
   
  [!code-cpp[NVC_MFCFiles #&6;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]  
   
-##  <a name="a-namegetfilepatha--cfilegetfilepath"></a><a name="getfilepath"></a>CFile::GetFilePath  
+##  <a name="getfilepath"></a>CFile::GetFilePath  
  调用该成员函数以检索指定的文件的完整路径。  
   
 ```  
@@ -316,7 +344,7 @@ virtual CString GetFilePath() const;
 ### <a name="example"></a>示例  
  请参阅示例[GetFileName](#getfilename)。  
   
-##  <a name="a-namegetfiletitlea--cfilegetfiletitle"></a><a name="getfiletitle"></a>CFile::GetFileTitle  
+##  <a name="getfiletitle"></a>CFile::GetFileTitle  
  调用此成员函数以检索该文件的文件标题 （显示名称）。  
   
 ```  
@@ -334,7 +362,7 @@ virtual CString GetFileTitle() const;
 ### <a name="example"></a>示例  
  请参阅示例[GetFileName](#getfilename)。  
   
-##  <a name="a-namegetlengtha--cfilegetlength"></a><a name="getlength"></a>CFile::GetLength  
+##  <a name="getlength"></a>CFile::GetLength  
  获取以字节为单位的文件的当前逻辑长度。  
   
 ```  
@@ -347,7 +375,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&7;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]  
   
-##  <a name="a-namegetpositiona--cfilegetposition"></a><a name="getposition"></a>CFile::GetPosition  
+##  <a name="getposition"></a>CFile::GetPosition  
  获取文件指针，可以对后续调用中使用的当前值`Seek`。  
   
 ```  
@@ -360,7 +388,7 @@ virtual ULONGLONG GetPosition() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&8;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]  
   
-##  <a name="a-namegetstatusa--cfilegetstatus"></a><a name="getstatus"></a>Cfile:: Getstatus  
+##  <a name="getstatus"></a>Cfile:: Getstatus  
  此方法会检索状态信息与有关给定`CFile`对象实例或给定的文件路径。  
   
 ```  
@@ -423,7 +451,7 @@ static BOOL PASCAL GetStatus(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&10;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]  
   
-##  <a name="a-namehfilenulla--cfilehfilenull"></a><a name="hfilenull"></a>CFile::hFileNull  
+##  <a name="hfilenull"></a>CFile::hFileNull  
  确定是否存在有效的文件句柄`CFile`对象。  
   
 ```  
@@ -437,7 +465,7 @@ static AFX_DATA const HANDLE hFileNull;
   
  [!code-cpp[NVC_MFCFiles #&22;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_7.cpp)]  
   
-##  <a name="a-namelockrangea--cfilelockrange"></a><a name="lockrange"></a>CFile::LockRange  
+##  <a name="lockrange"></a>CFile::LockRange  
  锁定某个范围的字节在打开的文件，如果文件已锁定，则引发异常。  
   
 ```  
@@ -464,7 +492,7 @@ virtual void LockRange(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&12;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
-##  <a name="a-namemhfilea--cfilemhfile"></a><a name="m_hfile"></a>CFile::m_hFile  
+##  <a name="m_hfile"></a>CFile::m_hFile  
  包含为打开的文件的操作系统文件句柄。  
   
 ```  
@@ -476,7 +504,7 @@ HANDLE m_hFile;
   
  利用`m_hFile`建议不要，因为该成员的含义取决于派生的类。 `m_hFile`将成为公共成员，为方便起见，在支持非多态类的使用。  
   
-##  <a name="a-namemptma--cfilemptm"></a><a name="m_ptm"></a>CFile::m_pTM  
+##  <a name="m_ptm"></a>CFile::m_pTM  
  指向 `CAtlTransactionManager` 对象的指针。  
   
 ```  
@@ -485,7 +513,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameopena--cfileopen"></a><a name="open"></a>CFile::Open  
+##  <a name="open"></a>CFile::Open  
  已重载。 **打开**旨在用于使用默认`CFile`构造函数。  
   
 ```  
@@ -537,14 +565,14 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCFiles #&14;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
-##  <a name="a-nameoperatorhandlea--cfileoperator-handle"></a><a name="operator_handle"></a>CFile::operator 句柄  
+##  <a name="operator_handle"></a>CFile::operator 句柄  
  使用此运算符传递的句柄`CFile`对象传递给函数如[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)和[GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) ，期望`HANDLE`。  
   
 ```  
 operator HANDLE() const;  
 ```  
   
-##  <a name="a-namereada--cfileread"></a><a name="read"></a>CFile::Read  
+##  <a name="read"></a>CFile::Read  
  将数据读入的缓冲区与关联的文件从`CFile`对象。  
   
 ```  
@@ -568,7 +596,7 @@ virtual UINT Read(
   
  有关其他示例[CFile::Open](#open)。  
   
-##  <a name="a-nameremovea--cfileremove"></a><a name="remove"></a>CFile::Remove  
+##  <a name="remove"></a>CFile::Remove  
  此静态函数删除由路径指定的文件。  
   
 ```  
@@ -592,7 +620,7 @@ static void PASCAL Remove(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&17;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_12.cpp)]  
   
-##  <a name="a-namerenamea--cfilerename"></a><a name="rename"></a>CFile::Rename  
+##  <a name="rename"></a>CFile::Rename  
  此静态函数重命名指定的文件。  
   
 ```  
@@ -618,7 +646,7 @@ static void PASCAL Rename(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&18;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]  
   
-##  <a name="a-nameseeka--cfileseek"></a><a name="seek"></a>CFile::Seek  
+##  <a name="seek"></a>CFile::Seek  
  文件指针重新定位在打开的文件中。  
   
 ```  
@@ -655,7 +683,7 @@ UINT nFrom);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&9;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]  
   
-##  <a name="a-nameseektobegina--cfileseektobegin"></a><a name="seektobegin"></a>CFile::SeekToBegin  
+##  <a name="seektobegin"></a>CFile::SeekToBegin  
  将文件指针的值设置为文件的开头。  
   
 ```  
@@ -668,7 +696,7 @@ void SeekToBegin();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&19;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
-##  <a name="a-nameseektoenda--cfileseektoend"></a><a name="seektoend"></a>CFile::SeekToEnd  
+##  <a name="seektoend"></a>CFile::SeekToEnd  
  将文件指针的值设置为该文件的逻辑结尾。  
   
 ```  
@@ -684,7 +712,7 @@ ULONGLONG SeekToEnd();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&19;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
-##  <a name="a-namesetfilepatha--cfilesetfilepath"></a><a name="setfilepath"></a>CFile::SetFilePath  
+##  <a name="setfilepath"></a>CFile::SetFilePath  
  调用此函数可指定该文件; 的路径例如，如果文件的路径不可用[CFile](../../mfc/reference/cfile-class.md)构造对象时，请调用`SetFilePath`提供它。  
   
 ```  
@@ -703,7 +731,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&20;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]  
   
-##  <a name="a-namesetlengtha--cfilesetlength"></a><a name="setlength"></a>CFile::SetLength  
+##  <a name="setlength"></a>CFile::SetLength  
  调用此函数可更改文件的长度。  
   
 ```  
@@ -722,7 +750,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&11;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]  
   
-##  <a name="a-namesetstatusa--cfilesetstatus"></a><a name="setstatus"></a>CFile::SetStatus  
+##  <a name="setstatus"></a>CFile::SetStatus  
  设置与此文件位置关联的文件的状态。  
   
 ```  
@@ -750,7 +778,7 @@ static void PASCAL SetStatus(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&21;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_18.cpp)]  
   
-##  <a name="a-nameunlockrangea--cfileunlockrange"></a><a name="unlockrange"></a>CFile::UnlockRange  
+##  <a name="unlockrange"></a>CFile::UnlockRange  
  解除锁定的打开的文件中的字节范围。  
   
 ```  
@@ -775,7 +803,7 @@ virtual void UnlockRange(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&12;](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
-##  <a name="a-namewritea--cfilewrite"></a><a name="write"></a>CFile::Write  
+##  <a name="write"></a>CFile::Write  
  将数据从缓冲区写入与关联的文件`CFile`对象。  
   
 ```  

@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSemaphore
+- AFXMT/CSemaphore
+- AFXMT/CSemaphore::CSemaphore
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +83,7 @@ class CSemaphore : public CSyncObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxmt.h  
   
-##  <a name="a-namecsemaphorea--csemaphorecsemaphore"></a><a name="csemaphore"></a>CSemaphore::CSemaphore  
+##  <a name="csemaphore"></a>CSemaphore::CSemaphore  
  构造的已命名的或未命名`CSemaphore`对象。  
   
 ```  

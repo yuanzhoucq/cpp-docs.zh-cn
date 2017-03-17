@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWordArray
+- AFXCOLL/CWordArray
+- AFXCOLL/CObArray::CObArray
+- AFXCOLL/CObArray::Add
+- AFXCOLL/CObArray::Append
+- AFXCOLL/CObArray::Copy
+- AFXCOLL/CObArray::ElementAt
+- AFXCOLL/CObArray::FreeExtra
+- AFXCOLL/CObArray::GetAt
+- AFXCOLL/CObArray::GetCount
+- AFXCOLL/CObArray::GetData
+- AFXCOLL/CObArray::GetSize
+- AFXCOLL/CObArray::GetUpperBound
+- AFXCOLL/CObArray::InsertAt
+- AFXCOLL/CObArray::IsEmpty
+- AFXCOLL/CObArray::RemoveAll
+- AFXCOLL/CObArray::RemoveAt
+- AFXCOLL/CObArray::SetAt
+- AFXCOLL/CObArray::SetAtGrow
+- AFXCOLL/CObArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +133,7 @@ class CWordArray : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxcoll.h  
   
-##  <a name="a-nameicommandsourceinterfacea--icommandsource-interface"></a><a name="icommandsource_interface"></a>ICommandSource 接口  
+##  <a name="icommandsource_interface"></a>ICommandSource 接口  
  管理命令从命令源对象发送到用户控件。  
   
 ```  
@@ -128,7 +147,7 @@ interface class ICommandSource
   
  有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
+##  <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
  将命令处理程序添加到命令源对象。  
   
 ```  
@@ -149,7 +168,7 @@ void AddCommandHandler(
   
  请参阅[如何︰ 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`AddCommandHandler`。  
   
-##  <a name="a-nameaddcommandrangehandlera--icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
+##  <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
  将一组命令处理程序添加到命令源对象。  
   
 ```  
@@ -172,7 +191,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>备注  
  此方法将一组连续的命令 Id 映射到单个消息处理程序，并将其添加到命令源对象。 这适用于带有一种方法处理一组相关的按钮。  
   
-##  <a name="a-nameaddcommandrangeuihandlera--icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
+##  <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
  将一组用户界面的命令消息处理程序添加到命令源对象。  
   
 ```  
@@ -195,7 +214,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>备注  
  此方法将一组连续的命令 Id 映射到单个用户界面命令消息处理程序，并将其添加到命令源对象。 这适用于带有一种方法处理一组相关的按钮。  
   
-##  <a name="a-nameaddcommanduihandlera--icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
+##  <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
  将用户界面命令消息处理程序添加到命令源对象。  
   
 ```  
@@ -214,7 +233,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>备注  
  此方法将添加的用户界面命令消息处理程序`cmdHandler`到命令源对象，并将映射到处理程序`cmdID`。  
   
-##  <a name="a-namepostcommanda--icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand  
+##  <a name="postcommand"></a>ICommandSource::PostCommand  
  将消息发送而无需等待被处理。  
   
 ```  
@@ -228,7 +247,7 @@ void PostCommand(unsigned int command);
 ### <a name="remarks"></a>备注  
  此方法以异步方式将映射到由指定 ID 的邮件投递`command`。 它将调用[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)将消息放入窗口的消息队列，然后又返回，而无需等待相应的窗口来处理该消息。  
   
-##  <a name="a-nameremovecommandhandlera--icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
+##  <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
  从命令源对象中删除命令处理程序。  
   
 ```  
@@ -242,7 +261,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>备注  
  此方法可以删除命令处理程序映射到`cmdID`命令源对象中。  
   
-##  <a name="a-nameremovecommandrangehandlera--icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
+##  <a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
  从命令源对象中删除一组命令处理程序。  
   
 ```  
@@ -261,7 +280,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>备注  
  此方法中删除一组映射到由指定的命令 Id 的消息处理程序`cmdIDMin`和`cmdIDMax`，从命令源对象。  
   
-##  <a name="a-nameremovecommandrangeuihandlera--icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
+##  <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
  从命令源对象中删除一组用户界面的命令消息处理程序。  
   
 ```  
@@ -280,7 +299,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>备注  
  此方法中删除一组用户界面命令消息处理程序，映射到由指定的命令 Id`cmdIDMin`和`cmdIDMax`，从命令源对象。  
   
-##  <a name="a-nameremovecommanduihandlera--icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
+##  <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
  从命令源对象中删除一个用户界面命令消息处理程序。  
   
 ```  
@@ -294,7 +313,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>备注  
  此方法移除的用户界面命令消息处理程序映射到`cmdID`命令源对象中。  
   
-##  <a name="a-namesendcommanda--icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand  
+##  <a name="sendcommand"></a>ICommandSource::SendCommand  
  发送一条消息并等待在返回之前要处理。  
   
 ```  
@@ -308,7 +327,7 @@ void SendCommand(unsigned int command);
 ### <a name="remarks"></a>备注  
  此方法以同步方式将消息映射到由指定的 ID 发送`command`。 它将调用[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)将消息放入窗口的消息队列并等待，直到该窗口过程在返回前处理消息。  
   
-##  <a name="a-nameicommandtargetinterfacea--icommandtarget-interface"></a><a name="icommandtarget_interface"></a>ICommandTarget 接口  
+##  <a name="icommandtarget_interface"></a>ICommandTarget 接口  
  使用接口来接收命令源对象中的命令提供了一个用户控件。  
   
 ```  
@@ -322,7 +341,7 @@ interface class ICommandTarget
   
  有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameinitializea--icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a>ICommandTarget::Initialize  
  初始化命令目标对象。  
   
 ```  
@@ -338,7 +357,7 @@ void Initialize(ICommandSource^ cmdSource);
   
  此方法初始化命令目标对象，并将其与指定的命令源对象相关联`cmdSource`。 用户控件类实现中，应调用它。 在初始化时，你应该注册命令处理程序的命令源对象通过调用[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)中`Initialize`实现。 请参阅[如何︰ 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)以举例说明如何使用`Initialize`要这样做。  
   
-##  <a name="a-nameicommanduiinterfacea--icommandui-interface"></a><a name="icommandui_interface"></a>ICommandUI 接口  
+##  <a name="icommandui_interface"></a>ICommandUI 接口  
  管理用户界面命令。  
   
 ```  
@@ -356,7 +375,7 @@ interface class ICommandUI
   
  在 MFC 中如何管理用户界面命令的详细信息，请参阅[CCmdUI 类](../../mfc/reference/ccmdui-class.md)。  
   
-##  <a name="a-namechecka--icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+##  <a name="check"></a>ICommandUI::Check  
  将此命令的用户界面项设置为相应的复选状态。  
   
 ```  
@@ -372,7 +391,7 @@ property UICheckState Check;
 |1|选中|  
 |2|不确定的组|  
   
-##  <a name="a-namecontinueroutinga--icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting  
+##  <a name="continuerouting"></a>ICommandUI::ContinueRouting  
  告知命令路由机制，继续传送当前消息的处理程序链的下方。  
   
 ```  
@@ -382,7 +401,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>备注  
  这是一个高级的成员函数，应结合使用[ON_COMMAND_EX](http://msdn.microsoft.com/library/0bb49090-aee8-4203-87c8-dd001d3dd26e)处理程序，它返回`FALSE`。 有关详细信息，请参阅技术说明[TN006︰ 消息映射](../../mfc/tn006-message-maps.md)。  
   
-##  <a name="a-nameenableda--icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled  
+##  <a name="enabled"></a>ICommandUI::Enabled  
  启用或禁用此命令的用户界面项。  
   
 ```  
@@ -392,7 +411,7 @@ property bool Enabled;
 ### <a name="remarks"></a>备注  
  此属性启用或禁用此命令的用户界面项。 设置`Enabled`到`TRUE`以启用项，`FALSE`以将其禁用。  
   
-##  <a name="a-nameida--icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+##  <a name="id"></a>ICommandUI::ID  
  获取所表示的用户界面对象的 ID`ICommandUI`对象。  
   
 ```  
@@ -402,7 +421,7 @@ property unsigned int ID;
 ### <a name="remarks"></a>备注  
  此属性获取菜单项，工具栏按钮的 ID （句柄） 或由其他用户界面对象表示`ICommandUI`对象。  
   
-##  <a name="a-nameindexa--icommanduiindex"></a><a name="index"></a>ICommandUI::Index  
+##  <a name="index"></a>ICommandUI::Index  
  获取所表示的用户界面对象的索引`ICommandUI`对象。  
   
 ```  
@@ -412,7 +431,7 @@ property unsigned int Index;
 ### <a name="remarks"></a>备注  
  此属性获取菜单项，工具栏按钮的索引 （句柄） 或由其他用户界面对象表示`ICommandUI`对象。  
   
-##  <a name="a-nameradioa--icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio  
+##  <a name="radio"></a>ICommandUI::Radio  
  将此命令的用户界面项设置为相应的复选状态。  
   
 ```  
@@ -422,7 +441,7 @@ property bool Radio;
 ### <a name="remarks"></a>备注  
  此属性将此命令的用户界面项设置为相应的复选状态。 设置`Radio`到`TRUE`以启用项; 否则为`FALSE`。  
   
-##  <a name="a-nametexta--icommanduitext"></a><a name="text"></a>ICommandUI::Text  
+##  <a name="text"></a>ICommandUI::Text  
  设置此命令的用户界面项的文本。  
   
 ```  
@@ -432,7 +451,7 @@ property String^ Text;
 ### <a name="remarks"></a>备注  
  此属性设置为此命令的用户界面项的文本。 设置`Text`文本字符串句柄。  
   
-##  <a name="a-nameiviewinterfacea--iview-interface"></a><a name="iview_interface"></a>IView 接口  
+##  <a name="iview_interface"></a>IView 接口  
  实现几种方法， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)用于向托管控件发送查看通知。  
   
 ```  
@@ -446,7 +465,7 @@ interface class IView
   
  有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameonactivateviewa--iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+##  <a name="onactivateview"></a>IView::OnActivateView  
  激活或停用视图时由 MFC 调用。  
   
 ```  
@@ -457,14 +476,14 @@ void OnActivateView(bool activate);
  `activate`  
  指示是否视图处于激活还是停用状态。  
   
-##  <a name="a-nameoninitialupdatea--iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>IView::OnInitialUpdate  
  查看第一次附加到文档之后, 但在最初显示的视图之前，由框架调用。  
   
 ```  
 void OnInitialUpdate();
 ```  
   
-##  <a name="a-nameonupdatea--iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate  
+##  <a name="onupdate"></a>IView::OnUpdate  
  由 MFC 视图的文档，修改后调用。  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
+- AFXDAO/CDaoRecordView
+- AFXDAO/CDaoRecordView::CDaoRecordView
+- AFXDAO/CDaoRecordView::IsOnFirstRecord
+- AFXDAO/CDaoRecordView::IsOnLastRecord
+- AFXDAO/CDaoRecordView::OnGetRecordset
+- AFXDAO/CDaoRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +112,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>要求  
  **标头︰** afxdao.h  
   
-##  <a name="a-namecdaorecordviewa--cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
  当创建类型的对象派生自`CDaoRecordView`，调用任一格式的构造函数，以便初始化视图的对象，并确定该视图所基于的对话框资源。  
   
 ```  
@@ -134,7 +140,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase #&35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
  调用此成员函数可确定当前记录是否与此记录视图关联的记录集对象中的第一个记录。  
   
 ```  
@@ -149,7 +155,7 @@ BOOL IsOnFirstRecord();
   
  如果用户移到第一个记录，任何用户界面对象 （如菜单项或工具栏按钮） 框架禁用则必须将移动到第一个或上一条记录。  
   
-##  <a name="a-nameisonlastrecorda--cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
  调用此成员函数可确定当前记录是否与此记录视图关联的记录集对象中的最后一个记录。  
   
 ```  
@@ -165,7 +171,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  此函数的结果是可靠的只不过此视图不可能无法检测到记录集的结尾，直到用户移过它。 用户可能必须超越最后一条记录之前记录的视图可以告诉它必须禁用任何用户界面对象移动到下一个或最后一条记录。 如果用户移过最后一条记录，然后移动回到最后一个记录 （或在它之前），记录视图可以跟踪为记录集中的用户的位置，并正确地禁用用户界面对象。  
   
-##  <a name="a-nameongetrecordseta--cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
  返回一个指向`CDaoRecordset`-派生的记录视图与关联的对象。  
   
 ```  
@@ -180,7 +186,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  有关详细信息和示例，请参阅文章[记录视图︰ 使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。  
   
-##  <a name="a-nameonmovea--cdaorecordviewonmove"></a><a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>CDaoRecordView::OnMove  
  调用此成员函数以将移动到另一条记录中的记录集中的记录视图控件中显示其字段。  
   
 ```  

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDBException
+- AFXDB/CDBException
+- AFXDB/CDBException::m_nRetCode
+- AFXDB/CDBException::m_strError
+- AFXDB/CDBException::m_strStateNativeOrigin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
   
-##  <a name="a-namemnretcodea--cdbexceptionmnretcode"></a><a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
  包含 ODBC 错误代码类型的**某一 RETCODE**由 ODBC 应用程序编程接口 (API) 函数返回。  
   
 ### <a name="remarks"></a>备注  
@@ -134,13 +138,13 @@ class CDBException : public CException
   
  由 ODBC 定义的 SQL 前缀代码。 AFXDB 中定义的由 AFX 前缀代码。H、 在 MFC\INCLUDE 中找到。  
   
-##  <a name="a-namemstrerrora--cdbexceptionmstrerror"></a><a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>CDBException::m_strError  
  包含描述导致了异常的错误的字符串。  
   
 ### <a name="remarks"></a>备注  
  该字符串在字母数字术语中描述的错误。 有关详细信息和示例，请参阅**m_strStateNativeOrigin**。  
   
-##  <a name="a-namemstrstatenativeorigina--cdbexceptionmstrstatenativeorigin"></a><a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
  包含描述导致了异常的错误的字符串。  
   
 ### <a name="remarks"></a>备注  

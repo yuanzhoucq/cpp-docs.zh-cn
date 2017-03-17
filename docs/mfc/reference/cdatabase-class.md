@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDatabase
+- AFXDB/CDatabase
+- AFXDB/CDatabase::CDatabase
+- AFXDB/CDatabase::BeginTrans
+- AFXDB/CDatabase::BindParameters
+- AFXDB/CDatabase::Cancel
+- AFXDB/CDatabase::CanTransact
+- AFXDB/CDatabase::CanUpdate
+- AFXDB/CDatabase::Close
+- AFXDB/CDatabase::CommitTrans
+- AFXDB/CDatabase::ExecuteSQL
+- AFXDB/CDatabase::GetBookmarkPersistence
+- AFXDB/CDatabase::GetConnect
+- AFXDB/CDatabase::GetCursorCommitBehavior
+- AFXDB/CDatabase::GetCursorRollbackBehavior
+- AFXDB/CDatabase::GetDatabaseName
+- AFXDB/CDatabase::IsOpen
+- AFXDB/CDatabase::OnSetOptions
+- AFXDB/CDatabase::Open
+- AFXDB/CDatabase::OpenEx
+- AFXDB/CDatabase::Rollback
+- AFXDB/CDatabase::SetLoginTimeout
+- AFXDB/CDatabase::SetQueryTimeout
+- AFXDB/CDatabase::m_hdbc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +133,7 @@ class CDatabase : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
   
-##  <a name="a-namebegintransa--cdatabasebegintrans"></a><a name="begintrans"></a>CDatabase::BeginTrans  
+##  <a name="begintrans"></a>CDatabase::BeginTrans  
  调用该成员函数以开始连接的数据源的事务。  
   
 ```  
@@ -142,7 +165,7 @@ BOOL BeginTrans();
 ### <a name="example"></a>示例  
   请参阅文章[事务︰ 在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
-##  <a name="a-namebindparametersa--cdatabasebindparameters"></a><a name="bindparameters"></a>CDatabase::BindParameters  
+##  <a name="bindparameters"></a>CDatabase::BindParameters  
  重写`BindParameters`时您需要将之前调用的参数绑定[CDatabase::ExecuteSQL](#executesql)。  
   
 ```  
@@ -158,7 +181,7 @@ virtual void BindParameters(HSTMT hstmt);
   
  在您重写时，调用**SQLBindParameters**及相关 ODBC 函数以将参数绑定。 MFC 调用之前调用重写`ExecuteSQL`。 不需要调用**SQLPrepare**;`ExecuteSQL`调用**SQLExecDirect**和销毁**hstmt**，使用一次。  
   
-##  <a name="a-namecancela--cdatabasecancel"></a><a name="cancel"></a>CDatabase::Cancel  
+##  <a name="cancel"></a>CDatabase::Cancel  
  调用该成员函数以请求数据源取消正在进行的异步操作或从第二个线程的进程。  
   
 ```  
@@ -168,7 +191,7 @@ void Cancel();
 ### <a name="remarks"></a>备注  
  请注意，MFC ODBC 类不能再使用异步处理;若要执行异步操作，必须直接调用 ODBC API 函数[SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx)。 有关详细信息，请参阅[异步执行](https://msdn.microsoft.com/library/ms713563.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecantransacta--cdatabasecantransact"></a><a name="cantransact"></a>CDatabase::CanTransact  
+##  <a name="cantransact"></a>CDatabase::CanTransact  
  调用此成员函数以确定数据库是否允许事务。  
   
 ```  
@@ -181,7 +204,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>备注  
  有关事务的信息，请参阅文章[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。  
   
-##  <a name="a-namecanupdatea--cdatabasecanupdate"></a><a name="canupdate"></a>CDatabase::CanUpdate  
+##  <a name="canupdate"></a>CDatabase::CanUpdate  
  调用此成员函数以确定是否`CDatabase`对象允许更新。  
   
 ```  
@@ -194,7 +217,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>备注  
  并非所有驱动程序支持的更新。  
   
-##  <a name="a-namecdatabasea--cdatabasecdatabase"></a><a name="cdatabase"></a>CDatabase::CDatabase  
+##  <a name="cdatabase"></a>CDatabase::CDatabase  
  构造 `CDatabase` 对象。  
   
 ```  
@@ -213,7 +236,7 @@ CDatabase();
   
  [!code-cpp[NVC_MFCDatabase #&10;](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
   
-##  <a name="a-nameclosea--cdatabaseclose"></a><a name="close"></a>CDatabase::Close  
+##  <a name="close"></a>CDatabase::Close  
  如果您想要从数据源断开连接，则调用此成员函数。  
   
 ```  
@@ -228,7 +251,7 @@ virtual void Close();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDatabase #&12;](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
-##  <a name="a-namecommittransa--cdatabasecommittrans"></a><a name="committrans"></a>CDatabase::CommitTrans  
+##  <a name="committrans"></a>CDatabase::CommitTrans  
  调用在完成事务时该成员函数。  
   
 ```  
@@ -248,7 +271,7 @@ BOOL CommitTrans();
 ### <a name="example"></a>示例  
   请参阅文章[事务︰ 在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
-##  <a name="a-nameexecutesqla--cdatabaseexecutesql"></a><a name="executesql"></a>CDatabase::ExecuteSQL  
+##  <a name="executesql"></a>CDatabase::ExecuteSQL  
  当您需要直接执行 SQL 命令时，请调用此成员函数。  
   
 ```  
@@ -267,7 +290,7 @@ void ExecuteSQL(LPCTSTR lpszSQL);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDatabase #&13;](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
-##  <a name="a-namegetbookmarkpersistencea--cdatabasegetbookmarkpersistence"></a><a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
+##  <a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
  在某些操作之后，通过调用此成员函数确定记录集对象上的书签的持久性。  
   
 ```  
@@ -294,7 +317,7 @@ DWORD GetBookmarkPersistence() const;
   
  有关此返回值的详细信息，请参阅 ODBC API 函数**SQLGetInfo**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 有关书签的详细信息，请参阅文章[记录集︰ 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。  
   
-##  <a name="a-namegetconnecta--cdatabasegetconnect"></a><a name="getconnect"></a>Cdatabase:: Getconnect  
+##  <a name="getconnect"></a>Cdatabase:: Getconnect  
  调用此成员函数以检索在调用期间使用的连接字符串`OpenEx`或`Open`连接`CDatabase`对象传递给数据源。  
   
 ```  
@@ -307,7 +330,7 @@ const CString GetConnect() const;
 ### <a name="remarks"></a>备注  
  请参阅[CDatabase::Open](#open)有关如何创建连接字符串的说明。  
   
-##  <a name="a-namegetcursorcommitbehaviora--cdatabasegetcursorcommitbehavior"></a><a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
+##  <a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
  调用此成员函数来确定如何[CommitTrans](#committrans)操作影响打开记录集对象上的游标。  
   
 ```  
@@ -328,7 +351,7 @@ int GetCursorCommitBehavior() const;
   
  有关此返回值的详细信息，请参阅 ODBC API 函数**SQLGetInfo**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 有关事务的详细信息，请参阅文章[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。  
   
-##  <a name="a-namegetcursorrollbackbehaviora--cdatabasegetcursorrollbackbehavior"></a><a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
+##  <a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
  调用此成员函数来确定如何[回滚](#rollback)操作影响打开记录集对象上的游标。  
   
 ```  
@@ -349,7 +372,7 @@ int GetCursorRollbackBehavior() const;
   
  有关此返回值的详细信息，请参阅 ODBC API 函数**SQLGetInfo**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 有关事务的详细信息，请参阅文章[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。  
   
-##  <a name="a-namegetdatabasenamea--cdatabasegetdatabasename"></a><a name="getdatabasename"></a>CDatabase::GetDatabaseName  
+##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
  调用该成员函数以检索当前连接的数据库的名称 （前提是数据源定义一个命名的对象称为"数据库"）。  
   
 ```  
@@ -364,7 +387,7 @@ CString GetDatabaseName() const;
   
  例如，可能会想要将该名称显示在标题中。 如果从 ODBC，检索的名称时出错`GetDatabaseName`返回一个空**Cstring**。  
   
-##  <a name="a-nameisopena--cdatabaseisopen"></a><a name="isopen"></a>CDatabase::IsOpen  
+##  <a name="isopen"></a>CDatabase::IsOpen  
  调用此成员函数以确定是否`CDatabase`对象当前连接到数据源。  
   
 ```  
@@ -374,7 +397,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>返回值  
  如果非零`CDatabase`当前连接对象; 否则为 0。  
   
-##  <a name="a-namemhdbca--cdatabasemhdbc"></a><a name="m_hdbc"></a>CDatabase::m_hdbc  
+##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
  包含 ODBC 数据源连接的公共句柄-"的"连接句柄。"  
   
 ### <a name="remarks"></a>备注  
@@ -385,7 +408,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDatabase #&15;](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
-##  <a name="a-nameonsetoptionsa--cdatabaseonsetoptions"></a><a name="onsetoptions"></a>CDatabase::OnSetOptions  
+##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
  框架将调用此成员函数时直接执行 SQL 语句与`ExecuteSQL`成员函数。  
   
 ```  
@@ -408,7 +431,7 @@ virtual void OnSetOptions(HSTMT hstmt);
   
  重写`OnSetOptions`如果您想要设置其他选项。 重写应调用基类`OnSetOptions`之前或之后调用 ODBC API 函数**SQLSetStmtOption**。 请按照框架的默认实现中所示的方法`OnSetOptions`。  
   
-##  <a name="a-nameopena--cdatabaseopen"></a><a name="open"></a>CDatabase::Open  
+##  <a name="open"></a>CDatabase::Open  
  调用此成员函数来初始化新构造`CDatabase`对象。  
   
 ```  
@@ -456,7 +479,7 @@ virtual BOOL Open(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDatabase #&14;](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
-##  <a name="a-nameopenexa--cdatabaseopenex"></a><a name="openex"></a>CDatabase::OpenEx  
+##  <a name="openex"></a>CDatabase::OpenEx  
  调用此成员函数来初始化新构造`CDatabase`对象。  
   
 ```  
@@ -499,7 +522,7 @@ virtual BOOL OpenEx(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDatabase #&11;](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
-##  <a name="a-namerollbacka--cdatabaserollback"></a><a name="rollback"></a>CDatabase::Rollback  
+##  <a name="rollback"></a>CDatabase::Rollback  
  调用该成员函数以反向在事务期间所做的更改。  
   
 ```  
@@ -519,7 +542,7 @@ BOOL Rollback();
 ### <a name="example"></a>示例  
   请参阅文章[事务︰ 在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
-##  <a name="a-namesetlogintimeouta--cdatabasesetlogintimeout"></a><a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
  调用此成员函数 â €"之前调用`OpenEx`或**打开**â €"来覆盖默认允许尝试数据前的秒数源连接超时。  
   
 ```  
@@ -535,7 +558,7 @@ void SetLoginTimeout(DWORD dwSeconds);
   
  登录超时的默认值为 15 秒。 并非所有数据源都支持的功能来指定登录超时值。 如果数据源不支持超时，将跟踪输出，但不是出现异常。 值为 0 表示"infinite。  
   
-##  <a name="a-namesetquerytimeouta--cdatabasesetquerytimeout"></a><a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
  调用该成员函数以重写默认连接的数据源超时的后续操作前允许的秒数。  
   
 ```  

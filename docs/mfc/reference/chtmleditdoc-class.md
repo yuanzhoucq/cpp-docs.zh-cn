@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditDoc
+- AFXHTML/CHtmlEditDoc
+- AFXHTML/CHtmlEditDoc::CHtmlEditDoc
+- AFXHTML/CHtmlEditDoc::GetView
+- AFXHTML/CHtmlEditDoc::IsModified
+- AFXHTML/CHtmlEditDoc::OpenURL
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,14 +81,14 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 ## <a name="requirements"></a>要求  
  **标头：** afxhtml.h  
   
-##  <a name="a-namechtmleditdoca--chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  
+##  <a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  
  构造**CHtmlEditDoc**对象。  
   
 ```  
 CHtmlEditDoc();
 ```  
   
-##  <a name="a-namegetviewa--chtmleditdocgetview"></a><a name="getview"></a>CHtmlEditDoc::GetView  
+##  <a name="getview"></a>CHtmlEditDoc::GetView  
  检索[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)对象附加到此文档。  
   
 ```  
@@ -93,14 +98,14 @@ virtual CHtmlEditView* GetView() const;
 ### <a name="return-value"></a>返回值  
  将指针返回到文档的**CHtmlEditView**对象。  
   
-##  <a name="a-nameismodifieda--chtmleditdocismodified"></a><a name="ismodified"></a>CHtmlEditDoc::IsModified  
+##  <a name="ismodified"></a>CHtmlEditDoc::IsModified  
  返回关联的视图 WebBrowser 控件是否包含已由用户修改的文档。  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
-##  <a name="a-nameopenurla--chtmleditdocopenurl"></a><a name="openurl"></a>CHtmlEditDoc::OpenURL  
+##  <a name="openurl"></a>CHtmlEditDoc::OpenURL  
  打开一个 URL。  
   
 ```  

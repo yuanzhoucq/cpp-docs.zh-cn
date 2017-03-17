@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComPtr
+- ATLBASE/ATL::CComPtr
+- ATLBASE/ATL::CComPtr::CComPtr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +88,7 @@ class CComPtr
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
-##  <a name="a-nameccomptra--ccomptrccomptr"></a><a name="ccomptr"></a>CComPtr::CComPtr  
+##  <a name="ccomptr"></a>CComPtr::CComPtr  
  构造函数。  
   
 ```
@@ -102,7 +104,7 @@ CComPtr (const CComPtr<T>& lp) throw ();
  `T`  
  COM 接口。  
   
-##  <a name="a-nameoperatoreqa--ccomptroperator-"></a><a name="operator_eq"></a>CComPtr::operator =  
+##  <a name="operator_eq"></a>CComPtr::operator =  
  赋值运算符。  
   
 ```

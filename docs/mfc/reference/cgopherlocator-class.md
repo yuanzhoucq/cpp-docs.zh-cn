@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
+- AFXINET/CGopherLocator
+- AFXINET/CGopherLocator::CGopherLocator
+- AFXINET/CGopherLocator::GetLocatorType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class CGopherLocator : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxinet.h  
   
-##  <a name="a-namecgopherlocatora--cgopherlocatorcgopherlocator"></a><a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
  此成员函数调用来创建`CGopherLocator`对象。  
   
 ```  
@@ -104,7 +107,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>备注  
  切勿创建`CGopherLocator`直接对象。 而应调用[CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator)创建并返回一个指向`CGopherLocator`对象。  
   
-##  <a name="a-namegetlocatortypea--cgopherlocatorgetlocatortype"></a><a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
  调用此成员函数可获取定位符类型。  
   
 ```  
@@ -148,7 +151,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|询问 + 项。|  
 |GOPHER_TYPE_GOPHER_PLUS|Gopher + 项。|  
   
-##  <a name="a-nameoperatorlpctstra--cgopherlocatoroperator-lpctstr"></a><a name="operator_lpctstr"></a>CGopherLocator::operator lpctstr 来  
+##  <a name="operator_lpctstr"></a>CGopherLocator::operator lpctstr 来  
  这非常有用的强制转换运算符提供了一种有效的方法来访问的以 null 结尾的 C 字符串中包含`CGopherLocator`对象。  
   
 ```  

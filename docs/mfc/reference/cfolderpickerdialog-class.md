@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxdlgs/CFolderPickerDialog
 - CFolderPickerDialog
+- AFXDLGS/CFolderPickerDialog
+- AFXDLGS/CFolderPickerDialog::CFolderPickerDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +79,7 @@ class CFolderPickerDialog : public CFileDialog;
 ## <a name="requirements"></a>要求  
  **标头︰** afxdlgs.h  
   
-##  <a name="a-namecfolderpickerdialoga--cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
+##  <a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
  构造函数。  
   
 ```  
@@ -104,7 +105,7 @@ explicit CFolderPickerDialog(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namedtorcfolderpickerdialoga--cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
+##  <a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
  析构函数。  
   
 ```  

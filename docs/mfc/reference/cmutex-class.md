@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- Mutex
 - CMutex
+- AFXMT/CMutex
+- AFXMT/CMutex::CMutex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CMutex : public CSyncObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxmt.h  
   
-##  <a name="a-namecmutexa--cmutexcmutex"></a><a name="cmutex"></a>CMutex::CMutex  
+##  <a name="cmutex"></a>CMutex::CMutex  
  构造的已命名的或未命名`CMutex`对象。  
   
 ```  

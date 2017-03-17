@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCCustomColorsPropertyPage
+- AFXCUSTOMCOLORSPROPERTYPAGE/CMFCCustomColorsPropertyPage
+- AFXCUSTOMCOLORSPROPERTYPAGE/CMFCCustomColorsPropertyPage::Setup
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +92,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>要求  
  **标头︰** afxcustomcolorspropertypage.h  
   
-##  <a name="a-namesetupa--cmfccustomcolorspropertypagesetup"></a><a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
+##  <a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
  设置属性页上的颜色组件。  
   
 ```  
