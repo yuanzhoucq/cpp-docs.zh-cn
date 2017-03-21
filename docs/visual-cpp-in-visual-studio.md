@@ -41,8 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
+ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
+ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
+ms.lasthandoff: 03/15/2017
 
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
@@ -65,6 +66,9 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
  [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md) 
 了解 Visual Studio 2017 中 C++ 的符合性改进。 
 
+ [Visual C++ 语言一致性](visual-cpp-language-conformance.md)  
+ Visual C ++ 中按功能列出的一致性状态列表。
+
  [Visual C++ 更改历史记录（2003 - 2015）](porting/visual-cpp-change-history-2003-2015.md)  
  了解先前版本中的重大更改。  
   
@@ -76,9 +80,6 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
   
  [Visual C++ 移植和升级指南](porting/visual-cpp-porting-and-upgrading-guide.md)  
  有关在 Visual Studio 2017 中移植代码并将项目升级到 Visual C++ 的指南，其中包括将 C++ 代码移植到 Windows 10 和通用 Windows 平台。  
-  
- [支持 C++11/14/17 功能（新式 C++）](cpp/support-for-cpp11-14-17-features-modern-cpp.md)  
- 了解 Visual C++ 中对 C++11 和 C++14 功能的支持。  
   
  [Visual C++ 团队博客](http://blogs.msdn.com/b/vcblog/)  
  详细了解 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)] 开发人员发布的新功能和最新信息。  
@@ -183,9 +184,4 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
  [C 语言参考](c-language/c-language-reference.md)   
  [C 运行时库参考](c-runtime-library/c-run-time-library-reference.md)   
  [编译器内部函数和程序集语言](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
