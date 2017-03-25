@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::ITarget
+- ITarget
+- AGENTS/concurrency::ITarget
+- AGENTS/concurrency::ITarget::propagate
+- AGENTS/concurrency::ITarget::send
+- AGENTS/concurrency::ITarget::supports_anonymous_source
+- AGENTS/concurrency::ITarget::link_source
+- AGENTS/concurrency::ITarget::unlink_source
+- AGENTS/concurrency::ITarget::unlink_sources
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aa9001de9ec35f20cd76f701d6b8acc5de7ffde0
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4bd6b21e274431449c8fac452995dd66fc1aef1b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="itarget-class"></a>ITarget 类
@@ -72,17 +79,17 @@ class ITarget;
   
 |名称|说明|  
 |----------|-----------------|  
-|[propagate 方法](#propagate)|当在派生类中重写，以异步方式将消息传递从源块到此目标块。|  
-|[send 方法](#send)|当在派生类中重写，以同步方式将消息传递到目标块。|  
-|[supports_anonymous_source 方法](#supports_anonymous_source)|在派生类中重写时，根据消息块是否接受未链接到它的源提供的消息返回 true 或 false。 如果重写的方法返回 `true`，则目标不能推迟所提供的消息，因为稍后被推迟消息的能耗要求源在其源链接注册表中已标识。|  
+|[传播](#propagate)|当在派生类中重写，以异步方式将消息传递从源块到此目标块。|  
+|[发送](#send)|当在派生类中重写，以同步方式将消息传递到目标块。|  
+|[supports_anonymous_source](#supports_anonymous_source)|在派生类中重写时，根据消息块是否接受未链接到它的源提供的消息返回 true 或 false。 如果重写的方法返回 `true`，则目标不能推迟所提供的消息，因为稍后被推迟消息的能耗要求源在其源链接注册表中已标识。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[link_source 方法](#link_source)|当在派生类中重写，将指定的源块链接到此`ITarget`块。|  
-|[unlink_source 方法](#unlink_source)|当在派生类中重写，将取消指定的源块与该链接`ITarget`块。|  
-|[unlink_sources 方法](#unlink_sources)|当在派生类中重写，将取消所有源块与该都链接`ITarget`块。|  
+|[link_source](#link_source)|当在派生类中重写，将指定的源块链接到此`ITarget`块。|  
+|[unlink_source](#unlink_source)|当在派生类中重写，将取消指定的源块与该链接`ITarget`块。|  
+|[unlink_sources](#unlink_sources)|当在派生类中重写，将取消所有源块与该都链接`ITarget`块。|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -95,7 +102,7 @@ class ITarget;
   
  **命名空间：** 并发  
   
-##  <a name="a-namedtora-itarget"></a><a name="dtor"></a>~ ITarget 
+##  <a name="dtor"></a>~ ITarget 
 
  销毁`ITarget`对象。  
   
@@ -103,7 +110,7 @@ class ITarget;
 virtual ~ITarget();
 ```  
   
-##  <a name="a-namelinksourcea-linksource"></a><a name="link_source"></a>link_source 
+##  <a name="link_source"></a>link_source 
 
  当在派生类中重写，将指定的源块链接到此`ITarget`块。  
   
@@ -118,7 +125,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>备注  
  不应直接调用此函数`ITarget`块。 应连接在一起使用的块`link_target`方法`ISource`块，将调用`link_source`相应目标系统上的方法。  
   
-##  <a name="a-namepropagatea-propagate"></a><a name="propagate"></a>传播 
+##  <a name="propagate"></a>传播 
 
  当在派生类中重写，以异步方式将消息传递从源块到此目标块。  
   
@@ -141,7 +148,7 @@ virtual message_status propagate(
 ### <a name="remarks"></a>备注  
  该方法将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)异常如果`_PMessage`或`_PSource`参数是`NULL`。  
   
-##  <a name="a-namesenda-send"></a><a name="send"></a>发送 
+##  <a name="send"></a>发送 
 
  当在派生类中重写，以同步方式将消息传递到目标块。  
   
@@ -168,7 +175,7 @@ virtual message_status send(
   
  当`send`返回时，该消息是已被接受，并传输到目标块后，或它已被拒绝的目标。  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  在派生类中重写时，根据消息块是否接受未链接到它的源提供的消息返回 true 或 false。 如果重写的方法返回 `true`，则目标不能推迟所提供的消息，因为稍后被推迟消息的能耗要求源在其源链接注册表中已标识。  
   
@@ -179,7 +186,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>返回值  
  如果块可以接受来自未链接到它的源的消息，则为 `true`，否则为 `false`。  
   
-##  <a name="a-nameunlinksourcea-unlinksource"></a><a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a>unlink_source 
 
  当在派生类中重写，将取消指定的源块与该链接`ITarget`块。  
   
@@ -194,7 +201,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>备注  
  不应直接调用此函数`ITarget`块。 应使用断开连接块`unlink_target`或`unlink_targets`方法`ISource`块，将调用`unlink_source`相应目标系统上的方法。  
   
-##  <a name="a-nameunlinksourcesa-unlinksources"></a><a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a>unlink_sources 
 
  当在派生类中重写，将取消所有源块与该都链接`ITarget`块。  
   

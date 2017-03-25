@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::norm
+- norm
+- AMP_SHORT_VECTORS/norm
+- AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 dev_langs:
 - C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
@@ -33,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8ff5a99136a75d17d914783496205f1dd1eb4a06
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6f6477f37a94a0c2a093fd3a63fa8e87463a5a7b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm-class"></a>norm 类
@@ -51,23 +53,23 @@ class norm;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[norm 构造函数](#ctor)|已重载。 默认构造函数。 初始化为 0.0f。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|norm::operator 运算符||  
-|norm::operator-运算符||  
-|norm::operator float 运算符|转换运算符。 将标准数字转换为浮点值。|  
-|norm::operator * = 运算符||  
-|norm::operator / = 运算符||  
-|norm::operator + + 运算符||  
-|norm::operator + = 运算符||  
-|norm::operator = 运算符||  
-|norm::operator-= 运算符||  
+|norm::operator-||  
+|norm::operator-||  
+|norm::operator float|转换运算符。 将标准数字转换为浮点值。|  
+|norm::operator * =||  
+|norm::operator / =||  
+|norm::operator + +||  
+|norm::operator + =||  
+|norm::operator =||  
+|norm::operator =||  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `norm`  
@@ -77,7 +79,7 @@ class norm;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-norm"></a><a name="ctor"></a>norm 
+##  <a name="ctor"></a>norm 
 
  默认构造函数。 初始化为 0.0f。  
   
@@ -125,5 +127,5 @@ norm(
  用于初始化的对象。  
   
 ## <a name="see-also"></a>另请参阅  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
 

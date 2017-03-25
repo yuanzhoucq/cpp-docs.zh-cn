@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::task_handle
+- task_handle
+- PPL/concurrency::task_handle
+- PPL/concurrency::task_handle::task_handle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0fef1ef7b1c02287a0113eb80be413e4a17dc1a4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskhandle-class"></a>task_handle 类
@@ -61,14 +63,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |名称|描述|  
 |----------|-----------------|  
-|[task_handle 构造函数](#ctor)|构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行任务的工作。|  
+|[task_handle](#ctor)|构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行任务的工作。|  
 |[~ task_handle 析构函数](#dtor)|销毁`task_handle`对象。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[operator （) 运算符](#task_handle__operator_call)|运行时将调用来执行的任务句柄的工作函数调用运算符。|  
+|[operator （)](#task_handle__operator_call)|运行时将调用来执行的任务句柄的工作函数调用运算符。|  
   
 ## <a name="remarks"></a>备注  
  `task_handle`对象可以配合使用`structured_task_group`或更多常规`task_group`对象，以将工作分解为并行任务。 有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
@@ -87,7 +89,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **命名空间：** 并发  
   
-##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>operator （) 
+##  <a name="task_handle__operator_call"></a>operator （) 
 
  运行时将调用来执行的任务句柄的工作函数调用运算符。  
   
@@ -97,7 +99,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a>task_handle 
 
  构造一个新`task_handle`对象。 通过调用作为构造函数的参数指定的函数执行任务的工作。  
   
@@ -112,7 +114,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>备注  
  运行时创建的副本传递到构造函数的工作函数。 因此，在函数中发生的任何状态变更对象传递给`task_handle`对象将不会显示在该函数对象的副本中。  
   
-##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+##  <a name="dtor"></a>~ task_handle 
 
  销毁`task_handle`对象。  
   

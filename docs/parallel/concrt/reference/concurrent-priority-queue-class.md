@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_priority_queue/concurrency::concurrent_priority_queue
+- concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::clear
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::empty
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::get_allocator
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::push
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 59bbd25f78294e1363b8acb49e45f364a9ae026e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 类
@@ -66,7 +75,7 @@ template <typename T,
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |`allocator_type`|一种表示适用于并发优先级队列的分配器类的类型。|  
 |`const_reference`|一种表示存储在并发优先级队列中类型的一个元素的常量引用的类型。|  
@@ -76,27 +85,27 @@ template <typename T,
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[concurrent_priority_queue 构造函数](#ctor)|已重载。 构造并发优先级队列。|  
+|[concurrent_priority_queue](#ctor)|已重载。 构造并发优先级队列。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
 |----------|-----------------|  
-|[clear 方法](#clear)|清除并发优先级中的所有元素。 此方法不是并发安全的。|  
-|[empty 方法](#empty)|测试在调用此方法时并发优先级队列是否为空。 此方法是并发安全的。|  
-|[get_allocator 方法](#get_allocator)|返回用于构造并发优先级队列的分配器的副本。 此方法是并发安全的。|  
-|[push 方法](#push)|已重载。 在并发优先级队列中添加一个元素。 此方法是并发安全的。|  
-|[size 方法](#size)|返回并发优先级队列中元素的数量。 此方法是并发安全的。|  
-|[swap 方法](#swap)|交换两个并发优先级队列中的内容。 此方法不是并发安全的。|  
-|[try_pop 方法](#try_pop)|如果队列非空，移除并返回队列中优先级最高的元素。 此方法是并发安全的。|  
+|[clear](#clear)|清除并发优先级中的所有元素。 此方法不是并发安全的。|  
+|[empty](#empty)|测试在调用此方法时并发优先级队列是否为空。 此方法是并发安全的。|  
+|[get_allocator](#get_allocator)|返回用于构造并发优先级队列的分配器的副本。 此方法是并发安全的。|  
+|[push](#push)|已重载。 在并发优先级队列中添加一个元素。 此方法是并发安全的。|  
+|[size](#size)|返回并发优先级队列中元素的数量。 此方法是并发安全的。|  
+|[swap](#swap)|交换两个并发优先级队列中的内容。 此方法不是并发安全的。|  
+|[try_pop](#try_pop)|如果队列非空，移除并返回队列中优先级最高的元素。 此方法是并发安全的。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[运算符 = 运算符](#operator_eq)|已重载。 另一种内容分配`concurrent_priority_queue`对象传递给它。 此方法不是并发安全的。|  
+|[operator=](#operator_eq)|已重载。 另一种内容分配`concurrent_priority_queue`对象传递给它。 此方法不是并发安全的。|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息`concurrent_priority_queue`类，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。  
@@ -109,7 +118,7 @@ template <typename T,
   
  **命名空间：** 并发  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>清除 
+##  <a name="clear"></a>清除 
 
  清除并发优先级中的所有元素。 此方法不是并发安全的。  
   
@@ -120,7 +129,7 @@ void clear();
 ### <a name="remarks"></a>备注  
  `clear`不是并发安全的。 您必须确保在调用此方法时，没有其他线程在调用在并发优先级队列的方法。 `clear`不会释放内存。  
   
-##  <a name="a-namectora-concurrentpriorityqueue"></a><a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a>concurrent_priority_queue 
 
  构造并发优先级队列。  
   
@@ -184,7 +193,7 @@ concurrent_priority_queue(
   
  第六、 七个构造函数指定的优先级队列移动`_Src`。  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>为空 
+##  <a name="empty"></a>为空 
 
  测试在调用此方法时并发优先级队列是否为空。 此方法是并发安全的。  
   
@@ -195,7 +204,7 @@ bool empty() const;
 ### <a name="return-value"></a>返回值  
  `true`如果已调用函数，时刻优先级队列为空`false`否则为。  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  返回用于构造并发优先级队列的分配器的副本。 此方法是并发安全的。  
   
@@ -206,7 +215,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>返回值  
  用于构造的分配器一份`concurrent_priority_queue`对象。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a>运算符 = 
 
  另一种内容分配`concurrent_priority_queue`对象传递给它。 此方法不是并发安全的。  
   
@@ -223,7 +232,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>返回值  
  参考这`concurrent_priority_queue`对象。  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>推送 
+##  <a name="push"></a>推送 
 
  在并发优先级队列中添加一个元素。 此方法是并发安全的。  
   
@@ -237,7 +246,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  要添加到并发优先级队列的元素。  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>大小 
+##  <a name="size"></a>大小 
 
  返回并发优先级队列中元素的数量。 此方法是并发安全的。  
   
@@ -251,7 +260,7 @@ size_type size() const;
 ### <a name="remarks"></a>备注  
  保证返回的大小将由对函数的调用添加的所有元素包含`push`。 但是，它可能不反映挂起的并发操作的结果。  
   
-##  <a name="a-nameswapa-swap"></a><a name="swap"></a>交换 
+##  <a name="swap"></a>交换 
 
  交换两个并发优先级队列中的内容。 此方法不是并发安全的。  
   
@@ -263,7 +272,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  `concurrent_priority_queue`对象要与其交换内容。  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  如果队列非空，移除并返回队列中优先级最高的元素。 此方法是并发安全的。  
   

@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::DispatchState
+- DispatchState
+- CONCRTRM/concurrency::DispatchState
+- CONCRTRM/concurrency::DispatchState::DispatchState::DispatchState
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_dispatchStateSize
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_reserved
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 46c2219464e57da4931596e970199549405d02ec
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a617d1f1d7f68c00c7011daffc6ba59f08c43a1e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="dispatchstate-structure"></a>DispatchState 结构
@@ -54,15 +59,15 @@ struct DispatchState;
   
 |名称|说明|  
 |----------|-----------------|  
-|[Dispatchstate:: Dispatchstate 构造函数](#ctor)|构造一个新`DispatchState`对象。|  
+|[Dispatchstate:: Dispatchstate](#ctor)|构造一个新`DispatchState`对象。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[Dispatchstate:: M_dispatchstatesize 数据成员](#m_dispatchstatesize)|此结构，用于版本控制的大小。|  
-|[Dispatchstate:: M_fispreviouscontextasynchronouslyblocked 数据成员](#m_fispreviouscontextasynchronouslyblocked)|指示是否已进入此上下文`Dispatch`方法由于以前的上下文以异步方式阻止。 这仅用于 UMS 调度上下文，并设置为值`0`的所有其他执行上下文。|  
-|[Dispatchstate:: M_reserved 数据成员](#m_reserved)|留待将来信息传递的位。|  
+|[Dispatchstate:: M_dispatchstatesize](#m_dispatchstatesize)|此结构，用于版本控制的大小。|  
+|[Dispatchstate:: M_fispreviouscontextasynchronouslyblocked](#m_fispreviouscontextasynchronouslyblocked)|指示是否已进入此上下文`Dispatch`方法由于以前的上下文以异步方式阻止。 这仅用于 UMS 调度上下文，并设置为值`0`的所有其他执行上下文。|  
+|[Dispatchstate:: M_reserved](#m_reserved)|留待将来信息传递的位。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `DispatchState`  
@@ -72,28 +77,28 @@ struct DispatchState;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora--dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>Dispatchstate:: Dispatchstate 构造函数  
+##  <a name="ctor"></a>Dispatchstate:: Dispatchstate 构造函数  
  构造一个新`DispatchState`对象。  
   
 ```
 DispatchState();
 ```  
   
-##  <a name="a-namemdispatchstatesizea--dispatchstatemdispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>Dispatchstate:: M_dispatchstatesize 数据成员  
+##  <a name="m_dispatchstatesize"></a>Dispatchstate:: M_dispatchstatesize 数据成员  
  此结构，用于版本控制的大小。  
   
 ```
 unsigned long m_dispatchStateSize;
 ```  
   
-##  <a name="a-namemfispreviouscontextasynchronouslyblockeda--dispatchstatemfispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>Dispatchstate:: M_fispreviouscontextasynchronouslyblocked 数据成员  
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>Dispatchstate:: M_fispreviouscontextasynchronouslyblocked 数据成员  
  指示是否已进入此上下文`Dispatch`方法由于以前的上下文以异步方式阻止。 这仅用于 UMS 调度上下文，并设置为值`0`的所有其他执行上下文。  
   
 ```
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```  
   
-##  <a name="a-namemreserveda--dispatchstatemreserved-data-member"></a><a name="m_reserved"></a>Dispatchstate:: M_reserved 数据成员  
+##  <a name="m_reserved"></a>Dispatchstate:: M_reserved 数据成员  
  留待将来信息传递的位。  
   
 ```
@@ -101,5 +106,5 @@ unsigned int m_reserved : 31;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

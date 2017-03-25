@@ -6,65 +6,65 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- concrt/concurrency::operator!=
+- concrt/concurrency:[operator&amp;&amp
+- concrt/concurrency:[operator&amp;&amp
+dev_langs:
+- C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 7fc7b500d882bb4e023904a147a7736996b5c5de
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 322c95da1774cb0b1d621a46c74125f435ebfbc4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 命名空间运算符
 ||||  
 |-|-|-|  
-|[运算符 ！ = 运算符](#operator_neq)|[运算符&amp;&amp;运算符](#operator_amp_amp)|[运算符&gt;运算符](#operator_gt)|  
-|[运算符&gt;= 运算符](#operator_gt_eq)|[运算符&lt;运算符](#operator_lt)|[运算符&lt;= 运算符](#operator_lt_eq)|  
-|[运算符 = = 运算符](#operator_eq_eq)|[operator|| Operator](#operator_lor)|  
+|[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|  
+|[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
+|[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="a-nameoperatorlora--operator124124-operator"></a><a name="operator_lor"></a>运算符 | |运算符  
+##  <a name="operator_lor"></a>运算符 | |运算符  
  创建将在作为自变量提供的任一任务成功完成时成功完成的任务。  
   
 ```  
-template<
-    typename _ReturnType  
->  
-task<_ReturnType>   operator||(
-    const task<_ReturnType>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<ReturnType> operator||(
+    const task<ReturnType>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>   operator||(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>> operator||(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>   operator||(
-    const task<_ReturnType>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>> operator||(
+    const task<ReturnType>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-inline task<void>   operator||(
-    const task<void>& _Lhs,  
-    const task<void>& _Rhs);
+inline task<void> operator||(
+    const task<void>& lhs,  
+    const task<void>& rhs);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_ReturnType`  
+ `ReturnType`  
  已返回任务的类型。  
   
- `_Lhs`  
+ `lhs`  
  要合并到结果任务的第一个任务。  
   
- `_Rhs`  
+ `rhs`  
  要合并到结果任务的第二个任务。  
   
 ### <a name="return-value"></a>返回值  
@@ -73,55 +73,47 @@ inline task<void>   operator||(
 ### <a name="remarks"></a>备注  
  如果两个任务均被取消或引发异常，则返回的任务将在已取消状态下完成，并且当您对此任务调用 `get()` 或 `wait()` 时将引发一种异常（在遇到异常的情况下）。  
   
-##  <a name="a-nameoperatorampampa--operatorampamp-operator"></a><a name="operator_amp_amp"></a>运算符&amp;&amp;运算符  
+##  <a name="operator_amp_amp"></a>运算符&amp;&amp;运算符  
  创建一个任务，在作为自变量提供的两个任务成功完成后，此任务将成功完成。  
   
 ```  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<_ReturnType>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<ReturnType>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<_ReturnType>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<ReturnType>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<_ReturnType>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<ReturnType>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-template<
-    typename _ReturnType  
->  
-task<std::vector<_ReturnType>>    operator&&(
-    const task<std::vector<_ReturnType>>& _Lhs,  
-    const task<std::vector<_ReturnType>>& _Rhs);
+template<typename ReturnType>  
+task<std::vector<ReturnType>>  operator&&(
+    const task<std::vector<ReturnType>>& lhs,  
+    const task<std::vector<ReturnType>>& rhs);
 
  
-inline task<void>    operator&&(
-    const task<void>& _Lhs,  
-    const task<void>& _Rhs);
+inline task<void>  operator&&(
+    const task<void>& lhs,  
+    const task<void>& rhs);
 ```  
   
 ### <a name="parameters"></a>参数  
- `_ReturnType`  
+ `ReturnType`  
  已返回任务的类型。  
   
- `_Lhs`  
+ `lhs`  
  要合并到结果任务的第一个任务。  
   
- `_Rhs`  
+ `rhs`  
  要合并到结果任务的第二个任务。  
   
 ### <a name="return-value"></a>返回值  
@@ -130,15 +122,11 @@ inline task<void>    operator&&(
 ### <a name="remarks"></a>备注  
  如果其中一个任务被取消或引发异常，则返回的任务将提前完成（处于已取消状态），并且，如果您对该任务调用 `get()` 或 `wait()`，则在遇到异常的情况下将会引发异常。  
   
-##  <a name="a-nameoperatoreqeqa--operator-operator"></a><a name="operator_eq_eq"></a>运算符 = = 运算符  
+##  <a name="operator_eq_eq"></a>运算符 = = 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否等于右侧的 `concurrent_vector` 对象。  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator== (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -168,15 +156,11 @@ inline bool operator== (
   
  此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
-##  <a name="a-nameoperatorneqa--operator-operator"></a><a name="operator_neq"></a>运算符 ！ = 运算符  
+##  <a name="operator_neq"></a>运算符 ！ = 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator!= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -206,15 +190,11 @@ inline bool operator!= (
   
  此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
-##  <a name="a-nameoperatorlta--operatorlt-operator"></a><a name="operator_lt"></a>运算符&lt;运算符  
+##  <a name="operator_lt"></a>运算符&lt;运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否小于右侧的 `concurrent_vector` 对象。  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator<(
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -244,15 +224,11 @@ inline bool operator<(
   
  此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
-##  <a name="a-nameoperatorlteqa--operatorlt-operator"></a><a name="operator_lt_eq"></a>运算符&lt;= 运算符  
+##  <a name="operator_lt_eq"></a>运算符&lt;= 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否小于或等于右侧的 `concurrent_vector` 对象。  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator<= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -282,15 +258,11 @@ inline bool operator<= (
   
  此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
-##  <a name="a-nameoperatorgta--operatorgt-operator"></a><a name="operator_gt"></a>运算符&gt;运算符  
+##  <a name="operator_gt"></a>运算符&gt;运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否大于右侧的 `concurrent_vector` 对象。  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator>(
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -320,15 +292,11 @@ inline bool operator>(
   
  此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
-##  <a name="a-nameoperatorgteqa--operatorgt-operator"></a><a name="operator_gt_eq"></a>运算符&gt;= 运算符  
+##  <a name="operator_gt_eq"></a>运算符&gt;= 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否大于或等于右侧的 `concurrent_vector` 对象。  
   
 ```  
-template<
-    typename T,  
-    class A1,  
-    class A2  
->  
+template<typename T, class A1, class A2>  
 inline bool operator>= (
     const concurrent_vector<T, A1>& _A,  
     const concurrent_vector<T, A2>& _B);
@@ -359,5 +327,5 @@ inline bool operator>= (
  此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

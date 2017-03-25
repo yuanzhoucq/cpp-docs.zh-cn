@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IVirtualProcessorRoot
+- IVirtualProcessorRoot
+- CONCRTRM/concurrency::IVirtualProcessorRoot
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Activate
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Deactivate
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::EnsureAllTasksVisible
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::GetId
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: ca095a249ee0eb9e1393e232ab7957a7060a2002
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2635f1c18dd61127360b8398ad1b0da03f1666d7
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 结构
@@ -52,12 +57,12 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[Ivirtualprocessorroot:: Activate 方法](#activate)|与执行上下文接口相关联的线程代理将导致`pContext`开始在此虚拟处理器根上执行。|  
-|[Ivirtualprocessorroot:: Deactivate 方法](#deactivate)|导致此虚拟处理器根停止调度的执行上下文中当前正在执行的线程代理。 线程代理将继续执行调用`Activate`方法。|  
-|[Ivirtualprocessorroot:: Ensurealltasksvisible 方法](#ensurealltasksvisible)|会导致数据存储在内存层次结构的各处理器，以对系统上的所有处理器都可见。 它确保了全内存界定已执行的所有处理器上在方法返回之前。|  
-|[Ivirtualprocessorroot:: Getid 方法](#getid)|返回的虚拟处理器根的唯一标识符。|  
+|[Ivirtualprocessorroot:: Activate](#activate)|与执行上下文接口相关联的线程代理将导致`pContext`开始在此虚拟处理器根上执行。|  
+|[Ivirtualprocessorroot:: Deactivate](#deactivate)|导致此虚拟处理器根停止调度的执行上下文中当前正在执行的线程代理。 线程代理将继续执行调用`Activate`方法。|  
+|[Ivirtualprocessorroot:: Ensurealltasksvisible](#ensurealltasksvisible)|会导致数据存储在内存层次结构的各处理器，以对系统上的所有处理器都可见。 它确保了全内存界定已执行的所有处理器上在方法返回之前。|  
+|[Ivirtualprocessorroot:: Getid](#getid)|返回的虚拟处理器根的唯一标识符。|  
   
 ## <a name="remarks"></a>备注  
  每个虚拟处理器根具有关联的执行资源。 `IVirtualProcessorRoot`接口继承自[IExecutionResource](iexecutionresource-structure.md)接口。 多个虚拟处理器根可能对应于相同的基础硬件线程。  
@@ -74,7 +79,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameactivatea--ivirtualprocessorrootactivate-method"></a><a name="activate"></a>Ivirtualprocessorroot:: Activate 方法  
+##  <a name="activate"></a>Ivirtualprocessorroot:: Activate 方法  
  与执行上下文接口相关联的线程代理将导致`pContext`开始在此虚拟处理器根上执行。  
   
 ```
@@ -100,7 +105,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
  激活的虚拟处理器根的行为会增加一个基础硬件线程的订阅级别。 订阅级别的详细信息，请参阅[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-##  <a name="a-namedeactivatea--ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a>Ivirtualprocessorroot:: Deactivate 方法  
+##  <a name="deactivate"></a>Ivirtualprocessorroot:: Deactivate 方法  
  导致此虚拟处理器根停止调度的执行上下文中当前正在执行的线程代理。 线程代理将继续执行调用`Activate`方法。  
   
 ```
@@ -127,7 +132,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  停用的虚拟处理器根的 act 减一基础硬件线程的订阅级别。 订阅级别的详细信息，请参阅[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-##  <a name="a-nameensurealltasksvisiblea--ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a>Ivirtualprocessorroot:: Ensurealltasksvisible 方法  
+##  <a name="ensurealltasksvisible"></a>Ivirtualprocessorroot:: Ensurealltasksvisible 方法  
  会导致数据存储在内存层次结构的各处理器，以对系统上的所有处理器都可见。 它确保了全内存界定已执行的所有处理器上在方法返回之前。  
   
 ```
@@ -147,7 +152,7 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_operation`如果尚未激活过虚拟处理器根，则会引发或参数`pContext`不表示最近调度由此虚拟处理器根的执行上下文。  
   
-##  <a name="a-namegetida--ivirtualprocessorrootgetid-method"></a><a name="getid"></a>Ivirtualprocessorroot:: Getid 方法  
+##  <a name="getid"></a>Ivirtualprocessorroot:: Getid 方法  
  返回的虚拟处理器根的唯一标识符。  
   
 ```
@@ -158,5 +163,5 @@ virtual unsigned int GetId() const = 0;
  整数标识符。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

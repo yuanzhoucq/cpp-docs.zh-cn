@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_continuation_context
+- task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context::get_current_winrt_context
+- PPLTASKS/concurrency::task_continuation_context::use_arbitrary
+- PPLTASKS/concurrency::task_continuation_context::use_current
+- PPLTASKS/concurrency::task_continuation_context::use_default
+- PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 627c2adc60c143ef7cd9be62f71a4365eed5aed5
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8afd599e5ee489500d7f8c498d03c91ace6b99ed
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 类
@@ -53,13 +59,13 @@ class task_continuation_context : public details::_ContextCallback;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[get_current_winrt_context 方法](#get_current_winrt_context)|返回表示当前的 winrt 线程上下文的任务延续上下文对象。|  
-|[use_arbitrary 方法](#use_arbitrary)|创建允许运行时选择延续的执行上下文的任务延续上下文。|  
-|[use_current 方法](#use_current)|返回表示当前执行上下文的任务延续上下文对象。|  
-|[use_default 方法](#use_default)|创建默认任务延续上下文。|  
-|[use_synchronous_execution 方法](#use_synchronous_execution)|返回表示执行同步上下文的任务延续上下文对象。|  
+|[get_current_winrt_context](#get_current_winrt_context)|返回表示当前的 winrt 线程上下文的任务延续上下文对象。|  
+|[use_arbitrary](#use_arbitrary)|创建允许运行时选择延续的执行上下文的任务延续上下文。|  
+|[use_current](#use_current)|返回表示当前执行上下文的任务延续上下文对象。|  
+|[use_default](#use_default)|创建默认任务延续上下文。|  
+|[use_synchronous_execution](#use_synchronous_execution)|返回表示执行同步上下文的任务延续上下文对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `_ContextCallback`  
@@ -71,7 +77,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **命名空间：** 并发  
 
-## <a name="a-namegetcurrentwinrtcontexta-getcurrentwinrtcontext"></a><a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a>get_current_winrt_context
  返回表示当前的 WinRT 线程上下文的任务延续上下文对象。  
   
 ## <a name="syntax"></a>语法  
@@ -91,7 +97,7 @@ static task_continuation_context get_current_winrt_context();
  此方法类似于是`use_current`方法，但它也是可用于本机 c + + 代码不使用 C + + /cli CX 扩展支持。 适用于在使用高级用户编写 C + + /cli CX 不可知本机模式和 Windows 运行时调用方的库代码。 除非您需要此功能，否则我们建议`use_current`方法，仅可供 C + + /cli CX 客户端。  
   
   
-##  <a name="a-nameusearbitrarya-usearbitrary"></a><a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a>use_arbitrary 
 
  创建允许运行时选择延续的执行上下文的任务延续上下文。  
   
@@ -109,7 +115,7 @@ static task_continuation_context use_arbitrary();
   
  此方法仅适用于 Windows 应用商店应用。  
   
-##  <a name="a-nameusecurrenta-usecurrent"></a><a name="use_current"></a>use_current 
+##  <a name="use_current"></a>use_current 
 
  返回表示当前执行上下文的任务延续上下文对象。  
   
@@ -127,7 +133,7 @@ static task_continuation_context use_current();
   
  此方法仅适用于 Windows 应用商店应用。  
   
-##  <a name="a-nameusedefaulta-usedefault"></a><a name="use_default"></a>use_default 
+##  <a name="use_default"></a>use_default 
 
  创建默认任务延续上下文。  
   
@@ -145,7 +151,7 @@ static task_continuation_context use_default();
   
  非单元注意任务将在运行时选择的上下文中执行。  
 
-## <a name="a-nameusesynchronousexecutiona-taskcontinuationcontextusesynchronousexecution"></a><a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
 返回表示执行同步上下文的任务延续上下文对象。  
   
 ## <a name="syntax"></a>语法  
@@ -164,5 +170,5 @@ static task_continuation_context use_synchronous_execution();
   
  
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::agent
+- agent
+- AGENTS/concurrency::agent
+- AGENTS/concurrency::agent::agent
+- AGENTS/concurrency::agent::cancel
+- AGENTS/concurrency::agent::start
+- AGENTS/concurrency::agent::status
+- AGENTS/concurrency::agent::status_port
+- AGENTS/concurrency::agent::wait
+- AGENTS/concurrency::agent::wait_for_all
+- AGENTS/concurrency::agent::wait_for_one
+- AGENTS/concurrency::agent::done
+- AGENTS/concurrency::agent::run
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +46,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 640e1d66a879e8eb73428b50339d6a325cfd7cb2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1e6e23e742137bffd9035ecf69ecc32d199ca0c5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="agent-class"></a>agent 类
@@ -53,29 +64,29 @@ class agent;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[代理构造函数](#ctor)|已重载。 构造一个代理。|  
+|[代理](#ctor)|已重载。 构造一个代理。|  
 |[~ agent 析构函数](#dtor)|销毁代理。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[cancel 方法](#cancel)|将代理移从`agent_created`或`agent_runnable`状态到`agent_canceled`状态。|  
-|[start 方法](#start)|将从代理移`agent_created`状态进入`agent_runnable`状态，并且执行对其进行安排。|  
-|[状态方法](#status)|来自代理的状态信息的同步源。|  
-|[status_port 方法](#status_port)|来自代理的状态信息异步源。|  
-|[wait 方法](#wait)|等待代理完成其任务。|  
-|[wait_for_all 方法](#wait_for_all)|等待所有指定的代理来完成其任务。|  
-|[wait_for_one 方法](#wait_for_one)|等待指定的代理完成其任务之一。|  
+|[取消](#cancel)|将代理移从`agent_created`或`agent_runnable`状态到`agent_canceled`状态。|  
+|[start](#start)|将从代理移`agent_created`状态进入`agent_runnable`状态，并且执行对其进行安排。|  
+|[status](#status)|来自代理的状态信息的同步源。|  
+|[status_port](#status_port)|来自代理的状态信息异步源。|  
+|[等待](#wait)|等待代理完成其任务。|  
+|[wait_for_all](#wait_for_all)|等待所有指定的代理来完成其任务。|  
+|[wait_for_one](#wait_for_one)|等待指定的代理完成其任务之一。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[done 的方法](#done)|将移动到代理`agent_done`状态，指示该代理已完成。|  
-|[run 的方法](#run)|表示代理的主要任务。 `run`应在派生类中重写，并指定代理应执行的操作已启动。|  
+|[完成](#done)|将移动到代理`agent_done`状态，指示该代理已完成。|  
+|[run](#run)|表示代理的主要任务。 `run`应在派生类中重写，并指定代理应执行的操作已启动。|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[异步代理](../../../parallel/concrt/asynchronous-agents.md)。  
@@ -88,7 +99,7 @@ class agent;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-agent"></a><a name="ctor"></a>代理 
+##  <a name="ctor"></a>代理 
 
  构造一个代理。  
   
@@ -110,7 +121,7 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="remarks"></a>备注  
  如果未指定，则运行时将使用默认计划程序`_PScheduler`或`_PGroup`参数。  
   
-##  <a name="a-namedtora-agent"></a><a name="dtor"></a>~ 代理 
+##  <a name="dtor"></a>~ 代理 
 
  销毁代理。  
   
@@ -121,7 +132,7 @@ virtual ~agent();
 ### <a name="remarks"></a>备注  
  它是错误销毁不处于终止状态的代理 (或者`agent_done`或`agent_canceled`)。 这可以避免等待代理到达终止状态的析构函数中的类，该类继承`agent`类。  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>取消 
+##  <a name="cancel"></a>取消 
 
  将代理移从`agent_created`或`agent_runnable`状态到`agent_canceled`状态。  
   
@@ -132,7 +143,7 @@ bool cancel();
 ### <a name="return-value"></a>返回值  
  `true`如果代理已被取消，`false`否则为。 如果它已经启动了运行或已完成，代理不能取消。  
   
-##  <a name="a-namedonea-done"></a><a name="done"></a>完成 
+##  <a name="done"></a>完成 
 
  将移动到代理`agent_done`状态，指示该代理已完成。  
   
@@ -146,7 +157,7 @@ bool done();
 ### <a name="remarks"></a>备注  
  此方法应调用的末尾`run`方法，当您知道您的代理执行完成。  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>运行 
+##  <a name="run"></a>运行 
 
  表示代理的主要任务。 `run`应在派生类中重写，并指定代理应执行的操作已启动。  
   
@@ -157,7 +168,7 @@ virtual void run() = 0;
 ### <a name="remarks"></a>备注  
  代理状态将更改为`agent_started`右键之前调用此方法。 该方法应调用`done`的代理上的相应的状态，然后再返回，并且可能不会引发任何异常。  
   
-##  <a name="a-namestarta-start"></a><a name="start"></a>启动 
+##  <a name="start"></a>启动 
 
  将从代理移`agent_created`状态进入`agent_runnable`状态，并且执行对其进行安排。  
   
@@ -168,7 +179,7 @@ bool start();
 ### <a name="return-value"></a>返回值  
  `true`如果代理是否正确，启动`false`否则为。 无法启动代理程序已被取消。  
   
-##  <a name="a-namestatusa-status"></a><a name="status"></a>状态 
+##  <a name="status"></a>状态 
 
  来自代理的状态信息的同步源。  
   
@@ -179,7 +190,7 @@ agent_status status();
 ### <a name="return-value"></a>返回值  
  返回的代理的当前状态。 请注意在返回后无法更改此返回的状态。  
   
-##  <a name="a-namestatusporta-statusport"></a><a name="status_port"></a>status_port 
+##  <a name="status_port"></a>status_port 
 
  来自代理的状态信息异步源。  
   
@@ -190,7 +201,7 @@ ISource<agent_status>* status_port();
 ### <a name="return-value"></a>返回值  
  返回可以发送有关代理的当前状态的消息的消息源。  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>等待 
+##  <a name="wait"></a>等待 
 
  等待代理完成其任务。  
   
@@ -215,7 +226,7 @@ static agent_status __cdecl wait(
   
  如果该参数`_Timeout`常数以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)代理已完成其任务之前，指定的时间内过期时引发。  
   
-##  <a name="a-namewaitforalla-waitforall"></a><a name="wait_for_all"></a>wait_for_all 
+##  <a name="wait_for_all"></a>wait_for_all 
 
  等待所有指定的代理来完成其任务。  
   
@@ -245,7 +256,7 @@ static void __cdecl wait_for_all(
   
  如果该参数`_Timeout`常数以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)代理已完成其任务之前，指定的时间内过期时引发。  
   
-##  <a name="a-namewaitforonea-waitforone"></a><a name="wait_for_one"></a>wait_for_one 
+##  <a name="wait_for_one"></a>wait_for_one 
 
  等待指定的代理完成其任务之一。  
   
@@ -280,5 +291,5 @@ static void __cdecl wait_for_one(
  如果该参数`_Timeout`常数以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)代理已完成其任务之前，指定的时间内过期时引发。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

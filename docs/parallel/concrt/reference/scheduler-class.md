@@ -9,7 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::Scheduler
+- Scheduler
+- CONCRT/concurrency::Scheduler
+- CONCRT/concurrency::Scheduler::Scheduler
+- CONCRT/concurrency::Scheduler::Attach
+- CONCRT/concurrency::Scheduler::Create
+- CONCRT/concurrency::Scheduler::CreateScheduleGroup
+- CONCRT/concurrency::Scheduler::GetNumberOfVirtualProcessors
+- CONCRT/concurrency::Scheduler::GetPolicy
+- CONCRT/concurrency::Scheduler::Id
+- CONCRT/concurrency::Scheduler::IsAvailableLocation
+- CONCRT/concurrency::Scheduler::Reference
+- CONCRT/concurrency::Scheduler::RegisterShutdownEvent
+- CONCRT/concurrency::Scheduler::Release
+- CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
+- CONCRT/concurrency::Scheduler::ScheduleTask
+- CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ea4de856528305020e8b082da3a55fcd27df3a64
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: cc39a524e9a65aeab0c84fb43f5b38ddd892923e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="scheduler-class"></a>Scheduler 类
@@ -52,28 +67,28 @@ class Scheduler;
   
 ### <a name="protected-constructors"></a>受保护的构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[计划程序构造函数](#ctor)|对象`Scheduler`类只能作为进程使用工厂方法创建或隐式。|  
+|[计划程序](#ctor)|对象`Scheduler`类只能作为进程使用工厂方法创建或隐式。|  
 |[~ Scheduler 析构函数](#dtor)|对象`Scheduler`类隐式被销毁时对它的所有外部引用不再存在。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
 |----------|-----------------|  
-|[Attach 方法](#attach)|将调度程序附加到调用的上下文。 此方法返回后，调用的上下文由计划程序和计划程序将成为当前计划程序。|  
-|[Create 方法](#create)|创建新的计划程序由描述其行为`_Policy`参数，在计划程序，将初始引用并将指针返回到它。|  
-|[CreateScheduleGroup 方法](#createschedulegroup)|已重载。 创建新的计划组的计划程序中。 采用参数的版本`_Placement`会导致任务偏向在该参数指定的位置执行新创建的计划组中。|  
-|[GetNumberOfVirtualProcessors 方法](#getnumberofvirtualprocessors)|返回计划程序的当前虚拟处理器数。|  
-|[GetPolicy 方法](#getpolicy)|返回用其创建计划的策略的副本。|  
-|[Id 方法](#id)|返回计划程序的唯一标识符。|  
-|[IsAvailableLocation 方法](#isavailablelocation)|确定给定的位置是否可用计划程序上。|  
-|[Reference 方法](#reference)|递增计划程序的引用计数。|  
-|[RegisterShutdownEvent 方法](#registershutdownevent)|Windows 事件句柄传入的原因`_Event`参数来计划程序关闭和销毁本身时发出信号。 发出事件信号时，已计划至计划程序的所有工作都都完成。 可以通过此方法注册多个关闭事件。|  
-|[Release 方法](#release)|递减计划程序的引用计数。|  
-|[ResetDefaultSchedulerPolicy 方法](#resetdefaultschedulerpolicy)|将默认计划程序策略重置为运行时的默认值。 下次创建一个默认计划程序，它将使用运行时的默认策略设置。|  
-|[ScheduleTask 方法](#scheduletask)|已重载。 计划轻量任务的计划程序中。 轻量任务将放置在运行时确定的计划组中。 采用参数 `_Placement` 的版本导致任务偏向在指定的位置执行。|  
-|[SetDefaultSchedulerPolicy 方法](#setdefaultschedulerpolicy)|允许用户定义的策略将用于创建默认计划程序。 仅当没有默认计划程序在进程中存在时，可以调用此方法。 设置了默认策略后，它将保持有效直到下一步的有效调用至任一`SetDefaultSchedulerPolicy`或[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)方法。|  
+|[附加](#attach)|将调度程序附加到调用的上下文。 此方法返回后，调用的上下文由计划程序和计划程序将成为当前计划程序。|  
+|[创建](#create)|创建新的计划程序由描述其行为`_Policy`参数，在计划程序，将初始引用并将指针返回到它。|  
+|[CreateScheduleGroup](#createschedulegroup)|已重载。 创建新的计划组的计划程序中。 采用参数的版本`_Placement`会导致任务偏向在该参数指定的位置执行新创建的计划组中。|  
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|返回计划程序的当前虚拟处理器数。|  
+|[GetPolicy](#getpolicy)|返回用其创建计划的策略的副本。|  
+|[Id](#id)|返回计划程序的唯一标识符。|  
+|[IsAvailableLocation](#isavailablelocation)|确定给定的位置是否可用计划程序上。|  
+|[参考](#reference)|递增计划程序的引用计数。|  
+|[RegisterShutdownEvent](#registershutdownevent)|Windows 事件句柄传入的原因`_Event`参数来计划程序关闭和销毁本身时发出信号。 发出事件信号时，已计划至计划程序的所有工作都都完成。 可以通过此方法注册多个关闭事件。|  
+|[发布](#release)|递减计划程序的引用计数。|  
+|[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|将默认计划程序策略重置为运行时的默认值。 下次创建一个默认计划程序，它将使用运行时的默认策略设置。|  
+|[ScheduleTask](#scheduletask)|已重载。 计划轻量任务的计划程序中。 轻量任务将放置在运行时确定的计划组中。 采用参数 `_Placement` 的版本导致任务偏向在指定的位置执行。|  
+|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|允许用户定义的策略将用于创建默认计划程序。 仅当没有默认计划程序在进程中存在时，可以调用此方法。 设置了默认策略后，它将保持有效直到下一步的有效调用至任一`SetDefaultSchedulerPolicy`或[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)方法。|  
   
 ## <a name="remarks"></a>备注  
  并发运行时计划程序将使用映射到操作系统执行上下文，如线程的执行上下文，来执行工作对其进行排队应用程序。 在任何时候，一个计划程序的并发级别等同于授予它通过资源管理器中的虚拟处理器数。 虚拟处理器是处理资源和映射到基础系统的硬件线程的抽象。 在给定时间，只有一个计划程序上下文可以执行一个虚拟处理器。  
@@ -88,7 +103,7 @@ class Scheduler;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameattacha-attach"></a><a name="attach"></a>附加 
+##  <a name="attach"></a>附加 
 
  将调度程序附加到调用的上下文。 此方法返回后，调用的上下文由计划程序和计划程序将成为当前计划程序。  
   
@@ -105,7 +120,7 @@ virtual void Attach() = 0;
   
  此方法将引发[improper_scheduler_attach](improper-scheduler-attach-class.md)如果此计划程序是调用上下文的当前计划程序的异常。  
   
-##  <a name="a-namecreatea-create"></a><a name="create"></a>创建 
+##  <a name="create"></a>创建 
 
  创建新的计划程序由描述其行为`_Policy`参数，在计划程序，将初始引用并将指针返回到它。  
   
@@ -127,7 +142,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
   
  此方法会引发异常，包括各种[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)和[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)。  
   
-##  <a name="a-namecreateschedulegroupa-createschedulegroup"></a><a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
  创建新的计划组的计划程序中。 采用参数的版本`_Placement`会导致任务偏向在该参数指定的位置执行新创建的计划组中。  
   
@@ -149,7 +164,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
   
  请注意，是否显式创建此计划程序，必须释放之前释放计划程序上的您引用的计划中，组的所有引用。  
   
-##  <a name="a-namegetnumberofvirtualprocessorsa-getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
  返回计划程序的当前虚拟处理器数。  
   
@@ -160,7 +175,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ### <a name="return-value"></a>返回值  
  当前的计划程序的虚拟处理器数。  
   
-##  <a name="a-namegetpolicya-getpolicy"></a><a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a>GetPolicy 
 
  返回用其创建计划的策略的副本。  
   
@@ -171,7 +186,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>返回值  
  用其创建计划的策略的副本。  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Id 
+##  <a name="id"></a>Id 
 
  返回计划程序的唯一标识符。  
   
@@ -182,7 +197,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>返回值  
  计划程序的唯一标识符。  
   
-##  <a name="a-nameisavailablelocationa-isavailablelocation"></a><a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a>IsAvailableLocation 
 
  确定给定的位置是否可用计划程序上。  
   
@@ -200,7 +215,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ### <a name="remarks"></a>备注  
  注意，返回值是给定位置是否可用的瞬时采样。 在存在多个计划程序时，动态资源管理可以从计划程序中的任意点添加或移除资源。 如果发生这种情况，那么给定位置的可用性会发生更改。  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>引用 
+##  <a name="reference"></a>引用 
 
  递增计划程序的引用计数。  
   
@@ -216,7 +231,7 @@ virtual unsigned int Reference() = 0 ;
   
  该方法将引发[improper_scheduler_reference](improper-scheduler-reference-class.md)异常的引用计数在调用之前如果`Reference`方法为零并不由计划程序拥有的上下文中进行调用。  
   
-##  <a name="a-nameregistershutdowneventa-registershutdownevent"></a><a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
  Windows 事件句柄传入的原因`_Event`参数来计划程序关闭和销毁本身时发出信号。 发出事件信号时，已计划至计划程序的所有工作都都完成。 可以通过此方法注册多个关闭事件。  
   
@@ -228,7 +243,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
  `_Event`  
  Windows 事件对象将由运行时计划程序关闭并销毁本身信号的句柄。  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>版本 
+##  <a name="release"></a>版本 
 
  递减计划程序的引用计数。  
   
@@ -242,7 +257,7 @@ virtual unsigned int Release() = 0;
 ### <a name="remarks"></a>备注  
  这通常用于管理计划程序的复合的生存期。 当计划程序的引用计数降为零时，计划程序将在其所有工作完成后关闭并析构自身。  
   
-##  <a name="a-nameresetdefaultschedulerpolicya-resetdefaultschedulerpolicy"></a><a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
+##  <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
 
  将默认计划程序策略重置为运行时的默认值。 下次创建一个默认计划程序，它将使用运行时的默认策略设置。  
   
@@ -253,7 +268,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 ### <a name="remarks"></a>备注  
  在进程中存在一个默认计划程序时，可以调用此方法。 它不会影响现有的默认计划程序的策略。 但是，如果默认计划程序将要关闭，并且打算在稍后的某个点上创建新的默认值，新的计划程序将使用运行时默认策略设置。  
   
-##  <a name="a-namectora-scheduler"></a><a name="ctor"></a>计划程序 
+##  <a name="ctor"></a>计划程序 
 
  对象`Scheduler`类只能作为进程使用工厂方法创建或隐式。  
   
@@ -266,7 +281,7 @@ Scheduler();
   
  您还可以创建一个计划程序明确地通过`CurrentScheduler::Create`方法或`Scheduler::Create`方法。  
   
-##  <a name="a-namedtora-scheduler"></a><a name="dtor"></a>~ 计划程序 
+##  <a name="dtor"></a>~ 计划程序 
 
  对象`Scheduler`类隐式被销毁时对它的所有外部引用不再存在。  
   
@@ -274,7 +289,7 @@ Scheduler();
 virtual ~Scheduler();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  计划轻量任务的计划程序中。 轻量任务将放置在运行时确定的计划组中。 采用参数 `_Placement` 的版本导致任务偏向在指定的位置执行。  
   
@@ -299,7 +314,7 @@ virtual void ScheduleTask(
  `_Placement`  
  对偏向执行轻量任务的位置的引用。  
   
-##  <a name="a-namesetdefaultschedulerpolicya-setdefaultschedulerpolicy"></a><a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
+##  <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
 
  允许用户定义的策略将用于创建默认计划程序。 仅当没有默认计划程序在进程中存在时，可以调用此方法。 设置了默认策略后，它将保持有效直到下一步的有效调用至任一`SetDefaultSchedulerPolicy`或[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)方法。  
   
@@ -317,7 +332,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [Scheduler 类](scheduler-class.md)   
- [PolicyElementKey 枚举](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

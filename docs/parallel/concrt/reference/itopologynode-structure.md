@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ITopologyNode
+- ITopologyNode
+- CONCRTRM/concurrency::ITopologyNode
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetExecutionResourceCount
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetFirstExecutionResource
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
+- CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 8274da148f9f74cad73d63363bbbaff307943539
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: c0a4e8365d7d0ef9912bb84e4a2a4cfe7e9ef0f1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 结构
@@ -52,13 +58,13 @@ struct ITopologyNode;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[Itopologynode:: Getexecutionresourcecount 方法](#getexecutionresourcecount)|返回在此节点下组合在一起的执行资源的数量。|  
-|[Itopologynode:: Getfirstexecutionresource 方法](#getfirstexecutionresource)|返回在此节点下以枚举顺序分组的第一个执行资源。|  
-|[Itopologynode:: Getid 方法](#getid)|返回此节点的资源管理器的唯一标识符。|  
-|[Itopologynode:: Getnext 方法](#getnext)|返回一个指向枚举顺序中下一拓扑节点的接口。|  
-|[Itopologynode:: Getnumanode 方法](#getnumanode)|返回 Windows 分配此资源管理器节点所属于的 NUMA 节点号。|  
+|[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|返回在此节点下组合在一起的执行资源的数量。|  
+|[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|返回在此节点下以枚举顺序分组的第一个执行资源。|  
+|[Itopologynode:: Getid](#getid)|返回此节点的资源管理器的唯一标识符。|  
+|[Itopologynode:: Getnext](#getnext)|返回一个指向枚举顺序中下一拓扑节点的接口。|  
+|[Itopologynode:: Getnumanode](#getnumanode)|返回 Windows 分配此资源管理器节点所属于的 NUMA 节点号。|  
   
 ## <a name="remarks"></a>备注  
  此接口通常用来为资源管理器已观察到引导系统的拓扑。  
@@ -71,7 +77,7 @@ struct ITopologyNode;
   
  **命名空间：** 并发  
   
-##  <a name="a-namegetexecutionresourcecounta--itopologynodegetexecutionresourcecount-method"></a><a name="getexecutionresourcecount"></a>Itopologynode:: Getexecutionresourcecount 方法  
+##  <a name="getexecutionresourcecount"></a>Itopologynode:: Getexecutionresourcecount 方法  
  返回在此节点下组合在一起的执行资源的数量。  
   
 ```
@@ -81,7 +87,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ### <a name="return-value"></a>返回值  
  在此节点下组合在一起的执行资源的数量。  
   
-##  <a name="a-namegetfirstexecutionresourcea--itopologynodegetfirstexecutionresource-method"></a><a name="getfirstexecutionresource"></a>Itopologynode:: Getfirstexecutionresource 方法  
+##  <a name="getfirstexecutionresource"></a>Itopologynode:: Getfirstexecutionresource 方法  
  返回在此节点下以枚举顺序分组的第一个执行资源。  
   
 ```
@@ -91,7 +97,7 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ### <a name="return-value"></a>返回值  
  在此节点下以枚举顺序分组的第一个执行资源。  
   
-##  <a name="a-namegetida--itopologynodegetid-method"></a><a name="getid"></a>Itopologynode:: Getid 方法  
+##  <a name="getid"></a>Itopologynode:: Getid 方法  
  返回此节点的资源管理器的唯一标识符。  
   
 ```
@@ -106,7 +112,7 @@ virtual unsigned int GetId() const = 0;
   
  可以从该函数获取节点数[GetProcessorNodeCount](concurrency-namespace-functions.md)。  
   
-##  <a name="a-namegetnexta--itopologynodegetnext-method"></a><a name="getnext"></a>Itopologynode:: Getnext 方法  
+##  <a name="getnext"></a>Itopologynode:: Getnext 方法  
  返回一个指向枚举顺序中下一拓扑节点的接口。  
   
 ```
@@ -116,7 +122,7 @@ virtual ITopologyNode *GetNext() const = 0;
 ### <a name="return-value"></a>返回值  
  一个指向枚举顺序中下一节点的接口。 如果系统拓扑的枚举顺序中没有更多的节点，则此方法将返回值 `NULL`。  
   
-##  <a name="a-namegetnumanodea--itopologynodegetnumanode-method"></a><a name="getnumanode"></a>Itopologynode:: Getnumanode 方法  
+##  <a name="getnumanode"></a>Itopologynode:: Getnumanode 方法  
  返回 Windows 分配此资源管理器节点所属于的 NUMA 节点号。  
   
 ```
@@ -130,5 +136,5 @@ virtual unsigned long GetNumaNode() const = 0;
  在对此节点所属的虚拟处理器根上运行的线程代理将具有关联到至少是此方法返回的 NUMA 节点的 NUMA 节点级别。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

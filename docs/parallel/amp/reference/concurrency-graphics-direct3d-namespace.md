@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f842080ce65d4c7a378a9c16ff91b24ae4f17a07
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d 命名空间
@@ -53,11 +53,11 @@ namespace direct3d;
   
 |名称<br /><br /> 说明|  
 |--------------------------|  
-|[get_sampler 函数](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> 获取给定加速器上的 Direct3D 采样器状态接口查看一个表示指定的采样器对象。|  
-|[get_texture 函数](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> 获取基础指定的 Direct3D 纹理接口[纹理](texture-class.md)对象。|  
-|[make_sampler 函数](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> 从 Direct3D 采样器状态的接口指针创建一个示例。|  
-|[make_texture 函数](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> 创建[纹理](texture-class.md)通过使用指定的参数的对象。|  
-|[msad4 函数](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> 将 4 字节引用值和一个 8 字节的源值进行比较，并累积 4 总和向量。|  
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> 获取给定加速器上的 Direct3D 采样器状态接口查看一个表示指定的采样器对象。|  
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> 获取基础指定的 Direct3D 纹理接口[纹理](texture-class.md)对象。|  
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> 从 Direct3D 采样器状态的接口指针创建一个示例。|  
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> 创建[纹理](texture-class.md)通过使用指定的参数的对象。|  
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> 将 4 字节引用值和一个 8 字节的源值进行比较，并累积 4 总和向量。|  
   
 ## <a name="requirements"></a>要求  
  **标头︰** amp_graphics.h  
@@ -65,5 +65,5 @@ namespace direct3d;
  **Namespace:** concurrency:: graphics  
   
 ## <a name="see-also"></a>另请参阅  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
 

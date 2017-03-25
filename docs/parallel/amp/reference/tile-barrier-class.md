@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::tile_barrier
+- tile_barrier
+- AMP/tile_barrier
+- AMP/Concurrency::tile_barrier::tile_barrier::tile_barrier
+- AMP/Concurrency::tile_barrier::tile_barrier::wait
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_all_memory_fence
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_global_memory_fence
+- AMP/Concurrency::tile_barrier::tile_barrier::wait_with_tile_static_memory_fence
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7ace6bb366881f9e5a9678b3a005f3079542c9cd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 247828a6de3a5820d75623ee438810b563f04519
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 类
@@ -58,12 +64,12 @@ class tile_barrier;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[wait 方法](#wait)|指示要停止执行，直至磁贴中的所有线程都完成等待的线程组 (tile) 中的所有线程。|  
-|[wait_with_all_memory_fence 方法](#wait_with_all_memory_fence)|直到已完成的所有内存访问平铺中的所有线程和磁贴中的所有线程的阻止执行已达到此调用。|  
-|[wait_with_global_memory_fence 方法](#wait_with_global_memory_fence)|块中的图块，直到已完成的所有全局内存访问以及磁贴中的所有线程均已都到达此调用的所有线程执行。|  
-|[wait_with_tile_static_memory_fence 方法](#wait_with_tile_static_memory_fence)|将阻止执行平铺中的所有线程，直到所有`tile_static`已完成的内存访问以及磁贴中的所有线程均已都到达此调用。|  
+|[等待](#wait)|指示要停止执行，直至磁贴中的所有线程都完成等待的线程组 (tile) 中的所有线程。|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|直到已完成的所有内存访问平铺中的所有线程和磁贴中的所有线程的阻止执行已达到此调用。|  
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|块中的图块，直到已完成的所有全局内存访问以及磁贴中的所有线程均已都到达此调用的所有线程执行。|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|将阻止执行平铺中的所有线程，直到所有`tile_static`已完成的内存访问以及磁贴中的所有线程均已都到达此调用。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `tile_barrier`  
@@ -73,7 +79,7 @@ class tile_barrier;
   
  **命名空间：** 并发  
 
-## <a name="a-nametilebarrierctora--tilebarrier-constructor"></a><a name="tile_barrier__ctor"></a>tile_barrier 构造函数  
+## <a name="tile_barrier__ctor"></a>tile_barrier 构造函数  
  通过将一个现有的复制初始化类的新实例。  
   
 ### <a name="syntax"></a>语法 
@@ -87,7 +93,7 @@ tile_barrier(
  `_Other`  
  `tile_barrier`要从中复制对象。  
 
-## <a name="a-namewaita--wait"></a><a name="wait"></a>等待 
+## <a name="wait"></a>等待 
 指示线程组 (Tile) 中的所有线程停止执行，直到 Tile 中的所有线程完成等待。  
   
 ### <a name="syntax"></a>语法 
@@ -96,7 +102,7 @@ tile_barrier(
 void wait() const restrict(amp);  
 ```    
 
-## <a name="a-namewaitwithallmemoryfencea--waitwithallmemoryfence"></a><a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
+## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
 平铺直至平铺中的所有线程都已都达到此调用中的所有线程的阻止执行。 这可确保所有的内存访问中的线程磁贴，其他线程可见，并且已按程序顺序执行。  
   
 ### <a name="syntax"></a>语法 
@@ -106,7 +112,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 ```  
   
 
-## <a name="a-namewaitwithglobalmemoryfencea--waitwithglobalmemoryfence"></a><a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
+## <a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
 平铺直至平铺中的所有线程都已都达到此调用中的所有线程的阻止执行。 这可确保所有全局内存访问中的线程磁贴，其他线程可见，并且已按程序顺序执行。  
   
 ### <a name="syntax"></a>语法 
@@ -115,7 +121,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 void wait_with_global_memory_fence() const  restrict(amp);  
 ```
 
-## <a name="a-namewaitwithtilestaticmemoryfencea--waitwithtilestaticmemoryfence"></a><a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
+## <a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
 平铺直至平铺中的所有线程都已都达到此调用中的所有线程的阻止执行。 这样可以确保`tile_static`内存的访问会向其他线程在线程图块，以及已按程序顺序执行。  
   
 ### <a name="syntax"></a>语法 
@@ -125,5 +131,5 @@ void wait_with_tile_static_memory_fence() const restrict(amp);
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

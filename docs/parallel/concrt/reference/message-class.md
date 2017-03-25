@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message
+- message
+- AGENTS/concurrency::message
+- AGENTS/concurrency::message::message
+- AGENTS/concurrency::message::add_ref
+- AGENTS/concurrency::message::msg_id
+- AGENTS/concurrency::message::remove_ref
+- AGENTS/concurrency::message::payload
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 08d67f2899f27a92250d6fedbf755a5413e01ebd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: c6cc72c1fe9385eabe86194031913b7363d602ff
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="message-class"></a>message 类
@@ -65,22 +71,22 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |名称|描述|  
 |----------|-----------------|  
-|[消息构造函数](#ctor)|已重载。 构造 `message` 对象。|  
+|[message](#ctor)|已重载。 构造 `message` 对象。|  
 |[~ message 析构函数](#dtor)|销毁`message`对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[add_ref 方法](#add_ref)|将添加到的引用计数`message`对象。 用于需要引用计数以确定消息生存期的消息块。|  
-|[msg_id 方法](#msg_id)|返回的 ID`message`对象。|  
-|[remove_ref 方法](#remove_ref)|将从的引用计数中减去`message`对象。 用于需要引用计数以确定消息生存期的消息块。|  
+|[add_ref](#add_ref)|将添加到的引用计数`message`对象。 用于需要引用计数以确定消息生存期的消息块。|  
+|[msg_id](#msg_id)|返回的 ID`message`对象。|  
+|[remove_ref](#remove_ref)|将从的引用计数中减去`message`对象。 用于需要引用计数以确定消息生存期的消息块。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[负载数据成员](#payload)|有效负载`message`对象。|  
+|[有效负载](#payload)|有效负载`message`对象。|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -93,7 +99,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameaddrefa-addref"></a><a name="add_ref"></a>add_ref 
+##  <a name="add_ref"></a>add_ref 
 
  将添加到的引用计数`message`对象。 用于需要引用计数以确定消息生存期的消息块。  
   
@@ -104,7 +110,7 @@ long add_ref();
 ### <a name="return-value"></a>返回值  
  新的引用计数值。  
   
-##  <a name="a-namectora-message"></a><a name="ctor"></a>消息 
+##  <a name="ctor"></a>消息 
 
  构造 `message` 对象。  
   
@@ -136,7 +142,7 @@ message(
 ### <a name="remarks"></a>备注  
  构造函数来采用一个指向`message`对象作为参数将引发[invalid_argument](../../../standard-library/invalid-argument-class.md)异常如果参数`_Msg`是`NULL`。  
   
-##  <a name="a-namedtora-message"></a><a name="dtor"></a>~ 消息 
+##  <a name="dtor"></a>~ 消息 
 
  销毁`message`对象。  
   
@@ -144,7 +150,7 @@ message(
 virtual ~message();
 ```  
   
-##  <a name="a-namemsgida-msgid"></a><a name="msg_id"></a>msg_id 
+##  <a name="msg_id"></a>msg_id 
 
  返回的 ID`message`对象。  
   
@@ -155,7 +161,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>返回值  
  `runtime_object_identity`的`message`对象。  
   
-##  <a name="a-namepayloada-payload"></a><a name="payload"></a>有效负载 
+##  <a name="payload"></a>有效负载 
 
  有效负载`message`对象。  
   
@@ -163,7 +169,7 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="a-nameremoverefa-removeref"></a><a name="remove_ref"></a>remove_ref 
+##  <a name="remove_ref"></a>remove_ref 
 
  将从的引用计数中减去`message`对象。 用于需要引用计数以确定消息生存期的消息块。  
   
@@ -175,5 +181,5 @@ long remove_ref();
  新的引用计数值。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

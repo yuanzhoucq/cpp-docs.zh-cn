@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSScheduler
+- IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 658c0d0c9ddb9bbe51134f0a7ea0211be9c39815
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58ca59224b5d9cdeb282562349642736a1b22c74
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 结构
@@ -54,7 +56,7 @@ struct IUMSScheduler : public IScheduler;
   
 |名称|说明|  
 |----------|-----------------|  
-|[Iumsscheduler:: Setcompletionlist 方法](#setcompletionlist)|将分配`IUMSCompletionList`UMS 线程计划程序的接口。|  
+|[Iumsscheduler:: Setcompletionlist](#setcompletionlist)|将分配`IUMSCompletionList`UMS 线程计划程序的接口。|  
   
 ## <a name="remarks"></a>备注  
  如果您要实现与资源管理器中，进行通信的自定义计划，并且您希望 UMS 线程要传递给您的计划程序，而不是普通的 Win32 线程，则应提供的实现`IUMSScheduler`接口。 此外，还应设置计划程序策略注册表项的策略值`SchedulerKind`要`UmsThreadDefault`。 如果策略指定 UMS 线程`IScheduler`作为参数传递的接口[iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler)方法必须是`IUMSScheduler`接口。  
@@ -73,7 +75,7 @@ struct IUMSScheduler : public IScheduler;
   
  **命名空间：** 并发  
   
-##  <a name="a-namesetcompletionlista--iumsschedulersetcompletionlist-method"></a><a name="setcompletionlist"></a>Iumsscheduler:: Setcompletionlist 方法  
+##  <a name="setcompletionlist"></a>Iumsscheduler:: Setcompletionlist 方法  
  将分配`IUMSCompletionList`UMS 线程计划程序的接口。  
   
 ```
@@ -89,7 +91,7 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
   
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
- [PolicyElementKey 枚举](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [IScheduler 结构](ischeduler-structure.md)   
  [IUMSCompletionList 结构](iumscompletionlist-structure.md)   
  [IResourceManager 结构](iresourcemanager-structure.md)

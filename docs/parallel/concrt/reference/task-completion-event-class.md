@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_completion_event
+- task_completion_event
+- PPLTASKS/concurrency::task_completion_event
+- PPLTASKS/concurrency::task_completion_event::task_completion_event
+- PPLTASKS/concurrency::task_completion_event::set
+- PPLTASKS/concurrency::task_completion_event::set_exception
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 2cd3e7381402cc65f3220010a71c969cda1c7e2d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b37ecb250c0794370fc586f0463f93023ca47603
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 类
@@ -64,14 +68,14 @@ class task_completion_event<void>;
   
 |名称|描述|  
 |----------|-----------------|  
-|[task_completion_event 构造函数](#ctor)|构造 `task_completion_event` 对象。|  
+|[task_completion_event](#ctor)|构造 `task_completion_event` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[set 方法](#set)|已重载。 设置任务完成事件。|  
-|[set_exception 方法](#set_exception)|已重载。 传播与此事件关联的所有任务的一个例外情况。|  
+|[set](#set)|已重载。 设置任务完成事件。|  
+|[set_exception](#set_exception)|已重载。 传播与此事件关联的所有任务的一个例外情况。|  
   
 ## <a name="remarks"></a>备注  
  在你的方案要求创建将完成的任务时使用基于任务完成事件创建的任务，从而计划在将来的某个时候执行其延续。 `task_completion_event` 的类型必须与创建的任务的类型相同，而对包含该类型的值的任务完成事件调用 set 方法将导致关联的任务完成，并提供该值作为其延续的结果。  
@@ -88,7 +92,7 @@ class task_completion_event<void>;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>设置 
+##  <a name="set"></a>设置 
 
  设置任务完成事件。  
   
@@ -108,7 +112,7 @@ bool set() const ;
 ### <a name="remarks"></a>备注  
  在多个存在或对并发调用`set`，仅第一次调用将失败，并且其结果 （如果有） 将存储在任务完成事件。 剩余的集将被忽略并且该方法将返回 false。 如果设置任务完成事件时，所有任务从都创建的事件将立即完成，并且其延续，如果有的话，这将安排。 任务已完成对象`_ResultType`以外`void`将的值传递给它们的延续。  
   
-##  <a name="a-namesetexceptiona-setexception"></a><a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a>set_exception 
 
  传播与此事件关联的所有任务的一个例外情况。  
   
@@ -126,7 +130,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-namectora-taskcompletionevent"></a><a name="ctor"></a>task_completion_event 
+##  <a name="ctor"></a>task_completion_event 
 
  构造 `task_completion_event` 对象。  
   
@@ -135,5 +139,5 @@ task_completion_event();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

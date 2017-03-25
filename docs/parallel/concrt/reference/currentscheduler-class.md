@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::CurrentScheduler
+- CurrentScheduler
+- CONCRT/concurrency::CurrentScheduler
+- CONCRT/concurrency::CurrentScheduler::Create
+- CONCRT/concurrency::CurrentScheduler::CreateScheduleGroup
+- CONCRT/concurrency::CurrentScheduler::Detach
+- CONCRT/concurrency::CurrentScheduler::Get
+- CONCRT/concurrency::CurrentScheduler::GetNumberOfVirtualProcessors
+- CONCRT/concurrency::CurrentScheduler::GetPolicy
+- CONCRT/concurrency::CurrentScheduler::Id
+- CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
+- CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
+- CONCRT/concurrency::CurrentScheduler::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 514f0abb6e317a7b133203a2f089d492a46ae4c4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 9536dd28eeb375f3b9e018539cefb338812e340b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 类
@@ -54,16 +65,16 @@ class CurrentScheduler;
   
 |名称|说明|  
 |----------|-----------------|  
-|[Create 方法](#create)|创建新的计划程序由描述其行为`_Policy`参数并将其附加到调用上下文。 新创建的计划程序将成为的当前计划程序调用的上下文。|  
-|[CreateScheduleGroup 方法](#createschedulegroup)|已重载。 创建新的计划组与调用上下文相关联的计划程序中。 采用参数的版本`_Placement`会导致任务偏向在该参数指定的位置执行新创建的计划组中。|  
-|[Detach 方法](#detach)|分离当前计划程序中调用的上下文和还原以前附加的计划程序当前计划程序，如果存在。 然后，由以前被附加到上下文使用的计划程序管理此方法返回后，调用上下文`CurrentScheduler::Create`或`Scheduler::Attach`方法。|  
-|[Get 方法](#get)|与调用上下文，也称为当前计划程序关联的计划程序返回的指针。|  
-|[GetNumberOfVirtualProcessors 方法](#getnumberofvirtualprocessors)|返回与调用上下文相关的计划程序的当前虚拟处理器数。|  
-|[GetPolicy 方法](#getpolicy)|返回当前计划程序使用已创建的策略的副本。|  
-|[Id 方法](#id)|返回当前计划程序的唯一标识符。|  
-|[IsAvailableLocation 方法](#isavailablelocation)|确定在当前计划程序中给定位置是否可用。|  
-|[RegisterShutdownEvent 方法](#registershutdownevent)|Windows 事件句柄传入的原因`_ShutdownEvent`参数，以与当前上下文关联的计划程序关闭和销毁本身时发出信号。 发出事件信号时，已计划至计划程序的所有工作都都完成。 可以通过此方法注册多个关闭事件。|  
-|[ScheduleTask 方法](#scheduletask)|已重载。 安排与调用上下文相关联的计划程序中的轻量任务。 轻量任务将放置在运行时确定的计划组中。 采用参数 `_Placement` 的版本导致任务偏向在指定的位置执行。|  
+|[创建](#create)|创建新的计划程序由描述其行为`_Policy`参数并将其附加到调用上下文。 新创建的计划程序将成为的当前计划程序调用的上下文。|  
+|[CreateScheduleGroup](#createschedulegroup)|已重载。 创建新的计划组与调用上下文相关联的计划程序中。 采用参数的版本`_Placement`会导致任务偏向在该参数指定的位置执行新创建的计划组中。|  
+|[分离](#detach)|分离当前计划程序中调用的上下文和还原以前附加的计划程序当前计划程序，如果存在。 然后，由以前被附加到上下文使用的计划程序管理此方法返回后，调用上下文`CurrentScheduler::Create`或`Scheduler::Attach`方法。|  
+|[获取](#get)|与调用上下文，也称为当前计划程序关联的计划程序返回的指针。|  
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|返回与调用上下文相关的计划程序的当前虚拟处理器数。|  
+|[GetPolicy](#getpolicy)|返回当前计划程序使用已创建的策略的副本。|  
+|[Id](#id)|返回当前计划程序的唯一标识符。|  
+|[IsAvailableLocation](#isavailablelocation)|确定在当前计划程序中给定位置是否可用。|  
+|[RegisterShutdownEvent](#registershutdownevent)|Windows 事件句柄传入的原因`_ShutdownEvent`参数，以与当前上下文关联的计划程序关闭和销毁本身时发出信号。 发出事件信号时，已计划至计划程序的所有工作都都完成。 可以通过此方法注册多个关闭事件。|  
+|[ScheduleTask](#scheduletask)|已重载。 安排与调用上下文相关联的计划程序中的轻量任务。 轻量任务将放置在运行时确定的计划组中。 采用参数 `_Placement` 的版本导致任务偏向在指定的位置执行。|  
   
 ## <a name="remarks"></a>备注  
  如果没有计划程序 (请参阅[计划程序](scheduler-class.md)) 与调用上下文中的许多方法相关联`CurrentScheduler`类将导致附加的进程的默认计划。 这可能意味着，在此类调用期间，才创建进程的默认计划。  
@@ -76,7 +87,7 @@ class CurrentScheduler;
   
  **命名空间：** 并发  
   
-##  <a name="a-namecreatea-create"></a><a name="create"></a>创建 
+##  <a name="create"></a>创建 
 
  创建新的计划程序由描述其行为`_Policy`参数并将其附加到调用上下文。 新创建的计划程序将成为的当前计划程序调用的上下文。  
   
@@ -97,7 +108,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
   
  此方法会引发异常，包括各种[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)和[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)。  
   
-##  <a name="a-namecreateschedulegroupa-createschedulegroup"></a><a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
  创建新的计划组与调用上下文相关联的计划程序中。 采用参数的版本`_Placement`会导致任务偏向在该参数指定的位置执行新创建的计划组中。  
   
@@ -121,7 +132,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  请注意，是否显式创建此计划程序，必须释放内的计划组，通过分离从其当前上下文中发布该计划程序上的引用之前的所有引用。  
   
-##  <a name="a-namedetacha-detach"></a><a name="detach"></a>分离 
+##  <a name="detach"></a>分离 
 
  分离当前计划程序中调用的上下文和还原以前附加的计划程序当前计划程序，如果存在。 然后，由以前被附加到上下文使用的计划程序管理此方法返回后，调用上下文`CurrentScheduler::Create`或`Scheduler::Attach`方法。  
   
@@ -136,7 +147,7 @@ static void __cdecl Detach();
   
  内部且正由一个计划程序或已附加以外使用的方法的上下文管理上下文中调用此方法是[scheduler:: attach](scheduler-class.md#attach)或[currentscheduler:: Create](#create)方法，将导致[improper_scheduler_detach](improper-scheduler-detach-class.md)所引发异常。  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>获取 
+##  <a name="get"></a>获取 
 
  与调用上下文，也称为当前计划程序关联的计划程序返回的指针。  
   
@@ -150,7 +161,7 @@ static Scheduler* __cdecl Get();
 ### <a name="remarks"></a>备注  
  如果当前没有计划程序与调用上下文关联,此方法将导致进程的默认计划程序正被创建和/或附加到调用上下文。 没有其他引用放置在`Scheduler`此方法返回的对象。  
   
-##  <a name="a-namegetnumberofvirtualprocessorsa-getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
  返回与调用上下文相关的计划程序的当前虚拟处理器数。  
   
@@ -166,7 +177,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
   
  此方法的返回值是与调用上下文相关的计划程序的虚拟处理器数的瞬时采样。 此值在返回时可能过时。  
   
-##  <a name="a-namegetpolicya-getpolicy"></a><a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a>GetPolicy 
 
  返回当前计划程序使用已创建的策略的副本。  
   
@@ -180,7 +191,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>备注  
  如果当前没有计划程序与调用上下文关联,此方法将导致进程的默认计划程序正被创建和/或附加到调用上下文。  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Id 
+##  <a name="id"></a>Id 
 
  返回当前计划程序的唯一标识符。  
   
@@ -194,7 +205,7 @@ static unsigned int __cdecl Id();
 ### <a name="remarks"></a>备注  
  此方法不会导致计划程序连接如果调用的上下文已不与计划程序相关联。  
   
-##  <a name="a-nameisavailablelocationa-isavailablelocation"></a><a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a>IsAvailableLocation 
 
  确定在当前计划程序中给定位置是否可用。  
   
@@ -214,7 +225,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
   
  注意，返回值是给定位置是否可用的瞬时采样。 在存在多个计划程序时，动态资源管理可以从计划程序中的任意点添加或移除资源。 如果发生这种情况，那么给定位置的可用性会发生更改。  
   
-##  <a name="a-nameregistershutdowneventa-registershutdownevent"></a><a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
  Windows 事件句柄传入的原因`_ShutdownEvent`参数，以与当前上下文关联的计划程序关闭和销毁本身时发出信号。 发出事件信号时，已计划至计划程序的所有工作都都完成。 可以通过此方法注册多个关闭事件。  
   
@@ -229,7 +240,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ### <a name="remarks"></a>备注  
  如果没有计划程序附加到调用上下文，调用此方法将导致[scheduler_not_attached](scheduler-not-attached-class.md)所引发异常。  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  安排与调用上下文相关联的计划程序中的轻量任务。 轻量任务将放置在运行时确定的计划组中。 采用参数 `_Placement` 的版本导致任务偏向在指定的位置执行。  
   
@@ -260,7 +271,7 @@ static void __cdecl ScheduleTask(
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [Scheduler 类](scheduler-class.md)   
- [PolicyElementKey 枚举](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

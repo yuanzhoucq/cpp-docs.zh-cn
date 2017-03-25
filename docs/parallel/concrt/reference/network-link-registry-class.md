@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::network_link_registry
+- network_link_registry
+- AGENTS/concurrency::network_link_registry
+- AGENTS/concurrency::network_link_registry::add
+- AGENTS/concurrency::network_link_registry::begin
+- AGENTS/concurrency::network_link_registry::contains
+- AGENTS/concurrency::network_link_registry::count
+- AGENTS/concurrency::network_link_registry::remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8b39ab676db0072d279ee4058693769ef6f7eb3f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 类
@@ -57,7 +63,7 @@ class network_link_registry;
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |`const_pointer`|提供指向的指针的类型`const`中的元素`network_link_registry`对象。|  
 |`const_reference`|提供对引用的类型`const`元素存储在`network_link_registry`用于读取和执行 const 操作的对象。|  
@@ -66,13 +72,13 @@ class network_link_registry;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[添加方法](#add)|当在派生类中重写，将添加一个指向`network_link_registry`对象。|  
-|[begin 方法](#begin)|当在派生类中重写时返回的第一个元素的迭代器`network_link_registry`对象。|  
-|[包含方法](#contains)|当在派生类中重写时搜索`network_link_registry`对象指定块。|  
-|[count 方法](#count)|当在派生类中重写返回中的项数`network_link_registry`对象。|  
-|[remove 方法](#remove)|如果在派生类中重写，将删除从指定的块`network_link_registry`对象。|  
+|[add](#add)|当在派生类中重写，将添加一个指向`network_link_registry`对象。|  
+|[begin](#begin)|当在派生类中重写时返回的第一个元素的迭代器`network_link_registry`对象。|  
+|[包含](#contains)|当在派生类中重写时搜索`network_link_registry`对象指定块。|  
+|[count](#count)|当在派生类中重写返回中的项数`network_link_registry`对象。|  
+|[remove](#remove)|如果在派生类中重写，将删除从指定的块`network_link_registry`对象。|  
   
 ## <a name="remarks"></a>备注  
  `network link registry`不是安全的并发访问。  
@@ -85,7 +91,7 @@ class network_link_registry;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>添加 
+##  <a name="add"></a>添加 
 
  当在派生类中重写，将添加一个指向`network_link_registry`对象。  
   
@@ -97,7 +103,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  指向要添加的块的指针。  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>开始 
+##  <a name="begin"></a>开始 
 
  当在派生类中重写时返回的第一个元素的迭代器`network_link_registry`对象。  
   
@@ -111,7 +117,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>备注  
  迭代器的最终状态由`NULL`链接。  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>包含 
+##  <a name="contains"></a>包含 
 
  当在派生类中重写时搜索`network_link_registry`对象指定块。  
   
@@ -126,7 +132,7 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="return-value"></a>返回值  
  `true`如果找到了指定块，`false`否则为。  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>计数 
+##  <a name="count"></a>计数 
 
  当在派生类中重写返回中的项数`network_link_registry`对象。  
   
@@ -137,7 +143,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>返回值  
  中的项数`network_link_registry`对象。  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>删除 
+##  <a name="remove"></a>删除 
 
  如果在派生类中重写，将删除从指定的块`network_link_registry`对象。  
   

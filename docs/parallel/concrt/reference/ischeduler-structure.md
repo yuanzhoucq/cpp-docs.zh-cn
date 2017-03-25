@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IScheduler
+- IScheduler
+- CONCRTRM/concurrency::IScheduler
+- CONCRTRM/concurrency::IScheduler::IScheduler::AddVirtualProcessors
+- CONCRTRM/concurrency::IScheduler::IScheduler::GetId
+- CONCRTRM/concurrency::IScheduler::IScheduler::GetPolicy
+- CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyBusy
+- CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
+- CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
+- CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fd8733bdcf113497b82cb2559eaba5a6a4a15165
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 24305fbdded1709ec51270b3a29a239b345a5679
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ischeduler-structure"></a>IScheduler 结构
@@ -54,13 +62,13 @@ struct IScheduler;
   
 |名称|说明|  
 |----------|-----------------|  
-|[Ischeduler:: Addvirtualprocessors 方法](#addvirtualprocessors)|为计划程序供其使用提供的虚拟处理器根的一组中。 每个`IVirtualProcessorRoot`接口表示执行单个线程可以执行代表计划程序作业的权限。|  
-|[Ischeduler:: Getid 方法](#getid)|返回计划程序的唯一标识符。|  
-|[Ischeduler:: Getpolicy 方法](#getpolicy)|返回计划程序的策略的副本。 计划程序策略的详细信息，请参阅[SchedulerPolicy](schedulerpolicy-class.md)。|  
-|[Ischeduler:: Notifyresourcesexternallybusy 方法](#notifyresourcesexternallybusy)|通知此计划程序的数组中的虚拟处理器根的集所表示的硬件线程`ppVirtualProcessorRoots`现在正在使用的其他计划程序。|  
-|[Ischeduler:: Notifyresourcesexternallyidle 方法](#notifyresourcesexternallyidle)|通知此计划程序的数组中的虚拟处理器根的集所表示的硬件线程`ppVirtualProcessorRoots`未正在由其他计划程序。|  
-|[Ischeduler:: Removevirtualprocessors 方法](#removevirtualprocessors)|启动之前分配给此计划程序的虚拟处理器根的删除。|  
-|[Ischeduler:: Statistics 方法](#statistics)|提供与任务到达和完成率和队列长度更改的计划程序相关的信息。|  
+|[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|为计划程序供其使用提供的虚拟处理器根的一组中。 每个`IVirtualProcessorRoot`接口表示执行单个线程可以执行代表计划程序作业的权限。|  
+|[Ischeduler:: Getid](#getid)|返回计划程序的唯一标识符。|  
+|[Ischeduler:: Getpolicy](#getpolicy)|返回计划程序的策略的副本。 计划程序策略的详细信息，请参阅[SchedulerPolicy](schedulerpolicy-class.md)。|  
+|[Ischeduler:: Notifyresourcesexternallybusy](#notifyresourcesexternallybusy)|通知此计划程序的数组中的虚拟处理器根的集所表示的硬件线程`ppVirtualProcessorRoots`现在正在使用的其他计划程序。|  
+|[Ischeduler:: Notifyresourcesexternallyidle](#notifyresourcesexternallyidle)|通知此计划程序的数组中的虚拟处理器根的集所表示的硬件线程`ppVirtualProcessorRoots`未正在由其他计划程序。|  
+|[Ischeduler:: Removevirtualprocessors](#removevirtualprocessors)|启动之前分配给此计划程序的虚拟处理器根的删除。|  
+|[Ischeduler:: Statistics](#statistics)|提供与任务到达和完成率和队列长度更改的计划程序相关的信息。|  
   
 ## <a name="remarks"></a>备注  
  如果要实现与资源管理器进行通信的自定义计划，则应提供的实现`IScheduler`接口。 此接口是通信的一个计划程序和资源管理器之间的双向通道的一端。 另一端都由`IResourceManager`和`ISchedulerProxy`实现资源管理器的接口。  
@@ -73,7 +81,7 @@ struct IScheduler;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameaddvirtualprocessorsa--ischeduleraddvirtualprocessors-method"></a><a name="addvirtualprocessors"></a>Ischeduler:: Addvirtualprocessors 方法  
+##  <a name="addvirtualprocessors"></a>Ischeduler:: Addvirtualprocessors 方法  
  为计划程序供其使用提供的虚拟处理器根的一组中。 每个`IVirtualProcessorRoot`接口表示执行单个线程可以执行代表计划程序作业的权限。  
   
 ```
@@ -92,7 +100,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>备注  
  资源管理器时，将调用`AddVirtualProcessor`方法到一个计划程序授予一组初始虚拟处理器根。 它还可以调用该方法时重新平衡计划之间的资源添加到计划程序的虚拟处理器根。  
   
-##  <a name="a-namegetida--ischedulergetid-method"></a><a name="getid"></a>Ischeduler:: Getid 方法  
+##  <a name="getid"></a>Ischeduler:: Getid 方法  
  返回计划程序的唯一标识符。  
   
 ```
@@ -107,7 +115,7 @@ virtual unsigned int GetId() const = 0;
   
  获取从不同源的标识符可能导致未定义的行为。  
   
-##  <a name="a-namegetpolicya--ischedulergetpolicy-method"></a><a name="getpolicy"></a>Ischeduler:: Getpolicy 方法  
+##  <a name="getpolicy"></a>Ischeduler:: Getpolicy 方法  
  返回计划程序的策略的副本。 计划程序策略的详细信息，请参阅[SchedulerPolicy](schedulerpolicy-class.md)。  
   
 ```
@@ -117,7 +125,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>返回值  
  计划程序的策略的副本。  
   
-##  <a name="a-namenotifyresourcesexternallybusya--ischedulernotifyresourcesexternallybusy-method"></a><a name="notifyresourcesexternallybusy"></a>Ischeduler:: Notifyresourcesexternallybusy 方法  
+##  <a name="notifyresourcesexternallybusy"></a>Ischeduler:: Notifyresourcesexternallybusy 方法  
  通知此计划程序的数组中的虚拟处理器根的集所表示的硬件线程`ppVirtualProcessorRoots`现在正在使用的其他计划程序。  
   
 ```
@@ -142,7 +150,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  有资格获得通知的计划获取一的组初始通知时创建它时，通知它刚分配的资源外部正忙还是空闲。  
   
-##  <a name="a-namenotifyresourcesexternallyidlea--ischedulernotifyresourcesexternallyidle-method"></a><a name="notifyresourcesexternallyidle"></a>Ischeduler:: Notifyresourcesexternallyidle 方法  
+##  <a name="notifyresourcesexternallyidle"></a>Ischeduler:: Notifyresourcesexternallyidle 方法  
  通知此计划程序的数组中的虚拟处理器根的集所表示的硬件线程`ppVirtualProcessorRoots`未正在由其他计划程序。  
   
 ```
@@ -167,7 +175,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  有资格获得通知的计划获取一的组初始通知时创建它时，通知它刚分配的资源外部正忙还是空闲。  
   
-##  <a name="a-nameremovevirtualprocessorsa--ischedulerremovevirtualprocessors-method"></a><a name="removevirtualprocessors"></a>Ischeduler:: Removevirtualprocessors 方法  
+##  <a name="removevirtualprocessors"></a>Ischeduler:: Removevirtualprocessors 方法  
  启动之前分配给此计划程序的虚拟处理器根的删除。  
   
 ```
@@ -188,7 +196,7 @@ virtual void RemoveVirtualProcessors(
   
  该参数`ppVirtualProcessorRoots`指向的接口的数组。 在虚拟处理器根，要删除的组，之间，永远不会被激活的根可以立即使用返回`Remove`方法。 应以异步方式返回已激活，并任一正在执行的工作或已被停用、 等待工作到达时，这些根。 计划程序必须进行每次尝试尽可能快地删除的虚拟处理器根。 延迟删除的虚拟处理器根的可能会导致意外的过度订阅的计划程序中。  
   
-##  <a name="a-namestatisticsa--ischedulerstatistics-method"></a><a name="statistics"></a>Ischeduler:: Statistics 方法  
+##  <a name="statistics"></a>Ischeduler:: Statistics 方法  
  提供与任务到达和完成率和队列长度更改的计划程序相关的信息。  
   
 ```
@@ -217,7 +225,7 @@ virtual void Statistics(
   
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
- [PolicyElementKey 枚举](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [SchedulerPolicy 类](schedulerpolicy-class.md)   
  [IExecutionContext 结构](iexecutioncontext-structure.md)   
  [IThreadProxy 结构](ithreadproxy-structure.md)   

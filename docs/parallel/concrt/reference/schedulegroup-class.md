@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::ScheduleGroup
+- ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup::Id
+- CONCRT/concurrency::ScheduleGroup::Reference
+- CONCRT/concurrency::ScheduleGroup::Release
+- CONCRT/concurrency::ScheduleGroup::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 424b2f53f39bce57c85e44f0df54928acdac399a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dc7a78fd135d56e1243c43672172e433652e34e2
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 类
@@ -52,18 +57,18 @@ class ScheduleGroup;
   
 ### <a name="protected-constructors"></a>受保护的构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[~ ScheduleGroup 析构函数](#dtor)||  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[Id 方法](#id)|返回组所属的计划程序中是唯一的计划组的标识符。|  
-|[Reference 方法](#reference)|递增计划组的引用计数。|  
-|[Release 方法](#release)|递减计划程序组的引用计数。|  
-|[ScheduleTask 方法](#scheduletask)|计划的计划组中的轻量任务。|  
+|[Id](#id)|返回组所属的计划程序中是唯一的计划组的标识符。|  
+|[参考](#reference)|递增计划组的引用计数。|  
+|[发布](#release)|递减计划程序组的引用计数。|  
+|[ScheduleTask](#scheduletask)|计划的计划组中的轻量任务。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ScheduleGroup`  
@@ -73,7 +78,7 @@ class ScheduleGroup;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>Id 
+##  <a name="id"></a>Id 
 
  返回组所属的计划程序中是唯一的计划组的标识符。  
   
@@ -84,7 +89,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>返回值  
  在组所属的计划程序中是唯一的计划组标识符。  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>运算符 delete 
+##  <a name="operator_delete"></a>运算符 delete 
 
  一个`ScheduleGroup`对象被销毁内部运行时在发布给它的所有外部引用。 不能显式删除它。  
   
@@ -103,7 +108,7 @@ void operator delete(
  `_PObject`  
  指向要删除的对象的指针。  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>引用 
+##  <a name="reference"></a>引用 
 
  递增计划组的引用计数。  
   
@@ -117,7 +122,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>备注  
  这通常用于管理复合计划组的生存期。 当计划组的引用计数降到零时，计划组将删除由运行时。 创建使用计划组[currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup)方法，或[scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup)方法首先之一的引用计数。  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>版本 
+##  <a name="release"></a>版本 
 
  递减计划程序组的引用计数。  
   
@@ -133,13 +138,13 @@ virtual unsigned int Release() = 0;
   
  计划组都与特定计划程序实例相关联。 必须确保对于计划组的所有引用都在所有对计划程序的引用释放之前释放，因为后者可能导致计划程序破坏。 这样做; 否则为会导致未定义的行为。  
   
-##  <a name="a-namedtora-schedulegroup"></a><a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a>~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  计划的计划组中的轻量任务。  
   

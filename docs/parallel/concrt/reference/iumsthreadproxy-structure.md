@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSThreadProxy
+- IUMSThreadProxy
+- CONCRTRM/concurrency::IUMSThreadProxy
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::EnterCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::EnterHyperCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::ExitCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::ExitHyperCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::GetCriticalRegionType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 55ed05f137775e819c81ce231cf8c8ad3a9974f3
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 46d486ddccce6f3c54627f3ea96f001e8e3bfcf7
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 结构
@@ -52,13 +58,13 @@ struct IUMSThreadProxy : public IThreadProxy;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[Iumsthreadproxy:: Entercriticalregion 方法](#entercriticalregion)|调用以输入临界区。 关键的区域内时计划程序将不会看到异步该区域中发生的阻塞操作。 这意味着计划程序将不再进入页面错误、 线程挂起、 内核异步过程调用 (Apc) 等，UMS 线程的。|  
-|[Iumsthreadproxy:: Enterhypercriticalregion 方法](#enterhypercriticalregion)|调用以输入超临界区。 当超关键的区域内，计划程序将不会看到该区域中发生的任何阻止操作。 这意味着计划程序将不再重新进入 UMS 线程的阻止函数调用、阻止锁定获取尝试、页面错误、线程挂起、内核异步过程调用 (APC) 等。|  
-|[Iumsthreadproxy:: Exitcriticalregion 方法](#exitcriticalregion)|调用以退出临界区。|  
-|[Iumsthreadproxy:: Exithypercriticalregion 方法](#exithypercriticalregion)|调用以退出超临界区。|  
-|[Iumsthreadproxy:: Getcriticalregiontype 方法](#getcriticalregiontype)|返回哪种线程代理所处的关键区域。 因为超临界区是临界区的超集，如果代码已进入临界区，然后超临界区，`InsideHyperCriticalRegion`将返回。|  
+|[Iumsthreadproxy:: Entercriticalregion](#entercriticalregion)|调用以输入临界区。 关键的区域内时计划程序将不会看到异步该区域中发生的阻塞操作。 这意味着计划程序将不再进入页面错误、 线程挂起、 内核异步过程调用 (Apc) 等，UMS 线程的。|  
+|[Iumsthreadproxy:: Enterhypercriticalregion](#enterhypercriticalregion)|调用以输入超临界区。 当超关键的区域内，计划程序将不会看到该区域中发生的任何阻止操作。 这意味着计划程序将不再重新进入 UMS 线程的阻止函数调用、阻止锁定获取尝试、页面错误、线程挂起、内核异步过程调用 (APC) 等。|  
+|[Iumsthreadproxy:: Exitcriticalregion](#exitcriticalregion)|调用以退出临界区。|  
+|[Iumsthreadproxy:: Exithypercriticalregion](#exithypercriticalregion)|调用以退出超临界区。|  
+|[Iumsthreadproxy:: Getcriticalregiontype](#getcriticalregiontype)|返回哪种线程代理所处的关键区域。 因为超临界区是临界区的超集，如果代码已进入临界区，然后超临界区，`InsideHyperCriticalRegion`将返回。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [IThreadProxy](ithreadproxy-structure.md)  
@@ -70,7 +76,7 @@ struct IUMSThreadProxy : public IThreadProxy;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameentercriticalregiona--iumsthreadproxyentercriticalregion-method"></a><a name="entercriticalregion"></a>Iumsthreadproxy:: Entercriticalregion 方法  
+##  <a name="entercriticalregion"></a>Iumsthreadproxy:: Entercriticalregion 方法  
  调用以输入临界区。 关键的区域内时计划程序将不会看到异步该区域中发生的阻塞操作。 这意味着计划程序将不再进入页面错误、 线程挂起、 内核异步过程调用 (Apc) 等，UMS 线程的。  
   
 ```
@@ -80,7 +86,7 @@ virtual int EnterCriticalRegion() = 0;
 ### <a name="return-value"></a>返回值  
  新的临界区深度。 临界区是可重入。  
   
-##  <a name="a-nameenterhypercriticalregiona--iumsthreadproxyenterhypercriticalregion-method"></a><a name="enterhypercriticalregion"></a>Iumsthreadproxy:: Enterhypercriticalregion 方法  
+##  <a name="enterhypercriticalregion"></a>Iumsthreadproxy:: Enterhypercriticalregion 方法  
  调用以输入超临界区。 当超关键的区域内，计划程序将不会看到该区域中发生的任何阻止操作。 这意味着计划程序将不再重新进入 UMS 线程的阻止函数调用、阻止锁定获取尝试、页面错误、线程挂起、内核异步过程调用 (APC) 等。  
   
 ```
@@ -93,7 +99,7 @@ virtual int EnterHyperCriticalRegion() = 0;
 ### <a name="remarks"></a>备注  
  计划程序必须格外注意什么，它调用的方法和其锁定获取在此类区域中。 如果在此类区域中的代码块由计划程序负责计划持有锁，可能会发生死锁。  
   
-##  <a name="a-nameexitcriticalregiona--iumsthreadproxyexitcriticalregion-method"></a><a name="exitcriticalregion"></a>Iumsthreadproxy:: Exitcriticalregion 方法  
+##  <a name="exitcriticalregion"></a>Iumsthreadproxy:: Exitcriticalregion 方法  
  调用以退出临界区。  
   
 ```
@@ -103,7 +109,7 @@ virtual int ExitCriticalRegion() = 0;
 ### <a name="return-value"></a>返回值  
  新的临界区深度。 临界区是可重入。  
   
-##  <a name="a-nameexithypercriticalregiona--iumsthreadproxyexithypercriticalregion-method"></a><a name="exithypercriticalregion"></a>Iumsthreadproxy:: Exithypercriticalregion 方法  
+##  <a name="exithypercriticalregion"></a>Iumsthreadproxy:: Exithypercriticalregion 方法  
  调用以退出超临界区。  
   
 ```
@@ -113,7 +119,7 @@ virtual int ExitHyperCriticalRegion() = 0;
 ### <a name="return-value"></a>返回值  
  新的超临界区深度。 超临界区是可重入。  
   
-##  <a name="a-namegetcriticalregiontypea--iumsthreadproxygetcriticalregiontype-method"></a><a name="getcriticalregiontype"></a>Iumsthreadproxy:: Getcriticalregiontype 方法  
+##  <a name="getcriticalregiontype"></a>Iumsthreadproxy:: Getcriticalregiontype 方法  
  返回哪种线程代理所处的关键区域。 因为超临界区是临界区的超集，如果代码已进入临界区，然后超临界区，`InsideHyperCriticalRegion`将返回。  
   
 ```

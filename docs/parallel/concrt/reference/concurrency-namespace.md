@@ -48,9 +48,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 70c0c5b5897e1cf4aabfefd66ed5f9eef85813c7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2e5a153359b2696b281a25794a85b5c676f179ce
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
@@ -72,7 +72,7 @@ namespace concurrency;
   
 ### <a name="typedefs"></a>Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |`runtime_object_identity`|每个消息实例都后接一个标识，因为它已被克隆并在消息组件之间传递。 这不能是消息对象的地址。|  
 |`task_status`|表示任务的终端状态的类型。 有效值为 `completed` 和 `canceled`。|  
@@ -81,7 +81,7 @@ namespace concurrency;
   
 ### <a name="classes"></a>类  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[affinity_partitioner 类](affinity-partitioner-class.md)|`affinity_partitioner` 类与 `static_partitioner` 类相似，但它选择将子范围映射到工作线程，从而改善缓存关联。 在同一数据集中重新执行循环且数据适应缓存时，它可以显著提高性能。 请注意，必须与在特定数据集中执行的并行循环的后续迭代一起使用同一 `affinity_partitioner` 对象，才能受益于数据位置。|  
 |[agent 类](agent-class.md)|旨在用作所有独立代理的基类的类。 用于对其他代理隐藏状态并通过消息传递进行交互。|  
@@ -150,13 +150,13 @@ namespace concurrency;
 |[static_partitioner 类](static-partitioner-class.md)|`static_partitioner` 类表示由 `parallel_for` 循环访问的范围的静态分区。 只要基础计划程序有工作线程可用，分区程序就会将范围分成尽可能多的区块。|  
 |[structured_task_group 类](structured-task-group-class.md)|`structured_task_group` 类表示并行工作的高度结构化集合。 可以使用 `task_handle` 对象将各个并行任务排队到 `structured_task_group` 并等待它们完成，或在它们完成执行之前取消任务组，这将中止尚未开始执行的所有任务。|  
 |[target_block 类](target-block-class.md)|`target_block` 类是抽象基类，它提供基本链接管理功能和针对仅限于目标的块的错误检查。|  
-|[task 类 （并发运行时）](task-class.md)|并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它也可通过使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 模式由其他任务构成。|  
+|[task 类（并发运行时）](task-class.md)|并行模式库 (PPL) `task` 类。 `task` 对象，表示可异步执行的工作，以及可与并发运行时中的并行算法生成的其他任务一起执行的工作。 成功完成后，它将生成类型为 `_ResultType` 的结果。 类型为 `task<void>` 的任务不生成任何结果。 可独立于其他任务等待和取消的任务。 它也可通过使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 模式由其他任务构成。|  
 |[task_canceled 类](task-canceled-class.md)|此类描述了 PPL 任务层为了强制取消当前任务而引发的异常。 它也会通过引发`get()`方法[任务](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)，为已取消的任务。|  
 |[task_completion_event 类](task-completion-event-class.md)|`task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。|  
 |[task_continuation_context 类](task-continuation-context-class.md)|`task_continuation_context` 类可让你指定想要执行延续的位置。 只能从 Windows 应用商店应用使用此类。 对于非 Windows 应用商店应用，任务延续的执行上下文由运行时确定，不可配置。|  
 |[task_group 类](task-group-class.md)|`task_group` 类表示可以等待或取消的并行工作的集合。|  
 |[task_handle 类](task-handle-class.md)|`task_handle` 类表示单个并行工作项。 它封装执行一项工作所需的指令和数据。|  
-|[task_options 类 （并发运行时）](task-options-class-concurrency-runtime.md)|表示可用于创建任务的选项|  
+|[task_options 类（并发运行时）](task-options-class-concurrency-runtime.md)|表示可用于创建任务的选项|  
 |[timer 类](timer-class.md)|`timer` 消息块是单目标的 `source_block`，能够在经过指定的时间段后或在特定时间间隔向其目标发送消息。|  
 |[transformer 类](transformer-class.md)|`transformer` 消息块是单目标、多源、有序的 `propagator_block`，它可以接受一个类型的消息，并能够存储不限数量的另一个类型的消息。|  
 |[unbounded_buffer 类](unbounded-buffer-class.md)|`unbounded_buffer` 消息块是多目标、多源、有序的 `propagator_block`，能够存储不限数量的消息。|  
@@ -164,7 +164,7 @@ namespace concurrency;
   
 ### <a name="structures"></a>结构  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[DispatchState 结构](dispatchstate-structure.md)|`DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `IExecutionContext` 接口上调用 `Dispatch` 方法的情形。|  
 |[IExecutionContext 结构](iexecutioncontext-structure.md)|可以在给定虚拟处理器上运行并可以协作切换上下文的执行上下文的接口。|  
@@ -181,30 +181,30 @@ namespace concurrency;
 |[IUMSUnblockNotification 结构](iumsunblocknotification-structure.md)|表示来自资源管理器的通知，说明阻止并触发返回到计划程序的指定计划上下文的线程代理已解除阻止，并已准备好进行计划。 一旦重新计划该线程代理的关联执行上下文（从 `GetContext` 方法返回），此接口将变得无效。|  
 |[IVirtualProcessorRoot 结构](ivirtualprocessorroot-structure.md)|线程代理可在其中执行的硬件线程的抽象。|  
 |[scheduler_interface 结构](scheduler-interface-structure.md)|计划程序接口|  
-|[scheduler_ptr 结构 （并发运行时）](scheduler-ptr-structure-concurrency-runtime.md)|表示指向计划程序的指针。 此类可用于通过使用 shared_ptr 来允许指定共享生存期，或通过使用原始指针来允许指定无格式引用。|  
+|[scheduler_ptr 结构（并发运行时）](scheduler-ptr-structure-concurrency-runtime.md)|表示指向计划程序的指针。 此类可用于通过使用 shared_ptr 来允许指定共享生存期，或通过使用原始指针来允许指定无格式引用。|  
   
 ### <a name="enumerations"></a>枚举  
   
 |名称|描述|  
 |----------|-----------------|  
-|[agent_status 枚举](concurrency-namespace-enums.md#agent_status)|`agent` 的有效状态。|  
-|[Agents_EventType 枚举](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理库提供的跟踪功能进行跟踪的事件的类型|  
-|[ConcRT_EventType 枚举](concurrency-namespace-enums.md#concrt_eventtype)|可以使用并发运行时提供的跟踪功能进行跟踪的事件的类型。|  
-|[Concrt_TraceFlags 枚举](concurrency-namespace-enums.md#concrt_traceflags)|事件类型的跟踪标志|  
-|[CriticalRegionType 枚举](concurrency-namespace-enums.md#criticalregiontype)|上下文位于其中的关键区域的类型。|  
-|[DynamicProgressFeedbackType 枚举](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|由 `DynamicProgressFeedback` 策略用于描述重新平衡计划程序资源的依据是从计划程序收集的统计信息，还是通过对 `IVirtualProcessorRoot` 接口上的 `Activate` 和 `Deactivate` 方法进行调用以进出空闲状态的虚拟处理器。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey 枚举](concurrency-namespace-enums.md#policyelementkey)。|  
-|[join_type 枚举](concurrency-namespace-enums.md#join_type)|`join` 消息块的类型。|  
-|[message_status 枚举](concurrency-namespace-enums.md#message_status)|`message` 对象的内容到块的有效响应。|  
-|[PolicyElementKey 枚举](concurrency-namespace-enums.md#policyelementkey)|描述计划程序行为各个方面的策略键。 每个策略元素由一个键值对描述。 有关计划程序策略和它们的影响计划程序的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|  
-|[SchedulerType 枚举](concurrency-namespace-enums.md#schedulertype)|由 `SchedulerKind` 策略用于描述应由计划程序用于基础执行上下文的线程的类型。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey 枚举](concurrency-namespace-enums.md#policyelementkey)。|  
-|[SchedulingProtocolType 枚举](concurrency-namespace-enums.md#schedulingprotocoltype)|由 `SchedulingProtocol` 策略用于描述将哪个计划算法用于计划程序。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey 枚举](concurrency-namespace-enums.md#policyelementkey)。|  
-|[SwitchingProxyState 枚举](concurrency-namespace-enums.md#switchingproxystate)|用于表示线程代理在执行另一个线程代理的协作上下文切换时所处的状态。|  
-|[task_group_status 枚举](concurrency-namespace-enums.md#task_group_status)|描述 `task_group` 或 `structured_task_group` 对象的执行状态。 此类型的值是由很多等待安排到一个任务组中的任务完成的方法返回的。|  
-|[WinRTInitializationType 枚举](concurrency-namespace-enums.md#winrtinitializationtype)|由 `WinRTInitialization` 策略用于描述，对于在 Windows 8 或更高版本的操作系统上运行的应用程序，是否以及如何在计划程序的线程上初始化 Windows 运行时。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey 枚举](concurrency-namespace-enums.md#policyelementkey)。|  
+|[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` 的有效状态。|  
+|[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理库提供的跟踪功能进行跟踪的事件的类型|  
+|[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|可以使用并发运行时提供的跟踪功能进行跟踪的事件的类型。|  
+|[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|事件类型的跟踪标志|  
+|[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|上下文位于其中的关键区域的类型。|  
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|由 `DynamicProgressFeedback` 策略用于描述重新平衡计划程序资源的依据是从计划程序收集的统计信息，还是通过对 `IVirtualProcessorRoot` 接口上的 `Activate` 和 `Deactivate` 方法进行调用以进出空闲状态的虚拟处理器。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
+|[join_type](concurrency-namespace-enums.md#join_type)|`join` 消息块的类型。|  
+|[message_status](concurrency-namespace-enums.md#message_status)|`message` 对象的内容到块的有效响应。|  
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|描述计划程序行为各个方面的策略键。 每个策略元素由一个键值对描述。 有关计划程序策略和它们的影响计划程序的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|  
+|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|由 `SchedulerKind` 策略用于描述应由计划程序用于基础执行上下文的线程的类型。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
+|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|由 `SchedulingProtocol` 策略用于描述将哪个计划算法用于计划程序。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
+|[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|用于表示线程代理在执行另一个线程代理的协作上下文切换时所处的状态。|  
+|[task_group_status](concurrency-namespace-enums.md#task_group_status)|描述 `task_group` 或 `structured_task_group` 对象的执行状态。 此类型的值是由很多等待安排到一个任务组中的任务完成的方法返回的。|  
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|由 `WinRTInitialization` 策略用于描述，对于在 Windows 8 或更高版本的操作系统上运行的应用程序，是否以及如何在计划程序的线程上初始化 Windows 运行时。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
   
 ### <a name="functions"></a>函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[Alloc 函数](concurrency-namespace-functions.md#alloc)|通过并发运行时缓存子分配器分配具有指定大小的内存块。|  
 |[asend 函数](concurrency-namespace-functions.md#asend)|已重载。 异步发送操作，计划任务以将数据传播到目标块。|  
@@ -253,37 +253,37 @@ namespace concurrency;
   
 |名称|说明|  
 |----------|-----------------| 
-|[运算符 ！ = 运算符](concurrency-namespace-operators.md#operator_neq)|测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。|  
-|[运算符 && 运算符](concurrency-namespace-operators.md#operator_amp_amp)|已重载。 创建一个任务，在作为自变量提供的两个任务成功完成后，此任务将成功完成。|  
-|[运算符 | |运算符](concurrency-namespace-operators.md#operator_lor)|已重载。 创建将在作为自变量提供的任一任务成功完成时成功完成的任务。|  
-|[运算符<>](concurrency-namespace-operators.md#operator_lt)|测试运算符左侧的 `concurrent_vector` 对象是否小于右侧的 `concurrent_vector` 对象。|  
-|[运算符<=></=>](concurrency-namespace-operators.md#operator_lt_eq)|测试运算符左侧的 `concurrent_vector` 对象是否小于或等于右侧的 `concurrent_vector` 对象。|  
-|[运算符 = = 运算符](concurrency-namespace-operators.md#operator_eq_eq)|测试运算符左侧的 `concurrent_vector` 对象是否等于右侧的 `concurrent_vector` 对象。|  
-|[运算符&1;> 运算符](concurrency-namespace-operators.md#operator_gt)|测试运算符左侧的 `concurrent_vector` 对象是否大于右侧的 `concurrent_vector` 对象。|  
-|[运算符&1;> = 运算符](concurrency-namespace-operators.md#operator_lt_eq)|测试运算符左侧的 `concurrent_vector` 对象是否大于或等于右侧的 `concurrent_vector` 对象。|  
+|[operator!=](concurrency-namespace-operators.md#operator_neq)|测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。|  
+|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|已重载。 创建一个任务，在作为自变量提供的两个任务成功完成后，此任务将成功完成。|  
+|[operator||](concurrency-namespace-operators.md#operator_lor)|已重载。 创建将在作为自变量提供的任一任务成功完成时成功完成的任务。|  
+|[operator<](concurrency-namespace-operators.md#operator_lt)|测试运算符左侧的 `concurrent_vector` 对象是否小于右侧的 `concurrent_vector` 对象。|  
+|[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|测试运算符左侧的 `concurrent_vector` 对象是否小于或等于右侧的 `concurrent_vector` 对象。|  
+|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|测试运算符左侧的 `concurrent_vector` 对象是否等于右侧的 `concurrent_vector` 对象。|  
+|[operator>](concurrency-namespace-operators.md#operator_gt)|测试运算符左侧的 `concurrent_vector` 对象是否大于右侧的 `concurrent_vector` 对象。|  
+|[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|测试运算符左侧的 `concurrent_vector` 对象是否大于或等于右侧的 `concurrent_vector` 对象。|  
   
 ### <a name="constants"></a>常量  
   
 |名称|说明|  
 |----------|-----------------|  
-|[AgentEventGuid 常量](concurrency-namespace-constants1.md#agenteventguid)|类别 GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07})，描述并发运行时中由代理库激发的 ETW 事件。|  
-|[ChoreEventGuid 常量](concurrency-namespace-constants1.md#choreeventguid)|类别 GUID，描述由与日常任务或任务直接相关的并发运行时激发的 ETW 事件。|  
-|[ConcRT_ProviderGuid 常量](concurrency-namespace-constants1.md#concrt_providerguid)|并发运行时的 ETW 提供程序 GUID。|  
-|[CONCRT_RM_VERSION_1 常量](concurrency-namespace-constants1.md#concrt_rm_version_1)|指示支持 Visual Studio 2010 中定义的资源管理器接口。|  
-|[ConcRTEventGuid 常量](concurrency-namespace-constants1.md#concrteventguid)|类别 GUID，描述由并发运行时激发的且没有被另一个类别进行更具体描述的 ETW 事件。|  
-|[ContextEventGuid 常量](concurrency-namespace-constants1.md#contexteventguid)|类别 GUID，描述由与上下文直接相关的并发运行时激发的 ETW 事件。|  
-|[COOPERATIVE_TIMEOUT_INFINITE 常量](concurrency-namespace-constants1.md#cooperative_timeout_infinite)|指示等待永远不应超时的值。|  
-|[COOPERATIVE_WAIT_TIMEOUT 常量](concurrency-namespace-constants1.md#cooperative_wait_timeout)|指示等待超时的值。|  
-|[INHERIT_THREAD_PRIORITY 常量](concurrency-namespace-constants1.md#inherit_thread_priority)|策略键 `ContextPriority` 的特殊值，指示计划程序中所有上下文的线程优先级都应与创建该计划程序的线程的优先级相同。|  
-|[LockEventGuid 常量](concurrency-namespace-constants1.md#lockeventguid)|类别 GUID，描述由与锁直接相关的并发运行时激发的 ETW 事件。|  
-|[MaxExecutionResources 常量](concurrency-namespace-constants1.md#maxexecutionresources)|策略键 `MinConcurrency` 和 `MaxConcurrency` 的特殊值。 默认值为没有其他约束的计算机上的硬件线程数。|  
-|[PPLParallelForeachEventGuid 常量](concurrency-namespace-constants1.md#pplparallelforeacheventguid)|类别 GUID，描述由与 `parallel_for_each` 函数的用法直接相关的并发运行时激发的 ETW 事件。|  
-|[PPLParallelForEventGuid 常量](concurrency-namespace-constants1.md#pplparallelforeventguid)|类别 GUID，描述由与 `parallel_for` 函数的用法直接相关的并发运行时激发的 ETW 事件。|  
-|[PPLParallelInvokeEventGuid 常量](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|类别 GUID，描述由与 `parallel_invoke` 函数的用法直接相关的并发运行时激发的 ETW 事件。|  
-|[ResourceManagerEventGuid 常量](concurrency-namespace-constants1.md#resourcemanagereventguid)|类别 GUID，描述由与资源管理器直接相关的并发运行时激发的 ETW 事件。|  
-|[ScheduleGroupEventGuid 常量](concurrency-namespace-constants1.md#schedulegroupeventguid)|类别 GUID，描述由与计划组直接相关的并发运行时激发的 ETW 事件。|  
-|[SchedulerEventGuid 常量](concurrency-namespace-constants1.md#schedulereventguid)|类别 GUID，描述由与计划程序活动直接相关的并发运行时激发的 ETW 事件。|  
-|[VirtualProcessorEventGuid 常量](concurrency-namespace-constants1.md#virtualprocessoreventguid)|类别 GUID，描述由与虚拟处理器直接相关的并发运行时激发的 ETW 事件。|  
+|[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|类别 GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07})，描述并发运行时中由代理库激发的 ETW 事件。|  
+|[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|类别 GUID，描述由与日常任务或任务直接相关的并发运行时激发的 ETW 事件。|  
+|[ConcRT_ProviderGuid](concurrency-namespace-constants1.md#concrt_providerguid)|并发运行时的 ETW 提供程序 GUID。|  
+|[CONCRT_RM_VERSION_1](concurrency-namespace-constants1.md#concrt_rm_version_1)|指示支持 Visual Studio 2010 中定义的资源管理器接口。|  
+|[ConcRTEventGuid](concurrency-namespace-constants1.md#concrteventguid)|类别 GUID，描述由并发运行时激发的且没有被另一个类别进行更具体描述的 ETW 事件。|  
+|[ContextEventGuid](concurrency-namespace-constants1.md#contexteventguid)|类别 GUID，描述由与上下文直接相关的并发运行时激发的 ETW 事件。|  
+|[COOPERATIVE_TIMEOUT_INFINITE](concurrency-namespace-constants1.md#cooperative_timeout_infinite)|指示等待永远不应超时的值。|  
+|[COOPERATIVE_WAIT_TIMEOUT](concurrency-namespace-constants1.md#cooperative_wait_timeout)|指示等待超时的值。|  
+|[INHERIT_THREAD_PRIORITY](concurrency-namespace-constants1.md#inherit_thread_priority)|策略键 `ContextPriority` 的特殊值，指示计划程序中所有上下文的线程优先级都应与创建该计划程序的线程的优先级相同。|  
+|[LockEventGuid](concurrency-namespace-constants1.md#lockeventguid)|类别 GUID，描述由与锁直接相关的并发运行时激发的 ETW 事件。|  
+|[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)|策略键 `MinConcurrency` 和 `MaxConcurrency` 的特殊值。 默认值为没有其他约束的计算机上的硬件线程数。|  
+|[PPLParallelForeachEventGuid](concurrency-namespace-constants1.md#pplparallelforeacheventguid)|类别 GUID，描述由与 `parallel_for_each` 函数的用法直接相关的并发运行时激发的 ETW 事件。|  
+|[PPLParallelForEventGuid](concurrency-namespace-constants1.md#pplparallelforeventguid)|类别 GUID，描述由与 `parallel_for` 函数的用法直接相关的并发运行时激发的 ETW 事件。|  
+|[PPLParallelInvokeEventGuid](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|类别 GUID，描述由与 `parallel_invoke` 函数的用法直接相关的并发运行时激发的 ETW 事件。|  
+|[ResourceManagerEventGuid](concurrency-namespace-constants1.md#resourcemanagereventguid)|类别 GUID，描述由与资源管理器直接相关的并发运行时激发的 ETW 事件。|  
+|[ScheduleGroupEventGuid](concurrency-namespace-constants1.md#schedulegroupeventguid)|类别 GUID，描述由与计划组直接相关的并发运行时激发的 ETW 事件。|  
+|[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|类别 GUID，描述由与计划程序活动直接相关的并发运行时激发的 ETW 事件。|  
+|[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|类别 GUID，描述由与虚拟处理器直接相关的并发运行时激发的 ETW 事件。|  
   
 ## <a name="requirements"></a>要求  
  **标头︰** agents.h、 concrt.h，concrtrm.h、 concurrent_priority_queue.h、 concurrent_queue.h、 concurrent_unordered_map.h、 concurrent_unordered_set.h、 concurrent_vector.h、 internal_concurrent_hash.h、 internal_split_ordered_list.h、 ppl.h、 pplcancellation_token.h、 pplconcrt.h、 pplinterface.h、 ppltasks.h  

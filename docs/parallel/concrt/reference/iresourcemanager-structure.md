@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IResourceManager
+- IResourceManager
+- CONCRTRM/concurrency::IResourceManager
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::OSVersion
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::CreateNodeTopology
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetAvailableNodeCount
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetFirstNode
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fb523127f60c4e8cd45b2525749b536ad55849b0
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2d054bd632db90708d90fe8d791965b47f713493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 结构
@@ -54,18 +62,18 @@ struct IResourceManager;
   
 |名称|说明|  
 |----------|-----------------|  
-|[Iresourcemanager:: Osversion 枚举](#osversion)|表示操作系统版本的枚举类型。|  
+|[Iresourcemanager:: Osversion](#osversion)|表示操作系统版本的枚举类型。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[Iresourcemanager:: Createnodetopology 方法](#createnodetopology)|仅在调试中的当前版本的运行时，此方法旨在促进测试资源管理器的不同硬件拓扑，而无需与配置匹配的实际硬件上的测试挂钩。 与零售版本的运行时，此方法将返回不执行任何操作。|  
-|[Iresourcemanager:: Getavailablenodecount 方法](#getavailablenodecount)|返回可供资源管理器使用的节点数。|  
-|[Iresourcemanager:: Getfirstnode 方法](#getfirstnode)|按照资源管理器的定义，返回枚举顺序中的第一个节点。|  
-|[Iresourcemanager:: Reference 方法](#reference)|递增上的资源管理器实例的引用计数。|  
-|[Iresourcemanager:: Registerscheduler 方法](#registerscheduler)|注册计划程序与资源管理器。 计划程序注册后，应与资源管理器使用通信`ISchedulerProxy`返回的接口。|  
-|[Iresourcemanager:: Release 方法](#release)|的资源管理器实例的引用计数递减。 资源管理器时的引用计数归销毁`0`。|  
+|[Iresourcemanager:: Createnodetopology](#createnodetopology)|仅在调试中的当前版本的运行时，此方法旨在促进测试资源管理器的不同硬件拓扑，而无需与配置匹配的实际硬件上的测试挂钩。 与零售版本的运行时，此方法将返回不执行任何操作。|  
+|[Iresourcemanager:: Getavailablenodecount](#getavailablenodecount)|返回可供资源管理器使用的节点数。|  
+|[Iresourcemanager:: Getfirstnode](#getfirstnode)|按照资源管理器的定义，返回枚举顺序中的第一个节点。|  
+|[Iresourcemanager:: Reference](#reference)|递增上的资源管理器实例的引用计数。|  
+|[Iresourcemanager:: Registerscheduler](#registerscheduler)|注册计划程序与资源管理器。 计划程序注册后，应与资源管理器使用通信`ISchedulerProxy`返回的接口。|  
+|[Iresourcemanager:: Release](#release)|的资源管理器实例的引用计数递减。 资源管理器时的引用计数归销毁`0`。|  
   
 ## <a name="remarks"></a>备注  
  使用[CreateResourceManager](concurrency-namespace-functions.md)函数来获取一个指向单一资源管理器实例的接口。 该方法递增引用计数在资源管理器中，并应调用[iresourcemanager:: Release](#release)方法来完成与资源管理器时释放该引用。 通常情况下，您创建每个计划程序将在创建期间，调用此方法并释放该引用到资源管理器中之后它会关闭。  
@@ -78,7 +86,7 @@ struct IResourceManager;
   
  **命名空间：** 并发  
   
-##  <a name="a-namecreatenodetopologya--iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>Iresourcemanager:: Createnodetopology 方法  
+##  <a name="createnodetopology"></a>Iresourcemanager:: Createnodetopology 方法  
  仅在调试中的当前版本的运行时，此方法旨在促进测试资源管理器的不同硬件拓扑，而无需与配置匹配的实际硬件上的测试挂钩。 与零售版本的运行时，此方法将返回不执行任何操作。  
   
 ```
@@ -107,7 +115,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md)如果在其他计划程序存在于该进程时调用此方法引发。  
   
-##  <a name="a-namegetavailablenodecounta--iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>Iresourcemanager:: Getavailablenodecount 方法  
+##  <a name="getavailablenodecount"></a>Iresourcemanager:: Getavailablenodecount 方法  
  返回可供资源管理器使用的节点数。  
   
 ```
@@ -117,7 +125,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>返回值  
  对资源管理器中可用的节点数。  
   
-##  <a name="a-namegetfirstnodea--iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>Iresourcemanager:: Getfirstnode 方法  
+##  <a name="getfirstnode"></a>Iresourcemanager:: Getfirstnode 方法  
  按照资源管理器的定义，返回枚举顺序中的第一个节点。  
   
 ```
@@ -127,14 +135,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>返回值  
  通过资源管理器中定义的枚举顺序中的第一个节点。  
   
-##  <a name="a-nameiresourcemanagerosversiona--iresourcemanagerosversion-enumeration"></a><a name="iresourcemanager__osversion"></a>Iresourcemanager:: Osversion 枚举  
+##  <a name="iresourcemanager__osversion"></a>Iresourcemanager:: Osversion 枚举  
  表示操作系统版本的枚举类型。  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="a-namereferencea--iresourcemanagerreference-method"></a><a name="reference"></a>Iresourcemanager:: Reference 方法  
+##  <a name="reference"></a>Iresourcemanager:: Reference 方法  
  递增上的资源管理器实例的引用计数。  
   
 ```
@@ -144,7 +152,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>返回值  
  在生成的引用计数。  
   
-##  <a name="a-nameregisterschedulera--iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>Iresourcemanager:: Registerscheduler 方法  
+##  <a name="registerscheduler"></a>Iresourcemanager:: Registerscheduler 方法  
  注册计划程序与资源管理器。 计划程序注册后，应与资源管理器使用通信`ISchedulerProxy`返回的接口。  
   
 ```
@@ -168,7 +176,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  该方法将引发`invalid_argument`异常如果参数`pScheduler`具有值`NULL`或者，如果该参数`version`不是有效的通信接口的版本。  
   
-##  <a name="a-namereleasea--iresourcemanagerrelease-method"></a><a name="release"></a>Iresourcemanager:: Release 方法  
+##  <a name="release"></a>Iresourcemanager:: Release 方法  
  的资源管理器实例的引用计数递减。 资源管理器时的引用计数归销毁`0`。  
   
 ```

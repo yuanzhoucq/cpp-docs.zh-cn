@@ -9,7 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::join
+- join
+- AGENTS/concurrency::join
+- AGENTS/concurrency::join::join
+- AGENTS/concurrency::join::accept_message
+- AGENTS/concurrency::join::consume_message
+- AGENTS/concurrency::join::link_target_notification
+- AGENTS/concurrency::join::propagate_message
+- AGENTS/concurrency::join::propagate_to_any_targets
+- AGENTS/concurrency::join::release_message
+- AGENTS/concurrency::join::reserve_message
+- AGENTS/concurrency::join::resume_propagation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b9671e6c9d29fb5f93977fe080e90dd087429460
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7847f1d8611c65e698ed5d47c3c20ef02ce048ff
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="join-class"></a>join 类
@@ -62,23 +72,23 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[加入构造函数](#ctor)|已重载。 构造`join`消息块。|  
+|[联接](#ctor)|已重载。 构造`join`消息块。|  
 |[~ join 析构函数](#dtor)|销毁`join`块。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|说明|  
 |----------|-----------------|  
-|[accept_message 方法](#accept_message)|接受提供的这一条消息`join`将所有权转移给调用方的消息块。|  
-|[consume_message 方法](#consume_message)|使用以前提供的消息`join`消息块并由该目标，将所有权转移给调用方保留。|  
-|[link_target_notification 方法](#link_target_notification)|回调，以通知新的目标已链接到此`join`消息块。|  
-|[propagate_message 方法](#propagate_message)|以异步方式从将消息传递`ISource`至此块`join`消息块。 由调用`propagate`方法时由源块调用。|  
-|[propagate_to_any_targets 方法](#propagate_to_any_targets)|构造输出消息时均传播一条消息将包含来自每个源的输入的消息。 将此输出消息发送到其每个目标。|  
-|[release_message 方法](#release_message)|释放以前的消息保留。 (重写[source_block:: release_message](source-block-class.md#release_message)。)|  
-|[reserve_message 方法](#reserve_message)|保留以前提供的这一条消息`join`消息块。 (重写[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
-|[resume_propagation 方法](#resume_propagation)|在释放了保留后，请恢复传播。 (重写[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
+|[accept_message](#accept_message)|接受提供的这一条消息`join`将所有权转移给调用方的消息块。|  
+|[consume_message](#consume_message)|使用以前提供的消息`join`消息块并由该目标，将所有权转移给调用方保留。|  
+|[link_target_notification](#link_target_notification)|回调，以通知新的目标已链接到此`join`消息块。|  
+|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`至此块`join`消息块。 由调用`propagate`方法时由源块调用。|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|构造输出消息时均传播一条消息将包含来自每个源的输入的消息。 将此输出消息发送到其每个目标。|  
+|[release_message](#release_message)|释放以前的消息保留。 (重写[source_block:: release_message](source-block-class.md#release_message)。)|  
+|[reserve_message](#reserve_message)|保留以前提供的这一条消息`join`消息块。 (重写[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
+|[resume_propagation](#resume_propagation)|在释放了保留后，请恢复传播。 (重写[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -99,7 +109,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  **命名空间：** 并发  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  接受提供的这一条消息`join`将所有权转移给调用方的消息块。  
   
@@ -114,7 +124,7 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>返回值  
  一个指向`message`对象时调用方现在具有的所有权。  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  使用以前提供的消息`join`消息块并由该目标，将所有权转移给调用方保留。  
   
@@ -132,7 +142,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>备注  
  类似于`accept`，但通过调用前面始终`reserve`。  
   
-##  <a name="a-namectora-join"></a><a name="ctor"></a>联接 
+##  <a name="ctor"></a>联接 
 
  构造`join`消息块。  
   
@@ -171,17 +181,17 @@ join(
  确定是否应接受提供的消息的筛选器函数。  
   
  `_PScheduler`  
- `Scheduler`对象在其中的传播任务`join`消息块计划。  
+ `Scheduler`对象在其中的传播任务`join`计划消息块。  
   
  `_PScheduleGroup`  
- `ScheduleGroup`对象在其中的传播任务`join`消息块计划。 所用 `Scheduler` 对象由该计划组提示。  
+ `ScheduleGroup`对象在其中的传播任务`join`计划消息块。 所用 `Scheduler` 对象由该计划组提示。  
   
 ### <a name="remarks"></a>备注  
  如果未指定 `_PScheduler` 或 `_PScheduleGroup` 函数，运行时将使用默认的计划程序。  
   
  类型`filter_method`是具有签名的伪函数`bool (T const &)`其调用此`join`消息块，以确定它是否应接受提供的消息。  
   
-##  <a name="a-namedtora-join"></a><a name="dtor"></a>~ 联接 
+##  <a name="dtor"></a>~ 联接 
 
  销毁`join`块。  
   
@@ -189,7 +199,7 @@ join(
 ~join();
 ```  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  回调，以通知新的目标已链接到此`join`消息块。  
   
@@ -197,7 +207,7 @@ join(
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  以异步方式从将消息传递`ISource`至此块`join`消息块。 由调用`propagate`方法时由源块调用。  
   
@@ -217,7 +227,7 @@ message_status propagate_message(
 ### <a name="return-value"></a>返回值  
  一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  构造输出消息时均传播一条消息将包含来自每个源的输入的消息。 将此输出消息发送到其每个目标。  
   
@@ -225,7 +235,7 @@ message_status propagate_message(
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  释放以前的消息保留。  
   
@@ -237,7 +247,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity`的`message`对象被释放。  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  保留以前提供的这一条消息`join`消息块。  
   
@@ -255,7 +265,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>备注  
  之后`reserve`调用时，如果它返回`true`、 任一`consume`或`release`必须调用来获取或释放消息的所有权。  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  在释放了保留后，请恢复传播。  
   

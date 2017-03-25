@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::index
+- AMP/index
+- AMP/Concurrency::index::index
+- AMP/Concurrency::index::rank
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 55a44499ca9bbd5149a4528a31c1417b60ba7fa3
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 52c19da3cb8de10c3963ca3b795cac1babb3dc7a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="index-class"></a>index 类
@@ -63,22 +65,22 @@ class index;
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[运算符-运算符](#operator--)|递减的每个元素`index`对象。|  
-|[operator(mod) = 运算符](#operator_mod_eq)|计算中每个元素的模数 （余数）`index`对象时某个数除该元素。|  
-|[运算符 * = 运算符](#operator_star_eq)|将相乘的每个元素`index`由很多对象。|  
-|[运算符 / = 运算符](#operator_div_eq)|将划分的每个元素`index`由很多对象。|  
+|[operator--](#operator--)|递减的每个元素`index`对象。|  
+|[operator(mod) =](#operator_mod_eq)|计算中每个元素的模数 （余数）`index`对象时某个数除该元素。|  
+|[operator*=](#operator_star_eq)|将相乘的每个元素`index`由很多对象。|  
+|[operator/=](#operator_div_eq)|将划分的每个元素`index`由很多对象。|  
 |[index:: operator\[\]](#operator_at)|返回位于指定索引处的元素。|  
-|[operator + + 运算符](#operator_add_add)|递增的每个元素`index`对象。|  
-|[运算符 + = 运算符](#operator_add_eq)|将指定的数加到的每个元素`index`对象。|  
-|[运算符 = 运算符](#operator_eq)|将指定的内容复制`index`到此对象。|  
-|[operator-= 运算符](#operator_-_eq)|从的每个元素指定的数中减去`index`对象。|  
+|[operator++](#operator_add_add)|递增的每个元素`index`对象。|  
+|[operator+=](#operator_add_eq)|将指定的数加到的每个元素`index`对象。|  
+|[operator=](#operator_eq)|将指定的内容复制`index`到此对象。|  
+|[operator-=](#operator_-_eq)|从的每个元素指定的数中减去`index`对象。|  
 
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|将存储的排名`index`对象。|  
   
@@ -86,7 +88,7 @@ class index;
  `index`  
   
 ## <a name="remarks"></a>备注  
- `index`结构均表示一个坐标向量*N*指定中的唯一位置的整数*N*-维空间。 对向量中的值按照从最重要到最不重要的顺序排列。 您可以使用的组件的值[运算符 = 运算符](#operator_eq)。  
+ `index`结构均表示一个坐标向量*N*指定中的唯一位置的整数*N*-维空间。 对向量中的值按照从最重要到最不重要的顺序排列。 您可以使用的组件的值[运算符 =](#operator_eq)。  
   
 ## <a name="requirements"></a>要求  
  **标头：** amp.h  
@@ -94,7 +96,7 @@ class index;
  **命名空间：** 并发  
 
 
-## <a name="a-nameindexctora-index-constructor"></a><a name="index_ctor"></a>索引构造函数
+## <a name="index_ctor"></a>索引构造函数
 初始化 index 类的新实例。
 
 ```  
@@ -139,7 +141,7 @@ _I2
 _Other  
 一个新的索引对象所基于的索引对象。  
 
-## <a name="a-nameoperator--a--operator--"></a><a name="operator--"></a>操作符 —
+## <a name="operator--"></a>操作符 —
 减少索引对象的每个元素。  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -151,7 +153,7 @@ index operator--(
 ### <a name="return-values"></a>返回值
 对于前缀运算符，该 index 对象 (* 这)。 对于后缀运算符，新的索引对象。
 
-## <a name="a-nameoperatormodeqa--operatormod"></a><a name="operator_mod_eq"></a>operator(mod) =   
+## <a name="operator_mod_eq"></a>operator(mod) =   
 该元素被指定的数除时将计算该 index 对象中每个元素的模数 （余数）。
 
 ```  
@@ -163,7 +165,7 @@ index<_Rank>& operator%=(
 _Rhs 要通过除法查找模数的数字。
 返回值的索引对象。
 
-## <a name="a-nameoperatorstareqa--operator"></a><a name="operator_star_eq"></a>运算符 * =   
+## <a name="operator_star_eq"></a>运算符 * =   
 返回由指定数量的索引对象的每个元素的乘积。
 ```
 index<_Rank>& operator*=(
@@ -174,7 +176,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>参数
 _Rhs 要相乘的数字。
 
-## <a name="a-nameoperatordiveqa--operator"></a><a name="operator_div_eq"></a>/ = 运算符 
+## <a name="operator_div_eq"></a>/ = 运算符 
 除以指定数量的索引对象的每个元素。
 
 ```
@@ -185,7 +187,7 @@ index<_Rank>& operator/=(
 ### <a name="parameters"></a>参数
 _Rhs 要除以的数字。
 
-## <a name="a-nameoperatorata--operator"></a><a name="operator_at"></a>operator\[\]  
+## <a name="operator_at"></a>operator\[\]  
 返回位于指定位置的索引的组件。
 
 ```
@@ -214,7 +216,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="a-nameoperatoraddadda--operator"></a><a name="operator_add_add"></a>operator + +   
+## <a name="operator_add_add"></a>operator + +   
 递增索引对象的每个元素。
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -226,7 +228,7 @@ index<_Rank> operator++(
 ### <a name="return-value"></a>返回值
 对于前缀运算符，该 index 对象 (* 这)。 对于后缀运算符，新的索引对象。
 
-## <a name="a-nameoperatoraddeqa--operator"></a><a name="operator_add_eq"></a>operator + =   
+## <a name="operator_add_eq"></a>operator + =   
 将指定的数加到每个元素的索引对象。
 ```  
 index<_Rank>& operator+=(
@@ -243,7 +245,7 @@ _Rhs 要添加的数字。
 ### <a name="return-value"></a>返回值
 索引对象中。
 
-## <a name="a-nameoperatoreqa--operator"></a><a name="operator_eq"></a>operator=   
+## <a name="operator_eq"></a>operator=   
 将指定的索引对象的内容复制到它。
 ```  
 index<_Rank>& operator=(
@@ -256,7 +258,7 @@ _Other 要从复制的索引对象。
 ### <a name="return-value"></a>返回值
 对此索引对象的引用。
 
-## <a name="a-nameoperator-eqa--operator-"></a><a name="operator_-_eq"></a>运算符 =
+## <a name="operator_-_eq"></a>运算符 =
 中减去指定的数目的索引对象的每个元素。
 ```  
 index<_Rank>& operator-=(
@@ -273,11 +275,11 @@ _Rhs 要减去的数字。
 ### <a name="return-value"></a>返回值
 索引对象中。   
 
-## <a name="a-nameranka--rank"></a><a name="rank"></a>排名  
+## <a name="rank"></a>排名  
   获取该 index 对象的秩。
 ```
 static const int rank = _Rank;
 ``` 
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

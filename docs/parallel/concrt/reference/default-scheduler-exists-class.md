@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::default_scheduler_exists
+- default_scheduler_exists
+- CONCRT/concurrency::default_scheduler_exists
+- CONCRT/concurrency::default_scheduler_exists::default_scheduler_exists
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 527d02e6b79d86c8a194fffa30351efc944db441
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4272c4658a6dbd85c838ccfd2586eb6a8ec08d81
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="defaultschedulerexists-class"></a>default_scheduler_exists 类
@@ -54,7 +56,7 @@ class default_scheduler_exists : public std::exception;
   
 |名称|描述|  
 |----------|-----------------|  
-|[default_scheduler_exists 构造函数](#ctor)|已重载。 构造 `default_scheduler_exists` 对象。|  
+|[default_scheduler_exists](#ctor)|已重载。 构造 `default_scheduler_exists` 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -66,7 +68,7 @@ class default_scheduler_exists : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-defaultschedulerexists"></a><a name="ctor"></a>default_scheduler_exists 
+##  <a name="ctor"></a>default_scheduler_exists 
 
  构造 `default_scheduler_exists` 对象。  
   
@@ -81,5 +83,5 @@ default_scheduler_exists() throw();
  错误的描述性消息。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 
