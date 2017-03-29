@@ -50,6 +50,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 0f4efaf826da7a2ff1ef5b9f21bc5e846751211b
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="to-functions"></a>to 函数
@@ -73,7 +74,7 @@ ms.openlocfilehash: 0f4efaf826da7a2ff1ef5b9f21bc5e846751211b
 |`_toupper`|`_toupper`|将 `c` 转换为大写|  
 |`towupper`|无|将 c 转换为相应的宽字符大写字母|  
   
- 若要将 ** 的函数版本用于同时定义为宏的 ** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。  
+ 若要将 **的函数版本用于同时定义为宏的** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。  
   
  `__toascii` 例程集将除低顺序 7 位以外的所有 `c` 设置为 0，使转换后的值表示 ASCII 字符集中的字符。 如果 `c` 已表示 ASCII 字符，则 `c` 保持不变。  
   
@@ -139,8 +140,3 @@ sOME OF these LETTERS ARE cAPITALS.
  [数据转换](../c-runtime-library/data-conversion.md)   
  [区域设置](../c-runtime-library/locale.md)   
  [is、isw 例程](../c-runtime-library/is-isw-routines.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
