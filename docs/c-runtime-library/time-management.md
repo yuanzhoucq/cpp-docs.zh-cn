@@ -38,9 +38,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 453cb5b598d2fca2e00cba9bb0a46cf0098eddec
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: baf07427498c6b1f60ceca67112251be794a7451
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="time-management"></a>时间管理
@@ -50,24 +50,24 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="time-routines"></a>时间例程  
   
-|函数|使用|.NET Framework 等效项|  
-|--------------|---------|-------------------------------|  
-|[asctime、_wasctime](../c-runtime-library/reference/asctime-wasctime.md)、[asctime_s、_wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|将时间从类型 `struct tm` 转换为字符串。 这些具有 `_s` 后缀的函数版本更安全。|[System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)、 [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)、 [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)、 [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)、 [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)|  
-|[clock](../c-runtime-library/reference/clock.md)|返回进程已用的时钟时间。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)、[ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|将时间从类型 `time_t`、 `__time32_t` 或 `__time64_t` 转换为字符串。 这些具有 `_s` 后缀的函数版本更安全。|[System::DateTime::GetDateTimeFormats](https://msdn.microsoft.com/en-us/library/system.datetime.getdatetimeformats.aspx)、 [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)、 [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)、 [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)|  
+|函数|使用|  
+|--------------|---------|  
+|[asctime、_wasctime](../c-runtime-library/reference/asctime-wasctime.md)、[asctime_s、_wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|将时间从类型 `struct tm` 转换为字符串。 这些具有 `_s` 后缀的函数版本更安全。|  
+|[clock](../c-runtime-library/reference/clock.md)|返回进程已用的时钟时间。|  
+|[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)、[ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|将时间从类型 `time_t`、 `__time32_t` 或 `__time64_t` 转换为字符串。 这些具有 `_s` 后缀的函数版本更安全。|  
 |[difftime、_difftime32、_difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|计算两个时间之差。|[System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|  
-|[_ftime、_ftime32、_ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)、[_ftime_s、_ftime32_s、_ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|将当前系统时间存储在 `struct _timeb` 或 `struct``__timeb64` 类型的变量中。这些带有 `_s` 后缀的函数版本更安全。|[System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)|  
-|[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|打开文件后设置修改时间|[System::IO::File::SetLastAccessTime](https://msdn.microsoft.com/en-us/library/system.io.file.setlastaccesstime.aspx)、 [System::IO::File::SetLastWriteTime](https://msdn.microsoft.com/en-us/library/system.io.file.setlastwritetime.aspx)、 [System::IO::File::SetCreationTime](https://msdn.microsoft.com/en-us/library/system.io.file.setcreationtime.aspx)|  
-|[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm`。这些具有 `_s` 后缀的函数版本更安全。|[System::DateTime::UtcNow](https://msdn.microsoft.com/en-us/library/system.datetime.utcnow.aspx)、 [System::DateTime::ToUniversalTime](https://msdn.microsoft.com/en-us/library/system.datetime.touniversaltime.aspx)|  
-|[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm` 这些具有 `_s` 后缀的函数版本更安全。|[System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)|  
-|[_mkgmtime、_mkgmtime32、_mkgmtime64](../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)|将时间转换为格林威治标准时间中的日历值。|[System::DateTime::ToUniversalTime](https://msdn.microsoft.com/en-us/library/system.datetime.touniversaltime.aspx)|  
-|[mktime、_mktime32、_mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md)|将时间转换为日历值。|[System::DateTime::DateTime](Overload:System.DateTime.)|  
-|[_strdate、_wstrdate](../c-runtime-library/reference/strdate-wstrdate.md)、[_strdate_s、_wstrdate_s](../c-runtime-library/reference/strdate-s-wstrdate-s.md)|以字符串形式返回当前系统日期。 这些具有 `_s` 后缀的函数版本更安全。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|将日期时间字符串设置为可在全球范围内使用的格式。|[System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)、 [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)、 [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)、 [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)、 [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)|  
-|[_strtime、_wstrtime](../c-runtime-library/reference/strtime-wstrtime.md)、[_strtime_s、_wstrtime_s](../c-runtime-library/reference/strtime-s-wstrtime-s.md)|以字符串形式返回当前系统时间。 这些具有 `_s` 后缀的函数版本更安全。|[System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)、 [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)、 [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)、 [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)、 [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)|  
-|[time、_time32、_time64](../c-runtime-library/reference/time-time32-time64.md)|以 `time_t`、 `__time32_t` 类型或 `__time64_t`类型获取当前系统时间。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_tzset](../c-runtime-library/reference/tzset.md)|根据环境时间变量 `TZ`设置外部时间变量。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)|使用当前时间或存储在结构中的时间值设置指定文件的修改时间。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
+|[_ftime、_ftime32、_ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)、[_ftime_s、_ftime32_s、_ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|将当前系统时间存储在 `struct _timeb` 或 `struct``__timeb64` 类型的变量中。这些带有 `_s` 后缀的函数版本更安全。|  
+|[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|打开文件后设置修改时间|  
+|[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm`。这些具有 `_s` 后缀的函数版本更安全。|  
+|[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm` 这些具有 `_s` 后缀的函数版本更安全。|  
+|[_mkgmtime、_mkgmtime32、_mkgmtime64](../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)|将时间转换为格林威治标准时间中的日历值。|  
+|[mktime、_mktime32、_mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md)|将时间转换为日历值。|  
+|[_strdate、_wstrdate](../c-runtime-library/reference/strdate-wstrdate.md)、[_strdate_s、_wstrdate_s](../c-runtime-library/reference/strdate-s-wstrdate-s.md)|以字符串形式返回当前系统日期。 这些具有 `_s` 后缀的函数版本更安全。|  
+|[strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|将日期时间字符串设置为可在全球范围内使用的格式。|  
+|[_strtime、_wstrtime](../c-runtime-library/reference/strtime-wstrtime.md)、[_strtime_s、_wstrtime_s](../c-runtime-library/reference/strtime-s-wstrtime-s.md)|以字符串形式返回当前系统时间。 这些具有 `_s` 后缀的函数版本更安全。|  
+|[time、_time32、_time64](../c-runtime-library/reference/time-time32-time64.md)|以 `time_t`、 `__time32_t` 类型或 `__time64_t`类型获取当前系统时间。|  
+|[_tzset](../c-runtime-library/reference/tzset.md)|根据环境时间变量 `TZ`设置外部时间变量。|  
+|[_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)|使用当前时间或存储在结构中的时间值设置指定文件的修改时间。|  
   
 > [!NOTE]
 >  在 Microsoft C/C++ 的所有版本（除 Microsoft C/C++ 7.0 版）和 Visual C++ 的所有版本中，时间函数将当前时间返回为自 1970 年 1 月 1 日午夜以来过去的秒数。 在 Microsoft C/C++ 7.0 版中， `time` 将当前时间返回为自 1899 年 12 月 31 日午夜以来过去的秒数。  

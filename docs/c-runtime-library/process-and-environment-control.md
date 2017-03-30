@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d5198dcef7d24d2755c21b90802b19e809c5b8da
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3cf27e03831d5f70d9035a4d8fdb0d9b1cdb40e5
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="process-and-environment-control"></a>进程和环境控制
@@ -49,48 +49,48 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="process-and-environment-control-functions"></a>进程和环境控制函数  
   
-|例程|使用|.NET Framework 等效项|  
-|-------------|---------|-------------------------------|  
-|[abort](../c-runtime-library/reference/abort.md)|中止进程而无需刷新缓冲区或调用通过 `atexit` 和 `_onexit` 注册的函数|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|测试逻辑错误|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
-|[_ASSERT、_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏|类似于 `assert`，但仅在运行时库的调试版本中可用|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
-|[atexit](../c-runtime-library/reference/atexit.md)|在程序终止时执行的计划例程|[System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)|  
-|[_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)|在 Windows 操作系统进程中创建新的线程|[System::Threading::Thread::Start](https://msdn.microsoft.com/en-us/library/system.threading.thread.start.aspx)|  
-|[_cexit](../c-runtime-library/reference/cexit-c-exit.md)|执行 `exit` 终止过程（例如刷新缓冲区），然后在不终止进程的情况下将控制权返回到调用程序|[System::Diagnostics::Process::CloseMainWindow](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.closemainwindow.aspx)|  
-|[_c_exit](../c-runtime-library/reference/cexit-c-exit.md)|执行 `_exit` 终止过程，然后在不终止进程的情况下将控制权返回到调用程序|[System::Diagnostics::Process::CloseMainWindow](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.closemainwindow.aspx)|  
-|[_cwait](../c-runtime-library/reference/cwait.md)|请等待，直到另一个进程终止|[System::Diagnostics::Process::WaitForExit](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.waitforexit.aspx)|  
-|[_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)|终止一个 Windows 操作系统线程|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_execl、_wexecl](../c-runtime-library/reference/execl-wexecl.md)|使用参数列表执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_execle、_wexecle](../c-runtime-library/reference/execle-wexecle.md)|使用参数列表和给定的环境执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_execlp、_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|使用 `PATH` 变量和参数列表执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_execlpe、_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|使用 `PATH` 变量、给定的环境和参数列表执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_execv、_wexecv](../c-runtime-library/reference/execv-wexecv.md)|使用参数数组执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_execve、_wexecve](../c-runtime-library/reference/execve-wexecve.md)|使用参数数组和给定的环境执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_execvp、_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|使用 `PATH` 变量和参数数组执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_execvpe、_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|使用 `PATH` 变量、给定的环境和参数数组执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[exit](../c-runtime-library/reference/exit-exit-exit.md)|调用通过 `atexit` 和 `_onexit` 注册的函数，刷新所有缓冲区，关闭所有打开的文件，然后终止进程|[System::Diagnostics::Process::Kill](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.kill.aspx)|  
-|[_exit](../c-runtime-library/reference/exit-exit-exit.md)|立即终止进程，无需调用 `atexit` 或 `_onexit` 或刷新缓冲区|[System::Diagnostics::Process::Kill](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.kill.aspx)|  
-|[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)、[getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|获取环境变量的值|[System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)|  
+|例程|使用|  
+|-------------|---------|  
+|[abort](../c-runtime-library/reference/abort.md)|中止进程而无需刷新缓冲区或调用通过 `atexit` 和 `_onexit` 注册的函数|  
+|[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|测试逻辑错误|  
+|[_ASSERT、_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏|类似于 `assert`，但仅在运行时库的调试版本中可用|  
+|[atexit](../c-runtime-library/reference/atexit.md)|在程序终止时执行的计划例程|  
+|[_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)|在 Windows 操作系统进程中创建新的线程|  
+|[_cexit](../c-runtime-library/reference/cexit-c-exit.md)|执行 `exit` 终止过程（例如刷新缓冲区），然后在不终止进程的情况下将控制权返回到调用程序|  
+|[_c_exit](../c-runtime-library/reference/cexit-c-exit.md)|执行 `_exit` 终止过程，然后在不终止进程的情况下将控制权返回到调用程序|  
+|[_cwait](../c-runtime-library/reference/cwait.md)|请等待，直到另一个进程终止|  
+|[_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)|终止一个 Windows 操作系统线程|  
+|[_execl、_wexecl](../c-runtime-library/reference/execl-wexecl.md)|使用参数列表执行新进程|  
+|[_execle、_wexecle](../c-runtime-library/reference/execle-wexecle.md)|使用参数列表和给定的环境执行新进程|  
+|[_execlp、_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|使用 `PATH` 变量和参数列表执行新进程|  
+|[_execlpe、_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|使用 `PATH` 变量、给定的环境和参数列表执行新进程|  
+|[_execv、_wexecv](../c-runtime-library/reference/execv-wexecv.md)|使用参数数组执行新进程|  
+|[_execve、_wexecve](../c-runtime-library/reference/execve-wexecve.md)|使用参数数组和给定的环境执行新进程|  
+|[_execvp、_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|使用 `PATH` 变量和参数数组执行新进程|  
+|[_execvpe、_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|使用 `PATH` 变量、给定的环境和参数数组执行新进程|  
+|[exit](../c-runtime-library/reference/exit-exit-exit.md)|调用通过 `atexit` 和 `_onexit` 注册的函数，刷新所有缓冲区，关闭所有打开的文件，然后终止进程|  
+|[_exit](../c-runtime-library/reference/exit-exit-exit.md)|立即终止进程，无需调用 `atexit` 或 `_onexit` 或刷新缓冲区|  
+|[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)、[getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|获取环境变量的值|  
 |[_getpid](../c-runtime-library/reference/getpid.md)|获取进程 ID 号|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|  
-|[longjmp](../c-runtime-library/reference/longjmp.md)|还原保存的堆栈环境；使用它来执行非本地 `goto`|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|在程序终止时执行的计划例程；用于与 Microsoft C/C++ 版本 7.0 和更早版本的兼容性|[System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)|  
-|[_pclose](../c-runtime-library/reference/pclose.md)|等待新命令处理器并关闭关联管道上的流|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[perror、_wperror](../c-runtime-library/reference/perror-wperror.md)|打印错误消息|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_pipe](../c-runtime-library/reference/pipe.md)|创建用于读取和写入的管道|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md)|创建管道，然后执行命令|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)、[_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|添加或更改环境变量的值|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[raise](../c-runtime-library/reference/raise.md)|将信号发送到调用进程|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[setjmp](../c-runtime-library/reference/setjmp.md)|保存堆栈环境；用于执行非本地 `goto`|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[signal](../c-runtime-library/reference/signal.md)|处理中断信号|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_spawnl、_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|使用指定的参数列表创建和执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_spawnle、_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|使用指定的参数列表和环境创建和执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_spawnlp、_wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|使用 `PATH` 变量和指定的参数列表创建和执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_spawnlpe、_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|使用 `PATH` 变量、指定的环境和参数列表创建和执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_spawnv、_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|使用指定的参数数组创建和执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_spawnve、_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|使用指定的环境和参数数组创建和执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_spawnvp、_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|使用 `PATH` 变量和指定的参数数组创建和执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[_spawnvpe、_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|使用 `PATH` 变量、指定的环境和参数数组创建和执行新进程|[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)、[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)|  
-|[system、_wsystem](../c-runtime-library/reference/system-wsystem.md)|执行操作系统命令|[System::Diagnostics::ProcessStartInfo 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)、[System::Diagnostics::Process 类](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)|  
+|[longjmp](../c-runtime-library/reference/longjmp.md)|还原保存的堆栈环境；使用它来执行非本地 `goto`|  
+|[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|在程序终止时执行的计划例程；用于与 Microsoft C/C++ 版本 7.0 和更早版本的兼容性|  
+|[_pclose](../c-runtime-library/reference/pclose.md)|等待新命令处理器并关闭关联管道上的流|  
+|[perror、_wperror](../c-runtime-library/reference/perror-wperror.md)|打印错误消息|  
+|[_pipe](../c-runtime-library/reference/pipe.md)|创建用于读取和写入的管道|  
+|[_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md)|创建管道，然后执行命令|  
+|[_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)、[_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|添加或更改环境变量的值|  
+|[raise](../c-runtime-library/reference/raise.md)|将信号发送到调用进程|  
+|[setjmp](../c-runtime-library/reference/setjmp.md)|保存堆栈环境；用于执行非本地 `goto`|  
+|[signal](../c-runtime-library/reference/signal.md)|处理中断信号|  
+|[_spawnl、_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|使用指定的参数列表创建和执行新进程|  
+|[_spawnle、_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|使用指定的参数列表和环境创建和执行新进程|  
+|[_spawnlp、_wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|使用 `PATH` 变量和指定的参数列表创建和执行新进程|  
+|[_spawnlpe、_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|使用 `PATH` 变量、指定的环境和参数列表创建和执行新进程|  
+|[_spawnv、_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|使用指定的参数数组创建和执行新进程|  
+|[_spawnve、_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|使用指定的环境和参数数组创建和执行新进程|  
+|[_spawnvp、_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|使用 `PATH` 变量和指定的参数数组创建和执行新进程|  
+|[_spawnvpe、_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|使用 `PATH` 变量、指定的环境和参数数组创建和执行新进程|  
+|[system、_wsystem](../c-runtime-library/reference/system-wsystem.md)|执行操作系统命令|  
   
  在 Windows 操作系统中，生成的进程等同于正在生成的进程。 任何进程都可以使用 `_cwait` 等待其进程 ID 为已知的任何其他进程。  
   

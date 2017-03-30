@@ -50,8 +50,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4d2f5694ad2f06bf78307783d8f24c34bb0849df
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c1a72c382d0df6d667ca97a45c6783c928f6ae98
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="heapadd"></a>_heapadd
@@ -92,9 +93,6 @@ int _heapadd(
   
  有关兼容性的详细信息，请参阅“简介”中的[兼容性](../c-runtime-library/compatibility.md)。  
   
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
-  
 ## <a name="see-also"></a>另请参阅  
  [内存分配](../c-runtime-library/memory-allocation.md)   
  [free](../c-runtime-library/reference/free.md)   
@@ -104,8 +102,3 @@ int _heapadd(
  [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
  [malloc](../c-runtime-library/reference/malloc.md)   
  [realloc](../c-runtime-library/reference/realloc.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
