@@ -132,7 +132,7 @@ ms.lasthandoff: 03/07/2017
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--   ** get 和 _getws ** 已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
+-   **get 和 _getws** 已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
   
 -   **_cgets 和 _cgetws** 已删除 [_cgets](../c-runtime-library/cgets-cgetws.md) 和 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函数。 作为这些函数替代，请考虑使用 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 和 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
   
