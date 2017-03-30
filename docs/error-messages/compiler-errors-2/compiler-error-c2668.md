@@ -1,41 +1,57 @@
 ---
-title: "编译器错误 C2668 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2668"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2668"
+title: "编译器错误 C2668 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2668
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 编译器错误 C2668
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 6bb1dc7c1dbf26a4ff8ec25a46fe7128e0fb6aa8
+ms.lasthandoff: 03/29/2017
 
-“function”: 对重载函数的调用不明确  
+---
+# <a name="compiler-error-c2668"></a>编译器错误 C2668
+function︰ 对重载函数调用不明确  
   
- 未能解析指定的重载函数调用。  可能需要显式转换一个或多个实际参数。  
+ 无法解析指定的重载的函数调用。 你可能想要将一个或多个实参显式转换。  
   
- 在模板的使用过程中也可发生此错误。  在同一个类中，如果有具有相同签名的常规成员函数和模板成员函数，则必须先有模板成员函数。  这是当前 Visual C\+\+ 实现的限制。  
+ 此外可以通过模板使用来获取此错误。 如果在同一类中，你有正则成员函数和模板化的成员函数具有相同签名，必须出现在模板化的一个最前面。 这是 Visual c + + 的当前实现的限制。  
   
- 有关函数模板部分排序的更多信息，请参见知识库文章 Q240869。  
+ 在函数模板的部分排序，请参阅知识库文章 Q240869 有关详细信息。  
   
- 如果要生成包含支持 `ISupportErrorInfo` 的 COM 对象的 ATL 项目，请参见知识库文章 Q243298。  
+ 如果你要生成包含 COM 对象支持 ATL 项目`ISupportErrorInfo`，请参阅知识库文章 Q243298。  
   
-## 示例  
- 下面的示例生成 C2668：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C2668:  
   
 ```  
 // C2668.cpp  
@@ -53,8 +69,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 解决此错误的另一个方式是通过 [using 声明](../../cpp/using-declaration.md)：  
+## <a name="example"></a>示例  
+ 若要解决此错误的另一个方法是使用[using 声明](../../cpp/using-declaration.md):  
   
 ```  
 // C2668b.cpp  
@@ -95,10 +111,10 @@ class MyTestCase : public AppTestCase {
 };  
 ```  
   
-## 示例  
- 也可能由于为 Visual Studio .NET 2003 进行的编译器一致性工作生成此错误：对常数 0 的转换的转换不明确。  
+## <a name="example"></a>示例  
+ 此错误还可能来自于为 Visual Studio.NET 2003年执行的编译器一致性工作︰ 强制转换为常量 0 上的不明确转换。  
   
- 对使用常数 0 的转换的转换不明确，因为 int 要求同时转换为 long 和 void\*。  为了解决此错误，将 0 转换为它所用于的函数参数的确切类型，这样不需要发生任何转换（此代码将在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本中有效）。  
+ 强制转换使用常量 0 上的转换是不明确，因为 int 需要这两个到转换和长到 void *。 若要解决此错误，强制转换为它正用于以便发生 （此代码将在 Visual c + + 的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中有效） 所需的任何转换的函数参数的确切类型 0。  
   
 ```  
 // C2668c.cpp  
@@ -118,8 +134,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 发生此错误的可能原因是 CRT 现在具有所有算术函数的浮点和双精度形式。  
+## <a name="example"></a>示例  
+ 由于 CRT 现在具有 float 和 double 窗体的所有数学函数，则可能出现此错误。  
   
 ```  
 // C2668d.cpp  
@@ -132,8 +148,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 发生此错误的可能原因是从 CRT 中的 math.h 删除了 pow\(int, int\)。  
+## <a name="example"></a>示例  
+ 因为 pow （int，int） 已从 CRT 中的 math.h 中删除，则可能出现此错误。  
   
 ```  
 // C2668e.cpp  
@@ -142,4 +158,26 @@ int main() {
    pow(9,9);   // C2668  
    pow((double)9,9);   // OK  
 }  
+```
+
+## <a name="example"></a>示例  
+此代码在 Visual Studio 2015 中成功，但失败 C2668 在 Visual Studio 2017 和更高版本。 在 Visual Studio 2015 中，编译器以与常规复制初始化相同的方式错误地处理复制列表初始化；它只考虑将转换构造函数用于重载决策。 
+
+```
+C++
+struct A {
+    explicit A(int) {}
+};
+
+struct B {
+    B(int) {}
+};
+
+void f(const A&) {}
+void f(const B&) {}
+
+int main()
+{
+    f({ 1 }); // error C2668: 'f': ambiguous call to overloaded function
+}
 ```

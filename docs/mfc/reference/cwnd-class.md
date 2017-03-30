@@ -443,9 +443,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ab9007e512f5af43bdace06796fb8487ffebc8e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 77be7b572bd5fa6d90d52d14a40706f251176a2b
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cwnd-class"></a>CWnd 类
@@ -461,7 +461,7 @@ class CWnd : public CCmdTarget
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CWnd::CWnd](#cwnd)|构造 `CWnd` 对象。|  
   
@@ -478,7 +478,7 @@ class CWnd : public CCmdTarget
 |[CWnd::ArrangeIconicWindows](#arrangeiconicwindows)|排列所有最小化（图标）子窗口。|  
 |[CWnd::Attach](#attach)|将 Windows 句柄附加到 `CWnd` 对象。|  
 |[CWnd::BeginModalState](#beginmodalstate)|调用此成员函数以使框架窗口具有模式。|  
-|[CWnd::BeginPaint](#beginpaint)|为进行绘制准备好 `CWnd`。|  
+|[Cwnd:: Beginpaint](#beginpaint)|为进行绘制准备好 `CWnd`。|  
 |[CWnd::BindDefaultProperty](#binddefaultproperty)|将调用对象的默认简单绑定属性（按照在类型库中进行的标记）绑定到与数据源控件关联的光标。|  
 |[CWnd::BindProperty](#bindproperty)|将数据绑定控件上的光标绑定属性绑定到数据源控件，并向 MFC 绑定管理器注册该关系。|  
 |[CWnd::BringWindowToTop](#bringwindowtotop)|将 `CWnd` 置于一堆重叠窗口的顶部。|  
@@ -512,7 +512,7 @@ class CWnd : public CCmdTarget
 |[CWnd::DrawCaption](#drawcaption)|绘制标题。|  
 |[CWnd::DrawMenuBar](#drawmenubar)|重绘菜单栏。|  
 |[CWnd::EnableActiveAccessibility](#enableactiveaccessibility)|启用用户定义的 `Active Accessibility` 函数。|  
-|[CWnd::EnableDynamicLayout](#enabledynamiclayout)|使子窗口的位置和大小可以在用户调整窗口大小时动态调整。|  
+|[Cwnd:: Enabledynamiclayout](#enabledynamiclayout)|使子窗口的位置和大小可以在用户调整窗口大小时动态调整。|  
 |[CWnd::EnableD2DSupport](#enabled2dsupport)|启用或禁用窗口 `D2D` 支持。 在初始化主窗口之前调用此方法。|  
 |[CWnd::EnableScrollBar](#enablescrollbar)|启用或禁用滚动条的一个或两个箭头。|  
 |[CWnd::EnableScrollBarCtrl](#enablescrollbarctrl)|启用或禁用同级滚动条控件。|  
@@ -528,14 +528,14 @@ class CWnd : public CCmdTarget
 |[CWnd::FindWindowEx](#findwindowex)|返回由其窗口名和窗口类标识的窗口的句柄。|  
 |[CWnd::FlashWindow](#flashwindow)|使窗口闪烁一次。|  
 |[CWnd::FlashWindowEx](#flashwindowex)|使具有其他功能的窗口闪烁。|  
-|[CWnd::FromHandle](#fromhandle)|在提供了窗口的句柄时返回指向 `CWnd` 对象的指针。 如果 `CWnd` 对象未附加到该句柄，则会创建并附加一个临时 `CWnd` 对象。|  
+|[Cwnd:: Fromhandle](#fromhandle)|在提供了窗口的句柄时返回指向 `CWnd` 对象的指针。 如果 `CWnd` 对象未附加到该句柄，则会创建并附加一个临时 `CWnd` 对象。|  
 |[CWnd::FromHandlePermanent](#fromhandlepermanent)|在提供了窗口的句柄时返回指向 `CWnd` 对象的指针。 如果 `CWnd` 对象未附加到该句柄，则会创建并附加一个临时 `CWnd` 对象。|  
 |[CWnd::get_accChild](#get_accchild)|由框架调用以检索指定子级的 `IDispatch` 接口地址。|  
 |[CWnd::get_accChildCount](#get_accchildcount)|由框架调用调用以检索属于该对象的子级的个数。|  
 |[CWnd::get_accDefaultAction](#get_accdefaultaction)|由框架调用以检索描述对象默认操作的字符串。|  
 |[CWnd::get_accDescription](#get_accdescription)|由框架调用以检索描述指定对象的可视外观的字符串。|  
 |[CWnd::get_accFocus](#get_accfocus)|由框架调用以检索具有键盘焦点的对象。|  
-|[CWnd::get_accHelp](#get_acchelp)|由框架调用以检索对象的**帮助**属性字符串。|  
+|[CWnd::get_accHelp](#get_acchelp)|由框架用于检索对象的调用**帮助**属性字符串。|  
 |[CWnd::get_accHelpTopic](#get_acchelptopic)|由框架调用以检索与指定对象关联的 `WinHelp` 文件的完整路径以及该文件内相应主题的标识符。|  
 |[CWnd::get_accKeyboardShortcut](#get_acckeyboardshortcut)|由框架调用以检索指定对象的快捷键或访问键。|  
 |[CWnd::get_accName](#get_accname)|由框架调用以检索指定对象的名称。|  
@@ -553,7 +553,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetClipboardOwner](#getclipboardowner)|检索指向剪贴板当前所有者的指针。|  
 |[CWnd::GetClipboardViewer](#getclipboardviewer)|检索指向剪贴板查看器链中第一个窗口的指针。|  
 |[CWnd::GetControlUnknown](#getcontrolunknown)|检索指向未知 ActiveX 控件的指针。|  
-|[CWnd::GetDC](#getdc)|检索工作区的显示上下文。|  
+|[Cwnd:: Getdc](#getdc)|检索工作区的显示上下文。|  
 |[CWnd::GetDCEx](#getdcex)|检索工作区的显示上下文，并在绘制启用剪辑。|  
 |[CWnd::GetDCRenderTarget](#getdcrendertarget)|检索 `CWnd` 窗口的设备上下文 (DC) 呈现目标。|  
 |[CWnd::GetDescendantWindow](#getdescendantwindow)|搜索所有子代窗口，并返回具有指定 ID 的窗口。|  
@@ -563,7 +563,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetDlgItemInt](#getdlgitemint)|将给定对话框中控件的文本转换为整数值。|  
 |[CWnd::GetDlgItemText](#getdlgitemtext)|检索与控件关联的标题或文本。|  
 |[CWnd::GetDSCCursor](#getdsccursor)|检索指向由数据源控件的 DataSource、UserName、Password 和 SQL 属性定义的基础光标的指针。|  
-|[CWnd::GetDynamicLayout](#getdynamiclayout)|检索指向动态布局管理器对象的指针。|  
+|[Cwnd:: Getdynamiclayout](#getdynamiclayout)|检索指向动态布局管理器对象的指针。|  
 |[CWnd::GetExStyle](#getexstyle)|返回窗口的扩展样式。|  
 |[CWnd::GetFocus](#getfocus)|检索当前具有输入焦点的 `CWnd`。|  
 |[CWnd::GetFont](#getfont)|检索当前字体。|  
@@ -573,7 +573,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetLayeredWindowAttributes](#getlayeredwindowattributes)|检索分层窗口的不透明度和透明度颜色键。|  
 |[CWnd::GetMenu](#getmenu)|检索指向指定菜单的指针。|  
 |[CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)|在控件组中搜索的下一个（或上一个）控件。|  
-|[CWnd::GetNextDlgTabItem](#getnextdlgtabitem)|检索与第一个控件[WS_TABSTOP](window-styles.md)遵循 （或前面） 指定的控件的样式。|  
+|[CWnd::GetNextDlgTabItem](#getnextdlgtabitem)|检索与第一个控件[WS_TABSTOP](window-styles.md) （或之前） 指定的控件的样式。|  
 |[CWnd::GetNextWindow](#getnextwindow)|返回窗口管理器列表中的下一个（或上一个）窗口。|  
 |[CWnd::GetOleControlSite](#getolecontrolsite)|检索指定 ActiveX 控件的自定义站点。|  
 |[CWnd::GetOpenClipboardWindow](#getopenclipboardwindow)|检索指向当前打开剪贴板的窗口的指针。|  
@@ -585,7 +585,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetRenderTarget](#getrendertarget)|获取与此窗口相关联的呈现目标。|  
 |[CWnd::GetSafeHwnd](#getsafehwnd)|返回 `m_hWnd`，如果 `this` 指针是 `NULL`，则返回 `NULL`。|  
 |[CWnd::GetSafeOwner](#getsafeowner)|检索给定窗口的安全所有者。|  
-|[CWnd::GetScrollBarCtrl](#getscrollbarctrl)|返回同级滚动条控件。|  
+|[Cwnd:: Getscrollbarctrl](#getscrollbarctrl)|返回同级滚动条控件。|  
 |[CWnd::GetScrollBarInfo](#getscrollbarinfo)|检索有关指定滚动条的信息。|  
 |[CWnd::GetScrollInfo](#getscrollinfo)|检索 `SCROLLINFO` 结构维护的有关滚动条的信息。|  
 |[CWnd::GetScrollLimit](#getscrolllimit)|检索滚动条的限制。|  
@@ -602,7 +602,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetUpdateRgn](#getupdatergn)|检索 `CWnd` 更新区域。|  
 |[CWnd::GetWindow](#getwindow)|返回与此窗口具有指定关系的窗口。|  
 |[CWnd::GetWindowContextHelpId](#getwindowcontexthelpid)|检索帮助上下文标识符。|  
-|[CWnd::GetWindowDC](#getwindowdc)|检索整个窗口的显示上下文，包括标题栏、菜单和滚动条。|  
+|[Cwnd:: Getwindowdc](#getwindowdc)|检索整个窗口的显示上下文，包括标题栏、菜单和滚动条。|  
 |[CWnd::GetWindowedChildCount](#getwindowedchildcount)|返回关联子窗口的数量。|  
 |[CWnd::GetWindowInfo](#getwindowinfo)|返回有关窗口的信息。|  
 |[CWnd::GetWindowlessChildCount](#getwindowlesschildcount)|返回关联无窗口子窗口的数量。|  
@@ -622,7 +622,7 @@ class CWnd : public CCmdTarget
 |[CWnd::IsD2DSupportEnabled](#isd2dsupportenabled)|确定是否启用 `D2D` 支持。|  
 |[CWnd::IsDialogMessage](#isdialogmessage)|确定给定消息是否用于无模式对话框，如果是，则处理它。|  
 |[CWnd::IsDlgButtonChecked](#isdlgbuttonchecked)|确定是否选中按钮控件。|  
-|[CWnd::IsDynamicLayoutEnabled](#isdynamiclayoutenabled)|确定是否在此窗口上启用动态布局。 如果启用动态布局，则子窗口的位置和大小可以在用户调整父窗口大小时进行更改。|  
+|[Cwnd:: Isdynamiclayoutenabled](#isdynamiclayoutenabled)|确定是否在此窗口上启用动态布局。 如果启用动态布局，则子窗口的位置和大小可以在用户调整父窗口大小时进行更改。|  
 |[CWnd::IsIconic](#isiconic)|确定 `CWnd` 是否进行最小化（图标化）。|  
 |[CWnd::IsTouchWindow](#istouchwindow)|指定 `CWnd` 是否具有触摸支持。|  
 |[CWnd::IsWindowEnabled](#iswindowenabled)|确定是否针对鼠标和键盘输入启用窗口。|  
@@ -643,18 +643,18 @@ class CWnd : public CCmdTarget
 |[CWnd::OnHelpIndex](#onhelpindex)|处理 `ID_HELP_INDEX` 命令，并提供默认帮助主题。|  
 |[CWnd::OnHelpUsing](#onhelpusing)|处理 `ID_HELP_USING` 命令。|  
 |[CWnd::OnToolHitTest](#ontoolhittest)|确定点是否在指定工具的边框内并检索有关此工具的信息。|  
-|[CWnd::OpenClipboard](#openclipboard)|打开剪贴板。 其他应用程序将不能修改直到 Windows 剪贴板[关闭剪贴板](http://msdn.microsoft.com/library/windows/desktop/ms649035)调用函数。|  
+|[CWnd::OpenClipboard](#openclipboard)|打开剪贴板。 其他应用程序将无法修改剪贴板，直到 Windows [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035)调用函数。|  
 |[CWnd::PaintWindowlessControls](#paintwindowlesscontrols)|在控件容器上绘制无窗口控件。|  
 |[CWnd::PostMessage](#postmessage)|将消息置于应用程序队列中，然后返回而不等待窗口处理该消息。|  
 |[CWnd::PreCreateWindow](#precreatewindow)|在创建附加到此 `CWnd` 对象的 Windows 窗口之前调用。|  
-|[CWnd::PreSubclassWindow](#presubclasswindow)|允许其他必要的子类化来前允许发生[SubclassWindow](#subclasswindow)调用。|  
+|[CWnd::PreSubclassWindow](#presubclasswindow)|允许创建其他必要的子类前允许发生[SubclassWindow](#subclasswindow)调用。|  
 |[Cwnd:: Pretranslatemessage](#pretranslatemessage)|由 `CWinApp` 用于在窗口消息调度到 `TranslateMessage` 和 `DispatchMessage` Windows 函数之前筛选它们。|  
 |[CWnd::Print](#print)|在指定设备上下文中绘制当前窗口。|  
 |[CWnd::PrintClient](#printclient)|在指定设备上下文（通常是打印机设备上下文）中绘制任何窗口。|  
 |[CWnd::PrintWindow](#printwindow)|将可视窗口复制到指定设备上下文（通常是打印机设备上下文）。|  
 |[CWnd::RedrawWindow](#redrawwindow)|更新工作区中的指定矩形或区域。|  
 |[CWnd::RegisterTouchWindow](#registertouchwindow)|注册/注销窗口 Windows 触摸支持。|  
-|[CWnd::ReleaseDC](#releasedc)|释放客户端和窗口设备上下文，从而使它们可供其他应用程序使用。|  
+|[Cwnd:: Releasedc](#releasedc)|释放客户端和窗口设备上下文，从而使它们可供其他应用程序使用。|  
 |[CWnd::RepositionBars](#repositionbars)|在工作区中重新定位控件条。|  
 |[CWnd::RunModalLoop](#runmodalloop)|为处于模式状态的窗口检索、转换或调度消息。|  
 |[CWnd::ScreenToClient](#screentoclient)|将显示中的给定点或矩形的屏幕坐标转换为客户端坐标。|  
@@ -685,7 +685,7 @@ class CWnd : public CCmdTarget
 |[CWnd::SetScrollInfo](#setscrollinfo)|设置有关滚动条的信息。|  
 |[CWnd::SetScrollPos](#setscrollpos)|设置滚动框的当前位置，并且（如果指定）重绘滚动条以反映新位置。|  
 |[CWnd::SetScrollRange](#setscrollrange)|设置给定滚动条的最小和最大位置值。|  
-|[CWnd::SetTimer](#settimer)|安装发送系统计时器[WM_TIMER](#ontimer)消息时触发。|  
+|[CWnd::SetTimer](#settimer)|安装系统计时器发送[WM_TIMER](#ontimer)消息时触发。|  
 |[CWnd::SetWindowContextHelpId](#setwindowcontexthelpid)|设置帮助上下文标识符。|  
 |[CWnd::SetWindowPlacement](#setwindowplacement)|设置窗口的显示状态以及正常（已还原）、最小化和最大化位置。|  
 |[CWnd::SetWindowPos](#setwindowpos)|更改子窗口、弹出窗口和顶级窗口的大小、位置和的顺序。|  
@@ -710,16 +710,16 @@ class CWnd : public CCmdTarget
   
 ### <a name="protected-methods"></a>受保护的方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CWnd::Default](#default)|调用默认窗口过程，该过程为应用程序不处理的任何窗口消息提供默认处理。|  
 |[CWnd::DefWindowProc](#defwindowproc)|调用默认窗口过程，该过程为应用程序不处理的任何窗口消息提供默认处理。|  
 |[CWnd::DoDataExchange](#dodataexchange)|用于对话框数据交换和验证。 由 `UpdateData` 调用。|  
-|[CWnd::GetCurrentMessage](#getcurrentmessage)|返回指向此窗口当前正在处理的消息的指针。 时，应只调用`On`*消息*消息处理程序成员函数。|  
+|[CWnd::GetCurrentMessage](#getcurrentmessage)|返回指向此窗口当前正在处理的消息的指针。 仅应调用时`On`*消息*消息处理程序成员函数。|  
 |[CWnd::InitDynamicLayout](#initdynamiclayout)|由框架调用以初始化窗口的动态布局。|  
 |[CWnd::LoadDynamicLayoutResource](#loaddynamiclayoutresource)|从资源文件加载动态布局信息。|  
 |[CWnd::OnActivate](#onactivate)|当正在激活或停用 `CWnd` 时调用。|  
-|[CWnd::OnActivateApp](#onactivateapp)|要激活或停用应用程序时调用。|  
+|[Cwnd:: Onactivateapp](#onactivateapp)|要激活或停用应用程序时调用。|  
 |[CWnd::OnAppCommand](#onappcommand)|当用户生成应用程序命令事件时调用。|  
 |[CWnd::OnAskCbFormatName](#onaskcbformatname)|由剪贴板查看器应用程序在剪贴板所有者显示剪贴板内容时调用。|  
 |[CWnd::OnCancelMode](#oncancelmode)|调用以允许 `CWnd` 取消任何内部模式（如鼠标捕获）。|  
@@ -727,7 +727,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|通知正在从链中移除指定窗口。|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|在应更改用户界面 (UI) 状态时调用。|  
 |[CWnd::OnChar](#onchar)|当击键转换为非系统字符时调用。|  
-|[CWnd::OnCharToItem](#onchartoitem)|由子列表框中与调用[LBS_WANTKEYBOARDINPUT](list-box-styles.md)样式以响应[WM_CHAR](#onchar)消息。|  
+|[CWnd::OnCharToItem](#onchartoitem)|由使用的子列表框调用[LBS_WANTKEYBOARDINPUT](list-box-styles.md)样式以响应[WM_CHAR](#onchar)消息。|  
 |[CWnd::OnChildActivate](#onchildactivate)|每当 `CWnd` 大小或位置更改或 `CWnd` 激活时，针对多文档界面 (MDI) 子窗口进行调用。|  
 |[CWnd::OnChildNotify](#onchildnotify)|由父窗口调用以使通知控件有机会响应控件通知。|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|在剪贴板内容已更改时调用。|  
@@ -744,7 +744,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnDeadChar](#ondeadchar)|当击键转换为非系统语音符号字符（如重音字符）时调用。|  
 |[CWnd::OnDeleteItem](#ondeleteitem)|当销毁所有者描述子列表框或组合框时，或是当从控件中移除项时调用。|  
 |[CWnd::OnDestroy](#ondestroy)|当销毁 `CWnd` 时调用。|  
-|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|当通过调用 Windows 清空剪贴板时，调用[清空剪贴板](http://msdn.microsoft.com/library/windows/desktop/ms649037)函数。|  
+|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|当通过调用 Windows 清空剪贴板时调用[EmptyClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649037)函数。|  
 |[CWnd::OnDeviceChange](#ondevicechange)|向应用程序或设备驱动程序通知设备或计算机的硬件配置已更改。|  
 |[CWnd::OnDevModeChange](#ondevmodechange)|当用户更改设备模式设置时针对所有顶级窗口进行调用。|  
 |[CWnd::OnDrawClipboard](#ondrawclipboard)|当剪贴板内容已更改时调用。|  
@@ -788,17 +788,17 @@ class CWnd : public CCmdTarget
 |[CWnd::OnMenuRButtonUp](#onmenurbuttonup)|当光标位于菜单项上并且用户释放鼠标右键时调用。|  
 |[CWnd::OnMenuSelect](#onmenuselect)|当用户选择菜单项时调用。|  
 |[CWnd::OnMouseActivate](#onmouseactivate)|当光标处于非活动窗口中并且用户按下鼠标按钮时调用。|  
-|[CWnd::OnMouseHover](#onmousehover)|将光标先前调用中指定的时间段内悬停窗口中的工作区时，调用[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。|  
+|[CWnd::OnMouseHover](#onmousehover)|将光标到调用中指定的时间段内悬停窗口的工作区时调用[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。|  
 |[CWnd::OnMouseHWheel](#onmousehwheel)|当前窗口由桌面窗口管理器 (DWM) 构造，并且该窗口已最大化时调用。|  
-|[CWnd::OnMouseLeave](#onmouseleave)|当光标离开的先前调用中指定的窗口的工作区时，调用[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。|  
+|[CWnd::OnMouseLeave](#onmouseleave)|当光标离开调用中指定的窗口的工作区时调用[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。|  
 |[CWnd::OnMouseMove](#onmousemove)|当鼠标光标移动时调用。|  
 |[CWnd::OnMouseWheel](#onmousewheel)|当用户旋转鼠标滚轮时调用。 使用 Windows NT 4.0 消息处理。|  
 |[CWnd::OnMove](#onmove)|在 `CWnd` 的位置已更改之后调用。|  
 |[CWnd::OnMoving](#onmoving)|指示用户正在移动 `CWnd` 对象。|  
 |[CWnd::OnNcActivate](#onncactivate)|当需要更改非工作区以指示活动或非活动状态时调用。|  
 |[CWnd::OnNcCalcSize](#onnccalcsize)|当需要计算工作区的大小和位置时调用。|  
-|[CWnd::OnNcCreate](#onnccreate)|之前调用[OnCreate](#oncreate)非工作区创建时。|  
-|[CWnd::OnNcDestroy](#onncdestroy)|当销毁非工作区时调用。|  
+|[CWnd::OnNcCreate](#onnccreate)|之前调用[OnCreate](#oncreate)的非工作区在创建时。|  
+|[Cwnd::](#onncdestroy)|当销毁非工作区时调用。|  
 |[CWnd::OnNcHitTest](#onnchittest)|每当如果 `CWnd` 包含光标或使用 `SetCapture` 捕获了鼠标输入便移动鼠标时调用。|  
 |[CWnd::OnNcLButtonDblClk](#onnclbuttondblclk)|当用户在光标处于 `CWnd` 的非工作区期间双击鼠标左键时调用。|  
 |[CWnd::OnNcLButtonDown](#onnclbuttondown)|当用户在光标处于 `CWnd` 的非工作区期间按下鼠标左键时调用。|  
@@ -806,8 +806,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcMButtonDblClk](#onncmbuttondblclk)|当用户在光标处于 `CWnd` 的非工作区期间双击鼠标中键时调用。|  
 |[CWnd::OnNcMButtonDown](#onncmbuttondown)|当用户在光标处于 `CWnd` 的非工作区期间按下鼠标中键时调用。|  
 |[CWnd::OnNcMButtonUp](#onncmbuttonup)|当用户在光标处于 `CWnd` 的非工作区期间释放鼠标中键时调用。|  
-|[CWnd::OnNcMouseHover](#onncmousehover)|将光标先前调用中指定的时间段内悬停窗口的非工作区时，调用[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。|  
-|[CWnd::OnNcMouseLeave](#onncmouseleave)|当光标离开的先前调用中指定的窗口的非工作区，框架将调用此成员函数[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。|  
+|[CWnd::OnNcMouseHover](#onncmousehover)|将光标到调用中指定的时间段内悬停在窗口的非工作区时调用[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。|  
+|[CWnd::OnNcMouseLeave](#onncmouseleave)|框架调用此成员函数，当光标离开调用中指定的窗口的非工作区[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。|  
 |[CWnd::OnNcMouseMove](#onncmousemove)|当在 `CWnd` 的非工作区中移动光标时调用。|  
 |[CWnd::OnNcPaint](#onncpaint)|当需要绘制非工作区时调用。|  
 |[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|当用户在光标处于 `CWnd` 的非工作区期间双击鼠标右键时调用。|  
@@ -846,8 +846,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|当剪贴板查看器窗口工作区的大小已更改时调用。|  
 |[CWnd::OnSizing](#onsizing)|指示用户正在调整矩形大小。|  
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|每当对打印管理器队列添加或移除作业时，从打印管理器调用。|  
-|[CWnd::OnStyleChanged](#onstylechanged)|指示[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数已更改一个或多个窗口的样式。|  
-|[CWnd::OnStyleChanging](#onstylechanging)|指示[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数即将更改一个或多个窗口的样式。|  
+|[CWnd::OnStyleChanged](#onstylechanged)|指示[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数已更改一个或多个窗口样式。|  
+|[CWnd::OnStyleChanging](#onstylechanging)|指示[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函数即将更改一个或多个窗口样式。|  
 |[CWnd::OnSysChar](#onsyschar)|当击键转换为系统字符时调用。|  
 |[CWnd::OnSysColorChange](#onsyscolorchange)|当在系统颜色设置中进行更改时，针对所有顶级窗口进行调用。|  
 |[CWnd::OnSysCommand](#onsyscommand)|当用户从控件菜单中选择命令时，或是当用户选择最大化或最小化按钮时调用。|  
@@ -856,24 +856,24 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSysKeyUp](#onsyskeyup)|当用户释放在按住 ALT 键的同时按下的键时调用。|  
 |[CWnd::OnTCard](#ontcard)|当用户单击可创作的按钮时调用。|  
 |[CWnd::OnTimeChange](#ontimechange)|在系统时间更改之后针对所有顶级窗口进行调用。|  
-|[CWnd::OnTimer](#ontimer)|在中指定每个时间间隔之后调用[SetTimer](#settimer)。|  
+|[CWnd::OnTimer](#ontimer)|在中指定每个间隔之后调用[SetTimer](#settimer)。|  
 |[CWnd::OnTouchInput](#ontouchinput)|处理来自 Windows 触摸屏的单个输入。|  
 |[CWnd::OnTouchInputs](#ontouchinputs)|处理来自 Windows 触摸屏的输入。|  
-|[CWnd::OnUniChar](#onunichar)|当按下键时调用。 当前窗口中，即，具有键盘焦点和[WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280)转换消息[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)函数。|  
+|[CWnd::OnUniChar](#onunichar)|当按下键时调用。 即，当前窗口具有键盘焦点和[WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280)消息转换通过[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)函数。|  
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|在下拉菜单或子菜单已销毁时调用。|  
 |[CWnd::OnUpdateUIState](#onupdateuistate)|调用以更改指定窗口及其所有子窗口的用户界面 (UI) 状态。|  
 |[CWnd::OnUserChanged](#onuserchanged)|在用户登录或注销之后调用。|  
-|[CWnd::OnVKeyToItem](#onvkeytoitem)|由拥有的一个列表框`CWnd`以响应[WM_KEYDOWN](#onkeydown)消息。|  
+|[CWnd::OnVKeyToItem](#onvkeytoitem)|由通过拥有的列表框调用`CWnd`以响应[WM_KEYDOWN](#onkeydown)消息。|  
 |[CWnd::OnVScroll](#onvscroll)|当用户单击窗口的垂直滚动条时调用。|  
 |[CWnd::OnVScrollClipboard](#onvscrollclipboard)|当所有者应滚动剪贴板图像、使相应部分失效以及更新滚动条值时调用。|  
-|[CWnd::OnWindowPosChanged](#onwindowposchanged)|大小、 位置或 Z-顺序已因调用而更改时调用[SetWindowPos](#setwindowpos)或另一个窗口管理函数。|  
-|[CWnd::OnWindowPosChanging](#onwindowposchanging)|大小、 位置或 Z-顺序即将因调用而更改时调用[SetWindowPos](#setwindowpos)或另一个窗口管理函数。|  
+|[CWnd::OnWindowPosChanged](#onwindowposchanged)|当大小、 位置或 Z 顺序已因调用而更改时调用[SetWindowPos](#setwindowpos)或另一个窗口管理函数。|  
+|[CWnd::OnWindowPosChanging](#onwindowposchanging)|当大小、 位置或 Z 顺序即将会因调用而更改时调用[SetWindowPos](#setwindowpos)或另一个窗口管理函数。|  
 |[CWnd::OnWinIniChange](#onwininichange)|在 Windows 初始化文件 (WIN.INI) 已更改之后对所有顶级窗口进行调用。|  
 |[CWnd::OnWndMsg](#onwndmsg)|指示是否处理了 Windows 消息。|  
 |[CWnd::OnXButtonDblClk](#onxbuttondblclk)|当用户在光标位于窗口工作区期间双击 XBUTTON1 或 XBUTTON2 时调用。|  
 |[CWnd::OnXButtonDown](#onxbuttondown)|当用户在光标位于窗口工作区期间按下 XBUTTON1 或 XBUTTON2 时调用。|  
 |[CWnd::OnXButtonUp](#onxbuttonup)|当用户在光标位于窗口工作区期间释放 XBUTTON1 或 XBUTTON2 时调用。|  
-|[CWnd::PostNcDestroy](#postncdestroy)|默认情况下调用该虚函数[OnNcDestroy](#onncdestroy)函数后窗口已被破坏。|  
+|[CWnd::PostNcDestroy](#postncdestroy)|默认情况下调用此虚拟函数[OnNcDestroy](#onncdestroy)函数在窗口已销毁之后。|  
 |[CWnd::ReflectChildNotify](#reflectchildnotify)|将消息反射到其源的 Helper 函数。|  
 |[CWnd::ReflectLastMsg](#reflectlastmsg)|将最后一个消息反射到子窗口。|  
 |[CWnd::ResizeDynamicLayout](#resizedynamiclayout)|如果对窗口启用了动态布局，则窗口大小更改以调整子窗口布局时会通过框架调用。|  
@@ -881,30 +881,30 @@ class CWnd : public CCmdTarget
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CWnd::operator HWND](#operator_hwnd)|调用以获取窗口的句柄。|  
-|[CWnd::operator ！ =](#operator_neq)|确定窗口是否不相同的窗口的句柄[m_hWnd](#m_hwnd)。|  
-|[CWnd::operator = =](#operator_eq_eq)|确定窗口是否为与窗口的句柄是相同[m_hWnd](#m_hwnd)。|  
+|[CWnd::operator ！ =](#operator_neq)|确定窗口是否不与句柄的窗口相同[m_hWnd](#m_hwnd)。|  
+|[CWnd::operator = =](#operator_eq_eq)|确定窗口是否与句柄的窗口相同[m_hWnd](#m_hwnd)。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CWnd::m_hWnd](#m_hwnd)|指示附加到此 `CWnd` 的 `HWND`。|  
   
 ## <a name="remarks"></a>备注  
- `CWnd` 对象与 Windows 窗口不同，但这两者紧密相关。 `CWnd` 对象由 `CWnd` 构造函数和析构函数进行创建或销毁。 Windows 窗口中，另一方面，是由创建的 Windows 的内部数据结构**创建**成员函数和销毁`CWnd`虚拟析构函数。 [DestroyWindow](#destroywindow)函数而不会破坏对象销毁 Windows 窗口。  
+ `CWnd` 对象与 Windows 窗口不同，但这两者紧密相关。 `CWnd` 对象由 `CWnd` 构造函数和析构函数进行创建或销毁。 Windows 窗口中，另一方面，是通过创建的 Windows 内部的数据结构**创建**成员函数销毁`CWnd`虚拟析构函数。 [DestroyWindow](#destroywindow)函数销毁 Windows 窗口而不销毁对象。  
   
- `CWnd`类和消息映射机制隐藏**WndProc**函数。 传入的 Windows 通知消息自动路由到正确的消息映射通过**上***消息*`CWnd`成员函数。 重写**上***消息*成员函数来处理在派生类中成员的特定消息。  
+ `CWnd`类和消息映射机制会隐藏**WndProc**函数。 传入 Windows 通知消息自动路由到正确的消息映射通过**上***消息*`CWnd`成员函数。 重写**上***消息*成员函数来处理在派生类中的成员的特定消息。  
   
  通过 `CWnd` 类还可以为应用程序创建 Windows 子窗口。 从 `CWnd` 派生类，然后将成员变量添加到派生类，以存储特定于应用程序的数据。 可派生类中实现消息处理程序成员函数和消息映射，以指定在消息定向到窗口时所发生的情况。  
   
- 可采用两个步骤创建子窗口。 首先，调用构造函数`CWnd`构造`CWnd`对象，然后调用[创建](#create)成员函数来创建子窗口，然后将其附加到`CWnd`对象。  
+ 可采用两个步骤创建子窗口。 首先，调用的构造函数`CWnd`构造`CWnd`对象，然后调用[创建](#create)成员函数以创建子窗口，并将其附加到`CWnd`对象。  
   
  当用户终止子窗口时，销毁 `CWnd` 对象，或调用 `DestroyWindow` 成员函数以移除窗口并销毁其数据结构。  
   
- 在 Microsoft 基础类库中，从 `CWnd` 派生了更多类以提供特定窗口类型。 这些类，其中包括的许多[CFrameWnd](../../mfc/reference/cframewnd-class.md)， [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)， [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)， [CView](../../mfc/reference/cview-class.md)，和[CDialog](../../mfc/reference/cdialog-class.md)，面向进一步派生。 控件类派生自`CWnd`，如[CButton](../../mfc/reference/cbutton-class.md)、 可直接使用或可用于进一步派生的类。  
+ 在 Microsoft 基础类库中，从 `CWnd` 派生了更多类以提供特定窗口类型。 其中许多类，包括[CFrameWnd](../../mfc/reference/cframewnd-class.md)， [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)， [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)， [CView](../../mfc/reference/cview-class.md)，和[CDialog](../../mfc/reference/cdialog-class.md)，设计为可进一步派生。 控件类派生自`CWnd`，如[CButton](../../mfc/reference/cbutton-class.md)、 可以直接使用或可用于进一步派生类。  
   
  有关详细信息使用`CWnd`，请参阅[框架窗口](../../mfc/frame-windows.md)和[窗口对象](../../mfc/window-objects.md)。  
   
@@ -927,15 +927,15 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
   
 ### <a name="parameters"></a>参数  
  `varChild`  
- 指定是否要调用的默认操作为对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （可执行对象的默认操作） 或子 ID （即执行默认操作的对象的子元素之一）。  
+ 指定是否要调用的默认操作为该对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （即执行对象的默认操作） 或一个子 ID （以执行默认操作的对象的子元素之一）。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，失败 COM 错误代码会返回 S_OK。 请参阅**返回值**中[iaccessible:: Accdodefaultaction](http://msdn.microsoft.com/library/windows/desktop/dd318470)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::accDoDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318470)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>备注  
- 此函数是 MFC 的组成部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- 重写此函数在您`CWnd`的派生类可执行对象的默认操作。 有关详细信息，请参阅[iaccessible:: Accdodefaultaction](http://msdn.microsoft.com/library/windows/desktop/dd318470)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 重写此函数在中的您`CWnd`-派生类来执行对象的默认操作。 有关详细信息，请参阅[IAccessible::accDoDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318470)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="acchittest"></a>CWnd::accHitTest  
  由框架调用以检索屏幕上给定点处的子元素或子对象。  
@@ -949,21 +949,21 @@ virtual HRESULT accHitTest(
   
 ### <a name="parameters"></a>参数  
  `xLeft`  
- X 坐标点的要进行点击测试 （以屏幕为单位）。  
+ X 坐标点要进行点击测试 （以屏幕为单位）。  
   
  `yTop`  
- Y 坐标点的要进行点击测试 （以屏幕为单位）。  
+ Y 坐标的点要进行点击测试 （以屏幕为单位）。  
   
  `pvarChild`  
- 接收信息，用于确定由指定的点处的对象`xLeft`和`yTop`。 请参阅*pvarID*中[IAccessible::accHitTest](http://msdn.microsoft.com/library/windows/desktop/dd318471)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 接收标识由指定的点处的对象的信息`xLeft`和`yTop`。 请参阅*pvarID*中[IAccessible::accHitTest](http://msdn.microsoft.com/library/windows/desktop/dd318471)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，失败 COM 错误代码会返回 S_OK。 请参阅**返回值**中**IAccessible::accHitTest**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::accHitTest**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>备注  
- 此函数是 MFC 的组成部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- 重写此函数在您`CWnd`的派生类，如果您有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
  有关详细信息，请参阅[IAccessible::accHitTest](http://msdn.microsoft.com/library/windows/desktop/dd318471)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
@@ -993,13 +993,13 @@ virtual HRESULT accLocation(
  接收高度 （以屏幕为单位） 的对象。  
   
  `varChild`  
- 指定是否要检索的位置为对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或子 ID （以获取有关对象的子元素的信息）。  
+ 指定要检索的位置是否的对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，失败 COM 错误代码会返回 S_OK。 请参阅**返回值**中**IAccessible::accLocation**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::accLocation**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>备注  
- 重写此函数在您`CWnd`的派生类，如果您有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
  有关详细信息，请参阅**IAccessible::accLocation**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
@@ -1021,15 +1021,15 @@ virtual HRESULT accNavigate(
  指定的起始对象。 请参阅`varStart`中**IAccessible::accNavigate**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
  *pvarEndUpAt*  
- 接收的目标用户界面对象的相关信息。 请参阅*pvarEnd*中**IAccessible::accNavigate**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 接收有关目标用户界面对象的信息。 请参阅*pvarEnd*中**IAccessible::accNavigate**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，失败 COM 错误代码会返回 S_OK。 请参阅**返回值**中**IAccessible::accNavigate**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::accNavigate**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>备注  
- 此函数是 MFC 的组成部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- 重写此函数在您`CWnd`的派生类，如果您有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
  有关详细信息，请参阅[IAccessible::accNavigate](http://msdn.microsoft.com/library/windows/desktop/dd318473)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
@@ -1047,20 +1047,20 @@ virtual HRESULT accSelect(
  指定如何更改当前所选内容或焦点。 请参阅`flagsSelect`中[IAccessible::accSelect](http://msdn.microsoft.com/library/windows/desktop/dd318474)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
  `varChild`  
- 指定要选择的对象。 此参数可以为 CHILDID_SELF （若要选择的对象本身） 或子 ID （若要选择一种对象的子级）。  
+ 指定要选择的对象。 此参数可以为 CHILDID_SELF （若要选择的对象本身） 或一个子 ID （以选择一种对象的子级）。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，失败 COM 错误代码会返回 S_OK。 请参阅**返回值**中**IAccessible::accSelect**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::accSelect**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>备注  
- 此函数是 MFC 的组成部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- 重写此函数在您`CWnd`的派生类，如果您有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
  有关详细信息，请参阅[IAccessible::accSelect](http://msdn.microsoft.com/library/windows/desktop/dd318474)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="animatewindow"></a>CWnd::AnimateWindow  
- 生成时显示或隐藏 windows 特殊效果。  
+ 生成时显示或隐藏窗口的特殊效果。  
   
 ```  
 BOOL AnimateWindow(
@@ -1070,16 +1070,16 @@ BOOL AnimateWindow(
   
 ### <a name="parameters"></a>参数  
  *dwTime*  
- 指定以毫秒为单位播放动画，花多长时间。 通常情况下，动画将 200 毫秒，若要播放。  
+ 指定以毫秒为单位播放动画，所需的时间。 通常情况下，动画将 200 毫秒，播放。  
   
  `dwFlags`  
- 指定类型的动画。 有关可能的值的完整列表，请参阅[AnimateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632669)。  
+ 指定动画的类型。 有关可能的值的完整列表，请参阅[AnimateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632669)。  
   
 ### <a name="return-value"></a>返回值  
  如果函数成功，则为非零值；否则为  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟函数的功能[AnimateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632669)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成员函数模拟函数的功能[AnimateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632669)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="arrangeiconicwindows"></a>CWnd::ArrangeIconicWindows  
  排列所有最小化（图标）子窗口。  
@@ -1089,15 +1089,15 @@ UINT ArrangeIconicWindows();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果该函数成功，则图标的一个行的高度否则为 0。  
+ 如果该函数成功，则图标中的一个行的高度否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数还排列在桌面窗口，其中介绍了整个屏幕上的图标。 [GetDesktopWindow](#getdesktopwindow)成员函数将检索到桌面窗口对象的指针。  
+ 此成员函数还排列在桌面窗口，覆盖整个屏幕上的图标。 [GetDesktopWindow](#getdesktopwindow)成员函数将检索到的桌面窗口对象的指针。  
   
  若要排列图标的 MDI 子窗口的 MDI 客户端窗口中，调用[CMDIFrameWnd::MDIIconArrange](../../mfc/reference/cmdiframewnd-class.md#mdiiconarrange)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&66;](../../mfc/reference/codesnippet/cpp/cwnd-class_1.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 66](../../mfc/reference/codesnippet/cpp/cwnd-class_1.cpp)]  
   
 ##  <a name="attach"></a>CWnd::Attach  
  将附加到 Windows 窗口`CWnd`对象。  
@@ -1108,19 +1108,19 @@ BOOL Attach(HWND hWndNew);
   
 ### <a name="parameters"></a>参数  
  `hWndNew`  
- 指定一个 Windows 窗口的句柄。  
+ 指定 Windows 窗口的句柄。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ### <a name="example"></a>示例  
- 此示例演示如何使用附加和分离映射至 MDI 客户端窗口。  
+ 此示例演示如何使用附加和分离将映射到 MDI 客户端窗口。  
   
- [!code-cpp[NVC_MFCWindowing #&67;](../../mfc/reference/codesnippet/cpp/cwnd-class_2.h)]  
+ [!code-cpp[NVC_MFCWindowing # 67](../../mfc/reference/codesnippet/cpp/cwnd-class_2.h)]  
   
- [!code-cpp[NVC_MFCWindowing #&68;](../../mfc/reference/codesnippet/cpp/cwnd-class_3.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 68](../../mfc/reference/codesnippet/cpp/cwnd-class_3.cpp)]  
   
- [!code-cpp[NVC_MFCWindowing #&69;](../../mfc/reference/codesnippet/cpp/cwnd-class_4.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 69](../../mfc/reference/codesnippet/cpp/cwnd-class_4.cpp)]  
   
 ##  <a name="beginmodalstate"></a>CWnd::BeginModalState  
  调用此成员函数以使框架窗口具有模式。  
@@ -1129,8 +1129,8 @@ BOOL Attach(HWND hWndNew);
 virtual void BeginModalState();
 ```  
   
-##  <a name="beginpaint"></a>CWnd::BeginPaint  
- 准备`CWnd`对于绘画和填充`PAINTSTRUCT`具有绘制有关的信息的数据结构。  
+##  <a name="beginpaint"></a>Cwnd:: Beginpaint  
+ 准备`CWnd`绘制和填充`PAINTSTRUCT`绘制有关的信息的数据结构。  
   
 ```  
 CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
@@ -1138,23 +1138,23 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
   
 ### <a name="parameters"></a>参数  
  `lpPaint`  
- 指向[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构，它是接收绘制的信息。  
+ 指向[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)是否要接收绘制信息的结构。  
   
 ### <a name="return-value"></a>返回值  
- 标识的设备上下文`CWnd`。 指针可能是暂时并不应超出的范围存储[EndPaint](#endpaint)。  
+ 标识的设备上下文`CWnd`。 指针可能是暂时的不应超出范围的存储[EndPaint](#endpaint)。  
   
 ### <a name="remarks"></a>备注  
- 画图结构包含的 RECT 数据结构具有完全包含的更新区域和一个标志，指定背景是否被清除过的最小矩形。  
+ 绘制结构包含一个具有完全包含的更新区域，用于指定是否清除后台的标志的最小矩形的 RECT 数据结构。  
   
- 通过设置更新区域[Invalidate](#invalidate)， [InvalidateRect](#invalidaterect)，或[InvalidateRgn](#invalidatergn)成员函数和系统后它将调整大小、 移动、 创建、 滚动时，或执行任何其他操作所影响的工作区。 如果更新区域标记为擦除，`BeginPaint`发送[WM_ONERASEBKGND](#onerasebkgnd)消息。  
+ 通过设置更新区域[Invalidate](#invalidate)， [InvalidateRect](#invalidaterect)，或[InvalidateRgn](#invalidatergn)成员函数和由系统后它可以调整大小、 移动、 创建、 滚动时，或执行影响客户端区域的任何其他操作。 如果更新区域标记为擦除，`BeginPaint`发送[WM_ONERASEBKGND](#onerasebkgnd)消息。  
   
- 不要调用`BeginPaint`成员函数除了以响应[WM_PAINT](#onpaint)消息。 每次调用`BeginPaint`成员函数必须具有与匹配调用[EndPaint](#endpaint)成员函数。 如果要在其中进行绘画的区域中插入符号是`BeginPaint`成员函数将自动隐藏插入符号以防止它被清除。  
+ 不要调用`BeginPaint`除外的成员函数以响应[WM_PAINT](#onpaint)消息。 每次调用`BeginPaint`成员函数必须具有匹配调用[EndPaint](#endpaint)成员函数。 如果脱字号位于要绘制的区域`BeginPaint`成员函数自动隐藏插入符号以防止它被擦除。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&70;](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 70](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]  
   
 ##  <a name="binddefaultproperty"></a>CWnd::BindDefaultProperty  
- 将调用对象的默认简单绑定的属性 （如编辑控件），作为类型库中的标记绑定到基础数据源控件的数据源、 用户名、 密码和 SQL 属性定义的游标。  
+ 将调用对象的默认简单绑定的属性 （如编辑控件），作为类型库中的标记绑定到数据源控件的数据源、 用户名、 密码和 SQL 属性定义的基础光标。  
   
 ```  
 void BindDefaultProperty(
@@ -1166,29 +1166,29 @@ void BindDefaultProperty(
   
 ### <a name="parameters"></a>参数  
  `dwDispID`  
- 指定要绑定到数据源控件的数据绑定控件的属性的 DISPID。  
+ 指定要绑定到数据源控件的数据绑定控件上的属性的 DISPID。  
   
  `vtProp`  
- 指定要绑定的属性的类型 — 例如， `VT_BSTR`， **VT_VARIANT**，依次类推。  
+ 指定要绑定的属性的类型-例如， `VT_BSTR`， **VT_VARIANT**，依次类推。  
   
  `szFieldName`  
  该属性将绑定到该数据源控件提供的游标中指定的列的名称。  
   
  `pDSCWnd`  
- 指向窗口中的属性将绑定到该主机数据源控件。 调用`GetDlgItem`与要检索此指针的 DC 宿主窗口的资源 ID。  
+ 指向窗口的属性将绑定到该主机数据源控件。 调用`GetDlgItem`与要检索此指针 DC 的主机窗口的资源 ID。  
   
 ### <a name="remarks"></a>备注  
- `CWnd`对象对其调用此函数必须是数据绑定控件。  
+ `CWnd`对其调用此函数的对象必须是数据绑定控件。  
   
 ### <a name="example"></a>示例  
- `BindDefaultProperty`可以在以下上下文中使用︰  
+ `BindDefaultProperty`可能在以下上下文中使用︰  
   
- [!code-cpp[NVC_MFC_AxDataBinding #&1;](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
-[!code-cpp[NVC_MFC_AxDataBinding #&2;](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]  
-[!code-cpp[NVC_MFC_AxDataBinding #&3;](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
+ [!code-cpp[NVC_MFC_AxDataBinding # 1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
+[!code-cpp[NVC_MFC_AxDataBinding # 2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]  
+[!code-cpp[NVC_MFC_AxDataBinding # 3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
 ##  <a name="bindproperty"></a>CWnd::BindProperty  
- 将一个游标绑定属性上将数据绑定控件 （如网格控件） 绑定到数据源控件和 MFC 绑定管理器中注册该关系。  
+ 将数据绑定控件 （如网格控件） 上的光标绑定属性绑定到数据源控件，并向 MFC 绑定管理器注册该关系。  
   
 ```  
 void BindProperty(
@@ -1198,20 +1198,20 @@ void BindProperty(
   
 ### <a name="parameters"></a>参数  
  *dwDispId*  
- 指定要绑定到数据源控件的数据绑定控件的属性的 DISPID。  
+ 指定要绑定到数据源控件的数据绑定控件上的属性的 DISPID。  
   
  `pWndDSC`  
- 指向窗口中的属性将绑定到该主机数据源控件。 调用`GetDlgItem`与要检索此指针的 DC 宿主窗口的资源 ID。  
+ 指向窗口的属性将绑定到该主机数据源控件。 调用`GetDlgItem`与要检索此指针 DC 的主机窗口的资源 ID。  
   
 ### <a name="remarks"></a>备注  
- `CWnd`对象对其调用此函数必须是数据绑定控件。  
+ `CWnd`对其调用此函数的对象必须是数据绑定控件。  
   
 ### <a name="example"></a>示例  
- `BindProperty`可以在以下上下文中使用︰  
+ `BindProperty`可能在以下上下文中使用︰  
   
- [!code-cpp[NVC_MFC_AxDataBinding #&1;](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
-[!code-cpp[NVC_MFC_AxDataBinding #&4;](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]  
-[!code-cpp[NVC_MFC_AxDataBinding #&3;](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
+ [!code-cpp[NVC_MFC_AxDataBinding # 1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
+[!code-cpp[NVC_MFC_AxDataBinding # 4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]  
+[!code-cpp[NVC_MFC_AxDataBinding # 3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
 ##  <a name="bringwindowtotop"></a>CWnd::BringWindowToTop  
  将 `CWnd` 置于一堆重叠窗口的顶部。  
@@ -1223,10 +1223,10 @@ void BringWindowToTop();
 ### <a name="remarks"></a>备注  
  此外，`BringWindowToTop` 将激活弹出的、顶层和 MDI 子窗口。 `BringWindowToTop` 成员函数应用于显露被任何重叠窗口部分或完全遮盖的任意窗口。  
   
- 此函数只调用 Win32 [BringWindowToTop](http://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx)函数。 调用[SetWindowPos](#setwindowpos)函数可更改的 Z 顺序的窗口的位置。 `BringWindowToTop` 函数不更改窗口样式，即可使其成为顶层窗口。 有关详细信息，请参阅[HWND_TOP 与 HWND_TOPMOST 之间的区别是什么](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)  
+ 此函数只调用 Win32 [BringWindowToTop](http://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx)函数。 调用[SetWindowPos](#setwindowpos)函数更改中的 Z 顺序的窗口的位置。 `BringWindowToTop` 函数不更改窗口样式，即可使其成为顶层窗口。 有关详细信息，请参阅[HWND_TOP 与 HWND_TOPMOST 之间的区别是什么](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&71;](../../mfc/reference/codesnippet/cpp/cwnd-class_10.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 71](../../mfc/reference/codesnippet/cpp/cwnd-class_10.cpp)]  
   
 ##  <a name="calcwindowrect"></a>CWnd::CalcWindowRect  
  计算窗口矩形可以包含指定的客户端矩形。  
@@ -1239,21 +1239,21 @@ virtual void CalcWindowRect(
   
 ### <a name="parameters"></a>参数  
  [in, out] `lpClientRect`  
- 向矩形结构的指针。 在输入时，此结构包含客户端矩形。 该方法运行完毕后，此结构包含可以包含指定的客户端矩形窗口矩形。  
+ 指向矩形结构的指针。 在输入时，此结构包含的客户端矩形。 该方法运行完毕后，此结构还包含可以包含指定的客户端矩形窗口矩形。  
   
  [in] `nAdjustType`  
  使用`CWnd::adjustBorder`来计算窗口坐标，而无需`WS_EX_CLIENTEDGE`样式; 否则，请使用`CWnd::adjustOutside`。  
   
 ### <a name="remarks"></a>备注  
- 计算的窗口矩形的大小不包括菜单栏的空间。  
+ 计算的窗口矩形的大小不包括表示菜单栏的空间。  
   
  有关更多的使用情况限制，请参阅[AdjustWindowRectEx](http://msdn.microsoft.com/library/windows/desktop/ms632667)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&72;](../../mfc/reference/codesnippet/cpp/cwnd-class_11.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 72](../../mfc/reference/codesnippet/cpp/cwnd-class_11.cpp)]  
   
 ##  <a name="canceltooltips"></a>CWnd::CancelToolTips  
- 调用该成员函数以从屏幕中移除的工具提示，如果当前显示的工具提示。  
+ 调用此成员函数可从屏幕中删除的工具提示，如果当前显示工具提示。  
   
 ```  
 static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
@@ -1261,15 +1261,15 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
   
 ### <a name="parameters"></a>参数  
  *bKeys*  
- **TRUE**取消工具提示，当按下某个键并将其设置状态栏文本的默认值; 否则为**FALSE**。  
+ **TRUE**取消工具提示时按下将密钥并将其设置状态栏文本的默认值; 否则为**FALSE**。  
   
 ### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  使用此成员函数都由您的代码的工具提示上无效。 它只会影响由管理的工具提示控件[CWnd::EnableToolTips](#enabletooltips)。  
+>  使用此成员函数具有由你的代码的工具提示没有影响。 它只影响由工具提示控件[CWnd::EnableToolTips](#enabletooltips)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&73;](../../mfc/reference/codesnippet/cpp/cwnd-class_12.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 73](../../mfc/reference/codesnippet/cpp/cwnd-class_12.cpp)]  
   
 ##  <a name="centerwindow"></a>CWnd::CenterWindow  
  使窗口相对于其父级居中。  
@@ -1280,16 +1280,16 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
   
 ### <a name="parameters"></a>参数  
  `pAlternateOwner`  
- 指向备用的窗口，它将是相对于其居中 （除父窗口之外）。  
+ 指向备用的窗口，它将是相对于其居中 （而非父窗口）。  
   
 ### <a name="remarks"></a>备注  
- 通常从调用[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)中心对话框相对于主窗口的应用程序。 默认情况下，该函数中居中放置相对于其父窗口和相对于其所有者的弹出窗口的子窗口。 如果不属于弹出窗口中，它是相对于屏幕中居中。 若要居中窗口相对于一个特定的窗口，它不是所有者或父站点，`pAlternateOwner`参数可能会设置为有效的窗口。 若要强制相对于屏幕中居中，请将传递返回值[CWnd::GetDesktopWindow](#getdesktopwindow)作为`pAlternateOwner`。  
+ 通常从调用[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) center 对话框相对于主窗口的应用程序。 默认情况下，该函数中心相对于其父窗口和相对于其所有者的弹出窗口的子窗口。 如果不拥有弹出窗口，它位于相对于屏幕。 到中心再窗口相对于特定的窗口，这不是所有者或父，`pAlternateOwner`参数可能设置为有效的窗口。 若要强制使相对于屏幕内居中，通过返回的值[CWnd::GetDesktopWindow](#getdesktopwindow)作为`pAlternateOwner`。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&74;](../../mfc/reference/codesnippet/cpp/cwnd-class_13.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 74](../../mfc/reference/codesnippet/cpp/cwnd-class_13.cpp)]  
   
 ##  <a name="changeclipboardchain"></a>CWnd::ChangeClipboardChain  
- 删除`CWnd`窗口中指定的剪贴板查看器并简化了一系列从`hWndNext`后代的`CWnd`链中的祖先。  
+ 删除`CWnd`从剪贴板查看器和使窗口指定通过链`hWndNext`的后代`CWnd`链中的上级。  
   
 ```  
 BOOL ChangeClipboardChain(HWND hWndNext);
@@ -1297,13 +1297,13 @@ BOOL ChangeClipboardChain(HWND hWndNext);
   
 ### <a name="parameters"></a>参数  
  `hWndNext`  
- 将下面的窗口`CWnd`剪贴板查看程序链中。  
+ 标识遵循窗口`CWnd`剪贴板查看器链中。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
 ##  <a name="checkdlgbutton"></a>CWnd::CheckDlgButton  
- 选择 （放置指向的旁边的复选标记） 或清除 （删除复选标记从） 按钮，或者它具有三个状态的按钮的状态更改。  
+ 选择 （放置的旁边的复选标记） 或清除 （复选标记从删除） 按钮，或它具有三个状态的按钮的状态更改。  
   
 ```  
 void CheckDlgButton(
@@ -1316,16 +1316,16 @@ void CheckDlgButton(
  指定要修改的按钮。  
   
  `nCheck`  
- 指定要执行的操作。 如果`nCheck`不为零，`CheckDlgButton`成员函数将置于按钮旁边的复选标记; 如果为 0，则删除复选标记。 对于三状态按钮，如果`nCheck`为 2，按钮状态却不确定。  
+ 指定要执行的操作。 如果`nCheck`不为零，`CheckDlgButton`成员函数将一个按钮旁边的复选标记; 如果为 0，删除复选标记。 对于三种状态的按钮，如果`nCheck`为 2，按钮状态是不确定的。  
   
 ### <a name="remarks"></a>备注  
- `CheckDlgButton`函数发送[BM_SETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775989)指定按钮的消息。  
+ `CheckDlgButton`函数发送[BM_SETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775989)到指定的按钮的消息。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&75;](../../mfc/reference/codesnippet/cpp/cwnd-class_14.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 75](../../mfc/reference/codesnippet/cpp/cwnd-class_14.cpp)]  
   
 ##  <a name="checkradiobutton"></a>CWnd::CheckRadioButton  
- 选择 （添加到一个复选标记） 组中给定的单选按钮和清除 （删除复选标记） 所有其他单选按钮组中的。  
+ 选择 （添加到一个复选标记） 中一组给定的单选按钮和清除 （复选标记从删除） 所有其他单选按钮组中的。  
   
 ```  
 void CheckRadioButton(
@@ -1345,13 +1345,13 @@ void CheckRadioButton(
  指定要检查的单选按钮的整数标识符。  
   
 ### <a name="remarks"></a>备注  
- `CheckRadioButton`函数发送[BM_SETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775989)至指定的单选按钮的消息。  
+ `CheckRadioButton`函数发送[BM_SETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775989)与指定的单选按钮的消息。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&76;](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 76](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]  
   
 ##  <a name="childwindowfrompoint"></a>CWnd::ChildWindowFromPoint  
- 确定将哪个，如果任何属于的子窗口`CWnd`包含指定的点。  
+ 确定，如果任何属于的子窗口`CWnd`包含指定的点。  
   
 ```  
 CWnd* ChildWindowFromPoint(POINT point) const;  
@@ -1370,6839 +1370,7017 @@ CWnd* ChildWindowFromPoint(
   
 |值|含义|  
 |-----------|-------------|  
-|**CWP_ALL**|不要跳过任何子窗口|  
-|**CWP_SKIPINVISIBLE**|跳过不可见的子窗口|  
+|**CWP_ALL**|请勿跳过任何子窗口|  
+|**CWP_SKIPINVISIBLE**|跳过不可见子窗口|  
 |**CWP_SKIPDISABLED**|跳过禁用的子窗口|  
-|**CWP_SKIPTRANSPARENT**|跳过透明的子窗口|  
+|**CWP_SKIPTRANSPARENT**|跳过透明子窗口|  
   
 ### <a name="return-value"></a>返回值  
- 标识包含点的子窗口。 它是**NULL**如果给定的点存在于客户端区之外。 如果点是客户端区域内，但是不包含任何子窗口，在`CWnd`返回。  
+ 标识包含点的子窗口。 它是**NULL**如果给定的点存在于客户端区之外。 如果点是客户端区域内，但不是包含任何子窗口，在`CWnd`返回。  
   
- 此成员函数将返回包含指定的点的隐藏或禁用子窗口。  
+ 此成员函数将返回一个包含指定的点的隐藏或禁用子窗口。  
   
- 多个窗口可能包含给定的点。 但是，此函数仅返回`CWnd`* 遇到包含点的第一个窗口。  
+ 多个窗口可能包含给定的点。 但是，此函数仅返回`CWnd`* 的遇到第一个窗口，其中包含的点。  
   
- `CWnd`* 返回可能是暂时的不应存储以供将来使用。  
+ `CWnd`* 返回可能是暂时的不应存储起来供以后使用。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&77;](../../mfc/reference/codesnippet/cpp/cwnd-class_16.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 77](../../mfc/reference/codesnippet/cpp/cwnd-class_16.cpp)]  
   
 ##  <a name="clienttoscreen"></a>CWnd::ClientToScreen  
  将显示中的给定点或矩形的客户端坐标转换为屏幕坐标。  
   
 ```  
-void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;  ```  
+void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;  
+```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpPoint`  
- Points to a [POINT structure](../../mfc/reference/point-structure1.md) or `CPoint` object that contains the client coordinates to be converted.  
+ 指向[点结构](../../mfc/reference/point-structure1.md)或`CPoint`对象，其中包含客户端坐标转换。  
   
  `lpRect`  
- Points to a [RECT structure](../../mfc/reference/rect-structure1.md) or `CRect` object that contains the client coordinates to be converted.  
+ 指向[RECT 结构](../../mfc/reference/rect-structure1.md)或`CRect`对象，其中包含客户端坐标转换。  
   
-### Remarks  
- The `ClientToScreen` member function uses the client coordinates in the **POINT** or `RECT` structure or the `CPoint` or `CRect` object pointed to by `lpPoint` or `lpRect` to compute new screen coordinates; it then replaces the coordinates in the structure with the new coordinates. The new screen coordinates are relative to the upper-left corner of the system display.  
+### <a name="remarks"></a>备注  
+ `ClientToScreen`成员函数使用中的客户端坐标**点**或`RECT`结构或`CPoint`或`CRect`指向对象`lpPoint`或`lpRect`来计算新的屏幕坐标; 然后将替换结构中的坐标，为新的坐标。 新的屏幕坐标位于相对于系统显示屏左上角。  
   
- The `ClientToScreen` member function assumes that the given point or rectangle is in client coordinates.  
+ `ClientToScreen`成员函数假定给的定点或矩形是在客户端坐标。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#78](../../mfc/reference/codesnippet/cpp/cwnd-class_17.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 78](../../mfc/reference/codesnippet/cpp/cwnd-class_17.cpp)]  
   
-##  <a name="closewindow"></a>  CWnd::CloseWindow  
- Minimizes the window.  
+##  <a name="closewindow"></a>CWnd::CloseWindow  
+ 最小化窗口。  
   
 ```  
 void CloseWindow();
 ```  
   
-### Remarks  
- This member function emulates the functionality of the function [CloseWindow](http://msdn.microsoft.com/library/windows/desktop/ms632678), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[CloseWindow](http://msdn.microsoft.com/library/windows/desktop/ms632678)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="continuemodal"></a>  CWnd::ContinueModal  
- This member function is called by [RunModalLoop](#runmodalloop) to determine when the modal state should be exited.  
-  
-```  
-虚拟 BOOL ContinueModal();
-```  
-  
-### Return Value  
- Nonzero if modal loop is to be continued; 0 when [EndModalLoop](#endmodalloop) is called.  
-  
-### Remarks  
- By default, it returns non-zero until `EndModalLoop` is called.  
-  
-##  <a name="create"></a>  CWnd::Create  
- Creates the specified child window and attaches it to the [CWnd](../../mfc/reference/cwnd-class.md) object.  
+##  <a name="continuemodal"></a>CWnd::ContinueModal  
+ 此成员函数调用[RunModalLoop](#runmodalloop)来确定何时应退出模式状态。  
   
 ```  
-虚拟 BOOL 创建 (LPCTSTR lpszClassName，  
-    LPCTSTR lpszWindowName  
-    DWORD dwStyle  
-    Const RECT & rect，  
-    CWnd* pParentWnd，UINT nID CCreateContext* pContext = NULL);
+virtual BOOL ContinueModal();
 ```  
   
-### Parameters  
+### <a name="return-value"></a>返回值  
+ 如果模式循环是能继续; 则为非 00 在[EndModalLoop](#endmodalloop)调用。  
+  
+### <a name="remarks"></a>备注  
+ 默认情况下，它将返回非零直到`EndModalLoop`调用。  
+  
+##  <a name="create"></a>Cwnd:: Create  
+ 创建指定的子窗口，并将其附加到[CWnd](../../mfc/reference/cwnd-class.md)对象。  
+  
+```  
+virtual BOOL Create(
+    LPCTSTR lpszClassName,  
+    LPCTSTR lpszWindowName,  
+    DWORD dwStyle,  
+    Const RECT& rect,  
+    CWnd* pParentWnd,  
+    UINT nID,  
+    CCreateContext* pContext = NULL);
+```  
+  
+### <a name="parameters"></a>参数  
  [in] `lpszClassName`  
- Pointer to a null-terminated string that contains the name of a registered system window class; or the name of a predefined system window class.  
+ 指向以 null 结尾的字符串，其中包含已注册的系统窗口类，则名称或预定义的系统窗口类的名称。  
   
  [in] `lpszWindowName`  
- Pointer to a null-terminated string that contains the window display name; otherwise `NULL` for no window display name.  
+ 指向以 null 结尾的字符串，包含该窗口显示名称;否则为`NULL`没有窗口显示名称。  
   
  [in] `dwStyle`  
- Bitwise combination (OR) of [window styles](../../mfc/reference/window-styles.md). The `WS_POPUP` option is not a valid style.  
+ 按位组合 (OR)[窗口样式](../../mfc/reference/window-styles.md)。 `WS_POPUP`选项不是有效的样式。  
   
  [in] `rect`  
- The size and location of the window relative to the top-left corner of the parent window.  
+ 大小和窗口相对于父窗口的左上角的位置。  
   
  [in] `pParentWnd`  
- Pointer to the parent window.  
+ 向父窗口的指针。  
   
  [in] `nID`  
- ID of the window.  
+ 窗口的 ID。  
   
  [in] `pContext`  
- Pointer to a [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure that is used to customize the document-view architecture for the application.  
+ 指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)用于自定义应用程序的文档视图体系结构的结构。  
   
-### Return Value  
- `TRUE` if the method was successful; otherwise `FALSE`.  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果此方法成功，则否则为`FALSE`。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow` now assigns the hMenu member of its `CREATESTRUCT` parameter to the `this` pointer if the menu is `NULL` and the style contains `WS_CHILD`. For proper functionality, ensure that your dialog control has an ID that is not `NULL`.  
+> `CWnd::PreCreateWindow`现在将分配的 hMenu 成员其`CREATESTRUCT`参数`this`指针如果菜单是`NULL`和样式包含`WS_CHILD`。 是否能正常运行，请确保对话框控件具有 ID 不是`NULL`。  
 >   
->  This change fixes a crash in managed/native interop scenarios. A `TRACE` statement in `CWnd::Create` alerts the developer of the problem.  
+>  在托管/本机互操作方案中，此项更改修复了崩溃。 A`TRACE`中的语句`CWnd::Create`警报问题的开发人员。  
   
- Use the [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) function to register window classes. User defined window classes are available in the module where they are registered.  
+ 使用[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)函数注册窗口类。 用户定义的类模块中提供了它们已注册的窗口。  
   
- The [CWnd::OnCreate](#oncreate) method is called before the `Create` method returns, and before the window becomes visible.  
+ [CWnd::OnCreate](#oncreate)方法之前调用`Create`方法返回时，和之前窗口变得可见。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#79](../../mfc/reference/codesnippet/cpp/cwnd-class_18.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 79](../../mfc/reference/codesnippet/cpp/cwnd-class_18.cpp)]  
   
-##  <a name="createaccessibleproxy"></a>  CWnd::CreateAccessibleProxy  
- Creates an Active Accessibility proxy for the specified object.  
+##  <a name="createaccessibleproxy"></a>CWnd::CreateAccessibleProxy  
+ 为指定对象创建 Active Accessibility 代理服务器。  
   
 ```  
-虚拟 HRESULT CreateAccessibleProxy (WPARAM wParam，  
-    LPARAM lParam  
+virtual HRESULT CreateAccessibleProxy(
+    WPARAM wParam,  
+    LPARAM lParam,  
     LRESULT* pResult);
 ```  
-  
-### Parameters  
+   
+### <a name="parameters"></a>参数  
  `wParam`  
- Identifies the object accessed by the Active Accessibility proxy. Can be one of the following values  
+ 标识 Active Accessibility 代理服务器访问的对象。 可以是以下值之一  
   
-|Value|Meaning|  
+|值|含义|  
 |-----------|-------------|  
-|**OBJID_CLIENT**|Refers to the window's client area.|  
+|**OBJID_CLIENT**|引用的窗口的客户端区域。|  
   
  `lParam`  
- Provides additional message-dependent information.  
+ 提供其他依赖于消息的信息。  
   
  `pResult`  
- A pointer to an **LRESULT** that stores the result code.  
+ 指向的指针**LRESULT**存储的结果代码。  
   
-### Remarks  
- Creates an Active Accessibility proxy for the specified object.  
+### <a name="remarks"></a>备注  
+ 为指定对象创建 Active Accessibility 代理服务器。  
   
-##  <a name="createcaret"></a>  CWnd::CreateCaret  
- Creates a new shape for the system caret and claims ownership of the caret.  
+##  <a name="createcaret"></a>CWnd::CreateCaret  
+ 创建新形状为系统插入符号，并声明插入符号的所有权。  
   
 ```  
-void CreateCaret (CBitmap * pBitmap);
+void CreateCaret(CBitmap* pBitmap);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pBitmap`  
- Identifies the bitmap that defines the caret shape.  
+ 标识定义的插入符号形状的位图。  
   
-### Remarks  
- The bitmap must have previously been created by the [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap) member function, the [CreateDIBitmap](http://msdn.microsoft.com/library/windows/desktop/dd183491) Windows function, or the [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap) member function.  
+### <a name="remarks"></a>备注  
+ 位图先前必须已创建通过[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)成员函数， [CreateDIBitmap](http://msdn.microsoft.com/library/windows/desktop/dd183491) Windows 函数或[cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)成员函数。  
   
- `CreateCaret` automatically destroys the previous caret shape, if any, regardless of which window owns the caret. Once created, the caret is initially hidden. To show the caret, the [ShowCaret](#showcaret) member function must be called.  
+ `CreateCaret`如果任何，而不考虑哪些时段拥有脱字号将自动销毁以前的插入符号形状。 创建后，开始就隐藏插入符号。 若要显示插入符号， [ShowCaret](#showcaret)必须调用成员函数。  
   
- The system caret is a shared resource. `CWnd` should create a caret only when it has the input focus or is active. It should destroy the caret before it loses the input focus or becomes inactive.  
+ 系统插入符号是共享的资源。 `CWnd`仅在具有输入的焦点或处于活动状态时，应创建插入符号。 失去输入的焦点或变为非活动状态之前，它应销毁脱字号。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#80](../../mfc/reference/codesnippet/cpp/cwnd-class_19.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 80](../../mfc/reference/codesnippet/cpp/cwnd-class_19.cpp)]  
   
-##  <a name="createcontrol"></a>  CWnd::CreateControl  
- Use this member function to create an ActiveX control that will be represented in the MFC program by a `CWnd` object.  
+##  <a name="createcontrol"></a>Cwnd:: Createcontrol  
+ 此成员函数用于在由 MFC 程序中创建将表示的 ActiveX 控件`CWnd`对象。  
   
 ```  
-BOOL CreateControl (LPCTSTR pszClass，  
-    LPCTSTR pszWindowName  
-    DWORD dwStyle  
-    const RECT & rect，  
-    CWnd* pParentWnd，UINT nID CFile* pPersist = NULL，  
-    BOOL bStorage = FALSE，  
+BOOL CreateControl(
+    LPCTSTR pszClass,  
+    LPCTSTR pszWindowName,  
+    DWORD dwStyle,  
+    const RECT& rect,  
+    CWnd* pParentWnd,  
+    UINT nID,  
+    CFile* pPersist = NULL,  
+    BOOL bStorage = FALSE,  
     BSTR bstrLicKey = NULL);
 
  
-BOOL CreateControl (REFCLSID clsid，  
-    LPCTSTR pszWindowName  
-    DWORD dwStyle  
-    const RECT & rect，  
-    CWnd* pParentWnd，UINT nID CFile* pPersist = NULL，  
-    BOOL bStorage = FALSE，  
+BOOL CreateControl(
+    REFCLSID clsid,  
+    LPCTSTR pszWindowName,  
+    DWORD dwStyle,  
+    const RECT& rect,  
+    CWnd* pParentWnd,  
+    UINT nID,  
+    CFile* pPersist = NULL,  
+    BOOL bStorage = FALSE,  
     BSTR bstrLicKey = NULL);
 
  
-BOOL CreateControl (REFCLSID clsid，  
-    LPCTSTR pszWindowName  
-    DWORD dwStyle  
-    const 点*const 大小的 ppt* psize，  
-    CWnd* pParentWnd，UINT nID CFile* pPersist = NULL，  
-    BOOL bStorage = FALSE，  
+BOOL CreateControl(
+    REFCLSID clsid,  
+    LPCTSTR pszWindowName,  
+    DWORD dwStyle,  
+    const POINT* ppt,  
+    const SIZE* psize,  
+    CWnd* pParentWnd,  
+    UINT nID,  
+    CFile* pPersist = NULL,  
+    BOOL bStorage = FALSE,  
     BSTR bstrLicKey = NULL);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pszClass*  
- This string may contain the OLE "short name" (ProgID) for the class, e.g., "CIRC3.Circ3Ctrl.1". The name needs to match the same name registered by the control. Alternatively, the string may contain the string form of a **CLSID**, contained in braces, e.g., "{9DBAFCCF-592F-101B-85CE-00608CEC297B}". In either case, `CreateControl` converts the string to the corresponding class ID.  
+ 此字符串可能包含 OLE"短名称"(ProgID) 类，例如，"CIRC3。Circ3Ctrl.1"。 名称必须以匹配由控件注册的相同名称。 或者，该字符串可能包含的字符串形式**CLSID**、 包含在括号中，例如，"{9DBAFCCF-592F-101B-85CE-00608CEC297B}"。 在任一情况下，`CreateControl`将字符串转换为相应的类 id。  
   
  *pszWindowName*  
- A pointer to the text to be displayed in the control. Sets the value of the control's Caption or Text property (if any). If **NULL**, the control's Caption or Text property is not changed.  
+ 指向要在控件中显示的文本的指针。 设置控件的标题或文本属性的值 （如果有）。 如果**NULL**，不会更改控件的标题或文本属性。  
   
  `dwStyle`  
- Windows styles. The available styles are listed under Remarks.  
+ 窗口样式。 在备注列出可用的样式。  
   
  `rect`  
- Specifies the control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT structure](../../mfc/reference/rect-structure1.md).  
+ 指定控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)。  
   
  `ppt`  
- Points to a [POINT structure](../../mfc/reference/point-structure1.md) or `CPoint` object that contains the upper left corner of the control.  
+ 指向[点结构](../../mfc/reference/point-structure1.md)或`CPoint`对象，它包含控件的左上的角。  
   
  `pSize`  
- Points to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure or `CSize` object that contains the control's size  
+ 指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构或`CSize`对象，它包含控件的大小  
   
  `pParentWnd`  
- Specifies the control's parent window. It must not be **NULL**.  
+ 指定控件的父窗口。 它不能**NULL**。  
   
  `nID`  
- Specifies the control's ID.  
+ 指定控件的 id。  
   
  `pPersist`  
- A pointer to a [CFile](../../mfc/reference/cfile-class.md) containing the persistent state for the control. The default value is **NULL**, indicating that the control initializes itself without restoring its state from any persistent storage. If not **NULL**, it should be a pointer to a `CFile`-derived object which contains the control's persistent data, in the form of either a stream or a storage. This data could have been saved in a previous activation of the client. The `CFile` can contain other data, but must have its read-write pointer set to the first byte of persistent data at the time of the call to `CreateControl`.  
+ 指向的指针[CFile](../../mfc/reference/cfile-class.md)包含控件的持久状态。 默认值是**NULL**，，该值指示该控件而不是从任何持久性存储区还原其状态初始化自身。 如果不是**NULL**，它应为一个指向`CFile`-派生对象，它包含控件的持久性数据，流或存储的形式。 无法在客户端以前激活保存此数据。 `CFile`可以包含其他数据，但必须在调用的时间设置为永久数据的第一个字节其读写指针`CreateControl`。  
   
  `bStorage`  
- Indicates whether the data in `pPersist` should be interpreted as IStorage or IStream data. If the data in `pPersist` is a storage, `bStorage` should be **TRUE**. If the data in `pPersist` is a stream, `bStorage` should be **FALSE**. The default value is **FALSE**.  
+ 指示是否在数据`pPersist`应被视为 IStorage 或 IStream 数据。 如果中的数据`pPersist`是一种存储，`bStorage`应**TRUE**。 如果中的数据`pPersist`是流、`bStorage`应**FALSE**。 默认值是**FALSE**。  
   
  *bstrLicKe*y  
- Optional license key data. This data is needed only for creating controls that require a run-time license key. If the control supports licensing, you must provide a license key for the creation of the control to succeed. The default value is **NULL**.  
+ 可选的许可证密钥数据。 仅用于创建控件需要运行时许可证密钥所需要的此数据。 如果该控件支持授权，则必须提供要成功的控件创建的许可密钥。 默认值是**NULL**。  
   
  `clsid`  
- The unique class ID of the control.  
+ 控件的唯一类 ID。  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果成功，则不为 0；否则为 0。  
   
-### Remarks  
- `CreateControl` is a direct analog of the [CWnd::Create](#create) function, which creates the window for a `CWnd`. `CreateControl` creates an ActiveX control instead of an ordinary window.  
+### <a name="remarks"></a>备注  
+ `CreateControl`是的直接模拟[cwnd:: Create](#create)函数，创建的窗口`CWnd`。 `CreateControl`创建 ActiveX 控件而不是普通的窗口。  
   
- Only a subset of the Windows `dwStyle` flags are supported for `CreateControl`:  
+ Windows 的一个子集`dwStyle`支持标志`CreateControl`:  
   
-- **WS_VISIBLE** Creates a window that is initially visible. Required if you want the control to be visible immediately, like ordinary windows.  
+- **WS_VISIBLE**创建初始可见的窗口。 如果您希望控件，使其立即，像普通的窗口可见，则必须填写。  
   
-- **WS_DISABLED** Creates a window that is initially disabled. A disabled window cannot receive input from the user. Can be set if the control has an Enabled property.  
+- **WS_DISABLED**创建最初处于禁用状态的窗口。 已禁用的窗口无法接收来自用户输入。 如果控件具有 Enabled 属性可以设置。  
   
-- `WS_BORDER` Creates a window with a thin-line border. Can be set if control has a BorderStyle property.  
+- `WS_BORDER`创建一个窗口，有精简行的边框。 如果控件具有 BorderStyle 属性可以设置。  
   
-- **WS_GROUP** Specifies the first control of a group of controls. The user can change the keyboard focus from one control in the group to the next by using the direction keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the group and starts the next group.  
+- **WS_GROUP**指定一组控件的第一个控件。 用户可以通过使用箭头键键盘焦点从一个控件组中更改为下一步。 使用定义的所有控件**WS_GROUP**样式后的第一个控件属于同一个组。 使用下一个控件**WS_GROUP**样式组结束和开始下一个组。  
   
-- **WS_TABSTOP** Specifies a control that can receive the keyboard focus when the user presses the TAB key. Pressing the TAB key changes the keyboard focus to the next control of the **WS_TABSTOP** style.  
+- **WS_TABSTOP**指定在用户按 TAB 键时，可以接收键盘焦点的控件。 按 TAB 键将键盘焦点更改到下一个控件的**WS_TABSTOP**样式。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#81](../../mfc/reference/codesnippet/cpp/cwnd-class_20.h)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 81](../../mfc/reference/codesnippet/cpp/cwnd-class_20.h)]  
   
-##  <a name="createex"></a>  CWnd::CreateEx  
- Creates the specified window and attaches it to the `CWnd` object.  
+##  <a name="createex"></a>CWnd::CreateEx  
+ 创建指定的窗口，并将其附加到`CWnd`对象。  
   
 ```  
-虚拟 BOOL CreateEx (DWORD dwExStyle，  
-    LPCTSTR lpszClassName  
-    LPCTSTR lpszWindowName  
-    DWORD dwStyle  
-    int x，  
-    int y  
-    int nWidth  
-    int nHeight  
-    HWND hWndParent  
-    HMENU nIDorHMenu  
+virtual BOOL CreateEx(
+    DWORD dwExStyle,  
+    LPCTSTR lpszClassName,  
+    LPCTSTR lpszWindowName,  
+    DWORD dwStyle,  
+    int x,  
+    int y,  
+    int nWidth,  
+    int nHeight,  
+    HWND hWndParent,  
+    HMENU nIDorHMenu,  
     LPVOID lpParam = NULL);
 
  
-虚拟 BOOL CreateEx (DWORD dwExStyle，  
-    LPCTSTR lpszClassName  
-    LPCTSTR lpszWindowName  
-    DWORD dwStyle  
-    const RECT & rect，  
-    CWnd * pParentWnd，  
-    UINT nID  
+virtual BOOL CreateEx(
+    DWORD dwExStyle,  
+    LPCTSTR lpszClassName,  
+    LPCTSTR lpszWindowName,  
+    DWORD dwStyle,  
+    const RECT& rect,  
+    CWnd* pParentWnd,  
+    UINT nID,  
     LPVOID lpParam = NULL);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `dwExStyle`  
- Bitwise combination (OR) of [extended window styles](../../mfc/reference/extended-window-styles.md); otherwise `NULL` for the default extended window style.  
+ 按位组合 (OR)[扩展窗口样式](../../mfc/reference/extended-window-styles.md); 否则为`NULL`默认扩展窗口样式。  
   
  `lpszClassName`  
- Pointer to a null-terminated string that contains the name of a registered system window class; or the name of a predefined system window class.  
+ 指向以 null 结尾的字符串，其中包含已注册的系统窗口类，则名称或预定义的系统窗口类的名称。  
   
  `lpszWindowName`  
- Pointer to a null-terminated string that contains the window display name; otherwise `NULL` for no window display name.  
+ 指向以 null 结尾的字符串，包含该窗口显示名称;否则为`NULL`没有窗口显示名称。  
   
  `dwStyle`  
- Bitwise combination (OR) of [window styles](../../mfc/reference/window-styles.md); otherwise `NULL` for the default window style.  
+ 按位组合 (OR)[窗口样式](../../mfc/reference/window-styles.md); 否则为`NULL`默认窗口样式。  
   
  `x`  
- The initial horizontal distance of the window from the left side of the screen or the parent window.  
+ 从屏幕左边的窗口或父窗口的初始水平距离。  
   
  `y`  
- The initial vertical distance of the window from the top of the screen or the parent window.  
+ 从屏幕顶部的窗口或父窗口的初始垂直距离。  
   
  `nWidth`  
- The width, in pixels, of the window.  
+ 以像素为单位的窗口的宽度。  
   
  `nHeight`  
- The height, in pixels, of the window.  
+ 以像素为单位的窗口的高度。  
   
  `hwndParent`  
- For a child window, the handle to the parent window; otherwise, the handle of the owner window if the window has an owner.  
+ 对于子窗口，父窗口中; 的句柄否则为如果窗口具有所有者的所有者窗口的句柄。  
   
  `nIDorHMenu`  
- For a child window, the window ID; otherwise, the ID of a menu for the window.  
+ 对于子窗口，窗口 ID 中;否则为该窗口的菜单的 ID。  
   
  `lpParam`  
- Pointer to user data that is passed to the [CWnd::OnCreate](#oncreate) method in the `lpCreateParams` field.  
+ 指向传递给的用户数据的[CWnd::OnCreate](#oncreate)中的方法`lpCreateParams`字段。  
   
  `rect`  
- The size and location of the window relative to the screen or the parent window.  
+ 大小和窗口相对于屏幕或父窗口的位置。  
   
  `pParentWnd`  
- For a child window, pointer to the parent window; otherwise, pointer to the owner window if the window has an owner.  
+ 对于子窗口，向父窗口中; 的指针否则为向所有者窗口如果窗口具有所有者的指针。  
   
  `nID`  
- For a child window, the window ID; otherwise, the ID of a menu for the window.  
+ 对于子窗口，窗口 ID 中;否则为该窗口的菜单的 ID。  
   
-### Return Value  
- `TRUE` if the method was successful; otherwise `FALSE`.  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果此方法成功，则否则为`FALSE`。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow` now assigns the hMenu member of its `CREATESTRUCT` parameter to the `this` pointer if the menu is `NULL` and the style contains `WS_CHILD`. For proper functionality, ensure that your dialog control has an ID that is not `NULL`.  
+> `CWnd::PreCreateWindow`现在将分配的 hMenu 成员其`CREATESTRUCT`参数`this`指针如果菜单是`NULL`和样式包含`WS_CHILD`。 是否能正常运行，请确保对话框控件具有 ID 不是`NULL`。  
 >   
->  This change fixes a crash in managed/native interop scenarios. A `TRACE` statement in `CWnd::Create` alerts the developer of the problem.  
+>  在托管/本机互操作方案中，此项更改修复了崩溃。 A`TRACE`中的语句`CWnd::Create`警报问题的开发人员。  
   
- The default extended window style is `WS_EX_LEFT`. The default window style is `WS_OVERLAPPED`.  
+ 默认值扩展窗口样式是`WS_EX_LEFT`。 默认窗口样式是`WS_OVERLAPPED`。  
   
- Use the [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) function to register window classes. User defined window classes are available in the module where they are registered.  
+ 使用[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)函数注册窗口类。 用户定义的类模块中提供了它们已注册的窗口。  
   
- Dimensions for child windows are relative to the top-left corner of the client area of the parent window. Dimensions for top-level windows are relative to the top-left corner of the screen.  
+ 子窗口的维度为相对于父窗口的工作区的左上角。 为顶级窗口的维度为相对于屏幕左上角。  
   
- The [CWnd::OnCreate](#oncreate) method is called before the `CreateEx` method returns, and before the window becomes visible.  
+ [CWnd::OnCreate](#oncreate)方法之前调用`CreateEx`方法返回时，和之前窗口变得可见。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#82](../../mfc/reference/codesnippet/cpp/cwnd-class_21.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 82](../../mfc/reference/codesnippet/cpp/cwnd-class_21.cpp)]  
   
-##  <a name="creategraycaret"></a>  CWnd::CreateGrayCaret  
- Creates a gray rectangle for the system caret and claims ownership of the caret.  
+##  <a name="creategraycaret"></a>CWnd::CreateGrayCaret  
+ 创建为系统插入符号的灰色矩形，并声明插入符号的所有权。  
   
 ```  
-void CreateGrayCaret (int nWidth，  
+void CreateGrayCaret(
+    int nWidth,  
     int nHeight);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nWidth`  
- Specifies the width of the caret (in logical units). If this parameter is 0, the width is set to the system-defined window-border width.  
+ 指定的宽度 （以逻辑单位） 插入符号。 如果此参数为 0，则会将宽度设置为系统定义的窗口边框宽度。  
   
  `nHeight`  
- Specifies the height of the caret (in logical units). If this parameter is 0, the height is set to the system-defined window-border height.  
+ 指定的高度 （以逻辑单位） 插入符号。 如果此参数为 0，高度设置为系统定义的窗口边框的高度。  
   
-### Remarks  
- The caret shape can be a line or a block.  
+### <a name="remarks"></a>备注  
+ 脱字号形状可以是一条线或块。  
   
- The parameters `nWidth` and `nHeight` specify the caret's width and height (in logical units); the exact width and height (in pixels) depend on the mapping mode.  
+ 参数`nWidth`和`nHeight`指定插入符号的宽度和高度 （以逻辑单位）; 的确切的宽度和高度 （以像素为单位） 取决于映射模式。  
   
- The system's window-border width or height can be retrieved by the [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows function with the **SM_CXBORDER** and **SM_CYBORDER** indexes. Using the window-border width or height ensures that the caret will be visible on a high-resolution display.  
+ 可以通过检索系统的窗口边框的宽度或高度[GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows 起作用**SM_CXBORDER**和**SM_CYBORDER**索引。 使用的窗口边框的宽度或高度可确保插入符号将在高分辨率的显示器上可见。  
   
- The `CreateGrayCaret` member function automatically destroys the previous caret shape, if any, regardless of which window owns the caret. Once created, the caret is initially hidden. To show the caret, the [ShowCaret](#showcaret) member function must be called.  
+ `CreateGrayCaret`成员函数自动销毁以前的插入符号形状，如果有解决问题，而不考虑哪个窗口拥有脱字号。 创建后，开始就隐藏插入符号。 若要显示插入符号， [ShowCaret](#showcaret)必须调用成员函数。  
   
- The system caret is a shared resource. `CWnd` should create a caret only when it has the input focus or is active. It should destroy the caret before it loses the input focus or becomes inactive.  
+ 系统插入符号是共享的资源。 `CWnd`仅在具有输入的焦点或处于活动状态时，应创建插入符号。 失去输入的焦点或变为非活动状态之前，它应销毁脱字号。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#83](../../mfc/reference/codesnippet/cpp/cwnd-class_22.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 83](../../mfc/reference/codesnippet/cpp/cwnd-class_22.cpp)]  
   
-##  <a name="createsolidcaret"></a>  CWnd::CreateSolidCaret  
- Creates a solid rectangle for the system caret and claims ownership of the caret.  
+##  <a name="createsolidcaret"></a>CWnd::CreateSolidCaret  
+ 创建一个实心矩形为系统插入符号，并声明插入符号的所有权。  
   
 ```  
-void CreateSolidCaret (int nWidth，  
+void CreateSolidCaret(
+    int nWidth,  
     int nHeight);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nWidth`  
- Specifies the width of the caret (in logical units). If this parameter is 0, the width is set to the system-defined window-border width.  
+ 指定的宽度 （以逻辑单位） 插入符号。 如果此参数为 0，则会将宽度设置为系统定义的窗口边框宽度。  
   
  `nHeight`  
- Specifies the height of the caret (in logical units). If this parameter is 0, the height is set to the system-defined window-border height.  
+ 指定的高度 （以逻辑单位） 插入符号。 如果此参数为 0，高度设置为系统定义的窗口边框的高度。  
   
-### Remarks  
- The caret shape can be a line or block.  
+### <a name="remarks"></a>备注  
+ 脱字号形状可以是行或块。  
   
- The parameters `nWidth` and `nHeight` specify the caret's width and height (in logical units); the exact width and height (in pixels) depend on the mapping mode.  
+ 参数`nWidth`和`nHeight`指定插入符号的宽度和高度 （以逻辑单位）; 的确切的宽度和高度 （以像素为单位） 取决于映射模式。  
   
- The system's window-border width or height can be retrieved by the [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows function with the **SM_CXBORDER** and **SM_CYBORDER** indexes. Using the window-border width or height ensures that the caret will be visible on a high-resolution display.  
+ 可以通过检索系统的窗口边框的宽度或高度[GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows 起作用**SM_CXBORDER**和**SM_CYBORDER**索引。 使用的窗口边框的宽度或高度可确保插入符号将在高分辨率的显示器上可见。  
   
- The `CreateSolidCaret` member function automatically destroys the previous caret shape, if any, regardless of which window owns the caret. Once created, the caret is initially hidden. To show the caret, the [ShowCaret](#showcaret) member function must be called.  
+ `CreateSolidCaret`成员函数自动销毁以前的插入符号形状，如果有解决问题，而不考虑哪个窗口拥有脱字号。 创建后，开始就隐藏插入符号。 若要显示插入符号， [ShowCaret](#showcaret)必须调用成员函数。  
   
- The system caret is a shared resource. `CWnd` should create a caret only when it has the input focus or is active. It should destroy the caret before it loses the input focus or becomes inactive.  
+ 系统插入符号是共享的资源。 `CWnd`仅在具有输入的焦点或处于活动状态时，应创建插入符号。 失去输入的焦点或变为非活动状态之前，它应销毁脱字号。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#84](../../mfc/reference/codesnippet/cpp/cwnd-class_23.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 84](../../mfc/reference/codesnippet/cpp/cwnd-class_23.cpp)]  
   
-##  <a name="cwnd"></a>  CWnd::CWnd  
- Constructs a `CWnd` object.  
+##  <a name="cwnd"></a>CWnd::CWnd  
+ 构造 `CWnd` 对象。  
   
 ```  
 CWnd();
 ```  
   
-### Remarks  
- The Windows window is not created and attached until the [CreateEx](#createex) or [Create](#create) member function is called.  
+### <a name="remarks"></a>备注  
+ Windows 窗口不创建并附加直到[CreateEx](#createex)或[创建](#create)调用成员函数。  
   
-##  <a name="default"></a>  CWnd::Default  
- Calls the default window procedure.  
-  
-```  
-LRESULT 返回 default （);
-```  
-  
-### Return Value  
- Depends on the message sent.  
-  
-### Remarks  
- The default window procedure provides default processing for any window message that an application does not process. This member function ensures that every message is processed.  
-  
-### Example  
- [!code-cpp[NVC_MFCWindowing#85](../../mfc/reference/codesnippet/cpp/cwnd-class_24.cpp)]  
-  
-##  <a name="defwindowproc"></a>  CWnd::DefWindowProc  
- Calls the default window procedure, which provides default processing for any window message that an application does not process.  
+##  <a name="default"></a>CWnd::Default  
+ 调用默认窗口过程。  
   
 ```  
-虚拟 LRESULT DefWindowProc （UINT 消息、  
-    WPARAM wParam，  
+LRESULT Default();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 依赖于发送的消息。  
+  
+### <a name="remarks"></a>备注  
+ 默认窗口过程提供了默认的应用程序不处理任何窗口消息处理。 此成员函数可确保，处理每条消息。  
+  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 85](../../mfc/reference/codesnippet/cpp/cwnd-class_24.cpp)]  
+  
+##  <a name="defwindowproc"></a>CWnd::DefWindowProc  
+ 调用默认窗口过程，该应用程序不处理任何窗口消息提供默认处理过程。  
+  
+```  
+virtual LRESULT DefWindowProc(
+    UINT message,  
+    WPARAM wParam,  
     LPARAM lParam);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `message`  
- Specifies the Windows message to be processed.  
+ 指定要处理的 Windows 消息。  
   
  `wParam`  
- Specifies additional message-dependent information.  
+ 指定消息相关的其他信息。  
   
  `lParam`  
- Specifies additional message-dependent information.  
+ 指定消息相关的其他信息。  
   
-### Return Value  
- Depends on the message sent.  
+### <a name="return-value"></a>返回值  
+ 依赖于发送的消息。  
   
-### Remarks  
- This member function ensures that every message is processed. It should be called with the same parameters as those received by the window procedure.  
+### <a name="remarks"></a>备注  
+ 此成员函数可确保，处理每条消息。 它应具有与接收的窗口过程相同的参数进行调用。  
   
-##  <a name="deletetempmap"></a>  CWnd::DeleteTempMap  
- Called automatically by the idle time handler of the `CWinApp` object.  
-  
-```  
-静态 void PASCAL DeleteTempMap();
-```  
-  
-### Remarks  
- Deletes any temporary `CWnd` objects created by the `FromHandle` member function.  
-  
-### Example  
- [!code-cpp[NVC_MFCWindowing#86](../../mfc/reference/codesnippet/cpp/cwnd-class_25.cpp)]  
-  
-##  <a name="destroywindow"></a>  CWnd::DestroyWindow  
- Destroys the Windows window attached to the `CWnd` object.  
+##  <a name="deletetempmap"></a>CWnd::DeleteTempMap  
+ 空闲时间处理程序的自动调用`CWinApp`对象。  
   
 ```  
-虚拟 BOOL DestroyWindow();
+static void PASCAL DeleteTempMap();
 ```  
   
-### Return Value  
- Nonzero if the window is destroyed; otherwise 0.  
+### <a name="remarks"></a>备注  
+ 删除任何临时`CWnd`创建的对象`FromHandle`成员函数。  
   
-### Remarks  
- The `DestroyWindow` member function sends appropriate messages to the window to deactivate it and remove the input focus. It also destroys the window's menu, flushes the application queue, destroys outstanding timers, removes Clipboard ownership, and breaks the Clipboard-viewer chain if `CWnd` is at the top of the viewer chain. It sends [WM_DESTROY](#ondestroy) and [WM_NCDESTROY](#onncdestroy) messages to the window. It does not destroy the `CWnd` object.  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 86](../../mfc/reference/codesnippet/cpp/cwnd-class_25.cpp)]  
   
- `DestroyWindow` is a place holder for performing cleanup. Because `DestroyWindow` is a virtual function, it is shown in any `CWnd`-derived class in Class View. But even if you override this function in your `CWnd`-derived class, `DestroyWindow` is not necessarily called. If `DestroyWindow` is not called in the MFC code, then you have to explicitly call it in your own code if you want it to be called.  
+##  <a name="destroywindow"></a>Cwnd:: Destroywindow  
+ 销毁 Windows 窗口附加到`CWnd`对象。  
   
- Assume, for example, you have overridden `DestroyWindow` in a `CView`-derived class. Since MFC source code does not call `DestroyWindow` in any of its `CFrameWnd`-derived classes, your overridden `DestroyWindow` will not be called unless you call it explicitly.  
+```  
+virtual BOOL DestroyWindow();
+```  
   
- If the window is the parent of any windows, these child windows are automatically destroyed when the parent window is destroyed. The `DestroyWindow` member function destroys child windows first and then the window itself.  
+### <a name="return-value"></a>返回值  
+ 销毁窗口; 如果非零否则为 0。  
   
- The `DestroyWindow` member function also destroys modeless dialog boxes created by [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
+### <a name="remarks"></a>备注  
+ `DestroyWindow`成员函数将适当的消息发送到窗口后，若要停用它并删除输入的焦点。 它还销毁窗口的菜单、 刷新应用程序队列、 销毁未完成的计时器，移除剪贴板所属权和如果操作会打断剪贴板查看器链`CWnd`是在查看器链的顶部。 它将发送[WM_DESTROY](#ondestroy)和[WM_NCDESTROY](#onncdestroy)到窗口的消息。 它不会销毁`CWnd`对象。  
   
- If the `CWnd` being destroyed is a child window and does not have the [WS_EX_NOPARENTNOTIFY](../../mfc/reference/extended-window-styles.md) style set, then the [WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx)       message is sent to the parent.  
+ `DestroyWindow`执行清理是一个占位符。 因为`DestroyWindow`是虚拟函数，它显示在任何`CWnd`-派生类视图中的类。 即使您重写此函数在中的，但你`CWnd`-派生类，`DestroyWindow`不一定会调用。 如果`DestroyWindow`不调用在 MFC 代码中，则需要显式将它自己的代码中调用如果您希望其调用。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
+ 例如，假定你已重写`DestroyWindow`中`CView`-派生类。 由于 MFC 源代码不调用`DestroyWindow`任一其`CFrameWnd`-派生类中重写的`DestroyWindow`除非显式调用不会被调用。  
   
-##  <a name="detach"></a>  CWnd::Detach  
- Detaches a Windows handle from a `CWnd` object and returns the handle.  
+ 如果窗口的父级的任何 windows，在父窗口被销毁时自动销毁这些子窗口。 `DestroyWindow`成员函数会销毁子窗口第一个，然后选择窗口本身。  
+  
+ `DestroyWindow`成员函数还会销毁无模式对话框创建的[CDialog::Create](../../mfc/reference/cdialog-class.md#create)。  
+  
+ 如果`CWnd`正在销毁是子窗口并且没有[WS_EX_NOPARENTNOTIFY](../../mfc/reference/extended-window-styles.md)样式集，则[WM_PARENTNOTIFY](https://msdn.microsoft.com/library/ms632638.aspx)消息发送给父级。  
+  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
+  
+##  <a name="detach"></a>CWnd::Detach  
+ 从 `CWnd` 对象分离 Windows 句柄并返回该句柄。  
   
 ```  
 HWND Detach();
 ```  
   
-### Return Value  
- A `HWND` to the Windows object.  
+### <a name="return-value"></a>返回值  
+ A`HWND`到 Windows 对象。  
   
-### Example  
-  See the example for [CWnd::Attach](#attach).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::Attach](#attach)。  
   
-##  <a name="dlgdirlist"></a>  CWnd::DlgDirList  
- Fills a list box with a file or directory listing.  
+##  <a name="dlgdirlist"></a>CWnd::DlgDirList  
+ 使用文件或目录列表填充列表框。  
   
 ```  
-int DlgDirList (LPTSTR lpPathSpec，  
-    int nIDListBox  
-    int nIDStaticPath  
+int DlgDirList(
+    LPTSTR lpPathSpec,  
+    int nIDListBox,  
+    int nIDStaticPath,  
     UINT nFileType);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpPathSpec`  
- Points to a null-terminated string that contains the path or filename. `DlgDirList` modifies this string, which should be long enough to contain the modifications. For more information, see the following "Remarks" section.  
+ 指向以 null 结尾的字符串，包含路径或文件名。 `DlgDirList`修改此字符串中，它应该是足够长，以包含进行修改。 有关详细信息，请参阅下面的"备注"部分。  
   
  `nIDListBox`  
- Specifies the identifier of a list box. If `nIDListBox` is 0, `DlgDirList` assumes that no list box exists and does not attempt to fill one.  
+ 指定列表框中的标识符。 如果`nIDListBox`为 0，`DlgDirList`假定没有列表框中存在，并且不会尝试填充一个。  
   
  `nIDStaticPath`  
- Specifies the identifier of the static-text control used to display the current drive and directory. If `nIDStaticPath` is 0, `DlgDirList` assumes that no such text control is present.  
+ 指定用来显示当前的驱动器及目录的静态文本控件的标识符。 如果`nIDStaticPath`为 0，`DlgDirList`假定文本控件不存在。  
   
  `nFileType`  
- Specifies the attributes of the files to be displayed. It can be any combination of the following values:  
+ 指定要显示的文件的属性。 它可以是以下值中的任意组合︰  
   
-- **DDL_READWRITE** Read-write data files with no additional attributes.  
+- **DDL_READWRITE**读写数据文件不具有任何其他属性。  
   
-- **DDL_READONLY** Read-only files.  
+- **DDL_READONLY**只读文件。  
   
-- **DDL_HIDDEN** Hidden files.  
+- **DDL_HIDDEN**隐藏文件。  
   
-- **DDL_SYSTEM** System files.  
+- **DDL_SYSTEM**系统文件。  
   
-- **DDL_DIRECTORY** Directories.  
+- **DDL_DIRECTORY**目录。  
   
-- **DDL_ARCHIVE** Archives.  
+- **DDL_ARCHIVE**存档。  
   
-- **DDL_POSTMSGS LB_DIR** flag. If the **LB_DIR** flag is set, Windows places the messages generated by `DlgDirList` in the application's queue; otherwise, they are sent directly to the dialog-box procedure.  
+- **DDL_POSTMSGS LB_DIR**标志。 如果**LB_DIR**设置标志，则 Windows 将生成的消息放`DlgDirList`中应用程序的队列; 否则，它们会直接发送到对话框过程。  
   
-- **DDL_DRIVES** Drives. If the **DDL_DRIVES** flag is set, the **DDL_EXCLUSIVE** flag is set automatically. Therefore, to create a directory listing that includes drives and files, you must call `DlgDirList` twice: once with the **DDL_DRIVES** flag set and once with the flags for the rest of the list.  
+- **DDL_DRIVES**驱动器。 如果**DDL_DRIVES**设置标志， **DDL_EXCLUSIVE**自动设置标志。 因此，若要创建包括驱动器和文件的目录列表，必须调用`DlgDirList`两次︰ 一次与**DDL_DRIVES**具有列表中的其余标志标志集，另一次。  
   
-- **DDL_EXCLUSIVE** Exclusive bit. If the exclusive bit is set, only files of the specified type are listed; otherwise normal files and files of the specified type are listed.  
+- **DDL_EXCLUSIVE**独占位。 如果设置独占位，将列出仅指定类型的文件;否则会列出普通文件和指定类型的文件。  
   
-### Return Value  
- Nonzero if the function is successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果该函数成功，则为非 0；否则为 0。  
   
-### Remarks  
- `DlgDirList` sends [LB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb761325) and [LB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775185) messages to the list box. It fills the list box specified by `nIDListBox` with the names of all files that match the path given by `lpPathSpec`.  
+### <a name="remarks"></a>备注  
+ `DlgDirList`发送[LB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb761325)和[LB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775185)到列表框的消息。 填充列表框中指定`nIDListBox`匹配给定的路径的所有文件的名称与`lpPathSpec`。  
   
- The `lpPathSpec` parameter has the following form:  
+ `lpPathSpec`参数具有以下形式︰  
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- In this example, `drive` is a drive letter, `directory` is a valid directory name, and *filename* is a valid filename that must contain at least one wildcard. The wildcards are a question mark ( ****), which means match any character, and an asterisk ( **\***), meaning match any number of characters.  
+ 在此示例中，`drive`是驱动器号，`directory`是有效的目录名称，并*filename*是有效的文件名必须包含至少一个通配符。 通配符将问号 （*），这意味着匹配任何字符和星号 ( **\***)，这意味着匹配任意数量的字符。  
   
- If you specify a 0-length string for `lpPathSpec`, or if you specify only a directory name but do not include any file specification, the string will be changed to "*.\*".  
+ 如果指定 0 长度字符串`lpPathSpec`，或如果你指定目录名称，但不是包括任何文件规范，该字符串将更改为"*。\*"。  
   
- If `lpPathSpec` includes a drive and/or directory name, the current drive and directory are changed to the designated drive and directory before the list box is filled. The text control identified by `nIDStaticPath` is also updated with the new drive and/or directory name.  
+ 如果`lpPathSpec`包括一个驱动器和/或目录的名称，当前的驱动器及目录更改为指定的驱动器及目录之前填充列表框。 文本控件由标识`nIDStaticPath`也会更新为新的驱动器和/或目录名称。  
   
- After the list box is filled, `lpPathSpec` is updated by removing the drive and/or directory portion of the path.  
+ 填充列表框后，`lpPathSpec`通过删除路径的驱动器和/或目录的一部分进行更新。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#88](../../mfc/reference/codesnippet/cpp/cwnd-class_27.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 88](../../mfc/reference/codesnippet/cpp/cwnd-class_27.cpp)]  
   
-##  <a name="dlgdirlistcombobox"></a>  CWnd::DlgDirListComboBox  
- Fills the list box of a combo box with a file or directory listing.  
+##  <a name="dlgdirlistcombobox"></a>CWnd::DlgDirListComboBox  
+ 使用文件或目录列表填充组合框的列表框。  
   
 ```  
-int DlgDirListComboBox (LPTSTR lpPathSpec，  
-    int nIDComboBox  
-    int nIDStaticPath  
+int DlgDirListComboBox(
+    LPTSTR lpPathSpec,  
+    int nIDComboBox,  
+    int nIDStaticPath,  
     UINT nFileType);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpPathSpec`  
- Points to a null-terminated string that contains the path or filename. `DlgDirListComboBox` modifies this string, so this data should not be in the form of a string literal. See the following "Remarks" section.  
+ 指向以 null 结尾的字符串，包含路径或文件名。 `DlgDirListComboBox`修改此字符串中，所以此数据不应是字符串文字形式。 请参阅下面的"备注"部分。  
   
  `nIDComboBox`  
- Specifies the identifier of a combo box in a dialog box. If `nIDComboBox` is 0, `DlgDirListComboBox` assumes that no combo box exists and does not attempt to fill one.  
+ 在对话框中指定的组合框的标识符。 如果`nIDComboBox`为 0，`DlgDirListComboBox`假定没有组合框存在，并且不会尝试填充一个。  
   
  `nIDStaticPath`  
- Specifies the identifier of the static-text control used to display the current drive and directory. If `nIDStaticPath` is 0, `DlgDirListComboBox` assumes that no such text control is present.  
+ 指定用来显示当前的驱动器及目录的静态文本控件的标识符。 如果`nIDStaticPath`为 0，`DlgDirListComboBox`假定文本控件不存在。  
   
  `nFileType`  
- Specifies DOS file attributes of the files to be displayed. It can be any combination of the following values:  
+ 指定要显示的文件的 DOS 文件属性。 它可以是以下值中的任意组合︰  
   
-- **DDL_READWRITE** Read-write data files with no additional attributes.  
+- **DDL_READWRITE**读写数据文件不具有任何其他属性。  
   
-- **DDL_READONLY** Read-only files.  
+- **DDL_READONLY**只读文件。  
   
-- **DDL_HIDDEN** Hidden files.  
+- **DDL_HIDDEN**隐藏文件。  
   
-- **DDL_SYSTEM** System files.  
+- **DDL_SYSTEM**系统文件。  
   
-- **DDL_DIRECTORY** Directories.  
+- **DDL_DIRECTORY**目录。  
   
-- **DDL_ARCHIVE** Archives.  
+- **DDL_ARCHIVE**存档。  
   
-- **DDL_POSTMSGS CB_DIR** flag. If the **CB_DIR** flag is set, Windows places the messages generated by `DlgDirListComboBox` in the application's queue; otherwise, they are sent directly to the dialog-box procedure.  
+- **DDL_POSTMSGS CB_DIR**标志。 如果**CB_DIR**设置标志，则 Windows 将生成的消息放`DlgDirListComboBox`中应用程序的队列; 否则，它们会直接发送到对话框过程。  
   
-- **DDL_DRIVES** Drives. If the **DDL_DRIVES** flag is set, the **DDL_EXCLUSIVE** flag is set automatically. Therefore, to create a directory listing that includes drives and files, you must call `DlgDirListComboBox` twice: once with the **DDL_DRIVES** flag set and once with the flags for the rest of the list.  
+- **DDL_DRIVES**驱动器。 如果**DDL_DRIVES**设置标志， **DDL_EXCLUSIVE**自动设置标志。 因此，若要创建包括驱动器和文件的目录列表，必须调用`DlgDirListComboBox`两次︰ 一次与**DDL_DRIVES**具有列表中的其余标志标志集，另一次。  
   
-- **DDL_EXCLUSIVE** Exclusive bit. If the exclusive bit is set, only files of the specified type are listed; otherwise normal files and files of the specified type are listed.  
+- **DDL_EXCLUSIVE**独占位。 如果设置独占位，将列出仅指定类型的文件;否则会列出普通文件和指定类型的文件。  
   
-### Return Value  
- Specifies the outcome of the function. It is nonzero if a listing was made, even an empty listing. A 0 return value implies that the input string did not contain a valid search path.  
+### <a name="return-value"></a>返回值  
+ 指定的函数的结果。 如果列表已进行，即使的空列表，它不为零。 返回值为 0 意味着输入的字符串不包含有效的搜索路径。  
   
-### Remarks  
- `DlgDirListComboBox` sends [CB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb775878) and [CB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775832) messages to the combo box. It fills the list box of the combo box specified by `nIDComboBox` with the names of all files that match the path given by `lpPathSpec`.  
+### <a name="remarks"></a>备注  
+ `DlgDirListComboBox`发送[CB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb775878)和[CB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775832)到组合框的消息。 填充列表框中的指定组合框`nIDComboBox`匹配给定的路径的所有文件的名称与`lpPathSpec`。  
   
- The `lpPathSpec` parameter has the following form:  
+ `lpPathSpec`参数具有以下形式︰  
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- In this example, `drive` is a drive letter, `directory` is a valid directory name, and *filename* is a valid filename that must contain at least one wildcard. The wildcards are a question mark ( ****), which means match any character, and an asterisk ( **\***), which means match any number of characters.  
+ 在此示例中，`drive`是驱动器号，`directory`是有效的目录名称，并*filename*是有效的文件名必须包含至少一个通配符。 通配符将问号 （*），这意味着匹配任何字符和星号 ( **\***)，这意味着匹配任意数量的字符。  
   
- If you specify a zero-length string for `lpPathSpec`, the current directory will be used and `lpPathSpec` will not be modified. If you specify only a directory name but do not include any file specification, the string will be changed to "*".  
+ 如果指定的零长度字符串`lpPathSpec`，将使用当前目录和`lpPathSpec`将不会修改。 如果你指定目录名称，但不是包括任何文件规范，该字符串将更改为"*"。  
   
- If `lpPathSpec` includes a drive and/or directory name, the current drive and directory are changed to the designated drive and directory before the list box is filled. The text control identified by `nIDStaticPath` is also updated with the new drive and/or directory name.  
+ 如果`lpPathSpec`包括一个驱动器和/或目录的名称，当前的驱动器及目录更改为指定的驱动器及目录之前填充列表框。 文本控件由标识`nIDStaticPath`也会更新为新的驱动器和/或目录名称。  
   
- After the combo-box list box is filled, `lpPathSpec` is updated by removing the drive and/or directory portion of the path.  
+ 填充组合框列表框后，`lpPathSpec`通过删除路径的驱动器和/或目录的一部分进行更新。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#89](../../mfc/reference/codesnippet/cpp/cwnd-class_28.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 89](../../mfc/reference/codesnippet/cpp/cwnd-class_28.cpp)]  
   
-##  <a name="dlgdirselect"></a>  CWnd::DlgDirSelect  
- Retrieves the current selection from a list box.  
+##  <a name="dlgdirselect"></a>CWnd::DlgDirSelect  
+ 从列表框检索当前所选内容。  
   
 ```  
-BOOL DlgDirSelect (LPTSTR lpString，  
+BOOL DlgDirSelect(
+    LPTSTR lpString,  
     int nIDListBox);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpString`  
- Points to a buffer that is to receive the current selection in the list box.  
+ 指向将在列表框中接收当前所选内容的缓冲区。  
   
  `nIDListBox`  
- Specifies the integer ID of a list box in the dialog box.  
+ 在对话框中指定列表框中的整数 ID。  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果成功，则不为 0；否则为 0。  
   
-### Remarks  
- It assumes that the list box has been filled by the [DlgDirList](#dlgdirlist) member function and that the selection is a drive letter, a file, or a directory name.  
+### <a name="remarks"></a>备注  
+ 该示例假定，已由填充列表框[DlgDirList](#dlgdirlist)成员函数和所选内容是驱动器号、 文件或目录名称。  
   
- The `DlgDirSelect` member function copies the selection to the buffer given by `lpString`. If there is no selection, `lpString` does not change.  
+ `DlgDirSelect`成员函数将所选内容复制到给定的缓冲区`lpString`。 如果未选择任何内容，`lpString`不会更改。  
   
- `DlgDirSelect` sends [LB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775197) and [LB_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761313) messages to the list box.  
+ `DlgDirSelect`发送[LB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775197)和[LB_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761313)到列表框的消息。  
   
- It does not allow more than one filename to be returned from a list box. The list box must not be a multiple-selection list box.  
+ 它不允许多个文件名，以从列表框中返回。 列表框中不能多选列表框。  
   
-##  <a name="dlgdirselectcombobox"></a>  CWnd::DlgDirSelectComboBox  
- Retrieves the current selection from the list box of a combo box.  
+##  <a name="dlgdirselectcombobox"></a>CWnd::DlgDirSelectComboBox  
+ 从组合框的列表框检索当前所选内容。  
   
 ```  
-BOOL DlgDirSelectComboBox (LPTSTR lpString，  
+BOOL DlgDirSelectComboBox(
+    LPTSTR lpString,  
     int nIDComboBox);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpString`  
- Points to a buffer that is to receive the selected path.  
+ 指向以将接收所选的路径的缓冲区。  
   
  `nIDComboBox`  
- Specifies the integer ID of the combo box in the dialog box.  
+ 在对话框中指定组合框的整数的 ID。  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果成功，则不为 0；否则为 0。  
   
-### Remarks  
- It assumes that the list box has been filled by the [DlgDirListComboBox](#dlgdirlistcombobox) member function and that the selection is a drive letter, a file, or a directory name.  
+### <a name="remarks"></a>备注  
+ 该示例假定，已由填充列表框[DlgDirListComboBox](#dlgdirlistcombobox)成员函数和所选内容是驱动器号、 文件或目录名称。  
   
- The `DlgDirSelectComboBox` member function copies the selection to the specified buffer. If there is no selection, the contents of the buffer are not changed.  
+ `DlgDirSelectComboBox`成员函数将所选内容复制到指定的缓冲区。 如果没有选择任何内容，缓冲区的内容不会改变。  
   
- `DlgDirSelectComboBox` sends [CB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775845) and [CB_GETLBTEXT](http://msdn.microsoft.com/library/windows/desktop/bb775862) messages to the combo box.  
+ `DlgDirSelectComboBox`发送[CB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775845)和[CB_GETLBTEXT](http://msdn.microsoft.com/library/windows/desktop/bb775862)到组合框的消息。  
   
- It does not allow more than one filename to be returned from a combo box.  
+ 它不允许多个文件名，以返回从组合框。  
   
-##  <a name="dodataexchange"></a>  CWnd::DoDataExchange  
- Called by the framework to exchange and validate dialog data.  
+##  <a name="dodataexchange"></a>CWnd::DoDataExchange  
+ 由框架调用以交换和验证对话框数据。  
   
 ```  
-虚拟 void DoDataExchange (CDataExchange * pDX);
+virtual void DoDataExchange(CDataExchange* pDX);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDX`  
- A pointer to a `CDataExchange` object.  
+ 指向 `CDataExchange` 对象的指针。  
   
-### Remarks  
- Never call this function directly. It is called by the [UpdateData](#updatedata) member function. Call `UpdateData` to initialize a dialog box's controls or retrieve data from a dialog box.  
+### <a name="remarks"></a>备注  
+ 永远不会直接调用此函数。 它由[UpdateData](#updatedata)成员函数。 调用`UpdateData`初始化对话框的控件或从对话框中检索数据。  
   
- When you derive an application-specific dialog class from [CDialog](../../mfc/reference/cdialog-class.md), you need to override this member function if you wish to utilize the framework's automatic data exchange and validation. The Add Variable wizard will write an overridden version of this member function for you containing the desired "data map" of dialog data exchange (DDX) and validation (DDV) global function calls.  
+ 从一个特定于应用程序的对话框类的派生时[CDialog](../../mfc/reference/cdialog-class.md)，您需要重写该成员函数，如果你想要利用框架的自动数据交换和验证。 添加变量向导将为你包含所需编写此成员函数的重写的版本的对话框数据交换 (DDX) 和验证 (DDV) 全局函数调用的"数据映射"。  
   
- To automatically generate an overridden version of this member function, first create a dialog resource with the dialog editor, then derive an application-specific dialog class. Then use the Add Variable wizard to associate variables, data, and validation ranges with various controls in the new dialog box. The wizard then writes the overridden `DoDataExchange`, which contains a data map. The following is an example DDX/DDV code block generated by the Add Variable wizard:  
+ 若要自动生成此成员函数的重写的版本，请首先使用对话框编辑器中，创建对话框资源，然后派生的特定于应用程序的对话框类。 然后使用添加变量向导将变量、 数据和验证范围与在新的对话框中的各种控件相关联。 然后，该向导将重写`DoDataExchange`，其中包含数据映射。 下面是添加变量向导生成的一个示例 DDX/DDV 代码块︰  
   
- [!code-cpp[NVC_MFCWindowing#90](../../mfc/reference/codesnippet/cpp/cwnd-class_29.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 90](../../mfc/reference/codesnippet/cpp/cwnd-class_29.cpp)]  
   
- The `DoDataExchange` overridden member function must precede the macro statements in your source file.  
+ `DoDataExchange`重写的成员函数，必须在源文件优先宏语句。  
   
- For more information on dialog data exchange and validation, see [Displaying and Manipulating Data in a Form](../../data/odbc/displaying-and-manipulating-data-in-a-form.md) and [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For a description of the DDX_ and DDV_ macros generated by the Add Variable wizard, see [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md).  
+ 对话框数据交换和验证的详细信息，请参阅[显示和操作窗体中的数据](../../data/odbc/displaying-and-manipulating-data-in-a-form.md)和[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 添加变量向导生成的 DDX_ 和 DDV_ 宏的说明，请参阅[技术注意 26](../../mfc/tn026-ddx-and-ddv-routines.md)。  
   
-##  <a name="dragacceptfiles"></a>  CWnd::DragAcceptFiles  
- Call this member function from within a window, using a `CWnd` pointer, in your application's [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) function to indicate that the window accepts dropped files from the Windows File Manager or File Explorer.  
+##  <a name="dragacceptfiles"></a>CWnd::DragAcceptFiles  
+ 在窗口中，调用该成员函数从使用`CWnd`中应用程序的指针[CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)函数以指示窗口接受从 Windows 文件管理器或文件资源管理器中删除文件。  
   
 ```  
-void DragAcceptFiles (BOOL bAccept = TRUE);
+void DragAcceptFiles(BOOL bAccept = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *BAccept*  
- Flag that indicates whether dragged files are accepted.  
+ 该标志指示是否接受拖动的文件。  
   
-### Remarks  
- Only the window that calls `DragAcceptFiles` with the `bAccept` parameter set to **TRUE** has identified itself as able to process the Windows message `WM_DROPFILES`. For example, in an MDI application, if the `CMDIFrameWnd` window pointer is used in the `DragAcceptFiles` function call, only the `CMDIFrameWnd` window gets the `WM_DROPFILES` message. This message is not sent to all open `CMDIChildWnd` windows. For a `CMDIChildWnd` window to receive this message, you must call `DragAcceptFiles` with the `CMDIChildWnd` window pointer.  
+### <a name="remarks"></a>备注  
+ 只有窗口调用`DragAcceptFiles`与`bAccept`参数设置为**TRUE**已标识本身为能够处理 Windows 消息`WM_DROPFILES`。 例如，在 MDI 应用程序，如果`CMDIFrameWnd`中使用窗口指针`DragAcceptFiles`函数调用，仅`CMDIFrameWnd`窗口获取`WM_DROPFILES`消息。 此消息不会发送到所有打开`CMDIChildWnd`windows。 有关`CMDIChildWnd`窗口收到此消息，必须调用`DragAcceptFiles`与`CMDIChildWnd`窗口指针。  
   
- To discontinue receiving dragged files, call the member function with `bAccept` set to **FALSE**.  
+ 若要停止接收拖动的文件，请调用具有的成员函数`bAccept`设置为**FALSE**。  
   
-##  <a name="dragdetect"></a>  CWnd::DragDetect  
- Captures the mouse and tracks its movement until the user releases the left button, presses the ESC key, or moves the mouse outside the drag rectangle around the specified point.  
+##  <a name="dragdetect"></a>CWnd::DragDetect  
+ 捕获鼠标并跟踪其移动，直到用户释放左键、按 ESC 键或将鼠标移动到围绕指定点的拖动矩形外部。  
   
 ```  
 BOOL DragDetect(POINT pt) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pt`  
- Initial position of the mouse, in screen coordinates. The function determines the coordinates of the drag rectangle by using this point.  
+ 在屏幕坐标中的鼠标，初始位置。 此函数将确定通过此点的拖动矩形的坐标。  
   
-### Return Value  
- If the user moved the mouse outside of the drag rectangle while holding down the left button , the return value is nonzero.  
+### <a name="return-value"></a>返回值  
+ 如果用户按住左键移动的拖动矩形外部鼠标，则返回值不为零。  
   
- If the user did not move the mouse outside of the drag rectangle while holding down the left button , the return value is zero.  
+ 如果用户未在按住左侧的按钮时移动的拖动矩形外部鼠标，则返回值为零。  
   
-### Remarks  
- This member function emulates the functionality of the function [DragDetect](http://msdn.microsoft.com/library/windows/desktop/ms646256), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[DragDetect](http://msdn.microsoft.com/library/windows/desktop/ms646256)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="drawanimatedrects"></a>  CWnd::DrawAnimatedRects  
- Draws a wire-frame rectangle and animates it to indicate the opening of an icon or the minimizing or maximizing of a window.  
+##  <a name="drawanimatedrects"></a>CWnd::DrawAnimatedRects  
+ 绘制透明框架矩形并对它进行动画处理，以指示图标的打开或是窗口的最小化或最大化。  
   
 ```  
-BOOL DrawAnimatedRects (int idAni，  
-    CONST RECT* lprcFrom，CONST RECT* lprcTo);
+BOOL DrawAnimatedRects(
+    int idAni,  
+    CONST RECT* lprcFrom,  
+    CONST RECT* lprcTo);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *idAni*  
- Specifies the type of animation. If you specify **IDANI_CAPTION**, the window caption will animate from the position specified by `lprcFrom` to the position specified by `lprcTo`. The effect is similar to minimizing or maximizing a window.  
+ 指定动画的类型。 如果指定**IDANI_CAPTION**，窗口标题将从指定的位置进行动画处理`lprcFrom`到指定的位置`lprcTo`。 结果类似于最小化或最大化窗口。  
   
  `lprcFrom`  
- Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure specifying the location and size of the icon or minimized window.  
+ 指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的位置和大小的图标或最小化的窗口。  
   
  `lprcTo`  
- Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure specifying the location and size of the restored window  
+ 指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的位置和大小的还原窗口  
   
-### Return Value  
- Nonzero if the function succeeds; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果函数成功，则为非零值；否则为  
   
-### Remarks  
- This member function emulates the functionality of the function [DrawAnimatedRects](http://msdn.microsoft.com/library/windows/desktop/dd162475), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[DrawAnimatedRects](http://msdn.microsoft.com/library/windows/desktop/dd162475)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="drawcaption"></a>  CWnd::DrawCaption  
- Draws a window caption.  
+##  <a name="drawcaption"></a>CWnd::DrawCaption  
+ 绘制窗口标题。  
   
 ```  
-BOOL DrawCaption (CDC * pDC，  
-    LPCRECT lprc  
+BOOL DrawCaption(
+    CDC* pDC,  
+    LPCRECT lprc,  
     UINT uFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- A pointer to a device context. The function draws the window caption into this device context.  
+ 一个指向设备上下文的指针。 该函数绘制到此设备上下文的窗口标题。  
   
  `lprc`  
- A pointer to a RECT structure that specifies the bounding rectangle for the window caption.  
+ 指向指定窗口标题的边框 RECT 结构的指针。  
   
  `uFlags`  
- Specifies drawing options. For a complete list of values, see [DrawCaption](http://msdn.microsoft.com/library/windows/desktop/dd162476).  
+ 指定绘图选项。 值的完整列表，请参阅[DrawCaption](http://msdn.microsoft.com/library/windows/desktop/dd162476)。  
   
-### Return Value  
- Nonzero if the function succeeds; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果函数成功，则为非零值；否则为  
   
-### Remarks  
- This member function emulates the functionality of the function [DrawCaption](http://msdn.microsoft.com/library/windows/desktop/dd162476), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[DrawCaption](http://msdn.microsoft.com/library/windows/desktop/dd162476)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="drawmenubar"></a>  CWnd::DrawMenuBar  
- Redraws the menu bar.  
+##  <a name="drawmenubar"></a>CWnd::DrawMenuBar  
+ 重绘菜单栏。  
   
 ```  
 void DrawMenuBar();
 ```  
   
-### Remarks  
- If a menu bar is changed after Windows has created the window, call this function to draw the changed menu bar.  
+### <a name="remarks"></a>备注  
+ 如果 Windows 已创建窗口后，更改菜单栏，，调用此函数可绘制已更改的菜单栏。  
   
-### Example  
-  See the example for [CWnd::GetMenu](#getmenu).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::GetMenu](#getmenu)。  
   
-##  <a name="enableactiveaccessibility"></a>  CWnd::EnableActiveAccessibility  
- Enables user-defined Active Accessibility functions.  
+##  <a name="enableactiveaccessibility"></a>CWnd::EnableActiveAccessibility  
+ 启用用户定义的活动辅助功能函数。  
   
 ```  
 void EnableActiveAccessibility();
 ```  
   
-### Remarks  
- MFC's default Active Accessibility support is sufficient for standard windows and controls, including ActiveX controls; however, if your `CWnd`-derived class contains nonwindowed user interface elements, MFC has no way of knowing about them. In that case, you must override the appropriate [Active Accessibility member functions](http://msdn.microsoft.com/en-us/68af04ac-4eb9-4b7d-b33f-c45512097a74) in your class, and you must call **EnableActiveAccessibility** in the class's constructor.  
+### <a name="remarks"></a>备注  
+ MFC 的默认 Active Accessibility 支持足以满足标准的 windows 和控件，包括 ActiveX 控件;但是，如果你`CWnd`-派生的类包含 nonwindowed 用户界面元素，MFC 有无法知道有关它们的信息。 在这种情况下，你必须重写适当[Active Accessibility 成员函数](http://msdn.microsoft.com/en-us/68af04ac-4eb9-4b7d-b33f-c45512097a74)在类中，并且你必须调用**EnableActiveAccessibility**类的构造函数中。  
   
-##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout  
- Enables or disables the dynamic layout manager. When dynamic layout is enabled, the position and size of child windows can adjust dynamically when the user resizes the window.  
+##  <a name="enabledynamiclayout"></a>Cwnd:: Enabledynamiclayout  
+ 启用或禁用动态布局管理器。 启用动态布局时，子窗口的位置和大小可以在用户调整窗口大小时动态调整。  
   
 ```  
-void EnableDynamicLayout (BOOL bEnable = TRUE);
+void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bEnable`  
- TRUE to enable dynamic layout; FALSE to disable dynamic layout.  
+ 如果为 TRUE，则启用动态布局；如果为 FALSE，则禁用动态布局。  
   
-### Remarks  
- If you want to enable dynamic layout, you have to do more than just call this method. You also have to provide dynamic layout information which species how the controls in the window respond to size changes. You can specify this information in the resource editor, or programmatically, for each control. See [Dynamic Layout](../../mfc/dynamic-layout.md).  
+### <a name="remarks"></a>备注  
+ 如果想要启用动态布局，你不只需要调用此方法。 还必须提供指定动态布局信息，此信息指定窗口中的控件如何响应大小更改。 可以在资源编辑器中（或以编程方式）为每个控件指定此信息。 请参阅[动态布局](../../mfc/dynamic-layout.md)。  
   
-##  <a name="enabled2dsupport"></a>  CWnd::EnableD2DSupport  
- Enables or disables window D2D support. Call this method before the main window is initialized.  
+##  <a name="enabled2dsupport"></a>CWnd::EnableD2DSupport  
+ 启用或禁用窗口 D2D 支持。 在初始化主窗口之前调用此方法。  
   
 ```  
-void EnableD2DSupport (BOOL bEnable = TRUE，  
+void EnableD2DSupport(
+    BOOL bEnable = TRUE,  
     BOOL bUseDCRenderTarget = FALSE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bEnable`  
- Specifies whether to turn on, or off D2D support.  
+ 指定是打开还是关闭 D2D 支持。  
   
  `bUseDCRenderTarget`  
- Species whether to use the Device Context (DC) render target, CDCRenderTarget. If FALSE, CHwndRenderTarget is used.  
+ 指定是否使用设备上下文 (DC) 呈现器目标 CDCRenderTarget。 如果为 FALSE，则使用 CHwndRenderTarget。  
   
-##  <a name="enablescrollbar"></a>  CWnd::EnableScrollBar  
- Enables or disables one or both arrows of a scroll bar.  
+##  <a name="enablescrollbar"></a>CWnd::EnableScrollBar  
+ 启用或禁用滚动条的一个或两个箭头。  
   
 ```  
-BOOL EnableScrollBar (int nSBFlags，  
+BOOL EnableScrollBar(
+    int nSBFlags,  
     UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *nSBFlags*  
- Specifies the scroll-bar type. Can have one of the following values:  
+ 指定的滚动条类型。 可以具有以下值之一︰  
   
-- **SB_BOTH** Enables or disables the arrows of the horizontal and vertical scroll bars associated with the window.  
+- **SB_BOTH**启用或禁用的箭头的水平和垂直滚动条的窗口相关联。  
   
-- **SB_HORZ** Enables or disables the arrows of the horizontal scroll bar associated with the window.  
+- **SB_HORZ**启用或禁用的箭头的水平滚动条的窗口相关联。  
   
-- **SB_VERT** Enables or disables the arrows of the vertical scroll bar associated with the window.  
+- **SB_VERT**启用或禁用与窗口关联的垂直滚动条的箭头。  
   
  `nArrowFlags`  
- Specifies whether the scroll-bar arrows are enabled or disabled and which arrows are enabled or disabled. Can have one of the following values:  
+ 指定是否启用或禁用滚动条箭头和启用或禁用的箭头。 可以具有以下值之一︰  
   
-- **ESB_ENABLE_BOTH** Enables both arrows of a scroll bar (default).  
+- **ESB_ENABLE_BOTH**使这两个箭头的滚动条 （默认）。  
   
-- **ESB_DISABLE_LTUP** Disables the left arrow of a horizontal scroll bar or the up arrow of a vertical scroll bar.  
+- **ESB_DISABLE_LTUP**禁用水平滚动条向左的箭头或垂直滚动条的向上箭头。  
   
-- **ESB_DISABLE_RTDN** Disables the right arrow of a horizontal scroll bar or the down arrow of a vertical scroll bar.  
+- **ESB_DISABLE_RTDN**禁用水平滚动条的向右箭头或垂直滚动条的向下箭头。  
   
-- **ESB_DISABLE_BOTH** Disables both arrows of a scroll bar.  
+- **ESB_DISABLE_BOTH**禁用这两个箭头的滚动条。  
   
-### Return Value  
- Nonzero if the arrows are enabled or disabled as specified. Otherwise it is 0, which indicates that the arrows are already in the requested state or that an error occurred.  
+### <a name="return-value"></a>返回值  
+ 如果启用或禁用指定箭头，则为非 0。 否则，它是 0，表示箭头已在请求的状态或发生了错误。  
   
-##  <a name="enablescrollbarctrl"></a>  CWnd::EnableScrollBarCtrl  
- Enables or disables the scroll bar for this window.  
+##  <a name="enablescrollbarctrl"></a>CWnd::EnableScrollBarCtrl  
+ 启用或禁用此窗口的滚动条。  
   
 ```  
-void EnableScrollBarCtrl (int nBar，  
+void EnableScrollBarCtrl(
+    int nBar,  
     BOOL bEnable = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nBar`  
- The scroll-bar identifier.  
+ 滚动条标识符中。  
   
  `bEnable`  
- Specifies whether the scroll bar is to be enabled or disabled.  
+ 指定是否要启用或禁用滚动条。  
   
-### Remarks  
- If the window has a sibling scroll-bar control, that scroll bar is used; otherwise the window's own scroll bar is used.  
+### <a name="remarks"></a>备注  
+ 如果窗口具有同级滚动条控件，则使用该滚动条;否则使用窗口的滚动条。  
   
-##  <a name="enabletooltips"></a>  CWnd::EnableToolTips  
- Enables tool tips for the given window.  
+##  <a name="enabletooltips"></a>CWnd::EnableToolTips  
+ 使给定窗口的工具提示。  
   
 ```  
 BOOL EnableToolTips(BOOL bEnable = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bEnable`  
- Specifies whether the tool tip control is enabled or disabled. **TRUE** enables the control; **FALSE** disables the control.  
+ 指定是启用还是禁用工具提示控件。 **TRUE**使控件;**FALSE**禁用控件。  
   
-### Return Value  
- **TRUE** if tool tips are enabled; otherwise **FALSE**.  
+### <a name="return-value"></a>返回值  
+ **TRUE**工具提示是否已启用; 否则为**FALSE**。  
   
-### Remarks  
- Override [OnToolHitTest](#ontoolhittest) to provide the [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struct or structs for the window.  
+### <a name="remarks"></a>备注  
+ 重写[OnToolHitTest](#ontoolhittest)提供[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)结构或结构窗口。  
   
 > [!NOTE]
->  Some windows, such as [CToolBar](../../mfc/reference/ctoolbar-class.md), provide a built-in implementation of [OnToolHitTest](#ontoolhittest).  
+>  某些窗口中，如[CToolBar](../../mfc/reference/ctoolbar-class.md)，提供的内置实现[OnToolHitTest](#ontoolhittest)。  
   
- See [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] for more information on this structure.  
+ 请参阅[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关此结构的详细信息。  
   
- Simply calling `EnableToolTips` is not enough to display tool tips for your child controls unless the parent window is derived from `CFrameWnd`. This is because `CFrameWnd` provides a default handler for the **TTN_NEEDTEXT** notification. If your parent window is not derived from `CFrameWnd`, that is, if it is a dialog box or a form view, tool tips for your child controls will not display correctly unless you provide a handler for the **TTN_NEEDTEXT** tool tip notification. See [Tool Tips](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
+ 只需调用`EnableToolTips`不足以显示工具提示，对于你的孩子控件除非父窗口派生自`CFrameWnd`。 这是因为`CFrameWnd`提供默认处理程序**TTN_NEEDTEXT**通知。 如果父窗口不派生自`CFrameWnd`，即，如果它是对话框中或窗体视图，为子女除非你提供的处理程序，控件将无法正确显示工具提示**TTN_NEEDTEXT**工具提示通知。 请参阅[工具提示](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)。  
   
- The default tool tips provided for your windows by `EnableToolTips` do not have text associated with them. To retrieve text for the tool tip to display, the **TTN_NEEDTEXT** notification is sent to the tool tip control's parent window just before the tool tip window is displayed. If there is no handler for this message to assign some value to the `pszText` member of the **TOOLTIPTEXT** structure, there will be no text displayed for the tool tip.  
+ 为通过 windows 提供的默认工具提示`EnableToolTips`不具有与之关联的文本。 检索文本的工具提示显示， **TTN_NEEDTEXT**显示工具提示窗口之前，会向工具提示控件的父窗口发送通知。 如果没有此消息将某些值赋给处理程序`pszText`的成员**TOOLTIPTEXT**结构，不将为工具提示显示任何文本。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#91](../../mfc/reference/codesnippet/cpp/cwnd-class_30.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 91](../../mfc/reference/codesnippet/cpp/cwnd-class_30.cpp)]  
   
- [!code-cpp[NVC_MFCWindowing#92](../../mfc/reference/codesnippet/cpp/cwnd-class_31.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 92](../../mfc/reference/codesnippet/cpp/cwnd-class_31.cpp)]  
   
-##  <a name="enabletrackingtooltips"></a>  CWnd::EnableTrackingToolTips  
- Enables or disables tracking tooltips.  
+##  <a name="enabletrackingtooltips"></a>CWnd::EnableTrackingToolTips  
+ 启用或禁用跟踪工具提示。  
   
 ```  
 BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bEnable`  
- Specifies whether tracking tool tips are enabled or disabled. If this parameter is **TRUE**, the tracking tool tips will be enabled. If this parameter is **FALSE**, the tracking tool tips will be disabled.  
+ 指定是否跟踪的工具提示是启用还是禁用。 如果此参数为**TRUE**，提示将启用的跟踪工具。 如果此参数为**FALSE**，将禁用提示的跟踪工具。  
   
-### Return Value  
- Indicates the state before the `EnableWindow` member function was called. The return value is nonzero if the window was previously disabled. The return value is 0 if the window was previously enabled or an error occurred.  
+### <a name="return-value"></a>返回值  
+ 指示之前的状态`EnableWindow`调用成员函数。 返回值不为零，如果窗口之前处于禁用状态。 如果以前启用窗口或出错，则返回值为 0。  
   
-### Remarks  
- Tracking tool tips are tool tip windows that you can dynamically position on the screen. By rapidly updating the position, the tool tip window appears to move smoothly, or "track." This functionality can be useful if you need tool tip text to follow the position of the pointer as it moves.  
+### <a name="remarks"></a>备注  
+ 跟踪工具提示是您可以动态定位在屏幕的工具提示窗口。 通过快速更新位置，工具提示窗口显示平稳，移动或"跟踪"。 此功能很有用，如果你需要遵循指针的位置移动的工具提示文本。  
   
-##  <a name="enablewindow"></a>  CWnd::EnableWindow  
- Enables or disables mouse and keyboard input.  
+##  <a name="enablewindow"></a>CWnd::EnableWindow  
+ 启用或禁用鼠标和键盘输入。  
   
 ```  
 BOOL EnableWindow(BOOL bEnable = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bEnable`  
- Specifies whether the given window is to be enabled or disabled. If this parameter is **TRUE**, the window will be enabled. If this parameter is **FALSE**, the window will be disabled.  
+ 指定是否要启用或禁用给定的窗口。 如果此参数为**TRUE**，将启用窗口。 如果此参数为**FALSE**，窗口将被禁用。  
   
-### Return Value  
- Indicates the state before the `EnableWindow` member function was called. The return value is nonzero if the window was previously disabled. The return value is 0 if the window was previously enabled or an error occurred.  
+### <a name="return-value"></a>返回值  
+ 指示之前的状态`EnableWindow`调用成员函数。 返回值不为零，如果窗口之前处于禁用状态。 如果以前启用窗口或出错，则返回值为 0。  
   
-### Remarks  
- When input is disabled, input such as mouse clicks and keystrokes is ignored. When input is enabled, the window processes all input.  
+### <a name="remarks"></a>备注  
+ 当禁用输入时，输入鼠标单击以及键击将被忽略。 启用输入后，窗口将处理所有的输入。  
   
- If the enabled state is changing, the [WM_ENABLE](#onenable) message is sent before this function returns.  
+ 如果正在更改的启用的状态， [WM_ENABLE](#onenable)之前此函数将返回发送消息。  
   
- If disabled, all child windows are implicitly disabled, although they are not sent `WM_ENABLE` messages.  
+ 如果禁用，所有子窗口隐式处于禁用都状态，尽管它们不会发送`WM_ENABLE`消息。  
   
- A window must be enabled before it can be activated. For example, if an application is displaying a modeless dialog box and has disabled its main window, the main window must be enabled before the dialog box is destroyed. Otherwise, another window will get the input focus and be activated. If a child window is disabled, it is ignored when Windows tries to determine which window should get mouse messages.  
+ 必须启用一个窗口，然后才能激活。 例如，如果应用程序正在显示无模式对话框，并已禁用的主窗口，对话框中被销毁之前必须已启用主窗口。 否则为另一个窗口将获取输入的焦点，激活。 如果禁用了子窗口，那么它将 Windows 将尝试确定哪个窗口应获取鼠标消息时将忽略。  
   
- By default, a window is enabled when it is created. An application can specify the **WS_DISABLED** style in the [Create](#create) or [CreateEx](#createex) member function to create a window that is initially disabled. After a window has been created, an application can also use the `EnableWindow` member function to enable or disable the window.  
+ 默认情况下，创建时，启用窗口。 应用程序可以指定**WS_DISABLED**设置中的样式[创建](#create)或[CreateEx](#createex)成员函数以创建最初处于禁用状态的窗口。 创建一个窗口后，应用程序还可以使用`EnableWindow`成员函数以启用或禁用窗口。  
   
- An application can use this function to enable or disable a control in a dialog box. A disabled control cannot receive the input focus, nor can a user access it.  
+ 应用程序可以使用此函数以启用或禁用在对话框中的控件。 已禁用的控件不能接收输入的焦点，也可以在用户访问它。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#93](../../mfc/reference/codesnippet/cpp/cwnd-class_32.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 93](../../mfc/reference/codesnippet/cpp/cwnd-class_32.cpp)]  
   
-##  <a name="endmodalloop"></a>  CWnd::EndModalLoop  
- Terminates a call to `RunModalLoop`.  
+##  <a name="endmodalloop"></a>CWnd::EndModalLoop  
+ 终止调用`RunModalLoop`。  
   
 ```  
-虚拟 void EndModalLoop （int n 结果）;
+virtual void EndModalLoop(int nResult);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nResult`  
- Contains the value to be returned to the caller of [RunModalLoop](#runmodalloop).  
+ 包含要返回到调用方的值[RunModalLoop](#runmodalloop)。  
   
-### Remarks  
- The `nResult` parameter is propagated to the return value from `RunModalLoop`.  
+### <a name="remarks"></a>备注  
+ `nResult`参数传播到中的返回值`RunModalLoop`。  
   
-##  <a name="endmodalstate"></a>  CWnd::EndModalState  
- Call this member function to change a frame window from modal to modeless.  
-  
-```  
-虚拟 void EndModalState();
-```  
-  
-##  <a name="endpaint"></a>  CWnd::EndPaint  
- Marks the end of painting in the given window.  
+##  <a name="endmodalstate"></a>CWnd::EndModalState  
+ 调用此成员函数以将框架窗口从有模式更改为无模式。  
   
 ```  
-void EndPaint (LPPAINTSTRUCT lpPaint);
+virtual void EndModalState();
 ```  
   
-### Parameters  
+##  <a name="endpaint"></a>CWnd::EndPaint  
+ 将标记在给定窗口中绘制的末尾。  
+  
+```  
+void EndPaint(LPPAINTSTRUCT lpPaint);
+```  
+  
+### <a name="parameters"></a>参数  
  `lpPaint`  
- Points to a [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) structure that contains the painting information retrieved by the [BeginPaint](#beginpaint) member function.  
+ 指向[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)结构，其中包含通过检索到的绘制信息[BeginPaint](#beginpaint)成员函数。  
   
-### Remarks  
- The `EndPaint` member function is required for each call to the `BeginPaint` member function, but only after painting is complete.  
+### <a name="remarks"></a>备注  
+ `EndPaint`成员函数是每次调用所需`BeginPaint`成员函数，但仅绘制完成后。  
   
- If the caret was hidden by the `BeginPaint` member function, `EndPaint` restores the caret to the screen.  
+ 如果脱字号隐藏的`BeginPaint`成员函数，`EndPaint`还原插入符号移动到屏幕。  
   
-### Example  
-  See the example for [CWnd::BeginPaint](#beginpaint).  
+### <a name="example"></a>示例  
+  请参阅示例[cwnd:: Beginpaint](#beginpaint)。  
   
-##  <a name="executedlginit"></a>  CWnd::ExecuteDlgInit  
- Initiates a dialog resource.  
+##  <a name="executedlginit"></a>CWnd::ExecuteDlgInit  
+ 启动对话框资源。  
   
 ```  
 BOOL ExecuteDlgInit(LPCTSTR lpszResourceName);  
 BOOL ExecuteDlgInit(LPVOID lpResource);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpszResourceName`  
- A pointer to a null-terminated string specifying the name of the resource.  
+ 指向以 null 结尾的字符串，指定资源的名称的指针。  
   
  `lpResource`  
- A pointer to a resource.  
+ 指向资源的指针。  
   
-### Return Value  
- **TRUE** if a dialog resource is executed; otherwise **FALSE**.  
+### <a name="return-value"></a>返回值  
+ **TRUE**对话框资源是否执行; 否则为**FALSE**。  
   
-### Remarks  
- `ExecuteDlgInit` will use resources bound to the executing module, or resources from other sources. To accomplish this, `ExecuteDlgInit` finds a resource handle by calling `AfxFindResourceHandle`. If your MFC application does not use the shared DLL (MFCx0[U][D].DLL), **AfxFindResourceHandle** calls [AfxGetResourceHandle](http://msdn.microsoft.com/library/d0eff6c4-f566-471a-96b7-a5a70a751a92), which returns the current resource handle for the executable. If your MFC application that uses MFCx0[U][D].DLL, `AfxFindResourceHandle` traverses the **CDynLinkLibrary** object list of shared and extension DLLs looking for the correct resource handle.  
+### <a name="remarks"></a>备注  
+ `ExecuteDlgInit`将使用绑定到正在执行的模块中，资源从其他源。 若要实现此目的，`ExecuteDlgInit`查找的资源句柄通过调用`AfxFindResourceHandle`。 如果你的 MFC 应用程序不使用共享的 DLL (MFCx0 [U] [D]。DLL)， **AfxFindResourceHandle**调用[AfxGetResourceHandle](http://msdn.microsoft.com/library/d0eff6c4-f566-471a-96b7-a5a70a751a92)，它返回的可执行文件的当前资源句柄。 如果您使用 MFC 应用程序 MFCx0 [U] [D]。DLL，`AfxFindResourceHandle`遍历**CDynLinkLibrary**对象列表的共享和扩展 Dll 查找正确的资源的处理。  
   
-##  <a name="filtertooltipmessage"></a>  CWnd::FilterToolTipMessage  
- Called by the framework to display tool tip messages.  
+##  <a name="filtertooltipmessage"></a>CWnd::FilterToolTipMessage  
+ 由框架调用以显示工具提示消息。  
   
 ```  
-void FilterToolTipMessage (MSG * pMsg);
+void FilterToolTipMessage(MSG* pMsg);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pMsg`  
- A pointer to the tool tip message.  
+ 工具提示消息指向的指针。  
   
-### Remarks  
- In most MFC applications this method is called by the framework from [PreTranslateMessage](#pretranslatemessage) and [EnableToolTips](#enabletooltips), and you do not need to call it yourself.  
+### <a name="remarks"></a>备注  
+ 大多数 MFC 应用程序中调用此方法由从框架[PreTranslateMessage](#pretranslatemessage)和[EnableToolTips](#enabletooltips)，并且不需要自行调用。  
   
- However, in certain applications, for example some ActiveX controls, these methods might not be invoked by the framework, and you will need to call FilterToolTipMessage yourself. For more information, see [Methods of Creating Tool Tips](../../mfc/methods-of-creating-tool-tips.md).  
+ 但是，在某些应用程序，例如某些 ActiveX 控件，这些方法可能不会调用由框架，并且你将需要自行调用 FilterToolTipMessage。 有关详细信息，请参阅[方法的创建工具提示](../../mfc/methods-of-creating-tool-tips.md)。  
   
-##  <a name="findwindow"></a>  CWnd::FindWindow  
- Returns the top-level `CWnd` whose window class is given by `lpszClassName` and whose window name, or title, is given by `lpszWindowName`.  
+##  <a name="findwindow"></a>CWnd::FindWindow  
+ 返回顶级`CWnd`由其窗口类`lpszClassName`并且其窗口名或标题，由其赋予`lpszWindowName`。  
   
 ```  
-静态 CWnd * PASCAL FindWindow (LPCTSTR lpszClassName，  
+static CWnd* PASCAL FindWindow(
+    LPCTSTR lpszClassName,  
     LPCTSTR lpszWindowName);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpszClassName`  
- Points to a null-terminated string that specifies the window's class name (a **WNDCLASS** structure). If `lpClassName` is **NULL**, all class names match.  
+ 指向以 null 结尾的字符串，指定窗口的类名称 ( **WNDCLASS**结构)。 如果`lpClassName`是**NULL**，所有的类名称匹配。  
   
  `lpszWindowName`  
- Points to a null-terminated string that specifies the window name (the window's title). If `lpWindowName` is **NULL**, all window names match.  
+ 指向以 null 结尾的字符串，指定的窗口名称 （窗口的标题）。 如果`lpWindowName`是**NULL**，所有的窗口名称匹配。  
   
-### Return Value  
- Identifies the window that has the specified class name and window name. It is **NULL** if no such window is found.  
+### <a name="return-value"></a>返回值  
+ 标识具有指定的类名称和窗口名称的窗口。 它是**NULL**如果不找到任何此类窗口。  
   
- The `CWnd`* may be temporary and should not be stored for later use.  
+ `CWnd`* 可能是暂时的不应存储起来供以后使用。  
   
-### Remarks  
- This function does not search child windows.  
+### <a name="remarks"></a>备注  
+ 此函数不会搜索子窗口。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#94](../../mfc/reference/codesnippet/cpp/cwnd-class_33.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 94](../../mfc/reference/codesnippet/cpp/cwnd-class_33.cpp)]  
   
-##  <a name="findwindowex"></a>  CWnd::FindWindowEx  
- Retrieves the window object whose class name and window name match the specified strings.  
+##  <a name="findwindowex"></a>CWnd::FindWindowEx  
+ 检索其类名和窗口名称匹配的指定的字符串的窗口对象。  
   
 ```  
-静态 CWnd * FindWindowEx (HWND hwndParent，  
-    HWND hwndChildAfter  
-    LPCTSTR lpszClass  
+static CWnd* FindWindowEx(
+    HWND hwndParent,  
+    HWND hwndChildAfter,  
+    LPCTSTR lpszClass,  
     LPCTSTR lpszWindow);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *hwndParent*  
- Handle to the parent window whose child windows are to be searched.  
+ 要搜索的子窗口的父窗口的句柄。  
   
  *hwndChildAfter*  
- Handle to a child window. The search begins with the next child window in the Z order. The child window must be a direct child window of *hwndParent*, not just a descendant window.  
+ 子窗口的句柄。 与中的 Z 顺序的下一步子窗口开始执行搜索。 子窗口必须直接子窗口的*hwndParent*，而不仅仅是一个子代窗口。  
   
  `lpszClass`  
- Pointer to a null-terminated string that specifies the class name or a class atom created by a previous call to the [RegisterClass](http://msdn.microsoft.com/library/windows/desktop/ms633586) or [RegisterClassEx](http://msdn.microsoft.com/library/windows/desktop/ms633587).  
+ 指向一个以 null 结尾的字符串，指定的类名称或创建通过以前调用类 atom [RegisterClass](http://msdn.microsoft.com/library/windows/desktop/ms633586)或[RegisterClassEx](http://msdn.microsoft.com/library/windows/desktop/ms633587)。  
   
  *lpszWindow*  
- Pointer to a null-terminated string that specifies the window name (the window's title). If this parameter is **NULL**, all window names match.  
+ 指向以 null 结尾的字符串，指定的窗口名称 （窗口的标题）。 如果此参数为**NULL**，所有的窗口名称匹配。  
   
-### Return Value  
- If the function succeeds, the return value is a pointer to the window object having the specified class and window names. If the function fails, the return value is **NULL**.  
+### <a name="return-value"></a>返回值  
+ 如果函数成功，则返回值是指向具有指定的类和窗口名称的窗口对象的指针。 如果函数失败，返回值是**NULL**。  
   
-### Remarks  
- This member function emulates the functionality of the function [FindWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms633500), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[FindWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms633500)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="flashwindow"></a>  CWnd::FlashWindow  
- Flashes the given window once.  
+##  <a name="flashwindow"></a>CWnd::FlashWindow  
+ 使给定的窗口闪烁一次。  
   
 ```  
 BOOL FlashWindow(BOOL bInvert);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bInvert`  
- Specifies whether the `CWnd` is to be flashed or returned to its original state. The `CWnd` is flashed from one state to the other if `bInvert` is **TRUE**. If `bInvert` is **FALSE**, the window is returned to its original state (either active or inactive).  
+ 指定是否`CWnd`是种快闪或返回到其原始状态。 `CWnd`刷新从一个状态为其他如果`bInvert`是**TRUE**。 如果`bInvert`是**FALSE**，窗口返回到其原始状态 （活动或非活动）。  
   
-### Return Value  
- Nonzero if the window was active before the call to the `FlashWindow` member function; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果窗口处于活动状态对的调用之前的非零`FlashWindow`成员函数; 否则为 0。  
   
-### Remarks  
- For successive flashing, create a system timer and repeatedly call `FlashWindow`. Flashing the `CWnd` means changing the appearance of its title bar as if the `CWnd` were changing from inactive to active status, or vice versa. (An inactive title bar changes to an active title bar; an active title bar changes to an inactive title bar.)  
+### <a name="remarks"></a>备注  
+ 对于连续闪烁创建系统计时器并重复调用`FlashWindow`。 闪烁的`CWnd`意味着更改其标题栏的外观像`CWnd`更改了从非活动状态为活动状态，反之亦然。 （非活动标题栏将变为活动的标题栏; 一个活动的标题栏将变为非活动标题栏。）  
   
- Typically, a window is flashed to inform the user that it requires attention but that it does not currently have the input focus.  
+ 通常情况下，一个窗口是已刷新，以通知用户，它需要关注，但它不当前具有输入的焦点。  
   
- The `bInvert` parameter should be **FALSE** only when the window is getting the input focus and will no longer be flashing; it should be **TRUE** on successive calls while waiting to get the input focus.  
+ `bInvert`参数应为**FALSE**仅当窗口获取输入的焦点并不再将闪烁; 它应为**TRUE**上等待获取输入的焦点时的连续调用。  
   
- This function always returns nonzero for minimized windows. If the window is minimized, `FlashWindow` will simply flash the window's icon; `bInvert` is ignored for minimized windows.  
+ 此函数始终返回非零，最小化窗口。 最小化窗口时，`FlashWindow`窗口的图标;，只需将闪烁`bInvert`对于最小化窗口将被忽略。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#95](../../mfc/reference/codesnippet/cpp/cwnd-class_34.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 95](../../mfc/reference/codesnippet/cpp/cwnd-class_34.cpp)]  
   
-##  <a name="flashwindowex"></a>  CWnd::FlashWindowEx  
- Flashes the given window.  
+##  <a name="flashwindowex"></a>CWnd::FlashWindowEx  
+ 给定的窗口的闪烁时间。  
   
 ```  
-BOOL FlashWindowEx (DWORD dwFlags，  
-    UINT uCount  
+BOOL FlashWindowEx(
+    DWORD dwFlags,  
+    UINT uCount,  
     DWORD dwTimeout);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `dwFlags`  
- Specifies the flash status. For a complete list of values, see the [FLASHWINFO](http://msdn.microsoft.com/library/windows/desktop/ms679348) structure.  
+ 指定的闪存的状态。 值的完整列表，请参阅[FLASHWINFO](http://msdn.microsoft.com/library/windows/desktop/ms679348)结构。  
   
  `uCount`  
- Specifies the number of times to flash the window.  
+ 指定的窗口闪烁的次数。  
   
  `dwTimeout`  
- Specifies the rate, in milliseconds, at which the window will be flashed. If `dwTimeout` is zero, the function uses the default cursor blink rate.  
+ 指定速率，单位为毫秒，将从该处刷新窗口。 如果`dwTimeout`为零，该函数使用的默认光标闪烁速率。  
   
-### Return Value  
- The return value specifies the window's state before the call to the `FlashWindowEx` function. If the window caption was drawn as active before the call, the return value is nonzero. Otherwise, the return value is zero.  
+### <a name="return-value"></a>返回值  
+ 返回值指定对的调用之前的窗口的状态`FlashWindowEx`函数。 如果窗口标题绘制为活动的调用之前，返回的值不为零。 否则，返回值为零。  
   
-### Remarks  
- This method emulates the functionality of the function [FlashWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms679347), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法模拟该函数的功能[FlashWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms679347)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="fromhandle"></a>  CWnd::FromHandle  
- Returns a pointer to a `CWnd` object when given a handle to a window. If a `CWnd` object is not attached to the handle, a temporary `CWnd` object is created and attached.  
+##  <a name="fromhandle"></a>Cwnd:: Fromhandle  
+ 在提供了窗口的句柄时返回指向 `CWnd` 对象的指针。 如果 `CWnd` 对象未附加到该句柄，则会创建并附加一个临时 `CWnd` 对象。  
   
 ```  
-静态 CWnd * PASCAL FromHandle(HWND hWnd);
+static CWnd* PASCAL FromHandle(HWND hWnd);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `hWnd`  
- An `HWND` of a Windows window.  
+ `HWND`的 Windows 窗口。  
   
-### Return Value  
- Returns a pointer to a `CWnd` object when given a handle to a window. If a `CWnd` object is not attached to the handle, a temporary `CWnd` object is created and attached.  
+### <a name="return-value"></a>返回值  
+ 在提供了窗口的句柄时返回指向 `CWnd` 对象的指针。 如果 `CWnd` 对象未附加到该句柄，则会创建并附加一个临时 `CWnd` 对象。  
   
- The pointer may be temporary and should not be stored for later use.  
+ 该指针可能是暂时的，不应存储起来供将来使用。  
   
-##  <a name="fromhandlepermanent"></a>  CWnd::FromHandlePermanent  
- Returns a pointer to a `CWnd` object when given a handle to a window.  
+##  <a name="fromhandlepermanent"></a>CWnd::FromHandlePermanent  
+ 在提供了窗口的句柄时返回指向 `CWnd` 对象的指针。  
   
 ```  
-静态 CWnd * PASCAL FromHandlePermanent(HWND hWnd);
+static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `hWnd`  
- An `HWND` of a Windows window.  
+ `HWND`的 Windows 窗口。  
   
-### Return Value  
- A pointer to a `CWnd` object.  
+### <a name="return-value"></a>返回值  
+ 指向的指针`CWnd`对象。  
   
-### Remarks  
- If a `CWnd` object is not attached to the handle, **NULL** is returned.  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`对象未附加到该句柄， **NULL**返回。  
   
- This function, unlike [FromHandle](#fromhandle), does not create temporary objects.  
+ 此函数与[FromHandle](#fromhandle)，不会创建临时对象。  
   
-##  <a name="get_accchild"></a>  CWnd::get_accChild  
- Called by the framework to retrieve the address of an `IDispatch` interface for the specified child.  
+##  <a name="get_accchild"></a>CWnd::get_accChild  
+ 由框架调用以检索指定子级的 `IDispatch` 接口地址。  
   
 ```  
-虚拟 HRESULT get_accChild (变体 varChild，  
+virtual HRESULT get_accChild(
+    VARIANT varChild,  
     IDispatch** ppdispChild);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Identifies the child whose `IDispatch` interface is to be retrieved.  
+ 标识的子级其`IDispatch`接口是要检索。  
   
  *ppdispChild*  
- Receives the address of the child object's `IDispatch` interface.  
+ 接收的子对象的地址`IDispatch`接口。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accChild](http://msdn.microsoft.com/library/windows/desktop/dd318475) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accChild](http://msdn.microsoft.com/library/windows/desktop/dd318475)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class if you have nonwindowed user interface elements (other than windowless ActiveX controls, which MFC handles).  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
- For more information, see [IAccessible::get_accChild](http://msdn.microsoft.com/library/windows/desktop/dd318475) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accChild](http://msdn.microsoft.com/library/windows/desktop/dd318475)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accchildcount"></a>  CWnd::get_accChildCount  
- Called by the framework to retrieve the number of children belonging to this object.  
+##  <a name="get_accchildcount"></a>CWnd::get_accChildCount  
+ 由框架调用调用以检索属于该对象的子级的个数。  
   
 ```  
-虚拟 HRESULT get_accChildCount (long 类型的值 * pcountChildren);
+virtual HRESULT get_accChildCount(long* pcountChildren);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pcountChildren*  
- Receives the number of children.  
+ 接收的子级的个数。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accChildCount](http://msdn.microsoft.com/library/windows/desktop/dd318476) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accChildCount](http://msdn.microsoft.com/library/windows/desktop/dd318476)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class if you have nonwindowed user interface elements (other than windowless ActiveX controls, which MFC handles). Call the base class version and then add the nonwindowed child elements.  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。 调用基类版本，然后添加 nonwindowed 子元素。  
   
- For more information, see [IAccessible::get_accChildCount](http://msdn.microsoft.com/library/windows/desktop/dd318476) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accChildCount](http://msdn.microsoft.com/library/windows/desktop/dd318476)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accdefaultaction"></a>  CWnd::get_accDefaultAction  
- Called by the framework to retrieve a string that describes the object's default action.  
+##  <a name="get_accdefaultaction"></a>CWnd::get_accDefaultAction  
+ 由框架调用以检索描述对象默认操作的字符串。  
   
 ```  
-虚拟 HRESULT get_accDefaultAction (变体 varChild，  
+virtual HRESULT get_accDefaultAction(
+    VARIANT varChild,  
     BSTR* pszDefaultAction);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Specifies whether the default action to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain information about the object) or a child ID (to obtain information about the object's child element).  
+ 指定是否要检索的默认操作为该对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
  *pszDefaultAction*  
- Address of a `BSTR` that receives a localized string describing the default action for the specified object, or NULL if this object has no default action.  
+ 地址`BSTR`接收描述的默认操作为指定的对象，则为 NULL，如果此对象没有默认操作的本地化的字符串。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318477) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318477)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class to describe your object's default action.  
+ 重写此函数在中的您`CWnd`-派生类来描述对象的默认操作。  
   
- For more information, see [IAccessible::get_accDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318477) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318477)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accdescription"></a>  CWnd::get_accDescription  
- Called by framework to retrieve a string that describes the visual appearance of the specified object.  
+##  <a name="get_accdescription"></a>CWnd::get_accDescription  
+ 由框架调用以检索描述指定对象的可视外观的字符串。  
   
 ```  
-虚拟 HRESULT get_accDescription (变体 varChild，  
+virtual HRESULT get_accDescription(
+    VARIANT varChild,  
     BSTR* pszDescription);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Specifies whether the description to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain information about the object) or a child ID (to obtain information about the object's child element).  
+ 指定要检索的说明是否的对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
  `pszDescription`  
- Address of a `BSTR` that receives a localized string describing the specified object, or NULL if no description is available for this object.  
+ 地址`BSTR`接收本地化的字符串描述所指定的对象，或如果没有任何其他说明是可用于此对象为 NULL。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accDescription](http://msdn.microsoft.com/library/windows/desktop/dd318478) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accDescription](http://msdn.microsoft.com/library/windows/desktop/dd318478)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class to describe your object. Call the base class version and add your description.  
+ 重写此函数在中的您`CWnd`-派生类来描述你的对象。 调用基类版本，并添加您的说明。  
   
- For more information, see [IAccessible::get_accDescription](http://msdn.microsoft.com/library/windows/desktop/dd318478) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accDescription](http://msdn.microsoft.com/library/windows/desktop/dd318478)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accfocus"></a>  CWnd::get_accFocus  
- Called by the framework to retrieve the object that has the keyboard focus.  
+##  <a name="get_accfocus"></a>CWnd::get_accFocus  
+ 由框架调用以检索具有键盘焦点的对象。  
   
 ```  
-虚拟 HRESULT get_accFocus (VARIANT * pvarChild);
+virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pvarChild`  
- Receives information about the object that has the focus. See *pvarID* in [IAccessible::get_accFocus](http://msdn.microsoft.com/library/windows/desktop/dd318479) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 接收具有焦点的对象有关的信息。 请参阅*pvarID*中[IAccessible::get_accFocus](http://msdn.microsoft.com/library/windows/desktop/dd318479)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in **IAccessible::get_accFocus** in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::get_accFocus**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class if you have nonwindowed user interface elements (other than windowless ActiveX controls, which MFC handles).  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
- For more information, see [IAccessible::get_accFocus](http://msdn.microsoft.com/library/windows/desktop/dd318479) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accFocus](http://msdn.microsoft.com/library/windows/desktop/dd318479)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_acchelp"></a>  CWnd::get_accHelp  
- Called by the framework to retrieve an object's **Help** property string.  
+##  <a name="get_acchelp"></a>CWnd::get_accHelp  
+ 由框架用于检索对象的调用**帮助**属性字符串。  
   
 ```  
-虚拟 HRESULT get_accHelp (变体 varChild，  
+virtual HRESULT get_accHelp(
+    VARIANT varChild,  
     BSTR* pszHelp);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Specifies whether the help information to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain information about the object) or a child ID (to obtain information about the object's child element).  
+ 指定要检索的帮助信息是否的对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
  *pszHelp*  
- Address of a `BSTR` that receives the localized string containing the help information for the specified object, or NULL if no help information is available.  
+ 地址`BSTR`接收包含指定的对象，则为 NULL 的帮助信息，如果没有帮助的信息的本地化的字符串。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accHelp](http://msdn.microsoft.com/library/windows/desktop/dd318480) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accHelp](http://msdn.microsoft.com/library/windows/desktop/dd318480)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class to provide help text for your object.  
+ 重写此函数在中的您`CWnd`-派生类为你的对象提供帮助文本。  
   
- For more information, see [IAccessible::get_accHelp](http://msdn.microsoft.com/library/windows/desktop/dd318480) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accHelp](http://msdn.microsoft.com/library/windows/desktop/dd318480)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_acchelptopic"></a>  CWnd::get_accHelpTopic  
- Called by the framework to retrieve the full path of the **WinHelp** file associated with the specified object and the identifier of the appropriate topic within that file.  
+##  <a name="get_acchelptopic"></a>CWnd::get_accHelpTopic  
+ 由框架后，若要检索的完整路径调用**WinHelp**与指定的对象和该文件内相应主题的标识符关联的文件。  
   
 ```  
-虚拟 HRESULT get_accHelpTopic (BSTR* pszHelpFile，变体 varChild 长*pidTopic);
+virtual HRESULT get_accHelpTopic(
+    BSTR* pszHelpFile,  
+    VARIANT varChild,  
+    long* pidTopic);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pszHelpFile`  
- Address of a `BSTR` that receives the full path of the `WinHelp` file associated with the specified object, if any.  
+ 地址`BSTR`接收的完整路径`WinHelp`与指定的对象，如果任何关联的文件。  
   
  `varChild`  
- Specifies whether the Help topic to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain a Help topic for the object) or a child ID (to obtain a Help topic for one of the object's child elements).  
+ 指定要检索的帮助主题是否为对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （以获取帮助主题的对象） 或一个子 ID （以获取一个对象的子元素的帮助主题）。  
   
  `pidTopic`  
- Identifies the Help file topic associated with the specified object. See `pidTopic` in [IAccessible::get_accHelpTopic](http://msdn.microsoft.com/library/windows/desktop/dd318481) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 标识与指定对象关联的帮助文件主题。 请参阅`pidTopic`中[IAccessible::get_accHelpTopic](http://msdn.microsoft.com/library/windows/desktop/dd318481)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in **IAccessible::get_accHelpTopic** in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::get_accHelpTopic**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class to provide help information about your object.  
+ 重写此函数在中的您`CWnd`-派生类以提供有关你的对象的帮助信息。  
   
- For more information, see [IAccessible::get_accHelpTopic](http://msdn.microsoft.com/library/windows/desktop/dd318481) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accHelpTopic](http://msdn.microsoft.com/library/windows/desktop/dd318481)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_acckeyboardshortcut"></a>  CWnd::get_accKeyboardShortcut  
- Called by the framework to retrieve the specified object's shortcut key or access key.  
+##  <a name="get_acckeyboardshortcut"></a>CWnd::get_accKeyboardShortcut  
+ 由框架调用以检索指定对象的快捷键或访问键。  
   
 ```  
-虚拟 HRESULT get_accKeyboardShortcut (变体 varChild，  
+virtual HRESULT get_accKeyboardShortcut(
+    VARIANT varChild,  
     BSTR* pszKeyboardShortcut);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Specifies whether the keyboard shortcut to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain information about the object) or a child ID (to obtain information about the object's child element).  
+ 指定要检索的键盘快捷方式是否的对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
  *pszKeyboardShortcut*  
- Address of a `BSTR` that receives a localized string identifying the keyboard shortcut, or NULL if no keyboard shortcut is associated with the specified object.  
+ 地址`BSTR`接收本地化的字符串标识键盘快捷方式，则为 NULL 没有键盘快捷方式是否与指定对象关联。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accKeyboardShortcut](http://msdn.microsoft.com/library/windows/desktop/dd318482) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accKeyboardShortcut](http://msdn.microsoft.com/library/windows/desktop/dd318482)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class to identify the keyboard shortcut for your object.  
+ 重写此函数在中的您`CWnd`-派生类来标识你的对象的键盘快捷方式。  
   
- For more information, see [IAccessible::get_accKeyboardShortcut](http://msdn.microsoft.com/library/windows/desktop/dd318482) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accKeyboardShortcut](http://msdn.microsoft.com/library/windows/desktop/dd318482)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accname"></a>  CWnd::get_accName  
- Called by the framework to retrieve the name of the specified object.  
+##  <a name="get_accname"></a>CWnd::get_accName  
+ 由框架调用以检索指定对象的名称。  
   
 ```  
-虚拟 HRESULT get_accName (变体 varChild，  
+virtual HRESULT get_accName(
+    VARIANT varChild,  
     BSTR* pszName);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Specifies whether the name to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain information about the object) or a child ID (to obtain information about the object's child element).  
+ 指定要检索的名称是否为对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
  `pszName`  
- Address of a `BSTR` that receives a string containing the specified object's name.  
+ 地址`BSTR`接收包含指定的对象的名称的字符串。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accName](http://msdn.microsoft.com/library/windows/desktop/dd318483) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accName](http://msdn.microsoft.com/library/windows/desktop/dd318483)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class to return the name of your object.  
+ 重写此函数在中的您`CWnd`-派生类返回的对象名称。  
   
- For more information, see [IAccessible::get_accName](http://msdn.microsoft.com/library/windows/desktop/dd318483) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accName](http://msdn.microsoft.com/library/windows/desktop/dd318483)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accparent"></a>  CWnd::get_accParent  
- Called by the framework to retrieve the `IDispatch` interface of the object's parent.  
+##  <a name="get_accparent"></a>CWnd::get_accParent  
+ 由框架调用以检索对象父级的 `IDispatch` 接口。  
   
 ```  
-虚拟 HRESULT get_accParent (IDispatch * * ppdispParent);
+virtual HRESULT get_accParent(IDispatch** ppdispParent);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *ppdispParent*  
- Receives the address of the parent object's `IDispatch` interface. The variable is set to NULL if no parent exists, or if the child cannot access its parent.  
+ 接收的父对象的地址`IDispatch`接口。 如果存在没有父级，或如果子无法访问其父级，则变量设置为 NULL。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accParent](http://msdn.microsoft.com/library/windows/desktop/dd318484) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accParent](http://msdn.microsoft.com/library/windows/desktop/dd318484)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- In most cases you don't have to override this function.  
+ 在大多数情况下，你无需重写此函数。  
   
- For more information, see [IAccessible::get_accParent](http://msdn.microsoft.com/library/windows/desktop/dd318484) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accParent](http://msdn.microsoft.com/library/windows/desktop/dd318484)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accrole"></a>  CWnd::get_accRole  
- Called by the framework to retrieve information that describes the role of the specified object.  
+##  <a name="get_accrole"></a>CWnd::get_accRole  
+ 由框架调用以检索描述指定对象的角色的信息。  
   
 ```  
-虚拟 HRESULT get_accRole (变体 varChild，  
+virtual HRESULT get_accRole(
+    VARIANT varChild,  
     VARIANT* pvarRole);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Specifies whether the role information to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain information about the object) or a child ID (to obtain information about the object's child element).  
+ 指定要检索的角色信息是否的对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
  `pvarRole`  
- Receives the role information. See `pvarRole` in [IAccessible::get_accRole](http://msdn.microsoft.com/library/windows/desktop/dd318485) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 接收角色信息。 请参阅`pvarRole`中[IAccessible::get_accRole](http://msdn.microsoft.com/library/windows/desktop/dd318485)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in **IAccessible::get_accRole** in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::get_accRole**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class if you have nonwindowed user interface elements (other than windowless ActiveX controls, which MFC handles).  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
- For more information, see [IAccessible::get_accRole](http://msdn.microsoft.com/library/windows/desktop/dd318485) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accRole](http://msdn.microsoft.com/library/windows/desktop/dd318485)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accselection"></a>  CWnd::get_accSelection  
- Called by the framework to retrieve the selected children of this object.  
+##  <a name="get_accselection"></a>CWnd::get_accSelection  
+ 由框架调用以检索该对象的选定子级。  
   
 ```  
-虚拟 HRESULT get_accSelection (VARIANT * pvarChildren);
+virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pvarChildren`  
- Receives information about which children are selected. See `pvarChildren` in [IAccessible::get_accSelection](http://msdn.microsoft.com/library/windows/desktop/dd318486) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 接收有关哪些选择子级的信息。 请参阅`pvarChildren`中[IAccessible::get_accSelection](http://msdn.microsoft.com/library/windows/desktop/dd318486)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in **IAccessible::get_accSelection** in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::get_accSelection**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class if you have nonwindowed user interface elements (other than windowless ActiveX controls, which MFC handles).  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
- For more information, see [IAccessible::get_accSelection](http://msdn.microsoft.com/library/windows/desktop/dd318486) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accSelection](http://msdn.microsoft.com/library/windows/desktop/dd318486)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accstate"></a>  CWnd::get_accState  
- Called by the framework to retrieve the current state of the specified object.  
+##  <a name="get_accstate"></a>CWnd::get_accState  
+ 由框架调用以检索指定对象的当前状态。  
   
 ```  
-虚拟 HRESULT get_accState (变体 varChild，  
+virtual HRESULT get_accState(
+    VARIANT varChild,  
     VARIANT* pvarState);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Specifies whether the state information to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain information about the object) or a child ID (to obtain information about the object's child element).  
+ 指定要检索的状态信息是否的对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
  `pvarState`  
- Receives information about the object's state. See `pvarState` in [IAccessible::get_accState](http://msdn.microsoft.com/library/windows/desktop/dd318487) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 接收有关对象的状态的信息。 请参阅`pvarState`中[IAccessible::get_accState](http://msdn.microsoft.com/library/windows/desktop/dd318487)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in **IAccessible::get_accState** in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中**IAccessible::get_accState**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class if you have nonwindowed user interface elements (other than windowless ActiveX controls, which MFC handles).  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
- For more information, see [IAccessible::get_accState](http://msdn.microsoft.com/library/windows/desktop/dd318487) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accState](http://msdn.microsoft.com/library/windows/desktop/dd318487)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="get_accvalue"></a>  CWnd::get_accValue  
- Called by the framework to retrieve the value of the specified object.  
+##  <a name="get_accvalue"></a>CWnd::get_accValue  
+ 由框架调用以检索指定对象的值。  
   
 ```  
-虚拟 HRESULT get_accValue (变体 varChild，  
+virtual HRESULT get_accValue(
+    VARIANT varChild,  
     BSTR* pszValue);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `varChild`  
- Specifies whether the value information to be retrieved is that of the object or one of the object's child elements. This parameter can be either CHILDID_SELF (to obtain information about the object) or a child ID (to obtain information about the object's child element).  
+ 指定要检索的值信息是否的对象或对象的子元素之一。 此参数可以为 CHILDID_SELF （若要获取有关对象的信息） 或一个子 ID （以获取有关对象的子元素的信息）。  
   
  `pszValue`  
- Address of the `BSTR` that receives a localized string containing the object's current value.  
+ 地址`BSTR`接收包含该对象的当前值的本地化的字符串。  
   
-### Return Value  
- Returns S_OK on success, a COM error code on failure. See **Return Values** in [IAccessible::get_accValue](http://msdn.microsoft.com/library/windows/desktop/dd318488) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 如果成功，失败 COM 错误代码返回，则为 S_OK。 请参阅**返回值**中[IAccessible::get_accValue](http://msdn.microsoft.com/library/windows/desktop/dd318488)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- This function is part of MFC's [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) support.  
+### <a name="remarks"></a>备注  
+ 此函数是 MFC 的一部分[Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592)支持。  
   
- Override this function in your `CWnd`-derived class if you have nonwindowed user interface elements (other than windowless ActiveX controls, which MFC handles).  
+ 重写此函数在中的您`CWnd`-派生类，如果你有 nonwindowed 用户界面元素 （而不是无窗口 ActiveX 控件，MFC 处理）。  
   
- For more information, see [IAccessible::get_accValue](http://msdn.microsoft.com/library/windows/desktop/dd318488) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关详细信息，请参阅[IAccessible::get_accValue](http://msdn.microsoft.com/library/windows/desktop/dd318488)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="getactivewindow"></a>  CWnd::GetActiveWindow  
- Retrieves a pointer to the active window.  
-  
-```  
-静态 CWnd * PASCAL GetActiveWindow();
-```  
-  
-### Return Value  
- The active window or **NULL** if no window was active at the time of the call. The pointer may be temporary and should not be stored for later use.  
-  
-### Remarks  
- The active window is either the window that has the current input focus or the window explicitly made active by the [SetActiveWindow](#setactivewindow) member function.  
-  
-##  <a name="getancestor"></a>  CWnd::GetAncestor  
- Retrieves the ancestor window object of the specified window.  
+##  <a name="getactivewindow"></a>CWnd::GetActiveWindow  
+ 检索指向活动窗口的指针。  
   
 ```  
-CWnd * GetAncestor(UINT gaFlags) const;  
+static CWnd* PASCAL GetActiveWindow();
 ```  
   
-### Parameters  
+### <a name="return-value"></a>返回值  
+ 活动窗口或**NULL**如果没有窗口处于活动状态的时间调用。 该指针可能是暂时的，不应存储起来供将来使用。  
+  
+### <a name="remarks"></a>备注  
+ 活动窗口是当前具有输入的焦点的窗口或明确指定为活动的窗口[SetActiveWindow](#setactivewindow)成员函数。  
+  
+##  <a name="getancestor"></a>CWnd::GetAncestor  
+ 检索指定窗口的上级先窗口对象。  
+  
+```  
+CWnd* GetAncestor(UINT gaFlags) const;  
+```  
+  
+### <a name="parameters"></a>参数  
  *gaFlags*  
- Specifies the ancestor to be retrieved. For a complete list of possible values, see [GetAncestor](http://msdn.microsoft.com/library/windows/desktop/ms633502).  
+ 指定要检索的上级。 有关可能的值的完整列表，请参阅[GetAncestor](http://msdn.microsoft.com/library/windows/desktop/ms633502)。  
   
-### Return Value  
- If the function succeeds, the return value is a pointer to the ancestor window object. If the function fails, the return value is **NULL**.  
+### <a name="return-value"></a>返回值  
+ 如果函数成功，则返回值是指向上级先窗口对象的指针。 如果函数失败，返回值是**NULL**。  
   
-### Remarks  
- This member function emulates the functionality of the function [GetAncestor](http://msdn.microsoft.com/library/windows/desktop/ms633502), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[GetAncestor](http://msdn.microsoft.com/library/windows/desktop/ms633502)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="getcapture"></a>  CWnd::GetCapture  
- Retrieves the window that has the mouse capture.  
-  
-```  
-静态 CWnd * PASCAL GetCapture();
-```  
-  
-### Return Value  
- Identifies the window that has the mouse capture. It is **NULL** if no window has the mouse capture.  
-  
- The return value may be temporary and should not be stored for later use.  
-  
-### Remarks  
- Only one window has the mouse capture at any given time. A window receives the mouse capture when the [SetCapture](#setcapture) member function is called. This window receives mouse input whether or not the cursor is within its borders.  
-  
-##  <a name="getcaretpos"></a>  CWnd::GetCaretPos  
- Retrieves the client coordinates of the caret's current position and returns them as a `CPoint`.  
+##  <a name="getcapture"></a>CWnd::GetCapture  
+ 检索具有鼠标捕获的窗口。  
   
 ```  
-静态 CPoint PASCAL GetCaretPos();
+static CWnd* PASCAL GetCapture();
 ```  
   
-### Return Value  
- [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object containing the coordinates of the caret's position.  
+### <a name="return-value"></a>返回值  
+ 标识具有鼠标捕获的窗口。 它是**NULL**如果没有窗口具有鼠标捕获。  
   
-### Remarks  
- The caret position is given in the client coordinates of the `CWnd` window.  
+ 返回值可能是暂时，并且不应存储起来供以后使用。  
   
-##  <a name="getcheckedradiobutton"></a>  CWnd::GetCheckedRadioButton  
- Retrieves the ID of the currently checked radio button in the specified group.  
+### <a name="remarks"></a>备注  
+ 只有一个窗口具有鼠标捕获在任何给定时间。 在窗口接收鼠标捕获时[SetCapture](#setcapture)调用成员函数。 指示光标在其边框内，此窗口将接收鼠标输入。  
+  
+##  <a name="getcaretpos"></a>CWnd::GetCaretPos  
+ 检索插入符号的当前位置的客户端坐标，并将它们作为返回`CPoint`。  
   
 ```  
-int GetCheckedRadioButton (int nIDFirstButton，  
+static CPoint PASCAL GetCaretPos();
+```  
+  
+### <a name="return-value"></a>返回值  
+ [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，其中包含脱字号的位置的坐标。  
+  
+### <a name="remarks"></a>备注  
+ 中的客户端坐标提供脱字号位置`CWnd`窗口。  
+  
+##  <a name="getcheckedradiobutton"></a>CWnd::GetCheckedRadioButton  
+ 检索指定的组中当前选中的单选按钮的 ID。  
+  
+```  
+int GetCheckedRadioButton(
+    int nIDFirstButton,  
     int nIDLastButton);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDFirstButton`  
- Specifies the integer identifier of the first radio button in the group.  
+ 指定组中的第一个单选按钮的整数标识符。  
   
  `nIDLastButton`  
- Specifies the integer identifier of the last radio button in the group.  
+ 指定组中的最后一个单选按钮的整数标识符。  
   
-### Return Value  
- ID of the checked radio button, or 0 if none is selected.  
+### <a name="return-value"></a>返回值  
+ 已选中的单选按钮或如果未选择任何为 0 的 ID。  
   
-##  <a name="getclientrect"></a>  CWnd::GetClientRect  
- Copies the client coordinates of the `CWnd` client area into the structure pointed to by `lpRect`.  
+##  <a name="getclientrect"></a>CWnd::GetClientRect  
+ 将复制的客户端坐标`CWnd`到结构的客户端区域的指向`lpRect`。  
   
 ```  
-void GetClientRect (LPRECT lpRect) 常量;  
+void GetClientRect(LPRECT lpRect) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpRect`  
- Points to a [RECT structure](../../mfc/reference/rect-structure1.md) or a `CRect` object to receive the client coordinates. The **left** and **top** members will be 0. The **right** and **bottom** members will contain the width and height of the window.  
+ 指向[RECT 结构](../../mfc/reference/rect-structure1.md)或`CRect`对象以便接收客户端坐标。 **左**和**顶部**成员将为 0。 **右**和**底部**成员将包含的宽度和窗口的高度。  
   
-### Remarks  
- The client coordinates specify the upper-left and lower-right corners of the client area. Since client coordinates are relative to the upper-left corners of the `CWnd` client area, the coordinates of the upper-left corner are (0,0).  
+### <a name="remarks"></a>备注  
+ 客户端坐标指定客户端区域的左上角和右下角。 由于客户端坐标相对于的左上角`CWnd`客户端区域中的左上角的坐标为 (0，0)。  
   
-### Example  
-  See the example for [CWnd::IsIconic](#isiconic).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::IsIconic](#isiconic)。  
   
-##  <a name="getclipboardowner"></a>  CWnd::GetClipboardOwner  
- Retrieves the current owner of the Clipboard.  
-  
-```  
-静态 CWnd * PASCAL GetClipboardOwner();
-```  
-  
-### Return Value  
- Identifies the window that owns the Clipboard if the function is successful. Otherwise, it is **NULL**.  
-  
- The returned pointer may be temporary and should not be stored for later use.  
-  
-### Remarks  
- The Clipboard can still contain data even if it is not currently owned.  
-  
-##  <a name="getclipboardviewer"></a>  CWnd::GetClipboardViewer  
- Retrieves the first window in the Clipboard-viewer chain.  
+##  <a name="getclipboardowner"></a>CWnd::GetClipboardOwner  
+ 检索剪贴板当前所有者。  
   
 ```  
-静态 CWnd * PASCAL GetClipboardViewer();
+static CWnd* PASCAL GetClipboardOwner();
 ```  
   
-### Return Value  
- Identifies the window currently responsible for displaying the Clipboard if successful; otherwise **NULL** (for example, if there is no viewer).  
+### <a name="return-value"></a>返回值  
+ 标识拥有剪贴板，如果该函数成功的窗口。 否则，它是**NULL**。  
   
- The returned pointer may be temporary and should not be stored for later use.  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
-##  <a name="getcontrolunknown"></a>  CWnd::GetControlUnknown  
- Call this member function to retrieve a pointer to an unknown OLE control.  
+### <a name="remarks"></a>备注  
+ 剪贴板仍然可以包含数据，即使不当前拥有。  
+  
+##  <a name="getclipboardviewer"></a>CWnd::GetClipboardViewer  
+ 检索剪贴板查看器链中的第一个窗口。  
+  
+```  
+static CWnd* PASCAL GetClipboardViewer();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标识当前负责显示剪贴板如果成功，则窗口否则为**NULL** （例如，如果没有任何查看工具）。  
+  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
+  
+##  <a name="getcontrolunknown"></a>CWnd::GetControlUnknown  
+ 调用此成员函数以检索指向未知 OLE 控件的指针。  
   
 ```  
 LPUNKNOWN GetControlUnknown();
 ```  
   
-### Return Value  
- A pointer to the [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface of the OLE control represented by this `CWnd` object. If this object does not represent an OLE control, the return value is **NULL**.  
+### <a name="return-value"></a>返回值  
+ 指向的指针[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)由此 OLE 控件的接口`CWnd`对象。 如果此对象不表示 OLE 控件，则返回值是**NULL**。  
   
-### Remarks  
- You should not release this **IUnknown** pointer. Typically, you would use to obtain a specific interface of the control.  
+### <a name="remarks"></a>备注  
+ 不应释放这**IUnknown**指针。 通常情况下，你将获取特定接口的控件。  
   
- The interface pointer returned by **GetControlUnknown** is not reference-counted. Do not call [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) on the pointer unless you have previously called [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) on it.  
+ 返回的接口指针**GetControlUnknown**不引用计数。 不要调用[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)指针上除非以前调用了[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)在其上。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#96](../../mfc/reference/codesnippet/cpp/cwnd-class_35.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 96](../../mfc/reference/codesnippet/cpp/cwnd-class_35.cpp)]  
   
-##  <a name="getcurrentmessage"></a>  CWnd::GetCurrentMessage  
- Returns a pointer to the message this window is currently processing. Should only be called when in an **On***Message* message-handler member function.  
-  
-```  
-静态 const MSG * PASCAL GetCurrentMessage();
-```  
-  
-### Return Value  
- Returns a pointer to the [MSG](../../mfc/reference/msg-structure1.md) structure that contains the message the window is currently processing. Should only be called when in an **On***Message* handler.  
-  
-### Example  
-  See the example for [CMDIFrameWnd::MDICascade](../../mfc/reference/cmdiframewnd-class.md#mdicascade).  
-  
-##  <a name="getdc"></a>  CWnd::GetDC  
- Retrieves a pointer to a common, class, or private device context for the client area depending on the class style specified for the `CWnd`.  
+##  <a name="getcurrentmessage"></a>CWnd::GetCurrentMessage  
+ 返回指向此窗口当前正在处理的消息的指针。 仅应调用时**上***消息*消息处理程序成员函数。  
   
 ```  
-CDC * GetDC();
+static const MSG* PASCAL GetCurrentMessage();
 ```  
   
-### Return Value  
- Identifies the device context for the `CWnd` client area if successful; otherwise, the return value is **NULL**. The pointer may be temporary and should not be stored for later use.  
+### <a name="return-value"></a>返回值  
+ 返回一个指向[消息](../../mfc/reference/msg-structure1.md)当前正在处理包含窗口的消息的结构。 仅应调用时**上***消息*处理程序。  
   
-### Remarks  
- For common device contexts, `GetDC` assigns default attributes to the context each time it is retrieved. For class and private contexts, `GetDC` leaves the previously assigned attributes unchanged. The device context can be used in subsequent graphics device interface (GDI) functions to draw in the client area.  
+### <a name="example"></a>示例  
+  请参阅示例[CMDIFrameWnd::MDICascade](../../mfc/reference/cmdiframewnd-class.md#mdicascade)。  
   
- Unless the device context belongs to a window class, the [ReleaseDC](#releasedc) member function must be called to release the context after painting.  
-  
- A device context belonging to the `CWnd` class is returned by the `GetDC` member function if **CS_CLASSDC**, **CS_OWNDC**, or **CS_PARENTDC** was specified as a style in the **WNDCLASS** structure when the class was registered.  
-  
-##  <a name="getdcex"></a>  CWnd::GetDCEx  
- Retrieves the handle of a device context for the `CWnd` window.  
+##  <a name="getdc"></a>Cwnd:: Getdc  
+ 检索指向一个常见、 类或专用设备上下文，具体取决于为指定的类样式的客户端区`CWnd`。  
   
 ```  
-CDC* GetDCEx (CRgn* prgnClip，  
-    DWORD 标志）;
+CDC* GetDC();
 ```  
   
-### Parameters  
+### <a name="return-value"></a>返回值  
+ 标识的设备上下文`CWnd`工作区成功; 否则为返回的值是否**NULL**。 该指针可能是暂时的，不应存储起来供将来使用。  
+  
+### <a name="remarks"></a>备注  
+ 对于常见的设备上下文，`GetDC`检索到它每次将默认属性分配给上下文。 类和私有上下文`GetDC`离开以前分配的属性保持不变。 设备上下文可以在后续的图形设备接口 (GDI) 函数中，用于在客户端区域中进行绘制。  
+  
+ 设备上下文所属的窗口类，除非[ReleaseDC](#releasedc)必须调用成员函数来绘制后释放上下文。  
+  
+ 设备上下文属于`CWnd`类由`GetDC`成员函数，如果**CS_CLASSDC**， **CS_OWNDC**，或**CS_PARENTDC**指定为中的样式**WNDCLASS**结构注册类时。  
+  
+##  <a name="getdcex"></a>CWnd::GetDCEx  
+ 检索设备上下文的句柄`CWnd`窗口。  
+  
+```  
+CDC* GetDCEx(
+    CRgn* prgnClip,  
+    DWORD flags);
+```  
+  
+### <a name="parameters"></a>参数  
  `prgnClip`  
- Identifies a clipping region that may be combined with the visible region of the client window.  
+ 标识可能结合客户端窗口的可见区域的剪辑区域。  
   
  `flags`  
- Can have one of the following preset values:  
+ 可以具有以下预设值之一︰  
   
-- **DCX_CACHE** Returns a device context from the cache rather than the **OWNDC** or **CLASSDC** window. Overrides **CS_OWNDC** and **CS_CLASSDC**.  
+- **DCX_CACHE**从缓存中返回设备上下文而不是**OWNDC**或**CLASSDC**窗口。 重写**CS_OWNDC**和**CS_CLASSDC**。  
   
-- **DCX_CLIPCHILDREN** Excludes the visible regions of all child windows below the `CWnd` window.  
+- **DCX_CLIPCHILDREN**排除下面的所有子窗口的可见区域`CWnd`窗口。  
   
-- **DCX_CLIPSIBLINGS** Excludes the visible regions of all sibling windows above the `CWnd` window.  
+- **DCX_CLIPSIBLINGS**排除所有同级窗口上面的可见区域`CWnd`窗口。  
   
-- **DCX_EXCLUDERGN** Excludes the clipping region identified by `prgnClip` from the visible region of the returned device context.  
+- **DCX_EXCLUDERGN**排除由标识的剪辑区域`prgnClip`从返回的设备上下文的可见区域。  
   
-- **DCX_INTERSECTRGN** Intersects the clipping region identified by `prgnClip` within the visible region of the returned device context.  
+- **DCX_INTERSECTRGN**与由标识该剪辑区域相交`prgnClip`中返回的设备上下文的可见区域。  
   
-- **DCX_LOCKWINDOWUPDATE** Allows drawing even if there is a `LockWindowUpdate` call in effect that would otherwise exclude this window. This value is used for drawing during tracking.  
+- **DCX_LOCKWINDOWUPDATE**允许绘图，即使没有`LockWindowUpdate`否则中排除此窗口的有效调用。 此值用于在跟踪期间的绘图。  
   
-- **DCX_PARENTCLIP** Uses the visible region of the parent window and ignores the parent window's **WS_CLIPCHILDREN** and **WS_PARENTDC** style bits. This value sets the device context's origin to the upper-left corner of the `CWnd` window.  
+- **DCX_PARENTCLIP**使用父窗口的可见区域并忽略父窗口的**WS_CLIPCHILDREN**和**WS_PARENTDC**样式位。 此值设置到的左上角的设备上下文的源`CWnd`窗口。  
   
-- **DCX_WINDOW** Returns a device context that corresponds to the window rectangle rather than the client rectangle.  
+- **DCX_WINDOW**对应设备上下文返回窗口矩形，而不是客户端矩形。  
   
-### Return Value  
- The device context for the specified window if the function is successful; otherwise **NULL**.  
+### <a name="return-value"></a>返回值  
+ 如果该函数成功，则指定的窗口设备上下文否则为**NULL**。  
   
-### Remarks  
- The device context can be used in subsequent GDI functions to draw in the client area.  
+### <a name="remarks"></a>备注  
+ 设备上下文可以在后续的 GDI 函数中，用于在客户端区域中进行绘制。  
   
- This function, which is an extension to the [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) function, gives an application more control over how and whether a device context for a window is clipped.  
+ 此函数，即扩展到[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)函数中，提供更好地控制是否以及如何将剪切窗口设备上下文的应用程序。  
   
- Unless the device context belongs to a window class, the [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) function must be called to release the context after drawing. Since only five common device contexts are available at any given time, failure to release a device context can prevent other applications from gaining access to a device context.  
+ 设备上下文所属的窗口类，除非[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)函数必须调用以绘制后释放上下文。 由于在任何给定时间都可以仅五个常见的设备上下文，无法释放设备上下文可以阻止其他应用程序获得对设备上下文的访问。  
   
- To obtain a cached device context, an application must specify [DCX_CACHE](http://msdn.microsoft.com/library/windows/desktop/dd144873). If **DCX_CACHE** is not specified and the window is neither **CS_OWNDC** nor [CS_CLASSDC](http://msdn.microsoft.com/library/windows/desktop/ms633576), this function returns **NULL**.  
+ 若要获取缓存的设备上下文，应用程序必须指定[DCX_CACHE](http://msdn.microsoft.com/library/windows/desktop/dd144873)。 如果**DCX_CACHE**未指定和窗口既不是**CS_OWNDC**也不[CS_CLASSDC](http://msdn.microsoft.com/library/windows/desktop/ms633576)，此函数将返回**NULL**。  
   
- A device context with special characteristics is returned by the [GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873) function if the **CS_CLASSDC**, [CS_OWNDC](http://msdn.microsoft.com/library/windows/desktop/ms633576), or [CS_PARENTDC](http://msdn.microsoft.com/library/windows/desktop/ms633576) style was specified in the [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure when the class was registered.  
+ 设备上下文具有特殊特性返回由[GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873)函数如果**CS_CLASSDC**， [CS_OWNDC](http://msdn.microsoft.com/library/windows/desktop/ms633576)，或[CS_PARENTDC](http://msdn.microsoft.com/library/windows/desktop/ms633576)中指定的样式[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)结构注册类时。  
   
- For more information about these characteristics, see the description of the **WNDCLASS** structure in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 有关这些特征的详细信息，请参阅的说明**WNDCLASS**结构[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="getdcrendertarget"></a>  CWnd::GetDCRenderTarget  
- Retrieves the device context (DC) render target for the `CWnd` window.  
-  
-```  
-CDCRenderTarget * GetDCRenderTarget();
-```  
-  
-### Return Value  
- The device context render target for the specified window if the function is successful; otherwise **NULL**.  
-  
-### Remarks  
-  
-##  <a name="getdescendantwindow"></a>  CWnd::GetDescendantWindow  
- Call this member function to find the descendant window specified by the given ID.  
+##  <a name="getdcrendertarget"></a>CWnd::GetDCRenderTarget  
+ 检索 `CWnd` 窗口的设备上下文 (DC) 呈现目标。  
   
 ```  
-CWnd * GetDescendantWindow (int nID，  
+CDCRenderTarget* GetDCRenderTarget();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 设备上下文呈现目标指定窗口，如果该函数成功，则否则为**NULL**。  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="getdescendantwindow"></a>CWnd::GetDescendantWindow  
+ 调用此成员函数以查找指定由给定 ID 的子代窗口  
+  
+```  
+CWnd* GetDescendantWindow(
+    int nID,  
     BOOL bOnlyPerm = FALSE) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nID`  
- Specifies the identifier of the control or child window to be retrieved.  
+ 指定要检索的控件或子窗口的标识符。  
   
  `bOnlyPerm`  
- Specifies whether the window to be returned can be temporary. If **TRUE**, only a permanent window can be returned; if **FALSE,** the function can return a temporary window. For more information on temporary windows see [Technical Note 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md).  
+ 指定要返回窗口是否可以为临时。 如果**TRUE**，可以返回只有永久窗口; 如果**FALSE，**函数可以返回临时窗口。 临时 windows 上的详细信息请参阅[技术说明 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)。  
   
-### Return Value  
- A pointer to a `CWnd` object, or **NULL** if no child window is found.  
+### <a name="return-value"></a>返回值  
+ 指向的指针`CWnd`对象，或**NULL**如果不找到任何子窗口。  
   
-### Remarks  
- This member function searches the entire tree of child windows, not only the windows that are immediate children.  
+### <a name="remarks"></a>备注  
+ 此成员函数将搜索子窗口，不仅直属子对象的窗口的整个树。  
   
-##  <a name="getdesktopwindow"></a>  CWnd::GetDesktopWindow  
- Returns the Windows desktop window.  
+##  <a name="getdesktopwindow"></a>CWnd::GetDesktopWindow  
+ 返回在 Windows 桌面窗口。  
   
 ```  
-静态 CWnd * PASCAL GetDesktopWindow();
+static CWnd* PASCAL GetDesktopWindow();
 ```  
   
-### Return Value  
- Identifies the Windows desktop window. This pointer may be temporary and should not be stored for later use.  
+### <a name="return-value"></a>返回值  
+ 标识 Windows 桌面窗口。 此指针可能是暂时的不应存储起来供以后使用。  
   
-### Remarks  
- The desktop window covers the entire screen and is the area on top of which all icons and other windows are painted.  
+### <a name="remarks"></a>备注  
+ 在桌面窗口覆盖整个屏幕，并是所有图标和其他 windows 绘制在其之上的区域。  
   
-##  <a name="getdlgctrlid"></a>  CWnd::GetDlgCtrlID  
- Returns the window or control ID value for any child window, not only that of a control in a dialog box.  
+##  <a name="getdlgctrlid"></a>CWnd::GetDlgCtrlID  
+ 返回窗口或控件的 ID 值的任何子窗口，不仅仅是这些控件在对话框中。  
   
 ```  
 int GetDlgCtrlID() const;  
 ```  
   
-### Return Value  
- The numeric identifier of the `CWnd` child window if the function is successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 数字标识符`CWnd`子窗口，如果该函数成功; 否则为 0。  
   
-### Remarks  
- Since top-level windows do not have an ID value, the return value of this function is invalid if the `CWnd` is a top-level window.  
+### <a name="remarks"></a>备注  
+ 顶级窗口没有 ID 值，因为此函数的返回值无效如果`CWnd`为顶级窗口。  
   
-### Example  
-  See the example for [CWnd::OnCtlColor](#onctlcolor).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::OnCtlColor](#onctlcolor)。  
   
-##  <a name="getdlgitem"></a>  CWnd::GetDlgItem  
- Retrieves a pointer to the specified control or child window in a dialog box or other window.  
+##  <a name="getdlgitem"></a>CWnd::GetDlgItem  
+ 检索对话框中指定的控件或子窗口或其他窗口的指针。  
   
 ```  
-CWnd * GetDlgItem(int nID) const;  
+CWnd* GetDlgItem(int nID) const;  
   
-void GetDlgItem (int nID，  
+void GetDlgItem(
+    int nID,  
     HWND* phWnd) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nID`  
- Specifies the identifier of the control or child window to be retrieved.  
+ 指定要检索的控件或子窗口的标识符。  
   
  `phWnd`  
- A pointer to a child window.  
+ 指向子窗口的指针。  
   
-### Return Value  
- A pointer to the given control or child window. If no control with the integer ID given by the `nID` parameter exists, the value is **NULL**.  
+### <a name="return-value"></a>返回值  
+ 指向给定的控件或子窗口的指针。 如果无法控制与给定的整数 ID`nID`参数存在，则值为**NULL**。  
   
- The returned pointer may be temporary and should not be stored for later use.  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
-### Remarks  
- The pointer returned is usually cast to the type of control identified by `nID`.  
+### <a name="remarks"></a>备注  
+ 将指针返回通常被强制转换由标识控件的类型为`nID`。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#97](../../mfc/reference/codesnippet/cpp/cwnd-class_36.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 97](../../mfc/reference/codesnippet/cpp/cwnd-class_36.cpp)]  
   
-##  <a name="getdlgitemint"></a>  CWnd::GetDlgItemInt  
- Retrieves the text of the control identified by `nID`.  
+##  <a name="getdlgitemint"></a>CWnd::GetDlgItemInt  
+ 检索标识的控件的文本`nID`。  
   
 ```  
-UINT GetDlgItemInt (int nID，  
-    BOOL * lpTrans = NULL，  
+UINT GetDlgItemInt(
+    int nID,  
+    BOOL* lpTrans = NULL,  
     BOOL bSigned = TRUE) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nID`  
- Specifies the integer identifier of the dialog-box control to be translated.  
+ 指定要转换的对话框中控件的整数标识符。  
   
  `lpTrans`  
- Points to the Boolean variable that is to receive the translated flag.  
+ 指向以将接收的已翻译的标志的布尔变量。  
   
  `bSigned`  
- Specifies whether the value to be retrieved is signed.  
+ 指定要检索的值是否已签名。  
   
-### Return Value  
- Specifies the translated value of the dialog-box item text. Since 0 is a valid return value, `lpTrans` must be used to detect errors. If a signed return value is desired, cast it as an `int` type.  
+### <a name="return-value"></a>返回值  
+ 指定对话框中项文本的已翻译的值。 0 是有效的返回值，因为`lpTrans`必须用于检测错误。 如果需要一个有符号的返回值，请将其转换为`int`类型。  
   
- The function returns 0 if the translated number is greater than INT_MAX (for signed numbers) or UINT_MAX (for unsigned).  
+ 在函数返回 0 已翻译的数是否大于 INT_MAX （对于有符号数字） 或 UINT_MAX （对应于无符号）。  
   
- When errors occur, such as encountering nonnumeric characters and exceeding the above maximum, `GetDlgItemInt` copies 0 to the location pointed to by `lpTrans`. If there are no errors, `lpTrans` receives a nonzero value. If `lpTrans` is **NULL**, `GetDlgItemInt` does not warn about errors.  
+ 当发生错误，例如遇到非数字字符和超过了上述最`GetDlgItemInt`将 0 复制到指向的位置`lpTrans`。 如果没有错误，`lpTrans`接收一个非零值。 如果`lpTrans`是**NULL**，`GetDlgItemInt`不会警告有关的错误。  
   
-### Remarks  
- It translates the text of the specified control in the given dialog box into an integer value by stripping any extra spaces at the beginning of the text and converting decimal digits. It stops the translation when it reaches the end of the text or encounters any nonnumeric character.  
+### <a name="remarks"></a>备注  
+ 它将给定的对话框中指定的控件的文本转换的整数值按最小化的文本开头任何多余的空格和转换十进制数字。 在达到文本的末尾或遇到任何非数字字符时，它会停止转换。  
   
- If `bSigned` is **TRUE**, `GetDlgItemInt` checks for a minus sign (–) at the beginning of the text and translates the text into a signed number. Otherwise, it creates an unsigned value.  
+ 如果`bSigned`是**TRUE**，`GetDlgItemInt`检查的文本开头减号 （-） 并将文本转换为有符号的数字。 否则，它会创建一个无符号的值。  
   
- It sends a [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627) message to the control.  
+ 它将发送[WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627)到控件的消息。  
   
-##  <a name="getdlgitemtext"></a>  CWnd::GetDlgItemText  
- Call this member function to retrieve the title or text associated with a control in a dialog box.  
+##  <a name="getdlgitemtext"></a>CWnd::GetDlgItemText  
+ 调用此成员函数可检索的标题或与在对话框中控件关联的文本。  
   
 ```  
-int GetDlgItemText (int nID，  
-    LPTSTR lpStr  
+int GetDlgItemText(
+    int nID,  
+    LPTSTR lpStr,  
     int nMaxCount) const;  
   
-int GetDlgItemText (int nID，  
-    CString & rString) const;  
+int GetDlgItemText(
+    int nID,  
+    CString& rString) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nID`  
- Specifies the integer identifier of the control whose title is to be retrieved.  
+ 指定要检索其标题控件的整数标识符。  
   
  `lpStr`  
- Points to the buffer to receive the control's title or text.  
+ 指向要接收控件的标题或文本的缓冲区。  
   
  `nMaxCount`  
- Specifies the maximum length (in characters) of the string to be copied to `lpStr`. If the string is longer than `nMaxCount`, it is truncated.  
+ 指定要复制到的字符串的最大长度 （以字符为单位） `lpStr`。 如果字符串的长度超过`nMaxCount`，则将被截断。  
   
  `rString`  
- A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
+ 对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
-### Return Value  
- Specifies the actual number of characters copied to the buffer, not including the terminating null character. The value is 0 if no text is copied.  
+### <a name="return-value"></a>返回值  
+ 指定的实际将复制到缓冲区，不包括终止 null 字符的字符数。 如果没有文本复制，则值为 0。  
   
-### Remarks  
- The `GetDlgItemText` member function copies the text to the location pointed to by `lpStr` and returns a count of the number of bytes it copies.  
+### <a name="remarks"></a>备注  
+ `GetDlgItemText`成员函数将文本复制到位置指向`lpStr`并返回复制的字节数的计数。  
   
-##  <a name="getdsccursor"></a>  CWnd::GetDSCCursor  
- Call this member function to retrieve a pointer to the underlying cursor that is defined by the DataSource, UserName, Password, and SQL properties of the data-source control.  
-  
-```  
-IUnknown * GetDSCCursor();
-```  
-  
-### Return Value  
- A pointer to a cursor that is defined by a data-source control. MFC takes care of calling `AddRef` for the pointer.  
-  
-### Remarks  
- Use the returned pointer to set the ICursor property of a complex data-bound control, such as the data-bound grid control. A data-source control will not become active until the first bound control requests its cursor. This can happen either explicitly by a call to `GetDSCCursor` or implicitly by the MFC binding manager. In either case, you can force a data-source control to become active by calling `GetDSCCursor` and then calling **Release** on the returned pointer to **IUnknown**. Activation will cause the data-source control to attempt to connect to the underlying data source. The returned pointer might be used in the following context:  
-  
-### Example  
- [!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
-[!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]  
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
-  
-##  <a name="getdynamiclayout"></a>  CWnd::GetDynamicLayout  
- Retrieves a pointer to the dynamic layout manager object.  
+##  <a name="getdsccursor"></a>CWnd::GetDSCCursor  
+ 调用此成员函数以检索指向由数据源控件的数据源、 用户名、 密码和 SQL 属性定义的基础光标的指针。  
   
 ```  
-CMFCDynamicLayout * GetDynamicLayout();
+IUnknown* GetDSCCursor();
 ```  
   
-### Return Value  
- A pointer to the dynamic layout manager object, or NULL if dynamic layout is not enabled.  
+### <a name="return-value"></a>返回值  
+ 指向由数据源控件定义的游标的指针。 MFC 负责调用`AddRef`指针。  
   
-### Remarks  
- The window object owns and manages the lifetime of the returned pointer, so it should only be used to access the object; do not delete the pointer or store the pointer permanently.  
+### <a name="remarks"></a>备注  
+ 使用返回的指针设置将复杂的数据绑定控件，如数据绑定网格控件的 ICursor 属性。 在第一个绑定的控件请求其光标，数据源控件不处于活动状态。 这种情况可能是通过调用显式`GetDSCCursor`或隐式 MFC 绑定管理器。 在任一情况下，你可以强制使数据源控件可通过调用变为活动状态`GetDSCCursor`，然后再调用**版本**上给返回的指针**IUnknown**。 激活将导致要尝试连接到基础数据源的数据源控件。 可能在以下上下文中使用返回的指针︰  
   
-##  <a name="getexstyle"></a>  CWnd::GetExStyle  
- Returns the window's extended style.  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFC_AxDataBinding # 1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
+[!code-cpp[NVC_MFC_AxDataBinding # 5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]  
+[!code-cpp[NVC_MFC_AxDataBinding # 3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
+  
+##  <a name="getdynamiclayout"></a>Cwnd:: Getdynamiclayout  
+ 检索指向动态布局管理器对象的指针。  
+  
+```  
+CMFCDynamicLayout* GetDynamicLayout();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 动态布局管理器对象的指针，如果未启用动态布局，则为 NULL。  
+  
+### <a name="remarks"></a>备注  
+ 窗口对象拥有并管理返回的指针的生存期，因此它只应该用于访问对象；不要删除指针或永久存储指针。  
+  
+##  <a name="getexstyle"></a>CWnd::GetExStyle  
+ 返回窗口的扩展样式。  
   
 ```  
 DWORD GetExStyle() const;  
 ```  
   
-### Return Value  
- The window's extended style. For more information about the extended window styles used in MFC, see [Extended Window Styles](../../mfc/reference/extended-window-styles.md).  
+### <a name="return-value"></a>返回值  
+ 窗口的扩展样式。 有关在 MFC 中使用的扩展的窗口样式的详细信息，请参阅[扩展窗口样式](../../mfc/reference/extended-window-styles.md)。  
   
-##  <a name="getfocus"></a>  CWnd::GetFocus  
- Retrieves a pointer to the `CWnd` that currently has the input focus.  
-  
-```  
-静态 CWnd * PASCAL GetFocus();
-```  
-  
-### Return Value  
- A pointer to the window that has the current focus, or **NULL** if there is no focus window.  
-  
- The pointer may be temporary and should not be stored for later use.  
-  
-##  <a name="getfont"></a>  CWnd::GetFont  
- Sends the `WM_GETFONT` message to the window to retrieve the current font.  
+##  <a name="getfocus"></a>CWnd::GetFocus  
+ 检索指向的`CWnd`，当前具有输入的焦点。  
   
 ```  
-CFont * GetFont() const;  
+static CWnd* PASCAL GetFocus();
 ```  
   
-### Return Value  
- Pointer to a [CFont](../../mfc/reference/cfont-class.md) object that is attached to the current font for the window.  
+### <a name="return-value"></a>返回值  
+ 指向当前具有焦点，窗口的指针或**NULL**如果未焦点窗口。  
   
-### Remarks  
- This method has no effect unless the window processes the `WM_GETFONT` message. Many MFC classes that derive from `CWnd` process this message because they are attached to a predefined window class that includes a message handler for the `WM_GETFONT` message. To use this method, classes that you derive from `CWnd` must define a method handler for the `WM_GETFONT` message.  
+ 该指针可能是暂时的，不应存储起来供将来使用。  
   
-##  <a name="getforegroundwindow"></a>  CWnd::GetForegroundWindow  
- Returns a pointer to the foreground window (the window with which the user is currently working).  
-  
-```  
-静态 CWnd * PASCAL GetForegroundWindow();
-```  
-  
-### Return Value  
- A pointer to the foreground window. This may be a temporary `CWnd` object.  
-  
-### Remarks  
- The foreground window applies only to top-level windows (frame windows or dialog boxes).  
-  
-##  <a name="geticon"></a>  CWnd::GetIcon  
- Call this member function to get the handle to either a big (32x32) or the handle to a small (16x16) icon, as indicated by `bBigIcon`.  
+##  <a name="getfont"></a>CWnd::GetFont  
+ 发送`WM_GETFONT`到窗口的消息，以检索当前的字体。  
   
 ```  
-HICON GetIcon(BOOL bBigIcon) 常量;  
+CFont* GetFont() const;  
 ```  
   
-### Parameters  
+### <a name="return-value"></a>返回值  
+ 指向[CFont](../../mfc/reference/cfont-class.md)附加到窗口的当前字体的对象。  
+  
+### <a name="remarks"></a>备注  
+ 此方法无任何效果，除非窗口处理`WM_GETFONT`消息。 很多 MFC 类派生自`CWnd`处理此消息，因为它们附加到的预定义的窗口类，包括消息处理程序`WM_GETFONT`消息。 若要使用此方法，派生自的类`CWnd`必须定义的方法处理程序`WM_GETFONT`消息。  
+  
+##  <a name="getforegroundwindow"></a>CWnd::GetForegroundWindow  
+ 返回指向前台窗口 （用户当前使用的窗口）。  
+  
+```  
+static CWnd* PASCAL GetForegroundWindow();
+```  
+  
+### <a name="return-value"></a>返回值  
+ 指向前台窗口的指针。 这可能是一个临时`CWnd`对象。  
+  
+### <a name="remarks"></a>备注  
+ 前景窗口仅适用于顶级窗口 （框架窗口或对话框）。  
+  
+##  <a name="geticon"></a>CWnd::GetIcon  
+ 调用此成员函数可获取是大 (32 x 32) 的句柄或一个小的 (16 x 16) 图标的句柄，由`bBigIcon`。  
+  
+```  
+HICON GetIcon(BOOL bBigIcon) const;  
+```  
+  
+### <a name="parameters"></a>参数  
  `bBigIcon`  
- Specifies a 32 pixel by 32 pixel icon if **TRUE**; specifies a 16 pixel by 16 pixel icon if **FALSE**.  
+ 如果通过 32 像素的图标指定 32 像素**TRUE**; 如果由 16 像素图标指定 16 像素**FALSE**。  
   
-### Return Value  
- A handle to an icon. If unsuccessful, returns **NULL**.  
+### <a name="return-value"></a>返回值  
+ 图标句柄。 如果不成功，则返回**NULL**。  
   
-##  <a name="getlastactivepopup"></a>  CWnd::GetLastActivePopup  
- Determines which pop-up window owned by `CWnd` was most recently active.  
-  
-```  
-CWnd * GetLastActivePopup() const;  
-```  
-  
-### Return Value  
- Identifies the most recently active pop-up window. The return value will be the window itself if any of the following conditions are met:  
-  
--   The window itself was most recently active.  
-  
--   The window does not own any pop-up windows.  
-  
--   The window is not a top-level window or is owned by another window.  
-  
- The pointer may be temporary and should not be stored for later use.  
-  
-### Example  
-  See the example for [CWnd::FindWindow](#findwindow).  
-  
-##  <a name="getlayeredwindowattributes"></a>  CWnd::GetLayeredWindowAttributes  
- Retrieves the opacity and transparency color key of a layered window.  
+##  <a name="getlastactivepopup"></a>CWnd::GetLastActivePopup  
+ 确定最近处于活动状态的由 `CWnd` 拥有的弹出窗口。  
   
 ```  
-BOOL GetLayeredWindowAttributes (COLORREF* pcrKey，字节*pbAlpha，  
+CWnd* GetLastActivePopup() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标识最近活动的弹出窗口。 如果满足以下任何条件，则返回的值将为窗口本身︰  
+  
+-   最近的活动窗口本身。  
+  
+-   窗口不拥有任何弹出窗口。  
+  
+-   窗口不是顶级窗口，或拥有的另一个窗口。  
+  
+ 该指针可能是暂时的，不应存储起来供将来使用。  
+  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::FindWindow](#findwindow)。  
+  
+##  <a name="getlayeredwindowattributes"></a>CWnd::GetLayeredWindowAttributes  
+ 检索分层窗口的不透明度和透明度颜色键。  
+  
+```  
+BOOL GetLayeredWindowAttributes(
+    COLORREF* pcrKey,  
+    BYTE* pbAlpha,  
     DWORD* pdwFlags) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pcrKey*  
- Pointer to a **COLORREF** value that receives the transparency color key to be used when composing the layered window. All pixels painted by the window in this color will be transparent. This can be **NULL** if the argument is not needed.  
+ 指向**COLORREF**接收用于撰写分层的窗口的透明度颜色键的值。 将透明绘制成这种颜色窗口的所有像素。 这可以是**NULL**如果不需要自变量。  
   
  `pbAlpha`  
- Pointer to a **BYTE** that receives the Alpha value used to describe the opacity of the layered window. When the variable referred to by `pbAlpha` is 0, the window is completely transparent. When the variable referred to by `pbAlpha` is 255, the window is opaque. This can be **NULL** if the argument is not needed.  
+ 指向**字节**接收用于描述分层窗口的不透明度的 Alpha 值。 当变量引用`pbAlpha`为 0，则该窗口是完全透明。 当变量引用`pbAlpha`为 255，窗口是不透明。 这可以是**NULL**如果不需要自变量。  
   
  *pdwFlags*  
- Pointer to a `DWORD` that receives a layering flag. This can be **NULL** if the argument is not needed. For a complete list of possible values, see [GetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633508).  
+ 指向`DWORD`接收分层标志。 这可以是**NULL**如果不需要自变量。 有关可能的值的完整列表，请参阅[GetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633508)。  
   
-### Return Value  
- Nonzero if the function succeeds; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果函数成功，则为非零值；否则为  
   
-### Remarks  
- This member function emulates the functionality of the function [GetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633508), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[GetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633508)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="getmenu"></a>  CWnd::GetMenu  
- Retrieves a pointer to the menu for this window.  
-  
-```  
-CMenu * GetMenu() 常量;  
-```  
-  
-### Return Value  
- Identifies the menu. The value is **NULL** if `CWnd` has no menu. The return value is undefined if `CWnd` is a child window.  
-  
- The returned pointer may be temporary and should not be stored for later use.  
-  
-### Remarks  
- This function should not be used for child windows because they do not have a menu.  
-  
-### Example  
- [!code-cpp[NVC_MFCWindowing#98](../../mfc/reference/codesnippet/cpp/cwnd-class_38.cpp)]  
-  
-##  <a name="getmenubarinfo"></a>  CWnd::GetMenuBarInfo  
- Retrieves information about the specified menu bar.  
+##  <a name="getmenu"></a>CWnd::GetMenu  
+ 检索指向此窗口的菜单的指针。  
   
 ```  
-BOOL GetMenuBarInfo (长 idObject，  
-    长 idItem  
-    PMENUBARINFO pmbi) 常量;  
+CMenu* GetMenu() const;  
 ```  
   
-### Parameters  
+### <a name="return-value"></a>返回值  
+ 标识菜单。 值是**NULL**如果`CWnd`有无菜单。 如果返回值是未定义`CWnd`是子窗口。  
+  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
+  
+### <a name="remarks"></a>备注  
+ 此函数应不使用的子窗口，因为它们不具有一个菜单。  
+  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 98](../../mfc/reference/codesnippet/cpp/cwnd-class_38.cpp)]  
+  
+##  <a name="getmenubarinfo"></a>CWnd::GetMenuBarInfo  
+ 检索有关指定的菜单栏的信息。  
+  
+```  
+BOOL GetMenuBarInfo(
+    LONG idObject,  
+    LONG idItem,  
+    PMENUBARINFO pmbi) const;  
+```  
+  
+### <a name="parameters"></a>参数  
  `idObject`  
- Specifies the menu object. For a list of possible values, see [GetMenuBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms647833).  
+ 指定菜单对象。 有关可能的值的列表，请参阅[GetMenuBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms647833)。  
   
  `idItem`  
- Specifies the item for which to retrieve information. If this parameter is zero, the function retrieves information about the menu itself. If this parameter is 1, the function retrieves information about the first item on the menu, and so on.  
+ 指定为其检索信息的项。 如果此参数为零，该函数将检索有关菜单本身的信息。 如果此参数为 1，函数将检索信息的第一项菜单上，依次类推。  
   
  *pmbi*  
- Pointer to a [MENUBARINFO](http://msdn.microsoft.com/library/windows/desktop/ms647564) structure that receives the information.  
+ 指向[MENUBARINFO](http://msdn.microsoft.com/library/windows/desktop/ms647564)接收信息的结构。  
   
-### Return Value  
- Nonzero if the function succeeds; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果函数成功，则为非零值；否则为  
   
-### Remarks  
- This member function emulates the functionality of the function [GetMenuBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms647833), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[GetMenuBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms647833)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="getnextdlggroupitem"></a>  CWnd::GetNextDlgGroupItem  
- Searches for the previous or next control within a group of controls in a dialog box.  
+##  <a name="getnextdlggroupitem"></a>CWnd::GetNextDlgGroupItem  
+ 中的一组控件在对话框中的上一或下一个控件的搜索。  
   
 ```  
-CWnd* GetNextDlgGroupItem (CWnd* pWndCtl，  
+CWnd* GetNextDlgGroupItem(
+    CWnd* pWndCtl,  
     BOOL bPrevious = FALSE) const;  
   
-COleControlSiteOrWnd* GetNextDlgGroupItem (COleControlSiteOrWnd* pCurSiteOrWnd = NULL) const;  
+COleControlSiteOrWnd* GetNextDlgGroupItem(
+    COleControlSiteOrWnd* pCurSiteOrWnd = NULL) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pWndCtl`  
- Identifies the control to be used as the starting point for the search.  
+ 标识要用作搜索的起始点的控件。  
   
  `bPrevious`  
- Specifies how the function is to search the group of controls in the dialog box. If **TRUE**, the function searches for the previous control in the group; if **FALSE**, it searches for the next control in the group.  
+ 指定如何在对话框中搜索控件组的函数。 如果**TRUE**，如果该函数的上一个控件组; 中搜索**FALSE**，搜索的组中的下一个控件。  
   
  `pCurSiteOrWnd`  
- Identifies the **COleControlSiteOrWnd** control. For more information about `COleControlSiteOrWnd`, see **Remarks**.  
+ 标识**COleControlSiteOrWnd**控件。 有关详细信息`COleControlSiteOrWnd`，请参阅**备注**。  
   
-### Return Value  
- Pointer to the previous or next control in the group if the member function is successful.  
+### <a name="return-value"></a>返回值  
+ 指向成员函数是否成功的组中的上一或下一步控件的指针。  
   
- The returned pointer may be temporary and should not be stored for later use.  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
-### Remarks  
- A group of controls begins with a control that was created with the [WS_GROUP](../../mfc/reference/window-styles.md) style and ends with the last control that was not created with the **WS_GROUP** style.  
+### <a name="remarks"></a>备注  
+ 一组控件开始使用已创建的某个控件一起[WS_GROUP](../../mfc/reference/window-styles.md)样式和最后一个控件不是创建与结尾**WS_GROUP**样式。  
   
- By default, the `GetNextDlgGroupItem` member function returns a pointer to the next control in the group. If `pWndCtl` identifies the first control in the group and `bPrevious` is **TRUE**, `GetNextDlgGroupItem` returns a pointer to the last control in the group.  
+ 默认情况下，`GetNextDlgGroupItem`成员函数返回一个指向组中的下一个控件。 如果`pWndCtl`标识组中的第一个控件和`bPrevious`是**TRUE**，`GetNextDlgGroupItem`将指针返回到组中的最后一个控件。  
   
 > [!NOTE]
->  Because MFC supports windowless ActiveX controls, standard ActiveX controls, and windows, referring to a control by only an HWND no longer suffices. The `COleControlSiteOrWnd` object includes information that identifies the object as a windowed ActiveX control, a windowless ActiveX control, or a window, as follows:  
+>  MFC 支持无窗口 ActiveX 控件、 标准 ActiveX 控件和 windows，因为不再引用通过仅 HWND 的控件后缀。 `COleControlSiteOrWnd`对象包括，如下所示为窗口的 ActiveX 控件、 无窗口的 ActiveX 控件或一个窗口，标识对象的信息︰  
   
-|Control or window type|Identifying information|  
+|控件或窗口类型|标识信息|  
 |----------------------------|-----------------------------|  
-|Windowed ActiveX control|Contains an HWND and associates a [COleControlSite](../../mfc/reference/colecontrolsite-class.md) object with it. The `m_hWnd` member of `COleControlSiteOrWnd` is set to the HWND of the control, and the **m_pSite** member points to the control's `COleControlSite`.|  
-|Windowless ActiveX control|Contains no `HWND`. The **m_pSite** member of `COleControlSiteOrWnd` points to the control's `COleControlSite`, and the **m_hWnd** member is **NULL**.|  
-|Standard window|Contains just an `HWND`. The `m_hWnd` member of `COleControlSiteOrWnd` is set to the `HWND` of the window, and the **m_pSite** member is **NULL**.|  
+|窗口的 ActiveX 控件|包含 HWND 并将关联[COleControlSite](../../mfc/reference/colecontrolsite-class.md)与它的对象。 `m_hWnd`的成员`COleControlSiteOrWnd`设置为该控件的 HWND 和**m_pSite**成员将指向控件的`COleControlSite`。|  
+|无窗口的 ActiveX 控件|不包含任何`HWND`。 **M_pSite**的成员`COleControlSiteOrWnd`指向控件的`COleControlSite`，和**m_hWnd**成员是**NULL**。|  
+|标准窗口|只包含`HWND`。 `m_hWnd`的成员`COleControlSiteOrWnd`设置为`HWND`的窗口中，与**m_pSite**成员是**NULL**。|  
   
-##  <a name="getnextdlgtabitem"></a>  CWnd::GetNextDlgTabItem  
- Retrieves a pointer to the first control that was created with the [WS_TABSTOP](window-styles.md) style and that precedes or follows the specified control.  
+##  <a name="getnextdlgtabitem"></a>CWnd::GetNextDlgTabItem  
+ 检索指向与创建的第一个控件的[WS_TABSTOP](window-styles.md)样式和程序之前或之后指定的控件。  
   
 ```  
-CWnd* GetNextDlgTabItem (CWnd* pWndCtl，  
+CWnd* GetNextDlgTabItem(
+    CWnd* pWndCtl,  
     BOOL bPrevious = FALSE) const;  
   
-COleControlSiteOrWnd* GetNextDlgTabItem (COleControlSiteOrWnd* pCurSiteOrWnd，  
+COleControlSiteOrWnd* GetNextDlgTabItem(
+    COleControlSiteOrWnd* pCurSiteOrWnd,  
     BOOL bPrevious) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pWndCtl`  
- Identifies the control to be used as the starting point for the search.  
+ 标识要用作搜索的起始点的控件。  
   
  `pCurSiteOrWnd`  
- Identifies the **COleControlSiteOrWnd** control. For more information about `COleControlSiteOrWnd`, see [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem).  
+ 标识**COleControlSiteOrWnd**控件。 有关详细信息`COleControlSiteOrWnd`，请参阅[CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)。  
   
  `bPrevious`  
- Specifies how the function is to search the dialog box. If **TRUE**, the function searches for the previous control in the dialog box; if **FALSE**, it searches for the next control.  
+ 指定如何函数要搜索对话框。 如果**TRUE**，该函数搜索的上一个控件在对话框中; 如果**FALSE**，搜索下一个控件。  
   
-### Return Value  
- Pointer to the previous or next control that has the **WS_TABSTOP** style, if the member function is successful.  
+### <a name="return-value"></a>返回值  
+ 指向具有的上一页或下一页控件**WS_TABSTOP**样式，该成员函数是否成功。  
   
- The returned pointer may be temporary and should not be stored for later use.  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
- For more information about `COleControlSiteOrWnd`, see [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem).  
+ 有关详细信息`COleControlSiteOrWnd`，请参阅[CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)。  
   
-##  <a name="getnextwindow"></a>  CWnd::GetNextWindow  
- Searches for the next (or previous) window in the window manager's list.  
+##  <a name="getnextwindow"></a>CWnd::GetNextWindow  
+ 窗口管理器的列表中的下一步 （或先前） 窗口搜索。  
   
 ```  
-CWnd * GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;  
+CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlag`  
- Specifies whether the function returns a pointer to the next window or the previous window. It can be either **GW_HWNDNEXT**, which returns the window that follows the `CWnd` object on the window manager's list, or **GW_HWNDPREV**, which returns the previous window on the window manager's list.  
+ 指定是否函数将指针返回到下一步窗口或上一个窗口。 它可以是**GW_HWNDNEXT**，它返回的窗口中遵循`CWnd`窗口管理器的列表上的对象或**GW_HWNDPREV**，它返回上一个窗口的窗口管理器的列表上。  
   
-### Return Value  
- Identifies the next (or the previous) window in the window manager's list if the member function is successful.  
+### <a name="return-value"></a>返回值  
+ 标识下一个 （或先前） 如果该成员函数是成功的窗口管理器的列表中的窗口。  
   
- The returned pointer may be temporary and should not be stored for later use.  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
-### Remarks  
- The window manager's list contains entries for all top-level windows, their associated child windows, and the child windows of any child windows.  
+### <a name="remarks"></a>备注  
+ 窗口管理器的列表包含所有顶级窗口、 其关联的子窗口和任何子窗口的子窗口的条目。  
   
- If `CWnd` is a top-level window, the function searches for the next (or previous) top-level window; if `CWnd` is a child window, the function searches for the next (or previous) child window.  
+ 如果`CWnd`为顶级窗口下, 一步 （或先前） 顶级窗口; 该函数搜索，如果`CWnd`是子窗口，功能下一步 （或先前） 的搜索子窗口。  
   
-##  <a name="getolecontrolsite"></a>  CWnd::GetOleControlSite  
- Retrieves the custom site for the specified ActiveX control.  
+##  <a name="getolecontrolsite"></a>CWnd::GetOleControlSite  
+ 检索指定 ActiveX 控件的自定义站点。  
   
 ```  
-COleControlSite * GetOleControlSite(UINT idControl) const;  
+COleControlSite* GetOleControlSite(UINT idControl) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `idControl`  
- The ID of the ActiveX control.  
+ ActiveX 控件的 ID。  
   
-##  <a name="getopenclipboardwindow"></a>  CWnd::GetOpenClipboardWindow  
- Retrieves the handle of the window that currently has the Clipboard open.  
-  
-```  
-静态 CWnd * PASCAL GetOpenClipboardWindow();
-```  
-  
-### Return Value  
- The handle of the window that currently has the Clipboard open if the function is successful; otherwise **NULL**.  
-  
-##  <a name="getowner"></a>  CWnd::GetOwner  
- Retrieves a pointer to the owner of the window.  
+##  <a name="getopenclipboardwindow"></a>CWnd::GetOpenClipboardWindow  
+ 检索当前已经剪贴板打开窗口的句柄。  
   
 ```  
-CWnd * GetOwner() const;  
+static CWnd* PASCAL GetOpenClipboardWindow();
 ```  
   
-### Return Value  
- A pointer to a `CWnd` object.  
+### <a name="return-value"></a>返回值  
+ 如果该函数成功，则当前具有剪贴板打开窗口的句柄否则为**NULL**。  
   
-### Remarks  
- If the window has no owner, then a pointer to the parent window object is returned by default. Note that the relationship between the owner and the owned differs from the parent-child aspect in several important aspects. For example, a window with a parent is confined to its parent window's client area. Owned windows can be drawn at any location on the desktop.  
-  
- The ownership concept of this function is different from the ownership concept of [GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms633515).  
-  
-##  <a name="getparent"></a>  CWnd::GetParent  
- Call this function to get a pointer to a child window's parent window (if any).  
+##  <a name="getowner"></a>CWnd::GetOwner  
+ 检索窗口的所有者的指针。  
   
 ```  
-CWnd * GetParent() const;  
+CWnd* GetOwner() const;  
 ```  
   
-### Return Value  
- See the Return Values section in [GetParent](http://msdn.microsoft.com/library/windows/desktop/ms633510) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>返回值  
+ 指向的指针`CWnd`对象。  
   
-### Remarks  
- The `GetParent` function returns a pointer to the immediate parent (if it exists). In contrast, the [GetParentOwner](#getparentowner) function returns a pointer to the most immediate parent or owner window that is not a child window (does not have the **WS_CHILD** style). If you have a child window within a child window `GetParent` and `GetParentOwner` return different results.  
+### <a name="remarks"></a>备注  
+ 如果窗口不具有任何所有者，则默认情况下返回指向父窗口对象的指针。 请注意，所有者和拥有之间的关系不同于在几个重要方面的父-子方面。 例如，与父窗口并局限于其父窗口工作区中。 在桌面上，可以在任何位置绘制拥有的 windows。  
   
-##  <a name="getparentframe"></a>  CWnd::GetParentFrame  
- Call this member function to retrieve the parent frame window.  
+ 此函数的所有权概念是不同的所有权概念[GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms633515)。  
   
-```  
-CFrameWnd * GetParentFrame() const;  
-```  
-  
-### Return Value  
- A pointer to a frame window if successful; otherwise **NULL**.  
-  
-### Remarks  
- The member function searches up the parent chain until a [CFrameWnd](../../mfc/reference/cframewnd-class.md) (or derived class) object is found.  
-  
-##  <a name="getparentowner"></a>  CWnd::GetParentOwner  
- Call this member function to get a pointer to a child window's parent window or owner window.  
+##  <a name="getparent"></a>CWnd::GetParent  
+ 调用此函数可获取指向子窗口的父窗口 （如果有） 的指针。  
   
 ```  
-CWnd * GetParentOwner() const;  
+CWnd* GetParent() const;  
 ```  
   
-### Return Value  
- A pointer to a `CWnd` object. If a `CWnd` object is not attached to the handle, a temporary `CWnd` object is created and attached. The pointer may be temporary and should not be stored for later use.  
+### <a name="return-value"></a>返回值  
+ 请参阅中的返回值部分[GetParent](http://msdn.microsoft.com/library/windows/desktop/ms633510)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- `GetParentOwner` returns a pointer to the most immediate parent or owner window that is not a child window (does not have the **WS_CHILD** style). The current owner window can be set with [SetOwner](#setowner). By default, the parent of a window is its owner.  
+### <a name="remarks"></a>备注  
+ `GetParent`函数返回一个指向直接父 （如果存在）。 与此相反， [GetParentOwner](#getparentowner)函数返回指向不是子窗口的最直接父或所有者窗口的指针 (没有**WS_CHILD**样式)。 如果在子窗口内具有子窗口`GetParent`和`GetParentOwner`返回不同的结果。  
   
- In contrast, the [GetParent](#getparent) function returns a pointer to the immediate parent, whether it is a child window or not. If you have a child window within a child window `GetParent` and `GetParentOwner` return different results.  
-  
-##  <a name="getproperty"></a>  CWnd::GetProperty  
- Call this member function to get the ActiveX control property specified by `dwDispID`.  
+##  <a name="getparentframe"></a>CWnd::GetParentFrame  
+ 调用此成员函数可检索父框架窗口。  
   
 ```  
-void GetProperty (DISPID dwDispID，  
-    VARTYPE vtProp  
-    void * pvProp) const;  
+CFrameWnd* GetParentFrame() const;  
 ```  
   
-### Parameters  
+### <a name="return-value"></a>返回值  
+ 如果成功，则框架窗口指向的指针否则为**NULL**。  
+  
+### <a name="remarks"></a>备注  
+ 成员函数将搜索之前在父一系列向上[CFrameWnd](../../mfc/reference/cframewnd-class.md) （或派生类） 找到对象。  
+  
+##  <a name="getparentowner"></a>CWnd::GetParentOwner  
+ 调用此成员函数以获取指向子窗口的父窗口或所有者窗口的指针。  
+  
+```  
+CWnd* GetParentOwner() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 指向的指针`CWnd`对象。 如果 `CWnd` 对象未附加到该句柄，则会创建并附加一个临时 `CWnd` 对象。 该指针可能是暂时的，不应存储起来供将来使用。  
+  
+### <a name="remarks"></a>备注  
+ `GetParentOwner`将指针返回到不是子窗口的最直接父或所有者窗口 (没有**WS_CHILD**样式)。 可以用来设置当前的所有者窗口[SetOwner](#setowner)。 默认情况下，窗口的父级是其所有者。  
+  
+ 与此相反， [GetParent](#getparent)函数返回一个指向直接父，不论它是否是子窗口。 如果在子窗口内具有子窗口`GetParent`和`GetParentOwner`返回不同的结果。  
+  
+##  <a name="getproperty"></a>CWnd::GetProperty  
+ 调用此成员函数可获取指定的 ActiveX 控件属性`dwDispID`。  
+  
+```  
+void GetProperty(
+    DISPID dwDispID,  
+    VARTYPE vtProp,  
+    void* pvProp)const;  
+```  
+  
+### <a name="parameters"></a>参数  
  `dwDispID`  
- Identifies the property to be retrieved.  
+ 标识要检索的属性。  
   
  `vtProp`  
- Specifies the type of the property to be retrieved. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ 指定要检索的属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  `pvProp`  
- Address of the variable that will that will receive the property value. It must match the type specified by `vtProp`.  
+ 将该变量的地址将接收属性值。 它必须与由指定的类型匹配`vtProp`。  
   
-### Remarks  
- **GetProperty** returns the value through `pvProp`.  
+### <a name="remarks"></a>备注  
+ **GetProperty**返回的值通过`pvProp`。  
   
 > [!NOTE]
->  This function should be called only on a `CWnd` object that represents an ActiveX control.  
+>  应仅在调用此函数`CWnd`表示 ActiveX 控件的对象。  
   
- For more information about using this member function with ActiveX Control Containers, see the article [ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container](../../mfc/programming-activex-controls-in-a-activex-control-container.md).  
+ 有关此成员函数使用 ActiveX 控件容器的信息的详细信息，请参阅文章[ActiveX 控件容器︰ 将 ActiveX 控件编程 ActiveX 控件容器中的](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。  
   
-##  <a name="getrendertarget"></a>  CWnd::GetRenderTarget  
- Gets a render target that is associated with this window.  
-  
-```  
-CHwndRenderTarget * GetRenderTarget();
-```  
-  
-### Return Value  
- Pointer to the render target or NULL.  
-  
-##  <a name="getsafehwnd"></a>  CWnd::GetSafeHwnd  
- Returns `m_hWnd`, or **NULL** if the **this** pointer is **NULL**.  
+##  <a name="getrendertarget"></a>CWnd::GetRenderTarget  
+ 获取与此窗口相关联的呈现目标。  
   
 ```  
-HWND GetSafeHwnd() 常量;  
+CHwndRenderTarget* GetRenderTarget();
 ```  
   
-### Return Value  
- Returns the window handle for a window. Returns **NULL** if the `CWnd` is not attached to a window or if it is used with a **NULL CWnd** pointer.  
+### <a name="return-value"></a>返回值  
+ 指向的呈现器目标或为 NULL 指针。  
   
-### Example  
-  See the example for [CWnd::SubclassWindow](#subclasswindow).  
-  
-##  <a name="getsafeowner"></a>  CWnd::GetSafeOwner  
- Call this member function to retrieve the owner window that should be used for dialog boxes or other modal windows.  
+##  <a name="getsafehwnd"></a>CWnd::GetSafeHwnd  
+ 返回`m_hWnd`，或**NULL**如果**这**指针**NULL**。  
   
 ```  
-静态 CWnd* GetSafeOwner (CWnd* pParent = NULL，  
+HWND GetSafeHwnd() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 返回一个窗口的窗口句柄。 返回**NULL**如果`CWnd`未附加到窗口或如果它用于**NULL CWnd**指针。  
+  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::SubclassWindow](#subclasswindow)。  
+  
+##  <a name="getsafeowner"></a>CWnd::GetSafeOwner  
+ 调用此成员函数可检索应该用于对话框所有者窗口或其他模式窗口。  
+  
+```  
+static CWnd* GetSafeOwner(
+    CWnd* pParent = NULL,  
     HWND* pWndTop = NULL);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pParent`  
- A pointer to a parent `CWnd` window. May be **NULL**.  
+ 指向父`CWnd`窗口。 可能是**NULL**。  
   
  *pWndTop*  
- A pointer to the window that is currently on top. May be **NULL**.  
+ 指向当前位于顶部的窗口的指针。 可能是**NULL**。  
   
-### Return Value  
- A pointer to the safe owner for the given window.  
+### <a name="return-value"></a>返回值  
+ 指向给定窗口的安全所有者的指针。  
   
-### Remarks  
- The safe owner is the first non-child parent window of `pParent`. If `pParent` is **NULL**, the thread's main window (retrieved via [AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)) is used to find an owner.  
+### <a name="remarks"></a>备注  
+ 安全所有者是第一个非父子父窗口的`pParent`。 如果`pParent`是**NULL**，线程的主窗口 (通过检索[AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)) 用于查找一个所有者。  
   
 > [!NOTE]
->  The framework itself uses this function to determine the correct owner window for dialog boxes and property sheets where the owner is not specified.  
+>  框架本身使用此函数来确定在未指定所有者的对话框和属性表的正确地将所有者窗口。  
   
-##  <a name="getscrollbarctrl"></a>  CWnd::GetScrollBarCtrl  
- Call this member function to obtain a pointer to the specified sibling scroll bar or splitter window.  
+##  <a name="getscrollbarctrl"></a>Cwnd:: Getscrollbarctrl  
+ 调用此成员函数以获取指向指定的同级滚动条或拆分窗口。  
   
 ```  
-虚拟 CScrollBar * GetScrollBarCtrl(int nBar) 常量;  
+virtual CScrollBar* GetScrollBarCtrl(int nBar) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nBar`  
- Specifies the type of scroll bar. The parameter can take one of the following values:  
+ 指定滚动条的类型。 参数可以采用以下值之一︰  
   
-- **SB_HORZ** Retrieves the position of the horizontal scroll bar.  
+- **SB_HORZ**检索水平滚动条的位置。  
   
-- **SB_VERT** Retrieves the position of the vertical scroll bar.  
+- **SB_VERT**检索垂直滚动条的位置。  
   
-### Return Value  
- A sibling scroll-bar control, or **NULL** if none.  
+### <a name="return-value"></a>返回值  
+ 同级滚动条控件，或**NULL**如果是 none。  
   
-### Remarks  
- This member function does not operate on scroll bars created when the **WS_HSCROLL** or **WS_VSCROLL** bits are set during the creation of a window. The `CWnd` implementation of this function simply returns **NULL**. Derived classes, such as `CView`, implement the described functionality.  
+### <a name="remarks"></a>备注  
+ 此成员函数不运行时创建的滚动条上**WS_HSCROLL**或**WS_VSCROLL**位将设置窗口的创建过程。 `CWnd`实现此函数只需返回**NULL**。 派生类，如`CView`，实现所述的功能。  
   
-##  <a name="getscrollbarinfo"></a>  CWnd::GetScrollBarInfo  
- Retrieves information about the specified scroll bar.  
+##  <a name="getscrollbarinfo"></a>CWnd::GetScrollBarInfo  
+ 检索有关指定滚动条的信息。  
   
 ```  
-BOOL GetScrollBarInfo (长 idObject，  
-    PSCROLLBARINFO psbi) 常量;  
+BOOL GetScrollBarInfo(
+    LONG idObject,  
+    PSCROLLBARINFO psbi) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `idObject`  
- Specifies the menu object. For a list of possible values, see [GetScrollBarInfo](http://msdn.microsoft.com/library/windows/desktop/bb787581).  
+ 指定菜单对象。 有关可能的值的列表，请参阅[GetScrollBarInfo](http://msdn.microsoft.com/library/windows/desktop/bb787581)。  
   
  *psbi*  
- Pointer to a [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) structure that receives the information.  
+ 指向[SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535)接收信息的结构。  
   
-### Return Value  
- Nonzero if the function succeeds; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果函数成功，则为非零值；否则为  
   
-### Remarks  
- This member function emulates the functionality of the function [GetScrollBarInfo](http://msdn.microsoft.com/library/windows/desktop/bb787581), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[GetScrollBarInfo](http://msdn.microsoft.com/library/windows/desktop/bb787581)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="getscrollinfo"></a>  CWnd::GetScrollInfo  
- Call this member function to retrieve the information that the `SCROLLINFO` structure maintains about a scroll bar.  
+##  <a name="getscrollinfo"></a>CWnd::GetScrollInfo  
+ 调用此成员函数可检索的信息，`SCROLLINFO`结构维护的有关滚动条。  
   
 ```  
-BOOL GetScrollInfo (int nBar，  
-    LPSCROLLINFO lpScrollInfo  
+BOOL GetScrollInfo(
+    int nBar,  
+    LPSCROLLINFO lpScrollInfo,  
     UINT nMask = SIF_ALL);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nBar`  
- Specifies whether the scroll bar is a control or part of a window's nonclient area. If it is part of the nonclient area, `nBar` also indicates whether the scroll bar is positioned horizontally, vertically, or both. It must be one of the following:  
+ 指定滚动条的控件或窗口的非工作区的一部分。 如果它是的非工作区中，一部分`nBar`还用于指明是否滚动条位于水平、 垂直或两者。 它必须是以下项之一︰  
   
-- **SB_CTL** Retrieves the parameters for a scroll bar control. The `m_hWnd` data member must be the handle of the scroll bar control.  
+- **SB_CTL**检索滚动条控件的参数。 `m_hWnd`数据成员必须是滚动条控件的句柄。  
   
-- **SB_HORZ** Retrieves the parameters for the window's standard horizontal scroll bar.  
+- **SB_HORZ**检索窗口的标准的水平滚动条的参数。  
   
-- **SB_VERT** Retrieves the parameters for the window's standard vertical scroll bar.  
+- **SB_VERT**检索窗口的标准的垂直滚动条的参数。  
   
  `lpScrollInfo`  
- A pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure. See the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] for more information about this structure.  
+ 指向的指针[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构。 请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关此结构的详细信息。  
   
  `nMask`  
- Specifies the scroll bar parameters to retrieve. The default specifies a combination of **SIF_PAGE**, **SIF_POS**, **SIF_TRACKPOS**, and **SIF_RANGE**. See `SCROLLINFO` for more information on the *nMask* values.  
+ 指定要检索的滚动栏参数。 默认值指定的组合**SIF_PAGE**， **SIF_POS**， **SIF_TRACKPOS**，和**SIF_RANGE**。 请参阅`SCROLLINFO`有关详细信息*nMask*值。  
   
-### Return Value  
- If the message retrieved any values, the return is **TRUE**. Otherwise, it is **FALSE**.  
+### <a name="return-value"></a>返回值  
+ 如果消息检索到的任何值，返回是**TRUE**。 否则，它是**FALSE**。  
   
-### Remarks  
- `GetScrollInfo` enables applications to use 32-bit scroll positions.  
+### <a name="remarks"></a>备注  
+ `GetScrollInfo`使应用程序可以使用 32 位滚动位置。  
   
- The [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure contains information about a scroll bar, including the minimum and maximum scrolling positions, the page size, and the position of the scroll box (the thumb). See the `SCROLLINFO` structure topic in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] for more information about changing the structure defaults.  
+ [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构包含有关滚动条，包括最小值和最大滚动位置、 页大小和滚动框 （缩略图） 的位置的信息。 请参阅`SCROLLINFO`结构中的主题[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关更改结构的默认值的详细信息。  
   
- The MFC Windows message handlers that indicate scroll-bar position, [CWnd::OnHScroll](#onhscroll) and [CWnd::OnVScroll](#onvscroll), provide only 16 bits of position data. `GetScrollInfo` and `SetScrollInfo` provide 32 bits of scroll-bar position data. Thus, an application can call `GetScrollInfo` while processing either `CWnd::OnHScroll` or `CWnd::OnVScroll` to obtain 32-bit scroll-bar position data.  
+ MFC Windows 消息处理程序指示滚动条位置[CWnd::OnHScroll](#onhscroll)和[CWnd::OnVScroll](#onvscroll)，提供只有 16 位的位置数据。 `GetScrollInfo`和`SetScrollInfo`提供 32 位的滚动条位置数据。 因此，应用程序可以调用`GetScrollInfo`处理任一时`CWnd::OnHScroll`或`CWnd::OnVScroll`获取 32 位滚动条位置数据。  
   
-##  <a name="getscrolllimit"></a>  CWnd::GetScrollLimit  
- Call this member function to retrieve the maximum scrolling position of the scroll bar.  
+##  <a name="getscrolllimit"></a>CWnd::GetScrollLimit  
+ 调用此成员函数可检索滚动条的最大滚动位置。  
   
 ```  
-int GetScrollLimit (int nBar);
+int GetScrollLimit(int nBar);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nBar`  
- Specifies the type of scroll bar. The parameter can take one of the following values:  
+ 指定滚动条的类型。 参数可以采用以下值之一︰  
   
-- **SB_HORZ** Retrieves the scroll limit of the horizontal scroll bar.  
+- **SB_HORZ**检索水平滚动条的滚动限制。  
   
-- **SB_VERT** Retrieves the scroll limit of the vertical scroll bar.  
+- **SB_VERT**检索垂直滚动条的滚动限制。  
   
-### Return Value  
- Specifies the maximum position of a scroll bar if successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 指定如果成功，则滚动条的最大位置否则为 0。  
   
-##  <a name="getscrollpos"></a>  CWnd::GetScrollPos  
- Retrieves the current position of the scroll box of a scroll bar.  
+##  <a name="getscrollpos"></a>CWnd::GetScrollPos  
+ 检索滚动条的滚动框的当前位置。  
   
 ```  
-int GetScrollPos (int nBar) const;  
+int GetScrollPos(int nBar) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nBar`  
- Specifies the scroll bar to examine. The parameter can take one of the following values:  
+ 指定要检查的滚动条。 参数可以采用以下值之一︰  
   
-- **SB_HORZ** Retrieves the position of the horizontal scroll bar.  
+- **SB_HORZ**检索水平滚动条的位置。  
   
-- **SB_VERT** Retrieves the position of the vertical scroll bar.  
+- **SB_VERT**检索垂直滚动条的位置。  
   
-### Return Value  
- Specifies the current position of the scroll box in the scroll bar if successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 指定如果成功，则滚动条中滚动框的当前位置否则为 0。  
   
-### Remarks  
- The current position is a relative value that depends on the current scrolling range. For example, if the scrolling range is 50 to 100 and the scroll box is in the middle of the bar, the current position is 75.  
+### <a name="remarks"></a>备注  
+ 当前的位置是一个相对的值，取决于当前滚动区域。 例如，如果滚动的范围是 50 到 100，滚动框为位于条的中间，当前位置为 75。  
   
-##  <a name="getscrollrange"></a>  CWnd::GetScrollRange  
- Copies the current minimum and maximum scroll-bar positions for the given scroll bar to the locations specified by `lpMinPos` and `lpMaxPos`.  
+##  <a name="getscrollrange"></a>CWnd::GetScrollRange  
+ 将给定的滚动条的当前最小和最大滚动条位置复制到指定的位置`lpMinPos`和`lpMaxPos`。  
   
 ```  
-void GetScrollRange (int nBar，  
-    LPINT lpMinPos  
+void GetScrollRange(
+    int nBar,  
+    LPINT lpMinPos,  
     LPINT lpMaxPos) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nBar`  
- Specifies the scroll bar to examine. The parameter can take one of the following values:  
+ 指定要检查的滚动条。 参数可以采用以下值之一︰  
   
-- **SB_HORZ** Retrieves the position of the horizontal scroll bar.  
+- **SB_HORZ**检索水平滚动条的位置。  
   
-- **SB_VERT** Retrieves the position of the vertical scroll bar.  
+- **SB_VERT**检索垂直滚动条的位置。  
   
  `lpMinPos`  
- Points to the integer variable that is to receive the minimum position.  
+ 指向以将接收的最小位置的整数变量。  
   
  `lpMaxPos`  
- Points to the integer variable that is to receive the maximum position.  
+ 指向以将接收的最大位置的整数变量。  
   
-### Remarks  
- If `CWnd` does not have a scroll bar, then the `GetScrollRange` member function copies 0 to `lpMinPos` and `lpMaxPos`.  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`不具有滚动条，则`GetScrollRange`成员函数将复制到 0`lpMinPos`和`lpMaxPos`。  
   
- The default range for a standard scroll bar is 0 to 100. The default range for a scroll-bar control is empty (both values are 0).  
+ 标准的滚动条的默认范围为 0 到 100。 滚动条控件的默认范围为空 （这两个值是 0）。  
   
-##  <a name="getstyle"></a>  CWnd::GetStyle  
- Returns the current window style.  
+##  <a name="getstyle"></a>CWnd::GetStyle  
+ 返回当前窗口样式。  
   
 ```  
 DWORD GetStyle() const;  
 ```  
   
-### Return Value  
- The window's style. For more information about the window styles used in MFC, see [Window Styles](../../mfc/reference/window-styles.md).  
+### <a name="return-value"></a>返回值  
+ 窗口的样式。 有关在 MFC 中使用的窗口样式的详细信息，请参阅[窗口样式](../../mfc/reference/window-styles.md)。  
   
-##  <a name="getsystemmenu"></a>  CWnd::GetSystemMenu  
- Allows the application to access the Control menu for copying and modification.  
+##  <a name="getsystemmenu"></a>CWnd::GetSystemMenu  
+ 允许应用程序访问控件菜单以进行复制和修改。  
   
 ```  
-CMenu * GetSystemMenu(BOOL bRevert) const;  
+CMenu* GetSystemMenu(BOOL bRevert) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bRevert`  
- Specifies the action to be taken. If `bRevert` is **FALSE**, `GetSystemMenu` returns a handle to a copy of the Control menu currently in use. This copy is initially identical to the Control menu but can be modified. If `bRevert` is **TRUE**, `GetSystemMenu` resets the Control menu back to the default state. The previous, possibly modified, Control menu, if any, is destroyed. The return value is undefined in this case.  
+ 指定要执行的操作。 如果`bRevert`是**FALSE**，`GetSystemMenu`返回一份当前正在使用的控件菜单的句柄。 此副本与控件菜单最初相同，但可以修改。 如果`bRevert`是**TRUE**，`GetSystemMenu`将控件菜单重置回默认状态。 以前，可能已经过修改，如果将控制菜单上，任何，销毁。 在这种情况下，返回值是不确定。  
   
-### Return Value  
- Identifies a copy of the Control menu if `bRevert` is **FALSE**. If `bRevert` is **TRUE**, the return value is undefined.  
+### <a name="return-value"></a>返回值  
+ 如果标识一份控件菜单`bRevert`是**FALSE**。 如果`bRevert`是**TRUE**，返回值是不确定。  
   
- The returned pointer may be temporary and should not be stored for later use.  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
-### Remarks  
- Any window that does not use `GetSystemMenu` to make its own copy of the Control menu receives the standard Control menu.  
+### <a name="remarks"></a>备注  
+ 不使用任何窗口`GetSystemMenu`以使其自己的控件副本菜单接收标准控件菜单。  
   
- The pointer returned by the `GetSystemMenu` member function can be used with the [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu), or [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) functions to change the Control menu.  
+ 返回的指针`GetSystemMenu`成员函数可与[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)， [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)，或[CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)函数来更改控件菜单。  
   
- The Control menu initially contains items identified with various ID values such as **SC_CLOSE**, **SC_MOVE**, and **SC_SIZE**. Items on the Control menu generate [WM_SYSCOMMAND](#onsyscommand) messages. All predefined Control-menu items have ID numbers greater than 0xF000. If an application adds items to the Control menu, it should use ID numbers less than F000.  
+ 控件菜单最初包含如标识各种 ID 值的项**SC_CLOSE**， **SC_MOVE**，和**SC_SIZE**。 控件菜单上的项目生成[WM_SYSCOMMAND](#onsyscommand)消息。 所有预定义的控件菜单项都具有大于 0xF000 的 ID 号。 如果应用程序将项添加到控件菜单中，它应使用小于 F000 ID 号。  
   
- Windows may automatically make items unavailable on the standard Control menu. `CWnd` can carry out its own selection or unavailability by responding to the [WM_INITMENU](#oninitmenu) messages, which are sent before any menu is displayed.  
+ Windows 可能会自动使项不可用标准控件菜单上。 `CWnd`可以执行自己所选内容或不可用通过响应[WM_INITMENU](#oninitmenu)之前会显示任何菜单发送的消息。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#99](../../mfc/reference/codesnippet/cpp/cwnd-class_39.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 99](../../mfc/reference/codesnippet/cpp/cwnd-class_39.cpp)]  
   
-##  <a name="gettitlebarinfo"></a>  CWnd::GetTitleBarInfo  
- Retrieves information about the specified title bar.  
+##  <a name="gettitlebarinfo"></a>CWnd::GetTitleBarInfo  
+ 检索有关指定标题栏的信息。  
   
 ```  
 BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pti*  
- Pointer to a [TITLEBARINFO](http://msdn.microsoft.com/library/windows/desktop/ms632608) structure that receives the information.  
+ 指向[TITLEBARINFO](http://msdn.microsoft.com/library/windows/desktop/ms632608)接收信息的结构。  
   
-### Remarks  
- This member function emulates the functionality of the function [GetTitleBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms633513), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[GetTitleBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms633513)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="gettoplevelframe"></a>  CWnd::GetTopLevelFrame  
- Call this member function to retrieve the window's top level frame window, if any.  
-  
-```  
-CFrameWnd * GetTopLevelFrame() const;  
-```  
-  
-### Return Value  
- Identifies the top-level frame window of the window.  
-  
- The returned pointer may be temporary and should not be stored for later use.  
-  
-### Remarks  
- If `CWnd` has no attached window, or its top-level parent is not a [CFrameWnd](../../mfc/reference/cframewnd-class.md)-derived object, this function returns **NULL**.  
-  
-##  <a name="gettoplevelowner"></a>  CWnd::GetTopLevelOwner  
- Call this member function to retrieve the top-level window.  
+##  <a name="gettoplevelframe"></a>CWnd::GetTopLevelFrame  
+ 调用此成员函数以检索窗口的顶部级别框架窗口中，如果有的话。  
   
 ```  
-CWnd * GetTopLevelOwner() const;  
+CFrameWnd* GetTopLevelFrame() const;  
 ```  
   
-### Return Value  
- Identifies the top-level window. The returned pointer may be temporary and should not be stored for later use.  
+### <a name="return-value"></a>返回值  
+ 标识窗口的顶级框架窗口。  
   
-### Remarks  
- The top-level window is the window that is a child of the desktop. If `CWnd` has no attached window, this function returns **NULL**.  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
-##  <a name="gettoplevelparent"></a>  CWnd::GetTopLevelParent  
- Call this member function to retrieve the window's top-level parent.  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`具有未附加的窗口，或者其顶层的父级不是[CFrameWnd](../../mfc/reference/cframewnd-class.md)-派生对象，此函数将返回**NULL**。  
   
-```  
-CWnd * GetTopLevelParent() const;  
-```  
-  
-### Return Value  
- Identifies the top-level parent window of the window.  
-  
- The returned pointer may be temporary and should not be stored for later use.  
-  
-### Remarks  
- `GetTopLevelParent` is similar to [GetTopLevelFrame](#gettoplevelframe) and [GetTopLevelOwner](#gettoplevelowner); however, it ignores the value set as the current owner window.  
-  
-##  <a name="gettopwindow"></a>  CWnd::GetTopWindow  
- Searches for the top-level child window that belongs to `CWnd`.  
+##  <a name="gettoplevelowner"></a>CWnd::GetTopLevelOwner  
+ 调用此成员函数可检索的顶级窗口。  
   
 ```  
-CWnd * GetTopWindow() const;  
+CWnd* GetTopLevelOwner() const;  
 ```  
   
-### Return Value  
- Identifies the top-level child window in a `CWnd` linked list of child windows. If no child windows exist, the value is **NULL**.  
+### <a name="return-value"></a>返回值  
+ 标识的顶级窗口。 返回的指针可能是暂时的不应以供稍后使用存储。  
   
- The returned pointer may be temporary and should not be stored for later use.  
+### <a name="remarks"></a>备注  
+ 顶级窗口是桌面的子级的窗口。 如果`CWnd`了任何附加的时段，此函数将返回**NULL**。  
   
-### Remarks  
- If `CWnd` has no children, this function returns **NULL**.  
-  
-##  <a name="getupdaterect"></a>  CWnd::GetUpdateRect  
- Retrieves the coordinates of the smallest rectangle that completely encloses the update region.  
+##  <a name="gettoplevelparent"></a>CWnd::GetTopLevelParent  
+ 调用此成员函数以检索窗口的顶级父级。  
   
 ```  
-BOOL GetUpdateRect (LPRECT lpRect，  
+CWnd* GetTopLevelParent() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标识窗口的顶级父窗口。  
+  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
+  
+### <a name="remarks"></a>备注  
+ `GetTopLevelParent`类似于[GetTopLevelFrame](#gettoplevelframe)和[GetTopLevelOwner](#gettoplevelowner); 但是，它将忽略此值设置为当前的所有者窗口。  
+  
+##  <a name="gettopwindow"></a>CWnd::GetTopWindow  
+ 搜索所属的顶级子窗口`CWnd`。  
+  
+```  
+CWnd* GetTopWindow() const;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 标识中的顶级子窗口`CWnd`子窗口的链接的列表。 如果不存在任何子窗口，则值是**NULL**。  
+  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
+  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`没有任何子级，此函数将返回**NULL**。  
+  
+##  <a name="getupdaterect"></a>CWnd::GetUpdateRect  
+ 检索完全包含的更新区域的最小矩形的坐标。  
+  
+```  
+BOOL GetUpdateRect(
+    LPRECT lpRect,  
     BOOL bErase = FALSE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpRect`  
- Points to a `CRect` object or [RECT structure](../../mfc/reference/rect-structure1.md) that is to receive the client coordinates of the update that encloses the update region.  
+ 指向`CRect`对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，是否要接收的更新，包含更新区域的客户端坐标。  
   
- Set this parameter to **NULL** to determine whether an update region exists within the `CWnd`. If `lpRect` is **NULL**, the `GetUpdateRect` member function returns nonzero if an update region exists and 0 if one does not. This provides a way to determine whether a `WM_PAINT` message resulted from an invalid area. Do not set this parameter to **NULL** in Windows version 3.0 and earlier.  
+ 将此参数设置为**NULL**以确定中是否存在更新区域`CWnd`。 如果`lpRect`是**NULL**、`GetUpdateRect`成员函数返回非零，如果存在更新区域，且 0，如果一个没有。 这使您能够确定是否`WM_PAINT`消息导致从无效的区域。 未设置此参数为**NULL** Windows 3.0 版及早期版本中。  
   
  `bErase`  
- Specifies whether the background in the update region is to be erased.  
+ 指定是否要消除中更新区域的背景。  
   
-### Return Value  
- Specifies the status of the update region. The value is nonzero if the update region is not empty; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 指定的更新区域的状态。 值不为零，如果更新区域不为空;否则为 0。  
   
- If the `lpRect` parameter is set to **NULL**, the return value is nonzero if an update region exists; otherwise 0.  
+ 如果`lpRect`参数设置为**NULL**，则返回值是如果存在更新区域则为非 0; 否则为 0。  
   
-### Remarks  
- If `CWnd` was created with the **CS_OWNDC** style and the mapping mode is not `MM_TEXT`, the `GetUpdateRect` member function gives the rectangle in logical coordinates. Otherwise, `GetUpdateRect` gives the rectangle in client coordinates. If there is no update region, `GetUpdateRect` sets the rectangle to be empty (sets all coordinates to 0).  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`与创建**CS_OWNDC**样式和映射模式不是`MM_TEXT`、`GetUpdateRect`成员函数提供以逻辑坐标表示的矩形。 否则为`GetUpdateRect`提供在客户端的矩形坐标。 如果没有任何更新区域中，`GetUpdateRect`设置为空 （将设置所有坐标为 0) 的矩形。  
   
- The `bErase` parameter specifies whether `GetUpdateRect` should erase the background of the update region. If `bErase` is **TRUE** and the update region is not empty, the background is erased. To erase the background, `GetUpdateRect` sends the [WM_ERASEBKGND](#onerasebkgnd) message.  
+ `bErase`参数指定是否`GetUpdateRect`应擦除更新区域的背景。 如果`bErase`是**TRUE**和更新区域不为空，后台被擦除。 若要擦除背景，`GetUpdateRect`发送[WM_ERASEBKGND](#onerasebkgnd)消息。  
   
- The update rectangle retrieved by the [BeginPaint](#beginpaint) member function is identical to that retrieved by the `GetUpdateRect` member function.  
+ 通过检索更新矩形[BeginPaint](#beginpaint)成员函数等同于检索到的`GetUpdateRect`成员函数。  
   
- The `BeginPaint` member function automatically validates the update region, so any call to `GetUpdateRect` made immediately after a call to `BeginPaint` retrieves an empty update region.  
+ `BeginPaint`成员函数自动验证的更新区域中，因此任何调用到`GetUpdateRect`在调用之后立即进行`BeginPaint`检索空更新区域。  
   
-##  <a name="getupdatergn"></a>  CWnd::GetUpdateRgn  
- Retrieves the update region into a region identified by `pRgn`.  
+##  <a name="getupdatergn"></a>CWnd::GetUpdateRgn  
+ 检索到由标识的区域的更新区域`pRgn`。  
   
 ```  
-int GetUpdateRgn (CRgn * pRgn，  
+int GetUpdateRgn(
+    CRgn* pRgn,  
     BOOL bErase = FALSE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pRgn`  
- Identifies the update region.  
+ 标识更新区域。  
   
  `bErase`  
- Specifies whether the background will be erased and nonclient areas of child windows will be drawn. If the value is **FALSE**, no drawing is done.  
+ 指定是否将清除后台和将绘制的子窗口的非工作区。 如果值为**FALSE**，不完成任何绘图。  
   
-### Return Value  
- Specifies a short-integer flag that indicates the type of resulting region. The value can take any one of the following:  
+### <a name="return-value"></a>返回值  
+ 指定一个短整数标志，指示的生成区域的类型。 值可以采用下列之一︰  
   
-- **SIMPLEREGION** The region has no overlapping borders.  
+- **SIMPLEREGION**区域具有不重叠的边框。  
   
-- **COMPLEXREGION** The region has overlapping borders.  
+- **COMPLEXREGION**区域有重叠的边框。  
   
-- **NULLREGION** The region is empty.  
+- **NULLREGION**区域为空。  
   
-- **ERROR** No region was created.  
+- **错误**已创建的任何区域。  
   
-### Remarks  
- The coordinates of this region are relative to the upper-left corner (client coordinates).  
+### <a name="remarks"></a>备注  
+ 此区域的坐标是相对于窗口左上角 （工作区坐标表示）。  
   
- The [BeginPaint](#beginpaint) member function automatically validates the update region, so any call to `GetUpdateRgn` made immediately after a call to `BeginPaint` retrieves an empty update region.  
+ [BeginPaint](#beginpaint)成员函数自动验证的更新区域中，因此任何调用到`GetUpdateRgn`在调用之后立即进行`BeginPaint`检索空更新区域。  
   
-##  <a name="getwindow"></a>  CWnd::GetWindow  
- Returns a pointer to the window requested, or **NULL** if none.  
+##  <a name="getwindow"></a>CWnd::GetWindow  
+ 将指针返回到请求，该窗口或**NULL**如果是 none。  
   
 ```  
-CWnd * GetWindow(UINT nCmd) const;  
+CWnd* GetWindow(UINT nCmd) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nCmd`  
- Specifies the relationship between `CWnd` and the returned window. It can take one of the following values:  
+ 指定之间的关系`CWnd`和返回的窗口。 它可以采用以下值之一︰  
   
-- **GW_CHILD** Identifies the `CWnd` first child window.  
+- **GW_CHILD**标识`CWnd`第一个子窗口。  
   
-- **GW_HWNDFIRST** If `CWnd` is a child window, returns the first sibling window. Otherwise, it returns the first top-level window in the list.  
+- **GW_HWNDFIRST**如果`CWnd`是子窗口，则返回第一个同级窗口。 否则，它在列表中返回的第一个顶级窗口。  
   
-- **GW_HWNDLAST** If `CWnd` is a child window, returns the last sibling window. Otherwise, it returns the last top-level window in the list.  
+- **GW_HWNDLAST**如果`CWnd`是子窗口，则返回的最后一个同级窗口。 否则，它在列表中返回的最后一个顶级窗口。  
   
-- **GW_HWNDNEXT** Returns the next window on the window manager's list.  
+- **GW_HWNDNEXT**窗口管理器的列表上返回下一个窗口。  
   
-- **GW_HWNDPREV** Returns the previous window on the window manager's list.  
+- **GW_HWNDPREV**窗口管理器的列表上返回上一个窗口。  
   
-- **GW_OWNER** Identifies the `CWnd` owner.  
+- **GW_OWNER**标识`CWnd`所有者。  
   
-### Return Value  
- The returned pointer may be temporary and should not be stored for later use.  
+### <a name="return-value"></a>返回值  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
-##  <a name="getwindowcontexthelpid"></a>  CWnd::GetWindowContextHelpId  
- Call this member function to retrieve the help context identifier, if any, associated with the window.  
+##  <a name="getwindowcontexthelpid"></a>CWnd::GetWindowContextHelpId  
+ 如果任何，与窗口关联，请调用此成员函数可检索帮助上下文标识符。  
   
 ```  
 DWORD GetWindowContextHelpId() const;  
 ```  
   
-### Return Value  
- The help context identifier. Returns 0 if the window has none.  
+### <a name="return-value"></a>返回值  
+ 帮助上下文标识符。 如果窗口都未，返回 0。  
   
-##  <a name="getwindowedchildcount"></a>  CWnd::GetWindowedChildCount  
- Call this member function to retrieve the number of associated child windows.  
-  
-```  
-长 GetWindowedChildCount();
-```  
-  
-### Return Value  
- The number of child windows associated with the `CWnd` object.  
-  
-##  <a name="getwindowdc"></a>  CWnd::GetWindowDC  
- Retrieves the display context for the entire window, including caption bar, menus, and scroll bars.  
+##  <a name="getwindowedchildcount"></a>CWnd::GetWindowedChildCount  
+ 调用此成员函数以检索关联的子窗口的次数。  
   
 ```  
-CDC * GetWindowDC();
+long GetWindowedChildCount();
 ```  
   
-### Return Value  
- Identifies the display context for the given window if the function is successful; otherwise **NULL**.  
+### <a name="return-value"></a>返回值  
+ 与相关联的子窗口数`CWnd`对象。  
   
- The returned pointer may be temporary and should not be stored for later use. [ReleaseDC](#releasedc) should be called once for each successful call to `GetWindowDC`.  
+##  <a name="getwindowdc"></a>Cwnd:: Getwindowdc  
+ 检索整个窗口中，包括标题栏、 菜单和滚动条的显示上下文。  
   
-### Remarks  
- A window display context permits painting anywhere in `CWnd`, since the origin of the context is the upper-left corner of `CWnd` instead of the client area.  
+```  
+CDC* GetWindowDC();
+```  
   
- Default attributes are assigned to the display context each time it retrieves the context. Previous attributes are lost.  
+### <a name="return-value"></a>返回值  
+ 如果该函数成功，则，标识给定窗口的显示上下文否则为**NULL**。  
   
- `GetWindowDC` is intended to be used for special painting effects within the `CWnd` nonclient area. Painting in nonclient areas of any window is not recommended.  
+ 返回的指针可能是暂时的不应以供稍后使用存储。 [ReleaseDC](#releasedc)应为每个成功调用一次调用`GetWindowDC`。  
   
- The [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows function can be used to retrieve the dimensions of various parts of the nonclient area, such as the caption bar, menu, and scroll bars.  
+### <a name="remarks"></a>备注  
+ 窗口显示上下文允许在任何位置绘制`CWnd`，因为上下文的源是的左上角`CWnd`而不是工作区。  
   
- After painting is complete, the [ReleaseDC](#releasedc) member function must be called to release the display context. Failure to release the display context will seriously affect painting requested by applications due to limitations on the number of device contexts that can be open at the same time.  
+ 默认属性分配给显示上下文检索上下文时，它每次。 以前的特性都将丢失。  
   
-##  <a name="getwindowinfo"></a>  CWnd::GetWindowInfo  
- Retrieves information about the window.  
+ `GetWindowDC`旨在用于在内的特殊的绘制效果`CWnd`非工作区。 不建议在任何窗口的非工作区域的绘制。  
+  
+ [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows 函数可以用于检索的非工作区，如标题栏、 菜单和滚动条的各个部分的尺寸。  
+  
+ 完成绘制后[ReleaseDC](#releasedc)必须调用成员函数以释放显示上下文。 无法释放显示上下文会严重影响绘制由由于可以同时打开的设备上下文的数量限制的应用程序请求。  
+  
+##  <a name="getwindowinfo"></a>CWnd::GetWindowInfo  
+ 检索有关窗口的信息。  
   
 ```  
 BOOL GetWindowInfo(PWINDOWINFO pwi) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pwi*  
- A pointer to a [WINDOWINFO](http://msdn.microsoft.com/library/windows/desktop/ms632610) structure.  
+ 指向的指针[WINDOWINFO](http://msdn.microsoft.com/library/windows/desktop/ms632610)结构。  
   
-### Remarks  
- This member function emulates the functionality of the function [GetWindowInfo](http://msdn.microsoft.com/library/windows/desktop/ms633516), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[GetWindowInfo](http://msdn.microsoft.com/library/windows/desktop/ms633516)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="getwindowlesschildcount"></a>  CWnd::GetWindowlessChildCount  
- Retrieves the number of associated windowless child windows.  
+##  <a name="getwindowlesschildcount"></a>CWnd::GetWindowlessChildCount  
+ 检索关联无窗口子窗口的数目。  
   
 ```  
-长 GetWindowlessChildCount();
+long GetWindowlessChildCount();
 ```  
   
-### Return Value  
- The number of windowless child windows associated with the `CWnd` object.  
+### <a name="return-value"></a>返回值  
+ 与相关联的无窗口子窗口数`CWnd`对象。  
   
-##  <a name="getwindowplacement"></a>  CWnd::GetWindowPlacement  
- Retrieves the show state and the normal (restored), minimized, and maximized positions of a window.  
+##  <a name="getwindowplacement"></a>CWnd::GetWindowPlacement  
+ 检索窗口的显示状态以及正常（已还原）、最小化和最大化位置。  
   
 ```  
 BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpwndpl`  
- Points to the `WINDOWPLACEMENT` structure that receives the show state and position information.  
+ 指向`WINDOWPLACEMENT`接收的显示状态和位置信息的结构。  
   
-### Return Value  
- Nonzero if the function is successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果该函数成功，则为非 0；否则为 0。  
   
-### Remarks  
- The **flags** member of the [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md) structure retrieved by this function is always 0. If `CWnd` is maximized, the **showCmd** member of `WINDOWPLACEMENT` is **SW_SHOWMAXIMIZED**. If the window is minimized, it is **SW_SHOWMINIMIZED.** It is **SW_SHOWNORMAL** otherwise.  
+### <a name="remarks"></a>备注  
+ **标志**的成员[WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)检索此函数的结构始终是 0。 如果`CWnd`最大化， **showCmd**的成员`WINDOWPLACEMENT`是**SW_SHOWMAXIMIZED**。 最小化窗口时，它是**SW_SHOWMINIMIZED。** 它是**SW_SHOWNORMAL**否则为。  
   
-##  <a name="getwindowrect"></a>  CWnd::GetWindowRect  
- Copies the dimensions of the bounding rectangle of the `CWnd` object to the structure pointed to by `lpRect`.  
+##  <a name="getwindowrect"></a>CWnd::GetWindowRect  
+ 将复制的绑定矩形的尺寸`CWnd`指向对象的结构`lpRect`。  
   
 ```  
-void GetWindowRect (LPRECT lpRect) const;  
+void GetWindowRect(LPRECT lpRect) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpRect`  
- Points to a `CRect` object or a [RECT structure](../../mfc/reference/rect-structure1.md) that will receive the screen coordinates of the upper-left and lower-right corners.  
+ 指向`CRect`对象或[RECT 结构](../../mfc/reference/rect-structure1.md)中将接收的左上角和右下角的屏幕坐标。  
   
-### Remarks  
- The dimensions are given in screen coordinates relative to the upper-left corner of the display screen. The dimensions of the caption, border, and scroll bars, if present, are included.  
+### <a name="remarks"></a>备注  
+ 尺寸的单位在屏幕坐标中相对于显示屏幕的左上角。 如果存在，，将包含的标题、 边框和滚动条的尺寸。  
   
-##  <a name="getwindowrgn"></a>  CWnd::GetWindowRgn  
- Call this member function to get the window region of a window.  
+##  <a name="getwindowrgn"></a>CWnd::GetWindowRgn  
+ 调用此成员函数以获取窗口的窗口区域。  
   
 ```  
-int GetWindowRgn (HRGN hRgn) const;  
+int GetWindowRgn(HRGN hRgn)const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `hRgn`  
- A handle to a window region.  
+ 窗口区域句柄。  
   
-### Return Value  
- The return value specifies the type of the region that the function obtains. It can be one of the following values:  
+### <a name="return-value"></a>返回值  
+ 返回值指定该函数可获取的区域的类型。 它可以是以下值之一︰  
   
-- **NULLREGION** The region is empty.  
+- **NULLREGION**区域为空。  
   
-- **SIMPLEREGION** The region is a single rectangle.  
+- **SIMPLEREGION**区域是单一的矩形区域。  
   
-- **COMPLEXREGION** The region is more than one rectangle.  
+- **COMPLEXREGION**区域是多个矩形。  
   
-- **ERROR** An error occurred; the region is unaffected.  
+- **错误**出错; 区域不会受到影响。  
   
-### Remarks  
- The window region determines the area within the window where the operating system permits drawing. The operating system does not display any portion of a window that lies outside of the window region.  
+### <a name="remarks"></a>备注  
+ 窗口区域确定操作系统允许其中进行绘画的窗口中的区域。 操作系统不显示窗口位于外部的窗口区域的任何部分。  
   
- The coordinates of a window's window region are relative to the upper-left corner of the window, not the client area of the window.  
+ 窗口的窗口区域的坐标是相对于窗口中，不是窗口的工作区的左上角。  
   
- To set the window region of a window, call [CWnd::SetWindowRgn](#setwindowrgn).  
+ 若要设置的窗口区域的一个窗口，调用[CWnd::SetWindowRgn](#setwindowrgn)。  
   
-##  <a name="getwindowtext"></a>  CWnd::GetWindowText  
- Copies the `CWnd` caption title (if it has one) into the buffer pointed to by `lpszStringBuf` or into the destination string `rString`.  
+##  <a name="getwindowtext"></a>CWnd::GetWindowText  
+ 副本`CWnd`标题标题 （如果有的话） 到指向的缓冲区`lpszStringBuf`或到目标字符串`rString`。  
   
 ```  
-int GetWindowText (LPTSTR lpszStringBuf，  
+int GetWindowText(
+    LPTSTR lpszStringBuf,  
     int nMaxCount) const;  
   
-常量; void GetWindowText （CString & rString）  
+void GetWindowText(
+    CString& rString) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpszStringBuf`  
- Points to the buffer that is to receive the copied string of the window's title.  
+ 指向以将接收复制的窗口的标题字符串的缓冲区。  
   
  `nMaxCount`  
- Specifies the maximum number of characters to be copied to the buffer, including the terminating null character. If the string is longer than the number of characters specified in `nMaxCount`, it is truncated.  
+ 指定字符复制到包括终止 null 字符的缓冲区最大的数目。 如果字符串长于中指定的字符数`nMaxCount`，则将被截断。  
   
  `rString`  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that is to receive the copied string of the window's title.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md)将接收复制的窗口的标题字符串的对象。  
   
-### Return Value  
- Specifies the length, in characters, of the copied string, not including the terminating null character. It is 0 if `CWnd` has no caption or if the caption is empty.  
+### <a name="return-value"></a>返回值  
+ 以字符为单位，不包括终止 null 字符的复制字符串的指定的长度。 如果则为 0`CWnd`没有标题或标题是否为空。  
   
-### Remarks  
- If the `CWnd` object is a control, the `GetWindowText` member function copies the text within the control instead of copying the caption.  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`对象是一个控件，`GetWindowText`成员函数将复制而不是复制标题控件中的文本。  
   
- This member function causes the [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627) message to be sent to the `CWnd` object.  
+ 此成员函数会导致[WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627)消息发送到`CWnd`对象。  
   
-### Example  
-  See the example for [CWnd::SetWindowText](#setwindowtext).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::SetWindowText](#setwindowtext)。  
   
-##  <a name="getwindowtextlength"></a>  CWnd::GetWindowTextLength  
- Returns the length of the `CWnd` object caption title.  
+##  <a name="getwindowtextlength"></a>CWnd::GetWindowTextLength  
+ 返回的长度`CWnd`对象标题标题。  
   
 ```  
 int GetWindowTextLength() const;  
 ```  
   
-### Return Value  
- Specifies the text length in characters, not including any null-termination character. The value is 0 if no such text exists.  
+### <a name="return-value"></a>返回值  
+ 以字符为单位，不包括任何 null 终止字符指定文本长度。 如果不存在任何此类文本，则值为 0。  
   
-### Remarks  
- If `CWnd` is a control, the `GetWindowTextLength` member function returns the length of the text within the control instead of the caption.  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`是一个控件，`GetWindowTextLength`成员函数将返回而不是标题控件中的文本的长度。  
   
- This member function causes the [WM_GETTEXTLENGTH](http://msdn.microsoft.com/library/windows/desktop/ms632628) message to be sent to the `CWnd` object.  
+ 此成员函数会导致[WM_GETTEXTLENGTH](http://msdn.microsoft.com/library/windows/desktop/ms632628)消息发送到`CWnd`对象。  
   
-### Example  
-  See the example for [CWnd::SetWindowText](#setwindowtext).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::SetWindowText](#setwindowtext)。  
   
-##  <a name="hidecaret"></a>  CWnd::HideCaret  
- Hides the caret by removing it from the display screen.  
+##  <a name="hidecaret"></a>CWnd::HideCaret  
+ 通过从显示屏幕中移除来隐藏插入符号。  
   
 ```  
 void HideCaret();
 ```  
   
-### Remarks  
- Although the caret is no longer visible, it can be displayed again by using the [ShowCaret](#showcaret) member function. Hiding the caret does not destroy its current shape.  
+### <a name="remarks"></a>备注  
+ 尽管脱字号不再是可见的但它可以显示再次使用[ShowCaret](#showcaret)成员函数。 隐藏插入符号不会销毁其当前的形状。  
   
- Hiding is cumulative. If `HideCaret` has been called five times in a row, the `ShowCaret` member function must be called five times before the caret will be shown.  
+ 隐藏是累积的。 如果`HideCaret`已在行中，调用五次`ShowCaret`成员函数前，必须调用五次将显示插入符号。  
   
-##  <a name="hilitemenuitem"></a>  CWnd::HiliteMenuItem  
- Highlights or removes the highlight from a top-level (menu-bar) menu item.  
+##  <a name="hilitemenuitem"></a>CWnd::HiliteMenuItem  
+ 突出显示，或者从顶级 （菜单栏） 菜单项移除突出显示。  
   
 ```  
-BOOL HiliteMenuItem (CMenu * pMenu，  
-    UINT nIDHiliteItem  
+BOOL HiliteMenuItem(
+    CMenu* pMenu,  
+    UINT nIDHiliteItem,  
     UINT nHilite);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pMenu`  
- Identifies the top-level menu that contains the item to be highlighted.  
+ 标识包含要突出显示的项的顶级菜单。  
   
  `nIDHiliteItem`  
- Specifies the menu item to be highlighted, depending on the value of the `nHilite` parameter.  
+ 指定要将突出显示，具体取决于的值的菜单项`nHilite`参数。  
   
  `nHilite`  
- Specifies whether the menu item is highlighted or the highlight is removed. It can be a combination of **MF_HILITE** or **MF_UNHILITE** with **MF_BYCOMMAND** or **MF_BYPOSITION**. The values can be combined using the bitwise OR operator. These values have the following meanings:  
+ 指定突出显示菜单项还是删除突出显示。 它可以是的组合**MF_HILITE**或**MF_UNHILITE**与**MF_BYCOMMAND**或**MF_BYPOSITION**。 可以使用按位 OR 运算符组合的值。 这些值的含义如下︰  
   
-- **MF_BYCOMMAND** Interprets `nIDHiliteItem` as the menu-item ID (the default interpretation).  
+- **MF_BYCOMMAND** Interprets`nIDHiliteItem`作为菜单项 ID （默认解释）。  
   
-- **MF_BYPOSITION** Interprets `nIDHiliteItem` as the zero-based offset of the menu item.  
+- **MF_BYPOSITION** Interprets`nIDHiliteItem`作为菜单项的从零开始的偏移量。  
   
-- **MF_HILITE** Highlights the item. If this value is not given, the highlight is removed from the item.  
+- **MF_HILITE**突出显示的项。 如果未提供此值，将从项移除突出显示。  
   
-- **MF_UNHILITE** Removes the highlight from the item.  
+- **MF_UNHILITE**从项目中删除突出显示。  
   
-### Return Value  
- Specifies whether the menu item was highlighted. Nonzero if the item was highlighted; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 指定是否已突出显示菜单项。 如果该项已突出显示; 则为非 0否则为 0。  
   
-### Remarks  
- The **MF_HILITE** and **MF_UNHILITE** flags can be used only with this member function; they cannot be used with the [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) member function.  
+### <a name="remarks"></a>备注  
+ **MF_HILITE**和**MF_UNHILITE**标志可仅与此成员函数; 它们不能与使用[CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)成员函数。  
   
-##  <a name="htmlhelp"></a>  CWnd::HtmlHelp  
- Call this member function to invoke the HTMLHelp application.  
+##  <a name="htmlhelp"></a>CWnd::HtmlHelp  
+ 调用此成员函数来调用 HTMLHelp 应用程序。  
   
 ```  
-虚拟 void HtmlHelp (DWORD_PTR dwData，  
+virtual void HtmlHelp(
+    DWORD_PTR dwData,  
     UINT nCmd = 0x000F);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `dwData`  
- Specifies additional data. The value used depends on the value of the `nCmd` parameter.  
+ 指定其他数据。 使用的值的值取决于`nCmd`参数。  
   
  `nCmd`  
- Specifies the type of help requested. For a list of possible values and how they affect the `dwData` parameter, see the `uCommand` parameter described in the HTML Help API Reference in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ 指定请求的帮助的类型。 有关的可能的值以及它们如何影响列表`dwData`参数，请参阅`uCommand`HTML 帮助 API 参考中所述的参数[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-### Remarks  
- See [CWinApp::HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp) for more information.  
+### <a name="remarks"></a>备注  
+ 请参阅[CWinApp::HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp)有关详细信息。  
   
-##  <a name="initdynamiclayout"></a>  CWnd::InitDynamicLayout  
- Called by the framework to initialize dynamic layout for a window.  
+##  <a name="initdynamiclayout"></a>CWnd::InitDynamicLayout  
+ 由框架调用以初始化窗口的动态布局。  
   
 ```  
 void InitDynamicLayout();
 ```  
   
-### Remarks  
- Do not call this method directly.  
+### <a name="remarks"></a>备注  
+ 请勿直接调用此方法。  
   
-##  <a name="invalidate"></a>  CWnd::Invalidate  
- Invalidates the entire client area of `CWnd`.  
+##  <a name="invalidate"></a>CWnd::Invalidate  
+ 失效的整个工作区`CWnd`。  
   
 ```  
-void Invalidate (BOOL bErase = TRUE);
+void Invalidate(BOOL bErase = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bErase`  
- Specifies whether the background within the update region is to be erased.  
+ 指定是否要消除更新区域内的背景。  
   
-### Remarks  
- The client area is marked for painting when the next [WM_PAINT](#onpaint) message occurs. The region can also be validated before a `WM_PAINT` message occurs by the [ValidateRect](#validaterect) or [ValidateRgn](#validatergn) member function.  
+### <a name="remarks"></a>备注  
+ 客户端区域标记为绘制时的下一步[WM_PAINT](#onpaint)消息时发生。 区域还可以验证之前`WM_PAINT`消息的发生是[ValidateRect](#validaterect)或[ValidateRgn](#validatergn)成员函数。  
   
- The `bErase` parameter specifies whether the background within the update area is to be erased when the update region is processed. If `bErase` is **TRUE**, the background is erased when the [BeginPaint](#beginpaint) member function is called; if `bErase` is **FALSE**, the background remains unchanged. If `bErase` is **TRUE** for any part of the update region, the background in the entire region, not just in the given part, is erased.  
+ `bErase`参数指定的更新区域中，后台是否处理更新区域时将被清除。 如果`bErase`是**TRUE**，擦除后台时[BeginPaint](#beginpaint)调用成员函数; 如果`bErase`是**FALSE**，后台保持不变。 如果`bErase`是**TRUE**更新区域的任何部分，清除整个区域，而不仅仅是在给定的部分中中的背景。  
   
- Windows sends a [WM_PAINT](#onpaint) message whenever the `CWnd` update region is not empty and there are no other messages in the application queue for that window.  
+ Windows 会将发送[WM_PAINT](#onpaint)每当消息`CWnd`更新区域不为空，并且在该窗口的应用程序队列中没有其他消息。  
   
-### Example  
-  See the example for [CWnd::UpdateWindow](#updatewindow).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::UpdateWindow](#updatewindow)。  
   
-##  <a name="invalidaterect"></a>  CWnd::InvalidateRect  
- Invalidates the client area within the given rectangle by adding that rectangle to the `CWnd` update region.  
+##  <a name="invalidaterect"></a>CWnd::InvalidateRect  
+ 通过添加到该矩形，使无效给定矩形内的工作区`CWnd`更新区域。  
   
 ```  
-void InvalidateRect (LPCRECT lpRect，  
+void InvalidateRect(
+    LPCRECT lpRect,  
     BOOL bErase = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpRect`  
- Points to a `CRect` object or a [RECT structure](../../mfc/reference/rect-structure1.md) that contains the rectangle (in client coordinates) to be added to the update region. If `lpRect` is **NULL**, the entire client area is added to the region.  
+ 指向`CRect`对象或[RECT 结构](../../mfc/reference/rect-structure1.md)包含矩形 （在客户端坐标中） 添加到更新区域。 如果`lpRect`是**NULL**，整个工作区添加到区域。  
   
  `bErase`  
- Specifies whether the background within the update region is to be erased.  
+ 指定是否要消除更新区域内的背景。  
   
-### Remarks  
- The invalidated rectangle, along with all other areas in the update region, is marked for painting when the next [WM_PAINT](#onpaint) message is sent. The invalidated areas accumulate in the update region until the region is processed when the next `WM_PAINT` call occurs, or until the region is validated by the [ValidateRect](#validaterect) or [ValidateRgn](#validatergn) member function.  
+### <a name="remarks"></a>备注  
+ 无效的矩形，以及所有其他区域中的更新区域中，标记为绘制时的下一步[WM_PAINT](#onpaint)发送消息。 失效的区域聚合的更新区域中，直到处理区域时的下一步`WM_PAINT`发生调用，或直到区域验证通过[ValidateRect](#validaterect)或[ValidateRgn](#validatergn)成员函数。  
   
- The `bErase` parameter specifies whether the background within the update area is to be erased when the update region is processed. If `bErase` is **TRUE**, the background is erased when the [BeginPaint](#beginpaint) member function is called; if `bErase` is **FALSE**, the background remains unchanged. If `bErase` is **TRUE** for any part of the update region, the background in the entire region is erased, not just in the given part.  
+ `bErase`参数指定的更新区域中，后台是否处理更新区域时将被清除。 如果`bErase`是**TRUE**，擦除后台时[BeginPaint](#beginpaint)调用成员函数; 如果`bErase`是**FALSE**，后台保持不变。 如果`bErase`是**TRUE**更新区域的任何部分中的整个区域的背景清除，而不仅仅是在给定的部分。  
   
- Windows sends a [WM_PAINT](#onpaint) message whenever the `CWnd` update region is not empty and there are no other messages in the application queue for that window.  
+ Windows 会将发送[WM_PAINT](#onpaint)每当消息`CWnd`更新区域不为空，并且在该窗口的应用程序队列中没有其他消息。  
   
-##  <a name="invalidatergn"></a>  CWnd::InvalidateRgn  
- Invalidates the client area within the given region by adding it to the current update region of `CWnd`.  
+##  <a name="invalidatergn"></a>CWnd::InvalidateRgn  
+ 通过将其添加到当前更新区域的失效给定区域内的工作区`CWnd`。  
   
 ```  
-void InvalidateRgn (CRgn * pRgn，  
+void InvalidateRgn(
+    CRgn* pRgn,  
     BOOL bErase = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pRgn`  
- A pointer to a [CRgn](../../mfc/reference/crgn-class.md) object that identifies the region to be added to the update region. The region is assumed to have client coordinates. If this parameter is **NULL**, the entire client area is added to the update region.  
+ 指向的指针[CRgn](../../mfc/reference/crgn-class.md)对象，它标识要添加到更新区域的区域。 区域被假定具有客户端坐标。 如果此参数为**NULL**，整个工作区添加到更新区域。  
   
  `bErase`  
- Specifies whether the background within the update region is to be erased.  
+ 指定是否要消除更新区域内的背景。  
   
-### Remarks  
- The invalidated region, along with all other areas in the update region, is marked for painting when the [WM_PAINT](#onpaint) message is next sent. The invalidated areas accumulate in the update region until the region is processed when a `WM_PAINT` message is next sent, or until the region is validated by the [ValidateRect](#validaterect) or [ValidateRgn](#validatergn) member function.  
+### <a name="remarks"></a>备注  
+ 无效的区域，以及所有其他区域中的更新区域中，标记为绘制时[WM_PAINT](#onpaint)下一步发送消息。 失效的区域聚合的更新区域中，直到处理区域时`WM_PAINT`下一步发送消息，或直到区域验证通过[ValidateRect](#validaterect)或[ValidateRgn](#validatergn)成员函数。  
   
- The `bErase` parameter specifies whether the background within the update area is to be erased when the update region is processed. If `bErase` is **TRUE**, the background is erased when the [BeginPaint](#beginpaint) member function is called; if `bErase` is **FALSE**, the background remains unchanged. If `bErase` is **TRUE** for any part of the update region, the background in the entire region, not just in the given part, is erased.  
+ `bErase`参数指定的更新区域中，后台是否处理更新区域时将被清除。 如果`bErase`是**TRUE**，擦除后台时[BeginPaint](#beginpaint)调用成员函数; 如果`bErase`是**FALSE**，后台保持不变。 如果`bErase`是**TRUE**更新区域的任何部分，清除整个区域，而不仅仅是在给定的部分中中的背景。  
   
- Windows sends a [WM_PAINT](#onpaint) message whenever the `CWnd` update region is not empty and there are no other messages in the application queue for that window.  
+ Windows 会将发送[WM_PAINT](#onpaint)每当消息`CWnd`更新区域不为空，并且在该窗口的应用程序队列中没有其他消息。  
   
- The given region must have been previously created by one of the region functions.  
+ 先前必须已将给定的区域创建由某一个区域函数中。  
   
-##  <a name="invokehelper"></a>  CWnd::InvokeHelper  
- Call this member function to invoke the ActiveX Control method or property specified by `dwDispID`, in the context specified by `wFlags`.  
+##  <a name="invokehelper"></a>CWnd::InvokeHelper  
+ 调用此成员函数以调用 ActiveX 控件方法或属性指定`dwDispID`，通过指定的上下文中`wFlags`。  
   
 ```  
-void AFX_CDECL InvokeHelper (DISPID dwDispID，  
-    WORD wFlags  
-    VARTYPE vtRet  
-    void* pvRet，const 字节*pbParamInfo，  
+void AFX_CDECL InvokeHelper(
+    DISPID dwDispID,  
+    WORD wFlags,  
+    VARTYPE vtRet,  
+    void* pvRet,  
+    const BYTE* pbParamInfo,  
  ...);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `dwDispID`  
- Identifies the method or property to be invoked.  
+ 标识要调用的方法或属性。  
   
  `wFlags`  
- Flags describing the context of the call to **IDispatch::Invoke**.  
+ 描述 **IDispatch::Invoke**调用的上下文的标志。  
   
  `vtRet`  
- Specifies the type of the return value. For possible values, see the Remarks section for [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).  
+ 指定返回值的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  `pvRet`  
- Address of the variable that will that will receive the property value or return value. It must match the type specified by `vtRet`.  
+ 将该变量的地址将接收的属性值或返回值。 它必须与 `vtRet`指定的类型匹配。  
   
  `pbParamInfo`  
- Pointer to a null-terminated string of bytes specifying the types of the parameters following `pbParamInfo`. For possible values, see the Remarks section for `COleDispatchDriver::InvokeHelper`.  
+ 指向以 null 结尾的字符串的指针，该字符串由指定 `pbParamInfo`后面的参数类型的字节组成。 有关可能的值，请参阅备注部分`COleDispatchDriver::InvokeHelper`。  
   
  *...*  
- Variable List of parameters, of types specified in `pbParamInfo`.  
+ 中指定的类型的参数的变量列表`pbParamInfo`。  
   
-### Remarks  
- The `pbParamInfo` parameter specifies the types of the parameters passed to the method or property. The variable list of arguments is represented by *...* in the syntax declaration.  
+### <a name="remarks"></a>备注  
+ `pbParamInfo` 参数指定传递到方法或属性的参数的类型。 自变量的变量列表由*...*语法声明中。  
   
- This function converts the parameters to **VARIANTARG** values, then invokes the **IDispatch::Invoke** method on the ActiveX control. If the call to **IDispatch::Invoke** fails, this function will throw an exception. If the `SCODE` (status code) returned by **IDispatch::Invoke** is `DISP_E_EXCEPTION`, this function throws a [COleException](../../mfc/reference/coleexception-class.md) object, otherwise it throws a [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
+ 此函数将转换的参数**VARIANTARG**值，然后调用**idispatch:: Invoke** ActiveX 控件上的方法。 如果调用**idispatch:: Invoke**失败，此函数将引发异常。 如果`SCODE`（状态代码） 返回**idispatch:: Invoke**是`DISP_E_EXCEPTION`，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)对象中，否则为它将引发[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
 > [!NOTE]
->  This function should be called only on a `CWnd` object that represents an ActiveX control.  
+>  应仅在调用此函数`CWnd`表示 ActiveX 控件的对象。  
   
- For more information about using this member function with ActiveX Control Containers, see the article [ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container](../../mfc/programming-activex-controls-in-a-activex-control-container.md).  
+ 有关此成员函数使用 ActiveX 控件容器的信息的详细信息，请参阅文章[ActiveX 控件容器︰ 将 ActiveX 控件编程 ActiveX 控件容器中的](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。  
   
-##  <a name="ischild"></a>  CWnd::IsChild  
- Indicates whether the window specified by `pWnd` is a child window or other direct descendant of `CWnd`.  
+##  <a name="ischild"></a>CWnd::IsChild  
+ 指示指定窗口`pWnd`为子窗口或其他直接子代`CWnd`。  
   
 ```  
 BOOL IsChild(const CWnd* pWnd) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pWnd`  
- Identifies the window to be tested.  
+ 标识要测试的窗口。  
   
-### Return Value  
- Specifies the outcome of the function. The value is nonzero if the window identified by `pWnd` is a child window of `CWnd`; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 指定的函数的结果。 值不为零，如果通过标识窗口`pWnd`是子窗口的`CWnd`; 否则为 0。  
   
-### Remarks  
- A child window is the direct descendant of `CWnd` if the `CWnd` object is in the chain of parent windows that leads from the original pop-up window to the child window.  
+### <a name="remarks"></a>备注  
+ 子窗口是直接子代`CWnd`如果`CWnd`对象是从原始的弹出窗口指向子窗口的父窗口的链中。  
   
-##  <a name="isd2dsupportenabled"></a>  CWnd::IsD2DSupportEnabled  
- Determines whether D2D support is enabled.  
+##  <a name="isd2dsupportenabled"></a>CWnd::IsD2DSupportEnabled  
+ 确定是否启用 D2D 支持。  
   
 ```  
 BOOL IsD2DSupportEnabled();
 ```  
   
-### Return Value  
- TRUE if the feature is enabled; otherwise FALSE.  
+### <a name="return-value"></a>返回值  
+ 如果已启用该功能; 则为 TRUE否则为 FALSE。  
   
-##  <a name="isdialogmessage"></a>  CWnd::IsDialogMessage  
- Call this member function to determine whether the given message is intended for a modeless dialog box; if it is, this function processes the message.  
+##  <a name="isdialogmessage"></a>CWnd::IsDialogMessage  
+ 调用此成员函数，以确定给定的消息是否适用于无模式对话框;如果是，此函数将处理的消息。  
   
 ```  
 BOOL IsDialogMessage(LPMSG lpMsg);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpMsg`  
- Points to an [MSG](../../mfc/reference/msg-structure1.md) structure that contains the message to be checked.  
+ 指向[MSG](../../mfc/reference/msg-structure1.md)结构，它包含要检查的消息。  
   
-### Return Value  
- Specifies whether the member function has processed the given message. It is nonzero if the message has been processed; otherwise 0. If the return is 0, call the [CWnd::PreTranslateMessage](#pretranslatemessage) member function of the base class to process the message. In an override of the `CWnd::PreTranslateMessage` member function the code looks like this :  
+### <a name="return-value"></a>返回值  
+ 指定该成员函数是否已处理给定的消息。 它不为零，如果已处理了消息;否则为 0。 如果返回为 0，则调用[cwnd:: Pretranslatemessage](#pretranslatemessage)来处理该消息的基类的成员函数。 中的重写`CWnd::PreTranslateMessage`成员函数的代码看起来像这样︰  
   
- [!code-cpp[NVC_MFCWindowing#100](../../mfc/reference/codesnippet/cpp/cwnd-class_40.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 100](../../mfc/reference/codesnippet/cpp/cwnd-class_40.cpp)]  
   
-### Remarks  
- When the `IsDialogMessage` function processes a message, it checks for keyboard messages and converts them to selection commands for the corresponding dialog box. For example, the TAB key selects the next control or group of controls, and the DOWN ARROW key selects the next control in a group.  
+### <a name="remarks"></a>备注  
+ 当`IsDialogMessage`函数处理消息，它会检查有关键盘消息并将其转换为相应的对话框中选择命令。 例如，TAB 键选择下一个控件或组控件，并向下箭头键选择下一个控件组中。  
   
- You must not pass a message processed by `IsDialogMessage` to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) or [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions, because it has already been processed.  
+ 你必须通过处理的消息`IsDialogMessage`到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)或[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数，因为它已处理。  
   
-##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked  
- Determines whether a button control has a check mark next to it.  
+##  <a name="isdlgbuttonchecked"></a>CWnd::IsDlgButtonChecked  
+ 确定按钮控件是否具有一个它旁边的复选标记。  
   
 ```  
 UINT IsDlgButtonChecked(int nIDButton) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDButton`  
- Specifies the integer identifier of the button control.  
+ 指定按钮控件的整数标识符。  
   
-### Return Value  
- Nonzero if the given control is checked, and 0 if it is not checked. Only radio buttons and check boxes can be checked. For three-state buttons, the return value can be 2 if the button is indeterminate. This member function returns 0 for a pushbutton.  
+### <a name="return-value"></a>返回值  
+ 如果选中给定的控制，则为非 0 和 0，如果未选中。 仅单选按钮，可以选中复选框。 对于三种状态的按钮，返回值可以为 2，如果按钮是不确定的。 此成员函数返回 0 表示按钮。  
   
-### Remarks  
- If the button is a three-state control, the member function determines whether it is dimmed, checked, or neither.  
+### <a name="remarks"></a>备注  
+ 如果按钮是具有三个状态的控件，该成员函数将确定是否它显示为灰色，选中，或都不。  
   
-##  <a name="isdynamiclayoutenabled"></a>  CWnd::IsDynamicLayoutEnabled  
- Determines whether dynamic layout is enabled on this window. If dynamic layout is enabled, the position and size of child windows can change when the user resizes the parent window.  
+##  <a name="isdynamiclayoutenabled"></a>Cwnd:: Isdynamiclayoutenabled  
+ 确定是否在此窗口上启用动态布局。 如果启用动态布局，则子窗口的位置和大小可以在用户调整父窗口大小时进行更改。  
   
 ```  
 BOOL IsDynamicLayoutEnabled() const;  
 ```  
   
-### Return Value  
- TRUE if dynamic layout is enabled; otherwise FALSE.  
+### <a name="return-value"></a>返回值  
+ 如果启用了动态布局，则为 TRUE；否则为 FALSE。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
-##  <a name="isiconic"></a>  CWnd::IsIconic  
- Specifies whether `CWnd` is minimized (iconic).  
+##  <a name="isiconic"></a>CWnd::IsIconic  
+ 指定是否`CWnd`已最小化 （图标化）。  
   
 ```  
 BOOL IsIconic() const;  
 ```  
   
-### Return Value  
- Nonzero if `CWnd` is minimized; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 非零如果`CWnd`降至最低; 否则为 0。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
-##  <a name="istouchwindow"></a>  CWnd::IsTouchWindow  
- Specifies whether `CWnd` has touch support.  
+##  <a name="istouchwindow"></a>CWnd::IsTouchWindow  
+ 指定 `CWnd` 是否具有触摸支持。  
   
 ```  
 BOOL IsTouchWindow() const;  
 ```  
   
-### Return Value  
- `TRUE` if `CWnd` has touch support; otherwise `FALSE`.  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果`CWnd`具有触摸支持; 否则为`FALSE`。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
-##  <a name="iswindowenabled"></a>  CWnd::IsWindowEnabled  
- Specifies whether `CWnd` is enabled for mouse and keyboard input.  
+##  <a name="iswindowenabled"></a>CWnd::IsWindowEnabled  
+ 指定是否`CWnd`为鼠标和键盘输入启用。  
   
 ```  
 BOOL IsWindowEnabled() const;  
 ```  
   
-### Return Value  
- Nonzero if `CWnd` is enabled; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 非零如果`CWnd`启用; 否则为 0。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#102](../../mfc/reference/codesnippet/cpp/cwnd-class_42.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 102](../../mfc/reference/codesnippet/cpp/cwnd-class_42.cpp)]  
   
-##  <a name="iswindowvisible"></a>  CWnd::IsWindowVisible  
- Determines the visibility state of the given window.  
+##  <a name="iswindowvisible"></a>CWnd::IsWindowVisible  
+ 确定给定窗口的可见性状态。  
   
 ```  
 BOOL IsWindowVisible() const;  
 ```  
   
-### Return Value  
- Nonzero if `CWnd` is visible (has the [WS_VISIBLE](../../mfc/reference/window-styles.md) style bit set, and parent window is visible). Because the return value reflects the state of the **WS_VISIBLE** style bit, the return value may be nonzero even though `CWnd` is totally obscured by other windows.  
+### <a name="return-value"></a>返回值  
+ 非零如果`CWnd`可见 (具有[WS_VISIBLE](../../mfc/reference/window-styles.md)设置样式位，并且其父窗口处于可见)。 因为返回的值反映的状态**WS_VISIBLE**样式位，则返回值可能为非零即使`CWnd`完全被其他窗口遮盖。  
   
-### Remarks  
- A window possesses a visibility state indicated by the **WS_VISIBLE** style bit. When this style bit is set with a call to the [ShowWindow](#showwindow) member function, the window is displayed and subsequent drawing to the window is displayed as long as the window has the style bit set.  
+### <a name="remarks"></a>备注  
+ 窗口拥有由指示的可见性状态**WS_VISIBLE**样式位。 当通过调用设置此样式位[ShowWindow](#showwindow)成员函数，将显示的窗口和后续绘制到窗口将显示，只要窗口具有位的样式设置。  
   
- Any drawing to a window that has the **WS_VISIBLE** style will not be displayed if the window is covered by other windows or is clipped by its parent window.  
+ 该窗口具有到任何绘图**WS_VISIBLE**如果窗口涵盖的其他 windows 或由其父窗口剪辑，将不显示样式。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#103](../../mfc/reference/codesnippet/cpp/cwnd-class_43.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 103](../../mfc/reference/codesnippet/cpp/cwnd-class_43.cpp)]  
   
-##  <a name="iszoomed"></a>  CWnd::IsZoomed  
- Determines whether `CWnd` has been maximized.  
+##  <a name="iszoomed"></a>CWnd::IsZoomed  
+ 确定是否`CWnd`已最大化。  
   
 ```  
-BOOL IsZoomed() 常量;  
+BOOL IsZoomed() const;  
 ```  
   
-### Return Value  
- Nonzero if `CWnd` is maximized; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 非零如果`CWnd`最大化; 否则为 0。  
   
-##  <a name="killtimer"></a>  CWnd::KillTimer  
- Kills the timer event identified by `nIDEvent` from the earlier call to `SetTimer`.  
+##  <a name="killtimer"></a>CWnd::KillTimer  
+ 将终止由标识的计时器事件`nIDEvent`从以前调用`SetTimer`。  
   
 ```  
 BOOL KillTimer(UINT_PTR nIDEvent);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDEvent`  
- The value of the timer event passed to [SetTimer](#settimer).  
+ 计时器事件的值传递给[SetTimer](#settimer)。  
   
-### Return Value  
- Specifies the outcome of the function. The value is nonzero if the event was killed. It is 0 if the `KillTimer` member function could not find the specified timer event.  
+### <a name="return-value"></a>返回值  
+ 指定的函数的结果。 值不为零，如果事件已被终止。 如果则为 0`KillTimer`成员函数找不到指定的计时器事件。  
   
-### Remarks  
- Pending [WM_TIMER](#ontimer) messages associated with the timer are not removed from the message queue.  
+### <a name="remarks"></a>备注  
+ 挂起[WM_TIMER](#ontimer)与计时器关联的消息不会从消息队列。  
   
-### Example  
-  See the example for [CWnd::SetTimer](#settimer).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::SetTimer](#settimer)。  
   
-##  <a name="loaddynamiclayoutresource"></a>  CWnd::LoadDynamicLayoutResource  
- Called by the framework to load dynamic layout information from the resource file.  
+##  <a name="loaddynamiclayoutresource"></a>CWnd::LoadDynamicLayoutResource  
+ 由框架调用，以从资源文件加载动态布局信息。  
   
 ```  
 BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpszResourceName`  
- The name of the resource that contains the desired dynamic layout information for this window.  
+ 包含此窗口所需的动态布局信息的资源名称。  
   
-### Return Value  
- Nonzero if the function is successful. It is 0 if a failure occurs.  
+### <a name="return-value"></a>返回值  
+ 如果函数运行成功，则为非零。 如果发生故障，则为 0。  
   
-### Remarks  
- Do not call this method directly.  
+### <a name="remarks"></a>备注  
+ 请勿直接调用此方法。  
   
-##  <a name="lockwindowupdate"></a>  CWnd::LockWindowUpdate  
- Disables drawing in the given window.  
+##  <a name="lockwindowupdate"></a>CWnd::LockWindowUpdate  
+ 禁用在给定窗口中绘制。  
   
 ```  
 BOOL LockWindowUpdate();
 ```  
   
-### Return Value  
- Nonzero if the function is successful. It is 0 if a failure occurs or if the `LockWindowUpdate` function has been used to lock another window.  
+### <a name="return-value"></a>返回值  
+ 如果函数运行成功，则为非零。 如果发生故障，或如果，则为 0`LockWindowUpdate`函数已用于锁定另一个窗口。  
   
-### Remarks  
- A locked window cannot be moved. Only one window can be locked at a time. To unlock a window locked with `LockWindowUpdate`, call [UnlockWindowUpdate](#unlockwindowupdate).  
+### <a name="remarks"></a>备注  
+ 不能移锁定的窗口。 只有一个窗口可以锁定一次。 若要解锁锁定的窗口`LockWindowUpdate`，调用[UnlockWindowUpdate](#unlockwindowupdate)。  
   
- If an application with a locked window (or any locked child windows) calls the [GetDC,](http://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx,](http://msdn.microsoft.com/library/windows/desktop/dd144873) or [BeginPaint](http://msdn.microsoft.com/library/windows/desktop/dd183362) Windows function, the called function returns a device context whose visible region is empty. This will occur until the application unlocks the window by calling the `UnlockWindowUpdate` member function.  
+ 如果应用程序具有锁定的窗口 （或任何锁定的子窗口） 调用[GetDC，](http://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx，](http://msdn.microsoft.com/library/windows/desktop/dd144873)或[BeginPaint](http://msdn.microsoft.com/library/windows/desktop/dd183362) Windows 函数调用的函数返回设备上下文的可见区域为空。 这会发生应用程序通过调用解锁窗口之前`UnlockWindowUpdate`成员函数。  
   
- While window updates are locked, the system keeps track of the bounding rectangle of any drawing operations to device contexts associated with a locked window. When drawing is reenabled, this bounding rectangle is invalidated in the locked window and its child windows to force an eventual [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message to update the screen. If no drawing has occurred while the window updates were locked, no area is invalidated.  
+ 当窗口更新处于锁定状态时，系统将记录的任何与锁定窗口关联的设备上下文的绘制操作的绑定矩形。 当重新启用绘制时，将此边界的矩形失效中锁定的窗口和其子窗口，来强制最终[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息更新屏幕。 如果没有绘图发生窗口更新已锁定时，没有区域会失效。  
   
- The `LockWindowUpdate` member function does not make the given window invisible and does not clear the [WS_VISIBLE](../../mfc/reference/window-styles.md) style bit.  
+ `LockWindowUpdate`成员函数不会使给定的窗口不可见，并不会清除[WS_VISIBLE](../../mfc/reference/window-styles.md)样式位。  
   
-##  <a name="m_hwnd"></a>  CWnd::m_hWnd  
- The handle of the Windows window attached to this `CWnd`.  
+##  <a name="m_hwnd"></a>CWnd::m_hWnd  
+ Windows 窗口的句柄附加到此`CWnd`。  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-### Remarks  
- The `m_hWnd` data member is a public variable of type `HWND`.  
+### <a name="remarks"></a>备注  
+ `m_hWnd`数据成员是类型的公共变量`HWND`。  
   
-##  <a name="mapwindowpoints"></a>  CWnd::MapWindowPoints  
- Converts (maps) a set of points from the coordinate space of the `CWnd` to the coordinate space of another window.  
+##  <a name="mapwindowpoints"></a>CWnd::MapWindowPoints  
+ 将一组点从 `CWnd` 的坐标空间转换（映射）到另一个窗口的坐标空间。  
   
 ```  
-void MapWindowPoints (CWnd * pwndTo，  
-    LPRECT lpRect) 常量;  
+void MapWindowPoints(
+    CWnd* pwndTo,  
+    LPRECT lpRect) const;  
   
-void MapWindowPoints (CWnd * pwndTo，  
-    LPPOINT lpPoint  
+void MapWindowPoints(
+    CWnd* pwndTo,  
+    LPPOINT lpPoint,  
     UINT nCount) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pwndTo*  
- Identifies the window to which points are converted. If this parameter is **NULL**, the points are converted to screen coordinates.  
+ 标识点转换到的目标窗口。 如果此参数为**NULL**，点转换为屏幕坐标。  
   
  `lpRect`  
- Specifies the rectangle whose points are to be converted. The first version of this function is available only for Windows 3.1 and later.  
+ 指定其点是要转换的矩形。 仅对于 Windows 3.1 及更高版本，此函数的第一个版本是可用。  
   
  `lpPoint`  
- A pointer to an array of [POINT structure](../../mfc/reference/point-structure1.md) that contain the set of points to be converted.  
+ 指向数组的指针[点结构](../../mfc/reference/point-structure1.md)，包含要转换的点集。  
   
  `nCount`  
- Specifies the number of **POINT** structures in the array pointed to by `lpPoint`.  
+ 指定的数**点**指向数组中的结构`lpPoint`。  
   
-##  <a name="messagebox"></a>  CWnd::MessageBox  
- Creates and displays a window that contains an application-supplied message and caption, plus a combination of the predefined icons and pushbuttons described in the [Message-Box Styles](../../mfc/reference/message-box-styles.md) list.  
+##  <a name="messagebox"></a>CWnd::MessageBox  
+ 创建并显示一个窗口，其中包含应用程序提供的消息和标题，再加上的预定义的图标和中所述的按键组合[消息框样式](../../mfc/reference/message-box-styles.md)列表。  
   
 ```  
-int MessageBox (LPCTSTR lpszText，  
-    LPCTSTR lpszCaption = NULL，  
+int MessageBox(
+    LPCTSTR lpszText,  
+    LPCTSTR lpszCaption = NULL,  
     UINT nType = MB_OK);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpszText`  
- Points to a `CString` object or null-terminated string containing the message to be displayed.  
+ 指向`CString`对象或包含要显示的消息的以 null 结尾的字符串。  
   
  `lpszCaption`  
- Points to a `CString` object or null-terminated string to be used for the message-box caption. If `lpszCaption` is **NULL**, the default caption "Error" is used.  
+ 指向`CString`对象或要用于消息框标题的以 null 结尾的字符串。 如果`lpszCaption`是**NULL**，使用"Error"的默认标题。  
   
  `nType`  
- Specifies the contents and behavior of the message box.  
+ 指定的内容和行为的消息框。  
   
-### Return Value  
- This method utilizes the [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) function as defined in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. This method returns the result of calling this function.  
+### <a name="return-value"></a>返回值  
+ 此方法使用[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)函数中定义[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此方法返回调用此函数的结果。  
   
-### Remarks  
- Use the global function [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) instead of this member function to implement a message box in your application.  
+### <a name="remarks"></a>备注  
+ 使用全局函数[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)而不是该成员函数以在你的应用程序中实现一个消息框。  
   
- The following shows the various system icons that can be used in a message box:  
+ 下面演示可以在一个消息框中使用的各种系统图标︰  
   
 |||  
 |-|-|  
-|![Stop &#40;x&#41; icon](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **MB_ICONSTOP**, and **MB_ICONERROR**|  
-|![Help &#40;&#41; icon](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
-|![Important &#40;&#33;&#41; icon](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION** and **MB_ICONWARNING**|  
-|![Information &#40;i&#41; icon](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** and **MB_ICONINFORMATION**|  
+|![停止 (x) 图标](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**， **MB_ICONSTOP**，和**MB_ICONERROR**|  
+|![帮助 （） 图标](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
+|![重要说明 （！） 图标](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION**和**MB_ICONWARNING**|  
+|![信息 (i) 图标](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK**和**MB_ICONINFORMATION**|  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
   
-##  <a name="modifystyle"></a>  CWnd::ModifyStyle  
- Call this member function to modify a window's style.  
+##  <a name="modifystyle"></a>CWnd::ModifyStyle  
+ 调用此成员函数以修改窗口的样式。  
   
 ```  
-BOOL ModifyStyle (DWORD dwRemove，  
-    DWORD dwAdd  
+BOOL ModifyStyle(
+    DWORD dwRemove,  
+    DWORD dwAdd,  
     UINT nFlags = 0);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `dwRemove`  
- Specifies window styles to be removed during style modification.  
+ 指定要删除在样式修改过程的窗口样式。  
   
  `dwAdd`  
- Specifies window styles to be added during style modification.  
+ 指定要添加在样式修改过程的窗口样式。  
   
  `nFlags`  
- Flags to be passed to [SetWindowPos](#setwindowpos), or zero if `SetWindowPos` should not be called. The default is zero. See the Remarks section for a list of preset flags.  
+ 标志传递给[SetWindowPos](#setwindowpos)，或为零`SetWindowPos`不应该调用。 默认值为零。 请参阅预设标志的列表的备注部分。  
   
-### Return Value  
- Nonzero if style was successfully modified; otherwise, 0.  
+### <a name="return-value"></a>返回值  
+ 如果已成功修改样式; 则为非 0否则为为 0。  
   
-### Remarks  
- Styles to be added or removed can be combined by using the bitwise OR (&#124;) operator. See the topics [Window Styles](http://msdn.microsoft.com/library/windows/desktop/ms632600) and [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] for information about the available window styles.  
+### <a name="remarks"></a>备注  
+ 可以通过使用按位 OR 组合样式来添加或删除 (|) 运算符。 请参阅主题[窗口样式](http://msdn.microsoft.com/library/windows/desktop/ms632600)和[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关可用的窗口样式信息。  
   
- If `nFlags` is nonzero, `ModifyStyle` calls the Windows API function [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) and redraws the window by combining `nFlags` with the following four preset flags:  
+ 如果`nFlags`不为零，`ModifyStyle`调用 Windows API 函数[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)和通过组合重绘的窗口`nFlags`与以下四个预设的标志︰  
   
-- `SWP_NOSIZE` Retains the current size.  
+- `SWP_NOSIZE`保留当前的大小。  
   
-- `SWP_NOMOVE` Retains the current position.  
+- `SWP_NOMOVE`保留当前的位置。  
   
-- `SWP_NOZORDER` Retains the current Z order.  
+- `SWP_NOZORDER`保留当前的 Z 顺序。  
   
-- `SWP_NOACTIVATE` Does not activate the window.  
+- `SWP_NOACTIVATE`不会激活窗口。  
   
- To modify a window's extended styles, see [ModifyStyleEx](#modifystyleex).  
+ 若要修改窗口的扩展样式，请参阅[ModifyStyleEx](#modifystyleex)。  
   
 > [!NOTE]
->  For some styles in certain controls (the **ES_READONLY** style in the edit control, for example), **ModifyStyle** may not properly change the style because the control may need to perform special internal processing. In these cases, a corresponding message to change the style will be available ( **EM_SETREADONLY** in the example mentioned).  
+>  对于某些控件中的某些样式 ( **ES_READONLY**样式在编辑控件中，例如)， **ModifyStyle**可能不正确更改样式因为控件可能需要执行特殊的内部处理。 可在这些情况下，使用相应的消息要更改的样式 ( **EM_SETREADONLY**在示例中所述)。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#105](../../mfc/reference/codesnippet/cpp/cwnd-class_45.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 105](../../mfc/reference/codesnippet/cpp/cwnd-class_45.cpp)]  
   
-##  <a name="modifystyleex"></a>  CWnd::ModifyStyleEx  
- Call this member function to modify a window's extended style.  
+##  <a name="modifystyleex"></a>CWnd::ModifyStyleEx  
+ 调用此成员函数以修改窗口的扩展的样式。  
   
 ```  
-BOOL ModifyStyleEx (DWORD dwRemove，  
-    DWORD dwAdd  
+BOOL ModifyStyleEx(
+    DWORD dwRemove,  
+    DWORD dwAdd,  
     UINT nFlags = 0);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `dwRemove`  
- Specifies extended styles to be removed during style modification.  
+ 指定要删除在样式修改过程的扩展的样式。  
   
  `dwAdd`  
- Specifies extended styles to be added during style modification.  
+ 指定要添加在样式修改过程的扩展的样式。  
   
  `nFlags`  
- Flags to be passed to [SetWindowPos](#setwindowpos), or zero if `SetWindowPos` should not be called. The default is zero. See the Remarks section for a list of preset flags.  
+ 标志传递给[SetWindowPos](#setwindowpos)，或为零`SetWindowPos`不应该调用。 默认值为零。 请参阅预设标志的列表的备注部分。  
   
-### Return Value  
- Nonzero if style was successfully modified; otherwise, 0.  
+### <a name="return-value"></a>返回值  
+ 如果已成功修改样式; 则为非 0否则为为 0。  
   
-### Remarks  
- Styles to be added or removed can be combined by using the bitwise OR (&#124;) operator. See the topics [Extended Window Styles](../../mfc/reference/extended-window-styles.md) in this book and [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] for information about the available extended styles  
+### <a name="remarks"></a>备注  
+ 可以通过使用按位 OR 组合样式来添加或删除 (|) 运算符。 请参阅主题[扩展窗口样式](../../mfc/reference/extended-window-styles.md)本书中和[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]了解有关可用扩展样式  
   
- If `nFlags` is nonzero, `ModifyStyleEx` calls the Windows API function [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) and redraws the window by combining `nFlags` with the following four preset flags:  
+ 如果`nFlags`不为零，`ModifyStyleEx`调用 Windows API 函数[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)和通过组合重绘的窗口`nFlags`与以下四个预设的标志︰  
   
-- `SWP_NOSIZE` Retains the current size.  
+- `SWP_NOSIZE`保留当前的大小。  
   
-- `SWP_NOMOVE` Retains the current position.  
+- `SWP_NOMOVE`保留当前的位置。  
   
-- `SWP_NOZORDER` Retains the current Z order.  
+- `SWP_NOZORDER`保留当前的 Z 顺序。  
   
-- `SWP_NOACTIVATE` Does not activate the window.  
+- `SWP_NOACTIVATE`不会激活窗口。  
   
- To modify windows using regular window styles, see [ModifyStyle](#modifystyle).  
+ 若要修改 windows 中使用正则窗口样式，请参阅[ModifyStyle](#modifystyle)。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#106](../../mfc/reference/codesnippet/cpp/cwnd-class_46.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 106](../../mfc/reference/codesnippet/cpp/cwnd-class_46.cpp)]  
   
-##  <a name="movewindow"></a>  CWnd::MoveWindow  
- Changes the position and dimensions.  
+##  <a name="movewindow"></a>CWnd::MoveWindow  
+ 更改的位置和尺寸。  
   
 ```  
-void MoveWindow (int x，  
-    int y  
-    int nWidth  
-    int nHeight  
+void MoveWindow(
+    int x,  
+    int y,  
+    int nWidth,  
+    int nHeight,  
     BOOL bRepaint = TRUE);
 
  
-void MoveWindow (LPCRECT lpRect，BOOL bRepaint = TRUE);
+void MoveWindow(
+    LPCRECT lpRect,
+    BOOL bRepaint = TRUE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *x*  
- Specifies the new position of the left side of the `CWnd`.  
+ 指定的左侧的新位置`CWnd`。  
   
  *y*  
- Specifies the new position of the top of the `CWnd`.  
+ 指定新位置的顶部`CWnd`。  
   
  `nWidth`  
- Specifies the new width of the `CWnd`.  
+ 指定的新宽度`CWnd`。  
   
  `nHeight`  
- Specifies the new height of the `CWnd`.  
+ 指定的新高度`CWnd`。  
   
  `bRepaint`  
- Specifies whether `CWnd` is to be repainted. If **TRUE**, `CWnd` receives a [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message in its [OnPaint](#onpaint) message handler as usual. If this parameter is **FALSE**, no repainting of any kind occurs. This applies to the client area, to the nonclient area (including the title and scroll bars), and to any part of the parent window uncovered as a result of `CWnd`'s move. When this parameter is **FALSE**, the application must explicitly invalidate or redraw any parts of `CWnd` and parent window that must be redrawn.  
+ 指定是否`CWnd`是进行重新绘制。 如果**TRUE**，`CWnd`接收[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息在其[OnPaint](#onpaint)照常消息处理程序。 如果此参数为**FALSE**，任何类型没有重新绘制时发生。 这适用的客户端区域、 （包括标题和滚动条） 的非工作区，和为发现了父窗口的任意部分`CWnd`的移动。 此参数时**FALSE**，应用程序必须显式失效或重绘的任何部分`CWnd`和必须重绘的父窗口。  
   
  `lpRect`  
- The [CRect](../../atl-mfc-shared/reference/crect-class.md) object or [RECT structure](../../mfc/reference/rect-structure1.md) that specifies the new size and position.  
+ [CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，指定新的大小和位置。  
   
-### Remarks  
- For a top-level `CWnd` object, the *x* and *y* parameters are relative to the upper-left corner of the screen. For a child `CWnd` object, they are relative to the upper-left corner of the parent window's client area.  
+### <a name="remarks"></a>备注  
+ 有关顶级`CWnd`对象， *x*和*y*参数是相对于屏幕左上角。 为子`CWnd`对象，它们是相对于父窗口的工作区的左上角。  
   
- The `MoveWindow` function sends the [WM_GETMINMAXINFO](#ongetminmaxinfo) message. Handling this message gives `CWnd` the opportunity to modify the default values for the largest and smallest possible windows. If the parameters to the `MoveWindow` member function exceed these values, the values can be replaced by the minimum or maximum values in the `WM_GETMINMAXINFO` handler.  
+ `MoveWindow`函数发送[WM_GETMINMAXINFO](#ongetminmaxinfo)消息。 处理此消息提供`CWnd`机会修改最大和最小可能 windows 的默认值。 如果参数为`MoveWindow`成员函数超过这些值，值可以替换为中的最小值或最大值`WM_GETMINMAXINFO`处理程序。  
   
-### Example  
-  See the example for [CWnd::ClientToScreen](#clienttoscreen).  
+### <a name="example"></a>示例  
+  请参阅示例[CWnd::ClientToScreen](#clienttoscreen)。  
   
-##  <a name="notifywinevent"></a>  CWnd::NotifyWinEvent  
- Signals the system that a predefined event occurred. If any client applications have registered a hook function for the event, the system calls the client's hook function.  
+##  <a name="notifywinevent"></a>CWnd::NotifyWinEvent  
+ 向系统发出信号，指出发生了预定义事件。 如果任何客户端应用程序中注册该事件的挂钩函数，则系统会调用客户端的挂钩函数。  
   
 ```  
-void NotifyWinEvent （DWORD 事件，  
-    长 idObjectType  
-    长 idObject);
+void NotifyWinEvent(
+    DWORD event,  
+    LONG idObjectType,  
+    LONG idObject);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `event`  
- Specifies the event that occurred. This value must be one of the [event constants](http://msdn.microsoft.com/library/windows/desktop/dd318066).  
+ 指定发生的事件。 此值必须是之一[事件常量](http://msdn.microsoft.com/library/windows/desktop/dd318066)。  
   
  *idObjectType*  
- Identifies the kind of object that generated the event. This value is one of the predefined [object identifiers](http://msdn.microsoft.com/library/windows/desktop/dd373606) or a custom object ID value.  
+ 标识生成事件的对象的种类。 此值是预定义之一[对象标识符](http://msdn.microsoft.com/library/windows/desktop/dd373606)或自定义对象的 ID 值。  
   
  `idObject`  
- Identifies whether the event was generated by an object or a child element of the object. If this value is **CHILDID_SELF**, the event was generated by the object itself. If not, this value is the child ID of the element that generated the event.  
+ 标识是否生成事件的对象或者该对象的子元素。 如果此值为**CHILDID_SELF**，对象本身生成事件。 否则，此值是生成该事件的元素的子 ID。  
   
-### Remarks  
- This member function emulates the functionality of the function [NotifyWinEvent](http://msdn.microsoft.com/library/windows/desktop/dd373603), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[NotifyWinEvent](http://msdn.microsoft.com/library/windows/desktop/dd373603)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="onactivate"></a>  CWnd::OnActivate  
- The framework calls this member function when a `CWnd` object is being activated or deactivated.  
+##  <a name="onactivate"></a>CWnd::OnActivate  
+ 框架调用此成员函数时`CWnd`对象正在激活或停用。  
   
 ```  
-afx_msg void OnActivate (UINT nState，  
-    CWnd * pWndOther，  
+afx_msg void OnActivate(
+    UINT nState,  
+    CWnd* pWndOther,  
     BOOL bMinimized);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nState`  
- Specifies whether the `CWnd` is being activated or deactivated. It can be one of the following values:  
+ 指定是否`CWnd`正在激活或停用。 它可以是以下值之一︰  
   
-- **WA_INACTIVE** The window is being deactivated.  
+- **WA_INACTIVE**窗口正在停用。  
   
-- **WA_ACTIVE** The window is being activated through some method other than a mouse click (for example, by use of the keyboard interface to select the window).  
+- **WA_ACTIVE**窗口正在激活通过某些方法是之外 （例如，通过使用要选择的窗口的键盘接口），鼠标单击。  
   
-- **WA_CLICKACTIVE** The window is being activated by a mouse click.  
+- **WA_CLICKACTIVE**鼠标单击激活窗口。  
   
  *pWndOther*  
- Pointer to the `CWnd` being activated or deactivated. The pointer can be **NULL**, and it may be temporary.  
+ 指向`CWnd`正在激活或停用。 指针可能为**NULL**，它可能是临时。  
   
  *bMinimized*  
- Specifies the minimized state of the `CWnd` being activated or deactivated. A value of **TRUE** indicates the window is minimized.  
+ 指定的最小化的状态`CWnd`正在激活或停用。 值为**TRUE**指示窗口最小化。  
   
- If **TRUE**, the `CWnd` is being activated; otherwise deactivated.  
+ 如果**TRUE**、`CWnd`正在激活; 否则停用。  
   
-### Remarks  
- If the `CWnd` object is activated with a mouse click, it will also receive an [OnMouseActivate](#onmouseactivate) member function call.  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`用鼠标单击激活对象，它也会收到[OnMouseActivate](#onmouseactivate)成员函数调用。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onactivateapp"></a>  CWnd::OnActivateApp  
- The framework calls this member function to all top-level windows of the task being activated and for all top-level windows of the task being deactivated.  
+##  <a name="onactivateapp"></a>Cwnd:: Onactivateapp  
+ 到所有顶级窗口正在激活的任务和正在停用任务的所有顶级窗口，框架调用此成员函数。  
   
 ```  
-afx_msg void OnActivateApp (BOOL bActive，  
+afx_msg void OnActivateApp(
+    BOOL bActive,  
     DWORD dwThreadID);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bActive`  
- Specifies whether the `CWnd` is being activated or deactivated. **TRUE** means the `CWnd` is being activated. **FALSE** means the `CWnd` is being deactivated.  
+ 指定是否`CWnd`正在激活或停用。 **TRUE**意味着`CWnd`正在激活。 **FALSE**意味着`CWnd`正在停用。  
   
  *dwThreadID*  
- Specifies the value of the thread ID. If `bActive` is **TRUE**, *dwThreadID* identifies the thread that owns the `CWnd` being deactivated. If `bActive` is **FALSE**, *dwThreadID* identifies the thread that owns the `CWnd` being activated.  
+ 指定的值的线程 id。 如果`bActive`是**TRUE**， *dwThreadID*标识拥有的线程`CWnd`正在停用。 如果`bActive`是**FALSE**， *dwThreadID*标识拥有的线程`CWnd`正在激活。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onambientproperty"></a>  CWnd::OnAmbientProperty  
- The framework calls this member function to obtain ambient property values from a window that contains OLE controls.  
+##  <a name="onambientproperty"></a>CWnd::OnAmbientProperty  
+ 框架调用此成员函数以从包含 OLE 控件的窗口中获取环境属性值。  
   
 ```  
-虚拟 BOOL OnAmbientProperty (COleControlSite* pSite，DISPID dispid 变体*pvar);
+virtual BOOL OnAmbientProperty(
+    COleControlSite* pSite,  
+    DISPID dispid,  
+    VARIANT* pvar);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pSite`  
- Pointer to the site of the control that requested the ambient property.  
+ 指向请求的环境属性的控件的站点。  
   
  `dispid`  
- The dispatch ID of the requested ambient property.  
+ 请求的环境属性的调度 ID。  
   
  `pvar`  
- Pointer to a caller-allocated `VARIANT` structure, through which the ambient property's value will be returned.  
+ 调用方分配的指向`VARIANT`结构通过环境属性的值将返回。  
   
-### Return Value  
- **TRUE** if the ambient property is supported; **FALSE** if not.  
+### <a name="return-value"></a>返回值  
+ **TRUE**才支持该环境的属性; 如果**FALSE**如果不是。  
   
-### Remarks  
- Override this function to alter the default ambient property values returned by an OLE control container to its controls. Any ambient property requests not handled by an overriding function should be forwarded to the base class implementation.  
+### <a name="remarks"></a>备注  
+ 重写此函数用于更改环境的属性值返回到其控件的 OLE 控件容器的默认值。 应将由重写函数不处理任何环境属性请求转发到基类实现。  
   
-##  <a name="onappcommand"></a>  CWnd::OnAppCommand  
- The framework calls this member function when the user generates an application command event. Such an event occurs when the user clicks an application command button or types an application command key.  
+##  <a name="onappcommand"></a>CWnd::OnAppCommand  
+ 当用户生成应用程序命令事件时，框架将调用此成员函数。 当用户单击应用程序命令按钮或类型的应用程序命令键，则会发生这种情况下。  
   
 ```  
-afx_msg void OnAppCommand (CWnd * pWnd，  
-    UINT nCmd  
-    UINT nDevice  
+afx_msg void OnAppCommand(
+    CWnd* pWnd,  
+    UINT nCmd,  
+    UINT nDevice,  
     UINT nKey);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `pWnd`|Pointer to a `CWnd` object that represents the window where the user clicked the comman button or pressed the command key. This window can be a child window of the window receiving the message.|  
-|[in] `nCmd`|Indicates the application command. For a list of possible values, see the commands under the *cmd* section of the `lParam` parameter of [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275).|  
-|[in] `nDevice`|The input device that generated the input event. For a list of possible values, see the devices under the *uDevice* section of the `lParam` parameter of [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275).|  
-|[in] `nKey`|Indicates any virtual keys that are down, such as the CTRL key or the left mouse button. For a list of possible values, see the keys under the *dwKeys* section of the `lParam` parameter of [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275). For more information, see the "Message Parameters" subheading in [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
+|[in] `pWnd`|指向`CWnd`表示的窗口，其中用户单击的命令按钮或按下命令键的对象。 此窗口可以是子窗口的接收消息窗口。|  
+|[in] `nCmd`|指示应用程序命令。 有关可能的值的列表，请参阅下面的命令*cmd*部分`lParam`参数[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。|  
+|[in] `nDevice`|输入生成的设备的输入的事件。 有关可能的值的列表，请参阅下的设备*uDevice*部分`lParam`参数[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。|  
+|[in] `nKey`|指示都已关闭，如 CTRL 键或鼠标左键任何虚拟键。 有关可能的值的列表，请参阅下的密钥*dwKeys*部分`lParam`参数[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。 有关详细信息，请参阅中的"消息参数"副标题[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
   
-### Remarks  
- This method receives the [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onaskcbformatname"></a>  CWnd::OnAskCbFormatName  
- The framework calls this member function when the Clipboard contains a data handle for the `CF_OWNERDISPLAY` format (that is, when the Clipboard owner will display the Clipboard contents).  
+##  <a name="onaskcbformatname"></a>CWnd::OnAskCbFormatName  
+ 框架在剪贴板中包含的数据句柄时调用此成员函数`CF_OWNERDISPLAY`格式 （即，当剪贴板所有者显示剪贴板内容）。  
   
 ```  
-afx_msg void OnAskCbFormatName (UINT nMaxCount，  
+afx_msg void OnAskCbFormatName(
+    UINT nMaxCount,  
     LPTSTR lpszString);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nMaxCount`  
- Specifies the maximum number of bytes to copy.  
+ 指定要复制字节的最大的数量。  
   
  `lpszString`  
- Points to the buffer where the copy of the format name is to be stored.  
+ 指向以的格式名副本其中是要存储的缓冲区。  
   
-### Remarks  
- The Clipboard owner should provide a name for its format.  
+### <a name="remarks"></a>备注  
+ 剪贴板所有者应提供有关其格式的名称。  
   
- Override this member function and copy the name of the `CF_OWNERDISPLAY` format into the specified buffer, not exceeding the maximum number of bytes specified.  
+ 重写该成员函数和复制的名称`CF_OWNERDISPLAY`到指定的缓冲区，不超过最大指定的字节数的格式。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oncancelmode"></a>  CWnd::OnCancelMode  
- The framework calls this member function to inform `CWnd` to cancel any internal mode.  
+##  <a name="oncancelmode"></a>CWnd::OnCancelMode  
+ 框架调用此成员函数以通知`CWnd`取消任何内部模式。  
   
 ```  
 afx_msg void OnCancelMode();
 ```  
   
-### Remarks  
- If the `CWnd` object has the focus, its `OnCancelMode` member function is called when a dialog box or message box is displayed. This gives the `CWnd` the opportunity to cancel modes such as mouse capture.  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`对象具有焦点，其`OnCancelMode`显示对话框或消息框时调用成员函数。 这使`CWnd`取消等鼠标捕获模式的机会。  
   
- The default implementation responds by calling the [ReleaseCapture](http://msdn.microsoft.com/library/windows/desktop/ms646261) Windows function. Override this member function in your derived class to handle other modes.  
+ 通过调用来响应的默认实现[ReleaseCapture](http://msdn.microsoft.com/library/windows/desktop/ms646261) Windows 函数。 重写此成员函数在处理其他模式在派生类中。  
   
-##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged  
- The framework calls this member function to notify the window that is losing the mouse capture.  
+##  <a name="oncapturechanged"></a>CWnd::OnCaptureChanged  
+ 框架调用此成员函数以通知失去鼠标捕获的窗口。  
   
 ```  
-afx_msg void OnCaptureChanged (CWnd * pWnd);
+afx_msg void OnCaptureChanged(CWnd* pWnd);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pWnd`  
- A pointer to the window to gain mouse capture  
+ 指向要获得鼠标捕获的窗口的指针  
   
-### Remarks  
- A window receives this message even if it calls [ReleaseCapture](http://msdn.microsoft.com/library/windows/desktop/ms646261) itself. An application should not attempt to set the mouse capture in response to this message. When it receives this message, a window should redraw itself, if necessary, to reflect the new mouse-capture state.  
+### <a name="remarks"></a>备注  
+ 窗口收到此消息，即使它调用[ReleaseCapture](http://msdn.microsoft.com/library/windows/desktop/ms646261)本身。 应用程序不应尝试在响应此消息中设置鼠标捕获。 当它收到此消息时，一个窗口应重绘自己，如有必要，以反映新的鼠标捕获状态。  
   
- See the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] for information on the `ReleaseCapture` Windows function.  
+ 请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关的信息`ReleaseCapture`Windows 函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onchangecbchain"></a>  CWnd::OnChangeCbChain  
- The framework calls this member function for each window in the Clipboard-viewer chain to notify it that a window is being removed from the chain.  
+##  <a name="onchangecbchain"></a>CWnd::OnChangeCbChain  
+ 对剪贴板查看器链来向其通知正在从链中删除一个窗口中的每个窗口，框架调用此成员函数。  
   
 ```  
-afx_msg void OnChangeCbChain (HWND hWndRemove，  
+afx_msg void OnChangeCbChain(
+    HWND hWndRemove,  
     HWND hWndAfter);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `hWndRemove`  
- Specifies the window handle that is being removed from the Clipboard-viewer chain.  
+ 指定正在从剪贴板查看器链中删除的窗口句柄。  
   
  `hWndAfter`  
- Specifies the window handle that follows the window being removed from the Clipboard-viewer chain.  
+ 指定遵循正在从剪贴板查看器链中删除的窗口的窗口句柄。  
   
-### Remarks  
- Each `CWnd` object that receives an `OnChangeCbChain` call should use the [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows function to send the [WM_CHANGECBCHAIN](http://msdn.microsoft.com/library/windows/desktop/ms649019) message to the next window in the Clipboard-viewer chain (the handle returned by `SetClipboardViewer`). If `hWndRemove` is the next window in the chain, the window specified by `hWndAfter` becomes the next window, and Clipboard messages are passed on to it.  
+### <a name="remarks"></a>备注  
+ 每个`CWnd`接收对象`OnChangeCbChain`调用应使用[SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 函数发送[WM_CHANGECBCHAIN](http://msdn.microsoft.com/library/windows/desktop/ms649019)到剪贴板查看器链中的下一步窗口的消息 (返回的句柄`SetClipboardViewer`)。 如果`hWndRemove`是链，通过指定的窗口中的下一步窗口`hWndAfter`将为下一个窗口，并且剪贴板消息传递给它。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onchangeuistate"></a>  CWnd::OnChangeUIState  
- Called when the user interface (UI) state should be changed.  
+##  <a name="onchangeuistate"></a>CWnd::OnChangeUIState  
+ 在应更改用户界面 (UI) 状态时调用。  
   
 ```  
-afx_msg void OnChangeUIState （UINT n 操作，  
+afx_msg void OnChangeUIState(
+    UINT nAction,  
     UINT nUIElement);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nAction`  
- Specifies the action to be taken. Can be one of the following values:  
+ 指定要执行的操作。 可以是以下值之一：  
   
-- **UIS_CLEAR** The UI state element (specified by `nUIElement`) should be hidden.  
+- **UIS_CLEAR**的 UI 状态元素 (通过指定`nUIElement`) 应被隐藏。  
   
-- **UIS_INITIALIZE** The UI state element (specified by `nUIElement`) should be changed based on the last input event. For more information, see the **Remarks** section of [WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342).  
+- **UIS_INITIALIZE**的 UI 状态元素 (通过指定`nUIElement`) 应根据输入的最后一个事件来更改。 有关详细信息，请参阅**备注**部分[WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342)。  
   
-- **UIS_SET** The UI state element (specified by `nUIElement`) should be visible.  
+- **UIS_SET**的 UI 状态元素 (通过指定`nUIElement`) 应是可见的。  
   
  `nUIElement`  
- Specifies which UI state elements are affected or the style of the control. Can be one of the following values:  
+ 指定将影响哪些 UI 状态元素或控件的样式。 可以是以下值之一：  
   
-- **UISF_HIDEACCEL** Keyboard accelerators.  
+- **UISF_HIDEACCEL**键盘快捷键。  
   
-- **UISF_HIDEFOCUS** Focus indicators.  
+- **UISF_HIDEFOCUS**专注指示器。  
   
-- **UISF_ACTIVE Windows XP:** A control should be drawn in the style used for active controls.  
+- **UISF_ACTIVE Windows XP:**应放用于活动控件的样式绘制控件。  
   
-### Remarks  
- This member function emulates the functionality of the [WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342) message, as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟的功能[WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="onchar"></a>  CWnd::OnChar  
- The framework calls this member function when a keystroke translates to a nonsystem character.  
+##  <a name="onchar"></a>CWnd::OnChar  
+ 当击键转换为非系统字符时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnChar (UINT nChar、  
-    UINT nRepCnt  
+afx_msg void OnChar(
+    UINT nChar,  
+    UINT nRepCnt,  
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Contains the character code value of the key.  
+ 包含密钥的字符代码值。  
   
  `nRepCnt`  
- Contains the repeat count, the number of times the keystroke is repeated when user holds down the key.  
+ 包含重复计数，当用户按住键重复击键次数。  
   
  `nFlags`  
- Contains the scan code, key-transition code, previous key state, and context code, as shown in the following list:  
+ 包含扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码，如下面的列表中所示︰  
   
-|Value|Meaning|  
+|值|含义|  
 |-----------|-------------|  
-|0-15|Specifies the repeat count. The value is the number of times the keystroke is repeated as a result of the user holding down the key.|  
-|16-23|Specifies the scan code. The value depends on the original equipment manufacturer (OEM)|  
-|24|Specifies whether the key is an extended key, such as the right-hand ALT and CTRL keys that appear on an enhanced 101- or 102-key keyboard. The value is 1 if it is an extended key; otherwise, it is 0.|  
-|25-28|Used internally by Windows.|  
-|29|Specifies the context code. The value is 1 if the ALT key is held down while the key is pressed; otherwise, the value is 0.|  
-|30|Specifies the previous key state. The value is 1 if the key is down before the message is sent, or it is 0 if the key is up.|  
-|31|Specifies the transition state. The value is 1 if the key is being released, or it is 0 if the key is being pressed.|  
+|0-15|指定的重复计数。 值是因为用户按住键重复击键次数。|  
+|16-23|指定的扫描代码。 值取决于原始设备制造商 (OEM)|  
+|24|指定密钥是否是扩展的密钥，如在增强的 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 如果它是扩展的密钥; 值为 1否则，则为 0。|  
+|25-28|由 Windows 内部使用。|  
+|29|指定的上下文代码。 如果当按下键; ALT 键并按住，则值为 1否则，值为 0。|  
+|30|指定上一项的状态。 如果密钥已关闭，然后发送消息，或如果注册该键，则为 0，则值为 1。|  
+|31|指定的转换状态。 如果正在释放键，或如果按下了键，则为 0，则值为 1。|  
   
-### Remarks  
- This function is called before the [OnKeyUp](#onkeyup) member function and after the [OnKeyDown](#onkeydown) member function are called. `OnChar` contains the value of the keyboard key being pressed or released.  
+### <a name="remarks"></a>备注  
+ 此函数调用前[OnKeyUp](#onkeyup)成员函数和后[OnKeyDown](#onkeydown)调用成员函数。 `OnChar`包含正在按下或释放键盘键的值。  
   
- Because there is not necessarily a one-to-one correspondence between keys pressed and `OnChar` calls generated, the information in `nFlags` is generally not useful to applications. The information in `nFlags` applies only to the most recent call to the `OnKeyUp` member function or the `OnKeyDown` member function that precedes the call to `OnChar`.  
+ 因为存在不一定是一对一的对应关系之间按下的键和`OnChar`生成的调用中的信息`nFlags`但通常不到应用程序很有用。 中的信息`nFlags`仅适用于最新调用`OnKeyUp`成员函数或`OnKeyDown`之前调用的成员函数`OnChar`。  
   
- For IBM Enhanced 101- and 102-key keyboards, enhanced keys are the right ALT and the right CTRL keys on the main section of the keyboard; the INS, DEL, HOME, END, PAGE UP, PAGE DOWN, and arrow keys in the clusters to the left of the numeric keypad; and the slash (/) and ENTER keys in the numeric keypad. Some other keyboards may support the extended-key bit in `nFlags`.  
+ 对于 IBM 增强 101 和 102 键键盘、 增强的键是右 ALT 和键盘; 的主要部分上的右 CTRL 键单元、 DEL、 主页、 结束、 PAGE UP、 PAGE down 键和向左数字小键盘; 的群集中的箭头键斜杠 （/） 和数字键盘中的 ENTER 键。 一些其他键盘可能支持中的扩展密钥位`nFlags`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onchartoitem"></a>  CWnd::OnCharToItem  
- Called when a list box with the [LBS_WANTKEYBOARDINPUT](../../mfc/reference/list-box-styles.md) style sends its owner a [WM_CHARTOITEM](http://msdn.microsoft.com/library/windows/desktop/bb761358) message in response to a [WM_CHAR](#onchar) message.  
+##  <a name="onchartoitem"></a>CWnd::OnCharToItem  
+ 当在列表框中时，调用[LBS_WANTKEYBOARDINPUT](../../mfc/reference/list-box-styles.md)样式将发送其所有者[WM_CHARTOITEM](http://msdn.microsoft.com/library/windows/desktop/bb761358)消息以响应[WM_CHAR](#onchar)消息。  
   
 ```  
-afx_msg int OnCharToItem (UINT nChar、  
-    CListBox * pListBox，  
+afx_msg int OnCharToItem(
+    UINT nChar,  
+    CListBox* pListBox,  
     UINT nIndex);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Specifies the value of the key pressed by the user.  
+ 指定用户按下的键的值。  
   
  `pListBox`  
- Specifies a pointer to the list box. It may be temporary.  
+ 指定指向列表框中的指针。 它可能是暂时的。  
   
  `nIndex`  
- Specifies the current caret position.  
+ 指定当前插入符号位置。  
   
-### Return Value  
- The framework calls this member function to specify the action that the application performed in response to the call. A return value of –2 indicates that the application handled all aspects of selecting the item and wants no further action by the list box. A return value of –1 indicates that the list box should perform the default action in response to the keystroke. A return value of 0 or greater specifies the zero-based index of an item in the list box and indicates that the list box should perform the default action for the keystroke on the given item.  
+### <a name="return-value"></a>返回值  
+ 框架调用此成员函数以指定应用程序执行以响应调用的操作。 返回值 – 2 表示应用程序处理的选择项的所有方面，希望列表框中的任何进一步的操作。 返回值 – 1 指示列表框在击键响应中应执行默认操作。 返回值 0 或更高版本的列表框中指定项的从零开始的索引，并指明列表框中，应在给定的项键击执行默认操作。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onchildactivate"></a>  CWnd::OnChildActivate  
- If the `CWnd` object is a multiple document interface (MDI) child window, `OnChildActivate` is called by the framework when the user clicks the window's title bar or when the window is activated, moved, or sized.  
+##  <a name="onchildactivate"></a>CWnd::OnChildActivate  
+ 如果`CWnd`对象是多文档界面 (MDI) 子窗口，`OnChildActivate`是由框架调用，当用户单击窗口的标题栏或在窗口已激活，移动或大小。  
   
 ```  
 afx_msg void OnChildActivate();
 ```  
   
-##  <a name="onchildnotify"></a>  CWnd::OnChildNotify  
- This member function is called by this window's parent window when it receives a notification message that applies to this window.  
+##  <a name="onchildnotify"></a>CWnd::OnChildNotify  
+ 在收到适用于此窗口的通知消息时，将通过此窗口的父窗口调用此成员函数。  
   
 ```  
-虚拟 BOOL OnChildNotify （UINT 消息、  
-    WPARAM wParam，  
-    LPARAM lParam  
+virtual BOOL OnChildNotify(
+    UINT message,  
+    WPARAM wParam,  
+    LPARAM lParam,  
     LRESULT* pResult);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `message`  
- A Windows message number sent to a parent window.  
+ Windows 消息数字发送到父窗口。  
   
  `wParam`  
- The **wparam** associated with the message.  
+ **Wparam**与消息关联。  
   
  `lParam`  
- The **lparam** associated with the message.  
+ **Lparam**与消息关联。  
   
  `pLResult`  
- A pointer to a value to be returned from the parent's window procedure. This pointer will be **NULL** if no return value is expected.  
+ 指向要从父级的窗口过程中返回一个值的指针。 此指针将**NULL**如果预期会有没有返回值。  
   
-### Return Value  
- Nonzero if this window is responsible for handling the message sent to its parent; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果此窗口负责处理到其父; 发送的消息则不为否则为 0。  
   
-### Remarks  
- Never call this member function directly.  
+### <a name="remarks"></a>备注  
+ 永远不会直接调用此成员函数。  
   
- The default implementation of this member function returns 0, which means that the parent should handle the message.  
+ 此成员函数的默认实现返回 0，这意味着父应处理消息。  
   
- Override this member function to extend the manner in which a control responds to notification messages.  
+ 重写该成员函数以扩展控件通知消息的响应的方式。  
   
-##  <a name="onclipboardupdate"></a>  CWnd::OnClipboardUpdate  
- The framework calls this member function when the contents of the clipboard have changed.  
+##  <a name="onclipboardupdate"></a>CWnd::OnClipboardUpdate  
+ 当剪贴板内容发生更改时，框架将调用此成员函数。  
   
 ```  
 afx_msg void OnClipboardUpdate();
 ```  
   
-##  <a name="onclose"></a>  CWnd::OnClose  
- The framework calls this member function as a signal that the `CWnd` or an application is to terminate.  
+##  <a name="onclose"></a>CWnd::OnClose  
+ 框架调用此成员函数作为的信号，`CWnd`线程或应用程序即将终止。  
   
 ```  
 afx_msg void OnClose();
 ```  
   
-### Remarks  
- The default implementation calls `DestroyWindow`.  
+### <a name="remarks"></a>备注  
+ 默认实现调用`DestroyWindow`。  
   
-##  <a name="oncolorizationcolorchanged"></a>  CWnd::OnColorizationColorChanged  
- The framework calls this member when the rendering policy for the nonclient area has changed.  
+##  <a name="oncolorizationcolorchanged"></a>CWnd::OnColorizationColorChanged  
+ 在非工作区的呈现策略已更改时，框架会调用此成员。  
   
 ```  
-afx_msg void OnColorizationColorChanged (DWORD dwColorizationColor，   
+afx_msg void OnColorizationColorChanged(
+    DWORD dwColorizationColor,   
     BOOL bOpacity);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `dwColorizationColor`|Specifies the new colorization color.<br /><br /> The color format is a hexadecimal number of the form 0xAARRGGBB, where each of the four components ranges from 0x00 through 0xFF. The AA component is the alpha value, RR is the color red, GG is green, and BB is blue.|  
-|[in] `bOpacity`|`true` if the new color is blended with opacity; `false` if it is not.|  
+|[in] `dwColorizationColor`|指定新的着色颜色。<br /><br /> 颜色格式，则十六进制数的窗体 0xAARRGGBB，其中每个四个组件的范围从 0x00 通过 0xFF。 AA 组件是 alpha 值、 RR 是红色的颜色、 GG 为绿色，和 BB 为蓝色。|  
+|[in] `bOpacity`|`true`如果新的颜色不透明度，则与混合`false`如果它不是。|  
   
-### Remarks  
- This method receives the [WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388198) notification message, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388198)中所述的通知消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oncommand"></a>  CWnd::OnCommand  
- The framework calls this member function when the user selects an item from a menu, when a child control sends a notification message, or when an accelerator keystroke is translated.  
+##  <a name="oncommand"></a>CWnd::OnCommand  
+ 当用户从菜单中，选择一个项，子控件将发送一条通知消息，或转换快捷键击键时，框架将调用此成员函数。  
   
 ```  
-虚拟 BOOL OnCommand (WPARAM wParam，  
+virtual BOOL OnCommand(
+    WPARAM wParam,  
     LPARAM lParam);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `wParam`  
- The low-order word of `wParam` identifies the command ID of the menu item, control, or accelerator. The high-order word of `wParam` specifies the notification message if the message is from a control. If the message is from an accelerator, the high-order word is 1. If the message is from a menu, the high-order word is 0.  
+ 低序位字`wParam`标识菜单项、 控件或快捷键的命令 ID。 高序位字`wParam`指定的通知消息，如果消息已从另一控件。 如果消息已从加速器，高序位字为 1。 如果消息已从菜单中，高序位字为 0。  
   
  `lParam`  
- Identifies the control that sends the message if the message is from a control. Otherwise, `lParam` is 0.  
+ 标识发送消息，如果消息已从控件的控件。 否则为`lParam`为 0。  
   
-### Return Value  
- An application returns nonzero if it processes this message; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 应用程序返回非零，如果它可以处理此消息;否则为 0。  
   
-### Remarks  
- `OnCommand` processes the message map for control notification and `ON_COMMAND` entries, and calls the appropriate member function.  
+### <a name="remarks"></a>备注  
+ `OnCommand`处理控件通知的消息映射和`ON_COMMAND`条目，并调用适当的成员函数。  
   
- Override this member function in your derived class to handle the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message. An override will not process the message map unless the base class `OnCommand` is called.  
+ 此成员函数在处理你在派生类中的重写[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。 重写将不会处理的消息映射，除非基类`OnCommand`调用。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oncompacting"></a>  CWnd::OnCompacting  
- The framework calls this member function for all top-level windows when Windows detects that more than 12.5 percent of system time over a 30- to 60-second interval is being spent compacting memory.  
+##  <a name="oncompacting"></a>CWnd::OnCompacting  
+ 框架调用此成员函数针对所有顶级窗口，当 Windows 检测到，多个 12.5%的系统时间段 30 到 60 秒间隔内花费了压缩内存。  
   
 ```  
-afx_msg void OnCompacting (UINT nCpuTime);
+afx_msg void OnCompacting(UINT nCpuTime);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *nCpuTime*  
- Specifies the ratio of CPU time currently spent by Windows compacting memory to CPU time spent performing other operations. For example, 8000h represents 50 percent of CPU time spent compacting memory.  
+ 指定当前所用的时间为 CPU 时间的压缩内存所用执行其他操作的 Windows 的 CPU 时间的比率。 例如，8000 h 表示 50%的 CPU 所花费的时间压缩内存。  
   
-### Remarks  
- This indicates that system memory is low.  
+### <a name="remarks"></a>备注  
+ 这表明系统内存不足。  
   
- When a `CWnd` object receives this call, it should free as much memory as possible, taking into account the current level of activity of the application and the total number of applications running in Windows. The application can call the Windows function to determine how many applications are running.  
+ 当`CWnd`对象接收此调用时，它应尽可能情况下，考虑到的应用程序和在 Windows 中运行的应用程序的总数量的活动的当前级别中释放尽可能多的内存。 应用程序可以调用 Windows 函数以确定在运行应用程序数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oncompareitem"></a>  CWnd::OnCompareItem  
- The framework calls this member function to specify the relative position of a new item in a child sorted owner-draw combo or list box.  
+##  <a name="oncompareitem"></a>CWnd::OnCompareItem  
+ 框架调用此成员函数以在排序的子所有者描述组合或列表框中指定新项的相对位置。  
   
 ```  
-afx_msg int OnCompareItem (int nIDCtl，  
+afx_msg int OnCompareItem(
+    int nIDCtl,  
     LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDCtl`  
- The identifier of the control that sent the `WM_COMPAREITEM` message.  
+ 发送的控件的标识符`WM_COMPAREITEM`消息。  
   
  `lpCompareItemStruct`  
- Contains a long pointer to a [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) data structure that contains the identifiers and application-supplied data for two items in the combo or list box.  
+ 包含的长指针[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)数据结构，其中包含的标识符和应用程序提供对组合或列表框中的两个项的数据。  
   
-### Return Value  
- Indicates the relative position of the two items. It may be any of the following values:  
+### <a name="return-value"></a>返回值  
+ 指示两个项的相对位置。 它可能是以下值之一︰  
   
-|Value|Meaning|  
+|值|含义|  
 |-----------|-------------|  
-|–1|Item 1 sorts before item 2.|  
-|0|Item 1 and item 2 sort the same.|  
-|1|Item 1 sorts after item 2.|  
+|–1|项 2 之前进行排序的第 1 项。|  
+|0|项 1 和 2 的项进行排序相同。|  
+|1|项 2 后进行排序的第 1 项。|  
   
-### Remarks  
- If a combo or list box is created with the [CBS_SORT](../../mfc/reference/combo-box-styles.md) or [LBS_SORT](../../mfc/reference/list-box-styles.md) style, Windows sends the combo-box or list-box owner a `WM_COMPAREITEM` message whenever the application adds a new item.  
+### <a name="remarks"></a>备注  
+ 如果使用组合或列表框中创建了[CBS_SORT](../../mfc/reference/combo-box-styles.md)或[LBS_SORT](../../mfc/reference/list-box-styles.md)样式，Windows 会将发送的组合框或列表框的所有者`WM_COMPAREITEM`消息每当应用程序中添加新项。  
   
- Two items in the combo or list box are reformed in a `COMPAREITEMSTRUCT` structure pointed to by `lpCompareItemStruct`. `OnCompareItem` should return a value that indicates which of the items should appear before the other. Typically, Windows makes this call several times until it determines the exact position for the new item.  
+ 组合或列表框中的两个项修订后的中`COMPAREITEMSTRUCT`指向结构`lpCompareItemStruct`。 `OnCompareItem`应返回一个值，指示哪个项应出现在其他之前。 通常情况下，Windows 将使此调用多次直到它确定新项的确切位置。  
   
- If the **hwndItem** member of the `COMPAREITEMSTRUCT` structure belongs to a [CListBox](../../mfc/reference/clistbox-class.md) or [CComboBox](../../mfc/reference/ccombobox-class.md) object, then the `CompareItem` virtual function of the appropriate class is called. Override `CComboBox::CompareItem` or `CListBox::CompareItem` in your derived `CListBox` or `CComboBox` class to do the item comparison.  
+ 如果**hwndItem**的成员`COMPAREITEMSTRUCT`结构属于[CListBox](../../mfc/reference/clistbox-class.md)或[CComboBox](../../mfc/reference/ccombobox-class.md)对象，则`CompareItem`调用虚函数的适当的类。 重写`CComboBox::CompareItem`或`CListBox::CompareItem`中你派生`CListBox`或`CComboBox`类来执行此项比较。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oncompositionchanged"></a>  CWnd::OnCompositionChanged  
- The framework calls this member function for all top-level windows when the Desktop Window Manager (DWM) composition is enabled or disabled.  
+##  <a name="oncompositionchanged"></a>CWnd::OnCompositionChanged  
+ 桌面窗口管理器 (DWM) 组合已启用或禁用时，框架针对所有顶级窗口调用此成员函数。  
   
 ```  
 afx_msg void OnCompositionChanged();
 ```  
   
-### Remarks  
- This method receives the [WM_DWMCOMPOSITIONCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388199) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_DWMCOMPOSITIONCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388199)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oncontextmenu"></a>  CWnd::OnContextMenu  
- Called by the framework when the user has clicked the right mouse button (right clicked) in the window.  
+##  <a name="oncontextmenu"></a>CWnd::OnContextMenu  
+ 当用户单击窗口中的鼠标右键按钮 （右键单击） 时，由框架调用。  
   
 ```  
-afx_msg void OnContextMenu (CWnd * pWnd，  
+afx_msg void OnContextMenu(
+    CWnd* pWnd,  
     CPoint pos);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pWnd`  
- Handle to the window in which the user right clicked the mouse. This can be a child window of the window receiving the message. For more information about processing this message, see the Remarks section.  
+ 在其中用户右键单击鼠标窗口的句柄。 这可以是子窗口的接收消息窗口。 有关处理此消息的详细信息，请参阅备注部分。  
   
  `pos`  
- Position of the cursor, in screen coordinates, at the time of the mouse click.  
+ 位置的光标，在屏幕坐标，时的鼠标单击。  
   
-### Remarks  
- You can process this message by displaying a context menu using the [TrackPopupMenu](../../mfc/reference/cmenu-class.md#trackpopupmenu).  
+### <a name="remarks"></a>备注  
+ 你可以处理此消息的显示上下文菜单使用[TrackPopupMenu](../../mfc/reference/cmenu-class.md#trackpopupmenu)。  
   
- If you do not display a context menu you should pass this message onto the [DefWindowProc](#defwindowproc) function. If your window is a child window, `DefWindowProc` sends the message to the parent. Otherwise, `DefWindowProc` displays a default context menu if the specified position is in the window's caption.  
+ 如果不显示上下文菜单应传递到此消息[DefWindowProc](#defwindowproc)函数。 如果你的窗口是子窗口，`DefWindowProc`将消息发送给父级。 否则为`DefWindowProc`窗口的标题中指定的位置是否显示默认上下文菜单。  
   
-##  <a name="oncopydata"></a>  CWnd::OnCopyData  
- This member function is called by the framework to copy data from one application to another.  
+##  <a name="oncopydata"></a>CWnd::OnCopyData  
+ 由框架将数据复制到另一个应用程序中调用此成员函数。  
   
 ```  
-afx_msg BOOL OnCopyData (CWnd* pWnd，COPYDATASTRUCT* pCopyDataStruct);
+afx_msg BOOL OnCopyData(
+    CWnd* pWnd,  
+    COPYDATASTRUCT* pCopyDataStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pWnd`  
- A pointer to a `CWnd` object that is sending the data.  
+ 指向的指针`CWnd`发送数据的对象。  
   
  `pCopyDataStruct`  
- A pointer to a [COPYDATASTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms649010) structure that contains the data being sent.  
+ 指向的指针[COPYDATASTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms649010)结构，其中包含所发送的数据。  
   
-### Return Value  
- Returns **TRUE** if the receiving application successfully accepts the data. Otherwise, returns **FALSE**.  
+### <a name="return-value"></a>返回值  
+ 返回**TRUE**如果接收应用程序已成功接受的数据。 否则，返回**FALSE**。  
   
-### Remarks  
- The data being passed must not contain pointers or other references to objects not accessible to the application receiving the data.  
+### <a name="remarks"></a>备注  
+ 指针或对接收数据的应用程序无法访问的对象的其他引用不能包含正传递的数据。  
   
- While the data is being copied, it must not be changed by another thread of the sending process.  
+ 虽然复制数据后，它必须不能由另一个线程发送过程的更改。  
   
- The receiving application should consider the data read-only. The structure pointed to by the parameter `pCopyDataStruct` is valid only during the transfer of data; however, the receiving application should not free the memory associated with the structure.  
+ 只读的则接收应用程序应考虑数据。 由参数指向的结构`pCopyDataStruct`无效的数据; 在传输期间只但是，接收应用程序不应释放与结构相关联的内存。  
   
- If the receiving application needs access to the data after this function returns, it must copy the data received to a local buffer.  
+ 如果接收应用程序需要访问数据，此函数返回之后，它必须复制到本地缓冲区接收的数据。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oncreate"></a>  CWnd::OnCreate  
- The framework calls this member function when an application requests that the Windows window be created by calling the [Create](#create) or [CreateEx](#createex) member function.  
+##  <a name="oncreate"></a>CWnd::OnCreate  
+ 框架调用此成员函数，当应用程序请求，Windows 窗口调用会创建[创建](#create)或[CreateEx](#createex)成员函数。  
   
 ```  
-afx_msg int OnCreate (LPCREATESTRUCT lpCreateStruct);
+afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpCreateStruct`  
- Points to a [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) structure that contains information about the `CWnd` object being created.  
+ 指向[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)结构包含以下信息`CWnd`对象创建。  
   
-### Return Value  
- `OnCreate` must return 0 to continue the creation of the `CWnd` object. If the application returns –1, the window will be destroyed.  
+### <a name="return-value"></a>返回值  
+ `OnCreate`必须返回 0，若要继续创建`CWnd`对象。 如果应用程序返回 – 1，则将被销毁窗口。  
   
-### Remarks  
- The `CWnd` object receives this call after the window is created but before it becomes visible. `OnCreate` is called before the **Create** or `CreateEx` member function returns.  
+### <a name="remarks"></a>备注  
+ `CWnd`对象接收此调用创建窗口之后，但之前它将显示出来。 `OnCreate`之前调用**创建**或`CreateEx`成员函数返回。  
   
- Override this member function to perform any needed initialization of a derived class.  
+ 重写该成员函数以执行派生任何的类所需的初始化。  
   
- The `CREATESTRUCT` structure contains copies of the parameters used to create the window.  
+ `CREATESTRUCT`结构包含用于创建窗口的参数的副本。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onctlcolor"></a>  CWnd::OnCtlColor  
- The framework calls this member function when a child control is about to be drawn.  
+##  <a name="onctlcolor"></a>CWnd::OnCtlColor  
+ 要绘制子控件时，框架将调用此成员函数。  
   
 ```  
-afx_msg HBRUSH OnCtlColor (CDC* pDC，CWnd* pWnd，  
+afx_msg HBRUSH OnCtlColor(
+    CDC* pDC,  
+    CWnd* pWnd,  
     UINT nCtlColor);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- Contains a pointer to the display context for the child window. May be temporary.  
+ 包含子窗口的显示上下文的指针。 可能是暂时的。  
   
  `pWnd`  
- Contains a pointer to the control asking for the color. May be temporary.  
+ 包含指向要求的颜色的控件的指针。 可能是暂时的。  
   
  `nCtlColor`  
- Contains one of the following values, specifying the type of control:  
+ 包含指定的控件类型的以下值之一︰  
   
-- **CTLCOLOR_BTN** Button control  
+- **CTLCOLOR_BTN**按钮控件  
   
-- **CTLCOLOR_DLG** Dialog box  
+- **CTLCOLOR_DLG**对话框  
   
-- **CTLCOLOR_EDIT** Edit control  
+- **CTLCOLOR_EDIT** Edit 控件  
   
-- **CTLCOLOR_LISTBOX** List-box control  
+- **CTLCOLOR_LISTBOX**列表框控件  
   
-- **CTLCOLOR_MSGBOX** Message box  
+- **CTLCOLOR_MSGBOX**消息框  
   
-- **CTLCOLOR_SCROLLBAR** Scroll-bar control  
+- **CTLCOLOR_SCROLLBAR**滚动条控件  
   
-- **CTLCOLOR_STATIC** Static control  
+- **CTLCOLOR_STATIC**静态控件  
   
-### Return Value  
- `OnCtlColor` must return a handle to the brush that is to be used for painting the control background.  
+### <a name="return-value"></a>返回值  
+ `OnCtlColor`必须返回到要用于绘制控件背景的画笔的句柄。  
   
-### Remarks  
- Most controls send this message to their parent (usually a dialog box) to prepare the `pDC` for drawing the control using the correct colors.  
+### <a name="remarks"></a>备注  
+ 大多数控件将此消息发送到其父 （通常为对话框） 准备`pDC`描述控件使用正确的颜色。  
   
- To change the text color, call the `SetTextColor` member function with the desired red, green, and blue (RGB) values.  
+ 若要更改的文本颜色，请调用`SetTextColor`具有所需的红色、 绿色和蓝色 (RGB) 值的成员函数。  
   
- To change the background color of a single-line edit control, set the brush handle in both the **CTLCOLOR_EDIT** and **CTLCOLOR_MSGBOX** message codes, and call the [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) function in response to the **CTLCOLOR_EDIT** code.  
+ 若要更改的单行编辑控件的背景色，请将画笔句柄设置中同时**CTLCOLOR_EDIT**和**CTLCOLOR_MSGBOX**消息代码，并调用[CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor)函数以响应**CTLCOLOR_EDIT**代码。  
   
- `OnCtlColor` will not be called for the list box of a drop-down combo box because the drop-down list box is actually a child of the combo box and not a child of the window. To change the color of the drop-down list box, create a `CComboBox` with an override of `OnCtlColor` that checks for **CTLCOLOR_LISTBOX** in the `nCtlColor` parameter. In this handler, the `SetBkColor` member function must be used to set the background color for the text.  
+ `OnCtlColor`不会调用下拉组合框的列表框因为下拉列表框将被实际组合框的子级并且不窗口的子级。 若要更改下拉列表框的颜色，创建`CComboBox`使用的替代`OnCtlColor`，用于检查**CTLCOLOR_LISTBOX**中`nCtlColor`参数。 在此处理程序，`SetBkColor`成员函数必须用于设置文本的背景色。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function. To add the following method to your dialog class, use the Visual Studio properties pane to add a message handler for WM_CTLCOLOR. Alternatively, you can manually add an ON_WM_CTLCOLOR() entry to the message map.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。 若要将以下方法添加到对话框类，请使用 Visual Studio 属性窗格添加 WM_CTLCOLOR 消息处理程序。 或者，可以手动将 ON_WM_CTLCOLOR() 条目添加到消息映射。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#107](../../mfc/reference/codesnippet/cpp/cwnd-class_47.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 107](../../mfc/reference/codesnippet/cpp/cwnd-class_47.cpp)]  
   
-##  <a name="ondeadchar"></a>  CWnd::OnDeadChar  
- The framework calls this member function when the [OnKeyUp](#onkeyup) member function and the [OnKeyDown](#onkeydown) member functions are called.  
+##  <a name="ondeadchar"></a>CWnd::OnDeadChar  
+ 框架调用此成员函数时[OnKeyUp](#onkeyup)成员函数和[OnKeyDown](#onkeydown)成员函数的调用。  
   
 ```  
-afx_msg void OnDeadChar (UINT nChar、  
-    UINT nRepCnt  
+afx_msg void OnDeadChar(
+    UINT nChar,  
+    UINT nRepCnt,  
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Specifies the dead-key character value.  
+ 指定死密钥字符值。  
   
  `nRepCnt`  
- Specifies the repeat count.  
+ 指定的重复计数。  
   
  `nFlags`  
- Specifies the scan code, key-transition code, previous key state, and context code, as shown in the following list:  
+ 下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码︰  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|0–7|Scan code (OEM-dependent value). Low byte of high-order word.|  
-|8|Extended key, such as a function key or a key on the numeric keypad (1 if it is an extended key; otherwise 0).|  
-|9–10|Not used.|  
-|11–12|Used internally by Windows.|  
-|13|Context code (1 if the ALT key is held down while the key is pressed; otherwise 0).|  
-|14|Previous key state (1 if the key is down before the call, 0 if the key is up).|  
-|15|Transition state (1 if the key is being released, 0 if the key is being pressed).|  
+|0–7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
+|8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
+|9–10|未使用。|  
+|11–12|由 Windows 内部使用。|  
+|13|上下文代码 （如果时按下键按下 ALT 键为 1; 否则为 0）。|  
+|14|以前的密钥状态 (如果在调用，0，如果密钥已启动之前已关闭的密钥，则为 1)。|  
+|15|过渡状态 （如果正在释放键为 1，0，如果按下了键）。|  
   
-### Remarks  
- This member function can be used to specify the character value of a dead key. A dead key is a key, such as the umlaut (double-dot) character, that is combined with other characters to form a composite character. For example, the umlaut-O character consists of the dead key, umlaut, and the O key.  
+### <a name="remarks"></a>备注  
+ 此成员函数可以用于指定死键的字符值。 成为死键是一个键，例如变音符 （双点） 字符，结合以形成复合字符的其他字符。 例如，元音变音符-O 字符包含死键、 元音变音符和 O 键。  
   
- An application typically uses `OnDeadChar` to give the user feedback about each key pressed. For example, an application can display the accent in the current character position without moving the caret.  
+ 应用程序通常使用`OnDeadChar`以提供有关按每个键用户反馈。 例如，应用程序可以显示重音符号中的当前字符位置而不移动插入符号。  
   
- Since there is not necessarily a one-to-one correspondence between keys pressed and `OnDeadChar` calls, the information in `nFlags` is generally not useful to applications. The information in `nFlags` applies only to the most recent call to the [OnKeyUp](#onkeyup) member function or the [OnKeyDown](#onkeydown) member function that precedes the `OnDeadChar` call.  
+ 由于存在不一定存在一对一的对应关系之间按下的键和`OnDeadChar`调用，信息`nFlags`但通常不到应用程序很有用。 中的信息`nFlags`仅适用于最新调用[OnKeyUp](#onkeyup)成员函数或[OnKeyDown](#onkeydown)之前的成员函数`OnDeadChar`调用。  
   
- For IBM Enhanced 101- and 102-key keyboards, enhanced keys are the right ALT and the right CTRL keys on the main section of the keyboard; the INS, DEL, HOME, END, PAGE UP, PAGE DOWN, and arrow keys in the clusters to the left of the numeric keypad; and the slash (/) and ENTER keys in the numeric keypad. Some other keyboards may support the extended-key bit in `nFlags`.  
+ 对于 IBM 增强 101 和 102 键键盘、 增强的键是右 ALT 和键盘; 的主要部分上的右 CTRL 键单元、 DEL、 主页、 结束、 PAGE UP、 PAGE down 键和向左数字小键盘; 的群集中的箭头键斜杠 （/） 和数字键盘中的 ENTER 键。 一些其他键盘可能支持中的扩展密钥位`nFlags`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="ondeleteitem"></a>  CWnd::OnDeleteItem  
- The framework calls this member function to inform the owner of an owner-draw list box or combo box that the list box or combo box is destroyed or that items have been removed by [CComboBox::DeleteString](../../mfc/reference/ccombobox-class.md#deletestring), [CListBox::DeleteString](../../mfc/reference/clistbox-class.md#deletestring), [CComboBox::ResetContent](../../mfc/reference/ccombobox-class.md#resetcontent), or [CListBox::ResetContent](../../mfc/reference/clistbox-class.md#resetcontent).  
+##  <a name="ondeleteitem"></a>CWnd::OnDeleteItem  
+ 框架调用此成员函数以通知的所有者描述列表框或组合框的所有者被销毁列表框或组合框或项目均已删除通过[CComboBox::DeleteString](../../mfc/reference/ccombobox-class.md#deletestring)， [CListBox::DeleteString](../../mfc/reference/clistbox-class.md#deletestring)， [CComboBox::ResetContent](../../mfc/reference/ccombobox-class.md#resetcontent)，或[CListBox::ResetContent](../../mfc/reference/clistbox-class.md#resetcontent)。  
   
 ```  
-afx_msg void OnDeleteItem (int nIDCtl，  
+afx_msg void OnDeleteItem(
+    int nIDCtl,  
     LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDCtl`  
- The identifier of the control that sent the `WM_DELETEITEM` message.  
+ 发送的控件的标识符`WM_DELETEITEM`消息。  
   
  `lpDeleteItemStruct`  
- Specifies a long pointer to a [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) data structure that contains information about the deleted list box item.  
+ 指定指向的长指针[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)包含已删除的列表框项的相关信息的数据结构。  
   
-### Remarks  
- If the **hwndItem** member of the `DELETEITEMSTRUCT` structure belongs to a combo box or list box, then the `DeleteItem` virtual function of the appropriate class is called. Override the `DeleteItem` member function of the appropriate control's class to delete item-specific data.  
+### <a name="remarks"></a>备注  
+ 如果**hwndItem**的成员`DELETEITEMSTRUCT`结构所属的组合框或列表框中，则`DeleteItem`调用虚函数的适当的类。 重写`DeleteItem`的要删除特定项的数据的相应控件的类成员函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="ondestroy"></a>  CWnd::OnDestroy  
- The framework calls this member function to inform the `CWnd` object that it is being destroyed.  
+##  <a name="ondestroy"></a>CWnd::OnDestroy  
+ 框架调用此成员函数以通知`CWnd`对象被销毁。  
   
 ```  
 afx_msg void OnDestroy();
 ```  
   
-### Remarks  
- `OnDestroy` is called after the `CWnd` object is removed from the screen.  
+### <a name="remarks"></a>备注  
+ `OnDestroy`之后，调用`CWnd`从屏幕中删除对象。  
   
- `OnDestroy` is called first for the `CWnd` being destroyed, then for the child windows of `CWnd` as they are destroyed. It can be assumed that all child windows still exist while `OnDestroy` runs.  
+ `OnDestroy`将为第一次调用`CWnd`被销毁，然后为的子窗口`CWnd`如销毁它们。 可以假定所有子窗口，仍然都存在时`OnDestroy`运行。  
   
- If the `CWnd` object being destroyed is part of the Clipboard-viewer chain (set by calling the [SetClipboardViewer](#setclipboardviewer) member function), the `CWnd` must remove itself from the Clipboard-viewer chain by calling the [ChangeClipboardChain](#changeclipboardchain) member function before returning from the `OnDestroy` function.  
+ 如果`CWnd`对象被销毁是剪贴板查看器链的一部分 (通过调用设置[SetClipboardViewer](#setclipboardviewer)成员函数)，则`CWnd`必须将其自身移除从剪贴板查看器链通过调用[ChangeClipboardChain](#changeclipboardchain)从返回之前的成员函数`OnDestroy`函数。  
   
-##  <a name="ondestroyclipboard"></a>  CWnd::OnDestroyClipboard  
- The framework calls this member function for the Clipboard owner when the Clipboard is emptied through a call to the [EmptyClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649037) Windows function.  
+##  <a name="ondestroyclipboard"></a>CWnd::OnDestroyClipboard  
+ 框架在通过调用清空剪贴板时，针对剪贴板所有者调用此成员函数[EmptyClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649037) Windows 函数。  
   
 ```  
 afx_msg void OnDestroyClipboard();
 ```  
   
-##  <a name="ondevicechange"></a>  CWnd::OnDeviceChange  
- The framework calls this member function to notify an application or device driver of a change to the hardware configuration of a device or the computer.  
+##  <a name="ondevicechange"></a>CWnd::OnDeviceChange  
+ 框架调用此成员函数以通知应用程序或设备驱动程序的设备或计算机的硬件配置的更改。  
   
 ```  
-afx_msg BOOL OnDeviceChange (UINT nEventType，  
+afx_msg BOOL OnDeviceChange(
+    UINT nEventType,  
     DWORD_PTR dwData);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *nEventType*  
- An event type. See the Remarks section for a description of the available values  
+ 事件类型。 请参阅备注部分有关可用值的说明  
   
  `dwData`  
- The address of a structure that contains event-specific data. Its meaning depends on the given event.  
+ 包含特定于事件的数据的结构的地址。 其含义取决于给定的事件。  
   
-### Remarks  
- For devices that offer software-controllable features, such as ejection and locking, the operating system typically sends a **DBT_DEVICEREMOVEPENDING** message to let applications and device drivers end their use of the device gracefully.  
+### <a name="remarks"></a>备注  
+ 提供软件控制的功能，如弹出和锁定、 的设备的操作系统通常情况下发送**DBT_DEVICEREMOVEPENDING**消息为了让应用程序和设备驱动程序正常结束他们的设备使用。  
   
- If the operating system forcefully removes of a device, it may not send a **DBT_DEVICEQUERYREMOVE** message before doing so.  
+ 如果操作系统强制中删除的设备，它可能不会发送**DBT_DEVICEQUERYREMOVE**之前执行此操作的消息。  
   
- The *nEvent* parameter can be one of these values:  
+ *N 事件*参数可以为以下值之一︰  
   
-- [DBT_DEVICEARRIVAL](http://msdn.microsoft.com/library/windows/desktop/aa363205) A device has been inserted and is now available.  
+- [DBT_DEVICEARRIVAL](http://msdn.microsoft.com/library/windows/desktop/aa363205)设备已插入，并且现已可用。  
   
-- [DBT_DEVICEQUERYREMOVE](http://msdn.microsoft.com/library/windows/desktop/aa363206) Permission to remove a device is requested. Any application can deny this request and cancel the removal.  
+- [DBT_DEVICEQUERYREMOVE](http://msdn.microsoft.com/library/windows/desktop/aa363206)请求权限来删除设备。 任何应用程序可以拒绝此请求，并取消的删除。  
   
-- [DBT_DEVICEQUERYREMOVEFAILED](http://msdn.microsoft.com/library/windows/desktop/aa363207) Request to remove a device has been canceled.  
+- [DBT_DEVICEQUERYREMOVEFAILED](http://msdn.microsoft.com/library/windows/desktop/aa363207)已取消请求，若要删除设备。  
   
-- [DBT_DEVICEREMOVEPENDING](http://msdn.microsoft.com/library/windows/desktop/aa363209) Device is about to be removed. Cannot be denied.  
+- [DBT_DEVICEREMOVEPENDING](http://msdn.microsoft.com/library/windows/desktop/aa363209)设备即将被删除。 不能被拒绝。  
   
-- [DBT_DEVICEREMOVECOMPLETE](http://msdn.microsoft.com/library/windows/desktop/aa363208) Device has been removed.  
+- [DBT_DEVICEREMOVECOMPLETE](http://msdn.microsoft.com/library/windows/desktop/aa363208)设备已被删除。  
   
-- [DBT_DEVICETYPESPECIFIC](http://msdn.microsoft.com/library/windows/desktop/aa363210) Device-specific event.  
+- [DBT_DEVICETYPESPECIFIC](http://msdn.microsoft.com/library/windows/desktop/aa363210)特定于设备的事件。  
   
-- [DBT_CONFIGCHANGED](http://msdn.microsoft.com/library/windows/desktop/aa363203) Current configuration has changed.  
+- [DBT_CONFIGCHANGED](http://msdn.microsoft.com/library/windows/desktop/aa363203)当前配置已更改。  
   
-- **DBT_DEVNODES_CHANGED** Device node has changed.  
+- **DBT_DEVNODES_CHANGED**设备节点已更改。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="ondevmodechange"></a>  CWnd::OnDevModeChange  
- The framework calls this member function for all top-level `CWnd` objects when the user changes device-mode settings.  
+##  <a name="ondevmodechange"></a>CWnd::OnDevModeChange  
+ 框架调用此成员函数以使用所有顶级`CWnd`对象时用户更改设备模式设置。  
   
 ```  
-afx_msg void OnDevModeChange (LPTSTR lpDeviceName);
+afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *lpDeviceName*  
- Points to the device name specified in the Windows initialization file, WIN.INI.  
+ 指向以指定在 Windows 初始化文件中，WIN 的设备名称。INI。  
   
-### Remarks  
- Applications that handle the `WM_DEVMODECHANGE` message may reinitialize their device-mode settings. Applications that use the Windows **ExtDeviceMode** function to save and restore device settings typically do not process this function.  
+### <a name="remarks"></a>备注  
+ 应用程序处理`WM_DEVMODECHANGE`消息可能会重新初始化其设备模式设置。 使用 Windows 的应用程序**ExtDeviceMode**函数来保存和还原设备设置通常不会处理此函数。  
   
- This function is not called when the user changes the default printer from Control Panel. In this case, the `OnWinIniChange` function is called.  
+ 在用户从控制面板中更改默认打印机时，将不会调用此函数。 在这种情况下，`OnWinIniChange`调用函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="ondrawclipboard"></a>  CWnd::OnDrawClipboard  
- The framework calls this member function for each window in the Clipboard-viewer chain when the contents of the Clipboard change.  
+##  <a name="ondrawclipboard"></a>CWnd::OnDrawClipboard  
+ 剪贴板的内容发生更改时，框架对剪贴板查看器链中每个窗口调用此成员函数。  
   
 ```  
 afx_msg void OnDrawClipboard();
 ```  
   
-### Remarks  
- Only applications that have joined the Clipboard-viewer chain by calling the [SetClipboardViewer](#setclipboardviewer) member function need to respond to this call.  
+### <a name="remarks"></a>备注  
+ 仅应用程序已通过调用加入剪贴板查看器链[SetClipboardViewer](#setclipboardviewer)成员函数需要接听此呼叫。  
   
- Each window that receives an `OnDrawClipboard` call should call the [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows function to pass a [WM_DRAWCLIPBOARD](http://msdn.microsoft.com/library/windows/desktop/ms649025) message on to the next window in the Clipboard-viewer chain. The handle of the next window is returned by the [SetClipboardViewer](#setclipboardviewer) member function; it may be modified in response to an [OnChangeCbChain](#onchangecbchain) member function call.  
+ 接收每个窗口`OnDrawClipboard`的调用应调用[SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 函数传递[WM_DRAWCLIPBOARD](http://msdn.microsoft.com/library/windows/desktop/ms649025)到剪贴板查看器链中的下一个窗口的消息。 返回下一步的窗口的句柄[SetClipboardViewer](#setclipboardviewer)成员函数; 它可能会在响应中修改[OnChangeCbChain](#onchangecbchain)成员函数调用。  
   
-##  <a name="ondrawiconicthumbnailorlivepreview"></a>  CWnd::OnDrawIconicThumbnailOrLivePreview  
- Called by the framework when it needs to obtain a bitmap to be displayed on Windows 7 tab thumbnail, or on the client for application peek.  
+##  <a name="ondrawiconicthumbnailorlivepreview"></a>CWnd::OnDrawIconicThumbnailOrLivePreview  
+ 由框架在需要获取要在 Windows 7 选项卡缩略图上或客户端上（进行应用程序速览）显示的位图时进行调用。  
   
 ```  
-虚拟 void OnDrawIconicThumbnailOrLivePreview （CDC & dc，  
-    CRect rect  
-    CSize szRequiredThumbnailSize  
-    BOOL bIsThumbnail  
-    BOOL & bAlphaChannelSet）;
+virtual void OnDrawIconicThumbnailOrLivePreview(
+    CDC& dc,  
+    CRect rect,  
+    CSize szRequiredThumbnailSize,  
+    BOOL bIsThumbnail,  
+    BOOL& bAlphaChannelSet);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `dc`  
- Specifies the device context.  
+ 指定的设备上下文。  
   
  `rect`  
- Specifies the bounding rectangle of the area to render.  
+ 指定要呈现的区域的边框。  
   
  `szRequiredThumbnailSize`  
- Specifies the size of the target thumbnail. Should be ignored if `bIsThumbnail` is `FALSE`.  
+ 指定目标缩略图的大小。 如果应忽略`bIsThumbnail`是`FALSE`。  
   
  `bIsThumbnail`  
- Specifies whether this method is called for iconic thumbnail or live preview (peek).  
+ 指定是否为图标缩略图或实时预览 （扫视） 调用此方法。  
   
  `bAlphaChannelSet`  
- [out] Set it to `TRUE` if your implementation initializes the alpha channel of a bitmap selected in `dc`.  
+ [out]将其设置为`TRUE`如果你实现初始化在中选择的位图的 alpha 通道`dc`。  
   
-### Remarks  
- Override this method in a derived class and draw on the specified device context in order to customize thumbnail and peek. If `bThumbnail` is `TRUE`, `szRequiredThumbnailSize` can be ignored. In this case you should be aware that you draw full sized bitmap (that is, a bitmap that covers the whole client area). The device context ( `dc`) comes with selected 32 bits bitmap. The default implementation sends WM_PRINT to this window with PRF_CLIENT, PRF_CHILDREN, and PRF_NONCLIENT flags.  
+### <a name="remarks"></a>备注  
+ 重写此方法在派生类中的和在指定的设备上下文上绘制以便自定义缩略图和查看。 如果`bThumbnail`是`TRUE`，`szRequiredThumbnailSize`可以忽略。 在这种情况下应注意绘制完整大小的位图 （即，涵盖整个工作区的位图）。 设备上下文 ( `dc`) 附带了所选的 32 位位图。 默认实现将 WM_PRINT 发送到 PRF_CLIENT、 PRF_CHILDREN 和 PRF_NONCLIENT 标志与此窗口。  
   
-##  <a name="ondrawitem"></a>  CWnd::OnDrawItem  
- The framework calls this member function for the owner of an owner-draw button control, combo-box control, list-box control, or menu when a visual aspect of the control or menu has changed.  
+##  <a name="ondrawitem"></a>CWnd::OnDrawItem  
+ 框架调用此成员函数为所有者描述按钮控件、 组合框控件或菜单时控件的可视方位列表框控件的所有者或菜单已更改。  
   
 ```  
-afx_msg void OnDrawItem (int nIDCtl，  
+afx_msg void OnDrawItem(
+    int nIDCtl,  
     LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDCtl`  
- Contains the identifier of the control that sent the `WM_DRAWITEM` message. If a menu sent the message, `nIDCtl` contains 0.  
+ 包含发送的控件的标识符`WM_DRAWITEM`消息。 如果菜单发送消息，`nIDCtl`包含 0。  
   
  `lpDrawItemStruct`  
- Specifies a long pointer to a `DRAWITEMSTRUCT` data structure that contains information about the item to be drawn and the type of drawing required.  
+ 指定指向的长指针`DRAWITEMSTRUCT`数据结构，其中包含有关要绘制的项和绘图所需的类型信息。  
   
-### Remarks  
- The **itemAction** member of the [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure defines the drawing operation that is to be performed. The data in this member allows the owner of the control to determine what drawing action is required.  
+### <a name="remarks"></a>备注  
+ **ItemAction**的成员[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构定义要执行的绘制操作。 此成员中的数据允许控件的所有者，以确定什么绘制操作要求。  
   
- Before returning from processing this message, an application should ensure that the device context identified by the `hDC` member of the `DRAWITEMSTRUCT` structure is restored to the default state.  
+ 在之前返回从处理此消息，应用程序应确保由标识的设备上下文`hDC`的成员`DRAWITEMSTRUCT`结构还原为默认状态。  
   
- If the **hwndItem** member belongs to a [CButton](../../mfc/reference/cbutton-class.md), [CMenu](../../mfc/reference/cmenu-class.md), [CListBox](../../mfc/reference/clistbox-class.md), or [CComboBox](../../mfc/reference/ccombobox-class.md) object, then the `DrawItem` virtual function of the appropriate class is called. Override the `DrawItem` member function of the appropriate control's class to draw the item.  
+ 如果**hwndItem**成员属于[CButton](../../mfc/reference/cbutton-class.md)， [CMenu](../../mfc/reference/cmenu-class.md)， [CListBox](../../mfc/reference/clistbox-class.md)，或[CComboBox](../../mfc/reference/ccombobox-class.md)对象，则`DrawItem`调用虚函数的适当的类。 重写`DrawItem`用于绘制项的相应控件的类的成员函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="ondropfiles"></a>  CWnd::OnDropFiles  
- The framework calls this member function when the user releases the left mouse button over a window that has registered itself as the recipient of dropped files.  
+##  <a name="ondropfiles"></a>CWnd::OnDropFiles  
+ 当用户已将自己注册为拖放文件接收者的窗口上方释放鼠标左键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnDropFiles (HDROP hDropInfo);
+afx_msg void OnDropFiles(HDROP hDropInfo);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *hDropInfo*  
- A pointer to an internal data structure that describes the dropped files. This handle is used by the **DragFinish**, **DragQueryFile**, and **DragQueryPoint** Windows functions to retrieve information about the dropped files.  
+ 指向描述删除的文件内部数据结构的指针。 使用此句柄**DragFinish**， **DragQueryFile**，和**DragQueryPoint** Windows 函数检索拖放文件有关的信息。  
   
-### Remarks  
- Typically, a derived class will be designed to support dropped files and it will register itself during window construction.  
+### <a name="remarks"></a>备注  
+ 通常情况下，派生的类将用于支持拖放的文件和它将在窗口构造过程中注册自身。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onenable"></a>  CWnd::OnEnable  
- The framework calls this member function when an application changes the enabled state of the `CWnd` object.  
+##  <a name="onenable"></a>CWnd::OnEnable  
+ 应用程序更改的启用的状态时，框架会调用此成员函数`CWnd`对象。  
   
 ```  
-afx_msg void OnEnable (BOOL bEnable);
+afx_msg void OnEnable(BOOL bEnable);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bEnable`  
- Specifies whether the `CWnd` object has been enabled or disabled. This parameter is **TRUE** if the `CWnd` has been enabled; it is **FALSE** if the `CWnd` has been disabled.  
+ 指定是否`CWnd`对象已启用或已禁用。 此参数是**TRUE**如果`CWnd`已启用; 它是**FALSE**如果`CWnd`已禁用。  
   
-### Remarks  
- `OnEnable` is called before the [EnableWindow](#enablewindow) member function returns, but after the window enabled state ( [WS_DISABLED](../../mfc/reference/window-styles.md) style bit) has changed.  
+### <a name="remarks"></a>备注  
+ `OnEnable`之前调用[EnableWindow](#enablewindow)成员函数返回，但在启用的窗口状态之后 ( [WS_DISABLED](../../mfc/reference/window-styles.md)样式位) 已更改。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onendsession"></a>  CWnd::OnEndSession  
- The framework calls this member function after the `CWnd` object has returned a nonzero value from a [OnQueryEndSession](#onqueryendsession) member function call.  
+##  <a name="onendsession"></a>CWnd::OnEndSession  
+ 框架调用此成员函数后的`CWnd`对象已返回非零值从[OnQueryEndSession](#onqueryendsession)成员函数调用。  
   
 ```  
 afx_msg void OnEndSession(BOOL bEnding);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bEnding`  
- Specifies whether or not the session is being ended. It is **TRUE** if the session is being ended; otherwise **FALSE**.  
+ 指定在正在结束会话。 它是**TRUE**如果会话正在结束; 否则为**FALSE**。  
   
-### Remarks  
- The `OnEndSession` call informs the `CWnd` object whether the session is actually ending.  
+### <a name="remarks"></a>备注  
+ `OnEndSession`调用通知`CWnd`对象是否实际结束会话。  
   
- If `bEnding` is **TRUE**, Windows can terminate any time after all applications have returned from processing this call. Consequently, have an application perform all tasks required for termination within `OnEndSession`.  
+ 如果`bEnding`是**TRUE**，Windows 仍可终止后从处理此调用返回了所有应用程序的任何时间。 因此，具有应用程序执行中的终止所需的所有任务`OnEndSession`。  
   
- You do not need to call the [DestroyWindow](#destroywindow) member function or [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) Windows function when the session is ending.  
+ 不需要调用[DestroyWindow](#destroywindow)成员函数或[PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945)在会话结束时，Windows 正常工作。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onenteridle"></a>  CWnd::OnEnterIdle  
- The framework calls this member function to inform an application's main window procedure that a modal dialog box or a menu is entering an idle state.  
+##  <a name="onenteridle"></a>CWnd::OnEnterIdle  
+ 框架调用此成员函数以向应用程序的主窗口过程通知模式对话框或菜单正在进入空闲状态。  
   
 ```  
-afx_msg void OnEnterIdle (UINT nWhy，  
+afx_msg void OnEnterIdle(
+    UINT nWhy,  
     CWnd* pWho);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nWhy`  
- Specifies whether the message is the result of a dialog box or a menu being displayed. This parameter can be one of the following values:  
+ 指定消息是一个对话框或菜单显示的结果。 此参数可以是以下值之一︰  
   
-- **MSGF_DIALOGBOX** The system is idle because a dialog box is being displayed.  
+- **MSGF_DIALOGBOX**系统处于空闲状态，因为正在显示一个对话框。  
   
-- **MSGF_MENU** The system is idle because a menu is being displayed.  
+- **MSGF_MENU**系统处于空闲状态，因为在显示的菜单。  
   
  *pWho*  
- Specifies a pointer to the dialog box (if `nWhy` is **MSGF_DIALOGBOX**), or the window that contains the displayed menu (if `nWhy` is **MSGF_MENU**). This pointer may be temporary and should not be stored for later use.  
+ 指定到对话框中的指针 (如果`nWhy`是**MSGF_DIALOGBOX**)，或包含显示的菜单中的窗口 (如果`nWhy`是**MSGF_MENU**)。 此指针可能是暂时的不应存储起来供以后使用。  
   
-### Remarks  
- A modal dialog box or menu enters an idle state when no messages are waiting in its queue after it has processed one or more previous messages.  
+### <a name="remarks"></a>备注  
+ 为模式对话框或菜单进入空闲状态时没有邮件正在等待其队列中之后它已处理一个或多个前面的消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onentermenuloop"></a>  CWnd::OnEnterMenuLoop  
- The framework calls this member function when a menu modal loop has been entered.  
+##  <a name="onentermenuloop"></a>CWnd::OnEnterMenuLoop  
+ 当进入了菜单模式循环时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnEnterMenuLoop (BOOL bIsTrackPopupMenu);
+afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bIsTrackPopupMenu`  
- Specifies whether the menu involved is a popup menu. Has a nonzero value if the function is successful; otherwise 0.  
+ 指定所涉及的菜单是否弹出菜单。 如果该函数成功，则，具有一个非零值否则为 0。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onentersizemove"></a>  CWnd::OnEnterSizeMove  
- The framework calls this member function one time after the affected window enters a moving or sizing modal loop.  
+##  <a name="onentersizemove"></a>CWnd::OnEnterSizeMove  
+ 框架调用此成员函数一次后受影响的窗口进入移动或大小调整模式循环。  
   
 ```  
 afx_msg void OnEnterSizeMove();
 ```  
   
-### Remarks  
- This method receives the [WM_ENTERSIZEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms632622) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_ENTERSIZEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms632622)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
- A window enters a moving or sizing modal loop when the user clicks the window's title bar or sizing border, or when the window passes the [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) message to the [CWnd::DefWindowProc](#defwindowproc) function and the `wParam` parameter of that message specifies `SC_MOVE` or `SC_SIZE`.  
+ 窗口进入移动或大小调整模式循环，当用户单击窗口的标题栏或大小调整边框或者窗口将传递[WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360)消息[CWnd::DefWindowProc](#defwindowproc)函数和`wParam`该消息的参数指定`SC_MOVE`或`SC_SIZE`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onerasebkgnd"></a>  CWnd::OnEraseBkgnd  
- The framework calls this member function when the `CWnd` object background needs erasing (for example, when resized).  
+##  <a name="onerasebkgnd"></a>CWnd::OnEraseBkgnd  
+ 框架调用此成员函数时`CWnd`对象背景需要擦除 （例如，在调整大小时）。  
   
 ```  
 afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- Specifies the device-context object.  
+ 指定的设备上下文对象。  
   
-### Return Value  
- Nonzero if it erases the background; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果它将擦除背景，则为非零否则为 0。  
   
-### Remarks  
- It is called to prepare an invalidated region for painting.  
+### <a name="remarks"></a>备注  
+ 它称为准备失效的区域的绘制。  
   
- The default implementation erases the background using the window class background brush specified by the **hbrBackground** member of the window class structure.  
+ 默认实现清除后台使用指定的窗口类背景画笔**hbrBackground**窗口类结构的成员。  
   
- If the **hbrBackground** member is **NULL**, your overridden version of `OnEraseBkgnd` should erase the background color. Your version should also align the origin of the intended brush with the `CWnd` coordinates by first calling [UnrealizeObject](http://msdn.microsoft.com/library/windows/desktop/dd145164) for the brush, and then selecting the brush.  
+ 如果**hbrBackground**成员是**NULL**，你的重写的版本`OnEraseBkgnd`应擦除的背景色。 你的版本还应保持一致的预期画笔的原点`CWnd`坐标通过首先调用[UnrealizeObject](http://msdn.microsoft.com/library/windows/desktop/dd145164)画笔，，然后选择画笔。  
   
- An overridden `OnEraseBkgnd` should return nonzero in response to `WM_ERASEBKGND` if it processes the message and erases the background; this indicates that no further erasing is required. If it returns 0, the window will remain marked as needing to be erased. (Typically, this means that the **fErase** member of the `PAINTSTRUCT` structure will be **TRUE**.)  
+ 被重写`OnEraseBkgnd`应返回非零值以响应`WM_ERASEBKGND`如果它处理消息并清除后台; 这表明，不会再清除不需要。 如果它返回 0 时，窗口将保持被标记为无需擦除。 (通常情况下，这意味着， **fErase**的成员`PAINTSTRUCT`结构将**TRUE**。)  
   
- Windows assumes the background is computed with the `MM_TEXT` mapping mode. If the device context is using any other mapping mode, the area erased may not be within the visible part of the client area.  
+ Windows 假定后台计算有`MM_TEXT`映射模式。 如果设备上下文使用任何其他映射模式下，清除的区域可能不是在客户端区域的可见部分。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onexitmenuloop"></a>  CWnd::OnExitMenuLoop  
- The framework calls this member function when a menu modal loop has been exited.  
+##  <a name="onexitmenuloop"></a>CWnd::OnExitMenuLoop  
+ 已退出了菜单模式循环时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnExitMenuLoop (BOOL bIsTrackPopupMenu);
+afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bIsTrackPopupMenu`  
- Specifies whether the menu involved is a pop-up menu. Has a nonzero value if the function is successful; otherwise 0.  
+ 指定所涉及的菜单是否是一个弹出菜单。 如果该函数成功，则，具有一个非零值否则为 0。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onexitsizemove"></a>  CWnd::OnExitSizeMove  
- The framework calls this member function one time after the affected window exits a moving or sizing modal loop.  
+##  <a name="onexitsizemove"></a>CWnd::OnExitSizeMove  
+ 框架调用此成员函数受影响的窗口退出移动或大小调整模式循环后的一次。  
   
 ```  
 afx_msg void OnExitSizeMove();
 ```  
   
-### Remarks  
- This method receives the [WM_EXITSIZEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms632623) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_EXITSIZEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms632623)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
- A window enters a moving or sizing modal loop when the user clicks the window's title bar or sizing border, or when the window passes the [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) message to the [CWnd::DefWindowProc](#defwindowproc) function and the `wParam` parameter of that message specifies `SC_MOVE` or `SC_SIZE`.  
+ 窗口进入移动或大小调整模式循环，当用户单击窗口的标题栏或大小调整边框或者窗口将传递[WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360)消息[CWnd::DefWindowProc](#defwindowproc)函数和`wParam`该消息的参数指定`SC_MOVE`或`SC_SIZE`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onfontchange"></a>  CWnd::OnFontChange  
- All top-level windows in the system receive an `OnFontChange` call from the framework after the application changes the pool of font resources.  
+##  <a name="onfontchange"></a>CWnd::OnFontChange  
+ 在系统中的所有顶级窗口接收`OnFontChange`后应用程序更改字体资源池从框架调用。  
   
 ```  
 afx_msg void OnFontChange();
 ```  
   
-### Remarks  
- An application that adds or removes fonts from the system (for example, through the [AddFontResource](http://msdn.microsoft.com/library/windows/desktop/dd183326) or [RemoveFontResource](http://msdn.microsoft.com/library/windows/desktop/dd162922) Windows function) should send the [WM_FONTCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd145211) message to all top-level windows.  
+### <a name="remarks"></a>备注  
+ 添加或删除从系统中的字体的应用程序 (例如，通过[AddFontResource](http://msdn.microsoft.com/library/windows/desktop/dd183326)或[RemoveFontResource](http://msdn.microsoft.com/library/windows/desktop/dd162922) Windows 函数) 应发送[WM_FONTCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd145211)向所有顶级窗口的消息。  
   
- To send this message, use the [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows function with the `hWnd` parameter set to **HWND_BROADCAST**.  
+ 若要发送此邮件，使用[SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 起作用`hWnd`参数设置为**HWND_BROADCAST**。  
   
-##  <a name="ongetdlgcode"></a>  CWnd::OnGetDlgCode  
- Called for a control so the control can process arrow-key and TAB-key input itself.  
+##  <a name="ongetdlgcode"></a>CWnd::OnGetDlgCode  
+ 针对控件进行调用，以便控件可以自己处理箭头键和 TAB 键输入。  
   
 ```  
 afx_msg UINT OnGetDlgCode();
 ```  
   
-### Return Value  
- One or more of the following values, indicating which type of input the application processes:  
+### <a name="return-value"></a>返回值  
+ 一个或多个以下的值，该值指示哪种类型的输入应用程序进程︰  
   
-- **DLGC_BUTTON** Button (generic).  
+- **DLGC_BUTTON**按钮 （泛型）。  
   
-- **DLGC_DEFPUSHBUTTON** Default pushbutton.  
+- **DLGC_DEFPUSHBUTTON**默认按钮。  
   
-- **DLGC_HASSETSEL EM_SETSEL** messages.  
+- **DLGC_HASSETSEL EM_SETSEL**消息。  
   
-- **DLGC_UNDEFPUSHBUTTON** No default pushbutton processing. (An application can use this flag with **DLGC_BUTTON** to indicate that it processes button input but relies on the system for default pushbutton processing.)  
+- **DLGC_UNDEFPUSHBUTTON**没有默认按键处理。 (应用程序可以使用此标志**DLGC_BUTTON**表明它处理按钮的输入，但依赖于默认按键处理的系统。)  
   
-- **DLGC_RADIOBUTTON** Radio button.  
+- **DLGC_RADIOBUTTON**单选按钮。  
   
-- **DLGC_STATIC** Static control.  
+- **DLGC_STATIC**静态控件。  
   
-- **DLGC_WANTALLKEYS** All keyboard input.  
+- **DLGC_WANTALLKEYS**所有键盘输入。  
   
-- **DLGC_WANTARROWS** Arrow keys.  
+- **DLGC_WANTARROWS**箭头键。  
   
-- **DLGC_WANTCHARS** `WM_CHAR` messages.  
+- **DLGC_WANTCHARS** `WM_CHAR`消息。  
   
-- **DLGC_WANTMESSAGE** All keyboard input. The application passes this message on to the control.  
+- **DLGC_WANTMESSAGE**所有键盘输入。 应用程序将传递到该控件的此消息。  
   
-- **DLGC_WANTTAB** TAB key.  
+- **DLGC_WANTTAB** TAB 键。  
   
-### Remarks  
- Normally, Windows handles all arrow-key and TAB-key input to a `CWnd` control. By overriding `OnGetDlgCode`, a `CWnd` control can choose a particular type of input to process itself.  
+### <a name="remarks"></a>备注  
+ 通常情况下，Windows 处理所有箭头键和 TAB 键输入到`CWnd`控件。 通过重写`OnGetDlgCode`、`CWnd`控件可以选择特定类型的输入流程自身。  
   
- The default `OnGetDlgCode` functions for the predefined control classes return a code appropriate for each class.  
+ 默认值`OnGetDlgCode`函数的预定义的控件类返回代码适用于每个类。  
   
-##  <a name="ongetminmaxinfo"></a>  CWnd::OnGetMinMaxInfo  
- The framework calls this member function whenever Windows needs to know the maximized position or dimensions, or the minimum or maximum tracking size.  
+##  <a name="ongetminmaxinfo"></a>CWnd::OnGetMinMaxInfo  
+ 每当 Windows 需要知道最大化的位置或维度，或最小值或最大跟踪大小，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnGetMinMaxInfo (MINMAXINFO * lpMMI);
+afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *lpMMI*  
- Points to a `MINMAXINFO` structure that contains information about a window's maximized size and position and its minimum and maximum tracking size. For more about this structure, see the [MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md) structure.  
+ 指向`MINMAXINFO`大小、 位置和其最小和最大跟踪大小，包含有关窗口的信息的结构的最大化。 有关此结构的详细信息，请参阅[MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md)结构。  
   
-### Remarks  
- The maximized size is the size of the window when its borders are fully extended. The maximum tracking size of the window is the largest window size that can be achieved by using the borders to size the window. The minimum tracking size of the window is the smallest window size that can be achieved by using the borders to size the window.  
+### <a name="remarks"></a>备注  
+ 最大化的大小时其边框进行了完全扩展窗口的大小。 跟踪窗口的大小最大为可以通过使用边框来调整窗口的大小最大窗口大小。 最小跟踪窗口的大小是最小的窗口大小，可以通过使用边框来调整窗口的大小。  
   
- Windows fills in an array of points specifying default values for the various positions and dimensions. The application may change these values in `OnGetMinMaxInfo`.  
+ Windows 将默认为指定值的各种位置和维度的点数组填充。 应用程序可能会更改这些值`OnGetMinMaxInfo`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onhelp"></a>  CWnd::OnHelp  
- Handles F1 Help within the application (using the current context).  
+##  <a name="onhelp"></a>CWnd::OnHelp  
+ 处理应用程序中的 F1 帮助（使用当前上下文）。  
   
 ```  
 afx_msg void OnHelp();
 ```  
   
-### Remarks  
- See [CWinApp::OnHelp](../../mfc/reference/cwinapp-class.md#onhelp) for more information.  
+### <a name="remarks"></a>备注  
+ 请参阅[CWinApp::OnHelp](../../mfc/reference/cwinapp-class.md#onhelp)有关详细信息。  
   
-##  <a name="onhelpfinder"></a>  CWnd::OnHelpFinder  
- Handles the **ID_HELP_FINDER** and **ID_DEFAULT_HELP** commands.  
+##  <a name="onhelpfinder"></a>CWnd::OnHelpFinder  
+ 处理**ID_HELP_FINDER**和**ID_DEFAULT_HELP**命令。  
   
 ```  
 afx_msg void OnHelpFinder();
 ```  
   
-### Remarks  
- See [CWinApp::OnHelpFinder](../../mfc/reference/cwinapp-class.md#onhelpfinder) for more information.  
+### <a name="remarks"></a>备注  
+ 请参阅[CWinApp::OnHelpFinder](../../mfc/reference/cwinapp-class.md#onhelpfinder)有关详细信息。  
   
-##  <a name="onhelpindex"></a>  CWnd::OnHelpIndex  
- Handles the **ID_HELP_INDEX** command and provides a default Help topic.  
+##  <a name="onhelpindex"></a>CWnd::OnHelpIndex  
+ 处理**ID_HELP_INDEX**命令，并提供默认帮助主题。  
   
 ```  
 afx_msg void OnHelpIndex();
 ```  
   
-### Remarks  
- See [CWinApp::OnHelpIndex](../../mfc/reference/cwinapp-class.md#onhelpindex) for more information.  
+### <a name="remarks"></a>备注  
+ 请参阅[CWinApp::OnHelpIndex](../../mfc/reference/cwinapp-class.md#onhelpindex)有关详细信息。  
   
-##  <a name="onhelpinfo"></a>  CWnd::OnHelpInfo  
- Called by the framework when the user presses the F1 key.  
+##  <a name="onhelpinfo"></a>CWnd::OnHelpInfo  
+ 当用户按 F1 键时，由框架调用。  
   
 ```  
 afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *lpHelpInfo*  
- Pointer to a [HELPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773313) structure that contains information about the menu item, control, dialog box, or window for which help is requested.  
+ 指向[HELPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773313)结构，它包含有关菜单项、 控件、 对话框中或为其请求帮助的窗口的信息。  
   
-### Return Value  
- Returns TRUE if a window has the keyboard focus or if a menu is active within a window. If no window has the keyboard focus, returns FALSE.  
+### <a name="return-value"></a>返回值  
+ 如果窗口具有键盘焦点或菜单处于活动状态的时间段内才返回 TRUE。 如果没有窗口具有键盘焦点，则返回 FALSE。  
   
-### Remarks  
- If a menu is active when F1 is pressed, **WM_HELP** is sent to the window associated with the menu; otherwise, **WM_HELP** is sent to the window that has the keyboard focus. If no window has the keyboard focus, **WM_HELP** is sent to the currently active window.  
+### <a name="remarks"></a>备注  
+ 如果菜单处于活动状态时按 F1 时， **WM_HELP**发送到关联的菜单的窗口; 否则为**WM_HELP**发送到具有键盘焦点的窗口。 如果没有窗口具有键盘焦点， **WM_HELP**发送到当前处于活动状态的窗口。  
   
-##  <a name="onhelpusing"></a>  CWnd::OnHelpUsing  
- Handles the **ID_HELP_USING** command.  
+##  <a name="onhelpusing"></a>CWnd::OnHelpUsing  
+ 处理**ID_HELP_USING**命令。  
   
 ```  
 afx_msg void OnHelpUsing();
 ```  
   
-### Remarks  
- See [CWinApp::OnHelpUsing](../../mfc/reference/cwinapp-class.md#onhelpusing) for more information.  
+### <a name="remarks"></a>备注  
+ 请参阅[CWinApp::OnHelpUsing](../../mfc/reference/cwinapp-class.md#onhelpusing)有关详细信息。  
   
-##  <a name="onhotkey"></a>  CWnd::OnHotKey  
- The framework calls this member function when the user presses a system-wide hot key.  
+##  <a name="onhotkey"></a>CWnd::OnHotKey  
+ 在用户按系统范围热键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnHotKey (UINT nHotKeyId，   
-    UINT nKey1   
+afx_msg void OnHotKey(
+    UINT nHotKeyId,   
+    UINT nKey1,   
     UINT nKey2);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nHotKeyId`|Identifier for the hot key that generated the message. If the message was generated by a system-defined hot key, this parameter will be one of the following values:<br /><br /> - `IDHOT_SNAPDESKTOP` - The snap desktop hot key was pressed.<br />- `IDHOT_SNAPWINDOW` - The snap window hot key was pressed.|  
-|[in] `nKey1`|A bitwise combination (OR) of flags that indicate the keys that were pressed in combination with the key specified by the `nKey2` parameter. The possible values are:<br /><br /> - `MOD_ALT` - Either ALT key was held down.<br />- `MOD_CONTROL` - Either CTRL key was held down.<br />- `MOD_SHIFT` - Either SHIFT key was held down.<br />- `MOD_WIN` - Either WINDOWS key was held down. These keys are labeled with the Microsoft Windows logo.|  
-|[in] `nKey2`|The virtual key code of the hot key.|  
+|[in] `nHotKeyId`|热键生成消息标识符。 如果消息由系统定义的热键生成的此参数将为以下值之一︰<br /><br /> - `IDHOT_SNAPDESKTOP`的曾按下管理单元的桌面热键。<br />- `IDHOT_SNAPWINDOW`的曾按下管理单元窗口热键。|  
+|[in] `nKey1`|指示已按下组合在具有由指定键的键的标志的按位组合 (OR)`nKey2`参数。 可能的值为：<br /><br /> - `MOD_ALT`的已按下任一 ALT 键。<br />- `MOD_CONTROL`的已按下任一 CTRL 键。<br />- `MOD_SHIFT`的已按下任一 SHIFT 键。<br />- `MOD_WIN`-这两个 WINDOWS 密钥已按下。 这些密钥标记为 Microsoft Windows 徽标。|  
+|[in] `nKey2`|热键虚拟键代码。|  
   
-### Remarks  
- This method receives the [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. This message is placed at the top of the message queue associated with the thread that registered the hot key. Use the [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) function to register a system-wide hot key.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此消息会放在与注册热键的线程关联的消息队列的顶部。 使用[RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)函数注册系统范围热键。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onhscroll"></a>  CWnd::OnHScroll  
- The framework calls this member function when the user clicks a window's horizontal scroll bar.  
+##  <a name="onhscroll"></a>CWnd::OnHScroll  
+ 当用户单击窗口的水平滚动条，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnHScroll (UINT nSBCode，  
-    UINT nPos  
+afx_msg void OnHScroll(
+    UINT nSBCode,  
+    UINT nPos,  
     CScrollBar* pScrollBar);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nSBCode`  
- Specifies a scroll-bar code that indicates the user's scrolling request. This parameter can be one of the following:  
+ 指定指示的用户的滚动条代码的滚动请求。 此参数可以是以下项之一︰  
   
-- **SB_LEFT** Scroll to far left.  
+- **SB_LEFT**滚动到最左侧。  
   
-- **SB_ENDSCROLL** End scroll.  
+- **SB_ENDSCROLL**结束滚动。  
   
-- **SB_LINELEFT** Scroll left.  
+- **SB_LINELEFT**滚动保留。  
   
-- **SB_LINERIGHT** Scroll right.  
+- **SB_LINERIGHT**向右滚动。  
   
-- **SB_PAGELEFT** Scroll one page left.  
+- **SB_PAGELEFT**滚动一页左。  
   
-- **SB_PAGERIGHT** Scroll one page right.  
+- **SB_PAGERIGHT**右侧的滚动一页。  
   
-- **SB_RIGHT** Scroll to far right.  
+- **SB_RIGHT**滚动到右侧。  
   
-- **SB_THUMBPOSITION** Scroll to absolute position. The current position is specified by the `nPos` parameter.  
+- **SB_THUMBPOSITION**滚动到绝对位置。 当前的位置由指定`nPos`参数。  
   
-- **SB_THUMBTRACK** Drag scroll box to specified position. The current position is specified by the `nPos` parameter.  
+- **SB_THUMBTRACK**拖到指定位置的滚动框。 当前的位置由指定`nPos`参数。  
   
  `nPos`  
- Specifies the scroll-box position if the scroll-bar code is **SB_THUMBPOSITION** or **SB_THUMBTRACK**; otherwise, not used. Depending on the initial scroll range, `nPos` may be negative and should be cast to an `int` if necessary.  
+ 如果滚动条的代码是指定的滚动框位置**SB_THUMBPOSITION**或**SB_THUMBTRACK**; 否则为未使用。 具体取决于初始滚动范围，`nPos`可以是负数，并且应强制转换为`int`如有必要。  
   
  `pScrollBar`  
- If the scroll message came from a scroll-bar control, contains a pointer to the control. If the user clicked a window's scroll bar, this parameter is **NULL**. The pointer may be temporary and should not be stored for later use.  
+ 如果滚动消息所来自的滚动条控件，包含控件的指针。 如果用户单击窗口的滚动条，此参数是**NULL**。 该指针可能是暂时的，不应存储起来供将来使用。  
   
-### Remarks  
- The **SB_THUMBTRACK** scroll-bar code typically is used by applications that give some feedback while the scroll box is being dragged.  
+### <a name="remarks"></a>备注  
+ **SB_THUMBTRACK**滚动条通常将使用代码进行拖动滚动框时，提供一些反馈的应用程序。  
   
- If an application scrolls the contents controlled by the scroll bar, it must also reset the position of the scroll box with the [SetScrollPos](#setscrollpos) member function.  
+ 如果应用程序将由滚动条控制的内容滚动，它必须还将重置具有的滚动框的位置[SetScrollPos](#setscrollpos)成员函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#108](../../mfc/reference/codesnippet/cpp/cwnd-class_48.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 108](../../mfc/reference/codesnippet/cpp/cwnd-class_48.cpp)]  
   
-##  <a name="onhscrollclipboard"></a>  CWnd::OnHScrollClipboard  
- The Clipboard owner's `OnHScrollClipboard` member function is called by the Clipboard viewer when the Clipboard data has the `CF_OWNERDISPLAY` format and there is an event in the Clipboard viewer's horizontal scroll bar.  
+##  <a name="onhscrollclipboard"></a>CWnd::OnHScrollClipboard  
+ 剪贴板所有者`OnHScrollClipboard`成员函数调用由剪贴板查看器，当剪贴板数据具有`CF_OWNERDISPLAY`格式，并且剪贴板查看器的水平滚动条中没有一个事件。  
   
 ```  
-afx_msg void OnHScrollClipboard (CWnd * pClipAppWnd，  
-    UINT nSBCode  
+afx_msg void OnHScrollClipboard(
+    CWnd* pClipAppWnd,  
+    UINT nSBCode,  
     UINT nPos);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pClipAppWnd`  
- Specifies a pointer to a Clipboard-viewer window. The pointer may be temporary and should not be stored for later use.  
+ 指定指向剪贴板查看器窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。  
   
  `nSBCode`  
- Specifies one of the following scroll-bar codes in the low-order word:  
+ 在低序位字中指定以下的滚动条代码之一︰  
   
-- **SB_BOTTOM** Scroll to lower right.  
+- **SB_BOTTOM**到右下角滚动。  
   
-- **SB_ENDSCROLL** End scroll.  
+- **SB_ENDSCROLL**结束滚动。  
   
-- **SB_LINEDOWN** Scroll one line down.  
+- **SB_LINEDOWN**向下滚动一行。  
   
-- **SB_LINEUP** Scroll one line up.  
+- **SB_LINEUP**向上滚动一行。  
   
-- **SB_PAGEDOWN** Scroll one page down.  
+- **SB_PAGEDOWN**向下滚动一页。  
   
-- **SB_PAGEUP** Scroll one page up.  
+- **SB_PAGEUP**向上滚动一页。  
   
-- **SB_THUMBPOSITION** Scroll to the absolute position. The current position is provided in `nPos`.  
+- **SB_THUMBPOSITION**滚动到的绝对位置。 中提供当前位置`nPos`。  
   
-- **SB_TOP** Scroll to upper left.  
+- **SB_TOP**滚动到左上方。  
   
  `nPos`  
- Contains the scroll-box position if the scroll-bar code is **SB_THUMBPOSITION**; otherwise not used.  
+ 如果滚动条代码包含的滚动框位置**SB_THUMBPOSITION**; 否则为未使用。  
   
-### Remarks  
- The owner should scroll the Clipboard image, invalidate the appropriate section, and update the scroll-bar values.  
+### <a name="remarks"></a>备注  
+ 所有者应滚动剪贴板图像、 使相应部分失效以及更新滚动条值。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oniconerasebkgnd"></a>  CWnd::OnIconEraseBkgnd  
- The framework calls this member function for a minimized (iconic) `CWnd` object when the background of the icon must be filled before painting the icon.  
+##  <a name="oniconerasebkgnd"></a>CWnd::OnIconEraseBkgnd  
+ 框架调用此成员函数以使用最小化 （图标化）`CWnd`对象必须在绘制图标之前填充图标背景时。  
   
 ```  
-afx_msg void OnIconEraseBkgnd (CDC * pDC);
+afx_msg void OnIconEraseBkgnd(CDC* pDC);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- Specifies the device-context object of the icon. May be temporary and should not be stored for later use.  
+ 指定的图标的设备上下文对象。 可能是暂时的不应存储起来供以后使用。  
   
-### Remarks  
- `CWnd` receives this call only if a class icon is defined for the window default implementation; otherwise [OnEraseBkgnd](#onerasebkgnd) is called.  
+### <a name="remarks"></a>备注  
+ `CWnd`接收此调用，仅当为窗口默认实现; 定义的类图标否则为[OnEraseBkgnd](#onerasebkgnd)调用。  
   
- The [DefWindowProc](#defwindowproc) member function fills the icon background with the background brush of the parent window.  
+ [DefWindowProc](#defwindowproc)成员函数填充图标背景与父窗口的背景画笔。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oninitmenu"></a>  CWnd::OnInitMenu  
- The framework calls this member function when a menu is about to become active.  
+##  <a name="oninitmenu"></a>CWnd::OnInitMenu  
+ 当菜单要成为活动状态时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnInitMenu (CMenu * pMenu);
+afx_msg void OnInitMenu(CMenu* pMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pMenu`  
- Specifies the menu to be initialized. May be temporary and should not be stored for later use.  
+ 指定要初始化的菜单。 可能是暂时的不应存储起来供以后使用。  
   
-### Remarks  
- `OnInitMenu` is called when the user clicks an item on the menu bar or presses a menu key. Override this member function to modify the menu before it is displayed.  
+### <a name="remarks"></a>备注  
+ `OnInitMenu`用户单击菜单栏上的项，或按菜单键时调用。 重写该成员函数以它在显示之前修改菜单。  
   
- `OnInitMenu` is only called once, when a menu is first accessed (for example, when a user clicks an item on the menu bar). This method does not provide information about menu items. As the user moves to items within the menu (for example, by moving the mouse across several menu items) the function is not called again. Once the user exits from the menu (for example, by clicking on the application client area) and later clicks an item on the menu bar, the function will be called again.  
+ `OnInitMenu`只能调用一次，（例如，当用户单击菜单栏上的项） 首次访问一个菜单。 此方法不提供有关菜单项的信息。 当用户移动到菜单中项 （例如，通过跨多个菜单项将鼠标） 将不会再次调用函数。 一旦用户从菜单退出 （例如，通过单击应用程序工作区） 和更高版本单击菜单栏上的项，将再次调用该函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oninitmenupopup"></a>  CWnd::OnInitMenuPopup  
- The framework calls this member function when a pop-up menu is about to become active.  
+##  <a name="oninitmenupopup"></a>CWnd::OnInitMenuPopup  
+ 当弹出菜单要成为活动状态时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnInitMenuPopup (CMenu * pPopupMenu，  
-    UINT nIndex  
+afx_msg void OnInitMenuPopup(
+    CMenu* pPopupMenu,  
+    UINT nIndex,  
     BOOL bSysMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pPopupMenu*  
- Specifies the menu object of the pop-up menu. May be temporary and should not be stored for later use.  
+ 指定弹出菜单的菜单对象。 可能是暂时的不应存储起来供以后使用。  
   
  `nIndex`  
- Specifies the index of the pop-up menu in the main menu.  
+ 指定在主菜单的弹出菜单的索引。  
   
  *bSysMenu*  
- **TRUE** if the pop-up menu is the Control menu; otherwise **FALSE**.  
+ **TRUE**弹出菜单是否控件菜单中; 否则为**FALSE**。  
   
-### Remarks  
- This allows an application to modify the pop-up menu before it is displayed without changing the entire menu.  
+### <a name="remarks"></a>备注  
+ 这允许应用程序而无需更改的整个菜单显示之前修改的弹出菜单。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oninputdevicechange"></a>  CWnd::OnInputDeviceChange  
- The framework calls this member function when an I/O device is added or removed from the system.  
+##  <a name="oninputdevicechange"></a>CWnd::OnInputDeviceChange  
+ 添加或从系统中删除的 I/O 设备时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnInputDeviceChange (无符号短 uFlag);
+afx_msg void OnInputDeviceChange(unsigned short uFlag);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `uFlag`|This flag can contain the following values:<br /><br /> - `GIDC_ARRIVAL` - A new device has been added to the system.<br />- `GIDC_REMOVAL` - A device has been removed from the system.|  
+|[in] `uFlag`|此标志可以包含以下值︰<br /><br /> - `GIDC_ARRIVAL`-新设备具有已添加到系统。<br />- `GIDC_REMOVAL`-A 设备已从系统中删除。|  
   
-### Remarks  
- This method receives the [WM_INPUT_DEVICE_CHANGE](http://msdn.microsoft.com/library/windows/desktop/ms645591) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. The is a generic input device message.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_INPUT_DEVICE_CHANGE](http://msdn.microsoft.com/library/windows/desktop/ms645591)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 是泛型的输入的设备消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oninputlangchange"></a>  CWnd::OnInputLangChange  
- The framework calls this member for the topmost affected window after an application's input language has been changed.  
+##  <a name="oninputlangchange"></a>CWnd::OnInputLangChange  
+ 框架调用此成员的最顶端的受影响窗口后应用程序的输入的语言已更改。  
   
 ```  
-afx_msg void OnInputLangChange (UINT nCharSet，   
+afx_msg void OnInputLangChange(
+    UINT nCharSet,   
     UINT nLocaleId);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nCharSet`|The character set of the new locale. For more information, see the `lfCharSet` parameter of the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.|  
-|[in] `nLocaleId`|The input locale identifier. For more information, see [Language Identifier Constants and Strings](http://msdn.microsoft.com/library/windows/desktop/dd318693).|  
+|[in] `nCharSet`|新的区域设置的字符集。 有关详细信息，请参阅`lfCharSet`参数[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。|  
+|[in] `nLocaleId`|输入区域设置标识符。 有关详细信息，请参阅[语言标识符常量和字符串](http://msdn.microsoft.com/library/windows/desktop/dd318693)。|  
   
-### Remarks  
- This method receives the [WM_INPUTLANGCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms632629) notification message, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_INPUTLANGCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms632629)中所述的通知消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="oninputlangchangerequest"></a>  CWnd::OnInputLangChangeRequest  
- The framework calls this member for window with the focus when the user chooses a new input language.  
+##  <a name="oninputlangchangerequest"></a>CWnd::OnInputLangChangeRequest  
+ 框架调用此成员具有焦点的窗口，当用户选择新的输入的语言。  
   
 ```  
-afx_msg void OnInputLangChangeRequest (UINT nFlags，   
+afx_msg void OnInputLangChangeRequest(
+    UINT nFlags,   
     UINT nLocaleId);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nFlags`|A bitwise (OR) combination of flags that indicate the new locale was selected from the previous or next locale in the installed list of locales, or that the new input locale's keyboard layout can be used with the system character set.<br /><br /> The possible values are `INPUTLANGCHANGE_BACKWARD`, `INPUTLANGCHANGE_FORWARD`, and `INPUTLANGCHANGE_SYSCHARSET`.|  
-|[in] `nLocaleId`|The input locale identifier. For more information, see [Language Identifier Constants and Strings](http://msdn.microsoft.com/library/windows/desktop/dd318693).|  
+|[in] `nFlags`|指示从上一页或下一页区域设置的区域设置中，安装列表中选择新的区域设置或新的输入区域设置的键盘布局可与系统字符集的标志的按位 (OR) 组合。<br /><br /> 可能的值为`INPUTLANGCHANGE_BACKWARD`， `INPUTLANGCHANGE_FORWARD`，和`INPUTLANGCHANGE_SYSCHARSET`。|  
+|[in] `nLocaleId`|输入区域设置标识符。 有关详细信息，请参阅[语言标识符常量和字符串](http://msdn.microsoft.com/library/windows/desktop/dd318693)。|  
   
-### Remarks  
- This method receives the [WM_INPUTLANGCHANGEREQUEST](http://msdn.microsoft.com/library/windows/desktop/ms632630) notification message, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. This message is posted when the user chooses a new input language with either a hotkey that is specified in the keyboard control panel application, or from the indicator on the system taskbar.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_INPUTLANGCHANGEREQUEST](http://msdn.microsoft.com/library/windows/desktop/ms632630)中所述的通知消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当用户选择新的输入的语言与任一热键在键盘控件面板应用程序，或从系统任务栏上的指示器指定发布此消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onkeydown"></a>  CWnd::OnKeyDown  
- The framework calls this member function when a nonsystem key is pressed.  
+##  <a name="onkeydown"></a>CWnd::OnKeyDown  
+ 按下非系统键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnKeyDown (UINT nChar、  
-    UINT nRepCnt  
+afx_msg void OnKeyDown(
+    UINT nChar,  
+    UINT nRepCnt,  
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Specifies the virtual key code of the given key. For a list of of standard virtual key codes, see Winuser.h  
+ 指定给定键的虚拟键代码。 有关标准虚拟键代码的列表，请参见 Winuser.h  
   
  `nRepCnt`  
- Repeat count (the number of times the keystroke is repeated as a result of the user holding down the key).  
+ 重复计数 （因为用户按住键重复击键次数的数量）。  
   
  `nFlags`  
- Specifies the scan code, key-transition code, previous key state, and context code, as shown in the following list:  
+ 下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码︰  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|0–7|Scan code (OEM-dependent value).|  
-|8|Extended key, such as a function key or a key on the numeric keypad (1 if it is an extended key).|  
-|9–10|Not used.|  
-|11–12|Used internally by Windows.|  
-|13|Context code (1 if the ALT key is held down while the key is pressed; otherwise 0).|  
-|14|Previous key state (1 if the key is down before the call, 0 if the key is up).|  
-|15|Transition state (1 if the key is being released, 0 if the key is being pressed).|  
+|0–7|扫描代码 （依赖于 OEM 的值）。|  
+|8|扩展的密钥，如函数密钥或数字键盘 (如果它是扩展的密钥，则为 1) 上的某个键。|  
+|9–10|未使用。|  
+|11–12|由 Windows 内部使用。|  
+|13|上下文代码 （如果时按下键按下 ALT 键为 1; 否则为 0）。|  
+|14|以前的密钥状态 (如果在调用，0，如果密钥已启动之前已关闭的密钥，则为 1)。|  
+|15|过渡状态 （如果正在释放键为 1，0，如果按下了键）。|  
   
- For a `WM_KEYDOWN` message, the key-transition bit (bit 15) is 0 and the context-code bit (bit 13) is 0.  
+ 有关`WM_KEYDOWN`消息密钥转换位 （位 15） 为 0 和上下文代码位 （位 13） 为 0。  
   
-### Remarks  
- A nonsystem key is a keyboard key that is pressed when the ALT key is not pressed or a keyboard key that is pressed when `CWnd` has the input focus.  
+### <a name="remarks"></a>备注  
+ 非系统键是未按下 ALT 键时按下键盘键还是时按下键盘键`CWnd`具有输入的焦点。  
   
- Because of auto-repeat, more than one `OnKeyDown` call may occur before an [OnKeyUp](#onkeyup) member function call is made. The bit that indicates the previous key state can be used to determine whether the `OnKeyDown` call is the first down transition or a repeated down transition.  
+ 由于自动重复，多个`OnKeyDown`调用可能会出现之前[OnKeyUp](#onkeyup)进行成员函数调用。 指示上一项状态的位可以用于确定是否`OnKeyDown`调用是第一个向下转换或向下重复的转换。  
   
- For IBM Enhanced 101- and 102-key keyboards, enhanced keys are the right ALT and the right CTRL keys on the main section of the keyboard; the INS, DEL, HOME, END, PAGE UP, PAGE DOWN, and arrow keys in the clusters to the left of the numeric keypad; and the slash (/) and ENTER keys in the numeric keypad. Some other keyboards may support the extended-key bit in `nFlags`.  
+ 对于 IBM 增强 101 和 102 键键盘、 增强的键是右 ALT 和键盘; 的主要部分上的右 CTRL 键单元、 DEL、 主页、 结束、 PAGE UP、 PAGE down 键和向左数字小键盘; 的群集中的箭头键斜杠 （/） 和数字键盘中的 ENTER 键。 一些其他键盘可能支持中的扩展密钥位`nFlags`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onkeyup"></a>  CWnd::OnKeyUp  
- The framework calls this member function when a nonsystem key is released.  
+##  <a name="onkeyup"></a>CWnd::OnKeyUp  
+ 释放非系统键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnKeyUp (UINT nChar、  
-    UINT nRepCnt  
+afx_msg void OnKeyUp(
+    UINT nChar,  
+    UINT nRepCnt,  
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Specifies the virtual key code of the given key. For a list of of standard virtual key codes, see Winuser.h  
+ 指定给定键的虚拟键代码。 有关标准虚拟键代码的列表，请参见 Winuser.h  
   
  `nRepCnt`  
- Repeat count (the number of times the keystroke is repeated as a result of the user holding down the key).  
+ 重复计数 （因为用户按住键重复击键次数的数量）。  
   
  `nFlags`  
- Specifies the scan code, key-transition code, previous key state, and context code, as shown in the following list:  
+ 下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码︰  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|0–7|Scan code (OEM-dependent value). Low byte of high-order word.|  
-|8|Extended key, such as a function key or a key on the numeric keypad (1 if it is an extended key; otherwise 0).|  
-|9–10|Not used.|  
-|11–12|Used internally by Windows.|  
-|13|Context code (1 if the ALT key is held down while the key is pressed; otherwise 0).|  
-|14|Previous key state (1 if the key is down before the call, 0 if the key is up).|  
-|15|Transition state (1 if the key is being released, 0 if the key is being pressed).|  
+|0–7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
+|8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
+|9–10|未使用。|  
+|11–12|由 Windows 内部使用。|  
+|13|上下文代码 （如果时按下键按下 ALT 键为 1; 否则为 0）。|  
+|14|以前的密钥状态 (如果在调用，0，如果密钥已启动之前已关闭的密钥，则为 1)。|  
+|15|过渡状态 （如果正在释放键为 1，0，如果按下了键）。|  
   
- For a `WM_KEYUP` message, the key-transition bit (bit 15) is 1 and the context-code bit (bit 13) is 0.  
+ 有关`WM_KEYUP`消息 （位 15） 中的密钥转换位是 1 和上下文代码位 （位 13） 为 0。  
   
-### Remarks  
- A nonsystem key is a keyboard key that is pressed when the ALT key is not pressed or a keyboard key that is pressed when the `CWnd` has the input focus.  
+### <a name="remarks"></a>备注  
+ 非系统键是未按下 ALT 键时按下键盘键还是时按下键盘键`CWnd`具有输入的焦点。  
   
- For IBM Enhanced 101- and 102-key keyboards, enhanced keys are the right ALT and the right CTRL keys on the main section of the keyboard; the INS, DEL, HOME, END, PAGE UP, PAGE DOWN, and arrow keys in the clusters to the left of the numeric keypad; and the slash (/) and ENTER keys in the numeric keypad. Some other keyboards may support the extended-key bit in `nFlags`.  
+ 对于 IBM 增强 101 和 102 键键盘、 增强的键是右 ALT 和键盘; 的主要部分上的右 CTRL 键单元、 DEL、 主页、 结束、 PAGE UP、 PAGE down 键和向左数字小键盘; 的群集中的箭头键斜杠 （/） 和数字键盘中的 ENTER 键。 一些其他键盘可能支持中的扩展密钥位`nFlags`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onkillfocus"></a>  CWnd::OnKillFocus  
- The framework calls this member function immediately before losing the input focus.  
+##  <a name="onkillfocus"></a>CWnd::OnKillFocus  
+ 框架失去输入的焦点之前调用此成员函数。  
   
 ```  
-afx_msg void OnKillFocus (CWnd * pNewWnd);
+afx_msg void OnKillFocus(CWnd* pNewWnd);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pNewWnd*  
- Specifies a pointer to the window that receives the input focus (may be **NULL** or may be temporary).  
+ 指定指向接收到输入的焦点的窗口的指针 (可能是**NULL**或可能是暂时)。  
   
-### Remarks  
- If the `CWnd` object is displaying a caret, the caret should be destroyed at this point.  
+### <a name="remarks"></a>备注  
+ 如果`CWnd`对象显示插入符号，应在此时销毁脱字号。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onlbuttondblclk"></a>  CWnd::OnLButtonDblClk  
- The framework calls this member function when the user double-clicks the left mouse button.  
+##  <a name="onlbuttondblclk"></a>CWnd::OnLButtonDblClk  
+ 当用户双击鼠标左键，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnLButtonDblClk (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnLButtonDblClk(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if the CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if the left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_MBUTTON** Set if the middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_RBUTTON** Set if the right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if the SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定光标 x 和 y 坐标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
- Only windows that have the **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) style will receive `OnLButtonDblClk` calls. This is the default for Microsoft Foundation Class windows. Windows calls `OnLButtonDblClk` when the user presses, releases, and then presses the left mouse button again within the system's double-click time limit. Double-clicking the left mouse button actually generates four events: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) messages, the `WM_LBUTTONDBLCLK` call, and another `WM_LBUTTONUP` message when the button is released.  
+### <a name="remarks"></a>备注  
+ 只有具有的 windows **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)样式将收到`OnLButtonDblClk`调用。 这是适用于 Microsoft 基础类 windows 默认值。 Windows 调用`OnLButtonDblClk`当用户按下，释放，然后按下鼠标左键再次在系统的双击时间限制。 双击鼠标左键实际生成四个事件︰ [WM_LBUTTONDOWN](#onlbuttondown)， [WM_LBUTTONUP](#onlbuttonup)消息，`WM_LBUTTONDBLCLK`调用时，并另一个`WM_LBUTTONUP`消息时释放按钮。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onlbuttondown"></a>  CWnd::OnLButtonDown  
- The framework calls this member function when the user presses the left mouse button.  
+##  <a name="onlbuttondown"></a>CWnd::OnLButtonDown  
+ 当用户按下鼠标左键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnLButtonDown (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnLButtonDown(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if the CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if the left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_MBUTTON** Set if the middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_RBUTTON** Set if the right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if the SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定光标 x 和 y 坐标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onlbuttonup"></a>  CWnd::OnLButtonUp  
- The framework calls this member function when the user releases the left mouse button.  
+##  <a name="onlbuttonup"></a>CWnd::OnLButtonUp  
+ 当用户释放鼠标左键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnLButtonUp (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnLButtonUp(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if the CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_MBUTTON** Set if the middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_RBUTTON** Set if the right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if the SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定光标 x 和 y 坐标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmbuttondblclk"></a>  CWnd::OnMButtonDblClk  
- The framework calls this member function when the user double-clicks the middle mouse button.  
+##  <a name="onmbuttondblclk"></a>CWnd::OnMButtonDblClk  
+ 当用户双击鼠标中键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnMButtonDblClk (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnMButtonDblClk(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if the CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if the left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_MBUTTON** Set if the middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_RBUTTON** Set if the right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if the SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定光标 x 和 y 坐标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
- Only windows that have the **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) style will receive `OnMButtonDblClk` calls. This is the default for all Microsoft Foundation Class windows. Windows generates an `OnMButtonDblClk` call when the user presses, releases, and then presses the middle mouse button again within the system's double-click time limit. Double-clicking the middle mouse button actually generates four events: [WM_MBUTTONDOWN](#onmbuttondown) and [WM_MBUTTONUP](#onmbuttonup) messages, the `WM_MBUTTONDBLCLK` call, and another `WM_MBUTTONUP` message.  
+### <a name="remarks"></a>备注  
+ 只有具有的 windows **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)样式将收到`OnMButtonDblClk`调用。 这是所有 Microsoft 基础类窗口的默认值。 Windows 生成`OnMButtonDblClk`在用户按可实现的版本中，然后按下鼠标按钮再次在系统的双击时间限制时调用。 双击鼠标中键实际生成四个事件︰ [WM_MBUTTONDOWN](#onmbuttondown)和[WM_MBUTTONUP](#onmbuttonup)消息，`WM_MBUTTONDBLCLK`调用时，并另一个`WM_MBUTTONUP`消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmbuttondown"></a>  CWnd::OnMButtonDown  
- The framework calls this member function when the user presses the middle mouse button.  
+##  <a name="onmbuttondown"></a>CWnd::OnMButtonDown  
+ 当用户按下鼠标中键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnMButtonDown (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnMButtonDown(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if the CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if the left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_MBUTTON** Set if the middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_RBUTTON** Set if the right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if the SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定光标 x 和 y 坐标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmbuttonup"></a>  CWnd::OnMButtonUp  
- The framework calls this member function when the user releases the middle mouse button.  
+##  <a name="onmbuttonup"></a>CWnd::OnMButtonUp  
+ 当用户释放鼠标中键时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnMButtonUp (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnMButtonUp(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if the CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if the left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_RBUTTON** Set if the right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if the SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定光标 x 和 y 坐标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmdiactivate"></a>  CWnd::OnMDIActivate  
- The framework calls this member function for the child window being deactivated and the child window being activated.  
+##  <a name="onmdiactivate"></a>CWnd::OnMDIActivate  
+ 正在停用的子窗口和子窗口被激活，框架调用此成员函数。  
   
 ```  
-afx_msg void OnMDIActivate (BOOL bActivate，  
-    CWnd* pActivateWnd，CWnd* pDeactivateWnd);
+afx_msg void OnMDIActivate(
+    BOOL bActivate,  
+    CWnd* pActivateWnd,  
+    CWnd* pDeactivateWnd);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bActivate`  
- **TRUE** if the child is being activated and **FALSE** if it is being deactivated.  
+ **TRUE**如果正在激活子和**FALSE**如果正在停用。  
   
  `pActivateWnd`  
- Contains a pointer to the MDI child window to be activated. When received by an MDI child window, `pActivateWnd` contains a pointer to the child window being activated. This pointer may be temporary and should not be stored for later use.  
+ 包含要激活的 MDI 子窗口的指针。 当 MDI 子窗口，收到`pActivateWnd`包含要激活的子窗口的指针。 此指针可能是暂时的不应存储起来供以后使用。  
   
  *pDeactivateWnd*  
- Contains a pointer to the MDI child window being deactivated. This pointer may be temporary and should not be stored for later use.  
+ 包含正在停用 MDI 子窗口的指针。 此指针可能是暂时的不应存储起来供以后使用。  
   
-### Remarks  
- An MDI child window is activated independently of the MDI frame window. When the frame becomes active, the child window that was last activated with a `OnMDIActivate` call receives an [WM_NCACTIVATE](#onncactivate) message to draw an active window frame and caption bar, but it does not receive another `OnMDIActivate` call.  
+### <a name="remarks"></a>备注  
+ MDI 子窗口激活独立于 MDI 框架窗口中。 当帧变为活动状态、 上次激活所用的子窗口`OnMDIActivate`调用接收[WM_NCACTIVATE](#onncactivate)消息来绘制活动窗口框架和标题栏中，但它不会收到另一个`OnMDIActivate`调用。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmeasureitem"></a>  CWnd::OnMeasureItem  
- The framework calls this member function by the framework for the owner of an owner-draw button, combo box, list box, or menu item when the control is created.  
+##  <a name="onmeasureitem"></a>CWnd::OnMeasureItem  
+ 框架调用此成员函数由框架所有者描述按钮、 组合框、 列表框中或菜单项的所有者为创建控件时。  
   
 ```  
-afx_msg void OnMeasureItem （int nIDCtl、 LPMEASUREITEMSTRUCT lpMeasureItemStruct）
+afx_msg void OnMeasureItem(
+    int nIDCtl, LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDCtl`  
- The ID of the control.  
+ 控件的 ID。  
   
  `lpMeasureItemStruct`  
- Points to a [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) data structure that contains the dimensions of the owner-draw control.  
+ 指向[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)包含所有者描述控件的维度的数据结构。  
   
-### Remarks  
- Override this member function and fill in the `MEASUREITEMSTRUCT` data structure pointed to by `lpMeasureItemStruct` and return; this informs Windows of the dimensions of the control and allows Windows to process user interaction with the control correctly.  
+### <a name="remarks"></a>备注  
+ 重写该成员函数，并填写`MEASUREITEMSTRUCT`指向数据结构`lpMeasureItemStruct`和返回; 这通知 Windows 控件的尺寸，并允许 Windows 正确地处理用户与控件交互。  
   
- If a list box or combo box is created with the [LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md) or [CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md) style, the framework calls this function for the owner for each item in the control; otherwise this function is called once.  
+ 如果使用列表框或组合框创建了[LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md)或[CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md)样式，框架会调用此函数为每个控件中项的所有者; 否则一次调用此函数。  
   
- Windows initiates the call to `OnMeasureItem` for the owner of combo boxes and list boxes created with the **OWNERDRAWFIXED** style before sending the [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message. As a result, when the owner receives this call, Windows has not yet determined the height and width of the font used in the control; function calls and calculations that require these values should occur in the main function of the application or library.  
+ Windows 会启动到调用`OnMeasureItem`组合框和列表框的所有者创建与**OWNERDRAWFIXED**样式在发送之前[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。 因此，当所有者会收到此调用，Windows 尚未确定的高度和宽度的控件; 中使用的字体函数调用和计算需要这些值应该出现在应用程序或库的主要功能。  
   
- If the item being measured is a `CMenu`, `CListBox` or `CComboBox` object, then the `MeasureItem` virtual function of the appropriate class is called. Override the `MeasureItem` member function of the appropriate control's class to calculate and set the size of each item.  
+ 如果当前测量的项是`CMenu`，`CListBox`或`CComboBox`对象，则`MeasureItem`调用虚函数的适当的类。 重写`MeasureItem`成员函数的相应控件的类，用于计算和设置的每个项的大小。  
   
- `OnMeasureItem` will be called only if the control's class is created at run time, or it is created with the **LBS_OWNERDRAWVARIABLE** or **CBS_OWNERDRAWVARIABLE** style. If the control is created by the dialog editor, `OnMeasureItem` will not be called. This is because the [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) message is sent early in the creation process of the control. If you subclass by using `DDX_Control`, `SubclassDlgItem`, or `SubclassWindow`, the subclassing usually occurs after the creation process. Therefore, there is no way to handle the [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) message in the control's `OnChildNotify` function, which is the mechanism MFC uses to implement **ON_WM_MEASUREITEM_REFLECT**.  
+ `OnMeasureItem`仅当在运行时，创建控件的类或使用创建的它将调用**LBS_OWNERDRAWVARIABLE**或**CBS_OWNERDRAWVARIABLE**样式。 如果控件由对话框编辑器中，创建`OnMeasureItem`将不会调用。 这是因为[WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925)尽早在控件的创建过程中发送消息。 如果通过使用子类`DDX_Control`， `SubclassDlgItem`，或`SubclassWindow`，子类化创建过程完成后，通常会出现。 因此，没有方法来处理[WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925)中控件的消息`OnChildNotify`函数，它是 MFC 使用来实现的机制**ON_WM_MEASUREITEM_REFLECT**。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmenuchar"></a>  CWnd::OnMenuChar  
- The framework calls this member function when the user presses a menu mnemonic character that doesn't match any of the predefined mnemonics in the current menu.  
+##  <a name="onmenuchar"></a>CWnd::OnMenuChar  
+ 当用户按下不与任何当前菜单中的预定义助记键匹配的菜单助记键字符时，框架将调用此成员函数。  
   
 ```  
-afx_msg LRESULT OnMenuChar (UINT nChar、  
-    UINT nFlags  
+afx_msg LRESULT OnMenuChar(
+    UINT nChar,  
+    UINT nFlags,  
     CMenu* pMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Depending on the build settings, specifies the ANSI or Unicode character that the user pressed.  
+ 具体取决于生成设置中，指定用户按下的 ANSI 或 Unicode 字符。  
   
  `nFlags`  
- Contains the **MF_POPUP** flag if the menu is a pop-up menu. It contains the **MF_SYSMENU** flag if the menu is a Control menu.  
+ 包含**MF_POPUP**标志如果菜单是一个弹出菜单。 它包含**MF_SYSMENU**标志如果菜单是控件。  
   
  `pMenu`  
- Contains a pointer to the selected `CMenu`. The pointer may be temporary and should not be stored.  
+ 包含所选的指针`CMenu`。 指针可能是暂时并不会存储。  
   
-### Return Value  
- The high-order word of the return value should contain one of the following command codes:  
+### <a name="return-value"></a>返回值  
+ 返回值的高序位字应包含以下命令代码之一︰  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
-|0|Tells Windows to discard the character that the user pressed and creates a short beep on the system speaker.|  
-|1|Tells Windows to close the current menu.|  
-|2|Informs Windows that the low-order word of the return value contains the item number for a specific item. This item is selected by Windows.|  
+|0|指示 Windows 丢弃用户按下和在系统扬声器上创建短播放提示音的字符。|  
+|1|指示 Windows 关闭当前的菜单。|  
+|2|向 Windows 通知返回值的低序位字包含特定项的项编号。 由 Windows 选择此项目。|  
   
- The low-order word is ignored if the high-order word contains 0 or 1. Applications should process this message when accelerator (shortcut) keys are used to select bitmaps placed in a menu.  
+ 如果高序位字包含 0 或 1，则忽略低序位字。 使用快捷键 （快捷方式） 来选择菜单中放置的位图时，应用程序应处理此消息。  
   
-### Remarks  
- It is sent to the `CWnd` that owns the menu. `OnMenuChar` is also called when the user presses ALT and any other key, even if the key does not correspond to a mnemonic character. In this case, `pMenu` points to the menu owned by the `CWnd`, and `nFlags` is 0.  
+### <a name="remarks"></a>备注  
+ 发送到`CWnd`拥有菜单。 `OnMenuChar`也称为当用户按 ALT 和任何其他密钥，即使密钥并不对应于助记键字符。 在这种情况下，`pMenu`指向拥有的菜单`CWnd`，和`nFlags`为 0。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmenudrag"></a>  CWnd::OnMenuDrag  
- The framework calls this member function of the current drag-and-drop menu when the user begins to drag a menu item.  
+##  <a name="onmenudrag"></a>CWnd::OnMenuDrag  
+ 当用户开始拖动菜单项时，框架将调用当前的拖放菜单此成员函数。  
   
 ```  
-afx_msg UINT OnMenuDrag (UINT nPos，   
+afx_msg UINT OnMenuDrag(
+    UINT nPos,   
     CMenu* pMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nPos`|The index position of the menu item when the drag operation begins.|  
-|[in] `pMenu`|Pointer to the [CMenu](../../mfc/reference/cmenu-class.md) object that contains the menu item.|  
+|[in] `nPos`|在拖动操作开始时的菜单项的索引的位置。|  
+|[in] `pMenu`|指向[CMenu](../../mfc/reference/cmenu-class.md)包含菜单项的对象。|  
   
-### Return Value  
+### <a name="return-value"></a>返回值  
   
-|Return Value|Meaning|  
+|返回值|含义|  
 |------------------|-------------|  
-|`MND_CONTINUE`|The menu should remain active. If the mouse is released, it should be ignored.|  
-|`MND_ENDMENU`|The menu should be ended.|  
+|`MND_CONTINUE`|菜单应保持活动状态。 如果鼠标已发布，应忽略它。|  
+|`MND_ENDMENU`|应结束菜单。|  
   
-### Remarks  
- This method receives the [WM_MENUDRAG](http://msdn.microsoft.com/library/windows/desktop/ms647606) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_MENUDRAG](http://msdn.microsoft.com/library/windows/desktop/ms647606)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmenugetobject"></a>  CWnd::OnMenuGetObject  
- The framework calls this member function of the current drag-and-drop menu when the mouse cursor enters a menu item or moves from the center of the item to the top or bottom of the item.  
+##  <a name="onmenugetobject"></a>CWnd::OnMenuGetObject  
+ 鼠标光标进入菜单项或将其从该项目的中心移动到顶部或底部的项时，框架将调用当前的拖放菜单此成员函数。  
   
 ```  
 afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `pMenu`|Pointer to a [MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572) structure that contains information about the drag-and-drop menu the mouse cursor is on.|  
+|[in] `pMenu`|指向[MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572)结构，它包含有关拖放菜单鼠标光标的信息位于。|  
   
-### Return Value  
+### <a name="return-value"></a>返回值  
   
-|Return Value|Meaning|  
+|返回值|含义|  
 |------------------|-------------|  
-|`MNGO_NOERROR`|An interface pointer that supports drop-and-drag operations is returned in the `pvObj` member of the [MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572) structure. Currently, only the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface is supported.|  
-|`MNGO_NOINTERFACE`|No drop-and-drag interface is supported.|  
+|`MNGO_NOERROR`|在中返回支持放拖动操作的接口指针`pvObj`的成员[MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572)结构。 目前，仅[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)支持界面。|  
+|`MNGO_NOINTERFACE`|不支持任何放拖界面。|  
   
-### Remarks  
- This method receives the [WM_MENUGETOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms647607) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_MENUGETOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms647607)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmenurbuttonup"></a>  CWnd::OnMenuRButtonUp  
- The framework calls this member function when the user releases the right mouse button while the cursor is on a menu item.  
+##  <a name="onmenurbuttonup"></a>CWnd::OnMenuRButtonUp  
+ 当用户释放鼠标右键按钮，光标位于菜单项上时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnMenuRButtonUp (UINT nPos，  
+afx_msg void OnMenuRButtonUp(
+    UINT nPos,  
     CMenu* pMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nPos`|The index position of the menu item when the right mouse button was released.|  
-|[in] `pMenu`|Pointer to the [CMenu](../../mfc/reference/cmenu-class.md) object that contains the menu item.|  
+|[in] `nPos`|当已松开了鼠标右键按钮的菜单项的索引的位置。|  
+|[in] `pMenu`|指向[CMenu](../../mfc/reference/cmenu-class.md)包含菜单项的对象。|  
   
-### Remarks  
- This method receives the [WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. The [WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610) message enables an application to provide a context-sensitive menu for the menu item specified in the message.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 [WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610)消息可让应用程序项指定消息中的菜单提供上下文相关菜单。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmenuselect"></a>  CWnd::OnMenuSelect  
- If the `CWnd` object is associated with a menu, `OnMenuSelect` is called by the framework when the user selects a menu item.  
+##  <a name="onmenuselect"></a>CWnd::OnMenuSelect  
+ 如果`CWnd`对象都与一个菜单，关联`OnMenuSelect`当用户选择菜单项时，由框架调用。  
   
 ```  
-afx_msg void OnMenuSelect (UINT nItemID，  
-    UINT nFlags  
+afx_msg void OnMenuSelect(
+    UINT nItemID,  
+    UINT nFlags,  
     HMENU hSysMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nItemID`  
- Identifies the item selected. If the selected item is a menu item, `nItemID` contains the menu-item ID. If the selected item contains a pop-up menu, `nItemID` contains the pop-up menu index, and *hSysMenu* contains the handle of the main (clicked-on) menu.  
+ 标识选择的项。 如果所选的项目属于一个菜单项，`nItemID`包含菜单项 id。 如果所选的项目包含一个弹出菜单，`nItemID`包含弹出菜单索引和*hSysMenu*包含主 (单击 on) 菜单的句柄。  
   
  `nFlags`  
- Contains a combination of the following menu flags:  
+ 包含以下菜单标志的组合︰  
   
-- **MF_BITMAP** Item is a bitmap.  
+- **MF_BITMAP**项是一个位图。  
   
-- **MF_CHECKED** Item is checked.  
+- **MF_CHECKED**选中项。  
   
-- **MF_DISABLED** Item is disabled.  
+- **MF_DISABLED**项被禁用。  
   
-- **MF_GRAYED** Item is dimmed.  
+- **MF_GRAYED**项将呈灰色。  
   
-- **MF_MOUSESELECT** Item was selected with a mouse.  
+- **MF_MOUSESELECT**用鼠标选择任何项目。  
   
-- `MF_OWNERDRAW` Item is an owner-draw item.  
+- `MF_OWNERDRAW`项是否为所有者描述项。  
   
-- **MF_POPUP** Item contains a pop-up menu.  
+- **MF_POPUP**项包含一个弹出菜单。  
   
-- **MF_SEPARATOR** Item is a menu-item separator.  
+- **MF_SEPARATOR**项是一个菜单项分隔符。  
   
-- **MF_SYSMENU** Item is contained in the Control menu.  
+- **MF_SYSMENU**项包含在控件菜单。  
   
  `hSysMenu`  
- If `nFlags` contains **MF_SYSMENU**, identifies the menu associated with the message. If `nFlags` contains **MF_POPUP**, identifies the handle of the main menu. If `nFlags` contains neither **MF_SYSMENU** nor **MF_POPUP**, it is unused.  
+ 如果`nFlags`包含**MF_SYSMENU**，标识与消息关联的菜单。 如果`nFlags`包含**MF_POPUP**，标识主菜单的句柄。 如果`nFlags`包含既不**MF_SYSMENU**也不**MF_POPUP**，它是未使用。  
   
-### Remarks  
- If `nFlags` contains 0xFFFF and `hSysMenu` contains 0, Windows has closed the menu because the user pressed the ESC key or clicked outside the menu.  
+### <a name="remarks"></a>备注  
+ 如果`nFlags`包含 0xFFFF 和`hSysMenu`包含 0，因为用户按下 ESC 键或单击的菜单之外，已关闭菜单窗口。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmouseactivate"></a>  CWnd::OnMouseActivate  
- The framework calls this member function when the cursor is in an inactive window and the user presses a mouse button.  
+##  <a name="onmouseactivate"></a>CWnd::OnMouseActivate  
+ 在光标处于非活动窗口，用户按下鼠标按钮时，框架将调用此成员函数。  
   
 ```  
-afx_msg int OnMouseActivate (CWnd * pDesktopWnd，  
-    UINT nHitTest  
+afx_msg int OnMouseActivate(
+    CWnd* pDesktopWnd,  
+    UINT nHitTest,  
     UINT message);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pDesktopWnd*  
- Specifies a pointer to the top-level parent window of the window being activated. The pointer may be temporary and should not be stored.  
+ 指定指向要激活的窗口的顶级父窗口的指针。 指针可能是暂时并不会存储。  
   
  `nHitTest`  
- Specifies the [hit-test](#onnchittest) area code. A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试](#onnchittest)区域代码。 命中的测试是确定光标的位置的测试。  
   
  `message`  
- Specifies the mouse message number.  
+ 指定鼠标消息号。  
   
-### Return Value  
- Specifies whether to activate the `CWnd` and whether to discard the mouse event. It must be one of the following values:  
+### <a name="return-value"></a>返回值  
+ 指定是否激活`CWnd`以及是否要放弃鼠标事件。 它必须是以下值之一︰  
   
-- **MA_ACTIVATE** Activate `CWnd` object.  
+- **MA_ACTIVATE**激活`CWnd`对象。  
   
-- **MA_NOACTIVATE** Do not activate `CWnd` object.  
+- **MA_NOACTIVATE**不要激活`CWnd`对象。  
   
-- **MA_ACTIVATEANDEAT** Activate `CWnd` object and discard the mouse event.  
+- **MA_ACTIVATEANDEAT**激活`CWnd`对象，并放弃所做的鼠标事件。  
   
-- **MA_NOACTIVATEANDEAT** Do not activate `CWnd` object and discard the mouse event.  
+- **MA_NOACTIVATEANDEAT**不要激活`CWnd`对象，并放弃所做的鼠标事件。  
   
-### Remarks  
- The default implementation passes this message to the parent window before any processing occurs. If the parent window returns **TRUE**, processing is halted.  
+### <a name="remarks"></a>备注  
+ 默认实现将此消息传递到父窗口之前进行任何处理。 如果父窗口返回**TRUE**，处理将暂停。  
   
- For a description of the individual hit-test area codes, see the [OnNcHitTest](#onnchittest) member function  
+ 单个的命中测试区域代码的说明，请参阅[OnNcHitTest](#onnchittest)成员函数  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-### Example  
- [!code-cpp[NVC_MFCAxCtl#9](../../mfc/reference/codesnippet/cpp/cwnd-class_49.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCAxCtl # 9](../../mfc/reference/codesnippet/cpp/cwnd-class_49.cpp)]  
   
-##  <a name="onmousehover"></a>  CWnd::OnMouseHover  
- The framework calls this member function when the cursor hovers over the client area of the window for the period of time specified in a prior call to [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).  
+##  <a name="onmousehover"></a>CWnd::OnMouseHover  
+ 框架调用此成员函数，当光标悬停在窗口的工作区中调用指定的时间段内[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。  
   
 ```  
-afx_msg void OnMouseHover (UINT nFlags，   
-    CPoint 磅）;
+afx_msg void OnMouseHover(
+    UINT nFlags,   
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nFlags`|A bitwise combination (OR) of flags that indicate which modifier keys are pressed. For example, the `MK_CONTROL` flag indicates that the CTRL key is pressed.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the client area.|  
+|[in] `nFlags`|指示哪个修改键被按下标志的按位组合 (OR)。 例如，`MK_CONTROL`标志指示按下 CTRL 键。|  
+|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于客户端区域的左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_MOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645613) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_MOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645613)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
- The `nFlags` parameter can be a combination of modifier keys listed in the following table. For more information, see [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ `nFlags`参数可以为下表中列出的修改键的组合。 有关详细信息，请参阅[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
   
-|Modifier Key|Description|  
+|修改键|描述|  
 |------------------|-----------------|  
-|MK_CONTROL|The CTRL key is pressed.|  
-|MK_LBUTTON|The left mouse button is pressed.|  
-|MK_MBUTTON|The middle mouse button is pressed.|  
-|MK_RBUTTON|The right mouse button is pressed.|  
-|MK_SHIFT|The SHIFT key is pressed.|  
-|MK_XBUTTON1|The XBUTTON1 mouse button of the Microsoft IntelliMouse is pressed.|  
-|MK_XBUTTON2|The XBUTTON2 mouse button of the Microsoft IntelliMouse is pressed.|  
+|MK_CONTROL|按下 CTRL 键。|  
+|MK_LBUTTON|按下鼠标左键。|  
+|MK_MBUTTON|按下鼠标按钮。|  
+|MK_RBUTTON|按下鼠标右键按钮。|  
+|MK_SHIFT|按下 SHIFT 键。|  
+|MK_XBUTTON1|按下 Microsoft 智能鼠标的 XBUTTON1 鼠标按钮。|  
+|MK_XBUTTON2|按下的 Microsoft 智能鼠标 XBUTTON2 鼠标按钮。|  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmousehwheel"></a>  CWnd::OnMouseHWheel  
- The framework calls this member when the current window is composed by the Desktop Window Manager (DWM), and that window is maximized.  
+##  <a name="onmousehwheel"></a>CWnd::OnMouseHWheel  
+ 在当前窗口由构成由桌面窗口管理器 (DWM) 中，并最大化该窗口时，框架会调用此成员。  
   
 ```  
-afx_msg void OnMouseHWheel (UINT nFlags，   
-    短 zDelta   
+afx_msg void OnMouseHWheel(
+    UINT nFlags,   
+    short zDelta,   
     CPoint pt);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nFlags`|A bitwise combination (OR) of flags that indicate which modifier keys are pressed. For example, the `MK_CONTROL` flag indicates that the CTRL key is pressed.<br /><br /> For a list of flags, see the "Message Parameters" subheading in [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
-|[in] `zDelta`|Indicates the distance the wheel is rotated, expressed in multiples or divisions of `WHEEL_DELTA`, which is 120. A positive value indicates that the wheel was rotated to the right; a negative value indicates that the wheel was rotated to the left.|  
-|[in] `pt`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the client area.|  
+|[in] `nFlags`|指示哪个修改键被按下标志的按位组合 (OR)。 例如，`MK_CONTROL`标志指示按下 CTRL 键。<br /><br /> 标志的列表，请参阅中的"消息参数"副标题[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
+|[in] `zDelta`|指示滚轮转动，倍数或色阶的分格表述的距离`WHEEL_DELTA`，这是 120。 正值指示轮已转动向右;负值指示轮已转动的左侧。|  
+|[in] `pt`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于客户端区域的左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_MOUSEHWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645614) notification message, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. This message is sent to the window that has the focus when the mouse's horizontal scroll wheel is tilted or rotated.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_MOUSEHWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645614)中所述的通知消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此消息发送到倾斜或旋转鼠标的水平滚动轮时具有焦点的窗口。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmouseleave"></a>  CWnd::OnMouseLeave  
- The framework calls this member function when the cursor leaves the client area of the window specified in a prior call to [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).  
+##  <a name="onmouseleave"></a>CWnd::OnMouseLeave  
+ 框架调用此成员函数，当光标离开调用中指定的窗口的工作区[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。  
   
 ```  
 afx_msg void OnMouseLeave();
 ```  
   
-### Remarks  
- This method receives the [WM_MOUSELEAVE](http://msdn.microsoft.com/library/windows/desktop/ms645615) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_MOUSELEAVE](http://msdn.microsoft.com/library/windows/desktop/ms645615)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmousemove"></a>  CWnd::OnMouseMove  
- The framework calls this member function when the mouse cursor moves.  
+##  <a name="onmousemove"></a>CWnd::OnMouseMove  
+ 当鼠标光标移动时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnMouseMove (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnMouseMove(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if the CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if the left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_MBUTTON** Set if the middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_RBUTTON** Set if the right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if the SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定光标 x 和 y 坐标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
- If the mouse is not captured, the `WM_MOUSEMOVE` message is received by the `CWnd` object beneath the mouse cursor; otherwise, the message goes to the window that has captured the mouse.  
+### <a name="remarks"></a>备注  
+ 如果没有捕获鼠标，`WM_MOUSEMOVE`接收到消息`CWnd`鼠标光标; 下的对象; 否则，将消息链接转到已捕获鼠标的窗口。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmousewheel"></a>  CWnd::OnMouseWheel  
- The framework calls this member function as a user rotates the mouse wheel and encounters the wheel's next notch.  
+##  <a name="onmousewheel"></a>CWnd::OnMouseWheel  
+ 用户旋转鼠标滚轮以及遇到轮的下一步陷波，框架将调用此成员函数。  
   
 ```  
-afx_msg BOOL OnMouseWheel (UINT nFlags，  
-    短 zDelta  
+afx_msg BOOL OnMouseWheel(
+    UINT nFlags,  
+    short zDelta,  
     CPoint pt);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if the CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if the left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_MBUTTON** Set if the middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_RBUTTON** Set if the right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if the SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `zDelta`  
- Indicates distance rotated. The `zDelta` value is expressed in multiples or divisions of **WHEEL_DELTA**, which is 120. A value less than zero indicates rotating back (toward the user) while a value greater than zero indicates rotating forward (away from the user). The user can reverse this response by changing the Wheel setting in the mouse software. See the Remarks for more information about this parameter.  
+ 指示距离旋转。 `zDelta`值表示在倍数或色阶的分格**WHEEL_DELTA**，这是 120。 小于零的值指示旋转后 （向用户） 时大于零表示转发轮换 （远离用户） 的值。 用户可以通过更改鼠标软件中的滚轮设置反转此响应。 请参阅有关此参数的详细信息的备注部分。  
   
  `pt`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定光标 x 和 y 坐标。 这些坐标始终是相对于屏幕左上角。  
   
-### Return Value  
- Nonzero if mouse wheel scrolling is enabled; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果启用了鼠标滚轮滚动; 则为非 0否则为 0。  
   
-### Remarks  
- Unless overridden, `OnMouseWheel` calls the default of [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617). Windows automatically routes the message to the control or child window that has the focus. The Win32 function [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) propagates the message up the parent chain to the window that processes it.  
+### <a name="remarks"></a>备注  
+ 重写，除非`OnMouseWheel`调用的默认[WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617)。 Windows 自动将消息路由到具有焦点的控件或子窗口。 Win32 函数[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572)传播向上父链对其进行处理的窗口消息。  
   
- The `zDelta` parameter is a multiple of **WHEEL_DELTA**, which is set at 120. This value is the threshold for an action to be taken, and one such action (for example, scrolling forward one notch) should occur for each delta.  
+ `zDelta`参数是的倍数**WHEEL_DELTA**，其设置为 120。 此值是要执行的操作的阈值和一个此类操作 （例如，滚动向前一个陷波） 应发生的每个增量。  
   
- **WHEEL_DELTA** was set to 120 to allow for finer-resolution wheels, such as a freely-rotating wheel with no notches. A finer-resolution wheel sends more messages per rotation, but each message has a smaller delta value. To use such a wheel, either add the incoming `zDelta` values until **WHEEL_DELTA** is reached (so that you get the same response for a given delta-rotation), or scroll partial lines in response to the more frequent messages. You can also choose a scroll granularity and accumulate deltas until **WHEEL_DELTA** is reached.  
+ **WHEEL_DELTA**设置为 120 以便更好地解析轮，如与任何凹口轮的自由地旋转。 更好地解析轮的鼠标将发送更多的消息，每次旋转，但每个消息具有较小的增量值。 若要使用此类轮的鼠标，请添加传入`zDelta`值直到**WHEEL_DELTA**为止 （以便为给定的增量旋转收到相同的响应），或向下滚动到更频繁的消息的响应中的部分行。 此外可以选择滚动粒度，并累积之前的增量可以保持**WHEEL_DELTA**为止。  
   
- Override this member function to provide your own mouse-wheel scrolling behavior.  
+ 重写该成员函数以提供您自己鼠标滚轮滚动行为。  
   
 > [!NOTE]
-> `OnMouseWheel` handles messages for Windows NT 4.0 and later versions. For Windows 95/98 or Windows NT 3.51 message handling, use [OnRegisteredMouseWheel](#onregisteredmousewheel).  
+> `OnMouseWheel`为 Windows NT 4.0 及更高版本中处理消息。 对于 Windows 95/98 或 Windows NT 3.51 消息处理功能，使用[OnRegisteredMouseWheel](#onregisteredmousewheel)。  
   
-##  <a name="onmove"></a>  CWnd::OnMove  
- The framework calls this member function after the `CWnd` object has been moved.  
+##  <a name="onmove"></a>CWnd::OnMove  
+ 框架调用此成员函数后的`CWnd`对象已移动。  
   
 ```  
-afx_msg void OnMove (int x，  
+afx_msg void OnMove(
+    int x,  
     int y);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *x*  
- Specifies the new x-coordinate location of the upper-left corner of the client area. This new location is given in screen coordinates for overlapped and pop-up windows, and parent-client coordinates for child windows.  
+ 指定新的客户端区域的左上角的 x 坐标位置。 这个新位置提供在屏幕坐标中用于重叠和弹出窗口，并且父工作区坐标的子窗口。  
   
  *y*  
- Specifies the new y-coordinate location of the upper-left corner of the client area. This new location is given in screen coordinates for overlapped and pop-up windows, and parent-client coordinates for child windows.  
+ 指定新的客户端区域的左上角的 y 坐标位置。 这个新位置提供在屏幕坐标中用于重叠和弹出窗口，并且父工作区坐标的子窗口。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onmoving"></a>  CWnd::OnMoving  
- The framework calls this member function while a user is moving a `CWnd` object.  
+##  <a name="onmoving"></a>CWnd::OnMoving  
+ 框架调用此成员函数时用户正在移动`CWnd`对象。  
   
 ```  
-afx_msg void OnMoving （UINT 深入剖析，  
+afx_msg void OnMoving(
+    UINT nSide,  
     LPRECT lpRect);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nSide`  
- The edge of window to be moved.  
+ 要移动的窗口边缘。  
   
  `lpRect`  
- Address of the [CRect](../../atl-mfc-shared/reference/crect-class.md) or [RECT structure](../../mfc/reference/rect-structure1.md) that will contain the item's coordinates.  
+ 地址[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 结构](../../mfc/reference/rect-structure1.md)将包含该项的坐标。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncactivate"></a>  CWnd::OnNcActivate  
- The framework calls this member function when the nonclient area needs to be changed to indicate an active or inactive state.  
+##  <a name="onncactivate"></a>CWnd::OnNcActivate  
+ 在非工作区需要更改以指示活动或非活动状态时，框架将调用此成员函数。  
   
 ```  
 afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bActive`  
- Specifies when a caption bar or icon needs to be changed to indicate an active or inactive state. The `bActive` parameter is **TRUE** if an active caption or icon is to be drawn. It is **FALSE** for an inactive caption or icon.  
+ 指定当标题栏或图标需要更改以指示活动或非活动状态。 `bActive`参数是**TRUE**如果某个活动标题或图标就是要绘制。 它是**FALSE**非活动标题或图标。  
   
-### Return Value  
- Nonzero if Windows should proceed with default processing; 0 to prevent the caption bar or icon from being deactivated.  
+### <a name="return-value"></a>返回值  
+ 如果 Windows 应继续默认处理; 则为非 00，将阻止从正在停用的标题栏或图标。  
   
-### Remarks  
- The default implementation draws the title bar and title-bar text in their active colors if `bActive` is **TRUE** and in their inactive colors if `bActive` is **FALSE**.  
+### <a name="remarks"></a>备注  
+ 默认实现绘制的标题栏和标题栏以其活动的颜色的文本如果`bActive`是**TRUE**和以其处于非活动状态的颜色如果`bActive`是**FALSE**。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onnccalcsize"></a>  CWnd::OnNcCalcSize  
- The framework calls this member function when the size and position of the client area needs to be calculated.  
+##  <a name="onnccalcsize"></a>CWnd::OnNcCalcSize  
+ 当需要计算的大小和客户端区域的位置时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcCalcSize (BOOL bCalcValidRects，  
+afx_msg void OnNcCalcSize(
+    BOOL bCalcValidRects,  
     NCCALCSIZE_PARAMS* lpncsp);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bCalcValidRects`  
- Specifies whether the application should specify which part of the client area contains valid information. Windows will copy the valid information to the specified area within the new client area. If this parameter is **TRUE**, the application should specify which part of the client area is valid.  
+ 指定应用程序应指定客户端区域的哪个部分包含有效信息。 Windows 会将有效的信息复制到新的客户端区域中，指定的区域。 如果此参数为**TRUE**，应用程序应指定哪些客户端区域的一部分无效。  
   
  `lpncsp`  
- Points to a [NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md) data structure that contains information an application can use to calculate the new size and position of the `CWnd` rectangle (including client area, borders, caption, scroll bars, and so on).  
+ 指向[NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md)数据结构，其中包含应用程序可用于计算新的大小和位置信息`CWnd`矩形 （包括客户端区域、 边框、 标题、 滚动条和等等）。  
   
-### Remarks  
- By processing this message, an application can control the contents of the window's client area when the size or position of the window changes.  
+### <a name="remarks"></a>备注  
+ 通过处理此消息，应用程序可以控制窗口的客户端区域的内容时的大小或窗口的位置发生更改。  
   
- Regardless of the value of `bCalcValidRects`, the first rectangle in the array specified by the **rgrc** structure member of the `NCCALCSIZE_PARAMS` structure contains the coordinates of the window. For a child window, the coordinates are relative to the parent window's client area. For top-level windows, the coordinates are screen coordinates. An application should modify the **rgrc[0]** rectangle to reflect the size and position of the client area.  
+ 无论的值如何`bCalcValidRects`，在指定的数组的第一个矩形**rgrc**的结构成员`NCCALCSIZE_PARAMS`结构包含窗口的坐标。 子窗口的坐标为相对于父窗口的工作区。 针对顶级窗口的坐标为屏幕坐标。 应用程序应修改**rgrc [0]**矩形才能反映的大小和客户端区域的位置。  
   
- The **rgrc[1]** and **rgrc[2]** rectangles are valid only if `bCalcValidRects` is **TRUE**. In this case, the **rgrc[1]** rectangle contains the coordinates of the window before it was moved or resized. The **rgrc[2]** rectangle contains the coordinates of the window's client area before the window was moved. All coordinates are relative to the parent window or screen.  
+ **Rgrc [1]**和**rgrc [2]**矩形是有效才`bCalcValidRects`是**TRUE**。 在这种情况下， **rgrc [1]**矩形包含之前它已移动或调整大小的窗口的坐标。 **Rgrc [2]**矩形包含之前窗口已移动的窗口的工作区的坐标。 所有坐标都是相对于父窗口或屏幕。  
   
- The default implementation calculates the size of the client area based on the window characteristics (presence of scroll bars, menu, and so on), and places the result in `lpncsp`.  
+ 默认实现计算的基于窗口特征 （显示状态的滚动条、 菜单和等等） 的客户端区域的大小，并将在结果放置于`lpncsp`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onnccreate"></a>  CWnd::OnNcCreate  
- The framework calls this member function prior to the [WM_CREATE](#oncreate) message when the `CWnd` object is first created.  
+##  <a name="onnccreate"></a>CWnd::OnNcCreate  
+ 框架调用此成员函数之前[WM_CREATE](#oncreate)时消息`CWnd`首次创建对象。  
   
 ```  
 afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpCreateStruct`  
- Points to the [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) data structure for `CWnd`.  
+ 指向[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)数据结构`CWnd`。  
   
-### Return Value  
- Nonzero if the nonclient area is created. It is 0 if an error occurs; the **Create** function will return **failure** in this case.  
+### <a name="return-value"></a>返回值  
+ 如果创建的非工作区，则为非 0。 如果发生错误; 则为 0**创建**函数将返回**失败**在这种情况下。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncdestroy"></a>  CWnd::OnNcDestroy  
- Called by the framework when the nonclient area is being destroyed, and is the last member function called when the Windows window is destroyed.  
+##  <a name="onncdestroy"></a>Cwnd::  
+ 当正在销毁的非工作区，并且销毁 Windows 窗口时最后一个成员函数调用时，由框架调用。  
   
 ```  
 afx_msg void OnNcDestroy();
 ```  
   
-### Remarks  
- The default implementation performs some cleanup, then calls the virtual member function [PostNcDestroy](#postncdestroy).  
+### <a name="remarks"></a>备注  
+ 默认实现将执行一些清理，然后调用虚成员函数[PostNcDestroy](#postncdestroy)。  
   
- Override `PostNcDestroy` if you want to perform your own cleanup, such as a **delete this** operation. If you override `OnNcDestroy`, you must call `OnNcDestroy` in your base class to ensure that any memory internally allocated for the window is freed.  
+ 重写`PostNcDestroy`如果你想要执行你自己的清理，如**删除此**操作。 如果你重写`OnNcDestroy`，必须调用`OnNcDestroy`基类以确保为释放窗口内部分配任何内存中。  
   
-##  <a name="onnchittest"></a>  CWnd::OnNcHitTest  
- The framework calls this member function for the `CWnd` object that contains the cursor (or the `CWnd` object that used the [SetCapture](#setcapture) member function to capture the mouse input) every time the mouse is moved.  
+##  <a name="onnchittest"></a>CWnd::OnNcHitTest  
+ 框架调用此成员函数以使用`CWnd`包含光标的对象 (或`CWnd`对象使用[SetCapture](#setcapture)成员函数以捕获鼠标输入) 每次移动鼠标时。  
   
 ```  
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `point`  
- Contains the x- and y-coordinates of the cursor. These coordinates are always screen coordinates.  
+ 包含光标 x 和 y 坐标。 这些坐标始终是屏幕坐标。  
   
-### Return Value  
- One of the mouse hit-test enumerated values listed below.  
+### <a name="return-value"></a>返回值  
+ 其中一项鼠标命中测试枚举下面列出的值。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onnclbuttondblclk"></a>  CWnd::OnNcLButtonDblClk  
- The framework calls this member function when the user double-clicks the left mouse button while the cursor is within a nonclient area of `CWnd`.  
+##  <a name="onnclbuttondblclk"></a>CWnd::OnNcLButtonDblClk  
+ 框架调用此成员函数，当用户双击鼠标左键时在光标处于非工作区的`CWnd`。  
   
 ```  
-afx_msg void OnNcLButtonDblClk (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcLButtonDblClk(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
- If appropriate, the [WM_SYSCOMMAND](#onsyscommand) message is sent.  
+### <a name="remarks"></a>备注  
+ 如果适当， [WM_SYSCOMMAND](#onsyscommand)发送消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onnclbuttondown"></a>  CWnd::OnNcLButtonDown  
- The framework calls this member function when the user presses the left mouse button while the cursor is within a nonclient area of the `CWnd` object.  
+##  <a name="onnclbuttondown"></a>CWnd::OnNcLButtonDown  
+ 框架调用此成员函数，当用户按下鼠标左键，而在光标处于非工作区的`CWnd`对象。  
   
 ```  
-afx_msg void OnNcLButtonDown (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcLButtonDown(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
- If appropriate, the [WM_SYSCOMMAND](#onsyscommand) is sent.  
+### <a name="remarks"></a>备注  
+ 如果适当， [WM_SYSCOMMAND](#onsyscommand)发送。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received.If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映已接收消息时，框架接收到的参数。如果调用此函数的基类实现，该实现将使用最初使用消息和不你提供的参数传递给函数的参数。  
   
-##  <a name="onnclbuttonup"></a>  CWnd::OnNcLButtonUp  
- The framework calls this member function when the user releases the left mouse button while the cursor is within a nonclient area.  
+##  <a name="onnclbuttonup"></a>CWnd::OnNcLButtonUp  
+ 当用户释放鼠标左键在光标处于非工作区时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcLButtonUp (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcLButtonUp(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
- If appropriate, [WM_SYSCOMMAND](#onsyscommand) is sent.  
+### <a name="remarks"></a>备注  
+ 如果适当， [WM_SYSCOMMAND](#onsyscommand)发送。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncmbuttondblclk"></a>  CWnd::OnNcMButtonDblClk  
- The framework calls this member function when the user double-clicks the middle mouse button while the cursor is within a nonclient area.  
+##  <a name="onncmbuttondblclk"></a>CWnd::OnNcMButtonDblClk  
+ 当用户双击鼠标中键时在光标处于非工作区，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcMButtonDblClk (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcMButtonDblClk(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncmbuttondown"></a>  CWnd::OnNcMButtonDown  
- The framework calls this member function when the user presses the middle mouse button while the cursor is within a nonclient area.  
+##  <a name="onncmbuttondown"></a>CWnd::OnNcMButtonDown  
+ 当用户按下鼠标中键，而在光标处于非工作区，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcMButtonDown (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcMButtonDown(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncmbuttonup"></a>  CWnd::OnNcMButtonUp  
- The framework calls this member function when the user releases the middle mouse button while the cursor is within a nonclient area.  
+##  <a name="onncmbuttonup"></a>CWnd::OnNcMButtonUp  
+ 当用户释放鼠标中键时在光标处于非工作区时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcMButtonUp (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcMButtonUp(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncmousehover"></a>  CWnd::OnNcMouseHover  
- The framework calls this member function when the cursor hovers over the nonclient area of the window for the period of time specified in a prior call to [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).  
+##  <a name="onncmousehover"></a>CWnd::OnNcMouseHover  
+ 框架调用此成员函数，当光标悬停在窗口的非工作区中调用指定的时间段内[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。  
   
 ```  
-afx_msg void OnNcMouseHover (UINT nHitTest，   
-    CPoint 磅）;  
+afx_msg void OnNcMouseHover(
+    UINT nHitTest,   
+    CPoint point);  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nHitTest`|The hit-test value returned by the [CWnd::DefWindowProc](#defwindowproc) function as a result of processing the [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) message.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the screen.|  
+|[in] `nHitTest`|返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)消息。|  
+|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于屏幕左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_NCMOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645625) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_NCMOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645625)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncmouseleave"></a>  CWnd::OnNcMouseLeave  
- The framework calls this member function when the cursor leaves the nonclient area of the window specified in a prior call to [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).  
+##  <a name="onncmouseleave"></a>CWnd::OnNcMouseLeave  
+ 框架调用此成员函数，当光标离开调用中指定的窗口的非工作区[TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265)。  
   
 ```  
 afx_msg void OnNcMouseLeave();
 ```  
   
-### Remarks  
- This method receives the [WM_NCMOUSELEAVE](http://msdn.microsoft.com/library/windows/desktop/ms645626) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_NCMOUSELEAVE](http://msdn.microsoft.com/library/windows/desktop/ms645626)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncmousemove"></a>  CWnd::OnNcMouseMove  
- The framework calls this member function when the cursor is moved within a nonclient area.  
+##  <a name="onncmousemove"></a>CWnd::OnNcMouseMove  
+ 在非工作区中移动光标时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcMouseMove (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcMouseMove(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
- If appropriate, the [WM_SYSCOMMAND](#onsyscommand) message is sent.  
+### <a name="remarks"></a>备注  
+ 如果适当， [WM_SYSCOMMAND](#onsyscommand)发送消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncpaint"></a>  CWnd::OnNcPaint  
- The framework calls this member function when the nonclient area needs to be painted.  
+##  <a name="onncpaint"></a>CWnd::OnNcPaint  
+ 当需要绘制非工作区时，框架将调用此成员函数。  
   
 ```  
 afx_msg void OnNcPaint();
 ```  
   
-### Remarks  
- The default implementation paints the window frame.  
+### <a name="remarks"></a>备注  
+ 默认实现绘制窗口框架。  
   
- An application can override this call and paint its own custom window frame. The clipping region is always rectangular, even if the shape of the frame is altered.  
+ 应用程序可以重写此调用，并绘制其自己的自定义窗口框架。 即使更改框架的形状，是始终矩形的剪辑区域。  
   
-##  <a name="onncrbuttondblclk"></a>  CWnd::OnNcRButtonDblClk  
- The framework calls this member function when the user double-clicks the right mouse button while the cursor is within a nonclient area of `CWnd`.  
+##  <a name="onncrbuttondblclk"></a>CWnd::OnNcRButtonDblClk  
+ 框架调用此成员函数，当用户双击鼠标右键时在光标处于非工作区的`CWnd`。  
   
 ```  
-afx_msg void OnNcRButtonDblClk (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcRButtonDblClk(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncrbuttondown"></a>  CWnd::OnNcRButtonDown  
- The framework calls this member function when the user presses the right mouse button while the cursor is within a nonclient area.  
+##  <a name="onncrbuttondown"></a>CWnd::OnNcRButtonDown  
+ 当用户按下鼠标右键按钮，而在光标处于非工作区，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcRButtonDown (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcRButtonDown(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncrbuttonup"></a>  CWnd::OnNcRButtonUp  
- The framework calls this member function when the user releases the right mouse button while the cursor is within a nonclient area.  
+##  <a name="onncrbuttonup"></a>CWnd::OnNcRButtonUp  
+ 当用户释放鼠标右键按钮在光标处于非工作区时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcRButtonUp (UINT nHitTest，  
-    CPoint 磅）;
+afx_msg void OnNcRButtonUp(
+    UINT nHitTest,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nHitTest`  
- Specifies the [hit-test code](#onnchittest). A hit test is a test that determines the location of the cursor.  
+ 指定[命中测试代码](#onnchittest)。 命中的测试是确定光标的位置的测试。  
   
  `point`  
- Specifies a `CPoint` object that contains the x and y screen coordinates of the cursor position. These coordinates are always relative to the upper-left corner of the screen.  
+ 指定`CPoint`对象，其中包含 x 和 y 屏幕坐标表示的光标位置。 这些坐标始终是相对于屏幕左上角。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncrenderingchanged"></a>  CWnd::OnNcRenderingChanged  
- The framework calls this member when the rendering policy for the nonclient area has changed.  
+##  <a name="onncrenderingchanged"></a>CWnd::OnNcRenderingChanged  
+ 在非工作区的呈现策略已更改时，框架会调用此成员。  
   
 ```  
-afx_msg void OnNcRenderingChanged (BOOL bIsRendering);
+afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `bIsRendering`|`true` if Desktop Window Manager (DWM) rendering is enabled for the nonclient area of the window; `false` if rendering is disabled.|  
+|[in] `bIsRendering`|`true`如果窗口; 的非工作区启用了桌面窗口管理器 (DWM) 呈现`false`如果呈现处于禁用状态。|  
   
-### Remarks  
- This method receives the [WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388200) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388200)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncxbuttondblclk"></a>  CWnd::OnNcXButtonDblClk  
- The framework calls this member function when the user double-clicks XBUTTON1 or XBUTTON2 while the cursor is in the nonclient area of a window.  
+##  <a name="onncxbuttondblclk"></a>CWnd::OnNcXButtonDblClk  
+ 当用户双击 XBUTTON1 或 XBUTTON2 时光标位于窗口非工作区中，框架将调用此成员函数。  
   
 ```  
-void OnNcXButtonDblClk (短 nHitTest，   
-    UINT nButton   
-    CPoint 磅）;
+void OnNcXButtonDblClk(
+    short nHitTest,   
+    UINT nButton,   
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nHitTest`|The hit-test value returned by the [CWnd::DefWindowProc](#defwindowproc) function as a result of processing the [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) message.|  
-|[in] `nButton`|A value of `XBUTTON1` if the first Microsoft Intellimouse X button is double-clicked, or `XBUTTON2` if the second X button is double-clicked.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the client area.|  
+|[in] `nHitTest`|返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)消息。|  
+|[in] `nButton`|值为`XBUTTON1`双击，第一个 Microsoft 缩放 X 按钮是否或`XBUTTON2`如果第二个 X 按钮是双击。|  
+|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于客户端区域的左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此消息发布到包含光标的窗口中。 如果窗口已捕获鼠标，将不会发布此消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncxbuttondown"></a>  CWnd::OnNcXButtonDown  
- The framework calls this member function when the user presses XBUTTON1 or XBUTTON2 of the mouse while the cursor is in the nonclient area of a window.  
+##  <a name="onncxbuttondown"></a>CWnd::OnNcXButtonDown  
+ 当用户按下鼠标的 XBUTTON1 或 XBUTTON2 光标位于窗口非工作区中，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcXButtonDown (短 nHitTest，   
-    UINT nButton   
-    CPoint 磅）;
+afx_msg void OnNcXButtonDown(
+    short nHitTest,   
+    UINT nButton,   
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nHitTest`|The hit-test value returned by the [CWnd::DefWindowProc](#defwindowproc) function as a result of processing the [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) message.|  
-|[in] `nButton`|A value of `XBUTTON1` if the first mouse X button is pressed, or `XBUTTON2` if the second X button is pressed.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the screen.|  
+|[in] `nHitTest`|返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)消息。|  
+|[in] `nButton`|值为`XBUTTON1`如果按第一个鼠标的 X 按钮，或`XBUTTON2`如果第二个 X 按钮按下。|  
+|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于屏幕左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_NCXBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645632) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_NCXBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645632)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此消息发布到包含光标的窗口中。 如果窗口已捕获鼠标，将不会发布此消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onncxbuttonup"></a>  CWnd::OnNcXButtonUp  
- The framework calls this member function when the user releases XBUTTON1 or XBUTTON2 of the mouse while the cursor is in the nonclient area of a window.  
+##  <a name="onncxbuttonup"></a>CWnd::OnNcXButtonUp  
+ 当用户释放鼠标的 XBUTTON1 或 XBUTTON2 光标位于窗口非工作区中，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnNcXButtonUp (短 nHitTest，   
-    UINT nButton   
-    CPoint 磅）;
+afx_msg void OnNcXButtonUp(
+    short nHitTest,   
+    UINT nButton,   
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nHitTest`|The hit-test value returned by the [CWnd::DefWindowProc](#defwindowproc) function as a result of processing the [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) message.|  
-|[in] `nButton`|A value of `XBUTTON1` if the first mouse X button is released, or `XBUTTON2` if the second X button is released.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the screen.|  
+|[in] `nHitTest`|返回的命中测试值[CWnd::DefWindowProc](#defwindowproc)函数作为处理结果[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)消息。|  
+|[in] `nButton`|值为`XBUTTON1`如果第一个鼠标的 X 按钮已发布，或`XBUTTON2`如果第二个发布 X 按钮。|  
+|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于屏幕左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_NCXBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646240) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. This message is posted to the window that contains the cursor. If a window has captured the mouse, this message is not posted.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_NCXBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646240)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此消息发布到包含光标的窗口中。 如果窗口已捕获鼠标，将不会发布此消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- The framework calls this member function when when the right or left arrow key is used to switch between the menu bar and the system menu.  
+##  <a name="onnextmenu"></a>CWnd::OnNextMenu  
+ 框架调用此成员函数时右或向左箭头键用于时的菜单栏和系统菜单之间切换。  
   
 ```  
-afx_msg void OnNextMenu (UINT nKey，  
+afx_msg void OnNextMenu(
+    UINT nKey,  
     LPMDINEXTMENU lpMdiNextMenu);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nKey`|A bitwise combination (OR) of flags that indicate which modifier keys are pressed. For example, the `MK_CONTROL` flag indicates that the CTRL key is pressed.<br /><br /> For a list of flags, see the "Message Parameters" subheading in [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).|  
-|[in] `lpMdiNextMenu`|Pointer to a [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) structure that contains information about the menu to be activated.|  
+|[in] `nKey`|指示哪个修改键被按下标志的按位组合 (OR)。 例如，`MK_CONTROL`标志指示按下 CTRL 键。<br /><br /> 标志的列表，请参阅中的"消息参数"副标题[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
+|[in] `lpMdiNextMenu`|指向[MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561)包含菜单将激活有关的信息的结构。|  
   
-### Remarks  
- This method receives the [WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. In response to this message, your application can set the `hmenuNext` member of the [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) structure to specify the menu to switch to, and the `hwndNext` member to specify the window to receive menu notification messages.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 响应此消息，在你的应用程序可以设置`hmenuNext`的成员[MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561)结构，以指定要切换到的菜单和`hwndNext`成员以指定窗口，以接收菜单通知消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onnotify"></a>  CWnd::OnNotify  
- The framework calls this member function to inform the parent window of a control that an event has occurred in the control or that the control requires some kind of information.  
+##  <a name="onnotify"></a>Cwnd:: Onnotify  
+ 框架调用此成员函数以在控件中已发生事件或该控件要求某种类型的信息将会通知控件的父窗口。  
   
 ```  
-虚拟 BOOL OnNotify (WPARAM wParam，  
-    LPARAM lParam  
+virtual BOOL OnNotify(
+    WPARAM wParam,  
+    LPARAM lParam,  
     LRESULT* pResult);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `wParam`  
- Identifies the control that sends the message if the message is from a control. Otherwise, `wParam` is 0.  
+ 标识发送消息，如果消息已从控件的控件。 否则为`wParam`为 0。  
   
  `lParam`  
- Pointer to a notification message ( **NMHDR**) structure that contains the notification code and additional information. For some notification messages, this parameter points to a larger structure that has the **NMHDR** structure as its first member.  
+ 指针，指向通知消息 ( **NMHDR**) 包含通知代码以及其他信息的结构。 对于某些通知消息，此参数指向具有较大结构**NMHDR**结构用作其第一个成员。  
   
  `pResult`  
- Pointer to an **LRESULT** variable in which to store the result code if the message is handled.  
+ 指向**LRESULT**变量要在其中存储结果代码，如果消息处理。  
   
-### Return Value  
- An application returns nonzero if it processes this message; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 应用程序返回非零，如果它可以处理此消息;否则为 0。  
   
-### Remarks  
- `OnNotify` processes the message map for control notification.  
+### <a name="remarks"></a>备注  
+ `OnNotify`处理控件通知的消息映射。  
   
- Override this member function in your derived class to handle the **WM_NOTIFY** message. An override will not process the message map unless the base class `OnNotify` is called.  
+ 此成员函数在处理你在派生类中的重写**WM_NOTIFY**消息。 重写将不会处理的消息映射，除非基类`OnNotify`调用。  
   
- For more information on the WM_NOTIFY message, see Technical Note 61 (TN061), [ON_NOTIFY and WM_NOTIFY messages](../../mfc/tn061-on-notify-and-wm-notify-messages.md). You may also be interested the related topics described in [Control Topics](../../mfc/controls-mfc.md), and TN062, [Message Reflection for Windows Controls](../../mfc/tn062-message-reflection-for-windows-controls.md).  
+ WM_NOTIFY 消息的详细信息，请参阅技术说明 61 (TN061) [ON_NOTIFY 和 WM_NOTIFY 消息](../../mfc/tn061-on-notify-and-wm-notify-messages.md)。 您可能还需要学习相关的主题中所述[控制主题](../../mfc/controls-mfc.md)，和 TN062， [Windows 控件的消息反射](../../mfc/tn062-message-reflection-for-windows-controls.md)。  
   
-##  <a name="onnotifyformat"></a>  CWnd::OnNotifyFormat  
- The framework calls this member function to determine if the current window accepts ANSI or Unicode structures in the WM_NOTIFY notification message.  
+##  <a name="onnotifyformat"></a>CWnd::OnNotifyFormat  
+ 框架调用此成员函数以确定当前窗口是否接受 WM_NOTIFY 通知消息中的 ANSI 或 Unicode 结构。  
   
 ```  
-afx_msg UINT OnNotifyFormat (CWnd * pWnd，   
+afx_msg UINT OnNotifyFormat(
+    CWnd* pWnd,   
     UINT nCommand);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `pWnd`|A pointer to a `CWnd` object that represents the window sending the [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) message.<br /><br /> This parameter is the pointer to a control if the `nCommand` parameter is `NF_QUERY`, or the pointer to the parent window of a control if `nCommand` is `NF_REQUERY`.|  
-|[in] `nCommand`|A command value that specializes the **WM_NOTIFY** message. The possible values are:<br /><br /> - `NF_QUERY` -<br />     The message is a query to determine whether ANSI or Unicode structures should be used in **WM_NOTIFY** messages. This message is sent from a control to its parent window during the creation of a control, and in response to the `NF_REQUERY` form of this message.<br />- `NF_REQUERY` -<br />     The message is a request for a control to send the `NF_QUERY` form of this message to its parent window. This request is sent from the parent window, and asks the control to requery the parent about the type of structure to use in **WM_NOTIFY** messages. If the `nCommand` parameter is `NF_REQUERY`, the return value is the result of the requery operation.|  
+|[in] `pWnd`|指向的指针`CWnd`对象，表示窗口发送[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息。<br /><br /> 此参数是指向控件的指针，如果`nCommand`参数是`NF_QUERY`，或指向控件的父窗口的指针如果`nCommand`是`NF_REQUERY`。|  
+|[in] `nCommand`|一个命令的值，专用化**WM_NOTIFY**消息。 可能的值为：<br /><br /> - `NF_QUERY` -<br />     消息是一个查询来确定是否应在使用 ANSI 或 Unicode 结构**WM_NOTIFY**消息。 此消息将发送从控件到其父窗口的控件，并在响应中的创建过程`NF_REQUERY`此消息的窗体。<br />- `NF_REQUERY` -<br />     消息是一个控件，用于发送请求`NF_QUERY`此消息发送到其父窗口的形式。 此请求是否来自父窗口中，并询问控件有关的类型的结构的父要在中使用的类型重新查询**WM_NOTIFY**消息。 如果`nCommand`参数是`NF_REQUERY`，返回值是重新查询操作的结果。|  
   
-### Return Value  
+### <a name="return-value"></a>返回值  
   
-|Return value|Meaning|  
+|返回值|含义|  
 |------------------|-------------|  
-|`NFR_ANSI`|ANSI structures should be used in **WM_NOTIFY** messages sent by the control.|  
-|`NFR_UNICODE`|Unicode structures should be used in **WM_NOTIFY** messages sent by the control.|  
-|0|An error occurred.|  
+|`NFR_ANSI`|应在中使用 ANSI 结构**WM_NOTIFY**由控件发送的消息。|  
+|`NFR_UNICODE`|应在中使用 Unicode 结构**WM_NOTIFY**由控件发送的消息。|  
+|0|出现了错误。|  
   
-### Remarks  
- This method receives the [WM_NOTIFYFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb775584) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. **WM_NOTIFY** messages are sent from a common control to its parent window, and from the parent window to the common control.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_NOTIFYFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb775584)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 **WM_NOTIFY**从公共控件到其父窗口，并从父窗口到公共控件发送消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onpaint"></a>  CWnd::OnPaint  
- The framework calls this member function when Windows or an application makes a request to repaint a portion of an application's window.  
+##  <a name="onpaint"></a>CWnd::OnPaint  
+ 在 Windows 或应用程序发出请求重绘窗体应用程序的窗口的一部分时，框架将调用此成员函数。  
   
 ```  
 afx_msg void OnPaint();
 ```  
   
-### Remarks  
- The [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145137) message is sent when the [UpdateWindow](#updatewindow) or [RedrawWindow](#redrawwindow) member function is called.  
+### <a name="remarks"></a>备注  
+ [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145137)消息发送时[UpdateWindow](#updatewindow)或[RedrawWindow](#redrawwindow)调用成员函数。  
   
- A window may receive internal paint messages as a result of calling the `RedrawWindow` member function with the **RDW_INTERNALPAINT** flag set. In this case, the window may not have an update region. An application should call the [GetUpdateRect](#getupdaterect) member function to determine whether the window has an update region. If `GetUpdateRect` returns 0, the application should not call the [BeginPaint](#beginpaint) and [EndPaint](#endpaint) member functions.  
+ 窗口可能会收到调用结果的内部的绘制消息`RedrawWindow`成员函数时**RDW_INTERNALPAINT**标志设置。 在这种情况下，窗口可能没有更新区域。 应用程序应调用[GetUpdateRect](#getupdaterect)成员函数来确定窗口是否具有更新区域。 如果`GetUpdateRect`返回 0 时，应用程序不应调用[BeginPaint](#beginpaint)和[EndPaint](#endpaint)成员函数。  
   
- It is an application's responsibility to check for any necessary internal repainting or updating by looking at its internal data structures for each `WM_PAINT` message because a `WM_PAINT` message may have been caused by both an invalid area and a call to the `RedrawWindow` member function with the **RDW_INTERNALPAINT** flag set.  
+ 若要检查是否有任何必要的内部重新绘制或通过查看其内部数据结构为每个更新的应用程序的负责`WM_PAINT`消息，因为`WM_PAINT`消息可能由无效的区域和调用引起`RedrawWindow`成员函数时**RDW_INTERNALPAINT**标志设置。  
   
- An internal `WM_PAINT` message is sent only once by Windows. After an internal `WM_PAINT` message is sent to a window by the `UpdateWindow` member function, no further `WM_PAINT` messages will be sent or posted until the window is invalidated or until the `RedrawWindow` member function is called again with the **RDW_INTERNALPAINT** flag set.  
+ 内部`WM_PAINT`Windows 仅一次发送消息。 之后内部`WM_PAINT`消息发送到通过窗口`UpdateWindow`成员函数，没有任何进一步`WM_PAINT`将发送消息，或将其发布直到失效窗口，或者直到`RedrawWindow`使用再次调用成员函数**RDW_INTERNALPAINT**标志设置。  
   
- For information on rendering an image in document/view applications, see [CView::OnDraw](../../mfc/reference/cview-class.md#ondraw).  
+ 有关呈现文档/视图应用程序中的映像的信息，请参阅[类库](../../mfc/reference/cview-class.md#ondraw)。  
   
- For more information about using **WM_Paint**, see the following topics in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]:  
+ 有关使用**WM_Paint**，请参阅中的以下主题[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]:  
   
-- [The WM_PAINT Message](http://msdn.microsoft.com/library/windows/desktop/dd145137)  
+- [WM_PAINT 消息](http://msdn.microsoft.com/library/windows/desktop/dd145137)  
   
-- [Using the WM_PAINT Message](http://msdn.microsoft.com/library/windows/desktop/dd145193)  
+- [使用 WM_PAINT 消息](http://msdn.microsoft.com/library/windows/desktop/dd145193)  
   
-##  <a name="onpaintclipboard"></a>  CWnd::OnPaintClipboard  
- A Clipboard owner's `OnPaintClipboard` member function is called by a Clipboard viewer when the Clipboard owner has placed data on the Clipboard in the `CF_OWNERDISPLAY` format and the Clipboard viewer's client area needs repainting.  
+##  <a name="onpaintclipboard"></a>CWnd::OnPaintClipboard  
+ 当剪贴板所有者已将数据以 `OnPaintClipboard` 格式放置在剪贴板上，并且剪贴板查看器的工作区需要重新绘制时，剪贴板查看器将调用剪贴板所有者的 `CF_OWNERDISPLAY` 成员函数。  
   
 ```  
-afx_msg void OnPaintClipboard (CWnd * pClipAppWnd，  
+afx_msg void OnPaintClipboard(
+    CWnd* pClipAppWnd,  
     HGLOBAL hPaintStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pClipAppWnd`  
- Specifies a pointer to the Clipboard-application window. The pointer may be temporary and should not be stored for later use.  
+ 指定指向剪贴板应用程序窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。  
   
  *hPaintStruct*  
- Identifies a [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) data structure that defines what part of the client area to paint.  
+ 标识[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)数据结构，它定义要绘制的客户端区域的哪个部分。  
   
-### Remarks  
- To determine whether the entire client area or just a portion of it needs repainting, the Clipboard owner must compare the dimensions of the drawing area given in the **rcpaint** member of the `PAINTSTRUCT` structure to the dimensions given in the most recent [OnSizeClipboard](#onsizeclipboard) member function call.  
+### <a name="remarks"></a>备注  
+ 若要确定整个工作区或它的一部分是否需要重新绘制，剪贴板所有者必须进行比较的中给定的绘图区域尺寸**rcpaint**的成员`PAINTSTRUCT`结构中最新给定的尺寸[OnSizeClipboard](#onsizeclipboard)成员函数调用。  
   
- `OnPaintClipboard` should use the [GlobalLock](http://msdn.microsoft.com/library/windows/desktop/aa366584) Windows function to lock the memory that contains the `PAINTSTRUCT` data structure and unlock that memory with the [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) Windows function before it exits.  
+ `OnPaintClipboard`应使用[GlobalLock](http://msdn.microsoft.com/library/windows/desktop/aa366584) Windows 函数来锁定包含的内存`PAINTSTRUCT`数据结构和解锁该内存， [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) Windows 函数之前退出函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onpalettechanged"></a>  CWnd::OnPaletteChanged  
- The framework calls this member function for all top-level windows after the window with input focus has realized its logical palette, thereby changing the system palette.  
+##  <a name="onpalettechanged"></a>CWnd::OnPaletteChanged  
+ 框架调用此成员函数针对所有顶级窗口后输入焦点的窗口已实现其逻辑调色板，从而更改系统调色板。  
   
 ```  
-afx_msg void OnPaletteChanged (CWnd * pFocusWnd);
+afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pFocusWnd`  
- Specifies a pointer to the window that caused the system palette to change. The pointer may be temporary and should not be stored.  
+ 指定指向导致要更改的系统调色板的窗口的指针。 指针可能是暂时并不会存储。  
   
-### Remarks  
- This call allows a window without the input focus that uses a color palette to realize its logical palettes and update its client area.  
+### <a name="remarks"></a>备注  
+ 此调用允许但不将使用调色板实现其逻辑调色板并更新其工作区输入焦点的窗口。  
   
- The `OnPaletteChanged` member function is called for all top-level and overlapped windows, including the one that changed the system palette and caused the `WM_PALETTECHANGED` message to be sent. If any child window uses a color palette, this message must be passed on to it.  
+ `OnPaletteChanged`对所有顶级和重叠窗口，包括更改系统调色板和导致调用成员函数`WM_PALETTECHANGED`要发送消息。 如果任何子窗口使用的调色板，此消息必须传递到它。  
   
- To avoid an infinite loop, the window shouldn't realize its palette unless it determines that `pFocusWnd` does not contain a pointer to itself.  
+ 若要避免无限循环，该窗口不应实现其调色板除非它认为`pFocusWnd`不包含对自身的指针。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onpaletteischanging"></a>  CWnd::OnPaletteIsChanging  
- The framework calls this member function to inform applications that an application is going to realize its logical palette.  
+##  <a name="onpaletteischanging"></a>CWnd::OnPaletteIsChanging  
+ 框架调用此成员函数以通知应用程序应用程序要实现其逻辑调色板。  
   
 ```  
-afx_msg void OnPaletteIsChanging (CWnd * pRealizeWnd);
+afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pRealizeWnd*  
- Specifies the window that is about to realize its logical palette.  
+ 指定将要实现其逻辑调色板的窗口。  
   
-### Remarks  
- This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+### <a name="remarks"></a>备注  
+ 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onparentnotify"></a>  CWnd::OnParentNotify  
- A parent's `OnParentNotify` member function is called by the framework when its child window is created or destroyed, or when the user clicks a mouse button while the cursor is over the child window.  
+##  <a name="onparentnotify"></a>CWnd::OnParentNotify  
+ 父母的`OnParentNotify`其子窗口在创建或销毁，或当用户单击鼠标按钮，在光标位于子窗口上方时，由框架调用成员函数。  
   
 ```  
-afx_msg void OnParentNotify （UINT 消息、  
+afx_msg void OnParentNotify(
+    UINT message,  
     LPARAM lParam);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `message`  
- Specifies the event for which the parent is being notified and the identifier of the child window. The event is the low-order word of `message`. If the event is `WM_CREATE` or `WM_DESTROY`, the high-order word of `message` is the identifier of the child window; otherwise, the high-order word is undefined. The event (low-order word of `message`) can be any of these values:  
+ 指定的事件的正在向父和子窗口的标识符。 事件是低序位字`message`。 如果事件是`WM_CREATE`或`WM_DESTROY`的高序位字`message`是标识符的子窗口; 否则，高序位字是不确定。 事件 (低序位字`message`) 可以是任何这些值︰  
   
-- `WM_CREATE` The child window is being created.  
+- `WM_CREATE`正在创建的子窗口。  
   
-- `WM_DESTROY` The child window is being destroyed.  
+- `WM_DESTROY`当销毁子窗口。  
   
-- `WM_LBUTTONDOWN` The user has placed the mouse cursor over the child window and clicked the left mouse button.  
+- `WM_LBUTTONDOWN`用户鼠标光标停放子窗口上方，并单击鼠标左键。  
   
-- `WM_MBUTTONDOWN` The user has placed the mouse cursor over the child window and clicked the middle mouse button.  
+- `WM_MBUTTONDOWN`用户鼠标光标停放子窗口上方，并单击鼠标按钮。  
   
-- `WM_RBUTTONDOWN` The user has placed the mouse cursor over the child window and clicked the right mouse button.  
+- `WM_RBUTTONDOWN`用户鼠标光标停放子窗口上方，并单击鼠标右键按钮。  
   
  `lParam`  
- If the event (low-order word) of `message` is `WM_CREATE` or `WM_DESTROY`, `lParam` specifies the window handle of the child window; otherwise `lParam` contains the x and y coordinates of the cursor. The x coordinate is in the low-order word and the y coordinate is in the high-order word.  
+ 如果事件 （低序位字） 的`message`是`WM_CREATE`或`WM_DESTROY`，`lParam`指定的子窗口的窗口句柄; 否则为`lParam`包含 x 和 y 坐标的光标。 X 坐标位于低序位字并且的 y 坐标是在高序位字。  
   
-### Remarks  
- When the child window is being created, the system calls `OnParentNotify` just before the [Create](#create) member function that creates the window returns. When the child window is being destroyed, the system calls `OnParentNotify` before any processing takes place to destroy the window.  
+### <a name="remarks"></a>备注  
+ 创建子窗口时，系统在调用`OnParentNotify`之前[创建](#create)创建窗口的成员函数返回。 正在销毁子窗口时时，系统调用`OnParentNotify`任何处理发生销毁窗口之前。  
   
- `OnParentNotify` is called for all ancestor windows of the child window, including the top-level window.  
+ `OnParentNotify`是针对包括顶级窗口的子窗口的所有祖先窗口进行调用。  
   
- All child windows except those that have the [WS_EX_NOPARENTNOTIFY](../../mfc/reference/extended-window-styles.md) style send this message to their parent windows. By default, child windows in a dialog box have the **WS_EX_NOPARENTNOTIFY** style unless the child window was created without this style by calling the [CreateEx](#createex) member function.  
+ 所有子窗口都除具有[WS_EX_NOPARENTNOTIFY](../../mfc/reference/extended-window-styles.md)样式将此消息发送到其父窗口。 默认情况下，在对话框中的子窗口具有**WS_EX_NOPARENTNOTIFY**样式除非子窗口已通过调用创建如果不使用此样式[CreateEx](#createex)成员函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onpowerbroadcast"></a>  CWnd::OnPowerBroadcast  
- The framework calls this member function when a power-management event occurs.  
+##  <a name="onpowerbroadcast"></a>CWnd::OnPowerBroadcast  
+ 电源管理事件发生时，框架将调用此成员函数。  
   
 ```  
-afx_msg UINT OnPowerBroadcast (UINT nPowerEvent，   
+afx_msg UINT OnPowerBroadcast(
+    UINT nPowerEvent,   
     UINT nEventData);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nPowerEvent`|The power-management event.|  
-|[in] `nEventData`|Event-specific data.|  
+|[in] `nPowerEvent`|电源管理事件中。|  
+|[in] `nEventData`|特定于事件的数据。|  
   
-### Return Value  
- If the event is a request, return `true` to grant the request, or `BROADCAST_QUERY_DENY` to deny the request.  
+### <a name="return-value"></a>返回值  
+ 如果事件是一个请求，返回`true`授予请求，或`BROADCAST_QUERY_DENY`为拒绝该请求。  
   
-### Remarks  
- This method receives the [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) message, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
- The `nPowerEvent` parameter specifies events such as battery power is low, the power status has changed, permission to suspend operation is requested or denied, an operation is resuming automatically after an event, the system is suspending operation, or an operation is resuming after suspension. The `nEventData` parameter is typically not used. For more information, see the `wParam` and `lParam` parameters of the [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) message.  
+ `nPowerEvent`参数指定事件，如电池电量不足、 电源状态已更改、 请求或拒绝挂起操作的权限、 发生事件后自动恢复操作，系统正在挂起操作，或挂起正在恢复操作。 `nEventData`通常不使用参数。 有关详细信息，请参阅`wParam`和`lParam`参数[WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247)消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onquerydragicon"></a>  CWnd::OnQueryDragIcon  
- The framework calls this member function by a minimized (iconic) window that does not have an icon defined for its class.  
+##  <a name="onquerydragicon"></a>CWnd::OnQueryDragIcon  
+ 框架调用此成员函数不具有为其类定义的图标的最小化 （图标化） 窗口。  
   
 ```  
 afx_msg HCURSOR OnQueryDragIcon();
 ```  
   
-### Return Value  
- A doubleword value that contains a cursor or icon handle in the low-order word. The cursor or icon must be compatible with the display driver's resolution. If the application returns **NULL**, the system displays the default cursor. The default return value is **NULL**.  
+### <a name="return-value"></a>返回值  
+ 一个双字值，包含在低序位字中的光标或图标句柄。 光标或图标必须符合显示驱动程序的分辨率。 如果在应用程序返回**NULL**，系统会显示的默认光标。 默认返回值为**NULL**。  
   
-### Remarks  
- The system makes this call to obtain the cursor to display while the user drags the minimized window. If an application returns the handle of an icon or cursor, the system converts it to black-and-white. If an application returns a handle, the handle must identify a monochrome cursor or icon compatible with the display driver's resolution. The application can call the [CWinApp::LoadCursor](../../mfc/reference/cwinapp-class.md#loadcursor) or [CWinApp::LoadIcon](../../mfc/reference/cwinapp-class.md#loadicon) member functions to load a cursor or icon from the resources in its executable file and to obtain this handle.  
+### <a name="remarks"></a>备注  
+ 系统会进行此调用，以获取要在用户拖动最小化的窗口时显示的光标。 如果应用程序返回的图标或光标的句柄，系统会将其转换为黑白。 如果应用程序返回的句柄，该句柄必须标识单色光标或符合显示驱动程序的分辨率的图标。 应用程序可以调用[CWinApp::LoadCursor](../../mfc/reference/cwinapp-class.md#loadcursor)或[CWinApp::LoadIcon](../../mfc/reference/cwinapp-class.md#loadicon)成员函数从其可执行文件中的资源加载光标或图标并获取此句柄。  
   
-##  <a name="onqueryendsession"></a>  CWnd::OnQueryEndSession  
- The framework calls this member function when the user chooses to end the Windows session or when an application calls the [ExitWindows](http://msdn.microsoft.com/library/windows/desktop/aa376867) Windows function.  
+##  <a name="onqueryendsession"></a>CWnd::OnQueryEndSession  
+ 框架调用此成员函数，当用户选择结束 Windows 会话或在应用程序调用[ExitWindows](http://msdn.microsoft.com/library/windows/desktop/aa376867) Windows 函数。  
   
 ```  
 afx_msg BOOL OnQueryEndSession();
 ```  
   
-### Return Value  
- Nonzero if an application can be conveniently shut down; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果应用程序可以方便地关闭; 则为非 0否则为 0。  
   
-### Remarks  
- If any application returns 0, the Windows session is not ended. Windows stops calling `OnQueryEndSession` as soon as one application returns 0 and sends the [WM_ENDSESSION](#onendsession) message with a parameter value of **FALSE** for any application that has already returned nonzero.  
+### <a name="remarks"></a>备注  
+ 如果任何应用程序返回 0，不会结束 Windows 会话。 Windows 将停止调用`OnQueryEndSession`只要一个应用程序，则返回 0 并发送[WM_ENDSESSION](#onendsession)参数值为消息**FALSE**的任何应用程序具有已返回非零。  
   
-##  <a name="onquerynewpalette"></a>  CWnd::OnQueryNewPalette  
- The framework calls this member function when the `CWnd` object is about to receive the input focus, giving the `CWnd` an opportunity to realize its logical palette when it receives the focus.  
+##  <a name="onquerynewpalette"></a>CWnd::OnQueryNewPalette  
+ 框架调用此成员函数时`CWnd`对象即将接收输入的焦点提供`CWnd`机会在接收焦点时实现其逻辑调色板。  
   
 ```  
 afx_msg BOOL OnQueryNewPalette();
 ```  
   
-### Return Value  
- Nonzero if the `CWnd` realizes its logical palette; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 非零如果`CWnd`实现其逻辑调色板; 否则为 0。  
   
-##  <a name="onqueryopen"></a>  CWnd::OnQueryOpen  
- The framework calls this member function when the `CWnd` object is minimized and the user requests that the `CWnd` be restored to its preminimized size and position.  
+##  <a name="onqueryopen"></a>CWnd::OnQueryOpen  
+ 框架调用此成员函数时`CWnd`对象已最小化和用户请求`CWnd`还原到其 preminimized 的大小和位置。  
   
 ```  
 afx_msg BOOL OnQueryOpen();
 ```  
   
-### Return Value  
- Nonzero if the icon can be opened, or 0 to prevent the icon from being opened.  
+### <a name="return-value"></a>返回值  
+ 如果可以打开该图标，则为非 0 或 0 将阻止从正在打开的图标。  
   
-### Remarks  
- While in `OnQueryOpen`, `CWnd` should not perform any action that would cause an activation or focus change (for example, creating a dialog box).  
+### <a name="remarks"></a>备注  
+ 中时，在`OnQueryOpen`，`CWnd`不应执行任何操作都将导致 （例如，创建一个对话框） 的激活或焦点更改。  
   
-##  <a name="onqueryuistate"></a>  CWnd::OnQueryUIState  
- Called to retrieve the user interface (UI) state for a window.  
+##  <a name="onqueryuistate"></a>CWnd::OnQueryUIState  
+ 调用以检索窗口的用户界面 (UI) 状态。  
   
 ```  
 afx_msg UINT OnQueryUIState();
 ```  
   
-### Return Value  
- The return value is **NULL** if the focus indicators and the keyboard accelerators are visible. Otherwise, the return value can be one or more of the following values:  
+### <a name="return-value"></a>返回值  
+ 返回值是**NULL**如果焦点指示器和键盘快捷键可见。 否则，返回值可以是一个或多个以下值︰  
   
-- **UISF_HIDEFOCUS** Focus indicators are hidden.  
+- **UISF_HIDEFOCUS**焦点指示器处于隐藏状态。  
   
-- **UISF_HIDEACCEL** Keyboard accelerators are hidden.  
+- **UISF_HIDEACCEL**隐藏的键盘快捷键。  
   
-- **UISF_ACTIVE Windows XP:** A control should be drawn in the style used for active controls.  
+- **UISF_ACTIVE Windows XP:**应放用于活动控件的样式绘制控件。  
   
-### Remarks  
- This member function emulates the functionality of the [WM_QUERYUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646355) message, as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟的功能[WM_QUERYUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646355)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="onrawinput"></a>  CWnd::OnRawInput  
- The framework calls this member function when the current window gets raw input.  
+##  <a name="onrawinput"></a>CWnd::OnRawInput  
+ 当前窗口中获取原始输入时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnRawInput (UINT nInputCode，  
+afx_msg void OnRawInput(
+    UINT nInputCode,  
     HRAWINPUT hRawInput);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nInputCode`|Input code that indicates whether the input occurred while the application was in the foreground or not. In either case, the application must call [CWnd::DefWindowProc](#defwindowproc) so the system can perform cleanup.<br /><br /> This parameter can be one of the following values:<br /><br /> - `RIM_INPUT` - Input occurred while the application was in the foreground.<br />- `RIM_INPUTSINK` - Input occurred while the application was not in the foreground.|  
-|[in] `hRawInput`|Handle to a [RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562) structure that contains the raw input from the device.|  
+|[in] `nInputCode`|指示输入是否在应用程序时出现的输入的代码是在前台，还是失败。 在任一情况下，应用程序必须调用[CWnd::DefWindowProc](#defwindowproc)以便系统可以执行清理。<br /><br /> 此参数可以是以下值之一︰<br /><br /> - `RIM_INPUT`的应用程序已在前台时发生输入。<br />- `RIM_INPUTSINK`输入时出现应用程序为不在前台。|  
+|[in] `hRawInput`|句柄[RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562)结构，它包含从设备的原始输入。|  
   
-### Remarks  
- This method receives the [WM_INPUT](http://msdn.microsoft.com/library/windows/desktop/ms646275) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
-  
-> [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
-  
-##  <a name="onrbuttondblclk"></a>  CWnd::OnRButtonDblClk  
- The framework calls this member function when the user double-clicks the right mouse button.  
-  
-```  
-afx_msg void OnRButtonDblClk (UINT nFlags，  
-    CPoint 磅）;
-```  
-  
-### Parameters  
- `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
-  
-- **MK_CONTROL** Set if CTRL key is down.  
-  
-- **MK_LBUTTON** Set if left mouse button is down.  
-  
-- **MK_MBUTTON** Set if middle mouse button is down.  
-  
-- **MK_RBUTTON** Set if right mouse button is down.  
-  
-- **MK_SHIFT** Set if SHIFT key is down.  
-  
- `point`  
- Specifies the x and y coordinates of the cursor. These coordinates are always relative to the upper-left corner of the window.  
-  
-### Remarks  
- Only windows that have the **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) style can receive `OnRButtonDblClk` calls. This is the default for windows within the Microsoft Foundation Class Library. Windows calls `OnRButtonDblClk` when the user presses, releases, and then again presses the right mouse button within the system's double-click time limit. Double-clicking the right mouse button actually generates four events: [WM_RBUTTONDOWN](#onrbuttondown) and [WM_RBUTTONUP](#onrbuttonup) messages, the `OnRButtonDblClk` call, and another `WM_RBUTTONUP` message when the button is released.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_INPUT](http://msdn.microsoft.com/library/windows/desktop/ms646275)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onrbuttondown"></a>  CWnd::OnRButtonDown  
- The framework calls this member function when the user presses the right mouse button.  
+##  <a name="onrbuttondblclk"></a>CWnd::OnRButtonDblClk  
+ 当用户双击鼠标右键按钮，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnRButtonDown (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnRButtonDblClk(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_MBUTTON** Set if middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_RBUTTON** Set if right mouse button is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
   
-- **MK_SHIFT** Set if SHIFT key is down.  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x and y coordinates of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定的 x 和 y 坐标的光标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
- This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+### <a name="remarks"></a>备注  
+ 只有具有的 windows **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)样式可以接收`OnRButtonDblClk`调用。 这是 Microsoft 基础类库中的窗口的默认值。 Windows 调用`OnRButtonDblClk`当用户按下，释放，然后再次按下鼠标右键按钮在系统的双击时间限制。 双击鼠标右键按钮实际生成四个事件︰ [WM_RBUTTONDOWN](#onrbuttondown)和[WM_RBUTTONUP](#onrbuttonup)消息，`OnRButtonDblClk`调用时，并另一个`WM_RBUTTONUP`消息时释放按钮。  
   
-##  <a name="onrbuttonup"></a>  CWnd::OnRButtonUp  
- The framework calls this member function when the user releases the right mouse button.  
+> [!NOTE]
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
+  
+##  <a name="onrbuttondown"></a>CWnd::OnRButtonDown  
+ 当用户按下鼠标右键按钮，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnRButtonUp (UINT nFlags，  
-    CPoint 磅）;
+afx_msg void OnRButtonDown(
+    UINT nFlags,  
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFlags`  
- Indicates whether various virtual keys are down. This parameter can be any combination of the following values:  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
   
-- **MK_CONTROL** Set if CTRL key is down.  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
   
-- **MK_LBUTTON** Set if left mouse button is down.  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
   
-- **MK_MBUTTON** Set if middle mouse button is down.  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
   
-- **MK_SHIFT** Set if SHIFT key is down.  
+- **MK_RBUTTON**如果鼠标右键按钮按下设置。  
+  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
   
  `point`  
- Specifies the x and y coordinates of the cursor. These coordinates are always relative to the upper-left corner of the window.  
+ 指定的 x 和 y 坐标的光标。 这些坐标始终是相对于窗口的左上角。  
   
-### Remarks  
- This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+### <a name="remarks"></a>备注  
+ 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onregisteredmousewheel"></a>  CWnd::OnRegisteredMouseWheel  
- The framework calls this member function as a user rotates the mouse wheel and encounters the wheel's next notch.  
+##  <a name="onrbuttonup"></a>CWnd::OnRButtonUp  
+ 当用户释放鼠标右键按钮时，框架将调用此成员函数。  
   
 ```  
-afx_msg LRESULT OnRegisteredMouseWheel (WPARAM wParam，  
+afx_msg void OnRButtonUp(
+    UINT nFlags,  
+    CPoint point);
+```  
+  
+### <a name="parameters"></a>参数  
+ `nFlags`  
+ 指示是否各种虚拟键都已关闭。 此参数可以是以下值中的任意组合︰  
+  
+- **MK_CONTROL**如果按下 CTRL 键设置。  
+  
+- **MK_LBUTTON**如果按下鼠标左键设置。  
+  
+- **MK_MBUTTON**如果鼠标中键按下设置。  
+  
+- **MK_SHIFT**如果按下 SHIFT 键设置。  
+  
+ `point`  
+ 指定的 x 和 y 坐标的光标。 这些坐标始终是相对于窗口的左上角。  
+  
+### <a name="remarks"></a>备注  
+ 框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
+  
+##  <a name="onregisteredmousewheel"></a>CWnd::OnRegisteredMouseWheel  
+ 用户旋转鼠标滚轮以及遇到轮的下一步陷波，框架将调用此成员函数。  
+  
+```  
+afx_msg LRESULT OnRegisteredMouseWheel(
+    WPARAM wParam,  
     LPARAM lParam);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `wParam`  
- Horizontal position of the pointer.  
+ 指针的水平位置。  
   
  `lParam`  
- Vertical position of the pointer.  
+ 指针的垂直位置。  
   
-### Return Value  
- Insignificant at this time. Always zero.  
+### <a name="return-value"></a>返回值  
+ 此时无意义。 始终为零。  
   
-### Remarks  
- Unless overridden, `OnRegisteredMouseWheel` routes the message to the appropriate window (the parent window with focus), and calls the [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617) handler for that window.  
+### <a name="remarks"></a>备注  
+ 重写，除非`OnRegisteredMouseWheel`将消息路由到相应的窗口 （父窗口具有焦点），并且调用[WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617)该窗口的处理程序。  
   
- Override this member function to provide your own message routing or to alter the mouse-wheel scrolling behavior.  
+ 重写该成员函数以提供您自己的消息路由或 alter 鼠标滚轮滚动行为。  
   
 > [!NOTE]
-> `OnRegisteredMouseWheel` handles messages for Windows 95/98 and Windows NT 3.51. For Windows NT 4.0 message handling, use [OnMouseWheel](#onmousewheel).  
+> `OnRegisteredMouseWheel`为 Windows 95/98 和 Windows NT 3.51 处理消息。 有关 Windows NT 4.0 消息处理问题，使用[OnMouseWheel](#onmousewheel)。  
   
-##  <a name="onrenderallformats"></a>  CWnd::OnRenderAllFormats  
- The Clipboard owner's `OnRenderAllFormats` member function is called by the framework when the owner application is being destroyed.  
+##  <a name="onrenderallformats"></a>CWnd::OnRenderAllFormats  
+ 剪贴板所有者`OnRenderAllFormats`当销毁所有者应用程序时，由框架调用成员函数。  
   
 ```  
 afx_msg void OnRenderAllFormats();
 ```  
   
-### Remarks  
- The Clipboard owner should render the data in all the formats it is capable of generating and pass a data handle for each format to the Clipboard by calling the [SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) Windows function. This ensures that the Clipboard contains valid data even though the application that rendered the data is destroyed. The application should call the [OpenClipboard](#openclipboard) member function before calling the [SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) Windows function and call the [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Windows function afterward.  
+### <a name="remarks"></a>备注  
+ 剪贴板所有者应呈现它能够生成并将每种格式的数据句柄传递到剪贴板，通过调用的所有格式中的数据[SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) Windows 函数。 这可确保剪贴板包含有效的数据，即使销毁的应用程序呈现数据。 应用程序应调用[打开剪贴板](#openclipboard)之前调用的成员函数[SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) Windows 函数并调用[CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Windows 此后函数。  
   
-##  <a name="onrenderformat"></a>  CWnd::OnRenderFormat  
- The Clipboard owner's `OnRenderFormat` member function is called by the framework when a particular format with delayed rendering needs to be rendered.  
+##  <a name="onrenderformat"></a>CWnd::OnRenderFormat  
+ 剪贴板所有者`OnRenderFormat`需要呈现具有延迟呈现特定的格式时，由框架调用成员函数。  
   
 ```  
-afx_msg void OnRenderFormat (UINT nFormat);
+afx_msg void OnRenderFormat(UINT nFormat);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nFormat`  
- Specifies the Clipboard format.  
+ 指定的剪贴板格式。  
   
-### Remarks  
- The receiver should render the data in that format and pass it to the Clipboard by calling the [SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) Windows function.  
+### <a name="remarks"></a>备注  
+ 接收方应呈现该格式中的数据，并将其传递到剪贴板，通过调用[SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) Windows 函数。  
   
- Do not call the `OpenClipboard` member function or the **CloseClipboard** Windows function from within `OnRenderFormat`.  
+ 不要调用`OpenClipboard`成员函数或**CloseClipboard**中的 Windows 函数`OnRenderFormat`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsessionchange"></a>  CWnd::OnSessionChange  
- The framework calls this member function to notify an application of a change in session state.  
+##  <a name="onsessionchange"></a>CWnd::OnSessionChange  
+ 框架调用此成员函数以通知应用程序的会话状态的更改。  
   
 ```  
-afx_msg void OnSessionChange (UINT nSessionState，   
+afx_msg void OnSessionChange(
+    UINT nSessionState,   
     UINT nId);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nSessionState`|A status code describes the session state change.|  
-|[in] `nId`|A session identifier.|  
+|[in] `nSessionState`|状态代码描述会话状态更改。|  
+|[in] `nId`|会话标识符。|  
   
-### Remarks  
- This method receives the [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
- The `nSessionState` parameter specifies that a session is connected or disconnected from the console or a remote terminal, a user logged on or off, a session is locked or unlocked, or a session has changed to remote-controlled status. For more information, see the `wParam` parameter of the the [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) message.  
+ `nSessionState`参数指定连接或断开控制台或远程终端会话，用户登录或注销、 锁定或解锁，会话或会话已更改为远程控制的状态。 有关详细信息，请参阅`wParam`参数[WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828)消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsetcursor"></a>  CWnd::OnSetCursor  
- The framework calls this member function if mouse input is not captured and the mouse causes cursor movement within the `CWnd` object.  
+##  <a name="onsetcursor"></a>CWnd::OnSetCursor  
+ 框架调用此成员函数，如果鼠标输入未捕获并且鼠标使光标移动内的`CWnd`对象。  
   
 ```  
-afx_msg BOOL OnSetCursor (CWnd * pWnd，  
-    UINT nHitTest  
+afx_msg BOOL OnSetCursor(
+    CWnd* pWnd,  
+    UINT nHitTest,  
     UINT message);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pWnd`  
- Specifies a pointer to the window that contains the cursor. The pointer may be temporary and should not be stored for later use.  
+ 指定指向包含光标的窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。  
   
  `nHitTest`  
- Specifies the [hit-test](#onnchittest) area code. The hit test determines the cursor's location.  
+ 指定[命中测试](#onnchittest)区域代码。 命中的测试确定光标的位置。  
   
  `message`  
- Specifies the mouse message number.  
+ 指定鼠标消息号。  
   
-### Return Value  
- Nonzero to halt further processing, or 0 to continue.  
+### <a name="return-value"></a>返回值  
+ 如果非零，则停止进一步处理，或为 0 以继续。  
   
-### Remarks  
- The default implementation calls the parent window's `OnSetCursor` before processing. If the parent window returns **TRUE**, further processing is halted. Calling the parent window gives the parent window control over the cursor's setting in a child window.  
+### <a name="remarks"></a>备注  
+ 默认实现调用父窗口的`OnSetCursor`然后再进行处理。 如果父窗口返回**TRUE**，进一步处理将暂停。 调用父窗口的父窗口通过，控制在子窗口中光标的设置。  
   
- The default implementation sets the cursor to an arrow if it is not in the client area or to the registered-class cursor if it is.  
+ 默认实现将光标设置到如果未在工作区中的箭头或注册类光标若是。  
   
- If `nHitTest` is **HTERROR** and `message` is a mouse button-down message, the **MessageBeep** member function is called.  
+ 如果`nHitTest`是**HTERROR**和`message`是鼠标 button-down 消息， **MessageBeep**调用成员函数。  
   
- The `message` parameter is 0 when `CWnd` enters menu mode.  
+ `message`参数为 0 时`CWnd`进入菜单模式。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsetfocus"></a>  CWnd::OnSetFocus  
- The framework calls this member function after gaining the input focus.  
+##  <a name="onsetfocus"></a>CWnd::OnSetFocus  
+ 获得输入的焦点后，框架调用此成员函数。  
   
 ```  
-afx_msg void OnSetFocus (CWnd * pOldWnd);
+afx_msg void OnSetFocus(CWnd* pOldWnd);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  *pOldWnd*  
- Contains the `CWnd` object that loses the input focus (may be **NULL**). The pointer may be temporary and should not be stored for later use.  
+ 包含`CWnd`失去输入的焦点的对象 (可能是**NULL**)。 该指针可能是暂时的，不应存储起来供将来使用。  
   
-### Remarks  
- To display a caret, `CWnd` should call the appropriate caret functions at this point.  
+### <a name="remarks"></a>备注  
+ 若要显示一个插入符号，`CWnd`应在此时调用相应的插入符号函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsettingchange"></a>  CWnd::OnSettingChange  
- The framework calls `OnSettingChange` for all top-level windows when the Win32 SystemParametersInfo function changes a system-wide setting.  
+##  <a name="onsettingchange"></a>CWnd::OnSettingChange  
+ 框架调用`OnSettingChange`对所有顶级窗口时 Win32 SystemParametersInfo 函数更改系统级设置。  
   
 ```  
-afx_msg void OnSettingChange (UINT uFlags，  
+afx_msg void OnSettingChange(
+    UINT uFlags,  
     LPCTSTR lpszSection);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `uFlags`  
- When the system sends the message as a result of a **SystemParametersInfo** call, this parameter is a flag that indicates the system parameter that was changed. For a list of values, see [SystemParametersInfo](http://msdn.microsoft.com/library/windows/desktop/ms724947) in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. When an application sends the message, this parameter must be 0.  
+ 当系统发送的结果消息**SystemParametersInfo**调用，此参数是一个标志，指示已更改系统参数。 值的列表，请参阅[SystemParametersInfo](http://msdn.microsoft.com/library/windows/desktop/ms724947)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当应用程序发送消息时，此参数必须为 0。  
   
  `lpszSection`  
- Points to a string that specifies the name of the section that has changed. (The string does not include the square brackets that enclose the section name.)  
+ 指向一个字符串，指定已更改的部分的名称。 （字符串不包含方括号将括起来的节名称）。  
   
-### Remarks  
- An application should send the message to all top-level windows when it makes changes to system parameters, and Windows will send the message if the user changes settings via the Control Panel.  
+### <a name="remarks"></a>备注  
+ 它对系统参数，进行更改并 Windows 将发送消息，如果用户更改通过控件面板设置时，应用程序应向所有顶级窗口发送消息。  
   
- The **ON_WM_SETTINGCHANGE** message is similar to the **ON_WM_WININICHANGE** message, with the following difference:  
+ **ON_WM_SETTINGCHANGE**消息是类似于**ON_WM_WININICHANGE**消息，但存在以下差异︰  
   
--   Use **ON_WM_SETTINGCHANGE** when running Windows NT 4.0 or newer, or under Windows 95/98.  
+-   使用**ON_WM_SETTINGCHANGE**时运行 Windows NT 4.0 或更高版本，或在 Windows 95/98。  
   
--   Use **ON_WININICHANGE** when running Windows NT 3.51 or older. This message is now obsolete.  
+-   使用**ON_WININICHANGE**时运行 Windows NT，3.51 或更低版本。 此消息现已过时。  
   
- You should have only one of these macros in your message map. To write a program that works for both Windows 95/98 and Windows NT 4.0, write a handler for **ON_WM_SETTINGCHANGE**. Under Windows NT 3.51, your handler will be called by `OnSettingChange` and `uFlags` and will always be zero.  
+ 你只能有一个这些宏的消息映射中。 若要编写适用于 Windows 95/98 和 Windows NT 4.0 的程序，编写的处理程序**ON_WM_SETTINGCHANGE**。 在 Windows NT 3.51 下您的处理程序将调用`OnSettingChange`和`uFlags`，将始终为零。  
   
-##  <a name="onshowwindow"></a>  CWnd::OnShowWindow  
- The framework calls this member function when the `CWnd` object is about to be hidden or shown.  
+##  <a name="onshowwindow"></a>CWnd::OnShowWindow  
+ 框架调用此成员函数时`CWnd`对象是以显示或隐藏。  
   
 ```  
-afx_msg void OnShowWindow (BOOL bShow，  
+afx_msg void OnShowWindow(
+    BOOL bShow,  
     UINT nStatus);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `bShow`  
- Specifies whether a window is being shown. It is **TRUE** if the window is being shown; it is **FALSE** if the window is being hidden.  
+ 指定是否正在显示一个窗口。 它是**TRUE**显示的窗口; 如果它是**FALSE**如果隐藏窗口。  
   
  `nStatus`  
- Specifies the status of the window being shown. It is 0 if the message is sent because of a `ShowWindow` member function call; otherwise `nStatus` is one of the following:  
+ 指定窗口中显示的状态。 如果由于发送消息，则为 0`ShowWindow`成员函数调用; 否则为`nStatus`是以下之一︰  
   
-- **SW_PARENTCLOSING** Parent window is closing (being made iconic) or a pop-up window is being hidden.  
+- **SW_PARENTCLOSING**父窗口正在关闭 （进行图标化） 或弹出窗口将会被隐藏。  
   
-- **SW_PARENTOPENING** Parent window is opening (being displayed) or a pop-up window is being shown.  
+- **SW_PARENTOPENING**父窗口正在打开 （显示） 或正在显示一个弹出窗口。  
   
-### Remarks  
- A window is hidden or shown when the `ShowWindow` member function is called, when an overlapped window is maximized or restored, or when an overlapped or pop-up window is closed (made iconic) or opened (displayed on the screen). When an overlapped window is closed, all pop-up windows associated with that window are hidden.  
+### <a name="remarks"></a>备注  
+ 窗口隐藏或显示时`ShowWindow`调用成员函数，或在关闭一个重叠或弹出窗口时最大化或还原，重叠的窗口 （使其图标化） 或打开 （显示在屏幕上）。 当重叠的窗口已关闭时，则会隐藏与该窗口关联的所有弹出窗口。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsize"></a>  CWnd::OnSize  
- The framework calls this member function after the window's size has changed.  
+##  <a name="onsize"></a>CWnd::OnSize  
+ 更改窗口的大小后，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnSize (UINT nType，  
-    int cx  
+afx_msg void OnSize(
+    UINT nType,  
+    int cx,  
     int cy);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nType`  
- Specifies the type of resizing requested. This parameter can be one of the following values:  
+ 指定的大小调整请求的类型。 此参数可以是以下值之一︰  
   
-- **SIZE_MAXIMIZED** Window has been maximized.  
+- **SIZE_MAXIMIZED**最大化窗口。  
   
-- **SIZE_MINIMIZED** Window has been minimized.  
+- **SIZE_MINIMIZED**窗口已最小化。  
   
-- **SIZE_RESTORED** Window has been resized, but neither **SIZE_MINIMIZED** nor **SIZE_MAXIMIZED** applies.  
+- **SIZE_RESTORED**已调整大小窗口，但既不**SIZE_MINIMIZED**也不**SIZE_MAXIMIZED**适用。  
   
-- **SIZE_MAXHIDE** Message is sent to all pop-up windows when some other window is maximized.  
+- **SIZE_MAXHIDE**最大化某些其他窗口时，将消息发送到所有的弹出窗口。  
   
-- **SIZE_MAXSHOW** Message is sent to all pop-up windows when some other window has been restored to its former size.  
+- **SIZE_MAXSHOW**时某些其他窗口已还原到其以前的大小，将消息发送到所有的弹出窗口。  
   
  `cx`  
- Specifies the new width of the client area.  
+ 指定客户端区域的新宽度。  
   
  `cy`  
- Specifies the new height of the client area.  
+ 指定客户端区域的新高度。  
   
-### Remarks  
- If the [SetScrollPos](#setscrollpos) or [MoveWindow](#movewindow) member function is called for a child window from `OnSize`, the `bRedraw` parameter of `SetScrollPos` or `MoveWindow` should be nonzero to cause the `CWnd` to be repainted.  
+### <a name="remarks"></a>备注  
+ 如果[SetScrollPos](#setscrollpos)或[MoveWindow](#movewindow)成员函数调用子窗口从`OnSize`、`bRedraw`参数`SetScrollPos`或`MoveWindow`应为非零值，导致`CWnd`进行重新绘制。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#109](../../mfc/reference/codesnippet/cpp/cwnd-class_50.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 109](../../mfc/reference/codesnippet/cpp/cwnd-class_50.cpp)]  
   
-##  <a name="onsizeclipboard"></a>  CWnd::OnSizeClipboard  
- The Clipboard owner's `OnSizeClipboard` member function is called by the Clipboard viewer when the Clipboard contains data with the `CF_OWNERDISPLAY` attribute and the size of the client area of the Clipboard-viewer window has changed.  
+##  <a name="onsizeclipboard"></a>CWnd::OnSizeClipboard  
+ 剪贴板所有者`OnSizeClipboard`时剪贴板含有的数据由剪贴板查看器中调用成员函数`CF_OWNERDISPLAY`属性和剪贴板查看器窗口的工作区的大小已更改。  
   
 ```  
-afx_msg void OnSizeClipboard (CWnd * pClipAppWnd，  
+afx_msg void OnSizeClipboard(
+    CWnd* pClipAppWnd,  
     HGLOBAL hRect);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pClipAppWnd`  
- Identifies the Clipboard-application window. The pointer may be temporary and should not be stored.  
+ 标识剪贴板应用程序窗口。 指针可能是暂时并不会存储。  
   
  *hRect*  
- Identifies a global memory object. The memory object contains a RECT data structure that specifies the area for the Clipboard owner to paint.  
+ 标识的全局内存对象。 内存对象包含指定剪贴板所有者进行绘画的区域的矩形数据结构。  
   
-### Remarks  
- The `OnSizeClipboard` member function is called with a null rectangle (0,0,0,0) as the new size when the Clipboard application is about to be destroyed or minimized. This permits the Clipboard owner to free its display resources.  
+### <a name="remarks"></a>备注  
+ `OnSizeClipboard`调用成员函数与 null 矩形 (0,0,0,0) 的新大小作为剪贴板应用程序时要销毁或最小化。 这允许剪贴板所有者释放其显示资源。  
   
- Within `OnSizeClipboard`, an application must use the [GlobalLock](http://msdn.microsoft.com/library/windows/desktop/aa366584) Windows function to lock the memory that contains the RECT data structure. Have the application unlock that memory with the [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) Windows function before it yields or returns control.  
+ 在`OnSizeClipboard`，应用程序必须使用[GlobalLock](http://msdn.microsoft.com/library/windows/desktop/aa366584) Windows 函数来锁定包含 RECT 数据结构的内存。 将解锁该内存，该应用程序[GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) Windows 函数生成或返回控件之前。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsizing"></a>  CWnd::OnSizing  
- The framework calls this member function to indicate that the user is resizing the rectangle.  
+##  <a name="onsizing"></a>CWnd::OnSizing  
+ 框架调用此成员函数以指示用户正在调整矩形大小。  
   
 ```  
-afx_msg void OnSizing （UINT 深入剖析，  
+afx_msg void OnSizing(
+    UINT nSide,  
     LPRECT lpRect);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nSide`  
- The edge of window to be moved.  
+ 要移动的窗口边缘。  
   
  `lpRect`  
- Address of the [CRect](../../atl-mfc-shared/reference/crect-class.md) or [RECT structure](../../mfc/reference/rect-structure1.md) that will contain the item's coordinates.  
+ 地址[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 结构](../../mfc/reference/rect-structure1.md)将包含该项的坐标。  
   
-### Remarks  
- By processing this message, an application can monitor the size and position of the drag rectangle and, if needed, change its size or position.  
+### <a name="remarks"></a>备注  
+ 通过处理此消息，应用程序可以监视的大小和位置的拖动矩形和，如果需要可以更改它们的大小或位置。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#110](../../mfc/reference/codesnippet/cpp/cwnd-class_51.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 110](../../mfc/reference/codesnippet/cpp/cwnd-class_51.cpp)]  
   
-##  <a name="onspoolerstatus"></a>  CWnd::OnSpoolerStatus  
- The framework calls this member function from Print Manager whenever a job is added to or removed from the Print Manager queue.  
+##  <a name="onspoolerstatus"></a>CWnd::OnSpoolerStatus  
+ 框架调用此成员函数从打印管理器添加到或从打印管理器队列中删除作业时。  
   
 ```  
-afx_msg void OnSpoolerStatus (UINT nStatus，  
+afx_msg void OnSpoolerStatus(
+    UINT nStatus,  
     UINT nJobs);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nStatus`  
- Specifies the **SP_JOBSTATUS** flag.  
+ 指定**SP_JOBSTATUS**标志。  
   
  *nJobs*  
- Specifies the number of jobs remaining in the Print Manager queue.  
+ 指定打印管理器队列中剩余的作业数。  
   
-### Remarks  
- This call is for informational purposes only.  
+### <a name="remarks"></a>备注  
+ 此调用是为仅供参考。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged  
- The framework calls this member function after the [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) function has changed one or more of the window's styles.  
+##  <a name="onstylechanged"></a>CWnd::OnStyleChanged  
+ 框架调用此成员函数后的[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591)函数已更改一个或多个窗口样式。  
   
 ```  
-afx_msg void OnStyleChanged (int nStyleType，  
+afx_msg void OnStyleChanged(
+    int nStyleType,  
     LPSTYLESTRUCT lpStyleStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nStyleType`  
- Specifies whether the window's extended or nonextended styles have changed. This parameter can be a combination of the following values:  
+ 指定是否窗口的扩展，或已改变的 nonextended 的样式。 此参数可以是以下值的组合︰  
   
-- **GWL_EXSTYLE** The window's extended styles have changed.  
+- **GWL_EXSTYLE**窗口的扩展的样式已更改。  
   
-- **GWL_STYLE** The window's nonextended styles have changed.  
+- **GWL_STYLE**窗口 nonextended 的样式已更改。  
   
  `lpStyleStruct`  
- Points to a [STYLESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632607) structure that contains the new styles for the window. An application can examine the styles, but it can not change them.  
+ 指向[STYLESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632607)结构，其中包含窗口的新样式。 应用程序可以检查样式，但可以更改它们。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging  
- The framework calls this member function when the [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) function is about to change one or more of the window's styles.  
+##  <a name="onstylechanging"></a>CWnd::OnStyleChanging  
+ 框架调用此成员函数时[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591)函数即将更改一个或多个窗口样式。  
   
 ```  
-afx_msg void OnStyleChanging (int nStyleType，  
+afx_msg void OnStyleChanging(
+    int nStyleType,  
     LPSTYLESTRUCT lpStyleStruct);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nStyleType`  
- Specifies whether the window's extended or nonextended styles have changed. This parameter can be a combination of the following values:  
+ 指定是否窗口的扩展，或已改变的 nonextended 的样式。 此参数可以是以下值的组合︰  
   
-- **GWL_EXSTYLE** The window's extended styles have changed.  
+- **GWL_EXSTYLE**窗口的扩展的样式已更改。  
   
-- **GWL_STYLE** The window's nonextended styles have changed.  
+- **GWL_STYLE**窗口 nonextended 的样式已更改。  
   
  `lpStyleStruct`  
- Points to a [STYLESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632607) structure that contains the new styles for the window. An application can examine the styles and change them.  
+ 指向[STYLESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632607)结构，其中包含窗口的新样式。 应用程序可以检查样式，并将其更改。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsyschar"></a>  CWnd::OnSysChar  
- The framework calls this member function if `CWnd` has the input focus and the [WM_SYSKEYUP](#onsyskeyup) and [WM_SYSKEYDOWN](#onsyskeydown) messages are translated.  
+##  <a name="onsyschar"></a>CWnd::OnSysChar  
+ 框架调用此成员函数，如果`CWnd`具有输入的焦点和[WM_SYSKEYUP](#onsyskeyup)和[WM_SYSKEYDOWN](#onsyskeydown)消息被翻译成。  
   
 ```  
-afx_msg void OnSysChar (UINT nChar、  
-    UINT nRepCnt  
+afx_msg void OnSysChar(
+    UINT nChar,  
+    UINT nRepCnt,  
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Specifies the ASCII-character key code of a Control-menu key.  
+ 指定一个控件菜单键的 ASCII 字符键代码。  
   
  `nRepCnt`  
- Specifies the repeat count (the number of times the keystroke is repeated as a result of the user holding down the key).  
+ 指定的重复计数 （次数击键重复因为用户按住键）。  
   
  `nFlags`  
- The `nFlags` parameter can have these values:  
+ `nFlags`参数可以具有这些值︰  
   
-|Value|Meaning|  
+|值|含义|  
 |-----------|-------------|  
-|0-15|Specifies the repeat count. The value is the number of times the keystroke is repeated as a result of the user holding down the key..|  
-|16-23|Specifies the scan code. The value depends on the original equipment manufacturer (OEM)|  
-|24|Specifies whether the key is an extended key, such as the right-hand ALT and CTRL keys that appear on an enhanced 101- or 102-key keyboard. The value is 1 if it is an extended key; otherwise, it is 0.|  
-|25-28|Used internally by Windows.|  
-|29|Specifies the context code. The value is 1 if the ALT key is held down while the key is pressed; otherwise, the value is 0.|  
-|30|Specifies the previous key state. The value is 1 if the key is down before the message is sent, or it is 0 if the key is up.|  
-|31|Specifies the transition state. The value is 1 if the key is being released, or it is 0 if the key is being pressed.|  
+|0-15|指定的重复计数。 值是因为用户按住键重复击键次数...|  
+|16-23|指定的扫描代码。 值取决于原始设备制造商 (OEM)|  
+|24|指定密钥是否是扩展的密钥，如在增强的 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 如果它是扩展的密钥; 值为 1否则，则为 0。|  
+|25-28|由 Windows 内部使用。|  
+|29|指定的上下文代码。 如果当按下键; ALT 键并按住，则值为 1否则，值为 0。|  
+|30|指定上一项的状态。 如果密钥已关闭，然后发送消息，或如果注册该键，则为 0，则值为 1。|  
+|31|指定的转换状态。 如果正在释放键，或如果按下了键，则为 0，则值为 1。|  
   
-### Remarks  
- It specifies the virtual key code of the Control-menu key. (For a list of of standard virtual key codes, see Winuser.h)  
+### <a name="remarks"></a>备注  
+ 它指定控件菜单键的虚拟键代码。 （有关标准虚拟键代码的列表，请参见 Winuser.h）  
   
- When the context code is 0, `WM_SYSCHAR` can pass the [WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357) message to the [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows function, which will handle it as though it were a normal key message instead of a system character-key. This allows accelerator keys to be used with the active window even if the active window does not have the input focus.  
+ 当上下文代码为 0，`WM_SYSCHAR`可以传递[WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357)消息[TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 函数，它将处理它，就像普通键消息而不是系统字符键。 这允许使用与活动窗口，即使活动窗口不具有输入的焦点的加速键。  
   
- For IBM Enhanced 101- and 102-key keyboards, enhanced keys are the right ALT and the right CTRL keys on the main section of the keyboard; the INS, DEL, HOME, END, PAGE UP, PAGE DOWN, and arrow keys in the clusters to the left of the numeric keypad; and the slash (/) and ENTER keys in the numeric keypad. Some other keyboards may support the extended-key bit in `nFlags`.  
+ 对于 IBM 增强 101 和 102 键键盘、 增强的键是右 ALT 和键盘; 的主要部分上的右 CTRL 键单元、 DEL、 主页、 结束、 PAGE UP、 PAGE down 键和向左数字小键盘; 的群集中的箭头键斜杠 （/） 和数字键盘中的 ENTER 键。 一些其他键盘可能支持中的扩展密钥位`nFlags`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsyscolorchange"></a>  CWnd::OnSysColorChange  
- The framework calls this member function for all top-level windows when a change is made in the system color setting.  
+##  <a name="onsyscolorchange"></a>CWnd::OnSysColorChange  
+ 在系统颜色设置进行更改时，框架针对所有顶级窗口调用此成员函数。  
   
 ```  
 afx_msg void OnSysColorChange();
 ```  
   
-### Remarks  
- Windows calls `OnSysColorChange` for any window that is affected by a system color change.  
+### <a name="remarks"></a>备注  
+ Windows 调用`OnSysColorChange`受系统颜色更改任何窗口。  
   
- Applications that have brushes that use the existing system colors should delete those brushes and re-create them with the new system colors.  
+ 具有使用现有的系统颜色的画笔的应用程序应删除这些画笔，并使用新的系统颜色重新创建索引。  
   
-##  <a name="onsyscommand"></a>  CWnd::OnSysCommand  
- The framework calls this member function when the user selects a command from the Control menu, or when the user selects the Maximize or the Minimize button.  
+##  <a name="onsyscommand"></a>CWnd::OnSysCommand  
+ 当用户从控件菜单中，选择命令，或者用户选择最大化或最小化按钮时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnSysCommand (UINT nID，  
+afx_msg void OnSysCommand(
+    UINT nID,  
     LPARAM lParam);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nID`  
- Specifies the type of system command requested. This parameter can be any one of the following values:  
+ 指定请求的系统命令的类型。 此参数可以是以下值之一︰  
   
-- **SC_CLOSE** Close the `CWnd` object.  
+- **SC_CLOSE**关闭`CWnd`对象。  
   
-- **SC_HOTKEY** Activate the `CWnd` object associated with the application-specified hot key. The low-order word of `lParam` identifies the `HWND` of the window to activate.  
+- **SC_HOTKEY**激活`CWnd`与应用程序特定的热键关联的对象。 低序位字`lParam`标识`HWND`要激活的窗口。  
   
-- **SC_HSCROLL** Scroll horizontally.  
+- **SC_HSCROLL**水平滚动。  
   
-- **SC_KEYMENU** Retrieve a menu through a keystroke.  
+- **SC_KEYMENU**检索通过击键菜单。  
   
-- **SC_MAXIMIZE** (or **SC_ZOOM**)   Maximize the `CWnd` object.  
+- **SC_MAXIMIZE** (或**SC_ZOOM**) 最大化`CWnd`对象。  
   
-- **SC_MINIMIZE** (or **SC_ICON**)   Minimize the `CWnd` object.  
+- **SC_MINIMIZE** (或**SC_ICON**) 最小化`CWnd`对象。  
   
-- **SC_MOUSEMENU** Retrieve a menu through a mouse click.  
+- **SC_MOUSEMENU**菜单通过鼠标单击的检索。  
   
-- **SC_MOVE** Move the `CWnd` object.  
+- **SC_MOVE**移动`CWnd`对象。  
   
-- **SC_NEXTWINDOW** Move to the next window.  
+- **SC_NEXTWINDOW**移到下一步的窗口。  
   
-- **SC_PREVWINDOW** Move to the previous window.  
+- **SC_PREVWINDOW**将移到上一个窗口。  
   
-- **SC_RESTORE** Restore window to normal position and size.  
+- **SC_RESTORE**将窗口还原到正常位置和大小。  
   
-- **SC_SCREENSAVE** Executes the screen-saver application specified in the [boot] section of the SYSTEM.INI file.  
+- **SC_SCREENSAVE**执行系统的 [启动] 部分中指定的屏幕保护程序应用程序。INI 文件。  
   
-- **SC_SIZE** Size the `CWnd` object.  
+- **SC_SIZE**大小`CWnd`对象。  
   
-- **SC_TASKLIST** Execute or activate the Windows Task Manager application.  
+- **SC_TASKLIST** Execute 或激活 Windows 任务管理器应用程序。  
   
-- **SC_VSCROLL** Scroll vertically.  
+- **SC_VSCROLL**垂直滚动。  
   
  `lParam`  
- If a Control-menu command is chosen with the mouse, `lParam` contains the cursor coordinates. The low-order word contains the x coordinate, and the high-order word contains the y coordinate. Otherwise this parameter is not used.  
+ 如果用鼠标选择控件菜单命令，则`lParam`包含光标坐标。 低序位字包含的 x 坐标，而高序位字包含的 y 坐标。 否则不使用此参数。  
   
-- **SC_HOTKEY** Activate the window associated with the application-specified hot key. The low-order word of `lParam` identifies the window to activate.  
+- **SC_HOTKEY**激活应用程序特定的热键与关联的窗口。 低序位字`lParam`标识要激活的窗口。  
   
-- **SC_SCREENSAVE** Execute the screen-save application specified in the Desktop section of Control Panel.  
+- **SC_SCREENSAVE**执行在控制面板的桌面部分中指定的屏幕保存应用程序。  
   
-### Remarks  
- By default, `OnSysCommand` carries out the Control-menu request for the predefined actions specified in the preceding table.  
+### <a name="remarks"></a>备注  
+ 默认情况下，`OnSysCommand`执行前面的表中指定的预定义操作的控件菜单请求。  
   
- In `WM_SYSCOMMAND` messages, the four low-order bits of the `nID` parameter are used internally by Windows. When an application tests the value of `nID`, it must combine the value 0xFFF0 with the `nID` value by using the bitwise-AND operator to obtain the correct result.  
+ 在`WM_SYSCOMMAND`消息的四个低顺序位`nID`参数由 Windows 内部使用。 当应用程序测试的值`nID`，它必须结合使用的值 0xFFF0`nID`通过使用按位值的和运算符以获取正确的结果。  
   
- The menu items in a Control menu can be modified with the `GetSystemMenu`, `AppendMenu`, `InsertMenu`, and `ModifyMenu` member functions. Applications that modify the Control menu must process `WM_SYSCOMMAND` messages, and any `WM_SYSCOMMAND` messages not handled by the application must be passed on to `OnSysCommand`. Any command values added by an application must be processed by the application and cannot be passed to `OnSysCommand`.  
+ 可以使用修改控件菜单中的菜单项`GetSystemMenu`， `AppendMenu`， `InsertMenu`，和`ModifyMenu`成员函数。 修改控件菜单的应用程序必须处理`WM_SYSCOMMAND`消息，以及任何`WM_SYSCOMMAND`由应用程序不处理的消息必须传递给`OnSysCommand`。 添加应用程序的任何命令值以及应用程序必须处理和不能传递给`OnSysCommand`。  
   
- An application can carry out any system command at any time by passing a `WM_SYSCOMMAND` message to `OnSysCommand`.  
+ 应用程序可以执行任何系统命令在任何时候通过传递`WM_SYSCOMMAND`消息`OnSysCommand`。  
   
- Accelerator (shortcut) keystrokes that are defined to select items from the Control menu are translated into `OnSysCommand` calls; all other accelerator keystrokes are translated into [WM_COMMAND](#oncommand) messages.  
+ 定义为从控件菜单中选择项的快捷键 （快捷方式） 击键转换为`OnSysCommand`调用; 所有击键转换为其他快捷键[WM_COMMAND](#oncommand)消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsysdeadchar"></a>  CWnd::OnSysDeadChar  
- The framework calls this member function if the `CWnd` object has the input focus when the [OnSysKeyUp](#onsyskeyup) or [OnSysKeyDown](#onsyskeydown) member function is called.  
+##  <a name="onsysdeadchar"></a>CWnd::OnSysDeadChar  
+ 框架调用此成员函数，如果`CWnd`对象具有输入焦点[OnSysKeyUp](#onsyskeyup)或[OnSysKeyDown](#onsyskeydown)调用成员函数。  
   
 ```  
-afx_msg void OnSysDeadChar (UINT nChar、  
-    UINT nRepCnt  
+afx_msg void OnSysDeadChar(
+    UINT nChar,  
+    UINT nRepCnt,  
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Specifies the dead-key character value.  
+ 指定死密钥字符值。  
   
  `nRepCnt`  
- Specifies the repeat count.  
+ 指定的重复计数。  
   
  `nFlags`  
- Specifies the scan code, key-transition code, previous key state, and context code, as shown in the following list:  
+ 下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码︰  
   
-|Value|Meaning|  
+|值|含义|  
 |-----------|-------------|  
-|0–7|Scan code (OEM-dependent value). Low byte of high-order word.|  
-|8|Extended key, such as a function key or a key on the numeric keypad (1 if it is an extended key; otherwise 0).|  
-|9–10|Not used.|  
-|11–12|Used internally by Windows.|  
-|13|Context code (1 if the ALT key is held down while the key is pressed; otherwise 0).|  
-|14|Previous key state (1 if the key is down before the call, 0 if the key is up).|  
-|15|Transition state (1 if the key is being released, 0 if the key is being pressed).|  
+|0–7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
+|8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
+|9–10|未使用。|  
+|11–12|由 Windows 内部使用。|  
+|13|上下文代码 （如果时按下键按下 ALT 键为 1; 否则为 0）。|  
+|14|以前的密钥状态 (如果在调用，0，如果密钥已启动之前已关闭的密钥，则为 1)。|  
+|15|过渡状态 （如果正在释放键为 1，0，如果按下了键）。|  
   
-### Remarks  
- It specifies the character value of a dead key.  
+### <a name="remarks"></a>备注  
+ 它指定死键的字符值。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsyskeydown"></a>  CWnd::OnSysKeyDown  
- If the `CWnd` object has the input focus, the `OnSysKeyDown` member function is called by the framework when the user holds down the ALT key and then presses another key.  
+##  <a name="onsyskeydown"></a>CWnd::OnSysKeyDown  
+ 如果`CWnd`对象具有输入的焦点，`OnSysKeyDown`由框架调用成员函数，当用户按住 ALT 键，然后按下另一个密钥。  
   
 ```  
-afx_msg void OnSysKeyDown (UINT nChar、  
-    UINT nRepCnt  
+afx_msg void OnSysKeyDown(
+    UINT nChar,  
+    UINT nRepCnt,  
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Specifies the virtual key code of the key being pressed. For a list of of standard virtual key codes, see Winuser.h  
+ 指定键的虚拟键代码。 有关标准虚拟键代码的列表，请参见 Winuser.h  
   
  `nRepCnt`  
- Specifies the repeat count.  
+ 指定的重复计数。  
   
  `nFlags`  
- Specifies the scan code, key-transition code, previous key state, and context code, as shown in the following list:  
+ 下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码︰  
   
-|Value|Meaning|  
+|值|含义|  
 |-----------|-------------|  
-|0–7|Scan code (OEM-dependent value). Low byte of high-order word.|  
-|8|Extended key, such as a function key or a key on the numeric keypad (1 if it is an extended key; otherwise 0).|  
-|9–10|Not used.|  
-|11–12|Used internally by Windows.|  
-|13|Context code (1 if the ALT key is held down while the key is pressed, 0 otherwise).|  
-|14|Previous key state (1 if the key is down before the message is sent, 0 if the key is up).|  
-|15|Transition state (1 if the key is being released, 0 if the key is being pressed).|  
+|0–7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
+|8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
+|9–10|未使用。|  
+|11–12|由 Windows 内部使用。|  
+|13|上下文代码 (如果当按下键，0 否则 ALT 键并按住，则为 1)。|  
+|14|以前的密钥状态 (如果该密钥是向下发送消息前，0 如果密钥为向上，则为 1)。|  
+|15|过渡状态 （如果正在释放键为 1，0，如果按下了键）。|  
   
- For `OnSysKeyDown` calls, the key-transition bit (bit 15) is 0. The context-code bit (bit 13) is 1 if the ALT key is down while the key is pressed; it is 0 if the message is sent to the active window because no window has the input focus.  
+ 有关`OnSysKeyDown`调用，密钥转换位 （位 15） 为 0。 如果 ALT 键已关闭时按下键; 上下文代码位 （位 13） 为 1如果向活动窗口发送消息，因为没有窗口具有输入的焦点，则为 0。  
   
-### Remarks  
- If no window currently has the input focus, the active window's `OnSysKeyDown` member function is called. The `CWnd` object that receives the message can distinguish between these two contexts by checking the context code in `nFlags`.  
+### <a name="remarks"></a>备注  
+ 如果没有窗口当前已经有输入的焦点，活动窗口的`OnSysKeyDown`调用成员函数。 `CWnd`接收消息的对象可以区分上下文代码签入由这些两个上下文`nFlags`。  
   
- When the context code is 0, the `WM_SYSKEYDOWN` message received by `OnSysKeyDown` can be passed to the [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows function, which will handle it as though it were a normal key message instead of a system-key message. This allows accelerator keys to be used with the active window even if the active window does not have the input focus.  
+ 当上下文代码为 0，`WM_SYSKEYDOWN`已接收消息`OnSysKeyDown`可以传递给[TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 函数，就像普通键消息而不是系统密钥消息处理它。 这允许使用与活动窗口，即使活动窗口不具有输入的焦点的加速键。  
   
- Because of auto-repeat, more than one `OnSysKeyDown` call may occur before the [WM_SYSKEYUP](#onsyskeyup) message is received. The previous key state (bit 14) can be used to determine whether the `OnSysKeyDown` call indicates the first down transition or a repeated down transition.  
+ 由于自动重复，多个`OnSysKeyDown`调用可能会出现之前[WM_SYSKEYUP](#onsyskeyup)接收消息。 以前的密钥状态 （位 14） 可以用于确定是否`OnSysKeyDown`调用指示第一个向下转换或向下重复的转换。  
   
- For IBM Enhanced 101- and 102-key keyboards, enhanced keys are the right ALT and the right CTRL keys on the main section of the keyboard; the INS, DEL, HOME, END, PAGE UP, PAGE DOWN, and arrow keys in the clusters to the left of the numeric keypad; and the slash (/) and ENTER keys in the numeric keypad. Some other keyboards may support the extended-key bit in `nFlags`.  
+ 对于 IBM 增强 101 和 102 键键盘、 增强的键是右 ALT 和键盘; 的主要部分上的右 CTRL 键单元、 DEL、 主页、 结束、 PAGE UP、 PAGE down 键和向左数字小键盘; 的群集中的箭头键斜杠 （/） 和数字键盘中的 ENTER 键。 一些其他键盘可能支持中的扩展密钥位`nFlags`。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onsyskeyup"></a>  CWnd::OnSysKeyUp  
- If the `CWnd` object has the focus, the `OnSysKeyUp` member function is called by the framework when the user releases a key that was pressed while the ALT key was held down.  
+##  <a name="onsyskeyup"></a>CWnd::OnSysKeyUp  
+ 如果`CWnd`对象具有焦点，`OnSysKeyUp`当用户释放某个键按下 ALT 键已按住时，由框架调用成员函数。  
   
 ```  
-afx_msg void OnSysKeyUp (UINT nChar、  
-    UINT nRepCnt  
+afx_msg void OnSysKeyUp(
+    UINT nChar,  
+    UINT nRepCnt,  
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nChar`  
- Specifies the virtual key code of the key being pressed. For a list of of standard virtual key codes, see Winuser.h  
+ 指定键的虚拟键代码。 有关标准虚拟键代码的列表，请参见 Winuser.h  
   
  `nRepCnt`  
- Specifies the repeat count.  
+ 指定的重复计数。  
   
  `nFlags`  
- Specifies the scan code, key-transition code, previous key state, and context code, as shown in the following list:  
+ 下面的列表中所示来指定扫描代码、 密钥转换代码、 以前的密钥状态和上下文代码︰  
   
-|Value|Meaning|  
+|值|含义|  
 |-----------|-------------|  
-|0–7|Scan code (OEM-dependent value). Low byte of high-order word.|  
-|8|Extended key, such as a function key or a key on the numeric keypad (1 if it is an extended key; otherwise 0).|  
-|9–10|Not used.|  
-|11–12|Used internally by Windows.|  
-|13|Context code (1 if the ALT key is held down while the key is pressed, 0 otherwise).|  
-|14|Previous key state (1 if the key is down before the message is sent, 0 if the key is up).|  
-|15|Transition state (1 if the key is being released, 0 if the key is being pressed).|  
+|0–7|扫描代码 （依赖于 OEM 的值）。 高序位字的低字节。|  
+|8|扩展的密钥，如功能键或 （如果它是扩展的密钥为 1; 否则为 0） 数字键盘上的某个键。|  
+|9–10|未使用。|  
+|11–12|由 Windows 内部使用。|  
+|13|上下文代码 (如果当按下键，0 否则 ALT 键并按住，则为 1)。|  
+|14|以前的密钥状态 (如果该密钥是向下发送消息前，0 如果密钥为向上，则为 1)。|  
+|15|过渡状态 （如果正在释放键为 1，0，如果按下了键）。|  
   
- For `OnSysKeyUp` calls, the key-transition bit (bit 15) is 1. The context-code bit (bit 13) is 1 if the ALT key is down while the key is pressed; it is 0 if the message is sent to the active window because no window has the input focus.  
+ 有关`OnSysKeyUp`调用，密钥转换位 （位 15） 为 1。 如果 ALT 键已关闭时按下键; 上下文代码位 （位 13） 为 1如果向活动窗口发送消息，因为没有窗口具有输入的焦点，则为 0。  
   
-### Remarks  
- If no window currently has the input focus, the active window's `OnSysKeyUp` member function is called. The `CWnd` object that receives the call can distinguish between these two contexts by checking the context code in `nFlags`.  
+### <a name="remarks"></a>备注  
+ 如果没有窗口当前已经有输入的焦点，活动窗口的`OnSysKeyUp`调用成员函数。 `CWnd`接收到调用的对象可以区分上下文代码签入由这些两个上下文`nFlags`。  
   
- When the context code is 0, the `WM_SYSKEYUP` message received by `OnSysKeyUp` can be passed to the [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows function, which will handle it as though it were a normal key message instead of a system-key message. This allows accelerator (shortcut) keys to be used with the active window even if the active window does not have the input focus.  
+ 当上下文代码为 0，`WM_SYSKEYUP`已接收消息`OnSysKeyUp`可以传递给[TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 函数，就像普通键消息而不是系统密钥消息处理它。 这允许快捷键 （快捷） 键使用与活动窗口，即使活动窗口不具有输入的焦点。  
   
- For IBM Enhanced 101- and 102-key keyboards, enhanced keys are the right ALT and the right CTRL keys on the main section of the keyboard; the INS, DEL, HOME, END, PAGE UP, PAGE DOWN, and arrow keys in the clusters to the left of the numeric keypad; and the slash (/) and ENTER keys in the numeric keypad. Some other keyboards may support the extended-key bit in `nFlags`.  
+ 对于 IBM 增强 101 和 102 键键盘、 增强的键是右 ALT 和键盘; 的主要部分上的右 CTRL 键单元、 DEL、 主页、 结束、 PAGE UP、 PAGE down 键和向左数字小键盘; 的群集中的箭头键斜杠 （/） 和数字键盘中的 ENTER 键。 一些其他键盘可能支持中的扩展密钥位`nFlags`。  
   
- For non-U.S. Enhanced 102-key keyboards, the right ALT key is handled as the CTRL+ALT key combination. The following shows the sequence of messages and calls that result when the user presses and releases this key:  
+ 适用于非美国增强的 102 键键盘、 右 ALT 键会被视为 CTRL + ALT 键组合。 下面显示消息和导致当用户按下并释放此键的调用的序列︰  
   
-|Sequence|Function Accessed|Message Passed|  
+|序列|访问的函数|消息传递|  
 |--------------|-----------------------|--------------------|  
 |1.|[WM_KEYDOWN](#onkeydown)|**VK_CONTROL**|  
 |2.|[WM_KEYDOWN](#onkeydown)|**VK_MENU**|  
@@ -8210,1043 +8388,1071 @@ afx_msg void OnSysKeyUp (UINT nChar、
 |4.|[WM_SYSKEYUP](http://msdn.microsoft.com/library/windows/desktop/ms646287)|**VK_MENU**|  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="ontcard"></a>  CWnd::OnTCard  
- The framework calls this member function when the user clicks an authorable button.  
+##  <a name="ontcard"></a>CWnd::OnTCard  
+ 当用户单击可创作的按钮时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnTCard (UINT idAction，  
+afx_msg void OnTCard(
+    UINT idAction,  
     DWORD dwActionData);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `idAction`  
- Indicates the action the user has taken. This parameter can be one of these values:  
+ 指示已获取用户的操作。 此参数可以是下列值之一︰  
   
-- **IDABORT** The user clicked an authorable Abort button.  
+- **IDABORT**用户单击可创作的中止按钮。  
   
-- **IDCANCEL** The user clicked an authorable Cancel button.  
+- **IDCANCEL**用户单击可创作的取消按钮。  
   
-- **IDCLOSE** The user closed the training card.  
+- **IDCLOSE**用户关闭培训卡。  
   
-- **IDHELP** The user clicked an authorable Windows Help button.  
+- **IDHELP**用户单击可创作 Windows 帮助的按钮。  
   
-- **IDIGNORE** The user clicked an authorable Ignore button.  
+- **IDIGNORE**用户单击可创作的忽略按钮。  
   
-- **IDOK** The user clicked an authorable OK button.  
+- **IDOK**用户单击可创作的确定按钮。  
   
-- **IDNO** The user clicked an authorable No button.  
+- **IDNO**用户单击可创作没有按钮。  
   
-- **IDRETRY** The user clicked an authorable Retry button.  
+- **IDRETRY**用户单击可创作的重试按钮。  
   
-- **HELP_TCARD_DATA** The user clicked an authorable button. The `dwActionData` parameter contains a long integer specified by the help author.  
+- **HELP_TCARD_DATA**用户单击可创作的按钮。 `dwActionData`参数包含一个长整型，指定的帮助文件的作者。  
   
-- **HELP_TCARD_NEXT** The user clicked an authorable Next button.  
+- **HELP_TCARD_NEXT**用户单击可创作的下一步按钮。  
   
-- **HELP_TCARD_OTHER_CALLER** Another application has requested training cards.  
+- **HELP_TCARD_OTHER_CALLER**另一个应用程序已请求培训卡。  
   
-- **IDYES** The user clicked an authorable Yes button.  
+- **IDYES**用户单击可创作的是按钮。  
   
  `dwActionData`  
- If `idAction` specifies **HELP_TCARD_DATA**, this parameter is a long integer specified by the help author. Otherwise, this parameter is zero.  
+ 如果`idAction`指定**HELP_TCARD_DATA**，此参数是一个长整型，指定的帮助文件的作者。 否则，此参数为零。  
   
-### Remarks  
- This function is called only when an application has initiated a training card with Windows Help. An application initiates a training card by specifying the **HELP_TCARD** command in a call to the [WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) function.  
+### <a name="remarks"></a>备注  
+ 仅当应用程序已启动培训卡与 Windows 帮助调用此函数。 应用程序通过指定启动培训卡**HELP_TCARD**命令对的调用中[WinHelp](../../mfc/reference/cwinapp-class.md#winhelp)函数。  
   
-##  <a name="ontimechange"></a>  CWnd::OnTimeChange  
- The framework calls this member function after the system time is changed.  
+##  <a name="ontimechange"></a>CWnd::OnTimeChange  
+ 更改系统时间后，框架将调用此成员函数。  
   
 ```  
 afx_msg void OnTimeChange();
 ```  
   
-### Remarks  
- Have any application that changes the system time send this message to all top-level windows. To send the `WM_TIMECHANGE` message to all top-level windows, an application can use the [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows function with its *hwnd* parameter set to **HWND_BROADCAST**.  
+### <a name="remarks"></a>备注  
+ 具有任何应用程序，更改系统时间将此消息发送到所有顶级窗口。 若要发送`WM_TIMECHANGE`消息向所有顶级窗口，应用程序可以使用[SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 函数替换其*hwnd*参数设置为**HWND_BROADCAST**。  
   
-##  <a name="ontimer"></a>  CWnd::OnTimer  
- The framework calls this member function after each interval specified in the [SetTimer](#settimer) member function used to install a timer.  
+##  <a name="ontimer"></a>CWnd::OnTimer  
+ 框架调用此成员函数中指定每个时间间隔过后[SetTimer](#settimer)成员函数用于安装一个计时器。  
   
 ```  
-afx_msg void OnTimer (UINT_PTR nIDEvent);
+afx_msg void OnTimer(UINT_PTR nIDEvent);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDEvent`  
- Specifies the identifier of the timer.  
+ 指定的计时器的标识符。  
   
-### Remarks  
- The [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows function sends a [WM_TIMER](http://msdn.microsoft.com/library/windows/desktop/ms644902) message when no other messages are in the application's message queue.  
+### <a name="remarks"></a>备注  
+ [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数发送[WM_TIMER](http://msdn.microsoft.com/library/windows/desktop/ms644902)消息应用程序的消息队列中没有其他消息时。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-### Example  
-  See the example in [CWnd::SetTimer](#settimer).  
+### <a name="example"></a>示例  
+  请参阅中的示例[CWnd::SetTimer](#settimer)。  
   
-##  <a name="ontoolhittest"></a>  CWnd::OnToolHitTest  
- The framework calls this member function to detemine whether a point is in the bounding rectangle of the specified tool.  
+##  <a name="ontoolhittest"></a>CWnd::OnToolHitTest  
+ 框架调用此成员函数以确定是否在点被指定工具的边框。  
   
 ```  
-虚拟 INT_PTR OnToolHitTest （CPoint 点，  
+virtual INT_PTR OnToolHitTest(
+    CPoint point,  
     TOOLINFO* pTI) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `point`  
- Specifies the x- and y-coordinate of the cursor. These coordinates are always relative to the upper-left corner of the window  
+ 指定光标 x 和 y 坐标。 这些坐标相对于窗口的左上角始终是  
   
  `pTI`  
- A pointer to a [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) structure. The following structure values are set by default:  
+ 指向的指针[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)结构。 默认情况下设置以下结构值︰  
   
-- *hwnd* = `m_hWnd` Handle to a window  
+- *hwnd*  =  `m_hWnd`窗口的句柄  
   
-- `uId` = **(UINT)hWndChild** Handle to a child window  
+- `uId` = **(UINT) hWndChild**子窗口的句柄  
   
-- `uFlags` &#124;= **TTF_IDISHWND** Handle of the tool  
+- `uFlags`| = **TTF_IDISHWND**句柄的工具  
   
-- `lpszText` = **LPSTR_TEXTCALLBACK** Pointer to the string that is to be displayed in the specified window  
+- `lpszText` = **LPSTR_TEXTCALLBACK**指向指定窗口中显示的字符串  
   
-### Return Value  
- If the tooltip control was found, the window control ID. If the tooltip control was not found, -1.  
+### <a name="return-value"></a>返回值  
+ 如果找到该工具提示控件，窗口控件 id。 如果工具提示控件未找到，则为-1。  
   
-### Remarks  
- If the point is in the rectangle, it retrieves information about the tool.  
+### <a name="remarks"></a>备注  
+ 在矩形中点时，它将检索有关工具的信息。  
   
- If the area with which the tooltip is associated is not a button, `OnToolHitTest` sets the structure flags to **TTF_NOTBUTTON** and **TTF_CENTERTIP**.  
+ 如果工具提示与之关联的区域不是一个按钮，`OnToolHitTest`将结构标志设置为**TTF_NOTBUTTON**和**TTF_CENTERTIP**。  
   
- Override `OnToolHitTest` to provide different information than the default provides.  
+ 重写`OnToolHitTest`提供比默认提供不同的信息。  
   
- See [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256), in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], for more information about the structure.  
+ 请参阅[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]，结构有关的详细信息。  
   
-##  <a name="ontouchinput"></a>  CWnd::OnTouchInput  
- Process single input from Windows touch.  
+##  <a name="ontouchinput"></a>CWnd::OnTouchInput  
+ 处理来自 Windows 触摸屏的单个输入。  
   
 ```  
-虚拟 BOOL OnTouchInput (CPoint pt，  
-    int nInputNumber  
-    int nInputsCount  
+virtual BOOL OnTouchInput(
+    CPoint pt,  
+    int nInputNumber,  
+    int nInputsCount,  
     PTOUCHINPUT pInput);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pt`  
- Point where screen has been touched (in the client coordinates).  
+ 其中，将屏幕接触 （在客户端坐标中） 的点。  
   
  `nInputNumber`  
- Number of touch input.  
+ 数触摸屏输入。  
   
  `nInputsCount`  
- Total number of touch inputs.  
+ 触控输入的总数。  
   
  `pInput`  
- Pointer to TOUCHINPUT structure.  
+ 指向 TOUCHINPUT 结构的指针。  
   
-### Return Value  
- `TRUE` if the application processes Windows touch input; otherwise `FALSE`.  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果应用程序处理 Windows 触摸屏输入;，否则为`FALSE`。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
-##  <a name="ontouchinputs"></a>  CWnd::OnTouchInputs  
- Processes inputs from Windows touch.  
+##  <a name="ontouchinputs"></a>CWnd::OnTouchInputs  
+ 处理来自 Windows 触摸屏输入。  
   
 ```  
-虚拟 BOOL OnTouchInputs (UINT nInputsCount，  
+virtual BOOL OnTouchInputs(
+    UINT nInputsCount,  
     PTOUCHINPUT pInputs);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nInputsCount`  
- Total number of Windows touch inputs.  
+ 总数 Windows 触摸输入。  
   
  `pInputs`  
- Array of TOUCHINPUT.  
+ TOUCHINPUT 的数组。  
   
-### Return Value  
- `TRUE` if application processes Windows touch inputs; otherwise `FALSE`.  
+### <a name="return-value"></a>返回值  
+ `TRUE`如果应用程序进程 Windows 触摸输入;，否则为`FALSE`。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
-##  <a name="onunichar"></a>  CWnd::OnUniChar  
- The framework calls this member function when a key is pressed. That is, the current window has the keyboard focus and a [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) message is translated by the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) function.  
+##  <a name="onunichar"></a>CWnd::OnUniChar  
+ 当按下某个键时，框架将调用此成员函数。 即，当前窗口具有键盘焦点和[WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280)消息转换通过[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)函数。  
   
 ```  
-afx_msg void OnUniChar (UINT nChar、   
-    UINT nRepCnt   
+afx_msg void OnUniChar(
+    UINT nChar,   
+    UINT nRepCnt,   
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nChar`|Specifies the character code of the pressed key.|  
-|[in] `nRepCnt`|Specifies the repeat count for the current message. The value is the number of times the keystroke is autorepeated as a result of the user holding down the key. If the keystroke is held long enough, multiple messages are sent. However, the repeat count is not cumulative.|  
-|[in] `nFlags`|Flags that specify the scan code, extended key, context code, previous key state, and transition state, as shown in the following table:<br /><br /> **0-7:** Specifies the scan code. The value depends on the original equipment manufacturer (OEM).<br /><br /> **8:** Specifies an extended key, such as the right-hand ALT and CTRL keys that appear on an enhanced 101 or 102-key keyboard. The flag is 1 if the key is an extended key; otherwise, it is 0.<br /><br /> **9-12:**  Used internally by Windows.<br /><br /> **13:**  Specifies the context code. The flag is 1 if the ALT key is held down while the key is pressed; otherwise, the value is 0.<br /><br /> **14:**  Specifies the previous key state. The flag is 1 if the key is down before the message is sent, or 0 if the key is up.<br /><br /> **15:**  Specifies the transition state. The flag is 1 if the key is being released, or 0 if the key is being pressed.|  
+|[in] `nChar`|指定按下的键的字符代码。|  
+|[in] `nRepCnt`|指定当前消息的重复计数。 值是击键是因为用户按住键 autorepeated 次数。 如果击键会保留足够长，将发送多条消息。 但是，重复计数不是累积的。|  
+|[in] `nFlags`|下表中所示指定扫描代码、 扩展的密钥、 上下文代码、 以前的密钥状态和转换状态的标志︰<br /><br /> **0-7:**指定扫描代码。 值取决于原始设备制造商 (OEM)。<br /><br /> **8:**指定扩展的密钥，如在增强型 101 或 102 键键盘显示的右侧 ALT 和 CTRL 键。 标志为 1，如果密钥是扩展的密钥;否则，则为 0。<br /><br /> **9-12:**由 Windows 在内部使用。<br /><br /> **13:**指定上下文的代码。 标志为 1，如果当按下键; ALT 键并按住否则，值为 0。<br /><br /> **14:**指定以前的密钥状态。 如果密钥为向上，标志是如果密钥已关闭之前将消息发送，则为 1 或 0。<br /><br /> **15:**指定的转换状态。 标志是如果正在释放键，则为 1 或 0，如果按下了键。|  
   
-### Remarks  
- This method receives the [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. The [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288) message is designed to send or post Unicode characters to ANSI windows. It is equivalent to the [WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276) message, but uses Unicode Transformation Format-32 encoding (UTF-32), whereas the [WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276) message uses UTF-16.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)消息旨在发送或发布到 ANSI windows 的 Unicode 字符。 它相当于[WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)消息，但使用 Unicode 转换格式-32 编码 (utf-32)，而[WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)消息使用 utf-16。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onuninitmenupopup"></a>  CWnd::OnUnInitMenuPopup  
- The framework calls this member function when a drop-down menu or submenu has been destroyed.  
+##  <a name="onuninitmenupopup"></a>CWnd::OnUnInitMenuPopup  
+ 框架调用此成员函数时的下拉列表菜单或子菜单已销毁。  
   
 ```  
-afx_msg void OnUnInitMenuPopup (CMenu * pPopupMenu，   
+afx_msg void OnUnInitMenuPopup(
+    CMenu* pPopupMenu,   
     UINT nFlags);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `pMenu`|Pointer to the [CMenu](../../mfc/reference/cmenu-class.md) object that represents the menu or submenu.|  
-|[in] `nFlags`|The menu that was destroyed. Currently, it can only be the window menu, `MF_SYSMENU`.|  
+|[in] `pMenu`|指向[CMenu](../../mfc/reference/cmenu-class.md)表示菜单或子菜单的对象。|  
+|[in] `nFlags`|已被销毁，菜单。 目前，它只能是窗口菜单中， `MF_SYSMENU`。|  
   
-### Remarks  
- This method receives the [WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- Called to to change the user interface (UI) state for the specified window and all its child windows.  
+##  <a name="onupdateuistate"></a>CWnd::OnUpdateUIState  
+ 调用以更改指定的窗口及其所有子窗口的用户界面 (UI) 状态。  
   
 ```  
-afx_msg void OnUpdateUIState （UINT n 操作，  
+afx_msg void OnUpdateUIState(
+    UINT nAction,  
     UINT nUIElement);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nAction`  
- Specifies the action to be performed. Can be one of the following values:  
+ 指定要执行的操作。 可以是以下值之一：  
   
-- **UIS_CLEAR** The UI state element (specified by `nUIElement`) should be hidden.  
+- **UIS_CLEAR**的 UI 状态元素 (通过指定`nUIElement`) 应被隐藏。  
   
-- **UIS_INITIALIZE** The UI state element (specified by `nUIElement`) should be changed based on the last input event. For more information, see the **Remarks** section of [WM_UPDATEISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361).  
+- **UIS_INITIALIZE**的 UI 状态元素 (通过指定`nUIElement`) 应根据输入的最后一个事件来更改。 有关详细信息，请参阅**备注**部分[WM_UPDATEISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361)。  
   
-- **UIS_SET** The UI state element (specified by `nUIElement`) should be visible.  
+- **UIS_SET**的 UI 状态元素 (通过指定`nUIElement`) 应是可见的。  
   
  `nUIElement`  
- Specifies which UI state elements are affected or the style of the control. Can be one of the following values:  
+ 指定将影响哪些 UI 状态元素或控件的样式。 可以是以下值之一：  
   
-- **UISF_HIDEACCEL** Keyboard accelerators.  
+- **UISF_HIDEACCEL**键盘快捷键。  
   
-- **UISF_HIDEFOCUS** Focus indicators.  
+- **UISF_HIDEFOCUS**专注指示器。  
   
-- **UISF_ACTIVE Windows XP:** A control should be drawn in the style used for active controls.  
+- **UISF_ACTIVE Windows XP:**应放用于活动控件的样式绘制控件。  
   
-### Remarks  
- This member function emulates the functionality of the [WM_UPDATEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361) message, as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟的功能[WM_UPDATEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="onuserchanged"></a>  CWnd::OnUserChanged  
- The framework calls this member for all windows after the user has logged on or off.  
+##  <a name="onuserchanged"></a>CWnd::OnUserChanged  
+ 框架在调用后在用户登录打开或关闭适用于所有 windows 此成员。  
   
 ```  
 afx_msg void OnUserChanged();
 ```  
   
-### Remarks  
- This method receives the [WM_USERCHANGED](http://msdn.microsoft.com/library/windows/desktop/ms632651) notification message, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. When the user logs on or off, the operating system updates user-specific settings. The system sends this message immediately after updating the settings.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_USERCHANGED](http://msdn.microsoft.com/library/windows/desktop/ms632651)中所述的通知消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当用户登录和注销时，操作系统将更新用户特定的设置。 系统更新完设置后立即发送此消息。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onvkeytoitem"></a>  CWnd::OnVKeyToItem  
- If the `CWnd` object owns a list box with the [LBS_WANTKEYBOARDINPUT](../../mfc/reference/list-box-styles.md) style, the list box will send the `WM_VKEYTOITEM` message in response to a `WM_KEYDOWN` message.  
+##  <a name="onvkeytoitem"></a>CWnd::OnVKeyToItem  
+ 如果`CWnd`对象拥有在列表框中[LBS_WANTKEYBOARDINPUT](../../mfc/reference/list-box-styles.md)样式，列表框中将发送`WM_VKEYTOITEM`消息以响应`WM_KEYDOWN`消息。  
   
 ```  
-afx_msg int OnVKeyToItem (UINT nKey，  
-    CListBox * pListBox，  
+afx_msg int OnVKeyToItem(
+    UINT nKey,  
+    CListBox* pListBox,  
     UINT nIndex);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nKey`  
- Specifies the virtual key code of the key that the user pressed. For a list of of standard virtual key codes, see Winuser.h  
+ 指定用户按下的键的虚拟键代码。 有关标准虚拟键代码的列表，请参见 Winuser.h  
   
  `pListBox`  
- Specifies a pointer to the list box. The pointer may be temporary and should not be stored for later use.  
+ 指定指向列表框中的指针。 该指针可能是暂时的，不应存储起来供将来使用。  
   
  `nIndex`  
- Specifies the current caret position.  
+ 指定当前插入符号位置。  
   
-### Return Value  
- Specifies the action that the application performed in response to the message. A return value of –2 indicates that the application handled all aspects of selecting the item and requires no further action by the list box. A return value of –1 indicates that the list box should perform the default action in response to the keystroke. A return value of 0 or greater specifies the zero-based index of an item in the list box and indicates that the list box should perform the default action for the keystroke on the given item.  
+### <a name="return-value"></a>返回值  
+ 指定在响应消息中的应用程序执行的操作。 返回值 – 2 指示应用程序处理的选择项的所有方面，并需要由列表框中的任何进一步的操作。 返回值 – 1 指示列表框在击键响应中应执行默认操作。 返回值 0 或更高版本的列表框中指定项的从零开始的索引，并指明列表框中，应在给定的项键击执行默认操作。  
   
-### Remarks  
- This member function is called by the framework only for list boxes that have the [LBS_HASSTRINGS](../../mfc/reference/list-box-styles.md) style.  
+### <a name="remarks"></a>备注  
+ 此成员函数调用仅有的列表框的框架[LBS_HASSTRINGS](../../mfc/reference/list-box-styles.md)样式。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onvscroll"></a>  CWnd::OnVScroll  
- The framework calls this member function when the user clicks the window's vertical scroll bar.  
+##  <a name="onvscroll"></a>CWnd::OnVScroll  
+ 当用户单击窗口的垂直滚动条，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnVScroll (UINT nSBCode，  
-    UINT nPos  
+afx_msg void OnVScroll(
+    UINT nSBCode,  
+    UINT nPos,  
     CScrollBar* pScrollBar);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nSBCode`  
- Specifies a scroll-bar code that indicates the user's scrolling request. This parameter can be one of the following:  
+ 指定指示的用户的滚动条代码的滚动请求。 此参数可以是以下项之一︰  
   
-- **SB_BOTTOM** Scroll to bottom.  
+- **SB_BOTTOM**滚动到底部。  
   
-- **SB_ENDSCROLL** End scroll.  
+- **SB_ENDSCROLL**结束滚动。  
   
-- **SB_LINEDOWN** Scroll one line down.  
+- **SB_LINEDOWN**向下滚动一行。  
   
-- **SB_LINEUP** Scroll one line up.  
+- **SB_LINEUP**向上滚动一行。  
   
-- **SB_PAGEDOWN** Scroll one page down.  
+- **SB_PAGEDOWN**向下滚动一页。  
   
-- **SB_PAGEUP** Scroll one page up.  
+- **SB_PAGEUP**向上滚动一页。  
   
-- **SB_THUMBPOSITION** Scroll to the absolute position. The current position is provided in `nPos`.  
+- **SB_THUMBPOSITION**滚动到的绝对位置。 中提供当前位置`nPos`。  
   
-- **SB_THUMBTRACK** Drag scroll box to specified position. The current position is provided in `nPos`.  
+- **SB_THUMBTRACK**拖到指定位置的滚动框。 中提供当前位置`nPos`。  
   
-- **SB_TOP** Scroll to top.  
+- **SB_TOP**滚动到顶部。  
   
  `nPos`  
- Contains the current scroll-box position if the scroll-bar code is **SB_THUMBPOSITION** or **SB_THUMBTRACK**; otherwise not used. Depending on the initial scroll range, `nPos` may be negative and should be cast to an `int` if necessary.  
+ 滚动条代码是否包含滚动框的当前位置**SB_THUMBPOSITION**或**SB_THUMBTRACK**; 否则为未使用。 具体取决于初始滚动范围，`nPos`可以是负数，并且应强制转换为`int`如有必要。  
   
  `pScrollBar`  
- If the scroll message came from a scroll-bar control, contains a pointer to the control. If the user clicked a window's scroll bar, this parameter is **NULL**. The pointer may be temporary and should not be stored for later use.  
+ 如果滚动消息所来自的滚动条控件，包含控件的指针。 如果用户单击窗口的滚动条，此参数是**NULL**。 该指针可能是暂时的，不应存储起来供将来使用。  
   
-### Remarks  
- `OnVScroll` typically is used by applications that give some feedback while the scroll box is being dragged.  
+### <a name="remarks"></a>备注  
+ `OnVScroll`通常使用的应用程序进行拖动滚动框时，提供一些反馈。  
   
- If `OnVScroll` scrolls the contents of the `CWnd` object, it must also reset the position of the scroll box with the [SetScrollPos](#setscrollpos) member function.  
+ 如果`OnVScroll`滚动的内容`CWnd`对象，它还必须重置具有的滚动框的位置[SetScrollPos](#setscrollpos)成员函数。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onvscrollclipboard"></a>  CWnd::OnVScrollClipboard  
- The Clipboard owner's `OnVScrollClipboard` member function is called by the Clipboard viewer when the Clipboard data has the `CF_OWNERDISPLAY` format and there is an event in the Clipboard viewer's vertical scroll bar.  
+##  <a name="onvscrollclipboard"></a>CWnd::OnVScrollClipboard  
+ 剪贴板所有者`OnVScrollClipboard`成员函数调用由剪贴板查看器，当剪贴板数据具有`CF_OWNERDISPLAY`格式，并且剪贴板查看器的垂直滚动条中没有一个事件。  
   
 ```  
-afx_msg void OnVScrollClipboard (CWnd * pClipAppWnd，  
-    UINT nSBCode  
+afx_msg void OnVScrollClipboard(
+    CWnd* pClipAppWnd,  
+    UINT nSBCode,  
     UINT nPos);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pClipAppWnd`  
- Specifies a pointer to a Clipboard-viewer window. The pointer may be temporary and should not be stored for later use.  
+ 指定指向剪贴板查看器窗口的指针。 该指针可能是暂时的，不应存储起来供将来使用。  
   
  `nSBCode`  
- Specifies one of the following scroll-bar values:  
+ 指定以下的滚动条值之一︰  
   
-- **SB_BOTTOM** Scroll to bottom.  
+- **SB_BOTTOM**滚动到底部。  
   
-- **SB_ENDSCROLL** End scroll.  
+- **SB_ENDSCROLL**结束滚动。  
   
-- **SB_LINEDOWN** Scroll one line down.  
+- **SB_LINEDOWN**向下滚动一行。  
   
-- **SB_LINEUP** Scroll one line up.  
+- **SB_LINEUP**向上滚动一行。  
   
-- **SB_PAGEDOWN** Scroll one page down.  
+- **SB_PAGEDOWN**向下滚动一页。  
   
-- **SB_PAGEUP** Scroll one page up.  
+- **SB_PAGEUP**向上滚动一页。  
   
-- **SB_THUMBPOSITION** Scroll to the absolute position. The current position is provided in `nPos`.  
+- **SB_THUMBPOSITION**滚动到的绝对位置。 中提供当前位置`nPos`。  
   
-- **SB_TOP** Scroll to top.  
+- **SB_TOP**滚动到顶部。  
   
  `nPos`  
- Contains the scroll-box position if the scroll-bar code is **SB_THUMBPOSITION**; otherwise `nPos` is not used.  
+ 如果滚动条代码包含的滚动框位置**SB_THUMBPOSITION**; 否则为`nPos`未使用。  
   
-### Remarks  
- The owner should scroll the Clipboard image, invalidate the appropriate section, and update the scroll-bar values.  
+### <a name="remarks"></a>备注  
+ 所有者应滚动剪贴板图像、 使相应部分失效以及更新滚动条值。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onwindowmaximizedchanged"></a>  CWnd::OnWindowMaximizedChanged  
- The framework calls this member when the current window is maximized, and the window is composed by the Desktop Window Manager (DWM).  
+##  <a name="onwindowmaximizedchanged"></a>CWnd::OnWindowMaximizedChanged  
+ 当前窗口最大化时，和窗口由桌面窗口管理器 (DWM) 时，框架会调用此成员。  
   
 ```  
-afx_msg void OnWindowMaximizedChanged (BOOL bIsMaximized);
+afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `bIsMaximized`|`true` if the current window is maximized, and `false` if it is not.|  
+|[in] `bIsMaximized`|`true`如果当前窗口已最大化，和`false`如果它不是。|  
   
-### Remarks  
- This method receives the [WM_DWMWINDOWMAXIMIZEDCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd388201) notification message, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_DWMWINDOWMAXIMIZEDCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd388201)中所述的通知消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged  
- The framework calls this member function when the size, position, or Z-order has changed as a result of a call to the [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) member function or another window-management function.  
+##  <a name="onwindowposchanged"></a>CWnd::OnWindowPosChanged  
+ 框架在大小、 位置或 Z 顺序已因调用而更改时调用此成员函数[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)成员函数或另一个窗口管理函数。  
   
 ```  
-afx_msg void OnWindowPosChanged (WINDOWPOS * lpwndpos);
+afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpwndpos`  
- Points to a [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) data structure that contains information about the window's new size and position.  
+ 指向[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)数据结构，其中包含有关窗口的新的大小和位置信息。  
   
-### Remarks  
- The default implementation sends the [WM_SIZE](http://msdn.microsoft.com/library/windows/desktop/ms632646) and [WM_MOVE](http://msdn.microsoft.com/library/windows/desktop/ms632631) messages to the window. These messages are not sent if an application handles the `OnWindowPosChanged` call without calling its base class. It is more efficient to perform any move or size change processing during the call to `OnWindowPosChanged` without calling its base class.  
+### <a name="remarks"></a>备注  
+ 默认实现将发送[WM_SIZE](http://msdn.microsoft.com/library/windows/desktop/ms632646)和[WM_MOVE](http://msdn.microsoft.com/library/windows/desktop/ms632631)到窗口的消息。 如果应用程序处理，不会发送这些消息`OnWindowPosChanged`而不会调用其基类调用。 更高效，执行任何移动或大小更改处理期间调用`OnWindowPosChanged`而不会调用其基类。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging  
- The framework calls this member function when the size, position, or Z-order is about to change as a result of a call to the [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) member function or another window-management function.  
+##  <a name="onwindowposchanging"></a>CWnd::OnWindowPosChanging  
+ 当大小、 位置或 Z 顺序即将会因调用而更改时，框架会调用此成员函数[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)成员函数或另一个窗口管理函数。  
   
 ```  
-afx_msg void OnWindowPosChanging (WINDOWPOS * lpwndpos);
+afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpwndpos`  
- Points to a `WINDOWPOS` data structure that contains information about the window's new size and position.  
+ 指向`WINDOWPOS`数据结构，其中包含有关窗口的新的大小和位置信息。  
   
-### Remarks  
- An application can prevent changes to the window by setting or clearing the appropriate bits in the **flags** member of the [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) structure.  
+### <a name="remarks"></a>备注  
+ 应用程序即可避免更改到窗口设置或清除中的相应位**标志**的成员[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)结构。  
   
- For a window with the [WS_OVERLAPPED](../../mfc/reference/window-styles.md) or [WS_THICKFRAME](../../mfc/reference/window-styles.md) style, the default implementation sends a [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) message to the window. This is done to validate the new size and position of the window and to enforce the **CS_BYTEALIGNCLIENT** and **CS_BYTEALIGN** client styles. An application can override this functionality by not calling its base class.  
+ 使用窗口[WS_OVERLAPPED](../../mfc/reference/window-styles.md)或[WS_THICKFRAME](../../mfc/reference/window-styles.md)样式，默认实现将发送[WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626)消息发送到窗口。 这是以验证新的大小和窗口的位置并强制**CS_BYTEALIGNCLIENT**和**CS_BYTEALIGN**客户端样式。 应用程序可以通过不调用其基类重写此功能。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onwininichange"></a>  CWnd::OnWinIniChange  
- The framework calls this member function after a change has been made to the Windows initialization file, WIN.INI.  
+##  <a name="onwininichange"></a>CWnd::OnWinIniChange  
+ 框架调用此成员函数对 Windows 初始化文件，做出更改后 WIN。INI。  
   
 ```  
-afx_msg void OnWinIniChange (LPCTSTR lpszSection);
+afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpszSection`  
- Points to a string that specifies the name of the section that has changed. (The string does not include the square brackets that enclose the section name.)  
+ 指向一个字符串，指定已更改的部分的名称。 （字符串不包含方括号将括起来的节名称）。  
   
-### Remarks  
- The [SystemParametersInfo](http://msdn.microsoft.com/library/windows/desktop/ms724947) Windows function calls `OnWinIniChange` after an application uses the function to change a setting in the WIN.INI file.  
+### <a name="remarks"></a>备注  
+ [SystemParametersInfo](http://msdn.microsoft.com/library/windows/desktop/ms724947) Windows 函数调用`OnWinIniChange`应用程序使用函数更改 WIN 中的设置后。INI 文件。  
   
- To send the `WM_WININICHANGE` message to all top-level windows, an application can use the [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows function with its *hwnd* parameter set to **HWND_BROADCAST**.  
+ 若要发送`WM_WININICHANGE`消息向所有顶级窗口，应用程序可以使用[SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 函数替换其*hwnd*参数设置为**HWND_BROADCAST**。  
   
- If an application changes many different sections in WIN.INI at the same time, the application should send one `WM_WININICHANGE` message with `lpszSection` set to **NULL**. Otherwise, an application should send `WM_WININICHANGE` each time it makes a change to WIN.INI.  
+ 如果应用程序更改中的许多不同部分 WIN。在同一时间 INI，该应用程序应发送一个`WM_WININICHANGE`消息`lpszSection`设置为**NULL**。 否则，应用程序应将发送`WM_WININICHANGE`每次它对 WIN 做了更改。INI。  
   
- If an application receives an `OnWinIniChange` call with `lpszSection` set to **NULL**, the application should check all sections in WIN.INI that affect the application.  
+ 如果应用程序收到`OnWinIniChange`调用`lpszSection`设置为**NULL**，应用程序应检查 WIN 中的所有部分。影响应用程序的 INI。  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onwndmsg"></a>  CWnd::OnWndMsg  
- This member function is called by `WindowProc`, or is called during message reflection.  
+##  <a name="onwndmsg"></a>CWnd::OnWndMsg  
+ 此成员函数调用`WindowProc`，或在消息反射过程中调用。  
   
 ```  
-虚拟 BOOL OnWndMsg （UINT 消息、  
-    WPARAM wParam，  
-    LPARAM lParam  
+virtual BOOL OnWndMsg(
+    UINT message,  
+    WPARAM wParam,  
+    LPARAM lParam,  
     LRESULT* pResult);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `message`  
- Specifies the message to be sent.  
+ 指定要发送的消息。  
   
  `wParam`  
- Specifies additional message-dependent information.  
+ 指定消息相关的其他信息。  
   
  `lParam`  
- Specifies additional message-dependent information.  
+ 指定消息相关的其他信息。  
   
  `pResult`  
- The return value of [WindowProc](#windowproc). Depends on the message; may be **NULL**.  
+ 返回值[WindowProc](#windowproc)。 取决于消息;可能是**NULL**。  
   
-### Return Value  
- **TRUE** if message was handled; otherwise **FALSE**.  
+### <a name="return-value"></a>返回值  
+ **TRUE**如果消息已处理; 否则为**FALSE**。  
   
-### Remarks  
- `OnWndMsg` determines the message type and either calls the appropriate framework function (for example, [OnCommand](#oncommand) for **WM_COMMAND**) or finds the appropriate message in the message map.  
+### <a name="remarks"></a>备注  
+ `OnWndMsg`确定消息类型和任一调用合适的框架函数 (例如， [OnCommand](#oncommand)为**WM_COMMAND**) 或在消息映射中查找适当的消息。  
   
- For more information about message reflection, see [Handling Reflected Messages](../../mfc/handling-reflected-messages.md).  
+ 有关消息反射的详细信息，请参阅[处理反射消息](../../mfc/handling-reflected-messages.md)。  
   
-##  <a name="onxbuttondblclk"></a>  CWnd::OnXButtonDblClk  
- The framework calls this member function when the user double-clicks XBUTTON1 or XBUTTON2 while the cursor is in the client area of a window.  
+##  <a name="onxbuttondblclk"></a>CWnd::OnXButtonDblClk  
+ 当用户双击 XBUTTON1 或 XBUTTON2 时光标位于窗口工作区中，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnXButtonDblClk (UINT nFlags，   
-    UINT nButton   
-    CPoint 磅）;
+afx_msg void OnXButtonDblClk(
+    UINT nFlags,   
+    UINT nButton,   
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nFlags`|A bitwise combination (OR) of flags that indicate which modifier keys are pressed. For example, the `MK_CONTROL` flag indicates that the CTRL key is pressed.|  
-|[in] `nButton`|A value of `XBUTTON1` if the first Microsoft Intellimouse X button is double-clicked, or `XBUTTON2` if the second X button is double-clicked.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the client area.|  
+|[in] `nFlags`|指示哪个修改键被按下标志的按位组合 (OR)。 例如，`MK_CONTROL`标志指示按下 CTRL 键。|  
+|[in] `nButton`|值为`XBUTTON1`双击，第一个 Microsoft 缩放 X 按钮是否或`XBUTTON2`如果第二个 X 按钮是双击。|  
+|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于客户端区域的左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如果没有捕获鼠标，则会将消息发布到窗口中光标下。 否则，将消息发布到已捕获鼠标的窗口中。  
   
- The `nFlags` parameter can be a combination of modifier keys listed in the following table. For more information, see [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ `nFlags`参数可以为下表中列出的修改键的组合。 有关详细信息，请参阅[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
   
-|Modifier Key|Description|  
+|修改键|描述|  
 |------------------|-----------------|  
-|MK_CONTROL|The CTRL key is pressed.|  
-|MK_LBUTTON|The left mouse button is pressed.|  
-|MK_MBUTTON|The middle mouse button is pressed.|  
-|MK_RBUTTON|The right mouse button is pressed.|  
-|MK_SHIFT|The SHIFT key is pressed.|  
-|MK_XBUTTON1|The XBUTTON1 mouse button of the Microsoft IntelliMouse is pressed.|  
-|MK_XBUTTON2|The XBUTTON2 mouse button of the Microsoft IntelliMouse is pressed.|  
+|MK_CONTROL|按下 CTRL 键。|  
+|MK_LBUTTON|按下鼠标左键。|  
+|MK_MBUTTON|按下鼠标按钮。|  
+|MK_RBUTTON|按下鼠标右键按钮。|  
+|MK_SHIFT|按下 SHIFT 键。|  
+|MK_XBUTTON1|按下 Microsoft 智能鼠标的 XBUTTON1 鼠标按钮。|  
+|MK_XBUTTON2|按下的 Microsoft 智能鼠标 XBUTTON2 鼠标按钮。|  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onxbuttondown"></a>  CWnd::OnXButtonDown  
- The framework calls this member function when the user presses XBUTTON1 or XBUTTON2 while the cursor is in the client area of a window.  
+##  <a name="onxbuttondown"></a>CWnd::OnXButtonDown  
+ 当用户按下 XBUTTON1 或 XBUTTON2 光标位于窗口工作区中，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnXButtonDown (UINT nFlags，   
-    UINT nButton   
-    CPoint 磅）;
+afx_msg void OnXButtonDown(
+    UINT nFlags,   
+    UINT nButton,   
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nFlags`|A bitwise combination (OR) of flags that indicate which modifier keys are pressed. For example, the `MK_CONTROL` flag indicates that the CTRL key is pressed.|  
-|[in] `nButton`|A value of `XBUTTON1` if the first Microsoft Intellimouse X button was clicked, or `XBUTTON2` if the second X button was clicked.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the client area.|  
+|[in] `nFlags`|指示哪个修改键被按下标志的按位组合 (OR)。 例如，`MK_CONTROL`标志指示按下 CTRL 键。|  
+|[in] `nButton`|值为`XBUTTON1`如果单击第一个 Microsoft 缩放 X 按钮或`XBUTTON2`如果第二个 X 按钮被单击。|  
+|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于客户端区域的左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_XBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646245) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_XBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646245)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如果没有捕获鼠标，则会将消息发布到窗口中光标下。 否则，将消息发布到已捕获鼠标的窗口中。  
   
- The `nFlags` parameter can be a combination of modifier keys listed in the following table. For more information, see [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ `nFlags`参数可以为下表中列出的修改键的组合。 有关详细信息，请参阅[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
   
-|Modifier Key|Description|  
+|修改键|描述|  
 |------------------|-----------------|  
-|MK_CONTROL|The CTRL key is pressed.|  
-|MK_LBUTTON|The left mouse button is pressed.|  
-|MK_MBUTTON|The middle mouse button is pressed.|  
-|MK_RBUTTON|The right mouse button is pressed.|  
-|MK_SHIFT|The SHIFT key is pressed.|  
-|MK_XBUTTON1|The XBUTTON1 mouse button of the Microsoft IntelliMouse is pressed.|  
-|MK_XBUTTON2|The XBUTTON2 mouse button of the Microsoft IntelliMouse is pressed.|  
+|MK_CONTROL|按下 CTRL 键。|  
+|MK_LBUTTON|按下鼠标左键。|  
+|MK_MBUTTON|按下鼠标按钮。|  
+|MK_RBUTTON|按下鼠标右键按钮。|  
+|MK_SHIFT|按下 SHIFT 键。|  
+|MK_XBUTTON1|按下 Microsoft 智能鼠标的 XBUTTON1 鼠标按钮。|  
+|MK_XBUTTON2|按下的 Microsoft 智能鼠标 XBUTTON2 鼠标按钮。|  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="onxbuttonup"></a>  CWnd::OnXButtonUp  
- The framework calls this member function when the user releases XBUTTON1 or XBUTTON2 while the cursor is in the client area of a window.  
+##  <a name="onxbuttonup"></a>CWnd::OnXButtonUp  
+ 当用户释放 XBUTTON1 或 XBUTTON2 在光标位于窗口的客户端区域中时，框架将调用此成员函数。  
   
 ```  
-afx_msg void OnXButtonUp (UINT nFlags，   
-    UINT nButton   
-    CPoint 磅）;
+afx_msg void OnXButtonUp(
+    UINT nFlags,   
+    UINT nButton,   
+    CPoint point);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
   
-|Parameter|Description|  
+|参数|说明|  
 |---------------|-----------------|  
-|[in] `nFlags`|A bitwise combination (OR) of flags that indicate which modifier keys are pressed. For example, the `MK_CONTROL` flag indicates that the CTRL key is pressed.|  
-|[in] `nButton`|A value of `XBUTTON1` if the first Microsoft Intellimouse X button was double-clicked, or `XBUTTON2` if the second X button was double-clicked.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that specifies the *x* and *y* coordinates of the cursor relative to the upper-left corner of the client area.|  
+|[in] `nFlags`|指示哪个修改键被按下标志的按位组合 (OR)。 例如，`MK_CONTROL`标志指示按下 CTRL 键。|  
+|[in] `nButton`|值为`XBUTTON1`双击，第一个 Microsoft 缩放 X 按钮是否或`XBUTTON2`如果第二个 X 按钮被单击。|  
+|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象，它指定*x*和*y*光标相对于客户端区域的左上角的坐标。|  
   
-### Remarks  
- This method receives the [WM_XBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646246) notification, which is described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. If the mouse is not captured, the message is posted to the window beneath the cursor. Otherwise, the message is posted to the window that has captured the mouse.  
+### <a name="remarks"></a>备注  
+ 此方法接收[WM_XBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646246)通知中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如果没有捕获鼠标，则会将消息发布到窗口中光标下。 否则，将消息发布到已捕获鼠标的窗口中。  
   
- The `nFlags` parameter can be a combination of modifier keys listed in the following table. For more information, see [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ `nFlags`参数可以为下表中列出的修改键的组合。 有关详细信息，请参阅[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
   
-|Modifier Key|Description|  
+|修改键|描述|  
 |------------------|-----------------|  
-|MK_CONTROL|The CTRL key is pressed.|  
-|MK_LBUTTON|The left mouse button is pressed.|  
-|MK_MBUTTON|The middle mouse button is pressed.|  
-|MK_RBUTTON|The right mouse button is pressed.|  
-|MK_SHIFT|The SHIFT key is pressed.|  
-|MK_XBUTTON1|The XBUTTON1 mouse button of the Microsoft IntelliMouse is pressed.|  
-|MK_XBUTTON2|The XBUTTON2 mouse button of the Microsoft IntelliMouse is pressed.|  
+|MK_CONTROL|按下 CTRL 键。|  
+|MK_LBUTTON|按下鼠标左键。|  
+|MK_MBUTTON|按下鼠标按钮。|  
+|MK_RBUTTON|按下鼠标右键按钮。|  
+|MK_SHIFT|按下 SHIFT 键。|  
+|MK_XBUTTON1|按下 Microsoft 智能鼠标的 XBUTTON1 鼠标按钮。|  
+|MK_XBUTTON2|按下的 Microsoft 智能鼠标 XBUTTON2 鼠标按钮。|  
   
 > [!NOTE]
->  This member function is called by the framework to allow your application to handle a Windows message. The parameters passed to your function reflect the parameters received by the framework when the message was received. If you call the base-class implementation of this function, that implementation will use the parameters originally passed with the message and not the parameters you supply to the function.  
+>  框架调用此成员函数来支持你的应用程序处理 Windows 消息。 传递到函数的参数反映了收到消息时框架所接收的参数。 如果调用此函数的基类实现，该实现将使用最初随消息传递的参数，而不是你提供给该函数的参数。  
   
-##  <a name="openclipboard"></a>  CWnd::OpenClipboard  
- Opens the Clipboard.  
+##  <a name="openclipboard"></a>CWnd::OpenClipboard  
+ 打开剪贴板。  
   
 ```  
 BOOL OpenClipboard();
 ```  
   
-### Return Value  
- Nonzero if the Clipboard is opened via `CWnd`, or 0 if another application or window has the Clipboard open.  
+### <a name="return-value"></a>返回值  
+ 非零，如果通过打开剪贴板`CWnd`，或如果另一个应用程序或窗口有剪贴板 0 打开。  
   
-### Remarks  
- Other applications will not be able to modify the Clipboard until the [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Windows function is called.  
+### <a name="remarks"></a>备注  
+ 其他应用程序将不能修改直到剪贴板[CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035)调用 Windows 函数。  
   
- The current `CWnd` object will not become the owner of the Clipboard until the [EmptyClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649037) Windows function is called.  
+ 当前`CWnd`对象不会成为直到剪贴板所有者[EmptyClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649037)调用 Windows 函数。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#111](../../mfc/reference/codesnippet/cpp/cwnd-class_52.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 111](../../mfc/reference/codesnippet/cpp/cwnd-class_52.cpp)]  
   
-##  <a name="operator_hwnd"></a>  CWnd::operator HWND  
- Use this operator to get the handle to the `CWnd` object.  
-  
-```  
-运算符 HWND() const;  
-```  
-  
-##  <a name="operator_neq"></a>  CWnd::operator !=  
- Compares two `CWnd` objects to determine if they do not have the same [m_hWnd](#m_hwnd).  
+##  <a name="operator_hwnd"></a>CWnd::operator HWND  
+ 使用此运算符来获取的句柄`CWnd`对象。  
   
 ```  
-BOOL 运算符 ！ = （const CWnd & wnd） 常量;  
+operator HWND() const;  
 ```  
   
-### Parameters  
+##  <a name="operator_neq"></a>CWnd::operator ！ =  
+ 比较两个`CWnd`对象以确定是否他们没有相同[m_hWnd](#m_hwnd)。  
+  
+```  
+BOOL operator!=(const CWnd& wnd) const;  
+```  
+  
+### <a name="parameters"></a>参数  
  `wnd`  
- A reference to a `CWnd` object.  
+ 对 `CWnd` 对象的引用。  
   
-### Return Value  
- Nonzero if equal; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 非零，如果相等;否则为 0。  
   
-##  <a name="operator_eq_eq"></a>  CWnd::operator ==  
- Compares two `CWnd` objects to determine if they have the same [m_hWnd](#m_hwnd).  
+##  <a name="operator_eq_eq"></a>CWnd::operator = =  
+ 比较两个`CWnd`对象以确定它们是否具有相同[m_hWnd](#m_hwnd)。  
   
 ```  
-BOOL 运算符 = = （const CWnd & wnd） const;  
+BOOL operator==(const CWnd& wnd) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `wnd`  
- A reference to a `CWnd` object.  
+ 对 `CWnd` 对象的引用。  
   
-### Return Value  
- Nonzero if equal; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 非零，如果相等;否则为 0。  
   
-##  <a name="paintwindowlesscontrols"></a>  CWnd::PaintWindowlessControls  
- Draws windowless controls on the control container.  
+##  <a name="paintwindowlesscontrols"></a>CWnd::PaintWindowlessControls  
+ 在控件容器上绘制无窗口控件。  
   
 ```  
 BOOL PaintWindowlessControls(CDC* pDC);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- The device context on which to draw the windowless controls.  
+ 在其上绘制无窗口控件设备上下文。  
   
-### Return Value  
- Returns TRUE if there is a control container and the windowless controls are drawn successfully, otherwise FALSE.  
+### <a name="return-value"></a>返回值  
+ 返回 TRUE，如果没有控件容器与无窗口控件所绘制成功，否则为 FALSE。  
   
-##  <a name="postmessage"></a>  CWnd::PostMessage  
- Places a message in the window's message queue and then returns without waiting for the corresponding window to process the message.  
+##  <a name="postmessage"></a>CWnd::PostMessage  
+ 将一条消息放在窗口的消息队列，然后返回而不等待相应的窗口来处理该消息。  
   
 ```  
-BOOL PostMessage （UINT 消息、  
-    WPARAM wParam = 0，  
+BOOL PostMessage(
+    UINT message,  
+    WPARAM wParam = 0,  
     LPARAM lParam = 0);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `message`  
- Specifies the message to be posted.  
+ 指定要发布的消息。  
   
  `wParam`  
- Specifies additional message information. The content of this parameter depends on the message being posted.  
+ 指定其他消息信息。 此参数的内容取决于正在发布的消息。  
   
  `lParam`  
- Specifies additional message information. The content of this parameter depends on the message being posted.  
+ 指定其他消息信息。 此参数的内容取决于正在发布的消息。  
   
-### Return Value  
- Nonzero if the message is posted; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果发布消息; 非零否则为 0。  
   
-### Remarks  
- Messages in a message queue are retrieved by calls to the [GetMessage](http://msdn.microsoft.com/library/windows/desktop/ms644936) or [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Windows function.  
+### <a name="remarks"></a>备注  
+ 消息队列中检索通过调用[GetMessage](http://msdn.microsoft.com/library/windows/desktop/ms644936)或[PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Windows 函数。  
   
- The Windows [PostMessage](http://msdn.microsoft.com/library/windows/desktop/ms644944) function can be used to access another application.  
+ Windows [PostMessage](http://msdn.microsoft.com/library/windows/desktop/ms644944)函数可用来访问另一个应用程序。  
   
-### Example  
-  See the example for [AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd).  
+### <a name="example"></a>示例  
+  请参阅示例[AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)。  
   
-##  <a name="postncdestroy"></a>  CWnd::PostNcDestroy  
- Called by the default [OnNcDestroy](#onncdestroy) member function after the window has been destroyed.  
-  
-```  
-虚拟 void PostNcDestroy();
-```  
-  
-### Remarks  
- Derived classes can use this function for custom cleanup such as the deletion of the **this** pointer.  
-  
-##  <a name="precreatewindow"></a>  CWnd::PreCreateWindow  
- Called by the framework before the creation of the Windows window attached to this `CWnd` object.  
+##  <a name="postncdestroy"></a>CWnd::PostNcDestroy  
+ 默认情况下调用[OnNcDestroy](#onncdestroy)成员函数在窗口已销毁之后。  
   
 ```  
-虚拟 BOOL PreCreateWindow(CREATESTRUCT& cs);
+virtual void PostNcDestroy();
 ```  
   
-### Parameters  
+### <a name="remarks"></a>备注  
+ 派生的类可以使用此函数，如删除了自定义清理来**这**指针。  
+  
+##  <a name="precreatewindow"></a>CWnd::PreCreateWindow  
+ 由框架创建附加到此 Windows 窗口之前调用`CWnd`对象。  
+  
+```  
+virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+```  
+  
+### <a name="parameters"></a>参数  
  *cs*  
- A [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) structure.  
+ A [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)结构。  
   
-### Return Value  
- Nonzero if the window creation should continue; 0 to indicate creation failure.  
+### <a name="return-value"></a>返回值  
+ 如果应继续窗口创建; 则为非 00，以指示创建失败。  
   
-### Remarks  
+### <a name="remarks"></a>备注  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow` now assigns the hMenu member of `cs` to the `this` pointer if the menu is `NULL` and the style contains `WS_CHILD`. For proper functionality, ensure that your dialog control has an ID that is not `NULL`.  
+> `CWnd::PreCreateWindow`现在将分配的 hMenu 成员`cs`到`this`指针如果菜单是`NULL`和样式包含`WS_CHILD`。 是否能正常运行，请确保对话框控件具有 ID 不是`NULL`。  
 >   
->  This change fixes a crash in managed/native interop scenarios. A `TRACE` statement in `CWnd::Create` alerts the developer of the problem.  
+>  在托管/本机互操作方案中，此项更改修复了崩溃。 A`TRACE`中的语句`CWnd::Create`警报问题的开发人员。  
   
- Never call this function directly.  
+ 永远不会直接调用此函数。  
   
- The default implementation of this function checks for a **NULL** window class name and substitutes an appropriate default. Override this member function to modify the `CREATESTRUCT` structure before the window is created.  
+ 此函数的默认实现检查**NULL**窗口类名称，将相应的默认值。 重写该成员函数以修改`CREATESTRUCT`结构创建窗口。  
   
- Each class derived from `CWnd` adds its own functionality to its override of `PreCreateWindow`. By design, these derivations of `PreCreateWindow` are not documented. To determine the styles appropriate to each class and the interdependencies between the styles, you can examine the MFC source code for your application's base class. If you choose to override **PreCreateWindow,** you can determine whether the styles used in your application's base class provide the functionality you need by using information gathered from the MFC source code.  
+ 每个类派生自`CWnd`将其自身的功能添加到其重写`PreCreateWindow`。 按照设计，这些派生的`PreCreateWindow`未记录。 若要确定适合于每个类和样式之间相互依赖项的样式，可以检查应用程序的基类的 MFC 源代码。 如果你选择覆盖**PreCreateWindow，**可以确定是否使用应用程序的基类中的样式提供你需要通过从 MFC 源代码收集的信息的功能。  
   
- For more information on changing window styles, see the [Changing the Styles of a Window Created by MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
+ 更改窗口样式的详细信息，请参阅[更改 MFC 创建的窗口样式](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
   
-### Example  
- [!code-cpp[NVC_MFCWindowing#112](../../mfc/reference/codesnippet/cpp/cwnd-class_53.cpp)]  
+### <a name="example"></a>示例  
+ [!code-cpp[NVC_MFCWindowing # 112](../../mfc/reference/codesnippet/cpp/cwnd-class_53.cpp)]  
   
-##  <a name="presubclasswindow"></a>  CWnd::PreSubclassWindow  
- This member function is called by the framework to allow other necessary subclassing to occur before the window is subclassed.  
-  
-```  
-虚拟 void PreSubclassWindow();
-```  
-  
-### Remarks  
- Overriding this member function allows for dynamic subclassing of controls. It is an advanced overridable.  
-  
-##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage  
- Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions.  
+##  <a name="presubclasswindow"></a>CWnd::PreSubclassWindow  
+ 由框架，以允许其他必要子类化之前对窗口子类化出现调用此成员函数。  
   
 ```  
-虚拟 BOOL PreTranslateMessage(MSG* pMsg);
+virtual void PreSubclassWindow();
 ```  
   
-### Parameters  
+### <a name="remarks"></a>备注  
+ 重写该成员函数允许动态子类化的控件。 它是一个高级可重写。  
+  
+##  <a name="pretranslatemessage"></a>Cwnd:: Pretranslatemessage  
+ 类使用[CWinApp](../../mfc/reference/cwinapp-class.md)窗口消息进行转换之前被发送到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。  
+  
+```  
+virtual BOOL PreTranslateMessage(MSG* pMsg);
+```  
+  
+### <a name="parameters"></a>参数  
  `pMsg`  
- Points to a [MSG](../../mfc/reference/msg-structure1.md) structure that contains the message to process.  
+ 指向[消息](../../mfc/reference/msg-structure1.md)结构，其中包含要处理的消息。  
   
-### Return Value  
- Nonzero if the message was translated and should not be dispatched; 0 if the message was not translated and should be dispatched.  
+### <a name="return-value"></a>返回值  
+ 如果消息已转换，并且不应将调度; 则为非 0如果消息已不转换，并且应将调度，则为 0。  
   
-##  <a name="print"></a>  CWnd::Print  
- Call this member function to draw the current window in the specified device context, which is most commonly in a printer device context.  
+##  <a name="print"></a>CWnd::Print  
+ 调用此成员函数以绘制当前窗口中的指定的设备上下文，这通常是打印机设备上下文中。  
   
 ```  
-void 打印 (CDC * pDC，  
+void Print(
+    CDC* pDC,  
     DWORD dwFlags) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- A pointer to a device context.  
+ 一个指向设备上下文的指针。  
   
  `dwFlags`  
- Specifies the drawing options. This parameter can be one or more of these flags:  
+ 指定的绘图选项。 此参数可以为一个或多个这些标志︰  
   
-- `PRF_CHECKVISIBLE` Draw the window only if it is visible.  
+- `PRF_CHECKVISIBLE`仅当为可见，则绘制窗口。  
   
-- `PRF_CHILDREN` Draw all visible children windows.  
+- `PRF_CHILDREN`绘制所有可见子窗口。  
   
-- `PRF_CLIENT` Draw the client area of the window.  
+- `PRF_CLIENT`绘制窗口的工作区。  
   
-- `PRF_ERASEBKGND` Erase the background before drawing the window.  
+- `PRF_ERASEBKGND`在绘制窗口之前擦除背景。  
   
-- `PRF_NONCLIENT` Draw the nonclient area of the window.  
+- `PRF_NONCLIENT`绘制窗口的非工作区。  
   
-- `PRF_OWNED` Draw all owned windows.  
+- `PRF_OWNED`绘制所有拥有的 windows。  
   
-### Remarks  
- [CWnd::DefWindowProc](#defwindowproc) function processes this message based on which drawing option is specified:  
+### <a name="remarks"></a>备注  
+ [CWnd::DefWindowProc](#defwindowproc)函数来处理此消息基于指定的绘图选项︰  
   
--   If `PRF_CHECKVISIBLE` is specified and the window is not visible, do nothing.  
+-   如果`PRF_CHECKVISIBLE`指定和窗口不可见，不执行任何操作。  
   
--   If `PRF_NONCLIENT` is specified, draw the nonclient area in the given device context.  
+-   如果`PRF_NONCLIENT`是指定，绘制在给定的设备上下文中的非工作区。  
   
--   If `PRF_ERASEBKGND` is specified, send the window a [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) message.  
+-   如果`PRF_ERASEBKGND`是指定，发送窗口[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息。  
   
--   If `PRF_CLIENT` is specified, send the window a [WM_PRINTCLIENT](http://msdn.microsoft.com/library/windows/desktop/dd145217) message.  
+-   如果`PRF_CLIENT`是指定，发送窗口[WM_PRINTCLIENT](http://msdn.microsoft.com/library/windows/desktop/dd145217)消息。  
   
--   If `PRF_CHILDREN` is set, send each visible child window a [WM_PRINT](http://msdn.microsoft.com/library/windows/desktop/dd145216) message.  
+-   如果`PRF_CHILDREN`设置，则将发送每个可见子窗口[WM_PRINT](http://msdn.microsoft.com/library/windows/desktop/dd145216)消息。  
   
--   If `PRF_OWNED` is set, send each visible owned window a `WM_PRINT` message.  
+-   如果`PRF_OWNED`设置，则将发送每个可见的附属的窗口`WM_PRINT`消息。  
   
-##  <a name="printclient"></a>  CWnd::PrintClient  
- Call this member function to draw any window in the specified device context (usually a printer device context).  
+##  <a name="printclient"></a>CWnd::PrintClient  
+ 调用此成员函数以绘制指定的设备上下文 （通常是打印机设备上下文） 中的任何窗口。  
   
 ```  
-void PrintClient (CDC * pDC，  
+void PrintClient(
+    CDC* pDC,  
     DWORD dwFlags) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- A pointer to a device context.  
+ 一个指向设备上下文的指针。  
   
  `dwFlags`  
- Specifies drawing options. This parameter can be one or more of these flags:  
+ 指定绘图选项。 此参数可以为一个或多个这些标志︰  
   
-- `PRF_CHECKVISIBLE` Draw the window only if it is visible.  
+- `PRF_CHECKVISIBLE`仅当为可见，则绘制窗口。  
   
-- `PRF_CHILDREN` Draw all visible children windows.  
+- `PRF_CHILDREN`绘制所有可见子窗口。  
   
-- `PRF_CLIENT` Draw the client area of the window.  
+- `PRF_CLIENT`绘制窗口的工作区。  
   
-- `PRF_ERASEBKGND` Erase the background before drawing the window.  
+- `PRF_ERASEBKGND`在绘制窗口之前擦除背景。  
   
-- `PRF_NONCLIENT` Draw the nonclient area of the window.  
+- `PRF_NONCLIENT`绘制窗口的非工作区。  
   
-- `PRF_OWNED` Draw all owned windows.  
+- `PRF_OWNED`绘制所有拥有的 windows。  
   
-##  <a name="printwindow"></a>  CWnd::PrintWindow  
- Copies a visual window into the specified device context, typically a printer DC.  
+##  <a name="printwindow"></a>CWnd::PrintWindow  
+ 将可视窗口复制到指定设备上下文（通常是打印机设备上下文）。  
   
 ```  
-BOOL PrintWindow (CDC * pDC，  
+BOOL PrintWindow(
+    CDC* pDC,  
     UINT nFlags) const;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- A pointer to the device context to be printed to.  
+ 指向要输出到的设备上下文的指针。  
   
  `nFlags`  
- Specifies the drawing options. For a list of possible values, see [PrintWindow](http://msdn.microsoft.com/library/windows/desktop/dd162869).  
+ 指定的绘图选项。 有关可能的值的列表，请参阅[PrintWindow](http://msdn.microsoft.com/library/windows/desktop/dd162869)。  
   
-### Return Value  
- Nonzero if the function succeeds; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果函数成功，则为非零值；否则为  
   
-### Remarks  
- This member function emulates the functionality of the function [PrintWindow](http://msdn.microsoft.com/library/windows/desktop/dd162869), as described in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>备注  
+ 此成员函数模拟函数的功能[PrintWindow](http://msdn.microsoft.com/library/windows/desktop/dd162869)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="redrawwindow"></a>  CWnd::RedrawWindow  
- Updates the specified rectangle or region in the given window's client area.  
+##  <a name="redrawwindow"></a>CWnd::RedrawWindow  
+ 更新的指定的矩形或在给定的窗口的客户端区域的区域。  
   
 ```  
-BOOL RedrawWindow (LPCRECT lpRectUpdate = NULL，  
-    CRgn * prgnUpdate = NULL，  
-    UINT 标志 = RDW_INVALIDATE |RDW_UPDATENOW |RDW_ERASE);
+BOOL RedrawWindow(
+    LPCRECT lpRectUpdate = NULL,  
+    CRgn* prgnUpdate = NULL,  
+    UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `lpRectUpdate`  
- Points to a [RECT structure](../../mfc/reference/rect-structure1.md) containing the coordinates of the update rectangle. This parameter is ignored if *prgnUpdate* contains a valid region handle.  
+ 指向[RECT 结构](../../mfc/reference/rect-structure1.md)包含更新矩形的坐标。 如果忽略此参数*prgnUpdate*包含有效的区域句柄。  
   
  *prgnUpdate*  
- Identifies the update region. If both *prgnUpdate* and `lpRectUpdate` are **NULL**, the entire client area is added to the update region.  
+ 标识更新区域。 如果这两个*prgnUpdate*和`lpRectUpdate`是**NULL**，整个工作区添加到更新区域。  
   
  `flags`  
- The following flags are used to invalidate the window:  
+ 以下标记用于以使其无效窗口︰  
   
-- **RDW_ERASE** Causes the window to receive a [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) message when the window is repainted. The **RDW_INVALIDATE** flag must also be specified; otherwise **RDW_ERASE** has no effect.  
+- **RDW_ERASE**导致窗口接收[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息时重新绘制窗口。 **RDW_INVALIDATE**标志还必须指定; 否则为**RDW_ERASE**不起作用。  
   
-- **RDW_FRAME** Causes any part of the nonclient area of the window that intersects the update region to receive a [WM_NCPAINT](http://msdn.microsoft.com/library/windows/desktop/dd145212) message. The **RDW_INVALIDATE** flag must also be specified; otherwise **RDW_FRAME** has no effect.  
+- **RDW_FRAME**会导致与接收该更新区域相交的窗口的非工作区的任何部分[WM_NCPAINT](http://msdn.microsoft.com/library/windows/desktop/dd145212)消息。 **RDW_INVALIDATE**标志还必须指定; 否则为**RDW_FRAME**不起作用。  
   
-- **RDW_INTERNALPAINT** Causes a [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message to be posted to the window regardless of whether the window contains an invalid region.  
+- **RDW_INTERNALPAINT**导致[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息被发送到窗口而不考虑该窗口是否包含一个无效的区域。  
   
-- **RDW_INVALIDATE** Invalidate `lpRectUpdate` or *prgnUpdate* (only one may be not **NULL**). If both are **NULL**, the entire window is invalidated.  
+- **RDW_INVALIDATE** Invalidate`lpRectUpdate`或*prgnUpdate* (只能有一个可能不是**NULL**)。 如果两者都**NULL**，整个窗口将会失效。  
   
- The following flags are used to validate the window:  
+ 以下标志用于验证窗口︰  
   
-- **RDW_NOERASE** Suppresses any pending `WM_ERASEBKGND` messages.  
+- **RDW_NOERASE**取消任何挂起的`WM_ERASEBKGND`消息。  
   
-- **RDW_NOFRAME** Suppresses any pending `WM_NCPAINT` messages. This flag must be used with **RDW_VALIDATE** and is typically used with **RDW_NOCHILDREN**. This option should be used with care, as it could prevent parts of a window from painting properly.  
+- **RDW_NOFRAME**取消任何挂起的`WM_NCPAINT`消息。 此标志必须与使用**RDW_VALIDATE**和通常用于**RDW_NOCHILDREN**。 应小心，使用此选项，因为它无法正确绘制可以防止一个窗口的部分。  
   
-- **RDW_NOINTERNALPAINT** Suppresses any pending internal `WM_PAINT` messages. This flag does not affect `WM_PAINT` messages resulting from invalid areas.  
+- **RDW_NOINTERNALPAINT**取消任何挂起的内部`WM_PAINT`消息。 此标志不会影响`WM_PAINT`从无效的区域生成的消息。  
   
-- **RDW_VALIDATE** Validates `lpRectUpdate` or *prgnUpdate* (only one may be not **NULL**). If both are **NULL**, the entire window is validated. This flag does not affect internal `WM_PAINT` messages.  
+- **RDW_VALIDATE**验证`lpRectUpdate`或*prgnUpdate* (只能有一个可能不是**NULL**)。 如果两者都**NULL**，验证整个窗口。 此标志不会影响内部`WM_PAINT`消息。  
   
- The following flags control when repainting occurs. Painting is not performed by the `RedrawWindow` function unless one of these bits is specified.  
+ 下列标志控制何时重新绘制时发生。 绘制不会执行`RedrawWindow`作用，除非指定了一个这些位。  
   
-- **RDW_ERASENOW** Causes the affected windows (as specified by the **RDW_ALLCHILDREN** and **RDW_NOCHILDREN** flags) to receive `WM_NCPAINT` and `WM_ERASEBKGND` messages, if necessary, before the function returns. `WM_PAINT` messages are deferred.  
+- **RDW_ERASENOW**会导致受影响的 windows (所指定的**RDW_ALLCHILDREN**和**RDW_NOCHILDREN**标志) 接收`WM_NCPAINT`和`WM_ERASEBKGND`消息，如有必要，函数返回前。 `WM_PAINT`消息会延迟。  
   
-- **RDW_UPDATENOW** Causes the affected windows (as specified by the **RDW_ALLCHILDREN** and **RDW_NOCHILDREN** flags) to receive `WM_NCPAINT`, `WM_ERASEBKGND`, and `WM_PAINT` messages, if necessary, before the function returns.  
+- **RDW_UPDATENOW**会导致受影响的 windows (所指定的**RDW_ALLCHILDREN**和**RDW_NOCHILDREN**标志) 接收`WM_NCPAINT`， `WM_ERASEBKGND`，和`WM_PAINT`消息，如有必要，函数返回前。  
   
- By default, the windows affected by the `RedrawWindow` function depend on whether the specified window has the **WS_CLIPCHILDREN** style. The child windows of **WS_CLIPCHILDREN** windows are not affected. However, those windows that are not **WS_CLIPCHILDREN** windows are recursively validated or invalidated until a **WS_CLIPCHILDREN** window is encountered. The following flags control which windows are affected by the `RedrawWindow` function:  
+ 默认情况下，windows 受`RedrawWindow`函数取决于是否指定的窗口具有**WS_CLIPCHILDREN**样式。 子窗口**WS_CLIPCHILDREN** windows 不会受到影响。 但是，这些窗口不**WS_CLIPCHILDREN**窗口都是以递归方式验证或直到失效**WS_CLIPCHILDREN**遇到窗口。 以下标志控制哪些 windows 受`RedrawWindow`函数︰  
   
-- **RDW_ALLCHILDREN** Includes child windows, if any, in the repainting operation.  
+- **RDW_ALLCHILDREN**如果有重操作中包括子窗口。  
   
-- **RDW_NOCHILDREN** Excludes child windows, if any, from the repainting operation.  
+- **RDW_NOCHILDREN**排除子窗口，如果有的话，从重的操作。  
   
-### Return Value  
- Nonzero if the window was redrawn successfully; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果窗口已成功，则重绘则为非 0否则为 0。  
   
-### Remarks  
- When the `RedrawWindow` member function is used to invalidate part of the desktop window, that window does not receive a [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message. To repaint the desktop, an application should use [CWnd::ValidateRgn](#validatergn), [CWnd::InvalidateRgn](#invalidatergn), [CWnd::UpdateWindow](#updatewindow), or [RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)  
+### <a name="remarks"></a>备注  
+ 当`RedrawWindow`使用成员函数要使之无效的桌面窗口中，一部分该窗口不会收到[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息。 若要重新绘制桌面，应用程序应使用[CWnd::ValidateRgn](#validatergn)， [CWnd::InvalidateRgn](#invalidatergn)， [CWnd::UpdateWindow](#updatewindow)，或[RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)  
   
-##  <a name="reflectchildnotify"></a>  CWnd::ReflectChildNotify  
- This message function is called by the framework from [OnChildNotify](#onchildnotify).  
+##  <a name="reflectchildnotify"></a>CWnd::ReflectChildNotify  
+ 由框架从调用此消息函数[OnChildNotify](#onchildnotify)。  
   
 ```  
-BOOL ReflectChildNotify （UINT 消息、  
-    WPARAM wParam，  
-    LPARAM lParam  
+BOOL ReflectChildNotify(
+    UINT message,  
+    WPARAM wParam,  
+    LPARAM lParam,  
     LRESULT* pResult);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `message`  
- Specifies the message to be reflected.  
+ 指定的消息才会反映。  
   
  `wParam`  
- Specifies additional message-dependent information.  
+ 指定消息相关的其他信息。  
   
  `lParam`  
- Specifies additional message-dependent information.  
+ 指定消息相关的其他信息。  
   
  `pResult`  
- The result generated by the child window to be returned by the parent window. Can be **NULL**.  
+ 生成要返回的父窗口的子窗口的结果。 可以是**NULL**。  
   
-### Return Value  
- **TRUE** if message was reflected; otherwise **FALSE**.  
+### <a name="return-value"></a>返回值  
+ **TRUE**如果消息已反映; 否则为**FALSE**。  
   
-### Remarks  
- It is a helper function which reflects `message` to its source.  
+### <a name="remarks"></a>备注  
+ 它是一个帮助器函数，这反映了`message`与其数据源。  
   
- Reflected messages are sent directly to [CWnd::OnWndMsg](#onwndmsg) or [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg).  
+ 反映直接发送消息[CWnd::OnWndMsg](#onwndmsg)或[CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)。  
   
- For more information about message reflection, see [Handling Reflected Messages](../../mfc/handling-reflected-messages.md).  
+ 有关消息反射的详细信息，请参阅[处理反射消息](../../mfc/handling-reflected-messages.md)。  
   
-##  <a name="reflectlastmsg"></a>  CWnd::ReflectLastMsg  
- This member function is called by the framework to reflect the last message to the child window.  
+##  <a name="reflectlastmsg"></a>CWnd::ReflectLastMsg  
+ 此成员函数调用由框架反映子窗口到最后一条消息。  
   
 ```  
-静态 BOOL PASCAL ReflectLastMsg (HWND hWndChild，  
+static BOOL PASCAL ReflectLastMsg(
+    HWND hWndChild,  
     LRESULT* pResult = NULL);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `hWndChild`  
- A handle to a child window.  
+ 子窗口的句柄。  
   
  `pResult`  
- The result generated by the child window to be returned by the parent window. Can be **NULL**.  
+ 生成要返回的父窗口的子窗口的结果。 可以是**NULL**。  
   
-### Return Value  
- Nonzero if the message was handled; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果该消息已处理; 则为非 0否则为 0。  
   
-### Remarks  
- This member function calls [SendChildNotifyLastMsg](#sendchildnotifylastmsg) if the window identified by `hWndChild` is an OLE control or a window in the permanent map.  
+### <a name="remarks"></a>备注  
+ 此成员函数将调用[SendChildNotifyLastMsg](#sendchildnotifylastmsg)如果窗口通过标识`hWndChild`OLE 控件或永久的映射中的窗口。  
   
- For more information about message reflection, see [Handling Reflected Messages](../../mfc/handling-reflected-messages.md).  
+ 有关消息反射的详细信息，请参阅[处理反射消息](../../mfc/handling-reflected-messages.md)。  
   
-##  <a name="releasedc"></a>  CWnd::ReleaseDC  
- Releases a device context, freeing it for use by other applications.  
+##  <a name="releasedc"></a>Cwnd:: Releasedc  
+ 释放设备上下文，从而使它用于其他应用程序。  
   
 ```  
-int ReleaseDC (CDC * pDC);
+int ReleaseDC(CDC* pDC);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `pDC`  
- Identifies the device context to be released.  
+ 标识要释放的设备上下文。  
   
-### Return Value  
- Nonzero if successful; otherwise 0.  
+### <a name="return-value"></a>返回值  
+ 如果成功，则不为 0；否则为 0。  
   
-### Remarks  
- The effect of the `ReleaseDC` member function depends on the device-context type.  
+### <a name="remarks"></a>备注  
+ 效果`ReleaseDC`成员函数取决于设备上下文类型。  
   
- The application must call the `ReleaseDC` member function for each call to the [GetWindowDC](#getwindowdc) member function and for each call to the [GetDC](#getdc) member function.  
+ 应用程序必须调用`ReleaseDC`每次调用的成员函数[GetWindowDC](#getwindowdc)成员函数和每次调用[GetDC](#getdc)成员函数。  
   
-##  <a name="repositionbars"></a>  CWnd::RepositionBars  
- Called to reposition and resize control bars in the client area of a window.  
+##  <a name="repositionbars"></a>CWnd::RepositionBars  
+ 调用以重新定位并调整大小的窗口工作区中的控件条。  
   
 ```  
-void RepositionBars (UINT nIDFirst，UINT nIDLast UINT nIDLeftOver，UINT nFlag = reposDefault，LPRECT lpRectParam = NULL，LPCRECT lpRectClient = NULL，BOOL bStretch = TRUE);  
+void RepositionBars(UINT nIDFirst,
+    UINT nIDLast,
+    UINT nIDLeftOver,
+    UINT nFlag = reposDefault,
+    LPRECT lpRectParam = NULL,
+    LPCRECT lpRectClient = NULL,
+    BOOL bStretch = TRUE) ;  
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `nIDFirst`  
- The ID of the first in a range of control bars to reposition and resize.  
+ 第一个 ID 控制条来重新定位并调整大小的范围中。  
   
  `nIDLast`  
- The ID of the last in a range of control bars to reposition and resize.  
+ 要重新定位并调整大小的控件条范围中的最后一个的 ID。  
   
  `nIDLeftOver`  
- Specifies ID of pane that fills the rest of the client area.  
+ 指定的填充客户端区域的其余部分的窗格中的 ID。  
   
  `nFlag`  
- Can have one of the following values:  
+ 可以具有以下值之一︰  
   
-- **CWnd::reposDefault** Performs the layout of the control bars. `lpRectParam` is not used and can be **NULL**.  
+- **CWnd::reposDefault**执行控件条的布局。 `lpRectParam`未使用，可以为**NULL**。  
   
-- **CWnd::reposQuery** The layout of the control bars is not done; instead `lpRectParam` is initialized with the size of the client area, as if the layout had actually been done.  
+- **CWnd::reposQuery**未完成的控件条布局; 而是`lpRectParam`像最初实际执行布局使用工作区的大小初始化。  
   
-- **CWnd::reposExtra** Adds the values of `lpRectParam` to the client area of `nIDLast` and also performs the layout *.*  
+- **CWnd::reposExtra**将的值相加`lpRectParam`的客户端区域`nIDLast`，还会执行布局*。*  
   
  `lpRectParam`  
- Points to a [RECT structure](../../mfc/reference/rect-structure1.md); the usage of which depends on the value of `nFlag`.  
+ 指向[RECT 结构](../../mfc/reference/rect-structure1.md); 其中的使用情况取决于值`nFlag`。  
   
  *lpRectClient*  
- Points to a [RECT structure](../../mfc/reference/rect-structure1.md) containing the available client area. If **NULL**, the window's client area will be used.  
+ 指向[RECT 结构](../../mfc/reference/rect-structure1.md)包含可用客户端区域。 如果**NULL**，将使用窗口的工作区。  
   
  `bStretch`  
- Indicates whether the bar should be stretched to the size of the frame.  
+ 指示是否应被栏拉伸到的帧的大小。  
   
-### Remarks  
- The `nIDFirst` and `nIDLast` parameters define a range of control-bar IDs to be repositioned in the client area. The `nIDLeftOver` parameter specifies the ID of the child window (normally the view) which is repositioned and resized to fill the rest of the client area not filled by control bars.  
+### <a name="remarks"></a>备注  
+ `nIDFirst`和`nIDLast`参数定义的工作区中重新定位控件条 Id 的范围。 `nIDLeftOver`参数指定的子窗口 （通常视图） 重新定位并调整大小以填充控件条由不填充的客户端区域的其余部分的 ID。  
   
-##  <a name="runmodalloop"></a>  CWnd::RunModalLoop  
- Call this member function to retrieve, translate, or dispatch messages until [ContinueModal](#continuemodal) returns **FALSE**.  
+##  <a name="runmodalloop"></a>CWnd::RunModalLoop  
+ 调用此成员函数可检索、 转换或调度消息之前[ContinueModal](#continuemodal)返回**FALSE**。  
   
 ```  
-int RunModalLoop (DWORD dwFlags = 0);
+int RunModalLoop(DWORD dwFlags = 0);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>参数  
  `dwFlags`  
- Specifies the Windows message to be sent. Can be one of the following values:  
+ 指定要发送的 Windows 消息。 可以是以下值之一：  
   
-- **MLF_NOIDLEMSG** Don't send [WM_ENTERIDLE](http://msdn.microsoft.com/library/windows/desktop/ms645422) messages to the parent.  
+- **MLF_NOIDLEMSG**不要发送[WM_ENTERIDLE](http://msdn.microsoft.com/library/windows/desktop/ms645422)到父级的消息。  
   
-- **MLF_NOKICKIDLE** Don't send **WM_KICKIDLE** messages to the window.  
+- **MLF_NOKICKIDLE**不要发送**WM_KICKIDLE**到窗口的消息。  
   
-- **MLF_SHOWONIDLE** Show the window when message queue goes idle.  
+- **MLF_SHOWONIDLE**消息队列进入空闲状态时显示窗口。  
   
-### Return Value  
- Specifies the value of the `nResult` parameter passed to the [EndModalLoop](#endmodalloop) member function, which is then used to end the modal loop.  
+### <a name="return-value"></a>返回值  
+ 指定的值`nResult`参数传递给[EndModalLoop](#endmodalloop)成员函数，然后将其用于将结束模式循环。  
   
-### Remarks  
- By default, `ContinueModal` returns **FALSE** after `EndModalLoop` is called. Returns the value provided as `nResult` to `EndModalLoop`.  
+### <a name="remarks"></a>备注  
+ 默认情况下，`ContinueModal`返回**FALSE**后`EndModalLoop`调用。 返回的值作为提供`nResult`到`EndModalLoop`。  
   
-##  <a name="screentoclient"></a>  CWnd::ScreenToClient  
- Converts the screen coordinates of a given point or rectangle on the display to client coordinates.  
+##  <a name="screentoclient"></a>CWnd::ScreenToClient  
+ 将显示中的给定点或矩形的屏幕坐标转换为客户端坐标。  
   
 ```  
-void ScreenToClient (LPPOINT lpPoint) 常量; void ScreenToClient (LPRECT lpRect) const; ```  
+void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;  
+```  
   
 ### <a name="parameters"></a>参数  
  `lpPoint`  
- 指向[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[POINT 结构](../../mfc/reference/point-structure1.md)，其中包含要转换的屏幕坐标。  
+ 指向[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[点结构](../../mfc/reference/point-structure1.md)，包含要转换的屏幕坐标。  
   
  `lpRect`  
- 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，其中包含要转换的屏幕坐标。  
+ 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，包含要转换的屏幕坐标。  
   
 ### <a name="remarks"></a>备注  
- `ScreenToClient`成员函数将替换中给出的屏幕坐标`lpPoint`或`lpRect`与工作区坐标。 新的坐标是相对于窗口左上角`CWnd`工作区。  
+ `ScreenToClient`成员函数将替换中给定的屏幕坐标`lpPoint`或`lpRect`与客户端坐标。 新的坐标是相对于窗口左上角`CWnd`工作区。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetItemRect](../../mfc/reference/clistctrl-class.md#getitemrect)。  
   
 ##  <a name="scrollwindow"></a>CWnd::ScrollWindow  
- 将当前的工作区的内容滚动`CWnd`对象。  
+ 将当前的客户端区域的内容滚动`CWnd`对象。  
   
 ```  
 void ScrollWindow(
@@ -9258,28 +9464,28 @@ void ScrollWindow(
   
 ### <a name="parameters"></a>参数  
  `xAmount`  
- 指定所需量，以设备为单位，水平滚动。 此参数必须是负值，以向左滚动。  
+ 指定量，以与设备单位，水平滚动。 此参数必须是负值可向左滚动。  
   
  `yAmount`  
- 指定所需量，采用设备单位的垂直滚动。 此参数必须是负值可向上滚动。  
+ 指定量，以与设备单位的垂直滚动。 此参数必须是负值可向上滚动。  
   
  `lpRect`  
- 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)指定要滚动的客户端区域的部分。 如果`lpRect`是**NULL**，滚动整个客户端区域。 如果光标矩形相交，滚动矩形重新定位脱字号。  
+ 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，它指定要滚动的客户端区域的部分。 如果`lpRect`是**NULL**，滚动整个工作区。 如果光标矩形相交，滚动矩形重新定位脱字号。  
   
  `lpClipRect`  
- 指向`CRect`对象或`RECT`结构，它指定要向下滚动的剪辑矩形。 滚动只有此矩形内的位。 在此矩形的外部 bits 不会受到影响，即使它们位于`lpRect`矩形。 如果`lpClipRect`是**NULL**，不存在修剪执行滚动矩形上。  
+ 指向`CRect`对象或`RECT`结构，它指定要向下滚动的剪辑矩形。 滚动只有此矩形内的位。 外部将此矩形的 bits 不会受到影响，即使它们处于`lpRect`矩形。 如果`lpClipRect`是**NULL**，没有剪辑执行滚动矩形上。  
   
 ### <a name="remarks"></a>备注  
- 如果光标位于`CWnd`正在滚动`ScrollWindow`自动隐藏插入符号以防止它被清除，然后在完成滚动后还原插入符号。 插入符号位置将进行相应调整。  
+ 如果脱字号位于`CWnd`在滚动`ScrollWindow`自动隐藏插入符号以防止它被擦除，然后在完成 scroll 后还原脱字号。 相应地调整脱字号位置。  
   
- 区域由发现`ScrollWindow`成员函数不重绘，但合并到当前`CWnd`对象的更新区域。 应用程序最终将收到[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)条消息，通知区域需要重新绘制。 若要完成滚动的同时重绘未覆盖的区域，请调用[UpdateWindow](#updatewindow)后立即调用成员函数`ScrollWindow`。  
+ 区域发现了这些`ScrollWindow`成员函数不重新绘制但并入当前`CWnd`对象的更新区域。 应用程序最终将收到[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)条消息，通知它区域需要重新绘制。 若要完成滚动的同时重绘未覆盖的区域，调用[UpdateWindow](#updatewindow)后立即调用成员函数`ScrollWindow`。  
   
- 如果`lpRect`是**NULL**，窗口中的任何子窗口的位置上均按指定的量偏移`xAmount`和`yAmount`，和中的任何无效 （未上漆） 区域`CWnd`还偏移量。 `ScrollWindow`当将更快地`lpRect`是**NULL**。  
+ 如果`lpRect`是**NULL**，窗口中任何子窗口的位置上均按指定的量偏移`xAmount`和`yAmount`，和中的任何无效 （上色） 区域`CWnd`还偏移量。 `ScrollWindow`当将更快`lpRect`是**NULL**。  
   
- 如果`lpRect`不是**NULL**，子窗口的位置不更改后，和无效区域中的`CWnd`不偏移量。 若要防止更新问题时`lpRect`不是**NULL**，调用`UpdateWindow`成员函数来重绘`CWnd`之前调用`ScrollWindow`。  
+ 如果`lpRect`不**NULL**，子窗口的位置不是中的已更改，和无效区域`CWnd`不偏移量。 若要防止更新问题时`lpRect`不**NULL**，调用`UpdateWindow`成员函数来重绘`CWnd`之前调用`ScrollWindow`。  
   
 ##  <a name="scrollwindowex"></a>CWnd::ScrollWindowEx  
- 滚动窗口的客户端区域中的内容。  
+ 滚动窗口的客户端区域的内容。  
   
 ```  
 int ScrollWindowEx(
@@ -9294,48 +9500,48 @@ int ScrollWindowEx(
   
 ### <a name="parameters"></a>参数  
  `dx`  
- 指定所需量，以设备为单位，水平滚动。 此参数必须具有负值可向左滚动。  
+ 指定量，以与设备单位，水平滚动。 此参数必须具有负值可向左滚动。  
   
  *dy*  
- 指定所需量，采用设备单位的垂直滚动。 此参数必须具有负值可向上滚动。  
+ 指定量，以与设备单位的垂直滚动。 此参数必须具有负值可向上滚动。  
   
  `lpRectScroll`  
- 指向[RECT 结构](../../mfc/reference/rect-structure1.md)指定要滚动的客户端区域的部分。 如果此参数为**NULL**，滚动整个客户端区域。  
+ 指向[RECT 结构](../../mfc/reference/rect-structure1.md)，它指定要滚动的客户端区域的部分。 如果此参数为**NULL**，滚动整个工作区。  
   
  `lpRectClip`  
- 指向`RECT`结构，它指定要向下滚动的剪辑矩形。 此结构将优先于所指向的矩形`lpRectScroll`。 滚动只有此矩形内的位。 在此矩形的外部 bits 不会受到影响，即使它们位于`lpRectScroll`矩形。 如果此参数为**NULL**，不存在修剪执行滚动矩形上。  
+ 指向`RECT`结构，它指定要向下滚动的剪辑矩形。 此结构将优先于指向矩形`lpRectScroll`。 滚动只有此矩形内的位。 外部将此矩形的 bits 不会受到影响，即使它们处于`lpRectScroll`矩形。 如果此参数为**NULL**，没有剪辑执行滚动矩形上。  
   
  *prgnUpdate*  
- 标识修改来保存通过滚动失效的区域的区域。 此参数可以为**NULL**。  
+ 标识被修改，以保存滚动失效的区域的区域。 此参数可以为**NULL**。  
   
  `lpRectUpdate`  
- 指向`RECT`结构，它将接收通过滚动失效的矩形的边界。 此参数可以为**NULL**。  
+ 指向`RECT`结构，它将接收滚动失效的矩形的边界。 此参数可以为**NULL**。  
   
  `flags`  
- 可以具有下列值之一︰  
+ 可以具有以下值之一︰  
   
 - **SW_ERASE**时使用指定**SW_INVALIDATE**，通过发送清除新失效的区域[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息发送到窗口。  
   
-- **SW_INVALIDATE**使标识区域无效*prgnUpdate*滚动后。  
+- **SW_INVALIDATE**使由标识的区域无效*prgnUpdate*后滚动。  
   
-- **SW_SCROLLCHILDREN**执行滚动操作使得相交的矩形所指向的所有子窗口`lpRectScroll`中指定的像素数由`dx`和*dy*。 Windows 将发送[WM_MOVE](http://msdn.microsoft.com/library/windows/desktop/ms632631)相交的所有子窗口的消息`lpRectScroll`，即使它们不会移动。 子窗口将滚动和光标矩形相交滚动矩形时重新定位脱字号。  
+- **SW_SCROLLCHILDREN**滚动相交的矩形的指向的所有子窗口`lpRectScroll`中指定的像素数由`dx`和*dy*。 Windows 会将发送[WM_MOVE](http://msdn.microsoft.com/library/windows/desktop/ms632631)相交的所有子窗口的消息`lpRectScroll`，即使它们不会移动。 当滚动子窗口和光标矩形相交滚动矩形时重新定位脱字号。  
   
 ### <a name="return-value"></a>返回值  
- 返回值是**SIMPLEREGION** （矩形无效的区域）， **COMPLEXREGION** （非矩形无效的区域，重叠的矩形），或**NULLREGION** （任何失效的区域），如果函数运行成功; 否则返回值是**错误**。  
+ 返回值是**SIMPLEREGION** （矩形失效的区域）， **COMPLEXREGION** （非矩形失效的区域; 重叠矩形，） 或**NULLREGION** （没有失效的区域），如果该函数成功; 否则返回值是**错误**。  
   
 ### <a name="remarks"></a>备注  
- 此函数是类似于[ScrollWindow](http://msdn.microsoft.com/library/windows/desktop/bb787591)函数与一些其他功能。  
+ 此函数是类似于[ScrollWindow](http://msdn.microsoft.com/library/windows/desktop/bb787591)函数，与一些其他功能。  
   
- 如果[SW_INVALIDATE](http://msdn.microsoft.com/library/windows/desktop/bb787593)和[SW_ERASE](http://msdn.microsoft.com/library/windows/desktop/bb787593)未指定，`ScrollWindowEx`成员函数不会使无效离开滚动的区域。 如果设置了这些标志任一，`ScrollWindowEx`使此区域无效。 区域将不更新，直至应用程序将调用[UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)成员函数，将调用[RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)成员函数 (指定[RDW_UPDATENOW](http://msdn.microsoft.com/library/windows/desktop/dd162911)或[RDW_ERASENOW](http://msdn.microsoft.com/library/windows/desktop/dd162911))，或检索[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)从应用程序队列的消息。  
+ 如果[SW_INVALIDATE](http://msdn.microsoft.com/library/windows/desktop/bb787593)和[SW_ERASE](http://msdn.microsoft.com/library/windows/desktop/bb787593)未指定，`ScrollWindowEx`成员函数不无效离开滚动区域。 如果设置了这些标志任一项，`ScrollWindowEx`使此区域无效。 区域将不更新，直至应用程序调用[UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)成员函数，调用[RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)成员函数 (指定[RDW_UPDATENOW](http://msdn.microsoft.com/library/windows/desktop/dd162911)或[RDW_ERASENOW](http://msdn.microsoft.com/library/windows/desktop/dd162911))，或检索[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)从应用程序队列的消息。  
   
- 如果窗口具有[WS_CLIPCHILDREN](http://msdn.microsoft.com/library/windows/desktop/ms632679)样式、 返回由指定的区域*prgnUpdate*和`lpRectUpdate`表示必须将更新，在需要更新的子窗口中包括的任何区域的滚动窗口的整个区域。  
+ 如果窗口具有[WS_CLIPCHILDREN](http://msdn.microsoft.com/library/windows/desktop/ms632679)样式、 返回由指定的区域*prgnUpdate*和`lpRectUpdate`表示总必须更新，包括任何区域中需要更新的子窗口的滚动窗口的区域。  
   
- 如果[SW_SCROLLCHILDREN](http://msdn.microsoft.com/library/windows/desktop/bb787593)标志指定，则 Windows 时不会正确更新屏幕滚动的子窗口的一部分。 位于源矩形外滚动的子窗口的此部分不会被删除，并将不会重绘正确地在其新的目标位置中。 使用[DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681) Windows 函数中不存在完全内移动子窗口到`lpRectScroll`矩形。 如果重新定位光标**SW_SCROLLCHILDREN**设置标志和插入符号矩形相交滚动矩形。  
+ 如果[SW_SCROLLCHILDREN](http://msdn.microsoft.com/library/windows/desktop/bb787593)指定标志，Windows 将不会正确更新屏幕如果滚动子窗口的一部分。 位于源矩形外滚动的子窗口的部分将不被删除，将不会重绘正确在其新的目标中。 使用[DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681)移动子窗口不完全在位于 Windows 函数`lpRectScroll`矩形。 如果重新定位光标**SW_SCROLLCHILDREN**标志设置和插入符号矩形相交滚动矩形。  
   
- 所有的输入和输出坐标 (对于`lpRectScroll`， `lpRectClip`， `lpRectUpdate`，和*prgnUpdate*) 假定要在客户端坐标中，而不考虑窗口是否具有**CS_OWNDC**或**CS_CLASSDC**类样式。 使用[LPtoDP](http://msdn.microsoft.com/library/windows/desktop/dd145042)和[DPtoLP](http://msdn.microsoft.com/library/windows/desktop/dd162474) Windows 函数和相互转换到逻辑坐标中，如有必要。  
+ 所有的输入和输出坐标 (有关`lpRectScroll`， `lpRectClip`， `lpRectUpdate`，和*prgnUpdate*) 都被认为是在客户端坐标中，而不考虑窗口是否具有**CS_OWNDC**或**CS_CLASSDC**类样式。 使用[LPtoDP](http://msdn.microsoft.com/library/windows/desktop/dd145042)和[DPtoLP](http://msdn.microsoft.com/library/windows/desktop/dd162474) Windows 函数要转换到和从逻辑坐标中，如有必要。  
   
 ##  <a name="sendchildnotifylastmsg"></a>CWnd::SendChildNotifyLastMsg  
- 此成员函数是由框架调用以使子窗口可以处理任务到子窗口，从父窗口中，提供一条通知消息。  
+ 框架提供了一条通知消息向子窗口，在父窗口中，以便子窗口可以处理任务由调用此成员函数。  
   
 ```  
 BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
@@ -9343,13 +9549,13 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
   
 ### <a name="parameters"></a>参数  
  `pResult`  
- 所生成的要返回的父窗口的子窗口的结果。  
+ 生成要返回的父窗口的子窗口的结果。  
   
 ### <a name="return-value"></a>返回值  
- 子窗口已处理的消息发送到其父项; 如果非零值否则为 0。  
+ 如果子窗口进行了处理到其父; 发送的消息则不为否则为 0。  
   
 ### <a name="remarks"></a>备注  
- `SendChildNotifyLastMsg`如果它是一条消息，将能反映当前消息发送到源。  
+ `SendChildNotifyLastMsg`如果它是将反映的消息，请将当前消息发送到源。  
   
  有关消息反射的详细信息，请参阅[处理反射消息](../../mfc/handling-reflected-messages.md)。  
   
@@ -9366,7 +9572,7 @@ LRESULT SendDlgItemMessage(
   
 ### <a name="parameters"></a>参数  
  `nID`  
- 指定将接收该消息的对话框控件的标识符。  
+ 指定将接收消息的对话框控件的标识符。  
   
  `message`  
  指定要发送的消息。  
@@ -9378,15 +9584,15 @@ LRESULT SendDlgItemMessage(
  指定消息相关的其他信息。  
   
 ### <a name="return-value"></a>返回值  
- 指定返回的控件的窗口过程，则为 0，如果找不到该控件的值。  
+ 指定如果找不到该控件返回控件的窗口过程，则为 0 的值。  
   
 ### <a name="remarks"></a>备注  
- `SendDlgItemMessage`成员函数不返回处理消息之前。  
+ `SendDlgItemMessage`成员函数不返回之前处理消息。  
   
- 使用`SendDlgItemMessage`等同于获取`CWnd`* 为给定的控件并调用[SendMessage](#sendmessage)成员函数。  
+ 使用`SendDlgItemMessage`等同于获取`CWnd`* 到给定的控件并调用[SendMessage](#sendmessage)成员函数。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&113;](../../mfc/reference/codesnippet/cpp/cwnd-class_54.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 113](../../mfc/reference/codesnippet/cpp/cwnd-class_54.cpp)]  
   
 ##  <a name="sendmessage"></a>CWnd::SendMessage  
  将指定的消息发送到此窗口。  
@@ -9412,13 +9618,13 @@ LRESULT SendMessage(
  消息处理中; 的结果其值取决于发送的消息。  
   
 ### <a name="remarks"></a>备注  
- **SendMessage**成员函数直接调用窗口过程，并直到该窗口过程处理完的消息才会返回。 这是与此相反[PostMessage](#postmessage)成员函数，它将邮件放在窗口的消息队列，并立即返回。  
+ **SendMessage**成员函数直接调用窗口过程，且不返回直到处理完该窗口过程的消息。 这是与此相反[PostMessage](#postmessage)成员函数，其将邮件放在窗口的消息队列并立即返回。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&101;](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
 ##  <a name="sendmessagetodescendants"></a>CWnd::SendMessageToDescendants  
- 调用该成员函数以将指定的 Windows 消息发送到所有子代的窗口。  
+ 调用此成员函数可将指定的 Windows 消息发送到所有子代窗口。  
   
 ```  
 void SendMessageToDescendants(
@@ -9440,21 +9646,21 @@ void SendMessageToDescendants(
  指定消息相关的其他信息。  
   
  `bDeep`  
- 指定要搜索到的级别。 如果**TRUE**，以递归方式搜索所有子级; 如果**FALSE**，都搜索仅直属子级。  
+ 指定要搜索到的级别。 如果**TRUE**，以递归方式搜索所有子级; 如果**FALSE**，都搜索仅将直属子级。  
   
  `bOnlyPerm`  
- 指定临时 windows 是否将接收此消息。 如果**TRUE**，临时 windows 可以接收该消息中; 如果**FALSE**，则只永久 windows 接收消息。 临时 windows 上的详细信息请参阅[技术说明 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)。  
+ 指定临时 windows 是否将接收此消息。 如果**TRUE**，临时 windows 可以接收消息; 如果**FALSE**，只有永久 windows 接收消息。 临时 windows 上的详细信息请参阅[技术说明 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)。  
   
 ### <a name="remarks"></a>备注  
- 如果`bDeep`是**FALSE**，不仅仅是对窗口中的直接子级发送消息; 否则将消息发送到所有子代的窗口。  
+ 如果`bDeep`是**FALSE**，消息发送只到窗口的直属子对象; 否则将消息发送到所有子代窗口。  
   
- 如果`bDeep`和`bOnlyPerm`是**TRUE**，临时 windows 下继续进行搜索。 在这种情况下，只有在搜索过程中遇到永久 windows 收到的消息。 如果`bDeep`是**FALSE**，消息只被发送到窗口中的直接子级。  
+ 如果`bDeep`和`bOnlyPerm`是**TRUE**，下方临时 windows 继续搜索。 在这种情况下，只有在搜索过程中遇到永久 windows 收到的消息。 如果`bDeep`是**FALSE**，消息只被发送到窗口的直属子对象。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&114;](../../mfc/reference/codesnippet/cpp/cwnd-class_55.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 114](../../mfc/reference/codesnippet/cpp/cwnd-class_55.cpp)]  
   
 ##  <a name="sendnotifymessage"></a>CWnd::SendNotifyMessage  
- 将指定的消息发送到窗口中。  
+ 将指定的消息发送到窗口。  
   
 ```  
 BOOL SendNotifyMessage(
@@ -9477,10 +9683,10 @@ BOOL SendNotifyMessage(
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果该窗口由调用线程创建`SendNotifyMessage`调用窗口的窗口过程，并且不返回直到窗口过程处理消息。 如果该窗口创建另一个线程，`SendNotifyMessage`消息传递到窗口过程，并返回立即; 它不会等待完成消息处理的窗口过程。  
+ 如果窗口由调用线程，`SendNotifyMessage`窗口调用窗口过程，且不返回之前的窗口过程已处理完该消息。 如果该窗口由另一线程，创建`SendNotifyMessage`消息传递到窗口过程并返回立即; 它不会等待完成消息处理的窗口过程。  
   
 ##  <a name="setactivewindow"></a>CWnd::SetActiveWindow  
- 使`CWnd`活动窗口中。  
+ 使`CWnd`活动的窗口。  
   
 ```  
 CWnd* SetActiveWindow();
@@ -9489,28 +9695,28 @@ CWnd* SetActiveWindow();
 ### <a name="return-value"></a>返回值  
  以前处于活动状态窗口。  
   
- 返回的指针可能是暂时的不应存储以供将来使用。  
+ 返回的指针可能是暂时的不应以供稍后使用存储。  
   
 ### <a name="remarks"></a>备注  
- `SetActiveWindow`应谨慎使用成员函数，因为它允许应用程序可以随意接管活动窗口，并输入的焦点。 通常情况下，Windows 会负责所有激活。  
+ `SetActiveWindow`应谨慎使用成员函数，因为它允许应用程序在任意接管活动窗口，并输入的焦点。 通常情况下，Windows 将负责所有激活。  
   
 ##  <a name="setcapture"></a>CWnd::SetCapture  
- 导致所有后续的鼠标输入发送到当前`CWnd`对象而不考虑光标的位置。  
+ 使所有后续鼠标输入都发送到当前`CWnd`对象而不考虑光标的位置。  
   
 ```  
 CWnd* SetCapture();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向以前接收的所有鼠标输入的窗口对象的指针。 它是`NULL`如果没有此类窗口。 返回的指针可能是暂时的不应存储以供将来使用。  
+ 指向以前接收所有鼠标输入的窗口对象的指针。 它是`NULL`如果没有此类窗口。 返回的指针可能是暂时的不应以供稍后使用存储。  
   
 ### <a name="remarks"></a>备注  
- 当`CWnd`不再需要所有鼠标输入，该应用程序应调用[ReleaseCapture](http://msdn.microsoft.com/library/windows/desktop/ms646261)函数，以便其他窗口可以接收鼠标输入。  
+ 当`CWnd`不再需要所有鼠标输入，应用程序应调用[ReleaseCapture](http://msdn.microsoft.com/library/windows/desktop/ms646261)函数，以便其他 windows 可以接收鼠标输入。  
   
- 捕获鼠标输入，而没有`WM_NCHITTEST`或`WM_SETCURSOR`消息发送到活动窗口中。  
+ 时捕获鼠标输入时，没有`WM_NCHITTEST`或`WM_SETCURSOR`消息发送到活动的窗口。  
   
 ##  <a name="setcaretpos"></a>CWnd::SetCaretPos  
- 设置插入符号的位置。  
+ 设置脱字号位置。  
   
 ```  
 static void PASCAL SetCaretPos(POINT point);
@@ -9518,35 +9724,35 @@ static void PASCAL SetCaretPos(POINT point);
   
 ### <a name="parameters"></a>参数  
  `point`  
- 指定新的 x 和 y 坐标 （以工作区坐标表示） 的插入符号。  
+ 指定新的 x 和 y 坐标 （以工作区坐标表示） 插入符号。  
   
 ### <a name="remarks"></a>备注  
- `SetCaretPos`成员函数仅当归当前任务中的一个窗口移动插入符号。 `SetCaretPos`指示隐藏插入符号移动插入符号。  
+ `SetCaretPos`成员函数将脱字号移仅当归当前任务中的窗口。 `SetCaretPos`指示隐藏插入符号移动插入符号。  
   
- 插入符号是共享的资源。 一个窗口，不应移动插入符号，如果不拥有插入符号。  
+ 脱字号是共享的资源。 窗口应移动插入符号，如果它不拥有脱字号。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&115;](../../mfc/reference/codesnippet/cpp/cwnd-class_56.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 115](../../mfc/reference/codesnippet/cpp/cwnd-class_56.cpp)]  
   
 ##  <a name="setclipboardviewer"></a>CWnd::SetClipboardViewer  
- 将此窗口添加到 windows 会通知你链 (通过`WM_DRAWCLIPBOARD`消息) 时更改剪贴板的内容。  
+ 将此窗口添加到的窗口会收到通知的链 (通过`WM_DRAWCLIPBOARD`消息) 每当剪贴板的内容发生了更改。  
   
 ```  
 HWND SetClipboardViewer();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果成功的剪贴板查看程序链中下一步的窗口的句柄。 应用程序应该保存此句柄 （作为成员变量可以存储），并响应剪贴板查看程序链消息时使用它。  
+ 如果成功，剪贴板查看器链中下一步的窗口的句柄。 应用程序应该保存此句柄 （作为成员变量可以存储） 和响应剪贴板查看器链消息时使用它。  
   
 ### <a name="remarks"></a>备注  
- 是剪贴板查看程序链的一部分的窗口必须响应[WM_DRAWCLIPBOARD](#ondrawclipboard)， [WM_CHANGECBCHAIN](#onchangecbchain)，和[会收到 WM_DESTROY](#ondestroy)消息，并将消息传递到链中下一个窗口。  
+ 剪贴板查看器链的一部分的窗口必须响应[WM_DRAWCLIPBOARD](#ondrawclipboard)， [WM_CHANGECBCHAIN](#onchangecbchain)，和[WM_DESTROY](#ondestroy)消息并将消息传递到链中的下一个窗口。  
   
- 此成员函数将发送`WM_DRAWCLIPBOARD`消息发送到窗口。 由于尚未返回剪贴板查看程序链中下一个窗口的句柄，该应用程序不应将传递`WM_DRAWCLIPBOARD`在调用期间接收的消息`SetClipboardViewer`。  
+ 此成员函数将发送`WM_DRAWCLIPBOARD`消息发送到窗口。 由于尚未返回剪贴板查看器链中的下一个窗口的句柄，应用程序不应将传递`WM_DRAWCLIPBOARD`它在调用期间收到的消息`SetClipboardViewer`。  
   
- 若要从剪贴板查看程序链中删除自身，应用程序必须调用[ChangeClipboardChain](#changeclipboardchain)成员函数。  
+ 若要从剪贴板查看器链中删除本身，应用程序必须调用[ChangeClipboardChain](#changeclipboardchain)成员函数。  
   
 ##  <a name="setdlgctrlid"></a>CWnd::SetDlgCtrlID  
- 将窗口 ID 或窗口的控件 ID 设置为新值。  
+ 将窗口 ID 或控件 ID 窗口设置为新值。  
   
 ```  
 int SetDlgCtrlID(int nID);
@@ -9554,16 +9760,16 @@ int SetDlgCtrlID(int nID);
   
 ### <a name="parameters"></a>参数  
  `nID`  
- 要为控件的标识符设置的新值。  
+ 要设置控件的标识符的新值。  
   
 ### <a name="return-value"></a>返回值  
- 窗口中，如果成功，则该以前标识符否则为 0。  
+ 窗口中，如果成功，则以前标识符否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 该窗口可以是任何子窗口，不仅在对话框中的控件。 窗口中不能为顶级窗口。  
+ 该窗口可以是任何子窗口，而不仅仅是在对话框中的控件。 窗口不能为顶级窗口。  
   
 ##  <a name="setdlgitemint"></a>CWnd::SetDlgItemInt  
- 为指定的整数值的字符串表示对话框中设置给定控件的文本。  
+ 在对话框中的字符串表示形式指定的整数值到设置的某一给定控件的文本。  
   
 ```  
 void SetDlgItemInt(
@@ -9577,19 +9783,19 @@ void SetDlgItemInt(
  指定要更改的控件的整数 ID。  
   
  `nValue`  
- 指定用来生成项文本的整数值。  
+ 指定用于生成项文本的整数值。  
   
  `bSigned`  
- 指定是否已签名或无符号整数值。 如果此参数为**TRUE**，`nValue`进行签名。 如果此参数为**TRUE**和`nValue`小于 0，负号位于前面在字符串中的第一个数字。 如果此参数为**FALSE**，`nValue`是无符号。  
+ 指定是否进行签名或无符号整数值。 如果此参数为**TRUE**，`nValue`进行签名。 如果此参数为**TRUE**和`nValue`小于 0，负号置于之前字符串中的第一个数字。 如果此参数为**FALSE**，`nValue`是无符号。  
   
 ### <a name="remarks"></a>备注  
- `SetDlgItemInt`将发送[WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644)到给定的控件的消息。  
+ `SetDlgItemInt`发送[WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644)到给定的控件的消息。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::SetDlgItemText](#setdlgitemtext)。  
   
 ##  <a name="setdlgitemtext"></a>CWnd::SetDlgItemText  
- 设置标题或拥有的窗口或对话框中控件的文本。  
+ 设置的标题或拥有的窗口或对话框中的控件的文本。  
   
 ```  
 void SetDlgItemText(
@@ -9599,16 +9805,16 @@ void SetDlgItemText(
   
 ### <a name="parameters"></a>参数  
  `nID`  
- 标识要设置其文本的控件。  
+ 标识要设置其文本控件。  
   
  `lpszString`  
- 指向[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象或包含要复制到该控件的文本的 null 终止的字符串。  
+ 指向[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象或包含要复制到该控件的文本的以 null 结尾的字符串。  
   
 ### <a name="remarks"></a>备注  
- `SetDlgItemText`将发送[WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644)到给定的控件的消息。  
+ `SetDlgItemText`发送[WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644)到给定的控件的消息。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing 排行榜的 #&116;](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 116](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]  
   
 ##  <a name="setforegroundwindow"></a>CWnd::SetForegroundWindow  
  将创建窗口的线程置于前台，并激活窗口。  
@@ -9621,7 +9827,7 @@ BOOL SetForegroundWindow();
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 键盘输入定向到窗口，并更改用户的各种视觉提示。 前台窗口是用户当前正在使用的窗口。 前台窗口仅适用于顶级窗口 （框架的窗口或对话框框）。  
+ 键盘输入定向到窗口，，各种视觉提示将更改的用户。 前景窗口是用户当前使用的窗口。 前景窗口仅适用于顶级窗口 （框架的窗口或对话框框）。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::FindWindow](#findwindow)。  
@@ -9634,17 +9840,17 @@ CWnd* SetFocus();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向以前具有输入的焦点的窗口对象的指针。 它是**NULL**如果没有此类窗口。 返回的指针可能是临时的不应存储。  
+ 指向以前具有输入的焦点的窗口对象的指针。 它是**NULL**如果没有此类窗口。 返回的指针可能是临时的并且不会存储。  
   
 ### <a name="remarks"></a>备注  
- 在输入的焦点将定向到此窗口的所有后续的键盘输入。 任何以前具有输入的焦点的窗口失去它。  
+ 输入的焦点将定向到此窗口的所有后续的键盘输入。 任何以前具有输入的焦点的窗口失去它。  
   
- `SetFocus`成员函数可将发送[WM_KILLFOCUS](http://msdn.microsoft.com/library/windows/desktop/ms646282)消息发送到失去输入的焦点的窗口和一个[WM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/ms646283)消息发送到接收到输入的焦点的窗口。 它还会激活窗口或其父级。  
+ `SetFocus`成员函数将[WM_KILLFOCUS](http://msdn.microsoft.com/library/windows/desktop/ms646282)消息发送到失去输入的焦点的窗口和[WM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/ms646283)消息发送到接收到输入的焦点的窗口。 它还会激活窗口或其父级。  
   
- 如果当前窗口处于活动状态，但不具有焦点 （即，没有任何窗口具有焦点），按任何键将生成消息[WM_SYSCHAR](#onsyschar)， [WM_SYSKEYDOWN](#onsyskeydown)，或[WM_SYSKEYUP](#onsyskeyup)。  
+ 如果当前窗口处于活动状态，但不具有焦点 （即，没有窗口具有焦点时），按任何键将生成消息[WM_SYSCHAR](#onsyschar)， [WM_SYSKEYDOWN](#onsyskeydown)，或[WM_SYSKEYUP](#onsyskeyup)。  
   
 ##  <a name="setfont"></a>CWnd::SetFont  
- 将发送`WM_SETFONT`消息发送到窗口以使用指定的字体。  
+ 发送`WM_SETFONT`消息发送到窗口以使用指定的字体。  
   
 ```  
 void SetFont(
@@ -9657,13 +9863,13 @@ void SetFont(
  指向 `CFont` 对象的指针。  
   
  `bRedraw`  
- `TRUE`针对重绘紧随其后的窗口处理`WM_SETFONT`消息; 否则为`FALSE`。  
+ `TRUE`对窗口进行重绘紧随其后处理`WM_SETFONT`消息; 否则为`FALSE`。  
   
 ### <a name="remarks"></a>备注  
- 此方法无任何效果，除非窗口中处理`WM_SETFONT`消息。 很多 MFC 类派生自`CWnd`处理此消息，因为它们附加到的预定义的窗口类，包括消息处理程序`WM_SETFONT`消息。 若要使用此方法，从派生类`CWnd`必须定义一个方法处理程序`WM_SETFONT`消息。  
+ 此方法无任何效果，除非窗口处理`WM_SETFONT`消息。 很多 MFC 类派生自`CWnd`处理此消息，因为它们附加到的预定义的窗口类，包括消息处理程序`WM_SETFONT`消息。 若要使用此方法，派生自的类`CWnd`必须定义的方法处理程序`WM_SETFONT`消息。  
   
 ##  <a name="seticon"></a>CWnd::SetIcon  
- 调用该成员函数以将该句柄设置为特定的图标，如由标识`hIcon`。  
+ 调用此成员函数将句柄设置为一个特定的图标，如由标识`hIcon`。  
   
 ```  
 HICON SetIcon(
@@ -9673,16 +9879,16 @@ HICON SetIcon(
   
 ### <a name="parameters"></a>参数  
  `hIcon`  
- 指向前一个图标的句柄。  
+ 前一个图标句柄。  
   
  `bBigIcon`  
- 如果指定 32 像素的图标 32 像素**TRUE**; 如果由 16 像素图标指定 16 像素**FALSE**。  
+ 如果通过 32 像素的图标指定 32 像素**TRUE**; 如果由 16 像素图标指定 16 像素**FALSE**。  
   
 ### <a name="return-value"></a>返回值  
- 指向一个图标的句柄。  
+ 图标句柄。  
   
 ### <a name="remarks"></a>备注  
- 如果注册窗口类，它将选择一个图标。  
+ 注册窗口类时，它将选择一个图标。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::GetSystemMenu](#getsystemmenu)。  
@@ -9699,10 +9905,10 @@ BOOL SetLayeredWindowAttributes(
   
 ### <a name="parameters"></a>参数  
  `crKey`  
- 指向**COLORREF**值，该值指定用于组成分层的窗口的透明度颜色键。 绘制由以此颜色窗口的所有像素将都是透明的。 若要生成**COLORREF**，使用 RGB 宏。  
+ 指向**COLORREF**值，该值指定用于撰写分层的窗口的透明度颜色键。 将透明绘制成这种颜色窗口的所有像素。 若要生成**COLORREF**，使用 RGB 宏。  
   
  `bAlpha`  
- 用于描述分层窗口的暗度的 alpha 值。 有关详细信息，请参阅**SourceConstantAlpha**的成员[BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393)结构。 当`bAlpha`为 0，则是完全透明的窗口中。 当`bAlpha`为 255，窗口中是不透明的。  
+ 用于描述分层窗口的不透明度的 alpha 值。 有关详细信息，请参阅**SourceConstantAlpha**的成员[BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393)结构。 当`bAlpha`为 0，则该窗口是完全透明。 当`bAlpha`为 255，窗口是不透明。  
   
  `dwFlags`  
  指定要采取的操作。 此参数可以为一个或多个以下的值。 有关可能的值的列表，请参阅[SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)。  
@@ -9711,10 +9917,10 @@ BOOL SetLayeredWindowAttributes(
  如果函数成功，则为非零值；否则为  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟函数的功能[SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成员函数模拟函数的功能[SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="setmenu"></a>CWnd::SetMenu  
- 将当前的菜单设置为指定的菜单。  
+ 将当前菜单设置为指定菜单。  
   
 ```  
 BOOL SetMenu(CMenu* pMenu);
@@ -9722,15 +9928,15 @@ BOOL SetMenu(CMenu* pMenu);
   
 ### <a name="parameters"></a>参数  
  `pMenu`  
- 标识新建菜单。 如果此参数为**NULL**，删除当前的菜单。  
+ 标识新的菜单。 如果此参数为**NULL**，删除当前菜单。  
   
 ### <a name="return-value"></a>返回值  
- 如果更改菜单上，则为非否则为 0。  
+ 如果更改菜单; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 导致重绘以反映此菜单更改窗口。  
+ 导致重绘以反映菜单更改窗口。  
   
- `SetMenu`不会破坏上一个菜单。 应用程序应调用[CMenu::DestroyMenu](../../mfc/reference/cmenu-class.md#destroymenu)成员函数来完成此任务。  
+ `SetMenu`不会破坏以前菜单。 应用程序应调用[CMenu::DestroyMenu](../../mfc/reference/cmenu-class.md#destroymenu)成员函数来完成此任务。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CMenu::LoadMenu](../../mfc/reference/cmenu-class.md#loadmenu)。  
@@ -9744,17 +9950,17 @@ void SetOwner(CWnd* pOwnerWnd);
   
 ### <a name="parameters"></a>参数  
  *pOwnerWnd*  
- 标识的新所有者的窗口对象。 如果此参数为**NULL**，窗口对象都有没有所有者。  
+ 标识的窗口对象的新所有者。 如果此参数为**NULL**，窗口对象的没有所有者。  
   
 ### <a name="remarks"></a>备注  
- 该所有者可以然后接收来自当前的窗口对象的命令消息。 默认情况下，当前窗口的父级是其所有者。  
+ 此所有者然后可以接收来自当前窗口对象的命令消息。 默认情况下，当前窗口的父级是其所有者。  
   
- 通常是有用的窗口层次结构与无关的窗口对象之间建立连接。 例如， [CToolBar](../../mfc/reference/ctoolbar-class.md)将通知发送给其所有者，而不是与父对象。 这样，工具栏将通知发送到另一个窗口 （如就地框架窗口中） 由于变得一个窗口 （如 OLE 容器应用程序窗口） 的子级。 此外，服务器窗口处于停用或在就地激活时编辑时，框架窗口所拥有的任何窗口隐藏或显示。 通过调用显式设置此所有权`SetOwner`。  
+ 通常很有用无关窗口层次结构的窗口对象之间建立连接。 例如， [CToolBar](../../mfc/reference/ctoolbar-class.md)将通知发送到其父级而不是其所有者。 这样，工具栏将通知发送到另一个窗口 （如就地框架窗口中） 时成为一个窗口 （如 OLE 容器应用程序窗口中） 的子级。 此外，服务器窗口在停用或激活期间在就地编辑，任何窗口拥有的框架窗口隐藏或显示。 通过调用显式设置了此所有权`SetOwner`。  
   
  此函数的所有权概念是不同的所有权概念[GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms633515)。  
   
 ##  <a name="setparent"></a>CWnd::SetParent  
- 更改的子窗口的父窗口。  
+ 更改子窗口的父窗口。  
   
 ```  
 CWnd* SetParent(CWnd* pWndNewParent);
@@ -9765,10 +9971,10 @@ CWnd* SetParent(CWnd* pWndNewParent);
  标识新的父窗口。  
   
 ### <a name="return-value"></a>返回值  
- 一个指向上一个父窗口对象如果操作成功。 返回的指针可能是暂时的不应存储以供将来使用。  
+ 指向上一个父窗口对象如果成功的指针。 返回的指针可能是暂时的不应以供稍后使用存储。  
   
 ### <a name="remarks"></a>备注  
- 如果子窗口是可见的 Windows 将执行的相应重绘和重画。  
+ 如果子窗口处于可见时，Windows 将执行的相应重绘和重新绘制。  
   
 ##  <a name="setproperty"></a>CWnd::SetProperty  
  调用此成员函数可设置指定的 OLE 控件属性`dwDispID`。  
@@ -9784,7 +9990,7 @@ void AFX_CDECL SetProperty(
  标识要设置的属性。  
   
  `vtProp`  
- 指定要设置的属性的类型。 有关可能的值，请参阅备注部分[COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
+ 指定要设置的属性的类型。 有关可能的值，请参阅备注部分[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  *...*  
  由 `vtProp`指定的类型的单个参数。  
@@ -9794,10 +10000,10 @@ void AFX_CDECL SetProperty(
 > [!NOTE]
 >  应仅在调用此函数`CWnd`表示 OLE 控件的对象。  
   
- 有关此成员函数使用 OLE 控件容器的详细信息，请参阅文章[ActiveX 控件容器︰ 将 ActiveX 控件编程 ActiveX 控件容器中的](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。  
+ 有关此成员函数使用 OLE 控件容器的信息的详细信息，请参阅文章[ActiveX 控件容器︰ 将 ActiveX 控件编程 ActiveX 控件容器中的](../../mfc/programming-activex-controls-in-a-activex-control-container.md)。  
   
 ##  <a name="setredraw"></a>CWnd::SetRedraw  
- 应用程序调用`SetRedraw`以允许进行重绘或防止更改重绘的更改。  
+ 应用程序调用`SetRedraw`以允许更改要重新绘制或以防止更改重绘。  
   
 ```  
 void SetRedraw(BOOL bRedraw = TRUE);
@@ -9805,16 +10011,16 @@ void SetRedraw(BOOL bRedraw = TRUE);
   
 ### <a name="parameters"></a>参数  
  `bRedraw`  
- 指定重绘标志的状态。 如果此参数为**TRUE**，设置重绘标志; 如果**FALSE**，清除该标记。  
+ 指定重绘标志的状态。 如果此参数为**TRUE**，已设置的重绘标志; 如果**FALSE**，清除该标记。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数设置或清除重绘标志。 虽然重绘标志已清除，内容将不会更新每项更改后，并直到重绘标志设置后，不重新绘制。 例如，需要将多个项添加到列表框中的应用程序可以清除重绘标志、 添加的项，然后设置重绘标志。 最后，应用程序可以调用[Invalidate](#invalidate)或[InvalidateRect](#invalidaterect)成员函数，以使列表框进行重新绘制。  
+ 此成员函数设置或清除重绘标志。 在重绘标志已清除，内容将不会更新每项更改后，并且将不进行重新绘制直到重绘标志设置。 例如，需要将多个项添加到列表框中的应用程序可以清除重绘标志、 添加项，并将重绘标志。 最后，应用程序可以调用[Invalidate](#invalidate)或[InvalidateRect](#invalidaterect)成员函数可以使列表框进行重新绘制。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&117;](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 117](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]  
   
 ##  <a name="setscrollinfo"></a>CWnd::SetScrollInfo  
- 调用此成员函数可对设置的信息，`SCROLLINFO`结构维护有关滚动条。  
+ 调用此成员函数可对设置的信息`SCROLLINFO`结构维护的有关滚动条。  
   
 ```  
 BOOL SetScrollInfo(
@@ -9825,33 +10031,33 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>参数  
  `nBar`  
- 指定的滚动条控件或窗口的非工作区的一部分。 如果它属于非工作区，nBar 还指示滚动条是否放置水平、 垂直和 / 或。 它必须是以下项之一︰  
+ 指定滚动条的控件或窗口的非工作区的一部分。 如果它是的非工作区的一部分，nBar 还指明是否滚动条位于水平、 垂直或两者。 它必须是以下项之一︰  
   
-- **SB_CTL**包含滚动条控件的参数。 `m_hWnd`数据成员必须为滚动条控件的句柄。  
+- **SB_CTL**包含滚动条控件的参数。 `m_hWnd`数据成员必须是滚动条控件的句柄。  
   
-- **SB_HORZ**指定窗口为水平滚动条。  
+- **SB_HORZ**指定该窗口是水平滚动条。  
   
-- **SB_VERT**指定窗口为垂直滚动条。  
+- **SB_VERT**指定该窗口是垂直滚动条。  
   
  `lpScrollInfo`  
- 一个指向[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构。 请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关此结构的详细信息。  
+ 指向的指针[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构。 请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关此结构的详细信息。  
   
  `bRedraw`  
- 指定是否重绘的滚动条，以反映新的位置。 如果`bRedraw`是**TRUE**，在重绘的滚动条。 如果它是**FALSE**，没有重绘。 默认情况下，重绘的滚动条。  
+ 指定是否重绘滚动条，以反映新的位置。 如果`bRedraw`是**TRUE**，在重绘滚动条。 如果它是**FALSE**，它不在重绘。 默认情况下重绘滚动条。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则返回值**TRUE**。 否则，它就是**FALSE**。  
+ 如果成功，返回是**TRUE**。 否则，它是**FALSE**。  
   
 ### <a name="remarks"></a>备注  
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构包含有关滚动条，包括最小值和最大滚动位置、 页大小和滚动框 （缩略图） 的位置信息。 请参阅`SCROLLINFO`结构中的主题[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关更改结构的默认值的详细信息。  
+ [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构包含有关滚动条，包括最小值和最大滚动位置、 页大小和滚动框 （缩略图） 的位置的信息。 请参阅`SCROLLINFO`结构中的主题[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关更改结构的默认值的详细信息。  
   
- MFC 窗口消息处理程序指示滚动条位置[CWnd::OnHScroll](#onhscroll)和[CWnd::OnVScroll](#onvscroll)，提供只有 16 位的位置数据。 [GetScrollInfo](#getscrollinfo)和`SetScrollInfo`提供 32 位的滚动条位置数据。 因此，应用程序可以调用`GetScrollInfo`处理任何一个时`CWnd::OnHScroll`或`CWnd::OnVScroll`以获取 32 位滚动条位置的数据。  
+ MFC Windows 消息处理程序指示滚动条位置[CWnd::OnHScroll](#onhscroll)和[CWnd::OnVScroll](#onvscroll)，提供只有 16 位的位置数据。 [GetScrollInfo](#getscrollinfo)和`SetScrollInfo`提供 32 位的滚动条位置数据。 因此，应用程序可以调用`GetScrollInfo`处理任一时`CWnd::OnHScroll`或`CWnd::OnVScroll`获取 32 位滚动条位置数据。  
   
 > [!NOTE]
 > [CWnd::GetScrollInfo](#getscrollinfo)使应用程序可以使用 32 位滚动条位置。  
   
 ##  <a name="setscrollpos"></a>CWnd::SetScrollPos  
- 设置滚动框的当前位置，并请求，如果重绘的滚动条以反映滚动框的新位置。  
+ 设置滚动框的当前位置，并请求，如果重绘滚动条以反映滚动框的新位置。  
   
 ```  
 int SetScrollPos(
@@ -9862,23 +10068,23 @@ int SetScrollPos(
   
 ### <a name="parameters"></a>参数  
  `nBar`  
- 指定要设置的滚动条。 此参数可以是以下任何一项︰  
+ 指定要设置的滚动条。 此参数可以为以下方法之一︰  
   
 - **SB_HORZ**设置窗口的水平滚动条中滚动框的位置。  
   
 - **SB_VERT**设置窗口的垂直滚动条中滚动框的位置。  
   
  `nPos`  
- 指定滚动框的新位置。 它必须在滚动范围内。  
+ 指定滚动框的新位置。 它必须在滚动的范围内。  
   
  `bRedraw`  
- 指定是否重新绘制的滚动条，以反映新的滚动框位置。 如果此参数为**TRUE**，绘制的滚动条; 如果**FALSE**，不绘制的滚动条。  
+ 指定是否重绘滚动条，以反映新的滚动框位置。 如果此参数为**TRUE**，滚动条重新绘制; 如果**FALSE**，滚动条不重新绘制。  
   
 ### <a name="return-value"></a>返回值  
  滚动框的前一个位置。  
   
 ### <a name="remarks"></a>备注  
- 设置`bRedraw`到**FALSE**每当滚动条将通过对另一个函数的后续调用重绘非常有用。  
+ 设置`bRedraw`到**FALSE**很有用，只要将通过对另一个函数的后续调用重绘滚动条。  
   
 ##  <a name="setscrollrange"></a>CWnd::SetScrollRange  
  设置给定滚动条的最小和最大位置值。  
@@ -9893,29 +10099,29 @@ void SetScrollRange(
   
 ### <a name="parameters"></a>参数  
  `nBar`  
- 指定要设置的滚动条。 此参数可以是下列值之一︰  
+ 指定要设置的滚动条。 此参数可以是以下值︰  
   
 - **SB_HORZ**设置窗口的水平滚动条的范围。  
   
 - **SB_VERT**设置窗口的垂直滚动条的范围。  
   
  `nMinPos`  
- 指定的滚动位置的最小。  
+ 指定滚动位置的最小。  
   
  `nMaxPos`  
- 指定的滚动位置的最大值。  
+ 指定滚动位置的最大值。  
   
  `bRedraw`  
- 指定是否重绘的滚动条，以反映更改。 如果`bRedraw`是**TRUE**，滚动条在重绘; 如果**FALSE**，不重绘的滚动条。  
+ 指定是否重绘滚动条，以反映更改。 如果`bRedraw`是**TRUE**，滚动条在重绘; 如果**FALSE**，滚动条不重绘。  
   
 ### <a name="remarks"></a>备注  
- 它还可用于隐藏或显示标准的滚动条。  
+ 它还可用于隐藏或显示标准滚动条。  
   
  应用程序不应调用此函数可在处理滚动条通知消息时隐藏滚动条。  
   
- 如果调用`SetScrollRange`紧随调用[SetScrollPos](#setscrollpos)成员函数，`bRedraw`中的参数`SetScrollPos`成员函数应为 0 以防止在两次绘制的滚动条。  
+ 如果调用`SetScrollRange`紧随调用[SetScrollPos](#setscrollpos)成员函数，`bRedraw`中的参数`SetScrollPos`成员函数应为 0 将阻止从正在两次绘制滚动条。  
   
- 一个标准的滚动条的默认范围是 0 到 100 之间。 滚动条控件的默认范围为空 (同时`nMinPos`和`nMaxPos`的值为 0)。 指定的值之间的差异`nMinPos`和`nMaxPos`不能晚于**INT_MAX**。  
+ 标准的滚动条的默认范围为 0 到 100 之间。 滚动条控件的默认范围为空 (同时`nMinPos`和`nMaxPos`值为 0)。 指定的值之间的差异`nMinPos`和`nMaxPos`不能大于**INT_MAX**。  
   
 ##  <a name="settimer"></a>CWnd::SetTimer  
  安装系统计时器。  
@@ -9932,21 +10138,21 @@ UINT_PTR SetTimer(
   
 ### <a name="parameters"></a>参数  
  `nIDEvent`  
- 指定非零计时器标识符。 如果计时器标识符是唯一的则在此相同的值返回`SetTimer`。 否则为`SetTimer`确定新的唯一值并返回该实例。 窗口计时器 （其为 NULL 的回调函数） 的值必须是唯一仅对与当前窗口相关联的其他 windows 计时器。 回调计时器，则这必须是唯一的所有进程中的所有计时器。 因此，当您创建一个回调计时器，是更有可能，则返回的值可能不同于您指定的值。  
+ 指定非零计时器标识符。 如果计时器标识符是唯一的则在此相同的值返回`SetTimer`。 否则为`SetTimer`确定新的唯一值并返回的。 窗口计时器 （其 NULL 回调函数），此值必须是唯一仅针对与当前窗口相关联的其他 windows 计时器。 回调计时器，值必须是唯一的所有进程中的所有计时器。 因此，当创建回调计时器，它都更有可能，则返回的值可能不同于你指定的值。  
   
  `nElapse`  
- 指定超时值或间隔，以毫秒为单位。  
+ 指定的超时值或间隔，以毫秒为单位。  
   
  `lpfnTimer`  
- 指定的应用程序提供的地址`TimerProc`处理的回调函数[WM_TIMER](http://msdn.microsoft.com/library/windows/desktop/ms644902)消息。 如果此参数为`NULL`、`WM_TIMER`放在应用程序的消息队列和处理的消息`CWnd`对象。  
+ 指定的应用程序提供的地址`TimerProc`处理的回调函数[WM_TIMER](http://msdn.microsoft.com/library/windows/desktop/ms644902)消息。 如果此参数为`NULL`、`WM_TIMER`放置在应用程序的消息队列和处理消息`CWnd`对象。  
   
 ### <a name="return-value"></a>返回值  
- 如果该函数成功，新的计时器的计时器标识符。 此值可能会或可能不是通过传入的值相等`nIDEvent`参数。 应用程序应始终传递返回值以[KillTimer](#killtimer)成员函数以终止计时器。 如果成功，则非零值否则为 0。  
+ 如果该函数成功，新的计时器的计时器标识符。 此值可能或可能不等于中传递的值`nIDEvent`参数。 应用程序应始终传递返回值以[KillTimer](#killtimer)成员函数以终止计时器。 如果成功，则非零否则为为 0。  
   
 ### <a name="remarks"></a>备注  
- 指定时间间隔值，并且每次间隔结束时，系统将发布`WM_TIMER`安装应用程序的安装消息队列的消息或消息传递到应用程序定义`TimerProc`回调函数。  
+ 指定的间隔值，并且每次间隔结束，则系统将过帐`WM_TIMER`向安装的应用程序的安装消息队列的消息或消息传递到应用程序定义`TimerProc`回调函数。  
   
- `lpfnTimer`不需要将回调函数来命名`TimerProc`，但它必须声明为静态的和定义，如下所示。  
+ `lpfnTimer`回调函数不需要命名为`TimerProc`，但它必须声明为静态和定义，如下所示。  
   
 ```  
 void CALLBACK TimerProc(
@@ -9957,12 +10163,12 @@ void CALLBACK TimerProc(
 ```  
   
 ### <a name="example"></a>示例  
- 此示例使用`CWnd::SetTimer`， `CWnd::OnTimer`，和`CWnd::KillTimer`来处理`WM_TIMER`消息。 第一个计时器设置为发送`WM_TIMER`消息发送到主框架窗口中每隔 2 秒`OnStartTimer`。 `OnTimer`事件处理程序句柄`WM_TIMER`主框架窗口的消息。 此方法使 PC 扬声器发出提示音每隔 2 秒。 第二个计时器的回调函数每隔 3.75 秒将发送一条消息。 `OnStopTimer`将通过调用停止这两个计时器`CWnd::KillTimer`用于每个计时器 id。  
+ 此示例使用`CWnd::SetTimer`， `CWnd::OnTimer`，和`CWnd::KillTimer`来处理`WM_TIMER`消息。 第一个计时器设置为发送`WM_TIMER`消息发送到主框架窗口中每 2 秒`OnStartTimer`。 `OnTimer`事件处理程序句柄`WM_TIMER`主框架窗口的消息。 此方法使 PC 扬声器发出提示音每 2 秒。 第二个计时器在每个 3.75 秒回调函数发送消息。 `OnStopTimer`将这两个计时器停止通过调用`CWnd::KillTimer`为每个计时器 id。  
   
- [!code-cpp[NVC_MFCWindowing #&118;](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 118](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]  
   
 ##  <a name="setwindowcontexthelpid"></a>CWnd::SetWindowContextHelpId  
- 调用该成员函数以将帮助上下文标识符与指定的窗口相关联。  
+ 调用此成员函数可将帮助上下文标识符与指定窗口相关联。  
   
 ```  
 BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
@@ -9976,10 +10182,10 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果子窗口不具有帮助上下文标识符，它将继承其父窗口的标识符。 同样，如果已拥有的窗口不具有帮助上下文标识符，它将继承其所有者窗口的标识符。 这种继承的帮助上下文标识符允许应用程序设置的对话框的只是一个标识符，并且它的所有控件。  
+ 如果子窗口不具有帮助上下文标识符，它将继承其父窗口的标识符。 同样，如果拥有的窗口不具有帮助上下文标识符，它将继承其所有者窗口的标识符。 此继承帮助上下文标识符允许应用程序设置对话框中的一个标识符和它的所有控件。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&119;](../../mfc/reference/codesnippet/cpp/cwnd-class_60.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 119](../../mfc/reference/codesnippet/cpp/cwnd-class_60.cpp)]  
   
 ##  <a name="setwindowplacement"></a>CWnd::SetWindowPlacement  
  设置窗口的显示状态以及正常（已还原）、最小化和最大化位置。  
@@ -9996,7 +10202,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
  如果该函数成功，则为非 0；否则为 0。  
   
 ##  <a name="setwindowpos"></a>CWnd::SetWindowPos  
- 更改大小、 位置和 Z 顺序的子级，弹出窗口和顶级窗口。  
+ 更改大小、 位置和子，弹出窗口和顶级窗口的 Z 顺序。  
   
 ```  
 BOOL SetWindowPos(
@@ -10010,15 +10216,15 @@ BOOL SetWindowPos(
   
 ### <a name="parameters"></a>参数  
  `pWndInsertAfter`  
- 标识`CWnd`之前出现的对象 （要高于） 这`CWnd`Z 顺序中的对象。 此参数可以为一个指向`CWnd`或**指针**为以下值之一︰  
+ 标识`CWnd`将位于之前的对象 （会高于） 这`CWnd`按 Z 顺序的对象。 此参数可以为指向的指针`CWnd`或**指针**为以下值之一︰  
   
-- **wndBottom**将该窗口在 Z 顺序的底层。 如果此`CWnd`是一个最顶层窗口，窗口失去其最顶端的状态; 在所有其他窗口的底部，系统将该窗口。  
+- **wndBottom**将该窗口在 Z 顺序的底层。 如果此`CWnd`是最顶端窗口，窗口失去其最顶层的状态; 在所有其他窗口的底部，系统将该窗口。  
   
 - **wndTop**将该窗口在 Z 顺序的顶部。  
   
-- **wndTopMost**将最重要的是非最顶层窗口的窗口。 窗口中保持其最顶端的位置，即使它被停用。  
+- **wndTopMost**将最重要的是非最顶层窗口的窗口。 即使它被停用时，窗口将保持其最顶层位置。  
   
-- **wndNoTopMost**重新定位到的所有非最顶层窗口顶部的窗口 (也就是说，所有的最顶层窗口后面)。 如果窗口已经非最顶端窗口，则此标志无效。  
+- **wndNoTopMost**重新定位到的所有非最顶端窗口顶部的窗口 (即，在所有最顶端窗口后面)。 如果该窗口已为非最顶端窗口，则此标志无效。  
   
  有关如何使用此参数的规则，请参阅本主题的"备注"部分。  
   
@@ -10035,69 +10241,69 @@ BOOL SetWindowPos(
  指定新窗口的高度。  
   
  `nFlags`  
- 指定的大小调整和定位选项。 此参数可以是下列标志的组合︰  
+ 指定大小和位置选项。 此参数可以是以下标志的组合︰  
   
-- **SWP_DRAWFRAME**在窗口上四处绘制 （窗口创建时定义） 的框架。  
+- **SWP_DRAWFRAME**窗口周围绘制 （该窗口创建时定义） 的帧。  
   
-- **SWP_FRAMECHANGED**发送`WM_NCCALCSIZE`消息到窗口中，即使该窗口的大小不会被更改。 如果未指定此标志，`WM_NCCALCSIZE`只有在窗口的大小正在更改时发送。  
+- **SWP_FRAMECHANGED**发送`WM_NCCALCSIZE`到窗口中，消息，即使未发生更改窗口的大小。 如果未指定此标志，`WM_NCCALCSIZE`仅更改窗口的大小时发送。  
   
-- **SWP_HIDEWINDOW**隐藏的窗口。  
+- **SWP_HIDEWINDOW**隐藏窗口。  
   
-- `SWP_NOACTIVATE`不会激活窗口中。 如果未设置此标志，为窗口激活，并移动到的最顶端或非最顶层的组的顶部 (这取决于设置`pWndInsertAfter`参数)。  
+- `SWP_NOACTIVATE`不会激活窗口。 如果未设置此标志，为窗口激活，并移动到顶部的最顶层或非最顶层的组 (具体取决于的设置`pWndInsertAfter`参数)。  
   
-- **SWP_NOCOPYBITS**放弃的工作区的全部内容。 如果未指定此标志，客户端区域中的有效内容保存和复制回的工作区后的窗口在大小或重新定位。  
+- **SWP_NOCOPYBITS**放弃的工作区的全部内容。 如果未指定此标志，客户端区域的有效内容会保存，并且之后的窗口在大小或重新定位复制回的工作区。  
   
 - `SWP_NOMOVE`保留当前的位置 (将忽略*x*和*y*参数)。  
   
-- **SWP_NOOWNERZORDER**不会更改的 Z 顺序的所有者窗口的位置。  
+- **SWP_NOOWNERZORDER**不会更改中的 Z 顺序的所有者窗口的位置。  
   
-- **SWP_NOREDRAW**不重绘的更改。 如果设置此标志，没有重画的任何类型会发生。 这适用于客户端区域、 （包括标题和滚动条） 的非工作区和发现由于移动窗口中的父任何的窗口部分。 当设置此标志时，该应用程序必须显式失效或重绘必须重绘的父窗口的窗口中的任何部分。  
+- **SWP_NOREDRAW**不重绘更改。 如果设置此标志，任何类型没有重新绘制时发生。 这适用于客户端区域、 （包括标题和滚动条） 的非工作区和结果移动窗口中发现了父任何的窗口部分。 当设置此标志时，应用程序必须显式使无效，或重绘窗口中，然后必须重绘的父任何的窗口部分。  
   
 - **SWP_NOREPOSITION**相同**SWP_NOOWNERZORDER**。  
   
-- **SWP_NOSENDCHANGING**禁止接收窗口`WM_WINDOWPOSCHANGING`消息。  
+- **SWP_NOSENDCHANGING**窗口防止接收`WM_WINDOWPOSCHANGING`消息。  
   
-- `SWP_NOSIZE`保留当前大小 (将忽略`cx`和`cy`参数)。  
+- `SWP_NOSIZE`保留当前大小 (忽略`cx`和`cy`参数)。  
   
-- `SWP_NOZORDER`保留当前排序 (将忽略`pWndInsertAfter`)。  
+- `SWP_NOZORDER`保留当前排序 (忽略`pWndInsertAfter`)。  
   
 - **SWP_SHOWWINDOW**显示窗口。  
   
 ### <a name="return-value"></a>返回值  
- 如果该函数成功，则非零值否则为 0。  
+ 如果该函数成功，则非零否则为为 0。  
   
 ### <a name="remarks"></a>备注  
- Windows 根据其 Z 顺序; 在屏幕上进行排序在顺序中的所有其他窗口之上将显示在 Z 顺序的顶层窗口。  
+ Windows 排序在根据其 Z 顺序; 屏幕上该窗口顶部的 Z 顺序出现在顺序中的所有其他窗口之上。  
   
- 子窗口的所有坐标都都工作区坐标 （相对于父窗口工作区的左上角）。  
+ 子窗口的所有坐标都是工作区坐标 （相对于父窗口工作区的左上角）。  
   
- 可以将窗口移动到 Z 顺序的顶层设置的`pWndInsertAfter`参数**& wndTopMost**并确保`SWP_NOZORDER`标志未设置或设置一个窗口的 Z 顺序，这样就任何现有的最顶层窗口上方。 当最顶部进行非最顶端窗口时，其拥有的 windows 还对最顶层。 不更改其所有者。  
+ 可以将一个窗口移到 Z 顺序的顶层通过设置`pWndInsertAfter`参数**& wndTopMost**并确保`SWP_NOZORDER`标志是未设置或通过设置窗口的 Z 顺序，以便它为以上任何现有的最顶层窗口。 当非最顶端窗口变得最顶层时，其拥有的 windows 还会最顶层。 不更改其所有者。  
   
- 最顶端窗口不再是最顶层，如果重新定位到底部 ( **& wndBottom**) Z 顺序的任何非最顶端窗口前后。 当非最顶层进行最顶端窗口时，所有其所有者和其拥有的 windows 还对非最顶层窗口。  
+ 最顶端窗口不再位于最顶层，如果重新定位到底部 ( **& wndBottom**) Z 顺序或任何非最顶端窗口后。 最顶端窗口进行非最顶层，所有其所有者和其拥有的 windows 还进行非最顶层窗口。  
   
- 如果既没有`SWP_NOACTIVATE`，也不`SWP_NOZORDER`指定 （即，当应用程序请求一个窗口，同时其激活并放置在指定的 Z 顺序），则在指定的值`pWndInsertAfter`仅在以下情况下使用︰  
+ 如果既没有`SWP_NOACTIVATE`也不`SWP_NOZORDER`（即，当应用程序请求一个窗口，同时将其激活并放置在指定的 Z 顺序） 指定中, 指定的值`pWndInsertAfter`仅在以下情况下使用︰  
   
--   既不**& wndTopMost** ，也不**& wndNoTopMost**中指定`pWndInsertAfter`参数。  
+-   既不**& wndTopMost**也不**& wndNoTopMost**中指定`pWndInsertAfter`参数。  
   
--   此窗口不是活动窗口中。  
+-   此窗口不是活动窗口。  
   
- 应用程序不能激活非活动窗口，而无需还将其带到 Z 顺序的顶层。 应用程序可以更改激活的窗口不受限制的 Z 顺序。  
+ 应用程序不能激活非活动窗口，无需还将其引入 Z 顺序的顶层。 应用程序可以更改不受限制的激活窗口的 Z 顺序。  
   
- 非最顶端窗口可能拥有最顶端窗口，但反之则不然。 本身又由前面的窗口，以确保所有拥有 windows 保持高于其所有者拥有的最顶端窗口的任何窗口 （例如，对话框）。  
+ 非最顶端窗口可能拥有最顶端窗口，但反之则不然。 本身又由最顶端窗口，以确保所有拥有 windows 保持高于其所有者拥有最顶端窗口的任何窗口 （例如，对话框）。  
   
- 使用 Windows 3.1 及更高版本，windows 可以移到 Z 顺序的顶层并通过设置那里锁定其**WS_EX_TOPMOST**样式。 这种最顶端窗口保持其最顶端的位置，即使停用后。 例如，选择 WinHelp 总在最前面命令会建立最顶层，帮助窗口和它然后返回到您的应用程序时保持可见。  
+ 与 Windows 版本 3.1 和更高版本，windows 可以移到 Z 顺序的顶层和锁定通过设置其**WS_EX_TOPMOST**样式。 此类最顶端窗口保持其最顶层位置即使停用。 例如，选择 WinHelp 总在最前面命令会建立最顶层，帮助窗口中，且然后返回到你的应用程序时保持可见。  
   
- 若要创建最顶层窗口，请调用`SetWindowPos`与`pWndInsertAfter`参数等于**& wndTopMost**，或者设置**WS_EX_TOPMOST**时创建窗口样式。  
+ 若要创建最顶端窗口，调用`SetWindowPos`与`pWndInsertAfter`参数等于**& wndTopMost**，或设置**WS_EX_TOPMOST**时创建窗口样式。  
   
- 如果 Z-顺序包含与任何 windows **WS_EX_TOPMOST**样式中，使用移动的窗口**& wndTopMost**值放在所有非最顶层窗口，但仍低于任何最顶层窗口的顶部。 当应用程序激活非活动窗口而不**WS_EX_TOPMOST**类型为 bit，窗口中移动所有非最顶层窗口之上但之下任何最顶层窗口。  
+ 如果 Z 顺序包含与任何 windows **WS_EX_TOPMOST**样式、 转移具有一个窗口**& wndTopMost**值将放在顶部的所有非最顶端窗口，但仍低于任何最顶层窗口。 应用程序时激活而不是非活动窗口**WS_EX_TOPMOST**位，窗口移动所有非最顶端窗口上面但仍低于任何最顶层窗口。  
   
- 如果`SetWindowPos`时，将调用`pWndInsertAfter`参数是**& wndBottom**和`CWnd`是一个最顶层窗口，窗口失去其最顶端的状态 ( **WS_EX_TOPMOST**清除)，并且系统将该窗口在 Z 顺序的底层。  
+ 如果`SetWindowPos`时，将调用`pWndInsertAfter`参数是**& wndBottom**和`CWnd`是最顶端窗口，窗口失去其最顶层的状态 ( **WS_EX_TOPMOST**处于未选中状态)，并且系统将该窗口在 Z 顺序的底层。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&120;](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 120](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  
   
 ##  <a name="setwindowrgn"></a>CWnd::SetWindowRgn  
- 调用该成员函数以设置窗口的区域。  
+ 调用此成员函数以设置窗口的区域。  
   
 ```  
 int SetWindowRgn(
@@ -10110,18 +10316,18 @@ int SetWindowRgn(
  区域句柄。  
   
  `bRedraw`  
- 如果**TRUE**，操作系统设置区域之后重绘的窗口; 否则，不允许。 通常情况下，设置`bRedraw`到**TRUE**如果窗口可见。 如果设置为**TRUE**，系统会发送`WM_WINDOWPOSCHANGING`和`WM_WINDOWPOSCHANGED`到窗口的消息。  
+ 如果**TRUE**，操作系统设置区域之后重绘的窗口; 否则，不。 通常情况下，设置`bRedraw`到**TRUE**窗口是否可见。 如果设置为**TRUE**，系统会将发送`WM_WINDOWPOSCHANGING`和`WM_WINDOWPOSCHANGED`到窗口的消息。  
   
 ### <a name="return-value"></a>返回值  
- 如果函数成功，返回值不为零。 如果函数失败，则返回值为零。  
+ 如果函数成功，则返回值不为零。 如果函数失败，则返回值为零。  
   
 ### <a name="remarks"></a>备注  
  窗口的窗口区域的坐标是相对于窗口中，不是窗口的工作区的左上角。  
   
- 在成功调用`SetWindowRgn`，操作系统拥有由区域句柄指定的区域`hRgn`。 操作系统不生成区域的副本，因此不执行任何进一步函数调用与此区域句柄，并且没有关闭此区域句柄。  
+ 成功调用了`SetWindowRgn`，操作系统拥有区域句柄所指定的区域`hRgn`。 操作系统不会进行区域的副本，因此不要进行任何进一步函数调用使用此区域句柄，，请不要关闭此区域句柄。  
   
 ##  <a name="setwindowtext"></a>CWnd::SetWindowText  
- 设置窗口的标题改为指定的文本。  
+ 设置为指定文本的窗口的标题。  
   
 ```  
 void SetWindowText(LPCTSTR lpszString);
@@ -10129,18 +10335,18 @@ void SetWindowText(LPCTSTR lpszString);
   
 ### <a name="parameters"></a>参数  
  `lpszString`  
- 指向[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象或要用作新的标题或控件文本 null 结尾的字符串。  
+ 指向[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象或要用作新的标题或控件文本的以 null 结尾的字符串。  
   
 ### <a name="remarks"></a>备注  
- 如果该窗口是一个控件，设置控件中的文本。  
+ 如果该窗口是一个控件，将设置在控件内的文本。  
   
  此函数会导致[WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644)消息发送到此窗口。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&121;](../../mfc/reference/codesnippet/cpp/cwnd-class_62.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 121](../../mfc/reference/codesnippet/cpp/cwnd-class_62.cpp)]  
   
 ##  <a name="showcaret"></a>CWnd::ShowCaret  
- 在当前插入符号的位置在屏幕上显示插入符号。  
+ 插入符号的当前位置屏幕上显示插入符号。  
   
 ```  
 void ShowCaret();
@@ -10149,17 +10355,17 @@ void ShowCaret();
 ### <a name="remarks"></a>备注  
  显示之后，插入符号开始自动闪烁。  
   
- `ShowCaret`成员函数显示仅插入符号，是否它具有当前的形状并不已隐藏两个或更多时间连续。 如果此窗口不拥有插入符号，不显示插入符号。  
+ `ShowCaret`成员函数显示仅插入符号，是否它具有当前的形状，并已不隐藏两个或更多时间连续。 如果脱字号不归此窗口，将不显示插入符号。  
   
- 隐藏插入符号是累积的。 如果[HideCaret](#hidecaret)成员函数已被调用五次连续`ShowCaret`必须调用五次以显示插入符号。  
+ 隐藏插入符号是累积的。 如果[HideCaret](#hidecaret)成员函数已调用五次连续，`ShowCaret`必须调用五次来显示插入符号。  
   
- 插入符号是共享的资源。 仅在它具有输入的焦点或处于活动状态时，窗口中应显示插入符号。  
+ 脱字号是共享的资源。 仅在具有输入的焦点或处于活动状态时，窗口应显示插入符号。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::CreateCaret](#createcaret)。  
   
 ##  <a name="showownedpopups"></a>CWnd::ShowOwnedPopups  
- 显示或隐藏所有归此窗口的弹出窗口。  
+ 显示或隐藏此窗口所拥有的所有弹出窗口。  
   
 ```  
 void ShowOwnedPopups(BOOL bShow = TRUE);
@@ -10183,19 +10389,19 @@ void ShowScrollBar(
   
 ### <a name="parameters"></a>参数  
  `nBar`  
- 指定的滚动条控件或窗口的非工作区的一部分。 如果它属于非工作区中，`nBar`还用于指明是否滚动条位于水平、 垂直，或两者。 它必须是以下项之一︰  
+ 指定滚动条的控件或窗口的非工作区的一部分。 如果它是的非工作区中，一部分`nBar`还用于指明是否滚动条位于水平、 垂直或两者。 它必须是以下项之一︰  
   
-- **SB_BOTH**指定窗口中的水平和垂直滚动条。  
+- **SB_BOTH**指定窗口的水平和垂直滚动条。  
   
-- **SB_HORZ**指定窗口为水平滚动条。  
+- **SB_HORZ**指定该窗口是水平滚动条。  
   
-- **SB_VERT**指定窗口为垂直滚动条。  
+- **SB_VERT**指定该窗口是垂直滚动条。  
   
  `bShow`  
- 指定 Windows 是否显示或隐藏的滚动条。 如果此参数为**TRUE**，显示滚动条; 否则将会隐藏滚动条。  
+ 指定 Windows 是否显示或隐藏滚动条。 如果此参数为**TRUE**，显示滚动条; 否则将会隐藏滚动条。  
   
 ### <a name="remarks"></a>备注  
- 应用程序不应调用`ShowScrollBar`处理滚动条通知消息时隐藏滚动条。  
+ 应用程序不应调用`ShowScrollBar`若要在处理滚动条通知消息时隐藏滚动条。  
   
 ##  <a name="showwindow"></a>CWnd::ShowWindow  
  设置窗口的可见性状态。  
@@ -10206,39 +10412,39 @@ BOOL ShowWindow(int nCmdShow);
   
 ### <a name="parameters"></a>参数  
  `nCmdShow`  
- 指定如何`CWnd`是否显示。 它必须是下列值之一︰  
+ 指定如何`CWnd`是否显示。 它必须是以下值之一︰  
   
 - **SW_HIDE**隐藏此窗口，并将激活传递到另一个窗口。  
   
-- **SW_MINIMIZE**最小化窗口，并激活系统的列表中的顶级窗口。  
+- **SW_MINIMIZE**最小化窗口并激活系统的列表中的顶级窗口。  
   
-- **SW_RESTORE**激活，并且显示窗口。 如果该窗口已最小化，则最大化，Windows 会将其还原到其原始大小和位置。  
+- **SW_RESTORE**激活，并且显示窗口。 如果对窗口进行最小化或最大化，Windows 会将其还原到其原始大小和位置。  
   
-- **SW_SHOW**激活窗口，并将其显示在其当前大小和位置。  
+- **SW_SHOW**激活窗口并将其显示在其当前大小和位置。  
   
-- **SW_SHOWMAXIMIZED**激活窗口，并将其显示为最大化的窗口。  
+- **SW_SHOWMAXIMIZED**激活窗口，并将其显示为最大化窗口。  
   
-- **SW_SHOWMINIMIZED**激活窗口，并将其显示为图标。  
+- **SW_SHOWMINIMIZED**激活窗口，并将其显示为一个图标。  
   
-- **SW_SHOWMINNOACTIVE**窗口中显示为图标。 当前处于活动状态窗口将保持活动状态。  
+- **SW_SHOWMINNOACTIVE**以图标形式显示窗口。 当前处于活动状态窗口保持活动状态。  
   
-- **SW_SHOWNA**显示其当前状态中的窗口。 当前处于活动状态窗口将保持活动状态。  
+- **SW_SHOWNA**在其当前状态显示窗口。 当前处于活动状态窗口保持活动状态。  
   
-- **SW_SHOWNOACTIVATE**显示窗口中的最新的大小和位置。 当前处于活动状态窗口将保持活动状态。  
+- **SW_SHOWNOACTIVATE**显示窗口中的最新的大小和位置。 当前处于活动状态窗口保持活动状态。  
   
-- **SW_SHOWNORMAL**激活，并且显示窗口。 如果该窗口已最小化，则最大化，Windows 会将其还原到其原始大小和位置。  
+- **SW_SHOWNORMAL**激活，并且显示窗口。 如果对窗口进行最小化或最大化，Windows 会将其还原到其原始大小和位置。  
   
 ### <a name="return-value"></a>返回值  
- 如果该窗口是以前可见，则非零值0`CWnd`之前为隐藏状态。  
+ 如果窗口已以前可见，则非零0 如果`CWnd`之前为隐藏状态。  
   
 ### <a name="remarks"></a>备注  
- `ShowWindow`必须只能调用一次每个应用程序的主窗口中以[CWinApp::m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow)。 后续调用`ShowWindow`必须使用一个而不是指定的上面列出的值`CWinApp::m_nCmdShow`。  
+ `ShowWindow`必须每个应用程序的主窗口中以一次调用[CWinApp::m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow)。 后续调用`ShowWindow`必须使用一个而不是指定的上面列出的值`CWinApp::m_nCmdShow`。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CWnd::CalcWindowRect](#calcwindowrect)。  
   
 ##  <a name="subclassdlgitem"></a>CWnd::SubclassDlgItem  
- 调用"动态子类化"该成员函数将通过对话框模板创建的控件并将其附加到此`CWnd`对象。  
+ 调用此成员函数可对"动态子类"从对话框模板创建的控件并将其附加到这`CWnd`对象。  
   
 ```  
 BOOL SubclassDlgItem(
@@ -10257,15 +10463,15 @@ BOOL SubclassDlgItem(
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 动态子类化控件时，windows 消息将路由通过`CWnd`的消息映射，并调用消息处理程序中`CWnd`第一次的类。 传递给类的基类的消息将传递到该控件中的默认消息处理程序。  
+ 动态子类化控件时，windows 消息将路由通过`CWnd`的消息映射，然后调用消息处理程序`CWnd`第一次的类。 传递给基类的消息将传递到控件中的默认消息处理程序。  
   
- 此成员函数将附加到 Windows 控件`CWnd`对象，并替换控件的**WndProc**和**AfxWndProc**函数。 该函数存储旧**WndProc**中返回的位置`GetSuperWndProcAddr`成员函数。  
+ 此成员函数将附加到 Windows 控件`CWnd`对象，并替换控件的**WndProc**和**AfxWndProc**函数。 函数将存储的旧**WndProc**中返回的位置`GetSuperWndProcAddr`成员函数。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&122;](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 122](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]  
   
 ##  <a name="subclasswindow"></a>CWnd::SubclassWindow  
- 调用一个窗口的"动态子类化"该成员函数并将其附加到此`CWnd`对象。  
+ 调用一个窗口的"动态子类化"此成员函数，并将其附加到这`CWnd`对象。  
   
 ```  
 BOOL SubclassWindow(HWND hWnd);
@@ -10279,28 +10485,28 @@ BOOL SubclassWindow(HWND hWnd);
  如果该函数成功，则为非 0；否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 动态子类化窗口时，windows 消息将路由通过`CWnd`的消息映射，并调用消息处理程序中`CWnd`第一次的类。 传递给类的基类的消息将传递到窗口中的默认消息处理程序。  
+ 动态子类化窗口时，windows 消息将路由通过`CWnd`的消息映射，然后调用消息处理程序`CWnd`第一次的类。 传递给基类的消息将传递到窗口中的默认消息处理程序。  
   
- 此成员函数将附加到 Windows 控件`CWnd`对象，并取代了窗口**WndProc**和**AfxWndProc**函数。 该函数存储与旧指针**WndProc**中`CWnd`对象。  
+ 此成员函数将附加到 Windows 控件`CWnd`对象，并替换窗口的**WndProc**和**AfxWndProc**函数。 函数将存储指向旧的**WndProc**中`CWnd`对象。  
   
 > [!NOTE]
->  窗口中必须尚未被附加到 MFC 对象时调用此函数。  
+>  窗口必须尚未被附加到 MFC 对象时调用此函数。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&123;](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 123](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]  
   
 ##  <a name="unlockwindowupdate"></a>CWnd::UnlockWindowUpdate  
- 调用此成员函数以解锁锁定的一个窗口`CWnd::LockWindowUpdate`。  
+ 调用此成员函数以解锁已锁定的窗口`CWnd::LockWindowUpdate`。  
   
 ```  
 void UnlockWindowUpdate();
 ```  
   
 ### <a name="remarks"></a>备注  
- 可以使用锁定一次只能有一个窗口`LockWindowUpdate`。 请参阅[CWnd::LockWindowUpdate](#lockwindowupdate)或 Win32 函数[LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034)有关锁定 windows 的详细信息。  
+ 可以使用锁定一次只有一个窗口`LockWindowUpdate`。 请参阅[CWnd::LockWindowUpdate](#lockwindowupdate)或 Win32 函数[LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034)有关锁定 windows 的详细信息。  
   
 ##  <a name="unsubclasswindow"></a>CWnd::UnsubclassWindow  
- 调用此成员函数以设置**WndProc**后退到其原始值和分离标识窗口`HWND`从**CWnd**对象。  
+ 调用此成员函数可设置**WndProc**回其原始值和分离由窗口`HWND`从**CWnd**对象。  
   
 ```  
 HWND UnsubclassWindow();
@@ -10313,7 +10519,7 @@ HWND UnsubclassWindow();
   请参阅示例[CWnd::SubclassWindow](#subclasswindow)。  
   
 ##  <a name="updatedata"></a>CWnd::UpdateData  
- 调用该成员函数来初始化数据在对话框中，或以检索和验证对话框数据。  
+ 调用此成员函数初始化数据在对话框中，也可以检索和验证对话框数据。  
   
 ```  
 BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
@@ -10321,16 +10527,16 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
   
 ### <a name="parameters"></a>参数  
  `bSaveAndValidate`  
- 该标志指示是否正在初始化对话框 ( **FALSE**) 或在检索数据 ( **TRUE**)。  
+ 该标志指示是否正在初始化对话框 ( **FALSE**) 或正在检索数据 ( **TRUE**)。  
   
 ### <a name="return-value"></a>返回值  
- 如果操作成功，则非零值否则为 0。 如果*bSaveAndValidat*e 是**TRUE**，则返回值为非零值表示已成功验证的数据。  
+ 如果操作成功，则非零否则为 0。 如果*bSaveAndValidat*e 是**TRUE**，则返回值为非零表示已成功验证数据。  
   
 ### <a name="remarks"></a>备注  
- 框架将自动调用`UpdateData`与`bSaveAndValidate`设置为**FALSE**的默认实现中创建一个模式对话框时[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。 调用发生对话框中才会显示。 默认实现[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)调用与此成员函数`bSaveAndValidate`设置为**TRUE**来检索数据，以及如果成功，将关闭该对话框。 （如果在对话框中单击取消按钮，则对话框已关闭而无需要检索的数据。）  
+ 框架将自动调用`UpdateData`与`bSaveAndValidate`设置为**FALSE**的默认实现中创建模式对话框时[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。 对话框中才会显示，将发生调用。 默认实现[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)调用与此成员函数`bSaveAndValidate`设置为**TRUE**要检索数据，以及如果成功，将关闭该对话框。 （如果在对话框中单击取消按钮，对话框中没有而关闭正在检索的数据。）  
   
 ##  <a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
- 调用此成员函数以更新对话框按钮和其他控件在对话框或使用的窗口中的状态[ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4)回调机制。  
+ 调用此成员函数以更新对话框按钮和一个对话框中或使用的窗口中的其他控件的状态[ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4)回调机制。  
   
 ```  
 void UpdateDialogControls(
@@ -10340,13 +10546,13 @@ void UpdateDialogControls(
   
 ### <a name="parameters"></a>参数  
  `pTarget`  
- 指向主框架窗口的应用程序，以及用来发送更新消息*。*  
+ 指向主框架窗口的应用程序，并且适用于更新消息路由*。*  
   
  `bDisableIfNoHndler`  
  该标志指示没有更新处理程序的控件是否应自动显示为已禁用。  
   
 ### <a name="remarks"></a>备注  
- 如果子控件不具有一个处理程序和`bDisableIfNoHndler`是**TRUE**，则将禁用的子控件。  
+ 如果子控件没有处理程序和`bDisableIfNoHndler`是**TRUE**，则将禁用的子控件。  
   
  框架调用此成员函数为对话栏或工具栏中的控件的应用程序的一部分空闲处理。  
   
@@ -10367,31 +10573,31 @@ BOOL UpdateLayeredWindow(
   
 ### <a name="parameters"></a>参数  
  `pDCDst`  
- 指向屏幕设备上下文的指针。 它用于调色板的颜色匹配时更新了窗口的内容。 如果`pDCDst`是**NULL**，将使用默认调色板。  
+ 指向屏幕设备上下文的指针。 它用于更新了窗口的内容时的调色板颜色匹配。 如果`pDCDst`是**NULL**，将使用默认调色板。  
   
  If `pDCSrc` is **NULL**, `pDCDst` must be **NULL**.  
   
  `pptDst`  
- 一个指向**点**结构，它指定新的屏幕位置的分层窗口。 如果不更改当前的位置，`pptDst`可以是**NULL**。  
+ 指向的指针**点**结构，它指定分层窗口的新屏幕位置。 如果未更改当前的位置，`pptDst`可以是**NULL**。  
   
  *psize*  
- 指向**大小**结构，它指定分层窗口的新大小。 如果不更改窗口的大小， *psize*可以是**NULL**。  
+ 指向**大小**结构，它指定分层窗口的新大小。 如果未更改窗口的大小， *psize*可以是**NULL**。  
   
  If `pDCSrc` is **NULL**, *psize* must be **NULL**.  
   
  `pDCSrc`  
- 为定义的分层的窗口图面 DC 指向的指针。 如果未更改的形状和可视窗口的上下文，`pDCSrc`可以是**NULL**。  
+ 指向定义分层的窗口的面的 DC 的指针。 如果未更改的形状和窗口的 visual 上下文，`pDCSrc`可以是**NULL**。  
   
  `pptSrc`  
- 指向**点**结构，它指定在设备上下文中的层的位置。  
+ 指向**点**结构，它在设备上下文中指定的层的位置。  
   
  If `pDCSrc` is **NULL**, `pptSrc` should be **NULL**.  
   
  `crKey`  
- 指向**COLORREF**值，该值指定用于组成分层的窗口的透明度颜色键。 绘制由以此颜色窗口的所有像素将都是透明的。 若要生成**COLORREF**，使用 RGB 宏。  
+ 指向**COLORREF**值，该值指定用于撰写分层的窗口的透明度颜色键。 将透明绘制成这种颜色窗口的所有像素。 若要生成**COLORREF**，使用 RGB 宏。  
   
  *pblend*  
- 指向[BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393)结构，它指定用于组成分层的窗口的透明度值。  
+ 指向[BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393)结构，它指定用于撰写分层的窗口的透明度值。  
   
  `dwFlags`  
  指定要采取的操作。 此参数可以为一个或多个以下的值。 有关可能的值的列表，请参阅[UpdateLayeredWindow](http://msdn.microsoft.com/library/windows/desktop/ms633556)。  
@@ -10400,23 +10606,23 @@ BOOL UpdateLayeredWindow(
  如果函数成功，则为非零值；否则为  
   
 ### <a name="remarks"></a>备注  
- 此成员函数模拟函数的功能[UpdateLayeredWindow](http://msdn.microsoft.com/library/windows/desktop/ms633556)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成员函数模拟函数的功能[UpdateLayeredWindow](http://msdn.microsoft.com/library/windows/desktop/ms633556)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="updatewindow"></a>CWnd::UpdateWindow  
- 通过发送更新的客户端区域[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息的更新区域是否不为空。  
+ 通过发送更新的客户端区域[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息更新区域是否不为空。  
   
 ```  
 void UpdateWindow();
 ```  
   
 ### <a name="remarks"></a>备注  
- `UpdateWindow`成员函数可将发送`WM_PAINT`消息直接，绕过应用程序队列。 如果更新区域为空，`WM_PAINT`不会被发送。  
+ `UpdateWindow`成员函数将`WM_PAINT`消息直接，绕过应用程序队列。 如果更新区域为空，`WM_PAINT`不会发送。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing #&124;](../../mfc/reference/codesnippet/cpp/cwnd-class_65.cpp)]  
+ [!code-cpp[NVC_MFCWindowing # 124](../../mfc/reference/codesnippet/cpp/cwnd-class_65.cpp)]  
   
 ##  <a name="validaterect"></a>CWnd::ValidateRect  
- 通过从窗口中的更新区域中删除该矩形中验证给定的矩形内的客户端区域。  
+ 通过从窗口的更新区域移除矩形验证给定矩形内的工作区。  
   
 ```  
 void ValidateRect(LPCRECT lpRect);
@@ -10424,15 +10630,15 @@ void ValidateRect(LPCRECT lpRect);
   
 ### <a name="parameters"></a>参数  
  `lpRect`  
- 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，其中包含工作区坐标表示的矩形的要从更新区域中删除。 如果`lpRect`是**NULL**，整个窗口进行验证。  
+ 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)，它包含客户端的矩形的坐标要从更新区域中删除。 如果`lpRect`是**NULL**，验证整个窗口。  
   
 ### <a name="remarks"></a>备注  
- [BeginPaint](#beginpaint)成员函数将自动验证整个客户端区域。 既不`ValidateRect`和[ValidateRgn](#validatergn)应调用成员函数，如果需要验证之前的更新区域的一部分[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)下一次生成。  
+ [BeginPaint](#beginpaint)成员函数将自动验证整个工作区。 既不`ValidateRect`也不[ValidateRgn](#validatergn)应调用成员函数，如果需要验证之前的更新区域的一部分[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)接下来生成。  
   
- Windows 继续生成`WM_PAINT`消息之前验证当前的更新区域。  
+ Windows 继续生成`WM_PAINT`消息之前验证当前更新区域。  
   
 ##  <a name="validatergn"></a>CWnd::ValidateRgn  
- 通过从窗口的当前的更新区域中删除该区域中验证给定区域内的客户端区域。  
+ 通过从窗口的当前更新区域移除区域验证给定区域内的工作区。  
   
 ```  
 void ValidateRgn(CRgn* pRgn);
@@ -10440,15 +10646,15 @@ void ValidateRgn(CRgn* pRgn);
   
 ### <a name="parameters"></a>参数  
  `pRgn`  
- 一个指向[CRgn](../../mfc/reference/crgn-class.md)对象，它标识定义要从更新区域中删除的区域的区域。 如果此参数为**NULL**，删除整个客户端区域。  
+ 指向的指针[CRgn](../../mfc/reference/crgn-class.md)标识定义要删除从更新区域的区域的区域的对象。 如果此参数为**NULL**，删除整个工作区。  
   
 ### <a name="remarks"></a>备注  
- 给定的区域必须事先创建区域函数。 区域坐标假定可工作区坐标。  
+ 给定的区域必须事先创建区域函数。 区域坐标被假定为客户端坐标。  
   
- [BeginPaint](#beginpaint)成员函数将自动验证整个客户端区域。 既不[ValidateRect](#validaterect)和`ValidateRgn`应调用成员函数，如果必须在下一步之前验证更新区域的一部分[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)生成消息。  
+ [BeginPaint](#beginpaint)成员函数将自动验证整个工作区。 既不[ValidateRect](#validaterect)也不`ValidateRgn`应调用成员函数，如果必须在下一步之前验证更新区域的一部分[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)生成消息。  
   
 ##  <a name="windowfrompoint"></a>CWnd::WindowFromPoint  
- 检索包含指定的点，则窗口`point`必须在屏幕上指定点的屏幕坐标。  
+ 检索包含指定的点; 的窗口`point`必须在屏幕上指定点的屏幕坐标。  
   
 ```  
 static CWnd* PASCAL WindowFromPoint(POINT point);
@@ -10456,13 +10662,13 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
   
 ### <a name="parameters"></a>参数  
  `point`  
- 指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[点](../../mfc/reference/point-structure1.md)数据结构，它定义要检查的点。  
+ 指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)对象或[点](../../mfc/reference/point-structure1.md)定义要检查的点的数据结构。  
   
 ### <a name="return-value"></a>返回值  
- 指向该点存在于该窗口对象的指针。 它是**NULL**如果不存在时段，在给定时刻。 返回的指针可能是暂时的不应存储以供将来使用。  
+ 指向中点所在的窗口对象的指针。 它是**NULL**如果不存在时段，在给定的时间。 返回的指针可能是暂时的不应以供稍后使用存储。  
   
 ### <a name="remarks"></a>备注  
- `WindowFromPoint`并不检索的隐藏或禁用窗口中，即使该点是在窗口中。 应用程序应使用[ChildWindowFromPoint](#childwindowfrompoint)受限搜索的成员函数。  
+ `WindowFromPoint`未检索的隐藏或禁用窗口中，即使该点是在窗口中。 应用程序应使用[ChildWindowFromPoint](#childwindowfrompoint)受限搜索的成员函数。  
   
 ##  <a name="windowproc"></a>CWnd::WindowProc  
  提供 Windows 过程 ( `WindowProc`) 为`CWnd`对象。  
@@ -10479,16 +10685,16 @@ virtual LRESULT WindowProc(
  指定要处理的 Windows 消息。  
   
  `wParam`  
- 提供在处理消息时使用的其他信息。 参数值取决于消息。  
+ 提供用于处理消息的其他信息。 参数值取决于消息。  
   
  `lParam`  
- 提供在处理消息时使用的其他信息。 参数值取决于消息。  
+ 提供用于处理消息的其他信息。 参数值取决于消息。  
   
 ### <a name="return-value"></a>返回值  
- 返回值取决于消息。  
+ 返回的值取决于消息。  
   
 ### <a name="remarks"></a>备注  
- 它将会在窗口的消息映射的消息调度。  
+ 它会将消息通过窗口的消息映射调度。  
   
 ##  <a name="winhelp"></a>CWnd::WinHelp  
  调用以启动 WinHelp 应用程序。  
@@ -10504,13 +10710,13 @@ virtual void WinHelp(
  指定其他数据。 使用的值的值取决于`nCmd`参数。  
   
  `nCmd`  
- 指定请求的帮助的类型。 有关的可能的值以及它们如何影响列表`dwData`参数，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows，此功能在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 指定请求的帮助的类型。 有关的可能的值以及它们如何影响列表`dwData`参数，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows 函数中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>备注  
  请参阅[CWinApp::WinHelp](../../mfc/reference/cwinapp-class.md#winhelp)有关详细信息。  
   
 ##  <a name="registertouchwindow"></a>CWnd::RegisterTouchWindow  
- 注册或注销 Windows 触控支持。  
+ 注册或注销 Windows 触摸屏支持。  
   
 ```  
 BOOL RegisterTouchWindow(
@@ -10523,7 +10729,7 @@ BOOL RegisterTouchWindow(
  `TRUE`指示注册 Windows 触摸屏支持;`FALSE`否则为。  
   
  `ulFlags`  
- 一组位标志，用于指定可选的修改。 此字段可能包含 0 或以下值之一︰ TWF_FINETOUCH、 TWF_WANTPALM。  
+ 一组位标志，用于指定可选的修改。 此字段可能包含 0 个或以下值之一︰ TWF_FINETOUCH、 TWF_WANTPALM。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则为 `TRUE`；否则为 `FALSE`。  

@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: a8ef7ba19d2337e4e50f34d7cdd528024a1d90aa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
+ms.openlocfilehash: 17a99edadeb7a5bd923126bce7fbef50313e1867
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="class-factories-and-licensing"></a>类工厂和许可
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/24/2017
 |[END_OLEFACTORY](#end_olefactory)|结束任何授权函数的声明。|  
 |[AfxVerifyLicFile](#afxverifylicfile)|确认控件是否已获得在特定计算机上使用的授权。|  
   
-##  <a name="a-namedeclareolecreateexa--declareolecreateex"></a><a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
+##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
  声明类工厂和`GetClassID`控件类的成员函数。  
   
 ```   
@@ -70,14 +70,14 @@ DECLARE_OLECREATE_EX(class_name)
 ### <a name="remarks"></a>备注  
  在控件类标头文件中的控件，不支持授权使用此宏。  
   
- 请注意，此宏的作用相同下面的代码示例︰  
+ 请注意此宏提供下面的代码示例相同的目的︰  
   
- [!code-cpp[NVC_MFCAxCtl #&14;](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
+ [!code-cpp[NVC_MFCAxCtl # 14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameimplementolecreateexa--implementolecreateex"></a><a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
+##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
  实现控件的类工厂和[GetClassID](../../mfc/reference/colecontrol-class.md#getclassid)控件类的成员函数。  
   
 ```   
@@ -104,17 +104,17 @@ IMPLEMENT_OLECREATE_EX(
  *external_name*  
  向应用程序公开的对象名称。  
   
- *左、 w1、 w2、 b1、 b2、 b3、 b4、 b5、 b6、 b7、 b8*  
- 类的组件**CLSID**。 有关这些参数的详细信息，请参阅的备注[IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
+ *l、 w1、 w2、 b1、 b2、 b3、 b4、 b5、 b6、 b7、 b8*  
+ 类的组件**CLSID**。 有关这些参数的详细信息，请参阅备注[IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
   
 ### <a name="remarks"></a>备注  
- 此宏必须出现在使用任何控件类的实现文件`DECLARE_OLECREATE_EX`宏或`BEGIN_OLEFACTORY`和`END_OLEFACTORY`宏。 外部名称是向其他应用程序公开 OLE 控件的标识符。 容器使用此名称可请求返回此控件类的对象。  
+ 此宏必须出现在任何使用的控件类的实现文件`DECLARE_OLECREATE_EX`宏或`BEGIN_OLEFACTORY`和`END_OLEFACTORY`宏。 外部名称是向其他应用程序公开 OLE 控件的标识符。 容器使用此名称请求此控件类的对象。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-namebeginolefactorya--beginolefactory"></a><a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
- 开始您的类工厂的标头文件中的控件类的声明。  
+##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
+ 开始你的控件类的标头文件中类工厂的声明。  
   
 ``` 
 BEGIN_OLEFACTORY(class_name)  
@@ -122,15 +122,15 @@ BEGIN_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>参数  
  *class_name*  
- 指定控件类这是其类工厂的名称。  
+ 指定的控件类这是其类工厂的名称。  
   
 ### <a name="remarks"></a>备注  
- 类工厂授权函数的声明应开始后立即`BEGIN_OLEFACTORY`。  
+ 声明的授权函数的类工厂应开始后立即`BEGIN_OLEFACTORY`。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameendolefactorya--endolefactory"></a><a name="end_olefactory"></a>END_OLEFACTORY  
+##  <a name="end_olefactory"></a>END_OLEFACTORY  
  结束控件的类工厂的声明。  
   
 ```  
@@ -139,13 +139,13 @@ END_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>参数  
  *class_name*  
- 控件类这是其类工厂的名称。  
+ 这是其类工厂的控件类名称。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameafxverifylicfilea--afxverifylicfile"></a><a name="afxverifylicfile"></a>AfxVerifyLicFile  
- 调用此函数可验证命名的许可证文件`pszLicFileName`仅适用于 OLE 控件。  
+##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
+ 调用此函数可验证通过名为的许可证文件`pszLicFileName`对 OLE 控件有效。  
   
 ```   
 BOOL AFXAPI AfxVerifyLicFile(
@@ -157,24 +157,24 @@ BOOL AFXAPI AfxVerifyLicFile(
   
 ### <a name="parameters"></a>参数  
  `hInstance`  
- DLL 与授权控件相关联的实例句柄。  
+ 与授权控件关联的 DLL 的实例句柄。  
   
  `pszLicFileName`  
- 指向以 null 结尾的字符串包含 string 许可证文件名。  
+ 指向以 null 结尾的字符串包含许可证文件名。  
   
  `pszLicFileContents`  
- 指向以必须匹配在许可证文件的开头找到序列的字节序列。  
+ 指向一个字节序列，其中必须与许可证文件的开头处的顺序匹配。  
   
  `cch`  
  中的字符数`pszLicFileContents`。  
   
 ### <a name="return-value"></a>返回值  
- 如果许可证文件存在并且开头中的字符序列，则为非`pszLicFileContents`; 否则为 0。  
+ 如果许可证文件存在且开始中的字符序列则不为`pszLicFileContents`; 否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 如果`cch`是 â €"1，此函数使用︰  
+ 如果`cch`为-1，此函数使用︰  
   
- [!code-cpp[NVC_MFC_Utilities #&36;](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities # 36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
