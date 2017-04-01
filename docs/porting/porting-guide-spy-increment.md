@@ -32,6 +32,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
@@ -42,7 +43,7 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
   
  我们认为这是最典型的移植使用 MFC 和 Win32 API 的 Windows 桌面应用程序的情况，尤其是对于尚未使用从 Visual C++ 6.0 版本开始的任意 Visual C++ 版本进行更新的旧项目。  
   
-##  <a name="a-nameconvertprojectfilea-step-1-converting-the-project-file"></a><a name="convert_project_file"></a>步骤 1. 转换项目文件。  
+##  <a name="convert_project_file"></a>步骤 1. 转换项目文件。  
  项目文件（Visual C++ 6.0 中两个旧的 .dsw 文件）轻松转换，且未产生任何需要进一步关注的问题。 其中一个项目是 Spy++ 应用程序。 另一个项目是 SpyHk，它是用 C 语言编写的支持 DLL。 如[此处](../porting/visual-cpp-porting-and-upgrading-guide.md)所述，更复杂的项目可能无法轻松升级。  
   
  升级两个项目后，我们的解决方案如下所示：  
@@ -51,7 +52,7 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
   
  我们共有两个项目，一个具有大量的 C++ 文件，另一个是用 C 语言编写的 DLL。  
   
-##  <a name="a-nameheaderfileproblemsa-step-2-header-file-problems"></a><a name="header_file_problems"></a>步骤 2. 头文件问题  
+##  <a name="header_file_problems"></a>步骤 2. 头文件问题  
  生成新转换的项目后，通常首先发现的是，找不到自己项目使用的头文件。  
   
  Spy++ 中无法找到的文件是 verstamp.h。 通过搜索 Internet，我们确定这是因为 DAO SDK（一种过时的数据技术）。 我们想知道使用了该头文件中的哪些符号，以确定是否真的需要该文件或者是否在其他地方定义了这些符号，因此我们注释了掉头文件声明并重新进行了编译。 事实证明只需要一个符号，即 VER_FILEFLAGSMASK。  
@@ -62,7 +63,7 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
   
  在可用的包含文件中查找符号最简单的方法是，使用“在文件中查找”(Ctrl+Shift+F)，并指定“Visual C++ 包含目录”。 我们在 ntverp.h 中找到了该符号。 我们将 verstamp.h 包含文件替换为 ntverp.h 后，此错误消失。  
   
-##  <a name="a-namelinkeroutputsettingsa-step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a>步骤 3. 链接器 OutputFile 设置  
+##  <a name="linker_output_settings"></a>步骤 3. 链接器 OutputFile 设置  
  有时，旧项目将文件放在非常规位置，升级后这可能会导致问题。 在这种情况下，我们必须将 $(SolutionDir) 添加到项目属性的包含路径，以确保 Visual Studio 可以找到放在此处而非放在某个项目文件夹中的头文件。  
   
  MSBuild 发出 MSB8012，报告 Link.OutputFile 属性与 TargetPath 和 TargetName 值不匹配。  
@@ -75,7 +76,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
   
  在这种情况下，对于 Spy++ 项目，转换后的项目中的 **Link.OutputFile** 属性将设置为 .\Debug\Spyxx.exe 或 .\Release\Spyxx.exe，具体取决于配置。 最好的方法就是，针对所有配置将这些硬编码值替换为 $(TargetDir)$(TargetName)$(TargetExt)。 如果不起作用，则可以从此处自定义，或更改设置这些值的“常规”部分中的属性（属性为“输出目录”、“目标文件名”和“目标文件扩展名”）。 记住，如果正在查看的属性使用宏，则可以选择下拉列表中的“编辑”打开一个对话框，该对话框显示最终的字符串和已进行的宏替换。 你可以通过选择“宏”按钮查看所有可用宏及其当前值。  
   
-##  <a name="a-nameupdatingwinvera-step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a>步骤 4. 更新目标 Windows 版本  
+##  <a name="updating_winver"></a>步骤 4. 更新目标 Windows 版本  
  下一个错误指示 WINVER 版本不再受 MFC 支持。 适用于 Windows XP 的 WINVER 是 0x0501。  
   
 ```Output  
@@ -101,7 +102,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7  
 ```  
   
-##  <a name="a-namelinkererrorsa-step-5-linker-errors"></a><a name="linker_errors"></a>步骤 5. 链接器错误  
+##  <a name="linker_errors"></a>步骤 5. 链接器错误  
  进行这些更改后，可以生成 SpyHk (DLL) 项目，但会产生链接器错误。  
   
 ```  
@@ -118,14 +119,14 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
   
  现在，可以生成 C DLL 项目 SpyHK.dll，而且链接不会出错。  
   
-##  <a name="a-nameoutdatedheaderfilesa-step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a>步骤 6. 更多过时的头文件  
+##  <a name="outdated_header_files"></a>步骤 6. 更多过时的头文件  
  从这一步骤开始，我们将对主要的可执行项目 Spyxx 执行操作。  
   
  找不到其他几个包含文件：ctl3d.h 和 penwin.h。 虽然通过搜索 Internet 尝试识别包含标头的内容可能有用，但有时信息作用并不大。 我们发现 ctl3d.h 是 Exchange 开发工具包的一部分，并且对 Windows 95 上的某些控件样式以及与 Window Pen Computin（一个过时的 API）相关的 penwin.h 提供支持。 在这种情况下，我们只需注释掉 #include 行，并用处理 verstamp.h 的方式处理未定义的符号。 与 3D 控件或 Pen Computing 相关的所有内容均已从项目中删除。  
   
  给定具有许多将逐渐消除的编译错误的项目，删除 #include 指令时立即找到所有使用过时 API 的情况并不现实。 我们没有立即检测到它，却在稍后出现一个未定义 WM_DLGBORDER 的错误。 它实际上是来自 ctl3d.h 的许多未定义符号之一。 一旦确定它与过时的 API 相关后，则可以在代码中删除对它所有的引用。  
   
-##  <a name="a-nameupdatingiostreamscodea-step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a>步骤 7. 更新旧的 iostreams 代码  
+##  <a name="updating_iostreams_code"></a>步骤 7. 更新旧的 iostreams 代码  
  下一个错误是使用 iostreams 的旧 C++ 代码的常见错误。  
   
  mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory  
@@ -278,7 +279,7 @@ mstream& operator<<(LPTSTR psz)
   
  旧的、不太严格的编译器允许这种类型的转换，但最新的符合性更改则要求更正确的代码。  
   
-##  <a name="a-namestricterconversionsa-step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a> 步骤 8. 编译器的更严格转换  
+##  <a name="stricter_conversions"></a> 步骤 8. 编译器的更严格转换  
  我们还获得了如下所示的许多错误：  
   
 ```  
@@ -289,10 +290,9 @@ error C2440: 'static_cast': cannot convert from 'UINT (__thiscall CHotLinkCtrl::
   
 ```cpp  
 BEGIN_MESSAGE_MAP(CFindToolIcon, CWnd)  
-// other message omitted …  
+// other messages omitted...  
 ON_WM_NCHITTEST() // Error occurs on this line.  
 END_MESSAGE_MAP()  
-  
 ```  
   
  转到此宏的定义，可以看到它引用了函数 OnNcHitTest。  
@@ -302,7 +302,6 @@ END_MESSAGE_MAP()
 { WM_NCHITTEST, 0, 0, 0, AfxSig_l_p, \  
 (AFX_PMSG)(AFX_PMSGW) \  
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },  
-  
 ```  
   
  此问题与指向成员函数类型的指针中的不匹配相关。 问题不在于从 CHotLinkCtrl（作为类类型）转换为 CWnd（作为类类型），因为这是有效的派生类到基类转换。 问题是返回类型：UINT 与 LRESULT。 LRESULT 将解析为 LONG_PTR（即 64 位指针或 32 位指针，具体取决于目标二进制类型），因此 UINT 不转换为此类型。 由于在 Visual Studio 2005 中，作为 64 位兼容性更改的一部分，许多消息映射方法的返回类型已从 UINT 更改为 LRESULT，这在升级在 2005 年之前编写的代码时并不罕见。 我们将以下代码的返回类型从 UINT 更改为 LRESULT：  
@@ -319,7 +318,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
   
  由于从 CWnd 派生的不同类中总共出现了此函数的大约十个匹配项，当光标位于编辑器的函数上时，使用“转到定义”（键盘：F12）和“转到声明”（键盘：Ctrl+F12）有助于从“查找符号”工具窗口定位并导航到这些函数。 “转到定义”通常是两个选项中更有用的。 “转到声明”将查找声明而不是定义类声明，例如友元类声明或前向引用。  
   
-##  <a name="a-namemfcchangesa-step-9-mfc-changes"></a><a name="mfc_changes"></a>步骤 9. MFC 更改  
+##  <a name="mfc_changes"></a>步骤 9. MFC 更改  
  下一个错误也与更改的声明类型有关，并且还会发生在宏中。  
   
 ```Output  
@@ -340,7 +339,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
   
  在此步骤中，我们将能够编译项目。 有几个警告需要解决，但是可以选择部分进行升级，例如从 MBCS 转换为 Unicode 或通过使用安全 CRT 函数提高安全性。  
   
-##  <a name="a-namecompilerwarningsa-step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a>步骤 10. 解决编译器警告  
+##  <a name="compiler_warnings"></a>步骤 10. 解决编译器警告  
  若要获取完整的警告列表，则应对解决方案执行“全部重新生成”而不是普通生成，从而确保以前编译的所有内容均将重新编译，因为你只能从当前的编译获取警告报表。 另一个问题在于是接受当前警告级别还是使用更高的警告级别。  移植大量代码（尤其是旧代码）时，使用更高的警告级别更恰当。  你可能还想从默认警告级别开始，然后增加警告级别以获取所有警告。 如果使用 /Wall，则可以获得系统头文件中的一些警告，多数人都使用 /W4 来获取有关其代码的大部分警告，而不获取系统头文件的警告。 如果希望警告显示为错误，则需添加 /WX 选项。 这些设置在“项目属性”对话框的 C/C++ 部分中。  
   
  CSpyApp 类中的方法之一将产生有关不再受支的持函数的警告。  
@@ -530,7 +529,7 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  该问题发生在变量首先声明 `extern` 再声明 `static` 时。 这两个存储类说明符的含义是互斥的，但作为 Microsoft 扩展这是允许的。 如果希望代码可移植到其他编译器，或者希望使用 /Za（ANSI 兼容性）来编译代码，则可以更改声明以获得匹配的存储类说明符。  
   
-##  <a name="a-nameportingtounicodea-step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a>步骤 11. 从 MBCS 移植到 Unicode  
+##  <a name="porting_to_unicode"></a>步骤 11. 从 MBCS 移植到 Unicode  
  注意，在 Windows 世界中，当说到 Unicode 时，通常是指 UTF-16。 其他操作系统（如 Linux）使用 UTF-8，但 Windows 通常不使用。 在执行实际将 MBCS 代码移植到 UTF-16 Unicode 的步骤之前，我们可能需要暂时消除已弃用 MBCS 的警告，以便执行其他工作或将移植推迟到方便的时间。 当前的代码使用 MBCS，若要继续使用，则需要下载 MBCS 版本的 MFC。  已从默认的 Visual Studio 安装中删除了这个相当大的库，因此必须单独下载。 请参阅 [MFC MBCS DLL 加载项](../mfc/mfc-mbcs-dll-add-on.md)。 完成下载并重启 Visual Studio 后，可以使用 MBCS 版本的 MFC 进行编译和链接，但若要完全删除关于 MBCS 的警告，则还应将 NO_WARN_MBCS_MFC_DEPRECATION 添加到项目属性预处理器部分的预定义宏列表，或者添加到 stdafx.h 头文件或其他常见头文件的开头。  
   
  现在我们将获得一些链接器错误。  
@@ -649,7 +648,7 @@ strFace.ReleaseBuffer();
   
  在使用此 Spy++ 解决方案的工作中，对于普通 C++ 开发人员而言，将代码转换为 Unicode 大约需要两天的工作时间。 这并不包括再测试的时间。  
   
-##  <a name="a-nameportingtosecurecrta-step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a>步骤 12. 移植以使用安全 CRT  
+##  <a name="porting_to_secure_crt"></a>步骤 12. 移植以使用安全 CRT  
  下一步是移植代码以使用安全版本（带 _s 后缀的版本）的 CRT 函数。 在这种情况下，常规策略是将函数替换为 _s 版本，然后通常会添加所需的附加缓冲区大小参数。 许多情况下这非常简单，因为大小是已知的。 在其他情况下，当不能立即知道大小时，则需要向正使用 CRT 函数的函数添加其他参数，或者可以检查目标缓冲区的使用情况并查看具体的适当大小限制。  
   
  Visual C++ 提供了技巧，可以更加轻松地获取代码安全而无需添加许多大小参数，添加参数是通过使用模板重载实现的。 由于这些重载都是模板，因此仅在作为 C++ 编译时可用，而作为 C 时不可用。Spyxxhk 是 C 项目，所以这个技巧不起作用。  但 pyxx 不是 C 项目，可以使用该技巧。 该技巧是在该项目每个文件中将进行编译的地方添加类似的行，例如在 stdafx.h 中：  
@@ -666,7 +665,7 @@ strFace.ReleaseBuffer();
   
  使用这些技巧，大约只需要半日时间即可转换代码以使用安全的 CRT 函数。 如果不选择添加到模板重载，而是选择手动添加大小参数，则可能需要两倍或三倍的时间。  
   
-##  <a name="a-namedeprecatedforscopea-step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a>步骤 13. /Zc:forScope 已弃用  
+##  <a name="deprecated_forscope"></a>步骤 13. /Zc:forScope 已弃用  
  自 Visual C++ 6.0 起，编译器符合当前的标准，该标准将在循环中声明的变量的范围限制为循环的范围。 编译器选项 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)（项目属性中的“强制 for 循环范围中的符合性”）控制是否将其报告为错误。 我们应更新我们的代码以使其符合标准，并在循环外部添加声明。 若要避免更改代码，可以将“语言”部分的 C++ 项目属性中的设置更改为“否(/Zc:forScope-)”。 但请记住，未来版本的 Visual C++ 中可能会删除 **/Zc:forScope-**，因此你的代码最终同样需要更改以符合标准。  
   
  这些问题的修复相对轻松，但具体取决于你的代码，此问题可能会影响大量代码。 下面是一个典型问题。  
@@ -706,8 +705,3 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 ## <a name="see-also"></a>另请参阅  
  [移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [上一个案例研究：COM Spy](../porting/porting-guide-com-spy.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

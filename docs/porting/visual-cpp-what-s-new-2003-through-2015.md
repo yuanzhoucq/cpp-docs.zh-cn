@@ -24,6 +24,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
@@ -44,7 +45,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
   
 -   [更新 3 中的符合性改进](#VS_Update3)  
   
-##  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a>Visual C++ 2015 中的符合性改进  
+##  <a name="VS_RTM"></a>Visual C++ 2015 中的符合性改进  
   
 -   /Zc:forScope- 选项  
   
@@ -527,7 +528,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
   
      在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 和 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]中，如果该类具有用户定义的移动构造函数，但没有用户定义的复制构造函数，则编译器生成类的复制构造函数。 在 Dev14 中，此隐式生成的复制构造函数也标记为“= delete”。  
   
-##  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>更新 1 中的符合性改进  
+##  <a name="VS_Update1"></a>更新 1 中的符合性改进  
   
 -   **私有虚拟基类和间接继承**  
   
@@ -1019,7 +1020,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // ok   
     }  
@@ -1032,13 +1033,13 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // warning C4702: unreachable code  
     }  
     ```  
   
-##  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a>更新 2 中的符合性改进  
+##  <a name="VS_Update2"></a>更新 2 中的符合性改进  
   
 -   **可能会因对表达式 SFINAE 的部分支持而发出其他警告和错误**  
   
@@ -1303,7 +1304,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
   
      修复以这种方式编写的代码可能需要将运算符定义从头文件移动到相应的源文件中。  
   
-##  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a>更新 3 中的符合性改进  
+##  <a name="VS_Update3"></a>更新 3 中的符合性改进  
   
 -   **现在，std::is_convertable 可以检测自我赋值**（标准库）  
   
@@ -1542,8 +1543,3 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
     ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-
