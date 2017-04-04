@@ -395,23 +395,17 @@ virtual Confidence MatchDocType(
 ### <a name="return-value"></a>返回值  
  取值范围为**置信度**枚举，它按以下方式定义︰  
   
- `enum Confidence`  
-  
- `{`  
-  
- `noAttempt,`  
-  
- `maybeAttemptForeign,`  
-  
- `maybeAttemptNative,`  
-  
- `yesAttemptForeign,`  
-  
- `yesAttemptNative,`  
-  
- `yesAlreadyOpen`  
-  
- `};`  
+```  
+enum Confidence  
+    {  
+    noAttempt,
+    maybeAttemptForeign,
+    maybeAttemptNative,
+    yesAttemptForeign,
+    yesAttemptNative,
+    yesAlreadyOpen
+    };  
+```  
   
 ### <a name="remarks"></a>备注  
  使用此函数来确定要用于打开文件的文档模板的类型。 如果您的应用程序支持多个文件类型，例如，您可以使用此函数来确定哪种可用的文档模板适用于给定文件通过调用`MatchDocType`对于每个模板中打开，并选择模板根据置信度值返回。  

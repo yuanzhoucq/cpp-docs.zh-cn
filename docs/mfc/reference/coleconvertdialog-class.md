@@ -245,17 +245,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>备注  
  返回类型值都由指定**选择**枚举类型中声明`COleConvertDialog`类。  
   
- `enum Selection`  
-  
- `{`  
-  
- `noConversion,`  
-  
- `convertItem,`  
-  
- `activateAs`  
-  
- `};`  
+```  
+enum Selection {
+    noConversion,
+    convertItem,
+    activateAs
+    };  
+```  
   
  请按照这些值的简短说明︰  
   

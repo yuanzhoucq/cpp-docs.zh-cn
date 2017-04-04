@@ -335,19 +335,14 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>备注  
  返回类型值都由指定**选择**枚举类型中声明`COlePasteSpecialDialog`类。  
   
- `enum Selection`  
-  
- `{`  
-  
- `pasteLink,`  
-  
- `pasteNormal,`  
-  
- `pasteOther,`  
-  
- `pasteStatic`  
-  
- `};`  
+```  
+enum Selection {
+    pasteLink,
+    pasteNormal,
+    pasteOther,
+    pasteStatic
+    };  
+```  
   
  请按照这些值的简短 desccriptions 操作︰  
   

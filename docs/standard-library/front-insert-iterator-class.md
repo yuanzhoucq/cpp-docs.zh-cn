@@ -85,7 +85,7 @@ class front_insert_iterator;
   
  **命名空间：** std  
   
-##  <a name="a-namefrontinsertiteratorcontainertypea--frontinsertiteratorcontainertype"></a><a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
+##  <a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
  表示要从中执行前端插入的容器的类型。  
   
 ```  
@@ -125,7 +125,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratorfrontinsertiteratora--frontinsertiteratorfrontinsertiterator"></a><a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
+##  <a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
  创建一个可以在指定容器对象前端插入元素的迭代器。  
   
 ```  
@@ -185,7 +185,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatorstara--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
+##  <a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
  取消引用返回其所寻址元素的插入迭代器。  
   
 ```  
@@ -243,7 +243,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatoraddadda--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
+##  <a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
  将 `back_insert_iterator` 递增到下一个可用来存储值的位置。  
   
 ```  
@@ -291,7 +291,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatoreqa--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
+##  <a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
  将值追加（推送）到容器开头。  
   
 ```  
@@ -301,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 ```  
   
 ### <a name="parameters"></a>参数  
- ` val`  
+ `val`  
  要赋给容器的值。  
   
 ### <a name="return-value"></a>返回值  
@@ -349,7 +349,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratorreferencea--frontinsertiteratorreference"></a><a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
+##  <a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
  一种类型，此类型提供对关联容器所控制序列中的元素的引用。  
   
 ```  

@@ -150,7 +150,7 @@ public:
   
  **命名空间：** std  
   
-##  <a name="a-namefunctionassigna--functionassign"></a><a name="function__assign"></a>  function::assign  
+##  <a name="function__assign"></a>  function::assign  
  将可调用对象分配给此函数对象。  
   
 ```  
@@ -178,7 +178,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>备注  
  每个成员函数使用作为 `operand` 传递的可调用对象替换由 `*this` 保留的`callable object`。 两者都使用分配器对象 `Ax` 分配存储。  
   
-##  <a name="a-namefunctionfunctiona--functionfunction"></a><a name="function__function"></a>  function::function  
+##  <a name="function__function"></a>  function::function  
  构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。  
   
 ```  
@@ -201,7 +201,7 @@ template <class Fx, class Alloc>
 ```  
   
 ### <a name="parameters"></a>参数  
- ` right`  
+ `right`  
  要复制的函数对象。  
   
  `Fx`  
@@ -292,7 +292,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="a-namefunctionoperatorunspecifieda--functionoperator-unspecified"></a><a name="function__operator_unspecified"></a>  function::operator 未指定  
+##  <a name="function__operator_unspecified"></a>  function::operator 未指定  
  测试存储的可调用对象是否存在。  
   
 ```  
@@ -332,7 +332,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="a-namefunctionoperatora--functionoperator"></a><a name="function__operator__"></a>  function::operator()  
+##  <a name="function__operator__"></a>  function::operator()  
  调用可调用的对象。  
   
 ```  
@@ -380,7 +380,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionoperatoreqa--functionoperator"></a><a name="function__operator_eq"></a>  function::operator=  
+##  <a name="function__operator_eq"></a>  function::operator=  
  替换存储的可调用对象。  
   
 ```  
@@ -459,7 +459,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionresulttypea--functionresulttype"></a><a name="function__result_type"></a>  function::result_type  
+##  <a name="function__result_type"></a>  function::result_type  
  存储的可调对象的返回类型。  
   
 ```  
@@ -499,7 +499,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctionswapa--functionswap"></a><a name="function__swap"></a>  function::swap  
+##  <a name="function__swap"></a>  function::swap  
  交换两个可调用对象。  
   
 ```  
@@ -555,7 +555,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="a-namefunctiontargeta--functiontarget"></a><a name="function__target"></a>  function::target  
+##  <a name="function__target"></a>  function::target  
  测试存储的可调用对象是否可按指定方式调用。  
   
 ```  
@@ -614,7 +614,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="a-namefunctiontargettypea--functiontargettype"></a><a name="function__target_type"></a>  function::target_type  
+##  <a name="function__target_type"></a>  function::target_type  
  获取有关可调用对象的类型信息。  
   
 ```  

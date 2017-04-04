@@ -172,17 +172,14 @@ HRESULT Init(
   
  `flags`参数允许您指定枚举器应如何处理传递给它的数组元素。 `flags`可以执行中的值之一**CComEnumFlags**枚举如下所示︰  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy**意味着数组的生存期不受该枚举数。 在这种情况下，任一则数组将为静态方法或标识的对象*pUnk*将负责在不再需要时释放该数组。  
   
