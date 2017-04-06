@@ -1,37 +1,51 @@
 ---
 title: "按类别分的运行时例程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类别, 运行时函数"
-  - "函数 [CRT]"
-  - "函数 [CRT], 运行时"
-  - "例程, 运行时"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- routines, run-time
+- functions [CRT], run-time
+- categories, run-time functions
+- functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 按类别分的运行时例程
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
+ms.lasthandoff: 03/30/2017
 
-此节按类别列出并介绍 Microsoft 运行库程序类型库。  为了方便引用，一些例程在多个类别中。  在它们存在的地方，字符 Multibyte 例程和宽字符组合例程与单字节\) 字符副本。  
+---
+# <a name="run-time-routines-by-category"></a>按类别分的运行时例程
+本节按类别列出并介绍了 Microsoft 运行库例程。 为了方便引用，一些例程已在多个类别中列出。 使用单字节字符副本将多字节字符例程和宽字符例程组合起来（在它们存在的位置）。  
   
- 本节还提供 .NET Framework 等效内容或类的方法在可用的。  
-  
- Microsoft 运行库类型库程序主要类别是：  
+ Microsoft 运行库例程的主要类别是：  
   
 |||  
 |-|-|  
@@ -47,5 +61,5 @@ caps.handback.revision: 11
 |[搜索和排序](../c-runtime-library/searching-and-sorting.md)|[字符串操作](../c-runtime-library/string-manipulation-crt.md)|  
 |[系统调用](../c-runtime-library/system-calls.md)|[时间管理](../c-runtime-library/time-management.md)|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)
