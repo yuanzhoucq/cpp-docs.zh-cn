@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState::AddCommand
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom
+- AFXRIBBONQUICKACCESSTOOLBAR/CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +83,7 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 ## <a name="requirements"></a>要求  
  **标头︰** afxribbonquickaccesstoolbar.h  
   
-##  <a name="a-nameaddcommanda--cmfcribbonquickaccesstoolbardefaultstateaddcommand"></a><a name="addcommand"></a>CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
+##  <a name="addcommand"></a>CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
  用于快速访问工具栏，将命令添加到默认状态。  
   
 ```  
@@ -97,7 +102,7 @@ void AddCommand(
 ### <a name="remarks"></a>备注  
  将命令添加到 CMFCRibbonQuickAccessToolBarDefaultState 实现了三个结果。 首先，在快速访问工具栏右侧下拉列表中列出每个添加的命令。 这种方式，用户可以轻松地添加或移除快速访问工具栏上的该命令。 其次，快速访问工具栏会重置列出的那些命令相同的可见性的默认状态时显示在用户单击**重置**按钮**自定义**对话框。 第三，如果您不调用[CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands)，快速访问工具栏使用从该列表的可见命令作为默认可见命令的用户运行你的应用程序第一次。 添加所需的所有命令后，调用[CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate)若要将此实例设置为该功能区栏的快速访问工具栏的默认状态。  
   
-##  <a name="a-namecopyfroma--cmfcribbonquickaccesstoolbardefaultstatecopyfrom"></a><a name="copyfrom"></a>CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
  将一个快速访问工具栏的属性复制到另一个。  
   
 ```  
@@ -111,7 +116,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ### <a name="remarks"></a>备注  
  此方法将每个命令复制从源`CMFCRibbonQuickAccessToolBarDefaultState`对象传递给使用此对象[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)方法。  
   
-##  <a name="a-namecmfcribbonquickaccesstoolbardefaultstatea--cmfcribbonquickaccesstoolbardefaultstatecmfcribbonquickaccesstoolbardefaultstate"></a><a name="cmfcribbonquickaccesstoolbardefaultstate"></a>CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
+##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
  构造的快速访问工具栏默认状态对象。  
   
 ```  
@@ -121,7 +126,7 @@ CMFCRibbonQuickAccessToolBarDefaultState();
 ### <a name="remarks"></a>备注  
  默认情况下，命令的列表中的新实例的[CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)包含为空。  
   
-##  <a name="a-nameremovealla--cmfcribbonquickaccesstoolbardefaultstateremoveall"></a><a name="removeall"></a>CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
+##  <a name="removeall"></a>CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
  清除快速访问工具栏中的默认命令的列表。  
   
 ```  

@@ -9,11 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWorkerThread<ThreadTraits>
-- ATL::CWorkerThread
-- ATL.CWorkerThread
-- ATL.CWorkerThread<ThreadTraits>
 - CWorkerThread
+- ATLUTIL/ATL::CWorkerThread
+- ATLUTIL/ATL::CWorkerThread::CWorkerThread
+- ATLUTIL/ATL::CWorkerThread::AddHandle
+- ATLUTIL/ATL::CWorkerThread::AddTimer
+- ATLUTIL/ATL::CWorkerThread::GetThreadHandle
+- ATLUTIL/ATL::CWorkerThread::GetThreadId
+- ATLUTIL/ATL::CWorkerThread::Initialize
+- ATLUTIL/ATL::CWorkerThread::RemoveHandle
+- ATLUTIL/ATL::CWorkerThread::Shutdown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +115,7 @@ class CWorkerThread
 ## <a name="requirements"></a>要求  
  **标头︰** atlutil.h  
   
-##  <a name="a-nameaddhandlea--cworkerthreadaddhandle"></a><a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>CWorkerThread::AddHandle  
  调用此方法以将可等待对象的句柄添加到由工作线程维护的列表。  
   
 ```
@@ -136,7 +141,7 @@ HRESULT AddHandle(
 ### <a name="remarks"></a>备注  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)将通过调用`pClient`时，句柄`hObject`，处于终止状态。  
   
-##  <a name="a-nameaddtimera--cworkerthreadaddtimer"></a><a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>CWorkerThread::AddTimer  
  调用此方法将定期的可等待计时器添加到由工作线程维护的列表。  
   
 ```
@@ -168,14 +173,14 @@ HRESULT AddTimer(
   
  将从计时器句柄传递`phTimer`到[CWorkerThread::RemoveHandle](#removehandle)关闭计时器。  
   
-##  <a name="a-namecworkerthreada--cworkerthreadcworkerthread"></a><a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
  构造函数。  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="a-namedtora--cworkerthreadcworkerthread"></a><a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
  析构函数。  
   
 ```
@@ -185,7 +190,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>备注  
  调用[CWorkerThread::Shutdown](#shutdown)。  
   
-##  <a name="a-namegetthreadhandlea--cworkerthreadgetthreadhandle"></a><a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
  调用此方法以获取工作线程的线程句柄。  
   
 ```
@@ -195,7 +200,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>返回值  
  如果尚未初始化工作线程，返回线程句柄或为空的。  
   
-##  <a name="a-namegetthreadida--cworkerthreadgetthreadid"></a><a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
  调用此方法以获取工作线程的线程 ID。  
   
 ```
@@ -205,7 +210,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>返回值  
  如果尚未初始化工作线程，返回线程 ID 或为空的。  
   
-##  <a name="a-nameinitializea--cworkerthreadinitialize"></a><a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>CWorkerThread::Initialize  
  调用此方法以初始化工作线程。  
   
 ```
@@ -228,7 +233,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  请参阅[CWorkerThread::Shutdown](#shutdown)有关使用指向现有对象的指针初始化时，该方法的行为如何变化的信息。  
   
-##  <a name="a-nameremovehandlea--cworkerthreadremovehandle"></a><a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
  调用此方法以从可等待对象的列表中删除一个句柄。  
   
 ```
@@ -245,7 +250,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>备注  
  删除句柄时[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)将在传递到关联的对象上调用[AddHandle](#addhandle)。 如果此调用失败，`CWorkerThread`将调用 Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)句柄上的函数。  
   
-##  <a name="a-nameshutdowna--cworkerthreadshutdown"></a><a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>CWorkerThread::Shutdown  
  调用此方法关闭工作线程。  
   
 ```

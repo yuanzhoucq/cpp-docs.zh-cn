@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
+- AFXINET/CInternetConnection
+- AFXINET/CInternetConnection::CInternetConnection
+- AFXINET/CInternetConnection::GetContext
+- AFXINET/CInternetConnection::GetServerName
+- AFXINET/CInternetConnection::GetSession
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CInternetConnection : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxinet.h  
   
-##  <a name="a-namecinternetconnectiona--cinternetconnectioncinternetconnection"></a><a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
  当调用此成员函数`CInternetConnection`创建对象。  
   
 ```  
@@ -122,7 +127,7 @@ CInternetConnection(
   
  默认值为`dwContext`发送到 mfc `CInternetConnection`-派生对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建**InternetConnection**-派生的对象。 默认值设置为 1;但是，可以显式指定一个特定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)连接的构造函数。 该对象，并且它执行任何工作将与该上下文 id。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供对它标识的对象的状态。 请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
-##  <a name="a-namegetcontexta--cinternetconnectiongetcontext"></a><a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>CInternetConnection::GetContext  
  调用该成员函数以获取此会话的上下文 ID。  
   
 ```  
@@ -137,7 +142,7 @@ DWORD_PTR GetContext() const;
   
  有关如何**GetContext**适用于其他 WinInet 类，让用户状态信息，请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
-##  <a name="a-namegetservernamea--cinternetconnectiongetservername"></a><a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>CInternetConnection::GetServerName  
  调用该成员函数以获取与此 Internet 连接关联的服务器的名称。  
   
 ```  
@@ -147,7 +152,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>返回值  
  使用此连接对象的服务器的名称。  
   
-##  <a name="a-namegetsessiona--cinternetconnectiongetsession"></a><a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>CInternetConnection::GetSession  
  调用此成员函数以获取指向`CInternetSession`具有与此连接关联的对象。  
   
 ```  
@@ -157,7 +162,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>返回值  
  一个指向[CInternetSession](../../mfc/reference/cinternetsession-class.md)与此 Internet 连接对象关联的对象。  
   
-##  <a name="a-nameoperatorhinterneta--cinternetconnectionoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
  使用此运算符将为当前的 Internet 会话获取的 API 级别句柄。  
   
 ```  

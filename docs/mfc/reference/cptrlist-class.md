@@ -1,41 +1,57 @@
 ---
-title: "CPtrList Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CPtrList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPtrList class"
-  - "generic lists"
-  - "列表, generic"
+title: "CPtrList 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CPtrList
+dev_langs:
+- C++
+helpviewer_keywords:
+- lists, generic
+- CPtrList class
+- generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# CPtrList Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8158e0acce04ee78ea07da26332f53613489653f
+ms.lasthandoff: 03/17/2017
 
-支持某些 void 指针列表。  
+---
+# <a name="cptrlist-class"></a>CPtrList 类
+支持 void 指针列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CPtrList : public CObject  
 ```  
   
-## 成员  
- `CPtrList` 的成员函数类似于类 [CObList](../../mfc/reference/coblist-class.md)的成员函数。  由于相似性，你可以使用 `CObList` 参考文档成员函数。  无论在哪里看见 `CObject` 指针作为函数参数或返回值，替换指为 `void`。  
+## <a name="members"></a>成员  
+ 成员函数`CPtrList`类似于类的成员函数[CObList](../../mfc/reference/coblist-class.md)。 由于此相似性，因此你可以使用 `CObList` 参考文档获取成员函数细节。 无论您在何处找到作为函数参数的 `CObject` 或返回值，都将替换指向 `void` 的指针。  
   
  `CObject*& CObList::GetHead() const;`  
   
@@ -43,24 +59,25 @@ class CPtrList : public CObject
   
  `void*& CPtrList::GetHead() const;`  
   
-## 备注  
- `CPtrList` 合并 `IMPLEMENT_DYNAMIC` 宏来支持运行时类型访问和转储到 `CDumpContext` 对象。  如果需要单独指针转储列表元素，则必须设置转储上下文的深度为 1 或更大。  
+## <a name="remarks"></a>备注  
+ `CPtrList` 合并 `IMPLEMENT_DYNAMIC` 宏来支持运行时类型访问和转储到 `CDumpContext` 对象。 如果需要单个指针列表元素的转储，则您必须将转储上下文的深度设为 1 或更大的值。  
   
- 指针列表不能序列化。  
+ 无法对指针列表进行序列化。  
   
- 当 `CPtrList` 对象被删除，或者，当元素被移除，只有这些指针被移除，而不是他们应用的实体。  
+ 当删除 `CPtrList` 对象或其元素时，仅删除指针而不是指针引用的实体。  
   
- 有关使用 `CPtrList` 的更多信息，请参见文章[Collections](../../mfc/collections.md)。  
+ 有关详细信息使用`CPtrList`，请参阅文章[集合](../../mfc/collections.md)。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrList`  
   
-## 要求  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>要求  
+ **标头︰** afxcoll.h  
   
-## 请参阅  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>另请参阅  
+ [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
- [CObList Class](../../mfc/reference/coblist-class.md)
+ [CObList 类](../../mfc/reference/coblist-class.md)
+

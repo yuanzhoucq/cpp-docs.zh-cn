@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComGITPtr<T>
 - CComGITPtr
-- ATL.CComGITPtr
-- ATL.CComGITPtr<T>
-- ATL::CComGITPtr
+- ATLBASE/ATL::CComGITPtr
+- ATLBASE/ATL::CComGITPtr::CComGITPtr
+- ATLBASE/ATL::CComGITPtr::Attach
+- ATLBASE/ATL::CComGITPtr::CopyTo
+- ATLBASE/ATL::CComGITPtr::Detach
+- ATLBASE/ATL::CComGITPtr::GetCookie
+- ATLBASE/ATL::CComGITPtr::Revoke
+- ATLBASE/ATL::CComGITPtr::m_dwCookie
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +102,7 @@ class CComGITPtr
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
-##  <a name="a-nameattacha--ccomgitptrattach"></a><a name="attach"></a>CComGITPtr::Attach  
+##  <a name="attach"></a>CComGITPtr::Attach  
  调用此方法以在全局接口表 (GIT) 中注册的接口指针。  
   
 ```
@@ -120,7 +124,7 @@ HRESULT Attach(DWORD dwCookie) throw();
 ### <a name="remarks"></a>备注  
  在调试版本中，如果 GIT 无效，或者该 cookie 是否等同于 NULL，将会出错断言。  
   
-##  <a name="a-nameccomgitptra--ccomgitptrccomgitptr"></a><a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
+##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
  构造函数。  
   
 ```
@@ -149,7 +153,7 @@ CComGITPtr(CComGITPtr&& rv);
   
  构造函数利用`rv`是移动构造函数。 这些数据源中的数据会移`rv`，然后`rv`被清除。  
   
-##  <a name="a-namedtora--ccomgitptrccomgitptr"></a><a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
+##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
  析构函数。  
   
 ```
@@ -159,7 +163,7 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="remarks"></a>备注  
  从全局接口表 (GIT) 中删除该接口使用[CComGITPtr::Revoke](#revoke)。  
   
-##  <a name="a-namecopytoa--ccomgitptrcopyto"></a><a name="copyto"></a>CComGITPtr::CopyTo  
+##  <a name="copyto"></a>CComGITPtr::CopyTo  
  调用此方法将该接口从全局接口表 (GIT) 复制到传递的指针。  
   
 ```
@@ -176,7 +180,7 @@ HRESULT CopyTo(T** pp) const throw();
 ### <a name="remarks"></a>备注  
  从 git 中获取的接口将复制到传递的指针。 当不再需要时，必须由调用方释放指针。  
   
-##  <a name="a-namedetacha--ccomgitptrdetach"></a><a name="detach"></a>CComGITPtr::Detach  
+##  <a name="detach"></a>CComGITPtr::Detach  
  调用此方法来取消关联的接口`CComGITPtr`对象。  
   
 ```
@@ -189,7 +193,7 @@ DWORD Detach() throw();
 ### <a name="remarks"></a>备注  
  它由调用方从 GIT，删除该接口是使用[CComGITPtr::Revoke](#revoke)。  
   
-##  <a name="a-namegetcookiea--ccomgitptrgetcookie"></a><a name="getcookie"></a>CComGITPtr::GetCookie  
+##  <a name="getcookie"></a>CComGITPtr::GetCookie  
  调用此方法以返回从 cookie`CComGITPtr`对象。  
   
 ```
@@ -202,7 +206,7 @@ DWORD GetCookie() const;
 ### <a name="remarks"></a>备注  
  Cookie 是用于标识接口，并且其位置的变量。  
   
-##  <a name="a-namemdwcookiea--ccomgitptrmdwcookie"></a><a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
+##  <a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
  Cookie。  
   
 ```
@@ -212,7 +216,7 @@ DWORD m_dwCookie;
 ### <a name="remarks"></a>备注  
  Cookie 是用于标识接口，并且其位置的成员变量。  
   
-##  <a name="a-nameoperatoreqa--ccomgitptroperator-"></a><a name="operator_eq"></a>CComGITPtr::operator =  
+##  <a name="operator_eq"></a>CComGITPtr::operator =  
  赋值运算符中。  
   
 ```
@@ -241,7 +245,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="remarks"></a>备注  
  将一个新值赋给`CComGITPtr`对象，从现有对象或对全局接口表的引用。  
   
-##  <a name="a-nameoperatordworda--ccomgitptroperator-dword"></a><a name="operator_dword"></a>CComGITPtr::operator DWORD  
+##  <a name="operator_dword"></a>CComGITPtr::operator DWORD  
  返回与关联的 cookie`CComGITPtr`对象。  
   
 ```  
@@ -251,7 +255,7 @@ operator DWORD() const;
 ### <a name="remarks"></a>备注  
  Cookie 是用于标识接口，并且其位置的变量。  
   
-##  <a name="a-namerevokea--ccomgitptrrevoke"></a><a name="revoke"></a>CComGITPtr::Revoke  
+##  <a name="revoke"></a>CComGITPtr::Revoke  
  调用此方法以从全局接口表 (GIT) 中删除当前的接口。  
   
 ```

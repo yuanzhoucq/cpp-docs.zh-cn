@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::PreTranslateMessage
+- AFXMENUBUTTON/CMFCMenuButton::SizeToContent
+- AFXMENUBUTTON/CMFCMenuButton::m_bOSMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_bRightArrow
+- AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
+- AFXMENUBUTTON/CMFCMenuButton::m_hMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,14 +110,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>要求  
  **标头︰** afxmenubutton.h  
   
-##  <a name="a-namecmfcmenubuttona--cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
  构造一个新[CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)对象。  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="a-namembosmenua--cmfcmenubuttonmbosmenu"></a><a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
  指示哪个弹出菜单的 Boolean 成员变量，框架显示。  
   
 ```  
@@ -118,7 +127,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>备注  
  如果`m_bOSMenu`是`TRUE`，框架将调用的继承`TrackPopupMenu`此对象的方法。 否则，框架将调用[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。  
   
-##  <a name="a-namembrightarrowa--cmfcmenubuttonmbrightarrow"></a><a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
  布尔值的成员变量，指示弹出菜单的位置。  
   
 ```  
@@ -128,7 +137,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>备注  
  当用户按菜单按钮时，该应用程序将显示一个弹出菜单。 框架将显示在按钮下或按钮右侧的弹出菜单。 该按钮还包括一个小箭头，该值指示弹出菜单将显示的位置。 如果`m_bRightArrow`是`TRUE`，框架显示按钮右侧的弹出菜单。 否则，将显示按钮下的弹出菜单中。  
   
-##  <a name="a-namembstaypresseda--cmfcmenubuttonmbstaypressed"></a><a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
  用户进行从弹出菜单选择情况下按下的 Boolean 成员变量，该值指示是否显示菜单按钮。  
   
 ```  
@@ -140,7 +149,7 @@ BOOL m_bStayPressed;
   
  如果`m_bStayPressed`成员是`TRUE`，用户单击按钮时，将成为按下菜单按钮。 用户关闭弹出菜单中，通过进行选择或取消后，它始终处于直到按下。  
   
-##  <a name="a-namemhmenua--cmfcmenubuttonmhmenu"></a><a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
  附加菜单句柄。  
   
 ```  
@@ -150,7 +159,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>备注  
  框架显示由此成员变量，当用户单击菜单按钮菜单。  
   
-##  <a name="a-namemnmenuresulta--cmfcmenubuttonmnmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
  一个整数，指示哪一项用户从弹出菜单中选择。  
   
 ```  
@@ -160,7 +169,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>备注  
  如果用户取消不做任何选择的菜单或出错时，此成员变量的值为零。  
   
-##  <a name="a-namepretranslatemessagea--cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
  由框架将窗口消息转换之前对它们进行调用。  
   
 ```  
@@ -176,7 +185,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesizetocontenta--cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
  根据其文本大小和图像大小的按钮的大小更改。  
   
 ```  

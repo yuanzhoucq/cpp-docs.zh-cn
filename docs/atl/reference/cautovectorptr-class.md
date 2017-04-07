@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoVectorPtr
-- ATL.CAutoVectorPtr
-- ATL.CAutoVectorPtr<T>
 - CAutoVectorPtr
-- ATL::CAutoVectorPtr<T>
+- ATLBASE/ATL::CAutoVectorPtr
+- ATLBASE/ATL::CAutoVectorPtr::CAutoVectorPtr
+- ATLBASE/ATL::CAutoVectorPtr::Allocate
+- ATLBASE/ATL::CAutoVectorPtr::Attach
+- ATLBASE/ATL::CAutoVectorPtr::Detach
+- ATLBASE/ATL::CAutoVectorPtr::Free
+- ATLBASE/ATL::CAutoVectorPtr::m_p
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +103,7 @@ class CAutoVectorPtr
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
-##  <a name="a-nameallocatea--cautovectorptrallocate"></a><a name="allocate"></a>CAutoVectorPtr::Allocate  
+##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
  调用此方法来分配对指向的对象数组所需的内存`CAutoVectorPtr`。  
   
 ```
@@ -117,7 +120,7 @@ bool Allocate(size_t nElements) throw();
 ### <a name="remarks"></a>备注  
  在调试版本中，如果将发生断言失败[CAutoVectorPtr::m_p](#m_p)成员变量当前指向的现有值; 也就是说，不等于 NULL。  
   
-##  <a name="a-nameattacha--cautovectorptrattach"></a><a name="attach"></a>CAutoVectorPtr::Attach  
+##  <a name="attach"></a>CAutoVectorPtr::Attach  
  调用此方法以获取现有指针的所有权。  
   
 ```
@@ -133,7 +136,7 @@ void Attach(T* p) throw();
   
  在调试版本中，如果将发生断言失败[CAutoVectorPtr::m_p](#m_p)成员变量当前指向的现有值; 也就是说，不等于 NULL。  
   
-##  <a name="a-namecautovectorptra--cautovectorptrcautovectorptr"></a><a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
+##  <a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
  构造函数。  
   
 ```
@@ -149,7 +152,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>备注  
  `CAutoVectorPtr`对象创建使用现有的指针，也可以在这种情况下它会将传输的指针的所有权。  
   
-##  <a name="a-namedtora--cautovectorptrcautovectorptr"></a><a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
+##  <a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
  析构函数。  
   
 ```
@@ -159,7 +162,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>备注  
  释放任何已分配的资源。 调用[CAutoVectorPtr::Free](#free)。  
   
-##  <a name="a-namedetacha--cautovectorptrdetach"></a><a name="detach"></a>CAutoVectorPtr::Detach  
+##  <a name="detach"></a>CAutoVectorPtr::Detach  
  调用此方法可释放的指针的所有权。  
   
 ```
@@ -172,7 +175,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>备注  
  释放指针的所有权，设置[CAutoVectorPtr::m_p](#m_p)成员变量为 NULL，并返回指针的副本。 在调用**分离**，它由编程人员以释放任何资源分配对其`CAutoVectorPtr`对象可能具有以前承担的责任。  
   
-##  <a name="a-namefreea--cautovectorptrfree"></a><a name="free"></a>CAutoVectorPtr::Free  
+##  <a name="free"></a>CAutoVectorPtr::Free  
  调用此方法可删除所指向的对象`CAutoVectorPtr`。  
   
 ```
@@ -182,7 +185,7 @@ void Free() throw();
 ### <a name="remarks"></a>备注  
  指向的对象`CAutoVectorPtr`释放控制块和[CAutoVectorPtr::m_p](#m_p)成员变量设置为 NULL。  
   
-##  <a name="a-namempa--cautovectorptrmp"></a><a name="m_p"></a>CAutoVectorPtr::m_p  
+##  <a name="m_p"></a>CAutoVectorPtr::m_p  
  指针数据成员变量。  
   
 ```
@@ -192,7 +195,7 @@ T* m_p;
 ### <a name="remarks"></a>备注  
  此成员变量包含指针信息。  
   
-##  <a name="a-nameoperatoreqa--cautovectorptroperator-"></a><a name="operator_eq"></a>CAutoVectorPtr::operator =  
+##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
  赋值运算符中。  
   
 ```
@@ -209,7 +212,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>备注  
  赋值运算符分离`CAutoVectorPtr`从任何当前指针的对象，并将附加的新指针`p`，在其位置。  
   
-##  <a name="a-nameoperatortstara--cautovectorptroperator-t-"></a><a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
+##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
  强制转换运算符。  
   
 ```  

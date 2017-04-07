@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArray
+- AFXTEMPL/CArray
+- AFXTEMPL/CArray::CArray
+- AFXTEMPL/CArray::Add
+- AFXTEMPL/CArray::Append
+- AFXTEMPL/CArray::Copy
+- AFXTEMPL/CArray::ElementAt
+- AFXTEMPL/CArray::FreeExtra
+- AFXTEMPL/CArray::GetAt
+- AFXTEMPL/CArray::GetCount
+- AFXTEMPL/CArray::GetData
+- AFXTEMPL/CArray::GetSize
+- AFXTEMPL/CArray::GetUpperBound
+- AFXTEMPL/CArray::InsertAt
+- AFXTEMPL/CArray::IsEmpty
+- AFXTEMPL/CArray::RemoveAll
+- AFXTEMPL/CArray::RemoveAt
+- AFXTEMPL/CArray::SetAt
+- AFXTEMPL/CArray::SetAtGrow
+- AFXTEMPL/CArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +141,7 @@ class CArray : public CObject
 ## <a name="requirements"></a>要求  
  `Header:`afxtempl.h  
   
-##  <a name="a-nameadda--carrayadd"></a><a name="add"></a>CArray::Add  
+##  <a name="add"></a>CArray::Add  
  将新元素添加到数组，由 1 增长数组的末尾。  
   
 ```  
@@ -145,7 +164,7 @@ INT_PTR Add(ARG_TYPE newElement);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&22;](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="a-nameappenda--carrayappend"></a><a name="append"></a>Carray:: Append  
+##  <a name="append"></a>Carray:: Append  
  调用该成员函数以将一个数组的内容添加到另一个末尾。  
   
 ```  
@@ -167,7 +186,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections 第&23;](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="a-namecarraya--carraycarray"></a><a name="carray"></a>CArray::CArray  
+##  <a name="carray"></a>CArray::CArray  
  构造一个空数组。  
   
 ```  
@@ -180,7 +199,7 @@ CArray();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&24;](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="a-namecopya--carraycopy"></a><a name="copy"></a>Carray:: Copy  
+##  <a name="copy"></a>Carray:: Copy  
  使用此成员函数将一个数组的元素复制到另一个。  
   
 ```  
@@ -199,7 +218,7 @@ void Copy(const CArray& src);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&25;](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="a-nameelementata--carrayelementat"></a><a name="elementat"></a>CArray::ElementAt  
+##  <a name="elementat"></a>CArray::ElementAt  
  返回对指定的元素，该数组中的临时引用。  
   
 ```  
@@ -220,7 +239,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ### <a name="example"></a>示例  
   请参阅示例[GetSize](#getsize)。  
   
-##  <a name="a-namefreeextraa--carrayfreeextra"></a><a name="freeextra"></a>CArray::FreeExtra  
+##  <a name="freeextra"></a>CArray::FreeExtra  
  释放任何额外的内存，已分配，而增长数组。  
   
 ```  
@@ -233,7 +252,7 @@ void FreeExtra();
 ### <a name="example"></a>示例  
   请参阅示例[GetData](#getdata)。  
   
-##  <a name="a-namegetata--carraygetat"></a><a name="getat"></a>CArray::GetAt  
+##  <a name="getat"></a>CArray::GetAt  
  返回指定索引处的数组元素。  
   
 ```  
@@ -257,7 +276,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&26;](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="a-namegetcounta--carraygetcount"></a><a name="getcount"></a>CArray::GetCount  
+##  <a name="getcount"></a>CArray::GetCount  
  返回数组元素的个数。  
   
 ```  
@@ -273,7 +292,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&27;](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="a-namegetdataa--carraygetdata"></a><a name="getdata"></a>CArray::GetData  
+##  <a name="getdata"></a>CArray::GetData  
  使用此成员函数来获取对数组中元素的直接访问。  
   
 ```  
@@ -296,7 +315,7 @@ TYPE* GetData();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&28;](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="a-namegetsizea--carraygetsize"></a><a name="getsize"></a>CArray::GetSize  
+##  <a name="getsize"></a>CArray::GetSize  
  返回数组的大小。  
   
 ```  
@@ -309,7 +328,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&29;](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="a-namegetupperbounda--carraygetupperbound"></a><a name="getupperbound"></a>CArray::GetUpperBound  
+##  <a name="getupperbound"></a>CArray::GetUpperBound  
  返回此数组中的当前的上限。  
   
 ```  
@@ -324,7 +343,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="example"></a>示例  
   请参阅示例[CArray::GetAt](#getat)。  
   
-##  <a name="a-nameinsertata--carrayinsertat"></a><a name="insertat"></a>CArray::InsertAt  
+##  <a name="insertat"></a>CArray::InsertAt  
  第一个版本`InsertAt`中数组的指定索引处插入一个元素 （或一个元素的多个副本）。  
   
 ```  
@@ -367,7 +386,7 @@ void InsertAt(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&30;](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="a-nameisemptya--carrayisempty"></a><a name="isempty"></a>CArray::IsEmpty  
+##  <a name="isempty"></a>CArray::IsEmpty  
  确定数组是否为空。  
   
 ```  
@@ -377,7 +396,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>返回值  
  如果数组不包含任何元素，则非零值否则为 0。  
   
-##  <a name="a-nameoperatorata--carrayoperator-"></a><a name="operator_at"></a>CArray::operator\[\]  
+##  <a name="operator_at"></a>CArray::operator\[\]  
  这些下标运算符是一个方便替换[SetAt](#setat)和[GetAt](#getat)函数。  
   
 ```  
@@ -400,7 +419,7 @@ const TYPE& operator[](int_ptr nindex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&34;](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="a-namerelocateelementsa--carrayrelocateelements"></a><a name="relocateelements"></a>CArray::RelocateElements  
+##  <a name="relocateelements"></a>CArray::RelocateElements  
  将数据重新调整到一个新的缓冲区数组应增大或收缩时。  
   
 ```  
@@ -428,7 +447,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
   
  对于在其中一个元素包含一个指向一个成员，或另一种结构包含指向一个数组元素的指针的数组，指针不会更新纯副本中。 在这种情况下，您可以通过实现的专用化来更正指针`RelocateElements`与相关的类型。 您还有负责数据复制。  
   
-##  <a name="a-nameremovealla--carrayremoveall"></a><a name="removeall"></a>CArray::RemoveAll  
+##  <a name="removeall"></a>CArray::RemoveAll  
  从此数组中移除所有元素。  
   
 ```  
@@ -441,7 +460,7 @@ void RemoveAll();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&31;](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="a-nameremoveata--carrayremoveat"></a><a name="removeat"></a>CArray::RemoveAt  
+##  <a name="removeat"></a>CArray::RemoveAt  
  移除数组中指定索引处开始的一个或多个元素。  
   
 ```  
@@ -465,7 +484,7 @@ void RemoveAt(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&32;](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="a-namesetata--carraysetat"></a><a name="setat"></a>CArray::SetAt  
+##  <a name="setat"></a>CArray::SetAt  
  设置指定索引处的数组元素。  
   
 ```  
@@ -490,7 +509,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>示例  
   请参阅示例[GetAt](#getat)。  
   
-##  <a name="a-namesetatgrowa--carraysetatgrow"></a><a name="setatgrow"></a>CArray::SetAtGrow  
+##  <a name="setatgrow"></a>CArray::SetAtGrow  
  设置指定索引处的数组元素。  
   
 ```  
@@ -513,7 +532,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections 第&33;](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="a-namesetsizea--carraysetsize"></a><a name="setsize"></a>CArray::SetSize  
+##  <a name="setsize"></a>CArray::SetSize  
  建立一个空的或现有的数组; 的大小如有必要，请分配内存。  
   
 ```  

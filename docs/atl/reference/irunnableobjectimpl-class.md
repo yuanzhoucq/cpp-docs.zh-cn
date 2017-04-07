@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IRunnableObjectImpl
+- ATLCTL/ATL::IRunnableObjectImpl
+- ATLCTL/ATL::IRunnableObjectImpl::GetRunningClass
+- ATLCTL/ATL::IRunnableObjectImpl::IsRunning
+- ATLCTL/ATL::IRunnableObjectImpl::LockRunning
+- ATLCTL/ATL::IRunnableObjectImpl::Run
+- ATLCTL/ATL::IRunnableObjectImpl::SetContainedObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +91,7 @@ class IRunnableObjectImpl
 ## <a name="requirements"></a>要求  
  **标头︰** atlctl.h  
   
-##  <a name="a-namegetrunningclassa--irunnableobjectimplgetrunningclass"></a><a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass  
+##  <a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass  
  返回正在运行的控件的 CLSID。  
   
 ```
@@ -98,7 +104,7 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 ### <a name="remarks"></a>备注  
  请参阅[IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisrunninga--irunnableobjectimplisrunning"></a><a name="isrunning"></a>IRunnableObjectImpl::IsRunning  
+##  <a name="isrunning"></a>IRunnableObjectImpl::IsRunning  
  确定控件是否正在运行。  
   
 ```
@@ -111,7 +117,7 @@ virtual BOOL IsRunning();
 ### <a name="remarks"></a>备注  
  请参阅[IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namelockrunninga--irunnableobjectimpllockrunning"></a><a name="lockrunning"></a>IRunnableObjectImpl::LockRunning  
+##  <a name="lockrunning"></a>IRunnableObjectImpl::LockRunning  
  进入运行状态将锁定该控件。  
   
 ```
@@ -124,7 +130,7 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 ### <a name="remarks"></a>备注  
  请参阅[IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameruna--irunnableobjectimplrun"></a><a name="run"></a>IRunnableObjectImpl::Run  
+##  <a name="run"></a>IRunnableObjectImpl::Run  
  强制控件运行。  
   
 ```
@@ -137,7 +143,7 @@ HRESULT Run(LPBINDCTX lpbc);
 ### <a name="remarks"></a>备注  
  请参阅[IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetcontainedobjecta--irunnableobjectimplsetcontainedobject"></a><a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject  
+##  <a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject  
  该值指示控件嵌入。  
   
 ```

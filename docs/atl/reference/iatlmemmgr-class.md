@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAtlMemMgr
+- ATLMEM/ATL::IAtlMemMgr
+- ATLMEM/ATL::Allocate
+- ATLMEM/ATL::Free
+- ATLMEM/ATL::GetSize
+- ATLMEM/ATL::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +78,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 ## <a name="requirements"></a>要求  
  **标头︰** atlmem.h  
   
-##  <a name="a-nameallocatea--iatlmemmgrallocate"></a><a name="allocate"></a>IAtlMemMgr::Allocate  
+##  <a name="allocate"></a>IAtlMemMgr::Allocate  
  调用此方法来分配内存块。  
   
 ```
@@ -93,7 +98,7 @@ void* Allocate(size_t nBytes) throw();
 ### <a name="example"></a>示例  
  有关示例，请参阅[IAtlMemMgr 概述](../../atl/reference/iatlmemmgr-class.md)。  
   
-##  <a name="a-namefreea--iatlmemmgrfree"></a><a name="free"></a>IAtlMemMgr::Free  
+##  <a name="free"></a>IAtlMemMgr::Free  
  调用此方法以释放的内存块。  
   
 ```
@@ -110,7 +115,7 @@ void Free(void* p) throw();
 ### <a name="example"></a>示例  
  有关示例，请参阅[IAtlMemMgr 概述](../../atl/reference/iatlmemmgr-class.md)。  
   
-##  <a name="a-namegetsizea--iatlmemmgrgetsize"></a><a name="getsize"></a>IAtlMemMgr::GetSize  
+##  <a name="getsize"></a>IAtlMemMgr::GetSize  
  调用此方法来检索分配的内存块的大小。  
   
 ```
@@ -127,7 +132,7 @@ size_t GetSize(void* p) throw();
 ### <a name="example"></a>示例  
  有关示例，请参阅[IAtlMemMgr 概述](../../atl/reference/iatlmemmgr-class.md)。  
   
-##  <a name="a-namereallocatea--iatlmemmgrreallocate"></a><a name="reallocate"></a>IAtlMemMgr::Reallocate  
+##  <a name="reallocate"></a>IAtlMemMgr::Reallocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
   
 ```
@@ -152,7 +157,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="example"></a>示例  
  有关示例，请参阅[IAtlMemMgr 概述](../../atl/reference/iatlmemmgr-class.md)。  
   
-##  <a name="a-namegetallowcontextmenua--iaxwinambientdispatchgetallowcontextmenu"></a><a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
+##  <a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
  **AllowContextMenu**属性指定是否允许所承载的控件以显示上下文菜单。  
   
 ```
@@ -169,7 +174,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-##  <a name="a-namegetallowshowuia--iaxwinambientdispatchgetallowshowui"></a><a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
+##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
  **AllowShowUI**属性指定是否允许所承载的控件来显示其自身用户界面。  
   
 ```
@@ -186,7 +191,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**VARIANT_FALSE**作为此属性的默认值。  
   
-##  <a name="a-namegetallowwindowlessactivationa--iaxwinambientdispatchgetallowwindowlessactivation"></a><a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
+##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
  **AllowWindowlessActivation**属性指定是否在容器上允许无窗口激活。  
   
 ```
@@ -203,7 +208,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-##  <a name="a-namegetbackcolora--iaxwinambientdispatchgetbackcolor"></a><a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
+##  <a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
  `BackColor`属性指定的容器的环境背景色。  
   
 ```
@@ -220,7 +225,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**COLOR_BTNFACE**或**COLOR_WINDOW**作为 （具体取决于是否宿主窗口的父级是一个对话框，或不） 此属性的默认值。  
   
-##  <a name="a-namegetdisplayasdefaulta--iaxwinambientdispatchgetdisplayasdefault"></a><a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
+##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
  **DisplayAsDefault**是一个允许控件以查看它是否具有默认控件的环境属性。  
   
 ```
@@ -237,7 +242,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**VARIANT_FALSE**作为此属性的默认值。  
   
-##  <a name="a-namegetdochostdoubleclickflagsa--iaxwinambientdispatchgetdochostdoubleclickflags"></a><a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
+##  <a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
  **DocHostDoubleClickFlags**属性指定应发生以响应一次双击该操作。  
   
 ```
@@ -254,7 +259,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**DOCHOSTUIDBLCLK_DEFAULT**作为此属性的默认值。  
   
-##  <a name="a-namegetdochostflagsa--iaxwinambientdispatchgetdochostflags"></a><a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
+##  <a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
  **DocHostFlags**属性指定该主机对象的用户界面功能。  
   
 ```
@@ -271,7 +276,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**DOCHOSTUIFLAG_NO3DBORDER**作为此属性的默认值。  
   
-##  <a name="a-namegetfonta--iaxwinambientdispatchgetfont"></a><a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
+##  <a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
  **字体**属性指定的容器的环境的字体。  
   
 ```
@@ -288,7 +293,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现此属性的默认值中用作默认 GUI 字体或系统字体。  
   
-##  <a name="a-namegetforecolora--iaxwinambientdispatchgetforecolor"></a><a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
+##  <a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
  `ForeColor`属性指定的容器的环境前景色。  
   
 ```
@@ -305,7 +310,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用此属性的默认值作为系统窗口文本颜色。  
   
-##  <a name="a-namegetlocaleida--iaxwinambientdispatchgetlocaleid"></a><a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
+##  <a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
  **LocaleID**属性指定的容器的环境的区域设置 ID。  
   
 ```
@@ -324,7 +329,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
   
  使用此方法可以发现环境 LocalID，也就是说，该程序的 LocaleID 控件正在使用中。 一旦您知道 LocaleID，可以从资源文件或附属 DLL，依此类推调用代码来加载特定于区域设置标题的错误消息文本。  
   
-##  <a name="a-namegetmessagereflecta--iaxwinambientdispatchgetmessagereflect"></a><a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
+##  <a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
  **MessageReflect**环境属性指定是否在容器将反映到所承载的控件的消息。  
   
 ```
@@ -341,7 +346,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-##  <a name="a-namegetoptionkeypatha--iaxwinambientdispatchgetoptionkeypath"></a><a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
+##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
  **OptionKeyPath**属性指定为用户设置的注册表项路径。  
   
 ```
@@ -355,7 +360,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namegetshowgrabhandlesa--iaxwinambientdispatchgetshowgrabhandles"></a><a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
+##  <a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
  **ShowGrabHandles**环境属性允许要查找是否它应自行绘制与抓取手柄的控件。  
   
 ```
@@ -372,7 +377,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ### <a name="remarks"></a>备注  
  ATL 主机对象实现始终返回**VARIANT_FALSE**作为此属性的值。  
   
-##  <a name="a-namegetshowhatchinga--iaxwinambientdispatchgetshowhatching"></a><a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
+##  <a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
  **ShowHatching**环境属性允许要查找是否它应将自身影线绘制的控件。  
   
 ```
@@ -389,7 +394,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ### <a name="remarks"></a>备注  
  ATL 主机对象实现始终返回**VARIANT_FALSE**作为此属性的值。  
   
-##  <a name="a-namegetusermodea--iaxwinambientdispatchgetusermode"></a><a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
+##  <a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
  **UserMode**属性指定的容器的环境的用户模式。  
   
 ```
@@ -406,7 +411,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-##  <a name="a-nameputallowcontextmenua--iaxwinambientdispatchputallowcontextmenu"></a><a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
+##  <a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
  **AllowContextMenu**属性指定是否允许所承载的控件以显示上下文菜单。  
   
 ```
@@ -423,7 +428,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-##  <a name="a-nameputallowshowuia--iaxwinambientdispatchputallowshowui"></a><a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
+##  <a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
  **AllowShowUI**属性指定是否允许所承载的控件来显示其自身用户界面。  
   
 ```
@@ -440,7 +445,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**VARIANT_FALSE**作为此属性的默认值。  
   
-##  <a name="a-nameputallowwindowlessactivationa--iaxwinambientdispatchputallowwindowlessactivation"></a><a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
+##  <a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
  **AllowWindowlessActivation**属性指定是否在容器上允许无窗口激活。  
   
 ```
@@ -457,7 +462,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-##  <a name="a-nameputbackcolora--iaxwinambientdispatchputbackcolor"></a><a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
+##  <a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
  `BackColor`属性指定的容器的环境背景色。  
   
 ```
@@ -474,7 +479,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**COLOR_BTNFACE**或**COLOR_WINDOW**作为 （具体取决于是否宿主窗口的父级是一个对话框，或不） 此属性的默认值。  
   
-##  <a name="a-nameputdisplayasdefaulta--iaxwinambientdispatchputdisplayasdefault"></a><a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
+##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
  **DisplayAsDefault**是一个允许控件以查看它是否具有默认控件的环境属性。  
   
 ```
@@ -491,7 +496,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**VARIANT_FALSE**作为此属性的默认值。  
   
-##  <a name="a-nameputdochostdoubleclickflagsa--iaxwinambientdispatchputdochostdoubleclickflags"></a><a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
+##  <a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
  **DocHostDoubleClickFlags**属性指定应发生以响应一次双击该操作。  
   
 ```
@@ -508,7 +513,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**DOCHOSTUIDBLCLK_DEFAULT**作为此属性的默认值。  
   
-##  <a name="a-nameputdochostflagsa--iaxwinambientdispatchputdochostflags"></a><a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
+##  <a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
  **DocHostFlags**属性指定该主机对象的用户界面功能。  
   
 ```
@@ -525,7 +530,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ### <a name="remarks"></a>备注  
  使用 ATL 宿主对象实现**DOCHOSTUIFLAG_NO3DBORDER**作为此属性的默认值。  
   
-##  <a name="a-nameputfonta--iaxwinambientdispatchputfont"></a><a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
+##  <a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
  **字体**属性指定的容器的环境的字体。  
   
 ```
@@ -542,7 +547,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现此属性的默认值中用作默认 GUI 字体或系统字体。  
   
-##  <a name="a-nameputforecolora--iaxwinambientdispatchputforecolor"></a><a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
+##  <a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
  `ForeColor`属性指定的容器的环境前景色。  
   
 ```
@@ -559,7 +564,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用此属性的默认值作为系统窗口文本颜色。  
   
-##  <a name="a-nameputlocaleida--iaxwinambientdispatchputlocaleid"></a><a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
+##  <a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
  **LocaleID**属性指定的容器的环境的区域设置 ID。  
   
 ```
@@ -576,7 +581,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用此属性的默认值作为用户的默认区域设置。  
   
-##  <a name="a-nameputmessagereflecta--iaxwinambientdispatchputmessagereflect"></a><a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
+##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
  **MessageReflect**环境属性指定是否在容器将反映到所承载的控件的消息。  
   
 ```
@@ -593,7 +598,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-##  <a name="a-nameputoptionkeypatha--iaxwinambientdispatchputoptionkeypath"></a><a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
+##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
  **OptionKeyPath**属性指定为用户设置的注册表项路径。  
   
 ```
@@ -607,7 +612,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-nameputusermodea--iaxwinambientdispatchputusermode"></a><a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
+##  <a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
  **UserMode**属性指定的容器的环境的用户模式。  
   
 ```
@@ -624,7 +629,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ### <a name="remarks"></a>备注  
  ATL 宿主对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-##  <a name="a-namesetambientdispatcha--iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
+##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
  调用此方法来补充具有用户定义的接口的默认环境属性接口。  
   
 ```
@@ -641,7 +646,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 ### <a name="remarks"></a>备注  
  当`SetAmbientDispatch`称为使用到新接口指针，这种新接口将用于调用任何属性或请求的托管控件的方法 — 如果这些属性不会由已提供[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)。  
   
-##  <a name="a-nameattachcontrola--iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
+##  <a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
  将现有的 （和以前初始化的） 的控件附加到该主机对象，使用标识窗口`hWnd`。  
   
 ```
@@ -658,7 +663,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namecreatecontrola--iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
+##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
  创建控件，初始化它，并在标识窗口中承载它`hWnd`。  
   
 ```
@@ -688,7 +693,7 @@ STDMETHOD(CreateControl)(
   
  若要创建授权的 ActiveX 控件，请参阅[IAxWinHostWindowLic::CreateControlLic](#createcontrollicex)。  
   
-##  <a name="a-namecreatecontrolexa--iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
  创建 ActiveX 控件，初始化它并将它宿主在指定窗口中，类似于[IAxWinHostWindow::CreateControl](#createcontrol)。  
   
 ```
@@ -728,7 +733,7 @@ STDMETHOD(CreateControlEx)(
   
  若要创建授权的 ActiveX 控件，请参阅[IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)。  
   
-##  <a name="a-namequerycontrola--iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
+##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
  返回由所承载的控件的指定的接口指针。  
   
 ```
@@ -745,7 +750,7 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namesetexternaldispatcha--iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
  设置可用于通过所含控件的外部调度接口[IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md)方法。  
   
 ```
@@ -759,7 +764,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namesetexternaluihandlera--iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
  调用此函数可设置外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)接口`CAxWindow`对象。  
   
 ```
@@ -776,7 +781,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="remarks"></a>备注  
  主机的站点中查询的控件 （如 Web 浏览器控件） 使用此函数`IDocHostUIHandlerDispatch`接口。  
   
-##  <a name="a-namecreatecontrollica--iaxwinhostwindowliccreatecontrollic"></a><a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
+##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
  创建授权的控件，初始化它，并在标识窗口中承载它`hWnd`。  
   
 ```
@@ -799,7 +804,7 @@ STDMETHOD(CreateControlLic)(
 ### <a name="example"></a>示例  
  请参阅[承载 ActiveX 控件使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)有关的示例，使用`IAxWinHostWindowLic::CreateControlLic`。  
   
-##  <a name="a-namecreatecontrollicexa--iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
+##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
  创建授权的 ActiveX 控件，初始化它并将它宿主在指定窗口中，类似于[IAxWinHostWindow::CreateControl](#createcontrol)。  
   
 ```

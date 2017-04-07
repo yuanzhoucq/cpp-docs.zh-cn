@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndInfo
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_hIcon
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_nURLCmdID
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_strText
+- AFXDESKTOPALERTDIALOG/CMFCDesktopAlertWndInfo::m_strURL
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +98,7 @@ class CMFCDesktopAlertWndInfo
 ## <a name="requirements"></a>要求  
  **标头︰** afxDesktopAlertDialog.h  
   
-##  <a name="a-nameoperatoreqa--cmfcdesktopalertwndinfooperator"></a><a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
+##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -107,7 +112,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemhicona--cmfcdesktopalertwndinfomhicon"></a><a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
+##  <a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
  句柄显示的图标。  
   
 ```  
@@ -116,7 +121,7 @@ HICON m_hIcon;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemnurlcmdida--cmfcdesktopalertwndinfomnurlcmdid"></a><a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
+##  <a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
  与在桌面警报窗口上的链接关联的命令 ID。  
   
 ```  
@@ -126,7 +131,7 @@ UINT m_nURLCmdID;
 ### <a name="remarks"></a>备注  
  当用户单击由指定的链接，将命令 ID 发送给弹出式窗口的所有者[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)。  
   
-##  <a name="a-namemstrtexta--cmfcdesktopalertwndinfomstrtext"></a><a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
+##  <a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
  在桌面警报窗口显示的文本。  
   
 ```  
@@ -135,7 +140,7 @@ CString m_strText;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemstrurla--cmfcdesktopalertwndinfomstrurl"></a><a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
+##  <a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
  在桌面警报窗口显示的链接。  
   
 ```  

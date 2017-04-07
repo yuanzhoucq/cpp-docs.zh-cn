@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::improper_scheduler_reference
+- improper_scheduler_reference
+- CONCRT/concurrency::improper_scheduler_reference
+- CONCRT/concurrency::improper_scheduler_reference::improper_scheduler_reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: fef830b502f43473bc683fdcb246be526bfb6db8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 92933e40a8756a08fa37434e97dd7d02fd6b1e61
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference 类
@@ -54,7 +56,7 @@ class improper_scheduler_reference : public std::exception;
   
 |名称|说明|  
 |----------|-----------------|  
-|[improper_scheduler_reference 构造函数](#ctor)|已重载。 构造 `improper_scheduler_reference` 对象。|  
+|[improper_scheduler_reference](#ctor)|已重载。 构造 `improper_scheduler_reference` 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -66,7 +68,7 @@ class improper_scheduler_reference : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-improperschedulerreference"></a><a name="ctor"></a>improper_scheduler_reference 
+##  <a name="ctor"></a>improper_scheduler_reference 
 
  构造 `improper_scheduler_reference` 对象。  
   

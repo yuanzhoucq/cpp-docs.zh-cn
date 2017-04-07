@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComHeap
-- ATL.CComHeap
-- ATL::CComHeap
+- ATLCOMMEM/ATL::CComHeap
+- ATLCOMMEM/ATL::CComHeap::Allocate
+- ATLCOMMEM/ATL::CComHeap::Free
+- ATLCOMMEM/ATL::CComHeap::GetSize
+- ATLCOMMEM/ATL::CComHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +81,7 @@ class CComHeap : public IAtlMemMgr
 ## <a name="requirements"></a>要求  
  **标头︰** ATLComMem.h  
   
-##  <a name="a-nameallocatea--ccomheapallocate"></a><a name="allocate"></a>CComHeap::Allocate  
+##  <a name="allocate"></a>CComHeap::Allocate  
  调用此方法来分配内存块。  
   
 ```
@@ -97,7 +100,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用实现[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)。  
   
-##  <a name="a-namefreea--ccomheapfree"></a><a name="free"></a>Ccomheap:: Free  
+##  <a name="free"></a>Ccomheap:: Free  
  调用此方法释放此内存管理器分配的内存块。  
   
 ```
@@ -111,7 +114,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)。  
   
-##  <a name="a-namegetsizea--ccomheapgetsize"></a><a name="getsize"></a>CComHeap::GetSize  
+##  <a name="getsize"></a>CComHeap::GetSize  
  调用此方法以获取此内存管理器分配的内存块的分配的大小。  
   
 ```
@@ -128,7 +131,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)。  
   
-##  <a name="a-namereallocatea--ccomheapreallocate"></a><a name="reallocate"></a>Ccomheap:: Reallocate  
+##  <a name="reallocate"></a>Ccomheap:: Reallocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
   
 ```

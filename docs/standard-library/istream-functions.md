@@ -22,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap](#istream_swap)|[ws](#ws)|  
   
-##  <a name="a-nameistreamswapa--swap"></a><a name="istream_swap"></a>swap  
+##  <a name="istream_swap"></a>swap  
  交换两个流对象的元素。  
   
 ```  
@@ -38,13 +38,13 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  一个流。  
   
- ` right`  
+ `right`  
  一个流。  
   
-##  <a name="a-namewsa--ws"></a><a name="ws"></a>  ws  
+##  <a name="ws"></a>  ws  
  跳过流中的空白。  
   
 ```  

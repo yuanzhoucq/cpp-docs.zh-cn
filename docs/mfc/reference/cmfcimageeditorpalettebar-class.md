@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::GetRowHeight
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +86,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 ## <a name="requirements"></a>要求  
  **标头︰** afximageeditordialog.h  
   
-##  <a name="a-namegetrowheighta--cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
  返回工具栏按钮的高度。  
   
 ```  
@@ -93,7 +96,7 @@ virtual int GetRowHeight() const;
 ### <a name="return-value"></a>返回值  
  在工具栏上的每个按钮的高度。  
   
-##  <a name="a-nameisbuttonextrasizeavailablea--cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
  确定工具栏上是否可以显示已扩展边框的按钮。  
   
 ```  

@@ -9,8 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationTimerEventHandler
 - CAnimationTimerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPostUpdate
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPreUpdate
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnRenderingTooSlow
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +79,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-namecreateinstancea--canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
  创建 CAnimationTimerEventHandler 回调的实例。  
   
 ```  
@@ -92,7 +97,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="a-nameonpostupdatea--canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
+##  <a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
  处理动画更新完成之后发生的事件。  
   
 ```  
@@ -102,7 +107,7 @@ IFACEMETHOD(OnPostUpdate)();
 ### <a name="return-value"></a>返回值  
  如果方法成功，则为 S_OK否则为 E_FAIL。  
   
-##  <a name="a-nameonpreupdatea--canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
+##  <a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
  处理动画更新开始之前发生的事件。  
   
 ```  
@@ -112,7 +117,7 @@ IFACEMETHOD(OnPreUpdate)();
 ### <a name="return-value"></a>返回值  
  如果方法成功，则为 S_OK否则为 E_FAIL。  
   
-##  <a name="a-nameonrenderingtooslowa--canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
+##  <a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
  处理一个动画的呈现帧速率低于最小的理想帧速率时发生的事件。  
   
 ```  
@@ -125,7 +130,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ### <a name="return-value"></a>返回值  
  如果方法成功，则为 S_OK否则为 E_FAIL。  
   
-##  <a name="a-namesetanimationcontrollera--canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
  存储事件路由的动画控制器的指针。  
   
 ```  

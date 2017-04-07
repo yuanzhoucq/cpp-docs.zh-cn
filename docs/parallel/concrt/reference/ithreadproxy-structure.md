@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IThreadProxy
+- IThreadProxy
+- CONCRTRM/concurrency::IThreadProxy
+- CONCRTRM/concurrency::IThreadProxy::IThreadProxy::GetId
+- CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
+- CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
+- CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: baa3266d1068672df96595fa8b9bcc974d52e7fa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0a002dc4440b4784dee7f808a9e3be8dd4f89124
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 结构
@@ -54,10 +59,10 @@ struct IThreadProxy;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Ithreadproxy:: Getid 方法](#getid)|线程代理返回的唯一标识符。|  
-|[Ithreadproxy:: Switchout 方法](#switchout)|解除上下文与基础虚拟处理器根的关联。|  
-|[Ithreadproxy:: Switchto 方法](#switchto)|到另一个从当前正在执行的上下文中执行协作式上下文切换。|  
-|[Ithreadproxy:: Yieldtosystem 方法](#yieldtosystem)|导致调用线程执行准备好在当前处理器上运行的另一个线程。 由操作系统选择要执行的下一个线程。|  
+|[Ithreadproxy:: Getid](#getid)|线程代理返回的唯一标识符。|  
+|[Ithreadproxy:: Switchout](#switchout)|解除上下文与基础虚拟处理器根的关联。|  
+|[Ithreadproxy:: Switchto](#switchto)|到另一个从当前正在执行的上下文中执行协作式上下文切换。|  
+|[Ithreadproxy:: Yieldtosystem](#yieldtosystem)|导致调用线程执行准备好在当前处理器上运行的另一个线程。 由操作系统选择要执行的下一个线程。|  
   
 ## <a name="remarks"></a>备注  
  线程代理耦合到执行上下文由接口表示`IExecutionContext`作为调度工作的一种方法。  
@@ -70,7 +75,7 @@ struct IThreadProxy;
   
  **命名空间：** 并发  
   
-##  <a name="a-namegetida--ithreadproxygetid-method"></a><a name="getid"></a>Ithreadproxy:: Getid 方法  
+##  <a name="getid"></a>Ithreadproxy:: Getid 方法  
  线程代理返回的唯一标识符。  
   
 ```
@@ -80,7 +85,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>返回值  
  一个唯一整数标识符。  
   
-##  <a name="a-nameswitchouta--ithreadproxyswitchout-method"></a><a name="switchout"></a>Ithreadproxy:: Switchout 方法  
+##  <a name="switchout"></a>Ithreadproxy:: Switchout 方法  
  解除上下文与基础虚拟处理器根的关联。  
   
 ```
@@ -94,7 +99,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ### <a name="remarks"></a>备注  
  如果由于某种原因需要解除上下文与执行它的虚拟处理器根的关联，请使用 `SwitchOut`。 根据传入参数 `switchState`的值，以及它是否在虚拟处理器根上执行，此调用将立即返回或阻塞与上下文关联的线程代理。 调用将参数设置为 `SwitchOut` 的 `Idle` 是错误的。 这样将导致[invalid_argument](../../../standard-library/invalid-argument-class.md)异常。  
   
- 当您因资源管理器指示或是请求了临时过度订阅的虚拟处理器根，而要减少计划程序所拥有的虚拟处理器根的数量，并且已完成时，`SwitchOut` 很有用。 在这种情况下应调用该方法[IVirtualProcessorRoot::Remove 方法](http://msdn.microsoft.com/en-us/ad699b4a-1972-4390-97ee-9c083ba7d9e4)在虚拟处理器根上，在进行调用之前`SwitchOut`与参数`switchState`设置为`Blocking`。 这将阻塞线程代理，并且当计划程序中不同的虚拟处理器根可用来执行它时，线程代理将继续执行。 可以通过调用函数恢复阻塞线程代理`SwitchTo`若要切换到该线程代理执行上下文。 此外可以通过使用其相关联的上下文来激活虚拟处理器根继续线程代理。 有关如何执行此操作的详细信息，请参阅[ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)。  
+ 当您因资源管理器指示或是请求了临时过度订阅的虚拟处理器根，而要减少计划程序所拥有的虚拟处理器根的数量，并且已完成时，`SwitchOut` 很有用。 在这种情况下应调用该方法[IVirtualProcessorRoot::Remove](http://msdn.microsoft.com/en-us/ad699b4a-1972-4390-97ee-9c083ba7d9e4)在虚拟处理器根上，在进行调用之前`SwitchOut`与参数`switchState`设置为`Blocking`。 这将阻塞线程代理，并且当计划程序中不同的虚拟处理器根可用来执行它时，线程代理将继续执行。 可以通过调用函数恢复阻塞线程代理`SwitchTo`若要切换到该线程代理执行上下文。 此外可以通过使用其相关联的上下文来激活虚拟处理器根继续线程代理。 有关如何执行此操作的详细信息，请参阅[ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)。  
   
  如果您希望重新初始化虚拟处理器，也可以使用 `SwitchOut`，这样在将来阻塞线程代理或从运行它的虚拟处理器根和它进行调度工作的计划程序暂时分离该线程代理时，可以将虚拟处理器激活。 如果您希望阻塞线程代理，请使用 `SwitchOut` 并将参数 `switchState` 设置为 `Blocking`。 如上所示，稍后可以使用 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 将其恢复。 当您想要将该线程代理从运行它的虚拟处理器根和与虚拟处理器关联的计划程序暂时分离时，请使用 `SwitchOut` 并将参数设置为 `Nesting`。 当线程代理在虚拟处理器根上执行时，调用 `SwitchOut` 并将参数 `switchState` 设置为 `Nesting` 将导致根重新初始化，而当前线程代理无需虚拟处理器根也会继续执行。 线程代理被视为已离开计划程序，直到它调用[ithreadproxy:: Switchout](#switchout)方法`Blocking`在一个更高版本的时间点。 对将参数设置为 `SwitchOut` 的 `Blocking` 的第二次调用旨在使上下文返回已阻止状态，以便通过 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 在之前与其分离的计划程序中恢复它。 由于它不是在虚拟处理器根上执行的，因此不会发生重新初始化。  
   
@@ -104,7 +109,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  在随 Visual Studio 2010 一同提供的库和标头中，此方法未采用参数，而且没有重新初始化虚拟处理器根。 为了保留旧行为，提供 `Blocking` 的默认参数值。  
   
-##  <a name="a-nameswitchtoa--ithreadproxyswitchto-method"></a><a name="switchto"></a>Ithreadproxy:: Switchto 方法  
+##  <a name="switchto"></a>Ithreadproxy:: Switchto 方法  
  到另一个从当前正在执行的上下文中执行协作式上下文切换。  
   
 ```
@@ -131,7 +136,7 @@ virtual void SwitchTo(
   
  `SwitchTo`必须在调用`IThreadProxy`接口，表示当前正在执行的线程或结果不确定。 该函数将引发`invalid_argument`如果参数`pContext`设置为`NULL`。  
   
-##  <a name="a-nameyieldtosystema--ithreadproxyyieldtosystem-method"></a><a name="yieldtosystem"></a>Ithreadproxy:: Yieldtosystem 方法  
+##  <a name="yieldtosystem"></a>Ithreadproxy:: Yieldtosystem 方法  
  导致调用线程执行准备好在当前处理器上运行的另一个线程。 由操作系统选择要执行的下一个线程。  
   
 ```

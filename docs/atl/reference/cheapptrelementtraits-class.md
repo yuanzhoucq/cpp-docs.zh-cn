@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHeapPtrElementTraits
 - CHeapPtrElementTraits
-- ATL::CHeapPtrElementTraits
+- ATLCOLL/ATL::CHeapPtrElementTraits
+- ATLCOLL/ATL::CHeapPtrElementTraits::INARGTYPE
+- ATLCOLL/ATL::CHeapPtrElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,14 +91,14 @@ class CHeapPtrElementTraits :
 ## <a name="requirements"></a>要求  
  **标头︰** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
  要用于将元素添加到集合类对象的数据类型。  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
  要用于从集合类对象中检索元素的数据类型。  
   
 ```

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFileException
+- AFX/CFileException
+- AFX/CFileException::CFileException
+- AFX/CFileException::ErrnoToException
+- AFX/CFileException::GetErrorMessage
+- AFX/CFileException::OsErrorToException
+- AFX/CFileException::ThrowErrno
+- AFX/CFileException::ThrowOsError
+- AFX/CFileException::m_cause
+- AFX/CFileException::m_lOsError
+- AFX/CFileException::m_strFileName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +101,7 @@ class CFileException : public CException
 ## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="a-namecfileexceptiona--cfileexceptioncfileexception"></a><a name="cfileexception"></a>CFileException::CFileException  
+##  <a name="cfileexception"></a>CFileException::CFileException  
  构造`CFileException`对象中存储的原因代码和操作系统代码的对象。  
   
 ```  
@@ -117,7 +127,7 @@ CFileException(
 > [!NOTE]
 >  该变量`lOsError`仅适用于`CFile`和`CStdioFile`对象。 `CMemFile`类不处理此错误代码。  
   
-##  <a name="a-nameerrnotoexceptiona--cfileexceptionerrnotoexception"></a><a name="errnotoexception"></a>CFileException::ErrnoToException  
+##  <a name="errnotoexception"></a>CFileException::ErrnoToException  
  将给定的运行时库的错误值到转换`CFileException`枚举错误值。  
   
 ```  
@@ -137,7 +147,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&26;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]  
   
-##  <a name="a-namegeterrormessagea--cfileexceptiongeterrormessage"></a><a name="geterrormessage"></a>CFileException::GetErrorMessage  
+##  <a name="geterrormessage"></a>CFileException::GetErrorMessage  
  检索描述一种异常的文本。  
   
 ```  
@@ -168,7 +178,7 @@ virtual BOOL GetErrorMessage(
   
  [!code-cpp[NVC_MFCExceptions #&22;](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]  
   
-##  <a name="a-namemcausea--cfileexceptionmcause"></a><a name="m_cause"></a>CFileException::m_cause  
+##  <a name="m_cause"></a>CFileException::m_cause  
  包含由 `CFileException` 枚举类型定义的值。  
   
 ```  
@@ -217,7 +227,7 @@ int m_cause;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&30;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]  
   
-##  <a name="a-namemloserrora--cfileexceptionmloserror"></a><a name="m_loserror"></a>CFileException::m_lOsError  
+##  <a name="m_loserror"></a>CFileException::m_lOsError  
  包含此异常的操作系统错误代码。  
   
 ```  
@@ -227,14 +237,14 @@ LONG m_lOsError;
 ### <a name="remarks"></a>备注  
  请参阅您操作系统技术手册来查找错误代码的列表。 此数据成员是类型的公共变量**长**。  
   
-##  <a name="a-namemstrfilenamea--cfileexceptionmstrfilename"></a><a name="m_strfilename"></a>CFileException::m_strFileName  
+##  <a name="m_strfilename"></a>CFileException::m_strFileName  
  包含此异常条件的文件的名称。  
   
 ```  
 CString m_strFileName;  
 ```  
   
-##  <a name="a-nameoserrortoexceptiona--cfileexceptionoserrortoexception"></a><a name="oserrortoexception"></a>CFileException::OsErrorToException  
+##  <a name="oserrortoexception"></a>CFileException::OsErrorToException  
  返回一个枚举器对应于给定`lOsError`值。 如果错误代码为未知的则该函数返回**CFileException::generic**。  
   
 ```  
@@ -251,7 +261,7 @@ static int PASCAL OsErrorToException(LONG lOsError);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&27;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
-##  <a name="a-namethrowerrnoa--cfileexceptionthrowerrno"></a><a name="throwerrno"></a>CFileException::ThrowErrno  
+##  <a name="throwerrno"></a>CFileException::ThrowErrno  
  构造`CFileException`对象对应于给定`nErrno`值，然后引发异常。  
   
 ```  
@@ -268,7 +278,7 @@ static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&28;](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
-##  <a name="a-namethrowoserrora--cfileexceptionthrowoserror"></a><a name="throwoserror"></a>CFileException::ThrowOsError  
+##  <a name="throwoserror"></a>CFileException::ThrowOsError  
  引发`CFileException`对应于给定`lOsError`值。 如果错误代码为未知，则该函数将引发异常的编码与**CFileException::generic**。  
   
 ```  

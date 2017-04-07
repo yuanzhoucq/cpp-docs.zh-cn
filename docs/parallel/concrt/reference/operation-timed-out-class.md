@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::operation_timed_out
+- operation_timed_out
+- CONCRT/concurrency::operation_timed_out
+- CONCRT/concurrency::operation_timed_out::operation_timed_out
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 64fdbfa539218bb24211d12cefb415cfcacd8313
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ec17c3ae4fa10fd7b24170934c672fb569112f60
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out 类
@@ -54,7 +56,7 @@ class operation_timed_out : public std::exception;
   
 |名称|说明|  
 |----------|-----------------|  
-|[operation_timed_out 构造函数](#ctor)|已重载。 构造 `operation_timed_out` 对象。|  
+|[operation_timed_out](#ctor)|已重载。 构造 `operation_timed_out` 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -66,7 +68,7 @@ class operation_timed_out : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-operationtimedout"></a><a name="ctor"></a>operation_timed_out 
+##  <a name="ctor"></a>operation_timed_out 
 
  构造 `operation_timed_out` 对象。  
   
@@ -81,5 +83,5 @@ operation_timed_out() throw();
  错误的描述性消息。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

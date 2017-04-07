@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleInsertDialog
+- AFXODLGS/COleInsertDialog
+- AFXODLGS/COleInsertDialog::COleInsertDialog
+- AFXODLGS/COleInsertDialog::CreateItem
+- AFXODLGS/COleInsertDialog::DoModal
+- AFXODLGS/COleInsertDialog::GetClassID
+- AFXODLGS/COleInsertDialog::GetDrawAspect
+- AFXODLGS/COleInsertDialog::GetIconicMetafile
+- AFXODLGS/COleInsertDialog::GetPathName
+- AFXODLGS/COleInsertDialog::GetSelectionType
+- AFXODLGS/COleInsertDialog::m_io
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +115,7 @@ class COleInsertDialog : public COleDialog
 ## <a name="requirements"></a>要求  
  **标头︰** afxodlgs.h  
   
-##  <a name="a-namecoleinsertdialoga--coleinsertdialogcoleinsertdialog"></a><a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
+##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
  此函数只构造`COleInsertDialog`对象。  
   
 ```  
@@ -138,7 +148,7 @@ COleInsertDialog (
 ### <a name="remarks"></a>备注  
  若要显示对话框中，调用[DoModal](#domodal)函数。  
   
-##  <a name="a-namecreateitema--coleinsertdialogcreateitem"></a><a name="createitem"></a>COleInsertDialog::CreateItem  
+##  <a name="createitem"></a>COleInsertDialog::CreateItem  
  调用此函数可创建类型的对象[COleClientItem](../../mfc/reference/coleclientitem-class.md)才[DoModal](#domodal)返回**IDOK**。  
   
 ```  
@@ -155,7 +165,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="remarks"></a>备注  
  您必须分配`COleClientItem`对象，然后才能调用此函数。  
   
-##  <a name="a-namedomodala--coleinsertdialogdomodal"></a><a name="domodal"></a>COleInsertDialog::DoModal  
+##  <a name="domodal"></a>COleInsertDialog::DoModal  
  调用此函数可显示 OLE 插入对象对话框。  
   
 ```  
@@ -191,7 +201,7 @@ INT_PTR
   
  如果`DoModal`返回 IDOK，可调用其他成员函数来检索这些设置，或者由用户对话框中的信息输入。  
   
-##  <a name="a-namegetclassida--coleinsertdialoggetclassid"></a><a name="getclassid"></a>COleInsertDialog::GetClassID  
+##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
  调用此函数可获取**CLSID**与选定的项仅当关联[DoModal](#domodal)返回**IDOK**并且所选内容类型为**COleInsertDialog::createNewItem**。  
   
 ```  
@@ -204,7 +214,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdrawaspecta--coleinsertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
  调用此函数可确定用户选择要以图标形式显示的选定的项。  
   
 ```  
@@ -223,7 +233,7 @@ DVASPECT GetDrawAspect() const;
   
  绘制方面的详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)数据结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegeticonicmetafilea--coleinsertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
  调用此函数可获取包含所选的项的图标方面的图元文件的句柄。  
   
 ```  
@@ -233,7 +243,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>返回值  
  检查显示为图标复选框是否包含所选项目，该图标方面的图元文件句柄，当对话框已关闭通过选择**确定**; 否则为**NULL**。  
   
-##  <a name="a-namegetpathnamea--coleinsertdialoggetpathname"></a><a name="getpathname"></a>COleInsertDialog::GetPathName  
+##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
  调用此函数可获取选定的文件才的完整路径[DoModal](#domodal)返回**IDOK**并且所选内容类型不是**COleInsertDialog::createNewItem**。  
   
 ```  
@@ -243,7 +253,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>返回值  
  在对话框中选择文件的完整路径。 如果所选内容类型为`createNewItem`，此函数将返回毫无意义`CString`在发布模式下或在调试模式下引发断言。  
   
-##  <a name="a-namegetselectiontypea--coleinsertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
  调用此函数可获取选定内容类型选择插入对象对话框中时通过选择解除**确定**。  
   
 ```  
@@ -256,17 +266,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>备注  
  返回类型值都由指定**选择**枚举类型中声明`COleInsertDialog`类。  
   
- `enum Selection`  
-  
- `{`  
-  
- `createNewItem,`  
-  
- `insertFromFile,`  
-  
- `linkToFile`  
-  
- `};`  
+```  
+enum Selection {
+    createNewItem,
+    insertFromFile,
+    linkToFile
+    };  
+```  
   
  请按照这些值的简短说明︰  
   
@@ -276,7 +282,7 @@ UINT GetSelectionType() const;
   
 - **COleInsertDialog::linkToFile**已选择从文件创建单选按钮和链接复选框已选中。  
   
-##  <a name="a-namemioa--coleinsertdialogmio"></a><a name="m_io"></a>COleInsertDialog::m_io  
+##  <a name="m_io"></a>COleInsertDialog::m_io  
  类型的结构**OLEUIINSERTOBJECT**用来控制插入对象对话框中的行为。  
   
 ```  

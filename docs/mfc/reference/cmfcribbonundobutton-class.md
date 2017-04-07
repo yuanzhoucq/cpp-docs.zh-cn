@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::CMFCRibbonUndoButton
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::AddUndoAction
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::CleanUpUndoList
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::GetActionNumber
+- AFXRIBBONUNDOBUTTON/CMFCRibbonUndoButton::HasMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +93,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 ## <a name="requirements"></a>要求  
  **标头︰** afxribbonundobutton.h  
   
-##  <a name="a-nameaddundoactiona--cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
+##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
  操作的列表中添加一个新的操作。  
   
 ```  
@@ -98,14 +104,14 @@ void AddUndoAction(LPCTSTR lpszLabel);
  [in] `lpszLabel`  
  将显示在下拉列表中的操作标签。  
   
-##  <a name="a-namecleanupundolista--cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
+##  <a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
  清除操作列表中，这是下拉列表。  
   
 ```  
 void CleanUpUndoList();
 ```  
   
-##  <a name="a-namecmfcribbonundobuttona--cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+##  <a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
  构造一个新`CMFCRibbonUndoButton`通过使用您指定的命令 ID、 文本标签和映像从父对象的图像列表对象。  
   
 ```  
@@ -138,7 +144,7 @@ CMFCRibbonUndoButton(
  [in] `hIcon`  
  您可以使用作为按钮的图像的图标句柄。  
   
-##  <a name="a-namegetactionnumbera--cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
+##  <a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
  确定用户从下拉列表中选择的项的数目。  
   
 ```  
@@ -148,7 +154,7 @@ int GetActionNumber() const;
 ### <a name="return-value"></a>返回值  
  用户选择的项目数。  
   
-##  <a name="a-namehasmenua--cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
+##  <a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
  指示对象是否包含一个菜单。  
   
 ```  

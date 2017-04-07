@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCCmdUsageCount
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::AddCmd
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::GetCount
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::HasEnoughInformation
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::Reset
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::Serialize
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::SetOptions
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CMFCCmdUsageCount : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxcmdusagecount.h  
   
-##  <a name="a-nameaddcmda--cmfccmdusagecountaddcmd"></a><a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
+##  <a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
  一个与给定的命令相关联的计数器将增加。  
   
 ```  
@@ -119,7 +127,7 @@ void AddCmd(UINT uiCmd);
   
 - `uiCmd`指的是标准命令 (全局`IsStandardCommand`函数将返回一个非零值)。  
   
-##  <a name="a-namegetcounta--cmfccmdusagecountgetcount"></a><a name="getcount"></a>CMFCCmdUsageCount::GetCount  
+##  <a name="getcount"></a>CMFCCmdUsageCount::GetCount  
  检索与给定的命令 ID 相关联的使用计数  
   
 ```  
@@ -136,7 +144,7 @@ UINT GetCount(UINT uiCmd) const;
 ### <a name="return-value"></a>返回值  
  与给定的命令 ID 相关联的使用计数  
   
-##  <a name="a-namehasenoughinformationa--cmfccmdusagecounthasenoughinformation"></a><a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
+##  <a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
  确定此对象是否已接收到最小数量的跟踪数据。  
   
 ```  
@@ -151,7 +159,7 @@ BOOL HasEnoughInformation() const;
   
  此方法由[CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands)来确定是否显示所有可用菜单命令。  
   
-##  <a name="a-nameisfreqeuntlyusedcmda--cmfccmdusagecountisfreqeuntlyusedcmd"></a><a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
+##  <a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
  确定是否经常使用给定的命令。  
   
 ```  
@@ -173,7 +181,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
  [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused)使用此方法来确定命令是否很少使用。  
   
-##  <a name="a-namereseta--cmfccmdusagecountreset"></a><a name="reset"></a>CMFCCmdUsageCount::Reset  
+##  <a name="reset"></a>CMFCCmdUsageCount::Reset  
  清除所有命令的使用计数。  
   
 ```  
@@ -183,7 +191,7 @@ void Reset();
 ### <a name="remarks"></a>备注  
  调用此方法来清除所有项从的命令计数映射结构`m_CmdUsage`，并重置总命令用法， `m_nTotalUsage`、 计数器为 0。  
   
-##  <a name="a-nameserializea--cmfccmdusagecountserialize"></a><a name="serialize"></a>CMFCCmdUsageCount::Serialize  
+##  <a name="serialize"></a>CMFCCmdUsageCount::Serialize  
  从存档读取此对象或将其写入存档。  
   
 ```  
@@ -202,7 +210,7 @@ virtual void Serialize(CArchive& ar);
   
  有关序列化示例，请参阅[序列化︰ 将对象序列化为](../../mfc/serialization-serializing-an-object.md)。  
   
-##  <a name="a-namesetoptionsa--cmfccmdusagecountsetoptions"></a><a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
+##  <a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
  设置的值共享`CMFCCmdUsageCount`类数据成员。  
   
 ```  

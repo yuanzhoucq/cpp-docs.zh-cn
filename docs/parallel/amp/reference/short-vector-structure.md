@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::short_vector
+- short_vector
+- AMP_SHORT_VECTORS/short_vector
+- AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 dev_langs:
 - C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
@@ -125,7 +127,7 @@ struct short_vector<double, 4>;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora--shortvectorshortvector-constructor"></a><a name="ctor"></a>short_vector:: short_vector 构造函数  
+##  <a name="ctor"></a>short_vector:: short_vector 构造函数  
   
 ```  
 short_vector();

@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlModuleT<T>
-- ATL.CAtlModuleT
-- ATL.CAtlModuleT<T>
-- ATL::CAtlModuleT
 - CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT::CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT::InitLibId
+- ATLBASE/ATL::CAtlModuleT::RegisterAppId
+- ATLBASE/ATL::CAtlModuleT::RegisterServer
+- ATLBASE/ATL::CAtlModuleT::UnregisterAppId
+- ATLBASE/ATL::CAtlModuleT::UnregisterServer
+- ATLBASE/ATL::CAtlModuleT::UpdateRegistryAppId
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +96,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
-##  <a name="a-namecatlmoduleta--catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
+##  <a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
  构造函数。  
   
 ```
@@ -102,7 +106,7 @@ CAtlModuleT() throw();
 ### <a name="remarks"></a>备注  
  调用[CAtlModuleT::InitLibId](#initlibid)。  
   
-##  <a name="a-nameinitlibida--catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT::InitLibId  
+##  <a name="initlibid"></a>CAtlModuleT::InitLibId  
  初始化包含当前模块的 GUID 的数据成员。  
   
 ```
@@ -112,7 +116,7 @@ static void InitLibId() throw();
 ### <a name="remarks"></a>备注  
  由构造函数调用[CAtlModuleT::CAtlModuleT](#catlmodulet)。  
   
-##  <a name="a-nameregisterappida--catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT::RegisterAppId  
+##  <a name="registerappid"></a>CAtlModuleT::RegisterAppId  
  向注册表添加该 exe 文件。  
   
 ```
@@ -122,7 +126,7 @@ HRESULT RegisterAppId() throw();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-nameregisterservera--catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::RegisterServer  
+##  <a name="registerserver"></a>CAtlModuleT::RegisterServer  
  将服务添加到注册表。  
   
 ```
@@ -141,7 +145,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-nameunregisterappida--catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
  从注册表中删除该 exe 文件。  
   
 ```
@@ -151,7 +155,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-nameunregisterservera--catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
+##  <a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
  从注册表中删除该服务。  
   
 ```
@@ -170,7 +174,7 @@ HRESULT UnregisterServer(
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-nameupdateregistryappida--catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
+##  <a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
  更新注册表中的 EXE 信息。  
   
 ```

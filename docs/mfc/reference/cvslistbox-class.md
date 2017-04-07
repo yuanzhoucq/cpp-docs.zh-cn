@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CVSListBox
+- AFXVSLISTBOX/CVSListBox
+- AFXVSLISTBOX/CVSListBox::CVSListBox
+- AFXVSLISTBOX/CVSListBox::AddItem
+- AFXVSLISTBOX/CVSListBox::EditItem
+- AFXVSLISTBOX/CVSListBox::GetCount
+- AFXVSLISTBOX/CVSListBox::GetItemData
+- AFXVSLISTBOX/CVSListBox::GetItemText
+- AFXVSLISTBOX/CVSListBox::GetSelItem
+- AFXVSLISTBOX/CVSListBox::RemoveItem
+- AFXVSLISTBOX/CVSListBox::SelectItem
+- AFXVSLISTBOX/CVSListBox::SetItemData
+- AFXVSLISTBOX/CVSListBox::GetListHwnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +120,7 @@ class CVSListBox : public CVSListBoxBase
 ## <a name="requirements"></a>要求  
  **标头︰** afxvslistbox.h  
   
-##  <a name="a-nameadditema--cvslistboxadditem"></a><a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>CVSListBox::AddItem  
  将字符串添加到列表控件。  
   
 ```  
@@ -134,7 +146,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>备注  
  使用[CVSListBox::GetItemData](#getitemdata)方法来检索由指定的值`dwData`参数。 此值可以是特定于应用程序的整数或与其他数据的指针。  
   
-##  <a name="a-namecvslistboxa--cvslistboxcvslistbox"></a><a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
  构造 `CVSListBox` 对象。  
   
 ```  
@@ -145,7 +157,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameedititema--cvslistboxedititem"></a><a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>CVSListBox::EditItem  
  启动列表控件项的文本编辑操作。  
   
 ```  
@@ -162,7 +174,7 @@ virtual BOOL EditItem(int iIndex);
 ### <a name="remarks"></a>备注  
  在用户开始编辑操作，通过双击某一项，标签或通过按**F2**或**空格键**键的项具有焦点时。  
   
-##  <a name="a-namegetcounta--cvslistboxgetcount"></a><a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>CVSListBox::GetCount  
  检索字符串的可编辑列表控件中的数量。  
   
 ```  
@@ -175,7 +187,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>备注  
  请注意，此计数是一个大于最后一项的索引值因为此索引是从零开始。  
   
-##  <a name="a-namegetitemdataa--cvslistboxgetitemdata"></a><a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>CVSListBox::GetItemData  
  检索与可编辑列表控件项相关联的特定于应用程序的 32 位值。  
   
 ```  
@@ -192,7 +204,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>备注  
  使用[CVSListBox::SetItemData](#setitemdata)或[CVSListBox::AddItem](#additem)方法来将 32 位的值与列表控件项相关联。 此值可以是特定于应用程序的整数或与其他数据的指针。  
   
-##  <a name="a-namegetitemtexta--cvslistboxgetitemtext"></a><a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>CVSListBox::GetItemText  
  检索可编辑列表控件项的文本。  
   
 ```  
@@ -208,7 +220,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetlisthwnda--cvslistboxgetlisthwnd"></a><a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
  返回当前的嵌入式的列表视图控件的句柄。  
   
 ```  
@@ -221,7 +233,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>备注  
  使用此方法来检索支持嵌入在列表视图控件的句柄`CVSListBox`类。  
   
-##  <a name="a-namegetselitema--cvslistboxgetselitem"></a><a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>CVSListBox::GetSelItem  
  检索可编辑列表控件中当前选定项的从零开始索引。  
   
 ```  
@@ -233,7 +245,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameremoveitema--cvslistboxremoveitem"></a><a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>CVSListBox::RemoveItem  
  从可编辑列表控件中移除一个项。  
   
 ```  
@@ -249,7 +261,7 @@ virtual BOOL RemoveItem(int iIndex);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameselectitema--cvslistboxselectitem"></a><a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>CVSListBox::SelectItem  
  选择一个可编辑列表控件字符串。  
   
 ```  
@@ -266,7 +278,7 @@ virtual BOOL SelectItem(int iItem);
 ### <a name="remarks"></a>备注  
  此方法可选择指定的项，并且如有必要，滚动到视图中的项。  
   
-##  <a name="a-namesetitemdataa--cvslistboxsetitemdata"></a><a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>CVSListBox::SetItemData  
  将特定于应用程序的 32 位值与可编辑列表控件项相关联。  
   
 ```  

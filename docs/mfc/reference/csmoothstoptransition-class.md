@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSmoothStopTransition
-- afxanimationcontroller/CSmoothStopTransition
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition::CSmoothStopTransition
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition::Create
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CSmoothStopTransition::m_maximumDuration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CSmoothStopTransition : public CBaseTransition;
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--csmoothstoptransitioncreate"></a><a name="create"></a>CSmoothStopTransition::Create  
+##  <a name="create"></a>CSmoothStopTransition::Create  
  调用转换库来创建封装的转换 COM 对象。  
   
 ```  
@@ -99,7 +103,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
-##  <a name="a-namecsmoothstoptransitiona--csmoothstoptransitioncsmoothstoptransition"></a><a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition  
+##  <a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition  
  构造平稳停止转换并初始化其最大持续时间和最终值。  
   
 ```  
@@ -115,14 +119,14 @@ CSmoothStopTransition(
  `dblFinalValue`  
  末尾的过渡动画变量的值。  
   
-##  <a name="a-namemdblfinalvaluea--csmoothstoptransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue  
  末尾的过渡动画变量的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemmaximumdurationa--csmoothstoptransitionmmaximumduration"></a><a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration  
+##  <a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration  
  过渡的最大持续时间。  
   
 ```  

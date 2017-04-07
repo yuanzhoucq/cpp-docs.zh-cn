@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: b110994cab92d2151f63912d2b08af56059b82d7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1683c03c522b0b332ced9e93188c65e996ac633d
+ms.openlocfilehash: ec7ec2a7f5f0393f00efb6d662494e7be2a3f696
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="copy-sources"></a>复制源文件
 进行生成时，将开发 PC 上的源文件复制到 Linux 计算机并在那里进行编译。  默认情况下，Visual Studio 项目中的所有源文件都将复制到上述设置中设置的位置。  但是，也可以将其他源文件添加到此列表，或完全关闭复制源文件，这是生成文件项目的默认值。
 
-* “**要复制的源**”确定将哪些源文件复制到远程计算机。  默认情况下，**@(SourcesToCopyRemotely)** 默认为项目中的所有文件。
+* “**要复制的源**”确定将哪些源文件复制到远程计算机。  在默认情况下，**@(SourcesToCopyRemotely)** 默认为项目中的所有源代码文件，但不包含任何资产/资源文件，如映像。
 
 * 可以打开和关闭“**复制源**”，以启用和禁用将源文件复制到远程计算机操作。
 

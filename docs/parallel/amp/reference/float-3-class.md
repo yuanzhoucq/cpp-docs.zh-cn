@@ -102,9 +102,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 9e1225c724d2c89dd2a6c4158446b6a4df195f6c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2cd5e44d60ce02a1acf781812a0cc72e1e7657cf
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="float3-class"></a>float_3 类
@@ -132,57 +132,57 @@ class float_3;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|float_3::get_x 方法||  
-|float_3::get_xy 方法||  
-|float_3::get_xyz 方法||  
-|float_3::get_xz 方法||  
-|float_3::get_xzy 方法||  
-|float_3::get_y 方法||  
-|float_3::get_yx 方法||  
-|float_3::get_yxz 方法||  
-|float_3::get_yz 方法||  
-|float_3::get_yzx 方法||  
-|float_3::get_z 方法||  
-|float_3::get_zx 方法||  
-|float_3::get_zxy 方法||  
-|float_3::get_zy 方法||  
-|float_3::get_zyx 方法||  
-|float_3::ref_b 方法||  
-|float_3::ref_g 方法||  
-|float_3::ref_r 方法||  
-|float_3::ref_x 方法||  
-|float_3::ref_y 方法||  
-|float_3::ref_z 方法||  
-|float_3::set_x 方法||  
-|float_3::set_xy 方法||  
-|float_3::set_xyz 方法||  
-|float_3::set_xz 方法||  
-|float_3::set_xzy 方法||  
-|float_3::set_y 方法||  
-|float_3::set_yx 方法||  
-|float_3::set_yxz 方法||  
-|float_3::set_yz 方法||  
-|float_3::set_yzx 方法||  
-|float_3::set_z 方法||  
-|float_3::set_zx 方法||  
-|float_3::set_zxy 方法||  
-|float_3::set_zy 方法||  
-|float_3::set_zyx 方法||  
+|float_3::get_x||  
+|float_3::get_xy||  
+|float_3::get_xyz||  
+|float_3::get_xz||  
+|float_3::get_xzy||  
+|float_3::get_y||  
+|float_3::get_yx||  
+|float_3::get_yxz||  
+|float_3::get_yz||  
+|float_3::get_yzx||  
+|float_3::get_z||  
+|float_3::get_zx||  
+|float_3::get_zxy||  
+|float_3::get_zy||  
+|float_3::get_zyx||  
+|float_3::ref_b||  
+|float_3::ref_g||  
+|float_3::ref_r||  
+|float_3::ref_x||  
+|float_3::ref_y||  
+|float_3::ref_z||  
+|float_3::set_x||  
+|float_3::set_xy||  
+|float_3::set_xyz||  
+|float_3::set_xz||  
+|float_3::set_xzy||  
+|float_3::set_y||  
+|float_3::set_yx||  
+|float_3::set_yxz||  
+|float_3::set_yz||  
+|float_3::set_yzx||  
+|float_3::set_z||  
+|float_3::set_zx||  
+|float_3::set_zxy||  
+|float_3::set_zy||  
+|float_3::set_zyx||  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|float_3::operator 运算符||  
-|float_3::operator-运算符||  
-|float_3::operator * = 运算符||  
-|float_3::operator / = 运算符||  
-|float_3::operator + + 运算符||  
-|float_3::operator + = 运算符||  
-|float_3::operator = 运算符||  
-|float_3::operator-= 运算符||  
+|float_3::operator-||  
+|float_3::operator-||  
+|float_3::operator * =||  
+|float_3::operator / =||  
+|float_3::operator + +||  
+|float_3::operator + =||  
+|float_3::operator =||  
+|float_3::operator =||  
   
 ### <a name="public-constants"></a>公共常量  
   
@@ -194,36 +194,36 @@ class float_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|float_3::b 数据成员||  
-|float_3::bg 数据成员||  
-|float_3::bgr 数据成员||  
-|float_3::br 数据成员||  
-|float_3::brg 数据成员||  
-|float_3::g 数据成员||  
-|float_3::gb 数据成员||  
-|float_3::gbr 数据成员||  
-|float_3::gr 数据成员||  
-|float_3::grb 数据成员||  
-|float_3::r 数据成员||  
-|float_3::rb 数据成员||  
-|float_3::rbg 数据成员||  
-|float_3::rg 数据成员||  
-|float_3::rgb 数据成员||  
-|float_3::x 数据成员||  
-|float_3::xy 数据成员||  
-|float_3::xyz 数据成员||  
-|float_3::xz 数据成员||  
-|float_3::xzy 数据成员||  
-|float_3::y 数据成员||  
-|float_3::yx 数据成员||  
-|float_3::yxz 数据成员||  
-|float_3::yz 数据成员||  
-|float_3::yzx 数据成员||  
-|float_3::z 数据成员||  
-|float_3::zx 数据成员||  
-|float_3::zxy 数据成员||  
-|float_3::zy 数据成员||  
-|float_3::zyx 数据成员||  
+|float_3::b||  
+|float_3::bg||  
+|float_3::bgr||  
+|float_3::br||  
+|float_3::brg||  
+|float_3::g||  
+|float_3::gb||  
+|float_3::gbr||  
+|float_3::gr||  
+|float_3::grb||  
+|float_3::r||  
+|float_3::rb||  
+|float_3::rbg||  
+|float_3::rg||  
+|float_3::rgb||  
+|float_3::x||  
+|float_3::xy||  
+|float_3::xyz||  
+|float_3::xz||  
+|float_3::xzy||  
+|float_3::y||  
+|float_3::yx||  
+|float_3::yxz||  
+|float_3::yz||  
+|float_3::yzx||  
+|float_3::z||  
+|float_3::zx||  
+|float_3::zxy||  
+|float_3::zy||  
+|float_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `float_3`  
@@ -233,7 +233,7 @@ class float_3;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-float3"></a><a name="ctor"></a>float_3 
+##  <a name="ctor"></a>float_3 
 
  默认构造函数，将初始化为 0 的所有元素。  
   
@@ -300,12 +300,12 @@ explicit inline float_3(
  `_Other`  
  用于初始化的对象。  
   
-##  <a name="a-namefloat3sizea-size"></a><a name="float_3__size"></a>大小 
+##  <a name="float_3__size"></a>大小 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
 

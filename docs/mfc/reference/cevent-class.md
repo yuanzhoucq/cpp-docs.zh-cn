@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEvent
+- AFXMT/CEvent
+- AFXMT/CEvent::CEvent
+- AFXMT/CEvent::PulseEvent
+- AFXMT/CEvent::ResetEvent
+- AFXMT/CEvent::SetEvent
+- AFXMT/CEvent::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxmt.h  
   
-##  <a name="a-nameceventa--ceventcevent"></a><a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>CEvent::CEvent  
  构造的已命名的或未命名`CEvent`对象。  
   
 ```  
@@ -131,7 +137,7 @@ CEvent(
 > [!IMPORTANT]
 >  在创建后`CEvent`对象，请使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以确保该互斥体尚不存在。 如果互斥体未存在意外，这可能表示一个恶意进程占用并可能想要出于恶意使用互斥体。 在这种情况下，建议的注重安全的过程是关闭句柄并继续像创建对象时出错。  
   
-##  <a name="a-namepulseeventa--ceventpulseevent"></a><a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>CEvent::PulseEvent  
  设置发出信号的事件的状态 （可用）、 释放任何正在等待的线程，并将其重置为非终止 （不可用） 自动。  
   
 ```  
@@ -148,7 +154,7 @@ BOOL PulseEvent();
   
  `PulseEvent`将使用基础 Win32`PulseEvent`函数，可暂时从等待状态由内核模式下异步过程调用。 因此，`PulseEvent`是不现实，而且不能由新的应用程序。 有关详细信息，请参阅[PulseEvent 函数](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
   
-##  <a name="a-namereseteventa--ceventresetevent"></a><a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>CEvent::ResetEvent  
  设置为事件的状态非终止之前显式设置为终止的[SetEvent](#setevent)成员函数。  
   
 ```  
@@ -163,7 +169,7 @@ BOOL ResetEvent();
   
  自动事件不使用此成员函数。  
   
-##  <a name="a-nameseteventa--ceventsetevent"></a><a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>CEvent::SetEvent  
  释放任何正在等待的线程的情况下设置为终止状态，该事件的状态。  
   
 ```  
@@ -176,7 +182,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>备注  
  如果该事件是手动，事件仍将终止状态，直到[ResetEvent](#resetevent)调用。 多个线程可能会在这种情况下释放。 如果该事件是自动的该事件会保持已发出信号，直至单个线程被释放。 然后，系统会将事件状态设置为非终止。 如果没有线程在等待，状态将保持已发出信号，直到释放一个线程。  
   
-##  <a name="a-nameunlocka--ceventunlock"></a><a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>CEvent::Unlock  
  释放事件对象。  
   
 ```  

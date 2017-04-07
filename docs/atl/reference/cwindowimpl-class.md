@@ -9,9 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWindowImpl
-- ATL.CWindowImpl
 - CWindowImpl
+- ATLWIN/ATL::CWindowImpl
+- ATLWIN/ATL::CWindowImpl::Create
+- ATLWIN/ATL::DefWindowProc
+- ATLWIN/ATL::GetCurrentMessage
+- ATLWIN/ATL::GetWindowProc
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::SubclassWindow
+- ATLWIN/ATL::UnsubclassWindow
+- ATLWIN/ATL::GetWndClassInfo
+- ATLWIN/ATL::WindowProc
+- ATLWIN/ATL::m_pfnSuperWindowProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -138,7 +147,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-namecreatea--cwindowimplcreate"></a><a name="create"></a>CWindowImpl::Create  
+##  <a name="create"></a>CWindowImpl::Create  
  创建基于新的窗口类的窗口。  
   
 ```
@@ -188,7 +197,7 @@ HWND Create(
 > [!NOTE]
 >  如果为的值使用 0`MenuOrID`参数，则必须指定为 0U （默认值） 以避免编译器错误。  
   
-##  <a name="a-namedefwindowproca--cwindowimpldefwindowproc"></a><a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
+##  <a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
  由调用[WindowProc](#windowproc)未处理的消息映射处理这些消息。  
   
 ```
@@ -218,7 +227,7 @@ LRESULT DefWindowProc();
   
  不带参数的函数会自动从当前消息检索所需的参数。  
   
-##  <a name="a-namegetcurrentmessagea--cwindowimplgetcurrentmessage"></a><a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
  返回当前消息，打包在`MSG`结构。  
   
 ```
@@ -228,7 +237,7 @@ const MSG* GetCurrentMessage();
 ### <a name="return-value"></a>返回值  
  当前消息。  
   
-##  <a name="a-namegetwindowproca--cwindowimplgetwindowproc"></a><a name="getwindowproc"></a>CWindowImpl::GetWindowProc  
+##  <a name="getwindowproc"></a>CWindowImpl::GetWindowProc  
  返回`WindowProc`，当前窗口过程。  
   
 ```
@@ -241,7 +250,7 @@ virtual WNDPROC GetWindowProc();
 ### <a name="remarks"></a>备注  
  重写此方法，以替换为您自己的窗口过程。  
   
-##  <a name="a-namegetwndclassinfoa--cwindowimplgetwndclassinfo"></a><a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
+##  <a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
  由调用[创建](#create)若要访问的窗口类信息。  
   
 ```
@@ -258,7 +267,7 @@ static CWndClassInfo& GetWndClassInfo();
   
  除了使用`DECLARE_WND_CLASS`和`DECLARE_WND_SUPERCLASS`宏，可以重写`GetWndClassInfo`使用您自己的实现。  
   
-##  <a name="a-namempfnsuperwindowproca--cwindowimplmpfnsuperwindowproc"></a><a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
  具体取决于窗口中，指向以下窗口过程之一。  
   
 ```
@@ -275,7 +284,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [CWindowImpl::DefWindowProc](#defwindowproc)发送消息到窗口过程中保存的信息`m_pfnSuperWindowProc`。  
   
-##  <a name="a-nameonfinalmessagea--cwindowimplonfinalmessage"></a><a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
  接收最后一条消息后调用 (通常`WM_NCDESTROY`)。  
   
 ```
@@ -289,7 +298,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>备注  
  默认实现`OnFinalMessage`不起作用，但您可以覆盖此函数来销毁窗口之前处理清理。 如果您想要自动删除您的对象在窗口析构时，您可以调用`delete this;`在此函数。  
   
-##  <a name="a-namesubclasswindowa--cwindowimplsubclasswindow"></a><a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
+##  <a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
  由窗口中标识的子类`hWnd`并将其附加到`CWindowImpl`对象。  
   
 ```
@@ -309,7 +318,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  不要调用`SubclassWindow`如果您调用了[创建](#create)。  
   
-##  <a name="a-nameunsubclasswindowa--cwindowimplunsubclasswindow"></a><a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
  分离从子类化的窗口`CWindowImpl`对象，并还原原始窗口过程，以保存[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
   
 ```
@@ -319,7 +328,7 @@ HWND UnsubclassWindow();
 ### <a name="return-value"></a>返回值  
  先前子类化窗口的句柄。  
   
-##  <a name="a-namewindowproca--cwindowimplwindowproc"></a><a name="windowproc"></a>CWindowImpl::WindowProc  
+##  <a name="windowproc"></a>CWindowImpl::WindowProc  
  此静态函数实现的窗口过程。  
   
 ```

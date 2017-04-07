@@ -10,8 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
-- ATL.CDialogImpl
-- ATL::CDialogImpl
+- ATLWIN/ATL::CDialogImpl
+- ATLWIN/ATL::Create
+- ATLWIN/ATL::DestroyWindow
+- ATLWIN/ATL::DoModal
+- ATLWIN/ATL::EndDialog
+- ATLWIN/ATL::GetDialogProc
+- ATLWIN/ATL::MapDialogRect
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::DialogProc
+- ATLWIN/ATL::StartDialogProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +123,7 @@ template <class T,
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-namecreatea--cdialogimplcreate"></a><a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>CDialogImpl::Create  
  创建无模式对话框。  
   
 ```  
@@ -145,7 +153,7 @@ HWND Create(
 ### <a name="remarks"></a>备注  
  此对话框中会自动附加到`CDialogImpl`对象。 若要创建模式对话框，请调用[DoModal](#domodal)。 上面的第二个重写仅用于[CComControl](../../atl/reference/ccomcontrol-class.md)。  
   
-##  <a name="a-namedestroywindowa--cdialogimpldestroywindow"></a><a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
  销毁无模式对话框。  
   
 ```  
@@ -161,7 +169,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>备注  
  返回**TRUE**如果对话框已成功地销毁; 否则为**FALSE**。  
   
-##  <a name="a-namedialogproca--cdialogimpldialogproc"></a><a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
  此静态函数可实现对话框过程。  
   
 ```  
@@ -196,7 +204,7 @@ static LRESULT CALLBACK DialogProc(
   
  您可以重写`DialogProc`提供另一种机制来处理消息。  
   
-##  <a name="a-namedomodala--cdialogimpldomodal"></a><a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>CDialogImpl::DoModal  
  创建模式对话框。  
   
 ```   
@@ -220,7 +228,7 @@ INT_PTR DoModal(
   
  若要创建无模式对话框，请调用[创建](#create)。  
   
-##  <a name="a-nameenddialoga--cdialogimplenddialog"></a><a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CDialogImpl::EndDialog  
  销毁一个模式对话框。  
   
 ```   
@@ -240,7 +248,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  不要调用`EndDialog`要销毁的无模式对话框。 调用[CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow)相反。  
   
-##  <a name="a-namegetdialogproca--cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
  返回`DialogProc`，当前对话框过程。  
   
 ```   
@@ -253,7 +261,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>备注  
  重写此方法，以替换为您自己的对话框过程。  
   
-##  <a name="a-namemapdialogrecta--cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
  将转换 （映射） 到屏幕的指定矩形的对话框单位单位 （像素）。  
   
 ```   
@@ -270,7 +278,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>备注  
  函数将替换为在指定的坐标`RECT`结构使用转换后的坐标，这样，要使用创建对话框，或将控件放在对话框中的结构。  
   
-##  <a name="a-nameonfinalmessagea--cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
  接收最后一条消息后调用 (通常`WM_NCDESTROY`)。  
   
 ```   
@@ -284,7 +292,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>备注  
  请注意，是否您想要自动删除您的对象在窗口析构时，您可以调用`delete this;`此处。  
   
-##  <a name="a-namestartdialogproca--cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
  只调用一次，第一条消息收到时，用于处理发送到对话框中的消息。  
   
 ```   

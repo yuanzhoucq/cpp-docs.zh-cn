@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCurrency
-- ATL.CComCurrency
-- ATL::CComCurrency
+- ATLCUR/ATL::CComCurrency
+- ATLCUR/ATL::CComCurrency::CComCurrency
+- ATLCUR/ATL::CComCurrency::GetCurrencyPtr
+- ATLCUR/ATL::CComCurrency::GetFraction
+- ATLCUR/ATL::CComCurrency::GetInteger
+- ATLCUR/ATL::CComCurrency::Round
+- ATLCUR/ATL::CComCurrency::SetFraction
+- ATLCUR/ATL::CComCurrency::SetInteger
+- ATLCUR/ATL::CComCurrency::m_currency
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +122,7 @@ class CComCurrency
 ## <a name="requirements"></a>要求  
  **标头︰** atlcur.h  
   
-##  <a name="a-nameccomcurrencya--ccomcurrencyccomcurrency"></a><a name="ccomcurrency"></a>CComCurrency::CComCurrency  
+##  <a name="ccomcurrency"></a>CComCurrency::CComCurrency  
  构造函数。  
   
 ```
@@ -170,7 +177,7 @@ explicit CComCurrency(LPCSTR szSrc);
   
  当使用浮点或双精度值分配一个值，请注意， **CComCurrency(10.50)**等同于**CComCurrency(10,5000)**和 not **CComCurrency(10,50)**。  
   
-##  <a name="a-namegetcurrencyptra--ccomcurrencygetcurrencyptr"></a><a name="getcurrencyptr"></a>CComCurrency::GetCurrencyPtr  
+##  <a name="getcurrencyptr"></a>CComCurrency::GetCurrencyPtr  
  返回 `m_currency` 数据成员的地址。  
   
 ```
@@ -180,7 +187,7 @@ CURRENCY* GetCurrencyPtr() throw();
 ### <a name="return-value"></a>返回值  
  返回的地址`m_currency`数据成员  
   
-##  <a name="a-namegetfractiona--ccomcurrencygetfraction"></a><a name="getfraction"></a>CComCurrency::GetFraction  
+##  <a name="getfraction"></a>CComCurrency::GetFraction  
  调用此方法可返回的小数部分`CComCurrency`对象。  
   
 ```
@@ -196,7 +203,7 @@ SHORT GetFraction() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&50;](../../atl/codesnippet/cpp/ccomcurrency-class_1.cpp)]  
   
-##  <a name="a-namegetintegera--ccomcurrencygetinteger"></a><a name="getinteger"></a>CComCurrency::GetInteger  
+##  <a name="getinteger"></a>CComCurrency::GetInteger  
  调用此方法以获取的整数部分`CComCurrency`对象。  
   
 ```
@@ -209,7 +216,7 @@ LONGLONG GetInteger() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&51;](../../atl/codesnippet/cpp/ccomcurrency-class_2.cpp)]  
   
-##  <a name="a-namemcurrencya--ccomcurrencymcurrency"></a><a name="m_currency"></a>CComCurrency::m_currency  
+##  <a name="m_currency"></a>CComCurrency::m_currency  
  **货币**数据成员。  
   
 ```
@@ -219,7 +226,7 @@ CURRENCY m_currency;
 ### <a name="remarks"></a>备注  
  此成员将具有访问和操作的此类方法的货币。  
   
-##  <a name="a-nameoperator-a--ccomcurrencyoperator--"></a><a name="operator_-"></a>CComCurrency::operator-  
+##  <a name="operator_-"></a>CComCurrency::operator-  
  此运算符用于对 `CComCurrency` 对象执行减法。  
   
 ```
@@ -237,7 +244,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&55;](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]  
   
-##  <a name="a-nameoperatorneqa--ccomcurrencyoperator-"></a><a name="operator_neq"></a>CComCurrency::operator ！ =  
+##  <a name="operator_neq"></a>CComCurrency::operator ！ =  
  此运算符比较两个对象不相等。  
   
 ```
@@ -254,7 +261,7 @@ bool operator!= (const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&56;](../../atl/codesnippet/cpp/ccomcurrency-class_4.cpp)]  
   
-##  <a name="a-nameoperatorstara--ccomcurrencyoperator-"></a><a name="operator_star"></a>CComCurrency::operator *  
+##  <a name="operator_star"></a>CComCurrency::operator *  
  此运算符用于对 `CComCurrency` 对象执行乘法。  
   
 ```
@@ -275,7 +282,7 @@ CComCurrency operator*(const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&57;](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]  
   
-##  <a name="a-nameoperatorstareqa--ccomcurrencyoperator-"></a><a name="operator_star_eq"></a>CComCurrency::operator * =  
+##  <a name="operator_star_eq"></a>CComCurrency::operator * =  
  此运算符用于对 `CComCurrency` 对象执行乘法并对它赋予结果。  
   
 ```
@@ -296,7 +303,7 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&58; 页](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]  
   
-##  <a name="a-nameoperatordiva--ccomcurrencyoperator-"></a><a name="operator_div"></a>CComCurrency::operator /  
+##  <a name="operator_div"></a>CComCurrency::operator /  
  此运算符用于对 `CComCurrency` 对象执行除法。  
   
 ```
@@ -313,7 +320,7 @@ CComCurrency operator/(long nOperand) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&59;](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]  
   
-##  <a name="a-nameoperatordiveqa--ccomcurrencyoperator-"></a><a name="operator_div_eq"></a>CComCurrency::operator / =  
+##  <a name="operator_div_eq"></a>CComCurrency::operator / =  
  此运算符用于对 `CComCurrency` 对象执行除法并对它赋予结果。  
   
 ```
@@ -330,7 +337,7 @@ const CComCurrency& operator/= (long nOperand);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&60;](../../atl/codesnippet/cpp/ccomcurrency-class_8.cpp)]  
   
-##  <a name="a-nameoperatoradda--ccomcurrencyoperator-"></a><a name="operator_add"></a>CComCurrency::operator +  
+##  <a name="operator_add"></a>CComCurrency::operator +  
  此运算符用于对 `CComCurrency` 对象执行加法。  
   
 ```
@@ -347,7 +354,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&61;](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]  
   
-##  <a name="a-nameoperatoraddeqa--ccomcurrencyoperator-"></a><a name="operator_add_eq"></a>CComCurrency::operator + =  
+##  <a name="operator_add_eq"></a>CComCurrency::operator + =  
  此运算符用于对 `CComCurrency` 对象执行加法并对它赋予结果。  
   
 ```
@@ -364,7 +371,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&62;](../../atl/codesnippet/cpp/ccomcurrency-class_10.cpp)]  
   
-##  <a name="a-nameoperatorlta--ccomcurrencyoperator-lt"></a><a name="operator_lt"></a>CComCurrency::operator&lt;  
+##  <a name="operator_lt"></a>CComCurrency::operator&lt;  
  此运算符比较两个 `CComCurrency` 对象以确定较小者。  
   
 ```
@@ -381,7 +388,7 @@ bool operator<(const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&63;](../../atl/codesnippet/cpp/ccomcurrency-class_11.cpp)]  
   
-##  <a name="a-nameoperatorlteqa--ccomcurrencyoperator-lt"></a><a name="operator_lt_eq"></a>CComCurrency::operator&lt;=  
+##  <a name="operator_lt_eq"></a>CComCurrency::operator&lt;=  
  此运算符比较两个 `CComCurrency` 对象以确定是否相等或较小者。  
   
 ```
@@ -398,7 +405,7 @@ bool operator<= (const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&64;](../../atl/codesnippet/cpp/ccomcurrency-class_12.cpp)]  
   
-##  <a name="a-nameoperatoreqa--ccomcurrencyoperator-"></a><a name="operator_eq"></a>CComCurrency::operator =  
+##  <a name="operator_eq"></a>CComCurrency::operator =  
  此运算符向 `CComCurrency` 对象赋予新值。  
   
 ```
@@ -431,7 +438,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&65;](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]  
   
-##  <a name="a-nameoperator-eqa--ccomcurrencyoperator--"></a><a name="operator_-_eq"></a>CComCurrency::operator =  
+##  <a name="operator_-_eq"></a>CComCurrency::operator =  
  此运算符用于对 `CComCurrency` 对象执行减法并对它赋予结果。  
   
 ```
@@ -448,7 +455,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&66;](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]  
   
-##  <a name="a-nameoperatoreqeqa--ccomcurrencyoperator-"></a><a name="operator_eq_eq"></a>CComCurrency::operator = =  
+##  <a name="operator_eq_eq"></a>CComCurrency::operator = =  
  此运算符比较两个 `CComCurrency` 对象是否相等。  
   
 ```
@@ -465,7 +472,7 @@ bool operator== (const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&67;](../../atl/codesnippet/cpp/ccomcurrency-class_15.cpp)]  
   
-##  <a name="a-nameoperatorgta--ccomcurrencyoperator-gt"></a><a name="operator_gt"></a>CComCurrency::operator&gt;  
+##  <a name="operator_gt"></a>CComCurrency::operator&gt;  
  此运算符比较两个 `CComCurrency` 对象以确定较大者。  
   
 ```
@@ -482,7 +489,7 @@ bool operator>(const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&68;](../../atl/codesnippet/cpp/ccomcurrency-class_16.cpp)]  
   
-##  <a name="a-nameoperatorgteqa--ccomcurrencyoperator-gt"></a><a name="operator_gt_eq"></a>CComCurrency::operator&gt;=  
+##  <a name="operator_gt_eq"></a>CComCurrency::operator&gt;=  
  此运算符比较两个 `CComCurrency` 对象以确定是否相等或较大者。  
   
 ```
@@ -499,7 +506,7 @@ bool operator>= (const CComCurrency& cur) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&69;](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]  
   
-##  <a name="a-nameoperatorcurrencya--ccomcurrencyoperator-currency"></a><a name="operator_currency"></a>CComCurrency::operator 货币  
+##  <a name="operator_currency"></a>CComCurrency::operator 货币  
  这些运算符用于强制转换`CComCurrency`对象传递给**货币**数据类型。  
   
 ```  
@@ -513,7 +520,7 @@ operator const CURRENCY&() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&70;](../../atl/codesnippet/cpp/ccomcurrency-class_18.cpp)]  
   
-##  <a name="a-namerounda--ccomcurrencyround"></a><a name="round"></a>CComCurrency::Round  
+##  <a name="round"></a>CComCurrency::Round  
  调用此方法要舍入到指定的小数位数的货币。  
   
 ```
@@ -530,7 +537,7 @@ HRESULT Roundint nDecimals);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&52;](../../atl/codesnippet/cpp/ccomcurrency-class_19.cpp)]  
   
-##  <a name="a-namesetfractiona--ccomcurrencysetfraction"></a><a name="setfraction"></a>CComCurrency::SetFraction  
+##  <a name="setfraction"></a>CComCurrency::SetFraction  
  调用此方法以设置 `CComCurrency` 对象的小数部分。  
   
 ```
@@ -547,7 +554,7 @@ HRESULT SetFraction(SHORT nFraction);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&53;](../../atl/codesnippet/cpp/ccomcurrency-class_20.cpp)]  
   
-##  <a name="a-namesetintegera--ccomcurrencysetinteger"></a><a name="setinteger"></a>CComCurrency::SetInteger  
+##  <a name="setinteger"></a>CComCurrency::SetInteger  
  调用此方法以设置 `CComCurrency` 对象的整数部分。  
   
 ```

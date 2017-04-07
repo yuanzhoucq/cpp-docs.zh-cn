@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionResource
+- IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::CurrentSubscriptionLevel
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 530fd40409a08be6ae13ad604deb5b85989b2964
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 结构
@@ -52,12 +57,12 @@ struct IExecutionResource;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[Iexecutionresource:: Currentsubscriptionlevel 方法](#currentsubscriptionlevel)|返回的数目已激活的虚拟处理器根和订阅当前与此执行资源所代表的基础硬件线程相关联的外部线程。|  
-|[Iexecutionresource:: Getexecutionresourceid 方法](#getexecutionresourceid)|返回此执行资源所代表的硬件线程的唯一标识符。|  
-|[Iexecutionresource:: Getnodeid 方法](#getnodeid)|返回此执行资源所属的处理器节点的唯一标识符。|  
-|[Iexecutionresource:: Remove 方法](#remove)|返回此执行资源到资源管理器。|  
+|[Iexecutionresource:: Currentsubscriptionlevel](#currentsubscriptionlevel)|返回的数目已激活的虚拟处理器根和订阅当前与此执行资源所代表的基础硬件线程相关联的外部线程。|  
+|[Iexecutionresource:: Getexecutionresourceid](#getexecutionresourceid)|返回此执行资源所代表的硬件线程的唯一标识符。|  
+|[Iexecutionresource:: Getnodeid](#getnodeid)|返回此执行资源所属的处理器节点的唯一标识符。|  
+|[Iexecutionresource:: Remove](#remove)|返回此执行资源到资源管理器。|  
   
 ## <a name="remarks"></a>备注  
  执行资源可以是独立的或与虚拟处理器根的关联。 在您的应用程序中的线程创建的线程订阅时，将创建独立执行资源。 这些方法[ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread)和[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)创建线程的订阅，并返回`IExecutionResource`表示订阅的接口。 创建线程订阅是一种方法通知资源管理器的给定的线程将参与工作排队发送至一个计划程序，以及资源管理器将分配给计划程序的虚拟处理器根。 资源管理器使用的信息以避免过度硬件线程，它可在其中。  
@@ -70,7 +75,7 @@ struct IExecutionResource;
   
  **命名空间：** 并发  
   
-##  <a name="a-namecurrentsubscriptionlevela--iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>Iexecutionresource:: Currentsubscriptionlevel 方法  
+##  <a name="currentsubscriptionlevel"></a>Iexecutionresource:: Currentsubscriptionlevel 方法  
  返回的数目已激活的虚拟处理器根和订阅当前与此执行资源所代表的基础硬件线程相关联的外部线程。  
   
 ```
@@ -89,7 +94,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  资源管理器使用作为一种用于确定何时要将资源移计划程序之间的订阅级别的信息。  
   
-##  <a name="a-namegetexecutionresourceida--iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>Iexecutionresource:: Getexecutionresourceid 方法  
+##  <a name="getexecutionresourceid"></a>Iexecutionresource:: Getexecutionresourceid 方法  
  返回此执行资源所代表的硬件线程的唯一标识符。  
   
 ```
@@ -102,7 +107,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>备注  
  每个硬件线程由并发运行时分配的唯一标识符。 如果多个执行资源相关联的硬件线程，它们将具有相同的执行资源标识符。  
   
-##  <a name="a-namegetnodeida--iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>Iexecutionresource:: Getnodeid 方法  
+##  <a name="getnodeid"></a>Iexecutionresource:: Getnodeid 方法  
  返回此执行资源所属的处理器节点的唯一标识符。  
   
 ```
@@ -117,7 +122,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  可以从该函数获取节点数[GetProcessorNodeCount](concurrency-namespace-functions.md)。  
   
-##  <a name="a-nameremovea--iexecutionresourceremove-method"></a><a name="remove"></a>Iexecutionresource:: Remove 方法  
+##  <a name="remove"></a>Iexecutionresource:: Remove 方法  
  返回此执行资源到资源管理器。  
   
 ```

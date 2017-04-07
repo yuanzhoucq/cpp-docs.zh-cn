@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::Close
+- AFXSETTINGSSTORE/CSettingsStore::CreateKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteValue
+- AFXSETTINGSSTORE/CSettingsStore::Open
+- AFXSETTINGSSTORE/CSettingsStore::Read
+- AFXSETTINGSSTORE/CSettingsStore::Write
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +93,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxsettingsstore.h  
   
-##  <a name="a-nameclosea--csettingsstoreclose"></a><a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>CSettingsStore::Close  
  关闭打开注册表项。  
   
 ```  
@@ -94,7 +103,7 @@ virtual void Close();
 ### <a name="remarks"></a>备注  
  默认情况下，这种方法称为的析构函数从[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
   
-##  <a name="a-namecreatekeya--csettingsstorecreatekey"></a><a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>CSettingsStore::CreateKey  
  打开注册表项或不存在时创建该队列。  
   
 ```  
@@ -111,7 +120,7 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ### <a name="remarks"></a>备注  
  `CreateKey`使用`m_hKey`作为注册表查询的根。 它会搜索`pszPath`作为项的子项`m_hKey`。 如果该键不存在，`CreateKey`将创建它。 否则，它将打开此项。 `CreateKey`然后设置`m_hKey`到在创建或打开项。  
   
-##  <a name="a-namecsettingsstorea--csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
  创建一个 `CSettngsStore` 对象。  
   
 ```  
@@ -134,7 +143,7 @@ CSettingsStore(
   
  析构函数`CSettingsStore`释放`m_hKey`自动。  
   
-##  <a name="a-namedeletekeya--csettingsstoredeletekey"></a><a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
  从注册表中删除键及其所有子级。  
   
 ```  
@@ -158,7 +167,7 @@ virtual BOOL DeleteKey(
   
  如果该参数`bAdmin`为零，`DeleteKey`搜索键来删除下`HKEY_CURRENT_USER`。 如果`bAdmin`不为零，`DeleteKey`搜索键来删除下`HKEY_LOCAL_MACHINE`。  
   
-##  <a name="a-namedeletevaluea--csettingsstoredeletevalue"></a><a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
  删除一个介于`m_hKey`。  
   
 ```  
@@ -172,7 +181,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
-##  <a name="a-nameopena--csettingsstoreopen"></a><a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>CSettingsStore::Open  
  打开注册表项。  
   
 ```  
@@ -189,7 +198,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>备注  
  此方法已成功打开指定的键后，它将设置`m_hKey`到该项的句柄。  
   
-##  <a name="a-namereada--csettingsstoreread"></a><a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>CSettingsStore::Read  
  从注册表中读取值。  
   
 ```  
@@ -319,7 +328,7 @@ virtual BOOL Read(
 ### <a name="remarks"></a>备注  
  `Read`检查`pszKey`作为项的子项`m_hKey`。  
   
-##  <a name="a-namewritea--csettingsstorewrite"></a><a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>CSettingsStore::Write  
  将值写入注册表项下的打开的密钥。  
   
 ```  

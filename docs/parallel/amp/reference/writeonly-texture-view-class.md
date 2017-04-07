@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics::writeonly_texture_view
+- writeonly_texture_view
+- AMP_GRAPHICS/writeonly_texture_view
+- AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view
+- AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
+- AMP_GRAPHICS/Concurrency::graphics::rank Constant
 dev_langs:
 - C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
@@ -32,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a40aa0cb433b6daee19af7fdea7c6421b61c1b4c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 5a051b8db98e36ced89783bfa1de2ab5f514c6bc
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view 类
@@ -67,7 +71,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |`scalar_type`||  
 |`value_type`|纹理中元素的类型。|  
@@ -81,19 +85,19 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[set 方法](#set)|设置指定索引处的元素的值。|  
+|[set](#set)|设置指定索引处的元素的值。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[运算符 = 运算符](#operator_eq)|将复制指定`writeonly_texture_view`对象传递给它。|  
+|[operator=](#operator_eq)|将复制指定`writeonly_texture_view`对象传递给它。|  
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|获取的秩`writeonly_texture_view`对象。|  
   
@@ -107,7 +111,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namedtora-writeonlytextureview"></a><a name="dtor"></a>~ writeonly_texture_view 
+##  <a name="dtor"></a>~ writeonly_texture_view 
 
  销毁`writeonly_texture_view`对象。  
   
@@ -115,7 +119,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ~writeonly_texture_view() restrict(amp,cpu);
 ```  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a>运算符 = 
 
  将复制指定`writeonly_texture_view`对象传递给它。  
   
@@ -131,7 +135,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ### <a name="return-value"></a>返回值  
  参考这`writeonly_texture_view`对象。  
   
-##  <a name="a-nameranka-rank"></a><a name="rank"></a>排名 
+##  <a name="rank"></a>排名 
 
  获取的秩`writeonly_texture_view`对象。  
   
@@ -139,7 +143,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>设置 
+##  <a name="set"></a>设置 
 
  设置指定索引处的元素的值。  
   
@@ -156,7 +160,7 @@ void set(
  `value`  
  该元素的新值。  
   
-##  <a name="a-namectora-writeonlytextureview"></a><a name="ctor"></a>writeonly_texture_view 
+##  <a name="ctor"></a>writeonly_texture_view 
 
  初始化 `writeonly_texture_view` 类的新实例。  
   
@@ -182,5 +186,5 @@ writeonly_texture_view(
  用于创建 `writeonly_texture_view` 的纹理。  
   
 ## <a name="see-also"></a>另请参阅  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
 

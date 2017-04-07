@@ -8,6 +8,13 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CSplitButton
+- AFXCMN/CSplitButton
+- AFXCMN/CSplitButton::CSplitButton
+- AFXCMN/CSplitButton::Create
+- AFXCMN/CSplitButton::SetDropDownMenu
+- AFXCMN/CSplitButton::OnDropDown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +99,7 @@ class CSplitButton : public CButton
   
  中介绍此类的其他要求[生成要求的 Windows Vista 公共控件](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   
-##  <a name="a-namecreatea--csplitbuttoncreate"></a><a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>CSplitButton::Create  
  创建具有指定样式的拆分按钮控件并将其附加到当前`CSplitButton`对象。  
   
 ```  
@@ -115,7 +122,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则为 `true`；否则为 `false`。  
   
-##  <a name="a-namecsplitbuttona--csplitbuttoncsplitbutton"></a><a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
  构造 `CSplitButton` 对象。 构造函数的参数指定当用户单击拆分按钮控件的下拉箭头时显示的子菜单。  
   
 ```  
@@ -139,7 +146,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>备注  
  使用[CSplitButton::Create](#create)方法可创建拆分按钮控件并将其附加到`CSplitButton`对象。  
   
-##  <a name="a-nameondropdowna--csplitbuttonondropdown"></a><a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
  处理`BCN_DROPDOWN`用户单击当前拆分按钮控件的下拉箭头时，系统将发送的通知。  
   
 ```  
@@ -169,7 +176,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="a-namesetdropdownmenua--csplitbuttonsetdropdownmenu"></a><a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
  设置当用户单击当前拆分按钮控件的下拉箭头时显示的下拉列表菜单。  
   
 ```  

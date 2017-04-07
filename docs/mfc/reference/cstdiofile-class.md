@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStdioFile
+- AFX/CStdioFile
+- AFX/CStdioFile::CStdioFile
+- AFX/CStdioFile::Open
+- AFX/CStdioFile::ReadString
+- AFX/CStdioFile::Seek
+- AFX/CStdioFile::WriteString
+- AFX/CStdioFile::m_pStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +101,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="a-namecstdiofilea--cstdiofilecstdiofile"></a><a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
  构造并初始化一个 `CStdioFile` 对象。  
   
 ```  
@@ -143,7 +150,7 @@ CStdioFile(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&37;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="a-namempstreama--cstdiofilempstream"></a><a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>CStdioFile::m_pStream  
  `m_pStream`数据成员是一个指针指向一个打开的文件与由 C 运行时函数返回`fopen`。  
   
 ```  
@@ -153,7 +160,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>备注  
  它是**NULL**如果以前从未打开该文件，或已关闭。  
   
-##  <a name="a-nameopena--cstdiofileopen"></a><a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>CStdioFile::Open  
  已重载。 打开设计默认值用于`CStdioFile`构造函数。  
   
 ```  
@@ -188,7 +195,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namereadstringa--cstdiofilereadstring"></a><a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>CStdioFile::ReadString  
  将文本数据读入的缓冲区最大的限制`nMax`–&1; 个字符，与关联的文件`CStdioFile`对象。  
   
 ```  
@@ -223,7 +230,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles #&38;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="a-nameseeka--cstdiofileseek"></a><a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>CStdioFile::Seek  
  在以前打开的文件指针重新定位。  
   
 ```  
@@ -260,7 +267,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles #&39;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="a-namewritestringa--cstdiofilewritestring"></a><a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>CStdioFile::WriteString  
  将数据从缓冲区写入与关联的文件`CStdioFile`对象。  
   
 ```  

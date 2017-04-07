@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnHide
+- AFXDOCOB/CDocObjectServerItem::OnShow
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDocObjectServerItem : public COleServerItem
 ## <a name="requirements"></a>要求  
  **标头︰** afxdocob.h  
   
-##  <a name="a-namecdocobjectserveritema--cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
+##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
  构造 `CDocObjectServerItem` 对象。  
   
 ```  
@@ -109,7 +114,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  `bAutoDelete`  
  指示链接到该发布时是否可以删除该对象。 将参数设置为**FALSE**如果`CDocObjectServerItem`对象是文档的数据的组成部分。 将其设置为**TRUE**如果对象是用来标识在可以删除由框架的文档的数据中的范围的辅助结构。  
   
-##  <a name="a-namegetdocumenta--cdocobjectserveritemgetdocument"></a><a name="getdocument"></a>CDocObjectServerItem::GetDocument  
+##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
  检索指向包含该项目的文档。  
   
 ```  
@@ -122,7 +127,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>备注  
  这将允许访问服务器文档作为参数传递到[CDocObjectServerItem](#cdocobjectserveritem)构造函数。  
   
-##  <a name="a-nameonhidea--cdocobjectserveritemonhide"></a><a name="onhide"></a>CDocObjectServerItem::OnHide  
+##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
  由框架表示隐藏该项调用。  
   
 ```  
@@ -132,7 +137,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>备注  
  如果该项是 DocObject，默认实现将引发异常。 不能隐藏活动 DocObject 项，因为它采用整个视图。 您必须先停用 DocObject 项以使其消失。 如果此项不是 DocObject，默认实现调用[COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide)。  
   
-##  <a name="a-nameonshowa--cdocobjectserveritemonshow"></a><a name="onshow"></a>CDocObjectServerItem::OnShow  
+##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
  由框架调用以指示服务器应用程序，以便 DocObject 项处于就地活动状态。  
   
 ```  

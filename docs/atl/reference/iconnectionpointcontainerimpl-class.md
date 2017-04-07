@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IConnectionPointContainerImpl
-- ATL.IConnectionPointContainerImpl
-- ATL.IConnectionPointContainerImpl<T>
 - IConnectionPointContainerImpl
-- ATL::IConnectionPointContainerImpl<T>
+- ATLCOM/ATL::IConnectionPointContainerImpl
+- ATLCOM/ATL::IConnectionPointContainerImpl::EnumConnectionPoints
+- ATLCOM/ATL::IConnectionPointContainerImpl::FindConnectionPoint
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +85,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameenumconnectionpointsa--iconnectionpointcontainerimplenumconnectionpoints"></a><a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
+##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
  创建一个枚举器循环访问可连接对象中所支持的连接点。  
   
 ```
@@ -96,7 +95,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ### <a name="remarks"></a>备注  
  请参阅[IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namefindconnectionpointa--iconnectionpointcontainerimplfindconnectionpoint"></a><a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
+##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
  检索支持指定的 IID 与连接点的接口指针。  
   
 ```

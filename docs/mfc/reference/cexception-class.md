@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CException
+- AFX/CException
+- AFX/CException::CException
+- AFX/CException::Delete
+- AFX/CException::ReportError
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +117,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="a-namecexceptiona--cexceptioncexception"></a><a name="cexception"></a>CException::CException  
+##  <a name="cexception"></a>CException::CException  
  此成员函数所构造`CException`对象。  
   
 ```  
@@ -127,7 +131,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>备注  
  永远不会正常情况下需要直接调用此构造函数。 将引发异常的函数应创建的实例`CException`的派生类并调用其构造函数，也应使用的 MFC 引发是否如函数、 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 引发预定义的类型。 本文档提供仅出于完整性的考虑。  
   
-##  <a name="a-namedeletea--cexceptiondelete"></a><a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>CException::Delete  
  此函数将检查以查看**CException**位于堆上，创建对象，如果是这样，它调用**删除**对象上的运算符。  
   
 ```  
@@ -191,7 +195,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="a-namereporterrora--cexceptionreporterror"></a><a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>CException::ReportError  
  在向用户的消息框中调用此成员函数可对报表错误文本。  
   
 ```  

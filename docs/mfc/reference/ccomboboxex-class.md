@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComboBoxEx
+- AFXCMN/CComboBoxEx
+- AFXCMN/CComboBoxEx::CComboBoxEx
+- AFXCMN/CComboBoxEx::Create
+- AFXCMN/CComboBoxEx::CreateEx
+- AFXCMN/CComboBoxEx::DeleteItem
+- AFXCMN/CComboBoxEx::GetComboBoxCtrl
+- AFXCMN/CComboBoxEx::GetEditCtrl
+- AFXCMN/CComboBoxEx::GetExtendedStyle
+- AFXCMN/CComboBoxEx::GetImageList
+- AFXCMN/CComboBoxEx::GetItem
+- AFXCMN/CComboBoxEx::HasEditChanged
+- AFXCMN/CComboBoxEx::InsertItem
+- AFXCMN/CComboBoxEx::SetExtendedStyle
+- AFXCMN/CComboBoxEx::SetImageList
+- AFXCMN/CComboBoxEx::SetItem
+- AFXCMN/CComboBoxEx::SetWindowTheme
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,14 +134,14 @@ class CComboBoxEx : public CComboBox
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="a-nameccomboboxexa--ccomboboxexccomboboxex"></a><a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
+##  <a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
  调用此成员函数来创建`CComboBoxEx`对象。  
   
 ```  
 CComboBoxEx();
 ```  
   
-##  <a name="a-namecreatea--ccomboboxexcreate"></a><a name="create"></a>CComboBoxEx::Create  
+##  <a name="create"></a>CComboBoxEx::Create  
  创建组合框，并将其附加到`CComboBoxEx`对象。  
   
 ```  
@@ -177,7 +193,7 @@ virtual BOOL Create(
   
  如果您想要扩展的窗口样式用于您的控件，调用[CreateEx](#createex)而不是**创建**。  
   
-##  <a name="a-namecreateexa--ccomboboxexcreateex"></a><a name="createex"></a>CComboBoxEx::CreateEx  
+##  <a name="createex"></a>CComboBoxEx::CreateEx  
  调用此函数可创建扩展的组合框控件 （子窗口） 并将其与关联`CComboBoxEx`对象。  
   
 ```  
@@ -213,7 +229,7 @@ virtual BOOL CreateEx(
   
  `CreateEx`创建具有指定的扩展窗口样式控件`dwExStyle`。 您必须设置扩展的样式特定于扩展的组合框控件使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`设置作为此类样式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`设置作为此类样式**CBES_EX_CASESENSITIVE**。 有关详细信息，请参阅主题中介绍的样式[ComboBoxEx 控件扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb775742)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedeleteitema--ccomboboxexdeleteitem"></a><a name="deleteitem"></a>CComboBoxEx::DeleteItem  
+##  <a name="deleteitem"></a>CComboBoxEx::DeleteItem  
  中移除的项从**ComboBoxEx**控件。  
   
 ```  
@@ -230,7 +246,7 @@ int DeleteItem(int iIndex);
 ### <a name="remarks"></a>备注  
  此成员函数实现消息的功能[CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当您调用 DeleteItem [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息**CBEN_DELETEITEM**通知将发送到父窗口。  
   
-##  <a name="a-namegetcomboboxctrla--ccomboboxexgetcomboboxctrl"></a><a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
+##  <a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
  调用此成员函数以获取指向一个组合框控件中的指针`CComboBoxEx`对象。  
   
 ```  
@@ -245,7 +261,7 @@ CComboBox* GetComboBoxCtrl();
   
  `CComboBox`指向返回的值的对象是临时对象，并在下一步的空闲处理期间被销毁。  
   
-##  <a name="a-namegeteditctrla--ccomboboxexgeteditctrl"></a><a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
+##  <a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
  调用此成员函数可为组合框的编辑控件中获取的指针。  
   
 ```  
@@ -260,7 +276,7 @@ CEdit* GetEditCtrl();
   
  `CEdit`指向返回的值的对象是临时对象，并在下一步的空闲处理期间被销毁。  
   
-##  <a name="a-namegetextendedstylea--ccomboboxexgetextendedstyle"></a><a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
  调用此成员函数以获取用于扩展的样式`CComboBoxEx`控件。  
   
 ```  
@@ -273,7 +289,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>备注  
  请参阅[ComboBoxEx 控件扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb775742)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]这些样式有关的详细信息。  
   
-##  <a name="a-namegetimagelista--ccomboboxexgetimagelist"></a><a name="getimagelist"></a>CComboBoxEx::GetImageList  
+##  <a name="getimagelist"></a>CComboBoxEx::GetImageList  
  调用此成员函数以获取指向使用的图像列表的指针`CComboBoxEx`控件。  
   
 ```  
@@ -286,7 +302,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>备注  
  `CImageList`指向返回的值的对象是临时对象，并在下一步的空闲处理期间被销毁。  
   
-##  <a name="a-namegetitema--ccomboboxexgetitem"></a><a name="getitem"></a>CComboBoxEx::GetItem  
+##  <a name="getitem"></a>CComboBoxEx::GetItem  
  检索项信息给定**ComboBoxEx**项。  
   
 ```  
@@ -303,7 +319,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>备注  
  此成员函数实现消息的功能[CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namehaseditchangeda--ccomboboxexhaseditchanged"></a><a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
+##  <a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
  确定用户是否已更改的内容**ComboBoxEx**通过键入来编辑控件。  
   
 ```  
@@ -316,7 +332,7 @@ BOOL HasEditChanged();
 ### <a name="remarks"></a>备注  
  此成员函数实现消息的功能[CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinsertitema--ccomboboxexinsertitem"></a><a name="insertitem"></a>CComboBoxEx::InsertItem  
+##  <a name="insertitem"></a>CComboBoxEx::InsertItem  
  将插入新项目在**ComboBoxEx**控件。  
   
 ```  
@@ -333,7 +349,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>备注  
  当您调用`InsertItem`、 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息[CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764)通知将发送到父窗口。  
   
-##  <a name="a-namesetextendedstylea--ccomboboxexsetextendedstyle"></a><a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
  调用此成员函数可设置用于扩展控件的组合框的扩展的样式。  
   
 ```  
@@ -357,7 +373,7 @@ DWORD SetExtendedStyle(
   
  若要创建扩展与扩展的 windows 样式的控件的组合框，使用[CreateEx](#createex)。  
   
-##  <a name="a-namesetimagelista--ccomboboxexsetimagelist"></a><a name="setimagelist"></a>CComboBoxEx::SetImageList  
+##  <a name="setimagelist"></a>CComboBoxEx::SetImageList  
  设置用于的图像列表**ComboBoxEx**控件。  
   
 ```  
@@ -376,7 +392,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  `CImageList`指向返回的值的对象是临时对象，并在下一步的空闲处理期间被销毁。  
   
-##  <a name="a-namesetitema--ccomboboxexsetitem"></a><a name="setitem"></a>CComboBoxEx::SetItem  
+##  <a name="setitem"></a>CComboBoxEx::SetItem  
  设置中的项的特性**ComboBoxEx**控件。  
   
 ```  
@@ -393,7 +409,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>备注  
  此成员函数实现消息的功能[CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetwindowthemea--ccomboboxexsetwindowtheme"></a><a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
  设置的视觉样式的扩展组合框控件。  
   
 ```  

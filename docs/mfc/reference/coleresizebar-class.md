@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleResizeBar
+- AFXOLE/COleResizeBar
+- AFXOLE/COleResizeBar::COleResizeBar
+- AFXOLE/COleResizeBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class COleResizeBar : public CControlBar
 ## <a name="requirements"></a>要求  
  **标头︰** afxole.h  
   
-##  <a name="a-namecoleresizebara--coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
  构造 `COleResizeBar` 对象。  
   
 ```  
@@ -98,7 +101,7 @@ COleResizeBar();
 ### <a name="remarks"></a>备注  
  调用**创建**创建重设大小条对象。  
   
-##  <a name="a-namecreatea--coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Create  
+##  <a name="create"></a>COleResizeBar::Create  
  创建一个子窗口，并将其与关联`COleResizeBar`对象。  
   
 ```  

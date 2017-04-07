@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDB/AFX_ODBC_CALL
+- AFXDB/AFX_SQL_ASYNC
+- AFXDB/AFX_SQL_SYNC
+- AFXDB/AfxGetHENV
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -62,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[AfxGetHENV](#afxgethenv)|检索 MFC 当前正在使用的 ODBC 环境的句柄。 您可以在直接 ODBC 调用中使用此句柄。|  
   
-##  <a name="a-nameafxodbccalla--afxodbccall"></a><a name="afx_odbc_call"></a>AFX_ODBC_CALL  
+##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
  使用此宏调用可能会返回任何 ODBC API 函数`SQL_STILL_EXECUTING`。  
   
 ```  
@@ -89,7 +92,7 @@ AFX_ODBC_CALL(SQLFunc)
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-##  <a name="a-nameafxsqlasynca--afxsqlasync"></a><a name="afx_sql_async"></a>AFX_SQL_ASYNC  
+##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC  
  此宏的实现在 MFC 4.2 中发生更改。  
   
 ```   
@@ -112,7 +115,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ### <a name="requirements"></a>要求  
   **标头**afxdb.h  
   
-##  <a name="a-nameafxsqlsynca--afxsqlsync"></a><a name="afx_sql_sync"></a>AFX_SQL_SYNC  
+##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
  `AFX_SQL_SYNC`宏只是调用该函数`SQLFunc`。  
   
 ```   
@@ -139,7 +142,7 @@ AFX_SQL_SYNC(SQLFunc)
 ### <a name="requirements"></a>要求  
   **标头**afxdb.h  
   
-##  <a name="a-nameafxgethenva--afxgethenv"></a><a name="afxgethenv"></a>AfxGetHENV  
+##  <a name="afxgethenv"></a>AfxGetHENV  
  可以在直接 ODBC 调用中，使用返回的句柄，但您不能关闭句柄或假定，该句柄仍然有效且可用后将任何现有`CDatabase`-或`CRecordset`-派生的对象都已损坏。  
   
 ```   

@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinThread
+- AFXWIN/CWinThread
+- AFXWIN/CWinThread::CWinThread
+- AFXWIN/CWinThread::CreateThread
+- AFXWIN/CWinThread::ExitInstance
+- AFXWIN/CWinThread::GetMainWnd
+- AFXWIN/CWinThread::GetThreadPriority
+- AFXWIN/CWinThread::InitInstance
+- AFXWIN/CWinThread::IsIdleMessage
+- AFXWIN/CWinThread::OnIdle
+- AFXWIN/CWinThread::PostThreadMessage
+- AFXWIN/CWinThread::PreTranslateMessage
+- AFXWIN/CWinThread::ProcessMessageFilter
+- AFXWIN/CWinThread::ProcessWndProcException
+- AFXWIN/CWinThread::PumpMessage
+- AFXWIN/CWinThread::ResumeThread
+- AFXWIN/CWinThread::Run
+- AFXWIN/CWinThread::SetThreadPriority
+- AFXWIN/CWinThread::SuspendThread
+- AFXWIN/CWinThread::m_bAutoDelete
+- AFXWIN/CWinThread::m_hThread
+- AFXWIN/CWinThread::m_nThreadID
+- AFXWIN/CWinThread::m_pActiveWnd
+- AFXWIN/CWinThread::m_pMainWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -121,7 +144,7 @@ class CWinThread : public CCmdTarget
 ## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="a-namecreatethreada--cwinthreadcreatethread"></a><a name="createthread"></a>CWinThread::CreateThread  
+##  <a name="createthread"></a>CWinThread::CreateThread  
  创建一个线程来执行调用进程的地址空间内。  
   
 ```  
@@ -151,7 +174,7 @@ BOOL CreateThread(
 ### <a name="remarks"></a>备注  
  使用`AfxBeginThread`创建线程对象并执行一个步骤中。 使用`CreateThread`如果您想要重用之间连续创建和终止线程执行的线程对象。  
   
-##  <a name="a-namecwinthreada--cwinthreadcwinthread"></a><a name="cwinthread"></a>CWinThread::CWinThread  
+##  <a name="cwinthread"></a>CWinThread::CWinThread  
  构造 `CWinThread` 对象。  
   
 ```  
@@ -161,7 +184,7 @@ CWinThread();
 ### <a name="remarks"></a>备注  
  若要开始线程的执行，请调用[CreateThread](#createthread)成员函数。 通常将通过调用创建线程[AfxBeginThread](http://msdn.microsoft.com/library/e9e8684d-24f7-4599-8fdf-1f4f560a753b)，它将调用此构造函数和`CreateThread`。  
   
-##  <a name="a-nameexitinstancea--cwinthreadexitinstance"></a><a name="exitinstance"></a>CWinThread::ExitInstance  
+##  <a name="exitinstance"></a>CWinThread::ExitInstance  
  由框架调用从中很少会重写[运行](#run)成员函数以退出此实例的线程，或如果调用[InitInstance](#initinstance)失败。  
   
 ```  
@@ -176,7 +199,7 @@ virtual int ExitInstance();
   
  此函数的默认实现中删除`CWinThread`对象，如果[m_bAutoDelete](#m_bautodelete)是**TRUE**。 如果您想要执行其他清理您的线程终止时，重写此函数。 实现`ExitInstance`执行您的代码后，应调用基类的版本。  
   
-##  <a name="a-namegetmainwnda--cwinthreadgetmainwnd"></a><a name="getmainwnd"></a>CWinThread::GetMainWnd  
+##  <a name="getmainwnd"></a>CWinThread::GetMainWnd  
  如果您的应用程序是 OLE 服务器，调用此函数可检索一个指向而不是直接引用应用程序的活动主窗口`m_pMainWnd`应用程序对象的成员。  
   
 ```  
@@ -195,7 +218,7 @@ virtual CWnd* GetMainWnd();
   
  重写此函数可修改默认行为。  
   
-##  <a name="a-namegetthreadprioritya--cwinthreadgetthreadpriority"></a><a name="getthreadpriority"></a>CWinThread::GetThreadPriority  
+##  <a name="getthreadpriority"></a>CWinThread::GetThreadPriority  
  获取此线程的当前线程优先级别。  
   
 ```  
@@ -221,7 +244,7 @@ int GetThreadPriority();
   
  有关这些优先级的详细信息，请参阅[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinitinstancea--cwinthreadinitinstance"></a><a name="initinstance"></a>CWinThread::InitInstance  
+##  <a name="initinstance"></a>CWinThread::InitInstance  
  `InitInstance`必须重写以初始化用户界面线程的每个新实例。  
   
 ```  
@@ -236,7 +259,7 @@ virtual BOOL InitInstance();
   
  仅在用户界面线程中使用此成员函数。 在控制传递到函数中执行的工作线程初始化[AfxBeginThread](application-information-and-management.md#afxbeginthread)。  
   
-##  <a name="a-nameisidlemessagea--cwinthreadisidlemessage"></a><a name="isidlemessage"></a>CWinThread::IsIdleMessage  
+##  <a name="isidlemessage"></a>CWinThread::IsIdleMessage  
  重写此函数以保留**OnIdle**生成特定消息后被调用。  
   
 ```  
@@ -259,7 +282,7 @@ virtual BOOL IsIdleMessage(MSG* pMsg);
   
  处理`WM_TIMER`这种方式将提高性能的应用程序使用简短的计时器。  
   
-##  <a name="a-namembautodeletea--cwinthreadmbautodelete"></a><a name="m_bautodelete"></a>CWinThread::m_bAutoDelete  
+##  <a name="m_bautodelete"></a>CWinThread::m_bAutoDelete  
  指定 `CWinThread` 对象是否应在线程终止时自动删除。  
   
 ```  
@@ -271,7 +294,7 @@ BOOL m_bAutoDelete;
   
  `m_bAutoDelete` 的值不影响关闭基础线程句柄的方式。 在销毁 `CWinThread` 对象时，始终关闭线程句柄。  
   
-##  <a name="a-namemhthreada--cwinthreadmhthread"></a><a name="m_hthread"></a>CWinThread::m_hThread  
+##  <a name="m_hthread"></a>CWinThread::m_hThread  
  附加到此该线程的句柄`CWinThread`。  
   
 ```  
@@ -281,7 +304,7 @@ HANDLE m_hThread;
 ### <a name="remarks"></a>备注  
  `m_hThread`数据成员是类型的公共变量`HANDLE`。 如果当前基础线程存在，才有效。  
   
-##  <a name="a-namemnthreadida--cwinthreadmnthreadid"></a><a name="m_nthreadid"></a>CWinThread::m_nThreadID  
+##  <a name="m_nthreadid"></a>CWinThread::m_nThreadID  
  线程的 ID 附加到此`CWinThread`。  
   
 ```  
@@ -294,7 +317,7 @@ DWORD m_nThreadID;
 ### <a name="example"></a>示例  
   请参阅示例[AfxGetThread](application-information-and-management.md#afxgetthread)。  
   
-##  <a name="a-namempactivewnda--cwinthreadmpactivewnd"></a><a name="m_pactivewnd"></a>CWinThread::m_pActiveWnd  
+##  <a name="m_pactivewnd"></a>CWinThread::m_pActiveWnd  
  使用此数据成员来存储指向线程的活动窗口对象的指针。  
   
 ```  
@@ -306,7 +329,7 @@ CWnd* m_pActiveWnd;
   
  通常情况下，设置此成员变量，当您重写`InitInstance`。 在辅助线程中，此数据成员的值继承自其父线程。  
   
-##  <a name="a-namempmainwnda--cwinthreadmpmainwnd"></a><a name="m_pmainwnd"></a>CWinThread::m_pMainWnd  
+##  <a name="m_pmainwnd"></a>CWinThread::m_pMainWnd  
  使用此数据成员来存储指向线程的主窗口对象的指针。  
   
 ```  
@@ -318,7 +341,7 @@ CWnd* m_pMainWnd;
   
  通常情况下，设置此成员变量，当您重写`InitInstance`。 在辅助线程中，此数据成员的值继承自其父线程。  
   
-##  <a name="a-nameonidlea--cwinthreadonidle"></a><a name="onidle"></a>CWinThread::OnIdle  
+##  <a name="onidle"></a>CWinThread::OnIdle  
  重写该成员函数以执行空闲处理。  
   
 ```  
@@ -343,7 +366,7 @@ virtual BOOL OnIdle(LONG lCount);
   
  因为应用程序无法处理消息之前`OnIdle`返回时，在此函数不执行耗时较长的任务。  
   
-##  <a name="a-nameoperatorhandlea--cwinthreadoperator-handle"></a><a name="operator_handle"></a>CWinThread::operator 句柄  
+##  <a name="operator_handle"></a>CWinThread::operator 句柄  
  检索的句柄`CWinThread`对象。  
   
 ```  
@@ -356,7 +379,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>备注  
  使用该句柄直接调用 Windows Api。  
   
-##  <a name="a-namepostthreadmessagea--cwinthreadpostthreadmessage"></a><a name="postthreadmessage"></a>CWinThread::PostThreadMessage  
+##  <a name="postthreadmessage"></a>CWinThread::PostThreadMessage  
  调用以将用户定义消息发布到另一个`CWinThread`对象。  
   
 ```  
@@ -385,7 +408,7 @@ BOOL PostThreadMessage(
 > [!NOTE]
 >  当调用 Windows [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) MFC 应用程序内，MFC 消息处理程序，不会调用的函数。 有关详细信息，请参阅知识库文章"PRB:: MFC 消息处理程序不调用与 PostThreadMessage()"(Q142415)。  
   
-##  <a name="a-namepretranslatemessagea--cwinthreadpretranslatemessage"></a><a name="pretranslatemessage"></a>CWinThread::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CWinThread::PreTranslateMessage  
  重写此函数可对筛选器窗口消息被发送到 Windows 函数之前[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)。  
   
 ```  
@@ -402,7 +425,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>备注  
  仅在用户界面线程中使用此成员函数。  
   
-##  <a name="a-nameprocessmessagefiltera--cwinthreadprocessmessagefilter"></a><a name="processmessagefilter"></a>CWinThread::ProcessMessageFilter  
+##  <a name="processmessagefilter"></a>CWinThread::ProcessMessageFilter  
  框架的挂钩函数调用该成员函数以筛选和响应特定 Windows 消息。  
   
 ```  
@@ -426,7 +449,7 @@ virtual BOOL ProcessMessageFilter(
   
  如果重写此高级的功能时，一定要调用基类版本以维护框架的挂钩处理。  
   
-##  <a name="a-nameprocesswndprocexceptiona--cwinthreadprocesswndprocexception"></a><a name="processwndprocexception"></a>CWinThread::ProcessWndProcException  
+##  <a name="processwndprocexception"></a>CWinThread::ProcessWndProcException  
  框架调用此成员函数，只要该处理程序不捕获中的一个线程的消息或命令处理程序引发的异常。  
   
 ```  
@@ -459,7 +482,7 @@ virtual LRESULT ProcessWndProcException(
   
  仅在有一个消息泵的线程中使用此成员函数。  
   
-##  <a name="a-namepumpmessagea--cwinthreadpumpmessage"></a><a name="pumpmessage"></a>CWinThread::PumpMessage  
+##  <a name="pumpmessage"></a>CWinThread::PumpMessage  
  包含线程的消息循环。  
   
 ```  
@@ -471,7 +494,7 @@ virtual BOOL PumpMessage();
   
  调用`PumpMessage`直接，重写其默认行为适用于高级用户。  
   
-##  <a name="a-nameresumethreada--cwinthreadresumethread"></a><a name="resumethread"></a>CWinThread::ResumeThread  
+##  <a name="resumethread"></a>CWinThread::ResumeThread  
  若要继续执行挂起的线程的调用[SuspendThread](#suspendthread)成员函数或使用创建的线程**CREATE_SUSPENDED**标志。  
   
 ```  
@@ -484,7 +507,7 @@ DWORD ResumeThread();
 ### <a name="remarks"></a>备注  
  当前线程的挂起计数被减少一个。 如果减小的挂起计数为零，该线程将继续执行。否则该线程将一直挂起。  
   
-##  <a name="a-nameruna--cwinthreadrun"></a><a name="run"></a>Cwinthread:: Run  
+##  <a name="run"></a>Cwinthread:: Run  
  为用户界面线程提供一个默认的消息循环。  
   
 ```  
@@ -501,7 +524,7 @@ virtual int Run();
   
  仅在用户界面线程中使用此成员函数。  
   
-##  <a name="a-namesetthreadprioritya--cwinthreadsetthreadpriority"></a><a name="setthreadpriority"></a>CWinThread::SetThreadPriority  
+##  <a name="setthreadpriority"></a>CWinThread::SetThreadPriority  
  此函数将设置其优先级类中的当前线程的优先级。  
   
 ```  
@@ -534,7 +557,7 @@ BOOL SetThreadPriority(int nPriority);
 ### <a name="remarks"></a>备注  
  仅之后调用[CreateThread](#createthread)成功返回。  
   
-##  <a name="a-namesuspendthreada--cwinthreadsuspendthread"></a><a name="suspendthread"></a>CWinThread::SuspendThread  
+##  <a name="suspendthread"></a>CWinThread::SuspendThread  
  递增当前线程的挂起计数。  
   
 ```  

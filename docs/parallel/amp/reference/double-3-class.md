@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 41cef906c326e7b113faa70fadfe347a11b58f87
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4ead4c4bd9aac91c4a0db7e2dfbc4976664120bd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="double3-class"></a>double_3 类
@@ -124,7 +124,7 @@ class double_3;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[double_3 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
@@ -132,55 +132,55 @@ class double_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|double_3::get_x 方法||  
-|double_3::get_xy 方法||  
-|double_3::get_xyz 方法||  
-|double_3::get_xz 方法||  
-|double_3::get_xzy 方法||  
-|double_3::get_y 方法||  
-|double_3::get_yx 方法||  
-|double_3::get_yxz 方法||  
-|double_3::get_yz 方法||  
-|double_3::get_yzx 方法||  
-|double_3::get_z 方法||  
-|double_3::get_zx 方法||  
-|double_3::get_zxy 方法||  
-|double_3::get_zy 方法||  
-|double_3::get_zyx 方法||  
-|double_3::ref_b 方法||  
-|double_3::ref_g 方法||  
-|double_3::ref_r 方法||  
-|double_3::ref_x 方法||  
-|double_3::ref_y 方法||  
-|double_3::ref_z 方法||  
-|double_3::set_x 方法||  
-|double_3::set_xy 方法||  
-|double_3::set_xyz 方法||  
-|double_3::set_xz 方法||  
-|double_3::set_xzy 方法||  
-|double_3::set_y 方法||  
-|double_3::set_yx 方法||  
-|double_3::set_yxz 方法||  
-|double_3::set_yz 方法||  
-|double_3::set_yzx 方法||  
-|double_3::set_z 方法||  
-|double_3::set_zx 方法||  
-|double_3::set_zxy 方法||  
-|double_3::set_zy 方法||  
-|double_3::set_zyx 方法||  
+|double_3::get_x||  
+|double_3::get_xy||  
+|double_3::get_xyz||  
+|double_3::get_xz||  
+|double_3::get_xzy||  
+|double_3::get_y||  
+|double_3::get_yx||  
+|double_3::get_yxz||  
+|double_3::get_yz||  
+|double_3::get_yzx||  
+|double_3::get_z||  
+|double_3::get_zx||  
+|double_3::get_zxy||  
+|double_3::get_zy||  
+|double_3::get_zyx||  
+|double_3::ref_b||  
+|double_3::ref_g||  
+|double_3::ref_r||  
+|double_3::ref_x||  
+|double_3::ref_y||  
+|double_3::ref_z||  
+|double_3::set_x||  
+|double_3::set_xy||  
+|double_3::set_xyz||  
+|double_3::set_xz||  
+|double_3::set_xzy||  
+|double_3::set_y||  
+|double_3::set_yx||  
+|double_3::set_yxz||  
+|double_3::set_yz||  
+|double_3::set_yzx||  
+|double_3::set_z||  
+|double_3::set_zx||  
+|double_3::set_zxy||  
+|double_3::set_zy||  
+|double_3::set_zyx||  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|double_3::operator 运算符||  
-|double_3::operator-运算符||  
-|double_3::operator * = 运算符||  
-|double_3::operator / = 运算符||  
-|double_3::operator + + 运算符||  
-|double_3::operator + = 运算符||  
-|double_3::operator = 运算符||  
-|double_3::operator-= 运算符||  
+|double_3::operator-||  
+|double_3::operator-||  
+|double_3::operator * =||  
+|double_3::operator / =||  
+|double_3::operator + +||  
+|double_3::operator + =||  
+|double_3::operator =||  
+|double_3::operator =||  
   
 ### <a name="public-constants"></a>公共常量  
   
@@ -192,36 +192,36 @@ class double_3;
   
 |名称|描述|  
 |----------|-----------------|  
-|double_3::b 数据成员||  
-|double_3::bg 数据成员||  
-|double_3::bgr 数据成员||  
-|double_3::br 数据成员||  
-|double_3::brg 数据成员||  
-|double_3::g 数据成员||  
-|double_3::gb 数据成员||  
-|double_3::gbr 数据成员||  
-|double_3::gr 数据成员||  
-|double_3::grb 数据成员||  
-|double_3::r 数据成员||  
-|double_3::rb 数据成员||  
-|double_3::rbg 数据成员||  
-|double_3::rg 数据成员||  
-|double_3::rgb 数据成员||  
-|double_3::x 数据成员||  
-|double_3::xy 数据成员||  
-|double_3::xyz 数据成员||  
-|double_3::xz 数据成员||  
-|double_3::xzy 数据成员||  
-|double_3::y 数据成员||  
-|double_3::yx 数据成员||  
-|double_3::yxz 数据成员||  
-|double_3::yz 数据成员||  
-|double_3::yzx 数据成员||  
-|double_3::z 数据成员||  
-|double_3::zx 数据成员||  
-|double_3::zxy 数据成员||  
-|double_3::zy 数据成员||  
-|double_3::zyx 数据成员||  
+|double_3::b||  
+|double_3::bg||  
+|double_3::bgr||  
+|double_3::br||  
+|double_3::brg||  
+|double_3::g||  
+|double_3::gb||  
+|double_3::gbr||  
+|double_3::gr||  
+|double_3::grb||  
+|double_3::r||  
+|double_3::rb||  
+|double_3::rbg||  
+|double_3::rg||  
+|double_3::rgb||  
+|double_3::x||  
+|double_3::xy||  
+|double_3::xyz||  
+|double_3::xz||  
+|double_3::xzy||  
+|double_3::y||  
+|double_3::yx||  
+|double_3::yxz||  
+|double_3::yz||  
+|double_3::yzx||  
+|double_3::z||  
+|double_3::zx||  
+|double_3::zxy||  
+|double_3::zy||  
+|double_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `double_3`  
@@ -231,7 +231,7 @@ class double_3;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-double3"></a><a name="ctor"></a>double_3 
+##  <a name="ctor"></a>double_3 
 
  默认构造函数，将初始化为 0 的所有元素。  
   
@@ -298,12 +298,12 @@ explicit inline double_3(
  `_Other`  
  用于初始化的对象。  
   
-##  <a name="a-namedouble3sizea-size"></a><a name="double_3__size"></a>大小 
+##  <a name="double_3__size"></a>大小 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
 

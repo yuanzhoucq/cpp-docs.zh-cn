@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWin32Heap
-- ATL.CWin32Heap
 - CWin32Heap
+- ATLMEM/ATL::CWin32Heap
+- ATLMEM/ATL::CWin32Heap::CWin32Heap
+- ATLMEM/ATL::CWin32Heap::Allocate
+- ATLMEM/ATL::CWin32Heap::Attach
+- ATLMEM/ATL::CWin32Heap::Detach
+- ATLMEM/ATL::CWin32Heap::Free
+- ATLMEM/ATL::CWin32Heap::GetSize
+- ATLMEM/ATL::CWin32Heap::Reallocate
+- ATLMEM/ATL::CWin32Heap::m_bOwnHeap
+- ATLMEM/ATL::CWin32Heap::m_hHeap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CWin32Heap : public IAtlMemMgr
 ## <a name="requirements"></a>要求  
  **标头︰** atlmem.h  
   
-##  <a name="a-nameallocatea--cwin32heapallocate"></a><a name="allocate"></a>CWin32Heap::Allocate  
+##  <a name="allocate"></a>CWin32Heap::Allocate  
  从堆对象中分配内存块。  
   
 ```
@@ -113,7 +121,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用实现[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)。  
   
-##  <a name="a-nameattacha--cwin32heapattach"></a><a name="attach"></a>Cwin32heap:: Attach  
+##  <a name="attach"></a>Cwin32heap:: Attach  
  将堆对象附加到现有的堆。  
   
 ```
@@ -130,7 +138,7 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ### <a name="remarks"></a>备注  
  如果`bTakeOwnership`为 TRUE，`CWin32Heap`对象负责删除堆句柄。  
   
-##  <a name="a-namecwin32heapa--cwin32heapcwin32heap"></a><a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
+##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
  构造函数。  
   
 ```
@@ -172,7 +180,7 @@ CWin32Heap(
   
  第三个参数默认为 0，这使堆能够根据需要增长。 请参阅[HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx)有关内存大小和标志的说明。  
   
-##  <a name="a-namedtora--cwin32heapcwin32heap"></a><a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
+##  <a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
  析构函数。  
   
 ```
@@ -182,7 +190,7 @@ CWin32Heap(
 ### <a name="remarks"></a>备注  
  如果将销毁堆句柄`CWin32Heap`对象都有此堆的所有权。  
   
-##  <a name="a-namedetacha--cwin32heapdetach"></a><a name="detach"></a>CWin32Heap::Detach  
+##  <a name="detach"></a>CWin32Heap::Detach  
  分离现有堆中的堆对象。  
   
 ```
@@ -192,7 +200,7 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>返回值  
  返回到以前向其附加该对象的堆句柄。  
   
-##  <a name="a-namefreea--cwin32heapfree"></a><a name="free"></a>CWin32Heap::Free  
+##  <a name="free"></a>CWin32Heap::Free  
  释放以前从由堆中分配的内存[CWin32Heap::Allocate](#allocate)或[CWin32Heap::Reallocate](#reallocate)。  
   
 ```
@@ -203,7 +211,7 @@ virtual void Free(void* p) throw();
  `p`  
  指向要释放的内存块指针。 NULL 是有效的值，不执行任何操作。  
   
-##  <a name="a-namegetsizea--cwin32heapgetsize"></a><a name="getsize"></a>CWin32Heap::GetSize  
+##  <a name="getsize"></a>CWin32Heap::GetSize  
  返回从堆对象分配的内存块的大小。  
   
 ```
@@ -217,14 +225,14 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>返回值  
  返回的大小，以字节为单位分配的内存块。  
   
-##  <a name="a-namembownheapa--cwin32heapmbownheap"></a><a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
+##  <a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
  用于确定当前的所有权堆句柄存储在一个标志[m_hHeap](#m_hheap)。  
   
 ```
 bool m_bOwnHeap;
 ```  
   
-##  <a name="a-namemhheapa--cwin32heapmhheap"></a><a name="m_hheap"></a>CWin32Heap::m_hHeap  
+##  <a name="m_hheap"></a>CWin32Heap::m_hHeap  
  堆对象的句柄。  
   
 ```
@@ -234,7 +242,7 @@ HANDLE m_hHeap;
 ### <a name="remarks"></a>备注  
  一个用于存储堆对象的句柄的变量。  
   
-##  <a name="a-namereallocatea--cwin32heapreallocate"></a><a name="reallocate"></a>CWin32Heap::Reallocate  
+##  <a name="reallocate"></a>CWin32Heap::Reallocate  
  从堆对象中重新分配内存块。  
   
 ```

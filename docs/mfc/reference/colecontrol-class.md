@@ -10,6 +10,171 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleControl
+- AFXCTL/COleControl
+- AFXCTL/COleControl::COleControl
+- AFXCTL/COleControl::AmbientAppearance
+- AFXCTL/COleControl::AmbientBackColor
+- AFXCTL/COleControl::AmbientDisplayName
+- AFXCTL/COleControl::AmbientFont
+- AFXCTL/COleControl::AmbientForeColor
+- AFXCTL/COleControl::AmbientLocaleID
+- AFXCTL/COleControl::AmbientScaleUnits
+- AFXCTL/COleControl::AmbientShowGrabHandles
+- AFXCTL/COleControl::AmbientShowHatching
+- AFXCTL/COleControl::AmbientTextAlign
+- AFXCTL/COleControl::AmbientUIDead
+- AFXCTL/COleControl::AmbientUserMode
+- AFXCTL/COleControl::BoundPropertyChanged
+- AFXCTL/COleControl::BoundPropertyRequestEdit
+- AFXCTL/COleControl::ClientToParent
+- AFXCTL/COleControl::ClipCaretRect
+- AFXCTL/COleControl::ControlInfoChanged
+- AFXCTL/COleControl::DisplayError
+- AFXCTL/COleControl::DoClick
+- AFXCTL/COleControl::DoPropExchange
+- AFXCTL/COleControl::DoSuperclassPaint
+- AFXCTL/COleControl::EnableSimpleFrame
+- AFXCTL/COleControl::ExchangeExtent
+- AFXCTL/COleControl::ExchangeStockProps
+- AFXCTL/COleControl::ExchangeVersion
+- AFXCTL/COleControl::FireClick
+- AFXCTL/COleControl::FireDblClick
+- AFXCTL/COleControl::FireError
+- AFXCTL/COleControl::FireEvent
+- AFXCTL/COleControl::FireKeyDown
+- AFXCTL/COleControl::FireKeyPress
+- AFXCTL/COleControl::FireKeyUp
+- AFXCTL/COleControl::FireMouseDown
+- AFXCTL/COleControl::FireMouseMove
+- AFXCTL/COleControl::FireMouseUp
+- AFXCTL/COleControl::FireReadyStateChange
+- AFXCTL/COleControl::GetActivationPolicy
+- AFXCTL/COleControl::GetAmbientProperty
+- AFXCTL/COleControl::GetAppearance
+- AFXCTL/COleControl::GetBackColor
+- AFXCTL/COleControl::GetBorderStyle
+- AFXCTL/COleControl::GetCapture
+- AFXCTL/COleControl::GetClassID
+- AFXCTL/COleControl::GetClientOffset
+- AFXCTL/COleControl::GetClientRect
+- AFXCTL/COleControl::GetClientSite
+- AFXCTL/COleControl::GetControlFlags
+- AFXCTL/COleControl::GetControlSize
+- AFXCTL/COleControl::GetDC
+- AFXCTL/COleControl::GetEnabled
+- AFXCTL/COleControl::GetExtendedControl
+- AFXCTL/COleControl::GetFocus
+- AFXCTL/COleControl::GetFont
+- AFXCTL/COleControl::GetFontTextMetrics
+- AFXCTL/COleControl::GetForeColor
+- AFXCTL/COleControl::GetHwnd
+- AFXCTL/COleControl::GetMessageString
+- AFXCTL/COleControl::GetNotSupported
+- AFXCTL/COleControl::GetReadyState
+- AFXCTL/COleControl::GetRectInContainer
+- AFXCTL/COleControl::GetStockTextMetrics
+- AFXCTL/COleControl::GetText
+- AFXCTL/COleControl::GetWindowlessDropTarget
+- AFXCTL/COleControl::InitializeIIDs
+- AFXCTL/COleControl::InternalGetFont
+- AFXCTL/COleControl::InternalGetText
+- AFXCTL/COleControl::InternalSetReadyState
+- AFXCTL/COleControl::InvalidateControl
+- AFXCTL/COleControl::InvalidateRgn
+- AFXCTL/COleControl::IsConvertingVBX
+- AFXCTL/COleControl::IsModified
+- AFXCTL/COleControl::IsOptimizedDraw
+- AFXCTL/COleControl::IsSubclassedControl
+- AFXCTL/COleControl::Load
+- AFXCTL/COleControl::LockInPlaceActive
+- AFXCTL/COleControl::OnAmbientPropertyChange
+- AFXCTL/COleControl::OnAppearanceChanged
+- AFXCTL/COleControl::OnBackColorChanged
+- AFXCTL/COleControl::OnBorderStyleChanged
+- AFXCTL/COleControl::OnClick
+- AFXCTL/COleControl::OnClose
+- AFXCTL/COleControl::OnDoVerb
+- AFXCTL/COleControl::OnDraw
+- AFXCTL/COleControl::OnDrawMetafile
+- AFXCTL/COleControl::OnEdit
+- AFXCTL/COleControl::OnEnabledChanged
+- AFXCTL/COleControl::OnEnumVerbs
+- AFXCTL/COleControl::OnEventAdvise
+- AFXCTL/COleControl::OnFontChanged
+- AFXCTL/COleControl::OnForeColorChanged
+- AFXCTL/COleControl::OnFreezeEvents
+- AFXCTL/COleControl::OnGetColorSet
+- AFXCTL/COleControl::OnGetControlInfo
+- AFXCTL/COleControl::OnGetDisplayString
+- AFXCTL/COleControl::OnGetInPlaceMenu
+- AFXCTL/COleControl::OnGetNaturalExtent
+- AFXCTL/COleControl::OnGetPredefinedStrings
+- AFXCTL/COleControl::OnGetPredefinedValue
+- AFXCTL/COleControl::OnGetViewExtent
+- AFXCTL/COleControl::OnGetViewRect
+- AFXCTL/COleControl::OnGetViewStatus
+- AFXCTL/COleControl::OnHideToolBars
+- AFXCTL/COleControl::OnInactiveMouseMove
+- AFXCTL/COleControl::OnInactiveSetCursor
+- AFXCTL/COleControl::OnKeyDownEvent
+- AFXCTL/COleControl::OnKeyPressEvent
+- AFXCTL/COleControl::OnKeyUpEvent
+- AFXCTL/COleControl::OnMapPropertyToPage
+- AFXCTL/COleControl::OnMnemonic
+- AFXCTL/COleControl::OnProperties
+- AFXCTL/COleControl::OnQueryHitPoint
+- AFXCTL/COleControl::OnQueryHitRect
+- AFXCTL/COleControl::OnRenderData
+- AFXCTL/COleControl::OnRenderFileData
+- AFXCTL/COleControl::OnRenderGlobalData
+- AFXCTL/COleControl::OnResetState
+- AFXCTL/COleControl::OnSetClientSite
+- AFXCTL/COleControl::OnSetData
+- AFXCTL/COleControl::OnSetExtent
+- AFXCTL/COleControl::OnSetObjectRects
+- AFXCTL/COleControl::OnShowToolBars
+- AFXCTL/COleControl::OnTextChanged
+- AFXCTL/COleControl::OnWindowlessMessage
+- AFXCTL/COleControl::ParentToClient
+- AFXCTL/COleControl::PostModalDialog
+- AFXCTL/COleControl::PreModalDialog
+- AFXCTL/COleControl::RecreateControlWindow
+- AFXCTL/COleControl::Refresh
+- AFXCTL/COleControl::ReleaseCapture
+- AFXCTL/COleControl::ReleaseDC
+- AFXCTL/COleControl::ReparentControlWindow
+- AFXCTL/COleControl::ResetStockProps
+- AFXCTL/COleControl::ResetVersion
+- AFXCTL/COleControl::ScrollWindow
+- AFXCTL/COleControl::SelectFontObject
+- AFXCTL/COleControl::SelectStockFont
+- AFXCTL/COleControl::SerializeExtent
+- AFXCTL/COleControl::SerializeStockProps
+- AFXCTL/COleControl::SerializeVersion
+- AFXCTL/COleControl::SetAppearance
+- AFXCTL/COleControl::SetBackColor
+- AFXCTL/COleControl::SetBorderStyle
+- AFXCTL/COleControl::SetCapture
+- AFXCTL/COleControl::SetControlSize
+- AFXCTL/COleControl::SetEnabled
+- AFXCTL/COleControl::SetFocus
+- AFXCTL/COleControl::SetFont
+- AFXCTL/COleControl::SetForeColor
+- AFXCTL/COleControl::SetInitialSize
+- AFXCTL/COleControl::SetModifiedFlag
+- AFXCTL/COleControl::SetNotPermitted
+- AFXCTL/COleControl::SetNotSupported
+- AFXCTL/COleControl::SetRectInContainer
+- AFXCTL/COleControl::SetText
+- AFXCTL/COleControl::ThrowError
+- AFXCTL/COleControl::TransformCoords
+- AFXCTL/COleControl::TranslateColor
+- AFXCTL/COleControl::WillAmbientsBeValidDuringLoad
+- AFXCTL/COleControl::WindowProc
+- AFXCTL/COleControl::DrawContent
+- AFXCTL/COleControl::DrawMetafile
+- AFXCTL/COleControl::IsInvokeAllowed
+- AFXCTL/COleControl::SetInitialDataFormats
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -270,7 +435,7 @@ class COleControl : public CWnd
 ## <a name="requirements"></a>要求  
  **标头︰** afxctl.h  
   
-##  <a name="a-nameambientbackcolora--colecontrolambientbackcolor"></a><a name="ambientbackcolor"></a>COleControl::AmbientBackColor  
+##  <a name="ambientbackcolor"></a>COleControl::AmbientBackColor  
  返回环境的 backcolor 属性的值。  
   
 ```  
@@ -283,7 +448,7 @@ OLE_COLOR AmbientBackColor();
 ### <a name="remarks"></a>备注  
  环境的 backcolor 属性可供所有控件，并定义由容器。 请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambientdisplaynamea--colecontrolambientdisplayname"></a><a name="ambientdisplayname"></a>COleControl::AmbientDisplayName  
+##  <a name="ambientdisplayname"></a>COleControl::AmbientDisplayName  
  可以向用户显示的错误消息中使用该容器已分配给控件的名称。  
   
 ```  
@@ -296,7 +461,7 @@ CString AmbientDisplayName();
 ### <a name="remarks"></a>备注  
  请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambientfonta--colecontrolambientfont"></a><a name="ambientfont"></a>COleControl::AmbientFont  
+##  <a name="ambientfont"></a>COleControl::AmbientFont  
  返回环境的字体属性的值。  
   
 ```  
@@ -309,7 +474,7 @@ LPFONTDISP AmbientFont();
 ### <a name="remarks"></a>备注  
  环境的字体属性是由容器定义并可供所有控件。请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambientforecolora--colecontrolambientforecolor"></a><a name="ambientforecolor"></a>COleControl::AmbientForeColor  
+##  <a name="ambientforecolor"></a>COleControl::AmbientForeColor  
  返回环境的前景色属性的值。  
   
 ```  
@@ -322,7 +487,7 @@ OLE_COLOR AmbientForeColor();
 ### <a name="remarks"></a>备注  
  环境前景色属性可供所有控件，并定义由容器。 请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambientlocaleida--colecontrolambientlocaleid"></a><a name="ambientlocaleid"></a>Colecontrol:: Ambientlocaleid  
+##  <a name="ambientlocaleid"></a>Colecontrol:: Ambientlocaleid  
  返回容器的区域设置 id。  
   
 ```  
@@ -335,7 +500,7 @@ LCID AmbientLocaleID();
 ### <a name="remarks"></a>备注  
  该控件可以使用 LocaleID 以适应特定的区域设置其用户界面。 请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambientappearancea--colecontrolambientappearance"></a><a name="ambientappearance"></a>COleControl::AmbientAppearance  
+##  <a name="ambientappearance"></a>COleControl::AmbientAppearance  
  检索控件对象的当前外观设置。  
   
 ```  
@@ -352,7 +517,7 @@ short AmbientAppearance();
 ### <a name="remarks"></a>备注  
  调用此函数可检索的当前值**DISPID_AMBIENT_APPEARANCE**的控件属性。  
   
-##  <a name="a-nameambientscaleunitsa--colecontrolambientscaleunits"></a><a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits  
+##  <a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits  
  返回由容器所用的单位类型。  
   
 ```  
@@ -365,7 +530,7 @@ CString AmbientScaleUnits();
 ### <a name="remarks"></a>备注  
  容器的环境 ScaleUnits 属性可以用于显示位置或维度，用选定的单元，例如缇还是按厘米标记。 请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambientshowgrabhandlesa--colecontrolambientshowgrabhandles"></a><a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles  
+##  <a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles  
  确定该容器是否允许要为其自身活动时显示抓取手柄的控件。  
   
 ```  
@@ -378,7 +543,7 @@ BOOL AmbientShowGrabHandles();
 ### <a name="remarks"></a>备注  
  请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambientshowhatchinga--colecontrolambientshowhatching"></a><a name="ambientshowhatching"></a>COleControl::AmbientShowHatching  
+##  <a name="ambientshowhatching"></a>COleControl::AmbientShowHatching  
  确定该容器是否允许该控件以将它显示与阴影模式时用户界面活动。  
   
 ```  
@@ -391,7 +556,7 @@ BOOL AmbientShowHatching();
 ### <a name="remarks"></a>备注  
  请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambienttextaligna--colecontrolambienttextalign"></a><a name="ambienttextalign"></a>COleControl::AmbientTextAlign  
+##  <a name="ambienttextalign"></a>COleControl::AmbientTextAlign  
  确定首选通过控件容器的环境的文本对齐方式。  
   
 ```  
@@ -413,7 +578,7 @@ short AmbientTextAlign();
 ### <a name="remarks"></a>备注  
  此属性可供所有嵌入的控件，并定义由容器。 请注意该容器不需要支持此属性。  
   
-##  <a name="a-nameambientuideada--colecontrolambientuidead"></a><a name="ambientuidead"></a>COleControl::AmbientUIDead  
+##  <a name="ambientuidead"></a>COleControl::AmbientUIDead  
  确定容器是否想要对用户界面操作做出响应的控件。  
   
 ```  
@@ -426,7 +591,7 @@ BOOL AmbientUIDead();
 ### <a name="remarks"></a>备注  
  例如，容器可能设置为**TRUE**在设计模式下。  
   
-##  <a name="a-nameambientusermodea--colecontrolambientusermode"></a><a name="ambientusermode"></a>COleControl::AmbientUserMode  
+##  <a name="ambientusermode"></a>COleControl::AmbientUserMode  
  确定是否容器是处于设计模式还是用户模式。  
   
 ```  
@@ -439,7 +604,7 @@ BOOL AmbientUserMode();
 ### <a name="remarks"></a>备注  
  例如，容器可能设置为**FALSE**在设计模式下。  
   
-##  <a name="a-nameboundpropertychangeda--colecontrolboundpropertychanged"></a><a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged  
+##  <a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged  
  绑定的属性值已更改的信号。  
   
 ```  
@@ -453,7 +618,7 @@ void BoundPropertyChanged(DISPID dispid);
 ### <a name="remarks"></a>备注  
  这必须每次设置的属性更改，即使在其中通过属性不进行更改的情况下的值的方法调用。 请特别注意绑定映射到成员变量的属性。 任何时候，只要此类成员变量更改，`BoundPropertyChanged`必须调用。  
   
-##  <a name="a-nameboundpropertyrequestedita--colecontrolboundpropertyrequestedit"></a><a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdit  
+##  <a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdit  
  请求权限从`IPropertyNotifySink`接口来更改该控件提供的绑定的属性值。  
   
 ```  
@@ -470,7 +635,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 ### <a name="remarks"></a>备注  
  如果权限被拒绝，控件必须不允许属性更改的值。 这可以通过忽略或未通过试图更改的属性值的操作。  
   
-##  <a name="a-nameclienttoparenta--colecontrolclienttoparent"></a><a name="clienttoparent"></a>COleControl::ClientToParent  
+##  <a name="clienttoparent"></a>COleControl::ClientToParent  
  将转换的坐标`pPoint`成父坐标。  
   
 ```  
@@ -489,7 +654,7 @@ virtual void ClientToParent(
 ### <a name="remarks"></a>备注  
  在输入`pPoint`是相对于原点 OLE 控件 （左上角的控件的客户端区域） 的工作区。 在输出`pPoint`是相对于父级 （左上角的容器） 的源。  
   
-##  <a name="a-nameclipcaretrecta--colecontrolclipcaretrect"></a><a name="clipcaretrect"></a>COleControl::ClipCaretRect  
+##  <a name="clipcaretrect"></a>COleControl::ClipCaretRect  
  如果它完全或部分被重叠的、 不透明对象覆盖，调整插入符号移动矩形。  
   
 ```  
@@ -510,7 +675,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
   
  创建插入符号的对象应提交的插入符号矩形`ClipCaretRect`和插入符号使用调整后的矩形。 如果完全隐藏的插入符号，则此方法将返回**FALSE**和插入符号不应显示在所有这种情况下。  
   
-##  <a name="a-namecolecontrola--colecontrolcolecontrol"></a><a name="colecontrol"></a>COleControl::COleControl  
+##  <a name="colecontrol"></a>COleControl::COleControl  
  构造 `COleControl` 对象。  
   
 ```  
@@ -520,7 +685,7 @@ COleControl();
 ### <a name="remarks"></a>备注  
  一般情况下不直接调用此函数。 而是 OLE 控件通常由其类工厂创建。  
   
-##  <a name="a-namecontrolinfochangeda--colecontrolcontrolinfochanged"></a><a name="controlinfochanged"></a>COleControl::ControlInfoChanged  
+##  <a name="controlinfochanged"></a>COleControl::ControlInfoChanged  
  已更改的支持的控件的助记键集时调用此函数。  
   
 ```  
@@ -530,7 +695,7 @@ void ControlInfoChanged();
 ### <a name="remarks"></a>备注  
  在收到此通知，控件的容器获取新的助记键集通过调用[IOleControl::GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730)。 请注意，容器则不需要对此通知做出响应。  
   
-##  <a name="a-namedisplayerrora--colecontroldisplayerror"></a><a name="displayerror"></a>COleControl::DisplayError  
+##  <a name="displayerror"></a>COleControl::DisplayError  
  由框架调用后 （除非该事件处理程序已禁止显示的错误） 已处理常用的错误事件。  
   
 ```  
@@ -563,7 +728,7 @@ virtual void DisplayError(
   
  重写此函数可自定义错误的显示方式。  
   
-##  <a name="a-namedoclicka--colecontroldoclick"></a><a name="doclick"></a>COleControl::DoClick  
+##  <a name="doclick"></a>COleControl::DoClick  
  模拟鼠标单击控件上的操作。  
   
 ```  
@@ -575,7 +740,7 @@ void DoClick();
   
  此函数支持通过`COleControl`基类作为调用 DoClick 的常用方法。 有关详细信息，请参阅文章[ActiveX 控件︰ 方法](../../mfc/mfc-activex-controls-methods.md)。  
   
-##  <a name="a-namedopropexchangea--colecontroldopropexchange"></a><a name="dopropexchange"></a>COleControl::DoPropExchange  
+##  <a name="dopropexchange"></a>COleControl::DoPropExchange  
  由框架加载或存储从持久性存储区表示形式，如流或属性的一组控件时调用。  
   
 ```  
@@ -591,7 +756,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
   
  如果控件向导用于创建 OLE 控件项目，此函数的重写的版本将序列化支持的常用属性`COleControl`为基类函数的调用`COleControl::DoPropExchange`。 当您将需要修改此函数可序列化新属性的 OLE 控件中添加用户定义的属性。 序列化的详细信息，请参阅文章[ActiveX 控件︰ 序列化](../../mfc/mfc-activex-controls-serializing.md)。  
   
-##  <a name="a-namedosuperclasspainta--colecontroldosuperclasspaint"></a><a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint  
+##  <a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint  
  重绘具有已通过 Windows 控件子类化的 OLE 控件。  
   
 ```  
@@ -612,7 +777,7 @@ void DoSuperclassPaint(
   
  此函数和 Windows 控件子类化的详细信息，请参阅文章[ActiveX 控件︰ 子类化 Windows 控件](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。  
   
-##  <a name="a-namedrawcontenta--colecontroldrawcontent"></a><a name="drawcontent"></a>COleControl::DrawContent  
+##  <a name="drawcontent"></a>COleControl::DrawContent  
  在控件的外观需要更新时由框架调用。  
   
 ```  
@@ -631,7 +796,7 @@ void DrawContent(
 ### <a name="remarks"></a>备注  
  此函数将直接调用可重写`OnDraw`函数。  
   
-##  <a name="a-namedrawmetafilea--colecontroldrawmetafile"></a><a name="drawmetafile"></a>COleControl::DrawMetafile  
+##  <a name="drawmetafile"></a>COleControl::DrawMetafile  
  在使用图元文件设备上下文时由框架调用。  
   
 ```  
@@ -647,7 +812,7 @@ void DrawMetafile(
  `rc`  
  要在中绘制的矩形区域。  
   
-##  <a name="a-nameenablesimpleframea--colecontrolenablesimpleframe"></a><a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame  
+##  <a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame  
  启用 OLE 控件的简单框架特性。  
   
 ```  
@@ -657,7 +822,7 @@ void EnableSimpleFrame();
 ### <a name="remarks"></a>备注  
  这一特性允许控件以支持 visual 包含其他控件，但事实并非如此的 OLE 包容。 示例将具有多个控件内的组框。 这些控件不是 OLE 包含，但它们在同一组框中。  
   
-##  <a name="a-nameexchangeextenta--colecontrolexchangeextent"></a><a name="exchangeextent"></a>COleControl::ExchangeExtent  
+##  <a name="exchangeextent"></a>COleControl::ExchangeExtent  
  序列化或初始化该控件的作用域的状态 (在其尺寸**HIMETRIC**单位)。  
   
 ```  
@@ -674,7 +839,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 ### <a name="remarks"></a>备注  
  默认实现正常情况下调用此函数`COleControl::DoPropExchange`。  
   
-##  <a name="a-nameexchangestockpropsa--colecontrolexchangestockprops"></a><a name="exchangestockprops"></a>COleControl::ExchangeStockProps  
+##  <a name="exchangestockprops"></a>COleControl::ExchangeStockProps  
  序列化或初始化该控件的常用属性的状态。  
   
 ```  
@@ -688,7 +853,7 @@ void ExchangeStockProps(CPropExchange* pPX);
 ### <a name="remarks"></a>备注  
  默认实现正常情况下调用此函数`COleControl::DoPropExchange`。  
   
-##  <a name="a-nameexchangeversiona--colecontrolexchangeversion"></a><a name="exchangeversion"></a>COleControl::ExchangeVersion  
+##  <a name="exchangeversion"></a>COleControl::ExchangeVersion  
  序列化或初始化控件的版本信息的状态。  
   
 ```  
@@ -716,7 +881,7 @@ BOOL ExchangeVersion(
   
  持久性和版本控制的详细信息，请参阅文章[ActiveX 控件︰ 序列化](../../mfc/mfc-activex-controls-serializing.md)。  
   
-##  <a name="a-namefireclicka--colecontrolfireclick"></a><a name="fireclick"></a>COleControl::FireClick  
+##  <a name="fireclick"></a>COleControl::FireClick  
  活动控件上方单击鼠标时由框架调用。  
   
 ```  
@@ -728,7 +893,7 @@ void FireClick();
   
  对于自动触发 Click 事件发生，该控件的事件映射必须具有常用 Click 事件定义。  
   
-##  <a name="a-namefiredblclicka--colecontrolfiredblclick"></a><a name="firedblclick"></a>COleControl::FireDblClick  
+##  <a name="firedblclick"></a>COleControl::FireDblClick  
  当鼠标位于双击活动控件时由框架调用。  
   
 ```  
@@ -740,7 +905,7 @@ void FireDblClick();
   
  用于自动触发的 DblClick 事件发生的该控件的事件映射必须具有定义的常用 DblClick 事件。  
   
-##  <a name="a-namefireerrora--colecontrolfireerror"></a><a name="fireerror"></a>COleControl::FireError  
+##  <a name="fireerror"></a>COleControl::FireError  
  激发股票的错误事件。  
   
 ```  
@@ -769,7 +934,7 @@ void FireError(
   
  若要解决此问题，手动更改`SCODE`中控件的参数。ODL 文件**长**。 此外，任何自定义事件、 方法或属性，它使用`SCODE`参数还会导致具有同样的问题。  
   
-##  <a name="a-namefireeventa--colecontrolfireevent"></a><a name="fireevent"></a>COleControl::FireEvent  
+##  <a name="fireevent"></a>COleControl::FireEvent  
  激发您的控件与任意数量的可选参数，从用户定义的事件。  
   
 ```  
@@ -811,7 +976,7 @@ void AFX_CDECL FireEvent(
 > [!NOTE]
 >  其他变体常量已定义对于所有的 variant 类型的值类型，除了**VTS_FONT**和**VTS_PICTURE**，它们提供了指向的变量数据常量的指针。 使用命名这些常量**VTS_P** `constantname`约定。 例如， **VTS_PCOLOR**是一个指向**VTS_COLOR**常量。  
   
-##  <a name="a-namefirekeydowna--colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl::FireKeyDown  
+##  <a name="firekeydown"></a>COleControl::FireKeyDown  
  当控件处于活动状态的 UI，按下某个键时由框架调用。  
   
 ```  
@@ -838,7 +1003,7 @@ void FireKeyDown(
   
  用于自动触发的 KeyDown 事件发生的该控件的事件映射必须具有定义的常用 KeyDown 事件。  
   
-##  <a name="a-namefirekeypressa--colecontrolfirekeypress"></a><a name="firekeypress"></a>COleControl::FireKeyPress  
+##  <a name="firekeypress"></a>COleControl::FireKeyPress  
  当按下某个键并将其发布自定义控件处于 UI 活动状态容器中时由框架调用。  
   
 ```  
@@ -856,7 +1021,7 @@ void FireKeyPress(USHORT* pnChar);
   
  用于自动触发的 KeyPress 事件发生的该控件的事件映射必须具有定义的常用 KeyPress 事件。  
   
-##  <a name="a-namefirekeyupa--colecontrolfirekeyup"></a><a name="firekeyup"></a>COleControl::FireKeyUp  
+##  <a name="firekeyup"></a>COleControl::FireKeyUp  
  当自定义控件处于 UI 活动状态的容器内释放某个键时由框架调用。  
   
 ```  
@@ -883,7 +1048,7 @@ void FireKeyUp(
   
  用于自动触发的 KeyUp 事件发生的该控件的事件映射必须具有定义的常用 KeyUp 事件。  
   
-##  <a name="a-namefiremousedowna--colecontrolfiremousedown"></a><a name="firemousedown"></a>COleControl::FireMouseDown  
+##  <a name="firemousedown"></a>COleControl::FireMouseDown  
  活动的自定义控件上按下鼠标按钮时由框架调用。  
   
 ```  
@@ -924,7 +1089,7 @@ void FireMouseDown(
   
  用于自动触发的 MouseDown 事件发生的该控件的事件映射必须具有定义的常用 MouseDown 事件。  
   
-##  <a name="a-namefiremousemovea--colecontrolfiremousemove"></a><a name="firemousemove"></a>COleControl::FireMouseMove  
+##  <a name="firemousemove"></a>COleControl::FireMouseMove  
  当光标移到活动的自定义控件由框架调用。  
   
 ```  
@@ -965,7 +1130,7 @@ void FireMouseMove(
   
  用于自动触发的 MouseMove 事件发生的该控件的事件映射必须具有定义的常用 MouseMove 事件。  
   
-##  <a name="a-namefiremouseupa--colecontrolfiremouseup"></a><a name="firemouseup"></a>COleControl::FireMouseUp  
+##  <a name="firemouseup"></a>COleControl::FireMouseUp  
  当在活动的自定义控件上释放鼠标按钮时由框架调用。  
   
 ```  
@@ -1006,7 +1171,7 @@ void FireMouseUp(
   
  用于自动触发的 MouseUp 事件发生的该控件的事件映射必须具有定义的常用 MouseUp 事件。  
   
-##  <a name="a-namefirereadystatechangea--colecontrolfirereadystatechange"></a><a name="firereadystatechange"></a>COleControl::FireReadyStateChange  
+##  <a name="firereadystatechange"></a>COleControl::FireReadyStateChange  
  一个与控件的就绪状态的当前值的事件的激发。  
   
 ```  
@@ -1035,7 +1200,7 @@ void FireReadyStateChange();
   
  [InternalSetReadyState](#internalsetreadystate)就绪状态更改为值提供，则调用`FireReadyStateChange`。  
   
-##  <a name="a-namegetactivationpolicya--colecontrolgetactivationpolicy"></a><a name="getactivationpolicy"></a>COleControl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>COleControl::GetActivationPolicy  
  更改支持的控件的默认激活行为`IPointerInactive`接口。  
   
 ```  
@@ -1077,7 +1242,7 @@ virtual DWORD GetActivationPolicy();
   
  [!code-cpp[NVC_MFCAxCtl #&10;](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]  
   
-##  <a name="a-namegetambientpropertya--colecontrolgetambientproperty"></a><a name="getambientproperty"></a>COleControl::GetAmbientProperty  
+##  <a name="getambientproperty"></a>COleControl::GetAmbientProperty  
  获取容器的环境属性的值。  
   
 ```  
@@ -1118,7 +1283,7 @@ BOOL GetAmbientProperty(
   
  请注意，已提供了函数的常见环境的属性，如[AmbientBackColor](#ambientbackcolor)和[AmbientFont](#ambientfont)。  
   
-##  <a name="a-namegetappearancea--colecontrolgetappearance"></a><a name="getappearance"></a>COleControl::GetAppearance  
+##  <a name="getappearance"></a>COleControl::GetAppearance  
  实现控件的常用外观属性的 Get 函数。  
   
 ```  
@@ -1128,7 +1293,7 @@ short GetAppearance ();
 ### <a name="return-value"></a>返回值  
  返回的值指定为当前的外观设置**短**( `VT_I2`) 值，如果操作成功。 如果该控件的外观是平面和 1 控件的外观具有三维，则此值为零。  
   
-##  <a name="a-namegetbackcolora--colecontrolgetbackcolor"></a><a name="getbackcolor"></a>COleControl::GetBackColor  
+##  <a name="getbackcolor"></a>COleControl::GetBackColor  
  实现控件的常用的 backcolor 属性 Get 函数。  
   
 ```  
@@ -1138,7 +1303,7 @@ OLE_COLOR GetBackColor();
 ### <a name="return-value"></a>返回值  
  返回的值指定为当前的背景色**OLE_COLOR**值，如果操作成功。 此值可以转换为**COLORREF**值通过调用`TranslateColor`。  
   
-##  <a name="a-namegetborderstylea--colecontrolgetborderstyle"></a><a name="getborderstyle"></a>COleControl::GetBorderStyle  
+##  <a name="getborderstyle"></a>COleControl::GetBorderStyle  
  实现控件的常用 borderstyle 属性 Get 函数。  
   
 ```  
@@ -1148,7 +1313,7 @@ short GetBorderStyle();
 ### <a name="return-value"></a>返回值  
  如果该控件具有普通边框; 则为 1如果该控件具有无边框，则为 0。  
   
-##  <a name="a-namegetcapturea--colecontrolgetcapture"></a><a name="getcapture"></a>COleControl::GetCapture  
+##  <a name="getcapture"></a>COleControl::GetCapture  
  确定是否`COleControl`对象具有鼠标捕获。  
   
 ```  
@@ -1163,7 +1328,7 @@ CWnd* GetCapture();
 ### <a name="remarks"></a>备注  
  激活的无窗口控件接收到鼠标捕获时[SetCapture](#setcapture)调用。  
   
-##  <a name="a-namegetclassida--colecontrolgetclassid"></a><a name="getclassid"></a>COleControl::GetClassID  
+##  <a name="getclassid"></a>COleControl::GetClassID  
  由框架来检索该控件的 OLE 类 ID 调用。  
   
 ```  
@@ -1180,7 +1345,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ### <a name="remarks"></a>备注  
  通常由[IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex)。  
   
-##  <a name="a-namegetclientoffseta--colecontrolgetclientoffset"></a><a name="getclientoffset"></a>COleControl::GetClientOffset  
+##  <a name="getclientoffset"></a>COleControl::GetClientOffset  
  检索控件的矩形区域的左上的角和其工作区的左上的角之间的差异。  
   
 ```  
@@ -1197,7 +1362,7 @@ virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ### <a name="remarks"></a>备注  
  OLE 控件具有在其容器内的矩形区域。 该控件的客户端区域是不包括边框及滚动条的控件区域。 检索偏移量`GetClientOffset`是控件的矩形区域的左上的角和其工作区的左上的角的区别。 如果控件具有非客户端元素以外的标准边框和滚动条，重写该成员函数以指定偏移量。  
   
-##  <a name="a-namegetclientrecta--colecontrolgetclientrect"></a><a name="getclientrect"></a>COleControl::GetClientRect  
+##  <a name="getclientrect"></a>COleControl::GetClientRect  
  检索控件的工作区的大小。  
   
 ```  
@@ -1208,7 +1373,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
  `lpRect`  
  指向`RECT`结构，它包含无窗口控件的客户端区域的尺寸; 即，该控件的大小减去窗口边框、 框架、 滚动条，等等。 `lpRect`参数指示该控件的客户端矩形，而非其位置的大小。  
   
-##  <a name="a-namegetclientsitea--colecontrolgetclientsite"></a><a name="getclientsite"></a>COleControl::GetClientSite  
+##  <a name="getclientsite"></a>COleControl::GetClientSite  
  将查询一个对象，用于指向其当前的客户端站点，在其容器内的指针。  
   
 ```  
@@ -1221,7 +1386,7 @@ LPOLECLIENTSITE GetClientSite();
 ### <a name="remarks"></a>备注  
  返回的指针指向的一个实例`IOleClientSite`。 `IOleClientSite`由容器实现的接口是其上下文的对象的视图︰ 其定位在文档中，它获取它的存储、 用户界面和其他资源的位置。  
   
-##  <a name="a-namegetcontrolflagsa--colecontrolgetcontrolflags"></a><a name="getcontrolflags"></a>COleControl::GetControlFlags  
+##  <a name="getcontrolflags"></a>COleControl::GetControlFlags  
  检索控件标志设置。  
   
 ```  
@@ -1270,7 +1435,7 @@ virtual DWORD GetControlFlags();
   
  有关详细信息`GetControlFlags`和其他优化 OLE 控件，请参阅[ActiveX 控件︰ 优化](../../mfc/mfc-activex-controls-optimization.md)。  
   
-##  <a name="a-namegetcontrolsizea--colecontrolgetcontrolsize"></a><a name="getcontrolsize"></a>COleControl::GetControlSize  
+##  <a name="getcontrolsize"></a>COleControl::GetControlSize  
  检索 OLE 控件窗口的大小。  
   
 ```  
@@ -1289,7 +1454,7 @@ void GetControlSize(
 ### <a name="remarks"></a>备注  
  请注意，用于控制 windows 的所有坐标都都相对于控件的左上角。  
   
-##  <a name="a-namegetdca--colecontrolgetdc"></a><a name="getdc"></a>COleControl::GetDC  
+##  <a name="getdc"></a>COleControl::GetDC  
  提供无窗口对象来获取 screen （或兼容） 设备上下文从其容器。  
   
 ```  
@@ -1317,7 +1482,7 @@ CDC* GetDC(
 ### <a name="remarks"></a>备注  
  [ReleaseDC](#releasedc)必须调用成员函数来绘制后释放上下文。 在调用时`GetDC`，对象将传递在想要在其自己的工作区坐标中绘制到的矩形。 `GetDC`将转换为容器客户端区域的坐标。 该对象应该不会请求所需的绘制矩形大于其自己的客户端区域矩形，可以通过检索它的大小[GetClientRect](#getclientrect)。 这可防止无意中绘制，也不应为对象。  
   
-##  <a name="a-namegetenableda--colecontrolgetenabled"></a><a name="getenabled"></a>COleControl::GetEnabled  
+##  <a name="getenabled"></a>COleControl::GetEnabled  
  实现控件的股票 Enabled 属性的 Get 函数。  
   
 ```  
@@ -1327,7 +1492,7 @@ BOOL GetEnabled();
 ### <a name="return-value"></a>返回值  
  如果启用该控件，则非零值否则为 0。  
   
-##  <a name="a-namegetextendedcontrola--colecontrolgetextendedcontrol"></a><a name="getextendedcontrol"></a>COleControl::GetExtendedControl  
+##  <a name="getextendedcontrol"></a>COleControl::GetExtendedControl  
  获取指向由表示使用扩展的一组属性的控件的容器维护的对象的指针。  
   
 ```  
@@ -1342,7 +1507,7 @@ LPDISPATCH GetExtendedControl();
 ### <a name="remarks"></a>备注  
  调用此函数的函数负责释放时已完成，但该对象的指针。 请注意该容器不需要支持此对象。  
   
-##  <a name="a-namegetfocusa--colecontrolgetfocus"></a><a name="getfocus"></a>COleControl::GetFocus  
+##  <a name="getfocus"></a>COleControl::GetFocus  
  确定是否`COleControl`对象具有焦点。  
   
 ```  
@@ -1357,7 +1522,7 @@ CWnd* GetFocus();
 ### <a name="remarks"></a>备注  
  激活的无窗口控件获得焦点时[SetFocus](#setfocus)调用。  
   
-##  <a name="a-namegetfonta--colecontrolgetfont"></a><a name="getfont"></a>COleControl::GetFont  
+##  <a name="getfont"></a>COleControl::GetFont  
  实现常用字体属性的 Get 函数。  
   
 ```  
@@ -1370,7 +1535,7 @@ LPFONTDISP GetFont();
 ### <a name="remarks"></a>备注  
  请注意，调用方必须释放对象时完成。 在控件实现中，使用`InternalGetFont`访问控件的股票 Font 对象。 在您的控件中使用字体的详细信息，请参阅文章[ActiveX 控件︰ 使用 ActiveX 控件中的字体](../../mfc/mfc-activex-controls-using-fonts.md)。  
   
-##  <a name="a-namegetfonttextmetricsa--colecontrolgetfonttextmetrics"></a><a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics  
+##  <a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics  
  测量一次文本度量值的任何`CFontHolder`拥有该控件的对象。  
   
 ```  
@@ -1391,7 +1556,7 @@ void GetFontTextMetrics(
   
  `TEXTMETRIC`结构的默认字体是刷新时[SelectFontObject](#selectfontobject)调用函数。 应调用`GetFontTextMetrics`唯一后选择的堆栈 Font 属性，以确保它提供的信息是否有效。  
   
-##  <a name="a-namegetforecolora--colecontrolgetforecolor"></a><a name="getforecolor"></a>COleControl::GetForeColor  
+##  <a name="getforecolor"></a>COleControl::GetForeColor  
  实现常用的前景色属性的 Get 函数。  
   
 ```  
@@ -1401,7 +1566,7 @@ OLE_COLOR GetForeColor();
 ### <a name="return-value"></a>返回值  
  返回的值指定为当前的前景颜色**OLE_COLOR**值，如果操作成功。 此值可以转换为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值通过调用`TranslateColor`。  
   
-##  <a name="a-namegethwnda--colecontrolgethwnd"></a><a name="gethwnd"></a>COleControl::GetHwnd  
+##  <a name="gethwnd"></a>COleControl::GetHwnd  
  实现常用 hWnd 属性的 Get 函数。  
   
 ```  
@@ -1411,7 +1576,7 @@ OLE_HANDLE GetHwnd();
 ### <a name="return-value"></a>返回值  
  OLE 控件的窗口句柄，如果有的话;否则为**NULL**。  
   
-##  <a name="a-namegetmessagestringa--colecontrolgetmessagestring"></a><a name="getmessagestring"></a>COleControl::GetMessageString  
+##  <a name="getmessagestring"></a>COleControl::GetMessageString  
  由框架调用以获得一个短的字符串，描述由标识的菜单项的目的`nID`。  
   
 ```  
@@ -1430,7 +1595,7 @@ virtual void GetMessageString(
 ### <a name="remarks"></a>备注  
  这可以用于获取在状态栏中显示一条消息，在突出显示的菜单项。 默认实现将尝试加载由标识的字符串资源`nID`。  
   
-##  <a name="a-namegetnotsupporteda--colecontrolgetnotsupported"></a><a name="getnotsupported"></a>Colecontrol:: Getnotsupported  
+##  <a name="getnotsupported"></a>Colecontrol:: Getnotsupported  
  由用户控件的属性值将阻止访问。  
   
 ```  
@@ -1440,7 +1605,7 @@ void GetNotSupported();
 ### <a name="remarks"></a>备注  
  调用此函数来代替任何属性的 Get 函数检索由该控件的用户的属性不支持的位置。 例如，可以是只写属性。  
   
-##  <a name="a-namegetreadystatea--colecontrolgetreadystate"></a><a name="getreadystate"></a>COleControl::GetReadyState  
+##  <a name="getreadystate"></a>COleControl::GetReadyState  
  返回控件的准备工作状态。  
   
 ```  
@@ -1468,7 +1633,7 @@ long GetReadyState();
 ### <a name="remarks"></a>备注  
  大多数简单控件永远不需要区分**LOADED**和`INTERACTIVE`。 但是，支持的数据路径属性的控件可能无法准备好进行交互，直到异步接收至少部分数据。 控件应尝试尽可能快地变为交互模式。  
   
-##  <a name="a-namegetrectincontainera--colecontrolgetrectincontainer"></a><a name="getrectincontainer"></a>COleControl::GetRectInContainer  
+##  <a name="getrectincontainer"></a>COleControl::GetRectInContainer  
  获取相对于容器，用设备单位表示控件的矩形的坐标。  
   
 ```  
@@ -1485,7 +1650,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 ### <a name="remarks"></a>备注  
  该矩形才有效，如果该控件是处于就地活动状态。  
   
-##  <a name="a-namegetstocktextmetricsa--colecontrolgetstocktextmetrics"></a><a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics  
+##  <a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics  
  度量值的控件的常用字体属性，它可以使用选择的文本标准[SelectStockFont](#selectstockfont)函数。  
   
 ```  
@@ -1501,7 +1666,7 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
   
  `TEXTMETRIC`结构的默认字体是刷新时`SelectStockFont`调用函数。 仅选择股票的字体，以确保它提供的信息有效后，应调用此函数。  
   
-##  <a name="a-namegettexta--colecontrolgettext"></a><a name="gettext"></a>COleControl::GetText  
+##  <a name="gettext"></a>COleControl::GetText  
  实现常用的文本或 Caption 属性的 Get 函数。  
   
 ```  
@@ -1517,7 +1682,7 @@ BSTR GetText();
 ### <a name="remarks"></a>备注  
  请注意，此函数的调用方必须调用`SysFreeString`对字符串返回为了免费资源。 在控件实现中，使用`InternalGetText`访问控件的常用文本或 Caption 属性。  
   
-##  <a name="a-namegetwindowlessdroptargeta--colecontrolgetwindowlessdroptarget"></a><a name="getwindowlessdroptarget"></a>Colecontrol:: Getwindowlessdroptarget  
+##  <a name="getwindowlessdroptarget"></a>Colecontrol:: Getwindowlessdroptarget  
  重写`GetWindowlessDropTarget`时您希望无窗口控件的目标的 ole 拖放操作。  
   
 ```  
@@ -1532,7 +1697,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
   
  [!code-cpp[NVC_MFCAxCtl #&2;](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
-##  <a name="a-nameinitializeiidsa--colecontrolinitializeiids"></a><a name="initializeiids"></a>COleControl::InitializeIIDs  
+##  <a name="initializeiids"></a>COleControl::InitializeIIDs  
  通知将使用该控件的 Iid 的基类。  
   
 ```  
@@ -1551,7 +1716,7 @@ void InitializeIIDs(
 ### <a name="remarks"></a>备注  
  调用此函数在控件的构造函数来通知的接口 Id，将使用您的控件的基类。  
   
-##  <a name="a-nameinternalgetfonta--colecontrolinternalgetfont"></a><a name="internalgetfont"></a>COleControl::InternalGetFont  
+##  <a name="internalgetfont"></a>COleControl::InternalGetFont  
  访问您的控件的堆栈 Font 属性  
   
 ```  
@@ -1561,7 +1726,7 @@ CFontHolder& InternalGetFont();
 ### <a name="return-value"></a>返回值  
  对引用[CFontHolder](../../mfc/reference/cfontholder-class.md)对象，其中包含股票 Font 对象。  
   
-##  <a name="a-nameinternalgettexta--colecontrolinternalgettext"></a><a name="internalgettext"></a>COleControl::InternalGetText  
+##  <a name="internalgettext"></a>COleControl::InternalGetText  
  访问您的控件的常用文本或 Caption 属性。  
   
 ```  
@@ -1571,7 +1736,7 @@ const CString& InternalGetText();
 ### <a name="return-value"></a>返回值  
  对控件的文本字符串的引用。  
   
-##  <a name="a-nameinternalsetreadystatea--colecontrolinternalsetreadystate"></a><a name="internalsetreadystate"></a>Colecontrol:: Internalsetreadystate  
+##  <a name="internalsetreadystate"></a>Colecontrol:: Internalsetreadystate  
  设置控件的准备工作状态。  
   
 ```  
@@ -1600,7 +1765,7 @@ void InternalSetReadyState(long lNewReadyState);
 ### <a name="remarks"></a>备注  
  大多数简单控件永远不需要区分**LOADED**和`INTERACTIVE`。 但是，支持的数据路径属性的控件可能无法准备好进行交互，直到异步接收至少部分数据。 控件应尝试尽可能快地变为交互模式。  
   
-##  <a name="a-nameinvalidatecontrola--colecontrolinvalidatecontrol"></a><a name="invalidatecontrol"></a>COleControl::InvalidateControl  
+##  <a name="invalidatecontrol"></a>COleControl::InvalidateControl  
  强制控件重绘自身。  
   
 ```  
@@ -1619,7 +1784,7 @@ void InvalidateControl(
 ### <a name="remarks"></a>备注  
  如果`lpRect`具有**NULL**值，将重新绘制整个控件。 如果`lpRect`不是**NULL**，这表示控件的矩形，它是无效的部分。 在其中控件没有窗口或当前未处于活动状态，该矩形将忽略，并且调用客户端站点的情况下[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)成员函数。 使用此函数，而不是`CWnd::InvalidateRect`或`InvalidateRect`。  
   
-##  <a name="a-nameinvalidatergna--colecontrolinvalidatergn"></a><a name="invalidatergn"></a>COleControl::InvalidateRgn  
+##  <a name="invalidatergn"></a>COleControl::InvalidateRgn  
  使容器窗口中的给定区域内的客户端区域无效。  
   
 ```  
@@ -1638,7 +1803,7 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
   
  如果`bErase`是**TRUE**更新区域的任何部分，在整个区域中，而不仅仅是在给定的部分中，背景将被删除。  
   
-##  <a name="a-nameisconvertingvbxa--colecontrolisconvertingvbx"></a><a name="isconvertingvbx"></a>COleControl::IsConvertingVBX  
+##  <a name="isconvertingvbx"></a>COleControl::IsConvertingVBX  
  允许 OLE 控件的专用的加载。  
   
 ```  
@@ -1661,7 +1826,7 @@ BOOL IsConvertingVBX();
   
  在控件的`DoPropExchange`函数，您可以检查此条件并如果为 true，执行加载代码特定于这种转换 （如前面的示例中）。 如果不转换该控件，您可以执行正常的负载代码。 此功能仅适用于将 VBX 对应项要转换的控件。  
   
-##  <a name="a-nameisinvokealloweda--colecontrolisinvokeallowed"></a><a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed  
  启用自动化方法调用。  
   
 ```  
@@ -1674,7 +1839,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
 ### <a name="remarks"></a>备注  
  框架的实现**idispatch:: Invoke**调用**IsInvokeAllowed**以确定给定函数 (由标识`dispid`) 可能会调用。 OLE 控件的默认行为是允许要调用仅当控件已经初始化; 自动化方法但是， **IsInvokeAllowed**是一个虚函数并且可能会被重写如有必要 （例如，当控件使用为自动化服务器）。 有关详细信息，请参阅知识库文章 Q166472，"如何︰ 使用 OLE 控件作为自动化服务器。" 知识库文章可在 MSDN 库的 Visual Studio 文档中或在[http://support.microsoft.com](http://support.microsoft.com/)。  
   
-##  <a name="a-nameismodifieda--colecontrolismodified"></a><a name="ismodified"></a>COleControl::IsModified  
+##  <a name="ismodified"></a>COleControl::IsModified  
  确定控件的状态是否已被修改。  
   
 ```  
@@ -1687,7 +1852,7 @@ BOOL IsModified();
 ### <a name="remarks"></a>备注  
  当属性值更改时，则修改控件的状态。  
   
-##  <a name="a-nameisoptimizeddrawa--colecontrolisoptimizeddraw"></a><a name="isoptimizeddraw"></a>Colecontrol:: Isoptimizeddraw  
+##  <a name="isoptimizeddraw"></a>Colecontrol:: Isoptimizeddraw  
  确定容器是否支持当前的绘制操作优化的绘图。  
   
 ```  
@@ -1700,7 +1865,7 @@ BOOL IsOptimizedDraw();
 ### <a name="remarks"></a>备注  
  如果支持优化的绘图，然后控件需要时，选择旧对象 （钢笔、 画笔、 字体、 等） 到设备上下文完成绘图。  
   
-##  <a name="a-nameissubclassedcontrola--colecontrolissubclassedcontrol"></a><a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl  
+##  <a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl  
  由框架来确定是否控件子类化 Windows 控件调用。  
   
 ```  
@@ -1713,7 +1878,7 @@ virtual BOOL IsSubclassedControl();
 ### <a name="remarks"></a>备注  
  必须重写此函数并返回**TRUE**如果您的 OLE 控件子类化 Windows 控件。  
   
-##  <a name="a-nameloada--colecontrolload"></a><a name="load"></a>COleControl::Load  
+##  <a name="load"></a>COleControl::Load  
  重置所有以前的数据以异步方式加载并启动新加载的控件的异步属性。  
   
 ```  
@@ -1727,7 +1892,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
  *prop*  
  一个[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)实现异步控件属性的对象。  
   
-##  <a name="a-namelockinplaceactivea--colecontrollockinplaceactive"></a><a name="lockinplaceactive"></a>COleControl::LockInPlaceActive  
+##  <a name="lockinplaceactive"></a>COleControl::LockInPlaceActive  
  防止容器停用您的控件。  
   
 ```  
@@ -1744,7 +1909,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 ### <a name="remarks"></a>备注  
  请注意必须与该控件在完成后解锁成对每个控件的锁定。 您应该仅锁定您的控件短时间内，如触发事件时。  
   
-##  <a name="a-nameonambientpropertychangea--colecontrolonambientpropertychange"></a><a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange  
  容器的环境属性已更改值时由框架调用。  
   
 ```  
@@ -1755,7 +1920,7 @@ virtual void OnAmbientPropertyChange(DISPID dispid);
  *dispID*  
  发生更改时，环境属性的调度 ID 或**DISPID_UNKNOWN**如果多个属性已更改。  
   
-##  <a name="a-nameonappearancechangeda--colecontrolonappearancechanged"></a><a name="onappearancechanged"></a>COleControl::OnAppearanceChanged  
+##  <a name="onappearancechanged"></a>COleControl::OnAppearanceChanged  
  当该股票的外观属性值发生更改时由框架调用。  
   
 ```  
@@ -1765,7 +1930,7 @@ virtual void OnAppearanceChanged ();
 ### <a name="remarks"></a>备注  
  如果您希望通知时此属性更改后的，重写此函数。 默认实现调用`InvalidateControl`。  
   
-##  <a name="a-nameonbackcolorchangeda--colecontrolonbackcolorchanged"></a><a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged  
+##  <a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged  
  常用的 backcolor 属性值已更改时由框架调用。  
   
 ```  
@@ -1775,7 +1940,7 @@ virtual void OnBackColorChanged();
 ### <a name="remarks"></a>备注  
  如果您希望通知时此属性更改后的，重写此函数。 默认实现调用`InvalidateControl`。  
   
-##  <a name="a-nameonborderstylechangeda--colecontrolonborderstylechanged"></a><a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged  
+##  <a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged  
  当该股票的边框样式属性值发生更改时由框架调用。  
   
 ```  
@@ -1787,7 +1952,7 @@ virtual void OnBorderStyleChanged();
   
  如果您希望通知时此属性更改后的，重写此函数。  
   
-##  <a name="a-nameonclicka--colecontrolonclick"></a><a name="onclick"></a>COleControl::OnClick  
+##  <a name="onclick"></a>COleControl::OnClick  
  已单击鼠标按钮或调用 DoClick 股票方法时由框架调用。  
   
 ```  
@@ -1809,7 +1974,7 @@ virtual void OnClick(USHORT iButton);
   
  重写该成员函数以修改或扩展的默认处理。  
   
-##  <a name="a-nameonclosea--colecontrolonclose"></a><a name="onclose"></a>COleControl::OnClose  
+##  <a name="onclose"></a>COleControl::OnClose  
  在容器已调用该控件时由框架调用**IOleControl::Close**函数。  
   
 ```  
@@ -1829,7 +1994,7 @@ virtual void OnClose(DWORD dwSaveOption);
 ### <a name="remarks"></a>备注  
  默认情况下，`OnClose`如果它已被修改，则保存控件对象和`dwSaveOption`是`OLECLOSE_SAVEIFDIRTY`或`OLECLOSE_PROMPTSAVE`。  
   
-##  <a name="a-nameondoverba--colecontrolondoverb"></a><a name="ondoverb"></a>COleControl::OnDoVerb  
+##  <a name="ondoverb"></a>COleControl::OnDoVerb  
  当容器调用时由框架调用**IOleObject::DoVerb**成员函数。  
   
 ```  
@@ -1861,7 +2026,7 @@ virtual BOOL OnDoVerb(
   
  重写此函数可更改谓词的默认处理。  
   
-##  <a name="a-nameondrawa--colecontrolondraw"></a><a name="ondraw"></a>COleControl::OnDraw  
+##  <a name="ondraw"></a>COleControl::OnDraw  
  由框架使用指定的设备上下文的指定边界矩形中绘制 OLE 控件调用。  
   
 ```  
@@ -1884,7 +2049,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>备注  
  `OnDraw`通常是为了屏幕显示，并传递作为屏幕设备上下文调用`pDC`。 `rcBounds`参数标识 （相对于其当前的映射模式） 的目标设备上下文中的矩形。 `rcInvalid`参数是无效的实际矩形。 在某些情况下，这将是较小的区域比`rcBounds`。  
   
-##  <a name="a-nameondrawmetafilea--colecontrolondrawmetafile"></a><a name="ondrawmetafile"></a>Colecontrol:: Ondrawmetafile  
+##  <a name="ondrawmetafile"></a>Colecontrol:: Ondrawmetafile  
  由框架使用指定的图元文件设备上下文的指定边界矩形中绘制 OLE 控件调用。  
   
 ```  
@@ -1903,7 +2068,7 @@ virtual void OnDrawMetafile(
 ### <a name="remarks"></a>备注  
  默认实现调用[OnDraw](#ondraw)函数。  
   
-##  <a name="a-nameonedita--colecontrolonedit"></a><a name="onedit"></a>COleControl::OnEdit  
+##  <a name="onedit"></a>COleControl::OnEdit  
  使控件，使其 UI 激活。  
   
 ```  
@@ -1933,7 +2098,7 @@ virtual BOOL OnEdit(
   
  [!code-cpp[NVC_MFCAxCtl #&5;](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]  
   
-##  <a name="a-nameonenabledchangeda--colecontrolonenabledchanged"></a><a name="onenabledchanged"></a>COleControl::OnEnabledChanged  
+##  <a name="onenabledchanged"></a>COleControl::OnEnabledChanged  
  当库存 Enabled 属性值发生更改时由框架调用。  
   
 ```  
@@ -1943,7 +2108,7 @@ virtual void OnEnabledChanged();
 ### <a name="remarks"></a>备注  
  如果您希望通知时此属性更改后的，重写此函数。 默认实现调用[InvalidateControl](#invalidatecontrol)。  
   
-##  <a name="a-nameonenumverbsa--colecontrolonenumverbs"></a><a name="onenumverbs"></a>COleControl::OnEnumVerbs  
+##  <a name="onenumverbs"></a>COleControl::OnEnumVerbs  
  当容器调用时由框架调用**ioleobject:: Enumverbs**成员函数。  
   
 ```  
@@ -1962,7 +2127,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
  重写此函数可更改枚举谓词的默认方式。  
   
-##  <a name="a-nameoneventadvisea--colecontroloneventadvise"></a><a name="oneventadvise"></a>COleControl::OnEventAdvise  
+##  <a name="oneventadvise"></a>COleControl::OnEventAdvise  
  连接到或来自 OLE 控件断开连接事件处理程序时由框架调用。  
   
 ```  
@@ -1973,7 +2138,7 @@ virtual void OnEventAdvise(BOOL bAdvise);
  `bAdvise`  
  **TRUE**指示事件处理程序已连接到控件。 **FALSE**表示从控件断开连接事件处理程序。  
   
-##  <a name="a-nameonfontchangeda--colecontrolonfontchanged"></a><a name="onfontchanged"></a>COleControl::OnFontChanged  
+##  <a name="onfontchanged"></a>COleControl::OnFontChanged  
  常用字体属性值已更改时由框架调用。  
   
 ```  
@@ -1988,7 +2153,7 @@ virtual void OnFontChanged();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAxCtl #&6;](../../mfc/reference/codesnippet/cpp/colecontrol-class_7.cpp)]  
   
-##  <a name="a-nameonforecolorchangeda--colecontrolonforecolorchanged"></a><a name="onforecolorchanged"></a>COleControl::OnForeColorChanged  
+##  <a name="onforecolorchanged"></a>COleControl::OnForeColorChanged  
  常用的前景色属性值已更改时由框架调用。  
   
 ```  
@@ -2000,7 +2165,7 @@ virtual void OnForeColorChanged();
   
  如果您希望通知时此属性更改后的，重写此函数。  
   
-##  <a name="a-nameonfreezeeventsa--colecontrolonfreezeevents"></a><a name="onfreezeevents"></a>COleControl::OnFreezeEvents  
+##  <a name="onfreezeevents"></a>COleControl::OnFreezeEvents  
  在容器调用由框架调用**IOleControl::FreezeEvents**。  
   
 ```  
@@ -2016,7 +2181,7 @@ virtual void OnFreezeEvents(BOOL bFreeze);
   
  重写此函数，如果冻结或解冻事件处理时需要其他行为。  
   
-##  <a name="a-nameongetcolorseta--colecontrolongetcolorset"></a><a name="ongetcolorset"></a>COleControl::OnGetColorSet  
+##  <a name="ongetcolorset"></a>COleControl::OnGetColorSet  
  当容器调用时由框架调用**IViewObject::GetColorSet**成员函数。  
   
 ```  
@@ -2044,7 +2209,7 @@ virtual BOOL OnGetColorSet(
   
  重写此函数可执行此请求任何特殊处理。  
   
-##  <a name="a-nameongetcontrolinfoa--colecontrolongetcontrolinfo"></a><a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo  
+##  <a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo  
  由框架调用，在控件的容器已请求有关控件的信息。  
   
 ```  
@@ -2060,7 +2225,7 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
   
  如果您的控件需要处理助记键，重写此函数。  
   
-##  <a name="a-nameongetdisplaystringa--colecontrolongetdisplaystring"></a><a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString  
+##  <a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString  
  由框架调用以获取一个字符串，表示通过标识的属性的当前值`dispid`。  
   
 ```  
@@ -2082,7 +2247,7 @@ virtual BOOL OnGetDisplayString(
 ### <a name="remarks"></a>备注  
  如果您的控件具有其值不能直接转换为字符串属性，并且所需属性的值以显示容器提供属性浏览器中，重写此函数。  
   
-##  <a name="a-nameongetinplacemenua--colecontrolongetinplacemenu"></a><a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu  
+##  <a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu  
  UI 激活以获取要合并到容器的现有菜单的菜单控件时由框架调用。  
   
 ```  
@@ -2095,7 +2260,7 @@ virtual HMENU OnGetInPlaceMenu();
 ### <a name="remarks"></a>备注  
  合并 OLE 资源的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
-##  <a name="a-nameongetnaturalextenta--colecontrolongetnaturalextent"></a><a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent  
+##  <a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent  
  由以响应容器的框架调用**IViewObjectEx::GetNaturalExtent**请求。  
   
 ```  
@@ -2151,7 +2316,7 @@ virtual BOOL OnGetNaturalExtent(
 ### <a name="remarks"></a>备注  
  重写此函数可返回对象的显示大小接近中建议的大小和范围模式**DVEXTENTINFO**结构。 默认实现返回**FALSE** ，并不使任何调整大小。  
   
-##  <a name="a-nameongetpredefinedstringsa--colecontrolongetpredefinedstrings"></a><a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings  
+##  <a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings  
  由框架来获取一组预定义的字符串表示一个属性的可能值调用。  
   
 ```  
@@ -2177,7 +2342,7 @@ virtual BOOL OnGetPredefinedStrings(
 ### <a name="remarks"></a>备注  
  如果您的控件具有带的一组可以用字符串表示的可能值的属性，重写此函数。 每个元素添加到`pStringArray`，应添加到相应的"cookie"元素*pCookieArray。* 这些"cookie"值更高版本可以通过向框架传递`COleControl::OnGetPredefinedValue`函数。  
   
-##  <a name="a-nameongetpredefinedvaluea--colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue  
+##  <a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue  
  由框架调用以获取对应于一个先前返回的重写的预定义字符串的值`COleControl::OnGetPredefinedStrings`。  
   
 ```  
@@ -2200,7 +2365,7 @@ virtual BOOL OnGetPredefinedValue(
 ### <a name="return-value"></a>返回值  
  如果已在返回的值，则为非`lpvarOut`; 否则为 0。  
   
-##  <a name="a-nameongetviewextenta--colecontrolongetviewextent"></a><a name="ongetviewextent"></a>COleControl::OnGetViewExtent  
+##  <a name="ongetviewextent"></a>COleControl::OnGetViewExtent  
  由以响应容器的框架调用[IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032)请求。  
   
 ```  
@@ -2230,7 +2395,7 @@ virtual BOOL OnGetViewExtent(
 ### <a name="remarks"></a>备注  
  如果您的控件使用两次绘图，并且其不透明和透明部件具有不同的维度，重写此函数。  
   
-##  <a name="a-nameongetviewrecta--colecontrolongetviewrect"></a><a name="ongetviewrect"></a>COleControl::OnGetViewRect  
+##  <a name="ongetviewrect"></a>COleControl::OnGetViewRect  
  由以响应容器的框架调用**IViewObjectEx::GetRect**请求。  
   
 ```  
@@ -2256,7 +2421,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ### <a name="remarks"></a>备注  
  该对象的大小来转换`OnGetViewRect`到矩形 （默认为显示的左上的角） 的特定位置开始。 如果您的控件使用两次绘图，并且其不透明和透明部件具有不同的维度，重写此函数。  
   
-##  <a name="a-nameongetviewstatusa--colecontrolongetviewstatus"></a><a name="ongetviewstatus"></a>COleControl::OnGetViewStatus  
+##  <a name="ongetviewstatus"></a>COleControl::OnGetViewStatus  
  由以响应容器的框架调用**IViewObjectEx::GetViewStatus**请求。  
   
 ```  
@@ -2281,7 +2446,7 @@ virtual DWORD OnGetViewStatus();
 ### <a name="remarks"></a>备注  
  如果您的控件使用两次绘图，重写此函数。 默认实现返回**VIEWSTATUS_OPAQUE**。  
   
-##  <a name="a-nameonhidetoolbarsa--colecontrolonhidetoolbars"></a><a name="onhidetoolbars"></a>COleControl::OnHideToolBars  
+##  <a name="onhidetoolbars"></a>COleControl::OnHideToolBars  
  当控件处于停用的用户界面由框架调用。  
   
 ```  
@@ -2291,7 +2456,7 @@ virtual void OnHideToolBars();
 ### <a name="remarks"></a>备注  
  实现应隐藏所有工具栏显示`OnShowToolbars`。  
   
-##  <a name="a-nameoninactivemousemovea--colecontroloninactivemousemove"></a><a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove  
  将鼠标指针悬停在收到下的非活动对象的容器由调用`WM_MOUSEMOVE`消息。  
   
 ```  
@@ -2318,7 +2483,7 @@ virtual void OnInactiveMouseMove(
 ### <a name="remarks"></a>备注  
  请注意，窗口工作区坐标 （像素） 用来传递鼠标光标位置。 这是通过实现还将相同的坐标系统中传递该对象的边框。  
   
-##  <a name="a-nameoninactivesetcursora--colecontroloninactivesetcursor"></a><a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor  
  将鼠标指针悬停在收到下的非活动对象的容器由调用`WM_SETCURSOR`消息。  
   
 ```  
@@ -2352,7 +2517,7 @@ virtual BOOL OnInactiveSetCursor(
 ### <a name="remarks"></a>备注  
  请注意，窗口工作区坐标 （像素） 用来传递鼠标光标位置。 这是通过实现还将相同的坐标系统中传递该对象的边框。  
   
-##  <a name="a-nameonkeydowneventa--colecontrolonkeydownevent"></a><a name="onkeydownevent"></a>COleControl::OnKeyDownEvent  
+##  <a name="onkeydownevent"></a>COleControl::OnKeyDownEvent  
  在处理常用的 KeyDown 事件后，由框架调用。  
   
 ```  
@@ -2377,7 +2542,7 @@ virtual void OnKeyDownEvent(
 ### <a name="remarks"></a>备注  
  如果您的控件必须具有访问权限的密钥信息后触发的事件，重写此函数。  
   
-##  <a name="a-nameonkeypresseventa--colecontrolonkeypressevent"></a><a name="onkeypressevent"></a>COleControl::OnKeyPressEvent  
+##  <a name="onkeypressevent"></a>COleControl::OnKeyPressEvent  
  由框架调用后激发 KeyPress 事件的库存。  
   
 ```  
@@ -2393,7 +2558,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
   
  如果您想要通知此事件发生后，重写此函数。  
   
-##  <a name="a-nameonkeyupeventa--colecontrolonkeyupevent"></a><a name="onkeyupevent"></a>COleControl::OnKeyUpEvent  
+##  <a name="onkeyupevent"></a>COleControl::OnKeyUpEvent  
  在处理常用的 KeyDown 事件后，由框架调用。  
   
 ```  
@@ -2418,7 +2583,7 @@ virtual void OnKeyUpEvent(
 ### <a name="remarks"></a>备注  
  如果您的控件必须具有访问权限的密钥信息后触发的事件，重写此函数。  
   
-##  <a name="a-nameonmappropertytopagea--colecontrolonmappropertytopage"></a><a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage  
+##  <a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage  
  由框架后，若要获取实现编辑指定的属性的属性页的类 ID 调用。  
   
 ```  
@@ -2444,7 +2609,7 @@ virtual BOOL OnMapPropertyToPage(
 ### <a name="remarks"></a>备注  
  重写此函数可提供一个方法来调用从容器的属性浏览器控件的属性页。  
   
-##  <a name="a-nameonmnemonica--colecontrolonmnemonic"></a><a name="onmnemonic"></a>COleControl::OnMnemonic  
+##  <a name="onmnemonic"></a>COleControl::OnMnemonic  
  该容器已检测到 OLE 控件的助记键已按下时，由框架调用。  
   
 ```  
@@ -2455,7 +2620,7 @@ virtual void OnMnemonic(LPMSG pMsg);
  `pMsg`  
  一个指针，指向由助记键按键操作生成的 Windows 消息。  
   
-##  <a name="a-nameonpropertiesa--colecontrolonproperties"></a><a name="onproperties"></a>COleControl::OnProperties  
+##  <a name="onproperties"></a>COleControl::OnProperties  
  当容器调用控件的属性的谓词后由框架调用。  
   
 ```  
@@ -2483,7 +2648,7 @@ virtual BOOL OnProperties(
   
  您可以使用此函数使您的控件的属性页的显示。 调用`OnProperties`函数，传递中控件的父项句柄`hWndParent`参数。 在此例中的值`lpMsg`和`lpRect`参数将被忽略。  
   
-##  <a name="a-nameonqueryhitpointa--colecontrolonqueryhitpoint"></a><a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint  
+##  <a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint  
  由以响应容器的框架调用**IViewObjectEx::QueryHitPoint**请求。  
   
 ```  
@@ -2525,7 +2690,7 @@ virtual BOOL OnQueryHitPoint(
 ### <a name="remarks"></a>备注  
  查询对象的显示矩形是否与给定的点重叠 （达到该点）。 `QueryHitPoint`可以重写以测试命中非矩形对象。  
   
-##  <a name="a-nameonqueryhitrecta--colecontrolonqueryhitrect"></a><a name="onqueryhitrect"></a>COleControl::OnQueryHitRect  
+##  <a name="onqueryhitrect"></a>COleControl::OnQueryHitRect  
  由以响应容器的框架调用**IViewObjectEx::QueryHitRect**请求。  
   
 ```  
@@ -2563,7 +2728,7 @@ virtual BOOL OnQueryHitRect(
 ### <a name="remarks"></a>备注  
  查询对象的显示矩形是否与给定的矩形中的任意点 （达到该矩形） 重叠。 `QueryHitRect`可以重写以测试命中非矩形对象。  
   
-##  <a name="a-nameonrenderdataa--colecontrolonrenderdata"></a><a name="onrenderdata"></a>COleControl::OnRenderData  
+##  <a name="onrenderdata"></a>COleControl::OnRenderData  
  由框架用于检索指定的格式数据调用。  
   
 ```  
@@ -2591,7 +2756,7 @@ virtual BOOL OnRenderData(
   
  有关详细信息，请参阅**FORMATETC**和**STGMEDIUM**中结构[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonrenderfiledataa--colecontrolonrenderfiledata"></a><a name="onrenderfiledata"></a>COleControl::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>COleControl::OnRenderFileData  
  由框架来检索指定格式的数据文件的存储介质时调用。  
   
 ```  
@@ -2617,7 +2782,7 @@ virtual BOOL OnRenderFileData(
   
  有关详细信息，请参阅**FORMATETC**结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonrenderglobaldataa--colecontrolonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData  
  由框架来检索指定格式的数据在指定的存储介质全局内存时调用。  
   
 ```  
@@ -2645,7 +2810,7 @@ virtual BOOL OnRenderGlobalData(
   
  有关详细信息，请参阅**FORMATETC**结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonresetstatea--colecontrolonresetstate"></a><a name="onresetstate"></a>COleControl::OnResetState  
+##  <a name="onresetstate"></a>COleControl::OnResetState  
  当控件的属性应设为其默认值由框架调用。  
   
 ```  
@@ -2657,7 +2822,7 @@ virtual void OnResetState();
   
  控件编写人员可以在此插入初始化代码的 OLE 控件可重写。 当调用此函数[ipersiststream:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680568)或[ipersiststorage:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680557)出现故障，或[IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234)或[IPersistStorage::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194)调用，而不第一个调用**ipersiststream:: Load**或**ipersiststorage:: Load**。  
   
-##  <a name="a-nameonsetclientsitea--colecontrolonsetclientsite"></a><a name="onsetclientsite"></a>Colecontrol:: Onsetclientsite  
+##  <a name="onsetclientsite"></a>Colecontrol:: Onsetclientsite  
  在容器已调用该控件时由框架调用**IOleControl::SetClientSite**函数。  
   
 ```  
@@ -2669,7 +2834,7 @@ virtual void OnSetClientSite();
   
  重写此函数可执行该通知的任何特殊处理。 具体而言，此函数的重写应调用基类。  
   
-##  <a name="a-nameonsetdataa--colecontrolonsetdata"></a><a name="onsetdata"></a>COleControl::OnSetData  
+##  <a name="onsetdata"></a>COleControl::OnSetData  
  由该控件的数据替换为指定的数据连接的框架调用。  
   
 ```  
@@ -2699,7 +2864,7 @@ virtual BOOL OnSetData(
   
  有关详细信息，请参阅**FORMATETC**和**STGMEDIUM**中结构[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonsetextenta--colecontrolonsetextent"></a><a name="onsetextent"></a>COleControl::OnSetExtent  
+##  <a name="onsetextent"></a>COleControl::OnSetExtent  
  控件的大小时需要因调用而更改时由框架调用[IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330)。  
   
 ```  
@@ -2718,7 +2883,7 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
   
  重写此函数可更改您的控件的默认大小调整。  
   
-##  <a name="a-nameonsetobjectrectsa--colecontrolonsetobjectrects"></a><a name="onsetobjectrects"></a>COleControl::OnSetObjectRects  
+##  <a name="onsetobjectrects"></a>COleControl::OnSetObjectRects  
  由框架调用以实现对调用[IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767)。  
   
 ```  
@@ -2742,7 +2907,7 @@ virtual BOOL OnSetObjectRects(
   
  重写此函数来改变此函数的默认行为。  
   
-##  <a name="a-nameonshowtoolbarsa--colecontrolonshowtoolbars"></a><a name="onshowtoolbars"></a>COleControl::OnShowToolBars  
+##  <a name="onshowtoolbars"></a>COleControl::OnShowToolBars  
  当控件已激活的用户界面时由框架调用。  
   
 ```  
@@ -2752,7 +2917,7 @@ virtual void OnShowToolBars();
 ### <a name="remarks"></a>备注  
  默认实现不执行任何操作。  
   
-##  <a name="a-nameontextchangeda--colecontrolontextchanged"></a><a name="ontextchanged"></a>COleControl::OnTextChanged  
+##  <a name="ontextchanged"></a>COleControl::OnTextChanged  
  常用的标题或文本属性值已更改时由框架调用。  
   
 ```  
@@ -2764,7 +2929,7 @@ virtual void OnTextChanged();
   
  如果您希望通知时此属性更改后的，重写此函数。  
   
-##  <a name="a-nameonwindowlessmessagea--colecontrolonwindowlessmessage"></a><a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage  
+##  <a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage  
  由以响应容器的框架调用**IOleInPlaceObjectWindowless::OnWindowMessage**请求。  
   
 ```  
@@ -2796,7 +2961,7 @@ virtual BOOL OnWindowlessMessage(
   
  由于无窗口对象还没有一个窗口，他们需要一种机制以允许发送到它们的容器调度消息。 无窗口的 OLE 对象从其容器中获取消息通过`OnWindowMessage`方法`IOleInPlaceObjectWindowless`接口 (扩展名为[IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646)无窗口支持)。 `OnWindowMessage`不采用`HWND`参数。  
   
-##  <a name="a-nameparenttoclienta--colecontrolparenttoclient"></a><a name="parenttoclient"></a>COleControl::ParentToClient  
+##  <a name="parenttoclient"></a>COleControl::ParentToClient  
  将转换的坐标`pPoint`成工作区坐标。  
   
 ```  
@@ -2870,7 +3035,7 @@ virtual UINT ParentToClient(
 ### <a name="remarks"></a>备注  
  在输入`pPoint`是相对于父级 （左上角的容器） 的源。 在输出`pPoint`是相对于原点 OLE 控件 （左上角的控件的客户端区域） 的工作区。  
   
-##  <a name="a-namepostmodaldialoga--colecontrolpostmodaldialog"></a><a name="postmodaldialog"></a>COleControl::PostModalDialog  
+##  <a name="postmodaldialog"></a>COleControl::PostModalDialog  
  通知容器有模式对话框已关闭。  
   
 ```  
@@ -2884,7 +3049,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 ### <a name="remarks"></a>备注  
  在显示任何模式对话框后调用此函数。 您必须调用此函数，以便容器可以启用被禁用的任何顶级窗口`PreModalDialog`。 此函数应通过调用配对`PreModalDialog`。  
   
-##  <a name="a-namepremodaldialoga--colecontrolpremodaldialog"></a><a name="premodaldialog"></a>COleControl::PreModalDialog  
+##  <a name="premodaldialog"></a>COleControl::PreModalDialog  
  通知将会显示一个模式对话框的容器。  
   
 ```  
@@ -2898,7 +3063,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 ### <a name="remarks"></a>备注  
  在显示任何模式对话框之前调用此函数。 您必须调用此函数，以便容器可以禁用所有顶层窗口。 显示了模式对话框后，必须调用`PostModalDialog`。  
   
-##  <a name="a-namerecreatecontrolwindowa--colecontrolrecreatecontrolwindow"></a><a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow  
+##  <a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow  
  销毁并重新创建该控件的窗口。  
   
 ```  
@@ -2908,7 +3073,7 @@ void RecreateControlWindow();
 ### <a name="remarks"></a>备注  
  这可能是有必要，如果需要更改窗口的样式位。  
   
-##  <a name="a-namerefresha--colecontrolrefresh"></a><a name="refresh"></a>COleControl::Refresh  
+##  <a name="refresh"></a>COleControl::Refresh  
  强行 OLE 控件重绘。  
   
 ```  
@@ -2918,7 +3083,7 @@ void Refresh();
 ### <a name="remarks"></a>备注  
  此函数支持通过`COleControl`基类作为调用刷新的常用方法。 这允许 OLE 控件的用户重绘窗体控件在特定时间。 此方法的详细信息，请参阅文章[ActiveX 控件︰ 方法](../../mfc/mfc-activex-controls-methods.md)。  
   
-##  <a name="a-namereleasecapturea--colecontrolreleasecapture"></a><a name="releasecapture"></a>COleControl::ReleaseCapture  
+##  <a name="releasecapture"></a>COleControl::ReleaseCapture  
  释放鼠标捕获。  
   
 ```  
@@ -2931,7 +3096,7 @@ BOOL ReleaseCapture();
 ### <a name="remarks"></a>备注  
  如果控件当前具有鼠标捕获，则释放捕获。 否则，此函数具有不起作用。  
   
-##  <a name="a-namereleasedca--colecontrolreleasedc"></a><a name="releasedc"></a>COleControl::ReleaseDC  
+##  <a name="releasedc"></a>COleControl::ReleaseDC  
  释放由其他应用程序释放使用的设备上下文的无窗口控件的容器的显示设备上下文。  
   
 ```  
@@ -2948,7 +3113,7 @@ int ReleaseDC(CDC* pDC);
 ### <a name="remarks"></a>备注  
  应用程序必须调用`ReleaseDC`每次调用[GetDC](#getdc)。  
   
-##  <a name="a-namereparentcontrolwindowa--colecontrolreparentcontrolwindow"></a><a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow  
+##  <a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow  
  设置控件的父级。  
   
 ```  
@@ -2967,7 +3132,7 @@ virtual void ReparentControlWindow(
 ### <a name="remarks"></a>备注  
  调用此函数可重置控制窗口的父级。  
   
-##  <a name="a-nameresetstockpropsa--colecontrolresetstockprops"></a><a name="resetstockprops"></a>COleControl::ResetStockProps  
+##  <a name="resetstockprops"></a>COleControl::ResetStockProps  
  初始化的状态`COleControl`常用属性为其默认值。  
   
 ```  
@@ -2982,7 +3147,7 @@ void ResetStockProps();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAxCtl #&7;](../../mfc/reference/codesnippet/cpp/colecontrol-class_8.cpp)]  
   
-##  <a name="a-nameresetversiona--colecontrolresetversion"></a><a name="resetversion"></a>COleControl::ResetVersion  
+##  <a name="resetversion"></a>COleControl::ResetVersion  
  初始化为指定值的版本号。  
   
 ```  
@@ -2996,7 +3161,7 @@ void ResetVersion(DWORD dwVersionDefault);
 ### <a name="remarks"></a>备注  
  你可以通过使用提高控件的二进制初始化性能`ResetVersion`和`ResetStockProps`重写`COleControl::OnResetState`。 参阅位于示例[ResetStockProps](#resetstockprops)。 有关优化初始化的详细信息，请参阅[ActiveX 控件︰ 优化](../../mfc/mfc-activex-controls-optimization.md)。  
   
-##  <a name="a-namescrollwindowa--colecontrolscrollwindow"></a><a name="scrollwindow"></a>COleControl::ScrollWindow  
+##  <a name="scrollwindow"></a>COleControl::ScrollWindow  
  允许无窗口的 OLE 对象进行滚动它在屏幕上处于就地活动映像内的一个区域。  
   
 ```  
@@ -3020,7 +3185,7 @@ void ScrollWindow(
  `lpClipRect`  
  指向`CRect`对象或`RECT`结构，它指定到向剪辑矩形。 只有在该矩形内的像素的滚动量。 在矩形外的 bits 不会受到影响，即使它们位于`lpRect`矩形。 如果`lpClipRect`是**NULL**，不存在修剪执行滚动矩形上。  
   
-##  <a name="a-nameselectfontobjecta--colecontrolselectfontobject"></a><a name="selectfontobject"></a>COleControl::SelectFontObject  
+##  <a name="selectfontobject"></a>COleControl::SelectFontObject  
  选择到设备上下文的一种字体。  
   
 ```  
@@ -3039,7 +3204,7 @@ CFont* SelectFontObject(
 ### <a name="return-value"></a>返回值  
  一个指向以前选定的字体。 当调用方已完成绘图使用所有操作都*fontHolder，*它应重新以前选定的字体选择通过将其传递以参数形式向[CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject)。  
   
-##  <a name="a-nameselectstockfonta--colecontrolselectstockfont"></a><a name="selectstockfont"></a>COleControl::SelectStockFont  
+##  <a name="selectstockfont"></a>COleControl::SelectStockFont  
  选择到设备上下文的堆栈 Font 属性。  
   
 ```  
@@ -3053,7 +3218,7 @@ CFont* SelectStockFont(CDC* pDC);
 ### <a name="return-value"></a>返回值  
  一个指向以前选定的`CFont`对象。 应使用[CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject)若要在完成时恢复到的设备上下文选择该字体。  
   
-##  <a name="a-nameserializeextenta--colecontrolserializeextent"></a><a name="serializeextent"></a>COleControl::SerializeExtent  
+##  <a name="serializeextent"></a>COleControl::SerializeExtent  
  序列化或初始化分配给该控件的显示空间的状态。  
   
 ```  
@@ -3070,7 +3235,7 @@ void SerializeExtent(CArchive& ar);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCAxCtl #&8;](../../mfc/reference/codesnippet/cpp/colecontrol-class_9.cpp)]  
   
-##  <a name="a-nameserializestockpropsa--colecontrolserializestockprops"></a><a name="serializestockprops"></a>COleControl::SerializeStockProps  
+##  <a name="serializestockprops"></a>COleControl::SerializeStockProps  
  序列化或初始化的状态`COleControl`常用属性︰ 外观、 backcolor、 borderstyle、 标题、 已启用、 字体、 前景色和文本。  
   
 ```  
@@ -3086,7 +3251,7 @@ void SerializeStockProps(CArchive& ar);
   
  你可以通过使用提高控件的二进制暂留性能`SerializeStockProps`， `SerializeExtent`，和`SerializeVersion`重写**COleControl::Serialize**。 有关示例，请参阅处的代码[SerializeExtent](#serializeextent)。 有关优化初始化的详细信息，请参阅[ActiveX 控件︰ 优化](../../mfc/mfc-activex-controls-optimization.md)。  
   
-##  <a name="a-nameserializeversiona--colecontrolserializeversion"></a><a name="serializeversion"></a>COleControl::SerializeVersion  
+##  <a name="serializeversion"></a>COleControl::SerializeVersion  
  序列化或初始化控件的版本信息的状态。  
   
 ```  
@@ -3112,7 +3277,7 @@ DWORD SerializeVersion(
 ### <a name="remarks"></a>备注  
  你可以通过使用提高控件的二进制暂留性能`SerializeVersion`， `SerializeExtent`，和`SerializeStockProps`重写**COleControl::Serialize**。 有关示例，请参阅处的代码[SerializeExtent](#serializeextent)。 有关优化初始化的详细信息，请参阅[ActiveX 控件︰ 优化](../../mfc/mfc-activex-controls-optimization.md)。  
   
-##  <a name="a-namesetappearancea--colecontrolsetappearance"></a><a name="setappearance"></a>COleControl::SetAppearance  
+##  <a name="setappearance"></a>COleControl::SetAppearance  
  设置控件的股票的外观属性值。  
   
 ```  
@@ -3126,7 +3291,7 @@ void SetAppearance (short sAppearance);
 ### <a name="remarks"></a>备注  
  关于常用属性的详细信息，请参阅[ActiveX 控件︰ 属性](../../mfc/mfc-activex-controls-properties.md)。  
   
-##  <a name="a-namesetbackcolora--colecontrolsetbackcolor"></a><a name="setbackcolor"></a>COleControl::SetBackColor  
+##  <a name="setbackcolor"></a>COleControl::SetBackColor  
  设置控件的股票的 backcolor 属性值。  
   
 ```  
@@ -3140,7 +3305,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 ### <a name="remarks"></a>备注  
  使用此属性和其他详细信息相关属性，请参阅文章[ActiveX 控件︰ 属性](../../mfc/mfc-activex-controls-properties.md)。  
   
-##  <a name="a-namesetborderstylea--colecontrolsetborderstyle"></a><a name="setborderstyle"></a>COleControl::SetBorderStyle  
+##  <a name="setborderstyle"></a>COleControl::SetBorderStyle  
  设置控件的股票的边框样式属性值。  
   
 ```  
@@ -3154,7 +3319,7 @@ void SetBorderStyle(short sBorderStyle);
 ### <a name="remarks"></a>备注  
  控制窗口将重新创建和`OnBorderStyleChanged`调用。  
   
-##  <a name="a-namesetcapturea--colecontrolsetcapture"></a><a name="setcapture"></a>COleControl::SetCapture  
+##  <a name="setcapture"></a>COleControl::SetCapture  
  导致该控件的容器窗口控件的代表将占用鼠标捕获。  
   
 ```  
@@ -3167,7 +3332,7 @@ CWnd* SetCapture();
 ### <a name="remarks"></a>备注  
  如果该控件已激活并无窗口，此函数将导致控件的容器窗口控件的代表将占用鼠标捕获。 否则，此函数将导致控件本身需要拥有鼠标捕获 (与相同`CWnd::SetCapture`)。  
   
-##  <a name="a-namesetcontrolsizea--colecontrolsetcontrolsize"></a><a name="setcontrolsize"></a>COleControl::SetControlSize  
+##  <a name="setcontrolsize"></a>COleControl::SetControlSize  
  设置 OLE 控件窗口的大小，并通知更改控件所在位置的容器。  
   
 ```  
@@ -3189,7 +3354,7 @@ BOOL SetControlSize(int cx, int cy);
   
  请注意，用于控制 windows 的所有坐标都都相对于控件的左上角。  
   
-##  <a name="a-namesetenableda--colecontrolsetenabled"></a><a name="setenabled"></a>COleControl::SetEnabled  
+##  <a name="setenabled"></a>COleControl::SetEnabled  
  设置常用控件的 Enabled 属性值。  
   
 ```  
@@ -3203,7 +3368,7 @@ void SetEnabled(BOOL bEnabled);
 ### <a name="remarks"></a>备注  
  设置此属性后**OnEnabledChange**调用。  
   
-##  <a name="a-namesetfocusa--colecontrolsetfocus"></a><a name="setfocus"></a>COleControl::SetFocus  
+##  <a name="setfocus"></a>COleControl::SetFocus  
  使控件的容器的窗口，才能拥有输入焦点的控件的代表。  
   
 ```  
@@ -3218,7 +3383,7 @@ CWnd* SetFocus();
   
  如果控件不是无窗口的此函数会导致控件本身需要拥有输入焦点 (与相同`CWnd::SetFocus`)。  
   
-##  <a name="a-namesetfonta--colecontrolsetfont"></a><a name="setfont"></a>COleControl::SetFont  
+##  <a name="setfont"></a>COleControl::SetFont  
  设置您的控件的堆栈 Font 属性。  
   
 ```  
@@ -3229,7 +3394,7 @@ void SetFont(LPFONTDISP pFontDisp);
  *pFontDisp*  
  指向一个字体的调度接口的指针。  
   
-##  <a name="a-namesetforecolora--colecontrolsetforecolor"></a><a name="setforecolor"></a>COleControl::SetForeColor  
+##  <a name="setforecolor"></a>COleControl::SetForeColor  
  设置控件的股票的前景色属性值。  
   
 ```  
@@ -3243,7 +3408,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 ### <a name="remarks"></a>备注  
  使用此属性和其他详细信息相关属性，请参阅文章[ActiveX 控件︰ 属性](../../mfc/mfc-activex-controls-properties.md)。  
   
-##  <a name="a-namesetinitialdataformatsa--colecontrolsetinitialdataformats"></a><a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats  
+##  <a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats  
  调用由框架来初始化该控件所支持的数据格式的列表。  
   
 ```  
@@ -3253,7 +3418,7 @@ virtual void SetInitialDataFormats();
 ### <a name="remarks"></a>备注  
  默认实现指定这两种格式︰`CF_METAFILEPICT`和设置的持久性属性。  
   
-##  <a name="a-namesetinitialsizea--colecontrolsetinitialsize"></a><a name="setinitialsize"></a>COleControl::SetInitialSize  
+##  <a name="setinitialsize"></a>COleControl::SetInitialSize  
  设置 OLE 控件容器中第一次显示的大小。  
   
 ```  
@@ -3272,7 +3437,7 @@ void SetInitialSize(
 ### <a name="remarks"></a>备注  
  调用此函数在构造函数来设置您的控件的初始大小。 以设备单位或像素为单位的初始大小。 建议在您的控件的构造函数中执行此调用。  
   
-##  <a name="a-namesetmodifiedflaga--colecontrolsetmodifiedflag"></a><a name="setmodifiedflag"></a>COleControl::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>COleControl::SetModifiedFlag  
  控件的已修改的状态更改。  
   
 ```  
@@ -3286,7 +3451,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="remarks"></a>备注  
  调用此函数，当发生了更改会影响您的控件的持久状态。 例如，如果持久属性的值发生更改，调用此函数与`bModified` **TRUE**。  
   
-##  <a name="a-namesetnotpermitteda--colecontrolsetnotpermitted"></a><a name="setnotpermitted"></a>COleControl::SetNotPermitted  
+##  <a name="setnotpermitted"></a>COleControl::SetNotPermitted  
  指示编辑请求已失败。  
   
 ```  
@@ -3296,7 +3461,7 @@ void SetNotPermitted();
 ### <a name="remarks"></a>备注  
  调用此函数时`BoundPropertyRequestEdit`失败。 此函数将引发类型的异常**COleDispScodeException**以指示不允许使用 set 操作。  
   
-##  <a name="a-namesetnotsupporteda--colecontrolsetnotsupported"></a><a name="setnotsupported"></a>Colecontrol:: Setnotsupported  
+##  <a name="setnotsupported"></a>Colecontrol:: Setnotsupported  
  可防止对控件的属性值由用户修改。  
   
 ```  
@@ -3306,7 +3471,7 @@ void SetNotSupported();
 ### <a name="remarks"></a>备注  
  调用此函数来代替任何属性的 Set 函数不支持的属性值由该控件的用户修改。 一个示例是一个属性，它只读的。  
   
-##  <a name="a-namesetrectincontainera--colecontrolsetrectincontainer"></a><a name="setrectincontainer"></a>COleControl::SetRectInContainer  
+##  <a name="setrectincontainer"></a>COleControl::SetRectInContainer  
  设置相对于容器，用设备单位表示控件的矩形的坐标。  
   
 ```  
@@ -3323,7 +3488,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 ### <a name="remarks"></a>备注  
  如果控件处于打开状态，其大小将调整;否则为容器的**OnPosRectChanged**调用函数。  
   
-##  <a name="a-namesettexta--colecontrolsettext"></a><a name="settext"></a>COleControl::SetText  
+##  <a name="settext"></a>COleControl::SetText  
  设置控件的股票 Caption 或 Text 属性的值。  
   
 ```  
@@ -3337,7 +3502,7 @@ void SetText(LPCTSTR pszText);
 ### <a name="remarks"></a>备注  
  请注意，常用的标题和文本属性都映射到相同的值。 这意味着对这两个属性所做的任何更改将自动更改这两个属性。 一般情况下，股票标题或 Text 属性，但不要两者都应支持控件。  
   
-##  <a name="a-namethrowerrora--colecontrolthrowerror"></a><a name="throwerror"></a>Colecontrol:: Throwerror  
+##  <a name="throwerror"></a>Colecontrol:: Throwerror  
  用信号通知您的控件中的错误的匹配项。  
   
 ```  
@@ -3369,7 +3534,7 @@ void ThrowError(
 ### <a name="remarks"></a>备注  
  此函数应仅从调用 Get 或 Set 函数中的 OLE 属性或 OLE 自动化方法的实现。 如果您需要发出信号在其他情况下出现的错误，应触发常用的错误事件。  
   
-##  <a name="a-nametransformcoordsa--colecontroltransformcoords"></a><a name="transformcoords"></a>COleControl::TransformCoords  
+##  <a name="transformcoords"></a>COleControl::TransformCoords  
  转换坐标之间的值**HIMETRIC**单位和容器的本机单位。  
   
 ```  
@@ -3400,7 +3565,7 @@ void TransformCoords(
 ### <a name="remarks"></a>备注  
  前两个标志， **XFORMCOORDS_POSITION**和**XFORMCOORDS_SIZE**，指示是否应作为一个位置或大小，处理坐标。 剩余的两个标志指示方向的转换。  
   
-##  <a name="a-nametranslatecolora--colecontroltranslatecolor"></a><a name="translatecolor"></a>COleControl::TranslateColor  
+##  <a name="translatecolor"></a>COleControl::TranslateColor  
  将转换的颜色值**OLE_COLOR**数据类型设置为[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)数据类型。  
   
 ```  
@@ -3422,7 +3587,7 @@ COLORREF TranslateColor(
 ### <a name="remarks"></a>备注  
  此函数可将转换为常用的前景色和背景色属性**COLORREF**所使用的类型[CDC](../../mfc/reference/cdc-class.md)成员函数。  
   
-##  <a name="a-namewillambientsbevalidduringloada--colecontrolwillambientsbevalidduringload"></a><a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad  
+##  <a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad  
  确定您的控件是否应作为默认值中使用的环境属性的值时从其持久性状态随后加载它。  
   
 ```  
@@ -3435,7 +3600,7 @@ BOOL WillAmbientsBeValidDuringLoad();
 ### <a name="remarks"></a>备注  
  在某些容器中，您的控件可能没有访问权限对其环境属性在初始的重写中调用期间`COleControl::DoPropExchange`。 这种情况，如果该容器调用[IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730)或[ipersiststorage:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680557)之前调用[IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) (即，如果它不会遵循**OLEMISC_SETCLIENTSITEFIRST**状态位)。  
   
-##  <a name="a-namewindowproca--colecontrolwindowproc"></a><a name="windowproc"></a>COleControl::WindowProc  
+##  <a name="windowproc"></a>COleControl::WindowProc  
  提供有关 Windows 过程`COleControl`对象。  
   
 ```  

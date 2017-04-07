@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
+- AFXDOCOBJ/COleCmdUI
+- AFXDOCOBJ/COleCmdUI::COleCmdUI
+- AFXDOCOBJ/COleCmdUI::Enable
+- AFXDOCOBJ/COleCmdUI::SetCheck
+- AFXDOCOBJ/COleCmdUI::SetText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>要求  
  **标头︰** afxdocobj.h  
   
-##  <a name="a-namecolecmduia--colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
  构造`COleCmdUI`与特定的用户界面命令相关联的对象。  
   
 ```  
@@ -107,7 +112,7 @@ COleCmdUI(
 ### <a name="remarks"></a>备注  
  `COleCmdUI`对象提供用于更新菜单项或控件条按钮之类的 DocObject 用户界面对象的编程接口。 可以启用、 禁用、 清除通过用户界面对象和选中状态，`COleCmdUI`对象。  
   
-##  <a name="a-nameenablea--colecmduienable"></a><a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>COleCmdUI::Enable  
  调用此函数可设置的命令标志`COleCmdUI`对象传递给**OLECOMDF_ENABLED**，该参数告诉界面命令是否可用，且已启用，或清除的命令标志。  
   
 ```  
@@ -118,7 +123,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  指示该命令与`COleCmdUI`对象应启用还是禁用。 Nonzero 使命令;0 禁用的命令。  
   
-##  <a name="a-namesetchecka--colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>COleCmdUI::SetCheck  
  调用此函数可设置的状态的开/关切换命令。  
   
 ```  
@@ -135,7 +140,7 @@ virtual void SetCheck(int nCheck);
 |**2**|将该命令设置为不确定的;因为此命令的属性是在同时打开和关闭相关的所选内容中的状态不确定状态。|  
 |任何其他值|设置为 off 的命令。|  
   
-##  <a name="a-namesettexta--colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>COleCmdUI::SetText  
  调用此函数可返回命令的文本名称或状态字符串。  
   
 ```  

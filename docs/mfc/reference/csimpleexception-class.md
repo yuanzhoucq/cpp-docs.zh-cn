@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleException
+- AFX/CSimpleException
+- AFX/CSimpleException::CSimpleException
+- AFX/CSimpleException::GetErrorMessage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +90,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="a-namecsimpleexceptiona--csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
  构造函数。  
   
 ```  
@@ -102,7 +105,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>备注  
  永远不会正常情况下需要直接调用此构造函数。 将引发异常的函数应创建的实例`CException`的派生类并调用其构造函数，也应使用的 MFC 引发是否如函数、 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 引发预定义的类型。  
   
-##  <a name="a-namegeterrormessagea--csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
  调用该成员函数以提供有关已发生错误的文本。  
   
 ```  

@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog::COlePasteSpecialDialog
+- AFXODLGS/COlePasteSpecialDialog::AddFormat
+- AFXODLGS/COlePasteSpecialDialog::AddLinkEntry
+- AFXODLGS/COlePasteSpecialDialog::AddStandardFormats
+- AFXODLGS/COlePasteSpecialDialog::CreateItem
+- AFXODLGS/COlePasteSpecialDialog::DoModal
+- AFXODLGS/COlePasteSpecialDialog::GetDrawAspect
+- AFXODLGS/COlePasteSpecialDialog::GetIconicMetafile
+- AFXODLGS/COlePasteSpecialDialog::GetPasteIndex
+- AFXODLGS/COlePasteSpecialDialog::GetSelectionType
+- AFXODLGS/COlePasteSpecialDialog::m_ps
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +116,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="requirements"></a>要求  
  **标头︰** afxodlgs.h  
   
-##  <a name="a-nameaddformata--colepastespecialdialogaddformat"></a><a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
+##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
  调用此函数可将新的格式添加到您的应用程序可以支持选择性粘贴操作中的格式的列表。  
   
 ```  
@@ -158,7 +170,7 @@ void AddFormat(
   
  有关详细信息，请参阅[OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)枚举类型中的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameaddlinkentrya--colepastespecialdialogaddlinkentry"></a><a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
+##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
  将新条目添加到受支持的剪贴板格式的列表。  
   
 ```  
@@ -172,7 +184,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="return-value"></a>返回值  
  [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)结构，它包含的新链接项的信息。  
   
-##  <a name="a-nameaddstandardformatsa--colepastespecialdialogaddstandardformats"></a><a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
+##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
  调用此函数可将以下剪贴板格式添加到您的应用程序可以支持选择性粘贴操作中的格式的列表︰  
   
 ```  
@@ -197,7 +209,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
  这些格式用于支持嵌入对象和链接。  
   
-##  <a name="a-namecolepastespecialdialoga--colepastespecialdialogcolepastespecialdialog"></a><a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
+##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
  构造 `COlePasteSpecialDialog` 对象。  
   
 ```  
@@ -230,7 +242,7 @@ COlePasteSpecialDialog(
   
  有关详细信息，请参阅[OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)枚举类型中的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecreateitema--colepastespecialdialogcreateitem"></a><a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
+##  <a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
  创建选择性粘贴对话框中选择了一个新项。  
   
 ```  
@@ -247,7 +259,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="remarks"></a>备注  
  此函数只应调用之后[DoModal](#domodal)返回**IDOK**。  
   
-##  <a name="a-namedomodala--colepastespecialdialogdomodal"></a><a name="domodal"></a>COlePasteSpecialDialog::DoModal  
+##  <a name="domodal"></a>COlePasteSpecialDialog::DoModal  
  显示 OLE 选择性粘贴对话框。  
   
 ```  
@@ -268,7 +280,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`返回**IDOK**，可调用其他成员函数来检索设置或用户的信息输入到对话框。  
   
-##  <a name="a-namegetdrawaspecta--colepastespecialdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
  确定用户选择要以图标形式显示的选定的项。  
   
 ```  
@@ -287,7 +299,7 @@ DVASPECT GetDrawAspect() const;
   
  绘制方面的详细信息，请参阅[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegeticonicmetafilea--colepastespecialdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
  获取与用户选定的项关联的图元文件。  
   
 ```  
@@ -297,7 +309,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>返回值  
  如果通过选择解除对话框时选择了显示为图标复选框包含所选项目，该图标方面的图元文件的句柄**确定**; 否则为**NULL**。  
   
-##  <a name="a-namegetpasteindexa--colepastespecialdialoggetpasteindex"></a><a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
+##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
  获取索引值与此项关联选定的用户。  
   
 ```  
@@ -310,7 +322,7 @@ int GetPasteIndex() const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetselectiontypea--colepastespecialdialoggetselectiontype"></a><a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
  确定用户所做的选择的类型。  
   
 ```  
@@ -323,19 +335,14 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>备注  
  返回类型值都由指定**选择**枚举类型中声明`COlePasteSpecialDialog`类。  
   
- `enum Selection`  
-  
- `{`  
-  
- `pasteLink,`  
-  
- `pasteNormal,`  
-  
- `pasteOther,`  
-  
- `pasteStatic`  
-  
- `};`  
+```  
+enum Selection {
+    pasteLink,
+    pasteNormal,
+    pasteOther,
+    pasteStatic
+    };  
+```  
   
  请按照这些值的简短 desccriptions 操作︰  
   
@@ -347,7 +354,7 @@ UINT GetSelectionType() const;
   
 - **COlePasteSpecialDialog::pasteStatic**所选的格式的图元文件。  
   
-##  <a name="a-namempsa--colepastespecialdialogmps"></a><a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
+##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
  类型的结构**OLEUIPASTESPECIAL**用来控制选择性粘贴对话框中的行为。  
   
 ```  

@@ -13,7 +13,7 @@
 # [使用 C++/CLI 的 .NET开发](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Visual C++ 中的云和 Web 编程](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [并行编程](parallel/parallel-programming-in-visual-cpp.md)
-# [数据访问](data/index.md)
+# [数据访问](data/data-access-in-cpp.md)
 # [文本和字符串](text/text-and-strings-in-visual-cpp.md)
 # [使用 C++ 的 Visual Studio IDE](ide/ide-and-tools-for-visual-cpp-development.md)
 # [编译器和生成工具](build/building-c-cpp-programs.md)

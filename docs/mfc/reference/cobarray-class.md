@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CObArray
+- AFXCOLL/CObArray
+- AFXCOLL/CObArray::CObArray
+- AFXCOLL/CObArray::Add
+- AFXCOLL/CObArray::Append
+- AFXCOLL/CObArray::Copy
+- AFXCOLL/CObArray::ElementAt
+- AFXCOLL/CObArray::FreeExtra
+- AFXCOLL/CObArray::GetAt
+- AFXCOLL/CObArray::GetCount
+- AFXCOLL/CObArray::GetData
+- AFXCOLL/CObArray::GetSize
+- AFXCOLL/CObArray::GetUpperBound
+- AFXCOLL/CObArray::InsertAt
+- AFXCOLL/CObArray::IsEmpty
+- AFXCOLL/CObArray::RemoveAll
+- AFXCOLL/CObArray::RemoveAt
+- AFXCOLL/CObArray::SetAt
+- AFXCOLL/CObArray::SetAtGrow
+- AFXCOLL/CObArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,7 +137,7 @@ class CObArray : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxcoll.h  
   
-##  <a name="a-nameadda--cobarrayadd"></a><a name="add"></a>CObArray::Add  
+##  <a name="add"></a>CObArray::Add  
  将新元素添加到数组，由 1 增长数组的末尾。  
   
 ```  
@@ -159,7 +178,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="a-nameappenda--cobarrayappend"></a><a name="append"></a>CObArray::Append  
+##  <a name="append"></a>CObArray::Append  
  调用该成员函数以另一个数组的内容添加到给定数组的末尾。  
   
 ```  
@@ -194,7 +213,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections #&76;](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="a-namecopya--cobarraycopy"></a><a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>CObArray::Copy  
  调用该成员函数以覆盖给定数组的元素具有相同类型的另一个数组的元素。  
   
 ```  
@@ -224,7 +243,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections #&77;](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="a-namecobarraya--cobarraycobarray"></a><a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>CObArray::CObArray  
  构造一个空`CObject`指针数组。  
   
 ```  
@@ -248,7 +267,7 @@ CObArray();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCCollections #&78;](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="a-nameelementata--cobarrayelementat"></a><a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>CObArray::ElementAt  
  在该数组中返回对元素指针的临时引用。  
   
 ```  
@@ -279,7 +298,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>示例  
   请参阅示例[CObArray::GetSize](#getsize)。  
   
-##  <a name="a-namefreeextraa--cobarrayfreeextra"></a><a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>CObArray::FreeExtra  
  释放任何额外的内存，已分配，而增长数组。  
   
 ```  
@@ -303,7 +322,7 @@ void FreeExtra();
 ### <a name="example"></a>示例  
   请参阅示例[CObArray::GetData](#getdata)。  
   
-##  <a name="a-namegetata--cobarraygetat"></a><a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>CObArray::GetAt  
  返回指定索引处的数组元素。  
   
 ```  
@@ -338,7 +357,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections #&79;](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="a-namegetcounta--cobarraygetcount"></a><a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>CObArray::GetCount  
  返回数组元素的个数。  
   
 ```  
@@ -367,7 +386,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections #&80;](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="a-namegetdataa--cobarraygetdata"></a><a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>CObArray::GetData  
  使用此成员函数来获取对数组中元素的直接访问。  
   
 ```  
@@ -400,7 +419,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections #&81;](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="a-namegetsizea--cobarraygetsize"></a><a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>CObArray::GetSize  
  返回数组的大小。  
   
 ```  
@@ -426,7 +445,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections #&82;](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="a-namegetupperbounda--cobarraygetupperbound"></a><a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>CObArray::GetUpperBound  
  返回此数组中的当前的上限。  
   
 ```  
@@ -457,7 +476,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections #&83;](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="a-nameinsertata--cobarrayinsertat"></a><a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>CObArray::InsertAt  
  在指定索引处插入一个元素（或另一个数组中的所有元素）。  
   
 ```  
@@ -521,7 +540,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="a-nameisemptya--cobarrayisempty"></a><a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>CObArray::IsEmpty  
  确定数组是否为空。  
   
 ```  
@@ -531,7 +550,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>返回值  
  如果数组为空，则为非零值否则为 0。  
   
-##  <a name="a-nameoperatorata--cobarrayoperator--"></a><a name="operator_at"></a>CObArray::operator]  
+##  <a name="operator_at"></a>CObArray::operator]  
  这些下标运算符是一个方便替换`SetAt`和`GetAt`函数。  
   
 ```  
@@ -560,7 +579,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections #&88;](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="a-nameremovealla--cobarrayremoveall"></a><a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>CObArray::RemoveAll  
  从该数组中移除所有指针，但不实际删除`CObject`对象。  
   
 ```  
@@ -588,7 +607,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections #&85;](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="a-nameremoveata--cobarrayremoveat"></a><a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>CObArray::RemoveAt  
  移除数组中指定索引处开始的一个或多个元素。  
   
 ```  
@@ -633,7 +652,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="a-namesetata--cobarraysetat"></a><a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>CObArray::SetAt  
  设置指定索引处的数组元素。  
   
 ```  
@@ -678,7 +697,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="a-namesetatgrowa--cobarraysetatgrow"></a><a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>CObArray::SetAtGrow  
  设置指定索引处的数组元素。  
   
 ```  
@@ -725,7 +744,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="a-namesetsizea--cobarraysetsize"></a><a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>CObArray::SetSize  
  建立一个空的或现有的数组; 的大小如有必要，请分配内存。  
   
 ```  

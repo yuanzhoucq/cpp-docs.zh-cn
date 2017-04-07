@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::IsContextMenuMode
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::SetCommands
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::Show
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::ShowWithContextMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 ## <a name="requirements"></a>要求  
  **标头︰** afxRibbonMiniToolBar.h  
   
-##  <a name="a-namesetcommandsa--cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
+##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
  设置要在工具栏上显示的命令的列表。  
   
 ```  
@@ -118,7 +124,7 @@ void SetCommands(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo #&9;](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="a-nameshowa--cmfcribbonminitoolbarshow"></a><a name="show"></a>CMFCRibbonMiniToolBar::Show  
+##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
  在指定的屏幕坐标上显示浮动工具栏。  
   
 ```  
@@ -137,7 +143,7 @@ BOOL Show(
 ### <a name="return-value"></a>返回值  
  `TRUE`如果成功，则显示浮动工具栏否则为`FALSE`。  
   
-##  <a name="a-nameshowwithcontextmenua--cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
+##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
  显示浮动工具栏以及上下文菜单。  
   
 ```  
@@ -167,7 +173,7 @@ BOOL ShowWithContextMenu(
 ### <a name="remarks"></a>备注  
  此函数用于显示具有一个上下文菜单的浮动工具栏。 上下文菜单为微型工具栏下方的定位 15 像素。  
   
-##  <a name="a-nameiscontextmenumodea--cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -178,7 +184,7 @@ BOOL IsContextMenuMode() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameisribbonminitoolbara--cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

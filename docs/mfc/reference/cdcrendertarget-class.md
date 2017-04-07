@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CDCRenderTarget
 - CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::Attach
+- AFXRENDERTARGET/CDCRenderTarget::BindDC
+- AFXRENDERTARGET/CDCRenderTarget::Create
+- AFXRENDERTARGET/CDCRenderTarget::Detach
+- AFXRENDERTARGET/CDCRenderTarget::GetDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::m_pDCRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +96,7 @@ class CDCRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cdcrendertargetattach"></a><a name="attach"></a>CDCRenderTarget::Attach  
+##  <a name="attach"></a>CDCRenderTarget::Attach  
  附加现有的呈现器目标接口的对象  
   
 ```  
@@ -100,7 +107,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
  `pTarget`  
  现有的呈现器目标接口。 不能为 NULL  
   
-##  <a name="a-namebinddca--cdcrendertargetbinddc"></a><a name="binddc"></a>CDCRenderTarget::BindDC  
+##  <a name="binddc"></a>CDCRenderTarget::BindDC  
  将该呈现器目标绑定到它发出的绘图命令的设备上下文  
   
 ```  
@@ -119,14 +126,14 @@ BOOL BindDC(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namecdcrendertargeta--cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
+##  <a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
  构造 CDCRenderTarget 对象。  
   
 ```  
 CDCRenderTarget();
 ```  
   
-##  <a name="a-namecreatea--cdcrendertargetcreate"></a><a name="create"></a>CDCRenderTarget::Create  
+##  <a name="create"></a>CDCRenderTarget::Create  
  创建 CDCRenderTarget。  
   
 ```  
@@ -140,7 +147,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namedetacha--cdcrendertargetdetach"></a><a name="detach"></a>CDCRenderTarget::Detach  
+##  <a name="detach"></a>CDCRenderTarget::Detach  
  分离对象中的呈现器目标接口  
   
 ```  
@@ -150,7 +157,7 @@ ID2D1DCRenderTarget* Detach();
 ### <a name="return-value"></a>返回值  
  指向分离呈现器目标接口。  
   
-##  <a name="a-namegetdcrendertargeta--cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
+##  <a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
  返回 ID2D1DCRenderTarget 接口  
   
 ```  
@@ -160,14 +167,14 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1DCRenderTarget 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namempdcrendertargeta--cdcrendertargetmpdcrendertarget"></a><a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
+##  <a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
  指向 ID2D1DCRenderTarget 对象的指针。  
   
 ```  
 ID2D1DCRenderTarget* m_pDCRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1dcrendertargetstara--cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
+##  <a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
  返回 ID2D1DCRenderTarget 接口  
   
 ```  

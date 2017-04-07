@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComObjectStack
-- ATL.CComObjectStack
-- ATL::CComObjectStack<Base>
-- ATL.CComObjectStack<Base>
 - CComObjectStack
+- ATLCOM/ATL::CComObjectStack
+- ATLCOM/ATL::CComObjectStack::CComObjectStack
+- ATLCOM/ATL::CComObjectStack::AddRef
+- ATLCOM/ATL::CComObjectStack::QueryInterface
+- ATLCOM/ATL::CComObjectStack::Release
+- ATLCOM/ATL::CComObjectStack::m_hResFinalConstruct
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +100,7 @@ class CComObjectStack
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectstackaddref"></a><a name="addref"></a>CComObjectStack::AddRef  
+##  <a name="addref"></a>CComObjectStack::AddRef  
  返回零。  
   
 ```
@@ -111,7 +113,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>备注  
  在调试模式下，将调用`_ASSERTE`。  
   
-##  <a name="a-nameccomobjectstacka--ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
+##  <a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
  构造函数。  
   
 ```
@@ -121,7 +123,7 @@ CComObjectStack(void* = NULL);
 ### <a name="remarks"></a>备注  
  调用`FinalConstruct`，然后设置[m_hResFinalConstruct](#m_hresfinalconstruct)到`HRESULT`返回`FinalConstruct`。 如果您不派生基类从[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)，您必须提供您自己`FinalConstruct`方法。 析构函数调用 `FinalRelease`。  
   
-##  <a name="a-namedtora--ccomobjectstackccomobjectstack"></a><a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
+##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
  析构函数。  
   
 ```
@@ -131,14 +133,14 @@ CComObjectStack();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源并调用[FinalRelease](ccomobjectrootex-class.md#finalrelease)。  
   
-##  <a name="a-namemhresfinalconstructa--ccomobjectstackmhresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
  包含`HRESULT`从调用返回`FinalConstruct`的构造期间`CComObjectStack`对象。  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
-##  <a name="a-namequeryinterfacea--ccomobjectstackqueryinterface"></a><a name="queryinterface"></a>CComObjectStack::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectStack::QueryInterface  
  返回**E_NOINTERFACE**。  
   
 ```
@@ -152,7 +154,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ### <a name="remarks"></a>备注  
  在调试模式下，将调用`_ASSERTE`。  
   
-##  <a name="a-namereleasea--ccomobjectstackrelease"></a><a name="release"></a>CComObjectStack::Release  
+##  <a name="release"></a>CComObjectStack::Release  
  返回零。  
   
 ```

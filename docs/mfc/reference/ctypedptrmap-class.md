@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap::GetNextAssoc
+- AFXTEMPL/CTypedPtrMap::Lookup
+- AFXTEMPL/CTypedPtrMap::RemoveKey
+- AFXTEMPL/CTypedPtrMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>要求  
  **标头：** afxtempl.h  
   
-##  <a name="a-namegetnextassoca--ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
  检索处的地图元素`rNextPosition`，然后更新`rNextPosition`来指代映射中的下一个元素。  
   
 ```  
@@ -128,7 +133,7 @@ void GetNextAssoc(
   
  此内联函数将调用`BASE_CLASS` **:: GetNextAssoc**。  
   
-##  <a name="a-namelookupa--ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Lookup  
+##  <a name="lookup"></a>CTypedPtrMap::Lookup  
  `Lookup`使用哈希算法来快速找到完全匹配的密钥的地图元素。  
   
 ```  
@@ -154,7 +159,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>备注  
  此内联函数将调用`BASE_CLASS` **:: 查找**。  
   
-##  <a name="a-nameoperatorata--ctypedptrmapoperator--"></a><a name="operator_at"></a>CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>CTypedPtrMap::operator]  
  仅在赋值语句 （左值） 的左侧，可以使用此运算符。  
   
 ```  
@@ -174,7 +179,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>备注  
  如果没有地图元素与指定的键，则创建一个新的元素。 等效于此运算符的没有"右侧"（右值），因为一个密钥可能无法找到在映射中的可能性。 使用`Lookup`元素检索的成员函数。  
   
-##  <a name="a-nameremovekeya--ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
  此成员函数将调用`BASE_CLASS` **:: RemoveKey**。  
   
 ```  
@@ -194,7 +199,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>备注  
  有关更详细的备注，请参阅[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)。  
   
-##  <a name="a-namesetata--ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>CTypedPtrMap::SetAt  
  此成员函数将调用`BASE_CLASS` **:: SetAt**。  
   
 ```  

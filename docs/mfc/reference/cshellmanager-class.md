@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CShellManager
+- AFXSHELLMANAGER/CShellManager
+- AFXSHELLMANAGER/CShellManager::CShellManager
+- AFXSHELLMANAGER/CShellManager::BrowseForFolder
+- AFXSHELLMANAGER/CShellManager::ConcatenateItem
+- AFXSHELLMANAGER/CShellManager::CopyItem
+- AFXSHELLMANAGER/CShellManager::CreateItem
+- AFXSHELLMANAGER/CShellManager::FreeItem
+- AFXSHELLMANAGER/CShellManager::GetItemCount
+- AFXSHELLMANAGER/CShellManager::GetItemSize
+- AFXSHELLMANAGER/CShellManager::GetNextItem
+- AFXSHELLMANAGER/CShellManager::GetParentItem
+- AFXSHELLMANAGER/CShellManager::ItemFromPath
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +96,7 @@ class CShellManager : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxshellmanager.h  
   
-##  <a name="a-namebrowseforfoldera--cshellmanagerbrowseforfolder"></a><a name="browseforfolder"></a>CShellManager::BrowseForFolder  
+##  <a name="browseforfolder"></a>CShellManager::BrowseForFolder  
  显示一个对话框，使用户能够选择外壳程序文件夹。  
   
 ```  
@@ -127,7 +139,7 @@ BOOL BrowseForFolder(
   
  [!code-cpp[NVC_MFC_Explorer #&6;](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]  
   
-##  <a name="a-nameconcatenateitema--cshellmanagerconcatenateitem"></a><a name="concatenateitem"></a>CShellManager::ConcatenateItem  
+##  <a name="concatenateitem"></a>CShellManager::ConcatenateItem  
  创建包含两个 Pidl 的新列表。  
   
 ```  
@@ -149,7 +161,7 @@ LPITEMIDLIST ConcatenateItem(
 ### <a name="remarks"></a>备注  
  此方法创建一个新[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)足够大，使之同时包含`pidl1`和`pidl2`。 然后将复制`pidl1`和`pidl2`到新列表。  
   
-##  <a name="a-namecopyitema--cshellmanagercopyitem"></a><a name="copyitem"></a>CShellManager::CopyItem  
+##  <a name="copyitem"></a>CShellManager::CopyItem  
  将复制的项列表。  
   
 ```  
@@ -166,7 +178,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ### <a name="remarks"></a>备注  
  新创建的项列表不包含源项列表的大小相同。  
   
-##  <a name="a-namecreateitema--cshellmanagercreateitem"></a><a name="createitem"></a>CShellManager::CreateItem  
+##  <a name="createitem"></a>CShellManager::CreateItem  
  创建新 PIDL。  
   
 ```  
@@ -180,7 +192,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ### <a name="return-value"></a>返回值  
  如果成功，则创建的项列表指向的指针否则为`NULL`。  
   
-##  <a name="a-namecshellmanagera--cshellmanagercshellmanager"></a><a name="cshellmanager"></a>CShellManager::CShellManager  
+##  <a name="cshellmanager"></a>CShellManager::CShellManager  
  构造 `CShellManager` 对象。  
   
 ```  
@@ -190,7 +202,7 @@ CShellManager();
 ### <a name="remarks"></a>备注  
  在大多数情况下，您不需要创建`CShellManager`直接。 默认情况下，框架会自动进行创建。 获取一个指向`CShellManager`，调用[CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager)。 如果您创建`CShellManager`手动，必须使用该方法初始化它[CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager)。  
   
-##  <a name="a-namefreeitema--cshellmanagerfreeitem"></a><a name="freeitem"></a>CShellManager::FreeItem  
+##  <a name="freeitem"></a>CShellManager::FreeItem  
  删除的项列表。  
   
 ```  
@@ -201,7 +213,7 @@ void FreeItem(LPITEMIDLIST pidl);
  [in] `pidl`  
  若要删除一个项列表。  
   
-##  <a name="a-namegetitemcounta--cshellmanagergetitemcount"></a><a name="getitemcount"></a>CShellManager::GetItemCount  
+##  <a name="getitemcount"></a>CShellManager::GetItemCount  
  将项列表中返回的项数。  
   
 ```  
@@ -215,7 +227,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ### <a name="return-value"></a>返回值  
  在项目列表中的项的数目。  
   
-##  <a name="a-namegetitemsizea--cshellmanagergetitemsize"></a><a name="getitemsize"></a>CShellManager::GetItemSize  
+##  <a name="getitemsize"></a>CShellManager::GetItemSize  
  返回一个项列表的大小。  
   
 ```  
@@ -229,7 +241,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ### <a name="return-value"></a>返回值  
  项目列表的大小。  
   
-##  <a name="a-namegetnextitema--cshellmanagergetnextitem"></a><a name="getnextitem"></a>CShellManager::GetNextItem  
+##  <a name="getnextitem"></a>CShellManager::GetNextItem  
  检索从指针的项标识符列表 (PIDL) 的下一项。  
   
 ```  
@@ -246,7 +258,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ### <a name="remarks"></a>备注  
  如果没有更多的项列表中，此方法将返回`NULL`。  
   
-##  <a name="a-namegetparentitema--cshellmanagergetparentitem"></a><a name="getparentitem"></a>CShellManager::GetParentItem  
+##  <a name="getparentitem"></a>CShellManager::GetParentItem  
  检索的项标识符列表 (PIDL) 的指针的父级。  
   
 ```  
@@ -268,7 +280,7 @@ int GetParentItem(
 ### <a name="remarks"></a>备注  
  PIDL 的级别是相对于桌面。 桌面 PIDL 被认为的级别为 0。  
   
-##  <a name="a-nameitemfrompatha--cshellmanageritemfrompath"></a><a name="itemfrompath"></a>CShellManager::ItemFromPath  
+##  <a name="itemfrompath"></a>CShellManager::ItemFromPath  
  从由字符串路径标识的项的项标识符列表 (PIDL) 检索的指针。  
   
 ```  

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::OnCreateControlBars
+- AFXOLE/COleIPFrameWnd::RepositionFrame
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>要求  
  **标头︰** afxole.h  
   
-##  <a name="a-namecoleipframewnda--coleipframewndcoleipframewnd"></a><a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
  构造`COleIPFrameWnd`对象，并初始化其适当地状态信息，它存储在类型的结构**OLEINPLACEFRAMEINFO**。  
   
 ```  
@@ -95,7 +99,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoncreatecontrolbarsa--coleipframewndoncreatecontrolbars"></a><a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
  框架将调用`OnCreateControlBars`激活某个项时就地编辑时的功能。  
   
 ```  
@@ -122,7 +126,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>备注  
  默认实现不执行任何操作。 重写此函数以执行任何所需控件条在创建时的特殊处理。  
   
-##  <a name="a-namerepositionframea--coleipframewndrepositionframe"></a><a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
  框架将调用`RepositionFrame`来布置控件条的大小和位置在就地编辑窗口，因此它是可见的成员函数。  
   
 ```  

@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDumpContext
+- AFX/CDumpContext
+- AFX/CDumpContext::CDumpContext
+- AFX/CDumpContext::DumpAsHex
+- AFX/CDumpContext::Flush
+- AFX/CDumpContext::GetDepth
+- AFX/CDumpContext::HexDump
+- AFX/CDumpContext::SetDepth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +112,7 @@ class CDumpContext
 ## <a name="requirements"></a>要求  
  **标头：** afx.h  
   
-##  <a name="a-namecdumpcontexta--cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext  
+##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
  构造类的对象`CDumpContext`。  
   
 ```  
@@ -124,7 +131,7 @@ CDumpContext(CFile* pFile = NULL);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities #&12;](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
-##  <a name="a-namedumpashexa--cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex  
+##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
  转储格式化为十六进制数字的指定的类型。  
   
 ```  
@@ -147,7 +154,7 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities #&13;](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
-##  <a name="a-nameflusha--cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Flush  
+##  <a name="flush"></a>CDumpContext::Flush  
  强制缓冲区进行写入到文件中剩余的任何数据附加到转储上下文。  
   
 ```  
@@ -157,7 +164,7 @@ void Flush();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities #&14;](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
-##  <a name="a-namegetdeptha--cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth  
+##  <a name="getdepth"></a>CDumpContext::GetDepth  
  确定是否深度或浅表转储为进程中。  
   
 ```  
@@ -170,7 +177,7 @@ int GetDepth() const;
 ### <a name="example"></a>示例  
   请参阅示例[SetDepth](#setdepth)。  
   
-##  <a name="a-namehexdumpa--cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump  
+##  <a name="hexdump"></a>CDumpContext::HexDump  
  转储设置为十六进制数字格式的字节数组。  
   
 ```  
@@ -200,7 +207,7 @@ void HexDump(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities #&15;](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
-##  <a name="a-nameoperatorltlta--cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
  将输出转储上下文的指定的数据。  
   
 ```  
@@ -238,7 +245,7 @@ CDumpContext& operator<<(HFONT h);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities #&17;](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
-##  <a name="a-namesetdeptha--cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::SetDepth  
+##  <a name="setdepth"></a>CDumpContext::SetDepth  
  设置转储的深度。  
   
 ```  

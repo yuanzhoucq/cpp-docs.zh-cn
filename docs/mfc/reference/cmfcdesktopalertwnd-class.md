@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWnd
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::Create
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAnimationSpeed
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAnimationType
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAutoCloseTime
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetCaptionHeight
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetDialogSize
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetLastPos
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetTransparency
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::HasSmallCaption
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnBeforeShow
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnClickLinkButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnCommand
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnDraw
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::ProcessCommand
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAnimationSpeed
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAnimationType
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAutoCloseTime
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetSmallCaption
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetTransparency
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -120,7 +140,7 @@ class CMFCDesktopAlertWnd : public CWnd
 ## <a name="requirements"></a>要求  
  **标头︰** afxDesktopAlertWnd.h  
   
-##  <a name="a-namecreatea--cmfcdesktopalertwndcreate"></a><a name="create"></a>CMFCDesktopAlertWnd::Create  
+##  <a name="create"></a>CMFCDesktopAlertWnd::Create  
  创建并初始化在桌面警报窗口。  
   
 ```  
@@ -168,7 +188,7 @@ virtual BOOL Create(
   
  第二个方法重载将创建一个警报窗口，其中包含默认控件。 您可以指定哪些控件以显示通过修改[CMFCDesktopAlertWndInfo 类](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)。  
   
-##  <a name="a-namegetanimationspeeda--cmfcdesktopalertwndgetanimationspeed"></a><a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
  返回动画速度。  
   
 ```  
@@ -181,7 +201,7 @@ UINT GetAnimationSpeed() const;
 ### <a name="remarks"></a>备注  
  动画速度介绍通知窗口打开和关闭的速度。  
   
-##  <a name="a-namegetanimationtypea--cmfcdesktopalertwndgetanimationtype"></a><a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
+##  <a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
  返回的动画类型。  
   
 ```  
@@ -201,7 +221,7 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="a-namegetautoclosetimea--cmfcdesktopalertwndgetautoclosetime"></a><a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
+##  <a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
  返回自动关闭超时值。  
   
 ```  
@@ -214,7 +234,7 @@ int GetAutoCloseTime() const;
 ### <a name="remarks"></a>备注  
  使用此方法以确定要通知窗口将自动关闭之前，应经过多长时间。  
   
-##  <a name="a-namegetcaptionheighta--cmfcdesktopalertwndgetcaptionheight"></a><a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
  返回的标题高度。  
   
 ```  
@@ -227,7 +247,7 @@ virtual int GetCaptionHeight();
 ### <a name="remarks"></a>备注  
  可以在派生类中重写此方法。 默认实现是︰ 如果弹出项窗口中应显示小标题或从 Windows API 函数获取的值，则返回的小标题高度值 （7 像素为单位） `GetSystemMetrics(SM_CYSMCAPTION)`。  
   
-##  <a name="a-namegetlastposa--cmfcdesktopalertwndgetlastpos"></a><a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
+##  <a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
  在屏幕上返回在桌面警报窗口的最后一个位置。  
   
 ```  
@@ -240,7 +260,7 @@ CPoint GetLastPos() const;
 ### <a name="remarks"></a>备注  
  此方法返回在屏幕上的警报窗口中的最后一个有效位置。  
   
-##  <a name="a-namegettransparencya--cmfcdesktopalertwndgettransparency"></a><a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
+##  <a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
  返回的透明度级别。  
   
 ```  
@@ -253,7 +273,7 @@ BYTE GetTransparency() const;
 ### <a name="remarks"></a>备注  
  使用此方法可检索当前的通知窗口的透明度级别。  
   
-##  <a name="a-namehassmallcaptiona--cmfcdesktopalertwndhassmallcaption"></a><a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
+##  <a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
  确定在桌面警报窗口具有小型标题或常规大小标题。  
   
 ```  
@@ -266,7 +286,7 @@ BOOL HasSmallCaption() const;
 ### <a name="remarks"></a>备注  
  使用此方法以确定的弹出窗口的小型标题或常规大小标题。 默认情况下，小型标题为 7 个像素高。 通过调用 Windows API 函数获取的常规大小标题的高度`GetSystemMetrics(SM_CYCAPTION)`。  
   
-##  <a name="a-nameonbeforeshowa--cmfcdesktopalertwndonbeforeshow"></a><a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
+##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -280,7 +300,7 @@ virtual BOOL OnBeforeShow(CPoint&);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameonclicklinkbuttona--cmfcdesktopalertwndonclicklinkbutton"></a><a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
+##  <a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
  由框架调用，当用户单击位于桌面警报菜单上的链接按钮。  
   
 ```  
@@ -297,7 +317,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ### <a name="remarks"></a>备注  
  如果您想要被通知用户单击通知窗口上的链接时，重写此方法在派生类中。  
   
-##  <a name="a-nameoncommanda--cmfcdesktopalertwndoncommand"></a><a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
+##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -314,7 +334,7 @@ virtual BOOL OnCommand(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameondrawa--cmfcdesktopalertwndondraw"></a><a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
+##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -326,7 +346,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameprocesscommanda--cmfcdesktopalertwndprocesscommand"></a><a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
+##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -340,7 +360,7 @@ BOOL ProcessCommand(HWND hwnd);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetanimationspeeda--cmfcdesktopalertwndsetanimationspeed"></a><a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
  设置新的动画速度。  
   
 ```  
@@ -354,7 +374,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ### <a name="remarks"></a>备注  
  调用此方法以设置通知窗口的动画速度。 默认值动画速度为 30 毫秒。  
   
-##  <a name="a-namesetanimationtypea--cmfcdesktopalertwndsetanimationtype"></a><a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
+##  <a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
  设置的动画类型。  
   
 ```  
@@ -378,7 +398,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="a-namesetautoclosetimea--cmfcdesktopalertwndsetautoclosetime"></a><a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
+##  <a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
  设置自动关闭超时值。  
   
 ```  
@@ -392,7 +412,7 @@ void SetAutoCloseTime(int nTime);
 ### <a name="remarks"></a>备注  
  如果用户不会交互使用窗口中指定的时间后自动关闭通知窗口。  
   
-##  <a name="a-namesetsmallcaptiona--cmfcdesktopalertwndsetsmallcaption"></a><a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
+##  <a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
  小型和常规大小字幕之间切换。  
   
 ```  
@@ -406,7 +426,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ### <a name="remarks"></a>备注  
  调用此方法以显示小型或常规大小标题。 默认情况下，小型标题为 7 个像素高。 通过调用 Windows API 函数获取的正则标题大小`GetSystemMetrics(SM_CYCAPTION)`。  
   
-##  <a name="a-namesettransparencya--cmfcdesktopalertwndsettransparency"></a><a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
+##  <a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
  设置弹出窗口的透明度级别。  
   
 ```  
@@ -420,7 +440,7 @@ void SetTransparency(BYTE nTransparency);
 ### <a name="remarks"></a>备注  
  调用此函数可设置弹出窗口的透明度级别。  
   
-##  <a name="a-namegetdialogsizea--cmfcdesktopalertwndgetdialogsize"></a><a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
+##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

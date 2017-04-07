@@ -10,6 +10,95 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CToolBarCtrl
+- AFXCMN/CToolBarCtrl
+- AFXCMN/CToolBarCtrl::CToolBarCtrl
+- AFXCMN/CToolBarCtrl::AddBitmap
+- AFXCMN/CToolBarCtrl::AddButtons
+- AFXCMN/CToolBarCtrl::AddString
+- AFXCMN/CToolBarCtrl::AddStrings
+- AFXCMN/CToolBarCtrl::AutoSize
+- AFXCMN/CToolBarCtrl::ChangeBitmap
+- AFXCMN/CToolBarCtrl::CheckButton
+- AFXCMN/CToolBarCtrl::CommandToIndex
+- AFXCMN/CToolBarCtrl::Create
+- AFXCMN/CToolBarCtrl::CreateEx
+- AFXCMN/CToolBarCtrl::Customize
+- AFXCMN/CToolBarCtrl::DeleteButton
+- AFXCMN/CToolBarCtrl::EnableButton
+- AFXCMN/CToolBarCtrl::GetAnchorHighlight
+- AFXCMN/CToolBarCtrl::GetBitmap
+- AFXCMN/CToolBarCtrl::GetBitmapFlags
+- AFXCMN/CToolBarCtrl::GetButton
+- AFXCMN/CToolBarCtrl::GetButtonCount
+- AFXCMN/CToolBarCtrl::GetButtonInfo
+- AFXCMN/CToolBarCtrl::GetButtonSize
+- AFXCMN/CToolBarCtrl::GetColorScheme
+- AFXCMN/CToolBarCtrl::GetDisabledImageList
+- AFXCMN/CToolBarCtrl::GetDropTarget
+- AFXCMN/CToolBarCtrl::GetExtendedStyle
+- AFXCMN/CToolBarCtrl::GetHotImageList
+- AFXCMN/CToolBarCtrl::GetHotItem
+- AFXCMN/CToolBarCtrl::GetImageList
+- AFXCMN/CToolBarCtrl::GetInsertMark
+- AFXCMN/CToolBarCtrl::GetInsertMarkColor
+- AFXCMN/CToolBarCtrl::GetItemRect
+- AFXCMN/CToolBarCtrl::GetMaxSize
+- AFXCMN/CToolBarCtrl::GetMaxTextRows
+- AFXCMN/CToolBarCtrl::GetMetrics
+- AFXCMN/CToolBarCtrl::GetPadding
+- AFXCMN/CToolBarCtrl::GetPressedImageList
+- AFXCMN/CToolBarCtrl::GetRect
+- AFXCMN/CToolBarCtrl::GetRows
+- AFXCMN/CToolBarCtrl::GetState
+- AFXCMN/CToolBarCtrl::GetString
+- AFXCMN/CToolBarCtrl::GetStyle
+- AFXCMN/CToolBarCtrl::GetToolTips
+- AFXCMN/CToolBarCtrl::HideButton
+- AFXCMN/CToolBarCtrl::HitTest
+- AFXCMN/CToolBarCtrl::Indeterminate
+- AFXCMN/CToolBarCtrl::InsertButton
+- AFXCMN/CToolBarCtrl::InsertMarkHitTest
+- AFXCMN/CToolBarCtrl::IsButtonChecked
+- AFXCMN/CToolBarCtrl::IsButtonEnabled
+- AFXCMN/CToolBarCtrl::IsButtonHidden
+- AFXCMN/CToolBarCtrl::IsButtonHighlighted
+- AFXCMN/CToolBarCtrl::IsButtonIndeterminate
+- AFXCMN/CToolBarCtrl::IsButtonPressed
+- AFXCMN/CToolBarCtrl::LoadImages
+- AFXCMN/CToolBarCtrl::MapAccelerator
+- AFXCMN/CToolBarCtrl::MarkButton
+- AFXCMN/CToolBarCtrl::MoveButton
+- AFXCMN/CToolBarCtrl::PressButton
+- AFXCMN/CToolBarCtrl::ReplaceBitmap
+- AFXCMN/CToolBarCtrl::RestoreState
+- AFXCMN/CToolBarCtrl::SaveState
+- AFXCMN/CToolBarCtrl::SetAnchorHighlight
+- AFXCMN/CToolBarCtrl::SetBitmapSize
+- AFXCMN/CToolBarCtrl::SetButtonInfo
+- AFXCMN/CToolBarCtrl::SetButtonSize
+- AFXCMN/CToolBarCtrl::SetButtonStructSize
+- AFXCMN/CToolBarCtrl::SetButtonWidth
+- AFXCMN/CToolBarCtrl::SetCmdID
+- AFXCMN/CToolBarCtrl::SetColorScheme
+- AFXCMN/CToolBarCtrl::SetDisabledImageList
+- AFXCMN/CToolBarCtrl::SetDrawTextFlags
+- AFXCMN/CToolBarCtrl::SetExtendedStyle
+- AFXCMN/CToolBarCtrl::SetHotImageList
+- AFXCMN/CToolBarCtrl::SetHotItem
+- AFXCMN/CToolBarCtrl::SetImageList
+- AFXCMN/CToolBarCtrl::SetIndent
+- AFXCMN/CToolBarCtrl::SetInsertMark
+- AFXCMN/CToolBarCtrl::SetInsertMarkColor
+- AFXCMN/CToolBarCtrl::SetMaxTextRows
+- AFXCMN/CToolBarCtrl::SetMetrics
+- AFXCMN/CToolBarCtrl::SetOwner
+- AFXCMN/CToolBarCtrl::SetPadding
+- AFXCMN/CToolBarCtrl::SetPressedImageList
+- AFXCMN/CToolBarCtrl::SetRows
+- AFXCMN/CToolBarCtrl::SetState
+- AFXCMN/CToolBarCtrl::SetStyle
+- AFXCMN/CToolBarCtrl::SetToolTips
+- AFXCMN/CToolBarCtrl::SetWindowTheme
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -201,7 +290,7 @@ class CToolBarCtrl : public CWnd
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="a-nameaddbitmapa--ctoolbarctrladdbitmap"></a><a name="addbitmap"></a>CToolBarCtrl::AddBitmap  
+##  <a name="addbitmap"></a>CToolBarCtrl::AddBitmap  
  将一个或多个按钮图像添加到的存储在该工具栏控件的按钮图像的列表。  
   
 ```  
@@ -231,7 +320,7 @@ int AddBitmap(
 ### <a name="remarks"></a>备注  
  您可以使用 Windows API [CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467)将位图添加到工具栏之前映射的颜色。 如果您将指针传递至**CBitMap**对象时，必须确保销毁工具栏后，该位图不销毁之前。  
   
-##  <a name="a-nameaddbuttonsa--ctoolbarctrladdbuttons"></a><a name="addbuttons"></a>CToolBarCtrl::AddButtons  
+##  <a name="addbuttons"></a>CToolBarCtrl::AddButtons  
  向工具栏控件添加一个或多个按钮。  
   
 ```  
@@ -313,7 +402,7 @@ BOOL AddButtons(
   
  使用图像和/或您提供其索引以前必须已添加到工具栏控件的字符串列出[AddBitmap](#addbitmap)， [AddString](#addstring)，和/或[AddStrings](#addstrings)。  
   
-##  <a name="a-nameaddstringa--ctoolbarctrladdstring"></a><a name="addstring"></a>CToolBarCtrl::AddString  
+##  <a name="addstring"></a>CToolBarCtrl::AddString  
  将添加一个新字符串，作为资源 ID，到工具栏的内部列表的字符串传递。  
   
 ```  
@@ -327,7 +416,7 @@ int AddString(UINT nStringID);
 ### <a name="return-value"></a>返回值  
  如果成功，则添加的第一个新字符串的从零开始的索引否则为-1。  
   
-##  <a name="a-nameaddstringsa--ctoolbarctrladdstrings"></a><a name="addstrings"></a>CToolBarCtrl::AddStrings  
+##  <a name="addstrings"></a>CToolBarCtrl::AddStrings  
  字符串可用于工具栏控件的列表中添加一个新字符串。  
   
 ```  
@@ -352,7 +441,7 @@ int AddStrings(LPCTSTR lpszStrings);
   
  您不应传递`CString`对象传递给此函数，因为它不是中可能有多个 null 字符`CString`。  
   
-##  <a name="a-nameautosizea--ctoolbarctrlautosize"></a><a name="autosize"></a>CToolBarCtrl::AutoSize  
+##  <a name="autosize"></a>CToolBarCtrl::AutoSize  
  调整整个工具栏控件的大小。  
   
 ```  
@@ -362,7 +451,7 @@ void AutoSize();
 ### <a name="remarks"></a>备注  
  当父窗口的大小发生更改或工具栏的大小更改 （例如当您设置按钮或位图的大小，或将字符串添加） 时，应调用此函数。  
   
-##  <a name="a-namechangebitmapa--ctoolbarctrlchangebitmap"></a><a name="changebitmap"></a>CToolBarCtrl::ChangeBitmap  
+##  <a name="changebitmap"></a>CToolBarCtrl::ChangeBitmap  
  更改当前的工具栏控件中的按钮的位图。  
   
 ```  
@@ -391,7 +480,7 @@ BOOL ChangeBitmap(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_3.cpp)]  
   
-##  <a name="a-namecheckbuttona--ctoolbarctrlcheckbutton"></a><a name="checkbutton"></a>CToolBarCtrl::CheckButton  
+##  <a name="checkbutton"></a>CToolBarCtrl::CheckButton  
  选中或清除给定的按钮在工具栏控件中。  
   
 ```  
@@ -413,7 +502,7 @@ BOOL CheckButton(
 ### <a name="remarks"></a>备注  
  当已选中一个按钮时，它似乎按下了。 如果您想要更改多个按钮的状态，请考虑调用[SetState](#setstate)相反。  
   
-##  <a name="a-namecommandtoindexa--ctoolbarctrlcommandtoindex"></a><a name="commandtoindex"></a>CToolBarCtrl::CommandToIndex  
+##  <a name="commandtoindex"></a>CToolBarCtrl::CommandToIndex  
  检索与指定的命令标识符关联的按钮的从零开始索引。  
   
 ```  
@@ -429,7 +518,7 @@ UINT CommandToIndex(UINT nID) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namecreatea--ctoolbarctrlcreate"></a><a name="create"></a>CToolBarCtrl::Create  
+##  <a name="create"></a>CToolBarCtrl::Create  
  创建工具栏控件，并将其附加到`CToolBarCtrl`对象。  
   
 ```  
@@ -475,7 +564,7 @@ virtual BOOL Create(
   
  工具栏控件自动设置的大小和位置工具栏窗口中。 高度取决于在工具栏按钮的高度。 宽度是与父窗口工作区的宽度相同。 `CCS_TOP`和`CCS_BOTTOM`样式可确定是否沿顶部或底部的客户端区域放置工具栏。 默认情况下，工具栏包含`CCS_TOP`样式。  
   
-##  <a name="a-namecreateexa--ctoolbarctrlcreateex"></a><a name="createex"></a>CToolBarCtrl::CreateEx  
+##  <a name="createex"></a>CToolBarCtrl::CreateEx  
  创建控件 （子窗口），并将其与相关联`CToolBarCtrl`对象。  
   
 ```  
@@ -509,7 +598,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  使用`CreateEx`而不是[创建](#create)应用扩展的窗口样式、 指定的 Windows 扩展的样式前言**WS_EX_**。 **CreateEx**创建具有指定的扩展窗口样式控件`dwExStyle`。 设置扩展样式特定于控件使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`设置作为此类样式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`设置作为此类样式**TBSTYLE_EX_DRAWDDARROWS**。 有关详细信息，请参阅中所述的样式[工具栏扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb760430)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namectoolbarctrla--ctoolbarctrlctoolbarctrl"></a><a name="ctoolbarctrl"></a>CToolBarCtrl::CToolBarCtrl  
+##  <a name="ctoolbarctrl"></a>CToolBarCtrl::CToolBarCtrl  
  构造 `CToolBarCtrl` 对象。  
   
 ```  
@@ -519,7 +608,7 @@ CToolBarCtrl();
 ### <a name="remarks"></a>备注  
  必须调用[创建](#create)以使工具栏上可用。  
   
-##  <a name="a-namecustomizea--ctoolbarctrlcustomize"></a><a name="customize"></a>CToolBarCtrl::Customize  
+##  <a name="customize"></a>CToolBarCtrl::Customize  
  显示自定义工具栏对话框。  
   
 ```  
@@ -531,7 +620,7 @@ void Customize();
   
  有关详细信息，请参阅知识库文章 Q241850: PRB︰ 号召 CToolBarCtrl::Customize 不会保留自定义对话框可见。  
   
-##  <a name="a-namedeletebuttona--ctoolbarctrldeletebutton"></a><a name="deletebutton"></a>CToolBarCtrl::DeleteButton  
+##  <a name="deletebutton"></a>CToolBarCtrl::DeleteButton  
  从工具栏控件中删除一个按钮。  
   
 ```  
@@ -547,7 +636,7 @@ BOOL DeleteButton(int nIndex);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameenablebuttona--ctoolbarctrlenablebutton"></a><a name="enablebutton"></a>CToolBarCtrl::EnableButton  
+##  <a name="enablebutton"></a>CToolBarCtrl::EnableButton  
  启用或禁用工具栏控件中指定的按钮。  
   
 ```  
@@ -569,7 +658,7 @@ BOOL EnableButton(
 ### <a name="remarks"></a>备注  
  当启用了一个按钮时，它可以按下和检查。 如果您想要更改多个按钮的状态，请考虑调用[SetState](#setstate)相反。  
   
-##  <a name="a-namegetanchorhighlighta--ctoolbarctrlgetanchorhighlight"></a><a name="getanchorhighlight"></a>CToolBarCtrl::GetAnchorHighlight  
+##  <a name="getanchorhighlight"></a>CToolBarCtrl::GetAnchorHighlight  
  检索设置工具栏的定位点突出显示。  
   
 ```  
@@ -582,7 +671,7 @@ BOOL GetAnchorHighlight() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbitmapa--ctoolbarctrlgetbitmap"></a><a name="getbitmap"></a>CToolBarCtrl::GetBitmap  
+##  <a name="getbitmap"></a>CToolBarCtrl::GetBitmap  
  检索相关联的按钮在工具栏中的位图的索引。  
   
 ```  
@@ -599,7 +688,7 @@ int GetBitmap(int nID) const;
 ### <a name="remarks"></a>备注  
  实现的功能[TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbitmapflagsa--ctoolbarctrlgetbitmapflags"></a><a name="getbitmapflags"></a>CToolBarCtrl::GetBitmapFlags  
+##  <a name="getbitmapflags"></a>CToolBarCtrl::GetBitmapFlags  
  检索从工具栏的位图标志。  
   
 ```  
@@ -612,7 +701,7 @@ UINT GetBitmapFlags() const;
 ### <a name="remarks"></a>备注  
  创建工具栏之后、 之前添加到工具栏的位图，不应调用它。 返回值指示是否显示是否支持大型位图。 如果显示器支持大型位图，并选择要使用它们，请调用[SetBitmapSize](#setbitmapsize)和[SetButtonSize](#setbuttonsize)然后再添加您大位图使用[AddBitmap](#addbitmap)。  
   
-##  <a name="a-namegetbuttona--ctoolbarctrlgetbutton"></a><a name="getbutton"></a>CToolBarCtrl::GetButton  
+##  <a name="getbutton"></a>CToolBarCtrl::GetButton  
  检索有关指定的按钮在工具栏控件中的信息。  
   
 ```  
@@ -631,7 +720,7 @@ BOOL GetButton(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namegetbuttoncounta--ctoolbarctrlgetbuttoncount"></a><a name="getbuttoncount"></a>CToolBarCtrl::GetButtonCount  
+##  <a name="getbuttoncount"></a>CToolBarCtrl::GetButtonCount  
  检索按钮工具栏控件中的当前计数。  
   
 ```  
@@ -641,7 +730,7 @@ int GetButtonCount() const;
 ### <a name="return-value"></a>返回值  
  这些按钮的计数。  
   
-##  <a name="a-namegetbuttoninfoa--ctoolbarctrlgetbuttoninfo"></a><a name="getbuttoninfo"></a>CToolBarCtrl::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>CToolBarCtrl::GetButtonInfo  
  检索一个按钮在工具栏中的信息。  
   
 ```  
@@ -663,7 +752,7 @@ int GetButtonInfo(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbuttonsizea--ctoolbarctrlgetbuttonsize"></a><a name="getbuttonsize"></a>CToolBarCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>CToolBarCtrl::GetButtonSize  
  获取一个工具栏按钮的大小。  
   
 ```  
@@ -673,7 +762,7 @@ DWORD GetButtonSize() const;
 ### <a name="return-value"></a>返回值  
  一个`DWORD`分别包含在 LOWORD 和 HIWORD，宽度和高度值的值。  
   
-##  <a name="a-namegetbuttontexta--ctoolbarctrlgetbuttontext"></a><a name="getbuttontext"></a>CToolBarCtrl::GetButtonText  
+##  <a name="getbuttontext"></a>CToolBarCtrl::GetButtonText  
  检索当前的工具栏控件上的指定按钮的显示文本。  
   
 ```  
@@ -692,7 +781,7 @@ CString GetButtonText(int idButton) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325)邮件中，Windows SDK 中所述。  
   
-##  <a name="a-namegetcolorschemea--ctoolbarctrlgetcolorscheme"></a><a name="getcolorscheme"></a>CToolBarCtrl::GetColorScheme  
+##  <a name="getcolorscheme"></a>CToolBarCtrl::GetColorScheme  
  检索当前的工具栏控件的配色方案。  
   
 ```  
@@ -711,7 +800,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdisabledimagelista--ctoolbarctrlgetdisabledimagelist"></a><a name="getdisabledimagelist"></a>CToolBarCtrl::GetDisabledImageList  
+##  <a name="getdisabledimagelist"></a>CToolBarCtrl::GetDisabledImageList  
  检索到显示禁用按钮使用工具栏控件的图像列表。  
   
 ```  
@@ -724,7 +813,7 @@ CImageList* GetDisabledImageList() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 MFC 实现`GetDisabledImageList`使用`CImageList`对象，包含工具栏控件的按钮映像，而不是图像列表的句柄。  
   
-##  <a name="a-namegetdroptargeta--ctoolbarctrlgetdroptarget"></a><a name="getdroptarget"></a>CToolBarCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>CToolBarCtrl::GetDropTarget  
  检索[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)工具栏控件的接口。  
   
 ```  
@@ -741,7 +830,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetextendedstylea--ctoolbarctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CToolBarCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CToolBarCtrl::GetExtendedStyle  
  检索在工具栏控件的扩展的样式。  
   
 ```  
@@ -754,7 +843,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegethotimagelista--ctoolbarctrlgethotimagelist"></a><a name="gethotimagelist"></a>CToolBarCtrl::GetHotImageList  
+##  <a name="gethotimagelist"></a>CToolBarCtrl::GetHotImageList  
  检索用于显示"热"按钮在工具栏控件的图像列表。 当鼠标指针位于其上方时突出显示热按钮。  
   
 ```  
@@ -767,7 +856,7 @@ CImageList* GetHotImageList() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当鼠标指针位于其上方时突出显示热按钮。  
   
-##  <a name="a-namegethotitema--ctoolbarctrlgethotitem"></a><a name="gethotitem"></a>CToolBarCtrl::GetHotItem  
+##  <a name="gethotitem"></a>CToolBarCtrl::GetHotItem  
  检索在工具栏中的热项的索引。  
   
 ```  
@@ -780,7 +869,7 @@ int GetHotItem() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetimagelista--ctoolbarctrlgetimagelist"></a><a name="getimagelist"></a>CToolBarCtrl::GetImageList  
+##  <a name="getimagelist"></a>CToolBarCtrl::GetImageList  
  检索工具栏控件用于显示在其默认状态的按钮的图像列表。  
   
 ```  
@@ -793,7 +882,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetinsertmarka--ctoolbarctrlgetinsertmark"></a><a name="getinsertmark"></a>CToolBarCtrl::GetInsertMark  
+##  <a name="getinsertmark"></a>CToolBarCtrl::GetInsertMark  
  检索当前插入标记的工具栏。  
   
 ```  
@@ -807,7 +896,7 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetinsertmarkcolora--ctoolbarctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CToolBarCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>CToolBarCtrl::GetInsertMarkColor  
  检索用来绘制工具栏上的插入标记的颜色。  
   
 ```  
@@ -820,7 +909,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitemrecta--ctoolbarctrlgetitemrect"></a><a name="getitemrect"></a>CToolBarCtrl::GetItemRect  
+##  <a name="getitemrect"></a>CToolBarCtrl::GetItemRect  
  检索工具栏控件中的按钮的边框。  
   
 ```  
@@ -842,7 +931,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>备注  
  此函数不会检索其状态设置为的按钮的边框`TBSTATE_HIDDEN`。  
   
-##  <a name="a-namegetmaxsizea--ctoolbarctrlgetmaxsize"></a><a name="getmaxsize"></a>CToolBarCtrl::GetMaxSize  
+##  <a name="getmaxsize"></a>CToolBarCtrl::GetMaxSize  
  检索所有可见的按钮和工具栏中的分隔符的总大小。  
   
 ```  
@@ -859,7 +948,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetmaxtextrowsa--ctoolbarctrlgetmaxtextrows"></a><a name="getmaxtextrows"></a>CToolBarCtrl::GetMaxTextRows  
+##  <a name="getmaxtextrows"></a>CToolBarCtrl::GetMaxTextRows  
  检索在工具栏按钮上显示的文本行的最大数目。  
   
 ```  
@@ -869,7 +958,7 @@ int GetMaxTextRows() const;
 ### <a name="return-value"></a>返回值  
  最大工具栏按钮上显示的文本行数。  
   
-##  <a name="a-namegetmetricsa--ctoolbarctrlgetmetrics"></a><a name="getmetrics"></a>CToolBarCtrl::GetMetrics  
+##  <a name="getmetrics"></a>CToolBarCtrl::GetMetrics  
  检索的度量值`CToolBarCtrl`对象。  
   
 ```  
@@ -883,7 +972,7 @@ void GetMetrics(LPTBMETRICS ptbm) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342)消息，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetpaddinga--ctoolbarctrlgetpadding"></a><a name="getpadding"></a>CToolBarCtrl::GetPadding  
+##  <a name="getpadding"></a>CToolBarCtrl::GetPadding  
  检索当前的工具栏控件的水平和垂直填充。  
   
 ```  
@@ -905,7 +994,7 @@ BOOL GetPadding(
 ### <a name="remarks"></a>备注  
  此方法可发送[TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetpressedimagelista--ctoolbarctrlgetpressedimagelist"></a><a name="getpressedimagelist"></a>CToolBarCtrl::GetPressedImageList  
+##  <a name="getpressedimagelist"></a>CToolBarCtrl::GetPressedImageList  
  检索当前的工具栏控件使用以表示按钮处于按下状态的图像列表。  
   
 ```  
@@ -918,7 +1007,7 @@ CImageList* GetPressedImageList();
 ### <a name="remarks"></a>备注  
  此方法可发送[TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetrecta--ctoolbarctrlgetrect"></a><a name="getrect"></a>CToolBarCtrl::GetRect  
+##  <a name="getrect"></a>CToolBarCtrl::GetRect  
  检索指定的工具栏按钮的边框。  
   
 ```  
@@ -940,7 +1029,7 @@ BOOL GetRect(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetrowsa--ctoolbarctrlgetrows"></a><a name="getrows"></a>CToolBarCtrl::GetRows  
+##  <a name="getrows"></a>CToolBarCtrl::GetRows  
  检索当前显示在工具栏控件的按钮的行数。  
   
 ```  
@@ -953,7 +1042,7 @@ int GetRows() const;
 ### <a name="remarks"></a>备注  
  请注意，行数将始终是一个除非使用创建工具栏`TBSTYLE_WRAPABLE`样式。  
   
-##  <a name="a-namegetstatea--ctoolbarctrlgetstate"></a><a name="getstate"></a>CToolBarCtrl::GetState  
+##  <a name="getstate"></a>CToolBarCtrl::GetState  
  检索有关指定的按钮在工具栏控件中，例如操作是已启用、 按下，还是已检查的状态信息。  
   
 ```  
@@ -970,7 +1059,7 @@ int GetState(int nID) const;
 ### <a name="remarks"></a>备注  
  此函数是如果您想要检索多个按钮状态尤为方便。 若要只检索一个状态，请使用以下成员函数之一︰ [IsButtonEnabled](#isbuttonenabled)， [IsButtonChecked](#isbuttonchecked)， [IsButtonPressed](#isbuttonpressed)， [IsButtonHidden](#isbuttonhidden)，或[IsButtonIndeterminate](#isbuttonindeterminate)。 但是，`GetState`成员函数是唯一的方法来检测`TBSTATE_WRAP`按钮状态。  
   
-##  <a name="a-namegetstringa--ctoolbarctrlgetstring"></a><a name="getstring"></a>CToolBarCtrl::GetString  
+##  <a name="getstring"></a>CToolBarCtrl::GetString  
  检索工具栏字符串。  
   
 ```  
@@ -1003,7 +1092,7 @@ int GetString(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetstylea--ctoolbarctrlgetstyle"></a><a name="getstyle"></a>CToolBarCtrl::GetStyle  
+##  <a name="getstyle"></a>CToolBarCtrl::GetStyle  
  获取当前应用于工具栏控件的样式。  
   
 ```  
@@ -1013,7 +1102,7 @@ DWORD GetStyle() const;
 ### <a name="return-value"></a>返回值  
  一个`DWORD`包含的一个组合[工具栏控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettooltipsa--ctoolbarctrlgettooltips"></a><a name="gettooltips"></a>CToolBarCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CToolBarCtrl::GetToolTips  
  如果有的话关联工具栏控件中检索工具提示控件，句的柄。  
   
 ```  
@@ -1026,7 +1115,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="remarks"></a>备注  
  工具栏控件通常创建并维护其自己的工具提示控件，因为大多数程序无需调用此函数。  
   
-##  <a name="a-namehittesta--ctoolbarctrlhittest"></a><a name="hittest"></a>CToolBarCtrl::HitTest  
+##  <a name="hittest"></a>CToolBarCtrl::HitTest  
  确定工具栏控件中的一个点所在。  
   
 ```  
@@ -1045,7 +1134,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namehidebuttona--ctoolbarctrlhidebutton"></a><a name="hidebutton"></a>CToolBarCtrl::HideButton  
+##  <a name="hidebutton"></a>CToolBarCtrl::HideButton  
  隐藏或显示指定的按钮在工具栏控件中。  
   
 ```  
@@ -1067,7 +1156,7 @@ BOOL HideButton(
 ### <a name="remarks"></a>备注  
  如果您想要更改多个按钮的状态，请考虑调用[SetState](#setstate)相反。  
   
-##  <a name="a-nameindeterminatea--ctoolbarctrlindeterminate"></a><a name="indeterminate"></a>CToolBarCtrl::Indeterminate  
+##  <a name="indeterminate"></a>CToolBarCtrl::Indeterminate  
  设置或清除指定按钮在工具栏控件中的不确定状态。  
   
 ```  
@@ -1089,7 +1178,7 @@ BOOL Indeterminate(
 ### <a name="remarks"></a>备注  
  不确定显示按钮灰显，如字处理器的方式加粗按钮在工具栏上看当选定的文本包含显示为粗体和常规字符。 如果您想要更改多个按钮的状态，请考虑调用[SetState](#setstate)相反。  
   
-##  <a name="a-nameinsertbuttona--ctoolbarctrlinsertbutton"></a><a name="insertbutton"></a>CToolBarCtrl::InsertButton  
+##  <a name="insertbutton"></a>CToolBarCtrl::InsertButton  
  在工具栏控件中插入一个按钮。  
   
 ```  
@@ -1111,7 +1200,7 @@ BOOL InsertButton(
 ### <a name="remarks"></a>备注  
  使用图像和/或您提供其索引以前必须已添加到工具栏控件的字符串列出[AddBitmap](#addbitmap)， [AddString](#addstring)，和/或[AddStrings](#addstrings)。  
   
-##  <a name="a-nameinsertmarkhittesta--ctoolbarctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a>CToolBarCtrl::InsertMarkHitTest  
+##  <a name="insertmarkhittest"></a>CToolBarCtrl::InsertMarkHitTest  
  检索在工具栏中的点的插入标记信息。  
   
 ```  
@@ -1133,7 +1222,7 @@ BOOL InsertMarkHitTest(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisbuttoncheckeda--ctoolbarctrlisbuttonchecked"></a><a name="isbuttonchecked"></a>CToolBarCtrl::IsButtonChecked  
+##  <a name="isbuttonchecked"></a>CToolBarCtrl::IsButtonChecked  
  确定是否已选中指定按钮在工具栏控件中。  
   
 ```  
@@ -1150,7 +1239,7 @@ BOOL IsButtonChecked(int nID) const;
 ### <a name="remarks"></a>备注  
  请考虑调用[GetState](#getstate)如果想要检索多个按钮的状态。  
   
-##  <a name="a-nameisbuttonenableda--ctoolbarctrlisbuttonenabled"></a><a name="isbuttonenabled"></a>CToolBarCtrl::IsButtonEnabled  
+##  <a name="isbuttonenabled"></a>CToolBarCtrl::IsButtonEnabled  
  确定是否启用指定的按钮在工具栏控件中。  
   
 ```  
@@ -1167,7 +1256,7 @@ BOOL IsButtonEnabled(int nID) const;
 ### <a name="remarks"></a>备注  
  请考虑调用[GetState](#getstate)如果想要检索多个按钮的状态。  
   
-##  <a name="a-nameisbuttonhiddena--ctoolbarctrlisbuttonhidden"></a><a name="isbuttonhidden"></a>CToolBarCtrl::IsButtonHidden  
+##  <a name="isbuttonhidden"></a>CToolBarCtrl::IsButtonHidden  
  确定指定的按钮在工具栏控件中是否处于隐藏状态。  
   
 ```  
@@ -1184,7 +1273,7 @@ BOOL IsButtonHidden(int nID) const;
 ### <a name="remarks"></a>备注  
  请考虑调用[GetState](#getstate)如果想要检索多个按钮的状态。  
   
-##  <a name="a-nameisbuttonhighlighteda--ctoolbarctrlisbuttonhighlighted"></a><a name="isbuttonhighlighted"></a>CToolBarCtrl::IsButtonHighlighted  
+##  <a name="isbuttonhighlighted"></a>CToolBarCtrl::IsButtonHighlighted  
  检查工具栏按钮的突出显示状态。  
   
 ```  
@@ -1198,7 +1287,7 @@ BOOL IsButtonHighlighted(int nID) const;
 ### <a name="return-value"></a>返回值  
  如果突出显示该按钮的正整数，如果未突出显示按钮，则为 0 或-1 如果检测到错误时发生。  
   
-##  <a name="a-nameisbuttonindeterminatea--ctoolbarctrlisbuttonindeterminate"></a><a name="isbuttonindeterminate"></a>CToolBarCtrl::IsButtonIndeterminate  
+##  <a name="isbuttonindeterminate"></a>CToolBarCtrl::IsButtonIndeterminate  
  确定指定的按钮在工具栏控件中是不确定的。  
   
 ```  
@@ -1215,7 +1304,7 @@ BOOL IsButtonIndeterminate(int nID) const;
 ### <a name="remarks"></a>备注  
  不确定显示按钮变灰，如字处理器的方式在工具栏上加粗按钮时所选的文本中包含显示为粗体和常规字符的外观。 请考虑调用[GetState](#getstate)如果想要检索多个按钮的状态。  
   
-##  <a name="a-nameisbuttonpresseda--ctoolbarctrlisbuttonpressed"></a><a name="isbuttonpressed"></a>CToolBarCtrl::IsButtonPressed  
+##  <a name="isbuttonpressed"></a>CToolBarCtrl::IsButtonPressed  
  确定是否按下工具栏控件中指定的按钮。  
   
 ```  
@@ -1232,7 +1321,7 @@ BOOL IsButtonPressed(int nID) const;
 ### <a name="remarks"></a>备注  
  请考虑调用[GetState](#getstate)如果想要检索多个按钮的状态。  
   
-##  <a name="a-nameloadimagesa--ctoolbarctrlloadimages"></a><a name="loadimages"></a>CToolBarCtrl::LoadImages  
+##  <a name="loadimages"></a>CToolBarCtrl::LoadImages  
  将位图加载到工具栏控件的图像列表。  
   
 ```  
@@ -1260,7 +1349,7 @@ void LoadImages(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemapacceleratora--ctoolbarctrlmapaccelerator"></a><a name="mapaccelerator"></a>CToolBarCtrl::MapAccelerator  
+##  <a name="mapaccelerator"></a>CToolBarCtrl::MapAccelerator  
  将一个加速器字符映射到一个工具栏按钮。  
   
 ```  
@@ -1282,7 +1371,7 @@ BOOL MapAccelerator(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemarkbuttona--ctoolbarctrlmarkbutton"></a><a name="markbutton"></a>CToolBarCtrl::MarkButton  
+##  <a name="markbutton"></a>CToolBarCtrl::MarkButton  
  在工具栏控件中设置给定的按钮的突出显示状态。  
   
 ```  
@@ -1304,7 +1393,7 @@ BOOL MarkButton(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemovebuttona--ctoolbarctrlmovebutton"></a><a name="movebutton"></a>CToolBarCtrl::MoveButton  
+##  <a name="movebutton"></a>CToolBarCtrl::MoveButton  
  将一个按钮从一个索引移到另一个。  
   
 ```  
@@ -1326,7 +1415,7 @@ BOOL MoveButton(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namepressbuttona--ctoolbarctrlpressbutton"></a><a name="pressbutton"></a>CToolBarCtrl::PressButton  
+##  <a name="pressbutton"></a>CToolBarCtrl::PressButton  
  按下或释放在工具栏控件中指定的按钮。  
   
 ```  
@@ -1348,7 +1437,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
   
  此方法可发送[TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namereplacebitmapa--ctoolbarctrlreplacebitmap"></a><a name="replacebitmap"></a>CToolBarCtrl::ReplaceBitmap  
+##  <a name="replacebitmap"></a>CToolBarCtrl::ReplaceBitmap  
  用新位图替换当前的工具栏控件中现有的位图。  
   
 ```  
@@ -1372,7 +1461,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_4.cpp)]  
   
-##  <a name="a-namerestorestatea--ctoolbarctrlrestorestate"></a><a name="restorestate"></a>CToolBarCtrl::RestoreState  
+##  <a name="restorestate"></a>CToolBarCtrl::RestoreState  
  从参数所指定的注册表中的位置还原工具栏控件的状态。  
   
 ```  
@@ -1400,7 +1489,7 @@ void RestoreState(
  `lpszValueName`  
  指向包含要检索的值的名称的字符串。 如果具有此名称的值尚不存在项中，该函数会将其添加到该密钥。  
   
-##  <a name="a-namesavestatea--ctoolbarctrlsavestate"></a><a name="savestate"></a>CToolBarCtrl::SaveState  
+##  <a name="savestate"></a>CToolBarCtrl::SaveState  
  将工具栏控件的状态保存在由参数指定的注册表中的位置。  
   
 ```  
@@ -1428,7 +1517,7 @@ void SaveState(
  `lpszValueName`  
  指向包含要设置的值的名称的字符串。 如果具有此名称的值尚不存在项中，该函数会将其添加到该密钥。  
   
-##  <a name="a-namesetanchorhighlighta--ctoolbarctrlsetanchorhighlight"></a><a name="setanchorhighlight"></a>CToolBarCtrl::SetAnchorHighlight  
+##  <a name="setanchorhighlight"></a>CToolBarCtrl::SetAnchorHighlight  
  设置设置为工具栏的定位点突出显示。  
   
 ```  
@@ -1445,7 +1534,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ### <a name="remarks"></a>备注  
  此方法实现的行为的 Win32 消息[TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetbitmapsizea--ctoolbarctrlsetbitmapsize"></a><a name="setbitmapsize"></a>CToolBarCtrl::SetBitmapSize  
+##  <a name="setbitmapsize"></a>CToolBarCtrl::SetBitmapSize  
  设置实际位图化图像添加到工具栏控件的大小。  
   
 ```  
@@ -1462,7 +1551,7 @@ BOOL SetBitmapSize(CSize size);
 ### <a name="remarks"></a>备注  
  仅在添加到工具栏上的任何位图之前必须调用此函数。 如果应用程序未显式设置位图的大小，则默认为 16 x 15 像素。  
   
-##  <a name="a-namesetbuttoninfoa--ctoolbarctrlsetbuttoninfo"></a><a name="setbuttoninfo"></a>CToolBarCtrl::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>CToolBarCtrl::SetButtonInfo  
  在工具栏中设置的现有按钮的信息。  
   
 ```  
@@ -1484,7 +1573,7 @@ BOOL SetButtonInfo(
 ### <a name="remarks"></a>备注  
  成员函数实现的行为的 Win32 消息[TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetbuttonsizea--ctoolbarctrlsetbuttonsize"></a><a name="setbuttonsize"></a>CToolBarCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>CToolBarCtrl::SetButtonSize  
  在工具栏控件中设置按钮的大小。  
   
 ```  
@@ -1504,7 +1593,7 @@ BOOL SetButtonSize(CSize size);
 ### <a name="example"></a>示例  
   请参阅示例[CToolBar::GetToolBarCtrl](../../mfc/reference/ctoolbar-class.md#gettoolbarctrl)。  
   
-##  <a name="a-namesetbuttonstructsizea--ctoolbarctrlsetbuttonstructsize"></a><a name="setbuttonstructsize"></a>CToolBarCtrl::SetButtonStructSize  
+##  <a name="setbuttonstructsize"></a>CToolBarCtrl::SetButtonStructSize  
  指定的大小`TBBUTTON`结构。  
   
 ```  
@@ -1520,7 +1609,7 @@ void SetButtonStructSize(int nSize);
   
  请参阅[CToolBarCtrl::AddButtons](#addbuttons)有关详细信息`TBBUTTON`结构。  
   
-##  <a name="a-namesetbuttonwidtha--ctoolbarctrlsetbuttonwidth"></a><a name="setbuttonwidth"></a>CToolBarCtrl::SetButtonWidth  
+##  <a name="setbuttonwidth"></a>CToolBarCtrl::SetButtonWidth  
  在工具栏控件中设置的最小值和最大按钮的宽度。  
   
 ```  
@@ -1542,7 +1631,7 @@ BOOL SetButtonWidth(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetcmdida--ctoolbarctrlsetcmdid"></a><a name="setcmdid"></a>CToolBarCtrl::SetCmdID  
+##  <a name="setcmdid"></a>CToolBarCtrl::SetCmdID  
  设置指定的按钮按下时，将向所有者窗口发送的命令标识符。  
   
 ```  
@@ -1561,7 +1650,7 @@ BOOL SetCmdID(
 ### <a name="return-value"></a>返回值  
  如果成功，则非零返回否则为零。  
   
-##  <a name="a-namesetcolorschemea--ctoolbarctrlsetcolorscheme"></a><a name="setcolorscheme"></a>CToolBarCtrl::SetColorScheme  
+##  <a name="setcolorscheme"></a>CToolBarCtrl::SetColorScheme  
  设置当前的工具栏控件的配色方案。  
   
 ```  
@@ -1584,7 +1673,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;&3;](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_5.cpp)]  
   
-##  <a name="a-namesetdisabledimagelista--ctoolbarctrlsetdisabledimagelist"></a><a name="setdisabledimagelist"></a>CToolBarCtrl::SetDisabledImageList  
+##  <a name="setdisabledimagelist"></a>CToolBarCtrl::SetDisabledImageList  
  将工具栏控件将使用的图像列表设置为显示禁用按钮。  
   
 ```  
@@ -1601,7 +1690,7 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 MFC 实现`SetDisabledImageList`使用`CImageList`对象，包含工具栏控件的禁用的按钮映像，而不是图像列表的句柄。  
   
-##  <a name="a-namesetdrawtextflagsa--ctoolbarctrlsetdrawtextflags"></a><a name="setdrawtextflags"></a>CToolBarCtrl::SetDrawTextFlags  
+##  <a name="setdrawtextflags"></a>CToolBarCtrl::SetDrawTextFlags  
  Win32 函数中设置的标志[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)，用于按照如何设置的标志设置格式的指定矩形中绘制文本。  
   
 ```  
@@ -1623,7 +1712,7 @@ DWORD SetDrawTextFlags(
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此成员函数的 Win32 函数中设置的标志`DrawText`，按照如何设置的标志设置格式的指定矩形中绘制文本的。  
   
-##  <a name="a-namesetextendedstylea--ctoolbarctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CToolBarCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CToolBarCtrl::SetExtendedStyle  
  设置工具栏控件的扩展的样式。  
   
 ```  
@@ -1640,7 +1729,7 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesethotimagelista--ctoolbarctrlsethotimagelist"></a><a name="sethotimagelist"></a>CToolBarCtrl::SetHotImageList  
+##  <a name="sethotimagelist"></a>CToolBarCtrl::SetHotImageList  
  设置工具栏控件将用于显示"热"按钮的图像列表。  
   
 ```  
@@ -1659,7 +1748,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
   
  MFC 实现`SetHotImageList`使用`CImageList`对象，包含工具栏控件的热点问题映像，而不是图像列表的句柄。 当指针位于其上方时突出显示热按钮。  
   
-##  <a name="a-namesethotitema--ctoolbarctrlsethotitem"></a><a name="sethotitem"></a>CToolBarCtrl::SetHotItem  
+##  <a name="sethotitem"></a>CToolBarCtrl::SetHotItem  
  在工具栏中设置的热的项。  
   
 ```  
@@ -1676,7 +1765,7 @@ int SetHotItem(int nHot);
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetimagelista--ctoolbarctrlsetimagelist"></a><a name="setimagelist"></a>CToolBarCtrl::SetImageList  
+##  <a name="setimagelist"></a>CToolBarCtrl::SetImageList  
  设置工具栏上将用来显示它们的默认状态的按钮的图像列表。  
   
 ```  
@@ -1695,7 +1784,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  MFC 实现`SetImageList`使用`CImageList`对象，包含工具栏控件的按钮映像，而不是图像列表的句柄。  
   
-##  <a name="a-namesetindenta--ctoolbarctrlsetindent"></a><a name="setindent"></a>CToolBarCtrl::SetIndent  
+##  <a name="setindent"></a>CToolBarCtrl::SetIndent  
  设置工具栏控件中的第一个按钮的缩进。  
   
 ```  
@@ -1709,7 +1798,7 @@ BOOL SetIndent(int iIndent);
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namesetinsertmarka--ctoolbarctrlsetinsertmark"></a><a name="setinsertmark"></a>CToolBarCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>CToolBarCtrl::SetInsertMark  
  设置工具栏上的当前插入标记。  
   
 ```  
@@ -1723,7 +1812,7 @@ void SetInsertMark(TBINSERTMARK* ptbim);
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetinsertmarkcolora--ctoolbarctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CToolBarCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>CToolBarCtrl::SetInsertMarkColor  
  设置用于绘制工具栏上的插入标记的颜色。  
   
 ```  
@@ -1740,7 +1829,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetmaxtextrowsa--ctoolbarctrlsetmaxtextrows"></a><a name="setmaxtextrows"></a>CToolBarCtrl::SetMaxTextRows  
+##  <a name="setmaxtextrows"></a>CToolBarCtrl::SetMaxTextRows  
  设置最大工具栏按钮上显示的文本行数。  
   
 ```  
@@ -1754,7 +1843,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namesetmetricsa--ctoolbarctrlsetmetrics"></a><a name="setmetrics"></a>CToolBarCtrl::SetMetrics  
+##  <a name="setmetrics"></a>CToolBarCtrl::SetMetrics  
  设置的度量值`CToolBarCtrl`对象。  
   
 ```  
@@ -1768,7 +1857,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446)消息，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetownera--ctoolbarctrlsetowner"></a><a name="setowner"></a>CToolBarCtrl::SetOwner  
+##  <a name="setowner"></a>CToolBarCtrl::SetOwner  
  设置工具栏控件的所有者窗口。  
   
 ```  
@@ -1782,7 +1871,7 @@ void SetOwner(CWnd* pWnd);
 ### <a name="remarks"></a>备注  
  所有者窗口是接收通知，从工具栏中的窗口。  
   
-##  <a name="a-namesetpaddinga--ctoolbarctrlsetpadding"></a><a name="setpadding"></a>CToolBarCtrl::SetPadding  
+##  <a name="setpadding"></a>CToolBarCtrl::SetPadding  
  设置当前的工具栏控件的水平和垂直填充。  
   
 ```  
@@ -1809,7 +1898,7 @@ DWORD SetPadding(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;&4;](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_6.cpp)]  
   
-##  <a name="a-namesetpressedimagelista--ctoolbarctrlsetpressedimagelist"></a><a name="setpressedimagelist"></a>CToolBarCtrl::SetPressedImageList  
+##  <a name="setpressedimagelist"></a>CToolBarCtrl::SetPressedImageList  
  设置当前的工具栏控件使用以表示按钮处于按下状态的图像列表。  
   
 ```  
@@ -1836,7 +1925,7 @@ CImagelist* SetPressedImageList(
   
  [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;&5;](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_7.cpp)]  
   
-##  <a name="a-namesetrowsa--ctoolbarctrlsetrows"></a><a name="setrows"></a>CToolBarCtrl::SetRows  
+##  <a name="setrows"></a>CToolBarCtrl::SetRows  
  将询问工具栏控件来调整其自身到请求的行数大小。  
   
 ```  
@@ -1869,7 +1958,7 @@ void SetRows(
   
  此函数只能调用使用以前创建的工具栏`TBSTYLE_WRAPABLE`样式。  
   
-##  <a name="a-namesetstatea--ctoolbarctrlsetstate"></a><a name="setstate"></a>CToolBarCtrl::SetState  
+##  <a name="setstate"></a>CToolBarCtrl::SetState  
  在工具栏控件中设置指定按钮的状态。  
   
 ```  
@@ -1891,7 +1980,7 @@ BOOL SetState(
 ### <a name="remarks"></a>备注  
  此函数是如果您想要设置多个按钮状态尤为方便。 若要只需设置一种状态，使用以下成员函数之一︰ [EnableButton](#enablebutton)， [CheckButton](#checkbutton)， [HideButton](#hidebutton)，[不确定](#indeterminate)，或[PressButton](#pressbutton)。  
   
-##  <a name="a-namesetstylea--ctoolbarctrlsetstyle"></a><a name="setstyle"></a>CToolBarCtrl::SetStyle  
+##  <a name="setstyle"></a>CToolBarCtrl::SetStyle  
  设置工具栏控件的样式。  
   
 ```  
@@ -1902,7 +1991,7 @@ void SetStyle(DWORD dwStyle);
  `dwStyle`  
  一个`DWORD`包含的一个组合[工具栏控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesettooltipsa--ctoolbarctrlsettooltips"></a><a name="settooltips"></a>CToolBarCtrl::SetToolTips  
+##  <a name="settooltips"></a>CToolBarCtrl::SetToolTips  
  将工具提示控件与工具栏控件相关联。  
   
 ```  
@@ -1913,7 +2002,7 @@ void SetToolTips(CToolTipCtrl* pTip);
  *pTip*  
  指向[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)对象。  
   
-##  <a name="a-namesetwindowthemea--ctoolbarctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolBarCtrl::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CToolBarCtrl::SetWindowTheme  
  设置的视觉样式`CToolBarCtrl`对象。  
   
 ```  

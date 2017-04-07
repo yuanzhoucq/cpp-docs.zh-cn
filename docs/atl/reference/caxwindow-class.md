@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CAxWindowT
 - CAxWindow
+- ATLWIN/ATL::CAxWindow
+- ATLWIN/ATL::AttachControl
+- ATLWIN/ATL::CAxWindow
+- ATLWIN/ATL::CreateControl
+- ATLWIN/ATL::CreateControlEx
+- ATLWIN/ATL::GetWndClassName
+- ATLWIN/ATL::QueryControl
+- ATLWIN/ATL::QueryHost
+- ATLWIN/ATL::SetExternalDispatch
+- ATLWIN/ATL::SetExternalUIHandler
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +96,7 @@ class CAxWindow : public CWindow
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-nameattachcontrola--caxwindowattachcontrol"></a><a name="attachcontrol"></a>CAxWindow::AttachControl  
+##  <a name="attachcontrol"></a>CAxWindow::AttachControl  
  如果有人已不存在，并将指定的控件附加到主机，请创建一个新的宿主对象。  
   
 ```
@@ -109,7 +118,7 @@ HRESULT AttachControl(
 ### <a name="remarks"></a>备注  
  要附加的控件对象必须正确的初始化，然后再调`AttachControl`。  
   
-##  <a name="a-namecaxwindowa--caxwindowcaxwindow"></a><a name="caxwindow"></a>CAxWindow::CAxWindow  
+##  <a name="caxwindow"></a>CAxWindow::CAxWindow  
  构造`CAxWindow`对象使用现有的窗口对象句柄。  
   
 ```
@@ -120,7 +129,7 @@ CAxWindow(HWND hWnd = NULL);
  `hWnd`  
  现有的窗口对象的句柄。  
   
-##  <a name="a-namecreatecontrola--caxwindowcreatecontrol"></a><a name="createcontrol"></a>CAxWindow::CreateControl  
+##  <a name="createcontrol"></a>CAxWindow::CreateControl  
  创建 ActiveX 控件，初始化它并在指定窗口中承载它。  
   
 ```
@@ -176,7 +185,7 @@ HRESULT CreateControl(
 ### <a name="example"></a>示例  
  请参阅[承载 ActiveX 控件使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)有关的示例，使用`CreateControl`。  
   
-##  <a name="a-namecreatecontrolexa--caxwindowcreatecontrolex"></a><a name="createcontrolex"></a>CAxWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx  
  创建 ActiveX 控件，初始化它并在指定窗口中承载它。  
   
 ```
@@ -243,7 +252,7 @@ HRESULT CreateControlEx(
 ### <a name="example"></a>示例  
  请参阅[承载 ActiveX 控件使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)有关的示例，使用`CreateControlEx`。  
   
-##  <a name="a-namegetwndclassnamea--caxwindowgetwndclassname"></a><a name="getwndclassname"></a>CAxWindow::GetWndClassName  
+##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName  
  检索的窗口类的名称。  
   
 ```
@@ -253,7 +262,7 @@ static LPCTSTR GetWndClassName();
 ### <a name="return-value"></a>返回值  
  指向包含可以承载未授权的 ActiveX 控件的窗口类的名称的字符串的指针。  
   
-##  <a name="a-nameoperatoreqa--caxwindowoperator-"></a><a name="operator_eq"></a>CAxWindow::operator =  
+##  <a name="operator_eq"></a>CAxWindow::operator =  
  将分配`HWND`到某个现有`CAxWindow`对象。  
   
 ```
@@ -267,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 ### <a name="return-value"></a>返回值  
  返回对当前 `CAxWindow` 对象的引用。  
   
-##  <a name="a-namequerycontrola--caxwindowquerycontrol"></a><a name="querycontrol"></a>CAxWindow::QueryControl  
+##  <a name="querycontrol"></a>CAxWindow::QueryControl  
  检索所承载的控件的指定的接口。  
   
 ```
@@ -289,7 +298,7 @@ HRESULT QueryControl(Q** ppUnk);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namequeryhosta--caxwindowqueryhost"></a><a name="queryhost"></a>CAxWindow::QueryHost  
+##  <a name="queryhost"></a>CAxWindow::QueryHost  
  返回指定的主机的接口。  
   
 ```
@@ -314,7 +323,7 @@ HRESULT QueryHost(Q** ppUnk);
 ### <a name="remarks"></a>备注  
  主机的接口允许访问该窗口中承载的代码，由实现的基本功能**AxWin**。  
   
-##  <a name="a-namesetexternaldispatcha--caxwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch  
  设置外部调度接口来`CAxWindow`对象。  
   
 ```
@@ -328,7 +337,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namesetexternaluihandlera--caxwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler  
  设置外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)接口`CAxWindow`对象。  
   
 ```

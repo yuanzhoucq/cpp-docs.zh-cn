@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
+- AFXMT/CCriticalSection
+- AFXMT/CCriticalSection::CCriticalSection
+- AFXMT/CCriticalSection::Lock
+- AFXMT/CCriticalSection::Unlock
+- AFXMT/CCriticalSection::m_sect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +111,7 @@ class CCriticalSection : public CSyncObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxmt.h  
   
-##  <a name="a-nameccriticalsectiona--ccriticalsectionccriticalsection"></a><a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
  构造 `CCriticalSection` 对象。  
   
 ```  
@@ -121,7 +126,7 @@ CCriticalSection();
 ### <a name="example"></a>示例  
   请参阅示例[CCriticalSection::Lock](#lock)。  
   
-##  <a name="a-namelocka--ccriticalsectionlock"></a><a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>CCriticalSection::Lock  
  调用此成员函数来访问关键部分对象。  
   
 ```  
@@ -148,14 +153,14 @@ BOOL Lock(DWORD dwTimeout);
   
  [!code-cpp[NVC_MFC_Utilities #&11;](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="a-namemsecta--ccriticalsectionmsect"></a><a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>CCriticalSection::m_sect  
  包含由所有的关键部分对象`CCriticalSection`方法。  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="a-nameoperatorcriticalsectionstara--ccriticalsectionoperator-criticalsection"></a><a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
  检索**CRITICAL_SECTION**对象。  
   
 ```  
@@ -165,7 +170,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>备注  
  调用此函数可检索到的内部指针**CRITICAL_SECTION**对象。  
   
-##  <a name="a-nameunlocka--ccriticalsectionunlock"></a><a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>CCriticalSection::Unlock  
  版本`CCriticalSection`对象以供另一个线程。  
   
 ```  

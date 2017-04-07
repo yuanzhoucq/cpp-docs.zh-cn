@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarsCustomizeDialog
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::FillAllCommandsList
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::FillCategoriesComboBox
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::FillCategoriesListBox
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::GetCommandName
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::GetCountInCategory
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::GetFlags
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::OnInitDialog
+- AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::PostNcDestroy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +129,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 ## <a name="requirements"></a>要求  
  **标头︰** afxToolBarsCustomizeDialog.h  
   
-##  <a name="a-nameaddbuttona--cmfctoolbarscustomizedialogaddbutton"></a><a name="addbutton"></a>CMFCToolBarsCustomizeDialog::AddButton  
+##  <a name="addbutton"></a>CMFCToolBarsCustomizeDialog::AddButton  
  工具栏按钮将插入命令的列表中上**命令**页。  
   
 ```  
@@ -161,7 +171,7 @@ void AddButton(
   
  [!code-cpp[NVC_MFC_Slider #&1;](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]  
   
-##  <a name="a-nameaddmenua--cmfctoolbarscustomizedialogaddmenu"></a><a name="addmenu"></a>CMFCToolBarsCustomizeDialog::AddMenu  
+##  <a name="addmenu"></a>CMFCToolBarsCustomizeDialog::AddMenu  
  从该资源并调用加载菜单[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)若要将该菜单添加到命令的列表，在**命令**页。  
   
 ```  
@@ -178,7 +188,7 @@ BOOL AddMenu(UINT uiMenuResId);
 ### <a name="remarks"></a>备注  
  在调用`AddMenuCommands`，`bPopup`是`FALSE`。 因此，该方法不会添加菜单项包含子菜单命令的列表。 此方法未向命令的列表，在子菜单中添加菜单项。  
   
-##  <a name="a-nameaddmenucommandsa--cmfctoolbarscustomizedialogaddmenucommands"></a><a name="addmenucommands"></a>CMFCToolBarsCustomizeDialog::AddMenuCommands  
+##  <a name="addmenucommands"></a>CMFCToolBarsCustomizeDialog::AddMenuCommands  
  将项添加到列表中的命令**命令**页上，代表指定菜单中的所有项。  
   
 ```  
@@ -207,7 +217,7 @@ void AddMenuCommands(
   
  如果`bPopup`是`TRUE`，每个菜单项包含子菜单，此方法创建[CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)对象，并将其插入到的命令列表，通过调用`AddButton`。 否则，包含子菜单的菜单项不会显示在命令的列表中。 在任一情况下，当`AddMenuCommands`遇到菜单项在子菜单调用其自身以递归方式，将指针传递给作为子菜单`pMenu`参数并追加到的子菜单中的标签`lpszMenuPath`。  
   
-##  <a name="a-nameaddtoolbara--cmfctoolbarscustomizedialogaddtoolbar"></a><a name="addtoolbar"></a>CMFCToolBarsCustomizeDialog::AddToolBar  
+##  <a name="addtoolbar"></a>CMFCToolBarsCustomizeDialog::AddToolBar  
  从资源加载工具栏。 然后，对于每个命令中的菜单调用[CMFCToolBarsCustomizeDialog::AddButton](#addbutton)方法插入的命令列表中的按钮上**命令**指定类别下的页。  
   
 ```  
@@ -241,7 +251,7 @@ BOOL AddToolBar(
 ### <a name="remarks"></a>备注  
  用于表示每个命令的控件是[CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)对象。 添加工具栏后，您可以将按钮与派生类型的控件通过调用[CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)。  
   
-##  <a name="a-namechecktoolsvaliditya--cmfctoolbarscustomizedialogchecktoolsvalidity"></a><a name="checktoolsvalidity"></a>CMFCToolBarsCustomizeDialog::CheckToolsValidity  
+##  <a name="checktoolsvalidity"></a>CMFCToolBarsCustomizeDialog::CheckToolsValidity  
  验证的用户工具列表的有效性。  
   
 ```  
@@ -260,7 +270,7 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
   
  重写`CheckToolsValidity`方法在类派生自`CMFCToolBarsCustomizeDialog`如果想要在用户关闭对话框前验证的用户工具。 如果此方法返回`FALSE`时用户将单击**关闭**右上角中的对话框或标记为按钮的按钮**关闭**对话框中显示在对话框中的右下角，**工具**而不是关闭的选项卡。 如果此方法返回`FALSE`当用户单击选项卡以离开**工具**选项卡上，导航不会发生。 应显示相应的消息框以通知用户导致验证失败的问题。  
   
-##  <a name="a-namecmfctoolbarscustomizedialoga--cmfctoolbarscustomizedialogcmfctoolbarscustomizedialog"></a><a name="cmfctoolbarscustomizedialog"></a>CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog  
+##  <a name="cmfctoolbarscustomizedialog"></a>CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog  
  构造 `CMFCToolBarsCustomizeDialog` 对象。  
   
 ```  
@@ -310,7 +320,7 @@ CMFCToolBarsCustomizeDialog(
   
  [!code-cpp[NVC_MFC_CustomPages #&3;](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]  
   
-##  <a name="a-namecreatea--cmfctoolbarscustomizedialogcreate"></a><a name="create"></a>CMFCToolBarsCustomizeDialog::Create  
+##  <a name="create"></a>CMFCToolBarsCustomizeDialog::Create  
  显示**自定义**对话框。  
   
 ```  
@@ -323,7 +333,7 @@ virtual BOOL Create();
 ### <a name="remarks"></a>备注  
  调用`Create`方法只在完全初始化类之后。  
   
-##  <a name="a-nameenableuserdefinedtoolbarsa--cmfctoolbarscustomizedialogenableuserdefinedtoolbars"></a><a name="enableuserdefinedtoolbars"></a>CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars  
+##  <a name="enableuserdefinedtoolbars"></a>CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars  
  启用或禁用通过使用创建新工具栏**自定义**对话框。  
   
 ```  
@@ -339,7 +349,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
   
  默认情况下，或者如果`bEnable`是`FALSE`，这些按钮不会显示，并且用户不能定义新的工具栏。  
   
-##  <a name="a-namefillallcommandslista--cmfctoolbarscustomizedialogfillallcommandslist"></a><a name="fillallcommandslist"></a>CMFCToolBarsCustomizeDialog::FillAllCommandsList  
+##  <a name="fillallcommandslist"></a>CMFCToolBarsCustomizeDialog::FillAllCommandsList  
  填充所提供`CListBox`对象中的命令**所有命令**类别。  
   
 ```  
@@ -357,7 +367,7 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
   
  `CMFCMousePropertyPage`类使用此方法来填充双击事件列表框。  
   
-##  <a name="a-namefillcategoriescomboboxa--cmfctoolbarscustomizedialogfillcategoriescombobox"></a><a name="fillcategoriescombobox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesComboBox  
+##  <a name="fillcategoriescombobox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesComboBox  
  填充所提供`CComboBox`对象中每个命令类别同名**自定义**对话框。  
   
 ```  
@@ -382,7 +392,7 @@ void FillCategoriesComboBox(
   
  `CMFCToolBarsKeyboardPropertyPage`和`CMFCKeyMapDialog`类使用此方法来对其进行分类的键盘映射。  
   
-##  <a name="a-namefillcategorieslistboxa--cmfctoolbarscustomizedialogfillcategorieslistbox"></a><a name="fillcategorieslistbox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesListBox  
+##  <a name="fillcategorieslistbox"></a>CMFCToolBarsCustomizeDialog::FillCategoriesListBox  
  填充所提供`CListBox`对象中每个命令类别同名**自定义**对话框。  
   
 ```  
@@ -407,7 +417,7 @@ void FillCategoriesListBox(
   
  `CMFCToolBarsCommandsPropertyPage`类使用此方法以显示与每个命令类别相关联的命令列表。  
   
-##  <a name="a-namegetcommandnamea--cmfctoolbarscustomizedialoggetcommandname"></a><a name="getcommandname"></a>CMFCToolBarsCustomizeDialog::GetCommandName  
+##  <a name="getcommandname"></a>CMFCToolBarsCustomizeDialog::GetCommandName  
  检索与给定的命令 ID 相关联的名称  
   
 ```  
@@ -421,7 +431,7 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
 ### <a name="return-value"></a>返回值  
  与给定的命令 ID 相关联的名称或`NULL`如果该命令不存在。  
   
-##  <a name="a-namegetcountincategorya--cmfctoolbarscustomizedialoggetcountincategory"></a><a name="getcountincategory"></a>CMFCToolBarsCustomizeDialog::GetCountInCategory  
+##  <a name="getcountincategory"></a>CMFCToolBarsCustomizeDialog::GetCountInCategory  
  检索具有给定的文本标签提供的列表中的项的数目。  
   
 ```  
@@ -443,7 +453,7 @@ int GetCountInCategory(
 ### <a name="remarks"></a>备注  
  提供的对象列表中每个元素必须属于类型`CMFCToolBarButton`。 此方法比较`lpszItemName`与[CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)数据成员。  
   
-##  <a name="a-namegetflagsa--cmfctoolbarscustomizedialoggetflags"></a><a name="getflags"></a>CMFCToolBarsCustomizeDialog::GetFlags  
+##  <a name="getflags"></a>CMFCToolBarsCustomizeDialog::GetFlags  
  检索一的组会影响对话框中的行为的标志。  
   
 ```  
@@ -482,7 +492,7 @@ UINT GetFlags() const;
   
  有关详细信息`WS_EX_CONTEXTHELP`视觉样式，请参阅[扩展窗口样式](../../mfc/reference/extended-window-styles.md)。  
   
-##  <a name="a-nameonafterchangetoola--cmfctoolbarscustomizedialogonafterchangetool"></a><a name="onafterchangetool"></a>CMFCToolBarsCustomizeDialog::OnAfterChangeTool  
+##  <a name="onafterchangetool"></a>CMFCToolBarsCustomizeDialog::OnAfterChangeTool  
  它发生后立即响应用户工具中的更改。  
   
 ```  
@@ -496,7 +506,7 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
 ### <a name="remarks"></a>备注  
  当用户更改用户定义的工具的属性时，将由框架调用此方法。 默认实现不执行任何操作。 重写此方法在派生类中的`CMFCToolBarsCustomizeDialog`之后发生更改的用户工具执行处理。  
   
-##  <a name="a-nameonassignkeya--cmfctoolbarscustomizedialogonassignkey"></a><a name="onassignkey"></a>CMFCToolBarsCustomizeDialog::OnAssignKey  
+##  <a name="onassignkey"></a>CMFCToolBarsCustomizeDialog::OnAssignKey  
  验证键盘快捷方式，如用户定义它们。  
   
 ```  
@@ -513,7 +523,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 ### <a name="remarks"></a>备注  
  重写此方法在派生类来执行额外处理，当用户将分配新的键盘快捷键，或以用户身份验证的键盘快捷方式定义它们。 若要防止指派一个快捷方式，返回`FALSE`。 您应该还显示一个消息框或否则通知给用户的键盘快捷方式已拒绝的原因。  
   
-##  <a name="a-nameonbeforechangetoola--cmfctoolbarscustomizedialogonbeforechangetool"></a><a name="onbeforechangetool"></a>CMFCToolBarsCustomizeDialog::OnBeforeChangeTool  
+##  <a name="onbeforechangetool"></a>CMFCToolBarsCustomizeDialog::OnBeforeChangeTool  
  执行自定义处理时对用户工具更改用户将要应用更改时。  
   
 ```  
@@ -527,7 +537,7 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 ### <a name="remarks"></a>备注  
  要更改用户定义的工具的属性时，将由框架调用此方法。 默认实现不执行任何操作。 重写`OnBeforeChangeTool`方法在类派生自`CMFCToolBarsCustomizeDialog`如果想要执行处理在发生更改的用户工具，如释放资源之前，`pSelTool`使用。  
   
-##  <a name="a-nameonedittoolbarmenuimagea--cmfctoolbarscustomizedialogonedittoolbarmenuimage"></a><a name="onedittoolbarmenuimage"></a>CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage  
+##  <a name="onedittoolbarmenuimage"></a>CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage  
  启动图像编辑器，以便用户可以自定义工具栏按钮或菜单项图标。  
   
 ```  
@@ -553,7 +563,7 @@ virtual BOOL OnEditToolbarMenuImage(
 ### <a name="remarks"></a>备注  
  当用户运行图像编辑器时，将由框架调用此方法。 默认实现显示[CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)对话框。 重写`OnEditToolbarMenuImage`派生类以使用自定义图像编辑器中。  
   
-##  <a name="a-nameoninitdialoga--cmfctoolbarscustomizedialogoninitdialog"></a><a name="oninitdialog"></a>CMFCToolBarsCustomizeDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>CMFCToolBarsCustomizeDialog::OnInitDialog  
  重写来扩充属性工作表初始化。  
   
 ```  
@@ -566,7 +576,7 @@ virtual BOOL OnInitDialog();
 ### <a name="remarks"></a>备注  
  此方法会扩展的基类实现， [cpropertysheet:: Oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)，通过显示**关闭**按钮，以确保能满足当前的屏幕尺寸、 的对话框中，然后将移动**帮助**对话框的左下角的按钮。  
   
-##  <a name="a-nameoninittoolspagea--cmfctoolbarscustomizedialogoninittoolspage"></a><a name="oninittoolspage"></a>CMFCToolBarsCustomizeDialog::OnInitToolsPage  
+##  <a name="oninittoolspage"></a>CMFCToolBarsCustomizeDialog::OnInitToolsPage  
  处理来自该框架的通知，**工具**页是要进行初始化。  
   
 ```  
@@ -576,7 +586,7 @@ virtual void OnInitToolsPage();
 ### <a name="remarks"></a>备注  
  默认实现不执行任何操作。 重写此方法在派生类来处理此通知。  
   
-##  <a name="a-namepostncdestroya--cmfctoolbarscustomizedialogpostncdestroy"></a><a name="postncdestroy"></a>CMFCToolBarsCustomizeDialog::PostNcDestroy  
+##  <a name="postncdestroy"></a>CMFCToolBarsCustomizeDialog::PostNcDestroy  
  窗口已销毁后，由框架调用。  
   
 ```  
@@ -588,7 +598,7 @@ virtual void PostNcDestroy();
   
  [CMFCToolBarsCustomizeDialog::Create](#create)方法将限制用户的自定义任务以特殊模式将应用程序。  
   
-##  <a name="a-nameremovebuttona--cmfctoolbarscustomizedialogremovebutton"></a><a name="removebutton"></a>CMFCToolBarsCustomizeDialog::RemoveButton  
+##  <a name="removebutton"></a>CMFCToolBarsCustomizeDialog::RemoveButton  
  从指定的类别中，或所有类别，请删除具有指定的命令 ID 的按钮。  
   
 ```  
@@ -617,7 +627,7 @@ int RemoveButton(
 ### <a name="remarks"></a>备注  
  若要从所有类别中删除一个按钮，调用此方法并集的第一个重载`uiCategoryId`为-1。  
   
-##  <a name="a-namerenamecategorya--cmfctoolbarscustomizedialogrenamecategory"></a><a name="renamecategory"></a>CMFCToolBarsCustomizeDialog::RenameCategory  
+##  <a name="renamecategory"></a>CMFCToolBarsCustomizeDialog::RenameCategory  
  将类别的列表框中的一个类别重命名在**命令**页。  
   
 ```  
@@ -639,7 +649,7 @@ BOOL RenameCategory(
 ### <a name="remarks"></a>备注  
  类别名称必须是唯一的。  
   
-##  <a name="a-namereplacebuttona--cmfctoolbarscustomizedialogreplacebutton"></a><a name="replacebutton"></a>CMFCToolBarsCustomizeDialog::ReplaceButton  
+##  <a name="replacebutton"></a>CMFCToolBarsCustomizeDialog::ReplaceButton  
  将命令的列表框中的工具栏按钮替换上**命令**页。  
   
 ```  
@@ -663,7 +673,7 @@ void ReplaceButton(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo #&34;](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]  
   
-##  <a name="a-namesetusercategorya--cmfctoolbarscustomizedialogsetusercategory"></a><a name="setusercategory"></a>CMFCToolBarsCustomizeDialog::SetUserCategory  
+##  <a name="setusercategory"></a>CMFCToolBarsCustomizeDialog::SetUserCategory  
  指定的类别列表中的哪些类别上**命令**页是用户类别。 您必须在调用之前调用此函数[CMFCToolBarsCustomizeDialog::Create](#create)。  
   
 ```  

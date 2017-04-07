@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecordView
+- AFXDB/CRecordView
+- AFXDB/CRecordView::CRecordView
+- AFXDB/CRecordView::IsOnFirstRecord
+- AFXDB/CRecordView::IsOnLastRecord
+- AFXDB/CRecordView::OnGetRecordset
+- AFXDB/CRecordView::OnMove
+- AFXDB/CRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +115,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
   
-##  <a name="a-namecrecordviewa--crecordviewcrecordview"></a><a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>CRecordView::CRecordView  
  当创建类型的对象派生自`CRecordView`，调用任一格式的构造函数，以便初始化视图的对象，并确定该视图所基于的对话框资源。  
   
 ```  
@@ -137,7 +144,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDatabase #&32;](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
  调用此成员函数可确定当前记录是否与此记录视图关联的记录集对象中的第一个记录。  
   
 ```  
@@ -152,7 +159,7 @@ BOOL IsOnFirstRecord();
   
  如果用户移到第一个记录，该框架将禁用移动到第一个或上一条记录有任何用户界面对象。  
   
-##  <a name="a-nameisonlastrecorda--crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
  调用此成员函数可确定当前记录是否与此记录视图关联的记录集对象中的最后一个记录。  
   
 ```  
@@ -168,7 +175,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  此函数的结果是可靠的只不过直到用户移过它，该视图无法检测到记录集的结尾。 记录视图可以告诉它必须禁用任何用户界面对象移动到下一个或最后一条记录之前，必须将用户移动超出了最后一条记录。 如果用户移过最后一条记录，然后移动回到最后一个记录 （或在它之前），记录视图可以跟踪为记录集中的用户的位置，并正确地禁用用户界面对象。 `IsOnLastRecord`在对实现函数的调用后也是不可靠**OnRecordLast**，哪些句柄`ID_RECORD_LAST`命令，或`CRecordset::MoveLast`。  
   
-##  <a name="a-nameongetrecordseta--crecordviewongetrecordset"></a><a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
  返回一个指向`CRecordset`-派生的记录视图与关联的对象。  
   
 ```  
@@ -183,7 +190,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  有关详细信息和示例，请参阅文章[记录视图︰ 使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。  
   
-##  <a name="a-nameonmovea--crecordviewonmove"></a><a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>CRecordView::OnMove  
  调用此成员函数以将移动到另一条记录中的记录集中的记录视图控件中显示其字段。  
   
 ```  

@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
-- ATL.IEnumOnSTLImpl
-- ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl::Clone
+- ATLCOM/ATL::IEnumOnSTLImpl::Init
+- ATLCOM/ATL::IEnumOnSTLImpl::Next
+- ATLCOM/ATL::IEnumOnSTLImpl::Reset
+- ATLCOM/ATL::IEnumOnSTLImpl::Skip
+- ATLCOM/ATL::IEnumOnSTLImpl::m_iter
+- ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
+- ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +113,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameinita--ienumonstlimplinit"></a><a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>IEnumOnSTLImpl::Init  
  初始化枚举器。  
   
 ```
@@ -130,7 +137,7 @@ HRESULT Init(
   
  将指针传递给枚举器接口返回到任何客户端之前，必须调用此方法。  
   
-##  <a name="a-nameclonea--ienumonstlimplclone"></a><a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
  此方法将提供的实现[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)通过创建类型的对象的方法`CComEnumOnSTL`，具有相同的集合和当前对象所使用的迭代器对其进行初始化并返回新创建的对象的接口。  
   
 ```
@@ -144,7 +151,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namemspunka--ienumonstlimplmspunk"></a><a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
  **IUnknown**提供集合的对象的指针。  
   
 ```
@@ -154,7 +161,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>备注  
  此智能指针保持对传递给该对象的引用[IEnumOnSTLImpl::Init](#init)，确保它仍然保持活动状态的枚举器的生存期内。  
   
-##  <a name="a-namempcollectiona--ienumonstlimplmpcollection"></a><a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
  此成员将指向提供推动枚举器接口的实现的数据的集合。  
   
 ```
@@ -164,14 +171,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>备注  
  此成员初始化调用[IEnumOnSTLImpl::Init](#init)。  
   
-##  <a name="a-namemitera--ienumonstlimplmiter"></a><a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
  此成员将具有用来标记该集合中的当前位置并定位到后续元素的迭代器。  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="a-namenexta--ienumonstlimplnext"></a><a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>IEnumOnSTLImpl::Next  
  此方法将提供的实现[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
   
 ```
@@ -194,7 +201,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namereseta--ienumonstlimplreset"></a><a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
  此方法将提供的实现[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
   
 ```
@@ -204,7 +211,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-nameskipa--ienumonstlimplskip"></a><a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
  此方法将提供的实现[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
   
 ```

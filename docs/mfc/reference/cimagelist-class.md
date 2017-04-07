@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CImageList
+- AFXCMN/CImageList
+- AFXCMN/CImageList::CImageList
+- AFXCMN/CImageList::Add
+- AFXCMN/CImageList::Attach
+- AFXCMN/CImageList::BeginDrag
+- AFXCMN/CImageList::Copy
+- AFXCMN/CImageList::Create
+- AFXCMN/CImageList::DeleteImageList
+- AFXCMN/CImageList::DeleteTempMap
+- AFXCMN/CImageList::Detach
+- AFXCMN/CImageList::DragEnter
+- AFXCMN/CImageList::DragLeave
+- AFXCMN/CImageList::DragMove
+- AFXCMN/CImageList::DragShowNolock
+- AFXCMN/CImageList::Draw
+- AFXCMN/CImageList::DrawEx
+- AFXCMN/CImageList::DrawIndirect
+- AFXCMN/CImageList::EndDrag
+- AFXCMN/CImageList::ExtractIcon
+- AFXCMN/CImageList::FromHandle
+- AFXCMN/CImageList::FromHandlePermanent
+- AFXCMN/CImageList::GetBkColor
+- AFXCMN/CImageList::GetDragImage
+- AFXCMN/CImageList::GetImageCount
+- AFXCMN/CImageList::GetImageInfo
+- AFXCMN/CImageList::GetSafeHandle
+- AFXCMN/CImageList::Read
+- AFXCMN/CImageList::Remove
+- AFXCMN/CImageList::Replace
+- AFXCMN/CImageList::SetBkColor
+- AFXCMN/CImageList::SetDragCursorImage
+- AFXCMN/CImageList::SetImageCount
+- AFXCMN/CImageList::SetOverlayImage
+- AFXCMN/CImageList::Write
+- AFXCMN/CImageList::m_hImageList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +157,7 @@ class CImageList : public CObject
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="a-nameadda--cimagelistadd"></a><a name="add"></a>CImageList::Add  
+##  <a name="add"></a>CImageList::Add  
  调用此函数可将一个或多个图像或一个图标添加到图像列表。  
   
 ```  
@@ -160,7 +195,7 @@ int Add(HICON hIcon);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&1;](../../mfc/reference/codesnippet/cpp/cimagelist-class_1.cpp)]  
   
-##  <a name="a-nameattacha--cimagelistattach"></a><a name="attach"></a>CImageList::Attach  
+##  <a name="attach"></a>CImageList::Attach  
  调用此函数可将附加到图像列表`CImageList`对象。  
   
 ```  
@@ -177,7 +212,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&2;](../../mfc/reference/codesnippet/cpp/cimagelist-class_2.cpp)]  
   
-##  <a name="a-namebegindraga--cimagelistbegindrag"></a><a name="begindrag"></a>CImageList::BeginDrag  
+##  <a name="begindrag"></a>CImageList::BeginDrag  
  调用此函数开始拖动图像。  
   
 ```  
@@ -202,14 +237,14 @@ BOOL BeginDrag(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&3;](../../mfc/reference/codesnippet/cpp/cimagelist-class_3.cpp)]  
   
-##  <a name="a-namecimagelista--cimagelistcimagelist"></a><a name="cimagelist"></a>CImageList::CImageList  
+##  <a name="cimagelist"></a>CImageList::CImageList  
  构造 `CImageList` 对象。  
   
 ```  
 CImageList();
 ```  
   
-##  <a name="a-namecopya--cimagelistcopy"></a><a name="copy"></a>CImageList::Copy  
+##  <a name="copy"></a>CImageList::Copy  
  此成员函数实现的 Win32 函数的行为[ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -250,7 +285,7 @@ BOOL Copy(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&6;](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]  
   
-##  <a name="a-namecreatea--cimagelistcreate"></a><a name="create"></a>CImageList::Create  
+##  <a name="create"></a>CImageList::Create  
  初始化图像列表并将其附加到[CImageList](../../mfc/reference/cimagelist-class.md)对象。  
   
 ```  
@@ -353,7 +388,7 @@ BOOL Create(CImageList* pImageList);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&7;](../../mfc/reference/codesnippet/cpp/cimagelist-class_5.cpp)]  
   
-##  <a name="a-namedeleteimagelista--cimagelistdeleteimagelist"></a><a name="deleteimagelist"></a>CImageList::DeleteImageList  
+##  <a name="deleteimagelist"></a>CImageList::DeleteImageList  
  调用此函数可删除图像列表。  
   
 ```  
@@ -366,7 +401,7 @@ BOOL DeleteImageList();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&8;](../../mfc/reference/codesnippet/cpp/cimagelist-class_6.cpp)]  
   
-##  <a name="a-namedeletetempmapa--cimagelistdeletetempmap"></a><a name="deletetempmap"></a>CImageList::DeleteTempMap  
+##  <a name="deletetempmap"></a>CImageList::DeleteTempMap  
  自动调用`CWinApp`空闲时间处理程序中，`DeleteTempMap`删除任何临时`CImageList`由创建的对象[fromhandle，前者能够](#fromhandle)，但不会破坏任何句柄 ( `hImageList`) 与临时关联**ImageList**对象。  
   
 ```  
@@ -376,7 +411,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&9;](../../mfc/reference/codesnippet/cpp/cimagelist-class_7.cpp)]  
   
-##  <a name="a-namedetacha--cimagelistdetach"></a><a name="detach"></a>CImageList::Detach  
+##  <a name="detach"></a>CImageList::Detach  
  调用此函数可从图像列表对象中分离`CImageList`对象。  
   
 ```  
@@ -392,7 +427,7 @@ HIMAGELIST Detach();
 ### <a name="example"></a>示例  
   请参阅示例[CImageList::Attach](#attach)。  
   
-##  <a name="a-namedragentera--cimagelistdragenter"></a><a name="dragenter"></a>CImageList::DragEnter  
+##  <a name="dragenter"></a>CImageList::DragEnter  
  在拖动操作期间锁定指定的窗口更新`pWndLock`并显示由指定的位置拖动图像`point`。  
   
 ```  
@@ -421,7 +456,7 @@ static BOOL PASCAL DragEnter(
 ### <a name="example"></a>示例  
   请参阅示例[CImageList::BeginDrag](#begindrag)。  
   
-##  <a name="a-namedragleavea--cimagelistdragleave"></a><a name="dragleave"></a>CImageList::DragLeave  
+##  <a name="dragleave"></a>CImageList::DragLeave  
  取消锁定指定的窗口`pWndLock`并隐藏拖动图像，允许更新窗口。  
   
 ```  
@@ -438,7 +473,7 @@ static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ### <a name="example"></a>示例  
   请参阅示例[CImageList::EndDrag](#enddrag)。  
   
-##  <a name="a-namedragmovea--cimagelistdragmove"></a><a name="dragmove"></a>CImageList::DragMove  
+##  <a name="dragmove"></a>CImageList::DragMove  
  调用此函数可将拖放操作期间所拖动的图像。  
   
 ```  
@@ -458,7 +493,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&4;](../../mfc/reference/codesnippet/cpp/cimagelist-class_8.cpp)]  
   
-##  <a name="a-namedragshownolocka--cimagelistdragshownolock"></a><a name="dragshownolock"></a>CImageList::DragShowNolock  
+##  <a name="dragshownolock"></a>CImageList::DragShowNolock  
  显示或隐藏在拖动操作期间的拖动图像，而不会锁定窗口中。  
   
 ```  
@@ -475,7 +510,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ### <a name="remarks"></a>备注  
  [CImageList::DragEnter](#dragenter)函数会在拖动操作期间锁定窗口中的所有更新。 此函数，但是，不会锁定窗口中。  
   
-##  <a name="a-namedrawa--cimagelistdraw"></a><a name="draw"></a>Cimagelist:: Draw  
+##  <a name="draw"></a>Cimagelist:: Draw  
  调用此函数可绘制在拖放操作期间所拖动图像。  
   
 ```  
@@ -513,7 +548,7 @@ BOOL Draw(
 ### <a name="example"></a>示例  
   请参阅示例[cimagelist:: Setoverlayimage](#setoverlayimage)。  
   
-##  <a name="a-namedrawexa--cimagelistdrawex"></a><a name="drawex"></a>CImageList::DrawEx  
+##  <a name="drawex"></a>CImageList::DrawEx  
  在指定的设备上下文中绘制的图像列表项。  
   
 ```  
@@ -558,7 +593,7 @@ BOOL DrawEx(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&10;](../../mfc/reference/codesnippet/cpp/cimagelist-class_9.cpp)]  
   
-##  <a name="a-namedrawindirecta--cimagelistdrawindirect"></a><a name="drawindirect"></a>CImageList::DrawIndirect  
+##  <a name="drawindirect"></a>CImageList::DrawIndirect  
  调用该成员函数以从图像列表绘制图像。  
   
 ```  
@@ -651,7 +686,7 @@ BOOL DrawIndirect(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&11;](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
   
-##  <a name="a-nameenddraga--cimagelistenddrag"></a><a name="enddrag"></a>CImageList::EndDrag  
+##  <a name="enddrag"></a>CImageList::EndDrag  
  调用此函数以结束执行拖动操作。  
   
 ```  
@@ -664,7 +699,7 @@ static void PASCAL EndDrag();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&5;](../../mfc/reference/codesnippet/cpp/cimagelist-class_11.cpp)]  
   
-##  <a name="a-nameextracticona--cimagelistextracticon"></a><a name="extracticon"></a>CImageList::ExtractIcon  
+##  <a name="extracticon"></a>CImageList::ExtractIcon  
  调用此函数可创建基于图像和图像列表中的其相关的掩码中的图标。  
   
 ```  
@@ -684,7 +719,7 @@ HICON ExtractIcon(int nImage);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&12;](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
   
-##  <a name="a-namefromhandlea--cimagelistfromhandle"></a><a name="fromhandle"></a>CImageList::FromHandle  
+##  <a name="fromhandle"></a>CImageList::FromHandle  
  返回一个指向`CImageList`对象时提供给图像列表的句柄。  
   
 ```  
@@ -704,7 +739,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&13;](../../mfc/reference/codesnippet/cpp/cimagelist-class_13.cpp)]  
   
-##  <a name="a-namefromhandlepermanenta--cimagelistfromhandlepermanent"></a><a name="fromhandlepermanent"></a>CImageList::FromHandlePermanent  
+##  <a name="fromhandlepermanent"></a>CImageList::FromHandlePermanent  
  返回一个指向`CImageList`对象时提供给图像列表的句柄。  
   
 ```  
@@ -724,7 +759,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&14;](../../mfc/reference/codesnippet/cpp/cimagelist-class_14.cpp)]  
   
-##  <a name="a-namegetbkcolora--cimagelistgetbkcolor"></a><a name="getbkcolor"></a>CImageList::GetBkColor  
+##  <a name="getbkcolor"></a>CImageList::GetBkColor  
  调用此函数可检索图像列表的当前背景色。  
   
 ```  
@@ -737,7 +772,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>示例  
   请参阅示例[CImageList::SetBkColor](#setbkcolor)。  
   
-##  <a name="a-namegetdragimagea--cimagelistgetdragimage"></a><a name="getdragimage"></a>CImageList::GetDragImage  
+##  <a name="getdragimage"></a>CImageList::GetDragImage  
  获取用于拖动的临时图像列表。  
   
 ```  
@@ -756,7 +791,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="return-value"></a>返回值  
  如果成功，指向临时图像的列表，用于拖动;否则为**NULL**。  
   
-##  <a name="a-namegetimagecounta--cimagelistgetimagecount"></a><a name="getimagecount"></a>CImageList::GetImageCount  
+##  <a name="getimagecount"></a>CImageList::GetImageCount  
  调用此函数可检索图像列表中的映像数。  
   
 ```  
@@ -769,7 +804,7 @@ int GetImageCount() const;
 ### <a name="example"></a>示例  
   请参阅示例[CImageList::ExtractIcon](#extracticon)。  
   
-##  <a name="a-namegetimageinfoa--cimagelistgetimageinfo"></a><a name="getimageinfo"></a>CImageList::GetImageInfo  
+##  <a name="getimageinfo"></a>CImageList::GetImageInfo  
  调用此函数可检索有关某个映像的信息。  
   
 ```  
@@ -791,7 +826,7 @@ BOOL GetImageInfo(
 ### <a name="remarks"></a>备注  
  `IMAGEINFO`结构包含有关图像列表中的映像的信息。  
   
-##  <a name="a-namegetsafehandlea--cimagelistgetsafehandle"></a><a name="getsafehandle"></a>CImageList::GetSafeHandle  
+##  <a name="getsafehandle"></a>CImageList::GetSafeHandle  
  调用此函数可检索**m_hImageList**数据成员。  
   
 ```  
@@ -804,7 +839,7 @@ HIMAGELIST GetSafeHandle() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&15;](../../mfc/reference/codesnippet/cpp/cimagelist-class_15.cpp)]  
   
-##  <a name="a-namemhimagelista--cimagelistmhimagelist"></a><a name="m_himagelist"></a>CImageList::m_hImageList  
+##  <a name="m_himagelist"></a>CImageList::m_hImageList  
  图像列表附加到此对象的句柄。  
   
  **HIMAGELIST m_hImageList;**  
@@ -815,7 +850,7 @@ HIMAGELIST GetSafeHandle() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList 第&23;](../../mfc/reference/codesnippet/cpp/cimagelist-class_16.cpp)]  
   
-##  <a name="a-nameoperatorhimagelista--cimagelistoperator-himagelist"></a><a name="operator_himagelist"></a>CImageList::operator HIMAGELIST  
+##  <a name="operator_himagelist"></a>CImageList::operator HIMAGELIST  
  使用此运算符将获取的连接句柄`CImageList`对象。  
   
 ```  
@@ -831,7 +866,7 @@ operator HIMAGELIST() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&16;](../../mfc/reference/codesnippet/cpp/cimagelist-class_17.cpp)]  
   
-##  <a name="a-namereada--cimagelistread"></a><a name="read"></a>CImageList::Read  
+##  <a name="read"></a>CImageList::Read  
  调用此函数可从存档中读取图像列表。  
   
 ```  
@@ -848,7 +883,7 @@ BOOL Read(CArchive* pArchive);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&18;](../../mfc/reference/codesnippet/cpp/cimagelist-class_18.cpp)]  
   
-##  <a name="a-nameremovea--cimagelistremove"></a><a name="remove"></a>CImageList::Remove  
+##  <a name="remove"></a>CImageList::Remove  
  调用此函数可从图像列表对象中删除映像。  
   
 ```  
@@ -868,7 +903,7 @@ BOOL Remove(int nImage);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&19;](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
   
-##  <a name="a-namereplacea--cimagelistreplace"></a><a name="replace"></a>CImageList::Replace  
+##  <a name="replace"></a>CImageList::Replace  
  调用此函数可将图像列表中的图像替换为新映像。  
   
 ```  
@@ -907,7 +942,7 @@ int Replace(
 ### <a name="example"></a>示例  
   请参阅示例[CImageList::SetImageCount](#setimagecount)。  
   
-##  <a name="a-namesetbkcolora--cimagelistsetbkcolor"></a><a name="setbkcolor"></a>CImageList::SetBkColor  
+##  <a name="setbkcolor"></a>CImageList::SetBkColor  
  调用此函数可设置图像列表的背景色。  
   
 ```  
@@ -924,7 +959,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&20;](../../mfc/reference/codesnippet/cpp/cimagelist-class_20.cpp)]  
   
-##  <a name="a-namesetdragcursorimagea--cimagelistsetdragcursorimage"></a><a name="setdragcursorimage"></a>CImageList::SetDragCursorImage  
+##  <a name="setdragcursorimage"></a>CImageList::SetDragCursorImage  
  通过组合给定的图像 （通常是鼠标光标图像） 与当前拖动图像创建一个新的拖动图像。  
   
 ```  
@@ -946,7 +981,7 @@ BOOL SetDragCursorImage(
 ### <a name="remarks"></a>备注  
  由于拖动函数将在拖动操作期间使用新的映像，您应使用 Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396)函数调用后隐藏实际鼠标光标`CImageList::SetDragCursorImage`。 否则，系统在拖动操作期间可能看起来具有两个鼠标光标。  
   
-##  <a name="a-namesetimagecounta--cimagelistsetimagecount"></a><a name="setimagecount"></a>CImageList::SetImageCount  
+##  <a name="setimagecount"></a>CImageList::SetImageCount  
  调用此成员函数以重置中的图像数`CImageList`对象。  
   
 ```  
@@ -968,7 +1003,7 @@ BOOL SetImageCount(UINT uNewCount);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&21;](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]  
   
-##  <a name="a-namesetoverlayimagea--cimagelistsetoverlayimage"></a><a name="setoverlayimage"></a>Cimagelist:: Setoverlayimage  
+##  <a name="setoverlayimage"></a>Cimagelist:: Setoverlayimage  
  调用此函数可将图像的从零开始的索引添加到映像以用作覆盖掩码的列表。  
   
 ```  
@@ -995,7 +1030,7 @@ BOOL SetOverlayImage(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList #&22;](../../mfc/reference/codesnippet/cpp/cimagelist-class_22.cpp)]  
   
-##  <a name="a-namewritea--cimagelistwrite"></a><a name="write"></a>CImageList::Write  
+##  <a name="write"></a>CImageList::Write  
  调用此函数可写入存档的图像列表对象。  
   
 ```  

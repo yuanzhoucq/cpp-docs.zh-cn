@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationManagerEventHandler
 - CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::OnManagerStatusChanged
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +82,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-namecanimationmanagereventhandlera--canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler  
+##  <a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  构造 CAnimationManagerEventHandler 对象。  
@@ -87,7 +91,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 CAnimationManagerEventHandler();
 ```  
   
-##  <a name="a-namecreateinstancea--canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  创建 CAnimationManagerEventHandler 对象的实例。  
@@ -108,7 +112,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="a-nameonmanagerstatuschangeda--canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged  
+##  <a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  动画管理器的状态发生更改时调用。  
@@ -129,7 +133,7 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ### <a name="return-value"></a>返回值  
  当前实现始终返回，则为 S_OK;  
   
-##  <a name="a-namesetanimationcontrollera--canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  存储事件路由的动画控制器的指针。  

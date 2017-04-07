@@ -10,6 +10,136 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CListCtrl
+- AFXCMN/CListCtrl
+- AFXCMN/CListCtrl::CListCtrl
+- AFXCMN/CListCtrl::ApproximateViewRect
+- AFXCMN/CListCtrl::Arrange
+- AFXCMN/CListCtrl::CancelEditLabel
+- AFXCMN/CListCtrl::Create
+- AFXCMN/CListCtrl::CreateDragImage
+- AFXCMN/CListCtrl::CreateEx
+- AFXCMN/CListCtrl::DeleteAllItems
+- AFXCMN/CListCtrl::DeleteColumn
+- AFXCMN/CListCtrl::DeleteItem
+- AFXCMN/CListCtrl::DrawItem
+- AFXCMN/CListCtrl::EditLabel
+- AFXCMN/CListCtrl::EnableGroupView
+- AFXCMN/CListCtrl::EnsureVisible
+- AFXCMN/CListCtrl::FindItem
+- AFXCMN/CListCtrl::GetBkColor
+- AFXCMN/CListCtrl::GetBkImage
+- AFXCMN/CListCtrl::GetCallbackMask
+- AFXCMN/CListCtrl::GetCheck
+- AFXCMN/CListCtrl::GetColumn
+- AFXCMN/CListCtrl::GetColumnOrderArray
+- AFXCMN/CListCtrl::GetColumnWidth
+- AFXCMN/CListCtrl::GetCountPerPage
+- AFXCMN/CListCtrl::GetEditControl
+- AFXCMN/CListCtrl::GetEmptyText
+- AFXCMN/CListCtrl::GetExtendedStyle
+- AFXCMN/CListCtrl::GetFirstSelectedItemPosition
+- AFXCMN/CListCtrl::GetFocusedGroup
+- AFXCMN/CListCtrl::GetGroupCount
+- AFXCMN/CListCtrl::GetGroupInfo
+- AFXCMN/CListCtrl::GetGroupInfoByIndex
+- AFXCMN/CListCtrl::GetGroupMetrics
+- AFXCMN/CListCtrl::GetGroupRect
+- AFXCMN/CListCtrl::GetGroupState
+- AFXCMN/CListCtrl::GetHeaderCtrl
+- AFXCMN/CListCtrl::GetHotCursor
+- AFXCMN/CListCtrl::GetHotItem
+- AFXCMN/CListCtrl::GetHoverTime
+- AFXCMN/CListCtrl::GetImageList
+- AFXCMN/CListCtrl::GetInsertMark
+- AFXCMN/CListCtrl::GetInsertMarkColor
+- AFXCMN/CListCtrl::GetInsertMarkRect
+- AFXCMN/CListCtrl::GetItem
+- AFXCMN/CListCtrl::GetItemCount
+- AFXCMN/CListCtrl::GetItemData
+- AFXCMN/CListCtrl::GetItemIndexRect
+- AFXCMN/CListCtrl::GetItemPosition
+- AFXCMN/CListCtrl::GetItemRect
+- AFXCMN/CListCtrl::GetItemSpacing
+- AFXCMN/CListCtrl::GetItemState
+- AFXCMN/CListCtrl::GetItemText
+- AFXCMN/CListCtrl::GetNextItem
+- AFXCMN/CListCtrl::GetNextItemIndex
+- AFXCMN/CListCtrl::GetNextSelectedItem
+- AFXCMN/CListCtrl::GetNumberOfWorkAreas
+- AFXCMN/CListCtrl::GetOrigin
+- AFXCMN/CListCtrl::GetOutlineColor
+- AFXCMN/CListCtrl::GetSelectedColumn
+- AFXCMN/CListCtrl::GetSelectedCount
+- AFXCMN/CListCtrl::GetSelectionMark
+- AFXCMN/CListCtrl::GetStringWidth
+- AFXCMN/CListCtrl::GetSubItemRect
+- AFXCMN/CListCtrl::GetTextBkColor
+- AFXCMN/CListCtrl::GetTextColor
+- AFXCMN/CListCtrl::GetTileInfo
+- AFXCMN/CListCtrl::GetTileViewInfo
+- AFXCMN/CListCtrl::GetToolTips
+- AFXCMN/CListCtrl::GetTopIndex
+- AFXCMN/CListCtrl::GetView
+- AFXCMN/CListCtrl::GetViewRect
+- AFXCMN/CListCtrl::GetWorkAreas
+- AFXCMN/CListCtrl::HasGroup
+- AFXCMN/CListCtrl::HitTest
+- AFXCMN/CListCtrl::InsertColumn
+- AFXCMN/CListCtrl::InsertGroup
+- AFXCMN/CListCtrl::InsertGroupSorted
+- AFXCMN/CListCtrl::InsertItem
+- AFXCMN/CListCtrl::InsertMarkHitTest
+- AFXCMN/CListCtrl::IsGroupViewEnabled
+- AFXCMN/CListCtrl::IsItemVisible
+- AFXCMN/CListCtrl::MapIDToIndex
+- AFXCMN/CListCtrl::MapIndexToID
+- AFXCMN/CListCtrl::MoveGroup
+- AFXCMN/CListCtrl::MoveItemToGroup
+- AFXCMN/CListCtrl::RedrawItems
+- AFXCMN/CListCtrl::RemoveAllGroups
+- AFXCMN/CListCtrl::RemoveGroup
+- AFXCMN/CListCtrl::Scroll
+- AFXCMN/CListCtrl::SetBkColor
+- AFXCMN/CListCtrl::SetBkImage
+- AFXCMN/CListCtrl::SetCallbackMask
+- AFXCMN/CListCtrl::SetCheck
+- AFXCMN/CListCtrl::SetColumn
+- AFXCMN/CListCtrl::SetColumnOrderArray
+- AFXCMN/CListCtrl::SetColumnWidth
+- AFXCMN/CListCtrl::SetExtendedStyle
+- AFXCMN/CListCtrl::SetGroupInfo
+- AFXCMN/CListCtrl::SetGroupMetrics
+- AFXCMN/CListCtrl::SetHotCursor
+- AFXCMN/CListCtrl::SetHotItem
+- AFXCMN/CListCtrl::SetHoverTime
+- AFXCMN/CListCtrl::SetIconSpacing
+- AFXCMN/CListCtrl::SetImageList
+- AFXCMN/CListCtrl::SetInfoTip
+- AFXCMN/CListCtrl::SetInsertMark
+- AFXCMN/CListCtrl::SetInsertMarkColor
+- AFXCMN/CListCtrl::SetItem
+- AFXCMN/CListCtrl::SetItemCount
+- AFXCMN/CListCtrl::SetItemCountEx
+- AFXCMN/CListCtrl::SetItemData
+- AFXCMN/CListCtrl::SetItemIndexState
+- AFXCMN/CListCtrl::SetItemPosition
+- AFXCMN/CListCtrl::SetItemState
+- AFXCMN/CListCtrl::SetItemText
+- AFXCMN/CListCtrl::SetOutlineColor
+- AFXCMN/CListCtrl::SetSelectedColumn
+- AFXCMN/CListCtrl::SetSelectionMark
+- AFXCMN/CListCtrl::SetTextBkColor
+- AFXCMN/CListCtrl::SetTextColor
+- AFXCMN/CListCtrl::SetTileInfo
+- AFXCMN/CListCtrl::SetTileViewInfo
+- AFXCMN/CListCtrl::SetToolTips
+- AFXCMN/CListCtrl::SetView
+- AFXCMN/CListCtrl::SetWorkAreas
+- AFXCMN/CListCtrl::SortGroups
+- AFXCMN/CListCtrl::SortItems
+- AFXCMN/CListCtrl::SortItemsEx
+- AFXCMN/CListCtrl::SubItemHitTest
+- AFXCMN/CListCtrl::Update
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -289,7 +419,7 @@ class CListCtrl : public CWnd
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="a-nameapproximateviewrecta--clistctrlapproximateviewrect"></a><a name="approximateviewrect"></a>CListCtrl::ApproximateViewRect  
+##  <a name="approximateviewrect"></a>CListCtrl::ApproximateViewRect  
  确定的宽度和高度需要它来显示列表视图控件的项。  
   
 ```  
@@ -312,7 +442,7 @@ CSize ApproximateViewRect(
 ### <a name="remarks"></a>备注  
  此成员函数实现 Win32 宏的行为[ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231)，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namearrangea--clistctrlarrange"></a><a name="arrange"></a>CListCtrl::Arrange  
+##  <a name="arrange"></a>CListCtrl::Arrange  
  重新定位图标视图中的项目，以便它们在网格上对齐。  
   
 ```  
@@ -346,7 +476,7 @@ BOOL Arrange(UINT nCode);
 ```
 
   
-##  <a name="a-namecanceleditlabela--clistctrlcanceleditlabel"></a><a name="canceleditlabel"></a>CListCtrl::CancelEditLabel  
+##  <a name="canceleditlabel"></a>CListCtrl::CancelEditLabel  
  取消编辑操作的项文本。  
   
 ```  
@@ -356,14 +486,14 @@ void CancelEditLabel();
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_CANCELEDITLABEL](http://msdn.microsoft.com/library/windows/desktop/bb774886)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameclistctrla--clistctrlclistctrl"></a><a name="clistctrl"></a>CListCtrl::CListCtrl  
+##  <a name="clistctrl"></a>CListCtrl::CListCtrl  
  构造 `CListCtrl` 对象。  
   
 ```  
 CListCtrl();
 ```  
   
-##  <a name="a-namecreatea--clistctrlcreate"></a><a name="create"></a>CListCtrl::Create  
+##  <a name="create"></a>CListCtrl::Create  
  创建列表控件，并将其附加到`CListCtrl`对象。  
   
 ```  
@@ -404,7 +534,7 @@ virtual BOOL Create(
 ```
 
   
-##  <a name="a-namecreateexa--clistctrlcreateex"></a><a name="createex"></a>CListCtrl::CreateEx  
+##  <a name="createex"></a>CListCtrl::CreateEx  
  创建控件 （子窗口），并将其与相关联`CListCtrl`对象。  
   
 ```  
@@ -440,7 +570,7 @@ virtual BOOL CreateEx(
   
  `CreateEx`创建具有指定的扩展窗口样式控件`dwExStyle`。 若要设置特定于控件的扩展的样式，调用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`设置作为此类样式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`设置作为此类样式**LVS_EX_FULLROWSELECT**。 有关详细信息，请参阅主题中介绍的样式[扩展列表视图样式](http://msdn.microsoft.com/library/windows/desktop/bb774732)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namecreatedragimagea--clistctrlcreatedragimage"></a><a name="createdragimage"></a>CListCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>CListCtrl::CreateDragImage  
  创建指定的项的一个拖动图像列表`nItem`。  
   
 ```  
@@ -472,7 +602,7 @@ CImageList* CreateDragImage(
 ```
 
   
-##  <a name="a-namedeleteallitemsa--clistctrldeleteallitems"></a><a name="deleteallitems"></a>CListCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>CListCtrl::DeleteAllItems  
  从列表视图控件中删除所有项。  
   
 ```  
@@ -491,7 +621,7 @@ BOOL DeleteAllItems();
 ```
 
   
-##  <a name="a-namedeletecolumna--clistctrldeletecolumn"></a><a name="deletecolumn"></a>CListCtrl::DeleteColumn  
+##  <a name="deletecolumn"></a>CListCtrl::DeleteColumn  
  从列表视图控件中删除某一列。  
   
 ```  
@@ -518,7 +648,7 @@ BOOL DeleteColumn(int nCol);
 ```
 
   
-##  <a name="a-namedeleteitema--clistctrldeleteitem"></a><a name="deleteitem"></a>CListCtrl::DeleteItem  
+##  <a name="deleteitem"></a>CListCtrl::DeleteItem  
  从列表视图控件中删除的项。  
   
 ```  
@@ -544,7 +674,7 @@ BOOL DeleteItem(int nItem);
 ```
 
   
-##  <a name="a-namedrawitema--clistctrldrawitem"></a><a name="drawitem"></a>CListCtrl::DrawItem  
+##  <a name="drawitem"></a>CListCtrl::DrawItem  
  由框架在所有者绘制列表视图控件更改的可视方位时调用。  
   
 ```  
@@ -562,7 +692,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  应用程序应还原选择用于显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`之前此成员函数将终止。  
   
-##  <a name="a-nameeditlabela--clistctrleditlabel"></a><a name="editlabel"></a>CListCtrl::EditLabel  
+##  <a name="editlabel"></a>CListCtrl::EditLabel  
  开始在就地编辑的项的文本。  
   
 ```  
@@ -593,7 +723,7 @@ CEdit* EditLabel(int nItem);
 ```
 
   
-##  <a name="a-nameenablegroupviewa--clistctrlenablegroupview"></a><a name="enablegroupview"></a>CListCtrl::EnableGroupView  
+##  <a name="enablegroupview"></a>CListCtrl::EnableGroupView  
  启用或禁用是否在列表视图控件中的项目显示为一组。  
   
 ```  
@@ -616,7 +746,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_ENABLEGROUPVIEW](http://msdn.microsoft.com/library/windows/desktop/bb774900)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameensurevisiblea--clistctrlensurevisible"></a><a name="ensurevisible"></a>CListCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CListCtrl::EnsureVisible  
  确保列表视图项至少部分可见。  
   
 ```  
@@ -647,7 +777,7 @@ BOOL EnsureVisible(
 ```
 
   
-##  <a name="a-namefinditema--clistctrlfinditem"></a><a name="finditem"></a>CListCtrl::FindItem  
+##  <a name="finditem"></a>CListCtrl::FindItem  
  搜索具有指定特征的列表视图项。  
   
 ```  
@@ -686,7 +816,7 @@ int FindItem(
 ```
 
   
-##  <a name="a-namegetbkcolora--clistctrlgetbkcolor"></a><a name="getbkcolor"></a>CListCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CListCtrl::GetBkColor  
  检索列表视图控件的背景色。  
   
 ```  
@@ -699,7 +829,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::SetBkColor](#setbkcolor)。  
   
-##  <a name="a-namegetbkimagea--clistctrlgetbkimage"></a><a name="getbkimage"></a>CListCtrl::GetBkImage  
+##  <a name="getbkimage"></a>CListCtrl::GetBkImage  
  检索当前的背景图像的列表视图控件。  
   
 ```  
@@ -732,7 +862,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```
 
   
-##  <a name="a-namegetcallbackmaska--clistctrlgetcallbackmask"></a><a name="getcallbackmask"></a>Clistctrl:: Getcallbackmask  
+##  <a name="getcallbackmask"></a>Clistctrl:: Getcallbackmask  
  检索列表视图控件的回调掩码。  
   
 ```  
@@ -748,7 +878,7 @@ UINT GetCallbackMask() const;
 ### <a name="example"></a>示例  
   请参阅示例[clistctrl:: Setcallbackmask](#setcallbackmask)。  
   
-##  <a name="a-namegetchecka--clistctrlgetcheck"></a><a name="getcheck"></a>CListCtrl::GetCheck  
+##  <a name="getcheck"></a>CListCtrl::GetCheck  
  检索与项相关联的状态图像的当前显示状态。  
   
 ```  
@@ -768,7 +898,7 @@ BOOL GetCheck(int nItem) const;
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::SetCheck](#setcheck)。  
   
-##  <a name="a-namegetcolumna--clistctrlgetcolumn"></a><a name="getcolumn"></a>CListCtrl::GetColumn  
+##  <a name="getcolumn"></a>CListCtrl::GetColumn  
  检索列表视图控件的列的属性。  
   
 ```  
@@ -806,7 +936,7 @@ BOOL GetColumn(
 ```
 
   
-##  <a name="a-namegetcolumnorderarraya--clistctrlgetcolumnorderarray"></a><a name="getcolumnorderarray"></a>CListCtrl::GetColumnOrderArray  
+##  <a name="getcolumnorderarray"></a>CListCtrl::GetColumnOrderArray  
  检索列表视图控件的列顺序 （从左到右）。  
   
 ```  
@@ -857,7 +987,7 @@ m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 ```
 
   
-##  <a name="a-namegetcolumnwidtha--clistctrlgetcolumnwidth"></a><a name="getcolumnwidth"></a>CListCtrl::GetColumnWidth  
+##  <a name="getcolumnwidth"></a>CListCtrl::GetColumnWidth  
  检索报表视图或列表视图中的列的宽度。  
   
 ```  
@@ -880,7 +1010,7 @@ int GetColumnWidth(int nCol) const;
 ```
 
   
-##  <a name="a-namegetcountperpagea--clistctrlgetcountperpage"></a><a name="getcountperpage"></a>CListCtrl::GetCountPerPage  
+##  <a name="getcountperpage"></a>CListCtrl::GetCountPerPage  
  计算的装载量垂直列表视图控件的可视区域中时在列表视图或报表视图中的项的数目。  
   
 ```  
@@ -893,7 +1023,7 @@ int GetCountPerPage() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetTopIndex](#gettopindex)。  
   
-##  <a name="a-namegeteditcontrola--clistctrlgeteditcontrol"></a><a name="geteditcontrol"></a>CListCtrl::GetEditControl  
+##  <a name="geteditcontrol"></a>CListCtrl::GetEditControl  
  检索用于编辑的列表视图项的文本编辑控件的句柄。  
   
 ```  
@@ -919,7 +1049,7 @@ CEdit* GetEditControl() const;
 ```
 
   
-##  <a name="a-namegetemptytexta--clistctrlgetemptytext"></a><a name="getemptytext"></a>CListCtrl::GetEmptyText  
+##  <a name="getemptytext"></a>CListCtrl::GetEmptyText  
  检索要显示当前的 list view 控件是否为空的字符串。  
   
 ```  
@@ -932,7 +1062,7 @@ CString GetEmptyText() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetextendedstylea--clistctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CListCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CListCtrl::GetExtendedStyle  
  检索列表视图控件的当前扩展的样式。  
   
 ```  
@@ -948,7 +1078,7 @@ DWORD GetExtendedStyle();
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::SetExtendedStyle](#setextendedstyle)。  
   
-##  <a name="a-namegetfirstselecteditempositiona--clistctrlgetfirstselecteditemposition"></a><a name="getfirstselecteditemposition"></a>CListCtrl::GetFirstSelectedItemPosition  
+##  <a name="getfirstselecteditemposition"></a>CListCtrl::GetFirstSelectedItemPosition  
  获取在列表视图控件中的第一个选择项位置。  
   
 ```  
@@ -980,7 +1110,7 @@ POSITION GetFirstSelectedItemPosition() const;
 ```
 
   
-##  <a name="a-namegetfocusedgroupa--clistctrlgetfocusedgroup"></a><a name="getfocusedgroup"></a>CListCtrl::GetFocusedGroup  
+##  <a name="getfocusedgroup"></a>CListCtrl::GetFocusedGroup  
  检索当前的列表视图控件中具有键盘焦点的组。  
   
 ```  
@@ -993,7 +1123,7 @@ int GetFocusedGroup() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。 有关详细信息，请参阅`LVGS_FOCUSED`值`state`的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构。  
   
-##  <a name="a-namegetgroupcounta--clistctrlgetgroupcount"></a><a name="getgroupcount"></a>CListCtrl::GetGroupCount  
+##  <a name="getgroupcount"></a>CListCtrl::GetGroupCount  
  检索当前的列表视图控件中的组数。  
   
 ```  
@@ -1006,7 +1136,7 @@ int GetGroupCount()const;
 ### <a name="remarks"></a>备注  
  此方法可发送[LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]-->。  
   
-##  <a name="a-namegetgroupinfoa--clistctrlgetgroupinfo"></a><a name="getgroupinfo"></a>CListCtrl::GetGroupInfo  
+##  <a name="getgroupinfo"></a>CListCtrl::GetGroupInfo  
  为指定的一组列表视图控件中获取的信息。  
   
 ```  
@@ -1028,7 +1158,7 @@ int GetGroupInfo(
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb774932)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetgroupinfobyindexa--clistctrlgetgroupinfobyindex"></a><a name="getgroupinfobyindex"></a>CListCtrl::GetGroupInfoByIndex  
+##  <a name="getgroupinfobyindex"></a>CListCtrl::GetGroupInfoByIndex  
  检索有关指定的组中当前的 list view 控件的信息。  
   
 ```  
@@ -1090,7 +1220,7 @@ public:
 ```
 
   
-##  <a name="a-namegetgroupmetricsa--clistctrlgetgroupmetrics"></a><a name="getgroupmetrics"></a>CListCtrl::GetGroupMetrics  
+##  <a name="getgroupmetrics"></a>CListCtrl::GetGroupMetrics  
  检索一个组的度量值。  
   
 ```  
@@ -1104,7 +1234,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774934)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetgrouprecta--clistctrlgetgrouprect"></a><a name="getgrouprect"></a>CListCtrl::GetGroupRect  
+##  <a name="getgrouprect"></a>CListCtrl::GetGroupRect  
  检索指定的组中当前的 list view 控件的边框。  
   
 ```  
@@ -1158,7 +1288,7 @@ public:
 ```
 
   
-##  <a name="a-namegetgroupstatea--clistctrlgetgroupstate"></a><a name="getgroupstate"></a>CListCtrl::GetGroupState  
+##  <a name="getgroupstate"></a>CListCtrl::GetGroupState  
  检索当前的列表视图控件中的指定组的状态。  
   
 ```  
@@ -1182,7 +1312,7 @@ UINT GetGroupState(
   
  此方法可发送[LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。 有关详细信息，请参阅[ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288)宏。  
   
-##  <a name="a-namegetheaderctrla--clistctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>CListCtrl::GetHeaderCtrl  
  检索列表视图控件的标头控件。  
   
 ```  
@@ -1198,7 +1328,7 @@ CHeaderCtrl* GetHeaderCtrl();
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。  
   
-##  <a name="a-namegethotcursora--clistctrlgethotcursor"></a><a name="gethotcursor"></a>CListCtrl::GetHotCursor  
+##  <a name="gethotcursor"></a>CListCtrl::GetHotCursor  
  检索用于列表视图控件启用热跟踪时使用的游标。  
   
 ```  
@@ -1221,7 +1351,7 @@ HCURSOR GetHotCursor();
 ```
 
   
-##  <a name="a-namegethotitema--clistctrlgethotitem"></a><a name="gethotitem"></a>CListCtrl::GetHotItem  
+##  <a name="gethotitem"></a>CListCtrl::GetHotItem  
  检索当前光标下的列表视图项。  
   
 ```  
@@ -1246,7 +1376,7 @@ int GetHotItem();
 ```
 
   
-##  <a name="a-namegethovertimea--clistctrlgethovertime"></a><a name="gethovertime"></a>CListCtrl::GetHoverTime  
+##  <a name="gethovertime"></a>CListCtrl::GetHoverTime  
  检索列表视图控件的当前悬停时间。  
   
 ```  
@@ -1269,7 +1399,7 @@ DWORD GetHoverTime() const;
 ```
 
   
-##  <a name="a-namegetimagelista--clistctrlgetimagelist"></a><a name="getimagelist"></a>CListCtrl::GetImageList  
+##  <a name="getimagelist"></a>CListCtrl::GetImageList  
  检索图像列表用于绘图的列表视图项的句柄。  
   
 ```  
@@ -1298,7 +1428,7 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
 ```
 
   
-##  <a name="a-namegetinsertmarka--clistctrlgetinsertmark"></a><a name="getinsertmark"></a>CListCtrl::GetInsertMark  
+##  <a name="getinsertmark"></a>CListCtrl::GetInsertMark  
  检索当前的位置插入标记。  
   
 ```  
@@ -1315,7 +1445,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774945)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetinsertmarkcolora--clistctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CListCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>CListCtrl::GetInsertMarkColor  
  检索当前颜色的插入标记。  
   
 ```  
@@ -1328,7 +1458,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774947)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetinsertmarkrecta--clistctrlgetinsertmarkrect"></a><a name="getinsertmarkrect"></a>CListCtrl::GetInsertMarkRect  
+##  <a name="getinsertmarkrect"></a>CListCtrl::GetInsertMarkRect  
  将检索限定插入点的矩形。  
   
 ```  
@@ -1349,7 +1479,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETINSERTMARKRECT](http://msdn.microsoft.com/library/windows/desktop/bb774949)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitema--clistctrlgetitem"></a><a name="getitem"></a>Clistctrl:: Getitem  
+##  <a name="getitem"></a>Clistctrl:: Getitem  
  检索部分或全部的列表视图项属性。  
   
 ```  
@@ -1366,7 +1496,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ### <a name="remarks"></a>备注  
  **LVITEM**结构指定或接收的列表视图项的属性。  
   
-##  <a name="a-namegetitemcounta--clistctrlgetitemcount"></a><a name="getitemcount"></a>CListCtrl::GetItemCount  
+##  <a name="getitemcount"></a>CListCtrl::GetItemCount  
  检索在列表视图控件中的项的数目。  
   
 ```  
@@ -1379,7 +1509,7 @@ int GetItemCount() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::DeleteItem](#deleteitem)。  
   
-##  <a name="a-namegetitemdataa--clistctrlgetitemdata"></a><a name="getitemdata"></a>CListCtrl::GetItemData  
+##  <a name="getitemdata"></a>CListCtrl::GetItemData  
  检索与指定的项相关联的 32 位应用程序特定的值`nItem`。  
   
 ```  
@@ -1410,7 +1540,7 @@ DWORD_PTR GetItemData(int nItem) const;
 ```
 
   
-##  <a name="a-namegetitemindexrecta--clistctrlgetitemindexrect"></a><a name="getitemindexrect"></a>CListCtrl::GetItemIndexRect  
+##  <a name="getitemindexrect"></a>CListCtrl::GetItemIndexRect  
  为所有或部分当前列表视图控件中的子项中检索的绑定矩形。  
   
 ```  
@@ -1464,7 +1594,7 @@ public:
 ```
 
   
-##  <a name="a-namegetitempositiona--clistctrlgetitemposition"></a><a name="getitemposition"></a>CListCtrl::GetItemPosition  
+##  <a name="getitemposition"></a>CListCtrl::GetItemPosition  
  检索列表视图项的位置。  
   
 ```  
@@ -1500,7 +1630,7 @@ BOOL GetItemPosition(
 ```
 
   
-##  <a name="a-namegetitemrecta--clistctrlgetitemrect"></a><a name="getitemrect"></a>CListCtrl::GetItemRect  
+##  <a name="getitemrect"></a>CListCtrl::GetItemRect  
  检索为所有或部分当前视图中的项的边框。  
   
 ```  
@@ -1572,7 +1702,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 ```
 
   
-##  <a name="a-namegetitemspacinga--clistctrlgetitemspacing"></a><a name="getitemspacing"></a>CListCtrl::GetItemSpacing  
+##  <a name="getitemspacing"></a>CListCtrl::GetItemSpacing  
  计算当前的列表视图控件中的项之间的间距。  
   
 ```  
@@ -1596,7 +1726,7 @@ BOOL GetItemSpacing(
 ### <a name="remarks"></a>备注  
  此方法可发送[LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitemstatea--clistctrlgetitemstate"></a><a name="getitemstate"></a>CListCtrl::GetItemState  
+##  <a name="getitemstate"></a>CListCtrl::GetItemState  
  检索列表视图项的状态。  
   
 ```  
@@ -1621,7 +1751,7 @@ UINT GetItemState(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetTopIndex](#gettopindex)。  
   
-##  <a name="a-namegetitemtexta--clistctrlgetitemtext"></a><a name="getitemtext"></a>CListCtrl::GetItemText  
+##  <a name="getitemtext"></a>CListCtrl::GetItemText  
  检索在列表视图项或子项的文本。  
   
 ```  
@@ -1657,7 +1787,7 @@ CString GetItemText(
 ### <a name="remarks"></a>备注  
  如果`nSubItem`为零，则此函数可检索项标签中; 如果`nSubItem`为非零值，则它将检索该子项的文本。 有关子项参数的详细信息，请参阅有关的讨论[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)结构中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetnextitema--clistctrlgetnextitem"></a><a name="getnextitem"></a>CListCtrl::GetNextItem  
+##  <a name="getnextitem"></a>CListCtrl::GetNextItem  
  搜索列表查看具有指定的属性并且具有与给定项的指定的关系的项。  
   
 ```  
@@ -1696,7 +1826,7 @@ int GetNextItem(
 ### <a name="return-value"></a>返回值  
  如果成功，下一项或否则为-1 的索引。  
   
-##  <a name="a-namegetnextitemindexa--clistctrlgetnextitemindex"></a><a name="getnextitemindex"></a>CListCtrl::GetNextItemIndex  
+##  <a name="getnextitemindex"></a>CListCtrl::GetNextItemIndex  
  检索具有指定的一组属性的当前列表视图控件中的项的索引。  
   
 ```  
@@ -1720,7 +1850,7 @@ BOOL GetNextItemIndex(
   
  此方法可发送[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)邮件中，Windows SDK 中所述。  
   
-##  <a name="a-namegetnextselecteditema--clistctrlgetnextselecteditem"></a><a name="getnextselecteditem"></a>CListCtrl::GetNextSelectedItem  
+##  <a name="getnextselecteditem"></a>CListCtrl::GetNextSelectedItem  
  获取由标识的列表项的索引`pos`，然后设置*pos*到**位置**值。  
   
 ```  
@@ -1760,7 +1890,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 ```
 
   
-##  <a name="a-namegetnumberofworkareasa--clistctrlgetnumberofworkareas"></a><a name="getnumberofworkareas"></a>CListCtrl::GetNumberOfWorkAreas  
+##  <a name="getnumberofworkareas"></a>CListCtrl::GetNumberOfWorkAreas  
  检索列表视图控件的工作区域的当前数目。  
   
 ```  
@@ -1802,7 +1932,7 @@ UINT GetNumberOfWorkAreas() const;
 ```
 
   
-##  <a name="a-namegetoutlinecolora--clistctrlgetoutlinecolor"></a><a name="getoutlinecolor"></a>CListCtrl::GetOutlineColor  
+##  <a name="getoutlinecolor"></a>CListCtrl::GetOutlineColor  
  检索列表视图控件的边框的颜色。  
   
 ```  
@@ -1815,7 +1945,7 @@ COLORREF GetOutlineColor() const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761065)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetorigina--clistctrlgetorigin"></a><a name="getorigin"></a>CListCtrl::GetOrigin  
+##  <a name="getorigin"></a>CListCtrl::GetOrigin  
  检索列表视图控件的当前视图原点。  
   
 ```  
@@ -1829,7 +1959,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。 但是，如果控件位于报表视图中，则返回值始终为零。  
   
-##  <a name="a-namegetselectedcolumna--clistctrlgetselectedcolumn"></a><a name="getselectedcolumn"></a>CListCtrl::GetSelectedColumn  
+##  <a name="getselectedcolumn"></a>CListCtrl::GetSelectedColumn  
  检索列表控件中当前选定的列的索引。  
   
 ```  
@@ -1842,7 +1972,7 @@ UINT GetSelectedColumn() const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761067)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetselectedcounta--clistctrlgetselectedcount"></a><a name="getselectedcount"></a>CListCtrl::GetSelectedCount  
+##  <a name="getselectedcount"></a>CListCtrl::GetSelectedCount  
  检索列表视图控件中选定项的数目。  
   
 ```  
@@ -1871,7 +2001,7 @@ UINT GetSelectedCount() const;
 ```
 
   
-##  <a name="a-namegetselectionmarka--clistctrlgetselectionmark"></a><a name="getselectionmark"></a>CListCtrl::GetSelectionMark  
+##  <a name="getselectionmark"></a>CListCtrl::GetSelectionMark  
  检索列表视图控件的选择标记。  
   
 ```  
@@ -1894,7 +2024,7 @@ int GetSelectionMark();
 ```
 
   
-##  <a name="a-namegetstringwidtha--clistctrlgetstringwidth"></a><a name="getstringwidth"></a>CListCtrl::GetStringWidth  
+##  <a name="getstringwidth"></a>CListCtrl::GetStringWidth  
  确定显示给定字符串的所有所需的最小列宽度。  
   
 ```  
@@ -1928,7 +2058,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ```
 
   
-##  <a name="a-namegetsubitemrecta--clistctrlgetsubitemrect"></a><a name="getsubitemrect"></a>CListCtrl::GetSubItemRect  
+##  <a name="getsubitemrect"></a>CListCtrl::GetSubItemRect  
  检索列表视图控件中的项的边框。  
   
 ```  
@@ -1964,7 +2094,7 @@ BOOL GetSubItemRect(
 ### <a name="remarks"></a>备注  
  此成员函数实现 Win32 宏的行为[ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004)，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettextbkcolora--clistctrlgettextbkcolor"></a><a name="gettextbkcolor"></a>CListCtrl::GetTextBkColor  
+##  <a name="gettextbkcolor"></a>CListCtrl::GetTextBkColor  
  检索列表视图控件的文本的背景颜色。  
   
 ```  
@@ -1977,7 +2107,7 @@ COLORREF GetTextBkColor() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::SetTextBkColor](#settextbkcolor)。  
   
-##  <a name="a-namegettextcolora--clistctrlgettextcolor"></a><a name="gettextcolor"></a>CListCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>CListCtrl::GetTextColor  
  检索列表视图控件的文本颜色。  
   
 ```  
@@ -1990,7 +2120,7 @@ COLORREF GetTextColor() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::SetTextColor](#settextcolor)。  
   
-##  <a name="a-namegettileinfoa--clistctrlgettileinfo"></a><a name="gettileinfo"></a>CListCtrl::GetTileInfo  
+##  <a name="gettileinfo"></a>CListCtrl::GetTileInfo  
  检索有关列表视图控件中的图块的信息。  
   
 ```  
@@ -2007,7 +2137,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761081)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettileviewinfoa--clistctrlgettileviewinfo"></a><a name="gettileviewinfo"></a>CListCtrl::GetTileViewInfo  
+##  <a name="gettileviewinfo"></a>CListCtrl::GetTileViewInfo  
  检索有关列表视图控件平铺视图中的信息。  
   
 ```  
@@ -2024,7 +2154,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761083)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettooltipsa--clistctrlgettooltips"></a><a name="gettooltips"></a>CListCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CListCtrl::GetToolTips  
  检索列表视图控件用于显示工具提示的工具提示控件。  
   
 ```  
@@ -2049,7 +2179,7 @@ CToolTipCtrl* GetToolTips() const;
 ```
 
   
-##  <a name="a-namegettopindexa--clistctrlgettopindex"></a><a name="gettopindex"></a>CListCtrl::GetTopIndex  
+##  <a name="gettopindex"></a>CListCtrl::GetTopIndex  
  在列表视图或报表视图中检索的最顶层的可见项的索引。  
   
 ```  
@@ -2078,7 +2208,7 @@ int GetTopIndex() const;
 ```
 
   
-##  <a name="a-namegetviewa--clistctrlgetview"></a><a name="getview"></a>CListCtrl::GetView  
+##  <a name="getview"></a>CListCtrl::GetView  
  获取列表视图控件的视图。  
   
 ```  
@@ -2091,7 +2221,7 @@ DWORD GetView() const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_GETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761091)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetviewrecta--clistctrlgetviewrect"></a><a name="getviewrect"></a>CListCtrl::GetViewRect  
+##  <a name="getviewrect"></a>CListCtrl::GetViewRect  
  检索列表视图控件中的所有项的边框。  
   
 ```  
@@ -2108,7 +2238,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="remarks"></a>备注  
  列表视图中必须是在图标视图或小图标视图中。  
   
-##  <a name="a-namegetworkareasa--clistctrlgetworkareas"></a><a name="getworkareas"></a>CListCtrl::GetWorkAreas  
+##  <a name="getworkareas"></a>CListCtrl::GetWorkAreas  
  检索列表视图控件的当前工作区。  
   
 ```  
@@ -2130,7 +2260,7 @@ void GetWorkAreas(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)。  
   
-##  <a name="a-namehasgroupa--clistctrlhasgroup"></a><a name="hasgroup"></a>CListCtrl::HasGroup  
+##  <a name="hasgroup"></a>CListCtrl::HasGroup  
  确定列表视图控件是否具有指定的组。  
   
 ```  
@@ -2147,7 +2277,7 @@ BOOL HasGroup(int iGroupId) const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_HASGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761097)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namehittesta--clistctrlhittest"></a><a name="hittest"></a>CListCtrl::HitTest  
+##  <a name="hittest"></a>CListCtrl::HitTest  
  确定哪些列表视图项目时，如果有的话的指定位置。  
   
 ```  
@@ -2199,7 +2329,7 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 ```
 
   
-##  <a name="a-nameinsertcolumna--clistctrlinsertcolumn"></a><a name="insertcolumn"></a>CListCtrl::InsertColumn  
+##  <a name="insertcolumn"></a>CListCtrl::InsertColumn  
  在列表视图控件中插入新列。  
   
 ```  
@@ -2243,7 +2373,7 @@ int InsertColumn(
   
  [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)结构包含在报表视图中的列的属性。 它还用于接收有关列的信息。 中介绍了此结构[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinsertgroupa--clistctrlinsertgroup"></a><a name="insertgroup"></a>CListCtrl::InsertGroup  
+##  <a name="insertgroup"></a>CListCtrl::InsertGroup  
  将一组插入到列表视图控件。  
   
 ```  
@@ -2265,7 +2395,7 @@ LRESULT InsertGroup(
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_INSERTGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761103)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinsertgroupsorteda--clistctrlinsertgroupsorted"></a><a name="insertgroupsorted"></a>CListCtrl::InsertGroupSorted  
+##  <a name="insertgroupsorted"></a>CListCtrl::InsertGroupSorted  
  将指定的组插入到组的排序列表。  
   
 ```  
@@ -2282,7 +2412,7 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_INSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb761105)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinsertitema--clistctrlinsertitem"></a><a name="insertitem"></a>CListCtrl::InsertItem  
+##  <a name="insertitem"></a>CListCtrl::InsertItem  
  将项插入到列表视图控件。  
   
 ```  
@@ -2366,7 +2496,7 @@ int InsertItem(
 ```
 
   
-##  <a name="a-nameinsertmarkhittesta--clistctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a>CListCtrl::InsertMarkHitTest  
+##  <a name="insertmarkhittest"></a>CListCtrl::InsertMarkHitTest  
  检索与指定的点最接近的插入点。  
   
 ```  
@@ -2388,7 +2518,7 @@ int InsertMarkHitTest(
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb761131)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisgroupviewenableda--clistctrlisgroupviewenabled"></a><a name="isgroupviewenabled"></a>CListCtrl::IsGroupViewEnabled  
+##  <a name="isgroupviewenabled"></a>CListCtrl::IsGroupViewEnabled  
  确定是否为列表视图控件启用的组视图。  
   
 ```  
@@ -2401,7 +2531,7 @@ BOOL IsGroupViewEnabled() const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_ISGROUPVIEWENABLED](http://msdn.microsoft.com/library/windows/desktop/bb761133)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisitemvisiblea--clistctrlisitemvisible"></a><a name="isitemvisible"></a>CListCtrl::IsItemVisible  
+##  <a name="isitemvisible"></a>CListCtrl::IsItemVisible  
  指示当前的列表视图控件中的指定的项是否可见。  
   
 ```  
@@ -2420,7 +2550,7 @@ BOOL IsItemVisible(int index) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namemapidtoindexa--clistctrlmapidtoindex"></a><a name="mapidtoindex"></a>CListCtrl::MapIDToIndex  
+##  <a name="mapidtoindex"></a>CListCtrl::MapIDToIndex  
  将当前的列表视图控件中的项的唯一 ID 映射到索引。  
   
 ```  
@@ -2443,7 +2573,7 @@ UINT MapIDToIndex(UINT id) const;
   
  此方法可发送[LVM_MAPIDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761137)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namemapindextoida--clistctrlmapindextoid"></a><a name="mapindextoid"></a>CListCtrl::MapIndexToID  
+##  <a name="mapindextoid"></a>CListCtrl::MapIndexToID  
  将当前的列表视图控件中的项的索引映射到唯一的 id。  
   
 ```  
@@ -2506,7 +2636,7 @@ public:
 ```
 
   
-##  <a name="a-namemovegroupa--clistctrlmovegroup"></a><a name="movegroup"></a>CListCtrl::MoveGroup  
+##  <a name="movegroup"></a>CListCtrl::MoveGroup  
  将移动指定的组指定零开始的列表视图控件索引。  
   
 ```  
@@ -2528,7 +2658,7 @@ LRESULT MoveGroup(
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_MOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761141)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namemoveitemtogroupa--clistctrlmoveitemtogroup"></a><a name="moveitemtogroup"></a>CListCtrl::MoveItemToGroup  
+##  <a name="moveitemtogroup"></a>CListCtrl::MoveItemToGroup  
  将指定的项移动到指定的组。  
   
 ```  
@@ -2551,7 +2681,7 @@ void MoveItemToGroup(
   
  此方法模拟的功能[LVM_MOVEITEMTOGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761143)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameredrawitemsa--clistctrlredrawitems"></a><a name="redrawitems"></a>CListCtrl::RedrawItems  
+##  <a name="redrawitems"></a>CListCtrl::RedrawItems  
  强制重新绘制的项的范围的列表视图控件。  
   
 ```  
@@ -2573,7 +2703,7 @@ BOOL RedrawItems(
 ### <a name="remarks"></a>备注  
  指定的项不实际重新绘制列表视图窗口接收之前`WM_PAINT`消息。 若要立即重绘，调用 Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)函数之后，使用此函数。  
   
-##  <a name="a-nameremoveallgroupsa--clistctrlremoveallgroups"></a><a name="removeallgroups"></a>CListCtrl::RemoveAllGroups  
+##  <a name="removeallgroups"></a>CListCtrl::RemoveAllGroups  
  从列表视图控件中移除所有组。  
   
 ```  
@@ -2583,7 +2713,7 @@ void RemoveAllGroups();
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_REMOVEALLGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761147)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nameremovegroupa--clistctrlremovegroup"></a><a name="removegroup"></a>CListCtrl::RemoveGroup  
+##  <a name="removegroup"></a>CListCtrl::RemoveGroup  
  从列表视图控件中删除指定的组。  
   
 ```  
@@ -2600,7 +2730,7 @@ LRESULT RemoveGroup(int iGroupId);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_REMOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761149)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namescrolla--clistctrlscroll"></a><a name="scroll"></a>CListCtrl::Scroll  
+##  <a name="scroll"></a>CListCtrl::Scroll  
  将列表视图控件的内容滚动。  
   
 ```  
@@ -2614,7 +2744,7 @@ BOOL Scroll(CSize size);
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namesetbkcolora--clistctrlsetbkcolor"></a><a name="setbkcolor"></a>CListCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CListCtrl::SetBkColor  
  设置在列表视图控件的背景色。  
   
 ```  
@@ -2639,7 +2769,7 @@ BOOL SetBkColor(COLORREF cr);
 ```
 
   
-##  <a name="a-namesetbkimagea--clistctrlsetbkimage"></a><a name="setbkimage"></a>CListCtrl::SetBkImage  
+##  <a name="setbkimage"></a>CListCtrl::SetBkImage  
  设置的列表视图控件的背景图像。  
   
 ```  
@@ -2688,7 +2818,7 @@ BOOL SetBkImage(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetBkImage](#getbkimage)。  
   
-##  <a name="a-namesetcallbackmaska--clistctrlsetcallbackmask"></a><a name="setcallbackmask"></a>Clistctrl:: Setcallbackmask  
+##  <a name="setcallbackmask"></a>Clistctrl:: Setcallbackmask  
  设置的列表视图控件的回调掩码。  
   
 ```  
@@ -2714,7 +2844,7 @@ BOOL SetCallbackMask(UINT nMask);
 ```
 
 
-##  <a name="a-namesetchecka--clistctrlsetcheck"></a><a name="setcheck"></a>CListCtrl::SetCheck  
+##  <a name="setcheck"></a>CListCtrl::SetCheck  
  确定列表控件项的状态图像是否可见。  
   
 ```  
@@ -2752,7 +2882,7 @@ BOOL SetCheck(
 ```
 
   
-##  <a name="a-namesetcolumna--clistctrlsetcolumn"></a><a name="setcolumn"></a>CListCtrl::SetColumn  
+##  <a name="setcolumn"></a>CListCtrl::SetColumn  
  设置列表视图列的属性。  
   
 ```  
@@ -2774,7 +2904,7 @@ BOOL SetColumn(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetColumn](#getcolumn)。  
   
-##  <a name="a-namesetcolumnorderarraya--clistctrlsetcolumnorderarray"></a><a name="setcolumnorderarray"></a>CListCtrl::SetColumnOrderArray  
+##  <a name="setcolumnorderarray"></a>CListCtrl::SetColumnOrderArray  
  设置的列表视图控件的列顺序 （从左到右）。  
   
 ```  
@@ -2799,7 +2929,7 @@ BOOL SetColumnOrderArray(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。  
   
-##  <a name="a-namesetcolumnwidtha--clistctrlsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListCtrl::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>CListCtrl::SetColumnWidth  
  更改报表视图或列表视图中的列的宽度。  
   
 ```  
@@ -2818,7 +2948,7 @@ BOOL SetColumnWidth(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为零，否则为零。  
   
-##  <a name="a-namesetextendedstylea--clistctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CListCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CListCtrl::SetExtendedStyle  
  设置的列表视图控件的当前扩展的样式。  
   
 ```  
@@ -2845,7 +2975,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```
 
   
-##  <a name="a-namesetgroupinfoa--clistctrlsetgroupinfo"></a><a name="setgroupinfo"></a>CListCtrl::SetGroupInfo  
+##  <a name="setgroupinfo"></a>CListCtrl::SetGroupInfo  
  设置描述当前的 list view 控件的指定的组的信息。  
   
 ```  
@@ -2867,7 +2997,7 @@ int SetGroupInfo(
 ### <a name="remarks"></a>备注  
  此方法可发送[LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetgroupmetricsa--clistctrlsetgroupmetrics"></a><a name="setgroupmetrics"></a>CListCtrl::SetGroupMetrics  
+##  <a name="setgroupmetrics"></a>CListCtrl::SetGroupMetrics  
  设置的列表视图控件的组度量值。  
   
 ```  
@@ -2881,7 +3011,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb761168)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesethotcursora--clistctrlsethotcursor"></a><a name="sethotcursor"></a>CListCtrl::SetHotCursor  
+##  <a name="sethotcursor"></a>CListCtrl::SetHotCursor  
  设置为列表视图控件启用热跟踪时使用的光标。  
   
 ```  
@@ -2903,7 +3033,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetHotCursor](#gethotcursor)。  
   
-##  <a name="a-namesethotitema--clistctrlsethotitem"></a><a name="sethotitem"></a>CListCtrl::SetHotItem  
+##  <a name="sethotitem"></a>CListCtrl::SetHotItem  
  设置的列表视图控件的当前热项。  
   
 ```  
@@ -2923,7 +3053,7 @@ int SetHotItem(int iIndex);
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetHotItem](#gethotitem)。  
   
-##  <a name="a-namesethovertimea--clistctrlsethovertime"></a><a name="sethovertime"></a>CListCtrl::SetHoverTime  
+##  <a name="sethovertime"></a>CListCtrl::SetHoverTime  
  设置的列表视图控件的当前悬停时间。  
   
 ```  
@@ -2943,7 +3073,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetHoverTime](#gethovertime)。  
   
-##  <a name="a-nameseticonspacinga--clistctrlseticonspacing"></a><a name="seticonspacing"></a>CListCtrl::SetIconSpacing  
+##  <a name="seticonspacing"></a>CListCtrl::SetIconSpacing  
  设置在列表视图控件中的图标之间的间距。  
   
 ```  
@@ -2979,7 +3109,7 @@ CSize SetIconSpacing(CSize size);
 ```
 
   
-##  <a name="a-namesetimagelista--clistctrlsetimagelist"></a><a name="setimagelist"></a>CListCtrl::SetImageList  
+##  <a name="setimagelist"></a>CListCtrl::SetImageList  
  将图像列表分配给列表视图控件。  
   
 ```  
@@ -3007,7 +3137,7 @@ CImageList* SetImageList(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetImageList](#getimagelist)。  
   
-##  <a name="a-namesetinfotipa--clistctrlsetinfotip"></a><a name="setinfotip"></a>CListCtrl::SetInfoTip  
+##  <a name="setinfotip"></a>CListCtrl::SetInfoTip  
  设置工具提示文本。  
   
 ```  
@@ -3024,7 +3154,7 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb761180)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetinsertmarka--clistctrlsetinsertmark"></a><a name="setinsertmark"></a>CListCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>CListCtrl::SetInsertMark  
  将插入点设置为已定义的位置。  
   
 ```  
@@ -3041,7 +3171,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb761182)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetinsertmarkcolora--clistctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CListCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>CListCtrl::SetInsertMarkColor  
  设置插入点的颜色。  
   
 ```  
@@ -3058,7 +3188,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761184)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetitema--clistctrlsetitem"></a><a name="setitem"></a>Clistctrl:: Setitem  
+##  <a name="setitem"></a>Clistctrl:: Setitem  
  设置的部分或全部列表视图项的属性。  
   
 ```  
@@ -3134,7 +3264,7 @@ BOOL SetItem(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::HitTest](#hittest)。  
   
-##  <a name="a-namesetitemcounta--clistctrlsetitemcount"></a><a name="setitemcount"></a>CListCtrl::SetItemCount  
+##  <a name="setitemcount"></a>CListCtrl::SetItemCount  
  准备添加大量项的列表视图控件。  
   
 ```  
@@ -3168,7 +3298,7 @@ void SetItemCount(int nItems);
 ```
 
   
-##  <a name="a-namesetitemcountexa--clistctrlsetitemcountex"></a><a name="setitemcountex"></a>CListCtrl::SetItemCountEx  
+##  <a name="setitemcountex"></a>CListCtrl::SetItemCountEx  
  设置虚拟列表视图控件的项计数。  
   
 ```  
@@ -3215,7 +3345,7 @@ BOOL SetItemCountEx(
 ```
 
   
-##  <a name="a-namesetitemdataa--clistctrlsetitemdata"></a><a name="setitemdata"></a>CListCtrl::SetItemData  
+##  <a name="setitemdata"></a>CListCtrl::SetItemData  
  设置与指定的项相关联的 32 位应用程序特定的值`nItem`。  
   
 ```  
@@ -3247,7 +3377,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```
 
   
-##  <a name="a-namesetitemindexstatea--clistctrlsetitemindexstate"></a><a name="setitemindexstate"></a>CListCtrl::SetItemIndexState  
+##  <a name="setitemindexstate"></a>CListCtrl::SetItemIndexState  
  设置当前的列表视图控件中的项的状态。  
   
 ```  
@@ -3275,7 +3405,7 @@ BOOL SetItemIndexState(
   
  此方法可发送[LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190)消息中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetitempositiona--clistctrlsetitemposition"></a><a name="setitemposition"></a>CListCtrl::SetItemPosition  
+##  <a name="setitemposition"></a>CListCtrl::SetItemPosition  
  将项移到列表视图控件中的指定位置。  
   
 ```  
@@ -3302,7 +3432,7 @@ BOOL SetItemPosition(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetItemPosition](#getitemposition)。  
   
-##  <a name="a-namesetitemstatea--clistctrlsetitemstate"></a><a name="setitemstate"></a>CListCtrl::SetItemState  
+##  <a name="setitemstate"></a>CListCtrl::SetItemState  
  更改列表视图控件中的项的状态。  
   
 ```  
@@ -3339,7 +3469,7 @@ BOOL SetItemState(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetTopIndex](#gettopindex)。  
   
-##  <a name="a-namesetitemtexta--clistctrlsetitemtext"></a><a name="setitemtext"></a>CListCtrl::SetItemText  
+##  <a name="setitemtext"></a>CListCtrl::SetItemText  
  更改列表视图项或子项的文本。  
   
 ```  
@@ -3368,7 +3498,7 @@ BOOL SetItemText(
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::InsertItem](#insertitem)。  
   
-##  <a name="a-namesetoutlinecolora--clistctrlsetoutlinecolor"></a><a name="setoutlinecolor"></a>CListCtrl::SetOutlineColor  
+##  <a name="setoutlinecolor"></a>CListCtrl::SetOutlineColor  
  如果设置的列表视图控件的边框颜色[LVS_EX_BORDERSELECT](http://msdn.microsoft.com/library/windows/desktop/bb774739)设置扩展的窗口样式。  
   
 ```  
@@ -3385,7 +3515,7 @@ COLORREF SetOutlineColor(COLORREF color);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761200)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetselectedcolumna--clistctrlsetselectedcolumn"></a><a name="setselectedcolumn"></a>CListCtrl::SetSelectedColumn  
+##  <a name="setselectedcolumn"></a>CListCtrl::SetSelectedColumn  
  将列表视图控件的所选的列的设置。  
   
 ```  
@@ -3402,7 +3532,7 @@ LRESULT SetSelectedColumn(int iCol);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761202)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetselectionmarka--clistctrlsetselectionmark"></a><a name="setselectionmark"></a>CListCtrl::SetSelectionMark  
+##  <a name="setselectionmark"></a>CListCtrl::SetSelectionMark  
  设置的列表视图控件的选择标记。  
   
 ```  
@@ -3422,7 +3552,7 @@ int SetSelectionMark(int iIndex);
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetSelectionMark](#getselectionmark)。  
   
-##  <a name="a-namesettextbkcolora--clistctrlsettextbkcolor"></a><a name="settextbkcolor"></a>CListCtrl::SetTextBkColor  
+##  <a name="settextbkcolor"></a>CListCtrl::SetTextBkColor  
  在列表视图控件中设置文本的背景色。  
   
 ```  
@@ -3447,7 +3577,7 @@ BOOL SetTextBkColor(COLORREF cr);
 ```
 
   
-##  <a name="a-namesettextcolora--clistctrlsettextcolor"></a><a name="settextcolor"></a>CListCtrl::SetTextColor  
+##  <a name="settextcolor"></a>CListCtrl::SetTextColor  
  设置的列表视图控件的文本颜色。  
   
 ```  
@@ -3473,7 +3603,7 @@ BOOL SetTextColor(COLORREF cr);
 ```
 
   
-##  <a name="a-namesettileinfoa--clistctrlsettileinfo"></a><a name="settileinfo"></a>CListCtrl::SetTileInfo  
+##  <a name="settileinfo"></a>CListCtrl::SetTileInfo  
  设置列表视图控件的磁贴的信息。  
   
 ```  
@@ -3490,7 +3620,7 @@ BOOL SetTileInfo(PLVTILEINFO pti);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761210)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesettileviewinfoa--clistctrlsettileviewinfo"></a><a name="settileviewinfo"></a>CListCtrl::SetTileViewInfo  
+##  <a name="settileviewinfo"></a>CListCtrl::SetTileViewInfo  
  平铺视图中设置的列表视图控件使用的信息。  
   
 ```  
@@ -3507,7 +3637,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761212)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesettooltipsa--clistctrlsettooltips"></a><a name="settooltips"></a>CListCtrl::SetToolTips  
+##  <a name="settooltips"></a>CListCtrl::SetToolTips  
  设置将使用列表视图控件来显示工具提示的工具提示控件。  
   
 ```  
@@ -3526,7 +3656,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
   
  若要不使用工具提示，指出`LVS_NOTOOLTIPS`时您创建样式`CListCtrl`对象。  
   
-##  <a name="a-namesetviewa--clistctrlsetview"></a><a name="setview"></a>CListCtrl::SetView  
+##  <a name="setview"></a>CListCtrl::SetView  
  将列表视图控件的视图设置。  
   
 ```  
@@ -3543,7 +3673,7 @@ DWORD SetView(int iView);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761220)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetworkareasa--clistctrlsetworkareas"></a><a name="setworkareas"></a>CListCtrl::SetWorkAreas  
+##  <a name="setworkareas"></a>CListCtrl::SetWorkAreas  
  设置图标可以显示在列表视图控件中的位置的区域。  
   
 ```  
@@ -3571,7 +3701,7 @@ void SetWorkAreas(
 ```
 
   
-##  <a name="a-namesortgroupsa--clistctrlsortgroups"></a><a name="sortgroups"></a>CListCtrl::SortGroups  
+##  <a name="sortgroups"></a>CListCtrl::SortGroups  
  使用应用程序定义比较函数按 ID 列表视图控件中的组进行排序。  
   
 ```  
@@ -3593,7 +3723,7 @@ BOOL SortGroups(
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LVM_SORTGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761225)消息，如中所述[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namesortitemsa--clistctrlsortitems"></a><a name="sortitems"></a>CListCtrl::SortItems  
+##  <a name="sortitems"></a>CListCtrl::SortItems  
  通过使用应用程序定义比较函数列表视图项进行排序。  
   
 ```  
@@ -3651,7 +3781,7 @@ void CListCtrlDlg::Sort()
 }
 ```
   
-##  <a name="a-namesortitemsexa--clistctrlsortitemsex"></a><a name="sortitemsex"></a>CListCtrl::SortItemsEx  
+##  <a name="sortitemsex"></a>CListCtrl::SortItemsEx  
  当前的列表视图控件的项进行排序通过使用应用程序定义比较函数。  
   
 ```  
@@ -3734,7 +3864,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 ```
 
   
-##  <a name="a-namesubitemhittesta--clistctrlsubitemhittest"></a><a name="subitemhittest"></a>CListCtrl::SubItemHitTest  
+##  <a name="subitemhittest"></a>CListCtrl::SubItemHitTest  
  确定哪些列表视图项目时，如果有的话位于给定位置。  
   
 ```  
@@ -3772,7 +3902,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 ```
 
   
-##  <a name="a-nameupdatea--clistctrlupdate"></a><a name="update"></a>CListCtrl::Update  
+##  <a name="update"></a>CListCtrl::Update  
  强制重新绘制由指定的项列表视图控件`nItem`。  
   
 ```  

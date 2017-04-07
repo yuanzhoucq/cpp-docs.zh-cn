@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplinterface/concurrency::scheduler_ptr
+- scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
+- PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 dev_langs:
 - C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
@@ -32,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 022b5fafc437a8103fe17967a9a5ea54d5b82a39
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4bef1995724d078c9702669806ff61d5563ac465
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 结构
@@ -52,20 +56,20 @@ struct scheduler_ptr;
   
 |名称|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: scheduler_ptr 构造函数](#ctor)|已重载。 创建一个从 shared_ptr 到计划程序的计划程序指针|  
+|[scheduler_ptr:: scheduler_ptr](#ctor)|已重载。 创建一个从 shared_ptr 到计划程序的计划程序指针|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: get 方法](#get)|返回指向计划程序的原始指针|  
+|[scheduler_ptr:: get](#get)|返回指向计划程序的原始指针|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: operator bool 运算符](#operator_bool)|测试计划程序指针是否为非 null|  
-|[scheduler_ptr:: operator-&gt;运算符](#operator_ptr)|行为类似于指针|  
+|[scheduler_ptr:: operator bool](#operator_bool)|测试计划程序指针是否为非 null|  
+|[scheduler_ptr:: operator-&gt;](#operator_ptr)|行为类似于指针|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `scheduler_ptr`  
@@ -75,7 +79,7 @@ struct scheduler_ptr;
   
  **命名空间：** 并发  
   
-##  <a name="a-namegeta--schedulerptrget-method"></a><a name="get"></a>scheduler_ptr:: get 方法  
+##  <a name="get"></a>scheduler_ptr:: get 方法  
  返回指向计划程序的原始指针  
   
 ```
@@ -84,7 +88,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-nameoperatorboola--schedulerptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr:: operator bool   
+##  <a name="operator_bool"></a>scheduler_ptr:: operator bool   
  测试计划程序指针是否为非 null  
   
 '' 运算符 bool() const;

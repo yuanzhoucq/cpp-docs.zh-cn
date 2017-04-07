@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHttpFile
+- AFXINET/CHttpFile
+- AFXINET/CHttpFile::CHttpFile
+- AFXINET/CHttpFile::AddRequestHeaders
+- AFXINET/CHttpFile::EndRequest
+- AFXINET/CHttpFile::GetFileURL
+- AFXINET/CHttpFile::GetObject
+- AFXINET/CHttpFile::GetVerb
+- AFXINET/CHttpFile::QueryInfo
+- AFXINET/CHttpFile::QueryInfoStatusCode
+- AFXINET/CHttpFile::SendRequest
+- AFXINET/CHttpFile::SendRequestEx
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +102,7 @@ class CHttpFile : public CInternetFile
 ## <a name="requirements"></a>要求  
  **标头︰** afxinet.h  
   
-##  <a name="a-nameaddrequestheadersa--chttpfileaddrequestheaders"></a><a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
+##  <a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
  调用此成员函数添加一个或多个 HTTP 请求标头对 HTTP 请求处理。  
   
 ```  
@@ -136,7 +147,7 @@ BOOL AddRequestHeaders(
 > [!NOTE]
 >  应用程序可以将多个标头中的传递`pstrHeaders`或`str`为`AddRequestHeaders`调用使用`HTTP_ADDREQ_FLAG_ADD`或`HTTP_ADDREQ_FLAG_ADD_IF_NEW`。 如果应用程序将尝试删除或替换标头使用**HTTP_ADDREQ_FLAG_REMOVE**或`HTTP_ADDREQ_FLAG_REPLACE`，只有一个页眉可以按提供`lpszHeaders`。  
   
-##  <a name="a-namechttpfilea--chttpfilechttpfile"></a><a name="chttpfile"></a>CHttpFile::CHttpFile  
+##  <a name="chttpfile"></a>CHttpFile::CHttpFile  
  调用此成员函数来构造`CHttpFile`对象。  
   
 ```  
@@ -183,7 +194,7 @@ CHttpFile(
   
  默认值为`dwContext`发送到 mfc`CHttpFile`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当您调用`CInternetSession::OpenURL`或`CHttpConnection`构造`CHttpFile`对象时，您可以重写默认设置，以便为您选择的值设置上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供对它标识的对象的状态。 请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
-##  <a name="a-nameendrequesta--chttpfileendrequest"></a><a name="endrequest"></a>CHttpFile::EndRequest  
+##  <a name="endrequest"></a>CHttpFile::EndRequest  
  调用此成员函数来结束发送到 HTTP 服务器所使用的请求[SendRequestEx](#sendrequestex)成员函数。  
   
 ```  
@@ -209,7 +220,7 @@ BOOL EndRequest(
 ### <a name="remarks"></a>备注  
  默认值为`dwContext`发送到 mfc`CHttpFile`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当您调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[CHttpConnection](../../mfc/reference/chttpconnection-class.md)构造`CHttpFile`对象时，您可以重写默认设置，以便为您选择的值设置上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供对它标识的对象的状态。 请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
-##  <a name="a-namegetfileurla--chttpfilegetfileurl"></a><a name="getfileurl"></a>CHttpFile::GetFileURL  
+##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
  调用该成员函数以获取作为 URL 的 HTTP 文件的名称。  
   
 ```  
@@ -222,7 +233,7 @@ virtual CString GetFileURL() const;
 ### <a name="remarks"></a>备注  
  在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`成功创建的对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
-##  <a name="a-namegetobjecta--chttpfilegetobject"></a><a name="getobject"></a>CHttpFile::GetObject  
+##  <a name="getobject"></a>CHttpFile::GetObject  
  调用此成员函数以获取与此相关联的对象的名称`CHttpFile`。  
   
 ```  
@@ -235,7 +246,7 @@ CString GetObject() const;
 ### <a name="remarks"></a>备注  
  在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`成功创建的对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
-##  <a name="a-namegetverba--chttpfilegetverb"></a><a name="getverb"></a>CHttpFile::GetVerb  
+##  <a name="getverb"></a>CHttpFile::GetVerb  
  调用此成员函数可获取与此相关的 HTTP 谓词 （或方法） `CHttpFile`。  
   
 ```  
@@ -248,7 +259,7 @@ CString GetVerb() const;
 ### <a name="remarks"></a>备注  
  在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`成功创建的对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
-##  <a name="a-namequeryinfoa--chttpfilequeryinfo"></a><a name="queryinfo"></a>CHttpFile::QueryInfo  
+##  <a name="queryinfo"></a>CHttpFile::QueryInfo  
  调用该成员函数以返回响应或请求标头从 HTTP 请求。  
   
 ```  
@@ -365,7 +376,7 @@ BOOL QueryInfo(
   
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
-##  <a name="a-namequeryinfostatuscodea--chttpfilequeryinfostatuscode"></a><a name="queryinfostatuscode"></a>CHttpFile::QueryInfoStatusCode  
+##  <a name="queryinfostatuscode"></a>CHttpFile::QueryInfoStatusCode  
  调用此成员函数以获取与 HTTP 请求相关联的状态代码并将其放在提供`dwStatusCode`参数。  
   
 ```  
@@ -402,7 +413,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 |500|未知的服务器错误|  
 |503|已达到服务器容量|  
   
-##  <a name="a-namesendrequesta--chttpfilesendrequest"></a><a name="sendrequest"></a>CHttpFile::SendRequest  
+##  <a name="sendrequest"></a>CHttpFile::SendRequest  
  调用该成员函数以将请求发送到 HTTP 服务器。  
   
 ```  
@@ -438,7 +449,7 @@ BOOL SendRequest(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。 如果调用失败，则通过检查则引发该异常来确定失败的原因[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。  
   
-##  <a name="a-namesendrequestexa--chttpfilesendrequestex"></a><a name="sendrequestex"></a>CHttpFile::SendRequestEx  
+##  <a name="sendrequestex"></a>CHttpFile::SendRequestEx  
  调用该成员函数以将请求发送到 HTTP 服务器。  
   
 ```  

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator::Allocate
+- ATLCORE/ATL::CCRTAllocator::Free
+- ATLCORE/ATL::CCRTAllocator::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -64,7 +68,7 @@ class ATL::CCRTAllocator
 ## <a name="requirements"></a>要求  
  **标头︰** atlcore.h  
   
-##  <a name="a-nameallocatea--ccrtallocatorallocate"></a><a name="allocate"></a>CCRTAllocator::Allocate  
+##  <a name="allocate"></a>CCRTAllocator::Allocate  
  调用此静态函数以分配内存。  
   
 ```
@@ -81,7 +85,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  分配内存。 请参阅[malloc](../../c-runtime-library/reference/malloc.md)的更多详细信息。  
   
-##  <a name="a-namefreea--ccrtallocatorfree"></a><a name="free"></a>CCRTAllocator::Free  
+##  <a name="free"></a>CCRTAllocator::Free  
  调用该静态函数以释放内存。  
   
 ```
@@ -95,7 +99,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>备注  
  释放分配的内存。 请参阅[免费](../../c-runtime-library/reference/free.md)的更多详细信息。  
   
-##  <a name="a-namereallocatea--ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::Reallocate  
+##  <a name="reallocate"></a>CCRTAllocator::Reallocate  
  调用此静态函数以重新分配内存。  
   
 ```

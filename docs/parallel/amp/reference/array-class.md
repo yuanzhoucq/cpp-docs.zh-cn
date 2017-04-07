@@ -9,7 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::array
+- array
+- AMP/array
+- AMP/Concurrency::array::array
+- AMP/Concurrency::array::copy_to
+- AMP/Concurrency::array::data
+- AMP/Concurrency::array::get_accelerator_view
+- AMP/Concurrency::array::get_associated_accelerator_view
+- AMP/Concurrency::array::get_cpu_access_type
+- AMP/Concurrency::array::get_extent
+- AMP/Concurrency::array::reinterpret_as
+- AMP/Concurrency::array::section
+- AMP/Concurrency::array::view_as
+- AMP/Concurrency::array::rank
+- AMP/Concurrency::array::accelerator_view
+- AMP/Concurrency::array::associated_accelerator_view
+- AMP/Concurrency::array::cpu_access_type
+- AMP/Concurrency::array::extent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +50,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c1708bfedc35076f1d10f6c4dd128bb428a7855e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 470918d62357a8dd463db35b4d929e7ec5c2f251
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="array-class"></a>array 类
@@ -68,28 +84,28 @@ friend class array;
   
 |名称|说明|  
 |----------|-----------------|  
-|[copy_to 方法](#copy_to)|将该数组的内容复制到另一个数组。|  
-|[数据的方法](#data)|返回指向数组的原始数据的指针。|  
-|[get_accelerator_view 方法](#get_accelerator_view)|返回[accelerator_view](accelerator-view-class.md)对象，表示分配数组的位置。 仅在 CPU 上，可以访问此属性。|  
-|[get_associated_accelerator_view 方法](#get_associated_accelerator_view)|获取第二个[accelerator_view](accelerator-view-class.md)暂存构造函数调用来实例化时作为参数传递的对象`array`对象。|  
-|[get_cpu_access_type 方法](#get_cpu_access_type)|返回[access_type](concurrency-namespace-enums-amp.md#access_type)的数组。 此方法可以访问仅在 CPU 上。|  
-|[get_extent 方法](#get_extent)|返回[扩展盘区](extent-class.md)数组的对象。|  
-|[reinterpret_as 方法](#reinterpret_as)|返回包含中的所有元素的一维数组`array`对象。|  
-|[部分方法](#section)|返回的子部分的`array`位于指定的 origin 和 （可选） 该的对象具有指定的范围。|  
-|[view_as 方法](#view_as)|返回[array_view](array-view-class.md)从构造的对象`array`对象。|  
+|[copy_to](#copy_to)|将该数组的内容复制到另一个数组。|  
+|[data](#data)|返回指向数组的原始数据的指针。|  
+|[get_accelerator_view](#get_accelerator_view)|返回[accelerator_view](accelerator-view-class.md)对象，表示分配数组的位置。 仅在 CPU 上，可以访问此属性。|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|获取第二个[accelerator_view](accelerator-view-class.md)暂存构造函数调用来实例化时作为参数传递的对象`array`对象。|  
+|[get_cpu_access_type](#get_cpu_access_type)|返回[access_type](concurrency-namespace-enums-amp.md#access_type)的数组。 此方法可以访问仅在 CPU 上。|  
+|[get_extent](#get_extent)|返回[扩展盘区](extent-class.md)数组的对象。|  
+|[reinterpret_as](#reinterpret_as)|返回包含中的所有元素的一维数组`array`对象。|  
+|[section](#section)|返回的子部分的`array`位于指定的 origin 和 （可选） 该的对象具有指定的范围。|  
+|[view_as](#view_as)|返回[array_view](array-view-class.md)从构造的对象`array`对象。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[运算符 std:: vector&lt;value_type&gt;运算符](#operator_vec)|使用`copy(*this, vector)`隐式将数组转换为 std::[向量](../../../standard-library/vector-class.md)对象。|  
-|[operator （) 运算符](#operator_call)|返回由参数指定的元素值。|  
-|[operator [] 运算符](#operator_at)|返回位于指定索引处的元素。|  
-|[运算符 = 运算符](#operator_eq)|将指定的内容复制`array`到此对象。|  
+|[运算符 std:: vector&lt;value_type&gt;](#operator_vec)|使用`copy(*this, vector)`隐式将数组转换为 std::[向量](../../../standard-library/vector-class.md)对象。|  
+|[operator （)](#operator_call)|返回由参数指定的元素值。|  
+|[operator]](#operator_at)|返回位于指定索引处的元素。|  
+|[operator=](#operator_eq)|将指定的内容复制`array`到此对象。|  
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|存储数组的秩。|  
   
@@ -97,13 +113,13 @@ friend class array;
   
 |名称|描述|  
 |----------|-----------------|  
-|[accelerator_view 数据成员](#accelerator_view)|获取[accelerator_view](accelerator-view-class.md)对象，表示分配数组的位置。 仅在 CPU 上，可以访问此属性。|  
-|[associated_accelerator_view 数据成员](#associated_accelerator_view)|获取第二个[accelerator_view](accelerator-view-class.md)暂存构造函数调用来实例化时作为参数传递的对象`array`对象。|  
-|[cpu_access_type 数据成员](#cpu_access_type)|获取[access_type](concurrency-namespace-enums-amp.md#access_type)表示如何 CPU 都可以访问该数组的存储。|  
-|[extent 数据成员](#extent)|获取定义该数组的形状的范围。|  
+|[accelerator_view](#accelerator_view)|获取[accelerator_view](accelerator-view-class.md)对象，表示分配数组的位置。 仅在 CPU 上，可以访问此属性。|  
+|[associated_accelerator_view](#associated_accelerator_view)|获取第二个[accelerator_view](accelerator-view-class.md)暂存构造函数调用来实例化时作为参数传递的对象`array`对象。|  
+|[cpu_access_type](#cpu_access_type)|获取[access_type](concurrency-namespace-enums-amp.md#access_type)表示如何 CPU 都可以访问该数组的存储。|  
+|[extent](#extent)|获取定义该数组的形状的范围。|  
   
 ## <a name="remarks"></a>备注  
- 类型`array<T,N>`表示一个密集和常规 （没有锯齿） *N*-维数组，它位于特定位置，如加速器或 CPU。 数组中元素的数据类型是`T`，它必须与目标加速器兼容的类型。 尽管级别， `N`，(的数组以静态方式确定，并且是该类型的一部分，则数组的范围内运行时确定，并且必须通过使用类表示`extent<N>`。  
+ 类型`array<T,N>`表示一个密集和常规 （没有锯齿） *N*-维数组，它位于特定位置，如加速器或 CPU。 数组中元素的数据类型是`T`，它必须与目标加速器兼容的类型。 尽管排名， `N`，(的数组以静态方式确定，并且是该类型的一部分，则数组的范围内运行时确定，并且必须通过使用类表示`extent<N>`。  
   
  数组可以有任意数量的维度，尽管某些功能专用于`array`具有排名一、 二和三个对象。 如果您省略维度参数，默认值为 1。  
   
@@ -127,7 +143,7 @@ friend class array;
   
  **命名空间：** 并发  
   
-##  <a name="a-namedtora-array"></a><a name="dtor"></a>~ 数组 
+##  <a name="dtor"></a>~ 数组 
 
  销毁`array`对象。  
   
@@ -135,7 +151,7 @@ friend class array;
 ~array() restrict(cpu);
 ```  
   
-##  <a name="a-nameacceleratorviewa-acceleratorview"></a><a name="accelerator_view"></a>accelerator_view 
+##  <a name="accelerator_view"></a>accelerator_view 
 
  获取[accelerator_view](accelerator-view-class.md)对象，表示分配数组的位置。 仅在 CPU 上，可以访问此属性。  
   
@@ -143,7 +159,7 @@ friend class array;
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;  
 ```  
   
-##  <a name="a-namectora-array"></a><a name="ctor"></a>数组 
+##  <a name="ctor"></a>数组 
 
  新实例初始化[array 类](array-class.md)。 没有默认构造函数，为`array<T,N>`。 在 CPU 上运行的所有构造函数。 它们不能在 Direct3D 目标上执行。  
   
@@ -446,7 +462,7 @@ array(array&& _Other) restrict(cpu);
  `value_type`  
  将复制的元素数据类型。  
   
-##  <a name="a-nameassociatedacceleratorviewa-associatedacceleratorview"></a><a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
 
  获取第二个[accelerator_view](accelerator-view-class.md)暂存构造函数调用来实例化时作为参数传递的对象`array`对象。  
   
@@ -454,7 +470,7 @@ array(array&& _Other) restrict(cpu);
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="a-namecopytoa-copyto"></a><a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a>copy_to 
 
  中的内容复制`array`到另一个`array`。  
   
@@ -470,7 +486,7 @@ void copy_to(
  `_Dest`  
  [Array_view](array-view-class.md)将复制到的对象。  
   
-##  <a name="a-namecpuaccesstypea-cpuaccesstype"></a><a name="cpu_access_type"></a>cpu_access_type 
+##  <a name="cpu_access_type"></a>cpu_access_type 
 
  获取 CPU access_type 允许为此数组。  
   
@@ -478,7 +494,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
 ```  
   
-##  <a name="a-namedataa-data"></a><a name="data"></a>数据 
+##  <a name="data"></a>数据 
 
  将指针返回到原始数据的`array`。  
   
@@ -491,7 +507,7 @@ const value_type* data() const restrict(amp, cpu);
 ### <a name="return-value"></a>返回值  
  指向数组的原始数据的指针。  
   
-##  <a name="a-nameextenta-extent"></a><a name="extent"></a>扩展盘区 
+##  <a name="extent"></a>扩展盘区 
 
  获取[扩展盘区](extent-class.md)对象，该定义的形状对象`array`。  
   
@@ -499,7 +515,7 @@ const value_type* data() const restrict(amp, cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="a-namegetacceleratorviewa-getacceleratorview"></a><a name="get_accelerator_view"></a>get_accelerator_view 
+##  <a name="get_accelerator_view"></a>get_accelerator_view 
 
  返回[accelerator_view](accelerator-view-class.md)代表位置对象，其中`array`分配对象。 仅在 CPU 上，可以访问此属性。  
   
@@ -510,7 +526,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
 ### <a name="return-value"></a>返回值  
  `accelerator_view`代表位置对象，其中`array`分配对象。  
   
-##  <a name="a-namegetassociatedacceleratorviewa-getassociatedacceleratorview"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
 
  获取第二个[accelerator_view](accelerator-view-class.md)暂存构造函数调用来实例化时作为参数传递的对象`array`对象。  
   
@@ -521,7 +537,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const ;
 ### <a name="return-value"></a>返回值  
  第二个[accelerator_view](accelerator-view-class.md)对象传递给暂存构造函数。  
   
-##  <a name="a-namegetcpuaccesstypea-getcpuaccesstype"></a><a name="get_cpu_access_type"></a>get_cpu_access_type 
+##  <a name="get_cpu_access_type"></a>get_cpu_access_type 
 
  允许为此数组的返回 CPU access_type。  
   
@@ -531,7 +547,7 @@ access_type get_cpu_access_type() const restrict(cpu);
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-namegetextenta-getextent"></a><a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a>get_extent 
 
  返回[扩展盘区](extent-class.md)对象`array`。  
   
@@ -542,7 +558,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ### <a name="return-value"></a>返回值  
  `extent`对象`array`。  
   
-##  <a name="a-nameoperatorveca-operator-stdvectorltvaluetypegt"></a><a name="operator_vec"></a>运算符 std:: vector&lt;value_type&gt; 
+##  <a name="operator_vec"></a>运算符 std:: vector&lt;value_type&gt; 
 
  使用`copy(*this, vector)`将隐式转换到 std:: vector 对象的数组。  
   
@@ -557,7 +573,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ### <a name="return-value"></a>返回值  
  类型的对象`vector<T>`，包含数组中包含的数据的副本。  
   
-##  <a name="a-nameoperatorcalla-operator"></a><a name="operator_call"></a>operator （) 
+##  <a name="operator_call"></a>operator （) 
 
  返回由参数指定的元素值。  
   
@@ -598,7 +614,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>返回值  
  在由参数指定的元素值。  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a>operator] 
 
  返回位于指定索引处的元素。  
   
@@ -623,7 +639,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>返回值  
  位于指定索引处的元素。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a>运算符 = 
 
  将指定的内容复制`array`对象。  
   
@@ -646,14 +662,14 @@ array& operator= (
 ### <a name="return-value"></a>返回值  
  参考这`array`对象。  
   
-##  <a name="a-nameranka-rank"></a><a name="rank"></a>排名 
+##  <a name="rank"></a>排名 
 
  将存储的排名`array`。  
   
 ```  
 static const int rank = _Rank;  
 ```  
-## <a name="a-namereinterpretasa-reinterpretas"></a><a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a>reinterpret_as 
 
 重新解释通过一维 array_view，（可选） 可能具有比源数组不同的值类型数组。
 
@@ -673,8 +689,8 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 Array_view 或基于数组，与从 T 重新解释为 ElementType 和减少从 N 到 1 排名的元素类型的常数 array_view 对象。
 
 ### <a name="remarks"></a>备注
-有时会很方便地查看多维数组就好像它可能具有不同的值类型比源数组是线性的一维数组。 可以使用此方法来实现此目的。
-**警告︰** ︰ 数组对象重新解释使用不同的值类型是一个潜在的不安全的操作。 我们建议您小心地使用此功能。 
+有时会很方便地查看多维数组就好像它可能具有不同的值类型比源阵列是线性的一维数组。 可以使用此方法来实现此目的。
+**警告︰** ︰ 数组对象重新解释使用不同的值类型是一个潜在的不安全操作。 我们建议您小心地使用此功能。 
 
 下面的代码提供了一个示例。
 
@@ -687,7 +703,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```  
   
-##  <a name="a-namesectiona-section"></a><a name="section"></a>部分 
+##  <a name="section"></a>部分 
 
  返回的子部分的`array`位于指定的 origin 和 （可选） 该的对象具有指定的范围。  
   
@@ -789,7 +805,7 @@ array_view<const value_type,3> section(
 ### <a name="return-value"></a>返回值  
  返回的子部分的`array`位于指定的 origin 和 （可选） 该的对象具有指定的范围。 当仅`index`指定对象时，子部分包含关联的网格中具有大于中的元素的索引的索引的所有元素`index`对象。  
   
-##  <a name="a-nameviewasa-viewas"></a><a name="view_as"></a>view_as 
+##  <a name="view_as"></a>view_as 
 
  重新解释为此数组[array_view](array-view-class.md)的不同级别。  
   
@@ -818,5 +834,5 @@ array_view<const value_type,_New_rank> view_as(
  [Array_view](array-view-class.md)构造的对象。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

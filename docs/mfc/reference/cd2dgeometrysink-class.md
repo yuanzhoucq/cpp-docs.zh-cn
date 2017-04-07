@@ -9,8 +9,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DGeometrySink
 - CD2DGeometrySink
+- AFXRENDERTARGET/CD2DGeometrySink
+- AFXRENDERTARGET/CD2DGeometrySink::CD2DGeometrySink
+- AFXRENDERTARGET/CD2DGeometrySink::AddArc
+- AFXRENDERTARGET/CD2DGeometrySink::AddBezier
+- AFXRENDERTARGET/CD2DGeometrySink::AddBeziers
+- AFXRENDERTARGET/CD2DGeometrySink::AddLine
+- AFXRENDERTARGET/CD2DGeometrySink::AddLines
+- AFXRENDERTARGET/CD2DGeometrySink::AddQuadraticBezier
+- AFXRENDERTARGET/CD2DGeometrySink::AddQuadraticBeziers
+- AFXRENDERTARGET/CD2DGeometrySink::BeginFigure
+- AFXRENDERTARGET/CD2DGeometrySink::Close
+- AFXRENDERTARGET/CD2DGeometrySink::EndFigure
+- AFXRENDERTARGET/CD2DGeometrySink::Get
+- AFXRENDERTARGET/CD2DGeometrySink::IsValid
+- AFXRENDERTARGET/CD2DGeometrySink::SetFillMode
+- AFXRENDERTARGET/CD2DGeometrySink::SetSegmentFlags
+- AFXRENDERTARGET/CD2DGeometrySink::m_pSink
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,14 +111,14 @@ class CD2DGeometrySink;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dgeometrysinka--cd2dgeometrysinkcd2dgeometrysink"></a><a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: ~ CD2DGeometrySink  
+##  <a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: ~ CD2DGeometrySink  
  析构函数。 当 D2D 几何图形接收器对象被销毁时调用。  
   
 ```  
 virtual ~CD2DGeometrySink();
 ```  
   
-##  <a name="a-nameaddarca--cd2dgeometrysinkaddarc"></a><a name="addarc"></a>CD2DGeometrySink::AddArc  
+##  <a name="addarc"></a>CD2DGeometrySink::AddArc  
  将一个圆弧添加到路径几何图形  
   
 ```  
@@ -113,7 +129,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
  `arc`  
  若要添加到该图形圆弧线段  
   
-##  <a name="a-nameaddbeziera--cd2dgeometrysinkaddbezier"></a><a name="addbezier"></a>CD2DGeometrySink::AddBezier  
+##  <a name="addbezier"></a>CD2DGeometrySink::AddBezier  
  创建当前点和指定的终结点之间的三次方贝塞尔曲线。  
   
 ```  
@@ -124,7 +140,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
  `bezier`  
  描述控点和终点的贝塞尔曲线，若要添加的结构。  
   
-##  <a name="a-nameaddbeziersa--cd2dgeometrysinkaddbeziers"></a><a name="addbeziers"></a>CD2DGeometrySink::AddBeziers  
+##  <a name="addbeziers"></a>CD2DGeometrySink::AddBeziers  
  创建三次方贝塞尔曲线的序列，并将它们添加到几何图形接收器。  
   
 ```  
@@ -137,7 +153,7 @@ void AddBeziers(
  `beziers`  
  描述要创建的贝塞尔曲线的贝塞尔曲线段数组。 一条曲线是从几何图形接收器当前点 （绘制的最后一段或由 BeginFigure 指定位置的终结点） 绘制到数组中的第一个贝塞尔曲线段的结束点。 如果数组包含其他贝赛尔曲线段，每个后续的贝塞尔曲线段将使用前面的贝塞尔曲线段的结束点作为其起点。  
   
-##  <a name="a-nameaddlinea--cd2dgeometrysinkaddline"></a><a name="addline"></a>CD2DGeometrySink::AddLine  
+##  <a name="addline"></a>CD2DGeometrySink::AddLine  
  创建当前点和指定的终结点之间的线段并将其添加到几何图形接收器。  
   
 ```  
@@ -148,7 +164,7 @@ void AddLine(CD2DPointF point);
  `point`  
  绘制直线终点。  
   
-##  <a name="a-nameaddlinesa--cd2dgeometrysinkaddlines"></a><a name="addlines"></a>CD2DGeometrySink::AddLines  
+##  <a name="addlines"></a>CD2DGeometrySink::AddLines  
  创建使用指定的点线的一个序列，并将它们添加到几何图形接收器。  
   
 ```  
@@ -161,7 +177,7 @@ void AddLines(
  `points`  
  描述要绘制的线条的一个或多个点的数组。 从几何图形接收器当前点 （绘制的最后一段或由 BeginFigure 指定位置的终结点） 到数组中的第一个点绘制线条。 如果数组包含额外的点，一条线是从第一个点到第二个点绘制在数组中，从第二个点到第三个点，依次类推。 要绘制的线条终结点的一系列的数组。  
   
-##  <a name="a-nameaddquadraticbeziera--cd2dgeometrysinkaddquadraticbezier"></a><a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier  
+##  <a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier  
  创建当前点和指定的终结点之间二次贝塞尔曲线。  
   
 ```  
@@ -172,7 +188,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
  `bezier`  
  描述控点和终点的二次贝塞尔曲线，若要添加的结构。  
   
-##  <a name="a-nameaddquadraticbeziersa--cd2dgeometrysinkaddquadraticbeziers"></a><a name="addquadraticbeziers"></a>CD2DGeometrySink::AddQuadraticBeziers  
+##  <a name="addquadraticbeziers"></a>CD2DGeometrySink::AddQuadraticBeziers  
  作为单个调用中的一个数组中添加一系列的二次贝赛尔曲线段。  
   
 ```  
@@ -185,7 +201,7 @@ void AddQuadraticBeziers(
  `beziers`  
  二次贝赛尔曲线段系列的数组。  
   
-##  <a name="a-namebeginfigurea--cd2dgeometrysinkbeginfigure"></a><a name="beginfigure"></a>CD2DGeometrySink::BeginFigure  
+##  <a name="beginfigure"></a>CD2DGeometrySink::BeginFigure  
  开始指定点处的一个新图形。  
   
 ```  
@@ -201,7 +217,7 @@ void BeginFigure(
  `figureBegin`  
  是否新图形应该是空心或填充。  
   
-##  <a name="a-namecd2dgeometrysinka--cd2dgeometrysinkcd2dgeometrysink"></a><a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink  
+##  <a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink  
  构造 CD2DGeometrySink 对象从 CD2DPathGeometry 对象。  
   
 ```  
@@ -212,7 +228,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
  `pathGeometry`  
  现有 CD2DPathGeometry 对象。  
   
-##  <a name="a-nameclosea--cd2dgeometrysinkclose"></a><a name="close"></a>CD2DGeometrySink::Close  
+##  <a name="close"></a>CD2DGeometrySink::Close  
  关闭几何图形接收器  
   
 ```  
@@ -222,7 +238,7 @@ BOOL Close();
 ### <a name="return-value"></a>返回值  
  如果成功，则非零值否则为 FALSE。  
   
-##  <a name="a-nameendfigurea--cd2dgeometrysinkendfigure"></a><a name="endfigure"></a>CD2DGeometrySink::EndFigure  
+##  <a name="endfigure"></a>CD2DGeometrySink::EndFigure  
  结束当前图;（可选） 将其关闭。  
   
 ```  
@@ -233,7 +249,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
  `figureEnd`  
  一个值，该值指示是否关闭当前图形。 如果关闭该图中，当前的点和由 BeginFigure 指定的起始点之间绘制线条。  
   
-##  <a name="a-namegeta--cd2dgeometrysinkget"></a><a name="get"></a>CD2DGeometrySink::Get  
+##  <a name="get"></a>CD2DGeometrySink::Get  
  返回 ID2D1GeometrySink 接口  
   
 ```  
@@ -243,7 +259,7 @@ ID2D1GeometrySink* Get();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1GeometrySink 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-nameisvalida--cd2dgeometrysinkisvalid"></a><a name="isvalid"></a>CD2DGeometrySink::IsValid  
+##  <a name="isvalid"></a>CD2DGeometrySink::IsValid  
  检查几何图形接收器有效性  
   
 ```  
@@ -253,14 +269,14 @@ BOOL IsValid() const;
 ### <a name="return-value"></a>返回值  
  如果几何图形接收器是否有效，则为，TRUE否则为 FALSE。  
   
-##  <a name="a-namempsinka--cd2dgeometrysinkmpsink"></a><a name="m_psink"></a>CD2DGeometrySink::m_pSink  
+##  <a name="m_psink"></a>CD2DGeometrySink::m_pSink  
  指向 ID2D1GeometrySink 的指针。  
   
 ```  
 ID2D1GeometrySink* m_pSink;  
 ```  
   
-##  <a name="a-nameoperatorid2d1geometrysinkstara--cd2dgeometrysinkoperator-id2d1geometrysink"></a><a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::operator ID2D1GeometrySink *  
+##  <a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::operator ID2D1GeometrySink *  
  返回 ID2D1GeometrySink 接口  
   
 ```  
@@ -270,7 +286,7 @@ operator ID2D1GeometrySink*();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1GeometrySink 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namesetfillmodea--cd2dgeometrysinksetfillmode"></a><a name="setfillmode"></a>CD2DGeometrySink::SetFillMode  
+##  <a name="setfillmode"></a>CD2DGeometrySink::SetFillMode  
  指定用于确定的那些点描述此几何图形接收器的几何图形内部和外部的点的方法。  
   
 ```  
@@ -281,7 +297,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
  `fillMode`  
  用来确定给定的点是否为几何图形的标识符的一部分的方法。  
   
-##  <a name="a-namesetsegmentflagsa--cd2dgeometrysinksetsegmentflags"></a><a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags  
+##  <a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags  
  指定要应用于新段添加到几何图形接收器的笔画和联接选项。  
   
 ```  

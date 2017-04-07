@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CUserTool
+- AFXUSERTOOL/CUserTool
+- AFXUSERTOOL/CUserTool::CopyIconToClipboard
+- AFXUSERTOOL/CUserTool::DrawToolIcon
+- AFXUSERTOOL/CUserTool::GetCommand
+- AFXUSERTOOL/CUserTool::GetCommandId
+- AFXUSERTOOL/CUserTool::Invoke
+- AFXUSERTOOL/CUserTool::Serialize
+- AFXUSERTOOL/CUserTool::SetCommand
+- AFXUSERTOOL/CUserTool::SetToolIcon
+- AFXUSERTOOL/CUserTool::LoadDefaultIcon
+- AFXUSERTOOL/CUserTool::m_strArguments
+- AFXUSERTOOL/CUserTool::m_strInitialDirectory
+- AFXUSERTOOL/CUserTool::m_strLabel
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +106,7 @@ class CUserTool : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxusertool.h  
   
-##  <a name="a-namecopyicontoclipboarda--cusertoolcopyicontoclipboard"></a><a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
+##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -104,7 +117,7 @@ BOOL CopyIconToClipboard();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namedrawtoolicona--cusertooldrawtoolicon"></a><a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
+##  <a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
  在指定的矩形的中心绘制用户工具图标。  
   
 ```  
@@ -120,7 +133,7 @@ void DrawToolIcon(
  [in] `rectImage`  
  指定的区域的坐标，以显示图标。  
   
-##  <a name="a-namegetcommanda--cusertoolgetcommand"></a><a name="getcommand"></a>CUserTool::GetCommand  
+##  <a name="getcommand"></a>CUserTool::GetCommand  
  返回一个字符串，包含与用户工具关联的命令的文本。  
   
 ```  
@@ -130,7 +143,7 @@ const CString& GetCommand() const;
 ### <a name="return-value"></a>返回值  
  对引用`CString`对象，其中包含与用户工具关联的命令的文本。  
   
-##  <a name="a-namegetcommandida--cusertoolgetcommandid"></a><a name="getcommandid"></a>CUserTool::GetCommandId  
+##  <a name="getcommandid"></a>CUserTool::GetCommandId  
  返回用户工具的命令 ID。  
   
 ```  
@@ -140,7 +153,7 @@ UINT GetCommandId() const;
 ### <a name="return-value"></a>返回值  
  此用户工具的命令 ID。  
   
-##  <a name="a-nameinvokea--cusertoolinvoke"></a><a name="invoke"></a>CUserTool::Invoke  
+##  <a name="invoke"></a>CUserTool::Invoke  
  执行与用户工具关联的命令。  
   
 ```  
@@ -153,7 +166,7 @@ virtual BOOL Invoke();
 ### <a name="remarks"></a>备注  
  调用[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)执行与用户工具关联的命令。 该函数将失败，该命令是否为空，或如果[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)失败。  
   
-##  <a name="a-nameloaddefaulticona--cusertoolloaddefaulticon"></a><a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
+##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
  加载用户工具的默认图标。  
   
 ```  
@@ -168,7 +181,7 @@ virtual HICON LoadDefaultIcon();
   
  重写此方法以提供您自己的默认工具图标。  
   
-##  <a name="a-namemstrargumentsa--cusertoolmstrarguments"></a><a name="m_strarguments"></a>CUserTool::m_strArguments  
+##  <a name="m_strarguments"></a>CUserTool::m_strArguments  
  用户工具命令行参数。  
   
 ```  
@@ -178,7 +191,7 @@ CString m_strArguments;
 ### <a name="remarks"></a>备注  
  此字符串传递给该工具，当您调用[CUserTool::Invoke](#invoke)或当用户单击此工具与关联的命令。  
   
-##  <a name="a-namemstrinitialdirectorya--cusertoolmstrinitialdirectory"></a><a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
+##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
  指定用户工具的初始目录。  
   
 ```  
@@ -188,14 +201,14 @@ CString m_strInitialDirectory;
 ### <a name="remarks"></a>备注  
  此变量指定当您调用时，该工具执行中的初始目录[CUserTool::Invoke](#invoke)或当用户单击此工具与关联的命令。  
   
-##  <a name="a-namemstrlabela--cusertoolmstrlabel"></a><a name="m_strlabel"></a>CUserTool::m_strLabel  
+##  <a name="m_strlabel"></a>CUserTool::m_strLabel  
  该工具的菜单项中显示的标签。  
   
 ```  
 CString m_strLabel;  
 ```  
   
-##  <a name="a-nameserializea--cusertoolserialize"></a><a name="serialize"></a>CUserTool::Serialize  
+##  <a name="serialize"></a>CUserTool::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -207,7 +220,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetcommanda--cusertoolsetcommand"></a><a name="setcommand"></a>CUserTool::SetCommand  
+##  <a name="setcommand"></a>CUserTool::SetCommand  
  设置用户工具运行的应用程序。  
   
 ```  
@@ -221,7 +234,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="remarks"></a>备注  
  调用此方法以设置新运行的应用程序用户工具。 该方法将销毁旧图标并从给定的应用程序加载新建图标。 如果它无法从应用程序加载一个图标，它通过调用加载用户工具的默认图标[CUserTool::LoadDefaultIcon](#loaddefaulticon)。  
   
-##  <a name="a-namesettoolicona--cusertoolsettoolicon"></a><a name="settoolicon"></a>CUserTool::SetToolIcon  
+##  <a name="settoolicon"></a>CUserTool::SetToolIcon  
  用户工具图标，从该工具使用的应用程序加载。  
   
 ```  

@@ -10,8 +10,47 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CImage
-- ATL.CImage
-- ATL::CImage
+- ATLIMAGE/ATL::CImage
+- ATLIMAGE/ATL::CImage::CImage
+- ATLIMAGE/ATL::CImage::AlphaBlend
+- ATLIMAGE/ATL::CImage::Attach
+- ATLIMAGE/ATL::CImage::BitBlt
+- ATLIMAGE/ATL::CImage::Create
+- ATLIMAGE/ATL::CImage::CreateEx
+- ATLIMAGE/ATL::CImage::Destroy
+- ATLIMAGE/ATL::CImage::Detach
+- ATLIMAGE/ATL::CImage::Draw
+- ATLIMAGE/ATL::CImage::GetBits
+- ATLIMAGE/ATL::CImage::GetBPP
+- ATLIMAGE/ATL::CImage::GetColorTable
+- ATLIMAGE/ATL::CImage::GetDC
+- ATLIMAGE/ATL::CImage::GetExporterFilterString
+- ATLIMAGE/ATL::CImage::GetHeight
+- ATLIMAGE/ATL::CImage::GetImporterFilterString
+- ATLIMAGE/ATL::CImage::GetMaxColorTableEntries
+- ATLIMAGE/ATL::CImage::GetPitch
+- ATLIMAGE/ATL::CImage::GetPixel
+- ATLIMAGE/ATL::CImage::GetPixelAddress
+- ATLIMAGE/ATL::CImage::GetTransparentColor
+- ATLIMAGE/ATL::CImage::GetWidth
+- ATLIMAGE/ATL::CImage::IsDIBSection
+- ATLIMAGE/ATL::CImage::IsIndexed
+- ATLIMAGE/ATL::CImage::IsNull
+- ATLIMAGE/ATL::CImage::IsTransparencySupported
+- ATLIMAGE/ATL::CImage::Load
+- ATLIMAGE/ATL::CImage::LoadFromResource
+- ATLIMAGE/ATL::CImage::MaskBlt
+- ATLIMAGE/ATL::CImage::PlgBlt
+- ATLIMAGE/ATL::CImage::ReleaseDC
+- ATLIMAGE/ATL::CImage::ReleaseGDIPlus
+- ATLIMAGE/ATL::CImage::Save
+- ATLIMAGE/ATL::CImage::SetColorTable
+- ATLIMAGE/ATL::CImage::SetPixel
+- ATLIMAGE/ATL::CImage::SetPixelIndexed
+- ATLIMAGE/ATL::CImage::SetPixelRGB
+- ATLIMAGE/ATL::CImage::SetTransparentColor
+- ATLIMAGE/ATL::CImage::StretchBlt
+- ATLIMAGE/ATL::CImage::TransparentBlt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -196,7 +235,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 ## <a name="requirements"></a>要求  
  **标头︰** atlimage.h  
   
-##  <a name="a-namealphablenda--cimagealphablend"></a><a name="alphablend"></a>Cimage:: Alphablend  
+##  <a name="alphablend"></a>Cimage:: Alphablend  
  显示具有透明或半透明的像素的位图。  
   
 ```
@@ -285,7 +324,7 @@ BOOL AlphaBlend(
   
  当`bBlendOp`设置为默认值为**AC_SRC_OVER**，源位图置于目标位图，并根据源像素的 alpha 值。  
 
-##  <a name="a-nameattacha--cimageattach"></a><a name="attach"></a>CImage::Attach  
+##  <a name="attach"></a>CImage::Attach  
  将附加`hBitmap`到`CImage`对象。  
   
 ```
@@ -308,7 +347,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 ### <a name="remarks"></a>备注  
  位图可以是一个非 DIB 部分位图或 DIB 部分位图。 请参阅[IsDIBSection](#isdibsection)有关列表，可以使用只适用于 DIB 方法部分位图。  
   
-##  <a name="a-namebitblta--cimagebitblt"></a><a name="bitblt"></a>CImage::BitBlt  
+##  <a name="bitblt"></a>CImage::BitBlt  
  将源设备上下文的位图复制到此当前的设备上下文。  
   
 ```
@@ -380,7 +419,7 @@ BOOL BitBlt(
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namecimagea--cimagecimage"></a><a name="cimage"></a>CImage::CImage  
+##  <a name="cimage"></a>CImage::CImage  
  构造 `CImage` 对象。  
   
 ```
@@ -394,7 +433,7 @@ CImage() throw();
   
  使用全局`CImage`不建议在 DLL 中的对象。 如果您需要使用全局`CImage`中一个 DLL，调用对象[CImage::ReleaseGDIPlus](#releasegdiplus)来显式释放所使用的 GDI + 资源。  
   
-##  <a name="a-namecreatea--cimagecreate"></a><a name="create"></a>CImage::Create  
+##  <a name="create"></a>CImage::Create  
  创建`CImage`位图，并将其附加到先前构造`CImage`对象。  
   
 ```
@@ -426,7 +465,7 @@ BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果成功，则不为 0；否则为 0。  
   
-##  <a name="a-namecreateexa--cimagecreateex"></a><a name="createex"></a>CImage::CreateEx  
+##  <a name="createex"></a>CImage::CreateEx  
  创建`CImage`位图，并将其附加到先前构造`CImage`对象。  
   
 ```
@@ -479,14 +518,14 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
 
-##  <a name="a-namedestroya--cimagedestroy"></a><a name="destroy"></a>CImage::Destroy  
+##  <a name="destroy"></a>CImage::Destroy  
  分离从位图`CImage`对象，并销毁位图。  
   
 ```
 void Destroy() throw();
 ```  
   
-##  <a name="a-namedetacha--cimagedetach"></a><a name="detach"></a>CImage::Detach  
+##  <a name="detach"></a>CImage::Detach  
  分离从位图`CImage`对象。  
   
 ```
@@ -496,7 +535,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>返回值  
  分离后，该位图的句柄或**NULL**如果连接不使用位图。  
   
-##  <a name="a-namedrawa--cimagedraw"></a><a name="draw"></a>Cimage:: Draw  
+##  <a name="draw"></a>Cimage:: Draw  
  将源设备上下文的位图复制到当前的设备上下文。  
   
 ```
@@ -582,7 +621,7 @@ BOOL Draw(
   
  对于版本的**绘制**不指定源矩形、 整个源图像是默认设置。 版本**绘制**，未指定目标矩形的大小、 源映像的大小为默认值且没有拉伸或收缩时发生。  
   
-##  <a name="a-namegetbitsa--cimagegetbits"></a><a name="getbits"></a>CImage::GetBits  
+##  <a name="getbits"></a>CImage::GetBits  
  检索指向给定像素位图中的实际位值的指针。  
   
 ```
@@ -598,7 +637,7 @@ void* GetBits() throw();
 > [!NOTE]
 >  此方法支持仅 DIB 部分位图;因此，访问的像素`CImage`对象相同的方式的像素 DIB 部分。 返回的指针指向的位置 （0，0） 像素。  
   
-##  <a name="a-namegetbppa--cimagegetbpp"></a><a name="getbpp"></a>CImage::GetBPP  
+##  <a name="getbpp"></a>CImage::GetBPP  
  检索的每像素位值。  
   
 ```
@@ -613,7 +652,7 @@ int GetBPP() const throw();
   
  1、 4、 8、 16、 24 或 32，通常是每像素位数。 请参阅**biBitCount**的成员[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]有关此值的详细信息。  
   
-##  <a name="a-namegetcolortablea--cimagegetcolortable"></a><a name="getcolortable"></a>CImage::GetColorTable  
+##  <a name="getcolortable"></a>CImage::GetColorTable  
  从 DIB 部分调色板中的项范围检索红、 绿、 蓝 (RGB) 颜色值。  
   
 ```
@@ -632,7 +671,7 @@ void GetColorTable(UINT iFirstColor,
  `prgbColors`  
  指向数组的指针[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)结构，以检索颜色表项。  
   
-##  <a name="a-namegetdca--cimagegetdc"></a><a name="getdc"></a>CImage::GetDC  
+##  <a name="getdc"></a>CImage::GetDC  
  检索当前具有到该选择的映像的设备上下文。  
   
 ```
@@ -645,7 +684,7 @@ HDC GetDC() const throw();
 ### <a name="remarks"></a>备注  
  每次调用`GetDC`，您必须具有的后续调用[ReleaseDC](#releasedc)。  
   
-##  <a name="a-namegetexporterfilterstringa--cimagegetexporterfilterstring"></a><a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
+##  <a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
  查找可用的图像格式来保存图像。  
   
 ```
@@ -724,7 +763,7 @@ CImage::GetExporterFilterString(
   
  使用默认分隔符 ' |' 如果将此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给标准保存文件对话框中，请使用空分隔符 \0'。  
   
-##  <a name="a-namegetheighta--cimagegetheight"></a><a name="getheight"></a>CImage::GetHeight  
+##  <a name="getheight"></a>CImage::GetHeight  
  检索的高度，以像素为单位的图像。  
   
 ```
@@ -734,7 +773,7 @@ int GetHeight() const throw();
 ### <a name="return-value"></a>返回值  
  以像素为单位的图像的高度。  
   
-##  <a name="a-namegetimporterfilterstringa--cimagegetimporterfilterstring"></a><a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
+##  <a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
  查找可用的图像格式加载图像。  
   
 ```
@@ -810,7 +849,7 @@ CImage::GetImporterFilterString(
   
  使用默认分隔符 ' |' 如果将此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递到一种常见使用 null 分隔符 \0'**文件打开**对话框。  
   
-##  <a name="a-namegetmaxcolortableentriesa--cimagegetmaxcolortableentries"></a><a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
+##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  检索的最大颜色表中的条目数。  
   
 ```
@@ -823,7 +862,7 @@ int GetMaxColorTableEntries() const throw();
 ### <a name="remarks"></a>备注  
  此方法支持仅 DIB 部分位图。  
   
-##  <a name="a-namegetpitcha--cimagegetpitch"></a><a name="getpitch"></a>CImage::GetPitch  
+##  <a name="getpitch"></a>CImage::GetPitch  
  检索图像的音调。  
   
 ```
@@ -841,7 +880,7 @@ int GetPitch() const throw();
 > [!NOTE]
 >  此方法支持仅 DIB 部分位图。  
   
-##  <a name="a-namegetpixela--cimagegetpixel"></a><a name="getpixel"></a>CImage::GetPixel  
+##  <a name="getpixel"></a>CImage::GetPixel  
  检索由指定的位置处的像素颜色*x*和*y*。  
   
 ```
@@ -858,7 +897,7 @@ COLORREF GetPixel(int x,int y) const throw();
 ### <a name="return-value"></a>返回值  
  红、 绿、 蓝 (RGB) 像素的值。 如果该像素是与当前剪辑区域之外，返回值是**CLR_INVALID**。  
   
-##  <a name="a-namegetpixeladdressa--cimagegetpixeladdress"></a><a name="getpixeladdress"></a>CImage::GetPixelAddress  
+##  <a name="getpixeladdress"></a>CImage::GetPixelAddress  
  检索一个像素的确切的地址。  
   
 ```
@@ -880,7 +919,7 @@ void* GetPixelAddress(int x,int y) throw();
 > [!NOTE]
 >  此方法支持仅 DIB 部分位图。  
   
-##  <a name="a-namegettransparentcolora--cimagegettransparentcolor"></a><a name="gettransparentcolor"></a>CImage::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>CImage::GetTransparentColor  
  检索的透明颜色在调色板中的索引的位置。  
   
 ```
@@ -890,7 +929,7 @@ LONG GetTransparentColor() const throw();
 ### <a name="return-value"></a>返回值  
  透明颜色的索引。  
   
-##  <a name="a-namegetwidtha--cimagegetwidth"></a><a name="getwidth"></a>CImage::GetWidth  
+##  <a name="getwidth"></a>CImage::GetWidth  
  检索的宽度，以像素为单位的图像。  
   
 ```
@@ -900,7 +939,7 @@ int GetWidth() const throw();
 ### <a name="return-value"></a>返回值  
  位图，以像素为单位的宽度。  
   
-##  <a name="a-nameisdibsectiona--cimageisdibsection"></a><a name="isdibsection"></a>CImage::IsDIBSection  
+##  <a name="isdibsection"></a>CImage::IsDIBSection  
  确定附加的位图是 DIB 部分。  
   
 ```
@@ -927,7 +966,7 @@ bool IsDIBSection() const throw();
   
 - [SetColorTable](#setcolortable)  
   
-##  <a name="a-nameisindexeda--cimageisindexed"></a><a name="isindexed"></a>CImage::IsIndexed  
+##  <a name="isindexed"></a>CImage::IsIndexed  
  确定是否将位图的像素映射到调色板。  
   
 ```
@@ -943,7 +982,7 @@ bool IsIndexed() const throw();
 > [!NOTE]
 >  此方法支持仅 DIB 部分位图。  
   
-##  <a name="a-nameisnulla--cimageisnull"></a><a name="isnull"></a>CImage::IsNull  
+##  <a name="isnull"></a>CImage::IsNull  
  确定当前已加载位图。  
   
 ```
@@ -953,7 +992,7 @@ bool IsNull() const throw();
 ### <a name="remarks"></a>备注  
  此方法返回**True**如果位图不是当前加载; 否则为**False**。  
   
-##  <a name="a-nameistransparencysupporteda--cimageistransparencysupported"></a><a name="istransparencysupported"></a>CImage::IsTransparencySupported  
+##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
  指示应用程序是否支持透明的位图，并且编译时用于 Windows 2000 或更高版本。  
   
 ```
@@ -969,7 +1008,7 @@ static BOOL IsTransparencySupported() throw();
  如果在 Windows 2000 或 Windows 98 之前编译与操作系统一起使用的应用程序，此方法将始终返回 0，即使在较新的操作系统上。  
   
 
-##  <a name="a-nameloada--cimageload"></a><a name="load"></a>CImage::Load  
+##  <a name="load"></a>CImage::Load  
  加载图像。  
   
 ```
@@ -992,7 +1031,7 @@ HRESULT Load(IStream* pStream) throw();
   
  有效的图像类型是 BMP、 GIF、 JPEG、 PNG 和 TIFF。  
   
-##  <a name="a-nameloadfromresourcea--cimageloadfromresource"></a><a name="loadfromresource"></a>CImage::LoadFromResource  
+##  <a name="loadfromresource"></a>CImage::LoadFromResource  
  将从映像加载`BITMAP`资源。  
   
 ```
@@ -1018,7 +1057,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>备注  
  该资源的类型必须为`BITMAP`。  
   
-##  <a name="a-namemaskblta--cimagemaskblt"></a><a name="maskblt"></a>CImage::MaskBlt  
+##  <a name="maskblt"></a>CImage::MaskBlt  
  将组合使用指定的掩码和光栅操作的源和目标位图的颜色数据。  
   
 ```
@@ -1109,10 +1148,10 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>备注  
  此方法适用于 Windows NT 中，4.0 版和更高版本的唯一版本。  
   
-##  <a name="a-nameoperatorhbitmapa--cimageoperator-hbitmap"></a><a name="operator_hbitmap"></a>CImage::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>CImage::operator HBITMAP  
  使用此运算符将获得附加的 Windows GDI 句柄的`CImage`对象。 此运算符被强制转换运算符，它支持直接使用`HBITMAP`对象。  
   
-##  <a name="a-nameplgblta--cimageplgblt"></a><a name="plgblt"></a>Cimage:: Plgblt  
+##  <a name="plgblt"></a>Cimage:: Plgblt  
  执行从所源设备上下文中的矩形变成平行四边形目标设备上下文中位块传输。  
   
 ```
@@ -1182,7 +1221,7 @@ BOOL PlgBlt(
   
  此方法适用于 Windows NT 中，4.0 版和更高版本的唯一版本。 请参阅[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]更多详细信息。  
   
-##  <a name="a-namereleasedca--cimagereleasedc"></a><a name="releasedc"></a>CImage::ReleaseDC  
+##  <a name="releasedc"></a>CImage::ReleaseDC  
  释放设备上下文。  
   
 ```
@@ -1192,7 +1231,7 @@ void ReleaseDC() const throw();
 ### <a name="remarks"></a>备注  
  由于只有一个位图可以一次选入设备上下文，因此你必须调用`ReleaseDC`每次调用[GetDC](#getdc)。  
   
-##  <a name="a-namereleasegdiplusa--cimagereleasegdiplus"></a><a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
+##  <a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
  释放使用的 GDI + 资源。  
   
 ```
@@ -1202,7 +1241,7 @@ void ReleaseGDIPlus() throw();
 ### <a name="remarks"></a>备注  
  必须先调用此方法，来释放资源分配的全局`CImage`对象。 请参阅[CImage::CImage](#cimage)。  
   
-##  <a name="a-namesavea--cimagesave"></a><a name="save"></a>CImage::Save  
+##  <a name="save"></a>CImage::Save  
  将图像保存到指定的流或文件在磁盘上。  
   
 ```
@@ -1240,7 +1279,7 @@ HRESULT Save(LPCTSTR pszFileName,
 ### <a name="remarks"></a>备注  
  调用此函数将使用指定的名称和类型的图像存储。 如果`guidFileType`不包含参数，将使用文件名的文件扩展名确定图像格式。 如果未不提供任何扩展，将以 BMP 格式保存图像。  
   
-##  <a name="a-namesetcolortablea--cimagesetcolortable"></a><a name="setcolortable"></a>CImage::SetColorTable  
+##  <a name="setcolortable"></a>CImage::SetColorTable  
  DIB 部分调色板中设置的条目范围的红、 绿、 蓝 (RGB) 颜色值。  
   
 ```
@@ -1263,7 +1302,7 @@ void SetColorTable(
 ### <a name="remarks"></a>备注  
  此方法支持仅 DIB 部分位图。  
   
-##  <a name="a-namesetpixela--cimagesetpixel"></a><a name="setpixel"></a>CImage::SetPixel  
+##  <a name="setpixel"></a>CImage::SetPixel  
  在位图中的给定位置设置像素的颜色。  
   
 ```
@@ -1283,7 +1322,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 ### <a name="remarks"></a>备注  
  如果像素坐标落在选定的剪辑区域之外，此方法将失败。  
   
-##  <a name="a-namesetpixelindexeda--cimagesetpixelindexed"></a><a name="setpixelindexed"></a>CImage::SetPixelIndexed  
+##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
  将像素颜色设置为位于颜色`iIndex`的调色板颜色。  
   
 ```
@@ -1300,7 +1339,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
  `iIndex`  
  一种颜色在调色板中的索引。  
   
-##  <a name="a-namesetpixelrgba--cimagesetpixelrgb"></a><a name="setpixelrgb"></a>CImage::SetPixelRGB  
+##  <a name="setpixelrgb"></a>CImage::SetPixelRGB  
  设置由指定的位置处的像素*x*和*y*为所指示的颜色*r*， *g*，和*b*、 为红色，绿色、 蓝 (RGB) 映像。  
   
 ```
@@ -1331,7 +1370,7 @@ void SetPixelRGB(
 ### <a name="remarks"></a>备注  
  介于 0 和 255 之间的分别表示红色、 绿色和蓝色参数。 如果将所有三个参数设置为零，则组合生成的颜色为黑色。 如果将所有三个参数设置为 255，组合结果色为白色。  
   
-##  <a name="a-namesettransparentcolora--cimagesettransparentcolor"></a><a name="settransparentcolor"></a>CImage::SetTransparentColor  
+##  <a name="settransparentcolor"></a>CImage::SetTransparentColor  
  设置为透明给定索引位置处的一种颜色。  
   
 ```
@@ -1345,7 +1384,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 ### <a name="return-value"></a>返回值  
  先前颜色的索引设置为透明。  
   
-##  <a name="a-namestretchblta--cimagestretchblt"></a><a name="stretchblt"></a>CImage::StretchBlt  
+##  <a name="stretchblt"></a>CImage::StretchBlt  
  将源设备上下文的位图复制到此当前的设备上下文。  
   
 ```
@@ -1424,7 +1463,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nametransparentblta--cimagetransparentblt"></a><a name="transparentblt"></a>Cimage:: Transparentblt  
+##  <a name="transparentblt"></a>Cimage:: Transparentblt  
  将源设备上下文的位图复制到此当前的设备上下文。  
   
 ```

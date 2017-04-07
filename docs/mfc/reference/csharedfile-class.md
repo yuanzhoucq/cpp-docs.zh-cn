@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSharedFile
+- AFXADV/CSharedFile
+- AFXADV/CSharedFile::CSharedFile
+- AFXADV/CSharedFile::Detach
+- AFXADV/CSharedFile::SetHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CSharedFile : public CMemFile
 ## <a name="requirements"></a>要求  
  **标头︰** afxadv.h  
   
-##  <a name="a-namecsharedfilea--csharedfilecsharedfile"></a><a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
  构造`CSharedFile`对象，并为它分配内存。  
   
 ```  
@@ -106,7 +110,7 @@ CSharedFile(
  `nGrowBytes`  
  内存分配的增量以字节为单位。  
   
-##  <a name="a-namedetacha--csharedfiledetach"></a><a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>CSharedFile::Detach  
  调用此函数会关闭内存文件并使其脱离对象从内存块。  
   
 ```  
@@ -119,7 +123,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>备注  
  您可以通过调用重新打开它[SetHandle](#sethandle)，使用返回的句柄**分离**。  
   
-##  <a name="a-namesethandlea--csharedfilesethandle"></a><a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>CSharedFile::SetHandle  
  调用此函数可将附加到的全局内存块`CSharedFile`对象。  
   
 ```  

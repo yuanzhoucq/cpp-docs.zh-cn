@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IQuickActivateImpl
-- ATL::IQuickActivateImpl<T>
-- ATL.IQuickActivateImpl
-- ATL.IQuickActivateImpl<T>
 - IQuickActivateImpl
+- ATLCTL/ATL::IQuickActivateImpl
+- ATLCTL/ATL::IQuickActivateImpl::GetContentExtent
+- ATLCTL/ATL::IQuickActivateImpl::QuickActivate
+- ATLCTL/ATL::IQuickActivateImpl::SetContentExtent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ## <a name="requirements"></a>要求  
  **标头︰** atlctl.h  
   
-##  <a name="a-namegetcontentextenta--iquickactivateimplgetcontentextent"></a><a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
+##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
  检索当前显示为正在运行的控件的大小。  
   
 ```
@@ -98,7 +98,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
   
  请参阅[IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namequickactivatea--iquickactivateimplquickactivate"></a><a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
+##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
  执行快速初始化控件正在加载。  
   
 ```
@@ -112,7 +112,7 @@ STDMETHOD(QuickActivate)(
   
  请参阅[IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetcontentextenta--iquickactivateimplsetcontentextent"></a><a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
+##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
  通知控件容器有分配给它的显示空间。  
   
 ```

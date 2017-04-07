@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
+- AFXWIN/CMiniFrameWnd
+- AFXWIN/CMiniFrameWnd::CMiniFrameWnd
+- AFXWIN/CMiniFrameWnd::Create
+- AFXWIN/CMiniFrameWnd::CreateEx
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +90,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="a-namecminiframewnda--cminiframewndcminiframewnd"></a><a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
  构造`CMiniFrameWnd`对象，但不会创建窗口中。  
   
 ```  
@@ -96,7 +100,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>备注  
  若要创建窗口，请调用[CMiniFrameWnd::Create](#create)。  
   
-##  <a name="a-namecreatea--cminiframewndcreate"></a><a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>CMiniFrameWnd::Create  
  创建 Windows 微型框架窗口，并将其附加到`CMiniFrameWnd`对象。  
   
 ```  
@@ -158,7 +162,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>备注  
  **创建**初始化窗口的类名和窗口名称，并注册的样式和父的默认值。  
   
-##  <a name="a-namecreateexa--cminiframewndcreateex"></a><a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
  创建一个 `CMiniFrameWnd` 对象。  
   
 ```  

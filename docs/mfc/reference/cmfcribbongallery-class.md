@@ -10,6 +10,43 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonGallery
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::CMFCRibbonGallery
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::AddGroup
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::AddSubItem
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::Clear
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::EnableMenuResize
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::EnableMenuSideBar
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetCompactSize
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetDroppedDown
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetGroupName
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetGroupOffset
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetIconsInRow
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetItemToolTip
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetLastSelectedItem
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetPaletteID
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetRegularSize
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::GetSelectedItem
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::HasMenu
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::IsButtonMode
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::IsMenuResizeEnabled
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::IsMenuResizeVertical
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::IsMenuSideBar
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::OnAfterChangeRect
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::OnDraw
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::OnEnable
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::OnRTLChanged
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::RedrawIcons
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::RemoveItemToolTips
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SelectItem
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetACCData
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetButtonMode
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetGroupName
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetIconsInRow
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetItemToolTip
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetPalette
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::SetPaletteID
+- AFXRIBBONPALETTEGALLERY/CMFCRibbonGallery::OnDrawPaletteIcon
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -117,7 +154,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 ## <a name="requirements"></a>要求  
  **标头︰** afxRibbonPaletteGallery.h  
   
-##  <a name="a-nameaddgroupa--cmfcribbongalleryaddgroup"></a><a name="addgroup"></a>CMFCRibbonGallery::AddGroup  
+##  <a name="addgroup"></a>CMFCRibbonGallery::AddGroup  
  将新的组添加到库中。  
   
 ```  
@@ -156,7 +193,7 @@ void AddGroup(
 ### <a name="remarks"></a>备注  
  通过调用此方法，你可以将功能区库上的项目划分为多个组。 每个组可以有标题。  
   
-##  <a name="a-nameaddsubitema--cmfcribbongalleryaddsubitem"></a><a name="addsubitem"></a>CMFCRibbonGallery::AddSubItem  
+##  <a name="addsubitem"></a>CMFCRibbonGallery::AddSubItem  
  将一个新菜单项添加到下拉列表菜单。  
   
 ```  
@@ -184,7 +221,7 @@ void AddSubItem(
 > [!NOTE]
 >  该参数`nIndex`指定插入索引同时在库的顶部和底部的库。 例如，如果需要插入之前库项一个位置，设置`nIndex`为 1 和`bOnTop`到`TRUE`。 同样，如果需要插入下面库项的一个位置，则将设置`nIndex`为 1 和`bOnTop`到`FALSE`。  
   
-##  <a name="a-namecleara--cmfcribbongalleryclear"></a><a name="clear"></a>CMFCRibbonGallery::Clear  
+##  <a name="clear"></a>CMFCRibbonGallery::Clear  
  清除库的内容。  
   
 ```  
@@ -194,7 +231,7 @@ virtual void Clear();
 ### <a name="remarks"></a>备注  
  调用此方法以从功能区库中删除所有内容。 此操作必须执行之前将新的功能区库或系列组附加到功能区库。  
   
-##  <a name="a-namecmfcribbongallerya--cmfcribbongallerycmfcribbongallery"></a><a name="cmfcribbongallery"></a>CMFCRibbonGallery::CMFCRibbonGallery  
+##  <a name="cmfcribbongallery"></a>CMFCRibbonGallery::CMFCRibbonGallery  
  构造并初始化[CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)对象。  
   
 ```  
@@ -258,7 +295,7 @@ CMFCRibbonGallery (
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameenablemenuresizea--cmfcribbongalleryenablemenuresize"></a><a name="enablemenuresize"></a>CMFCRibbonGallery::EnableMenuResize  
+##  <a name="enablemenuresize"></a>CMFCRibbonGallery::EnableMenuResize  
  启用或禁用菜单面板大小的调整大小。  
   
 ```  
@@ -277,7 +314,7 @@ void EnableMenuResize(
 ### <a name="remarks"></a>备注  
  此方法用于启用或禁用调整大小功能区库。 当启用时调整大小时，功能区库将显示用户可以使用它来调整其大小的控制手柄。  
   
-##  <a name="a-nameenablemenusidebara--cmfcribbongalleryenablemenusidebar"></a><a name="enablemenusidebar"></a>CMFCRibbonGallery::EnableMenuSideBar  
+##  <a name="enablemenusidebar"></a>CMFCRibbonGallery::EnableMenuSideBar  
  启用或禁用弹出菜单的左侧的侧栏。  
   
 ```  
@@ -291,7 +328,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>备注  
  调用此方法以启用或禁用 Office XP 样式侧栏菜单的左侧。  
   
-##  <a name="a-namegetcompactsizea--cmfcribbongallerygetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonGallery::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonGallery::GetCompactSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -305,7 +342,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetdroppeddowna--cmfcribbongallerygetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonGallery::GetDroppedDown  
+##  <a name="getdroppeddown"></a>CMFCRibbonGallery::GetDroppedDown  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -316,7 +353,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetgroupnamea--cmfcribbongallerygetgroupname"></a><a name="getgroupname"></a>CMFCRibbonGallery::GetGroupName  
+##  <a name="getgroupname"></a>CMFCRibbonGallery::GetGroupName  
  返回位于指定索引处的组的名称。  
   
 ```  
@@ -332,7 +369,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetgroupoffseta--cmfcribbongallerygetgroupoffset"></a><a name="getgroupoffset"></a>CMFCRibbonGallery::GetGroupOffset  
+##  <a name="getgroupoffset"></a>CMFCRibbonGallery::GetGroupOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -343,7 +380,7 @@ virtual int GetGroupOffset() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegeticonsinrowa--cmfcribbongallerygeticonsinrow"></a><a name="geticonsinrow"></a>CMFCRibbonGallery::GetIconsInRow  
+##  <a name="geticonsinrow"></a>CMFCRibbonGallery::GetIconsInRow  
  功能区库的某一行中返回的项数。  
   
 ```  
@@ -355,7 +392,7 @@ int GetIconsInRow() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetitemtooltipa--cmfcribbongallerygetitemtooltip"></a><a name="getitemtooltip"></a>CMFCRibbonGallery::GetItemToolTip  
+##  <a name="getitemtooltip"></a>CMFCRibbonGallery::GetItemToolTip  
  返回与库中的项相关联的工具提示文本。  
   
 ```  
@@ -371,7 +408,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetlastselecteditema--cmfcribbongallerygetlastselecteditem"></a><a name="getlastselecteditem"></a>CMFCRibbonGallery::GetLastSelectedItem  
+##  <a name="getlastselecteditem"></a>CMFCRibbonGallery::GetLastSelectedItem  
  返回用户所选的功能区库中的最后一项的索引。  
   
 ```  
@@ -387,7 +424,7 @@ static int GetLastSelectedItem(UINT uiCmdID);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetpaletteida--cmfcribbongallerygetpaletteid"></a><a name="getpaletteid"></a>CMFCRibbonGallery::GetPaletteID  
+##  <a name="getpaletteid"></a>CMFCRibbonGallery::GetPaletteID  
  返回当前调色板的命令 ID。  
   
 ```  
@@ -399,7 +436,7 @@ int GetPaletteID() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetregularsizea--cmfcribbongallerygetregularsize"></a><a name="getregularsize"></a>CMFCRibbonGallery::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonGallery::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -413,7 +450,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetselecteditema--cmfcribbongallerygetselecteditem"></a><a name="getselecteditem"></a>CMFCRibbonGallery::GetSelectedItem  
+##  <a name="getselecteditem"></a>CMFCRibbonGallery::GetSelectedItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -424,7 +461,7 @@ int GetSelectedItem() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namehasmenua--cmfcribbongalleryhasmenu"></a><a name="hasmenu"></a>CMFCRibbonGallery::HasMenu  
+##  <a name="hasmenu"></a>CMFCRibbonGallery::HasMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -435,7 +472,7 @@ virtual BOOL HasMenu() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameisbuttonmodea--cmfcribbongalleryisbuttonmode"></a><a name="isbuttonmode"></a>CMFCRibbonGallery::IsButtonMode  
+##  <a name="isbuttonmode"></a>CMFCRibbonGallery::IsButtonMode  
  指定调色板是否包含在库按钮。  
   
 ```  
@@ -447,7 +484,7 @@ BOOL IsButtonMode() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameismenuresizeenableda--cmfcribbongalleryismenuresizeenabled"></a><a name="ismenuresizeenabled"></a>CMFCRibbonGallery::IsMenuResizeEnabled  
+##  <a name="ismenuresizeenabled"></a>CMFCRibbonGallery::IsMenuResizeEnabled  
  指定是否启用菜单调整大小。  
   
 ```  
@@ -459,7 +496,7 @@ BOOL IsMenuResizeEnabled() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameismenuresizeverticala--cmfcribbongalleryismenuresizevertical"></a><a name="ismenuresizevertical"></a>CMFCRibbonGallery::IsMenuResizeVertical  
+##  <a name="ismenuresizevertical"></a>CMFCRibbonGallery::IsMenuResizeVertical  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -470,7 +507,7 @@ BOOL IsMenuResizeVertical() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameismenusidebara--cmfcribbongalleryismenusidebar"></a><a name="ismenusidebar"></a>CMFCRibbonGallery::IsMenuSideBar  
+##  <a name="ismenusidebar"></a>CMFCRibbonGallery::IsMenuSideBar  
  指定是否启用或禁用侧栏。  
   
 ```  
@@ -482,7 +519,7 @@ BOOL IsMenuSideBar() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameonafterchangerecta--cmfcribbongalleryonafterchangerect"></a><a name="onafterchangerect"></a>CMFCRibbonGallery::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>CMFCRibbonGallery::OnAfterChangeRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -494,7 +531,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameondrawa--cmfcribbongalleryondraw"></a><a name="ondraw"></a>CMFCRibbonGallery::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonGallery::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -506,7 +543,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameondrawpaletteicona--cmfcribbongalleryondrawpaletteicon"></a><a name="ondrawpaletteicon"></a>CMFCRibbonGallery::OnDrawPaletteIcon  
+##  <a name="ondrawpaletteicon"></a>CMFCRibbonGallery::OnDrawPaletteIcon  
  绘制库图标时，由框架调用。  
   
 ```  
@@ -537,7 +574,7 @@ virtual void OnDrawPaletteIcon(
 ### <a name="remarks"></a>备注  
  您可以重写此方法在派生类自定义功能区库的外观。  
   
-##  <a name="a-nameonenablea--cmfcribbongalleryonenable"></a><a name="onenable"></a>CMFCRibbonGallery::OnEnable  
+##  <a name="onenable"></a>CMFCRibbonGallery::OnEnable  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -549,7 +586,7 @@ virtual void OnEnable(BOOL bEnable);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameonrtlchangeda--cmfcribbongalleryonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonGallery::OnRTLChanged  
+##  <a name="onrtlchanged"></a>CMFCRibbonGallery::OnRTLChanged  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -561,7 +598,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameredrawiconsa--cmfcribbongalleryredrawicons"></a><a name="redrawicons"></a>CMFCRibbonGallery::RedrawIcons  
+##  <a name="redrawicons"></a>CMFCRibbonGallery::RedrawIcons  
  重绘库。  
   
 ```  
@@ -571,7 +608,7 @@ void RedrawIcons();
 ### <a name="remarks"></a>备注  
  调用此函数进行重绘库。 如果您更改了在运行时库的内容，必须调用此方法。  
   
-##  <a name="a-nameremoveitemtooltipsa--cmfcribbongalleryremoveitemtooltips"></a><a name="removeitemtooltips"></a>CMFCRibbonGallery::RemoveItemToolTips  
+##  <a name="removeitemtooltips"></a>CMFCRibbonGallery::RemoveItemToolTips  
  从库中的所有项中移除工具提示。  
   
 ```  
@@ -580,7 +617,7 @@ void RemoveItemToolTips();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameselectitema--cmfcribbongalleryselectitem"></a><a name="selectitem"></a>CMFCRibbonGallery::SelectItem  
+##  <a name="selectitem"></a>CMFCRibbonGallery::SelectItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -592,7 +629,7 @@ void SelectItem(int nItemIndex);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetaccdataa--cmfcribbongallerysetaccdata"></a><a name="setaccdata"></a>CMFCRibbonGallery::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonGallery::SetACCData  
  使用功能区库中的可访问性数据填充指定的 `CAccessibilityData` 对象。  
   
 ```  
@@ -613,7 +650,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>备注  
  如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
   
-##  <a name="a-namesetbuttonmodea--cmfcribbongallerysetbuttonmode"></a><a name="setbuttonmode"></a>CMFCRibbonGallery::SetButtonMode  
+##  <a name="setbuttonmode"></a>CMFCRibbonGallery::SetButtonMode  
  确定是否显示功能区库作为下拉列表按钮或直接在功能区上的调色板。  
   
 ```  
@@ -626,7 +663,7 @@ void SetButtonMode(BOOL bSet=TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetgroupnamea--cmfcribbongallerysetgroupname"></a><a name="setgroupname"></a>CMFCRibbonGallery::SetGroupName  
+##  <a name="setgroupname"></a>CMFCRibbonGallery::SetGroupName  
  设置组的名称。  
   
 ```  
@@ -645,7 +682,7 @@ void SetGroupName(
 ### <a name="remarks"></a>备注  
  要更改其名称的组必须已将添加使用[CMFCRibbonGallery::AddGroup](#addgroup)方法。  
   
-##  <a name="a-nameseticonsinrowa--cmfcribbongalleryseticonsinrow"></a><a name="seticonsinrow"></a>CMFCRibbonGallery::SetIconsInRow  
+##  <a name="seticonsinrow"></a>CMFCRibbonGallery::SetIconsInRow  
  指定在库中的每个行项的数目。  
   
 ```  
@@ -659,7 +696,7 @@ void SetIconsInRow(int nIconsInRow);
 ### <a name="remarks"></a>备注  
  使用此方法以指定功能区库的宽度。  
   
-##  <a name="a-namesetitemtooltipa--cmfcribbongallerysetitemtooltip"></a><a name="setitemtooltip"></a>CMFCRibbonGallery::SetItemToolTip  
+##  <a name="setitemtooltip"></a>CMFCRibbonGallery::SetItemToolTip  
  设置库中的项的工具提示文本。  
   
 ```  
@@ -677,7 +714,7 @@ void SetItemToolTip(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetpalettea--cmfcribbongallerysetpalette"></a><a name="setpalette"></a>CMFCRibbonGallery::SetPalette  
+##  <a name="setpalette"></a>CMFCRibbonGallery::SetPalette  
  附加到功能区库的调色板。  
   
 ```  
@@ -701,7 +738,7 @@ void SetPalette(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetpaletteida--cmfcribbongallerysetpaletteid"></a><a name="setpaletteid"></a>CMFCRibbonGallery::SetPaletteID  
+##  <a name="setpaletteid"></a>CMFCRibbonGallery::SetPaletteID  
  定义中发送的命令 ID **WM_COMMAND**消息时用户选择某一库项。  
   
 ```  

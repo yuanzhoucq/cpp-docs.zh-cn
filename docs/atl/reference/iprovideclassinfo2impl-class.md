@@ -9,10 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- IProvideClassInfo2
-- ATL.IProvideClassInfo2Impl
 - IProvideClassInfo2Impl
-- ATL::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl::IProvideClassInfo2Impl
+- ATLCOM/ATL::IProvideClassInfo2Impl::GetClassInfo
+- ATLCOM/ATL::IProvideClassInfo2Impl::GetGUID
+- ATLCOM/ATL::IProvideClassInfo2Impl::_tih
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +113,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-namegetclassinfoa--iprovideclassinfo2implgetclassinfo"></a><a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
+##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
  检索`ITypeInfo`与 coclass' 的类型信息的指针。  
   
 ```
@@ -121,7 +123,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ### <a name="remarks"></a>备注  
  请参阅[IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetguida--iprovideclassinfo2implgetguid"></a><a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
+##  <a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
  检索对象的传出调度接口的 GUID。  
   
 ```
@@ -133,7 +135,7 @@ STDMETHOD(GetGUID)(
 ### <a name="remarks"></a>备注  
  请参阅[IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameiprovideclassinfo2impla--iprovideclassinfo2impliprovideclassinfo2impl"></a><a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
+##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  构造函数。  
   
 ```
@@ -143,7 +145,7 @@ IProvideClassInfo2Impl();
 ### <a name="remarks"></a>备注  
  调用`AddRef`上[_tih](#_tih)成员。 析构函数调用**版本**。  
   
-##  <a name="a-nametiha--iprovideclassinfo2impltih"></a><a name="_tih"></a>IProvideClassInfo2Impl::_tih  
+##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih  
  此静态数据成员是类模板参数的一个实例`tihclass`，它们的默认值是`CComTypeInfoHolder`。  
   
 ```

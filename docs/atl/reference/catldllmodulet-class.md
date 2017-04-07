@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlDllModuleT
-- ATL::CAtlDllModuleT<T>
-- ATL::CAtlDllModuleT
-- ATL.CAtlDllModuleT<T>
 - CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT::CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT::DllCanUnloadNow
+- ATLBASE/ATL::CAtlDllModuleT::DllGetClassObject
+- ATLBASE/ATL::CAtlDllModuleT::DllMain
+- ATLBASE/ATL::CAtlDllModuleT::DllRegisterServer
+- ATLBASE/ATL::CAtlDllModuleT::DllUnregisterServer
+- ATLBASE/ATL::CAtlDllModuleT::GetClassObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,21 +99,21 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
-##  <a name="a-namecatldllmoduleta--catldllmoduletcatldllmodulet"></a><a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
+##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
  构造函数。  
   
 ```
 CAtlDllModuleT() throw();
 ```  
   
-##  <a name="a-namedtora--catldllmoduletcatldllmodulet"></a><a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT  
+##  <a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT  
  析构函数。  
   
 ```
 ~CAtlDllModuleT() throw();
 ```  
   
-##  <a name="a-namedllcanunloadnowa--catldllmoduletdllcanunloadnow"></a><a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
+##  <a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
  测试是否可以卸载 DLL。  
   
 ```
@@ -119,7 +123,7 @@ HRESULT DllCanUnloadNow() throw();
 ### <a name="return-value"></a>返回值  
  如果不能，返回 S_OK，如果该 DLL 可以被卸载或 S_FALSE。  
   
-##  <a name="a-namedllgetclassobjecta--catldllmoduletdllgetclassobject"></a><a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
+##  <a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
  返回类工厂。  
   
 ```
@@ -142,7 +146,7 @@ HRESULT DllGetClassObject(
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namedllmaina--catldllmoduletdllmain"></a><a name="dllmain"></a>CAtlDllModuleT::DllMain  
+##  <a name="dllmain"></a>CAtlDllModuleT::DllMain  
  动态链接库 (DLL) 可选入口点。  
   
 ```
@@ -162,7 +166,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ### <a name="remarks"></a>备注  
  禁用 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知调用可以是具有多个 Dll，频繁地创建和删除线程，并且其 Dll 不需要附件/分离这些线程级通知的多线程应用程序优化的有用。  
   
-##  <a name="a-namedllregisterservera--catldllmoduletdllregisterserver"></a><a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
+##  <a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
  将条目添加到系统注册表中的 DLL 中的对象。  
   
 ```
@@ -176,7 +180,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namedllunregisterservera--catldllmoduletdllunregisterserver"></a><a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
+##  <a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
  在系统注册表中的 DLL 中的对象中移除项。  
   
 ```
@@ -190,7 +194,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namegetclassobjecta--catldllmoduletgetclassobject"></a><a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
+##  <a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
  创建指定的 CLSID 的对象。  
   
 ```

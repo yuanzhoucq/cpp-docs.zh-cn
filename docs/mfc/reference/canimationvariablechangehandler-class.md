@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationVariableChangeHandler
 - CAnimationVariableChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::OnValueChanged
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +80,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-nameonvaluechangeda--canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
+##  <a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
  动画变量的值发生更改时调用。  
   
 ```  
@@ -105,7 +107,7 @@ IFACEMETHOD(OnValueChanged) (
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="a-namesetanimationcontrollera--canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
  存储事件路由的动画控制器的指针。  
   
 ```  

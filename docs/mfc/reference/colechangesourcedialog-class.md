@@ -10,7 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleChangeSourceDialog
-- OLEUICHANGESOURCE
+- AFXODLGS/COleChangeSourceDialog
+- AFXODLGS/COleChangeSourceDialog::COleChangeSourceDialog
+- AFXODLGS/COleChangeSourceDialog::DoModal
+- AFXODLGS/COleChangeSourceDialog::GetDisplayName
+- AFXODLGS/COleChangeSourceDialog::GetFileName
+- AFXODLGS/COleChangeSourceDialog::GetFromPrefix
+- AFXODLGS/COleChangeSourceDialog::GetItemName
+- AFXODLGS/COleChangeSourceDialog::GetToPrefix
+- AFXODLGS/COleChangeSourceDialog::IsValidSource
+- AFXODLGS/COleChangeSourceDialog::m_cs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +113,7 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="requirements"></a>要求  
  **标头︰** afxodlgs.h  
   
-##  <a name="a-namecolechangesourcedialoga--colechangesourcedialogcolechangesourcedialog"></a><a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
+##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
  此函数将构造`COleChangeSourceDialog`对象。  
   
 ```  
@@ -125,7 +134,7 @@ explicit COleChangeSourceDialog(
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构和[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) ，此功能在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedomodala--colechangesourcedialogdomodal"></a><a name="domodal"></a>COleChangeSourceDialog::DoModal  
+##  <a name="domodal"></a>COleChangeSourceDialog::DoModal  
  调用此函数可显示 OLE 更改源对话框。  
   
 ```  
@@ -152,7 +161,7 @@ virtual INT_PTR DoModal();
   
 - [GetItemName](#getitemname)  
   
-##  <a name="a-namegetdisplaynamea--colechangesourcedialoggetdisplayname"></a><a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
+##  <a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
  调用此函数可检索链接的客户端项的完整显示名称。  
   
 ```  
@@ -162,7 +171,7 @@ CString GetDisplayName();
 ### <a name="return-value"></a>返回值  
  完整源显示名称 (moniker) [COleClientItem](../../mfc/reference/coleclientitem-class.md)构造函数中指定。  
   
-##  <a name="a-namegetfilenamea--colechangesourcedialoggetfilename"></a><a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
+##  <a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
  调用此函数可检索链接的客户端项的显示名称的文件标记部分。  
   
 ```  
@@ -175,7 +184,7 @@ CString GetFileName();
 ### <a name="remarks"></a>备注  
  项名字对象以及文件名字对象提供了完整显示名称。  
   
-##  <a name="a-namegetfromprefixa--colechangesourcedialoggetfromprefix"></a><a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
+##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
  调用此函数可获取以前的前缀字符串的源。  
   
 ```  
@@ -192,7 +201,7 @@ CString GetFromPrefix();
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitemnamea--colechangesourcedialoggetitemname"></a><a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
+##  <a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
  调用此函数可检索链接的客户端项的显示名称的项标记部分。  
   
 ```  
@@ -205,7 +214,7 @@ CString GetItemName();
 ### <a name="remarks"></a>备注  
  项名字对象以及文件名字对象提供了完整显示名称。  
   
-##  <a name="a-namegettoprefixa--colechangesourcedialoggettoprefix"></a><a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
+##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
  调用此函数可获取新的前缀字符串的源。  
   
 ```  
@@ -222,7 +231,7 @@ CString GetToPrefix();
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemcsa--colechangesourcedialogmcs"></a><a name="m_cs"></a>COleChangeSourceDialog::m_cs  
+##  <a name="m_cs"></a>COleChangeSourceDialog::m_cs  
  此数据成员是类型的结构[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)。  
   
 ```  
@@ -234,7 +243,7 @@ OLEUICHANGESOURCE m_cs;
   
  有关详细信息，请参阅[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisvalidsourcea--colechangesourcedialogisvalidsource"></a><a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
+##  <a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
  调用此函数可确定新的源是否有效。  
   
 ```  

@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task
+- task
+- PPLTASKS/concurrency::task
+- PPLTASKS/concurrency::task::task
+- PPLTASKS/concurrency::task::get
+- PPLTASKS/concurrency::task::is_apartment_aware
+- PPLTASKS/concurrency::task::is_done
+- PPLTASKS/concurrency::task::scheduler
+- PPLTASKS/concurrency::task::then
+- PPLTASKS/concurrency::task::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7bbe0445c59279423665cd7df4eb5972f23ecf78
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="task-class-concurrency-runtime"></a>task 类（并发运行时）
@@ -73,26 +81,26 @@ class task;
   
 |名称|描述|  
 |----------|-----------------|  
-|[任务构造函数](#ctor)|已重载。 构造 `task` 对象。|  
+|[任务](#ctor)|已重载。 构造 `task` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[get 方法](#get)|已重载。 返回此任务产生的结果。 如果任务不处于终止状态，则对 `get` 的调用将等待任务完成。 在调用 `result_type` 为 `void` 的任务时，此方法不返回值。|  
-|[is_apartment_aware 方法](#is_apartment_aware)|确定任务是否解包 Windows 运行时 `IAsyncInfo` 接口或继承自此类任务。|  
-|[is_done 方法](#is_done)|确定任务是否已完成。|  
-|[计划程序方法](#scheduler)|返回此任务的计划程序|  
-|[then 方法](#then)|已重载。 向此任务添加延续任务。|  
-|[wait 方法](#wait)|等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。|  
+|[get](#get)|已重载。 返回此任务产生的结果。 如果任务不处于终止状态，则对 `get` 的调用将等待任务完成。 在调用 `result_type` 为 `void` 的任务时，此方法不返回值。|  
+|[is_apartment_aware](#is_apartment_aware)|确定任务是否解包 Windows 运行时 `IAsyncInfo` 接口或继承自此类任务。|  
+|[is_done](#is_done)|确定任务是否已完成。|  
+|[计划程序](#scheduler)|返回此任务的计划程序|  
+|[然后](#then)|已重载。 向此任务添加延续任务。|  
+|[等待](#wait)|等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[运算符 ！ = 运算符](#operator_neq)|已重载。 确定两个 `task` 对象是否表示不同的内部任务。|  
-|[运算符 = 运算符](#operator_eq)|已重载。 将一个 `task` 对象的内容替换为另一个对象的内容。|  
-|[运算符 = = 运算符](#operator_eq_eq)|已重载。 确定两个 `task` 对象是否表示相同的内部任务。|  
+|[operator!=](#operator_neq)|已重载。 确定两个 `task` 对象是否表示不同的内部任务。|  
+|[operator=](#operator_eq)|已重载。 将一个 `task` 对象的内容替换为另一个对象的内容。|  
+|[operator==](#operator_eq_eq)|已重载。 确定两个 `task` 对象是否表示相同的内部任务。|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
@@ -105,7 +113,7 @@ class task;
   
  **命名空间：** 并发  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>获取 
+##  <a name="get"></a>获取 
 
  返回此任务产生的结果。 如果任务不处于终止状态，则对 `get` 的调用将等待任务完成。 在调用 `result_type` 为 `void` 的任务时，此方法不返回值。  
   
@@ -124,7 +132,7 @@ void get() const;
 > [!IMPORTANT]
 >  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]应用程序中，不要调用[concurrency::task::wait](#wait)或`get`(`wait`调用`get`) 在 STA 运行的代码中 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)因为这些方法阻止当前线程并且会导致应用停止响应。 但是，你可以调用`get`方法来接收基于任务的延续中的先行任务的结果，因为所得的结果立即可用。  
   
-##  <a name="a-nameisapartmentawarea-isapartmentaware"></a><a name="is_apartment_aware"></a>is_apartment_aware 
+##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
  确定任务是否解包 Windows 运行时 `IAsyncInfo` 接口或继承自此类任务。  
   
@@ -135,7 +143,7 @@ bool is_apartment_aware() const;
 ### <a name="return-value"></a>返回值  
  如果任务解包一个 `true` 接口或继承自此类任务，则为 `IAsyncInfo`；否则为 `false`。  
   
-##  <a name="a-nameisdonea--taskisdone-method-concurrency-runtime"></a><a name="is_done"></a>task:: is_done 方法 （并发运行时）  
+##  <a name="is_done"></a>task:: is_done 方法 （并发运行时）  
  确定任务是否已完成。  
   
 ```
@@ -148,7 +156,7 @@ bool is_done() const;
 ### <a name="remarks"></a>备注  
  如果该任务完成或取消 （有或没有用户异常），该函数返回 true。  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>运算符 ！ = 
+##  <a name="operator_neq"></a>运算符 ！ = 
 
  确定两个 `task` 对象是否表示不同的内部任务。  
   
@@ -164,7 +172,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>返回值  
  如果这两个对象引用不同基础任务，则为 `true`；否则为 `false`。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a>运算符 = 
 
  将一个 `task` 对象的内容替换为另一个对象的内容。  
   
@@ -183,7 +191,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>备注  
  `task` 的行为方式与智能指针的类似，在分配副本之后，此 `task` 对象与 `_Other` 表示相同的实际任务。  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>运算符 = = 
+##  <a name="operator_eq_eq"></a>运算符 = = 
 
  确定两个 `task` 对象是否表示相同的内部任务。  
   
@@ -199,7 +207,7 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>返回值  
  如果这两个对象引用同一基础任务，则为 `true`；否则为 `false`。  
   
-##  <a name="a-nameschedulera--taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>task:: scheduler 方法 （并发运行时）  
+##  <a name="scheduler"></a>task:: scheduler 方法 （并发运行时）  
  返回此任务的计划程序  
   
 ```
@@ -209,7 +217,7 @@ scheduler_ptr scheduler() const;
 ### <a name="return-value"></a>返回值  
  指向计划程序指针  
   
-##  <a name="a-namectora-task"></a><a name="ctor"></a>任务 
+##  <a name="ctor"></a>任务 
 
  构造 `task` 对象。  
   
@@ -259,7 +267,7 @@ task(
   
  有关详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
-##  <a name="a-namethena-then"></a><a name="then"></a>然后 
+##  <a name="then"></a>然后 
 
  向此任务添加延续任务。  
   
@@ -320,7 +328,7 @@ __declspec(
   
  有关如何使用任务延续构成异步工作的详细信息，请参阅[任务并行](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>等待 
+##  <a name="wait"></a>等待 
 
  等待此任务到达终止状态。 `wait` 可执行内联任务，前提是所有任务依赖项得到满足并且后台辅助线程没有选取它执行。  
   
@@ -337,5 +345,5 @@ task_status wait() const;
 >  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]应用程序中，不要调用`wait`在 STA 运行的代码中 否则，运行时会引发[concurrency:: invalid_operation](invalid-operation-class.md)原因是此方法阻止当前线程并可能导致应用停止响应。 但是，你可以调用[concurrency::task::get](#get)方法来接收基于任务的延续中的先行任务的结果。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

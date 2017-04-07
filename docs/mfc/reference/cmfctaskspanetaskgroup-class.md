@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::SetACCData
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsBottom
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsCollapsed
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsSpecial
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_lstTasks
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_rect
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_rectGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_strName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +110,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxTasksPane.h  
   
-##  <a name="a-namecmfctaskspanetaskgroupa--cmfctaskspanetaskgroupcmfctaskspanetaskgroup"></a><a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
  构造 `CMFCTasksPaneTaskGroup` 对象。  
   
 ```  
@@ -134,7 +144,7 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namembisbottoma--cmfctaskspanetaskgroupmbisbottom"></a><a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
+##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
  确定是否将任务组对齐到任务窗格控件的底部。  
   
 ```  
@@ -144,7 +154,7 @@ BOOL m_bIsBottom;
 ### <a name="remarks"></a>备注  
  只有一个组可以向任务窗格控件底部对齐。 必须将上一次添加此任务组。 有关详细信息，请参阅[CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。  
   
-##  <a name="a-namembiscollapseda--cmfctaskspanetaskgroupmbiscollapsed"></a><a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  确定任务组处于折叠状态。  
   
 ```  
@@ -154,7 +164,7 @@ BOOL m_bIsCollapsed;
 ### <a name="remarks"></a>备注  
  您可以启用或禁用能够通过调用上任务窗格中的折叠组[CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)。  
   
-##  <a name="a-namembisspeciala--cmfctaskspanetaskgroupmbisspecial"></a><a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
+##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
  确定任务组是否为*特殊*并是否应由另一种颜色标识特殊任务组的标题。  
   
 ```  
@@ -164,7 +174,7 @@ BOOL m_bIsSpecial;
 ### <a name="remarks"></a>备注  
  如果应用程序正在使用 Windows XP 可视主题和`m_bIsSpecial`是`FALSE`，框架将调用`DrawThemeBackground`与`EBP_NORMALGROUPBACKGROUND`标志。 如果`m_bIsSpecial`是`TRUE`，框架将调用`DrawThemeBackground`与`EBP_SPECIALGROUPBACKGROUND`标志。  
   
-##  <a name="a-namemlsttasksa--cmfctaskspanetaskgroupmlsttasks"></a><a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
+##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
  包含任务的内部列表。  
   
 ```  
@@ -174,7 +184,7 @@ CObList m_lstTasks;
 ### <a name="remarks"></a>备注  
  若要填充此列表，请调用[CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask)。  
   
-##  <a name="a-namemrecta--cmfctaskspanetaskgroupmrect"></a><a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
+##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
  指定的组标题的边框。  
   
 ```  
@@ -184,7 +194,7 @@ CRect m_rect;
 ### <a name="remarks"></a>备注  
  由框架自动计算此值。  
   
-##  <a name="a-namemrectgroupa--cmfctaskspanetaskgroupmrectgroup"></a><a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
+##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
  指定组的边框。  
   
 ```  
@@ -194,7 +204,7 @@ CRect m_rectGroup;
 ### <a name="remarks"></a>备注  
  由框架自动计算此值。  
   
-##  <a name="a-namemstrnamea--cmfctaskspanetaskgroupmstrname"></a><a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
+##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
  指定组的名称。  
   
 ```  
@@ -204,7 +214,7 @@ CString m_strName;
 ### <a name="remarks"></a>备注  
  如果此值为空，不显示组标题，并且不能折叠组。  
   
-##  <a name="a-namesetaccdataa--cmfctaskspanetaskgroupsetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
+##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
  确定当前的任务组的可访问性数据。  
   
 ```  

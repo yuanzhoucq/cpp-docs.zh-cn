@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message_processor
+- message_processor
+- AGENTS/concurrency::message_processor
+- AGENTS/concurrency::message_processor::async_send
+- AGENTS/concurrency::message_processor::sync_send
+- AGENTS/concurrency::message_processor::wait
+- AGENTS/concurrency::message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messageprocessor-class"></a>message_processor 类
@@ -65,15 +70,15 @@ class message_processor;
   
 |名称|说明|  
 |----------|-----------------|  
-|[async_send 方法](#async_send)|当在派生类中重写，以异步方式将消息放置到块中。|  
-|[sync_send 方法](#sync_send)|当在派生类中重写，以同步方式将消息放置到块中。|  
-|[wait 方法](#wait)|当在派生类中重写，等待所有异步操作完成。|  
+|[async_send](#async_send)|当在派生类中重写，以异步方式将消息放置到块中。|  
+|[sync_send](#sync_send)|当在派生类中重写，以同步方式将消息放置到块中。|  
+|[等待](#wait)|当在派生类中重写，等待所有异步操作完成。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[process_incoming_message 方法](#process_incoming_message)|当在派生类中重写，执行到块转发的消息处理。 每次添加一个新消息并找到队列为空，则调用一次。|  
+|[process_incoming_message](#process_incoming_message)|当在派生类中重写，执行到块转发的消息处理。 每次添加一个新消息并找到队列为空，则调用一次。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `message_processor`  
@@ -83,7 +88,7 @@ class message_processor;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  当在派生类中重写，以异步方式将消息放置到块中。  
   
@@ -98,7 +103,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>备注  
  处理器实现应重写此方法。  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  当在派生类中重写，执行到块转发的消息处理。 每次添加一个新消息并找到队列为空，则调用一次。  
   
@@ -109,7 +114,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>备注  
  消息块实现应重写此方法。  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  当在派生类中重写，以同步方式将消息放置到块中。  
   
@@ -124,7 +129,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>备注  
  处理器实现应重写此方法。  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>等待 
+##  <a name="wait"></a>等待 
 
  当在派生类中重写，等待所有异步操作完成。  
   

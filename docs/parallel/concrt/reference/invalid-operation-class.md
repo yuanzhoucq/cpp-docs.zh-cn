@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_operation
+- invalid_operation
+- CONCRT/concurrency::invalid_operation
+- CONCRT/concurrency::invalid_operation::invalid_operation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 0484e149409b2515f60b2e9aa34a85d5381e05a5
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 85821bbbe62fe5da93165065cb6f17ae4e938f4e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidoperation-class"></a>invalid_operation 类
@@ -52,9 +54,9 @@ class invalid_operation : public std::exception;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[invalid_operation 构造函数](#ctor)|已重载。 构造 `invalid_operation` 对象。|  
+|[invalid_operation](#ctor)|已重载。 构造 `invalid_operation` 对象。|  
   
 ## <a name="remarks"></a>备注  
  引发此异常的各种方法通常会记录它们将引发此异常的环境。  
@@ -69,7 +71,7 @@ class invalid_operation : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-invalidoperation"></a><a name="ctor"></a>invalid_operation 
+##  <a name="ctor"></a>invalid_operation 
 
  构造 `invalid_operation` 对象。  
   
@@ -84,5 +86,5 @@ invalid_operation() throw();
  错误的描述性消息。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

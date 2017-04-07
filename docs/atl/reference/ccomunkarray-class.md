@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComUnkArray
-- ATL.CComUnkArray<nMaxSize>
-- ATL::CComUnkArray<nMaxSize>
-- ATL::CComUnkArray
 - CComUnkArray
+- ATLCOM/ATL::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::Add
+- ATLCOM/ATL::CComUnkArray::begin
+- ATLCOM/ATL::CComUnkArray::end
+- ATLCOM/ATL::CComUnkArray::GetCookie
+- ATLCOM/ATL::CComUnkArray::GetUnknown
+- ATLCOM/ATL::CComUnkArray::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CComUnkArray
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameadda--ccomunkarrayadd"></a><a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>CComUnkArray::Add  
  调用此方法可添加**IUnknown**指向数组的指针。  
   
 ```
@@ -104,7 +108,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>返回值  
  返回与新添加的指针，则为 0，如果数组是不足够大以包含新的指针的 cookie。  
   
-##  <a name="a-namebegina--ccomunkarraybegin"></a><a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>CComUnkArray::begin  
  将指针返回到的集合的开头**IUnknown**接口指针。  
   
 ```
@@ -120,7 +124,7 @@ IUnknown**
   
  在使用之前**IUnknown**接口，您应检查不是**NULL**。  
   
-##  <a name="a-nameccomunkarraya--ccomunkarrayccomunkarray"></a><a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
  构造函数。  
   
 ```
@@ -130,7 +134,7 @@ CComUnkArray();
 ### <a name="remarks"></a>备注  
  设置的集合来保存`nMaxSize` **IUnknown**指针，并初始化指向**NULL**。  
   
-##  <a name="a-nameenda--ccomunkarrayend"></a><a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>CComUnkArray::end  
  将指针返回到上一次之后一个**IUnknown**集合中的指针。  
   
 ```
@@ -146,7 +150,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM&#44;](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="a-namegetcookiea--ccomunkarraygetcookie"></a><a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>CComUnkArray::GetCookie  
  调用此方法以获取与关联的 cookie 给定**IUnknown**指针。  
   
 ```
@@ -163,7 +167,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>备注  
  如果没有相同的多个实例**IUnknown**指针，此函数将返回第一个 cookie。  
   
-##  <a name="a-namegetunknowna--ccomunkarraygetunknown"></a><a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
  调用此方法以获取**IUnknown**给定 cookie 与相关联的指针。  
   
 ```
@@ -177,7 +181,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>返回值  
  返回**IUnknown**指针，则为 NULL，如果不找到任何匹配的 cookie。  
   
-##  <a name="a-nameremovea--ccomunkarrayremove"></a><a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>CComUnkArray::Remove  
  调用此方法来删除**IUnknown**从数组的指针。  
   
 ```

@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8c4e7cd3040e9d9d6d3c3a5a915118fbc815aebf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 789c1fc872f478945de6444c07de069b50074a7f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm2-class"></a>unorm_2 类
@@ -80,7 +80,7 @@ class unorm_2;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[unorm_2 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
@@ -88,30 +88,30 @@ class unorm_2;
   
 |名称|描述|  
 |----------|-----------------|  
-|unorm_2::get_x 方法||  
-|unorm_2::get_xy 方法||  
-|unorm_2::get_y 方法||  
-|unorm_2::get_yx 方法||  
-|unorm_2::ref_g 方法||  
-|unorm_2::ref_r 方法||  
-|unorm_2::ref_x 方法||  
-|unorm_2::ref_y 方法||  
-|unorm_2::set_x 方法||  
-|unorm_2::set_xy 方法||  
-|unorm_2::set_y 方法||  
-|unorm_2::set_yx 方法||  
+|unorm_2::get_x||  
+|unorm_2::get_xy||  
+|unorm_2::get_y||  
+|unorm_2::get_yx||  
+|unorm_2::ref_g||  
+|unorm_2::ref_r||  
+|unorm_2::ref_x||  
+|unorm_2::ref_y||  
+|unorm_2::set_x||  
+|unorm_2::set_xy||  
+|unorm_2::set_y||  
+|unorm_2::set_yx||  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|unorm_2::operator-运算符||  
-|unorm_2::operator * = 运算符||  
-|unorm_2::operator / = 运算符||  
-|unorm_2::operator + + 运算符||  
-|unorm_2::operator + = 运算符||  
-|unorm_2::operator = 运算符||  
-|unorm_2::operator-= 运算符||  
+|unorm_2::operator-||  
+|unorm_2::operator * =||  
+|unorm_2::operator / =||  
+|unorm_2::operator + +||  
+|unorm_2::operator + =||  
+|unorm_2::operator =||  
+|unorm_2::operator =||  
   
 ### <a name="public-constants"></a>公共常量  
   
@@ -123,14 +123,14 @@ class unorm_2;
   
 |名称|描述|  
 |----------|-----------------|  
-|unorm_2::g 数据成员||  
-|unorm_2::gr 数据成员||  
-|unorm_2::r 数据成员||  
-|unorm_2::rg 数据成员||  
-|unorm_2::x 数据成员||  
-|unorm_2::xy 数据成员||  
-|unorm_2::y 数据成员||  
-|unorm_2::yx 数据成员||  
+|unorm_2::g||  
+|unorm_2::gr||  
+|unorm_2::r||  
+|unorm_2::rg||  
+|unorm_2::x||  
+|unorm_2::xy||  
+|unorm_2::y||  
+|unorm_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `unorm_2`  
@@ -140,7 +140,7 @@ class unorm_2;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-unorm2"></a><a name="ctor"></a>unorm_2 
+##  <a name="ctor"></a>unorm_2 
 
  默认构造函数，将初始化为 0 的所有元素。  
   
@@ -214,12 +214,12 @@ explicit inline unorm_2(
  `_Other`  
  用于初始化的对象。  
   
-##  <a name="a-nameunorm2sizea-size"></a><a name="unorm_2__size"></a>大小 
+##  <a name="unorm_2__size"></a>大小 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
 

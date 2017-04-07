@@ -10,7 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimationRect
-- afxanimationcontroller/CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect::CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetBottom
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetLeft
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetRight
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetTop
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_bFixedSize
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_bottomValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_leftValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_rightValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_szInitial
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_topValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +128,7 @@ class CAnimationRect : public CAnimationBaseObject;
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationrectaddtransition"></a><a name="addtransition"></a>CAnimationRect::AddTransition  
+##  <a name="addtransition"></a>CAnimationRect::AddTransition  
  添加的左侧、 顶部、 右侧和底部坐标的转换。  
   
 ```  
@@ -139,7 +155,7 @@ void AddTransition(
 ### <a name="remarks"></a>备注  
  调用此函数可将指定的转换添加到内部列表应用于每个矩形边的动画变量的转换。 当您添加转换时，它们将不会立即应用并存储在内部列表。 转换将应用 （添加到情节提要为特定值） 当您调用 CAnimationController::AnimateGroup。 如果您不需要将转换应用到一个矩形边，可以传递 NULL。  
   
-##  <a name="a-namecanimationrecta--canimationrectcanimationrect"></a><a name="canimationrect"></a>CAnimationRect::CAnimationRect  
+##  <a name="canimationrect"></a>CAnimationRect::CAnimationRect  
  构造 CAnimationRect 对象。  
   
 ```  
@@ -205,7 +221,7 @@ CAnimationRect(
 ### <a name="remarks"></a>备注  
  使用默认值为左侧、 顶部、 右侧和底部，对象 ID 和组 ID，将设置为 0 构造的对象。 它们可以在运行时使用 SetDefaultValue SetID 以后更改。  
   
-##  <a name="a-namegetanimationvariablelista--canimationrectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
  将封装的动画变量放入列表。  
   
 ```  
@@ -218,7 +234,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  当函数返回时，它包含指向四个 CAnimationVariable 对象，表示矩形的坐标的指针。  
   
-##  <a name="a-namegetbottoma--canimationrectgetbottom"></a><a name="getbottom"></a>CAnimationRect::GetBottom  
+##  <a name="getbottom"></a>CAnimationRect::GetBottom  
  提供对表示底部坐标 CAnimationVariable 访问。  
   
 ```  
@@ -231,7 +247,7 @@ CAnimationVariable& GetBottom();
 ### <a name="remarks"></a>备注  
  您可以调用此方法以获取直接访问基础 CAnimationVariable 表示底部坐标。  
   
-##  <a name="a-namegetdefaultvaluea--canimationrectgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
  返回矩形边界的默认的值。  
   
 ```  
@@ -244,7 +260,7 @@ CRect GetDefaultValue();
 ### <a name="remarks"></a>备注  
  调用此函数可检索由构造函数或 SetDefaultValue 以前设置的默认值。  
   
-##  <a name="a-namegetlefta--canimationrectgetleft"></a><a name="getleft"></a>CAnimationRect::GetLeft  
+##  <a name="getleft"></a>CAnimationRect::GetLeft  
  提供访问权限 CAnimationVariable 表示左的坐标。  
   
 ```  
@@ -257,7 +273,7 @@ CAnimationVariable& GetLeft();
 ### <a name="remarks"></a>备注  
  您可以调用此方法以获取直接访问基础 CAnimationVariable 表示的左的坐标。  
   
-##  <a name="a-namegetrighta--canimationrectgetright"></a><a name="getright"></a>CAnimationRect::GetRight  
+##  <a name="getright"></a>CAnimationRect::GetRight  
  提供对表示右坐标 CAnimationVariable 访问。  
   
 ```  
@@ -270,7 +286,7 @@ CAnimationVariable& GetRight();
 ### <a name="remarks"></a>备注  
  您可以调用此方法以获取直接访问基础 CAnimationVariable 表示右坐标。  
   
-##  <a name="a-namegettopa--canimationrectgettop"></a><a name="gettop"></a>CAnimationRect::GetTop  
+##  <a name="gettop"></a>CAnimationRect::GetTop  
  提供访问权限 CAnimationVariable 表示上坐标。  
   
 ```  
@@ -283,7 +299,7 @@ CAnimationVariable& GetTop();
 ### <a name="remarks"></a>备注  
  您可以调用此方法以获取直接访问基础 CAnimationVariable 表示的上坐标。  
   
-##  <a name="a-namegetvaluea--canimationrectgetvalue"></a><a name="getvalue"></a>CAnimationRect::GetValue  
+##  <a name="getvalue"></a>CAnimationRect::GetValue  
  返回当前值。  
   
 ```  
@@ -300,7 +316,7 @@ BOOL GetValue(CRect& rect);
 ### <a name="remarks"></a>备注  
  调用此函数可检索当前动画矩形的值。 如果此方法失败或基础 COM 对象左侧、 顶部、 右侧和底部对尚未初始化，rect 包含构造函数中或通过 SetDefaultValue 以前设置的默认值。  
   
-##  <a name="a-namembfixedsizea--canimationrectmbfixedsize"></a><a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
+##  <a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
  指定矩形是否具有固定大小。  
   
 ```  
@@ -310,42 +326,42 @@ BOOL m_bFixedSize;
 ### <a name="remarks"></a>备注  
  如果此成员为 true，然后矩形的大小是固定和向右和探底值每的次重新计算的左上角移动根据固定大小。 将此值设置为 TRUE 以轻松地移动屏幕周围的矩形。 在这种情况下应用于右边和底边坐标的转换将被忽略。 当构造对象和/或调用 SetDefaultValue 内部存储大小。 默认情况下此成员设置为 FALSE。  
   
-##  <a name="a-namembottomvaluea--canimationrectmbottomvalue"></a><a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
+##  <a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
  封装的动画变量，表示底层动画矩形的边界。  
   
 ```  
 CAnimationVariable m_bottomValue;  
 ```  
   
-##  <a name="a-namemleftvaluea--canimationrectmleftvalue"></a><a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
+##  <a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
  表示左封装的动画变量的动画矩形边界。  
   
 ```  
 CAnimationVariable m_leftValue;  
 ```  
   
-##  <a name="a-namemrightvaluea--canimationrectmrightvalue"></a><a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
+##  <a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
  表示右封装的动画变量的动画矩形边界。  
   
 ```  
 CAnimationVariable m_rightValue;  
 ```  
   
-##  <a name="a-namemszinitiala--canimationrectmszinitial"></a><a name="m_szinitial"></a>CAnimationRect::m_szInitial  
+##  <a name="m_szinitial"></a>CAnimationRect::m_szInitial  
  指定动画矩形的初始大小。  
   
 ```  
 CSize m_szInitial;  
 ```  
   
-##  <a name="a-namemtopvaluea--canimationrectmtopvalue"></a><a name="m_topvalue"></a>CAnimationRect::m_topValue  
+##  <a name="m_topvalue"></a>CAnimationRect::m_topValue  
  封装的动画变量表示顶部动画矩形的边界。  
   
 ```  
 CAnimationVariable m_topValue;  
 ```  
   
-##  <a name="a-nameoperatorrecta--canimationrectoperator-rect"></a><a name="operator_rect"></a>CAnimationRect::operator RECT  
+##  <a name="operator_rect"></a>CAnimationRect::operator RECT  
  将 CAnimationRect 转换为矩形  
   
 ```  
@@ -358,7 +374,7 @@ operator RECT();
 ### <a name="remarks"></a>备注  
  此函数在内部调用 GetValue。 如果出于某种原因 GetValue 失败，则返回的矩形将包含所有矩形坐标的默认值。  
   
-##  <a name="a-nameoperatoreqa--canimationrectoperator"></a><a name="operator_eq"></a>CAnimationRect::operator =  
+##  <a name="operator_eq"></a>CAnimationRect::operator =  
  将 rect 分配给 CAnimationRect。  
   
 ```  
@@ -372,7 +388,7 @@ void operator=(const RECT& rect);
 ### <a name="remarks"></a>备注  
  建议将动画开始之前执行，原因是此运算符将调用 SetDefaultValue，将已创建的情况下重新创建颜色组件的基础 COM 对象。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 此动画对象，您需要重新启用这些事件。  
   
-##  <a name="a-namesetdefaultvaluea--canimationrectsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
  设置默认值。  
   
 ```  

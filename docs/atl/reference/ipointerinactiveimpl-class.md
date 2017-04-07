@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPointerInactiveImpl
+- ATLCTL/ATL::IPointerInactiveImpl
+- ATLCTL/ATL::IPointerInactiveImpl::GetActivationPolicy
+- ATLCTL/ATL::IPointerInactiveImpl::OnInactiveMouseMove
+- ATLCTL/ATL::IPointerInactiveImpl::OnInactiveSetCursor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class IPointerInactiveImpl
 ## <a name="requirements"></a>要求  
  **标头︰** atlctl.h  
   
-##  <a name="a-namegetactivationpolicya--ipointerinactiveimplgetactivationpolicy"></a><a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
  检索对象的当前激活策略。  
   
 ```
@@ -98,7 +102,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 ### <a name="remarks"></a>备注  
  请参阅[IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoninactivemousemovea--ipointerinactiveimploninactivemousemove"></a><a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
  通知鼠标指针已移动到它上面，该对象，该值指示该对象可以激发鼠标事件。  
   
 ```
@@ -115,7 +119,7 @@ HRESULT OnInactiveMouseMove(
 ### <a name="remarks"></a>备注  
  请参阅[IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoninactivesetcursora--ipointerinactiveimploninactivesetcursor"></a><a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
  如果将鼠标指针的非活动状态的对象。  
   
 ```

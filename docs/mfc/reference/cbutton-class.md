@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CButton
+- AFXWIN/CButton
+- AFXWIN/CButton::CButton
+- AFXWIN/CButton::Create
+- AFXWIN/CButton::DrawItem
+- AFXWIN/CButton::GetBitmap
+- AFXWIN/CButton::GetButtonStyle
+- AFXWIN/CButton::GetCheck
+- AFXWIN/CButton::GetCursor
+- AFXWIN/CButton::GetIcon
+- AFXWIN/CButton::GetIdealSize
+- AFXWIN/CButton::GetImageList
+- AFXWIN/CButton::GetNote
+- AFXWIN/CButton::GetNoteLength
+- AFXWIN/CButton::GetSplitGlyph
+- AFXWIN/CButton::GetSplitImageList
+- AFXWIN/CButton::GetSplitInfo
+- AFXWIN/CButton::GetSplitSize
+- AFXWIN/CButton::GetSplitStyle
+- AFXWIN/CButton::GetState
+- AFXWIN/CButton::GetTextMargin
+- AFXWIN/CButton::SetBitmap
+- AFXWIN/CButton::SetButtonStyle
+- AFXWIN/CButton::SetCheck
+- AFXWIN/CButton::SetCursor
+- AFXWIN/CButton::SetDropDownState
+- AFXWIN/CButton::SetIcon
+- AFXWIN/CButton::SetImageList
+- AFXWIN/CButton::SetNote
+- AFXWIN/CButton::SetSplitGlyph
+- AFXWIN/CButton::SetSplitImageList
+- AFXWIN/CButton::SetSplitInfo
+- AFXWIN/CButton::SetSplitSize
+- AFXWIN/CButton::SetSplitStyle
+- AFXWIN/CButton::SetState
+- AFXWIN/CButton::SetTextMargin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -146,7 +181,7 @@ class CButton : public CWnd
 ## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="a-namecbuttona--cbuttoncbutton"></a><a name="cbutton"></a>CButton::CButton  
+##  <a name="cbutton"></a>CButton::CButton  
  构造 `CButton` 对象。  
   
 ```  
@@ -156,7 +191,7 @@ CButton();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&1;](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cbuttoncreate"></a><a name="create"></a>CButton::Create  
+##  <a name="create"></a>CButton::Create  
  创建的 Windows 按钮控件并将其附加到`CButton`对象。  
   
 ```  
@@ -207,7 +242,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&2;](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
   
-##  <a name="a-namedrawitema--cbuttondrawitem"></a><a name="drawitem"></a>CButton::DrawItem  
+##  <a name="drawitem"></a>CButton::DrawItem  
  当所有者描述的按钮的可视特征发生更改时由框架调用。  
   
 ```  
@@ -226,7 +261,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&3;](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
   
-##  <a name="a-namegetbitmapa--cbuttongetbitmap"></a><a name="getbitmap"></a>CButton::GetBitmap  
+##  <a name="getbitmap"></a>CButton::GetBitmap  
  调用此成员函数以获取与以前设置的位图的句柄[SetBitmap](#setbitmap)，即与按钮相关联。  
   
 ```  
@@ -239,7 +274,7 @@ HBITMAP GetBitmap() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&4;](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="a-namegetbuttonstylea--cbuttongetbuttonstyle"></a><a name="getbuttonstyle"></a>CButton::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>CButton::GetButtonStyle  
  检索有关按钮控件样式信息。  
   
 ```  
@@ -252,7 +287,7 @@ UINT GetButtonStyle() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&5;](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="a-namegetchecka--cbuttongetcheck"></a><a name="getcheck"></a>CButton::GetCheck  
+##  <a name="getcheck"></a>CButton::GetCheck  
  检索单选按钮或复选框的选中状态。  
   
 ```  
@@ -273,7 +308,7 @@ int GetCheck() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&6;](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="a-namegetcursora--cbuttongetcursor"></a><a name="getcursor"></a>CButton::GetCursor  
+##  <a name="getcursor"></a>CButton::GetCursor  
  调用此成员函数可获取与以前设置光标的句柄[SetCursor](#setcursor)，即与按钮相关联。  
   
 ```  
@@ -286,7 +321,7 @@ HCURSOR GetCursor();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&7;](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="a-namegeticona--cbuttongeticon"></a><a name="geticon"></a>CButton::GetIcon  
+##  <a name="geticon"></a>CButton::GetIcon  
  调用此成员函数可获取与以前设置的图标的句柄[SetIcon](#seticon)，即与按钮相关联。  
   
 ```  
@@ -299,7 +334,7 @@ HICON GetIcon() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&8;](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="a-namegetidealsizea--cbuttongetidealsize"></a><a name="getidealsize"></a>CButton::GetIdealSize  
+##  <a name="getidealsize"></a>CButton::GetIdealSize  
  检索按钮控件的理想大小。  
   
 ```  
@@ -316,7 +351,7 @@ BOOL GetIdealSize(SIZE* psize);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能**BCM_GETIDEALSIZE**消息，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)部分[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetimagelista--cbuttongetimagelist"></a><a name="getimagelist"></a>CButton::GetImageList  
+##  <a name="getimagelist"></a>CButton::GetImageList  
  调用此方法以获取从按钮控件的图像列表。  
   
 ```  
@@ -333,7 +368,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能**BCM_GETIMAGELIST**消息，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)部分[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetnotea--cbuttongetnote"></a><a name="getnote"></a>CButton::GetNote  
+##  <a name="getnote"></a>CButton::GetNote  
  检索与当前的 command link 控件相关联的注释文本。  
   
 ```  
@@ -363,7 +398,7 @@ BOOL GetNote(
   
  此方法可发送[BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetnotelengtha--cbuttongetnotelength"></a><a name="getnotelength"></a>CButton::GetNoteLength  
+##  <a name="getnotelength"></a>CButton::GetNoteLength  
  检索当前 command link 控件的注释文本的长度。  
   
 ```  
@@ -378,7 +413,7 @@ UINT GetNoteLength() const;
   
  此方法可发送[BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetsplitglypha--cbuttongetsplitglyph"></a><a name="getsplitglyph"></a>CButton::GetSplitGlyph  
+##  <a name="getsplitglyph"></a>CButton::GetSplitGlyph  
  检索与当前的拆分按钮控件关联的标志符号。  
   
 ```  
@@ -395,7 +430,7 @@ TCHAR GetSplitGlyph() const;
   
  此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构与`BCSIF_GLYPH`标志，然后将该结构中发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当消息函数返回时，此方法检索从标志符号`himlGlyph`结构中的成员。  
   
-##  <a name="a-namegetsplitimagelista--cbuttongetsplitimagelist"></a><a name="getsplitimagelist"></a>CButton::GetSplitImageList  
+##  <a name="getsplitimagelist"></a>CButton::GetSplitImageList  
  检索[图像列表](../../mfc/reference/cimagelist-class.md)当前拆分按钮控件。  
   
 ```  
@@ -410,7 +445,7 @@ CImageList* GetSplitImageList() const;
   
  此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构与`BCSIF_IMAGE`标志，然后将该结构中发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当消息函数返回时，此方法检索从图像列表`himlGlyph`结构中的成员。  
   
-##  <a name="a-namegetsplitinfoa--cbuttongetsplitinfo"></a><a name="getsplitinfo"></a>CButton::GetSplitInfo  
+##  <a name="getsplitinfo"></a>CButton::GetSplitInfo  
  检索参数，以确定 Windows 如何绘制当前拆分按钮控件。  
   
 ```  
@@ -431,7 +466,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
  此方法可发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetsplitsizea--cbuttongetsplitsize"></a><a name="getsplitsize"></a>CButton::GetSplitSize  
+##  <a name="getsplitsize"></a>CButton::GetSplitSize  
  检索当前的拆分按钮控件的下拉部分的边框。  
   
 ```  
@@ -454,7 +489,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构与`BCSIF_SIZE`标志，然后将该结构中发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当消息函数返回时，此方法检索从边框`size`结构中的成员。  
   
-##  <a name="a-namegetsplitstylea--cbuttongetsplitstyle"></a><a name="getsplitstyle"></a>CButton::GetSplitStyle  
+##  <a name="getsplitstyle"></a>CButton::GetSplitStyle  
  检索定义当前拆分按钮控件的拆分按钮样式。  
   
 ```  
@@ -471,7 +506,7 @@ UINT GetSplitStyle() const;
   
  此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构与`BCSIF_STYLE`标志，然后将该结构中发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 当消息函数返回时，此方法检索中的拆分按钮样式`uSplitStyle`结构中的成员。  
   
-##  <a name="a-namegetstatea--cbuttongetstate"></a><a name="getstate"></a>CButton::GetState  
+##  <a name="getstate"></a>CButton::GetState  
  检索一个 button 控件的状态。  
   
 ```  
@@ -495,7 +530,7 @@ UINT GetState() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&9;](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="a-namegettextmargina--cbuttongettextmargin"></a><a name="gettextmargin"></a>CButton::GetTextMargin  
+##  <a name="gettextmargin"></a>CButton::GetTextMargin  
  调用此方法以获取文本的页边空白处`CButton`对象。  
   
 ```  
@@ -515,7 +550,7 @@ BOOL GetTextMargin(RECT* pmargin);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能**BCM_GETTEXTMARGIN**消息，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)部分[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetbitmapa--cbuttonsetbitmap"></a><a name="setbitmap"></a>CButton::SetBitmap  
+##  <a name="setbitmap"></a>CButton::SetBitmap  
  调用该成员函数以将新位图与按钮相关联。  
   
 ```  
@@ -551,7 +586,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&4;](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="a-namesetbuttonstylea--cbuttonsetbuttonstyle"></a><a name="setbuttonstyle"></a>CButton::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>CButton::SetButtonStyle  
  更改按钮的样式。  
   
 ```  
@@ -573,7 +608,7 @@ void SetButtonStyle(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&5;](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="a-namesetchecka--cbuttonsetcheck"></a><a name="setcheck"></a>CButton::SetCheck  
+##  <a name="setcheck"></a>CButton::SetCheck  
  设置或重置的复选状态的单选按钮或复选框。  
   
 ```  
@@ -596,7 +631,7 @@ void SetCheck(int nCheck);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&6;](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="a-namesetcursora--cbuttonsetcursor"></a><a name="setcursor"></a>CButton::SetCursor  
+##  <a name="setcursor"></a>CButton::SetCursor  
  调用该成员函数以将新光标与按钮相关联。  
   
 ```  
@@ -630,7 +665,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&7;](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="a-namesetdropdownstatea--cbuttonsetdropdownstate"></a><a name="setdropdownstate"></a>CButton::SetDropDownState  
+##  <a name="setdropdownstate"></a>CButton::SetDropDownState  
  设置当前的拆分按钮控件的下拉列表状态。  
   
 ```  
@@ -661,7 +696,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
  [!code-cpp[NVC_MFC_CButton_s&#1;&6;](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
   
-##  <a name="a-namesetelevationrequireda--cbuttonsetelevationrequired"></a><a name="setelevationrequired"></a>CButton::SetElevationRequired  
+##  <a name="setelevationrequired"></a>CButton::SetElevationRequired  
  设置为当前的按钮控件的状态`elevation required`，这是必需的控件以显示一个提升的安全图标。  
   
 ```  
@@ -682,7 +717,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
  此方法可发送[BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameseticona--cbuttonseticon"></a><a name="seticon"></a>CButton::SetIcon  
+##  <a name="seticon"></a>CButton::SetIcon  
  调用该成员函数以将新建图标的按钮相关联。  
   
 ```  
@@ -716,7 +751,7 @@ HICON SetIcon(HICON hIcon);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&8;](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="a-namesetimagelista--cbuttonsetimagelist"></a><a name="setimagelist"></a>CButton::SetImageList  
+##  <a name="setimagelist"></a>CButton::SetImageList  
  调用此方法可设置的图像列表`CButton`对象。  
   
 ```  
@@ -733,7 +768,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能**BCM_SETIMAGELIST**消息，如中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)部分[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetnotea--cbuttonsetnote"></a><a name="setnote"></a>CButton::SetNote  
+##  <a name="setnote"></a>CButton::SetNote  
  设置当前 command link 控件的注释文本。  
   
 ```  
@@ -764,7 +799,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
  [!code-cpp[NVC_MFC_CButton_s&#1;&7;](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
   
-##  <a name="a-namesetsplitglypha--cbuttonsetsplitglyph"></a><a name="setsplitglyph"></a>CButton::SetSplitGlyph  
+##  <a name="setsplitglyph"></a>CButton::SetSplitGlyph  
  将指定的标志符号与当前的拆分按钮控件相关联。  
   
 ```  
@@ -787,7 +822,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构与`BCSIF_GLYPH`标志和`himlGlyph`具有成员`chGlyph`参数，然后将该结构中发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetsplitimagelista--cbuttonsetsplitimagelist"></a><a name="setsplitimagelist"></a>CButton::SetSplitImageList  
+##  <a name="setsplitimagelist"></a>CButton::SetSplitImageList  
  将相关联[图像列表](../../mfc/reference/cimagelist-class.md)与当前的拆分按钮控件。  
   
 ```  
@@ -808,7 +843,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
  此方法初始化`mask`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构与`BCSIF_IMAGE`标志和`himlGlyph`具有成员`pSplitImageList`参数，然后将该结构中发送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)中所述的消息[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetsplitinfoa--cbuttonsetsplitinfo"></a><a name="setsplitinfo"></a>CButton::SetSplitInfo  
+##  <a name="setsplitinfo"></a>CButton::SetSplitInfo  
  指定参数，以确定 Windows 如何绘制当前拆分按钮控件。  
   
 ```  
@@ -839,7 +874,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
  [!code-cpp[NVC_MFC_CButton_s&#1;&4;](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
   
-##  <a name="a-namesetsplitsizea--cbuttonsetsplitsize"></a><a name="setsplitsize"></a>CButton::SetSplitSize  
+##  <a name="setsplitsize"></a>CButton::SetSplitSize  
  设置当前的拆分按钮控件的下拉部分的边框。  
   
 ```  
@@ -872,7 +907,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  [!code-cpp[NVC_MFC_CButton_s&#1;&5;](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
   
-##  <a name="a-namesetsplitstylea--cbuttonsetsplitstyle"></a><a name="setsplitstyle"></a>CButton::SetSplitStyle  
+##  <a name="setsplitstyle"></a>CButton::SetSplitStyle  
  设置当前的拆分按钮控件的样式。  
   
 ```  
@@ -905,7 +940,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
  [!code-cpp[NVC_MFC_CButton_s&#1;&3;](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
   
-##  <a name="a-namesetstatea--cbuttonsetstate"></a><a name="setstate"></a>CButton::SetState  
+##  <a name="setstate"></a>CButton::SetState  
  设置突出显示的按钮控件。  
   
 ```  
@@ -924,7 +959,7 @@ void SetState(BOOL bHighlight);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CButton #&9;](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="a-namesettextmargina--cbuttonsettextmargin"></a><a name="settextmargin"></a>CButton::SetTextMargin  
+##  <a name="settextmargin"></a>CButton::SetTextMargin  
  调用此方法来设置文本的页边空白处`CButton`对象。  
   
 ```  

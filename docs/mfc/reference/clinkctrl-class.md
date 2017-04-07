@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CLinkCtrl
+- AFXCMN/CLinkCtrl
+- AFXCMN/CLinkCtrl::CLinkCtrl
+- AFXCMN/CLinkCtrl::Create
+- AFXCMN/CLinkCtrl::CreateEx
+- AFXCMN/CLinkCtrl::GetIdealHeight
+- AFXCMN/CLinkCtrl::GetIdealSize
+- AFXCMN/CLinkCtrl::GetItem
+- AFXCMN/CLinkCtrl::GetItemID
+- AFXCMN/CLinkCtrl::GetItemState
+- AFXCMN/CLinkCtrl::GetItemUrl
+- AFXCMN/CLinkCtrl::HitTest
+- AFXCMN/CLinkCtrl::SetItem
+- AFXCMN/CLinkCtrl::SetItemID
+- AFXCMN/CLinkCtrl::SetItemState
+- AFXCMN/CLinkCtrl::SetItemUrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,14 +112,14 @@ class CLinkCtrl : public CWnd
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="a-nameclinkctrla--clinkctrlclinkctrl"></a><a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
+##  <a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
  构造 `CLinkCtrl` 对象。  
   
 ```  
 CLinkCtrl();
 ```  
   
-##  <a name="a-namecreatea--clinkctrlcreate"></a><a name="create"></a>CLinkCtrl::Create  
+##  <a name="create"></a>CLinkCtrl::Create  
  创建链接控件，并将其附加到`CLinkCtrl`对象。  
   
 ```  
@@ -156,7 +171,7 @@ virtual BOOL Create(DWORD dwStyle,
   
  [!code-cpp[NVC_MFC_CLinkCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
   
-##  <a name="a-namecreateexa--clinkctrlcreateex"></a><a name="createex"></a>CLinkCtrl::CreateEx  
+##  <a name="createex"></a>CLinkCtrl::CreateEx  
  创建具有扩展样式的链接控件并将其附加到`CLinkCtrl`对象。  
   
 ```  
@@ -203,7 +218,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
  第二种形式的`CreateEx`方法已弃用。 使用指定的第一个窗体`lpszLinkMarkup`参数。  
   
-##  <a name="a-namegetidealheighta--clinkctrlgetidealheight"></a><a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
+##  <a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
  检索链接控件的理想高度。  
   
 ```  
@@ -216,7 +231,7 @@ int GetIdealHeight() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetidealsizea--clinkctrlgetidealsize"></a><a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
+##  <a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
  计算当前的链接控件，具体取决于指定的宽度的链接的链接文本的首选的高度。  
   
 ```  
@@ -240,7 +255,7 @@ int GetIdealSize(
   
  此方法可发送[LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitema--clinkctrlgetitem"></a><a name="getitem"></a>CLinkCtrl::GetItem  
+##  <a name="getitem"></a>CLinkCtrl::GetItem  
  检索状态和链接控件项的特性。  
   
 ```  
@@ -257,7 +272,7 @@ BOOL GetItem(PLITEM pItem) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitemida--clinkctrlgetitemid"></a><a name="getitemid"></a>CLinkCtrl::GetItemID  
+##  <a name="getitemid"></a>CLinkCtrl::GetItemID  
  检索的链接控件项的 ID。  
   
 ```  
@@ -293,7 +308,7 @@ BOOL GetItemID(
 ### <a name="remarks"></a>备注  
  检索特定链接控件项的 ID。 有关详细信息，请参阅的 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitemstatea--clinkctrlgetitemstate"></a><a name="getitemstate"></a>CLinkCtrl::GetItemState  
+##  <a name="getitemstate"></a>CLinkCtrl::GetItemState  
  检索链接控件项的状态。  
   
 ```  
@@ -319,7 +334,7 @@ BOOL GetItemState(
 ### <a name="remarks"></a>备注  
  检索指定的状态项中的特定链接控件项的值。 有关详细信息，请参阅的 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetitemurla--clinkctrlgetitemurl"></a><a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
+##  <a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
  检索由链接控件项的 URL。  
   
 ```  
@@ -355,7 +370,7 @@ BOOL GetItemUrl(
 ### <a name="remarks"></a>备注  
  检索由指定的链接控件项的 URL。 有关详细信息，请参阅的 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namehittesta--clinkctrlhittest"></a><a name="hittest"></a>CLinkCtrl::HitTest  
+##  <a name="hittest"></a>CLinkCtrl::HitTest  
  确定用户是否单击指定的链接。  
   
 ```  
@@ -372,7 +387,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetitema--clinkctrlsetitem"></a><a name="setitem"></a>CLinkCtrl::SetItem  
+##  <a name="setitem"></a>CLinkCtrl::SetItem  
  设置的状态和链接控件项的特性。  
   
 ```  
@@ -389,7 +404,7 @@ BOOL SetItem(PLITEM pItem);
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetitemida--clinkctrlsetitemid"></a><a name="setitemid"></a>CLinkCtrl::SetItemID  
+##  <a name="setitemid"></a>CLinkCtrl::SetItemID  
  检索的链接控件项的 ID。  
   
 ```  
@@ -411,7 +426,7 @@ BOOL SetItemID(
 ### <a name="remarks"></a>备注  
  设置特定链接控件项的 ID。 有关详细信息，请参阅的 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetitemstatea--clinkctrlsetitemstate"></a><a name="setitemstate"></a>CLinkCtrl::SetItemState  
+##  <a name="setitemstate"></a>CLinkCtrl::SetItemState  
  检索链接控件项的状态。  
   
 ```  
@@ -437,7 +452,7 @@ BOOL SetItemState(
 ### <a name="remarks"></a>备注  
  设置指定的状态项中的特定链接控件项的值。 有关详细信息，请参阅的 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetitemurla--clinkctrlsetitemurl"></a><a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
+##  <a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
  设置由链接控件项的 URL。  
   
 ```  

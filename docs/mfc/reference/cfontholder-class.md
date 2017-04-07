@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFontHolder
+- AFXCTL/CFontHolder
+- AFXCTL/CFontHolder::CFontHolder
+- AFXCTL/CFontHolder::GetDisplayString
+- AFXCTL/CFontHolder::GetFontDispatch
+- AFXCTL/CFontHolder::GetFontHandle
+- AFXCTL/CFontHolder::InitializeFont
+- AFXCTL/CFontHolder::QueryTextMetrics
+- AFXCTL/CFontHolder::ReleaseFont
+- AFXCTL/CFontHolder::Select
+- AFXCTL/CFontHolder::SetFont
+- AFXCTL/CFontHolder::m_pFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +99,7 @@ class CFontHolder
 ## <a name="requirements"></a>要求  
  **标头︰** afxctl.h  
   
-##  <a name="a-namecfontholdera--cfontholdercfontholder"></a><a name="cfontholder"></a>CFontHolder::CFontHolder  
+##  <a name="cfontholder"></a>CFontHolder::CFontHolder  
  构造 `CFontHolder` 对象。  
   
 ```  
@@ -102,7 +113,7 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="remarks"></a>备注  
  必须调用`InitializeFont`来初始化所产生的对象，然后再使用它。  
   
-##  <a name="a-namegetdisplaystringa--cfontholdergetdisplaystring"></a><a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
  检索可以在容器的属性浏览器中显示的字符串。  
   
 ```  
@@ -116,7 +127,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>返回值  
  非零，如果成功检索到字符串;否则为 0。  
   
-##  <a name="a-namegetfontdispatcha--cfontholdergetfontdispatch"></a><a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
+##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
  调用此函数可检索到的字体的调度接口指针。  
   
 ```  
@@ -129,7 +140,7 @@ LPFONTDISP GetFontDispatch();
 ### <a name="remarks"></a>备注  
  调用`InitializeFont`之前调用`GetFontDispatch`。  
   
-##  <a name="a-namegetfonthandlea--cfontholdergetfonthandle"></a><a name="getfonthandle"></a>CFontHolder::GetFontHandle  
+##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle  
  调用此函数可获取为 Windows 字体的句柄。  
   
 ```  
@@ -158,7 +169,7 @@ HFONT GetFontHandle(
   
  不带参数的版本返回正确设置大小，以使屏幕字体的句柄。  
   
-##  <a name="a-nameinitializefonta--cfontholderinitializefont"></a><a name="initializefont"></a>CFontHolder::InitializeFont  
+##  <a name="initializefont"></a>CFontHolder::InitializeFont  
  初始化`CFontHolder`对象。  
   
 ```  
@@ -181,14 +192,14 @@ void InitializeFont(
   
  在构造之后调用此函数`CFontHolder`对象。  
   
-##  <a name="a-namempfonta--cfontholdermpfont"></a><a name="m_pfont"></a>CFontHolder::m_pFont  
+##  <a name="m_pfont"></a>CFontHolder::m_pFont  
  一个指向`CFontHolder`对象的`IFont`接口。  
   
 ```  
 LPFONT m_pFont;  
 ```  
   
-##  <a name="a-namequerytextmetricsa--cfontholderquerytextmetrics"></a><a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
+##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
  检索有关所表示的物理字体`CFontHolder`对象。  
   
 ```  
@@ -199,14 +210,14 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
  `lptm`  
  一个指向[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)结构，它将会收到信息。  
   
-##  <a name="a-namereleasefonta--cfontholderreleasefont"></a><a name="releasefont"></a>CFontHolder::ReleaseFont  
+##  <a name="releasefont"></a>CFontHolder::ReleaseFont  
  此函数断开`CFontHolder`对象从其`IFont`接口。  
   
 ```  
 void ReleaseFont();
 ```  
   
-##  <a name="a-nameselecta--cfontholderselect"></a><a name="select"></a>CFontHolder::Select  
+##  <a name="select"></a>CFontHolder::Select  
  调用此函数可指定的设备上下文中选择控件的字体。  
   
 ```  
@@ -232,7 +243,7 @@ CFont* Select(
 ### <a name="remarks"></a>备注  
  请参阅[GetFontHandle](#getfonthandle)有关的讨论`cyLogical`和`cyHimetric`参数。  
   
-##  <a name="a-namesetfonta--cfontholdersetfont"></a><a name="setfont"></a>CFontHolder::SetFont  
+##  <a name="setfont"></a>CFontHolder::SetFont  
  释放任何现有的字体并连接`CFontHolder`对象传递给`IFont`接口。  
   
 ```  

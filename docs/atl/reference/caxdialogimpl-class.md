@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAxDialogImpl
-- ATL.CAxDialogImpl
 - CAxDialogImpl
+- ATLWIN/ATL::CAxDialogImpl
+- ATLWIN/ATL::CAxDialogImpl::AdviseSinkMap
+- ATLWIN/ATL::CAxDialogImpl::Create
+- ATLWIN/ATL::CAxDialogImpl::DestroyWindow
+- ATLWIN/ATL::CAxDialogImpl::DoModal
+- ATLWIN/ATL::CAxDialogImpl::EndDialog
+- ATLWIN/ATL::CAxDialogImpl::GetDialogProc
+- ATLWIN/ATL::CAxDialogImpl::GetIDD
+- ATLWIN/ATL::CAxDialogImpl::IsDialogMessage
+- ATLWIN/ATL::CAxDialogImpl::m_bModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +122,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-nameadvisesinkmapa--caxdialogimpladvisesinkmap"></a><a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
  调用此方法以建议或不建议在对象的接收器映射事件映射的所有条目。  
   
 ```
@@ -128,7 +136,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namecreatea--caxdialogimplcreate"></a><a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>CAxDialogImpl::Create  
  调用此方法以创建无模式对话框。  
   
 ```
@@ -154,7 +162,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  第二个重写提供为了仅使对话框中可与使用[CComControl](../../atl/reference/ccomcontrol-class.md)。  
   
-##  <a name="a-namedestroywindowa--caxdialogimpldestroywindow"></a><a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
  调用此方法要销毁的无模式对话框。  
   
 ```
@@ -167,7 +175,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>备注  
  不要调用`DestroyWindow`销毁一个模式对话框。 调用[EndDialog](#enddialog)相反。  
   
-##  <a name="a-namedomodala--caxdialogimpldomodal"></a><a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>CAxDialogImpl::DoModal  
  调用此方法以创建模式对话框。  
   
 ```
@@ -191,7 +199,7 @@ INT_PTR DoModal(
   
  若要创建无模式对话框，请调用[创建](#create)。  
   
-##  <a name="a-nameenddialoga--caxdialogimplenddialog"></a><a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
  调用此方法可销毁一个模式对话框。  
   
 ```
@@ -211,7 +219,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  不要调用`EndDialog`销毁无模式对话框。 调用[DestroyWindow](#destroywindow)相反。  
   
-##  <a name="a-namegetdialogproca--caxdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
  调用此方法以获取一个指向`DialogProc`回调函数。  
   
 ```
@@ -224,7 +232,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>备注  
  `DialogProc`函数是一个应用程序定义的回调函数。  
   
-##  <a name="a-namegetidda--caxdialogimplgetidd"></a><a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
  调用此方法以获取对话框模板资源 id。  
   
 ```
@@ -234,7 +242,7 @@ int GetIDD();
 ### <a name="return-value"></a>返回值  
  返回此对话框模板资源 id。  
   
-##  <a name="a-nameisdialogmessagea--caxdialogimplisdialogmessage"></a><a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
  调用此方法以确定消息是否适用于此对话框中，如果是，处理该消息。  
   
 ```
@@ -251,7 +259,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>备注  
  此方法用于从一个消息循环中调用。  
   
-##  <a name="a-namembmodala--caxdialogimplmbmodal"></a><a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
  仅在调试中存在的变量生成并被设置为 true，如果对话框中是模式。  
   
 ```

@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDacl
 - CDacl
-- ATL.CDacl
+- ATLSECURITY/ATL::CDacl
+- ATLSECURITY/ATL::CDacl::CDacl
+- ATLSECURITY/ATL::CDacl::AddAllowedAce
+- ATLSECURITY/ATL::CDacl::AddDeniedAce
+- ATLSECURITY/ATL::CDacl::GetAceCount
+- ATLSECURITY/ATL::CDacl::RemoveAce
+- ATLSECURITY/ATL::CDacl::RemoveAllAces
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>要求  
  **标头︰** atlsecurity.h  
   
-##  <a name="a-nameaddallowedacea--cdacladdallowedace"></a><a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
  将允许的 ACE （访问控制项） 添加到`CDacl`对象。  
   
 ```
@@ -139,7 +144,7 @@ bool AddAllowedAce(
   
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关可以在中设置的各种标志的说明`AceFlags`参数。  
   
-##  <a name="a-nameadddeniedacea--cdacladddeniedace"></a><a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
  将拒绝的 ACE （访问控制项） 添加到`CDacl`对象。  
   
 ```
@@ -183,7 +188,7 @@ bool AddDeniedAce(
   
  请参阅[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)有关可以在中设置的各种标志的说明`AceFlags`参数。  
   
-##  <a name="a-namecdacla--cdaclcdacl"></a><a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>CDacl::CDacl  
  构造函数。  
   
 ```
@@ -198,7 +203,7 @@ CDacl () throw();
 ### <a name="remarks"></a>备注  
  `CDacl`对象可以根据需要使用创建的现有**ACL**结构。 务必注意，只有 DACL （自由访问控制列表） 和 SACL （系统访问控制列表），不应作为此参数进行传递。 在调试版本中，传递了 SACL 将导致断言。 在发布版本中传递了 SACL 都将导致 Ace （访问控制项） 中的 ACL 以被忽略，并不会发生错误。  
   
-##  <a name="a-namedtora--cdaclcdacl"></a><a name="dtor"></a>CDacl:: ~ CDacl  
+##  <a name="dtor"></a>CDacl:: ~ CDacl  
  析构函数。  
   
 ```
@@ -208,7 +213,7 @@ CDacl () throw();
 ### <a name="remarks"></a>备注  
  析构函数释放使用任何资源获取的对象，其中包括所有 Ace （访问控制项） [CDacl::RemoveAllAces](#removeallaces)。  
   
-##  <a name="a-namegetacecounta--cdaclgetacecount"></a><a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>CDacl::GetAceCount  
  在返回的数目 （访问控制项） 的 Ace`CDacl`对象。  
   
 ```
@@ -218,7 +223,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>返回值  
  返回包含在的 Ace 的数量`CDacl`对象。  
   
-##  <a name="a-nameoperatoreqa--cdacloperator-"></a><a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>CDacl::operator =  
  赋值运算符。  
   
 ```
@@ -235,7 +240,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>备注  
  您应该确保您只能向此函数传递 DACL （自由访问控制列表）。 传递 SACL （系统访问控制列表） 对此函数将导致在调试版本中的断言，但将导致在发布版本中的任何错误。  
   
-##  <a name="a-nameremoveacea--cdaclremoveace"></a><a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>CDacl::RemoveAce  
  从中删除特定的 ACE （访问控制项）`CDacl`对象。  
   
 ```
@@ -249,7 +254,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>备注  
  此方法从派生[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
-##  <a name="a-nameremoveallacesa--cdaclremoveallaces"></a><a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
  将删除 Ace （访问控制项） 中包含的所有`CDacl`对象。  
   
 ```

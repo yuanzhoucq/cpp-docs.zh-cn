@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CInstantaneousTransition
 - CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::Create
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::m_dblFinalValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CInstantaneousTransition : public CBaseTransition;
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-namecinstantaneoustransitiona--cinstantaneoustransitioncinstantaneoustransition"></a><a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
+##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
  构造转换对象并初始化其最终值。  
   
 ```  
@@ -93,7 +96,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
  `dblFinalValue`  
  末尾的过渡动画变量的值。  
   
-##  <a name="a-namecreatea--cinstantaneoustransitioncreate"></a><a name="create"></a>CInstantaneousTransition::Create  
+##  <a name="create"></a>CInstantaneousTransition::Create  
  调用转换库来创建封装的转换 COM 对象。  
   
 ```  
@@ -110,7 +113,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
-##  <a name="a-namemdblfinalvaluea--cinstantaneoustransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
  末尾的过渡动画变量的值。  
   
 ```  

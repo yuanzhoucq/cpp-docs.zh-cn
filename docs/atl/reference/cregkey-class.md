@@ -10,8 +10,38 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRegKey
-- ATL::CRegKey
-- ATL.CRegKey
+- ATLBASE/ATL::CRegKey
+- ATLBASE/ATL::CRegKey::CRegKey
+- ATLBASE/ATL::CRegKey::Attach
+- ATLBASE/ATL::CRegKey::Close
+- ATLBASE/ATL::CRegKey::Create
+- ATLBASE/ATL::CRegKey::DeleteSubKey
+- ATLBASE/ATL::CRegKey::DeleteValue
+- ATLBASE/ATL::CRegKey::Detach
+- ATLBASE/ATL::CRegKey::EnumKey
+- ATLBASE/ATL::CRegKey::Flush
+- ATLBASE/ATL::CRegKey::GetKeySecurity
+- ATLBASE/ATL::CRegKey::NotifyChangeKeyValue
+- ATLBASE/ATL::CRegKey::Open
+- ATLBASE/ATL::CRegKey::QueryBinaryValue
+- ATLBASE/ATL::CRegKey::QueryDWORDValue
+- ATLBASE/ATL::CRegKey::QueryGUIDValue
+- ATLBASE/ATL::CRegKey::QueryMultiStringValue
+- ATLBASE/ATL::CRegKey::QueryQWORDValue
+- ATLBASE/ATL::CRegKey::QueryStringValue
+- ATLBASE/ATL::CRegKey::QueryValue
+- ATLBASE/ATL::CRegKey::RecurseDeleteKey
+- ATLBASE/ATL::CRegKey::SetBinaryValue
+- ATLBASE/ATL::CRegKey::SetDWORDValue
+- ATLBASE/ATL::CRegKey::SetGUIDValue
+- ATLBASE/ATL::CRegKey::SetKeySecurity
+- ATLBASE/ATL::CRegKey::SetKeyValue
+- ATLBASE/ATL::CRegKey::SetMultiStringValue
+- ATLBASE/ATL::CRegKey::SetQWORDValue
+- ATLBASE/ATL::CRegKey::SetStringValue
+- ATLBASE/ATL::CRegKey::SetValue
+- ATLBASE/ATL::CRegKey::m_hKey
+- ATLBASE/ATL::CRegKey::m_pTM
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -126,7 +156,7 @@ class CRegKey
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
-##  <a name="a-nameattacha--cregkeyattach"></a><a name="attach"></a>CRegKey::Attach  
+##  <a name="attach"></a>CRegKey::Attach  
  调用此方法可将附加到 HKEY`CRegKey`对象通过设置[m_hKey](#m_hkey)成员句柄`hKey`。  
   
 ```
@@ -140,7 +170,7 @@ void Attach(HKEY hKey) throw();
 ### <a name="remarks"></a>备注  
  **附加**将断定如果`m_hKey`为非 NULL。  
   
-##  <a name="a-nameclosea--cregkeyclose"></a><a name="close"></a>CRegKey::Close  
+##  <a name="close"></a>CRegKey::Close  
  调用此方法才能释放[m_hKey](#m_hkey)成员处理，并将其设置为 NULL。  
   
 ```
@@ -150,7 +180,7 @@ LONG Close() throw();
 ### <a name="return-value"></a>返回值  
  如果成功，返回 ERROR_SUCCESS;否则将返回一个错误值。  
   
-##  <a name="a-namecreatea--cregkeycreate"></a><a name="create"></a>CRegKey::Create  
+##  <a name="create"></a>CRegKey::Create  
  调用此方法来创建指定的键，如果不存在为项的子项`hKeyParent`。  
   
 ```
@@ -192,7 +222,7 @@ LONG Create(
 ### <a name="remarks"></a>备注  
  **创建**设置[m_hKey](#m_hkey)到该项的句柄的成员。  
   
-##  <a name="a-namecregkeya--cregkeycregkey"></a><a name="cregkey"></a>CRegKey::CRegKey  
+##  <a name="cregkey"></a>CRegKey::CRegKey  
  构造函数。  
   
 ```
@@ -215,7 +245,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>备注  
  创建一个新的 `CRegKey` 对象。 可以创建该对象从现有`CRegKey`对象，或从注册表项的句柄。  
   
-##  <a name="a-namedtora--cregkeycregkey"></a><a name="dtor"></a>CRegKey:: ~ CRegKey  
+##  <a name="dtor"></a>CRegKey:: ~ CRegKey  
  析构函数。  
   
 ```
@@ -225,7 +255,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>备注  
  析构函数释放`m_hKey`。  
   
-##  <a name="a-namedeletesubkeya--cregkeydeletesubkey"></a><a name="deletesubkey"></a>CRegKey::DeleteSubKey  
+##  <a name="deletesubkey"></a>CRegKey::DeleteSubKey  
  调用此方法以从注册表中删除指定的键。  
   
 ```
@@ -242,7 +272,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 ### <a name="remarks"></a>备注  
  `DeleteSubKey`只能删除没有子项的密钥。 如果该注册表项具有子项，则调用[RecurseDeleteKey](#recursedeletekey)相反。  
   
-##  <a name="a-namedeletevaluea--cregkeydeletevalue"></a><a name="deletevalue"></a>CRegKey::DeleteValue  
+##  <a name="deletevalue"></a>CRegKey::DeleteValue  
  调用此方法来删除中的值字段[m_hKey](#m_hkey)。  
   
 ```
@@ -256,7 +286,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="return-value"></a>返回值  
  如果成功，返回 ERROR_SUCCESS。 如果此方法失败，返回值将是在 WINERROR 中定义的非零错误代码。H。  
   
-##  <a name="a-namedetacha--cregkeydetach"></a><a name="detach"></a>CRegKey::Detach  
+##  <a name="detach"></a>CRegKey::Detach  
  调用此方法以分离[m_hKey](#m_hkey)成员句柄从`CRegKey`对象并设置`m_hKey`为 NULL。  
   
 ```
@@ -266,7 +296,7 @@ HKEY Detach() throw();
 ### <a name="return-value"></a>返回值  
  与关联 HKEY`CRegKey`对象。  
   
-##  <a name="a-nameenumkeya--cregkeyenumkey"></a><a name="enumkey"></a>CRegKey::EnumKey  
+##  <a name="enumkey"></a>CRegKey::EnumKey  
  调用此方法来枚举打开注册表项的子项。  
   
 ```
@@ -296,7 +326,7 @@ LONG EnumKey(
 ### <a name="remarks"></a>备注  
  若要枚举子项，请调用`CRegKey::EnumKey`索引为零。 递增的索引值和重复，直到该方法返回 ERROR_NO_MORE_ITEMS。 有关详细信息，请参阅[RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameflusha--cregkeyflush"></a><a name="flush"></a>CRegKey::Flush  
+##  <a name="flush"></a>CRegKey::Flush  
  调用此方法以打开注册表项的属性的所有写入注册表。  
   
 ```
@@ -309,7 +339,7 @@ LONG Flush() throw();
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetkeysecuritya--cregkeygetkeysecurity"></a><a name="getkeysecurity"></a>CRegKey::GetKeySecurity  
+##  <a name="getkeysecurity"></a>CRegKey::GetKeySecurity  
  调用此方法以检索保护打开注册表项的安全描述符的副本。  
   
 ```
@@ -335,14 +365,14 @@ LONG GetKeySecurity(
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313)。  
   
-##  <a name="a-namemhkeya--cregkeymhkey"></a><a name="m_hkey"></a>CRegKey::m_hKey  
+##  <a name="m_hkey"></a>CRegKey::m_hKey  
  包含与关联的注册表项的句柄`CRegKey`对象。  
   
 ```
 HKEY m_hKey;
 ```  
   
-##  <a name="a-namemptma--cregkeymptm"></a><a name="m_ptm"></a>CRegKey::m_pTM  
+##  <a name="m_ptm"></a>CRegKey::m_pTM  
  指向 `CAtlTransactionManager` 对象的指针。  
   
 ```
@@ -351,7 +381,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namenotifychangekeyvaluea--cregkeynotifychangekeyvalue"></a><a name="notifychangekeyvalue"></a>CRegKey::NotifyChangeKeyValue  
+##  <a name="notifychangekeyvalue"></a>CRegKey::NotifyChangeKeyValue  
  此方法通知调用方有关更改的属性或打开注册表项的内容。  
   
 ```
@@ -392,7 +422,7 @@ LONG NotifyChangeKeyValue(
   
  有关更多详细信息和示例程序，请参阅[RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892)。  
   
-##  <a name="a-nameopena--cregkeyopen"></a><a name="open"></a>CRegKey::Open  
+##  <a name="open"></a>CRegKey::Open  
  调用此方法以打开指定的键，并设置[m_hKey](#m_hkey)到该项的句柄。  
   
 ```
@@ -420,14 +450,14 @@ LONG Open(
   
  与不同[CRegKey::Create](#create)，**打开**如果它尚不存在，不会创建指定的键。  
   
-##  <a name="a-nameoperatorhkeya--cregkeyoperator-hkey"></a><a name="operator_hkey"></a>CRegKey::operator HKEY  
+##  <a name="operator_hkey"></a>CRegKey::operator HKEY  
  将转换`CRegKey`对象传递给 HKEY。  
   
 ```  
 operator HKEY() const throw();
 ```  
   
-##  <a name="a-nameoperatoreqa--cregkeyoperator-"></a><a name="operator_eq"></a>CRegKey::operator =  
+##  <a name="operator_eq"></a>CRegKey::operator =  
  赋值运算符。  
   
 ```
@@ -444,7 +474,7 @@ CRegKey& operator= (CRegKey& key) throw();
 ### <a name="remarks"></a>备注  
  此运算符分离`key`从其当前对象并将它分配给`CRegKey`对象。  
   
-##  <a name="a-namequerybinaryvaluea--cregkeyquerybinaryvalue"></a><a name="querybinaryvalue"></a>CRegKey::QueryBinaryValue  
+##  <a name="querybinaryvalue"></a>CRegKey::QueryBinaryValue  
  调用此方法以检索指定的值名称的二进制数据。  
   
 ```
@@ -473,7 +503,7 @@ LONG QueryBinaryValue(
 > [!IMPORTANT]
 >  此方法允许调用方指定任何注册表位置，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不能显式处理字符串，它们是以 NULL 结尾。 要调用的代码检查这两个条件。  
   
-##  <a name="a-namequerydwordvaluea--cregkeyquerydwordvalue"></a><a name="querydwordvalue"></a>CRegKey::QueryDWORDValue  
+##  <a name="querydwordvalue"></a>CRegKey::QueryDWORDValue  
  调用此方法以检索指定的值名称的 dword 值数据。  
   
 ```
@@ -498,7 +528,7 @@ LONG QueryDWORDValue(
 > [!IMPORTANT]
 >  此方法允许调用方指定任何注册表位置，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不能显式处理字符串，它们是以 NULL 结尾。 要调用的代码检查这两个条件。  
   
-##  <a name="a-namequeryguidvaluea--cregkeyqueryguidvalue"></a><a name="queryguidvalue"></a>CRegKey::QueryGUIDValue  
+##  <a name="queryguidvalue"></a>CRegKey::QueryGUIDValue  
  调用此方法以检索指定的值名称的 GUID 数据。  
   
 ```
@@ -523,7 +553,7 @@ LONG QueryGUIDValue(
 > [!IMPORTANT]
 >  此方法允许调用方指定任何注册表位置，可能会读取不能为受信任的数据。  
   
-##  <a name="a-namequerymultistringvaluea--cregkeyquerymultistringvalue"></a><a name="querymultistringvalue"></a>CRegKey::QueryMultiStringValue  
+##  <a name="querymultistringvalue"></a>CRegKey::QueryMultiStringValue  
  调用此方法以检索指定的值名称的多字符串数据。  
   
 ```
@@ -552,7 +582,7 @@ LONG QueryMultiStringValue(
 > [!IMPORTANT]
 >  此方法允许调用方指定任何注册表位置，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不能显式处理字符串，它们是以 NULL 结尾。 要调用的代码检查这两个条件。  
   
-##  <a name="a-namequeryqwordvaluea--cregkeyqueryqwordvalue"></a><a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue  
+##  <a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue  
  调用此方法以检索指定的值名称的 QWORD 数据。  
   
 ```
@@ -577,7 +607,7 @@ LONG QueryQWORDValue(
 > [!IMPORTANT]
 >  此方法允许调用方指定任何注册表位置，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不能显式处理字符串，它们是以 NULL 结尾。 要调用的代码检查这两个条件。  
   
-##  <a name="a-namequerystringvaluea--cregkeyquerystringvalue"></a><a name="querystringvalue"></a>CRegKey::QueryStringValue  
+##  <a name="querystringvalue"></a>CRegKey::QueryStringValue  
  调用此方法以检索指定的值名称的字符串数据。  
   
 ```
@@ -606,7 +636,7 @@ LONG QueryStringValue(
 > [!IMPORTANT]
 >  此方法允许调用方指定任何注册表位置，可能会读取不能为受信任的数据。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)函数使用此方法不能显式处理字符串，它们是以 NULL 结尾。 要调用的代码检查这两个条件。  
   
-##  <a name="a-namequeryvaluea--cregkeyqueryvalue"></a><a name="queryvalue"></a>CRegKey::QueryValue  
+##  <a name="queryvalue"></a>CRegKey::QueryValue  
  调用此方法可检索指定的值字段的数据[m_hKey](#m_hkey)。 此方法的更早版本不再受支持，并被标记为**ATL_DEPRECATED**。  
   
 ```
@@ -662,7 +692,7 @@ ATL_DEPRECATED LONG QueryValue(
 > [!IMPORTANT]
 >  此方法允许调用方指定任何注册表位置，可能会读取不能为受信任的数据。 此外，使用此方法的 RegQueryValueEx 函数不会显式处理字符串，它们是`NULL`终止。 要调用的代码检查这两个条件。  
   
-##  <a name="a-namerecursedeletekeya--cregkeyrecursedeletekey"></a><a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey  
+##  <a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey  
  调用此方法以从注册表中删除指定的键并显式删除所有子项。  
   
 ```
@@ -679,7 +709,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="remarks"></a>备注  
  如果该注册表项具有子项，则必须调用此方法来删除项。  
   
-##  <a name="a-namesetbinaryvaluea--cregkeysetbinaryvalue"></a><a name="setbinaryvalue"></a>CRegKey::SetBinaryValue  
+##  <a name="setbinaryvalue"></a>CRegKey::SetBinaryValue  
  调用此方法以设置注册表项的二进制值。  
   
 ```
@@ -705,7 +735,7 @@ LONG SetBinaryValue(
 ### <a name="remarks"></a>备注  
  此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)值写入注册表。  
   
-##  <a name="a-namesetdwordvaluea--cregkeysetdwordvalue"></a><a name="setdwordvalue"></a>CRegKey::SetDWORDValue  
+##  <a name="setdwordvalue"></a>CRegKey::SetDWORDValue  
  调用此方法以设置注册表项的 DWORD 值。  
   
 ```
@@ -725,7 +755,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ### <a name="remarks"></a>备注  
  此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)值写入注册表。  
   
-##  <a name="a-namesetguidvaluea--cregkeysetguidvalue"></a><a name="setguidvalue"></a>CRegKey::SetGUIDValue  
+##  <a name="setguidvalue"></a>CRegKey::SetGUIDValue  
  调用此方法以设置注册表项的 GUID 值。  
   
 ```
@@ -745,7 +775,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ### <a name="remarks"></a>备注  
  此方法利用了`CRegKey::SetStringValue`并将 GUID 转换为字符串，字符串使用[StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893)。  
   
-##  <a name="a-namesetkeyvaluea--cregkeysetkeyvalue"></a><a name="setkeyvalue"></a>CRegKey::SetKeyValue  
+##  <a name="setkeyvalue"></a>CRegKey::SetKeyValue  
  调用此方法以使用指定的项指定的值字段中存储数据。  
   
 ```
@@ -771,7 +801,7 @@ LONG SetKeyValue(
 ### <a name="remarks"></a>备注  
  调用此方法以创建或打开`lpszKeyName`密钥并将存储`lpszValue`中的数据`lpszValueName`值字段。  
   
-##  <a name="a-namesetkeysecuritya--cregkeysetkeysecurity"></a><a name="setkeysecurity"></a>CRegKey::SetKeySecurity  
+##  <a name="setkeysecurity"></a>CRegKey::SetKeySecurity  
  调用此方法以设置该注册表项的安全。  
   
 ```
@@ -798,7 +828,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="remarks"></a>备注  
  设置密钥的安全属性。 请参阅[RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314)的更多详细信息。  
   
-##  <a name="a-namesetmultistringvaluea--cregkeysetmultistringvalue"></a><a name="setmultistringvalue"></a>CRegKey::SetMultiStringValue  
+##  <a name="setmultistringvalue"></a>CRegKey::SetMultiStringValue  
  调用此方法以设置注册表项的多字符串值。  
   
 ```
@@ -818,7 +848,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ### <a name="remarks"></a>备注  
  此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)值写入注册表。  
   
-##  <a name="a-namesetqwordvaluea--cregkeysetqwordvalue"></a><a name="setqwordvalue"></a>CRegKey::SetQWORDValue  
+##  <a name="setqwordvalue"></a>CRegKey::SetQWORDValue  
  调用此方法以设置注册表项的 QWORD 值。  
   
 ```
@@ -838,7 +868,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ### <a name="remarks"></a>备注  
  此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)值写入注册表。  
   
-##  <a name="a-namesetstringvaluea--cregkeysetstringvalue"></a><a name="setstringvalue"></a>CRegKey::SetStringValue  
+##  <a name="setstringvalue"></a>CRegKey::SetStringValue  
  调用此方法以设置注册表项的字符串值。  
   
 ```
@@ -864,7 +894,7 @@ LONG SetStringValue(
 ### <a name="remarks"></a>备注  
  此方法使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx)值写入注册表。  
   
-##  <a name="a-namesetvaluea--cregkeysetvalue"></a><a name="setvalue"></a>CRegKey::SetValue  
+##  <a name="setvalue"></a>CRegKey::SetValue  
  调用此方法以将数据存储在指定的值字段中的[m_hKey](#m_hkey)。 此方法的更早版本不再受支持，并被标记为**ATL_DEPRECATED**。  
   
 ```

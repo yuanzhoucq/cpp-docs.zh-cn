@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IView
+- No header/IView
+- No header/IView::OnActivateView
+- No header/IView::OnInitialUpdate
+- No header/IView::OnUpdate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +75,7 @@ interface class IView
 ## <a name="requirements"></a>要求  
  标头︰ afxwinforms.h (在程序集 atlmfc\lib\mfcmifc80.dll 中定义)  
 
-## <a name="a-nameonactivateviewa-iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+## <a name="onactivateview"></a>IView::OnActivateView  
 激活或停用视图时由 MFC 调用。
 ```
 void OnActivateView(bool activate);
@@ -80,13 +84,13 @@ void OnActivateView(bool activate);
 `activate`  
 指示是否视图处于激活还是停用状态。  
 
-## <a name="a-nameoninitialupdatea-iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate
+## <a name="oninitialupdate"></a>IView::OnInitialUpdate
 查看第一次附加到文档之后, 但在最初显示的视图之前，由框架调用。
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="a-nameonupdatea-iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate 
+## <a name="onupdate"></a>IView::OnUpdate 
 由 MFC 视图的文档，修改后调用。  
 ```
 void OnUpdate();

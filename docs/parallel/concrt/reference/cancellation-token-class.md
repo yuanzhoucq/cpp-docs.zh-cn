@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplcancellation_token/concurrency::cancellation_token
+- cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::deregister_callback
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_cancelable
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 93d5abe132203a53f3ffac8490fe32604e7e896e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 类
@@ -52,28 +59,28 @@ class cancellation_token;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[cancellation_token 构造函数](#ctor)||  
+|[cancellation_token](#ctor)||  
 |[~ cancellation_token 析构函数](#dtor)||  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[deregister_callback 方法](#deregister_callback)|通过 `register` 方法基于注册时返回的 `cancellation_token_registration` 对象移除之前注册的回调。|  
-|[is_cancelable 方法](#is_cancelable)|返回有关此标记是否可取消的指示。|  
-|[is_canceled 方法](#is_canceled)|如果标记已取消，则返回 `true`。|  
-|[none 方法](#none)|返回一个取消标记，此标记绝不会受到取消。|  
-|[register_callback 方法](#register_callback)|使用标记注册一个回调函数。 取消该标记时，将进行回调。 请注意，如果在调用此方法时已删除此标记，则将立即同步进行回调。|  
+|[deregister_callback](#deregister_callback)|通过 `register` 方法基于注册时返回的 `cancellation_token_registration` 对象移除之前注册的回调。|  
+|[is_cancelable](#is_cancelable)|返回有关此标记是否可取消的指示。|  
+|[is_canceled](#is_canceled)|如果标记已取消，则返回 `true`。|  
+|[none](#none)|返回一个取消标记，此标记绝不会受到取消。|  
+|[register_callback](#register_callback)|使用标记注册一个回调函数。 取消该标记时，将进行回调。 请注意，如果在调用此方法时已删除此标记，则将立即同步进行回调。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[运算符 ！ = 运算符](#operator_neq)||  
-|[运算符 = 运算符](#operator_eq)||  
-|[运算符 = = 运算符](#operator_eq_eq)||  
+|[operator!=](#operator_neq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `cancellation_token`  
@@ -83,13 +90,13 @@ class cancellation_token;
   
  **命名空间：** 并发  
   
-##  <a name="a-namedtora-cancellationtoken"></a><a name="dtor"></a>~ cancellation_token 
+##  <a name="dtor"></a>~ cancellation_token 
 
 ```
 ~cancellation_token();
 ```  
   
-##  <a name="a-namectora-cancellationtoken"></a><a name="ctor"></a>cancellation_token 
+##  <a name="ctor"></a>cancellation_token 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -100,7 +107,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>参数  
  `_Src`  
   
-##  <a name="a-namederegistercallbacka-deregistercallback"></a><a name="deregister_callback"></a>deregister_callback 
+##  <a name="deregister_callback"></a>deregister_callback 
 
  通过 `register` 方法基于注册时返回的 `cancellation_token_registration` 对象移除之前注册的回调。  
   
@@ -112,7 +119,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
  `_Registration`  
  与将取消注册的回调对应的 `cancellation_token_registration` 对象。 此标记必须先前已从对 `register` 的调用中返回。  
   
-##  <a name="a-nameiscancelablea-iscancelable"></a><a name="is_cancelable"></a>is_cancelable 
+##  <a name="is_cancelable"></a>is_cancelable 
 
  返回有关此标记是否可取消的指示。  
   
@@ -123,7 +130,7 @@ bool is_cancelable() const;
 ### <a name="return-value"></a>返回值  
  有关此标记是否可以取消的指示。  
   
-##  <a name="a-nameiscanceleda-iscanceled"></a><a name="is_canceled"></a>is_canceled 
+##  <a name="is_canceled"></a>is_canceled 
 
  如果标记已取消，则返回 `true`。  
   
@@ -134,7 +141,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>返回值  
  如果标记已取消，则值为 `true`；否则值为 `false`。  
   
-##  <a name="a-namenonea-none"></a><a name="none"></a>无 
+##  <a name="none"></a>无 
 
  返回一个取消标记，此标记绝不会受到取消。  
   
@@ -145,7 +152,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>返回值  
  无法取消的取消标记。  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>运算符 ！ = 
+##  <a name="operator_neq"></a>运算符 ！ = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -156,7 +163,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a>运算符 = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -169,7 +176,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>运算符 = = 
+##  <a name="operator_eq_eq"></a>运算符 = = 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -180,7 +187,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-nameregistercallbacka-registercallback"></a><a name="register_callback"></a>register_callback 
+##  <a name="register_callback"></a>register_callback 
 
  使用标记注册一个回调函数。 取消该标记时，将进行回调。 请注意，如果在调用此方法时已删除此标记，则将立即同步进行回调。  
   
@@ -200,5 +207,5 @@ template<typename _Function>
  可在 `cancellation_token_registration` 方法中用于取消注册之前注册的回调并防止进行该回调的 `deregister` 对象。 该方法将引发[invalid_operation](invalid-operation-class.md)异常，如果它调用`cancellation_token`使用创建的对象[cancellation_token:: none](#none)方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

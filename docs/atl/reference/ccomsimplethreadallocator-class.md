@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSimpleThreadAllocator
-- ATL::CComSimpleThreadAllocator
-- ATL.CComSimpleThreadAllocator
+- ATLBASE/ATL::CComSimpleThreadAllocator
+- ATLBASE/ATL::CComSimpleThreadAllocator::GetThread
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -67,7 +67,7 @@ class CComSimpleThreadAllocator
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
-##  <a name="a-namegetthreada--ccomsimplethreadallocatorgetthread"></a><a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
+##  <a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
  选择一个线程通过指定序列中的下一个线程。  
   
 ```

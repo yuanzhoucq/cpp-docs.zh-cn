@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[access_type 枚举](#access_type)|[queuing_mode 枚举](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>access_type 枚举  
+##  <a name="access_type"></a>access_type 枚举  
  用来表示对数据的访问的各种类型的枚举类型。  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|共享。 分配在快捷键上可访问且是读取和写入在 CPU 上。|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>queuing_mode 枚举  
+##  <a name="queuing_mode"></a>queuing_mode 枚举  
  指定在快捷键支持的排队模式。  
   
 ```  

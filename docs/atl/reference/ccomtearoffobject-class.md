@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComTearOffObject<Base>
-- ATL::CComTearOffObject
-- ATL.CComTearOffObject
-- ATL.CComTearOffObject<Base>
 - CComTearOffObject
+- ATLCOM/ATL::CComTearOffObject
+- ATLCOM/ATL::CComTearOffObject::CComTearOffObject
+- ATLCOM/ATL::CComTearOffObject::AddRef
+- ATLCOM/ATL::CComTearOffObject::QueryInterface
+- ATLCOM/ATL::CComTearOffObject::Release
+- ATLCOM/ATL::CComTearOffObjectBase
+- ATLCOM/ATL::m_pOwner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +112,7 @@ class CComTearOffObject : public Base
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomtearoffobjectaddref"></a><a name="addref"></a>CComTearOffObject::AddRef  
+##  <a name="addref"></a>CComTearOffObject::AddRef  
  递增引用计数的`CComTearOffObject`由一个对象。  
   
 ```
@@ -119,7 +122,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>返回值  
  一个值，可能会有助于诊断和测试。  
   
-##  <a name="a-nameccomtearoffobjecta--ccomtearoffobjectccomtearoffobject"></a><a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
+##  <a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
  构造函数。  
   
 ```
@@ -133,7 +136,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>备注  
  该所有者的引用计数递增&1;。  
   
-##  <a name="a-namedtora--ccomtearoffobjectccomtearoffobject"></a><a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
+##  <a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
  析构函数。  
   
 ```
@@ -143,7 +146,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源，而该模块的调用 FinalRelease，并减少锁计数。  
   
-##  <a name="a-nameccomtearoffobjectbasea--ccomtearoffobjectccomtearoffobjectbase"></a><a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
+##  <a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
  构造函数。  
   
 ```
@@ -153,7 +156,7 @@ CComTearOffObjectBase();
 ### <a name="remarks"></a>备注  
  初始化[m_pOwner](#m_powner)成员**NULL**。  
   
-##  <a name="a-namempownera--ccomtearoffobjectmpowner"></a><a name="m_powner"></a>CComTearOffObject::m_pOwner  
+##  <a name="m_powner"></a>CComTearOffObject::m_pOwner  
  一个指向[CComObject](../../atl/reference/ccomobject-class.md)对象派生自*所有者*。  
   
 ```
@@ -167,7 +170,7 @@ CComObject<Owner>* m_pOwner;
 ### <a name="remarks"></a>备注  
  将指针初始化为**NULL**在构造期间。  
   
-##  <a name="a-namequeryinterfacea--ccomtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>CComTearOffObject::QueryInterface  
  检索指向所请求的接口的指针。  
   
 ```
@@ -187,7 +190,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>备注  
  对于您分离式的类上的接口第一次查询。 如果接口不存在，所有者对象上的接口的查询。 如果所请求的接口是**IUnknown**，返回**IUnknown**的所有者。  
   
-##  <a name="a-namereleasea--ccomtearoffobjectrelease"></a><a name="release"></a>CComTearOffObject::Release  
+##  <a name="release"></a>CComTearOffObject::Release  
  引用计数按&1; 递减并且，如果引用计数为零时，将删除`CComTearOffObject`。  
   
 ```

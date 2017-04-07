@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDispatchException
+- AFXDISP/COleDispatchException
+- AFXDISP/COleDispatchException::m_dwHelpContext
+- AFXDISP/COleDispatchException::m_strDescription
+- AFXDISP/COleDispatchException::m_strHelpFile
+- AFXDISP/COleDispatchException::m_strSource
+- AFXDISP/COleDispatchException::m_wCode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +86,7 @@ class COleDispatchException : public CException
 ## <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
   
-##  <a name="a-namemdwhelpcontexta--coledispatchexceptionmdwhelpcontext"></a><a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
+##  <a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
  标识应用程序的帮助中的帮助上下文 (。HLP) 文件。  
   
 ```  
@@ -93,7 +99,7 @@ DWORD m_dwHelpContext;
 ### <a name="example"></a>示例  
   请参阅示例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="a-namemstrdescriptiona--coledispatchexceptionmstrdescription"></a><a name="m_strdescription"></a>COleDispatchException::m_strDescription  
+##  <a name="m_strdescription"></a>COleDispatchException::m_strDescription  
  包含一个口头错误说明，如"磁盘已满。"  
   
 ```  
@@ -106,14 +112,14 @@ CString m_strDescription;
 ### <a name="example"></a>示例  
   请参阅示例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="a-namemstrhelpfilea--coledispatchexceptionmstrhelpfile"></a><a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
+##  <a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
  框架填充应用程序的帮助文件的名称与此字符串中。  
   
 ```  
 CString m_strHelpFile;  
 ```  
   
-##  <a name="a-namemstrsourcea--coledispatchexceptionmstrsource"></a><a name="m_strsource"></a>COleDispatchException::m_strSource  
+##  <a name="m_strsource"></a>COleDispatchException::m_strSource  
  框架填充的应用程序生成了异常的名称与此字符串中。  
   
 ```  
@@ -123,7 +129,7 @@ CString m_strSource;
 ### <a name="example"></a>示例  
   请参阅示例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="a-namemwcodea--coledispatchexceptionmwcode"></a><a name="m_wcode"></a>COleDispatchException::m_wCode  
+##  <a name="m_wcode"></a>COleDispatchException::m_wCode  
  包含特定于您的应用程序的错误代码。  
   
 ```  

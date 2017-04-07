@@ -9,11 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComAggObject<contained>
-- ATL.CComAggObject
-- ATL.CComAggObject<contained>
 - CComAggObject
-- ATL::CComAggObject
+- ATLCOM/ATL::CComAggObject
+- ATLCOM/ATL::CComAggObject::CComAggObject
+- ATLCOM/ATL::CComAggObject::AddRef
+- ATLCOM/ATL::CComAggObject::CreateInstance
+- ATLCOM/ATL::CComAggObject::FinalConstruct
+- ATLCOM/ATL::CComAggObject::FinalRelease
+- ATLCOM/ATL::CComAggObject::QueryInterface
+- ATLCOM/ATL::CComAggObject::Release
+- ATLCOM/ATL::CComAggObject::m_contained
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +108,7 @@ class CComAggObject : public IUnknown,
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomaggobjectaddref"></a><a name="addref"></a>CComAggObject::AddRef  
+##  <a name="addref"></a>CComAggObject::AddRef  
  递增上聚合的对象的引用计数。  
   
 ```
@@ -113,7 +118,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>返回值  
  可能是有用的诊断或测试一个值。  
   
-##  <a name="a-nameccomaggobjecta--ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a>CComAggObject::CComAggObject  
+##  <a name="ccomaggobject"></a>CComAggObject::CComAggObject  
  构造函数。  
   
 ```
@@ -129,7 +134,7 @@ CComAggObject(void* pv);
   
  析构函数递减模块锁计数。  
   
-##  <a name="a-namedtora--ccomaggobjectccomaggobject"></a><a name="dtor"></a>CComAggObject:: ~ CComAggObject  
+##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject  
  析构函数。  
   
 ```
@@ -139,7 +144,7 @@ CComAggObject(void* pv);
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源，调用[FinalRelease](#finalrelease)，并减少模块锁计数。  
   
-##  <a name="a-namecreateinstancea--ccomaggobjectcreateinstance"></a><a name="createinstance"></a>CComAggObject::CreateInstance  
+##  <a name="createinstance"></a>CComAggObject::CreateInstance  
  此静态函数允许您创建一个新**CComAggObject** `contained` ** > **对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
@@ -160,7 +165,7 @@ static HRESULT WINAPI CreateInstance(
   
  如果执行不需要直接访问对象，但仍想要创建新的对象，而不需要的开销`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)相反。  
   
-##  <a name="a-namefinalconstructa--ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a>CComAggObject::FinalConstruct  
+##  <a name="finalconstruct"></a>CComAggObject::FinalConstruct  
  调用对象构造的最后阶段，此方法对中执行任何最终初始化[m_contained](#m_contained)成员。  
   
 ```
@@ -170,14 +175,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namefinalreleasea--ccomaggobjectfinalrelease"></a><a name="finalrelease"></a>CComAggObject::FinalRelease  
+##  <a name="finalrelease"></a>CComAggObject::FinalRelease  
  在对象销毁过程中调用，此方法释放[m_contained](#m_contained)成员。  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="a-namemcontaineda--ccomaggobjectmcontained"></a><a name="m_contained"></a>CComAggObject::m_contained  
+##  <a name="m_contained"></a>CComAggObject::m_contained  
  一个[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)从您的类派生的对象。  
   
 ```
@@ -191,7 +196,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>备注  
  所有**IUnknown**调用通过`m_contained`委派给未知的外部对象。  
   
-##  <a name="a-namequeryinterfacea--ccomaggobjectqueryinterface"></a><a name="queryinterface"></a>CComAggObject::QueryInterface  
+##  <a name="queryinterface"></a>CComAggObject::QueryInterface  
  检索指向所请求的接口的指针。  
   
 ```
@@ -216,7 +221,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="remarks"></a>备注  
  如果所请求的接口是**IUnknown**，`QueryInterface`返回指向聚合对象本身的指针**IUnknown**和递增引用计数。 否则，此方法通过接口会询问`CComContainedObject`成员， [m_contained](#m_contained)。  
   
-##  <a name="a-namereleasea--ccomaggobjectrelease"></a><a name="release"></a>CComAggObject::Release  
+##  <a name="release"></a>CComAggObject::Release  
  聚合的对象的引用计数递减。  
   
 ```

@@ -1,32 +1,48 @@
 ---
-title: "编译器错误 C2955 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2955"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2955"
+title: "编译器错误 C2955 |Microsoft 文档"
+ms.custom: 
+ms.date: 03/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2955
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 编译器错误 C2955
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 1d2d589ad29896cda2657888c616388e50cc397a
+ms.lasthandoff: 03/29/2017
 
-“标识符”：类模板或别名泛型的使用需要模板或泛型参数列表  
+---
+# <a name="compiler-error-c2955"></a>编译器错误 C2955
+“标识符”：类模板或别名泛型的使用需要模板或泛型自变量列表  
   
- 在没有模板和泛型参数列表的情况下，你不能将类模板或类泛型用作标识符。  
+ 在没有模板和泛型自变量列表的情况下，你不能将类模板或类泛型用作标识符。  
   
  有关详细信息，请参阅[类模板](../../cpp/class-templates.md)。  
   
@@ -77,3 +93,16 @@ int main() {
    GC <int>^ g;  
 }  
 ```
+
+## <a name="example"></a>示例
+**Visual Studio 2017 及更高版本︰**编译器正确诊断缺少模板自变量列表，当模板出现在模板参数列表中 （例如作为默认模板自变量或非类型模板参数的一部分）。 下列代码在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中引发错误。
+
+```
+template <class T> class ListNode;
+template <class T> using ListNodeMember = ListNode<T> T::*;
+template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember': use of alias 
+                                                     // template requires template argument list
+
+// correct:  template <class T, ListNodeMember<T> M> class ListHead;
+```
+

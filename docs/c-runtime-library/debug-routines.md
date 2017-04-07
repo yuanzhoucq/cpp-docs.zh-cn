@@ -39,8 +39,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: fc61db0c2078432ab32030ce897884275d8d2084
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 41e3f6151dc3bec38cd672deee681c37e090507f
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="debug-routines"></a>调试例程
@@ -58,43 +59,43 @@ C 运行时库的调试版本提供了很多诊断服务，便于调试程序并
   
 ### <a name="debug-versions-of-the-c-run-time-library-routines"></a>C 运行时库例程的调试版本  
   
-|例程|使用|.NET Framework 等效项|  
-|-------------|---------|-------------------------------|  
-|[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|计算表达式，并在结果是 FALSE 时生成调试报告|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
-|[_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|类似于 `_ASSERT`，但包括生成报告中的失败表达式|[System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)|  
-|[_CrtCheckMemory](../c-runtime-library/reference/crtcheckmemory.md)|确认在调试堆上分配的内存块的完整性|[System::Diagnostics::PerformanceCounter](https://msdn.microsoft.com/en-us/library/system.diagnostics.performancecounter.aspx)|  
-|[_CrtDbgBreak](../c-runtime-library/reference/crtdbgbreak.md)|设置一个断点。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtDbgReport、_CrtDbgReportW](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)|生成具有用户消息的调试报表并将此报表发送到三个可能的目标|[System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)、[System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)、[System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)、[System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)|  
-|[_CrtDoForAllClientObjects](../c-runtime-library/reference/crtdoforallclientobjects.md)|为堆中的所有 `_CLIENT_BLOCK` 类型调用应用程序提供的函数|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtDumpMemoryLeaks](../c-runtime-library/reference/crtdumpmemoryleaks.md)|发生了大量内存泄漏时转储调试堆上的所有内存块|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtIsMemoryBlock](../c-runtime-library/reference/crtismemoryblock.md)|确认指定的内存块位于本地堆，并且具有有效的调试堆块类型标识符|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtIsValidHeapPointer](../c-runtime-library/reference/crtisvalidheappointer.md)|验证指定的指针是否位于本地堆中|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtIsValidPointer](../c-runtime-library/reference/crtisvalidpointer.md)|验证指定的内存范围对于读取和写入是否有效|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtMemCheckpoint](../c-runtime-library/reference/crtmemcheckpoint.md)|获取调试堆的当前状态并将其存储在应用程序提供的 `_CrtMemState` 结构中|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtMemDifference](../c-runtime-library/reference/crtmemdifference.md)|比较两个内存状态的重要差异，并返回结果|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtMemDumpAllObjectsSince](../c-runtime-library/reference/crtmemdumpallobjectssince.md)|在提取指定检查点之后或者在开始执行程序时转储堆上的有关对象的信息|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtMemDumpStatistics](../c-runtime-library/reference/crtmemdumpstatistics.md)|以用户可读的形式转储指定内存状态的调试标头信息|[System::Diagnostics::PerformanceCounter](https://msdn.microsoft.com/en-us/library/system.diagnostics.performancecounter.aspx)|  
-|[_CrtReportBlockType](../c-runtime-library/reference/crtreportblocktype.md)|返回与给定调试堆块指针相关联的块类型/子类型。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtSetAllocHook](../c-runtime-library/reference/crtsetallochook.md)|通过挂钩到 C 运行时调试内存分配过程安装客户端定义的分配函数|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtSetBreakAlloc](../c-runtime-library/reference/crtsetbreakalloc.md)|在指定的对象分配序号上设置断点|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md)|检索或修改 `_crtDbgFlag` 标志的状态，以控制调试堆管理器的分配行为|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtSetDumpClient](../c-runtime-library/reference/crtsetdumpclient.md)|安装每次调用调试转储函数来转储 `_CLIENT_BLOCK` 类型内存块时所调用的应用程序定义的函数|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtSetReportFile](../c-runtime-library/reference/crtsetreportfile.md)|标识被 `_CrtDbgReport` 用作特定报表类型的目标的文件或流|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtSetReportHook](../c-runtime-library/reference/crtsetreporthook.md)|通过以下方式安装客户端定义的报告函数：将该函数挂钩到 C 运行时调试报告过程中|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtSetReportHook2、_CrtSetReportHookW2](../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)|通过以下方式安装或卸载客户端定义的报告函数：将该函数挂钩到 C 运行时调试报告过程中。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_CrtSetReportMode](../c-runtime-library/reference/crtsetreportmode.md)|指定由 `_CrtDbgReport` 生成的特定报表类型的一般目标|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_RPT&#91;0,1,2,3,4&#93;](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|通过调用带格式字符串和可变数量参数的 `_CrtDbgReport` 生成调试报表来跟踪应用程序的进度。 提供了无源文件和行号信息。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_RPTF&#91;0,1,2,3,4&#93;](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|类似于 `_RPTn` 宏，但提供发起报表请求的源文件名和行号|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|在具有额外空间的堆中为调试标头和覆盖缓冲区分配指定数量的内存块|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|通过展开或收缩块调整堆上指定内存块的大小|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_free_dbg](../c-runtime-library/reference/free-dbg.md)|释放堆上的内存块|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
+|例程|使用|  
+|-------------|---------|  
+|[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|计算表达式，并在结果是 FALSE 时生成调试报告|  
+|[_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|类似于 `_ASSERT`，但包括生成报告中的失败表达式|  
+|[_CrtCheckMemory](../c-runtime-library/reference/crtcheckmemory.md)|确认在调试堆上分配的内存块的完整性|  
+|[_CrtDbgBreak](../c-runtime-library/reference/crtdbgbreak.md)|设置一个断点。|  
+|[_CrtDbgReport、_CrtDbgReportW](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)|生成具有用户消息的调试报表并将此报表发送到三个可能的目标|  
+|[_CrtDoForAllClientObjects](../c-runtime-library/reference/crtdoforallclientobjects.md)|为堆中的所有 `_CLIENT_BLOCK` 类型调用应用程序提供的函数|  
+|[_CrtDumpMemoryLeaks](../c-runtime-library/reference/crtdumpmemoryleaks.md)|发生了大量内存泄漏时转储调试堆上的所有内存块|  
+|[_CrtIsMemoryBlock](../c-runtime-library/reference/crtismemoryblock.md)|确认指定的内存块位于本地堆，并且具有有效的调试堆块类型标识符|  
+|[_CrtIsValidHeapPointer](../c-runtime-library/reference/crtisvalidheappointer.md)|验证指定的指针是否位于本地堆中|  
+|[_CrtIsValidPointer](../c-runtime-library/reference/crtisvalidpointer.md)|验证指定的内存范围对于读取和写入是否有效|  
+|[_CrtMemCheckpoint](../c-runtime-library/reference/crtmemcheckpoint.md)|获取调试堆的当前状态并将其存储在应用程序提供的 `_CrtMemState` 结构中|  
+|[_CrtMemDifference](../c-runtime-library/reference/crtmemdifference.md)|比较两个内存状态的重要差异，并返回结果|  
+|[_CrtMemDumpAllObjectsSince](../c-runtime-library/reference/crtmemdumpallobjectssince.md)|在提取指定检查点之后或者在开始执行程序时转储堆上的有关对象的信息|  
+|[_CrtMemDumpStatistics](../c-runtime-library/reference/crtmemdumpstatistics.md)|以用户可读的形式转储指定内存状态的调试标头信息|  
+|[_CrtReportBlockType](../c-runtime-library/reference/crtreportblocktype.md)|返回与给定调试堆块指针相关联的块类型/子类型。|  
+|[_CrtSetAllocHook](../c-runtime-library/reference/crtsetallochook.md)|通过挂钩到 C 运行时调试内存分配过程安装客户端定义的分配函数|  
+|[_CrtSetBreakAlloc](../c-runtime-library/reference/crtsetbreakalloc.md)|在指定的对象分配序号上设置断点|  
+|[_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md)|检索或修改 `_crtDbgFlag` 标志的状态，以控制调试堆管理器的分配行为|  
+|[_CrtSetDumpClient](../c-runtime-library/reference/crtsetdumpclient.md)|安装每次调用调试转储函数来转储 `_CLIENT_BLOCK` 类型内存块时所调用的应用程序定义的函数|  
+|[_CrtSetReportFile](../c-runtime-library/reference/crtsetreportfile.md)|标识被 `_CrtDbgReport` 用作特定报表类型的目标的文件或流|  
+|[_CrtSetReportHook](../c-runtime-library/reference/crtsetreporthook.md)|通过以下方式安装客户端定义的报告函数：将该函数挂钩到 C 运行时调试报告过程中|  
+|[_CrtSetReportHook2、_CrtSetReportHookW2](../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)|通过以下方式安装或卸载客户端定义的报告函数：将该函数挂钩到 C 运行时调试报告过程中。|  
+|[_CrtSetReportMode](../c-runtime-library/reference/crtsetreportmode.md)|指定由 `_CrtDbgReport` 生成的特定报表类型的一般目标|  
+|[_RPT&#91;0,1,2,3,4&#93;](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|通过调用带格式字符串和可变数量参数的 `_CrtDbgReport` 生成调试报表来跟踪应用程序的进度。 提供了无源文件和行号信息。|  
+|[_RPTF&#91;0,1,2,3,4&#93;](../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)|类似于 `_RPTn` 宏，但提供发起报表请求的源文件名和行号|  
+|[_calloc_dbg](../c-runtime-library/reference/calloc-dbg.md)|在具有额外空间的堆中为调试标头和覆盖缓冲区分配指定数量的内存块|  
+|[_expand_dbg](../c-runtime-library/reference/expand-dbg.md)|通过展开或收缩块调整堆上指定内存块的大小|  
+|[_free_dbg](../c-runtime-library/reference/free-dbg.md)|释放堆上的内存块|  
 |[_fullpath_dbg、_wfullpath_dbg](../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md)|创建指定相对路径名称的绝对或完整路径名称，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|[System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)|  
-|[_getcwd_dbg、_wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|获取当前工作目录，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|在具有额外空间的堆中为调试标头和覆盖缓冲区分配内存块|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|计算堆上的内存块大小|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_realloc_dbg](../c-runtime-library/reference/realloc-dbg.md)|通过移动和/或调整块的大小重新分配堆上的指定内存块|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_strdup_dbg、_wcsdup_dbg](../c-runtime-library/reference/strdup-dbg-wcsdup-dbg.md)|复制字符串，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|[System::String::Clone](https://msdn.microsoft.com/en-us/library/system.string.clone.aspx)|  
-|[_tempnam_dbg、_wtempnam_dbg](../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md)|生成可用于创建临时文件的名称，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
+|[_getcwd_dbg、_wgetcwd_dbg](../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md)|获取当前工作目录，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|  
+|[_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md)|在具有额外空间的堆中为调试标头和覆盖缓冲区分配内存块|  
+|[_msize_dbg](../c-runtime-library/reference/msize-dbg.md)|计算堆上的内存块大小|  
+|[_realloc_dbg](../c-runtime-library/reference/realloc-dbg.md)|通过移动和/或调整块的大小重新分配堆上的指定内存块|  
+|[_strdup_dbg、_wcsdup_dbg](../c-runtime-library/reference/strdup-dbg-wcsdup-dbg.md)|复制字符串，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|  
+|[_tempnam_dbg、_wtempnam_dbg](../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md)|生成可用于创建临时文件的名称，使用 [_malloc_dbg](../c-runtime-library/reference/malloc-dbg.md) 来分配内存。|  
   
  可以使用调试例程逐步完成调试过程中大部分其他 C 运行时例程的源代码。 但是，Microsoft 认为一些技术是专有的，因此，不会为这些例程提供源代码。 这些例程大多数属于异常处理或浮点处理组，但也包含一些其他例程。 下表列出了这些例程。  
   
@@ -133,8 +134,3 @@ C 运行时库的调试版本提供了很多诊断服务，便于调试程序并
 ## <a name="see-also"></a>另请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)   
  [运行时错误检查](../c-runtime-library/run-time-error-checking.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

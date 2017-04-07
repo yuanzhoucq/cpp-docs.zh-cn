@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSimpleArray
-- ATL::CSimpleArray
 - CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray::CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray::Add
+- ATLSIMPCOLL/ATL::CSimpleArray::Find
+- ATLSIMPCOLL/ATL::CSimpleArray::GetData
+- ATLSIMPCOLL/ATL::CSimpleArray::GetSize
+- ATLSIMPCOLL/ATL::CSimpleArray::Remove
+- ATLSIMPCOLL/ATL::CSimpleArray::RemoveAll
+- ATLSIMPCOLL/ATL::CSimpleArray::RemoveAt
+- ATLSIMPCOLL/ATL::CSimpleArray::SetAtIndex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +109,7 @@ class CSimpleArray
 ## <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&86;](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
-##  <a name="a-nameadda--csimplearrayadd"></a><a name="add"></a>CSimpleArray::Add  
+##  <a name="add"></a>CSimpleArray::Add  
  将新元素添加到数组。  
   
 ```
@@ -118,7 +126,7 @@ BOOL Add(const T& t);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&87;](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
-##  <a name="a-namecsimplearraya--csimplearraycsimplearray"></a><a name="csimplearray"></a>CSimpleArray::CSimpleArray  
+##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
  数组对象的构造函数。  
   
 ```
@@ -133,7 +141,7 @@ CSimpleArray();
 ### <a name="remarks"></a>备注  
  初始化数据成员，创建新的空`CSimpleArray`对象或现有的副本`CSimpleArray`对象。  
   
-##  <a name="a-namedtora--csimplearraycsimplearray"></a><a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
  析构函数。  
   
 ```
@@ -143,7 +151,7 @@ CSimpleArray();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="a-namefinda--csimplearrayfind"></a><a name="find"></a>CSimpleArray::Find  
+##  <a name="find"></a>CSimpleArray::Find  
  数组中查找的元素。  
   
 ```
@@ -160,7 +168,7 @@ int Find(const T& t) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&88;](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
-##  <a name="a-namegetdataa--csimplearraygetdata"></a><a name="getdata"></a>CSimpleArray::GetData  
+##  <a name="getdata"></a>CSimpleArray::GetData  
  返回指向数组中存储的数据的指针。  
   
 ```
@@ -170,7 +178,7 @@ T* GetData() const;
 ### <a name="return-value"></a>返回值  
  返回指向数组中的数据的指针。  
   
-##  <a name="a-namegetsizea--csimplearraygetsize"></a><a name="getsize"></a>CSimpleArray::GetSize  
+##  <a name="getsize"></a>CSimpleArray::GetSize  
  返回存储在数组中的元素数量。  
   
 ```
@@ -180,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>返回值  
  返回存储在数组中的元素数量。  
   
-##  <a name="a-nameoperatorata--csimplearrayoperator-"></a><a name="operator_at"></a>CSimpleArray::operator\[\]  
+##  <a name="operator_at"></a>CSimpleArray::operator\[\]  
  从数组中检索元素。  
   
 ```
@@ -197,7 +205,7 @@ T& operator[](int nindex);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&89;](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
-##  <a name="a-nameoperatoreqa--csimplearrayoperator-"></a><a name="operator_eq"></a>CSimpleArray::operator =  
+##  <a name="operator_eq"></a>CSimpleArray::operator =  
  赋值运算符。  
   
 ```
@@ -219,7 +227,7 @@ CSimpleArray<T, TEqual>
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&90;](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
-##  <a name="a-nameremovea--csimplearrayremove"></a><a name="remove"></a>CSimpleArray::Remove  
+##  <a name="remove"></a>CSimpleArray::Remove  
  从数组中移除给定的元素。  
   
 ```
@@ -236,7 +244,7 @@ BOOL Remove(const T& t);
 ### <a name="remarks"></a>备注  
  在删除某个元素后，该数组中的其余元素会重新编号来填充空白区域。  
   
-##  <a name="a-nameremovealla--csimplearrayremoveall"></a><a name="removeall"></a>CSimpleArray::RemoveAll  
+##  <a name="removeall"></a>CSimpleArray::RemoveAll  
  从数组中移除所有元素。  
   
 ```
@@ -246,7 +254,7 @@ void RemoveAll();
 ### <a name="remarks"></a>备注  
  移除当前存储在数组中的所有元素。  
   
-##  <a name="a-nameremoveata--csimplearrayremoveat"></a><a name="removeat"></a>CSimpleArray::RemoveAt  
+##  <a name="removeat"></a>CSimpleArray::RemoveAt  
  从数组中移除指定的元素。  
   
 ```
@@ -263,7 +271,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="remarks"></a>备注  
  在删除某个元素后，该数组中的其余元素会重新编号来填充空白区域。  
   
-##  <a name="a-namesetatindexa--csimplearraysetatindex"></a><a name="setatindex"></a>CSimpleArray::SetAtIndex  
+##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  
  将指定的元素设置数组中。  
   
 ```

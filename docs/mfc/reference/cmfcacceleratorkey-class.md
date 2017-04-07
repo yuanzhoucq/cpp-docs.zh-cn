@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey::CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey::Format
+- AFXACCELERATORKEY/CMFCAcceleratorKey::SetAccelerator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +85,7 @@ class CMFCAcceleratorKey : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxacceleratorkey.h  
   
-##  <a name="a-namecmfcacceleratorkeya--cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
  构造[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象。  
   
 ```  
@@ -96,7 +100,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="remarks"></a>备注  
  如果你未提供的快捷键在创建时`CMFCAccleratorKey`，使用[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)方法将与快捷键关联起来您`CMFCAcceleratorKey`对象。  
   
-##  <a name="a-nameformata--cmfcacceleratorkeyformat"></a><a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>CMFCAcceleratorKey::Format  
  将转换为其关联的字符串值的加速结构。  
   
 ```  
@@ -110,7 +114,7 @@ void Format(CString& str) const;
 ### <a name="remarks"></a>备注  
  此方法检索关联的快捷键的字符串格式。 您可以设置的字符串格式[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象使用构造函数或方法[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)。  
   
-##  <a name="a-namesetacceleratora--cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
  设置的快捷键[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)对象。  
   
 ```  

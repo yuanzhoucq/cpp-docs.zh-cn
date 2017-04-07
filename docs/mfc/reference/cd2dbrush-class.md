@@ -10,7 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DBrush
-- afxrendertarget/CD2DBrush
+- AFXRENDERTARGET/CD2DBrush
+- AFXRENDERTARGET/CD2DBrush::CD2DBrush
+- AFXRENDERTARGET/CD2DBrush::Attach
+- AFXRENDERTARGET/CD2DBrush::Destroy
+- AFXRENDERTARGET/CD2DBrush::Detach
+- AFXRENDERTARGET/CD2DBrush::Get
+- AFXRENDERTARGET/CD2DBrush::GetOpacity
+- AFXRENDERTARGET/CD2DBrush::GetTransform
+- AFXRENDERTARGET/CD2DBrush::IsValid
+- AFXRENDERTARGET/CD2DBrush::SetOpacity
+- AFXRENDERTARGET/CD2DBrush::SetTransform
+- AFXRENDERTARGET/CD2DBrush::m_pBrush
+- AFXRENDERTARGET/CD2DBrush::m_pBrushProperties
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,14 +107,14 @@ class CD2DBrush : public CD2DResource;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dbrusha--cd2dbrushcd2dbrush"></a><a name="_dtorcd2dbrush"></a>CD2DBrush:: ~ CD2DBrush  
+##  <a name="_dtorcd2dbrush"></a>CD2DBrush:: ~ CD2DBrush  
  析构函数。 当 D2D 画笔对象被销毁时调用。  
   
 ```  
 virtual ~CD2DBrush();
 ```  
   
-##  <a name="a-nameattacha--cd2dbrushattach"></a><a name="attach"></a>CD2DBrush::Attach  
+##  <a name="attach"></a>CD2DBrush::Attach  
  附加现有的资源的对象的接口  
   
 ```  
@@ -113,7 +125,7 @@ void Attach(ID2D1Brush* pResource);
  `pResource`  
  现有资源的接口。 不能为 NULL  
   
-##  <a name="a-namecd2dbrusha--cd2dbrushcd2dbrush"></a><a name="cd2dbrush"></a>CD2DBrush::CD2DBrush  
+##  <a name="cd2dbrush"></a>CD2DBrush::CD2DBrush  
  构造 CD2DBrush 对象。  
   
 ```  
@@ -133,14 +145,14 @@ CD2DBrush(
  `bAutoDestroy`  
  指示所有者 (pParentTarget) 将销毁该对象。  
   
-##  <a name="a-namedestroya--cd2dbrushdestroy"></a><a name="destroy"></a>CD2DBrush::Destroy  
+##  <a name="destroy"></a>CD2DBrush::Destroy  
  销毁 CD2DBrush 对象。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dbrushdetach"></a><a name="detach"></a>CD2DBrush::Detach  
+##  <a name="detach"></a>CD2DBrush::Detach  
  分离对象中的资源接口  
   
 ```  
@@ -150,7 +162,7 @@ ID2D1Brush* Detach();
 ### <a name="return-value"></a>返回值  
  指向已分离的资源接口指针。  
   
-##  <a name="a-namegeta--cd2dbrushget"></a><a name="get"></a>CD2DBrush::Get  
+##  <a name="get"></a>CD2DBrush::Get  
  返回 ID2D1Brush 接口  
   
 ```  
@@ -160,7 +172,7 @@ ID2D1Brush* Get();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1Brush 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namegetopacitya--cd2dbrushgetopacity"></a><a name="getopacity"></a>CD2DBrush::GetOpacity  
+##  <a name="getopacity"></a>CD2DBrush::GetOpacity  
  获取此画笔的不透明度  
   
 ```  
@@ -170,7 +182,7 @@ FLOAT GetOpacity() const;
 ### <a name="return-value"></a>返回值  
  一个介于 0 和 1，该值指示画笔的不透明度之间的值。 此值是常数乘数，可线性扩展由画笔填充的所有像素的 alpha 值。 不透明度值限制为 0 到 1 范围内之前相乘在一起  
   
-##  <a name="a-namegettransforma--cd2dbrushgettransform"></a><a name="gettransform"></a>CD2DBrush::GetTransform  
+##  <a name="gettransform"></a>CD2DBrush::GetTransform  
  获取当前呈现器目标的转换  
   
 ```  
@@ -181,7 +193,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
  `transform`  
  当此方法返回时，包含当前呈现器目标的转换。 此参数未经初始化即被传递  
   
-##  <a name="a-nameisvalida--cd2dbrushisvalid"></a><a name="isvalid"></a>CD2DBrush::IsValid  
+##  <a name="isvalid"></a>CD2DBrush::IsValid  
  检查资源的有效性  
   
 ```  
@@ -191,21 +203,21 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>返回值  
  如果资源是有效，则为，TRUE否则为 FALSE。  
   
-##  <a name="a-namempbrusha--cd2dbrushmpbrush"></a><a name="m_pbrush"></a>CD2DBrush::m_pBrush  
+##  <a name="m_pbrush"></a>CD2DBrush::m_pBrush  
  存储指向 ID2D1Brush 对象的指针。  
   
 ```  
 ID2D1Brush* m_pBrush;  
 ```  
   
-##  <a name="a-namempbrushpropertiesa--cd2dbrushmpbrushproperties"></a><a name="m_pbrushproperties"></a>CD2DBrush::m_pBrushProperties  
+##  <a name="m_pbrushproperties"></a>CD2DBrush::m_pBrushProperties  
  画笔属性。  
   
 ```  
 CD2DBrushProperties* m_pBrushProperties;  
 ```  
   
-##  <a name="a-nameoperatorid2d1brushstara--cd2dbrushoperator-id2d1brush"></a><a name="operator_id2d1brush_star"></a>CD2DBrush::operator ID2D1Brush *  
+##  <a name="operator_id2d1brush_star"></a>CD2DBrush::operator ID2D1Brush *  
  返回 ID2D1Brush 接口  
   
 ```  
@@ -215,7 +227,7 @@ operator ID2D1Brush*();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1Brush 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namesetopacitya--cd2dbrushsetopacity"></a><a name="setopacity"></a>CD2DBrush::SetOpacity  
+##  <a name="setopacity"></a>CD2DBrush::SetOpacity  
  设置此画笔的不透明度  
   
 ```  
@@ -226,7 +238,7 @@ void SetOpacity(FLOAT opacity);
  `opacity`  
  一个介于 0 和 1，该值指示画笔的不透明度之间的值。 此值是常数乘数，可线性扩展由画笔填充的所有像素的 alpha 值。 不透明度值限制为 0 到 1 范围内之前相乘在一起  
   
-##  <a name="a-namesettransforma--cd2dbrushsettransform"></a><a name="settransform"></a>CD2DBrush::SetTransform  
+##  <a name="settransform"></a>CD2DBrush::SetTransform  
  适用于呈现器目标，替换现有转换指定的转换。 所有后续的绘图操作将在转换后的空间  
   
 ```  

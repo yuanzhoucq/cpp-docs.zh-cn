@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplcancellation_token/concurrency::cancellation_token_registration
+- cancellation_token_registration
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration::cancellation_token_registration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 72c317bb95b646a3a97b361ac3248f015cd0f29a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1dd55aff292926b930271257bda583a2f93aba92
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration 类
@@ -54,16 +56,16 @@ class cancellation_token_registration;
   
 |名称|说明|  
 |----------|-----------------|  
-|[cancellation_token_registration 构造函数](#ctor)||  
+|[cancellation_token_registration](#ctor)||  
 |[~ cancellation_token_registration 析构函数](#dtor)||  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|说明|  
 |----------|-----------------|  
-|[运算符 ！ = 运算符](#operator_neq)||  
-|[运算符 = 运算符](#operator_eq)||  
-|[运算符 = = 运算符](#operator_eq_eq)||  
+|[operator!=](#operator_neq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `cancellation_token_registration`  
@@ -73,13 +75,13 @@ class cancellation_token_registration;
   
  **命名空间：** 并发  
   
-##  <a name="a-namedtora-cancellationtokenregistration"></a><a name="dtor"></a>~ cancellation_token_registration 
+##  <a name="dtor"></a>~ cancellation_token_registration 
 
 ```
 ~cancellation_token_registration();
 ```  
   
-##  <a name="a-namectora-cancellationtokenregistration"></a><a name="ctor"></a>cancellation_token_registration 
+##  <a name="ctor"></a>cancellation_token_registration 
 
 ```
 cancellation_token_registration();
@@ -92,7 +94,7 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ### <a name="parameters"></a>参数  
  `_Src`  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>运算符 ！ = 
+##  <a name="operator_neq"></a>运算符 ！ = 
 
 ```
 bool operator!= (const cancellation_token_registration& _Rhs) const;
@@ -103,7 +105,7 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a>运算符 = 
 
 ```
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
@@ -116,7 +118,7 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>运算符 = = 
+##  <a name="operator_eq_eq"></a>运算符 = = 
 
 ```
 bool operator== (const cancellation_token_registration& _Rhs) const;
@@ -128,5 +130,5 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ### <a name="return-value"></a>返回值  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispEventSimpleImpl
-- ATL::IDispEventSimpleImpl
-- ATL.IDispEventSimpleImpl
+- ATLCOM/ATL::IDispEventSimpleImpl
+- ATLCOM/ATL::IDispEventSimpleImpl::Advise
+- ATLCOM/ATL::IDispEventSimpleImpl::DispEventAdvise
+- ATLCOM/ATL::IDispEventSimpleImpl::DispEventUnadvise
+- ATLCOM/ATL::IDispEventSimpleImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfo
+- ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispEventSimpleImpl::Invoke
+- ATLCOM/ATL::IDispEventSimpleImpl::Unadvise
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +120,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameadvisea--idispeventsimpleimpladvise"></a><a name="advise"></a>IDispEventSimpleImpl::Advise  
+##  <a name="advise"></a>IDispEventSimpleImpl::Advise  
  调用此方法以建立与由事件源的连接*pUnk*。  
   
 ```
@@ -135,7 +142,7 @@ HRESULT Advise(IUnknown* pUnk);
   
  `Advise`建立的连接与默认的事件源，它将获取由该对象的默认事件源的 IID [AtlGetObjectSourceInterface](http://msdn.microsoft.com/library/a8528f45-fbfb-4e24-ad1a-1d69b2897155)。  
   
-##  <a name="a-namedispeventadvisea--idispeventsimpleimpldispeventadvise"></a><a name="dispeventadvise"></a>IDispEventSimpleImpl::DispEventAdvise  
+##  <a name="dispeventadvise"></a>IDispEventSimpleImpl::DispEventAdvise  
  调用此方法以建立与由事件源的连接*pUnk*。  
   
 ```
@@ -160,7 +167,7 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
   
  `DispEventAdvise`建立的连接中指定的事件源与`pdiid`。  
   
-##  <a name="a-namedispeventunadvisea--idispeventsimpleimpldispeventunadvise"></a><a name="dispeventunadvise"></a>IDispEventSimpleImpl::DispEventUnadvise  
+##  <a name="dispeventunadvise"></a>IDispEventSimpleImpl::DispEventUnadvise  
  断开与所表示的事件源的连接*pUnk*。  
   
 ```
@@ -185,7 +192,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
   
  `DispEventAdvise`将中断与中指定的事件源建立的连接`pdiid`。  
   
-##  <a name="a-namegetidsofnamesa--idispeventsimpleimplgetidsofnames"></a><a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
  这种实现**IDispatch::GetIDsOfNames**返回**E_NOTIMPL**。  
   
 ```
@@ -200,7 +207,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>备注  
  请参阅[IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettypeinfoa--idispeventsimpleimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
  这种实现**IDispatch::GetTypeInfo**返回**E_NOTIMPL**。  
   
 ```
@@ -213,7 +220,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>备注  
  请参阅[IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettypeinfocounta--idispeventsimpleimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
  这种实现**IDispatch::GetTypeInfoCount**返回**E_NOTIMPL**。  
   
 ```
@@ -223,7 +230,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ### <a name="remarks"></a>备注  
  请参阅[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinvokea--idispeventsimpleimplinvoke"></a><a name="invoke"></a>IDispEventSimpleImpl::Invoke  
+##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
  这种实现**idispatch:: Invoke**调用事件处理程序列出在事件接收器映射。  
   
 ```
@@ -241,7 +248,7 @@ STDMETHOD(Invoke)(
 ### <a name="remarks"></a>备注  
  请参阅[idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)。  
   
-##  <a name="a-nameunadvisea--idispeventsimpleimplunadvise"></a><a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
+##  <a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
  断开与所表示的事件源的连接*pUnk*。  
   
 ```

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl::FreezeEvents
+- ATLCTL/ATL::IOleControlImpl::GetControlInfo
+- ATLCTL/ATL::IOleControlImpl::OnAmbientPropertyChange
+- ATLCTL/ATL::IOleControlImpl::OnMnemonic
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +85,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>要求  
  **标头︰** atlctl.h  
   
-##  <a name="a-namefreezeeventsa--iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
  在 ATL 的实现中，`FreezeEvents`递增控件类`m_nFreezeEvents`数据成员如果`bFreeze`是**TRUE**，并减少`m_nFreezeEvents`如果`bFreeze`是**FALSE**。  
   
 ```
@@ -92,7 +97,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
   
  请参阅[IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetcontrolinfoa--iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
  填写有关控件的键盘行为的信息。  
   
 ```
@@ -105,7 +110,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>返回值  
  返回**E_NOTIMPL**。  
   
-##  <a name="a-nameonambientpropertychangea--iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
  通知一个或多个容器的环境属性已更改一个控件。  
   
 ```
@@ -118,7 +123,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>备注  
  请参阅[IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonmnemonica--iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
  通知控件用户已按指定的键击。  
   
 ```

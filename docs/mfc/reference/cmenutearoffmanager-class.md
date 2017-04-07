@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMenuTearOffManager
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::CMenuTearOffManager
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::Build
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::GetRegPath
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::Initialize
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::IsDynamicID
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::Parse
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::Reset
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::SetInUse
+- AFXMENUTEAROFFMANAGER/CMenuTearOffManager::SetupTearOffMenus
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +95,7 @@ class CMenuTearOffManager : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxmenutearoffmanager.h  
   
-##  <a name="a-namebuilda--cmenutearoffmanagerbuild"></a><a name="build"></a>CMenuTearOffManager::Build  
+##  <a name="build"></a>CMenuTearOffManager::Build  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -100,7 +110,7 @@ void Build(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namecmenutearoffmanagera--cmenutearoffmanagercmenutearoffmanager"></a><a name="cmenutearoffmanager"></a>CMenuTearOffManager::CMenuTearOffManager  
+##  <a name="cmenutearoffmanager"></a>CMenuTearOffManager::CMenuTearOffManager  
  构造[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)对象。  
   
 ```  
@@ -110,7 +120,7 @@ CMenuTearOffManager();
 ### <a name="remarks"></a>备注  
  在大多数情况下，不应创建`CMenuTearOffManager`手动。 您的应用程序框架创建`CMenuTearOffManager`对象在调用时[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。  
   
-##  <a name="a-namegetregpatha--cmenutearoffmanagergetregpath"></a><a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
+##  <a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -121,7 +131,7 @@ LPCTSTR GetRegPath() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameinitializea--cmenutearoffmanagerinitialize"></a><a name="initialize"></a>CMenuTearOffManager::Initialize  
+##  <a name="initialize"></a>CMenuTearOffManager::Initialize  
  初始化[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)对象。  
   
 ```  
@@ -147,7 +157,7 @@ BOOL Initialize(
 ### <a name="remarks"></a>备注  
  从菜单 Id 的范围`uiTearOffMenuFirst`到`uiTearOffMenuLast`必须是连续的时间间隔。 在间隔定义可以出现在应用程序中的同一时间可拖曳菜单数。  
   
-##  <a name="a-nameisdynamicida--cmenutearoffmanagerisdynamicid"></a><a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
+##  <a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -161,7 +171,7 @@ BOOL IsDynamicID(UINT uiID) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameparsea--cmenutearoffmanagerparse"></a><a name="parse"></a>CMenuTearOffManager::Parse  
+##  <a name="parse"></a>CMenuTearOffManager::Parse  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -175,7 +185,7 @@ UINT Parse(CString& str);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namereseta--cmenutearoffmanagerreset"></a><a name="reset"></a>CMenuTearOffManager::Reset  
+##  <a name="reset"></a>CMenuTearOffManager::Reset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -187,7 +197,7 @@ void Reset(HMENU hmenu);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetinusea--cmenutearoffmanagersetinuse"></a><a name="setinuse"></a>CMenuTearOffManager::SetInUse  
+##  <a name="setinuse"></a>CMenuTearOffManager::SetInUse  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -202,7 +212,7 @@ void SetInUse(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetuptearoffmenusa--cmenutearoffmanagersetuptearoffmenus"></a><a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
+##  <a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

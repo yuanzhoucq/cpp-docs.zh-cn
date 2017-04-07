@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
+- AFXINET/CFtpFileFind
+- AFXINET/CFtpFileFind::CFtpFileFind
+- AFXINET/CFtpFileFind::FindFile
+- AFXINET/CFtpFileFind::FindNextFile
+- AFXINET/CFtpFileFind::GetFileURL
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CFtpFileFind : public CFileFind
 ## <a name="requirements"></a>要求  
  **标头︰** afxinet.h  
   
-##  <a name="a-namecftpfilefinda--cftpfilefindcftpfilefind"></a><a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
  调用此成员函数来构造`CFtpFileFind`对象。  
   
 ```  
@@ -109,7 +114,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>示例  
   请参见本主题中前面的类概述中的示例。  
   
-##  <a name="a-namefindfilea--cftpfilefindfindfile"></a><a name="findfile"></a>Cftpfilefind:: Findfile  
+##  <a name="findfile"></a>Cftpfilefind:: Findfile  
  调用该成员函数以找到 FTP 文件。  
   
 ```  
@@ -144,7 +149,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>示例  
   请参阅本主题中前面的示例。  
   
-##  <a name="a-namefindnextfilea--cftpfilefindfindnextfile"></a><a name="findnextfile"></a>Cftpfilefind:: Findnextfile  
+##  <a name="findnextfile"></a>Cftpfilefind:: Findnextfile  
  调用此成员函数以继续时，首先执行调用的文件搜索[FindFile](#findfile)成员函数。  
   
 ```  
@@ -162,7 +167,7 @@ virtual BOOL FindNextFile();
 ### <a name="example"></a>示例  
   请参阅本主题前面的示例。  
   
-##  <a name="a-namegetfileurla--cftpfilefindgetfileurl"></a><a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
  调用此成员函数可获取指定的文件的 URL。  
   
 ```  

@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
-- ATL.CSocketAddr
-- ATL::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr::FindAddr
+- ATLSOCKET/ATL::CSocketAddr::FindINET4Addr
+- ATLSOCKET/ATL::CSocketAddr::FindINET6Addr
+- ATLSOCKET/ATL::CSocketAddr::GetAddrInfo
+- ATLSOCKET/ATL::CSocketAddr::GetAddrInfoList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +83,7 @@ class CSocketAddr
 ## <a name="requirements"></a>要求  
  **标头︰** atlsocket.h  
   
-##  <a name="a-namecsocketaddra--csocketaddrcsocketaddr"></a><a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
  构造函数。  
   
 ```
@@ -88,7 +93,7 @@ CSocketAddr();
 ### <a name="remarks"></a>备注  
  创建一个新`CSocketAddr`对象，然后初始化包含有关主机的响应信息的链接的列表。  
   
-##  <a name="a-namefindaddra--csocketaddrfindaddr"></a><a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>CSocketAddr::FindAddr  
  调用此方法将提供的主机名转换为主机地址。  
   
 ```
@@ -137,7 +142,7 @@ int FindAddr(
 ### <a name="remarks"></a>备注  
  主机名称参数可能是 IPv4 或 IPv6 格式。 此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
   
-##  <a name="a-namefindinet4addra--csocketaddrfindinet4addr"></a><a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
  调用此方法将 IPv4 主机名转换为主机地址。  
   
 ```
@@ -167,7 +172,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>备注  
  此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
   
-##  <a name="a-namefindinet6addra--csocketaddrfindinet6addr"></a><a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
  调用此方法将 IPv6 主机名转换为主机地址。  
   
 ```
@@ -197,7 +202,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>备注  
  此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
   
-##  <a name="a-namegetaddrinfoa--csocketaddrgetaddrinfo"></a><a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
  调用此方法以返回指向中的特定元素的指针**addrinfo**列表。  
   
 ```
@@ -211,7 +216,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>返回值  
  返回一个指向**addrinfo**结构引用的`nIndex`中包含有关主机的响应信息的链接列表。  
   
-##  <a name="a-namegetaddrinfolista--csocketaddrgetaddrinfolist"></a><a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
  调用此方法以返回一个指向**addrinfo**列表。  
   
 ```

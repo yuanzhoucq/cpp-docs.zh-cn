@@ -9,9 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlBaseModule
-- ATL.CAtlBaseModule
 - CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule::CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule::AddResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::GetHInstanceAt
+- ATLCORE/ATL::CAtlBaseModule::GetModuleInstance
+- ATLCORE/ATL::CAtlBaseModule::GetResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::SetResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::m_bInitFailed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +95,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 ## <a name="requirements"></a>要求  
  **标头︰** atlcore.h  
   
-##  <a name="a-nameaddresourceinstancea--catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
+##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
  将资源实例添加到的存储句柄的列表。  
   
 ```
@@ -102,7 +109,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>返回值  
  如果该资源已成功则返回 true，添加 false 否则。  
   
-##  <a name="a-namecatlbasemodulea--catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
+##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
  构造函数。  
   
 ```
@@ -112,7 +119,7 @@ CAtlBaseModule() throw();
 ### <a name="remarks"></a>备注  
  创建 `CAtlBaseModule`。  
   
-##  <a name="a-namegethinstanceata--catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
+##  <a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
  返回指定的资源实例的句柄。  
   
 ```
@@ -126,7 +133,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 ### <a name="return-value"></a>返回值  
  如果没有对应的资源实例存在，请返回的句柄资源实例，或者为 NULL。  
   
-##  <a name="a-namegetmoduleinstancea--catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
  返回从模块实例`CAtlBaseModule`对象。  
   
 ```
@@ -136,7 +143,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="return-value"></a>返回值  
  返回的模块实例。  
   
-##  <a name="a-namegetresourceinstancea--catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
  返回的资源实例。  
   
 ```
@@ -146,7 +153,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="return-value"></a>返回值  
  返回的资源实例。  
   
-##  <a name="a-namembinitfaileda--catlbasemodulembinitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
+##  <a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
  指示是否出现故障的模块初始化的变量。  
   
 ```
@@ -156,7 +163,7 @@ static bool m_bInitFailed;
 ### <a name="remarks"></a>备注  
  如果该模块初始化，false 如果它无法初始化，则为 true。  
   
-##  <a name="a-nameremoveresourceinstancea--catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
+##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
  从存储句柄的列表中删除资源实例。  
   
 ```
@@ -170,7 +177,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>返回值  
  如果资源否则是已成功删除，则返回 false，则返回 true。  
   
-##  <a name="a-namesetresourceinstancea--catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
+##  <a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
  设置的资源实例`CAtlBaseModule`对象。  
   
 ```

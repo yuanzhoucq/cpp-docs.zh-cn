@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CStringElementTraitsI
 - CStringElementTraitsI
-- ATL.CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI::INARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::OUTARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElements
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElementsOrdered
+- ATLCOLL/ATL::CStringElementTraitsI::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ## <a name="requirements"></a>要求  
  **标头︰** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringelementtraitsicompareelements"></a><a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
  调用该静态函数以比较两个字符串元素相等性，忽略大小写差异。  
   
 ```
@@ -105,7 +109,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>备注  
  比较是区分大小写。  
   
-##  <a name="a-namecompareelementsordereda--cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
  调用该静态函数用于比较两个字符串元素，忽略大小写差异。  
   
 ```
@@ -126,7 +130,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>备注  
  比较是区分大小写。  
   
-##  <a name="a-namehasha--cstringelementtraitsihash"></a><a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>CStringElementTraitsI::Hash  
  调用该静态函数来计算给定的字符串元素进行哈希值。  
   
 ```
@@ -140,14 +144,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>返回值  
  返回使用字符串的内容来计算哈希值。  
   
-##  <a name="a-nameinargtypea--cstringelementtraitsiinargtype"></a><a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
  要用于将元素添加到集合类对象的数据类型。  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cstringelementtraitsioutargtype"></a><a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
  要用于从集合类对象中检索元素的数据类型。  
   
 ```

@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DSizeF
 - CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF::CD2DSizeF
+- AFXRENDERTARGET/CD2DSizeF::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-namecd2dsizefa--cd2dsizefcd2dsizef"></a><a name="cd2dsizef"></a>CD2DSizeF::CD2DSizeF  
+##  <a name="cd2dsizef"></a>CD2DSizeF::CD2DSizeF  
  构造 CD2DSizeF 对象从 CSize 对象。  
   
 ```  
@@ -101,7 +103,7 @@ CD2DSizeF(
  `cy`  
  源高度  
   
-##  <a name="a-nameisnulla--cd2dsizefisnull"></a><a name="isnull"></a>CD2DSizeF::IsNull  
+##  <a name="isnull"></a>CD2DSizeF::IsNull  
  返回一个布尔值，该值指示表达式是否包含无效数据 (Null)。  
   
 ```  
@@ -111,7 +113,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>返回值  
  如果宽度和高度都为空;，则返回 TRUE否则为 FALSE。  
   
-##  <a name="a-nameoperatorcsizea--cd2dsizefoperator-csize"></a><a name="operator_csize"></a>CD2DSizeF::operator CSize  
+##  <a name="operator_csize"></a>CD2DSizeF::operator CSize  
  将 CD2DSizeF 转换成 CSize 对象。  
   
 ```  

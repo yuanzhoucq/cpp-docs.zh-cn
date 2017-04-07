@@ -10,6 +10,114 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrlBase
+- AFXHTML/CHtmlEditCtrlBase
+- AFXHTML/CHtmlEditCtrlBase::AddToGlyphTable
+- AFXHTML/CHtmlEditCtrlBase::Bold
+- AFXHTML/CHtmlEditCtrlBase::Button
+- AFXHTML/CHtmlEditCtrlBase::CheckBox
+- AFXHTML/CHtmlEditCtrlBase::ClearSelection
+- AFXHTML/CHtmlEditCtrlBase::Copy
+- AFXHTML/CHtmlEditCtrlBase::Cut
+- AFXHTML/CHtmlEditCtrlBase::Delete
+- AFXHTML/CHtmlEditCtrlBase::DropDownBox
+- AFXHTML/CHtmlEditCtrlBase::EmptyGlyphTable
+- AFXHTML/CHtmlEditCtrlBase::ExecCommand
+- AFXHTML/CHtmlEditCtrlBase::Font
+- AFXHTML/CHtmlEditCtrlBase::GetAbsolutePosition
+- AFXHTML/CHtmlEditCtrlBase::GetBackColor
+- AFXHTML/CHtmlEditCtrlBase::GetBlockFormat
+- AFXHTML/CHtmlEditCtrlBase::GetBlockFormatNames
+- AFXHTML/CHtmlEditCtrlBase::GetBookMark
+- AFXHTML/CHtmlEditCtrlBase::GetDocument
+- AFXHTML/CHtmlEditCtrlBase::GetDocumentHTML
+- AFXHTML/CHtmlEditCtrlBase::GetDocumentTitle
+- AFXHTML/CHtmlEditCtrlBase::GetEvent
+- AFXHTML/CHtmlEditCtrlBase::GetEventSrcElement
+- AFXHTML/CHtmlEditCtrlBase::GetFontFace
+- AFXHTML/CHtmlEditCtrlBase::GetFontSize
+- AFXHTML/CHtmlEditCtrlBase::GetForeColor
+- AFXHTML/CHtmlEditCtrlBase::GetFrameZone
+- AFXHTML/CHtmlEditCtrlBase::GetIsDirty
+- AFXHTML/CHtmlEditCtrlBase::GetShowAlignedSiteTags
+- AFXHTML/CHtmlEditCtrlBase::GetShowAllTags
+- AFXHTML/CHtmlEditCtrlBase::GetShowAreaTags
+- AFXHTML/CHtmlEditCtrlBase::GetShowBRTags
+- AFXHTML/CHtmlEditCtrlBase::GetShowCommentTags
+- AFXHTML/CHtmlEditCtrlBase::GetShowMiscTags
+- AFXHTML/CHtmlEditCtrlBase::GetShowScriptTags
+- AFXHTML/CHtmlEditCtrlBase::GetShowStyleTags
+- AFXHTML/CHtmlEditCtrlBase::GetShowUnknownTags
+- AFXHTML/CHtmlEditCtrlBase::HorizontalLine
+- AFXHTML/CHtmlEditCtrlBase::HyperLink
+- AFXHTML/CHtmlEditCtrlBase::IE50Paste
+- AFXHTML/CHtmlEditCtrlBase::Iframe
+- AFXHTML/CHtmlEditCtrlBase::Image
+- AFXHTML/CHtmlEditCtrlBase::Indent
+- AFXHTML/CHtmlEditCtrlBase::InsFieldSet
+- AFXHTML/CHtmlEditCtrlBase::InsInputButton
+- AFXHTML/CHtmlEditCtrlBase::InsInputHidden
+- AFXHTML/CHtmlEditCtrlBase::InsInputImage
+- AFXHTML/CHtmlEditCtrlBase::InsInputPassword
+- AFXHTML/CHtmlEditCtrlBase::InsInputReset
+- AFXHTML/CHtmlEditCtrlBase::InsInputSubmit
+- AFXHTML/CHtmlEditCtrlBase::InsInputUpload
+- AFXHTML/CHtmlEditCtrlBase::Is1DElement
+- AFXHTML/CHtmlEditCtrlBase::Is2DElement
+- AFXHTML/CHtmlEditCtrlBase::Italic
+- AFXHTML/CHtmlEditCtrlBase::JustifyCenter
+- AFXHTML/CHtmlEditCtrlBase::JustifyLeft
+- AFXHTML/CHtmlEditCtrlBase::JustifyRight
+- AFXHTML/CHtmlEditCtrlBase::ListBox
+- AFXHTML/CHtmlEditCtrlBase::Marquee
+- AFXHTML/CHtmlEditCtrlBase::NewDocument
+- AFXHTML/CHtmlEditCtrlBase::OrderList
+- AFXHTML/CHtmlEditCtrlBase::Outdent
+- AFXHTML/CHtmlEditCtrlBase::Paragraph
+- AFXHTML/CHtmlEditCtrlBase::Paste
+- AFXHTML/CHtmlEditCtrlBase::PrintDocument
+- AFXHTML/CHtmlEditCtrlBase::PrintPreview
+- AFXHTML/CHtmlEditCtrlBase::QueryStatus
+- AFXHTML/CHtmlEditCtrlBase::RadioButton
+- AFXHTML/CHtmlEditCtrlBase::RefreshDocument
+- AFXHTML/CHtmlEditCtrlBase::RemoveFormat
+- AFXHTML/CHtmlEditCtrlBase::SaveAs
+- AFXHTML/CHtmlEditCtrlBase::SelectAll
+- AFXHTML/CHtmlEditCtrlBase::Set2DPosition
+- AFXHTML/CHtmlEditCtrlBase::SetAbsolutePosition
+- AFXHTML/CHtmlEditCtrlBase::SetAtomicSelection
+- AFXHTML/CHtmlEditCtrlBase::SetAutoURLDetectMode
+- AFXHTML/CHtmlEditCtrlBase::SetBackColor
+- AFXHTML/CHtmlEditCtrlBase::SetBlockFormat
+- AFXHTML/CHtmlEditCtrlBase::SetBookMark
+- AFXHTML/CHtmlEditCtrlBase::SetCSSEditingLevel
+- AFXHTML/CHtmlEditCtrlBase::SetDefaultComposeSettings
+- AFXHTML/CHtmlEditCtrlBase::SetDesignMode
+- AFXHTML/CHtmlEditCtrlBase::SetDisableEditFocusUI
+- AFXHTML/CHtmlEditCtrlBase::SetDocumentHTML
+- AFXHTML/CHtmlEditCtrlBase::SetFontFace
+- AFXHTML/CHtmlEditCtrlBase::SetFontSize
+- AFXHTML/CHtmlEditCtrlBase::SetForeColor
+- AFXHTML/CHtmlEditCtrlBase::SetIE5PasteMode
+- AFXHTML/CHtmlEditCtrlBase::SetLiveResize
+- AFXHTML/CHtmlEditCtrlBase::SetMultiSelect
+- AFXHTML/CHtmlEditCtrlBase::SetOverrideCursor
+- AFXHTML/CHtmlEditCtrlBase::SetOverwriteMode
+- AFXHTML/CHtmlEditCtrlBase::SetRespectVisInDesign
+- AFXHTML/CHtmlEditCtrlBase::SetShowAlignedSiteTags
+- AFXHTML/CHtmlEditCtrlBase::SetShowAllTags
+- AFXHTML/CHtmlEditCtrlBase::SetShowAreaTags
+- AFXHTML/CHtmlEditCtrlBase::SetShowBRTags
+- AFXHTML/CHtmlEditCtrlBase::SetShowCommentTags
+- AFXHTML/CHtmlEditCtrlBase::SetShowMiscTags
+- AFXHTML/CHtmlEditCtrlBase::SetShowScriptTags
+- AFXHTML/CHtmlEditCtrlBase::SetShowStyleTags
+- AFXHTML/CHtmlEditCtrlBase::SetShowUnknownTags
+- AFXHTML/CHtmlEditCtrlBase::TextArea
+- AFXHTML/CHtmlEditCtrlBase::TextBox
+- AFXHTML/CHtmlEditCtrlBase::UnBookmark
+- AFXHTML/CHtmlEditCtrlBase::Underline
+- AFXHTML/CHtmlEditCtrlBase::Unlink
+- AFXHTML/CHtmlEditCtrlBase::UnorderList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -177,7 +285,7 @@ template <class T> class CHtmlEditCtrlBase
 ## <a name="requirements"></a>要求  
  **标头：** afxhtml.h  
   
-##  <a name="a-nameaddtoglyphtablea--chtmleditctrlbaseaddtoglyphtable"></a><a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
+##  <a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
  指定要为特定标记在设计模式下显示的图像的标志符号表中添加一个条目。  
   
 ```  
@@ -225,7 +333,7 @@ HRESULT AddToGlyphTable(
   
  此方法可发送[IDM_ADDTOGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769891.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namebolda--chtmleditctrlbasebold"></a><a name="bold"></a>CHtmlEditCtrlBase::Bold  
+##  <a name="bold"></a>CHtmlEditCtrlBase::Bold  
  将所选文本加粗状态之间切换。  
   
 ```  
@@ -238,7 +346,7 @@ HRESULT Bold() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_BOLD 命令 ID](https://msdn.microsoft.com/library/aa769861.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namebuttona--chtmleditctrlbasebutton"></a><a name="button"></a>CHtmlEditCtrlBase::Button  
+##  <a name="button"></a>CHtmlEditCtrlBase::Button  
  将覆盖当前所选内容上的按钮控件。  
   
 ```  
@@ -255,7 +363,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_BUTTON 命令 ID](https://msdn.microsoft.com/library/aa769966.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namecheckboxa--chtmleditctrlbasecheckbox"></a><a name="checkbox"></a>CHtmlEditCtrlBase::CheckBox  
+##  <a name="checkbox"></a>CHtmlEditCtrlBase::CheckBox  
  将覆盖当前所选内容上的复选框控件。  
   
 ```  
@@ -272,7 +380,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_CHECKBOX 命令 ID](https://msdn.microsoft.com/library/aa769972.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameclearselectiona--chtmleditctrlbaseclearselection"></a><a name="clearselection"></a>CHtmlEditCtrlBase::ClearSelection  
+##  <a name="clearselection"></a>CHtmlEditCtrlBase::ClearSelection  
  清除当前所选内容。  
   
 ```  
@@ -285,7 +393,7 @@ HRESULT ClearSelection() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_CLEARSELECTION 命令 ID](https://msdn.microsoft.com/library/aa770038.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namecopya--chtmleditctrlbasecopy"></a><a name="copy"></a>CHtmlEditCtrlBase::Copy  
+##  <a name="copy"></a>CHtmlEditCtrlBase::Copy  
  将当前所选内容复制到剪贴板。  
   
 ```  
@@ -298,7 +406,7 @@ HRESULT Copy() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_COPY 命令 ID](https://msdn.microsoft.com/library/aa769872.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namecuta--chtmleditctrlbasecut"></a><a name="cut"></a>CHtmlEditCtrlBase::Cut  
+##  <a name="cut"></a>CHtmlEditCtrlBase::Cut  
  将当前选定内容复制到剪贴板，然后删除它。  
   
 ```  
@@ -311,7 +419,7 @@ HRESULT Cut() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_CUT 命令 ID](https://msdn.microsoft.com/library/aa769875.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namedeletea--chtmleditctrlbasedelete"></a><a name="delete"></a>CHtmlEditCtrlBase::Delete  
+##  <a name="delete"></a>CHtmlEditCtrlBase::Delete  
  删除当前所选内容。  
   
 ```  
@@ -324,7 +432,7 @@ HRESULT Delete() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_DELETE 命令 ID](https://msdn.microsoft.com/library/aa769876.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namedropdownboxa--chtmleditctrlbasedropdownbox"></a><a name="dropdownbox"></a>CHtmlEditCtrlBase::DropDownBox  
+##  <a name="dropdownbox"></a>CHtmlEditCtrlBase::DropDownBox  
  将覆盖当前所选内容上的下拉列表选择控件。  
   
 ```  
@@ -341,7 +449,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_DROPDOWNBOX 命令 ID](https://msdn.microsoft.com/library/aa769984.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameemptyglyphtablea--chtmleditctrlbaseemptyglyphtable"></a><a name="emptyglyphtable"></a>CHtmlEditCtrlBase::EmptyGlyphTable  
+##  <a name="emptyglyphtable"></a>CHtmlEditCtrlBase::EmptyGlyphTable  
  隐藏显示在设计模式下的标记的所有图像的标志符号表中移除所有项。  
   
 ```  
@@ -354,7 +462,7 @@ HRESULT EmptyGlyphTable() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_EMPTYGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769907.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameexeccommanda--chtmleditctrlbaseexeccommand"></a><a name="execcommand"></a>CHtmlEditCtrlBase::ExecCommand  
+##  <a name="execcommand"></a>CHtmlEditCtrlBase::ExecCommand  
  执行命令。  
   
 ```  
@@ -394,7 +502,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>备注  
  此方法提供的功能的[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)。  
   
-##  <a name="a-namefonta--chtmleditctrlbasefont"></a><a name="font"></a>CHtmlEditCtrlBase::Font  
+##  <a name="font"></a>CHtmlEditCtrlBase::Font  
  打开字体对话框中，以使用户能够更改文本颜色、 字体和字体大小均为当前所选内容。  
   
 ```  
@@ -407,7 +515,7 @@ HRESULT Font() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_FONT 命令 ID](https://msdn.microsoft.com/library/aa769913.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namegetabsolutepositiona--chtmleditctrlbasegetabsoluteposition"></a><a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition  
  返回一个元素位置属性是否为"绝对"。  
   
 ```  
@@ -424,7 +532,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_ABSOLUTE_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769889.aspx)。  
   
-##  <a name="a-namegetbackcolora--chtmleditctrlbasegetbackcolor"></a><a name="getbackcolor"></a>CHtmlEditCtrlBase::GetBackColor  
+##  <a name="getbackcolor"></a>CHtmlEditCtrlBase::GetBackColor  
  检索当前所选内容的背景色。  
   
 ```  
@@ -441,7 +549,7 @@ HRESULT GetBackColor(int& nColor) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namegetblockformata--chtmleditctrlbasegetblockformat"></a><a name="getblockformat"></a>CHtmlEditCtrlBase::GetBlockFormat  
+##  <a name="getblockformat"></a>CHtmlEditCtrlBase::GetBlockFormat  
  检索当前块格式标记。  
   
 ```  
@@ -458,7 +566,7 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_BLOCKFMT 命令 ID](https://msdn.microsoft.com/library/aa769883.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namegetblockformatnamesa--chtmleditctrlbasegetblockformatnames"></a><a name="getblockformatnames"></a>CHtmlEditCtrlBase::GetBlockFormatNames  
+##  <a name="getblockformatnames"></a>CHtmlEditCtrlBase::GetBlockFormatNames  
  检索与可用的块格式标记相对应的字符串。  
   
 ```  
@@ -475,7 +583,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_GETBLOCKFMTS 命令 ID](https://msdn.microsoft.com/library/aa769884.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namegetbookmarka--chtmleditctrlbasegetbookmark"></a><a name="getbookmark"></a>CHtmlEditCtrlBase::GetBookMark  
+##  <a name="getbookmark"></a>CHtmlEditCtrlBase::GetBookMark  
  检索书签定位标记的名称。  
   
 ```  
@@ -492,7 +600,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_BOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa769873.aspx)。  
   
-##  <a name="a-namegetdocumenta--chtmleditctrlbasegetdocument"></a><a name="getdocument"></a>CHtmlEditCtrlBase::GetDocument  
+##  <a name="getdocument"></a>CHtmlEditCtrlBase::GetDocument  
  检索的文档对象。  
   
 ```  
@@ -506,7 +614,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namegetdocumenthtmla--chtmleditctrlbasegetdocumenthtml"></a><a name="getdocumenthtml"></a>CHtmlEditCtrlBase::GetDocumentHTML  
+##  <a name="getdocumenthtml"></a>CHtmlEditCtrlBase::GetDocumentHTML  
  检索当前文档的 HTML。  
   
 ```  
@@ -520,7 +628,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namegetdocumenttitlea--chtmleditctrlbasegetdocumenttitle"></a><a name="getdocumenttitle"></a>CHtmlEditCtrlBase::GetDocumentTitle  
+##  <a name="getdocumenttitle"></a>CHtmlEditCtrlBase::GetDocumentTitle  
  检索文档的标题。  
   
 ```  
@@ -534,7 +642,7 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namegeteventa--chtmleditctrlbasegetevent"></a><a name="getevent"></a>CHtmlEditCtrlBase::GetEvent  
+##  <a name="getevent"></a>CHtmlEditCtrlBase::GetEvent  
  检索与事件对象，其中包含与最新的事件相关的信息的接口指针。  
   
 ```  
@@ -548,7 +656,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namegeteventsrcelementa--chtmleditctrlbasegeteventsrcelement"></a><a name="geteventsrcelement"></a>CHtmlEditCtrlBase::GetEventSrcElement  
+##  <a name="geteventsrcelement"></a>CHtmlEditCtrlBase::GetEventSrcElement  
  检索触发该事件的对象。  
   
 ```  
@@ -562,7 +670,7 @@ HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namegetfontfacea--chtmleditctrlbasegetfontface"></a><a name="getfontface"></a>CHtmlEditCtrlBase::GetFontFace  
+##  <a name="getfontface"></a>CHtmlEditCtrlBase::GetFontFace  
  检索当前所选内容的字体名称。  
   
 ```  
@@ -581,7 +689,7 @@ HRESULT GetFontFace(CString& strFace) const;
   
  此方法可发送[IDM_FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namegetfontsizea--chtmleditctrlbasegetfontsize"></a><a name="getfontsize"></a>CHtmlEditCtrlBase::GetFontSize  
+##  <a name="getfontsize"></a>CHtmlEditCtrlBase::GetFontSize  
  检索当前所选内容的字体大小。  
   
 ```  
@@ -598,7 +706,7 @@ HRESULT GetFontSize(short& nSize) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namegetforecolora--chtmleditctrlbasegetforecolor"></a><a name="getforecolor"></a>CHtmlEditCtrlBase::GetForeColor  
+##  <a name="getforecolor"></a>CHtmlEditCtrlBase::GetForeColor  
  检索当前所选内容的前景色 （文本）。  
   
 ```  
@@ -615,7 +723,7 @@ HRESULT GetForeColor(int& nColor);
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namegetframezonea--chtmleditctrlbasegetframezone"></a><a name="getframezone"></a>CHtmlEditCtrlBase::GetFrameZone  
+##  <a name="getframezone"></a>CHtmlEditCtrlBase::GetFrameZone  
  在 web 浏览器返回当前页的安全区域。  
   
 ```  
@@ -632,7 +740,7 @@ HRESULT GetFrameZone(short& nZone) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_GETFRAMEZONE 命令 ID](https://msdn.microsoft.com/library/aa769916.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namegetisdirtya--chtmleditctrlbasegetisdirty"></a><a name="getisdirty"></a>CHtmlEditCtrlBase::GetIsDirty  
+##  <a name="getisdirty"></a>CHtmlEditCtrlBase::GetIsDirty  
  指示是否已更改的 HTML 文档。  
   
 ```  
@@ -642,7 +750,7 @@ HRESULT GetIsDirty() const;
 ### <a name="remarks"></a>备注  
  指示文档是否已更改。 `GetIsDirty`返回`HRESULT`从[IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910)。  
   
-##  <a name="a-namegetshowalignedsitetagsa--chtmleditctrlbasegetshowalignedsitetags"></a><a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags  
+##  <a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags  
  返回一个标志符号是否为具有的所有元素显示**styleFloat**属性。  
   
 ```  
@@ -659,7 +767,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWALIGNEDSITETAGS 命令 ID](https://msdn.microsoft.com/library/aa769947.aspx)。  
   
-##  <a name="a-namegetshowalltagsa--chtmleditctrlbasegetshowalltags"></a><a name="getshowalltags"></a>CHtmlEditCtrlBase::GetShowAllTags  
+##  <a name="getshowalltags"></a>CHtmlEditCtrlBase::GetShowAllTags  
  返回是否 webbrowser 控件中显示字形来显示文档中的所有标记的位置。  
   
 ```  
@@ -676,7 +784,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx)。  
   
-##  <a name="a-namegetshowareatagsa--chtmleditctrlbasegetshowareatags"></a><a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags  
+##  <a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags  
  检索是否 webbrowser 控件中显示区域标记的标志符号。  
   
 ```  
@@ -693,7 +801,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx)。  
   
-##  <a name="a-namegetshowbrtagsa--chtmleditctrlbasegetshowbrtags"></a><a name="getshowbrtags"></a>CHtmlEditCtrlBase::GetShowBRTags  
+##  <a name="getshowbrtags"></a>CHtmlEditCtrlBase::GetShowBRTags  
  检索是否 webbrowser 控件中显示 br 标记的标志符号。  
   
 ```  
@@ -710,7 +818,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx)。  
   
-##  <a name="a-namegetshowcommenttagsa--chtmleditctrlbasegetshowcommenttags"></a><a name="getshowcommenttags"></a>CHtmlEditCtrlBase::GetShowCommentTags  
+##  <a name="getshowcommenttags"></a>CHtmlEditCtrlBase::GetShowCommentTags  
  检索是否 webbrowser 控件中显示注释标记的标志符号。  
   
 ```  
@@ -727,7 +835,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx)。  
   
-##  <a name="a-namegetshowmisctagsa--chtmleditctrlbasegetshowmisctags"></a><a name="getshowmisctags"></a>CHtmlEditCtrlBase::GetShowMiscTags  
+##  <a name="getshowmisctags"></a>CHtmlEditCtrlBase::GetShowMiscTags  
  检索是否 webbrowser 控件中显示 Microsoft Internet Explorer 4.0 中所示的所有标记。  
   
 ```  
@@ -744,7 +852,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx)。  
   
-##  <a name="a-namegetshowscripttagsa--chtmleditctrlbasegetshowscripttags"></a><a name="getshowscripttags"></a>CHtmlEditCtrlBase::GetShowScriptTags  
+##  <a name="getshowscripttags"></a>CHtmlEditCtrlBase::GetShowScriptTags  
  检索是否 webbrowser 控件中显示的所有脚本标记标志符号。  
   
 ```  
@@ -761,7 +869,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx)。  
   
-##  <a name="a-namegetshowstyletagsa--chtmleditctrlbasegetshowstyletags"></a><a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags  
+##  <a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags  
  检索是否 webbrowser 控件中显示的所有样式标记标志符号。  
   
 ```  
@@ -778,7 +886,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx)。  
   
-##  <a name="a-namegetshowunknowntagsa--chtmleditctrlbasegetshowunknowntags"></a><a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags  
+##  <a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags  
  检索是否 webbrowser 控件中显示的所有未知的标记的标志符号。  
   
 ```  
@@ -795,7 +903,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[IDM_SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx)。  
   
-##  <a name="a-namehorizontallinea--chtmleditctrlbasehorizontalline"></a><a name="horizontalline"></a>CHtmlEditCtrlBase::HorizontalLine  
+##  <a name="horizontalline"></a>CHtmlEditCtrlBase::HorizontalLine  
  将覆盖当前所选内容上的一条水平线。  
   
 ```  
@@ -812,7 +920,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_HORIZONTALLINE 命令 ID](https://msdn.microsoft.com/library/aa769968.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namehyperlinka--chtmleditctrlbasehyperlink"></a><a name="hyperlink"></a>CHtmlEditCtrlBase::HyperLink  
+##  <a name="hyperlink"></a>CHtmlEditCtrlBase::HyperLink  
  将插入当前所选内容上的超链接。  
   
 ```  
@@ -829,7 +937,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_HYPERLINK 命令 ID](https://msdn.microsoft.com/library/aa769874.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameie50pastea--chtmleditctrlbaseie50paste"></a><a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste  
+##  <a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste  
  执行粘贴操作，则与 Internet Explorer 5 兼容。  
   
 ```  
@@ -846,7 +954,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_IE50_PASTE 命令 ID](https://msdn.microsoft.com/library/aa769922.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameiframea--chtmleditctrlbaseiframe"></a><a name="iframe"></a>CHtmlEditCtrlBase::Iframe  
+##  <a name="iframe"></a>CHtmlEditCtrlBase::Iframe  
  将覆盖当前所选内容的嵌入式框架。  
   
 ```  
@@ -863,7 +971,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_IFRAME 命令 ID](https://msdn.microsoft.com/library/aa769969.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameimagea--chtmleditctrlbaseimage"></a><a name="image"></a>CHtmlEditCtrlBase::Image  
+##  <a name="image"></a>CHtmlEditCtrlBase::Image  
  将覆盖当前所选内容上的图像。  
   
 ```  
@@ -880,7 +988,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_IMAGE 命令 ID](https://msdn.microsoft.com/library/aa769970.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameindenta--chtmleditctrlbaseindent"></a><a name="indent"></a>CHtmlEditCtrlBase::Indent  
+##  <a name="indent"></a>CHtmlEditCtrlBase::Indent  
  一个缩进增量增加所选文本的缩进量。  
   
 ```  
@@ -893,7 +1001,7 @@ HRESULT Indent() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INDENT 命令 ID](https://msdn.microsoft.com/library/aa769963.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameinsfieldseta--chtmleditctrlbaseinsfieldset"></a><a name="insfieldset"></a>CHtmlEditCtrlBase::InsFieldSet  
+##  <a name="insfieldset"></a>CHtmlEditCtrlBase::InsFieldSet  
  将覆盖当前所选内容上的框。  
   
 ```  
@@ -910,7 +1018,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INSFIELDSET 命令 ID](https://msdn.microsoft.com/library/aa769967.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameinsinputbuttona--chtmleditctrlbaseinsinputbutton"></a><a name="insinputbutton"></a>CHtmlEditCtrlBase::InsInputButton  
+##  <a name="insinputbutton"></a>CHtmlEditCtrlBase::InsInputButton  
  将覆盖当前所选内容上的按钮控件。  
   
 ```  
@@ -927,7 +1035,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INSINPUTBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769971.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameinsinputhiddena--chtmleditctrlbaseinsinputhidden"></a><a name="insinputhidden"></a>CHtmlEditCtrlBase::InsInputHidden  
+##  <a name="insinputhidden"></a>CHtmlEditCtrlBase::InsInputHidden  
  将插入当前所选内容上的隐藏的控件。  
   
 ```  
@@ -944,7 +1052,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INSINPUTHIDDEN 命令 ID](https://msdn.microsoft.com/library/aa769974.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameinsinputimagea--chtmleditctrlbaseinsinputimage"></a><a name="insinputimage"></a>CHtmlEditCtrlBase::InsInputImage  
+##  <a name="insinputimage"></a>CHtmlEditCtrlBase::InsInputImage  
  将覆盖图像控件在当前所选内容。  
   
 ```  
@@ -961,7 +1069,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INSINPUTIMAGE 命令 ID](https://msdn.microsoft.com/library/aa769975.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameinsinputpassworda--chtmleditctrlbaseinsinputpassword"></a><a name="insinputpassword"></a>CHtmlEditCtrlBase::InsInputPassword  
+##  <a name="insinputpassword"></a>CHtmlEditCtrlBase::InsInputPassword  
  将覆盖当前所选内容上的密码控件。  
   
 ```  
@@ -978,7 +1086,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INSINPUTPASSWORD 命令 ID](https://msdn.microsoft.com/library/aa769976.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameinsinputreseta--chtmleditctrlbaseinsinputreset"></a><a name="insinputreset"></a>CHtmlEditCtrlBase::InsInputReset  
+##  <a name="insinputreset"></a>CHtmlEditCtrlBase::InsInputReset  
  将覆盖当前所选内容上的重置控件。  
   
 ```  
@@ -995,7 +1103,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INSINPUTRESET 命令 ID](https://msdn.microsoft.com/library/aa769978.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameinsinputsubmita--chtmleditctrlbaseinsinputsubmit"></a><a name="insinputsubmit"></a>CHtmlEditCtrlBase::InsInputSubmit  
+##  <a name="insinputsubmit"></a>CHtmlEditCtrlBase::InsInputSubmit  
  将覆盖当前所选内容上的提交控件。  
   
 ```  
@@ -1012,7 +1120,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INSINPUTSUBMIT 命令 ID](https://msdn.microsoft.com/library/aa769979.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameinsinputuploada--chtmleditctrlbaseinsinputupload"></a><a name="insinputupload"></a>CHtmlEditCtrlBase::InsInputUpload  
+##  <a name="insinputupload"></a>CHtmlEditCtrlBase::InsInputUpload  
  将覆盖当前所选内容上的文件上载控件。  
   
 ```  
@@ -1029,7 +1137,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_INSINPUTUPLOAD 命令 ID](https://msdn.microsoft.com/library/aa769973.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameis1delementa--chtmleditctrlbaseis1delement"></a><a name="is1delement"></a>CHtmlEditCtrlBase::Is1DElement  
+##  <a name="is1delement"></a>CHtmlEditCtrlBase::Is1DElement  
  确定是否以静态方式定位元素。  
   
 ```  
@@ -1046,7 +1154,7 @@ HRESULT Is1DElement(bool& bValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_1D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769885.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameis2delementa--chtmleditctrlbaseis2delement"></a><a name="is2delement"></a>CHtmlEditCtrlBase::Is2DElement  
+##  <a name="is2delement"></a>CHtmlEditCtrlBase::Is2DElement  
  确定是否绝对定位元素。  
   
 ```  
@@ -1063,7 +1171,7 @@ HRESULT Is2DElement(bool& bValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_2D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769886.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameitalica--chtmleditctrlbaseitalic"></a><a name="italic"></a>CHtmlEditCtrlBase::Italic  
+##  <a name="italic"></a>CHtmlEditCtrlBase::Italic  
  切换斜体和倾斜之间当前所选内容。  
   
 ```  
@@ -1076,7 +1184,7 @@ HRESULT Italic() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_ITALIC 命令 ID](https://msdn.microsoft.com/library/aa769988.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namejustifycentera--chtmleditctrlbasejustifycenter"></a><a name="justifycenter"></a>CHtmlEditCtrlBase::JustifyCenter  
+##  <a name="justifycenter"></a>CHtmlEditCtrlBase::JustifyCenter  
  中心格式设置块中当前所选内容所在。  
   
 ```  
@@ -1089,7 +1197,7 @@ HRESULT JustifyCenter() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_JUSTIFYCENTER 命令 ID](https://msdn.microsoft.com/library/aa769989.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namejustifylefta--chtmleditctrlbasejustifyleft"></a><a name="justifyleft"></a>CHtmlEditCtrlBase::JustifyLeft  
+##  <a name="justifyleft"></a>CHtmlEditCtrlBase::JustifyLeft  
  左对齐的格式设置块中当前所选内容所在。  
   
 ```  
@@ -1102,7 +1210,7 @@ HRESULT JustifyLeft() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_JUSTIFYLEFT 命令 ID](https://msdn.microsoft.com/library/aa770011.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namejustifyrighta--chtmleditctrlbasejustifyright"></a><a name="justifyright"></a>CHtmlEditCtrlBase::JustifyRight  
+##  <a name="justifyright"></a>CHtmlEditCtrlBase::JustifyRight  
  右对齐的格式设置块中当前所选内容所在。  
   
 ```  
@@ -1115,7 +1223,7 @@ HRESULT JustifyRight() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_JUSTIFYRIGHT 命令 ID](https://msdn.microsoft.com/library/aa770013.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namelistboxa--chtmleditctrlbaselistbox"></a><a name="listbox"></a>CHtmlEditCtrlBase::ListBox  
+##  <a name="listbox"></a>CHtmlEditCtrlBase::ListBox  
  将覆盖上当前所选内容的列表框中选择控件。  
   
 ```  
@@ -1132,7 +1240,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_LISTBOX 命令 ID](https://msdn.microsoft.com/library/aa769985.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namemarqueea--chtmleditctrlbasemarquee"></a><a name="marquee"></a>CHtmlEditCtrlBase::Marquee  
+##  <a name="marquee"></a>CHtmlEditCtrlBase::Marquee  
  将覆盖当前所选内容空字幕。  
   
 ```  
@@ -1149,7 +1257,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_MARQUEE 命令 ID](https://msdn.microsoft.com/library/aa769981.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namenewdocumenta--chtmleditctrlbasenewdocument"></a><a name="newdocument"></a>CHtmlEditCtrlBase::NewDocument  
+##  <a name="newdocument"></a>CHtmlEditCtrlBase::NewDocument  
  创建新文档。  
   
 ```  
@@ -1159,7 +1267,7 @@ HRESULT NewDocument() const;
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-nameorderlista--chtmleditctrlbaseorderlist"></a><a name="orderlist"></a>CHtmlEditCtrlBase::OrderList  
+##  <a name="orderlist"></a>CHtmlEditCtrlBase::OrderList  
  切换当前选择的排序的列表和普通格式化块之间。  
   
 ```  
@@ -1176,7 +1284,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_ORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769982.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameoutdenta--chtmleditctrlbaseoutdent"></a><a name="outdent"></a>CHtmlEditCtrlBase::Outdent  
+##  <a name="outdent"></a>CHtmlEditCtrlBase::Outdent  
  减少了一个增量的缩进的格式设置块中当前所选内容所在。  
   
 ```  
@@ -1189,7 +1297,7 @@ HRESULT Outdent() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_OUTDENT 命令 ID](https://msdn.microsoft.com/library/aa770015.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameparagrapha--chtmleditctrlbaseparagraph"></a><a name="paragraph"></a>CHtmlEditCtrlBase::Paragraph  
+##  <a name="paragraph"></a>CHtmlEditCtrlBase::Paragraph  
  将覆盖当前所选内容以换行符结尾。  
   
 ```  
@@ -1206,7 +1314,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_PARAGRAPH 命令 ID](https://msdn.microsoft.com/library/aa769983.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namepastea--chtmleditctrlbasepaste"></a><a name="paste"></a>CHtmlEditCtrlBase::Paste  
+##  <a name="paste"></a>CHtmlEditCtrlBase::Paste  
  将覆盖当前所选内容剪贴板的内容。  
   
 ```  
@@ -1219,7 +1327,7 @@ HRESULT Paste() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_PASTE 命令 ID](https://msdn.microsoft.com/library/aa770017.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameprintdocumenta--chtmleditctrlbaseprintdocument"></a><a name="printdocument"></a>CHtmlEditCtrlBase::PrintDocument  
+##  <a name="printdocument"></a>CHtmlEditCtrlBase::PrintDocument  
  打印当前文档。  
   
 ```  
@@ -1241,7 +1349,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_PRINT 命令 ID](https://msdn.microsoft.com/library/aa769937.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameprintpreviewa--chtmleditctrlbaseprintpreview"></a><a name="printpreview"></a>CHtmlEditCtrlBase::PrintPreview  
+##  <a name="printpreview"></a>CHtmlEditCtrlBase::PrintPreview  
  将打开打印预览窗口中当前文档使用默认的打印预览模板或自定义模板。  
   
 ```  
@@ -1259,7 +1367,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_PRINTPREVIEW 命令 ID](https://msdn.microsoft.com/library/aa769938.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namequerystatusa--chtmleditctrlbasequerystatus"></a><a name="querystatus"></a>CHtmlEditCtrlBase::QueryStatus  
+##  <a name="querystatus"></a>CHtmlEditCtrlBase::QueryStatus  
  调用此方法来查询命令的状态。  
   
 ```  
@@ -1273,7 +1381,7 @@ long QueryStatus(long cmdID) const;
 ### <a name="return-value"></a>返回值  
  返回[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) ，该值指示的状态`cmdID`，或 0 的失败。  
   
-##  <a name="a-nameradiobuttona--chtmleditctrlbaseradiobutton"></a><a name="radiobutton"></a>CHtmlEditCtrlBase::RadioButton  
+##  <a name="radiobutton"></a>CHtmlEditCtrlBase::RadioButton  
  将覆盖当前所选内容上的单选控件。  
   
 ```  
@@ -1290,7 +1398,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_RADIOBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769977.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namerefreshdocumenta--chtmleditctrlbaserefreshdocument"></a><a name="refreshdocument"></a>CHtmlEditCtrlBase::RefreshDocument  
+##  <a name="refreshdocument"></a>CHtmlEditCtrlBase::RefreshDocument  
  刷新当前文档。  
   
 ```  
@@ -1303,7 +1411,7 @@ HRESULT RefreshDocument() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_REFRESH 命令 ID](https://msdn.microsoft.com/library/aa770020.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameremoveformata--chtmleditctrlbaseremoveformat"></a><a name="removeformat"></a>CHtmlEditCtrlBase::RemoveFormat  
+##  <a name="removeformat"></a>CHtmlEditCtrlBase::RemoveFormat  
  从当前所选内容中删除格式设置标记。  
   
 ```  
@@ -1316,7 +1424,7 @@ HRESULT RemoveFormat() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_REMOVEFORMAT 命令 ID](https://msdn.microsoft.com/library/aa770021.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesaveasa--chtmleditctrlbasesaveas"></a><a name="saveas"></a>CHtmlEditCtrlBase::SaveAs  
+##  <a name="saveas"></a>CHtmlEditCtrlBase::SaveAs  
  将当前网页保存到一个文件。  
   
 ```  
@@ -1333,7 +1441,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_SAVEAS 命令 ID](https://msdn.microsoft.com/library/aa770024.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameselectalla--chtmleditctrlbaseselectall"></a><a name="selectall"></a>CHtmlEditCtrlBase::SelectAll  
+##  <a name="selectall"></a>CHtmlEditCtrlBase::SelectAll  
  选择整个文档。  
   
 ```  
@@ -1346,7 +1454,7 @@ HRESULT SelectAll() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_SELECTALL 命令 ID](https://msdn.microsoft.com/library/aa770025.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameset2dpositiona--chtmleditctrlbaseset2dposition"></a><a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition  
+##  <a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition  
  允许绝对定位的元素，通过拖动来移动。  
   
 ```  
@@ -1363,7 +1471,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_2D_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769887.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetabsolutepositiona--chtmleditctrlbasesetabsoluteposition"></a><a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition  
  元素的位置将属性设置为"绝对"或"静态"。  
   
 ```  
@@ -1380,7 +1488,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_ABSOLUTE_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769889.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetatomicselectiona--chtmleditctrlbasesetatomicselection"></a><a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection  
+##  <a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection  
  设置原子选择模式。  
   
 ```  
@@ -1397,7 +1505,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_ATOMICSELECTION 命令 ID](https://msdn.microsoft.com/library/aa769892.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetautourldetectmodea--chtmleditctrlbasesetautourldetectmode"></a><a name="setautourldetectmode"></a>CHtmlEditCtrlBase::SetAutoURLDetectMode  
+##  <a name="setautourldetectmode"></a>CHtmlEditCtrlBase::SetAutoURLDetectMode  
  打开和关闭自动 URL 检测。  
   
 ```  
@@ -1414,7 +1522,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_AUTOURLDETECT_MODE 命令 ID](https://msdn.microsoft.com/library/aa769893.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetbackcolora--chtmleditctrlbasesetbackcolor"></a><a name="setbackcolor"></a>CHtmlEditCtrlBase::SetBackColor  
+##  <a name="setbackcolor"></a>CHtmlEditCtrlBase::SetBackColor  
  设置当前所选内容的背景色。  
   
 ```  
@@ -1435,7 +1543,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_BACKCOLOR_ 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetblockformata--chtmleditctrlbasesetblockformat"></a><a name="setblockformat"></a>CHtmlEditCtrlBase::SetBlockFormat  
+##  <a name="setblockformat"></a>CHtmlEditCtrlBase::SetBlockFormat  
  设置当前块格式标记。  
   
 ```  
@@ -1452,7 +1560,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetbookmarka--chtmleditctrlbasesetbookmark"></a><a name="setbookmark"></a>CHtmlEditCtrlBase::SetBookMark  
+##  <a name="setbookmark"></a>CHtmlEditCtrlBase::SetBookMark  
  创建书签定位标记的当前选定内容或插入点。  
   
 ```  
@@ -1469,7 +1577,7 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_BOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa769873.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetcsseditinglevela--chtmleditctrlbasesetcsseditinglevel"></a><a name="setcsseditinglevel"></a>CHtmlEditCtrlBase::SetCSSEditingLevel  
+##  <a name="setcsseditinglevel"></a>CHtmlEditCtrlBase::SetCSSEditingLevel  
  选择哪个 CSS 级别 （CSS1 或 CSS2） 编辑器将支持，如果有的话。  
   
 ```  
@@ -1486,7 +1594,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_CSSEDITING_LEVEL 命令 ID](https://msdn.microsoft.com/library/aa769903.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetdefaultcomposesettingsa--chtmleditctrlbasesetdefaultcomposesettings"></a><a name="setdefaultcomposesettings"></a>CHtmlEditCtrlBase::SetDefaultComposeSettings  
+##  <a name="setdefaultcomposesettings"></a>CHtmlEditCtrlBase::SetDefaultComposeSettings  
  调用此方法以设置默认值撰写设置。  
   
 ```  
@@ -1528,7 +1636,7 @@ HRESULT SetDefaultComposeSettings(
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_COMPOSESETTINGS 命令 ID](https://msdn.microsoft.com/library/aa769901.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetdesignmodea--chtmleditctrlbasesetdesignmode"></a><a name="setdesignmode"></a>CHtmlEditCtrlBase::SetDesignMode  
+##  <a name="setdesignmode"></a>CHtmlEditCtrlBase::SetDesignMode  
  设置设计模式。  
   
 ```  
@@ -1542,7 +1650,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
-##  <a name="a-namesetdisableeditfocusuia--chtmleditctrlbasesetdisableeditfocusui"></a><a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI  
+##  <a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI  
  禁用阴影线的边框，并具有编辑焦点的元素周围处理。  
   
 ```  
@@ -1559,7 +1667,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM_DISABLE_EDITFOCUS_UI 命令 ID](https://msdn.microsoft.com/library/aa769905.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetdocumenthtmla--chtmleditctrlbasesetdocumenthtml"></a><a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML  
+##  <a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML  
  设置当前文档的 HTML。  
   
 ```  
@@ -1573,7 +1681,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-##  <a name="a-namesetfontfacea--chtmleditctrlbasesetfontface"></a><a name="setfontface"></a>CHtmlEditCtrlBase::SetFontFace  
+##  <a name="setfontface"></a>CHtmlEditCtrlBase::SetFontFace  
  设置当前所选内容的字体。  
   
 ```  
@@ -1590,7 +1698,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetfontsizea--chtmleditctrlbasesetfontsize"></a><a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize  
+##  <a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize  
  设置当前所选内容的字体大小。  
   
 ```  
@@ -1607,7 +1715,7 @@ HRESULT SetFontSize(unsigned short size) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetforecolora--chtmleditctrlbasesetforecolor"></a><a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor  
+##  <a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor  
  设置当前选定项的前景色 （文本）。  
   
 ```  
@@ -1628,7 +1736,7 @@ HRESULT SetForeColor(int nColor) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetie5pastemodea--chtmleditctrlbasesetie5pastemode"></a><a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode  
+##  <a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode  
  设置要与 Microsoft Internet Explorer 5 兼容的粘贴操作。  
   
 ```  
@@ -1645,7 +1753,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM IE50_PASTE_MODE 命令 ID](https://msdn.microsoft.com/library/aa769923.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetliveresizea--chtmleditctrlbasesetliveresize"></a><a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize  
+##  <a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize  
  使 web 浏览器来更新持续期间调整大小或移动操作后，而不是更新仅在完成时移动的元素的外观或调整大小。  
   
 ```  
@@ -1662,7 +1770,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM LIVERESIZE 命令 ID](https://msdn.microsoft.com/library/aa769928.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetmultiselecta--chtmleditctrlbasesetmultiselect"></a><a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect  
+##  <a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect  
  使多个所选内容。  
   
 ```  
@@ -1679,7 +1787,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM MULTIPLESELECTION 命令 ID](https://msdn.microsoft.com/library/aa769929.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetoverridecursora--chtmleditctrlbasesetoverridecursor"></a><a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor  
+##  <a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor  
  Webbrowser 控件中永远不会以更改鼠标指针的命令。  
   
 ```  
@@ -1696,7 +1804,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM OVERRIDE_CURSOR 命令 ID](https://msdn.microsoft.com/library/aa769932.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetoverwritemodea--chtmleditctrlbasesetoverwritemode"></a><a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode  
+##  <a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode  
  切换文本输入模式之间插入，并覆盖。  
   
 ```  
@@ -1713,7 +1821,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM 覆盖命令 ID](https://msdn.microsoft.com/library/aa770016.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetrespectvisindesigna--chtmleditctrlbasesetrespectvisindesign"></a><a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign  
+##  <a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign  
  隐藏在设计模式中不可见元素。  
   
 ```  
@@ -1730,7 +1838,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM RESPECTVISIBILITY_INDESIGN 命令 ID](https://msdn.microsoft.com/library/aa770023.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowalignedsitetagsa--chtmleditctrlbasesetshowalignedsitetags"></a><a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags  
+##  <a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags  
  显示标志符号的所有元素具有**styleFloat**属性。  
   
 ```  
@@ -1747,7 +1855,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWALIGNEDSITETAGS 命令 ID](https://msdn.microsoft.com/library/aa769947.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowalltagsa--chtmleditctrlbasesetshowalltags"></a><a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags  
+##  <a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags  
  显示标志符号来显示文档中的所有标记的位置。  
   
 ```  
@@ -1764,7 +1872,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowareatagsa--chtmleditctrlbasesetshowareatags"></a><a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags  
+##  <a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags  
  显示区域的所有标记的标志符号。  
   
 ```  
@@ -1781,7 +1889,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowbrtagsa--chtmleditctrlbasesetshowbrtags"></a><a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags  
+##  <a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags  
  显示所有 br 标记的标志符号。  
   
 ```  
@@ -1798,7 +1906,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowcommenttagsa--chtmleditctrlbasesetshowcommenttags"></a><a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags  
+##  <a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags  
  显示所有注释标记的标志符号。  
   
 ```  
@@ -1815,7 +1923,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowmisctagsa--chtmleditctrlbasesetshowmisctags"></a><a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags  
+##  <a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags  
  显示所有 Microsoft Internet Explorer 4.0 中所示的标签。  
   
 ```  
@@ -1832,7 +1940,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowscripttagsa--chtmleditctrlbasesetshowscripttags"></a><a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags  
+##  <a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags  
  显示所有脚本标记的标志符号。  
   
 ```  
@@ -1849,7 +1957,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowstyletagsa--chtmleditctrlbasesetshowstyletags"></a><a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags  
+##  <a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags  
  显示样式的所有标记的标志符号。  
   
 ```  
@@ -1866,7 +1974,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx)到 web 浏览器控件。  
   
-##  <a name="a-namesetshowunknowntagsa--chtmleditctrlbasesetshowunknowntags"></a><a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags  
+##  <a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags  
  显示所有未知的标记的标志符号。  
   
 ```  
@@ -1883,7 +1991,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nametextareaa--chtmleditctrlbasetextarea"></a><a name="textarea"></a>CHtmlEditCtrlBase::TextArea  
+##  <a name="textarea"></a>CHtmlEditCtrlBase::TextArea  
  将覆盖上当前所选内容的多行文本输入的控件。  
   
 ```  
@@ -1900,7 +2008,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM TEXTAREA 命令 ID](https://msdn.microsoft.com/library/aa769986.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nametextboxa--chtmleditctrlbasetextbox"></a><a name="textbox"></a>CHtmlEditCtrlBase::TextBox  
+##  <a name="textbox"></a>CHtmlEditCtrlBase::TextBox  
  将覆盖当前所选内容上的文本控件。  
   
 ```  
@@ -1917,7 +2025,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM 文本框中的命令 ID](https://msdn.microsoft.com/library/aa769980.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameunbookmarka--chtmleditctrlbaseunbookmark"></a><a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark  
+##  <a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark  
  从当前所选内容中删除所有书签。  
   
 ```  
@@ -1930,7 +2038,7 @@ HRESULT UnBookmark() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM UNBOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa770034.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameunderlinea--chtmleditctrlbaseunderline"></a><a name="underline"></a>CHtmlEditCtrlBase::Underline  
+##  <a name="underline"></a>CHtmlEditCtrlBase::Underline  
  切换当前所选内容之间有和无下划线。  
   
 ```  
@@ -1943,7 +2051,7 @@ HRESULT Underline() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM 下划线命令 ID](https://msdn.microsoft.com/library/aa770035.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameunlinka--chtmleditctrlbaseunlink"></a><a name="unlink"></a>CHtmlEditCtrlBase::Unlink  
+##  <a name="unlink"></a>CHtmlEditCtrlBase::Unlink  
  从当前所选内容中删除任何超链接。  
   
 ```  
@@ -1956,7 +2064,7 @@ HRESULT Unlink() const;
 ### <a name="remarks"></a>备注  
  此方法可发送[IDM 取消链接的命令 ID](https://msdn.microsoft.com/library/aa770037.aspx)到 web 浏览器控件。  
   
-##  <a name="a-nameunorderlista--chtmleditctrlbaseunorderlist"></a><a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList  
+##  <a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList  
  切换当前选择的排序的列表和普通格式化块之间。  
   
 ```  

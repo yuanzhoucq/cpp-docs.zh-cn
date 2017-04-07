@@ -10,6 +10,79 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CMFCPropertyGridCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::accSelect
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AddProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AlwaysShowUserToolTip
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CloseColorPopup
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::Create
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::DeleteProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::DrawControlBarColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnableDescriptionArea
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnableHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EnsureVisible
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ExpandAll
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::FindItemByData
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accChildCount
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accFocus
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accHelp
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accHelpTopic
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accKeyboardShortcut
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::get_accSelection
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetBkColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetBoldFont
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetCurSel
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetCustomColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetDescriptionHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetDescriptionRows
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetHeaderHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetLeftColumnWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetListRect
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetPropertyColumnWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetPropertyCount
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetRowHeight
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetScrollBarCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::GetTextColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::HitTest
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::InitHeader
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsAlphabeticMode
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsDescriptionArea
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsGroupNameFullWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsHeaderCtrl
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsMarkModifiedProperties
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsShowDragContext
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::IsVSDotNetLook
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::MarkModifiedProperties
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::RemoveAll
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ResetOriginalValues
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetAlphabeticMode
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetBoolLabels
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetCurSel
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetCustomColors
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetDescriptionRows
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetGroupNameFullWidth
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetListDelimiter
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetShowDragContext
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::SetVSDotNetLook
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::UpdateColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::AdjustLayout
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::CompareProps
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EditItem
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::EndEditItem
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::Init
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnChangeSelection
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnClickButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawBorder
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawDescription
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawList
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnDrawProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnPropertyChanged
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::OnSelectCombo
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl::ValidateItemData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -204,7 +277,7 @@ class CMFCPropertyGridCtrl : public CWnd
 ## <a name="requirements"></a>要求  
  **标头︰** afxpropertygridctrl.h  
   
-##  <a name="a-nameaccselecta--cmfcpropertygridctrlaccselect"></a><a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
+##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -221,7 +294,7 @@ virtual HRESULT accSelect(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameaddpropertya--cmfcpropertygridctrladdproperty"></a><a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
+##  <a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
  将新属性添加到属性网格控件。  
   
 ```  
@@ -247,7 +320,7 @@ int AddProperty(
 ### <a name="remarks"></a>备注  
  此方法将添加到属性网格控件中的属性列表的末尾的指定属性的指针。 不要破坏属性或允许它们超出范围，网格控件被销毁之前。 完成此操作与属性网格控件，调用[CMFCPropertyGridCtrl::RemoveAll](#removeall)若要删除所有添加的属性。 如果指定的属性已添加到列表 AddProperty 方法失败。  
   
-##  <a name="a-nameadjustlayouta--cmfcpropertygridctrladjustlayout"></a><a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
+##  <a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
  重绘属性网格控件并将其属性。  
   
 ```  
@@ -257,7 +330,7 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>备注  
  此方法将重新计算如何绘制整个属性网格控件和属性，包括图像、 字体和控件。  
   
-##  <a name="a-namealwaysshowusertooltipa--cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
+##  <a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -269,7 +342,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameclosecolorpopupa--cmfcpropertygridctrlclosecolorpopup"></a><a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
+##  <a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
  关闭颜色选择对话框。  
   
 ```  
@@ -279,7 +352,7 @@ virtual void CloseColorPopup();
 ### <a name="remarks"></a>备注  
  有关颜色选择对话框的详细信息，请参阅[CMFCPropertyGridColorProperty 类](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)。  
   
-##  <a name="a-namecmfcpropertygridctrla--cmfcpropertygridctrlcmfcpropertygridctrl"></a><a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
+##  <a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
  构造 `CMFCPropertyGridCtrl` 对象。  
   
 ```  
@@ -290,7 +363,7 @@ CMFCPropertyGridCtrl();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namecomparepropsa--cmfcpropertygridctrlcompareprops"></a><a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
+##  <a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
  由对属性排序的属性网格控件调用。  
   
 ```  
@@ -317,7 +390,7 @@ virtual int CompareProps(
 ### <a name="remarks"></a>备注  
  默认情况下，此方法使用[CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法来比较`CMFCPropertyGridProperty::m_strName`指定参数的成员。  
   
-##  <a name="a-namecreatea--cmfcpropertygridctrlcreate"></a><a name="create"></a>CMFCPropertyGridCtrl::Create  
+##  <a name="create"></a>CMFCPropertyGridCtrl::Create  
  创建属性网格控件，并将其附加到属性网格控件对象。  
   
 ```  
@@ -352,7 +425,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_NewControls #&15;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]  
   
-##  <a name="a-namedeletepropertya--cmfcpropertygridctrldeleteproperty"></a><a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
+##  <a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
  从属性网格控件中删除指定的属性。  
   
 ```  
@@ -378,7 +451,7 @@ BOOL DeleteProperty(
 ### <a name="remarks"></a>备注  
  此方法用于从属性网格控件中删除某个属性和任何子项目。  
   
-##  <a name="a-namedrawcontrolbarcolorsa--cmfcpropertygridctrldrawcontrolbarcolors"></a><a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
+##  <a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -389,7 +462,7 @@ BOOL DrawControlBarColors() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameedititema--cmfcpropertygridctrledititem"></a><a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
+##  <a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
  由框架调用，当用户开始修改属性。  
   
 ```  
@@ -410,7 +483,7 @@ virtual BOOL EditItem(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameenabledescriptionareaa--cmfcpropertygridctrlenabledescriptionarea"></a><a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
+##  <a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
  启用或禁用在属性网格控件的属性列表下显示的说明区域。  
   
 ```  
@@ -424,7 +497,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>备注  
  说明区域显示在属性网格控件的底部。 默认情况下，说明区域为已禁用，从而不可见。  
   
-##  <a name="a-nameenableheaderctrla--cmfcpropertygridctrlenableheaderctrl"></a><a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
+##  <a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
  启用或禁用在属性网格控件顶部标头控件。  
   
 ```  
@@ -444,7 +517,7 @@ void EnableHeaderCtrl(
  [in] `lpszRightColumn`  
  标头控件的右侧列的标题。 默认值是**值**。  
   
-##  <a name="a-nameendedititema--cmfcpropertygridctrlendedititem"></a><a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
+##  <a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
  由框架调用，当用户完成修改的属性。  
   
 ```  
@@ -460,7 +533,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameensurevisiblea--cmfcpropertygridctrlensurevisible"></a><a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
  执行滚动操作使得在属性网格控件，并扩展属性项，直到指定的属性可见。  
   
 ```  
@@ -478,7 +551,7 @@ void EnsureVisible(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameexpandalla--cmfcpropertygridctrlexpandall"></a><a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
+##  <a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
  展开或折叠属性网格控件的所有节点。  
   
 ```  
@@ -491,7 +564,7 @@ void ExpandAll(BOOL bExpand=TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namefinditembydataa--cmfcpropertygridctrlfinditembydata"></a><a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
+##  <a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
  检索与用户定义相关联的属性`DWORD`值。  
   
 ```  
@@ -513,7 +586,7 @@ CMFCPropertyGridProperty* FindItemByData(
 ### <a name="remarks"></a>备注  
  使用[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)构造函数或[CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata)方法将关联起来`DWORD`具有属性。  
   
-##  <a name="a-namegetaccchildcounta--cmfcpropertygridctrlgetaccchildcount"></a><a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
+##  <a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -527,7 +600,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetaccfocusa--cmfcpropertygridctrlgetaccfocus"></a><a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
+##  <a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -541,7 +614,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetacchelpa--cmfcpropertygridctrlgetacchelp"></a><a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
+##  <a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -558,7 +631,7 @@ virtual HRESULT get_accHelp(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetacchelptopica--cmfcpropertygridctrlgetacchelptopic"></a><a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -577,7 +650,7 @@ virtual HRESULT get_accHelpTopic(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetacckeyboardshortcuta--cmfcpropertygridctrlgetacckeyboardshortcut"></a><a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
+##  <a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -594,7 +667,7 @@ virtual HRESULT get_accKeyboardShortcut(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetaccselectiona--cmfcpropertygridctrlgetaccselection"></a><a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
+##  <a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -608,7 +681,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetbkcolora--cmfcpropertygridctrlgetbkcolor"></a><a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
  检索当前的属性网格控件的背景色。  
   
 ```  
@@ -621,7 +694,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>备注  
  此方法检索框架使用用于绘制当前属性网格控件的背景的颜色。 [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)方法检索的前景色。  
   
-##  <a name="a-namegetboldfonta--cmfcpropertygridctrlgetboldfont"></a><a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
+##  <a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
  检索用于在粗体样式中的当前属性网格控件中绘制文本的 Windows 字体。  
   
 ```  
@@ -631,7 +704,7 @@ CFont& GetBoldFont();
 ### <a name="return-value"></a>返回值  
  对引用[CFont](../../mfc/reference/cfont-class.md)描述加粗字体的特征的对象。  
   
-##  <a name="a-namegetcursela--cmfcpropertygridctrlgetcursel"></a><a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
+##  <a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
  检索当前所选的属性。  
   
 ```  
@@ -643,7 +716,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetcustomcolorsa--cmfcpropertygridctrlgetcustomcolors"></a><a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
+##  <a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
  检索当前为属性网格控件元素定义的自定义颜色。  
   
 ```  
@@ -682,7 +755,7 @@ void GetCustomColors(
 ### <a name="remarks"></a>备注  
  使用[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)方法设置自定义颜色。  
   
-##  <a name="a-namegetdescriptionheighta--cmfcpropertygridctrlgetdescriptionheight"></a><a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
+##  <a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
  检索位于属性网格控件底部的描述区域的高度。  
   
 ```  
@@ -697,7 +770,7 @@ int GetDescriptionHeight() const;
   
  使用[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)方法，以显示或隐藏说明区域。 使用[CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)方法，以确定是否描述区域是显示还是隐藏。  
   
-##  <a name="a-namegetdescriptionrowsa--cmfcpropertygridctrlgetdescriptionrows"></a><a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
+##  <a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
  检索在说明区域中的当前属性网格控件的行数。  
   
 ```  
@@ -710,7 +783,7 @@ int GetDescriptionRows() const;
 ### <a name="remarks"></a>备注  
  [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)构造函数将初始化为 3 行说明区域。  
   
-##  <a name="a-namegetheaderctrla--cmfcpropertygridctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
  检索内部[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)对象框架使用，以显示当前的属性网格控件。  
   
 ```  
@@ -720,7 +793,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="return-value"></a>返回值  
  对 `CMFCHeaderCtrl` 对象的引用。  
   
-##  <a name="a-namegetheaderheighta--cmfcpropertygridctrlgetheaderheight"></a><a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
+##  <a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
  检索在属性网格控件的标头的高度。  
   
 ```  
@@ -732,7 +805,7 @@ int GetHeaderHeight() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetleftcolumnwidtha--cmfcpropertygridctrlgetleftcolumnwidth"></a><a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
+##  <a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
  检索包含每个属性的名称的当前属性网格控件左侧的列的宽度。  
   
 ```  
@@ -745,7 +818,7 @@ int GetLeftColumnWidth() const;
 ### <a name="remarks"></a>备注  
  在属性网格控件的右列中包含的每个属性的值。  
   
-##  <a name="a-namegetlistrecta--cmfcpropertygridctrlgetlistrect"></a><a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
+##  <a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
  检索的属性网格控件的边框。  
   
 ```  
@@ -757,7 +830,7 @@ CRect GetListRect() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetpropertya--cmfcpropertygridctrlgetproperty"></a><a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
+##  <a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
  检索指向对应于在属性网格控件中的项的指定索引的属性对象的指针。  
   
 ```  
@@ -775,7 +848,7 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetpropertycolumnwidtha--cmfcpropertygridctrlgetpropertycolumnwidth"></a><a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
+##  <a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
  检索包含属性值的列的当前宽度。  
   
 ```  
@@ -788,7 +861,7 @@ int GetPropertyColumnWidth() const;
 ### <a name="remarks"></a>备注  
  在属性网格控件右侧列包含的属性值。 客户可以使用属性网格控件的拆分框更改值列的宽度。  
   
-##  <a name="a-namegetpropertycounta--cmfcpropertygridctrlgetpropertycount"></a><a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
+##  <a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
  检索在属性网格控件的属性的数目。  
   
 ```  
@@ -800,7 +873,7 @@ int GetPropertyCount() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetrowheighta--cmfcpropertygridctrlgetrowheight"></a><a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
  检索的属性网格控件中的某行的高度。  
   
 ```  
@@ -813,7 +886,7 @@ int GetRowHeight() const;
 ### <a name="remarks"></a>备注  
  行的高度等于当前的字体高度加 4 个像素。  
   
-##  <a name="a-namegetscrollbarctrla--cmfcpropertygridctrlgetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
  检索指向属性网格控件中滚动条控件的指针。  
   
 ```  
@@ -830,7 +903,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ### <a name="remarks"></a>备注  
  使用此方法来获取到垂直滚动条控件的直接访问。  
   
-##  <a name="a-namegettextcolora--cmfcpropertygridctrlgettextcolor"></a><a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
  检索用于在当前的属性网格控件中绘制属性项的文本的颜色。  
   
 ```  
@@ -843,7 +916,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>备注  
  此方法检索框架将绘制前景色的当前属性网格控件使用的颜色。 [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)方法检索的背景色。  
   
-##  <a name="a-namehittesta--cmfcpropertygridctrlhittest"></a><a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
+##  <a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
  检索指向项中指定的点是否与属性网格控件项相对应的属性对象的指针。 此方法还指示在属性网格控件中包含点的区域。  
   
 ```  
@@ -880,7 +953,7 @@ CMFCPropertyGridProperty* HitTest(
 |`ClickArea::ClickValue`|属性值。|  
 |`CMFCPropertyGridProperty::ClickDescription`|属性网格控件说明区域。|  
   
-##  <a name="a-nameinita--cmfcpropertygridctrlinit"></a><a name="init"></a>CMFCPropertyGridCtrl::Init  
+##  <a name="init"></a>CMFCPropertyGridCtrl::Init  
  由框架来初始化属性网格控件调用。  
   
 ```  
@@ -889,14 +962,14 @@ virtual void Init();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameinitheadera--cmfcpropertygridctrlinitheader"></a><a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
+##  <a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
  初始化内部[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)对象框架使用，以显示当前的属性网格控件。  
   
 ```  
 virtual void InitHeader();
 ```  
   
-##  <a name="a-nameisalphabeticmodea--cmfcpropertygridctrlisalphabeticmode"></a><a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
+##  <a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
  指示在属性网格控件是否处于按字母顺序模式。  
   
 ```  
@@ -911,7 +984,7 @@ BOOL IsAlphabeticMode() const;
   
  使用[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)方法来启用或禁用按字母顺序模式。  
   
-##  <a name="a-nameisalwaysshowusertooltipa--cmfcpropertygridctrlisalwaysshowusertooltip"></a><a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
+##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -922,7 +995,7 @@ BOOL IsAlwaysShowUserToolTip() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameisdescriptionareaa--cmfcpropertygridctrlisdescriptionarea"></a><a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
+##  <a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
  指示是否显示在属性网格控件的描述区域。  
   
 ```  
@@ -935,7 +1008,7 @@ BOOL IsDescriptionArea() const;
 ### <a name="remarks"></a>备注  
  使用[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)方法来隐藏或显示的说明区域。  
   
-##  <a name="a-nameisgroupnamefullwidtha--cmfcpropertygridctrlisgroupnamefullwidth"></a><a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
+##  <a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
  指示是否在当前的属性网格控件的宽度范围内显示每个属性组名称。  
   
 ```  
@@ -948,7 +1021,7 @@ BOOL IsGroupNameFullWidth() const;
 ### <a name="remarks"></a>备注  
  一个*组*是相关属性在属性网格控件的集合。 如果层次结构方式显示控件*组名*显示为组上方的行中类别标题。  
   
-##  <a name="a-nameisheaderctrla--cmfcpropertygridctrlisheaderctrl"></a><a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
+##  <a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
  指示是否显示标头控件。  
   
 ```  
@@ -961,7 +1034,7 @@ BOOL IsHeaderCtrl() const;
 ### <a name="remarks"></a>备注  
  使用[CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)隐藏或显示标头控件的方法。  
   
-##  <a name="a-nameismarkmodifiedpropertiesa--cmfcpropertygridctrlismarkmodifiedproperties"></a><a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
+##  <a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
  指示在属性网格控件显示修改后的属性的方式。  
   
 ```  
@@ -973,7 +1046,7 @@ BOOL IsMarkModifiedProperties() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameisshowdragcontexta--cmfcpropertygridctrlisshowdragcontext"></a><a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
+##  <a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
  指示是否框架重绘的当前属性网格控件的名称和值列在用户调整列的大小。  
   
 ```  
@@ -986,7 +1059,7 @@ BOOL IsShowDragContext() const;
 ### <a name="remarks"></a>备注  
  用户可以通过拖动列之间的拆分条来调整在属性网格控件的名称和值列。 如果显示的拖动上下文，则只要用户拖动拆分栏将调整大小的名称和值的列。 否则为在拆分栏移动，但这些列拖放操作完成之前不重新绘制。  
   
-##  <a name="a-nameisvsdotnetlooka--cmfcpropertygridctrlisvsdotnetlook"></a><a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
+##  <a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
  指示是否在 Visual Studio.NET 中的样式属性网格控件的外观。  
   
 ```  
@@ -999,7 +1072,7 @@ BOOL IsVSDotNetLook() const;
 ### <a name="remarks"></a>备注  
  使用[CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)方法来为 Visual Studio.NET 中的样式设置的属性网格控件。  
   
-##  <a name="a-namemarkmodifiedpropertiesa--cmfcpropertygridctrlmarkmodifiedproperties"></a><a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
+##  <a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
  指定如何显示修改后的属性。  
   
 ```  
@@ -1017,7 +1090,7 @@ void MarkModifiedProperties(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameonchangeselectiona--cmfcpropertygridctrlonchangeselection"></a><a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
+##  <a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
  当前所选内容更改时由框架调用。  
   
 ```  
@@ -1036,7 +1109,7 @@ virtual void OnChangeSelection(
 ### <a name="remarks"></a>备注  
  此方法的默认实现没有任何影响。  
   
-##  <a name="a-nameonclickbuttona--cmfcpropertygridctrlonclickbutton"></a><a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
+##  <a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
  单击属性按钮时由框架调用。  
   
 ```  
@@ -1050,7 +1123,7 @@ virtual void OnClickButton(CPoint point);
 ### <a name="remarks"></a>备注  
  默认情况下，此方法更新当前属性值。  
   
-##  <a name="a-nameondrawbordera--cmfcpropertygridctrlondrawborder"></a><a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
  由要绘制在属性网格控件周围的边框的框架调用。  
   
 ```  
@@ -1063,7 +1136,7 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameondrawdescriptiona--cmfcpropertygridctrlondrawdescription"></a><a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
  由框架来绘制说明区域和显示的说明文本调用。  
   
 ```  
@@ -1082,7 +1155,7 @@ virtual void OnDrawDescription(
 ### <a name="remarks"></a>备注  
  使用[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)方法以显示说明区域。  
   
-##  <a name="a-nameondrawlista--cmfcpropertygridctrlondrawlist"></a><a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
+##  <a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
  由框架在属性网格控件中显示的属性列表调用。  
   
 ```  
@@ -1095,7 +1168,7 @@ virtual void OnDrawList(CDC* pDC);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameondrawpropertya--cmfcpropertygridctrlondrawproperty"></a><a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
+##  <a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
  由框架，以显示属性的调用。  
   
 ```  
@@ -1116,7 +1189,7 @@ virtual int OnDrawProperty(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameonpropertychangeda--cmfcpropertygridctrlonpropertychanged"></a><a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
+##  <a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
  属性的值发生更改时由框架调用。  
   
 ```  
@@ -1130,7 +1203,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ### <a name="remarks"></a>备注  
  默认情况下，此方法可发送[AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md)属性网格控件的所有者的消息。  
   
-##  <a name="a-nameonselectcomboa--cmfcpropertygridctrlonselectcombo"></a><a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
+##  <a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
  选择一个属性，它包含一个组合框控件时由框架调用。  
   
 ```  
@@ -1139,7 +1212,7 @@ void OnSelectCombo();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameremovealla--cmfcpropertygridctrlremoveall"></a><a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
+##  <a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
  从属性网格控件中删除所有属性对象。  
   
 ```  
@@ -1148,7 +1221,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameresetoriginalvaluesa--cmfcpropertygridctrlresetoriginalvalues"></a><a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
+##  <a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
  还原所有属性的原始值。  
   
 ```  
@@ -1161,7 +1234,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetalphabeticmodea--cmfcpropertygridctrlsetalphabeticmode"></a><a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
+##  <a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
  设置或重置字母的模式。  
   
 ```  
@@ -1175,7 +1248,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ### <a name="remarks"></a>备注  
  按字母顺序模式的属性网格控件时，该控件对它包含由其属性名称的所有属性进行都排序。  
   
-##  <a name="a-namesetboollabelsa--cmfcpropertygridctrlsetboollabels"></a><a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
+##  <a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
  指定的布尔值的标签的文本。  
   
 ```  
@@ -1193,7 +1266,7 @@ void SetBoolLabels(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetcursela--cmfcpropertygridctrlsetcursel"></a><a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
+##  <a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
  在属性网格控件中选择一个属性。  
   
 ```  
@@ -1212,7 +1285,7 @@ void SetCurSel(
 ### <a name="remarks"></a>备注  
  使用此方法以取消在属性网格控件中当前项的选择，然后选择对应于指定的属性的项。  
   
-##  <a name="a-namesetcustomcolorsa--cmfcpropertygridctrlsetcustomcolors"></a><a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
+##  <a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
  指定属性网格控件的各种元素的自定义的颜色。  
   
 ```  
@@ -1253,7 +1326,7 @@ void SetCustomColors(
   
  若要自定义的特定属性的外观，请从派生类[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)类，然后重写[CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname)， [CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue)， [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)，和[CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton)方法。  
   
-##  <a name="a-namesetdescriptionrowsa--cmfcpropertygridctrlsetdescriptionrows"></a><a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
+##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
  指定要在当前的属性网格控件的描述部分中显示行的数。  
   
 ```  
@@ -1264,7 +1337,7 @@ void SetDescriptionRows(int nDescRows);
  [in] `nDescRows`  
  要在属性说明中显示的行数。  
   
-##  <a name="a-namesetgroupnamefullwidtha--cmfcpropertygridctrlsetgroupnamefullwidth"></a><a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
+##  <a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  指定是否在当前的属性网格控件中显示一组属性的类别名称的整个宽度。  
   
 ```  
@@ -1285,7 +1358,7 @@ void SetGroupNameFullWidth(
   
  这些条款*组名*和*类别名称*此方法中互换使用。 类别名称将显示在注意一组相关的属性和值的行。 此方法指定属性名称列的宽度是否还指定显示的类别名称的宽度。  
   
-##  <a name="a-namesetlistdelimitera--cmfcpropertygridctrlsetlistdelimiter"></a><a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
+##  <a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
  定义用作分隔符的属性值列表中的字符。  
   
 ```  
@@ -1301,7 +1374,7 @@ void SetListDelimiter(TCHAR c);
   
  默认情况下， [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)构造函数将分隔符字符设置为以逗号 （，）。  
   
-##  <a name="a-namesetshowdragcontexta--cmfcpropertygridctrlsetshowdragcontext"></a><a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
+##  <a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
  指定是否在 framework 重绘的当前属性网格控件的名称和值列时用户调整列的大小。  
   
 ```  
@@ -1315,7 +1388,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ### <a name="remarks"></a>备注  
  用户可以通过拖动列之间的拆分条来调整在属性网格控件的名称和值列。 如果显示的拖动上下文，则只要用户拖动拆分栏将调整大小的名称和值的列。 否则为在拆分栏移动，但这些列拖放操作完成之前不重新绘制。  
   
-##  <a name="a-namesetvsdotnetlooka--cmfcpropertygridctrlsetvsdotnetlook"></a><a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
+##  <a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
  在 Visual Studio.NET 中使用的样式设置的属性网格控件的外观。  
   
 ```  
@@ -1328,7 +1401,7 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameupdatecolora--cmfcpropertygridctrlupdatecolor"></a><a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
+##  <a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
  设置当前选定的颜色属性的颜色值。  
   
 ```  
@@ -1342,7 +1415,7 @@ virtual void UpdateColor(COLORREF color);
 ### <a name="remarks"></a>备注  
  此方法断言在调试模式下，如果属性网格控件的当前选定的属性不是一个颜色属性。  
   
-##  <a name="a-namevalidateitemdataa--cmfcpropertygridctrlvalidateitemdata"></a><a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
+##  <a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
  由该框架能验证属性数据调用。  
   
 ```  

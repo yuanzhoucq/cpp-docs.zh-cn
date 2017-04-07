@@ -103,7 +103,7 @@ class queue
   
  **命名空间：** std  
   
-##  <a name="a-namequeuebacka--queueback"></a><a name="queue__back"></a>queue::back  
+##  <a name="queue__back"></a>queue::back  
  返回对在队列后部最近添加的最后一个元素的引用。  
   
 ```  
@@ -146,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namequeuecontainertypea--queuecontainertype"></a><a name="queue__container_type"></a>queue::container_type  
+##  <a name="queue__container_type"></a>queue::container_type  
  一种类型，它提供将调整的基容器。  
   
 ```  
@@ -161,7 +161,7 @@ typedef Container container_type;
 ### <a name="example"></a>示例  
   有关如何声明和使用 `container_type` 的示例，请参阅 [queue](#queue__queue) 的示例。  
   
-##  <a name="a-namequeueemptya--queueempty"></a><a name="queue__empty"></a>queue::empty  
+##  <a name="queue__empty"></a>queue::empty  
  测试队列是否为空。  
   
 ```  
@@ -205,7 +205,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="a-namequeuefronta--queuefront"></a><a name="queue__front"></a>queue::front  
+##  <a name="queue__front"></a>queue::front  
  返回对队列前部的第一个元素的引用。  
   
 ```  
@@ -254,7 +254,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namequeuepopa--queuepop"></a><a name="queue__pop"></a>queue::pop  
+##  <a name="queue__pop"></a>queue::pop  
  从队列的前部移除元素。  
   
 ```  
@@ -308,7 +308,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="a-namequeuepusha--queuepush"></a><a name="queue__push"></a>queue::push  
+##  <a name="queue__push"></a>queue::push  
  将元素添加到队列的后部。  
   
 ```  
@@ -354,7 +354,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="a-namequeuequeuea--queuequeue"></a><a name="queue__queue"></a>queue::queue  
+##  <a name="queue__queue"></a>queue::queue  
  构造一个空的或者是基容器对象副本的队列。  
   
 ```  
@@ -364,7 +364,7 @@ explicit queue(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` right`  
+ `right`  
  要以构造的队列为副本的 **const** 容器。  
   
 ### <a name="remarks"></a>备注  
@@ -418,7 +418,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="a-namequeuesizea--queuesize"></a><a name="queue__size"></a>queue::size  
+##  <a name="queue__size"></a>queue::size  
  返回队列中的元素数目。  
   
 ```  
@@ -457,7 +457,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="a-namequeuesizetypea--queuesizetype"></a><a name="queue__size_type"></a>queue::size_type  
+##  <a name="queue__size_type"></a>queue::size_type  
  一种无符号整数类型，此类型可表示队列中的元素数量。  
   
 ```  
@@ -470,7 +470,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>示例  
   有关如何声明和使用 `size_type` 的示例，请参阅 [queue::front](#queue__front) 的示例。  
   
-##  <a name="a-namequeuevaluetypea--queuevaluetype"></a><a name="queue__value_type"></a>queue::value_type  
+##  <a name="queue__value_type"></a>queue::value_type  
  一种类型，它表示存储为队列中元素的对象的类型。  
   
 ```  

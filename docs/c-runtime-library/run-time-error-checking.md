@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e5ffb6d3321637b662790a32cce65e6908b4778d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: eb9db9ea42d50faa6e7a693c95795036e650a760
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="run-time-error-checking"></a>运行时错误检查
@@ -47,12 +47,12 @@ C 运行库包含支持运行时错误检查 (RTC) 的函数。 利用运行时�
   
 ### <a name="run-time-error-checking-functions"></a>运行时错误检查函数  
   
-|函数|使用|.NET Framework 等效项|  
-|--------------|---------|-------------------------------|  
-|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|返回运行时错误检查类型的简要描述。||  
-|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|返回可由运行时错误检查检测的错误的总数。||  
-|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|将函数指定为报告运行时错误检查的处理程序。||  
-|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|将一个由运行时错误检查检测到的错误与一个类型关联。||  
+|函数|使用|  
+|--------------|---------|  
+|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|返回运行时错误检查类型的简要描述。|  
+|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|返回可由运行时错误检查检测的错误的总数。|  
+|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|将函数指定为报告运行时错误检查的处理程序。|  
+|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|将一个由运行时错误检查检测到的错误与一个类型关联。|  
   
 ## <a name="see-also"></a>另请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)   

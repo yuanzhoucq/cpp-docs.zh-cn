@@ -10,7 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHwndRenderTarget
-- afxrendertarget/CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::Attach
+- AFXRENDERTARGET/CHwndRenderTarget::CheckWindowState
+- AFXRENDERTARGET/CHwndRenderTarget::Create
+- AFXRENDERTARGET/CHwndRenderTarget::Detach
+- AFXRENDERTARGET/CHwndRenderTarget::GetHwnd
+- AFXRENDERTARGET/CHwndRenderTarget::GetHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::ReCreate
+- AFXRENDERTARGET/CHwndRenderTarget::Resize
+- AFXRENDERTARGET/CHwndRenderTarget::m_pHwndRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +102,7 @@ class CHwndRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-nameattacha--chwndrendertargetattach"></a><a name="attach"></a>CHwndRenderTarget::Attach  
+##  <a name="attach"></a>CHwndRenderTarget::Attach  
  附加现有的呈现器目标接口的对象  
   
 ```  
@@ -103,7 +113,7 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
  `pTarget`  
  现有的呈现器目标接口。 不能为 NULL  
   
-##  <a name="a-namecheckwindowstatea--chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
+##  <a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
  指示是否封闭的与此呈现器目标相关联的 HWND。  
   
 ```  
@@ -113,7 +123,7 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 ### <a name="return-value"></a>返回值  
  一个值，该值指示是否与此相关的 HWND 呈现目标被封闭。  
   
-##  <a name="a-namechwndrendertargeta--chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
+##  <a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
  构造 CHwndRenderTarget 对象与 HWND。  
   
 ```  
@@ -124,7 +134,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
  `hwnd`  
  与此相关的 HWND 呈现器目标  
   
-##  <a name="a-namecreatea--chwndrendertargetcreate"></a><a name="create"></a>CHwndRenderTarget::Create  
+##  <a name="create"></a>CHwndRenderTarget::Create  
  创建与窗口关联的呈现器目标  
   
 ```  
@@ -138,7 +148,7 @@ BOOL Create(HWND hWnd);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE  
   
-##  <a name="a-namedetacha--chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderTarget::Detach  
+##  <a name="detach"></a>CHwndRenderTarget::Detach  
  分离对象中的呈现器目标接口  
   
 ```  
@@ -148,7 +158,7 @@ ID2D1HwndRenderTarget* Detach();
 ### <a name="return-value"></a>返回值  
  指向分离呈现器目标接口。  
   
-##  <a name="a-namegethwnda--chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
+##  <a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
  返回与此相关的 HWND 呈现器目标。  
   
 ```  
@@ -158,7 +168,7 @@ HWND GetHwnd() const;
 ### <a name="return-value"></a>返回值  
  与此相关的 HWND 呈现器目标。  
   
-##  <a name="a-namegethwndrendertargeta--chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
+##  <a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
  返回 ID2D1HwndRenderTarget 接口。  
   
 ```  
@@ -168,14 +178,14 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1HwndRenderTarget 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namemphwndrendertargeta--chwndrendertargetmphwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
+##  <a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
  指向 ID2D1HwndRenderTarget 对象的指针。  
   
 ```  
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1hwndrendertargetstara--chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
+##  <a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
  返回 ID2D1HwndRenderTarget 接口。  
   
 ```  
@@ -185,7 +195,7 @@ operator ID2D1HwndRenderTarget*();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1HwndRenderTarget 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namerecreatea--chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndRenderTarget::ReCreate  
+##  <a name="recreate"></a>CHwndRenderTarget::ReCreate  
  重新创建与窗口关联的呈现器目标  
   
 ```  
@@ -199,7 +209,7 @@ BOOL ReCreate(HWND hWnd);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-nameresizea--chwndrendertargetresize"></a><a name="resize"></a>CHwndRenderTarget::Resize  
+##  <a name="resize"></a>CHwndRenderTarget::Resize  
  呈现器目标的大小更改为指定的像素大小  
   
 ```  

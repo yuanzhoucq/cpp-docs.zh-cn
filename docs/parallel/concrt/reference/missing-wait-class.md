@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::missing_wait
+- missing_wait
+- CONCRT/concurrency::missing_wait
+- CONCRT/concurrency::missing_wait::missing_wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 70b1c77660992b33de2204fd4f4221ed6e957e21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="missingwait-class"></a>missing_wait 类
@@ -54,7 +56,7 @@ class missing_wait : public std::exception;
   
 |名称|说明|  
 |----------|-----------------|  
-|[missing_wait 构造函数](#ctor)|已重载。 构造 `missing_wait` 对象。|  
+|[missing_wait](#ctor)|已重载。 构造 `missing_wait` 对象。|  
   
 ## <a name="remarks"></a>备注  
  不存在异常流，您负责进行调用`wait`或`run_and_wait`方法`task_group`或`structured_task_group`之前允许销毁该对象的对象。 运行时会引发此异常显示为相对值忘记调用`wait`或`run_and_wait`方法。  
@@ -69,7 +71,7 @@ class missing_wait : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+##  <a name="ctor"></a>missing_wait 
 
  构造 `missing_wait` 对象。  
   
@@ -86,7 +88,7 @@ missing_wait() throw();
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [task_group 类](task-group-class.md)   
- [wait 方法](task-group-class.md)   
- [run_and_wait 方法](task-group-class.md)   
+ [等待](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
  [structured_task_group 类](structured-task-group-class.md)
 

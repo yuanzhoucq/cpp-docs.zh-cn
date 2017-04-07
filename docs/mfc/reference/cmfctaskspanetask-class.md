@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask::CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask::SetACCData
+- AFXTASKSPANE/CMFCTasksPaneTask::m_bAutoDestroyWindow
+- AFXTASKSPANE/CMFCTasksPaneTask::m_bIsBold
+- AFXTASKSPANE/CMFCTasksPaneTask::m_dwUserData
+- AFXTASKSPANE/CMFCTasksPaneTask::m_hwndTask
+- AFXTASKSPANE/CMFCTasksPaneTask::m_nIcon
+- AFXTASKSPANE/CMFCTasksPaneTask::m_nWindowHeight
+- AFXTASKSPANE/CMFCTasksPaneTask::m_pGroup
+- AFXTASKSPANE/CMFCTasksPaneTask::m_rect
+- AFXTASKSPANE/CMFCTasksPaneTask::m_strName
+- AFXTASKSPANE/CMFCTasksPaneTask::m_uiCommandID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +107,7 @@ class CMFCTasksPaneTask : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxTasksPane.h  
   
-##  <a name="a-namecmfctaskspanetaska--cmfctaskspanetaskcmfctaskspanetask"></a><a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
+##  <a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
  创建并初始化`CMFCTasksPaneTask`对象。  
   
 ```  
@@ -136,7 +149,7 @@ CMFCTasksPaneTask(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namembautodestroywindowa--cmfctaskspanetaskmbautodestroywindow"></a><a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
+##  <a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
  确定是否自动销毁任务窗口。  
   
 ```  
@@ -146,7 +159,7 @@ BOOL m_bAutoDestroyWindow;
 ### <a name="remarks"></a>备注  
  设置为`TRUE`指定任务窗口 ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) 会自动; 否则为应销毁`FALSE`。  
   
-##  <a name="a-namembisbolda--cmfctaskspanetaskmbisbold"></a><a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
+##  <a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
  确定是否显示为粗体文本绘制任务标签。  
   
 ```  
@@ -156,7 +169,7 @@ BOOL m_bIsBold;
 ### <a name="remarks"></a>备注  
  将此成员设置为`TRUE`以显示任务标签显示为粗体文本。  
   
-##  <a name="a-namemdwuserdataa--cmfctaskspanetaskmdwuserdata"></a><a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
+##  <a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
  包含与任务关联的用户定义数据。 如果数据不会与任务关联，设置为零。  
   
 ```  
@@ -165,7 +178,7 @@ DWORD m_dwUserData;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemhwndtaska--cmfctaskspanetaskmhwndtask"></a><a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
+##  <a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
  任务窗口句柄。  
   
 ```  
@@ -175,7 +188,7 @@ HWND m_hwndTask;
 ### <a name="remarks"></a>备注  
  若要添加的任务窗口，请调用[CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow)。  
   
-##  <a name="a-namemnicona--cmfctaskspanetaskmnicon"></a><a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
+##  <a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
  标识指定的任务旁边显示的图像的图像列表中的索引位置。  
   
 ```  
@@ -187,7 +200,7 @@ int m_nIcon;
   
  设置`m_nIcon`为-1，如果想要显示的任务，如果没有图像。  
   
-##  <a name="a-namemnwindowheighta--cmfctaskspanetaskmnwindowheight"></a><a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
+##  <a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
  任务窗口的高度。 如果该任务有没有任务窗口，此值为零。  
   
 ```  
@@ -196,7 +209,7 @@ int m_nWindowHeight;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namempgroupa--cmfctaskspanetaskmpgroup"></a><a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
+##  <a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
  指向[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)此任务属于。  
   
 ```  
@@ -206,7 +219,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 ### <a name="remarks"></a>备注  
  每个任务必须具有父组。 您通过调用向一个任务窗格添加组[CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。  
   
-##  <a name="a-namemrecta--cmfctaskspanetaskmrect"></a><a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
+##  <a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
  指定任务的边框。  
   
 ```  
@@ -216,7 +229,7 @@ CRect m_rect;
 ### <a name="remarks"></a>备注  
  绘制任务时，将由框架计算此值。  
   
-##  <a name="a-namemstrnamea--cmfctaskspanetaskmstrname"></a><a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
+##  <a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
  任务的名称。  
   
 ```  
@@ -225,7 +238,7 @@ CString m_strName;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemuicommandida--cmfctaskspanetaskmuicommandid"></a><a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
+##  <a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
  指定当用户单击该任务执行的命令的命令 ID。 如果此值不是有效的命令 ID，该任务将被视为一个简单的标签。  
   
 ```  
@@ -234,7 +247,7 @@ UINT m_uiCommandID;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetaccdataa--cmfctaskspanetasksetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
+##  <a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
  确定当前任务的可访问性数据。  
   
 ```  

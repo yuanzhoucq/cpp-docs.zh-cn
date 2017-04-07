@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl::CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl::Create
+- AFXCMN/CHotKeyCtrl::CreateEx
+- AFXCMN/CHotKeyCtrl::GetHotKey
+- AFXCMN/CHotKeyCtrl::GetHotKeyName
+- AFXCMN/CHotKeyCtrl::GetKeyName
+- AFXCMN/CHotKeyCtrl::SetHotKey
+- AFXCMN/CHotKeyCtrl::SetRules
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="a-namechotkeyctrla--chotkeyctrlchotkeyctrl"></a><a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
  构造 `CHotKeyCtrl` 对象。  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="a-namecreatea--chotkeyctrlcreate"></a><a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>CHotKeyCtrl::Create  
  创建热键控件，并将其附加到`CHotKeyCtrl`对象。  
   
 ```  
@@ -132,7 +141,7 @@ virtual BOOL Create(
   
  如果您想要扩展的窗口样式用于您的控件，调用[CreateEx](#createex)而不是**创建**。  
   
-##  <a name="a-namecreateexa--chotkeyctrlcreateex"></a><a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
  调用此函数可创建的控件 （子窗口），并将其与关联`CHotKeyCtrl`对象。  
   
 ```  
@@ -166,7 +175,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  使用`CreateEx`而不是[创建](#create)应用扩展的窗口样式、 指定的 Windows 扩展的样式前言**WS_EX_**。  
   
-##  <a name="a-namegethotkeya--chotkeyctrlgethotkey"></a><a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
  从热键控件中检索的键盘快捷方式的虚拟键代码和修饰符标志。  
   
 ```  
@@ -199,7 +208,7 @@ void GetHotKey(
 ### <a name="remarks"></a>备注  
  虚拟键代码和修改键组合在一起定义的键盘快捷方式。  
   
-##  <a name="a-namegethotkeynamea--chotkeyctrlgethotkeyname"></a><a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
  调用此成员函数可获取热键的本地化的名称。  
   
 ```  
@@ -212,7 +221,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>备注  
  此成员函数返回的名称来自键盘驱动程序。 您可以在本地化版本的 Windows 中, 安装的非本地化键盘驱动程序，反之亦然。  
   
-##  <a name="a-namegetkeynamea--chotkeyctrlgetkeyname"></a><a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
  调用此成员函数可获取分配给指定的虚拟键代码的键的本地化的名称。  
   
 ```  
@@ -237,7 +246,7 @@ static CString GetKeyName(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCControlLadenDialog #&69;](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="a-namesethotkeya--chotkeyctrlsethotkey"></a><a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
  设置热键控件的键盘快捷方式。  
   
 ```  
@@ -265,7 +274,7 @@ void SetHotKey(
 ### <a name="remarks"></a>备注  
  虚拟键代码和修改键组合在一起定义的键盘快捷方式。  
   
-##  <a name="a-namesetrulesa--chotkeyctrlsetrules"></a><a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
  调用此函数可定义无效组合和热键控件的默认修饰符组合。  
   
 ```  

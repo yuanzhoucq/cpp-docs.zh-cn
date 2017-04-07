@@ -9,13 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- GetThisClass
-- CMFCRibbonSeparator::GetThisClass
-- CMFCRibbonSeparator.CreateObject
-- CMFCRibbonSeparator::CreateObject
 - CMFCRibbonSeparator
-- CreateObject
-- CMFCRibbonSeparator.GetThisClass
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::CMFCRibbonSeparator
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::AddToListBox
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::CopyFrom
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::GetRegularSize
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::IsSeparator
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::IsTabStop
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::OnDraw
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::OnDrawOnList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +114,7 @@ pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ## <a name="requirements"></a>要求  
  **标头：** afxbaseribbonelement.h  
   
-##  <a name="a-nameaddtolistboxa--cmfcribbonseparatoraddtolistbox"></a><a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
+##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
  添加到分隔符**命令**列入**自定义**对话框。  
   
 ```  
@@ -130,7 +133,7 @@ virtual int AddToListBox(
 ### <a name="return-value"></a>返回值  
  为指定的列表框中字符串的从零开始索引`pWndListBox`。  
   
-##  <a name="a-namecmfcribbonseparatora--cmfcribbonseparatorcmfcribbonseparator"></a><a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
+##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
  构造 `CMFCRibbonSeparator` 对象。  
   
 ```  
@@ -149,7 +152,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
   
  [!code-cpp[NVC_MFC_RibbonApp #&19;](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
-##  <a name="a-namecopyfroma--cmfcribbonseparatorcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
  从另一个对象设置分隔符的成员变量的复制方法。  
   
 ```  
@@ -160,7 +163,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
  [in] `Src`  
  要从复制的源功能区元素。  
   
-##  <a name="a-namegetregularsizea--cmfcribbonseparatorgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
  返回一个分隔符的大小。  
   
 ```  
@@ -174,7 +177,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="return-value"></a>返回值  
  在给定的设备上下文的分隔符的大小。  
   
-##  <a name="a-nameisseparatora--cmfcribbonseparatorisseparator"></a><a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
+##  <a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
  指示这是否是一个分隔符。  
   
 ```  
@@ -184,7 +187,7 @@ virtual BOOL IsSeparator() const;
 ### <a name="return-value"></a>返回值  
  始终`TRUE`此类。  
   
-##  <a name="a-nameistabstopa--cmfcribbonseparatoristabstop"></a><a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
+##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
  指示这是否是一个制表位。  
   
 ```  
@@ -197,7 +200,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>备注  
  功能区分隔符不是一个制表位。  
   
-##  <a name="a-nameondrawa--cmfcribbonseparatorondraw"></a><a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
  系统会在功能区或快速访问工具栏上绘制分隔符的调用。  
   
 ```  
@@ -208,7 +211,7 @@ virtual void OnDraw(CDC* pDC);
  [in] `pDC`  
  一个指向设备上下文的指针。  
   
-##  <a name="a-nameondrawonlista--cmfcribbonseparatorondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
+##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
  由系统上绘制分隔符调用**命令**列表。  
   
 ```  

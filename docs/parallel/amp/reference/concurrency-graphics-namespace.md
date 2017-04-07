@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics
-- amp_short_vectors/Concurrency::graphics
+- AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
@@ -33,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空间
@@ -51,9 +50,9 @@ namespace graphics;
   
 ### <a name="namespaces"></a>命名空间  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[Concurrency::graphics::direct3d Namespace](concurrency-graphics-direct3d-namespace.md)|提供用于 Direct3D 互操作函数。|  
+|[Concurrency::graphics::direct3d 命名空间](concurrency-graphics-direct3d-namespace.md)|提供用于 Direct3D 互操作函数。|  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -63,14 +62,14 @@ namespace graphics;
   
 ### <a name="enumerations"></a>枚举  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[address_mode 枚举](concurrency-graphics-namespace-enums.md#address_mode)。|指定地址模式支持纹理采样。|  
 |[filter_mode 枚举](concurrency-graphics-namespace-enums.md#filter_mode)|指定支持纹理采样的筛选器模式。|  
   
 ### <a name="classes"></a>类  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[texture 类](texture-class.md)|纹理是在扩展盘区域中的 accelerator_view 上聚合的数据。 它是变量，一个用于扩展盘区域中的每个元素的集合。 每个变量包含的值对应于 c + + 基元类型 (unsigned 的 int、 int、 float、 double)，或在 concurrency:: graphics 中定义的标量类型 norm 或 unorm （在 concurrency:: graphics 中定义） 或合格的短矢量类型。|  
 |[writeonly_texture_view 类](writeonly-texture-view-class.md)|Writeonly_texture_view 提供对纹理 writeonly 访问。|  
@@ -99,10 +98,10 @@ namespace graphics;
   
 ### <a name="functions"></a>函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[copy 函数](concurrency-graphics-namespace-functions.md#copy)|已重载。 将源纹理的内容复制到目标主机缓冲区。|  
-|[copy_async 函数](concurrency-graphics-namespace-functions.md#copy_async)|已重载。 以异步方式将源纹理的内容复制到目标主机缓冲区。|  
+|[copy](concurrency-graphics-namespace-functions.md#copy)|已重载。 将源纹理的内容复制到目标主机缓冲区。|  
+|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|已重载。 以异步方式将源纹理的内容复制到目标主机缓冲区。|  
   
 ## <a name="requirements"></a>要求  
  **标头︰** amp_graphics.h  
@@ -110,5 +109,5 @@ namespace graphics;
  **命名空间：** 并发  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

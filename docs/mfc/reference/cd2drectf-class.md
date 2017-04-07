@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DRectF
 - CD2DRectF
+- AFXRENDERTARGET/CD2DRectF
+- AFXRENDERTARGET/CD2DRectF::CD2DRectF
+- AFXRENDERTARGET/CD2DRectF::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DRectF : public D2D1_RECT_F;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-namecd2drectfa--cd2drectfcd2drectf"></a><a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
+##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
  构造 CD2DRectF 对象从 CRect 对象。  
   
 ```  
@@ -109,7 +111,7 @@ CD2DRectF(
  `fBottom`  
  源底部坐标  
   
-##  <a name="a-nameisnulla--cd2drectfisnull"></a><a name="isnull"></a>CD2DRectF::IsNull  
+##  <a name="isnull"></a>CD2DRectF::IsNull  
  返回一个布尔值，该值指示表达式是否包含无效数据 (Null)。  
   
 ```  
@@ -119,7 +121,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>返回值  
  矩形的顶部、 左边框、 下、 和正确的值完全等于 0; 如果为 TRUE否则为 FALSE。  
   
-##  <a name="a-nameoperatorcrecta--cd2drectfoperator-crect"></a><a name="operator_crect"></a>CD2DRectF::operator CRect  
+##  <a name="operator_crect"></a>CD2DRectF::operator CRect  
  将 CD2DRectF 转换成 CRect 对象。  
   
 ```  

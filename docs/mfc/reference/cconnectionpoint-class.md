@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
+- AFXDISP/CConnectionPoint
+- AFXDISP/CConnectionPoint::CConnectionPoint
+- AFXDISP/CConnectionPoint::GetConnections
+- AFXDISP/CConnectionPoint::GetContainer
+- AFXDISP/CConnectionPoint::GetIID
+- AFXDISP/CConnectionPoint::GetMaxConnections
+- AFXDISP/CConnectionPoint::GetNextConnection
+- AFXDISP/CConnectionPoint::GetStartPosition
+- AFXDISP/CConnectionPoint::OnAdvise
+- AFXDISP/CConnectionPoint::QuerySinkInterface
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,14 +116,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
   
-##  <a name="a-namecconnectionpointa--cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
  构造 `CConnectionPoint` 对象。  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="a-namegetconnectionsa--cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint::GetConnections  
+##  <a name="getconnections"></a>CConnectionPoint::GetConnections  
  调用此函数可检索所有活动连接的连接点。  
   
 ```  
@@ -123,7 +133,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>返回值  
  指向活动连接 （接收器） 的数组的指针。 某些中数组的指针可能是 NULL。 此数组中的每个非 NULL 指针可以安全地转换为指向使用强制转换运算符的接收器接口的指针。  
   
-##  <a name="a-namegetcontainera--cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
  由框架调用以检索**IConnectionPointContainer**连接点。  
   
 ```  
@@ -136,7 +146,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>备注  
  此函数通常由实现`BEGIN_CONNECTION_PART`宏。  
   
-##  <a name="a-namegetiida--cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint::GetIID  
+##  <a name="getiid"></a>CConnectionPoint::GetIID  
  由框架来检索连接点的接口 ID 调用。  
   
 ```  
@@ -149,7 +159,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>备注  
  重写此函数可返回用于此连接点的接口 ID。  
   
-##  <a name="a-namegetmaxconnectionsa--cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
  由要检索的最大连接点所支持的连接数的框架调用。  
   
 ```  
@@ -164,7 +174,7 @@ virtual int GetMaxConnections();
   
  如果您想要限制可以连接到您的控件的接收器的数目，重写此函数。  
   
-##  <a name="a-namegetnextconnectiona--cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>在  
+##  <a name="getnextconnection"></a>在  
  检索指向处的连接元素的指针`pos`。  
   
 ```  
@@ -184,7 +194,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCConnectionPoints #&4;](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
  通过返回启动映射迭代**位置**值，可以传递给[GetNextConnection](#getnextconnection)调用。  
   
 ```  
@@ -200,7 +210,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>示例  
   请参阅示例[在](#getnextconnection)。  
   
-##  <a name="a-nameonadvisea--cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
  由框架的连接时调用是建立或断开。  
   
 ```  
@@ -216,7 +226,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  如果您想要通知接收器连接到或从连接点断开连接时，重写此函数。  
   
-##  <a name="a-namequerysinkinterfacea--cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
  检索指向请求的接收器接口的指针。  
   
 ```  

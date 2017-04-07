@@ -10,7 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DGradientBrush
-- afxrendertarget/CD2DGradientBrush
+- AFXRENDERTARGET/CD2DGradientBrush
+- AFXRENDERTARGET/CD2DGradientBrush::CD2DGradientBrush
+- AFXRENDERTARGET/CD2DGradientBrush::Destroy
+- AFXRENDERTARGET/CD2DGradientBrush::m_arGradientStops
+- AFXRENDERTARGET/CD2DGradientBrush::m_colorInterpolationGamma
+- AFXRENDERTARGET/CD2DGradientBrush::m_extendMode
+- AFXRENDERTARGET/CD2DGradientBrush::m_pGradientStops
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +91,14 @@ class CD2DGradientBrush : public CD2DBrush;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dgradientbrusha--cd2dgradientbrushcd2dgradientbrush"></a><a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
+##  <a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
  析构函数。 当 D2D 渐变画笔对象被销毁时调用。  
   
 ```  
 virtual ~CD2DGradientBrush();
 ```  
   
-##  <a name="a-namecd2dgradientbrusha--cd2dgradientbrushcd2dgradientbrush"></a><a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
+##  <a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
  构造 CD2DGradientBrush 对象。  
   
 ```  
@@ -128,35 +134,35 @@ CD2DGradientBrush(
  `bAutoDestroy`  
  指示所有者 (pParentTarget) 将销毁该对象。  
   
-##  <a name="a-namedestroya--cd2dgradientbrushdestroy"></a><a name="destroy"></a>CD2DGradientBrush::Destroy  
+##  <a name="destroy"></a>CD2DGradientBrush::Destroy  
  销毁 CD2DGradientBrush 对象。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namemargradientstopsa--cd2dgradientbrushmargradientstops"></a><a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
+##  <a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
  D2D1_GRADIENT_STOP 结构的数组。  
   
 ```  
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;  
 ```  
   
-##  <a name="a-namemcolorinterpolationgammaa--cd2dgradientbrushmcolorinterpolationgamma"></a><a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
+##  <a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
  在哪种颜色执行内插的渐变停止点之间的空间。  
   
 ```  
 D2D1_GAMMA m_colorInterpolationGamma;  
 ```  
   
-##  <a name="a-namemextendmodea--cd2dgradientbrushmextendmode"></a><a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
+##  <a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
  [0，1] 的规范化范围之外的渐变的行为。  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  
 ```  
   
-##  <a name="a-namempgradientstopsa--cd2dgradientbrushmpgradientstops"></a><a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
+##  <a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
  指向一个 D2D1_GRADIENT_STOP 结构数组的指针。  
   
 ```  

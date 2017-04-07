@@ -10,11 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ISpecifyPropertyPagesImpl
-- ATL.ISpecifyPropertyPagesImpl<T>
-- ATL::ISpecifyPropertyPagesImpl
-- ATL::ISpecifyPropertyPagesImpl<T>
-- ATL.ISpecifyPropertyPagesImpl
-- ISpecifyPropertyPagesImpl Class
+- ATLCOM/ATL::ISpecifyPropertyPagesImpl
+- ATLCOM/ATL::ISpecifyPropertyPagesImpl::GetPages
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +85,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-namegetpagesa--ispecifypropertypagesimplgetpages"></a><a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
+##  <a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
  填充数组[CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048)结构可以在对象的属性表中显示的属性页的 Clsid。  
   
 ```

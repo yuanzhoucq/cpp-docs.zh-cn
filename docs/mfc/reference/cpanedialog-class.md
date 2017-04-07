@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPaneDialog
+- AFXPANEDIALOG/CPaneDialog
+- AFXPANEDIALOG/CPaneDialog::Create
+- AFXPANEDIALOG/CPaneDialog::HandleInitDialog
+- AFXPANEDIALOG/CPaneDialog::SetOccDialogInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +104,7 @@ class CPaneDialog : public CDockablePane
 ## <a name="requirements"></a>要求  
  **标头︰** afxpanedialog.h  
   
-##  <a name="a-namecreatea--cpanedialogcreate"></a><a name="create"></a>CPaneDialog::Create  
+##  <a name="create"></a>CPaneDialog::Create  
  创建停靠的对话框中，并将其附加到`CPaneDialog`对象。  
   
 ```  
@@ -177,7 +181,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_SetPaneSize #&2;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize #&3;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
-##  <a name="a-namehandleinitdialoga--cpanedialoghandleinitdialog"></a><a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
+##  <a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
  处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。  
   
 ```  
@@ -199,7 +203,7 @@ afx_msg LRESULT HandleInitDialog(
 ### <a name="remarks"></a>备注  
  该框架使用此方法来初始化控件和对话框中的外观。 然后再显示对话框中，框架将调用此方法。  
   
-##  <a name="a-namesetoccdialoginfoa--cpanedialogsetoccdialoginfo"></a><a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
+##  <a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
  指定是 OLE 控件容器的对话框模板。  
   
 ```  

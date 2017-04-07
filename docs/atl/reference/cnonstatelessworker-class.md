@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CNonStatelessWorker<Worker>
-- ATL::CNonStatelessWorker
-- ATL.CNonStatelessWorker
 - CNonStatelessWorker
-- ATL::CNonStatelessWorker<Worker>
+- ATLUTIL/ATL::CNonStatelessWorker
+- ATLUTIL/ATL::CNonStatelessWorker::RequestType
+- ATLUTIL/ATL::CNonStatelessWorker::Execute
+- ATLUTIL/ATL::CNonStatelessWorker::Initialize
+- ATLUTIL/ATL::CNonStatelessWorker::Terminate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +85,7 @@ class CNonStatelessWorker
 ## <a name="requirements"></a>要求  
  **标头︰** atlutil.h  
   
-##  <a name="a-nameexecutea--cnonstatelessworkerexecute"></a><a name="execute"></a>CNonStatelessWorker::Execute  
+##  <a name="execute"></a>CNonStatelessWorker::Execute  
  实现[WorkerArchetype::Execute](worker-archetype.md#execute)。  
 
   
@@ -99,7 +100,7 @@ void Execute(
  此方法创建的一个实例*工作人员*类上的堆栈和调用[初始化](worker-archetype.md#initialize)对该对象。 如果初始化成功，此方法还会调用[Execute](worker-archetype.md#execute)和[终止](worker-archetype.md#terminate)对同一个对象。  
 
   
-##  <a name="a-nameinitializea--cnonstatelessworkerinitialize"></a><a name="initialize"></a>CNonStatelessWorker::Initialize  
+##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
  实现[WorkerArchetype::Initialize](worker-archetype.md#initialize)。  
   
 ```
@@ -112,7 +113,7 @@ BOOL Initialize(void* /* pvParam */) throw();
 ### <a name="remarks"></a>备注  
  此类不会进行任意初始化`Initialize`。  
   
-##  <a name="a-namerequesttypea--cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>CNonStatelessWorker::RequestType  
+##  <a name="requesttype"></a>CNonStatelessWorker::RequestType  
  实现[WorkerArchetype::RequestType](worker-archetype.md#requesttype)。  
   
 ```
@@ -122,7 +123,7 @@ typedef Worker::RequestType RequestType;
 ### <a name="remarks"></a>备注  
  此类处理类用于具有相同类型的工作项*工作人员*模板参数。 请参阅[CNonStatelessWorker 概述](../../atl/reference/cnonstatelessworker-class.md)有关的详细信息。  
   
-##  <a name="a-nameterminatea--cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStatelessWorker::Terminate  
+##  <a name="terminate"></a>CNonStatelessWorker::Terminate  
  实现[WorkerArchetype::Terminate](worker-archetype.md#terminate)。  
   
 ```

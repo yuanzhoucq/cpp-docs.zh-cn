@@ -47,9 +47,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: ab3c60c735fbca972ff544a31918698f4afffa0e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="crt-library-features"></a>CRT 库功能
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="c-run-time-libraries-crt"></a>C 运行时库 (CRT)  
  C 运行时库 (CRT) 是集成了 ISO C99 标准库的 C++ 标准库。 实现 CRT 的 Visual C++ 库支持用于 .NET 开发的本机代码开发、本机和托管混合代码以及纯托管代码。 所有版本的 CRT 都支持多线程开发。 大多数的库都支持通过静态链接将库直接链接到代码中，或通过动态链接让代码使用常用 DLL 文件。  
   
- 在 Visual Studio 2015 中，CRT 已重构为新的二进制文件。 通用 CRT (UCRT) 包含通过标准 C99 CRT 库导出的函数和全局函数。 UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 静态库、DLL 导入库和 UCRT 的头文件现在 Windows 10 SDK 中提供。 安装 Visual C++ 时，Visual Studio 安装程序将安装使用 UCRT 所需 Windows 10 SDK 的子集。 可以在 Visual Studio 2015 支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 重新分发它，以便支持 Windows 10 以外的 Windows 版本。 有关详细信息，请参阅[重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)。  
+ 从 Visual Studio 2015 开始，CRT 已被重构为新的二进制文件。 通用 CRT (UCRT) 包含通过标准 C99 CRT 库导出的函数和全局函数。 UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 静态库、DLL 导入库和 UCRT 的头文件现在 Windows 10 SDK 中提供。 安装 Visual C++ 时，Visual Studio 安装程序将安装使用 UCRT 所需 Windows 10 SDK 的子集。 可以在 Visual Studio 2015 及更高版本支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 重新分发它，以便支持 Windows 10 以外的 Windows 版本。 有关详细信息，请参阅[重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)。  
   
  下表列出了实现 UCRT 的库。  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/24/2017
   
  如果使用 **/clr** 编译器开关，则将通过静态库 msvcmrt.lib 链接代码。 静态库将提供托管的代码和本机 CRT 之间的代理。 你无法使用静态链接的 CRT（ **/MT** 或 **/MTd** 选项）和 **/clr**。 请改用动态链接的库（**/MD** 或 **/MDd**）。  
   
- 如果使用 **/clr:pure** 编译器开关，则代码将与静态库 msvcurt.lib 链接。 与 **/clr**一样，你不能与静态链接的库链接。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
+ 如果使用 **/clr:pure** 编译器开关，则代码将与静态库 msvcurt.lib 链接。 与 **/clr**一样，你不能与静态链接的库链接。 从 Visual Studio 2015 开始，**/clr:pure** 和 **/clr:safe** 编译器选项已被弃用。  
   
  有关将 CRT 与 **/clr** 配合使用的详细信息，请参阅[混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)；对于 **/clr: pure**，请参阅[纯代码和可验证代码 (C + + CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
   

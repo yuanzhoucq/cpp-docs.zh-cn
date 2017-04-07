@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogEx
+- AFXDIALOGEX/CDialogEx
+- AFXDIALOGEX/CDialogEx::CDialogEx
+- AFXDIALOGEX/CDialogEx::SetBackgroundColor
+- AFXDIALOGEX/CDialogEx::SetBackgroundImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +90,7 @@ class CDialogEx : public CDialog
 ## <a name="requirements"></a>要求  
  **标头︰** afxdialogex.h  
   
-##  <a name="a-namecdialogexa--cdialogexcdialogex"></a><a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
  构造 `CDialogEx` 对象。  
   
 ```  
@@ -117,7 +121,7 @@ CDialogEx(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetbackgroundcolora--cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
  设置对话框的背景色。  
   
 ```  
@@ -135,7 +139,7 @@ void SetBackgroundColor(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetbackgroundimagea--cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
  设置对话框的背景图像。  
   
 ```  

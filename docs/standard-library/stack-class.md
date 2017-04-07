@@ -101,7 +101,7 @@ class stack
   
  **命名空间：** std  
   
-##  <a name="a-namestackcontainertypea--stackcontainertype"></a><a name="stack__container_type"></a>  stack::container_type  
+##  <a name="stack__container_type"></a>  stack::container_type  
  一种类型，它提供将调整的基容器。  
   
 ```  
@@ -116,7 +116,7 @@ typedef Container container_type;
 ### <a name="example"></a>示例  
   有关如何声明和使用 `container_type` 的示例，请参阅 [stack::stack](#stack__stack) 的示例。  
   
-##  <a name="a-namestackemptya--stackempty"></a><a name="stack__empty"></a>  stack::empty  
+##  <a name="stack__empty"></a>  stack::empty  
  测试堆栈是否为空。  
   
 ```  
@@ -159,7 +159,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="a-namestackpopa--stackpop"></a><a name="stack__pop"></a>  stack::pop  
+##  <a name="stack__pop"></a>  stack::pop  
  从堆栈的顶部删除元素。  
   
 ```  
@@ -213,7 +213,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="a-namestackpusha--stackpush"></a><a name="stack__push"></a>  stack::push  
+##  <a name="stack__push"></a>  stack::push  
  在堆栈的末尾处添加一个元素。  
   
 ```  
@@ -221,7 +221,7 @@ void push(const Type& val);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` val`  
+ `val`  
  添加到堆栈顶部的元素。  
   
 ### <a name="remarks"></a>备注  
@@ -259,7 +259,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="a-namestacksizea--stacksize"></a><a name="stack__size"></a>  stack::size  
+##  <a name="stack__size"></a>  stack::size  
  返回堆栈中元素数。  
   
 ```  
@@ -298,7 +298,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="a-namestacksizetypea--stacksizetype"></a><a name="stack__size_type"></a>  stack::size_type  
+##  <a name="stack__size_type"></a>  stack::size_type  
  一种无符号整数类型，此类型可表示堆栈中的元素数。  
   
 ```  
@@ -311,7 +311,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>示例  
   有关如何声明和使用 `size_type` 的示例，请参阅 [size](#stack__size) 的示例。  
   
-##  <a name="a-namestackstacka--stackstack"></a><a name="stack__stack"></a>  stack::stack  
+##  <a name="stack__stack"></a>  stack::stack  
  构造一个空的堆栈或者是基容器类副本的堆栈。  
   
 ```  
@@ -321,7 +321,7 @@ explicit stack(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` right`  
+ `right`  
  所构造堆栈要成为其副本的矢量。  
   
 ### <a name="example"></a>示例  
@@ -363,7 +363,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="a-namestacktopa--stacktop"></a><a name="stack__top"></a>  stack::top  
+##  <a name="stack__top"></a>  stack::top  
  返回对堆栈顶部元素的引用。  
   
 ```  
@@ -411,7 +411,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="a-namestackvaluetypea--stackvaluetype"></a><a name="stack__value_type"></a>  stack::value_type  
+##  <a name="stack__value_type"></a>  stack::value_type  
  一种类型，它表示存储为堆栈中元素的对象类型。  
   
 ```  

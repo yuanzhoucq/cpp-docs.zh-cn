@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CKeyFrame
 - CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboard
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAfterTransition
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAtOffset
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetExistingKeyframe
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetOffset
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetTransition
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_offset
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_pExistingKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_pTransition
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +99,7 @@ class CKeyFrame : public CBaseKeyFrame;
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtostoryboarda--ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
  添加到情节提要的一个关键帧。  
   
 ```  
@@ -111,7 +121,7 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>备注  
  此方法添加到情节提要的关键帧。 如果这取决于其他关键帧或转换，并且 bDeepAdd 为 TRUE，此方法将尝试以递归方式添加它们。  
   
-##  <a name="a-nameaddtostoryboardaftertransitiona--ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
+##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
  添加关键帧，以转换后的情节提要。  
   
 ```  
@@ -133,7 +143,7 @@ BOOL AddToStoryboardAfterTransition(
 ### <a name="remarks"></a>备注  
  此函数是由框架调用以添加关键帧转换后的情节提要。  
   
-##  <a name="a-nameaddtostoryboardatoffseta--ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
+##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
  将添加到情节提要偏移量处的关键帧。  
   
 ```  
@@ -155,7 +165,7 @@ virtual BOOL AddToStoryboardAtOffset(
 ### <a name="remarks"></a>备注  
  要添加到情节提要偏移量处的关键帧的框架调用此函数。  
   
-##  <a name="a-nameckeyframea--ckeyframeckeyframe"></a><a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
+##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
  构造一个取决于转换的关键帧。  
   
 ```  
@@ -180,7 +190,7 @@ CKeyFrame(
 ### <a name="remarks"></a>备注  
  指定的转换结束时，构造的关键帧将表示某个时刻情节提要。  
   
-##  <a name="a-namegetexistingkeyframea--ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
+##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
  返回指向此关键帧依赖的关键帧的指针。  
   
 ```  
@@ -193,7 +203,7 @@ CBaseKeyFrame* GetExistingKeyframe();
 ### <a name="remarks"></a>备注  
  这是对此关键帧依赖的关键帧的访问器。  
   
-##  <a name="a-namegetoffseta--ckeyframegetoffset"></a><a name="getoffset"></a>CKeyFrame::GetOffset  
+##  <a name="getoffset"></a>CKeyFrame::GetOffset  
  从其他关键帧返回某一偏移量。  
   
 ```  
@@ -206,7 +216,7 @@ UI_ANIMATION_SECONDS GetOffset();
 ### <a name="remarks"></a>备注  
  应调用此方法来确定其他关键帧之后的秒数中的偏移量。  
   
-##  <a name="a-namegettransitiona--ckeyframegettransition"></a><a name="gettransition"></a>CKeyFrame::GetTransition  
+##  <a name="gettransition"></a>CKeyFrame::GetTransition  
  返回到转换取决于此关键帧的指针。  
   
 ```  
@@ -219,21 +229,21 @@ CBaseTransition* GetTransition();
 ### <a name="remarks"></a>备注  
  这是对转换取决于此关键帧的访问器。  
   
-##  <a name="a-namemoffseta--ckeyframemoffset"></a><a name="m_offset"></a>CKeyFrame::m_offset  
+##  <a name="m_offset"></a>CKeyFrame::m_offset  
  指定从存储在 m_pExistingKeyFrame 一个关键帧此关键帧的偏移量。  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="a-namempexistingkeyframea--ckeyframempexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
+##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
  存储指向现有关键帧的指针。 此关键帧添加到现有关键帧 m_offset 的情节提要。  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="a-namemptransitiona--ckeyframemptransition"></a><a name="m_ptransition"></a>CKeyFrame::m_pTransition  
+##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
  存储在此关键帧处开始的过渡的指针。  
   
 ```  

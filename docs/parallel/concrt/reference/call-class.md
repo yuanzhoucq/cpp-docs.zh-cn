@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrency::call
-- agents/concurrency::call
+- call
+- AGENTS/concurrency::call
+- AGENTS/concurrency::call::call
+- AGENTS/concurrency::call::process_input_messages
+- AGENTS/concurrency::call::process_message
+- AGENTS/concurrency::call::propagate_message
+- AGENTS/concurrency::call::send_message
+- AGENTS/concurrency::call::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
-ms.openlocfilehash: b3cfec104346b212217a6854af2390c412c9e015
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 894540410e2768be1cb679b5108fc8c694ca02d3
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="call-class"></a>call 类
@@ -63,18 +69,18 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |名称|说明|  
 |----------|-----------------|  
-|[调用构造函数](#ctor)|已重载。 构造`call`消息块。|  
+|[调用](#ctor)|已重载。 构造`call`消息块。|  
 |[~ call 析构函数](#dtor)|销毁`call`消息块。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|说明|  
 |----------|-----------------|  
-|[process_input_messages 方法](#process_input_messages)|执行输入消息中调用函数。|  
-|[process_message 方法](#process_message)|处理一条消息，已接受此`call`消息块。|  
-|[propagate_message 方法](#propagate_message)|以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法时由源块调用。|  
-|[send_message 方法](#send_message)|以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法时由源块调用。|  
-|[supports_anonymous_source 方法](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 (重写[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
+|[process_input_messages](#process_input_messages)|执行输入消息中调用函数。|  
+|[process_message](#process_message)|处理一条消息，已接受此`call`消息块。|  
+|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法时由源块调用。|  
+|[send_message](#send_message)|以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法时由源块调用。|  
+|[supports_anonymous_source](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 (重写[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -91,7 +97,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-call"></a><a name="ctor"></a>调用 
+##  <a name="ctor"></a>调用 
 
  构造`call`消息块。  
   
@@ -142,7 +148,7 @@ call(
   
  类型`filter_method`是具有签名的伪函数`bool (T const &)`其调用此`call`消息块，以确定它是否应接受提供的消息。  
   
-##  <a name="a-namedtora-call"></a><a name="dtor"></a>~ 调用 
+##  <a name="dtor"></a>~ 调用 
 
  销毁`call`消息块。  
   
@@ -150,7 +156,7 @@ call(
 ~call();
 ```  
   
-##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a>process_input_messages 
 
  执行输入消息中调用函数。  
   
@@ -161,7 +167,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>参数  
  `_PMessage`  
   
-##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+##  <a name="process_message"></a>process_message 
 
  处理一条消息，已接受此`call`消息块。  
   
@@ -173,7 +179,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  指向要处理的消息的指针。  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法时由源块调用。  
   
@@ -193,7 +199,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>返回值  
  一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法时由源块调用。  
   
@@ -213,7 +219,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>返回值  
  一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。  
   

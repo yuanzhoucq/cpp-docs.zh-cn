@@ -10,6 +10,55 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CListBox
+- AFXWIN/CListBox
+- AFXWIN/CListBox::CListBox
+- AFXWIN/CListBox::AddString
+- AFXWIN/CListBox::CharToItem
+- AFXWIN/CListBox::CompareItem
+- AFXWIN/CListBox::Create
+- AFXWIN/CListBox::DeleteItem
+- AFXWIN/CListBox::DeleteString
+- AFXWIN/CListBox::Dir
+- AFXWIN/CListBox::DrawItem
+- AFXWIN/CListBox::FindString
+- AFXWIN/CListBox::FindStringExact
+- AFXWIN/CListBox::GetAnchorIndex
+- AFXWIN/CListBox::GetCaretIndex
+- AFXWIN/CListBox::GetCount
+- AFXWIN/CListBox::GetCurSel
+- AFXWIN/CListBox::GetHorizontalExtent
+- AFXWIN/CListBox::GetItemData
+- AFXWIN/CListBox::GetItemDataPtr
+- AFXWIN/CListBox::GetItemHeight
+- AFXWIN/CListBox::GetItemRect
+- AFXWIN/CListBox::GetListBoxInfo
+- AFXWIN/CListBox::GetLocale
+- AFXWIN/CListBox::GetSel
+- AFXWIN/CListBox::GetSelCount
+- AFXWIN/CListBox::GetSelItems
+- AFXWIN/CListBox::GetText
+- AFXWIN/CListBox::GetTextLen
+- AFXWIN/CListBox::GetTopIndex
+- AFXWIN/CListBox::InitStorage
+- AFXWIN/CListBox::InsertString
+- AFXWIN/CListBox::ItemFromPoint
+- AFXWIN/CListBox::MeasureItem
+- AFXWIN/CListBox::ResetContent
+- AFXWIN/CListBox::SelectString
+- AFXWIN/CListBox::SelItemRange
+- AFXWIN/CListBox::SetAnchorIndex
+- AFXWIN/CListBox::SetCaretIndex
+- AFXWIN/CListBox::SetColumnWidth
+- AFXWIN/CListBox::SetCurSel
+- AFXWIN/CListBox::SetHorizontalExtent
+- AFXWIN/CListBox::SetItemData
+- AFXWIN/CListBox::SetItemDataPtr
+- AFXWIN/CListBox::SetItemHeight
+- AFXWIN/CListBox::SetLocale
+- AFXWIN/CListBox::SetSel
+- AFXWIN/CListBox::SetTabStops
+- AFXWIN/CListBox::SetTopIndex
+- AFXWIN/CListBox::VKeyToItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -166,7 +215,7 @@ class CListBox : public CWnd
 ## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="a-nameaddstringa--clistboxaddstring"></a><a name="addstring"></a>CListBox::AddString  
+##  <a name="addstring"></a>CListBox::AddString  
  将一个字符串添加到列表框中。  
   
 ```  
@@ -188,7 +237,7 @@ int AddString(LPCTSTR lpszItem);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&3;](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]  
   
-##  <a name="a-namechartoitema--clistboxchartoitem"></a><a name="chartoitem"></a>CListBox::CharToItem  
+##  <a name="chartoitem"></a>CListBox::CharToItem  
  当列表框中的父窗口接收时由框架调用`WM_CHARTOITEM`从列表框中的消息。  
   
 ```  
@@ -225,7 +274,7 @@ virtual int CharToItem(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&4;](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]  
   
-##  <a name="a-nameclistboxa--clistboxclistbox"></a><a name="clistbox"></a>CListBox::CListBox  
+##  <a name="clistbox"></a>CListBox::CListBox  
  构造 `CListBox` 对象。  
   
 ```  
@@ -238,7 +287,7 @@ CListBox();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&1;](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
   
-##  <a name="a-namecompareitema--clistboxcompareitem"></a><a name="compareitem"></a>CListBox::CompareItem  
+##  <a name="compareitem"></a>CListBox::CompareItem  
  由框架来确定新项的已排序的所有者描述列表框中的相对位置调用。  
   
 ```  
@@ -266,7 +315,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&5;](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]  
   
-##  <a name="a-namecreatea--clistboxcreate"></a><a name="create"></a>CListBox::Create  
+##  <a name="create"></a>CListBox::Create  
  创建 Windows 列表框中，并将其附加到`CListBox`对象。  
   
 ```  
@@ -319,7 +368,7 @@ virtual BOOL Create(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&2;](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]  
   
-##  <a name="a-namedeleteitema--clistboxdeleteitem"></a><a name="deleteitem"></a>CListBox::DeleteItem  
+##  <a name="deleteitem"></a>CListBox::DeleteItem  
  当用户从所有者描述中删除项时由框架调用`CListBox`对象或销毁列表框。  
   
 ```  
@@ -338,7 +387,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&6;](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]  
   
-##  <a name="a-namedeletestringa--clistboxdeletestring"></a><a name="deletestring"></a>CListBox::DeleteString  
+##  <a name="deletestring"></a>CListBox::DeleteString  
  删除位置中的项`nIndex`从列表框。  
   
 ```  
@@ -358,7 +407,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&7;](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
   
-##  <a name="a-namedira--clistboxdir"></a><a name="dir"></a>CListBox::Dir  
+##  <a name="dir"></a>CListBox::Dir  
  添加列表的文件名、 驱动器或均为列表框中。  
   
 ```  
@@ -391,7 +440,7 @@ int Dir(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&8;](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]  
   
-##  <a name="a-namedrawitema--clistboxdrawitem"></a><a name="drawitem"></a>CListBox::DrawItem  
+##  <a name="drawitem"></a>CListBox::DrawItem  
  由框架在自绘列表框中更改的可视方位时调用。  
   
 ```  
@@ -412,7 +461,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&9;](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]  
   
-##  <a name="a-namefindstringa--clistboxfindstring"></a><a name="findstring"></a>CListBox::FindString  
+##  <a name="findstring"></a>CListBox::FindString  
  在包含指定的前缀，而无需更改的列表框中选择一个列表框中查找第一个字符串。  
   
 ```  
@@ -437,7 +486,7 @@ int FindString(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&10;](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
-##  <a name="a-namefindstringexacta--clistboxfindstringexact"></a><a name="findstringexact"></a>CListBox::FindStringExact  
+##  <a name="findstringexact"></a>CListBox::FindStringExact  
  查找与中指定的字符串匹配的第一个列表框中字符串`lpszFind`。  
   
 ```  
@@ -462,7 +511,7 @@ int FindStringExact(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&11;](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
   
-##  <a name="a-namegetanchorindexa--clistboxgetanchorindex"></a><a name="getanchorindex"></a>CListBox::GetAnchorIndex  
+##  <a name="getanchorindex"></a>CListBox::GetAnchorIndex  
  检索列表框中当前的定位点项的从零开始的索引。  
   
 ```  
@@ -478,7 +527,7 @@ int GetAnchorIndex() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListBox::SetAnchorIndex](#setanchorindex)。  
   
-##  <a name="a-namegetcaretindexa--clistboxgetcaretindex"></a><a name="getcaretindex"></a>CListBox::GetCaretIndex  
+##  <a name="getcaretindex"></a>CListBox::GetCaretIndex  
  确定具有多选列表框中的下的聚焦框的项的索引。  
   
 ```  
@@ -494,7 +543,7 @@ int GetCaretIndex() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListBox::SetCaretIndex](#setcaretindex)。  
   
-##  <a name="a-namegetcounta--clistboxgetcount"></a><a name="getcount"></a>CListBox::GetCount  
+##  <a name="getcount"></a>CListBox::GetCount  
  检索列表框中的项的数目。  
   
 ```  
@@ -510,7 +559,7 @@ int GetCount() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&12;](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]  
   
-##  <a name="a-namegetcursela--clistboxgetcursel"></a><a name="getcursel"></a>CListBox::GetCurSel  
+##  <a name="getcursel"></a>CListBox::GetCurSel  
  如果有单选列表框中，检索当前选定项的从零开始索引。  
   
 ```  
@@ -528,7 +577,7 @@ int GetCurSel() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&13;](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]  
   
-##  <a name="a-namegethorizontalextenta--clistboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
  从列表框中检索以像素为单位，它可以进行水平滚动的宽度。  
   
 ```  
@@ -544,7 +593,7 @@ int GetHorizontalExtent() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&14;](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]  
   
-##  <a name="a-namegetitemdataa--clistboxgetitemdata"></a><a name="getitemdata"></a>CListBox::GetItemData  
+##  <a name="getitemdata"></a>CListBox::GetItemData  
  检索与指定的列表框项相关联的应用程序提供双字值。  
   
 ```  
@@ -564,7 +613,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&15;](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
-##  <a name="a-namegetitemdataptra--clistboxgetitemdataptr"></a><a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
  检索与指定的列表框项作为指针关联的应用程序提供 32 位值 ( **void\***)。  
   
 ```  
@@ -581,7 +630,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&16;](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]  
   
-##  <a name="a-namegetitemheighta--clistboxgetitemheight"></a><a name="getitemheight"></a>CListBox::GetItemHeight  
+##  <a name="getitemheight"></a>CListBox::GetItemHeight  
  确定在列表框中的项的高度。  
   
 ```  
@@ -598,7 +647,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&17;](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
   
-##  <a name="a-namegetitemrecta--clistboxgetitemrect"></a><a name="getitemrect"></a>CListBox::GetItemRect  
+##  <a name="getitemrect"></a>CListBox::GetItemRect  
  因为它当前显示在列表框窗口中检索的矩形的尺寸该边界列表框项。  
   
 ```  
@@ -620,7 +669,7 @@ int GetItemRect(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&18;](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]  
   
-##  <a name="a-namegetlistboxinfoa--clistboxgetlistboxinfo"></a><a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
+##  <a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
  检索每个列的项的数目。  
   
 ```  
@@ -633,7 +682,7 @@ DWORD GetListBoxInfo() const;
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能[LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208)消息，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetlocalea--clistboxgetlocale"></a><a name="getlocale"></a>CListBox::GetLocale  
+##  <a name="getlocale"></a>CListBox::GetLocale  
  检索列表框中使用的区域设置。  
   
 ```  
@@ -649,7 +698,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListBox::SetLocale](#setlocale)。  
   
-##  <a name="a-namegetsela--clistboxgetsel"></a><a name="getsel"></a>CListBox::GetSel  
+##  <a name="getsel"></a>CListBox::GetSel  
  检索项的选择状态。  
   
 ```  
@@ -671,7 +720,7 @@ int GetSel(int nIndex) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&19;](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]  
   
-##  <a name="a-namegetselcounta--clistboxgetselcount"></a><a name="getselcount"></a>CListBox::GetSelCount  
+##  <a name="getselcount"></a>CListBox::GetSelCount  
  检索多选列表框中选定项的总数。  
   
 ```  
@@ -684,7 +733,7 @@ int GetSelCount() const;
 ### <a name="example"></a>示例  
   请参阅示例[CListBox::GetSelItems](#getselitems)。  
   
-##  <a name="a-namegetselitemsa--clistboxgetselitems"></a><a name="getselitems"></a>CListBox::GetSelItems  
+##  <a name="getselitems"></a>CListBox::GetSelItems  
  用指定的多选列表框中的选定项的物料编号的整数数组填充缓冲区。  
   
 ```  
@@ -706,7 +755,7 @@ int GetSelItems(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&20;](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]  
   
-##  <a name="a-namegettexta--clistboxgettext"></a><a name="gettext"></a>CListBox::GetText  
+##  <a name="gettext"></a>CListBox::GetText  
  从列表框中获取一个字符串。  
   
 ```  
@@ -738,7 +787,7 @@ void GetText(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&21;](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]  
   
-##  <a name="a-namegettextlena--clistboxgettextlen"></a><a name="gettextlen"></a>CListBox::GetTextLen  
+##  <a name="gettextlen"></a>CListBox::GetTextLen  
  获取列表框项中的字符串的长度。  
   
 ```  
@@ -755,7 +804,7 @@ int GetTextLen(int nIndex) const;
 ### <a name="example"></a>示例  
   请参阅示例[CListBox::GetText](#gettext)。  
   
-##  <a name="a-namegettopindexa--clistboxgettopindex"></a><a name="gettopindex"></a>CListBox::GetTopIndex  
+##  <a name="gettopindex"></a>CListBox::GetTopIndex  
  检索列表框中的第一个可见项的从零开始索引。  
   
 ```  
@@ -771,7 +820,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&22;](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]  
   
-##  <a name="a-nameinitstoragea--clistboxinitstorage"></a><a name="initstorage"></a>CListBox::InitStorage  
+##  <a name="initstorage"></a>CListBox::InitStorage  
  用于存储列表框中的项目中分配内存。  
   
 ```  
@@ -800,7 +849,7 @@ int InitStorage(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox 第&23;](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
   
-##  <a name="a-nameinsertstringa--clistboxinsertstring"></a><a name="insertstring"></a>CListBox::InsertString  
+##  <a name="insertstring"></a>CListBox::InsertString  
  将字符串插入到列表框。  
   
 ```  
@@ -825,7 +874,7 @@ int InsertString(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&24;](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
-##  <a name="a-nameitemfrompointa--clistboxitemfrompoint"></a><a name="itemfrompoint"></a>CListBox::ItemFromPoint  
+##  <a name="itemfrompoint"></a>CListBox::ItemFromPoint  
  确定最近的中指定的点的列表框项`pt`。  
   
 ```  
@@ -850,7 +899,7 @@ UINT ItemFromPoint(
 ### <a name="example"></a>示例  
   请参阅示例[CListBox::SetAnchorIndex](#setanchorindex)。  
   
-##  <a name="a-namemeasureitema--clistboxmeasureitem"></a><a name="measureitem"></a>CListBox::MeasureItem  
+##  <a name="measureitem"></a>CListBox::MeasureItem  
  创建具有一个所有者绘制样式的列表框时，由框架调用。  
   
 ```  
@@ -871,7 +920,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&25;](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]  
   
-##  <a name="a-nameresetcontenta--clistboxresetcontent"></a><a name="resetcontent"></a>CListBox::ResetContent  
+##  <a name="resetcontent"></a>CListBox::ResetContent  
  从列表框中移除所有项。  
   
 ```  
@@ -881,7 +930,7 @@ void ResetContent();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&26;](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]  
   
-##  <a name="a-nameselectstringa--clistboxselectstring"></a><a name="selectstring"></a>CListBox::SelectString  
+##  <a name="selectstring"></a>CListBox::SelectString  
  搜索列表框中项的匹配指定的字符串，并且如果找到匹配项，则将选择此项。  
   
 ```  
@@ -912,7 +961,7 @@ int SelectString(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&27;](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]  
   
-##  <a name="a-nameselitemrangea--clistboxselitemrange"></a><a name="selitemrange"></a>CListBox::SelItemRange  
+##  <a name="selitemrange"></a>CListBox::SelItemRange  
  多选列表框中选择多个连续的项。  
   
 ```  
@@ -941,7 +990,7 @@ int SelItemRange(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&28;](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
   
-##  <a name="a-namesetanchorindexa--clistboxsetanchorindex"></a><a name="setanchorindex"></a>CListBox::SetAnchorIndex  
+##  <a name="setanchorindex"></a>CListBox::SetAnchorIndex  
  设置中多选列表框，以便开始扩展所选内容的定位点。  
   
 ```  
@@ -958,7 +1007,7 @@ void SetAnchorIndex(int nIndex);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&29;](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]  
   
-##  <a name="a-namesetcaretindexa--clistboxsetcaretindex"></a><a name="setcaretindex"></a>CListBox::SetCaretIndex  
+##  <a name="setcaretindex"></a>CListBox::SetCaretIndex  
  多选列表框中将聚焦框设置为指定索引处的项。  
   
 ```  
@@ -983,7 +1032,7 @@ int SetCaretIndex(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&30;](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]  
   
-##  <a name="a-namesetcolumnwidtha--clistboxsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
  在多列的列表框中，以像素为单位的所有列的设置的宽度 (使用创建[LBS_MULTICOLUMN](../../mfc/reference/list-box-styles.md)样式)。  
   
 ```  
@@ -997,7 +1046,7 @@ void SetColumnWidth(int cxWidth);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&31;](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]  
   
-##  <a name="a-namesetcursela--clistboxsetcursel"></a><a name="setcursel"></a>CListBox::SetCurSel  
+##  <a name="setcursel"></a>CListBox::SetCurSel  
  选择一个字符串，并将其滚动到视图，如有必要。  
   
 ```  
@@ -1021,7 +1070,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&32;](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]  
   
-##  <a name="a-namesethorizontalextenta--clistboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent  
  设置的宽度，以像素为单位，列表框中可以进行水平滚动。  
   
 ```  
@@ -1042,7 +1091,7 @@ void SetHorizontalExtent(int cxExtent);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox 第&33;](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]  
   
-##  <a name="a-namesetitemdataa--clistboxsetitemdata"></a><a name="setitemdata"></a>CListBox::SetItemData  
+##  <a name="setitemdata"></a>CListBox::SetItemData  
  设置与列表框中指定的项关联的 32 位值。  
   
 ```  
@@ -1064,7 +1113,7 @@ int SetItemData(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&34;](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
-##  <a name="a-namesetitemdataptra--clistboxsetitemdataptr"></a><a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
  设置与要指定的指针的列表框中的指定项相关联的 32 位值 ( **void\***)。  
   
 ```  
@@ -1089,7 +1138,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&35;](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]  
   
-##  <a name="a-namesetitemheighta--clistboxsetitemheight"></a><a name="setitemheight"></a>CListBox::SetItemHeight  
+##  <a name="setitemheight"></a>CListBox::SetItemHeight  
  在列表框中设置项的高度。  
   
 ```  
@@ -1114,7 +1163,7 @@ int SetItemHeight(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&36;](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
   
-##  <a name="a-namesetlocalea--clistboxsetlocale"></a><a name="setlocale"></a>CListBox::SetLocale  
+##  <a name="setlocale"></a>CListBox::SetLocale  
  设置此列表框中的区域设置标识符。  
   
 ```  
@@ -1134,7 +1183,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&37;](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]  
   
-##  <a name="a-namesetsela--clistboxsetsel"></a><a name="setsel"></a>CListBox::SetSel  
+##  <a name="setsel"></a>CListBox::SetSel  
  多选列表框中选择一个字符串。  
   
 ```  
@@ -1161,7 +1210,7 @@ int SetSel(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&38;](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]  
   
-##  <a name="a-namesettabstopsa--clistboxsettabstops"></a><a name="settabstops"></a>CListBox::SetTabStops  
+##  <a name="settabstops"></a>CListBox::SetTabStops  
  设置在列表框中的制表位位置。  
   
 ```  
@@ -1197,7 +1246,7 @@ BOOL SetTabStops(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&39;](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]  
   
-##  <a name="a-namesettopindexa--clistboxsettopindex"></a><a name="settopindex"></a>CListBox::SetTopIndex  
+##  <a name="settopindex"></a>CListBox::SetTopIndex  
  确保特定的列表框项可见。  
   
 ```  
@@ -1217,7 +1266,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox #&40;](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
   
-##  <a name="a-namevkeytoitema--clistboxvkeytoitem"></a><a name="vkeytoitem"></a>CListBox::VKeyToItem  
+##  <a name="vkeytoitem"></a>CListBox::VKeyToItem  
  当列表框中的父窗口接收时由框架调用`WM_VKEYTOITEM`从列表框中的消息。  
   
 ```  

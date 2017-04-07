@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenuBar
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::AdjustSizeImmediate
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::BuildOrigItems
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::CloseDelayedSubMenu
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::ExportToMenu
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::FindDestintationToolBar
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetCurrentMenuImageSize
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetDefaultMenuId
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetLastCommandIndex
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetOffset
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::ImportFromMenu
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsDropDownListMode
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsPaletteMode
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsRibbonPanel
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsRibbonPanelInRegularMode
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::LoadFromHash
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::RestoreDelayedSubMenu
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::SetButtonStyle
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::SetOffset
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::StartPopupMenuTimer
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::m_bDisableSideBarInXPMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +130,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 ## <a name="requirements"></a>要求  
  **标头︰** afxpopupmenubar.h  
   
-##  <a name="a-nameadjustsizeimmediatea--cmfcpopupmenubaradjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>CMFCPopupMenuBar::AdjustSizeImmediate  
+##  <a name="adjustsizeimmediate"></a>CMFCPopupMenuBar::AdjustSizeImmediate  
  立即重新计算弹出菜单栏窗格中的布局。 (重写[CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)。  
   
 ```  
@@ -122,7 +143,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namebuildorigitemsa--cmfcpopupmenubarbuildorigitems"></a><a name="buildorigitems"></a>CMFCPopupMenuBar::BuildOrigItems  
+##  <a name="buildorigitems"></a>CMFCPopupMenuBar::BuildOrigItems  
  从指定的菜单资源加载弹出菜单项。  
   
 ```  
@@ -138,7 +159,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameclosedelayedsubmenua--cmfcpopupmenubarclosedelayedsubmenu"></a><a name="closedelayedsubmenu"></a>CMFCPopupMenuBar::CloseDelayedSubMenu  
+##  <a name="closedelayedsubmenu"></a>CMFCPopupMenuBar::CloseDelayedSubMenu  
  关闭已延迟的弹出菜单按钮。  
   
 ```  
@@ -147,7 +168,7 @@ virtual void CloseDelayedSubMenu();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameexporttomenua--cmfcpopupmenubarexporttomenu"></a><a name="exporttomenu"></a>CMFCPopupMenuBar::ExportToMenu  
+##  <a name="exporttomenu"></a>CMFCPopupMenuBar::ExportToMenu  
  生成中的菜单的弹出菜单按钮。  
   
 ```  
@@ -159,7 +180,7 @@ virtual HMENU ExportToMenu() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namefinddestintationtoolbara--cmfcpopupmenubarfinddestintationtoolbar"></a><a name="finddestintationtoolbar"></a>CMFCPopupMenuBar::FindDestintationToolBar  
+##  <a name="finddestintationtoolbar"></a>CMFCPopupMenuBar::FindDestintationToolBar  
  查找指定的点所在的工具栏。  
   
 ```  
@@ -175,7 +196,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetcurrentmenuimagesizea--cmfcpopupmenubargetcurrentmenuimagesize"></a><a name="getcurrentmenuimagesize"></a>CMFCPopupMenuBar::GetCurrentMenuImageSize  
+##  <a name="getcurrentmenuimagesize"></a>CMFCPopupMenuBar::GetCurrentMenuImageSize  
  指示菜单按钮图像的大小。  
   
 ```  
@@ -187,7 +208,7 @@ virtual CSize GetCurrentMenuImageSize() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetdefaultmenuida--cmfcpopupmenubargetdefaultmenuid"></a><a name="getdefaultmenuid"></a>CMFCPopupMenuBar::GetDefaultMenuId  
+##  <a name="getdefaultmenuid"></a>CMFCPopupMenuBar::GetDefaultMenuId  
  返回默认菜单项的标识符。  
   
 ```  
@@ -199,7 +220,7 @@ UINT GetDefaultMenuId() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetlastcommandindexa--cmfcpopupmenubargetlastcommandindex"></a><a name="getlastcommandindex"></a>CMFCPopupMenuBar::GetLastCommandIndex  
+##  <a name="getlastcommandindex"></a>CMFCPopupMenuBar::GetLastCommandIndex  
  获取最近一次调用菜单命令的索引。  
   
 ```  
@@ -211,7 +232,7 @@ static int __stdcall GetLastCommandIndex();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetoffseta--cmfcpopupmenubargetoffset"></a><a name="getoffset"></a>CMFCPopupMenuBar::GetOffset  
+##  <a name="getoffset"></a>CMFCPopupMenuBar::GetOffset  
  获取弹出菜单栏的行偏移量。  
   
 ```  
@@ -224,7 +245,7 @@ int GetOffset() const;
 ### <a name="remarks"></a>备注  
  此值设置为使用[CMFCPopupMenuBar::SetOffset](#setoffset)。  
   
-##  <a name="a-nameimportfrommenua--cmfcpopupmenubarimportfrommenu"></a><a name="importfrommenu"></a>CMFCPopupMenuBar::ImportFromMenu  
+##  <a name="importfrommenu"></a>CMFCPopupMenuBar::ImportFromMenu  
  从指定的菜单导入弹出菜单按钮。  
   
 ```  
@@ -245,7 +266,7 @@ virtual BOOL ImportFromMenu(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameisdropdownlistmodea--cmfcpopupmenubarisdropdownlistmode"></a><a name="isdropdownlistmode"></a>CMFCPopupMenuBar::IsDropDownListMode  
+##  <a name="isdropdownlistmode"></a>CMFCPopupMenuBar::IsDropDownListMode  
  指示弹出菜单栏是否处于下的下拉列表模式。  
   
 ```  
@@ -257,7 +278,7 @@ BOOL IsDropDownListMode() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameispalettemodea--cmfcpopupmenubarispalettemode"></a><a name="ispalettemode"></a>CMFCPopupMenuBar::IsPaletteMode  
+##  <a name="ispalettemode"></a>CMFCPopupMenuBar::IsPaletteMode  
  指示弹出菜单栏是否处于调色板模式。  
   
 ```  
@@ -270,7 +291,7 @@ BOOL IsPaletteMode() const;
 ### <a name="remarks"></a>备注  
  当菜单栏设置为调色板模式时，菜单项将出现在多个列和有限的数量的行。  
   
-##  <a name="a-nameisribbonpanela--cmfcpopupmenubarisribbonpanel"></a><a name="isribbonpanel"></a>CMFCPopupMenuBar::IsRibbonPanel  
+##  <a name="isribbonpanel"></a>CMFCPopupMenuBar::IsRibbonPanel  
  指示是否为功能区面板 (`FALSE`默认情况下)。  
   
 ```  
@@ -282,7 +303,7 @@ virtual BOOL IsRibbonPanel() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameisribbonpanelinregularmodea--cmfcpopupmenubarisribbonpanelinregularmode"></a><a name="isribbonpanelinregularmode"></a>CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
+##  <a name="isribbonpanelinregularmode"></a>CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
  指示是否为功能区面板以常规模式 (`FALSE`默认情况下)。  
   
 ```  
@@ -294,7 +315,7 @@ virtual BOOL IsRibbonPanelInRegularMode() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameloadfromhasha--cmfcpopupmenubarloadfromhash"></a><a name="loadfromhash"></a>CMFCPopupMenuBar::LoadFromHash  
+##  <a name="loadfromhash"></a>CMFCPopupMenuBar::LoadFromHash  
  加载已存档的菜单。  
   
 ```  
@@ -310,7 +331,7 @@ BOOL LoadFromHash(HMENU hMenu);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namembdisablesidebarinxpmodea--cmfcpopupmenubarmbdisablesidebarinxpmode"></a><a name="m_bdisablesidebarinxpmode"></a>CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
+##  <a name="m_bdisablesidebarinxpmode"></a>CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
  一个布尔型参数，该值指示具有 Windows XP 外观时，您的应用程序是否具有灰色侧栏。  
   
 ```  
@@ -322,7 +343,7 @@ BOOL m_bDisableSideBarInXPMode;
   
  默认值为 `FALSE`。  
   
-##  <a name="a-namerestoredelayedsubmenua--cmfcpopupmenubarrestoredelayedsubmenu"></a><a name="restoredelayedsubmenu"></a>CMFCPopupMenuBar::RestoreDelayedSubMenu  
+##  <a name="restoredelayedsubmenu"></a>CMFCPopupMenuBar::RestoreDelayedSubMenu  
  还原用于关闭弹出菜单栏的延迟的菜单按钮。  
   
 ```  
@@ -331,7 +352,7 @@ virtual void RestoreDelayedSubMenu();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetbuttonstylea--cmfcpopupmenubarsetbuttonstyle"></a><a name="setbuttonstyle"></a>CMFCPopupMenuBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>CMFCPopupMenuBar::SetButtonStyle  
  将工具栏按钮的样式设置给定索引处。 (重写[CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle)。)  
   
 ```  
@@ -349,7 +370,7 @@ virtual void SetButtonStyle(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetoffseta--cmfcpopupmenubarsetoffset"></a><a name="setoffset"></a>CMFCPopupMenuBar::SetOffset  
+##  <a name="setoffset"></a>CMFCPopupMenuBar::SetOffset  
  设置弹出菜单栏的行偏移量。  
   
 ```  
@@ -362,7 +383,7 @@ void SetOffset(int iOffset);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namestartpopupmenutimera--cmfcpopupmenubarstartpopupmenutimer"></a><a name="startpopupmenutimer"></a>CMFCPopupMenuBar::StartPopupMenuTimer  
+##  <a name="startpopupmenutimer"></a>CMFCPopupMenuBar::StartPopupMenuTimer  
  启动指定的延迟的弹出菜单按钮的计时器。  
   
 ```  

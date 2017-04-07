@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::SetImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 ## <a name="requirements"></a>要求  
  **标头︰** afxRibbonBar.h  
   
-##  <a name="a-namecmfcribbonapplicationbuttona--cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
  构造并初始化[而 CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)对象。  
   
 ```  
@@ -101,7 +104,7 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ### <a name="remarks"></a>备注  
  功能区应用程序按钮是位于应用程序窗口的左上角的特殊按钮。 当用户单击此按钮时，应用程序打开一个菜单，通常包含公共**文件**命令，如**打开**，**保存**，和**退出**。  
   
-##  <a name="a-namesetimagea--cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
+##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
  将图像分配给应用程序按钮。  
   
 ```  

@@ -10,6 +10,32 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CreateBitmap_32
+- AFXDRAWMANAGER/CDrawingManager::DrawAlpha
+- AFXDRAWMANAGER/CDrawingManager::DrawRotated
+- AFXDRAWMANAGER/CDrawingManager::DrawEllipse
+- AFXDRAWMANAGER/CDrawingManager::DrawGradientRing
+- AFXDRAWMANAGER/CDrawingManager::DrawRect
+- AFXDRAWMANAGER/CDrawingManager::DrawShadow
+- AFXDRAWMANAGER/CDrawingManager::Fill4ColorsGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient2
+- AFXDRAWMANAGER/CDrawingManager::GrayRect
+- AFXDRAWMANAGER/CDrawingManager::HighlightRect
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_ONE
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_TWO
+- AFXDRAWMANAGER/CDrawingManager::HSVtoRGB
+- AFXDRAWMANAGER/CDrawingManager::HuetoRGB
+- AFXDRAWMANAGER/CDrawingManager::MirrorRect
+- AFXDRAWMANAGER/CDrawingManager::PixelAlpha
+- AFXDRAWMANAGER/CDrawingManager::PrepareShadowMask
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSL
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSV
+- AFXDRAWMANAGER/CDrawingManager::SetAlphaPixel
+- AFXDRAWMANAGER/CDrawingManager::SetPixel
+- AFXDRAWMANAGER/CDrawingManager::SmartMixColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +123,7 @@ class CDrawingManager : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxdrawmanager.h  
   
-##  <a name="a-namecdrawingmanagera--cdrawingmanagercdrawingmanager"></a><a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
+##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
  构造[CDrawingManager](../../mfc/reference/cdrawingmanager-class.md)对象。  
   
 ```  
@@ -108,7 +134,7 @@ CDrawingManager(CDC& dc);
  [in] `dc`  
  对设备上下文的引用。 `CDrawingManager`的绘图区域使用此上下文。  
   
-##  <a name="a-namecreatebitmap32a--cdrawingmanagercreatebitmap32"></a><a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
+##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
  创建应用程序可以直接写入一个 32 位与设备无关位图 (DIB)。  
   
 ```  
@@ -137,7 +163,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 ### <a name="remarks"></a>备注  
  有关如何创建 DIB 位图的详细信息，请参阅[CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491)。  
   
-##  <a name="a-namedrawalphaa--cdrawingmanagerdrawalpha"></a><a name="drawalpha"></a>CDrawingManager::DrawAlpha  
+##  <a name="drawalpha"></a>CDrawingManager::DrawAlpha  
  显示具有透明或半透明的像素的位图。  
   
 ```  
@@ -164,7 +190,7 @@ void DrawAlpha(
 ### <a name="remarks"></a>备注  
  此方法执行 alpha 混合的两个位图。 Alpha 混合的详细信息，请参阅[AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) Windows SDK 中。  
   
-##  <a name="a-namedrawellipsea--cdrawingmanagerdrawellipse"></a><a name="drawellipse"></a>CDrawingManager::DrawEllipse  
+##  <a name="drawellipse"></a>CDrawingManager::DrawEllipse  
  绘制一个椭圆使用提供的填充和边框颜色。  
   
 ```  
@@ -187,7 +213,7 @@ void DrawEllipse(
 ### <a name="remarks"></a>备注  
  此方法返回不会绘制一个椭圆，如果任意一种颜色设置为-1。 它也会返回不会绘制一个椭圆的边框的任一维度为 0。  
   
-##  <a name="a-namedrawgradientringa--cdrawingmanagerdrawgradientring"></a><a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
+##  <a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
  绘制一个环，使用颜色渐变填充它。  
   
 ```  
@@ -229,7 +255,7 @@ BOOL DrawGradientRing(
 ### <a name="remarks"></a>备注  
  通过定义的矩形`rect`必须是至少 5 个像素宽和 5 像素高。  
   
-##  <a name="a-namedrawlinecdrawingmanagerdrawlineaa--cdrawingmanagerdrawline-cdrawingmanagerdrawlinea"></a><a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
  将绘制直线。  
   
 ```  
@@ -262,7 +288,7 @@ void DrawLineA(
 ### <a name="remarks"></a>备注  
  如果此方法将失败`clrLine`等于-1。  
   
-##  <a name="a-namedrawrecta--cdrawingmanagerdrawrect"></a><a name="drawrect"></a>CDrawingManager::DrawRect  
+##  <a name="drawrect"></a>CDrawingManager::DrawRect  
  绘制一个具有提供的填充和边框颜色的矩形。  
   
 ```  
@@ -285,7 +311,7 @@ void DrawRect(
 ### <a name="remarks"></a>备注  
  此方法返回不会绘制一个矩形，如果任意一种颜色设置为-1。 它还返回的矩形的任一尺寸如果为 0。  
   
-##  <a name="a-namedrawshadowa--cdrawingmanagerdrawshadow"></a><a name="drawshadow"></a>CDrawingManager::DrawShadow  
+##  <a name="drawshadow"></a>CDrawingManager::DrawShadow  
  绘制的矩形区域的阴影。  
   
 ```  
@@ -340,7 +366,7 @@ BOOL DrawShadow(
   
  [!code-cpp[NVC_MFC_PropSheetDemo #&1;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
   
-##  <a name="a-namefill4colorsgradienta--cdrawingmanagerfill4colorsgradient"></a><a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
+##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
  用两种颜色渐变填充的矩形区域。  
   
 ```  
@@ -381,7 +407,7 @@ void Fill4ColorsGradient(
   
  如果此方法生成断言失败`nPercentage`小于 0 或大于 100。  
   
-##  <a name="a-namefillgradienta--cdrawingmanagerfillgradient"></a><a name="fillgradient"></a>CDrawingManager::FillGradient  
+##  <a name="fillgradient"></a>CDrawingManager::FillGradient  
  用指定的颜色渐变填充的矩形区域。  
   
 ```  
@@ -418,7 +444,7 @@ void FillGradient(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo #&12;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
   
-##  <a name="a-namefillgradient2a--cdrawingmanagerfillgradient2"></a><a name="fillgradient2"></a>CDrawingManager::FillGradient2  
+##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2  
  用指定的颜色渐变填充的矩形区域。  
   
 ```  
@@ -450,7 +476,7 @@ void FillGradient2 (
   
  [!code-cpp[NVC_MFC_NewControls #&37;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
   
-##  <a name="a-namegrayrecta--cdrawingmanagergrayrect"></a><a name="grayrect"></a>CDrawingManager::GrayRect  
+##  <a name="grayrect"></a>CDrawingManager::GrayRect  
  使用指定的灰颜色填充的矩形。  
   
 ```  
@@ -482,7 +508,7 @@ BOOL GrayRect(
   
  最大值`nPercentage`为 200。 200 个以上更大的值不会更改矩形的外观。 如果值为-1，则此方法使用`clrDisabled`来限制的矩形的饱和度。  
   
-##  <a name="a-namehighlightrecta--cdrawingmanagerhighlightrect"></a><a name="highlightrect"></a>CDrawingManager::HighlightRect  
+##  <a name="highlightrect"></a>CDrawingManager::HighlightRect  
  突出显示的矩形区域。  
   
 ```  
@@ -518,7 +544,7 @@ BOOL HighlightRect(
   
  该方法将使用该参数`nTolerance`来确定是否突出显示的矩形区域。 若要突出显示该矩形，您的应用程序的背景色之间的差异和`clrTransparent`必须小于`nTolerance`（红色、 绿色和蓝色） 每个颜色组件中。  
   
-##  <a name="a-namehlstorgbonea--cdrawingmanagerhlstorgbone"></a><a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
+##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
  将一种颜色从 HLS 表示形式转换为 RGB 表示形式。  
   
 ```  
@@ -546,7 +572,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
   
  此方法与`CDrawingManager::HLStoRGB_TWO`方法执行相同的操作，但需要不同的值`H`参数。 在此方法，`H`是指圆的相对百分比。 在`CDrawingManager::HLStoRGB_TWO`方法，`H`是介于 0 至 360，这两个代表红色度数值。 例如，通过使用`HLStoRGB_ONE`，值为 0.25`H`等同于值为 90 与`HLStoRGB_TWO`。  
   
-##  <a name="a-namehlstorgbtwoa--cdrawingmanagerhlstorgbtwo"></a><a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
+##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
  将一种颜色从 HLS 表示形式转换为 RGB 表示形式。  
   
 ```  
@@ -574,7 +600,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
   
  此方法与[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法执行相同的操作，但需要不同的值`H`参数。 在此方法，`H`是介于 0 至 360，这两个代表红色度数值。 在[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法，`H`是指圆的相对百分比。 例如，通过使用`HLStoRGB_ONE`，值为 0.25`H`等同于值为 90 与`HLStoRGB_TWO`。  
   
-##  <a name="a-namehsvtorgba--cdrawingmanagerhsvtorgb"></a><a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
+##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
  将一种颜色从 HSV 表示形式转换为 RGB 表示形式。  
   
 ```  
@@ -599,7 +625,7 @@ static COLORREF __stdcall HSVtoRGB(
 ### <a name="remarks"></a>备注  
  一种颜色可以表示为 HSV （色调、 饱和度和值）、 （色调、 饱和度和亮度） 的 HSL 或 RGB （红色、 绿色和蓝色）。 有关的颜色不同的表示形式的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/linkid=119126)。  
   
-##  <a name="a-namehuetorgba--cdrawingmanagerhuetorgb"></a><a name="huetorgb"></a>CDrawingManager::HuetoRGB  
+##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  将色调值转换为红色、 绿色还是蓝色组件。  
   
 ```  
@@ -648,7 +674,7 @@ static BYTE __stdcall HueToRGB(
   
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)  
   
-##  <a name="a-namemirrorrecta--cdrawingmanagermirrorrect"></a><a name="mirrorrect"></a>CDrawingManager::MirrorRect  
+##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect  
  翻转的矩形区域。  
   
 ```  
@@ -667,7 +693,7 @@ void MirrorRect(
 ### <a name="remarks"></a>备注  
  此方法可反转拥有的设备任何的上下文区域`CDrawingManager`类。 如果`bHorz`设置为`TRUE`，此方法将水平翻转区域。 否则，它垂直翻转区域。  
   
-##  <a name="a-namepixelalphaa--cdrawingmanagerpixelalpha"></a><a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
+##  <a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
  计算一个半透明的像素的最终颜色。  
   
 ```  
@@ -714,7 +740,7 @@ static COLORREF __stdcall PixelAlpha(
   
  如果你使用的方法的具有版本`dstPixel`，最终颜色既有`dstPixel`和`srcPixel`。 `srcPixel`颜色将部分透明的颜色高于基础颜色的`dstPixel`。  
   
-##  <a name="a-nameprepareshadowmaska--cdrawingmanagerprepareshadowmask"></a><a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
+##  <a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
  创建可用作阴影的位图。  
   
 ```  
@@ -744,7 +770,7 @@ static HBITMAP __stdcall PrepareShadowMask (
 ### <a name="remarks"></a>备注  
  如果`nDepth`是设置为 0，此方法退出并返回`NULL`。 如果`nDepth`小于 3 的宽度和高度的阴影将设置为 3 个像素。  
   
-##  <a name="a-namergbtohsla--cdrawingmanagerrgbtohsl"></a><a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
+##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
  将一种颜色从红色、 绿色和蓝色 (RGB) 表示形式转换为色调、 饱和度和亮度 (HSL) 表示形式。  
   
 ```  
@@ -770,7 +796,7 @@ static void __stdcall RGBtoHSL(
   
  返回的值为`H`表示为介于 0 和 1 其中 0 和 1 表示红色之间的一小部分。 返回的值`S`和`L`是介于 0 和 1 之间的数字。  
   
-##  <a name="a-namergbtohsva--cdrawingmanagerrgbtohsv"></a><a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
+##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
  将一种颜色从 RGB 表示形式转换为 HSV 表示形式。  
   
 ```  
@@ -799,7 +825,7 @@ static void __stdcall RGBtoHSV(
   
  返回的值为`H`是介于 0 至 360 之间的数字 0 至 360 在这里指明红色。 返回值`S`和`V`是介于 0 和 1 之间的数字。  
   
-##  <a name="a-namesetalphapixela--cdrawingmanagersetalphapixel"></a><a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
+##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
  位图中的透明像素的颜色。  
   
 ```  
@@ -844,7 +870,7 @@ static void __stdcall SetAlphaPixel(
   
  如果`bIsRight`设置为`TRUE`，为颜色的像素为单位`x`的右边缘的像素`rect`。 如果它是`FALSE`，为颜色的像素为单位`x`像素从左边缘`rect`。  
   
-##  <a name="a-namesetpixela--cdrawingmanagersetpixel"></a><a name="setpixel"></a>CDrawingManager::SetPixel  
+##  <a name="setpixel"></a>CDrawingManager::SetPixel  
  为指定的颜色更改位图中的单一像素。  
   
 ```  
@@ -869,7 +895,7 @@ static void __stdcall SetPixel(
 |[in] `y`|要更改的位图的像素 y 坐标。|  
 |[in] `color`|标识由坐标的像素新颜色。|  
   
-##  <a name="a-namesmartmixcolorsa--cdrawingmanagersmartmixcolors"></a><a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
+##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
  合并两个颜色根据加权的比率。  
   
 ```  
@@ -900,7 +926,7 @@ static COLORREF __stdcall SmartMixColors(
   
  加权的比率使用以下公式计算: (color1 * 版 k1 + color2 \* k2) /(k1 + k2)。 加权的比决定之后，该方法计算混合的颜色的亮度。 然后将相乘的亮度`dblLumRatio`。 如果值大于 1.0，方法将设置为新值的混合颜色的亮度。 否则，亮度设置为 1.0。  
   
-##  <a name="a-namedrawrotateda--cdrawingmanagerdrawrotated"></a><a name="drawrotated"></a>CDrawingManager::DrawRotated  
+##  <a name="drawrotated"></a>CDrawingManager::DrawRotated  
  源 DC 在给定的矩形内的内容旋转 90 度。  
   
 ```  

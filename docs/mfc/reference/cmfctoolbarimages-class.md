@@ -10,6 +10,74 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarImages
+- AFXTOOLBARIMAGES/CMFCToolBarImages
+- AFXTOOLBARIMAGES/CMFCToolBarImages::CMFCToolBarImages
+- AFXTOOLBARIMAGES/CMFCToolBarImages::AdaptColors
+- AFXTOOLBARIMAGES/CMFCToolBarImages::AddIcon
+- AFXTOOLBARIMAGES/CMFCToolBarImages::AddImage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::CleanUp
+- AFXTOOLBARIMAGES/CMFCToolBarImages::Clear
+- AFXTOOLBARIMAGES/CMFCToolBarImages::ConvertTo32Bits
+- AFXTOOLBARIMAGES/CMFCToolBarImages::CopyImageToClipboard
+- AFXTOOLBARIMAGES/CMFCToolBarImages::CopyTo
+- AFXTOOLBARIMAGES/CMFCToolBarImages::CreateFromImageList
+- AFXTOOLBARIMAGES/CMFCToolBarImages::CreateRegionFromImage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::DeleteImage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::Draw
+- AFXTOOLBARIMAGES/CMFCToolBarImages::DrawEx
+- AFXTOOLBARIMAGES/CMFCToolBarImages::EnableRTL
+- AFXTOOLBARIMAGES/CMFCToolBarImages::EndDrawImage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::ExtractIcon
+- AFXTOOLBARIMAGES/CMFCToolBarImages::FillDitheredRect
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetAlwaysLight
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetBitsPerPixel
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetCount
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetDisabledImageAlpha
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetFadedImageAlpha
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetImageSize
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetImageWell
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetImageWellLight
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetLastImageRect
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetLightPercentage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetMapTo3DColors
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetMask
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetResourceOffset
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetScale
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GetTransparentColor
+- AFXTOOLBARIMAGES/CMFCToolBarImages::GrayImages
+- AFXTOOLBARIMAGES/CMFCToolBarImages::Is32BitTransparencySupported
+- AFXTOOLBARIMAGES/CMFCToolBarImages::IsPreMultiplyAutoCheck
+- AFXTOOLBARIMAGES/CMFCToolBarImages::IsRTL
+- AFXTOOLBARIMAGES/CMFCToolBarImages::IsReadOnly
+- AFXTOOLBARIMAGES/CMFCToolBarImages::IsScaled
+- AFXTOOLBARIMAGES/CMFCToolBarImages::IsUserImagesList
+- AFXTOOLBARIMAGES/CMFCToolBarImages::IsValid
+- AFXTOOLBARIMAGES/CMFCToolBarImages::Load
+- AFXTOOLBARIMAGES/CMFCToolBarImages::LoadStr
+- AFXTOOLBARIMAGES/CMFCToolBarImages::MapFromSysColor
+- AFXTOOLBARIMAGES/CMFCToolBarImages::MapTo3dColors
+- AFXTOOLBARIMAGES/CMFCToolBarImages::MapToSysColor
+- AFXTOOLBARIMAGES/CMFCToolBarImages::MapToSysColorAlpha
+- AFXTOOLBARIMAGES/CMFCToolBarImages::Mirror
+- AFXTOOLBARIMAGES/CMFCToolBarImages::MirrorBitmap
+- AFXTOOLBARIMAGES/CMFCToolBarImages::MirrorBitmapVert
+- AFXTOOLBARIMAGES/CMFCToolBarImages::MirrorVert
+- AFXTOOLBARIMAGES/CMFCToolBarImages::OnSysColorChange
+- AFXTOOLBARIMAGES/CMFCToolBarImages::PrepareDrawImage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::Save
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetAlwaysLight
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetDisabledImageAlpha
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetFadedImageAlpha
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetImageSize
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetLightPercentage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetMapTo3DColors
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetPreMultiplyAutoCheck
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetSingleImage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SetTransparentColor
+- AFXTOOLBARIMAGES/CMFCToolBarImages::SmoothResize
+- AFXTOOLBARIMAGES/CMFCToolBarImages::UpdateImage
+- AFXTOOLBARIMAGES/CMFCToolBarImages::PreMultiplyAlpha
+- AFXTOOLBARIMAGES/CMFCToolBarImages::m_bDisableTrueColorAlpha
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -154,7 +222,7 @@ class CMFCToolBarImages : public CObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxtoolbarimages.h  
   
-##  <a name="a-nameadaptcolorsa--cmfctoolbarimagesadaptcolors"></a><a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors  
+##  <a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -169,7 +237,7 @@ void AdaptColors(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameaddicona--cmfctoolbarimagesaddicon"></a><a name="addicon"></a>CMFCToolBarImages::AddIcon  
+##  <a name="addicon"></a>CMFCToolBarImages::AddIcon  
  将图标添加到列表中的工具栏图像。  
   
 ```  
@@ -188,7 +256,7 @@ int AddIcon(
 ### <a name="return-value"></a>返回值  
  如果此方法成功，则已添加的工具栏图像的从零开始的索引否则为-1。  
   
-##  <a name="a-nameaddimagea--cmfctoolbarimagesaddimage"></a><a name="addimage"></a>CMFCToolBarImages::AddImage  
+##  <a name="addimage"></a>CMFCToolBarImages::AddImage  
  将位图添加到工具栏图像。  
   
 ```  
@@ -217,7 +285,7 @@ int AddImage(
 ### <a name="return-value"></a>返回值  
  许多 toolbar 映像`CMFCToolBarImages`对象维护成功，则添加新位图后如果操作失败，则为-1。  
   
-##  <a name="a-namecleanupa--cmfctoolbarimagescleanup"></a><a name="cleanup"></a>CMFCToolBarImages::CleanUp  
+##  <a name="cleanup"></a>CMFCToolBarImages::CleanUp  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -226,14 +294,14 @@ static void __stdcall CleanUp();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namecleara--cmfctoolbarimagesclear"></a><a name="clear"></a>CMFCToolBarImages::Clear  
+##  <a name="clear"></a>CMFCToolBarImages::Clear  
  释放系统资源， [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md)分配的对象。  
   
 ```  
 void Clear();
 ```  
   
-##  <a name="a-namecmfctoolbarimagesa--cmfctoolbarimagescmfctoolbarimages"></a><a name="cmfctoolbarimages"></a>CMFCToolBarImages::CMFCToolBarImages  
+##  <a name="cmfctoolbarimages"></a>CMFCToolBarImages::CMFCToolBarImages  
  构造 `CMFCToolBarImages` 对象。  
   
 ```  
@@ -243,7 +311,7 @@ CMFCToolBarImages();
 ### <a name="remarks"></a>备注  
  构造`CMFCToolBarImages`对象，初始化它呈现引擎并将图像大小设置为其默认值 16 x 15 像素。 使用[CMFCToolBarImages::SetImageSize](#setimagesize)若要更改的图像的大小，然后添加图像。  
   
-##  <a name="a-namecopyimagetoclipboarda--cmfctoolbarimagescopyimagetoclipboard"></a><a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard  
+##  <a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -257,7 +325,7 @@ BOOL CopyImageToClipboard(int iImage);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namecopytoa--cmfctoolbarimagescopyto"></a><a name="copyto"></a>CMFCToolBarImages::CopyTo  
+##  <a name="copyto"></a>CMFCToolBarImages::CopyTo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -271,7 +339,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namecreatefromimagelista--cmfctoolbarimagescreatefromimagelist"></a><a name="createfromimagelist"></a>CMFCToolBarImages::CreateFromImageList  
+##  <a name="createfromimagelist"></a>CMFCToolBarImages::CreateFromImageList  
  初始化中的工具栏图像[CImageList 类](../../mfc/reference/cimagelist-class.md)对象。  
   
 ```  
@@ -288,7 +356,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ### <a name="remarks"></a>备注  
  使用此函数来快速初始化外部图像列表中的工具栏图像列表。  
   
-##  <a name="a-namecreateregionfromimagea--cmfctoolbarimagescreateregionfromimage"></a><a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage  
+##  <a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -305,7 +373,7 @@ static HRGN __stdcall CreateRegionFromImage(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namedeleteimagea--cmfctoolbarimagesdeleteimage"></a><a name="deleteimage"></a>CMFCToolBarImages::DeleteImage  
+##  <a name="deleteimage"></a>CMFCToolBarImages::DeleteImage  
  删除具有指定的索引的工具栏图像的用户定义的图像。  
   
 ```  
@@ -319,7 +387,7 @@ BOOL DeleteImage(int iImage);
 ### <a name="return-value"></a>返回值  
  `TRUE`如果映像已成功，则删除`FALSE`的图像索引是无效的如果`CMFCToolbarImages`对象是临时的`CMFCToolbarImages`对象不包含用户定义的图像，或者如果某一其他出现错误。  
   
-##  <a name="a-namedrawa--cmfctoolbarimagesdraw"></a><a name="draw"></a>CMFCToolBarImages::Draw  
+##  <a name="draw"></a>CMFCToolBarImages::Draw  
  绘制一个工具栏上的图像。  
   
 ```  
@@ -370,7 +438,7 @@ BOOL Draw(
 ### <a name="return-value"></a>返回值  
  `TRUE`如果成功，则显示了指定的图像`FALSE`如果图像索引已无效，或出现了其他错误。  
   
-##  <a name="a-namedrawexa--cmfctoolbarimagesdrawex"></a><a name="drawex"></a>CMFCToolBarImages::DrawEx  
+##  <a name="drawex"></a>CMFCToolBarImages::DrawEx  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -402,7 +470,7 @@ BOOL DrawEx(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameenablertla--cmfctoolbarimagesenablertl"></a><a name="enablertl"></a>CMFCToolBarImages::EnableRTL  
+##  <a name="enablertl"></a>CMFCToolBarImages::EnableRTL  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -414,7 +482,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameenddrawimagea--cmfctoolbarimagesenddrawimage"></a><a name="enddrawimage"></a>CMFCToolBarImages::EndDrawImage  
+##  <a name="enddrawimage"></a>CMFCToolBarImages::EndDrawImage  
  释放系统资源， [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage)后通过调用绘制的工具栏图像分配[CMFCToolBarImages::Draw](#draw)。  
   
 ```  
@@ -425,7 +493,7 @@ void EndDrawImage(CAfxDrawState& ds);
  [in] `ds`  
  对引用`CAfxDrawState`对象传递给`PrepareDrawImage`方法。  
   
-##  <a name="a-nameextracticona--cmfctoolbarimagesextracticon"></a><a name="extracticon"></a>CMFCToolBarImages::ExtractIcon  
+##  <a name="extracticon"></a>CMFCToolBarImages::ExtractIcon  
  返回具有指定的图像索引从工具栏图像的图标。  
   
 ```  
@@ -439,7 +507,7 @@ HICON ExtractIcon(int nIndex);
 ### <a name="return-value"></a>返回值  
  提取图标的句柄或`NULL`如果`nIndex`超出范围。  
   
-##  <a name="a-namefillditheredrecta--cmfctoolbarimagesfillditheredrect"></a><a name="fillditheredrect"></a>CMFCToolBarImages::FillDitheredRect  
+##  <a name="fillditheredrect"></a>CMFCToolBarImages::FillDitheredRect  
  与工具栏背景色填充的矩形。  
   
 ```  
@@ -458,7 +526,7 @@ static void FillDitheredRect(
 ### <a name="remarks"></a>备注  
  使用此方法使用的系统颜色 COLOR_BTNFACE 和 COLOR_BTNHIGHLIGHT 的平均值的颜色填充矩形。 如果系统正在使用 256 色或更少的颜色，将填充该矩形与这两种颜色的抖动模式。  
   
-##  <a name="a-namegetalwayslighta--cmfctoolbarimagesgetalwayslight"></a><a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight  
+##  <a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -469,7 +537,7 @@ BOOL GetAlwaysLight() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetcounta--cmfctoolbarimagesgetcount"></a><a name="getcount"></a>CMFCToolBarImages::GetCount  
+##  <a name="getcount"></a>CMFCToolBarImages::GetCount  
  在工具栏上的图像列表中返回映像的数量。  
   
 ```  
@@ -479,7 +547,7 @@ int GetCount() const;
 ### <a name="return-value"></a>返回值  
  中的图像数`CMFCToolBarImages`对象。  
   
-##  <a name="a-namegetdisabledimagealphaa--cmfctoolbarimagesgetdisabledimagealpha"></a><a name="getdisabledimagealpha"></a>CMFCToolBarImages::GetDisabledImageAlpha  
+##  <a name="getdisabledimagealpha"></a>CMFCToolBarImages::GetDisabledImageAlpha  
  返回用于禁用图像的 alpha 通道 (opacity) 值。  
   
 ```  
@@ -492,7 +560,7 @@ static BYTE GetDisabledImageAlpha();
 ### <a name="remarks"></a>备注  
  您可以调用[CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha)若要更改的 alpha 通道值。  
   
-##  <a name="a-namegetfadedimagealphaa--cmfctoolbarimagesgetfadedimagealpha"></a><a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha  
+##  <a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -503,7 +571,7 @@ static BYTE __stdcall GetFadedImageAlpha();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetimagesizea--cmfctoolbarimagesgetimagesize"></a><a name="getimagesize"></a>CMFCToolBarImages::GetImageSize  
+##  <a name="getimagesize"></a>CMFCToolBarImages::GetImageSize  
  检索存储在内存 （源大小） 中的工具栏图像的大小或在 （目标大小） 屏幕绘制的工具栏图像的大小。  
   
 ```  
@@ -522,7 +590,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
   
  默认情况下，目标映像大小为 0x0。 在调用时指定的目标大小[CMFCToolBarImages::PrepareDrawImage](#preparedrawimage)。 [CMFCToolBarImages::EndDrawImage](#enddrawimage)方法重置为默认值的目标大小。  
   
-##  <a name="a-namegetimagewella--cmfctoolbarimagesgetimagewell"></a><a name="getimagewell"></a>CMFCToolBarImages::GetImageWell  
+##  <a name="getimagewell"></a>CMFCToolBarImages::GetImageWell  
  返回包含所有的工具栏图像的位图句柄。  
   
 ```  
@@ -535,7 +603,7 @@ HBITMAP GetImageWell() const;
 ### <a name="remarks"></a>备注  
  工具栏图像存储在名为在单个位图中的行*image well — 图像*。 若要查找图像良好的工具栏图像，乘以的图像的索引的工具栏图像的宽度 (请参阅[CMFCToolBarImages::GetImageSize](#getimagesize)) 也获取映像内的图像的水平偏移量。  
   
-##  <a name="a-namegetimagewelllighta--cmfctoolbarimagesgetimagewelllight"></a><a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight  
+##  <a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -546,7 +614,7 @@ HBITMAP GetImageWellLight() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetlastimagerecta--cmfctoolbarimagesgetlastimagerect"></a><a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect  
+##  <a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -557,7 +625,7 @@ CRect GetLastImageRect() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetlightpercentagea--cmfctoolbarimagesgetlightpercentage"></a><a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage  
+##  <a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -568,7 +636,7 @@ int GetLightPercentage() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetmapto3dcolorsa--cmfctoolbarimagesgetmapto3dcolors"></a><a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DColors  
+##  <a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -579,7 +647,7 @@ BOOL GetMapTo3DColors() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetmaska--cmfctoolbarimagesgetmask"></a><a name="getmask"></a>CMFCToolBarImages::GetMask  
+##  <a name="getmask"></a>CMFCToolBarImages::GetMask  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -593,7 +661,7 @@ HBITMAP GetMask(int iImage);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetresourceoffseta--cmfctoolbarimagesgetresourceoffset"></a><a name="getresourceoffset"></a>CMFCToolBarImages::GetResourceOffset  
+##  <a name="getresourceoffset"></a>CMFCToolBarImages::GetResourceOffset  
  返回指定的资源 id 的图像索引  
   
 ```  
@@ -607,7 +675,7 @@ int GetResourceOffset(UINT uiResId) const;
 ### <a name="return-value"></a>返回值  
  如果此方法已成功，则图像索引如果不存在具有指定的资源 ID 的图像，则为-1。  
   
-##  <a name="a-namegettransparentcolora--cmfctoolbarimagesgettransparentcolor"></a><a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -618,7 +686,7 @@ COLORREF GetTransparentColor() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegrayimagesa--cmfctoolbarimagesgrayimages"></a><a name="grayimages"></a>CMFCToolBarImages::GrayImages  
+##  <a name="grayimages"></a>CMFCToolBarImages::GrayImages  
  用灰色工具栏图像，使其看起来已禁用。  
   
 ```  
@@ -638,7 +706,7 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 > [!NOTE]
 >  如果您想要撤消所做更改，您必须从源映像重新加载。 你可以通过调用[CMFCToolBarImages::Load](#load)或[CMFCToolBarImages::UpdateImage](#updateimage) （仅适用于用户定义的图像），或通过调用[CMFCToolBarImages::Clear](#clear) ，将映像重新添加通过调用[CMFCToolBarImages::AddIcon](#addicon)或[CMFCToolBarImages::AddImage](#addimage)。  
   
-##  <a name="a-nameis32bittransparencysupporteda--cmfctoolbarimagesis32bittransparencysupported"></a><a name="is32bittransparencysupported"></a>CMFCToolBarImages::Is32BitTransparencySupported  
+##  <a name="is32bittransparencysupported"></a>CMFCToolBarImages::Is32BitTransparencySupported  
  指定操作系统是否支持 32 位 alpha 值混合处理。  
   
 ```  
@@ -651,7 +719,7 @@ static BOOL Is32BitTransparencySupported();
 ### <a name="remarks"></a>备注  
  此静态方法用于在运行时确定操作系统是否支持 32 位 alpha 值混合处理。 上均支持此功能[!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)]及更高版本。  
   
-##  <a name="a-nameispremultiplyautochecka--cmfctoolbarimagesispremultiplyautocheck"></a><a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck  
+##  <a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -662,7 +730,7 @@ BOOL IsPreMultiplyAutoCheck() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameisreadonlya--cmfctoolbarimagesisreadonly"></a><a name="isreadonly"></a>CMFCToolBarImages::IsReadOnly  
+##  <a name="isreadonly"></a>CMFCToolBarImages::IsReadOnly  
  指定工具栏图像都是只读的。  
   
 ```  
@@ -675,7 +743,7 @@ BOOL IsReadOnly() const;
 ### <a name="remarks"></a>备注  
  `CMFCToolbarImages`对象是只读的当从只读文件，已加载的工具栏图像的位图或位图被复制到使用`CMFCToolBarImages::CopyTemp`方法。  
   
-##  <a name="a-nameisrtla--cmfctoolbarimagesisrtl"></a><a name="isrtl"></a>CMFCToolBarImages::IsRTL  
+##  <a name="isrtl"></a>CMFCToolBarImages::IsRTL  
  指定是否启用从右到左 (RTL) 支持。  
   
 ```  
@@ -688,7 +756,7 @@ static BOOL IsRTL();
 ### <a name="remarks"></a>备注  
  应用程序本地化为一种语言，从右到左，如阿拉伯语、 希伯来语、 波斯语或乌尔都语读取时，将使用 RTL 支持。  
   
-##  <a name="a-nameisuserimageslista--cmfctoolbarimagesisuserimageslist"></a><a name="isuserimageslist"></a>CMFCToolBarImages::IsUserImagesList  
+##  <a name="isuserimageslist"></a>CMFCToolBarImages::IsUserImagesList  
  指定的工具栏图像此集是否包含用户定义的图像。  
   
 ```  
@@ -698,7 +766,7 @@ BOOL IsUserImagesList() const;
 ### <a name="return-value"></a>返回值  
  `TRUE`如果`CMFCToolBarImages`对象包含用户定义的工具栏图像; 否则为`FALSE`。  
   
-##  <a name="a-nameisvalida--cmfctoolbarimagesisvalid"></a><a name="isvalid"></a>CMFCToolBarImages::IsValid  
+##  <a name="isvalid"></a>CMFCToolBarImages::IsValid  
  指示的工具栏图像此集是否包含有效的工具栏图像。  
   
 ```  
@@ -711,7 +779,7 @@ BOOL IsValid() const;
 ### <a name="remarks"></a>备注  
  `CMFCToolBarImages`对象不是有效的工具栏图像的位图的句柄时`NULL`。  
   
-##  <a name="a-nameloada--cmfctoolbarimagesload"></a><a name="load"></a>CMFCToolBarImages::Load  
+##  <a name="load"></a>CMFCToolBarImages::Load  
  与系统资源或从文件加载的工具栏图像。  
   
 ```  
@@ -747,7 +815,7 @@ BOOL Load(
 ### <a name="remarks"></a>备注  
  如果该文件具有只读属性，以只读方式标记的图像列表。  
   
-##  <a name="a-nameloadstra--cmfctoolbarimagesloadstr"></a><a name="loadstr"></a>CMFCToolBarImages::LoadStr  
+##  <a name="loadstr"></a>CMFCToolBarImages::LoadStr  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -766,7 +834,7 @@ BOOL LoadStr(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemapfromsyscolora--cmfctoolbarimagesmapfromsyscolor"></a><a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor  
+##  <a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -783,7 +851,7 @@ static COLORREF __stdcall MapFromSysColor(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemapto3dcolorsa--cmfctoolbarimagesmapto3dcolors"></a><a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dColors  
+##  <a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -802,7 +870,7 @@ BOOL MapTo3dColors(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemaptosyscolora--cmfctoolbarimagesmaptosyscolor"></a><a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor  
+##  <a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -819,7 +887,7 @@ static COLORREF __stdcall MapToSysColor(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemaptosyscoloralphaa--cmfctoolbarimagesmaptosyscoloralpha"></a><a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha  
+##  <a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -833,7 +901,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemirrora--cmfctoolbarimagesmirror"></a><a name="mirror"></a>CMFCToolBarImages::Mirror  
+##  <a name="mirror"></a>CMFCToolBarImages::Mirror  
  替换其水平的镜像图像的工具栏图像。  
   
 ```  
@@ -846,7 +914,7 @@ BOOL Mirror();
 ### <a name="remarks"></a>备注  
  此方法用于支持从右到左书写系统。  
   
-##  <a name="a-namemirrorbitmapa--cmfctoolbarimagesmirrorbitmap"></a><a name="mirrorbitmap"></a>CMFCToolBarImages::MirrorBitmap  
+##  <a name="mirrorbitmap"></a>CMFCToolBarImages::MirrorBitmap  
  替换其水平的镜像图像的位图。  
   
 ```  
@@ -868,7 +936,7 @@ static BOOL MirrorBitmap(
 ### <a name="remarks"></a>备注  
  此函数用于支持从右到左书写系统。  
   
-##  <a name="a-namemirrorbitmapverta--cmfctoolbarimagesmirrorbitmapvert"></a><a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert  
+##  <a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -885,7 +953,7 @@ static BOOL __stdcall MirrorBitmapVert(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namemirrorverta--cmfctoolbarimagesmirrorvert"></a><a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert  
+##  <a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -896,7 +964,7 @@ BOOL MirrorVert();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameonsyscolorchangea--cmfctoolbarimagesonsyscolorchange"></a><a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange  
+##  <a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -905,7 +973,7 @@ void OnSysColorChange();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namepremultiplyalphaa--cmfctoolbarimagespremultiplyalpha"></a><a name="premultiplyalpha"></a>CMFCToolBarImages::PreMultiplyAlpha  
+##  <a name="premultiplyalpha"></a>CMFCToolBarImages::PreMultiplyAlpha  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -924,7 +992,7 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namembdisabletruecoloralphaa--cmfctoolbarimagesmbdisabletruecoloralpha"></a><a name="m_bdisabletruecoloralpha"></a>CMFCToolBarImages::m_bDisableTrueColorAlpha  
+##  <a name="m_bdisabletruecoloralpha"></a>CMFCToolBarImages::m_bDisableTrueColorAlpha  
  `TRUE`如果禁用了真彩色 alpha 值混合处理 （32 位颜色）。  
   
 ```  
@@ -936,7 +1004,7 @@ static BOOL m_bDisableTrueColorAlpha;
   
  默认值是`TRUE`为了向后兼容。  
   
-##  <a name="a-namepreparedrawimagea--cmfctoolbarimagespreparedrawimage"></a><a name="preparedrawimage"></a>CMFCToolBarImages::PrepareDrawImage  
+##  <a name="preparedrawimage"></a>CMFCToolBarImages::PrepareDrawImage  
  分配指定大小绘制的工具栏图像所需的资源。  
   
 ```  
@@ -963,7 +1031,7 @@ BOOL PrepareDrawImage(
 ### <a name="remarks"></a>备注  
  调用此方法后，您可以调用[CMFCToolBarImages::Draw](#draw)任意次数。 完成绘制后，必须调用[CMFCToolBarImages::EndDrawImage](#enddrawimage)以释放资源由分配`PrepareDrawImage`。  
   
-##  <a name="a-namesavea--cmfctoolbarimagessave"></a><a name="save"></a>CMFCToolBarImages::Save  
+##  <a name="save"></a>CMFCToolBarImages::Save  
  将工具栏图像存储在文件中，如果此集的工具栏图像包含用户定义的图像。  
   
 ```  
@@ -980,7 +1048,7 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ### <a name="remarks"></a>备注  
  调用此方法以将用户定义的映像存储到磁盘文件。 如果`lpszBmpFileName`是`NULL`，该方法将该位图存储到位图被从中加载该文件[CMFCToolBarImages::Load](#load)方法。  
   
-##  <a name="a-namesetalwayslighta--cmfctoolbarimagessetalwayslight"></a><a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight  
+##  <a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -992,7 +1060,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetdisabledimagealphaa--cmfctoolbarimagessetdisabledimagealpha"></a><a name="setdisabledimagealpha"></a>CMFCToolBarImages::SetDisabledImageAlpha  
+##  <a name="setdisabledimagealpha"></a>CMFCToolBarImages::SetDisabledImageAlpha  
  设置用于禁用图像的 alpha 通道 (opacity) 值。  
   
 ```  
@@ -1006,7 +1074,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ### <a name="remarks"></a>备注  
  此方法用于设置已禁用的图像的自定义 alpha 值。 默认值为 127 个，这将导致是半透明的禁用的按钮图像。 如果您设置的值为 0，已禁用的图像将完全透明。 如果您设置的值为 255，已禁用的图像将完全不透明。  
   
-##  <a name="a-namesetfadedimagealphaa--cmfctoolbarimagessetfadedimagealpha"></a><a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha  
+##  <a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1018,7 +1086,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetimagesizea--cmfctoolbarimagessetimagesize"></a><a name="setimagesize"></a>CMFCToolBarImages::SetImageSize  
+##  <a name="setimagesize"></a>CMFCToolBarImages::SetImageSize  
  设置每个工具栏图像 （源大小） 的大小。  
   
 ```  
@@ -1034,7 +1102,7 @@ void SetImageSize(
 ### <a name="remarks"></a>备注  
  默认情况下工具栏图像的大小为 16 x 15 像素。 如果您想要使用的不同大小的工具栏图像，请调用此方法。  
   
-##  <a name="a-namesetlightpercentagea--cmfctoolbarimagessetlightpercentage"></a><a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage  
+##  <a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1046,7 +1114,7 @@ void SetLightPercentage(int nValue);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetmapto3dcolorsa--cmfctoolbarimagessetmapto3dcolors"></a><a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors  
+##  <a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1058,7 +1126,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetpremultiplyautochecka--cmfctoolbarimagessetpremultiplyautocheck"></a><a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck  
+##  <a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1070,7 +1138,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetsingleimagea--cmfctoolbarimagessetsingleimage"></a><a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage  
+##  <a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1079,7 +1147,7 @@ void SetSingleImage();
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesettransparentcolora--cmfctoolbarimagessettransparentcolor"></a><a name="settransparentcolor"></a>CMFCToolBarImages::SetTransparentColor  
+##  <a name="settransparentcolor"></a>CMFCToolBarImages::SetTransparentColor  
  设置的工具栏图像的透明色。  
   
 ```  
@@ -1096,7 +1164,7 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ### <a name="remarks"></a>备注  
  当您或框架调用[CMFCToolBarImages::Draw](#draw)，该方法不绘制任何与指定的颜色相匹配的像素`clrTransparent`。  
   
-##  <a name="a-nameupdateimagea--cmfctoolbarimagesupdateimage"></a><a name="updateimage"></a>CMFCToolBarImages::UpdateImage  
+##  <a name="updateimage"></a>CMFCToolBarImages::UpdateImage  
  更新从位图的用户定义的工具栏图像。  
   
 ```  
@@ -1115,7 +1183,7 @@ BOOL UpdateImage(
 ### <a name="return-value"></a>返回值  
  `TRUE`如果成功，则更新映像`FALSE`如果图像列表不是用户定义的或临时。  
   
-##  <a name="a-nameconvertto32bitsa--cmfctoolbarimagesconvertto32bits"></a><a name="convertto32bits"></a>CMFCToolBarImages::ConvertTo32Bits  
+##  <a name="convertto32bits"></a>CMFCToolBarImages::ConvertTo32Bits  
  转换为它添加下划线为 32 bpp 图像的位图。  
   
 ```  
@@ -1128,7 +1196,7 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetbitsperpixela--cmfctoolbarimagesgetbitsperpixel"></a><a name="getbitsperpixel"></a>CMFCToolBarImages::GetBitsPerPixel  
+##  <a name="getbitsperpixel"></a>CMFCToolBarImages::GetBitsPerPixel  
  返回当前分辨率的带下划线的映像。  
   
 ```  
@@ -1140,7 +1208,7 @@ int GetBitsPerPixel() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namegetscalea--cmfctoolbarimagesgetscale"></a><a name="getscale"></a>CMFCToolBarImages::GetScale  
+##  <a name="getscale"></a>CMFCToolBarImages::GetScale  
  返回当前的缩放比例的带下划线的映像。  
   
 ```  
@@ -1152,7 +1220,7 @@ double GetScale() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameisscaleda--cmfctoolbarimagesisscaled"></a><a name="isscaled"></a>CMFCToolBarImages::IsScaled  
+##  <a name="isscaled"></a>CMFCToolBarImages::IsScaled  
  指示是否对带下划线的图像缩放。  
   
 ```  
@@ -1164,7 +1232,7 @@ BOOL IsScaled () const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesmoothresizea--cmfctoolbarimagessmoothresize"></a><a name="smoothresize"></a>CMFCToolBarImages::SmoothResize  
+##  <a name="smoothresize"></a>CMFCToolBarImages::SmoothResize  
  顺利地调整带下划线的图像的大小。  
   
 ```  

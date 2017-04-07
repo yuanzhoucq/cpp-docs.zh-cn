@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDynamicChain
-- ATL.CDynamicChain
 - CDynamicChain
+- ATLWIN/ATL::CDynamicChain
+- ATLWIN/ATL::CDynamicChain::CDynamicChain
+- ATLWIN/ATL::CDynamicChain::CallChain
+- ATLWIN/ATL::CDynamicChain::RemoveChainEntry
+- ATLWIN/ATL::CDynamicChain::SetChainEntry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +101,7 @@ class CDynamicChain
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-namecallchaina--cdynamicchaincallchain"></a><a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>CDynamicChain::CallChain  
  将定向到另一个对象的消息映射的 Windows 消息。  
   
 ```
@@ -138,14 +141,14 @@ BOOL CallChain(
   
  `CallChain`要求对以前调用[SetChainEntry](#setchainentry)关联`dwChainID`值，该值具有对象和其消息映射。  
   
-##  <a name="a-namecdynamicchaina--cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
  构造函数。  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="a-namedtora--cdynamicchaincdynamicchain"></a><a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
  析构函数。  
   
 ```
@@ -155,7 +158,7 @@ CDynamicChain();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="a-nameremovechainentrya--cdynamicchainremovechainentry"></a><a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
  从集合中移除指定的消息映射。  
   
 ```
@@ -169,7 +172,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>返回值  
  **TRUE**如果成功从集合中移除的消息映射。 否则为**FALSE**。  
   
-##  <a name="a-namesetchainentrya--cdynamicchainsetchainentry"></a><a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
  将指定的消息映射添加到集合。  
   
 ```

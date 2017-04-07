@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CInterpolatorBase
 - CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::CreateInstance
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetDependencies
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetDuration
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetFinalValue
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::InterpolateValue
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::InterpolateVelocity
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetCustomInterpolator
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetDuration
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetInitialValueAndVelocity
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,14 +94,14 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-namecinterpolatorbasea--cinterpolatorbasecinterpolatorbase"></a><a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
+##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
  构造 CInterpolatorBase 对象。  
   
 ```  
 CInterpolatorBase();
 ```  
   
-##  <a name="a-namecreateinstancea--cinterpolatorbasecreateinstance"></a><a name="createinstance"></a>CInterpolatorBase::CreateInstance  
+##  <a name="createinstance"></a>CInterpolatorBase::CreateInstance  
  创建的 CInterpolatorBase 实例并将存储指向自定义内插器，将处理事件的指针。  
   
 ```  
@@ -109,7 +119,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-namegetdependenciesa--cinterpolatorbasegetdependencies"></a><a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
+##  <a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
  获取该内插器依赖项。  
   
 ```  
@@ -132,7 +142,7 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从一个 GetDependencies 方法将返回 FALSE，则返回 E_FAIL。  
   
-##  <a name="a-namegetdurationa--cinterpolatorbasegetduration"></a><a name="getduration"></a>CInterpolatorBase::GetDuration  
+##  <a name="getduration"></a>CInterpolatorBase::GetDuration  
  获取该内插器持续时间。  
   
 ```  
@@ -146,7 +156,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 GetDuration 方法将返回 FALSE，则返回 E_FAIL。  
   
-##  <a name="a-namegetfinalvaluea--cinterpolatorbasegetfinalvalue"></a><a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
+##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
  获取该内插器导致的最终值。  
   
 ```  
@@ -160,7 +170,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 GetFinalValue 方法将返回 FALSE，则返回 E_FAIL。  
   
-##  <a name="a-nameinterpolatevaluea--cinterpolatorbaseinterpolatevalue"></a><a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
+##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
  给定的偏移量处的值的内插  
   
 ```  
@@ -179,7 +189,7 @@ IFACEMETHOD(InterpolateValue)(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 InterpolateValue 方法将返回 FALSE，则返回 E_FAIL。  
   
-##  <a name="a-nameinterpolatevelocitya--cinterpolatorbaseinterpolatevelocity"></a><a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
  内插在给定的偏移量的速度  
   
 ```  
@@ -198,7 +208,7 @@ IFACEMETHOD(InterpolateVelocity)(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 InterpolateVelocity 方法将返回 FALSE，则返回 E_FAIL。  
   
-##  <a name="a-namesetcustominterpolatora--cinterpolatorbasesetcustominterpolator"></a><a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
+##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
  存储自定义内插器，将处理事件的指针。  
   
 ```  
@@ -209,7 +219,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  自定义内插器指向的指针。  
   
-##  <a name="a-namesetdurationa--cinterpolatorbasesetduration"></a><a name="setduration"></a>CInterpolatorBase::SetDuration  
+##  <a name="setduration"></a>CInterpolatorBase::SetDuration  
  将内插器的持续时间设置  
   
 ```  
@@ -223,7 +233,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现 SetDuration 方法将返回 FALSE，则返回 E_FAIL。  
   
-##  <a name="a-namesetinitialvalueandvelocitya--cinterpolatorbasesetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
  设置内插器的初始值和速度。  
   
 ```  

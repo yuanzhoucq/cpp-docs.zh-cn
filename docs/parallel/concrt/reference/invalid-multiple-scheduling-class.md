@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_multiple_scheduling
+- invalid_multiple_scheduling
+- CONCRT/concurrency::invalid_multiple_scheduling
+- CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 762648e65a7fcbda29daf31412e42bbd0e63f3d6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 82f1046173ba1f2eebfc74e1121b01ba0ed46b04
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling 类
@@ -52,9 +54,9 @@ class invalid_multiple_scheduling : public std::exception;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[invalid_multiple_scheduling 构造函数](#ctor)|已重载。 构造 `invalid_multiple_scheduling` 对象。|  
+|[invalid_multiple_scheduling](#ctor)|已重载。 构造 `invalid_multiple_scheduling` 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-invalidmultiplescheduling"></a><a name="ctor"></a>invalid_multiple_scheduling 
+##  <a name="ctor"></a>invalid_multiple_scheduling 
 
  构造 `invalid_multiple_scheduling` 对象。  
   
@@ -84,8 +86,8 @@ invalid_multiple_scheduling() throw();
  [并发 Namespace](concurrency-namespace.md)   
  [task_handle 类](task-handle-class.md)   
  [task_group 类](task-group-class.md)   
- [run 的方法](task-group-class.md)   
- [wait 方法](task-group-class.md)   
- [run_and_wait 方法](task-group-class.md)   
+ [运行](task-group-class.md)   
+ [等待](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
  [structured_task_group 类](structured-task-group-class.md)
 

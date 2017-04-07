@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1fb9eba97f469aa407dfe3287a216ceb8f707faf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58eb9db3ee67830d6f69028c6c83be8640450205
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="int2-class"></a>int_2 类
@@ -88,57 +88,57 @@ class int_2;
   
 |名称|描述|  
 |----------|-----------------|  
-|int_2::get_x 方法||  
-|int_2::get_xy 方法||  
-|int_2::get_y 方法||  
-|int_2::get_yx 方法||  
-|int_2::ref_g 方法||  
-|int_2::ref_r 方法||  
-|int_2::ref_x 方法||  
-|int_2::ref_y 方法||  
-|int_2::set_x 方法||  
-|int_2::set_xy 方法||  
-|int_2::set_y 方法||  
-|int_2::set_yx 方法||  
+|int_2::get_x||  
+|int_2::get_xy||  
+|int_2::get_y||  
+|int_2::get_yx||  
+|int_2::ref_g||  
+|int_2::ref_r||  
+|int_2::ref_x||  
+|int_2::ref_y||  
+|int_2::set_x||  
+|int_2::set_xy||  
+|int_2::set_y||  
+|int_2::set_yx||  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|int_2::operator 运算符||  
-|int_2::operator-运算符||  
-|int_2::operator %= 运算符||  
-|int_2::operator < = 运算符||  
-|int_2::operator * = 运算符||  
-|int_2::operator / = 运算符||  
-|int_2::operator ^ = 运算符||  
-|int_2::operator | = 运算符||  
-|int_2::operator ~ 运算符||  
-|int_2::operator + + 运算符||  
-|int_2::operator + = 运算符||  
-|int_2::operator\<= 运算符||  
-|int_2::operator = 运算符||  
-|int_2::operator-= 运算符||  
-|int_2::operator >> = 运算符||  
+|int_2::operator-||  
+|int_2::operator-||  
+|int_2::operator %=||  
+|int_2::operator < =||  
+|int_2::operator * =||  
+|int_2::operator / =||  
+|int_2::operator ^ =||  
+|int_2::operator | =||  
+|int_2::operator ~||  
+|int_2::operator + +||  
+|int_2::operator + =||  
+|int_2::operator\<=||  
+|int_2::operator =||  
+|int_2::operator =||  
+|int_2::operator >> =||  
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[大小常量](#int_2__size)||  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|int_2::g 数据成员||  
-|int_2::gr 数据成员||  
-|int_2::r 数据成员||  
-|int_2::rg 数据成员||  
-|int_2::x 数据成员||  
-|int_2::xy 数据成员||  
-|int_2::y 数据成员||  
-|int_2::yx 数据成员||  
+|int_2::g||  
+|int_2::gr||  
+|int_2::r||  
+|int_2::rg||  
+|int_2::x||  
+|int_2::xy||  
+|int_2::y||  
+|int_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `int_2`  
@@ -148,7 +148,7 @@ class int_2;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="a-namectora-int2"></a><a name="ctor"></a>int_2 
+##  <a name="ctor"></a>int_2 
 
  默认构造函数，将初始化为 0 的所有元素。  
   
@@ -211,12 +211,12 @@ explicit inline int_2(
  `_Other`  
  用于初始化的对象。  
   
-##  <a name="a-nameint2sizea-size"></a><a name="int_2__size"></a>大小 
+##  <a name="int_2__size"></a>大小 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
 

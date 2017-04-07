@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IThreadPoolConfig
-- ATL::IThreadPoolConfig
-- ATL.IThreadPoolConfig
+- ATLUTIL/ATL::IThreadPoolConfig
+- ATLUTIL/ATL::GetSize
+- ATLUTIL/ATL::GetTimeout
+- ATLUTIL/ATL::SetSize
+- ATLUTIL/ATL::SetTimeout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +74,7 @@ __interface
 ## <a name="requirements"></a>要求  
  **标头︰** atlutil.h  
   
-##  <a name="a-namegetsizea--ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
  调用此方法以获取在池中的线程数。  
   
 ```
@@ -88,7 +91,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&134;](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
-##  <a name="a-namegettimeouta--ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
  调用此方法以获取以毫秒为单位，线程池可以关闭一个线程将等待的最长时间。  
   
 ```
@@ -105,7 +108,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>示例  
  请参阅[IThreadPoolConfig::GetSize](#getsize)。  
   
-##  <a name="a-namesetsizea--ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
  调用此方法以设置池中的线程数。  
   
 ```
@@ -126,7 +129,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>示例  
  请参阅[IThreadPoolConfig::GetSize](#getsize)。  
   
-##  <a name="a-namesettimeouta--ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
  调用此方法以设置以毫秒为单位，线程池可以关闭一个线程将等待的最长时间。  
   
 ```

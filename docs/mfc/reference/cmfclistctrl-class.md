@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
+- AFXLISTCTRL/CMFCListCtrl
+- AFXLISTCTRL/CMFCListCtrl::EnableMarkSortedColumn
+- AFXLISTCTRL/CMFCListCtrl::EnableMultipleSort
+- AFXLISTCTRL/CMFCListCtrl::GetHeaderCtrl
+- AFXLISTCTRL/CMFCListCtrl::IsMultipleSort
+- AFXLISTCTRL/CMFCListCtrl::OnCompareItems
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellBkColor
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellFont
+- AFXLISTCTRL/CMFCListCtrl::OnGetCellTextColor
+- AFXLISTCTRL/CMFCListCtrl::RemoveSortColumn
+- AFXLISTCTRL/CMFCListCtrl::SetSortColumn
+- AFXLISTCTRL/CMFCListCtrl::Sort
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +101,7 @@ class CMFCListCtrl : public CListCtrl
 ## <a name="requirements"></a>要求  
  **标头︰** afxlistctrl.h  
   
-##  <a name="a-nameenablemarksortedcolumna--cmfclistctrlenablemarksortedcolumn"></a><a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
+##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
  将标记与不同的背景色排序的列。  
   
 ```  
@@ -108,7 +120,7 @@ void EnableMarkSortedColumn(
 ### <a name="remarks"></a>备注  
  `EnableMarkSortedColumn`使用方法`CDrawingManager::PixelAlpha`计算要使用的颜色已排序的列。 选取颜色取决于正则背景色。  
   
-##  <a name="a-nameenablemultiplesorta--cmfclistctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
  启用按多个列进行排序的列表控件中的数据行。  
   
 ```  
@@ -122,7 +134,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>备注  
  当您启用排序基于多个列时，列不必层次结构。 第一次将按主列排序的数据行。 任何等效值然后将通过每个后续的专栏基于优先级进行排序。  
   
-##  <a name="a-namegetheaderctrla--cmfclistctrlgetheaderctrl"></a><a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
  返回对标头控件的引用。  
   
 ```  
@@ -135,7 +147,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="remarks"></a>备注  
  列表控件的标头控件是包含列标题的窗口。 它通常位于正上方的列。  
   
-##  <a name="a-nameismultiplesorta--cmfclistctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
  检查是否列表控件当前支持对多个列进行排序。  
   
 ```  
@@ -148,7 +160,7 @@ BOOL IsMultipleSort() const;
 ### <a name="remarks"></a>备注  
  当[CMFCListCtrl 类](../../mfc/reference/cmfclistctrl-class.md)支持多个排序，用户可以按多个列排序列表控件中的数据。 若要启用多个排序，请调用[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)。  
   
-##  <a name="a-nameoncompareitemsa--cmfclistctrloncompareitems"></a><a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
  比较两个项目时，框架将调用此方法。  
   
 ```  
@@ -174,7 +186,7 @@ virtual int OnCompareItems(
 ### <a name="remarks"></a>备注  
  默认实现始终返回 0。 必须重写此函数可提供一种排序算法。  
   
-##  <a name="a-nameongetcellbkcolora--cmfclistctrlongetcellbkcolor"></a><a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
+##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
  它必须确定单个单元格的背景色时，框架将调用此方法。  
   
 ```  
@@ -196,7 +208,7 @@ virtual COLORREF OnGetCellBkColor(
 ### <a name="remarks"></a>备注  
  默认实现`OnGetCellBkColor`不使用所提供的输入的参数，而是只需调用`GetBkColor`。 因此，默认情况下，整个列表控件将具有相同的背景色。 您可以重写`OnGetCellBkColor`在派生类来标记使用不同的背景颜色的各个单元格。  
   
-##  <a name="a-nameongetcellfonta--cmfclistctrlongetcellfont"></a><a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
+##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
  获取单个单元格的字体时，框架将调用此方法。  
   
 ```  
@@ -222,7 +234,7 @@ virtual HFONT OnGetCellFont(
 ### <a name="remarks"></a>备注  
  默认情况下，此方法返回`NULL`。 所有列表控件中的单元格都有相同的字体。 要为不同的单元格提供不同的字体，重写此方法。  
   
-##  <a name="a-nameongetcelltextcolora--cmfclistctrlongetcelltextcolor"></a><a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
+##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
  它必须确定单个单元格的文本颜色时，框架将调用此方法。  
   
 ```  
@@ -244,7 +256,7 @@ virtual COLORREF OnGetCellTextColor(
 ### <a name="remarks"></a>备注  
  默认情况下，此方法调用`GetTextColor`而不考虑输入参数。 整个列表控件将具有相同的文本颜色。 您可以重写`OnGetCellTextColor`派生的类将用单独的文本颜色的单个单元格标记中。  
   
-##  <a name="a-nameremovesortcolumna--cmfclistctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
  从排序的列的列表中删除列排序。  
   
 ```  
@@ -258,7 +270,7 @@ void RemoveSortColumn(int iColumn);
 ### <a name="remarks"></a>备注  
  此方法从标头控件中删除列排序。 它将调用[CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)。  
   
-##  <a name="a-namesetsortcolumna--cmfclistctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
  设置当前排的序列和排序顺序。  
   
 ```  
@@ -281,7 +293,7 @@ void SetSortColumn(
 ### <a name="remarks"></a>备注  
  此方法将传递输入的参数给标头控件使用的方法[CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)。  
   
-##  <a name="a-namesorta--cmfclistctrlsort"></a><a name="sort"></a>CMFCListCtrl::Sort  
+##  <a name="sort"></a>CMFCListCtrl::Sort  
  对排序列表控件。  
   
 ```  

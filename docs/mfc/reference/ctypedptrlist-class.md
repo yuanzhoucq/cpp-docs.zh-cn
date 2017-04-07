@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
+- AFXTEMPL/CTypedPtrList
+- AFXTEMPL/CTypedPtrList::AddHead
+- AFXTEMPL/CTypedPtrList::AddTail
+- AFXTEMPL/CTypedPtrList::GetAt
+- AFXTEMPL/CTypedPtrList::GetHead
+- AFXTEMPL/CTypedPtrList::GetNext
+- AFXTEMPL/CTypedPtrList::GetPrev
+- AFXTEMPL/CTypedPtrList::GetTail
+- AFXTEMPL/CTypedPtrList::RemoveHead
+- AFXTEMPL/CTypedPtrList::RemoveTail
+- AFXTEMPL/CTypedPtrList::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +119,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>要求  
  **标头：** afxtempl.h  
   
-##  <a name="a-nameaddheada--ctypedptrlistaddhead"></a><a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>CTypedPtrList::AddHead  
  此成员函数将调用`BASE_CLASS` **:: AddHead**。  
   
 ```  
@@ -135,7 +146,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>备注  
  第一个版本中添加新元素前对列表头。 第二个版本将添加另一个列表前头元素。  
   
-##  <a name="a-nameaddtaila--ctypedptrlistaddtail"></a><a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>CTypedPtrList::AddTail  
  此成员函数将调用`BASE_CLASS` **:: AddTail**。  
   
 ```  
@@ -162,7 +173,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>备注  
  第一个版本后列表末尾添加新元素。 第二个版本在列表的结尾之后添加另一个元素的列表。  
   
-##  <a name="a-namegetata--ctypedptrlistgetat"></a><a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>CTypedPtrList::GetAt  
  类型的变量**位置**至关重要的列表。  
   
 ```  
@@ -189,7 +200,7 @@ TYPE GetAt(POSITION position) const;
   
  此内联函数将调用`BASE_CLASS` **:: GetAt**。  
   
-##  <a name="a-namegetheada--ctypedptrlistgethead"></a><a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>CTypedPtrList::GetHead  
  获取表示此列表的头元素的指针。  
   
 ```  
@@ -209,7 +220,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>备注  
  您必须确保列表不为空，然后调用`GetHead`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)验证列表中包含的元素。  
   
-##  <a name="a-namegetnexta--ctypedptrlistgetnext"></a><a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>CTypedPtrList::GetNext  
  获取标识的列表元素`rPosition`，然后设置`rPosition`到**位置**列表中的下一个条目的值。  
   
 ```  
@@ -238,7 +249,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  可执行迭代的过程中删除元素。 请参阅示例[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)。  
   
-##  <a name="a-namegetpreva--ctypedptrlistgetprev"></a><a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>CTypedPtrList::GetPrev  
  获取标识的列表元素`rPosition`，然后设置`rPosition`到**位置**以前在列表中项的值。  
   
 ```  
@@ -265,7 +276,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  如果检索的元素则在列表中，第一个的新值`rPosition`设置为**NULL**。  
   
-##  <a name="a-namegettaila--ctypedptrlistgettail"></a><a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>CTypedPtrList::GetTail  
  获取表示此列表的头元素的指针。  
   
 ```  
@@ -285,7 +296,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>备注  
  您必须确保列表不为空，然后调用`GetTail`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)验证列表中包含的元素。  
   
-##  <a name="a-nameremoveheada--ctypedptrlistremovehead"></a><a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
  从列表头中移除的元素并将其返回。  
   
 ```  
@@ -302,7 +313,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>备注  
  您必须确保列表不为空，然后调用`RemoveHead`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)验证列表中包含的元素。  
   
-##  <a name="a-nameremovetaila--ctypedptrlistremovetail"></a><a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
  从列表的结尾移除的元素并将其返回。  
   
 ```  
@@ -319,7 +330,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>备注  
  您必须确保列表不为空，然后调用`RemoveTail`。 如果列表为空，Microsoft 基础类库的调试版本断言。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)验证列表中包含的元素。  
   
-##  <a name="a-namesetata--ctypedptrlistsetat"></a><a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>CTypedPtrList::SetAt  
  此成员函数将调用`BASE_CLASS` **:: SetAt**。  
   
 ```  

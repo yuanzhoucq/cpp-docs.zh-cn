@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CDefaultCompareTraits<T>
-- ATL::CDefaultCompareTraits
-- ATL.CDefaultCompareTraits
-- ATL::CDefaultCompareTraits<T>
 - CDefaultCompareTraits
+- ATLCOLL/ATL::CDefaultCompareTraits
+- ATLCOLL/ATL::CDefaultCompareTraits::CompareElements
+- ATLCOLL/ATL::CDefaultCompareTraits::CompareElementsOrdered
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +73,7 @@ class CDefaultCompareTraits
 ## <a name="requirements"></a>要求  
  **标头︰** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
+##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
  调用此函数可比较两个元素相等。  
   
 ```
@@ -94,7 +93,7 @@ static bool CompareElements(const T& element1, const T& element2);
 ### <a name="remarks"></a>备注  
  此函数的默认实现是等号 ( `==`) 运算符。 对于以外的简单数据类型的对象，该函数可能需要重写。  
   
-##  <a name="a-namecompareelementsordereda--cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
  调用此函数可确定更高版本或更低的元素。  
   
 ```

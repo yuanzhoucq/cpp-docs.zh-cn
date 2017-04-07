@@ -9,11 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObjectRootEx
-- ATL::CComObjectRootEx<ThreadModel>
 - CComObjectRootEx
-- ATL::CComObjectRootEx
-- ATL.CComObjectRootEx<ThreadModel>
+- ATLCOM/ATL::CComObjectRootEx
+- ATLCOM/ATL::CComObjectRootEx
+- ATLCOM/ATL::InternalAddRef
+- ATLCOM/ATL::InternalRelease
+- ATLCOM/ATL::Lock
+- ATLCOM/ATL::Unlock
+- ATLCOM/ATL::FinalConstruct
+- ATLCOM/ATL::FinalRelease
+- ATLCOM/ATL::OuterAddRef
+- ATLCOM/ATL::OuterQueryInterface
+- ATLCOM/ATL::OuterRelease
+- ATLCOM/ATL::InternalQueryInterface
+- ATLCOM/ATL::ObjectMain
+- ATLCOM/ATL::m_dwRef
+- ATLCOM/ATL::m_pOuterUnknown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,14 +123,14 @@ class CComObjectRootEx : public CComObjectRootBase
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameccomobjectrootexa--ccomobjectrootexccomobjectrootex"></a><a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
+##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
  构造函数将初始化为 0 的引用计数。  
   
 ```
 CComObjectRootEx();
 ```  
   
-##  <a name="a-namefinalconstructa--ccomobjectrootexfinalconstruct"></a><a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
+##  <a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
  您可以执行任何所需的对象的初始化派生类中重写此方法。  
   
 ```
@@ -159,7 +170,7 @@ HRESULT FinalConstruct();
   
 -   重写`FinalRelease`释放**IUnknown**指针。  
   
-##  <a name="a-namefinalreleasea--ccomobjectrootexfinalrelease"></a><a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
+##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
  在派生类来执行您的对象所需的任何清理操作中，可以重写此方法。  
   
 ```
@@ -171,7 +182,7 @@ void FinalRelease();
   
  执行清理在`FinalRelease`优于将代码添加到您的类的析构函数，因为在该处的点仍完全构造的对象`FinalRelease`调用。 这使您可以安全地访问提供的派生程度最高的类的方法。 这一点特别重要释放之前删除任何聚合的对象。  
   
-##  <a name="a-nameinternaladdrefa--ccomobjectrootexinternaladdref"></a><a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
+##  <a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
  非聚合对象的引用计数递增 1。  
   
 ```
@@ -184,7 +195,7 @@ ULONG InternalAddRef();
 ### <a name="remarks"></a>备注  
  如果线程模型为多线程、 **InterlockedIncrement**用于防止多个线程同时更改引用计数。  
   
-##  <a name="a-nameinternalqueryinterfacea--ccomobjectrootexinternalqueryinterface"></a><a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
+##  <a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
  检索指向所请求的接口的指针。  
   
 ```
@@ -214,7 +225,7 @@ static HRESULT InternalQueryInterface(
 ### <a name="remarks"></a>备注  
  `InternalQueryInterface` 仅处理 COM 映射表中的接口。 如果您的对象进行了聚合，`InternalQueryInterface`不将委派给未知的外部对象。 接口输入到 COM 映射表与宏[COM_INTERFACE_ENTRY](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)或其变化版本之一。  
   
-##  <a name="a-nameinternalreleasea--ccomobjectrootexinternalrelease"></a><a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
+##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
  递减引用非聚合对象的计数加 1。  
   
 ```
@@ -227,7 +238,7 @@ ULONG InternalRelease();
 ### <a name="remarks"></a>备注  
  如果线程模型为多线程、 **InterlockedDecrement**用于防止多个线程同时更改引用计数。  
   
-##  <a name="a-namelocka--ccomobjectrootexlock"></a><a name="lock"></a>CComObjectRootEx::Lock  
+##  <a name="lock"></a>CComObjectRootEx::Lock  
  如果线程模型为多线程，则此方法将调用 Win32 API 函数[EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)，通过私有数据成员获取的等待线程可以获得关键部分对象的所有权。  
   
 ```
@@ -239,7 +250,7 @@ void Lock();
   
  如果线程模型是单线程，则此方法将没有任何效果。  
   
-##  <a name="a-namemdwrefa--ccomobjectrootexmdwref"></a><a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
+##  <a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
  访问四个字节的内存的联合的一部分。  
   
 ```
@@ -261,7 +272,7 @@ long m_dwRef;
   
  如果该对象不会累计，引用计数的访问`AddRef`和**版本**存储在`m_dwRef`。 如果该对象进行了聚合，未知的外部对象的指针存储在[m_pOuterUnknown](#m_pouterunknown)。  
   
-##  <a name="a-namempouterunknowna--ccomobjectrootexmpouterunknown"></a><a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
+##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
  访问四个字节的内存的联合的一部分。  
   
 ```
@@ -284,7 +295,7 @@ IUnknown*
   
  如果该对象进行了聚合，未知的外部对象的指针存储在`m_pOuterUnknown`。 如果该对象不会累计，引用计数的访问`AddRef`和**版本**存储在[m_dwRef](#m_dwref)。  
   
-##  <a name="a-nameobjectmaina--ccomobjectrootexobjectmain"></a><a name="objectmain"></a>CComObjectRootEx::ObjectMain  
+##  <a name="objectmain"></a>CComObjectRootEx::ObjectMain  
  对于每个类中列出[对象映射](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f)，一旦初始化模块时，调用此函数并且再次时它已被终止。  
   
 ```
@@ -303,7 +314,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_COM&#41;](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
-##  <a name="a-nameouteraddrefa--ccomobjectrootexouteraddref"></a><a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
+##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  未知聚合的外部对象的引用计数递增。  
   
 ```
@@ -313,7 +324,7 @@ ULONG OuterAddRef();
 ### <a name="return-value"></a>返回值  
  一个值，可能会有助于诊断和测试。  
   
-##  <a name="a-nameouterqueryinterfacea--ccomobjectrootexouterqueryinterface"></a><a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
+##  <a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
  检索指向所请求的接口的间接指针。  
   
 ```
@@ -330,7 +341,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>返回值  
  其中一个标准`HRESULT`值。  
   
-##  <a name="a-nameouterreleasea--ccomobjectrootexouterrelease"></a><a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
+##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
  递减引用计数的未知聚合的外部对象。  
   
 ```
@@ -340,7 +351,7 @@ ULONG OuterRelease();
 ### <a name="return-value"></a>返回值  
  在非调试版本中，始终返回 0。 在调试版本中，返回一个值，可能是有用的诊断或测试。  
   
-##  <a name="a-nameunlocka--ccomobjectrootexunlock"></a><a name="unlock"></a>CComObjectRootEx::Unlock  
+##  <a name="unlock"></a>CComObjectRootEx::Unlock  
  如果线程模型为多线程，则此方法将调用 Win32 API 函数[LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169)，通过私有数据成员获取关键部分对象的哪些版本所有权。  
   
 ```

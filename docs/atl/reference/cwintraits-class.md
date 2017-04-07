@@ -10,11 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinTraits
-- CMDIChildWinTraits
-- ATL.CWinTraits
-- CFrameWinTraits
-- ATL::CWinTraits
-- CControlWinTraits
+- ATLWIN/ATL::CWinTraits
+- ATLWIN/ATL::CWinTraits::GetWndExStyle
+- ATLWIN/ATL::CWinTraits::GetWndStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +95,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-namegetwndstylea--cwintraitsgetwndstyle"></a><a name="getwndstyle"></a>CWinTraits::GetWndStyle  
+##  <a name="getwndstyle"></a>CWinTraits::GetWndStyle  
  调用此函数可检索的标准样式`CWinTraits`对象。  
   
 ```
@@ -111,7 +109,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>返回值  
  对象的标准的窗口样式。  
   
-##  <a name="a-namegetwndexstylea--cwintraitsgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
+##  <a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
  调用此函数可检索的扩展的样式`CWinTraits`对象。  
   
 ```

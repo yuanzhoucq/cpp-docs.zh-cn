@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::direct3d_abort
+- runtime_exception
+- AMPRT/runtime_exception
+- AMPRT/Concurrency::runtime_exception
+- AMPRT/Concurrency::runtime_exception::get_error_code
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +38,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1a2655ed4c8783dd5f7a3b8af2a7d6a9db88f43e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 399d2531c06285012df12d703b4cda6e18469c38
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 类
@@ -53,23 +56,23 @@ class runtime_exception : public std::exception;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[runtime_exception 构造函数](#ctor)|初始化 `runtime_exception` 类的新实例。|  
 |[~ runtime_exception 析构函数](#dtor)|销毁`runtime_exception`对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[get_error_code 方法](#runtime_exception__get_error_code)|返回导致异常的错误代码。|  
+|[get_error_code](#runtime_exception__get_error_code)|返回导致异常的错误代码。|  
 
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[运算符 = 运算符](#operator_eq)|将指定的内容复制`runtime_exception`到此对象。|  
+|[operator=](#operator_eq)|将指定的内容复制`runtime_exception`到此对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -81,7 +84,7 @@ class runtime_exception : public std::exception;
   
  **命名空间：** 并发  
 
-## <a name="a-nameruntimeexceptionctora--runtimeexception-constructor"></a><a name="runtime_exception__ctor"></a>runtime_exception 构造函数  
+## <a name="runtime_exception__ctor"></a>runtime_exception 构造函数  
 初始化类的新实例。  
   
 ### <a name="syntax"></a>语法  
@@ -111,7 +114,7 @@ runtime_exception(
 ### <a name="return-value"></a>返回值  
  `runtime_exception` 对象。  
 
-## <a name="a-namedtora--runtimeexception-destructor"></a><a name="dtor"></a>~ runtime_exception 析构函数  
+## <a name="dtor"></a>~ runtime_exception 析构函数  
 销毁对象。  
   
 ### <a name="syntax"></a>语法  
@@ -120,7 +123,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="a-nameruntimeexceptiongeterrorcodea--geterrorcode"></a><a name="runtime_exception__get_error_code"></a>get_error_code   
+## <a name="runtime_exception__get_error_code"></a>get_error_code   
 返回导致异常的错误代码。  
   
 ### <a name="syntax"></a>语法  
@@ -132,7 +135,7 @@ HRESULT get_error_code() const throw();
 ### <a name="return-value"></a>返回值  
  导致异常的错误的 HRESULT。  
   
-## <a name="a-nameruntimeexceptionoperatoreqa--operator"></a><a name="runtime_exception__operator_eq"></a>operator=   
+## <a name="runtime_exception__operator_eq"></a>operator=   
   将指定的内容复制`runtime_exception`到此对象。  
   
 ### <a name="syntax"></a>语法  
@@ -151,5 +154,5 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
+- AFXOLE/COleLinkingDoc
+- AFXOLE/COleLinkingDoc::COleLinkingDoc
+- AFXOLE/COleLinkingDoc::Register
+- AFXOLE/COleLinkingDoc::Revoke
+- AFXOLE/COleLinkingDoc::OnFindEmbeddedItem
+- AFXOLE/COleLinkingDoc::OnGetLinkedItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +114,7 @@ class COleLinkingDoc : public COleDocument
 ## <a name="requirements"></a>要求  
  **标头︰** afxole.h  
   
-##  <a name="a-namecolelinkingdoca--colelinkingdoccolelinkingdoc"></a><a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
  构造`COleLinkingDoc`对象而无需开始与 OLE 系统 Dll 之间的通信。  
   
 ```  
@@ -118,7 +124,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>备注  
  必须调用`Register`成员函数，以通知 OLE 文档处于打开状态。  
   
-##  <a name="a-nameonfindembeddeditema--colelinkingdoconfindembeddeditem"></a><a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
  由框架来确定文档是否包含具有指定名称嵌入的 OLE 项调用。  
   
 ```  
@@ -135,7 +141,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>备注  
  默认实现将搜索具有指定名称 （名称比较不区分大小写） 的项的嵌入项的列表。 如果您有自己的存储或命名嵌入的 OLE 项的方法，重写此函数。  
   
-##  <a name="a-nameongetlinkeditema--colelinkingdocongetlinkeditem"></a><a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
  由框架来检查文档是否包含具有指定名称的链接的服务器项调用。  
   
 ```  
@@ -152,7 +158,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>备注  
  默认值`COleLinkingDoc`实现始终返回**NULL**。 此函数是在派生类中的重写`COleServerDoc`搜索具有指定名称 （名称比较不区分大小写） 链接的项的 OLE 服务器项的列表。 如果你已实现了自己的存储或检索链接的服务器项的方法，重写此函数。  
   
-##  <a name="a-nameregistera--colelinkingdocregister"></a><a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>COleLinkingDoc::Register  
  告知 OLE 系统 Dll 此文档已打开。  
   
 ```  
@@ -176,7 +182,7 @@ BOOL Register(
   
  如果您使用`COleTemplateServer`应用程序中`Register`为您通过调用`COleLinkingDoc`的实现`OnNewDocument`， `OnOpenDocument`，和`OnSaveDocument`。  
   
-##  <a name="a-namerevokea--colelinkingdocrevoke"></a><a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>COleLinkingDoc::Revoke  
  告知 OLE 系统 Dll 文档不再处于打开状态。  
   
 ```  

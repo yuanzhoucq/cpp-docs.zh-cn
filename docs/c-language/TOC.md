@@ -126,7 +126,7 @@
 #### [C 乘法运算符](c-multiplicative-operators.md)
 #### [C 加法运算符](c-additive-operators.md)
 ##### [加法 (+)](addition-plus.md)
-##### [减号 (–)](subtraction-minus.md)
+##### [减法 (–)](subtraction-minus.md)
 ##### [使用加法运算符](using-the-additive-operators.md)
 ##### [指针算术](pointer-arithmetic.md)
 #### [按位移位运算符](bitwise-shift-operators.md)
@@ -282,8 +282,3 @@
 #### [strerror 函数](strerror-function.md)
 #### [时区](time-zone.md)
 #### [clock 函数 (C)](clock-function-c.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

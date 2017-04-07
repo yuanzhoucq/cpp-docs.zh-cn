@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency
+- AMP/Concurrency
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: a62955c94771320a64027f4f820434dd5e7984a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 38c3154244b163202bcb8e271f96b393231247ca
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 命名空间 (C++ AMP)
@@ -52,12 +52,12 @@ namespace Concurrency;
   
 ### <a name="namespaces"></a>命名空间  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[Concurrency:: direct3d Namespace](concurrency-direct3d-namespace.md)|提供了支持 D3D 互操作性的函数。 启用无缝使用 D3D 资源 AMP 代码中的计算和在 AMP 中创建在 D3D 代码中，而无需创建多余的中间副本的资源的使用。 C + + AMP 可用于以增量方式加速 DirectX 应用程序的需要进行大量计算部分和对数据产生的 AMP 计算中使用 D3D API。|  
-|[Concurrency:: fast_math Namespace](concurrency-fast-math-namespace.md)|中的函数`fast_math`命名空间不符合 C99 标准。 提供了只有单精度的每个函数的版本。 这些函数将使用 DirectX 内部函数，其速度要快于中的相应函数`precise_math`命名空间并不需要扩展的双精度支持加速器，但它们是不太准确。 有两个版本的每个函数的源代码级别与 C99 代码; 的兼容性这两个版本采用并返回单精度值。|  
-|[Concurrency:: graphics Namespace](concurrency-graphics-namespace.md)|图形编程提供类型和设计的函数。|  
-|[Concurrency:: precise_math Namespace](concurrency-precise-math-namespace.md)|中的函数`precise_math`命名空间是符合 C99。 每个函数的单精度和双精度版本不包括在内。 这些函数，其中包括单精度函数 — 需要扩展的双精度支持加速器。|  
+|[Concurrency::direct3d 命名空间](concurrency-direct3d-namespace.md)|提供了支持 D3D 互操作性的函数。 启用无缝使用 D3D 资源 AMP 代码中的计算和在 AMP 中创建在 D3D 代码中，而无需创建多余的中间副本的资源的使用。 C + + AMP 可用于以增量方式加速 DirectX 应用程序的需要进行大量计算部分和对数据产生的 AMP 计算中使用 D3D API。|  
+|[Concurrency::fast_math 命名空间](concurrency-fast-math-namespace.md)|中的函数`fast_math`命名空间不符合 C99 标准。 提供了只有单精度的每个函数的版本。 这些函数将使用 DirectX 内部函数，其速度要快于中的相应函数`precise_math`命名空间并不需要扩展的双精度支持加速器，但它们是不太准确。 有两个版本的每个函数的源代码级别与 C99 代码; 的兼容性这两个版本采用并返回单精度值。|  
+|[Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)|图形编程提供类型和设计的函数。|  
+|[Concurrency::precise_math 命名空间](concurrency-precise-math-namespace.md)|中的函数`precise_math`命名空间是符合 C99。 每个函数的单精度和双精度版本不包括在内。 这些函数，其中包括单精度函数 — 需要扩展的双精度支持加速器。|  
   
 ### <a name="classes"></a>类  
   
@@ -89,7 +89,7 @@ namespace Concurrency;
   
 ### <a name="operators"></a>运算符  
   
-|运算符|说明|  
+|运算符|描述|  
 |--------------|-----------------|  
 |[运算符 = = 运算符 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|确定指定的数据结构是否相等。|  
 |[运算符 ！ = 运算符 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_neq)|确定指定的数据结构是否不相等。|  
@@ -101,29 +101,29 @@ namespace Concurrency;
   
 ### <a name="functions"></a>函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[all_memory_fence 函数](concurrency-namespace-functions-amp.md#all_memory_fence)|块中的图块，直到完成所有的内存访问的所有线程执行。|  
-|[amp_uninitialize 函数](concurrency-namespace-functions-amp.md#amp_uninitialize)|取消初始化 c + + AMP 运行时。|  
-|[atomic_compare_exchange 函数](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|已重载。 如果存储在指定位置的值比较的第一个指定值相等，则第二个指定的值存储在同一位置作为一个原子操作。|  
-|[atomic_exchange 函数](concurrency-namespace-functions-amp.md#atomic_exchange)|已重载。 设置存储在为指定的值作为一个原子操作的指定位置处的值。|  
-|[atomic_fetch_add 函数](concurrency-namespace-functions-amp.md#atomic_fetch_add)|已重载。 设置存储在该值与指定的值的总和作为一个原子操作的指定位置处的值。|  
-|[atomic_fetch_and 函数](concurrency-namespace-functions-amp.md#atomic_fetch_and)|已重载。 设置存储在指定的位置为按位值`and`该值与指定的值作为一个原子操作。|  
-|[atomic_fetch_dec 函数](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|已重载。 递减的值存储在指定的位置，并将结果存储在同一位置作为一个原子操作。|  
-|[atomic_fetch_inc 函数](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|已重载。 递增存储的指定位置的值并将结果存储在同一位置作为一个原子操作。|  
-|[atomic_fetch_max 函数](concurrency-namespace-functions-amp.md#atomic_fetch_max)|已重载。 设置存储在指定的位置为较大值以及该值作为一个原子操作的指定的值。|  
-|[atomic_fetch_min 函数](concurrency-namespace-functions-amp.md#atomic_fetch_min)|已重载。 设置存储在指定位置到较小的值以及该值作为一个原子操作的指定的值。|  
-|[atomic_fetch_or 函数](concurrency-namespace-functions-amp.md#atomic_fetch_or)|已重载。 设置存储在指定的位置为按位值`or`该值与指定的值作为一个原子操作。|  
-|[atomic_fetch_sub 函数](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|已重载。 设置存储到差异该值与指定的值作为一个原子操作的指定位置的值。|  
-|[atomic_fetch_xor 函数](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|已重载。 设置存储在指定的位置为按位值`xor`该值与指定的值作为一个原子操作。|  
-|[copy 函数](concurrency-namespace-functions-amp.md#copy)|将 c + + AMP 对象复制。 满足所有同步数据传输要求。 当代码在快捷键上运行代码时，无法复制数据。 此函数的常规形式`copy(src, dest)`。|  
-|[copy_async 函数](concurrency-namespace-functions-amp.md#copy_async)|复制 c + + AMP 对象并返回[completion_future](completion-future-class.md) ，可以等待。 在快捷键上运行代码时，无法复制数据。 此函数的常规形式`copy(src, dest)`。|  
-|[direct3d_abort 函数](concurrency-namespace-functions-amp.md#direct3d_abort)|中止具有的函数的执行`restrict(amp)`限制子句。|  
-|[direct3d_errorf 函数](concurrency-namespace-functions-amp.md#direct3d_errorf)|打印到 Visual Studio 的格式化的字符串**输出**窗口，并引发[runtime_exception](runtime-exception-class.md)异常有相同的格式字符串。|  
-|[direct3d_printf 函数](concurrency-namespace-functions-amp.md#direct3d_printf)|打印到 Visual Studio 的格式化的字符串**输出**窗口。 从具有的函数调用`restrict(amp)`限制子句。|  
-|[global_memory_fence 函数](concurrency-namespace-functions-amp.md#global_memory_fence)|直到所有全局内存存取平铺中的所有线程的阻止执行已完成。|  
+|[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|块中的图块，直到完成所有的内存访问的所有线程执行。|  
+|[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|取消初始化 c + + AMP 运行时。|  
+|[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|已重载。 如果存储在指定位置的值比较的第一个指定值相等，则第二个指定的值存储在同一位置作为一个原子操作。|  
+|[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|已重载。 设置存储在为指定的值作为一个原子操作的指定位置处的值。|  
+|[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|已重载。 设置存储在该值与指定的值的总和作为一个原子操作的指定位置处的值。|  
+|[atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|已重载。 设置存储在指定的位置为按位值`and`该值与指定的值作为一个原子操作。|  
+|[atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|已重载。 递减的值存储在指定的位置，并将结果存储在同一位置作为一个原子操作。|  
+|[atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|已重载。 递增存储的指定位置的值并将结果存储在同一位置作为一个原子操作。|  
+|[atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|已重载。 设置存储在指定的位置为较大值以及该值作为一个原子操作的指定的值。|  
+|[atomic_fetch_min](concurrency-namespace-functions-amp.md#atomic_fetch_min)|已重载。 设置存储在指定位置到较小的值以及该值作为一个原子操作的指定的值。|  
+|[atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|已重载。 设置存储在指定的位置为按位值`or`该值与指定的值作为一个原子操作。|  
+|[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|已重载。 设置存储到差异该值与指定的值作为一个原子操作的指定位置的值。|  
+|[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|已重载。 设置存储在指定的位置为按位值`xor`该值与指定的值作为一个原子操作。|  
+|[copy](concurrency-namespace-functions-amp.md#copy)|将 c + + AMP 对象复制。 满足所有同步数据传输要求。 当代码在快捷键上运行代码时，无法复制数据。 此函数的常规形式`copy(src, dest)`。|  
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|复制 c + + AMP 对象并返回[completion_future](completion-future-class.md) ，可以等待。 在快捷键上运行代码时，无法复制数据。 此函数的常规形式`copy(src, dest)`。|  
+|[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|中止具有的函数的执行`restrict(amp)`限制子句。|  
+|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|打印到 Visual Studio 的格式化的字符串**输出**窗口，并引发[runtime_exception](runtime-exception-class.md)异常有相同的格式字符串。|  
+|[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|打印到 Visual Studio 的格式化的字符串**输出**窗口。 从具有的函数调用`restrict(amp)`限制子句。|  
+|[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|直到所有全局内存存取平铺中的所有线程的阻止执行已完成。|  
 |[parallel_for_each 函数 (c + + AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|在计算域内运行了一个函数。|  
-|[tile_static_memory_fence 函数](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|阻止，直到 tile 中的所有线程的执行`tile_static`内存访问已完成。|  
+|[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|阻止，直到 tile 中的所有线程的执行`tile_static`内存访问已完成。|  
   
 ## <a name="constants"></a>常量  
   
@@ -136,7 +136,7 @@ namespace Concurrency;
  **标头：** amp.h  
   
 ## <a name="see-also"></a>另请参阅  
- [参考 (c + + AMP)](reference-cpp-amp.md)
+ [参考 (C++ AMP)](reference-cpp-amp.md)
 
 
 

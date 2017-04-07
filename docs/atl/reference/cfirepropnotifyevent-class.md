@@ -10,8 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFirePropNotifyEvent
-- ATL::CFirePropNotifyEvent
-- ATL.CFirePropNotifyEvent
+- ATLCTL/ATL::CFirePropNotifyEvent
+- ATLCTL/ATL::CFirePropNotifyEvent::FireOnChanged
+- ATLCTL/ATL::CFirePropNotifyEvent::FireOnRequestEdit
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +75,7 @@ class CFirePropNotifyEvent
 ## <a name="requirements"></a>要求  
  **标头︰** atlctl.h  
   
-##  <a name="a-namefireonchangeda--cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
  通知所有连接[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （上对象的每个连接点） 指定的对象属性已更改的接口。  
   
 ```
@@ -94,7 +95,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="remarks"></a>备注  
  此函数是安全地调用即使您的控件不支持连接点。  
   
-##  <a name="a-namefireonrequestedita--cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
  通知所有连接[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)指定的对象属性是否将要发生更改 （在该对象的每个连接点） 的接口。  
   
 ```

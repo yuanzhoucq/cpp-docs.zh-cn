@@ -225,6 +225,7 @@
 ## [聚合和类工厂宏](aggregation-and-class-factory-macros.md)
 ## [分类宏](category-macros.md)
 ## [COM 映射宏](com-map-macros.md)
+## [COM 接口入口宏](com-interface-entry-macros.md)
 ## [编译器选项宏](compiler-options-macros.md)
 ## [复合控件宏](composite-control-macros.md)
 ## [连接点宏](connection-point-macros.md)

@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
+- No header/ATL::IAxWinHostWindow
+- No header/ATL::AttachControl
+- No header/ATL::CreateControl
+- No header/ATL::CreateControlEx
+- No header/ATL::QueryControl
+- No header/ATL::SetExternalDispatch
+- No header/ATL::SetExternalUIHandler
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +82,7 @@ interface IAxWinHostWindow : IUnknown
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h （也包括在 ATLBase.h）|  
   
-##  <a name="a-nameattachcontrola--iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
+##  <a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
  将现有的 （和以前初始化的） 的控件附加到该主机对象，使用标识窗口`hWnd`。  
   
 ```
@@ -92,7 +99,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namecreatecontrola--iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
+##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
  创建控件，初始化它，并在标识窗口中承载它`hWnd`。  
   
 ```
@@ -122,7 +129,7 @@ STDMETHOD(CreateControl)(
   
  若要创建授权的 ActiveX 控件，请参阅[IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。  
   
-##  <a name="a-namecreatecontrolexa--iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
  创建 ActiveX 控件，初始化它并将它宿主在指定窗口中，类似于[IAxWinHostWindow::CreateControl](#createcontrol)。  
   
 ```
@@ -162,7 +169,7 @@ STDMETHOD(CreateControlEx)(
   
  若要创建授权的 ActiveX 控件，请参阅[IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)。  
   
-##  <a name="a-namequerycontrola--iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
+##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
  返回由所承载的控件的指定的接口指针。  
   
 ```
@@ -181,7 +188,7 @@ STDMETHOD(QueryControl)(
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namesetexternaldispatcha--iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
  设置可用于通过所含控件的外部调度接口[IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md)方法。  
   
 ```
@@ -195,7 +202,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-##  <a name="a-namesetexternaluihandlera--iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
  调用此函数可设置外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)接口`CAxWindow`对象。  
   
 ```

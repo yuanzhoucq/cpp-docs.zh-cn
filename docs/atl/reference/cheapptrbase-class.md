@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHeapPtrBase
-- ATL::CHeapPtrBase
 - CHeapPtrBase
+- ATLCORE/ATL::CHeapPtrBase
+- ATLCORE/ATL::CHeapPtrBase::AllocateBytes
+- ATLCORE/ATL::CHeapPtrBase::Attach
+- ATLCORE/ATL::CHeapPtrBase::Detach
+- ATLCORE/ATL::CHeapPtrBase::Free
+- ATLCORE/ATL::CHeapPtrBase::ReallocateBytes
+- ATLCORE/ATL::CHeapPtrBase::m_pData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +105,7 @@ class CHeapPtrBase
 ## <a name="requirements"></a>要求  
  **标头︰** atlcore.h  
   
-##  <a name="a-nameallocatebytesa--cheapptrbaseallocatebytes"></a><a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
  调用此方法来分配内存。  
   
 ```
@@ -117,7 +122,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  在调试版本中，如果将发生断言失败[CHeapPtrBase::m_pData](#m_pdata)成员变量当前指向的现有值; 也就是说，不等于 NULL。  
   
-##  <a name="a-nameattacha--cheapptrbaseattach"></a><a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>CHeapPtrBase::Attach  
  调用此方法以获取现有指针的所有权。  
   
 ```
@@ -133,7 +138,7 @@ void Attach(T* pData) throw();
   
  在调试版本中，如果将发生断言失败[CHeapPtrBase::m_pData](#m_pdata)成员变量当前指向的现有值; 也就是说，不等于 NULL。  
   
-##  <a name="a-namedtora--cheapptrbasecheapptrbase"></a><a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
+##  <a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
  析构函数。  
   
 ```
@@ -143,7 +148,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>备注  
  释放所有已分配的资源。  
   
-##  <a name="a-namedetacha--cheapptrbasedetach"></a><a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>CHeapPtrBase::Detach  
  调用此方法可释放的指针的所有权。  
   
 ```
@@ -156,7 +161,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>备注  
  释放指针的所有权，设置[CHeapPtrBase::m_pData](#m_pdata)成员变量为 NULL，并返回指针的副本。  
   
-##  <a name="a-namefreea--cheapptrbasefree"></a><a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>CHeapPtrBase::Free  
  调用此方法可删除所指向的对象`CHeapPtrBase`。  
   
 ```
@@ -166,7 +171,7 @@ void Free() throw();
 ### <a name="remarks"></a>备注  
  指向的对象`CHeapPtrBase`释放控制块和[CHeapPtrBase::m_pData](#m_pdata)成员变量设置为 NULL。  
   
-##  <a name="a-namempdataa--cheapptrbasempdata"></a><a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
  指针数据成员变量。  
   
 ```
@@ -176,7 +181,7 @@ T* m_pData;
 ### <a name="remarks"></a>备注  
  此成员变量包含指针信息。  
   
-##  <a name="a-nameoperatorampa--cheapptrbaseoperator-amp"></a><a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
  < 运算符。  
   
 ```
@@ -187,7 +192,7 @@ T** operator&() throw();
  返回指向的对象的地址`CHeapPtrBase`对象。  
   
 
-##  <a name="a-nameoperatorptra--cheapptrbaseoperator--gt"></a><a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
 
  指针到成员运算符中。  
   
@@ -201,7 +206,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>备注  
  使用此运算符将指向类中调用的方法`CHeapPtrBase`对象。 在调试版本中，如果将发生断言失败`CHeapPtrBase`点为 NULL。  
   
-##  <a name="a-nameoperatortstara--cheapptrbaseoperator-t"></a><a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
  强制转换运算符。  
   
 ```  
@@ -211,7 +216,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>备注  
  返回[CHeapPtrBase::m_pData](#m_pdata)。  
   
-##  <a name="a-namereallocatebytesa--cheapptrbasereallocatebytes"></a><a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
  调用此方法来重新分配内存。  
   
 ```

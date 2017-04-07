@@ -10,7 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DGeometry
-- afxrendertarget/CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry::CD2DGeometry
+- AFXRENDERTARGET/CD2DGeometry::Attach
+- AFXRENDERTARGET/CD2DGeometry::CombineWithGeometry
+- AFXRENDERTARGET/CD2DGeometry::CompareWithGeometry
+- AFXRENDERTARGET/CD2DGeometry::ComputeArea
+- AFXRENDERTARGET/CD2DGeometry::ComputeLength
+- AFXRENDERTARGET/CD2DGeometry::ComputePointAtLength
+- AFXRENDERTARGET/CD2DGeometry::Destroy
+- AFXRENDERTARGET/CD2DGeometry::Detach
+- AFXRENDERTARGET/CD2DGeometry::FillContainsPoint
+- AFXRENDERTARGET/CD2DGeometry::Get
+- AFXRENDERTARGET/CD2DGeometry::GetBounds
+- AFXRENDERTARGET/CD2DGeometry::GetWidenedBounds
+- AFXRENDERTARGET/CD2DGeometry::IsValid
+- AFXRENDERTARGET/CD2DGeometry::Outline
+- AFXRENDERTARGET/CD2DGeometry::Simplify
+- AFXRENDERTARGET/CD2DGeometry::StrokeContainsPoint
+- AFXRENDERTARGET/CD2DGeometry::Tessellate
+- AFXRENDERTARGET/CD2DGeometry::Widen
+- AFXRENDERTARGET/CD2DGeometry::m_pGeometry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,14 +123,14 @@ class CD2DGeometry : public CD2DResource;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dgeometrya--cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
+##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
  析构函数。 当 D2D 几何图形对象被销毁时调用。  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="a-nameattacha--cd2dgeometryattach"></a><a name="attach"></a>CD2DGeometry::Attach  
+##  <a name="attach"></a>CD2DGeometry::Attach  
  附加现有的资源的对象的接口  
   
 ```  
@@ -121,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
  `pResource`  
  现有资源的接口。 不能为 NULL  
   
-##  <a name="a-namecd2dgeometrya--cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
+##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
  构造 CD2DGeometry 对象。  
   
 ```  
@@ -137,7 +157,7 @@ CD2DGeometry(
  `bAutoDestroy`  
  指示所有者 (pParentTarget) 将销毁该对象。  
   
-##  <a name="a-namecombinewithgeometrya--cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
+##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
  组合此几何都与指定的几何图形，并将结果存储在 ID2D1SimplifiedGeometrySink。  
   
 ```  
@@ -168,7 +188,7 @@ BOOL CombineWithGeometry(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namecomparewithgeometrya--cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
+##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
  描述此 geometry 和指定的几何图形的交集。 使用指定的平展容差进行比较。  
   
 ```  
@@ -191,7 +211,7 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namecomputeareaa--cd2dgeometrycomputearea"></a><a name="computearea"></a>CD2DGeometry::ComputeArea  
+##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
  计算几何形状的区域后，将通过指定的矩阵转换并使用指定的容差单一化。  
   
 ```  
@@ -214,7 +234,7 @@ BOOL ComputeArea(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namecomputelengtha--cd2dgeometrycomputelength"></a><a name="computelength"></a>CD2DGeometry::ComputeLength  
+##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
  计算该几何图形的长度，就好像每个段是为一条线展开。  
   
 ```  
@@ -237,7 +257,7 @@ BOOL ComputeLength(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namecomputepointatlengtha--cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
+##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
  计算在几何图形的指定距离处的点和切线向量后，将通过指定的矩阵转换并使用指定的容差单一化。  
   
 ```  
@@ -268,14 +288,14 @@ BOOL ComputePointAtLength(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namedestroya--cd2dgeometrydestroy"></a><a name="destroy"></a>CD2DGeometry::Destroy  
+##  <a name="destroy"></a>CD2DGeometry::Destroy  
  销毁 CD2DGeometry 对象。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dgeometrydetach"></a><a name="detach"></a>CD2DGeometry::Detach  
+##  <a name="detach"></a>CD2DGeometry::Detach  
  分离对象中的资源接口  
   
 ```  
@@ -285,7 +305,7 @@ ID2D1Geometry* Detach();
 ### <a name="return-value"></a>返回值  
  指向已分离的资源接口指针。  
   
-##  <a name="a-namefillcontainspointa--cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
+##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
  指示是否由几何图形填充的区域将包含指定的点给定指定的平展容差。  
   
 ```  
@@ -312,7 +332,7 @@ BOOL FillContainsPoint(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namegeta--cd2dgeometryget"></a><a name="get"></a>CD2DGeometry::Get  
+##  <a name="get"></a>CD2DGeometry::Get  
  返回 ID2D1Geometry 接口  
   
 ```  
@@ -322,7 +342,7 @@ ID2D1Geometry* Get();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1Geometry 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namegetboundsa--cd2dgeometrygetbounds"></a><a name="getbounds"></a>CD2DGeometry::GetBounds  
+##  <a name="getbounds"></a>CD2DGeometry::GetBounds  
   
 ```   
 BOOL GetBounds(
@@ -336,7 +356,7 @@ CD2DRectF& bounds) const;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="a-namegetwidenedboundsa--cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
+##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
  扩展由指定的笔画宽度和样式并通过指定的矩阵转换后，请获取该几何图形的边界。  
   
 ```  
@@ -367,7 +387,7 @@ BOOL GetWidenedBounds(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-nameisvalida--cd2dgeometryisvalid"></a><a name="isvalid"></a>CD2DGeometry::IsValid  
+##  <a name="isvalid"></a>CD2DGeometry::IsValid  
  检查资源的有效性  
   
 ```  
@@ -377,14 +397,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>返回值  
  如果资源是有效，则为，TRUE否则为 FALSE。  
   
-##  <a name="a-namempgeometrya--cd2dgeometrympgeometry"></a><a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
+##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
  指向 ID2D1Geometry 的指针。  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="a-nameoperatorid2d1geometrystara--cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
+##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
  返回 ID2D1Geometry 接口  
   
 ```  
@@ -394,7 +414,7 @@ operator ID2D1Geometry*();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1Geometry 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-nameoutlinea--cd2dgeometryoutline"></a><a name="outline"></a>CD2DGeometry::Outline  
+##  <a name="outline"></a>CD2DGeometry::Outline  
  计算 geometry 的轮廓，并将结果写入 ID2D1SimplifiedGeometrySink。  
   
 ```  
@@ -417,7 +437,7 @@ BOOL Outline(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namesimplifya--cd2dgeometrysimplify"></a><a name="simplify"></a>CD2DGeometry::Simplify  
+##  <a name="simplify"></a>CD2DGeometry::Simplify  
  创建仅包含行和 （可选） 三次方贝塞尔曲线并将结果写入到 ID2D1SimplifiedGeometrySink 的几何图形的简化的版本。  
   
 ```  
@@ -444,7 +464,7 @@ BOOL Simplify(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namestrokecontainspointa--cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
+##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
  确定几何图形的笔画是否包含给定指定的笔画粗细、 样式和转换的指定的点。  
   
 ```  
@@ -479,7 +499,7 @@ BOOL StrokeContainsPoint(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-nametessellatea--cd2dgeometrytessellate"></a><a name="tessellate"></a>CD2DGeometry::Tessellate  
+##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
  创建一组覆盖该几何图形后已转换使用指定的矩阵并使用指定的容差单一化的顺时针缠绕三角形。  
   
 ```  
@@ -502,7 +522,7 @@ BOOL Tessellate(
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
   
-##  <a name="a-namewidena--cd2dgeometrywiden"></a><a name="widen"></a>CD2DGeometry::Widen  
+##  <a name="widen"></a>CD2DGeometry::Widen  
  通过指定的笔画加宽几何图形，并将结果写入到 ID2D1SimplifiedGeometrySink 后，将通过指定的矩阵转换并使用指定的容差单一化。  
   
 ```  

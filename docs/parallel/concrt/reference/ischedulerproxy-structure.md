@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ISchedulerProxy
+- ISchedulerProxy
+- CONCRTRM/concurrency::ISchedulerProxy
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::BindContext
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::CreateOversubscriber
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::RequestInitialVirtualProcessors
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::Shutdown
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::SubscribeCurrentThread
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::UnbindContext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: a282e397186ee4ab3eda4f882b9c9fc89ff353f2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 3dd95150022ad94f50b456c84f7dacd2d3cef7c5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 结构
@@ -52,14 +59,14 @@ struct ISchedulerProxy;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[Ischedulerproxy:: Bindcontext 方法](#bindcontext)|如果尚未与之一相关联，则可以将线程代理，与关联的执行上下文。|  
-|[Ischedulerproxy:: Createoversubscriber 方法](#createoversubscriber)|在与现有的执行资源相关联的硬件线程上创建新的虚拟处理器根。|  
-|[Ischedulerproxy:: Requestinitialvirtualprocessors 方法](#requestinitialvirtualprocessors)|请求的虚拟处理器根的初始分配。 每个虚拟处理器根表示执行可执行工作计划程序的一个线程的能力。|  
-|[Ischedulerproxy:: Shutdown 方法](#shutdown)|通知资源管理器计划程序正在关闭。 这将导致资源管理器，以立即回收所有资源授予计划程序。|  
-|[Ischedulerproxy:: Subscribecurrentthread 方法](#subscribecurrentthread)|注册当前线程使用资源管理器，将其与此计划程序关联。|  
-|[Ischedulerproxy:: Unbindcontext 方法](#unbindcontext)|解除关联的线程代理从通过指定的执行上下文`pContext`参数并将其返回到线程代理工厂的可用池。 此方法仅调用通过绑定的执行上下文[ischedulerproxy:: Bindcontext](#bindcontext)方法和尚未开始通过正在`pContext`参数[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)方法调用。|  
+|[Ischedulerproxy:: Bindcontext](#bindcontext)|如果尚未与之一相关联，则可以将线程代理，与关联的执行上下文。|  
+|[Ischedulerproxy:: Createoversubscriber](#createoversubscriber)|在与现有的执行资源相关联的硬件线程上创建新的虚拟处理器根。|  
+|[Ischedulerproxy:: Requestinitialvirtualprocessors](#requestinitialvirtualprocessors)|请求的虚拟处理器根的初始分配。 每个虚拟处理器根表示执行可执行工作计划程序的一个线程的能力。|  
+|[Ischedulerproxy:: Shutdown](#shutdown)|通知资源管理器计划程序正在关闭。 这将导致资源管理器，以立即回收所有资源授予计划程序。|  
+|[Ischedulerproxy:: Subscribecurrentthread](#subscribecurrentthread)|注册当前线程使用资源管理器，将其与此计划程序关联。|  
+|[Ischedulerproxy:: Unbindcontext](#unbindcontext)|解除关联的线程代理从通过指定的执行上下文`pContext`参数并将其返回到线程代理工厂的可用池。 此方法仅调用通过绑定的执行上下文[ischedulerproxy:: Bindcontext](#bindcontext)方法和尚未开始通过正在`pContext`参数[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)方法调用。|  
   
 ## <a name="remarks"></a>备注  
  资源管理器将传递`ISchedulerProxy`注册使用其每个计划程序接口[iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler)方法。  
@@ -72,7 +79,7 @@ struct ISchedulerProxy;
   
  **命名空间：** 并发  
   
-##  <a name="a-namebindcontexta--ischedulerproxybindcontext-method"></a><a name="bindcontext"></a>Ischedulerproxy:: Bindcontext 方法  
+##  <a name="bindcontext"></a>Ischedulerproxy:: Bindcontext 方法  
  如果尚未与之一相关联，则可以将线程代理，与关联的执行上下文。  
   
 ```
@@ -88,7 +95,7 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_argument`如果该参数`pContext`具有值`NULL`。  
   
-##  <a name="a-namecreateoversubscribera--ischedulerproxycreateoversubscriber-method"></a><a name="createoversubscriber"></a>Ischedulerproxy:: Createoversubscriber 方法  
+##  <a name="createoversubscriber"></a>Ischedulerproxy:: Createoversubscriber 方法  
  在与现有的执行资源相关联的硬件线程上创建新的虚拟处理器根。  
   
 ```
@@ -107,7 +114,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
   
  您甚至可以过度订阅现有虚拟处理器根，因为 `IVirtualProcessorRoot` 接口继承自 `IExecutionResource` 接口。  
   
-##  <a name="a-namerequestinitialvirtualprocessorsa--ischedulerproxyrequestinitialvirtualprocessors-method"></a><a name="requestinitialvirtualprocessors"></a>Ischedulerproxy:: Requestinitialvirtualprocessors 方法  
+##  <a name="requestinitialvirtualprocessors"></a>Ischedulerproxy:: Requestinitialvirtualprocessors 方法  
  请求的虚拟处理器根的初始分配。 每个虚拟处理器根表示执行可执行工作计划程序的一个线程的能力。  
   
 ```
@@ -132,7 +139,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
   
  订阅一个线程会增加一个基础硬件线程的订阅级别。 终止订阅时，将通过一个减少的订阅级别。 订阅级别的详细信息，请参阅[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-##  <a name="a-nameshutdowna--ischedulerproxyshutdown-method"></a><a name="shutdown"></a>Ischedulerproxy:: Shutdown 方法  
+##  <a name="shutdown"></a>Ischedulerproxy:: Shutdown 方法  
  通知资源管理器计划程序正在关闭。 这将导致资源管理器，以立即回收所有资源授予计划程序。  
   
 ```
@@ -146,7 +153,7 @@ virtual void Shutdown() = 0;
   
  计划程序不需要通过调用 `Remove` 方法分别返回资源管理器授予它的所有虚拟处理器根，因为关机时所有虚拟处理器根都将返回到资源管理器。  
   
-##  <a name="a-namesubscribecurrentthreada--ischedulerproxysubscribecurrentthread-method"></a><a name="subscribecurrentthread"></a>Ischedulerproxy:: Subscribecurrentthread 方法  
+##  <a name="subscribecurrentthread"></a>Ischedulerproxy:: Subscribecurrentthread 方法  
  注册当前线程使用资源管理器，将其与此计划程序关联。  
   
 ```
@@ -163,7 +170,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
   
  订阅一个线程会增加一个基础硬件线程的订阅级别。 终止订阅时，将通过一个减少的订阅级别。 订阅级别的详细信息，请参阅[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-##  <a name="a-nameunbindcontexta--ischedulerproxyunbindcontext-method"></a><a name="unbindcontext"></a>Ischedulerproxy:: Unbindcontext 方法  
+##  <a name="unbindcontext"></a>Ischedulerproxy:: Unbindcontext 方法  
  解除关联的线程代理从通过指定的执行上下文`pContext`参数并将其返回到线程代理工厂的可用池。 此方法仅调用通过绑定的执行上下文[ischedulerproxy:: Bindcontext](#bindcontext)方法和尚未开始通过正在`pContext`参数[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)方法调用。  
   
 ```

@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWndClassInfo
+- ATLWIN/ATL::CWndClassInfo
+- ATLWIN/ATL::Register
+- ATLWIN/ATL::m_atom
+- ATLWIN/ATL::m_bSystemCursor
+- ATLWIN/ATL::m_lpszCursorID
+- ATLWIN/ATL::m_lpszOrigName
+- ATLWIN/ATL::m_szAutoName
+- ATLWIN/ATL::m_wc
+- ATLWIN/ATL::pWndProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CWndClassInfo
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-namematoma--cwndclassinfomatom"></a><a name="m_atom"></a>CWndClassInfo::m_atom  
+##  <a name="m_atom"></a>CWndClassInfo::m_atom  
  包含已注册的窗口类的唯一标识符。  
   
 ```
 ATOM m_atom;
 ```  
   
-##  <a name="a-namembsystemcursora--cwndclassinfombsystemcursor"></a><a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
+##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
  如果**TRUE**，在注册窗口类时，将加载的系统光标资源。  
   
 ```
@@ -112,7 +121,7 @@ BOOL m_bSystemCursor;
   
  `CWndClassInfo`使用`m_bSystemCursor`仅当[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (中的默认设置[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或[DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411)指定宏。 在这种情况下，`m_bSystemCursor`初始化为**TRUE**。 有关详细信息，请参阅[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)概述。  
   
-##  <a name="a-namemlpszcursorida--cwndclassinfomlpszcursorid"></a><a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
+##  <a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
  在低序位字和零的高序位字中指定的光标资源的名称或资源标识符。  
   
 ```
@@ -124,7 +133,7 @@ LPCTSTR m_lpszCursorID;
   
  `CWndClassInfo`使用`m_lpszCursorID`仅当[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (中的默认设置[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或[DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411)指定宏。 在这种情况下，`m_lpszCursorID`初始化为**IDC_ARROW**。 有关详细信息，请参阅[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)概述。  
   
-##  <a name="a-namemlpszorignamea--cwndclassinfomlpszorigname"></a><a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
+##  <a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
  包含现有窗口类的名称。  
   
 ```
@@ -134,7 +143,7 @@ LPCTSTR m_lpszOrigName;
 ### <a name="remarks"></a>备注  
  `CWndClassInfo`使用`m_lpszOrigName`仅包括[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)在类定义的宏。 在这种情况下，`CWndClassInfo`寄存器窗口类根据消息由名为的类`m_lpszOrigName`。 有关详细信息，请参阅[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)概述。  
   
-##  <a name="a-namemszautonamea--cwndclassinfomszautoname"></a><a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
+##  <a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
  保留的窗口类的名称。  
   
 ```
@@ -144,7 +153,7 @@ TCHAR m_szAutoName[13];
 ### <a name="remarks"></a>备注  
  `CWndClassInfo`使用`m_szAutoName`才**NULL**为传递`WndClassName`参数[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971)、 [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411)或[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)。 注册窗口类时，ATL 将构造的名称。  
   
-##  <a name="a-namemwca--cwndclassinfomwc"></a><a name="m_wc"></a>CWndClassInfo::m_wc  
+##  <a name="m_wc"></a>CWndClassInfo::m_wc  
  维护中的窗口类信息[WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577)结构。  
   
 ```
@@ -156,7 +165,7 @@ WNDCLASSEX m_wc;
   
  如果已指定[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)宏，`m_wc`包含有关超类信息 — 的窗口类，基于现有类，但使用不同的窗口过程。 [m_lpszOrigName](#m_lpszorigname)和[pWndProc](#pwndproc)分别保存现有窗口类的名称和窗口过程。  
   
-##  <a name="a-namepwndproca--cwndclassinfopwndproc"></a><a name="pwndproc"></a>CWndClassInfo::pWndProc  
+##  <a name="pwndproc"></a>CWndClassInfo::pWndProc  
  指向现有窗口类的窗口过程。  
   
 ```
@@ -166,7 +175,7 @@ WNDPROC pWndProc;
 ### <a name="remarks"></a>备注  
  `CWndClassInfo`使用`pWndProc`仅包括[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)在类定义的宏。 在这种情况下，`CWndClassInfo`注册的窗口类，基于现有类，但使用不同的窗口过程。 现有窗口类的窗口过程将保存在`pWndProc`。 有关详细信息，请参阅[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)概述。  
   
-##  <a name="a-nameregistera--cwndclassinforegister"></a><a name="register"></a>CWndClassInfo::Register  
+##  <a name="register"></a>CWndClassInfo::Register  
  由调用[CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)注册窗口类，如果尚未注册。  
   
 ```

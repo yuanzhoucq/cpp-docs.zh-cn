@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherFileFind
+- AFXINET/CGopherFileFind
+- AFXINET/CGopherFileFind::CGopherFileFind
+- AFXINET/CGopherFileFind::FindFile
+- AFXINET/CGopherFileFind::FindNextFile
+- AFXINET/CGopherFileFind::GetCreationTime
+- AFXINET/CGopherFileFind::GetLastAccessTime
+- AFXINET/CGopherFileFind::GetLastWriteTime
+- AFXINET/CGopherFileFind::GetLength
+- AFXINET/CGopherFileFind::GetLocator
+- AFXINET/CGopherFileFind::GetScreenName
+- AFXINET/CGopherFileFind::IsDots
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +117,7 @@ class CGopherFileFind : public CFileFind
 ## <a name="requirements"></a>要求  
  **标头︰** afxinet.h  
   
-##  <a name="a-namecgopherfilefinda--cgopherfilefindcgopherfilefind"></a><a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
+##  <a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
  调用此成员函数来构造`CGopherFileFind`对象。  
   
 ```  
@@ -125,7 +136,7 @@ explicit CGopherFileFind(
 ### <a name="remarks"></a>备注  
  默认值为`dwContext`发送到 mfc`CGopherFileFind`对象从[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CGopherFileFind`对象。 当构造`CGopherFileFind`对象时，您可以重写默认设置，以便为您选择的值设置上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供对它标识的对象的状态。 请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
   
-##  <a name="a-namefindfilea--cgopherfilefindfindfile"></a><a name="findfile"></a>CGopherFileFind::FindFile  
+##  <a name="findfile"></a>CGopherFileFind::FindFile  
  调用此成员函数来查找 gopher 文件。  
   
 ```  
@@ -164,7 +175,7 @@ virtual BOOL FindFile(
 ### <a name="remarks"></a>备注  
  在调用**FindFile**若要检索的第一个 gopher 对象，您可以调用[FindNextFile](#findnextfile)检索后续 gopher 文件。  
   
-##  <a name="a-namefindnextfilea--cgopherfilefindfindnextfile"></a><a name="findnextfile"></a>CGopherFileFind::FindNextFile  
+##  <a name="findnextfile"></a>CGopherFileFind::FindNextFile  
  调用此成员函数以继续时，首先执行调用的文件搜索[CGopherFileFind::FindFile](#findfile)。  
   
 ```  
@@ -174,7 +185,7 @@ virtual BOOL FindNextFile();
 ### <a name="return-value"></a>返回值  
  非零，如果有多个文件;如果找到该文件是在目录中的最后一个或者出错，则为零。 若要获得扩展错误信息，请调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到该文件是在目录中，最后一个文件，或者如果没有匹配可以找到文件，`GetLastError`函数将返回 ERROR_NO_MORE_FILES。  
   
-##  <a name="a-namegetcreationtimea--cgopherfilefindgetcreationtime"></a><a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
+##  <a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
  获取当前文件的创建时间。  
   
 ```  
@@ -198,7 +209,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 > [!NOTE]
 >  并非所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的值返回的其他时间戳函数，如果基础文件系统或服务器不支持保留的时间属性。 请参阅[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)有关时间格式信息的结构。 在某些操作系统上返回的时间是在区域本地计算机到了该文件所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
   
-##  <a name="a-namegetlastaccesstimea--cgopherfilefindgetlastaccesstime"></a><a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
+##  <a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
  获取上次访问指定的文件的时间。  
   
 ```  
@@ -222,7 +233,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 > [!NOTE]
 >  并非所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的值返回的其他时间戳函数，如果基础文件系统或服务器不支持保留的时间属性。 请参阅[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)有关时间格式信息的结构。 在某些操作系统上返回的时间是在区域本地计算机到了该文件所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
   
-##  <a name="a-namegetlastwritetimea--cgopherfilefindgetlastwritetime"></a><a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
+##  <a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
  获取上次更改该文件的时间。  
   
 ```  
@@ -246,7 +257,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 > [!NOTE]
 >  并非所有的文件系统使用相同的语义来实现此函数返回的时间戳。 此函数可返回相同的值返回的其他时间戳函数，如果基础文件系统或服务器不支持保留的时间属性。 请参阅[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)有关时间格式信息的结构。 在某些操作系统上返回的时间是在区域本地计算机到了该文件所在的时间。 请参阅 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API 的详细信息。  
   
-##  <a name="a-namegetlengtha--cgopherfilefindgetlength"></a><a name="getlength"></a>CGopherFileFind::GetLength  
+##  <a name="getlength"></a>CGopherFileFind::GetLength  
  调用此成员函数要获取长度，以字节为单位找到的文件。  
   
 ```  
@@ -265,7 +276,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="example"></a>示例  
   请参阅示例[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) （基类实现）。  
   
-##  <a name="a-namegetlocatora--cgopherfilefindgetlocator"></a><a name="getlocator"></a>CGopherFileFind::GetLocator  
+##  <a name="getlocator"></a>CGopherFileFind::GetLocator  
  调用此成员函数可获取[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)对象[FindFile](#findfile)使用查找 gopher 文件。  
   
 ```  
@@ -275,7 +286,7 @@ CGopherLocator GetLocator() const;
 ### <a name="return-value"></a>返回值  
  一个 `CGopherLocator` 对象。  
   
-##  <a name="a-namegetscreennamea--cgopherfilefindgetscreenname"></a><a name="getscreenname"></a>CGopherFileFind::GetScreenName  
+##  <a name="getscreenname"></a>CGopherFileFind::GetScreenName  
  调用此成员函数可获取 gopher 屏幕的名称。  
   
 ```  
@@ -285,7 +296,7 @@ CString GetScreenName() const;
 ### <a name="return-value"></a>返回值  
  Gopher 屏幕的名称。  
   
-##  <a name="a-nameisdotsa--cgopherfilefindisdots"></a><a name="isdots"></a>CGopherFileFind::IsDots  
+##  <a name="isdots"></a>CGopherFileFind::IsDots  
  测试循环访问文件时的当前目录及其父目录标记。  
   
 ```  

@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CGlobalHeap
-- ATL::CGlobalHeap
 - CGlobalHeap
+- ATLMEM/ATL::CGlobalHeap
+- ATLMEM/ATL::CGlobalHeap::Allocate
+- ATLMEM/ATL::CGlobalHeap::Free
+- ATLMEM/ATL::CGlobalHeap::GetSize
+- ATLMEM/ATL::CGlobalHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +84,7 @@ class CGlobalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>要求  
  **标头︰** atlmem.h  
   
-##  <a name="a-nameallocatea--cglobalheapallocate"></a><a name="allocate"></a>CGlobalHeap::Allocate  
+##  <a name="allocate"></a>CGlobalHeap::Allocate  
  调用此方法来分配内存块。  
   
 ```
@@ -100,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用实现[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)标志参数的**GMEM_FIXED**。  
   
-##  <a name="a-namefreea--cglobalheapfree"></a><a name="free"></a>CGlobalHeap::Free  
+##  <a name="free"></a>CGlobalHeap::Free  
  调用此方法释放此内存管理器分配的内存块。  
   
 ```
@@ -114,7 +117,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)。  
   
-##  <a name="a-namegetsizea--cglobalheapgetsize"></a><a name="getsize"></a>CGlobalHeap::GetSize  
+##  <a name="getsize"></a>CGlobalHeap::GetSize  
  调用此方法以获取此内存管理器分配的内存块的分配的大小。  
   
 ```
@@ -131,7 +134,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)。  
   
-##  <a name="a-namereallocatea--cglobalheapreallocate"></a><a name="reallocate"></a>CGlobalHeap::Reallocate  
+##  <a name="reallocate"></a>CGlobalHeap::Reallocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
   
 ```

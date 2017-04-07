@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
+- AFXEXT/CMetaFileDC
+- AFXEXT/CMetaFileDC::CMetaFileDC
+- AFXEXT/CMetaFileDC::Close
+- AFXEXT/CMetaFileDC::CloseEnhanced
+- AFXEXT/CMetaFileDC::Create
+- AFXEXT/CMetaFileDC::CreateEnhanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>要求  
  **标头︰** afxext.h  
   
-##  <a name="a-nameclosea--cmetafiledcclose"></a><a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>CMetaFileDC::Close  
  关闭图元文件设备上下文，并创建一个 Windows 图元文件句柄，可用于播放使用图元文件[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)成员函数。  
   
 ```  
@@ -109,7 +115,7 @@ HMETAFILE Close();
   
  在使用后通过调用 Windows 删除图元文件[DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537)函数。  
   
-##  <a name="a-namecloseenhanceda--cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
  关闭增强型图元文件设备上下文，并返回标识增强格式图元文件的句柄。  
   
 ```  
@@ -140,7 +146,7 @@ HENHMETAFILE CloseEnhanced();
   
  当应用程序不再需要的增强型图元文件句柄时，它应释放该句柄，通过调用 Win32 **DeleteEnhMetaFile**函数。  
   
-##  <a name="a-namecmetafiledca--cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
  构造`CMetaFileDC`两个步骤中的对象。  
   
 ```  
@@ -150,7 +156,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>备注  
  首先，调用`CMetaFileDC`，然后调用**创建**，它创建 Windows 图元文件设备上下文，并将其附加到`CMetaFileDC`对象。  
   
-##  <a name="a-namecreatea--cmetafiledccreate"></a><a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>CMetaFileDC::Create  
  构造`CMetaFileDC`两个步骤中的对象。  
   
 ```  
@@ -167,7 +173,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>备注  
  首先，调用构造函数`CMetaFileDC`，然后调用**创建**，它创建 Windows 图元文件设备上下文，并将其附加到`CMetaFileDC`对象。  
   
-##  <a name="a-namecreateenhanceda--cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
  创建增强型格式图元文件设备上下文。  
   
 ```  

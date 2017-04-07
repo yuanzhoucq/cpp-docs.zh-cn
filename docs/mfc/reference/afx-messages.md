@@ -1,168 +1,186 @@
 ---
-title: "AFX 消息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SB_LINELEFT"
-  - "SB_THUMBTRACK"
-  - "AFX_TOOLTIP_TYPE_EDIT"
-  - "AFX_WM_ON_HSCROLL"
-  - "SB_PAGERIGHT"
-  - "AFX_WM_RESETPROMPT"
-  - "AFX_WM_CHANGE_RIBBON_CATEGORY"
-  - "AFX_TOOLTIP_TYPE_MINIFRAME"
-  - "AFX_WM_CUSTOMIZETOOLBAR"
-  - "AFX_WM_CHANGE_ACTIVE_TAB"
-  - "AFX_WM_ACCGETOBJECT"
-  - "AFX_WM_TOOLBARMENU"
-  - "AFX_TOOLTIP_TYPE_DOCKBAR"
-  - "AFX_WM_CUSTOMIZEHELP"
-  - "AFX_WM_ON_GET_TAB_TOOLTIP"
-  - "AFX_WM_ON_RIBBON_CUSTOMIZE"
-  - "AFX_WM_ON_DRAGCOMPLETE"
-  - "AFX_WM_RESETTOOLBAR"
-  - "AFX_WM_ON_MOVETOTABGROUP"
-  - "AFX_WM_CHECKEMPTYMINIFRAME"
-  - "AFX_WM_GETDOCUMENTCOLORS"
-  - "SB_RIGHT"
-  - "AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU"
-  - "AFX_WM_ACCGETSTATE"
-  - "SB_PAGELEFT"
-  - "SB_ENDSCROLL"
-  - "AFX_WM_ON_CANCELTABMOVE"
-  - "AFX_TOOLTIP_TYPE_TAB"
-  - "AFX_WM_WINDOW_HELP"
-  - "AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM"
-  - "AFX_WM_SHOWREGULARMENU"
-  - "AFX_TOOLTIP_TYPE_TOOLBAR"
-  - "AFX_WM_CHANGE_CURRENT_FOLDER"
-  - "AFX_WM_UPDATETOOLTIPS"
-  - "AFX_WM_ON_MOVE_TAB"
-  - "AFX_WM_CHANGING_ACTIVE_TAB"
-  - "AFX_WM_RESETMENU"
-  - "AFX_WM_GETDRAGBOUNDS"
-  - "AFX_WM_RESETCONTEXTMENU"
-  - "AFX_TOOLTIP_TYPE_BUTTON"
-  - "AFX_WM_ON_CLOSEPOPUPWINDOW"
-  - "AFX_TOOLTIP_TYPE_TOOLBOX"
-  - "AFX_WM_CHANGEVISUALMANAGER"
-  - "SB_LINERIGHT"
-  - "AFX_WM_ON_RENAME_TAB"
-  - "AFX_TOOLTIP_TYPE_DEFAULT"
-  - "AFX_WM_ON_TABGROUPMOUSEMOVE"
-  - "SB_LEFT"
-  - "AFX_WM_DELETETOOLBAR"
-  - "AFX_WM_PROPERTY_CHANGED"
-  - "AFX_TOOLTIP_TYPE_ALL"
-  - "AFX_WM_ACCHITTEST"
-  - "AFX_WM_ON_AFTER_SHELL_COMMAND"
-  - "AFX_WM_ON_PRESS_CLOSE_BUTTON"
-  - "AFX_WM_RESETKEYBOARD"
-  - "AFX_WM_ON_MOVETABCOMPLETE"
-  - "AFX_WM_CREATETOOLBAR"
-  - "SB_THUMBPOSITION"
-  - "AFX_WM_POSTSETPREVIEWFRAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AFX 消息"
+title: "AFX 消息 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SB_LINELEFT
+- SB_THUMBTRACK
+- AFX_TOOLTIP_TYPE_EDIT
+- AFX_WM_ON_HSCROLL
+- SB_PAGERIGHT
+- AFX_WM_RESETPROMPT
+- AFX_WM_CHANGE_RIBBON_CATEGORY
+- AFX_TOOLTIP_TYPE_MINIFRAME
+- AFX_WM_CUSTOMIZETOOLBAR
+- AFX_WM_CHANGE_ACTIVE_TAB
+- AFX_WM_ACCGETOBJECT
+- AFX_WM_TOOLBARMENU
+- AFX_TOOLTIP_TYPE_DOCKBAR
+- AFX_WM_CUSTOMIZEHELP
+- AFX_WM_ON_GET_TAB_TOOLTIP
+- AFX_WM_ON_RIBBON_CUSTOMIZE
+- AFX_WM_ON_DRAGCOMPLETE
+- AFX_WM_RESETTOOLBAR
+- AFX_WM_ON_MOVETOTABGROUP
+- AFX_WM_CHECKEMPTYMINIFRAME
+- AFX_WM_GETDOCUMENTCOLORS
+- SB_RIGHT
+- AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU
+- AFX_WM_ACCGETSTATE
+- SB_PAGELEFT
+- SB_ENDSCROLL
+- AFX_WM_ON_CANCELTABMOVE
+- AFX_TOOLTIP_TYPE_TAB
+- AFX_WM_WINDOW_HELP
+- AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM
+- AFX_WM_SHOWREGULARMENU
+- AFX_TOOLTIP_TYPE_TOOLBAR
+- AFX_WM_CHANGE_CURRENT_FOLDER
+- AFX_WM_UPDATETOOLTIPS
+- AFX_WM_ON_MOVE_TAB
+- AFX_WM_CHANGING_ACTIVE_TAB
+- AFX_WM_RESETMENU
+- AFX_WM_GETDRAGBOUNDS
+- AFX_WM_RESETCONTEXTMENU
+- AFX_TOOLTIP_TYPE_BUTTON
+- AFX_WM_ON_CLOSEPOPUPWINDOW
+- AFX_TOOLTIP_TYPE_TOOLBOX
+- AFX_WM_CHANGEVISUALMANAGER
+- SB_LINERIGHT
+- AFX_WM_ON_RENAME_TAB
+- AFX_TOOLTIP_TYPE_DEFAULT
+- AFX_WM_ON_TABGROUPMOUSEMOVE
+- SB_LEFT
+- AFX_WM_DELETETOOLBAR
+- AFX_WM_PROPERTY_CHANGED
+- AFX_TOOLTIP_TYPE_ALL
+- AFX_WM_ACCHITTEST
+- AFX_WM_ON_AFTER_SHELL_COMMAND
+- AFX_WM_ON_PRESS_CLOSE_BUTTON
+- AFX_WM_RESETKEYBOARD
+- AFX_WM_ON_MOVETABCOMPLETE
+- AFX_WM_CREATETOOLBAR
+- SB_THUMBPOSITION
+- AFX_WM_POSTSETPREVIEWFRAME
+dev_langs:
+- C++
+helpviewer_keywords:
+- AFX messages
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# AFX 消息
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
+ms.openlocfilehash: 3d2a811f850ca2779066f39fefd8312eb268f603
+ms.lasthandoff: 03/29/2017
 
-这些消息使用 MFC。  
+---
+# <a name="afx-messages"></a>AFX 消息
+在 MFC 中使用这些消息。  
   
-## 消息  
- 下表列出了 MFC 库的消息：  
+## <a name="messages"></a>消息  
+ 下表列出了在 MFC 库中使用的消息︰  
   
 ||||||  
 |-|-|-|-|-|  
-|消息|说明|\[in\] `wParam`|除非另行说明`lParam` \(所有参数都为 \[in\] 。\)|返回值|  
-|AFX\_WM\_ACCGETOBJECT|未使用。|未使用。|不适用。|不适用。|  
-|AFX\_WM\_ACCGETSTATE|用于访问支持。  发送此信息对 `CMFCPopupMenu` 或 `CMFCRibbonPanelMenu` 检索当前元素的状态。|元素索引，可以为按钮或菜单分隔符。|未使用。|元素的状态。  如果索引无效则其值为\-1，如果菜单按钮没有特殊特性为0。  否则它是下列标记的组合：<br /><br /> TBBS\_DISABLED：项禁用服务<br /><br /> TBBS\_CHECKED \- 项检查<br /><br /> TBBS\_BUTTON \- 项是一个标准按钮<br /><br /> \- TBBS\_PRESSED 按钮<br /><br /> TBBS\_INDETERMINATE \- 未定义状态<br /><br /> TBBS\_SEPARATOR 菜单而不是按钮，此窗体分离其他菜单项之间的元素。|  
-|AFX\_WM\_CHANGE\_ACTIVE\_TAB|框架发送此信息向可调整大小的控件条控件。  当用户更改活动选项卡，请处理此消息接收通知的 `CMFCTabCtrl` 对象。|标签的索引。|未使用。|非零值。|  
-|AFX\_WM\_CHANGE\_CURRENT\_FOLDER|当用户更改当前文件夹时，框架将发送此信息对 `CMFCShellListCtrl` 父级。|未使用。|未使用。|未使用。|  
-|AFX\_WM\_CHANGEVISUALMANAGER|当用户更改当前视觉管理器时，框架将发送此信息向所有框架窗口。  为了响应此消息，框架窗口需要重新计算其区域并调整其他参数。  如果需要，会通知此事件，您可以在应用程序中处理 AFX\_WM\_CHANGEVISUALMANAGER 消息。  必须调用基类处理程序 \(`OnChangeVisualManager`\) 以确保框架的内部处理时发生此事件。|未使用。|未使用。|未使用。|  
-|AFX\_WM\_CHANGING\_ACTIVE\_TAB|发送到 `CMFCTabCtrl` 父对象。请处理此消息，当用户重置选项卡时，如果要从 `CMFCTabCtrl` 对象接收的通知。|激活选项卡的索引。|未使用。|非零值。|  
-|AFX\_WM\_CHECKEMPTYMINIFRAME|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX\_WM\_CREATETOOLBAR|发送从 `CMFCToolBarsListPropertyPage`，当用户在自定义过程中创建新工具栏。  可以处理此消息以实例化自定义 CMFCToolBar 派生的对象。  如果处理此消息并创建自己工具栏，请省略调用默认处理程序。|未使用。|为工具栏包含名称的字符串的指针。|为新创建工具栏上的指针。  NULL 表示工具栏创建取消。|  
-|AFX\_WM\_CUSTOMIZEHELP|发送到自定义属性表 `CMFCToolbarCustomize``Dialog`，则用户按 **帮助** 按钮或 F1 键的主框架窗口。|指定自定义属性表的活动页。|一个 `CMFCToolbarCustomize``Dialog` 对象的指针。|零。|  
-|AFX\_WM\_CUSTOMIZETOOLBAR|`CMFCToolbarCustomize` `Dialog` 发送此信息通知父框架用户创建新工具栏。|`TRUE`，当自定义起始，`FALSE`，同时自定义完成。|未使用。|零。|  
-|AFX\_WM\_DELETETOOLBAR|发送到主框架窗口，当用户要删除的自定义模式的工具栏。<br /><br /> 当用户删除自定义模式时，的工具栏中处理此消息采用其他操作。  还应调用默认处理程序 \(`OnToolbarDelete`\)，删除工具栏。  默认处理程序返回的值指示删除工具栏是可能的。|未使用。|指向要删除的`CMFCToolBar` 对象的指针。|非零则工具栏无法删除；否则 0。|  
-|AFX\_WM\_GETDOCUMENTCOLORS|`CMFCColorMenuButton` 将此信息向主框架窗口检索文档颜色。|未使用。|\[in,out\] 指向 `CList<COLORREF, COLORREF>` 对象的指针。|零。|  
-|AFX\_WM\_GETDRAGBOUNDS|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX\_WM\_HIGHLIGHT\_RIBBON\_LIST\_ITEM|发送到主框架窗口，则用户突出显示功能区的列表项。|选中高亮项的索引。|指向 `CMFCBaseRibbonElement`的指针。|未使用。|  
-|AFX\_WM\_ON\_AFTER\_SHELL\_COMMAND|发送给 `CMFCShellListCtrl` 或 `CMFCShellTreeCtrl` 控件父级，当用户完成执行命令 shell。|用户执行命令的 ID|未使用。|如果应用程序进程此消息，则应返回零。|  
-|AFX\_WM\_ON\_BEFORE\_SHOW\_RIBBON\_ITEM\_MENU|在显示弹出菜单之前，发送此信息向功能区框架的父级。  可以处理此消息并随时修改弹出菜单。|未使用。|指向 `CMFCBaseRibbonElement`的指针。|未使用。|  
-|AFX\_WM\_ON\_CANCELTABMOVE|仅限内部使用。|不适用。|不适用。||  
-|AFX\_WM\_ON\_CHANGE\_RIBBON\_CATEGORY|当用户更改功能区控件可用类别时，框架将发送此信息对主框架。|未使用。|为类别更改的 `CMFCRibbonBar` 的指针。|未使用。|  
-|AFX\_WM\_ON\_CLOSEPOPUPWINDOW|框架发送此信息通知窗口将关闭 `CMFCDesktopAlertWnd` 的所有者。|未使用。|一个指向 `CMFCDesktopAlertWnd` 对象的指针。|未使用。|  
-|AFX\_WM\_ON\_DRAGCOMPLETE|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX\_WM\_ON\_GET\_TAB\_TOOLTIP|发送到主框架窗口，则窗口将选项卡显示选项卡的工具提示，那么，如果自定义工具提示。|未使用。|指向 `CMFCTabToolTipInfo` 结构的指针。|未使用。|  
-|AFX\_WM\_ON\_HSCROLL|发送对可调整大小的控件条控件。  当滚动事件，在选项卡式小组件水平滚动条时发生，请处理此消息接收通知的 `CMFCTabCtrl` 对象。|低序 Word 指定指示用户的滚动条滚动请求的值。有关更多信息，请参见本主题中后面的表。|未使用。|非零值。|  
-|AFX\_WM\_ON\_MOVE\_TAB|发送给一个选项卡式窗口的父级，则用户将选项卡拖动到新位置。|选项卡的在原始位置从零开始的索引原始位置。|\[out\]选项卡的在原始位置从零开始的索引新位置。|零。|  
-|AFX\_WM\_ON\_MOVETABCOMPLETE|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX\_WM\_ON\_MOVETOTABGROUP|发送到主框架窗口，则用户将从一个制表符分隔的 MDI 子窗口到另一个。|一个句柄 \(`CMFCTabCtrl`\) 类型的 MDI 子窗口被移除选项卡式窗口。|\[out\] 一个句柄 \(`CMFCTabCtrl`\) MDI 子窗口插入的选项卡式窗口。|已忽略。|  
-|AFX\_WM\_ON\_PRESS\_CLOSE\_BUTTON|当用户单击按钮 **关闭** 对控件条的标题，发送到 `CDockablePane`。|未使用。|为用户单击按钮的 **关闭** 可停靠的窗格的指针。|`TRUE`，如果窗格不能关闭；否则为 false。|  
-|AFX\_WM\_ON\_RENAME\_TAB|发送到选项卡式窗口父在用户后重命名可编辑的选项卡。|重命名的选项卡的从零开始的索引。|\[out\] 一个指向包含命名新标签的字符串的指针。|非零，如果应用程序的过程；此消息框架将取消调用 `CMFCBaseTabCtrl::SetTabLabel`。如果非零返回，则 `CMFCBaseTabCtrl::SetTabLabel` 由框架调用。|  
-|AFX\_WM\_ON\_RIBBON\_CUSTOMIZE|当用户启动自定义项，发送对父帧。  如果希望查看自己的自定义对话框，请处理此消息。|未使用。|向功能区控件的指针将自定义。|非零，则应用程序进程此消息和显示自己的自定义对话框。  如果应用程序以返回零，框架将显示内置自定义对话框。|  
-|AFX\_WM\_ON\_TABGROUPMOUSEMOVE|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX\_WM\_POSTSETPREVIEWFRAME|发送通知主框架用户更改打印预览模式|`TRUE` 指示打印预览模式设置。  `FALSE` 指示打印预览模式被关闭。|未使用。|未使用。|  
-|AFX\_WM属性更改|发送到属性网格控件 \(`CMFCPropertyGridCtrl`的所有者，当用户更改选择的属性的值。|属性列表的控件ID。|与更改的属性 \(`CMFCProp``ertyGridProperty`\) 的指针。|未使用。|  
-|AFX\_WM\_RESETCONTEXTMENU|发送到主框架窗口，如果用户在自定义上下文菜单时重置。|上下文菜单资源的资源 ID。|一个指向当前上下文的指针 `CMFCPopupMenu`。|未使用。|  
-|AFX\_WM\_RESETKEYBOARD|如果用户在自定义时，重置所有键盘快捷框架发送此信息向主框架窗口。|未使用。|未使用。|未使用。|  
-|AFX\_WM\_RESETMENU|当用户在自定义时重置应用程序帧菜单，框架发送此消息给菜单所有者（一个框架窗口） 。|菜单资源ID。|未使用。|未使用。|  
-|AFX\_WM\_RESETPROMPT|当用户重置从工具栏的工具栏自定义对话框时，框架将发送此信息。  默认处理程序显示的消息询问用户是否希望重置工具栏。|未使用。|未使用。|未使用。|  
-|AFX\_WM\_RESETTOOLBAR|当工具栏，还原为其原始状态，例如，加载从资源时，`CMFCToolBar` 对象将此信息。  处理此消息重新插入类从 `CMFCToolbarButton`派生的工具栏按钮。  有关详细信息，请参阅`CMFCToolbarComboBoxButton`。|状态还原工具栏的资源 ID。|未使用。|零。|  
-|AFX\_WM\_SHOWREGULARMENU|当用户单击菜单，普通按钮时，`CMFCToolbarMenuButton` 对象将此信息转发给其所有者。  每次处理此消息使用 `CMFCToolbarMenuButton` 显示弹出菜单，当用户单击该按钮时。|发送按钮的命令 ID。|光标的屏幕坐标。  低序 Word 指定 x 坐标。  高位 Word 指定 y 坐标。|未使用。|  
-|AFX\_WM\_TOOLBARMENU|发送到主框架窗口，当用户释放鼠标右键的，当鼠标指针向左、窗格的客户端或非客户端区域中。|未使用。|鼠标指针的屏幕坐标。  低序 Word 指定 x 坐标。  高位 Word 指定 y 坐标。|如果应用程序的过程为零；否则此消息为非零值。|  
-|AFX\_WM\_UPDATETOOLTIPS|发送对所有工具提示指示所有者应重新创建这些控件的工具提示。|应处理此消息的控件的类型。  为可能值列表之后参见本表主题。|未使用。|未使用。|  
-|AFX\_WM\_WINDOW\_HELP|`CMFCWindowsManagerDialog` 将此信息添加到父帧，当用户单击按钮时 **帮助**，或者通过单击标题 **帮助** 按钮或 F1 键访问帮助模式。|未使用。|对 `CMFCWindowsManagerDialog`实例的指针。|未使用。|  
+|消息|描述|[in] `wParam`|`lParam`（所有参数都都 [in] 除非另行说明。）|返回值|  
+|AFX_WM_ACCGETOBJECT|未使用。|未使用。|不适用。|不适用。|  
+|AFX_WM_ACCGETSTATE|用于可访问性支持。 发送到此消息`CMFCPopupMenu`或`CMFCRibbonPanelMenu`检索的当前元素的状态。|元素，可以为一个菜单按钮或分隔符的索引。|未使用。|元素状态中。 如果该索引无效，则为-1 0 菜单按钮是否没有特殊特性。 否则，它是以下标志的组合︰<br /><br /> TBBS_DISABLED \u2012 项被禁用<br /><br /> 选中 TBBS_CHECKED \u2012 项<br /><br /> TBBS_BUTTON \u2012 项是标准按键<br /><br /> 按下 TBBS_PRESSED \u2012 按钮<br /><br /> TBBS_INDETERMINATE \u2012 未定义的状态<br /><br /> TBBS_SEPARATOR-而不是菜单按钮，此元素窗体的其他菜单项之间的分离|  
+|AFX_WM_CHANGE_ACTIVE_TAB|框架将此消息发送到可调整大小控件栏控件。 处理此消息以接收来自通知`CMFCTabCtrl`对象时用户更改活动选项卡。|选项卡的索引。|未使用。|非零。|  
+|AFX_WM_CHANGE_CURRENT_FOLDER|框架将此邮件发送到的父级`CMFCShellListCtrl`时用户已更改的当前文件夹。|未使用。|未使用。|未使用。|  
+|AFX_WM_CHANGEVISUALMANAGER|在用户更改当前可视化管理器时，框架会将此消息发送到所有框架窗口。 响应此消息，框架窗口重新计算其区域，并根据需要调整其他参数。 如果你需要有关此事件通知，您可以在你的应用程序中处理 AFX_WM_CHANGEVISUALMANAGER 消息。 必须调用基类处理程序 (`OnChangeVisualManager`) 以确保框架的内部处理此事件发生。|未使用。|未使用。|未使用。|  
+|AFX_WM_CHANGING_ACTIVE_TAB|发送到的父级`CMFCTabCtrl`对象。  处理此消息，如果你想要接收来自通知`CMFCTabCtrl`对象时用户重置选项卡。|正在激活选项卡的索引。|未使用。|非零。|  
+|AFX_WM_CHECKEMPTYMINIFRAME|仅限内部使用。|不适用。|不适用。|不适用。|  
+|AFX_WM_CREATETOOLBAR|从发送`CMFCToolBarsListPropertyPage`时用户可以在自定义过程创建一个新的工具栏。 你可以处理此消息实例化自定义的 CMFCToolBar 派生对象。 如果你处理此消息，并且创建您自己的工具栏，省略默认处理程序调用。|未使用。|指向包含的工具栏的名称的字符串的指针。|指向新创建的工具栏的指针。 NULL 指示工具栏创建已取消。|  
+|AFX_WM_CUSTOMIZEHELP|从自定义属性表发送到主框架窗口`CMFCToolbarCustomize``Dialog`当用户按**帮助**按钮或按 F1 键。|指定的活动页面的自定义属性表。|指向的指针`CMFCToolbarCustomize``Dialog`对象。|为零。|  
+|AFX_WM_CUSTOMIZETOOLBAR|`CMFCToolbarCustomize``Dialog`发送此消息，以通知父框架，用户为其创建一个新的工具栏。|`TRUE`当启动自定义项时，`FALSE`完成自定义项。|未使用。|为零。|  
+|AFX_WM_DELETETOOLBAR|当用户是将要删除自定义模式中的工具栏时，发送到主框架窗口。<br /><br /> 处理此消息以执行额外的操作，当用户中删除自定义模式中的工具栏。 你还应调用默认处理程序 (`OnToolbarDelete`)，并删除工具栏。 默认处理程序返回一个值，该值指示是否可以删除工具栏。|未使用。|指向`CMFCToolBar`要删除的对象。|如果无法删除一个工具栏，则不为否则为 0。|  
+|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton`将此消息发送到要检索的文档颜色的主框架窗口。|未使用。|[在中，out]指向`CList<COLORREF, COLORREF>`对象。|为零。|  
+|AFX_WM_GETDRAGBOUNDS|仅限内部使用。|不适用。|不适用。|不适用。|  
+|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|用户突出显示功能区列表项时，发送到主框架窗口。|突出显示的项的索引|指向的指针`CMFCBaseRibbonElement`|未使用。|  
+|AFX_WM_ON_AFTER_SHELL_COMMAND|发送到的父级`CMFCShellListCtrl`或`CMFCShellTreeCtrl`控制用户完成执行 shell 命令。|用户执行的命令 ID|未使用。|如果应用程序将处理此消息，则应返回零。|  
+|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|显示弹出菜单之前，框架会将此邮件发送到功能区的父级。 可以处理此消息，还可以随时修改弹出菜单。|未使用。|指向的指针`CMFCBaseRibbonElement`|未使用。|  
+|AFX_WM_ON_CANCELTABMOVE|仅限内部使用。|不适用。|不适用。||  
+|AFX_WM_ON_CHANGE_RIBBON_CATEGORY|在用户更改活动的功能区控件类别时，框架会将此消息发送到主框架。|未使用。|指向的指针`CMFCRibbonBar`其类别发生了更改。|未使用。|  
+|AFX_WM_ON_CLOSEPOPUPWINDOW|框架发送此消息，以通知的所有者`CMFCDesktopAlertWnd`窗口是即将关闭。|未使用。|指向的指针`CMFCDesktopAlertWnd`对象。|未使用。|  
+|AFX_WM_ON_DRAGCOMPLETE|仅限内部使用。|不适用。|不适用。|不适用。|  
+|AFX_WM_ON_GET_TAB_TOOLTIP|选项卡窗口将要时显示的工具提示选项卡上，如果启用了自定义工具提示，则发送到主框架窗口。|未使用。|指向的指针`CMFCTabToolTipInfo`结构。|未使用。|  
+|AFX_WM_ON_HSCROLL|发送到可调整大小控件栏控件。 处理此消息以接收来自通知`CMFCTabCtrl`对象中选项卡式小组件水平滚动条的滚动事件发生时。|低序位字指定滚动条值，该值指示用户的滚动请求。  有关更多信息，请参见本主题中后面的表。|未使用。|非零。|  
+|AFX_WM_ON_MOVE_TAB|当用户将选项卡拖动到新位置，则发送到选项卡式窗口的父级。|在其原始位置的选项卡的从零开始的索引。|[out]在其新位置的选项卡的从零开始的索引。|为零。|  
+|AFX_WM_ON_MOVETABCOMPLETE|仅限内部使用。|不适用。|不适用。|不适用。|  
+|AFX_WM_ON_MOVETOTABGROUP|当用户将 MDI 子窗口从一个选项卡式组移到另一个，则发送到主框架窗口。|选项卡式窗口的句柄 (`CMFCTabCtrl`) 从已删除的 MDI 子窗口。|[out]选项卡式窗口的句柄 (`CMFCTabCtrl`) 到已插入 MDI 子窗口。|已忽略。|  
+|AFX_WM_ON_PRESS_CLOSE_BUTTON|发送到的父级`CDockablePane`当用户单击**关闭**在标题控件条上的按钮。|未使用。|用户单击了在其上的可停靠窗格的指针**关闭**按钮。|`TRUE`如果窗格中不能关闭;否则为 FALSE。|  
+|AFX_WM_ON_RENAME_TAB|之后用户重命名一个可编辑的选项卡，则发送到选项卡式窗口的父级。|重命名选项卡的从零开始索引。|[out]指向包含新的选项卡名称的字符串的指针。|如果应用程序处理此消息; 非零框架将取消显示调用`CMFCBaseTabCtrl::SetTabLabel`。  如果返回零，然后`CMFCBaseTabCtrl::SetTabLabel`由框架调用。|  
+|AFX_WM_ON_RIBBON_CUSTOMIZE|在用户开始自定义项时，发送到的父框架。 如果你想要显示你自己的自定义对话框，请处理此消息。|未使用。|指向要自定义功能区控件的指针。|如果应用程序处理此消息，并显示其自己的自定义对话框，则为非 0。 如果在应用程序返回零，则框架将显示内置的自定义对话框。|  
+|AFX_WM_ON_TABGROUPMOUSEMOVE|仅限内部使用。|不适用。|不适用。|不适用。|  
+|AFX_WM_POSTSETPREVIEWFRAME|发送通知的主框架用户更改的打印预览模式|`TRUE`指示设置的打印预览模式。 `FALSE`指示该打印预览模式处于关闭状态。|未使用。|未使用。|  
+|AFX_WM_PROPERTY_CHANGED|发送到属性网格控件的所有者 (`CMFCPropertyGridCtrl`) 当用户更改所选属性的值。|属性列表控件 ID。|属性指向的指针 (`CMFCProp``ertyGridProperty`) 更改。|未使用。|  
+|AFX_WM_RESETCONTEXTMENU|当用户重置中的自定义的上下文菜单时，发送到主框架窗口。|上下文菜单资源 ID。|指向当前的上下文菜单中， `CMFCPopupMenu`。|未使用。|  
+|AFX_WM_RESETKEYBOARD|当用户在自定义期间重置所有键盘快捷键时，框架会将此消息发送到主框架窗口。|未使用。|未使用。|未使用。|  
+|AFX_WM_RESETMENU|框架将此消息发送到的菜单所有者 （框架窗口） 时用户将重置应用程序框架菜单中的自定义|菜单资源 id。|未使用。|未使用。|  
+|AFX_WM_RESETPROMPT|从工具栏中的工具栏上的用户重置自定义对话框时，框架将发送此消息。 默认处理程序会显示一个消息框，询问用户是否要重置此工具栏。|未使用。|未使用。|未使用。|  
+|AFX_WM_RESETTOOLBAR|A`CMFCToolBar`对象将发送此消息，当一个工具栏还原到其原始状态，即，从资源加载。 处理此消息以重新插入其类派生自的工具栏按钮`CMFCToolbarButton`。 有关详细信息，请参阅`CMFCToolbarComboBoxButton`。|其状态已还原的工具栏的资源 ID。|未使用。|为零。|  
+|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton`用户单击常规菜单按钮时，对象会将此邮件发送给其所有者。 处理此消息使用每次`CMFCToolbarMenuButton`用户单击按钮时显示一个弹出菜单。|将消息发送的按钮命令 ID。|光标的屏幕坐标。 低序位字指定的 x 坐标。 高序位字指定的 y 坐标。|未使用。|  
+|AFX_WM_TOOLBARMENU|当用户释放鼠标右键，鼠标指针在客户端或窗格中的非工作区时，发送到主框架窗口。|未使用。|鼠标指针的屏幕坐标。 低序位字指定的 x 坐标。 高序位字指定的 y 坐标。|如果应用程序将处理此消息; 则为零否则为则为非 0。|  
+|AFX_WM_UPDATETOOLTIPS|发送到所有工具提示所有者以指示其工具提示控件应该重新创建。|应处理此消息的控件的类型。 请参阅有关的可能的值列表本主题后面的表。|未使用。|未使用。|  
+|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog`将此消息发送到的父框架中，当用户单击**帮助**按钮，或通过单击进入帮助模式**帮助**标题按钮或按 F1 键。|未使用。|指向的实例的指针`CMFCWindowsManagerDialog`。|未使用。|  
   
- 下表显示 AFX\_WM\_HSCROLL 方法的参数 `lParam` 的右下角 Word 的值：  
+ 下表显示的值的低位字`lParam`AFX_WM_HSCROLL 方法的参数︰  
   
 |||  
 |-|-|  
 |值|含义|  
-|SB\_ENDSCROLL|用户结束卷。|  
-|SB\_LEFT|用户滚动到左上角。|  
-|SB\_RIGHT|对低权限的用户滚动。|  
-|SB\_LINELEFT|用户用单位滚动的。|  
-|SB\_LINERIGHT|用户滚动向右移动一个单元。|  
-|SB\_PAGELEFT|用户通过左滚动窗口的宽度。|  
-|SB\_PAGERIGHT|用户通过右滚动窗口的宽度。|  
-|SB\_THUMBPOSITION|用户拖动滚动框 \(滚动块\) 并释放鼠标按钮。  高位 Word 指示拖动滚动框的位置在操作结束时。|  
-|SB\_THUMBTRACK|用户拖动滚动框。  AFX\_WM\_ON\_HSCROLL 重复使用此信息发送值，直至用户释放鼠标按钮。  高位 Word 指示拖动滚动框的位置。|  
+|SB_ENDSCROLL|用户结束滚动。|  
+|SB_LEFT|用户滚动到左上角。|  
+|SB_RIGHT|用户滚动到右下角。|  
+|SB_LINELEFT|用户滚动一个单元的左侧。|  
+|SB_LINERIGHT|用户向一个单元的右滚动。|  
+|SB_PAGELEFT|用户滚动左窗口的宽度。|  
+|SB_PAGERIGHT|用户向右滚动的窗口的宽度。|  
+|SB_THUMBPOSITION|用户拖动滚动框 （缩略图），并释放鼠标按钮。 高序位字指示在拖动操作结束时滚动框的位置。|  
+|SB_THUMBTRACK|用户正在拖动滚动框。 此值，直到用户释放鼠标按钮会重复发送 AFX_WM_ON_HSCROLL 消息。 高序位字指示已向其拖动到滚动框的位置。|  
   
 > [!NOTE]
->  如果低序单词是 SB\_THUMBPOSITION 或 SB\_THUMBTRACK，`lParam` 参数的高位 Word 指定滚动框的当前位置；否则，不使用此单词。  
+>  高序位字`lParam`参数指定滚动框的当前位置，如果低序位字是 SB_THUMBPOSITION 或 SB_THUMBTRACK; 否则，不使用该单词。  
   
- 下表列出 AFX\_WM\_UPDATETOOLTIPS 消息的参数 `lParam` 的标志值：  
+ 下表列出的标志值`lParam`AFX_WM_UPDATETOOLTIPS 消息参数︰  
   
 |||  
 |-|-|  
 |Flag|值|  
-|AFX\_TOOLTIP\_TYPE\_DEFAULT|0x0001|  
-|AFX\_TOOLTIP\_TYPE\_TOOLBAR|0x0002|  
-|AFX\_TOOLTIP\_TYPE\_TAB|0x0004|  
-|AFX\_TOOLTIP\_TYPE\_MINIFRAME|0x0008|  
-|AFX\_TOOLTIP\_TYPE\_DOCKBAR|0x0010|  
-|AFX\_TOOLTIP\_TYPE\_EDIT|0x0020|  
-|AFX\_TOOLTIP\_TYPE\_BUTTON|0x0040|  
-|AFX\_TOOLTIP\_TYPE\_TOOLBOX|0x0008|  
-|AFX\_TOOLTIP\_TYPE\_ALL|0xFFFF|  
+|AFX_TOOLTIP_TYPE_DEFAULT|从 0x0001|  
+|AFX_TOOLTIP_TYPE_TOOLBAR|0x0002|  
+|AFX_TOOLTIP_TYPE_TAB|0x0004|  
+|AFX_TOOLTIP_TYPE_MINIFRAME|0x0008|  
+|AFX_TOOLTIP_TYPE_DOCKBAR|0x0010|  
+|AFX_TOOLTIP_TYPE_EDIT|0x0020|  
+|AFX_TOOLTIP_TYPE_BUTTON|0x0040|  
+|AFX_TOOLTIP_TYPE_TOOLBOX|0x0080|  
+|AFX_TOOLTIP_TYPE_ALL|0xFFFF|  
   
-## 请参阅  
- [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>另请参阅  
+ [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocItem
+- AFXOLE/CDocItem
+- AFXOLE/CDocItem::GetDocument
+- AFXOLE/CDocItem::IsBlank
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +82,7 @@ class CDocItem : public CCmdTarget
 ## <a name="requirements"></a>要求  
  **标头︰** afxole.h  
   
-##  <a name="a-namegetdocumenta--cdocitemgetdocument"></a><a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>CDocItem::GetDocument  
  调用此函数可获取包含项的文档。  
   
 ```  
@@ -92,7 +95,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>备注  
  在派生类中重写此函数[COleClientItem](../../mfc/reference/coleclientitem-class.md)和[COleServerItem](../../mfc/reference/coleserveritem-class.md)，返回一个指向任何一个[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)对象。  
   
-##  <a name="a-nameisblanka--cdocitemisblank"></a><a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>CDocItem::IsBlank  
  默认序列化时由框架调用。  
   
 ```  

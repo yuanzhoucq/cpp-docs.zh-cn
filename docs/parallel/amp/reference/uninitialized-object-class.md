@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::uninitialized_object
+- uninitialized_object
+- AMPRT/uninitialized_object
+- AMPRT/Concurrency::uninitialized_object
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -69,7 +71,7 @@ class uninitialized_object : public runtime_exception;
  **标头︰** amprt.h  
   
  **命名空间：** 并发  
-## <a name="a-nameuninitializedobjectctora-unsupportedfeature"></a><a name="uninitialized_object__ctor"></a>unsupported_feature 
+## <a name="uninitialized_object__ctor"></a>unsupported_feature 
 
 构造 unsupported_feature 异常的新实例。  
   

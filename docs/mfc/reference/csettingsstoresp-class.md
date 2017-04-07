@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP::CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP::Create
+- AFXSETTINGSSTORE/CSettingsStoreSP::SetRuntimeClass
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +92,7 @@ class CSettingsStoreSP
 ## <a name="requirements"></a>要求  
  **标头︰** afxsettingsstore.h  
   
-##  <a name="a-namecreatea--csettingsstorespcreate"></a><a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>CSettingsStoreSP::Create  
  创建派生自的对象的新实例[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
   
 ```  
@@ -119,7 +123,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp 第&33;](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="a-namecsettingsstorespa--csettingsstorespcsettingsstoresp"></a><a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
  构造[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)对象。  
   
 ```  
@@ -133,7 +137,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="remarks"></a>备注  
  `CSettingsStoreSP`对象将从数据存储`dwUserData`在受保护的成员变量`m_dwUserData`。  
   
-##  <a name="a-namesetruntimeclassa--csettingsstorespsetruntimeclass"></a><a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
  设置运行时类。 该方法[CSettingsStoreSP::Create](#create)的运行时类用于确定要创建的对象类型。  
   
 ```  

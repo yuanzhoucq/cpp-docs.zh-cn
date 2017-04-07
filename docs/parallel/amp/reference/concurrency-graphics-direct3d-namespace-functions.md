@@ -6,24 +6,31 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d::get_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_texture
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: aa7e91237eaa9ced297e2c5748359c23bb436df8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空间函数
 ||||  
 |-|-|-|  
-|[get_sampler 函数](#get_sampler)|[get_texture 函数](#get_texture)|[make_sampler 函数](#make_sampler)|  
-|[make_texture 函数](#make_texture)|[msad4 函数](#msad4)|  
-  
-##  <a name="a-namegetsamplera--getsampler-function"></a><a name="get_sampler"></a>get_sampler 函数  
+|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
+|[make_texture](#make_texture)|[msad4](#msad4)|  
+
+ 
+##  <a name="get_sampler"></a>get_sampler  
  获取给定加速器的 D3D 采样器状态接口查看一个表示指定的采样器对象。  
   
 ```  
@@ -42,7 +49,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>返回值  
  IUnknown 接口指针表示的给定的采样器的 D3D 采样器状态相对应。  
   
-##  <a name="a-namegettexturea--gettexture-function"></a><a name="get_texture"></a>get_texture 函数  
+##  <a name="get_texture"></a>get_texture  
  获取基础指定的 Direct3D 纹理接口[纹理](texture-class.md)对象。  
   
 ```  
@@ -85,7 +92,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>返回值  
  对应于基础纹理的 Direct3D 纹理 IUnknown 接口指针。  
   
-##  <a name="a-namemakesamplera--makesampler-function"></a><a name="make_sampler"></a>make_sampler 函数  
+##  <a name="make_sampler"></a>make_sampler  
  从 D3D 采样器状态的接口指针创建一个示例。  
   
 ```  
@@ -99,7 +106,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>返回值  
  采样器表示提供的 D3D 采样器状态。  
   
-##  <a name="a-namemaketexturea--maketexture-function"></a><a name="make_texture"></a>make_texture 函数  
+##  <a name="make_texture"></a>make_texture  
  创建[纹理](texture-class.md)通过使用指定的参数的对象。  
   
 ```  
@@ -132,7 +139,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>返回值  
  使用提供的 D3D 纹理纹理。  
   
-##  <a name="a-namemsad4a--msad4-function"></a><a name="msad4"></a>msad4 函数  
+##  <a name="msad4"></a>msad4  
  将 4 字节引用值和一个 8 字节的源值进行比较，并累积 4 总和向量。 每个总和对应于不同的字节对齐方式的引用值，并在源值之间的绝对差的掩码总和。  
   
 ```  
@@ -154,7 +161,12 @@ inline uint4 msad4(
   
 ### <a name="return-value"></a>返回值  
  返回一个向量 4 总和。 每个总和对应于不同的字节对齐方式的引用值，并在源值之间的绝对差的掩码总和。  
+
+## <a name="requirements"></a>要求  
+ **标头︰** amp_graphics.h  
   
+ **Namespace:** Concurrency::graphics::direct3d 
+
 ## <a name="see-also"></a>另请参阅  
- [Concurrency::graphics::direct3d Namespace](concurrency-graphics-direct3d-namespace.md)
+ [Concurrency::graphics::direct3d 命名空间](concurrency-graphics-direct3d-namespace.md)
 

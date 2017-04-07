@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CCRTHeap
-- ATL.CCRTHeap
 - CCRTHeap
+- ATLMEM/ATL::CCRTHeap
+- ATLMEM/ATL::CCRTHeap::Allocate
+- ATLMEM/ATL::CCRTHeap::Free
+- ATLMEM/ATL::CCRTHeap::GetSize
+- ATLMEM/ATL::CCRTHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +78,7 @@ class CCRTHeap : public IAtlMemMgr
 ## <a name="requirements"></a>要求  
  **标头︰** atlmem.h  
   
-##  <a name="a-nameallocatea--ccrtheapallocate"></a><a name="allocate"></a>Ccrtheap:: Allocate  
+##  <a name="allocate"></a>Ccrtheap:: Allocate  
  调用此方法来分配内存块。  
   
 ```
@@ -94,7 +97,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用实现[malloc](../../c-runtime-library/reference/malloc.md)。  
   
-##  <a name="a-namefreea--ccrtheapfree"></a><a name="free"></a>Ccrtheap:: Free  
+##  <a name="free"></a>Ccrtheap:: Free  
  调用此方法释放此内存管理器分配的内存块。  
   
 ```
@@ -108,7 +111,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[免费](../../c-runtime-library/reference/free.md)。  
   
-##  <a name="a-namegetsizea--ccrtheapgetsize"></a><a name="getsize"></a>CCRTHeap::GetSize  
+##  <a name="getsize"></a>CCRTHeap::GetSize  
  调用此方法以获取此内存管理器分配的内存块的分配的大小。  
   
 ```
@@ -125,7 +128,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>备注  
  使用实现[_msize](../../c-runtime-library/reference/msize.md)。  
   
-##  <a name="a-namereallocatea--ccrtheapreallocate"></a><a name="reallocate"></a>CCRTHeap::Reallocate  
+##  <a name="reallocate"></a>CCRTHeap::Reallocate  
  调用此方法以重新分配由该内存管理器分配的内存。  
   
 ```

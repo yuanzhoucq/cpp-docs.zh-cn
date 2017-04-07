@@ -9,15 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CMFCBaseToolBar::CreateObject
-- ~CMFCBaseToolBar
 - CMFCBaseToolBar
-- CMFCBaseToolBar::CMFCBaseToolBar
-- CMFCBaseToolBar::~CMFCBaseToolBar
-- CMFCBaseToolBar.~CMFCBaseToolBar
-- CreateObject
-- CMFCBaseToolBar.CMFCBaseToolBar
-- CMFCBaseToolBar.CreateObject
+- AFXBASETOOLBAR/CMFCBaseToolBar
+- AFXBASETOOLBAR/CMFCBaseToolBar::GetDockingMode
+- AFXBASETOOLBAR/CMFCBaseToolBar::GetMinSize
+- AFXBASETOOLBAR/CMFCBaseToolBar::OnAfterChangeParent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +90,7 @@ class CMFCBaseToolBar : public CPane
 ## <a name="requirements"></a>要求  
  **标头︰** afxbasetoolbar.h  
   
-##  <a name="a-namegetdockingmodea--cmfcbasetoolbargetdockingmode"></a><a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
+##  <a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
  返回停靠模式。  
   
 ```  
@@ -104,7 +100,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>返回值  
  停靠的模式。  
   
-##  <a name="a-namegetminsizea--cmfcbasetoolbargetminsize"></a><a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
+##  <a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
  返回一个工具栏的最小大小。  
   
 ```  
@@ -115,7 +111,7 @@ virtual void GetMinSize(CSize& size) const;
  [out] `size`  
  工具栏的最小大小。  
   
-##  <a name="a-nameonafterchangeparenta--cmfcbasetoolbaronafterchangeparent"></a><a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
  由框架调用窗格中的父发生更改后。  
   
 ```  

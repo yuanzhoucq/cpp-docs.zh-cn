@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDialog
+- AFXODLGS/COleDialog
+- AFXODLGS/COleDialog::GetLastError
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +99,7 @@ class COleDialog : public CCommonDialog
 ## <a name="requirements"></a>要求  
  **标头︰** afxodlgs.h  
   
-##  <a name="a-namegetlasterrora--coledialoggetlasterror"></a><a name="getlasterror"></a>COleDialog::GetLastError  
+##  <a name="getlasterror"></a>COleDialog::GetLastError  
  调用`GetLastError`成员函数以获取其他错误信息时`DoModal`返回**IDABORT**。  
   
 ```  

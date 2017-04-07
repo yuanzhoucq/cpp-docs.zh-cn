@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::ISupportErrorInfoImpl<piid>
-- ATL::ISupportErrorInfoImpl
 - ISupportErrorInfoImpl
-- ATL.ISupportErrorInfoImpl<piid>
-- ATL.ISupportErrorInfoImpl
+- ATLCOM/ATL::ISupportErrorInfoImpl
+- ATLCOM/ATL::ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +84,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-nameinterfacesupportserrorinfoa--isupporterrorinfoimplinterfacesupportserrorinfo"></a><a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
+##  <a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
  该值指示标识接口`riid`支持[IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)接口。  
   
 ```
@@ -96,7 +94,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ### <a name="remarks"></a>备注  
  请参阅[ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetsizea--ithreadpoolconfiggetsize"></a><a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
  调用此方法以获取在池中的线程数。  
   
 ```
@@ -113,7 +111,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&134;](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
   
-##  <a name="a-namegettimeouta--ithreadpoolconfiggettimeout"></a><a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
  调用此方法以获取以毫秒为单位，线程池可以关闭一个线程将等待的最长时间。  
   
 ```
@@ -130,7 +128,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>示例  
  请参阅[IThreadPoolConfig::GetSize](#getsize)。  
   
-##  <a name="a-namesetsizea--ithreadpoolconfigsetsize"></a><a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
  调用此方法以设置池中的线程数。  
   
 ```
@@ -151,7 +149,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>示例  
  请参阅[IThreadPoolConfig::GetSize](#getsize)。  
   
-##  <a name="a-namesettimeouta--ithreadpoolconfigsettimeout"></a><a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
  调用此方法以设置以毫秒为单位，线程池可以关闭一个线程将等待的最长时间。  
   
 ```

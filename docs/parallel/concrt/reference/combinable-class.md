@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::combinable
+- combinable
+- PPL/concurrency::combinable
+- PPL/concurrency::combinable::combinable
+- PPL/concurrency::combinable::clear
+- PPL/concurrency::combinable::combine
+- PPL/concurrency::combinable::combine_each
+- PPL/concurrency::combinable::local
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="combinable-class"></a>combinable 类
@@ -59,23 +65,23 @@ class combinable;
   
 |名称|描述|  
 |----------|-----------------|  
-|[combinable 构造函数](#ctor)|已重载。 构造一个新`combinable`对象。|  
+|[可组合](#ctor)|已重载。 构造一个新`combinable`对象。|  
 |[~ combinable 析构函数](#dtor)|销毁 `combinable` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
 |----------|-----------------|  
-|[clear 方法](#clear)|清除所有中间的计算结果，从前面的用法。|  
-|[combine 方法](#combine)|通过调用提供的 combine 伪函数计算的一套线程本地子计算的最终值。|  
-|[combine_each 方法](#combine_each)|通过调用线程本地子计算每一次的提供的 combine 函子计算从线程本地子计算集的最终值。 最终结果被累积的函数对象。|  
-|[本地方法](#local)|已重载。 返回对线程私有子计算的引用。|  
+|[clear](#clear)|清除所有中间的计算结果，从前面的用法。|  
+|[combine](#combine)|通过调用提供的 combine 伪函数计算的一套线程本地子计算的最终值。|  
+|[combine_each](#combine_each)|通过调用线程本地子计算每一次的提供的 combine 函子计算从线程本地子计算集的最终值。 最终结果被累积的函数对象。|  
+|[本地](#local)|已重载。 返回对线程私有子计算的引用。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[运算符 = 运算符](#operator_eq)|将分配给`combinable`从另一个对象`combinable`对象。|  
+|[operator=](#operator_eq)|将分配给`combinable`从另一个对象`combinable`对象。|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。  
@@ -88,7 +94,7 @@ class combinable;
   
  **命名空间：** 并发  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>清除 
+##  <a name="clear"></a>清除 
 
  清除所有中间的计算结果，从前面的用法。  
   
@@ -96,7 +102,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="a-namectora-combinable"></a><a name="ctor"></a>可组合 
+##  <a name="ctor"></a>可组合 
 
  构造一个新`combinable`对象。  
   
@@ -126,7 +132,7 @@ combinable(const combinable& _Copy);
   
  第三个构造函数是复制构造函数。  
   
-##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a>~ combinable 
 
  销毁 `combinable` 对象。  
   
@@ -134,7 +140,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="a-namecombinea-combine"></a><a name="combine"></a>组合 
+##  <a name="combine"></a>组合 
 
  通过调用提供的 combine 伪函数计算的一套线程本地子计算的最终值。  
   
@@ -153,7 +159,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>返回值  
  最终组合的结果，所有线程私有子计算。  
   
-##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a>combine_each 
 
  通过调用线程本地子计算每一次的提供的 combine 函子计算从线程本地子计算集的最终值。 最终结果被累积的函数对象。  
   
@@ -169,7 +175,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  用于组合某一子计算函子。 其签名是`void (T)`或`void (const T&)`，并且必须是结合并可交换。  
   
-##  <a name="a-namelocala-local"></a><a name="local"></a>本地 
+##  <a name="local"></a>本地 
 
  返回对线程私有子计算的引用。  
   
@@ -186,7 +192,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>返回值  
  对线程私有子计算的引用。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a>运算符 = 
 
  将分配给`combinable`从另一个对象`combinable`对象。  
   
@@ -202,5 +208,5 @@ combinable& operator= (const combinable& _Copy);
  参考这`combinable`对象。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

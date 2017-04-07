@@ -9,10 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CSimpleDialog
-- CSimpleDialgo
 - CSimpleDialog
-- ATL.CSimpleDialog
+- ATLWIN/ATL::CSimpleDialog
+- ATLWIN/ATL::CSimpleDialog::DoModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +85,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-namedomodala--csimpledialogdomodal"></a><a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>CSimpleDialog::DoModal  
  调用模式对话框并返回完成的对话框结果。  
   
 ```

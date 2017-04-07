@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::Create
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentMenuBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentPopupMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::RecalcLayout
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::SetAutoDestroy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +103,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>要求  
  **标头：** afxdropdowntoolbar.h  
   
-##  <a name="a-namecreatea--cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>CMFCDropDownFrame::Create  
  创建一个 `CMFCDropDownFrame` 对象。  
   
 ```  
@@ -126,7 +132,7 @@ virtual BOOL Create(
   
  `CMFCDropDownFrame`类会创建一份提供的`CMFCDropDownToolBar`参数。 此方法会复制按钮图像和按钮状态从`pWndOriginToolbar`参数`m_pWndOriginToolbar`数据成员。  
   
-##  <a name="a-namegetparentmenubara--cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
  检索父菜单栏中的下拉列表框。  
   
 ```  
@@ -139,7 +145,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>备注  
  此方法检索父菜单栏从父按钮。 此方法返回`NULL`如果下拉列表框架都有没有父按钮或父按钮没有父菜单栏。  
   
-##  <a name="a-namegetparentpopupmenua--cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
  检索父弹出菜单的下拉列表框。  
   
 ```  
@@ -152,7 +158,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>备注  
  此方法从父按钮检索父菜单。 此方法返回`NULL`如果下拉列表框架都有没有父按钮或父按钮没有父菜单。  
   
-##  <a name="a-namerecalclayouta--cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
  重新定位下拉列表框。  
   
 ```  
@@ -169,7 +175,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>备注  
  创建下拉列表框或调整父窗口时，框架将调用此方法。 此方法使用的位置和位于父窗口的大小计算的位置和下拉列表框的大小。  
   
-##  <a name="a-namesetautodestroya--cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
  设置是否自动销毁子下拉工具栏窗口。  
   
 ```  

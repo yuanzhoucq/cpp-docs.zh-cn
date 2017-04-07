@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
-- concrtrm/concurrency::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::GetPolicyValue
+- concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
+- concrt/concurrency::SchedulerPolicy::SetPolicyValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 68707be387590cf04745d5a53872558d7af8da8c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a00f7d9cafbd84fc3bbf6b10f322fad6166110cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 类
@@ -55,25 +59,25 @@ class SchedulerPolicy;
   
 |名称|说明|  
 |----------|-----------------|  
-|[SchedulerPolicy 构造函数](#ctor)|已重载。 构造一个新的计划程序策略，并用值填充此[策略密钥](concurrency-namespace-enums.md)支持并发运行时和资源管理器。|  
+|[SchedulerPolicy](#ctor)|已重载。 构造一个新的计划程序策略，并用值填充此[策略密钥](concurrency-namespace-enums.md)支持并发运行时和资源管理器。|  
 |[~ SchedulerPolicy 析构函数](#dtor)|销毁计划程序策略。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[GetPolicyValue 方法](#getpolicyvalue)|检索的策略键的值作为提供`key`参数。|  
-|[SetConcurrencyLimits 方法](#setconcurrencylimits)|同时设置`MinConcurrency`和`MaxConcurrency`上的策略`SchedulerPolicy`对象。|  
-|[SetPolicyValue 方法](#setpolicyvalue)|组策略注册表项的值作为提供`key`参数并返回旧值。|  
+|[GetPolicyValue](#getpolicyvalue)|检索的策略键的值作为提供`key`参数。|  
+|[SetConcurrencyLimits](#setconcurrencylimits)|同时设置`MinConcurrency`和`MaxConcurrency`上的策略`SchedulerPolicy`对象。|  
+|[SetPolicyValue](#setpolicyvalue)|组策略注册表项的值作为提供`key`参数并返回旧值。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[运算符 = 运算符](#operator_eq)|从另一个计划程序策略，将分配计划程序策略。|  
+|[operator=](#operator_eq)|从另一个计划程序策略，将分配计划程序策略。|  
   
 ## <a name="remarks"></a>备注  
- 有关详细信息的策略的使用进行控制`SchedulerPolicy`类，请参阅[PolicyElementKey 枚举](concurrency-namespace-enums.md)。  
+ 有关详细信息的策略的使用进行控制`SchedulerPolicy`类，请参阅[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `SchedulerPolicy`  
@@ -83,7 +87,7 @@ class SchedulerPolicy;
   
  **命名空间：** 并发  
   
-##  <a name="a-namegetpolicyvaluea-getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a>GetPolicyValue 
 
  检索的策略键的值作为提供`key`参数。  
   
@@ -101,7 +105,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>备注  
  该方法将引发[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)为无效的策略键。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>运算符 = 
+##  <a name="operator_eq"></a>运算符 = 
 
  从另一个计划程序策略，将分配计划程序策略。  
   
@@ -119,7 +123,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>备注  
  通常，定义新的计划程序策略最方便的方法是复制现有策略并使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法对其进行修改。  
   
-##  <a name="a-namectora-schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a>SchedulerPolicy 
 
  构造一个新的计划程序策略，并用值填充此[策略密钥](concurrency-namespace-enums.md)支持并发运行时和资源管理器。  
   
@@ -148,7 +152,7 @@ SchedulerPolicy(
   
  第三个构造函数是一个复制构造函数。 通常，定义新的计划程序策略最方便的方法是复制现有策略并使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法对其进行修改。  
   
-##  <a name="a-namedtora-schedulerpolicy"></a><a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a>~ SchedulerPolicy 
 
  销毁计划程序策略。  
   
@@ -156,7 +160,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="a-namesetconcurrencylimitsa-setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
 
  同时设置`MinConcurrency`和`MaxConcurrency`上的策略`SchedulerPolicy`对象。  
   
@@ -178,7 +182,7 @@ void SetConcurrencyLimits(
   
  该方法还会引发[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)其他无效值。  
   
-##  <a name="a-namesetpolicyvaluea-setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a>SetPolicyValue 
 
  组策略注册表项的值作为提供`key`参数并返回旧值。  
   
@@ -207,7 +211,7 @@ unsigned int SetPolicyValue(
   
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
- [PolicyElementKey 枚举](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [CurrentScheduler 类](currentscheduler-class.md)   
  [Scheduler 类](scheduler-class.md)   
  [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

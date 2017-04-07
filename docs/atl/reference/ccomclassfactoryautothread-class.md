@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactoryAutoThread
-- ATL.CComClassFactoryAutoThread
 - CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
+- ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CComClassFactoryAutoThread
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactoryautothreadcreateinstance"></a><a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
  创建指定的 CLSID 的对象，并检索到此对象的接口指针。  
   
 ```
@@ -109,7 +110,7 @@ STDMETHODIMP CreateInstance(
 ### <a name="remarks"></a>备注  
  如果您的模块派生自[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)，`CreateInstance`首先选择一个线程以在相关联的单元中创建对象。  
   
-##  <a name="a-namelockservera--ccomclassfactoryautothreadlockserver"></a><a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
  递增和递减模块锁计数通过调用**_Module::Lock**和**_Module::Unlock**分别。  
   
 ```

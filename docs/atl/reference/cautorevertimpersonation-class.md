@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoRevertImpersonation
 - CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Attach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Detach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::GetAccessToken
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +80,7 @@ class CAutoRevertImpersonation
 ## <a name="requirements"></a>要求  
  **标头︰** atlsecurity.h  
   
-##  <a name="a-nameattacha--cautorevertimpersonationattach"></a><a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
  自动执行一个访问令牌模拟重新。  
   
 ```
@@ -90,7 +94,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>备注  
  如果应仅使用此方法[CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md)对象使用空值创建`CAccessToken`指针，或者如果[分离](#detach)以前调用过。 对于简单情况，不需要使用此方法。  
   
-##  <a name="a-namecautorevertimpersonationa--cautorevertimpersonationcautorevertimpersonation"></a><a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
  构造 `CAutoRevertImpersonation` 对象。  
   
 ```
@@ -104,7 +108,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>备注  
  从和最好的创建之前应该分别执行访问令牌的实际模拟`CAutoRevertImpersonation`对象。 此模拟会自动还原时`CAutoRevertImpersonation`对象超出范围。  
   
-##  <a name="a-namedtora--cautorevertimpersonationcautorevertimpersonation"></a><a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  销毁对象，并恢复访问令牌模拟。  
   
 ```
@@ -114,7 +118,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>备注  
  将恢复当前有效的任何模拟[CAccessToken](../../atl/reference/caccesstoken-class.md)提供可以在构造或通过对象[附加](#attach)方法。 如果没有`CAccessToken`是相关联，析构函数不起作用。  
   
-##  <a name="a-namedetacha--cautorevertimpersonationdetach"></a><a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
  取消自动模拟重新。  
   
 ```
@@ -127,7 +131,7 @@ const CAccessToken* Detach() throw();
 ### <a name="remarks"></a>备注  
  调用**分离**可防止`CAutoRevertImpersonation`对象从还原的任何模拟当前作用于[CAccessToken](../../atl/reference/caccesstoken-class.md)与此对象关联的对象。 `CAutoRevertImpersonation`然后可以通过不起作用销毁或重新关联到相同或另一个`CAccessToken`对象使用[附加](#attach)。  
   
-##  <a name="a-namegetaccesstokena--cautorevertimpersonationgetaccesstoken"></a><a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
  检索与此对象关联的访问令牌当前。  
   
 ```

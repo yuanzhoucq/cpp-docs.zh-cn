@@ -10,6 +10,101 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlView
+- AFXHTML/CHtmlView
+- AFXHTML/CHtmlView::Create
+- AFXHTML/CHtmlView::CreateControlSite
+- AFXHTML/CHtmlView::ExecFormsCommand
+- AFXHTML/CHtmlView::ExecWB
+- AFXHTML/CHtmlView::GetAddressBar
+- AFXHTML/CHtmlView::GetApplication
+- AFXHTML/CHtmlView::GetBusy
+- AFXHTML/CHtmlView::GetContainer
+- AFXHTML/CHtmlView::GetFullName
+- AFXHTML/CHtmlView::GetFullScreen
+- AFXHTML/CHtmlView::GetHeight
+- AFXHTML/CHtmlView::GetHtmlDocument
+- AFXHTML/CHtmlView::GetLeft
+- AFXHTML/CHtmlView::GetLocationName
+- AFXHTML/CHtmlView::GetLocationURL
+- AFXHTML/CHtmlView::GetMenuBar
+- AFXHTML/CHtmlView::GetOffline
+- AFXHTML/CHtmlView::GetParentBrowser
+- AFXHTML/CHtmlView::GetProperty
+- AFXHTML/CHtmlView::GetReadyState
+- AFXHTML/CHtmlView::GetRegisterAsBrowser
+- AFXHTML/CHtmlView::GetRegisterAsDropTarget
+- AFXHTML/CHtmlView::GetSilent
+- AFXHTML/CHtmlView::GetSource
+- AFXHTML/CHtmlView::GetStatusBar
+- AFXHTML/CHtmlView::GetTheaterMode
+- AFXHTML/CHtmlView::GetToolBar
+- AFXHTML/CHtmlView::GetTop
+- AFXHTML/CHtmlView::GetTopLevelContainer
+- AFXHTML/CHtmlView::GetType
+- AFXHTML/CHtmlView::GetVisible
+- AFXHTML/CHtmlView::GetWidth
+- AFXHTML/CHtmlView::GoBack
+- AFXHTML/CHtmlView::GoForward
+- AFXHTML/CHtmlView::GoHome
+- AFXHTML/CHtmlView::GoSearch
+- AFXHTML/CHtmlView::LoadFromResource
+- AFXHTML/CHtmlView::Navigate
+- AFXHTML/CHtmlView::Navigate2
+- AFXHTML/CHtmlView::OnBeforeNavigate2
+- AFXHTML/CHtmlView::OnCommandStateChange
+- AFXHTML/CHtmlView::OnDocumentComplete
+- AFXHTML/CHtmlView::OnDocWindowActivate
+- AFXHTML/CHtmlView::OnDownloadBegin
+- AFXHTML/CHtmlView::OnDownloadComplete
+- AFXHTML/CHtmlView::OnEnableModeless
+- AFXHTML/CHtmlView::OnFilterDataObject
+- AFXHTML/CHtmlView::OnFrameWindowActivate
+- AFXHTML/CHtmlView::OnFullScreen
+- AFXHTML/CHtmlView::OnGetDropTarget
+- AFXHTML/CHtmlView::OnGetExternal
+- AFXHTML/CHtmlView::OnGetHostInfo
+- AFXHTML/CHtmlView::OnGetOptionKeyPath
+- AFXHTML/CHtmlView::OnHideUI
+- AFXHTML/CHtmlView::OnMenuBar
+- AFXHTML/CHtmlView::OnNavigateComplete2
+- AFXHTML/CHtmlView::OnNavigateError
+- AFXHTML/CHtmlView::OnNewWindow2
+- AFXHTML/CHtmlView::OnProgressChange
+- AFXHTML/CHtmlView::OnPropertyChange
+- AFXHTML/CHtmlView::OnQuit
+- AFXHTML/CHtmlView::OnResizeBorder
+- AFXHTML/CHtmlView::OnShowContextMenu
+- AFXHTML/CHtmlView::OnShowUI
+- AFXHTML/CHtmlView::OnStatusBar
+- AFXHTML/CHtmlView::OnStatusTextChange
+- AFXHTML/CHtmlView::OnTheaterMode
+- AFXHTML/CHtmlView::OnTitleChange
+- AFXHTML/CHtmlView::OnToolBar
+- AFXHTML/CHtmlView::OnTranslateAccelerator
+- AFXHTML/CHtmlView::OnTranslateUrl
+- AFXHTML/CHtmlView::OnUpdateUI
+- AFXHTML/CHtmlView::OnVisible
+- AFXHTML/CHtmlView::PutProperty
+- AFXHTML/CHtmlView::QueryFormsCommand
+- AFXHTML/CHtmlView::QueryStatusWB
+- AFXHTML/CHtmlView::Refresh
+- AFXHTML/CHtmlView::Refresh2
+- AFXHTML/CHtmlView::SetAddressBar
+- AFXHTML/CHtmlView::SetFullScreen
+- AFXHTML/CHtmlView::SetHeight
+- AFXHTML/CHtmlView::SetLeft
+- AFXHTML/CHtmlView::SetMenuBar
+- AFXHTML/CHtmlView::SetOffline
+- AFXHTML/CHtmlView::SetRegisterAsBrowser
+- AFXHTML/CHtmlView::SetRegisterAsDropTarget
+- AFXHTML/CHtmlView::SetSilent
+- AFXHTML/CHtmlView::SetStatusBar
+- AFXHTML/CHtmlView::SetTheaterMode
+- AFXHTML/CHtmlView::SetToolBar
+- AFXHTML/CHtmlView::SetTop
+- AFXHTML/CHtmlView::SetVisible
+- AFXHTML/CHtmlView::SetWidth
+- AFXHTML/CHtmlView::Stop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -199,7 +294,7 @@ class CHtmlView : public CFormView
 ## <a name="requirements"></a>要求  
  **标头：** afxhtml.h  
   
-##  <a name="a-namecreatea--chtmlviewcreate"></a><a name="create"></a>CHtmlView::Create  
+##  <a name="create"></a>CHtmlView::Create  
  调用此成员函数来创建一个 web 浏览器控件或容器 Internet explorer 可执行文件。  
   
 ```  
@@ -235,7 +330,7 @@ virtual BOOL Create(
  `pContext`  
  一个指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 **NULL**默认情况下。  
   
-##  <a name="a-namecreatecontrolsitea--chtmlviewcreatecontrolsite"></a><a name="createcontrolsite"></a>CHtmlView::CreateControlSite  
+##  <a name="createcontrolsite"></a>CHtmlView::CreateControlSite  
  可重写，用于创建控件站点实例以承载窗体上的控件。  
   
 ```  
@@ -265,7 +360,7 @@ virtual BOOL CreateControlSite(
 ### <a name="remarks"></a>备注  
  您可以重写该成员函数以返回您自己控件站点类的实例。  
   
-##  <a name="a-nameexecformscommanda--chtmlviewexecformscommand"></a><a name="execformscommand"></a>CHtmlView::ExecFormsCommand  
+##  <a name="execformscommand"></a>CHtmlView::ExecFormsCommand  
  使用 `IOleCommandTarget::Exec` 方法执行指定的命令。  
   
 ```  
@@ -291,7 +386,7 @@ HRESULT ExecFormsCommand(
 ### <a name="remarks"></a>备注  
  **ExecFormsCommand**实现的行为[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)方法。  
   
-##  <a name="a-nameexecwba--chtmlviewexecwb"></a><a name="execwb"></a>CHtmlView::ExecWB  
+##  <a name="execwb"></a>CHtmlView::ExecWB  
  调用该成员函数以在 web 浏览器或 Internet Explorer 中执行命令。  
   
 ```  
@@ -318,7 +413,7 @@ void ExecWB(
 ### <a name="remarks"></a>备注  
  请参阅[IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetaddressbara--chtmlviewgetaddressbar"></a><a name="getaddressbar"></a>CHtmlView::GetAddressBar  
+##  <a name="getaddressbar"></a>CHtmlView::GetAddressBar  
  调用此成员函数以检索 Internet Explorer 地址栏。  
   
 ```  
@@ -331,7 +426,7 @@ BOOL GetAddressBar() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer。 如果使用 WebBrowser 控件使用此调用，它将返回没有错误，但它将忽略此调用。  
   
-##  <a name="a-namegetapplicationa--chtmlviewgetapplication"></a><a name="getapplication"></a>CHtmlView::GetApplication  
+##  <a name="getapplication"></a>CHtmlView::GetApplication  
  调用此成员函数以检索包含 web 浏览器控件的应用程序支持的自动化对象。  
   
 ```  
@@ -344,7 +439,7 @@ LPDISPATCH GetApplication() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetbusya--chtmlviewgetbusy"></a><a name="getbusy"></a>CHtmlView::GetBusy  
+##  <a name="getbusy"></a>CHtmlView::GetBusy  
  调用该成员函数以确定 web 浏览器控件所从事的导航或下载操作。  
   
 ```  
@@ -357,7 +452,7 @@ BOOL GetBusy() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetcontainera--chtmlviewgetcontainer"></a><a name="getcontainer"></a>CHtmlView::GetContainer  
+##  <a name="getcontainer"></a>CHtmlView::GetContainer  
  调用此成员函数以检索到的容器的 web 浏览器的计算结果的对象。  
   
 ```  
@@ -370,7 +465,7 @@ LPDISPATCH GetContainer() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetfullnamea--chtmlviewgetfullname"></a><a name="getfullname"></a>CHtmlView::GetFullName  
+##  <a name="getfullname"></a>CHtmlView::GetFullName  
  调用该成员函数以检索当前显示 Internet explorer 中的文件的完整路径。  
   
 ```  
@@ -383,7 +478,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer。 如果使用 WebBrowser 控件使用此调用，它将返回没有错误，但它将忽略此调用。  
   
-##  <a name="a-namegetfullscreena--chtmlviewgetfullscreen"></a><a name="getfullscreen"></a>CHtmlView::GetFullScreen  
+##  <a name="getfullscreen"></a>CHtmlView::GetFullScreen  
  调用此成员函数来确定在全屏幕模式下或在正常窗口模式下是否运行 web 浏览器控件。  
   
 ```  
@@ -398,7 +493,7 @@ BOOL GetFullScreen() const;
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetheighta--chtmlviewgetheight"></a><a name="getheight"></a>CHtmlView::GetHeight  
+##  <a name="getheight"></a>CHtmlView::GetHeight  
  调用此成员函数可检索的高度，以像素为单位，WebBrowser 控件的框架窗口。  
   
 ```  
@@ -408,7 +503,7 @@ long GetHeight() const;
 ### <a name="return-value"></a>返回值  
  控件的框架窗口高度，以像素为单位。  
   
-##  <a name="a-namegethtmldocumenta--chtmlviewgethtmldocument"></a><a name="gethtmldocument"></a>CHtmlView::GetHtmlDocument  
+##  <a name="gethtmldocument"></a>CHtmlView::GetHtmlDocument  
  调用此成员函数以检索活动文档的 HTML 文档。  
   
 ```  
@@ -421,7 +516,7 @@ LPDISPATCH GetHtmlDocument() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetlefta--chtmlviewgetleft"></a><a name="getleft"></a>CHtmlView::GetLeft  
+##  <a name="getleft"></a>CHtmlView::GetLeft  
  调用此成员函数以检索 web 浏览器控件的内部左边的缘与其容器左边的缘之间的距离。  
   
 ```  
@@ -434,7 +529,7 @@ long GetLeft() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetlocationnamea--chtmlviewgetlocationname"></a><a name="getlocationname"></a>CHtmlView::GetLocationName  
+##  <a name="getlocationname"></a>CHtmlView::GetLocationName  
  调用该成员函数以获取显示在 webbrowser 控件中的资源的名称。  
   
 ```  
@@ -449,7 +544,7 @@ CString GetLocationName() const;
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetlocationurla--chtmlviewgetlocationurl"></a><a name="getlocationurl"></a>CHtmlView::GetLocationURL  
+##  <a name="getlocationurl"></a>CHtmlView::GetLocationURL  
  调用该成员函数以检索 web 浏览器控件当前显示的资源的 URL。  
   
 ```  
@@ -464,7 +559,7 @@ CString GetLocationURL() const;
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetmenubara--chtmlviewgetmenubar"></a><a name="getmenubar"></a>CHtmlView::GetMenuBar  
+##  <a name="getmenubar"></a>CHtmlView::GetMenuBar  
  调用此成员函数可确定在菜单栏是否可见。  
   
 ```  
@@ -477,7 +572,7 @@ BOOL GetMenuBar() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetofflinea--chtmlviewgetoffline"></a><a name="getoffline"></a>CHtmlView::GetOffline  
+##  <a name="getoffline"></a>CHtmlView::GetOffline  
  调用此成员函数来确定是否脱机运行 web 浏览器。  
   
 ```  
@@ -490,7 +585,7 @@ BOOL GetOffline() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetparentbrowsera--chtmlviewgetparentbrowser"></a><a name="getparentbrowser"></a>CHtmlView::GetParentBrowser  
+##  <a name="getparentbrowser"></a>CHtmlView::GetParentBrowser  
  调用此成员函数以检索指向 web 浏览器控件的父对象的指针。  
   
 ```  
@@ -503,7 +598,7 @@ LPDISPATCH GetParentBrowser() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetpropertya--chtmlviewgetproperty"></a><a name="getproperty"></a>CHtmlView::GetProperty  
+##  <a name="getproperty"></a>CHtmlView::GetProperty  
  调用该成员函数以获取当前与该控件关联的属性的值。  
   
 ```  
@@ -527,7 +622,7 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetreadystatea--chtmlviewgetreadystate"></a><a name="getreadystate"></a>CHtmlView::GetReadyState  
+##  <a name="getreadystate"></a>CHtmlView::GetReadyState  
  调用此成员函数以检索 web 浏览器对象的就绪状态。  
   
 ```  
@@ -540,7 +635,7 @@ READYSTATE GetReadyState() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetregisterasbrowsera--chtmlviewgetregisterasbrowser"></a><a name="getregisterasbrowser"></a>CHtmlView::GetRegisterAsBrowser  
+##  <a name="getregisterasbrowser"></a>CHtmlView::GetRegisterAsBrowser  
  调用该成员函数以确定是否将 web 浏览器对象注册为目标的名称解析的顶层浏览器。  
   
 ```  
@@ -553,7 +648,7 @@ BOOL GetRegisterAsBrowser() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetregisterasdroptargeta--chtmlviewgetregisterasdroptarget"></a><a name="getregisterasdroptarget"></a>CHtmlView::GetRegisterAsDropTarget  
+##  <a name="getregisterasdroptarget"></a>CHtmlView::GetRegisterAsDropTarget  
  调用该成员函数以确定是否将 WebBrowser 控件注册为放置目标进行导航。  
   
 ```  
@@ -566,7 +661,7 @@ BOOL GetRegisterAsDropTarget() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetsilenta--chtmlviewgetsilent"></a><a name="getsilent"></a>CHtmlView::GetSilent  
+##  <a name="getsilent"></a>CHtmlView::GetSilent  
  调用该成员函数以确定是否可以在 web 浏览器控件中显示任何对话框。  
   
 ```  
@@ -579,7 +674,7 @@ BOOL GetSilent() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetsourcea--chtmlviewgetsource"></a><a name="getsource"></a>CHtmlView::GetSource  
+##  <a name="getsource"></a>CHtmlView::GetSource  
  调用此成员函数以检索 web 页的 HTML 源代码。  
   
 ```  
@@ -596,7 +691,7 @@ BOOL GetSource(CString& strRef);
 ### <a name="remarks"></a>备注  
  此函数是等效于 Internet Explorer 中的"查看源文件"命令，只不过中返回的源代码`CString`。  
   
-##  <a name="a-namegetstatusbara--chtmlviewgetstatusbar"></a><a name="getstatusbar"></a>CHtmlView::GetStatusBar  
+##  <a name="getstatusbar"></a>CHtmlView::GetStatusBar  
  调用该成员函数以确定是否显示状态栏，web 浏览器控件。  
   
 ```  
@@ -609,7 +704,7 @@ BOOL GetStatusBar() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer。 如果使用 WebBrowser 控件使用此调用，它将返回没有错误，但它将忽略此调用。  
   
-##  <a name="a-namegettheatermodea--chtmlviewgettheatermode"></a><a name="gettheatermode"></a>CHtmlView::GetTheaterMode  
+##  <a name="gettheatermode"></a>CHtmlView::GetTheaterMode  
  调用该成员函数以确定 web 浏览器是否处于影院模式。  
   
 ```  
@@ -624,7 +719,7 @@ BOOL GetTheaterMode() const;
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegettoolbara--chtmlviewgettoolbar"></a><a name="gettoolbar"></a>CHtmlView::GetToolBar  
+##  <a name="gettoolbar"></a>CHtmlView::GetToolBar  
  调用该成员函数以确定指示工具栏是否可见。  
   
 ```  
@@ -634,7 +729,7 @@ int GetToolBar() const;
 ### <a name="return-value"></a>返回值  
  一个值，该值指示工具栏是否可见。 如果工具栏可见，则非零值否则为零。  
   
-##  <a name="a-namegettopa--chtmlviewgettop"></a><a name="gettop"></a>CHtmlView::GetTop  
+##  <a name="gettop"></a>CHtmlView::GetTop  
  调用此成员函数以检索 web 浏览器控件的主窗口的上边缘的屏幕坐标。  
   
 ```  
@@ -647,7 +742,7 @@ long GetTop() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegettoplevelcontainera--chtmlviewgettoplevelcontainer"></a><a name="gettoplevelcontainer"></a>CHtmlView::GetTopLevelContainer  
+##  <a name="gettoplevelcontainer"></a>CHtmlView::GetTopLevelContainer  
  调用该成员函数以确定 Internet Explorer 是否为 web 浏览器控件的顶级容器。  
   
 ```  
@@ -660,7 +755,7 @@ BOOL GetTopLevelContainer() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegettypea--chtmlviewgettype"></a><a name="gettype"></a>CHtmlView::GetType  
+##  <a name="gettype"></a>CHtmlView::GetType  
  调用此成员函数以检索包含的活动文档的类型名称。  
   
 ```  
@@ -673,7 +768,7 @@ CString GetType() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetvisiblea--chtmlviewgetvisible"></a><a name="getvisible"></a>CHtmlView::GetVisible  
+##  <a name="getvisible"></a>CHtmlView::GetVisible  
  调用该成员函数以确定包含的对象是否可见。  
   
 ```  
@@ -686,7 +781,7 @@ BOOL GetVisible() const;
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegetwidtha--chtmlviewgetwidth"></a><a name="getwidth"></a>CHtmlView::GetWidth  
+##  <a name="getwidth"></a>CHtmlView::GetWidth  
  检索 Internet Explorer 主窗口的宽度。  
   
 ```  
@@ -696,7 +791,7 @@ long GetWidth() const;
 ### <a name="return-value"></a>返回值  
  窗口中，以像素为单位的当前宽度。  
   
-##  <a name="a-namegobacka--chtmlviewgoback"></a><a name="goback"></a>CHtmlView::GoBack  
+##  <a name="goback"></a>CHtmlView::GoBack  
  导航历史记录列表中的向后一个项目。  
   
 ```  
@@ -706,14 +801,14 @@ void GoBack();
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegoforwarda--chtmlviewgoforward"></a><a name="goforward"></a>CHtmlView::GoForward  
+##  <a name="goforward"></a>CHtmlView::GoForward  
  导航历史记录列表中的正向一个项。  
   
 ```  
 void GoForward();
 ```  
   
-##  <a name="a-namegohomea--chtmlviewgohome"></a><a name="gohome"></a>CHtmlView::GoHome  
+##  <a name="gohome"></a>CHtmlView::GoHome  
  导航到当前主页，或者启动“Internet Explorer Internet 选项”对话框或“Internet 属性”对话框（可从“控制面板”访问）中指定的网页。  
   
 ```  
@@ -723,7 +818,7 @@ void GoHome();
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namegosearcha--chtmlviewgosearch"></a><a name="gosearch"></a>CHtmlView::GoSearch  
+##  <a name="gosearch"></a>CHtmlView::GoSearch  
  导航到当前搜索页，指定在 Internet Explorer Internet 选项对话框中或 Internet 属性对话框中，从控制面板中访问。  
   
 ```  
@@ -733,7 +828,7 @@ void GoSearch();
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-nameloadfromresourcea--chtmlviewloadfromresource"></a><a name="loadfromresource"></a>CHtmlView::LoadFromResource  
+##  <a name="loadfromresource"></a>CHtmlView::LoadFromResource  
  调用该成员函数以加载到 WebBrowser 控件中指定的资源。  
   
 ```  
@@ -754,7 +849,7 @@ BOOL LoadFromResource(UINT nRes);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namenavigatea--chtmlviewnavigate"></a><a name="navigate"></a>CHtmlView::Navigate  
+##  <a name="navigate"></a>CHtmlView::Navigate  
  调用该成员函数以导航到由 URL 进行标识的资源。  
   
 ```  
@@ -789,7 +884,7 @@ void Navigate(
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namenavigate2a--chtmlviewnavigate2"></a><a name="navigate2"></a>CHtmlView::Navigate2  
+##  <a name="navigate2"></a>CHtmlView::Navigate2  
  调用该成员函数以导航到一个 URL，标识的资源或完整路径所标识的文件。  
   
 ```  
@@ -849,7 +944,7 @@ void Navigate2(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCHtmlHttp #&7;](../../mfc/reference/codesnippet/cpp/chtmlview-class_1.cpp)]  
   
-##  <a name="a-nameonbeforenavigate2a--chtmlviewonbeforenavigate2"></a><a name="onbeforenavigate2"></a>CHtmlView::OnBeforeNavigate2  
+##  <a name="onbeforenavigate2"></a>CHtmlView::OnBeforeNavigate2  
  此成员函数是由框架调用以导致在 web 浏览器中发生导航之前引发该事件。  
   
 ```  
@@ -881,7 +976,7 @@ virtual void OnBeforeNavigate2(
  `pbCancel`  
  指向一个取消标记的指针。 应用程序可以将此参数设置为非零，若要取消导航的操作，或为零以允许应用程序继续执行。  
   
-##  <a name="a-nameoncommandstatechangea--chtmlviewoncommandstatechange"></a><a name="oncommandstatechange"></a>CHtmlView::OnCommandStateChange  
+##  <a name="oncommandstatechange"></a>CHtmlView::OnCommandStateChange  
  此成员函数是由框架调用以通知应用程序启用的 web 浏览器命令状态已更改。  
   
 ```  
@@ -897,7 +992,7 @@ virtual void OnCommandStateChange(
  `bEnable`  
  已启用的状态。 如果该命令已启用，或者如果它处于禁用状态为零，则此参数为非零。  
   
-##  <a name="a-nameondocumentcompletea--chtmlviewondocumentcomplete"></a><a name="ondocumentcomplete"></a>CHtmlView::OnDocumentComplete  
+##  <a name="ondocumentcomplete"></a>CHtmlView::OnDocumentComplete  
  此成员函数由框架调用以通知应用程序的文档已达到`READYSTATE_COMPLETE`状态。  
   
 ```  
@@ -913,7 +1008,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
   
  该 URL 由`lpszURL`可以不同于浏览器被告知要导航到，因为此 URL 是规范化的限定的 URL 的 URL。 例如，如果应用程序在调用中指定的 URL"www.microsoft.com"[导航](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将"http://www.microsoft.com/"。 此外，如果服务器已经重浏览器定向到另一个 URL，重定向的 URL 将会反映在此处。  
   
-##  <a name="a-nameondocwindowactivatea--chtmlviewondocwindowactivate"></a><a name="ondocwindowactivate"></a>CHtmlView::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>CHtmlView::OnDocWindowActivate  
  从 **IOleInPlaceActiveObject::OnDocWindowActivate**的 Internet Explorer 或 MSHTML 实现调用，该操作将在激活或停用容器文件窗口时通知活动的就地对象。  
   
 ```  
@@ -930,7 +1025,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>备注  
  重写`OnDocWindowActivate`以响应`OnDocWindowActivate`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameondownloadbegina--chtmlviewondownloadbegin"></a><a name="ondownloadbegin"></a>CHtmlView::OnDownloadBegin  
+##  <a name="ondownloadbegin"></a>CHtmlView::OnDownloadBegin  
  此成员函数是由框架调用以开始下载文档。  
   
 ```  
@@ -940,14 +1035,14 @@ virtual void OnDownloadBegin();
 ### <a name="remarks"></a>备注  
  此事件激发后不久[OnBeforeNavigate2](#onbeforenavigate2)事件，除非取消导航。 任何动画或需要显示容器的"忙"指示应该连接到此事件。  
   
-##  <a name="a-nameondownloadcompletea--chtmlviewondownloadcomplete"></a><a name="ondownloadcomplete"></a>CHtmlView::OnDownloadComplete  
+##  <a name="ondownloadcomplete"></a>CHtmlView::OnDownloadComplete  
  此成员函数是由框架调用以指示导航操作完成、 已暂停，还是已失败。  
   
 ```  
 virtual void OnDownloadComplete();
 ```  
   
-##  <a name="a-nameonenablemodelessa--chtmlviewonenablemodeless"></a><a name="onenablemodeless"></a>CHtmlView::OnEnableModeless  
+##  <a name="onenablemodeless"></a>CHtmlView::OnEnableModeless  
  当 Internet Explorer 或 MSHTML 显示模式 UI 时调用。  
   
 ```  
@@ -964,7 +1059,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>备注  
  启用或禁用无模式对话框创建或销毁模式对话框中的容器。 重写`OnEnableModeless`以响应`EnableModeless`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonfilterdataobjecta--chtmlviewonfilterdataobject"></a><a name="onfilterdataobject"></a>CHtmlView::OnFilterDataObject  
+##  <a name="onfilterdataobject"></a>CHtmlView::OnFilterDataObject  
  由 Internet Explorer 或 MSHTML 对主机调用，以允许主机替换 Internet Explorer 或 MSHTML 的数据对象。  
   
 ```  
@@ -986,7 +1081,7 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="remarks"></a>备注  
  重写`OnFilterDataObject`以响应`FilterDataObject`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonframewindowactivatea--chtmlviewonframewindowactivate"></a><a name="onframewindowactivate"></a>CHtmlView::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>CHtmlView::OnFrameWindowActivate  
  从调用[IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969)以便通知对象，当容器的顶层框架窗口激活或停用。  
   
 ```  
@@ -1003,7 +1098,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>备注  
  重写`OnFrameWindowActivate`以响应`OnFrameWindowActivate`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonfullscreena--chtmlviewonfullscreen"></a><a name="onfullscreen"></a>CHtmlView::OnFullScreen  
+##  <a name="onfullscreen"></a>CHtmlView::OnFullScreen  
  由框架调用此成员函数时[全屏幕](https://msdn.microsoft.com/library/aa752119.aspx)属性已更改。  
   
 ```  
@@ -1014,7 +1109,7 @@ virtual void OnFullScreen(BOOL bFullScreen);
  *bFullScreen*  
  如果 Internet 资源管理器处于全屏显示模式，则非零值否则为零。  
   
-##  <a name="a-nameongetdroptargeta--chtmlviewongetdroptarget"></a><a name="ongetdroptarget"></a>CHtmlView::OnGetDropTarget  
+##  <a name="ongetdroptarget"></a>CHtmlView::OnGetDropTarget  
  它被用作放置目标，它使主机提供一种替代方法时由 Internet Explorer 或 MSHTML 调用`IDropTarget`。  
   
 ```  
@@ -1036,7 +1131,7 @@ virtual HRESULT OnGetDropTarget(
 ### <a name="remarks"></a>备注  
  重写`OnGetDropTarget`以响应`GetDropTarget`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameongetexternala--chtmlviewongetexternal"></a><a name="ongetexternal"></a>CHtmlView::OnGetExternal  
+##  <a name="ongetexternal"></a>CHtmlView::OnGetExternal  
  由 Internet Explorer 或 MSHTML 调用以获取主机的 `IDispatch` 接口。  
   
 ```  
@@ -1053,7 +1148,7 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
 ### <a name="remarks"></a>备注  
  重写`OnGetExternal`以响应`GetExternal`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameongethostinfoa--chtmlviewongethostinfo"></a><a name="ongethostinfo"></a>CHtmlView::OnGetHostInfo  
+##  <a name="ongethostinfo"></a>CHtmlView::OnGetHostInfo  
  检索 Internet Explorer 或 MSHTML 主机的用户界面功能。  
   
 ```  
@@ -1070,7 +1165,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="remarks"></a>备注  
  重写`OnGetHostInfo`以响应`GetHostInfo`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameongetoptionkeypatha--chtmlviewongetoptionkeypath"></a><a name="ongetoptionkeypath"></a>CHtmlView::OnGetOptionKeyPath  
+##  <a name="ongetoptionkeypath"></a>CHtmlView::OnGetOptionKeyPath  
  调用该成员函数以获取在其下 Internet Explorer 或 MSHTML 存储用户首选项的注册表项。  
   
 ```  
@@ -1092,7 +1187,7 @@ virtual HRESULT OnGetOptionKeyPath(
 ### <a name="remarks"></a>备注  
  重写`OnGetOptionKeyPath`以响应`GetOptionKeyPath`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonhideuia--chtmlviewonhideui"></a><a name="onhideui"></a>CHtmlView::OnHideUI  
+##  <a name="onhideui"></a>CHtmlView::OnHideUI  
  当 Internet Explorer 或 MSHTML 删除其菜单和工具栏，将由框架调用此成员函数。  
   
 ```  
@@ -1105,7 +1200,7 @@ virtual HRESULT OnHideUI();
 ### <a name="remarks"></a>备注  
  重写`OnHideUI`以响应`HideUI`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonmenubara--chtmlviewonmenubar"></a><a name="onmenubar"></a>CHtmlView::OnMenuBar  
+##  <a name="onmenubar"></a>CHtmlView::OnMenuBar  
  由框架调用此成员函数时[MenuBar](https://msdn.microsoft.com/library/aa752131.aspx)属性已更改。  
   
 ```  
@@ -1116,7 +1211,7 @@ virtual void OnMenuBar(BOOL bMenuBar);
  *bMenuBar*  
  如果 Internet 资源管理器菜单栏可见，则为非否则为零。  
   
-##  <a name="a-nameonnavigatecomplete2a--chtmlviewonnavigatecomplete2"></a><a name="onnavigatecomplete2"></a>CHtmlView::OnNavigateComplete2  
+##  <a name="onnavigatecomplete2"></a>CHtmlView::OnNavigateComplete2  
  （在窗口或框架集元素上） 为超链接导航完成后，将由框架调用此成员函数。  
   
 ```  
@@ -1132,7 +1227,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
   
  请注意，该 URL 包含在*strURL*可以不同于浏览器被告知要导航到，因为此 URL 是规范化的限定的 URL 的 URL。 例如，如果应用程序在调用中指定的 URL"www.microsoft.com"[导航](#navigate)或[Navigate2](#navigate2)，通过传递 URL`OnNavigateComplete2`将"http://www.microsoft.com/"。 此外，如果服务器已经重浏览器定向到另一个 URL，重定向的 URL 将会反映在此处。  
   
-##  <a name="a-nameonnavigateerrora--chtmlviewonnavigateerror"></a><a name="onnavigateerror"></a>CHtmlView::OnNavigateError  
+##  <a name="onnavigateerror"></a>CHtmlView::OnNavigateError  
  当导航到超链接失败时由框架调用。  
   
 ```  
@@ -1161,7 +1256,7 @@ virtual void OnNavigateError(
   
  有关详细信息，请参阅[DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)  
   
-##  <a name="a-nameonnewwindow2a--chtmlviewonnewwindow2"></a><a name="onnewwindow2"></a>CHtmlView::OnNewWindow2  
+##  <a name="onnewwindow2"></a>CHtmlView::OnNewWindow2  
  要为显示资源创建一个新的窗口时，将由框架调用此成员函数。  
   
 ```  
@@ -1180,7 +1275,7 @@ virtual void OnNewWindow2(
 ### <a name="remarks"></a>备注  
  此事件之前从 webbrowser 控件中的一个新窗口的创建。  
   
-##  <a name="a-nameonprogresschangea--chtmlviewonprogresschange"></a><a name="onprogresschange"></a>CHtmlView::OnProgressChange  
+##  <a name="onprogresschange"></a>CHtmlView::OnProgressChange  
  此成员函数是由框架调用以通知应用程序已更新的下载操作的进度。  
   
 ```  
@@ -1199,7 +1294,7 @@ virtual void OnProgressChange(
 ### <a name="remarks"></a>备注  
  若要显示到目前为止下载的字节数，或要更新进度指示器，容器可以使用此事件提供的信息。  
   
-##  <a name="a-nameonpropertychangea--chtmlviewonpropertychange"></a><a name="onpropertychange"></a>CHtmlView::OnPropertyChange  
+##  <a name="onpropertychange"></a>CHtmlView::OnPropertyChange  
  此成员函数由框架调用以通知应用程序，[只有](#putproperty)已更改属性的值。  
   
 ```  
@@ -1210,14 +1305,14 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
  `lpszProperty`  
  指向包含的属性名称的字符串的指针。  
   
-##  <a name="a-nameonquita--chtmlviewonquit"></a><a name="onquit"></a>CHtmlView::OnQuit  
+##  <a name="onquit"></a>CHtmlView::OnQuit  
  此成员函数是由框架调用以通知 Internet Explorer 应用程序已准备好退出应用程序。  
   
 ```  
 virtual void OnQuit();
 ```  
   
-##  <a name="a-nameonresizebordera--chtmlviewonresizeborder"></a><a name="onresizeborder"></a>CHtmlView::OnResizeBorder  
+##  <a name="onresizeborder"></a>CHtmlView::OnResizeBorder  
  调用与的 Internet Explorer 或 MSHTML 实现[IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053)，来提醒的对象，它需要调整其边框空间的大小。  
   
 ```  
@@ -1243,7 +1338,7 @@ virtual HRESULT OnResizeBorder(
 ### <a name="remarks"></a>备注  
  重写`OnResizeBorder`以响应`ResizeBorder`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonshowcontextmenua--chtmlviewonshowcontextmenu"></a><a name="onshowcontextmenu"></a>CHtmlView::OnShowContextMenu  
+##  <a name="onshowcontextmenu"></a>CHtmlView::OnShowContextMenu  
  当 Internet Explorer 或 MSHTML 将要显示其上下文菜单时，从其调用。  
   
 ```  
@@ -1273,7 +1368,7 @@ virtual HRESULT OnShowContextMenu(
 ### <a name="remarks"></a>备注  
  重写`OnShowContextMenu`以响应`ShowContextMenu`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonshowuia--chtmlviewonshowui"></a><a name="onshowui"></a>CHtmlView::OnShowUI  
+##  <a name="onshowui"></a>CHtmlView::OnShowUI  
  在 Internet Explorer 或 MSHTML 显示其菜单和工具栏之前调用。  
   
 ```  
@@ -1307,7 +1402,7 @@ virtual HRESULT OnShowUI(
 ### <a name="remarks"></a>备注  
  重写`OnShowUI`以响应`ShowUI`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonstatusbara--chtmlviewonstatusbar"></a><a name="onstatusbar"></a>CHtmlView::OnStatusBar  
+##  <a name="onstatusbar"></a>CHtmlView::OnStatusBar  
  由框架调用此成员函数时[StatusBar](https://msdn.microsoft.com/library/aa768270.aspx)属性已更改。  
   
 ```  
@@ -1318,7 +1413,7 @@ virtual void OnStatusBar(BOOL bStatusBar);
  *bStatusBar*  
  如果 Internet Explorer 状态栏可见，则为非零，则为或。  
   
-##  <a name="a-nameonstatustextchangea--chtmlviewonstatustextchange"></a><a name="onstatustextchange"></a>CHtmlView::OnStatusTextChange  
+##  <a name="onstatustextchange"></a>CHtmlView::OnStatusTextChange  
  此成员函数是由框架调用以通知应用程序与 web 浏览器控件相关联的状态栏文本已更改。  
   
 ```  
@@ -1329,7 +1424,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
  `lpszText`  
  一个包含新状态栏文本的字符串。  
   
-##  <a name="a-nameontheatermodea--chtmlviewontheatermode"></a><a name="ontheatermode"></a>CHtmlView::OnTheaterMode  
+##  <a name="ontheatermode"></a>CHtmlView::OnTheaterMode  
  由框架调用此成员函数时[TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx)属性已更改。  
   
 ```  
@@ -1340,7 +1435,7 @@ virtual void OnTheaterMode(BOOL bTheaterMode);
  *bTheaterMode*  
  如果 Internet 资源管理器处于影院模式，则为非零值否则为零。  
   
-##  <a name="a-nameontitlechangea--chtmlviewontitlechange"></a><a name="ontitlechange"></a>CHtmlView::OnTitleChange  
+##  <a name="ontitlechange"></a>CHtmlView::OnTitleChange  
  此成员函数是由框架以便在 web 浏览器控件中的文档的标题将变为可用时通知应用程序或更改的调用。  
   
 ```  
@@ -1354,7 +1449,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ### <a name="remarks"></a>备注  
  以 html 格式，可能会更改标题;虽然仍在下载 HTML，文档的 URL 将设置为标题。 实际的标题 （如果有） 从分析 HTML 后，标题会更改以反映实际的标题。  
   
-##  <a name="a-nameontoolbara--chtmlviewontoolbar"></a><a name="ontoolbar"></a>CHtmlView::OnToolBar  
+##  <a name="ontoolbar"></a>CHtmlView::OnToolBar  
  由框架调用此成员函数时[工具栏](https://msdn.microsoft.com/library/aa768274.aspx)属性已更改。  
   
 ```  
@@ -1365,7 +1460,7 @@ virtual void OnToolBar(BOOL bToolBar);
  *bToolBar*  
  如果 Internet Explorer 工具栏是否可见，则为非零，则为或。  
   
-##  <a name="a-nameontranslateacceleratora--chtmlviewontranslateaccelerator"></a><a name="ontranslateaccelerator"></a>CHtmlView::OnTranslateAccelerator  
+##  <a name="ontranslateaccelerator"></a>CHtmlView::OnTranslateAccelerator  
  通过 Internet Explorer 或 MSHTML 调用时[IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360)或[IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756)调用来处理菜单加速键从容器的消息队列的消息。  
   
 ```  
@@ -1391,7 +1486,7 @@ virtual HRESULT OnTranslateAccelerator(
 ### <a name="remarks"></a>备注  
  重写`OnTranslateAccelerator`以响应`TranslateAccelerator`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameontranslateurla--chtmlviewontranslateurl"></a><a name="ontranslateurl"></a>CHtmlView::OnTranslateUrl  
+##  <a name="ontranslateurl"></a>CHtmlView::OnTranslateUrl  
  由 Internet Explorer 或 MSHTML 调用以允许主机有机会修改要加载的 URL。  
   
 ```  
@@ -1417,7 +1512,7 @@ virtual HRESULT OnTranslateUrl(
 ### <a name="remarks"></a>备注  
  重写`OnTranslateUrl`以响应`TranslateUrl`从 Microsoft Web 浏览器控件的通知。 请参阅[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
   
-##  <a name="a-nameonupdateuia--chtmlviewonupdateui"></a><a name="onupdateui"></a>CHtmlView::OnUpdateUI  
+##  <a name="onupdateui"></a>CHtmlView::OnUpdateUI  
  通知主机命令状态已更改。  
   
 ```  
@@ -1430,7 +1525,7 @@ virtual HRESULT OnUpdateUI();
 ### <a name="remarks"></a>备注  
  主机应更新工具栏按钮的状态。 无论从返回的值调用此方法`ShowUI`。 重写`OnUpdateUI`以响应`UpdateUI`从 Microsoft Web 浏览器控件的通知。  
   
-##  <a name="a-nameonvisiblea--chtmlviewonvisible"></a><a name="onvisible"></a>CHtmlView::OnVisible  
+##  <a name="onvisible"></a>CHtmlView::OnVisible  
  Webbrowser 控件中的窗口应显示或隐藏时，将由框架调用此成员函数。  
   
 ```  
@@ -1444,7 +1539,7 @@ virtual void OnVisible(BOOL bVisible);
 ### <a name="remarks"></a>备注  
  这样，对象控制主机窗口具有相同的表现的 Internet Explorer 窗口的行为。  
   
-##  <a name="a-nameputpropertya--chtmlviewputproperty"></a><a name="putproperty"></a>CHtmlView::PutProperty  
+##  <a name="putproperty"></a>CHtmlView::PutProperty  
  调用此成员函数可设置与给定对象关联的属性。  
   
 ```  
@@ -1498,7 +1593,7 @@ void PutProperty(
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namequeryformscommanda--chtmlviewqueryformscommand"></a><a name="queryformscommand"></a>CHtmlView::QueryFormsCommand  
+##  <a name="queryformscommand"></a>CHtmlView::QueryFormsCommand  
  查询由用户界面事件生成的一个或多个命令的状态。  
   
 ```  
@@ -1528,7 +1623,7 @@ HRESULT QueryFormsCommand(
 ### <a name="remarks"></a>备注  
  `QueryFormsCommand`实现的行为[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)方法。  
   
-##  <a name="a-namequerystatuswba--chtmlviewquerystatuswb"></a><a name="querystatuswb"></a>CHtmlView::QueryStatusWB  
+##  <a name="querystatuswb"></a>CHtmlView::QueryStatusWB  
  调用此成员函数来查询命令状态。  
   
 ```  
@@ -1547,7 +1642,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namerefresha--chtmlviewrefresh"></a><a name="refresh"></a>CHtmlView::Refresh  
+##  <a name="refresh"></a>CHtmlView::Refresh  
  重新加载 URL 或 web 浏览器当前显示的文件。  
   
 ```  
@@ -1559,7 +1654,7 @@ void Refresh();
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namerefresh2a--chtmlviewrefresh2"></a><a name="refresh2"></a>CHtmlView::Refresh2  
+##  <a name="refresh2"></a>CHtmlView::Refresh2  
  重新加载当前显示 Internet explorer 中的文件。  
   
 ```  
@@ -1575,7 +1670,7 @@ void Refresh2(int nLevel);
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesetaddressbara--chtmlviewsetaddressbar"></a><a name="setaddressbar"></a>CHtmlView::SetAddressBar  
+##  <a name="setaddressbar"></a>CHtmlView::SetAddressBar  
  调用该成员函数以显示或隐藏 Internet Explorer 对象的地址栏中。  
   
 ```  
@@ -1589,7 +1684,7 @@ void SetAddressBar(BOOL bNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer。 如果使用 WebBrowser 控件使用此调用，它将返回没有错误，但它将忽略此调用。  
   
-##  <a name="a-namesetfullscreena--chtmlviewsetfullscreen"></a><a name="setfullscreen"></a>CHtmlView::SetFullScreen  
+##  <a name="setfullscreen"></a>CHtmlView::SetFullScreen  
  调用该成员函数以将 Internet Explorer 设置为任何一种全屏幕或正常窗口模式。  
   
 ```  
@@ -1605,7 +1700,7 @@ void SetFullScreen(BOOL bNewValue);
   
  适用于 Internet Explorer。 如果使用 WebBrowser 控件使用此调用，它将返回没有错误，但它将忽略此调用。  
   
-##  <a name="a-namesetheighta--chtmlviewsetheight"></a><a name="setheight"></a>CHtmlView::SetHeight  
+##  <a name="setheight"></a>CHtmlView::SetHeight  
  调用此成员函数可设置 Internet 资源管理器主窗口的高度。  
   
 ```  
@@ -1619,7 +1714,7 @@ void SetHeight(long nNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesetlefta--chtmlviewsetleft"></a><a name="setleft"></a>CHtmlView::SetLeft  
+##  <a name="setleft"></a>CHtmlView::SetLeft  
  设置 Internet Explorer 主窗口的水平位置。  
   
 ```  
@@ -1630,7 +1725,7 @@ void SetLeft(long nNewValue);
  `nNewValue`  
  主窗口的左边缘屏幕坐标。  
   
-##  <a name="a-namesetmenubara--chtmlviewsetmenubar"></a><a name="setmenubar"></a>CHtmlView::SetMenuBar  
+##  <a name="setmenubar"></a>CHtmlView::SetMenuBar  
  调用该成员函数以显示或隐藏 Internet Explorer 菜单栏。  
   
 ```  
@@ -1644,7 +1739,7 @@ void SetMenuBar(BOOL bNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer。 如果使用 WebBrowser 控件使用此调用，它将返回没有错误，但它将忽略此调用。  
   
-##  <a name="a-namesetofflinea--chtmlviewsetoffline"></a><a name="setoffline"></a>CHtmlView::SetOffline  
+##  <a name="setoffline"></a>CHtmlView::SetOffline  
  调用此成员函数可设置一个值，该值指示 web 浏览器控件当前在脱机模式下操作。  
   
 ```  
@@ -1660,7 +1755,7 @@ void SetOffline(BOOL bNewValue);
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesetregisterasbrowsera--chtmlviewsetregisterasbrowser"></a><a name="setregisterasbrowser"></a>CHtmlView::SetRegisterAsBrowser  
+##  <a name="setregisterasbrowser"></a>CHtmlView::SetRegisterAsBrowser  
  调用此成员函数可设置一个值，该值指示是否将 WebBrowser 控件注册为目标的名称解析的顶层浏览器。  
   
 ```  
@@ -1676,7 +1771,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesetregisterasdroptargeta--chtmlviewsetregisterasdroptarget"></a><a name="setregisterasdroptarget"></a>CHtmlView::SetRegisterAsDropTarget  
+##  <a name="setregisterasdroptarget"></a>CHtmlView::SetRegisterAsDropTarget  
  调用此成员函数可设置一个值，该值指示是否将 WebBrowser 控件注册为放置目标进行导航。  
   
 ```  
@@ -1690,7 +1785,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesetsilenta--chtmlviewsetsilent"></a><a name="setsilent"></a>CHtmlView::SetSilent  
+##  <a name="setsilent"></a>CHtmlView::SetSilent  
  调用此成员函数可设置一个值，该值指示是否可以显示任何对话框。  
   
 ```  
@@ -1704,7 +1799,7 @@ void SetSilent(BOOL bNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesetstatusbara--chtmlviewsetstatusbar"></a><a name="setstatusbar"></a>CHtmlView::SetStatusBar  
+##  <a name="setstatusbar"></a>CHtmlView::SetStatusBar  
  调用该成员函数以显示状态栏。  
   
 ```  
@@ -1718,7 +1813,7 @@ void SetStatusBar(BOOL bNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer。 如果使用 WebBrowser 控件使用此调用，它将返回没有错误，但它将忽略此调用。  
   
-##  <a name="a-namesettheatermodea--chtmlviewsettheatermode"></a><a name="settheatermode"></a>CHtmlView::SetTheaterMode  
+##  <a name="settheatermode"></a>CHtmlView::SetTheaterMode  
  调用此成员函数可设置一个值，该值指示 web 浏览器控件是否处于影院模式。  
   
 ```  
@@ -1734,7 +1829,7 @@ void SetTheaterMode(BOOL bNewValue);
   
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesettoolbara--chtmlviewsettoolbar"></a><a name="settoolbar"></a>CHtmlView::SetToolBar  
+##  <a name="settoolbar"></a>CHtmlView::SetToolBar  
  调用该成员函数以显示或隐藏 Internet Explorer 工具栏。  
   
 ```  
@@ -1748,7 +1843,7 @@ void SetToolBar(int nNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer。 如果使用 WebBrowser 控件使用此调用，它将返回没有错误，但它将忽略此调用。  
   
-##  <a name="a-namesettopa--chtmlviewsettop"></a><a name="settop"></a>CHtmlView::SetTop  
+##  <a name="settop"></a>CHtmlView::SetTop  
  调用此成员函数以设置 WebBrowser 控件的内部上边缘与其容器上的边缘之间的距离  
   
 ```  
@@ -1762,7 +1857,7 @@ void SetTop(long nNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesetvisiblea--chtmlviewsetvisible"></a><a name="setvisible"></a>CHtmlView::SetVisible  
+##  <a name="setvisible"></a>CHtmlView::SetVisible  
  调用此成员函数可设置 WebBrowser 控件的可见性状态。  
   
 ```  
@@ -1776,7 +1871,7 @@ void SetVisible(BOOL bNewValue);
 ### <a name="remarks"></a>备注  
  适用于 Internet Explorer 和 WebBrowser。  
   
-##  <a name="a-namesetwidtha--chtmlviewsetwidth"></a><a name="setwidth"></a>CHtmlView::SetWidth  
+##  <a name="setwidth"></a>CHtmlView::SetWidth  
  设置 Internet Explorer 主窗口的宽度。  
   
 ```  
@@ -1787,7 +1882,7 @@ void SetWidth(long nNewValue);
  `nNewValue`  
  以像素为单位的 Internet 资源管理器主窗口的宽度。  
   
-##  <a name="a-namestopa--chtmlviewstop"></a><a name="stop"></a>CHtmlView::Stop  
+##  <a name="stop"></a>CHtmlView::Stop  
  调用该成员函数以取消所有挂起的导航或下载操作并停止所有动态页元素，如背景声音和动画。  
   
 ```  

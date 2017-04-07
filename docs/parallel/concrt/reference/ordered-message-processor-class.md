@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::ordered_message_processor
+- ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor::ordered_message_processor
+- AGENTS/concurrency::ordered_message_processor::async_send
+- AGENTS/concurrency::ordered_message_processor::initialize
+- AGENTS/concurrency::ordered_message_processor::initialize_batched_processing
+- AGENTS/concurrency::ordered_message_processor::sync_send
+- AGENTS/concurrency::ordered_message_processor::wait
+- AGENTS/concurrency::ordered_message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a9653c8eb5f05e56fd7812d334575e62dc101d63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1c3147001db16b610992d2501ed12ad4bd001fc9
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor 类
@@ -57,7 +65,7 @@ class ordered_message_processor : public message_processor<T>;
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |`type`|类型别名`T`。|  
   
@@ -65,24 +73,24 @@ class ordered_message_processor : public message_processor<T>;
   
 |名称|说明|  
 |----------|-----------------|  
-|[ordered_message_processor 构造函数](#ctor)|构造 `ordered_message_processor` 对象。|  
+|[ordered_message_processor](#ctor)|构造 `ordered_message_processor` 对象。|  
 |[~ ordered_message_processor 析构函数](#dtor)|销毁`ordered_message_processor`对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[async_send 方法](#async_send)|异步消息进行排队，并开始处理任务，如果这有没有已完成操作。 (重写[message_processor:: async_send](message-processor-class.md#async_send)。)|  
-|[initialize 方法](#initialize)|初始化`ordered_message_processor`与相应的回调函数、 计划程序和计划组的对象。|  
-|[initialize_batched_processing 方法](#initialize_batched_processing)|初始化消息的批处理|  
-|[sync_send 方法](#sync_send)|同步消息进行排队，并开始处理任务，如果这有没有已完成操作。 (重写[message_processor:: sync_send](message-processor-class.md#sync_send)。)|  
-|[wait 方法](#wait)|特定于处理器的旋转等待，用于在析构函数中的消息块，以确保所有异步处理任务有时间完成，然后再销毁块。 (重写[message_processor:: wait](message-processor-class.md#wait)。)|  
+|[async_send](#async_send)|异步消息进行排队，并开始处理任务，如果这有没有已完成操作。 (重写[message_processor:: async_send](message-processor-class.md#async_send)。)|  
+|[初始化](#initialize)|初始化`ordered_message_processor`与相应的回调函数、 计划程序和计划组的对象。|  
+|[initialize_batched_processing](#initialize_batched_processing)|初始化消息的批处理|  
+|[sync_send](#sync_send)|同步消息进行排队，并开始处理任务，如果这有没有已完成操作。 (重写[message_processor:: sync_send](message-processor-class.md#sync_send)。)|  
+|[等待](#wait)|特定于处理器的旋转等待，用于在析构函数中的消息块，以确保所有异步处理任务有时间完成，然后再销毁块。 (重写[message_processor:: wait](message-processor-class.md#wait)。)|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[process_incoming_message 方法](#process_incoming_message)|以异步方式调用的处理函数。 它将消息取消排队，并开始处理它们。 (重写[message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message)。)|  
+|[process_incoming_message](#process_incoming_message)|以异步方式调用的处理函数。 它将消息取消排队，并开始处理它们。 (重写[message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message)。)|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [message_processor](message-processor-class.md)  
@@ -94,7 +102,7 @@ class ordered_message_processor : public message_processor<T>;
   
  **命名空间：** 并发  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  异步消息进行排队，并开始处理任务，如果这有没有已完成操作。  
   
@@ -106,7 +114,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  一个指向一条消息。  
   
-##  <a name="a-nameinitializea-initialize"></a><a name="initialize"></a>初始化 
+##  <a name="initialize"></a>初始化 
 
  初始化`ordered_message_processor`与相应的回调函数、 计划程序和计划组的对象。  
   
@@ -127,7 +135,7 @@ void initialize(
  `_Handler`  
  在回调期间调用处理程序函子。  
   
-##  <a name="a-nameinitializebatchedprocessinga-initializebatchedprocessing"></a><a name="initialize_batched_processing"></a>initialize_batched_processing 
+##  <a name="initialize_batched_processing"></a>initialize_batched_processing 
 
  初始化消息的批处理  
   
@@ -144,7 +152,7 @@ virtual void initialize_batched_processing(
  `_Propagator`  
  在回调期间调用传播器函子。  
   
-##  <a name="a-namectora-orderedmessageprocessor"></a><a name="ctor"></a>ordered_message_processor 
+##  <a name="ctor"></a>ordered_message_processor 
 
  构造 `ordered_message_processor` 对象。  
   
@@ -155,7 +163,7 @@ ordered_message_processor();
 ### <a name="remarks"></a>备注  
  这`ordered_message_processor`不计划异步或同步处理程序，直到`initialize`调用函数。  
   
-##  <a name="a-namedtora-orderedmessageprocessor"></a><a name="dtor"></a>~ ordered_message_processor 
+##  <a name="dtor"></a>~ ordered_message_processor 
 
  销毁`ordered_message_processor`对象。  
   
@@ -166,7 +174,7 @@ virtual ~ordered_message_processor();
 ### <a name="remarks"></a>备注  
  销毁处理器之前等待所有未完成的异步操作。  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  以异步方式调用的处理函数。 它将消息取消排队，并开始处理它们。  
   
@@ -174,7 +182,7 @@ virtual ~ordered_message_processor();
 virtual void process_incoming_message();
 ```  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  同步消息进行排队，并开始处理任务，如果这有没有已完成操作。  
   
@@ -186,7 +194,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
  `_Msg`  
  一个指向一条消息。  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>等待 
+##  <a name="wait"></a>等待 
 
  特定于处理器的旋转等待，用于在析构函数中的消息块，以确保所有异步处理任务有时间完成，然后再销毁块。  
   
@@ -195,5 +203,5 @@ virtual void wait();
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

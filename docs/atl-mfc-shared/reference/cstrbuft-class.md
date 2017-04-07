@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CStrBufT<TCharType>
-- ATL.CStrBufT
 - CStrBufT
-- ATL::CStrBufT
-- ATL.CStrBufT<TCharType>
+- ATLSIMPSTR/ATL::CStrBufT
+- ATLSIMPSTR/ATL::CStrBufT::CStrBufT
+- ATLSIMPSTR/ATL::CStrBufT::SetLength
+- ATLSIMPSTR/ATL::CStrBufT::AUTO_LENGTH
+- ATLSIMPSTR/ATL::CStrBufT::SET_LENGTH
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +110,7 @@ class CStrBufT
 ## <a name="requirements"></a>要求  
  **标头︰** atlsimpstr.h  
   
-##  <a name="a-nameautolengtha--cstrbuftautolength"></a><a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
+##  <a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
  自动确定字符串中发布的新长度。  
   
 ```
@@ -119,7 +120,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 ### <a name="remarks"></a>备注  
  自动确定字符串中发布的新长度。 字符串必须是以 null 结尾。  
   
-##  <a name="a-namecstrbufta--cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CStrBufT  
+##  <a name="cstrbuft"></a>CStrBufT::CStrBufT  
  构造一个缓冲对象。  
   
 ```
@@ -146,7 +147,7 @@ explicit CStrBufT(StringType& str) throw(...);
   
  请注意，复制构造函数是`private`。  
   
-##  <a name="a-nameoperatorpcxstra--cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
  直接访问存储在关联的字符串对象用作 C 样式字符串的字符。  
   
 ```  
@@ -159,7 +160,7 @@ operator PCXSTR() const throw();
 ### <a name="remarks"></a>备注  
  调用此函数可返回指向字符串对象的字符缓冲区的指针。 字符串对象的内容不能更改与此指针。  
   
-##  <a name="a-nameoperatorpxstra--cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
+##  <a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
  直接访问存储在关联的字符串对象用作 C 样式字符串的字符。  
   
 ```
@@ -172,21 +173,21 @@ operator PXSTR() throw();
 ### <a name="remarks"></a>备注  
  调用此函数可返回指向字符串对象的字符缓冲区的指针。 开发人员可能会更改与此指针的字符串对象的内容。  
   
-##  <a name="a-namepcxstra--cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::PCXSTR  
+##  <a name="pcxstr"></a>CStrBufT::PCXSTR  
  指向常量字符串的指针。  
   
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```  
   
-##  <a name="a-namepxstra--cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::PXSTR  
+##  <a name="pxstr"></a>CStrBufT::PXSTR  
  指向字符串的指针。  
   
 ```
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
-##  <a name="a-namesetlengtha--cstrbuftsetlength"></a><a name="set_length"></a>CStrBufT::SET_LENGTH  
+##  <a name="set_length"></a>CStrBufT::SET_LENGTH  
  处的字符串对象的长度设置`GetBuffer`时间。  
   
 ```
@@ -198,7 +199,7 @@ static const DWORD SET_LENGTH = 0x02;
   
  确定如果[CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer)和[CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength)构造字符串的缓冲区对象时调用。  
   
-##  <a name="a-namesetlengtha--cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT::SetLength  
+##  <a name="setlength"></a>CStrBufT::SetLength  
  设置字符缓冲区的长度。  
   
 ```
@@ -215,7 +216,7 @@ void SetLength(int nLength);
 ### <a name="remarks"></a>备注  
  调用此函数可设置所表示的缓冲区对象的字符串的长度。  
   
-##  <a name="a-namestringtypea--cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::StringType  
+##  <a name="stringtype"></a>CStrBufT::StringType  
  通过此类模板的专用化操作其缓冲区字符串类型。  
   
 ```

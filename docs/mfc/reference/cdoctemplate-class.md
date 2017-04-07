@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocTemplate
+- AFXWIN/CDocTemplate
+- AFXWIN/CDocTemplate::CDocTemplate
+- AFXWIN/CDocTemplate::AddDocument
+- AFXWIN/CDocTemplate::CloseAllDocuments
+- AFXWIN/CDocTemplate::CreateNewDocument
+- AFXWIN/CDocTemplate::CreateNewFrame
+- AFXWIN/CDocTemplate::CreateOleFrame
+- AFXWIN/CDocTemplate::CreatePreviewFrame
+- AFXWIN/CDocTemplate::GetDocString
+- AFXWIN/CDocTemplate::GetFirstDocPosition
+- AFXWIN/CDocTemplate::GetNextDoc
+- AFXWIN/CDocTemplate::InitialUpdateFrame
+- AFXWIN/CDocTemplate::LoadTemplate
+- AFXWIN/CDocTemplate::MatchDocType
+- AFXWIN/CDocTemplate::OpenDocumentFile
+- AFXWIN/CDocTemplate::RemoveDocument
+- AFXWIN/CDocTemplate::SaveAllModified
+- AFXWIN/CDocTemplate::SetContainerInfo
+- AFXWIN/CDocTemplate::SetDefaultTitle
+- AFXWIN/CDocTemplate::SetPreviewInfo
+- AFXWIN/CDocTemplate::SetServerInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +136,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="requirements"></a>要求  
  **标头:** afxwin.h  
   
-##  <a name="a-nameadddocumenta--cdoctemplateadddocument"></a><a name="adddocument"></a>CDocTemplate::AddDocument  
+##  <a name="adddocument"></a>CDocTemplate::AddDocument  
  使用此函数将文档添加到模板。  
   
 ```  
@@ -129,7 +150,7 @@ virtual void AddDocument(CDocument* pDoc);
 ### <a name="remarks"></a>备注  
  派生的类[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)和[CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)重写此函数。 如果派生您自己的文档模板类从`CDocTemplate`，派生的类必须重写此函数。  
   
-##  <a name="a-namecdoctemplatea--cdoctemplatecdoctemplate"></a><a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
+##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
  构造 `CDocTemplate` 对象。  
   
 ```  
@@ -170,7 +191,7 @@ CDocTemplate (
 ### <a name="remarks"></a>备注  
  使用此成员函数来构造`CDocTemplate`对象。 动态分配`CDocTemplate`对象，并将其传递给[CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)从`InitInstance`应用程序类的成员函数。  
   
-##  <a name="a-nameclosealldocumentsa--cdoctemplateclosealldocuments"></a><a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
+##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
  调用该成员函数以关闭所有打开的文档。  
   
 ```  
@@ -186,7 +207,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
   
  如果你希望要求用户执行的特殊清理处理之前关闭文档，重写此函数。 例如，如果文档表示数据库中的记录，您可能想要重写此函数以关闭该数据库。  
   
-##  <a name="a-namecreatenewdocumenta--cdoctemplatecreatenewdocument"></a><a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
+##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
  调用该成员函数以创建与此文档模板关联的类型的新文档。  
   
 ```  
@@ -196,7 +217,7 @@ virtual CDocument* CreateNewDocument();
 ### <a name="return-value"></a>返回值  
  指向新创建的文档的指针或**NULL**如果发生错误。  
   
-##  <a name="a-namecreatenewframea--cdoctemplatecreatenewframe"></a><a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
+##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
  创建新的框架窗口包含文档和视图。  
   
 ```  
@@ -220,7 +241,7 @@ virtual CFrameWnd* CreateNewFrame(
   
  `pOther`参数用于实现新建窗口命令。 它提供了新的框架窗口的模型所依据的框架窗口。 通常会创建新的框架窗口不可见。 调用此函数可创建新文件，并打开文件的标准框架实现之外的框架窗口。  
   
-##  <a name="a-namecreateoleframea--cdoctemplatecreateoleframe"></a><a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
+##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
  创建 OLE 框架窗口。  
   
 ```  
@@ -246,7 +267,7 @@ CFrameWnd* CreateOleFrame(
 ### <a name="remarks"></a>备注  
  如果`bCreateView`为零，则创建一个空框架。  
   
-##  <a name="a-namegetdocstringa--cdoctemplategetdocstring"></a><a name="getdocstring"></a>CDocTemplate::GetDocString  
+##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
  检索与文档类型关联的字符串。  
   
 ```  
@@ -284,7 +305,7 @@ virtual BOOL GetDocString(
   
  调用此函数，仅当派生您自己的类从`CDocTemplate`。  
   
-##  <a name="a-namegetfirstdocpositiona--cdoctemplategetfirstdocposition"></a><a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
+##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
  检索与此模板关联的第一个文档的位置。  
   
 ```  
@@ -299,7 +320,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
   
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)和[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)都重写此纯虚函数。 从中派生的任何类`CDocTemplate`还必须重写此函数。  
   
-##  <a name="a-namegetnextdoca--cdoctemplategetnextdoc"></a><a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
+##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
  检索标识的列表元素`rPos`，然后设置`rPos`到**位置**列表中的下一个条目的值。  
   
 ```  
@@ -320,7 +341,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
   
  您必须确保您**位置**值表示列表中的有效位置。 如果该值无效，Microsoft 基础类库的调试版本断言。  
   
-##  <a name="a-nameinitialupdateframea--cdoctemplateinitialupdateframe"></a><a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
  初始化框架窗口中，并根据需要使其可见。  
   
 ```  
@@ -345,7 +366,7 @@ virtual void InitialUpdateFrame(
   
  不需要使用的框架实现文件新建和打开文件时调用此函数。  
   
-##  <a name="a-nameloadtemplatea--cdoctemplateloadtemplate"></a><a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
+##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
  加载的资源给定`CDocTemplate`或派生类。  
   
 ```  
@@ -355,7 +376,7 @@ virtual void LoadTemplate();
 ### <a name="remarks"></a>备注  
  此成员函数由框架调用以针对加载资源给定`CDocTemplate`或派生类。 通常情况下它在构造期间，除时调用全局正在构建模板。 在这种情况下，对调用`LoadTemplate`延迟直至[CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)调用。  
   
-##  <a name="a-namematchdoctypea--cdoctemplatematchdoctype"></a><a name="matchdoctype"></a>CDocTemplate::MatchDocType  
+##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
  确定文档类型与此模板之间的匹配的置信度。  
   
 ```  
@@ -374,23 +395,17 @@ virtual Confidence MatchDocType(
 ### <a name="return-value"></a>返回值  
  取值范围为**置信度**枚举，它按以下方式定义︰  
   
- `enum Confidence`  
-  
- `{`  
-  
- `noAttempt,`  
-  
- `maybeAttemptForeign,`  
-  
- `maybeAttemptNative,`  
-  
- `yesAttemptForeign,`  
-  
- `yesAttemptNative,`  
-  
- `yesAlreadyOpen`  
-  
- `};`  
+```  
+enum Confidence  
+    {  
+    noAttempt,
+    maybeAttemptForeign,
+    maybeAttemptNative,
+    yesAttemptForeign,
+    yesAttemptNative,
+    yesAlreadyOpen
+    };  
+```  
   
 ### <a name="remarks"></a>备注  
  使用此函数来确定要用于打开文件的文档模板的类型。 如果您的应用程序支持多个文件类型，例如，您可以使用此函数来确定哪种可用的文档模板适用于给定文件通过调用`MatchDocType`对于每个模板中打开，并选择模板根据置信度值返回。  
@@ -403,7 +418,7 @@ virtual Confidence MatchDocType(
   
  默认实现不会返回**CDocTemplate::maybeAttemptForeign**或**CDocTemplate::maybeAttemptNative**。 重写此函数可实现适合您的应用程序，可能使用从这两个值的类型匹配的逻辑**置信度**枚举。  
   
-##  <a name="a-nameopendocumentfilea--cdoctemplateopendocumentfile"></a><a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
+##  <a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
  打开由路径指定一个文件。  
   
 ```  
@@ -427,7 +442,7 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="remarks"></a>备注  
  打开指定其路径的文件`lpszPathName`。 如果`lpszPathName`是`NULL`，创建新文件，其中包含与此模板关联的类型的文档。  
   
-##  <a name="a-nameremovedocumenta--cdoctemplateremovedocument"></a><a name="removedocument"></a>CDocTemplate::RemoveDocument  
+##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
  删除所指向的文档`pDoc`从与此模板关联的文档的列表。  
   
 ```  
@@ -441,7 +456,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 ### <a name="remarks"></a>备注  
  派生的类`CMultiDocTemplate`和`CSingleDocTemplate`重写此函数。 如果派生您自己的文档模板类从`CDocTemplate`，派生的类必须重写此函数。  
   
-##  <a name="a-namesaveallmodifieda--cdoctemplatesaveallmodified"></a><a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
+##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
  保存已修改的所有文档。  
   
 ```  
@@ -451,7 +466,7 @@ virtual BOOL SaveAllModified();
 ### <a name="return-value"></a>返回值  
  非零如果成功，则否则为 0。  
   
-##  <a name="a-namesetcontainerinfoa--cdoctemplatesetcontainerinfo"></a><a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
+##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
  在编辑就地 OLE 项时，请确定 OLE 容器的资源。  
   
 ```  
@@ -467,7 +482,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
   
  与关联的菜单`nIDOleInPlaceContainer`包含允许激活的就地项，若要合并的菜单与容器应用程序的菜单的分隔符。 有关合并服务器和容器菜单的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
-##  <a name="a-namesetdefaulttitlea--cdoctemplatesetdefaulttitle"></a><a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
+##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
  调用此函数可加载文档的默认标题并将其显示在文档的标题栏中。  
   
 ```  
@@ -481,7 +496,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ### <a name="remarks"></a>备注  
  默认标题的信息，请参阅的说明**CDocTemplate::docName**中[CDocTemplate::GetDocString](#getdocstring)。  
   
-##  <a name="a-namesetserverinfoa--cdoctemplatesetserverinfo"></a><a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
+##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
  当服务器文档嵌入或编辑适当地确定资源和类。  
   
 ```  
@@ -510,7 +525,7 @@ void SetServerInfo(
   
  与关联的菜单`nIDOleInPlaceServer`包含允许服务器菜单合并的容器的菜单的分隔符。 有关合并服务器和容器菜单的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
-##  <a name="a-namecreatepreviewframea--cdoctemplatecreatepreviewframe"></a><a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
+##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
  创建一个子框架用于丰富预览。  
   
 ```  
@@ -531,7 +546,7 @@ CFrameWnd* CreatePreviewFrame(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namesetpreviewinfoa--cdoctemplatesetpreviewinfo"></a><a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
+##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
  设置外进程预览处理程序。  
   
 ```  

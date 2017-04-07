@@ -9,9 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.COleDateTimeSpan
 - COleDateTimeSpan
-- ATL::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::COleDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::Format
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetDays
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetHours
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetMinutes
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetSeconds
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetStatus
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalDays
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalHours
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalMinutes
+- ATLCOMTIME/ATL::COleDateTimeSpan::GetTotalSeconds
+- ATLCOMTIME/ATL::COleDateTimeSpan::SetDateTimeSpan
+- ATLCOMTIME/ATL::COleDateTimeSpan::SetStatus
+- ATLCOMTIME/ATL::COleDateTimeSpan::m_span
+- ATLCOMTIME/ATL::COleDateTimeSpan::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +123,7 @@ class COleDateTimeSpan
 ## <a name="requirements"></a>要求  
  **标头︰** ATLComTime.h  
   
-##  <a name="a-namecoledatetimespanrelationaloperatorsa--coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>COleDateTimeSpan 关系运算符  
+##  <a name="coledatetimespan_relational_operators"></a>COleDateTimeSpan 关系运算符  
  比较运算符。  
   
 ```
@@ -138,7 +152,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities #&26;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]  
   
-##  <a name="a-namecoledatetimespana--coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
+##  <a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
  构造 `COleDateTimeSpan` 对象。  
   
 ```
@@ -170,7 +184,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&14;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]  
   
-##  <a name="a-nameformata--coledatetimespanformat"></a><a name="format"></a>COleDateTimeSpan::Format  
+##  <a name="format"></a>COleDateTimeSpan::Format  
  生成带格式的字符串表示形式`COleDateTimeSpan`对象。  
   
 ```
@@ -214,7 +228,7 @@ CString Format(UINT nID) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&15;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]  
   
-##  <a name="a-namegetdaysa--coledatetimespangetdays"></a><a name="getdays"></a>COleDateTimeSpan::GetDays  
+##  <a name="getdays"></a>COleDateTimeSpan::GetDays  
  检索此日期/时间范围值的日部分。  
   
 ```
@@ -246,7 +260,7 @@ LONG GetDays() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&16;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]  
   
-##  <a name="a-namegethoursa--coledatetimespangethours"></a><a name="gethours"></a>COleDateTimeSpan::GetHours  
+##  <a name="gethours"></a>COleDateTimeSpan::GetHours  
  检索此日期/时间范围值的小时部分。  
   
 ```
@@ -278,7 +292,7 @@ LONG GetHours() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&17;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]  
   
-##  <a name="a-namegetminutesa--coledatetimespangetminutes"></a><a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
+##  <a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
  检索此日期/时间范围值的分钟部分。  
   
 ```
@@ -310,7 +324,7 @@ LONG GetMinutes() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&18;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]  
   
-##  <a name="a-namegetsecondsa--coledatetimespangetseconds"></a><a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
+##  <a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
  检索此日期/时间范围值的第二个部分。  
   
 ```
@@ -342,7 +356,7 @@ LONG GetSeconds() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&19;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]  
   
-##  <a name="a-namegetstatusa--coledatetimespangetstatus"></a><a name="getstatus"></a>COleDateTimeSpan::GetStatus  
+##  <a name="getstatus"></a>COleDateTimeSpan::GetStatus  
  获取此的状态 （有效期）`COleDateTimeSpan`对象。  
   
 ```
@@ -385,7 +399,7 @@ DateTimeSpanStatus GetStatus() const throw();
   
  有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间︰ 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="a-namegettotaldaysa--coledatetimespangettotaldays"></a><a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays  
+##  <a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays  
  检索此以天数表示的日期/时间范围值。  
   
 ```
@@ -417,7 +431,7 @@ double GetTotalDays() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&20;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]  
   
-##  <a name="a-namegettotalhoursa--coledatetimespangettotalhours"></a><a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
+##  <a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
  检索此日期/时间跨度值，以小时为单位。  
   
 ```
@@ -449,7 +463,7 @@ double GetTotalHours() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetTotalDays](#gettotaldays)。  
   
-##  <a name="a-namegettotalminutesa--coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes  
+##  <a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes  
  检索此以分钟为单位表示的日期/时间范围值。  
   
 ```
@@ -481,7 +495,7 @@ double GetTotalMinutes() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetTotalDays](#gettotaldays)。  
   
-##  <a name="a-namegettotalsecondsa--coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds  
+##  <a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds  
  检索此日期/时间范围值以秒为单位。  
   
 ```
@@ -513,7 +527,7 @@ double GetTotalSeconds() const throw();
 ### <a name="example"></a>示例  
  请参阅示例[GetTotalDays](#gettotaldays)。  
   
-##  <a name="a-namemspana--coledatetimespanmspan"></a><a name="m_span"></a>COleDateTimeSpan::m_span  
+##  <a name="m_span"></a>COleDateTimeSpan::m_span  
  基础**double**值这`COleDateTime`对象。  
   
 ```
@@ -526,7 +540,7 @@ double m_span;
 > [!CAUTION]
 >  更改中的值**double**数据成员将此值更改`COleDateTimeSpan`对象。 不会更改此状态`COleDateTimeSpan`对象。  
   
-##  <a name="a-namemstatusa--coledatetimespanmstatus"></a><a name="m_status"></a>COleDateTimeSpan::m_status  
+##  <a name="m_status"></a>COleDateTimeSpan::m_status  
  此数据成员的类型是枚举的类型**DateTimeSpanStatus**，其定义内`COleDateTimeSpan`类。  
   
 ```
@@ -567,7 +581,7 @@ DateTimeSpanStatus m_status;
   
  有关更多信息的边界`COleDateTimeSpan`值，请参阅文章[日期和时间︰ 自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="a-nameoperatoreqa--coledatetimespanoperator-"></a><a name="operator_eq"></a>COleDateTimeSpan::operator =  
+##  <a name="operator_eq"></a>COleDateTimeSpan::operator =  
  副本`COleDateTimeSpan`值。  
   
 ```
@@ -577,7 +591,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 ### <a name="remarks"></a>备注  
  此重载的赋值运算符将源日期/时间范围值复制到此`COleDateTimeSpan`对象。  
   
-##  <a name="a-nameoperatoradd-a--coledatetimespanoperator---"></a><a name="operator_add_-"></a>COleDateTimeSpan::operator +、-  
+##  <a name="operator_add_-"></a>COleDateTimeSpan::operator +、-  
  添加、 减法运算，并将更改用于符号`COleDateTimeSpan`值。  
   
 ```
@@ -598,7 +612,7 @@ COleDateTimeSpan operator-() const throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities 第&23;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]  
   
-##  <a name="a-nameoperatoraddeq-eqa--coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>COleDateTimeSpan::operator + =、 =  
+##  <a name="operator_add_eq_-_eq"></a>COleDateTimeSpan::operator + =、 =  
  加法和减法`COleDateTimeSpan`从此值`COleDateTimeSpan`值。  
   
 ```
@@ -616,7 +630,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&24;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]  
   
-##  <a name="a-nameoperatordoublea--coledatetimespanoperator-double"></a><a name="operator_double"></a>COleDateTimeSpan::operator double  
+##  <a name="operator_double"></a>COleDateTimeSpan::operator double  
  将此转换`COleDateTimeSpan`值赋给**double**。  
   
 ```
@@ -626,7 +640,7 @@ operator double() const throw();
 ### <a name="remarks"></a>备注  
  此运算符将返回此值`COleDateTimeSpan`天的浮点数形式的值。  
   
-##  <a name="a-namesetdatetimespana--coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan  
+##  <a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan  
  设置此日期/时间范围值的值。  
   
 ```
@@ -659,7 +673,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATLMFC_Utilities #&21;](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]  
   
-##  <a name="a-namesetstatusa--coledatetimespansetstatus"></a><a name="setstatus"></a>COleDateTimeSpan::SetStatus  
+##  <a name="setstatus"></a>COleDateTimeSpan::SetStatus  
  设置的状态 （有效期） 这`COleDateTimeSpan`对象。  
   
 ```

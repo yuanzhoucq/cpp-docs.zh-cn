@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DPathGeometry
 - CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry::CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry::Attach
+- AFXRENDERTARGET/CD2DPathGeometry::Create
+- AFXRENDERTARGET/CD2DPathGeometry::Destroy
+- AFXRENDERTARGET/CD2DPathGeometry::Detach
+- AFXRENDERTARGET/CD2DPathGeometry::GetFigureCount
+- AFXRENDERTARGET/CD2DPathGeometry::GetSegmentCount
+- AFXRENDERTARGET/CD2DPathGeometry::Open
+- AFXRENDERTARGET/CD2DPathGeometry::Stream
+- AFXRENDERTARGET/CD2DPathGeometry::m_pPathGeometry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +98,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cd2dpathgeometryattach"></a><a name="attach"></a>CD2DPathGeometry::Attach  
+##  <a name="attach"></a>CD2DPathGeometry::Attach  
  附加现有的资源的对象的接口  
   
 ```  
@@ -99,7 +109,7 @@ void Attach(ID2D1PathGeometry* pResource);
  `pResource`  
  现有资源的接口。 不能为 NULL  
   
-##  <a name="a-namecd2dpathgeometrya--cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
+##  <a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
  构造 CD2DPathGeometry 对象。  
   
 ```  
@@ -115,7 +125,7 @@ CD2DPathGeometry(
  `bAutoDestroy`  
  指示所有者 (pParentTarget) 将销毁该对象。  
   
-##  <a name="a-namecreatea--cd2dpathgeometrycreate"></a><a name="create"></a>CD2DPathGeometry::Create  
+##  <a name="create"></a>CD2DPathGeometry::Create  
  创建 CD2DPathGeometry。  
   
 ```  
@@ -129,14 +139,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="a-namedestroya--cd2dpathgeometrydestroy"></a><a name="destroy"></a>CD2DPathGeometry::Destroy  
+##  <a name="destroy"></a>CD2DPathGeometry::Destroy  
  销毁 CD2DPathGeometry 对象。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dpathgeometrydetach"></a><a name="detach"></a>CD2DPathGeometry::Detach  
+##  <a name="detach"></a>CD2DPathGeometry::Detach  
  分离对象中的资源接口  
   
 ```  
@@ -146,7 +156,7 @@ ID2D1PathGeometry* Detach();
 ### <a name="return-value"></a>返回值  
  指向已分离的资源接口指针。  
   
-##  <a name="a-namegetfigurecounta--cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
+##  <a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
  检索路径几何图形中的图形的数量。  
   
 ```  
@@ -156,7 +166,7 @@ int GetFigureCount() const;
 ### <a name="return-value"></a>返回值  
  返回路径几何图形中的图形数。  
   
-##  <a name="a-namegetsegmentcounta--cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
+##  <a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
  检索路径几何图形中的段数。  
   
 ```  
@@ -166,14 +176,14 @@ int GetSegmentCount() const;
 ### <a name="return-value"></a>返回值  
  返回路径几何图形中的段数。  
   
-##  <a name="a-namemppathgeometrya--cd2dpathgeometrymppathgeometry"></a><a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
+##  <a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
  指向 ID2D1PathGeometry 的指针。  
   
 ```  
 ID2D1PathGeometry* m_pPathGeometry;  
 ```  
   
-##  <a name="a-nameopena--cd2dpathgeometryopen"></a><a name="open"></a>CD2DPathGeometry::Open  
+##  <a name="open"></a>CD2DPathGeometry::Open  
  检索用于填充路径几何图形中的与图形和线段的几何接收器。  
   
 ```  
@@ -183,7 +193,7 @@ ID2D1GeometrySink* Open();
 ### <a name="return-value"></a>返回值  
  用于填充与图形和线段路径几何图形 ID2D1GeometrySink 指向的指针。  
   
-##  <a name="a-namestreama--cd2dpathgeometrystream"></a><a name="stream"></a>CD2DPathGeometry::Stream  
+##  <a name="stream"></a>CD2DPathGeometry::Stream  
  将路径几何图形中的内容复制到指定 ID2D1GeometrySink。  
   
 ```  

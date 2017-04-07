@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fe9121d6e054446d3adb70da9f78884f4198517e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 94e0542910484166a01bd79beb9dfaa805aae6cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空间
@@ -56,45 +56,45 @@ namespace direct3d;
   
 ### <a name="classes"></a>类  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[scoped_d3d_access_lock 类](scoped-d3d-access-lock-class.md)|RAII 包装器上的 D3D 访问锁`accelerator_view`对象。|  
   
 ### <a name="structures"></a>结构  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[adopt_d3d_access_lock_t 结构](adopt-d3d-access-lock-t-structure.md)|而不获取，应采用标记类型以便指示 D3D 访问锁。|  
   
 ### <a name="functions"></a>函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[abs 函数](concurrency-direct3d-namespace-functions-amp.md#abs)|返回参数的绝对值|  
-|[clamp 函数](concurrency-direct3d-namespace-functions-amp.md#clamp)|已重载。 Clamps 指定 _Min，_Max 范围的 _X|  
-|[countbits 函数](concurrency-direct3d-namespace-functions-amp.md#countbits)|计算 _X 中设置位的数目|  
-|[create_accelerator_view 函数](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|创建[accelerator_view 类](accelerator-view-class.md)从指向 Direct3D 设备接口的指针|  
-|[d3d_access_lock 函数](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|获取用于安全地执行与 accelerator_view 共享资源上的 D3D 操作 accelerator_view 锁|  
-|[d3d_access_try_lock 函数](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|尝试获取对 accelerator_view 的 D3D 访问锁定而无需阻止。|  
-|[d3d_access_unlock 函数](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|解锁 D3D 访问给定的 accelerator_view 上。|  
-|[firstbithigh 函数](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|获取 _X，从最高顺序位开始并向下拖动工作中的第一个设置位的位置|  
-|[firstbitlow 函数](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|获取 _X，从最低顺序位开始学习并且向上工作中的第一个设置位的位置|  
-|[get_buffer 函数](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|获取 D3D 缓冲区接口基础数组。|  
-|[imax 函数](concurrency-direct3d-namespace-functions-amp.md#imax)|比较两个值，返回较大的值。|  
-|[imin 函数](concurrency-direct3d-namespace-functions-amp.md#imin)|比较两个值，返回其中的较小的值。|  
-|[is_timeout_disabled 函数](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|返回一个布尔型标志，指示是否对指定 accelerator_view 禁用超时。|  
-|[mad 函数](concurrency-direct3d-namespace-functions-amp.md#mad)|已重载。 执行三个参数的算术乘法/加法操作︰ _X * _Y + _Z|  
-|[make_array 函数](concurrency-direct3d-namespace-functions-amp.md#make_array)|创建从 D3D 缓冲区接口指针的数组。|  
-|[noise 函数](concurrency-direct3d-namespace-functions-amp.md#noise)|通过采用 Perlin 噪音算法生成一个随机值|  
-|[radians 函数](concurrency-direct3d-namespace-functions-amp.md#radians)|将 _X 从度数转换成弧度|  
-|[rcp 函数](concurrency-direct3d-namespace-functions-amp.md#rcp)|计算参数的快速、 近似倒数|  
-|[reversebits 函数](concurrency-direct3d-namespace-functions-amp.md#reversebits)|_X 中位的顺序反转|  
-|[saturate 函数](concurrency-direct3d-namespace-functions-amp.md#saturate)|Clamps 的 0 到 1 范围内的 _X|  
-|[sign 函数](concurrency-direct3d-namespace-functions-amp.md#sign)|已重载。 返回参数的符号|  
-|[smoothstep 函数](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|如果 _X 处于范围 [_Min，_Max] 0 和 1 之间，返回平滑 Hermite 内插。|  
-|[step 函数](concurrency-direct3d-namespace-functions-amp.md#step)|比较两个值，返回 0 或 1 根据哪个值为更高版本|  
-|[umax 函数](concurrency-direct3d-namespace-functions-amp.md#umax)|比较两个无符号的值，返回较大的值。|  
-|[umin 函数](concurrency-direct3d-namespace-functions-amp.md#umin)|比较两个无符号的值，返回其中的较小的值。|  
+|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|返回参数的绝对值|  
+|[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|已重载。 Clamps 指定 _Min，_Max 范围的 _X|  
+|[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|计算 _X 中设置位的数目|  
+|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|创建[accelerator_view 类](accelerator-view-class.md)从指向 Direct3D 设备接口的指针|  
+|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|获取用于安全地执行与 accelerator_view 共享资源上的 D3D 操作 accelerator_view 锁|  
+|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|尝试获取对 accelerator_view 的 D3D 访问锁定而无需阻止。|  
+|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|解锁 D3D 访问给定的 accelerator_view 上。|  
+|[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|获取 _X，从最高顺序位开始并向下拖动工作中的第一个设置位的位置|  
+|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|获取 _X，从最低顺序位开始学习并且向上工作中的第一个设置位的位置|  
+|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|获取 D3D 缓冲区接口基础数组。|  
+|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|比较两个值，返回较大的值。|  
+|[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|比较两个值，返回其中的较小的值。|  
+|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|返回一个布尔型标志，指示是否对指定 accelerator_view 禁用超时。|  
+|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|已重载。 执行三个参数的算术乘法/加法操作︰ _X * _Y + _Z|  
+|[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|创建从 D3D 缓冲区接口指针的数组。|  
+|[噪音](concurrency-direct3d-namespace-functions-amp.md#noise)|通过采用 Perlin 噪音算法生成一个随机值|  
+|[弧度为单位](concurrency-direct3d-namespace-functions-amp.md#radians)|将 _X 从度数转换成弧度|  
+|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|计算参数的快速、 近似倒数|  
+|[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|_X 中位的顺序反转|  
+|[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Clamps 的 0 到 1 范围内的 _X|  
+|[登录](concurrency-direct3d-namespace-functions-amp.md#sign)|已重载。 返回参数的符号|  
+|[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|如果 _X 处于范围 [_Min，_Max] 0 和 1 之间，返回平滑 Hermite 内插。|  
+|[步骤](concurrency-direct3d-namespace-functions-amp.md#step)|比较两个值，返回 0 或 1 根据哪个值为更高版本|  
+|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|比较两个无符号的值，返回较大的值。|  
+|[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|比较两个无符号的值，返回其中的较小的值。|  
 
 ## <a name="requirements"></a>要求  
  **标头：** amp.h  
@@ -102,5 +102,5 @@ namespace direct3d;
  **命名空间：** 并发  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

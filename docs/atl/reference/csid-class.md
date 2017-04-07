@@ -10,8 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSid
-- ATL::CSid
-- ATL.CSid
+- ATLSECURITY/ATL::CSid
+- ATLSECURITY/ATL::CSid::CSidArray
+- ATLSECURITY/ATL::CSid::CSid
+- ATLSECURITY/ATL::CSid::AccountName
+- ATLSECURITY/ATL::CSid::Domain
+- ATLSECURITY/ATL::CSid::EqualPrefix
+- ATLSECURITY/ATL::CSid::GetLength
+- ATLSECURITY/ATL::CSid::GetPSID
+- ATLSECURITY/ATL::CSid::GetPSID_IDENTIFIER_AUTHORITY
+- ATLSECURITY/ATL::CSid::GetSubAuthority
+- ATLSECURITY/ATL::CSid::GetSubAuthorityCount
+- ATLSECURITY/ATL::CSid::IsValid
+- ATLSECURITY/ATL::CSid::LoadAccount
+- ATLSECURITY/ATL::CSid::Sid
+- ATLSECURITY/ATL::CSid::SidNameUse
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +126,7 @@ class CSid
 ## <a name="requirements"></a>要求  
  **标头︰** atlsecurity.h  
   
-##  <a name="a-nameaccountnamea--csidaccountname"></a><a name="accountname"></a>CSid::AccountName  
+##  <a name="accountname"></a>CSid::AccountName  
  返回与关联的帐户的名称`CSid`对象。  
   
 ```
@@ -128,7 +141,7 @@ LPCTSTR AccountName() const throw(...);
   
  如果没有帐户名`SID`可以找到，`AccountName`返回一个空字符串。 如果网络超时可防止此方法查找名称便会出现此问题。 它也会发生与没有相应的帐户名称，如一次登录安全标识符`SID`标识登录会话。  
   
-##  <a name="a-namecsida--csidcsid"></a><a name="csid"></a>CSid::CSid  
+##  <a name="csid"></a>CSid::CSid  
  构造函数。  
   
 ```
@@ -174,7 +187,7 @@ explicit CSid(
   
  如果初始化失败，构造函数将引发[CAtlException 类](../../atl/reference/catlexception-class.md)。  
   
-##  <a name="a-namedtora--csidcsid"></a><a name="dtor"></a>CSid:: ~ CSid  
+##  <a name="dtor"></a>CSid:: ~ CSid  
  析构函数。  
   
 ```
@@ -184,7 +197,7 @@ virtual ~CSid() throw();
 ### <a name="remarks"></a>备注  
  析构函数释放由对象中获取所有资源。  
   
-##  <a name="a-namecsidarraya--csidcsidarray"></a><a name="csidarray"></a>CSid::CSidArray  
+##  <a name="csidarray"></a>CSid::CSidArray  
  一个数组[CSid](../../atl/reference/csid-class.md)对象。  
   
 ```
@@ -194,7 +207,7 @@ typedef CAtlArray<CSid> CSidArray;
 ### <a name="remarks"></a>备注  
  此 typedef 指定可用来从一个 ACL （访问控制列表） 中检索的安全标识符的数组类型。 请参阅[CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries)。  
   
-##  <a name="a-namedomaina--csiddomain"></a><a name="domain"></a>CSid::Domain  
+##  <a name="domain"></a>CSid::Domain  
  返回与关联的域的名称`CSid`对象。  
   
 ```
@@ -209,7 +222,7 @@ LPCTSTR Domain() const throw(...);
   
  如果没有帐户名`SID`找，**域**返回为空字符串的域。 如果网络超时可防止此方法查找名称便会出现此问题。 它也会发生与没有相应的帐户名称，如一次登录安全标识符`SID`标识登录会话。  
   
-##  <a name="a-nameequalprefixa--csidequalprefix"></a><a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>CSid::EqualPrefix  
  测试`SID`（安全标识符） 前缀的相等性。  
   
 ```
@@ -227,7 +240,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="remarks"></a>备注  
  请参阅[EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]的更多详细信息。  
   
-##  <a name="a-namegetlengtha--csidgetlength"></a><a name="getlength"></a>CSid::GetLength  
+##  <a name="getlength"></a>CSid::GetLength  
  返回的长度`CSid`对象。  
   
 ```
@@ -243,7 +256,7 @@ UINT GetLength() const throw();
 > [!NOTE]
 >  在下，如果该函数将导致断言的调试版本`CSid`对象无效。  
   
-##  <a name="a-namegetpsida--csidgetpsid"></a><a name="getpsid"></a>CSid::GetPSID  
+##  <a name="getpsid"></a>CSid::GetPSID  
  返回一个指向`SID`（安全标识符） 结构。  
   
 ```
@@ -253,7 +266,7 @@ const SID* GetPSID() const throw(...);
 ### <a name="return-value"></a>返回值  
  返回的地址`CSid`对象的基本`SID`结构。  
   
-##  <a name="a-namegetpsididentifierauthoritya--csidgetpsididentifierauthority"></a><a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
+##  <a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
  返回一个指向**SID_IDENTIFIER_AUTHORITY**结构。  
   
 ```
@@ -266,7 +279,7 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 > [!NOTE]
 >  在下，如果该函数将导致断言的调试版本`CSid`对象无效。  
   
-##  <a name="a-namegetsubauthoritya--csidgetsubauthority"></a><a name="getsubauthority"></a>CSid::GetSubAuthority  
+##  <a name="getsubauthority"></a>CSid::GetSubAuthority  
  返回在指定个子颁发机构`SID`（安全标识符） 结构。  
   
 ```
@@ -286,7 +299,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 > [!NOTE]
 >  在下，如果该函数将导致断言的调试版本`CSid`对象无效。  
   
-##  <a name="a-namegetsubauthoritycounta--csidgetsubauthoritycount"></a><a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount  
+##  <a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount  
  返回个子颁发机构计数。  
   
 ```
@@ -301,7 +314,7 @@ UCHAR GetSubAuthorityCount() const throw();
 > [!NOTE]
 >  在下，如果该函数将导致断言的调试版本`CSid`对象无效。  
   
-##  <a name="a-nameisvalida--csidisvalid"></a><a name="isvalid"></a>CSid::IsValid  
+##  <a name="isvalid"></a>CSid::IsValid  
  测试`CSid`对象的有效性。  
   
 ```
@@ -314,7 +327,7 @@ bool IsValid() const throw();
 ### <a name="remarks"></a>备注  
  `IsValid`方法验证`CSid`通过验证的修订号是已知的范围内，且次级机构数小于最大值的对象。  
   
-##  <a name="a-nameloadaccounta--csidloadaccount"></a><a name="loadaccount"></a>CSid::LoadAccount  
+##  <a name="loadaccount"></a>CSid::LoadAccount  
  更新`CSid`对象的具有给定的帐户名和域或现有的 SID （安全标识符） 结构。  
   
 ```
@@ -343,7 +356,7 @@ bool LoadAccount(
 ### <a name="remarks"></a>备注  
  `LoadAccount`尝试查找指定名称的安全标识符。 请参阅[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)的更多详细信息。  
   
-##  <a name="a-nameoperatoreqa--csidoperator-"></a><a name="operator_eq"></a>CSid::operator =  
+##  <a name="operator_eq"></a>CSid::operator =  
  赋值运算符。  
   
 ```
@@ -358,7 +371,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>返回值  
  返回对已更新的引用`CSid`对象。  
   
-##  <a name="a-nameoperatoreqeqa--csidoperator-"></a><a name="operator_eq_eq"></a>CSid::operator = =  
+##  <a name="operator_eq_eq"></a>CSid::operator = =  
  测试两个安全描述符对象相等。  
   
 ```
@@ -377,7 +390,7 @@ bool operator==(
 ### <a name="return-value"></a>返回值  
  **true**如果安全描述符是否相等，否则**false**。  
   
-##  <a name="a-nameoperatorneqa--csidoperator-"></a><a name="operator_neq"></a>CSid::operator ！ =  
+##  <a name="operator_neq"></a>CSid::operator ！ =  
  测试不相等的两个安全描述符对象。  
   
 ```
@@ -396,7 +409,7 @@ bool operator!=(
 ### <a name="return-value"></a>返回值  
  **true**如果安全描述符不相等，否则**false**。  
   
-##  <a name="a-nameoperatorlta--csidoperator-lt"></a><a name="operator_lt"></a>CSid::operator&lt;  
+##  <a name="operator_lt"></a>CSid::operator&lt;  
  将两个安全描述符对象的相关值进行比较。  
   
 ```
@@ -415,7 +428,7 @@ bool operator<(
 ### <a name="return-value"></a>返回值  
  **true**如果`lhs`是小于`rhs`，否则为**false**。  
   
-##  <a name="a-nameoperatorlteqa--csidoperator-lt"></a><a name="operator_lt__eq"></a>CSid::operator&lt;=  
+##  <a name="operator_lt__eq"></a>CSid::operator&lt;=  
  将两个安全描述符对象的相关值进行比较。  
   
 ```
@@ -434,7 +447,7 @@ bool operator<=(
 ### <a name="return-value"></a>返回值  
  **true**如果`lhs`是否小于或等于`rhs`，否则为**false**。  
   
-##  <a name="a-nameoperatorgta--csidoperator-gt"></a><a name="operator_gt"></a>CSid::operator&gt;  
+##  <a name="operator_gt"></a>CSid::operator&gt;  
  将两个安全描述符对象的相关值进行比较。  
   
 ```
@@ -453,7 +466,7 @@ bool operator>(
 ### <a name="return-value"></a>返回值  
  **true**如果`lhs`大于`rhs`，否则为**false**。  
   
-##  <a name="a-nameoperatorgteqa--csidoperator-gt"></a><a name="operator_gt__eq"></a>CSid::operator&gt;=  
+##  <a name="operator_gt__eq"></a>CSid::operator&gt;=  
  将两个安全描述符对象的相关值进行比较。  
   
 ```
@@ -472,7 +485,7 @@ bool operator>=(
 ### <a name="return-value"></a>返回值  
  **true**如果`lhs`是否大于或等于`rhs`，否则为**false**。  
   
-##  <a name="a-nameoperatorconstsidstara--csidoperator-const-sid-"></a><a name="operator_const_sid__star"></a>CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>CSid::operator const SID *  
  强制转换`CSid`对象的指针到`SID`（安全标识符） 结构。  
   
 ```  
@@ -482,7 +495,7 @@ operator const SID *() const throw(...);
 ### <a name="remarks"></a>备注  
  返回的地址`SID`结构。  
   
-##  <a name="a-namesida--csidsid"></a><a name="sid"></a>CSid::Sid  
+##  <a name="sid"></a>CSid::Sid  
  返回`SID`（安全标识符） 作为字符串的结构。  
   
 ```
@@ -492,7 +505,7 @@ LPCTSTR Sid() const throw(...);
 ### <a name="return-value"></a>返回值  
  返回`SID`以适合显示、 存储或传输的格式的字符串的结构。 等效于[ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399)，尽管此函数才位于 Windows 2000 或更高版本，因此模拟早期版本操作系统。  
   
-##  <a name="a-namesidnameusea--csidsidnameuse"></a><a name="sidnameuse"></a>CSid::SidNameUse  
+##  <a name="sidnameuse"></a>CSid::SidNameUse  
  返回的状态的说明`CSid`对象。  
   
 ```

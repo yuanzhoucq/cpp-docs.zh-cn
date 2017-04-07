@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog::COlePropertiesDialog
+- AFXODLGS/COlePropertiesDialog::DoModal
+- AFXODLGS/COlePropertiesDialog::OnApplyScale
+- AFXODLGS/COlePropertiesDialog::m_gp
+- AFXODLGS/COlePropertiesDialog::m_lp
+- AFXODLGS/COlePropertiesDialog::m_op
+- AFXODLGS/COlePropertiesDialog::m_psh
+- AFXODLGS/COlePropertiesDialog::m_vp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +114,7 @@ class COlePropertiesDialog : public COleDialog
 ## <a name="requirements"></a>要求  
  **标头︰** afxodlgs.h  
   
-##  <a name="a-namecolepropertiesdialoga--colepropertiesdialogcolepropertiesdialog"></a><a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
+##  <a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
  创建一个 `COlePropertiesDialog` 对象。  
   
 ```  
@@ -148,7 +157,7 @@ COlePropertiesDialog(
   
  若要添加页面之外提供默认情况下，修改[m_psh](#m_psh)成员变量的构造函数在退出之前您`COlePropertiesDialog`的派生类。 这是高级的实现`COlePropertiesDialog`构造函数。  
   
-##  <a name="a-namedomodala--colepropertiesdialogdomodal"></a><a name="domodal"></a>COlePropertiesDialog::DoModal  
+##  <a name="domodal"></a>COlePropertiesDialog::DoModal  
  调用该成员函数以显示 Windows 公共 OLE 对象属性对话框中，并让用户能够查看和/或更改文档项的各种属性。  
   
 ```  
@@ -160,7 +169,7 @@ virtual INT_PTR DoModal();
   
  如果**IDCANCEL**返回，则可以调用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函数来确定是否发生了错误。  
   
-##  <a name="a-namemgpa--colepropertiesdialogmgp"></a><a name="m_gp"></a>COlePropertiesDialog::m_gp  
+##  <a name="m_gp"></a>COlePropertiesDialog::m_gp  
  类型的结构[OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297)，可用来初始化 OLE 对象属性对话框中的常规页。  
   
 ```  
@@ -172,7 +181,7 @@ OLEUIGNRLPROPS m_gp;
   
  有关详细信息**OLEUIGNRLPROPS**结构，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemlpa--colepropertiesdialogmlp"></a><a name="m_lp"></a>COlePropertiesDialog::m_lp  
+##  <a name="m_lp"></a>COlePropertiesDialog::m_lp  
  类型的结构[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)，可用来初始化 OLE 对象属性对话框中的链接页。  
   
 ```  
@@ -184,7 +193,7 @@ OLEUILINKPROPS m_lp;
   
  有关详细信息**OLEUILINKPROPS**结构，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemopa--colepropertiesdialogmop"></a><a name="m_op"></a>COlePropertiesDialog::m_op  
+##  <a name="m_op"></a>COlePropertiesDialog::m_op  
  类型的结构[OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199)，可用来初始化公共 OLE 对象属性对话框。  
   
 ```  
@@ -196,7 +205,7 @@ OLEUIOBJECTPROPS m_op;
   
  有关详细信息，请参阅**OLEUIOBJECTPROPS**和[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)中结构[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namempsha--colepropertiesdialogmpsh"></a><a name="m_psh"></a>COlePropertiesDialog::m_psh  
+##  <a name="m_psh"></a>COlePropertiesDialog::m_psh  
  类型的结构[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)，其成员存储对话框对象的特征。  
   
 ```  
@@ -210,7 +219,7 @@ PROPSHEETHEADER m_psh;
   
  有关详细信息**PROPSHEETHEADER**结构，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemvpa--colepropertiesdialogmvp"></a><a name="m_vp"></a>COlePropertiesDialog::m_vp  
+##  <a name="m_vp"></a>COlePropertiesDialog::m_vp  
  类型的结构[OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751)，可用来初始化 OLE 对象属性对话框中的视图页。  
   
 ```  
@@ -222,7 +231,7 @@ OLEUIVIEWPROPS m_vp;
   
  有关详细信息**OLEUIVIEWPROPS**结构，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonapplyscalea--colepropertiesdialogonapplyscale"></a><a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
+##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
  已更改的缩放值，且选择了确定或应用时由框架调用。  
   
 ```  

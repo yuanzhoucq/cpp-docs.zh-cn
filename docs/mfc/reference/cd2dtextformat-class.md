@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DTextFormat
 - CD2DTextFormat
+- AFXRENDERTARGET/CD2DTextFormat
+- AFXRENDERTARGET/CD2DTextFormat::CD2DTextFormat
+- AFXRENDERTARGET/CD2DTextFormat::Create
+- AFXRENDERTARGET/CD2DTextFormat::Destroy
+- AFXRENDERTARGET/CD2DTextFormat::Get
+- AFXRENDERTARGET/CD2DTextFormat::GetFontFamilyName
+- AFXRENDERTARGET/CD2DTextFormat::GetLocaleName
+- AFXRENDERTARGET/CD2DTextFormat::IsValid
+- AFXRENDERTARGET/CD2DTextFormat::ReCreate
+- AFXRENDERTARGET/CD2DTextFormat::m_pTextFormat
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,14 +101,14 @@ class CD2DTextFormat : public CD2DResource;
 ## <a name="requirements"></a>要求  
  **标头︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dtextformata--cd2dtextformatcd2dtextformat"></a><a name="_dtorcd2dtextformat"></a>CD2DTextFormat:: ~ CD2DTextFormat  
+##  <a name="_dtorcd2dtextformat"></a>CD2DTextFormat:: ~ CD2DTextFormat  
  析构函数。 当 D2D 文本格式对象被销毁时调用。  
   
 ```  
 virtual ~CD2DTextFormat();
 ```  
   
-##  <a name="a-namecd2dtextformata--cd2dtextformatcd2dtextformat"></a><a name="cd2dtextformat"></a>CD2DTextFormat::CD2DTextFormat  
+##  <a name="cd2dtextformat"></a>CD2DTextFormat::CD2DTextFormat  
  构造 CD2DTextFormat 对象。  
   
 ```  
@@ -143,7 +152,7 @@ CD2DTextFormat(
  `bAutoDestroy`  
  指示所有者 (pParentTarget) 将销毁该对象。  
   
-##  <a name="a-namecreatea--cd2dtextformatcreate"></a><a name="create"></a>CD2DTextFormat::Create  
+##  <a name="create"></a>CD2DTextFormat::Create  
  创建 CD2DTextFormat。  
   
 ```  
@@ -153,14 +162,14 @@ virtual HRESULT Create(CRenderTarget* */);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-##  <a name="a-namedestroya--cd2dtextformatdestroy"></a><a name="destroy"></a>CD2DTextFormat::Destroy  
+##  <a name="destroy"></a>CD2DTextFormat::Destroy  
  销毁 CD2DTextFormat 对象。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namegeta--cd2dtextformatget"></a><a name="get"></a>CD2DTextFormat::Get  
+##  <a name="get"></a>CD2DTextFormat::Get  
  返回 IDWriteTextFormat 接口  
   
 ```  
@@ -170,7 +179,7 @@ IDWriteTextFormat* Get();
 ### <a name="return-value"></a>返回值  
  指向 IDWriteTextFormat 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namegetfontfamilynamea--cd2dtextformatgetfontfamilyname"></a><a name="getfontfamilyname"></a>CD2DTextFormat::GetFontFamilyName  
+##  <a name="getfontfamilyname"></a>CD2DTextFormat::GetFontFamilyName  
  获取字体系列名称的副本。  
   
 ```  
@@ -180,7 +189,7 @@ CString GetFontFamilyName() const;
 ### <a name="return-value"></a>返回值  
  CString 对象，其中包含当前的字体系列名称。  
   
-##  <a name="a-namegetlocalenamea--cd2dtextformatgetlocalename"></a><a name="getlocalename"></a>CD2DTextFormat::GetLocaleName  
+##  <a name="getlocalename"></a>CD2DTextFormat::GetLocaleName  
  获取区域设置名称的副本。  
   
 ```  
@@ -190,7 +199,7 @@ CString GetLocaleName() const;
 ### <a name="return-value"></a>返回值  
  CString 对象，其中包含当前区域设置名称。  
   
-##  <a name="a-nameisvalida--cd2dtextformatisvalid"></a><a name="isvalid"></a>CD2DTextFormat::IsValid  
+##  <a name="isvalid"></a>CD2DTextFormat::IsValid  
  检查资源的有效性  
   
 ```  
@@ -200,14 +209,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>返回值  
  如果资源是有效，则为，TRUE否则为 FALSE。  
   
-##  <a name="a-namemptextformata--cd2dtextformatmptextformat"></a><a name="m_ptextformat"></a>CD2DTextFormat::m_pTextFormat  
+##  <a name="m_ptextformat"></a>CD2DTextFormat::m_pTextFormat  
  指向 IDWriteTextFormat 的指针。  
   
 ```  
 IDWriteTextFormat* m_pTextFormat;  
 ```  
   
-##  <a name="a-nameoperatoridwritetextformatstara--cd2dtextformatoperator-idwritetextformat"></a><a name="operator_idwritetextformat_star"></a>CD2DTextFormat::operator IDWriteTextFormat *  
+##  <a name="operator_idwritetextformat_star"></a>CD2DTextFormat::operator IDWriteTextFormat *  
  返回 IDWriteTextFormat 接口  
   
 ```  
@@ -217,7 +226,7 @@ operator IDWriteTextFormat*();
 ### <a name="return-value"></a>返回值  
  指向 IDWriteTextFormat 接口或者如果对象尚未初始化为 NULL 指针。  
   
-##  <a name="a-namerecreatea--cd2dtextformatrecreate"></a><a name="recreate"></a>CD2DTextFormat::ReCreate  
+##  <a name="recreate"></a>CD2DTextFormat::ReCreate  
  重新创建 CD2DTextFormat。  
   
 ```  

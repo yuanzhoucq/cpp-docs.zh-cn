@@ -10,7 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
-- afxanimationcontroller/CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::Create
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_delay
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_hold
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CDiscreteTransition : public CBaseTransition;
 ## <a name="requirements"></a>要求  
  **标头：** afxanimationcontroller.h  
   
-##  <a name="a-namecdiscretetransitiona--cdiscretetransitioncdiscretetransition"></a><a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
  构造一个离散转换对象并初始化其参数。  
   
 ```  
@@ -104,7 +109,7 @@ CDiscreteTransition(
  `hold`  
  若要保存该变量在其最终值所依据的时间量。  
   
-##  <a name="a-namecreatea--cdiscretetransitioncreate"></a><a name="create"></a>CDiscreteTransition::Create  
+##  <a name="create"></a>CDiscreteTransition::Create  
  调用转换库来创建封装的转换 COM 对象。  
   
 ```  
@@ -120,21 +125,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>返回值  
  如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
   
-##  <a name="a-namemdblfinalvaluea--cdiscretetransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
  末尾的过渡动画变量的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdelaya--cdiscretetransitionmdelay"></a><a name="m_delay"></a>CDiscreteTransition::m_delay  
+##  <a name="m_delay"></a>CDiscreteTransition::m_delay  
  用于瞬时切换到最终值延迟的时间量。  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
-##  <a name="a-namemholda--cdiscretetransitionmhold"></a><a name="m_hold"></a>CDiscreteTransition::m_hold  
+##  <a name="m_hold"></a>CDiscreteTransition::m_hold  
  若要保存该变量在其最终值所依据的时间量。  
   
 ```  

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl::CIPAddressCtrl
+- AFXCMN/CIPAddressCtrl::ClearAddress
+- AFXCMN/CIPAddressCtrl::Create
+- AFXCMN/CIPAddressCtrl::CreateEx
+- AFXCMN/CIPAddressCtrl::GetAddress
+- AFXCMN/CIPAddressCtrl::IsBlank
+- AFXCMN/CIPAddressCtrl::SetAddress
+- AFXCMN/CIPAddressCtrl::SetFieldFocus
+- AFXCMN/CIPAddressCtrl::SetFieldRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +103,14 @@ class CIPAddressCtrl : public CWnd
 ## <a name="requirements"></a>要求  
  **标头：** afxcmn.h  
   
-##  <a name="a-namecipaddressctrla--cipaddressctrlcipaddressctrl"></a><a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
+##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
  创建一个 `CIPAddressCtrl` 对象。  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="a-nameclearaddressa--cipaddressctrlclearaddress"></a><a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
+##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
  清除 IP 地址控件的内容。  
   
 ```  
@@ -110,7 +120,7 @@ void ClearAddress();
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecreatea--cipaddressctrlcreate"></a><a name="create"></a>CIPAddressCtrl::Create  
+##  <a name="create"></a>CIPAddressCtrl::Create  
  创建 IP 地址控件，并将其附加到`CIPAddressCtrl`对象。  
   
 ```  
@@ -146,7 +156,7 @@ virtual BOOL Create(
   
  如果您想要扩展的窗口样式用于您的控件，调用[CreateEx](#createex)而不是**创建**。  
   
-##  <a name="a-namecreateexa--cipaddressctrlcreateex"></a><a name="createex"></a>CIPAddressCtrl::CreateEx  
+##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
  调用此函数可创建的控件 （子窗口），并将其与关联`CIPAddressCtrl`对象。  
   
 ```  
@@ -180,7 +190,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>备注  
  使用`CreateEx`而不是[创建](#create)应用扩展的窗口样式、 指定的 Windows 扩展的样式前言**WS_EX_**。  
   
-##  <a name="a-namegetaddressa--cipaddressctrlgetaddress"></a><a name="getaddress"></a>CIPAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
  检索 IP 地址控件中的所有四个字段的地址值。  
   
 ```  
@@ -222,7 +232,7 @@ int GetAddress(DWORD& dwAddress);
 |2|8 到 15|  
 |3|0 到 7|  
   
-##  <a name="a-nameisblanka--cipaddressctrlisblank"></a><a name="isblank"></a>CIPAddressCtrl::IsBlank  
+##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
  确定 IP 地址控件中的所有字段都为空。  
   
 ```  
@@ -235,7 +245,7 @@ BOOL IsBlank() const;
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetaddressa--cipaddressctrlsetaddress"></a><a name="setaddress"></a>CIPAddressCtrl::SetAddress  
+##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
  设置 IP 地址控件中的所有四个字段的地址值。  
   
 ```  
@@ -274,7 +284,7 @@ void SetAddress(DWORD dwAddress);
 |2|8 到 15|  
 |3|0 到 7|  
   
-##  <a name="a-namesetfieldfocusa--cipaddressctrlsetfieldfocus"></a><a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
+##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
  将键盘焦点设置为 IP 地址控件中指定的字段。  
   
 ```  
@@ -288,7 +298,7 @@ void SetFieldFocus(WORD nField);
 ### <a name="remarks"></a>备注  
  此成员函数实现的行为的 Win32 消息[IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetfieldrangea--cipaddressctrlsetfieldrange"></a><a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
+##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
  设置 IP 地址控件中指定的字段的范围。  
   
 ```  

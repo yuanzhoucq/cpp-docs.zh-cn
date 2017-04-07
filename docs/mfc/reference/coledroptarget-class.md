@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
+- AFXOLE/COleDropTarget
+- AFXOLE/COleDropTarget::COleDropTarget
+- AFXOLE/COleDropTarget::OnDragEnter
+- AFXOLE/COleDropTarget::OnDragLeave
+- AFXOLE/COleDropTarget::OnDragOver
+- AFXOLE/COleDropTarget::OnDragScroll
+- AFXOLE/COleDropTarget::OnDrop
+- AFXOLE/COleDropTarget::OnDropEx
+- AFXOLE/COleDropTarget::Register
+- AFXOLE/COleDropTarget::Revoke
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +99,7 @@ class COleDropTarget : public CCmdTarget
 ## <a name="requirements"></a>要求  
  **标头︰** afxole.h  
   
-##  <a name="a-namecoledroptargeta--coledroptargetcoledroptarget"></a><a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
  构造类的对象`COleDropTarget`。  
   
 ```  
@@ -99,7 +109,7 @@ COleDropTarget();
 ### <a name="remarks"></a>备注  
  调用[注册](#register)将此对象与窗口相关联。  
   
-##  <a name="a-nameondragentera--coledroptargetondragenter"></a><a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
  第一次光标拖到窗口中时由框架调用。  
   
 ```  
@@ -141,7 +151,7 @@ virtual DROPEFFECT OnDragEnter(
   
  有关详细信息，请参阅[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameondragleavea--coledroptargetondragleave"></a><a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
  当光标离开窗口中，实际上在拖动操作时由框架调用。  
   
 ```  
@@ -157,7 +167,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  有关详细信息，请参阅[IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameondragovera--coledroptargetondragover"></a><a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
  将光标拖到窗口时由框架调用。  
   
 ```  
@@ -202,7 +212,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCOleContainer #&21;](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="a-nameondragscrolla--coledroptargetondragscroll"></a><a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
  由之前调用框架调用[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)以确定是否`point`滚动区域中。  
   
 ```  
@@ -238,7 +248,7 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="remarks"></a>备注  
  当您想要为此事件提供特殊行为时，重写此函数。 此函数的默认实现调用[CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)，它将返回`DROPEFFECT_NONE`和光标拖到窗口的边框内的默认滚动区域时滚动窗口。  
   
-##  <a name="a-nameondropa--coledroptargetondrop"></a><a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>COleDropTarget::OnDrop  
  拖放操作发生时由框架调用。  
   
 ```  
@@ -278,7 +288,7 @@ virtual BOOL OnDrop(
   
  有关详细信息，请参阅[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameondropexa--coledroptargetondropex"></a><a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
  拖放操作发生时由框架调用。  
   
 ```  
@@ -328,7 +338,7 @@ virtual DROPEFFECT OnDropEx(
   
  有关详细信息，请参阅[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameregistera--coledroptargetregister"></a><a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>COleDropTarget::Register  
  调用此函数以向 OLE Dll 作为有效的放置目标注册您的窗口。  
   
 ```  
@@ -347,7 +357,7 @@ BOOL Register(CWnd* pWnd);
   
  有关详细信息，请参阅[RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namerevokea--coledroptargetrevoke"></a><a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>COleDropTarget::Revoke  
  销毁已注册为放置目标，通过调用任何窗口之前调用此函数[注册](#register)以去除的放置目标的列表。  
   
 ```  

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleLinksDialog
+- AFXODLGS/COleLinksDialog
+- AFXODLGS/COleLinksDialog::COleLinksDialog
+- AFXODLGS/COleLinksDialog::DoModal
+- AFXODLGS/COleLinksDialog::m_el
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +103,7 @@ class COleLinksDialog : public COleDialog
 ## <a name="requirements"></a>要求  
  **标头︰** afxodlgs.h  
   
-##  <a name="a-namedomodala--colelinksdialogdomodal"></a><a name="domodal"></a>COleLinksDialog::DoModal  
+##  <a name="domodal"></a>COleLinksDialog::DoModal  
  显示 OLE 编辑链接对话框。  
   
 ```  
@@ -118,7 +122,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>备注  
  如果您想要通过设置成员的初始化各种对话框控件[m_el](#m_el)结构中，您应该这么做，然后再调`DoModal`，但在构造对话框对象之后。  
   
-##  <a name="a-namecolelinksdialoga--colelinksdialogcolelinksdialog"></a><a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
+##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
  构造 `COleLinksDialog` 对象。  
   
 ```  
@@ -145,7 +149,7 @@ COleLinksDialog (
 ### <a name="remarks"></a>备注  
  此函数只构造`COleLinksDialog`对象。 若要显示对话框中，调用[DoModal](#domodal)函数。  
   
-##  <a name="a-namemela--colelinksdialogmel"></a><a name="m_el"></a>COleLinksDialog::m_el  
+##  <a name="m_el"></a>COleLinksDialog::m_el  
  类型的结构**OLEUIEDITLINKS**用来控制编辑链接对话框中的行为。  
   
 ```  

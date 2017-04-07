@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::scheduler_resource_allocation_error
+- scheduler_resource_allocation_error
+- CONCRT/concurrency::scheduler_resource_allocation_error
+- CONCRT/concurrency::scheduler_resource_allocation_error::scheduler_resource_allocation_error
+- CONCRT/concurrency::scheduler_resource_allocation_error::get_error_code
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 52233a99e1d1a715fc7d52599ffeff18a3c2c34b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 84f32bb6192057c9d5872147cc8ef0bd2c13b349
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error 类
@@ -52,15 +55,15 @@ class scheduler_resource_allocation_error : public std::exception;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[scheduler_resource_allocation_error 构造函数](#ctor)|已重载。 构造 `scheduler_resource_allocation_error` 对象。|  
+|[scheduler_resource_allocation_error](#ctor)|已重载。 构造 `scheduler_resource_allocation_error` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[get_error_code 方法](#get_error_code)|返回导致异常的错误代码。|  
+|[get_error_code](#get_error_code)|返回导致异常的错误代码。|  
   
 ## <a name="remarks"></a>备注  
  对从并发运行时中的操作系统调用失败时，通常将引发此异常。 通常从调用 Win32 方法 `GetLastError` 返回的错误代码将转换为类型 `HRESULT` 的值，并且可以使用 `get_error_code` 方法检索。  
@@ -75,7 +78,7 @@ class scheduler_resource_allocation_error : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="a-namegeterrorcodea-geterrorcode"></a><a name="get_error_code"></a>get_error_code 
+##  <a name="get_error_code"></a>get_error_code 
 
  返回导致异常的错误代码。  
   
@@ -86,7 +89,7 @@ HRESULT get_error_code() const throw();
 ### <a name="return-value"></a>返回值  
  `HRESULT`导致异常的错误值。  
   
-##  <a name="a-namectora-schedulerresourceallocationerror"></a><a name="ctor"></a>scheduler_resource_allocation_error 
+##  <a name="ctor"></a>scheduler_resource_allocation_error 
 
  构造 `scheduler_resource_allocation_error` 对象。  
   
@@ -107,5 +110,5 @@ explicit _CRTIMP scheduler_resource_allocation_error(
  `HRESULT`导致异常的错误值。  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
+ [并发命名空间](concurrency-namespace.md)
 

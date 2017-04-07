@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
-- ATL.CRBMultiMap
-- ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::FindFirstWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextValueWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextWithKey
+- ATLCOLL/ATL::CRBMultiMap::Insert
+- ATLCOLL/ATL::CRBMultiMap::RemoveKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +112,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>要求  
  **标头︰** atlcoll.h  
   
-##  <a name="a-namecrbmultimapa--crbmultimapcrbmultimap"></a><a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
  构造函数。  
   
 ```
@@ -126,7 +131,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities #&85;](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmultimapcrbmultimap"></a><a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
+##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
  析构函数。  
   
 ```
@@ -138,7 +143,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。  
   
-##  <a name="a-namefindfirstwithkeya--crbmultimapfindfirstwithkey"></a><a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
  调用此方法，以找到具有给定键的第一个元素的位置。  
   
 ```
@@ -160,7 +165,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>示例  
  请参阅示例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="a-namegetnextvaluewithkeya--crbmultimapgetnextvaluewithkey"></a><a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
  调用此方法以获取与给定的键关联的值并更新位置值。  
   
 ```
@@ -190,7 +195,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>示例  
  请参阅示例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="a-namegetnextwithkeya--crbmultimapgetnextwithkey"></a><a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
  调用此方法以获取具有给定的键相关联的元素，并更新位置值。  
   
 ```
@@ -217,7 +222,7 @@ CPair* GetNextWithKey(
   
  请参阅的文档的基类[CRBTree](../../atl/reference/crbtree-class.md)有关可用的其他方法的信息。  
   
-##  <a name="a-nameinserta--crbmultimapinsert"></a><a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>CRBMultiMap::Insert  
  调用此方法来插入到映射的元素对。  
   
 ```
@@ -240,7 +245,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>示例  
  请参阅示例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="a-nameremovekeya--crbmultimapremovekey"></a><a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
  调用此方法以删除所有给定键的键/值元素。  
   
 ```

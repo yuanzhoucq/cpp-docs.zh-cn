@@ -58,8 +58,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 54325f60b0d1714cab68f17152609a8980bc2a60
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b0dabfdf6540a09a08f7b7a3dec05fd5aa9d07fa
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
@@ -110,14 +111,6 @@ unsigned long _inpd(
 ## <a name="libraries"></a>库  
  [C 运行时库](../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
-  
 ## <a name="see-also"></a>另请参阅  
  [控制台和端口 I/O](../c-runtime-library/console-and-port-i-o.md)   
  [_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

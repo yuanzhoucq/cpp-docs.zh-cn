@@ -10,8 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispatchImpl
-- ATL.IDispatchImpl
-- ATL::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispatchImpl::GetTypeInfo
+- ATLCOM/ATL::IDispatchImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispatchImpl::Invoke
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +120,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
   
-##  <a name="a-namegetidsofnamesa--idispatchimplgetidsofnames"></a><a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames  
  将一组名称映射为对应的一组调度标识符。  
   
 ```
@@ -131,7 +135,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>备注  
  请参阅[IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettypeinfoa--idispatchimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
  检索双重接口的类型信息。  
   
 ```
@@ -144,7 +148,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>备注  
  请参阅[IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettypeinfocounta--idispatchimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
  确定是否有可用于双重接口的类型信息。  
   
 ```
@@ -154,14 +158,14 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>备注  
  See `IDispatch::GetTypeInfoCount` in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameidispatchimpla--idispatchimplidispatchimpl"></a><a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
+##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
  构造函数。 调用`AddRef`管理双重接口的类型信息的受保护的成员变量上。 析构函数调用**版本**。  
   
 ```
 IDispatchImpl();
 ```  
   
-##  <a name="a-nameinvokea--idispatchimplinvoke"></a><a name="invoke"></a>IDispatchImpl::Invoke  
+##  <a name="invoke"></a>IDispatchImpl::Invoke  
  提供访问权限的方法和属性公开的双重接口。  
   
 ```

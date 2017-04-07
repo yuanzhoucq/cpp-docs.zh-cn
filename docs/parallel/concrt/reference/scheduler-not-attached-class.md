@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::scheduler_not_attached
+- scheduler_not_attached
+- CONCRT/concurrency::scheduler_not_attached
+- CONCRT/concurrency::scheduler_not_attached::scheduler_not_attached
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ee1cbe219b7a1fc5a646afd5e975e84be949f65
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 5e0ec52a5b204d33f391d367d36d6ab3e9af6d74
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached 类
@@ -52,9 +54,9 @@ class scheduler_not_attached : public std::exception;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[scheduler_not_attached 构造函数](#ctor)|已重载。 构造 `scheduler_not_attached` 对象。|  
+|[scheduler_not_attached](#ctor)|已重载。 构造 `scheduler_not_attached` 对象。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -66,7 +68,7 @@ class scheduler_not_attached : public std::exception;
   
  **命名空间：** 并发  
   
-##  <a name="a-namectora-schedulernotattached"></a><a name="ctor"></a>scheduler_not_attached 
+##  <a name="ctor"></a>scheduler_not_attached 
 
  构造 `scheduler_not_attached` 对象。  
   

@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 49084f97470965f2b3d8fec627f0d0c92f4ec522
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 00a892376691f0d73b6ce0483cccf8bb063c43b4
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="directory-control"></a>目录控制
@@ -45,18 +45,18 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="directory-control-routines"></a>目录控制例程  
   
-|例程|使用|.NET Framework 等效项|  
-|-------------|---------|-------------------------------|  
-|[_chdir、_wchdir](../c-runtime-library/reference/chdir-wchdir.md)|更改当前工作目录|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_chdrive](../c-runtime-library/reference/chdrive.md)|更改当前驱动器|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_getcwd、_wgetcwd](../c-runtime-library/reference/getcwd-wgetcwd.md)|获取默认驱动器的当前工作目录|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_getdcwd、_wgetdcwd](../c-runtime-library/reference/getdcwd-wgetdcwd.md)|获取指定驱动器的当前工作目录|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_getdiskfree](../c-runtime-library/reference/getdiskfree.md)|使用磁盘驱动器的相关信息填充 `_diskfree_t` 结构。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_getdrive](../c-runtime-library/reference/getdrive.md)|获取当前（默认）驱动器|[System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)|  
-|[_getdrives](../c-runtime-library/reference/getdrives.md)|返回一个表示当前可用磁盘驱动器的位掩码。|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[_mkdir、_wmkdir](../c-runtime-library/reference/mkdir-wmkdir.md)|创建新目录|[System::IO::Directory::CreateDirectory](https://msdn.microsoft.com/en-us/library/system.io.directory.createdirectory.aspx)、[System::IO::DirectoryInfo::CreateSubdirectory](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.createsubdirectory.aspx)|  
-|[_rmdir、_wrmdir](../c-runtime-library/reference/rmdir-wrmdir.md)|移除目录|[System::IO::Directory::Delete](https://msdn.microsoft.com/en-us/library/system.io.directory.delete.aspx)|  
-|[_searchenv、_wsearchenv](../c-runtime-library/reference/searchenv-wsearchenv.md)、[_searchenv_s、_wsearchenv_s](../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)|在指定路径中搜索给定的文件|不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
+|例程|使用|  
+|-------------|---------|  
+|[_chdir、_wchdir](../c-runtime-library/reference/chdir-wchdir.md)|更改当前工作目录|  
+|[_chdrive](../c-runtime-library/reference/chdrive.md)|更改当前驱动器|  
+|[_getcwd、_wgetcwd](../c-runtime-library/reference/getcwd-wgetcwd.md)|获取默认驱动器的当前工作目录|  
+|[_getdcwd、_wgetdcwd](../c-runtime-library/reference/getdcwd-wgetdcwd.md)|获取指定驱动器的当前工作目录|  
+|[_getdiskfree](../c-runtime-library/reference/getdiskfree.md)|使用磁盘驱动器的相关信息填充 `_diskfree_t` 结构。|  
+|[_getdrive](../c-runtime-library/reference/getdrive.md)|获取当前（默认）驱动器|  
+|[_getdrives](../c-runtime-library/reference/getdrives.md)|返回一个表示当前可用磁盘驱动器的位掩码。|  
+|[_mkdir、_wmkdir](../c-runtime-library/reference/mkdir-wmkdir.md)|创建新目录|  
+|[_rmdir、_wrmdir](../c-runtime-library/reference/rmdir-wrmdir.md)|移除目录|  
+|[_searchenv、_wsearchenv](../c-runtime-library/reference/searchenv-wsearchenv.md)、[_searchenv_s、_wsearchenv_s](../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)|在指定路径中搜索给定的文件|  
   
 ## <a name="see-also"></a>另请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)   

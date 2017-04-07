@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COccManager
+- AFXOCC/COccManager
+- AFXOCC/COccManager::CreateContainer
+- AFXOCC/COccManager::CreateDlgControls
+- AFXOCC/COccManager::CreateSite
+- AFXOCC/COccManager::GetDefBtnCode
+- AFXOCC/COccManager::IsDialogMessage
+- AFXOCC/COccManager::IsLabelControl
+- AFXOCC/COccManager::IsMatchingMnemonic
+- AFXOCC/COccManager::OnEvent
+- AFXOCC/COccManager::PostCreateDialog
+- AFXOCC/COccManager::PreCreateDialog
+- AFXOCC/COccManager::SetDefaultButton
+- AFXOCC/COccManager::SplitDialogTemplate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +94,7 @@ class COccManager : public CNoTrackObject
 ## <a name="requirements"></a>要求  
  **标头︰** afxocc.h  
   
-##  <a name="a-namecreatecontainera--coccmanagercreatecontainer"></a><a name="createcontainer"></a>COccManager::CreateContainer  
+##  <a name="createcontainer"></a>COccManager::CreateContainer  
  由框架创建的控件容器调用。  
   
 ```  
@@ -98,7 +111,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ### <a name="remarks"></a>备注  
  有关创建自定义网站的详细信息，请参阅[COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)。  
   
-##  <a name="a-namecreatedlgcontrolsa--coccmanagercreatedlgcontrols"></a><a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
+##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
  调用此函数可创建所指定的 ActiveX 控件`pOccDialogInfo`参数。  
   
 ```  
@@ -130,7 +143,7 @@ virtual BOOL CreateDlgControls(
 ### <a name="return-value"></a>返回值  
  非零，如果成功，则创建控件否则为零。  
   
-##  <a name="a-namecreatesitea--coccmanagercreatesite"></a><a name="createsite"></a>COccManager::CreateSite  
+##  <a name="createsite"></a>COccManager::CreateSite  
  由框架调用以创建控制站点，由指向该容器承载`pCtrlCont`。  
   
 ```  
@@ -149,7 +162,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
   
  每个控件容器可以承载多个站点。 创建更多的站点具有多个调用`CreateSite`。  
   
-##  <a name="a-namegetdefbtncodea--coccmanagergetdefbtncode"></a><a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
  调用此函数可确定控件是否为默认按钮。  
   
 ```  
@@ -169,7 +182,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
   
 - **0**控件不是一个按钮。  
   
-##  <a name="a-nameisdialogmessagea--coccmanagerisdialogmessage"></a><a name="isdialogmessage"></a>COccManager::IsDialogMessage  
+##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage  
  由框架来确定消息是否适用于指定对话框中，如果是，处理的消息调用。  
   
 ```  
@@ -193,7 +206,7 @@ virtual BOOL IsDialogMessage(
   
  重写此函数可为消息发送到指定的对话框中提供自定义行为。  
   
-##  <a name="a-nameislabelcontrola--coccmanagerislabelcontrol"></a><a name="islabelcontrol"></a>COccManager::IsLabelControl  
+##  <a name="islabelcontrol"></a>COccManager::IsLabelControl  
  调用此函数可确定指定的控件是一个标签控件。  
   
 ```  
@@ -211,7 +224,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ### <a name="remarks"></a>备注  
  Label 控件是指像任何控件是下一步在排序中的标签。  
   
-##  <a name="a-nameismatchingmnemonica--coccmanagerismatchingmnemonic"></a><a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
+##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
  调用此函数来确定是否当前的助记键匹配由该控件表示。  
   
 ```  
@@ -237,7 +250,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameoneventa--coccmanageronevent"></a><a name="onevent"></a>COccManager::OnEvent  
+##  <a name="onevent"></a>COccManager::OnEvent  
  由框架来处理指定的事件调用。  
   
 ```  
@@ -267,7 +280,7 @@ virtual BOOL OnEvent(
 ### <a name="remarks"></a>备注  
  重写此函数可自定义默认事件处理过程。  
   
-##  <a name="a-nameprecreatedialoga--coccmanagerprecreatedialog"></a><a name="precreatedialog"></a>COccManager::PreCreateDialog  
+##  <a name="precreatedialog"></a>COccManager::PreCreateDialog  
  由框架之前要处理 ActiveX 控件的对话框模板创建实际对话框中调用。  
   
 ```  
@@ -291,7 +304,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
   
  重写此函数可自定义创建一个承载 ActiveX 控件的对话框中的过程。  
   
-##  <a name="a-namepostcreatedialoga--coccmanagerpostcreatedialog"></a><a name="postcreatedialog"></a>COccManager::PostCreateDialog  
+##  <a name="postcreatedialog"></a>COccManager::PostCreateDialog  
  由框架来释放内存分配的对话框模板调用。  
   
 ```  
@@ -307,7 +320,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
   
  重写此函数可自定义清理使用对话框对象的任何资源的过程。  
   
-##  <a name="a-namesetdefaultbuttona--coccmanagersetdefaultbutton"></a><a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
  调用此函数可将控件设置为默认按钮。  
   
 ```  
@@ -331,7 +344,7 @@ static void AFX_CDECL SetDefaultButton(
 > [!NOTE]
 >  该控件必须具有**OLEMISC_ACTSLIKEBUTTON**设置状态位。 有关详细信息**OLEMISC**标志，请参见[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)中的主题[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesplitdialogtemplatea--coccmanagersplitdialogtemplate"></a><a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
+##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
  由框架拆分从公共对话框控件的 ActiveX 控件调用。  
   
 ```  

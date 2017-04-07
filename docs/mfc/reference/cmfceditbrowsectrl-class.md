@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCEditBrowseCtrl
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableFileBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableFolderBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::GetMode
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnAfterUpdate
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnBrowse
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnChangeLayout
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnDrawBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnIllegalFileName
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::SetBrowseButtonImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +139,7 @@ class CMFCEditBrowseCtrl : public CEdit
 ## <a name="requirements"></a>要求  
  **标头︰** afxeditbrowsectrl.h  
   
-##  <a name="a-nameenablebrowsebuttona--cmfceditbrowsectrlenablebrowsebutton"></a><a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
+##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
  显示或不在当前的编辑浏览控件上显示浏览按钮。  
   
 ```  
@@ -149,7 +160,7 @@ void EnableBrowseButton(
   
  如果`bEnable`参数是`TRUE`，该控件的浏览模式是`BrowseMode_Default`; 否则为浏览模式是`BrowseMode_None`。 有关浏览模式的详细信息，请参阅[GetMode](#getmode)方法。  
   
-##  <a name="a-nameenablefilebrowsebuttona--cmfceditbrowsectrlenablefilebrowsebutton"></a><a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
+##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
  在当前的编辑浏览控件中显示浏览按钮并将控件放入*文件浏览*模式。  
   
 ```  
@@ -174,7 +185,7 @@ void EnableFileBrowseButton(
   
  有关可用标志的完整列表，请参阅[OPENFILENAME 结构](https://msdn.microsoft.com/library/ms646839.aspx)。  
   
-##  <a name="a-nameenablefolderbrowsebuttona--cmfceditbrowsectrlenablefolderbrowsebutton"></a><a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  在当前的编辑浏览控件中显示浏览按钮并将控件放入*文件夹浏览*模式。  
   
 ```  
@@ -184,7 +195,7 @@ void EnableFolderBrowseButton();
 ### <a name="remarks"></a>备注  
  当编辑浏览控件在文件夹浏览模式中并且用户单击浏览按钮时，该控件将显示标准文件夹选择对话框。  
   
-##  <a name="a-namegetmodea--cmfceditbrowsectrlgetmode"></a><a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
+##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
  检索当前的编辑浏览控件的浏览模式。  
   
 ```  
@@ -206,7 +217,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 ### <a name="remarks"></a>备注  
  默认情况下，`CMFCEditBrowseCtrl`对象初始化为`BrowseMode_None`模式。 修改使用浏览模式[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)， [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)，和[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)方法。  
   
-##  <a name="a-nameonafterupdatea--cmfceditbrowsectrlonafterupdate"></a><a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
+##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
  编辑浏览控件更新用的浏览操作的结果后，由框架调用。  
   
 ```  
@@ -216,7 +227,7 @@ virtual void OnAfterUpdate();
 ### <a name="remarks"></a>备注  
  重写此方法在派生类来实现自定义操作。  
   
-##  <a name="a-nameonbrowsea--cmfceditbrowsectrlonbrowse"></a><a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
+##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
  在用户单击编辑浏览控件的浏览按钮之后，由框架调用。  
   
 ```  
@@ -226,7 +237,7 @@ virtual void OnBrowse();
 ### <a name="remarks"></a>备注  
  使用此方法以执行自定义代码，当用户单击编辑浏览控件的浏览按钮。 派生您自己的类从`CMFCEditBrowseCtrl`类并重写其`OnBrowse`方法。 在该方法中，实现自定义浏览操作，并 （可选） 更新编辑浏览控件的文本框。 在您的应用程序，使用[EnableBrowseButton](#enablebrowsebutton)方法，以将编辑浏览控件放入*自定义浏览*模式。  
   
-##  <a name="a-nameonchangelayouta--cmfceditbrowsectrlonchangelayout"></a><a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
+##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
  重绘当前编辑浏览控件。  
   
 ```  
@@ -236,7 +247,7 @@ virtual void OnChangeLayout();
 ### <a name="remarks"></a>备注  
  在浏览模式的编辑浏览控件发生更改时，框架将调用此方法。 有关详细信息，请参阅[CMFCEditBrowseCtrl::GetMode](#getmode)。  
   
-##  <a name="a-nameondrawbrowsebuttona--cmfceditbrowsectrlondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
  由框架用于绘制编辑浏览控件上的浏览按钮调用。  
   
 ```  
@@ -263,7 +274,7 @@ virtual void OnDrawBrowseButton(
 ### <a name="remarks"></a>备注  
  重写此函数在派生类自定义浏览按钮的外观。  
   
-##  <a name="a-namesetbrowsebuttonimagea--cmfceditbrowsectrlsetbrowsebuttonimage"></a><a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
+##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
  在浏览按钮编辑浏览控件上设置自定义映像。  
   
 ```  
@@ -295,7 +306,7 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ### <a name="remarks"></a>备注  
  此方法用于将自定义映像应用到浏览按钮。 默认情况下，该框架时，获取标准映像编辑浏览控件是否处于*文件浏览*或*文件夹浏览*模式。  
   
-##  <a name="a-nameonillegalfilenamea--cmfceditbrowsectrlonillegalfilename"></a><a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
+##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
  在编辑控件中输入了非法的文件名称时，由框架调用。  
   
 ```  
