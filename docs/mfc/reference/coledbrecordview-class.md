@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 8269a71e9528da5c3468b5eb37f5dce3a16b14fd
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 类
@@ -57,13 +57,13 @@ class COleDBRecordView : public CFormView
   
 ### <a name="protected-constructors"></a>受保护的构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[COleDBRecordView::COleDBRecordView](#coledbrecordview)|构造 `COleDBRecordView` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[COleDBRecordView::OnGetRowset](#ongetrowset)|返回一个标准`HRESULT`值。|  
 |[COleDBRecordView::OnMove](#onmove)|当前记录 （如果更新），可以在更新数据源，然后移动到指定的记录 （下一步、 上一个、 第一个或最后一个）。|  
@@ -76,7 +76,7 @@ class COleDBRecordView : public CFormView
 > [!NOTE]
 >  如果你正在使用的数据访问对象 (DAO) 类，而不是 OLE DB 使用者模板类，可以使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述︰ 数据库编程](../../data/data-access-programming-mfc-atl.md)。  
   
- `COleDBRecordView`将跟踪的行集中的用户的位置，以便记录视图可以更新用户界面。 当用户移动到的行集，如菜单项的记录视图禁用用户界面对象 \u2012 或移动工具栏按钮 \u2012 任一端进一步方向相同。  
+ `COleDBRecordView`将跟踪的行集中的用户的位置，以便记录视图可以更新用户界面。 如果用户移到行集中的任意一端，记录视图禁用用户界面对象 — 如菜单项或工具栏按钮-移动进一步方向相同。  
   
  有关行集类的详细信息，请参阅[使用 OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)文章。  
   
@@ -152,13 +152,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  以下标准命令 ID 值之一︰  
   
-- `ID_RECORD_FIRST`\u2012 将移动到记录集的第一个记录。  
+- `ID_RECORD_FIRST`— 将移动到记录集的第一个记录。  
   
-- `ID_RECORD_LAST`\u2012 移动到的最后记录的记录集。  
+- `ID_RECORD_LAST`— 将移动到最后一个记录的记录集。  
   
-- `ID_RECORD_NEXT`\u2012 将移动到记录集的下一个记录。  
+- `ID_RECORD_NEXT`— 将移动到记录集的下一个记录。  
   
-- `ID_RECORD_PREV`\u2012 将移到上一记录的记录集。  
+- `ID_RECORD_PREV`— 将移动到上一记录的记录集。  
   
 ### <a name="return-value"></a>返回值  
  如果移动已成功; 则为非 0如果移动请求被拒绝则否则为 0。  

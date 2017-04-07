@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmap-class"></a>CMap 类
@@ -90,13 +90,13 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMap::CMap](#cmap)|构造键映射到值的集合。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CMap::GetCount](#getcount)|在此地图中返回元素的数。|  
 |[CMap::GetHashTableSize](#gethashtablesize)|返回哈希表中的元素数。|  
@@ -115,9 +115,9 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[CMap::operator]](#operator_at)|将元素插入到映射 \u2012 运算符替换为`SetAt`。|  
+|[CMap::operator]](#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
   
 ## <a name="remarks"></a>备注  
  一旦已插入到映射的键 / 值对 （元素），你可以高效地检索或删除使用该密钥来访问它的对。 此外可以循环访问映射中的所有元素。  

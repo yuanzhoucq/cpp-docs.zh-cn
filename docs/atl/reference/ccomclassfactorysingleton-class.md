@@ -37,16 +37,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 7ff6f3a9d00c0f579077d9502aefad5cbea35f17
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 55d8fb96dfce1b278763cc348c605f8e76b5f56f
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 类
-此类派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md) ，并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)来构造一个对象。  
+此类派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)构造单个对象。  
   
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类及其成员。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,9 +57,9 @@ class CComClassFactorySingleton : public CComClassFactory
   
 #### <a name="parameters"></a>参数  
  `T`  
- 您的类。  
+ 你的类。  
   
- `CComClassFactorySingleton`派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md) ，并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)来构造一个对象。 每次调用`CreateInstance`方法只需查询此对象的接口指针。  
+ `CComClassFactorySingleton`派生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)并使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)构造单个对象。 每次调用`CreateInstance`方法只需查询此对象的接口指针。  
   
 ## <a name="members"></a>成员  
   
@@ -71,14 +71,14 @@ class CComClassFactorySingleton : public CComClassFactory
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
-|[CComClassFactorySingleton::m_spObj](#m_spobj)|[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)对象构造的`CComClassFactorySingleton`。|  
+|[CComClassFactorySingleton::m_spObj](#m_spobj)|[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)对象通过构造`CComClassFactorySingleton`。|  
   
 ## <a name="remarks"></a>备注  
- ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4)，其中声明`CComClassFactory`作为默认类工厂。 若要使用`CComClassFactorySingleton`，指定[DECLARE_CLASSFACTORY_SINGLETON](http://msdn.microsoft.com/library/0e4a3964-c03d-463e-884c-fe3b416db478)对象的类定义中的宏。 例如:   
+ ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明`CComClassFactory`作为默认类工厂。 若要使用`CComClassFactorySingleton`，指定[DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)对象的类定义中的宏。 例如:   
   
- [!code-cpp[NVC_ATL_COM&#10;](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM #10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CComObjectRootBase`  
@@ -95,7 +95,7 @@ class CComClassFactorySingleton : public CComClassFactory
  **标头︰** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactorySingleton::CreateInstance  
- 调用`QueryInterface`通过[m_spObj](#m_spobj)来检索接口指针。  
+ 调用`QueryInterface`通过[m_spObj](#m_spobj)检索的接口指针。  
   
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -103,19 +103,19 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
   
 ### <a name="parameters"></a>参数  
  `pUnkOuter`  
- [in]如果该对象被作为的一部分创建聚合时，然后`pUnkOuter`必须是未知的外部对象。 否则为`pUnkOuter`必须**NULL**。  
+ [in]如果该对象正在创建的聚合时，一部分然后`pUnkOuter`必须是未知的外部对象。 否则为`pUnkOuter`必须**NULL**。  
   
  `riid`  
  [in]所请求的接口的 IID。 如果`pUnkOuter`为非**NULL**，`riid`必须**IID_IUnknown**。  
   
  `ppvObj`  
- [out]指向由标识的接口指针的指针`riid`。 如果该对象不支持此接口，`ppvObj`设置为**NULL**。  
+ [out]指向由标识的接口指针的指针`riid`。 如果对象不支持此接口，`ppvObj`设置为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
 ##  <a name="m_spobj"></a>CComClassFactorySingleton::m_spObj  
- [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)对象构造的`CComClassFactorySingleton`。  
+ [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)对象通过构造`CComClassFactorySingleton`。  
   
 ```
 CComPtr<IUnknown> m_spObj;
@@ -124,7 +124,7 @@ CComPtr<IUnknown> m_spObj;
 ### <a name="remarks"></a>备注  
  每次调用[CreateInstance](#createinstance)方法只需查询此对象的接口指针。  
   
- 请注意，当前窗体的`m_spObj`提供了一项重大更改的一种方式，`CComClassFactorySingleton`曾在以前版本的 atl。 在早期版本中`CComClassFactorySingleton`作为类工厂，同时在服务器初始化过程中创建对象。 在 Visual c + +.NET 2003年，创建该对象是延迟，在首次请求。 此更改可能导致依赖早期初始化程序中出现错误。  
+ 请注意，当前窗体的`m_spObj`提供一项重大更改的方式，`CComClassFactorySingleton`处理在以前版本的 atl。 在早期版本中`CComClassFactorySingleton`作为类工厂，同时在服务器初始化过程中创建对象。 在 Visual c + +.NET 2003 中，该对象创建延迟，在首次请求。 此更改可能会导致程序依赖于早期初始化错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   

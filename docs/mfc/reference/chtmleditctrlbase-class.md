@@ -142,9 +142,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e5541025653cca908d5d0c7666a434aa3f81ab5b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a32d9df86837c5cafd27f8f876a703d0b3ec3bfe
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 类
@@ -162,122 +162,122 @@ template <class T> class CHtmlEditCtrlBase
   
 |名称|描述|  
 |----------|-----------------|  
-|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|指定要为特定标记在设计模式下显示的图像的标志符号表中添加一个条目。|  
-|[CHtmlEditCtrlBase::Bold](#bold)|将所选文本加粗状态之间切换。|  
+|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|将项添加到标志符号表中，指定显示在设计模式下的特定标记的图像。|  
+|[CHtmlEditCtrlBase::Bold](#bold)|切换所选文本加粗状态。|  
 |[CHtmlEditCtrlBase::Button](#button)|将覆盖当前所选内容上的按钮控件。|  
 |[CHtmlEditCtrlBase::CheckBox](#checkbox)|将覆盖当前所选内容上的复选框控件。|  
-|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|清除当前所选内容。|  
+|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|清除当前的选择。|  
 |[CHtmlEditCtrlBase::Copy](#copy)|将当前所选内容复制到剪贴板。|  
-|[CHtmlEditCtrlBase::Cut](#cut)|将当前选定内容复制到剪贴板，然后删除它。|  
+|[CHtmlEditCtrlBase::Cut](#cut)|将当前所选内容复制到剪贴板，然后删除它。|  
 |[CHtmlEditCtrlBase::Delete](#delete)|删除当前所选内容。|  
-|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|将覆盖当前所选内容上的下拉列表选择控件。|  
-|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|隐藏显示在设计模式下的标记的所有图像的标志符号表中移除所有项。|  
+|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|将覆盖对当前选定内容的下拉列表选择控件。|  
+|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|隐藏所有映像显示在设计模式下的标记的标志符号表中移除所有项。|  
 |[CHtmlEditCtrlBase::ExecCommand](#execcommand)|执行命令。|  
-|[CHtmlEditCtrlBase::Font](#font)|打开字体对话框中，以使用户能够更改文本颜色、 字体和字体大小均为当前所选内容。|  
-|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|返回一个元素位置属性是否为"绝对"。|  
+|[CHtmlEditCtrlBase::Font](#font)|打开字体对话框，以使用户能够更改文本颜色、 字体和当前选定的字体大小。|  
+|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|返回元素的位置属性是否为"绝对"。|  
 |[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|检索当前所选内容的背景色。|  
 |[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|检索当前块格式标记。|  
-|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|检索与可用的块格式标记相对应的字符串。|  
-|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|检索书签定位标记的名称。|  
+|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|检索对应于可用的块格式标记的字符串。|  
+|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|检索书签定位点的名称。|  
 |[CHtmlEditCtrlBase::GetDocument](#getdocument)|检索的文档对象。|  
 |[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|检索当前文档的 HTML。|  
 |[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|检索文档的标题。|  
-|[CHtmlEditCtrlBase::GetEvent](#getevent)|检索与事件对象，其中包含与最新的事件相关的信息的接口指针。|  
-|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|检索触发该事件的对象。|  
+|[CHtmlEditCtrlBase::GetEvent](#getevent)|检索到包含的最新事件相关的信息的事件对象的接口指针。|  
+|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|检索触发事件的对象。|  
 |[CHtmlEditCtrlBase::GetFontFace](#getfontface)|检索当前所选内容的字体名称。|  
 |[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|检索当前所选内容的字体大小。|  
 |[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|检索当前所选内容的前景色 （文本）。|  
-|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|在 web 浏览器返回当前页的安全区域。|  
-|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|指示是否已更改的 HTML 文档。|  
-|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|返回一个标志符号是否为具有的所有元素显示**styleFloat**属性。|  
+|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|在 web 浏览器中返回当前页的安全区域。|  
+|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|指示是否已更改 HTML 文档。|  
+|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|返回的所有元素是否显示标志符号**styleFloat**属性。|  
 |[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|返回是否 webbrowser 控件中显示字形来显示文档中的所有标记的位置。|  
-|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|检索是否 webbrowser 控件中显示区域标记的标志符号。|  
-|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|检索是否 webbrowser 控件中显示 br 标记的标志符号。|  
-|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|检索是否 webbrowser 控件中显示注释标记的标志符号。|  
-|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|检索是否 webbrowser 控件中显示 Microsoft Internet Explorer 4.0 中所示的所有标记。|  
-|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|检索是否 webbrowser 控件中显示的所有脚本标记标志符号。|  
-|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|检索是否 webbrowser 控件中显示的所有样式标记标志符号。|  
-|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|检索是否 webbrowser 控件中显示的所有未知的标记的标志符号。|  
-|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|将覆盖当前所选内容上的一条水平线。|  
+|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|检索 webbrowser 控件中显示区域标记的标志符号是否。|  
+|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|检索 webbrowser 控件中显示 br 标记的标志符号是否。|  
+|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|检索 webbrowser 控件中显示注释标记的标志符号是否。|  
+|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|检索是否 webbrowser 控件中显示 Microsoft Internet Explorer 4.0 版中所示的所有标记。|  
+|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|检索 webbrowser 控件中显示所有脚本标记的标志符号是否。|  
+|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|检索 webbrowser 控件中显示样式的所有标记的标志符号是否。|  
+|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|检索 webbrowser 控件中显示所有未知的标记的标志符号是否。|  
+|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|将覆盖当前所选内容上的一条横线。|  
 |[CHtmlEditCtrlBase::HyperLink](#hyperlink)|将插入当前所选内容上的超链接。|  
 |[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|执行粘贴操作与 Microsoft Internet Explorer 5 兼容。|  
-|[CHtmlEditCtrlBase::Iframe](#iframe)|将覆盖当前所选内容的嵌入式框架。|  
+|[CHtmlEditCtrlBase::Iframe](#iframe)|将覆盖对当前选定内容的嵌入式框架。|  
 |[CHtmlEditCtrlBase::Image](#image)|将覆盖当前所选内容上的图像。|  
 |[CHtmlEditCtrlBase::Indent](#indent)|一个缩进增量增加所选文本的缩进量。|  
 |[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|将覆盖当前所选内容上的框。|  
 |[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|将覆盖当前所选内容上的按钮控件。|  
 |[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|将插入当前所选内容上的隐藏的控件。|  
-|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|将覆盖图像控件在当前所选内容。|  
+|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|将覆盖当前所选内容上的图像的控件。|  
 |[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|将覆盖当前所选内容上的密码控件。|  
 |[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|将覆盖当前所选内容上的重置控件。|  
 |[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|将覆盖当前所选内容上的提交控件。|  
 |[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|将覆盖当前所选内容上的文件上载控件。|  
-|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|确定是否以静态方式定位元素。|  
+|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|确定是否静态定位元素。|  
 |[CHtmlEditCtrlBase::Is2DElement](#is2delement)|确定是否绝对定位元素。|  
-|[CHtmlEditCtrlBase::Italic](#italic)|切换斜体和倾斜之间当前所选内容。|  
-|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|中心格式设置块中当前所选内容所在。|  
-|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|左对齐的格式设置块中当前所选内容所在。|  
-|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|右对齐的格式设置块中当前所选内容所在。|  
-|[CHtmlEditCtrlBase::ListBox](#listbox)|将覆盖上当前所选内容的列表框中选择控件。|  
-|[CHtmlEditCtrlBase::Marquee](#marquee)|将覆盖当前所选内容空字幕。|  
+|[CHtmlEditCtrlBase::Italic](#italic)|切换当前选择斜体和倾斜之间。|  
+|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|中心格式块中当前所选内容所在。|  
+|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|左对齐格式块中当前所选内容所在。|  
+|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|右对齐格式块中当前所选内容所在。|  
+|[CHtmlEditCtrlBase::ListBox](#listbox)|将覆盖对当前选定内容的列表框选择控件。|  
+|[CHtmlEditCtrlBase::Marquee](#marquee)|将覆盖对当前选定内容空选框。|  
 |[CHtmlEditCtrlBase::NewDocument](#newdocument)|创建新文档。|  
-|[CHtmlEditCtrlBase::OrderList](#orderlist)|切换当前选择的排序的列表和普通格式化块之间。|  
-|[CHtmlEditCtrlBase::Outdent](#outdent)|减少了一个增量的缩进的格式设置块中当前所选内容所在。|  
-|[CHtmlEditCtrlBase::Paragraph](#paragraph)|将覆盖当前所选内容以换行符结尾。|  
-|[CHtmlEditCtrlBase::Paste](#paste)|将覆盖当前所选内容剪贴板的内容。|  
-|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|打印当前文档。|  
-|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|将打开打印预览窗口中当前文档使用默认的打印预览模板或自定义模板。|  
+|[CHtmlEditCtrlBase::OrderList](#orderlist)|切换当前选择的已排序的列表和普通格式化块之间。|  
+|[CHtmlEditCtrlBase::Outdent](#outdent)|减少了一个增量格式块的缩进中当前所选内容所在。|  
+|[CHtmlEditCtrlBase::Paragraph](#paragraph)|将覆盖对当前选定内容的换行符。|  
+|[CHtmlEditCtrlBase::Paste](#paste)|将覆盖对当前选定内容剪贴板的内容。|  
+|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|将打印当前文档。|  
+|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|将打开当前文档使用的默认打印预览模板或自定义模板的打印预览窗口。|  
 |[CHtmlEditCtrlBase::QueryStatus](#querystatus)|调用此方法来查询命令的状态。|  
 |[CHtmlEditCtrlBase::RadioButton](#radiobutton)|将覆盖当前所选内容上的单选控件。|  
 |[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|刷新当前文档。|  
-|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|从当前所选内容中删除格式设置标记。|  
-|[CHtmlEditCtrlBase::SaveAs](#saveas)|将当前网页保存到一个文件。|  
+|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|从当前所选内容中移除格式设置的标记。|  
+|[CHtmlEditCtrlBase::SaveAs](#saveas)|将当前网页保存到文件。|  
 |[CHtmlEditCtrlBase::SelectAll](#selectall)|选择整个文档。|  
-|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|允许绝对定位的元素，通过拖动来移动。|  
+|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|使绝对定位的元素，可以通过拖动来移动。|  
 |[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|元素的位置将属性设置为"绝对"或"静态"。|  
 |[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|设置原子选择模式。|  
-|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|打开和关闭自动 URL 检测。|  
+|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|开启自动 URL 检测和关闭。|  
 |[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|设置当前所选内容的背景色。|  
 |[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|设置当前块格式标记。|  
-|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|创建书签定位标记的当前选定内容或插入点。|  
-|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|选择哪个 CSS 级别 （CSS1 或 CSS2） 编辑器将支持，如果有的话。|  
+|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|创建当前选定内容或插入点的书签密钥。|  
+|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|选择哪些 CSS 级别 （CSS1 或 CSS2） 编辑器将支持，如果有的话。|  
 |[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|调用此方法以设置默认值撰写设置。|  
 |[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|设置设计模式。|  
-|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|禁用阴影线的边框，并具有编辑焦点的元素周围处理。|  
+|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|禁用阴影的边框，并具有编辑焦点的元素周围处理。|  
 |[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|设置当前文档的 HTML。|  
 |[CHtmlEditCtrlBase::SetFontFace](#setfontface)|设置当前所选内容的字体。|  
 |[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|设置当前所选内容的字体大小。|  
-|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|设置当前选定项的前景色 （文本）。|  
+|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|设置当前所选内容的前景色 （文本）。|  
 |[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|设置要与 Microsoft Internet Explorer 5 兼容的粘贴操作。|  
-|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|导致 webbrowser 控件中以更新调整大小或移动操作期间连续的元素的外观。|  
-|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|使多个所选内容。|  
-|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Webbrowser 控件中永远不会以更改鼠标指针的命令。|  
-|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|切换文本输入模式之间插入，并覆盖。|  
-|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|隐藏在设计模式中不可见元素。|  
-|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|显示标志符号的所有元素具有**styleFloat**属性。|  
-|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|显示标志符号来显示文档中的所有标记的位置。|  
+|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|导致 webbrowser 控件中以更新大小调整或移动操作期间的连续的元素的外观。|  
+|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|启用多个选择。|  
+|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Webbrowser 控件中决不要更改鼠标指针的命令。|  
+|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|切换的文本输入模式之间插入和覆盖。|  
+|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|隐藏在设计模式下的不可见元素。|  
+|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|显示标志符号的所有元素**styleFloat**属性。|  
+|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|显示标志符号来显示文档中所有标记的位置。|  
 |[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|显示区域的所有标记的标志符号。|  
 |[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|显示所有 br 标记的标志符号。|  
 |[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|显示所有注释标记的标志符号。|  
-|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|显示所有 Microsoft Internet Explorer 4.0 中所示的标签。|  
+|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|显示 Microsoft Internet Explorer 4.0 版中所示的所有标记。|  
 |[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|显示所有脚本标记的标志符号。|  
 |[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|显示样式的所有标记的标志符号。|  
 |[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|显示所有未知的标记的标志符号。|  
-|[CHtmlEditCtrlBase::TextArea](#textarea)|将覆盖上当前所选内容的多行文本输入的控件。|  
-|[CHtmlEditCtrlBase::TextBox](#textbox)|将覆盖当前所选内容上的文本控件。|  
-|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|从当前所选内容中删除所有书签。|  
+|[CHtmlEditCtrlBase::TextArea](#textarea)|将覆盖当前所选内容上的多行文本输入的控件。|  
+|[CHtmlEditCtrlBase::TextBox](#textbox)|将覆盖对当前选定内容的文本控件。|  
+|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|将删除当前所选内容中的任何书签。|  
 |[CHtmlEditCtrlBase::Underline](#underline)|切换当前所选内容之间有和无下划线。|  
 |[CHtmlEditCtrlBase::Unlink](#unlink)|从当前所选内容中删除任何超链接。|  
-|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|切换当前选择的排序的列表和普通格式化块之间。|  
+|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|切换当前选择的已排序的列表和普通格式化块之间。|  
   
 #### <a name="parameters"></a>参数  
  `T`  
  派生类的名称。  
   
 ## <a name="remarks"></a>备注  
- **CHtmlEditCtrlBase**提供用于 web 浏览器的 HTML 编辑命令，如成员函数[加粗](#bold)。 (或者，你可以调用[ExecCommand](#execcommand)执行**IDM_BOLD**命令。)  
+ **CHtmlEditCtrlBase**提供 webbrowser 控件中的 HTML 编辑命令，如用于成员函数[加粗](#bold)。 (或者，可以调用[标识符](#execcommand)执行**IDM_BOLD**命令。)  
   
- **CHtmlEditCtrlBase**不是为了独立的。 它旨在作为公开的 HTML 编辑功能的 webbrowser 控件中的派生类的基类 (请参阅[CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md)和[CHtmlEditView](../../mfc/reference/chtmleditview-class.md))。  
+ **CHtmlEditCtrlBase**不是独立的。 它可公开的 HTML 编辑 webbrowser 控件中的功能的派生类的基类 (请参阅[CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md)和[CHtmlEditView](../../mfc/reference/chtmleditview-class.md))。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CHtmlEditCtrlBase`  
@@ -286,7 +286,7 @@ template <class T> class CHtmlEditCtrlBase
  **标头：** afxhtml.h  
   
 ##  <a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
- 指定要为特定标记在设计模式下显示的图像的标志符号表中添加一个条目。  
+ 将项添加到标志符号表中，指定显示在设计模式下的特定标记的图像。  
   
 ```  
 HRESULT AddToGlyphTable(
@@ -308,33 +308,33 @@ HRESULT AddToGlyphTable(
  图像 URL。  
   
  *nTagType*  
- 标记类型︰ 0 表示图像为的开始标记。 1 表示映像是在结束标记。 2 表示图像的开始和结束标记。 必须用设置为 0 的标记类型添加 br 和注释等的单个标记。  
+ 标记类型︰ 0 意味着映像适用于的开始标记。 1 意味着映像适用于仅结束标记。 2 意味着映像适用于开始和结束标记。 必须设置为 0 的标记类型添加如巴西和注释的单个标记。  
   
  *nAlignment*  
- 对齐方式 （仅限矩形元素）︰ 此参数指示该图像是为具有对齐特性的元素。 左 = 0 时，中心 = 1、 右 = 2，和未定义 = 3。 左、 右或居中属性必须显式设置的元素上。  
+ 对齐方式 （仅限矩形元素）︰ 此参数指示映像是为具有对齐特性的元素。 左 = 0，center = 1、 右 = 2，和未定义 = 3。 左、 右或 center 特性必须显式设置元素上。  
   
  *nPosInfo*  
- 定位信息。 确定哪些级联样式表 (CSS) 定位值标志符号应用的其中静态定位 = 0，绝对定位 = 1，相对定位 = 2，并且所有 = 3。 此字段使你可以指定一个标志符号时它不定位的标记和另一个标志符号，以定位到该标记时显示一个定位点。  
+ 定位信息。 确定哪些级联样式表 (CSS) 定位值标志符号适用范围，其中静态定位 = 0，绝对定位 = 1，相对定位为 2，且所有 = 3。 此字段使你可以指定一个标志符号的标记时它不定位和另一个标志符号时定位标记显示定位点。  
   
  *nDirection*  
- 方向。 此参数指定的图像的基于当前语言从右向左阅读顺序标记。 0 指定从左到右、 1 指定从右到左、 2 指定自上而下的顺序、 3 指定底部到顶部，和 4 指定所有。 通常将此字段设置为 4。  
+ 方向。 此参数指定的图像的基于当前语言的阅读顺序的标记。 0 指定从左到右、 1 指定右到左、 2 指定自上而下的顺序、 3 指定底部到顶部，和 4 指定了所有。 此外，你通常会将此字段设置为 4。  
   
  *nImgWidth*  
- 图像的宽度以像素为单位。  
+ 以像素为单位图像宽度。  
   
  *nImgHeight*  
- 图像高度 （像素）。  
+ 以像素为单位为图像高度。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 参数的详细信息，请参阅"标志符号表字符串格式"中[使用编辑标志符号](https://msdn.microsoft.com/library/aa969614.aspx)。  
+ 有关参数的详细信息，请参阅"标志符号表字符串格式"[使用编辑标志符号](https://msdn.microsoft.com/library/aa969614.aspx)。  
   
- 此方法可发送[IDM_ADDTOGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769891.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_ADDTOGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769891.aspx)到 WebBrowser 控件。  
   
 ##  <a name="bold"></a>CHtmlEditCtrlBase::Bold  
- 将所选文本加粗状态之间切换。  
+ 切换所选文本加粗状态。  
   
 ```  
 HRESULT Bold() const;  
@@ -344,7 +344,7 @@ HRESULT Bold() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_BOLD 命令 ID](https://msdn.microsoft.com/library/aa769861.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_BOLD 命令 ID](https://msdn.microsoft.com/library/aa769861.aspx)到 WebBrowser 控件。  
   
 ##  <a name="button"></a>CHtmlEditCtrlBase::Button  
  将覆盖当前所选内容上的按钮控件。  
@@ -361,7 +361,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_BUTTON 命令 ID](https://msdn.microsoft.com/library/aa769966.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_BUTTON 命令 ID](https://msdn.microsoft.com/library/aa769966.aspx)到 WebBrowser 控件。  
   
 ##  <a name="checkbox"></a>CHtmlEditCtrlBase::CheckBox  
  将覆盖当前所选内容上的复选框控件。  
@@ -372,16 +372,16 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szId`  
- 该复选框控件的 ID。  
+ 复选框控件的 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_CHECKBOX 命令 ID](https://msdn.microsoft.com/library/aa769972.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_CHECKBOX 命令 ID](https://msdn.microsoft.com/library/aa769972.aspx)到 WebBrowser 控件。  
   
 ##  <a name="clearselection"></a>CHtmlEditCtrlBase::ClearSelection  
- 清除当前所选内容。  
+ 清除当前的选择。  
   
 ```  
 HRESULT ClearSelection() const;  
@@ -391,7 +391,7 @@ HRESULT ClearSelection() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_CLEARSELECTION 命令 ID](https://msdn.microsoft.com/library/aa770038.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_CLEARSELECTION 命令 ID](https://msdn.microsoft.com/library/aa770038.aspx)到 WebBrowser 控件。  
   
 ##  <a name="copy"></a>CHtmlEditCtrlBase::Copy  
  将当前所选内容复制到剪贴板。  
@@ -404,10 +404,10 @@ HRESULT Copy() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_COPY 命令 ID](https://msdn.microsoft.com/library/aa769872.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_COPY 命令 ID](https://msdn.microsoft.com/library/aa769872.aspx)到 WebBrowser 控件。  
   
 ##  <a name="cut"></a>CHtmlEditCtrlBase::Cut  
- 将当前选定内容复制到剪贴板，然后删除它。  
+ 将当前所选内容复制到剪贴板，然后删除它。  
   
 ```  
 HRESULT Cut() const;  
@@ -417,7 +417,7 @@ HRESULT Cut() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_CUT 命令 ID](https://msdn.microsoft.com/library/aa769875.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_CUT 命令 ID](https://msdn.microsoft.com/library/aa769875.aspx)到 WebBrowser 控件。  
   
 ##  <a name="delete"></a>CHtmlEditCtrlBase::Delete  
  删除当前所选内容。  
@@ -430,10 +430,10 @@ HRESULT Delete() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_DELETE 命令 ID](https://msdn.microsoft.com/library/aa769876.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_DELETE 命令 ID](https://msdn.microsoft.com/library/aa769876.aspx)到 WebBrowser 控件。  
   
 ##  <a name="dropdownbox"></a>CHtmlEditCtrlBase::DropDownBox  
- 将覆盖当前所选内容上的下拉列表选择控件。  
+ 将覆盖对当前选定内容的下拉列表选择控件。  
   
 ```  
 HRESULT DropDownBox(LPCTSTR szId = NULL) const;  
@@ -447,10 +447,10 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_DROPDOWNBOX 命令 ID](https://msdn.microsoft.com/library/aa769984.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_DROPDOWNBOX 命令 ID](https://msdn.microsoft.com/library/aa769984.aspx)到 WebBrowser 控件。  
   
 ##  <a name="emptyglyphtable"></a>CHtmlEditCtrlBase::EmptyGlyphTable  
- 隐藏显示在设计模式下的标记的所有图像的标志符号表中移除所有项。  
+ 隐藏所有映像显示在设计模式下的标记的标志符号表中移除所有项。  
   
 ```  
 HRESULT EmptyGlyphTable() const;  
@@ -460,7 +460,7 @@ HRESULT EmptyGlyphTable() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_EMPTYGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769907.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_EMPTYGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769907.aspx)到 WebBrowser 控件。  
   
 ##  <a name="execcommand"></a>CHtmlEditCtrlBase::ExecCommand  
  执行命令。  
@@ -485,10 +485,10 @@ HRESULT ExecCommand(
  要执行的命令 ID。 有关列表，请参阅[MSHTML 命令标识符](https://msdn.microsoft.com/library/aa741315.aspx)。  
   
  `cmdExecOpt`  
- 取自值[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)枚举，它描述了该对象应如何执行该命令。  
+ 值取自[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)枚举，用于描述对象应如何执行该命令。  
   
  *pInVar*  
- 输入的参数。  
+ 输入自变量。  
   
  *pOutVar*  
  命令输出中。  
@@ -500,10 +500,10 @@ HRESULT ExecCommand(
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法提供的功能的[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)。  
+ 此方法提供的功能[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)。  
   
 ##  <a name="font"></a>CHtmlEditCtrlBase::Font  
- 打开字体对话框中，以使用户能够更改文本颜色、 字体和字体大小均为当前所选内容。  
+ 打开字体对话框，以使用户能够更改文本颜色、 字体和当前选定的字体大小。  
   
 ```  
 HRESULT Font() const;  
@@ -513,10 +513,10 @@ HRESULT Font() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_FONT 命令 ID](https://msdn.microsoft.com/library/aa769913.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_FONT 命令 ID](https://msdn.microsoft.com/library/aa769913.aspx)到 WebBrowser 控件。  
   
 ##  <a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition  
- 返回一个元素位置属性是否为"绝对"。  
+ 返回元素的位置属性是否为"绝对"。  
   
 ```  
 HRESULT GetAbsolutePosition(bool& bCurValue) const;  
@@ -524,7 +524,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- 如果该元素的位置属性设置为"绝对"。  
+ 如果元素的位置属性设置为"绝对"。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -547,7 +547,7 @@ HRESULT GetBackColor(int& nColor) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)到 WebBrowser 控件。  
   
 ##  <a name="getblockformat"></a>CHtmlEditCtrlBase::GetBlockFormat  
  检索当前块格式标记。  
@@ -558,16 +558,16 @@ HRESULT GetBlockFormat(CString& strFormat) const;
   
 ### <a name="parameters"></a>参数  
  *strFormat*  
- 当前块格式标记。  
+ 当前的块格式标记。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_BLOCKFMT 命令 ID](https://msdn.microsoft.com/library/aa769883.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_BLOCKFMT 命令 ID](https://msdn.microsoft.com/library/aa769883.aspx)到 WebBrowser 控件。  
   
 ##  <a name="getblockformatnames"></a>CHtmlEditCtrlBase::GetBlockFormatNames  
- 检索与可用的块格式标记相对应的字符串。  
+ 检索对应于可用的块格式标记的字符串。  
   
 ```  
 HRESULT GetBlockFormatNames(CStringArray& sa) const;  
@@ -575,16 +575,16 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
   
 ### <a name="parameters"></a>参数  
  *sa*  
- 可用的块格式标记，作为一个字符串数组。  
+ 可用的块格式标记，表示为一个字符串数组。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_GETBLOCKFMTS 命令 ID](https://msdn.microsoft.com/library/aa769884.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_GETBLOCKFMTS 命令 ID](https://msdn.microsoft.com/library/aa769884.aspx)到 WebBrowser 控件。  
   
 ##  <a name="getbookmark"></a>CHtmlEditCtrlBase::GetBookMark  
- 检索书签定位标记的名称。  
+ 检索书签定位点的名称。  
   
 ```  
 HRESULT GetBookMark(CString& strAnchor) const;  
@@ -592,7 +592,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
   
 ### <a name="parameters"></a>参数  
  *strAnchor*  
- 书签定位标记的名称。  
+ 书签定位点的名称。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -609,7 +609,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
   
 ### <a name="parameters"></a>参数  
  `ppDoc`  
- 文档对象中。  
+ 文档对象。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -623,7 +623,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
   
 ### <a name="parameters"></a>参数  
  `szHTML`  
- Html 代码。  
+ HTML。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -643,7 +643,7 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ##  <a name="getevent"></a>CHtmlEditCtrlBase::GetEvent  
- 检索与事件对象，其中包含与最新的事件相关的信息的接口指针。  
+ 检索到包含的最新事件相关的信息的事件对象的接口指针。  
   
 ```  
 HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;  
@@ -657,7 +657,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ##  <a name="geteventsrcelement"></a>CHtmlEditCtrlBase::GetEventSrcElement  
- 检索触发该事件的对象。  
+ 检索触发事件的对象。  
   
 ```  
 HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;  
@@ -685,9 +685,9 @@ HRESULT GetFontFace(CString& strFace) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 如果当前所选内容使用多个字体`strFace`将能为空字符串。  
+ 如果当前所选内容使用多个字体`strFace`将为空字符串。  
   
- 此方法可发送[IDM_FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx)到 WebBrowser 控件。  
   
 ##  <a name="getfontsize"></a>CHtmlEditCtrlBase::GetFontSize  
  检索当前所选内容的字体大小。  
@@ -701,10 +701,10 @@ HRESULT GetFontSize(short& nSize) const;
  字号。  
   
 ### <a name="return-value"></a>返回值  
- 返回 HTML 字体大小 (1-7)。 如果所选内容中包含多个字体大小，则返回 0。  
+ 返回的 HTML 字体大小 (1-7)。 如果所选内容包含多个字体大小，则返回 0。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx)到 WebBrowser 控件。  
   
 ##  <a name="getforecolor"></a>CHtmlEditCtrlBase::GetForeColor  
  检索当前所选内容的前景色 （文本）。  
@@ -721,10 +721,10 @@ HRESULT GetForeColor(int& nColor);
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx)到 WebBrowser 控件。  
   
 ##  <a name="getframezone"></a>CHtmlEditCtrlBase::GetFrameZone  
- 在 web 浏览器返回当前页的安全区域。  
+ 在 web 浏览器中返回当前页的安全区域。  
   
 ```  
 HRESULT GetFrameZone(short& nZone) const;  
@@ -738,10 +738,10 @@ HRESULT GetFrameZone(short& nZone) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_GETFRAMEZONE 命令 ID](https://msdn.microsoft.com/library/aa769916.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_GETFRAMEZONE 命令 ID](https://msdn.microsoft.com/library/aa769916.aspx)到 WebBrowser 控件。  
   
 ##  <a name="getisdirty"></a>CHtmlEditCtrlBase::GetIsDirty  
- 指示是否已更改的 HTML 文档。  
+ 指示是否已更改 HTML 文档。  
   
 ```  
 HRESULT GetIsDirty() const;  
@@ -751,7 +751,7 @@ HRESULT GetIsDirty() const;
  指示文档是否已更改。 `GetIsDirty`返回`HRESULT`从[IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910)。  
   
 ##  <a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags  
- 返回一个标志符号是否为具有的所有元素显示**styleFloat**属性。  
+ 返回的所有元素是否显示标志符号**styleFloat**属性。  
   
 ```  
 HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;  
@@ -759,7 +759,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- 如果为 true 的标志符号显示的所有元素具有**styleFloat**属性; 否则显示没有标志符号为 false。  
+ 如果为 true 的标志符号显示的所有元素**styleFloat**属性; 否则如果显示没有标志符号，则为 false。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -776,7 +776,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- Webbrowser 控件中显示字形来显示所有标记的位置在文档中; 如果为 true如果不是，false。  
+ 如果 webbrowser 控件中显示字形来显示文档; 中的所有标记的位置，则返回 true如果它不，false。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -785,7 +785,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
  有关详细信息，请参阅[IDM_SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx)。  
   
 ##  <a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags  
- 检索是否 webbrowser 控件中显示区域标记的标志符号。  
+ 检索 webbrowser 控件中显示区域标记的标志符号是否。  
   
 ```  
 HRESULT GetShowAreaTags(bool& bCurValue) const;  
@@ -793,7 +793,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- Webbrowser 控件中显示区域标记的标志符号 false 否则如果为 true。  
+ 如果 webbrowser 控件中显示区域标记的标志符号 false 如果它不为 true。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -802,7 +802,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
  有关详细信息，请参阅[IDM_SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx)。  
   
 ##  <a name="getshowbrtags"></a>CHtmlEditCtrlBase::GetShowBRTags  
- 检索是否 webbrowser 控件中显示 br 标记的标志符号。  
+ 检索 webbrowser 控件中显示 br 标记的标志符号是否。  
   
 ```  
 HRESULT GetShowBRTags(bool& bCurValue) const;  
@@ -819,7 +819,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
  有关详细信息，请参阅[IDM_SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx)。  
   
 ##  <a name="getshowcommenttags"></a>CHtmlEditCtrlBase::GetShowCommentTags  
- 检索是否 webbrowser 控件中显示注释标记的标志符号。  
+ 检索 webbrowser 控件中显示注释标记的标志符号是否。  
   
 ```  
 HRESULT GetShowCommentTags(bool& bCurValue) const;  
@@ -827,7 +827,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- 如果 webbrowser 控件中显示注释标记的标志符号 false 不是，如果为 true。  
+ 如果 webbrowser 控件中显示注释标记的标志符号 false 如果它不存在，则为 true。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -836,7 +836,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
  有关详细信息，请参阅[IDM_SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx)。  
   
 ##  <a name="getshowmisctags"></a>CHtmlEditCtrlBase::GetShowMiscTags  
- 检索是否 webbrowser 控件中显示 Microsoft Internet Explorer 4.0 中所示的所有标记。  
+ 检索是否 webbrowser 控件中显示 Microsoft Internet Explorer 4.0 版中所示的所有标记。  
   
 ```  
 HRESULT GetShowMiscTags(bool& bCurValue) const;  
@@ -844,7 +844,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- 如果 webbrowser 控件中显示所有标签显示为 Microsoft Internet Explorer 4.0，如果不是 false，则为 true。  
+ 如果 webbrowser 控件中显示 Microsoft Internet Explorer 4.0 版，false，如果它不显示的所有标记，则为 true。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -853,7 +853,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
  有关详细信息，请参阅[IDM_SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx)。  
   
 ##  <a name="getshowscripttags"></a>CHtmlEditCtrlBase::GetShowScriptTags  
- 检索是否 webbrowser 控件中显示的所有脚本标记标志符号。  
+ 检索 webbrowser 控件中显示所有脚本标记的标志符号是否。  
   
 ```  
 HRESULT GetShowScriptTags(bool& bCurValue) const;  
@@ -861,7 +861,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- 如果 webbrowser 控件中显示的所有脚本标记的标志符号 false 如果它不存在，则为 true。  
+ 如果 webbrowser 控件中显示所有脚本标记的标志符号 false 如果它不为 true。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -870,7 +870,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
  有关详细信息，请参阅[IDM_SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx)。  
   
 ##  <a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags  
- 检索是否 webbrowser 控件中显示的所有样式标记标志符号。  
+ 检索 webbrowser 控件中显示样式的所有标记的标志符号是否。  
   
 ```  
 HRESULT GetShowStyleTags(bool& bCurValue) const;  
@@ -878,7 +878,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- 如果 webbrowser 控件中显示的所有样式标记的标志符号 false 如果不为 true  
+ 如果 webbrowser 控件中显示所有样式标记的标志符号 false 如果它不为 true  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -887,7 +887,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
  有关详细信息，请参阅[IDM_SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx)。  
   
 ##  <a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags  
- 检索是否 webbrowser 控件中显示的所有未知的标记的标志符号。  
+ 检索 webbrowser 控件中显示所有未知的标记的标志符号是否。  
   
 ```  
 HRESULT GetShowUnknownTags(bool& bCurValue) const;  
@@ -895,7 +895,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>参数  
  `bCurValue`  
- 如果 webbrowser 控件中显示的标志符号的所有未知的标记，则返回 false 如果它不存在，则为 true。  
+ 如果 webbrowser 控件中显示的标志符号的所有未知的标记，则返回 false 如果没有，则为 true。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -904,7 +904,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
  有关详细信息，请参阅[IDM_SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx)。  
   
 ##  <a name="horizontalline"></a>CHtmlEditCtrlBase::HorizontalLine  
- 将覆盖当前所选内容上的一条水平线。  
+ 将覆盖当前所选内容上的一条横线。  
   
 ```  
 HRESULT HorizontalLine(LPCTSTR szId = NULL) const;  
@@ -912,13 +912,13 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  *szID*  
- 水平行的 ID。  
+ 水平行 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_HORIZONTALLINE 命令 ID](https://msdn.microsoft.com/library/aa769968.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_HORIZONTALLINE 命令 ID](https://msdn.microsoft.com/library/aa769968.aspx)到 WebBrowser 控件。  
   
 ##  <a name="hyperlink"></a>CHtmlEditCtrlBase::HyperLink  
  将插入当前所选内容上的超链接。  
@@ -935,10 +935,10 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_HYPERLINK 命令 ID](https://msdn.microsoft.com/library/aa769874.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_HYPERLINK 命令 ID](https://msdn.microsoft.com/library/aa769874.aspx)到 WebBrowser 控件。  
   
 ##  <a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste  
- 执行粘贴操作，则与 Internet Explorer 5 兼容。  
+ 执行与 Internet Explorer 5 兼容粘贴操作。  
   
 ```  
 HRESULT IE50Paste(LPCTSTR szData) const;  
@@ -952,10 +952,10 @@ HRESULT IE50Paste(LPCTSTR szData) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_IE50_PASTE 命令 ID](https://msdn.microsoft.com/library/aa769922.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_IE50_PASTE 命令 ID](https://msdn.microsoft.com/library/aa769922.aspx)到 WebBrowser 控件。  
   
 ##  <a name="iframe"></a>CHtmlEditCtrlBase::Iframe  
- 将覆盖当前所选内容的嵌入式框架。  
+ 将覆盖对当前选定内容的嵌入式框架。  
   
 ```  
 HRESULT Iframe(LPCTSTR szId = NULL) const;  
@@ -963,13 +963,13 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szId`  
- 嵌入式框架 ID。  
+ 内联帧的 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_IFRAME 命令 ID](https://msdn.microsoft.com/library/aa769969.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_IFRAME 命令 ID](https://msdn.microsoft.com/library/aa769969.aspx)到 WebBrowser 控件。  
   
 ##  <a name="image"></a>CHtmlEditCtrlBase::Image  
  将覆盖当前所选内容上的图像。  
@@ -980,13 +980,13 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szUrl`  
- 要插入的图像的路径和文件名称。  
+ 要插入的图像路径和文件名称。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_IMAGE 命令 ID](https://msdn.microsoft.com/library/aa769970.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_IMAGE 命令 ID](https://msdn.microsoft.com/library/aa769970.aspx)到 WebBrowser 控件。  
   
 ##  <a name="indent"></a>CHtmlEditCtrlBase::Indent  
  一个缩进增量增加所选文本的缩进量。  
@@ -999,7 +999,7 @@ HRESULT Indent() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INDENT 命令 ID](https://msdn.microsoft.com/library/aa769963.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INDENT 命令 ID](https://msdn.microsoft.com/library/aa769963.aspx)到 WebBrowser 控件。  
   
 ##  <a name="insfieldset"></a>CHtmlEditCtrlBase::InsFieldSet  
  将覆盖当前所选内容上的框。  
@@ -1010,13 +1010,13 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szId`  
- 框的 ID。  
+ 框 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INSFIELDSET 命令 ID](https://msdn.microsoft.com/library/aa769967.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INSFIELDSET 命令 ID](https://msdn.microsoft.com/library/aa769967.aspx)到 WebBrowser 控件。  
   
 ##  <a name="insinputbutton"></a>CHtmlEditCtrlBase::InsInputButton  
  将覆盖当前所选内容上的按钮控件。  
@@ -1033,7 +1033,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INSINPUTBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769971.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INSINPUTBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769971.aspx)到 WebBrowser 控件。  
   
 ##  <a name="insinputhidden"></a>CHtmlEditCtrlBase::InsInputHidden  
  将插入当前所选内容上的隐藏的控件。  
@@ -1044,16 +1044,16 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szId`  
- 隐藏控件的 ID。  
+ 隐藏的控件的 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INSINPUTHIDDEN 命令 ID](https://msdn.microsoft.com/library/aa769974.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INSINPUTHIDDEN 命令 ID](https://msdn.microsoft.com/library/aa769974.aspx)到 WebBrowser 控件。  
   
 ##  <a name="insinputimage"></a>CHtmlEditCtrlBase::InsInputImage  
- 将覆盖图像控件在当前所选内容。  
+ 将覆盖当前所选内容上的图像的控件。  
   
 ```  
 HRESULT InsInputImage(LPCTSTR szId = NULL) const;  
@@ -1061,13 +1061,13 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szId`  
- 图像控件的 ID。  
+ 图像控件 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INSINPUTIMAGE 命令 ID](https://msdn.microsoft.com/library/aa769975.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INSINPUTIMAGE 命令 ID](https://msdn.microsoft.com/library/aa769975.aspx)到 WebBrowser 控件。  
   
 ##  <a name="insinputpassword"></a>CHtmlEditCtrlBase::InsInputPassword  
  将覆盖当前所选内容上的密码控件。  
@@ -1084,7 +1084,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INSINPUTPASSWORD 命令 ID](https://msdn.microsoft.com/library/aa769976.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INSINPUTPASSWORD 命令 ID](https://msdn.microsoft.com/library/aa769976.aspx)到 WebBrowser 控件。  
   
 ##  <a name="insinputreset"></a>CHtmlEditCtrlBase::InsInputReset  
  将覆盖当前所选内容上的重置控件。  
@@ -1101,7 +1101,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INSINPUTRESET 命令 ID](https://msdn.microsoft.com/library/aa769978.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INSINPUTRESET 命令 ID](https://msdn.microsoft.com/library/aa769978.aspx)到 WebBrowser 控件。  
   
 ##  <a name="insinputsubmit"></a>CHtmlEditCtrlBase::InsInputSubmit  
  将覆盖当前所选内容上的提交控件。  
@@ -1112,13 +1112,13 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szId`  
- 用于提交控件 ID。  
+ 提交控件 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INSINPUTSUBMIT 命令 ID](https://msdn.microsoft.com/library/aa769979.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INSINPUTSUBMIT 命令 ID](https://msdn.microsoft.com/library/aa769979.aspx)到 WebBrowser 控件。  
   
 ##  <a name="insinputupload"></a>CHtmlEditCtrlBase::InsInputUpload  
  将覆盖当前所选内容上的文件上载控件。  
@@ -1135,10 +1135,10 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_INSINPUTUPLOAD 命令 ID](https://msdn.microsoft.com/library/aa769973.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_INSINPUTUPLOAD 命令 ID](https://msdn.microsoft.com/library/aa769973.aspx)到 WebBrowser 控件。  
   
 ##  <a name="is1delement"></a>CHtmlEditCtrlBase::Is1DElement  
- 确定是否以静态方式定位元素。  
+ 确定是否静态定位元素。  
   
 ```  
 HRESULT Is1DElement(bool& bValue) const;  
@@ -1146,13 +1146,13 @@ HRESULT Is1DElement(bool& bValue) const;
   
 ### <a name="parameters"></a>参数  
  `bValue`  
- 如果该元素否则是以静态方式定位，则返回 false，则为 true。  
+ 如果该元素否则已以静态方式定位，则返回 false，则为 true。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_1D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769885.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_1D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769885.aspx)到 WebBrowser 控件。  
   
 ##  <a name="is2delement"></a>CHtmlEditCtrlBase::Is2DElement  
  确定是否绝对定位元素。  
@@ -1169,10 +1169,10 @@ HRESULT Is2DElement(bool& bValue) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_2D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769886.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_2D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769886.aspx)到 WebBrowser 控件。  
   
 ##  <a name="italic"></a>CHtmlEditCtrlBase::Italic  
- 切换斜体和倾斜之间当前所选内容。  
+ 切换当前选择斜体和倾斜之间。  
   
 ```  
 HRESULT Italic() const;  
@@ -1182,10 +1182,10 @@ HRESULT Italic() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_ITALIC 命令 ID](https://msdn.microsoft.com/library/aa769988.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_ITALIC 命令 ID](https://msdn.microsoft.com/library/aa769988.aspx)到 WebBrowser 控件。  
   
 ##  <a name="justifycenter"></a>CHtmlEditCtrlBase::JustifyCenter  
- 中心格式设置块中当前所选内容所在。  
+ 中心格式块中当前所选内容所在。  
   
 ```  
 HRESULT JustifyCenter() const;  
@@ -1195,10 +1195,10 @@ HRESULT JustifyCenter() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_JUSTIFYCENTER 命令 ID](https://msdn.microsoft.com/library/aa769989.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_JUSTIFYCENTER 命令 ID](https://msdn.microsoft.com/library/aa769989.aspx)到 WebBrowser 控件。  
   
 ##  <a name="justifyleft"></a>CHtmlEditCtrlBase::JustifyLeft  
- 左对齐的格式设置块中当前所选内容所在。  
+ 左对齐格式块中当前所选内容所在。  
   
 ```  
 HRESULT JustifyLeft() const;  
@@ -1208,10 +1208,10 @@ HRESULT JustifyLeft() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_JUSTIFYLEFT 命令 ID](https://msdn.microsoft.com/library/aa770011.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_JUSTIFYLEFT 命令 ID](https://msdn.microsoft.com/library/aa770011.aspx)到 WebBrowser 控件。  
   
 ##  <a name="justifyright"></a>CHtmlEditCtrlBase::JustifyRight  
- 右对齐的格式设置块中当前所选内容所在。  
+ 右对齐格式块中当前所选内容所在。  
   
 ```  
 HRESULT JustifyRight() const;  
@@ -1221,10 +1221,10 @@ HRESULT JustifyRight() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_JUSTIFYRIGHT 命令 ID](https://msdn.microsoft.com/library/aa770013.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_JUSTIFYRIGHT 命令 ID](https://msdn.microsoft.com/library/aa770013.aspx)到 WebBrowser 控件。  
   
 ##  <a name="listbox"></a>CHtmlEditCtrlBase::ListBox  
- 将覆盖上当前所选内容的列表框中选择控件。  
+ 将覆盖对当前选定内容的列表框选择控件。  
   
 ```  
 HRESULT ListBox(LPCTSTR szId = NULL) const;  
@@ -1238,10 +1238,10 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_LISTBOX 命令 ID](https://msdn.microsoft.com/library/aa769985.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_LISTBOX 命令 ID](https://msdn.microsoft.com/library/aa769985.aspx)到 WebBrowser 控件。  
   
 ##  <a name="marquee"></a>CHtmlEditCtrlBase::Marquee  
- 将覆盖当前所选内容空字幕。  
+ 将覆盖对当前选定内容空选框。  
   
 ```  
 HRESULT Marquee(LPCTSTR szId = NULL) const;  
@@ -1255,7 +1255,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_MARQUEE 命令 ID](https://msdn.microsoft.com/library/aa769981.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_MARQUEE 命令 ID](https://msdn.microsoft.com/library/aa769981.aspx)到 WebBrowser 控件。  
   
 ##  <a name="newdocument"></a>CHtmlEditCtrlBase::NewDocument  
  创建新文档。  
@@ -1268,7 +1268,7 @@ HRESULT NewDocument() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ##  <a name="orderlist"></a>CHtmlEditCtrlBase::OrderList  
- 切换当前选择的排序的列表和普通格式化块之间。  
+ 切换当前选择的已排序的列表和普通格式化块之间。  
   
 ```  
 HRESULT OrderList(LPCTSTR szId = NULL) const;  
@@ -1282,10 +1282,10 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_ORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769982.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_ORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769982.aspx)到 WebBrowser 控件。  
   
 ##  <a name="outdent"></a>CHtmlEditCtrlBase::Outdent  
- 减少了一个增量的缩进的格式设置块中当前所选内容所在。  
+ 减少了一个增量格式块的缩进中当前所选内容所在。  
   
 ```  
 HRESULT Outdent() const;  
@@ -1295,10 +1295,10 @@ HRESULT Outdent() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_OUTDENT 命令 ID](https://msdn.microsoft.com/library/aa770015.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_OUTDENT 命令 ID](https://msdn.microsoft.com/library/aa770015.aspx)到 WebBrowser 控件。  
   
 ##  <a name="paragraph"></a>CHtmlEditCtrlBase::Paragraph  
- 将覆盖当前所选内容以换行符结尾。  
+ 将覆盖对当前选定内容的换行符。  
   
 ```  
 HRESULT Paragraph(LPCTSTR szId = NULL) const;  
@@ -1306,16 +1306,16 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szId`  
- 段 ID。  
+ 使段落 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_PARAGRAPH 命令 ID](https://msdn.microsoft.com/library/aa769983.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_PARAGRAPH 命令 ID](https://msdn.microsoft.com/library/aa769983.aspx)到 WebBrowser 控件。  
   
 ##  <a name="paste"></a>CHtmlEditCtrlBase::Paste  
- 将覆盖当前所选内容剪贴板的内容。  
+ 将覆盖对当前选定内容剪贴板的内容。  
   
 ```  
 HRESULT Paste() const;  
@@ -1325,10 +1325,10 @@ HRESULT Paste() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_PASTE 命令 ID](https://msdn.microsoft.com/library/aa770017.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_PASTE 命令 ID](https://msdn.microsoft.com/library/aa770017.aspx)到 WebBrowser 控件。  
   
 ##  <a name="printdocument"></a>CHtmlEditCtrlBase::PrintDocument  
- 打印当前文档。  
+ 将打印当前文档。  
   
 ```  
 HRESULT PrintDocument() const;  
@@ -1338,19 +1338,19 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
   
 ### <a name="parameters"></a>参数  
  `szPrintTemplate`  
- 打印模板; 路径如果未指定，则使用默认打印模板。  
+ 路径是打印模板;如果未指定，，使用默认打印模板。  
   
  *bShowPrintDialog*  
- 如果为 true，将显示打印对话框。  
+ 如果为 true，则显示打印对话框。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_PRINT 命令 ID](https://msdn.microsoft.com/library/aa769937.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_PRINT 命令 ID](https://msdn.microsoft.com/library/aa769937.aspx)到 WebBrowser 控件。  
   
 ##  <a name="printpreview"></a>CHtmlEditCtrlBase::PrintPreview  
- 将打开打印预览窗口中当前文档使用默认的打印预览模板或自定义模板。  
+ 将打开当前文档使用的默认打印预览模板或自定义模板的打印预览窗口。  
   
 ```  
 HRESULT PrintPreview() const;  
@@ -1365,7 +1365,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_PRINTPREVIEW 命令 ID](https://msdn.microsoft.com/library/aa769938.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_PRINTPREVIEW 命令 ID](https://msdn.microsoft.com/library/aa769938.aspx)到 WebBrowser 控件。  
   
 ##  <a name="querystatus"></a>CHtmlEditCtrlBase::QueryStatus  
  调用此方法来查询命令的状态。  
@@ -1376,10 +1376,10 @@ long QueryStatus(long cmdID) const;
   
 ### <a name="parameters"></a>参数  
  `cmdID`  
- 命令 ID。 命令标识符，将从`CGID_MSHTML`命令组。 这些命令在 Mshtmcid.h 中定义。 您还可以查找榜首联机[MSHTML 命令标识符](http://go.microsoft.com/fwlink/linkid=149220)。  
+ 命令 ID。 命令标识符，将从`CGID_MSHTML`命令组。 这些命令在 Mshtmcid.h 中定义。 你还可以找到在联机列表[MSHTML 命令标识符](http://go.microsoft.com/fwlink/linkid=149220)。  
   
 ### <a name="return-value"></a>返回值  
- 返回[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) ，该值指示的状态`cmdID`，或 0 的失败。  
+ 返回[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) ，该值指示的状态`cmdID`，或失败的 0。  
   
 ##  <a name="radiobutton"></a>CHtmlEditCtrlBase::RadioButton  
  将覆盖当前所选内容上的单选控件。  
@@ -1396,7 +1396,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_RADIOBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769977.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_RADIOBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769977.aspx)到 WebBrowser 控件。  
   
 ##  <a name="refreshdocument"></a>CHtmlEditCtrlBase::RefreshDocument  
  刷新当前文档。  
@@ -1409,10 +1409,10 @@ HRESULT RefreshDocument() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_REFRESH 命令 ID](https://msdn.microsoft.com/library/aa770020.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_REFRESH 命令 ID](https://msdn.microsoft.com/library/aa770020.aspx)到 WebBrowser 控件。  
   
 ##  <a name="removeformat"></a>CHtmlEditCtrlBase::RemoveFormat  
- 从当前所选内容中删除格式设置标记。  
+ 从当前所选内容中移除格式设置的标记。  
   
 ```  
 HRESULT RemoveFormat() const;  
@@ -1422,10 +1422,10 @@ HRESULT RemoveFormat() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_REMOVEFORMAT 命令 ID](https://msdn.microsoft.com/library/aa770021.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_REMOVEFORMAT 命令 ID](https://msdn.microsoft.com/library/aa770021.aspx)到 WebBrowser 控件。  
   
 ##  <a name="saveas"></a>CHtmlEditCtrlBase::SaveAs  
- 将当前网页保存到一个文件。  
+ 将当前网页保存到文件。  
   
 ```  
 HRESULT SaveAs(LPCTSTR szPath = NULL) const;  
@@ -1439,7 +1439,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_SAVEAS 命令 ID](https://msdn.microsoft.com/library/aa770024.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_SAVEAS 命令 ID](https://msdn.microsoft.com/library/aa770024.aspx)到 WebBrowser 控件。  
   
 ##  <a name="selectall"></a>CHtmlEditCtrlBase::SelectAll  
  选择整个文档。  
@@ -1452,10 +1452,10 @@ HRESULT SelectAll() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_SELECTALL 命令 ID](https://msdn.microsoft.com/library/aa770025.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_SELECTALL 命令 ID](https://msdn.microsoft.com/library/aa770025.aspx)到 WebBrowser 控件。  
   
 ##  <a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition  
- 允许绝对定位的元素，通过拖动来移动。  
+ 使绝对定位的元素，可以通过拖动来移动。  
   
 ```  
 HRESULT Set2DPosition(bool bNewValue) const;  
@@ -1469,7 +1469,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_2D_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769887.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_2D_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769887.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition  
  元素的位置将属性设置为"绝对"或"静态"。  
@@ -1480,13 +1480,13 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，该元素的 position 属性是"绝对";如果为 false，它是"静态"。  
+ 如果为 true，元素的位置属性是"绝对";如果为 false，它是"静态"。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_ABSOLUTE_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769889.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_ABSOLUTE_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769889.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection  
  设置原子选择模式。  
@@ -1497,16 +1497,16 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，所有元素都含有 ATOMICSELECTION 特性设置为 TRUE 将都可以选择仅作为一个单元。  
+ 如果为 true，具备 ATOMICSELECTION 属性设置为 TRUE 的所有元素将都能选择仅作为一个单元。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_ATOMICSELECTION 命令 ID](https://msdn.microsoft.com/library/aa769892.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_ATOMICSELECTION 命令 ID](https://msdn.microsoft.com/library/aa769892.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setautourldetectmode"></a>CHtmlEditCtrlBase::SetAutoURLDetectMode  
- 打开和关闭自动 URL 检测。  
+ 开启自动 URL 检测和关闭。  
   
 ```  
 HRESULT SetAutoURLDetectMode(bool bNewValue) const;  
@@ -1514,13 +1514,13 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，则启用自动 URL 检测。  
+ 如果为 true，启用了自动 URL 检测。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_AUTOURLDETECT_MODE 命令 ID](https://msdn.microsoft.com/library/aa769893.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_AUTOURLDETECT_MODE 命令 ID](https://msdn.microsoft.com/library/aa769893.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setbackcolor"></a>CHtmlEditCtrlBase::SetBackColor  
  设置当前所选内容的背景色。  
@@ -1541,7 +1541,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_BACKCOLOR_ 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_BACKCOLOR_ 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setblockformat"></a>CHtmlEditCtrlBase::SetBlockFormat  
  设置当前块格式标记。  
@@ -1558,10 +1558,10 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setbookmark"></a>CHtmlEditCtrlBase::SetBookMark  
- 创建书签定位标记的当前选定内容或插入点。  
+ 创建当前选定内容或插入点的书签密钥。  
   
 ```  
 HRESULT SetBookMark(LPCTSTR szAnchorName) const;  
@@ -1569,16 +1569,16 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
   
 ### <a name="parameters"></a>参数  
  *szAnchorName*  
- 锚点的名称。  
+ 定位点名称中。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_BOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa769873.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_BOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa769873.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setcsseditinglevel"></a>CHtmlEditCtrlBase::SetCSSEditingLevel  
- 选择哪个 CSS 级别 （CSS1 或 CSS2） 编辑器将支持，如果有的话。  
+ 选择哪些 CSS 级别 （CSS1 或 CSS2） 编辑器将支持，如果有的话。  
   
 ```  
 HRESULT SetCSSEditingLevel(short nLevel) const;  
@@ -1586,13 +1586,13 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
   
 ### <a name="parameters"></a>参数  
  `nLevel`  
- CSS 级别中。 如果不希望 CSS 支持，传递 0。  
+ CSS 级别中。 如果您不希望 CSS 支持，传递 0。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_CSSEDITING_LEVEL 命令 ID](https://msdn.microsoft.com/library/aa769903.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_CSSEDITING_LEVEL 命令 ID](https://msdn.microsoft.com/library/aa769903.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setdefaultcomposesettings"></a>CHtmlEditCtrlBase::SetDefaultComposeSettings  
  调用此方法以设置默认值撰写设置。  
@@ -1622,19 +1622,19 @@ HRESULT SetDefaultComposeSettings(
  字体背景色。  
   
  *bBold*  
- 通过为粗体文本，则返回 true。  
+ 传递 true 加粗文本。  
   
  `bItalic`  
- 通过为斜体文本，则返回 true。  
+ 传递 true 斜体的文本。  
   
  `bUnderline`  
- 传递的带下划线的文本，则返回 true。  
+ 通过适用于带下划线的文本。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_COMPOSESETTINGS 命令 ID](https://msdn.microsoft.com/library/aa769901.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_COMPOSESETTINGS 命令 ID](https://msdn.microsoft.com/library/aa769901.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setdesignmode"></a>CHtmlEditCtrlBase::SetDesignMode  
  设置设计模式。  
@@ -1645,13 +1645,13 @@ BOOL SetDesignMode(BOOL bMode) const;
   
 ### <a name="parameters"></a>参数  
  `bMode`  
- 如果为 true，打开设计模式。  
+ 如果为 true，则会将启用设计模式。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
   
 ##  <a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI  
- 禁用阴影线的边框，并具有编辑焦点的元素周围处理。  
+ 禁用阴影的边框，并具有编辑焦点的元素周围处理。  
   
 ```  
 HRESULT SetDisableEditFocusUI(bool bNewValue) const;  
@@ -1659,13 +1659,13 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，则应在该元素在设计模式，则具有"编辑焦点"时禁用阴影线的边框和站点的可选元素周围的句柄也就是说，当文本或元素的内容可以进行编辑。  
+ 如果为 true，应在元素所具有的设计模式，则在"编辑焦点"当禁用阴影的边框和站点可选择元素周围的句柄也就是说，当文本或元素内容可以进行编辑。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM_DISABLE_EDITFOCUS_UI 命令 ID](https://msdn.microsoft.com/library/aa769905.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM_DISABLE_EDITFOCUS_UI 命令 ID](https://msdn.microsoft.com/library/aa769905.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML  
  设置当前文档的 HTML。  
@@ -1676,7 +1676,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
   
 ### <a name="parameters"></a>参数  
  `szHTML`  
- Html 代码。  
+ HTML。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -1696,7 +1696,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM 字体名称命令 ID](https://msdn.microsoft.com/library/aa769880.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize  
  设置当前所选内容的字体大小。  
@@ -1713,10 +1713,10 @@ HRESULT SetFontSize(unsigned short size) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor  
- 设置当前选定项的前景色 （文本）。  
+ 设置当前所选内容的前景色 （文本）。  
   
 ```  
 HRESULT SetForeColor(LPCTSTR szColor) const;  
@@ -1734,7 +1734,7 @@ HRESULT SetForeColor(int nColor) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode  
  设置要与 Microsoft Internet Explorer 5 兼容的粘贴操作。  
@@ -1745,16 +1745,16 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，则所有粘贴操作都都符合 Internet Explorer 5;如果为 false，则粘贴操作可以与 Internet Explorer 5.5 兼容。  
+ 如果为 true，粘贴的所有操作都都与 Internet Explorer 5; 兼容如果为 false，粘贴操作可以与 Internet Explorer 5.5 兼容。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM IE50_PASTE_MODE 命令 ID](https://msdn.microsoft.com/library/aa769923.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM IE50_PASTE_MODE 命令 ID](https://msdn.microsoft.com/library/aa769923.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize  
- 使 web 浏览器来更新持续期间调整大小或移动操作后，而不是更新仅在完成时移动的元素的外观或调整大小。  
+ 导致 webbrowser 控件中以更新持续期间一个大小调整或移动操作，而不是更新仅在完成时移动的元素的外观或调整其大小。  
   
 ```  
 HRESULT SetLiveResize(bool bNewValue) const;  
@@ -1762,16 +1762,16 @@ HRESULT SetLiveResize(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，则将导致 webbrowser 控件中以更新调整大小或移动操作; 期间连续的元素的外观如果为 false，则它将更新仅在完成移动或重设大小。  
+ 如果为 true，将导致 webbrowser 控件中以更新大小调整或移动操作; 期间的连续的元素的外观如果为 false，则会更新仅在完成移动或重设大小。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM LIVERESIZE 命令 ID](https://msdn.microsoft.com/library/aa769928.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM LIVERESIZE 命令 ID](https://msdn.microsoft.com/library/aa769928.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect  
- 使多个所选内容。  
+ 启用多个选择。  
   
 ```  
 HRESULT SetMultiSelect(bool bNewValue) const;  
@@ -1779,16 +1779,16 @@ HRESULT SetMultiSelect(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，则允许供时同时用户按住 SHIFT 或 CTRL 键一次选择多个站点可选择元素。  
+ 如果为 true，允许当同时用户按住 SHIFT 或 CTRL 键一次选择多个站点可选元素。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM MULTIPLESELECTION 命令 ID](https://msdn.microsoft.com/library/aa769929.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM MULTIPLESELECTION 命令 ID](https://msdn.microsoft.com/library/aa769929.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor  
- Webbrowser 控件中永远不会以更改鼠标指针的命令。  
+ Webbrowser 控件中决不要更改鼠标指针的命令。  
   
 ```  
 HRESULT SetOverrideCursor(bool bNewValue) const;  
@@ -1796,16 +1796,16 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，webbrowser 控件中不会更改鼠标指针。  
+ 如果为 true，web 浏览器不会更改鼠标指针。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM OVERRIDE_CURSOR 命令 ID](https://msdn.microsoft.com/library/aa769932.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM OVERRIDE_CURSOR 命令 ID](https://msdn.microsoft.com/library/aa769932.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode  
- 切换文本输入模式之间插入，并覆盖。  
+ 切换的文本输入模式之间插入和覆盖。  
   
 ```  
 HRESULT SetOverwriteMode(bool bMode) const;  
@@ -1813,16 +1813,16 @@ HRESULT SetOverwriteMode(bool bMode) const;
   
 ### <a name="parameters"></a>参数  
  `bMode`  
- 如果为 true，则覆盖文本输入模式;如果为 false，则文本输入模式为 insert。  
+ 如果为 true，则覆盖文本输入模式;如果为 false，则文本输入模式是插入。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM 覆盖命令 ID](https://msdn.microsoft.com/library/aa770016.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM 覆盖命令 ID](https://msdn.microsoft.com/library/aa770016.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign  
- 隐藏在设计模式中不可见元素。  
+ 隐藏在设计模式下的不可见元素。  
   
 ```  
 HRESULT SetRespectVisInDesign(bool bNewValue) const;  
@@ -1830,16 +1830,16 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，任何具有可见性设置为"隐藏"或显示属性设置为"none"的元素不会显示在设计模式和浏览模式;如果为 false，将仅在浏览模式中显示这些元素。  
+ 如果为 true，任何具有可见性设置为"隐藏"或显示属性设置为"none"的元素不会显示在设计模式和浏览模式;如果为 false，则将仅在浏览模式下显示这些元素。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM RESPECTVISIBILITY_INDESIGN 命令 ID](https://msdn.microsoft.com/library/aa770023.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM RESPECTVISIBILITY_INDESIGN 命令 ID](https://msdn.microsoft.com/library/aa770023.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags  
- 显示标志符号的所有元素具有**styleFloat**属性。  
+ 显示标志符号的所有元素**styleFloat**属性。  
   
 ```  
 HRESULT SetShowAlignedSiteTags(bool bNewValue) const;  
@@ -1847,16 +1847,16 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，将显示具有的所有元素的标志符号**styleFloat**属性。  
+ 如果为 true，显示的所有元素的标志符号**styleFloat**属性。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWALIGNEDSITETAGS 命令 ID](https://msdn.microsoft.com/library/aa769947.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWALIGNEDSITETAGS 命令 ID](https://msdn.microsoft.com/library/aa769947.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags  
- 显示标志符号来显示文档中的所有标记的位置。  
+ 显示标志符号来显示文档中所有标记的位置。  
   
 ```  
 HRESULT SetShowAllTags(bool bNewValue) const;  
@@ -1864,13 +1864,13 @@ HRESULT SetShowAllTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，将显示字形来显示文档中的所有标记的位置。  
+ 如果为 true，则显示标志符号来显示文档中所有标记的位置。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags  
  显示区域的所有标记的标志符号。  
@@ -1881,13 +1881,13 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，将显示区域的所有标记的标志符号。  
+ 如果为 true，则显示区域的所有标记的标志符号。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags  
  显示所有 br 标记的标志符号。  
@@ -1904,7 +1904,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags  
  显示所有注释标记的标志符号。  
@@ -1921,10 +1921,10 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags  
- 显示所有 Microsoft Internet Explorer 4.0 中所示的标签。  
+ 显示 Microsoft Internet Explorer 4.0 版中所示的所有标记。  
   
 ```  
 HRESULT SetShowMiscTags(bool bNewValue) const;  
@@ -1932,13 +1932,13 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，将显示在 Microsoft Internet Explorer 4.0 中所示的所有标记。  
+ 如果为 true，则显示 Microsoft Internet Explorer 4.0 版中所示的所有标记。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags  
  显示所有脚本标记的标志符号。  
@@ -1955,7 +1955,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags  
  显示样式的所有标记的标志符号。  
@@ -1966,13 +1966,13 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>参数  
  `bNewValue`  
- 如果为 true，将显示所有样式标记的标志符号。  
+ 如果为 true，则显示样式的所有标记的标志符号。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx)到 WebBrowser 控件。  
   
 ##  <a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags  
  显示所有未知的标记的标志符号。  
@@ -1989,10 +1989,10 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx)到 WebBrowser 控件。  
   
 ##  <a name="textarea"></a>CHtmlEditCtrlBase::TextArea  
- 将覆盖上当前所选内容的多行文本输入的控件。  
+ 将覆盖当前所选内容上的多行文本输入的控件。  
   
 ```  
 HRESULT TextArea(LPCTSTR szId = NULL) const;  
@@ -2006,10 +2006,10 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM TEXTAREA 命令 ID](https://msdn.microsoft.com/library/aa769986.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM TEXTAREA 命令 ID](https://msdn.microsoft.com/library/aa769986.aspx)到 WebBrowser 控件。  
   
 ##  <a name="textbox"></a>CHtmlEditCtrlBase::TextBox  
- 将覆盖当前所选内容上的文本控件。  
+ 将覆盖对当前选定内容的文本控件。  
   
 ```  
 HRESULT TextBox(LPCTSTR szId = NULL) const;  
@@ -2023,10 +2023,10 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM 文本框中的命令 ID](https://msdn.microsoft.com/library/aa769980.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM 文本框中命令 ID](https://msdn.microsoft.com/library/aa769980.aspx)到 WebBrowser 控件。  
   
 ##  <a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark  
- 从当前所选内容中删除所有书签。  
+ 将删除当前所选内容中的任何书签。  
   
 ```  
 HRESULT UnBookmark() const;  
@@ -2036,7 +2036,7 @@ HRESULT UnBookmark() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM UNBOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa770034.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM UNBOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa770034.aspx)到 WebBrowser 控件。  
   
 ##  <a name="underline"></a>CHtmlEditCtrlBase::Underline  
  切换当前所选内容之间有和无下划线。  
@@ -2049,7 +2049,7 @@ HRESULT Underline() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM 下划线命令 ID](https://msdn.microsoft.com/library/aa770035.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM UNDERLINE 命令 ID](https://msdn.microsoft.com/library/aa770035.aspx)到 WebBrowser 控件。  
   
 ##  <a name="unlink"></a>CHtmlEditCtrlBase::Unlink  
  从当前所选内容中删除任何超链接。  
@@ -2062,10 +2062,10 @@ HRESULT Unlink() const;
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM 取消链接的命令 ID](https://msdn.microsoft.com/library/aa770037.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM 取消链接命令 ID](https://msdn.microsoft.com/library/aa770037.aspx)到 WebBrowser 控件。  
   
 ##  <a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList  
- 切换当前选择的排序的列表和普通格式化块之间。  
+ 切换当前选择的已排序的列表和普通格式化块之间。  
   
 ```  
 HRESULT UnorderList(LPCTSTR szId = NULL) const;  
@@ -2073,13 +2073,13 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>参数  
  `szId`  
- 无序列表的 ID。  
+ 未经排序的列表 ID。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法可发送[IDM UNORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769987.aspx)到 web 浏览器控件。  
+ 此方法可发送[IDM UNORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769987.aspx)到 WebBrowser 控件。  
   
 ## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

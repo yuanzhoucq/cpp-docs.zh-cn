@@ -62,9 +62,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: afcf1f37dbf0f55dc26c7258d130043bffc8c1a8
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|启动对可逆调用一系列的"事务"\u2012 `AddNew`，**编辑**，**删除**，和**更新**类的成员函数`CRecordset`\u2012 上连接的数据源。 数据源必须支持事务**BeginTrans**以产生任何影响。|  
+|[CDatabase::BeginTrans](#begintrans)|启动"事务"-可逆调用一系列`AddNew`，**编辑**，**删除**，和**更新**类的成员函数`CRecordset`-上连接的数据源。 数据源必须支持事务**BeginTrans**以产生任何影响。|  
 |[CDatabase::BindParameters](#bindparameters)|允许你将绑定之前调用的参数`CDatabase::ExecuteSQL`。|  
 |[CDatabase::Cancel](#cancel)|取消一个异步操作或从第二个线程的进程。|  
 |[CDatabase::CanTransact](#cantransact)|返回非零，如果数据源支持事务。|  
@@ -398,10 +398,10 @@ BOOL IsOpen() const;
  非零如果`CDatabase`当前连接对象; 否则为 0。  
   
 ##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
- 包含 ODBC 数据源连接 \u2012 的"连接句柄。"的公共句柄  
+ 包含 ODBC 数据源连接的公共句柄-的"连接句柄。"  
   
 ### <a name="remarks"></a>备注  
- 通常情况下，你将具有无需直接访问此成员变量。 框架在调用时相反，分配的句柄`OpenEx`或**打开**。 在调用时，框架将释放句柄**删除**运算符`CDatabase`对象。 请注意，**关闭**成员函数不释放句柄。  
+ 通常情况下，你将具有无需直接访问此成员变量。 相反，框架分配句柄，当您调用`OpenEx`或**打开**。 在调用时，框架将释放句柄**删除**运算符`CDatabase`对象。 请注意，**关闭**成员函数不释放句柄。  
   
  但是，某些情况下，可能需要直接使用该句柄。 例如，如果你需要直接而不是类通过调用 ODBC API 函数`CDatabase`，你可能需要连接句柄将作为参数传递。 请参阅下面的代码示例。  
   
@@ -445,7 +445,7 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>参数  
  `lpszDSN`  
- 指定一个名称将 ODBC 已通过 ODBC 管理员程序注册数据源名称 \u2012。 如果在指定 DSN 值`lpszConnect`(窗体中"DSN =\<数据源 1>")，它必须未中再次指定`lpszDSN`。 在这种情况下，`lpszDSN`应**NULL**。 否则，你可以将传递**NULL**如果你想要向用户显示数据源对话框中，用户可以在其中选择数据源。 有关详细信息，请参阅备注。  
+ 指定数据源名称 — 通过 ODBC 注册通过 ODBC 管理员程序的名称。 如果在指定 DSN 值`lpszConnect`(窗体中"DSN =\<数据源 1>")，它必须未中再次指定`lpszDSN`。 在这种情况下，`lpszDSN`应**NULL**。 否则，你可以将传递**NULL**如果你想要向用户显示数据源对话框中，用户可以在其中选择数据源。 有关详细信息，请参阅备注。  
   
  `bExclusive`  
  不支持在此版本的类库。 目前，断言失败时如果此参数为**TRUE**。 数据源是始终打开是因为共享 （非独占）。  
@@ -543,7 +543,7 @@ BOOL Rollback();
   请参阅文章[事务︰ 在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- 你在调用之前调用此成员函数 \u2012`OpenEx`或**打开**\u2012 重写默认数量的秒允许之前尝试的数据源连接超时。  
+ 调用此成员函数 — 之前调用`OpenEx`或**打开**-若要重写默认允许尝试数据前的秒数源连接超时。  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);

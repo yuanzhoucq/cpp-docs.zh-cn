@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 0cc29b21aa2279e51ba666d7447d913c4cc777d4
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
@@ -54,6 +54,8 @@ ms.lasthandoff: 03/29/2017
   
 ### <a name="run-time-object-model-services-macros"></a>运行时对象模型服务宏  
   
+
+
 |||  
 |-|-|  
 |[DECLARE_DYNAMIC](#declare_dynamic)|支持访问运行时类信息（必须在类声明中使用）。|  
@@ -70,12 +72,69 @@ ms.lasthandoff: 03/29/2017
  Microsoft 基础类库提供了两个特定于 OLE 的宏。  
   
 ### <a name="dynamic-creation-of-ole-objects"></a>OLE 对象的动态创建  
-  
+
+ 
+
+
+
+
+
+
 |||  
 |-|-|  
+|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|确定公共控件库是否实现了指定的 API。|
+|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|确定公共控件库是否实现了指定的 API。|
 |[DECLARE_OLECREATE](#declare_olecreate)|支持通过 OLE 自动化创建对象。|  
+|[DECLARE_OLECTLTYPE](#declare_olectltype)|声明**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。|
+|[DECLARE_PROPPAGEIDS](#declare_proppageids)|声明 OLE 控件提供的属性页以显示其属性的列表。|
 |[IMPLEMENT_OLECREATE](#implement_olecreate)|支持由 OLE 系统创建对象。|  
-  
+|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|实现**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。|  
+|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|任一此宏或[IMPLEMENT_OLECREATE](#implement_olecreate)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。 |
+
+## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+确定公共控件库是否实现了指定的 API。  
+   
+### <a name="syntax"></a>语法  
+  ```  
+AFX_COMCTL32_IF_EXISTS(  proc );  
+```
+### <a name="parameters"></a>参数  
+ `proc`  
+ 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。  
+   
+### <a name="remarks"></a>备注  
+ 使用此宏来确定是否公共控件库函数指定`proc`(而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。  
+   
+### <a name="requirements"></a>要求  
+ afxcomctl32.h，afxcomctl32.inl  
+   
+### <a name="see-also"></a>另请参阅  
+ [隔离 MFC 公共控件库](../isolation-of-the-mfc-common-controls-library.md)
+ [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
+ 
+## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+确定公共控件库是否实现指定的 API (这是 Unicode 版的[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists))。  
+   
+### <a name="syntax"></a>语法    
+```  
+AFX_COMCTL32_IF_EXISTS2( proc );  
+```
+### <a name="parameters"></a>参数  
+ `proc`  
+ 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。  
+   
+### <a name="remarks"></a>备注  
+ 使用此宏来确定是否公共控件库函数指定`proc`(而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。 此宏是 Unicode 版本的`AFX_COMCTL32_IF_EXISTS`。  
+   
+### <a name="requirements"></a>要求  
+ afxcomctl32.h，afxcomctl32.inl  
+   
+### <a name="see-also"></a>另请参阅  
+ [隔离 MFC 公共控件库](../isolation-of-the-mfc-common-controls-library.md)
+ [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
+
+
+
 ##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
  添加了派生类时访问的对象类的运行时信息的功能`CObject`。  
   
@@ -130,6 +189,51 @@ DECLARE_DYNCREATE(class_name)
 
 ### <a name="requirements"></a>要求  
  **标头：** afx.h 
+
+ 
+## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
+声明**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。  
+   
+### <a name="syntax"></a>语法    
+```
+DECLARE_OLECTLTYPE( class_name )  
+```
+### <a name="parameters"></a>参数  
+ *class_name*  
+ 控件类的名称。  
+   
+### <a name="remarks"></a>备注  
+ **GetUserTypeNameID**和`GetMiscStatus`是纯虚函数，在中声明`COleControl`。 因为这些函数是纯虚拟的它们必须被重写控件类中。 除了**DECLARE_OLECTLTYPE**，必须添加`IMPLEMENT_OLECTLTYPE`向控件类声明的宏。  
+   
+### <a name="requirements"></a>要求  
+ **标头︰** afxctl.h  
+   
+### <a name="see-also"></a>另请参阅  
+ [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
+ 
+
+## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
+声明 OLE 控件提供的属性页以显示其属性的列表。  
+   
+### <a name="syntax"></a>语法    
+```
+DECLARE_PROPPAGEIDS( class_name )  
+```
+### <a name="parameters"></a>参数  
+ *class_name*  
+ 拥有属性页的控件类名称。  
+   
+### <a name="remarks"></a>备注  
+ 使用`DECLARE_PROPPAGEIDS`宏在类声明的末尾。 然后，在定义类的成员函数的.cpp 文件，使用`BEGIN_PROPPAGEIDS`宏，为每个控件的属性页中，宏项和`END_PROPPAGEIDS`宏声明属性页列表的末尾。  
+  
+ 属性页的详细信息，请参阅文章[ActiveX 控件︰ 属性页](../mfc-activex-controls-property-pages.md)。  
+   
+### <a name="requirements"></a>要求  
+ **标头︰** afxctl.h  
+   
+### <a name="see-also"></a>另请参阅   
+ [BEGIN_PROPPAGEIDS](#begin_proppageids)   
+ [END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>DECLARE_SERIAL  
  生成必需的 c + + 标头代码`CObject`-派生可序列化的类。  
@@ -220,6 +324,83 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 
 ### <a name="requirements"></a>要求  
  **标头：** afx.h 
+
+## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+任一此宏或[IMPLEMENT_OLECREATE](#implement_olecreate)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。  
+   
+### <a name="syntax"></a>语法    
+```
+IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags, 
+    l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
+  
+```
+### <a name="parameters"></a>参数  
+ *class_name*  
+ 类的实际名称。  
+  
+ *external_name*  
+ 向其他应用程序 （用引号引起来） 公开的对象名称。  
+  
+ `nFlags`  
+ 包含一个或多个以下的标志︰  
+  
+-   `afxRegInsertable`允许在 OLE 对象的插入对象对话框中显示控件。    
+-   `afxRegApartmentThreading`ThreadingModel 到注册表中设置线程模型 = 单元。    
+-   **afxRegFreeThreading** ThreadingModel 到注册表中设置线程模型 = 免费。  
+  
+     你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)线程处理模型注册的详细信息的 Windows SDK 中。    
+ *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
+ 类的组件**CLSID**。  
+   
+### <a name="remarks"></a>备注  
+  
+> [!NOTE]
+>  如果你使用`IMPLEMENT_OLECREATE_FLAGS`，你可以指定通过使用支持你的对象的线程模型`nFlags`参数。 如果你想要支持仅单线程模型，使用`IMPLEMENT_OLECREATE`。  
+  
+ 外部名称是公开给其他应用程序的标识符。 客户端应用程序使用的外部名称从自动化服务器请求的此类对象。  
+  
+ OLE 类 ID 是对象的唯一 128 位标识符。 它由一个**长**、 两个**WORD**和八**字节**s，由表示*l*， *w1*， *w2*，和*b1*通过*b8*语法说明中。 应用程序向导和代码向导根据需要为你创建唯一的 OLE 类 Id。  
+   
+### <a name="requirements"></a>要求  
+ **标头：** afxdisp.h  
+   
+### <a name="see-also"></a>另请参阅  
+ [宏和全局函数](mfc-macros-and-globals.md)   
+ [DECLARE_OLECREATE](#declare_olecreate)   
+ [CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+
+
+## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
+实现**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。  
+   
+### <a name="syntax"></a>语法    
+```
+DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )  
+```
+### <a name="parameters"></a>参数  
+ *class_name*  
+ 控件类的名称。  
+  
+ *idsUserTypeName*  
+ 包含控件的外部名称的字符串资源 ID。  
+  
+ *dwOleMisc*  
+ 包含一个或多个标志一个枚举。 此枚举的详细信息，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+   
+### <a name="remarks"></a>备注  
+ 除了`IMPLEMENT_OLECTLTYPE`，必须添加**DECLARE_OLECTLTYPE**向控件类声明的宏。  
+  
+ **GetUserTypeNameID**成员函数将返回标识你的控件类的资源字符串。 `GetMiscStatus`返回**OLEMISC** bits 为您的控件。 此枚举指定设置说明杂项特征的控件的集合。 有关完整说明**OLEMISC**设置，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+  
+> [!NOTE]
+>  使用 ActiveX 控件向导的默认设置是︰ **OLEMISC_ACTIVATEWHENVISIBLE**， **OLEMISC_SETCLIENTSITEFIRST**， **OLEMISC_INSIDEOUT**， **OLEMISC_CANTLINKINSIDE**，和**OLEMISC_RECOMPOSEONRESIZE**。  
+   
+### <a name="requirements"></a>要求  
+ **标头︰** afxctl.h  
+   
+### <a name="see-also"></a>另请参阅  
+ [宏和全局函数](mfc-macros-and-globals.md)   
+ [DECLARE_OLECTLTYPE](#declare_olectltype)
 
 ##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
  生成为动态所需的 c + + 代码`CObject`-派生的类名称和层次结构中的位置与运行时访问的类。  
@@ -327,4 +508,5 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 ## <a name="see-also"></a>另请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+
 
