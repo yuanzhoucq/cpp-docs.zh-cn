@@ -47,9 +47,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7069e35a44dbb0dbd4ad8d5d2b9156ccfbc15c76
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 06c852081b5de8bd10de29f87310b56c7f2279ec
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 类
@@ -65,7 +65,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty](#cmfcpropertygridcolorproperty)|构造 `CMFCPropertyGridColorProperty` 对象。|  
 |`CMFCPropertyGridColorProperty::~CMFCPropertyGridColorProperty`|析构函数。|  
@@ -74,26 +74,26 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
   
 |名称|说明|  
 |----------|-----------------|  
-|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|使*自动*颜色选择对话框上的按钮。 (标记为标准自动按钮**自动**。)|  
-|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|使*其他*颜色选择对话框上的按钮。 (标准其他按钮标记为**其他颜色...**.)|  
-|`CMFCPropertyGridColorProperty::FormatProperty`|设置属性值的文本表示形式的格式。 (重写[CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty)。)|  
+|[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|使*自动*颜色选择对话框上的按钮。 (标准的自动按钮标记为**自动**。)|  
+|[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|使*其他*颜色选择对话框上的按钮。 (标准其他按钮标记为**其他颜色**。)|  
+|`CMFCPropertyGridColorProperty::FormatProperty`|设置属性值的文本表示形式的格式。 (重写[cmfcpropertygridproperty:: Formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty)。)|  
 |[CMFCPropertyGridColorProperty::GetColor](#getcolor)|获取属性的当前颜色。|  
-|`CMFCPropertyGridColorProperty::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|`CMFCPropertyGridColorProperty::OnClickButton`|当用户单击属性中包含的按钮时，由框架调用。 (重写[CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)。)|  
-|`CMFCPropertyGridColorProperty::OnDrawValue`|由框架调用以显示属性值。 (重写[CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue)。)|  
-|`CMFCPropertyGridColorProperty::OnEdit`|当用户要修改属性值时由框架调用。 (重写[CMFCPropertyGridProperty::OnEdit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit)。)|  
-|`CMFCPropertyGridColorProperty::OnUpdateValue`|当可编辑属性值已更改时由框架调用。 (重写[CMFCPropertyGridProperty::OnUpdateValue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue)。)|  
+|`CMFCPropertyGridColorProperty::GetThisClass`|由框架用于获取指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型关联的对象。|  
+|`CMFCPropertyGridColorProperty::OnClickButton`|当用户单击属性中包含的按钮时，由框架调用。 (重写[cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)。)|  
+|`CMFCPropertyGridColorProperty::OnDrawValue`|由框架调用以显示属性值。 (重写[cmfcpropertygridproperty:: Ondrawvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue)。)|  
+|`CMFCPropertyGridColorProperty::OnEdit`|当用户要修改属性值时由框架调用。 (重写[cmfcpropertygridproperty:: Onedit](../../mfc/reference/cmfcpropertygridproperty-class.md#onedit)。)|  
+|`CMFCPropertyGridColorProperty::OnUpdateValue`|当可编辑属性值已更改时由框架调用。 (重写[cmfcpropertygridproperty:: Onupdatevalue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue)。)|  
 |[CMFCPropertyGridColorProperty::SetColor](#setcolor)|设置属性的新颜色。|  
 |[CMFCPropertyGridColorProperty::SetColumnsNumber](#setcolumnsnumber)|指定当前颜色属性网格中的列数。|  
 |[CMFCPropertyGridColorProperty::SetOriginalValue](#setoriginalvalue)|设置可编辑属性的原始值。|  
   
 ## <a name="remarks"></a>备注  
- `CMFCPropertyGridColorProperty` 类支持可添加到属性列表控件的颜色属性。 有关详细信息，请参阅[CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)。  
+ `CMFCPropertyGridColorProperty` 类支持可添加到属性列表控件的颜色属性。 有关详细信息，请参阅[CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何构造 `CMFCPropertyGridColorProperty` 类的对象，以及如何使用 `CMFCPropertyGridColorProperty` 类的各种方法来配置此对象。 下面的代码介绍如何启用“自动”按钮和“其他”按钮，以及如何设置颜色和列数。 此示例摘自[新控件示例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_NewControls #&13;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls # 13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -125,16 +125,16 @@ CMFCPropertyGridColorProperty(
  属性的颜色值。  
   
  [in] `pPalette`  
- 指向指针的颜色的调色板。 默认值为 `NULL`。  
+ 指向一个颜色的调色板。 默认值为 `NULL`。  
   
  [in] `lpszDescr`  
- 属性说明。 默认值为 `NULL`。  
+ 属性说明中。 默认值为 `NULL`。  
   
  [in] `dwData`  
- 应用程序特定的数据，如整数或其他与属性关联的数据的指针。 默认值为 0。  
+ 应用程序特定数据，如整数或与属性关联的其他数据的指针。 默认值为 0。  
   
 ##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
- 使*自动*颜色选择对话框上的按钮。 (标记为标准自动按钮**自动**。)  
+ 使*自动*颜色选择对话框上的按钮。 (标准的自动按钮标记为**自动**。)  
   
 ```  
 void EnableAutomaticButton(
@@ -148,7 +148,7 @@ void EnableAutomaticButton(
  自动按钮标签文本。  
   
  [in] `colorAutomatic`  
- Automatic （默认值） 颜色的 RGB 颜色值。  
+ 自动 （默认值） 颜色的 RGB 颜色值。  
   
  [in] `bEnable`  
  `TRUE`若要启用自动按钮;否则为`FALSE`。 默认值为 `TRUE`。  
@@ -156,7 +156,7 @@ void EnableAutomaticButton(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
- 使*其他*颜色选择对话框上的按钮。 (标准其他按钮标记为**其他颜色...**.)  
+ 使*其他*颜色选择对话框上的按钮。 (标准其他按钮标记为**其他颜色**。)  
   
 ```  
 void EnableOtherButton(
@@ -170,7 +170,7 @@ void EnableOtherButton(
  其他按钮的标签文本。  
   
  [in] `bAltColorDlg`  
- `TRUE`若要显示`CMFCColorDialog`对话框;`FALSE`若要显示标准颜色选择对话框。 默认值为 `TRUE`。  
+ `TRUE`若要显示`CMFCColorDialog`对话框;`FALSE`以显示标准颜色选择对话框。 默认值为 `TRUE`。  
   
  [in] `bEnable`  
  `TRUE`若要显示其他按钮;否则为`FALSE`。  默认值为 `TRUE`。  
@@ -211,7 +211,7 @@ void SetColumnsNumber(int nColumnsNumber);
   
 ### <a name="parameters"></a>参数  
  [in] `nColumnsNumber`  
- 首选的颜色属性网格中的列数。  
+ 首选在颜色属性网格中的列数。  
   
 ### <a name="remarks"></a>备注  
  此方法设置的值`m_nColumnsNumber`受保护的数据成员。  
@@ -233,6 +233,6 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
- [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)   
+ [CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)   
  [CMFCPropertyGridProperty 类](../../mfc/reference/cmfcpropertygridproperty-class.md)
 

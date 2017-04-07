@@ -1,38 +1,54 @@
 ---
-title: "编译器警告 C4335 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4335"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4335"
+title: "编译器警告 C4335 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4335
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器警告 C4335
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: dc8436664038d3f53f3a01d5006c41c3d0e4c8f0
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="compiler-warning-c4335"></a>编译器警告 C4335
 检测到 Mac 文件格式: 请将源文件转换为 DOS 格式或 UNIX 格式  
   
- 源文件第一行的行终止字符是 Macintosh 样式 \(‘\\r’\)，而不是 UNIX \(‘\\n’\) 或 DOS \(‘\\r\\n’\) 样式。  
+ 源文件的第一行的行终止字符是 Macintosh 样式 ('\r') 而不是 UNIX (\n) 或 DOS (\r\n)。  
   
- 此警告始终作为错误发出。有关如何禁用此警告的信息，请参见[警告](../../preprocessor/warning.md)编译提示。并且，此警告只在每次编译时发出一次。  因此，如果存在多个指定 Macintosh 格式文件的 `#include` 指令，C4335 警告将只发出一次。  
+ 作为错误发出始终发出此警告。  请参阅[警告](../../preprocessor/warning.md)杂注有关如何禁用此警告信息。  此外，发出此警告仅一次每编译单位。 因此，如果有多个`#include`在 Macintosh 格式中指定文件的指令，C4335 将才会发出一次。  
   
- 生成 Macintosh 格式文件的一种方法是使用 Visual Studio 中的**“高级保存选项”**（在**“文件”**菜单上）。  
+ Macintosh 格式生成文件的一种方法是使用**高级保存选项**(上**文件**菜单) 在 Visual Studio 中。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4335。  
   
 ```  

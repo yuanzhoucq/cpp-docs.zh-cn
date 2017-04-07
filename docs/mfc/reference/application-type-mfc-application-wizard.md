@@ -1,35 +1,51 @@
 ---
-title: "MFC 应用程序向导的应用程序类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.apptype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "静态库，MFC"
+title: "应用程序类型、 MFC 应用程序向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.apptype
+dev_langs:
+- C++
+helpviewer_keywords:
+- static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# MFC 应用程序向导的应用程序类型
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: bd862d4a537f2297c1ee5a6fd517e22f7c684fa4
+ms.lasthandoff: 04/01/2017
 
-使用 [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)的此页设计新的 MFC 应用程序并为其添加基本功能。  
+---
+# <a name="application-type-mfc-application-wizard"></a>MFC 应用程序向导的应用程序类型
+使用此页的[MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)设计并将基本功能添加到新的 MFC 应用程序。  
   
  **应用程序类型**  
- 指定希望在应用程序中创建的文档支持类型。  您选择的应用程序类型决定了应用程序中可用的用户界面选项。  有关更多信息，请参见[MFC 应用程序向导的用户界面功能](../../mfc/reference/user-interface-features-mfc-application-wizard.md)。  
+ 指定你想要在你的应用程序中创建的文档支持的类型。 你选择的应用程序的类型确定可用于你的应用程序的用户界面选项。 请参阅[用户界面功能，MFC 应用程序向导](../../mfc/reference/user-interface-features-mfc-application-wizard.md)有关详细信息。  
   
- 有关文档类型的更多信息，请参见：  
+ 有关类型的文档的详细信息，请参阅︰  
   
 -   [SDI 和 MDI](../../mfc/sdi-and-mdi.md)  
   
@@ -41,64 +57,66 @@ caps.handback.revision: 12
   
 -   [对话框](../../mfc/dialog-boxes.md)  
   
-|选项|说明|  
-|--------|--------|  
-|**单文档**|为应用程序创建一个单文档界面 \(SDI\) 结构，其中的视图类基于 [CView Class](../../mfc/reference/cview-class.md)。  可以在向导的[MFC 应用程序向导的生成的类](../../mfc/reference/generated-classes-mfc-application-wizard.md)页中更改视图的基类。  例如，若要创建基于窗体的应用程序，请使用 [CFormView Class](../../mfc/reference/cformview-class.md)作为视图类。<br /><br /> 在此类应用程序中，文档的框架窗口只能容纳一个文档。|  
-|**多文档**|为应用程序创建一个多文档界面 \(MDI\) 结构，其中的视图类基于 `CView`。  可以在向导的**生成的类**页中更改视图的基类。  例如，若要创建基于窗体的应用程序，请使用 `CFormView` 作为视图类。<br /><br /> 在此类应用程序中，文档的框架窗口可以容纳多个子文档。|  
-|**选项卡式文档**|将每个文档放置到单独的选项卡上。|  
-|**基于对话框**|为应用程序创建一个基于对话框的结构，其中的对话框类基于 `CDialog`。（若要创建 HTML 对话框，请选中**“使用 HTML 对话框”**框。）|  
-|**使用 HTML 对话框**|只适用于对话框应用程序。  从 [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)（而不是 [CDialog Class](../../mfc/reference/cdialog-class.md)）派生对话框类。  如果选中此框，则 `CDHtmlDialog` 会在向导的[MFC 应用程序向导的生成的类](../../mfc/reference/generated-classes-mfc-application-wizard.md)页中的**“基类”**框中列出。<br /><br /> `CDHtmlDialog` 派生的对话框显示基于 HTML 的对话框、与 HTML 控件交换数据并处理 HTML 事件。|  
-|**多顶级文档**|为应用程序创建一个多顶级结构，其中的类视图基于 `CView`。<br /><br /> 在此类应用程序中，当用户单击**“文件”**菜单上的**“新建”**（或**“新建框架”**）时，应用程序会创建一个其父窗口隐式为桌面的窗口。  新的文档框架会显示在任务栏中，并且不局限于应用程序窗口的工作区。|  
+|选项|描述|  
+|------------|-----------------|  
+|**单个文档**|创建你的应用程序，视图类基于一个单文档界面 (SDI) 结构[CView 类](../../mfc/reference/cview-class.md)。 你可以更改中的视图的基类[生成的类，MFC 应用程序向导](../../mfc/reference/generated-classes-mfc-application-wizard.md)向导页。 若要创建基于窗体的应用程序，例如，使用[CFormView 类](../../mfc/reference/cformview-class.md)视图类。<br /><br /> 在此类型的应用程序，该文档的框架窗口可以容纳只有一个文档。|  
+|**多个文档**|创建你的应用程序，其中基于视图类的多文档界面 (MDI) 结构`CView`。 你可以更改中的视图的基类**生成的类**向导页。 若要创建基于窗体的应用程序，例如，使用`CFormView`视图类。<br /><br /> 在此类型的应用程序，该文档的框架窗口可以容纳多个子 windows。|  
+|**选项卡式的文档**|将每个文档置于单独的选项卡。|  
+|**基于对话框**|创建对话框类取决于你的应用程序的基于对话框的体系结构`CDialog`。 (若要创建一个 HTML 对话框，请选中框**使用 HTML 对话框**。)|  
+|**使用 HTML 对话框**|对话框框仅限于应用程序。 派生对话框类从[CDHtmlDialog 类](../../mfc/reference/cdhtmldialog-class.md)而不是[CDialog 类](../../mfc/reference/cdialog-class.md)。 如果勾选此框中，`CDHtmlDialog`被列入**基类**框中[生成的类，MFC 应用程序向导](../../mfc/reference/generated-classes-mfc-application-wizard.md)向导页。<br /><br /> A `CDHtmlDialog`-派生的对话框中显示的基于 HTML 的对话框时，交换数据与 HTML 控件和处理 HTML 事件。|  
+|**多个顶级文档**|创建你的应用程序，其中基于视图类的多个顶级结构`CView`。<br /><br /> 在这种类型的应用程序，当用户单击**新建**(或**新帧**) 上**文件**菜单上，应用程序创建一个其父窗口隐式桌面的窗口。 新的文档框架将显示在任务栏，并且不局限于应用程序窗口的工作区。|  
   
- **文档\/视图结构支持**  
- 通过使用 [CDocument Class](../../mfc/reference/cdocument-class.md)和 [CView Class](../../mfc/reference/cview-class.md)（默认值）指定应用程序中是否包含文档\/视图结构。  如果要移植非 MFC 应用程序或者希望减小编译生成的可执行文件的大小，则清除此复选框。  默认情况下，无文档\/视图结构的应用程序派生自 [CWinApp Class](../../mfc/reference/cwinapp-class.md)，并且不包含从磁盘文件打开文档的 MFC 支持。  
+ **文档/视图体系结构支持**  
+ 指定是否要包含在你的应用程序中使用的文档/视图体系结构[CDocument 类](../../mfc/reference/cdocument-class.md)和[CView 类](../../mfc/reference/cview-class.md)（默认值）。 如果要移植非 MFC 应用程序，或者如果你想要减少编译可执行文件的大小，请清除此复选框。 默认情况下，应用程序，而文档/视图体系结构不派生自[CWinApp 类](../../mfc/reference/cwinapp-class.md)，并且它不包括用于从磁盘文件打开的文档的 MFC 支持。  
   
  **资源语言**  
- 设置资源的语言。  列表显示系统上由 Visual Studio 安装的可用语言。  如果要选择系统语言以外的语言，则必须已经安装了该语言的适当模板文件夹。  有关安装**“资源语言”**列表中默认可用语言资源以外的语言资源的更多信息，请参见[其他语言的向导支持](../../ide/wizard-support-for-other-languages.md)。  
+ 设置你的资源的语言。 为已安装 Visual studio，该列表显示你系统上可用的语言。 如果你想要选择你的系统语言以外的语言，必须已安装该语言的适当的模板文件夹。 有关安装不同于默认安装中可用的语言资源的详细信息**资源语言**列表中，请参阅[其他语言的向导支持](../../ide/wizard-support-for-other-languages.md)。  
   
- 您选择的语言反映在向导的[MFC 应用程序向导的文档模板字符串](../../mfc/reference/document-template-strings-mfc-application-wizard.md)页中**“本地化字符串”**选项中。  
+ 你选择的语言反映在**本地化字符串**选项[文档模板字符串，MFC 应用程序向导](../../mfc/reference/document-template-strings-mfc-application-wizard.md)向导页。  
   
  **使用 Unicode 库**  
- 指定是使用 Unicode 版 MFC 库还是使用非 Unicode 版 MFC 库。  
+ 指定是否使用 MFC 库的 Unicode 或非 Unicode 版本。  
   
  **项目样式**  
- 指示应用程序是否具有标准 MFC 资源管理器、文件、Visual Studio 或 Office 结构和显示。  有关详细信息，请参阅[创建文件资源管理器样式的 MFC 应用程序](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)。  
+ 指示你的应用程序是否具有标准 MFC、 文件资源管理器、 Visual Studio 中，或 Office 体系结构和显示。 有关详细信息，请参阅[创建文件资源管理器样式的 MFC 应用程序](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)。  
   
-|选项|说明|  
-|--------|--------|  
-|**MFC 标准**|提供标准 MFC 应用程序结构。|  
-|**文件资源管理器**|实现文件。Explorer 的应用程序使用左窗格为 [CTreeView Class](../../mfc/reference/ctreeview-class.md) 的拆分窗口，然后右窗格是 [CListView Class](../../mfc/reference/clistview-class.md)。|  
-|**Visual Studio**|实现一个 Visual Studio 样式的应用程序，其中包含四个派生自 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 的可停靠窗格（**“文件视图”**、**“类视图”**、**“属性”**和**“输出”**）和一个派生自 [CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)（默认值）的主框架窗口。|  
-|**Office**|实现一个 Office 样式的应用程序，其中包含一个派生自 [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)的工作区、一个派生自 [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)的 Outlook 栏、一个派生自 [CMFCCaptionBar 类](../../mfc/reference/cmfccaptionbar-class.md)的标题栏和一个派生自 [CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)的主框架。|  
+|选项|描述|  
+|------------|-----------------|  
+|**MFC 标准**|提供标准的 MFC 应用程序体系结构。|  
+|**文件资源管理器**|实现使用拆分器窗口的左窗格中的工作所在的文件资源管理器样式的应用程序[CTreeView 类](../../mfc/reference/ctreeview-class.md)和右窗格中是[CListView 类](../../mfc/reference/clistview-class.md)。|  
+|**Visual Studio**|实现包含四个可停靠窗格的 Visual Studio 类似应用程序 (**文件视图**，**类视图**，**属性**，和**输出**) 派生自[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)和派生自的主框架窗口[CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)（默认值）。|  
+|**Office**|实现类似于 Office 的应用程序包含派生自的功能区[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)，派生自一个 Outlook 栏[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)，派生自的标题栏[CMFCCaptionBar 类](../../mfc/reference/cmfccaptionbar-class.md)，和派生自的主框架[CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)。|  
   
  **视觉样式和颜色**  
- 确定应用程序的视觉样式。  下列选项可用：  
+ 确定应用程序的视觉样式。 可用选项如下：  
   
--   **Windows 本机\/默认设置**  
+-   **Windows 本机/默认**  
   
 -   **Office 2003**  
   
 -   **Visual Studio 2005**  
   
--   **Office 2007 \(蓝色主题\)**  
+-   **Office 2007 （蓝色主题）**  
   
--   **Office 2007 \(黑色主题\)**  
+-   **Office 2007 （黑色主题）**  
   
--   **Office 2007 \(银色主题\)**  
+-   **Office 2007 （银级主题）**  
   
--   **Office 2007 \(水绿色主题\)**  
+-   **Office 2007 （浅绿色主题）**  
   
  **启用视觉样式切换**  
- 指定在运行时，用户通常是否可以通过从菜单或工作区中选择适当的视觉样式来更改应用程序的视觉样式。  
+ 指定用户是否可以更改在运行时，应用程序的视觉样式通常通过从菜单或工作区中选择适当的视觉样式。  
   
  **MFC 的使用**  
- 指定如何链接到 MFC 库。  默认情况下，MFC 作为共享 DLL 链接。  
+ 指定如何将链接到 MFC 库。 默认情况下，MFC 将作为共享 DLL 链接。  
   
 |选项|说明|  
-|--------|--------|  
-|**使用共享 DLL 中的 MFC**|将 MFC 库作为共享 DLL 链接到应用程序。  应用程序在运行时调用 MFC 库。  如果应用程序由多个使用 MFC 库的可执行文件组成，则此选项可降低应用程序的磁盘和内存需求。  Win32 和 MFC 应用程序都可以调用 DLL 中的函数（默认值）。|  
-|**使用静态库中的 MFC**|生成时将应用程序链接到静态 MFC 库。|  
+|------------|-----------------|  
+|**在共享 DLL 中使用 MFC**|链接 MFC 库作为共享 DLL 的应用程序。 应用程序在运行时调用的 MFC 库。 此选项可减少应用程序包含多个可执行文件，使用 MFC 库的磁盘和内存要求。 Win32 和 MFC 应用程序可以在 DLL （默认值） 中调用函数|  
+|**使用静态库中的 MFC**|链接到静态 MFC 库应用程序，在生成时。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)   
- [为 Visual C\+\+ 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)
+ [为 Visual C++ 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)
+
+

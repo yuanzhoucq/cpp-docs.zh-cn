@@ -33,18 +33,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 04df63d36c1ac8dbcb93c3f9503d97decad994f8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 0e04a53a0ea8919c793614d7e3037d10ce01a03c
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="atl-macros"></a>ATL 宏
 若要按类别查找 ATL 宏，请参阅以下主题。  
   
  [聚合和类工厂宏](../../atl/reference/aggregation-and-class-factory-macros.md)  
- 提供控制聚合的并声明类工厂的方法。  
+ 提供的控制聚合和声明类工厂的方法。  
   
- [类别宏](../../atl/reference/category-macros.md)  
+ [分类宏](../../atl/reference/category-macros.md)  
  定义类别映射。  
   
  [COM 映射宏](../../atl/reference/com-map-macros.md)  
@@ -57,10 +57,10 @@ ms.lasthandoff: 02/24/2017
  定义事件接收器映射和条目。  
   
  [连接点宏](../../atl/reference/connection-point-macros.md)  
- 定义连接点映射和条目。  
+ 定义连接点图和条目。  
   
- [调试和错误报告的宏](../../atl/reference/debugging-and-error-reporting-macros.md)  
- 提供有用的调试和跟踪工具。  
+ [调试和错误报告宏](../../atl/reference/debugging-and-error-reporting-macros.md)  
+ 提供有用的调试和跟踪功能。  
   
  [异常处理宏](../../atl/reference/exception-handling-macros.md)  
  为异常处理提供支持。  
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/24/2017
  定义消息映射和条目。  
   
  [对象映射宏](../../atl/reference/object-map-macros.md)  
- 定义对象映射和条目。  
+ 定义对象图和条目。  
   
  [对象状态宏](../../atl/reference/object-status-macros.md)  
  设置属于 ActiveX 控件的标志。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/24/2017
  [属性映射宏](../../atl/reference/property-map-macros.md)  
  定义属性映射和条目。  
   
- [注册表数据 Exchange 宏](../../atl/reference/registry-data-exchange-macros.md)  
+ [注册表数据交换宏](../../atl/reference/registry-data-exchange-macros.md)  
  执行注册表数据交换操作。  
   
  [注册表宏](../../atl/reference/registry-macros.md)  
@@ -86,11 +86,11 @@ ms.lasthandoff: 02/24/2017
  [服务映射宏](../../atl/reference/service-map-macros.md)  
  定义服务映射和条目。  
   
- [管理单元对象宏](../../atl/reference/snap-in-object-macros.md)  
+ [单元对象宏](../../atl/reference/snap-in-object-macros.md)  
  为管理单元扩展提供支持。  
   
- [字符串转换宏](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)  
- 提供的字符串转换功能。  
+ [字符串转换宏](string-conversion-macros.md)  
+ 提供字符串转换功能。  
   
  [窗口类宏](../../atl/reference/window-class-macros.md)  
  定义窗口类实用程序。  
@@ -104,6 +104,6 @@ ms.lasthandoff: 02/24/2017
  [函数](../../atl/reference/atl-functions.md)   
  [全局变量](../../atl/reference/atl-global-variables.md)   
  [结构](../../atl/reference/atl-structures.md)   
- [类型定义](../../atl/reference/atl-typedefs.md)   
+ [Typedef](../../atl/reference/atl-typedefs.md)   
  [类](../../atl/reference/atl-classes.md)
 

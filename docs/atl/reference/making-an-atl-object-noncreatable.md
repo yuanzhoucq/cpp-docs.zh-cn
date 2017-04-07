@@ -1,5 +1,5 @@
 ---
-title: "使 ATL 对象不可创建 |Microsoft 文档"
+title: "使 ATL 对象 Noncreatable |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,19 +35,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b812c2d4bfeb0663d62051c05829f25dc7139faf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9ee276d86478bb4a7b6c9839378183bfd49533d6
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="making-an-atl-object-noncreatable"></a>使 ATL 对象不可创建
-您可以更改基于 ATL 的 COM 对象的属性，以便客户端不能直接创建该对象。 在这种情况下，该对象将被另一个对象通过方法调用返回而不直接创建。  
+你可以更改基于 ATL COM 对象的属性，以便客户端不能直接创建对象。 在这种情况下，该对象将被另一个对象通过方法调用返回而不直接创建。  
   
 ### <a name="to-make-an-object-noncreatable"></a>若要使对象不可创建  
   
-1.  删除[OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c)对象。 如果您想要不可创建，但要注册控件的对象，替换与 OBJECT_ENTRY_AUTO [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](http://msdn.microsoft.com/library/abdc093c-6502-42de-8419-b7ebf45299d1)。  
+1.  删除[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)对象。 如果你想要 noncreatable 但要注册的控件的对象，将使用 OBJECT_ENTRY_AUTO [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto)。  
   
-2.  添加[noncreatable](../../windows/noncreatable.md)属性设为.idl 文件中的组件类。 例如:   
+2.  添加[noncreatable](../../windows/noncreatable.md)属性设为.idl 文件中的组件类。 例如：  
   
  ```  
  [  
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/24/2017
  [ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
  [Visual c + + 项目类型](../../ide/visual-cpp-project-types.md)   
  [使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [使用 ATL 和 C 运行时代码编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
  [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
 

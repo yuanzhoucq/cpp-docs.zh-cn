@@ -131,9 +131,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: ec5969edb26f4dbc2c249f16a8c39498bd01ca44
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 099e027e778090d14dd7dbe24d6732f7eb06b9d9
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwinapp-class"></a>CWinApp 类
@@ -149,7 +149,7 @@ class CWinApp : public CWinThread
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CWinApp::CWinApp](#cwinapp)|构造 `CWinApp` 对象。|  
   
@@ -259,7 +259,7 @@ class CWinApp : public CWinThread
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|确定重新启动管理器的行为的标志。|  
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|以毫秒为单位之间自动保存的时间长度。|  
@@ -594,7 +594,7 @@ virtual DWORD GetApplicationRecoveryPingInterval();
  以毫秒为单位的时间长度。  
   
 ### <a name="remarks"></a>备注  
- 时的应用程序注册到重新启动管理器退出意外，应用程序尝试保存打开的文档，并调用恢复的回调函数。 默认恢复回调函数是[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。  
+ 在应用程序意外注册在重新启动管理器退出，应用程序尝试保存打开的文档，并调用恢复的回调函数。 默认恢复回调函数是[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。  
   
  要返回的恢复回调函数的框架等待的时间长度为 ping 时间间隔。 可以通过重写自定义的 ping 间隔`CWinApp::GetApplicationRecoveryPingInterval`或通过提供自定义值到`RegisterWithRestartManager`。  
   
@@ -1121,15 +1121,12 @@ AFX_HELP_TYPE m_eHelpType;
 ### <a name="remarks"></a>备注  
  **AFX_HELP_TYPE**枚举定义，如下所示︰  
   
- `enum AFX_HELP_TYPE`  
-  
- `{`  
-  
- `afxWinHelp = 0,`  
-  
- `afxHTMLHelp = 1`  
-  
- `};`  
+```  
+enum AFX_HELP_TYPE {  
+    afxWinHelp = 0,
+    afxHTMLHelp = 1
+    };  
+```  
   
 -   若要设置到 HTML 帮助的应用程序的帮助，请调用[SetHelpMode](#sethelpmode)并指定**afxHTMLHelp**。  
   
@@ -1215,7 +1212,7 @@ LPCTSTR m_pszAppName;
  全局函数返回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName`是类型的公共变量**const char\***。  
   
 > [!NOTE]
->  如果将值赋给`m_pszAppName`，则它必须动态分配的堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 您可能要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：  
+>  如果将值赋给`m_pszAppName`，则它必须动态分配的堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 您可能要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:   
   
  [!code-cpp[NVC_MFCWindowing # 57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]  
   
@@ -1233,7 +1230,7 @@ LPCTSTR m_pszExeName;
  与不同[m_pszAppName](#m_pszappname)，此名称不能包含空格。 `m_pszExeName`是类型的公共变量**const char\***。  
   
 > [!NOTE]
->  如果将值赋给`m_pszExeName`，则它必须动态分配的堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 您可能要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：  
+>  如果将值赋给`m_pszExeName`，则它必须动态分配的堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 您可能要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:   
   
  [!code-cpp[NVC_MFCWindowing # 58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]  
   
@@ -1263,7 +1260,7 @@ LPCTSTR m_pszProfileName;
  `m_pszProfileName`是类型的公共变量**const char\***。  
   
 > [!NOTE]
->  如果将值赋给`m_pszProfileName`，则它必须动态分配的堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 您可能要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如:   
+>  如果将值赋给`m_pszProfileName`，则它必须动态分配的堆上。 `CWinApp`析构函数调用**免费**（与此指针)。 您可能要使用`_tcsdup`（） 运行时库函数来执行分配。 此外，释放分配新值之前将其与当前指针相关联的内存。 例如：  
   
  [!code-cpp[NVC_MFCWindowing # 60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]  
   
@@ -1578,19 +1575,15 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
   
  数据成员`CCommandLineInfo`对象，由标识[CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)，以下在中定义的枚举类型的`CCommandLineInfo`类。  
   
- `enum {`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `};`  
+```  
+enum {
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE
+    };  
+```
   
  有关其中每个值的简短说明，请参阅`CCommandLineInfo::m_nShellCommand`。  
   
@@ -1694,7 +1687,7 @@ DWORD dwCallbackFlags);
   
  如果调用此方法替换为空字符串`strRestartIdentifier`，`RegisterWithRestartManager`创建管理器的重新启动此实例的唯一标识符字符串。  
   
- 当应用程序意外退出时，请重新启动管理器重新启动应用程序从命令行，并提供唯一的重新启动作为可选自变量的标识符。 在此方案中，框架将调用`RegisterWithRestartManager`两次。 第一个调用是来自[CWinApp::InitInstance](#initinstance)使用空字符串的字符串标识符。 然后，该方法[CWinApp::ProcessShellCommand](#processshellcommand)调用`RegisterWithRestartManager`具有唯一的重新启动标识符。  
+ 当应用程序意外退出时，请重新启动管理器重新启动应用程序从命令行，并提供重新启动的唯一标识符，则为可选自变量。 在此方案中，框架将调用`RegisterWithRestartManager`两次。 第一个调用是来自[CWinApp::InitInstance](#initinstance)使用空字符串的字符串标识符。 然后，该方法[CWinApp::ProcessShellCommand](#processshellcommand)调用`RegisterWithRestartManager`具有唯一的重新启动标识符。  
   
  重新启动管理器注册应用程序后，重新启动管理器将监视应用程序。 如果应用程序意外退出，请重新启动管理器将调用在关闭过程中的恢复的回调函数。 重新启动管理器等待`dwPingInterval`恢复回调函数的响应。 如果恢复回调函数未在此时间内响应，应用程序退出时不执行恢复回调函数。  
   

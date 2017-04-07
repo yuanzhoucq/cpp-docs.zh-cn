@@ -1,32 +1,48 @@
 ---
-title: "矢量化程序和并行化程序消息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C5011"
-  - "C5002"
-  - "C5021"
-  - "C5001"
-  - "C5012"
-dev_langs: 
-  - "C++"
+title: "矢量化程序和并行化程序消息 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C5011
+- C5002
+- C5021
+- C5001
+- C5012
+dev_langs:
+- C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# 矢量化程序和并行化程序消息
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5c466510a00079f04ee5871b41364fff552ecf70
+ms.lasthandoff: 04/01/2017
 
-你可以使用 Visual C\+\+ 编译器选项 [\/Qpar\-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 和 [\/Qvec\-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) 来设置[自动并行化和自动矢量化](../../parallel/auto-parallelization-and-auto-vectorization.md)，以输出原因代码及有关其活动的信息性消息。  本文说明原因代码和消息。  
+---
+# <a name="vectorizer-and-parallelizer-messages"></a>矢量化程序和并行化程序消息
+你可以使用 Visual c + + 编译器选项[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)设置[自动并行化和自动向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)以输出原因代码及有关其活动的信息性消息。 本文说明原因代码和消息。  
   
 -   [信息性消息](#BKMK_InformationalMessages)  
   
@@ -44,32 +60,32 @@ caps.handback.revision: 16
   
 -   [15xx](#BKMK_ReasonCode150x)  
   
-##  <a name="BKMK_InformationalMessages"></a> 信息性消息  
+##  <a name="BKMK_InformationalMessages"></a>信息性消息  
  根据你指定的报告级别，将为每个循环显示下列信息性消息之一。  
   
  有关原因代码的信息，请参见本文的下一部分。  
   
 |信息性消息|描述|  
-|-----------|--------|  
+|---------------------------|-----------------|  
 |5001|循环已向量化。|  
 |5002|由于原因“description”，循环未向量化。|  
 |5011|循环已并行化。|  
 |5012|由于原因“description”，循环未并行化。|  
 |5021|无法将循环与杂注关联。|  
   
-## 原因代码  
+## <a name="reason-codes"></a>原因代码  
  以下几节列出了自动并行化和自动向量化的可能原因代码。  
   
-###  <a name="BKMK_ReasonCode50x"></a> 5xx  
- 5*xx* 原因代码应用于自动并行化和自动向量化。  
+###  <a name="BKMK_ReasonCode50x"></a>5xx  
+ 5*xx*原因代码应用于自动并行化和自动向量化。  
   
 |原因代码|说明|  
-|----------|--------|  
+|-----------------|-----------------|  
 |500|这是包含多个用例的泛型消息（例如，该循环包含多个退出，或循环标头不会因增加归纳变量而结束）。|  
 |501|归纳变量不是本地的；或上限绑定不是循环固定的。|  
-|502|除了简单 \+1 外，归纳变量以某种方式单步执行。|  
+|502|除了简单 +1 外，归纳变量以某种方式单步执行。|  
 |503|循环包含异常处理或 switch 语句。|  
-|504|循环体可能会引发需要析构 C\+\+ 对象的异常。|  
+|504|循环体可能会引发需要析构 C++ 对象的异常。|  
   
 ```cpp  
 void code_500(int *A)  
@@ -223,22 +239,22 @@ void code_504(int *A) {
   
 ```  
   
-###  <a name="BKMK_ReasonCode100x"></a> 10xx  
- 10*xx* 原因代码应用于自动并行化。  
+###  <a name="BKMK_ReasonCode100x"></a>10xx  
+ 10*xx*原因代码应用于自动并行化。  
   
 |原因代码|说明|  
-|----------|--------|  
+|-----------------|-----------------|  
 |1000|编译器在循环体中检测到数据依赖项。|  
 |1001|编译器在循环体中检测到标量变量的存储，该标量在循环外使用。|  
 |1002|编译器尝试实现具有已并行化的内部循环的循环的并行化。|  
 |1003|循环体包含可读取或写入内存的内部调用。|  
-|1004|循环体中的标量降低。  如果循环已向量化，标量会减少。|  
-|1005|已指定 **no\_parallel** 杂注。|  
-|1006|该函数包含 **openmp**。  通过移除此函数中的所有 **openmp** 解决此问题。|  
-|1007|循环归纳变量或循环绑定不是有符号的 32 位数字（`int` 或 `long`）。  通过更改归纳变量的类型解决此问题。|  
+|1004|循环体中的标量降低。 如果循环已向量化，标量会减少。|  
+|1005|**No_parallel**指定杂注。|  
+|1006|该函数包含**openmp**。 解决此问题通过删除任何**openmp**此函数中。|  
+|1007|循环归纳变量或循环绑定不是有符号的 32 位数字（`int` 或 `long`）。 通过更改归纳变量的类型解决此问题。|  
 |1008|编译器检测到此循环未执行足够的工作来保证自动并行化。|  
-|1009|编译器检测到并行化“do\-while”循环的尝试。  自动并行化只针对 `for` 循环。|  
-|1010|编译器检测到循环正在使用“不等于”\(\!\=\) 作为其条件。|  
+|1009|编译器检测到并行化“do-while”循环的尝试。 自动并行化只针对 `for` 循环。|  
+|1010|编译器检测到循环正在使用“不等于”(!=) 作为其条件。|  
   
 ```cpp  
 int A[1000];  
@@ -432,11 +448,11 @@ void code_1010()
   
 ```  
   
-###  <a name="BKMK_ReasonCode110x"></a> 11xx  
- 11*xx* 原因代码应用于自动向量化。  
+###  <a name="BKMK_ReasonCode110x"></a>11xx  
+ 11*xx*原因代码应用于自动向量化。  
   
 |原因代码|说明|  
-|----------|--------|  
+|-----------------|-----------------|  
 |1100|循环包含控制流（例如，“if”或“?”）。|  
 |1101|循环包含无法向量化的数据类型转换（可能隐式）。|  
 |1102|循环包含非算术或其他非向量化操作。|  
@@ -580,12 +596,12 @@ void code_1106(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode120x"></a> 12xx  
- 12*xx* 原因代码应用于自动向量化。  
+###  <a name="BKMK_ReasonCode120x"></a>12xx  
+ 12*xx*原因代码应用于自动向量化。  
   
 |原因代码|说明|  
-|----------|--------|  
-|1200|循环包含阻止向量化的循环携带的数据依赖项。  不同的循环迭代会相互影响，这样向量化循环将产生错误的接听，并且自动向量化不能证明自身没有此类数据依赖项。|  
+|-----------------|-----------------|  
+|1200|循环包含阻止向量化的循环携带的数据依赖项。 不同的循环迭代会相互影响，这样向量化循环将产生错误的接听，并且自动向量化不能证明自身没有此类数据依赖项。|  
 |1201|数组基础会在循环时更改。|  
 |1202|结构中的字段没有 32 或 64 位宽。|  
 |1203|循环体包含对数组的非连续访问。|  
@@ -655,14 +671,14 @@ void code_1203(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode130x"></a> 13xx  
- 13*xx* 原因代码应用于自动向量化。  
+###  <a name="BKMK_ReasonCode130x"></a>13xx  
+ 13*xx*原因代码应用于自动向量化。  
   
 |原因代码|说明|  
-|----------|--------|  
+|-----------------|-----------------|  
 |1300|循环体不包含计算或包含非常小的计算。|  
-|1301|循环步幅不是 \+1。|  
-|1302|循环是“do\-while”。|  
+|1301|循环步幅不是 +1。|  
+|1302|循环是"执行-时"。|  
 |1303|向量化的循环迭代太少，无法提供值。|  
 |1304|循环包含不同大小的分配。|  
 |1305|没有足够的类型信息。|  
@@ -787,16 +803,16 @@ void code_1305( S_1305 *s, S_1305 x)
   
 ```  
   
-###  <a name="BKMK_ReasonCode140x"></a> 14xx  
- 在指定与自动向量化不兼容的选项时，会出现 14*xx* 原因代码。  
+###  <a name="BKMK_ReasonCode140x"></a>14xx  
+ 14*xx*指定与自动向量化不兼容的选项，则会发生的代码的原因。  
   
 |原因代码|说明|  
-|----------|--------|  
-|1400|指定 **\#pragma loop\(no\_vector\)**。|  
-|1401|在面向 x86 或 ARM 时，指定 **\/kernel** 开关。|  
-|1402|在面向 x86 时，不指定 **\/arch:SSE2** 或更高开关。|  
-|1403|指定 **\/arch:ATOM** 开关，且循环包含两倍运算。|  
-|1404|指定 **\/O1** 或 **\/Os** 开关。|  
+|-----------------|-----------------|  
+|1400|**#pragma loop （no_vector)**指定。|  
+|1401|**/kernel**面向 x86 或 ARM 时指定开关。|  
+|1402|**/arch:SSE2**或面向 x86 时未指定更高开关。|  
+|1403|**/arch:ATOM**指定交换机且循环包含两倍运算。|  
+|1404|**/O1**或**/Os**指定开关。|  
 |1405|禁用向量化可帮助动态初始值设定项到静态初始值设定项优化。|  
   
 ```cpp  
@@ -859,14 +875,14 @@ void code_1404(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode150x"></a> 15xx  
- 15*xx* 原因代码应用于别名。  当内存中的位置可由两个不同名称访问时，将出现别名。  
+###  <a name="BKMK_ReasonCode150x"></a>15xx  
+ 15*xx*原因代码应用于别名。 当内存中的位置可由两个不同名称访问时，将出现别名。  
   
 |原因代码|说明|  
-|----------|--------|  
+|-----------------|-----------------|  
 |1500|多维数组中的可能别名。|  
 |1501|数组结构中的可能别名。|  
-|1502|可能的别名和数组索引不包括 n \+ K。|  
+|1502|可能的别名和数组索引不包括 n + K。|  
 |1503|可能的别名和数组索引有多个偏移量。|  
 |1504|可能的别名；需要过多的运行时检查。|  
 |1505|可能的别名，但运行时检查太复杂。|  
@@ -987,10 +1003,10 @@ void code_1505(int *A, int *B)
   
 ```  
   
-## 请参阅  
- [自动并行化和自动矢量化](../../parallel/auto-parallelization-and-auto-vectorization.md)   
+## <a name="see-also"></a>另请参阅  
+ [自动并行化和自动向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)   
  [本机代码中的并行编程](http://go.microsoft.com/fwlink/?LinkId=263662)   
- [\#pragma loop\(\)](../../preprocessor/loop.md)   
- [\/Q 选项（低级别操作）](../../build/reference/q-options-low-level-operations.md)   
- [\/Qpar\-report（自动并行化程序报告等级）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
- [\/Qvec\-report（自动矢量化程序报告等级）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+ [#pragma loop （)](../../preprocessor/loop.md)   
+ [/Q 选项 （低级别操作）](../../build/reference/q-options-low-level-operations.md)   
+ [/Qpar-report （自动并行化程序报告等级）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
+ [/Qvec-report （自动向量化报告等级）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

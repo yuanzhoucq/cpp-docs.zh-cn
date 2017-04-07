@@ -34,17 +34,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: dbc2045eae70cacd42e13ddb7cc8ecb3d60b8596
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53a3144fe8e87f36a1a5149d292130a9913b646a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2435"></a>编译器错误 C2435
-var︰ 动态初始化需要托管的 CRT，而不能使用 /clr: safe 编译  
+var︰ 动态初始化需要托管的 CRT，不能使用 /clr: safe 编译  
   
- **/Clr: pure**和**/clr: safe**编译器选项不推荐使用 Visual Studio 2015 中。  
+ **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
- 每个 – 应用程序域的全局变量的初始化，需要使用编译的 CRT `/clr:pure`，这不会产生可验证映像。  
+ 每个应用程序域全局变量的初始化要求使用编译的 CRT `/clr:pure`，这不会生成可验证的映像。  
   
  有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)和[过程](../../cpp/process.md)。  
   
