@@ -110,9 +110,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 9e79a6728471acd08052d87b97645407d1f7cc47
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 262b2b8548f203a210b1aabbe149fe25cf6ad655
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
@@ -128,13 +128,13 @@ class CRichEditCtrl : public CWnd
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|构造 `CRichEditCtrl` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CRichEditCtrl::CanPaste](#canpaste)|确定当可以被剪贴板内容粘贴到此 rich edit 控件。|  
 |[CRichEditCtrl::CanRedo](#canredo)|确定是否存在该控件的重做队列中的任何操作。|  
@@ -514,7 +514,7 @@ long FindText(
  指向[FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909)结构为参数提供了搜索，并返回在其中找到匹配的范围。  
   
 ### <a name="return-value"></a>返回值  
- 从零开始的字符位置的下一个匹配项;– 如果没有更多的匹配项，则为 1。  
+ 从零开始的字符位置的下一个匹配项;-如果没有更多的匹配项，则为 1。  
   
 ### <a name="remarks"></a>备注  
  你可以搜索其中之一向上或向下通过设置中的适当范围内参数[CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885)结构内**FINDTEXTEX**结构。  
@@ -869,7 +869,7 @@ void GetSel(
   
 - **GetSel (** `nStartChar` **，** `nEndChar` **)**此窗体的参数中返回的界限`nStartChar`和`nEndChar`。  
   
- 如果所选内容都将包括所有内容开头 ( **cpMin**或`nStartChar`) 是 0 和结束 ( **cpMax**或`nEndChar`) 为 – 1。  
+ 如果所选内容都将包括所有内容开头 ( **cpMin**或`nStartChar`) 是 0 和结束 ( **cpMax**或`nEndChar`) 是-1。  
   
  有关详细信息，请参阅[EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001)消息和[CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885)结构[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
@@ -1109,10 +1109,10 @@ long LineFromChar(long nIndex) const;
   
 ### <a name="parameters"></a>参数  
  `nIndex`  
- 包含所需的字符的文本编辑控件中的从零开始的索引值或包含为-1。 如果`nIndex`为 1，它指定的当前行，即包含脱字号的行。  
+ 包含所需的字符的文本编辑控件中的从零开始的索引值或包含为-1。 如果`nIndex`为-1，它指定的当前行，即包含脱字号的行。  
   
 ### <a name="return-value"></a>返回值  
- 包含指定的字符索引的行的从零开始的行号`nIndex`。 如果`nIndex`为 1，返回的包含所选内容的第一个字符的行数。 如果没有选择任何内容，则返回当前的行号。  
+ 包含指定的字符索引的行的从零开始的行号`nIndex`。 如果`nIndex`为-1，返回的包含所选内容的第一个字符的行数。 如果没有选择任何内容，则返回当前的行号。  
   
 ### <a name="remarks"></a>备注  
  字符索引是从开始处 rich edit 控件的字符数。 适用于字符计数，OLE 项被计为单个字符。  
@@ -1131,10 +1131,10 @@ int LineIndex(int nLine = -1) const;
   
 ### <a name="parameters"></a>参数  
  `nLine`  
- 包含所需的行的文本编辑控件中的索引值或包含为-1。 如果`nLine`为 1，它指定的当前行，即包含脱字号的行。  
+ 包含所需的行的文本编辑控件中的索引值或包含为-1。 如果`nLine`为-1，它指定的当前行，即包含脱字号的行。  
   
 ### <a name="return-value"></a>返回值  
- 在指定的行的字符索引`nLine`或为-1 如果指定的行号大于然后编辑控件中的行数。  
+ 在指定的行的字符索引`nLine`或-1，如果指定的行号大于然后编辑控件中的行数。  
   
 ### <a name="remarks"></a>备注  
  字符索引是从 rich edit 控件的开头到指定的行的字符数。  
@@ -1153,7 +1153,7 @@ int LineLength(int nLine = -1) const;
   
 ### <a name="parameters"></a>参数  
  `nLine`  
- 指定其长度是要检索的行中的一个字符的字符索引。 如果此参数为 – 1，返回当前行 （包含脱字号的行） 的长度，不包括任何的长度在所选的行中的文本。 当`LineLength`称为对于单行编辑控件，则忽略此参数。  
+ 指定其长度是要检索的行中的一个字符的字符索引。 如果此参数为-1，返回当前行 （包含脱字号的行） 的长度，不包括任何的长度在所选的行中的文本。 当`LineLength`称为对于单行编辑控件，则忽略此参数。  
   
 ### <a name="return-value"></a>返回值  
  当`LineLength`称为对于多行编辑控件，返回值是由指定的行的长度 （以字节为单位） `nLine`。 当`LineLength`称为对于单行编辑控件，返回值是编辑控件中的文本的长度 （以字节为单位）。  
@@ -1603,7 +1603,7 @@ void SetSel(CHARRANGE& cr);
   
  脱字号位于指示通过更高版本的启动所选内容的末尾 ( **cpMin**或`nStartChar`) 和结束 ( **cpMax**或`nEndChar`) 索引。 此函数的内容滚动`CRichEditCtrl`以便脱字号位于可见。  
   
- 若要在此选择所有文本`CRichEditCtrl`对象，请调用`SetSel`开始索引为 0 和的结束索引为 – 1。  
+ 若要在此选择所有文本`CRichEditCtrl`对象，请调用`SetSel`开始索引为 0 和的结束索引为-1。  
   
  有关详细信息，请参阅[EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007)消息和[CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885)结构[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   

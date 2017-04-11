@@ -57,9 +57,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e78c0cb7a0e2fb6cc1e1ac4bba9186d4beee98b4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
@@ -80,7 +80,7 @@ class CComSafeArray
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|构造函数。|  
 |[CComSafeArray:: ~ CComSafeArray](#dtor)|析构函数。|  
@@ -93,8 +93,8 @@ class CComSafeArray
 |[CComSafeArray::Attach](#attach)|将 **SAFEARRAY** 结构附加到 `CComSafeArray` 对象。|  
 |[CComSafeArray::CopyFrom](#copyfrom)|将 **SAFEARRAY** 结构的内容复制到 `CComSafeArray` 对象中。|  
 |[CComSafeArray::CopyTo](#copyto)|创建 `CComSafeArray` 对象的副本。|  
-|[CComSafeArray::Create](#create)|创建一个 `CComSafeArray` 对象。|  
-|[CComSafeArray::Destroy](#destroy)|销毁 `CComSafeArray` 对象。|  
+|[Ccomsafearray:: Create](#create)|创建一个 `CComSafeArray` 对象。|  
+|[Ccomsafearray:: Destroy](#destroy)|销毁 `CComSafeArray` 对象。|  
 |[CComSafeArray::Detach](#detach)|从 **对象拆离** SAFEARRAY `CComSafeArray` 。|  
 |[CComSafeArray::GetAt](#getat)|从一维数组中检索单个元素。|  
 |[CComSafeArray::GetCount](#getcount)|返回数组中的元素数目。|  
@@ -125,13 +125,13 @@ class CComSafeArray
 |[CComSafeArray::m_psa](#m_psa)|此数据成员保留 **SAFEARRAY** 结构的地址。|  
   
 ## <a name="remarks"></a>备注  
- `CComSafeArray`提供的包装[SAFEARRAY 数据类型](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)类，使其非常简单的事情，可以创建和管理的几乎任何变体支持的类型的单个会话和多维数组。  
+ `CComSafeArray`提供的包装[SAFEARRAY 数据类型](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)类，从而可以简单地创建和管理一维数组和多维数组几乎所有支持 VARIANT 的类型。  
   
  `CComSafeArray` 可简化数组在进程之间的传递，此外还可以对照上限和下限检查数组索引值，从而提供额外的安全性。  
   
  `CComSafeArray` 的下限可以从任何用户定义值开始；但是，通过 C++ 访问的数组应该使用下限 0。 Visual Basic 等其他语言可以使用其他边界值（例如，-10 到 10）。  
   
- 使用[CComSafeArray::Create](#create)创建`CComSafeArray`对象，并[CComSafeArray::Destroy](#destroy)可将其删除。  
+ 使用[ccomsafearray:: Create](#create)创建`CComSafeArray`对象，和[ccomsafearray:: Destroy](#destroy)可将其删除。  
   
  `CComSafeArray` 可以包含以下 VARIANT 数据类型子集：  
   
@@ -157,7 +157,7 @@ class CComSafeArray
  **标头：** atlsafe.h  
   
 ## <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities #&75;](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities # 75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  将一个或多个元素或 **SAFEARRAY** 结构添加到 `CComSafeArray`。  
@@ -170,10 +170,10 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
   
 ### <a name="parameters"></a>参数  
  `psaSrc`  
- 一个指向**SAFEARRAY**对象。  
+ 指向的指针**SAFEARRAY**对象。  
   
  `ulCount`  
- 要添加到数组的对象数量。  
+ 要添加到数组的对象数。  
   
  *pT*  
  指向要添加到数组的一个或多个对象的指针。  
@@ -188,9 +188,9 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 新对象追加到现有的末尾**SAFEARRAY**对象。 将对象添加到多维**SAFEARRAY**不支持对象。 添加现有对象的数组，当两个数组必须包含相同类型的元素。  
+ 新对象追加到现有的末尾**SAFEARRAY**对象。 对象添加到多维**SAFEARRAY**不支持对象。 在添加现有对象的数组时，这两个数组必须包含相同类型的元素。  
   
- `bCopy`标志考虑在内时类型的元素`BSTR`或**VARIANT**添加到数组。 默认值为**TRUE**可确保在该元素已添加到数组时的数据创建一个新副本。  
+ `bCopy`考虑标志时类型的元素`BSTR`或**VARIANT**添加到数组。 默认值**TRUE**可确保当该元素添加到数组的数据创建一个新副本。  
   
 ##  <a name="attach"></a>CComSafeArray::Attach  
  将 **SAFEARRAY** 结构附加到 `CComSafeArray` 对象。  
@@ -201,13 +201,13 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
   
 ### <a name="parameters"></a>参数  
  `psaSrc`  
- 一个指向**SAFEARRAY**结构。  
+ 指向的指针**SAFEARRAY**结构。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 将附加**SAFEARRAY**结构`CComSafeArray`对象，这使得现有`CComSafeArray`可用方法。  
+ 将附加**SAFEARRAY**结构`CComSafeArray`对象，使现有`CComSafeArray`可用的方法。  
   
 ##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
  构造函数。  
@@ -224,7 +224,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
   
 ### <a name="parameters"></a>参数  
  `bound`  
- 一个**SAFEARRAYBOUND**结构。  
+ A **SAFEARRAYBOUND**结构。  
   
  `ulCount`  
  数组中的元素数。  
@@ -233,16 +233,16 @@ CComSafeArray(const SAFEARRAY* psaSrc);
  下限值，则为即，数组中的第一个元素的索引。  
   
  `pBound`  
- 一个指向**SAFEARRAYBOUND**结构。  
+ 指向的指针**SAFEARRAYBOUND**结构。  
   
  `uDims`  
- 数组中的维度数。  
+ 数组中的维度的计数。  
   
  `saSrc`  
- 对引用**SAFEARRAY**结构或`CComSafeArray`对象。 在任一情况下构造函数使用此引用来制作该数组的副本，以便完成构造后所未引用的数组。  
+ 对引用**SAFEARRAY**结构或`CComSafeArray`对象。 在任一情况下构造函数使用此引用制作该数组的副本，以便完成构造后所不引用的数组。  
   
  `psaSrc`  
- 一个指向**SAFEARRAY**结构。 构造函数使用此地址来制作该数组的副本，以便完成构造后所未引用的数组。  
+ 指向的指针**SAFEARRAY**结构。 构造函数使用此地址制作该数组的副本，以便完成构造后所不引用的数组。  
   
 ### <a name="remarks"></a>备注  
  创建一个 `CComSafeArray` 对象。  
@@ -272,7 +272,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法将复制的内容**SAFEARRAY**到当前`CComSafeArray`对象。 将替换该数组的现有内容。  
+ 此方法将内容复制**SAFEARRAY**到当前`CComSafeArray`对象。 将替换现有数组的内容。  
   
 ##  <a name="copyto"></a>CComSafeArray::CopyTo  
  创建 `CComSafeArray` 对象的副本。  
@@ -283,15 +283,15 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
   
 ### <a name="parameters"></a>参数  
  `ppArray`  
- 指向要在其中创建新位置的指针**SAFEARRAY**。  
+ 指向要在其中创建新的位置的指针**SAFEARRAY**。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法将复制的内容`CComSafeArray`对象插入**SAFEARRAY**结构。  
+ 此方法将内容复制`CComSafeArray`对象插入**SAFEARRAY**结构。  
   
-##  <a name="create"></a>CComSafeArray::Create  
+##  <a name="create"></a>Ccomsafearray:: Create  
  创建一个 `CComSafeArray`。  
   
 ```
@@ -301,7 +301,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
   
 ### <a name="parameters"></a>参数  
  `pBound`  
- 一个指向**SAFEARRAYBOUND**对象。  
+ 指向的指针**SAFEARRAYBOUND**对象。  
   
  `uDims`  
  数组中的维度数。  
@@ -316,9 +316,9 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 一个`CComSafeArray`对象可以创建从现有**SAFEARRAYBOUND**结构和数字的维度，或通过在该数组和下限中指定的元素数。 如果数组是从 Visual c + + 进行访问，下限应为 0。 其他语言可能允许其他值下限 （例如，Visual Basic 支持数组元素，如-10 到 10 期）。  
+ A`CComSafeArray`对象可以创建从现有**SAFEARRAYBOUND**结构和数目的维度，或者按指定的元素数，在使用数组和下限。 如果数组为从 Visual c + + 中访问，下限应为 0。 其他语言可能允许其他值下限 （例如，如-10 到 10 范围的元素的 Visual 基本支持阵列）。  
   
-##  <a name="destroy"></a>CComSafeArray::Destroy  
+##  <a name="destroy"></a>Ccomsafearray:: Destroy  
  销毁 `CComSafeArray` 对象。  
   
 ```
@@ -329,7 +329,7 @@ HRESULT Destroy();
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 销毁现有`CComSafeArray`对象及其所有其包含的数据。  
+ 销毁现有`CComSafeArray`对象及其所有包含的数据。  
   
 ##  <a name="detach"></a>CComSafeArray::Detach  
  从 **对象拆离** SAFEARRAY `CComSafeArray` 。  
@@ -342,7 +342,7 @@ LPSAFEARRAY Detach();
  返回一个指向**SAFEARRAY**对象。  
   
 ### <a name="remarks"></a>备注  
- 此方法将分离**SAFEARRAY**对象从`CComSafeArray`对象。  
+ 此方法将分离**SAFEARRAY**对象`CComSafeArray`对象。  
   
 ##  <a name="getat"></a>CComSafeArray::GetAt  
  从一维数组中检索单个元素。  
@@ -356,7 +356,7 @@ T& GetAt(LONG lIndex) const;
  要返回的数组中的值的索引号。  
   
 ### <a name="return-value"></a>返回值  
- 返回对所需的数组元素的引用。  
+ 返回所需的数组元素的引用。  
   
 ##  <a name="getcount"></a>CComSafeArray::GetCount  
  返回数组中的元素数目。  
@@ -373,7 +373,7 @@ ULONG GetCount(UINT uDim = 0) const;
  返回数组中的元素数目。  
   
 ### <a name="remarks"></a>备注  
- 与多维数组使用时，此方法将返回的特定维度中的元素的数目。  
+ 当与多维数组一起使用，此方法将仅由特定维度中返回元素的数。  
   
 ##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
  返回数组中的维数。  
@@ -400,7 +400,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
  返回下限。  
   
 ### <a name="remarks"></a>备注  
- 如果下限为 0，则表明其第一个元素是元素编号为 0 的类似 c 语言的数组。 如果出现错误，例如，维度无效参数，此方法调用`AtlThrow`与描述该错误的 HRESULT。  
+ 如果下限为 0，则表明其第一个元素为元素编号为 0 的类似 C 的数组。 发生错误，例如，维度无效自变量，此方法调用`AtlThrow`与描述该错误的 HRESULT。  
   
 ##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
  返回 `m_psa` 数据成员的地址。  
@@ -449,13 +449,13 @@ LONG GetUpperBound(UINT uDim = 0) const;
   
 ### <a name="parameters"></a>参数  
  `uDim`  
- 要为其获取上限的数组维度。 如果省略，默认值为 0。  
+ 要为其获取上限数组维度。 如果省略，默认值为 0。  
   
 ### <a name="return-value"></a>返回值  
- 返回上限。 此值是包括在内，此维度的最大有效索引。  
+ 返回的上限。 此值是 （含），此维度的最大有效索引。  
   
 ### <a name="remarks"></a>备注  
- 如果出现错误，例如，维度无效参数，此方法调用`AtlThrow`与描述该错误的 HRESULT。  
+ 发生错误，例如，维度无效自变量，此方法调用`AtlThrow`与描述该错误的 HRESULT。  
   
 ##  <a name="issizable"></a>CComSafeArray::IsSizable  
  测试是否可重设 `CComSafeArray` 对象的大小。  
@@ -465,7 +465,7 @@ bool IsSizable() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回**true**如果`CComSafeArray`可调整**false**如果它不能。  
+ 返回**true**如果`CComSafeArray`可调整大小， **false**如果它不能。  
   
 ##  <a name="m_psa"></a>CComSafeArray::m_psa  
  保留的地址**SAFEARRAY**访问的结构。  
@@ -483,7 +483,7 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
   
 ### <a name="parameters"></a>参数  
  `alIndex`  
- 对某个向量的每个维度的数组的索引的指针。 最左侧 （最不重要） 的维度是`alIndex`[0] *。*  
+ 指向数组中每个维度的索引的向量。 最左侧 （最不重要） 的维度是`alIndex[0]`。  
   
  *t*  
  对返回的数据的引用。  
@@ -500,10 +500,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
   
 ### <a name="parameters"></a>参数  
  `alIndex`  
- 对某个向量的每个维度的数组的索引的指针。 最右边的 （最不重要） 维度是`alIndex`[0]。  
+ 指向数组中每个维度的索引的向量。 最右边的 （最不重要） 维度是`alIndex`[0]。  
   
  *T*  
- 指定新元素的值。  
+ 指定新的元素的值。  
   
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
@@ -527,7 +527,7 @@ T& operator[]int nindex) const;
  返回适当的数组元素。  
   
 ### <a name="remarks"></a>备注  
- 执行类似的功能为[CComSafeArray::GetAt](#getat)，但是，此运算符仅适用于一维数组。  
+ 执行到相似的功能[CComSafeArray::GetAt](#getat)，但此运算符仅适用于一维数组。  
   
 ##  <a name="operator_eq"></a>CComSafeArray::operator =  
  赋值运算符。  
@@ -542,7 +542,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
  对 `CComSafeArray` 对象的引用。  
   
  `psaSrc`  
- 一个指向**SAFEARRAY**对象。  
+ 指向的指针**SAFEARRAY**对象。  
   
 ### <a name="return-value"></a>返回值  
  返回数组中存储的数据类型。  
@@ -567,10 +567,10 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
   
 ### <a name="parameters"></a>参数  
  `pBound`  
- 一个指向**SAFEARRAYBOUND**结构，其中包含有关元素的数目和数组的下限。  
+ 指向的指针**SAFEARRAYBOUND**结构，其中包含有关元素的数目和数组的下限。  
   
  `ulCount`  
- 请求的已调整大小的数组中的对象数。  
+ 请求的调整大小的数组中的对象数。  
   
  `lLBound`  
  下限。  
@@ -579,7 +579,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- 此方法仅调整大小最右边的维度。 它不会调整大小返回的数组**IsResizable**作为**false**。  
+ 此方法仅调整大小时最右边的维度。 它将不调整大小返回的数组**IsResizable**作为**false**。  
   
 ##  <a name="setat"></a>CComSafeArray::SetAt  
  设置一维数组中元素的值。  
@@ -590,10 +590,10 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
   
 ### <a name="parameters"></a>参数  
  `lIndex`  
- 若要设置的数组元素的索引号。  
+ 要设置的数组元素的索引号。  
   
  *t*  
- 指定的元素的新值。  
+ 指定元素的新值。  
   
  `bCopy`  
  指示是否应创建数据的副本。 默认值是**TRUE**。  
@@ -602,11 +602,11 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ### <a name="remarks"></a>备注  
- `bCopy`标志考虑在内时类型的元素`BSTR`或**VARIANT**添加到数组。 默认值为**TRUE**可确保在该元素已添加到数组时的数据创建一个新副本。  
+ `bCopy`考虑标志时类型的元素`BSTR`或**VARIANT**添加到数组。 默认值**TRUE**可确保当该元素添加到数组的数据创建一个新副本。  
   
 ## <a name="see-also"></a>另请参阅  
  [SAFEARRAY 数据类型](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
- [CComSafeArray::Create](#create)   
- [CComSafeArray::Destroy](#destroy)   
+ [Ccomsafearray:: Create](#create)   
+ [Ccomsafearray:: Destroy](#destroy)   
  [类概述](../../atl/atl-class-overview.md)
 

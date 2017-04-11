@@ -36,13 +36,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: aae76ec5df3fc8d7541cf967cb4a9bb9cd3484a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 3b6f4264a65a824a57b6cffa201424a1a61cf5e6
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catldebuginterfacesmodule-class"></a>CAtlDebugInterfacesModule 类
-此类为调试接口提供支持。  
+此类提供了支持调试接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -51,7 +51,7 @@ class CAtlDebugInterfacesModule
 ```  
   
 ## <a name="remarks"></a>备注  
- `CAtlDebugInterfacesModule`提供调试接口所需的支持。 它包括在任何项目中定义的符号[_ATL_DEBUG_QI](http://msdn.microsoft.com/library/4f1feddf-1469-42ad-a2f7-5a816d1c0bc5)。  
+ `CAtlDebugInterfacesModule`提供所需的调试接口的支持。 定义符号的任何项目中包含[_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi)。  
   
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  

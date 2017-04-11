@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: e86ca806e5e6f19fa36b3ab33ba7a518da80e86b
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="diagnostic-services"></a>诊断服务
@@ -79,9 +79,11 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
 |-|-|  
 |[断言](#assert)|打印一条消息，然后中止程序，如果指定的表达式的计算结果为**FALSE**库的调试版本中。|  
 |[ASSERT_KINDOF](#assert_kindof)|测试对象是指定类的对象还是指定类派生类的对象。|  
-|[ASSERT_VALID](#assert_valid)|测试一个对象的内部有效性通过调用其`AssertValid`成员函数; 通常从重写`CObject`。|  
+|[ASSERT_VALID](#assert_valid)|测试一个对象的内部有效性通过调用其`AssertValid`成员函数; 通常从重写`CObject`。|
 |[DEBUG_NEW](#debug_new)|提供调试模式下用于所有对象分配的文件名和行号以帮助查找内存泄漏。|  
 |[DEBUG_ONLY](#debug_only)|类似于**断言**但不会测试表达式; 的值用于仅在调试模式下执行的代码。|  
+|[确保和 ENSURE_VALID](#ensure)|用于验证数据的正确性。|
+|[THIS_FILE](#this_file)|将扩展到正在编译的文件的名称。|
 |[TRACE](#trace)|提供`printf`-如库的调试版本中的功能。|  
 |[验证](#verify)|类似于**断言**但计算结果也如下所示的调试版本的库的发行版中的表达式。|  
   
@@ -93,7 +95,9 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
 |[afxMemDF](#afxmemdf)|控制调试内存分配器行为的全局变量。|  
 |[AfxCheckError](#afxcheckerror)|用于测试传递的全局变量**SCODE**以查看它时出错并且，如果是这样，将引发相应的错误。|  
 |[AfxCheckMemory](#afxcheckmemory)|检查所有当前分配的内存的完整性。|  
-|[AfxDump](#cdumpcontext_in_mfc_)|如果在调试器中调用，将在调试时转储对象的状态。|  
+|[AfxDebugBreak](#afxdebugbreak)|在执行过程中会引起的中断。|
+|[AfxDump](#cdumpcontext_in_mfc)|如果在调试器中调用，将在调试时转储对象的状态。|  
+|[AfxDump](#afxdump)|在调试时转储对象的状态的内部函数。|
 |[AfxDumpStack](#afxdumpstack)|生成当前堆栈的映像。 此函数始终以静态方式链接。|  
 |[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|启用内存泄漏转储。|  
 |[AfxEnableMemoryTracking](#afxenablememorytracking)|打开和关闭内存跟踪。|  
@@ -108,7 +112,49 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
 |-|-|  
 |[AfxDoForAllClasses](#afxdoforallclasses)|在所有上执行指定的函数`CObject`-派生支持运行时类型检查的类。|  
 |[AfxDoForAllObjects](#afxdoforallobjects)|在所有上执行指定的函数`CObject`-派生的对象的已分配了与**新**。|  
+
+### <a name="mfc-compilation-macros"></a>MFC 编译宏
+|||
+|-|-|
+|[_AFX_SECURE_NO_WARNINGS，则](#afx_secure_no_warnings)|取消显示有关对已弃用的 MFC 函数的使用的编译器警告。|  
+
+
+## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS，则
+取消显示有关对已弃用的 MFC 函数的使用的编译器警告。  
+   
+### <a name="syntax"></a>语法   
+```  
+_AFX_SECURE_NO_WARNINGS  
+```     
+### <a name="example"></a>示例  
+ 如果未定义 _AFX_SECURE_NO_WARNINGS，则此代码示例将产生一个编译器警告。  
   
+ ```cpp
+// define this before including any afx files in stdafx.h
+#define _AFX_SECURE_NO_WARNINGS
+```
+```cpp
+CRichEditCtrl* pRichEdit = new CRichEditCtrl;
+pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
+   CRect(10,10,100,200), pParentWnd, 1);
+char sz[256];
+pRichEdit->GetSelText(sz);
+```
+
+## <a name="afxdebugbreak"></a>AfxDebugBreak
+调用此函数可导致中断 (调用位置`AfxDebugBreak`) 执行过程中的 MFC 应用程序的调试版本。  
+
+### <a name="syntax"></a>语法    
+```
+void AfxDebugBreak( );    
+```  
+   
+### <a name="remarks"></a>备注  
+ `AfxDebugBreak`在 MFC 应用程序的发行版本中不起，应删除。 此函数只应在 MFC 应用程序。 使用 Win32 API 的版本， **DebugBreak**，以在非 MFC 应用程序中导致中断。  
+   
+### <a name="requirements"></a>要求  
+ **标头︰** afxver_.h   
+
 ##  <a name="assert"></a>断言
  计算其自变量。  
   
@@ -206,7 +252,7 @@ ASSERT_VALID(pObject)
 ```  
   
 ### <a name="remarks"></a>备注  
- 你可以使用`DEBUG_NEW`你通常将使用的程序中的所有位置**新**运算符以将堆存储分配。  
+ 你可以使用`DEBUG_NEW`你通常将使用的程序中的所有位置**新**运算符以将存储堆分配。  
   
  在调试模式下 (当**_DEBUG**定义符号)，`DEBUG_NEW`将跟踪的每个对象所分配的文件名和行号。 然后，使用[cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince)用的成员函数，每个对象分配`DEBUG_NEW`还会显示文件名和行号分配所在位置。  
   
@@ -239,6 +285,67 @@ DEBUG_ONLY(expression)
 
 ### <a name="requirements"></a>要求  
  **标头：** afx.h
+
+ ### <a name="ensure"></a>确保和 ENSURE_VALID
+用于验证数据的正确性。  
+   
+### <a name="syntax"></a>语法    
+```
+ENSURE(  booleanExpression )  
+ENSURE_VALID( booleanExpression  )  
+```
+### <a name="parameters"></a>参数  
+ `booleanExpression`  
+ 指定要测试的布尔表达式。  
+   
+### <a name="remarks"></a>备注  
+ 这些宏的目的是提高验证的参数。 宏阻止进一步处理代码中的参数不正确。 与不同**断言**宏，**确保**宏引发除了生成断言异常。  
+  
+ 根据项目配置将宏的行为方式中，两种方式。 宏调用**断言**和这样如果，则断言失败将引发异常。 因此，在调试配置 (即，其中**_DEBUG**定义) 宏生成断言，并在发布配置中的异常，该宏产生只能使用异常 (**断言**的计算结果不发布配置中的表达式)。  
+  
+ 宏**ENSURE_ARG**类似**确保**宏。  
+  
+ **ENSURE_VALID**调用`ASSERT_VALID`宏 （用于仅在调试版本中起作用）。 此外， **ENSURE_VALID**指针为 NULL 时引发异常。 在调试和发布配置执行 NULL 测试。  
+  
+ 如果任何这些测试失败，一条警告消息将显示在与相同的方式**断言**。 如果需要宏将引发无效参数异常。  
+### <a name="requirements"></a>要求  
+ **标头：** afx.h  
+   
+### <a name="see-also"></a>另请参阅  
+ [宏和全局函数](mfc-macros-and-globals.md)   
+ [验证](#verify)   
+ [ATLENSURE](#altensure)
+
+## <a name="this_file"></a>THIS_FILE
+将扩展到正在编译的文件的名称。  
+   
+### <a name="syntax"></a>语法    
+```
+THIS_FILE    
+```  
+   
+### <a name="remarks"></a>备注  
+ 使用的信息**断言**和**验证**宏。 应用程序向导和代码向导将宏放在他们创建源代码文件。  
+   
+### <a name="example"></a>示例  
+```cpp
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+// __FILE__ is one of the six predefined ANSI C macros that the 
+// compiler recognizes. 
+```
+   
+### <a name="requirements"></a>要求  
+ **标头：** afx.h  
+   
+### <a name="see-also"></a>另请参阅  
+ [宏和全局函数](mfc-macros-and-globals.md)   
+ [断言](#assert)   
+ [验证](#verify)
+
 
 ##  <a name="trace"></a>跟踪  
  将指定的字符串发送到当前应用程序的调试器。  
@@ -286,7 +393,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>要求  
  **标头：** afx.h
 
-##  <a name="cdumpcontext_in_mfc_"></a>afxDump (MFC 中的 CDumpContext)  
+##  <a name="cdumpcontext_in_mfc"></a>afxDump (MFC 中的 CDumpContext)  
  提供了在你的应用程序的基本对象转储功能。  
   
 ```   
@@ -305,6 +412,31 @@ CDumpContext  afxDump;
 
 ### <a name="requirements"></a>要求  
  **标头：** afx.h
+
+
+## <a name="afxdump"></a>AfxDump （内部）
+MFC 使用要在调试时转储对象的状态的内部函数。  
+
+### <a name="syntax"></a>语法    
+```
+void AfxDump(const CObject* pOb);   
+```
+### <a name="parameters"></a>参数  
+ `pOb`  
+ 指向类的对象的指针派生自`CObject`。  
+   
+### <a name="remarks"></a>备注  
+ **AfxDump**调用对象的`Dump`成员函数，并发送到的位置信息由指定`afxDump`变量。 **AfxDump**仅在调试版本的 MFC 中可用。  
+  
+ 你的程序代码不应调用**AfxDump**，但应改为调用`Dump`的相应对象的成员函数。  
+   
+### <a name="requirements"></a>要求  
+ **标头：** afx.h  
+   
+### <a name="see-also"></a>另请参阅  
+ [CObject::Dump](cobject-class.md#dump)   
+
+
 
 ##  <a name="afxmemdf"></a>afxMemDF  
  此变量从调试器或程序进行访问，并允许你调整分配诊断。  
@@ -383,7 +515,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>要求  
  **标头：** afx.h  
  
-##  <a name="mfc_"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>AfxDump (MFC)  
  调用此函数在调试器能够在调试时转储对象的状态中。  
   
 ```   
@@ -398,6 +530,14 @@ void AfxDump(const CObject* pOb);
  **AfxDump**调用对象的`Dump`成员函数，并发送到的位置信息由指定`afxDump`变量。 **AfxDump**仅在调试版本的 MFC 中可用。  
   
  你的程序代码不应调用**AfxDump**，但应改为调用`Dump`的相应对象的成员函数。  
+
+### <a name="requirements"></a>要求  
+ **标头：** afx.h  
+
+### <a name="see-also"></a>另请参阅  
+ [CObject::Dump](cobject-class.md#dump)   
+
+
   
 ##  <a name="afxdumpstack"></a>AfxDumpStack  
  可以使用此全局函数生成当前堆栈的映像。  

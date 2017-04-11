@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 9706c47d9bd5996c28873da6a15a687bf9b5e038
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: ddf13f6458df387d6686a18ecd459938ef2ebafd
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="database-macros-and-globals"></a>数据库宏和全局函数
@@ -62,9 +62,30 @@ ms.lasthandoff: 02/24/2017
 ### <a name="database-globals"></a>数据库全局  
   
 |||  
-|-|-|  
+|-|-| 
+|[AfxDbInitModule](#afxdbinitmodule)|添加了对动态链接到 MFC 的规则 DLL 的数据库支持。| 
 |[AfxGetHENV](#afxgethenv)|检索 MFC 当前正在使用的 ODBC 环境的句柄。 您可以在直接 ODBC 调用中使用此句柄。|  
+
+
+## <a name="afxdbinitmodule"></a>AfxDbInitModule
+为获得 MFC 数据库 （或 DAO） 支持从动态链接到 MFC 的规则 DLL，在常规 DLL 中添加对此函数的调用**CWinApp::InitInstance**函数可以初始化 MFC 数据库 DLL。  
+   
+### <a name="syntax"></a>语法    
+```
+void AFXAPI AfxDbInitModule( );    
+```  
+   
+### <a name="remarks"></a>备注  
+ 请确保此调用发生在基类中的任何调用之前或任何添加的代码访问 MFC 数据库 DLL。 MFC 数据库 DLL 是扩展 DLL;使扩展 DLL，若要连接到**CDynLinkLibrary**链，它必须创建**CDynLinkLibrary**将使用它的每个模块的上下文中的对象。 `AfxDbInitModule`创建**CDynLinkLibrary**对象在常规 DLL 上下文中，以便让它连接到**CDynLinkLibrary**对象常规 dll 的链。  
+   
+### <a name="requirements"></a>要求  
+ **标头︰**<afxdll_.h></afxdll_.h>  
+   
+### <a name="see-also"></a>另请参阅  
+ [宏和全局函数](mfc-macros-and-globals.md)
+ 
   
+
 ##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
  使用此宏调用可能会返回任何 ODBC API 函数`SQL_STILL_EXECUTING`。  
   
@@ -77,17 +98,17 @@ AFX_ODBC_CALL(SQLFunc)
  ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>备注  
- `AFX_ODBC_CALL`将重复调用函数之前不会再返回`SQL_STILL_EXECUTING`。  
+ `AFX_ODBC_CALL`将重复调用该函数之前它不再返回`SQL_STILL_EXECUTING`。  
   
- 在调用之前`AFX_ODBC_CALL`，您必须声明一个变量， `nRetCode`，类型的**某一 RETCODE**。  
+ 然后再调用`AFX_ODBC_CALL`，必须声明变量， `nRetCode`，类型的**某一 RETCODE**。  
   
- 请注意 MFC ODBC 类现在使用只有同步处理。 若要执行异步操作，必须调用 ODBC API 函数**SQLSetConnectOption**。 有关详细信息，请参阅 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 中的“异步执行函数”主题。  
+ 请注意，MFC ODBC 类现在使用仅同步处理。 若要执行异步操作，必须调用 ODBC API 函数**SQLSetConnectOption**。 有关详细信息，请参阅 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 中的“异步执行函数”主题。  
 
   
 ### <a name="example"></a>示例  
- 此示例使用`AFX_ODBC_CALL`调用**SQLColumns** ODBC API 函数，返回的列的列表中，表通过名为`strTableName`。 请注意声明`nRetCode`和记录集数据成员，若要将参数传递给函数的使用。 该示例还阐释了检查与调用的结果**检查**，类的成员函数`CRecordset`。 该变量`prs`是一个指向`CRecordset`声明在其他位置的对象。  
+ 此示例使用`AFX_ODBC_CALL`调用**SQLColumns** ODBC API 函数时，返回通过名为的表中的列的列表`strTableName`。 请注意声明`nRetCode`和的记录集数据成员，将参数传递到函数的用法。 该示例还阐释了检查与调用的结果**检查**，类的成员函数`CRecordset`。 变量`prs`是一个指向`CRecordset`声明在其他位置的对象。  
   
- [!code-cpp[NVC_MFCDatabase #&39;](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase # 39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]  
 
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
@@ -116,7 +137,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
   **标头**afxdb.h  
   
 ##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
- `AFX_SQL_SYNC`宏只是调用该函数`SQLFunc`。  
+ `AFX_SQL_SYNC`宏只需调用函数`SQLFunc`。  
   
 ```   
 AFX_SQL_SYNC(SQLFunc)   
@@ -127,23 +148,23 @@ AFX_SQL_SYNC(SQLFunc)
  ODBC API 函数。 有关这些函数的详细信息，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>备注  
- 使用此宏调用 ODBC API 函数，将不会返回`SQL_STILL_EXECUTING`。  
+ 使用此宏调用不会返回的 ODBC API 函数`SQL_STILL_EXECUTING`。  
   
- 之前，先调用`AFX_SQL_SYNC`，您必须声明一个变量， `nRetCode`，类型的**某一 RETCODE**。 您可以检查的值`nRetCode`宏调用之后。  
+ 之前调用`AFX_SQL_SYNC`，必须声明变量， `nRetCode`，类型的**某一 RETCODE**。 你可以检查的值`nRetCode`宏调用之后。  
   
- 请注意，实现`AFX_SQL_SYNC`在 MFC 4.2 中发生更改。 检查服务器状态不再是必需的因为`AFX_SQL_SYNC`只需将一个值赋给`nRetCode`。 例如，而不是进行调用  
+ 请注意的实现`AFX_SQL_SYNC`在 MFC 4.2 中发生更改。 检查服务器状态不再是必需的因为`AFX_SQL_SYNC`只需将值赋给`nRetCode`。 例如，而不是进行调用  
   
- [!code-cpp[NVC_MFCDatabase #&40;](../../mfc/codesnippet/cpp/database-macros-and-globals_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase # 40](../../mfc/codesnippet/cpp/database-macros-and-globals_2.cpp)]  
   
- 您只需进行分配  
+ 你可以只需进行分配  
   
- [!code-cpp[NVC_MFCDatabase #&41;](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]  
+ [!code-cpp[NVC_MFCDatabase # 41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]  
   
 ### <a name="requirements"></a>要求  
   **标头**afxdb.h  
   
 ##  <a name="afxgethenv"></a>AfxGetHENV  
- 可以在直接 ODBC 调用中，使用返回的句柄，但您不能关闭句柄或假定，该句柄仍然有效且可用后将任何现有`CDatabase`-或`CRecordset`-派生的对象都已损坏。  
+ 你可以在直接 ODBC 调用中，使用返回的句柄，但不是必须关闭句柄，或假定，句柄后依然有效且可用任何现有`CDatabase`-或`CRecordset`-派生的对象已被销毁。  
   
 ```   
 HENV AFXAPI AfxGetHENV(); 

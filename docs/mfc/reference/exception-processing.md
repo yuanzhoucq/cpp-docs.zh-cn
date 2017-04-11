@@ -41,23 +41,23 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a2ded9c49a9f6935a5b268ccbefc4678af184029
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: fc136efaa6312edf3edfa8420411eda73e1c2468
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="exception-processing"></a>异常处理
-当程序执行时，可能发生的异常情况和称为"例外"的错误数。 其中可能包括耗尽内存、 资源分配错误和查找文件时失败。  
+程序执行时，可以发生的异常条件和称为"异常"的错误数。 其中可能包括耗尽内存、 资源分配错误和文件中查找失败。  
   
- Microsoft 基础类库使用模仿密切 ANSI 标准委员会建议的 c + + 异常处理方案。 在调用函数可能会遇到反常情况之前，必须设置的异常处理程序。 如果该函数时遇到异常条件，则它引发异常并将控制传递到异常处理程序。  
+ Microsoft 基础类库使用模仿密切一个由 ANSI 标准委员会建议用于 c + + 异常处理方案。 在调用函数可能会遇到反常情况之前，必须设置的异常处理程序。 如果该函数时遇到异常条件，则会引发异常并将控制传递到异常处理程序。  
   
- 随 Microsoft 基础类库提供的几个宏将设置异常处理程序。 很多其他全局函数帮助引发特殊的异常并终止程序，如有必要。 这些宏和全局函数分为以下类别︰  
+ 包含带有 Microsoft 基础类库的几个宏都将设置异常处理程序。 全局函数中的大量帮助引发专用的异常并终止程序，如有必要。 这些宏和全局函数分为以下类别︰  
   
-- 异常宏，则异常处理程序的结构。  
+- 异常宏，结构异常处理程序。  
   
-- Exception-throwing 函数)，这会生成特定类型的异常。  
+- Exception-throwing 函数)，其生成特定类型的异常。  
   
-- 终止函数，这会导致程序终止。  
+- 终止函数，这会使程序终止。  
   
  有关示例和更多详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
   
@@ -65,28 +65,29 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[重试](#try)|将指定异常处理的代码的块。|  
-|[CATCH](#catch)|将指定的捕获的异常从前面的代码块**尝试**块。|  
-|[CATCH_ALL](#catch_all)|将指定的用于捕获所有异常从前面的代码块**尝试**块。|  
-|[AND_CATCH](#and_catch)|将指定的用于捕获从前面的其他异常类型的代码块**尝试**块。|  
-|[AND_CATCH_ALL](#and_catch_all)|将指定的用于捕获中前面引发其他所有其他异常类型的代码块**尝试**块。|  
-|[END_CATCH](#end_catch)|结束最后一个**捕获**或`AND_CATCH`代码块。|  
-|[END_CATCH_ALL](#end_catch_all)|结束最后一个`CATCH_ALL`代码块。|  
+|[重](#try)|指定异常处理的代码的块。|  
+|[捕获](#catch)|将捕获的异常从前面的代码块指定**重**块。|  
+|[CATCH_ALL](#catch_all)|指定的用于捕获所有异常从前面的代码块**重**块。|  
+|[AND_CATCH](#and_catch)|指定的用于捕获从前面的其他异常类型的代码块**重**块。|  
+|[AND_CATCH_ALL](#and_catch_all)|指定的用于捕获中前面引发其他所有其他异常类型的代码块**重**块。|  
+|[END_CATCH](#end_catch)|结束最后**捕获**或`AND_CATCH`代码块。|  
+|[END_CATCH_ALL](#end_catch_all)|结束最后`CATCH_ALL`代码块。|  
 |[引发](#throw)|将指定的异常引发。|  
-|[THROW_LAST](#throw_last)|引发当前正在处理的异常到下一个外部处理程序。|  
+|[THROW_LAST](#throw_last)|会引发到下一步的外部处理程序当前已处理的异常。|  
   
 ### <a name="exception-throwing-functions"></a>异常引发函数  
   
 |||  
 |-|-|  
 |[AfxThrowArchiveException](#afxthrowarchiveexception)|引发存档异常。|  
-|[AfxThrowFileException](#afxthrowfileexception)|将引发文件例外。|  
+|[AfxThrowFileException](#afxthrowfileexception)|将引发文件异常。|  
+|[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|将引发无效参数异常。|
 |[AfxThrowMemoryException](#afxthrowmemoryexception)|将引发内存异常。|  
 |[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|会引发不受支持的异常。|  
 |[AfxThrowResourceException](#afxthrowresourceexception)|会引发 Windows 未找到资源的异常。|  
-|[AfxThrowUserException](#afxthrowuserexception)|用户启动程序操作，则会引发异常。|  
+|[AfxThrowUserException](#afxthrowuserexception)|在用户启动程序操作中引发异常。|  
   
- MFC 专门为 OLE 异常提供了两个异常引发函数︰  
+ 专门为 OLE 异常，MFC 提供了两个异常引发函数︰  
   
 ### <a name="ole-exception-functions"></a>OLE 异常函数  
   
@@ -101,8 +102,8 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[AfxThrowDAOException](#afxthrowdaoexception)|引发[CDaoException](../../mfc/reference/cdaoexception-class.md)从您自己的代码。|  
-|[AfxThrowDBException](#afxthrowdbexception)|引发[CDBException](../../mfc/reference/cdbexception-class.md)从您自己的代码。|  
+|[AfxThrowDAOException](#afxthrowdaoexception)|引发[CDaoException](../../mfc/reference/cdaoexception-class.md)从你自己的代码。|  
+|[AfxThrowDBException](#afxthrowdbexception)|引发[CDBException](../../mfc/reference/cdbexception-class.md)从你自己的代码。|  
   
  MFC 提供了以下的终止函数︰  
   
@@ -110,17 +111,17 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[AfxAbort](#afxabort)|调用终止应用程序运行时错误时发生。|  
+|[AfxAbort](#afxabort)|调用终止应用程序时出现错误时发生。|  
   
-##  <a name="a-nametrya--try"></a><a name="try"></a>重试  
- 设置**尝试**块。  
+##  <a name="try"></a>重  
+ 将设置**重**块。  
   
 ```   
 TRY   
 ```  
   
 ### <a name="remarks"></a>备注  
- 一个**尝试**块将可能引发异常的代码块的标识。 在下面的示例处理这些异常**捕获**和`AND_CATCH`块。 允许递归︰ 异常可能会传递到一个外部**尝试**通过忽略它们或通过使用块`THROW_LAST`宏。 结束**尝试**块`END_CATCH`或`END_CATCH_ALL`宏。  
+ A**重**块标识的可能会引发异常的代码块。 在下面的示例处理这些异常**捕获**和`AND_CATCH`块。 允许递归︰ 异常可能会传递给为外部**重**块，请忽略它们，或使用`THROW_LAST`宏。 结束**重**块`END_CATCH`或`END_CATCH_ALL`宏。  
   
  有关详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
   
@@ -130,8 +131,8 @@ TRY
 ### <a name="requirements"></a>要求
 标头：afx.h
 
-##  <a name="a-namecatcha--catch"></a><a name="catch"></a>CATCH  
- 定义的捕获引发在前面的第一个异常类型的代码块**尝试**块。  
+##  <a name="catch"></a>捕获  
+ 定义的捕获引发在前面的第一个异常类型的代码块**重**块。  
   
 ```   
 CATCH(exception_class, exception_object_pointer_name)  
@@ -140,28 +141,28 @@ CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="parameters"></a>参数  
  *exception_class*  
- 指定要测试的异常类型。 有关标准异常类的列表，请参见类[CException](../../mfc/reference/cexception-class.md)。  
+ 指定要测试的异常类型。 标准异常类的列表，请参阅类[CException](../../mfc/reference/cexception-class.md)。  
   
  *exception_object_pointer_name*  
- 为将由宏创建的异常对象指针指定名称。 可以使用指针名访问中的异常对象**捕获**块。 已为您声明此变量。  
+ 为将由宏创建的异常对象指针指定名称。 你可以使用指针名访问中的异常对象**捕获**块。 已为您声明此变量。  
   
 ### <a name="remarks"></a>备注  
- 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部帧。 结束**尝试**块`END_CATCH`宏。  
+ 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部帧。 结束**重**块`END_CATCH`宏。  
   
- 如果*exception_class*是类`CException`，则将捕获所有异常类型。 您可以使用[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)成员函数来确定哪些特定异常。 更好的方法来捕获几种例外情况是使用顺序`AND_CATCH`语句，每个都有不同的异常类型。  
+ 如果*exception_class*是类`CException`，然后将捕获所有异常类型。 你可以使用[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)成员函数来确定抛出的特定异常。 更好的方法来捕获的异常的几种类型是使用顺序`AND_CATCH`语句，每个都有不同的异常类型。  
   
- 由宏创建异常对象指针。 不需要自行声明。  
+ 异常对象指针是由宏创建的。 不需要自行声明。  
   
 > [!NOTE]
->  **捕获**块定义为用大括号分隔的 c + + 范围。 如果您在此范围中声明变量，则只能在该范围中访问它们。 这同样适用于*exception_object_pointer_name*。  
+>  **捕获**块被定义为用大括号分隔的 c + + 作用域。 如果您在此范围中声明变量，则只能在该范围中访问它们。 这也适用于*exception_object_pointer_name*。  
   
  有关异常的详细信息和**捕获**宏，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCExceptions #&26;](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions # 26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="a-namecatchalla--catchall"></a><a name="catch_all"></a>CATCH_ALL  
- 定义的捕获所有引发的异常在前面的代码块**尝试**块。  
+##  <a name="catch_all"></a>CATCH_ALL  
+ 定义的捕获引发在前面的所有异常类型的代码块**重**块。  
   
 ```   
 CATCH_ALL(exception_object_pointer_name)   
@@ -172,7 +173,7 @@ CATCH_ALL(exception_object_pointer_name)
  为将由宏创建的异常对象指针指定名称。 您可以使用指针名访问 `CATCH_ALL` 块中的异常对象。 已为您声明此变量。  
   
 ### <a name="remarks"></a>备注  
- 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部帧。 如果您使用`CATCH_ALL`，最终**尝试**块`END_CATCH_ALL`宏。  
+ 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部帧。 如果你使用`CATCH_ALL`，结束**重**块`END_CATCH_ALL`宏。  
   
 > [!NOTE]
 >  `CATCH_ALL` 块被定义为用大括号分隔的 C ++ 范围。 如果您在此范围中声明变量，则只能在该范围中访问它们。  
@@ -185,8 +186,8 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
 
-##  <a name="a-nameandcatcha--andcatch"></a><a name="and_catch"></a>AND_CATCH  
- 定义一个用于捕获中前面引发其他异常的代码块**尝试**块。  
+##  <a name="and_catch"></a>AND_CATCH  
+ 定义的用于捕获中前面引发其他异常的代码块**重**块。  
   
 ```   
 AND_CATCH(exception_class, exception_object_pointer_name)   
@@ -194,26 +195,26 @@ AND_CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="parameters"></a>参数  
  *exception_class*  
- 指定要测试的异常类型。 有关标准异常类的列表，请参见类[CException](../../mfc/reference/cexception-class.md)。  
+ 指定要测试的异常类型。 标准异常类的列表，请参阅类[CException](../../mfc/reference/cexception-class.md)。  
   
  *exception_object_pointer_name*  
- 将由宏创建异常对象指针的名称。 您可以使用指针名访问 `AND_CATCH` 块中的异常对象。 已为您声明此变量。  
+ 将由宏创建的异常对象指针名称。 您可以使用指针名访问 `AND_CATCH` 块中的异常对象。 已为您声明此变量。  
   
 ### <a name="remarks"></a>备注  
- 使用**捕获**宏来捕获一个异常类型，则`AND_CATCH`宏来捕获每个后续的类型。 结束**尝试**块`END_CATCH`宏。  
+ 使用**捕获**宏来捕获一个异常类型，则`AND_CATCH`宏来捕获每个后续的类型。 结束**重**块`END_CATCH`宏。  
   
- 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用`THROW_LAST`宏内的`AND_CATCH`阻止把处理转移到下一个外部帧。 `AND_CATCH`标记在前面的末尾**捕获**或`AND_CATCH`块。  
+ 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用`THROW_LAST`宏内的`AND_CATCH`阻止 shift 处理到下一步的外部异常帧。 `AND_CATCH`标记的前面末尾**捕获**或`AND_CATCH`块。  
   
 > [!NOTE]
->  `AND_CATCH`块被定义为 （大括号分隔） 的 c + + 范围。 如果您声明此范围中的变量，请记住它们是只能在该作用域中访问。 这同样适用于*exception_object_pointer_name*变量。  
+>  `AND_CATCH`块被定义为 c + + 作用域 （用大括号分开）。 如果您声明此范围中的变量，请记住，它们只能在该作用域中访问。 这也适用于*exception_object_pointer_name*变量。  
   
 ### <a name="example"></a>示例  
  请参阅示例[捕获](#catch)。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
-##  <a name="a-nameandcatchalla--andcatchall"></a><a name="and_catch_all"></a>AND_CATCH_ALL  
- 定义一个用于捕获中前面引发其他异常的代码块**尝试**块。  
+##  <a name="and_catch_all"></a>AND_CATCH_ALL  
+ 定义的用于捕获中前面引发其他异常的代码块**重**块。  
   
 ```   
 AND_CATCH_ALL(exception_object_pointer_name)  
@@ -221,20 +222,20 @@ AND_CATCH_ALL(exception_object_pointer_name)
   
 ### <a name="parameters"></a>参数  
  *exception_object_pointer_name*  
- 将由宏创建异常对象指针的名称。 您可以使用指针名访问 `AND_CATCH_ALL` 块中的异常对象。 已为您声明此变量。  
+ 将由宏创建的异常对象指针名称。 您可以使用指针名访问 `AND_CATCH_ALL` 块中的异常对象。 已为您声明此变量。  
   
 ### <a name="remarks"></a>备注  
- 使用**捕获**宏来捕获一个异常类型，则`AND_CATCH_ALL`宏来捕获其他所有后续的类型。 如果您使用`AND_CATCH_ALL`，最终**尝试**块`END_CATCH_ALL`宏。  
+ 使用**捕获**宏来捕获一个异常类型，则`AND_CATCH_ALL`宏来捕获其他所有后续的类型。 如果你使用`AND_CATCH_ALL`，结束**重**块`END_CATCH_ALL`宏。  
   
- 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用`THROW_LAST`宏内的`AND_CATCH_ALL`阻止把处理转移到下一个外部帧。 `AND_CATCH_ALL`标记在前面的末尾**捕获**或`AND_CATCH_ALL`块。  
+ 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用`THROW_LAST`宏内的`AND_CATCH_ALL`阻止 shift 处理到下一步的外部异常帧。 `AND_CATCH_ALL`标记的前面末尾**捕获**或`AND_CATCH_ALL`块。  
   
 > [!NOTE]
->  `AND_CATCH_ALL`块被定义为 c + + 作用域 （用大括号分隔）。 如果您声明此范围中的变量，请记住它们是只能在该作用域中访问。  
+>  `AND_CATCH_ALL`块被定义为 c + + 作用域 （用大括号分隔）。 如果您声明此范围中的变量，请记住，它们只能在该作用域中访问。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameendcatcha--endcatch"></a><a name="end_catch"></a>END_CATCH  
+##  <a name="end_catch"></a>END_CATCH  
  标记的最后一个结束**捕获**或`AND_CATCH`块。  
   
 ```   
@@ -247,7 +248,7 @@ END_CATCH
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameendcatchalla--endcatchall"></a><a name="end_catch_all"></a>END_CATCH_ALL  
+##  <a name="end_catch_all"></a>END_CATCH_ALL  
  标记的最后一个结束`CATCH_ALL`或`AND_CATCH_ALL`块。  
   
 ```   
@@ -257,7 +258,7 @@ END_CATCH_ALL
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-namethrowa--throw-mfc"></a><a name="throw"></a>THROW (MFC)  
+##  <a name="throw"></a>THROW (MFC)  
  将指定的异常引发。  
   
 ```   
@@ -266,17 +267,17 @@ THROW(exception_object_pointer)
   
 ### <a name="parameters"></a>参数  
  *exception_object_pointer*  
- 指的异常对象派生自`CException`。  
+ 指向异常对象派生自`CException`。  
   
 ### <a name="remarks"></a>备注  
- **引发**中断程序的执行，将控制权传递到关联**捕获**中您的程序块。 如果未提供**捕获**阻止，则控制权传递给一个打印错误消息并退出的 Microsoft 基础类库模块。  
+ **引发**中断程序的执行，将控件传递到关联**捕获**阻止在程序中。 如果你未提供**捕获**阻止，则控制权传递给一个打印错误消息并退出的 Microsoft 基础类库模块。  
   
  有关详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-namethrowlasta--throwlast"></a><a name="throw_last"></a>THROW_LAST  
+##  <a name="throw_last"></a>THROW_LAST  
  异常引发回下一个外部**捕获**块。  
   
 ```   
@@ -284,7 +285,7 @@ THROW_LAST()
 ```  
   
 ### <a name="remarks"></a>备注  
- 此宏可引发本地创建的异常。 如果尝试引发您只需捕获的异常，它通常将超出范围，并被删除。 与`THROW_LAST`，此异常正确传递到下一步**捕获**处理程序。  
+ 此宏可以引发本地创建的异常。 如果你尝试引发异常，你只需捕获，它通常将超出范围，而且被删除。 与`THROW_LAST`，此异常正确传递到下一步**捕获**处理程序。  
   
  有关详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
   
@@ -294,7 +295,7 @@ THROW_LAST()
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameafxthrowarchiveexceptiona--afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
+##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
  引发存档异常。  
   
 ```   
@@ -306,13 +307,13 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
  指定一个整数，指示该异常的原因。 有关可能的值的列表，请参阅[CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)。  
   
  `lpszArchiveName`  
- 指向包含名称的字符串`CArchive`导致了异常 （如果可用） 的对象。  
+ 指向包含的名称的字符串`CArchive`导致异常，（如果可用） 的对象。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameafxthrowfileexceptiona--afxthrowfileexception"></a><a name="afxthrowfileexception"></a>AfxThrowFileException  
- 将引发文件例外。  
+##  <a name="afxthrowfileexception"></a>AfxThrowFileException  
+ 将引发文件异常。  
   
 ```   
 void AfxThrowFileException(
@@ -326,18 +327,38 @@ void AfxThrowFileException(
  指定一个整数，指示该异常的原因。 有关可能的值的列表，请参阅[CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause)。  
   
  `lOsError`  
- 包含的操作系统错误号 （如果可用），它指示该异常的原因。 请参阅您操作系统手册来查找错误代码的列表。  
+ 包含操作系统错误号 （如果可用），它指示异常的原因。 请参阅你操作系统手册了解错误代码的列表。  
   
  `lpszFileName`  
- 指向包含导致了异常 （如果可用） 的文件的名称的字符串。  
+ 指向包含导致异常，（如果可用） 文件的名称的字符串。  
   
 ### <a name="remarks"></a>备注  
- 您负责确定基于操作系统错误代码的原因。  
+ 你负责确定基于操作系统错误代码的原因。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
+
+## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+将引发无效参数异常。  
+   
+### <a name="syntax"></a>语法    
+```
+void AfxThrowInvalidArgException( );  
+```  
+   
+### <a name="remarks"></a>备注  
+ 使用无效参数时，调用此函数。  
+   
+### <a name="requirements"></a>要求  
+ **标头：** afx.h  
+   
+### <a name="see-also"></a>另请参阅  
+ [宏和全局函数](mfc-macros-and-globals.md)   
+ [CInvalidArgException 类](cinvalidargexception-class.md)   
+ [引发](#throw)
   
-##  <a name="a-nameafxthrowmemoryexceptiona--afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
+  
+##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
  将引发内存异常。  
   
 ```   
@@ -345,12 +366,12 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果调用此函数对基础系统内存分配器的调用 (如`malloc`和[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函数) 失败。 不需要调用它以**新**因为**新**内存分配失败时将自动引发内存异常。  
+ 如果调用此函数对基础系统内存分配器的调用 (如`malloc`和[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函数) 失败。 不需要调用它的**新**因为**新**自动将引发内存异常，如果内存分配失败。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameafxthrownotsupportedexceptiona--afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
+##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
  将引发异常时不支持的功能请求的结果。  
   
 ```  
@@ -360,7 +381,7 @@ void AfxThrowNotSupportedException();
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameafxthrowresourceexceptiona--afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a>AfxThrowResourceException  
+##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException  
  将资源异常引发。  
   
 ```   
@@ -368,25 +389,25 @@ void  AfxThrowResourceException();
 ```  
   
 ### <a name="remarks"></a>备注  
- 无法加载 Windows 资源时，通常情况下调用此函数。  
+ 无法加载 Windows 资源时，通常会调用此函数。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameafxthrowuserexceptiona--afxthrowuserexception"></a><a name="afxthrowuserexception"></a>AfxThrowUserException  
- 引发的异常将终止最终用户操作。  
+##  <a name="afxthrowuserexception"></a>AfxThrowUserException  
+ 引发异常来停止最终用户操作。  
   
 ```   
 void AfxThrowUserException(); 
 ```  
   
 ### <a name="remarks"></a>备注  
- 此函数通常之后立即调用`AfxMessageBox`向用户报告了错误。  
+ 通常后立即调用此函数`AfxMessageBox`已向用户报告错误。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameafxthrowoledispatchexceptiona--afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
+##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
  使用此函数将在 OLE 自动化函数中引发异常。  
   
 ```   
@@ -418,12 +439,12 @@ void AFXAPI AfxThrowOleDispatchException(
  提供给此函数的信息可由驱动应用程序（Microsoft Visual Basic 或其他 OLE 自动化客户端应用程序）显示。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCExceptions #&25;](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
+ [!code-cpp[NVC_MFCExceptions # 25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameafxthrowoleexceptiona--afxthrowoleexception"></a><a name="afxthrowoleexception"></a>AfxThrowOleException  
+##  <a name="afxthrowoleexception"></a>AfxThrowOleException  
  创建类型的对象`COleException`并引发异常。  
   
 ``` 
@@ -439,13 +460,13 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  指示该异常的原因的结果代码的句柄。  
   
 ### <a name="remarks"></a>备注  
- 采用的版本`HRESULT`如参数将该结果代码转换为相应`SCODE`。 有关详细信息`HRESULT`和`SCODE`，请参阅[COM 错误代码的结构](http://msdn.microsoft.com/library/windows/desktop/ms690088)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 采用的版本`HRESULT`如自变量将该结果代码转换为相应`SCODE`。 有关详细信息`HRESULT`和`SCODE`，请参阅[COM 错误代码的结构](http://msdn.microsoft.com/library/windows/desktop/ms690088)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxdao.h  
   
-##  <a name="a-nameafxthrowdaoexceptiona--afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a>AfxThrowDaoException  
- 调用此函数可引发类型的异常[CDaoException](../../mfc/reference/cdaoexception-class.md)从您自己的代码。  
+##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException  
+ 调用此函数引发异常的类型[CDaoException](../../mfc/reference/cdaoexception-class.md)从你自己的代码。  
   
 ```   
 void AFXAPI AfxThrowDaoException(
@@ -455,21 +476,21 @@ void AFXAPI AfxThrowDaoException(
   
 ### <a name="parameters"></a>参数  
  `nAfxDaoError`  
- 表示 DAO 扩展错误代码的整数值，它可以值之一列入[CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)。  
+ 表示扩展错误代码 DAO 的整数值，这可以值之一列入[CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)。  
   
  *scode*  
  OLE 错误代码，从 DAO，类型的`SCODE`。 有关信息，请参阅[CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)。  
   
 ### <a name="remarks"></a>备注  
- 框架还将调用`AfxThrowDaoException`。 在您调用中，可以传递的参数之一或两者。 例如，如果您想要提升的一个错误定义在**CDaoException::nAfxDaoError** ，但您不关心*scode*参数，传递中的有效代码`nAfxDaoError`参数并接受默认值为*scode*。  
+ 框架还调用`AfxThrowDaoException`。 在你调用中，可以传递的参数之一或两者。 例如，如果您想要提升之一错误中定义**CDaoException::nAfxDaoError**但你不关心*scode*参数，将传递中的有效代码`nAfxDaoError`参数并接受默认值为*scode*。  
   
- 有关与 MFC DAO 类相关的异常的信息，请参阅类`CDaoException`此书和文章中[异常︰ 数据库异常](../../mfc/exceptions-database-exceptions.md)。  
+ 有关与 MFC DAO 类相关的异常的信息，请参阅类`CDaoException`在本书和文章[异常︰ 数据库异常](../../mfc/exceptions-database-exceptions.md)。  
   
 ### <a name="requirements"></a>要求  
   **标头**afxdb.h  
   
-##  <a name="a-nameafxthrowdbexceptiona--afxthrowdbexception"></a><a name="afxthrowdbexception"></a>AfxThrowDBException  
- 调用此函数可引发类型的异常`CDBException`从您自己的代码。  
+##  <a name="afxthrowdbexception"></a>AfxThrowDBException  
+ 调用此函数引发异常的类型`CDBException`从你自己的代码。  
   
 ```  
 void AfxThrowDBException(
@@ -480,31 +501,31 @@ void AfxThrowDBException(
   
 ### <a name="parameters"></a>参数  
  `nRetCode`  
- 类型的值**某一 RETCODE**，定义的错误导致异常引发的异常类型。  
+ 类型的值**某一 RETCODE**，定义类型的错误导致引发异常。  
   
  `pdb`  
- 一个指向`CDatabase`对象，表示异常与之关联的数据源连接。  
+ 指向的指针`CDatabase`表示异常与之关联的数据源连接的对象。  
   
  `hstmt`  
- ODBC **HSTMT**指定异常与之关联的语句句柄的句柄。  
+ 一个 ODBC **HSTMT**指定异常与之关联的语句句柄的句柄。  
   
 ### <a name="remarks"></a>备注  
- 框架将调用`AfxThrowDBException`当接收 ODBC**某一 RETCODE**通过调用 ODBC API 函数，并解释**某一 RETCODE**为异常情况，而不是 expectable 错误。 例如，数据访问操作可能会因磁盘的读取错误而失败。  
+ 框架调用`AfxThrowDBException`当它收到一个 ODBC**某一 RETCODE**从调用 ODBC API 函数，并解释**某一 RETCODE**为一个异常情况，而不是 expectable 错误。 例如，数据访问操作可能会由于磁盘读取错误而失败。  
   
- 璝惠**某一 RETCODE**值定义由 ODBC，请参阅第 8 章"检索状态和错误信息，" [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 有关 MFC 扩展到这些代码的信息，请参阅类[CDBException](../../mfc/reference/cdbexception-class.md)。  
+ 璝惠**某一 RETCODE**值由 ODBC，请参阅第 8 章"检索状态和错误的信息，" [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 有关 MFC 扩展到这些代码的信息，请参阅类[CDBException](../../mfc/reference/cdbexception-class.md)。  
   
 ### <a name="requirements"></a>要求  
   **标头**afx.h  
   
-##  <a name="a-nameafxaborta--afxabort"></a><a name="afxabort"></a>AfxAbort  
- MFC 提供的默认终止函数。  
+##  <a name="afxabort"></a>AfxAbort  
+ 由 MFC 提供的默认终止函数。  
   
 ```   
 void  AfxAbort(); 
 ```  
   
 ### <a name="remarks"></a>备注  
- `AfxAbort`在内部调用由 MFC 成员函数致命错误，例如不能处理未捕获的异常时。 您可以调用`AfxAbort`的情况很少遇到灾难性错误，无法将恢复时。  
+ `AfxAbort`在内部调用由 MFC 成员函数是错误，例如不能处理未捕获的异常时。 你可以调用`AfxAbort`遇到出现灾难性错误无法恢复时的罕见情况。  
   
 ### <a name="example"></a>示例  
  请参阅示例[捕获](#catch)。  

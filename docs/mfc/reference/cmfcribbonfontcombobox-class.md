@@ -43,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 851ef15013ca62012931fd92baf277d5db96033d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9bf968571f9a1bcdbce57c3559b3d70e7692ebe0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 类
@@ -61,7 +61,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |`CMFCRibbonFontComboBox::~CMFCRibbonFontComboBox`|析构函数。|  
   
@@ -73,7 +73,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|使用具有指定字体类型、字符集以及间距和系列的字体填充功能区字体组合框。|  
 |`CMFCRibbonFontComboBox::CreateObject`|由框架用于创建此类类型的动态实例。|  
@@ -81,12 +81,12 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||  
 |[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|返回要在组合框中显示的字体类型。 有效选项是是 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 或是它们的任何按位组合。|  
 |[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|返回组合框中显示的字体的间距和系列。|  
-|`CMFCRibbonFontComboBox::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
+|`CMFCRibbonFontComboBox::GetThisClass`|由框架用于获取指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型关联的对象。|  
 |[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|使用具有以前指定的字体类型、字符集以及间距和系列的字体填充功能区字体组合框。|  
 |[CMFCRibbonFontComboBox::SetFont](#setfont)|选择组合框中的指定字体。|  
   
 ## <a name="remarks"></a>备注  
- 在创建后`CMFCRibbonFontComboBox`对象，请将其添加到功能区面板，通过调用[CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
+ 在创建后`CMFCRibbonFontComboBox`对象，请将其添加到功能区面板，通过调用[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -105,7 +105,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
  **标头︰** afxRibbonComboBox.h  
   
 ##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
- 填充与字体功能区上的组合框。  
+ 填充字体使用功能区上的组合框。  
   
 ```  
 void BuildFonts(
@@ -141,21 +141,21 @@ CMFCRibbonFontComboBox(
  当用户从组合框中选择某个项时可以执行命令的命令 ID。  
   
  [in] `nFontType`  
- 指定要在组合框中显示哪种字体类型。 有效选项为**DEVICE_FONTTYPE**， **RASTER_FONTTYPE**，和**TRUETYPE_FONTTYPE**，或它们的任何按位组合。  
+ 指定要在组合框中显示哪种字体类型。 有效选项为**是 DEVICE_FONTTYPE**， **RASTER_FONTTYPE**，和**TRUETYPE_FONTTYPE**，或它们的任何按位组合。  
   
  [in] `nCharSet`  
- 筛选器的字体组合框与属于指定的字符集中...  
+ 筛选器组合框为那些属于指定的字符集中的字体...  
   
  [in] `nPitchAndFamily`  
  指定的间距和组合框中显示的字体系列。  
   
  [in] `nWidth`  
- 指定以像素为单位的组合框的宽度。  
+ 指定宽度，以像素为单位，组合框。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，有关可能的`nFontType`参数值，请参阅[EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 文档中。  
+ 有关详细信息，有关可行`nFontType`参数值，请参阅[EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 文档中。  
   
- 有关可以分配给的有效字符集`nCharSet,`以及可以分配给的有效值`nPitchAndFamily`，请参阅[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 文档中。  
+ 有关可以分配给的有效字符集的详细信息`nCharSet`，并可以分配给的有效值`nPitchAndFamily`，请参阅[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 文档中。  
   
 ##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -172,14 +172,14 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
- 填充组合框与字体功能区上的先前所指定的字体类型、 字符集和音调和系列。  
+ 填充字体使用功能区上以前指定的字体类型、 字符集，和间距和系列的组合框。  
   
 ```  
 void RebuildFonts();
 ```  
   
 ### <a name="remarks"></a>备注  
- 您可以指定字体、 字符集中，并框中的间距和要包括在功能区字体组合框中的字体系列[构造函数](#cmfcribbonfontcombobox)对于此类，或通过调用[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)。  
+ 您可以指定字体类型、 字符集以及间距和系列的字体，要包括在功能区字体组合框中[构造函数](#cmfcribbonfontcombobox)对于此类，或通过调用[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)。  
   
 ##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
  选择组合框中的指定字体。  
@@ -196,13 +196,13 @@ BOOL SetFont(
  指定要选择的字体的名称。  
   
  `nCharSet`  
- 指定所选字体的字符集。  
+ 指定选定的字体的字符集。  
   
  `bExact`  
- `TRUE`若要指定该字符集必须与匹配时选择一种字体;`FALSE`指定选择一种字体时，可以忽略的字符集。  
+ `TRUE`若要指定字符设置必须匹配时选择一种字体;`FALSE`指定选择一种字体时，可以忽略的字符集。  
   
 ### <a name="return-value"></a>返回值  
- 如果找到指定的字体并将其选中; 否则，则为非否则为为零。  
+ 非零，如果找到并选择; 指定的字体否则为零。  
   
 ### <a name="remarks"></a>备注  
   

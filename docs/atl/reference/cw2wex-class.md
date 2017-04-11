@@ -38,16 +38,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 9382f8404c1469b3f847500f35ab26499b6579bc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cw2wex-class"></a>CW2WEX 类
 此类由字符串转换宏`CW2TEX`和`CT2WEX`，和 typedef `CW2W`。  
   
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类及其成员。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ class CW2WEX
   
 #### <a name="parameters"></a>参数  
  `t_nBufferLength`  
- 在转换过程中所用的缓冲区的大小。 默认长度为 128 个字节。  
+ 在转换过程中使用的缓冲区大小。 默认长度为 128 个字节。  
   
 ## <a name="members"></a>成员  
   
@@ -71,40 +71,40 @@ class CW2WEX
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CW2WEX::operator LPWSTR](#operator_lpwstr)|转换运算符。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[CW2WEX::m_psz](#m_psz)|将源字符串存储的数据成员。|  
-|[CW2WEX::m_szBuffer](#m_szbuffer)|静态缓冲区，用来存储转换后的字符串。|  
+|[CW2WEX::m_psz](#m_psz)|将源字符串存储数据成员。|  
+|[CW2WEX::m_szBuffer](#m_szbuffer)|静态缓冲区，用于存储已转换的字符串。|  
   
 ## <a name="remarks"></a>备注  
  除非需要额外功能，则使用`CW2TEX`， `CT2WEX`，或`CW2W`在代码中。  
   
- 此类包含固定大小的静态缓冲区用于存储转换的结果。 如果结果过大，无法放入静态缓冲区，则该类将使用 `malloc` 分配内存，并在对象超出范围时释放内存。 这样可确保，像文本转换宏可在以前版本的 ATL，它是此类是在循环中安全使用，并且它不会溢出堆栈。  
+ 此类包含固定大小静态缓冲区，用于存储转换的结果。 如果结果过大，无法放入静态缓冲区，则该类将使用 `malloc` 分配内存，并在对象超出范围时释放内存。 这样可确保，像文本转换宏可用在以前版本的 ATL，此类可以安全地在循环中使用和它不会溢出堆栈。  
   
- 如果该类尝试分配内存堆和无法正常工作，它将调用`AtlThrow`用参数**E_OUTOFMEMORY**。  
+ 如果类尝试分配内存堆和失败，它将调用`AtlThrow`用参数**E_OUTOFMEMORY**。  
   
- 默认情况下，ATL 转换类和宏用于当前线程的 ANSI 代码页转换。  
+ 默认情况下，情况下，ATL 转换类和宏使用当前线程的 ANSI 代码页进行转换。  
   
- 下列宏基于此类︰  
+ 在此类基于以下宏︰  
   
 - `CW2TEX`  
   
 - `CT2WEX`  
   
- 下面的 typedef 基于此类︰  
+ 以下 typedef 基于此类︰  
   
 - `CW2W`  
   
- 这些文本转换宏的讨论，请参阅[ATL 和 MFC 字符串转换宏](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)。  
+ 这些文本转换宏的讨论，请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)。  
   
 ## <a name="example"></a>示例  
- 请参阅[ATL 和 MFC 字符串转换宏](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)有关使用这些字符串转换宏的示例。  
+ 请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
 ## <a name="requirements"></a>要求  
  **标头︰** atlconv.h  
@@ -135,17 +135,17 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 释放分配的缓冲区。  
+ 释放已分配的缓冲区。  
   
 ##  <a name="m_psz"></a>CW2WEX::m_psz  
- 将源字符串存储的数据成员。  
+ 将源字符串存储数据成员。  
   
 ```
 LPWSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>CW2WEX::m_szBuffer  
- 静态缓冲区，用来存储转换后的字符串。  
+ 静态缓冲区，用于存储已转换的字符串。  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
@@ -159,7 +159,7 @@ operator LPWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回将文本字符串作为类型`LPWSTR`。  
+ 返回文本字符串作为类型`LPWSTR`。  
   
 ## <a name="see-also"></a>另请参阅  
  [CA2AEX 类](../../atl/reference/ca2aex-class.md)   

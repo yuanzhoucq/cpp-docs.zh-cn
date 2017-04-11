@@ -1,40 +1,56 @@
 ---
-title: "编译器错误 C2662 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2662"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2662"
+title: "编译器错误 C2662 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2662
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 编译器错误 C2662
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aa2c22d7fbe8b017617fcad41327feef7f8fd19a
+ms.lasthandoff: 04/04/2017
 
-“function”: 不能将“this”指针从“type1”转换为“type2”  
+---
+# <a name="compiler-error-c2662"></a>编译器错误 C2662
+function︰ 无法将从 type1 到 type2 的 this 指针转换  
   
- 编译器未能将 `this` 指针从 `type1`转换为 `type2`。  
+ 编译器无法转换`this`指针从`type1`到`type2`。  
   
- 此错误可能是由对 `const` 对象调用非 `const` 成员函数引起的。可能的解决方案：  
+ 可以通过调用非-导致此错误`const`成员函数上的`const`对象。  可能的解决方法︰  
   
--   从对象声明中移除 `const`。  
+-   删除`const`从对象声明。  
   
--   将 `const` 添加到成员函数中。  
+-   添加`const`指向成员函数。  
   
- 下面的示例生成 C2662：  
+ 下面的示例生成 C2662:  
   
 ```  
 // C2662.cpp  
@@ -50,7 +66,7 @@ int main() {
 }  
 ```  
   
- 在使用 **\/clr** 编译时，不能对 `const` 或 `volatile` 限定托管类型调用函数。  由于不能声明托管类的常量成员函数，因此不能调用常量托管对象上的方法。  
+ 使用编译时**/clr**，不能调用一个函数`const`或`volatile`限定托管的类型。 不能声明托管类的 const 成员函数，因此您无法 const 托管对象上调用方法。  
   
 ```  
 // C2662_b.cpp  
@@ -76,7 +92,7 @@ ref struct N {
 };  
 ```  
   
- 下面的示例生成 C2662：  
+ 下面的示例生成 C2662:  
   
 ```  
 // C2662_c.cpp  

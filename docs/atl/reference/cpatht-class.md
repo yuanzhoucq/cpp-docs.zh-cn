@@ -77,16 +77,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8cbd91ae1c4318788b38b2daaa7721d1a29fca98
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cpatht-class"></a>CPathT 类
-此类表示一个路径。  
+此类表示的路径。  
   
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类及其成员。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -97,16 +97,16 @@ class CPathT
   
 #### <a name="parameters"></a>参数  
  `StringType`  
- ATL/MFC 字符串类使用的路径 (请参阅[CStringT](../../atl-mfc-shared/reference/cstringt-class.md))。  
+ 要将用作路径的 ATL/MFC 字符串类 (请参阅[CStringT](../../atl-mfc-shared/reference/cstringt-class.md))。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[CPathT::PCXSTR](#pcxstr)|一个常量字符串类型。|  
-|[CPathT::PXSTR](#pxstr)|String 类型。|  
+|[CPathT::PCXSTR](#pcxstr)|常量字符串类型。|  
+|[CPathT::PXSTR](#pxstr)|字符串类型。|  
 |[CPathT::XCHAR](#xchar)|一种字符类型。|  
   
 ### <a name="public-constructors"></a>公共构造函数  
@@ -119,56 +119,56 @@ class CPathT
   
 |名称|描述|  
 |----------|-----------------|  
-|[CPathT::AddBackslash](#addbackslash)|调用此方法以创建一个路径的正确语法的字符串的末尾添加反斜杠。|  
-|[CPathT::AddExtension](#addextension)|调用此方法以将文件扩展名添加到的路径。|  
-|[CPathT::Append](#append)|调用此方法以将一个字符串追加到当前路径。|  
-|[CPathT::BuildRoot](#buildroot)|调用此方法从给定的驱动器号创建根路径。|  
-|[CPathT::Canonicalize](#canonicalize)|调用此方法将路径转换为规范化格式。|  
-|[CPathT::Combine](#combine)|调用此方法以将表示目录名称的字符串和一个到一条路径表示的文件路径名称的字符串连接起来。|  
-|[CPathT::CommonPrefix](#commonprefix)|调用此方法以确定指定的路径是否为当前路径共享一个通用前缀。|  
-|[CPathT::CompactPath](#compactpath)|调用此方法来截断以通过路径组件替换为省略号适合给定的像素宽度的文件路径。|  
-|[CPathT::CompactPathEx](#compactpathex)|调用此方法来截断以适合通过路径组件替换为省略号给定数量的字符的文件路径。|  
-|[CPathT::FileExists](#fileexists)|调用此方法以检查是否存在此路径名称中的文件。|  
-|[CPathT::FindExtension](#findextension)|调用此方法找到文件扩展名的路径中的位置。|  
-|[CPathT::FindFileName](#findfilename)|调用此方法以查找在该路径的文件名的位置。|  
-|[CPathT::GetDriveNumber](#getdrivenumber)|调用此方法来搜索的 A 到 Z 范围内的驱动器号的路径并返回相应的驱动器号。|  
-|[CPathT::GetExtension](#getextension)|调用此方法以获取文件扩展名的路径。|  
+|[CPathT::AddBackslash](#addbackslash)|调用此方法以创建正确的语法的路径的字符串的末尾添加反斜杠。|  
+|[CPathT::AddExtension](#addextension)|调用此方法以将文件扩展名的文件添加到路径。|  
+|[CPathT::Append](#append)|调用此方法以将字符串追加到当前路径。|  
+|[CPathT::BuildRoot](#buildroot)|调用此方法以从给定的驱动器号创建根路径。|  
+|[CPathT::Canonicalize](#canonicalize)|调用此方法将路径转换为规范格式。|  
+|[CPathT::Combine](#combine)|调用此方法以串联表示目录名称的字符串和一个字符串，表示为一个路径的文件路径名称。|  
+|[CPathT::CommonPrefix](#commonprefix)|调用此方法以确定指定的路径是否与当前路径共享一个通用前缀。|  
+|[CPathT::CompactPath](#compactpath)|调用此方法进行截断操作的文件路径，以通过将路径组件替换为省略号适合给定的像素宽度。|  
+|[CPathT::CompactPathEx](#compactpathex)|调用此方法进行截断操作的文件路径，以通过将路径组件替换为省略号适合给定数目的字符。|  
+|[CPathT::FileExists](#fileexists)|调用此方法来检查是否位于此路径名称的文件是否存在。|  
+|[CPathT::FindExtension](#findextension)|调用此方法以查找文件扩展名的路径中的位置。|  
+|[CPathT::FindFileName](#findfilename)|调用此方法以查找在该路径的文件名称的位置。|  
+|[CPathT::GetDriveNumber](#getdrivenumber)|调用此方法可搜索的 A 到 Z 范围内的驱动器号的路径并返回相应的驱动器数。|  
+|[CPathT::GetExtension](#getextension)|调用此方法以获取从路径的文件扩展名。|  
 |[CPathT::IsDirectory](#isdirectory)|调用此方法来检查路径是否是有效的目录。|  
-|[CPathT::IsFileSpec](#isfilespec)|调用此方法来搜索路径分隔的任何字符的路径 (例如，':' 或 '\\)。 如果存在任何路径分隔字符，该路径被认为可以文件规范路径。|  
-|[CPathT::IsPrefix](#isprefix)|调用此方法来确定路径是否包含由传递的类型的有效前缀`pszPrefix`。|  
-|[CPathT::IsRelative](#isrelative)|调用此方法以确定是相对路径。|  
-|[CPathT::IsRoot](#isroot)|调用此方法来确定该路径是目录的根目录。|  
-|[CPathT::IsSameRoot](#issameroot)|调用此方法以确定是否另一条路径具有公共根组件与当前路径。|  
-|[CPathT::IsUNC](#isunc)|调用此方法来确定路径是否有效的 UNC （通用命名约定） 路径的服务器和共享。|  
-|[CPathT::IsUNCServer](#isuncserver)|调用此方法以确定路径是否只能为服务器的有效 UNC （通用命名约定） 路径。|  
-|[CPathT::IsUNCServerShare](#isuncservershare)|调用此方法来确定路径是否有效的 UNC （通用命名约定） 共享路径， \\ \ *服务器*\ *共享*。|  
-|[CPathT::MakePretty](#makepretty)|调用此方法将路径转换为所有小写字符，以提供一致的外观的路径。|  
-|[CPathT::MatchSpec](#matchspec)|调用此方法来搜索包含通配符匹配类型的字符串的路径。|  
-|[CPathT::QuoteSpaces](#quotespaces)|调用此方法以将路径括在引号中，如果它包含任何空格。|  
-|[CPathT::RelativePathTo](#relativepathto)|调用此方法来从一个文件或文件夹的相对路径创建指向另一个。|  
+|[CPathT::IsFileSpec](#isfilespec)|调用此方法以搜索任何路径分隔字符的路径 (例如，: 或\\)。 如果存在任何路径分隔字符，被考虑使用该路径为文件规范路径。|  
+|[CPathT::IsPrefix](#isprefix)|调用此方法以确定路径是否包含传递的类型的有效前缀`pszPrefix`。|  
+|[CPathT::IsRelative](#isrelative)|调用此方法以确定是否是相对路径。|  
+|[CPathT::IsRoot](#isroot)|调用此方法以确定路径是否目录的根目录。|  
+|[CPathT::IsSameRoot](#issameroot)|调用此方法以确定另一个路径是否具有当前路径的常见根组件。|  
+|[CPathT::IsUNC](#isunc)|调用此方法以确定路径是否有效的 UNC （通用命名约定） 路径的服务器和共享。|  
+|[CPathT::IsUNCServer](#isuncserver)|调用此方法来确定路径是否为服务器仅有效的 UNC （通用命名约定） 路径。|  
+|[CPathT::IsUNCServerShare](#isuncservershare)|调用此方法以确定路径是否有效的 UNC （通用命名约定） 共享路径， \\ \ *服务器*\ *共享*。|  
+|[CPathT::MakePretty](#makepretty)|调用此方法将路径转换为所有小写字符，若要为路径提供一致的外观。|  
+|[CPathT::MatchSpec](#matchspec)|调用此方法以搜索包含通配符匹配类型的字符串的路径。|  
+|[CPathT::QuoteSpaces](#quotespaces)|调用此方法可将路径括在引号中，如果它包含任何空格。|  
+|[CPathT::RelativePathTo](#relativepathto)|调用此方法创建从一个文件或文件夹的相对路径，到另一个。|  
 |[CPathT::RemoveArgs](#removeargs)|调用此方法以从路径中删除任何命令行参数。|  
-|[CPathT::RemoveBackslash](#removebackslash)|调用此方法以从路径中删除尾部反斜杠。|  
+|[CPathT::RemoveBackslash](#removebackslash)|调用此方法以从路径中删除尾随反斜杠。|  
 |[CPathT::RemoveBlanks](#removeblanks)|调用此方法以从路径中删除所有前导和尾随空格。|  
-|[CPathT::RemoveExtension](#removeextension)|如果存在，则调用此方法以从路径中，删除的文件扩展名。|  
-|[CPathT::RemoveFileSpec](#removefilespec)|它是否调用此方法以从路径中，删除尾随的文件名和反斜杠。|  
-|[CPathT::RenameExtension](#renameextension)|调用此方法将替换为一个新的扩展路径中的文件扩展名。 如果文件名不包含扩展名，该扩展将附加到字符串的末尾。|  
-|[CPathT::SkipRoot](#skiproot)|调用此方法来分析忽略驱动器号或 UNC 路径部分服务器/共享的路径。|  
-|[CPathT::StripPath](#strippath)|调用此方法来删除的完全限定的路径和文件名的路径部分。|  
-|[CPathT::StripToRoot](#striptoroot)|调用此方法来删除除根目录信息的路径的所有部分。|  
-|[CPathT::UnquoteSpaces](#unquotespaces)|调用此方法以开头和结尾的路径中删除引号标记。|  
+|[CPathT::RemoveExtension](#removeextension)|如果存在，请调用此方法以从路径中，删除的文件扩展名。|  
+|[CPathT::RemoveFileSpec](#removefilespec)|如果它具有它们，请调用此方法以从路径中，删除尾随的文件名和反斜杠。|  
+|[CPathT::RenameExtension](#renameextension)|调用此方法以将替换为一个新的扩展的路径中的文件扩展名。 如果文件名称不包含扩展，该扩展将附加到字符串的末尾。|  
+|[CPathT::SkipRoot](#skiproot)|调用此方法，以便分析的路径，忽略驱动器号或 UNC 服务器/共享路径部分。|  
+|[CPathT::StripPath](#strippath)|调用此方法以删除的完全限定的路径和文件名的路径部分。|  
+|[CPathT::StripToRoot](#striptoroot)|调用此方法以删除所有路径部分的但根信息除外。|  
+|[CPathT::UnquoteSpaces](#unquotespaces)|调用此方法以从的开头和结尾的路径中删除引号标记。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CPathT::operator const StringType.](#operator_const_stringtype_amp)|此运算符使对象可以被当作一个字符串。|  
-|[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|此运算符使对象可以被当作一个字符串。|  
-|[CPathT::operator StringType.](#operator_stringtype)|此运算符使对象可以被当作一个字符串。|  
-|[CPathT::operator + =](#operator_add_eq)|此运算符将一个字符串追加到的路径。|  
+|[CPathT::operator const StringType.](#operator_const_stringtype_amp)|利用此运算符，要被视为一个字符串的对象。|  
+|[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|利用此运算符，要被视为一个字符串的对象。|  
+|[CPathT::operator StringType.](#operator_stringtype)|利用此运算符，要被视为一个字符串的对象。|  
+|[CPathT::operator + =](#operator_add_eq)|此运算符将一个字符串追加到路径。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CPathT::m_strPath](#m_strpath)|路径。|  
   
@@ -185,7 +185,7 @@ class CPathT
  **标头︰** atlpath.h  
   
 ##  <a name="addbackslash"></a>CPathT::AddBackslash  
- 调用此方法以创建一个路径的正确语法的字符串的末尾添加反斜杠。 如果该路径已具有尾部反斜杠，则将添加没有反斜杠。  
+ 调用此方法以创建正确的语法的路径的字符串的末尾添加反斜杠。 如果路径已包含尾随反斜杠，则将添加没有反斜杠。  
   
 ```
 void AddBackslash();
@@ -195,7 +195,7 @@ void AddBackslash();
  有关详细信息，请参阅[PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561)。  
   
 ##  <a name="addextension"></a>CPathT::AddExtension  
- 调用此方法以将文件扩展名添加到的路径。  
+ 调用此方法以将文件扩展名的文件添加到路径。  
   
 ```
 BOOL AddExtension(PCXSTR pszExtension);
@@ -212,7 +212,7 @@ BOOL AddExtension(PCXSTR pszExtension);
  有关详细信息，请参阅[PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)。  
   
 ##  <a name="append"></a>CPathT::Append  
- 调用此方法以将一个字符串追加到当前路径。  
+ 调用此方法以将字符串追加到当前路径。  
   
 ```
 BOOL Append(PCXSTR pszMore);
@@ -229,7 +229,7 @@ BOOL Append(PCXSTR pszMore);
  有关详细信息，请参阅[PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)。  
   
 ##  <a name="buildroot"></a>CPathT::BuildRoot  
- 调用此方法从给定的驱动器号创建根路径。  
+ 调用此方法以从给定的驱动器号创建根路径。  
   
 ```
 void BuildRoot(int iDrive);
@@ -237,13 +237,13 @@ void BuildRoot(int iDrive);
   
 ### <a name="parameters"></a>参数  
  *iDrive*  
- 驱动器数量 （0 表示 a:，1 是 b:，依此类推）。  
+ 驱动器数量 （0 表示答:，1 是 b:，依此类推）。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)。  
   
 ##  <a name="canonicalize"></a>CPathT::Canonicalize  
- 调用此方法将路径转换为规范化格式。  
+ 调用此方法将路径转换为规范格式。  
   
 ```
 void Canonicalize();
@@ -253,7 +253,7 @@ void Canonicalize();
  有关详细信息，请参阅[PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)。  
   
 ##  <a name="combine"></a>CPathT::Combine  
- 调用此方法以将表示目录名称的字符串和一个到一条路径表示的文件路径名称的字符串连接起来。  
+ 调用此方法以串联表示目录名称的字符串和一个字符串，表示为一个路径的文件路径名称。  
   
 ```
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
@@ -270,7 +270,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  有关详细信息，请参阅[PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)。  
   
 ##  <a name="commonprefix"></a>CPathT::CommonPrefix  
- 调用此方法以确定指定的路径是否为当前路径共享一个通用前缀。  
+ 调用此方法以确定指定的路径是否与当前路径共享一个通用前缀。  
   
 ```
 CPathT<StringType> CommonPrefix(PCXSTR pszOther);
@@ -281,13 +281,13 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  要与当前进行比较的路径。  
   
 ### <a name="return-value"></a>返回值  
- 返回的通用前缀。  
+ 返回的常见的前缀。  
   
 ### <a name="remarks"></a>备注  
- 前缀为这些类型之一:"c:\\\\"，"。"，".."，"...\\\\". 有关详细信息，请参阅[PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)。  
+ 前缀为这些类型之一:"c:\\\\"，"。"，"..."，"...\\\\". 有关详细信息，请参阅[PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)。  
   
 ##  <a name="compactpath"></a>CPathT::CompactPath  
- 调用此方法来截断以通过路径组件替换为省略号适合给定的像素宽度的文件路径。  
+ 调用此方法进行截断操作的文件路径，以通过将路径组件替换为省略号适合给定的像素宽度。  
   
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -298,7 +298,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  用于字体规格的设备上下文。  
   
  `nWidth`  
- 宽度，以像素为单位，将强制该字符串中容纳不下。  
+ 宽度，以像素为单位，将强制字符串中容纳不下。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -307,7 +307,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  有关详细信息，请参阅[PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)。  
   
 ##  <a name="compactpathex"></a>CPathT::CompactPathEx  
- 调用此方法来截断以适合通过路径组件替换为省略号给定数量的字符的文件路径。  
+ 调用此方法进行截断操作的文件路径，以通过将路径组件替换为省略号适合给定数目的字符。  
   
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
@@ -315,7 +315,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
   
 ### <a name="parameters"></a>参数  
  `nMaxChars`  
- 最大字符要包含在新的字符串，包括终止 NULL 字符数。  
+ 最大要包含在包括终止 NULL 字符的新字符串的字符数。  
   
  `dwFlags`  
  保留。  
@@ -337,13 +337,13 @@ CPathT() throw();
   
 ### <a name="parameters"></a>参数  
  *pszPath*  
- 指向将路径字符串的指针。  
+ 指向的路径字符串的指针。  
   
  *path*  
  路径字符串中。  
   
 ##  <a name="fileexists"></a>CPathT::FileExists  
- 调用此方法以检查是否存在此路径名称中的文件。  
+ 调用此方法来检查是否位于此路径名称的文件是否存在。  
   
 ```
 BOOL FileExists() const;
@@ -356,46 +356,46 @@ BOOL FileExists() const;
  有关详细信息，请参阅[PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)。  
   
 ##  <a name="findextension"></a>CPathT::FindExtension  
- 调用此方法找到文件扩展名的路径中的位置。  
+ 调用此方法以查找文件扩展名的路径中的位置。  
   
 ```
 int FindExtension() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回的位置"。"前面的扩展。 如果不找到任何扩展，则返回-1。  
+ 返回的位置"。"前面的扩展。 如果没有找到扩展名，则返回-1。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)。  
   
 ##  <a name="findfilename"></a>CPathT::FindFileName  
- 调用此方法以查找在该路径的文件名的位置。  
+ 调用此方法以查找在该路径的文件名称的位置。  
   
 ```
 int FindFileName() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回的文件名的位置。 如果不找到任何文件的名称，则返回 –&1;。  
+ 返回的文件名称的位置。 如果不找到任何文件名称，则返回-1。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)。  
   
 ##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber  
- 调用此方法来搜索的 A 到 Z 范围内的驱动器号的路径并返回相应的驱动器号。  
+ 调用此方法可搜索的 A 到 Z 范围内的驱动器号的路径并返回相应的驱动器数。  
   
 ```
 int GetDriveNumber() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回驱动器号作为一个整数，介于 0 到 25 （对应于 A 到 Z） 如果该路径否则包含驱动器号，则为-1。  
+ 驱动器数作为整数返回从 0 到 25 （对应于 A 到 Z） 如果路径否则具有驱动器号，则为-1。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)。  
   
 ##  <a name="getextension"></a>CPathT::GetExtension  
- 调用此方法以获取文件扩展名的路径。  
+ 调用此方法以获取从路径的文件扩展名。  
   
 ```
 StringType GetExtension() const;
@@ -418,20 +418,20 @@ BOOL IsDirectory() const;
  有关详细信息，请参阅[PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621)。  
   
 ##  <a name="isfilespec"></a>CPathT::IsFileSpec  
- 调用此方法来搜索路径分隔的任何字符的路径 (例如，':' 或 '\\)。 如果存在任何路径分隔字符，该路径被认为可以文件规范路径。  
+ 调用此方法以搜索任何路径分隔字符的路径 (例如，: 或\\)。 如果存在任何路径分隔字符，被考虑使用该路径为文件规范路径。  
   
 ```
 BOOL IsFileSpec() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果没有路径分隔字符，在该路径，则为 TRUE 或 FALSE 路径分隔字符是否返回。  
+ 如果没有路径分隔字符在该路径，则为 TRUE 或 FALSE 路径分隔字符是否返回。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)。  
   
 ##  <a name="isprefix"></a>CPathT::IsPrefix  
- 调用此方法来确定路径是否包含由传递的类型的有效前缀`pszPrefix`。  
+ 调用此方法以确定路径是否包含传递的类型的有效前缀`pszPrefix`。  
   
 ```
 BOOL IsPrefix(PCXSTR pszPrefix) const;
@@ -439,29 +439,29 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
   
 ### <a name="parameters"></a>参数  
  `pszPrefix`  
- 要搜索前缀。 前缀为这些类型之一:"c:\\\\"，"。"，".."，"...\\\\".  
+ 要搜索前缀。 前缀为这些类型之一:"c:\\\\"，"。"，"..."，"...\\\\".  
   
 ### <a name="return-value"></a>返回值  
- 如果路径中包含 FALSE 的前缀，否则，则返回 TRUE。  
+ 如果路径否则包含前缀或 FALSE，则返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)。  
   
 ##  <a name="isrelative"></a>CPathT::IsRelative  
- 调用此方法以确定是相对路径。  
+ 调用此方法以确定是否是相对路径。  
   
 ```
 BOOL IsRelative() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果路径为相对值，则或 FALSE，如果它是绝对路径，则返回 TRUE。  
+ 如果该路径是相对或 FALSE，如果它是绝对路径，则返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)。  
   
 ##  <a name="isroot"></a>CPathT::IsRoot  
- 调用此方法来确定该路径是目录的根目录。  
+ 调用此方法以确定路径是否目录的根目录。  
   
 ```
 BOOL IsRoot() const;
@@ -474,7 +474,7 @@ BOOL IsRoot() const;
  有关详细信息，请参阅[PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)。  
   
 ##  <a name="issameroot"></a>CPathT::IsSameRoot  
- 调用此方法以确定是否另一条路径具有公共根组件与当前路径。  
+ 调用此方法以确定另一个路径是否具有当前路径的常见根组件。  
   
 ```
 BOOL IsSameRoot(PCXSTR pszOther) const;
@@ -485,13 +485,13 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  另一条路径。  
   
 ### <a name="return-value"></a>返回值  
- 如果这两个字符串否则具有相同的根组件或 FALSE，则返回 TRUE。  
+ 如果两个字符串否则具有相同的根组件或 FALSE，则返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)。  
   
 ##  <a name="isunc"></a>CPathT::IsUNC  
- 调用此方法来确定路径是否有效的 UNC （通用命名约定） 路径的服务器和共享。  
+ 调用此方法以确定路径是否有效的 UNC （通用命名约定） 路径的服务器和共享。  
   
 ```
 BOOL IsUNC() const;
@@ -504,27 +504,27 @@ BOOL IsUNC() const;
  有关详细信息，请参阅[PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)。  
   
 ##  <a name="isuncserver"></a>CPathT::IsUNCServer  
- 调用此方法以确定路径是否只能为服务器的有效 UNC （通用命名约定） 路径。  
+ 调用此方法来确定路径是否为服务器仅有效的 UNC （通用命名约定） 路径。  
   
 ```
 BOOL IsUNCServer() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果字符串是有效的 UNC 路径只能为服务器 （没有共享名称） 或 FALSE 否则，则返回 TRUE。  
+ 如果字符串是一个有效服务器仅的 UNC 路径 （没有共享名称） 或 FALSE 否则，则返回 TRUE。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)。  
   
 ##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare  
- 调用此方法来确定路径是否有效的 UNC （通用命名约定） 共享路径， \\ \ *服务器*\ *共享*。  
+ 调用此方法以确定路径是否有效的 UNC （通用命名约定） 共享路径， \\ \ *服务器*\ *共享*。  
   
 ```
 BOOL IsUNCServerShare() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果该路径是在窗体，则返回 TRUE \\ \ *服务器*\ *共享*，或假否则为。  
+ 如果该路径是在窗体中，则返回 TRUE \\ \ *服务器*\ *共享*，或 FALSE 否则为。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)。  
@@ -537,23 +537,23 @@ StringType m_strPath;
 ```  
   
 ### <a name="remarks"></a>备注  
- `StringType`为模板参数`CPathT`。  
+ `StringType`是模板参数到`CPathT`。  
   
 ##  <a name="makepretty"></a>CPathT::MakePretty  
- 调用此方法将路径转换为所有小写字符，以提供一致的外观的路径。  
+ 调用此方法将路径转换为所有小写字符，若要为路径提供一致的外观。  
   
 ```
 BOOL MakePretty();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 否则，返回如果被转换路径，则为 TRUE 或 FALSE。  
+ 否则，返回转换后的路径，如果为 TRUE 或 FALSE。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)。  
   
 ##  <a name="matchspec"></a>CPathT::MatchSpec  
- 调用此方法来搜索包含通配符匹配类型的字符串的路径。  
+ 调用此方法以搜索包含通配符匹配类型的字符串的路径。  
   
 ```
 BOOL MatchSpec(PCXSTR pszSpec) const;
@@ -561,7 +561,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
   
 ### <a name="parameters"></a>参数  
  `pszSpec`  
- 以 null 结尾的字符串与要搜索的文件类型的指针。 例如，若要测试是否位于当前路径的文件是 DOC 文件，`pszSpec`应设置为"*.doc"。  
+ 指向要搜索的文件类型与以 null 结尾的字符串的指针。 例如，若要测试是否当前路径中的文件是文档文件，`pszSpec`应设置为"*.doc"。  
   
 ### <a name="return-value"></a>返回值  
  否则，返回的字符串与匹配，如果为 TRUE 或 FALSE。  
@@ -570,7 +570,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
  有关详细信息，请参阅[PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)。  
   
 ##  <a name="operator_add_eq"></a>CPathT::operator + =  
- 此运算符将一个字符串追加到的路径。  
+ 此运算符将一个字符串追加到路径。  
   
 ```
 CPathT<StringType>& operator+=(PCXSTR pszMore);
@@ -581,60 +581,60 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
  要追加的字符串。  
   
 ### <a name="return-value"></a>返回值  
- 返回的已更新的路径。  
+ 返回更新的路径。  
   
 ##  <a name="operator_const_stringtype_amp"></a>CPathT::operator const StringType&amp;  
- 此运算符使对象可以被当作一个字符串。  
+ 利用此运算符，要被视为一个字符串的对象。  
   
 ```
  operatorconst StringType&() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回表示由该对象的当前路径的字符串。  
+ 返回表示此对象由管理当前路径的字符串。  
   
 ##  <a name="operator_cpatht__pcxstr"></a>CPathT::operator CPathT::PCXSTR  
- 此运算符使对象可以被当作一个字符串。  
+ 利用此运算符，要被视为一个字符串的对象。  
   
 ```
  operatorPCXSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回表示由该对象的当前路径的字符串。  
+ 返回表示此对象由管理当前路径的字符串。  
   
 ##  <a name="operator_stringtype__amp"></a>CPathT::operator StringType&amp;  
- 此运算符使对象可以被当作一个字符串。  
+ 利用此运算符，要被视为一个字符串的对象。  
   
 ```
  operatorStringType&() throw();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回表示由该对象的当前路径的字符串。  
+ 返回表示此对象由管理当前路径的字符串。  
   
 ##  <a name="pcxstr"></a>CPathT::PCXSTR  
- 一个常量字符串类型。  
+ 常量字符串类型。  
   
 ```
 typedef StringType::PCXSTR PCXSTR;
 ```  
   
 ### <a name="remarks"></a>备注  
- `StringType`为模板参数`CPathT`。  
+ `StringType`是模板参数到`CPathT`。  
   
 ##  <a name="pxstr"></a>CPathT::PXSTR  
- String 类型。  
+ 字符串类型。  
   
 ```
 typedef StringType::PXSTR PXSTR;
 ```  
   
 ### <a name="remarks"></a>备注  
- `StringType`为模板参数`CPathT`。  
+ `StringType`是模板参数到`CPathT`。  
   
 ##  <a name="quotespaces"></a>CPathT::QuoteSpaces  
- 调用此方法以将路径括在引号中，如果它包含任何空格。  
+ 调用此方法可将路径括在引号中，如果它包含任何空格。  
   
 ```
 void QuoteSpaces();
@@ -644,7 +644,7 @@ void QuoteSpaces();
  有关详细信息，请参阅[PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)。  
   
 ##  <a name="relativepathto"></a>CPathT::RelativePathTo  
- 调用此方法来从一个文件或文件夹的相对路径创建指向另一个。  
+ 调用此方法创建从一个文件或文件夹的相对路径，到另一个。  
   
 ```
 BOOL RelativePathTo(
@@ -684,7 +684,7 @@ void RemoveArgs();
  有关详细信息，请参阅[PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)。  
   
 ##  <a name="removebackslash"></a>CPathT::RemoveBackslash  
- 调用此方法以从路径中删除尾部反斜杠。  
+ 调用此方法以从路径中删除尾随反斜杠。  
   
 ```
 void RemoveBackslash();
@@ -704,7 +704,7 @@ void RemoveBlanks();
  有关详细信息，请参阅[PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)。  
   
 ##  <a name="removeextension"></a>CPathT::RemoveExtension  
- 如果存在，则调用此方法以从路径中，删除的文件扩展名。  
+ 如果存在，请调用此方法以从路径中，删除的文件扩展名。  
   
 ```
 void RemoveExtension();
@@ -714,7 +714,7 @@ void RemoveExtension();
  有关详细信息，请参阅[PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)。  
   
 ##  <a name="removefilespec"></a>CPathT::RemoveFileSpec  
- 它是否调用此方法以从路径中，删除尾随的文件名和反斜杠。  
+ 如果它具有它们，请调用此方法以从路径中，删除尾随的文件名和反斜杠。  
   
 ```
 BOOL RemoveFileSpec();
@@ -727,7 +727,7 @@ BOOL RemoveFileSpec();
  有关详细信息，请参阅[PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)。  
   
 ##  <a name="renameextension"></a>CPathT::RenameExtension  
- 调用此方法将替换为一个新的扩展路径中的文件扩展名。 如果文件名不包含扩展名，该扩展将附加到路径的末尾。  
+ 调用此方法以将替换为一个新的扩展的路径中的文件扩展名。 如果文件名称不包含扩展，该扩展将附加到路径的末尾。  
   
 ```
 BOOL RenameExtension(PCXSTR pszExtension);
@@ -735,7 +735,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
   
 ### <a name="parameters"></a>参数  
  `pszExtension`  
- 新的文件扩展名，前面有"。"字符。  
+ 新的文件扩展名，前面是"。"字符。  
   
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 TRUE FALSE 失败。  
@@ -744,20 +744,20 @@ BOOL RenameExtension(PCXSTR pszExtension);
  有关详细信息，请参阅[PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)。  
   
 ##  <a name="skiproot"></a>CPathT::SkipRoot  
- 调用此方法来分析忽略驱动器号或 UNC （通用命名约定） 路径部分服务器/共享的路径。  
+ 调用此方法，以便分析的路径，忽略驱动器号或 UNC （通用命名约定） 服务器/共享路径部分。  
   
 ```
 int SkipRoot() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回的后面 （驱动器号或 UNC 服务器/共享） 的根的子路径开头的位置。  
+ 返回遵循根 （驱动器号或 UNC 服务器/共享） 的子路径的开头的位置。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)。  
   
 ##  <a name="strippath"></a>CPathT::StripPath  
- 调用此方法来删除的完全限定的路径和文件名的路径部分。  
+ 调用此方法以删除的完全限定的路径和文件名的路径部分。  
   
 ```
 void StripPath();
@@ -767,20 +767,20 @@ void StripPath();
  有关详细信息，请参阅[PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)。  
   
 ##  <a name="striptoroot"></a>CPathT::StripToRoot  
- 调用此方法来删除除根目录信息的路径的所有部分。  
+ 调用此方法以删除所有路径部分的但根信息除外。  
   
 ```
 BOOL StripToRoot();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果有效的驱动器号，则返回 TRUE 返回找否则在路径中，或 FALSE。  
+ 否则返回如果有效的驱动器号已找到在路径中，或 FALSE。  
   
 ### <a name="remarks"></a>备注  
  有关详细信息，请参阅[PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)。  
   
 ##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces  
- 调用此方法以开头和结尾的路径中删除引号标记。  
+ 调用此方法以从的开头和结尾的路径中删除引号标记。  
   
 ```
 void UnquoteSpaces();
@@ -797,7 +797,7 @@ typedef StringType::XCHAR XCHAR;
 ```  
   
 ### <a name="remarks"></a>备注  
- `StringType`为模板参数`CPathT`。  
+ `StringType`是模板参数到`CPathT`。  
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../atl/reference/atl-classes.md)   

@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>CDBException 类
@@ -60,7 +60,7 @@ class CDBException : public CException
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CDBException::m_nRetCode](#m_nretcode)|包含类型的开放式数据库连接 (ODBC) 返回代码**某一 RETCODE**。|  
 |[CDBException::m_strError](#m_strerror)|包含在字母数字术语描述错误的字符串。|  
@@ -98,7 +98,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL**与数据源连接失败。 你传递**NULL** `CDatabase`指向记录集构造函数和创建的连接的后续尝试基于`GetDefaultConnect`失败。  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED**请求更多的数据不是你提供的存储。 有关提高的提供的数据存储信息`CString`或`CByteArray`数据类型，请参阅`nMaxLength`参数[RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6)和[RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915)下"宏和全局函数。"  
+- **AFX_SQL_ERROR_DATA_TRUNCATED**请求更多的数据不是你提供的存储。 有关提高的提供的数据存储信息`CString`或`CByteArray`数据类型，请参阅`nMaxLength`参数[RFX_Text](record-field-exchange-functions.md#rfx_text)和[RFX_Binary](record-field-exchange-functions.md#rfx_binary)下"宏和全局函数。"  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED**调用`CRecordset::Open`请求动态集失败。 由驱动程序不支持动态记录集。  
   

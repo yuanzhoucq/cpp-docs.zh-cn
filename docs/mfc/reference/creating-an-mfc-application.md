@@ -1,35 +1,52 @@
 ---
-title: "创建 MFC 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序 [MFC]"
-  - "MFC [C++], 创建应用程序"
-  - "MFC 应用程序"
+title: "创建 MFC 应用程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [MFC]
+- MFC [C++], creating applications
+- MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 创建 MFC 应用程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6d900cc7c81907fa755ab44b23af3e3ec5fab56b
+ms.lasthandoff: 04/01/2017
 
-MFC 应用程序是基于 Microsoft 基础类 \(MFC\) 库的 Windows 可执行应用程序。  创建 MFC 应用程序的最容易方法是使用 MFC 应用程序向导。  
+---
+# <a name="creating-an-mfc-application"></a>创建 MFC 应用程序
+MFC 应用程序是基于 Microsoft 基础类 (MFC) 库的 Windows 可执行应用程序。 创建 MFC 应用程序的最容易方法是使用 MFC 应用程序向导。  
   
 > [!IMPORTANT]
 >  Visual Studio Express 版本不支持 MFC 项目。  
   
- MFC 可执行程序通常分为五类：标准 Windows 应用程序、对话框、基于窗体的应用程序、资源管理器样式的应用程序和 Web 浏览器样式的应用程序。  有关详细信息，请参阅：  
+ MFC 可执行程序通常分为五类︰ 标准 Windows 应用程序、 对话框、 基于窗体的应用程序，资源管理器样式的应用程序和 Web 浏览器样式的应用程序。 有关详细信息，请参见:  
   
 -   [使用类编写 Windows 应用程序](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
@@ -43,23 +60,25 @@ MFC 应用程序是基于 Microsoft 基础类 \(MFC\) 库的 Windows 可执行�
   
  根据在向导中选择的选项，MFC 应用程序向导为上述任何应用程序生成适当的类和文件。  
   
-### 使用 MFC 应用程序向导创建 MFC 应用程序  
+### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>使用 MFC 应用程序向导创建 MFC 应用程序  
   
-1.  按照帮助主题[用 Visual C\+\+ 应用程序向导创建项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)中的说明进行操作。  
+1.  按照帮助主题中的说明[使用 Visual c + + 应用程序向导创建项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)。  
   
-2.  在**“新建项目”**对话框中，选择“模板”窗格中的**“MFC 应用程序”**打开向导。  
+2.  在**新项目**对话框中，选择**MFC 应用程序**在模板窗格中，以打开向导。  
   
-3.  使用 [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)定义应用程序设置。  
+3.  定义你使用的应用程序设置[MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)。  
   
     > [!NOTE]
     >  跳过此步骤可保留向导的默认设置。  
   
-4.  单击“完成”关闭向导并在开发环境中打开新项目。  
+4.  单击**完成**关闭向导并在开发环境中打开你的新项目。  
   
- 创建项目后，可在**解决方案资源管理器**中查看创建的文件。  有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。  有关文件类型的更多信息，请参见[为 Visual C\+\+ 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。  
+ 你的项目创建后，你可以查看在中创建的文件**解决方案资源管理器**。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。  
   
-## 请参阅  
- [Debugging Preparation: Visual C\+\+ Windows Applications](http://msdn.microsoft.com/zh-cn/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+## <a name="see-also"></a>另请参阅  
+ [调试准备︰ Visual c + + Windows 应用程序](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [属性页](../../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/zh-cn/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [部署应用程序](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
+

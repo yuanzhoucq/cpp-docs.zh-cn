@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 377e7f2fa6d8377d46e98b52e9c8f075b10956a8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 04946d07bea39eb739c31a3254355d3527d2e9c3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator 类
@@ -57,18 +57,18 @@ class CComSimpleThreadAllocator
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CComSimpleThreadAllocator::GetThread](#getthread)|选择一个线程。|  
   
 ## <a name="remarks"></a>备注  
- `CComSimpleThreadAllocator`管理的线程选择[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。 `CComSimpleThreadAllocator::GetThread`只需循环访问每个线程，并返回序列中的下一个。  
+ `CComSimpleThreadAllocator`管理对的线程选择[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。 `CComSimpleThreadAllocator::GetThread`只需循环访问每个线程，并返回序列中的下一个。  
   
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
   
 ##  <a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
- 选择一个线程通过指定序列中的下一个线程。  
+ 通过指定序列中的下一个线程中选择一个线程。  
   
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
@@ -76,16 +76,16 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
   
 ### <a name="parameters"></a>参数  
  `pApt`  
- ATL 的默认实现中不使用。  
+ 不在 ATL 的默认实现中使用。  
   
  `nThreads`  
  最大 EXE 模块中的线程数。  
   
 ### <a name="return-value"></a>返回值  
- 一个整数，介于零和 ( `nThreads` – 1)。 标识一个 EXE 模块中的线程。  
+ 一个整数，介于零和 ( `nThreads` -1)。 标识一个 EXE 模块中的线程。  
   
 ### <a name="remarks"></a>备注  
- 您可以重写`GetThread`提供不同的方法所选内容，或者使利用`pApt`参数。  
+ 您可以重写`GetThread`可以提供所选内容的不同方法，或要使用的`pApt`参数。  
   
  `GetThread`由调用[CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)。  
   

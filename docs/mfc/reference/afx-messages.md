@@ -93,9 +93,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 3d2a811f850ca2779066f39fefd8312eb268f603
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 67fa0c6355443bcee478e9cd8d22b50813c0a4b0
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="afx-messages"></a>AFX 消息
@@ -108,7 +108,7 @@ ms.lasthandoff: 03/29/2017
 |-|-|-|-|-|  
 |消息|描述|[in] `wParam`|`lParam`（所有参数都都 [in] 除非另行说明。）|返回值|  
 |AFX_WM_ACCGETOBJECT|未使用。|未使用。|不适用。|不适用。|  
-|AFX_WM_ACCGETSTATE|用于可访问性支持。 发送到此消息`CMFCPopupMenu`或`CMFCRibbonPanelMenu`检索的当前元素的状态。|元素，可以为一个菜单按钮或分隔符的索引。|未使用。|元素状态中。 如果该索引无效，则为-1 0 菜单按钮是否没有特殊特性。 否则，它是以下标志的组合︰<br /><br /> TBBS_DISABLED \u2012 项被禁用<br /><br /> 选中 TBBS_CHECKED \u2012 项<br /><br /> TBBS_BUTTON \u2012 项是标准按键<br /><br /> 按下 TBBS_PRESSED \u2012 按钮<br /><br /> TBBS_INDETERMINATE \u2012 未定义的状态<br /><br /> TBBS_SEPARATOR-而不是菜单按钮，此元素窗体的其他菜单项之间的分离|  
+|AFX_WM_ACCGETSTATE|用于可访问性支持。 发送到此消息`CMFCPopupMenu`或`CMFCRibbonPanelMenu`检索的当前元素的状态。|元素，可以为一个菜单按钮或分隔符的索引。|未使用。|元素状态中。 如果该索引无效，则为-1 0 菜单按钮是否没有特殊特性。 否则，它是以下标志的组合︰<br /><br /> TBBS_DISABLED — 项被禁用<br /><br /> TBBS_CHECKED-选中项<br /><br /> TBBS_BUTTON-表明它是标准按键<br /><br /> TBBS_PRESSED-按下按钮<br /><br /> TBBS_INDETERMINATE-未定义的状态<br /><br /> TBBS_SEPARATOR-而不是菜单按钮，此元素窗体的其他菜单项之间的分离|  
 |AFX_WM_CHANGE_ACTIVE_TAB|框架将此消息发送到可调整大小控件栏控件。 处理此消息以接收来自通知`CMFCTabCtrl`对象时用户更改活动选项卡。|选项卡的索引。|未使用。|非零。|  
 |AFX_WM_CHANGE_CURRENT_FOLDER|框架将此邮件发送到的父级`CMFCShellListCtrl`时用户已更改的当前文件夹。|未使用。|未使用。|未使用。|  
 |AFX_WM_CHANGEVISUALMANAGER|在用户更改当前可视化管理器时，框架会将此消息发送到所有框架窗口。 响应此消息，框架窗口重新计算其区域，并根据需要调整其他参数。 如果你需要有关此事件通知，您可以在你的应用程序中处理 AFX_WM_CHANGEVISUALMANAGER 消息。 必须调用基类处理程序 (`OnChangeVisualManager`) 以确保框架的内部处理此事件发生。|未使用。|未使用。|未使用。|  

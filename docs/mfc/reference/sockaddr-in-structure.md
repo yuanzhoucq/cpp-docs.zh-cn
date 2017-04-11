@@ -1,94 +1,94 @@
 ---
-title: "SOCKADDR_IN 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SOCKADDR_IN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SOCKADDR_IN 结构"
+title: "SOCKADDR_IN 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SOCKADDR_IN
+dev_langs:
+- C++
+helpviewer_keywords:
+- SOCKADDR_IN structure
 ms.assetid: e8cd7c34-78bd-4e28-a990-eb3ca070b7a6
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# SOCKADDR_IN 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a1283740c0abb0538e5912efa11500c46b45bb9f
+ms.lasthandoff: 04/04/2017
 
-在 Internet 地址族中，Windows 套接字使用 `SOCKADDR_IN` 来指定连接套接字的本地或远程端点地址。  
+---
+# <a name="sockaddrin-structure"></a>SOCKADDR_IN 结构
+在 Internet 地址系列中， `SOCKADDR_IN` Windows 套接字使用结构来指定要连接套接字的本地或远程终结点地址。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      struct sockaddr_in{  
-   short sin_family;  
-   unsigned short sin_port;  
-   struct in_addr sin_addr;  
-   char sin_zero[8];  
+struct sockaddr_in{  
+    short sin_family;  
+    unsigned short sin_port;  
+struct in_addr sin_addr;  
+    char sin_zero[8];  
 };  
 ```  
   
-#### 参数  
- *sin\_family*  
- 地址系列（必须是 **AF\_INET**）。  
+#### <a name="parameters"></a>参数  
+ *sin_family*  
+ 地址系列 (必须是**AF_INET**)。  
   
- *sin\_port*  
+ *sin_port*  
  IP 端口。  
   
- *sin\_addr*  
+ *sin_addr*  
  IP 地址。  
   
- *sin\_zero*  
- 填充结构使其与 `SOCKADDR` 的大小一致。  
+ *sin_zero*  
+ 填充以使大小相同的结构`SOCKADDR`。  
   
-## 备注  
- 这是特定于 Internet 地址族并可转换为 `SOCKADDR` 的 `SOCKADDR` 结构窗体。  
+## <a name="remarks"></a>备注  
+ 此窗体中的`SOCKADDR`结构特定于 Internet 地址族，和可以强制转换为`SOCKADDR`。  
   
- 此结构的 IP 地址组件是 **IN\_ADDR** 类型。  **IN\_ADDR** 结构在 Windows 套接字标头文件 WINSOCK.H 中定义如下：  
+ 组件的此结构的 IP 地址属于类型**IN_ADDR**。 **IN_ADDR** Windows 套接字头文件 WINSOCK 中定义结构。H，如下所示︰  
   
- `struct   in_addr {`  
+```  
+struct in_addr {
+    union {
+        struct {  
+            unsigned char s_b1, s_b2, s_b3, s_b4;  
+        } S_un_b;  
+        struct {  
+            unsigned short s_w1, s_w2;
+        } S_un_w;
+        unsigned long S_addr;
+    } S_un;  
+};  
+```  
   
- `union   {`  
+## <a name="requirements"></a>要求  
+ **标头︰** winsock2.h  
   
- `struct{`  
-  
- `unsigned  char   s_b1,`  
-  
- `s_b2,`  
-  
- `s_b3,`  
-  
- `s_b4;`  
-  
- `}  S_un_b;`  
-  
- `struct  {`  
-  
- `unsigned  short  s_w1,`  
-  
- `s_w2;`  
-  
- `}  S_un_w;`  
-  
- `unsigned long  S_addr;`  
-  
- `} S_un;`  
-  
- `};`  
-  
-## 要求  
- **标头：**winsock2.h  
-  
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>另请参阅  
+ [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [SOCKADDR 结构](../../mfc/reference/sockaddr-structure.md)
+

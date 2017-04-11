@@ -54,9 +54,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: a2358d31bd87b2cc540dd9a5ce182b9340764522
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7f394d6519bcf86a4de3966bb958923aab8dd0c6
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 类
@@ -78,7 +78,7 @@ class CStatusBar : public CControlBar
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CStatusBar::CommandToIndex](#commandtoindex)|给定的指示器 id 获取索引|  
 |[CStatusBar::Create](#create)|创建状态栏，将其附加到`CStatusBar`对象，并设置初始的字体和栏高度。|  
@@ -150,7 +150,7 @@ int CommandToIndex(UINT nIDFind) const;
  字符串 ID 的索引是要检索的指示器。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功，则该指示器的索引如果不成功，则为 – 1。  
+ 如果成功，则该指示器的索引如果不成功，则为-1。  
   
 ### <a name="remarks"></a>备注  
  第一个指示器的索引为 0。  
@@ -167,7 +167,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
  `pParentWnd`  
- 指向[CWnd](../../mfc/reference/cwnd-class.md)其 Windows 窗口是状态条的父级的对象。  
+ 指向[CWnd](../../mfc/reference/cwnd-class.md)其 Windows 窗口是状态栏的父对象。  
   
  `dwStyle`  
  状态栏样式中。 除了标准的 Windows[样式](../../mfc/reference/window-styles.md)，支持这些样式。  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
  `pParentWnd`  
- 指向[CWnd](../../mfc/reference/cwnd-class.md)其 Windows 窗口是状态条的父级的对象。  
+ 指向[CWnd](../../mfc/reference/cwnd-class.md)其 Windows 窗口是状态栏的父对象。  
   
  `dwCtrlStyle`  
  为创建的嵌入其他样式[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)对象。 默认值指定状态栏不带大小调整手柄或工具提示支持。 支持的状态栏样式包括︰  

@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
@@ -70,7 +70,7 @@ class CSpinButtonCtrl : public CWnd
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|构造 `CSpinButtonCtrl` 对象。|  
   
@@ -361,7 +361,7 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>参数  
- `nLower`和`nUpper`  
+ `nLower` 和 `nUpper`  
  控件的上限和下限限制。 有关`SetRange`，既不限制可以大于**UD_MAXVAL**或小于**UD_MINVAL**; 此外，不能超过两个限制之间的差异**UD_MAXVAL**。 `SetRange32`无限制将限制;使用任何整数。  
   
 ### <a name="remarks"></a>备注  

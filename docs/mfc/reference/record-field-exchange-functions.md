@@ -74,13 +74,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 87b658cab22ad1aa5db17a00d1d3817e55ff4fc7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: acabc4e9469560b67c5fe10bcb845517e05c7854
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="record-field-exchange-functions"></a>记录字段交换函数
-本主题列出了记录字段交换 （RFX、 Bulk RFX 和 DFX） 使用自动完成记录集对象和它的数据源之间传输数据以及对数据执行其他操作的函数。  
+本主题列出了记录字段交换 （RFX、 Bulk RFX 和 DFX） 用于自动记录集对象与其数据源之间传输数据以及对数据执行其他操作的函数。  
   
  如果正在使用基于 ODBC 的类，并且已实现批量行提取，则必须为与数据源列对应的每个数据成员调用批量 RFX 函数，以便手动重写 `DoBulkFieldExchange` 的 `CRecordset` 成员函数。  
   
@@ -88,24 +88,24 @@ ms.lasthandoff: 02/24/2017
   
  记录字段交换函数在框架每次调用 `DoFieldExchange` 或 `DoBulkFieldExchange`时传输数据。 每个函数传输一种特定的数据类型。  
   
- 有关如何使用这些函数的详细信息，请参阅文章[记录字段交换︰ 如何 RFX 的工作原理 (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md)。 有关批量取行的详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+ 有关如何使用这些函数的详细信息，请参阅文章[记录字段交换︰ 如何 RFX 工作方式 (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md)。 有关批量行提取的详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 对于动态绑定的数据的列，您还可以调用 RFX 或 DFX 函数自己，如文章中所述[记录集︰ 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。 此外，您可以编写您自己自定义的 RFX 或 DFX 例程，技术说明中所述[43](../../mfc/tn043-rfx-routines.md) （对于 ODBC) 和技术说明[53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) （对于 DAO)。  
+ 对于动态绑定的数据的列，你还可以调用 RFX 或 DFX 函数自己，文章中所述[记录集︰ 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。 此外，可以编写你自己自定义 RFX 或 DFX 例程，技术说明中所述[43](../../mfc/tn043-rfx-routines.md) （对于 ODBC) 和技术说明[53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) （针对 DAO)。  
   
- 以举例说明 RFX 和 Bulk RFX 函数按它们出现在`DoFieldExchange`和`DoBulkFieldExchange`函数，请参见[RFX_Text](#rfx_text)和 [RFX_Text_Bulk] #rfx_text_bulk)。 DFX 函数与 RFX 函数非常类似。  
+ 有关示例的 RFX 和批量 RFX 函数与出现在`DoFieldExchange`和`DoBulkFieldExchange`函数，请参阅[RFX_Text](#rfx_text)和 [RFX_Text_Bulk] #rfx_text_bulk)。 DFX 函数与 RFX 函数非常类似。  
   
 ### <a name="rfx-functions-odbc"></a>RFX 函数 (ODBC)  
   
 |||  
 |-|-|  
-|[RFX_Binary](#rfx_binary)|传输类型的字节的数组[CByteArray](cbytearray-class.md)。|  
+|[RFX_Binary](#rfx_binary)|传输类型的字节数组[CByteArray](cbytearray-class.md)。|  
 |[RFX_Bool](#rfx_bool)|传输布尔数据。|  
 |[RFX_Byte](#rfx_byte)|传输单字节数据。|  
-|[RFX_Date](#rfx_date)|传输时间和日期的数据使用[CTime](../../atl-mfc-shared/reference/ctime-class.md)或**TIMESTAMP_STRUCT**。|  
+|[RFX_Date](#rfx_date)|传输时间和日期数据使用[CTime](../../atl-mfc-shared/reference/ctime-class.md)或**TIMESTAMP_STRUCT**。|  
 |[RFX_Double](#rfx_double)|传输双精度浮点数据。|  
 |[RFX_Int](#rfx_int)|传输整型数据。|  
 |[RFX_Long](#rfx_long)|传输长整型数据。|  
-|[RFX_LongBinary](#rfx_longbinary)|将使用对象的二进制大型对象 (BLOB) 数据传输[CLongBinary](clongbinary-class.md)类。|  
+|[RFX_LongBinary](#rfx_longbinary)|传输的对象的二进制大型对象 (BLOB) 数据[CLongBinary](clongbinary-class.md)类。|  
 |[RFX_Single](#rfx_single)|传输浮点数据。|  
 |[RFX_Text](#rfx_text)|传输字符串数据。|  
   
@@ -127,11 +127,11 @@ ms.lasthandoff: 02/24/2017
   
 |||
 |-|-|  
-|[DFX_Binary](#dfx_binary)|传输类型的字节的数组[CByteArray](cbytearray-class.md)。|  
+|[DFX_Binary](#dfx_binary)|传输类型的字节数组[CByteArray](cbytearray-class.md)。|  
 |[DFX_Bool](#dfx_bool)|传输布尔数据。|  
 |[DFX_Byte](#dfx_byte)|传输单字节数据。|  
 |[DFX_Currency](#dfx_currency)|传输类型的货币数据[COleCurrency](colecurrency-class.md)。|  
-|[DFX_DateTime](#dfx_datetime)|将日期和时间数据类型的传输[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。|  
+|[DFX_DateTime](#dfx_datetime)|将时间和日期数据类型的传输[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)。|  
 |[DFX_Double](#dfx_double)|传输双精度浮点数据。|  
 |[DFX_Long](#dfx_long)|传输长整型数据。|  
 |[DFX_LongBinary](#dfx_longbinary)|使用 `CLongBinary` 类的对象传输二进制大型对象 (BLOB) 数据。 对于 DAO，建议你使用[DFX_Binary](#dfx_binary)相反。|  
@@ -162,13 +162,13 @@ void RFX_Binary(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输[CByteArray](cbytearray-class.md)，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， [CByteArray](cbytearray-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `nMaxLength`  
- 允许的最大的字符串或正在传输的数组的长度。 默认值为`nMaxLength`为 255。 合法值是 1 到`INT_MAX`。 框架将为数据分配空间的量。 为了获得最佳性能，将传递一个足够大以容纳您预期的最大数据项目的值。  
+ 允许的最大的字符串或传输的数组的长度。 默认值`nMaxLength`为 255。 合法值为 1 到`INT_MAX`。 框架为数据分配此空间量。 为了获得最佳性能，将传递足够大，以适应你预期的最大数据项的值。  
   
 ### <a name="remarks"></a>备注  
- 这些类型的数据源中的数据将映射与类型`CByteArray`在记录集中。  
+ 数据源中的这些类型的数据类型映射`CByteArray`的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -177,7 +177,7 @@ void RFX_Binary(
  **标头︰** afxdb.h  
 
 ## <a name="rfx_bool"></a>RFX_Bool
-将布尔值的数据传输之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_BIT**。  
+传输布尔数据之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_BIT**。  
   
 ### <a name="syntax"></a>语法  
   
@@ -196,7 +196,7 @@ void RFX_Bool(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**BOOL**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **BOOL**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -205,7 +205,7 @@ void RFX_Bool(
  **标头︰** afxdb.h  
 
 ## <a name="rfx_byte"></a>RFX_Byte
-字段数据成员之间传输单字节`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_TINYINT**。  
+传输单字节之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_TINYINT**。  
   
 ### <a name="syntax"></a>语法  
   
@@ -224,7 +224,7 @@ void RFX_Byte(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**字节**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**字节**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -262,14 +262,14 @@ void RFX_Date(
  数据列的名称。  
   
  *值*  
- 指定的数据成员; 中存储的值要传输的值。 各种版本的函数执行值的不同的数据类型︰  
+ 指定的数据成员; 中存储的值要传输的值。 各种版本的函数执行值的不同数据类型︰  
   
- 该函数的第一个版本采用指向的引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。 对于从记录集到数据源的传输，从指定的数据成员中提取此值。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 该函数的第一个版本会引用[CTime](../../atl-mfc-shared/reference/ctime-class.md)对象。 对于从记录集到数据源的传输，此值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
- 第二个版本的函数将对引用**TIMESTAMP_STRUCT**结构。 您必须设置此结构自己在调用之前。 既没有对话框数据交换 (DDX) 支持，也可用于此版本代码的向导支持。 该函数的第三版工作方式类似于第一个版本，但前者将对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象。  
+ 第二个版本的函数会引用**TIMESTAMP_STRUCT**结构。 你必须设置此结构自己在调用之前。 既不对话框数据交换 (DDX) 支持也不代码向导支持是可用于此版本。 第三个版本的函数工作方式类似于第一个版本，但前者将对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象。  
   
 ### <a name="remarks"></a>备注  
- `CTime`该函数的版本会产生的某些中间的处理开销，并且具有一定的限制的范围。 如果您发现极大地限制这些因素之一，则使用第二个版本的函数。 但请注意它没有代码向导和 DDX 支持以及您设置结构您自己的要求。  
+ `CTime`版本的函数有一定的某些中间的处理开销，并且具有某种程度上有限范围。 如果你发现太多的限制这些因素之一，使用该函数的第二个版本。 但请注意其缺乏代码向导和 DDX 支持和你设置结构自己的要求。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -278,7 +278,7 @@ void RFX_Date(
  **标头︰** afxdb.h  
 
 ## <a name="rfx_double"></a>RFX_Double
-传输**双精度浮点**之间的字段数据成员的数据`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_DOUBLE**。  
+传输**双精度浮点数**之间的字段数据成员的数据`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_DOUBLE**。  
   
 ### <a name="syntax"></a>语法  
   
@@ -297,7 +297,7 @@ void RFX_Double(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**double**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **double**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -305,7 +305,7 @@ void RFX_Double(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-## <a name="RFX_Int"></a>RFX_Int
+## <a name="rfx_int"></a>RFX_Int
 将整数数据传输之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_SMALLINT**。  
   
 ### <a name="syntax"></a>语法  
@@ -325,7 +325,7 @@ void RFX_Int(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输`int`，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， `int`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -333,7 +333,7 @@ void RFX_Int(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-## <a name="RFX_Long"></a>RFX_Long
+## <a name="rfx_long"></a>RFX_Long
 将长整型数据传输之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_INTEGER**。  
   
 ### <a name="syntax"></a>语法  
@@ -354,7 +354,7 @@ value );
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**长**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**长**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -362,8 +362,8 @@ value );
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
   
-## <a name="RFX_LongBinary"></a>RFX_LongBinary
-将使用类的二进制大型对象 (BLOB) 数据传输[CLongBinary](clongbinary-class.md)之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_LONGVARBINARY**或**SQL_LONGVARCHAR**。  
+## <a name="rfx_longbinary"></a>RFX_LongBinary
+传输二进制大型对象 (BLOB) 数据使用类[CLongBinary](clongbinary-class.md)之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_LONGVARBINARY**或**SQL_LONGVARCHAR**。  
   
 ### <a name="syntax"></a>语法  
   
@@ -382,7 +382,7 @@ void RFX_LongBinary(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输`CLongBinary`，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， `CLongBinary`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -391,7 +391,7 @@ void RFX_LongBinary(
  **标头︰** afxdb.h  
 
 ## <a name="rfx_single"></a>RFX_Single
-将浮点数据传输之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_REAL**。  
+传输浮点数据之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_REAL**。  
   
 ### <a name="syntax"></a>语法  
   
@@ -410,7 +410,7 @@ void RFX_Single(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**float**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **float**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -442,22 +442,22 @@ void RFX_Text(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输`CString`，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， `CString`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `nMaxLength`  
- 允许的最大的字符串或正在传输的数组的长度。 默认值为`nMaxLength`为 255。 合法值是 1 到`INT_MAX`)。 框架将为数据分配空间的量。 为了获得最佳性能，将传递一个足够大以容纳您预期的最大数据项目的值。  
+ 允许的最大的字符串或传输的数组的长度。 默认值`nMaxLength`为 255。 合法值为 1 到`INT_MAX`)。 框架为数据分配此空间量。 为了获得最佳性能，将传递足够大，以适应你预期的最大数据项的值。  
   
  *nColumnType*  
- 主要用于参数。 一个整数，指示该参数的数据类型。 类型为 ODBC 数据类型的窗体**SQL_XXX**。  
+ 主要用于参数。 指示参数的数据类型的整数。 类型为 ODBC 数据类型的窗体**SQL_XXX**。  
   
  `nScale`  
- 指定 ODBC 类型的值的小数位数**SQL_DECIMAL**或**SQL_NUMERIC**。 `nScale`有用时才设置参数值。 详细信息，请参阅主题"精度、 小数位数、 长度和显示大小"中的附录 D *ODBC SDK 程序员参考*。  
+ 指定 ODBC 类型的值的小数位数**SQL_DECIMAL**或**SQL_NUMERIC**。 `nScale`当时才有用设置参数值。 详细信息，请参阅主题"精度、 小数位数、 长度和显示大小"中的附录 D *ODBC SDK 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 所有这些类型的数据源中的数据映射间来回`CString`在记录集中。  
+ 数据源中的所有这些类型的数据映射到和从`CString`的记录集。  
   
 ### <a name="example"></a>示例  
- 此示例演示多次调用`RFX_Text`。 请注意两次调用也`CFieldExchange::SetFieldType`。 您必须为参数编写调用`SetFieldType`和其 RFX 调用。 代码向导通常写入的输出列调用并其相关联的 RFX 调用。  
+ 此示例演示几次调用到`RFX_Text`。 请注意还对的两个调用`CFieldExchange::SetFieldType`。 对于参数，你必须编写调用`SetFieldType`和其 RFX 调用。 输出列调用和其关联的 RFX 调用通常编写的代码向导中。  
   
 ```cpp  
 void CCustomer::DoFieldExchange(CFieldExchange* pFX)
@@ -481,8 +481,8 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
  **标头︰** afxdb.h  
 
 
-## <a name="rfx_binary_Bulk"></a>RFX_Binary_Bulk
-将字节数据的多个行从 ODBC 数据源的列传输到相应数组`CRecordset`-派生的对象。  
+## <a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
+将从 ODBC 数据源的列的多行字节数据传输到相应数组中`CRecordset`-派生对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -497,27 +497,27 @@ void RFX_Binary_Bulk(
   
 ### <a name="parameters"></a>参数  
  `pFX`  
- 一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
+ 指向的指针[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
   
  `szName`  
  数据列的名称。  
   
  `prgByteVals`  
- 指向数组的指针**字节**值。 此数组将存储数据以便从数据源传输到记录集。  
+ 指向数组的指针**字节**值。 此数组将存储从数据源传输到记录集的数据。  
   
  `prgLengths`  
- 指向一个长整数数组的指针。 此数组将以字节为单位由指向数组中每个值的存储长度`prgByteVals`。 请注意，值**SQL_NULL_DATA**相应数据项都包含一个 Null 值的情况下存储。 有关详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
+ 指向一个长整数数组的指针。 此数组将以字节为单位的指向数组中每个值的存储长度`prgByteVals`。 请注意，值**SQL_NULL_DATA**将存储如果相应的数据项目包含一个 Null 值。 有关更多详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
   
  `nMaxLength`  
- 允许的最大长度为指向数组中存储的值`prgByteVals`。 若要确保数据不会被截断，传递值足够大以容纳您预期的最大数据项目。  
+ 允许的最大的存储指向数组中的值的长度`prgByteVals`。 若要确保数据不会被截断，传递足够大，以适应你预期的最大数据项的值。  
   
 ### <a name="remarks"></a>备注  
  数据源列可以具有的 ODBC 类型**SQL_BINARY**， **SQL_VARBINARY**，或**SQL_LONGVARBINARY**。 记录集必须定义的字段数据成员的指针类型的**字节**。  
   
- 如果初始化`prgByteVals`和`prgLengths`到**NULL**，则它们指向的数组将自动分配给具有大小等于行集大小。  
+ 如果初始化`prgByteVals`和`prgLengths`到**NULL**，然后它们指向数组将自动分配具有大小等于行集大小。  
   
 > [!NOTE]
->  批量记录字段交换只将数据传输从数据源到记录集对象。 为了使您的记录集可更新，您必须使用 ODBC API 函数**SQLSetPos**。  
+>  批量记录字段交换仅将数据传输从数据源到记录集对象。 若要将你的记录集的更新，你必须使用 ODBC API 函数**SQLSetPos**。  
   
  有关详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
@@ -527,8 +527,8 @@ void RFX_Binary_Bulk(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-## <a name="rfx_bool_Bulk"></a>RFX_Bool_Bulk
-将布尔型数据的多个行从 ODBC 数据源的列传输到相应数组`CRecordset`-派生的对象。  
+## <a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
+将从 ODBC 数据源的列的布尔型数据的多个行传输到相应数组中`CRecordset`-派生对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -542,24 +542,24 @@ void RFX_Bool_Bulk(
   
 ### <a name="parameters"></a>参数  
  `pFX`  
- 一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
+ 指向的指针[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
   
  `szName`  
  数据列的名称。  
   
  `prgBoolVals`  
- 指向数组的指针**BOOL**值。 此数组将存储数据以便从数据源传输到记录集。  
+ 指向数组的指针**BOOL**值。 此数组将存储从数据源传输到记录集的数据。  
   
  `prgLengths`  
- 指向一个长整数数组的指针。 此数组将以字节为单位由指向数组中每个值的存储长度`prgBoolVals`。 请注意，值**SQL_NULL_DATA**相应数据项都包含一个 Null 值的情况下存储。 有关详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
+ 指向一个长整数数组的指针。 此数组将以字节为单位的指向数组中每个值的存储长度`prgBoolVals`。 请注意，值**SQL_NULL_DATA**将存储如果相应的数据项目包含一个 Null 值。 有关更多详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 数据源列都必须有的 ODBC 类型**SQL_BIT**。 记录集必须定义的字段数据成员的指针类型的**BOOL**。  
+ 数据源列必须具有的 ODBC 类型**SQL_BIT**。 记录集必须定义的字段数据成员的指针类型的**BOOL**。  
   
- 如果初始化`prgBoolVals`和`prgLengths`到**NULL**，则它们指向的数组将自动分配给具有大小等于行集大小。  
+ 如果初始化`prgBoolVals`和`prgLengths`到**NULL**，然后它们指向数组将自动分配具有大小等于行集大小。  
   
 > [!NOTE]
->  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数**SQLSetPos**。  
+>  批量记录字段交换仅将数据传输从数据源到记录集对象。 若要将更新记录集，必须使用 ODBC API 函数**SQLSetPos**。  
   
  有关详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
@@ -569,8 +569,8 @@ void RFX_Bool_Bulk(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-## <a name="rfx_byte_Bulk"></a>RFX_Byte_Bulk
-将单字节的多个行从 ODBC 数据源的列传输到相应数组`CRecordset`-派生的对象。  
+## <a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
+从 ODBC 数据源的列中的相应数组到传输单字节的多个行`CRecordset`-派生对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -584,24 +584,24 @@ void RFX_Byte_Bulk(
   
 ### <a name="parameters"></a>参数  
  `pFX`  
- 一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
+ 指向的指针[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
   
  `szName`  
  数据列的名称。  
   
  `prgByteVals`  
- 指向数组的指针**字节**值。 此数组将存储数据以便从数据源传输到记录集。  
+ 指向数组的指针**字节**值。 此数组将存储从数据源传输到记录集的数据。  
   
  `prgLengths`  
- 指向一个长整数数组的指针。 此数组将以字节为单位由指向数组中每个值的存储长度`prgByteVals`。 请注意，值**SQL_NULL_DATA**相应数据项都包含一个 Null 值的情况下存储。 有关详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
+ 指向一个长整数数组的指针。 此数组将以字节为单位的指向数组中每个值的存储长度`prgByteVals`。 请注意，值**SQL_NULL_DATA**将存储如果相应的数据项目包含一个 Null 值。 有关更多详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 数据源列都必须有的 ODBC 类型**SQL_TINYINT**。 记录集必须定义的字段数据成员的指针类型的**字节**。  
+ 数据源列必须具有的 ODBC 类型**SQL_TINYINT**。 记录集必须定义的字段数据成员的指针类型的**字节**。  
   
- 如果初始化`prgByteVals`和`prgLengths`到**NULL**，则它们指向的数组将自动分配给具有大小等于行集大小。  
+ 如果初始化`prgByteVals`和`prgLengths`到**NULL**，然后它们指向数组将自动分配具有大小等于行集大小。  
   
 > [!NOTE]
->  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数**SQLSetPos**。  
+>  批量记录字段交换仅将数据传输从数据源到记录集对象。 若要将更新记录集，必须使用 ODBC API 函数**SQLSetPos**。  
   
  有关详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
@@ -611,8 +611,8 @@ void RFX_Byte_Bulk(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
   
-## <a name="rfx_date_Bulk"></a>RFX_Date_Bulk
-将传输的多个行**TIMESTAMP_STRUCT**数据从 ODBC 数据源的列中的相应数组到`CRecordset`-派生的对象。  
+## <a name="rfx_date_bulk"></a>RFX_Date_Bulk
+传输的多个行**TIMESTAMP_STRUCT**从 ODBC 数据源的列中数据复制到相应数组中`CRecordset`-派生对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -626,24 +626,24 @@ void RFX_Date_Bulk(
   
 ### <a name="parameters"></a>参数  
  `pFX`  
- 一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
+ 指向的指针[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
   
  `szName`  
  数据列的名称。  
   
  `prgTSVals`  
- 指向数组的指针**TIMESTAMP_STRUCT**值。 此数组将存储数据以便从数据源传输到记录集。 有关详细信息**TIMESTAMP_STRUCT**数据类型，请参阅主题"C 数据类型"中的附录 D 的*ODBC SDK 程序员参考*。  
+ 指向数组的指针**TIMESTAMP_STRUCT**值。 此数组将存储从数据源传输到记录集的数据。 有关详细信息**TIMESTAMP_STRUCT**数据类型，请参阅的附录 D 中的主题"C 数据类型" *ODBC SDK 程序员参考*。  
   
  `prgLengths`  
- 指向一个长整数数组的指针。 此数组将以字节为单位由指向数组中每个值的存储长度`prgTSVals`。 请注意，值**SQL_NULL_DATA**相应数据项都包含一个 Null 值的情况下存储。 有关详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
+ 指向一个长整数数组的指针。 此数组将以字节为单位的指向数组中每个值的存储长度`prgTSVals`。 请注意，值**SQL_NULL_DATA**将存储如果相应的数据项目包含一个 Null 值。 有关更多详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
  数据源列可以具有的 ODBC 类型**SQL_DATE**， **SQL_TIME**，或**SQL_TIMESTAMP**。 记录集必须定义的字段数据成员的指针类型的**TIMESTAMP_STRUCT**。  
   
- 如果初始化`prgTSVals`和`prgLengths`到**NULL**，则它们指向的数组将自动分配给具有大小等于行集大小。  
+ 如果初始化`prgTSVals`和`prgLengths`到**NULL**，然后它们指向数组将自动分配具有大小等于行集大小。  
   
 > [!NOTE]
->  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数**SQLSetPos**。  
+>  批量记录字段交换仅将数据传输从数据源到记录集对象。 若要将更新记录集，必须使用 ODBC API 函数**SQLSetPos**。  
   
  有关详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
@@ -653,8 +653,8 @@ void RFX_Date_Bulk(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-## <a name="rfx_double_Bulk"></a>RFX_Double_Bulk
-将从 ODBC 数据源的列的多个行的双精度浮点数据传输到相应数组中`CRecordset`-派生的对象。  
+## <a name="rfx_double_bulk"></a>RFX_Double_Bulk
+从 ODBC 数据源的列中的相应数组到传输的双精度浮点数据的多个行`CRecordset`-派生对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -668,24 +668,24 @@ void RFX_Double_Bulk(
   
 ### <a name="parameters"></a>参数  
  `pFX`  
- 一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
+ 指向的指针[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
   
  `szName`  
  数据列的名称。  
   
  `prgDblVals`  
- 指向数组的指针**double**值。 此数组将存储数据以便从数据源传输到记录集。  
+ 指向数组的指针**double**值。 此数组将存储从数据源传输到记录集的数据。  
   
  `prgLengths`  
- 指向一个长整数数组的指针。 此数组将以字节为单位由指向数组中每个值的存储长度`prgDblVals`。 请注意，值**SQL_NULL_DATA**相应数据项都包含一个 Null 值的情况下存储。 有关详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
+ 指向一个长整数数组的指针。 此数组将以字节为单位的指向数组中每个值的存储长度`prgDblVals`。 请注意，值**SQL_NULL_DATA**将存储如果相应的数据项目包含一个 Null 值。 有关更多详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 数据源列都必须有的 ODBC 类型**SQL_DOUBLE**。 记录集必须定义的字段数据成员的指针类型的**double**。  
+ 数据源列必须具有的 ODBC 类型**SQL_DOUBLE**。 记录集必须定义的字段数据成员的指针类型的**double**。  
   
- 如果初始化`prgDblVals`和`prgLengths`到**NULL**，则它们指向的数组将自动分配给具有大小等于行集大小。  
+ 如果初始化`prgDblVals`和`prgLengths`到**NULL**，然后它们指向数组将自动分配具有大小等于行集大小。  
   
 > [!NOTE]
->  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数**SQLSetPos**。  
+>  批量记录字段交换仅将数据传输从数据源到记录集对象。 若要将更新记录集，必须使用 ODBC API 函数**SQLSetPos**。  
   
  有关详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
@@ -695,7 +695,7 @@ void RFX_Double_Bulk(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-## <a name="RFX_Int_Bulk"></a>RFX_Int_Bulk
+## <a name="rfx_int_bulk"></a>RFX_Int_Bulk
 将整数数据传输之间的字段数据成员`CRecordset`对象和列上的数据源的 ODBC 类型的记录**SQL_SMALLINT**。  
   
 ### <a name="syntax"></a>语法  
@@ -715,7 +715,7 @@ void RFX_Int(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输`int`，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， `int`，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
 ### <a name="example"></a>示例  
  请参阅[RFX_Text](#rfx_text)。  
@@ -723,8 +723,8 @@ void RFX_Int(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-## <a name="RFX_Long_Bulk"></a>RFX_Long_Bulk
-将从 ODBC 数据源的列的多行的长整型数据传输到相应数组中`CRecordset`-派生的对象。  
+## <a name="rfx_long_bulk"></a>RFX_Long_Bulk
+将从 ODBC 数据源的列的多行长整型数据传输到相应数组中`CRecordset`-派生对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -738,24 +738,24 @@ void RFX_Long_Bulk(
   
 ### <a name="parameters"></a>参数  
  `pFX`  
- 一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
+ 指向的指针[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
   
  `szName`  
  数据列的名称。  
   
  `prgLongVals`  
- 指向一个长整数数组的指针。 此数组将存储数据以便从数据源传输到记录集。  
+ 指向一个长整数数组的指针。 此数组将存储从数据源传输到记录集的数据。  
   
  `prgLengths`  
- 指向一个长整数数组的指针。 此数组将以字节为单位由指向数组中每个值的存储长度`prgLongVals`。 请注意，值**SQL_NULL_DATA**相应数据项都包含一个 Null 值的情况下存储。 有关详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
+ 指向一个长整数数组的指针。 此数组将以字节为单位的指向数组中每个值的存储长度`prgLongVals`。 请注意，值**SQL_NULL_DATA**将存储如果相应的数据项目包含一个 Null 值。 有关更多详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 数据源列都必须有的 ODBC 类型**SQL_INTEGER**。 记录集必须定义的字段数据成员的指针类型的**长**。  
+ 数据源列必须具有的 ODBC 类型**SQL_INTEGER**。 记录集必须定义的字段数据成员的指针类型的**长**。  
   
- 如果初始化`prgLongVals`和`prgLengths`到**NULL**，则它们指向的数组将自动分配给具有大小等于行集大小。  
+ 如果初始化`prgLongVals`和`prgLengths`到**NULL**，然后它们指向数组将自动分配具有大小等于行集大小。  
   
 > [!NOTE]
->  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数**SQLSetPos**。  
+>  批量记录字段交换仅将数据传输从数据源到记录集对象。 若要将更新记录集，必须使用 ODBC API 函数**SQLSetPos**。  
   
  有关详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
@@ -765,8 +765,8 @@ void RFX_Long_Bulk(
 ### <a name="requirements"></a>要求  
  **标头︰** afxdb.h  
 
-## <a name="rfx_single_Bulk"></a>RFX_Single_Bulk
-将浮点型数据的多个行从 ODBC 数据源的列传输到相应数组`CRecordset`-派生的对象。  
+## <a name="rfx_single_bulk"></a>RFX_Single_Bulk
+将从 ODBC 数据源的列的浮点型数据的多个行传输到相应数组中`CRecordset`-派生对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -780,24 +780,24 @@ void RFX_Single_Bulk(
   
 ### <a name="parameters"></a>参数  
  `pFX`  
- 一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
+ 指向的指针[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
   
  `szName`  
  数据列的名称。  
   
  `prgFltVals`  
- 指向数组的指针**float**值。 此数组将存储数据以便从数据源传输到记录集。  
+ 指向数组的指针**float**值。 此数组将存储从数据源传输到记录集的数据。  
   
  `prgLengths`  
- 指向一个长整数数组的指针。 此数组将以字节为单位由指向数组中每个值的存储长度`prgFltVals`。 请注意，值**SQL_NULL_DATA**相应数据项都包含一个 Null 值的情况下存储。 有关详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
+ 指向一个长整数数组的指针。 此数组将以字节为单位的指向数组中每个值的存储长度`prgFltVals`。 请注意，值**SQL_NULL_DATA**将存储如果相应的数据项目包含一个 Null 值。 有关更多详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
   
 ### <a name="remarks"></a>备注  
- 数据源列都必须有的 ODBC 类型**SQL_REAL**。 记录集必须定义的字段数据成员的指针类型的**float**。  
+ 数据源列必须具有的 ODBC 类型**SQL_REAL**。 记录集必须定义的字段数据成员的指针类型的**float**。  
   
- 如果初始化`prgFltVals`和`prgLengths`到**NULL**，则它们指向的数组将自动分配给具有大小等于行集大小。  
+ 如果初始化`prgFltVals`和`prgLengths`到**NULL**，然后它们指向数组将自动分配具有大小等于行集大小。  
   
 > [!NOTE]
->  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数**SQLSetPos**。  
+>  批量记录字段交换仅将数据传输从数据源到记录集对象。 若要将更新记录集，必须使用 ODBC API 函数**SQLSetPos**。  
   
  有关详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
@@ -808,8 +808,8 @@ void RFX_Single_Bulk(
  **标头︰** afxdb.h  
   
 
-## <a name="rfx_text_Bulk"></a>RFX_Text_Bulk
-将字符数据的多个行从 ODBC 数据源的列传输到相应数组`CRecordset`-派生的对象。  
+## <a name="rfx_text_bulk"></a>RFX_Text_Bulk
+将从 ODBC 数据源的列的多行字符数据传输到相应数组中`CRecordset`-派生对象。  
   
 ### <a name="syntax"></a>语法  
   
@@ -824,32 +824,32 @@ void RFX_Text_Bulk(
   
 ### <a name="parameters"></a>参数  
  `pFX`  
- 一个指向[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
+ 指向的指针[CFieldExchange](cfieldexchange-class.md)对象。 此对象包含用于定义每次函数时的上下文的信息。 有关详细信息，请参阅文章[记录字段交换︰ RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  
   
  `szName`  
  数据列的名称。  
   
  `prgStrVals`  
- 指向数组的指针**LPSTR**值。 此数组将存储数据以便从数据源传输到记录集。 请注意，与 ODBC 的当前版本，这些值不能为 Unicode。  
+ 指向数组的指针**LPSTR**值。 此数组将存储从数据源传输到记录集的数据。 请注意 ODBC 的当前版本，这些值不能为 Unicode。  
   
  `prgLengths`  
- 指向一个长整数数组的指针。 此数组将以字节为单位由指向数组中每个值的存储长度`prgStrVals`。 这种长度不包括 null 终止字符。 请注意，值**SQL_NULL_DATA**相应数据项都包含一个 Null 值的情况下存储。 有关详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
+ 指向一个长整数数组的指针。 此数组将以字节为单位的指向数组中每个值的存储长度`prgStrVals`。 此长度不包括 null 终止字符。 请注意，值**SQL_NULL_DATA**将存储如果相应的数据项目包含一个 Null 值。 有关更多详细信息，请参阅 ODBC API 函数**SQLBindCol**中*ODBC SDK 程序员参考*。  
   
  `nMaxLength`  
- 允许的最大长度为指向数组中存储的值`prgStrVals`，包括 null 终止字符。 若要确保数据不会被截断，传递值足够大以容纳您预期的最大数据项目。  
+ 允许的最大的存储指向数组中的值的长度`prgStrVals`，包括 null 终止字符。 若要确保数据不会被截断，传递足够大，以适应你预期的最大数据项的值。  
   
 ### <a name="remarks"></a>备注  
  数据源列可以具有的 ODBC 类型**SQL_LONGVARCHAR**， **SQL_CHAR**， **SQL_VARCHAR**， **SQL_DECIMAL**，或**SQL_NUMERIC**。 记录集必须定义类型的字段数据成员**LPSTR**。  
   
- 如果初始化`prgStrVals`和`prgLengths`到**NULL**，则它们指向的数组将自动分配给具有大小等于行集大小。  
+ 如果初始化`prgStrVals`和`prgLengths`到**NULL**，然后它们指向数组将自动分配具有大小等于行集大小。  
   
 > [!NOTE]
->  批量记录字段交换只将数据传输从数据源到记录集对象。 若要使您的记录集可更新，必须使用 ODBC API 函数**SQLSetPos**。  
+>  批量记录字段交换仅将数据传输从数据源到记录集对象。 若要将更新记录集，必须使用 ODBC API 函数**SQLSetPos**。  
   
  有关详细信息，请参阅文章[记录集︰ 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)和[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
 ### <a name="example"></a>示例  
- 您必须手动编写调用，您`DoBulkFieldExchange`重写。 此示例演示如何调用`RFX_Text_Bulk`，以及调用`RFX_Long_Bulk`，数据传输。 通过调用前面带有这些调用[CFieldExchange::SetFieldType](CFieldExchange::SetFieldType.md)。 请注意，对于参数，则必须调用 RFX 函数而不是批量 RFX 函数。  
+ 您必须手动中编写调用你`DoBulkFieldExchange`重写。 此示例演示调用`RFX_Text_Bulk`，以及调用`RFX_Long_Bulk`，数据传输。 这些调用前面通过调用[CFieldExchange::SetFieldType](CFieldExchange::SetFieldType.md)。 请注意，对于参数时，必须调用 RFX 函数而不是批量 RFX 函数。  
   
 ```cpp  
 void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
@@ -891,19 +891,19 @@ void AFXAPI DFX_Binary(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输[CByteArray](cbytearray-class.md)，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， [CByteArray](cbytearray-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `nPreAllocSize`  
- 框架预先分配内存的量。 如果您的数据大小，该框架将分配所需的更多的空间。 为了提高性能，此大小设置为足够大，以防止重新分配的值。 AFXDAO 中定义的默认大小。H 文件作为**AFX_DAO_BINARY_DEFAULT_SIZE**。  
+ 框架预分配此内存量。 如果你的数据大小，框架将分配更多空间，根据需要。 为了提高性能，此大小设置为一个足够大，以防止重新分配的值。 AFXDAO 中定义的默认大小。H 文件作为**AFX_DAO_BINARY_DEFAULT_SIZE**。  
   
  `dwBindOptions`  
- 一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认情况下， `AFX_DAO_DISABLE_FIELD_CACHE`，不会不使用双缓冲，并必须调用[SetFieldDirty](cdaorecordset-class.md#setfielddirty)和[SetFieldNull](cdaorecordset-class.md#setfieldnull)自己。 其他可能的值， `AFX_DAO_ENABLE_FIELD_CACHE`，使用双缓冲，并且您不需要做一些额外工作来标记字段变脏或 Null。 性能和内存的原因，为避免此值，除非是相对较小的二进制数据。  
+ 一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认情况下， `AFX_DAO_DISABLE_FIELD_CACHE`、 不使用双缓冲，并且你必须调用[SetFieldDirty](cdaorecordset-class.md#setfielddirty)和[SetFieldNull](cdaorecordset-class.md#setfieldnull)自己。 其他可能的值， `AFX_DAO_ENABLE_FIELD_CACHE`，使用双缓冲，并且你不需要执行额外的操作来标记字段脏页，则为 Null。 性能和内存原因，避免此值，除非你二进制数据是相对较小。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲的所有字段默认情况下通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲的所有字段默认情况下通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_BYTES** DAO 以及类型[CByteArray](cbytearray-class.md)在记录集中。  
+ 数据类型之间的映射**DAO_BYTES** DAO 和类型中[CByteArray](cbytearray-class.md)的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -913,7 +913,7 @@ void AFXAPI DFX_Binary(
   
 
 ## <a name="dfx_bool"></a>DFX_Bool
-将布尔值的数据传输之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
+传输布尔数据之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
   
 ### <a name="syntax"></a>语法  
   
@@ -933,16 +933,16 @@ void AFXAPI DFX_Bool(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**BOOL**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **BOOL**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 您必须调用 `SetFieldDirty` 和 `SetFieldNull`。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_BOOL** DAO 以及类型**BOOL**在记录集中。  
+ 数据类型之间的映射**DAO_BOOL** DAO 以及类型**BOOL**的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -951,7 +951,7 @@ void AFXAPI DFX_Bool(
  **标头︰** afxdao.h  
 
 ## <a name="dfx_byte"></a>DFX_Byte
-字段数据成员之间传输单字节[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
+传输单字节之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
   
 ### <a name="syntax"></a>语法  
   
@@ -971,16 +971,16 @@ void AFXAPI DFX_Byte(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**字节**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**字节**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 您必须调用 `SetFieldDirty` 和 `SetFieldNull`。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_BYTES** DAO 以及类型**字节**在记录集中。  
+ 数据类型之间的映射**DAO_BYTES** DAO 和类型中**字节**的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -1009,16 +1009,16 @@ void AFXAPI DFX_Currency(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源的传输，此值来自类型的指定的数据成员， [COleCurrency](colecurrency-class.md)。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源的传输，此值将由类型的指定的数据成员， [COleCurrency](colecurrency-class.md)。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 您必须调用 `SetFieldDirty` 和 `SetFieldNull`。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_CURRENCY** DAO 以及类型[COleCurrency](colecurrency-class.md)在记录集中。  
+ 数据类型之间的映射**DAO_CURRENCY** DAO 以及类型[COleCurrency](colecurrency-class.md)的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -1027,7 +1027,7 @@ void AFXAPI DFX_Currency(
  **标头︰** afxdao.h  
 
 ## <a name="dfx_datetime"></a>DFX_DateTime
-将日期和时间数据传输之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
+将时间和日期数据传输之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
   
 ### <a name="syntax"></a>语法  
   
@@ -1047,19 +1047,19 @@ void AFXAPI DFX_DateTime(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 该函数采用对引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象。 对于从记录集到数据源的传输，从指定的数据成员中提取此值。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 该函数使用的引用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象。 对于从记录集到数据源的传输，此值执行从指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 您必须调用 `SetFieldDirty` 和 `SetFieldNull`。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_DATE** DAO 以及类型[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)在记录集中。  
+ 数据类型之间的映射**DAO_DATE** DAO 和类型中[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)的记录集。  
   
 > [!NOTE]
->  `COleDateTime`将替换[CTime](../../atl-mfc-shared/reference/ctime-class.md)和**TIMESTAMP_STRUCT**为此目的在 DAO 类。 `CTime`和**TIMESTAMP_STRUCT**仍然是用于基于 ODBC 的数据访问类。  
+>  `COleDateTime`替换[CTime](../../atl-mfc-shared/reference/ctime-class.md)和**TIMESTAMP_STRUCT**为此目的在 DAO 类。 `CTime`和**TIMESTAMP_STRUCT**仍然是用于基于 ODBC 的数据访问类。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -1068,7 +1068,7 @@ void AFXAPI DFX_DateTime(
  **标头︰** afxdao.h  
 
 ## <a name="dfx_double"></a>DFX_Double
-传输**双精度浮点**之间的字段数据成员的数据[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
+传输**双精度浮点数**之间的字段数据成员的数据[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
   
 ### <a name="syntax"></a>语法  
   
@@ -1088,16 +1088,16 @@ void AFXAPI DFX_Double(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**double**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **double**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 您必须调用 `SetFieldDirty` 和 `SetFieldNull`。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_R8** DAO 以及类型**双精度浮点**在记录集中。  
+ 数据类型之间的映射**DAO_R8** DAO 和类型中**双精度浮点数**的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -1126,16 +1126,16 @@ void AFXAPI DFX_Long(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**长**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**长**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 您必须调用 `SetFieldDirty` 和 `SetFieldNull`。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_I4** DAO 以及类型**长**在记录集中。  
+ 数据类型之间的映射**DAO_I4** DAO 和类型中**长**的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -1166,19 +1166,19 @@ void AFXAPI DFX_LongBinary(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输[CLongBinary](clongbinary-class.md)，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， [CLongBinary](clongbinary-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  *dwPreAllocSize*  
- 框架预先分配内存的量。 如果您的数据大小，该框架将分配所需的更多的空间。 为了提高性能，此大小设置为足够大，以防止重新分配的值。  
+ 框架预分配此内存量。 如果你的数据大小，框架将分配更多空间，根据需要。 为了提高性能，此大小设置为一个足够大，以防止重新分配的值。  
   
  `dwBindOptions`  
- 一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认情况下， **AFX_DISABLE_FIELD_CACHE**，不使用双缓冲。 另一个可能的值为 `AFX_DAO_ENABLE_FIELD_CACHE`。 使用双缓冲，并且您不需要做一些额外工作来标记字段变脏或 Null。 性能和内存的原因，为避免此值，除非是相对较小的二进制数据。  
+ 一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认情况下， **AFX_DISABLE_FIELD_CACHE**，不使用双缓冲。 另一个可能的值为 `AFX_DAO_ENABLE_FIELD_CACHE`。 使用双缓冲，并且你不需要执行额外的操作来标记字段脏页，则为 Null。 性能和内存原因，避免此值，除非你二进制数据是相对较小。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- `DFX_LongBinary`提供与 MFC ODBC 类的兼容性。 `DFX_LongBinary`函数将使用类的二进制大型对象 (BLOB) 数据传输`CLongBinary`之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。 数据类型之间的映射**DAO_BYTES** DAO 以及类型[CLongBinary](clongbinary-class.md)在记录集中。  
+ `DFX_LongBinary`被提供用于使用 MFC ODBC 类的兼容性。 `DFX_LongBinary`函数传输二进制大型对象 (BLOB) 数据使用类`CLongBinary`之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。 数据类型之间的映射**DAO_BYTES** DAO 和类型中[CLongBinary](clongbinary-class.md)的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -1187,7 +1187,7 @@ void AFXAPI DFX_LongBinary(
  **标头︰** afxdao.h  
 
 ## <a name="dfx_short"></a>DFX_Short
-传输短的字段数据成员之间的整数数据[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
+传输短整型数据之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
   
 ### <a name="syntax"></a>语法  
   
@@ -1207,16 +1207,16 @@ void AFXAPI DFX_Short(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**短**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值，**短**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 您必须调用 `SetFieldDirty` 和 `SetFieldNull`。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_I2** DAO 以及类型**短**在记录集中。  
+ 数据类型之间的映射**DAO_I2** DAO 和类型中**短**的记录集。  
   
 > [!NOTE]
 >  `DFX_Short`等效于[RFX_Int](#rfx_int)基于 ODBC 的类。  
@@ -1229,7 +1229,7 @@ void AFXAPI DFX_Short(
   
 
 ## <a name="dfx_single"></a>DFX_Single
-将浮点数据传输之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
+传输浮点数据之间的字段数据成员[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
   
 ### <a name="syntax"></a>语法  
   
@@ -1249,16 +1249,16 @@ void AFXAPI DFX_Single(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输**float**，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， **float**，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 您必须调用 `SetFieldDirty` 和 `SetFieldNull`。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_R4** DAO 以及类型**float**在记录集中。  
+ 数据类型之间的映射**DAO_R4** DAO 和类型中**float**的记录集。  
   
 ### <a name="example"></a>示例  
  请参阅[DFX_Text](#dfx_text)。  
@@ -1267,7 +1267,7 @@ void AFXAPI DFX_Single(
  **标头︰** afxdao.h  
 
 ## <a name="dfx_text"></a>DFX_Text
-传输`CString`之间的字段数据成员的数据[CDaoRecordset](cdaorecordset-class.md)对象和列的数据源上的记录。  
+传输`CString`之间的字段数据成员的数据[CDaoRecordset](cdaorecordset-class.md)对象和数据源上的记录的列。  
   
 ### <a name="syntax"></a>语法  
   
@@ -1288,22 +1288,22 @@ void AFXAPI DFX_Text(
  数据列的名称。  
   
  *值*  
- 存储在指定的数据成员中的值（要传输的值）。 对于从记录集到数据源类型的值的传输[CString](../../atl-mfc-shared/reference/cstringt-class.md)，从指定的数据成员中提取。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
+ 存储在指定的数据成员中的值（要传输的值）。 对于从记录集的传输到数据源，类型的值， [CString](../../atl-mfc-shared/reference/cstringt-class.md)，则来自指定的数据成员。 对于从数据源得到记录集的传输，将在指定的数据成员中存储值。  
   
  `nPreAllocSize`  
- 框架预先分配内存的量。 如果您的数据大小，该框架将分配所需的更多的空间。 为了提高性能，此大小设置为足够大，以防止重新分配的值。  
+ 框架预分配此内存量。 如果你的数据大小，框架将分配更多空间，根据需要。 为了提高性能，此大小设置为一个足够大，以防止重新分配的值。  
   
  `dwBindOptions`  
  一个选项，用来支持您利用 MFC 的双缓冲机制来检测已更改的字段记录集。 默认值 `AFX_DAO_ENABLE_FIELD_CACHE` 使用双缓冲。 另一个可能的值为 `AFX_DAO_DISABLE_FIELD_CACHE`。 如果您指定此值，MFC 将不对此字段执行检查。 必须调用[SetFieldDirty](cdaorecordset-class.md#setfielddirty)和[SetFieldNull](cdaorecordset-class.md#setfieldnull)自己。  
   
 > [!NOTE]
->  您可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
+>  你可以控制是否对数据进行双缓冲默认情况下，通过设置[cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>备注  
- 数据类型之间的映射**DAO_CHAR**在 DAO 中 (或者，如果该符号**_UNICODE**定义，则**DAO_WCHAR**) 和类型[CString](../../atl-mfc-shared/reference/cstringt-class.md)在记录集中。  n
+ 数据类型之间的映射**DAO_CHAR**在 DAO 中 (或者，如果符号**_UNICODE**定义， **DAO_WCHAR**) 和类型[CString](../../atl-mfc-shared/reference/cstringt-class.md)的记录集。  n
   
 ### <a name="example"></a>示例  
- 此示例演示多次调用`DFX_Text`。 请注意两次调用也[CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype)。 您必须编写首次调用`SetFieldType`并将其**DFX**调用。 第二个调用和及其关联**DFX**调用通常由生成的类中的代码向导编写的。  
+ 此示例演示几次调用到`DFX_Text`。 请注意还对的两个调用[CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype)。 你必须编写首次调用`SetFieldType`及其**DFX**调用。 第二个调用和其关联**DFX**调用通常由生成的类中的代码向导编写的。  
   
 ```cpp  
 void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
