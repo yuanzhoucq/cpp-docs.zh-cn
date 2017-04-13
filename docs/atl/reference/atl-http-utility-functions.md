@@ -11,9 +11,9 @@ caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0f55ad2529ac32647d72336b426e0790f5617561
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 实用函数
@@ -50,7 +50,7 @@ inline BOOL AtlCanonicalizeUrl(
  要规范化的 URL。  
   
  `szCanonicalized`  
- 要接收的规范化的 URL 的调用方分配的缓冲区。  
+ 若要检索规范化的 URL 的调用方分配的缓冲区。  
   
  `pdwMaxLength`  
  指向包含以字符为单位的长度的变量`szCanonicalized`。 如果函数成功，变量将接收到不包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。  
@@ -95,13 +95,13 @@ inline BOOL AtlCombineUrl(
  相对于基 URL URL。  
   
  `szBuffer`  
- 要接收的规范化的 URL 的调用方分配的缓冲区。  
+ 若要检索规范化的 URL 的调用方分配的缓冲区。  
   
  `pdwMaxLength`  
  指向包含以字符为单位的长度的变量`szBuffer`。 如果函数成功，变量将接收到不包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。  
   
  `dwFlags`  
- 控制此函数的行为的标志。 请参阅[ATL_URL 标志](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7)。  
+ 控制此函数的行为的标志。 请参阅[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
   
 ### <a name="return-value"></a>返回值  
  返回**TRUE**成功后， **FALSE**失败。  
@@ -136,7 +136,7 @@ inline BOOL AtlEscapeUrl(
  转换后的 URL 将写入的调用方分配的缓冲区。  
   
  `pdwStrLen`  
- 指向 DWORD 变量的指针。 如果函数成功，`pdwStrLen`接收写入缓冲区，不包括终止 null 字符的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。 使用此方法的宽字符版本时`pdwStrLen`接收需要的字符数，不的字节数。  
+ 指向 DWORD 变量的指针。 如果函数成功，`pdwStrLen`接收写入缓冲区，不包括终止 null 字符的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。 使用此方法的宽字符版本时`pdwStrLen`收到需要的字符数，不的字节数。  
   
  `dwMaxLength`  
  缓冲区的大小`lpszStringOut`。  

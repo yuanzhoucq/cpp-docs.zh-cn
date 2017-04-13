@@ -34,21 +34,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: d7ce6fbec9278893fd4f3f6b75c74ef91718646b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 5f6719ade94bdbca9659405995fe09bfade57230
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c3917"></a>编译器错误 C3917
-属性︰ 已过时的构造声明样式  
+*属性*︰ 过时的构造声明样式  
   
-属性或事件定义使用从以前版本的语法。  
+一个属性或事件定义使用语法从 Visual Studio 2005 之前的版本。  
   
 有关详细信息，请参阅[属性](../../windows/property-cpp-component-extensions.md)。  
   
 ## <a name="example"></a>示例  
   
-```  
+```cpp  
 // C3917.cpp  
 // compile with: /clr /c  
 public ref class  C {  

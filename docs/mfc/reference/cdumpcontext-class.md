@@ -45,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 40d833772735e1079647f8f3205fb8db736843fd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 0722150ff3cc496a462008b362e55362aeebb9c1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 类
@@ -74,33 +74,33 @@ class CDumpContext
 |[CDumpContext::DumpAsHex](#dumpashex)|转储以十六进制格式的指定的项。|  
 |[CDumpContext::Flush](#flush)|刷新转储上下文缓冲区中的任何数据。|  
 |[CDumpContext::GetDepth](#getdepth)|获取对应于转储的深度的整数。|  
-|[CDumpContext::HexDump](#hexdump)|转储以十六进制格式的一个数组中包含的字节数。|  
+|[CDumpContext::HexDump](#hexdump)|转储十六进制格式的数组中包含的字节。|  
 |[CDumpContext::SetDepth](#setdepth)|设置转储的深度。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CDumpContext::operator&lt;&lt;](#operator_lt_lt)|转储上下文中插入变量和对象。|  
   
 ## <a name="remarks"></a>备注  
- `CDumpContext`没有基类的类。  
+ `CDumpContext`没有基类。  
   
- 您可以使用[afxDump](http://msdn.microsoft.com/library/4b3cfa3f-fb75-456a-9d99-a5601acbcb11)，预先声明`CDumpContext`对象，以便您转储的大部分。 `afxDump`对象是仅在 Microsoft 基础类库的调试版本中可用。  
+ 你可以使用[afxDump](diagnostic-services.md#afxdump)，预先声明`CDumpContext`对象，以便你转储的大部分。 `afxDump`对象是仅在 Microsoft 基础类库的调试版本中可用。  
   
  多个内存[诊断服务](../../mfc/reference/diagnostic-services.md)使用`afxDump`其输出。  
   
- 在 Windows 环境下从预定义的输出`afxDump`对象，概念上类似于`cerr`流式传输时，会传送到 Windows 函数通过调试器**OutputDebugString**。  
+ 在 Windows 环境下预定义的输出`afxDump`对象，从概念上讲类似于`cerr`流式处理、 路由到通过 Windows 函数调试器**OutputDebugString**。  
   
- `CDumpContext`类具有重载的插入 ( ** << **) 运算符，用于`CObject`转储对象的数据的指针。 如果您需要自定义转储格式派生的对象，重写[CObject::Dump](../../mfc/reference/cobject-class.md#dump)。 大多数 Microsoft 基础类实现重写`Dump`成员函数。  
+ `CDumpContext`类具有重载的插入 ( **<<**) 运算符`CObject`转储对象的数据的指针。 如果派生的对象需要自定义转储格式，重写[CObject::Dump](../../mfc/reference/cobject-class.md#dump)。 大多数 Microsoft 基础类实现被重写`Dump`成员函数。  
   
- 不从派生的类`CObject`，如`CString`， `CTime`，和`CTimeSpan`，具有其自己重载`CDumpContext`插入运算符，如经常使用，请执行结构作为**CFileStatus**， `CPoint`，和`CRect`。  
+ 不派生自的类`CObject`，如`CString`， `CTime`，和`CTimeSpan`，具有其自己重载`CDumpContext`插入运算符，为通常使用的是否结构，如**CFileStatus**， `CPoint`，和`CRect`。  
   
- 如果您使用[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)或[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏在实现您的类，然后`CObject::Dump`将打印的名称您`CObject`的派生类。 否则，该代码会打印`CObject`。  
+ 如果你使用[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)或[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏在实现您的类，然后`CObject::Dump`将打印的名称你`CObject`-派生类。 否则，它将打印`CObject`。  
   
- `CDumpContext`类是可用于调试和发布版本的库，但`Dump`仅在调试版本中定义成员函数。 使用**#ifdef _DEBUG**  /  `#endif`语句来封闭您诊断代码，包括您的自定义`Dump`成员函数。  
+ `CDumpContext`类是适用于调试和发布版本的库，但`Dump`仅在调试版本中定义成员函数。 使用**#ifdef _DEBUG**  /  `#endif`语句来封闭诊断代码中，包括您的自定义`Dump`成员函数。  
   
- 创建您自己之前`CDumpContext`对象时，必须创建`CFile`用作转储目标的对象。  
+ 在创建你自己之前`CDumpContext`对象，必须创建`CFile`用作转储目标的对象。  
   
  有关详细信息`CDumpContext`，请参阅[调试 MFC 应用程序](/visualstudio/debugger/mfc-debugging-techniques)。  
   
@@ -121,15 +121,15 @@ CDumpContext(CFile* pFile = NULL);
   
 ### <a name="parameters"></a>参数  
  `pFile`  
- 一个指向`CFile`转储目标的对象。  
+ 指向的指针`CFile`转储目标的对象。  
   
 ### <a name="remarks"></a>备注  
  `afxDump`自动构造对象。  
   
- 未写入到基础`CFile`活动; 否则为转储上下文时，您将使用该转储磁带。 在 Windows 环境下的输出传送到 Windows 函数通过调试器**OutputDebugString**。  
+ 不写入基础`CFile`活动; 否则为转储上下文时，你将使用转储磁带。 在 Windows 环境中，输出路由到通过 Windows 函数调试器**OutputDebugString**。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&12;](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities # 12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
 ##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
  转储格式化为十六进制数字的指定的类型。  
@@ -149,36 +149,36 @@ CDumpContext& DumpAsHex(WORD w);
  对 `CDumpContext` 对象的引用。  
   
 ### <a name="remarks"></a>备注  
- 调用此成员函数来转储为十六进制数的指定类型的项。 若要转储数组，调用[CDumpContext::HexDump](#hexdump)。  
+ 调用此成员函数以转储十六进制数字的形式指定类型的项。 若要转储数组，调用[CDumpContext::HexDump](#hexdump)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&13;](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities # 13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
 ##  <a name="flush"></a>CDumpContext::Flush  
- 强制缓冲区进行写入到文件中剩余的任何数据附加到转储上下文。  
+ 强制缓冲区写入到文件中剩余的任何数据附加到转储上下文。  
   
 ```  
 void Flush();
 ```  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&14;](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities # 14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
 ##  <a name="getdepth"></a>CDumpContext::GetDepth  
- 确定是否深度或浅表转储为进程中。  
+ 确定是否正在执行深度或浅表转储。  
   
 ```  
 int GetDepth() const;  
 ```  
   
 ### <a name="return-value"></a>返回值  
- 设置的转储的深度`SetDepth`。  
+ 如所设置转储的深度`SetDepth`。  
   
 ### <a name="example"></a>示例  
   请参阅示例[SetDepth](#setdepth)。  
   
 ##  <a name="hexdump"></a>CDumpContext::HexDump  
- 转储设置为十六进制数字格式的字节数组。  
+ 转储格式化为十六进制数字的字节数组。  
   
 ```  
 void HexDump(
@@ -190,7 +190,7 @@ void HexDump(
   
 ### <a name="parameters"></a>参数  
  *lpszLine*  
- 要输出的一个新行开头的字符串。  
+ 要在新行的开头输出的字符串。  
   
  *pby*  
  指向包含要转储的字节的缓冲区的指针。  
@@ -199,16 +199,16 @@ void HexDump(
  要转储的字节数。  
   
  `nWidth`  
- 每行 （不在输出行的宽度） 转储最大字节数。  
+ 最大字节数转储每行 （不在输出行的宽度）。  
   
 ### <a name="remarks"></a>备注  
  若要转储为十六进制数的单一的特定项类型，调用[CDumpContext::DumpAsHex](#dumpashex)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&15;](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities # 15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
 ##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
- 将输出转储上下文的指定的数据。  
+ 将输出转储上下文到指定的数据。  
   
 ```  
 CDumpContext& operator<<(const CObject* pOb);  
@@ -235,15 +235,15 @@ CDumpContext& operator<<(HFONT h);
 ```  
   
 ### <a name="return-value"></a>返回值  
- 一个`CDumpContext`引用。 使用返回的值，可以在源代码的一行上编写多个插入操作。  
+ A`CDumpContext`引用。 使用返回的值，可以编写代码的源代码的行上多个插入。  
   
 ### <a name="remarks"></a>备注  
- 为重载插入运算符`CObject`也适用于大多数基元类型的指针。 指向字符的指针将导致转储的字符串内容;一个指向`void`仅的地址的十六进制转储将导致。 一个**LONGLONG**导致 64 位有符号整数; 转储一个**ULONGLONG**导致转储的 64 位无符号整数。  
+ 有关重载插入运算符`CObject`也适用于大多数基元类型的指针。 指向字符会导致字符串内容; 的转储指向的指针`void`导致仅的地址的十六进制转储。 A **LONGLONG**导致 64 位有符号整数; 转储A **ULONGLONG**导致转储的 64 位无符号整数。  
   
- 如果您使用`IMPLEMENT_DYNAMIC`或`IMPLEMENT_SERIAL`宏在实现您的类，然后插入运算符，通过`CObject::Dump`，将打印的名称您`CObject`的派生类。 否则，该代码会打印`CObject`。 如果重写`Dump`函数的类，则可提供更有意义的输出的对象的内容，而不是十六进制转储。  
+ 如果你使用`IMPLEMENT_DYNAMIC`或`IMPLEMENT_SERIAL`宏在实现中的类，然后插入运算符，通过`CObject::Dump`，将打印的名称你`CObject`-派生类。 否则，它将打印`CObject`。 如果你重写`Dump`函数的类，则你可以提供对象的内容，而不是十六进制转储的更有意义输出。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&17;](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities # 17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
 ##  <a name="setdepth"></a>CDumpContext::SetDepth  
  设置转储的深度。  
@@ -257,13 +257,13 @@ void SetDepth(int nNewDepth);
  新的深度值。  
   
 ### <a name="remarks"></a>备注  
- 如果要转储的基元类型或简单`CObject`，其中不包含对其他对象的任何指针，则值为 0 就足够了。 大于 0 指定深层转储所有对象的值转储以递归方式。 例如，集合的深层转储将转储集合中的所有元素。 在派生类中，您可以使用其他特定深度值。  
+ 如果你要转储的基元类型或简单`CObject`包含没有指向其他对象，然后就足够了值为 0。 一个值大于 0 指定所有对象的深层转储转储以递归方式。 例如，集合的深层转储将转储将集合的所有元素。 在派生类中，你可能使用其他特定深度值。  
   
 > [!NOTE]
 >  循环引用在深层转储中未检测到，并且可能会导致无限循环。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&16;](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities # 16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
   
 ## <a name="see-also"></a>另请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   

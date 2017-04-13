@@ -1,41 +1,79 @@
 ---
-title: "编译器错误 C3055 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3055"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3055"
+title: "编译器错误 C3055 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3055
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3055
 ms.assetid: 60446ee0-18dd-48fc-9059-f0a14229dce8
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3055
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: f5c657322e901da8658e5d7d99e3d28c3392b579
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="compiler-error-c3055"></a>编译器错误 C3055
 “symbol”：符号在用于“threadprivate”指令之前无法引用  
   
- 引用了一个符号，然后在 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 子句中使用，这是不允许的。  
+ 符号是引用，然后再在[threadprivate](../../parallel/openmp/reference/threadprivate.md)子句，这不允许。  
   
  下面的示例生成 C3055：  
   
 ```  
-// C3055.cpp // compile with: /openmp int x, y; int z = x; #pragma omp threadprivate(x, y)   // C3055 void test() { #pragma omp parallel copyin(x, y) { x = y; } }  
+// C3055.cpp  
+// compile with: /openmp  
+int x, y;  
+int z = x;  
+#pragma omp threadprivate(x, y)   // C3055  
+  
+void test() {  
+   #pragma omp parallel copyin(x, y)  
+   {  
+      x = y;  
+   }  
+}  
 ```  
   
  可能的解决方法：  
   
 ```  
-// C3055b.cpp // compile with: /openmp /LD int x, y, z; #pragma omp threadprivate(x, y) void test() { #pragma omp parallel copyin(x, y) { x = y; } }  
+// C3055b.cpp  
+// compile with: /openmp /LD  
+int x, y, z;  
+#pragma omp threadprivate(x, y)  
+  
+void test() {  
+   #pragma omp parallel copyin(x, y)  
+   {  
+      x = y;  
+   }  
+}  
 ```
