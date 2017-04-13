@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a128095cfc443f0ea8de4cb4028b903929a83f47
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1831f868b7388cbc6382e26fca92280c3b880276
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetexception-class"></a>CInternetException 类
@@ -58,21 +58,21 @@ class CInternetException : public CException
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CInternetException::CInternetException](#cinternetexception)|构造 `CInternetException` 对象。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[CInternetException::m_dwContext](#m_dwcontext)|与操作引发异常的异常关联的上下文值。|  
-|[CInternetException::m_dwError](#m_dwerror)|导致该异常的错误。|  
+|[CInternetException::m_dwContext](#m_dwcontext)|导致异常的操作与关联的上下文值。|  
+|[CInternetException::m_dwError](#m_dwerror)|导致异常的错误。|  
   
 ## <a name="remarks"></a>备注  
- `CInternetException`类包括两个公共数据成员︰ 一个包含与该异常关联的错误代码和其他包含与错误关联的 Internet 应用程序的上下文标识符。  
+ `CInternetException`类包括两个公共数据成员︰ 一个包含与此异常关联的错误代码和其他包含与错误关联 Internet 应用程序的上下文标识符。  
   
- 有关 Internet 应用程序的上下文标识符的详细信息，请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
+ 有关 Internet 应用程序的上下文标识符的详细信息，请参阅文章[Internet 使用 WinInet 编程](../../mfc/win32-internet-extensions-wininet.md)。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,7 +85,7 @@ class CInternetException : public CException
  **标头︰** afxinet.h  
   
 ##  <a name="cinternetexception"></a>CInternetException::CInternetException  
- 当调用此成员函数`CInternetException`创建对象。  
+ 此成员函数调用时`CInternetException`创建对象。  
   
 ```  
 CInternetException(DWORD dwError);
@@ -93,10 +93,10 @@ CInternetException(DWORD dwError);
   
 ### <a name="parameters"></a>参数  
  `dwError`  
- 导致该异常的错误。  
+ 导致异常的错误。  
   
 ### <a name="remarks"></a>备注  
- 若要引发 CInternetException，调用 MFC 全局函数[AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb)。  
+ 若要引发 CInternetException，调用 MFC 全局函数[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)。  
   
 ##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
  上下文值和相关 Internet 操作相关联。  
@@ -106,17 +106,17 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>备注  
- 在最初指定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md)并传递由 MFC 到[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)的派生类。 您可以覆盖此默认值并分配任何`dwContext`参数所选的值。 `dwContext`程序与给定任何的对象操作。 `dwContext`标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
+ 中最初指定的上下文标识符[CInternetSession](../../mfc/reference/cinternetsession-class.md)和传递到 MFC 的[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-派生类。 你可以重写此默认值并分配任何`dwContext`参数选择的值。 `dwContext`是与给定任何的操作相关联。 `dwContext`标识返回的操作的状态信息[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
   
 ##  <a name="m_dwerror"></a>CInternetException::m_dwError  
- 导致该异常的错误。  
+ 导致异常的错误。  
   
 ```  
 DWORD m_dwError;  
 ```  
   
 ### <a name="remarks"></a>备注  
- 此错误值可能是系统在 WINERROR 中找到的错误代码。H 或从 WININET 错误值。H。  
+ 此错误值可能是系统错误代码，在 WINERROR 中找到。H 或从 WININET 一个错误值。H。  
   
  有关 Win32 错误代码的列表，请参阅[错误代码](http://msdn.microsoft.com/library/windows/desktop/ms681381)。 有关特定于 Internet 的错误消息的列表，请参阅。 这两个主题位于[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   

@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 59d41497bafd9782c0849a03e0354e338b7f8467
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="dhtml-event-maps"></a>DHTML 事件映射
@@ -140,7 +140,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ### <a name="remarks"></a>备注  
  将 DHTML 事件映射添加到你的类将信息提供给**CDHtmlDialog**可用于触发的 HTML 元素或网页到类中的处理程序函数中的 ActiveX 控件的路由事件。  
   
- 位置`BEGIN_DHTML_EVENT_MAP`类的定义 (.h) 文件中的宏跟`DHTML_EVENT`事件宏类是处理 (例如，`DHTML_EVENT_ONMOUSEOVER`鼠标悬停事件)。 使用[END_DHTML_EVENT_MAP_INLINE](http://msdn.microsoft.com/library/0cfec092-20ee-49f3-bc38-56d6a5572db2)宏来标记事件映射的末尾。 这些宏实现以下函数︰  
+ 位置`BEGIN_DHTML_EVENT_MAP`类的定义 (.h) 文件中的宏跟`DHTML_EVENT`事件宏类是处理 (例如，`DHTML_EVENT_ONMOUSEOVER`鼠标悬停事件)。 使用[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)宏来标记事件映射的末尾。 这些宏实现以下函数︰  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   

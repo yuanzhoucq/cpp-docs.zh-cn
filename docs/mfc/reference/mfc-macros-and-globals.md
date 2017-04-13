@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 7dc1f904d1c3f76635a49db1747578e2ce0b0b3b
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 4de4d9a0764bb2f25eaf63c302fa03ebc12e3cee
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 宏和全局函数
@@ -124,7 +124,7 @@ Microsoft 基础类库可以分成两个主要部分: （1） 的 MFC 类和 （
   
 -   [调度映射](dispatch-maps.md)  
   
- 此外，MFC 还提供了一个名为函数[AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b)启用任何 OLE 容器开发使用 MFC 4.0 以完全支持嵌入 OLE 控件。  
+ 此外，MFC 提供了一个名为函数[AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer)启用任何 OLE 容器开发使用 MFC 4.0 以完全支持嵌入 OLE 控件。  
   
 ## <a name="ole-controls"></a>OLE 控件  
   
@@ -146,7 +146,7 @@ Microsoft 基础类库可以分成两个主要部分: （1） 的 MFC 类和 （
   
 -   [OLE 控件的持久性](persistence-of-ole-controls.md)  
   
- 本部分的第一部分简要讨论每个以前的类别，并列出的全局和类别，以及功能的简要说明中的宏。 以下这是全局函数、 全局变量和宏 MFC 库中的说明。  
+ 本部分的第一个部分简要讨论每个以前的类别，并列出的全局和类别，以及功能的简要说明中的宏。 以下这是全局函数、 全局变量和宏 MFC 库中的说明。  
   
 > [!NOTE]
 >  许多全局函数以前缀"Afx"开头，但一些，例如，对话框数据交换 (DDX) 函数和许多数据库函数，不遵循此约定。 所有全局变量开头"afx"作为前缀。 宏不会启动与任何特定的前缀，但它们用大写字母编写。  

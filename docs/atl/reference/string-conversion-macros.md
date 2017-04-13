@@ -30,19 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: e322c3af297c288ec6c9ccdb1c04e58d0a5759ff
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="string-conversion-macros"></a>字符串转换宏
 这些宏提供字符串转换功能。  
   
-|||  
-|-|-|  
-|[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)|组的字符串类型之间转换的宏。|  
-|[DEVMODE 和 TEXTMETRIC 字符串转换宏](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|组将在此字符串转换宏`DEVMODE`和`TEXTMETRIC`结构。|  
-  
+ 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL 和 MFC 字符串转换宏  
  此处讨论的字符串转换宏对 ATL 和 MFC 都有效。 有关 MFC 字符串转换的详细信息，请参阅[TN059︰ 使用 MFC MBCS/Unicode 转换宏](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)和[MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)。  
   
@@ -80,8 +76,6 @@ MACRONAME( address_of_structure )
 |**_UNICODE**和**OLE2ANSI**|**W**|**A**|  
   
  下表列出`DEVMODE`和`TEXTMETRIC`字符串转换宏。  
-  
-### <a name="devmode-and-textmetric-string-conversion-macros"></a>DEVMODE 和 TEXTMETRIC 字符串转换宏  
   
 |||  
 |-|-|  

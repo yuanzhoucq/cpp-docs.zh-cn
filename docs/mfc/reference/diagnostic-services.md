@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ceaf02cbe0eedec6e8bd4980d87c025d6aa23615
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="diagnostic-services"></a>诊断服务
@@ -252,7 +252,7 @@ ASSERT_VALID(pObject)
 ```  
   
 ### <a name="remarks"></a>备注  
- 你可以使用`DEBUG_NEW`你通常将使用的程序中的所有位置**新**运算符以将存储堆分配。  
+ 你可以使用`DEBUG_NEW`你通常将使用的程序中的所有位置**新**运算符以将堆存储分配。  
   
  在调试模式下 (当**_DEBUG**定义符号)，`DEBUG_NEW`将跟踪的每个对象所分配的文件名和行号。 然后，使用[cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince)用的成员函数，每个对象分配`DEBUG_NEW`还会显示文件名和行号分配所在位置。  
   
@@ -356,7 +356,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[ATLTRACE2](http://msdn.microsoft.com/library/467ff555-e7a5-4f94-bdd9-50ee27ab9986)有关的说明**跟踪**。 **跟踪**和`ATLTRACE2`具有相同的行为。  
+ 请参阅[ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2)有关的说明**跟踪**。 **跟踪**和`ATLTRACE2`具有相同的行为。  
   
  在 MFC 调试版本中，此宏将指定的字符串发送到当前应用程序的调试器。 在发布版本中，此宏编译为 nothing （在完全生成任何代码）。  
   
@@ -496,7 +496,7 @@ BOOL  AfxCheckMemory();
 ### <a name="remarks"></a>备注  
  如果该函数检测到没有内存损坏，会输出执行任何操作。  
   
- 检查所有当前分配的堆上的内存块，包括那些由分配**新**但无法通过直接调用基础内存分配器，如分配`malloc`函数或**GlobalAlloc** Windows 函数。 如果找到任何块可能已损坏，则会将消息打印到调试器输出。  
+ 检查所有当前分配的堆上的内存块，包括那些由分配**新**但无法通过直接调用基础内存分配器，如分配`malloc`函数或**GlobalAlloc** Windows 函数。 如果找到任何块可能已损坏，则会将一条消息打印到调试器输出。  
   
  如果包括行  
   

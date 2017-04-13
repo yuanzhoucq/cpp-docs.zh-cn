@@ -1,42 +1,58 @@
 ---
-title: "编译器警告（等级 1）C4342 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4342"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4342"
+title: "编译器警告 （等级 1） C4342 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4342
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器警告（等级 1）C4342
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: c4a2afbc3ced186b0db63b22b3cc5c2b27204c71
+ms.lasthandoff: 04/12/2017
 
-行为更改: 调用了“function”，但在以前版本中调用的是成员运算符  
+---
+# <a name="compiler-warning-level-1-c4342"></a>编译器警告（等级 1）C4342
+行为更改:*函数*调用，但在早期版本中调用时是成员运算符  
   
- 在以前版本的 Visual C\+\+ 中调用了某个成员，但此行为已更改，编译器将在命名空间范围内查找最佳匹配。  
+ 在 Visual Studio 2002 之前的 Visual c + + 版本中，已调用的成员，但此行为已更改和编译器现在在命名空间范围中找到最佳匹配。  
   
- 以前在找到成员运算符以后，编译器便不再考虑任何命名空间范围运算符。  如果在命名空间范围内有更好的匹配，当前的编译器将对其进行正确的调用，而以前的编译器则不予以考虑。  
+ 如果找到一个成员运算符，编译器会以前不考虑任何命名空间范围运算符。 如果没有在命名空间范围更好的匹配，当前编译器正确调用它，而以前的编译器不予以考虑。  
   
- 在您将代码成功接入当前版本后，应禁用此警告。否则编译器可能会误报，对没有任何行为更改的代码生成此警告。  
+ 你已成功将代码移植到最新版本后，应禁用此警告。  编译器可能会误报，生成此警告的代码没有任何行为更改。  
   
- 默认情况下关闭此警告。  有关详细信息，请参阅[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 默认情况下，此警告处于关闭状态。 有关详细信息，请参阅[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
   
- 下面的示例生成 C4342：  
+ 下面的示例生成 C4342:  
   
-```  
+```cpp  
 // C4342.cpp  
 // compile with: /EHsc /W1  
 #include <fstream>  
