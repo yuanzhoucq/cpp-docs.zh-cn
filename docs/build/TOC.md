@@ -111,7 +111,7 @@
 # [在命令行上生成](building-on-the-command-line.md)
 ## [演练：在命令行上编译本机 C++ 程序](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 ## [演练：在命令行上编译 C 程序](walkthrough-compile-a-c-program-on-the-command-line.md)
-## [演练：在命令行上编译 C++-CLI 程序](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)
+## [演练：在命令行上编译 C++/CLI 程序](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)
 ## [演练：在命令行上编译 C++/CX 程序](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)
 ## [为命令行生成设置路径和环境变量](setting-the-path-and-environment-variables-for-command-line-builds.md)
 ## [NMAKE 参考](nmake-reference.md)
