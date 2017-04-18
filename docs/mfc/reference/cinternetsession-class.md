@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0d9ff419c0275d9ab426b4e60102918794aa5221
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
@@ -67,7 +67,7 @@ class CInternetSession : public CObject
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CInternetSession::CInternetSession](#cinternetsession)|构造 `CInternetSession` 对象。|  
   
@@ -171,7 +171,7 @@ CInternetSession(
 ### <a name="remarks"></a>备注  
  **CInternetSession**是由应用程序调用的第一个 Internet 函数。 它将初始化内部数据结构，并为将来的调用，从应用程序做好准备。  
   
- 如果可以打开无 Internet 连接，`CInternetSession`引发[AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb)。  
+ 如果可以打开无 Internet 连接，`CInternetSession`引发[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)。  
   
 ### <a name="example"></a>示例  
   请参阅示例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
@@ -331,7 +331,7 @@ CFtpConnection* GetFtpConnection(
   请参阅示例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
 ##  <a name="getgopherconnection"></a>CInternetSession::GetGopherConnection  
- 调用此成员函数建立新的 gopher 连接，获取一个指向`CGopherConnection`对象。  
+ 调用此成员函数以建立新 gopher 连接并获取指向的指针`CGopherConnection`对象。  
   
 ```  
 CGopherConnection* GetGopherConnection(

@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
@@ -151,7 +151,7 @@ DECLARE_DYNAMIC(class_name)
   
  如果你使用**DECLARE**_**动态**和`IMPLEMENT_DYNAMIC`宏所述，你可以然后使用`RUNTIME_CLASS`宏和`CObject::IsKindOf`函数来确定在运行时中的对象的类。  
   
- 如果`DECLARE_DYNAMIC`包含在类声明中，然后`IMPLEMENT_DYNAMIC`必须包含在类实现。  
+ 如果`DECLARE_DYNAMIC`包括在类声明中，然后`IMPLEMENT_DYNAMIC`必须包含在类实现。  
   
  有关详细信息`DECLARE_DYNAMIC`宏，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
   
@@ -177,7 +177,7 @@ DECLARE_DYNCREATE(class_name)
   
  添加`DECLARE_DYNCREATE`类，.h 模块中的宏然后将该模块包含在需要访问此类的对象的所有.cpp 模块。  
   
- 如果`DECLARE_DYNCREATE`包含在类声明中，然后`IMPLEMENT_DYNCREATE`必须包含在类实现。  
+ 如果`DECLARE_DYNCREATE`包括在类声明中，然后`IMPLEMENT_DYNCREATE`必须包含在类实现。  
   
  有关详细信息`DECLARE_DYNCREATE`宏，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
   
@@ -251,7 +251,7 @@ DECLARE_SERIAL(class_name)
   
  使用`DECLARE_SERIAL`宏在.h 模块中，然后将该模块包含需要访问此类的对象的所有.cpp 模块中。  
   
- 如果`DECLARE_SERIAL`包含在类声明中，然后`IMPLEMENT_SERIAL`必须包含在类实现。  
+ 如果`DECLARE_SERIAL`包括在类声明中，然后`IMPLEMENT_SERIAL`必须包含在类实现。  
   
  `DECLARE_SERIAL`宏包含的所有功能`DECLARE_DYNAMIC`和`DECLARE_DYNCREATE`。  
   
@@ -313,7 +313,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
   
  如果你使用`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`宏，你可以然后使用`RUNTIME_CLASS`宏和`CObject::IsKindOf`成员函数以在运行时确定对象的类。  
   
- 如果`DECLARE_DYNCREATE`包含在类声明中，然后`IMPLEMENT_DYNCREATE`必须包含在类实现。  
+ 如果`DECLARE_DYNCREATE`包括在类声明中，然后`IMPLEMENT_DYNCREATE`必须包含在类实现。  
   
  请注意，此宏定义将调用你的类的默认构造函数。 如果由类显式实现非普通构造函数，它必须还可以显式实现默认构造函数。 默认构造函数可以添加到类的**私有**或**保护**以防止它被调用从外部类实现的成员部分。  
   
@@ -472,13 +472,13 @@ DECLARE_OLECREATE(class_name)
   
  添加`DECLARE_OLECREATE`类，.h 模块中的宏然后将该模块包含需要访问此类的对象的所有.cpp 模块中。  
   
- 如果`DECLARE_OLECREATE`包含在类声明中，然后`IMPLEMENT_OLECREATE`必须包含在类实现。 类声明使用`DECLARE_OLECREATE`还必须使用`DECLARE_DYNCREATE`或`DECLARE_SERIAL`。  
+ 如果`DECLARE_OLECREATE`包括在类声明中，然后`IMPLEMENT_OLECREATE`必须包含在类实现。 类声明使用`DECLARE_OLECREATE`还必须使用`DECLARE_DYNCREATE`或`DECLARE_SERIAL`。  
 
 ### <a name="requirements"></a>要求  
  **标头**: afxdisp.h  
 
 ##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- 任一此宏或[IMPLEMENT_OLECREATE_FLAGS](http://msdn.microsoft.com/library/d1589f6a-5a69-4742-b07c-4c621cfd040d)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。  
+ 任一此宏或[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  

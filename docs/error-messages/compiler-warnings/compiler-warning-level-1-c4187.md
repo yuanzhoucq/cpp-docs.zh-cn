@@ -1,29 +1,46 @@
 ---
-title: "编译器警告（等级 1）C4187 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C4187"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4187"
+title: "编译器警告 （等级 1） C4187 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C4187
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4187
 ms.assetid: 2443d948-ab7b-472c-af43-5d81e09af677
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器警告（等级 1）C4187
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 57e60d442b32904eed344b8de83ff51c5439ff91
+ms.lasthandoff: 04/12/2017
 
-\#import 特性“attribute1”和“attribute2”不兼容；均被忽略  
+---
+# <a name="compiler-warning-level-1-c4187"></a>编译器警告（等级 1）C4187
+\#导入特性 attribute1 和 attribute2 不兼容;同时忽略  
   
- [\#import](../../preprocessor/hash-import-directive-cpp.md) 语句指定了 `no_implementation` 和 `implementation_only` 特性。 忽略这两个特性。
+ A [#import](../../preprocessor/hash-import-directive-cpp.md)指定语句`no_implementation`和`implementation_only`属性。 忽略这两个特性。

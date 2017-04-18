@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>消息映射宏 (MFC)
@@ -55,6 +55,7 @@ ms.lasthandoff: 04/04/2017
 |-|-|  
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|声明将在类中使用消息映射来将消息映射到函数（必须在类声明中使用）。|  
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|开始消息映射的定义（必须在类实现中使用）。|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|开始消息映射上包含单个模板自变量的类类型的定义。 |
 |[END_MESSAGE_MAP](#end_message_map)|结束消息映射的定义（必须在类实现中使用）。|  
   
 ### <a name="message-mapping-macros"></a>消息映射宏  
@@ -81,6 +82,63 @@ ms.lasthandoff: 04/04/2017
   
  有关消息映射、 消息映射声明和分界宏和消息映射宏的详细信息，请参阅[消息映射](../../mfc/reference/message-maps-mfc.md)和[消息处理和映射主题](../../mfc/message-handling-and-mapping.md)。 有关消息映射范围的详细信息，请参阅[消息映射范围的处理程序](../../mfc/handlers-for-message-map-ranges.md)。  
 
+
+## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
+开始消息映射的定义。  
+  
+### <a name="syntax"></a>语法  
+  
+```  
+BEGIN_MESSAGE_MAP( theClass, baseClass )  
+```  
+  
+### <a name="parameters"></a>参数  
+ `theClass`  
+ 指定其消息映射这类的名称。  
+  
+ `baseClass`  
+ 指定 `theClass` 的基类的名称。  
+  
+### <a name="remarks"></a>备注  
+ 在实现 (.cpp) 文件中定义你的类的成员函数，开始对消息地图`BEGIN_MESSAGE_MAP`宏，然后为每个消息处理程序函数，添加宏条目并完成对消息地图`END_MESSAGE_MAP`宏。  
+  
+ 有关消息映射的详细信息，请参阅[消息映射](message-maps-mfc.md)  
+  
+### <a name="example"></a>示例  
+```cpp  
+BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
+   ON_WM_CREATE()
+END_MESSAGE_MAP()
+```
+  
+### <a name="requirements"></a>要求  
+ **标头:** afxwin.h 
+
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+开始消息映射上包含单个模板自变量的类类型的定义。  
+   
+### <a name="syntax"></a>语法  
+  ```
+BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
+```
+### <a name="parameters"></a>参数  
+ `theClass`  
+ 指定其消息映射这类的名称。    
+ `type_name`  
+ 为类指定的模板参数的名称。    
+ `baseClass`  
+ 指定 `theClass` 的基类的名称。  
+   
+### <a name="remarks"></a>备注  
+ 此宏等同于[BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map)宏; 但是，此宏适用于包含单个模板自变量的类。  
+  
+ 在你的类的方法的实现部分，开始对消息地图**BEGIN_TEMPLATE_MESSAGE_MAP**宏; 然后的每个消息处理程序方法添加宏条目，就像为标准的消息映射。 与**BEGIN_MESSAGE_MAP**宏，完成与模板消息映射[END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map)宏。  
+  
+ 有关实现模板类的消息映射的详细信息，请参阅[如何︰ 为一种模板类创建消息映射](../how-to-create-a-message-map-for-a-template-class.md)。  
+   
+### <a name="requirements"></a>要求  
+ **标头:** afxwin.h  
+ 
 ## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
  声明类定义消息映射。 每个`CCmdTarget`-程序中的派生的类必须提供一个消息映射来处理消息。  
   
@@ -110,36 +168,6 @@ class CMainFrame : public CMDIFrameWnd
 ### <a name="requirements"></a>要求  
  **标头:** afxwin.h  
 
-## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
-开始消息映射的定义。  
-  
-### <a name="syntax"></a>语法  
-  
-```  
-BEGIN_MESSAGE_MAP( theClass, baseClass )  
-```  
-  
-### <a name="parameters"></a>参数  
- `theClass`  
- 指定其消息映射这类的名称。  
-  
- `baseClass`  
- 指定 `theClass` 的基类的名称。  
-  
-### <a name="remarks"></a>备注  
- 在实现 (.cpp) 文件中定义你的类的成员函数，开始使用消息映射`BEGIN_MESSAGE_MAP`宏，然后为每个消息处理程序函数，添加宏条目并完成用消息映射`END_MESSAGE_MAP`宏。  
-  
- 有关消息映射的详细信息，请参阅[消息映射](message-maps-mfc.md)  
-  
-### <a name="example"></a>示例  
-```cpp  
-BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
-   ON_WM_CREATE()
-END_MESSAGE_MAP()
-```
-  
-### <a name="requirements"></a>要求  
- **标头:** afxwin.h 
 
 ## <a name="end_message_map"></a>END_MESSAGE_MAP
 结束消息映射的定义。  
@@ -444,7 +472,7 @@ ON_OLECMD( pguid, olecmdid, id )
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
 ## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
-Windows **RegisterWindowMessage**函数用于定义新的窗口消息来保证是唯一整个系统。  
+Windows **RegisterWindowMessage**函数用于定义新的窗口消息来保证是唯一的在整个系统。  
   
 ### <a name="syntax"></a>语法  
   

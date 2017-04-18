@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: d2855f44e05e095f8e1e5cf992eacaafcbe8464d
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
@@ -260,10 +260,12 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 ## <a name="example"></a>示例  
 ### <a name="copy-list-initialization"></a>复制列表初始化
 
-2017 及更高版本的 visual Studio 正确引发与使用 Visual Studio 2015 中已捕获不到，可能会导致崩溃初始值设定项列表的对象创建相关的编译器错误或未定义的运行时行为。 根据 N4594 13.3.1.7p1，在复制列表初始化中，编译器需要考虑用于重载决策的显式构造函数，但是如果实际选择了该重载，则必须引发错误。
-以下两个示例在 Visual Studio 2015 中编译，但在 Visual Studio 2017 中不编译。
+2017 及更高版本的 visual Studio 正确引发与使用 Visual Studio 2015 中已捕获不到，可能会导致崩溃初始值设定项列表的对象创建相关的编译器错误或未定义的运行时行为。 在 C + + 17 副本列表-初始化，编译器需要考虑以执行重载决策的显式构造函数，但如果实际选择该重载，则必须引发错误。
 
-```
+下面的示例将编译使用 Visual Studio 2015 中但不是在 Visual Studio 2017。
+
+```cpp  
+// C2440j.cpp  
 struct A
 {
     explicit A(int) {} 
@@ -272,25 +274,33 @@ struct A
 
 int main()
 {
-    A a1 = { 1 }; // error C3445: copy-list-initialization of 'A' cannot use an explicit constructor
-    const A& a2 = { 1 }; // error C2440: 'initializing': cannot convert from 'int' to 'const A &'
-
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot 
+                         // convert from 'int' to 'const A &'
 }
-```
+```  
+  
+为更正此错误，应使用直接初始化：  
+  
+```cpp  
+// C2440k.cpp  
+struct A
+{
+    explicit A(int) {} 
+    A(double) {}
+};
 
-为更正此错误，应使用直接初始化：
-
-```
-A a1{ 1 };
-const A& a2{ 1 };
-```
+int main()
+{
+    const A& a2{ 1 };
+}  
+```  
 
 ## <a name="example"></a>示例
 ### <a name="cv-qualifiers-in-class-construction"></a>类构造中的 cv 限定符
 
 在 Visual Studio 2015 中，编译器有时会在通过构造函数调用生成类对象时错误地忽略 cv 限定符。 这可能会导致故障或意外的运行时行为。 下面的示例在 Visual Studio 2015 中编译，但将引发编译器错误 Visual Studio 2017 及更高版本︰
 
-```
+```cpp
 struct S 
 {
     S(int);

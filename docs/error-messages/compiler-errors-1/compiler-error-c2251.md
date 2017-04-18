@@ -1,35 +1,63 @@
 ---
-title: "编译器错误 C2251 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2251"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2251"
+title: "编译器错误 C2251 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2251
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2251
 ms.assetid: fefe050c-f8d3-4316-b237-8007dbcdd3bf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2251
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: e9450ea2547043f80130cf6484d1d4975cba9219
+ms.lasthandoff: 04/12/2017
 
-命名空间“namespace”不具有成员“member”\- 是否要使用“member”？  
+---
+# <a name="compiler-error-c2251"></a>编译器错误 C2251
+命名空间“namespace”不具有成员“member”- 是否要使用“member”？  
   
  编译器无法在指定的命名空间中找到标识符。  
   
  下面的示例生成 C2251：  
   
 ```  
-// C2251.cpp // compile with: /c namespace A { namespace B { void f1(); } using namespace B; } void A::f1() {}   // C2251 void A::B::f1() {}   // OK  
+// C2251.cpp  
+// compile with: /c  
+namespace A {  
+   namespace B {  
+      void f1();  
+   }  
+  
+   using namespace B;  
+}  
+  
+void A::f1() {}   // C2251  
+void A::B::f1() {}   // OK  
 ```
