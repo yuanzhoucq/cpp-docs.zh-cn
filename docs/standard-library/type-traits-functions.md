@@ -6,6 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- type_traits/std::is_assignable
+- type_traits/std::is_copy_assignable
+- type_traits/std::is_copy_constructible
+- type_traits/std::is_default_constructible
+- type_traits/std::is_move_assignable
+- type_traits/std::is_move_constructible
+- type_traits/std::is_nothrow_move_assignable
+- type_traits/std::is_trivially_copy_assignable
+- type_traits/std::is_trivially_move_assignable
+- type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
 caps.latest.revision: 13
 manager: ghogen
@@ -23,7 +34,7 @@ ms.lasthandoff: 02/24/2017
 |[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|[is_trivially_move_assignable](#is_trivially_move_assignable)|  
 |[is_trivially_move_constructible](#is_trivially_move_constructible)|  
   
-##  <a name="a-nameisassignablea--isassignable"></a><a name="is_assignable"></a>is_assignable  
+##  <a name="is_assignable"></a>is_assignable  
  测试 `From` 类型的值是否可以分配给 `To` 类型。  
   
 ```  
@@ -41,7 +52,7 @@ struct is_assignable;
 ### <a name="remarks"></a>备注  
  未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 `From` 和 `To` 都必须是完整类型、`void` 或具有未知边界的数组。  
   
-##  <a name="a-nameiscopyassignablea--iscopyassignable"></a><a name="is_copy_assignable"></a>  is_copy_assignable  
+##  <a name="is_copy_assignable"></a>  is_copy_assignable  
  测试是否可以在赋值时复制类型。  
   
 ```  
@@ -56,7 +67,7 @@ struct is_copy_assignable;
 ### <a name="remarks"></a>备注  
  如果类型 `Ty` 是具有复制赋值运算符的类，则类型谓词的实例为 true；否则为 false。 等效于 is_assignable\<Ty&, const Ty&>。  
   
-##  <a name="a-nameiscopyconstructiblea--iscopyconstructible"></a><a name="is_copy_constructible"></a>  is_copy_constructible  
+##  <a name="is_copy_constructible"></a>  is_copy_constructible  
  测试类型是否包含复制构造函数。  
   
 ```  
@@ -106,7 +117,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false  
 ```  
   
-##  <a name="a-nameisdefaultconstructiblea--isdefaultconstructible"></a><a name="is_default_constructible"></a>  is_default_constructible  
+##  <a name="is_default_constructible"></a>  is_default_constructible  
  测试类型是否具有默认构造函数。  
   
 ```  
@@ -156,7 +167,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false  
 ```  
   
-##  <a name="a-nameismoveassignablea--ismoveassignable"></a><a name="is_move_assignable"></a>  is_move_assignable  
+##  <a name="is_move_assignable"></a>  is_move_assignable  
  测试类型是否可移动赋值。  
   
 ```  
@@ -171,7 +182,7 @@ struct is_move_assignable;
 ### <a name="remarks"></a>备注  
  如果类型的右值引用可赋予此类型的引用，则该类型可移动赋值。 类型谓词等效于 `is_assignable<T&, T&&>`。 可移动赋值的类型包括可引用的标量类型和类类型，这些类型具有编译器生成的移动赋值运算符或用户定义的移动赋值运算符。  
   
-##  <a name="a-nameismoveconstructiblea--ismoveconstructible"></a><a name="is_move_constructible"></a>  is_move_constructible  
+##  <a name="is_move_constructible"></a>  is_move_constructible  
  测试类型是否具有移动构造函数。  
   
 ```  
@@ -186,7 +197,7 @@ struct is_move_constructible;
 ### <a name="remarks"></a>备注  
  如果类型 `T` 可通过使用移动操作构造，则类型谓词的计算结果为 true。 此谓词等效于 `is_constructible<T, T&&>`。  
   
-##  <a name="a-nameisnothrowmoveassignablea--isnothrowmoveassignable"></a><a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable  
+##  <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable  
  测试类型是否具有 **nothrow** 移动赋值运算符。  
   
 ```  
@@ -201,7 +212,7 @@ struct is_nothrow_move_assignable;
 ### <a name="remarks"></a>备注  
  如果类型 `Ty` 具有 nothrow 移动赋值运算符，类型谓词的实例将为 true，否则为 false。  
   
-##  <a name="a-nameistriviallycopyassignablea--istriviallycopyassignable"></a><a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable  
+##  <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable  
  测试类型是否具有普通复制赋值运算符。  
   
 ```  
@@ -218,7 +229,7 @@ struct is_trivially_copy_assignable;
   
  如果类 `T` 的赋值构造函数为隐式提供，则为普通类，类 `T` 不具有虚拟函数，类 `T` 不具有虚拟基，类类型的所有非静态数据成员的类都具有普通赋值运算符，且类的类型数组的所有非静态数据成员的类具有普通赋值运算符。  
   
-##  <a name="a-nameistriviallymoveassignablea--istriviallymoveassignable"></a><a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable  
+##  <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable  
  测试类型是否具有普通移动赋值运算符。  
   
 ```  
@@ -245,7 +256,7 @@ struct is_trivially_move_assignable;
   
  类的类型数组的所有非静态数据成员的类具有普通移动赋值运算符  
   
-##  <a name="a-nameistriviallymoveconstructiblea--istriviallymoveconstructible"></a><a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible  
+##  <a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible  
  测试类型是否具有普通移动构造函数。  
   
 ```  

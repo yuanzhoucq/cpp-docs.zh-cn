@@ -6,6 +6,8 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 caps.latest.revision: 8
 manager: ghogen
@@ -23,7 +25,7 @@ ms.lasthandoff: 02/24/2017
 |[operator*](#operator_star)|[operator+](#operator_add)|[operator-](#operator-)|  
 |[operator/](#operator_)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>  operator-  
  用于对 [duration](../standard-library/duration-class.md) 和 [time_point](../standard-library/time-point-class.md) 对象进行减法或求反运算的运算符。  
   
 ```  
@@ -67,7 +69,7 @@ constexpr typename common_type<Duration1, Duration2>::type
   
  第三个函数返回一个 `duration` 对象，该对象表示 `Left` 和 `Right` 之间的时间间隔。  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 对象的不等运算符。  
   
 ```  
@@ -93,7 +95,7 @@ constexpr bool operator!=(
 ### <a name="return-value"></a>返回值  
  每个函数均返回 `!(Left == Right)`。  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*  
+##  <a name="operator_star"></a>  operator*  
  [duration](../standard-library/chrono-operators.md#operator_star) 对象的乘法运算符。  
   
 ```  
@@ -126,7 +128,7 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
   
  除非 `is_convertible<Rep1, common_type<Rep1, Rep2>>` *“保持为 true”*，否则第二个函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。  
   
-##  <a name="a-nameoperatora--operator"></a><a name="operator_"></a>  operator/  
+##  <a name="operator_"></a>  operator/  
  [duration](../standard-library/chrono-operators.md#operator_star) 对象的除法运算符。  
   
 ```  
@@ -164,7 +166,7 @@ constexpr typename common_type<Rep1, Rep2>::type
   
  除非 `is_convertible<Rep2, common_type<Rep1, Rep2>>` *“保持为 true”*，并且 `Rep2` 不是 `duration` 的实例化，否则第一个运算符不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+  
+##  <a name="operator_add"></a>  operator+  
  添加 [duration](../standard-library/duration-class.md) 和 [time_point](../standard-library/time-point-class.md) 对象。  
   
 ```  
@@ -207,7 +209,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
   
  第二个和第三个函数将返回 `time_point` 对象，该对象表示从时间点 `Time` 由 `Dur` 时间间隔取代的时间点。  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  确定一个 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 对象是否小于另一个 `duration` 或 `time_point` 对象。  
   
 ```  
@@ -235,7 +237,7 @@ constexpr bool operator<(
   
  如果 `Left` 先于 `Right`，则第二个函数返回 `true`。 否则，该函数返回 `false`。  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  确定一个 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 对象是否小于或等于另一个 `duration` 或 `time_point` 对象。  
   
 ```  
@@ -260,7 +262,7 @@ constexpr bool operator<=(
 ### <a name="return-value"></a>返回值  
  每个函数均返回 `!(Right < Left)`。  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  确定两个 `duration` 对象是否表示相同长度的时间间隔，或两个 `time_point` 对象是否表示相同的时间点。  
   
 ```  
@@ -287,7 +289,7 @@ constexpr bool operator==(
   
  如果 `Left` 和 `Right` 表示相同时间点，则第二个函数将返回 `true`。 否则，该函数返回 `false`。  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  确定一个 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 对象是否大于另一个 `duration` 或 `time_point` 对象。  
   
 ```  
@@ -312,7 +314,7 @@ constexpr bool operator>(
 ### <a name="return-value"></a>返回值  
  每个函数均返回 `Right < Left`。  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  确定一个 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 对象是否大于或等于另一个 `duration` 或 `time_point` 对象。  
   
 ```  
@@ -337,7 +339,7 @@ constexpr bool operator>=(
 ### <a name="return-value"></a>返回值  
  每个函数均返回 `!(Left < Right)`。  
   
-##  <a name="a-nameoperatormoduloa--operator-modulo"></a><a name="operator_modulo"></a>  operator modulo  
+##  <a name="operator_modulo"></a>  operator modulo  
  用于对 [duration](../standard-library/duration-class.md) 对象进行取模操作的运算符。  
   
 ```  

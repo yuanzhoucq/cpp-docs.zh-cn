@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - enable_shared_from_this
-- std::enable_shared_from_this
 - memory/std::enable_shared_from_this
 dev_langs:
 - C++
@@ -75,7 +74,7 @@ protected:
   
  **命名空间：** std  
   
-##  <a name="a-nameenablesharedfromthissharedfromthisa--enablesharedfromthissharedfromthis"></a><a name="enable_shared_from_this__shared_from_this"></a>  enable_shared_from_this::shared_from_this  
+##  <a name="enable_shared_from_this__shared_from_this"></a>  enable_shared_from_this::shared_from_this  
  生成与现有 `shared_ptr` 所有者共享实例所有权的 `shared_ptr`。  
   
 ```  

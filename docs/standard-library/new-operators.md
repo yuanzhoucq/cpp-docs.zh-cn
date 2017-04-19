@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::operator delete
+- new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
@@ -21,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |[运算符 delete](#operator_delete)|[运算符 delete[]](#operator_delete_arr)|[运算符 new](#operator_new)|  
 |[运算符 new[]](#operator_new_arr)|  
   
-##  <a name="a-nameoperatordeletea--operator-delete"></a><a name="operator_delete"></a>运算符 delete  
+##  <a name="operator_delete"></a>运算符 delete  
  由 delete 表达式调用来解除单个对象的存储空间分配的函数。  
   
 ```
@@ -50,7 +53,7 @@ void operator delete(void* ptr,
 ### <a name="example"></a>示例  
   有关使用 `operator delete` 的示例，请参阅[运算符 new](../standard-library/new-operators.md#operator_new)。  
   
-##  <a name="a-nameoperatordeletearra--operator-delete"></a><a name="operator_delete_arr"></a>运算符 delete[]  
+##  <a name="operator_delete_arr"></a>运算符 delete[]  
  由 delete 表达式调用来解除对象数组的存储空间分配的函数。  
   
 ```
@@ -77,7 +80,7 @@ void operator delete[](void* ptr,
 ### <a name="example"></a>示例  
   有关 `operator delete[]` 的使用示例，请参阅[运算符 new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)。  
   
-##  <a name="a-nameoperatornewa--operator-new"></a><a name="operator_new"></a>运算符 new  
+##  <a name="operator_new"></a>运算符 new  
  由 new 表达式调用来为单个对象分配存储空间的函数。  
   
 ```
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatornewarra--operator-new"></a><a name="operator_new_arr"></a>operator new[]  
+##  <a name="operator_new_arr"></a>operator new[]  
  由 new 表达式调用来为对象数组分配存储空间的分配函数。  
   
 ```

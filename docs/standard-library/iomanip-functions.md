@@ -6,6 +6,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- iomanip/std::get_money
+- iomanip/std::get_time
+- iomanip/std::put_money
+- iomanip/std::put_time
+- iomanip/std::quoted
+- iomanip/std::resetiosflags
+- iomanip/std::setbase
+- iomanip/std::setfill
+- iomanip/std::setiosflags
+- iomanip/std::setprecision
+- iomanip/std::setw
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
@@ -23,7 +35,7 @@ ms.lasthandoff: 02/24/2017
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|  
 |[setprecision](#setprecision)|[setw](#setw)|  
   
-##  <a name="a-nameiomanipgetmoneya--getmoney"></a><a name="iomanip_get_money"></a>get_money  
+##  <a name="iomanip_get_money"></a>get_money  
  使用所需格式从流中提取货币值，然后在参数中返回值。  
   
 ```  
@@ -43,7 +55,7 @@ T7 get_money(Money& _Amount, bool _Intl);
   
  `Money` 必须为 `long double` 类型，或者是具有与 `str` 相同的元素和特征参数的 `basic_string` 的实例化。  
   
-##  <a name="a-nameiomanipgettimea--gettime"></a><a name="iomanip_get_time"></a>get_time  
+##  <a name="iomanip_get_time"></a>get_time  
  使用所需格式从流中提取时间值。 在参数中返回值作为时间结构。  
   
 ```  
@@ -61,7 +73,7 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 ### <a name="remarks"></a>备注  
  此操控器会返回一个对象，该对象在从流 `str` 中提取时会表现为 `formatted input function`，它为与 `str` 关联的区域设置 Facet `time_get` 调用成员函数 `get`，其使用 `tptr` 来指示时间结构，使用 `fmt` 来指示 null 终止格式字符串的开头。 如果成功，则调用会将与任何提取时间字段关联的值存储在时间结构中。 此操控器随后返回 `str`。  
   
-##  <a name="a-nameiomanipputmoneya--putmoney"></a><a name="iomanip_put_money"></a>put_money  
+##  <a name="iomanip_put_money"></a>put_money  
  使用所需格式将货币金额插入流中。  
   
 ```  
@@ -84,7 +96,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
   
  `Money` 必须为 `long double` 类型，或者是具有与 `str` 相同的元素和特征参数的 `basic_string` 的实例化。  
   
-##  <a name="a-nameiomanipputtimea--puttime"></a><a name="iomanip_put_time"></a>put_time  
+##  <a name="iomanip_put_time"></a>put_time  
  使用指定格式将时间值从时间结构写入流中。  
   
 ```  
@@ -102,7 +114,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 ### <a name="remarks"></a>备注  
  操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 此输出函数使用 `_Tptr` 来指示时间结构，使用 `_Fmt` 来指示 NUL 终止格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。  
   
-##  <a name="a-namequoteda--quoted"></a><a name="quoted"></a>quoted  
+##  <a name="quoted"></a>quoted  
  **（C++14 中的新增功能）** 一个 iostream 操控程序，它使用 >> and << 运算符，使字符串能方便地往返进出流。  
   
 ```  
@@ -265,7 +277,7 @@ Press Enter to exit
   
 ```  
   
-##  <a name="a-nameresetiosflagsa--resetiosflags"></a><a name="resetiosflags"></a>resetiosflags  
+##  <a name="resetiosflags"></a>resetiosflags  
  清除指定标志。  
   
 ```  
@@ -282,7 +294,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>示例  
   有关使用 `resetiosflags` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
   
-##  <a name="a-namesetbasea--setbase"></a><a name="setbase"></a>setbase  
+##  <a name="setbase"></a>setbase  
  为整数设置基数。  
   
 ```  
@@ -307,7 +319,7 @@ T3 setbase(int _Base);
 ### <a name="example"></a>示例  
   有关使用 `setbase` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
   
-##  <a name="a-namesetfilla--setfill"></a><a name="setfill"></a>setfill  
+##  <a name="setfill"></a>setfill  
  设置用于在右对齐显示中填充空格的字符。  
   
 ```  
@@ -325,7 +337,7 @@ T4 setfill(Elem Ch);
 ### <a name="example"></a>示例  
   有关使用 `setfill` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
   
-##  <a name="a-namesetiosflagsa--setiosflags"></a><a name="setiosflags"></a>setiosflags  
+##  <a name="setiosflags"></a>setiosflags  
  设置指定标志。  
   
 ```  
@@ -342,7 +354,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
 ### <a name="example"></a>示例  
   有关使用 `setiosflags` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
   
-##  <a name="a-namesetprecisiona--setprecision"></a><a name="setprecision"></a>setprecision  
+##  <a name="setprecision"></a>setprecision  
  为浮点值设置精度。  
   
 ```  
@@ -359,7 +371,7 @@ T5 setprecision(streamsize Prec);
 ### <a name="example"></a>示例  
   有关使用 `setprecision` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
   
-##  <a name="a-namesetwa--setw"></a><a name="setw"></a>setw  
+##  <a name="setw"></a>setw  
  为流中下一元素指定显示字段的宽度。  
   
 ```  

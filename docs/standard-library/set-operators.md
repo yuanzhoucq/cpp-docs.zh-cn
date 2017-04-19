@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
 caps.latest.revision: 8
 manager: ghogen
@@ -23,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!= (multiset)](#operator_neq_multiset)|[operator&gt; (multiset)](#operator_gt_multiset)|[operator&gt;= (multiset)](#operator_gt__eq_multiset)|  
 |[operator&lt; (multiset)](#operator_lt_multiset)|[operator&lt;= (multiset)](#operator_lt__eq_multiset)|[operator== (multiset)](#operator_eq_eq_multiset)|  
   
-##  <a name="a-nameoperatorneqa--operator-set"></a><a name="operator_neq"></a>operator!= (set)  
+##  <a name="operator_neq"></a>operator!= (set)  
  测试运算符左侧的 set 对象是否不等于右侧的 set 对象。  
   
 ```
@@ -80,7 +81,7 @@ The sets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt-set"></a><a name="operator_lt_"></a>operator&lt; (set)  
+##  <a name="operator_lt_"></a>operator&lt; (set)  
  测试运算符左侧的集对象是否小于右侧的集对象。  
   
 ```
@@ -137,7 +138,7 @@ The set s1 is not less than the set s3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt-set"></a><a name="operator_lt__eq"></a>operator&lt;= (set)  
+##  <a name="operator_lt__eq"></a>operator&lt;= (set)  
  测试运算符左侧的集对象是否小于或等于右侧的集对象。  
   
 ```
@@ -201,7 +202,7 @@ Set s1 is less than or equal to the set s4.
 *\  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator-set"></a><a name="operator_eq_eq"></a>operator== (set)  
+##  <a name="operator_eq_eq"></a>operator== (set)  
  测试运算符左侧的 set 对象是否等于右侧的 set 对象。  
   
 ```
@@ -258,7 +259,7 @@ The sets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt-set"></a><a name="operator_gt_"></a>operator&gt; (set)  
+##  <a name="operator_gt_"></a>operator&gt; (set)  
  测试运算符左侧的集对象是否大于右侧的集对象。  
   
 ```
@@ -315,7 +316,7 @@ The set s1 is greater than the set s3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt-set"></a><a name="operator_gt__eq"></a>operator&gt;= (set)  
+##  <a name="operator_gt__eq"></a>operator&gt;= (set)  
  测试运算符左侧的集对象是否大于或等于右侧的集对象。  
   
 ```
@@ -379,7 +380,7 @@ Set s1 is greater than or equal to set s4.
 *\  
 ```  
   
-##  <a name="a-nameoperatorneqmultiseta--operator-multiset"></a><a name="operator_neq_multiset"></a>operator!= (multiset)  
+##  <a name="operator_neq_multiset"></a>operator!= (multiset)  
  测试运算符左侧的 multiset 对象是否不等于右侧的 multiset 对象。  
   
 ```
@@ -436,7 +437,7 @@ The multisets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorltmultiseta--operatorlt-multiset"></a><a name="operator_lt_multiset"></a>operator&lt; (multiset)  
+##  <a name="operator_lt_multiset"></a>operator&lt; (multiset)  
  测试运算符左侧的多重集对象是否小于右侧的多重集对象。  
   
 ```
@@ -497,7 +498,7 @@ The multiset s1 is not less than the multiset s3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorlteqmultiseta--operatorlt-multiset"></a><a name="operator_lt__eq_multiset"></a>operator&lt;= (multiset)  
+##  <a name="operator_lt__eq_multiset"></a>operator&lt;= (multiset)  
  测试运算符左侧的多重集对象是否小于或等于右侧的多重集对象。  
   
 ```
@@ -567,7 +568,7 @@ The multiset s1 is less than or equal to the multiset s4.
 *\  
 ```  
   
-##  <a name="a-nameoperatoreqeqmultiseta--operator-multiset"></a><a name="operator_eq_eq_multiset"></a>operator== (multiset)  
+##  <a name="operator_eq_eq_multiset"></a>operator== (multiset)  
  测试运算符左侧的 multiset 对象是否等于右侧的 multiset 对象。  
   
 ```
@@ -624,7 +625,7 @@ The multisets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgtmultiseta--operatorgt-multiset"></a><a name="operator_gt_multiset"></a>operator&gt; (multiset)  
+##  <a name="operator_gt_multiset"></a>operator&gt; (multiset)  
  测试运算符左侧的多重集对象是否大于右侧的多重集对象。  
   
 ```
@@ -685,7 +686,7 @@ The multiset s1 is greater than the multiset s3.
 *\  
 ```  
   
-##  <a name="a-nameoperatorgteqmultiseta--operatorgt-multiset"></a><a name="operator_gt__eq_multiset"></a>operator&gt;= (multiset)  
+##  <a name="operator_gt__eq_multiset"></a>operator&gt;= (multiset)  
  测试运算符左侧的多重集对象是否大于或等于右侧的多重集对象。  
   
 ```

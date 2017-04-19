@@ -6,6 +6,13 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- ios/std::ios
+- ios/std::streamoff
+- ios/std::streampos
+- ios/std::streamsize
+- ios/std::wios
+- ios/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 caps.latest.revision: 13
 manager: ghogen
@@ -21,7 +28,7 @@ ms.lasthandoff: 02/24/2017
 |[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|  
 |[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|  
   
-##  <a name="a-nameiosa--ios"></a><a name="ios"></a>ios  
+##  <a name="ios"></a>ios  
  支持旧 iostream 库中的 ios 类。  
   
 ```  
@@ -31,7 +38,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>备注  
  该类型是模板类 [basic_ios](../standard-library/basic-ios-class.md) 的同义词，专用于具有默认字符特征的 `char` 类型的元素。  
   
-##  <a name="a-namestreamoffa--streamoff"></a><a name="streamoff"></a>streamoff  
+##  <a name="streamoff"></a>streamoff  
  支持内部操作。  
   
 ```  
@@ -45,7 +52,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>备注  
  此类型为带符号整数，该整数描述的对象可存储多个流定位操作涉及的字节偏移。 它的表示形式具有至少 32 个值位。 它并不需要大得足以表示流中任意字节位置。 值 **streamoff(-1)** 通常指示错误的偏移。  
   
-##  <a name="a-namestreamposa--streampos"></a><a name="streampos"></a>streampos  
+##  <a name="streampos"></a>streampos  
  保留缓冲区指针或文件指针的当前位置。  
   
 ```  
@@ -78,7 +85,7 @@ int main( )
 7  
 ```  
   
-##  <a name="a-namestreamsizea--streamsize"></a><a name="streamsize"></a>streamsize  
+##  <a name="streamsize"></a>streamsize  
  表示流的大小。  
   
 ```  
@@ -111,7 +118,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namewiosa--wios"></a><a name="wios"></a>wios  
+##  <a name="wios"></a>wios  
  支持旧 iostream 库中的 wios 类。  
   
 ```  
@@ -121,7 +128,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ### <a name="remarks"></a>备注  
  该类型是模板类 [basic_ios](../standard-library/basic-ios-class.md) 的同义词，专用于具有默认字符特征的 `wchar_t` 类型的元素。  
   
-##  <a name="a-namewstreamposa--wstreampos"></a><a name="wstreampos"></a>wstreampos  
+##  <a name="wstreampos"></a>wstreampos  
  保留缓冲区指针或文件指针的当前位置。  
   
 ```  

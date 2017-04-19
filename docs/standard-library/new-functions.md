@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::nothrow
+- new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
-##  <a name="a-namenothrowa--nothrow"></a><a name="nothrow"></a>  nothrow  
+##  <a name="nothrow"></a>  nothrow  
  提供一个对象，用作 **new** 和 **delete** 的 `nothrow` 版本的自变量。  
   
 ```  
@@ -33,7 +36,7 @@ extern const std::nothrow_t nothrow;
 ### <a name="example"></a>示例  
   有关如何将 `std::nothrow_t` 用作函数参数的示例，请参阅[运算符 new](../standard-library/new-operators.md#operator_new) 和[运算符 new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)。  
   
-##  <a name="a-namesetnewhandlera--setnewhandler"></a><a name="set_new_handler"></a>  set_new_handler  
+##  <a name="set_new_handler"></a>  set_new_handler  
  安装一个用户函数，当 `operator new` 尝试分配内存失败时会调用该函数。  
   
 ```  

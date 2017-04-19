@@ -6,6 +6,12 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- utility/std::exchange
+- utility/std::forward
+- utility/std::make_pair
+- utility/std::move
+- utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[exchange](#exchange)|[forward](#forward)|[get 函数 &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
-##  <a name="a-nameexchangea--exchange"></a><a name="exchange"></a>  exchange  
+##  <a name="exchange"></a>  exchange  
  **(C++14)** 向对象赋予新值并返回其旧值。  
   
 ```cpp  
@@ -70,7 +76,7 @@ The new value of c1 after exchange is: 2
 */  
 ```  
   
-##  <a name="a-nameforwarda--forward"></a><a name="forward"></a>  forward  
+##  <a name="forward"></a>  forward  
  如果自变量是右值或右值引用，则有条件地将其自变量强制转换为右值引用。 这会将自变量的右值状态还原到转发函数，以支持完美转发。  
   
 ```
@@ -98,7 +104,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
   
  还原参数原始值的右值状态以执行重载决策被称为“完美转发”。 通过完美转发，模板函数可接受任一引用类型的自变量，并在必要时还原其右值状态以执行正确的重载决策。 通过使用完美转发，你可以保留右值的移动语义，而且无需提供仅根据其自变量的引用类型而变化的函数的重载。  
   
-##  <a name="a-namegeta--get"></a><a name="get"></a>get  
+##  <a name="get"></a>get  
  按索引位置或类型从 `pair` 对象获取元素。  
   
 ```
@@ -193,7 +199,7 @@ int main()
 }
 ```  
   
-##  <a name="a-namemakepaira--makepair"></a><a name="make_pair"></a>  make_pair  
+##  <a name="make_pair"></a>  make_pair  
  一种可用来构造 `pair` 类型对象的模板函数，其中，组件类型将根据作为参数传递的数据类型自动进行选择。  
   
 ```
@@ -238,7 +244,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 ### <a name="example"></a>示例  
   有关如何使用 helper 函数 `make_pair` 声明和初始化对的示例，请参阅 [pair 结构](../standard-library/pair-structure.md)。  
   
-##  <a name="a-namemovea--move"></a><a name="move"></a>  move  
+##  <a name="move"></a>  move  
  无条件将其自变量强制转换为右值引用，从而表示其可以移动（如果其类型支持移动）。  
   
 ```
@@ -263,7 +269,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
   
  如果 `Arg` 中传递的值为左值（也就是说，它具有名称或可以采用其地址），则它在发生移动时将会失效。 在移动 `Arg` 中传递的值后，请勿按照其名称或地址来引用它。  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>swap  
+##  <a name="swap"></a>swap  
  交换两个 [pair 结构](../standard-library/pair-structure.md)对象的元素。  
   
 ```

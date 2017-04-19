@@ -9,12 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- cvt.wstring_convert
 - wstring_convert
 - stdext::cvt::wstring_convert
 - cvt::wstring_convert
 - wstring/stdext::cvt::wstring_convert
-- stdext.cvt.wstring_convert
+- locale/std::wstring_convert::byte_string
+- locale/std::wstring_convert::wide_string
+- locale/std::wstring_convert::state_type
+- locale/std::wstring_convert::int_type
+- locale/std::wstring_convert::from_bytes
+- locale/std::wstring_convert::to_bytes
+- locale/std::wstring_convert::converted
+- locale/std::wstring_convert::state
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +111,7 @@ class wstring_convert
   
  **命名空间：** std  
   
-##  <a name="a-namewstringconvertbytestringa--wstringconvertbytestring"></a><a name="wstring_convert__byte_string"></a>wstring_convert::byte_string  
+##  <a name="wstring_convert__byte_string"></a>wstring_convert::byte_string  
  表示字节字符串的类型。  
   
 ```
@@ -115,7 +121,7 @@ typedef std::basic_string<char> byte_string;
 ### <a name="remarks"></a>备注  
  该类型是 `std::basic_string<char>` 的同义词。  
   
-##  <a name="a-namewstringconvertconverteda--wstringconvertconverted"></a><a name="wstring_convert__converted"></a>wstring_convert::converted  
+##  <a name="wstring_convert__converted"></a>wstring_convert::converted  
  返回成功转换数。  
   
 ```
@@ -128,7 +134,7 @@ size_t converted() const;
 ### <a name="remarks"></a>备注  
  成功的转换数存储在转换计数对象中。  
   
-##  <a name="a-namewstringconvertfrombytesa--wstringconvertfrombytes"></a><a name="wstring_convert__from_bytes"></a>wstring_convert::from_bytes  
+##  <a name="wstring_convert__from_bytes"></a>wstring_convert::from_bytes  
  将字节字符串转换为宽字符串。  
   
 ```
@@ -156,7 +162,7 @@ wide_string from_bytes(const char* first, const char* last);
   
  成功转换的输入元素的数量存储在转换计数对象中。 如果未发生转换错误，则该成员函数返回转换后的宽字符串。 否则，如果对象是使用宽字符串错误消息的初始值设定项构造的，则该成员函数返回宽字符串错误消息对象。 否则，成员函数将引发 [range_error](../standard-library/range-error-class.md) 类的对象。  
   
-##  <a name="a-namewstringconvertinttypea--wstringconvertinttype"></a><a name="wstring_convert__int_type"></a>wstring_convert::int_type  
+##  <a name="wstring_convert__int_type"></a>wstring_convert::int_type  
  表示整数的类型。  
   
 ```
@@ -166,7 +172,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 ### <a name="remarks"></a>备注  
  该类型是 `wide_string::traits_type::int_type` 的同义词。  
   
-##  <a name="a-namewstringconvertstatea--wstringconvertstate"></a><a name="wstring_convert__state"></a>wstring_convert::state  
+##  <a name="wstring_convert__state"></a>wstring_convert::state  
  返回表示转换状态的对象。  
   
 ```
@@ -178,7 +184,7 @@ state_type state() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namewstringconvertstatetypea--wstringconvertstatetype"></a><a name="wstring_convert__state_type"></a>wstring_convert::state_type  
+##  <a name="wstring_convert__state_type"></a>wstring_convert::state_type  
  表示转换状态的类型。  
   
 ```
@@ -188,7 +194,7 @@ typedef typename Codecvt::state_type state_type;
 ### <a name="remarks"></a>备注  
  此类型描述一个可以表示转换状态的对象。 该类型是 `Codecvt::state_type` 的同义词。  
   
-##  <a name="a-namewstringconverttobytesa--wstringconverttobytes"></a><a name="wstring_convert__to_bytes"></a>wstring_convert::to_bytes  
+##  <a name="wstring_convert__to_bytes"></a>wstring_convert::to_bytes  
  将宽字符串转换为字节字符串。  
   
 ```
@@ -213,7 +219,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
   
  成功转换的输入元素的数量存储在转换计数对象中。 如果未发生转换错误，则成员函数返回转换后的字节字符串。 否则，如果对象是使用字节字符串错误消息的初始值设定项构造的，则成员函数返回字节字符串错误消息对象。 否则，成员函数将引发 [range_error](../standard-library/range-error-class.md) 类的对象。  
   
-##  <a name="a-namewstringconvertwidestringa--wstringconvertwidestring"></a><a name="wstring_convert__wide_string"></a>wstring_convert::wide_string  
+##  <a name="wstring_convert__wide_string"></a>wstring_convert::wide_string  
  表示宽字符串的类型。  
   
 ```
@@ -223,7 +229,7 @@ typedef std::basic_string<Elem> wide_string;
 ### <a name="remarks"></a>备注  
  该类型是 `std::basic_string<Elem>` 的同义词。  
   
-##  <a name="a-namewstringconvertwstringconverta--wstringconvertwstringconvert"></a><a name="wstring_convert__wstring_convert"></a>wstring_convert::wstring_convert  
+##  <a name="wstring_convert__wstring_convert"></a>wstring_convert::wstring_convert  
  构造 `wstring_convert` 类型的对象。  
   
 ```

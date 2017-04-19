@@ -10,9 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - error_code
-- std.error_code
-- std::error_code
 - system_error/std::error_code
+- system_error/std::error_code::value_type
+- system_error/std::error_code::assign
+- system_error/std::error_code::category
+- system_error/std::error_code::clear
+- system_error/std::error_code::default_error_condition
+- system_error/std::error_code::message
+- system_error/std::error_code::operator bool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +96,7 @@ class error_code;
   
  **命名空间：** std  
   
-##  <a name="a-nameerrorcodeassigna--errorcodeassign"></a><a name="error_code__assign"></a>  error_code::assign  
+##  <a name="error_code__assign"></a>  error_code::assign  
  向错误代码分配错误代码值和类别。  
   
 ```
@@ -108,7 +113,7 @@ void assign(value_type val, const error_category& _Cat);
 ### <a name="remarks"></a>备注  
  此成员函数存储 `val` 作为错误代码值和指向 `_Cat` 的指针。  
   
-##  <a name="a-nameerrorcodecategorya--errorcodecategory"></a><a name="error_code__category"></a>  error_code::category  
+##  <a name="error_code__category"></a>  error_code::category  
  返回错误类别。  
   
 ```
@@ -117,7 +122,7 @@ const error_category& category() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameerrorcodecleara--errorcodeclear"></a><a name="error_code__clear"></a>  error_code::clear  
+##  <a name="error_code__clear"></a>  error_code::clear  
  清除错误代码值和类别。  
   
 ```
@@ -127,7 +132,7 @@ clear();
 ### <a name="remarks"></a>备注  
  此成员函数存储零错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 对象的指针。  
   
-##  <a name="a-nameerrorcodedefaulterrorconditiona--errorcodedefaulterrorcondition"></a><a name="error_code__default_error_condition"></a>  error_code::default_error_condition  
+##  <a name="error_code__default_error_condition"></a>  error_code::default_error_condition  
  返回默认的错误条件。  
   
 ```
@@ -140,7 +145,7 @@ error_condition default_error_condition() const;
 ### <a name="remarks"></a>备注  
  此成员函数返回 `category().default_error_condition(value())`。  
   
-##  <a name="a-nameerrorcodeerrorcodea--errorcodeerrorcode"></a><a name="error_code__error_code"></a>  error_code::error_code  
+##  <a name="error_code__error_code"></a>  error_code::error_code  
  构造 `error_code` 类型的对象。  
   
 ```
@@ -169,7 +174,7 @@ error_code(_Enum _Errcode,
   
  第三个构造函数存储 `(value_type)_Errcode` 作为错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。  
   
-##  <a name="a-nameerrorcodemessagea--errorcodemessage"></a><a name="error_code__message"></a>  error_code::message  
+##  <a name="error_code__message"></a>  error_code::message  
  返回错误代码的名称。  
   
 ```
@@ -182,7 +187,7 @@ string message() const;
 ### <a name="remarks"></a>备注  
  此成员函数返回 `category().message(value())`。  
   
-##  <a name="a-nameerrorcodeoperatoreqeqa--errorcodeoperator"></a><a name="error_code__operator_eq_eq"></a>  error_code::operator==  
+##  <a name="error_code__operator_eq_eq"></a>  error_code::operator==  
  测试各 `error_code` 对象是否相等。  
   
 ```
@@ -201,7 +206,7 @@ bool operator==(const error_code& right) const;
 ### <a name="remarks"></a>备注  
  该成员运算符将返回 `category() == right.category() && value == right.value()`。  
   
-##  <a name="a-nameerrorcodeoperatorneqa--errorcodeoperator"></a><a name="error_code__operator_neq"></a>  error_code::operator!=  
+##  <a name="error_code__operator_neq"></a>  error_code::operator!=  
  测试各 `error_code` 对象是否不相等。  
   
 ```
@@ -220,7 +225,7 @@ bool operator!=(const error_code& right) const;
 ### <a name="remarks"></a>备注  
  该成员运算符将返回 `!(*this == right)`。  
   
-##  <a name="a-nameerrorcodeoperatorlta--errorcodeoperatorlt"></a><a name="error_code__operator_lt_"></a>  error_code::operator&lt;  
+##  <a name="error_code__operator_lt_"></a>  error_code::operator&lt;  
  测试 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 对象是否小于要比较的传入 `error_code` 对象。  
   
 ```
@@ -239,7 +244,7 @@ bool operator<(const error_code& right) const;
 ### <a name="remarks"></a>备注  
  该成员运算符将返回 `category() < right.category() || category() == right.category() && value < right.value()`。  
   
-##  <a name="a-nameerrorcodeoperatoreqa--errorcodeoperator"></a><a name="error_code__operator_eq"></a>  error_code::operator=  
+##  <a name="error_code__operator_eq"></a>  error_code::operator=  
  向 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 对象分配新的枚举值。  
   
 ```
@@ -261,7 +266,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 ### <a name="remarks"></a>备注  
  成员运算符存储 `(value_type)_Errcode` 作为错误代码值和指向 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指针。 它将返回 `*this`。  
   
-##  <a name="a-nameerrorcodeoperatorboola--errorcodeoperator-bool"></a><a name="error_code__operator_bool"></a>  error_code::operator bool  
+##  <a name="error_code__operator_bool"></a>  error_code::operator bool  
  转换 `error_code` 类型的变量。  
   
 ```
@@ -274,7 +279,7 @@ explicit operator bool() const;
 ### <a name="remarks"></a>备注  
  仅在[值](#error_code__value)不等于零时，此运算符才返回可转换为 `true` 的值。 返回类型只能转换为 `bool`，而不能转换为 `void *` 或其他已知的标量类型。  
   
-##  <a name="a-nameerrorcodevaluea--errorcodevalue"></a><a name="error_code__value"></a>  error_code::value  
+##  <a name="error_code__value"></a>  error_code::value  
  返回存储的错误代码值。  
   
 ```
@@ -286,7 +291,7 @@ value_type value() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-nameerrorcodevaluetypea--errorcodevaluetype"></a><a name="error_code__value_type"></a>  error_code::value_type  
+##  <a name="error_code__value_type"></a>  error_code::value_type  
  表示存储的错误代码值的类型。  
   
 ```
