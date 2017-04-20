@@ -58,9 +58,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b0dabfdf6540a09a08f7b7a3dec05fd5aa9d07fa
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ec0c11cf43080389363fc682aad9511a958e6edd
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
@@ -94,7 +94,7 @@ unsigned long _inpd(
  这些函数返回从 `port`中读取的字节、字或双字。 无错误返回。  
   
 ## <a name="remarks"></a>备注  
- `_inp`、 `_inpw`和 `_inpd` 函数分别从指定的输入端口读取一个字节、一个字和一个双字。 输入值可以是 0 – 65,535 范围内的任何无符号短整数。  
+ `_inp`、 `_inpw`和 `_inpd` 函数分别从指定的输入端口读取一个字节、一个字和一个双字。 输入值可以是 0 - 65,535 范围内的任何无符号短整数。  
   
  由于这些函数直接从 I/O 端口读取内容，因此它们可能无法在 Windows NT、Windows 2000、Windows XP 和 Windows Server 2003 的用户代码中使用。  
   

@@ -38,9 +38,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: baf07427498c6b1f60ceca67112251be794a7451
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 665210ecf78fa0c76d598c9116fc19dc391a0585
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="time-management"></a>时间管理
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/30/2017
 |[_ftime、_ftime32、_ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)、[_ftime_s、_ftime32_s、_ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|将当前系统时间存储在 `struct _timeb` 或 `struct``__timeb64` 类型的变量中。这些带有 `_s` 后缀的函数版本更安全。|  
 |[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|打开文件后设置修改时间|  
 |[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm`。这些具有 `_s` 后缀的函数版本更安全。|  
-|[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm` 这些具有 `_s` 后缀的函数版本更安全。|  
+|[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|使用本地更正将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm`。 这些具有 `_s` 后缀的函数版本更安全。|  
 |[_mkgmtime、_mkgmtime32、_mkgmtime64](../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)|将时间转换为格林威治标准时间中的日历值。|  
 |[mktime、_mktime32、_mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md)|将时间转换为日历值。|  
 |[_strdate、_wstrdate](../c-runtime-library/reference/strdate-wstrdate.md)、[_strdate_s、_wstrdate_s](../c-runtime-library/reference/strdate-s-wstrdate-s.md)|以字符串形式返回当前系统日期。 这些具有 `_s` 后缀的函数版本更安全。|  

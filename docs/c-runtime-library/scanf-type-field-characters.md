@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7a9d13924a14b51ed78256825dee6d9a59475c51
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>scanf 类型字段字符
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/07/2017
 |`p`|十六进制数字中的指针地址。 最大位数读数取决于指针大小（32 或 64 位），指针大小取决于计算机体系结构。 接受“0x”或“0X”作为前缀。|指向 `void*`的指针。|不是。|  
 |`u`|无符号十进制整数。|指向 `unsigned``int`的指针。|不是。|  
 |`x`|十六进制整数。|指向 `int`的指针。|不是。|  
-|`e`, `E`, `f`, `F`, `g`, `G`|包含可选符号（+ 或 –）的浮点值、包含小数点的一个或多个十进制数字系列，以及后跟可选带符号整数值的可选指数（“e”或“E”）。|指向 `float`的指针。|不是。|  
+|`e`, `E`, `f`, `F`, `g`, `G`|包含可选符号（+ 或 -）的浮点值、包含小数点的一个或多个十进制数字系列，以及后跟可选带符号整数值的可选指数（“e”或“E”）。|指向 `float`的指针。|不是。|  
 |`a`, `A`|由一系列一个或多个包含可选小数点的十六进制数字和后跟十进制值的一个指数（“p”或“P”）所组成的浮点值。|指向 `float`的指针。|不是。|  
 |`n`|未从流或缓冲区读取任何输入。|指向 `int`的指针，其中存储了当前调用 `scanf` 函数或 `wscanf` 函数时从流或缓冲区到该点成功读取的字符数。|不是。|  
 |`s`|字符串，直到第一个空白字符（空格、制表符或换行）。 若要读取未被空格字符分隔的字符串，请使用一组方括号 (`[ ]`)，如 [scanf 宽度规范](../c-runtime-library/scanf-width-specification.md)中所述。|与 `scanf` 函数结合使用时，表示单字节字符数组；与 `wscanf` 函数结合使用时，表示宽字符数组。 无论哪种情况，字符数组都必须具有足够大小以容纳输入字段和自动附加的终止 null 字符。|必需。 大小中包括 null 终止符的占用空间。|  

@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 904069e809876beefbc05c7dc0ddb83bee8e5c94
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-floating-point-constants"></a>C 浮点常量
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/24/2017
  &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
  *sign*：一个   
- &nbsp;&nbsp; **+ –**  
+ &nbsp;&nbsp; **+ -**  
   
  *digit-sequence*：  
  &nbsp;&nbsp; *digit*  
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/24/2017
 25E-4     /* =  0.0025 */  
 ```  
   
- 浮点常量为正数，除非它们的前面有减号 (**–**)。 在这种情况下，减号将视为一元算术求反运算符。 浮点常量包括类型 `float`、`double` 或 `long double`。  
+ 浮点常量为正数，除非它们的前面有减号 (**-**)。 在这种情况下，减号将视为一元算术求反运算符。 浮点常量包括类型 `float`、`double` 或 `long double`。  
   
  浮点常量没有 **f**、**F** 或 **l**，或者 **L** 后缀类型为 `double`。 如果后缀是字母 **f** 或 **F**，则该常量类型为 `float`。 如果后缀是字母 **l** 或 **L**，则该常量类型为 `long double`。 例如:   
   
