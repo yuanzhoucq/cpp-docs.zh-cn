@@ -30,15 +30,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: a13be4d4d32ab0f0bc3cc7b5972e90c4493d06ff
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 8e21a77e42a90571c73ff0f207f5d799ff722bd3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 语言一致性 
 本主题概述了 Visual Studio 2017 及早期版本中，针对 Visual C++ 的编译器功能和标准库 (STL) 功能的 ISO C ++03、C++11、C++14 以及 C++17 草稿语言标准一致性。 每个编译器和 STL 功能名称都可链接到介绍该功能的 ISO C++ 标准建议文章（如果在发布时可用）。 “支持”列中列出了首次出现在其中并支持该功能的 Visual Studio 版本。  
   
 若要深入了解 Visual Studio 2017 中的一致性改进和其他更改，请参阅 [Visual Studio 2017 中 C++ 的一致性改进](cpp-conformance-improvements-2017.md)和 [Visual Studio 2017 中 Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 若要了解早期版本中的一致性更改，请参阅 [Visual C++ 更改历史记录](porting/visual-cpp-change-history-2003-2015.md)和 [2003 至 2015 各版本中 Visual C++ 的新增功能](porting/visual-cpp-what-s-new-2003-through-2015.md)。 有关来自 C++ 团队的最新信息，请访问 [Visual C++ 团队博客](http://blogs.msdn.microsoft.com/vcblog/)。  
+
+ > [!NOTE]
+ > Visual Studio 2015 和 Visual Studio 2017 之间没有二进制的重大更改。
   
 ## <a name="compiler-features"></a>编译器功能  
   
@@ -50,7 +53,7 @@ ms.lasthandoff: 03/15/2017
 |&nbsp;&nbsp;[N2634 表达式 SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|部分支持 <sup>[2](#note_2)</sup>|
 |&nbsp;&nbsp;[N1653 C99 预处理器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|部分支持 <sup>[3](#note_3)</sup>|
 |&nbsp;&nbsp;[N1988 扩展的整型](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|N/A <sup>[4](#note_4)</sup>|
-|__C++&14; 核心语言功能__|__支持__|
+|__C++ 14 核心语言功能__|__支持__|
 |&nbsp;&nbsp;[N3664 避免/合成分配](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3664.html)|N/A <sup><sup>[5](#note_5)</sup></sup>|
 |&nbsp;&nbsp;[N3323 上下文转换的已调整 wording](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 二进制文本](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
@@ -63,7 +66,7 @@ ms.lasthandoff: 03/15/2017
 |&nbsp;&nbsp;[N3760 [[已弃用]] 属性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3760.html)|VS 2015|
 |&nbsp;&nbsp;[N3778 调整大小的释放](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3778.html)|VS 2015|
 |&nbsp;&nbsp;[N3781 数字分隔符](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3781.pdf)|VS 2015|
-|__C++&17; 核心语言功能__|__支持__|
+|__C++ 17 核心语言功能__|__支持__|
 |&nbsp;&nbsp;[N3922 针对自动使用大括号内的初始值设定项列表的新建规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015|
 |&nbsp;&nbsp;[N3928 简要静态断言](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf)|VS 2017 [*](#note_star)|
 |&nbsp;&nbsp;[N4051 模板-参数模板的类型名称](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015|

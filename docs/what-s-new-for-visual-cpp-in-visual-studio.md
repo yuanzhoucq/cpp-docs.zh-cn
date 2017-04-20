@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
-ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
+ms.lasthandoff: 04/01/2017
 
 ---
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/07/2017
 - 版本控制：内置预处理器宏_MSC_VER 的值现在会在每次 Visual C++ 工具集更新时单调更新。 有关详细信息，请参阅 [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)（Visual C++ 编译器版本）。
 - 新工具集布局：编译器和相关生成工具在开发计算机上有了新的位置和目录结构。 新布局支持并行安装多个版本的编译器。 有关详细信息，请参阅 [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/)（Visual Studio“15”中的编译器工具布局）。
 - 改进了诊断：输出窗口现在会显示发生错误的列。 有关详细信息，请参阅 [C++ compiler diagnostics improvements in VS “15” Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/)（VS“15”预览版 5 中的 C++ 编译器诊断改进）。
-- 使用协同例程时，实验关键字 "yield"（在 /await 开关下可用）已被删除。 应更新你的代码，以改为使用 "co_yield”。 有关详细信息，请参阅 Visual C++ 团队博客。 
+- 使用协同例程时，实验关键字 "yield"（在 /await 开关下可用）已被删除。 应更新你的代码，以改为使用“co_yield”。 有关详细信息，请参阅 Visual C++ 团队博客。 
 
 ## <a name="c-libraries"></a>C++ 库
 
@@ -127,7 +127,7 @@ CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细
 
   ![成员列表筛选](media/mlfiltering.png "成员列表筛选")
 
-* 添了新的实验性预测 IntelliSense 功能，此功能可根据上下文筛选成员列表中的所示内容。 请参阅 [C++ IntelliSense Improvements – Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)（C++ IntelliSense 改进 - IntelliSense 和筛选）
+* 添了新的实验性预测 IntelliSense 功能，此功能可根据上下文筛选成员列表中的所示内容。 请参阅 [C++ IntelliSense Improvements – Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)（C++ IntelliSense 改进 - 预测 IntelliSense 和筛选）
 
 * 即使在复杂基本代码中，“查找所有引用”(Shift+F12) 现在也可帮助轻松进行查找。 它提供高级分组、筛选、排序、在结果中搜索以及（适用于某些语言的）着色，以便你清楚了解自己的引用。 对于 C++ 而言，新的UI 包括有关是否要从变量读取或向其写入的信息。
 
@@ -148,7 +148,7 @@ Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含�
   -    使用 Launch.json 可自定义调试体验。
 
 ### <a name="cmake-support-via-open-folder"></a>通过“打开文件夹”支持 CMake
-Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/)（Visual Studio 中的 CMake 支持）和 [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/)（Visual Studio 2017 中的 CMake 支持 - RC.2 更新中新增的内容）。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
+Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/)（Visual Studio 中的 CMake 支持）和 [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/)（Visual Studio 2017 中的 CMake 支持 - RC.2 更新中的新增内容）。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
 
 * 无需在根文件夹中创建 CppProperties.json 文件，C++ IntelliSense 便可正常工作。 此外，我们增添了一个新的下拉列表，允许用户在分别由 CMake 和 CppProperties.json 文件提供的配置之间轻松切换。
 
