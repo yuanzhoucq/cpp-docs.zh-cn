@@ -11,32 +11,26 @@ ms.topic: article
 f1_keywords:
 - copy_options
 - filesystem::copy_options
-- std::filesystem::copy_options
 - filesystem/std::filesystem::copy_options
 - experimental::filesystem::copy_options
-- std::experimental::filesystem::copy_options
 - filesystem/std::experimental::filesystem::copy_options
 - directory_options
 - filesystem::directory_options
-- std::filesystem::directory_options
 - filesystem/std::filesystem::directory_options
 - experimental::filesystem::directory_options
-- std::experimental::filesystem::directory_options
 - filesystem/std::experimental::filesystem::directory_options
 - file_type
 - filesystem::file_type
-- std::filesystem::file_type
 - filesystem/std::filesystem::file_type
 - experimental::filesystem::file_type
-- std::experimental::filesystem::file_type
 - filesystem/std::experimental::filesystem::file_type
 - perms
 - filesystem::perms
-- std::filesystem::perms
 - filesystem/std::filesystem::perms
 - experimental::filesystem::perms
-- std::experimental::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
+dev_langs:
+- C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 caps.latest.revision: 3
 author: corob-msft
@@ -56,7 +50,7 @@ ms.lasthandoff: 02/24/2017
   
  **命名空间：**std::experimental::filesystem  
 
-##  <a name="a-namefilesystemcopyoptionsa--copyoptions"></a><a name="filesystem__copy_options"></a>  copy_options
+##  <a name="filesystem__copy_options"></a>  copy_options
 和 [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 和 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 函数一起用于指定行为的位掩码值的枚举。  
   
 ### <a name="syntax"></a>语法  
@@ -91,7 +85,7 @@ enum class copy_options {
 |`create_hard_links`|生成硬链接，而非复制文件。|  
   
 
-##  <a name="a-namefilesystemdirectoryoptionsa-directoryoptions"></a><a name="filesystem__directory_options"></a> directory_options
+##  <a name="filesystem__directory_options"></a> directory_options
 指定是跟踪指向目录的符号链接还是忽略它们。  
   
 ### <a name="syntax"></a>语法  
@@ -109,7 +103,7 @@ enum class directory_options {
 |`none`|默认行为：忽略指向目录的符号链接。 拒绝权限是错误。|  
 |`follow_directory_symlink`|将指向目录的符号链接视为实际目录。|  
   
-##  <a name="a-namefilesystemfiletypea--filetype"></a><a name="filesystem__file_type"></a>  file_type
+##  <a name="filesystem__file_type"></a>  file_type
 文件类型的枚举。 支持的值有 regular、directory、not_found 和 unknown。  
   
 ### <a name="syntax"></a>语法  
@@ -143,7 +137,7 @@ enum class file_type {
 |`socket`|7|表示基于 UNIX 的系统上的套接字。 （不支持。）|  
 |`unknown`|8|表示状态无法确定的文件。|  
   
-##  <a name="a-namefilesystempermsa--perms"></a><a name="filesystem__perms"></a>  perms
+##  <a name="filesystem__perms"></a>  perms
 文件权限的标志。 支持的值实质上是“readonly”以及所有。 对于只读文件，未设置任何 *_write 位。 其他文件设置了 `all` 位 (0x0777)。  
   
 ### <a name="syntax"></a>语法  

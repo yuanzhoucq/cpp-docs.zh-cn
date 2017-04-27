@@ -12,8 +12,9 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: fb1f9f25be6d32f15324c8d3a7bd5069ca869a35
-ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
@@ -47,7 +48,7 @@ ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
   
 2.  如果无法（或不希望）重新生成静态库，可以尝试使用 legacy_stdio_definitions.lib 进行链接。 如果它满足静态库的链接时间依赖项，则需要彻底测试静态库在二进制文件中的使用情况，以确保[对通用 CRT 所做的行为更改](visual-cpp-change-history-2003-2015.md#BK_CRT)不会对其造成不利影响。  
   
-3.  如果 legacy_stdio_definitions.lib 不能满足静态库的依赖项，或库不适用于通用 CRT（由于上述行为更改），则建议将静态库封装到与 Microsoft C 运行时的正确版本链接的 DLL。 例如，如果使用 Visual C++ 2013 生成静态库，则也需要使用 Visual C++ 2013 和 Visual C++ 2013 库来生成此 DLL。 通过将库构建到 DLL 中，可封装实现的详细信息（此详细信息是在特定版本 Microsoft C 运行时上的它的依赖项）。 （注意：需要小心的是 DLL 接口不会“泄露”其使用的是哪种 C 运行时的详细信息，例如通过返回跨 DLL 边界的 FILE*，或通过返回 malloc 分配的指针并让调用方释放它。）  
+3.  如果 legacy_stdio_definitions.lib 不能满足静态库的依赖项，或库不适用于通用 CRT（由于上述行为更改），则建议将静态库封装到与 Microsoft C 运行时的正确版本链接的 DLL。 例如，如果使用 Visual C++ 2013 生成静态库，则也需要使用 Visual C++ 2013 和 Visual C++ 2013 库来生成此 DLL。 通过将库构建到 DLL 中，可封装实现的详细信息（此详细信息是在特定版本 Microsoft C 运行时上的它的依赖项）。 （注意：需要小心的是 DLL 接口不会泄露其使用的是哪种 C 运行时的详细信息，例如通过返回跨 DLL 边界的 FILE*，或通过返回 malloc 分配的指针并让调用方释放它。）  
   
  在单个进程中使用多个 CRT 本身不是问题（实际上，大多数进程最终将加载多个 CRT DLL；例如 Windows 操作系统组件依赖于 msvcrt.dll，而 CLR 也依赖于它自己的专用 CRT）。 当混杂不同 CRT 中的状态时，会出现问题。 例如，不应使用 msvcr110.dll!malloc 分配内存，也不应使用 msvcr120.dll!free 取消分配内存，不应尝试使用 msvcr110!fopen 打开文件，也不应尝试使用 msvcr120!fread 读取文件。 只要不混杂不同 CRT 中的状态，就能安全地在单个进程中加载多个 CRT。  
   
@@ -66,13 +67,13 @@ ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
 ### <a name="lnk2019-unresolved-external"></a>LNK2019：无法解析的外部符号  
  对于无法解析的符号，可能需要修复项目设置。  
   
--   •   如果源文件位于非默认位置，你是否已将路径添加至项目的包含目录？  
+-   如果源文件位于非默认位置，你是否将路径添加到了项目的包含目录？  
   
--   •   如果在 .lib 文件中定义了外部符号，你是否在项目属性中指定了 lib 路径？正确版本的 .lib 文件是否位于此处？  
+-   如果在 .lib 文件中定义了外部符号，你是否在项目属性中指定了 lib 路径？正确版本的 .lib 文件是否位于此处？  
   
--   •   是否尝试链接到由其他版本的 Visual Studio 编译的 .lib 文件？ 如果是，请参阅前面部分中关于库和工具集依赖项的内容。  
+-   是否尝试链接到由其他版本的 Visual Studio 编译的 .lib 文件？ 如果是，请参阅前面部分中关于库和工具集依赖项的内容。  
   
--   •   调用站点处的参数类型是否匹配现有的函数重载？ 验证函数签名和调用函数的代码中的 typedef 的基础类型是否是你需要的类型。  
+-   调用站点处的参数类型是否匹配现有的函数重载？ 验证函数签名和调用函数的代码中的 typedef 的基础类型是否是你需要的类型。  
   
  若要解决无法解析的符号错误，可以尝试使用 dumpbin.exe 来检查二进制文件中定义的符号。 请尝试使用下面的命令行来查看在库中定义的符号：  
   
@@ -107,16 +108,16 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  升级时一个常见的编译器错误是将非常数参数传递到常数参数。 旧版本的 Visual C++ 并不总是将其标记为错误。 有关详细信息，请参阅[编译器的更严格转换](porting-guide-spy-increment.md#stricter_conversions)。  
   
- 有关特定符合性改进的详细信息，请参阅 [Visual C++ 更改历史记录 2003 – 2015](visual-cpp-change-history-2003-2015.md) 以及 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。  
+ 有关特定符合性改进的详细信息，请参阅 [Visual C++ 更改历史记录 2003 - 2015](visual-cpp-change-history-2003-2015.md) 以及 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。  
   
 ## <a name="errors-involving-stdinth-integral-types"></a>涉及 \<stdint.h> 整型类型的错误  
  \<stdint.h> 标头定义了 typedef 和宏，它们保证在所有平台上具有指定长度，这与内置整型类型不同。 例如 int32_t 和 int64_t。 Visual C++ 在 Visual Studio 2010 中添加了 \<stdint.h>。 编写于 2010 年之前的代码可能为这些类型提供了专用定义，这些定义可能无法总是与 \<stdint.h> 定义保持一致。  
   
  如果错误为 C2371 且涉及 stdint 类型，这可能意味着该类型在代码或第三方 lib 文件中的标头中定义。  升级时，应消除 \<stdint.h> 类型的任何自定义定义，但应先将自定义定义与当前标准定义进行对比，确保不会引入新问题。  
   
- 可按 F12“转到定义”，查看有问题的类型的定义位置。  
+ 可按 F12 **转到定义**，查看有问题的类型的定义位置。  
   
- 此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++”、“高级”页，并将“显示包含”设置为“是”。 然后重新生成项目，并在输出窗口中查看 #includes 列表。  每个标头在包含它的标头下都是缩进的。  
+ 此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++”、“高级”页，并将“显示包含文件”设置为“是”。 然后重新生成项目，并在输出窗口中查看 #includes 列表。  每个标头在包含它的标头下都是缩进的。  
   
 ## <a name="errors-involving-crt-functions"></a>涉及 CRT 函数的错误  
  多年来，针对 C 运行时进行了许多更改。 已添加函数的许多安全版本，也删除了函数的一些安全版本。 此外，如前文所述，Microsoft 的 CRT 实现在 Visual Studio 2015 中重构为新的二进制文件和相关的 .lib 文件。  
@@ -167,9 +168,4 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 ## <a name="see-also"></a>另请参阅  
  [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
  [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

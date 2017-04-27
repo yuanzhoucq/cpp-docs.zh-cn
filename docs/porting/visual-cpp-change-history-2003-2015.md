@@ -33,12 +33,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
+本文介绍从 Visual Studio 2003 到 Visual Studio 2015 的所有重大更改。在本文中，术语“新行为”或“现在”指 Visual Studio 2015 及更高版本。 术语“旧行为”和“之前”指 Visual Studio 2013 和早期版本。 
+ 
+ 有关 Visual Studio 2017 的信息，请参阅 [Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中 Visual C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。 
+ > [!NOTE]
+ > Visual Studio 2015 和 Visual Studio 2017 之间没有二进制的重大更改。
+
 当你升级到 Visual C++ 编译器的新版本后，可能会在之前编译并正常运行的代码中遇到编译和/或运行时错误。 新版本中会引起这类问题的更改称为 *重大更改*，通常，修改 C++ 语言标准、函数签名或内存中的对象布局时需要进行这种更改。  
   
  若要避免难以检测和诊断的运行时错误，我们建议你永远不静态链接到使用不同编译器版本编译的二进制文件。 此外，当你升级 EXE 或 DLL 项目时，请确保升级它所链接的库。 如果使用 CRT（C 运行时）或 C++ 标准库（C++ 标准库）类型，请勿在使用不同编译器版本编译的二进制文件（包括 DLL）之间传递这些类型。 有关详细信息，请参阅[跨 DLL 边界传递 CRT 对象的潜在错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
@@ -47,9 +53,6 @@ ms.lasthandoff: 03/07/2017
   
  此外，对编译器符合性的不断改进有时会改变编译器理解现有源代码的方式。 发生这种情况时，可能会在生成过程中遇到新的或不同的错误，甚至以前生成且似乎运行正常的代码也可能出现行为差异。 虽然这些不是本文档中所讨论的重大更改，但可能需要更改源代码来解决这些问题。  
   
- 本文介绍从 Visual Studio 2003 到 Visual Studio 2015 的所有重大更改。在本文中，术语“新行为”或“现在”指 Visual Studio 2015 及更高版本。 术语“旧行为”和“之前”指 Visual Studio 2013 和早期版本。 
- 
- 有关 Visual Studio 2017 的信息，请参阅 [Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 2017 中 Visual C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。
   
 1.  [C 运行时 (CRT) 库的重大更改](#BK_CRT)  
   
@@ -217,7 +220,7 @@ ms.lasthandoff: 03/07/2017
   
 -   **strtof 和 wcstof** The strtof 和 wcstof functions failed to set errno to ERANGE when the value was not representable as a float. 已解决此问题。 （请注意此错误只特定于这两个函数；strtod、wcstod、strtold 和 wcstold 函数不受影响。）这是运行时重大更改。  
   
--   **对齐的分配函数** 在早期版本中，对齐的分配函数（_aligned_malloc、_aligned_offset_malloc 等）以静默方式接受带 0 的对齐方式的块的请求。 请求的对齐方式幂必须是&2;（而不是零）。 已解决此问题，且请求的 0 的对齐方式现在被视为无效的参数。 这是运行时重大更改。  
+-   **对齐的分配函数** 在早期版本中，对齐的分配函数（_aligned_malloc、_aligned_offset_malloc 等）以静默方式接受带 0 的对齐方式的块的请求。 请求的对齐方式幂必须是 2（而不是零）。 已解决此问题，且请求的 0 的对齐方式现在被视为无效的参数。 这是运行时重大更改。  
   
 -   **堆函数** 删除了 _heapadd、_heapset 和 _heapused 函数。 这些函数已不起作用，因为 CRT 已更新为使用 Windows 堆。  
   
@@ -949,7 +952,7 @@ ms.lasthandoff: 03/07/2017
   
      此外，尽管编译器不能进行具体诊断，但内联运算符 new 会被视为格式不正确。  
   
--   **对非类类型调用“operator type**()”（用户定义的转换）**  
+-   **对非类类型调用“operator *type*()”（用户定义的转换）**  
   
      早期版本的编译器允许以无提示忽略的方式对非类类型调用“operator *type*()”。 这种旧行为会导致无提示代码生成错误风险，从而导致不可预知的运行时行为。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2228。  
   
@@ -2676,7 +2679,7 @@ ms.lasthandoff: 03/07/2017
 -   CTime 类：CTime 类现在接受从 1900/1/1 C.E 开始的日期。 而不是 1970/1/1 C.E。              
 -   MFC 对话框中控件的 Tab 键顺序：如果按 Tab 键顺序插入 MFC ActiveX 控件，则 MFC 对话框中多个控件的正确 Tab 键顺序会受到干扰。 此更改可以解决该问题。  
   
-     例如，创建具有&1; 个 ActiveX 控件和多个编辑控件的 MFC 对话框应用程序。 将 ActiveX 控件放置在编辑控件的 Tab 键顺序的中间。 启动应用程序，单击其 Tab 键顺序在 ActiveX 控件之后的编辑控件，然后单击 Tab。 在此更改前，焦点将转到 ActiveX 控件后的编辑控件，而不是 Tab 键顺序中的下一个编辑控件。  
+     例如，创建具有 1 个 ActiveX 控件和多个编辑控件的 MFC 对话框应用程序。 将 ActiveX 控件放置在编辑控件的 Tab 键顺序的中间。 启动应用程序，单击其 Tab 键顺序在 ActiveX 控件之后的编辑控件，然后单击 Tab。 在此更改前，焦点将转到 ActiveX 控件后的编辑控件，而不是 Tab 键顺序中的下一个编辑控件。  
   
 -   CFileDialog 类：CFileDialog 类的自定义模板无法自动移植到 Windows Vista。 该模板仍然可用，但将不具有 Windows Vista 样式对话框的其他功能或外观。  
   

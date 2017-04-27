@@ -10,9 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iterator/std::istream_iterator
-- std.istream_iterator
-- std::istream_iterator
 - istream_iterator
+- iterator/std::istream_iterator::char_type
+- iterator/std::istream_iterator::istream_type
+- iterator/std::istream_iterator::traits_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +99,7 @@ class istream_iterator
   
  **命名空间：** std  
   
-##  <a name="a-nameistreamiteratorchartypea--istreamiteratorchartype"></a><a name="istream_iterator__char_type"></a>istream_iterator::char_type  
+##  <a name="istream_iterator__char_type"></a>istream_iterator::char_type  
  为 `istream_iterator` 的字符类型提供的类型。  
   
 ```
@@ -144,7 +145,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratoristreamiteratora--istreamiteratoristreamiterator"></a><a name="istream_iterator__istream_iterator"></a>istream_iterator::istream_iterator  
+##  <a name="istream_iterator__istream_iterator"></a>istream_iterator::istream_iterator  
  构造一个流结尾迭代器作为默认的 `istream_iterator`，或作为一个 `istream_iterator`，以便初始化为它开始读取的迭代器流类型。  
   
 ```
@@ -196,7 +197,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratoristreamtypea--istreamiteratoristreamtype"></a><a name="istream_iterator__istream_type"></a>istream_iterator::istream_type  
+##  <a name="istream_iterator__istream_type"></a>istream_iterator::istream_type  
  为 `istream_iterator` 的流类型提供的类型。  
   
 ```
@@ -209,7 +210,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 ### <a name="example"></a>示例  
   有关如何声明和使用 `istream_type` 的示例，请参阅 [istream_iterator](#istream_iterator__istream_iterator)。  
   
-##  <a name="a-nameistreamiteratoroperatorstara--istreamiteratoroperator"></a><a name="istream_iterator__operator_star"></a>istream_iterator::operator*  
+##  <a name="istream_iterator__operator_star"></a>istream_iterator::operator*  
  此解引用运算符返回由 `istream_iterator` 定址的、**Type** 类型的存储对象。  
   
 ```
@@ -251,7 +252,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratoroperator-gta--istreamiteratoroperator-gt"></a><a name="istream_iterator__operator-_gt_"></a>istream_iterator::operator-&gt;  
+##  <a name="istream_iterator__operator-_gt_"></a>istream_iterator::operator-&gt;  
  返回成员的值（如果有）。  
   
 ```
@@ -298,7 +299,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratoroperatoraddadda--istreamiteratoroperator"></a><a name="istream_iterator__operator_add_add"></a>istream_iterator::operator++  
+##  <a name="istream_iterator__operator_add_add"></a>istream_iterator::operator++  
  从输入流提取增量对象，或在递增对象之前复制对象并返回副本。  
   
 ```
@@ -342,7 +343,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratortraitstypea--istreamiteratortraitstype"></a><a name="istream_iterator__traits_type"></a>istream_iterator::traits_type  
+##  <a name="istream_iterator__traits_type"></a>istream_iterator::traits_type  
  为 `istream_iterator` 的字符特征类型提供的类型。  
   
 ```

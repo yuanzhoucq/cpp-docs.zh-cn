@@ -1,28 +1,44 @@
 ---
-title: "main 的参数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "main 参数 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# main 的参数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 338aa70c280b7638369443b66714c82b7a149d51
+ms.lasthandoff: 04/01/2017
 
-**ANSI 2.1.2.2.1** main 的参数的语义  
+---
+# <a name="arguments-to-main"></a>要保留的自变量
+**ANSI 2.1.2.2.1**：main 参数的语义  
   
- 在 Microsoft C 中，程序启动时调用的函数称为“main”。  没有针对 **main** 声明的原型，可以用零个、两个或三个参数对其进行定义：  
+ 在 Microsoft C 中，程序启动时调用的函数称为 **main**。 没有针对 **main** 声明的原型，可以用零个、两个或三个参数对其进行定义：  
   
 ```  
 int main( void )  
@@ -30,17 +46,17 @@ int main( int argc, char *argv[] )
 int main( int argc, char *argv[], char *envp[] )  
 ```  
   
- 上面第三行（其中，**main** 接受三个参数）是 Microsoft ANSI C 标准扩展。  第三个参数 \(**envp**\) 是指向环境变量的指针的数组。  **envp** 数组以 null 指针终止。  有关 **main** 和 **envp** 的详细信息，请参阅 [main 函数和程序执行](../c-language/main-function-and-program-execution.md)。  
+ 上面第三行（其中，**main** 接受三个参数）是 Microsoft ANSI C 标准扩展。 第三个参数 (**envp**) 是指向环境变量的指针的数组。 **envp** 数组以 null 指针终止。 有关 **main** 和 **envp** 的详细信息，请参阅 [main 函数和程序执行](../c-language/main-function-and-program-execution.md)。  
   
  变量 **argc** 从不保留负值。  
   
- 字符串数组以包含 null 指针的 **argv\[argc\]** 结束。  
+ 字符串数组以包含 null 指针的 **argv[argc]** 结束。  
   
  **argv** 数组的所有元素都是指向字符串的指针。  
   
- 未使用命令行参数调用的程序将接收 **argc** 的值 1，因为可执行文件的名称将置于 **argv\[0\]** 内。（在 3.0 之前的 MS\-DOS 版本中，可执行文件名不可用。  字母“C”将置于 **argv\[0\]** 中。）**argv\[1\]** 通过 **argv\[argc – 1\]** 指向的字符串表示程序参数。  
+ 未使用命令行参数调用的程序将接收 **argc** 的值 1，因为可执行文件的名称将置于 **argv[0]** 内。 （在 3.0 之前的 MS-DOS 版本中，可执行文件名不可用。 字母“C”将置于 **argv[0]** 中。）**argv[1]** 通过 **argv[argc – 1]** 指向的字符串表示程序参数。  
   
- 参数 **argc** 和 **argv** 是可修改的，并在程序启动与程序终止之间保留最后存储的值。  
+ 参数 **arg** 和 **argv** 是可修改的，并在程序启动与程序终止之间保留最后存储的值。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [环境](../c-language/environment.md)

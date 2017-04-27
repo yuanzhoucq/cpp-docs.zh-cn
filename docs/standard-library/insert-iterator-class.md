@@ -9,10 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::insert_iterator
 - iterator/std::insert_iterator
-- std.insert_iterator
 - insert_iterator
+- iterator/std::insert_iterator::container_type
+- iterator/std::insert_iterator::reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class insert_iterator;
   
  **命名空间：** std  
   
-##  <a name="a-nameinsertiteratorcontainertypea--insertiteratorcontainertype"></a><a name="insert_iterator__container_type"></a>insert_iterator::container_type  
+##  <a name="insert_iterator__container_type"></a>insert_iterator::container_type  
  一种类型，代表要对其执行泛型插入的容器。  
   
 ```
@@ -126,7 +126,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratorinsertiteratora--insertiteratorinsertiterator"></a><a name="insert_iterator__insert_iterator"></a>insert_iterator::insert_iterator  
+##  <a name="insert_iterator__insert_iterator"></a>insert_iterator::insert_iterator  
  构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。  
   
 ```
@@ -189,7 +189,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatorstara--insertiteratoroperator"></a><a name="insert_iterator__operator_star"></a>insert_iterator::operator*  
+##  <a name="insert_iterator__operator_star"></a>insert_iterator::operator*  
  取消引用插入迭代器，其返回元素为地址。  
   
 ```
@@ -246,7 +246,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatoraddadda--insertiteratoroperator"></a><a name="insert_iterator__operator_add_add"></a>insert_iterator::operator++  
+##  <a name="insert_iterator__operator_add_add"></a>insert_iterator::operator++  
  将 **insert_iterator** 递增到下一个可用来存储值的位置。  
   
 ```
@@ -307,7 +307,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratoroperatoreqa--insertiteratoroperator"></a><a name="insert_iterator__operator_eq"></a>insert_iterator::operator=  
+##  <a name="insert_iterator__operator_eq"></a>insert_iterator::operator=  
  将值插入容器并返回更新的迭代器，以指向新元素。  
   
 ```
@@ -386,7 +386,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-nameinsertiteratorreferencea--insertiteratorreference"></a><a name="insert_iterator__reference"></a>insert_iterator::reference  
+##  <a name="insert_iterator__reference"></a>insert_iterator::reference  
  一种类型，此类型提供对关联容器所控制序列中的元素的引用。  
   
 ```

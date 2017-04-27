@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 1088f17c1d758589fba146f82b2544ae17090a22
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ba1dd940e6dfe9bb749de1473850a245fa8073a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>使用 Visual Studio 中的本机多目标来生成旧项目  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/24/2017
   
 最新版本的 Visual Studio 支持项目的本机多目标和往返。 本机多目标是一种功能，即最新的 IDE 使用 Visual Studio 旧版本安装的工具集进行生成。 往返是一种功能，即最新的 IDE 可加载由 IDE 旧版本创建的项目，而无需对项目进行任何更改。 如果并行安装最新版本和现有版本的 Visual Studio，则可以配合使用新版本的 IDE 与现有版本的编译器和工具，来生成项目。 团队的其他成员可以继续在旧版本的 Visual Studio 中使用项目。  
   
-使用较旧的工具集时，可以利用许多最新的 IDE 功能，但不能利用 C++ 编译器、库和生成工具中的最新改进。 例如，将无法使用新的语言一致性改进、新调试和代码分析功能，或实现更快的最新工具集生成吞吐量。 也有一些 IDE 功能与旧的工具集不兼容。 例如，内存探查器中可能缺少类型信息，重构操作“转换为原始字符串”会生成 C++11 兼容代码，该代码在用户使用 Visual Studio 2012 或更旧版本的工具集时不进行编译。
+使用较旧的工具集时，可以利用许多最新的 IDE 功能，但不能利用 C++ 编译器、库和生成工具中的最新改进。 例如，将无法使用新的语言一致性改进、新调试和代码分析功能，或实现更快的最新工具集生成吞吐量。 也有一些 IDE 功能与旧的工具集不兼容。 例如，内存探查器中可能缺少类型信息，重构操作**转换为原始字符串**会生成 C++11 兼容代码，该代码在用户使用 Visual Studio 2012 或更旧版本的工具集时不进行编译。
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>如何使用 Visual Studio 中的本机多目标
 并行安装 Visual Studio 和较旧版本后，在 Visual Studio 的新版本中打开现有项目。 加载项目时，Visual Studio 会询问是否要对其进行升级以使用最新的 C++ 编译器和库。 由于希望项目保留旧版编译器和库，因此选择“取消”按钮。  

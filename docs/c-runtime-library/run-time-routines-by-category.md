@@ -37,13 +37,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7c22002fa6b98213913a3cff1b8f0e851f22c6d3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="run-time-routines-by-category"></a>按类别分的运行时例程
-本节按类别列出并介绍了 Microsoft 运行库例程。 为了方便引用，一些例程已在多个类别中列出。 使用单字节字符副本将多字节字符例程和宽字符例程组合起来（在它们存在的位置）。  
+本节按类别列出并介绍了 Microsoft 运行库例程。 为了方便引用，一些例程已在多个类别中列出。 多字节字符例程和宽字符例程在它们存在的位置按单字节字符副本进行分组。  
   
  Microsoft 运行库例程的主要类别是：  
   

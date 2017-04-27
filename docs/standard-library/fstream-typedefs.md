@@ -6,6 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- fstream/std::filebuf
+- fstream/std::fstream
+- fstream/std::ifstream
+- fstream/std::ofstream
+- fstream/std::wfilebuf
+- fstream/std::wfstream
+- fstream/std::wifstream
+- fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
 caps.latest.revision: 11
 manager: ghogen
@@ -22,7 +31,7 @@ ms.lasthandoff: 02/24/2017
 |[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|  
 |[wifstream](#wifstream)|[wofstream](#wofstream)|  
   
-##  <a name="a-namefilebufa--filebuf"></a><a name="filebuf"></a>  filebuf  
+##  <a name="filebuf"></a>  filebuf  
  专用于 `char` 模板参数的类型 `basic_filebuf`。  
   
 ```
@@ -32,7 +41,7 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 ### <a name="remarks"></a>备注  
  该类型是模板类 [basic_filebuf](../standard-library/basic-filebuf-class.md) 的同义词，专门用于具有默认字符特征的 `char` 类型的元素。  
   
-##  <a name="a-namefstreama--fstream"></a><a name="fstream"></a>  fstream  
+##  <a name="fstream"></a>  fstream  
  专用于 `char` 模板参数的类型 `basic_fstream`。  
   
 ```
@@ -42,7 +51,7 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 ### <a name="remarks"></a>备注  
  此类型是模板类 [basic_fstream](../standard-library/basic-fstream-class.md) 的同义词，专用于具有默认字符特征的 `char` 类型的元素。  
   
-##  <a name="a-nameifstreama--ifstream"></a><a name="ifstream"></a>  ifstream  
+##  <a name="ifstream"></a>  ifstream  
  定义要用于从文件中按顺序读取单字节字符数据的流。 `ifstream` 是将 `basic_ifstream` 的模板类 `char` 进行专用化的 typedef。  
   
  另外，还有 `wifstream`，一种专用化 `basic_ifstream` 以读取 `wchar_t` 倍宽字符的 typedef。 有关详细信息，请参阅 [wifstream](../standard-library/fstream-typedefs.md#wifstream)。  
@@ -70,7 +79,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
   
  `}`  
   
-##  <a name="a-nameofstreama--ofstream"></a><a name="ofstream"></a>  ofstream  
+##  <a name="ofstream"></a>  ofstream  
  专用于 `char` 模板参数的类型 `basic_ofstream`。  
   
 ```
@@ -80,7 +89,7 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 ### <a name="remarks"></a>备注  
  此类型是模板类 [basic_ofstream](../standard-library/basic-ofstream-class.md) 的同义词，专用于具有默认字符特征的 `char` 类型的元素。  
   
-##  <a name="a-namewfstreama--wfstream"></a><a name="wfstream"></a>  wfstream  
+##  <a name="wfstream"></a>  wfstream  
  专用于 `wchar_t` 模板参数的类型 `basic_fstream`。  
   
 ```
@@ -90,7 +99,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 ### <a name="remarks"></a>备注  
  此类型是模板类 [basic_fstream](../standard-library/basic-fstream-class.md) 的同义词，专用于具有默认字符特征的 `wchar_t` 类型的元素。  
   
-##  <a name="a-namewifstreama--wifstream"></a><a name="wifstream"></a>  wifstream  
+##  <a name="wifstream"></a>  wifstream  
  专用于 `wchar_t` 模板参数的类型 `basic_ifstream`。  
   
 ```
@@ -100,7 +109,7 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 ### <a name="remarks"></a>备注  
  此类型是模板类 [basic_ifstream](../standard-library/basic-ifstream-class.md) 的同义词，专用于具有默认字符特征的 `wchar_t` 类型的元素。  
   
-##  <a name="a-namewofstreama--wofstream"></a><a name="wofstream"></a>  wofstream  
+##  <a name="wofstream"></a>  wofstream  
  专用于 `wchar_t` 模板参数的类型 `basic_ofstream`。  
   
 ```
@@ -110,7 +119,7 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 ### <a name="remarks"></a>备注  
  此类型是模板类 [basic_ofstream](../standard-library/basic-ofstream-class.md) 的同义词，专用于具有默认字符特征的 `wchar_t` 类型的元素。  
   
-##  <a name="a-namewfilebufa--wfilebuf"></a><a name="wfilebuf"></a>  wfilebuf  
+##  <a name="wfilebuf"></a>  wfilebuf  
  专用于 `wchar_t` 模板参数的类型 `basic_filebuf`。  
   
 ```
