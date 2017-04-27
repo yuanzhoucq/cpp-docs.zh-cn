@@ -8,6 +8,251 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
+f1_keywords:
+- C3502
+- C3503
+- C3504
+- C3511
+- C3512
+- C3513
+- C3514
+- C3515
+- C3516
+- C3517
+- C3518
+- C3520
+- C3521
+- C3522
+- C3523
+- C3524
+- C3525
+- C3526
+- C3527
+- C3528
+- C3529
+- C3534
+- C3542
+- C3543
+- C3544
+- C3545
+- C3546
+- C3547
+- C3548
+- C3549
+- C3557
+- C3558
+- C3559
+- C3560
+- C3561
+- C3562
+- C3563
+- C3564
+- C3565
+- C3566
+- C3567
+- C3568
+- C3569
+- C3570
+- C3571
+- C3572
+- C3573
+- C3574
+- C3575
+- C3576
+- C3577
+- C3578
+- C3579
+- C3580
+- C3581
+- C3582
+- C3583
+- C3584
+- C3585
+- C3586
+- C3587
+- C3588
+- C3589
+- C3590
+- C3591
+- C3592
+- C3593
+- C3594
+- C3595
+- C3596
+- C3597
+- C3598
+- C3599
+- C3600
+- C3601
+- C3602
+- C3604
+- C3605
+- C3613
+- C3614
+- C3615
+- C3616
+- C3620
+- C3621
+- C3635
+- C3636
+- C3649
+- C3658
+- C3659
+- C3660
+- C3663
+- C3664
+- C3667
+- C3674
+- C3676
+- C3677
+- C3678
+- C3679
+- C3680
+- C3681
+- C3682
+- C3683
+- C3684
+- C3685
+- C3686
+- C3687
+- C3688
+- C3689
+- C3690
+- C3691
+- C3696
+- C3716
+- C3720
+- C3725
+- C3726
+- C3729
+- C3730
+- C3735
+- C3742
+- C3746
+- C3750
+- C3751
+- C3756
+- C3757
+- C3758
+- C3759
+- C3760
+- C3770
+- C3773
+- C3774
+- C3775
+- C3776
+- C3777
+- C3778
+- C3779
+- C3780
+- C3781
+- C3782
+- C3783
+- C3784
+- C3785
+- C3786
+- C3787
+- C3801
+- C3802
+- C3806
+- C3811
+- C3814
+- C3819
+- C3822
+- C3823
+- C3826
+- C3827
+- C3829
+- C3837
+- C3840
+- C3841
+- C3843
+- C3844
+- C3845
+- C3863
+- C3870
+- C3871
+- C3875
+- C3879
+- C3881
+- C3882
+- C3884
+- C3885
+- C3897
+- C3905
+- C3906
+- C3916
+- C3921
+- C3924
+- C3925
+- C3926
+- C3927
+- C3928
+- C3930
+- C3931
+- C3932
+- C3933
+- C3934
+- C3935
+- C3936
+- C3937
+- C3938
+- C3939
+- C3940
+- C3941
+- C3945
+- C3946
+- C3947
+- C3948
+- C3949
+- C3950
+- C3951
+- C3952
+- C3953
+- C3954
+- C3955
+- C3956
+- C3957
+- C3958
+- C3959
+- C3960
+- C3961
+- C3962
+- C3963
+- C3964
+- C3965
+- C3966
+- C3967
+- C3968
+- C3969
+- C3970
+- C3971
+- C3972
+- C3975
+- C3976
+- C3977
+- C3978
+- C3979
+- C3980
+- C3981
+- C3982
+- C3983
+- C3984
+- C3985
+- C3986
+- C3987
+- C3988
+- C3989
+- C3990
+- C3991
+- C3992
+- C3993
+- C3994
+- C3995
+- C3996
+- C3997
+- C3998
+- C3999
 dev_langs:
 - C++
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
@@ -31,427 +276,518 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: ec3dba4995e0df05a1871c73abfbbee5c24b5266
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 1c6e5e54541d5cdcb7e2cde7c12117266d45b514
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>编译器错误 C3500 到 C3999
 文档的此部分中的文章包含有关 Visual C++ 编译器错误的子部分的信息。 可在此处访问信息，或者在 Visual Studio 中的“输出”  窗口中选择错误号，然后选择 F1 键。  
   
- [编译器错误 C3500](../../error-messages/compiler-errors-2/compiler-error-c3500.md)  
-  
- [编译器错误 C3501](../../error-messages/compiler-errors-2/compiler-error-c3501.md)  
-  
- [编译器错误 C3505](../../error-messages/compiler-errors-2/compiler-error-c3505.md)  
-  
- [编译器错误 C3506](../../error-messages/compiler-errors-2/compiler-error-c3506.md)  
-  
- [编译器错误 C3507](../../error-messages/compiler-errors-2/compiler-error-c3507.md)  
-  
- [编译器错误 C3508](../../error-messages/compiler-errors-2/compiler-error-c3508.md)  
-  
- [编译器错误 C3509](../../error-messages/compiler-errors-2/compiler-error-c3509.md)  
-  
- [编译器错误 C3510](../../error-messages/compiler-errors-2/compiler-error-c3510.md)  
-  
- [编译器错误 C3519](../../error-messages/compiler-errors-2/compiler-error-c3519.md)  
-  
- [编译器错误 C3530](../../error-messages/compiler-errors-2/compiler-error-c3530.md)  
-  
- [编译器错误 C3531](../../error-messages/compiler-errors-2/compiler-error-c3531.md)  
-  
- [编译器错误 C3532](../../error-messages/compiler-errors-2/compiler-error-c3532.md)  
-  
- [编译器错误 C3533](../../error-messages/compiler-errors-2/compiler-error-c3533.md)  
-  
- [编译器错误 C3535](../../error-messages/compiler-errors-2/compiler-error-c3535.md)  
-  
- [编译器错误 C3536](../../error-messages/compiler-errors-2/compiler-error-c3536.md)  
-  
- [编译器错误 C3537](../../error-messages/compiler-errors-2/compiler-error-c3537.md)  
-  
- [编译器错误 C3538](../../error-messages/compiler-errors-2/compiler-error-c3538.md)  
-  
- [编译器错误 C3539](../../error-messages/compiler-errors-2/compiler-error-c3539.md)  
-  
- [编译器错误 C3540](../../error-messages/compiler-errors-2/compiler-error-c3540.md)  
-  
- [编译器错误 C3541](../../error-messages/compiler-errors-2/compiler-error-c3541.md)  
-  
- [编译器错误 C3550](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
-  
- [编译器错误 C3603](../../error-messages/compiler-errors-2/compiler-error-c3603.md)  
-  
- [编译器错误 C3609](../../error-messages/compiler-errors-2/compiler-error-c3609.md)  
-  
- [编译器错误 C3610](../../error-messages/compiler-errors-2/compiler-error-c3610.md)  
-  
- [编译器错误 C3611](../../error-messages/compiler-errors-2/compiler-error-c3611.md)  
-  
- [编译器错误 C3612](../../error-messages/compiler-errors-2/compiler-error-c3612.md)  
-  
- [编译器错误 C3618](../../error-messages/compiler-errors-2/compiler-error-c3618.md)  
-  
- [编译器错误 C3619](../../error-messages/compiler-errors-2/compiler-error-c3619.md)  
-  
- [编译器错误 C3622](../../error-messages/compiler-errors-2/compiler-error-c3622.md)  
-  
- [编译器错误 C3623](../../error-messages/compiler-errors-2/compiler-error-c3623.md)  
-  
- [编译器错误 C3624](../../error-messages/compiler-errors-2/compiler-error-c3624.md)  
-  
- [编译器错误 C3625](../../error-messages/compiler-errors-2/compiler-error-c3625.md)  
-  
- [编译器错误 C3626](../../error-messages/compiler-errors-2/compiler-error-c3626.md)  
-  
- [编译器错误 C3627](../../error-messages/compiler-errors-2/compiler-error-c3627.md)  
-  
- [编译器错误 C3628](../../error-messages/compiler-errors-2/compiler-error-c3628.md)  
-  
- [编译器错误 C3630](../../error-messages/compiler-errors-2/compiler-error-c3630.md)  
-  
- [编译器错误 C3631](../../error-messages/compiler-errors-2/compiler-error-c3631.md)  
-  
- [编译器错误 C3632](../../error-messages/compiler-errors-2/compiler-error-c3632.md)  
-  
- [编译器错误 C3633](../../error-messages/compiler-errors-2/compiler-error-c3633.md)  
-  
- [编译器错误 C3634](../../error-messages/compiler-errors-2/compiler-error-c3634.md)  
-  
- [编译器错误 C3637](../../error-messages/compiler-errors-2/compiler-error-c3637.md)  
-  
- [编译器错误 C3638](../../error-messages/compiler-errors-2/compiler-error-c3638.md)  
-  
- [编译器错误 C3640](../../error-messages/compiler-errors-2/compiler-error-c3640.md)  
-  
- [编译器错误 C3641](../../error-messages/compiler-errors-2/compiler-error-c3641.md)  
-  
- [编译器错误 C3642](../../error-messages/compiler-errors-2/compiler-error-c3642.md)  
-  
- [编译器错误 C3644](../../error-messages/compiler-errors-2/compiler-error-c3644.md)  
-  
- [编译器错误 C3645](../../error-messages/compiler-errors-2/compiler-error-c3645.md)  
-  
- [编译器错误 C3646](../../error-messages/compiler-errors-2/compiler-error-c3646.md)  
-  
- [编译器错误 C3648](../../error-messages/compiler-errors-2/compiler-error-c3648.md)  
-  
- [编译器错误 C3650](../../error-messages/compiler-errors-2/compiler-error-c3650.md)  
-  
- [编译器错误 C3651](../../error-messages/compiler-errors-2/compiler-error-c3651.md)  
-  
- [编译器错误 C3652](../../error-messages/compiler-errors-2/compiler-error-c3652.md)  
-  
- [编译器错误 C3653](../../error-messages/compiler-errors-2/compiler-error-c3653.md)  
-  
- [编译器错误 C3654](../../error-messages/compiler-errors-2/compiler-error-c3654.md)  
-  
- [编译器错误 C3655](../../error-messages/compiler-errors-2/compiler-error-c3655.md)  
-  
- [编译器错误 C3656](../../error-messages/compiler-errors-2/compiler-error-c3656.md)  
-  
- [编译器错误 C3657](../../error-messages/compiler-errors-2/compiler-error-c3657.md)  
-  
- [编译器错误 C3661](../../error-messages/compiler-errors-2/compiler-error-c3661.md)  
-  
- [编译器错误 C3662](../../error-messages/compiler-errors-2/compiler-error-c3662.md)  
-  
- [编译器错误 C3665](../../error-messages/compiler-errors-2/compiler-error-c3665.md)  
-  
- [编译器错误 C3666](../../error-messages/compiler-errors-2/compiler-error-c3666.md)  
-  
- [编译器错误 C3668](../../error-messages/compiler-errors-2/compiler-error-c3668.md)  
-  
- [编译器错误 C3669](../../error-messages/compiler-errors-2/compiler-error-c3669.md)  
-  
- [编译器错误 C3670](../../error-messages/compiler-errors-2/compiler-error-c3670.md)  
-  
- [编译器错误 C3671](../../error-messages/compiler-errors-2/compiler-error-c3671.md)  
-  
- [编译器错误 C3672](../../error-messages/compiler-errors-2/compiler-error-c3672.md)  
-  
- [编译器错误 C3673](../../error-messages/compiler-errors-2/compiler-error-c3673.md)  
-  
- [编译器错误 C3675](../../error-messages/compiler-errors-2/compiler-error-c3675.md)  
-  
- [编译器错误 C3697](../../error-messages/compiler-errors-2/compiler-error-c3697.md)  
-  
- [编译器错误 C3698](../../error-messages/compiler-errors-2/compiler-error-c3698.md)  
-  
- [编译器错误 C3699](../../error-messages/compiler-errors-2/compiler-error-c3699.md)  
-  
- [编译器错误 C3701](../../error-messages/compiler-errors-2/compiler-error-c3701.md)  
-  
- [编译器错误 C3702](../../error-messages/compiler-errors-2/compiler-error-c3702.md)  
-  
- [编译器错误 C3703](../../error-messages/compiler-errors-2/compiler-error-c3703.md)  
-  
- [编译器错误 C3704](../../error-messages/compiler-errors-2/compiler-error-c3704.md)  
-  
- [编译器错误 C3705](../../error-messages/compiler-errors-2/compiler-error-c3705.md)  
-  
- [编译器错误 C3706](../../error-messages/compiler-errors-2/compiler-error-c3706.md)  
-  
- [编译器错误 C3707](../../error-messages/compiler-errors-2/compiler-error-c3707.md)  
-  
- [编译器错误 C3708](../../error-messages/compiler-errors-2/compiler-error-c3708.md)  
-  
- [编译器错误 C3709](../../error-messages/compiler-errors-2/compiler-error-c3709.md)  
-  
- [编译器错误 C3710](../../error-messages/compiler-errors-2/compiler-error-c3710.md)  
-  
- [编译器错误 C3711](../../error-messages/compiler-errors-2/compiler-error-c3711.md)  
-  
- [编译器错误 C3712](../../error-messages/compiler-errors-2/compiler-error-c3712.md)  
-  
- [编译器错误 C3713](../../error-messages/compiler-errors-2/compiler-error-c3713.md)  
-  
- [编译器错误 C3714](../../error-messages/compiler-errors-2/compiler-error-c3714.md)  
-  
- [编译器错误 C3715](../../error-messages/compiler-errors-2/compiler-error-c3715.md)  
-  
- [编译器错误 C3717](../../error-messages/compiler-errors-2/compiler-error-c3717.md)  
-  
- [编译器错误 C3718](../../error-messages/compiler-errors-2/compiler-error-c3718.md)  
-  
- [编译器错误 C3719](../../error-messages/compiler-errors-2/compiler-error-c3719.md)  
-  
- [编译器错误 C3721](../../error-messages/compiler-errors-2/compiler-error-c3721.md)  
-  
- [编译器错误 C3722](../../error-messages/compiler-errors-2/compiler-error-c3722.md)  
-  
- [编译器错误 C3723](../../error-messages/compiler-errors-2/compiler-error-c3723.md)  
-  
- [编译器错误 C3724](../../error-messages/compiler-errors-2/compiler-error-c3724.md)  
-  
- [编译器错误 C3727](../../error-messages/compiler-errors-2/compiler-error-c3727.md)  
-  
- [编译器错误 C3728](../../error-messages/compiler-errors-2/compiler-error-c3728.md)  
-  
- [编译器错误 C3731](../../error-messages/compiler-errors-2/compiler-error-c3731.md)  
-  
- [编译器错误 C3732](../../error-messages/compiler-errors-2/compiler-error-c3732.md)  
-  
- [编译器错误 C3733](../../error-messages/compiler-errors-2/compiler-error-c3733.md)  
-  
- [编译器错误 C3734](../../error-messages/compiler-errors-2/compiler-error-c3734.md)  
-  
- [编译器错误 C3736](../../error-messages/compiler-errors-2/compiler-error-c3736.md)  
-  
- [编译器错误 C3737](../../error-messages/compiler-errors-2/compiler-error-c3737.md)  
-  
- [编译器错误 C3738](../../error-messages/compiler-errors-2/compiler-error-c3738.md)  
-  
- [编译器错误 C3739](../../error-messages/compiler-errors-2/compiler-error-c3739.md)  
-  
- [编译器错误 C3740](../../error-messages/compiler-errors-2/compiler-error-c3740.md)  
-  
- [编译器错误 C3741](../../error-messages/compiler-errors-2/compiler-error-c3741.md)  
-  
- [编译器错误 C3743](../../error-messages/compiler-errors-2/compiler-error-c3743.md)  
-  
- [编译器错误 C3744](../../error-messages/compiler-errors-2/compiler-error-c3744.md)  
-  
- [编译器错误 C3745](../../error-messages/compiler-errors-2/compiler-error-c3745.md)  
-  
- [编译器错误 C3747](../../error-messages/compiler-errors-2/compiler-error-c3747.md)  
-  
- [编译器错误 C3748](../../error-messages/compiler-errors-2/compiler-error-c3748.md)  
-  
- [编译器错误 C3749](../../error-messages/compiler-errors-2/compiler-error-c3749.md)  
-  
- [编译器错误 C3752](../../error-messages/compiler-errors-2/compiler-error-c3752.md)  
-  
- [编译器错误 C3753](../../error-messages/compiler-errors-2/compiler-error-c3753.md)  
-  
- [编译器错误 C3754](../../error-messages/compiler-errors-2/compiler-error-c3754.md)  
-  
- [编译器错误 C3755](../../error-messages/compiler-errors-2/compiler-error-c3755.md)  
-  
- [编译器错误 C3761](../../error-messages/compiler-errors-2/compiler-error-c3761.md)  
-  
- [编译器错误 C3762](../../error-messages/compiler-errors-2/compiler-error-c3762.md)  
-  
- [编译器错误 C3763](../../error-messages/compiler-errors-2/compiler-error-c3763.md)  
-  
- [编译器错误 C3764](../../error-messages/compiler-errors-2/compiler-error-c3764.md)  
-  
- [编译器错误 C3765](../../error-messages/compiler-errors-2/compiler-error-c3765.md)  
-  
- [编译器错误 C3766](../../error-messages/compiler-errors-2/compiler-error-c3766.md)  
-  
- [编译器错误 C3767](../../error-messages/compiler-errors-2/compiler-error-c3767.md)  
-  
- [编译器错误 C3768](../../error-messages/compiler-errors-2/compiler-error-c3768.md)  
-  
- [编译器错误 C3769](../../error-messages/compiler-errors-2/compiler-error-c3769.md)  
-  
- [编译器错误 C3797](../../error-messages/compiler-errors-2/compiler-error-c3797.md)  
-  
- [编译器错误 C3798](../../error-messages/compiler-errors-2/compiler-error-c3798.md)  
-  
- [编译器错误 C3799](../../error-messages/compiler-errors-2/compiler-error-c3799.md)  
-  
- [编译器错误 C3800](../../error-messages/compiler-errors-2/compiler-error-c3800.md)  
-  
- [编译器错误 C3803](../../error-messages/compiler-errors-2/compiler-error-c3803.md)  
-  
- [编译器错误 C3804](../../error-messages/compiler-errors-2/compiler-error-c3804.md)  
-  
- [编译器错误 C3805](../../error-messages/compiler-errors-2/compiler-error-c3805.md)  
-  
- [编译器错误 C3807](../../error-messages/compiler-errors-2/compiler-error-c3807.md)  
-  
- [编译器错误 C3808](../../error-messages/compiler-errors-2/compiler-error-c3808.md)  
-  
- [编译器错误 C3809](../../error-messages/compiler-errors-2/compiler-error-c3809.md)  
-  
- [编译器错误 C3812](../../error-messages/compiler-errors-2/compiler-error-c3812.md)  
-  
- [编译器错误 C3813](../../error-messages/compiler-errors-2/compiler-error-c3813.md)  
-  
- [编译器错误 C3815](../../error-messages/compiler-errors-2/compiler-error-c3815.md)  
-  
- [编译器错误 C3816](../../error-messages/compiler-errors-2/compiler-error-c3816.md)  
-  
- [编译器错误 C3817](../../error-messages/compiler-errors-2/compiler-error-c3817.md)  
-  
- [编译器错误 C3818](../../error-messages/compiler-errors-2/compiler-error-c3818.md)  
-  
- [编译器错误 C3821](../../error-messages/compiler-errors-2/compiler-error-c3821.md)  
-  
- [编译器错误 C3824](../../error-messages/compiler-errors-2/compiler-error-c3824.md)  
-  
- [编译器错误 C3825](../../error-messages/compiler-errors-2/compiler-error-c3825.md)  
-  
- [编译器错误 C3828](../../error-messages/compiler-errors-2/compiler-error-c3828.md)  
-  
- [编译器错误 C3830](../../error-messages/compiler-errors-2/compiler-error-c3830.md)  
-  
- [编译器错误 C3831](../../error-messages/compiler-errors-2/compiler-error-c3831.md)  
-  
- [编译器错误 C3832](../../error-messages/compiler-errors-2/compiler-error-c3832.md)  
-  
- [编译器错误 C3833](../../error-messages/compiler-errors-2/compiler-error-c3833.md)  
-  
- [编译器错误 C3834](../../error-messages/compiler-errors-2/compiler-error-c3834.md)  
-  
- [编译器错误 C3836](../../error-messages/compiler-errors-2/compiler-error-c3836.md)  
-  
- [编译器错误 C3838](../../error-messages/compiler-errors-2/compiler-error-c3838.md)  
-  
- [编译器错误 C3839](../../error-messages/compiler-errors-2/compiler-error-c3839.md)  
-  
- [编译器错误 C3842](../../error-messages/compiler-errors-2/compiler-error-c3842.md)  
-  
- [编译器错误 C3846](../../error-messages/compiler-errors-2/compiler-error-c3846.md)  
-  
- [编译器错误 C3848](../../error-messages/compiler-errors-2/compiler-error-c3848.md)  
-  
- [编译器错误 C3849](../../error-messages/compiler-errors-2/compiler-error-c3849.md)  
-  
- [编译器错误 C3850](../../error-messages/compiler-errors-2/compiler-error-c3850.md)  
-  
- [编译器错误 C3851](../../error-messages/compiler-errors-2/compiler-error-c3851.md)  
-  
- [编译器错误 C3852](../../error-messages/compiler-errors-2/compiler-error-c3852.md)  
-  
- [编译器错误 C3853](../../error-messages/compiler-errors-2/compiler-error-c3853.md)  
-  
- [编译器错误 C3854](../../error-messages/compiler-errors-2/compiler-error-c3854.md)  
-  
- [编译器错误 C3855](../../error-messages/compiler-errors-2/compiler-error-c3855.md)  
-  
- [编译器错误 C3856](../../error-messages/compiler-errors-2/compiler-error-c3856.md)  
-  
- [编译器错误 C3857](../../error-messages/compiler-errors-2/compiler-error-c3857.md)  
-  
- [编译器错误 C3858](../../error-messages/compiler-errors-2/compiler-error-c3858.md)  
-  
- [编译器错误 C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)  
-  
- [编译器错误 C3860](../../error-messages/compiler-errors-2/compiler-error-c3860.md)  
-  
- [编译器错误 C3861](../../error-messages/compiler-errors-2/compiler-error-c3861.md)  
-  
- [编译器错误 C3862](../../error-messages/compiler-errors-2/compiler-error-c3862.md)  
-  
- [编译器错误 C3865](../../error-messages/compiler-errors-2/compiler-error-c3865.md)  
-  
- [编译器错误 C3866](../../error-messages/compiler-errors-2/compiler-error-c3866.md)  
-  
- [编译器错误 C3867](../../error-messages/compiler-errors-2/compiler-error-c3867.md)  
-  
- [编译器错误 C3868](../../error-messages/compiler-errors-2/compiler-error-c3868.md)  
-  
- [编译器错误 C3869](../../error-messages/compiler-errors-2/compiler-error-c3869.md)  
-  
- [编译器错误 C3872](../../error-messages/compiler-errors-2/compiler-error-c3872.md)  
-  
- [编译器错误 C3873](../../error-messages/compiler-errors-2/compiler-error-c3873.md)  
-  
- [编译器错误 C3874](../../error-messages/compiler-errors-2/compiler-error-c3874.md)  
-  
- [编译器错误 C3880](../../error-messages/compiler-errors-2/compiler-error-c3880.md)  
-  
- [编译器错误 C3883](../../error-messages/compiler-errors-2/compiler-error-c3883.md)  
-  
- [编译器错误 C3886](../../error-messages/compiler-errors-2/compiler-error-c3886.md)  
-  
- [编译器错误 C3887](../../error-messages/compiler-errors-2/compiler-error-c3887.md)  
-  
- [编译器错误 C3890](../../error-messages/compiler-errors-2/compiler-error-c3890.md)  
-  
- [编译器错误 C3891](../../error-messages/compiler-errors-2/compiler-error-c3891.md)  
-  
- [编译器错误 C3892](../../error-messages/compiler-errors-2/compiler-error-c3892.md)  
-  
- [编译器错误 C3893](../../error-messages/compiler-errors-2/compiler-error-c3893.md)  
-  
- [编译器错误 C3894](../../error-messages/compiler-errors-2/compiler-error-c3894.md)  
-  
- [编译器错误 C3895](../../error-messages/compiler-errors-2/compiler-error-c3895.md)  
-  
- [编译器错误 C3896](../../error-messages/compiler-errors-2/compiler-error-c3896.md)  
-  
- [编译器错误 C3898](../../error-messages/compiler-errors-2/compiler-error-c3898.md)  
-  
- [编译器错误 C3899](../../error-messages/compiler-errors-2/compiler-error-c3899.md)  
-  
- [编译器错误 C3900](../../error-messages/compiler-errors-2/compiler-error-c3900.md)  
-  
- [编译器错误 C3901](../../error-messages/compiler-errors-2/compiler-error-c3901.md)  
-  
- [编译器错误 C3902](../../error-messages/compiler-errors-2/compiler-error-c3902.md)  
-  
- [编译器错误 C3903](../../error-messages/compiler-errors-2/compiler-error-c3903.md)  
-  
- [编译器错误 C3904](../../error-messages/compiler-errors-2/compiler-error-c3904.md)  
-  
- [编译器错误 C3908](../../error-messages/compiler-errors-2/compiler-error-c3908.md)  
-  
- [编译器错误 C3909](../../error-messages/compiler-errors-2/compiler-error-c3909.md)  
-  
- [编译器错误 C3910](../../error-messages/compiler-errors-2/compiler-error-c3910.md)  
-  
- [编译器错误 C3911](../../error-messages/compiler-errors-2/compiler-error-c3911.md)  
-  
- [编译器错误 C3912](../../error-messages/compiler-errors-2/compiler-error-c3912.md)  
-  
- [编译器错误 C3913](../../error-messages/compiler-errors-2/compiler-error-c3913.md)  
-  
- [编译器错误 C3914](../../error-messages/compiler-errors-2/compiler-error-c3914.md)  
-  
- [编译器错误 C3915](../../error-messages/compiler-errors-2/compiler-error-c3915.md)  
-  
- [编译器错误 C3917](../../error-messages/compiler-errors-2/compiler-error-c3917.md)  
-  
- [编译器错误 C3918](../../error-messages/compiler-errors-2/compiler-error-c3918.md)  
-  
- [编译器错误 C3919](../../error-messages/compiler-errors-2/compiler-error-c3919.md)  
-  
- [编译器错误 C3920](../../error-messages/compiler-errors-2/compiler-error-c3920.md)  
-  
- [编译器错误 C3923](../../error-messages/compiler-errors-2/compiler-error-c3923.md)  
+> [!NOTE]
+>  不是每个[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]错误记录在 MSDN 中。 在许多情况下，诊断消息将提供的所有可用信息。 如果你认为某个错误消息需要更多说明，请通知我们。 你可以在此页上，使用反馈表单或转到 Visual Studio 中的菜单栏，然后选择**帮助**，**报告 Bug**，或可以在提交建议或 bug 报表[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+  
+ 错误和警告的 MSDN 公共论坛，可能会发现更多帮助。 [Visual c + + 语言](http://go.microsoft.com/fwlink/?LinkId=158195)论坛是有关问题和讨论有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]语言语法和编译器。 [Visual c + + 常规](http://go.microsoft.com/fwlink/?LinkId=158194)论坛的问题是有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他论坛中未涉及。 你还可能上查找有关错误和警告的帮助[堆栈溢出](http://stackoverflow.com/)。  
+  
+|错误|消息|  
+|-----------|-------------|  
+|[编译器错误 C3500](compiler-error-c3500.md)|无效的 ProgID*progid*|  
+|[编译器错误 C3501](compiler-error-c3501.md)|不没有为 ProgID 注册任何 typelib*progid*|  
+|编译器错误 C3502|无法将 LIBID 获得 ProgID*progid*|  
+|编译器错误 C3503|字符"0 x*值*不允许在原始字符串文本|  
+|编译器错误 C3504|无法从字符串创建 GUID*字符串*|  
+|[编译器错误 C3505](compiler-error-c3505.md)|无法加载类型库*库*|  
+|[编译器错误 C3506](compiler-error-c3506.md)|不没有为 LIBID 注册任何 typelib*库*|  
+|[编译器错误 C3507](compiler-error-c3507.md)|ProgID 可以具有不能超过 39 个字符的*progid*; 也不包含除了任何标点。 '; 也不能以数字开头|  
+|[编译器错误 C3508](compiler-error-c3508.md)|*类型*︰ 不是有效的自动化类型|  
+|[编译器错误 C3509](compiler-error-c3509.md)|*类型*︰ 自动化返回类型; 参数被标记为 retval，返回类型必须是 void，HRESULT 或 SCODE 无效|  
+|[编译器错误 C3510](compiler-error-c3510.md)|找不到依赖类型库*库*|  
+|编译器错误 C3511|*标识符*︰ 委托构造函数的调用应是唯一成员初始值设定项|  
+|编译器错误 C3512|原始字符串文本的分隔符序列应不超过 16 个字符|  
+|编译器错误 C3513|*字符串*︰ 不受支持的原始字符串文本的分隔符字符|  
+|编译器错误 C3514|*字符*(*值*): 不受支持的原始字符串文本的分隔符字符|  
+|编译器错误 C3515|如果类模板部分专用化的参数是一个包扩展，则它应是最后一个参数|  
+|编译器错误 C3516|意外的文件尾时处理原始字符串文本; 找到分隔符序列*字符串*不匹配|  
+|编译器错误 C3517|*标识符*别名声明不能具有包含 auto 的类型|  
+|编译器错误 C3518|*标识符*: direct 列表初始化上下文类型中的*类型*仅能从单个初始值设定项表达式中推导|  
+|[编译器错误 C3519](compiler-error-c3519.md)|*参数*: embedded_idl 特性的参数无效|  
+|编译器错误 C3520|*标识符*︰ 必须在此上下文中展开参数包|  
+|编译器错误 C3521|*标识符*不是参数包|  
+|编译器错误 C3522|*类型*︰ 无法在此上下文中扩展参数包|  
+|编译器错误 C3523|sizeof... 需要作为其自变量的未扩展的参数包|  
+|编译器错误 C3524|*标识符*: sizeof 不能应用于参数包。 你是否希望使用...sizeof？|  
+|编译器错误 C3525|*参数*︰ 如果类模板模板参数包，它必须出现在模板参数列表的末尾|  
+|编译器错误 C3526|'...' 不能应用于 this|  
+|编译器错误 C3527|*标识符*不是有效操作数的用于 sizeof...。 你是否希望使用 sizeof？|  
+|编译器错误 C3528|*identifier1*︰ 此包扩展中的元素数中的元素数量不匹配*identifier2*|  
+|编译器错误 C3529|*参数*︰ 模板参数包不能具有默认自变量|  
+|[编译器错误 C3530](compiler-error-c3530.md)|*类型*不能与任何其他类型说明符组合|  
+|[编译器错误 C3531](compiler-error-c3531.md)|*标识符*︰ 符号的类型包含*类型*必须具有初始值设定项|  
+|[编译器错误 C3532](compiler-error-c3532.md)|数组的元素类型不能为包含的类型*类型*|  
+|[编译器错误 C3533](compiler-error-c3533.md)|参数不能具有包含的类型*类型*|  
+|编译器错误 C3534|已过时。|  
+|[编译器错误 C3535](compiler-error-c3535.md)|无法推导为类型*type1*发件人*type2*|  
+|[编译器错误 C3536](compiler-error-c3536.md)|*标识符*︰ 不能在初始化之前|  
+|[编译器错误 C3537](compiler-error-c3537.md)|你不能强制转换为包含的类型*类型*|  
+|[编译器错误 C3538](compiler-error-c3538.md)|声明符列表中*类型*必须始终推导为同一类型|  
+|[编译器错误 C3539](compiler-error-c3539.md)|模板自变量不能为包含的类型*类型*|  
+|[编译器错误 C3540](compiler-error-c3540.md)|sizeof 不能应用于包含的类型*类型*|  
+|[编译器错误 C3541](compiler-error-c3541.md)|typeid 不能应用于包含的类型*类型*|  
+|编译器错误 C3542|*标识符*︰ 虚拟成员函数不应具有的返回类型，包含*类型*|  
+|编译器错误 C3543|*类型*︰ 不包含参数包|  
+|编译器错误 C3544|*参数*︰ 参数包需要类型模板自变量|  
+|编译器错误 C3545|*参数*︰ 参数包需要非类型模板自变量|  
+|编译器错误 C3546|“...”: 没有可用于扩展的参数包|  
+|编译器错误 C3547|模板参数*参数*无法使用，因为它后面的模板参数包并不能从的函数参数推导*函数*|  
+|编译器错误 C3548|*标识符*︰ 此上下文中不使用参数包|  
+|编译器错误 C3549|*值*︰ 函数参数包不能具有默认自变量|  
+|[编译器错误 C3550](compiler-error-c3550.md)|此上下文只允许纯“decltype(auto)”|  
+|[编译器错误 C3551](compiler-error-c3551.md)|如果使用尾随返回类型，则前导的返回类型应为单个类型说明符 auto (不*类型*)|  
+|[编译器错误 C3552](compiler-error-c3552.md)|应该为“decltype(auto)”|  
+|[编译器错误 C3553](compiler-error-c3553.md)|decltype 应为表达式而不是类型|  
+|[编译器错误 C3554](compiler-error-c3554.md)|*类型*不能与任何其他类型说明符组合|  
+|[编译器错误 C3555](compiler-error-c3555.md)|“decltype”的参数不正确|  
+|[编译器错误 C3556](compiler-error-c3556.md)|*表达式*: decltype 的参数不正确|  
+|编译器错误 C3557|已过时。|  
+|编译器错误 C3558|已过时。|  
+|编译器错误 C3559|递归调用*函数*︰ 递归编译在 concurrency:: parallel_for_each 的调用关系图时检测到:*函数*|  
+|编译器错误 C3560|*函数*︰ 编译在 concurrency:: parallel_for_each 的调用关系图时，IL 不可用: '*函数*|  
+|编译器错误 C3561|磁贴在编译在 concurrency:: parallel_for_each 的调用关系图时不磁贴一致性的控制流中找到的屏障操作:*函数*|  
+|编译器错误 C3562|内部函数*函数*限定为没有多个*数*参数|  
+|编译器错误 C3563|编译在 concurrency:: parallel_for_each 的调用关系图时检测到的无限循环:*函数*|  
+|编译器错误 C3564|编译在 concurrency:: parallel_for_each 的调用关系图时读取未初始化的值:*函数*|  
+|编译器错误 C3565|Tile_static 内存总量 (*数*字节) 超出了限制*数*字节编译 concurrency:: parallel_for_each 的调用关系图时|  
+|编译器错误 C3566|具有副作用的块嵌套太深在 concurrency:: parallel_for_each 的编译调用的图形: '*函数*|  
+|编译器错误 C3567|除或对零求模零编译在 concurrency:: parallel_for_each 的调用关系图时检测到:*函数*|  
+|编译器错误 C3568|寄存器的总和超过了限制*数*编译 concurrency:: parallel_for_each 的调用关系图时。 请简化你的程序|  
+|编译器错误 C3569|争用条件编译在 concurrency:: parallel_for_each 的调用关系图时检测到:*函数*|  
+|编译器错误 C3570|使用 /clr 编译时非法使用了 amp 限制的范围|  
+|编译器错误 C3571|*类型*︰ 非法的计算域自变量; 不是类类型|  
+|编译器错误 C3572|*类型*︰ 非法的计算域自变量; 缺少的公共成员: 静态 const int 级别或排名值为非正值|  
+|编译器错误 C3573|传递给 concurrency:: parallel_for_each 的 concurrency::graphics::sampler 的实例数不能超过*数*|  
+|编译器错误 C3574|*类型*︰ 非法的磁贴范围︰ 必须为正数且 (1) Z < =*数*;(2) Z*Y*X <= *number*|  
+|编译器错误 C3575|*类型*︰ 非法的计算域自变量; 缺少的公共成员: concurrency::index <*数*> _map_index (const concurrency::index <*数*> &) restrict(amp)|  
+|编译器错误 C3576|*类型*: concurrency::details::_Parallel_for_each 参数 #*数*具有不受支持的类型|  
+|编译器错误 C3577|concurrency:: parallel_for_each 内核自变量是非法的︰ 无法解析为成员的调用 void operator （) (*类型*) restrict(amp)|  
+|编译器错误 C3578|传递给 concurrency:: parallel_for_each 的函数对象的大小不能超过*数*字节|  
+|编译器错误 C3579|Concurrency::array 和 concurrency::graphics::texture 传递给 concurrency:: parallel_for_each 的只读实例数量不得超过*数*|  
+|编译器错误 C3580|Concurrency::array 和 concurrency::graphics::texture 传递给 concurrency:: parallel_for_each 的可写实例数量不得超过*数*|  
+|编译器错误 C3581|*类型*︰ 不支持在 amp 中的类型限制代码|  
+|编译器错误 C3582|已过时。|  
+|编译器错误 C3583|*标识符*: 变量的大小 (*数*字节) 超过最大大小 (*数*字节) 的限制的 amp 代码的支持|  
+|编译器错误 C3584|在上不支持的 tile_static 的使用情况*标识符*|  
+|编译器错误 C3585|*标识符*具有在 amp 中的不受支持的存储类受限代码|  
+|编译器错误 C3586|*标识符*︰ 使用全局或静态变量不支持限制的 amp 代码中|  
+|编译器错误 C3587|amp 限制代码中不支持 dynamic_cast|  
+|编译器错误 C3588|从强制转换*type1*到*type2*限制的 amp 代码中不受支持|  
+|编译器错误 C3589|*字符串*︰ 在 amp 中的字符串文本的不受支持的使用情况限制代码|  
+|编译器错误 C3590|*令牌*: lambda 是否 amp 限制，按引用捕获或捕获 this 不受支持|  
+|编译器错误 C3591|amp 限制代码中不支持 typeid 运算符|  
+|编译器错误 C3592|amp 限制代码中不支持内联本机程序集(“__asm”)|  
+|编译器错误 C3593|amp 限制代码中不支持“goto”|  
+|编译器错误 C3594|amp 限制代码中不支持异常处理(try、catch、throw 等)|  
+|编译器错误 C3595|amp 限制代码中的常量值超出了支持的范围|  
+|编译器错误 C3596|*参数*(*类型*): lambda 捕获变量具有不受支持的限制的 amp 代码中的类型|  
+|编译器错误 C3597|*参数*:*标识符*不允许通过值捕获，如果 lambda amp 限制|  
+|编译器错误 C3598|amp 限制代码中不支持标签语句|  
+|编译器错误 C3599|*运算符*︰ 不能对为受限的 amp 代码中的布尔值的指针执行指针算术|  
+|编译器错误 C3600|*函数*︰ 使用磁贴的\_编译非平铺 concurrency::parallel 的调用关系图时检测到的静态内存\_在 for_each:*函数*|  
+|编译器错误 C3601|*类型*︰ 是 amp 诊断函数的无效自变量类型*函数*|  
+|编译器错误 C3602|不支持在编译在 concurrency:: parallel_for_each 的调用关系图时检测到的控制流:*函数*|  
+|[编译器错误 C3603](compiler-error-c3603.md)|*符号*︰ 类型 '*类型*尚不支持|  
+|编译器错误 C3604|*标识符*︰ 只能在 gc 堆上创建托管的对象|  
+|编译器错误 C3605|取样器的总数 (*数*捕获和*数*预定义) 超过*数*编译在 concurrency:: parallel_for_each 的调用关系图时:*函数*|  
+|编译器错误 C3606|已过时。|  
+|编译器错误 C3607|已过时。|  
+|编译器错误 C3608|已过时。|  
+|[编译器错误 C3609](compiler-error-c3609.md)|*标识符*: 密封/最终函数必须是虚拟的|  
+|[编译器错误 C3610](compiler-error-c3610.md)|*标识符*︰ 值类型必须将装箱方法之前*方法*可以调用|  
+|[编译器错误 C3611](compiler-error-c3611.md)|*标识符*︰ 密封的函数不能有纯说明符|  
+|[编译器错误 C3612](compiler-error-c3612.md)|*标识符*︰ 密封的类不能具有任何纯虚方法|  
+|编译器错误 C3613|“->”后缺少返回类型(假定为“int”)|  
+|编译器错误 C3614|在同一个类; 内的包大小的不同值以前已被*值*，新值是*值*|  
+|编译器错误 C3615|constexpr 函数*函数*所得结果不能在常量表达式|  
+|编译器错误 C3616|已过时。|  
+|编译器错误 C3617|已过时。|  
+|[编译器错误 C3618](compiler-error-c3618.md)|*声明*︰ 不能定义标记 DllImport 的方法|  
+|[编译器错误 C3619](compiler-error-c3619.md)|托管/WinRT 类型中不能声明模板|  
+|编译器错误 C3620|*类型*: WinRT 类型上不允许设置对齐|  
+|编译器错误 C3621|*类型*︰ 仅封装值的默认 (*数*) 允许 WinRT 类型|  
+|[编译器错误 C3622](编译器错误 c3622.md*类型*︰ 的类声明为*关键字*不能实例化|  
+|[编译器错误 C3623](compiler-error-c3623.md)|*标识符*︰ 托管/WinRT 类型不支持位域|  
+|[编译器错误 C3624](compiler-error-c3624.md)|*类型*︰ 使用此类型需要对程序集/模块的引用*标识符*|  
+|[编译器错误 C3625](compiler-error-c3625.md)|*类*︰ 本机类型不能从托管/WinRT 类型派生*类型*|  
+|[编译器错误 C3626](compiler-error-c3626.md)|*标识符*:*关键字*关键字只能在 COM 接口、 成员函数和都是指向委托的数据成员|  
+|[编译器错误 C3627](compiler-error-c3627.md)|只有值类型可以装箱|  
+|[编译器错误 C3628](compiler-error-c3628.md)|*类*︰ 托管/WinRT 类只支持公共继承|  
+|编译器错误 C3629|*令牌*︰ 捕获 default 只能出现在 lambda 捕获列表的开头|  
+|[编译器错误 C3630](compiler-error-c3630.md)|错误处理令牌时*令牌*|  
+|[编译器错误 C3631](compiler-error-c3631.md)|*事件*︰ 无法重载托管/WinRT 事件|  
+|[编译器错误 C3632](compiler-error-c3632.md)|*事件*︰ 非法的事件样式*构造*|  
+|[编译器错误 C3633](compiler-error-c3633.md)|不能定义*标识符*为托管的成员*类*|  
+|[编译器错误 C3634](compiler-error-c3634.md)|*成员*︰ 不能定义托管/WinRT 类的一个抽象方法|  
+|编译器错误 C3635|*标识符*︰ 不能应用于托管/WinRT 类 (使用*标识符*改为)|  
+|编译器错误 C3636|*标识符*︰ 不能应用于此类型|  
+|[编译器错误 C3637](compiler-error-c3637.md)|*函数*︰ 友元函数定义不能为专用化函数模板/泛型|  
+|[编译器错误 C3638](compiler-error-c3638.md)|*运算符*︰ 不能重新定义的标准装箱和取消装箱转换运算符|  
+|编译器错误 C3639|已过时。|  
+|[编译器错误 C3640](compiler-error-c3640.md)|*成员*︰ 必须定义的本地类的引用或虚拟成员函数|  
+|[编译器错误 C3641](compiler-error-c3641.md)|*函数*': 无效的调用约定*约定*使用 /clr 编译的函数︰ pure 或 /clr: safe|  
+|[编译器错误 C3642](compiler-error-c3642.md)|*函数*︰ 无法从本机代码调用约定的 __clrcall 与调用函数|  
+|编译器错误 C3643|已过时。|  
+|[编译器错误 C3644](compiler-error-c3644.md)|*函数*︰ 无法编译将生成托管的代码的函数|  
+|[编译器错误 C3645](compiler-error-c3645.md)|*函数*: __clrcall 不能用于函数编译为本机代码|  
+|[编译器错误 C3646](compiler-error-c3646.md)|*标识符*': 未知的重写说明符|  
+|编译器错误 C3647|已过时。|  
+|[编译器错误 C3648](compiler-error-c3648.md)|托管的类型不支持此显式重写语法|  
+|编译器错误 C3649|不允许对 /ZW 使用此显式覆盖语法|  
+|[编译器错误 C3650](compiler-error-c3650.md)|*成员*︰ 不能用作显式重写，必须为基类的虚拟成员函数|  
+|[编译器错误 C3651](compiler-error-c3651.md)|*成员*︰ 不能用作显式重写，必须是基类的成员|  
+|[编译器错误 C3652](compiler-error-c3652.md)|*成员*︰ 显式重写的函数必须是虚拟的|  
+|[编译器错误 C3653](compiler-error-c3653.md)|*标识符*︰ 不能用作命名重写︰ 重写未找到; 函数是否忘记函数命名显式使用答:: 运算符？|  
+|[编译器错误 C3654](compiler-error-c3654.md)|*令牌*︰ 显式重写中的语法错误|  
+|[编译器错误 C3655](compiler-error-c3655.md)|*成员*︰ 函数已显式重写|  
+|[编译器错误 C3656](compiler-error-c3656.md)|*关键字*︰ 重写说明符不能重复|  
+|[编译器错误 C3657](compiler-error-c3657.md)|析构函数/终结器不能显式重写或被显式重写|  
+|编译器错误 C3658|已过时。|  
+|编译器错误 C3659|*成员*︰ 重写说明符*关键字*不支持|  
+|编译器错误 C3660|*member1*︰ 隐藏继承成员*member2*|  
+|[编译器错误 C3661](compiler-error-c3661.md)|显式重写列表没有发现任何要重写的方法|  
+|[编译器错误 C3662](compiler-error-c3662.md)|*成员*︰ 重写说明符*关键字*只允许对托管/WinRT 类的成员函数执行|  
+|编译器错误 C3663|已过时。|  
+|编译器错误 C3664|*成员*︰ 不能用作显式重写，必须具有 public 或受保护的可访问性|  
+|[编译器错误 C3665](compiler-error-c3665.md)|*成员*︰ 重写说明符*关键字*不允许对析构函数/终结器|  
+|[编译器错误 C3666](compiler-error-c3666.md)|*构造函数*︰ 重写说明符*关键字*不允许在构造函数|  
+|编译器错误 C3667|*属性*︰ 特性不支持包扩展|  
+|[编译器错误 C3668](compiler-error-c3668.md)|*成员*︰ 重写说明符替代方法未进行重写任何基类方法|  
+|[编译器错误 C3669](compiler-error-c3669.md)|*成员*︰ 重写的说明符替代不允许在静态成员函数或构造函数|  
+|[编译器错误 C3670](compiler-error-c3670.md)|*成员*︰ 不能重写无法访问基类方法*成员*|  
+|[编译器错误 C3671](compiler-error-c3671.md)|*成员*︰ 函数不重写*成员*|  
+|[编译器错误 C3672](compiler-error-c3672.md)|伪析构函数表达式只能用作函数调用的一部分|  
+|[编译器错误 C3673](compiler-error-c3673.md)|*类*︰ 类没有复制构造函数|  
+|编译器错误 C3674|找不到标准库模块*模块*|  
+|[编译器错误 C3675](compiler-error-c3675.md)|*函数*︰ 因为保留*属性*定义|  
+|编译器错误 C3676|*类*: ref 类和基类具有不兼容的属性 [*属性*]|  
+|编译器错误 C3677|“operator”后的字符串文本不能具有编码前缀|  
+|编译器错误 C3678|字符串后的 operator 必须是空字符串"""|  
+|编译器错误 C3679|预期之后的文本的后缀标识符运算符"""|  
+|编译器错误 C3680|不能将用户定义的字符串常量与不匹配的文本后缀标识符连接|  
+|编译器错误 C3681|fallthrough︰ 特性只能出现在封闭的 switch 语句中|  
+|编译器错误 C3682|运算符*标识符*︰ 文本运算符/文本运算符模板不能声明为具有 C 链接|  
+|编译器错误 C3683|不能使用相同的文本后缀标识符定义原始文本运算符和文本运算符模板|  
+|编译器错误 C3684|运算符*标识符*︰ 文本运算符声明具有无效的参数列表|  
+|编译器错误 C3685|运算符*标识符*︰ 文本运算符模板不能具有函数参数|  
+|编译器错误 C3686|运算符*标识符*︰ 文本运算符模板必须具有恰好一个是参数包的模板参数|  
+|编译器错误 C3687|运算符*标识符*︰ 文本运算符模板必须具有非类型模板参数的类型为 char|  
+|编译器错误 C3688|无效文本的后缀*后缀*; 文本运算符或文本运算符模板运算符*标识符*找不到|  
+|编译器错误 C3689|运算符*标识符*︰ 文本运算符/文本运算符模板必须在全局或命名空间范围内|  
+|编译器错误 C3690|应该为字符串文本，但找到的是用户定义的字符串文本|  
+|编译器错误 C3691|无效文本的前缀*前缀*|  
+|编译器错误 C3692|已过时。|  
+|编译器错误 C3693|已过时。|  
+|编译器错误 C3694|已过时。|  
+|编译器错误 C3695|已过时。|  
+|编译器错误 C3696|*关键字*: %上不能使用此限定符|  
+|[编译器错误 C3697](compiler-error-c3697.md)|*关键字*︰ 不能使用此限定符 ^|  
+|[编译器错误 C3698](compiler-error-c3698.md)|*类型*︰ 不能使用此类型作为自变量*运算符*|  
+|[编译器错误 C3699](compiler-error-c3699.md)|*运算符*︰ 不能在类型上使用此间接寻址*类型*|  
+|编译器错误 C3700|已过时。|  
+|[编译器错误 C3701](compiler-error-c3701.md)|*函数*︰ 事件源具有任何事件|  
+|[编译器错误 C3702](compiler-error-c3702.md)|COM 事件需要 ATL|  
+|[编译器错误 C3703](compiler-error-c3703.md)|*event_handler*︰ 作为源，则事件处理程序方法必须具有相同的存储类*事件*|  
+|[编译器错误 C3704](compiler-error-c3704.md)|*成员*: vararg 方法不能激发事件|  
+|[编译器错误 C3705](compiler-error-c3705.md)|*函数*︰ 找不到事件接口|  
+|[编译器错误 C3706](compiler-error-c3706.md)|*函数*︰ 必须是一个 COM 接口激发 COM 事件|  
+|[编译器错误 C3707](compiler-error-c3707.md)|*成员*︰ 调度接口方法必须具有一个 dispid|  
+|[编译器错误 C3708](compiler-error-c3708.md)|*函数*︰ 错误地使用*关键字*; 必须是兼容的事件源的成员|  
+|[编译器错误 C3709](compiler-error-c3709.md)|*函数*︰ 不正确的语法指定中 __hook/__unhook 事件|  
+|[编译器错误 C3710](compiler-error-c3710.md)|*函数*︰ 不正确的语法，用于指定中 __hook/__unhook 的事件处理程序|  
+|[编译器错误 C3711](compiler-error-c3711.md)|*事件*︰ 非托管事件源方法必须返回 void 或整数类型|  
+|[编译器错误 C3712](compiler-error-c3712.md)|*event_handler*︰ 事件处理程序方法必须返回与源相同的类型*事件*|  
+|[编译器错误 C3713](compiler-error-c3713.md)|*event_handler*︰ 作为源，则事件处理程序方法必须具有相同的函数参数*事件*|  
+|[编译器错误 C3714](compiler-error-c3714.md)|*event_handler*︰ 事件处理程序方法必须具有相同的调用约定，为源*事件*|  
+|[编译器错误 C3715](compiler-error-c3715.md)|*指针*︰ 必须是指向的指针*类型*|  
+|编译器错误 C3716|已过时。|  
+|[编译器错误 C3717](compiler-error-c3717.md)|*成员*︰ 不能定义激发事件的方法|  
+|[编译器错误 C3718](compiler-error-c3718.md)|可以仅调用 __*关键字*接收类的成员函数的上下文中|  
+|[编译器错误 C3719](compiler-error-c3719.md)|*成员*︰ 接口基于的事件源仅用于 COM 事件|  
+|编译器错误 C3720|*类型*︰ 只能在双或调度接口上实现 IDispatch|  
+|[编译器错误 C3721](compiler-error-c3721.md)|*签名*︰ 事件不兼容的签名|  
+|[编译器错误 C3722](compiler-error-c3722.md)|不允许泛型事件|  
+|[编译器错误 C3723](compiler-error-c3723.md)|*函数*︰ 无法解析事件|  
+|[编译器错误 C3724](compiler-error-c3724.md)|使用具有事件的多线程处理必须 #include <windows.h>|  
+|编译器错误 C3725|已过时。|  
+|编译器错误 C3726|已过时。|  
+|[编译器错误 C3727](compiler-error-c3727.md)|*事件*︰ 托管的事件必须是成员函数或是指向委托的指针的数据成员|  
+|[编译器错误 C3728](compiler-error-c3728.md)|*事件*︰ 事件不具有引发方法|  
+|编译器错误 C3729|已过时。|  
+|编译器错误 C3730|已过时。|  
+|[编译器错误 C3731](compiler-error-c3731.md)|不兼容的事件*事件*和处理程序*event_handler*; 事件源和事件处理程序必须具有相同的事件类型|  
+|[编译器错误 C3732](compiler-error-c3732.md)|*接口*︰ 不能从 IDispatch 继承自定义接口激发 COM 事件|  
+|[编译器错误 C3733](compiler-error-c3733.md)|*事件*︰ 用于指定的 COM 事件; 不正确的语法是否忘记了 __interface？|  
+|[编译器错误 C3734](compiler-error-c3734.md)|*类*︰ 托管/WinRT 类不能是组件类|  
+|编译器错误 C3735|已过时。|  
+|[编译器错误 C3736](compiler-error-c3736.md)|*成员*︰ 必须是一种方法，或在托管事件中 （可选） 的数据成员|  
+|[编译器错误 C3737](compiler-error-c3737.md)|*标识符*︰ 委托可能没有显式调用约定|  
+|[编译器错误 C3738](compiler-error-c3738.md)|*约定*︰ 显式实例化的调用约定必须匹配的实例化的模板|  
+|[编译器错误 C3739](compiler-error-c3739.md)|*类*︰ 语法仅当布局\_依赖 event_receiver 参数为 true|  
+|[编译器错误 C3740](compiler-error-c3740.md)|*模板*︰ 模板不能发出或接收事件|  
+|[编译器错误 C3741](compiler-error-c3741.md)|*类*︰ 必须能是组件类时布局\_依赖 event_receiver 参数为 true|  
+|编译器错误 C3742|*token1*︰ 不对称令牌序列中的特性自变量*属性*，预期*token2*|  
+|[编译器错误 C3743](compiler-error-c3743.md)|当 event_receiver 的“layout_dependent”参数为 True 时才能挂钩/解除挂钩整个接口 |  
+|[编译器错误 C3744](compiler-error-c3744.md)|对托管事件 __unhook 必须有至少 3 个参数|  
+|[编译器错误 C3745](compiler-error-c3745.md)|*函数*︰ 只有事件可以被引发|  
+|编译器错误 C3746|标准属性*标识符*属性列表中出现最多一次|  
+|[编译器错误 C3747](compiler-error-c3747.md)|缺少默认模板/泛型参数︰ 参数*数*|  
+|[编译器错误 C3748](compiler-error-c3748.md)|*接口*︰ 非托管的接口可能不会激发事件|  
+|[编译器错误 C3749](compiler-error-c3749.md)|*属性*︰ 不能在函数内使用的自定义特性|  
+|编译器错误 C3750|*令牌*︰ 特性列表中的有意外的标记|  
+|编译器错误 C3751|*标识符*︰ 在属性列表中的意外的标识符|  
+|[编译器错误 C3752](compiler-error-c3752.md)|*属性*︰ 不能将属性;*关键字*不应在此上下文中使用|  
+|[编译器错误 C3753](compiler-error-c3753.md)|不允许使用泛型属性|  
+|[编译器错误 C3754](compiler-error-c3754.md)|委托构造函数︰ 成员函数*成员*无法对类型的实例调用*类型*|  
+|[编译器错误 C3755](compiler-error-c3755.md)|*标识符*︰ 不能定义委托|  
+|编译器错误 C3756|已过时。|  
+|编译器错误 C3757|*类型*︰ 不允许 constexpr 函数的类型|  
+|编译器错误 C3758|*成员*︰ 虚函数不能声明为 constexpr|  
+|编译器错误 C3759|*成员*︰ 非文本类型的成员函数不能声明为 constexpr|  
+|编译器错误 C3760|请使用 __property 关键字来声明托管/WinRT 中的属性 '*类*|  
+|[编译器错误 C3761](compiler-error-c3761.md)|*函数*: retval 只能出现在函数的最后一个参数|  
+|[编译器错误 C3762](compiler-error-c3762.md)|无法处理属性*属性*|  
+|[编译器错误 C3763](compiler-error-c3763.md)|*类型*: retval 和 out 只能出现在数据指针类型|  
+|[编译器错误 C3764](compiler-error-c3764.md)|*成员*︰ 不能重写基类方法*成员*|  
+|[编译器错误 C3765](compiler-error-c3765.md)|*事件*︰ 不能在类/结构中定义事件*类型*标记为 event_receiver|  
+|[编译器错误 C3766](compiler-error-c3766.md)|*类型*'必须提供的接口方法的实现'*函数*|  
+|[编译器错误 C3767](compiler-error-c3767.md)|*函数*︰ 候选函数不可访问|  
+|[编译器错误 C3768](compiler-error-c3768.md)|在纯托管代码中不能采用虚拟 vararg 函数的地址|  
+|[编译器错误 C3769](compiler-error-c3769.md)|*标识符*︰ 嵌套的类不能具有同名的立即封闭类|  
+|编译器错误 C3770|*类型*︰ 不是有效的基类|  
+|[编译器错误 C3771](compiler-error-c3771.md)|*标识符*︰ 在最近的命名空间范围中找不到友元声明|  
+|[编译器错误 C3772](compiler-error-c3772.md)|*标识符*': 无效的友元模板声明|  
+|编译器错误 C3773|请使用/await 编译器开关来启用协同程序|  
+|编译器错误 C3774|找不到*作用域*::*标识符*︰ 请包括*标头*标头|  
+|编译器错误 C3775|返回类型*函数*不应*类型*|  
+|编译器错误 C3776|不能返回类型的表达式中使用非 void 最终返回类型协同程序 void|  
+|编译器错误 C3777|*函数*: 协同程序不能接受变量自变量列表|  
+|编译器错误 C3778|alloca: 协同程序中不能使用|  
+|编译器错误 C3779|*函数*︰ 返回的函数*类型*不能在定义它之前|  
+|编译器错误 C3780|*函数*︰ 转换函数返回的*类型*不能在定义它之前|  
+|编译器错误 C3781|*关键字*︰ 不能在类型协同程序中使用*类型*。 任一*关键字*或*关键字*必须存在于关联 promise_type|  
+|编译器错误 C3782|*类型*︰ 协同程序的承诺不能同时包含*关键字*和*关键字*|  
+|编译器错误 C3783|*标识符*︰ 不能为协同程序|  
+|编译器错误 C3784|*关键字*表达式不能出现在此上下文中|  
+|编译器错误 C3785|std::integer_sequence 的第一个模板参数必须是整数类型|  
+|编译器错误 C3786|std::make_integer_sequence 的第二个模板参数必须是大于或等于零的整数常量|  
+|编译器错误 C3787|无法推导作为此协同程序的返回类型|  
+|编译器错误 C3788|已过时。|  
+|编译器错误 C3789|已过时。|  
+|编译器错误 C3790|已过时。|  
+|编译器错误 C3791|已过时。|  
+|编译器错误 C3792|已过时。|  
+|编译器错误 C3793|已过时。|  
+|编译器错误 C3794|已过时。|  
+|编译器错误 C3795|已过时。|  
+|编译器错误 C3796|已过时。|  
+|[编译器错误 C3797](compiler-error-c3797.md)|*关键字*︰ 事件声明不能重写说明符 （应该放在事件添加/删除/引发方法相反）|  
+|[编译器错误 C3798](compiler-error-c3798.md)|*关键字*︰ 属性声明不能重写说明符 （应能将置于属性改为 get/set 方法）|  
+|[编译器错误 C3799](compiler-error-c3799.md)|索引的属性不能具有空参数列表|  
+|[编译器错误 C3800](compiler-error-c3800.md)|*声明*︰ 不能混合属性和事件|  
+|编译器错误 C3801|*属性*︰ 特性不可能有一个自变量子句|  
+|编译器错误 C3802|已过时。|  
+|[编译器错误 C3803](compiler-error-c3803.md)|*属性*︰ 属性是一种与其某个访问器的不兼容类型*访问器*|  
+|[编译器错误 C3804](compiler-error-c3804.md)|*成员*︰ 访问器方法的属性必须为所有静态或所有非静态|  
+|[编译器错误 C3805](compiler-error-c3805.md)|*令牌*︰ 意外的标记，应输入} '或 '，'|  
+|编译器错误 C3806|*令牌*︰ 意外的标记，应输入 {或成员的初始值设定项|  
+|[编译器错误 C3807](compiler-error-c3807.md)|*类型*︰ 具有 ComImport 特性的类不能从派生*类型*，允许仅接口的实现|  
+|[编译器错误 C3808](compiler-error-c3808.md)|*类型*︰ 具有 ComImport 特性的类不能定义成员*成员*、 仅抽象或允许使用 dllimport 函数|  
+|[编译器错误 C3809](compiler-error-c3809.md)|*类型*︰ 托管/WinRT 类型不能有任何友元函数/类/接口|  
+|编译器错误 C3810|已过时。|  
+|编译器错误 C3811|已过时。|  
+|[编译器错误 C3812](compiler-error-c3812.md)|“__property”必须是属性声明的第一个标记|  
+|[编译器错误 C3813](compiler-error-c3813.md)|托管/WinRT 类型的定义中只能出现在属性声明|  
+|编译器错误 C3814|已过时。|  
+|[编译器错误 C3815](compiler-error-c3815.md)|方法的返回类型*成员*必须与 setter 的最后一个参数的类型匹配|  
+|[编译器错误 C3816](compiler-error-c3816.md)|类/结构*成员*以前声明或定义与不同的管理/WinRT 修饰符|  
+|[编译器错误 C3817](compiler-error-c3817.md)|*声明*︰ 属性可以仅应用于函数|  
+|[编译器错误 C3818](compiler-error-c3818.md)|数组属性声明*属性*应重载索引属性*属性*|  
+|编译器错误 C3819|已过时。|  
+|[编译器错误 C3820](compiler-error-c3820.md)|*标识符*︰ 初始值设定项必须进行管理|  
+|[编译器错误 C3821](compiler-error-c3821.md)|*函数*︰ 托管的类型或函数不能在非托管函数|  
+|编译器错误 C3822|已过时。|  
+|编译器错误 C3823|已过时。|  
+|[编译器错误 C3824](compiler-error-c3824.md)|*类型*︰ 此类型不能出现在此上下文 （函数参数、 返回类型或静态成员）|  
+|[编译器错误 C3825](compiler-error-c3825.md)|*类型*︰ 托管/WinRT 类只能支持托管/WinRT 事件|  
+|编译器错误 C3826|已过时。|  
+|编译器错误 C3827|已弃用的标准特性可能有没有自变量或一个字符串文字描述的原因|  
+|[编译器错误 C3828](compiler-error-c3828.md)|无法为指定使用位置自变量*关键字*表达式类型*类型*|  
+|编译器错误 C3829|标准属性 noreturn 可能仅应用于函数|  
+|[编译器错误 C3830](compiler-error-c3830.md)|*type1*︰ 不能继承自*type2*，值类型只能继承自接口类|  
+|[编译器错误 C3831](compiler-error-c3831.md)|*标识符*:*类型*不能具有固定的数据成员或成员函数返回钉住指针|  
+|[编译器错误 C3832](compiler-error-c3832.md)|*typelib*︰ 类型库看起来就像它为 32 位指针生成; 请更改 ptrsize 限定符|  
+|[编译器错误 C3833](compiler-error-c3833.md)|*类型*': 无效的目标类型*标识符*|  
+|[编译器错误 C3834](compiler-error-c3834.md)|显式转换为钉住指针非法；改用钉住的局部变量|  
+|编译器错误 C3835|已过时。|  
+|[编译器错误 C3836](compiler-error-c3836.md)|静态构造函数不允许有成员初始值设定项列表|  
+|编译器错误 C3837|在此上下文中不允许属性|  
+|[编译器错误 C3838](compiler-error-c3838.md)|不能继承自*类型*|  
+|[编译器错误 C3839](compiler-error-c3839.md)|无法更改托管/WinRT 类型中的对齐方式|  
+|编译器错误 C3840|已过时。|  
+|编译器错误 C3841|已过时。|  
+|[编译器错误 C3842](compiler-error-c3842.md)|*标识符*︰ 不支持托管/WinRT 类型的成员函数上的 const 和 volatile 限定符|  
+|编译器错误 C3843|*标识符*︰ 不支持托管/WinRT 类型的成员函数上的引用限定符|  
+|编译器错误 C3844|*标识符*︰ 无法导入来自符号*源*︰ 为*标识符*当前范围内已存在|  
+|编译器错误 C3845|已过时。|  
+|[编译器错误 C3846](compiler-error-c3846.md)|*标识符*︰ 无法导入来自符号*源*︰ 为*标识符*具有已导入从另一个程序集*程序集*|  
+|编译器错误 C3847|已过时。|  
+|[编译器错误 C3848](compiler-error-c3848.md)|表达式具有类型*类型*都将丢失某些 const volatile 限定符才能调用*标识符*|  
+|[编译器错误 C3849](compiler-error-c3849.md)|函数样式类型的表达式调用*类型*将所有丢失 const 和/或可变限定符*数*可用运算符重载|  
+|[编译器错误 C3850](compiler-error-c3850.md)|*令牌*︰ 通用字符名称指定了一个无效字符|  
+|[编译器错误 C3851](compiler-error-c3851.md)|*令牌*︰ 通用字符名称不能指定基本字符集中的字符|  
+|[编译器错误 C3852](compiler-error-c3852.md)|*成员*具有类型*类型*︰ 聚合初始化无法初始化此成员|  
+|[编译器错误 C3853](compiler-error-c3853.md)|“=”: 通过指向函数的引用重新初始化引用或分配是非法的|  
+|[编译器错误 C3854](compiler-error-c3854.md)|左侧的 = 的表达式计算的函数。 无法分配到函数 （函数不是左值）|  
+|[编译器错误 C3855](compiler-error-c3855.md)|*函数*︰ 模板/泛型参数*标识符*与声明不兼容|  
+|[编译器错误 C3856](compiler-error-c3856.md)|*类*︰ 不是类模板/泛型类。|  
+|[编译器错误 C3857](compiler-error-c3857.md)|*模板*︰ 不允许多个模板/泛型参数列表|  
+|[编译器错误 C3858](compiler-error-c3858.md)|*标识符*︰ 不能重新声明在当前范围内|  
+|[编译器错误 C3859](compiler-error-c3859.md)|PCH 超出; 的虚拟内存范围请重新编译使用命令行选项的-Zm*数*或更高版本|  
+|[编译器错误 C3860](compiler-error-c3860.md)|类模板/泛型名称后面的模板/泛型自变量列表必须列出使用模板/泛型参数列表的顺序中的参数|  
+|[编译器错误 C3861](compiler-error-c3861.md)|*标识符*︰ 找不到标识符|  
+|[编译器错误 C3862](compiler-error-c3862.md)|*函数*︰ 无法编译非托管的函数使用 /clr: pure 或 /clr: safe|  
+|编译器错误 C3863|数组类型*类型*不能分配|  
+|编译器错误 C3864|已过时。|  
+|[编译器错误 C3865](compiler-error-c3865.md)|*关键字*︰ 只能在本机成员函数|  
+|[编译器错误 C3866](compiler-error-c3866.md)|析构函数/终结器调用缺少自变量列表|  
+|[编译器错误 C3867](compiler-error-c3867.md)|*函数*︰ 非标准的语法; 请改用 & 以创建指向成员的指针|  
+|[编译器错误 C3868](compiler-error-c3868.md)|*类型*︰ 泛型参数的约束*参数*与不同，在声明上|  
+|[编译器错误 C3869](compiler-error-c3869.md)|gcnew 约束缺少空参数列表“()”|  
+|编译器错误 C3870|*参数*: __declspec (*说明符*) 可以仅应用于的整数类型参数|  
+|编译器错误 C3871|*参数*: 函数的第一次 64 参数仅支持 __declspec(guard(overflow))|  
+|[编译器错误 C3872](compiler-error-c3872.md)|"0 x*值*︰ 在标识符中不允许此字符|  
+|[编译器错误 C3873](compiler-error-c3873.md)|"0 x*值*︰ 不允许此字符作为标识符的第一个字符|  
+|[编译器错误 C3874](compiler-error-c3874.md)|返回类型*标识符*'应是'*type1*而不是 of*type2*|  
+|编译器错误 C3875|调用缺少参数列表的非静态成员函数|  
+|编译器错误 C3876|已过时。|  
+|编译器错误 C3877|已过时。|  
+|编译器错误 C3878|已过时。|  
+|编译器错误 C3879|*成员*︰ 不能为 initonly 数据成员|  
+|[编译器错误 C3880](compiler-error-c3880.md)|*成员*︰ 不能为 literal 数据成员|  
+|编译器错误 C3881|只能从直接基继承构造函数|  
+|编译器错误 C3882|*类*︰ 构造函数已继承自*类*|  
+|编译器错误 C3883|*成员*︰ 必须初始化 initonly 静态数据成员|  
+|编译器错误 C3884|*类型*': 未知的大小的数组不能为值初始化|  
+|编译器错误 C3885|*类型*': 未知的大小的数组不能使用空初始值设定项列表初始化|  
+|[编译器错误 C3886](compiler-error-c3886.md)|*成员*︰ 必须初始化 literal 数据成员|  
+|[编译器错误 C3887](compiler-error-c3887.md)|*成员*: literal 数据成员的初始值设定项必须是常量表达式|  
+|[编译器错误 C3888](compiler-error-c3888.md)|*成员*︰ 与此 literal 数据成员关联的常量表达式不支持 C + + /cli CLI|  
+|编译器错误 C3889|已过时。|  
+|[编译器错误 C3890](compiler-error-c3890.md)|*成员*︰ 不能采用 literal 数据成员的地址|  
+|[编译器错误 C3891](compiler-error-c3891.md)|*成员*: literal 数据成员不能用作左值|  
+|[编译器错误 C3892](compiler-error-c3892.md)|*变量*︰ 不能将其分配给为常量类型的变量|  
+|[编译器错误 C3893](compiler-error-c3893.md)|*成员*︰ 左值使用 initonly 数据成员的类的实例构造函数中只允许*类*|  
+|[编译器错误 C3894](compiler-error-c3894.md)|*成员*︰ 左值使用 initonly 静态数据成员的类的类构造函数中只允许*类*|  
+|[编译器错误 C3895](compiler-error-c3895.md)|*成员*:*类型*数据成员不能为易失性|  
+|[编译器错误 C3896](compiler-error-c3896.md)|*成员*︰ 不正确的初始值设定项︰ 只能与 nullptr 初始化此 literal 数据成员|  
+|编译器错误 C3897|已过时。|  
+|[编译器错误 C3898](compiler-error-c3898.md)|*成员*:*类型*数据成员只能是托管类型的成员|  
+|[编译器错误 C3899](compiler-error-c3899.md)|*成员*︰ 左值使用 initonly 数据成员不允许直接在类的并行区域内*类*|  
+|[编译器错误 C3900](compiler-error-c3900.md)|*成员*︰ 不允许在当前范围内|  
+|[编译器错误 C3901](compiler-error-c3901.md)|*函数*︰ 必须具有返回类型*类型*|  
+|[编译器错误 C3902](compiler-error-c3902.md)|*函数*︰ 最后一个参数类型必须是*类型*|  
+|[编译器错误 C3903](compiler-error-c3903.md)|*属性*︰ 未不具有 set 或 get 方法|  
+|[编译器错误 C3904](compiler-error-c3904.md)|*属性*︰ 必须指定*数*参数|  
+|编译器错误 C3905|对于内部类型，不支持未对齐的访问*类型*|  
+|编译器错误 C3906|内部类型*类型*不是支持的返回或自变量的类型 vararg 或非原型函数|  
+|编译器错误 C3907|已过时。|  
+|[编译器错误 C3908](compiler-error-c3908.md)|访问级别限制性比的*标识符*|  
+|[编译器错误 C3909](compiler-error-c3909.md)|托管/WinRT 事件声明必须出现在托管/WinRT 类型|  
+|[编译器错误 C3910](compiler-error-c3910.md)|*事件*︰ 必须定义成员*成员*|  
+|[编译器错误 C3911](compiler-error-c3911.md)|*成员*︰ 函数必须具有类型*类型*|  
+|[编译器错误 C3912](compiler-error-c3912.md)|*事件*︰ 必须是委托类型的事件的类型。|  
+|[编译器错误 C3913](compiler-error-c3913.md)|必须将默认属性编入索引|  
+|[编译器错误 C3914](compiler-error-c3914.md)|默认属性不能是静态的|  
+|[编译器错误 C3915](compiler-error-c3915.md)|*标识符*具有已无默认值编制索引属性 （类索引器）|  
+|编译器错误 C3916|已过时。|  
+|[编译器错误 C3917](compiler-error-c3917.md)|*令牌*︰ 已过时*构造*声明样式 (你是否希望使用 [] 改为？)|  
+|[编译器错误 C3918](compiler-error-c3918.md)|用法要求*标识符*是数据成员|  
+|[编译器错误 C3919](compiler-error-c3919.md)|*函数*︰ 函数必须具有类型*return_type* (*类型*)|  
+|[编译器错误 C3920](compiler-error-c3920.md)|*运算符*︰ 不能定义后缀递增/递减 CLR/WinRT 运算符，调用后缀 CLR/WinRT 运算符将调用相应的前缀 CLR/WinRT 运算符 (op_Increment/op_Decrement)，但具有后缀语义|  
+|编译器错误 C3921|已过时。|  
+|编译器错误 C3922|已过时。|  
+|[编译器错误 C3923](compiler-error-c3923.md)|*成员*︰ 局部类、 结构或联合定义中的管理/WinRT 类的成员函数不允许|  
+|编译器错误 C3924|参数中的错误 #*数*委托构造函数调用*构造函数*:|  
+|编译器错误 C3925|预期循环 (，尽管，或执行操作) 以下*指令*指令|  
+|编译器错误 C3926|“parallel”指令中的常量无效|  
+|编译器错误 C3927|"->": 非函数声明符后不允许尾随返回类型|  
+|编译器错误 C3928|"->": 带圆括号的声明符后不允许尾随返回类型|  
+|编译器错误 C3929|已过时。|  
+|编译器错误 C3930|*函数*︰ 没有重载的函数具有与环境的上下文兼容的限制说明符*上下文*|  
+|编译器错误 C3931|*类型*︰ 不能调用具有不兼容与环境的上下文的限制说明符的函数|  
+|编译器错误 C3932|已过时。|  
+|编译器错误 C3933|*类*︰ 析构函数的限制说明符必须包含联合的所有构造函数的限制|  
+|编译器错误 C3934|使用任意“main”格式的函数不能包含除 restrict(cpu) 以外的限制说明符|  
+|编译器错误 C3935|*标识符*︰ 重定义; 重叠限制说明符|  
+|编译器错误 C3936|*标识符*︰ 无法识别的限制说明符|  
+|编译器错误 C3937|不允许空限制说明符|  
+|编译器错误 C3938|*标识符*: extern \042C\042 函数不支持多个限制说明符|  
+|编译器错误 C3939|*标识符*︰ 指向成员函数，函数指针，不允许对与 amp 限制说明符的函数的引用|  
+|编译器错误 C3940|*标识符*︰ 找不到的可能不匹配编译器和库版本之间的标识符。 请确保 vccorlib.h/.lib、 vccorlib120.dll 和 c1xx.dll 匹配|  
+|编译器错误 C3941|*条件*︰ 需要 / clr 命令行选项|  
+|编译器错误 C3942|已过时。|  
+|编译器错误 C3943|已过时。|  
+|编译器错误 C3944|已过时。|  
+|编译器错误 C3945|*类型*︰ 无法引发或捕获一个 winrt 对象，它不从 platform:: exception|  
+|编译器错误 C3946|*类型*: typeid 不能应用于此类型|  
+|编译器错误 C3947|*typeid*: typeid 不能应用于包扩展|  
+|编译器错误 C3948|*关键字*︰ 包扩展不能出现在此上下文中|  
+|编译器错误 C3949|包扩展“...”不能出现在带圆括号的抽象声明符中|  
+|编译器错误 C3950|已过时。|  
+|编译器错误 C3951|不能在投影的 WinRT 类型中使用指向成员的指针*类型*。 请改用委托。|  
+|编译器错误 C3952|*类型*: WinRT 不支持 in/out 的数组。 使用 const 数组<T>^ 为 in 和 WriteOnlyArray<T>或数组<T>^ * 的公共 Api 上的 out|  
+|编译器错误 C3953|不能使用托管的类*类型*WinRT 模块中。|  
+|编译器错误 C3954|*类型*: WinRT 类型的已发布的方法返回的数组必须使用窗体数组<T>^|  
+|编译器错误 C3955|*类型*︰ 公共构造函数不能包含 out 参数或 WriteOnlyArray<T>|  
+|编译器错误 C3956|*类型*︰ 类型标记为独占到*类型*并不能用作底数*derived_type 低*|  
+|编译器错误 C3957|*类型*︰ 不能使用 new 在 WinRT 类型; 请改用 ref new|  
+|编译器错误 C3958|*类型*︰ 不能在 WinRT 上使用 gcnew 键入; 请改用 ref new|  
+|编译器错误 C3959|“ref new”只能用于创建 WinRT 类型的对象|  
+|编译器错误 C3960|已过时。|  
+|编译器错误 C3961|不支持静态构造函数|  
+|编译器错误 C3962|不支持泛型类|  
+|编译器错误 C3963|不支持多维数组|  
+|编译器错误 C3964|不支持交错数组|  
+|编译器错误 C3965|不支持参数数组|  
+|编译器错误 C3966|*函数*︰ 不支持泛型函数|  
+|编译器错误 C3967|导入错误*标识符*从模块*模块*|  
+|编译器错误 C3968|令牌*令牌*不能作为模块名称分隔符，则使用句点 (。) 改为|  
+|编译器错误 C3969|不一致的模块名称:*module1*和*module1*|  
+|编译器错误 C3970|*标识符*:*关键字*可以仅应用于 ref class 或 ref struct (在全局范围或命名空间范围|  
+|编译器错误 C3971|*类型*︰ 部分定义不能出现在完全定义之后|  
+|编译器错误 C3972|*类型*: partial 只能应用于类声明或定义|  
+|编译器错误 C3973|已过时。|  
+|编译器错误 C3974|已过时。|  
+|编译器错误 C3975|类/结构*标识符*以前声明或定义与不同的修饰符|  
+|编译器错误 C3976|*identifier1*必须声明为公共若要使用*identifier2*|  
+|编译器错误 C3977|用法要求对定义的程序集的引用*标识符*|  
+|编译器错误 C3978|*标识符*︰ 静态属性不允许作为 WinRT 接口或值类型的成员|  
+|编译器错误 C3979|*类型*︰ 使用特性*属性*而不是 of*值*|  
+|编译器错误 C3980|*类型*无法发送到元数据|  
+|编译器错误 C3981|*类型*︰ 值类型不能有任何静态数据成员的*标识符*|  
+|编译器错误 C3982|*类型*︰ 值类型不能具有任何非公共数据成员的*标识符*|  
+|编译器错误 C3983|*类型*︰ 值类型不能有任何公共的非数据成员的*标识符*|  
+|编译器错误 C3984|*类型*︰ 非值类型不能有任何公共数据成员的*标识符*|  
+|编译器错误 C3985|*标识符*︰ 的公共成员的签名包含私有类型*成员*|  
+|编译器错误 C3986|*标识符*︰ 的公共成员的签名包含本机类型*成员*|  
+|编译器错误 C3987|*标识符*︰ 的公共成员的签名包含本机类型*类型*|  
+|编译器错误 C3988|*类型*︰ 本机类型不能是公共|  
+|编译器错误 C3989|*类型*︰ 不能是公共嵌套的类型|  
+|编译器错误 C3990|*类型*︰ 属性 '*属性*不能为私有或嵌套|  
+|编译器错误 C3991|*类型*︰ 不能实现的非公共或嵌套的接口*接口*|  
+|编译器错误 C3992|*标识符*︰ 的公共成员的签名包含无效的类型*类型*|  
+|编译器错误 C3993|*类型*︰ 值类型必须包含至少一个公共字段|  
+|编译器错误 C3994|*类型*︰ 值类型不能实现接口或具有虚函数|  
+|编译器错误 C3995|*类型*︰ 值类型不能有任何事件成员的*标识符*|  
+|编译器错误 C3996|已过时。|  
+|编译器错误 C3998|c + +*版本*︰ 不受支持的 c + + 版本; 默认为 c + +*版本*|  
+|编译器错误 C3999|请未知错误，选择技术支持命令的 Visual c + + 帮助菜单上，或打开技术支持帮助文件了解详细信息|  
 

@@ -88,6 +88,86 @@ f1_keywords:
 - C1901
 - C1903
 - C1904
+helpviewer_keywords:
+- C1012
+- C1013
+- C1014
+- C1016
+- C1018
+- C1019
+- C1020
+- C1021
+- C1022
+- C1023
+- C1034
+- C1035
+- C1036
+- C1037
+- C1038
+- C1041
+- C1045
+- C1047
+- C1048
+- C1049
+- C1053
+- C1063
+- C1068
+- C1069
+- C1070
+- C1074
+- C1077
+- C1082
+- C1086
+- C1087
+- C1088
+- C1089
+- C1090
+- C1091
+- C1098
+- C1099
+- C1100
+- C1101
+- C1102
+- C1103
+- C1104
+- C1105
+- C1108
+- C1109
+- C1110
+- C1111
+- C1112
+- C1114
+- C1190
+- C1193
+- C1195
+- C1196
+- C1201
+- C1202
+- C1205
+- C1206
+- C1207
+- C1208
+- C1209
+- C1210
+- C1211
+- C1300
+- C1301
+- C1302
+- C1306
+- C1310
+- C1312
+- C1352
+- C1353
+- C1383
+- C1384
+- C1451
+- C1505
+- C1508
+- C1510
+- C1852
+- C1901
+- C1903
+- C1904
 dev_langs:
 - C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
@@ -111,13 +191,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: e8d1696e325ac6a005636aa1d874d30b9c296e91
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>编译器错误 C999 到 C1999
 文档的此部分中的文章包含有关 Visual C++ 编译器错误的子部分的信息。 可在此处访问信息，或者在 Visual Studio 中的“输出”  窗口中选择错误号，然后选择 F1 键。  
+  
+> [!NOTE]
+>  不是每个[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]错误记录在 MSDN 中。 在许多情况下，诊断消息将提供的所有可用信息。 如果你认为某个错误消息需要更多说明，请通知我们。 你可以在此页上，使用反馈表单或转到 Visual Studio 中的菜单栏，然后选择**帮助**，**报告 Bug**，或可以在提交建议或 bug 报表[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+  
+ 错误和警告的 MSDN 公共论坛，可能会发现更多帮助。 [Visual c + + 语言](http://go.microsoft.com/fwlink/?LinkId=158195)论坛是有关问题和讨论有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]语言语法和编译器。 [Visual c + + 常规](http://go.microsoft.com/fwlink/?LinkId=158194)论坛的问题是有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他论坛中未涉及。 你还可能上查找有关错误和警告的帮助[堆栈溢出](http://stackoverflow.com/)。  
   
 |错误|消息|  
 |-----------|-------------|  
@@ -130,7 +215,7 @@ ms.lasthandoff: 04/12/2017
 |[错误 C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|无法识别的标志 '*字符串*in*选项*|  
 |[错误 C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|没有指定输入文件|  
 |[错误 C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|编译器限制: 宏嵌套太深|  
-|[错误 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|查找预编译头时意外的文件尾。 是否忘记添加 #include*文件*1> 对源？|  
+|[错误 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|查找预编译头时意外的文件尾。 是否忘记添加 #include <*文件*> 到您的源？|  
 |错误 C1012|括号不匹配︰ 缺少*字符*"|  
 |错误 C1013|编译器限制: 左括号太多|  
 |错误 C1014|包含文件太多︰ 深度 =*数*|  
@@ -194,17 +279,17 @@ ms.lasthandoff: 04/12/2017
 |错误 C1098|版本与“编辑并继续”引擎不匹配|  
 |错误 C1099|“编辑并继续”引擎正在终止编译|  
 |错误 C1100|无法初始化 OLE:*错误*|  
-|错误 C1101|无法创建处理程序属性*标识符*'|  
+|错误 C1101|无法创建处理程序属性*标识符*|  
 |错误 C1102|无法进行初始化︰*错误*|  
-|错误 C1103|导入 progid 致命错误:*消息*'|  
-|错误 C1104|导入 libid 遇到错误:*消息*'|  
+|错误 C1103|导入 progid 致命错误:*消息*|  
+|错误 C1104|导入 libid 遇到错误:*消息*|  
 |错误 C1105|*消息*:*错误*|  
-|[错误 C1107](../../error-messages/compiler-errors-1/fatal-error-c1107.md)|找不到程序集*程序集*': 请指定程序集搜索路径中使用 /AI 或通过设置 LIBPATH 环境变量|  
-|错误 C1108|无法找到 DLL:*文件*'|  
-|错误 C1109|找不到*符号*'在 DLL*文件*'|  
+|[错误 C1107](../../error-messages/compiler-errors-1/fatal-error-c1107.md)|找不到程序集*程序集*︰ 请指定程序集搜索路径中使用 /AI 或通过设置 LIBPATH 环境变量|  
+|错误 C1108|无法找到 DLL:*文件*|  
+|错误 C1109|找不到*符号*DLL 中*文件*|  
 |错误 C1110|嵌套的模板/泛型定义太多|  
 |错误 C1111|模板/泛型参数太多|  
-|错误 C1112|编译器限制︰ `'number`' 太多宏自变量，只*数*允许|  
+|错误 C1112|编译器限制︰`'number`太多宏自变量，只*数*允许|  
 |[错误 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#在上失败，使用*文件*|  
 |错误 C1114|*文件*: WinRT 不支持 #using 的托管程序集|  
 |[错误 C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|调用 GetProcAddress 失败*函数*|  
@@ -218,7 +303,7 @@ ms.lasthandoff: 04/12/2017
 |错误 C1193|中预期的错误*文件*(*行*) 未达到|  
 |错误 C1195|在同一命令行上使用 /Yu 和 /Yc 与 /clr 选项不兼容|  
 |错误 C1196|*标识符*︰ 类型库中找到的标识符*typelib*不是有效的 c + + 标识符|  
-|[错误 C1197](../../error-messages/compiler-errors-1/fatal-error-c1197.md)|不能引用*文件*'因为程序已经引用*文件*'|  
+|[错误 C1197](../../error-messages/compiler-errors-1/fatal-error-c1197.md)|不能引用*文件*因为程序已经引用*文件*|  
 |错误 C1201|类模板定义中出现语法错误后无法继续|  
 |错误 C1202|递归类型或函数依赖项上下文太复杂|  
 |错误 C1205|安装的运行时版本不支持这些泛型|  
