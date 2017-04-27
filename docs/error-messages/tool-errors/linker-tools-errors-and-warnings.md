@@ -1,30 +1,53 @@
 ---
-title: "链接器工具错误和警告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "错误 [C++]"
-  - "错误 [C++], 链接器"
-  - "链接器 [C++], 错误和警告"
+title: "链接器工具错误和警告 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- errors [C++]
+- linker [C++], errors and warnings
+- errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 链接器工具错误和警告
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 55a178e48f6189a0159943c36a26c5179456343f
+ms.lasthandoff: 04/24/2017
 
-LINK、LIB、DUMPBIN 和 EDITBIN 产生这些错误和警告。  若要获得特定错误信息的相关帮助，请在“输出”窗口中的错误号上单击鼠标并按 F1，在“索引”的**“查找”**框中键入错误号，或单击下面的链接。  
+---
+# <a name="linker-tools-errors-and-warnings"></a>链接器工具错误和警告
+链接、 LIB、 DUMPBIN，和 EDITBIN 生成这些错误和警告。 以获取有关特定错误消息的帮助，单击输出窗口中的错误号上鼠标并按 F1，键入错误号**查找**框中的索引，或单击下面的链接。  
+  
+> [!NOTE]
+>  不是每个[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]错误或警告记录在 MSDN 中。 在许多情况下，诊断消息将提供的所有可用信息。 如果你认为某个错误消息需要更多说明，请通知我们。 你可以在此页上，使用反馈表单或转到 Visual Studio 中的菜单栏，然后选择**帮助**，**报告 Bug**，或可以在提交建议或 bug 报表[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+  
+错误和警告的 MSDN 公共论坛，可能会发现更多帮助。 [Visual c + + 语言](http://go.microsoft.com/fwlink/?LinkId=158195)论坛是有关问题和讨论有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]语言语法和编译器。 [Visual c + + 常规](http://go.microsoft.com/fwlink/?LinkId=158194)论坛的问题是有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他论坛中未涉及。 你还可能上查找有关错误和警告的帮助[堆栈溢出](http://stackoverflow.com/)。  
+  
+## <a name="in-this-section"></a>本节内容
   
  [链接器工具错误 LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md)  
   
