@@ -28,7 +28,7 @@ caps.handback.revision: 35
   
 -   [Platform::Collections::VectorView 类](../cppcx/platform-collections-vectorview-class.md)和 [Platform::Collections::MapView 类](../cppcx/platform-collections-mapview-class.md)是 `Vector` 和 `Map` 的只读版本。  
   
--   迭代器是在 [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 中定义的。 这些迭代器既满足了 STL 迭代器的要求，又使你能够对任何 [Windows::Foundation::Collections](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) 接口类型或 [Platform::Collections](../cppcx/platform-collections-namespace.md) 具体类型使用 [std::find](../Topic/find%20\(STL\).md)、[std::count\_if](../Topic/count_if.md) 和其他 STL 算法。 例如，这意味着，可以在用 C\# 创建的 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件中迭代集合以及将 STL 算法应用于它。  
+-   迭代器是在 [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 中定义的。 这些迭代器既满足了 STL 迭代器的要求，又使你能够对任何 [Windows::Foundation::Collections](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) 接口类型或 [Platform::Collections](../cppcx/platform-collections-namespace.md) 具体类型使用 [std::find](http://msdn.microsoft.com/library/021e9ef9-8817-409f-92ee-cd7104867361)、[std::count\_if](http://msdn.microsoft.com/library/b785887c-83cd-4099-becc-3284dee05295) 和其他 STL 算法。 例如，这意味着，可以在用 C\# 创建的 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件中迭代集合以及将 STL 算法应用于它。  
   
     > [!IMPORTANT]
     >  代理迭代器 `VectorIterator` 和 `VectorViewIterator` 使用代理对象 `VectoryProxy<T>` 及 `ArrowProxy<T>` 实现与 STL 容器的共同使用。 有关更多信息，请参见本文后面的“VectorProxy 元素”。  
@@ -61,7 +61,7 @@ caps.handback.revision: 35
   
   
 ## VectorProxy 元素  
- 你可以利用 [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) 和 [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) 结合使用 `range for` 循环和算法（如 [std::sort](../Topic/sort.md)）与 [IVector\<T\>](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) 容器。 但是，无法通过 C\+\+ 指针取消引用来访问 `IVector` 元素，只能通过 [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) 和 [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) 方法访问此类元素。 因此，这些迭代器使用代理类 `Platform::Details::VectorProxy<T>` 和 `Platform::Details::ArrowProxy<T>`，按照 STL 的要求，通过 `*`、`->` 和 `[]` 运算符提供对各个元素的访问。 严格来说，给定 `IVector<Person^> vec`，`*begin(vec)` 的类型为 `VectorProxy<Person^>`。 不过，代理对象对于你的代码几乎始终是透明的。 我们不讨论这些代理对象，因为它们仅由迭代器在内部使用，但了解该机制的工作原理将非常有用。  
+ 你可以利用 [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) 和 [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) 结合使用 `range for` 循环和算法（如 [std::sort](http://msdn.microsoft.com/library/9b0a4fc1-5131-4c73-9c2e-d72211f2d0ae)）与 [IVector\<T\>](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) 容器。 但是，无法通过 C\+\+ 指针取消引用来访问 `IVector` 元素，只能通过 [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) 和 [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) 方法访问此类元素。 因此，这些迭代器使用代理类 `Platform::Details::VectorProxy<T>` 和 `Platform::Details::ArrowProxy<T>`，按照 STL 的要求，通过 `*`、`->` 和 `[]` 运算符提供对各个元素的访问。 严格来说，给定 `IVector<Person^> vec`，`*begin(vec)` 的类型为 `VectorProxy<Person^>`。 不过，代理对象对于你的代码几乎始终是透明的。 我们不讨论这些代理对象，因为它们仅由迭代器在内部使用，但了解该机制的工作原理将非常有用。  
   
  对 `range for` 容器使用 `IVector` 循环时，请使用 `auto&&` 以使迭代器变量正确绑定到 `VectorProxy` 元素。 如果使用 `auto` 或 `auto&`，将引发编译器警告 C4239，警告文本中将提到 `VectoryProxy`。  
   

@@ -32,7 +32,7 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 ```  
   
 ## 备注  
- 如果碰到此异常，请确保已请求适当的功能，并在您的应用程序的包清单中做了必需的声明。 有关更多信息，请参见 [使用清单设计器配置 Windows 8.1 应用包](../Topic/Configure%20a%20Windows%208.1%20app%20package%20by%20using%20the%20manifest%20designer.md)和 [COMException](../cppcx/platform-comexception-class.md) 类。  
+ 如果碰到此异常，请确保已请求适当的功能，并在您的应用程序的包清单中做了必需的声明。 有关更多信息，请参见 [使用清单设计器配置 Windows 8.1 应用包](http://msdn.microsoft.com/library/24c58b7f-9c6d-41c3-b385-c1e8497d5b2d)和 [COMException](../cppcx/platform-comexception-class.md) 类。  
   
 ## 要求  
  **支持的最低客户端版本：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

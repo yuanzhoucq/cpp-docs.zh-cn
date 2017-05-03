@@ -19,7 +19,7 @@ caps.handback.revision: 9
 可以自由混合 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 代码与 [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)] \([!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]\) 代码。 在同一个翻译单元中，可以使用通过 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 句柄到对象 \(`^`\) 表示法和 [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 智能指针 \(`ComPtr<T>`\) 表示法声明的对象。 但是，必须手动处理返回值、[!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] HRESULT 错误代码和 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 异常。  
   
 ## [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 开发  
- 有关创作和使用 [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 组件的更多信息，请参见 [Windows 运行时 C\+\+ 模板库 \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)。  
+ 有关创作和使用 [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 组件的更多信息，请参见 [Windows 运行时 C\+\+ 模板库 \(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md)。  
   
 ## 示例  
  下面的代码片段演示如何通过 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 和 [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 使用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 类和检查元数据文件。  

@@ -93,7 +93,7 @@ VectorView(
  用于初始化当前 VectorView 中每个元素的值。  
   
  `v`  
- 对用于初始化当前 VectorView 的 [::std::vector](../Topic/vector%20Class%201.md) 的 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)。  
+ 对用于初始化当前 VectorView 的 [::std::vector](../Topic/vector%20Class%201.md) 的 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md)。  
   
  `ptr`  
  指向用于初始化当前 VectorView 的 `std::vector` 的指针。  
@@ -105,10 +105,10 @@ VectorView(
  用于初始化当前 VectorView 的 [std::array](../Topic/vector%20Class%201.md) 对象。  
   
  `first`  
- 用于初始化当前 VectorView 的对象序列中的第一个元素。`first` 的类型通过完美转发传递。 有关详细信息，请参阅[规则引用声明符：&&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md)。  
+ 用于初始化当前 VectorView 的对象序列中的第一个元素。`first` 的类型通过完美转发传递。 有关详细信息，请参阅[规则引用声明符：&&](~/cpp/rvalue-reference-declarator-amp-amp.md)。  
   
  `last`  
- 用于初始化当前 VectorView 的对象序列中的最后一个元素。`last` 的类型通过完美转发传递。 有关更多信息，请参见[规则引用声明符：&&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md)。  
+ 用于初始化当前 VectorView 的对象序列中的最后一个元素。`last` 的类型通过完美转发传递。 有关更多信息，请参见[规则引用声明符：&&](~/cpp/rvalue-reference-declarator-amp-amp.md)。  
   
 ## 要求  
  **标头：**collection.h  

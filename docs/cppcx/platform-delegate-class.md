@@ -34,7 +34,7 @@ public delegate void delegate_name();
  Delegate 类具有从 [Platform::Object 类](../cppcx/platform-object-class.md)派生的 Equals\(\)、GetHashCode\(\) 和 ToString\(\) 方法。  
   
 ## 备注  
- 使用 [delegate](../Topic/delegate%20%20\(C++%20Component%20Extensions\).md) 关键字创建委托；不要显式使用 Platform::Delegate。 有关详细信息，请参阅[委托](../cppcx/delegates-c-cx.md)。 有关如何创建和使用委托的示例，请参见[用 C\+\+ 创建 Windows 运行时组件](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)。  
+ 使用 [delegate](~/windows/delegate-cpp-component-extensions.md) 关键字创建委托；不要显式使用 Platform::Delegate。 有关详细信息，请参阅[委托](../cppcx/delegates-c-cx.md)。 有关如何创建和使用委托的示例，请参见[用 C\+\+ 创建 Windows 运行时组件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)。  
   
 ## 要求  
  **支持的最低客户端版本：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

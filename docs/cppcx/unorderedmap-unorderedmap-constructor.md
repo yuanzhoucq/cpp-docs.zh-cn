@@ -106,7 +106,7 @@ UnorderedMap();
  可以为键生成哈希值的函数对象。 此参数默认为类支持的键类型的 [hash 类](../Topic/hash%20Class%201.md)。  
   
  `m`  
- 对用于初始化当前 UnorderedMap 的 [std::unordered\_map](../standard-library/unordered-map-class.md) 的引用或 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)。  
+ 对用于初始化当前 UnorderedMap 的 [std::unordered\_map](../standard-library/unordered-map-class.md) 的引用或 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md)。  
   
  il  
  用于初始化映射的 [std::pair](../standard-library/initializer-list-class.md) 对象的 [std::initializer\_list](../standard-library/pair-structure.md)。  

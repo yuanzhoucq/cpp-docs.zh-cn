@@ -19,9 +19,9 @@ caps.handback.revision: 14
 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 支持 `public enum class` 关键字，该关键字类似于标准 C\+\+ `scoped  enum`。 当你使用通过 `public enum class` 关键字声明的枚举数时，必须使用枚举标识符确定每个枚举值的范围。  
   
 ## 备注  
- 没有访问说明符（如 `public enum class`）的 `public` 将作为标准 C\+\+ [范围枚举](../Topic/Enumerations%20\(C++\).md)处理。  
+ 没有访问说明符（如 `public enum class`）的 `public` 将作为标准 C\+\+ [范围枚举](~/cpp/enumerations-cpp.md)处理。  
   
- `public enum class` 或 `public enum struct` 声明可以有任何整数类型的基础类型，尽管 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]本身要求类型是 int32 或者 uint32（对于标志枚举）。 以下语法描述 `public enum class` 或 `public enum struct` 的一部分。 有关详细信息，请参阅[enum class](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md)。  
+ `public enum class` 或 `public enum struct` 声明可以有任何整数类型的基础类型，尽管 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]本身要求类型是 int32 或者 uint32（对于标志枚举）。 以下语法描述 `public enum class` 或 `public enum struct` 的一部分。 有关详细信息，请参阅[enum class](~/windows/enum-class-cpp-component-extensions.md)。  
   
  此示例演示如何定义公共枚举类：  
   

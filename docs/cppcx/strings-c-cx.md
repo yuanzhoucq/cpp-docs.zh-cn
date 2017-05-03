@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 22
 ---
 # 字符串 (C++/CX)
-[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]中的文本在 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 中用 [Platform::String 类](../cppcx/platform-string-class.md)表示。 当来回向 `Platform::String Class`类中的方法传递字符串或者跨越应用程序二进制接口 \(ABI\) 边界与其他 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件交互时，请使用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]。 虽然 `Platform::String Class`为几种常见字符串操作提供方法，但它还不是全功能字符串类。 在您的 C\+\+ 模块中，将标准 C\+\+ 字符串类型（如 [wstring](../Topic/wstring.md)）用于任何大量的文本处理，然后将最终结果转换为 [Platform::String^](../cppcx/platform-string-class.md)，最后再向（或从）公共接口传递它。 在 `wstring` 或 `wchar_t*` 与 `Platform::String` 之间进行转换很容易也很有效。  
+[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]中的文本在 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 中用 [Platform::String 类](../cppcx/platform-string-class.md)表示。 当来回向 `Platform::String Class`类中的方法传递字符串或者跨越应用程序二进制接口 \(ABI\) 边界与其他 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件交互时，请使用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]。 虽然 `Platform::String Class`为几种常见字符串操作提供方法，但它还不是全功能字符串类。 在您的 C\+\+ 模块中，将标准 C\+\+ 字符串类型（如 [wstring](http://msdn.microsoft.com/library/77953dd7-ee2f-4f6c-90e7-27da549ca631)）用于任何大量的文本处理，然后将最终结果转换为 [Platform::String^](../cppcx/platform-string-class.md)，最后再向（或从）公共接口传递它。 在 `wstring` 或 `wchar_t*` 与 `Platform::String` 之间进行转换很容易也很有效。  
   
  **快速传递**  
   
@@ -39,9 +39,9 @@ caps.handback.revision: 22
  [!code-cpp[cx_strings#03](../snippets/cpp/VS_Snippets_Misc/cx_strings/cpp/class1.cpp#03)]  
   
 ## 字符串转换  
- `Platform::String` 中只能包含 `char16` 字符或 `NULL` 字符。 如果您的应用程序必须使用 8 位字符，请使用 [String::Data 方法](../cppcx/string-data-method.md) 提取文本作为 `const wchar_t*`。 然后，您可以使用适当的 Windows 函数或标准库函数对数据进行操作并将其转换回 `wchar_t*` 或 [wstring](../Topic/wstring.md)（用于构造新的 `Platform::String`）。  
+ `Platform::String` 中只能包含 `char16` 字符或 `NULL` 字符。 如果您的应用程序必须使用 8 位字符，请使用 [String::Data 方法](../cppcx/string-data-method.md) 提取文本作为 `const wchar_t*`。 然后，您可以使用适当的 Windows 函数或标准库函数对数据进行操作并将其转换回 `wchar_t*` 或 [wstring](http://msdn.microsoft.com/library/77953dd7-ee2f-4f6c-90e7-27da549ca631)（用于构造新的 `Platform::String`）。  
   
- 下面的代码片段演示 `String^` 变量和 `wstring` 变量间如何相互转换。 有关此示例中使用的字符串操作的更多信息，请参见 [basic\_string::replace](../Topic/basic_string::replace.md)。  
+ 下面的代码片段演示 `String^` 变量和 `wstring` 变量间如何相互转换。 有关此示例中使用的字符串操作的更多信息，请参见 [basic\_string::replace](http://msdn.microsoft.com/library/16d81b9d-9724-458a-9179-556748034507)。  
   
  [!code-cpp[cx_strings#04](../snippets/cpp/VS_Snippets_Misc/cx_strings/cpp/class1.cpp#04)]  
   

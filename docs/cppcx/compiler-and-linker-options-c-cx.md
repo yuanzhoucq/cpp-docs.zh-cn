@@ -25,9 +25,9 @@ caps.handback.revision: 10
   
 |选项|描述|  
 |--------|--------|  
-|[\/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> \/ZW:nostdlib|启用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 语言扩展。<br /><br /> `nostdlib` 参数可阻止编译器使用标准的预定义搜索路径来查找程序集和 .winmd 文件。<br /><br /> [\/ZW](../build/reference/zw-windows-runtime-compilation.md) 编译器选项隐式指定以下编译器选项：<br /><br /> -   [\/FI](../build/reference/fi-name-forced-include-file.md) vccorlib.h，这会强制包含 vccorlib.h 头文件，该文件定义编译器所需的许多类型。<br />-   [\/FU](../Topic/-FU%20\(Name%20Forced%20%23using%20File\).md) Windows.winmd，这会强制包含 Windows.winmd 元数据文件，该文件由操作系统提供，定义 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 中的许多类型。<br />-   [\/FU](../Topic/-FU%20\(Name%20Forced%20%23using%20File\).md) Platform.winmd，这会强制包含 Platform.winmd 元数据文件，该文件由编译器提供，定义命名空间的 Platform 系列中的大多数类型。|  
+|[\/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> \/ZW:nostdlib|启用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 语言扩展。<br /><br /> `nostdlib` 参数可阻止编译器使用标准的预定义搜索路径来查找程序集和 .winmd 文件。<br /><br /> [\/ZW](../build/reference/zw-windows-runtime-compilation.md) 编译器选项隐式指定以下编译器选项：<br /><br /> -   [\/FI](../build/reference/fi-name-forced-include-file.md) vccorlib.h，这会强制包含 vccorlib.h 头文件，该文件定义编译器所需的许多类型。<br />-   [\/FU](~/build/reference/fu-name-forced-hash-using-file.md) Windows.winmd，这会强制包含 Windows.winmd 元数据文件，该文件由操作系统提供，定义 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 中的许多类型。<br />-   [\/FU](~/build/reference/fu-name-forced-hash-using-file.md) Platform.winmd，这会强制包含 Platform.winmd 元数据文件，该文件由编译器提供，定义命名空间的 Platform 系列中的大多数类型。|  
 |[\/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|向编译器用于查找程序集和 .winmd 文件的搜索路径添加目录（由 *dir* 参数指定）。|  
-|[\/FU](../Topic/-FU%20\(Name%20Forced%20%23using%20File\).md) *文件*|强制包含指定模块或 .winmd 文件。 即，不必在源代码中指定 `#using`*file*。 编译器会自动强制包含自己的 Windows 元数据文件 Platform.winmd。|  
+|[\/FU](~/build/reference/fu-name-forced-hash-using-file.md) *文件*|强制包含指定模块或 .winmd 文件。 即，不必在源代码中指定 `#using`*file*。 编译器会自动强制包含自己的 Windows 元数据文件 Platform.winmd。|  
 |\/D "WINAPI\_FAMILY\=2"|创建一个定义，以便可以使用与 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 兼容的 Win32 SDK 子集。|  
   
 ## 链接器选项  

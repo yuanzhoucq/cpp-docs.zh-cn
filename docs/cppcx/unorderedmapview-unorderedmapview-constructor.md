@@ -100,7 +100,7 @@ UnorderedMapView(
  提供可比较两个键以确定其相等性的函数对象的类型。 默认为 [std::equal\_to\<K\>](../standard-library/equal-to-struct.md)。  
   
  `m`  
- 对用于初始化 UnorderedMapView 的 [std::unordered\_map](../standard-library/unordered-map-class.md) 的引用或 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)。  
+ 对用于初始化 UnorderedMapView 的 [std::unordered\_map](../standard-library/unordered-map-class.md) 的引用或 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md)。  
   
  `first`  
  用于初始化 UnorderedMapView 的一系列元素中的第一个元素的输入迭代器。  

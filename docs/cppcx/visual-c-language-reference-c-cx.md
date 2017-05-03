@@ -16,13 +16,13 @@ manager: "ghogen"
 caps.handback.revision: 27
 ---
 # Visual C++ 语言参考 (C++-CX)
-[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 是 C\+\+ 语言的一组扩展，通过这些扩展，可用一种尽可能接近现代 C\+\+ 的惯用语法创建 Windows 应用和 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 组件。 使用 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 通过本机代码编写 Windows 应用和组件，而本机代码可与 Visual C\#、Visual Basic、JavaScript 和其他支持 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 的语言轻松交互。 少数情况下需要直接访问原始 COM 接口或非异常代码，在这些情况下可使用 [Windows 运行时 C\+\+ 模板库 \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)。  
+[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 是 C\+\+ 语言的一组扩展，通过这些扩展，可用一种尽可能接近现代 C\+\+ 的惯用语法创建 Windows 应用和 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 组件。 使用 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 通过本机代码编写 Windows 应用和组件，而本机代码可与 Visual C\#、Visual Basic、JavaScript 和其他支持 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 的语言轻松交互。 少数情况下需要直接访问原始 COM 接口或非异常代码，在这些情况下可使用 [Windows 运行时 C\+\+ 模板库 \(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md)。  
   
  新模型代表 Windows 上的下一代本机 C\+\+ 编程。 你可以使用它来创建：  
   
 -   使用 XAML 定义用户界面和使用本机堆栈的 C\+\+ Windows 应用。 有关详细信息，请参阅[在 C\+\+ \(Windows 10\) 中创建一个“hello world”应用](http://msdn.microsoft.com/library/windows/apps/dn996906.aspx)。  
   
--   可供基于 JavaScript 的 Windows 应用使用的 C\+\+ [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 组件。 有关详细信息，请参阅[用 C\+\+ 创建 Windows 运行时组件](http://msdn.microsoft.com/library/hh441569.aspx)[用 C\+\+ 创建 Windows 运行时组件](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)。  
+-   可供基于 JavaScript 的 Windows 应用使用的 C\+\+ [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 组件。 有关详细信息，请参阅[用 C\+\+ 创建 Windows 运行时组件](http://msdn.microsoft.com/library/hh441569.aspx)[用 C\+\+ 创建 Windows 运行时组件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)。  
   
 -   Windows DirectX 游戏和图形密集型应用程序。 有关详细信息，请参阅[使用 DirectX 创建简单的通用 Windows 平台 \(UWP\) 游戏](http://msdn.microsoft.com/library/windows/apps/xaml/mt210793.aspx)。  
   

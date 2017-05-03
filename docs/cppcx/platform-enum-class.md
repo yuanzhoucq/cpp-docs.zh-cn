@@ -34,7 +34,7 @@ public class Enum
  此枚举类从 [Platform::Object 类](../cppcx/platform-object-class.md) 继承 Equals\(\)、GetHashCode\(\) 和 ToString\(\) 方法。  
   
 ## 备注  
- 使用 [public enum class](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md) 关键字创建枚举。 不要显式使用 Platform::Enum 类型。 有关更多信息，请参见[枚举](../cppcx/enums-c-cx.md)。  
+ 使用 [public enum class](~/windows/enum-class-cpp-component-extensions.md) 关键字创建枚举。 不要显式使用 Platform::Enum 类型。 有关更多信息，请参见[枚举](../cppcx/enums-c-cx.md)。  
   
 ## 要求  
  **支持的最低客户端版本：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

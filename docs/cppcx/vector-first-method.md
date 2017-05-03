@@ -34,7 +34,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^
  指向该向量中第一个元素的迭代器。  
   
 ## 备注  
- 保留 First\(\) 返回的迭代器的一种简便方式是将返回值分配给用 [auto](../Topic/auto%20\(C++\).md) 类型推导关键字声明的变量。 例如 `auto x = myVector->First();`。 此迭代器知道该集合的长度。  
+ 保留 First\(\) 返回的迭代器的一种简便方式是将返回值分配给用 [auto](~/cpp/auto-cpp.md) 类型推导关键字声明的变量。 例如 `auto x = myVector->First();`。 此迭代器知道该集合的长度。  
   
  当你需要一对要传递到 STL 函数的迭代器时，请使用自由格式函数 [Windows::Foundation::Collections::begin](../cppcx/begin-function.md) 和 [Windows::Foundation::Collections::end](../cppcx/end-function.md)  
   

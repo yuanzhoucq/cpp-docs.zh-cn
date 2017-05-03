@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Platform::Type 类
-包含有关类型的运行时信息，尤其是字符串名称和类型代码。 通过对任何对象调用 [Object::GetType 方法](../cppcx/object-gettype-method.md)或者对类或结构名称使用 [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) 运算符来获取。  
+包含有关类型的运行时信息，尤其是字符串名称和类型代码。 通过对任何对象调用 [Object::GetType 方法](../cppcx/object-gettype-method.md)或者对类或结构名称使用 [typeid](~/windows/typeid-cpp-component-extensions.md) 运算符来获取。  
   
 ## 语法  
   

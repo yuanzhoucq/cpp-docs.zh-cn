@@ -136,7 +136,7 @@ caps.handback.revision: 28
  有关更多信息，请参见[委托](../cppcx/delegates-c-cx.md)。  
   
 ### 异常  
- 在 C\+\+\/CX 中，可以捕获自定义异常类型、[std::exception](../Topic/exception%20Class1.md) 类型和 [Platform::Exception](../cppcx/platform-exception-class.md) 类型。  
+ 在 C\+\+\/CX 中，可以捕获自定义异常类型、[std::exception](~/standard-library/exception-class.md) 类型和 [Platform::Exception](../cppcx/platform-exception-class.md) 类型。  
   
  有关更多信息，请参见[异常](../cppcx/exceptions-c-cx.md)。  
   
@@ -146,7 +146,7 @@ caps.handback.revision: 28
  有关更多信息，请参见[事件](../cppcx/events-c-cx.md)。  
   
 ### 强制转换  
- C\+\+\/CX 支持标准 C\+\+ 强制转换运算符 [static\_cast](../cpp/static-cast-operator.md)、[dynamic\_cast](../cpp/dynamic-cast-operator.md) 和 [reinterpret\_cast](../cpp/reinterpret-cast-operator.md)，以及特定于 C\+\+\/CX 的 [safe\_cast](../Topic/safe_cast%20\(C++%20Component%20Extensions\).md) 运算符。  
+ C\+\+\/CX 支持标准 C\+\+ 强制转换运算符 [static\_cast](../cpp/static-cast-operator.md)、[dynamic\_cast](../cpp/dynamic-cast-operator.md) 和 [reinterpret\_cast](../cpp/reinterpret-cast-operator.md)，以及特定于 C\+\+\/CX 的 [safe\_cast](~/windows/safe-cast-cpp-component-extensions.md) 运算符。  
   
  有关更多信息，请参见[强制转换](../cppcx/casting-c-cx.md)。  
   

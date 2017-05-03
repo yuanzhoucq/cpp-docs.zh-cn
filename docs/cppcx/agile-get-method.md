@@ -33,7 +33,7 @@ manager: "ghogen"
 ## 返回值  
  用当前敏捷对象表示的对象的句柄。  
   
- 返回值的类型实际是未公开的内部类型。 保留返回值的一种简便方式是将它分配给用 [auto](../Topic/auto%20\(C++\).md) 类型推导关键字声明的变量。 例如 `auto x = myAgileTvariable->Get();`。  
+ 返回值的类型实际是未公开的内部类型。 保留返回值的一种简便方式是将它分配给用 [auto](~/cpp/auto-cpp.md) 类型推导关键字声明的变量。 例如 `auto x = myAgileTvariable->Get();`。  
   
 ## 要求  
  **支持的最低客户端版本：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

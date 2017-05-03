@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 15
 ---
 # 强制转换 (C++/CX)
-有四种不同的强制转换运算符适用于 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]类型：[static\_cast 运算符](../cpp/static-cast-operator.md)、[dynamic\_cast 运算符](../cpp/dynamic-cast-operator.md)、[safe\_cast 运算符](../Topic/safe_cast%20\(C++%20Component%20Extensions\).md)和 [reinterpret\_cast 运算符](../cpp/reinterpret-cast-operator.md)。 当无法执行转换时，`safe_cast` 和 `static_cast` 将引发异常；[static\_cast 运算符](../cpp/static-cast-operator.md)还执行编译时类型检查。 如果 `dynamic_cast` 无法转换类型，它将返回 `nullptr`。 即使 `reinterpret_cast` 返回一个非 null 值，它也可能是无效的。 为此，我们建议不使用 `reinterpret_cast`，除非已知该强制转换将会成功。 此外，我们还建议你不要在 [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 代码中使用 C 样式强制转换，因为它们与 `reinterpret_cast` 相同。  
+有四种不同的强制转换运算符适用于 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]类型：[static\_cast 运算符](../cpp/static-cast-operator.md)、[dynamic\_cast 运算符](../cpp/dynamic-cast-operator.md)、[safe\_cast 运算符](~/windows/safe-cast-cpp-component-extensions.md)和 [reinterpret\_cast 运算符](../cpp/reinterpret-cast-operator.md)。 当无法执行转换时，`safe_cast` 和 `static_cast` 将引发异常；[static\_cast 运算符](../cpp/static-cast-operator.md)还执行编译时类型检查。 如果 `dynamic_cast` 无法转换类型，它将返回 `nullptr`。 即使 `reinterpret_cast` 返回一个非 null 值，它也可能是无效的。 为此，我们建议不使用 `reinterpret_cast`，除非已知该强制转换将会成功。 此外，我们还建议你不要在 [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 代码中使用 C 样式强制转换，因为它们与 `reinterpret_cast` 相同。  
   
  编译器和运行时也执行隐式强制转换，例如，在装箱操作中（当值类型或内置类型作为参数传递到其参数类型为 `Object^` 的方法时）。 理论上，隐式强制转换不应在运行时引起异常；如果编译器无法执行隐式转换，它会在编译时引发错误。  
   

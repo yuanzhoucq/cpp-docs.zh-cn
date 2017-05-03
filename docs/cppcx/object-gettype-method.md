@@ -36,7 +36,7 @@ Object::GetType()
   
  [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) 类在 Windows API 中用作在 Windows 组件和应用之间传递类型信息的一种独立于语言的方式。 T[Platform::Type 类](../cppcx/platform-type-class.md) 具有用于在 `Type` 和 `TypeName` 之间进行转换的运算符。  
   
- 使用 [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) 运算符可返回类名称的 `Platform::Type` 对象，例如在 XAML 页面之间导航时：  
+ 使用 [typeid](~/windows/typeid-cpp-component-extensions.md) 运算符可返回类名称的 `Platform::Type` 对象，例如在 XAML 页面之间导航时：  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

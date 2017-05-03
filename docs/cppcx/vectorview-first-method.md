@@ -34,7 +34,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
  指定 VectorView 中第一个元素的迭代器。  
   
 ## 备注  
- 保留 First\(\) 返回的迭代器的一种简便方式是将返回值分配给用 [auto](../Topic/auto%20\(C++\).md) 类型推导关键字声明的变量。 例如 `auto x = myVectorView->First();`。  
+ 保留 First\(\) 返回的迭代器的一种简便方式是将返回值分配给用 [auto](~/cpp/auto-cpp.md) 类型推导关键字声明的变量。 例如 `auto x = myVectorView->First();`。  
   
 ## 要求  
  **标头：**collection.h  

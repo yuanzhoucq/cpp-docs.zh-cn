@@ -21,7 +21,7 @@ caps.handback.revision: 21
 ## [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件 DLL  
  在几乎任何情况下，当你要创建在 [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)]应用程序中使用的 DLL 时，可使用该名称的项目模板将其创建为 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件。 你可以为具有公共或私有 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]类型的 DLL 创建一个 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件项目。 可以从用任何 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]兼容语言编写的应用程序访问 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件。 默认情况下，[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件项目的编译器设置使用 **\/ZW** 开关。 .winmd 文件必须具有和根命名空间相同的名称。 例如，名为 A.B.C.MyClass 的类只有在名为 A.winmd 或 A.B.winmd 或 A.B.C.winmd 的元数据文件中定义后才能实例化。 DLL 的名称不必与 .winmd 文件名匹配。  
   
- 有关详细信息，请参阅[用 C\+\+ 创建 Windows 运行时组件](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)。  
+ 有关详细信息，请参阅[用 C\+\+ 创建 Windows 运行时组件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)。  
   
 #### 在项目中引用第三方 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]组件二进制文件  
   

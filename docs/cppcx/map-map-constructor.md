@@ -52,7 +52,7 @@ Map(
  提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。  
   
  `m`  
- 对用于初始化当前映射的 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) 的引用或 [map 类](../standard-library/map-class.md)。  
+ 对用于初始化当前映射的 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) 的引用或 [map 类](../standard-library/map-class.md)。  
   
  `first`  
  用于初始化当前映射的一系列元素中的第一个元素的输入迭代器。  
