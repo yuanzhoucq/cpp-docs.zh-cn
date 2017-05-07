@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: c7547d0df457e9f96676b99fdf4f7808945e206c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1cbaa14c04aac55a09f646bfbe669a475e527add
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2830"></a>编译器错误 C2830
 只有“operator new”的位置参数可以有默认值  
   
-标准形参[运算符 new](../../standard-library/new-operators.md#operator_new)不能有默认值。 只有用户定义的位置参数可以指定默认值。
+标准形参[运算符 new](../../standard-library/new-operators.md#op_new)不能有默认值。 仅用户定义的位置参数可以指定默认值。
 
