@@ -28,7 +28,6 @@ f1_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -54,7 +53,6 @@ helpviewer_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -82,9 +80,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8e3f009def24f09cbc8b373a81ea63ed6bd922ed
-ms.lasthandoff: 04/24/2017
+ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
+ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>编译器错误 C2200 到 C2299
@@ -109,7 +107,7 @@ ms.lasthandoff: 04/24/2017
 |编译器错误 C2209|*标识符*︰ 不能在构造函数声明中使用别名|  
 |编译器错误 C2210|*标识符*︰ 包扩展不能用作别名模板中的非打包参数的变量|  
 |编译器错误 C2211|从具有公共析构函数的 ref 类派生的 ref 类中的非虚拟析构函数也必须是公共|  
-|[编译器错误 C2212](compiler-error-c2212.md)|*标识符*︰ 不 __based 可用于指向函数的指针|  
+|[编译器错误 C2212](compiler-error-c2212.md)|*标识符*︰ 不 __based 适用于指向函数的指针|  
 |[编译器错误 C2213](compiler-error-c2213.md)|*标识符*︰ 非法的自变量以 __based|  
 |编译器错误 C2214|基于“void”的指针要求使用 :>|  
 |编译器错误 C2215|*关键字*不能与使用 / 体系结构︰ SSE|  
@@ -135,7 +133,7 @@ ms.lasthandoff: 04/24/2017
 |编译器错误 C2235|已过时。|  
 |[编译器错误 C2236](compiler-error-c2236.md)|意外的标记*令牌*。 你是否忘了“;”？|  
 |编译器错误 C2237|多个模块声明|  
-|[编译器错误 C2238](compiler-error-c2238.md)|前面的意外的标记*令牌*|  
+|[编译器错误 C2238](compiler-error-c2238.md)|意外的标记前面*令牌*|  
 |编译器错误 C2239|*函数*': 尝试删除 __declspec （dllexport） 函数|  
 |编译器错误 C2240|已过时。|  
 |[编译器错误 C2241](compiler-error-c2241.md)|*标识符*︰ 成员访问受限制|  
@@ -177,7 +175,7 @@ ms.lasthandoff: 04/24/2017
 |[编译器错误 C2277](compiler-error-c2277.md)|*函数*︰ 不能采用该成员函数的地址|  
 |编译器错误 C2278|已过时。|  
 |[编译器错误 C2279](compiler-error-c2279.md)|异常规范不能出现在 typedef 声明中|  
-|编译器错误 C2280|*类*::*函数*': 尝试引用已删除的函数|  
+|[编译器错误 C2280](compiler-error-c2280.md)|*类*::*函数*': 尝试引用已删除的函数|  
 |编译器错误 C2281|*类*::*函数*︰ 函数只能在第一个声明中删除|  
 |编译器错误 C2282|*function1*不能重写*function2*|  
 |[编译器错误 C2283](compiler-error-c2283.md)|*标识符*︰ 纯说明符或抽象重写说明符不允许对未命名类/结构|  

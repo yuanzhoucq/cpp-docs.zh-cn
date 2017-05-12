@@ -34,25 +34,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: d53dbd9429ba3c1a525b85a3ef9f2e70152ddfa2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c81fc315c4bb893b96876b7b67b42806a3246583
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2872"></a>编译器错误 C2872
-symbol︰ 不明确的符号  
+*符号*︰ 不明确的符号  
   
-编译器无法确定所引用的符号。  
+编译器无法确定所引用的符号。 具有指定名称的多个符号处于范围。 编译器找到不明确的符号，请参阅以下错误消息中的文件位置和声明说明。 若要解决此问题，你可以完全限定的不明确的符号通过使用其命名空间，例如，`std::byte`或`::byte`。 你还可以使用[命名空间别名](../../cpp/namespaces-cpp.md#namespace_aliases)，以为提供一个包含命名空间使用的方便短名称消除歧义在源代码中的符号。  
   
-如果标头文件包含，则会出现 C2872 [using 指令](../../cpp/namespaces-cpp.md#using_directives)，包含了一个后续的头文件，并包含在指定的命名空间中也是一种`using`指令。 指定`using`指令仅在所有标头文件指定与后`#include`。  
+如果标头文件包含，则会发生 C2872 [using 指令](../../cpp/namespaces-cpp.md#using_directives)，并包含了一个后续标头文件，其中包含在指定的命名空间中也是一种`using`指令。 指定`using`指令仅在所有标头文件指定与后`#include`。  
   
- 有关 C2872 的详细信息，请参阅知识库文章[PRB︰ 编译器错误在您使用 #import 具有 Visual c + +.NET 中的 XML](http://support.microsoft.com/kb/316317)和["错误 C2872: 平台︰ 不明确的符号"Visual Studio 2013 中使用 Windows::Foundation::Metadata 命名空间时，错误消息](https://support.microsoft.com/kb/2890859)。  
+ 有关 C2872 的详细信息，请参阅知识库文章[PRB︰ 编译器错误时你用于 #import Visual c + +.NET 中的 XML](http://support.microsoft.com/kb/316317)和["错误 C2872: 平台︰ 不明确的符号"在 Visual Studio 2013 中使用 Windows::Foundation::Metadata 命名空间时的错误消息](https://support.microsoft.com/kb/2890859)。  
   
 ## <a name="example"></a>示例  
- 下面的示例生成 C2872:  
+ 下面的示例生成 C2872，因为不明确的引用名为的变量，所以`i`; 两个具有相同名称的变量都位于作用域︰  
   
 ```cpp  
 // C2872.cpp  
+// compile with: cl /EHsc C2872.cpp  
 namespace A {  
    int i;  
 }  
@@ -60,8 +61,10 @@ namespace A {
 using namespace A;  
 int i;  
 int main() {  
-   ::i++;   // ok  
-   A::i++;   // ok  
-   i++;   // C2872 ::i or A::i?  
+   ::i++;   // ok, uses i from global namespace  
+   A::i++;   // ok, uses i from namespace A  
+   i++;   // C2872 ambiguous: ::i or A::i? 
+   // To fix this issue, use the fully qualified name
+   // for the intended variable. 
 }  
 ```

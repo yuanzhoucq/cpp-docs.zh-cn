@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 129ad6a0359fbee402b39c5e7ff498602e97479d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7cd85d29ee14376b46d05ac5cfa95496fffdc9e5
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2815"></a>编译器错误 C2815
-operator delete︰ 第一个形参必须是 void *，param 实际使用的却  
+operator delete︰ 第一个形参必须是 void *，但却使用 param  
   
- 任何用户定义[运算符 delete](../../standard-library/new-operators.md#operator_delete)函数必须将类型的第一个形参`void *`。  
+ 任何用户定义[运算符 delete](../../standard-library/new-operators.md#op_delete)函数必须采用类型的第一个形参`void *`。  
   
  下面的示例生成 C2815:  
   
