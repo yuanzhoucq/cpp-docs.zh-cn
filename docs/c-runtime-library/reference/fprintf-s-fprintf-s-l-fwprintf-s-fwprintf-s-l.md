@@ -1,136 +1,153 @@
 ---
-title: "fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fprintf_s_l"
-  - "fwprintf_s"
-  - "fprintf_s"
-  - "_fwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftprintf_s"
-  - "fprintf_s"
-  - "fwprintf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fprintf_s_l 函数"
-  - "_ftprintf_s 函数"
-  - "_ftprintf_s_l 函数"
-  - "_fwprintf_s_l 函数"
-  - "fprintf_s 函数"
-  - "fprintf_s_l 函数"
-  - "ftprintf_s 函数"
-  - "ftprintf_s_l 函数"
-  - "fwprintf_s 函数"
-  - "fwprintf_s_l 函数"
-  - "将格式化的数据打印到流"
+title: "fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fprintf_s_l
+- fwprintf_s
+- fprintf_s
+- _fwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _ftprintf_s
+- fprintf_s
+- fwprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftprintf_s_l function
+- ftprintf_s function
+- _fprintf_s_l function
+- _ftprintf_s function
+- _ftprintf_s_l function
+- fwprintf_s_l function
+- fwprintf_s function
+- fprintf_s_l function
+- fprintf_s function
+- _fwprintf_s_l function
+- print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6ca073e8021d10b81245327d04b358b8c410ef0f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-将格式化的数据打印到流  [fprintf、\_fprintf\_l、fwprintf、\_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) 的一些版本提供安全增强功能（如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述）。  
+---
+# <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
+将格式化数据输出到流。 如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) 具有安全增强功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int fprintf_s(   
    FILE *stream,  
    const char *format [,  
-   argument ]...  
+   argument_list ]  
 );  
 int _fprintf_s_l(   
    FILE *stream,  
    const char *format,  
    locale_t locale [,  
-   argument ]...  
+   argument_list ]  
 );  
 int fwprintf_s(   
    FILE *stream,  
    const wchar_t *format [,  
-   argument ]...  
+   argument_list ]  
 );  
 int _fwprintf_s_l(   
    FILE *stream,  
    const wchar_t *format,  
    locale_t locale [,  
-   argument ]…  
+   argument_list ]  
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `stream`  
  指向 `FILE` 结构的指针。  
   
  `format`  
  窗体控件字符串。  
   
- `argument`  
- 可选参数。  
+ `argument_list`  
+ 格式字符串的可选自变量。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- `fprintf_s`返回写入的字节数。  `fwprintf_s` 返回编写的宽字符的数目。  在输出错误发生时，这些函数返回负值。  
+## <a name="return-value"></a>返回值  
+ `fprintf_s` 返回已写入的字节数。 `fwprintf_s` 返回已写入的宽字符数。 其中每个函数在出现输出错误时返回一个负值。  
   
-## 备注  
- `fprintf_s`格式化并输出一系列字符和值到输出`stream`*.*每个函数 `argument`（如果有）根据 `format`*.* 中相应的格式规范进行转换和输出。对于 `fprintf_s`，`format` 参数与`printf_s`相同的语法和用法。  
+## <a name="remarks"></a>备注  
+ `fprintf_s` 格式化一系列字符和值并将其输出到输出 `stream`。 在每个自变量`argument_list`（如果有） 进行转换和输出中的相应格式规范根据`format`。 `format`自变量使用[格式规范语法 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
- `fwprintf_s` 是 `fprintf_s` 的宽字符版本；`fwprintf_s`，`format`是宽字符串。  如果流在 ANSI 模式中打开，这些函数具有相同的行为。  `fprintf_s` 当前不支持输出到 UNICODE 流。  
+ `fwprintf_s` 是 `fprintf_s` 的宽字符版本；在 `fwprintf_s` 中，`format` 是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 `fprintf_s` 当前不支持到 UNICODE 流中的输出。  
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前区域设置。  
   
 > [!IMPORTANT]
 >  确保 `format` 不是用户定义的字符串。  
   
- 与不安全的版本相似 \(参见 [fprintf、\_fprintf\_l、fwprintf、\_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)\)，如果`stream`和 `format` 是一个 null 指针，这些函数验证其参数并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)所述。  这些函数与不安全的版本的不同之处在于格式字符串也需要验证。  如果有任何未知或格式不好的格式化说明符，这些函数调用的参数无效处理程序。  任何情况下，如果允许执行继续，则这些函数返回\-1, 并将`errno`设置为`EINVAL` 。  有关这些内容的更多信息以及其他错误代码，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 与不安全版本一样（请参见 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)），如果 `stream` 或 `format` 为 null 指针，则这些函数将验证其参数并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 格式字符串本身也需进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将生成无效参数异常。 在所有情况下，如果允许执行继续，则这些函数将返回 -1 并将 `errno` 设置为 `EINVAL`。 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|\_UNICODE & \_MBCS not defined|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|------------------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ftprintf_s`|`fprintf_s`|`fprintf_s`|`fwprintf_s`|  
 |`_ftprintf_s_l`|`_fprintf_s_l`|`_fprintf_s_l`|`_fwprintf_s_l`|  
   
- 有关更多信息，请参见[格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 有关详细信息，请参阅[格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`fprintf_s`, `_fprintf_s_l`|\<stdio.h\>|  
-|`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h\> 或 \<wchar.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`fprintf_s`, `_fprintf_s_l`|\<stdio.h>|  
+|`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```C  
 // crt_fprintf_s.c  
 // This program uses fprintf_s to format various  
 // data and print it to the file named FPRINTF_S.OUT. It  
@@ -158,14 +175,14 @@ int main( void )
 }  
 ```  
   
-  **这是一个字符串。**  
-**10**  
-**1.500000**   
-## .NET Framework 等效项  
- [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
+```Output  
+this is a string  
+10  
+1.500000  
+```  
   
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [\_cprintf、\_cprintf\_l、\_cwprintf、\_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf、\_fscanf\_l、fwscanf、\_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf、_fscanf_l、fwscanf、_fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)

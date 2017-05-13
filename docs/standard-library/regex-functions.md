@@ -8,31 +8,32 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_match
-- std::regex_match
 - regex/std::regex_match
 - regex_replace
-- std::regex_replace
 - regex/std::regex_replace
 - regex_search
-- std::regex_search
 - regex/std::regex_search
 - regex/std::swap
+- regex/std::swap
+dev_langs:
+- C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 28fdbf1c00c44711538b7c163053eeca5a0c47e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0b803ecc31331cdfed9b178ca2e919606482aa33
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函数
 ||||  
 |-|-|-|  
-|[regex_match 函数](#regex_match_function)|[regex_replace 函数](#regex_replace_function)|[regex_search 函数](#regex_search_function)|  
-|[swap 函数](#swap_function)|  
+|[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|  
+|[swap](#swap)|  
   
-##  <a name="a-nameregexmatchfunctiona--regexmatch-function"></a><a name="regex_match_function"></a>  regex_match 函数  
+##  <a name="regex_match"></a>regex_match
  测试正则表达式是否与整个目标字符串相匹配。  
   
 ```  
@@ -121,7 +122,7 @@ bool regex_match(
  要匹配的序列的结尾。  
   
  `match`  
- 匹配结果。 对应于 Elem 类型：[smatch](../standard-library/regex-typedefs.md#smatch_typedef) 匹配 string、[wsmatch](../standard-library/regex-typedefs.md#wsmatch_typedef) 匹配 wstring、[cmatch](../standard-library/regex-typedefs.md#cmatch_typedef) 匹配 char* 或 [wcmatch](../standard-library/regex-typedefs.md#wcmatch_typedef) 匹配 wchar_t\*。  
+ 匹配结果。 对应于 Elem 类型：[smatch](../standard-library/regex-typedefs.md#smatch) 匹配 string、[wsmatch](../standard-library/regex-typedefs.md#wsmatch) 匹配 wstring、[cmatch](../standard-library/regex-typedefs.md#cmatch) 匹配 char* 或 [wcmatch](../standard-library/regex-typedefs.md#wcmatch) 匹配 wchar_t\*。  
   
  `ptr`  
  指向要匹配的序列开头的指针。 如果 ptr 是 char*，则使用 cmatch 和 regex。 如果 ptr 是 wchar_t\*，则使用 wcmatch 和 wregex。  
@@ -133,7 +134,7 @@ bool regex_match(
  要匹配的字符串。 对应于 Elem 类型。  
   
 ### <a name="remarks"></a>备注  
- 每个模板函数仅在整个操作数序列 `str` 与正则表达式参数 `re` 完全匹配时才返回 true。 请使用 [regex_search](../standard-library/regex-functions.md#regex_search_function) 匹配目标序列中的子字符串，并使用 regex_iterator 查找多个匹配。 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。  
+ 每个模板函数仅在整个操作数序列 `str` 与正则表达式参数 `re` 完全匹配时才返回 true。 请使用 [regex_search](../standard-library/regex-functions.md#regex_search) 匹配目标序列中的子字符串，并使用 regex_iterator 查找多个匹配。 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。  
   
  采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。  
   
@@ -192,7 +193,7 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ```  
   
-##  <a name="a-nameregexreplacefunctiona--regexreplace-function"></a><a name="regex_replace_function"></a>  regex_replace 函数  
+##  <a name="regex_replace"></a>regex_replace
  替换匹配正则表达式。  
   
 ```  
@@ -298,7 +299,7 @@ replacement == AdAeAf
 replacement == Adaeaf  
 ```  
   
-##  <a name="a-nameregexsearchfunctiona--regexsearch-function"></a><a name="regex_search_function"></a>  regex_search 函数  
+##  <a name="regex_search"></a>regex_search
  搜索正则表达式匹配项。  
   
 ```  
@@ -447,7 +448,7 @@ search(string, "abc") == true
   matched: "abc"  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap-function"></a><a name="swap_function"></a>swap 函数  
+##  <a name="swap"></a>  swap
  交换两个 basic_regex 或 match_results 对象。  
   
 ```  

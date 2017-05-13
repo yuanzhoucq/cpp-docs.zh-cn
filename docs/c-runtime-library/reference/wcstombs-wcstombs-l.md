@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 200337a53155b27b76a944d025c8fb013c29c4e6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
@@ -108,7 +109,7 @@ size_t _wcstombs_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `wcstombs` 成功转换多字节字符串，将返回多字节输出字符串中写入的字节数，不包括终止 `NULL`（如果有）。 如果 `mbstr` 参数为 `NULL`，则 `wcstombs` 会返回目标字符串所需的大小（以字节为单位）。 如果 `wcstombs` 遇到无法转换为多字节字符的宽字符，将会把 -1 强制转换为类型 `size_t`，并将 `errno` 设置为 `EILSEQ`。  
+ 如果 `wcstombs` 成功转换多字节字符串，将返回多字节输出字符串中写入的字节数，不包括终止 `NULL`（如果有）。 如果 `mbstr` 参数为 `NULL`，则 `wcstombs` 会返回目标字符串所需的大小（以字节为单位）。 如果`wcstombs`遇到宽字符不能转换为多字节字符，则返回-1 转换为类型`size_t`和设置`errno`到`EILSEQ`。  
   
 ## <a name="remarks"></a>备注  
  `wcstombs` 函数将 `wcstr` 指向的宽字符字符串转换为相应的多字节字符，并将转换结果存储到 `mbstr` 数组中。 `count` 参数指明多字节输出字符串可以存储的最大字节数（也就是 `mbstr` 的大小）。 一般情况下，转换宽字符字符串时不会知道需要多少个字节。 某些宽字符在输出字符串中仅占一个字节；其他的字符则占两个。 如果输入字符串每个宽字符的多字节输出字符串存在两个字节（包括宽字符 `NULL`），要确保结果可以将其容纳。  
@@ -117,7 +118,7 @@ size_t _wcstombs_l(
   
  如果 `mbstr` 参数为 `NULL`，则 `wcstombs` 会返回目标字符串所需的大小（以字节为单位）。  
   
- `wcstombs` 会验证其参数。 如果 `wcstr` 为 `NULL`，或如果 `count` 优于 `INT_MAX`，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。  
+ `wcstombs` 会验证其参数。 如果`wcstr`是`NULL`，或者如果`count`大于`INT_MAX`，此函数将调用无效参数处理程序，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
  `wcstombs` 将当前区域设置用于任何与区域设置相关的行为；`_wcstombs_l` 与此相同，只不过它使用传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
@@ -172,9 +173,6 @@ Convert wide-character string:
    Characters converted: 13  
     Multibyte character: Hello, world.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   

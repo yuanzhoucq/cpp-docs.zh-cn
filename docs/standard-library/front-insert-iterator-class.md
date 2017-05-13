@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6468f372324cb6f62b5b09524cfbf5386b1502c6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b9ea6370bb55c57fb3713c41acb9281e928496c2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 类
@@ -63,29 +64,29 @@ class front_insert_iterator;
   
 |||  
 |-|-|  
-|[front_insert_iterator](#front_insert_iterator__front_insert_iterator)|创建一个可以在指定容器对象前端插入元素的迭代器。|  
+|[front_insert_iterator](#front_insert_iterator)|创建一个可以在指定容器对象前端插入元素的迭代器。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[container_type](#front_insert_iterator__container_type)|表示要从中执行前端插入的容器的类型。|  
-|[reference](#front_insert_iterator__reference)|一种类型，此类型提供对关联容器所控制序列中的元素的引用。|  
+|[container_type](#container_type)|表示要从中执行前端插入的容器的类型。|  
+|[reference](#reference)|一种类型，此类型提供对关联容器所控制序列中的元素的引用。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator*](#front_insert_iterator__operator_star)|取消引用用于实现前端插入的输出迭代器表达式 * `i` = `x` 的运算符。|  
-|[operator++](#front_insert_iterator__operator_add_add)|将 `front_insert_iterator` 递增到下一个可用来存储值的位置。|  
-|[operator=](#front_insert_iterator__operator_eq)|赋值运算符，用于实现前端插入的输出迭代器表达式 * `i` = `x`。|  
+|[operator*](#op_star)|取消引用用于实现前端插入的输出迭代器表达式 * `i` = `x` 的运算符。|  
+|[operator++](#op_add_add)|将 `front_insert_iterator` 递增到下一个可用来存储值的位置。|  
+|[operator=](#op_eq)|赋值运算符，用于实现前端插入的输出迭代器表达式 * `i` = `x`。|  
   
 ## <a name="requirements"></a>要求  
  **标头**：\<iterator>  
   
  **命名空间：** std  
   
-##  <a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
+##  <a name="container_type"></a>  front_insert_iterator::container_type  
  表示要从中执行前端插入的容器的类型。  
   
 ```  
@@ -125,7 +126,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
+##  <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
  创建一个可以在指定容器对象前端插入元素的迭代器。  
   
 ```  
@@ -185,7 +186,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
+##  <a name="op_star"></a>  front_insert_iterator::operator*  
  取消引用返回其所寻址元素的插入迭代器。  
   
 ```  
@@ -243,7 +244,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
+##  <a name="op_add_add"></a>  front_insert_iterator::operator++  
  将 `back_insert_iterator` 递增到下一个可用来存储值的位置。  
   
 ```  
@@ -291,7 +292,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
+##  <a name="op_eq"></a>  front_insert_iterator::operator=  
  将值追加（推送）到容器开头。  
   
 ```  
@@ -349,7 +350,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
+##  <a name="reference"></a>  front_insert_iterator::reference  
  一种类型，此类型提供对关联容器所控制序列中的元素的引用。  
   
 ```  

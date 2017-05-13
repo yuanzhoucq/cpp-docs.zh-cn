@@ -72,10 +72,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 17978f1c6f934783236df5a36464ab44f8254903
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e864aca13c5ae83b3806a95026a05f8f408e9071
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltsharedmutexgt"></a>&lt;shared_mutex&gt;
@@ -91,7 +92,7 @@ ms.lasthandoff: 02/24/2017
   
 |函数|描述|  
 |---------------|-----------------|  
-|[swap 函数](../standard-library/shared-mutex.md#function_swap)|交换由函数参数引用的共享 mutex 对象的内容。|  
+|[swap](../standard-library/shared-mutex.md#function_swap)|交换由函数参数引用的共享 mutex 对象的内容。|  
   
 ## <a name="syntax"></a>语法  
   
@@ -128,11 +129,11 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
  `shared_lock` 模板类扩展对定时锁定和所有权转移给共享 mutex 的支持。 Mutex 所有权可以在构造之时或之后获得，也可转移到另一个 `shared_lock` 对象。 可移动 `shared_lock` 类型的对象，但不能复制。  
   
 > [!WARNING]
->  Visual Studio 2015 中的 C++ 标准库同步类型是基于 Windows 同步基元，且不再使用 ConcRT（除非目标平台是 Windows XP）。 <shared_mutex> 中定义的类型不应与任何 ConcRT 类型或函数共同使用。  
+>  从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元，且不再使用 ConcRT （除非当目标平台是 Windows XP）。 <shared_mutex> 中定义的类型不应与任何 ConcRT 类型或函数共同使用。  
   
 ## <a name="classes"></a>类  
   
-###  <a name="a-nameclasssharedmutexa-sharedmutex-class"></a><a name="class_shared_mutex"></a>shared_mutex 类  
+###  <a name="class_shared_mutex"></a>shared_mutex 类  
  类 `shared_mutex` 实现非递归 mutex 和共享所有权语义。  
   
 ```cpp  
@@ -158,7 +159,7 @@ class shared_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedtimedmutexa-sharedtimedmutex-class"></a><a name="class_shared_timed_mutex"></a>shared_timed_mutex 类  
+###  <a name="class_shared_timed_mutex"></a>shared_timed_mutex 类  
  类 `shared_timed_mutex` 实现非递归 mutex 和满足定时 mutex 类型要求的共享所有权语义。  
   
 ```cpp  
@@ -189,7 +190,7 @@ class shared_timed_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedlocka-sharedlock-class"></a><a name="class_shared_lock"></a>shared_lock 类  
+###  <a name="class_shared_lock"></a>shared_lock 类  
  模板类 `shared_lock` 控制作用域中共享 mutex 对象的共享所有权。 模板参数必须是共享 mutex 类型。  
 
 ```cpp  
@@ -236,7 +237,7 @@ class shared_lock {
 
 ## <a name="functions"></a>函数  
   
-###  <a name="a-namefunctionswapa-swap-function"></a><a name="function_swap"></a>swap 函数  
+###  <a name="function_swap"></a>交换
  交换 `shared_lock` 对象。  
   
 ```cpp  

@@ -12,18 +12,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 72389624e776a2e8334490c37a5ca628e033ffaa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 运算符
 ||  
 |-|  
-|[operator&lt;&lt;](#operator_lt__lt_)|  
+|[operator&lt;&lt;](#op_lt_lt)|  
   
-##  <a name="operator_lt__lt_"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>operator&lt;&lt;  
  将各种类型写入流。  
   
 ```
@@ -106,7 +107,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
  流。  
   
 ### <a name="remarks"></a>备注  
- `basic_ostream` 类还定义了多个插入运算符。 有关详细信息，请参阅 [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt_)。  
+ `basic_ostream` 类还定义了多个插入运算符。 有关详细信息，请参阅 [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)。  
   
  模板函数  
   
@@ -117,7 +118,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 确定以 `str` 开始的序列的长度 N = `traits_type::`[length](../standard-library/char-traits-struct.md#char_traits__length)( `str`)，并插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#ios_base__width)，则该函数还将插入 `_Ostr.``width` 的重复项 - N 个填充字符。 重复项在序列前，前提是 ( `_Ostr`. [flags](../standard-library/ios-base-class.md#ios_base__flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 该函数返回 `_Ostr`。  
+ 确定以 `str` 开始的序列的长度 N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`)，并插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.``width` 的重复项 - N 个填充字符。 重复项在序列前，前提是 ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 该函数返回 `_Ostr`。  
   
  模板函数  
   
@@ -148,14 +149,18 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 通过调用 `_Ostr.`[put](../standard-library/basic-ostream-class.md#basic_ostream__put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#basic_ios__widen)( `_Ch`)) 将以 `str` 开头的序列的每个元素 `_Ch` 转换为 `Elem` 类型的对象除外。  
+ 通过调用 `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)) 将以 `str` 开头的序列的每个元素 `_Ch` 转换为 `Elem` 类型的对象除外。  
   
  模板函数  
   
-``cpp template <class _Elem, class _Tr> basic_ostream<Elem, _Tr>& operator<<( basic_ostream<Elem, _Tr>& _Ostr, char _Ch);
+```cpp
+template <class _Elem, class _Tr>
+basic_ostream<Elem, _Tr>& operator<<(
+    basic_ostream<Elem, _Tr>& _Ostr,
+    char _Ch);
 ```  
   
- behaves the same as  
+ 行为等同于  
   
 ```cpp  
 template <class _Elem, class _Tr>

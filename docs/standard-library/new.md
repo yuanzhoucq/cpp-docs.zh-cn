@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ad237fd3f28e7adfd380e6c2adf0510bfcf5248d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e804f35db459c7fe50bb36fa8eeaf795d04cc621
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
@@ -76,10 +77,10 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[运算符 delete](../standard-library/new-operators.md#operator_delete)|由 delete 表达式调用来解除单个对象的存储空间分配的函数。|  
-|[运算符 &#91;&#93;](../standard-library/new-operators.md#operator_delete_arr)|由 delete 表达式调用来解除对象数组的存储空间分配的函数。|  
-|[运算符 new](../standard-library/new-operators.md#operator_new)|由 new 表达式调用来为单个对象分配存储空间的函数。|  
-|[运算符 new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)|由 new 表达式调用来为对象数组分配存储空间的函数。|  
+|[运算符 delete](../standard-library/new-operators.md#op_delete)|由 delete 表达式调用来解除单个对象的存储空间分配的函数。|  
+|[运算符 &#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|由 delete 表达式调用来解除对象数组的存储空间分配的函数。|  
+|[运算符 new](../standard-library/new-operators.md#op_new)|由 new 表达式调用来为单个对象分配存储空间的函数。|  
+|[运算符 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|由 new 表达式调用来为对象数组分配存储空间的函数。|  
   
 ### <a name="classes"></a>类  
   

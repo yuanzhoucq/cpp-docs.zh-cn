@@ -10,15 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - random_device
-- std::random_device
 - random/std::random_device
-- std::random_device::min
 - random/std::random_device::min
-- std::random_device::max
 - random/std::random_device::max
-- std::random_device::entropy
 - random/std::random_device::entropy
-- std::random_device::operator()
+- random/std::random_device::operator()
+- random/std::random_device::entropy
 - random/std::random_device::operator()
 dev_langs:
 - C++
@@ -43,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d755f15b9f8dc575eb95d65822adfae3fdb568dd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 842e4f9b53a06373df8e00f64b1ab24a48a5c6b9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="randomdevice-class"></a>random_device 类
@@ -80,8 +78,8 @@ public:
   
 |||  
 |-|-|  
-|[random_device::random_device](#random_device__random_device)|[random_device::entropy](#random_device__entropy)|  
-|[random_device::operator()](#random_device__operator__)||  
+|[random_device](#random_device)|[平均信息量](#entropy)|  
+|[random_device::operator()](#op_call)||  
   
 ## <a name="remarks"></a>备注  
 该类描述了随机数的源，按 ISO C++ 标准，允许但不要求它为非确定性的或进行安全加密。 在 Visual Studio 实现中，产生的值是非确定性的且进行了安全加密，但是比从引擎和引擎适配器中创建的生成器运行得更慢（例如，对于大多数应用程序而言，会选择高质量且快速的引擎 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)）。  
@@ -132,7 +130,7 @@ a random value == 213725214
   
  **命名空间：** std  
   
-##  <a name="a-namerandomdevicerandomdevicea--randomdevicerandomdevice"></a><a name="random_device__random_device"></a>random_device::random_device  
+##  <a name="random_device"></a>random_device::random_device  
 构造生成器。  
   
 ```  
@@ -142,7 +140,7 @@ random_device(const std::string& = "");
 ### <a name="remarks"></a>备注  
 构造函数将按需初始化生成器，从而忽略字符串参数。 如果无法初始化 `random_device`，将引发派生自 [exception](../standard-library/exception-class.md) 的实现定义的类型的值。  
   
-##  <a name="a-namerandomdeviceentropya--randomdeviceentropy"></a><a name="random_device__entropy"></a>random_device::entropy  
+##  <a name="entropy"></a>random_device::entropy  
 估计源的随机性。  
   
 ```  
@@ -152,7 +150,7 @@ double entropy() const noexcept;
 ### <a name="remarks"></a>备注  
 成员函数将返回源的随机性的估计（以位为单位）。  
   
-##  <a name="a-namerandomdeviceoperatora--randomdeviceoperator"></a><a name="random_device__operator__"></a>random_device::operator()  
+##  <a name="op_call"></a>random_device::operator()  
 返回随机值。  
   
 ```  

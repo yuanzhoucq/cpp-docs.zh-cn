@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33826176b57dbc26c023e0556993ade7dc3e9cfd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a6163775f7e8592a48a8011e8d72eea008dd5c7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pclose"></a>_pclose
@@ -77,7 +78,7 @@ FILE *stream
  上一次调用 `_popen` 的返回值。  
   
 ## <a name="return-value"></a>返回值  
- 返回终止命令处理器的退出状态，如果发生错误，则返回 -1。 除了交换低位字节和高位字节外，返回值的格式与 `_cwait` 的格式相同。 如果流是 **NULL**，则 `_pclose` 将 `errno` 设置为 `EINVAL` 并返回 -1。  
+ 如果发生错误，则返回终止的命令处理器，则为-1 的退出状态。 除了交换低位字节和高位字节外，返回值的格式与 `_cwait` 的格式相同。 如果流是 **NULL**，则 `_pclose` 将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
  有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -94,9 +95,6 @@ FILE *stream
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   

@@ -7,61 +7,63 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::addressof
 - memory/std::addressof
-- std::align
 - memory/std::align
-- std::allocate_shared
 - memory/std::allocate_shared
-- std::const_pointer_cast
 - memory/std::const_pointer_cast
-- std::declare_no_pointers
 - memory/std::declare_no_pointers
-- std::declare_reachable
 - memory/std::declare_reachable
-- std::default_delete
 - memory/std::default_delete
-- std::dynamic_pointer_cast
 - memory/std::dynamic_pointer_cast
-- std::get_deleter_function
-- memory/std::get_deleter_function
-- std::get_pointer_safety
+- memory/std::get_deleter
 - memory/std::get_pointer_safety
-- std::get_temporary_buffer
 - memory/std::get_temporary_buffer
-- std::make_shared
 - memory/std::make_shared
-- std::make_unique
 - memory/std::make_unique
-- std::owner_less
 - memory/std::owner_less
-- std::return_temporary_buffer
 - memory/std::return_temporary_buffer
-- std::static_pointer_cast
 - memory/std::static_pointer_cast
-- std::swap
 - memory/std::swap
-- std::undeclare_no_pointers
 - memory/std::undeclare_no_pointers
-- std::undeclare_reachable
 - memory/std::undeclare_reachable
-- std::uninitialized_copy
 - memory/std::uninitialized_copy
-- std::uninitialized_copy_n
 - memory/std::uninitialized_copy_n
-- std::uninitialized_fill
 - memory/std::uninitialized_fill
-- std::uninitialized_fill_n
 - memory/std::uninitialized_fill_n
+- memory/std::addressof
+- memory/std::align
+- memory/std::allocate_shared
+- memory/std::const_pointer_cast
+- memory/std::declare_no_pointers
+- memory/std::declare_reachable
+- memory/std::default_delete
+- memory/std::dynamic_pointer_cast
+- memory/std::get_deleter
+- memory/std::get_pointer_safety
+- memory/std::get_temporary_buffer
+- memory/std::make_shared
+- memory/std::make_unique
+- memory/std::owner_less
+- memory/std::return_temporary_buffer
+- memory/std::static_pointer_cast
+- memory/std::undeclare_no_pointers
+- memory/std::undeclare_reachable
+- memory/std::uninitialized_copy
+- memory/std::uninitialized_copy_n
+- memory/std::uninitialized_fill
+- memory/std::uninitialized_fill_n
+dev_langs:
+- C++
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bab363d16555ca66ce0b57aad4ac8f3d9aaad21b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 4d6d010f7f910a89565ef8cd7c07ddbb2f054759
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函数
@@ -69,14 +71,14 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|  
 |[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|  
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter 函数](#get_deleter_function)|  
+|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|  
 |[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|  
 |[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|  
 |[static_pointer_cast](#static_pointer_cast)|[swap（C++ 标准库）](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|  
 |[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|  
 |[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|  
   
-##  <a name="a-nameaddressofa--addressof"></a><a name="addressof"></a>addressof  
+##  <a name="addressof"></a>addressof  
  获取对象的实际地址。  
   
 ```  
@@ -93,7 +95,7 @@ T* addressof(T& Val);
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="a-namealigna--align"></a><a name="align"></a>align  
+##  <a name="align"></a>align  
  将给定大小的存储（通过给定对齐规范对齐）放入给定存储的第一个可能地址。  
   
 ```  
@@ -150,7 +152,7 @@ while (alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.   
 ```  
   
-##  <a name="a-nameallocateshareda--allocateshared"></a><a name="allocate_shared"></a>allocate_shared  
+##  <a name="allocate_shared"></a>allocate_shared  
  创建指向对象的 `shared_ptr`，这些对象通过指定分配器针对给定类型分配和构造。 返回 `shared_ptr`。  
   
 ```  
@@ -169,7 +171,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 ### <a name="remarks"></a>备注  
  此函数创建对象 `shared_ptr``<Type>`，此对象为指向 `Type(``Args``...)` 的指针，通过 `Alloc` 分配和构造。  
   
-##  <a name="a-nameconstpointercasta--constpointercast"></a><a name="const_pointer_cast"></a>const_pointer_cast  
+##  <a name="const_pointer_cast"></a>const_pointer_cast  
  常量强制转换为 shared_ptr。  
   
 ```  
@@ -217,7 +219,7 @@ int main()
 sp1 == 3  
 ```  
   
-##  <a name="a-namedeclarenopointersa--declarenopointers"></a><a name="declare_no_pointers"></a>declare_no_pointers  
+##  <a name="declare_no_pointers"></a>declare_no_pointers  
  通知垃圾回收器：通过基地址指针和块大小而定义的内存块中的字符不包含可跟踪的指针。  
   
 ```  
@@ -230,13 +232,13 @@ void declare_no_pointers(
   
 |参数|说明|  
 |---------------|-----------------|  
-|` ptr`|第一个字符的地址，该字符不再包含可跟踪的指针。|  
-|`_Size`|块的大小，该块以不包含可跟踪的指针的 ` ptr` 开始。|  
+|`ptr`|第一个字符的地址，该字符不再包含可跟踪的指针。|  
+|`_Size`|块的大小，该块以不包含可跟踪的指针的 `ptr` 开始。|  
   
 ### <a name="remarks"></a>备注  
- 该函数通知任何 `garbage collector`：地址 `[`` ptr``,` ` ptr` `+` `_Size``)` 的范围内不再包含可跟踪的指针。 （不得取消引用指向已分配存储的任何指针，除非使其 `reachable`。）  
+ 函数告知任何`garbage collector`的地址范围`[ ptr, ptr + _Size)`不再包含可跟踪的指针。 （不得取消引用指向已分配存储的任何指针，除非使其 `reachable`。）  
   
-##  <a name="a-namedeclarereachablea--declarereachable"></a><a name="declare_reachable"></a>declare_reachable  
+##  <a name="declare_reachable"></a>declare_reachable  
  通知垃圾回收器：所指示的地址属于分配的存储并可到达。  
   
 ```  
@@ -244,13 +246,13 @@ void declare_reachable(void* ptr);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` ptr`  
+ `ptr`  
  指向可访问、已分配且有效的存储区域的指针。  
   
 ### <a name="remarks"></a>备注  
- 如果 ` ptr` 不为 null，则该函数将通知任何垃圾回收器以后可访问 ` ptr`（指向有效的已分配存储）。  
+ 如果 `ptr` 不为 null，则该函数将通知任何垃圾回收器以后可访问 `ptr`（指向有效的已分配存储）。  
   
-##  <a name="a-namedefaultdeletea--defaultdelete"></a><a name="default_delete"></a>default_delete  
+##  <a name="default_delete"></a>default_delete  
  删除使用 `operator new` 分配的对象。 适合与 `unique_ptr` 一起使用。  
 ```  
 struct default_delete {
@@ -269,7 +271,7 @@ struct default_delete {
 ### <a name="remarks"></a>备注  
  此模板类描述 `deleter`，它删除使用 `operator new` 分配的标量对象，适合与 `unique_ptr` 模板类一起使用。 它还具有显式专用化 `default_delete<Type[]>`。  
   
-##  <a name="a-namedynamicpointercasta--dynamicpointercast"></a><a name="dynamic_pointer_cast"></a>dynamic_pointer_cast  
+##  <a name="dynamic_pointer_cast"></a>dynamic_pointer_cast  
  动态强制转换为 shared_ptr。  
   
 ```  
@@ -331,7 +333,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-namegetdeleterfunctiona--getdeleter-function"></a><a name="get_deleter_function"></a>get_deleter 函数  
+##  <a name="get_deleter"></a>get_deleter
  从 shared_ptr 获取删除器。  
   
 ```  
@@ -397,7 +399,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true  
 ```  
   
-##  <a name="a-namegetpointersafetya--getpointersafety"></a><a name="get_pointer_safety"></a>get_pointer_safety  
+##  <a name="get_pointer_safety"></a>get_pointer_safety  
  返回任意垃圾回收器所采用的指针安全类型。  
   
 ```  
@@ -407,7 +409,7 @@ pointer_safety get_pointer_safety();
 ### <a name="remarks"></a>备注  
  该函数返回任何自动 `garbage collector` 所采用的指针安全类型。  
   
-##  <a name="a-namegettemporarybuffera--gettemporarybuffer"></a><a name="get_temporary_buffer"></a>get_temporary_buffer  
+##  <a name="get_temporary_buffer"></a>get_temporary_buffer  
  为不超过指定元素数量的元素序列分配临时存储。  
   
 ```  
@@ -416,7 +418,7 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` count`  
+ `count`  
  所请求的、要为其分配内存的元素的最大数目。  
   
 ### <a name="return-value"></a>返回值  
@@ -460,7 +462,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.  
 ```  
   
-##  <a name="a-namemakeshareda--makeshared"></a><a name="make_shared"></a>make_shared  
+##  <a name="make_shared"></a>make_shared  
  创建并返回指向分配对象的 `shared_ptr`，这些对象是通过使用默认分配器从零个或多个参数构造的。 分配并构造指定类型的对象和`shared_ptr`来管理对象的共享所有权，并返回`shared_ptr`。  
   
 ```  
@@ -554,7 +556,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3  
 ```  
   
-##  <a name="a-namemakeuniquea--makeunique"></a><a name="make_unique"></a>make_unique  
+##  <a name="make_unique"></a>make_unique  
  创建 [unique_ptr](../standard-library/unique-ptr-class.md) 并将其返回到指定类型的对象，该对象通过指定的自变量进行构建。  
   
 ```scr  
@@ -608,7 +610,7 @@ typename enable_if<extent<T>::value != 0,
   
   如果您收到与 `unique_ptr` 有关的错误 C2280，则几乎可以肯定是因为您尝试调用其副本构造函数（此函数是一个已删除的函数）。  
   
-##  <a name="a-nameownerlessa--ownerless"></a><a name="owner_less"></a>owner_less  
+##  <a name="owner_less"></a>owner_less  
  允许对共享指针和弱指针进行基于所有权的混合比较。 如果成员函数 `owner_before` 将左侧参数排在右侧参数前面，则返回 `true`。  
   
 ```  
@@ -652,13 +654,13 @@ struct owner_less<weak_ptr<Type>>
  `_left`  
  共享指针或弱指针。  
   
- ` right`  
+ `right`  
  共享指针或弱指针。  
   
 ### <a name="remarks"></a>备注  
- 该模板类将其所有成员运算符都定义为返回 ` left``.owner_before(`` right``)`。  
+ 该模板类将其所有成员运算符都定义为返回 `left``.owner_before(``right``)`。  
   
-##  <a name="a-namereturntemporarybuffera--returntemporarybuffer"></a><a name="return_temporary_buffer"></a>return_temporary_buffer  
+##  <a name="return_temporary_buffer"></a>return_temporary_buffer  
  对使用 `get_temporary_buffer` 模板函数分配的临时内存执行解除分配。  
   
 ```  
@@ -711,7 +713,7 @@ The number of elements that the allocated memory
  could store is given by: resultPair.second = 7.  
 ```  
   
-##  <a name="a-namestaticpointercasta--staticpointercast"></a><a name="static_pointer_cast"></a>static_pointer_cast  
+##  <a name="static_pointer_cast"></a>static_pointer_cast  
  静态强制转换为 shared_ptr。  
   
 ```  
@@ -769,7 +771,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-nameswapa--swap-c-standard-library"></a><a name="swap"></a>swap（C++ 标准库）  
+##  <a name="swap"></a>swap（C++ 标准库）  
  交换两个 shared_ptr 或 weak_ptr 对象。  
   
 ```  
@@ -850,7 +852,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-nameundeclarenopointersa--undeclarenopointers"></a><a name="undeclare_no_pointers"></a>undeclare_no_pointers  
+##  <a name="undeclare_no_pointers"></a>undeclare_no_pointers  
  通知垃圾回收器：通过基地址指针和块大小而定义的内存块中的字符现在可包含可跟踪的指针。  
   
 ```  
@@ -860,9 +862,9 @@ void undeclare_no_pointers(
 ```  
   
 ### <a name="remarks"></a>备注  
- 该函数通知任何 `garbage collector`：地址 `[`` ptr``,` ` ptr` `+` `_Size``)` 的范围内现在可能包含 `traceable pointers`。  
+ 函数告知任何`garbage collector`的地址范围`[ptr, ptr + _Size)`现在可包含`traceable pointers`。  
   
-##  <a name="a-nameundeclarereachablea--undeclarereachable"></a><a name="undeclare_reachable"></a>undeclare_reachable  
+##  <a name="undeclare_reachable"></a>undeclare_reachable  
  通知 `garbage_collector`：指定的内存位置无法达到。  
   
 ```  
@@ -874,12 +876,12 @@ Type *undeclare_reachable(Type* ptr);
   
 |参数|描述|  
 |---------------|-----------------|  
-|` ptr`|指向要声明为不可访问的内存地址的指针。|  
+|`ptr`|指向要声明为不可访问的内存地址的指针。|  
   
 ### <a name="remarks"></a>备注  
- 如果 ` ptr` 不为 `null`，则该函数将通知任何 `garbage collector` ` ptr` 以后不 `reachable`。 它将返回等同于 ` ptr` 的 `safely derived` 指针。  
+ 如果 `ptr` 不为 `null`，则该函数将通知任何 `garbage collector` `ptr` 以后不 `reachable`。 它将返回等同于 `ptr` 的 `safely derived` 指针。  
   
-##  <a name="a-nameuninitializedcopya--uninitializedcopy"></a><a name="uninitialized_copy"></a>uninitialized_copy  
+##  <a name="uninitialized_copy"></a>uninitialized_copy  
  将指定源范围中的对象复制到未初始化的目标范围。  
   
 ```  
@@ -888,17 +890,17 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  确定源范围中第一个元素的地址的输入迭代器。  
   
- ` last`  
+ `last`  
  确定源范围中最后一个元素的地址的输入迭代器。  
   
- ` dest`  
+ `dest`  
  确定目标范围中第一个元素的地址的前向迭代器。  
   
 ### <a name="return-value"></a>返回值  
- 确定超出目标范围的第一个位置的地址的前向迭代器，除非源范围为空，此时迭代器将确定 * first* 的地址。  
+ 确定超出目标范围的第一个位置，除非源范围为空的向前迭代器和迭代器地址 * first.*  
   
 ### <a name="remarks"></a>备注  
  该算法可将内存分配与对象构造分离开。  
@@ -980,7 +982,7 @@ int main()
 }
 ```  
   
-##  <a name="a-nameuninitializedcopyna--uninitializedcopyn"></a><a name="uninitialized_copy_n"></a>uninitialized_copy_n  
+##  <a name="uninitialized_copy_n"></a>uninitialized_copy_n  
  创建来自输入迭代器的指定数量的元素的副本。 副本放置在向前迭代器中。  
   
 ```  
@@ -992,32 +994,30 @@ ForwardIterator uninitialized_copy_n(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  引用要复制的对象的输入迭代器。  
   
- ` count`  
+ `count`  
  指定复制对象的次数的带符号或无符号整数类型。  
   
- ` dest`  
+ `dest`  
  引用新副本所在位置的向前迭代器。  
   
 ### <a name="return-value"></a>返回值  
- 发现超出目标的第一个位置的向前迭代器。 如果源范围为空，迭代器将发现 ` first`*。*  
+ 发现超出目标的第一个位置的向前迭代器。 如果源范围为空，迭代器地址`first`。  
   
 ### <a name="remarks"></a>备注  
  模板函数有效执行以下操作：  
   
- `for (; 0 < count; -- count)`  
-  
- `new ((void *)&*` ` dest` `++)`  
-  
- `iterator_traits<InputIterator>::value_type(*` ` first` `++);`  
-  
- `return dest;`  
+```cpp  
+    for (; 0 < count; --count)  
+        new ((void *)&* dest++) iterator_traits<InputIterator>::value_type(*first++);  
+    return dest;  
+```  
   
  除非代码引发异常。 在这种情况下，所有构造的对象将销毁，并重新引发异常。  
   
-##  <a name="a-nameuninitializedfilla--uninitializedfill"></a><a name="uninitialized_fill"></a>uninitialized_fill  
+##  <a name="uninitialized_fill"></a>uninitialized_fill  
  将具有指定值的对象复制到未初始化的目标范围。  
   
 ```  
@@ -1026,13 +1026,13 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  一个向前迭代器，用于在要启动的目标范围中发现第一个元素。  
   
- ` last`  
+ `last`  
  一个向前迭代器，用于在要启动的目标范围中发现最后一个元素。  
   
- ` val`  
+ `val`  
  用于初始化目标范围的值。  
   
 ### <a name="remarks"></a>备注  
@@ -1086,7 +1086,7 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25   
 ```  
   
-##  <a name="a-nameuninitializedfillna--uninitializedfilln"></a><a name="uninitialized_fill_n"></a>uninitialized_fill_n  
+##  <a name="uninitialized_fill_n"></a>uninitialized_fill_n  
  将具有指定值的对象复制到未初始化的目标范围内的指定数量的元素。  
   
 ```  
@@ -1095,13 +1095,13 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  在要初始化的目标范围中发现第一个元素的向前迭代器。  
   
- ` count`  
+ `count`  
  要初始化的元素的个数。  
   
- ` val`  
+ `val`  
  用于初始化目标范围的值。  
   
 ### <a name="remarks"></a>备注  

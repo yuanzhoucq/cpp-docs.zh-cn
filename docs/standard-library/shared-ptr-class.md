@@ -10,30 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - shared_ptr
-- std::shared_ptr
 - memory/std::shared_ptr
-- std::shared_ptr::element_type
 - memory/std::shared_ptr::element_type
-- std::shared_ptr::get
 - memory/std::shared_ptr::get
-- std::shared_ptr::owner_before
 - memory/std::shared_ptr::owner_before
-- std::shared_ptr::reset
 - memory/std::shared_ptr::reset
-- std::shared_ptr::swap
 - memory/std::shared_ptr::swap
-- std::shared_ptr::unique
 - memory/std::shared_ptr::unique
-- std::shared_ptr::use_count
 - memory/std::shared_ptr::use_count
-- std::shared_ptr::operator boolean-type
 - memory/std::shared_ptr::operator boolean-type
-- std::shared_ptr::operator*
 - memory/std::shared_ptr::operator*
-- std::shared_ptr::operator=
 - memory/std::shared_ptr::operator=
-- std::shared_ptr::operator->
 - memory/std::shared_ptr::operator->
+- memory/std::shared_ptr::element_type
+- memory/std::shared_ptr::get
+- memory/std::shared_ptr::owner_before
+- memory/std::shared_ptr::reset
+- memory/std::shared_ptr::swap
+- memory/std::shared_ptr::unique
+- memory/std::shared_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -57,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: d3638923d92759e5bbc379b8f1da633931fd7254
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sharedptr-class"></a>shared_ptr 类
@@ -105,7 +101,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 -   如果已从指向该资源的 [weak_ptr 类](../standard-library/weak-ptr-class.md) 对象构造它，或  
   
--   如果已使用 [shared_ptr::operator=](#shared_ptr__operator_eq) 或通过调用成员函数 [shared_ptr::reset](#shared_ptr__reset) 将该资源的所有权分配给它。  
+-   如果已使用 [shared_ptr::operator=](#op_eq) 或通过调用成员函数 [shared_ptr::reset](#reset) 将该资源的所有权分配给它。  
   
  拥有资源的 `shared_ptr` 对象共享控制块。 控制块包含：  
   
@@ -152,36 +148,36 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 |||  
 |-|-|  
-|[shared_ptr::shared_ptr](#shared_ptr__shared_ptr)|构造一个 `shared_ptr`。|  
-|[shared_ptr::~shared_ptr](#shared_ptr___dtorshared_ptr)|销毁 `shared_ptr`。|  
+|[shared_ptr](#shared_ptr)|构造一个 `shared_ptr`。|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|销毁 `shared_ptr`。|  
   
 ### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[shared_ptr::element_type](#shared_ptr__element_type)|元素的类型。|  
-|[shared_ptr::get](#shared_ptr__get)|获取拥有的资源的地址。|  
-|[shared_ptr::owner_before](#shared_ptr__owner_before)|如果此 `shared_ptr` 排在提供的指针之前（或小于该指针），则返回 true。|  
-|[shared_ptr::reset](#shared_ptr__reset)|替换拥有的资源。|  
-|[shared_ptr::swap](#shared_ptr__swap)|交换两个 `shared_ptr` 对象。|  
-|[shared_ptr::unique](#shared_ptr__unique)|测试拥有的资源是否是唯一的。|  
-|[shared_ptr::use_count](#shared_ptr__use_count)|计算资源所有者的数目。|  
+|[element_type](#element_type)|元素的类型。|  
+|[get](#get)|获取拥有的资源的地址。|  
+|[owner_before](#owner_before)|如果此 `shared_ptr` 排在提供的指针之前（或小于该指针），则返回 true。|  
+|[reset](#reset)|替换拥有的资源。|  
+|[swap](#swap)|交换两个 `shared_ptr` 对象。|  
+|[unique](#unique)|测试拥有的资源是否是唯一的。|  
+|[use_count](#use_count)|计算资源所有者的数目。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#shared_ptr__operator_boolean-type)|测试拥有的资源是否存在。|  
-|[shared_ptr::operator*](#shared_ptr__operator_star)|获取指定的值。|  
-|[shared_ptr::operator=](#shared_ptr__operator_eq)|替换拥有的资源。|  
-|[shared_ptr::operator-&gt;](#shared_ptr__operator-_gt_)|获取指向指定的值的指针。|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|测试拥有的资源是否存在。|  
+|[shared_ptr::operator*](#op_star)|获取指定的值。|  
+|[shared_ptr::operator=](#op_eq)|替换拥有的资源。|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|获取指向指定的值的指针。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<memory>  
   
  **命名空间：** std  
   
-##  <a name="a-namesharedptrelementtypea--sharedptrelementtype"></a><a name="shared_ptr__element_type"></a>  shared_ptr::element_type  
+##  <a name="element_type"></a>  shared_ptr::element_type  
  元素的类型。  
   
 ```  
@@ -215,7 +211,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptrgeta--sharedptrget"></a><a name="shared_ptr__get"></a>  shared_ptr::get  
+##  <a name="get"></a>  shared_ptr::get  
  获取拥有的资源的地址。  
   
 ```  
@@ -252,7 +248,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5  
 ```  
   
-##  <a name="a-namesharedptroperatorboolean-typea--sharedptroperator-boolean-type"></a><a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
+##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
  测试拥有的资源是否存在。  
   
 ```  
@@ -290,7 +286,7 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="a-namesharedptroperatorstara--sharedptroperator"></a><a name="shared_ptr__operator_star"></a>shared_ptr::operator*  
+##  <a name="op_star"></a>shared_ptr::operator*  
  获取指定的值。  
   
 ```  
@@ -323,7 +319,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptroperatoreqa--sharedptroperator"></a><a name="shared_ptr__operator_eq"></a>shared_ptr::operator=  
+##  <a name="op_eq"></a>shared_ptr::operator=  
  替换拥有的资源。  
   
 ```  
@@ -385,7 +381,7 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="a-namesharedptroperator-gta--sharedptroperator-gt"></a><a name="shared_ptr__operator-_gt_"></a>shared_ptr::operator-&gt;  
+##  <a name="shared_ptr__operator-_gt"></a>shared_ptr::operator-&gt;  
  获取指向指定的值的指针。  
   
 ```  
@@ -421,7 +417,7 @@ sp0->first == 1
 sp0->second == 2  
 ```  
   
-##  <a name="a-namesharedptrownerbeforea--sharedptrownerbefore"></a><a name="shared_ptr__owner_before"></a>  shared_ptr::owner_before  
+##  <a name="owner_before"></a>  shared_ptr::owner_before  
  如果此 `shared_ptr` 排在提供的指针之前（或小于该指针），则返回 true。  
   
 ```  
@@ -439,7 +435,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>备注  
  如果 `*this` 为 `ordered before``ptr`，则模板成员函数返回 true。  
   
-##  <a name="a-namesharedptrreseta--sharedptrreset"></a><a name="shared_ptr__reset"></a>  shared_ptr::reset  
+##  <a name="reset"></a>  shared_ptr::reset  
  替换拥有的资源。  
   
 ```  
@@ -524,7 +520,7 @@ int main()
 *sp == 15  
 ```  
   
-##  <a name="a-namesharedptrsharedptra--sharedptrsharedptr"></a><a name="shared_ptr__shared_ptr"></a>  shared_ptr::shared_ptr  
+##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
  构造一个 `shared_ptr`。  
   
 ```  
@@ -657,7 +653,7 @@ int main()
 *sp5 == 15  
 ```  
   
-##  <a name="a-namesharedptrdtorsharedptra--sharedptrsharedptr"></a><a name="shared_ptr___dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
+##  <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
  销毁 `shared_ptr`。  
   
 ```  
@@ -711,7 +707,7 @@ use count == 2
 use count == 1  
 ```  
   
-##  <a name="a-namesharedptrswapa--sharedptrswap"></a><a name="shared_ptr__swap"></a>  shared_ptr::swap  
+##  <a name="swap"></a>  shared_ptr::swap  
  交换两个 `shared_ptr` 对象。  
   
 ```  
@@ -779,7 +775,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-namesharedptruniquea--sharedptrunique"></a><a name="shared_ptr__unique"></a>  shared_ptr::unique  
+##  <a name="unique"></a>  shared_ptr::unique  
  测试拥有的资源是否是唯一的。  
   
 ```  
@@ -825,7 +821,7 @@ sp1.unique() == true
 sp1.unique() == false  
 ```  
   
-##  <a name="a-namesharedptrusecounta--sharedptrusecount"></a><a name="shared_ptr__use_count"></a>  shared_ptr::use_count  
+##  <a name="use_count"></a>  shared_ptr::use_count  
  计算资源所有者的数目。  
   
 ```  

@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 436e581907e3b651716e819a9c82a24eed2e4b8e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs、_mbstowcs_l
@@ -103,13 +104,13 @@ size_t _mbstowcs_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `mbstowcs` 成功转换源字符串，则会返回经转换的多字节字符的数量。 如果 `wcstr` 参数为 `NULL`，此函数会返回目标字符串所需的大小（以宽字符为单位）。 如果 `mbstowcs` 遇到一个无效的多字节字符，则返回 –1。 如果返回值为 `count`，则宽字符字符串不以 null 结尾。  
+ 如果 `mbstowcs` 成功转换源字符串，则会返回经转换的多字节字符的数量。 如果 `wcstr` 参数为 `NULL`，此函数会返回目标字符串所需的大小（以宽字符为单位）。 如果`mbstowcs`遇到无效的多字节字符，则返回-1。 如果返回值为 `count`，则宽字符字符串不以 null 结尾。  
   
 > [!IMPORTANT]
 >  确保 `wcstr` 和 `mbstr` 未重叠，并且 `count` 正确反映了要转换的多字节字符的数量。  
   
 ## <a name="remarks"></a>备注  
- `mbstowcs` 函数最多可将 `mbstr` 指向的最大数量的 `count` 多字节字符转换为当前区域设置确定的相应的宽字符串。 它将生成的宽字符串存储在 `wcstr` 表示的地址上*。* 结果类似于对 `mbtowc` 的一系列调用。 如果在 `count` 发生之前或发生时 `mbstowcs` 遇到单字节空字符 ('\0')，则其将空字符转换为宽字符空字符 (L'\0') 然后停止。 因此，只有在转换期间遇到空字符时，`wcstr` 处的宽字符字符串才以 null 结尾。 如果 `wcstr` 和 `mbstr` 指向的序列重叠，则此行为没有定义。  
+ `mbstowcs` 函数最多可将 `mbstr` 指向的最大数量的 `count` 多字节字符转换为当前区域设置确定的相应的宽字符串。 它存储在表示的地址生成的宽字符字符串`wcstr`。 结果类似于对 `mbtowc` 的一系列调用。 如果在 `count` 发生之前或发生时 `mbstowcs` 遇到单字节空字符 ('\0')，则其将空字符转换为宽字符空字符 (L'\0') 然后停止。 因此，只有在转换期间遇到空字符时，`wcstr` 处的宽字符字符串才以 null 结尾。 如果 `wcstr` 和 `mbstr` 指向的序列重叠，则此行为没有定义。  
   
  如果 `wcstr` 参数是 `NULL`，则 `mbstowcs` 返回转换生成的宽字符数量，其中不包括 null 终止符。 源字符串必须以 null 结尾才能返回正确的值。 如果需要生成以 null 结尾的宽字符串，请向返回的值添加一个。  
   
@@ -222,9 +223,6 @@ Convert back to wide-character string:
   Characters converted: 2  
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   

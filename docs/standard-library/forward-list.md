@@ -1,61 +1,82 @@
 ---
-title: "&lt;forward_list&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<forward_list>"
-  - "std::<forward_list>"
-  - "std.<forward_list>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<forward_list>"
+title: "&lt;forward_list&gt; | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <forward_list>
+- std::<forward_list>
+- std.<forward_list>
+dev_langs:
+- C++
+helpviewer_keywords:
+- <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# &lt;forward_list&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3493d1897018e203e3918c3368c68f5b112908b6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
-容器定义模板类 forward\_list 和若干支持的模板。  
+---
+# <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
+定义容器模板类 forward_list 和几个支持模板。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #include <forward_list>  
 ```  
   
-### 运算符  
+### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator\=\= \(\<forward\_list\>\)](../Topic/operator==%20\(%3Cforward_list%3E\).md)|测试，如果运算符左侧的正向列表对象与右侧的正向列表对象是否相等。|  
-|[运算符。\= \(\<forward\_list\>\)](../Topic/operator!=%20\(%3Cforward_list%3E\).md)|测试，如果运算符左侧的正向列表对象与右侧的正向列表对象不等于。|  
-|[运算符\< \(\<forward\_list\>\)](../Topic/operator%3C%20\(%3Cforward_list%3E\).md)|测试，如果运算符左侧的正向列表对象与右侧的正向列表对象较少。|  
-|[operator\=\<\(\<forward\_list\>\)](../Topic/operator%3C=%20\(%3Cforward_list%3E\).md)|测试，如果运算符左侧的正向列表对象小于或等于右侧的正向列表对象。|  
-|[运算符\> \(\<forward\_list\>\)](../Topic/operator%3E%20\(%3Cforward_list%3E\).md)|测试，如果运算符左侧的正向列表对象与右侧的正向列表对象的。|  
-|[operator\=\>\(\<forward\_list\>\)](../Topic/operator%3E=%20\(%3Cforward_list%3E\).md)|测试，如果运算符左侧的正向列表对象大于或等于右侧的正向列表对象。|  
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|测试运算符左侧的转发列表对象是否等于右侧的转发列表对象。|  
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|测试运算符左侧的转发列表对象是否不等于右侧的转发列表对象。|  
+|[operator<](../standard-library/forward-list-operators.md#op_lt)|测试运算符左侧的转发列表对象是否小于右侧的转发列表对象。|  
+|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|测试运算符左侧的转发列表对象是否小于或等于右侧的转发列表对象。|  
+|[operator>](../standard-library/forward-list-operators.md#op_gt)|测试运算符左侧的转发列表对象是否大于右侧的转发列表对象。|  
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|测试运算符左侧的转发列表对象是否大于或等于右侧的转发列表对象。|  
   
-### 函数  
-  
-|||  
-|-|-|  
-|[交换 \(\<forward\_list\>\)](../Topic/swap%20\(%3Cforward_list%3E\).md)|交换两个转接列表对象的元素。|  
-  
-### 类  
+### <a name="functions"></a>函数  
   
 |||  
 |-|-|  
-|[forward\_list](../standard-library/forward-list-class.md)|描述控制变长元素序列的对象。  序列元素存储为单个链接列表，包含 `Type`类型成员的每个。|  
+|[swap](../standard-library/forward-list-functions.md#swap)|交换两个转发列表的元素。|  
   
-## 请参阅  
+### <a name="classes"></a>类  
+  
+|||  
+|-|-|  
+|[forward_list](../standard-library/forward-list-class.md)|描述用于控制变长元素序列的对象。 序列存储为元素的单向链接列表，其中每个节点都包含 `Type` 类型的成员。|  
+  
+## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

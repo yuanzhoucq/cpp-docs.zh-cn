@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 440cf44dda47253141247fe9a82925e13c84b48f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
@@ -142,9 +143,6 @@ errno_t mbsrtowcs_s(
   
 ## <a name="exceptions"></a>异常  
  只要 `mbsrtowcs_s` 函数正在执行且 `mbstate` 参数不是 null 指针，当前线程中的函数都不调用 `setlocale` 时，此函数就是多线程安全的。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="requirements"></a>要求  
   

@@ -14,25 +14,28 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
+dev_langs:
+- C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 50cfd9e09a7534ea7c615ebf6b0c781806013965
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6416c01a3538961af9f1c6f2e8bca3c91ffd4bde
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 运算符
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
-|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>operator!=  
+##  <a name="op_neq"></a>operator!=  
  测试各对象之间是否不相等。  
   
 ```  
@@ -53,10 +56,10 @@ bool operator!=(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  要测试不相等的对象之一。  
   
- ` right`  
+ `right`  
  要测试不相等的对象之一。  
   
  `Ty1`  
@@ -71,7 +74,7 @@ bool operator!=(
 ### <a name="remarks"></a>备注  
  第一个模板运算符返回 false。 （所有默认分配器都相等。）  
   
- 第二个和第三个模板运算符返回 `!(`` left` `==` ` right``)`。  
+ 第二个和第三个模板运算符返回 `!(left == right)`。  
   
 ### <a name="example"></a>示例  
   
@@ -130,7 +133,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>operator==  
+##  <a name="op_eq_eq"></a>operator==  
  测试两个对象是否相等。  
   
 ```  
@@ -151,10 +154,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  要测试是否相等的其中一个对象。  
   
- ` right`  
+ `right`  
  要测试是否相等的其中一个对象。  
   
  `Ty1`  
@@ -239,7 +242,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>operator&gt;=  
  测试一个对象是否大于或等于另一个对象。  
   
 ```  
@@ -255,10 +258,10 @@ bool operator>=(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  要比较的对象之一。  
   
- ` right`  
+ `right`  
  要比较的对象之一。  
   
  `Ty1`  
@@ -268,9 +271,9 @@ bool operator>=(
  由右侧共享指针控制的类型。  
   
 ### <a name="remarks"></a>备注  
- 模板运算符返回 ` left``.get() >=` ` right``.get()`。  
+ 模板运算符返回`left.get() >= right.get()`。  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>operator&lt;  
+##  <a name="op_lt"></a>operator&lt;  
  测试某一对象是否小于另一对象。  
   
 ```  
@@ -286,10 +289,10 @@ bool operator<(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  要比较的对象之一。  
   
- ` right`  
+ `right`  
  要比较的对象之一。  
   
  `Ty1`  
@@ -298,7 +301,7 @@ bool operator<(
  `Ty2`  
  由右侧指针控制的类型。  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>operator&lt;=  
  测试某一对象是否小于或等于另一个对象。  
   
 ```  
@@ -314,10 +317,10 @@ bool operator<=(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  要比较的对象之一。  
   
- ` right`  
+ `right`  
  要比较的对象之一。  
   
  `Ty1`  
@@ -327,9 +330,9 @@ bool operator<=(
  由右侧共享指针控制的类型。  
   
 ### <a name="remarks"></a>备注  
- 模板运算符返回 ` left``.get() <=` ` right``.get()`  
+ 模板运算符返回`left.get() <= right.get()`  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>operator&gt;  
+##  <a name="op_gt"></a>operator&gt;  
  测试一个对象是否大于或等于第二个对象。  
   
 ```  
@@ -345,10 +348,10 @@ bool operator>(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  要比较的对象之一。  
   
- ` right`  
+ `right`  
  要比较的对象之一。  
   
  `Ty1`  
@@ -357,7 +360,7 @@ bool operator>(
  `Ty2`  
  由右侧共享指针控制的类型。  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>operator&lt;&lt;  
 将共享指针写入该流。  
   
 ```  

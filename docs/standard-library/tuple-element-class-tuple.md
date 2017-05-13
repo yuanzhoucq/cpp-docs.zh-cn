@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 54bfdd8a1f095478282af39354a6e9a91ba32891
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="tupleelement-class"></a>tuple_element 类
@@ -108,7 +109,7 @@ T2
   
 每个 `pair` 类型的模板专用化都具有一个成员 typedef `type`，它是对中指定位置处元素类型的同义词，保留有任何恒定和/或可变的限定。 此 typedef `tuple_element_t` 是 `tuple_element<N, pair<T1, T2>>::type` 的方便别名。  
   
-使用 [get 函数 &lt;utility&gt;](../standard-library/utility-functions.md#get) 返回指定位置处或（C++14 / Visual Studio 2015 中）指定类型的元素。 
+使用[get 函数&lt;实用工具&gt;](../standard-library/utility-functions.md#get)要返回其元素中指定的位置，或指定的类型。 
   
 ## <a name="example"></a>示例  
   

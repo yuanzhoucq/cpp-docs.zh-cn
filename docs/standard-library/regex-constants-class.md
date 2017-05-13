@@ -100,10 +100,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 248e9ba676b906af62f6804f4939e04158a8e2ef
-ms.openlocfilehash: 9330a5c4e1b487880f405478dd7e8838af739c44
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 83cf6d3c8b6c571898bf6d1f2aeeefbc930dd573
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regexconstants-class"></a>regex_constants 类
@@ -123,11 +124,11 @@ namespace regex_constants {
  命名空间 `regex_constants` 封装若干标记类型及其关联的标记值。  
   
 ## <a name="requirements"></a>要求  
- **标头：**\<regex&1;>  
+ **标头：**\<regex 1>  
   
  **命名空间：** std  
   
-##  <a name="regex_constants__error_type"></a>regex_constants::error_type  
+##  <a name="error_type"></a>regex_constants::error_type  
  用于报告正则表达式语法错误的标志。  
   
 ```  
@@ -186,7 +187,7 @@ enum error_type
   
  `error_backref` - 表达式中包含无效的向后引用  
   
-##  <a name="regex_constants__match_flag_type"></a>  regex_constants::match_flag_type  
+##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
  正则表达式匹配选项的标志。  
   
 ```  
@@ -242,7 +243,7 @@ enum match_flag_type
   
  `format_first_only` - 不搜索第一个匹配项之后的匹配项  
   
-##  <a name="regex_constants__syntax_option_type"></a>  regex_constants::syntax_option_type  
+##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
  用于选择语法选项的标志。  
   
 ```  

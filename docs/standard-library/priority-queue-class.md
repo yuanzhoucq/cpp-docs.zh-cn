@@ -9,9 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.priority_queue
 - priority_queue
-- std::priority_queue
+- queue/std::priority_queue::container_type
+- queue/std::priority_queue::size_type
+- queue/std::priority_queue::value_type
+- queue/std::priority_queue::empty
+- queue/std::priority_queue::pop
+- queue/std::priority_queue::push
+- queue/std::priority_queue::size
+- queue/std::priority_queue::top
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 493cc5b28bb4cfa682b06ed904c3b0c0aa46220c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 31191f5109242dc239ac0237a2eab6ff459fe41b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="priorityqueue-class"></a>priority_queue 类
@@ -62,7 +69,7 @@ class priority_queue
  一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在 priority_queue 中的相对顺序。 此参数是可选自变量，默认值为二元谓词 **less***\<***typename** *Container***::value_type***>*。  
   
 ## <a name="remarks"></a>备注  
- 队列对象的第一个模板参数中规定的 **Type** 类的元素与 [value_type](#priority_queue__value_type) 同义，并且必须与第二个模板参数规定的基础容器类 **Container** 中的元素类型相匹配。 **Type** 必须是可赋值的，这样才能复制该类型的对象并为该类型的变量赋值。  
+ 队列对象的第一个模板参数中规定的 **Type** 类的元素与 [value_type](#value_type) 同义，并且必须与第二个模板参数规定的基础容器类 **Container** 中的元素类型相匹配。 **Type** 必须是可赋值的，这样才能复制该类型的对象并为该类型的变量赋值。  
   
  Priority_queue 通过调用存储的 **Traits** 类的函数对象，对它控制的序列进行排序。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。  
   
@@ -82,32 +89,32 @@ class priority_queue
   
 |||  
 |-|-|  
-|[priority_queue](#priority_queue__priority_queue)|构造一个 `priority_queue`，它是空的，或者是一定范围内的基容器对象或其他 `priority_queue` 的副本。|  
+|[priority_queue](#priority_queue)|构造一个 `priority_queue`，它是空的，或者是一定范围内的基容器对象或其他 `priority_queue` 的副本。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[container_type](#priority_queue__container_type)|一种类型，它提供将由 `priority_queue` 采用的基容器。|  
-|[size_type](#priority_queue__size_type)|可表示 `priority_queue` 中元素数量的无符号整数类型。|  
-|[value_type](#priority_queue__value_type)|一种类型，它表示存储为 `priority_queue` 中元素的对象的类型。|  
+|[container_type](#container_type)|一种类型，它提供将由 `priority_queue` 采用的基容器。|  
+|[size_type](#size_type)|可表示 `priority_queue` 中元素数量的无符号整数类型。|  
+|[value_type](#value_type)|一种类型，它表示存储为 `priority_queue` 中元素的对象的类型。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[empty](#priority_queue__empty)|测试 `priority_queue` 是否为空。|  
-|[pop](#priority_queue__pop)|从顶部位置移除 `priority_queue` 的最大元素。|  
-|[push](#priority_queue__push)|基于来自 operator< 的元素的优先级将元素添加到优先级队列。|  
-|[size](#priority_queue__size)|返回 `priority_queue` 中的元素数量。|  
-|[top](#priority_queue__top)|返回对 `priority_queue` 顶部的最大元素的常量引用。|  
+|[empty](#empty)|测试 `priority_queue` 是否为空。|  
+|[pop](#pop)|从顶部位置移除 `priority_queue` 的最大元素。|  
+|[push](#push)|基于来自 operator< 的元素的优先级将元素添加到优先级队列。|  
+|[size](#size)|返回 `priority_queue` 中的元素数量。|  
+|[top](#top)|返回对 `priority_queue` 顶部的最大元素的常量引用。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<queue>  
   
  **命名空间：** std  
   
-##  <a name="a-namepriorityqueuecontainertypea--priorityqueuecontainertype"></a><a name="priority_queue__container_type"></a>priority_queue::container_type  
+##  <a name="container_type"></a>priority_queue::container_type  
  一种类型，它提供将调整的基容器。  
   
 ```  
@@ -120,9 +127,9 @@ typedef Container container_type;
  有关 `Container` 的详细信息，请参阅 [priority_queue 类](../standard-library/priority-queue-class.md)主题的备注部分。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `container_type` 的示例，请参阅 [priority_queue](#priority_queue__priority_queue) 的示例。  
+  有关如何声明和使用 `container_type` 的示例，请参阅 [priority_queue](#priority_queue) 的示例。  
   
-##  <a name="a-namepriorityqueueemptya--priorityqueueempty"></a><a name="priority_queue__empty"></a>priority_queue::empty  
+##  <a name="empty"></a>priority_queue::empty  
  测试 priority_queue 是否为空。  
   
 ```  
@@ -166,7 +173,7 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.  
 ```  
   
-##  <a name="a-namepriorityqueuepopa--priorityqueuepop"></a><a name="priority_queue__pop"></a>priority_queue::pop  
+##  <a name="pop"></a>priority_queue::pop  
  从顶部位置移除 priority_queue 的最大元素。  
   
 ```  
@@ -220,7 +227,7 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.  
 ```  
   
-##  <a name="a-namepriorityqueuepriorityqueuea--priorityqueuepriorityqueue"></a><a name="priority_queue__priority_queue"></a>priority_queue::priority_queue  
+##  <a name="priority_queue"></a>priority_queue::priority_queue  
  构造一个空的 priority_queue，或是一定范围内基容器对象或其他 priority_queue 的副本。  
   
 ```  
@@ -249,21 +256,21 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
  `_Cont`  
  要以构造的 priority_queue 为副本的基容器。  
   
- ` right`  
+ `right`  
  要以构造的集为副本的 priority_queue。  
   
- ` first`  
+ `first`  
  要复制的范围元素中的第一个元素的位置。  
   
- ` last`  
+ `last`  
  要复制的元素范围以外的第一个元素的位置。  
   
 ### <a name="remarks"></a>备注  
- 前三个构造函数中的每个函数均指定空的初始 priority_queue，第二个函数还指定用于建立元素顺序的比较函数 (` comp`) 的类型，第三个函数明确指定要使用的 `container_type` (`_Cont`)。 关键字 **explicit** 取消某些种类的自动类型转换。  
+ 前三个构造函数中的每个函数均指定空的初始 priority_queue，第二个函数还指定用于建立元素顺序的比较函数 (`comp`) 的类型，第三个函数明确指定要使用的 `container_type` (`_Cont`)。 关键字 **explicit** 取消某些种类的自动类型转换。  
   
- 第四个构造函数指定 priority_queue ` right` 副本。  
+ 第四个构造函数指定 priority_queue `right` 副本。  
   
- 最后三个构造函数复制某些容器的范围 [ *first、last*)，并使用该值来初始化 priority_queue，同时增加了指定 **Traits** 和 `container_type` 类的比较函数的类型的明确性。  
+ 最后三个构造函数复制范围 [* 首先上, 一次 *) 的某些容器和使用这些值来初始化不断增加的实现中指定的比较函数的类类型 priority_queue**特征**和`container_type`。  
   
 ### <a name="example"></a>示例  
   
@@ -376,7 +383,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namepriorityqueuepusha--priorityqueuepush"></a><a name="priority_queue__push"></a>priority_queue::push  
+##  <a name="push"></a>priority_queue::push  
  基于来自 operator< 的元素的优先级将元素添加到优先级队列。  
   
 ```  
@@ -384,7 +391,7 @@ void push(const Type& val);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` val`  
+ `val`  
  添加到 priority_queue 顶部的元素。  
   
 ### <a name="remarks"></a>备注  
@@ -422,7 +429,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuesizea--priorityqueuesize"></a><a name="priority_queue__size"></a>priority_queue::size  
+##  <a name="size"></a>priority_queue::size  
  返回 priority_queue 中的元素数目。  
   
 ```  
@@ -461,7 +468,7 @@ The priority_queue length is 1.
 The priority_queue length is now 2.  
 ```  
   
-##  <a name="a-namepriorityqueuesizetypea--priorityqueuesizetype"></a><a name="priority_queue__size_type"></a>priority_queue::size_type  
+##  <a name="size_type"></a>priority_queue::size_type  
  一种无符号整数类型，此类型可表示 priority_queue 中的元素数量。  
   
 ```  
@@ -472,9 +479,9 @@ typedef typename Container::size_type size_type;
  该类型是由 priority_queue 调整的基容器的 `size_type` 的同义词。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#priority_queue__size) 的示例。  
+  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例。  
   
-##  <a name="a-namepriorityqueuetopa--priorityqueuetop"></a><a name="priority_queue__top"></a>priority_queue::top  
+##  <a name="top"></a>priority_queue::top  
  返回对 priority_queue 顶部的最大元素的常量引用。  
   
 ```  
@@ -519,7 +526,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuevaluetypea--priorityqueuevaluetype"></a><a name="priority_queue__value_type"></a>priority_queue::value_type  
+##  <a name="value_type"></a>priority_queue::value_type  
  一种类型，它表示存储为 priority_queue 中元素的对象的类型。  
   
 ```  

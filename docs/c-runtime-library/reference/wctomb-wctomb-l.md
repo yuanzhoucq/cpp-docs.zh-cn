@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3d95aae18858582f732459e136c998c15d70189e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3d199cba90dd2440a7a467c95d32e2a5a75f8cbf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
@@ -86,7 +87,7 @@ int _wctomb_l(
  宽字符。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `wctomb` 将宽字符转换为多字节字符，则将返回宽字符的字节数（始终不大于 `MB_CUR_MAX`）。 如果 `wchar` 为宽字符 null 字符 (L'\0')，`wctomb` 将返回 1。 如果目标指针 `mbchar` 为 NULL，`wctomb` 将返回 0。 如果当前区域设置中不支持转换，则 `wctomb` 将返回 –1 且 `errno` 设置为 `EILSEQ`。  
+ 如果 `wctomb` 将宽字符转换为多字节字符，则将返回宽字符的字节数（始终不大于 `MB_CUR_MAX`）。 如果 `wchar` 为宽字符 null 字符 (L'\0')，`wctomb` 将返回 1。 如果目标指针 `mbchar` 为 NULL，`wctomb` 将返回 0。 如果转换不在当前区域设置，可能`wctomb`返回-1 和`errno`设置为`EILSEQ`。  
   
 ## <a name="remarks"></a>备注  
  `wctomb` 函数将 `wchar` 参数转换为相应的多字节字符并将转换结果存储到 `mbchar`。 可以从任何程序的任何程序点调用该函数。 `wctomb` 对所有区域设置相关行为使用当前区域设置；`_wctomb_l` 与 `wctomb` 相同，只不过前者使用的是传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
@@ -129,9 +130,6 @@ Convert a wide character:
    Characters converted: 1  
    Multibyte character: a  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   

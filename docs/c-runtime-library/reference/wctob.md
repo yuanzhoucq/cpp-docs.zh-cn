@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c72cc32c5bd48bc6b7fc9c9187797f056ec7712
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8eee02245359e71f32944f1a1f5c7180223553e3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctob"></a>wctob
@@ -72,7 +73,7 @@ int wctob(
  要转换的值。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `wctob` 成功转换宽字符，仅在多字节字符正好为一个字节长时返回该字符的表示形式。 如果 `wctob` 遇到无法转换为多字节字符的宽字符或多字节字符正好为一个字节长，则返回 –1。  
+ 如果 `wctob` 成功转换宽字符，仅在多字节字符正好为一个字节长时返回该字符的表示形式。 如果`wctob`遇到它不能将其转换为多字节字符或多字节字符的宽字符不完全是 1 个字节长，它将返回-1。  
   
 ## <a name="remarks"></a>备注  
  如果多字节字符正好为一个字节长，`wctob` 函数会将 `wchar` 中的宽字符转换为 `int` 返回值传递的相应多字节字符。  
@@ -120,9 +121,6 @@ int main( void )
 ```Output  
 Determined the corresponding multibyte character to be "A".  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   

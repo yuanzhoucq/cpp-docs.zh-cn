@@ -1,52 +1,69 @@
 ---
-title: "_umask | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_umask"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_umask"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_umask 函数"
-  - "文件权限 [C++]"
-  - "文件 [C++], 权限设置"
-  - "蒙板"
-  - "蒙板, 文件权限设置"
-  - "umask 函数"
+title: "_umask | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _umask
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _umask
+dev_langs:
+- C++
+helpviewer_keywords:
+- masks, file-permission-setting
+- _umask function
+- masks
+- umask function
+- file permissions [C++]
+- files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _umask
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f2ad9c75caa5f3816ab4791dc4e67cb7937bfad4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-设置默认的文件权限掩码。  提供该函数的一个更安全版本；请参阅 [\_umask\_s](../../c-runtime-library/reference/umask-s.md)。  
+---
+# <a name="umask"></a>_umask
+设置默认的文件权限掩码。 此函数有一个更安全的版本；请参阅 [_umask_s](../../c-runtime-library/reference/umask-s.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _umask(  
@@ -54,20 +71,20 @@ int _umask(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `pmode`  
  默认权限设置。  
   
-## 返回值  
- `_umask` 返回 `pmode` 的先前值。  无错误返回。  
+## <a name="return-value"></a>返回值  
+ `_umask` 返回 `pmode` 的前一个值。 无错误返回。  
   
-## 备注  
- `_umask` 函数通过`pmode`*.*用于设置当前进程的文件权限屏蔽掩码文件权限掩码通过 `_creat`、`_open`或 `_sopen`创建的新文件修改权限设置。  如果在掩码中一个位是 1，文件的请求的权限值对应的位设置为 0 \(禁止\)。  如果在掩码中一个位是 0，则对应的位保持不变。  直到文件第一次关闭，才会设置新的文件权限。  
+## <a name="remarks"></a>备注  
+ `_umask`函数将当前进程的文件权限掩码设置为所指定的模式`pmode`。 文件权限掩码修改 `_creat`、`_open` 或 `_sopen` 创建的新文件的权限设置。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。  
   
- 整数表达式 `pmode` 包含以下 SYS \\STAT.H定义中的一个或全部清单常数：  
+ 整数表达式 `pmode` 包含在 SYS\STAT.H 中定义的以下清单常量的其中一个或两个：  
   
  `_S_IWRITE`  
- 允许写。  
+ 允许写入。  
   
  `_S_IREAD`  
  允许读取。  
@@ -75,22 +92,22 @@ int _umask(
  `_S_IREAD | _S_IWRITE`  
  允许读取和写入。  
   
- 当给定两个常数，则用按位或运算符联接 \(          `|`  \).  如果 `pmode` 参数为 `_S_IREAD`，将不允许读 \(文件为只写\)。  如果 `pmode` 参数为 `_S_IWRITE`，将不允许写 \(文件为只读\)。  例如，如果掩码中设置写位，所有新建的文件将是只读的。  请注意使用 MS\-DOS 和 Windows 操作系统上，所有文件是可读性的；生成只写权限是不可能的。  因此，使用 `_umask` 设置读取位对文件模式没有影响。  
+ 当给定这两个常量时，将使用按位 OR 运算符 (`|`) 连接它们。 如果 `pmode` 参数为 `_S_IREAD`，则不允许读取（此文件为只写）。 如果 `pmode` 参数为 `_S_IWRITE`，则不允许写入（此文件为只读）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，使用 `_umask` 设置读取位不影响文件的模式。  
   
- 如果 `pmode` 不是组合的清单常数也没有并入重写项组常量，函数将会忽略这些。  
+ 如果 `pmode` 不是清单常量之一的组合或包含备用常量集，则此函数将会忽略这些。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_umask`|\<io.h\>, \<sys\/stat.h\>, \<sys\/types.h\>|  
+|-------------|---------------------|  
+|`_umask`|\<io.h>、\<sys/stat.h>、\<sys/types.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_umask.c  
@@ -115,14 +132,14 @@ int main( void )
 }  
 ```  
   
-  **Oldmask \= 0x0000**   
-## .NET Framework 等效项  
- [System.IO.File::GetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
+```Output  
+Oldmask = 0x0000  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [低级别 I\/O](../../c-runtime-library/low-level-i-o.md)   
- [\_chmod、\_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_creat、\_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_mkdir、\_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
+ [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_mkdir、_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)

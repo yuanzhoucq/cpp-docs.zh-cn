@@ -10,9 +10,47 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - multimap
-- std.multimap
 - map/std::multimap
-- std::multimap
+- map/std::multimap::allocator_type
+- map/std::multimap::const_iterator
+- map/std::multimap::const_pointer
+- map/std::multimap::const_reference
+- map/std::multimap::const_reverse_iterator
+- map/std::multimap::difference_type
+- map/std::multimap::iterator
+- map/std::multimap::key_compare
+- map/std::multimap::key_type
+- map/std::multimap::mapped_type
+- map/std::multimap::pointer
+- map/std::multimap::reference
+- map/std::multimap::reverse_iterator
+- map/std::multimap::size_type
+- map/std::multimap::value_type
+- map/std::multimap::begin
+- map/std::multimap::cbegin
+- map/std::multimap::cend
+- map/std::multimap::clear
+- map/std::multimap::count
+- map/std::multimap::crbegin
+- map/std::multimap::crend
+- map/std::multimap::emplace
+- map/std::multimap::emplace_hint
+- map/std::multimap::empty
+- map/std::multimap::end
+- map/std::multimap::equal_range
+- map/std::multimap::erase
+- map/std::multimap::find
+- map/std::multimap::get_allocator
+- map/std::multimap::insert
+- map/std::multimap::key_comp
+- map/std::multimap::lower_bound
+- map/std::multimap::max_size
+- map/std::multimap::rbegin
+- map/std::multimap::rend
+- map/std::multimap::size
+- map/std::multimap::swap
+- map/std::multimap::upper_bound
+- map/std::multimap::value_comp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fa25ed3e958087a9fd602ac4e3914cc7a42edca
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fb3454e66d682241b96b02f78e7aae6a0a3cf6b5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="multimap-class"></a>multimap 类
@@ -65,7 +104,7 @@ class multimap;
  `Traits`  
  一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在多重映射中的相对顺序。 默认值是二元谓词 `less<Key>`。  
   
- 在 C++&14; 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
  一种表示存储的分配器对象的类型，该分配器对象封装有关映射的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<pair <const Key, Type> >`。  
@@ -85,15 +124,15 @@ class multimap;
   
 -   模板类，因为它提供的功能是一般性的功能，因此与作为元素或键包含的特定数据类型无关。 用于元素和键的数据类型作为类模板以及比较函数和分配器中的参数指定。  
   
- 映射类提供的迭代器是双向迭代器，但类成员函数 [insert](#multimap__insert) 和 [multimap](#multimap__multimap) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能需求比双向迭代器类保证的功能需求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 `[First, Last)`。  
+ 映射类提供的迭代器是双向迭代器，但类成员函数 [insert](#insert) 和 [multimap](#multimap) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能需求比双向迭代器类保证的功能需求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 `[First, Last)`。  
   
  容器类型选择通常应根据应用程序所需的搜索和插入的类型。 关联容器针对查找、插入和移除操作进行了优化。 显式支持这些操作的成员函数较为高效，执行这些操作的时间与容器中元素数量的对数平均成比例。 插入元素不会使迭代器失效，移除元素仅会使专门指向已移除元素的迭代器失效。  
   
  当应用程序满足将值与其键关联的条件时，应选择多重映射作为关联容器。 此类结构的模型是关键字排序列表，这些关键字具有提供定义等的关联字符串值，并且并非始终唯一定义。 如果关键字经过唯一定义以使键唯一，则应选择映射作为容器。 另一方面，如果仅存储关键字列表，则应使用集作为正确容器。 如果允许关键字多次出现，则应使用多重集合作为适当的容器结构。  
   
- 多重映射通过调用存储的 [key_compare](#multimap__key_compare) 类型的函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#multimap__key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 `f(x,y)` 是包含两个参数对象（`x` 和 `y`）以及一个返回值（true 或 false）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 `x` 和 `y` 定义为在 `f(x,y)` 和 `f(y,x)` 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。  
+ 多重映射通过调用存储的 [key_compare](#key_compare) 类型的函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 `f(x,y)` 是包含两个参数对象（`x` 和 `y`）以及一个返回值（true 或 false）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 `x` 和 `y` 定义为在 `f(x,y)` 和 `f(y,x)` 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。  
   
- 在 C++&14; 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
   
 ## <a name="members"></a>成员  
   
@@ -101,72 +140,72 @@ class multimap;
   
 |||  
 |-|-|  
-|[multimap](#multimap__multimap)|构造一个空的或者是其他某个 `multimap` 的全部或部分副本的 `multimap`。|  
+|[multimap](#multimap)|构造一个空的或者是其他某个 `multimap` 的全部或部分副本的 `multimap`。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[allocator_type](#multimap__allocator_type)|一种类型，此类型表示 `allocator` 对象的 `multimap` 类。|  
-|[const_iterator](#multimap__const_iterator)|一种类型，此类型提供可读取 `const` 中的 `multimap` 元素的双向迭代器。|  
-|[const_pointer](#multimap__const_pointer)|一种类型，此类型提供指向 `const` 中的 `multimap` 元素的指针。|  
-|[const_reference](#multimap__const_reference)|一种类型，此类型提供对存储在 `const` 中的 `multimap` 元素的引用（用于读取和执行 `const` 操作）。|  
-|[const_reverse_iterator](#multimap__const_reverse_iterator)|一种类型，此类型提供可读取 `const` 中的任何 `multimap` 元素的双向迭代器。|  
-|[difference_type](#multimap__difference_type)|一种有符号整数类型，此类型可用于表示 `multimap` 中迭代器指向的元素间范围内的元素数量。|  
-|[iterator](#multimap__iterator)|一种类型，此类型提供引用同一 `multimap` 中的元素的两个迭代器之间的差异。|  
-|[key_compare](#multimap__key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `multimap` 中两个元素的相对顺序。|  
-|[key_type](#multimap__key_type)|一种类型，此类型描述组成 `multimap` 中每个元素的排序键对象。|  
-|[mapped_type](#multimap__mapped_type)|一种类型，此类型表示存储在 `multimap` 中的数据类型。|  
-|[pointer](#multimap__pointer)|一种类型，此类型提供指向 `const` 中的 `multimap` 元素的指针。|  
-|[reference](#multimap__reference)|一种类型，此类型提供对存储在 `multimap` 中的元素的引用。|  
-|[reverse_iterator](#multimap__reverse_iterator)|一种类型，此类型提供可读取或修改反向 `multimap` 中的元素的双向迭代器。|  
-|[size_type](#multimap__size_type)|一种无符号整数类型，此类型提供指向 `const` 中`multimap` 元素的指针。|  
-|[value_type](#multimap__value_type)|一种提供函数对象的类型，该函数对象可将两个元素作为排序键比较以确定它们在 `multimap` 中的相对顺序。|  
+|[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `multimap` 类。|  
+|[const_iterator](#const_iterator)|一种类型，此类型提供可读取 `const` 中的 `multimap` 元素的双向迭代器。|  
+|[const_pointer](#const_pointer)|一种类型，此类型提供指向 `const` 中的 `multimap` 元素的指针。|  
+|[const_reference](#const_reference)|一种类型，此类型提供对存储在 `const` 中的 `multimap` 元素的引用（用于读取和执行 `const` 操作）。|  
+|[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取 `const` 中的任何 `multimap` 元素的双向迭代器。|  
+|[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `multimap` 中迭代器指向的元素间范围内的元素数量。|  
+|[iterator](#iterator)|一种类型，此类型提供引用同一 `multimap` 中的元素的两个迭代器之间的差异。|  
+|[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `multimap` 中两个元素的相对顺序。|  
+|[key_type](#key_type)|一种类型，此类型描述组成 `multimap` 中每个元素的排序键对象。|  
+|[mapped_type](#mapped_type)|一种类型，此类型表示存储在 `multimap` 中的数据类型。|  
+|[pointer](#pointer)|一种类型，此类型提供指向 `const` 中的 `multimap` 元素的指针。|  
+|[reference](#reference)|一种类型，此类型提供对存储在 `multimap` 中的元素的引用。|  
+|[reverse_iterator](#reverse_iterator)|一种类型，此类型提供可读取或修改反向 `multimap` 中的元素的双向迭代器。|  
+|[size_type](#size_type)|一种无符号整数类型，此类型提供指向 `const` 中`multimap` 元素的指针。|  
+|[value_type](#value_type)|一种提供函数对象的类型，该函数对象可将两个元素作为排序键比较以确定它们在 `multimap` 中的相对顺序。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[begin](#multimap__begin)|返回一个迭代器，此迭代器用于发现 `multimap` 中的第一个元素。|  
-|[cbegin](#multimap__cbegin)|返回一个常量迭代器，此迭代器用于发现 `multimap` 中的第一个元素。|  
-|[cend](#multimap__cend)|返回一个常量迭代器，此迭代器用于发现 `multimap` 中最后一个元素之后的位置。|  
-|[clear](#multimap__clear)|清除 `multimap` 的所有元素。|  
-|[count](#multimap__count)|返回 `multimap` 中其键与指定为参数的键匹配的元素数量。|  
-|[crbegin](#multimap__crbegin)|返回一个常量迭代器，此迭代器用于发现反向 `multimap` 中的第一个元素。|  
-|[crend](#multimap__crend)|返回一个常量迭代器，此迭代器用于发现反向 `multimap` 中最后一个元素之后的位置。|  
-|[emplace](#multimap__emplace)|将就地构造的元素插入到 `multimap`。|  
-|[emplace_hint](#multimap__emplace_hint)|将就地构造的元素插入到 `multimap`，附带位置提示|  
-|[empty](#multimap__empty)|测试 `multimap` 是否为空。|  
-|[end](#multimap__end)|返回一个迭代器，此迭代器用于发现 `multimap` 中最后一个元素之后的位置。|  
-|[equal_range](#multimap__equal_range)|查找其中元素的键与指定值匹配的元素范围。|  
-|[erase](#multimap__erase)|从 `multimap` 中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。|  
-|[find](#multimap__find)|返回一个迭代器，此迭代器用于发现 `multimap` 中其键与指定键等效的元素的第一个位置。|  
-|[get_allocator](#multimap__get_allocator)|返回用于构造 `allocator` 的 `multimap` 对象的副本。|  
-|[insert](#multimap__insert)|将一个元素或元素范围插入到 `multimap`。|  
-|[key_comp](#multimap__key_comp)|检索用于对 `multimap` 中的键进行排序的比较对象副本。|  
-|[lower_bound](#multimap__lower_bound)|返回一个迭代器，此迭代器指向 `multimap` 中其键等于或大于指定键的第一个元素。|  
-|[max_size](#multimap__max_size)|返回 `multimap` 的最大长度。|  
-|[rbegin](#multimap__rbegin)|返回一个迭代器，此迭代器用于发现反向 `multimap` 中的第一个元素。|  
-|[rend](#multimap__rend)|返回一个迭代器，此迭代器用于发现反向 `multimap` 中最后一个元素之后的位置。|  
-|[size](#multimap__size)|返回 `multimap` 中的元素数量。|  
-|[swap](#multimap__swap)|交换两个 `multimap` 的元素。|  
-|[upper_bound](#multimap__upper_bound)|返回一个迭代器，此迭代器指向 `multimap` 中其键大于指定键的第一个元素。|  
-|[value_comp](#multimap__value_comp)|此成员函数返回一个函数对象，该函数对象可通过比较 `multimap` 中元素的键值来确定元素顺序。|  
+|[begin](#begin)|返回一个迭代器，此迭代器用于发现 `multimap` 中的第一个元素。|  
+|[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现 `multimap` 中的第一个元素。|  
+|[cend](#cend)|返回一个常量迭代器，此迭代器用于发现 `multimap` 中最后一个元素之后的位置。|  
+|[clear](#clear)|清除 `multimap` 的所有元素。|  
+|[count](#count)|返回 `multimap` 中其键与指定为参数的键匹配的元素数量。|  
+|[crbegin](#crbegin)|返回一个常量迭代器，此迭代器用于发现反向 `multimap` 中的第一个元素。|  
+|[crend](#crend)|返回一个常量迭代器，此迭代器用于发现反向 `multimap` 中最后一个元素之后的位置。|  
+|[emplace](#emplace)|将就地构造的元素插入到 `multimap`。|  
+|[emplace_hint](#emplace_hint)|将就地构造的元素插入到 `multimap`，附带位置提示|  
+|[empty](#empty)|测试 `multimap` 是否为空。|  
+|[end](#end)|返回一个迭代器，此迭代器用于发现 `multimap` 中最后一个元素之后的位置。|  
+|[equal_range](#equal_range)|查找其中元素的键与指定值匹配的元素范围。|  
+|[erase](#erase)|从 `multimap` 中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。|  
+|[find](#find)|返回一个迭代器，此迭代器用于发现 `multimap` 中其键与指定键等效的元素的第一个位置。|  
+|[get_allocator](#get_allocator)|返回用于构造 `allocator` 的 `multimap` 对象的副本。|  
+|[insert](#insert)|将一个元素或元素范围插入到 `multimap`。|  
+|[key_comp](#key_comp)|检索用于对 `multimap` 中的键进行排序的比较对象副本。|  
+|[lower_bound](#lower_bound)|返回一个迭代器，此迭代器指向 `multimap` 中其键等于或大于指定键的第一个元素。|  
+|[max_size](#max_size)|返回 `multimap` 的最大长度。|  
+|[rbegin](#rbegin)|返回一个迭代器，此迭代器用于发现反向 `multimap` 中的第一个元素。|  
+|[rend](#rend)|返回一个迭代器，此迭代器用于发现反向 `multimap` 中最后一个元素之后的位置。|  
+|[size](#size)|返回 `multimap` 中的元素数量。|  
+|[swap](#swap)|交换两个 `multimap` 的元素。|  
+|[upper_bound](#upper_bound)|返回一个迭代器，此迭代器指向 `multimap` 中其键大于指定键的第一个元素。|  
+|[value_comp](#value_comp)|此成员函数返回一个函数对象，该函数对象可通过比较 `multimap` 中元素的键值来确定元素顺序。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator=](#multimap__operator_eq)|将一个 `multimap` 中的元素替换为另一 `multimap` 副本。|  
+|[operator=](#op_eq)|将一个 `multimap` 中的元素替换为另一 `multimap` 副本。|  
   
 ## <a name="requirements"></a>要求  
- **标头：**\<map>  
+ **Header:** \<map>  
   
  **命名空间：** std  
   
  (**key**, **value**) 对作为 `pair` 类型的对象存储在多重映射中。 此对类需要标头 \<utility>，\<map> 自动包括此标头。  
   
-##  <a name="a-namemultimapallocatortypea--multimapallocatortype"></a><a name="multimap__allocator_type"></a>  multimap::allocator_type  
+##  <a name="allocator_type"></a>  multimap::allocator_type  
  一种类型，它代表多重映射对象的分配器类。  
   
 ```  
@@ -174,9 +213,9 @@ typedef Allocator allocator_type;
 ```  
   
 ### <a name="example"></a>示例  
-  有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#multimap__get_allocator) 的示例。  
+  有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。  
   
-##  <a name="a-namemultimapbegina--multimapbegin"></a><a name="multimap__begin"></a>  multimap::begin  
+##  <a name="begin"></a>  multimap::begin  
  返回发现多重映射中第一个元素的迭代器。  
   
 ```  
@@ -229,7 +268,7 @@ The first element of m1 is 0
 First element of m1 is now 1  
 ```  
   
-##  <a name="a-namemultimapcbegina--multimapcbegin"></a><a name="multimap__cbegin"></a>  multimap::cbegin  
+##  <a name="cbegin"></a>  multimap::cbegin  
  返回确定范围中第一个元素地址的 `const` 迭代器。  
   
 ```  
@@ -252,7 +291,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namemultimapcenda--multimapcend"></a><a name="multimap__cend"></a>  multimap::cend  
+##  <a name="cend"></a>  multimap::cend  
  返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
   
 ```  
@@ -265,7 +304,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>备注  
  `cend` 用于测试迭代器是否超过了其范围的末尾。  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的 (non- `const`) 任何类型的容器。  
+ 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -277,7 +316,7 @@ auto i2 = Container.cend();
   
  不应对 `cend` 返回的值取消引用。  
   
-##  <a name="a-namemultimapcleara--multimapclear"></a><a name="multimap__clear"></a>  multimap::clear  
+##  <a name="clear"></a>  multimap::clear  
  清除多重映射的所有元素。  
   
 ```  
@@ -319,7 +358,7 @@ The size of the multimap is initially 2.
 The size of the multimap after clearing is 0.  
 ```  
   
-##  <a name="a-namemultimapconstiteratora--multimapconstiterator"></a><a name="multimap__const_iterator"></a>  multimap::const_iterator  
+##  <a name="const_iterator"></a>  multimap::const_iterator  
  一种类型，提供可读取多重映射中 **const** 元素的双向迭代器。  
   
 ```  
@@ -329,16 +368,16 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>备注  
  `const_iterator` 类型不能用于修改元素的值。  
   
- 多重映射定义的 `const_iterator` 会指向 [value_type](#multimap__value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
+ 多重映射定义的 `const_iterator` 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
   
  若要取消引用指向多重映射中元素的 `const_iterator``cIter`，请使用 **->** 运算符。  
   
- 若要访问元素的键值，请使用 `cIter` -> **first**，其等同于 (\* `cIter`)。 **first**。 若要访问元素的映射基准值，请使用 `cIter` -> **second**，其等同于 (\* `cIter`)。 **second**。  
+ 若要访问元素的键值，请使用 `cIter` -> **first**，其等同于 (\* `cIter`)。 **first** 相同。 若要访问元素的映射值，请使用 `cIter` -> **second**，其作用与 (\* `cIter`). **second** 相同。  
   
 ### <a name="example"></a>示例  
-  有关使用 `const_iterator` 的示例，请参阅 [begin](#multimap__begin) 的示例。  
+  有关使用 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。  
   
-##  <a name="a-namemultimapconstpointera--multimapconstpointer"></a><a name="multimap__const_pointer"></a>  multimap::const_pointer  
+##  <a name="const_pointer"></a>  multimap::const_pointer  
  一种类型，它提供指向多重映射中 **const** 元素的指针。  
   
 ```  
@@ -348,9 +387,9 @@ typedef typename allocator_type::const_pointer const_pointer;
 ### <a name="remarks"></a>备注  
  `const_pointer` 类型不能用于修改元素的值。  
   
- 在大多数情况下，应使用 [iterator](#multimap__iterator) 访问多重映射对象中的元素。  
+ 在大多数情况下，应使用 [iterator](#iterator) 访问多重映射对象中的元素。  
   
-##  <a name="a-namemultimapconstreferencea--multimapconstreference"></a><a name="multimap__const_reference"></a>  multimap::const_reference  
+##  <a name="const_reference"></a>  multimap::const_reference  
  一种类型，此类型提供对用于读取和执行 **const** 操作的多重映射中存储的 **const** 元素的引用。  
   
 ```  
@@ -399,7 +438,7 @@ The key of the first element in the multimap is 1.
 The data value of the first element in the multimap is 10.  
 ```  
   
-##  <a name="a-namemultimapconstreverseiteratora--multimapconstreverseiterator"></a><a name="multimap__const_reverse_iterator"></a>  multimap::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  multimap::const_reverse_iterator  
  一种类型，提供可读取多重映射中任何 **const** 元素的双向迭代器。  
   
 ```  
@@ -409,16 +448,16 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>备注  
  `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问多重映射。  
   
- 多重映射定义的 `const_reverse_iterator` 会指向 [value_type](#multimap__value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
+ 多重映射定义的 `const_reverse_iterator` 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
   
  若要取消引用指向多重映射中元素的 `const_reverse_iterator``crIter`，请使用 **->** 运算符。  
   
- 若要访问元素的键值，请使用 `crIter` -> **first**，其等同于 (\* `crIter`)。 **first**。 若要访问元素的映射基准值，请使用 `crIter` -> **second**，其等同于 (\* `crIter`)。 **first**。  
+ 若要访问元素的键值，请使用 `crIter` -> **first**，其等同于 (\* `crIter`)。 **first** 相同。 若要访问元素的映射值，请使用 `crIter` -> **second**，其作用与 (\* `crIter`). **first** 相同。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#multimap__rend) 的示例。  
+  有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例。  
   
-##  <a name="a-namemultimapcounta--multimapcount"></a><a name="multimap__count"></a>  multimap::count  
+##  <a name="count"></a>  multimap::count  
  返回 multimap 中其键与指定了参数的键匹配的元素数量。  
   
 ```  
@@ -426,7 +465,7 @@ size_type count(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要从 multimap 中进行匹配的元素的键。  
   
 ### <a name="return-value"></a>返回值  
@@ -437,7 +476,7 @@ size_type count(const Key& key) const;
   
  [ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )  
   
- 这些元素具有键值 ` key`。  
+ 这些元素具有键值 `key`。  
   
 ### <a name="example"></a>示例  
   下面的示例演示 multimap::count 成员函数的用法。  
@@ -482,7 +521,7 @@ The number of elements in m1 with a sort key of 2 is: 2.
 The number of elements in m1 with a sort key of 3 is: 0.  
 ```  
   
-##  <a name="a-namemultimapcrbegina--multimapcrbegin"></a><a name="multimap__crbegin"></a>  multimap::crbegin  
+##  <a name="crbegin"></a>  multimap::crbegin  
  返回一个常量迭代器，此迭代器用于发现反向多重映射中的第一个元素。  
   
 ```  
@@ -493,7 +532,7 @@ const_reverse_iterator crbegin() const;
  发现反向 [multimap](../standard-library/multimap-class.md) 中的第一个元素或发现曾是非反向 `multimap` 中的最后一个元素的常量反向双向迭代器。  
   
 ### <a name="remarks"></a>备注  
- `crbegin` 用于反向 `multimap`，正如 [begin](#multimap__begin) 用于 `multimap` 一样。  
+ `crbegin` 用于反向 `multimap`，正如 [begin](#begin) 用于 `multimap` 一样。  
   
  返回值为 `crbegin` 时，无法修改 `multimap` 对象。  
   
@@ -529,7 +568,7 @@ int main( )
 The first element of the reversed multimap m1 is 3.  
 ```  
   
-##  <a name="a-namemultimapcrenda--multimapcrend"></a><a name="multimap__crend"></a>  multimap::crend  
+##  <a name="crend"></a>  multimap::crend  
  返回一个常量迭代器，此迭代器用于发现反向多重映射中最后一个元素之后的位置。  
   
 ```  
@@ -540,7 +579,7 @@ const_reverse_iterator crend() const;
  用于发现反向 [multimap](../standard-library/multimap-class.md)中最后一个元素之后的位置（非反向 `multimap` 中第一个元素之前的位置）的常量反向双向迭代器。  
   
 ### <a name="remarks"></a>备注  
- `crend` 用于反向 `multimap`，正如 [multimap::end](#multimap__end) 用于 `multimap` 一样。  
+ `crend` 用于反向 `multimap`，正如 [multimap::end](#end) 用于 `multimap` 一样。  
   
  返回值为 `crend` 时，无法修改 `multimap` 对象。  
   
@@ -579,7 +618,7 @@ int main( )
 The last element of the reversed multimap m1 is 1.  
 ```  
   
-##  <a name="a-namemultimapdifferencetypea--multimapdifferencetype"></a><a name="multimap__difference_type"></a>  multimap::difference_type  
+##  <a name="difference_type"></a>  multimap::difference_type  
  一种带符号整数类型，此类型可用于表示多重映射中迭代器指向的元素间范围内的元素数量。  
   
 ```  
@@ -587,7 +626,7 @@ typedef typename allocator_type::difference_type difference_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 ` first` 和 ` last` 之间的范围 [ *first, last*) 内元素的数目，包括 ` first` 指向的元素以及那一系列元素，但不包括 *last* 指向的元素。  
+ `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type`通常用于表示的范围中元素数 [*第一个*，*最后一个*) 迭代器之间`first`和`last`，包括指向的元素`first`和元素，但不是包括的范围，该元素指向`last`。  
   
  注意，尽管 `difference_type` 适用于满足输入迭代器（包括可逆容器支持的双向迭代器的类，如集）需求的所有迭代器，迭代器之间的减法仅受随机访问容器（如 vector）提供的随机访问迭代器支持。  
   
@@ -635,7 +674,7 @@ int main( )
 The number of elements in the multimap m1 is: 4.  
 ```  
   
-##  <a name="a-namemultimapemplacea--multimapemplace"></a><a name="multimap__emplace"></a>  multimap::emplace  
+##  <a name="emplace"></a>  multimap::emplace  
  就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -658,7 +697,7 @@ iterator emplace(Args&&... args);
   
  如果在插入过程中引发异常，该容器将保持不变并重新引发异常。  
   
- 元素的 [value_type](../standard-library/map-class.md#map__value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
   
 ### <a name="example"></a>示例  
   
@@ -702,7 +741,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemultimapemplacehinta--multimapemplacehint"></a><a name="multimap__emplace_hint"></a>  multimap::emplace_hint  
+##  <a name="emplace_hint"></a>  multimap::emplace_hint  
  使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -728,11 +767,11 @@ iterator emplace_hint(
   
  在定位过程中，如果引发异常，则不会修改该容器的状态。  
   
- 元素的 [value_type](../standard-library/map-class.md#map__value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
   
- 有关代码示例，请参阅 [map::emplace_hint](../standard-library/map-class.md#map__emplace_hint)。  
+ 有关代码示例，请参阅 [map::emplace_hint](../standard-library/map-class.md#emplace_hint)。  
   
-##  <a name="a-namemultimapemptya--multimapempty"></a><a name="multimap__empty"></a>  multimap::empty  
+##  <a name="empty"></a>  multimap::empty  
  测试多重映射是否为空。  
   
 ```  
@@ -775,7 +814,7 @@ The multimap m1 is not empty.
 The multimap m2 is empty.  
 ```  
   
-##  <a name="a-namemultimapenda--multimapend"></a><a name="multimap__end"></a>  multimap::end  
+##  <a name="end"></a>  multimap::end  
  返回超过末尾迭代器。  
   
 ```  
@@ -794,9 +833,9 @@ iterator end();
   
  不应对 **end** 返回的值取消引用。  
   
- 有关代码示例，请参阅 [multimap::find](#multimap__find)。  
+ 有关代码示例，请参阅 [multimap::find](#find)。  
   
-##  <a name="a-namemultimapequalrangea--multimapequalrange"></a><a name="multimap__equal_range"></a>  multimap::equal_range  
+##  <a name="equal_range"></a>  multimap::equal_range  
  查找其中元素的键与指定值匹配的元素范围。  
   
 ```  
@@ -806,11 +845,11 @@ pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的多重元素中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
- 一对迭代器，其中第一个是键的 [lower_bound](#multimap__lower_bound)，第二个是键的 [upper_bound](#multimap__upper_bound)。  
+ 一对迭代器，其中第一个是键的 [lower_bound](#lower_bound)，第二个是键的 [upper_bound](#upper_bound)。  
   
  若要访问成员函数返回的 `pr` 对的第一个迭代器，请使用 `pr`. **first**；若要取消引用下界迭代器，请使用 \*( `pr`. **first**)。 若要访问成员函数返回的 `pr` 对的第二个迭代器，请使用 `pr`. **second**；若要取消引用上界迭代器，请使用 \*( `pr`. **second**)。  
   
@@ -874,7 +913,7 @@ A direct call of upper_bound( 2 ) gives 30,
 The multimap m1 doesn't have an element with a key less than 4.  
 ```  
   
-##  <a name="a-namemultimaperasea--multimaperase"></a><a name="multimap__erase"></a>  multimap::erase  
+##  <a name="erase"></a>  multimap::erase  
  从多重映射中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。  
   
 ```  
@@ -908,9 +947,9 @@ size_type erase(
  对于第三个成员函数，则返回已从多重映射中移除的元素的数目。  
   
 ### <a name="remarks"></a>备注  
- 有关代码示例，请参阅 [map::erase](../standard-library/map-class.md#map__erase)。  
+ 有关代码示例，请参阅 [map::erase](../standard-library/map-class.md#erase)。  
   
-##  <a name="a-namemultimapfinda--multimapfind"></a><a name="multimap__find"></a>  multimap::find  
+##  <a name="find"></a>  multimap::find  
  返回一个迭代器，此迭代器引用多重映射当中具有与指定键等效的键的元素的第一个位置。  
   
 ```  
@@ -995,7 +1034,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemultimapgetallocatora--multimapgetallocator"></a><a name="multimap__get_allocator"></a>  multimap::get_allocator  
+##  <a name="get_allocator"></a>  multimap::get_allocator  
  返回用于构造多重映射的分配器对象的一个副本。  
   
 ```  
@@ -1064,7 +1103,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemultimapinserta--multimapinsert"></a><a name="multimap__insert"></a>  multimap::insert  
+##  <a name="insert"></a>  multimap::insert  
  将一个元素或元素范围插入到多重映射中。  
   
 ```  
@@ -1113,10 +1152,10 @@ IList);
 |参数|描述|  
 |`Val`|要插入到多重映射中的元素的值。|  
 |`Where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `Where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|  
-|`ValTy`|指定映射可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 元素的自变量类型并将 `Val` 作为自变量完美转发的模板参数。|  
+|`ValTy`|指定 map 可用于构造 [value_type](../standard-library/map-class.md#value_type) 元素的自变量类型并将 `Val` 作为自变量完美转发的模板参数。|  
 |`First`|要复制的第一个元素的位置。|  
 |`Last`|要复制的最后一个元素以外的位置。|  
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 对象的类型的元素。|  
+|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|  
 |`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|  
   
 ### <a name="return-value"></a>返回值  
@@ -1129,13 +1168,13 @@ IList);
   
  在插入单个元素的过程中，如果引发异常，则不会修改该容器的状态。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。  
   
- 容器的 [value_type](../standard-library/map-class.md#map__value_type) 是属于该容器的 typedef；对于映射，`multimap<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于映射，`multimap<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
   
  范围成员函数 (5) 将元素值序列插入到多重映射中，它对应于迭代器在范围 `[First, Last)` 中所处理的每一个元素；因此，不会插入 `Last`。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`m.insert(v.begin(), v.end());` 语句会将 `v` 的所有元素插入到 `m` 中。  
   
  初始值设定项列表成员函数 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 将元素复制到映射中。  
   
- 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [multimap::emplace](#multimap__emplace) 和 [multimap::emplace_hint](#multimap__emplace_hint)。  
+ 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [multimap::emplace](#emplace) 和 [multimap::emplace_hint](#emplace_hint)。  
   
 ### <a name="example"></a>示例  
   
@@ -1228,7 +1267,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemultimapiteratora--multimapiterator"></a><a name="multimap__iterator"></a>  multimap::iterator  
+##  <a name="iterator"></a>  multimap::iterator  
  一种类型，此类型提供可读取或修改多重映射中的任何元素的双向迭代器。  
   
 ```  
@@ -1236,18 +1275,18 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>备注  
- 多重映射定义的 **iterator** 会指向 [value_type](#multimap__value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
+ 多重映射定义的 **iterator** 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
   
  若要取消引用指向 multimap 中元素的 **iterator**`Iter`，请使用 **->** 运算符。  
   
- 若要访问元素的键值，请使用 `Iter` -> **first**，其等同于 (\* `Iter`)。 **first**。 若要访问元素的映射基准值，请使用 `Iter` -> **second**，其等同于 (\* `Iter`)。 **second**。  
+ 若要访问元素的键值，请使用 `Iter` -> **first**，其等同于 (\* `Iter`)。 **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **second**。  
   
  **iterator** 类型可用于修改元素的值。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#multimap__begin) 的示例。  
+  有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#begin) 的示例。  
   
-##  <a name="a-namemultimapkeycompa--multimapkeycomp"></a><a name="multimap__key_comp"></a>  multimap::key_comp  
+##  <a name="key_comp"></a>  multimap::key_comp  
  检索用于对多重映射中的键进行排序的比较对象副本。  
   
 ```  
@@ -1315,7 +1354,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.  
 ```  
   
-##  <a name="a-namemultimapkeycomparea--multimapkeycompare"></a><a name="multimap__key_compare"></a>  multimap::key_compare  
+##  <a name="key_compare"></a>  multimap::key_compare  
  一种提供函数对象的类型，该函数对象可比较两个排序键以确定多重映射中两个元素的相对顺序。  
   
 ```  
@@ -1328,9 +1367,9 @@ typedef Traits key_compare;
  有关 `Traits` 的详细信息，请参阅 [multimap 类](../standard-library/multimap-class.md)主题。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#multimap__key_comp) 的示例。  
+  有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。  
   
-##  <a name="a-namemultimapkeytypea--multimapkeytype"></a><a name="multimap__key_type"></a>  multimap::key_type  
+##  <a name="key_type"></a>  multimap::key_type  
  一种类型，此类型描述组成多重映射中每个元素的排序键对象。  
   
 ```  
@@ -1343,9 +1382,9 @@ typedef Key key_type;
  有关 `Key` 的详细信息，请参阅 [multimap 类](../standard-library/multimap-class.md)主题的备注部分。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#multimap__value_type) 的示例。  
+  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。  
   
-##  <a name="a-namemultimaplowerbounda--multimaplowerbound"></a><a name="multimap__lower_bound"></a>  multimap::lower_bound  
+##  <a name="lower_bound"></a>  multimap::lower_bound  
  返回一个迭代器，此迭代器指向多重映射中其键等于或大于指定键的第一个元素。  
   
 ```  
@@ -1355,7 +1394,7 @@ const_iterator lower_bound(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的多重元素中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
@@ -1430,7 +1469,7 @@ that of the last element is: 20.
 This is not the last element of multimap m1.  
 ```  
   
-##  <a name="a-namemultimapmappedtypea--multimapmappedtype"></a><a name="multimap__mapped_type"></a>  multimap::mapped_type  
+##  <a name="mapped_type"></a>  multimap::mapped_type  
  一种类型，它代表多重映射中存储的数据类型。  
   
 ```  
@@ -1443,9 +1482,9 @@ typedef Type mapped_type;
  有关 `Type` 的详细信息，请参阅 [multimap 类](../standard-library/multimap-class.md)主题。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#multimap__value_type) 的示例。  
+  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。  
   
-##  <a name="a-namemultimapmaxsizea--multimapmaxsize"></a><a name="multimap__max_size"></a>  multimap::max_size  
+##  <a name="max_size"></a>  multimap::max_size  
  返回多重映射的最大长度。  
   
 ```  
@@ -1475,7 +1514,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemultimapmultimapa--multimapmultimap"></a><a name="multimap__multimap"></a>  multimap::multimap  
+##  <a name="multimap"></a>  multimap::multimap  
  构造一个空的或者是其他某个多重映射的全部或部分副本的多重映射。  
   
 ```  
@@ -1538,11 +1577,11 @@ multimap(
 |`IList`|从中复制元素的 initializer_list。|  
   
 ### <a name="remarks"></a>备注  
- 所有构造函数存储一种类型的分配器对象，此类对象管理多重映射的内存存储，且事后可通过调用 [get_allocator](#multimap__get_allocator) 返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。  
+ 所有构造函数存储一种类型的分配器对象，此类对象管理多重映射的内存存储，且事后可通过调用 [get_allocator](#get_allocator) 返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。  
   
  所有构造函数初始化其多重映射。  
   
- 所有构造函数会存储类型为 `Traits` 的函数对象，此对象用于在多重映射的键之间建立顺序，且事后可通过调用 [key_comp](#multimap__key_comp) 返回。  
+ 所有构造函数会存储类型为 `Traits` 的函数对象，此对象用于在多重映射的键之间建立顺序，且事后可通过调用 [key_comp](#key_comp) 返回。  
   
  前三个构造函数均指定空的起始多重映射，此外，第二个函数还指定用于建立元素顺序的比较函数 (`Comp`) 的类型，第三个函数还显式指定了要使用的分配器类型 (`Al`)。 关键字 `explicit` 取消了某些种类的自动类型转换。  
   
@@ -1663,7 +1702,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemultimapoperatoreqa--multimapoperator"></a><a name="multimap__operator_eq"></a>multimap::operator=  
+##  <a name="op_eq"></a>multimap::operator=  
  将一个多重映射中的元素替换为另一多重映射副本。  
   
 ```  
@@ -1677,10 +1716,10 @@ multimap& operator=(multimap&& right);
 |||  
 |-|-|  
 |参数|说明|  
-|` right`|正在复制到 `multimap` 的 [multimap](../standard-library/multimap-class.md)。|  
+|`right`|正在复制到 `multimap` 的 [multimap](../standard-library/multimap-class.md)。|  
   
 ### <a name="remarks"></a>备注  
- 清除 `multimap` 中的任何现有元素后，`operator=` 会将 ` right` 的内容复制或移动到 `multimap`。  
+ 清除 `multimap` 中的任何现有元素后，`operator=` 会将 `right` 的内容复制或移动到 `multimap`。  
   
 ### <a name="example"></a>示例  
   
@@ -1719,7 +1758,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-namemultimappointera--multimappointer"></a><a name="multimap__pointer"></a>  multimap::pointer  
+##  <a name="pointer"></a>  multimap::pointer  
  一种类型，此类型提供指向多重映射中元素的指针。  
   
 ```  
@@ -1729,9 +1768,9 @@ typedef typename allocator_type::pointer pointer;
 ### <a name="remarks"></a>备注  
  **pointer** 类型可用于修改元素的值。  
   
- 在大多数情况下，应使用 [iterator](#multimap__iterator) 访问多重映射对象中的元素。  
+ 在大多数情况下，应使用 [iterator](#iterator) 访问多重映射对象中的元素。  
   
-##  <a name="a-namemultimaprbegina--multimaprbegin"></a><a name="multimap__rbegin"></a>  multimap::rbegin  
+##  <a name="rbegin"></a>  multimap::rbegin  
  返回一个迭代器，此迭代器用于发现反向多重映射中的第一个元素。  
   
 ```  
@@ -1744,7 +1783,7 @@ reverse_iterator rbegin();
  一个发现反向多重映射中的第一个元素或发现非反向多重映射中的最后一个元素的的反向双向迭代器。  
   
 ### <a name="remarks"></a>备注  
- `rbegin` 用于反向多重映射，正如 [begin](#multimap__begin) 用于多重映射一样。  
+ `rbegin` 用于反向多重映射，正如 [begin](#begin) 用于多重映射一样。  
   
  如果将 `rbegin` 的返回值赋予 `const_reverse_iterator`，则无法修改多重映射对象。 如果将 `rbegin` 的返回值赋予 `reverse_iterator`，则可以修改多重映射对象。  
   
@@ -1808,7 +1847,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the first element in the reversed multimap is 2.  
 ```  
   
-##  <a name="a-namemultimapreferencea--multimapreference"></a><a name="multimap__reference"></a>  multimap::reference  
+##  <a name="reference"></a>  multimap::reference  
  一种类型，此类型提供对存储在多重映射中的元素的引用。  
   
 ```  
@@ -1864,7 +1903,7 @@ The data value of first element in the multimap is 10.
 The modified data value of first element is 15.  
 ```  
   
-##  <a name="a-namemultimaprenda--multimaprend"></a><a name="multimap__rend"></a>  multimap::rend  
+##  <a name="rend"></a>  multimap::rend  
  返回一个迭代器，此迭代器用于发现反向多重映射中最后一个元素之后的位置。  
   
 ```  
@@ -1877,7 +1916,7 @@ reverse_iterator rend();
  用于发现反向多重映射中最后一个元素之后的位置（非反向多重映射中第一个元素之前的位置）的反向双向迭代器。  
   
 ### <a name="remarks"></a>备注  
- `rend` 用于反向多重映射，正如 [end](../standard-library/map-class.md#map__end) 用于多重映射一样。  
+ `rend` 用于反向多重映射，正如 [end](../standard-library/map-class.md#end) 用于多重映射一样。  
   
  如果将 `rend` 的返回值赋予 `const_reverse_iterator`，则无法修改多重映射对象。 如果将 `rend` 的返回值赋予 `reverse_iterator`，则可以修改多重映射对象。  
   
@@ -1945,7 +1984,7 @@ The reversed multimap is: 3 2 1 .
 After the erasure, the last element in the reversed multimap is 2.  
 ```  
   
-##  <a name="a-namemultimapreverseiteratora--multimapreverseiterator"></a><a name="multimap__reverse_iterator"></a>  multimap::reverse_iterator  
+##  <a name="reverse_iterator"></a>  multimap::reverse_iterator  
  一种类型，此类型提供可读取或修改反向多重映射中的元素的双向迭代器。  
   
 ```  
@@ -1955,16 +1994,16 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>备注  
  `reverse_iterator` 类型用于反向循环访问多重映射。  
   
- 多重映射定义的 `reverse_iterator` 会指向 [value_type](#multimap__value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
+ 多重映射定义的 `reverse_iterator` 会指向 [value_type](#value_type) 对象，其为 `pair`*\<***const Key**, **Type***>* 类型。 键值通过第一个成员对可用，已映射元素的值通过对的第二个成员可用。  
   
  若要取消引用指向多重映射中元素的 `reverse_iterator``rIter`，请使用 -> 运算符。  
   
- 若要访问元素的键值，请使用 `rIter` -> **first**，其等同于 (\* `rIter`)。 **first**。 若要访问元素的映射基准值，请使用 `rIter` -> **second**，其等同于 (\* `rIter`)。 **first**。  
+ 若要访问元素的键值，请使用 `rIter` -> **first**，其等同于 (\* `rIter`)。 **first** 相同。 若要访问元素的映射值，请使用 `rIter` -> **second**，其作用与 (\* `rIter`). **first** 相同。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#multimap__rbegin) 的示例。  
+  有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。  
   
-##  <a name="a-namemultimapsizea--multimapsize"></a><a name="multimap__size"></a>  multimap::size  
+##  <a name="size"></a>  multimap::size  
  返回 multimap 中的元素数量。  
   
 ```  
@@ -2005,7 +2044,7 @@ The multimap length is 1.
 The multimap length is now 2.  
 ```  
   
-##  <a name="a-namemultimapsizetypea--multimapsizetype"></a><a name="multimap__size_type"></a>  multimap::size_type  
+##  <a name="size_type"></a>  multimap::size_type  
  一种无符号整数类型，此类型会对多重映射中元素的数量计数。  
   
 ```  
@@ -2013,9 +2052,9 @@ typedef typename allocator_type::size_type size_type;
 ```  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#multimap__size) 的示例  
+  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例  
   
-##  <a name="a-namemultimapswapa--multimapswap"></a><a name="multimap__swap"></a>  multimap::swap  
+##  <a name="swap"></a>  multimap::swap  
  交换两个多重映射的元素。  
   
 ```  
@@ -2024,8 +2063,8 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` right`  
- 多重映射提供要交换的元素或其元素要与多重映射 ` left` 的元素进行交换。  
+ `right`  
+ 多重映射提供要交换的元素或其元素要与多重映射 `left` 的元素进行交换。  
   
 ### <a name="remarks"></a>备注  
  成员函数不会使在彼此交换元素的两个多重映射中指定元素的任何引用、指针或迭代器无效。  
@@ -2081,7 +2120,7 @@ After swapping with m2, multimap m1 is: 100 200.
 After swapping with m3, multimap m1 is: 300.  
 ```  
   
-##  <a name="a-namemultimapupperbounda--multimapupperbound"></a><a name="multimap__upper_bound"></a>  multimap::upper_bound  
+##  <a name="upper_bound"></a>  multimap::upper_bound  
  返回一个迭代器，此迭代器指向多重映射中其键大于指定键的第一个元素。  
   
 ```  
@@ -2091,7 +2130,7 @@ const_iterator upper_bound(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的多重元素中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
@@ -2157,7 +2196,7 @@ The first element of m1 with a key greater than
 that of the initial element of m1 is: 20.  
 ```  
   
-##  <a name="a-namemultimapvaluecompa--multimapvaluecomp"></a><a name="multimap__value_comp"></a>  multimap::value_comp  
+##  <a name="value_comp"></a>  multimap::value_comp  
  此成员函数返回一个函数对象，该函数对象可通过比较多重映射中元素的键值来确定元素顺序。  
   
 ```  
@@ -2220,7 +2259,7 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).  
 ```  
   
-##  <a name="a-namemultimapvaluetypea--multimapvaluetype"></a><a name="multimap__value_type"></a>  multimap::value_type  
+##  <a name="value_type"></a>  multimap::value_type  
  一种类型，它表示存储为映射中元素的对象的类型。  
   
 ```  

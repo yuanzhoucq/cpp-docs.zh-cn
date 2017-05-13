@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 088bf359fefd09bf4ea71ffceacd9139fbdbfba2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 535ce75fb600b919b5e255bc580a93e448e81d59
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 类
@@ -63,40 +64,40 @@ class vector<bool, Allocator>
   
 |||  
 |-|-|  
-|[const_pointer](#vector_lt_bool_gt___const_pointer)|`const_iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的常量指针。|  
-|[const_reference](#vector_lt_bool_gt___const_reference)|`bool` 的 typedef。 初始化之后，它不观察对原始值的更新。|  
-|[pointer](#vector_lt_bool_gt___pointer)|`iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的指针。|  
+|[const_pointer](#const_pointer)|`const_iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的常量指针。|  
+|[const_reference](#const_reference)|`bool` 的 typedef。 初始化之后，它不观察对原始值的更新。|  
+|[pointer](#pointer)|`iterator` 的 typedef，可用作指向 `vector<bool>` 的布尔值元素的指针。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[flip](#vector_lt_bool_gt___flip)|反转 `vector<bool>` 中的所有位。|  
-|[swap](#vector_lt_bool_gt___swap)|交换两个 `vector<bool>` 的元素。|  
-|[operator[]](#vector_lt_bool_gt___operator_at)|返回对指定位置的 `vector<bool>` 元素的模拟引用。|  
-|`at`|与非专用的 [vector](../standard-library/vector-class.md)::at 函数的作用相同，但它使用代理类 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)。 另请参阅 [operator[]](#vector_lt_bool_gt___operator_at)。|  
-|`front`|与非专用的 [vector](../standard-library/vector-class.md)::front 函数的作用相同，但它使用代理类 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)。 另请参阅 [operator[]](#vector_lt_bool_gt___operator_at)。|  
-|`back`|与非专用的 [vector](../standard-library/vector-class.md)::backt 函数的作用相同，但它使用代理类 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)。 另请参阅 [operator[]](#vector_lt_bool_gt___operator_at)。|  
+|[flip](#flip)|反转 `vector<bool>` 中的所有位。|  
+|[swap](#swap)|交换两个 `vector<bool>` 的元素。|  
+|[operator[]](#op_at)|返回对指定位置的 `vector<bool>` 元素的模拟引用。|  
+|`at`|与非专用的 [vector](../standard-library/vector-class.md)::at 函数的作用相同，但它使用代理类 [vector\<bool>::reference](#reference_class)。 另请参阅 [operator[]](#op_at)。|  
+|`front`|与非专用的 [vector](../standard-library/vector-class.md)::front 函数的作用相同，但它使用代理类 [vector\<bool>::reference](#reference_class)。 另请参阅 [operator[]](#op_at)。|  
+|`back`|与非专用的 [vector](../standard-library/vector-class.md)::backt 函数的作用相同，但它使用代理类 [vector\<bool>::reference](#reference_class)。 另请参阅 [operator[]](#op_at)。|  
   
 ### <a name="proxy-class"></a>代理类  
   
 |||  
 |-|-|  
-|[vector\<bool> reference 类](#vector_lt_bool_gt___reference_class)|一种用做代理以模拟 `bool&` 行为的类，其对象可提供对 `vector<bool>` 对象中的元素（一位）的引用。|  
+|[vector\<bool> reference 类](#reference_class)|一种用做代理以模拟 `bool&` 行为的类，其对象可提供对 `vector<bool>` 对象中的元素（一位）的引用。|  
   
 ## <a name="requirements"></a>要求  
  **标头**：\<vector>  
   
  **命名空间：** std  
   
-##  <a name="vector_lt_bool_gt___const_pointer"></a>vector\<bool>::const_pointer  
+##  <a name="const_pointer"></a>vector\<bool>::const_pointer  
  该类型描述可作为常量指针的对象，该指针指向 `vector<bool>` 对象所包含序列中的布尔元素。  
   
 ```  
 typedef const_iterator const_pointer;  
 ```  
   
-##  <a name="vector_lt_bool_gt___const_reference"></a>vector\<bool>::const_reference  
+##  <a name="const_reference"></a>vector\<bool>::const_reference  
  该类型描述可作为常量引用的对象，它引用 `vector<bool>` 对象所包含序列中的布尔元素。  
   
 ```  
@@ -104,9 +105,9 @@ typedef bool const_reference;
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息和代码示例，请参阅 [vector&lt;bool&gt;::reference::operator=](#vector_lt_bool_gt___reference_operator_eq)。  
+ 有关详细信息和代码示例，请参阅 [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)。  
   
-##  <a name="vector_lt_bool_gt___flip"></a>vector\<bool>::flip  
+##  <a name="flip"></a>vector\<bool>::flip  
  反转 `vector<bool>` 中的所有位。  
   
 ```  
@@ -144,7 +145,7 @@ int main()
   
 ```  
   
-##  <a name="vector_lt_bool_gt___operator_at"></a>vector\<bool>::operator[]  
+##  <a name="op_at"></a>vector\<bool>::operator[]  
  返回对指定位置的 `vector<bool>` 元素的模拟引用。  
   
 ```  
@@ -161,7 +162,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 |`Pos`|`vector<bool>` 元素的位置。|  
   
 ### <a name="return-value"></a>返回值  
- 包含索引元素值的 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class) 或 [vector\<bool>::const_reference](#vector_lt_bool_gt___const_reference) 对象。  
+ 包含索引元素值的 [vector\<bool>::reference](#reference_class) 或 [vector\<bool>::const_reference](#const_reference) 对象。  
   
  如果指定的位置大于或等于容器大小，则结果为 undefined。  
   
@@ -198,18 +199,18 @@ int main()
 }  
 ```  
   
-##  <a name="vector_lt_bool_gt___pointer"></a>vector\<bool>::pointer  
+##  <a name="pointer"></a>vector\<bool>::pointer  
  一种类型，用于描述一个对象来充当指针，以便指向 `vector<bool>` 对象所包含序列的布尔元素。  
   
 ```  
 typedef iterator pointer;  
 ```  
   
-##  <a name="vector_lt_bool_gt___reference_class"></a>vector\<bool>::reference Class  
+##  <a name="reference_class"></a>vector\<bool>::reference Class  
  `vector<bool>::reference` 类是 [vector\<bool> 类](../standard-library/vector-bool-class.md) 为模拟 `bool&` 而提供的一种代理类。  
   
 ### <a name="remarks"></a>备注  
- 必须使用模拟引用，因为 C++ 不允许直接引用位。 `vector<bool>` 每个元素只使用一个位，这可以使用此代理类来引用。 但是，引用模拟不会完成，原因是某些赋值无效。 例如，因为无法采用 `vector<bool>::reference` 对象的地址，所以下列使用 [vector\<bool>::operator[]](#vector_lt_bool_gt___operator_at) 的代码是错误的：  
+ 必须使用模拟引用，因为 C++ 不允许直接引用位。 `vector<bool>` 每个元素只使用一个位，这可以使用此代理类来引用。 但是，引用模拟不会完成，原因是某些赋值无效。 例如，因为无法采用 `vector<bool>::reference` 对象的地址，所以下列使用 [vector\<bool>::operator[]](#op_at) 的代码是错误的：  
   
 ```cpp  
 vector<bool> vb;  
@@ -218,7 +219,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use  
 ```  
   
-###  <a name="vector_lt_bool_gt___reference_flip"></a>vector\<bool>::reference::flip  
+###  <a name="reference_flip"></a>vector\<bool>::reference::flip  
  反转引用的 [vector\<bool>](../standard-library/vector-bool-class.md) 元素的布尔值。  
   
 ```  
@@ -264,7 +265,7 @@ The vector with first element flipped is:
     false false false true true  
 ```  
   
-###  <a name="vector_lt_bool_gt___reference_operator_bool"></a>vector\<bool>::reference::operator bool  
+###  <a name="reference_operator_bool"></a>vector\<bool>::reference::operator bool  
  提供从 `vector<bool>::reference` 到 `bool` 的隐式转换。  
   
 ```  
@@ -277,7 +278,7 @@ operator bool() const;
 #### <a name="remarks"></a>备注  
  `vector<bool>` 对象无法通过此运算符修改。  
   
-###  <a name="vector_lt_bool_gt___reference_operator_eq"></a>vector\<bool>::reference::operator=  
+###  <a name="reference_operator_eq"></a>vector\<bool>::reference::operator=  
  将布尔值赋给一个位，或将引用的元素所保存的值赋给一个位。  
   
 ```  
@@ -363,8 +364,8 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-##  <a name="vector_lt_bool_gt___swap"></a>vector\<bool>::swap  
- 通过使用代理类 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class) 交换布尔矢量 ( `vector<bool>`) 的两个元素的静态成员函数。  
+##  <a name="swap"></a>vector\<bool>::swap  
+ 通过使用代理类 [vector\<bool>::reference](#reference_class) 交换布尔矢量 ( `vector<bool>`) 的两个元素的静态成员函数。  
   
 ```  
 static void swap(

@@ -1,58 +1,134 @@
 ---
 title: "sync_none 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext.sync_none"
-  - "sync_none"
-  - "allocators/stdext::sync_none"
-  - "stdext::sync_none"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sync_none 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sync_none
+- allocators/stdext::sync_none
+- stdext::sync_none
+- allocators/stdext::sync_none::allocate
+- allocators/stdext::sync_none::deallocate
+- allocators/stdext::sync_none::equals
+dev_langs:
+- C++
+helpviewer_keywords:
+- sync_none class
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# sync_none 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f56f09f3c3591d0c969ea3b3e242cf39812356fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
-描述未同步提供的 [同步筛选器](../standard-library/allocators-header.md)。  
+---
+# <a name="syncnone-class"></a>sync_none 类
+描述不提供同步的[同步筛选器](../standard-library/allocators-header.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template <class Cache>  
+class sync_none
 ```  
-template <class Cache> class sync_none  
-```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
   
-|参数|说明|  
-|--------|--------|  
-|`Cache`|缓存类型与同步筛选器。  这可以是 [cache\_chunklist](../standard-library/cache-chunklist-class.md)、[cache\_freelist](../standard-library/cache-freelist-class.md)或 [cache\_suballoc](../standard-library/cache-suballoc-class.md)。|  
+|参数|描述|  
+|---------------|-----------------|  
+|`Cache`|与同步筛选器相关联的缓存类型。 它可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|  
   
-### 成员函数  
+### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[分配](../Topic/sync_none::allocate.md)|分配内存块。|  
-|[释放](../Topic/sync_none::deallocate.md)|从存储空间开头释放对象中的指定数字中的指定位置。|  
-|[equals](../Topic/sync_none::equals.md)|比较是否相等来缓存。|  
+|[allocate](#allocate)|分配内存块。|  
+|[deallocate](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|  
+|[equals](#equals)|比较两个缓存是否相等。|  
   
-## 要求  
- **页眉：** \<分配程序\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<allocators>  
   
- **命名空间：**stdext  
+ **命名空间：** stdext  
   
-## 请参阅  
- [\<allocators\>](../standard-library/allocators-header.md)
+##  <a name="allocate"></a>  sync_none::allocate  
+ 分配内存块。  
+  
+```
+void *allocate(std::size_t count);
+```  
+  
+### <a name="parameters"></a>参数  
+  
+|参数|描述|  
+|---------------|-----------------|  
+|`count`|数组中要分配的元素数目。|  
+  
+### <a name="remarks"></a>备注  
+ 此成员函数返回 `cache.allocate(count)`，其中 `cache` 是缓存对象。  
+  
+##  <a name="deallocate"></a>  sync_none::deallocate  
+ 从指定位置开始从存储中释放指定数量的的对象。  
+  
+```
+void deallocate(void* ptr, std::size_t count);
+```  
+  
+### <a name="parameters"></a>参数  
+  
+|参数|描述|  
+|---------------|-----------------|  
+|`ptr`|指向要从存储中释放的第一个对象的指针。|  
+|`count`|要从存储中释放的对象数量。|  
+  
+### <a name="remarks"></a>备注  
+ 此成员函数调用 `cache.deallocate(ptr, count)`，其中 `cache` 表示缓存对象。  
+  
+##  <a name="equals"></a>  sync_none::equals  
+ 比较两个缓存是否相等。  
+  
+```
+bool equals(const sync<Cache>& Other) const;
+```  
+  
+### <a name="parameters"></a>参数  
+  
+|参数|描述|  
+|---------------|-----------------|  
+|`Cache`|同步筛选器的缓存对象。|  
+|`Other`|要用于比较是否相等的缓存对象。|  
+  
+### <a name="return-value"></a>返回值  
+ 此成员函数总是返回 `true`。  
+  
+### <a name="remarks"></a>备注  
+  
+## <a name="see-also"></a>另请参阅  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

@@ -1,60 +1,78 @@
 ---
-title: "_putc_nolock、_putwc_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putc_nolock"
-  - "_putwc_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_puttc_nolock"
-  - "puttc_nolock"
-  - "putwc_nolock"
-  - "_putwc_nolock"
-  - "_putc_nolock"
-  - "putc_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putc_nolock 函数"
-  - "_puttc_nolock 函数"
-  - "_putwc_nolock 函数"
-  - "字符, 写入"
-  - "putc_nolock 函数"
-  - "puttc_nolock 函数"
-  - "putwc_nolock 函数"
-  - "流, 将字符写入到"
+title: "_putc_nolock、_putwc_nolock | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putc_nolock
+- _putwc_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _puttc_nolock
+- puttc_nolock
+- putwc_nolock
+- _putwc_nolock
+- _putc_nolock
+- putc_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- puttc_nolock function
+- putc_nolock function
+- _putc_nolock function
+- streams, writing characters to
+- characters, writing
+- putwc_nolock function
+- _puttc_nolock function
+- _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _putc_nolock、_putwc_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a92fc2fe740d52c2040c8dc479e2ffaa8607989a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-写入流中的字符不锁定线程。  
+---
+# <a name="putcnolock-putwcnolock"></a>_putc_nolock、_putwc_nolock
+将字符写入流，而不锁定线程。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -68,40 +86,40 @@ wint_t _putwc_nolock(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `c`  
  要写入的字符。  
   
  `stream`  
- 指向 **FILE** 结构的指针。  
+ 指向**文件**结构的指针。  
   
-## 返回值  
- 请参见 **putc, putwc**。  
+## <a name="return-value"></a>返回值  
+ 请参阅 **putc、putwc**。  
   
-## 备注  
- 有`_putc_nolock`和 `_putwc_nolock`后缀的版本是相同的（不包括有**\_nolock** 后缀的），但它们不由其他线程的干扰保护。  它们可能更快，因为它们不会产生锁定其他线程的开销。  仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。  
+## <a name="remarks"></a>备注  
+ `_putc_nolock` 和 `_putwc_nolock` 与不带 **_nolock** 后缀的版本相同，只不过它们可能受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。  
   
- `_putwc_nolock` 是 `_putc_nolock`的宽字符版本；如果流在 ANSI 模式下是公开的则两个函数具有相同行为。  `_putc_nolock` 当前不支持输出到 UNICODE 流。  
+ `_putwc_nolock` 是 `_putc_nolock` 的宽字符版本；如果在 ANSI 模式下打开流，则这两个函数的行为相同。 `_putc_nolock` 当前不支持到 UNICODE 流中的输出。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
-|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**\_putwc\_nolock**|  
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**_putwc_nolock**|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_putc_nolock`|\<stdio.h\>|  
-|`_putwc_nolock`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_putc_nolock`|\<stdio.h>|  
+|`_putwc_nolock`|\<stdio.h> 或 \<wchar.h>|  
   
- 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。  与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用它们。  有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。 与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_putc_nolock.c  
@@ -126,19 +144,13 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 This is the line of output  
 ```  
   
-## .NET Framework 等效项  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)

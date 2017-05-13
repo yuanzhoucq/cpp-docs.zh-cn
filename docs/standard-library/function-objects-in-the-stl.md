@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3928493eeb4aa09511b3e58d27383c7a480d06ad
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 标准库中的函数对象
@@ -83,7 +84,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```  
   
- `remove_if` 的最后一个参数是返回布尔值（一个 *谓词*）的函数对象。 如果函数对象的结果是 `true`，则从迭代器 ` first` 和 ` last` 正在访问的容器中删除元素。 你可以使用在 ` pred` 参数的 [\<functional>](../standard-library/functional.md) 标头中声明的任何函数对象，也可以自行创建。  
+ `remove_if` 的最后一个参数是返回布尔值（一个 *谓词*）的函数对象。 如果函数对象的结果是 `true`，则从迭代器 `first` 和 `last` 正在访问的容器中删除元素。 你可以使用在 `pred` 参数的 [\<functional>](../standard-library/functional.md) 标头中声明的任何函数对象，也可以自行创建。  
   
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

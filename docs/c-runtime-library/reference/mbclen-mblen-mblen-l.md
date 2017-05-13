@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f8e2a1bf9282298d3d41183c0d335e49e89f1b42
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen、mblen、_mblen_l
@@ -106,7 +107,7 @@ int _mblen_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- `_mbclen` 根据多字节字符 `c` 是 1 个还是 2 个字节的长度返回 1 或 2。 `_mbclen` 没有错误返回。 如果 `mbstr` 不是 `NULL`，则 `mblen` 返回多字节字符的字节长度。 如果 `mbstr` 是 `NULL`，或其指向宽字符空字符，则 `mblen` 返回 0. 如果 `mbstr` 指向的对象未构成前 `count` 个字符内的有效多字节字符，则 `mblen` 返回 –1。  
+ `_mbclen` 根据多字节字符 `c` 是 1 个还是 2 个字节的长度返回 1 或 2。 `_mbclen` 没有错误返回。 如果 `mbstr` 不是 `NULL`，则 `mblen` 返回多字节字符的字节长度。 如果 `mbstr` 是 `NULL`，或其指向宽字符空字符，则 `mblen` 返回 0. 如果该对象的`mbstr`指向未形成有效的多字节字符，在第一个`count`字符，`mblen`返回-1。  
   
 ## <a name="remarks"></a>备注  
  `_mbclen` 函数返回多字节字符 `c` 的长度（以字节为单位）。 如果 `c` 未按照对 `_ismbblead` 的隐式调用确定的方式指向多字节字符的前导字节，则 `_mbclen` 的结果不可预知。  
@@ -171,9 +172,6 @@ Convert wide character to multibyte character:
 Length in bytes of multibyte character 61: 1  
 Length in bytes of NULL multibyte character 0: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   

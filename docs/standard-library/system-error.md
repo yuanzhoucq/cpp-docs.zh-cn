@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: ad53550cce165587057910e3cd4c77427fb1cd55
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8f3441306b21ca1111cf2fd2d377a1b233e7ad86
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
@@ -75,15 +76,15 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/system-error-operators.md#operator_eq_eq)|测试运算符左侧的对象是否等于右侧的对象。|  
-|[operator!=](../standard-library/system-error-operators.md#operator_neq)|测试运算符左侧的对象是否不等于右侧的对象。|  
-|[operator<](../standard-library/system-error-operators.md#operator_lt_)|测试一个对象是否小于要比较的传入对象。|  
+|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|测试运算符左侧的对象是否等于右侧的对象。|  
+|[operator!=](../standard-library/system-error-operators.md#op_neq)|测试运算符左侧的对象是否不等于右侧的对象。|  
+|[operator<](../standard-library/system-error-operators.md#op_lt)|测试一个对象是否小于要比较的传入对象。|  
   
 ### <a name="enumerations"></a>枚举  
   
 |||  
 |-|-|  
-|[errc](../standard-library/system-error-enums.md#errc_enumeration)|为 `<errno.h>` 中的 Posix 定义的所有错误代码宏提供符号名称。|  
+|[errc](../standard-library/system-error-enums.md#errc)|为 `<errno.h>` 中的 Posix 定义的所有错误代码宏提供符号名称。|  
   
 ### <a name="classes-and-structs"></a>类和结构  
   
