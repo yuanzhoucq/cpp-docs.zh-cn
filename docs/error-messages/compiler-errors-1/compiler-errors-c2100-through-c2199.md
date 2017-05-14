@@ -17,7 +17,6 @@ f1_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 helpviewer_keywords:
@@ -29,7 +28,6 @@ helpviewer_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 dev_langs:
@@ -53,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c724fd7907f7ec3f0ce8f096faf88d4ec66ae970
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>编译器错误s C2100 through C2199
@@ -99,7 +98,7 @@ ms.lasthandoff: 04/24/2017
 |编译器错误 C2127|*标识符*︰ 具有非常量表达式的 constexpr 实体的初始化非法|  
 |[编译器错误 C2128](compiler-error-c2128.md)|*函数*: alloc_text/same_seg 仅适用于带 C 链接的函数|  
 |[编译器错误 C2129](compiler-error-c2129.md)|静态函数*标识符*声明但未定义|  
-|[编译器错误 C2130](compiler-error-c2130.md)|#行应包含文件名，却找到输入字符串*令牌*|  
+|[编译器错误 C2130](compiler-error-c2130.md)|#line 应包含文件名，却找到的字符串*令牌*|  
 |编译器错误 C2131|表达式的计算结果不是常数|  
 |[编译器错误 C2132](compiler-error-c2132.md)|语法错误: 意外的标识符|  
 |[编译器错误 C2133](compiler-error-c2133.md)|*标识符*': 未知的大小|  
@@ -147,7 +146,7 @@ ms.lasthandoff: 04/24/2017
 |[编译器错误 C2175](compiler-error-c2175.md)|*区域设置*': 无效的区域设置|  
 |编译器错误 C2176|不能在与构造函数关联的函数 try 块的处理程序中使用 return 语句|  
 |[编译器错误 C2177](compiler-error-c2177.md)|常量太大|  
-|编译器错误 C2178|*标识符*不能使用声明*说明符*说明符|  
+|[编译器错误 C2178](compiler-error-c2178.md)|*标识符*不能使用声明*说明符*说明符|  
 |[编译器错误 C2179](compiler-error-c2179.md)|*类型*︰ 特性自变量不能使用类型参数|  
 |[编译器错误 C2180](compiler-error-c2180.md)|控制表达式具有类型*类型*|  
 |[编译器错误 C2181](compiler-error-c2181.md)|没有匹配 if 的非法 else|  

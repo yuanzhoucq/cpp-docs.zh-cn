@@ -31,17 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7e6aaf9ae1817da4a532b00fe0bf54afc5e9cd17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 241d1ad9b3313337b874d5e9a6d39f86f2c71838
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 包括：用于定义类 `mutex`、`recursive_mutex`、`timed_mutex` 和 `recursive_timed_mutex` 的标准标头 \<mutex>，模板 `lock_guard` 和 `unique_lock`，以及用于定义互斥代码区域的支持类型和函数。  
   
 > [!WARNING]
->  Visual Studio 2015 中的 C++ 标准库同步类型是基于 Windows 同步基元，且不再使用 ConcRT（除非目标平台是 Windows XP）。 \<mutex> 中定义的类型不应与任何 ConcRT 类型或函数共同使用。  
+>  从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元，且不再使用 ConcRT （除非当目标平台是 Windows XP）。 \<mutex> 中定义的类型不应与任何 ConcRT 类型或函数共同使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  在使用编译的代码中**/clr**，此标头被阻止。  
+>  通过使用编译的代码中**/clr**，阻止此标头。  
   
  类 `mutex` 和 `recursive_mutex` 是互斥体类型。 互斥体类型的默认构造函数和析构函数不会引发异常。 当多个线程尝试锁定同一对象时，这些对象有方法实现互相排斥。 具体而言，互斥体类型包含的方法有 `lock`、`try_lock` 和 `unlock`：  
   
@@ -87,8 +88,8 @@ ms.lasthandoff: 02/24/2017
   
 |名称|描述|  
 |----------|-----------------|  
-|[call_once 函数](../standard-library/mutex-functions.md#call_once_function)|提供在执行期间只调用一次指定的可调用对象的机制。|  
-|[lock 函数](../standard-library/mutex-functions.md#lock_function)|尝试在不死锁的情况下锁定所有自变量。|  
+|[call_once](../standard-library/mutex-functions.md#call_once)|提供在执行期间只调用一次指定的可调用对象的机制。|  
+|[lock](../standard-library/mutex-functions.md#lock)|尝试在不死锁的情况下锁定所有自变量。|  
   
 ### <a name="structs"></a>结构  
   
@@ -103,9 +104,9 @@ ms.lasthandoff: 02/24/2017
   
 |名称|描述|  
 |----------|-----------------|  
-|[adopt_lock 变量](../standard-library/mutex-functions.md#adopt_lock_variable)|表示可传递给 `lock_guard` 和 `unique_lock` 的构造函数，以指示同样传递给该构造函数的互斥体对象已锁定的对象。|  
-|[defer_lock 变量](../standard-library/mutex-functions.md#defer_lock_variable)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数不应锁定同样传递给它的互斥体对象。|  
-|[try_to_lock 变量](../standard-library/mutex-functions.md#try_to_lock_variable)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数应尝试在不阻止的情况下解锁同样传递给它的 `mutex`。|  
+|[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|表示可传递给 `lock_guard` 和 `unique_lock` 的构造函数，以指示同样传递给该构造函数的互斥体对象已锁定的对象。|  
+|[defer_lock](../standard-library/mutex-functions.md#defer_lock)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数不应锁定同样传递给它的互斥体对象。|  
+|[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数应尝试在不阻止的情况下解锁同样传递给它的 `mutex`。|  
   
 ## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)

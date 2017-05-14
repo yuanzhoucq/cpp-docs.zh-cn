@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 9e36da6c4f7dde6df281d8ad229373d861ee045a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7e4ff26f4d98dc677483f8526c17474aecc81dc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="weakptr-class"></a>weak_ptr 类
@@ -89,7 +90,7 @@ public:
 ## <a name="remarks"></a>备注  
  此模板类描述了一个对象，此对象指向由一个或多个 [shared_ptr 类](../standard-library/shared-ptr-class.md)对象管理的资源的。 指向某个资源的 `weak_ptr` 对象不会影响资源的引用计数。 因此，当最后一个管理该资源 `shared_ptr` 的对象被销毁时，则即使存在指向该资源的 `weak_ptr` 对象，该资源也将被释放。 这对于避免数据结构中的循环至关重要。  
   
- 在以下情况下 `weak_ptr` 对象将指向某个资源：如果该对象是从拥有该资源的 `shared_ptr` 对象构造而成；如果是从指向该资源的 `weak_ptr` 对象构造而成；或者使用 [operator=](#weak_ptr__operator_eq) 将该资源分配到了该对象。 `weak_ptr` 对象不提供直接访问其所指向的资源的权限。 需要使用该资源的代码可通过一个 `shared_ptr` 对象来执行该操作，该对象通过调用成员函数 [lock](#weak_ptr__lock) 创建并拥有该资源。 `weak_ptr` 对象在其所指向的资源被释放时已过期，因为所有拥有该资源的 `shared_ptr` 对象已被销毁。 调用已过期的 `weak_ptr` 对象上的 `lock` 将创建一个空 shared_ptr 对象。  
+ 在以下情况下 `weak_ptr` 对象将指向某个资源：如果该对象是从拥有该资源的 `shared_ptr` 对象构造而成；如果是从指向该资源的 `weak_ptr` 对象构造而成；或者使用 [operator=](#op_eq) 将该资源分配到了该对象。 `weak_ptr` 对象不提供直接访问其所指向的资源的权限。 需要使用该资源的代码可通过一个 `shared_ptr` 对象来执行该操作，该对象通过调用成员函数 [lock](#lock) 创建并拥有该资源。 `weak_ptr` 对象在其所指向的资源被释放时已过期，因为所有拥有该资源的 `shared_ptr` 对象已被销毁。 调用已过期的 `weak_ptr` 对象上的 `lock` 将创建一个空 shared_ptr 对象。  
   
  空 weak_ptr 对象不会指向任何资源，而且没有控制块。 其成员函数 `lock` 将返回一个空 shared_ptr 对象。  
   
@@ -101,32 +102,32 @@ public:
   
 |||  
 |-|-|  
-|[weak_ptr](#weak_ptr__weak_ptr)|构造一个 `weak_ptr`。|  
+|[weak_ptr](#weak_ptr)|构造一个 `weak_ptr`。|  
   
 ### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[element_type](#weak_ptr__element_type)|元素的类型。|  
-|[expired](#weak_ptr__expired)|测试所属权是否已过期。|  
-|[lock](#weak_ptr__lock)|获取资源的独占所属权。|  
-|[owner_before](#weak_ptr__owner_before)|如果此 `weak_ptr` 排在提供的指针之前（或小于该指针），则返回 `true`。|  
-|[reset](#weak_ptr__reset)|释放所拥有的资源。|  
-|[swap](#weak_ptr__swap)|交换两个 `weak_ptr` 对象。|  
-|[use_count](#weak_ptr__use_count)|指定 `shared_ptr` 对象的计数。|  
+|[element_type](#element_type)|元素的类型。|  
+|[expired](#expired)|测试所属权是否已过期。|  
+|[lock](#lock)|获取资源的独占所属权。|  
+|[owner_before](#owner_before)|如果此 `weak_ptr` 排在提供的指针之前（或小于该指针），则返回 `true`。|  
+|[reset](#reset)|释放所拥有的资源。|  
+|[swap](#swap)|交换两个 `weak_ptr` 对象。|  
+|[use_count](#use_count)|指定 `shared_ptr` 对象的计数。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator=](#weak_ptr__operator_eq)|替换所拥有的资源。|  
+|[operator=](#op_eq)|替换所拥有的资源。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<memory>  
   
  **命名空间：** std  
   
-##  <a name="weak_ptr__element_type"></a>element_type  
+##  <a name="element_type"></a>element_type  
  元素的类型。  
   
 ```  
@@ -161,7 +162,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="weak_ptr__expired"></a>expired  
+##  <a name="expired"></a>expired  
  测试所属权是否已过期。  
   
 ```  
@@ -217,7 +218,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__lock"></a>lock  
+##  <a name="lock"></a>lock  
  获取资源的独占所属权。  
   
 ```  
@@ -273,7 +274,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__operator_eq"></a>operator=  
+##  <a name="op_eq"></a>operator=  
  替换所拥有的资源。  
   
 ```  
@@ -332,7 +333,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="weak_ptr__owner_before"></a>owner_before  
+##  <a name="owner_before"></a>owner_before  
  如果此 `weak_ptr` 排在提供的指针之前（或小于该指针），则返回 `true`。  
   
 ```  
@@ -350,7 +351,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>备注  
  如果 `*this` 为 `ordered before``ptr`，则模板成员函数返回 `true`。  
   
-##  <a name="weak_ptr__reset"></a>reset  
+##  <a name="reset"></a>reset  
  释放所拥有的资源。  
   
 ```  
@@ -391,7 +392,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="weak_ptr__swap"></a>swap  
+##  <a name="swap"></a>swap  
  交换两个 `weak_ptr` 对象。  
   
 ```  
@@ -459,7 +460,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="weak_ptr__use_count"></a>use_count  
+##  <a name="use_count"></a>use_count  
  指定 `shared_ptr` 对象的计数。  
   
 ```  
@@ -498,7 +499,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr__weak_ptr"></a>weak_ptr  
+##  <a name="weak_ptr"></a>weak_ptr  
  构造一个 `weak_ptr`。  
   
 ```  

@@ -6,13 +6,20 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- numeric/std::accumulate
+- numeric/std::adjacent_difference
+- numeric/std::inner_product
+- numeric/std::iota
+- numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 88c311b28caa80d4c4292888be501feae797ce27
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d194bebeb13d9a5e4648a7c74192047fe093576d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函数
@@ -21,7 +28,7 @@ ms.lasthandoff: 02/24/2017
 |[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|  
 |[iota](#iota)|[partial_sum](#partial_sum)|  
   
-##  <a name="a-nameaccumulatea--accumulate"></a><a name="accumulate"></a>accumulate  
+##  <a name="accumulate"></a>accumulate  
  通过计算连续部分总和来计算指定范围（包括一些初始值）中所有元素的和，或计算通过指定的二元运算（而不是求和运算）获得的类似的连续部分结果的结果。  
   
 ```  
@@ -37,23 +44,23 @@ Type accumulate(
 ```  
   
 ### <a name="parameters"></a>参数   
- ` first`  
+ `first`  
  输入迭代器，此迭代器在要求和或根据指定二元运算合并的范围内发现第一个元素。  
   
- ` last`  
+ `last`  
  输入迭代器，此迭代器在要求和或根据指定二元运算合并的范围内发现最后一个元素，即迭代累计中实际包含的最后一个元素之外的一个位置。  
   
- ` val`  
+ `val`  
  向其依次添加每个元素或根据指定二元运算合并每个元素的初始值。  
   
  `binary_op`  
  要应用于指定范围内每个元素的二元运算及其上一应用的结果。  
   
 ### <a name="return-value"></a>返回值  
- ` val` 与指定范围内第一个模板函数的所有元素或第二个模板函数的所有元素的总和，将指定的二元运算替代求和运算，应用于 ( *PartialResult, \*Iter*) 的结果，其中 *PartialResult* 是该运算的上一应用的结果，`Iter` 是指向范围内的元素的迭代器。  
+ `val` 与指定范围内第一个模板函数的所有元素或第二个模板函数的所有元素的总和，将指定的二元运算替代求和运算，应用于 ( *PartialResult, \*Iter*) 的结果，其中 *PartialResult* 是该运算的上一应用的结果，`Iter` 是指向范围内的元素的迭代器。  
   
 ### <a name="remarks"></a>备注  
- 初始值确保当范围为空时具有明确定义的结果，在这种情况下，将返回 ` val`。 二元运算不需要具有关联性或可交换性。 将结果初始化为初始值 ` val`，然后以迭代方式计算范围内的 *result* = `binary_op` ( *result*, **\***`Iter`)，其中 `Iter` 是指向范围内连续元素的迭代器。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。  
+ 初始值确保当范围为空时具有明确定义的结果，在这种情况下，将返回 `val`。 二元运算不需要具有关联性或可交换性。 将结果初始化为初始值 `val`，然后以迭代方式计算范围内的 *result* = `binary_op` ( *result*, **\***`Iter`)，其中 `Iter` 是指向范围内连续元素的迭代器。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。  
   
 ### <a name="example"></a>示例  
   
@@ -154,7 +161,7 @@ The vector of partial products is:
  ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).  
 ```  
   
-##  <a name="a-nameadjacentdifferencea--adjacentdifference"></a><a name="adjacent_difference"></a>  adjacent_difference  
+##  <a name="adjacent_difference"></a>  adjacent_difference  
  计算输入范围中每个元素与其前一元素之间的连续差值，并将结果输出到目标范围，或计算将差值运算替换为其他指定二元运算的一般化程序的结果。  
   
 ```  
@@ -173,10 +180,10 @@ OutputIterator adjacent_difference(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  输入迭代器，此迭代器在其中元素与各自前一元素不同的输入范围内或从中通过其他指定二元运算来操作值对的输入范围内发现第一个元素。  
   
- ` last`  
+ `last`  
  输入迭代器，此迭代器在其中元素与各自前一元素不同的输入范围内或从中通过其他指定二元运算来操作值对的输入范围内发现最后一个元素。  
   
  `result`  
@@ -186,12 +193,12 @@ OutputIterator adjacent_difference(
  在用于替换差分程序中减法运算的通用运算中应用的二元运算。  
   
 ### <a name="return-value"></a>返回值  
- 发现目标范围末尾的输出迭代器：`result` + ( ` last` - ` first`)。  
+ 发现目标范围末尾的输出迭代器：`result` + ( `last` - `first`)。  
   
 ### <a name="remarks"></a>备注  
- 输出迭代器 _ *result* 可以与输入迭代器 * first* 相同，这样便可以就地计算 `adjacent_difference`。  
+ 输出迭代器 _*结果*可以是相同的迭代器的输入迭代器作为 * 首先，*，以便`adjacent_difference`可能就地计算 s。  
   
- 对于输入范围中的值序列 *a*1, *a*2, *a*3，第一个模板函数将在目标范围中存储连续的 **partial_difference**：*a*1, *a*2 - *a*1, a3 – *a*2。  
+ 值的序列1， 2， 3，输入范围，第一个模板函数中的存储连续**partial_difference**s 1， 2- 1，a3- 2，目标范围内的。  
   
  对于输入范围中的值序列 *a*1, *a*2, *a*3，第二个模板函数将在目标范围中存储连续的 **partial_difference**：*a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2。  
   
@@ -258,7 +265,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameinnerproducta--innerproduct"></a><a name="inner_product"></a>  inner_product  
+##  <a name="inner_product"></a>  inner_product  
  计算两个范围的逐元素集乘积的总和并将总和添加到指定初始值，或计算将求和与乘积二元运算替换为其他指定二元运算的一般化程序的结果。  
   
 ```  
@@ -280,16 +287,16 @@ Type inner_product(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first1`  
+ `first1`  
  一个输入迭代器，该迭代器发现第一个范围内的第一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。  
   
- ` last1`  
+ `last1`  
  一个输入迭代器，该迭代器发现第一个范围内的最后一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。  
   
- ` first2`  
+ `first2`  
  一个输入迭代器，该迭代器发现第二个范围内的第一个元素，该范围与第一个范围的内部乘积或一般化内部乘积将进行计算。  
   
- ` val`  
+ `val`  
  一个初始值，将对该值添加两个范围间的内部乘积或一般化内部乘积。  
   
  *binary_op1*  
@@ -301,18 +308,18 @@ Type inner_product(
 ### <a name="return-value"></a>返回值  
  第一个成员函数返回逐元素集乘积的总和，并向其添加指定的初始值。 因此，对于值 *a*i 和 *b*i 的范围，它将返回：  
   
- ` val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) +  
+ `val`+ ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
- 方法是以迭代方式将 ` val` 替换为 ` val` + (\* *a*i \* \* *b*i )。  
+ 通过以迭代方式将`val`与`val`+ ( 我\* *b*我)。  
   
  第二个成员函数返回：  
   
- ` val` _ *Binary_op1* ( *a*1 \_ *Binary_op2* *b*1 ) \_ *Binary_op1* ( *a*2 \_ *Binary_op2* *b*2 ) \_ *Binary_op1*  
+ `val`*binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ...*binary_op1* ( *a*n *binary_op2* *b*n )  
   
- 方法是以迭代方式将 ` val` 替换为 ` val` _ *Binary_op1* (\* *a*i \_ *Binary_op2* \* *b*i )。  
+ 通过以迭代方式将`val`与`val` *binary_op1* ( 我*binary_op2* *b*我)。  
   
 ### <a name="remarks"></a>备注  
- 初始值确保当范围为空时具有明确定义的结果，在这种情况下，将返回 ` val`。 二元运算不需要具有关联性或可交换性。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。  
+ 初始值确保当范围为空时具有明确定义的结果，在这种情况下，将返回 `val`。 二元运算不需要具有关联性或可交换性。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。  
   
 ### <a name="example"></a>示例  
   
@@ -404,7 +411,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameiotaa--iota"></a><a name="iota"></a>  iota  
+##  <a name="iota"></a>  iota  
  存储一个起始值，从第一个元素开始，在间隔 `[ first,  last)` 内的每个元素中填充此值的连续递增值 (` value++`)。  
   
 ```  
@@ -413,13 +420,13 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  发现范围中要填充的第一个元素的输入迭代器。  
   
- ` last`  
+ `last`  
  发现范围中要填充的最后一个元素的输入迭代器。  
   
- ` value`  
+ `value`  
  要存储在第一个元素中并连续增加后续元素的起始值。  
   
 ### <a name="remarks"></a>备注  
@@ -465,7 +472,7 @@ int main(void)
 }  
 ```  
   
-##  <a name="a-namepartialsuma--partialsum"></a><a name="partial_sum"></a>  partial_sum  
+##  <a name="partial_sum"></a>  partial_sum  
  计算输入范围中从第一个元素到第 *i* 个元素的一系列总和，并在目标范围的第 *i* 个元素中存储此类每个总和的结果，或计算将求和运算替换为其他指定二元运算的一般化程序的结果。  
   
 ```  
@@ -484,10 +491,10 @@ OutputIterator partial_sum(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现第一个元素。  
   
- ` last`  
+ `last`  
  输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现最后一个元素，即迭代累计中实际包含的最后一个元素之外的一个位置。  
   
  `result`  
@@ -497,14 +504,14 @@ OutputIterator partial_sum(
  在用于替换部分求和程序中求和运算的通用运算中应用的二元运算。    
   
 ### <a name="return-value"></a>返回值  
- 发现目标范围末尾的输出迭代器：`result` + ( ` last` - ` first`),  
+ 发现目标范围末尾的输出迭代器：`result` + ( `last` - `first`),  
   
 ### <a name="remarks"></a>备注  
- 输出迭代器 `result` 可以与输入迭代器 ` first` 相同，因此可就地计算部分和。  
+ 输出迭代器 `result` 可以与输入迭代器 `first` 相同，因此可就地计算部分和。  
   
  对于输入范围中的 *a*1, *a*2, *a*3 值序列，第一个模板函数在目标范围中存储连续部分和，其中第 *i* 个元素通过 ( ( (*a*1 + *a*2) + *a*3) *a*i) 给定。  
   
- 对于输入范围中的 *a*1, *a*2, *a*3 值序列，第二个模板函数在目标范围中存储连续部分和，其中第 i 个元素通过 ( ( ( *a*1`binary_op` *a*2 ) `binary_op` *a*3 ) *a*i) 给定。  
+ 值的序列1， 2， 3，在输入的范围中第二个模板函数将存储在目标范围，其中第 i 个元素指定的连续部分和 ((( 1 `binary_op` 2) `binary_op` 3) 我)。  
   
  二元运算 `binary_op` 无需具有关联性或可交换性，因为应用的运算顺序是完全指定的。  
   

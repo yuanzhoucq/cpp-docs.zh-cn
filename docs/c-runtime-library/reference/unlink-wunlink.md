@@ -1,58 +1,75 @@
 ---
-title: "_unlink、_wunlink | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_unlink"
-  - "_wunlink"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tunlink"
-  - "_unlink"
-  - "wunlink"
-  - "_wunlink"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tunlink 函数"
-  - "_unlink 函数"
-  - "_wunlink 函数"
-  - "文件 [C++], 删除"
-  - "文件 [C++], 移除"
-  - "tunlink 函数"
-  - "unlink 函数"
-  - "wunlink 函数"
+title: "_unlink、_wunlink | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _unlink
+- _wunlink
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tunlink
+- _unlink
+- wunlink
+- _wunlink
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], deleting
+- _wunlink function
+- wunlink function
+- unlink function
+- _unlink function
+- tunlink function
+- files [C++], removing
+- _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _unlink、_wunlink
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 64e215e42433ac7d69e8005f1e44f9ae8184bec0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="unlink-wunlink"></a>_unlink、_wunlink
 删除文件。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _unlink(  
@@ -63,35 +80,35 @@ int _wunlink(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `filename`  
- 移除文件名。  
+ 要删除的文件名称。  
   
-## 返回值  
- 如果成功，这些函数中的每个表达式都返回 0。  否则，函数返回 \- 1 并将 `errno` 设置为 `EACCES`，则意味着路径指定只读文件，或为 `ENOENT`，这意味着文件未找到或路径指定的目录未找到。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则这些函数均返回 0。 否则，该函数返回-1 并设置`errno`到`EACCES`，这意味着路径指定只读文件，或`ENOENT`，这意味着文件或路径未找到或指定一个目录的路径。  
   
- 有关这些内容的详细信息以及其他返回代码，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `_unlink` 函数删除通过`filename` 指定的文件。  `_wunlink` 是 `_unlink` 的宽字符版本；`_wunlink` 的 `filename` 参数是宽字符字符串。  否则这些函数具有相同行为。  
+## <a name="remarks"></a>备注  
+ `_unlink` 函数删除由 `filename` 指定的文件。 `_wunlink` 是 `_unlink` 的宽字符版本；`filename` 的 `_wunlink` 参数是宽字符字符串。 否则这些函数具有相同行为。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|\_UNICODE  & \_MBCS 未定义|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|-----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tunlink`|`_unlink`|`_unlink`|`_wunlink`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_unlink`|\<io.h\> and \<stdio.h\>|  
-|`_wunlink`|\<io.h\> or \<wchar.h\>|  
+|-------------|---------------------|  
+|`_unlink`|\<io.h> 和 \<stdio.h>|  
+|`_wunlink`|\<io.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 代码示例  
- 本程序使用\_unlink 删除 CRT\_UNLINK.TXT。  
+## <a name="code-example"></a>代码示例  
+ 此程序使用 _unlink 删除 CRT_UNLINK.TXT。  
   
 ```  
 // crt_unlink.c  
@@ -107,22 +124,19 @@ int main( void )
 }  
 ```  
   
-### Input: crt\_unlink.txt  
+### <a name="input-crtunlinktxt"></a>输入：crt_unlink.txt  
   
 ```  
 This file will be deleted.  
 ```  
   
-### 示例输出  
+### <a name="sample-output"></a>示例输出  
   
 ```  
 Deleted 'CRT_UNLINK.TXT'  
 ```  
   
-## .NET Framework 等效项  
- [System::IO::File::删除](https://msdn.microsoft.com/en-us/library/system.io.file.delete.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [remove、\_wremove](../../c-runtime-library/reference/remove-wremove.md)
+ [_close](../../c-runtime-library/reference/close.md)   
+ [remove、_wremove](../../c-runtime-library/reference/remove-wremove.md)

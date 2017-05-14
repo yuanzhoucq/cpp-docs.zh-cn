@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e03e1a12b27eb5401a31f7096ae46d8a779d4a70
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
@@ -66,12 +67,11 @@ int fesetexceptflag(
      const fexcept_t *pstatus,  
      int excepts  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>参数  
  `pstatus`  
- 指向 `fexcept_t` 对象的指针，其中包含要设置为异常状态标志的值。 可由以前对 [fegetexceptflag](http://msdn.microsoft.com/Library/5031bc1a-9834-4573-9113-160a55eb9654) 的调用设置该对象。  
+ 指向 `fexcept_t` 对象的指针，其中包含要设置为异常状态标志的值。 可由以前对 [fegetexceptflag](fegetexceptflag2.md) 的调用设置该对象。  
   
  `excepts`  
  要设置的浮点异常状态标志。  

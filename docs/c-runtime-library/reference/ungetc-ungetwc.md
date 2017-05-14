@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f33416614f18a5a1cd7a61ccf4acfb9276de8e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3bab0bd81a8a17fd32c244bab0dd30658564d257
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetc-ungetwc"></a>ungetc、ungetwc
@@ -85,12 +86,12 @@ wint_t ungetwc(
  指向 `FILE` 结构的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则其中每个函数都会返回字符参数 `c`*。* 如果无法推送回 `c` 或未读取任何字符，则输入流不改变且 `ungetc` 返回 `EOF`；`ungetwc` 返回 `WEOF`。 如果 `stream` 为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则返回 `EOF` 或 `WEOF`并将 `errno` 设置为 `EINVAL`。  
+ 如果成功，其中每个函数将返回字符自变量`c`。 如果无法推送回 `c` 或未读取任何字符，则输入流不改变且 `ungetc` 返回 `EOF`；`ungetwc` 返回 `WEOF`。 如果 `stream` 为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则返回 `EOF` 或 `WEOF`并将 `errno` 设置为 `EINVAL`。  
   
  有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>备注  
- `ungetc` 函数将字符 `c` 重新推送到 `stream` 上，并清除文件结尾指示符。 流必须打开以供读取。 `stream` 上的后续读取操作以 `c` 开始*。* 将忽略尝试使用 `ungetc` 将 `EOF` 重新推送到流上。  
+ `ungetc` 函数将字符 `c` 重新推送到 `stream` 上，并清除文件结尾指示符。 流必须打开以供读取。 在进行的后续读取操作`stream`开头`c`。 将忽略尝试使用 `ungetc` 将 `EOF` 重新推送到流上。  
   
  如果从流中读取此字符前调用了 `fflush`、`fseek`、`fsetpos`、或 `rewind`，则可能会消除 `ungetc` 在流上放置的字符。 文件位置指示符将拥有将字符推送回之前的值。 对应流的外部存储未改变。 对文本流的 `ungetc` 调用成功后，将不指定文件位置指示符，直至读取或弃用推送回的所有字符。 每次对二进制流的 `ungetc` 调用成功后，文件位置指示符将减少；如果调用前其值为 0，则调用后不定义此值。  
   
@@ -148,9 +149,6 @@ int main( void )
       521aNumber = 521  
 Next character in stream = 'a'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   

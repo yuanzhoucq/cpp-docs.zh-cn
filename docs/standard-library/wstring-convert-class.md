@@ -44,10 +44,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bbe0589b9f0b02a738e8367002986c1669935605
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9545a1c559574bd5dc86e8924a65db9bea8cf9ae
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 类
@@ -78,7 +79,7 @@ class wstring_convert
   
 -   指向分配的转换对象（在销毁 wbuffer_convert 对象时释放）的指针  
   
--   [state_type](#wstring_convert__state_type) 类型的转换状态对象  
+-   [state_type](#state_type) 类型的转换状态对象  
   
 -   转换计数  
   
@@ -86,32 +87,32 @@ class wstring_convert
   
 |||  
 |-|-|  
-|[wstring_convert](#wstring_convert__wstring_convert)|构造 `wstring_convert` 类型的对象。|  
+|[wstring_convert](#wstring_convert)|构造 `wstring_convert` 类型的对象。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[byte_string](#wstring_convert__byte_string)|表示字节字符串的类型。|  
-|[wide_string](#wstring_convert__wide_string)|表示宽字符串的类型。|  
-|[state_type](#wstring_convert__state_type)|表示转换状态的类型。|  
-|[int_type](#wstring_convert__int_type)|表示整数的类型。|  
+|[byte_string](#byte_string)|表示字节字符串的类型。|  
+|[wide_string](#wide_string)|表示宽字符串的类型。|  
+|[state_type](#state_type)|表示转换状态的类型。|  
+|[int_type](#int_type)|表示整数的类型。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[from_bytes](#wstring_convert__from_bytes)|将字节字符串转换为宽字符串。|  
-|[to_bytes](#wstring_convert__to_bytes)|将宽字符串转换为字节字符串。|  
-|[converted](#wstring_convert__converted)|返回成功转换数。|  
-|[state](#wstring_convert__state)|返回表示转换状态的对象。|  
+|[from_bytes](#from_bytes)|将字节字符串转换为宽字符串。|  
+|[to_bytes](#to_bytes)|将宽字符串转换为字节字符串。|  
+|[converted](#converted)|返回成功转换数。|  
+|[state](#state)|返回表示转换状态的对象。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<locale>  
   
  **命名空间：** std  
   
-##  <a name="wstring_convert__byte_string"></a>wstring_convert::byte_string  
+##  <a name="byte_string"></a>wstring_convert::byte_string  
  表示字节字符串的类型。  
   
 ```
@@ -121,7 +122,7 @@ typedef std::basic_string<char> byte_string;
 ### <a name="remarks"></a>备注  
  该类型是 `std::basic_string<char>` 的同义词。  
   
-##  <a name="wstring_convert__converted"></a>wstring_convert::converted  
+##  <a name="converted"></a>wstring_convert::converted  
  返回成功转换数。  
   
 ```
@@ -134,7 +135,7 @@ size_t converted() const;
 ### <a name="remarks"></a>备注  
  成功的转换数存储在转换计数对象中。  
   
-##  <a name="wstring_convert__from_bytes"></a>wstring_convert::from_bytes  
+##  <a name="from_bytes"></a>wstring_convert::from_bytes  
  将字节字符串转换为宽字符串。  
   
 ```
@@ -150,7 +151,7 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|  
 |`Byte`|要转换的单元素字节序列。|  
 |`ptr`|要转换的以 null 结尾的 C 样式字符序列。|  
-|`Bstr`|要转换的 [byte_string](#wstring_convert__byte_string)。|  
+|`Bstr`|要转换的 [byte_string](#byte_string)。|  
 |`first`|要转换的字符范围中的第一个字符。|  
 |`last`|要转换的字符范围中的最后一个字符。|  
   
@@ -162,7 +163,7 @@ wide_string from_bytes(const char* first, const char* last);
   
  成功转换的输入元素的数量存储在转换计数对象中。 如果未发生转换错误，则该成员函数返回转换后的宽字符串。 否则，如果对象是使用宽字符串错误消息的初始值设定项构造的，则该成员函数返回宽字符串错误消息对象。 否则，成员函数将引发 [range_error](../standard-library/range-error-class.md) 类的对象。  
   
-##  <a name="wstring_convert__int_type"></a>wstring_convert::int_type  
+##  <a name="int_type"></a>wstring_convert::int_type  
  表示整数的类型。  
   
 ```
@@ -172,7 +173,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 ### <a name="remarks"></a>备注  
  该类型是 `wide_string::traits_type::int_type` 的同义词。  
   
-##  <a name="wstring_convert__state"></a>wstring_convert::state  
+##  <a name="state"></a>wstring_convert::state  
  返回表示转换状态的对象。  
   
 ```
@@ -184,7 +185,7 @@ state_type state() const;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="wstring_convert__state_type"></a>wstring_convert::state_type  
+##  <a name="state_type"></a>wstring_convert::state_type  
  表示转换状态的类型。  
   
 ```
@@ -194,7 +195,7 @@ typedef typename Codecvt::state_type state_type;
 ### <a name="remarks"></a>备注  
  此类型描述一个可以表示转换状态的对象。 该类型是 `Codecvt::state_type` 的同义词。  
   
-##  <a name="wstring_convert__to_bytes"></a>wstring_convert::to_bytes  
+##  <a name="to_bytes"></a>wstring_convert::to_bytes  
  将宽字符串转换为字节字符串。  
   
 ```
@@ -210,7 +211,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |---------------|-----------------|  
 |`Char`|要转换的宽字符。|  
 |`Wptr`|要转换的以 null 结尾的 C 样式序列（从 `wptr` 开始）。|  
-|`Wstr`|要转换的 [wide_string](#wstring_convert__wide_string)。|  
+|`Wstr`|要转换的 [wide_string](#wide_string)。|  
 |`first`|要转换的元素范围内的第一个元素。|  
 |`last`|要转换的元素范围内的最后一个元素。|  
   
@@ -219,7 +220,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
   
  成功转换的输入元素的数量存储在转换计数对象中。 如果未发生转换错误，则成员函数返回转换后的字节字符串。 否则，如果对象是使用字节字符串错误消息的初始值设定项构造的，则成员函数返回字节字符串错误消息对象。 否则，成员函数将引发 [range_error](../standard-library/range-error-class.md) 类的对象。  
   
-##  <a name="wstring_convert__wide_string"></a>wstring_convert::wide_string  
+##  <a name="wide_string"></a>wstring_convert::wide_string  
  表示宽字符串的类型。  
   
 ```
@@ -229,7 +230,7 @@ typedef std::basic_string<Elem> wide_string;
 ### <a name="remarks"></a>备注  
  该类型是 `std::basic_string<Elem>` 的同义词。  
   
-##  <a name="wstring_convert__wstring_convert"></a>wstring_convert::wstring_convert  
+##  <a name="wstring_convert"></a>wstring_convert::wstring_convert  
  构造 `wstring_convert` 类型的对象。  
   
 ```
@@ -243,9 +244,9 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 |参数|描述|  
 |---------------|-----------------|  
 |`*Pcvt`|用于执行转换的 `Codecvt` 类型的对象。|  
-|`_State`|表示转换状态的 [state_type](#wstring_convert__state_type) 类型的对象。|  
-|`_Berr`|用于在发生错误时显示的 [byte_string](#wstring_convert__byte_string)。|  
-|`Werr`|用于在发生错误时显示的 [wide_string](#wstring_convert__wide_string)。|  
+|`_State`|表示转换状态的 [state_type](#state_type) 类型的对象。|  
+|`_Berr`|用于在发生错误时显示的 [byte_string](#byte_string)。|  
+|`Werr`|用于在发生错误时显示的 [wide_string](#wide_string)。|  
   
 ### <a name="remarks"></a>备注  
  第一个构造函数将存储[转换对象](../standard-library/wstring-convert-class.md)中的 Pcvt_arg

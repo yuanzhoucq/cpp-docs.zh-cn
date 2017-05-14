@@ -34,18 +34,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fd99248bdfca428b01921e80eb902d482c0e95be
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 60e5fb2346c92b3005e7cbfe1663d43cc0a12cdc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-error-c2316"></a>编译器错误 C2316
-“exception”: 无法作为析构函数捕获，或者复制构造函数不可访问，或同时出现这两种情况  
+
+> *异常*︰ 无法作为析构函数和/或复制构造函数都不可访问捕获  
   
- 通过值或引用捕获了异常，但复制构造函数和/或赋值运算符无法访问。  
+通过值或引用捕获了异常，但复制构造函数和/或赋值运算符无法访问。  
   
- 以前版本的编译器可接受此代码，但现在会导致错误。  
+通过在 Visual Studio 2003 中之前, 的 Visual c + + 版本接受此代码，但现在会导致错误。  
+  
+进行此错误适用于错误的 catch 语句的 MFC 异常派生自 Visual Studio 2015 中的一致性更改`CException`。 因为`CException`有一个继承私有复制构造函数，类和及其派生非可复制，无法传递的值，这还意味着无法通过值捕获它们。 捕获导致未捕获的异常，在运行时，以前的值由捕获 MFC 异常的语句，但现在编译器正确地标识此情形以及报表错误 C2316。 若要解决此问题，我们建议你使用 MFC TRY/CATCH 宏，而不是编写您自己的异常处理程序但不适合你的代码，如果捕获 MFC 异常由引用相反。   
   
 ## <a name="example"></a>示例  
  下面的示例生成 C2316：  

@@ -9,10 +9,48 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::set
 - set
 - set/std::set
-- std.set
+- set/std::set::allocator_type
+- set/std::set::const_iterator
+- set/std::set::const_pointer
+- set/std::set::const_reference
+- set/std::set::const_reverse_iterator
+- set/std::set::difference_type
+- set/std::set::iterator
+- set/std::set::key_compare
+- set/std::set::key_type
+- set/std::set::pointer
+- set/std::set::reference
+- set/std::set::reverse_iterator
+- set/std::set::size_type
+- set/std::set::value_compare
+- set/std::set::value_type
+- set/std::set::begin
+- set/std::set::cbegin
+- set/std::set::cend
+- set/std::set::clear
+- set/std::set::count
+- set/std::set::crbegin
+- set/std::set::crend
+- set/std::set::emplace
+- set/std::set::emplace_hint
+- set/std::set::empty
+- set/std::set::end
+- set/std::set::equal_range
+- set/std::set::erase
+- set/std::set::find
+- set/std::set::get_allocator
+- set/std::set::insert
+- set/std::set::key_comp
+- set/std::set::lower_bound
+- set/std::set::max_size
+- set/std::set::rbegin
+- set/std::set::rend
+- set/std::set::size
+- set/std::set::swap
+- set/std::set::upper_bound
+- set/std::set::value_comp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b779d47cdcf8d383b415b0412dcc77d8cdc78d7b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 43eeea7d80f332e180342bd18460f1750c1b4b44
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="set-class"></a>set 类
@@ -61,7 +100,7 @@ class set
  `Traits`  
  一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在集中的相对顺序。 此参数是可选自变量，默认值为二元谓词 **less***\<Key>*。  
   
- 在 C++&14; 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
  一种表示存储的分配器对象的类型，该分配器对象封装有关集的内存分配和解除分配的详细信息。 此自变量是可选自变量，且默认值为 **allocator***\<Key>。*  
@@ -83,80 +122,80 @@ class set
   
  当应用程序满足将值与其键关联的条件时，应选择集作为关联容器。 集的元素是唯一的，并用作其自己的排序键。 此类结构的模型是排序列表，如关键字排序列表，其中关键字只能出现一次。 如果允许关键字多次出现，则应使用多重集合作为适当的容器结构。 如果需要将值附加到唯一关键字的列表，则映射应为包含此数据的适当结构。 如果键不唯一，则应选择多重映射作为容器。  
   
- 集通过调用存储的 [key_compare](#set__key_compare) 类型的函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#set__key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序，因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x,y*) 是包含两个参数对象（*x* 和 *y*）以及一个返回值（**true** 或 **false**）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 *x* 和 *y* 定义为在 *f*(*x,y*) 和 *f*(*y,x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。  
+ 集通过调用存储的 [key_compare](#key_compare) 类型的函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序，因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x,y*) 是包含两个参数对象（*x* 和 *y*）以及一个返回值（**true** 或 **false**）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 *x* 和 *y* 定义为在 *f*(*x,y*) 和 *f*(*y,x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。  
   
- 在 C++&14; 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
   
- 集类提供的迭代器是双向迭代器，但类成员函数 [insert](#set__insert) 和 [set](#set__set) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能需求比双向迭代器类保证的功能需求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 [`First`, `Last`)。  
+ 集类提供的迭代器是双向迭代器，但类成员函数 [insert](#insert) 和 [set](#set) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能需求比双向迭代器类保证的功能需求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 [`First`, `Last`)。  
   
 ### <a name="constructors"></a>构造函数  
   
 |||  
 |-|-|  
-|[set](#set__set)|构造一个空的或者是其他某个集的全部或部分副本的集。|  
+|[set](#set)|构造一个空的或者是其他某个集的全部或部分副本的集。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[allocator_type](#set__allocator_type)|一种类型，此类型表示集对象的 `allocator` 类。|  
-|[const_iterator](#set__const_iterator)|一种类型，此类型提供可读取集中的 `const` 元素的双向迭代器。|  
-|[const_pointer](#set__const_pointer)|一种类型，此类型提供指向集中的 `const` 元素的指针。|  
-|[const_reference](#set__const_reference)|一种类型，此类型提供对存储在集中的 `const` 元素的引用（用于读取和执行 `const` 操作）。|  
-|[const_reverse_iterator](#set__const_reverse_iterator)|一种类型，此类型提供可读取集中的任何 `const` 元素的双向迭代器。|  
-|[difference_type](#set__difference_type)|一种有符号整数类型，此类型可用于表示集中迭代器指向的元素间范围内的元素数量。|  
-|[iterator](#set__iterator)|一种类型，此类型提供可读取或修改集中的任何元素的双向迭代器。|  
-|[key_compare](#set__key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定集中两个元素的相对顺序。|  
-|[key_type](#set__key_type)|此类型描述当作为排序键时存储为集中元素的对象。|  
-|[pointer](#set__pointer)|一种类型，此类型提供指向集中元素的指针。|  
-|[reference](#set__reference)|一种类型，此类型提供对存储在集中的元素的引用。|  
-|[reverse_iterator](#set__reverse_iterator)|一种类型，此类型提供可读取或修改反向集中的元素的双向迭代器。|  
-|[size_type](#set__size_type)|一种无符号整数类型，此类型可表示集中的元素数量。|  
-|[value_compare](#set__value_compare)|一种提供函数对象的类型，该函数对象可比较两个元素以确定其在集中的相对顺序。|  
-|[value_type](#set__value_type)|此类型描述当作为值时存储为集中元素的对象。|  
+|[allocator_type](#allocator_type)|一种类型，此类型表示集对象的 `allocator` 类。|  
+|[const_iterator](#const_iterator)|一种类型，此类型提供可读取集中的 `const` 元素的双向迭代器。|  
+|[const_pointer](#const_pointer)|一种类型，此类型提供指向集中的 `const` 元素的指针。|  
+|[const_reference](#const_reference)|一种类型，此类型提供对存储在集中的 `const` 元素的引用（用于读取和执行 `const` 操作）。|  
+|[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取集中的任何 `const` 元素的双向迭代器。|  
+|[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示集中迭代器指向的元素间范围内的元素数量。|  
+|[iterator](#iterator)|一种类型，此类型提供可读取或修改集中的任何元素的双向迭代器。|  
+|[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定集中两个元素的相对顺序。|  
+|[key_type](#key_type)|此类型描述当作为排序键时存储为集中元素的对象。|  
+|[pointer](#pointer)|一种类型，此类型提供指向集中元素的指针。|  
+|[reference](#reference)|一种类型，此类型提供对存储在集中的元素的引用。|  
+|[reverse_iterator](#reverse_iterator)|一种类型，此类型提供可读取或修改反向集中的元素的双向迭代器。|  
+|[size_type](#size_type)|一种无符号整数类型，此类型可表示集中的元素数量。|  
+|[value_compare](#value_compare)|一种提供函数对象的类型，该函数对象可比较两个元素以确定其在集中的相对顺序。|  
+|[value_type](#value_type)|此类型描述当作为值时存储为集中元素的对象。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[begin](#set__begin)|返回一个迭代器，此迭代器用于发现集中的第一个元素。|  
-|[cbegin](#set__cbegin)|返回一个常量迭代器，此迭代器用于发现集中的第一个元素。|  
-|[cend](#set__cend)|返回一个常量迭代器，此迭代器用于发现集中最后一个元素之后的位置。|  
-|[clear](#set__clear)|清除集的所有元素。|  
-|[count](#set__count)|返回集中其键与指定为参数的键匹配的元素数量。|  
-|[crbegin](#set__rbegin)|返回一个常量迭代器，此迭代器用于发现反向集中的第一个元素。|  
-|[crend](#set__rend)|返回一个常量迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。|  
-|[emplace](#set__emplace)|将就地构造的元素插入到集中。|  
-|[emplace_hint](#set__emplace_hint)|将就地构造的元素插入到集中，附带位置提示。|  
-|[empty](#set__empty)|测试集是否为空。|  
-|[end](#set__end)|返回一个迭代器，此迭代器用于发现集中最后一个元素之后的位置。|  
-|[equal_range](#set__equal_range)|返回一对迭代器，这两个迭代器分别用于发现集中其键大于指定键的第一个元素，以及集中其键等于或大于指定键的第一个元素。|  
-|[erase](#set__erase)|从集中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。|  
-|[find](#set__find)|返回一个迭代器，此迭代器用于发现集中其键与指定键等效的元素的位置。|  
-|[get_allocator](#set__get_allocator)|返回用于构造集的 `allocator` 对象的副本。|  
-|[insert](#set__insert)|将一个元素或元素范围插入到集。|  
-|[key_comp](#set__key_comp)|检索用于对集中的键进行排序的比较对象副本。|  
-|[lower_bound](#set__lower_bound)|返回一个迭代器，此迭代器指向集中其键等于或大于指定键的第一个元素。|  
-|[max_size](#set__max_size)|返回集的最大长度。|  
-|[rbegin](#set__rbegin)|返回一个迭代器，此迭代器用于发现反向集中的第一个元素。|  
-|[rend](#set__rend)|返回一个迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。|  
-|[size](#set__size)|返回集合中元素的数目。|  
-|[swap](#set__swap)|交换两个集的元素。|  
-|[upper_bound](#set__upper_bound)|返回一个迭代器，此迭代器指向集中其键大于指定键的第一个元素。|  
-|[value_comp](#set__value_comp)|检索用于对集中的元素值进行排序的比较对象副本。|  
+|[begin](#begin)|返回一个迭代器，此迭代器用于发现集中的第一个元素。|  
+|[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现集中的第一个元素。|  
+|[cend](#cend)|返回一个常量迭代器，此迭代器用于发现集中最后一个元素之后的位置。|  
+|[clear](#clear)|清除集的所有元素。|  
+|[count](#count)|返回集中其键与指定为参数的键匹配的元素数量。|  
+|[crbegin](#rbegin)|返回一个常量迭代器，此迭代器用于发现反向集中的第一个元素。|  
+|[crend](#rend)|返回一个常量迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。|  
+|[emplace](#emplace)|将就地构造的元素插入到集中。|  
+|[emplace_hint](#emplace_hint)|将就地构造的元素插入到集中，附带位置提示。|  
+|[empty](#empty)|测试集是否为空。|  
+|[end](#end)|返回一个迭代器，此迭代器用于发现集中最后一个元素之后的位置。|  
+|[equal_range](#equal_range)|返回一对迭代器，这两个迭代器分别用于发现集中其键大于指定键的第一个元素，以及集中其键等于或大于指定键的第一个元素。|  
+|[erase](#erase)|从集中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。|  
+|[find](#find)|返回一个迭代器，此迭代器用于发现集中其键与指定键等效的元素的位置。|  
+|[get_allocator](#get_allocator)|返回用于构造集的 `allocator` 对象的副本。|  
+|[insert](#insert)|将一个元素或元素范围插入到集。|  
+|[key_comp](#key_comp)|检索用于对集中的键进行排序的比较对象副本。|  
+|[lower_bound](#lower_bound)|返回一个迭代器，此迭代器指向集中其键等于或大于指定键的第一个元素。|  
+|[max_size](#max_size)|返回集的最大长度。|  
+|[rbegin](#rbegin)|返回一个迭代器，此迭代器用于发现反向集中的第一个元素。|  
+|[rend](#rend)|返回一个迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。|  
+|[size](#size)|返回集合中元素的数目。|  
+|[swap](#swap)|交换两个集的元素。|  
+|[upper_bound](#upper_bound)|返回一个迭代器，此迭代器指向集中其键大于指定键的第一个元素。|  
+|[value_comp](#value_comp)|检索用于对集中的元素值进行排序的比较对象副本。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator=](#set__operator_eq)|将一个集中的元素替换为另一个集的副本。|  
+|[operator=](#op_eq)|将一个集中的元素替换为另一个集的副本。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<set>  
   
  **命名空间：** std  
   
-##  <a name="a-namesetallocatortypea--setallocatortype"></a><a name="set__allocator_type"></a>  set::allocator_type  
+##  <a name="allocator_type"></a>  set::allocator_type  
  一个类型，代表集对象的分配器类。  
   
 ```  
@@ -171,9 +210,9 @@ typedef Allocator allocator_type;
  有关 `Allocator` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题的“备注”部分。  
   
 ### <a name="example"></a>示例  
-  有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#set__get_allocator) 的示例。  
+  有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。  
   
-##  <a name="a-namesetbegina--setbegin"></a><a name="set__begin"></a>  set::begin  
+##  <a name="begin"></a>  set::begin  
  返回一个迭代器，此迭代器用于发现集中的第一个元素。  
   
 ```  
@@ -186,7 +225,7 @@ iterator begin();
  一个双向迭代器，发现集中第一个元素的位置或空集之后的位置。  
   
 ### <a name="remarks"></a>备注  
- 如果 **begin`const_iterator` 的返回值赋给了 **，则无法修改集对象中的元素。 如果 **begin** 的返回值赋给了 **iterator**，则可以修改集对象中的元素。  
+ 如果 **begin`const_iterator` 的返回值赋给了** ，则无法修改集对象中的元素。 如果 **begin** 的返回值赋给了 **iterator**，则可以修改集对象中的元素。  
   
 ### <a name="example"></a>示例  
   
@@ -227,7 +266,7 @@ The first element of s1 is 1
 The first element of s1 is now 2  
 ```  
   
-##  <a name="a-namesetcbegina--setcbegin"></a><a name="set__cbegin"></a>  set::cbegin  
+##  <a name="cbegin"></a>  set::cbegin  
  返回确定范围中第一个元素地址的 `const` 迭代器。  
   
 ```  
@@ -250,7 +289,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namesetcenda--setcend"></a><a name="set__cend"></a>  set::cend  
+##  <a name="cend"></a>  set::cend  
  返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
   
 ```  
@@ -263,7 +302,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>备注  
  `cend` 用于测试迭代器是否超过了其范围的末尾。  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的 (non- `const`) 任何类型的容器。  
+ 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -275,7 +314,7 @@ auto i2 = Container.cend();
   
  不应对 `cend` 返回的值取消引用。  
   
-##  <a name="a-namesetcleara--setclear"></a><a name="set__clear"></a>  set::clear  
+##  <a name="clear"></a>  set::clear  
  清除集的所有元素。  
   
 ```  
@@ -312,7 +351,7 @@ The size of the set is initially 2.
 The size of the set after clearing is 0.  
 ```  
   
-##  <a name="a-namesetconstiteratora--setconstiterator"></a><a name="set__const_iterator"></a>  set::const_iterator  
+##  <a name="const_iterator"></a>  set::const_iterator  
  一个提供双向迭代器的类型，双向迭代器可读取集中的 **const** 元素。  
   
 ```  
@@ -323,9 +362,9 @@ typedef implementation-defined const_iterator;
  `const_iterator` 类型不能用于修改元素的值。  
   
 ### <a name="example"></a>示例  
-  有关 `const_iterator` 的示例，请参阅 [begin](#set__begin) 的示例。  
+  有关 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。  
   
-##  <a name="a-namesetconstpointera--setconstpointer"></a><a name="set__const_pointer"></a>  set::const_pointer  
+##  <a name="const_pointer"></a>  set::const_pointer  
  一种类型，此类型提供指向集中的 **const** 元素的指针。  
   
 ```  
@@ -335,9 +374,9 @@ typedef typename allocator_type::const_pointer const_pointer;
 ### <a name="remarks"></a>备注  
  `const_pointer` 类型不能用于修改元素的值。  
   
- 在大多数情况下，应使用 [const_iterator](#set__const_iterator) 访问 const 集对象中的元素。  
+ 在大多数情况下，应使用 [const_iterator](#const_iterator) 访问 const 集对象中的元素。  
   
-##  <a name="a-namesetconstreferencea--setconstreference"></a><a name="set__const_reference"></a>  set::const_reference  
+##  <a name="const_reference"></a>  set::const_reference  
  一种类型，此类型提供对用于读取和执行 **const** 操作的集中存储的 **const** 元素的引用。  
   
 ```  
@@ -377,7 +416,7 @@ int main( )
 The first element in the set is 10.  
 ```  
   
-##  <a name="a-namesetconstreverseiteratora--setconstreverseiterator"></a><a name="set__const_reverse_iterator"></a>  set::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  set::const_reverse_iterator  
  一个提供双向迭代器的类型，双向迭代器可读取集中的任何 **const** 元素。  
   
 ```  
@@ -388,9 +427,9 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
  `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问集。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#set__rend) 的示例。  
+  有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例。  
   
-##  <a name="a-namesetcounta--setcount"></a><a name="set__count"></a>  set::count  
+##  <a name="count"></a>  set::count  
  返回集中其键与指定为参数的键匹配的元素数量。  
   
 ```  
@@ -398,11 +437,11 @@ size_type count(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要从集中进行匹配的元素的键。  
   
 ### <a name="return-value"></a>返回值  
- 如果该集包含其排序关键字匹配参数键的元素，则为&1;。 如果该集不包含具有匹配键的元素，则为&0;。  
+ 如果该集包含其排序关键字匹配参数键的元素，则为 1。 如果该集不包含具有匹配键的元素，则为 0。  
   
 ### <a name="remarks"></a>备注  
  成员函数返回在以下范围内的元素数目：  
@@ -443,7 +482,7 @@ The number of elements in s1 with a sort key of 1 is: 1.
 The number of elements in s1 with a sort key of 2 is: 0.  
 ```  
   
-##  <a name="a-namesetcrbegina--setcrbegin"></a><a name="set__crbegin"></a>  set::crbegin  
+##  <a name="crbegin"></a>  set::crbegin  
  返回一个常量迭代器，此迭代器用于发现反向集中的第一个元素。  
   
 ```  
@@ -454,7 +493,7 @@ const_reverse_iterator crbegin() const;
  一个常量反向双向迭代器，发现反向集中的第一个元素或发现曾是非反向集中的最后一个元素的元素。  
   
 ### <a name="remarks"></a>备注  
- `crbegin` 用于反向集，正如 [begin](#set__begin) 用于集一样。  
+ `crbegin` 用于反向集，正如 [begin](#begin) 用于集一样。  
   
  返回值为 `crbegin` 时，无法修改集对象。  
   
@@ -486,7 +525,7 @@ int main( )
 The first element in the reversed set is 30.  
 ```  
   
-##  <a name="a-namesetcrenda--setcrend"></a><a name="set__crend"></a>  set::crend  
+##  <a name="crend"></a>  set::crend  
  返回一个常量迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。  
   
 ```  
@@ -497,7 +536,7 @@ const_reverse_iterator crend() const;
  一个常量反向双向迭代器，用于发现反向集中最后一个元素之后的位置（非反向集中第一个元素之前的位置）。  
   
 ### <a name="remarks"></a>备注  
- `crend` 用于反向集，正如 [end](#set__end) 用于集一样。  
+ `crend` 用于反向集，正如 [end](#end) 用于集一样。  
   
  返回值为 `crend` 时，无法修改集对象。 不应对 `crend` 返回的值取消引用。  
   
@@ -527,7 +566,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetdifferencetypea--setdifferencetype"></a><a name="set__difference_type"></a>  set::difference_type  
+##  <a name="difference_type"></a>  set::difference_type  
  一种有符号整数类型，此类型可用于表示集中迭代器指向的元素间范围内的元素数量。  
   
 ```  
@@ -535,7 +574,7 @@ typedef typename allocator_type::difference_type difference_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 ` first` 和 ` last` 之间的范围 *[ first,  last)* 内元素的数目，包括 ` first` 指向的元素以及那一系列元素，但不包括 ` last` 指向的元素。  
+ `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 *[ first,  last)* 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。  
   
  注意，尽管 `difference_type` 适用于满足输入迭代器（包括可逆容器支持的双向迭代器的类，如集）需求的所有迭代器，迭代器之间的减法仅受随机访问容器（如 vector）提供的随机访问迭代器支持。  
   
@@ -598,7 +637,7 @@ The number '20' occurs 1 times in set s1.
 The number of elements in the set s1 is: 2.  
 ```  
   
-##  <a name="a-namesetemplacea--setemplace"></a><a name="set__emplace"></a>  set::emplace  
+##  <a name="emplace"></a>  set::emplace  
  就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -678,7 +717,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetemplacehinta--setemplacehint"></a><a name="set__emplace_hint"></a>  set::emplace_hint  
+##  <a name="emplace_hint"></a>  set::emplace_hint  
  使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -751,7 +790,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetemptya--setempty"></a><a name="set__empty"></a>  set::empty  
+##  <a name="empty"></a>  set::empty  
  测试集是否为空。  
   
 ```  
@@ -792,7 +831,7 @@ The set s1 is not empty.
 The set s2 is empty.  
 ```  
   
-##  <a name="a-namesetenda--setend"></a><a name="set__end"></a>  set::end  
+##  <a name="end"></a>  set::end  
  返回超过末尾迭代器。  
   
 ```  
@@ -811,9 +850,9 @@ iterator end();
   
  不应对 **end** 返回的值取消引用。  
   
- 有关代码示例，请参阅 [set::find](#set__find)。  
+ 有关代码示例，请参阅 [set::find](#find)。  
   
-##  <a name="a-namesetequalrangea--setequalrange"></a><a name="set__equal_range"></a>  set::equal_range  
+##  <a name="equal_range"></a>  set::equal_range  
  返回一对迭代器，这两个迭代器分别用于发现集中其键大于或等于指定键的第一个元素，以及集中其键大于指定键的第一个元素。  
   
 ```  
@@ -823,11 +862,11 @@ pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的集中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
- 一对迭代器，其中第一个是键的 [lower_bound](#set__lower_bound)，第二个是键的 [upper_bound](#set__upper_bound)。  
+ 一对迭代器，其中第一个是键的 [lower_bound](#lower_bound)，第二个是键的 [upper_bound](#upper_bound)。  
   
  若要访问成员函数返回的 `pr` 对的第一个迭代器，请使用 `pr`. **first**；若要取消引用下界迭代器，请使用 \*( `pr`. **first**)。 若要访问成员函数返回的 `pr` 对的第二个迭代器，请使用 `pr`. **second**；若要取消引用上界迭代器，请使用 \*( `pr`. **second**)。  
   
@@ -889,7 +928,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The set s1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="a-nameseterasea--seterase"></a><a name="set__erase"></a>  set::erase  
+##  <a name="erase"></a>  set::erase  
  从集中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。  
   
 ```  
@@ -1003,7 +1042,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetfinda--setfind"></a><a name="set__find"></a>  set::find  
+##  <a name="find"></a>  set::find  
  返回引用集中具有与指定键等效的键的元素的位置的迭代器。  
   
 ```  
@@ -1087,7 +1126,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetgetallocatora--setgetallocator"></a><a name="set__get_allocator"></a>  set::get_allocator  
+##  <a name="get_allocator"></a>  set::get_allocator  
  返回用于构造集的分配器对象的一个副本。  
   
 ```  
@@ -1158,7 +1197,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetinserta--setinsert"></a><a name="set__insert"></a>  set::insert  
+##  <a name="insert"></a>  set::insert  
  将一个元素或元素范围插入到集。  
   
 ```  
@@ -1207,10 +1246,10 @@ IList);
 |参数|描述|  
 |`Val`|要插入到集中的元素的值（除非它已经包含一个具有相对有序的值的元素）。|  
 |`Where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `Where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|  
-|`ValTy`|指定集可用于构造 [value_type`Val` 元素的自变量类型并将 ](../standard-library/map-class.md#map__value_type) 作为自变量完美转发的模板参数。|  
+|`ValTy`|指定集可用于构造 [value_type`Val` 元素的自变量类型并将 ](../standard-library/map-class.md#value_type) 作为自变量完美转发的模板参数。|  
 |`First`|要复制的第一个元素的位置。|  
 |`Last`|要复制的最后一个元素以外的位置。|  
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 对象的类型的元素。|  
+|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|  
 |`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|  
   
 ### <a name="return-value"></a>返回值  
@@ -1225,13 +1264,13 @@ IList);
   
  若要访问单个元素成员函数返回的 `pair``pr` 的迭代器组件，请使用 `pr.first`；若要在返回的对中取消引用迭代器，请使用 `*pr.first`，这将向你提供一个元素。 要访问 `bool` 组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。  
   
- 容器的 [value_type](../standard-library/map-class.md#map__value_type) 是属于该容器的 typedef；对于集，`set<V>::value_type` 是 `const V` 类型。  
+ 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于集，`set<V>::value_type` 是 `const V` 类型。  
   
  范围成员函数 (5) 将元素值序列插入到集中，它对应于迭代器在范围 `[First, Last)` 中所处理的每一个元素；因此，不会插入 `Last`。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`s.insert(v.begin(), v.end());` 语句尝试将 `v` 的所有元素插入到 `s` 中。 只插入在该范围中具有唯一值的元素；忽略副本。 若要观察拒绝了哪些元素，请使用单个元素版本的 `insert`。  
   
  初始值设定项列表成员函数 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 将元素复制到该集中。  
   
- 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [set::emplace](#set__emplace) 和 [set::emplace_hint](#set__emplace_hint)。  
+ 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [set::emplace](#emplace) 和 [set::emplace_hint](#emplace_hint)。  
   
 ### <a name="example"></a>示例  
   
@@ -1332,7 +1371,7 @@ int main()
   
 ```  
   
-##  <a name="a-namesetiteratora--setiterator"></a><a name="set__iterator"></a>  set::iterator  
+##  <a name="iterator"></a>  set::iterator  
  一种提供常量[双向迭代器](../standard-library/bidirectional-iterator-tag-struct.md)的类型，双向迭代器可读取集中的任何元素。  
   
 ```  
@@ -1340,9 +1379,9 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#set__begin) 的示例。  
+  有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#begin) 的示例。  
   
-##  <a name="a-namesetkeycompa--setkeycomp"></a><a name="set__key_comp"></a>  set::key_comp  
+##  <a name="key_comp"></a>  set::key_comp  
  检索用于对集中的键进行排序的比较对象副本。  
   
 ```  
@@ -1361,7 +1400,7 @@ key_compare key_comp() const;
   
  如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。  
   
- 请注意，[key_compare](#set__key_compare) 和 [value_compare](#set__value_compare) 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
 ### <a name="example"></a>示例  
   
@@ -1414,7 +1453,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of s2.  
 ```  
   
-##  <a name="a-namesetkeycomparea--setkeycompare"></a><a name="set__key_compare"></a>  set::key_compare  
+##  <a name="key_compare"></a>  set::key_compare  
  一种提供函数对象的类型，该函数对象可比较两个排序键以确定集中两个元素的相对顺序。  
   
 ```  
@@ -1426,12 +1465,12 @@ typedef Traits key_compare;
   
  有关 `Traits` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题。  
   
- 请注意，`key_compare` 和 [value_compare](#set__value_compare) 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，`key_compare` 和 [value_compare](#value_compare) 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#set__key_comp) 的示例。  
+  有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。  
   
-##  <a name="a-namesetkeytypea--setkeytype"></a><a name="set__key_type"></a>  set::key_type  
+##  <a name="key_type"></a>  set::key_type  
  一种类型，此类型将在其容量中存储为 set 元素的对象描述为排序键。  
   
 ```  
@@ -1443,12 +1482,12 @@ typedef Key key_type;
   
  有关 `Key` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题的“备注”部分。  
   
- 请注意，`key_type` 和 [value_type](#set__value_type) 皆是模板参数 **Key** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，`key_type` 和 [value_type](#value_type) 皆是模板参数 **Key** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#set__value_type) 的示例。  
+  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。  
   
-##  <a name="a-namesetlowerbounda--setlowerbound"></a><a name="set__lower_bound"></a>  set::lower_bound  
+##  <a name="lower_bound"></a>  set::lower_bound  
  返回一个迭代器，此迭代器指向集中其键等于或大于指定键的第一个元素。  
   
 ```  
@@ -1458,7 +1497,7 @@ iterator lower_bound(const Key& key);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的集中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
@@ -1513,7 +1552,7 @@ The set s1 doesn't have an element with a key of 40.
 The element of s1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="a-namesetmaxsizea--setmaxsize"></a><a name="set__max_size"></a>  set::max_size  
+##  <a name="max_size"></a>  set::max_size  
  返回集的最大长度。  
   
 ```  
@@ -1543,7 +1582,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetoperatoreqa--setoperator"></a><a name="set__operator_eq"></a>set::operator=  
+##  <a name="op_eq"></a>set::operator=  
  使用另一个 `set` 的元素替换该 `set` 的元素。  
   
 ```  
@@ -1557,12 +1596,12 @@ set& operator=(set&& right);
 |||  
 |-|-|  
 |参数|描述|  
-|` right`|`set` 提供用于分配给此 `set` 的新元素。|  
+|`right`|`set` 提供用于分配给此 `set` 的新元素。|  
   
 ### <a name="remarks"></a>备注  
- `operator=` 的第一个版本使用 ` right` 的 [左值引用](../cpp/lvalue-reference-declarator-amp.md)，将元素从 ` right` 复制到此 `set`。  
+ `operator=` 的第一个版本使用 `right` 的 [左值引用](../cpp/lvalue-reference-declarator-amp.md)，将元素从 `right` 复制到此 `set`。  
   
- 第二个版本使用 right 的[右值引用](../cpp/rvalue-reference-declarator-amp-amp.md)。 将元素从 ` right` 移动到此 `set`。  
+ 第二个版本使用 right 的[右值引用](../cpp/rvalue-reference-declarator-amp-amp.md)。 将元素从 `right` 移动到此 `set`。  
   
  执行运算符函数之前，丢弃此 `set` 中的任何元素。  
   
@@ -1603,7 +1642,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-namesetpointera--setpointer"></a><a name="set__pointer"></a>  set::pointer  
+##  <a name="pointer"></a>  set::pointer  
  一种类型，此类型提供指向集中元素的指针。  
   
 ```  
@@ -1613,9 +1652,9 @@ typedef typename allocator_type::pointer pointer;
 ### <a name="remarks"></a>备注  
  **pointer** 类型可用于修改元素的值。  
   
- 在大多数情况下，应使用 [iterator](#set__iterator) 访问集对象中的元素。  
+ 在大多数情况下，应使用 [iterator](#iterator) 访问集对象中的元素。  
   
-##  <a name="a-namesetrbegina--setrbegin"></a><a name="set__rbegin"></a>  set::rbegin  
+##  <a name="rbegin"></a>  set::rbegin  
  返回一个迭代器，此迭代器用于发现反向集中的第一个元素。  
   
 ```  
@@ -1628,7 +1667,7 @@ reverse_iterator rbegin();
  一个反向双向迭代器，发现反向集中的第一个元素或发现曾是非反向集中的最后一个元素的元素。  
   
 ### <a name="remarks"></a>备注  
- `rbegin` 用于反向集，正如 [begin](#set__begin) 用于集一样。  
+ `rbegin` 用于反向集，正如 [begin](#begin) 用于集一样。  
   
  如果将 `rbegin` 的返回值分配给 `const_reverse_iterator`，则无法修改集对象。 如果将 `rbegin` 的返回值分配给 `reverse_iterator`，则可修改集对象。  
   
@@ -1688,7 +1727,7 @@ The reversed set is: 30 20 10
 After the erasure, the first element in the reversed set is 20.  
 ```  
   
-##  <a name="a-namesetreferencea--setreference"></a><a name="set__reference"></a>  set::reference  
+##  <a name="reference"></a>  set::reference  
  一种类型，此类型提供对存储在集中的元素的引用。  
   
 ```  
@@ -1723,7 +1762,7 @@ int main( )
 The first element in the set is 10.  
 ```  
   
-##  <a name="a-namesetrenda--setrend"></a><a name="set__rend"></a>  set::rend  
+##  <a name="rend"></a>  set::rend  
  返回一个迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。  
   
 ```  
@@ -1736,7 +1775,7 @@ reverse_iterator rend();
  一个反向双向迭代器，用于发现反向集中最后一个元素之后的位置（非反向集中第一个元素之前的位置）。  
   
 ### <a name="remarks"></a>备注  
- `rend` 用于反向集，正如 [end](#set__end) 用于集一样。  
+ `rend` 用于反向集，正如 [end](#end) 用于集一样。  
   
  如果将 `rend` 的返回值分配给 `const_reverse_iterator`，则无法修改集对象。 如果将 `rend` 的返回值分配给 `reverse_iterator`，则可修改集对象。 不应对 `rend` 返回的值取消引用。  
   
@@ -1791,7 +1830,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetreverseiteratora--setreverseiterator"></a><a name="set__reverse_iterator"></a>  set::reverse_iterator  
+##  <a name="reverse_iterator"></a>  set::reverse_iterator  
  一种类型，此类型提供可读取或修改反向集中的元素的双向迭代器。  
   
 ```  
@@ -1802,9 +1841,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
  `reverse_iterator` 类型用于反向循环访问集。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#set__rbegin) 的示例。  
+  有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。  
   
-##  <a name="a-namesetseta--setset"></a><a name="set__set"></a>  set::set  
+##  <a name="set"></a>  set::set  
  构造一个空的或者是其他某个集的全部或部分副本的集。  
   
 ```  
@@ -1868,11 +1907,11 @@ set(
 |`IList`|从中复制元素的 initializer_list。|  
   
 ### <a name="remarks"></a>备注  
- 所有构造函数存储一种类型的分配器对象，此类对象管理集的内存存储，且事后可通过调用 [get_allocator](#set__get_allocator) 返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。  
+ 所有构造函数存储一种类型的分配器对象，此类对象管理集的内存存储，且事后可通过调用 [get_allocator](#get_allocator) 返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。  
   
  所有构造函数对其集进行初始化。  
   
- 所有构造函数会存储 **Traits** 类型的函数对象，此对象用于在集的键之间建立排序，且稍后可通过调用 [key_comp](#set__key_comp) 返回。  
+ 所有构造函数会存储 **Traits** 类型的函数对象，此对象用于在集的键之间建立排序，且稍后可通过调用 [key_comp](#key_comp) 返回。  
   
  前三个构造函数均指定空的初始集，此外，第二个函数还指定用于建立元素顺序的比较函数 ( `comp`) 的类型，第三个函数显式指定了要使用的分配器类型 ( `al`)。 关键字 **explicit** 取消某些种类的自动类型转换。  
   
@@ -1997,7 +2036,7 @@ int main()
 s1 = 10 20 30 40s2 = 10 20s3 = 30s4 = 10 20 30 40s5 = 10 20s6 = 10s7 = 10 20s8 = 1 2 3 4s9 = 5 6 7 8s10 = 10 20 30 40  
 ```  
   
-##  <a name="a-namesetsizea--setsize"></a><a name="set__size"></a>  set::size  
+##  <a name="size"></a>  set::size  
  返回集合中元素的数目。  
   
 ```  
@@ -2036,7 +2075,7 @@ The set length is 1.
 The set length is now 2.  
 ```  
   
-##  <a name="a-namesetsizetypea--setsizetype"></a><a name="set__size_type"></a>  set::size_type  
+##  <a name="size_type"></a>  set::size_type  
  一种无符号整数类型，此类型可表示集中的元素数量。  
   
 ```  
@@ -2044,9 +2083,9 @@ typedef typename allocator_type::size_type size_type;
 ```  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#set__size) 的示例  
+  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例  
   
-##  <a name="a-namesetswapa--setswap"></a><a name="set__swap"></a>  set::swap  
+##  <a name="swap"></a>  set::swap  
  交换两个集的元素。  
   
 ```  
@@ -2055,7 +2094,7 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` right`  
+ `right`  
  参数集，提供与目标集进行交换的元素。  
   
 ### <a name="remarks"></a>备注  
@@ -2111,7 +2150,7 @@ After swapping with s2, list s1 is: 100 200.
 After swapping with s3, list s1 is: 300.  
 ```  
   
-##  <a name="a-namesetupperbounda--setupperbound"></a><a name="set__upper_bound"></a>  set::upper_bound  
+##  <a name="upper_bound"></a>  set::upper_bound  
  返回一个迭代器，此迭代器指向集中其键大于指定键的第一个元素。  
   
 ```  
@@ -2121,7 +2160,7 @@ iterator upper_bound(const Key& key);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的集中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
@@ -2176,7 +2215,7 @@ The first element of s1 with a key greater than
 that of the initial element of s1 is: 20.  
 ```  
   
-##  <a name="a-namesetvaluecompa--setvaluecomp"></a><a name="set__value_comp"></a>  set::value_comp  
+##  <a name="value_comp"></a>  set::value_comp  
  检索用于对集中的元素值进行排序的比较对象副本。  
   
 ```  
@@ -2195,7 +2234,7 @@ value_compare value_comp() const;
   
  如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。  
   
- 请注意，[value_compare](#set__value_compare) 和 [key_compare](#set__key_compare) 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，[value_compare](#value_compare) 和 [key_compare](#key_compare) 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
 ### <a name="example"></a>示例  
   
@@ -2248,7 +2287,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of s1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of s2.  
 ```  
   
-##  <a name="a-namesetvaluecomparea--setvaluecompare"></a><a name="set__value_compare"></a>  set::value_compare  
+##  <a name="value_compare"></a>  set::value_compare  
  一种提供函数对象的类型，该函数对象可比较两个元素值以确定其在集中的相对顺序。  
   
 ```  
@@ -2260,12 +2299,12 @@ typedef key_compare value_compare;
   
  有关 `Traits` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题。  
   
- 请注意，[key_compare](#set__key_compare) 和 **value_compare** 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，[key_compare](#key_compare) 和 **value_compare** 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#set__value_comp) 的示例。  
+  有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#value_comp) 的示例。  
   
-##  <a name="a-namesetvaluetypea--setvaluetype"></a><a name="set__value_type"></a>  set::value_type  
+##  <a name="value_type"></a>  set::value_type  
  一种类型，此类型将在其容量中存储为 set 元素的对象描述为值。  
   
 ```  
@@ -2277,7 +2316,7 @@ typedef Key value_type;
   
  有关 `Key` 的详细信息，请参阅 [set 类](../standard-library/set-class.md)主题的“备注”部分。  
   
- 请注意，[key_type](#set__key_type) 和 `value_type` 皆是模板参数 **Key** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，[key_type](#key_type) 和 `value_type` 皆是模板参数 **Key** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
 ### <a name="example"></a>示例  
   

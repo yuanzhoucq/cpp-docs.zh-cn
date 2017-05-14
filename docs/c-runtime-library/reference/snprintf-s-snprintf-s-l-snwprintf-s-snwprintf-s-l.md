@@ -73,10 +73,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8a3e2cd1a9bff5c7cb08e30753e98b1769e0b7fa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5daa64e8a0e96cf00c75f6a797429baec5ac8180
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
@@ -155,7 +156,7 @@ int _snwprintf_s(
   
  如果存储数据和终止 null 所需的存储超过 `sizeOfBuffer`，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果在调用无效参数处理程序后继续执行，这些函数会将 `buffer` 设置为空字符串、`errno` 设置为 `ERANGE`，并返回 -1。  
   
- 如果 `buffer` 或 `format` 是一个 `NULL` 指针，或如果 `count` 小于或等于&0;，则将调用无效参数处理程序。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。  
+ 如果 `buffer` 或 `format` 是一个 `NULL` 指针，或如果 `count` 小于或等于 0，则将调用无效参数处理程序。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
  有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -316,9 +317,6 @@ Secure template overload example:
 Invalid parameter handler invoked: ("Buffer too small", 0)  
     new contents of dest: ''  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   

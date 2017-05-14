@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e1e92656713a31d3057dfe180bd1cb4e819ceb5b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="div"></a>div
@@ -89,9 +90,9 @@ lldiv_t div(
  使用 `div` 类型的参数调用的 `int` 将返回 `div_t` 类型的结构，其包含商和余数。 具有 `long` 类型参数的重载的返回值为 `ldiv_t`。 `div_t` 和 `ldiv_t` 均是在 STDLIB.H. 中定义的。  
   
 ## <a name="remarks"></a>备注  
- `div` 函数将`numer` 除以 `denom`，从而计算商和余数。 [div_t](../../c-runtime-library/standard-types.md) 结构包含商、`int``quot` 和余数 `int``rem`。 商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。  
+ `div` 函数将`numer` 除以 `denom`，从而计算商和余数。 [div_t](../../c-runtime-library/standard-types.md) 结构包含商、`int quot` 和余数 `int rem`。 商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。  
   
- 采用 `long` 或 `long long` 类型参数的重载仅可供 C++ 代码使用。 返回类型 [ldiv_t](../../c-runtime-library/standard-types.md) 包含成员 `long``quot` 和 `long``rem`，而返回类型 [lldiv_t](../../c-runtime-library/standard-types.md) 包含成员 `long long quot` 和 `long long rem`，其与 `div_t` 的成员具有相同的含义。  
+ 采用 `long` 或 `long long` 类型参数的重载仅可供 C++ 代码使用。 返回类型 [ldiv_t](../../c-runtime-library/standard-types.md) 包含成员 `long quot` 和 `long rem`，而返回类型 [lldiv_t](../../c-runtime-library/standard-types.md) 包含成员 `long long quot` 和 `long long rem`，其与 `div_t` 的成员具有相同的含义。  
   
 ## <a name="requirements"></a>要求  
   
@@ -138,9 +139,6 @@ int main( int argc, char *argv[] )
 x is 876, y is 13  
 The quotient is 67, and the remainder is 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   

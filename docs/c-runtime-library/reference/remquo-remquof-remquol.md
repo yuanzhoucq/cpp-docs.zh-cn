@@ -1,53 +1,71 @@
 ---
-title: "remquo、remquof、remquol | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "remquof"
-  - "remquo"
-  - "remquol"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "remquof"
-  - "remquol"
-  - "remquo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remquol 函数"
-  - "remquof 函数"
-  - "remquo 函数"
+title: "remquo、remquof、remquol | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- remquof
+- remquo
+- remquol
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- remquof
+- remquol
+- remquo
+dev_langs:
+- C++
+helpviewer_keywords:
+- remquol function
+- remquof function
+- remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# remquo、remquof、remquol
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fb7cbf4fe2450d574a4418e62c43dca699cde9b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-计算两个整数值的余数，并在参数指定的位置存储与此商的符号相同且大小相似的整数值。  
+---
+# <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
+计算两个整数值的余数，并将一个带有商的符号和近似值的整数值存储在参数中指定的位置。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 double remquo(   
@@ -78,35 +96,35 @@ long double remquol(
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `numer`  
- 枚举器。  
+ 分子。  
   
  `denom`  
  分母。  
   
  `quo`  
- 指向存储带有符号和近似大小的商的整数值的指针  
+ 指向整数值的指针，以存储带有商的符号和近似值的值。  
   
-## 返回值  
- `remquo` 返回 `x` \/ `y` 的浮点余数。  如果 `y` 的值为 0.0，则 `remquo` 将返回安静 NaN。  有关安静 NaN 的 `printf` 系列的表示形式信息，请参阅 [printf、\_printf\_l、wprintf、\_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)。  
+## <a name="return-value"></a>返回值  
+ `remquo` 返回 `x` / `y` 的浮点余数。 如果 `y` 的值为 0.0，则 `remquo` 返回静态 NaN。 有关 `printf` 系列表现静态 NaN 形式的信息，请参阅 [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)。  
   
-## 备注  
- `remquo` 函数计算 `x` 除以 `y` 的 `f` 浮点余数，这样  `x` \= `i` `*` `y` \+ `f`，其中 `i` 是整数，`f` 和 `x` 有相同的符号，而且 `f` 的绝对值小于 `y` 的绝对值。  
+## <a name="remarks"></a>备注  
+ `remquo` 函数计算 `x` / `y` 的浮点余数 `f`，以便 `x` = `i` `*` `y` + `f`（其中 `i` 是一个整数），`f` 具有与 `x` 相同的符号，且 `f` 的绝对值小于 `y` 的绝对值。  
   
- C\+\+ 允许重载，因此您可以调用 `remquo` 的重载，该重载采用和返回 `float` 或 `long double` 值。  在 C 程序中，`remquo` 始终采用两个双精度值并返回一个双精度值。  
+ C++ 允许重载，因此，可以调用采用并返回 `float` 或 `long double` 值的 `remquo` 重载。 在 C 程序中，`remquo` 始终采用两个双精度型值并返回一个双精度值。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`remquo`, `remquof`, `remquol`|\<math.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`remquo`, `remquof`, `remquol`|\<math.h>|  
   
- 有关兼容性信息，请参见 [兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```c  
+```C  
 // crt_remquo.c  
 // This program displays a floating-point remainder.  
   
@@ -124,14 +142,14 @@ int main( void )
 }  
 ```  
   
-  **\-10.00 除以 3.00 的余数是 \-1.000000**  
-**大致签名的商为 \-3**   
-## .NET Framework 等效项  
- [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
+```Output  
+The remainder of -10.00 / 3.00 is -1.000000  
+Approximate signed quotient is -3  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [ldiv、lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   
- [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
+ [fmod、fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
  [remainder、remainderf、remainderl](../../c-runtime-library/reference/remainder-remainderf-remainderl.md)

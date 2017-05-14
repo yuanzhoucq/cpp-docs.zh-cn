@@ -1,90 +1,107 @@
 ---
-title: "_fgetchar、_fgetwchar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fgetchar"
-  - "_fgetwchar"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fgetwchar"
-  - "_fgettchar"
-  - "_fgetchar"
-  - "_fgetwchar"
-  - "fgettchar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fgetchar 函数"
-  - "_fgettchar 函数"
-  - "_fgetwchar 函数"
-  - "fgetchar 函数"
-  - "fgettchar 函数"
-  - "fgetwchar 函数"
-  - "标准输入, 读取自"
+title: "_fgetchar、_fgetwchar | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fgetchar
+- _fgetwchar
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fgetwchar
+- _fgettchar
+- _fgetchar
+- _fgetwchar
+- fgettchar
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgetwchar function
+- _fgetchar function
+- fgettchar function
+- _fgetwchar function
+- _fgettchar function
+- standard input, reading from
+- fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _fgetchar、_fgetwchar
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 194ac613cbb783d0327ce1ce7c53138c5c67bc49
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-从 `stdin` 中读取字符。  
+---
+# <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
+从 `stdin` 读取一个字符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _fgetchar( void );  
 wint_t _fgetwchar( void );  
 ```  
   
-## 返回值  
- `_fgetchar` 返回作为 `int` 读取的字符或返回 `EOF` 指示错误或文件结尾。  **\_**`fgetwchar` 返回，作为 [wint\_t](../../c-runtime-library/standard-types.md)，对应于读取字符的宽字符或返回 `WEOF` 指示错误或文件结尾。  对于两个函数，请使用 `feof` 或 `ferror` 区分错误和文件结束的情形。  
+## <a name="return-value"></a>返回值  
+ `_fgetchar` 返回读作 `int` 的字符或返回 `EOF` 以指示错误或文件结尾。 **_**`fgetwchar` 将返回对应于字符读取的宽字符（作为 [wint_t](../../c-runtime-library/standard-types.md)）或返回 `WEOF` 以指示错误或文件结尾。 对于这两个函数，使用 `feof` 或 `ferror` 来区分错误和文件结尾条件。  
   
-## 备注  
- 这些函数从 `stdin`读取单个字符。  函数增加关联文件指针 \(如果定义\) 指向下一个字符。  如果流是在文件末尾，流的文件结尾指示符已设置。  
+## <a name="remarks"></a>备注  
+ 这些函数读取 `stdin` 中的单个字符。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。  
   
- `_fgetchar` 与 `fgetc( stdin )` 相等。  与 `getchar`等效，但是作为函数实现，而不是函数和宏。  `_fgetwchar` 是 `_fgetchar`的宽字符版本。  
+ `_fgetchar` 与 `fgetc( stdin )` 相等。 它也等效于 `getchar`，但仅作为函数实现，而不是同时作为函数和宏实现。 `_fgetwchar` 是 `_fgetchar` 的宽字符版本。  
   
- 这些函数与 ANSI 标准不兼容。  
+ 这些函数不符合 ANSI 标准。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_fgettchar`|`_fgetchar`|`_fgetchar`|`_fgetwchar`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`_fgetchar`|\<stdio.h\>|  
-|`_fgetwchar`|\<stdio.h\> 或 \<wchar.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`_fgetchar`|\<stdio.h>|  
+|`_fgetwchar`|\<stdio.h> 或 \<wchar.h>|  
   
- 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。  与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用它们。  有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。 与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_fgetchar.c  
@@ -115,15 +132,14 @@ int main( void )
 }  
 ```  
   
-  **`第一行。 第二行。`第一行。**  
-**第二行。**   
-## .NET Framework 等效项  
+```Output  
   
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx)  
+      Line one.  
+Line two.Line one.  
+Line two.  
+```  
   
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)

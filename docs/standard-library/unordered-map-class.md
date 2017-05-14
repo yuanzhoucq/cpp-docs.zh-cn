@@ -10,96 +10,94 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unordered_map
-- std::unordered_map
 - unordered_map/std::unordered_map
-- std::unordered_map::allocator_type
 - unordered_map/std::unordered_map::allocator_type
-- std::unordered_map::const_iterator
 - unordered_map/std::unordered_map::const_iterator
-- std::unordered_map::const_local_iterator
 - unordered_map/std::unordered_map::const_local_iterator
-- std::unordered_map::const_pointer
 - unordered_map/std::unordered_map::const_pointer
-- std::unordered_map::const_reference
 - unordered_map/std::unordered_map::const_reference
-- std::unordered_map::difference_type
 - unordered_map/std::unordered_map::difference_type
-- std::unordered_map::hasher
 - unordered_map/std::unordered_map::hasher
-- std::unordered_map::iterator
 - unordered_map/std::unordered_map::iterator
-- std::unordered_map::key_equal
 - unordered_map/std::unordered_map::key_equal
-- std::unordered_map::key_type
 - unordered_map/std::unordered_map::key_type
-- std::unordered_map::local_iterator
 - unordered_map/std::unordered_map::local_iterator
-- std::unordered_map::mapped_type
 - unordered_map/std::unordered_map::mapped_type
-- std::unordered_map::pointer
 - unordered_map/std::unordered_map::pointer
-- std::unordered_map::reference
 - unordered_map/std::unordered_map::reference
-- std::unordered_map::size_type
 - unordered_map/std::unordered_map::size_type
-- std::unordered_map::value_type
 - unordered_map/std::unordered_map::value_type
-- std::unordered_map::at
 - unordered_map/std::unordered_map::at
-- std::unordered_map::begin
 - unordered_map/std::unordered_map::begin
-- std::unordered_map::bucket
 - unordered_map/std::unordered_map::bucket
-- std::unordered_map::bucket_count
 - unordered_map/std::unordered_map::bucket_count
-- std::unordered_map::bucket_size
 - unordered_map/std::unordered_map::bucket_size
-- std::unordered_map::cbegin
 - unordered_map/std::unordered_map::cbegin
-- std::unordered_map::cend
 - unordered_map/std::unordered_map::cend
-- std::unordered_map::clear
 - unordered_map/std::unordered_map::clear
-- std::unordered_map::count
 - unordered_map/std::unordered_map::count
-- std::unordered_map::emplace
 - unordered_map/std::unordered_map::emplace
-- std::unordered_map::emplace_hint
 - unordered_map/std::unordered_map::emplace_hint
-- std::unordered_map::empty
 - unordered_map/std::unordered_map::empty
-- std::unordered_map::end
 - unordered_map/std::unordered_map::end
-- std::unordered_map::equal_range
 - unordered_map/std::unordered_map::equal_range
-- std::unordered_map::erase
 - unordered_map/std::unordered_map::erase
-- std::unordered_map::find
 - unordered_map/std::unordered_map::find
-- std::unordered_map::get_allocator
 - unordered_map/std::unordered_map::get_allocator
-- std::unordered_map::hash_function
-- unordered_map/std::unordered_map::hash_function
-- std::unordered_map::insert
+- unordered_map/std::unordered_map::hash
 - unordered_map/std::unordered_map::insert
-- std::unordered_map::key_eq
 - unordered_map/std::unordered_map::key_eq
-- std::unordered_map::load_factor
 - unordered_map/std::unordered_map::load_factor
-- std::unordered_map::max_bucket_count
 - unordered_map/std::unordered_map::max_bucket_count
-- std::unordered_map::max_load_factor
 - unordered_map/std::unordered_map::max_load_factor
-- std::unordered_map::max_size
 - unordered_map/std::unordered_map::max_size
-- std::unordered_map::rehash
 - unordered_map/std::unordered_map::rehash
-- std::unordered_map::size
 - unordered_map/std::unordered_map::size
-- std::unordered_map::swap
 - unordered_map/std::unordered_map::swap
-- std::unordered_map::unordered_map
 - unordered_map/std::unordered_map::unordered_map
+- unordered_map/std::unordered_map::allocator_type
+- unordered_map/std::unordered_map::const_iterator
+- unordered_map/std::unordered_map::const_local_iterator
+- unordered_map/std::unordered_map::const_pointer
+- unordered_map/std::unordered_map::const_reference
+- unordered_map/std::unordered_map::difference_type
+- unordered_map/std::unordered_map::hasher
+- unordered_map/std::unordered_map::iterator
+- unordered_map/std::unordered_map::key_equal
+- unordered_map/std::unordered_map::key_type
+- unordered_map/std::unordered_map::local_iterator
+- unordered_map/std::unordered_map::mapped_type
+- unordered_map/std::unordered_map::pointer
+- unordered_map/std::unordered_map::reference
+- unordered_map/std::unordered_map::size_type
+- unordered_map/std::unordered_map::value_type
+- unordered_map/std::unordered_map::at
+- unordered_map/std::unordered_map::begin
+- unordered_map/std::unordered_map::bucket
+- unordered_map/std::unordered_map::bucket_count
+- unordered_map/std::unordered_map::bucket_size
+- unordered_map/std::unordered_map::cbegin
+- unordered_map/std::unordered_map::cend
+- unordered_map/std::unordered_map::clear
+- unordered_map/std::unordered_map::count
+- unordered_map/std::unordered_map::emplace
+- unordered_map/std::unordered_map::emplace_hint
+- unordered_map/std::unordered_map::empty
+- unordered_map/std::unordered_map::end
+- unordered_map/std::unordered_map::equal_range
+- unordered_map/std::unordered_map::erase
+- unordered_map/std::unordered_map::find
+- unordered_map/std::unordered_map::get_allocator
+- unordered_map/std::unordered_map::hash_function
+- unordered_map/std::unordered_map::insert
+- unordered_map/std::unordered_map::key_eq
+- unordered_map/std::unordered_map::load_factor
+- unordered_map/std::unordered_map::max_bucket_count
+- unordered_map/std::unordered_map::max_load_factor
+- unordered_map/std::unordered_map::max_size
+- unordered_map/std::unordered_map::rehash
+- unordered_map/std::unordered_map::size
+- unordered_map/std::unordered_map::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -123,10 +121,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 82ef90b457ea875cc9237ad4aae73202c13ad4ea
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8e32440470dd576757e631ec7c74971dc5338a6c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="unorderedmap-class"></a>unordered_map 类
@@ -159,76 +158,76 @@ class unordered_map;
 |||  
 |-|-|  
 |类型定义|描述|  
-|[unordered_map::allocator_type](#unordered_map__allocator_type)|用于管理存储的分配器的类型。|  
-|[unordered_map::const_iterator](#unordered_map__const_iterator)|受控序列的常量迭代器的类型。|  
-|[unordered_map::const_local_iterator](#unordered_map__const_local_iterator)|受控序列的常量存储桶迭代器的类型。|  
-|[unordered_map::const_pointer](#unordered_map__const_pointer)|元素的常量指针的类型。|  
-|[unordered_map::const_reference](#unordered_map__const_reference)|元素的常量引用的类型。|  
-|[unordered_map::difference_type](#unordered_map__difference_type)|两个元素间的带符号距离的类型。|  
-|[unordered_map::hasher](#unordered_map__hasher)|哈希函数的类型。|  
-|[unordered_map::iterator](#unordered_map__iterator)|受控序列的迭代器的类型。|  
-|[unordered_map::key_equal](#unordered_map__key_equal)|比较函数的类型。|  
-|[unordered_map::key_type](#unordered_map__key_type)|排序键的类型。|  
-|[unordered_map::local_iterator](#unordered_map__local_iterator)|受控序列的存储桶迭代器的类型。|  
-|[unordered_map::mapped_type](#unordered_map__mapped_type)|与每个键关联的映射值的类型。|  
-|[unordered_map::pointer](#unordered_map__pointer)|指向元素的指针的类型。|  
-|[unordered_map::reference](#unordered_map__reference)|元素的引用的类型。|  
-|[unordered_map::size_type](#unordered_map__size_type)|两个元素间的无符号距离的类型。|  
-|[unordered_map::value_type](#unordered_map__value_type)|元素的类型。|  
+|[allocator_type](#allocator_type)|用于管理存储的分配器的类型。|  
+|[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|  
+|[const_local_iterator](#const_local_iterator)|受控序列的常量存储桶迭代器的类型。|  
+|[const_pointer](#const_pointer)|元素的常量指针的类型。|  
+|[const_reference](#const_reference)|元素的常量引用的类型。|  
+|[difference_type](#difference_type)|两个元素间的带符号距离的类型。|  
+|[hasher](#hasher)|哈希函数的类型。|  
+|[iterator](#iterator)|受控序列的迭代器的类型。|  
+|[key_equal](#key_equal)|比较函数的类型。|  
+|[key_type](#key_type)|排序键的类型。|  
+|[local_iterator](#local_iterator)|受控序列的存储桶迭代器的类型。|  
+|[mapped_type](#mapped_type)|与每个键关联的映射值的类型。|  
+|[pointer](#pointer)|指向元素的指针的类型。|  
+|[reference](#reference)|元素的引用的类型。|  
+|[size_type](#size_type)|两个元素间的无符号距离的类型。|  
+|[value_type](#value_type)|元素的类型。|  
   
 |||  
 |-|-|  
 |成员函数|描述|  
-|[unordered_map::at](#unordered_map__at)|查找具有指定键的元素。|  
-|[unordered_map::begin](#unordered_map__begin)|指定受控序列的开头。|  
-|[unordered_map::bucket](#unordered_map__bucket)|获取键值的存储桶编号。|  
-|[unordered_map::bucket_count](#unordered_map__bucket_count)|获取存储桶数。|  
-|[unordered_map::bucket_size](#unordered_map__bucket_size)|获取存储桶的大小。|  
-|[unordered_map::cbegin](#unordered_map__cbegin)|指定受控序列的开头。|  
-|[unordered_map::cend](#unordered_map__cend)|指定受控序列的末尾。|  
-|[unordered_map::clear](#unordered_map__clear)|删除所有元素。|  
-|[unordered_map::count](#unordered_map__count)|查找与指定键匹配的元素数。|  
-|[unordered_map::emplace](#unordered_map__emplace)|添加就地构造的元素。|  
-|[unordered_map::emplace_hint](#unordered_map__emplace_hint)|添加就地构造的元素，附带提示。|  
-|[unordered_map::empty](#unordered_map__empty)|测试元素是否存在。|  
-|[unordered_map::end](#unordered_map__end)|指定受控序列的末尾。|  
-|[unordered_map::equal_range](#unordered_map__equal_range)|查找与指定键匹配的范围。|  
-|[unordered_map::erase](#unordered_map__erase)|移除指定位置处的元素。|  
-|[unordered_map::find](#unordered_map__find)|查找与指定键匹配的元素。|  
-|[unordered_map::get_allocator](#unordered_map__get_allocator)|获取存储的分配器对象。|  
-|[unordered_map::hash_function](#unordered_map__hash_function)|获取存储的哈希函数对象。|  
-|[unordered_map::insert](#unordered_map__insert)|添加元素。|  
-|[unordered_map::key_eq](#unordered_map__key_eq)|获取存储的比较函数对象。|  
-|[unordered_map::load_factor](#unordered_map__load_factor)|对每个存储桶的平均元素数进行计数。|  
-|[unordered_map::max_bucket_count](#unordered_map__max_bucket_count)|获取最大的存储桶数。|  
-|[unordered_map::max_load_factor](#unordered_map__max_load_factor)|获取或设置每个存储桶的最多元素数。|  
-|[unordered_map::max_size](#unordered_map__max_size)|获取受控序列的最大大小。|  
-|[unordered_map::rehash](#unordered_map__rehash)|重新生成哈希表。|  
-|[unordered_map::size](#unordered_map__size)|对元素数进行计数。|  
-|[unordered_map::swap](#unordered_map__swap)|交换两个容器的内容。|  
-|[unordered_map::unordered_map](#unordered_map__unordered_map)|构造容器对象。|  
+|[at](#at)|查找具有指定键的元素。|  
+|[begin](#begin)|指定受控序列的开头。|  
+|[存储桶](#bucket)|获取键值的存储桶编号。|  
+|[bucket_count](#bucket_count)|获取存储桶数。|  
+|[bucket_size](#bucket_size)|获取存储桶的大小。|  
+|[cbegin](#cbegin)|指定受控序列的开头。|  
+|[cend](#cend)|指定受控序列的末尾。|  
+|[clear](#clear)|删除所有元素。|  
+|[count](#count)|查找与指定键匹配的元素数。|  
+|[emplace](#emplace)|添加就地构造的元素。|  
+|[emplace_hint](#emplace_hint)|添加就地构造的元素，附带提示。|  
+|[empty](#empty)|测试元素是否存在。|  
+|[end](#end)|指定受控序列的末尾。|  
+|[equal_range](#equal_range)|查找与指定键匹配的范围。|  
+|[erase](#erase)|移除指定位置处的元素。|  
+|[find](#find)|查找与指定键匹配的元素。|  
+|[get_allocator](#get_allocator)|获取存储的分配器对象。|  
+|[hash_function](#hash)|获取存储的哈希函数对象。|  
+|[insert](#insert)|添加元素。|  
+|[key_eq](#key_eq)|获取存储的比较函数对象。|  
+|[load_factor](#load_factor)|对每个存储桶的平均元素数进行计数。|  
+|[max_bucket_count](#max_bucket_count)|获取最大的存储桶数。|  
+|[max_load_factor](#max_load_factor)|获取或设置每个存储桶的最多元素数。|  
+|[max_size](#max_size)|获取受控序列的最大大小。|  
+|[rehash](#rehash)|重新生成哈希表。|  
+|[size](#size)|对元素数进行计数。|  
+|[swap](#swap)|交换两个容器的内容。|  
+|[unordered_map](#unordered_map)|构造容器对象。|  
   
 |||  
 |-|-|  
 |运算符|描述|  
-|[unordered_map::operator[]](#unordered_map__operator_at)|查找或插入具有指定键的元素。|  
-|[unordered_map::operator=](#unordered_map__operator_eq)|复制哈希表。|  
+|[unordered_map::operator[]](#op_at)|查找或插入具有指定键的元素。|  
+|[unordered_map::operator=](#op_eq)|复制哈希表。|  
   
 ## <a name="remarks"></a>备注  
- 对象通过调用两个存储对象，即一个 [unordered_map::key_equal](#unordered_map__key_equal) 类型的比较函数对象和一个 [unordered_map::hasher](#unordered_map__hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_map::key_eq](#unordered_map__key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_map::hash_function](#unordered_map__hash_function)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与模板类 [unordered_multimap Class](../standard-library/unordered-multimap-class.md) 不同，模板类 `unordered_map` 的对象可确保 `key_eq()(X, Y)` 对于受控序列的任意两个元素始终为 false。 （键是唯一的。）  
+ 对象通过调用两个存储对象，即一个 [unordered_map::key_equal](#key_equal) 类型的比较函数对象和一个 [unordered_map::hasher](#hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_map::key_eq](#key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_map::hash_function](#hash)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与模板类 [unordered_multimap Class](../standard-library/unordered-multimap-class.md) 不同，模板类 `unordered_map` 的对象可确保 `key_eq()(X, Y)` 对于受控序列的任意两个元素始终为 false。 （键是唯一的。）  
   
- 此对象还存储最大加载因子，用于指定每个存储桶的元素的最大所需平均数量。 如果插入元素导致 [unordered_map::load_factor](#unordered_map__load_factor)`()` 超出最大加载因子，容器将增加存储桶的数量并根据需要重新生成哈希表。  
+ 此对象还存储最大加载因子，用于指定每个存储桶的元素的最大所需平均数量。 如果插入元素导致 [unordered_map::load_factor](#load_factor)`()` 超出最大加载因子，容器将增加存储桶的数量并根据需要重新生成哈希表。  
   
  受控序列中元素的实际顺序取决于哈希函数、比较函数、插入顺序、最大加载因子和存储桶的当前数量。 通常无法预测受控序列中的元素顺序。 但是，可以始终确保具有等效顺序的任何元素子集在受控序列中相邻。  
   
- 对象通过 [unordered_map::allocator_type](#unordered_map__allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此分配器对象必须与 `allocator` 模板类的对象的外部接口相同。 请注意，分配容器对象时不会复制存储的分配器对象。  
+ 对象通过 [unordered_map::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此分配器对象必须与 `allocator` 模板类的对象的外部接口相同。 请注意，分配容器对象时不会复制存储的分配器对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<unordered_map>  
   
  **命名空间：** std  
   
-##  <a name="a-nameunorderedmapallocatortypea--unorderedmapallocatortype"></a><a name="unordered_map__allocator_type"></a>  unordered_map::allocator_type  
+##  <a name="allocator_type"></a>  unordered_map::allocator_type  
  用于管理存储的分配器的类型。  
   
 ```  
@@ -265,7 +264,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmapata--unorderedmapat"></a><a name="unordered_map__at"></a>  unordered_map::at  
+##  <a name="at"></a>  unordered_map::at  
  在 unordered_map 中查找具有指定键值的元素。  
   
 ```  
@@ -277,8 +276,8 @@ const Ty& at(const Key& key) const;
   
 |||  
 |-|-|  
-|参数|描述|  
-|` key`|要查找的键值。|  
+|参数|说明|  
+|`key`|要查找的键值。|  
   
 ### <a name="return-value"></a>返回值  
  对找到的元素数据值的引用。  
@@ -313,7 +312,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameunorderedmapbegina--unorderedmapbegin"></a><a name="unordered_map__begin"></a>  unordered_map::begin  
+##  <a name="begin"></a>  unordered_map::begin  
  指定受控序列或存储桶的开头。  
   
 ```  
@@ -377,7 +376,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapbucketa--unorderedmapbucket"></a><a name="unordered_map__bucket"></a>  unordered_map::bucket  
+##  <a name="bucket"></a>  unordered_map::bucket  
  获取键值的存储桶编号。  
   
 ```  
@@ -430,7 +429,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmapbucketcounta--unorderedmapbucketcount"></a><a name="unordered_map__bucket_count"></a>  unordered_map::bucket_count  
+##  <a name="bucket_count"></a>  unordered_map::bucket_count  
  获取存储桶数。  
   
 ```  
@@ -516,7 +515,7 @@ max_load_factor() == 0.1
 
 ```  
   
-##  <a name="a-nameunorderedmapbucketsizea--unorderedmapbucketsize"></a><a name="unordered_map__bucket_size"></a>  unordered_map::bucket_size  
+##  <a name="bucket_size"></a>  unordered_map::bucket_size  
  获取存储桶的大小  
   
 ```  
@@ -569,7 +568,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmapcbegina--unorderedmapcbegin"></a><a name="unordered_map__cbegin"></a>  unordered_map::cbegin  
+##  <a name="cbegin"></a>  unordered_map::cbegin  
  返回确定范围中第一个元素地址的 `const` 迭代器。  
   
 ```  
@@ -592,7 +591,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameunorderedmapcenda--unorderedmapcend"></a><a name="unordered_map__cend"></a>  unordered_map::cend  
+##  <a name="cend"></a>  unordered_map::cend  
  返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
   
 ```  
@@ -605,7 +604,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>备注  
  `cend` 用于测试迭代器是否超过了其范围的末尾。  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的 (non- `const`) 任何类型的容器。  
+ 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -616,7 +615,7 @@ auto i2 = Container.cend();
   
  不应对 `cend` 返回的值取消引用。  
   
-##  <a name="a-nameunorderedmapcleara--unorderedmapclear"></a><a name="unordered_map__clear"></a>  unordered_map::clear  
+##  <a name="clear"></a>  unordered_map::clear  
  删除所有元素。  
   
 ```  
@@ -624,7 +623,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此成员函数调用 [unordered_map::erase](#unordered_map__erase)`(` [unordered_map::begin](#unordered_map__begin)`(),` [unordered_map::end](#unordered_map__end)`())`。  
+ 此成员函数调用 [unordered_map::erase](#erase)`(` [unordered_map::begin](#begin)`(),` [unordered_map::end](#end)`())`。  
   
 ### <a name="example"></a>示例  
   
@@ -682,7 +681,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmapconstiteratora--unorderedmapconstiterator"></a><a name="unordered_map__const_iterator"></a>  unordered_map::const_iterator  
+##  <a name="const_iterator"></a>  unordered_map::const_iterator  
  受控序列的常量迭代器的类型。  
   
 ```  
@@ -724,7 +723,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapconstlocaliteratora--unorderedmapconstlocaliterator"></a><a name="unordered_map__const_local_iterator"></a>  unordered_map::const_local_iterator  
+##  <a name="const_local_iterator"></a>  unordered_map::const_local_iterator  
  受控序列的常量存储桶迭代器的类型。  
   
 ```  
@@ -771,7 +770,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapconstpointera--unorderedmapconstpointer"></a><a name="unordered_map__const_pointer"></a>  unordered_map::const_pointer  
+##  <a name="const_pointer"></a>  unordered_map::const_pointer  
  元素的常量指针的类型。  
   
 ```  
@@ -816,7 +815,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapconstreferencea--unorderedmapconstreference"></a><a name="unordered_map__const_reference"></a>  unordered_map::const_reference  
+##  <a name="const_reference"></a>  unordered_map::const_reference  
  元素的常量引用的类型。  
   
 ```  
@@ -861,7 +860,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapcounta--unorderedmapcount"></a><a name="unordered_map__count"></a>  unordered_map::count  
+##  <a name="count"></a>  unordered_map::count  
  查找与指定键匹配的元素数。  
   
 ```  
@@ -873,7 +872,7 @@ size_type count(const Key& keyval) const;
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 该成员函数返回由 [unordered_map::equal_range](#unordered_map__equal_range)`(keyval)` 分隔的范围内的元素数量。  
+ 该成员函数返回由 [unordered_map::equal_range](#equal_range)`(keyval)` 分隔的范围内的元素数量。  
   
 ### <a name="example"></a>示例  
   
@@ -914,7 +913,7 @@ count('b') == 1
 count('C') == 0  
 ```  
   
-##  <a name="a-nameunorderedmapdifferencetypea--unorderedmapdifferencetype"></a><a name="unordered_map__difference_type"></a>  unordered_map::difference_type  
+##  <a name="difference_type"></a>  unordered_map::difference_type  
  两个元素间的带符号距离的类型。  
   
 ```  
@@ -971,7 +970,7 @@ end()-begin() == 3
 begin()-end() == -3  
 ```  
   
-##  <a name="a-nameunorderedmapemplacea--unorderedmapemplace"></a><a name="unordered_map__emplace"></a>  unordered_map::emplace  
+##  <a name="emplace"></a>  unordered_map::emplace  
  就地将构造的元素插入到 unordered_map 中（不执行复制或移动操作）。  
   
 ```  
@@ -996,9 +995,9 @@ pair<iterator, bool>  emplace( Args&&... args);
   
  在插入期间，如果引发了异常但未发生在容器的哈希函数中，则不会修改此容器。 如果在哈希函数中引发异常，则未定义此结果。  
   
- 有关代码示例，请参阅 [map::emplace](../standard-library/map-class.md#map__emplace)。  
+ 有关代码示例，请参阅 [map::emplace](../standard-library/map-class.md#emplace)。  
   
-##  <a name="a-nameunorderedmapemplacehinta--unorderedmapemplacehint"></a><a name="unordered_map__emplace_hint"></a>  unordered_map::emplace_hint  
+##  <a name="emplace_hint"></a>  unordered_map::emplace_hint  
  使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -1024,11 +1023,11 @@ iterator emplace_hint(const_iterator where, Args&&... args);
   
  在插入期间，如果引发了异常但未发生在容器的哈希函数中，则不会修改此容器。 如果在哈希函数中引发异常，则未定义此结果。  
   
- 元素的 [value_type](../standard-library/map-class.md#map__value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
   
- 有关代码示例，请参阅 [map::emplace_hint](../standard-library/map-class.md#map__emplace_hint)。  
+ 有关代码示例，请参阅 [map::emplace_hint](../standard-library/map-class.md#emplace_hint)。  
   
-##  <a name="a-nameunorderedmapemptya--unorderedmapempty"></a><a name="unordered_map__empty"></a>  unordered_map::empty  
+##  <a name="empty"></a>  unordered_map::empty  
  测试元素是否存在。  
   
 ```  
@@ -1093,7 +1092,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmapenda--unorderedmapend"></a><a name="unordered_map__end"></a>  unordered_map::end  
+##  <a name="end"></a>  unordered_map::end  
  指定受控序列的末尾。  
   
 ```  
@@ -1113,7 +1112,7 @@ const_local_iterator end(size_type nbucket) const;
 ### <a name="remarks"></a>备注  
  前两个成员函数返回一个向前迭代器，它指向刚超出序列末尾的位置。 最后两个成员函数返回一个向前迭代器，它指向刚超出存储桶 `nbucket` 末尾的位置。  
   
-##  <a name="a-nameunorderedmapequalrangea--unorderedmapequalrange"></a><a name="unordered_map__equal_range"></a>  unordered_map::equal_range  
+##  <a name="equal_range"></a>  unordered_map::equal_range  
  查找与指定键匹配的范围。  
   
 ```  
@@ -1179,7 +1178,7 @@ equal_range('x'):
 equal_range('b'): [b, 2]  
 ```  
   
-##  <a name="a-nameunorderedmaperasea--unorderedmaperase"></a><a name="unordered_map__erase"></a>  unordered_map::erase  
+##  <a name="erase"></a>  unordered_map::erase  
  从 unordered_map 中的指定位置删除一个元素或元素范围，或者删除与指定键匹配的元素。  
   
 ```  
@@ -1207,9 +1206,9 @@ size_type erase(const key_type& Key);
  对于第三个成员函数，返回已从 unordered_map 中删除的元素数目。  
   
 ### <a name="remarks"></a>备注  
- 有关代码示例，请参阅 [map::erase](../standard-library/map-class.md#map__erase)。  
+ 有关代码示例，请参阅 [map::erase](../standard-library/map-class.md#erase)。  
   
-##  <a name="a-nameunorderedmapfinda--unorderedmapfind"></a><a name="unordered_map__find"></a>  unordered_map::find  
+##  <a name="find"></a>  unordered_map::find  
  查找与指定键匹配的元素。  
   
 ```  
@@ -1221,7 +1220,7 @@ const_iterator find(const Key& keyval) const;
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回 [unordered_map::equal_range](#unordered_map__equal_range)`(keyval).first`。  
+ 成员函数返回 [unordered_map::equal_range](#equal_range)`(keyval).first`。  
   
 ### <a name="example"></a>示例  
   
@@ -1267,7 +1266,7 @@ find('A') == false
 find('b') == true: [b, 2]  
 ```  
   
-##  <a name="a-nameunorderedmapgetallocatora--unorderedmapgetallocator"></a><a name="unordered_map__get_allocator"></a>  unordered_map::get_allocator  
+##  <a name="get_allocator"></a>  unordered_map::get_allocator  
  获取存储的分配器对象。  
   
 ```  
@@ -1304,7 +1303,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmaphashfunctiona--unorderedmaphashfunction"></a><a name="unordered_map__hash_function"></a>  unordered_map::hash_function  
+##  <a name="hash"></a>  unordered_map::hash_function  
  获取存储的哈希函数对象。  
   
 ```  
@@ -1341,7 +1340,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmaphashera--unorderedmaphasher"></a><a name="unordered_map__hasher"></a>  unordered_map::hasher  
+##  <a name="hasher"></a>  unordered_map::hasher  
  哈希函数的类型。  
   
 ```  
@@ -1378,7 +1377,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmapinserta--unorderedmapinsert"></a><a name="unordered_map__insert"></a>  unordered_map::insert  
+##  <a name="insert"></a>  unordered_map::insert  
  将一个元素或元素范围插入到 unordered_map 中。  
   
 ```  
@@ -1421,10 +1420,10 @@ IList);
 |参数|描述|  
 |`Val`|要插入到 unordered_map 中的元素的值（除非它已经包含一个具有相对有序的键的元素）。|  
 |`Where`|开始搜索正确插入点的位置。|  
-|`ValTy`|一种模板参数，它指定 unordered_map 可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 元素的参数类型并将 `Val` 作为参数完美转发。|  
+|`ValTy`|一种模板参数，它指定 unordered_map 可用于构造 [value_type](../standard-library/map-class.md#value_type) 元素的参数类型并将 `Val` 作为参数完美转发。|  
 |`First`|要复制的第一个元素的位置。|  
 |`Last`|要复制的最后一个元素以外的位置。|  
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 对象的类型的元素。|  
+|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|  
 |`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|  
   
 ### <a name="return-value"></a>返回值  
@@ -1439,17 +1438,17 @@ IList);
   
  若要访问单个元素成员函数返回的 `pair``pr` 的迭代器组件，请使用 `pr.first`；若要在返回的对中取消引用迭代器，请使用 `*pr.first`，这将向你提供一个元素。 要访问 `bool` 组件，请使用 `pr.second`。 有关示例，请参阅本文后面的示例代码。  
   
- 容器的 [value_type](../standard-library/map-class.md#map__value_type) 是属于该容器的 typedef；对于映射，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于 map ，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
   
  范围成员函数 (5) 将元素值序列插到 unordered_map 中，它对应于迭代器在范围 `[First, Last)` 中所处理的每一个元素；因此，不会插入 `Last`。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`m.insert(v.begin(), v.end());` 语句尝试将 `v` 的所有元素插入到 `m` 中。 只插入在该范围中具有唯一值的元素；忽略副本。 若要观察拒绝了哪些元素，请使用单个元素版本的 `insert`。  
   
  初始化表达式列表成员函数 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 将元素复制到 unordered_map 中。  
   
- 有关就地插入构造的元素（即不执行复制或移动操作），请参阅 [unordered_map::emplace](#unordered_map__emplace) 和 [unordered_map::emplace_hint](#unordered_map__emplace_hint)。  
+ 有关就地插入构造的元素（即不执行复制或移动操作），请参阅 [unordered_map::emplace](#emplace) 和 [unordered_map::emplace_hint](#emplace_hint)。  
   
- 有关代码示例，请参阅 [map::insert](../standard-library/map-class.md#map__insert)。  
+ 有关代码示例，请参阅 [map::insert](../standard-library/map-class.md#insert)。  
   
-##  <a name="a-nameunorderedmapiteratora--unorderedmapiterator"></a><a name="unordered_map__iterator"></a>  unordered_map::iterator  
+##  <a name="iterator"></a>  unordered_map::iterator  
  受控序列的迭代器的类型。  
   
 ```  
@@ -1491,7 +1490,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapkeyeqa--unorderedmapkeyeq"></a><a name="unordered_map__key_eq"></a>  unordered_map::key_eq  
+##  <a name="key_eq"></a>  unordered_map::key_eq  
  获取存储的比较函数对象。  
   
 ```  
@@ -1530,7 +1529,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmapkeyequala--unorderedmapkeyequal"></a><a name="unordered_map__key_equal"></a>  unordered_map::key_equal  
+##  <a name="key_equal"></a>  unordered_map::key_equal  
  比较函数的类型。  
   
 ```  
@@ -1569,7 +1568,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmapkeytypea--unorderedmapkeytype"></a><a name="unordered_map__key_type"></a>  unordered_map::key_type  
+##  <a name="key_type"></a>  unordered_map::key_type  
  排序键的类型。  
   
 ```  
@@ -1623,7 +1622,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmaploadfactora--unorderedmaploadfactor"></a><a name="unordered_map__load_factor"></a>  unordered_map::load_factor  
+##  <a name="load_factor"></a>  unordered_map::load_factor  
  对每个存储桶的平均元素数进行计数。  
   
 ```  
@@ -1631,7 +1630,7 @@ float load_factor() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回每个存储桶的平均元素数 `(float)`[unordered_map::size](#unordered_map__size)`() / (float)`[unordered_map::bucket_count](#unordered_map__bucket_count)`()`。  
+ 成员函数返回每个存储桶的平均元素数 `(float)`[unordered_map::size](#size)`() / (float)`[unordered_map::bucket_count](#bucket_count)`()`。  
   
 ### <a name="example"></a>示例  
   
@@ -1709,7 +1708,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmaplocaliteratora--unorderedmaplocaliterator"></a><a name="unordered_map__local_iterator"></a>  unordered_map::local_iterator  
+##  <a name="local_iterator"></a>  unordered_map::local_iterator  
  存储桶迭代器类型。  
   
 ```  
@@ -1756,7 +1755,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapmappedtypea--unorderedmapmappedtype"></a><a name="unordered_map__mapped_type"></a>  unordered_map::mapped_type  
+##  <a name="mapped_type"></a>  unordered_map::mapped_type  
  与每个键关联的映射值的类型。  
   
 ```  
@@ -1810,7 +1809,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapmaxbucketcounta--unorderedmapmaxbucketcount"></a><a name="unordered_map__max_bucket_count"></a>  unordered_map::max_bucket_count  
+##  <a name="max_bucket_count"></a>  unordered_map::max_bucket_count  
  获取最大的存储桶数。  
   
 ```  
@@ -1896,7 +1895,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmapmaxloadfactora--unorderedmapmaxloadfactor"></a><a name="unordered_map__max_load_factor"></a>  unordered_map::max_load_factor  
+##  <a name="max_load_factor"></a>  unordered_map::max_load_factor  
  获取或设置每个存储桶的最多元素数。  
   
 ```  
@@ -1989,7 +1988,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmapmaxsizea--unorderedmapmaxsize"></a><a name="unordered_map__max_size"></a>  unordered_map::max_size  
+##  <a name="max_size"></a>  unordered_map::max_size  
  获取受控序列的最大大小。  
   
 ```  
@@ -2023,7 +2022,7 @@ int main()
 max_size() == 536870911  
 ```  
   
-##  <a name="a-nameunorderedmapoperatorata--unorderedmapoperator"></a><a name="unordered_map__operator_at"></a>unordered_map::operator[]  
+##  <a name="op_at"></a>unordered_map::operator[]  
  查找或插入具有指定键的元素。  
   
 ```  
@@ -2047,7 +2046,7 @@ Ty& operator[](Key&& keyval);
   
  `operator[]` 可用于使用 *m*[_ *Key*] = `DataValue` 将元素插入到映射 *m* 中；其中 `DataValue` 是键值为 \_ *Key* 的元素的 `mapped_type` 值。  
   
- 使用 `operator[]` 插入元素时，返回的引用不指示插入是更改预先存在的元素还是创建一个新元素。 成员函数 [find](../standard-library/map-class.md#map__find) 和 [insert](../standard-library/map-class.md#map__insert) 可用于确定具有指定键的元素在插入前是否已存在。  
+ 使用 `operator[]` 插入元素时，返回的引用不指示插入是更改预先存在的元素还是创建一个新元素。 成员函数 [find](../standard-library/map-class.md#find) 和 [insert](../standard-library/map-class.md#insert) 可用于确定具有指定键的元素在插入前是否已存在。  
   
 ### <a name="example"></a>示例  
   
@@ -2106,9 +2105,9 @@ c2["abc"] == 1
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将迭代器 `where` 确定为 [unordered_map::insert](#unordered_map__insert)`(` [unordered_map::value_type](#unordered_map__value_type)`(keyval, Ty())` 的返回值。 （如果不存在此元素，它将插入具有指定键的元素。）随后它将返回对 `(*where).second` 的引用。  
+ 成员函数将迭代器 `where` 确定为 [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())` 的返回值。 （如果不存在此元素，它将插入具有指定键的元素。）随后它将返回对 `(*where).second` 的引用。  
   
-##  <a name="a-nameunorderedmapoperatoreqa--unorderedmapoperator"></a><a name="unordered_map__operator_eq"></a>unordered_map::operator=  
+##  <a name="op_eq"></a>unordered_map::operator=  
  使用其他 unordered_map 中的元素来替代此 unordered_map 中的元素。  
   
 ```  
@@ -2122,12 +2121,12 @@ unordered_map& operator=(unordered_map&& right);
 |||  
 |-|-|  
 |参数|描述|  
-|` right`|运算符函数从中分配内容的 unordered_map。|  
+|`right`|运算符函数从中分配内容的 unordered_map。|  
   
 ### <a name="remarks"></a>备注  
- 第一版将 ` right` 的所有元素复制到此 unordered_map。  
+ 第一版将 `right` 的所有元素复制到此 unordered_map。  
   
- 第二版将 ` right` 的所有元素移动到此 unordered_map。  
+ 第二版将 `right` 的所有元素移动到此 unordered_map。  
   
  放弃 `operator`= executes 之前此 unordered_map 中的任何元素。  
   
@@ -2168,7 +2167,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-nameunorderedmappointera--unorderedmappointer"></a><a name="unordered_map__pointer"></a>  unordered_map::pointer  
+##  <a name="pointer"></a>  unordered_map::pointer  
  指向元素的指针的类型。  
   
 ```  
@@ -2213,7 +2212,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapreferencea--unorderedmapreference"></a><a name="unordered_map__reference"></a>  unordered_map::reference  
+##  <a name="reference"></a>  unordered_map::reference  
  元素的引用的类型。  
   
 ```  
@@ -2258,7 +2257,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmaprehasha--unorderedmaprehash"></a><a name="unordered_map__rehash"></a>  unordered_map::rehash  
+##  <a name="rehash"></a>  unordered_map::rehash  
  重新生成哈希表。  
   
 ```  
@@ -2334,7 +2333,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="a-nameunorderedmapsizea--unorderedmapsize"></a><a name="unordered_map__size"></a>  unordered_map::size  
+##  <a name="size"></a>  unordered_map::size  
  对元素数进行计数。  
   
 ```  
@@ -2400,7 +2399,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmapsizetypea--unorderedmapsizetype"></a><a name="unordered_map__size_type"></a>  unordered_map::size_type  
+##  <a name="size_type"></a>  unordered_map::size_type  
  两个元素间的无符号距离的类型。  
   
 ```  
@@ -2435,7 +2434,7 @@ int main()
 size == 0  
 ```  
   
-##  <a name="a-nameunorderedmapswapa--unorderedmapswap"></a><a name="unordered_map__swap"></a>  unordered_map::swap  
+##  <a name="swap"></a>  unordered_map::swap  
  交换两个容器的内容。  
   
 ```  
@@ -2447,7 +2446,7 @@ void swap(unordered_map& right);
  要交换的容器。  
   
 ### <a name="remarks"></a>备注  
- 成员函数交换 `*this` 和 `right`之间的受控序列。 如果为 [unordered_map::get_allocator](#unordered_map__get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。  
+ 成员函数交换 `*this` 和 `right`之间的受控序列。 如果为 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。  
   
 ### <a name="example"></a>示例  
   
@@ -2505,7 +2504,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapunorderedmapa--unorderedmapunorderedmap"></a><a name="unordered_map__unordered_map"></a>  unordered_map::unordered_map  
+##  <a name="unordered_map"></a>  unordered_map::unordered_map  
  构造容器对象。  
   
 ```  
@@ -2710,7 +2709,7 @@ int main()
  [a, 1] [b, 2] [c, 3]
  ```  
   
-##  <a name="a-nameunorderedmapvaluetypea--unorderedmapvaluetype"></a><a name="unordered_map__value_type"></a>  unordered_map::value_type  
+##  <a name="value_type"></a>  unordered_map::value_type  
  元素的类型。  
   
 ```  

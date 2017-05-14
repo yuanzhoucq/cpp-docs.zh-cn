@@ -1,51 +1,68 @@
 ---
-title: "__min | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__min"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__min"
-  - "min"
-  - "_min"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__min 宏"
-  - "_min 宏"
-  - "min 宏"
-  - "minimum 宏"
+title: "__min | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __min
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- __min
+- min
+- _min
+dev_langs:
+- C++
+helpviewer_keywords:
+- __min macro
+- min macro
+- minimum macro
+- _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# __min
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 171ca8b2136e2311a814328989b4dd121416918a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
+---
+# <a name="min"></a>__min
 返回两个值中的较小者。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 type __min(  
@@ -54,26 +71,26 @@ type __min(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `type`  
  任何数字数据类型。  
   
  `a, b`  
- 任何数值类型的值会被比较。  
+ 要比较的任何数字类型的值。  
   
-## 返回值  
- 两个参数中的小的。  
+## <a name="return-value"></a>返回值  
+ 两个参数中的较小者。  
   
-## 备注  
- `__min` 宏对两个值进行比较并返回值较小的一个。  参数可以是任何数字数据类型，有符号或者没有符号。  参数和返回值必须是同一数据类型。  
+## <a name="remarks"></a>备注  
+ `__min` 宏会将两个值进行比较并返回其中的较小者。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`__min`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`__min`|\<stdlib.h>|  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_minmax.c  
@@ -91,11 +108,11 @@ int main( void )
 }  
 ```  
   
-  **大 10 和 21 是 21**  
-**10 和 21 中小的是 10**   
-## .NET Framework 等效项  
- [System::Math::Min](https://msdn.microsoft.com/en-us/library/system.math.min.aspx)  
+```Output  
+The larger of 10 and 21 is 21  
+The smaller of 10 and 21 is 10  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
- [\_\_max](../../c-runtime-library/reference/max.md)
+ [__max](../../c-runtime-library/reference/max.md)

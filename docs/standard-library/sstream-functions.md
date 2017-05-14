@@ -6,13 +6,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bbc38cb453c010f7d395372a5eb9f121cd6e3dc8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 3b5d850026627127e539d39faca18574d72d2ff8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltsstreamgt-functions"></a>&lt;sstream&gt; 函数
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|  
 |[swap](#sstream_swap)|  
   
-##  <a name="a-namesstreamswapa--swap"></a><a name="sstream_swap"></a>swap  
+##  <a name="sstream_swap"></a>swap  
  交换两个 `sstream` 对象间的值。  
   
 ```  
@@ -49,11 +52,11 @@ void swap(
   
 |参数|描述|  
 |---------------|-----------------|  
-|` left`|引用 `sstream` 对象。|  
-|` right`|引用 `sstream` 对象。|  
+|`left`|引用 `sstream` 对象。|  
+|`right`|引用 `sstream` 对象。|  
   
 ### <a name="remarks"></a>备注  
- 该模板函数执行 ` left``.swap(`` right``)`。  
+ 该模板函数执行 `left.swap(right)`。  
   
 ## <a name="see-also"></a>另请参阅  
  [\<sstream>](../standard-library/sstream.md)

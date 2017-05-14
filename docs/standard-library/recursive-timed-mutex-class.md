@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::recursive_timed_mutex
+- mutex/std::recursive_timed_mutex::recursive_timed_mutex
+- mutex/std::recursive_timed_mutex::lock
+- mutex/std::recursive_timed_mutex::try_lock
+- mutex/std::recursive_timed_mutex::try_lock_for
+- mutex/std::recursive_timed_mutex::try_lock_until
+- mutex/std::recursive_timed_mutex::unlock
 dev_langs:
 - C++
 ms.assetid: 59cc2d5c-ed80-45f3-a0a8-05652a8ead7e
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a28e9521455f0380f412fc2aa81aecd713f9535a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 898661756cd21f362dc9d83dee6dab9b0c16fb8f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 类
@@ -52,25 +59,25 @@ class recursive_timed_mutex;
   
 |名称|描述|  
 |----------|-----------------|  
-|[recursive_timed_mutex 构造函数](#recursive_timed_mutex__recursive_timed_mutex_constructor)|构造未锁定的 `recursive_timed_mutex` 对象。|  
-|[~recursive_timed_mutex 析构函数](#recursive_timed_mutex___dtorrecursive_timed_mutex_destructor)|释放由 `recursive_timed_mutex` 对象使用的任何资源。|  
+|[recursive_timed_mutex](#recursive_timed_mutex)|构造未锁定的 `recursive_timed_mutex` 对象。|  
+|[~recursive_timed_mutex 析构函数](#dtorrecursive_timed_mutex_destructor)|释放由 `recursive_timed_mutex` 对象使用的任何资源。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|说明|  
 |----------|-----------------|  
-|[lock](#recursive_timed_mutex__lock_method)|阻止调用线程，直到线程获取 `mutex` 的所有权。|  
-|[try_lock](#recursive_timed_mutex__try_lock_method)|在不阻止的情况下尝试获取 `mutex` 的所有权。|  
-|[try_lock_for](#recursive_timed_mutex__try_lock_for_method)|尝试获取在指定时间间隔内有效的 `mutex` 的所有权。|  
-|[try_lock_until](#recursive_timed_mutex__try_lock_until_method)|尝试获取在指定时间之前有效的 `mutex` 的所有权。|  
-|[unlock](#recursive_timed_mutex__unlock_method)|释放 `mutex` 的所有权。|  
+|[lock](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|  
+|[try_lock](#try_lock)|在不阻止的情况下尝试获取 `mutex` 的所有权。|  
+|[try_lock_for](#try_lock_for)|尝试获取在指定时间间隔内有效的 `mutex` 的所有权。|  
+|[try_lock_until](#try_lock_until)|尝试获取在指定时间之前有效的 `mutex` 的所有权。|  
+|[unlock](#unlock)|释放 `mutex` 的所有权。|  
   
 ## <a name="requirements"></a>要求  
- **标头：**mutex  
+ **标头︰** \<互斥体 >  
   
  **命名空间：** std  
   
-##  <a name="a-namerecursivetimedmutexlockmethoda--lock"></a><a name="recursive_timed_mutex__lock_method"></a>lock  
+##  <a name="lock"></a>lock  
  阻止调用线程，直到线程获取 `mutex` 的所有权。  
   
 ```cpp  
@@ -80,14 +87,14 @@ void lock();
 ### <a name="remarks"></a>备注  
  如果调用线程已拥有 `mutex`，则该方法将立即返回，同时上一锁定保持有效。  
   
-##  <a name="a-namerecursivetimedmutexrecursivetimedmutexconstructora--recursivetimedmutex-constructor"></a><a name="recursive_timed_mutex__recursive_timed_mutex_constructor"></a>  recursive_timed_mutex 构造函数  
+##  <a name="recursive_timed_mutex"></a>  recursive_timed_mutex 构造函数  
  构造未锁定的 `recursive_timed_mutex` 对象。  
   
 ```cpp  
 recursive_timed_mutex();
 ```  
   
-##  <a name="a-namerecursivetimedmutexdtorrecursivetimedmutexdestructora--recursivetimedmutex-destructor"></a><a name="recursive_timed_mutex___dtorrecursive_timed_mutex_destructor"></a>  ~recursive_timed_mutex 析构函数  
+##  <a name="dtorrecursive_timed_mutex_destructor"></a>  ~recursive_timed_mutex 析构函数  
  释放由 `recursive_timed_mutex` 对象使用的任何资源。  
   
 ```cpp  
@@ -97,7 +104,7 @@ recursive_timed_mutex();
 ### <a name="remarks"></a>备注  
  如果当析构函数运行时对象被锁定，则该行为不确定。  
   
-##  <a name="a-namerecursivetimedmutextrylockmethoda--trylock"></a><a name="recursive_timed_mutex__try_lock_method"></a>try_lock  
+##  <a name="try_lock"></a>try_lock  
  在不阻止的情况下尝试获取 `mutex` 的所有权。  
   
 ```cpp  
@@ -110,7 +117,7 @@ bool try_lock() noexcept;
 ### <a name="remarks"></a>备注  
  如果调用线程已拥有 `mutex`，则该函数将立即返回 `true`，并且上一锁定一直保持有效。  
   
-##  <a name="a-namerecursivetimedmutextrylockformethoda--trylockfor"></a><a name="recursive_timed_mutex__try_lock_for_method"></a>try_lock_for  
+##  <a name="try_lock_for"></a>try_lock_for  
  在不阻止的情况下尝试获取 `mutex` 的所有权。  
   
 ```cpp  
@@ -128,7 +135,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>备注  
  如果调用线程已拥有 `mutex`，则该方法将立即返回 `true`，同时上一锁定保持有效。  
   
-##  <a name="a-namerecursivetimedmutextrylockuntilmethoda--trylockuntil"></a><a name="recursive_timed_mutex__try_lock_until_method"></a>try_lock_until  
+##  <a name="try_lock_until"></a>try_lock_until  
  在不阻止的情况下尝试获取 `mutex` 的所有权。  
   
 ```cpp  
@@ -148,7 +155,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="remarks"></a>备注  
  如果调用线程已拥有 `mutex`，则该方法将立即返回 `true`，同时上一锁定保持有效。  
   
-##  <a name="a-namerecursivetimedmutexunlockmethoda--unlock"></a><a name="recursive_timed_mutex__unlock_method"></a>unlock  
+##  <a name="unlock"></a>unlock  
  释放 `mutex` 的所有权。  
   
 ```cpp  
@@ -156,7 +163,7 @@ void unlock();
 ```  
   
 ### <a name="remarks"></a>备注  
- 仅当 `mutex` 的调用次数与在 `recursive_timed_mutex` 对象上成功调用 [lock](#recursive_timed_mutex__lock_method)、[try_lock](#recursive_timed_mutex__try_lock_method)、[try_lock_for](#recursive_timed_mutex__try_lock_for_method) [try_lock_until](#recursive_timed_mutex__try_lock_until_method) 的次数一样多时，此方法才释放其所有权。  
+ 仅当 `mutex` 的调用次数与在 `recursive_timed_mutex` 对象上成功调用 [lock](#lock)、[try_lock](#try_lock)、[try_lock_for](#try_lock_for) [try_lock_until](#try_lock_until) 的次数一样多时，此方法才释放其所有权。  
   
  如果调用的线程不拥有 `mutex`，则该行为不确定。  
   

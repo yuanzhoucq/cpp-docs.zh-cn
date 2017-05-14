@@ -10,21 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sub_match
-- std::sub_match
 - regex/std::sub_match
-- std::sub_match::matched
 - regex/std::sub_match::matched
-- std::sub_match::compare
 - regex/std::sub_match::compare
-- std::sub_match::length
 - regex/std::sub_match::length
-- std::sub_match::str
 - regex/std::sub_match::str
-- std::sub_match::difference_type
 - regex/std::sub_match::difference_type
-- std::sub_match::iterator
 - regex/std::sub_match::iterator
-- std::sub_match::value_type
 - regex/std::sub_match::value_type
 dev_langs:
 - C++
@@ -49,10 +41,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: 1a2b0c43fd5942e6f4b9ddd54c50db8bc8e8218f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 12d12497fa96d7cf4185ad3664908a56be1078c9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="submatch-class"></a>sub_match 类
@@ -85,7 +78,7 @@ public:
  子匹配项的迭代器类型。  
   
 ## <a name="remarks"></a>备注  
- 此模板类描述指定字符序列的对象，该字符序列与调用 [regex_match Function](../standard-library/regex-functions.md#regex_match_function) 或 [regex_search Function](../standard-library/regex-functions.md#regex_search_function) 的捕获组匹配。 [match_results Class](../standard-library/match-results-class.md) 类型的对象保存这些对象的数组，每个数组用于搜索中所用正则表达式中的每个捕获组。  
+ 此模板类描述一个对象，它指定对的调用中的捕获组匹配的字符序列[regex_match](../standard-library/regex-functions.md#regex_match)或[regex_search](../standard-library/regex-functions.md#regex_search)。 [match_results Class](../standard-library/match-results-class.md) 类型的对象保存这些对象的数组，每个数组用于搜索中所用正则表达式中的每个捕获组。  
   
  如果捕获组不匹配，则对象的数据成员 `matched` 保持为 false，两个迭代器 `first` 和 `second` （继承自基类 `std::pair`）相等。 如果捕获组匹配，则 `matched` 保持为 true，迭代器 `first` 指向与捕获组匹配的目标序列中第一个字符，迭代器 `second` 与捕获组匹配的目标序列中最后一个字符后紧邻的位置。 请注意，对于长度为零的匹配项，成员 `matched` 保持为 true，两个迭代器将相等并将同时将指向匹配项的位置。  
   
@@ -96,11 +89,11 @@ public:
  “b(a*)b”匹配目标序列“bb”； `sub_match` 对象对应捕获组 0 持有两个迭代器，它们均指向序列中第二个字符。  
   
 ## <a name="requirements"></a>要求  
- **标头：**\<regex&1;>  
+ **标头：**\<regex 1>  
   
  **命名空间：** std  
   
-##  <a name="a-namesubmatchcomparea--submatchcompare"></a><a name="sub_match__compare"></a>  sub_match::compare  
+##  <a name="compare"></a>  sub_match::compare  
  将子匹配项与序列进行比较。  
   
 ```  
@@ -183,7 +176,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchdifferencetypea--submatchdifferencetype"></a><a name="sub_match__difference_type"></a>  sub_match::difference_type  
+##  <a name="difference_type"></a>  sub_match::difference_type  
  迭代器差异的类型。  
   
 ```  
@@ -246,7 +239,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchiteratora--submatchiterator"></a><a name="sub_match__iterator"></a>  sub_match::iterator  
+##  <a name="iterator"></a>  sub_match::iterator  
  迭代器的类型。  
   
 ```  
@@ -309,7 +302,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchlengtha--submatchlength"></a><a name="sub_match__length"></a>  sub_match::length  
+##  <a name="length"></a>  sub_match::length  
  返回子匹配项的长度。  
   
 ```  
@@ -372,7 +365,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchmatcheda--submatchmatched"></a><a name="sub_match__matched"></a>  sub_match::matched  
+##  <a name="matched"></a>  sub_match::matched  
  指示是否匹配成功。  
   
 ```  
@@ -435,7 +428,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchoperatorbasicstringltvaluetypegta--submatchoperator-basicstringltvaluetypegt"></a><a name="sub_match__operator_basic_string_lt_value_type_gt_"></a>sub_match::operator basic_string&lt;value_type&gt;  
+##  <a name="op_basic_string_lt_value_type_gt"></a>sub_match::operator basic_string&lt;value_type&gt;  
  将子匹配转换为字符串。  
   
 ```  
@@ -498,7 +491,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchstra--submatchstr"></a><a name="sub_match__str"></a>  sub_match::str  
+##  <a name="str"></a>  sub_match::str  
  将子匹配转换为字符串。  
   
 ```  
@@ -561,7 +554,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchvaluetypea--submatchvaluetype"></a><a name="sub_match__value_type"></a>  sub_match::value_type  
+##  <a name="value_type"></a>  sub_match::value_type  
  元素的类型。  
   
 ```  

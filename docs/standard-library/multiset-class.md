@@ -9,10 +9,48 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::multiset
 - set/std::multiset
-- std.multiset
 - multiset
+- set/std::multiset::allocator_type
+- set/std::multiset::const_iterator
+- set/std::multiset::const_pointer
+- set/std::multiset::const_reference
+- set/std::multiset::const_reverse_iterator
+- set/std::multiset::difference_type
+- set/std::multiset::iterator
+- set/std::multiset::key_compare
+- set/std::multiset::key_type
+- set/std::multiset::pointer
+- set/std::multiset::reference
+- set/std::multiset::reverse_iterator
+- set/std::multiset::size_type
+- set/std::multiset::value_compare
+- set/std::multiset::value_type
+- set/std::multiset::begin
+- set/std::multiset::cbegin
+- set/std::multiset::cend
+- set/std::multiset::clear
+- set/std::multiset::count
+- set/std::multiset::crbegin
+- set/std::multiset::crend
+- set/std::multiset::emplace
+- set/std::multiset::emplace_hint
+- set/std::multiset::empty
+- set/std::multiset::end
+- set/std::multiset::equal_range
+- set/std::multiset::erase
+- set/std::multiset::find
+- set/std::multiset::get_allocator
+- set/std::multiset::insert
+- set/std::multiset::key_comp
+- set/std::multiset::lower_bound
+- set/std::multiset::max_size
+- set/std::multiset::rbegin
+- set/std::multiset::rend
+- set/std::multiset::size
+- set/std::multiset::swap
+- set/std::multiset::upper_bound
+- set/std::multiset::value_comp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f1b633b3793e99c24d0ae386a73e38e08cca088f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ff713a2813798c82b42ecc814d433e64ba2a51a6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="multiset-class"></a>multiset 类
@@ -59,7 +98,7 @@ class multiset
  *Compare*  
  一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在多重集合中的相对顺序。 默认值是二元谓词 **less**\<Key>。  
   
- 在 C++&14; 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
  一种表示存储的分配器对象的类型，该分配器对象封装有关多重集合的内存分配和解除分配的详细信息。 默认值为 **allocator***\<Key>。*  
@@ -79,84 +118,84 @@ class multiset
   
 -   模板类，因为它提供的功能是一般性的功能，因此与作为元素包含的特定数据类型无关。 可使用的数据类型作为类模板以及比较函数和分配器中的参数指定。  
   
- 多重集合类提供的迭代器是双向迭代器，但类成员函数 [insert](#multiset__insert) 和 [multiset](#multiset__multiset) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能需求比双向迭代器类保证的功能需求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 [`First`, `Last`)。  
+ 多重集合类提供的迭代器是双向迭代器，但类成员函数 [insert](#insert) 和 [multiset](#multiset) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能需求比双向迭代器类保证的功能需求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 [`First`, `Last`)。  
   
  容器类型选择通常应根据应用程序所需的搜索和插入的类型。 关联容器针对查找、插入和移除操作进行了优化。 显式支持这些操作的成员函数较为高效，执行这些操作的时间与容器中元素数量的对数平均成比例。 插入元素不会使迭代器失效，移除元素仅会使专门指向已移除元素的迭代器失效。  
   
  当应用程序满足将值与其键关联的条件时，应选择多重集合作为关联容器。 多重集合的元素可以为多个，并用作其自己的排序键，因此键不是唯一的。 此类结构的模型是排序列表，如关键字排序列表，其中关键字可以出现多次。 如果不允许关键字多次出现，则应使用集作为适当的容器结构。 如果将唯一定义作为值附加到唯一关键字的列表，则映射应为包含此数据的适当结构。 如果定义不唯一，则应选择多重映射作为容器。  
   
- 多重集合通过调用存储的 `Compare` 类型的函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#multiset__key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（*x* 和 *y*）以及一个返回值（**true** 或 **false**）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 x 和 y 定义为在 *f*( *x,y*) 和 *f*( *y,x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。  
+ 多重集合通过调用存储的 `Compare` 类型的函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（*x* 和 *y*）以及一个返回值（**true** 或 **false**）的函数对象。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 x 和 y 定义为在 *f*( *x,y*) 和 *f*( *y,x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。  
   
- 在 C++&14; 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)  
   
 ### <a name="constructors"></a>构造函数  
   
 |||  
 |-|-|  
-|[multiset](#multiset__multiset)|构造一个空的或者是指定 `multiset` 的全部或部分副本的 `multiset`。|  
+|[multiset](#multiset)|构造一个空的或者是指定 `multiset` 的全部或部分副本的 `multiset`。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[allocator_type](#multiset__allocator_type)|`allocator` 对象的 `multiset` 类的 typedef。|  
-|[const_iterator](#multiset__const_iterator)|可读取 `const` 中 `multiset` 元素的双向迭代器的 typedef。|  
-|[const_pointer](#multiset__const_pointer)|指向 `const` 中的 `multiset` 元素的指针的 typedef。|  
-|[const_reference](#multiset__const_reference)|对存储在 `const` 中的 `multiset` 元素的引用（用于读取和执行 `const` 操作）的 typedef。|  
-|[const_reverse_iterator](#multiset__const_reverse_iterator)|可读取 `const` 中任何 `multiset` 元素的双向迭代器的 typedef。|  
-|[difference_type](#multiset__difference_type)|`multiset` 中迭代器指向的元素间范围内元素数量的有符号整数 typedef。|  
-|[iterator](#multiset__iterator)|可读取或修改 `multiset` 中任何元素的双向迭代器的 typedef。|  
-|[key_compare](#multiset__key_compare)|可比较两个键以确定 `multiset` 中两个元素的相对顺序的函数对象的 typedef。|  
-|[key_type](#multiset__key_type)|可比较两个排序键以确定 `multiset` 中两个元素的相对顺序的函数对象的 typedef。|  
-|[pointer](#multiset__pointer)|指向 `multiset` 中的元素的指针的 typedef。|  
-|[reference](#multiset__reference)|对 `multiset` 中存储的元素的引用的 typedef。|  
-|[reverse_iterator](#multiset__reverse_iterator)|可读取或修改反向 `multiset` 中的元素的双向迭代器的 typedef。|  
-|[size_type](#multiset__size_type)|可表示 `multiset` 中元素数量的无符号整数类型。|  
-|[value_compare](#multiset__value_compare)|可将两个元素作为排序键比较以确定它们在 `multiset` 中的相对顺序的函数对象的 typedef。|  
-|[value_type](#multiset__value_type)|一个 typedef，描述当 `multiset` 作为值时存储为元素的对象。|  
+|[allocator_type](#allocator_type)|`allocator` 对象的 `multiset` 类的 typedef。|  
+|[const_iterator](#const_iterator)|可读取 `const` 中 `multiset` 元素的双向迭代器的 typedef。|  
+|[const_pointer](#const_pointer)|指向 `const` 中的 `multiset` 元素的指针的 typedef。|  
+|[const_reference](#const_reference)|对存储在 `const` 中的 `multiset` 元素的引用（用于读取和执行 `const` 操作）的 typedef。|  
+|[const_reverse_iterator](#const_reverse_iterator)|可读取 `const` 中任何 `multiset` 元素的双向迭代器的 typedef。|  
+|[difference_type](#difference_type)|`multiset` 中迭代器指向的元素间范围内元素数量的有符号整数 typedef。|  
+|[iterator](#iterator)|可读取或修改 `multiset` 中任何元素的双向迭代器的 typedef。|  
+|[key_compare](#key_compare)|可比较两个键以确定 `multiset` 中两个元素的相对顺序的函数对象的 typedef。|  
+|[key_type](#key_type)|可比较两个排序键以确定 `multiset` 中两个元素的相对顺序的函数对象的 typedef。|  
+|[pointer](#pointer)|指向 `multiset` 中的元素的指针的 typedef。|  
+|[reference](#reference)|对 `multiset` 中存储的元素的引用的 typedef。|  
+|[reverse_iterator](#reverse_iterator)|可读取或修改反向 `multiset` 中的元素的双向迭代器的 typedef。|  
+|[size_type](#size_type)|可表示 `multiset` 中元素数量的无符号整数类型。|  
+|[value_compare](#value_compare)|可将两个元素作为排序键比较以确定它们在 `multiset` 中的相对顺序的函数对象的 typedef。|  
+|[value_type](#value_type)|一个 typedef，描述当 `multiset` 作为值时存储为元素的对象。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[begin](#multiset__begin)|返回一个迭代器，此迭代器指向 `multiset` 中的第一个元素。|  
-|[cbegin](#multiset__cbegin)|返回一个常量迭代器，此迭代器用于发现 `multiset` 中的第一个元素。|  
-|[cend](#multiset__cend)|返回一个常量迭代器，此迭代器用于发现 `multiset` 中最后一个元素之后的位置。|  
-|[clear](#multiset__clear)|清除 `multiset` 的所有元素。|  
-|[count](#multiset__count)|返回 `multiset` 中其键与指定为参数的键匹配的元素数量。|  
-|[crbegin](#multiset__crbegin)|返回一个常量迭代器，此迭代器用于发现反向集中的第一个元素。|  
-|[crend](#multiset__crend)|返回一个常量迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。|  
-|[emplace](#multiset__emplace)|将就地构造的元素插入到 `multiset`。|  
-|[emplace_hint](#multiset__emplace_hint)|将就地构造的元素插入到 `multiset`，附带位置提示。|  
-|[empty](#multiset__empty)|测试 `multiset` 是否为空。|  
-|[end](#multiset__end)|返回一个迭代器，此迭代器指向 `multiset` 中最后一个元素之后的位置。|  
-|[equal_range](#multiset__equal_range)|返回一对迭代器。 此迭代器对中的第一个迭代器指向 `multiset` 中其键大于指定键的第一个元素。 此迭代器对中的第二个迭代器指向 `multiset` 中其键等于或大于指定键的第一个元素。|  
-|[erase](#multiset__erase)|从 `multiset` 中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。|  
-|[find](#multiset__find)|返回一个迭代器，此迭代器指向 `multiset` 中其键与指定键相等的元素的第一个位置。|  
-|[get_allocator](#multiset__get_allocator)|返回用于构造 `allocator` 的 `multiset` 对象的副本。|  
-|[insert](#multiset__insert)|将一个元素或元素范围插入到 `multiset`。|  
-|[key_comp](#multiset__key_comp)|提供一个函数对象，此函数对象可比较两个排序键以确定 `multiset` 中两个元素的相对顺序。|  
-|[lower_bound](#multiset__lower_bound)|返回一个迭代器，此迭代器指向 `multiset` 中其键等于或大于指定键的第一个元素。|  
-|[max_size](#multiset__max_size)|返回 `multiset` 的最大长度。|  
-|[rbegin](#multiset__rbegin)|返回一个迭代器，此迭代器指向反向 `multiset` 中的第一个元素。|  
-|[rend](#multiset__rend)|返回一个迭代器，此迭代器指向反向 `multiset` 中最后一个元素之后的位置。|  
-|[size](#multiset__size)|返回 `multiset` 中的元素数量。|  
-|[swap](#multiset__swap)|交换两个 `multiset` 的元素。|  
-|[upper_bound](#multiset__upper_bound)|返回一个迭代器，此迭代器指向 `multiset` 中其键大于指定键的第一个元素。|  
-|[value_comp](#multiset__value_comp)|检索用于对 `multiset` 中的元素值进行排序的比较对象副本。|  
+|[begin](#begin)|返回一个迭代器，此迭代器指向 `multiset` 中的第一个元素。|  
+|[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现 `multiset` 中的第一个元素。|  
+|[cend](#cend)|返回一个常量迭代器，此迭代器用于发现 `multiset` 中最后一个元素之后的位置。|  
+|[clear](#clear)|清除 `multiset` 的所有元素。|  
+|[count](#count)|返回 `multiset` 中其键与指定为参数的键匹配的元素数量。|  
+|[crbegin](#crbegin)|返回一个常量迭代器，此迭代器用于发现反向集中的第一个元素。|  
+|[crend](#crend)|返回一个常量迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。|  
+|[emplace](#emplace)|将就地构造的元素插入到 `multiset`。|  
+|[emplace_hint](#emplace_hint)|将就地构造的元素插入到 `multiset`，附带位置提示。|  
+|[empty](#empty)|测试 `multiset` 是否为空。|  
+|[end](#end)|返回一个迭代器，此迭代器指向 `multiset` 中最后一个元素之后的位置。|  
+|[equal_range](#equal_range)|返回一对迭代器。 此迭代器对中的第一个迭代器指向 `multiset` 中其键大于指定键的第一个元素。 此迭代器对中的第二个迭代器指向 `multiset` 中其键等于或大于指定键的第一个元素。|  
+|[erase](#erase)|从 `multiset` 中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。|  
+|[find](#find)|返回一个迭代器，此迭代器指向 `multiset` 中其键与指定键相等的元素的第一个位置。|  
+|[get_allocator](#get_allocator)|返回用于构造 `allocator` 的 `multiset` 对象的副本。|  
+|[insert](#insert)|将一个元素或元素范围插入到 `multiset`。|  
+|[key_comp](#key_comp)|提供一个函数对象，此函数对象可比较两个排序键以确定 `multiset` 中两个元素的相对顺序。|  
+|[lower_bound](#lower_bound)|返回一个迭代器，此迭代器指向 `multiset` 中其键等于或大于指定键的第一个元素。|  
+|[max_size](#max_size)|返回 `multiset` 的最大长度。|  
+|[rbegin](#rbegin)|返回一个迭代器，此迭代器指向反向 `multiset` 中的第一个元素。|  
+|[rend](#rend)|返回一个迭代器，此迭代器指向反向 `multiset` 中最后一个元素之后的位置。|  
+|[size](#size)|返回 `multiset` 中的元素数量。|  
+|[swap](#swap)|交换两个 `multiset` 的元素。|  
+|[upper_bound](#upper_bound)|返回一个迭代器，此迭代器指向 `multiset` 中其键大于指定键的第一个元素。|  
+|[value_comp](#value_comp)|检索用于对 `multiset` 中的元素值进行排序的比较对象副本。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator=](#multiset__operator_eq)|将一个 `multiset` 中的元素替换为另一 `multiset` 副本。|  
+|[operator=](#op_eq)|将一个 `multiset` 中的元素替换为另一 `multiset` 副本。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<set>  
   
  **命名空间：** std  
   
-##  <a name="a-namemultisetallocatortypea--multisetallocatortype"></a><a name="multiset__allocator_type"></a>  multiset::allocator_type  
+##  <a name="allocator_type"></a>  multiset::allocator_type  
  一种类型，它代表多重集对象的分配器类  
   
 ```  
@@ -169,9 +208,9 @@ typedef Allocator allocator_type;
  有关 `Allocator` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。  
   
 ### <a name="example"></a>示例  
-  有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#multiset__get_allocator) 的示例  
+  有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例  
   
-##  <a name="a-namemultisetbegina--multisetbegin"></a><a name="multiset__begin"></a>  multiset::begin  
+##  <a name="begin"></a>  multiset::begin  
  返回发现多重集中第一个元素的位置的迭代器。  
   
 ```  
@@ -222,7 +261,7 @@ The first element of ms1 is 1
 The first element of ms1 is now 2  
 ```  
   
-##  <a name="a-namemultisetcbegina--multisetcbegin"></a><a name="multiset__cbegin"></a>  multiset::cbegin  
+##  <a name="cbegin"></a>  multiset::cbegin  
  返回确定范围中第一个元素地址的 `const` 迭代器。  
   
 ```  
@@ -245,7 +284,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namemultisetcenda--multisetcend"></a><a name="multiset__cend"></a>  multiset::cend  
+##  <a name="cend"></a>  multiset::cend  
  返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
   
 ```  
@@ -258,7 +297,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>备注  
  `cend` 用于测试迭代器是否超过了其范围的末尾。  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的 (non- `const`) 任何类型的容器。  
+ 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -270,7 +309,7 @@ auto i2 = Container.cend();
   
  不应对 `cend` 返回的值取消引用。  
   
-##  <a name="a-namemultisetcleara--multisetclear"></a><a name="multiset__clear"></a>  multiset::clear  
+##  <a name="clear"></a>  multiset::clear  
  清除多重集的所有元素。  
   
 ```  
@@ -307,7 +346,7 @@ The size of the multiset is initially 2.
 The size of the multiset after clearing is 0.  
 ```  
   
-##  <a name="a-namemultisetconstiteratora--multisetconstiterator"></a><a name="multiset__const_iterator"></a>  multiset::const_iterator  
+##  <a name="const_iterator"></a>  multiset::const_iterator  
  一种类型，提供可读取多重集中 **const** 元素的双向迭代器。  
   
 ```  
@@ -318,9 +357,9 @@ typedef implementation-defined const_iterator;
  `const_iterator` 类型不能用于修改元素的值。  
   
 ### <a name="example"></a>示例  
-  有关使用 `const_iterator` 的示例，请参阅 [begin](#multiset__begin) 的示例。  
+  有关使用 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。  
   
-##  <a name="a-namemultisetconstpointera--multisetconstpointer"></a><a name="multiset__const_pointer"></a>  multiset::const_pointer  
+##  <a name="const_pointer"></a>  multiset::const_pointer  
  一种类型，它提供指向多重集中 **const** 元素的指针。  
   
 ```  
@@ -330,9 +369,9 @@ typedef typename allocator_type::const_pointer const_pointer;
 ### <a name="remarks"></a>备注  
  `const_pointer` 类型不能用于修改元素的值。  
   
- 在大多数情况下，应使用 [iterator](#multiset__iterator) 访问多重集对象中的元素。  
+ 在大多数情况下，应使用 [iterator](#iterator) 访问多重集对象中的元素。  
   
-##  <a name="a-namemultisetconstreferencea--multisetconstreference"></a><a name="multiset__const_reference"></a>  multiset::const_reference  
+##  <a name="const_reference"></a>  multiset::const_reference  
  一种类型，此类型提供对用于读取和执行 **const** 操作的多重集中存储的 **const** 元素的引用。  
   
 ```  
@@ -372,7 +411,7 @@ int main( )
 The first element in the multiset is 10.  
 ```  
   
-##  <a name="a-namemultisetconstreverseiteratora--multisetconstreverseiterator"></a><a name="multiset__const_reverse_iterator"></a>  multiset::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  multiset::const_reverse_iterator  
  一种类型，提供可读取多重集中任何 **const** 元素的双向迭代器。  
   
 ```  
@@ -383,9 +422,9 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
  `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问多重集。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#multiset__rend) 的示例。  
+  有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例。  
   
-##  <a name="a-namemultisetcounta--multisetcount"></a><a name="multiset__count"></a>  multiset::count  
+##  <a name="count"></a>  multiset::count  
  返回 multiset 中其键与指定了参数的键匹配的元素数量。  
   
 ```  
@@ -393,7 +432,7 @@ size_type count(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要从 multiset 中进行匹配的元素的键。  
   
 ### <a name="return-value"></a>返回值  
@@ -445,7 +484,7 @@ The number of elements in ms1 with a sort key of 2 is: 1.
 The number of elements in ms1 with a sort key of 3 is: 0.  
 ```  
   
-##  <a name="a-namemultisetcrbegina--multisetcrbegin"></a><a name="multiset__crbegin"></a>  multiset::crbegin  
+##  <a name="crbegin"></a>  multiset::crbegin  
  返回一个常量迭代器，此迭代器用于发现反向多重集中的第一个元素。  
   
 ```  
@@ -490,7 +529,7 @@ int main( )
 The first element in the reversed multiset is 30.  
 ```  
   
-##  <a name="a-namemultisetcrenda--multisetcrend"></a><a name="multiset__crend"></a>  multiset::crend  
+##  <a name="crend"></a>  multiset::crend  
  返回一个常量迭代器，此迭代器用于发现反向多重集中最后一个元素之后的位置。  
   
 ```  
@@ -501,7 +540,7 @@ const_reverse_iterator crend() const;
  用于发现反向多重集中最后一个元素之后的位置（非反向多重集中第一个元素之前的位置）的常量反向双向迭代器。  
   
 ### <a name="remarks"></a>备注  
- `crend` 用于反向多重集，正如 [end](#multiset__end) 用于多重集一样。  
+ `crend` 用于反向多重集，正如 [end](#end) 用于多重集一样。  
   
  返回值为 `crend` 时，无法修改多重集对象。  
   
@@ -533,7 +572,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemultisetdifferencetypea--multisetdifferencetype"></a><a name="multiset__difference_type"></a>  multiset::difference_type  
+##  <a name="difference_type"></a>  multiset::difference_type  
  一种带符号整数类型，此类型可用于表示多重集中迭代器指向的元素间范围内的元素数量。  
   
 ```  
@@ -541,7 +580,7 @@ typedef typename allocator_type::difference_type difference_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 ` first` 和 ` last` 之间的范围 [ ` first`, ` last`) 内元素的数目，包括 ` first` 指向的元素以及那一系列元素，但不包括 ` last` 指向的元素。  
+ `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 [ `first`, `last`) 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。  
   
  注意，尽管 `difference_type` 适用于满足输入迭代器（包括可逆容器支持的双向迭代器的类，如集）需求的所有迭代器，迭代器之间的减法仅受随机访问容器（如 vector）提供的随机访问迭代器支持。  
   
@@ -603,7 +642,7 @@ The number '20' occurs 2 times in multiset ms1.
 The number of elements in the multiset ms1 is: 3.  
 ```  
   
-##  <a name="a-namemultisetemplacea--multisetemplace"></a><a name="multiset__emplace"></a>  multiset::emplace  
+##  <a name="emplace"></a>  multiset::emplace  
  使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -668,7 +707,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemultisetemplacehinta--multisetemplacehint"></a><a name="multiset__emplace_hint"></a>  multiset::emplace_hint  
+##  <a name="emplace_hint"></a>  multiset::emplace_hint  
  使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -694,9 +733,9 @@ iterator emplace_hint(
   
  在定位过程中，如果引发异常，则不会修改该容器的状态。  
   
- 有关代码示例，请参阅 [set::emplace_hint](../standard-library/set-class.md#set__emplace_hint)。  
+ 有关代码示例，请参阅 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)。  
   
-##  <a name="a-namemultisetemptya--multisetempty"></a><a name="multiset__empty"></a>  multiset::empty  
+##  <a name="empty"></a>  multiset::empty  
  测试多重集是否为空。  
   
 ```  
@@ -737,7 +776,7 @@ The multiset ms1 is not empty.
 The multiset ms2 is empty.  
 ```  
   
-##  <a name="a-namemultisetenda--multisetend"></a><a name="multiset__end"></a>  multiset::end  
+##  <a name="end"></a>  multiset::end  
  返回超过末尾迭代器。  
   
 ```  
@@ -756,9 +795,9 @@ iterator end();
   
  不应对 **end** 返回的值取消引用。  
   
- 有关代码示例，请参阅 [multiset::find](#multiset__find)。  
+ 有关代码示例，请参阅 [multiset::find](#find)。  
   
-##  <a name="a-namemultisetequalrangea--multisetequalrange"></a><a name="multiset__equal_range"></a>  multiset::equal_range  
+##  <a name="equal_range"></a>  multiset::equal_range  
  返回一对迭代器，这两个迭代器分别用于发现多重集中其键大于指定键的第一个元素，以及多重集中其键等于或大于指定键的第一个元素。  
   
 ```  
@@ -768,11 +807,11 @@ pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的多重集中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
- 一对迭代器，其中第一个是键的 [lower_bound](#multiset__lower_bound)，第二个是键的 [upper_bound](#multiset__upper_bound)。  
+ 一对迭代器，其中第一个是键的 [lower_bound](#lower_bound)，第二个是键的 [upper_bound](#upper_bound)。  
   
  若要访问成员函数返回的 `pr` 对的第一个迭代器，请使用 `pr`. **first**；若要取消引用下界迭代器，请使用 \*( `pr`. **first**)。 若要访问成员函数返回的 `pr` 对的第二个迭代器，请使用 `pr`. **second**；若要取消引用上界迭代器，请使用 \*( `pr`. **second**)。  
   
@@ -834,7 +873,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The multiset ms1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="a-namemultiseterasea--multiseterase"></a><a name="multiset__erase"></a>  multiset::erase  
+##  <a name="erase"></a>  multiset::erase  
  从多重集中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。  
   
 ```  
@@ -868,9 +907,9 @@ size_type erase(
  对于第三个成员函数，则返回已从多重集中移除的元素的数目。  
   
 ### <a name="remarks"></a>备注  
- 有关代码示例，请参阅 [set::erase](../standard-library/set-class.md#set__erase)。  
+ 有关代码示例，请参阅 [set::erase](../standard-library/set-class.md#erase)。  
   
-##  <a name="a-namemultisetfinda--multisetfind"></a><a name="multiset__find"></a>  multiset::find  
+##  <a name="find"></a>  multiset::find  
  返回引用多重集当中具有与指定键等效的键的元素的位置的迭代器。  
   
 ```  
@@ -953,7 +992,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-namemultisetgetallocatora--multisetgetallocator"></a><a name="multiset__get_allocator"></a>  multiset::get_allocator  
+##  <a name="get_allocator"></a>  multiset::get_allocator  
  返回用于构造多重集的分配器对象的一个副本。  
   
 ```  
@@ -1018,7 +1057,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemultisetinserta--multisetinsert"></a><a name="multiset__insert"></a>  multiset::insert  
+##  <a name="insert"></a>  multiset::insert  
  将一个元素或元素范围插入到多重集合中。  
   
 ```  
@@ -1067,10 +1106,10 @@ IList);
 |参数|描述|  
 |`Val`|要插入到多重集合中的元素的值。|  
 |`Where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `Where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|  
-|`ValTy`|指定多重集合可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 元素的自变量类型并将 `Val` 作为自变量完美转发的模板参数。|  
+|`ValTy`|指定多重集合可用于构造 [value_type](../standard-library/map-class.md#value_type) 元素的自变量类型并将 `Val` 作为自变量完美转发的模板参数。|  
 |`First`|要复制的第一个元素的位置。|  
 |`Last`|要复制的最后一个元素以外的位置。|  
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 对象的类型的元素。|  
+|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|  
 |`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|  
   
 ### <a name="return-value"></a>返回值  
@@ -1083,13 +1122,13 @@ IList);
   
  在插入单个元素的过程中，如果引发异常，则不会修改该容器的状态。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。  
   
- 容器的 [value_type](../standard-library/map-class.md#map__value_type) 是属于该容器的 typedef；对于集，`multiset<V>::value_type` 是 `const V` 类型。  
+ 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于集，`multiset<V>::value_type` 是 `const V` 类型。  
   
  范围成员函数 (5) 将元素值序列插入到多重集合中，它对应于迭代器在范围 `[First, Last)` 中所处理的每一个元素；因此，不会插入 `Last`。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`s.insert(v.begin(), v.end());` 语句会将 `v` 的所有元素插入到 `s` 中。  
   
  初始值设定项列表成员函数 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 将元素复制到多重集合中。  
   
- 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [multiset::emplace](#multiset__emplace) 和 [multiset::emplace_hint](#multiset__emplace_hint)。  
+ 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [multiset::emplace](#emplace) 和 [multiset::emplace_hint](#emplace_hint)。  
   
 ### <a name="example"></a>示例  
   
@@ -1182,7 +1221,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemultisetiteratora--multisetiterator"></a><a name="multiset__iterator"></a>  multiset::iterator  
+##  <a name="iterator"></a>  multiset::iterator  
  提供可读取多组中的任何元素的常量[双向迭代器](../standard-library/bidirectional-iterator-tag-struct.md)的类型。  
   
 ```  
@@ -1190,9 +1229,9 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#multiset__begin) 的示例。  
+  有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#begin) 的示例。  
   
-##  <a name="a-namemultisetkeycompa--multisetkeycomp"></a><a name="multiset__key_comp"></a>  multiset::key_comp  
+##  <a name="key_comp"></a>  multiset::key_comp  
  检索用于对多重集中的键进行排序的比较对象副本。  
   
 ```  
@@ -1211,7 +1250,7 @@ key_compare key_comp() const;
   
  如果在排序顺序中 *x* 严格位于 *y* 之前，则返回 true。  
   
- 请注意，[key_compare](#multiset__key_compare) 和 [value_compare](#multiset__value_compare) 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
 ### <a name="example"></a>示例  
   
@@ -1264,7 +1303,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of ms2.  
 ```  
   
-##  <a name="a-namemultisetkeycomparea--multisetkeycompare"></a><a name="multiset__key_compare"></a>  multiset::key_compare  
+##  <a name="key_compare"></a>  multiset::key_compare  
  一种提供函数对象的类型，该函数对象可比较两个排序键以确定多重集中两个元素的相对顺序。  
   
 ```  
@@ -1277,9 +1316,9 @@ typedef Compare key_compare;
  有关 `Compare` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#multiset__key_comp) 的示例。  
+  有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。  
   
-##  <a name="a-namemultisetkeytypea--multisetkeytype"></a><a name="multiset__key_type"></a>  multiset::key_type  
+##  <a name="key_type"></a>  multiset::key_type  
  一种提供函数对象的类型，该函数对象可比较排序键以确定多重集中两个元素的相对顺序。  
   
 ```  
@@ -1292,9 +1331,9 @@ typedef Key key_type;
  有关 `Key` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#multiset__value_type) 的示例。  
+  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。  
   
-##  <a name="a-namemultisetlowerbounda--multisetlowerbound"></a><a name="multiset__lower_bound"></a>  multiset::lower_bound  
+##  <a name="lower_bound"></a>  multiset::lower_bound  
  返回一个迭代器，此迭代器指向多重集中其键等于或大于指定键的第一个元素。  
   
 ```  
@@ -1304,7 +1343,7 @@ iterator lower_bound(const Key& key);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的多重集中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
@@ -1359,7 +1398,7 @@ The multiset ms1 doesn't have an element with a key of 40.
 The element of ms1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="a-namemultisetmaxsizea--multisetmaxsize"></a><a name="multiset__max_size"></a>  multiset::max_size  
+##  <a name="max_size"></a>  multiset::max_size  
  返回多重集的最大长度。  
   
 ```  
@@ -1389,7 +1428,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemultisetmultiseta--multisetmultiset"></a><a name="multiset__multiset"></a>  multiset::multiset  
+##  <a name="multiset"></a>  multiset::multiset  
  构造一个空的或者是其他某个多重集的全部或部分副本的多重集。  
   
 ```  
@@ -1453,11 +1492,11 @@ multiset (
 |`IList`|从中复制元素的 initializer_list。|  
   
 ### <a name="remarks"></a>备注  
- 所有构造函数存储一种类型的分配器对象，此类对象管理多重集的内存存储，且事后可通过调用 [get_allocator](#multiset__get_allocator) 返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。  
+ 所有构造函数存储一种类型的分配器对象，此类对象管理多重集的内存存储，且事后可通过调用 [get_allocator](#get_allocator) 返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。  
   
  所有构造函数对它们的多重集进行初始化。  
   
- 所有构造函数会存储类型为 Compare 的函数对象，此对象用于在多重集的键之间建立顺序，且事后可通过调用 [key_comp](#multiset__key_comp) 返回。  
+ 所有构造函数会存储类型为 Compare 的函数对象，此对象用于在多重集的键之间建立顺序，且事后可通过调用 [key_comp](#key_comp) 返回。  
   
  前三个构造函数均指定空的起始多重集，此外，第二个函数还指定用于建立元素顺序的比较函数 (`Comp`) 的类型，第三个函数还显式指定了要使用的分配器类型 (`Al`)。 关键字 `explicit` 取消了某些种类的自动类型转换。  
   
@@ -1570,7 +1609,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-namemultisetoperatoreqa--multisetoperator"></a><a name="multiset__operator_eq"></a>  multiset::operator=  
+##  <a name="op_eq"></a>  multiset::operator=  
  使用另一个 `multiset` 的元素替换该 `multiset` 的元素。  
   
 ```  
@@ -1584,10 +1623,10 @@ multiset& operator=(multiset&& right);
 |||  
 |-|-|  
 |参数|描述|  
-|` right`|从中复制或移动元素的 `multiset`。|  
+|`right`|从中复制或移动元素的 `multiset`。|  
   
 ### <a name="remarks"></a>备注  
- `operator=` 会将 ` right` 中的元素复制或移动到此 `multiset`，具体取决于使用的引用类型（左值或右值）。 放弃 `operator=` executes 之前此 `multiset` 中的元素。  
+ `operator=` 会将 `right` 中的元素复制或移动到此 `multiset`，具体取决于使用的引用类型（左值或右值）。 放弃 `operator=` executes 之前此 `multiset` 中的元素。  
   
 ### <a name="example"></a>示例  
   
@@ -1626,7 +1665,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-namemultisetpointera--multisetpointer"></a><a name="multiset__pointer"></a>  multiset::pointer  
+##  <a name="pointer"></a>  multiset::pointer  
  一种类型，此类型提供指向多重集中元素的指针。  
   
 ```  
@@ -1636,9 +1675,9 @@ typedef typename allocator_type::pointer pointer;
 ### <a name="remarks"></a>备注  
  **pointer** 类型可用于修改元素的值。  
   
- 在大多数情况下，应使用 [iterator](#multiset__iterator) 访问多重集对象中的元素。  
+ 在大多数情况下，应使用 [iterator](#iterator) 访问多重集对象中的元素。  
   
-##  <a name="a-namemultisetrbegina--multisetrbegin"></a><a name="multiset__rbegin"></a>  multiset::rbegin  
+##  <a name="rbegin"></a>  multiset::rbegin  
  返回一个迭代器，此迭代器用于发现反向多重集中的第一个元素。  
   
 ```  
@@ -1712,7 +1751,7 @@ The reversed multiset is: 30 20 10
 After the erasure, the first element in the reversed multiset is 20.  
 ```  
   
-##  <a name="a-namemultisetreferencea--multisetreference"></a><a name="multiset__reference"></a>  multiset::reference  
+##  <a name="reference"></a>  multiset::reference  
  一种类型，此类型提供对存储在多重集中的元素的引用。  
   
 ```  
@@ -1747,7 +1786,7 @@ int main( )
 The first element in the multiset is 10.  
 ```  
   
-##  <a name="a-namemultisetrenda--multisetrend"></a><a name="multiset__rend"></a>  multiset::rend  
+##  <a name="rend"></a>  multiset::rend  
  返回一个迭代器，此迭代器用于发现反向多重集中最后一个元素之后的位置。  
   
 ```  
@@ -1760,7 +1799,7 @@ reverse_iterator rend();
  用于发现反向多重集中最后一个元素之后的位置（非反向多重集中第一个元素之前的位置）的反向双向迭代器。  
   
 ### <a name="remarks"></a>备注  
- `rend` 用于反向多重集，正如 [end](#multiset__end) 用于多重集一样。  
+ `rend` 用于反向多重集，正如 [end](#end) 用于多重集一样。  
   
  如果将 `rend` 的返回值赋予 `const_reverse_iterator`，则无法修改多重集对象。 如果将 `rend` 的返回值赋予 `reverse_iterator`，则可修改多重集对象。  
   
@@ -1817,7 +1856,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemultisetreverseiteratora--multisetreverseiterator"></a><a name="multiset__reverse_iterator"></a>  multiset::reverse_iterator  
+##  <a name="reverse_iterator"></a>  multiset::reverse_iterator  
  一种类型，此类型提供可读取或修改反向多重集中的元素的双向迭代器。  
   
 ```  
@@ -1828,9 +1867,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
  `reverse_iterator` 类型用于反向循环访问多重集。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#multiset__rbegin) 的示例。  
+  有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。  
   
-##  <a name="a-namemultisetsizea--multisetsize"></a><a name="multiset__size"></a>  multiset::size  
+##  <a name="size"></a>  multiset::size  
  返回多重集中的元素数量。  
   
 ```  
@@ -1869,7 +1908,7 @@ The multiset length is 1.
 The multiset length is now 2.  
 ```  
   
-##  <a name="a-namemultisetsizetypea--multisetsizetype"></a><a name="multiset__size_type"></a>  multiset::size_type  
+##  <a name="size_type"></a>  multiset::size_type  
  一种无符号整数类型，此类型可表示多重集中的元素数量。  
   
 ```  
@@ -1877,9 +1916,9 @@ typedef typename allocator_type::size_type size_type;
 ```  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#multiset__size) 的示例  
+  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例  
   
-##  <a name="a-namemultisetswapa--multisetswap"></a><a name="multiset__swap"></a>  multiset::swap  
+##  <a name="swap"></a>  multiset::swap  
  交换两个多重集的元素。  
   
 ```  
@@ -1888,7 +1927,7 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` right`  
+ `right`  
  参数多重集提供与目标多重集进行交换的元素。  
   
 ### <a name="remarks"></a>备注  
@@ -1944,7 +1983,7 @@ After swapping with ms2, list ms1 is: 100 200.
 After swapping with ms3, list ms1 is: 300.  
 ```  
   
-##  <a name="a-namemultisetupperbounda--multisetupperbound"></a><a name="multiset__upper_bound"></a>  multiset::upper_bound  
+##  <a name="upper_bound"></a>  multiset::upper_bound  
  返回一个迭代器，此迭代器指向多重集中其键大于指定键的第一个元素。  
   
 ```  
@@ -1954,7 +1993,7 @@ iterator upper_bound(const Key& key);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` key`  
+ `key`  
  要与当前搜索的多重集中元素的排序键进行比较的参数键。  
   
 ### <a name="return-value"></a>返回值  
@@ -2009,7 +2048,7 @@ The first element of ms1 with a key greater than
 that of the initial element of ms1 is: 20.  
 ```  
   
-##  <a name="a-namemultisetvaluecompa--multisetvaluecomp"></a><a name="multiset__value_comp"></a>  multiset::value_comp  
+##  <a name="value_comp"></a>  multiset::value_comp  
  检索用于对多重集中的元素值进行排序的比较对象副本。  
   
 ```  
@@ -2028,7 +2067,7 @@ value_compare value_comp() const;
   
  如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 true。  
   
- 请注意，[key_compare](#multiset__key_compare) 和 [value_compare](#multiset__value_compare) 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
 ### <a name="example"></a>示例  
   
@@ -2081,7 +2120,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of ms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of ms2.  
 ```  
   
-##  <a name="a-namemultisetvaluecomparea--multisetvaluecompare"></a><a name="multiset__value_compare"></a>  multiset::value_compare  
+##  <a name="value_compare"></a>  multiset::value_compare  
  一种提供函数对象的类型，该函数对象可比较两个排序键以确定它们在多重集中的相对顺序。  
   
 ```  
@@ -2091,14 +2130,14 @@ typedef key_compare value_compare;
 ### <a name="remarks"></a>备注  
  `value_compare` 是模板参数 `Compare` 的同义词。  
   
- 请注意，[key_compare](#multiset__key_compare) 和 **value_compare** 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，[key_compare](#key_compare) 和 **value_compare** 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
  有关 `Compare` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#multiset__value_comp) 的示例。  
+  有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#value_comp) 的示例。  
   
-##  <a name="a-namemultisetvaluetypea--multisetvaluetype"></a><a name="multiset__value_type"></a>  multiset::value_type  
+##  <a name="value_type"></a>  multiset::value_type  
  一种类型，此类型将在其容量中存储为多重集元素的对象描述为值。  
   
 ```  
@@ -2108,7 +2147,7 @@ typedef Key value_type;
 ### <a name="remarks"></a>备注  
  `value_type` 是模板参数 `Key` 的同义词。  
   
- 请注意，[key_type](#multiset__key_type) 和 `value_type` 皆是模板参数 **Key** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ 请注意，[key_type](#key_type) 和 `value_type` 皆是模板参数 **Key** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
   
  有关 `Key` 的详细信息，请参阅该主题的备注部分。  
   

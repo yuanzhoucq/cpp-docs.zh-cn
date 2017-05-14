@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d06d072dd62eed102c3073cd1cd7a0c112e674bb
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9ae60a13db0f975aca84c74caed43327e5bd1267
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cdialog-class"></a>CDialog 类
@@ -269,7 +270,7 @@ virtual BOOL CreateIndirect(
   
  使用`CWnd::DestroyWindow`函数销毁对话框中创建的`CreateIndirect`函数。  
   
- 包含 ActiveX 控件的对话框需要中提供的其他信息**DLGINIT**资源。 有关详细信息，请参阅知识库文章 Q231591，"如何︰ 使用对话框模板创建与 ActiveX 控件的 MFC 对话框。" 知识库文章位于 MSDN 库的 Visual Studio 文档中或在[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 包含 ActiveX 控件的对话框需要中提供的其他信息**DLGINIT**资源。 有关详细信息，请参阅知识库文章 Q231591，"如何︰ 使用对话框模板创建与 ActiveX 控件的 MFC 对话框。" 知识库文章位于[http://support.microsoft.com](http://support.microsoft.com/)。  
   
 ##  <a name="domodal"></a>CDialog::DoModal  
  调用此成员函数以调用模式对话框并返回完成的对话框结果。  
@@ -282,7 +283,7 @@ virtual INT_PTR DoModal();
  `int`值，该值指定的值`nResult`参数传递到[CDialog::EndDialog](#enddialog)成员函数，其用于关闭对话框。 返回值为-1，如果该函数无法创建对话框中，或**IDABORT**如果发生了一些其他错误，通过这种情况下输出窗口将包含错误信息从[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>备注  
- 对话框中处于活动状态时，此成员函数将处理与用户的所有交互。 正是这使得对话框模式;也就是说，用户不能交互与其他窗口中，是关闭该对话框之前。  
+ 对话框中处于活动状态时，此成员函数将处理与用户的所有交互。 这是什么使对话框框模式;也就是说，用户不能交互与其他窗口中，是关闭该对话框之前。  
   
  如果用户单击其中一个在对话框中，如确定或取消，消息处理程序成员函数时，按键如[OnOK](#onok)或[OnCancel](#oncancel)，调用以尝试关闭对话框。 默认值`OnOK`成员函数将验证和更新对话框中的数据并关闭结果对话框中**IDOK**，也是默认值`OnCancel`成员函数将关闭结果的对话框中**IDCANCEL**而无需验证或更新的对话框中的数据。 你可以重写这些消息处理程序函数，以更改其行为。  
   
@@ -379,7 +380,7 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>备注  
  若要间接创建模式对话框，首先分配全局内存块，并填充对话框模板。 然后调用空`CDialog`用于构造对话框对象构造函数。 接下来，调用`InitModalIndirect`存储到内存中对话框模板你句柄。 创建并显示 Windows 对话框中更高版本，在[DoModal](#domodal)调用成员函数。  
   
- 包含 ActiveX 控件的对话框需要中提供的其他信息**DLGINIT**资源。 有关详细信息，请参阅知识库文章 Q231591，"如何︰ 使用对话框模板创建与 ActiveX 控件的 MFC 对话框。" 知识库文章位于 MSDN 库的 Visual Studio 文档中或在[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 包含 ActiveX 控件的对话框需要中提供的其他信息**DLGINIT**资源。 有关详细信息，请参阅知识库文章 Q231591，"如何︰ 使用对话框模板创建与 ActiveX 控件的 MFC 对话框。" 知识库文章位于[http://support.microsoft.com](http://support.microsoft.com/)。  
   
 ##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  要转换为屏幕单元的矩形的对话框单位的调用。  

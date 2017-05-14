@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 16d166f205f026977673e39bd539b377496bdc0c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
@@ -72,7 +73,7 @@ int _resetstkoflw ( void );
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果函数成功，则为非零值；如果失败，则为&0;。  
+ 如果函数成功，则为非零值；如果失败，则为 0。  
   
 ## <a name="remarks"></a>备注  
  `_resetstkoflw` 函数将从堆栈溢出条件中恢复，让程序继续执行，而不会出现致命异常错误。 如果未调用 `_resetstkoflw` 函数，则在前一个异常后不会显示保护页。 下次发生堆栈溢出时，将不会有任何异常，且进程会在无警告的情况下终止。  
@@ -119,7 +120,7 @@ int _resetstkoflw ( void );
   
  在某些情况下，即使在正确的位置（例如，在 **__except** 块中）使用 **_resetstkoflw**，它也会失败。 甚至在展开堆栈后，如果仍未留下足够的堆栈空间来执行 **_resetstkoflw**，而且未写入到堆栈的最后一页，则 **_resetstkoflw** 无法将堆栈的最后一页重置为保护页并且将返回 0（这指示失败）。 因此，此函数的安全用法应包括检查返回值而不是假定可安全使用堆栈。  
   
- 将不会捕获结构化的异常处理`STATUS_STACK_OVERFLOW`使用编译的应用程序时出现异常`/clr`(请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md))。  
+ 将不会捕获结构化的异常处理`STATUS_STACK_OVERFLOW`异常时应用程序编译与`/clr`(请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md))。  
   
 ## <a name="requirements"></a>要求  
   
@@ -327,9 +328,6 @@ int main ( )
 Stack overflow!  
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [_alloca](../../c-runtime-library/reference/alloca.md)

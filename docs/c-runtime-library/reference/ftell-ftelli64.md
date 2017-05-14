@@ -1,53 +1,70 @@
 ---
-title: "ftell、_ftelli64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftelli64"
-  - "ftell"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftelli64"
-  - "ftell"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftelli64 函数"
-  - "文件指针 [C++]"
-  - "文件指针 [C++], 获取当前位置"
-  - "ftell 函数"
-  - "ftelli64 函数"
+title: "ftell、_ftelli64 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftelli64
+- ftell
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftelli64
+- ftell
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftell function
+- ftelli64 function
+- _ftelli64 function
+- file pointers [C++], getting current position
+- file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# ftell、_ftelli64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 220b34e5bba7a4a6716d6ef18d6621b58d36ecc3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-Gets the current position of a file pointer.  
+---
+# <a name="ftell-ftelli64"></a>ftell、_ftelli64
+获取文件指针的当前位置。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 long ftell(   
@@ -58,34 +75,34 @@ __int64 _ftelli64(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `stream`  
- Target `FILE` structure.  
+ 目标 `FILE` 结构。  
   
-## 返回值  
- `ftell` and `_ftelli64` return the current file position.  The value returned by `ftell` and `_ftelli64` may not reflect the physical byte offset for streams opened in text mode, because text mode causes carriage return–linefeed translation.  Use `ftell` with `fseek`or`_ftelli64`with`_fseeki64` to return to file locations correctly.  On error, `ftell`and`_ftelli64` invoke the invalid parameter handler, as described in [参数验证](../../c-runtime-library/parameter-validation.md).  If execution is allowed to continue, these functions return –1L and set `errno` to one of two constants, defined in ERRNO.H.  The `EBADF` constant means the `stream` argument is not a valid file pointer value or does not refer to an open file.  `EINVAL` means an invalid `stream` argument was passed to the function.  On devices incapable of seeking \(such as terminals and printers\), or when `stream` does not refer to an open file, the return value is undefined.  
+## <a name="return-value"></a>返回值  
+ `ftell` 和 `_ftelli64` 返回当前的文件位置。 返回的值`ftell`和`_ftelli64`因为文本模式下会将回车换行符转换可能不会反映在文本模式下打开的流的物理字节偏移量。 使用`ftell`与`fseek`或`_ftelli64`与`_fseeki64`正确返回到文件位置。 错误时，`ftell`和`_ftelli64`中所述将调用无效参数处理程序，[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则这些函数返回-1l 和集`errno`ERRNO 中定义的两个常量之一。H。 `EBADF` 常量意味着`stream` 参数不是有效的文件指针值，或者未引用打开的文件。 `EINVAL` 意味着传递给函数的 `stream` 参数无效。 在无法查找的设备（例如终端和打印机）上，或者当 `stream` 未引用打开的文件时，返回值是未定义的。  
   
- 有关这些内容的详细信息以及其他返回代码，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- The `ftell` and `_ftelli64`functions retrieve the current position of the file pointer \(if any\) associated with `stream`*.*The position is expressed as an offset relative to the beginning of the stream.  
+## <a name="remarks"></a>备注  
+ `ftell`和`_ftelli64`函数将检索与关联的文件指针 （如果有） 的当前位置`stream`。 位置表示为相对于流开头的偏移量。  
   
- Note that when a file is opened for appending data, the current file position is determined by the last I\/O operation, not by where the next write would occur.  For example, if a file is opened for an append and the last operation was a read, the file position is the point where the next read operation would start, not where the next write would start.\(When a file is opened for appending, the file position is moved to end of file before any write operation.\)If no I\/O operation has yet occurred on a file opened for appending, the file position is the beginning of the file.  
+ 请注意，当文件打开以追加数据时，当前文件位置由最后的 I/O 操作确定，而不是由发生下一个写入位置确定。 例如，如果打开文件进行追加，并且最后一次操作是读取，则文件位置将是下一个读取操作的开始点，而不是下一个写入的开始点。 （在打开文件进行追加时，文件位置会在执行任何写操作前移动到文件的末尾。）如果在为进行追加而打开的文件中尚未发生任何 I/O 操作，则文件位置是文件的开头。  
   
- In text mode, CTRL\+Z is interpreted as an end\-of\-file character on input.  In files opened for reading\/writing, `fopen` and all related routines check for a CTRL\+Z at the end of the file and remove it if possible.  这是因为使用 `ftell` 和 `fseek`的结合或`_ftelli64` 和 `_fseeki64`的结合，在以 CTRL\+Z 结尾的文件中移动时，可能导致 `ftell` 或 `_ftelli64` 在文件末尾错误运行。  
+ 在文本模式中，CTRL+Z 将在输入时解释为文件尾字符。 在打开以进行读取/写入的文件中，`fopen` 和所有相关例程将检查文件末尾的 Ctrl+Z 并在可能的情况下将其移除。 由于结合使用了 `ftell` 和 `fseek`，或 `_ftelli64` 和 `_fseeki64`，可执行此操作。在以 CTRL+Z 结尾的文件中移动可能导致 `ftell` 或 `_ftelli64` 在文件末尾附近无法正常工作。  
   
- 该函数在运行期间锁定调用线程，因此线程安全的。  有关非固定版本，请参见 `_ftell_nolock`。  
+ 此函数在执行期间会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 `_ftell_nolock`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`ftell`|\<stdio.h\>|\<errno.h\>|  
-|`_ftelli64`|\<stdio.h\>|\<errno.h\>|  
+|函数|必需的标头|可选标头|  
+|--------------|---------------------|----------------------|  
+|`ftell`|\<stdio.h>|\<errno.h>|  
+|`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_ftell.c  
@@ -115,13 +132,13 @@ int main( void )
 }  
 ```  
   
-  **Position after trying to read 100 bytes: 100**   
-## .NET Framework 等效项  
- [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
+```Output  
+Position after trying to read 100 bytes: 100  
+```  
   
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [fopen、\_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [fgetpos](../../c-runtime-library/reference/fgetpos.md)   
- [fseek、\_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
- [\_lseek、\_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)
+ [fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
+ [_lseek、_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)

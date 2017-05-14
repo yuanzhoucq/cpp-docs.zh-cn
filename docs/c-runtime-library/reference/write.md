@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d035a6b0941e7fa916e9306e5ef4f420d4e066d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9e6e654e043a71cbb6eb75c53077b14400b82d72
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="write"></a>_write
@@ -79,11 +80,11 @@ int _write(
  字节数。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则 `_write` 将返回实际写入的字节数。 如果磁盘上剩余的实际空间小于函数尝试写入到磁盘的缓冲区的大小，则 `_write` 将失败，并且无法将缓冲区中的任何内容刷新到磁盘中。 返回值 –1 指示错误。 如果传递的参数无效，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回 -1 并将 `errno` 设置为以下三个值之一：`EBADF`，该值表示文件描述符无效或文件未处于打开状态以供写入；`ENOSPC`，该值表示设备上的剩余空间不足，无法进行操作；或 `EINVAL`，该值表示 `buffer` 是空指针或已传递 `count` 个奇数字节以便在 Unicode 模式下将其写入到文件中。  
+ 如果成功，则 `_write` 将返回实际写入的字节数。 如果磁盘上剩余的实际空间小于函数尝试写入到磁盘的缓冲区的大小，则 `_write` 将失败，并且无法将缓冲区中的任何内容刷新到磁盘中。 返回值-1 指示错误。 如果传递的参数无效，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回 -1 并将 `errno` 设置为以下三个值之一：`EBADF`，该值表示文件描述符无效或文件未处于打开状态以供写入；`ENOSPC`，该值表示设备上的剩余空间不足，无法进行操作；或 `EINVAL`，该值表示 `buffer` 是空指针或已传递 `count` 个奇数字节以便在 Unicode 模式下将其写入到文件中。  
   
  有关这些代码及其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
- 如果在文本模式下打开该文件，则会在输出中将每个换行符字符替换为回车符 – 换行符对。 此替换不会影响返回值。  
+ 如果在文本模式下打开该文件，则每一个换行符替换回车-换行符对在输出中。 此替换不会影响返回值。  
   
  当在 Unicode 转换模式下打开该文件时（例如，当使用 `_open` 或 `_sopen` 和包含 `_O_WTEXT`、`_O_U16TEXT` 或 `_O_U8TEXT` 的模式参数打开 `fd`，或使用 `fopen` 和包含 `ccs=UNICODE`、`ccs=UTF-16LE` 或 `ccs=UTF-8` 的模式参数打开它，或使用 `_setmode` 将该模式更改为 Unicode 转换模式时），会将 `buffer` 解释为指向包含 **UTF-16** 数据的 `wchar_t` 数组的指针。 尝试在此模式下写入奇数个字节会导致参数验证错误。  
   

@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>备注  
  `<type_traits>` 中的类和模板用于支持编译时的类型推理、分类和转换，检测类型相关的错误，帮助你优化泛型代码。 这些类和模板包括描述类型属性的一元类型特征、描述类型间关系的二元类型特征，以及修改类型属性的转换特征。  
   
- 若要支持类型特征，需定义一个帮助程序类 `integral_constant`。 它具有可构成类型谓词的基类的模板专用化 `true_type` 和 `false_type`。 类型谓词是采用一个或多个类型参数的模板。 如果类型谓词保留为 true，则它是以公共方式直接或间接从 [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef) 派生的。 如果类型谓词保留为 false，则它是以公共方式直接或间接从 [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef) 派生的。  
+ 若要支持类型特征，需定义一个帮助程序类 `integral_constant`。 它具有可构成类型谓词的基类的模板专用化 `true_type` 和 `false_type`。 类型谓词是采用一个或多个类型参数的模板。 如果类型谓词保留为 true，则它是以公共方式直接或间接从 [true_type](../standard-library/type-traits-typedefs.md#true_type) 派生的。 如果类型谓词保留为 false，则它是以公共方式直接或间接从 [false_type](../standard-library/type-traits-typedefs.md#false_type) 派生的。  
   
  类型修饰符或转换特征是一个模板，包含一个或多个参数以及一个成员 `type`（即修改后的类型）。  
   
@@ -79,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|从类型和值生成整型常量。|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|保留包含值 true 的整数常量。|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|保留包含值 false 的整数常量。|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|保留包含值 true 的整数常量。|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|保留包含值 false 的整数常量。|  
   
  主要类型类别  
   

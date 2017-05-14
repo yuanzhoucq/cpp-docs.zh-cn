@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ca10c4b759f9dafbfe4ffd3d6ac4a4b8c0d5b1dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4704adafeefcb9acff9bdb41428075f34439cc39
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
@@ -66,13 +67,13 @@ ms.lasthandoff: 02/24/2017
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|通知垃圾回收器：所指示的地址属于分配的存储并可到达。|  
 |[default_delete](../standard-library/memory-functions.md#default_delete)|删除使用 `operator new` 分配的对象。 适合与 `unique_ptr` 一起使用。|  
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|动态强制转换为 `shared_ptr`。|  
-|[get_deleter](../standard-library/memory-functions.md#get_deleter_function)|从 `shared_ptr` 获取删除器。|  
+|[get_deleter](../standard-library/memory-functions.md#get_deleter)|从 `shared_ptr` 获取删除器。|  
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|返回任意垃圾回收器所采用的指针安全类型。|  
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|为不超过指定元素数量的元素序列分配临时存储。|  
 |[make_shared](../standard-library/memory-functions.md#make_shared)|创建并返回一个 `shared_ptr`，指向使用默认分配器从零个或多个参数构造的分配对象。|  
 |[make_unique](../standard-library/memory-functions.md#make_unique)|创建并返回一个 [unique_ptr](../standard-library/unique-ptr-class.md)，指向从零个或多个自变量构建的分配对象。|  
 |[owner_less](../standard-library/memory-functions.md#owner_less)|允许对共享指针和弱指针进行基于所有权的混合比较。|  
-|[pointer_safety](../standard-library/memory-enums.md#pointer_safety_enumeration)|一种对 `get_pointer_safety` 的所有可能返回值的枚举。|  
+|[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|一种对 `get_pointer_safety` 的所有可能返回值的枚举。|  
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|对使用 `get_temporary_buffer` 模板函数分配的临时内存执行解除分配。|  
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|静态强制转换为 `shared_ptr`。|  
 |[swap](../standard-library/memory-functions.md#swap)|交换两个 `shared_ptr` 或 `weak_ptr` 对象。|  
@@ -87,13 +88,13 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/memory-operators.md#operator_neq)|测试指定类的分配器对象之间是否不相等。|  
-|[operator==](../standard-library/memory-operators.md#operator_eq_eq)|测试指定类的分配器对象之间是否相等。|  
-|[operator>=](../standard-library/memory-operators.md#operator_gt__eq)|测试指定类的某一分配器对象是否大于或等于另一个分配器对象。|  
-|[operator<](../standard-library/memory-operators.md#operator_lt_)|测试指定类的某一对象是否小于另一个对象。|  
-|[operator\<=](../standard-library/memory-operators.md#operator_lt__eq)|测试指定类的某一对象是否小于或等于另一个对象。|  
-|[operator>](../standard-library/memory-operators.md#operator_gt_)|测试指定类的某一对象是否大于另一个对象。|  
-|[operator<<](../standard-library/memory-operators.md#operator_lt__lt_)|`shared_ptr` 插入器。|  
+|[operator!=](../standard-library/memory-operators.md#op_neq)|测试指定类的分配器对象之间是否不相等。|  
+|[operator==](../standard-library/memory-operators.md#op_eq_eq)|测试指定类的分配器对象之间是否相等。|  
+|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|测试指定类的某一分配器对象是否大于或等于另一个分配器对象。|  
+|[operator<](../standard-library/memory-operators.md#op_lt)|测试指定类的某一对象是否小于另一个对象。|  
+|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|测试指定类的某一对象是否小于或等于另一个对象。|  
+|[operator>](../standard-library/memory-operators.md#op_gt)|测试指定类的某一对象是否大于另一个对象。|  
+|[operator<<](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` 插入器。|  
   
 ### <a name="classes"></a>类  
   
