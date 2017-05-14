@@ -36,10 +36,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d9f3bbe8cddea347e1663d8963c4496bcf8d7319
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
   
  **命名空间：**std::experimental::filesystem  
 
-##  <a name="filesystem__copy_options"></a>  copy_options
+##  <a name="copy_options"></a>  copy_options
 和 [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 和 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 函数一起用于指定行为的位掩码值的枚举。  
   
 ### <a name="syntax"></a>语法  
@@ -85,7 +86,7 @@ enum class copy_options {
 |`create_hard_links`|生成硬链接，而非复制文件。|  
   
 
-##  <a name="filesystem__directory_options"></a> directory_options
+##  <a name="directory_options"></a> directory_options
 指定是跟踪指向目录的符号链接还是忽略它们。  
   
 ### <a name="syntax"></a>语法  
@@ -103,7 +104,7 @@ enum class directory_options {
 |`none`|默认行为：忽略指向目录的符号链接。 拒绝权限是错误。|  
 |`follow_directory_symlink`|将指向目录的符号链接视为实际目录。|  
   
-##  <a name="filesystem__file_type"></a>  file_type
+##  <a name="file_type"></a>  file_type
 文件类型的枚举。 支持的值有 regular、directory、not_found 和 unknown。  
   
 ### <a name="syntax"></a>语法  
@@ -137,7 +138,7 @@ enum class file_type {
 |`socket`|7|表示基于 UNIX 的系统上的套接字。 （不支持。）|  
 |`unknown`|8|表示状态无法确定的文件。|  
   
-##  <a name="filesystem__perms"></a>  perms
+##  <a name="perms"></a>  perms
 文件权限的标志。 支持的值实质上是“readonly”以及所有。 对于只读文件，未设置任何 *_write 位。 其他文件设置了 `all` 位 (0x0777)。  
   
 ### <a name="syntax"></a>语法  
