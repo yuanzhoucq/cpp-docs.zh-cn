@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 649c3d34e1ebcfc7af2fa3ef0b500dc1f630a967
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 930ef18229737fee03d03308c45f5ffb3615cdcd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="cabs"></a>_cabs
@@ -80,7 +81,7 @@ double _cabs(
  如果成功，`_cabs` 将返回其参数的绝对值。 在溢出时，`_cabs` 将返回 `HUGE_VAL` 并将 `errno` 设置为 `ERANGE`。 可以使用 [_matherr](../../c-runtime-library/reference/matherr.md) 更改错误处理。  
   
 ## <a name="remarks"></a>备注  
- `_cabs` 函数计算复数的绝对值，该值必须是 [_complex](../../c-runtime-library/standard-types.md) 类型的结构。 结构 `z` 由实部 `x` 和虚部 `y` 构成。 调用 `_cabs` 会生成一个与表达式 `sqrt`( `z.x``*``z.x``+``z.y`*`z.y`) 的值等效的值。  
+ `_cabs` 函数计算复数的绝对值，该值必须是 [_complex](../../c-runtime-library/standard-types.md) 类型的结构。 结构 `z` 由实部 `x` 和虚部 `y` 构成。 调用`_cabs`生成等效的表达式值`sqrt( z.x * z.x + z.y * z.y )`。  
   
 ## <a name="requirements"></a>要求  
   
@@ -114,9 +115,6 @@ int main( void )
 ```Output  
 The absolute value of 3.000000 + 4.000000i is 5.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   

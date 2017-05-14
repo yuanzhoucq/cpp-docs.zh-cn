@@ -10,8 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - function
-- std::function
 - functional/std::function
+- functional/std::function::result_type
+- functional/std::function::assign
+- functional/std::function::swap
+- functional/std::function::target
+- functional/std::function::target_type
+- functional/std::function::operator unspecified
+- functional/std::function::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: adc625fe0acd085f2433d5436c535c9ae9fd2455
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c79b2b4d1ac2e9df7f38708ff232d70392cce15
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="function-class"></a>function 类
@@ -120,37 +127,37 @@ public:
   
 |||  
 |-|-|  
-|[function::function](#function__function)|构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。|  
+|[函数](#function)|构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[function::result_type](#function__result_type)|存储的可调对象的返回类型。|  
+|[result_type](#result_type)|存储的可调对象的返回类型。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[function::assign](#function__assign)|将可调用对象分配给此函数对象。|  
-|[function::swap](#function__swap)|交换两个可调用对象。|  
-|[function::target](#function__target)|测试存储的可调用对象是否可按指定方式调用。|  
-|[function::target_type](#function__target_type)|获取有关可调用对象的类型信息。|  
+|[assign](#assign)|将可调用对象分配给此函数对象。|  
+|[swap](#swap)|交换两个可调用对象。|  
+|[目标](#target)|测试存储的可调用对象是否可按指定方式调用。|  
+|[target_type](#target_type)|获取有关可调用对象的类型信息。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[function::operator 未指定](#function__operator_unspecified)|测试存储的可调用对象是否存在。|  
-|[function::operator()](#function__operator__)|调用可调用的对象。|  
-|[function::operator=](#function__operator_eq)|替换存储的可调用对象。|  
+|[function::operator 未指定](#op_unspecified)|测试存储的可调用对象是否存在。|  
+|[function::operator()](#op_call)|调用可调用的对象。|  
+|[function::operator=](#op_eq)|替换存储的可调用对象。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<functional>  
   
  **命名空间：** std  
   
-##  <a name="function__assign"></a>  function::assign  
+##  <a name="assign"></a>  function::assign  
  将可调用对象分配给此函数对象。  
   
 ```  
@@ -178,7 +185,7 @@ template <class Fx, class Alloc>
 ### <a name="remarks"></a>备注  
  每个成员函数使用作为 `operand` 传递的可调用对象替换由 `*this` 保留的`callable object`。 两者都使用分配器对象 `Ax` 分配存储。  
   
-##  <a name="function__function"></a>  function::function  
+##  <a name="function"></a>  function::function  
  构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。  
   
 ```  
@@ -292,7 +299,7 @@ f is non-empty (correct).
 g is empty (correct).  
 ```  
   
-##  <a name="function__operator_unspecified"></a>  function::operator 未指定  
+##  <a name="op_unspecified"></a>  function::operator 未指定  
  测试存储的可调用对象是否存在。  
   
 ```  
@@ -332,7 +339,7 @@ not empty == false
 not empty == true  
 ```  
   
-##  <a name="function__operator__"></a>  function::operator()  
+##  <a name="op_call"></a>  function::operator()  
  调用可调用的对象。  
   
 ```  
@@ -380,7 +387,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__operator_eq"></a>  function::operator=  
+##  <a name="op_eq"></a>  function::operator=  
  替换存储的可调用对象。  
   
 ```  
@@ -459,7 +466,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__result_type"></a>  function::result_type  
+##  <a name="result_type"></a>  function::result_type  
  存储的可调对象的返回类型。  
   
 ```  
@@ -499,7 +506,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__swap"></a>  function::swap  
+##  <a name="swap"></a>  function::swap  
  交换两个可调用对象。  
   
 ```  
@@ -555,7 +562,7 @@ empty == false
 val == -3  
 ```  
   
-##  <a name="function__target"></a>  function::target  
+##  <a name="target"></a>  function::target  
  测试存储的可调用对象是否可按指定方式调用。  
   
 ```  
@@ -614,7 +621,7 @@ empty == true
 no target == true  
 ```  
   
-##  <a name="function__target_type"></a>  function::target_type  
+##  <a name="target_type"></a>  function::target_type  
  获取有关可调用对象的类型信息。  
   
 ```  
@@ -659,6 +666,6 @@ type == void
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [mem_fn 函数](../standard-library/functional-functions.md#mem_fn_function)   
+ [mem_fn](../standard-library/functional-functions.md#mem_fn)   
  [reference_wrapper 类](../standard-library/reference-wrapper-class.md)
 

@@ -1,53 +1,70 @@
 ---
-title: "_chdrive | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chdrive"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "chdrive"
-  - "_chdrive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_chdrive 函数"
-  - "chdrive 函数"
-  - "驱动器, 更改"
+title: "_chdrive | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chdrive
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- chdrive
+- _chdrive
+dev_langs:
+- C++
+helpviewer_keywords:
+- drives, changing
+- _chdrive function
+- chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _chdrive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 946f5bee25b093d024eecc030527be39ad1a0162
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
+---
+# <a name="chdrive"></a>_chdrive
 更改当前工作驱动器。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _chdrive(   
@@ -55,40 +72,37 @@ int _chdrive(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `drive`  
- 整数1到26指定当前的工作驱动器\(1\=A，2\=B，等等\)。  
+ 指定当前工作驱动器的 1 到 26 的整数（1=A，2=B 等）。  
   
-## 返回值  
- 零 （0），如果成功更改了当前工作的驱动程序；否则为\-1。  
+## <a name="return-value"></a>返回值  
+ 如果已成功更改当前工作驱动器，则为零 (0)，否则为 -1。  
   
-## 备注  
- 如果 `drive` 不在范围从 1 到 26，调用参数无效处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许执行继续， **\_chdrive**函数返回\-1，`errno`设置为`EACCES`，并且 `_doserrno` 设置为 `ERROR_INVALID_DRIVE`  
+## <a name="remarks"></a>备注  
+ 如果 `drive` 不在 1 到 26 的范围内，则会调用无效的函数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则 **_chdrive** 函数将返回 -1，将 `errno` 设置为 `EACCES` 并且将 `_doserrno` 设置为 `ERROR_INVALID_DRIVE`。  
   
- **\_chdrive** 函数不是线程安全的，因为这取决于 **SetCurrentDirectory** 功能，它本身不是线程安全的。  若要在多线程应用程安全的使用 **\_chdrive** ，则必须提供你自己的线程同步。  有关更多信息，转到[MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) 搜索 **SetCurrentDirectory**。  
+ **_chdrive** 函数不具备线程安全，因为它依赖 **SetCurrentDirectory** 函数，该函数本身不具备线程安全。 若要在多线程应用程序中安全地使用 **_chdrive**，必须提供自己的线程同步。 有关详细信息，请转到 [MSDN 库](http://go.microsoft.com/fwlink/?LinkID=150542)，然后搜索 **SetCurrentDirectory**。  
   
- **\_chdrive** 功能只转换当前工作的驱动器；**\_chdir** 更改当前工作目录。  
+ **_chdrive** 函数仅更改当前工作驱动器；**_chdir** 更改当前工作目录。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|**\_chdrive**|\<direct.h\>|  
+|-------------|---------------------|  
+|**_chdrive**|\<direct.h>|  
   
  有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
- 请参见 [\_getdrive](../../c-runtime-library/reference/getdrive.md)中的示例。  
+## <a name="example"></a>示例  
+ 请参阅 [_getdrive](../../c-runtime-library/reference/getdrive.md) 的示例。  
   
-## .NET Framework 等效项  
- [System::Environment::CurrentDirectory](https://msdn.microsoft.com/en-us/library/system.environment.currentdirectory.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [目录控制](../../c-runtime-library/directory-control.md)   
- [\_chdir、\_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [\_fullpath、\_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [\_getcwd、\_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [\_getdrive](../../c-runtime-library/reference/getdrive.md)   
- [\_mkdir、\_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [\_rmdir、\_wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   
- [system、\_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [_chdir、_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_fullpath、_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getcwd、_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
+ [_getdrive](../../c-runtime-library/reference/getdrive.md)   
+ [_mkdir、_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_rmdir、_wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   
+ [system、_wsystem](../../c-runtime-library/reference/system-wsystem.md)

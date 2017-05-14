@@ -1,36 +1,51 @@
 ---
 title: "integer_sequence 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "type_traits/std::index_sequence"
-  - "type_traits/std::make_index_sequence"
-  - "type_traits/std::integer_sequence"
-  - "type_traits/std::make_integer_sequence"
-  - "type_traits/std::index_sequence_for"
-  - "integer_sequence"
-  - "std.integer_sequence"
-  - "std::integer_sequence"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "integer_sequence"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- type_traits/std::index_sequence
+- type_traits/std::make_index_sequence
+- type_traits/std::integer_sequence
+- type_traits/std::make_integer_sequence
+- type_traits/std::index_sequence_for
+- integer_sequence
+dev_langs:
+- C++
+helpviewer_keywords:
+- integer_sequence
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# integer_sequence 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 533bb3094949d0f339f67fade4e199a6210b2d26
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
+---
+# <a name="integersequence-class"></a>integer_sequence 类
 表示整数序列。 可以用于推导并展开可变参数类型中作为自变量传递给函数的参数包（如 std::tuple\<T...>）。  
   
 ## <a name="syntax"></a>语法  
@@ -58,11 +73,11 @@ struct integer_sequence
  直接传递给函数的参数包可以在没有任何特殊库帮助程序的进行解压缩。 当参数包属于传递给函数的类型，并且需要索引来访问元素时，对它进行解压缩的最简单方法是使用 `integer_sequence` 及其相关类型别名 `make_integer_sequence`、`index_sequence`、`make_index_sequence` 和 `index_sequence_for`。  
   
 ## <a name="example"></a>示例  
- 下面的示例基于原始方案 [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html)。 它演示如何使用 `integer_sequence` 从 `std::array<T,N>` 创建 `std::tuple`，以及如何使用 `integer_sequence` 访问元组成员。  
+ 如下示例基于原始方案 [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html)。 它演示如何使用 `integer_sequence` 从 `std::array<T,N>` 创建 `std::tuple`，以及如何使用 `integer_sequence` 访问元组成员。  
   
  在 `a2t` 函数中，`index_sequence` 是基于 `size_t` 整数类型的 `integer_sequence` 的别名。 `make_index_sequence` 是一个别名，会在编译时使用与调用方传入的数组相同数量的元素创建一个从零开始的 `index_sequence`。 `a2t` 通过值将 `index_sequence` 传递到 `a2t_`（其中表达式 `a[I]...` 对 `I` 进行解压缩），随后将元素提供给使用它们作为单独参数的 `make_tuple`。 例如，如果序列包含三个元素，则 `make_tuple` 称为 make_tuple(a[0], a[1], a[2])。 当然，数组元素本身可以是任何类型。  
   
- 应用函数会接受 [std:: tuple](../standard-library/tuple-class.md), ，并使用生成 integer_sequence `tuple_size` 帮助器类。 请注意， [std:: decay_t](../standard-library/decay-class.md)_ 是必需因为 [tuple_size](../standard-library/tuple-size-class-tuple.md) 并不适用于引用类型。 `apply_` 函数对元组成员进行解压缩，并将它们作为单独参数转发到函数调用。 在此示例中，该函数是一个打印出值的简单 lambda 表达式。  
+ 应用函数会接受 [std::tuple](../standard-library/tuple-class.md)，并使用 `tuple_size` 帮助程序类生成 integer_sequence。 请注意，[std::decay_t](../standard-library/decay-class.md) 是必需的，因为 [tuple_size](../standard-library/tuple-size-class-tuple.md) 并不适用于引用类型。 `apply_` 函数对元组成员进行解压缩，并将它们作为单独参数转发到函数调用。 在此示例中，该函数是一个打印出值的简单 lambda 表达式。  
   
 ```  
   
@@ -122,13 +137,14 @@ int main()
   
 ```  
   
-  若要为参数包创建 `index_sequence`，请使用 `index_sequence_for`\<T...>（这是 `make_index_sequence`\<sizeof...(T)> 的别名）  
+  若要为参数包创建 `index_sequence`，请使用 `index_sequence_for`\<T...>（即 `make_index_sequence`\<sizeof...(T)> 的别名）  
   
 ## <a name="requirements"></a>要求  
  标头：<type_traits>  
   
  命名空间：std  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)
+
 

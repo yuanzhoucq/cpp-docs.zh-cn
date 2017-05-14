@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b0852cc3fd3531e05791cfce952853265b4458b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ef11e8bca4971b4fb07669907b2234c90a040ef8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 运算符
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator*](#operator_star)|[operator+](#operator_add)|[operator-](#operator-)|  
-|[operator/](#operator_)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  测试两个复数是否不相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```  
@@ -44,10 +46,10 @@ bool operator!=(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  将测试其不等性的复数或与复数的参数类型相同的对象。  
   
- ` right`  
+ `right`  
  将测试其不等性的复数或与复数的参数类型相同的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -158,7 +160,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*  
+##  <a name="op_star"></a>  operator*  
  将两个复数相乘，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```  
@@ -180,10 +182,10 @@ complex<Type> operator*(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  两个复数的第一个数或属于复数参数类型的数通过 * 运算相乘。  
   
- ` right`  
+ `right`  
  两个复数的第二个数或属于复数参数类型的数通过 * 运算相乘。  
   
 ### <a name="return-value"></a>返回值  
@@ -252,7 +254,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  将两个复数相加，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```  
@@ -277,17 +279,17 @@ complex<Type> operator+(const complex<Type>& left);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  两个复数的第一个数或属于复数参数类型的数通过 + 运算相加。  
   
- ` right`  
+ `right`  
  两个复数的第二个数或属于复数参数类型的数通过 + 运算相加。  
   
 ### <a name="return-value"></a>返回值  
  由两个数相加得出的复数的值和类型由参数输入指定。  
   
 ### <a name="remarks"></a>备注  
- 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。 一元运算符返回 ` left.`  
+ 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。 一元运算符返回`left`。  
   
 ### <a name="example"></a>示例  
   
@@ -389,7 +391,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>  operator-  
  将两个复数相减，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```   
@@ -413,14 +415,14 @@ complex<Type> operator-(const complex<Type>& left);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  两个复数的第一个数或属于复数参数类型的数通过 - 运算相减。  
   
- ` right`  
+ `right`  
  两个复数的第二个数或属于复数参数类型的数通过 - 运算相减。  
   
 ### <a name="return-value"></a>返回值  
- 由 ` right`从 ` left` 减去得出的复数，两个数的值由参数输入指定。  
+ 由 `right`从 `left` 减去得出的复数，两个数的值由参数输入指定。  
   
 ### <a name="remarks"></a>备注  
  重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。  
@@ -527,7 +529,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.  
 ```  
   
-##  <a name="a-nameoperatora--operator"></a><a name="operator_"></a>  operator/  
+##  <a name="op_div"></a>  operator/  
  将两个复数相除，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```   
@@ -548,10 +550,10 @@ complex<Type> operator*(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  复数或属于复数参数类型的数通过 / 运算用分子除以分母。  
   
- ` right`  
+ `right`  
  复数或属于复数参数类型的数通过 / 运算用分子除以分母。  
   
 ### <a name="return-value"></a>返回值  
@@ -643,7 +645,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  向输出流插入指定的复数。  
   
 ```   
@@ -657,7 +659,7 @@ basic_ostream<Elem, Traits>& operator<<(
  `Ostr`  
  要输入到输出流的复数。  
   
- ` right`  
+ `right`  
  要输入到输出流的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -701,7 +703,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  测试两个复数是否相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```  
@@ -723,10 +725,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  将测试其不等性的复数或与复数的参数类型相同的对象。  
   
- ` right`  
+ `right`  
  将测试其不等性的复数或与复数的参数类型相同的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -837,7 +839,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  从输入流提取一个复值。  
   
 ```  
@@ -852,11 +854,11 @@ basic_istream<Elem, Traits>& operator>>(
  `Istr`  
  要从中提取复数的输入流。  
   
- ` right`  
+ `right`  
  正在从输入流提取的复数。  
   
 ### <a name="return-value"></a>返回值  
- 从 `Istr` 读取指定的复数，并返回到 ` right.`  
+ 读取从表示指定复数的值`Istr`并返回到`right`。  
   
 ### <a name="remarks"></a>备注  
  有效的输入格式为  

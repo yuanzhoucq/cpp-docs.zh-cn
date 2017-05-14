@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 2ac3e7fa456e5d3ff04bc5d974c87a9cbb055fea
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 542a13de6e8b97f736ea2cfcdf8956c2f261c1e4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="initializerlist-class"></a>initializer_list 类
@@ -70,7 +71,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[initializer_list](../standard-library/forward-list-class.md#forward_list__forward_list)|构造 `initializer_list` 类型的对象。|  
+|[initializer_list](../standard-library/forward-list-class.md#forward_list)|构造 `initializer_list` 类型的对象。|  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -87,16 +88,16 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[begin](#initializer_list__begin)|返回指向 `initializer_list` 中第一个元素的指针。|  
-|[end](#initializer_list__end)|返回指向 `initializer_list` 中最后一个元素之后的元素的指针。|  
-|[size](#initializer_list__size)|返回 `initializer_list` 中的元素数量。|  
+|[begin](#begin)|返回指向 `initializer_list` 中第一个元素的指针。|  
+|[end](#end)|返回指向 `initializer_list` 中最后一个元素之后的元素的指针。|  
+|[size](#size)|返回 `initializer_list` 中的元素数量。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<initializer_list>  
   
  **命名空间：** std  
   
-##  <a name="initializer_list__begin"></a>initializer_list::begin  
+##  <a name="begin"></a>initializer_list::begin  
  返回指向 `initializer_list` 中第一个元素的指针。  
   
 ```  
@@ -108,7 +109,7 @@ constexpr const InputIterator* begin() const noexcept;
   
 ### <a name="remarks"></a>备注  
   
-##  <a name="initializer_list__end"></a>initializer_list::end  
+##  <a name="end"></a>initializer_list::end  
  返回指向 `initializer list` 中最后一个元素之后的元素的指针。  
   
 ```  
@@ -118,7 +119,7 @@ constexpr const InputIterator* end() const noexcept;
 ### <a name="return-value"></a>返回值  
  指向列表中最后一个元素之后的元素的指针。 如果列表为空，则指向列表中第一个元素的指针也为空。  
   
-##  <a name="initializer_list__initializer_list"></a>initializer_list::initializer_list  
+##  <a name="initializer_list"></a>initializer_list::initializer_list  
  构造 `initializer_list` 类型的对象。  
   
 ```  
@@ -199,7 +200,7 @@ int main()
 c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4  
 ```  
   
-##  <a name="initializer_list__size"></a>initializer_list::size  
+##  <a name="size"></a>initializer_list::size  
  返回列表中元素的数目。  
   
 ```  

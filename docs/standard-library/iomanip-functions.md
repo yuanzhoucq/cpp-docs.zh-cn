@@ -21,10 +21,11 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d54e1d5071414f1e8f6ae96391aa1659397bbcb3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
@@ -289,7 +290,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
  要清除的标志。  
   
 ### <a name="return-value"></a>返回值  
- 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags), _ *Mask*)，然后返回 **str**。  
+ 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*)，然后返回 **str**。  
   
 ### <a name="example"></a>示例  
   有关使用 `resetiosflags` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -306,7 +307,7 @@ T3 setbase(int _Base);
  数基。  
   
 ### <a name="return-value"></a>返回值  
- 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#ios_base__fmtflags))，然后返回 **str**。 此处，**mask** 确定方式如下：  
+ 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags))，然后返回 **str**。 此处，**mask** 确定方式如下：  
   
 -   如果 _ *Base* 是 8，则 **mask** 是 `ios_base::`[oct](../standard-library/ios-functions.md#oct)。  
   
@@ -314,7 +315,7 @@ T3 setbase(int _Base);
   
 -   如果 _ *Base* 是 16，则 **mask** 是 `ios_base::`[hex](../standard-library/ios-functions.md#hex)。  
   
--   如果 _ *Base* 是其他任何值，则 mask 是 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags)(0)。  
+-   如果 _ *Base* 是其他任何值，则 mask 是 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0)。  
   
 ### <a name="example"></a>示例  
   有关使用 `setbase` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -332,7 +333,7 @@ T4 setfill(Elem Ch);
  用于在右对齐显示中填充空格的字符。  
   
 ### <a name="return-value"></a>返回值  
- 模板操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [fill](../standard-library/basic-ios-class.md#basic_ios__fill)( `Ch`)，然后返回 **str**。 类型 **Elem** 必须与流 **str** 的元素类型相同。  
+ 模板操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`)，然后返回 **str**。 类型 **Elem** 必须与流 **str** 的元素类型相同。  
   
 ### <a name="example"></a>示例  
   有关使用 `setfill` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -349,7 +350,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
  要设置的标志。  
   
 ### <a name="return-value"></a>返回值  
- 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)(_ *Mask*)，然后返回 **str**。  
+ 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*)，然后返回 **str**。  
   
 ### <a name="example"></a>示例  
   有关使用 `setiosflags` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -366,7 +367,7 @@ T5 setprecision(streamsize Prec);
  浮点值的精度。  
   
 ### <a name="return-value"></a>返回值  
- 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [precision](../standard-library/ios-base-class.md#ios_base__precision)( `Prec`)，然后返回 **str**。  
+ 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`)，然后返回 **str**。  
   
 ### <a name="example"></a>示例  
   有关使用 `setprecision` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -383,7 +384,7 @@ T6 setw(streamsize Wide);
  显示字段的宽度。  
   
 ### <a name="return-value"></a>返回值  
- 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [width](../standard-library/ios-base-class.md#ios_base__width)(_ *Wide*)，然后返回 **str**。  
+ 操控器返回一个对象，该对象在从流中提取或插入到流 **str** 时会调用 **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*)，然后返回 **str**。  
   
 ### <a name="remarks"></a>备注  
  setw 仅设置流中下一元素的宽度，并且必须插入在要对其指定宽度的每个元素之前。  

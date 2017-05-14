@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - basic_regex
-- std::basic_regex
 - regex/std::basic_regex
 dev_langs:
 - C++
@@ -35,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 7b3665d0193f1d1fd658942d6e45b7a6229c9b32
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7b9afbe09fe010596a40f37eba9b0679a38268c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicregex-class"></a>basic_regex 类
@@ -107,7 +107,7 @@ class basic_regex {
  元素的特征类。  
   
 ## <a name="remarks"></a>备注  
- 此模板类描述包含正则表达式的对象。 此模板类对象可传递给模板函数 [regex_match 函数](../standard-library/regex-functions.md#regex_match_function)、[regex_search 函数](../standard-library/regex-functions.md#regex_search_function)和 [regex_replace 函数](../standard-library/regex-functions.md#regex_replace_function)，结合适合的文本字符串自变量，可搜索与正则表达式匹配的文本。 此模板类有两种专用定义，包括针对 `char` 类型元素的类型定义 [regex](../standard-library/regex-typedefs.md#regex_typedef)，以及针对 `wchar_t` 类型元素的类型定义 [wregex](../standard-library/regex-typedefs.md#wregex_typedef)。  
+ 此模板类描述包含正则表达式的对象。 此模板类的对象可以传递给模板函数[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，和[regex_replace](../standard-library/regex-functions.md#regex_replace)，以及适合的文本字符串参数，可搜索与正则表达式匹配的文本。 此模板类有两种专用定义，包括针对 `char` 类型元素的类型定义 [regex](../standard-library/regex-typedefs.md#regex)，以及针对 `wchar_t` 类型元素的类型定义 [wregex](../standard-library/regex-typedefs.md#wregex)。  
   
  模板参数 `RXtraits` 描述模板类支持的正则表达式语法的各个重要属性。 一个指定这些正则表达式特征的外部接口必须与模板类 [regex_traits Class](../standard-library/regex-traits-class.md) 的对象相同的类。  
   
@@ -126,11 +126,11 @@ class basic_regex {
  这些成员函数还使用参数 `flags` 指定用于解释正则表达式的各个选项以及 `RXtraits` 类型描述的选项。  
   
 ## <a name="requirements"></a>要求  
- **标头：**\<regex&1;>  
+ **标头：**\<regex 1>  
   
  **命名空间：** std  
   
-##  <a name="a-namebasicregexassigna--basicregexassign"></a><a name="basic_regex__assign"></a>  basic_regex::assign  
+##  <a name="assign"></a>  basic_regex::assign  
  将一个值分配到正则表达式对象。  
   
 ```  
@@ -280,7 +280,7 @@ int main()
 match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc") == true  
 ```  
   
-##  <a name="a-namebasicregexbasicregexa--basicregexbasicregex"></a><a name="basic_regex__basic_regex"></a>  basic_regex::basic_regex  
+##  <a name="basic_regex"></a>  basic_regex::basic_regex  
  构造正则表达式对象。  
   
 ```  
@@ -353,7 +353,7 @@ explicit basic_regex(
   
  第一个构造函数构造一个空 `basic_regex` 对象。 其他构造函数构造 `basic_regex` 对象，其中包含由操作数序列描述的正则表达式。  
   
- 一个空 `basic_regex` 对象在被传递到给 [regex_match 函数](../standard-library/regex-functions.md#regex_match_function)、[regex_search 函数](../standard-library/regex-functions.md#regex_search_function)或 [regex_replace 函数](../standard-library/regex-functions.md#regex_replace_function)时不匹配任何字符序列。  
+ 一个空`basic_regex`对象不匹配任何字符序列时传递给[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，或[regex_replace](../standard-library/regex-functions.md#regex_replace)。  
   
 ### <a name="example"></a>示例  
   
@@ -437,7 +437,7 @@ int main()
 match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc", "abc") == true  
 ```  
   
-##  <a name="a-namebasicregexflagtypea--basicregexflagtype"></a><a name="basic_regex__flag_type"></a>  basic_regex::flag_type  
+##  <a name="flag_type"></a>  basic_regex::flag_type  
  语法选项标志的类型。  
   
 ```  
@@ -445,7 +445,7 @@ typedef regex_constants::syntax_option_type flag_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#regex_constants__syntax_option_type) 的同义词。  
+ 该类型是 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type) 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -532,7 +532,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexflagsa--basicregexflags"></a><a name="basic_regex__flags"></a>  basic_regex::flags  
+##  <a name="flags"></a>  basic_regex::flags  
  返回语法选项标志。  
   
 ```  
@@ -540,7 +540,7 @@ flag_type flags() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回 `flag_type` 自变量的值，该值传递到对一个 [basic_regex::assign](#basic_regex__assign) 成员函数的最近调用，或者如果没有实施这类调用，则返回传递到构造函数的值。  
+ 成员函数返回 `flag_type` 自变量的值，该值传递到对一个 [basic_regex::assign](#assign) 成员函数的最近调用，或者如果没有实施这类调用，则返回传递到构造函数的值。  
   
 ### <a name="example"></a>示例  
   
@@ -627,7 +627,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexgetloca--basicregexgetloc"></a><a name="basic_regex__getloc"></a>  basic_regex::getloc  
+##  <a name="getloc"></a>  basic_regex::getloc  
  返回存储的区域设置对象。  
   
 ```  
@@ -635,7 +635,7 @@ locale_type getloc() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数将返回 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#regex_traits__getloc)`()`。  
+ 成员函数将返回 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`。  
   
 ### <a name="example"></a>示例  
   
@@ -722,7 +722,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregeximbuea--basicregeximbue"></a><a name="basic_regex__imbue"></a>  basic_regex::imbue  
+##  <a name="imbue"></a>  basic_regex::imbue  
  更改存储的区域设置对象。  
   
 ```  
@@ -734,7 +734,7 @@ locale_type imbue(locale_type loc);
  要存储的区域设置对象。  
   
 ### <a name="remarks"></a>备注  
- 该成员函数将清空 `*this` 并返回 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#regex_traits__imbue)`(loc)`。  
+ 该成员函数将清空 `*this` 并返回 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`。  
   
 ### <a name="example"></a>示例  
   
@@ -821,7 +821,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexlocaletypea--basicregexlocaletype"></a><a name="basic_regex__locale_type"></a>  basic_regex::locale_type  
+##  <a name="locale_type"></a>  basic_regex::locale_type  
  存储的区域设置对象的类型。  
   
 ```  
@@ -829,7 +829,7 @@ typedef typename RXtraits::locale_type locale_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是 [regex_traits::locale_type](../standard-library/regex-traits-class.md#regex_traits__locale_type) 的同义词。  
+ 该类型是 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type) 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -916,7 +916,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexmarkcounta--basicregexmarkcount"></a><a name="basic_regex__mark_count"></a>  basic_regex::mark_count  
+##  <a name="mark_count"></a>  basic_regex::mark_count  
  返回匹配的子表达式的数目。  
   
 ```  
@@ -1011,7 +1011,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexoperatoreqa--basicregexoperator"></a><a name="basic_regex__operator_eq"></a>  basic_regex::operator=  
+##  <a name="op_eq"></a>  basic_regex::operator=  
  将一个值分配到正则表达式对象。  
   
 ```  
@@ -1124,7 +1124,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexswapa--basicregexswap"></a><a name="basic_regex__swap"></a>  basic_regex::swap  
+##  <a name="swap"></a>  basic_regex::swap  
  交换两个正则表达式对象。  
   
 ```  
@@ -1223,7 +1223,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexvaluetypea--basicregexvaluetype"></a><a name="basic_regex__value_type"></a>  basic_regex::value_type  
+##  <a name="value_type"></a>  basic_regex::value_type  
  元素类型。  
   
 ```  
@@ -1320,11 +1320,11 @@ getloc == imbued == true
   
 ## <a name="see-also"></a>另请参阅  
  [\<regex>](../standard-library/regex.md)   
- [regex_match 函数](../standard-library/regex-functions.md#regex_match_function)   
- [regex_search 函数](../standard-library/regex-functions.md#regex_search_function)   
- [regex_replace 函数](../standard-library/regex-functions.md#regex_replace_function)   
- [regex](../standard-library/regex-typedefs.md#regex_typedef)   
- [wregex](../standard-library/regex-typedefs.md#wregex_typedef)   
+ [regex_match](../standard-library/regex-functions.md#regex_match)   
+ [regex_search](../standard-library/regex-functions.md#regex_search)   
+ [regex_replace](../standard-library/regex-functions.md#regex_replace)   
+ [regex](../standard-library/regex-typedefs.md#regex)   
+ [wregex](../standard-library/regex-typedefs.md#wregex)   
  [regex_traits 类](../standard-library/regex-traits-class.md)
 
 

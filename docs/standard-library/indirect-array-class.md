@@ -1,101 +1,61 @@
 ---
 title: "indirect_array 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.indirect_array"
-  - "valarray/std::indirect_array"
-  - "std::indirect_array"
-  - "indirect_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indirect_array 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- valarray/std::indirect_array
+- indirect_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# indirect_array 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7a5b105b9c812d81dfbbe5905bb593bba1b98ef8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
-支持对象是的子集 valarrays 通过提供了子集数组之间操作的内部，辅助模板类通过指定子集定义 valarray 父级的索引。  
+---
+# <a name="indirectarray-class"></a>indirect_array 类
+一个内部的辅助模板类，该类通过提供子集阵列（通过指定父级 valarray 的索引子集进行定义）之间的操作来支持作为 valarray 的子集的对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
-template<class Type>  
-   class indirect_array {  
-public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
   
-   void operator=(  
-      const Type& x  
-   ) const;  
   
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
+## <a name="remarks"></a>备注  
+ 该类描述的对象将存储对 [valarray](../standard-library/valarray-class.md)**\<Type>** 类的 **va** 对象及 **valarray<size_t>** 类的 **xa** 对象的引用，它描述了要从 **valarray\<Type>** 对象中选择的元素序列。  
   
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
+ 只可通过编写 **va[xa]** 形式的表达式来构造 **indirect_array\<Type>** 对象。 indirect_array 类的成员函数的行为方式类似于为 **valarray\<Type>** 定义的对应函数签名，只不过仅所选的元素的序列受到影响。  
   
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
+ 此序列由 **xa.**[size](../standard-library/valarray-class.md#size) 元素组成，其中元素 `I` 在 **va** 内成为索引 **xa**[ `I`]。  
   
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-// The rest is private or implementation defined  
-}  
-```  
-  
-## 备注  
- 类描述对象以及类 **valarray\<size\_t\>xa** 一起存储为对象类 [valarray](../standard-library/valarray-class.md)**\<类型\>va** 的引用，描述元素序列。**valarrayType\<\>** 对象中的对象。  
-  
- 通过将窗体的 **va\[xa\]** 的表达式只构造  **indirect\_array\<Type\>** 对象。  indirect\_array 类成员的行为像函数然后相应的函数签名定义为 **valarray\<Type\>**，但选择的元素序列仅受影响。  
-  
- 序列包括[范围](../Topic/valarray::size.md)**xa.**元素，元素变为 **xa**索引 `I` \[`I`\] 在 **va**内。  
-  
-## 示例：  
+## <a name="example"></a>示例:  
   
 ```  
 // indirect_array.cpp  
@@ -134,17 +94,19 @@ int main( )
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
-The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).  
-The modified operand valarray is:  ( 0 -1 10 -1 10 -1 10 -1 8 -1 ).  
+The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
+The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).  
 ```  
   
-## 要求  
- **Header:** \<valarray\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<valarray>  
   
- **命名空间:**  std  
+ **命名空间：** std  
   
-## 请参阅  
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
