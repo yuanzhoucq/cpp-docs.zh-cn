@@ -1,47 +1,64 @@
 ---
-title: "atexit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atexit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "atexit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atexit 函数"
-  - "处理, at exit"
+title: "atexit | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atexit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- atexit
+dev_langs:
+- C++
+helpviewer_keywords:
+- processing, at exit
+- atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# atexit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6d0d85ffc7f3ed71a26a947dd66c710e76388e96
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-在退出时处理指定的函数。  
+---
+# <a name="atexit"></a>atexit
+处理退出时指定的函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int atexit(  
@@ -49,28 +66,28 @@ int atexit(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `func`  
- 被调用的函数。  
+ 要调用的函数。  
   
-## 返回值  
- 如果成功 `atexit` 返回 0，如果发生错误，返回一个非零值，。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则 `atexit` 返回 0；如果发生错误，则返回非零值。  
   
-## 备注  
- 当程序正常终止时，`atexit` 函数传递 \(`func`\) 的地址来调用。  成功调用 `atexit` 的函数注册，执行后后进先出函数 \(LIFO\) 的顺序。  函数传递给 `atexit` 不能带参数。  `atexit` 和 `_onexit` 使用堆保留函数注册。  因此，注册可以函数的数目由堆内存只限制。  
+## <a name="remarks"></a>备注  
+ 当程序正常终止时，向 `atexit` 函数传递要调用的函数 (`func`) 的地址。 对 `atexit` 的后续调用将创建一个函数注册表，其中的函数按后进先出 (LIFO) 顺序执行。 传递到 `atexit` 的函数不能接受参数。 `atexit` 和 `_onexit` 使用堆保存函数注册表。 因此，可以注册的函数的数量仅受堆内存限制。  
   
- 在 `atexit` 函数的代码中不应包含任何依赖于刚被卸载的 DLL ，当调用 `atexit` 函数时。  
+ `atexit` 函数中的代码不应该包含在调用 `atexit` 函数时已卸载的任何 DLL 上的任何依赖项。  
   
- 若要生成一个符合 ANSI 的应用程序，请使用 ANSI 标准 `atexit` 函数 \(而不是相同的 `_onexit` 函数。\)  
+ 要生成符合 ANSI 的应用程序，请使用 ANSI 标准的 `atexit` 函数（而不是类似的 `_onexit` 函数）。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`atexit`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`atexit`|\<stdlib.h>|  
   
-## 示例  
- 当调用 `atexit` 时，此程序推入四个执行函数到栈上。  在程序退出，这些程序执行后进先出顺序。  
+## <a name="example"></a>示例  
+ 调用 `atexit` 时，该程序将四个函数推送到要执行的函数堆栈。 当程序退出时，这些程序以后进先出的方式执行。  
   
 ```  
 // crt_atexit.c  
@@ -109,13 +126,13 @@ void fn4()
 }  
 ```  
   
-  **这首先执行。**  
-**这接下来执行。**   
-## .NET Framework 等效项  
- [System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)  
+```Output  
+This is executed first.  
+This is executed next.  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_onexit、\_onexit\_m](../../c-runtime-library/reference/onexit-onexit-m.md)
+ [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_onexit、_onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;字符串&gt;
@@ -73,15 +74,15 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#operator_add)|连接两个字符串对象。|  
-|[operator!=](../standard-library/string-operators.md#operator_neq)|测试运算符左侧的字符串对象是否不等于右侧的字符串对象。|  
-|[operator==](../standard-library/string-operators.md#operator_eq_eq)|测试运算符左侧的字符串对象是否等于右侧的字符串对象。|  
-|[operator<](../standard-library/string-operators.md#operator_lt_)|测试运算符左侧的字符串对象是否小于右侧的字符串对象。|  
-|[operator<=](../standard-library/string-operators.md#operator_lt__eq)|测试运算符左侧的字符串对象是否小于或等于右侧的字符串对象。|  
-|[operator<\<](../standard-library/string-operators.md#operator_lt__lt_)|一个模板函数，用于向输出流插入字符串。|  
-|[operator>](../standard-library/string-operators.md#operator_gt_)|测试运算符左侧的字符串对象是否大于右侧的字符串对象。|  
-|[operator>=](../standard-library/string-operators.md#operator_gt__eq)|测试运算符左侧的字符串对象是否大于或等于右侧的字符串对象。|  
-|[operator>>](../standard-library/string-operators.md#operator_gt__gt_)|一个模板函数，用于从输入流提取字符串。|  
+|[operator+](../standard-library/string-operators.md#op_add)|连接两个字符串对象。|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|测试运算符左侧的字符串对象是否不等于右侧的字符串对象。|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|测试运算符左侧的字符串对象是否等于右侧的字符串对象。|  
+|[operator<](../standard-library/string-operators.md#op_lt)|测试运算符左侧的字符串对象是否小于右侧的字符串对象。|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|测试运算符左侧的字符串对象是否小于或等于右侧的字符串对象。|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|一个模板函数，用于向输出流插入字符串。|  
+|[operator>](../standard-library/string-operators.md#op_gt)|测试运算符左侧的字符串对象是否大于右侧的字符串对象。|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|测试运算符左侧的字符串对象是否大于或等于右侧的字符串对象。|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|一个模板函数，用于从输入流提取字符串。|  
   
 ### <a name="specialized-template-functions"></a>专用化模板函数  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[getline Template Function](../standard-library/string-functions.md#getline)|将字符串从输入流中一行一行地提取出来。|  
+|[getline 模板](../standard-library/string-functions.md#getline)|将字符串从输入流中一行一行地提取出来。|  
   
 ### <a name="classes"></a>类  
   

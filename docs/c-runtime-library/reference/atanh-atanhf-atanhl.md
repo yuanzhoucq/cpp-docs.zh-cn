@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8cda9bb597a24cc3e7988ba8ef4c4f8103861ea3
-ms.openlocfilehash: 3b559db7a8d8f8fbc0672d8d8a644579fd9e1ca8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4648fb28d20951b045abde39d0238de81a133f0c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
@@ -88,7 +89,7 @@ long double atanhl(
  浮点值。  
   
 ## <a name="return-value"></a>返回值  
- `atanh` 函数返回 `x` 的反双曲正切。 如果 `x` 大于 1 或小于 –1，则将 `errno` 设置为 `EDOM` 且结果是 quiet NaN。 如果 `x` 等于 1 或 -1，则分别返回正无穷或负无穷且将 `errno` 设置为 `ERANGE`。  
+ `atanh` 函数返回 `x` 的反双曲正切。 如果`x`大于 1 或小于-1，`errno`设置为`EDOM`且结果是 quiet NaN。 如果 `x` 等于 1 或 -1，则分别返回正无穷或负无穷且将 `errno` 设置为 `ERANGE`。  
   
 |输入|SEH 异常|`Matherr` 异常|  
 |-----------|-------------------|-------------------------|  
@@ -133,9 +134,6 @@ int main( void )
 tanh( 0.785398 ) = 0.655794  
 atanh( 0.655794 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   

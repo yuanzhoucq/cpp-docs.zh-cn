@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f58035cc3e3159dc8bb54860e3c8e7454f35b51
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8d5cfdb53b5aab8e6b0404b84de87ba24ee57597
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cwait"></a>_cwait
@@ -82,7 +83,7 @@ intptr_t _cwait(
  NULL：Windows 操作系统应用程序将忽略它；对于其他应用程序：要在 `procHandle` 上执行的操作代码。  
   
 ## <a name="return-value"></a>返回值  
- 成功完成指定的进程后，将返回指定进程的句柄并将 `termstat` 设置为由该指定的进程返回的结果代码。 否则，返回 –1 并设置 `errno`，如下所示。  
+ 成功完成指定的进程后，将返回指定进程的句柄并将 `termstat` 设置为由该指定的进程返回的结果代码。 否则为返回-1 并设置`errno`，如下所示。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -110,13 +111,12 @@ intptr_t _cwait(
   
 ## <a name="example"></a>示例  
   
-```  
-  
-      // crt_cwait.c  
+```C  
+// crt_cwait.c  
 // compile with: /c  
 // This program launches several processes and waits  
 // for a specified process to finish.  
-//  
+  
 #define _CRT_RAND_S  
   
 #include <windows.h>  
@@ -142,13 +142,13 @@ int main( int argc, char *argv[] )
    srand( (unsigned)time( NULL ) );    // Seed randomizer  
   
    // If no arguments, this is the calling process  
-   if( argc == 1 )  
+   if ( argc == 1 )  
    {  
       // Spawn processes in numeric order  
-      for( c = 0; c < 4; c++ ){  
+      for ( c = 0; c < 4; c++ ) {  
          _flushall();  
          process[c].nPid = _spawnl( _P_NOWAIT, argv[0], argv[0],   
-                             process[c].name, NULL );  
+                                    process[c].name, NULL );  
       }  
   
       // Wait for randomly specified process, and respond when done   
@@ -176,9 +176,6 @@ Hi, Dad. It's Beth.
 Hi, Dad. It's Carl.  
 Hi, Dad. It's Dave.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- [System::Diagnostics::Process::WaitForExit](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.waitforexit.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   

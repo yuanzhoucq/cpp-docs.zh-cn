@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 3f9a4705d946831ddee15116676fde9e433288f7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a1c256df1182c00c1b6045923ba9975f02c9bfa2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
@@ -61,14 +62,14 @@ ms.lasthandoff: 02/24/2017
   
 |Hash_map 版本|Hash_multimap 版本|描述|  
 |-----------------------|----------------------------|-----------------|  
-|[operator!= (hash_map)](../standard-library/hash-map-operators.md#operator_neq__hash_map_)|[operator!= (hash_multimap)](../standard-library/hash-map-operators.md#operator_neq)|测试运算符左侧和右侧的 hash_map 或 hash_multimap 对象是否不相等。|  
-|[operator== (hash_map)](http://msdn.microsoft.com/en-us/f933cb1c-934d-43f5-aa9e-0b325eb95b85)|[operator== (hash_multimap)](http://msdn.microsoft.com/en-us/3fa378b1-0250-4e3f-a130-dc14103fc5e9)|测试运算符左侧和右侧的 hash_map 或 hash_multimap 对象是否相等。|  
+|[operator!= (hash_map)](../standard-library/hash-map-operators.md#op_neq)|`operator!= (hash_multimap)`|测试运算符左侧和右侧的 hash_map 或 hash_multimap 对象是否不相等。|  
+|[operator== (hash_map)](../standard-library/hash-map-operators.md#op_eq_eq)|`operator== (hash_multimap)`|测试运算符左侧和右侧的 hash_map 或 hash_multimap 对象是否相等。|  
   
 ### <a name="specialized-template-functions"></a>专用化模板函数  
   
-|Hash_map 版本|Hash_multimap 版本|说明|  
+|Hash_map 版本|Hash_multimap 版本|描述|  
 |-----------------------|----------------------------|-----------------|  
-|[swap (hash_map)](../standard-library/hash-map-class.md#hash_map__swap)|[swap (hash_multimap)](../standard-library/hash-multimap-class.md#hash_multimap__swap)|交换两个 hash_map 或 hash_multimap 的元素。|  
+|[swap (hash_map)](../standard-library/hash-map-class.md#swap)|[swap (hash_multimap)](../standard-library/hash-multimap-class.md#swap)|交换两个 hash_map 或 hash_multimap 的元素。|  
   
 ### <a name="classes"></a>类  
   

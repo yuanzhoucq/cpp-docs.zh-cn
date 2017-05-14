@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 8346982360dbc6ecfaae296e48da9464b91190b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 0727a9bab67872237ffe6f747bd0be3f538eb01d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
@@ -93,7 +94,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  在使用编译的代码中**/clr**，此标头被阻止。  
+>  通过使用编译的代码中**/clr**，阻止此标头。  
   
  一个原子操作有两个关键属性，帮助你使用多个线程正确操控对象，而无需使用互斥锁。  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 02/24/2017
   
  在某些平台上，如果不使用 `mutex` 锁，可能无法有效地实施某些类型的原子操作。 如果对该类型执行的原子操作都没有使用锁，则原子类型为*无锁*。  
   
- **C + +&11;**：在信号处理程序中，如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 为 true，则可以对对象 `obj` 执行原子操作。  
+ **C + + 11**：在信号处理程序中，如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 为 true，则可以对对象 `obj` 执行原子操作。  
   
  类 [atomic_flag](../standard-library/atomic-flag-structure.md) 提供一个保留 `bool` 标志的最小原子类型。 其操作始终为无锁操作。  
   
@@ -189,37 +190,37 @@ ms.lasthandoff: 02/24/2017
 ## <a name="functions"></a>函数  
  在下面的列表中，不是以 `_explicit` 结尾的函数具有对应的 `_explicit` 的语义，只不过它们具有 `memory_order_seq_cst` 的隐式 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 参数。  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[atomic_compare_exchange_strong 函数](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_function)|执行*原子比较和交换*操作。|  
-|[atomic_compare_exchange_strong_explicit 函数](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)|执行*原子比较和交换*操作。|  
-|[atomic_compare_exchange_weak 函数](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_function)|执行*弱原子比较和交换*操作。|  
-|[atomic_compare_exchange_weak_explicit 函数](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)|执行*弱原子比较和交换*操作。|  
-|[atomic_exchange 函数](../standard-library/atomic-functions.md#atomic_exchange_function)|替换存储值。|  
-|[atomic_exchange_explicit 函数](../standard-library/atomic-functions.md#atomic_exchange_explicit_function)|替换存储值。|  
-|[atomic_fetch_add 函数](../standard-library/atomic-functions.md#atomic_fetch_add_function)|将指定的值添加到现有存储值。|  
-|[atomic_fetch_add_explicit 函数](../standard-library/atomic-functions.md#atomic_fetch_add_explicit_function)|将指定的值添加到现有存储值。|  
-|[atomic_fetch_and 函数](../standard-library/atomic-functions.md#atomic_fetch_and_function)|对指定值和现有存储值执行按位 `and`。|  
-|[atomic_fetch_and_explicit 函数](../standard-library/atomic-functions.md#atomic_fetch_and_explicit_function)|对指定值和现有存储值执行按位 `and`。|  
-|[atomic_fetch_or 函数](../standard-library/atomic-functions.md#atomic_fetch_or_function)|对指定值和现有存储值执行按位 `or`。|  
-|[atomic_fetch_or_explicit 函数](../standard-library/atomic-functions.md#atomic_fetch_or_explicit_function)|对指定值和现有存储值执行按位 `or`。|  
-|[atomic_fetch_sub 函数](../standard-library/atomic-functions.md#atomic_fetch_sub_function)|从现有存储值减去指定的值。|  
-|[atomic_fetch_sub_explicit 函数](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit_function)|从现有存储值减去指定的值。|  
-|[atomic_fetch_xor 函数](../standard-library/atomic-functions.md#atomic_fetch_xor_function)|对指定值和现有存储值执行按位 `exclusive or`。|  
-|[atomic_fetch_xor_explicit 函数](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit_function)|对指定值和现有存储值执行按位 `exclusive or`。|  
-|[atomic_flag_clear 函数](../standard-library/atomic-functions.md#atomic_flag_clear_function)|将 `atomic_flag` 对象中的标志设置为 `false`。|  
-|[atomic_flag_clear_explicit 函数](../standard-library/atomic-functions.md#atomic_flag_clear_explicit_function)|将 `atomic_flag` 对象中的标志设置为 `false`。|  
-|[atomic_flag_test_and_set 函数](../standard-library/atomic-functions.md#atomic_flag_test_and_set_function)|将 `atomic_flag` 对象中的标志设置为 `true`。|  
-|[atomic_flag_test_and_set_explicit 函数](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit_function)|将 `atomic_flag` 对象中的标志设置为 `true`。|  
-|[atomic_init 函数](../standard-library/atomic-functions.md#atomic_init_function)|设置 `atomic` 对象中存储的值。|  
-|[atomic_is_lock_free 函数](../standard-library/atomic-functions.md#atomic_is_lock_free_function)|指定对指定对象执行的原子操作是否为无锁。|  
-|[atomic_load 函数](../standard-library/atomic-functions.md#atomic_load_function)|以原子方式检索一个值。|  
-|[atomic_load_explicit 函数](../standard-library/atomic-functions.md#atomic_load_explicit_function)|以原子方式检索一个值。|  
-|[atomic_signal_fence 函数](../standard-library/atomic-functions.md#atomic_signal_fence_function)|充当 *fence*，用于在调用线程中信号处理程序在同一线程中执行的 fence 之间建立内存排序要求。|  
-|[atomic_store 函数](../standard-library/atomic-functions.md#atomic_store_function)|以原子方式存储一个值。|  
-|[atomic_store_explicit 函数](../standard-library/atomic-functions.md#atomic_store_explicit_function)|以原子方式存储一个值。|  
-|[atomic_thread_fence 函数](../standard-library/atomic-functions.md#atomic_thread_fence_function)|充当就其他 fence 建立内存排序要求的 *fence*。|  
-|[kill_dependency 函数](../standard-library/atomic-functions.md#kill_dependency_function)|中断可能的依赖关系链。|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|执行*原子比较和交换*操作。|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|执行*原子比较和交换*操作。|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|执行*弱原子比较和交换*操作。|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|执行*弱原子比较和交换*操作。|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|替换存储值。|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|替换存储值。|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|将指定的值添加到现有存储值。|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|将指定的值添加到现有存储值。|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|对指定值和现有存储值执行按位 `and`。|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|对指定值和现有存储值执行按位 `and`。|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|对指定值和现有存储值执行按位 `or`。|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|对指定值和现有存储值执行按位 `or`。|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|从现有存储值减去指定的值。|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|从现有存储值减去指定的值。|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|对指定值和现有存储值执行按位 `exclusive or`。|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|对指定值和现有存储值执行按位 `exclusive or`。|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|将 `atomic_flag` 对象中的标志设置为 `false`。|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|将 `atomic_flag` 对象中的标志设置为 `false`。|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|将 `atomic_flag` 对象中的标志设置为 `true`。|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|将 `atomic_flag` 对象中的标志设置为 `true`。|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|设置 `atomic` 对象中存储的值。|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|指定对指定对象执行的原子操作是否为无锁。|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|以原子方式检索一个值。|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|以原子方式检索一个值。|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|充当 *fence*，用于在调用线程中信号处理程序在同一线程中执行的 fence 之间建立内存排序要求。|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|以原子方式存储一个值。|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|以原子方式存储一个值。|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|充当就其他 fence 建立内存排序要求的 *fence*。|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|中断可能的依赖关系链。|  
   
 ## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   

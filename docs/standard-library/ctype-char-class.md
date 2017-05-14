@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 0acae30ecbe670c87179f4cc2f5a2b8066ef3a4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 28fc5cf88c6a50b5fcd9950b68d7c6ef3529ccee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 类
@@ -156,9 +157,9 @@ protected:
   
 -   受保护的静态成员函数 **classic_table** 返回适合于 “C” 区域设置的 ctype 掩码表。  
   
--   没有受保护的虚拟成员函数 [do_is](../standard-library/ctype-class.md#ctype__do_is)、[do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is)，或 [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not)。 相应的公共成员函数自身执行等效操作。  
+-   没有受保护的虚拟成员函数 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is)，或 [do_scan_not](../standard-library/ctype-class.md#do_scan_not)。 相应的公共成员函数自身执行等效操作。  
   
- 成员函数 [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) 和 [do_widen](../standard-library/ctype-class.md#ctype__do_widen) 复制未改变的元素。  
+ 成员函数 [do_narrow](../standard-library/ctype-class.md#do_narrow) 和 [do_widen](../standard-library/ctype-class.md#do_widen) 复制未改变的元素。  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<locale>  

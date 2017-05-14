@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5d460e3f135015a3eb29f4f3a27a5f4cba615179
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 8deaefffa7afe676a7c8634c4c6c40e784aed982
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltalgorithmgt"></a>&lt;算法&gt;
@@ -147,7 +148,7 @@ ms.lasthandoff: 02/24/2017
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|将属于一个而不是两个排序的源范围的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。|  
 |[set_union](../standard-library/algorithm-functions.md#set_union)|将至少属于两个排序的源范围之一的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。|  
 |[sort](../standard-library/algorithm-functions.md#sort)|将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。|  
-|[shuffle](../standard-library/algorithm-functions.md#std__shuffle)|使用随机数生成器重新排列给定范围中的元素。|  
+|[shuffle](../standard-library/algorithm-functions.md#shuffle)|使用随机数生成器重新排列给定范围中的元素。|  
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|将堆转换为排序的范围。|  
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前，并保留等效元素的相对顺序。|  
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列，并保留等效元素的相对顺序。|  

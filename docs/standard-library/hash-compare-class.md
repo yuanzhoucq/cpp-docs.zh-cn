@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: e493529a2511d92b9c99f820bd05b8f911ef9280
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 56b02a7bcafebebfb9fbb5569ad28eb2d52cf879
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="hashcompare-class"></a>hash_compare 类
@@ -56,12 +57,12 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
   
 -   整数常量 **bucket_size** 指定容器不应尝试超过的每个“存储桶”（哈希表项）的平均元素数目。 该数目必须大于零。 由 hash_compare 提供的值为 4。  
   
--   整数常量 **min_buckets** 指定要保留在哈希表中的存储桶的最小数目。 该数目必须是&2; 的幂且大于零。 Hash_compare 提供的值为 8。  
+-   整数常量 **min_buckets** 指定要保留在哈希表中的存储桶的最小数目。 该数目必须是 2 的幂且大于零。 Hash_compare 提供的值为 8。  
   
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
   
 ## <a name="example"></a>示例  
- 有关如何声明和使用 hash_compare 的示例，请参阅 [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map__hash_map)、[hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap__hash_multimap)、[hash_set::hash_set](../standard-library/hash-set-class.md#hash_set__hash_set) 和 [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset__hash_multiset) 的示例。  
+ 有关如何声明和使用 hash_compare 的示例，请参阅 [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map)、[hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap)、[hash_set::hash_set](../standard-library/hash-set-class.md#hash_set) 和 [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset) 的示例。  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<hash_map>  

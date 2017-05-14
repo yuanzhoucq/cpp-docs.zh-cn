@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 02ce6e15184a7ef6acb07218564c9e1d5a7dcddd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
@@ -56,12 +57,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#operator_neq)|测试运算符左侧的堆栈对象是否不等于右侧的堆栈对象。|  
-|[operator<](../standard-library/stack-operators.md#operator_eq_eq)|测试运算符左侧的堆栈对象是否小于右侧的堆栈对象。|  
-|[operator\<=](../standard-library/stack-operators.md#operator_lt_)|测试运算符左侧的堆栈对象是否小于或等于右侧的堆栈对象。|  
-|[operator==](../standard-library/stack-operators.md#operator_lt__eq)|测试运算符左侧的堆栈对象是否等于右侧的堆栈对象。|  
-|[operator>](../standard-library/stack-operators.md#operator_gt_)|测试运算符左侧的堆栈对象是否大于右侧的堆栈对象。|  
-|[operator>=](../standard-library/stack-operators.md#operator_gt__eq)|测试运算符左侧的堆栈对象是否大于或等于右侧的堆栈对象。|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|测试运算符左侧的堆栈对象是否不等于右侧的堆栈对象。|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|测试运算符左侧的堆栈对象是否小于右侧的堆栈对象。|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|测试运算符左侧的堆栈对象是否小于或等于右侧的堆栈对象。|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|测试运算符左侧的堆栈对象是否等于右侧的堆栈对象。|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|测试运算符左侧的堆栈对象是否大于右侧的堆栈对象。|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|测试运算符左侧的堆栈对象是否大于或等于右侧的堆栈对象。|  
   
 ### <a name="classes"></a>类  
   

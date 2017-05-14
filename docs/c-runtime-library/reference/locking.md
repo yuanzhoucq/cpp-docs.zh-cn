@@ -1,51 +1,68 @@
 ---
-title: "_locking | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_locking"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_locking"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_locking 函数"
-  - "字节 [C++], 锁定文件"
-  - "文件 [C++], 锁定"
-  - "文件 [C++], 锁定字节"
-  - "locking 函数"
+title: "_locking | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _locking
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _locking
+dev_langs:
+- C++
+helpviewer_keywords:
+- locking function
+- bytes [C++], locking file
+- files [C++], locking bytes
+- files [C++], locking
+- _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _locking
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7789a1634f5ee87d54d6b9f2aadbc720819f31ef
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="locking"></a>_locking
 锁定或解锁文件的字节。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -56,43 +73,43 @@ caps.handback.revision: 19
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fd`  
- 文件说明符  
+ 文件描述符。  
   
- *mode*  
- 锁定要执行的操作。  
+ *模式*  
+ 要执行的锁定操作  
   
  *nbytes*  
- 用于锁定的字节数。  
+ 要锁定的字节数。  
   
-## 返回值  
- 如果成功，`_locking`返回 0 。  为\-1的返回值指示一个错误，在[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)设置为以下任一值情况下。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则 `_locking` 返回 0。 返回值-1 指示失败，在这种情况下[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)设置为以下值之一。  
   
  `EACCES`  
- 锁定冲突 \(文件锁定或解除锁定\)。  
+ 锁定冲突（文件已锁定或已解锁）。  
   
  `EBADF`  
- 文件无效描述符。  
+ 无效的文件描述符。  
   
  `EDEADLOCK`  
- 锁定冲突。  当 `_LK_LOCK` 或 `_LK_RLCK` 标志指定时和文件不可能被锁定，然后尝试10次之后返回。  
+ 锁定冲突。 如果指定了 `_LK_LOCK` 或 `_LK_RLCK` 标志且该文件在尝试 10 次后仍无法锁定，则返回。  
   
  `EINVAL`  
- 无效参数指定 `_locking`。  
+ 一个无效参数将提供给 `_locking`。  
   
- 如果失败由于参数错误，例如一个文件无效描述符，无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  
+ 如果失败是由错误参数导致，如无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。  
   
-## 备注  
- `_locking` 函数被锁定或解锁 `fd`指定文件的 *nbytes* 字节。  锁在文件的字节。其他进程可以防止对这些字节的访问权限。  所有锁定或解锁的起始文件指针的当前位置 *nbytes* 字节并为下运行。  锁定文件尾字节的过去是可能的。  
+## <a name="remarks"></a>备注  
+ `_locking` 函数锁定或解锁由 `fd` 指定的文件的 *nbytes* 字节。 锁定文件中的字节将阻止其他进程访问这些字节。 所有锁定或解锁在文件指针的当前位置开始，并继续到接下来的 *nbytes* 字节。 可能会锁定超出文件尾的字节。  
   
- 清单常数*模式* 必须为下列之一，在 Locking.h 定义。  
+ *mode* 必须是 Locking.h 中定义的以下清单常量之一。  
   
  `_LK_LOCK`  
- 锁定指定字节。  如果字节无法锁定，函数在 1 秒后直接调用。  如果10 多次尝试后字节无法锁定后，常数返回 FALSE。  
+ 锁定指定字节。 如果无法锁定字节，该程序会立即在 1 秒后再次尝试。 如果在 10 次尝试后仍无法锁定字节，该常量将返回一个错误。  
   
  `_LK_NBLCK`  
- 锁定指定字节。  如果字节无法锁定，常数将返回 false。  
+ 锁定指定字节。 如果无法锁定字节，该常量将返回一个错误。  
   
  `_LK_NBRLCK`  
  与 `_LK_NBLCK` 相同。  
@@ -101,22 +118,22 @@ caps.handback.revision: 19
  与 `_LK_LOCK` 相同。  
   
  `_LK_UNLCK`  
- 取消锁定指定字节，以前必须锁定。  
+ 要解锁的指定字节必须在之前锁定过。  
   
- 重叠文件的多区域可以锁定。  绑定以前锁定解锁的区域。  `_locking` 不合并相邻区域；如果两种锁定的区域是连续的，必须单独取消锁定每个区域。  只应简要锁区域应在关闭文件或程序退出之前被取消锁定。  
+ 可以锁定文件中不重叠的多个区域。 正在解锁的区域必须在之前锁定过。 `_locking` 不会合并相邻区域；如果有两个相邻的锁定区域，每个区域必须单独解锁。 区域应只是暂时锁定，在关闭文件或退出程序前应进行解锁。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_locking`|\<io.h 和\> sys \<\/locking.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_locking`|\<io.h 1> 和 \<sys/locking.h 1>|\<errno.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_locking.c  
@@ -167,13 +184,13 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_locking.txt  
+## <a name="input-crtlockingtxt"></a>输入：crt_locking.txt  
   
 ```  
 The first thirty bytes of this file will be locked.  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
   
 ```  
 No one can change these bytes while I'm reading them  
@@ -181,10 +198,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them  
 ```  
   
-## .NET Framework 等效项  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [\_creat、\_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)

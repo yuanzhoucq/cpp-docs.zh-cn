@@ -1,72 +1,90 @@
 ---
-title: "atof、_atof_l、_wtof、_wtof_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtof_l"
-  - "atof"
-  - "_atof_l"
-  - "_wtof"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstof"
-  - "_ttof"
-  - "atof"
-  - "stdlib/atof"
-  - "math/atof"
-  - "_atof_l"
-  - "stdlib/_atof_l"
-  - "math/_atof_l"
-  - "_wtof"
-  - "corecrt_wstdlib/_wtof"
-  - "_wtof_l"
-  - "corecrt_wstdlib/_wtof_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tstof 函数"
-  - "atof_l 函数"
-  - "_atof_l 函数"
-  - "atof 函数"
-  - "_tstof 函数"
-  - "_ttof 函数"
-  - "wtof 函数"
-  - "_wtof_l 函数"
-  - "ttof 函数"
-  - "wtof_l 函数"
-  - "_wtof 函数"
-  - "字符串转换, 为浮点值"
+title: "atof、_atof_l、_wtof、_wtof_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtof_l
+- atof
+- _atof_l
+- _wtof
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstof
+- _ttof
+- atof
+- stdlib/atof
+- math/atof
+- _atof_l
+- stdlib/_atof_l
+- math/_atof_l
+- _wtof
+- corecrt_wstdlib/_wtof
+- _wtof_l
+- corecrt_wstdlib/_wtof_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- tstof function
+- atof_l function
+- _atof_l function
+- atof function
+- _tstof function
+- _ttof function
+- wtof function
+- _wtof_l function
+- ttof function
+- wtof_l function
+- _wtof function
+- string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# atof、_atof_l、_wtof、_wtof_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3bb571d759b8a6360326554f4915e60d6ab0aa93
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
-将字符串转换为双精度。  
+---
+# <a name="atof-atofl-wtof-wtofl"></a>atof、_atof_l、_wtof、_wtof_l
+将字符串转换为双精度型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 double atof(  
@@ -85,100 +103,103 @@ double _wtof_l(
 );  
 ```  
   
-#### 参数  
+## <a name="parameters"></a>参数  
  `str`  
  要转换的字符串。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 每个函数返回 `double` 值，此值由将输入字符作为数字解析而生成。  如果该输入无法转换为该类型的值，则返回值为 0.0。  
+## <a name="return-value"></a>返回值  
+ 每个函数均返回 `double` 值，此值是通过将输入字符解释为数字来生成的。 如果输入无法转换为该类型的值，则返回值为 0.0。  
   
- 在所有超出范围的情况下，errno设置为`ERANGE`。  如果传递的参数为 `NULL`，则调用无效的参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。  如果允许继续执行，则这些函数将 `errno` 设置为 `EINVAL`，并返回 0。  
+ 在所有超出范围的情况下，将 errno 设置为 `ERANGE`。 如果传入的参数为 `NULL`，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL`，并返回 0。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  这些函数将字符串转换为双精度浮点值。  
   
- 输入字符串是可被解释为指定类型的数值的字符序列。  当第一个字符不能识别为数字时，函数将停止读入输入字符串。  此字符可能是终止字符串的 null 字符（'\\0' 或 L'\\0'）。  
+ 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。  
   
- `atof` 和 `_wtof` 的 `str` 参数具有以下格式：  
+ `atof` 和 `_wtof` 的 `str` 参数采用以下格式：  
   
- \[`whitespace`\] \[`sign`\] \[`digits`\] \[`.digits`\] \[ {`d` &#124; `D` &#124; `e` &#124; `E` }\[`sign`\]`digits`\]  
+ [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E` }[`sign`]`digits`]  
   
- `whitespace` 包含已忽略的空格或制表符；`sign` 是加号 \(\+\) 或减号 \(\-\)；而 `digits` 是一个或多个十进制数字。  如果数字没在小数点出现之前，至少一个必须在小数点后显示。  十进制数字后跟指数，包括一个介绍性字母（`d`、`D`、`e` 或 `E`）和一个可选带符号十进制整数。  
+ A`whitespace`空格或制表符字符，将被忽略; 组成`sign`是加号 （+） 或减号 （-）; 和`digits`是一个或多个十进制数字。 如果小数点前没有数字，则小数点后必须至少有一个数字。 十进制数字后面可以跟一个指数，该指数由一个引导性字母（`e` 或 `E`）和一个可选的带符号十进制整数组成。  
+ 
+ 这些函数的 UCRT 版本不支持转换 Fortran 样式的（`d` 或 `D`）指数字母。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。  
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前区域设置。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义的 \_UNICODE& 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|------------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstof`|`atof`|`atof`|`_wtof`|  
 |`_ttof`|`atof`|`atof`|`_wtof`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|Routine\(s\)|必需的标头|  
-|------------------|-----------|  
-|`atof`|\<math.h\> and \<stdlib.h\>|  
-|`_atof_l`|\<math.h\> and \<stdlib.h\>|  
-|`_wtof`, `_wtof_l`|\<stdlib.h\> 或 \<wchar.h\>|  
+|例程|必需的标头|  
+|------------------|---------------------|  
+|`atof`, `_atof_l`|C：\<math.h> 或 \<stdlib.h> C++：\<cstdlib>、\<stdlib.h>、\<cmath> 或 \<math.h>|  
+|`_wtof`, `_wtof_l`|C：\<stdlib.h> 或 \<wchar.h> C++：\<cstdlib>、\<stdlib.h> 或 \<wchar.h>|  
   
-## 示例  
- 此过程演示如何使用 `atof` 函数将作为字符串存储的数字转换为数值。  
+## <a name="example"></a>示例  
+ 此程序说明如何使用 `atof` 和 `_atof_l` 函数将存储为字符串的数字转换为数值。  
   
-```  
+```C  
 // crt_atof.c  
 //  
 // This program shows how numbers stored as   
 // strings can be converted to numeric  
-// values using the atof function.  
-  
+// values using the atof and _atof_l functions.  
+
 #include <stdlib.h>  
 #include <stdio.h>  
-  
-int main( void )  
-{  
-    char    *str = NULL;  
-    double  value = 0;  
-  
+#include <locale.h>  
+
+int main(void)
+{
+    char    *str = NULL;
+    double value = 0;
+    _locale_t fr = _create_locale(LC_NUMERIC, "fr-FR");
+
     // An example of the atof function  
     // using leading and training spaces.  
-    str = "  3336402735171707160320 ";  
-    value = atof( str );  
-    printf( "Function: atof( \"%s\" ) = %e\n", str, value );  
-  
+    str = "  3336402735171707160320 ";
+    value = atof(str);
+    printf("Function: atof(\"%s\") = %e\n", str, value);
+
     // Another example of the atof function  
-    // using the 'd' exponential formatting keyword.  
-    str = "3.1412764583d210";  
-    value = atof( str );  
-    printf( "Function: atof( \"%s\" ) = %e\n", str, value );  
-  
-    // An example of the atof function  
-    // using the 'e' exponential formatting keyword.  
-    str = "  -2309.12E-15";  
-    value = atof( str );  
-    printf( "Function: atof( \"%s\" ) = %e\n", str, value );  
-  
+    // using the 'E' exponential formatting keyword.  
+    str = "3.1412764583E210";
+    value = atof(str);
+    printf("Function: atof(\"%s\") = %e\n", str, value);
+
+    // An example of the atof and _atof_l functions  
+    // using the 'e' exponential formatting keyword  
+    // and showing different decimal point interpretations.  
+    str = "  -2,309e-25";
+    value = atof(str);
+    printf("Function: atof(\"%s\") = %e\n", str, value);
+    value = _atof_l(str, fr);
+    printf("Function: _atof_l(\"%s\", fr)) = %e\n", str, value);
 }  
 ```  
   
-  **Function: atof\( " 3336402735171707160320 " \) \= 3.336403e\+021**  
-**Function: atof\( "3.1412764583d210" \) \= 3.141276e\+210**  
-**Function: atof\( " \-2309.12E\-15" \) \= \-2.309120e\-012**   
-## .NET Framework 等效项  
+```Output  
+Function: atof("  3336402735171707160320 ") = 3.336403e+21
+Function: atof("3.1412764583E210") = 3.141276e+210
+Function: atof("  -2,309e-25") = -2.000000e+00
+Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25  
+```  
   
--   [System::Convert::ToSingle](https://msdn.microsoft.com/en-us/library/system.convert.tosingle.aspx)  
-  
--   [System::Convert::ToDouble](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [区域设置](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

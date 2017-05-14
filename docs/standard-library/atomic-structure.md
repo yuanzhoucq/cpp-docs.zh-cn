@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 03665af409892b087bcc8a0858513f1f96f0c41d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: fd21d2fe59dc7db7670fb94fde6d169603bbf6d1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="atomic-structure"></a>atomic 结构
@@ -51,16 +52,16 @@ struct atomic;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[atomic::atomic 构造函数](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|构造一个原子对象。|  
+|[atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|构造一个原子对象。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|说明|  
 |----------|-----------------|  
-|[atomic::operator Ty 运算符](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|读取并返回存储的值。 ([atomic::load 方法](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
-|[atomic::operator= 运算符](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|使用指定值替换存储值。 ([atomic::store 方法](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[atomic::operator Ty 运算符](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|读取并返回存储的值。 ([atomic:: load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[atomic::operator= 运算符](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|使用指定值替换存储值。 ([atomic:: store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
 |[atomic::operator++ 运算符](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|增加存储值。 仅由整型和指针专用化使用。|  
 |[atomic::operator+= 运算符](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|将指定的值添加到存储值。 仅由整型和指针专用化使用。|  
 |[atomic::operator-- 运算符](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|减小存储值。 仅由整型和指针专用化使用。|  
@@ -73,16 +74,16 @@ struct atomic;
   
 |名称|描述|  
 |----------|-----------------|  
-|[atomic::compare_exchange_strong 方法](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|对 `this` 执行 `atomic_compare_and_exchange` 操作并返回结果。|  
-|[atomic::compare_exchange_weak 方法](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|对 `this` 执行 `weak_atomic_compare_and_exchange` 操作并返回结果。|  
-|[atomic::fetch_add 方法](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|将指定的值添加到存储值。|  
-|[atomic::fetch_and 方法](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|对指定值和存储值执行按位 `and`。|  
-|[atomic::fetch_or 方法](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|对指定值和存储值执行按位 `or`。|  
-|[atomic::fetch_sub 方法](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|从存储值减去指定的值。|  
-|[atomic::fetch_xor 方法](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|对指定值和存储值执行按位 `exclusive or`。|  
-|[atomic::is_lock_free 方法](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|指定 `this` 上的原子操作是否为*无锁*。 如果对类型执行的原子操作都没有使用锁，则原子类型为*无锁*。|  
-|[atomic::load 方法](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|读取并返回存储的值。|  
-|[atomic::store 方法](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|使用指定值替换存储值。|  
+|[compare_exchange_strong](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|对 `this` 执行 `atomic_compare_and_exchange` 操作并返回结果。|  
+|[compare_exchange_weak](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|对 `this` 执行 `weak_atomic_compare_and_exchange` 操作并返回结果。|  
+|[fetch_add](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|将指定的值添加到存储值。|  
+|[fetch_and](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|对指定值和存储值执行按位 `and`。|  
+|[fetch_or](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|对指定值和存储值执行按位 `or`。|  
+|[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|从存储值减去指定的值。|  
+|[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|对指定值和存储值执行按位 `exclusive or`。|  
+|[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|指定 `this` 上的原子操作是否为*无锁*。 如果对类型执行的原子操作都没有使用锁，则原子类型为*无锁*。|  
+|[负载](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|读取并返回存储的值。|  
+|[应用商店](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|使用指定值替换存储值。|  
   
 ## <a name="remarks"></a>备注  
  类型 `Ty` 必须*完全可复制*。 即，使用 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 复制其字节必须生成一个与原始对象相等的有效 `Ty` 对象。 `compare_exchange_weak` 和 `compare_exchange_strong` 成员函数使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 来确定两个`Ty` 值是否相等。 这些函数将不会使用 `Ty`-defined `operator==`。 `atomic` 的成员函数使用 `memcpy` 复制类型 `Ty` 的值。  
@@ -102,7 +103,7 @@ struct atomic;
  整型专用化派生自相应的 `atomic_``integral` 类型。 例如，`atomic<unsigned int>` 派生自 `atomic_uint`。  
   
 ## <a name="requirements"></a>要求  
- **标头：**atomic  
+ **标头︰** \<原子 >  
   
  **命名空间：** std  
   

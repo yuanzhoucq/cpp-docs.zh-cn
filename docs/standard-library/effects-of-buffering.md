@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d888b6d16e0a71168e0615d89bbd1d03c51afad8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e834b5be6b7d31d1f1516799462d57330bf4ceb2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="effects-of-buffering"></a>缓冲效果
@@ -65,7 +66,7 @@ int main( )
 cout <<"Please wait..." <<flush;  
 ```  
   
- 此步骤将刷新缓冲区，确保在等待之前输出消息。 还可以使用 `endl` 操控器刷新缓冲区并输出回车符-换行符，也可以使用 `cin` 对象。 此对象（与 `cerr` 或 `clog` 对象一起）通常绑定到 `cout` 对象。 因此，对 `cin` （或 `cerr` 或 `clog` 对象）的任何使用将刷新 `cout` 对象。  
+ 此步骤将刷新缓冲区，确保在等待之前输出消息。 你还可以使用`endl`操控器，其刷新缓冲区并输出回车换行符，或者是你可以使用`cin`对象。 此对象（与 `cerr` 或 `clog` 对象一起）通常绑定到 `cout` 对象。 因此，对 `cin` （或 `cerr` 或 `clog` 对象）的任何使用将刷新 `cout` 对象。  
   
 ## <a name="see-also"></a>另请参阅  
  [输出流](../standard-library/output-streams.md)

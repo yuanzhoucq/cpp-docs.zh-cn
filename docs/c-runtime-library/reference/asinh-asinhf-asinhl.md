@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 35e456abc1682624b73f75b32ea4ec2fedee1a37
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 459b1a8c80f4131c0e23f7ab92e304e7353290d8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
@@ -92,7 +93,7 @@ long double asinhl(
   
 |输入|SEH 异常|`_matherr` 异常|  
 |-----------|-------------------|--------------------------|  
-|± QNAN、IND、INF|无|无|  
+|± QNAN, IND, INF|无|无|  
   
 ## <a name="remarks"></a>备注  
  使用 C++ 时，你可以调用采用并返回 `asinh` 或 `float` 值的 `long double` 重载。 在 C 程序中，`asinh` 始终采用并返回 `double`。  
@@ -132,9 +133,6 @@ int main( void )
 sinh( 0.785398 ) = 0.868671  
 asinh( 0.868671 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   

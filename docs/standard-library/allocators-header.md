@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: fa76512c47fd7412227a26de3de05190c687c4b3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 536e39fdb795580a770c6bee474d3bc03614879c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
@@ -158,8 +159,8 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#operator_neq)|测试指定类的分配器对象之间是否不相等。|  
-|[operator== (\<allocators>)](../standard-library/allocators-operators.md#operator_eq_eq)|测试指定类的分配器对象之间是否相等。|  
+|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#op_neq)|测试指定类的分配器对象之间是否不相等。|  
+|[operator== (\<allocators>)](../standard-library/allocators-operators.md#op_eq_eq)|测试指定类的分配器对象之间是否相等。|  
   
 ### <a name="classes"></a>类  
   

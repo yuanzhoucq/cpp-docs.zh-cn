@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: e7f431f18a1ddd6097fc5a4790a1a3688d3bda92
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 67ba9e9a670ac187d15fe53729d8cdac475472ce
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
@@ -92,13 +93,13 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/iterator-operators.md#operator_neq)|测试运算符左侧的迭代器对象是否不等于右侧的迭代器对象。|  
-|[operator==](../standard-library/iterator-operators.md#operator_eq_eq)|测试运算符左侧的迭代器对象是否等于右侧的迭代器对象。|  
-|[operator<](../standard-library/iterator-operators.md#operator_lt_)|测试运算符左侧的迭代器对象是否小于右侧的迭代器对象。|  
-|[operator\<=](../standard-library/iterator-operators.md#operator_lt__eq)|测试运算符左侧的迭代器对象是否小于或等于右侧的迭代器对象。|  
-|[operator>](../standard-library/iterator-operators.md#operator_gt_)|测试运算符左侧的迭代器对象是否大于右侧的迭代器对象。|  
-|[operator>=](../standard-library/iterator-operators.md#operator_gt__eq)|测试运算符左侧的迭代器对象是否大于或等于右侧的迭代器对象。|  
-|[operator+](../standard-library/iterator-operators.md#operator_add)|将偏移量添加到迭代器，并返回在新偏移位置处发现插入元素的新 `reverse_iterator`。|  
+|[operator!=](../standard-library/iterator-operators.md#op_neq)|测试运算符左侧的迭代器对象是否不等于右侧的迭代器对象。|  
+|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|测试运算符左侧的迭代器对象是否等于右侧的迭代器对象。|  
+|[operator<](../standard-library/iterator-operators.md#op_lt)|测试运算符左侧的迭代器对象是否小于右侧的迭代器对象。|  
+|[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|测试运算符左侧的迭代器对象是否小于或等于右侧的迭代器对象。|  
+|[operator>](../standard-library/iterator-operators.md#op_gt)|测试运算符左侧的迭代器对象是否大于右侧的迭代器对象。|  
+|[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|测试运算符左侧的迭代器对象是否大于或等于右侧的迭代器对象。|  
+|[operator+](../standard-library/iterator-operators.md#op_add)|将偏移量添加到迭代器，并返回在新偏移位置处发现插入元素的新 `reverse_iterator`。|  
 |[operator-](../standard-library/iterator-operators.md#operator-)|从另一个迭代器中减去一个迭代器并返回差值。|  
   
 ### <a name="classes"></a>类  

@@ -1,50 +1,67 @@
 ---
-title: "fread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fread"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据 [C++], 从输入流中读取"
-  - "fread 函数"
-  - "读取数据 [C++], 从输入流"
-  - "流 [C++], 读取数据自"
+title: "fread | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fread
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fread
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- fread function
+- data [C++], reading from input stream
+- streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# fread
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1075fc8aad54dfdcada7fe2f4dd8e99706de7d99
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-从流中读取数据。  
+---
+# <a name="fread"></a>fread
+从流读取数据。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_t fread(   
@@ -55,38 +72,38 @@ size_t fread(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `buffer`  
  数据的存储位置。  
   
  `size`  
- 项目大小 \(以字节为单位\)。  
+ 项目大小（以字节为单位）。  
   
  `count`  
- 要读取项目的最大数量。  
+ 要读取的项的最大数量。  
   
  `stream`  
  指向 `FILE` 结构的指针。  
   
-## 返回值  
- `fread` 返回实际读取的完整项目数，可能小于`count` ，如果出错，或如果在达到之前遇到文件结束 `count`*。*使用 `feof` 或 `ferror` 函数与一个文件的条件区分一个可读错误。  如果 `size` 或 `count` 为 0，则 `fread` 返回 0，并且缓冲区内容保持不变。  如果 `stream` or `buffer`是null指针， `fread` 则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许执行继续，则该函数设置 `errno` 为 `EINVAL` 并返回0 。  
+## <a name="return-value"></a>返回值  
+ `fread`返回实际读取完整的项的数目，它可能小于`count`如果发生错误，或如果之前已到达遇到文件末尾，则`count`。 使用 `feof` 或 `ferror` 函数将读取错误与文件结尾条件区分开来。 如果 `size` 或 `count` 为 0，则 `fread` 返回 0 并且缓冲区内容保持不变。 如果 `stream` 或 `buffer` 为 null 指针，则 `fread` 将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 0。  
   
- 有关这些内容的更多信息以及其他错误代码，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `fread` 读取到字节函数 `count` `size` 项从输入 `stream` 且存储在 `buffer`中*。*与 `stream` 有关的文件指针\(如果有 一个\)由实际读取的字节数增加。  如果特定流在文本模式打开，支架返回换行符对用个换行符替换。  替换没有影响文件指针或返回值的效果。  如果出错，文件指针位置是不确定的。  一个读取项的值不可部分确定。  
+## <a name="remarks"></a>备注  
+ `fread` 函数最多从输入 `stream` 中读取 `size` 字节的 `count` 项并将它们存储在 `buffer` 中。 与 `stream` 相关联的文件指针（如果存在）以实际读取的字节数为增量进行递增。 如果在文本模式下打开给定的流，则单一的换行字符替换回车换行符对。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。  
   
- 此函数锁定其他线程。  如果需要一非锁定版本的，请使用 `_fread_nolock`。  
+ 此函数将锁定其他线程。 如果需要非锁定版本，请使用 `_fread_nolock`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`fread`|\<stdio.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`fread`|\<stdio.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_fread.c  
@@ -130,13 +147,13 @@ int main( void )
 }  
 ```  
   
-  **编写多 25 项。**  
-**项个数为\=25**  
-**缓冲区 \= zyxwvutsrqponmlkjihgfedcb**   
-## .NET Framework 等效项  
- [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
+```Output  
+Wrote 25 items  
+Number of items read = 25  
+Contents of buffer = zyxwvutsrqponmlkjihgfedcb  
+```  
   
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [\_read](../../c-runtime-library/reference/read.md)
+ [_read](../../c-runtime-library/reference/read.md)

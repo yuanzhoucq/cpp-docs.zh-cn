@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 04a060699b23bfc5dfaba5da0d41a522455eb03a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7c65c73075c282f3a1b0dac83692c0adfe527c58
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
@@ -98,7 +99,7 @@ void * _aligned_offset_recalloc_dbg(
  `_aligned_offset_recalloc_dbg` 将返回指向重新分配的（并且可能已移动的）内存块的 void 指针。 如果大小为零且缓冲区参数不为 `NULL`，或内存不足以将块展开到给定的大小，则返回值为 `NULL`。 在第一种情况下，会释放原始块。 在第二种情况下，将不会更改原始块。 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向类型而非 void 的指针，请在返回值上使用类型转换。  
   
 ## <a name="remarks"></a>备注  
- `_aligned_offset_realloc_dbg` 是 [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_aligned_offset_recalloc_dbg` 的调用都会减少到对 _`aligned_offset_recalloc` 的调用。 \_`aligned_offset_recalloc` 和 `_aligned_offset_recalloc_dbg` 都可重新分配基堆中的内存块，但是 `_aligned_offset_recalloc_dbg` 还包含几种调试功能：用于测试泄漏的块的用户部分两侧的缓冲区、用于跟踪特定分配类型的块类型参数，以及用于确定分配请求的源的 `filename`/`linenumber` 信息。  
+ `_aligned_offset_realloc_dbg` 是 [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_aligned_offset_recalloc_dbg` 的调用都会减少到对 `_aligned_offset_recalloc` 的调用。 `_aligned_offset_recalloc` 和 `_aligned_offset_recalloc_dbg` 都可重新分配基堆中的内存块，但是 `_aligned_offset_recalloc_dbg` 还包含几种调试功能：用于测试泄漏的块的用户部分两侧的缓冲区、用于跟踪特定分配类型的块类型参数，以及用于确定分配请求的源的 `filename`/`linenumber` 信息。  
   
  `_aligned_offset_realloc_dbg` 将使用比请求的 `newSize` 稍多的空间重新分配指定的内存块。 `newSize` 可能会大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 如果移动内存块，将覆盖原始块中的内容。  
   
@@ -111,9 +112,6 @@ void * _aligned_offset_recalloc_dbg(
 |例程|必需的标头|  
 |-------------|---------------------|  
 |`_aligned_offset_recalloc_dbg`|\<malloc.h>|  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据对齐](../../c-runtime-library/data-alignment.md)

@@ -1,94 +1,111 @@
 ---
-title: "_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnset"
-  - "_strnset"
-  - "_mbsnset_l"
-  - "_wcsnset_l"
-  - "_wcsnset"
-  - "_strnset_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsncset_l"
-  - "mbsnset_l"
-  - "_tcsnset_l"
-  - "_fstrnset"
-  - "_wcsnset_l"
-  - "_ftcsnset"
-  - "wcsnset_l"
-  - "_mbsnset_l"
-  - "_strnset"
-  - "_tcsnset"
-  - "_strnset_l"
-  - "mbsnset"
-  - "strnset_l"
-  - "_mbsnset"
-  - "_wcsnset"
-  - "_tcsncset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrnset 函数"
-  - "_ftcsnset 函数"
-  - "_mbsnset 函数"
-  - "_mbsnset_l 函数"
-  - "_strnset 函数"
-  - "_strnset_l 函数"
-  - "_tcsncset 函数"
-  - "_tcsncset_l 函数"
-  - "_tcsnset 函数"
-  - "_tcsnset_l 函数"
-  - "_wcsnset 函数"
-  - "_wcsnset_l 函数"
-  - "字符 [C++], 初始化至格式"
-  - "fstrnset 函数"
-  - "ftcsnset 函数"
-  - "初始化字符"
-  - "mbsnset 函数"
-  - "mbsnset_l 函数"
-  - "字符串 [C++], 初始化"
-  - "strnset_l 函数"
-  - "tcsncset 函数"
-  - "tcsnset 函数"
-  - "tcsnset_l 函数"
-  - "wcsnset_l 函数"
+title: "_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnset
+- _strnset
+- _mbsnset_l
+- _wcsnset_l
+- _wcsnset
+- _strnset_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsncset_l
+- mbsnset_l
+- _tcsnset_l
+- _fstrnset
+- _wcsnset_l
+- _ftcsnset
+- wcsnset_l
+- _mbsnset_l
+- _strnset
+- _tcsnset
+- _strnset_l
+- mbsnset
+- strnset_l
+- _mbsnset
+- _wcsnset
+- _tcsncset
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wcsnset function
+- strnset_l function
+- tcsnset function
+- tcsncset function
+- characters [C++], initializing to formats
+- mbsnset function
+- _tcsnset_l function
+- _mbsnset function
+- _strnset function
+- _tcsncset_l function
+- mbsnset_l function
+- _tcsnset function
+- initializing characters
+- _tcsncset function
+- ftcsnset function
+- wcsnset_l function
+- _ftcsnset function
+- _wcsnset_l function
+- _fstrnset function
+- _mbsnset_l function
+- _strnset_l function
+- fstrnset function
+- strings [C++], initializing
+- tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
 caps.latest.revision: 31
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 31
----
-# _strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9650e07c35fc72f9dd5b73c32c472d0f48f6277a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-初始化字符串到特定字符。  有关这些函数存在的更多安全版本；请参见 [\_strnset\_s、\_strnset\_s\_l、\_wcsnset\_s、\_wcsnset\_s\_l、\_mbsnset\_s、\_mbsnset\_s\_l](../../c-runtime-library/reference/strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)。  
+---
+# <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
+将字符串的字符初始化为给定字符。 这些函数的更安全版本已发布；请参阅 [_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l ](../../c-runtime-library/reference/strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)。  
   
 > [!IMPORTANT]
->  `_mbsnset` 和 `_mbsnset_l` 不能在 Windows 运行时中执行的应用程序中使用。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  `_mbsnset` 和 `_mbsnset_l` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 char *_strnset(  
@@ -126,7 +143,7 @@ unsigned char *_mbsnset_l(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `str`  
  要修改的字符串。  
   
@@ -139,38 +156,38 @@ unsigned char *_mbsnset_l(
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  返回指向修改后的字符串的指针。  
   
-## 备注  
- `_strnset` 功能集，至多，`str` 的第一个 `count` 字符到`c` \(转换为 `char`\)。  如果 `count` 比 `str`的长度更长时，使用`str` 代替 `count`。  
+## <a name="remarks"></a>备注  
+ `_strnset` 函数最多可以将 `str` 的前 `count` 个字符设置为 `c`（已转换为 `char`）。 如果 `count` 大于 `str` 的长度，则会使用 `str` 的长度而使用 `count`。  
   
- `_wcsnset` 和 `_mbsnset`  是宽字符， `_strnset` 的多节字字符版本。  参数和 `_wcsnset`  的返回值是宽字符串；`_mbsnset` 的参数和返回值为多字节字符串。  否则这三个函数否则具有相同行为。  
+ `_wcsnset` 和 `_mbsnset` 分别是 `_strnset` 的宽字符及多字节字符版本。 `_wcsnset` 的字符串参数和返回值是宽字符字符串；`_mbsnset` 的是多字节字符字符串。 否则这三个函数否则具有相同行为。  
   
- `_mbsnset` 确认其参数； 如果 `str` 是空指针，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。  如果允许继续执行，`_mbsnset`  返回空，设置 `errno` 为`EINVAL`。  `_strnset` 和 `_wcsnset` 不验证其参数。  
+ `_mbsnset` 验证其参数；如果 `str` 为空指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `_mbsnset` 返回 NULL，并将 `errno` 设置为 `EINVAL`。 `_strnset` 和 `_wcsnset` 不会验证其参数。  
   
- 输出值受区域设置的 `LC_CTYPE`  类别设置影响；有关更多信息，请参见 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  这些不带 `_l` 后缀的函数的版本使用为该区域设置相关行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用通过的区域设置参数。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsnset`|`_strnset`|`_mbsnbset`|`_wcsnset`|  
 |`_tcsnset_l`|`_strnset_l`|`_mbsnbset_l`|`_wcsnset_l`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_strnset`|\<string.h\>|  
-|`_strnset_l`|\<tchar.h\>|  
-|`_wcsnset`|\<string.h\> 或 \<wchar.h\>|  
-|`_wcsnset_l`|\<tchar.h\>|  
-|`_mbsnset`, `_mbsnset_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strnset`|\<string.h>|  
+|`_strnset_l`|\<tchar.h>|  
+|`_wcsnset`|\<string.h> 或 \<wchar.h>|  
+|`_wcsnset_l`|\<tchar.h>|  
+|`_mbsnset`, `_mbsnset_l`|\<mbstring.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_strnset.c  
@@ -189,16 +206,16 @@ int main( void )
 }  
 ```  
   
-  **之前：这是一项测试**  
-**之后：\*\*\*\*是一项测试**   
-## .NET Framework 等效项  
- [System::String::Replace](https://msdn.microsoft.com/en-us/library/system.string.replace.aspx)  
+```Output  
+Before: This is a test  
+After:  **** is a test  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcat、wcscat、\_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp、wcscmp、\_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy、wcscpy、\_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [\_strset、\_strset\_l、\_wcsset、\_wcsset\_l、\_mbsset、\_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+ [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

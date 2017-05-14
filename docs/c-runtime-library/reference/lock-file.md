@@ -1,50 +1,67 @@
 ---
-title: "_lock_file | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lock_file"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_lock_file"
-  - "lock_file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_lock_file 函数"
-  - "文件锁定 [C++]"
-  - "lock_file 函数"
+title: "_lock_file | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lock_file
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _lock_file
+- lock_file
+dev_langs:
+- C++
+helpviewer_keywords:
+- file locking [C++]
+- _lock_file function
+- lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _lock_file
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 379f0cba0d19133acbe70f7d0e9e186616a817a5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-锁定 `FILE` 对象来确保同时访问 `FILE` 对象的线程的一致性。  
+---
+# <a name="lockfile"></a>_lock_file
+锁定 `FILE` 对象，以确保一致性线程同时访问 `FILE` 对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void _lock_file(  
@@ -52,22 +69,22 @@ void _lock_file(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `file`  
- 文件处理程序。  
+ 文件句柄。  
   
-## 备注  
- `_lock_file` 函数锁定通过 `file` 指定的 `FILE` 对象。  相关文件不会由 `_lock_file` 锁定。  使用 [\_unlock\_file](../../c-runtime-library/reference/unlock-file.md) 释放文件的锁定。   `_lock_file` 和 `_unlock_file` 的调用必须在线程中匹配。  
+## <a name="remarks"></a>备注  
+ `_lock_file` 函数锁定由 `file` 指定的 `FILE` 对象。 基础文件未被 `_lock_file` 锁定。 使用 [_unlock_file](../../c-runtime-library/reference/unlock-file.md) 解除对该文件的锁定。 调用 `_lock_file` 和 `_unlock_file` 必须在线程中匹配。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_lock_file`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_lock_file`|\<stdio.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_lock_file.c  
@@ -119,31 +136,31 @@ int main()
 }  
 ```  
   
-  **...**  
-**First**  
-**第二个**  
-**First**  
-**第二个**  
-**第三**  
-**第二个**  
-**第三**  
-**第二个**  
-**...**  
-**FSiercsotn**  
-**dF**  
-**iSrescto**  
-**nFdi**  
-**rSsetc**  
-**oFnidr**  
-**sSte**  
-**cFoinrds**  
-**tS**  
-**eFciornsdt**   
-## .NET Framework 等效项  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
+```Output  
+...  
+First  
+Second  
+First  
+Second  
+Third  
+Second  
+Third  
+Second  
+...  
+FSiercsotn  
+dF  
+iSrescto  
+nFdi  
+rSsetc  
+oFnidr  
+sSte  
+cFoinrds  
+tS  
+eFciornsdt  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [\_creat、\_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_unlock\_file](../../c-runtime-library/reference/unlock-file.md)
+ [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_unlock_file](../../c-runtime-library/reference/unlock-file.md)

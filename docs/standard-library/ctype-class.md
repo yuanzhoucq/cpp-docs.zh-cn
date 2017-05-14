@@ -10,10 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - ctype
-- std::ctype
-- std.ctype
-- CType
 - xlocale/std::ctype
+- locale/std::ctype::char_type
+- locale/std::ctype::do_is
+- locale/std::ctype::do_narrow
+- locale/std::ctype::do_scan_is
+- locale/std::ctype::do_scan_not
+- locale/std::ctype::do_tolower
+- locale/std::ctype::do_toupper
+- locale/std::ctype::do_widen
+- locale/std::ctype::is
+- locale/std::ctype::narrow
+- locale/std::ctype::scan_is
+- locale/std::ctype::scan_not
+- locale/std::ctype::tolower
+- locale/std::ctype::toupper
+- locale/std::ctype::widen
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 08c792c0ab211a5ea8e83d026790322242decb81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2e99ceb296bd3f620ce1bd58e8b0de6b6132299b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ctype-class"></a>ctype 类
@@ -78,39 +91,39 @@ class ctype : public ctype_base;
   
 |||  
 |-|-|  
-|[ctype](#ctype__ctype)|`ctype` 类对象的构造函数，该类可用作字符的区域设置 facet。|  
+|[ctype](#ctype)|`ctype` 类对象的构造函数，该类可用作字符的区域设置 facet。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[char_type](#ctype__char_type)|一种类型，此类型描述区域设置使用的字符。|  
+|[char_type](#char_type)|一种类型，此类型描述区域设置使用的字符。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[do_is](#ctype__do_is)|一种虚拟函数，通过调用此函数可测试单个字符是否具有特定属性，或者为某个范围内的每个字符的属性进行分类并将属性存储在数组中。|  
-|[do_narrow](#ctype__do_narrow)|一种虚拟函数，通过调用此函数可将区域设置使用的 `CharType` 类型的字符转换为本机字符集中 `char` 类型的相应字符。|  
-|[do_scan_is](#ctype__do_scan_is)|一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码匹配的第一个字符。|  
-|[do_scan_not](#ctype__do_scan_not)|一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码不匹配的第一个字符。|  
-|[do_tolower](#ctype__do_tolower)|一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为小写。|  
-|[do_toupper](#ctype__do_toupper)|一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为大写。|  
-|[do_widen](#ctype__do_widen)|一种虚拟函数，通过调用此函数可将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。|  
-|[is](#ctype__is)|测试单个字符是否具有特定属性，或者对某个范围内的每个字符的属性进行分类并将属性存储在数组中。|  
-|[narrow](#ctype__narrow)|将区域设置使用的 `CharType` 类型的字符转换为本机字符集中 char 类型的相应字符。|  
-|[scan_is](#ctype__scan_is)|查找某个范围内与指定掩码匹配的第一个字符。|  
-|[scan_not](#ctype__scan_not)|查找某个范围内与指定掩码不匹配的第一个字符。|  
-|[tolower](#ctype__tolower)|将一个或一些列字符转换为小写。|  
-|[toupper](#ctype__toupper)|将一个或一些列字符转换为大写。|  
-|[widen](#ctype__widen)|将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。|  
+|[do_is](#do_is)|一种虚拟函数，通过调用此函数可测试单个字符是否具有特定属性，或者为某个范围内的每个字符的属性进行分类并将属性存储在数组中。|  
+|[do_narrow](#do_narrow)|一种虚拟函数，通过调用此函数可将区域设置使用的 `CharType` 类型的字符转换为本机字符集中 `char` 类型的相应字符。|  
+|[do_scan_is](#do_scan_is)|一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码匹配的第一个字符。|  
+|[do_scan_not](#do_scan_not)|一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码不匹配的第一个字符。|  
+|[do_tolower](#do_tolower)|一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为小写。|  
+|[do_toupper](#do_toupper)|一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为大写。|  
+|[do_widen](#do_widen)|一种虚拟函数，通过调用此函数可将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。|  
+|[is](#is)|测试单个字符是否具有特定属性，或者对某个范围内的每个字符的属性进行分类并将属性存储在数组中。|  
+|[narrow](#narrow)|将区域设置使用的 `CharType` 类型的字符转换为本机字符集中 char 类型的相应字符。|  
+|[scan_is](#scan_is)|查找某个范围内与指定掩码匹配的第一个字符。|  
+|[scan_not](#scan_not)|查找某个范围内与指定掩码不匹配的第一个字符。|  
+|[tolower](#tolower)|将一个或一些列字符转换为小写。|  
+|[toupper](#toupper)|将一个或一些列字符转换为大写。|  
+|[widen](#widen)|将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<locale>  
   
  **命名空间：** std  
   
-##  <a name="a-namectypechartypea--ctypechartype"></a><a name="ctype__char_type"></a>  ctype::char_type  
+##  <a name="char_type"></a>  ctype::char_type  
  一种类型，此类型描述区域设置使用的字符。  
   
 ```  
@@ -121,9 +134,9 @@ typedef CharType char_type;
  该类型是模板参数 **CharType** 的同义词。  
   
 ### <a name="example"></a>示例  
-  有关将 `char_type` 用作返回值的示例，请参阅成员函数 [widen](#ctype__widen)。  
+  有关将 `char_type` 用作返回值的示例，请参阅成员函数 [widen](#widen)。  
   
-##  <a name="a-namectypectypea--ctypectype"></a><a name="ctype__ctype"></a>  ctype::ctype  
+##  <a name="ctype"></a>  ctype::ctype  
  ctype 类对象的构造函数，该类可用作字符的区域设置 facet。  
   
 ```  
@@ -141,13 +154,13 @@ explicit ctype(size_t _Refs = 0);
   
 -   1：必须手动管理对象的生存期。  
   
--   \>0：未定义这些值。  
+-   \>1︰ 未定义这些值。  
   
  由于该析构函数受到保护，可能没有直接的示例。  
   
  构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其 `locale::facet` 基对象。  
   
-##  <a name="a-namectypedoisa--ctypedois"></a><a name="ctype__do_is"></a>  ctype::do_is  
+##  <a name="do_is"></a>  ctype::do_is  
  一种虚拟函数，通过调用此函数可测试单个字符是否具有特定属性，或者为某个范围内的每个字符的属性进行分类并将属性存储在数组中。  
   
 ```  
@@ -187,9 +200,9 @@ virtual const CharType *do_is(
  [ctype_base](../standard-library/ctype-base-class.md) 类提供了对字符属性进行分类的掩码值，从中派生 ctype。 第一个成员函数可以接受其第一个参数的表达式，该参数被称为位掩码，由逻辑按位运算符 (&#124; , & , ^ , ~) 组成的掩码值构成。  
   
 ### <a name="example"></a>示例  
-  请参阅 [is](#ctype__is) 的示例，它调用 `do_is`。  
+  请参阅 [is](#is) 的示例，它调用 `do_is`。  
   
-##  <a name="a-namectypedonarrowa--ctypedonarrow"></a><a name="ctype__do_narrow"></a>  ctype::do_narrow  
+##  <a name="do_narrow"></a>  ctype::do_narrow  
  一种虚拟函数，通过调用此函数可将区域设置使用的 `CharType` 类型的字符转换为本机字符集中 `char` 类型的相应字符。  
   
 ```  
@@ -227,12 +240,12 @@ virtual const CharType* do_narrow(
  第二个受保护的成员函数返回一个指针，指向从 `CharType` 类型的字符转换的本机字符的目标范围。  
   
 ### <a name="remarks"></a>备注  
- 第二个受保护的成员模板函数将 `I` 的值 `do_narrow`( `first` [ `I`], `default`) 存储在 `dest`[ `I`] ，间隔为 [0, `last` – `first`)。  
+ 第二个受保护成员中的模板函数存储`dest`[ `I`] 值`do_narrow`( `first` [ `I`]， `default`)，为`I`中间隔 [0， `last`  -  `first`)。  
   
 ### <a name="example"></a>示例  
-  请参阅 [narrow](#ctype__narrow) 的示例，它调用 `do_narrow`。  
+  请参阅 [narrow](#narrow) 的示例，它调用 `do_narrow`。  
   
-##  <a name="a-namectypedoscanisa--ctypedoscanis"></a><a name="ctype__do_scan_is"></a>ctype:: do_scan_is  
+##  <a name="do_scan_is"></a>ctype:: do_scan_is  
  一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码匹配的第一个字符。  
   
 ```  
@@ -256,12 +269,12 @@ virtual const CharType *do_scan_is(
  指向某个范围内与指定掩码匹配的第一个字符的指针。 如果此类值不存在，则该函数返回 `last.`  
   
 ### <a name="remarks"></a>备注  
- 受保护的成员函数返回范围 [ `first`, `last`) 内最小的指针 `ptr`，对于该范围，[do_is](#ctype__do_is)( `maskVal`,* `ptr`) 为 true。  
+ 受保护的成员函数返回范围 [ `first`, `last`) 内最小的指针 `ptr`，对于该范围，[do_is](#do_is)( `maskVal`,* `ptr`) 为 true。  
   
 ### <a name="example"></a>示例  
-  请参阅 [scan_is](#ctype__scan_is) 的示例，它调用 `do_scan_is`。  
+  请参阅 [scan_is](#scan_is) 的示例，它调用 `do_scan_is`。  
   
-##  <a name="a-namectypedoscannota--ctypedoscannot"></a><a name="ctype__do_scan_not"></a>  ctype::do_scan_not  
+##  <a name="do_scan_not"></a>  ctype::do_scan_not  
  一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码不匹配的第一个字符。  
   
 ```  
@@ -285,12 +298,12 @@ virtual const CharType *do_scan_not(
  指向某个范围内与指定掩码不匹配的第一个字符的指针。 如果此类值不存在，则该函数返回 `last`。  
   
 ### <a name="remarks"></a>备注  
- 受保护的成员函数返回范围 [ `first`, `last`) 内最小的指针 `ptr`，对于该范围，[do_is](#ctype__do_is)( `maskVal`, * `ptr`) 为 false。  
+ 受保护的成员函数返回范围 [ `first`, `last`) 内最小的指针 `ptr`，对于该范围，[do_is](#do_is)( `maskVal`, * `ptr`) 为 false。  
   
 ### <a name="example"></a>示例  
-  请参阅 [scan_not](#ctype__scan_not) 的示例，它调用 `do_scan_not`。  
+  请参阅 [scan_not](#scan_not) 的示例，它调用 `do_scan_not`。  
   
-##  <a name="a-namectypedotolowera--ctypedotolower"></a><a name="ctype__do_tolower"></a>ctype:: do_tolower  
+##  <a name="do_tolower"></a>ctype:: do_tolower  
  一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为小写。  
   
 ```  
@@ -316,12 +329,12 @@ virtual const CharType *do_tolower(
  第一个受保护的成员函数返回 `ch` 参数的小写形式。 如果没有小写形式存在，则它将返回 `ch`。 第二个受保护的成员函数返回 `last`。  
   
 ### <a name="remarks"></a>备注  
- 第二个受保护的成员模板函数将使用 `do_tolower`( `first` [ `I`]) 替换 `I` 的每个元素 `first` [ `I`]，间隔为 [0, `last` – `first`)。  
+ 第二个受保护的成员模板函数替换每个元素`first`[ `I`]，有关`I`中间隔 [0， `last`  -  `first`)，与`do_tolower`( `first` [ `I`])。  
   
 ### <a name="example"></a>示例  
-  请参阅 [tolower](#ctype__tolower) 的示例，它调用 `do_tolower`。  
+  请参阅 [tolower](#tolower) 的示例，它调用 `do_tolower`。  
   
-##  <a name="a-namectypedotouppera--ctypedotoupper"></a><a name="ctype__do_toupper"></a>ctype:: do_toupper  
+##  <a name="do_toupper"></a>ctype:: do_toupper  
  一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为大写。  
   
 ```  
@@ -347,12 +360,12 @@ virtual const CharType *do_toupper(
  第一个受保护的成员函数返回 `ch` 参数的大写形式。 如果没有大写形式存在，则它将返回 `ch`。 第二个受保护的成员函数返回 `last`。  
   
 ### <a name="remarks"></a>备注  
- 第二个受保护的成员模板函数将使用 `do_toupper`( `first` [ `I`]) 替换 `I` 的每个元素 `first` [ `I`]，间隔为 [0, `last` – `first`)。  
+ 第二个受保护的成员模板函数替换每个元素`first`[ `I`]，有关`I`中间隔 [0， `last`  -  `first`)，与`do_toupper`( `first` [ `I`])。  
   
 ### <a name="example"></a>示例  
-  请参阅 [toupper](#ctype__toupper) 的示例，它调用 `do_toupper`。  
+  请参阅 [toupper](#toupper) 的示例，它调用 `do_toupper`。  
   
-##  <a name="a-namectypedowidena--ctypedowiden"></a><a name="ctype__do_widen"></a>  ctype::do_widen  
+##  <a name="do_widen"></a>  ctype::do_widen  
  一种虚拟函数，通过调用此函数可将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。  
   
 ```  
@@ -387,9 +400,9 @@ virtual const char *do_widen(
  第二个受保护的成员模板函数将 `I` 的值 `do_widen`( `first` [ `I`]) 存储在 `dest`[ `I`] 值 ，间隔为 [0, `last` - `first`)。  
   
 ### <a name="example"></a>示例  
-  请参阅 [widen](#ctype__widen) 的示例，它调用 `do_widen`。  
+  请参阅 [widen](#widen) 的示例，它调用 `do_widen`。  
   
-##  <a name="a-namectypeisa--ctypeis"></a><a name="ctype__is"></a>  ctype::is  
+##  <a name="is"></a>  ctype::is  
  测试单个字符是否具有特定属性，或者对某个范围内的每个字符的属性进行分类并将属性存储在数组中。  
   
 ```  
@@ -465,7 +478,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namectypenarrowa--ctypenarrow"></a><a name="ctype__narrow"></a>  ctype::narrow  
+##  <a name="narrow"></a>  ctype::narrow  
  将区域设置使用的 `CharType` 类型字符转换为本机字符集中相应的 `char` 类型字符。  
   
 ```  
@@ -501,7 +514,7 @@ const CharType* narrow(
  第二个成员函数返回一个指针，指向从 `CharType` 类型的字符转换的本机字符的目标范围。  
   
 ### <a name="remarks"></a>备注  
- 第一个成员函数返回 [do_narrow](#ctype__do_narrow)( `ch`, `default`)。 第二个成员函数返回 [do_narrow](#ctype__do_narrow) ( `first`, `last`, `default`, `dest`)。 只有基本的源字符才能保证在 `narrow` 之下存在唯一的反向映像 `CharType`。 对于这些基本的源字符，包含以下不变式：`narrow` ([widen](#ctype__widen) ( **c** ), 0 ) == **c**。  
+ 第一个成员函数返回 [do_narrow](#do_narrow)( `ch`, `default`)。 第二个成员函数返回 [do_narrow](#do_narrow) ( `first`, `last`, `default`, `dest`)。 只有基本的源字符才能保证在 `narrow` 之下存在唯一的反向映像 `CharType`。 对于这些基本的源字符，包含以下不变式：`narrow` ([widen](#widen) ( **c** ), 0 ) == **c**。  
   
 ### <a name="example"></a>示例  
   
@@ -529,7 +542,7 @@ int main( )
 Xhello everyone  
 ```  
   
-##  <a name="a-namectypescanisa--ctypescanis"></a><a name="ctype__scan_is"></a>  ctype::scan_is  
+##  <a name="scan_is"></a>  ctype::scan_is  
  查找某个范围内与指定掩码匹配的第一个字符。  
   
 ```  
@@ -553,7 +566,7 @@ const CharType *scan_is(
  指向某个范围内与指定掩码匹配的第一个字符的指针。 如果此类值不存在，则该函数返回 `last.`  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回 [do_scan_is](#ctype__do_scan_is)( `maskVal`, `first`, `last`)。  
+ 成员函数返回 [do_scan_is](#do_scan_is)( `maskVal`, `first`, `last`)。  
   
 ### <a name="example"></a>示例  
   
@@ -581,7 +594,7 @@ int main( )
 The first punctuation is "," at position: 5  
 ```  
   
-##  <a name="a-namectypescannota--ctypescannot"></a><a name="ctype__scan_not"></a>  ctype::scan_not  
+##  <a name="scan_not"></a>  ctype::scan_not  
  查找某个范围内与指定掩码不匹配的第一个字符。  
   
 ```  
@@ -605,7 +618,7 @@ const CharType *scan_not(
  指向某个范围内与指定掩码不匹配的第一个字符的指针。 如果此类值不存在，则该函数返回 `last`。  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回 [do_scan_not](#ctype__do_scan_not)( `maskVal`, `first`, `last`)。  
+ 成员函数返回 [do_scan_not](#do_scan_not)( `maskVal`, `first`, `last`)。  
   
 ### <a name="example"></a>示例  
   
@@ -633,7 +646,7 @@ int main( )
 First nonalpha character is "," at position: 5  
 ```  
   
-##  <a name="a-namectypetolowera--ctypetolower"></a><a name="ctype__tolower"></a>  ctype::tolower  
+##  <a name="tolower"></a>  ctype::tolower  
  将一个或一些列字符转换为小写。  
   
 ```  
@@ -659,7 +672,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
  第二个成员函数返回 `last`。  
   
 ### <a name="remarks"></a>备注  
- 第一个成员函数返回 [do_tolower](#ctype__do_tolower)( `ch`)。 第二个成员函数返回 [do_tolower](#ctype__do_tolower)( `first`, `last`)。  
+ 第一个成员函数返回 [do_tolower](#do_tolower)( `ch`)。 第二个成员函数返回 [do_tolower](#do_tolower)( `first`, `last`)。  
   
 ### <a name="example"></a>示例  
   
@@ -686,7 +699,7 @@ int main( )
 The lowercase string is: hello, my name is john  
 ```  
   
-##  <a name="a-namectypetouppera--ctypetoupper"></a><a name="ctype__toupper"></a>  ctype::toupper  
+##  <a name="toupper"></a>  ctype::toupper  
  将一个或一些列字符转换为大写。  
   
 ```  
@@ -710,7 +723,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
  第二个成员函数返回 `last`。  
   
 ### <a name="remarks"></a>备注  
- 第一个成员函数返回 [do_toupper](#ctype__do_toupper)( `ch`)。 第二个成员函数返回 [do_toupper](#ctype__do_toupper)( `first`、`last`)。  
+ 第一个成员函数返回 [do_toupper](#do_toupper)( `ch`)。 第二个成员函数返回 [do_toupper](#do_toupper)( `first`、`last`)。  
   
 ### <a name="example"></a>示例  
   
@@ -737,7 +750,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN  
 ```  
   
-##  <a name="a-namectypewidena--ctypewiden"></a><a name="ctype__widen"></a>  ctype::widen  
+##  <a name="widen"></a>  ctype::widen  
  将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。  
   
 ```  
@@ -764,7 +777,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
  第二个成员函数返回一个指针，指向 `CharType` 类型字符的目标范围，从 `char` 类型的本机字符转换而来的区域设置使用该类型的字符。  
   
 ### <a name="remarks"></a>备注  
- 第一个成员函数返回 [do_widen](#ctype__do_widen)( `byte`)。 第二个成员函数返回 [do_widen](#ctype__do_widen)( `first`, `last`, `dest`)。  
+ 第一个成员函数返回 [do_widen](#do_widen)( `byte`)。 第二个成员函数返回 [do_widen](#do_widen)( `first`, `last`, `dest`)。  
   
 ### <a name="example"></a>示例  
   

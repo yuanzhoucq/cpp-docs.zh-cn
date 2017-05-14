@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ad3410852975757c34220e2de19f696ba3b7c718
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 97bdb002953c07aba3bf7951a6f94a058c977f9d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 宏、_assert、_wassert
@@ -169,9 +170,6 @@ A problem caused the program to stop working correctly. Windows will close the p
 ```  
   
  如果已安装调试器，请选择“调试”  按钮以启动调试器，或选择“关闭程序”  以退出。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [错误处理](../../c-runtime-library/error-handling-crt.md)   

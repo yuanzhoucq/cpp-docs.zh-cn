@@ -13,10 +13,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c82a33636012665f671dbaf16d5d0e0b90bbc391
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5cccff749b58c7e229068ebedf9e8b3c6984114c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltdequegt-functions"></a>&lt;deque&gt; 函数
@@ -41,7 +42,7 @@ void swap(
  一个 `deque` 类型的对象。  
   
 ### <a name="example"></a>示例  
- 请参阅 [deque:: swap](../standard-library/deque-class.md#deque__swap) 的示例。  
+ 请参阅 [deque:: swap](../standard-library/deque-class.md#swap) 的示例。  
   
 ## <a name="see-also"></a>另请参阅  
  [\<deque>](../standard-library/deque.md)

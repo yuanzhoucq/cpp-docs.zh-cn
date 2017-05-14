@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 6c8b7cc67cc2c35b7a02cea7d60c812cf2d9bb92
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ce9fb66784027d81acaac6e98ad0f6a6121da956
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
@@ -54,12 +55,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/list-operators.md#operator_neq)|测试运算符左侧的列表对象是否不等于右侧的列表对象。|  
-|[operator<](../standard-library/list-operators.md#operator_lt_)|测试运算符左侧的列表对象是否小于右侧的列表对象。|  
-|[operator\<=](../standard-library/list-operators.md#operator_lt__eq)|测试运算符左侧的列表对象是否小于或等于右侧的列表对象。|  
-|[operator==](../standard-library/list-operators.md#operator_eq_eq)|测试运算符左侧的列表对象是否等于右侧的列表对象。|  
-|[operator>](../standard-library/list-operators.md#operator_gt_)|测试运算符左侧的列表对象是否大于右侧的列表对象。|  
-|[operator>=](../standard-library/list-operators.md#operator_gt__eq)|测试运算符左侧的列表对象是否大于或等于右侧的列表对象。|  
+|[operator!=](../standard-library/list-operators.md#op_neq)|测试运算符左侧的列表对象是否不等于右侧的列表对象。|  
+|[operator<](../standard-library/list-operators.md#op_lt)|测试运算符左侧的列表对象是否小于右侧的列表对象。|  
+|[operator\<=](../standard-library/list-operators.md#op_gt_eq)|测试运算符左侧的列表对象是否小于或等于右侧的列表对象。|  
+|[operator==](../standard-library/list-operators.md#op_eq_eq)|测试运算符左侧的列表对象是否等于右侧的列表对象。|  
+|[operator>](../standard-library/list-operators.md#op_gt)|测试运算符左侧的列表对象是否大于右侧的列表对象。|  
+|[operator>=](../standard-library/list-operators.md#op_gt_eq)|测试运算符左侧的列表对象是否大于或等于右侧的列表对象。|  
   
 ### <a name="classes"></a>类  
   

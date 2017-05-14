@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 81467a48b08fab628da94b217c2925010f3118fe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="stack-class"></a>stack 类
@@ -66,7 +67,7 @@ class stack
  用来实现堆栈的基础容器的类型。 默认值为 `deque`*\<Type>* 类。  
   
 ## <a name="remarks"></a>备注  
- 堆栈对象的第一个模板参数中规定的 **Type** 类的元素与 [value_type](#stack__value_type) 同义，并且必须与第二个模板参数规定的基础容器类 **Container** 中的元素类型相匹配。 **Type** 必须是可赋值的，这样才能复制该类型的对象并为该类型的变量赋值。  
+ 堆栈对象的第一个模板参数中规定的 **Type** 类的元素与 [value_type](#value_type) 同义，并且必须与第二个模板参数规定的基础容器类 **Container** 中的元素类型相匹配。 **Type** 必须是可赋值的，这样才能复制该类型的对象并为该类型的变量赋值。  
   
  适合堆栈的基础容器类包括 [deque](../standard-library/deque-class.md)、[list class](../standard-library/list-class.md) 和 [vector class](../standard-library/vector-class.md) 或者支持 **back** 操作（`push_back` 和 `pop_back`）的任何其他序列容器。 基础容器类封装在容器适配器中，容器适配器仅公开一组有限的序列容器成员函数为公共接口。  
   
@@ -82,32 +83,32 @@ class stack
   
 |||  
 |-|-|  
-|[stack](#stack__stack)|构造一个空的或者是基容器对象副本的 `stack`。|  
+|[stack](#stack)|构造一个空的或者是基容器对象副本的 `stack`。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[container_type](#stack__container_type)|一种类型，它提供将由 `stack` 采用的基容器。|  
-|[size_type](#stack__size_type)|可表示 `stack` 中元素数量的无符号整数类型。|  
-|[value_type](#stack__value_type)|一种类型，它表示存储为 `stack` 中元素的对象的类型。|  
+|[container_type](#container_type)|一种类型，它提供将由 `stack` 采用的基容器。|  
+|[size_type](#size_type)|可表示 `stack` 中元素数量的无符号整数类型。|  
+|[value_type](#value_type)|一种类型，它表示存储为 `stack` 中元素的对象的类型。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[empty](#stack__empty)|测试 `stack` 是否为空。|  
-|[pop](#stack__pop)|从 `stack` 的顶部删除元素。|  
-|[push](#stack__push)|将元素添加到 `stack` 顶部。|  
-|[size](#stack__size)|返回 `stack` 中的元素数量。|  
-|[top](#stack__top)|返回对 `stack` 顶部元素的引用。|  
+|[empty](#empty)|测试 `stack` 是否为空。|  
+|[pop](#pop)|从 `stack` 的顶部删除元素。|  
+|[push](#push)|将元素添加到 `stack` 顶部。|  
+|[size](#size)|返回 `stack` 中的元素数量。|  
+|[top](#top)|返回对 `stack` 顶部元素的引用。|  
   
 ## <a name="requirements"></a>要求  
  **标头：** \<堆栈>  
   
  **命名空间：** std  
   
-##  <a name="stack__container_type"></a>  stack::container_type  
+##  <a name="container_type"></a>  stack::container_type  
  一种类型，它提供将调整的基容器。  
   
 ```  
@@ -120,9 +121,9 @@ typedef Container container_type;
  有关 `Container` 的详细信息，请参阅 [stack 类](../standard-library/stack-class.md)主题的“备注”部分。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `container_type` 的示例，请参阅 [stack::stack](#stack__stack) 的示例。  
+  有关如何声明和使用 `container_type` 的示例，请参阅 [stack::stack](#stack) 的示例。  
   
-##  <a name="stack__empty"></a>  stack::empty  
+##  <a name="empty"></a>  stack::empty  
  测试堆栈是否为空。  
   
 ```  
@@ -165,7 +166,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="stack__pop"></a>  stack::pop  
+##  <a name="pop"></a>  stack::pop  
  从堆栈的顶部删除元素。  
   
 ```  
@@ -219,7 +220,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="stack__push"></a>  stack::push  
+##  <a name="push"></a>  stack::push  
  在堆栈的末尾处添加一个元素。  
   
 ```  
@@ -265,7 +266,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="stack__size"></a>  stack::size  
+##  <a name="size"></a>  stack::size  
  返回堆栈中元素数。  
   
 ```  
@@ -304,7 +305,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="stack__size_type"></a>  stack::size_type  
+##  <a name="size_type"></a>  stack::size_type  
  一种无符号整数类型，此类型可表示堆栈中的元素数。  
   
 ```  
@@ -315,9 +316,9 @@ typedef typename Container::size_type size_type;
  类型为堆栈采用的基容器的 `size_type` 的同义词。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#stack__size) 的示例。  
+  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例。  
   
-##  <a name="stack__stack"></a>  stack::stack  
+##  <a name="stack"></a>  stack::stack  
  构造一个空的堆栈或者是基容器类副本的堆栈。  
   
 ```  
@@ -369,7 +370,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="stack__top"></a>  stack::top  
+##  <a name="top"></a>  stack::top  
  返回对堆栈顶部元素的引用。  
   
 ```  
@@ -417,7 +418,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="stack__value_type"></a>  stack::value_type  
+##  <a name="value_type"></a>  stack::value_type  
  一种类型，它表示存储为堆栈中元素的对象类型。  
   
 ```  

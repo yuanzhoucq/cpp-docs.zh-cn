@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde781215787a1d39a58c69b344eb8d41f7b3c52
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
@@ -93,7 +94,7 @@ errno_t _localtime64_s(
  指向存储时间的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回&0;。 如果失败，则返回值为错误代码。 错误代码是在 Errno.h 中定义。 有关这些错误的列表，请参阅 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 Errno.h 中定义。 有关这些错误的列表，请参阅 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ### <a name="error-conditions"></a>错误条件  
   
@@ -120,28 +121,28 @@ errno_t _localtime64_s(
  结构类型 [tm](../../c-runtime-library/standard-types.md) 的字段存储以下值，其中每个值为 `int`。  
   
  `tm_sec`  
- 整分后的秒数 (0-59)。  
+ 分钟之后的秒 (0-59)。  
   
  `tm_min`  
- 整点后的分钟数 (0-59)。  
+ 分钟后小时 (0-59)。  
   
  `tm_hour`  
- 午夜后的小时数 (0-23)。  
+ 午夜后经过的小时数 (0-23)。  
   
  `tm_mday`  
- 每月的某一日 (1 – 31)。  
+ 某一天的月份 (1-31)。  
   
  `tm_mon`  
- 月（0 – 11；1 月 = 0）。  
+ 月 (0-11;年 1 月 = 0）。  
   
  `tm_year`  
  年（当前年份减去 1900）。  
   
  `tm_wday`  
- 每周的某一日（0 – 6；星期天 = 0）。  
+ 星期几 (0-6;星期日 = 0）。  
   
  `tm_yday`  
- 一年的某一天（0 – 365；1 月 1 日 = 0）。  
+ 年的某一天 (0-365;1 月 1 日 = 0)。  
   
  `tm_isdst`  
  如果夏令时生效，则为正值；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负值。 如果设置 `TZ` 环境变量，C 运行时库假设规则适用于美国，以使用该规则实现夏令时 (DST) 的计算。  
@@ -211,9 +212,6 @@ int main( void )
 ```  
 Fri Apr 25 01:19:27 PM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   

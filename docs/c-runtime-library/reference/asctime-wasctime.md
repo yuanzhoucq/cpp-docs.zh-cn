@@ -1,56 +1,73 @@
 ---
-title: "asctime、_wasctime | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wasctime"
-  - "asctime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tasctime"
-  - "asctime"
-  - "_wasctime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tasctime 函数"
-  - "_wasctime 函数"
-  - "asctime 函数"
-  - "tasctime 函数"
-  - "时间结构转换"
-  - "时间, 转换"
-  - "wasctime 函数"
+title: "asctime、_wasctime | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wasctime
+- asctime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tasctime
+- asctime
+- _wasctime
+dev_langs:
+- C++
+helpviewer_keywords:
+- asctime function
+- tasctime function
+- wasctime function
+- _tasctime function
+- _wasctime function
+- time structure conversion
+- time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# asctime、_wasctime
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 91f0ffd5b02f9e8bc34604683c6274ec0f2c28b3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
-变换一个 `tm` 时间结构为字符串。  提供这些函数的更多安全版本；请参见 [asctime\_s、\_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)。  
+---
+# <a name="asctime-wasctime"></a>asctime、_wasctime
+将 `tm` 时间结构转换为字符串。 提供这些函数的更多安全版本；请参阅 [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 char *asctime(   
@@ -61,53 +78,53 @@ wchar_t *_wasctime(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `timeptr`  
- Time\/date 结构  
+ 时间/日期结构。  
   
-## 返回值  
- `asctime` 返回指向字符串的指针； `_wasctime` 返回指向宽字符字符串的指针。  无错误值返回。  
+## <a name="return-value"></a>返回值  
+ `asctime` 返回一个指向字符串结果的指针；`_wasctime` 返回一个指向宽字符串结果的指针。 无错误返回值。  
   
-## 备注  
- 提供这些函数的更多安全版本；请参见[asctime\_s, \_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)。  
+## <a name="remarks"></a>备注  
+ 提供这些函数的更多安全版本；请参阅 [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)。  
   
- `asctime` 函数转换为结构存储的时间为字符串。  `timeptr` 值总是包含调用 `gmtime` 或 `localtime`，都返回指向 `tm` 结构的指针，定义在 TIME.H。  
+ `asctime` 函数将存储为结构的时间转换为字符串。 通常情况下，`timeptr` 值通过调用 `gmtime` 或 `localtime` 获取，这两个函数均返回一个指向 TIME_H 中定义的 `tm` 结构的指针。  
   
 |timeptr 成员|值|  
-|----------------|-------|  
-|`tm_hour`|午夜后的小时 \(0 – 23\)。|  
-|`tm_isdst`|如果夏时制有效，是正值；如果夏时制无效，是0；负值，如果夏时制状态未知，是负值。  C 运行库假设使用美国规则实现夏令时 \(DST\) 的计算。|  
-|`tm_mday`|一月中的一天\(1–31\)|  
-|`tm_min`|一小时中的分钟 \(0–59\)|  
-|`tm_mon`|月份 \(0–11;一月 \= 0\)|  
-|`tm_sec`|一分钟的秒数 \(0–59\)|  
-|`tm_wday`|一周中的一天 \(0–6;周日 \= 0\)|  
-|`tm_yday`|一年中的一天\(0–365; 1 月 1 日 \= 0 \)|  
-|`tm_year`|年份 \(当前年份减 1900\)|  
+|--------------------|-----------|  
+|`tm_hour`|小时，自午夜 (0-23)|  
+|`tm_isdst`|如果夏令时生效，则为正；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。|  
+|`tm_mday`|月 (1-31) 天|  
+|`tm_min`|分钟后小时 (0-59)|  
+|`tm_mon`|月 (0-11;年 1 月 = 0）|  
+|`tm_sec`|分钟 (0-59) 之后的秒|  
+|`tm_wday`|周的天 (0-6;星期日 = 0）|  
+|`tm_yday`|年份 (0-365; 天1 月 1 日 = 0)|  
+|`tm_year`|年（当前年份减去 1900）|  
   
- 转换的字符串本地根据的时区设置也会调整。  有关设置本地时间，请参见 [time](../../c-runtime-library/reference/time-time32-time64.md)[\_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)，[localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)，并且[\_tzset](../../c-runtime-library/reference/tzset.md) 有关配置本地时间的函数，以及有关环境定义时区和全局变量信息的函数。  
+ 转换的字符串同时根据本地时区设置进行调整。 有关配置本地时间的信息，请参阅 [time](../../c-runtime-library/reference/time-time32-time64.md)、[_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 和 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 函数，有关定义时区环境和全局变量的信息，请参阅 [_tzset](../../c-runtime-library/reference/tzset.md)。  
   
- `asctime` 生成的结果字符串正确包含 26 个字符并具有 `Wed Jan 02 02:03:55 1980\n\0`格式。  使用 24 小时制。  所有字段都具有一个常数的宽度。  换行符和空字符占用字符串中的后两个位置。  `asctime` 使用单例，静态分配的缓冲区容纳返回字符串。  每次对此函数的调用销毁以前调用的结果。  
+ `asctime` 生成的字符串结果正好包含 26 个字符，格式为 `Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小时制。 所有字段都具有固定宽度。 换行符和空字符占据字符串的最后两个位置。 `asctime` 使用单个静态分配的缓冲区来保存返回的字符串。 每次调用此函数都会破坏上一次调用的结果。  
   
- `_wasctime` 是 `asctime`的宽字符版本。  `_wasctime` 和 `asctime` 行为相同，否则。  
+ `_wasctime` 是 `asctime` 的宽字符版本。 除此以外，`_wasctime` 和 `asctime` 的行为完全相同。  
   
- 这些函数验证其参数。  如果 `timeptr` 为 null 指针，或者如果它包含超出范围的值，则调用无效参数调用处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许执行继续，则该函数返回 `NULL` 并将 `errno` 设置为 `EINVAL`。  
+ 这些函数验证其参数。 如果 `timeptr` 是空指针或包含超出范围的值，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回 `NULL`，并且将 `errno` 设置为 `EINVAL`。  
   
-### 通用文本程序映射  
+### <a name="generic-text-routine-mapping"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义的 \_UNICODE &和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|------------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`asctime`|\<time.h\>|  
-|`_wasctime`|\<time.h\> or \<wchar.h\>|  
+|-------------|---------------------|  
+|`asctime`|\<time.h>|  
+|`_wasctime`|\<time.h> 或 \<wchar.h>|  
   
-## 示例  
- 使用 `asctime` 函数，此程序把系统时间存储在长整数 `aclock` 中，将其转换为结构 `newtime` 转换为字符串形式，然后输出。  
+## <a name="example"></a>示例  
+ 此程序以长整型 `aclock` 格式进行系统时间设置，将其转换为 `newtime` 结构，然后使用 `asctime` 函数将其转换为字符串形式以进行输出。  
   
 ```  
 // crt_asctime.c  
@@ -133,25 +150,16 @@ int main( void )
 }  
 ```  
   
-  **当前日期和时间：白天 2 月 03 日 11:38: 58 年 2002**   
-## .NET Framework 等效项  
+```Output  
+Current date and time: Sun Feb 03 11:38:58 2002  
+```  
   
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime、\_gmtime32、\_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime、\_localtime32、\_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time、\_time32、\_time64](../../c-runtime-library/reference/time-time32-time64.md)   
- [\_tzset](../../c-runtime-library/reference/tzset.md)   
- [asctime\_s、\_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)
+ [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime、_localtime32、_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)   
+ [_tzset](../../c-runtime-library/reference/tzset.md)   
+ [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)

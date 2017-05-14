@@ -1,51 +1,68 @@
 ---
-title: "_chsize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chsize"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_chsize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_chsize 函数"
-  - "chsize 函数"
-  - "文件 [C++], 更改大小"
-  - "大小"
-  - "大小, 更改文件"
+title: "_chsize | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chsize
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _chsize
+dev_langs:
+- C++
+helpviewer_keywords:
+- size
+- _chsize function
+- size, changing file
+- files [C++], changing size
+- chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _chsize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
-更改文件的大小。  一种较为安全有效的版本；请参见[\_chsize\_s](../../c-runtime-library/reference/chsize-s.md)。  
+---
+# <a name="chsize"></a>_chsize
+更改文件大小。 提供此函数的一个更安全的版本；请参阅 [_chsize_s](../../c-runtime-library/reference/chsize-s.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _chsize(   
@@ -54,32 +71,32 @@ int _chsize(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fd`  
- 引用开启文件的描述符。  
+ 引用打开的文件的文件描述符。  
   
  `size`  
  文件的新长度（以字节为单位）。  
   
-## 返回值  
- 如果更改成功，文件大小，`_chsize`返回值 0。  返回 \-1 指示错误：如果指定的文件锁定访问，`errno`为`EACCES`，如果指定的文件改为只读或说明符无效，为`EBADF`，如果设备没有留出空间，为`ENOSPC`，或如果 `size` 小于零，为`EINVAL`。  
+## <a name="return-value"></a>返回值  
+ 如果已成功更改文件大小，则 `_chsize` 返回值 0。 返回值-1 指示错误︰`errno`设置为`EACCES`如果指定的文件被锁定对访问权限，为`EBADF`如果指定的文件是只读的或描述符无效，`ENOSPC`如果没有空间保留在设备上，或`EINVAL`如果`size`小于零。  
   
- 有关这些内容的详细信息以及其他返回代码，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `_chsize`函数扩展或截断文件与 `fd` 为 `size`的指定长度。  文件绑定中打开允许写入的模式。  null 字符 \(“\\ 0 "\) 追加，如果文件是扩展。  如果文件被截断，缩短从文件的结尾的所有数据。文件的原始长度的丢失。  
+## <a name="remarks"></a>备注  
+ `_chsize` 函数扩展或截断与 `fd` 关联的文件，以达到 `size` 所指定的长度。 必须在允许写入的模式下打开文件。 如果扩展该文件，将追加 Null 字符 ('\0')。 如果文件被截断，则从缩短的文件的末尾到文件原始长度的所有数据都将丢失。  
   
- 此函数验证其参数。  如果 `size` 小于零或一个 `fd` 文件错误描述符，无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  
+ 此函数验证其参数。 如果 `size` 小于零或 `fd` 是无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_chsize`|\<io.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_chsize`|\<io.h>|\<errno.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_chsize.c  
@@ -113,17 +130,14 @@ int main( void )
 }  
 ```  
   
-  **以前文件长度：0**  
-**成功改变大小**  
-**后文件长度：329678**   
-## .NET Framework 等效项  
+```Output  
+File length before: 0  
+Size successfully changed  
+File length after:  329678  
+```  
   
--   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
-  
--   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [\_sopen、\_wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_sopen、_wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)

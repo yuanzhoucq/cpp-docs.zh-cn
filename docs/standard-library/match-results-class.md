@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 14e87ce57d9637e7e0bce5e4a6c8ec6cbffa524a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 25f0926af84b1f9075489d48fda3fc52a5998c6a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="matchresults-class"></a>match_results 类
@@ -92,11 +93,11 @@ class match_results {
  模板类描述一个对象，该对象用于控制由正则表达式搜索生成的 `sub_match<BidIt>` 类型元素不可修改的序列。 每个元素指向与该元素对应的捕获组匹配的子序列。  
   
 ## <a name="requirements"></a>要求  
- **标头：**\<regex&1;>  
+ **标头：**\<regex 1>  
   
  **命名空间：** std  
   
-##  <a name="match_results__allocator_type"></a>match_results::allocator_type  
+##  <a name="allocator_type"></a>match_results::allocator_type  
  用于管理存储的分配器的类型。  
   
 ```  
@@ -215,7 +216,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__begin"></a>match_results::begin  
+##  <a name="begin"></a>match_results::begin  
  指定子匹配序列的开头。  
   
 ```  
@@ -334,7 +335,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__char_type"></a>match_results::char_type  
+##  <a name="char_type"></a>match_results::char_type  
  元素的类型。  
   
 ```  
@@ -453,7 +454,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__const_iterator"></a>match_results::const_iterator  
+##  <a name="const_iterator"></a>match_results::const_iterator  
  子匹配项的常量迭代器类型。  
   
 ```  
@@ -572,7 +573,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__const_reference"></a>match_results::const_reference  
+##  <a name="const_reference"></a>match_results::const_reference  
  元素常量引用的类型。  
   
 ```  
@@ -691,7 +692,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__difference_type"></a>match_results::difference_type  
+##  <a name="difference_type"></a>match_results::difference_type  
  迭代器差异的类型。  
   
 ```  
@@ -810,7 +811,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__empty"></a>match_results::empty  
+##  <a name="empty"></a>match_results::empty  
  测试是否无子匹配项。  
   
 ```  
@@ -929,7 +930,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__end"></a>match_results::end  
+##  <a name="end"></a>match_results::end  
  指定子匹配序列的末尾。  
   
 ```  
@@ -1048,7 +1049,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__format"></a>match_results::format  
+##  <a name="format"></a>match_results::format  
  设置子匹配项格式。  
   
 ```  
@@ -1187,7 +1188,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__get_allocator"></a>match_results::get_allocator  
+##  <a name="get_allocator"></a>match_results::get_allocator  
  返回存储的分配器。  
   
 ```  
@@ -1306,7 +1307,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__iterator"></a>match_results::iterator  
+##  <a name="iterator"></a>match_results::iterator  
  子匹配项的迭代器类型。  
   
 ```  
@@ -1425,7 +1426,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__length"></a>match_results::length  
+##  <a name="length"></a>match_results::length  
  返回子匹配项的长度。  
   
 ```  
@@ -1548,7 +1549,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__match_results"></a>match_results::match_results  
+##  <a name="match_results"></a>match_results::match_results  
  构造对象。  
   
 ```  
@@ -1676,7 +1677,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__max_size"></a>match_results::max_size  
+##  <a name="max_size"></a>match_results::max_size  
  获取子匹配项的最大数目。  
   
 ```  
@@ -1795,7 +1796,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__operator_eq"></a>match_results::operator=  
+##  <a name="op_eq"></a>match_results::operator=  
  复制 match_results 对象。  
   
 ```  
@@ -1918,7 +1919,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__operator_at"></a>match_results::operator[]  
+##  <a name="op_at"></a>match_results::operator[]  
  访问子对象。  
   
 ```  
@@ -2041,7 +2042,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__position"></a>match_results::position  
+##  <a name="position"></a>match_results::position  
  获取子组的起始偏移量。  
   
 ```  
@@ -2164,7 +2165,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__prefix"></a>match_results::prefix  
+##  <a name="prefix"></a>match_results::prefix  
  获取第一个子匹配项之前的序列。  
   
 ```  
@@ -2283,7 +2284,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__reference"></a>match_results::reference  
+##  <a name="reference"></a>match_results::reference  
  元素引用的类型。  
   
 ```  
@@ -2402,7 +2403,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__size"></a>match_results::size  
+##  <a name="size"></a>match_results::size  
  计算子匹配项的数目。  
   
 ```  
@@ -2410,7 +2411,7 @@ size_type size() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该成员函数将返回比用于搜索的正则表达式中捕获组大一的数字，或如果为进行搜索则返回&0;。  
+ 该成员函数将返回比用于搜索的正则表达式中捕获组大一的数字，或如果为进行搜索则返回 0。  
   
 ### <a name="example"></a>示例  
   
@@ -2521,7 +2522,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__size_type"></a>match_results::size_type  
+##  <a name="size_type"></a>match_results::size_type  
  子匹配项计数的类型。  
   
 ```  
@@ -2640,7 +2641,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__str"></a>match_results::str  
+##  <a name="str"></a>match_results::str  
  返回子匹配项。  
   
 ```  
@@ -2763,7 +2764,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__string_type"></a>match_results::string_type  
+##  <a name="string_type"></a>match_results::string_type  
  字符串的类型。  
   
 ```  
@@ -2882,7 +2883,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__suffix"></a>match_results::suffix  
+##  <a name="suffix"></a>match_results::suffix  
  获取最后一个子匹配项后的序列。  
   
 ```  
@@ -3001,7 +3002,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__swap"></a>match_results::swap  
+##  <a name="swap"></a>match_results::swap  
  交换两个 match_results 对象。  
   
 ```  
@@ -3124,7 +3125,7 @@ next submatch: matched == false
 empty == false  
 ```  
   
-##  <a name="match_results__value_type"></a>match_results::value_type  
+##  <a name="value_type"></a>match_results::value_type  
  子匹配项的类型。  
   
 ```  
