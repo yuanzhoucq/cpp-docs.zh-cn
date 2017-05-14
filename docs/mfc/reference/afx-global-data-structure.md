@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1427efddf9271d273e94c4f62d6d104e7f1c2b48
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c490b3d744aa691331500f491444435dfe583d13
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 结构
@@ -103,7 +104,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|指示当前操作系统是否支持 alpha 值混合处理。|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|指示应用程序在 Windows 7 OS 还是更高版本下执行|  
@@ -278,13 +279,13 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  `TRUE` 启用辅助功能支持；`FALSE` 禁用辅助功能支持。 默认值为 `TRUE`。  
   
 ### <a name="remarks"></a>备注  
- Active Accessibility 是基于 COM 的技术，其使用辅助技术产品改进了程序和 Windows 操作系统一起工作的方式。 它提供了可靠的方式来公开与用户界面元素有关的信息。 但是，称为 Microsoft UI 自动化的更新辅助功能现已可用。 有关这两种技术的比较，请参阅[UI 自动化和 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)。  
+ Active Accessibility 是基于 COM 的技术，其使用辅助技术产品改进了程序和 Windows 操作系统一起工作的方式。 它提供了可靠的方式来公开与用户界面元素有关的信息。 但是，称为 Microsoft UI 自动化的更新辅助功能现已可用。 有关这两种技术的比较，请参阅[UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)。  
   
  使用[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)方法来确定是否启用 Microsoft Active Accessibility 支持。  
   
  
 ### <a name="see-also"></a>另请参阅  
- [UI 自动化和 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)   
+ [UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
  [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a>AFX_GLOBAL_DATA::ExcludeTag
@@ -320,7 +321,7 @@ BOOL ExcludeTag(
   
  使用下表中的符号进行编码的一组指定的缓冲区中的转义字符。 指定`TRUE`为`bIsCharsList`要转换中的符号参数`strTag`到实际的转义符的参数。 下表使用[_T()](../../c-runtime-library/data-type-mappings.md)宏来指定符号并转义字符字符串。  
   
-|符号|转义字符|  
+|符号|转义符|  
 |------------|----------------------|  
 |_T("\\\t")|_T("\t")|  
 |_T("\\\n")|_T("\n")|  
@@ -486,7 +487,7 @@ BOOL IsAccessibilitySupport() const;
   
 
 ### <a name="see-also"></a>另请参阅  
- [UI 自动化和 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)
+ [UI 自动化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  确定是否已初始化 D2D  
@@ -742,7 +743,7 @@ BOOL SetMenuFont(
  `TRUE`如果此方法成功，则否则为`FALSE`。 在调试模式下，此方法断言如果此方法将失败。  
   
 ### <a name="remarks"></a>备注  
- 此方法创建一个水平的正则字体，带下划线的字体，并使用默认菜单项是加粗字体。 此方法 （可选） 创建一个正则垂直字体。 有关逻辑字体的详细信息，请参阅[cfont:: Createfontindirect](../../mfc/reference/cfont-class.md#createfontindirect)。  
+ 此方法创建一个水平的正则字体，带下划线的字体，并使用默认菜单项是加粗字体。。 此方法 （可选） 创建一个正则垂直字体。 有关逻辑字体的详细信息，请参阅[cfont:: Createfontindirect](../../mfc/reference/cfont-class.md#createfontindirect)。  
   
 ## <a name="updatefonts"></a>AFX_GLOBAL_DATA::UpdateFonts
 重新初始化框架使用的逻辑字体。  
