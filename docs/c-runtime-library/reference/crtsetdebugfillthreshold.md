@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 86fa28d188aa5d1009d7a97591c95bad0e479564
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6d200480df1ff06afbb2b167ca62515fbf406435
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
@@ -77,7 +78,7 @@ size_t _CrtSetDebugFillThreshold(
  以前的阈值。  
   
 ## <a name="remarks"></a>备注  
- 某些安全性增强了的 CRT 函数的调试版本将使用特殊字符 (0xFD) 来填充传递给它们的缓冲区。 这有助于查找为函数传递错误大小的情况。 遗憾的是，这样也会降低性能。 若要提高性能，可对大于阈值的缓冲区使用 `_CrtSetDebugFillThreshold` 来禁止填充缓冲区。 阈值为 0 时将禁止填充所有的缓冲区。  
+ 某些安全性增强的 CRT 函数的调试版本填充传递给它们使用特殊字符的缓冲区 (0xFE)。 这有助于查找为函数传递错误大小的情况。 遗憾的是，这样也会降低性能。 若要提高性能，可对大于阈值的缓冲区使用 `_CrtSetDebugFillThreshold` 来禁止填充缓冲区。 阈值为 0 时将禁止填充所有的缓冲区。  
   
  默认阈值为 `SIZE_T_MAX`。  
   
@@ -132,9 +133,9 @@ size_t _CrtSetDebugFillThreshold(
   
 ## <a name="example"></a>示例  
   
-```  
-// crt_crtsetdebugfillthreshold.cpp  
-// compile with: /MTd  
+```C  
+// crt_crtsetdebugfillthreshold.c  
+// compile with: cl /MTd crt_crtsetdebugfillthreshold.c  
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <string.h>  
@@ -169,7 +170,7 @@ int main( void )
 }  
 ```  
   
-```  
+```Output  
 With buffer-filling on:  
 68  h  
 6f  o  
@@ -177,10 +178,10 @@ With buffer-filling on:
 64  d  
 79  y  
 00  
-fd  ²  
-fd  ²  
-fd  ²  
-fd  ²  
+fe  ■  
+fe  ■  
+fe  ■  
+fe  ■  
 With buffer-filling off:  
 68  h  
 6f  o  
@@ -193,9 +194,6 @@ With buffer-filling off:
 00  
 00  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)

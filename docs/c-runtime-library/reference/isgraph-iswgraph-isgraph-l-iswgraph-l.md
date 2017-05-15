@@ -64,10 +64,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a583f0b870f4395c80a384914d6fdd8b39e85a4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 90f55b90498908ce0c806ae1d253e07d8672df17
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
@@ -114,15 +115,12 @@ int _iswgraph_l(
   
 |例程|必需的标头|  
 |-------------|---------------------|  
-|`isgraph`|\<ctype.h&1;>|  
-|`iswgraph`|\<ctype.h&1;> 或 \<wchar.h&1;>|  
-|`_isgraph_l`|\<ctype.h&1;>|  
-|`_iswgraph_l`|\<ctype.h&1;> 或 \<wchar.h&1;>|  
+|`isgraph`|\<ctype.h 1>|  
+|`iswgraph`|\<ctype.h 1> 或 \<wchar.h 1>|  
+|`_isgraph_l`|\<ctype.h 1>|  
+|`_iswgraph_l`|\<ctype.h 1> 或 \<wchar.h 1>|  
   
  有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   

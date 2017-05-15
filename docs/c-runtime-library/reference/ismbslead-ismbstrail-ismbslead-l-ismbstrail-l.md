@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e0f3aa666b38966699cbf8a98032318f9eb938e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5c74c39a90896f9c04bfc945b420238795b11b74
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
@@ -113,7 +114,7 @@ int _ismbstrail_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果字符是前导字节，则 `_ismbslead` 将返回 -1；如果字符为结尾字节，则 `_ismbstrail` 将返回 -1。 如果输入字符串有效，但不是前导字节也不是结尾字节，则这些函数将返回零。 如果任一参数为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `NULL` 并将 `errno` 设置为 `EINVAL`。  
+ `_ismbslead`如果字符是前导字节，则返回-1 和`_ismbstrail`如果字符是一个尾字节返回-1。 如果输入字符串有效，但不是前导字节也不是结尾字节，则这些函数将返回零。 如果任一参数为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `NULL` 并将 `errno` 设置为 `EINVAL`。  
   
 ## <a name="remarks"></a>备注  
  `_ismbslead` 和 `_ismbstrail` 慢于 `_ismbblead` 和 `_ismbbtrail` 版本，因为前二者会将字符串文本考虑进去。  
@@ -124,17 +125,14 @@ int _ismbstrail_l(
   
 |例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
-|`_ismbslead`|\<mbctype.h&1;> 或 \<mbstring.h&1;>|\<ctype.h>、* \<limits.h&1;>、\<stdlib.h&1;>|  
-|`_ismbstrail`|\<mbctype.h&1;> 或 \<mbstring.h&1;>|\<ctype.h>、* \<limits.h&1;>、\<stdlib.h&1;>|  
-|`_ismbslead_l`|\<mbctype.h&1;> 或 \<mbstring.h&1;>|\<ctype.h>、* \<limits.h&1;>、\<stdlib.h&1;>|  
-|`_ismbstrail_l`|\<mbctype.h&1;> 或 \<mbstring.h&1;>|\<ctype.h>、* \<limits.h&1;>、\<stdlib.h&1;>|  
+|`_ismbslead`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
+|`_ismbstrail`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
+|`_ismbslead_l`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
+|`_ismbstrail_l`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
   
  \* 适用于测试条件的清单常量。  
   
  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   

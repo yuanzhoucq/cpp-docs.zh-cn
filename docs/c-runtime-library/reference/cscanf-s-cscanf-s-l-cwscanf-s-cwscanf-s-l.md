@@ -1,77 +1,94 @@
 ---
-title: "_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cwscanf_s_l"
-  - "_cwscanf_s"
-  - "_cscanf_s"
-  - "_cscanf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cscanf_s"
-  - "cscanf_s_l"
-  - "cwscanf_s"
-  - "_cwscanf_s"
-  - "_tcscanf_s"
-  - "_cscanf_s"
-  - "_cwscanf_s_l"
-  - "_cscanf_s_l"
-  - "cwscanf_s_l"
-  - "_tcscanf_s_l"
-  - "tcscanf_s"
-  - "tcscanf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_cscanf_s 函数"
-  - "_cscanf_s_l 函数"
-  - "_cwscanf_s 函数"
-  - "_cwscanf_s_l 函数"
-  - "_tcscanf_s 函数"
-  - "_tcscanf_s_l 函数"
-  - "控制台 [C++], 读取自"
-  - "cscanf_s 函数"
-  - "cscanf_s_l 函数"
-  - "cwscanf_s 函数"
-  - "cwscanf_s_l 函数"
-  - "数据 [C++], 从控制台读取"
-  - "读取数据 [C++], 从控制台中"
-  - "tcscanf_s 函数"
-  - "tcscanf_s_l 函数"
+title: "_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cwscanf_s_l
+- _cwscanf_s
+- _cscanf_s
+- _cscanf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- cscanf_s
+- cscanf_s_l
+- cwscanf_s
+- _cwscanf_s
+- _tcscanf_s
+- _cscanf_s
+- _cwscanf_s_l
+- _cscanf_s_l
+- cwscanf_s_l
+- _tcscanf_s_l
+- tcscanf_s
+- tcscanf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- cscanf_s function
+- _cwscanf_s_l function
+- tcscanf_s function
+- console [C++], reading from
+- _cscanf_s function
+- data [C++], reading from the console
+- cwscanf_s function
+- _tcscanf_s_l function
+- _cscanf_s_l function
+- cscanf_s_l function
+- cwscanf_s_l function
+- reading data [C++], from the console
+- _cwscanf_s function
+- _tcscanf_s function
+- tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: af647340f579d6dfba8bcc1a67a4e90b40753a4e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-从控制台读取格式数据。  [\_cscanf、\_cscanf\_l、\_cwscanf、\_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md) 的这些版本如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md) 所述，其安全得到了增强。  
+---
+# <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l
+从控制台读取格式数据。 这些更安全版本的 [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 Windows 运行时中执行的应用程序。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _cscanf_s(   
@@ -94,7 +111,7 @@ int _cwscanf_s_l(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `format`  
  窗体控件字符串。  
   
@@ -104,41 +121,41 @@ int _cwscanf_s_l(
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 成功转换并分配字段数。  返回值不包括读取，但未赋值的字段。  返回值是`EOF` ，它尝试在文件末尾读取。  当键入被重定向的操作系统命令行级别时，该情况可能发生。  返回值为 0 表示未分配字段。  
+## <a name="return-value"></a>返回值  
+ 已成功转换和分配的字段数。 返回值不包括已读取但未分配的字段。 返回值为尝试在文件结尾读取的 `EOF`。 在操作系统命令行级别重定向键盘输入时，会发生这种情况。 返回值为 0 表示没有分配任何字段。  
   
- 这些函数验证其参数。  如果 `format` 是 null 指针，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md) 所述。  如果允许执行继续，则这些函数返回 `EOF`并将 `errno` 设置为`EINVAL`。  
+ 这些函数验证其参数。 如果 `format` 为空指针，则这些函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回`EOF`和`errno`设置为`EINVAL`。  
   
-## 备注  
- `_cscanf_s` 函数直接从控制台读取数据到由`argument`给定的位置。  [\_getche](../../c-runtime-library/reference/getch-getwch.md) 函数用于读取字符。  每个任意参数必须是指向类型变量的指针，此类型需与 `format` 中的类型说明符对应。  这种格式控制输入字段的解释，并且形式和函数都与 [scanf\_s](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函数的`format` 参数相同。  `_cscanf_s` 正常回显输入字符，如果最后是对 `_ungetch`的调用，则不这样。  
+## <a name="remarks"></a>备注  
+ `_cscanf_s` 函数直接将数据从控制台读取到 `argument` 给定的位置。 [_Getche](../../c-runtime-library/reference/getch-getwch.md) 函数用于读取字符。 每个可选参数都必须为指向类型的变量的指针，该类型与 `format` 中的类型说明符对应。 格式控制输入字段的解释，格式和函数与 [scanf_s](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函数的 `format` 参数相同。 虽然 `_cscanf_s` 通常回显输入字符，但如果最后一次调用的是 `_ungetch`，则不会执行此操作。  
   
- 在`scanf` 系列中类似于函数的其他安全版本， 对于类型字段字符`c`、`C`、`s`、`S`和 `[`，`_cscanf_s` 和 `_cswscanf_s` 需要范围参数。  有关详细信息，请参阅[scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)。  
+ 像其他安全版本中的函数的`scanf`系列，`_cscanf_s`和`_cswscanf_s`需要类型字段字符的大小参数`c`， `C`， `s`， `S`，和`[`。 有关详细信息，请参阅 [scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)。  
   
 > [!NOTE]
->  大小参数的类型为 `unsigned` 而非 `size_t`。  
+>  大小参数的类型具有 `unsigned`，而不具有 `size_t`。  
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前线程区域设置。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcscanf_s`|`_cscanf_s`|`_cscanf_s`|`_cwscanf_s`|  
 |`_tcscanf_s_l`|`_cscanf_s_l`|`_cscanf_s_l`|`_cwscanf_s_l`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_cscanf_s`,`_cscanf_s_l`|\<conio.h\>|  
-|`_cwscanf_s`, `_cwscanf_s_l`|\<conio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_cscanf_s`，`_cscanf_s_l`|\<conio.h>|  
+|`_cwscanf_s`, `_cwscanf_s_l`|\<conio.h> 或 \<wchar.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_cscanf_s.c  
@@ -165,21 +182,21 @@ int main( void )
 }  
 ```  
   
-## 输入  
+## <a name="input"></a>输入  
   
 ```  
 1 2 3  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 You entered 1 2 3  
 ```  
   
-## 请参阅  
- [控制台和端口 I\/O](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cprintf、\_cprintf\_l、\_cwprintf、\_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf\_s、\_fscanf\_s\_l、fwscanf\_s、\_fwscanf\_s\_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
- [scanf\_s、\_scanf\_s\_l、wscanf\_s、\_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf\_s、\_sscanf\_s\_l、swscanf\_s、\_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
+## <a name="see-also"></a>另请参阅  
+ [控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)   
+ [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
