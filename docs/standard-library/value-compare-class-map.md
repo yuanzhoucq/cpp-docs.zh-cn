@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 200e62472c8c6002cdc45181ad019a1d78ca7977
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c46338445598ef77e6b8a4c1c261962fe9e7ff0f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare 类（&lt;映射&gt;）
@@ -64,10 +65,10 @@ protected:
  对于 set 和 multiset（二者均为键值与元素值完全相同的简单容器），`value_compare` 等效于 `key_compare`；对于 map 和 multimap，它们则不相等，因为类型 `pair` 元素的值与元素的键值不完全相同。  
   
 ## <a name="example"></a>示例  
-  有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](../standard-library/map-class.md#map__value_comp) 的示例。  
+  有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](../standard-library/map-class.md#value_comp) 的示例。  
   
 ## <a name="requirements"></a>要求  
- **标头：**\<map>  
+ **Header:** \<map>  
   
  **命名空间：** std  
   

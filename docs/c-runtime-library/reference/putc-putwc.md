@@ -1,55 +1,73 @@
 ---
-title: "putc、putwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "putwc"
-  - "putc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_puttc"
-  - "putwc"
-  - "putc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_puttc 函数"
-  - "字符, 写入"
-  - "putc 函数"
-  - "puttc 函数"
-  - "putwc 函数"
-  - "流, 将字符写入到"
+title: "putc、putwc | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- putwc
+- putc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _puttc
+- putwc
+- putc
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, writing characters to
+- characters, writing
+- putwc function
+- putc function
+- _puttc function
+- puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# putc、putwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e7df1c7810719092874990286c1b22b7e7ec6faa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
+---
+# <a name="putc-putwc"></a>putc、putwc
 将字符写入流。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -63,42 +81,42 @@ wint_t putwc(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `c`  
  要写入的字符。  
   
  `stream`  
- 指向 **FILE** 结构的指针。  
+ 指向**文件**结构的指针。  
   
-## 返回值  
- 返回已写好的字符。  若要指示错误或文件结尾情况，`putc` 和 `putchar` 返回 `EOF`; `putwc` ， `putwchar` 返回 **WEOF**。  对于所有的四个程序，请使用 [ferror](../../c-runtime-library/reference/ferror.md) 或 [feof](../../c-runtime-library/reference/feof.md) 检测错误或文件结尾。  如果 `stream` 是 null 指针，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md) 中所述。  如果允许执行继续，则这些函数返回 `EOF`或**WEOF** 并将  `errno`设置为  `EINVAL`。  
+## <a name="return-value"></a>返回值  
+ 返回写入的字符。 若要指示错误或文件结尾条件，`putc` 和 `putchar` 返回 `EOF`；`putwc` 和 `putwchar` 返回 **WEOF**。 对于所有四种例程，使用 [ferror](../../c-runtime-library/reference/ferror.md) 或 [feof](../../c-runtime-library/reference/feof.md) 来检查是否存在错误或文件结尾。 如果向 `stream` 传递的是空指针，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `EOF` 或 **WEOF**，并将 `errno` 设置为 `EINVAL`。  
   
- 有关这些内容的更多信息以及其他错误代码，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `putc` 程序写入单个字符 `c` 到当前位置的输出 `stream` 。  任何整数可以传递给 `putc`，但是仅较低的8位被写入。  `putchar` 程序与**putc\(** `c`**,stdout \)**相同。  对于每个程序，如果读取错误，流的错误指示器会被设置。  `putc` 和 `putchar` 分别类似于 `fputc` 和 `_fputchar`，但是都以函数和宏实现 \(请参见 [在函数和宏之间选择](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)\)。  `putwc` 和 `putwchar` 分别为 `putc` 和 `putchar`的宽字符版本.  如果流在 ANSI 模式中打开，`putwc` 和 `putc` 会具有相同的行为。  `putc` 当前不支持输出到 UNICODE 流。  
+## <a name="remarks"></a>备注  
+ `putc` 例程会在当前位置将单个字符 `c` 写入输出 `stream`。 任何整数都可以传递给 `putc`，但是只写入低 8 位。 `putchar` 例程等同于 **putc(** `c`**, stdout )**。 对于每个例程，如果发生读取错误，则会设置流的错误指示器。 `putc` 和 `putchar` 分别与 `fputc` 和 `_fputchar` 类似，但是都作为函数和宏实现（请参阅[在函数和宏之间选择](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)）。 `putwc` 和 `putwchar` 分别是 `putc` 和 `putchar` 的宽字符版本。 如果在 ANSI 模式下打开流，则 `putwc` 和 `putc` 的行为相同。 `putc` 当前不支持到 UNICODE 流中的输出。  
   
- 有**\_nolock** 后缀的版本是相同的，但它们不能阻止其他线程的干扰。  有关详细信息，请参阅 **\_putc\_nolock, \_putwc\_nolock**。  
+ 后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请参阅 **_putc_nolock、_putwc_nolock**。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_puttc`|`putc`|`putc`|**putwc**|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`putc`|\<stdio.h\>|  
-|`putwc`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`putc`|\<stdio.h>|  
+|`putwc`|\<stdio.h> 或 \<wchar.h>|  
   
- 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。  与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用它们。  有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。 与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_putc.c  
@@ -123,19 +141,13 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 This is the line of output  
 ```  
   
-## .NET Framework 等效项  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)

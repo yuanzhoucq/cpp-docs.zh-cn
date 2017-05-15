@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b4b1a35e2abcbeb128a36443eb4c5e5aa2a15e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s、_wsplitpath_s
@@ -195,9 +196,6 @@ errno_t _wsplitpath_s(
   
 ## <a name="example"></a>示例  
  请参阅 [_makepath_s、_wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md) 的示例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   

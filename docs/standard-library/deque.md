@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 399ee327dffdd3c223718e9fb2d36bbff0a74f81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5d3ff49236c53f484098cdc075a1d0d5379acb5f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
@@ -55,12 +56,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/deque-operators.md#operator_neq)|测试运算符左侧的 deque 对象是否不等于右侧的 deque 对象。|  
-|[operator<](../standard-library/deque-operators.md#operator_lt_)|测试运算符左侧的 deque 对象是否小于右侧的 deque 对象。|  
-|[operator\<=](../standard-library/deque-operators.md#operator_lt__eq)|测试运算符左侧的 deque 对象是否小于或等于右侧的 deque 对象。|  
-|[operator==](../standard-library/deque-operators.md#operator_eq_eq)|测试运算符左侧的 deque 对象是否等于右侧的 deque 对象。|  
-|[operator>](../standard-library/deque-operators.md#operator_gt_)|测试运算符左侧的 deque 对象是否大于右侧的 deque 对象。|  
-|[operator>=](../standard-library/deque-operators.md#operator_gt__eq)|测试运算符左侧的 deque 对象是否大于或等于右侧的 deque 对象。|  
+|[operator!=](../standard-library/deque-operators.md#op_neq)|测试运算符左侧的 deque 对象是否不等于右侧的 deque 对象。|  
+|[operator<](../standard-library/deque-operators.md#op_lt)|测试运算符左侧的 deque 对象是否小于右侧的 deque 对象。|  
+|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|测试运算符左侧的 deque 对象是否小于或等于右侧的 deque 对象。|  
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|测试运算符左侧的 deque 对象是否等于右侧的 deque 对象。|  
+|[operator>](../standard-library/deque-operators.md#op_gt)|测试运算符左侧的 deque 对象是否大于右侧的 deque 对象。|  
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|测试运算符左侧的 deque 对象是否大于或等于右侧的 deque 对象。|  
   
 ### <a name="functions"></a>函数  
   

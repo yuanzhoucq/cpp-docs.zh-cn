@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - const_mem_fun_t
-- std.const_mem_fun_t
 - xfunctional/std::const_mem_fun_t
-- std::const_mem_fun_t
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: d965e3b4072feb654a9920b9da9044f21d93f58b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: b68670f5c297bd4ec031985d5c16bb8f6da1cc14
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t 类
@@ -70,7 +69,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
  模板类存储 `Pm` 的副本，它必须是专用成员对象中指向类 **Type** 的成员函数的指针。 它将其成员函数 `operator()` 定义为返回 ( `Pleft`->\* `Pm`)() **const**。  
   
 ## <a name="example"></a>示例  
- 通常不直接使用 `const_mem_fun_t` 的构造函数；helper 函数 `mem_fun` 用于调整成员函数。 有关如何使用成员函数适配器的示例，请参阅 [mem_fun](../standard-library/functional-functions.md#mem_fun_function)。  
+ 通常不直接使用 `const_mem_fun_t` 的构造函数；helper 函数 `mem_fun` 用于调整成员函数。 有关如何使用成员函数适配器的示例，请参阅 [mem_fun](../standard-library/functional-functions.md#mem_fun)。  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<functional>  

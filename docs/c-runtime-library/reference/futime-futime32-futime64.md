@@ -1,58 +1,76 @@
 ---
-title: "_futime、_futime32、_futime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_futime64"
-  - "_futime32"
-  - "_futime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "futime"
-  - "_futime"
-  - "futime64"
-  - "_futime64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_futime 函数"
-  - "futime32 函数"
-  - "futime64 函数"
-  - "文件修改时间 [C++]"
-  - "_futime64 函数"
-  - "futime 函数"
-  - "_futime32 函数"
+title: "_futime、_futime32、_futime64 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _futime64
+- _futime32
+- _futime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- futime
+- _futime
+- futime64
+- _futime64
+dev_langs:
+- C++
+helpviewer_keywords:
+- _futime function
+- futime32 function
+- futime64 function
+- file modification time [C++]
+- _futime64 function
+- futime function
+- _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _futime、_futime32、_futime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: fe4ae59495ecea19dc14424bd4787db5decfac18
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-修改打开文件的时间。  
+---
+# <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
+设置打开的文件的修改时间。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _futime(   
@@ -69,32 +87,32 @@ int _futime64(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fd`  
- 引用开启文件的描述符。  
+ 打开的文件的文件描述符。  
   
  `filetime`  
- 为包含的新日期修改结构的指针。  
+ 指向包含新修改日期的结构的指针。  
   
-## 返回值  
- 如果成功，则返回0。  如果错误发生，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 所述。  如果实现允许继续，返回函数 \- 1 与 `errno` 设置为 `EBADF`，则指示无效的文件说明符或 `EINVAL`，指示的参数无效。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则返回 0。 出现错误时，会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回-1 和`errno`设置为`EBADF`，指示无效文件描述符或`EINVAL`，指示参数无效。  
   
-## 备注  
- `_futime` 例程设置修改访问日期和时间在打开文件与 `fd`*。* `_futime` 与 [\_utime](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)相同，只不过其参数是，打开的文件文件说明符，而不是路径或文件的名称写入文件。  `_utimbuf` 结构包含新的修改日期和访问时间字段。  两个字段必须包含有效值。  `_utimbuf32` 和 `_utimbuf64` 与 `_utimbuf` 是相同的 \(分别使用 32 位、64 位时间类型）。  `_futime` 和 `_utimbuf` 使用 64 位时类型，并且 `_futime` 在与 `_futime64`的行为相同。  如果需要强制旧行为，请定义 `_USE_32BIT_TIME_T`。  这样做使 `_futime` 相同中行为的 `_futime32` 并使 `_utimbuf` 结构使用 32 位时类型，使其等效于 `__utimbuf32`。  
+## <a name="remarks"></a>备注  
+ `_futime`例程设置上与关联的打开文件修改日期和访问时间`fd`。 `_futime` 等同于 [_utime](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)，只不过其参数是打开的文件的文件描述符，而不是文件的名称或文件的路径名称。 `_utimbuf` 结构包含新修改日期和访问时间的字段。 这两个字段必须包含有效的值。 `_utimbuf32` 和 `_utimbuf64` 等同于 `_utimbuf`，只不过分别用于 32 位和 64 位的时间类型。 `_futime` 和 `_utimbuf` 使用 64 位时间类型，`_futime` 的行为等同于 `_futime64`。 若要强制旧的非标准行为，请定义 `_USE_32BIT_TIME_T`。 这样做，会导致 `_futime` 的行为等同于 `_futime32`，并致使 `_utimbuf` 结构使用 32 位时间类型，使其等效于 `__utimbuf32`。  
   
- `_futime64`，使用 `__utimbuf64` 结构可以通过读取和修改文件日期3000 年 12 月 31 日23:59:59，UTC;然而对 `_futime32` 的调用失败，则文件上的日期晚于2038 年1 月 18 日19:14:07，UTC。  1970 年 1 月 1 日 00:00:00，是这些函数的下限的日期范围。  
+ `_futime64` 使用 `__utimbuf64` 结构，可以读取和修改日期截至 3000 年 12 月 31 日 23:59:59 UTC 的文件；如果文件日期晚于 2038 年 1 月 18 日 23:59:59 UTC，则对 `_futime32` 的调用失败。 1970 年 1 月 1 日午夜是这些函数的日期范围下限。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_futime`|\<sys\/utime.h\>|\<errno.h\>|  
-|`_futime32`|\<sys\/utime.h\>|\<errno.h\>|  
-|`_futime64`|\<sys\/utime.h\>|\<errno.h\>|  
+|函数|必需的标头|可选标头|  
+|--------------|---------------------|---------------------|  
+|`_futime`|\<sys/utime.h>|\<errno.h>|  
+|`_futime32`|\<sys/utime.h>|\<errno.h>|  
+|`_futime64`|\<sys/utime.h>|\<errno.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_futime.c  
@@ -130,13 +148,13 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_futime.c\_input  
+## <a name="input-crtfutimecinput"></a>输入：crt_futime.c_input  
   
 ```  
 Arbitrary file contents.  
 ```  
   
-### 示例输出  
+### <a name="sample-output"></a>示例输出  
   
 ```  
 Volume in drive Z has no label.  
@@ -158,13 +176,5 @@ Volume in drive Z has no label.
 File time modified  
 ```  
   
-## .NET Framework 等效项  
-  
--   [System::IO::File::SetLastAccessTime](https://msdn.microsoft.com/en-us/library/system.io.file.setlastaccesstime.aspx)  
-  
--   [System::IO::File::SetLastWriteTime](https://msdn.microsoft.com/en-us/library/system.io.file.setlastwritetime.aspx)  
-  
--   [System::IO::File::SetCreationTime](https://msdn.microsoft.com/en-us/library/system.io.file.setcreationtime.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [时间管理](../../c-runtime-library/time-management.md)

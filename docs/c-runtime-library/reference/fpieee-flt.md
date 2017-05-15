@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 54718c64d7a6720ac0601792bfec5ffb196a9716
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c2e9f909f3e7e778845d8fefebe5d8b1604af489
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
@@ -95,7 +96,7 @@ int _fpieee_flt(
 |`unsigned int RoundingMode`, `unsigned int Precision`|这些字段包含发生异常时浮点环境的相关信息。|  
 |`unsigned int Operation`|指示导致陷阱的操作的类型。 如果该类型是一个比较 (`_FpCodeCompare`)，您可以提供 `_FPIEEE_COMPARE_RESULT` 字段中某个特殊的 `Result.Value` 值（如 Fpieee.h 中所定义）。 转换类型 (`_FpCodeConvert`) 指示浮点转换操作期间出现了陷阱。 可以查看 `Operand1` 和 `Result` 类型来决定要尝试的转换类型。|  
 |`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|这些结构指示建议的结果和操作数的类型和值：<br /><br /> `OperandValid` 指示响应值是否有效的标志。<br /><br /> `Format` 对应值的数据类型。 可返回格式类型，即使相应的值无效。<br /><br /> `Value` 结果或操作数的数据值。|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS 为每个浮点异常类型包含一个&1; 位字段。<br /><br /> 这些字段和用于屏蔽提供给 [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 的异常的自变量之间存在对应关系。<br /><br /> 每个位的确切含义取决于上下文：<br /><br /> `Cause` 每个设置位指示已引发的特定异常。<br /><br /> `Enable` 每个设置位指示特定异常当前已取消屏蔽。<br /><br /> `Status` 每个设置位指示特定异常当前处于挂起状态。 这包括因被 `_controlfp` 屏蔽而未引发的异常。|  
+|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS 为每个浮点异常类型包含一个 1 位字段。<br /><br /> 这些字段和用于屏蔽提供给 [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 的异常的自变量之间存在对应关系。<br /><br /> 每个位的确切含义取决于上下文：<br /><br /> `Cause` 每个设置位指示已引发的特定异常。<br /><br /> `Enable` 每个设置位指示特定异常当前已取消屏蔽。<br /><br /> `Status` 每个设置位指示特定异常当前处于挂起状态。 这包括因被 `_controlfp` 屏蔽而未引发的异常。|  
   
  已禁用的挂起的异常在您启用它们之后将会引发。 这在将 `_fpieee_flt` 用作异常筛选器时会导致未定义的行为。 在启用浮点异常之前，始终调用 [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)。  
   
@@ -103,7 +104,7 @@ int _fpieee_flt(
   
 |函数|必需的标头|  
 |--------------|---------------------|  
-|`_fpieee_flt`|\<fpieee.h&1;>|  
+|`_fpieee_flt`|\<fpieee.h 1>|  
   
  有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
@@ -173,9 +174,6 @@ int main( void )
    // ...  
 }  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   

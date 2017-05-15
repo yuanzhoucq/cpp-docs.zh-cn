@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d5f2d015ecc2f027712bc81f1ea538f88e130662
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d54444dcd6f0b22527dc2362cfdee5f2b1c33b60
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getch-getwch"></a>_getch、_getwch
@@ -79,7 +80,7 @@ wint_t _getwch( void );
  返回读取的字符。 无错误返回。  
   
 ## <a name="remarks"></a>备注  
- `_getch` 和 `_getwch` 函数从不回显字符的控制台读取单个字符。 无可用于读取 CTRL+C 的函数。 在读取功能键或箭头键时，必须调用每个函数两次；第一次调用返回 0 或 0xE0，并且第二个调用会返回实际的键代码。  
+ `_getch`和`_getwch`函数而无需回显字符从控制台读取单个字符。 无可用于读取 CTRL+C 的函数。 在读取功能键或箭头键时，必须调用每个函数两次；第一次调用返回 0 或 0xE0，并且第二个调用会返回实际的键代码。  
   
  这些函数会锁定调用线程，因此是线程安全的。 有关非锁定版本的信息，请参阅 [_getch_nolock、_getwch_nolock](../../c-runtime-library/reference/getch-nolock-getwch-nolock.md)。  
   
@@ -100,7 +101,7 @@ wint_t _getwch( void );
   
 ## <a name="example"></a>示例  
   
-```  
+```C  
 // crt_getch.c  
 // compile with: /c  
 // This program reads characters from  
@@ -126,13 +127,13 @@ int main( void )
 }  
 ```  
   
+```Input  
+abcdefy
+```
+  
 ```Output  
-  
-abcdeyType 'Y' when finished typing keys: Y  
+Type 'Y' when finished typing keys: Y  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)   

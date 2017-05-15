@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: b6f1fb2eacdc12857978d03ccbd98ee5da3047e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d1739ef33378358a9d195b79c1ba7ace7bf54acf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="path-class"></a>path 类
@@ -174,7 +175,7 @@ template <class Elem,
 string generic_string() const;
 ```  
   
- 返回 `this->string<Elem, Traits, Alloc>(al)`，其中（在 Windows 下）任何反斜杠均转换为正斜杠。  
+ 返回 `this->string<Elem, Traits, Alloc>(al)` ，其中（在 Windows 下）任何反斜杠均转换为正斜杠。  
   
 ## <a name="pathgenericu16string"></a>path::generic_u16string  
   
@@ -612,7 +613,7 @@ wstring wstring() const;
  将 mypath 中存储的序列转换为 wchar_t 序列的主机系统偏好的编码，并将其返回存储到类型 wstring 的对象中。  
   
 ## <a name="requirements"></a>要求  
- **标头：** filesystem  
+ **标头︰** \<文件系统 >  
   
  **命名空间：**std::experimental::filesystem
   

@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 079830cff49d8efabe9bf0cf531cafa35e42c3ff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: baff5ee4871e6cfca7a5a9a1951a0d39f62bc4e7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum、_ismbbalnum_l
@@ -89,7 +90,7 @@ int _ismbbalnum_l(
 isalnum || _ismbbkalnum  
 ```  
   
- 对于 `c` 是非零，否则是 0。  
+ 对于 `c`是非零，否则是 0。  
   
  此函数带 `_l` 后缀的版本是相同的，但该本本会针对其依赖于区域设置的行为使用传入的区域设置而非当前的区域设置。  
   
@@ -104,9 +105,6 @@ isalnum || _ismbbkalnum
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   

@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: bfab56fe6847015adff4013d075893e982d5d2f4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>使用插入运算符并控制格式
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
   
 - [基数](#vclrfradixanchor6)  
   
-##  <a name="a-namevclrfoutputwidthanchor3a-output-width"></a><a name="vclrfoutputwidthanchor3"></a>输出宽度  
+##  <a name="vclrfoutputwidthanchor3"></a>输出宽度  
  若要对齐输出，可通过将 `setw` 操控器放置在流中或通过调用 **width** 成员函数来指定每个项的输出宽度。 此示例右对齐至少为 10 个字符宽的列中的值：  
   
 ```  
@@ -134,7 +135,7 @@ Jimmy     35.36
   
  `setw` 和 **width** 均不截断值。 如果格式化输出超出宽度，则整个值受流的精度设置的约束进行打印。 `setw` 和 **width** 都仅影响以下字段。 已打印一个字段之后，字段宽度将恢复为其默认行为（必要宽度）。 但是，在更改之前，其他流格式选项保持有效。  
   
-##  <a name="a-namevclrfalignmentanchor4a-alignment"></a><a name="vclrfalignmentanchor4"></a>对齐方式  
+##  <a name="vclrfalignmentanchor4"></a>对齐方式  
  输出流默认为右对齐的文本。 若要左对齐以前示例中的名称以及右对齐数字，请替换 **for** 循环，如下所示：  
   
 ```  
@@ -156,7 +157,7 @@ Stan     4358.24
   
  通过使用 [setiosflags](../standard-library/iomanip-functions.md#setiosflags) 操控器和 `left` 枚举器设置左对齐标志。 此枚举器在 [ios](../standard-library/basic-ios-class.md) 类中定义，因此它的引用必须包括 **ios::** 前缀。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) 操控器关闭左对齐标志。 与 **width** 和 `setw` 不同，`setiosflags` 和 `resetiosflags` 的效果是永久性的。  
   
-##  <a name="a-namevclrfprecisionanchor5a-precision"></a><a name="vclrfprecisionanchor5"></a>精度  
+##  <a name="vclrfprecisionanchor5"></a>精度  
  浮点精度的默认值为六。 例如，数字 3466.9768 打印为 3466.98。 若要更改此值的打印方式，请使用 [setprecision](../standard-library/iomanip-functions.md#setprecision) 操控器。 操控器具有两种标志：[fixed](../standard-library/ios-functions.md#fixed) 和 [scientific](../standard-library/ios-functions.md#scientific)。 如果设定了 [fixed](../standard-library/ios-functions.md#fixed)，则数字将打印为 3466.976800。 如果设定了 **scientific**，则它将打印为 3.4669773+003。  
   
  若要显示[对齐](#vclrfalignmentanchor4)中所示的具有一个有效数字的浮点数字，请替换 **for** 循环，如下所示：  
@@ -208,7 +209,7 @@ Stan    4.4e+003
   
  程序会再次在小数点之后打印一位数字。 如果设定了 **ios::fixed** 或 **ios::scientific** 中的任一个，则精度值将确定小数点后的位数。 如果两个标志均未设定，则精度值将确定有效位数的总数。 `resetiosflags` 操控器清除这些标志。  
   
-##  <a name="a-namevclrfradixanchor6a-radix"></a><a name="vclrfradixanchor6"></a>基数  
+##  <a name="vclrfradixanchor6"></a>基数  
  **dec**、**oct** 和 **hex** 操控器设定输入和输出的默认基数。 例如，如果将 **hex** 操控器插入到输出流中，该对象会将整数的内部数据表示形式正确转换为十六进制输出格式。 如果 [uppercase](../standard-library/ios-functions.md#uppercase) 标志已清除（默认），则数字将显示为采用小写格式的 a 到 f 的数字；否则，将以大写格式显示。 默认基数是 **dec**（十进制）。  
   
 ## <a name="quoted-strings-c14"></a>引用字符串 (C++14)  
@@ -229,7 +230,7 @@ std::cout <<extracted;   //   This
   
  可以手动克服这种行为，但为了使字符串往返过程更方便，C++14 在 `<iomanip>` 中添加了 `std::quoted` 流操控器。 插入时， `quoted()` 使用一个分隔符（默认情况下为双引号 ' " '）包围字符串，且在提取时，操作流以提取所有字符直到遇到最后一个分隔符。 任何嵌入的引号都使用转义符进行转义（默认为“\\\\”）。  
   
- 分隔符仅存在于流对象中；它们不存在于提取的字符串中，但存在于由 [basic_stringstream::str](../standard-library/basic-stringstream-class.md#basic_stringstream__str)() 返回的字符串中。  
+ 分隔符仅存在于流对象中；它们不存在于提取的字符串中，但存在于由 [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)() 返回的字符串中。  
   
  插入和提取操作的空格行为不依赖于字符串在代码中的表示方式，因此，无论输入的字符串是原始字符串文本还是规则的字符串，带引号的运算符都很有用。 输入字符串，无论其格式是什么，都可以有嵌入的引号、换行符、制表符等等且所有这些都将被 quoted() 操控器保留。  
   

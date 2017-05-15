@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 13dea0e3f4fdaef74d4806373376d5c84904ce8f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
@@ -109,7 +110,7 @@ wchar_t *_wfullpath_dbg(
  每个函数都会返回指向包含绝对路径名称 (`absPath`) 的缓冲区的指针。 如果存在错误（例如，如果在 `relPath` 中传递的值包含一个无效或无法找到的驱动器号，或者创建的绝对路径名称 (`absPath`) 的长度大于 `maxLength`），则该函数将返回 `NULL`。  
   
 ## <a name="remarks"></a>备注  
- `_fullpath_dbg` 和 `_wfullpath_dbg` 函数与 `_fullpath` 和 `_wfullpath` 完全相同，只是当定义 **_**`DEBUG` 时，如果将 NULL 作为第一个参数进行传递，则这些函数将使用 `malloc` 的调试版本 `_malloc_dbg` 来分配内存。 有关 `_malloc_dbg` 调试功能的信息，请参阅 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
+ `_fullpath_dbg`和`_wfullpath_dbg`函数相等`_fullpath`和`_wfullpath`只不过，当`_DEBUG`是定义，这些函数将使用的调试版本`malloc`，`_malloc_dbg`来分配内存，如果作为第一个参数传递 NULL。 有关 `_malloc_dbg` 调试功能的信息，请参阅 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
   
  在大多数情况下，无需显式调用这些函数。 可以改为定义 `_CRTDBG_MAP_ALLOC` 标志。 定义 `_CRTDBG_MAP_ALLOC` 后，对 `_fullpath` 和 `_wfullpath` 的调用将分别重新映射到 `_fullpath_dbg` 和 `_wfullpath_dbg`，同时会将 `blockType` 设置为 `_NORMAL_BLOCK`。 因此，无需显式调用这些函数，除非你希望将堆块标记为 `_CLIENT_BLOCK`。 有关详细信息，请参阅[调试堆的块类型](/visualstudio/debugger/crt-debug-heap-details)。  
   
@@ -127,9 +128,6 @@ wchar_t *_wfullpath_dbg(
 |`_wfullpath_dbg`|\<crtdbg.h>|  
   
  有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- <xref:System.IO.File.Create%2A>  
   
 ## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   

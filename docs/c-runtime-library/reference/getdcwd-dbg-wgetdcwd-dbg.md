@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4c4f63690395398698624fd75d1450ef4bcb7287
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9131d9769d96d7668db180c5c9595ea786770e8b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg、_wgetdcwd_dbg
@@ -128,9 +129,6 @@ wchar_t *_wgetdcwd_dbg(
 |`_wgetdcwd_dbg`|\<crtdbg.h>|  
   
  有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- <xref:System.Environment.CurrentDirectory%2A?displayProperty=fullName>  
   
 ## <a name="see-also"></a>另请参阅  
  [_getdcwd、_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   

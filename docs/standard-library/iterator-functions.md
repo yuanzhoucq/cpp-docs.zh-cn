@@ -6,13 +6,29 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- iterator/std::advance
+- iterator/std::back_inserter
+- iterator/std::begin
+- iterator/std::cbegin
+- iterator/std::cend
+- iterator/std::distance
+- iterator/std::end
+- iterator/std::front_inserter
+- iterator/std::inserter
+- iterator/std::make_checked_array_iterator
+- iterator/std::make_move_iterator
+- iterator/std::make_unchecked_array_iterator
+- iterator/std::next
+- iterator/std::prev
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
 caps.latest.revision: 16
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fb4f0f27496db45c7bbb7b609e0f945eb007154
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 171fd87608b0afed1ebb0c2ae82d6118adff727f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函数
@@ -24,7 +40,7 @@ ms.lasthandoff: 02/24/2017
 |[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|  
 |[next](#next)|[prev](#prev)|  
   
-##  <a name="a-nameadvancea--advance"></a><a name="advance"></a>advance  
+##  <a name="advance"></a>advance  
  使迭代器递增指定数量的位置。  
   
 ```  
@@ -95,7 +111,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.  
 ```  
   
-##  <a name="a-namebackinsertera--backinserter"></a><a name="back_inserter"></a>back_inserter  
+##  <a name="back_inserter"></a>back_inserter  
  创建一个可以在指定容器的后面插入元素的迭代器。  
   
 ```  
@@ -162,7 +178,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).  
 ```  
   
-##  <a name="a-namebegina--begin"></a><a name="begin"></a>begin  
+##  <a name="begin"></a>begin  
  检索一个指向指定容器中第一个元素的迭代器。  
   
 ```  
@@ -262,7 +278,7 @@ void reverse_sort(C& c) {
 error C2228: left of '.begin' must have class/struct/union  
 ```  
   
-##  <a name="a-namecbegina--cbegin"></a><a name="cbegin"></a>cbegin  
+##  <a name="cbegin"></a>cbegin  
  检索指向指定容器中第一个元素的常量迭代器。  
   
 ```  
@@ -291,7 +307,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namecenda--cend"></a><a name="cend"></a>cend  
+##  <a name="cend"></a>cend  
  检索指向指定容器中最后元素之后的元素的常量迭代器。  
   
 ```  
@@ -320,7 +336,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namedistancea--distance"></a><a name="distance"></a>distance  
+##  <a name="distance"></a>distance  
  确定两个迭代器定址位置之间的增量数。  
   
 ```  
@@ -329,14 +345,14 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  第一个迭代器，将要确定其与第二个迭代器之间的距离。  
   
- ` last`  
+ `last`  
  第二个迭代器，将要确定其与第一个迭代器之间的距离。  
   
 ### <a name="return-value"></a>返回值  
- ` first` 必须递增到等于 ` last` 时的次数。  
+ `first` 必须递增到等于 `last` 时的次数。  
   
 ### <a name="remarks"></a>备注  
  当 **InputIterator** 满足随机访问迭代器的需求时，distance 函数具有固定复杂度；否则具有线性复杂度，因此可能会产生高昂的代价。  
@@ -389,7 +405,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.  
 ```  
   
-##  <a name="a-nameenda--end"></a><a name="end"></a>end  
+##  <a name="end"></a>end  
  检索指向指定容器中最后一个元素之后的元素的迭代器。  
   
 ```  
@@ -420,7 +436,7 @@ Ty *end(Ty (& array)[Size]);
 ### <a name="remarks"></a>备注  
  有关代码示例，请参阅 [begin](../standard-library/iterator-functions.md#begin)。  
   
-##  <a name="a-namefrontinsertera--frontinserter"></a><a name="front_inserter"></a>front_inserter  
+##  <a name="front_inserter"></a>front_inserter  
  创建一个可以在指定容器前面插入元素的迭代器。  
   
 ```  
@@ -436,7 +452,7 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
  与容器对象 `_Cont` 关联的 `front_insert_iterator`。  
   
 ### <a name="remarks"></a>备注  
- 也可使用 front_insert_iterator 类的成员函数 [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator__front_insert_iterator)。  
+ 也可使用 front_insert_iterator 类的成员函数 [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator)。  
   
  C++ 标准库中，此自变量必须引用具有成员函数 `push_back`: [deque 类](../standard-library/deque-class.md)或“列表类”的两个序列容器中的一个容器。  
   
@@ -487,8 +503,8 @@ After the front insertions, the list L is:
  ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).  
 ```  
   
-##  <a name="a-nameinsertera--inserter"></a><a name="inserter"></a>inserter  
- 一个帮助器模板函数，允许使用 `inserter(``_Cont``,``_Where``)` 而非 `insert_iterator<Container>(``_Cont`、`_Where``)`。  
+##  <a name="inserter"></a>inserter  
+ 允许你使用的帮助程序模板函数`inserter(_Cont, _Where)`而不是`insert_iterator<Container>(_Cont, _Where)`。  
   
 ```  
 template <class Container>  
@@ -506,7 +522,7 @@ inserter(
  定位插入点的迭代器。  
   
 ### <a name="remarks"></a>备注  
- 此模板函数返回 [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator__insert_iterator)`<Container>(``_Cont``,` `_Where``)`。  
+ 模板函数返回[insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`。  
   
 ### <a name="example"></a>示例  
   
@@ -555,7 +571,7 @@ After the insertions, the list L is:
  ( 1 20 30 40 500 ).  
 ```  
   
-##  <a name="a-namemakecheckedarrayiteratora--makecheckedarrayiterator"></a><a name="make_checked_array_iterator"></a>make_checked_array_iterator  
+##  <a name="make_checked_array_iterator"></a>make_checked_array_iterator  
  创建可由其他算法使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。  
   
 > [!NOTE]
@@ -645,7 +661,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemakemoveiteratora--makemoveiterator"></a><a name="make_move_iterator"></a>make_move_iterator  
+##  <a name="make_move_iterator"></a>make_move_iterator  
  创建一个将所提供的迭代器包含在内作为 `stored` 迭代器的 `move iterator`。  
   
 ```  
@@ -661,7 +677,7 @@ make_move_iterator(const Iterator& _It);
 ### <a name="remarks"></a>备注  
  此模板函数返回 `move_iterator``<Iterator>(``_It``)`。  
   
-##  <a name="a-namemakeuncheckedarrayiteratora--makeuncheckedarrayiterator"></a><a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator  
+##  <a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator  
  创建可由其他算法使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。  
   
 > [!NOTE]
@@ -736,7 +752,7 @@ int main()
   
 ```  
   
-##  <a name="a-namenexta--next"></a><a name="next"></a>next  
+##  <a name="next"></a>next  
  迭代指定的次数并返回新的迭代器位置。  
   
 ```  
@@ -747,7 +763,7 @@ InputIterator next(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  当前位置。  
   
  `_Off`  
@@ -759,7 +775,7 @@ InputIterator next(
 ### <a name="remarks"></a>备注  
  模板函数返回 `next` 递增 `_Off` 次数  
   
-##  <a name="a-namepreva--prev"></a><a name="prev"></a>prev  
+##  <a name="prev"></a>prev  
  反向迭代指定的次数并返回新的迭代器位置。  
   
 ```  
@@ -770,7 +786,7 @@ BidirectionalIterator prev(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` first`  
+ `first`  
  当前位置。  
   
  `_Off`  

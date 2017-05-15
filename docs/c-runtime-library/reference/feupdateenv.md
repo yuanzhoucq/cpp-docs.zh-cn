@@ -49,10 +49,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 170e385a5741ced5612c060a7a537a05b4668432
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0bc689cdf4a76412afd44c88357321cdc0778b40
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feupdateenv"></a>feupdateenv
@@ -66,12 +67,12 @@ int feupdateenv(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+### <a name="parameters"></a>参数  
  `penv`  
- 指向 `fenv_t` 对象的指针，其中包含通过调用 [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) 或 [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9) 设置的浮点环境。 此外，也可以通过使用 FE_DFL_ENV 宏指定默认启动浮点环境。  
+ 指向 `fenv_t` 对象的指针，其中包含通过调用 [fegetenv](fegetenv1.md) 或 [feholdexcept](feholdexcept2.md) 设置的浮点环境。 此外，也可以通过使用 FE_DFL_ENV 宏指定默认启动浮点环境。  
   
 ## <a name="return-value"></a>返回值  
- 如果所有操作已成功完成，则返回 0。        否则，返回一个非零值。  
+ 如果所有操作已成功完成，则返回 0。 否则，返回一个非零值。  
   
 ## <a name="remarks"></a>备注  
  `feupdateenv` 函数执行多个操作。 首先，它在自动存储中存储当前引发的浮点异常状态标志。 然后，它将从存储在由 `penv` 指向 `fenv_t` 的对象中的值设置当前浮点环境。 如果 `penv` 不是 FE_DFL_ENV 或未指向有效的 `fenv_t` 对象，则不定义后续行为。 最后，`feupdateenv` 引发本地存储的浮点异常。  

@@ -1,51 +1,55 @@
 ---
 title: "type_index 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "typeindex/std::type_index"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "type_index 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- typeindex/std::type_index
+dev_langs:
+- C++
+helpviewer_keywords:
+- type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# type_index 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: ca921a28653cf83cd76f4d8e826af277f1f574e1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
-`type_index` 类包装指向 [type\_info 类](../cpp/type-info-class.md) 帮助索引由这样的对象。  
+---
+# <a name="typeindex-class"></a>type_index 类
+`type_index` 类将指针包装到 [type_info 类](../cpp/type-info-class.md)，以便通过这些对象辅助编写索引。  
   
-```  
-class type_index {  
-public:  
-    type_index(const type_info& tinfo);  
-    const char *name() const;  
-    size_t hash_code() const;  
-    bool operator==(const type_info& right) const;  
-    bool operator!=(const type_info& right) const;  
-    bool operator<(const type_info& right) const;  
-    bool operator<=(const type_info& right) const;  
-    bool operator>(const type_info& right) const;  
-    bool operator>=(const type_info& right) const;  
-};  
-```  
+class type_index { public: type_index(const type_info& tinfo); const char *name() const; size_t hash_code() const; bool operator==(const type_info& right) const; bool operator!=(const type_info& right) const; bool operator<(const type_info& right) const; bool operator\<=(const type_info& right) const; bool operator>(const type_info& right) const; bool operator>=(const type_info& right) const; };  
   
- 构造函数初始化 `ptr` 设置为 `&tinfo`。  
+ 构造函数将 `ptr` 初始化为 `&tinfo`。  
   
  `name` 返回 `ptr->name()`。  
   
- `hash_code` 返回了 `ptr->hash_code().`  
+ `hash_code` 返回 `ptr->hash_code().`  
   
  `operator==` 返回 `*ptr == right.ptr`。  
   
@@ -53,12 +57,16 @@ public:
   
  `operator<` 返回 `*ptr->before(*right.ptr)`。  
   
- `operator<=` 返回了 `!(right < *this).`  
+ `operator<=` 返回 `!(right < *this).`  
   
- `operator>`的返回 `right < *this`。  
+ `operator>` 返回 `right < *this`。  
   
  `operator>=` 返回 `!(*this < right)`。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [运行时类型信息](../cpp/run-time-type-information.md)   
- [\<typeindex\>](../standard-library/typeindex.md)
+ [\<typeindex>](../standard-library/typeindex.md)
+
+
+
+

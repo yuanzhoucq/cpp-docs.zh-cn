@@ -10,20 +10,21 @@ f1_keywords: []
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7e849e8585b372b5b423a6c960aa926ac7d5cfec
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 04b9f1a76c637f7bca9f230092e51246da0c6075
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 运算符
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
-|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_gt__eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>operator&gt;=  
  确定一个 `thread::id` 对象是否大于或等于另一个。  
   
 ```cpp  
@@ -45,7 +46,7 @@ bool operator>= (
 ### <a name="remarks"></a>备注  
  此函数不引发任何异常。  
   
-##  <a name="operator_gt_"></a>operator&gt;  
+##  <a name="op_gt"></a>operator&gt;  
  确定一个 `thread::id` 对象是否大于另一个。  
   
 ```cpp  
@@ -67,7 +68,7 @@ bool operator> (
 ### <a name="remarks"></a>备注  
  此函数不引发任何异常。  
   
-##  <a name="operator_lt__eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>operator&lt;=  
  确定一个 `thread::id` 对象是否小于或等于另一个。  
   
 ```cpp  
@@ -89,7 +90,7 @@ bool operator<= (
 ### <a name="remarks"></a>备注  
  此函数不引发任何异常。  
   
-##  <a name="operator_lt_"></a>operator&lt;  
+##  <a name="op_lt"></a>operator&lt;  
  确定一个 `thread::id` 对象是否小于另一个。  
   
 ```cpp  
@@ -113,7 +114,7 @@ bool operator<(
   
  此函数不引发任何异常。  
   
-##  <a name="operator_neq"></a>operator!=  
+##  <a name="op_neq"></a>operator!=  
  比较两个 `thread::id` 对象是否相等。  
   
 ```cpp  
@@ -135,7 +136,7 @@ bool operator!= (
 ### <a name="remarks"></a>备注  
  此函数不引发任何异常。  
   
-##  <a name="operator_eq_eq"></a>operator==  
+##  <a name="op_eq_eq"></a>operator==  
  比较两个 `thread::id` 对象是否相等。  
   
 ```cpp  
@@ -157,7 +158,7 @@ bool operator== (
 ### <a name="remarks"></a>备注  
  此函数不引发任何异常。  
   
-##  <a name="operator_lt__lt_"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>operator&lt;&lt;  
  将 `thread::id` 对象的文本表示形式插入流。  
   
 ```cpp  

@@ -10,18 +10,19 @@ f1_keywords: []
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6185bc74c530d6327d0ac37a5425a7653ba36841
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0a2da6c72e8900c0cea86c30c6b8511e6b256ff9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 运算符
 |||  
 |-|-|  
-|[operator!=](#operator_neq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  测试指定类的分配器对象之间是否不相等。  
   
 ```
@@ -44,7 +45,7 @@ bool operator!=(
 ### <a name="remarks"></a>备注  
  模板运算符返回 `!(left == right)`。  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  测试指定类的分配器对象之间是否相等。  
   
 ```

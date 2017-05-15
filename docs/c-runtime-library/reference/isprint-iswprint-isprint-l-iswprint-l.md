@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3836d13d9f050ebdd7ed7502e11bbde2da76992a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 50f17486f72a272d45c45fc3f0c6b25a7b4b6c56
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint、iswprint、_isprint_l、_iswprint_l
@@ -96,7 +97,7 @@ int _iswprint_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `c` 是可打印字符的特定表示形式，则每个例程将返回非零值。 如果 `c` 是可打印字符，其中包括空格字符 (0x20 – 0x7E)，则 `isprint` 返回一个非零值。 如果 `c` 是可打印宽字符，其中包括空格宽字符，则 `iswprint` 返回一个非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
+ 如果 `c` 是可打印字符的特定表示形式，则每个例程将返回非零值。 `isprint`返回一个非零值，如果`c`是可打印字符-这包括空格字符 (0x20-0x7E)。 如果 `c` 是可打印宽字符，其中包括空格宽字符，则 `iswprint` 返回一个非零值。 如果 `c` 不满足测试条件，则这些例程都返回 0。  
   
  这些函数的测试条件的结果取决于区域设置的 `LC_CTYPE` 类别设置；有关详细信息，请参阅 [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本将当前区域设置用于任何依赖于区域设置的行为；带有 `_l` 后缀的版本与之相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
@@ -112,15 +113,12 @@ int _iswprint_l(
   
 |例程|必需的标头|  
 |-------------|---------------------|  
-|`isprint`|\<ctype.h&1;>|  
-|`iswprint`|\<ctype.h&1;> 或 \<wchar.h&1;>|  
-|`_isprint_l`|\<ctype.h&1;>|  
-|`_iswprint_l`|\<ctype.h&1;> 或 \<wchar.h&1;>|  
+|`isprint`|\<ctype.h 1>|  
+|`iswprint`|\<ctype.h 1> 或 \<wchar.h 1>|  
+|`_isprint_l`|\<ctype.h 1>|  
+|`_iswprint_l`|\<ctype.h 1> 或 \<wchar.h 1>|  
   
  有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   

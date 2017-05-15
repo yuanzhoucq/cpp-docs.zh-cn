@@ -14,10 +14,11 @@ f1_keywords:
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ba8cd6e49f490718beb8fdc216781d8950aedbfb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d9bc4c7f814c44d91ec1cff881107fdc92949368
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedef
@@ -44,7 +45,7 @@ string str("");
 basic_string<char> str("");
 ```  
   
- 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string__basic_string)。  
+ 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。  
   
 ##  <a name="u16string"></a>  u16string  
  用 `char16_t` 类型的元素描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化的类型。  
@@ -56,7 +57,7 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 ```  
   
 ### <a name="remarks"></a>备注  
- 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string__basic_string)。  
+ 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。  
   
 ##  <a name="u32string"></a>  u32string  
  用 `char32_t` 类型的元素描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化的类型。  
@@ -68,7 +69,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 ```  
   
 ### <a name="remarks"></a>备注  
- 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string__basic_string)。  
+ 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。  
   
 ##  <a name="wstring"></a>  wstring  
  用 `wchar_t` 类型的元素描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化的类型。  
@@ -88,7 +89,7 @@ wstring wstr(L"");
 basic_string<wchar_t> wstr(L"");
 ```  
   
- 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string__basic_string)。  
+ 关于字符串构造函数的列表，请参阅 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。  
   
 > [!NOTE]
 >  `wchar_t` 的大小是由实现定义的。 如果你的代码的大小取决于 `wchar_t`，请检查你平台的实现（例如，使用 `sizeof(wchar_t)`）。 如果需要保证宽度在所有平台上一致的字符串字符类型，请使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。  

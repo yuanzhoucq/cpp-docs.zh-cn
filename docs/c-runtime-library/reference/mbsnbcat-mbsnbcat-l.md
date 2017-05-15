@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 412e739b9a336cf98dcf08cba9a477625613cbfc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ad5d71827a69eaf46f5aef05e2c880e4e4eef71f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
@@ -117,7 +118,7 @@ unsigned char *_mbsnbcat_l(
  `_mbsnbcat` 返回一个指向目标字符串的指针。 没有保留任何返回值以指示错误。  
   
 ## <a name="remarks"></a>备注  
- `_mbsnbcat` 函数最多可以将 `src` 的第一个 `count` 字节追加到 `dest`。 如果 `dest` 中紧靠空字符之前的字节是前导字节，则 `src` 的初始字节将覆盖此前导字节。 否则，`src` 的初始字节会覆盖 `dest` 的终止 null 字符。 如果在追加 `count` 字节之前，null 字节出现在 `src` 中，_`mbsnbcat` 将追加 `src` 中此空字符之前的所有字节。 如果 `count` 大于 `src` 的长度，则会使用 `src` 的长度代替 `count`。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。  
+ `_mbsnbcat` 函数最多可以将 `src` 的第一个 `count` 字节追加到 `dest`。 如果 `dest` 中紧靠空字符之前的字节是前导字节，则 `src` 的初始字节将覆盖此前导字节。 否则，`src` 的初始字节会覆盖 `dest` 的终止 null 字符。 如果在 `src` 字节追加之前，null 字节出现在 `count` 中，`_mbsnbcat` 将追加来自 `src` 的所有字节，直到 null 字符。 如果 `count` 大于 `src` 的长度，则会使用 `src` 的长度代替 `count`。 生成的字符串由空字符终止。 如果复制出现在重叠的字符串之间，则该行为不确定。  
   
  输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 此函数的 `_mbsnbcat` 版本对与区域设置相关的行为使用当前区域设置，`_mbsnbcat_l` 版本基本相同，但他们使用传入的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
@@ -142,9 +143,6 @@ unsigned char *_mbsnbcat_l(
 |`_mbsnbcat_l`|\<mbstring.h>|  
   
  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

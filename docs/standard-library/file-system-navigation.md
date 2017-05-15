@@ -30,14 +30,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f376ad55945cf9f23579406ae73866f93c17008b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="file-system-navigation"></a>文件系统导航
-\<filesystem> 标头实现 C++ 文件系统技术规范 ISO/IEC TS 18822:2015（最终稿：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)），并具有可用以编写独立于平台的代码从而实现文件系统导航的类型和函数。 因为它是跨平台的，所以包含与 Windows 系统不相关的 API。 例如，这意味着 `is_fifo(const path&)` 在 Windows 上始终返回 `false` 。 标头基于草稿技术规范，截至 Visual Studio 2015 RTM，该规范尚未入选 C++17 标准。 其成员都位于 `std::experimental::filesystem` 命名空间，通过 `std::experimental::filesystem::v1` 内联。  
+\<filesystem> 标头实现 C++ 文件系统技术规范 ISO/IEC TS 18822:2015（最终稿：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)），并具有可用以编写独立于平台的代码从而实现文件系统导航的类型和函数。 因为它是跨平台的，所以包含与 Windows 系统不相关的 API。 例如，这意味着 `is_fifo(const path&)` 在 Windows 上始终返回 `false` 。   
   
 ## <a name="overview"></a>概述  
 将 \<filesystem> API 用于以下任务：  
@@ -175,7 +176,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 若要运行此代码，请将其粘贴到上述完整示例中的 `main` 前，并取消注释在 main 中调用它的行。  
   
 ### <a name="converting-between-path-and-string-types"></a>在路径和字符串类型之间进行转换  
-`path` 对象可隐式转换为 `std::wstring` 或 `std::string`。 这意味着可以将路径传递给如 [wofstream::open](../standard-library/basic-ofstream-class.md#basic_ofstream__open) 等函数，如此示例中所示：  
+`path` 对象可隐式转换为 `std::wstring` 或 `std::string`。 这意味着可以将路径传递给如 [wofstream::open](../standard-library/basic-ofstream-class.md#open) 等函数，如此示例中所示：  
   
 ```cpp  
 // filesystem_path_conversion.cpp  

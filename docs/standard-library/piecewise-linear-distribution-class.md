@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - piecewise_linear_distribution
-- std::piecewise_linear_distribution
 - random/std::piecewise_linear_distribution
-- std::piecewise_linear_distribution::reset
 - random/std::piecewise_linear_distribution::reset
-- std::piecewise_linear_distribution::intervals
 - random/std::piecewise_linear_distribution::intervals
-- std::piecewise_linear_distribution::densities
 - random/std::piecewise_linear_distribution::densities
-- std::piecewise_linear_distribution::param
 - random/std::piecewise_linear_distribution::param
-- std::piecewise_linear_distribution::min
 - random/std::piecewise_linear_distribution::min
-- std::piecewise_linear_distribution::max
 - random/std::piecewise_linear_distribution::max
-- std::piecewise_linear_distribution::operator()
 - random/std::piecewise_linear_distribution::operator()
-- std::piecewise_linear_distribution::param_type
 - random/std::piecewise_linear_distribution::param_type
-- std::piecewise_linear_distribution::param_type::intervals
 - random/std::piecewise_linear_distribution::param_type::intervals
-- std::piecewise_linear_distribution::param_type::densities
 - random/std::piecewise_linear_distribution::param_type::densities
-- std::piecewise_linear_distribution::param_type::operator==
 - random/std::piecewise_linear_distribution::param_type::operator==
-- std::piecewise_linear_distribution::param_type::operator!=
 - random/std::piecewise_linear_distribution::param_type::operator!=
+- random/std::piecewise_linear_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d91ffbbc989babde5bb83f344ca2447cb018f16d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4c98be8541c04dd9819fd459fad4cfdf25951a0c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution 类
@@ -118,8 +107,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[piecewise_linear_distribution::piecewise_linear_distribution](#piecewise_linear_distribution__piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|  
-|`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[piecewise_linear_distribution::param_type](#piecewise_linear_distribution__param_type)|  
+|[piecewise_linear_distribution](#piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|  
+|`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[param_type](#param_type)|  
   
 属性函数 `intervals()` 将返回 `vector<result_type>` 以及分布的存储区间集。  
   
@@ -245,7 +234,7 @@ Distribution for 100 samples:
   
  **命名空间：** std  
   
-##  <a name="a-namepiecewiselineardistributionpiecewiselineardistributiona--piecewiselineardistributionpiecewiselineardistribution"></a><a name="piecewise_linear_distribution__piecewise_linear_distribution"></a>  piecewise_linear_distribution::piecewise_linear_distribution  
+##  <a name="piecewise_linear_distribution"></a>  piecewise_linear_distribution::piecewise_linear_distribution  
  构造分布。  
   
 ```  
@@ -350,7 +339,7 @@ explicit piecewise_linear_distribution(const param_type& parm);
 ```  
 通过将 `parm` 用作存储的参数结构，构造分布对象。  
   
-##  <a name="a-namepiecewiselineardistributionparamtypea--piecewiselineardistributionparamtype"></a><a name="piecewise_linear_distribution__param_type"></a>  piecewise_linear_distribution::param_type  
+##  <a name="param_type"></a>  piecewise_linear_distribution::param_type  
 存储分布的所有参数。  
   
 ```  
@@ -372,7 +361,7 @@ struct param_type {
 ```  
 
 ### <a name="parameters"></a>参数  
-请参阅 [piecewise_linear_distribution](#piecewise_linear_distribution__piecewise_linear_distribution) 的构造函数参数。  
+请参阅 [piecewise_linear_distribution](#piecewise_linear_distribution) 的构造函数参数。  
   
 ### <a name="remarks"></a>备注  
  **前置条件：**`xmin < xmax`  

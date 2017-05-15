@@ -203,10 +203,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1f6eeb9802636ebf78f7e5d0b20a188e08a903a6
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 7f98ac382549509874bd570307a05ccea5ed657a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="colecontrol-class"></a>COleControl 类
@@ -350,7 +351,7 @@ class COleControl : public CWnd
 |[COleControl::OnSetData](#onsetdata)|控件的数据替换为另一个值。|  
 |[COleControl::OnSetExtent](#onsetextent)|更改控件的大小时后调用。|  
 |[COleControl::OnSetObjectRects](#onsetobjectrects)|控件的维度具有更改之后调用。|  
-|[COleControl::OnShowToolBars](#onshowtoolbars)|当控件已经被激活的用户界面时调用。|  
+|[COleControl::OnShowToolBars](#onshowtoolbars)|当控件已经被 UI 激活时调用。|  
 |[COleControl::OnTextChanged](#ontextchanged)|股票文本或标题属性更改时调用。|  
 |[COleControl::OnWindowlessMessage](#onwindowlessmessage)|为无窗口控件过程 （而不是鼠标和键盘消息） 的窗口消息。|  
 |[COleControl::ParentToClient](#parenttoclient)|将相对于容器的来源，相对于控件的原点的点到点转换。|  
@@ -392,7 +393,7 @@ class COleControl : public CWnd
   
 ### <a name="protected-methods"></a>受保护的方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[COleControl::DrawContent](#drawcontent)|当控件的外观需要更新时，由框架调用。|  
 |[COleControl::DrawMetafile](#drawmetafile)|在使用图元文件设备上下文时，由框架调用。|  
@@ -871,7 +872,7 @@ BOOL ExchangeVersion(
  控件的当前版本号。  
   
  `bConvert`  
- 指示是否应将持久性数据转换为最新格式保存，或在加载了相同的格式中维护。  
+ 指示是否应将持久性数据转换为最新格式保存，或在加载了相同的格式中维护时。  
   
 ### <a name="return-value"></a>返回值  
  非零的成功，则该函数否则为 0。  
@@ -1549,7 +1550,7 @@ void GetFontTextMetrics(
 ### <a name="remarks"></a>备注  
  可以使用选择这种字体[COleControl::SelectFontObject](#selectfontobject)函数。 `GetFontTextMetrics`将初始化`TEXTMETRIC`指向结构`lptm`包含的有效度量值信息`fontHolder`的字体如果成功，或如果不成功，用零填充结构。 应使用此函数，而不是[GetTextMetrics](http://msdn.microsoft.com/library/windows/desktop/dd144941)时绘制控件，因为控件，像任何嵌入 OLE 对象，可能需要将自身呈现到图元文件。  
   
- `TEXTMETRIC`结构的默认字体是刷新时[SelectFontObject](#selectfontobject)调用函数。 应调用`GetFontTextMetrics`仅后选择常用的字体属性，以确保它提供的信息是否有效。  
+ `TEXTMETRIC`结构的默认字体是刷新时[SelectFontObject](#selectfontobject)调用函数。 应调用`GetFontTextMetrics`唯一有效选择常用的字体属性，以确保它提供的信息后。  
   
 ##  <a name="getforecolor"></a>COleControl::GetForeColor  
  实现的 Get 函数中的常用的前景色属性。  
@@ -1688,7 +1689,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
  指向对象的指针`IDropTarget`接口。 由于它不具有一个窗口，无窗口对象无法注册`IDropTarget`接口。 但是，若要参与拖放，无窗口对象仍可实现接口，以及返回在`GetWindowlessDropTarget`。  
   
 ### <a name="remarks"></a>备注  
- 通常，这需要将该控件的窗口注册为放置目标。 但由于该控件没有自己的窗口，以容器将使用自己的窗口作为放置目标。 在控件只需要提供的一个实现`IDropTarget`接口到容器可以委托调用在适当的时间。 例如:   
+ 通常，这需要将该控件的窗口注册为放置目标。 但由于该控件没有自己的窗口，以容器将使用自己的窗口作为放置目标。 在控件只需要提供的一个实现`IDropTarget`接口到容器可以委托调用在适当的时间。 例如：  
   
  [!code-cpp[NVC_MFCAxCtl # 2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
@@ -1832,7 +1833,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
  如果控件已初始化; 则为非 0否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 框架的实现**idispatch:: Invoke**调用**IsInvokeAllowed**以确定给定函数 (由标识`dispid`) 可以调用。 OLE 控件的默认行为是允许仅当控件已初始化; 要调用自动化方法但是， **IsInvokeAllowed**是虚拟函数，可以被重写如有必要 （例如，当控件使用作为自动化服务器时）。 有关详细信息，请参阅知识库文章 Q166472，"如何︰ 使用作为自动化服务器的 OLE 控件。" 知识库文章位于 MSDN 库的 Visual Studio 文档中或在[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 框架的实现**idispatch:: Invoke**调用**IsInvokeAllowed**以确定给定函数 (由标识`dispid`) 可以调用。 OLE 控件的默认行为是允许仅当控件已初始化; 要调用自动化方法但是， **IsInvokeAllowed**是虚拟函数，可以被重写如有必要 （例如，当控件使用作为自动化服务器时）。 有关详细信息，请参阅知识库文章 Q166472，"如何︰ 使用作为自动化服务器的 OLE 控件。" 知识库文章位于[http://support.microsoft.com](http://support.microsoft.com/)。  
   
 ##  <a name="ismodified"></a>COleControl::IsModified  
  确定控件的状态是否已被修改。  
@@ -2745,7 +2746,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>备注  
  指定的格式是以前放置在控件对象使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)或[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)成员函数被延迟呈现的。 此函数的默认实现调用`OnRenderFileData`或`OnRenderGlobalData`分别，如果提供的存储介质是文件或内存。 如果请求的格式是`CF_METAFILEPICT`或将持久性属性设置格式，默认实现呈现适当的数据，并返回非零值。 否则为它返回 0，且不执行任何操作。  
   
- 如果*-> tymed lpStgMedium*是**TYMED_NULL**、 **STGMEDIUM**应分配和指定的填充*-> tymed lpFormatEtc*。 如果不是**TYMED_NULL**、 **STGMEDIUM**应填充了具有数据的位置。  
+ 如果*lpStgMedium-> tymed*是**TYMED_NULL**、 **STGMEDIUM**应分配和指定的填充*lpFormatEtc-> tymed*。 如果不是**TYMED_NULL**、 **STGMEDIUM**应填充了具有数据的位置。  
   
  重写此函数可提供的请求的格式和介质中的数据。 具体取决于你的数据，你可能想要改为重写此函数的其他版本之一。 如果你的数据较小，而且固定大小，重写`OnRenderGlobalData`。 如果你的数据是在文件中，或者是大小可变的重写`OnRenderFileData`。  
   

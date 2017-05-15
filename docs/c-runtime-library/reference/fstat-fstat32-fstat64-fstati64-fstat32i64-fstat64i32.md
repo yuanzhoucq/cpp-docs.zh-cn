@@ -76,10 +76,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4bf1e3ad35fb03891f9c861255919752d0403d70
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
@@ -122,7 +123,7 @@ int _fstat64i32(
  指向存储结果的结构的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果获取到文件状态信息，则返回 0。 返回值 –1 指示错误。 如果文件描述符无效或 `buffer` 是 `NULL`，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，在出现无效文件描述符的情况下，则将 `errno` 设置为 `EBADF`，或者如果 `buffer` 是 `NULL`，则设置为 `EINVAL`。  
+ 如果获取到文件状态信息，则返回 0。 返回值-1 指示错误。 如果文件描述符无效或 `buffer` 是 `NULL`，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，在出现无效文件描述符的情况下，则将 `errno` 设置为 `EBADF`，或者如果 `buffer` 是 `NULL`，则设置为 `EINVAL`。  
   
 ## <a name="remarks"></a>备注  
  `_fstat` 函数可获取有关与 `fd` 关联的打开文件的信息，并将其存储在 `buffer` 指向的结构中。 SYS\Stat.h 中定义的 `_stat` 结构包含下列字段。  
@@ -159,7 +160,7 @@ int _fstat64i32(
   
  这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀（`32` 或 `64`）表示所用时间类型的大小；第二个后缀是 `i32` 或 `i64`，表示以 32 位还是 64 位整数表示文件大小。  
   
- `_fstat` 与 `_fstat64i32` 等效，`struct``_stat` 包含 64 位时间。 除非定义了 `_USE_32BIT_TIME_T`，这种情况下旧行为有效；`_fstat` 使用 32 位时间，`struct``_stat` 包含 32 位时间。 这一点也适用于 `_fstati64`。  
+ `_fstat` 与 `_fstat64i32` 等效，`struct _stat` 包含 64 位时间。 除非定义了 `_USE_32BIT_TIME_T`，这种情况下旧行为有效；`_fstat` 使用 32 位时间，`struct _stat` 包含 32 位时间。 这一点也适用于 `_fstati64`。  
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 时间类型和文件长度类型变体  
   
@@ -251,9 +252,6 @@ int main( void )
 File size     : 16  
 Time modified : Wed May 07 15:25:11 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   

@@ -1,54 +1,71 @@
 ---
-title: "_gcvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_gcvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gcvt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CVTBUFSIZE"
-  - "_gcvt 函数"
-  - "转换, 浮点到字符串"
-  - "CVTBUFSIZE"
-  - "浮点函数, 将数字转换为字符串"
-  - "gcvt 函数"
-  - "数字, 转换为字符串"
-  - "字符串 [C++], 从浮点转换"
+title: "_gcvt | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _gcvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gcvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _gcvt function
+- _CVTBUFSIZE
+- gcvt function
+- floating-point functions, converting number to string
+- numbers, converting to strings
+- conversions, floating point to strings
+- strings [C++], converting from floating point
+- CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _gcvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 055d1e6d996a076ca7f1a49e21abf3771fa543fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-将浮点值转换为字符串，存在缓冲区。  该函数的一个更安全版本可利用；请参阅 [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md)。  
+---
+# <a name="gcvt"></a>_gcvt
+将浮点值转换为字符串，并将其存储在缓冲区中。 此函数有一个更安全的版本；请参阅 [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 char *_gcvt(   
@@ -58,7 +75,7 @@ char *_gcvt(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `value`  
  要转换的值。  
   
@@ -68,25 +85,25 @@ char *_gcvt(
  `buffer`  
  结果的存储位置。  
   
-## 返回值  
- `_gcvt`返回指向数字字符串的指针。  
+## <a name="return-value"></a>返回值  
+ `_gcvt` 返回指向数字字符串的指针。  
   
-## 备注  
- `_gcvt` 函数将浮点 `value`转换为字符字符串（ 包含小数点和一种符号字节\)，并存储在`buffer`中。  `buffer` 应该足够大以容纳转换的值和自动追加的终止 null 字符。  如果使用`digits`的缓冲区大小\+1，函数覆盖缓冲区的末尾。  这是因为，转换的字符串包含小数点，并且可包含符号和指数信息。  没有规定溢出。  `_gcvt` 尝试产生十进制格式的`digits`数值。  如果不能，它产生指数格式`digits`的数值。  在转换中，尾随零转换可能被抑制。  
+## <a name="remarks"></a>备注  
+ `_gcvt` 函数将浮点 `value` 转换为字符串（它包括小数点和可能的登录字节），并将字符串存储在 `buffer` 中。 `buffer` 应足够大以容纳转换后的值加上一个会自动追加的端接空字符。 如果已使用 `digits` + 1 的缓冲区大小，该函数将覆盖缓冲区的末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 `_gcvt` 尝试生成十进制格式的 `digits` 数字。 如果不能，则将生成指数格式的 `digits` 数字。 在转换过程中，可以取消零结尾。  
   
- `buffer`的`_CVTBUFSIZE`长度对于任何浮点数值都是足够的。  
+ `_CVTBUFSIZE` 的 `buffer` 长度足以满足任何浮点值。  
   
- 此函数验证其参数。  如果 `buffer` 是 `NULL`，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。  如果允许执行继续，则该函数设置 `errno` 为 `EINVAL` 并返回 `NULL`。  
+ 此函数验证其参数。 如果 `buffer` 为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 `NULL`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_gcvt`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_gcvt`|\<stdlib.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_gcvt.c  
@@ -129,21 +146,22 @@ int main( void )
 }  
 ```  
   
-  **下面数字按\_gcvt \(值，12，缓冲区\) 转换：**  
-**缓冲区：“\-1234567890.12 " \(14 个字符\)**  
-**缓冲区：“\-12345678901.2 " \(14 个字符\)**  
-**缓冲区：“\-123456789012 " \(13 个字符\)**  
-**缓冲区：“\-1.23456789012e\+012”\(19 个字符\)**  
-**缓冲区：“\-1234567890.12 " \(14 个字符\)**  
-**缓冲区：“\-1234567890.12 " \(14 个字符\)**  
-**缓冲区：“\-0.123456789012 " \(15 个字符\)**  
-**缓冲区：“\-1.23456789012e\-002”\(19 个字符\)**   
-## .NET Framework 等效项  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
+```Output  
+The following numbers were converted by _gcvt(value,12,buffer):  
+buffer: '-1234567890.12' (14 chars)  
+buffer: '-12345678901.2' (14 chars)  
+buffer: '-123456789012' (13 chars)  
+buffer: '-1.23456789012e+012' (19 chars)  
   
-## 请参阅  
+buffer: '-12.3456789012' (14 chars)  
+buffer: '-1.23456789012' (14 chars)  
+buffer: '-0.123456789012' (15 chars)  
+buffer: '-1.23456789012e-002' (19 chars)  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
- [atof、\_atof\_l、\_wtof、\_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)
+ [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

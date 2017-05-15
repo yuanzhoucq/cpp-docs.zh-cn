@@ -6,32 +6,63 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- atomic/std::atomic_compare_exchange_strong
+- atomic/std::atomic_compare_exchange_strong_explicit
+- atomic/std::atomic_compare_exchange_weak
+- atomic/std::atomic_compare_exchange_weak_explicit
+- atomic/std::atomic_exchange
+- atomic/std::atomic_exchange_explicit
+- atomic/std::atomic_fetch_add
+- atomic/std::atomic_fetch_add_explicit
+- atomic/std::atomic_fetch_and
+- atomic/std::atomic_fetch_and_explicit
+- atomic/std::atomic_fetch_or
+- atomic/std::atomic_fetch_or_explicit
+- atomic/std::atomic_fetch_sub
+- atomic/std::atomic_fetch_sub_explicit
+- atomic/std::atomic_fetch_xor
+- atomic/std::atomic_fetch_xor_explicit
+- atomic/std::atomic_flag_clear
+- atomic/std::atomic_flag_clear_explicit
+- atomic/std::atomic_flag_test_and_set
+- atomic/std::atomic_flag_test_and_set_explicit
+- atomic/std::atomic_init
+- atomic/std::atomic_is_lock_free
+- atomic/std::atomic_load
+- atomic/std::atomic_load_explicit
+- atomic/std::atomic_signal_fence
+- atomic/std::atomic_store
+- atomic/std::atomic_store_explicit
+- atomic/std::atomic_thread_fence
+- atomic/std::kill_dependency
 ms.assetid: 5c53b4f8-6ff5-47d7-beb2-2d6ee3c6ea89
 caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b10205d490f9ac7a4f69ef01fc0da30fe7012ed
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9915c89415594b1cc3475a458ec3a1fbdcfdf290
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 函数
 ||||  
 |-|-|-|  
-|[atomic_compare_exchange_strong](#atomic_compare_exchange_strong_function)|[atomic_compare_exchange_strong_explicit](#atomic_compare_exchange_strong_explicit_function)|[atomic_compare_exchange_weak](#atomic_compare_exchange_weak_function)|  
-|[atomic_compare_exchange_weak_explicit](#atomic_compare_exchange_weak_explicit_function)|[atomic_exchange](#atomic_exchange_function)|[atomic_exchange_explicit](#atomic_exchange_explicit_function)|  
-|[atomic_fetch_add](#atomic_fetch_add_function)|[atomic_fetch_add_explicit](#atomic_fetch_add_explicit_function)|[atomic_fetch_and](#atomic_fetch_and_function)|  
-|[atomic_fetch_and_explicit](#atomic_fetch_and_explicit_function)|[atomic_fetch_or](#atomic_fetch_or_function)|[atomic_fetch_or_explicit](#atomic_fetch_or_explicit_function)|  
-|[atomic_fetch_sub](#atomic_fetch_sub_function)|[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit_function)|[atomic_fetch_xor](#atomic_fetch_xor_function)|  
-|[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit_function)|[atomic_flag_clear](#atomic_flag_clear_function)|[atomic_flag_clear_explicit](#atomic_flag_clear_explicit_function)|  
-|[atomic_flag_test_and_set](#atomic_flag_test_and_set_function)|[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit_function)|[atomic_init](#atomic_init_function)|  
-|[atomic_is_lock_free](#atomic_is_lock_free_function)|[atomic_load](#atomic_load_function)|[atomic_load_explicit](#atomic_load_explicit_function)|  
-|[atomic_signal_fence](#atomic_signal_fence_function)|[atomic_store](#atomic_store_function)|[atomic_store_explicit](#atomic_store_explicit_function)|  
-|[atomic_thread_fence](#atomic_thread_fence_function)|[kill_dependency](#kill_dependency_function)|  
+|[atomic_compare_exchange_strong](#atomic_compare_exchange_strong)|[atomic_compare_exchange_strong_explicit](#atomic_compare_exchange_strong_explicit)|[atomic_compare_exchange_weak](#atomic_compare_exchange_weak)|  
+|[atomic_compare_exchange_weak_explicit](#atomic_compare_exchange_weak_explicit)|[atomic_exchange](#atomic_exchange)|[atomic_exchange_explicit](#atomic_exchange_explicit)|  
+|[atomic_fetch_add](#atomic_fetch_add)|[atomic_fetch_add_explicit](#atomic_fetch_add_explicit)|[atomic_fetch_and](#atomic_fetch_and)|  
+|[atomic_fetch_and_explicit](#atomic_fetch_and_explicit)|[atomic_fetch_or](#atomic_fetch_or)|[atomic_fetch_or_explicit](#atomic_fetch_or_explicit)|  
+|[atomic_fetch_sub](#atomic_fetch_sub)|[atomic_fetch_sub_explicit](#atomic_fetch_sub_explicit)|[atomic_fetch_xor](#atomic_fetch_xor)|  
+|[atomic_fetch_xor_explicit](#atomic_fetch_xor_explicit)|[atomic_flag_clear](#atomic_flag_clear)|[atomic_flag_clear_explicit](#atomic_flag_clear_explicit)|  
+|[atomic_flag_test_and_set](#atomic_flag_test_and_set)|[atomic_flag_test_and_set_explicit](#atomic_flag_test_and_set_explicit)|[atomic_init](#atomic_init)|  
+|[atomic_is_lock_free](#atomic_is_lock_free)|[atomic_load](#atomic_load)|[atomic_load_explicit](#atomic_load_explicit)|  
+|[atomic_signal_fence](#atomic_signal_fence)|[atomic_store](#atomic_store)|[atomic_store_explicit](#atomic_store_explicit)|  
+|[atomic_thread_fence](#atomic_thread_fence)|[kill_dependency](#kill_dependency)|  
   
-##  <a name="a-nameatomiccompareexchangestrongfunctiona--atomiccompareexchangestrong"></a><a name="atomic_compare_exchange_strong_function"></a>  atomic_compare_exchange_strong  
+##  <a name="atomic_compare_exchange_strong"></a>  atomic_compare_exchange_strong  
  执行原子比较和交换操作。  
   
 ```
@@ -62,9 +93,9 @@ inline bool atomic_compare_exchange_strong(
  指示值比较的结果的 `bool`。  
   
 ### <a name="remarks"></a>备注  
- 此方法使用隐式 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 参数执行原子比较和交换操作。 有关详细信息，请参阅 [atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)。  
+ 此方法使用隐式 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 参数执行原子比较和交换操作。 有关详细信息，请参阅 [atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)。  
   
-##  <a name="a-nameatomiccompareexchangestrongexplicitfunctiona--atomiccompareexchangestrongexplicit"></a><a name="atomic_compare_exchange_strong_explicit_function"></a>  atomic_compare_exchange_strong_explicit  
+##  <a name="atomic_compare_exchange_strong_explicit"></a>  atomic_compare_exchange_strong_explicit  
  执行*原子比较和交换*操作。  
   
 ```
@@ -107,7 +138,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 ### <a name="remarks"></a>备注  
  *原子比较和交换操作*将 `Atom` 所指向的存储在对象中的值与 `Exp` 所指向的值比较。 如果这些值相等，将会通过使用 `read-modify-write` 操作将 `atom` 所指向的存储在对象中的值替换为 `Val`，并应用 `Order1` 指定的内存顺序约束。 如果这些值不相等，该操作会将 `Exp` 所指向的值替换为 `Atom` 所指向的存储在对象中的值，并应用 `Order2` 指定的内存顺序约束。  
   
-##  <a name="a-nameatomiccompareexchangeweakfunctiona--atomiccompareexchangeweak"></a><a name="atomic_compare_exchange_weak_function"></a>  atomic_compare_exchange_weak  
+##  <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak  
  执行*弱原子比较和交换*操作。  
   
 ```
@@ -138,9 +169,9 @@ inline bool atomic_compare_exchange_strong(
  指示值比较的结果的 `bool`。  
   
 ### <a name="remarks"></a>备注  
- 此方法执行具有隐式 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 参数的*弱原子比较和交换*操作。 有关详细信息，请参阅 [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)。  
+ 此方法执行具有隐式 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 参数的*弱原子比较和交换*操作。 有关详细信息，请参阅 [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)。  
   
-##  <a name="a-nameatomiccompareexchangeweakexplicitfunctiona--atomiccompareexchangeweakexplicit"></a><a name="atomic_compare_exchange_weak_explicit_function"></a>  atomic_compare_exchange_weak_explicit  
+##  <a name="atomic_compare_exchange_weak_explicit"></a>  atomic_compare_exchange_weak_explicit  
  执行*弱原子比较和交换*操作。  
   
 ```
@@ -185,7 +216,7 @@ inline bool atomic_compare_exchange_weak_explicit(
   
  如果所比较的值相等，一个*弱*原子比较和交换操作将执行交换。 但是，如果这些值不相等，则不保证该操作会执行交换。  
   
-##  <a name="a-nameatomicexchangefunctiona--atomicexchange"></a><a name="atomic_exchange_function"></a>  atomic_exchange  
+##  <a name="atomic_exchange"></a>  atomic_exchange  
  使用 `Value` 替换存储的值 `Atom`。  
   
 ```
@@ -209,7 +240,7 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 ### <a name="remarks"></a>备注  
  `atomic_exchange` 函数执行 `read-modify-write` 操作，将存储在 `Atom` 中的值与 `Value` 进行交换（使用 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。  
   
-##  <a name="a-nameatomicexchangeexplicitfunctiona--atomicexchangeexplicit"></a><a name="atomic_exchange_explicit_function"></a>  atomic_exchange_explicit  
+##  <a name="atomic_exchange_explicit"></a>  atomic_exchange_explicit  
  将 `Atom` 的存储值替换为 `Value`。  
   
 ```
@@ -242,7 +273,7 @@ inline Ty atomic_exchange_explicit(
 ### <a name="remarks"></a>备注  
  `atomic_exchange_explicit` 函数执行 `read-modify-write` 操作，将 `Atom` 中存储的值与 `Value` 进行交换（限于 `Order` 指定的内存约束）。  
   
-##  <a name="a-nameatomicfetchaddfunctiona--atomicfetchadd"></a><a name="atomic_fetch_add_function"></a>  atomic_fetch_add  
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add  
  将值添加到 `atomic` 对象中存储的现有值。  
   
 ```
@@ -275,7 +306,7 @@ integral atomic_fetch_add(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_add(atomic-integral* Atom, integral Value) noexcept;
 ```  
   
-##  <a name="a-nameatomicfetchaddexplicitfunctiona--atomicfetchaddexplicit"></a><a name="atomic_fetch_add_explicit_function"></a>  atomic_fetch_add_explicit  
+##  <a name="atomic_fetch_add_explicit"></a>  atomic_fetch_add_explicit  
  将值添加到 `atomic` 对象中存储的现有值。  
   
 ```
@@ -321,7 +352,7 @@ integral atomic_fetch_add_explicit(
     memory_order Order) noexcept;
 ```  
   
-##  <a name="a-nameatomicfetchandfunctiona--atomicfetchand"></a><a name="atomic_fetch_and_function"></a>  atomic_fetch_and  
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and  
  对某个值和存储在 `atomic` 对象中的一个现有值执行按位 `and`。  
   
 ```
@@ -344,7 +375,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>备注  
  `atomic_fetch_and` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `and` 和存储在 `Atom` 中的当前值（使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。  
   
-##  <a name="a-nameatomicfetchandexplicitfunctiona--atomicfetchandexplicit"></a><a name="atomic_fetch_and_explicit_function"></a>  atomic_fetch_and_explicit  
+##  <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit  
  对某个值和存储在 `atomic` 对象中的一个现有值执行按位 `and`。  
   
 ```
@@ -377,7 +408,7 @@ inline T atomic_fetch_and_explicit(
 ### <a name="remarks"></a>备注  
  `atomic_fetch_and_explicit` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `and` 和存储在 `Atom` 中的当前值（限于 `Order` 指定的内存约束）。  
   
-##  <a name="a-nameatomicfetchorfunctiona--atomicfetchor"></a><a name="atomic_fetch_or_function"></a>  atomic_fetch_or  
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or  
  对某个值和存储在 `atomic` 对象中的一个现有值执行按位 `or`。  
   
 ```
@@ -400,7 +431,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>备注  
  `atomic_fetch_or` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `or` 和存储在 `Atom` 中的当前值（使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。  
   
-##  <a name="a-nameatomicfetchorexplicitfunctiona--atomicfetchorexplicit"></a><a name="atomic_fetch_or_explicit_function"></a>  atomic_fetch_or_explicit  
+##  <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit  
  对某个值和存储在 `atomic` 对象中的一个现有值执行按位 `or`。  
   
 ```
@@ -433,7 +464,7 @@ inline T atomic_fetch_or_explicit(
 ### <a name="remarks"></a>备注  
  `atomic_fetch_or_explicit` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `or` 和存储在 `Atom` 中的当前值（限于 `Order` 指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。  
   
-##  <a name="a-nameatomicfetchsubfunctiona--atomicfetchsub"></a><a name="atomic_fetch_sub_function"></a>  atomic_fetch_sub  
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub  
  从 `atomic` 对象存储的现有值中减去一个值。  
   
 ```
@@ -470,7 +501,7 @@ integral atomic_fetch_sub(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_sub(atomic-integral* Atom, integral Value) noexcept;
 ```  
   
-##  <a name="a-nameatomicfetchsubexplicitfunctiona--atomicfetchsubexplicit"></a><a name="atomic_fetch_sub_explicit_function"></a>  atomic_fetch_sub_explicit  
+##  <a name="atomic_fetch_sub_explicit"></a>  atomic_fetch_sub_explicit  
  从 `atomic` 对象存储的现有值中减去一个值。  
   
 ```
@@ -515,7 +546,7 @@ integral atomic_fetch_sub_explicit(
     memory_order Order) noexcept;
 ```  
   
-##  <a name="a-nameatomicfetchxorfunctiona--atomicfetchxor"></a><a name="atomic_fetch_xor_function"></a>  atomic_fetch_xor  
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor  
  对某个值和存储在 `atomic` 对象中的一个现有值执行按位 `exclusive or`。  
   
 ```
@@ -539,7 +570,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>备注  
  `atomic_fetch_xor` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `exclusive or` 和存储在 `Atom` 中的当前值（使用 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。  
   
-##  <a name="a-nameatomicfetchxorexplicitfunctiona--atomicfetchxorexplicit"></a><a name="atomic_fetch_xor_explicit_function"></a>  atomic_fetch_xor_explicit  
+##  <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit  
  对某个值和存储在 `atomic` 对象中的一个现有值执行按位 `exclusive or`。  
   
 ```
@@ -572,7 +603,7 @@ inline T atomic_fetch_xor_explicit(
 ### <a name="remarks"></a>备注  
  `atomic_fetch_xor_explicit` 函数执行 `read-modify-write` 操作，将 `Atom` 的存储值替换为 `Value` 的按位 `exclusive or` 和存储在 `Atom` 中的当前值（限于 `Order` 指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。  
   
-##  <a name="a-nameatomicflagclearfunctiona--atomicflagclear"></a><a name="atomic_flag_clear_function"></a>  atomic_flag_clear  
+##  <a name="atomic_flag_clear"></a>  atomic_flag_clear  
  将对象 [atomic_flag](../standard-library/atomic-flag-structure.md) 中的标志 `bool` 设置为 `false`（限于 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。  
   
 ```
@@ -584,7 +615,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
  `Flag`  
  指向 `atomic_flag` 对象的指针。  
   
-##  <a name="a-nameatomicflagclearexplicitfunctiona--atomicflagclearexplicit"></a><a name="atomic_flag_clear_explicit_function"></a>  atomic_flag_clear_explicit  
+##  <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit  
  将对象 [atomic_flag](../standard-library/atomic-flag-structure.md) 中的标志 `bool` 设置为 `false`（限于指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。  
   
 ```
@@ -599,7 +630,7 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
  `Order`  
  [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。  
   
-##  <a name="a-nameatomicflagtestandsetfunctiona--atomicflagtestandset"></a><a name="atomic_flag_test_and_set_function"></a>  atomic_flag_test_and_set  
+##  <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set  
  将对象 [atomic_flag](../standard-library/atomic-flag-structure.md) 中的标志 `bool` 设置为 `true`（限于 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 的约束）。  
   
 ```
@@ -614,7 +645,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 ### <a name="return-value"></a>返回值  
  `Flag` 的初始值。  
   
-##  <a name="a-nameatomicflagtestandsetexplicitfunctiona--atomicflagtestandsetexplicit"></a><a name="atomic_flag_test_and_set_explicit_function"></a>  atomic_flag_test_and_set_explicit  
+##  <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit  
  将对象 [atomic_flag](../standard-library/atomic-flag-structure.md) 中的标志 `bool` 设置为 `true`（限于指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。  
   
 ```
@@ -632,7 +663,7 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 ### <a name="return-value"></a>返回值  
  `Flag` 的初始值。  
   
-##  <a name="a-nameatomicinitfunctiona--atomicinit"></a><a name="atomic_init_function"></a>  atomic_init  
+##  <a name="atomic_init"></a>  atomic_init  
  设置 `atomic` 对象中存储的值。  
   
 ```
@@ -652,7 +683,7 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 ### <a name="remarks"></a>备注  
  `atomic_init` 不是一个原子操作。 不是线程安全的。  
   
-##  <a name="a-nameatomicislockfreefunctiona--atomicislockfree"></a><a name="atomic_is_lock_free_function"></a>  atomic_is_lock_free  
+##  <a name="atomic_is_lock_free"></a>  atomic_is_lock_free  
  指定对 `atomic` 对象执行的原子操作是否为*无锁*。  
   
 ```
@@ -672,7 +703,7 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 ### <a name="remarks"></a>备注  
  如果对该类型执行的原子操作都没有使用锁，则原子类型为无锁。 如果此函数返回 true，则类型可以安全地在信号处理程序中使用。  
   
-##  <a name="a-nameatomicloadfunctiona--atomicload"></a><a name="atomic_load_function"></a>  atomic_load  
+##  <a name="atomic_load"></a>  atomic_load  
  检索 `atomic` 对象中存储的值。  
   
 ```
@@ -692,7 +723,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 ### <a name="remarks"></a>备注  
  `atomic_load` 隐式使用 `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。  
   
-##  <a name="a-nameatomicloadexplicitfunctiona--atomicloadexplicit"></a><a name="atomic_load_explicit_function"></a>  atomic_load_explicit  
+##  <a name="atomic_load_explicit"></a>  atomic_load_explicit  
  检索 `atomic` 对象中存储的值（限于指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)）。  
   
 ```
@@ -712,7 +743,7 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 ### <a name="return-value"></a>返回值  
  存储在 `Atom` 中的检索到的值。  
   
-##  <a name="a-nameatomicsignalfencefunctiona--atomicsignalfence"></a><a name="atomic_signal_fence_function"></a>  atomic_signal_fence  
+##  <a name="atomic_signal_fence"></a>  atomic_signal_fence  
  充当调用线程中信号处理程序在同一线程中执行的其他 fence 之间的 *fence*（强制在加载/存储操作之间进行排序的内存同步基元）。  
   
 ```
@@ -735,7 +766,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 |`memory_order_acq_rel`|fence 既是 acquire fence 也是 release fence。|  
 |`memory_order_seq_cst`|fence 既是 acquire fence 也是 release fence，并且在顺序上保持一致。|  
   
-##  <a name="a-nameatomicstorefunctiona--atomicstore"></a><a name="atomic_store_function"></a>  atomic_store  
+##  <a name="atomic_store"></a>  atomic_store  
  自动将值存储到原子对象中。  
   
 ```
@@ -755,7 +786,7 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 ### <a name="remarks"></a>备注  
  `atomic_store` 将 `Value` 存储到 `Atom` 所指向的对象中（限于 `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 约束）。  
   
-##  <a name="a-nameatomicstoreexplicitfunctiona--atomicstoreexplicit"></a><a name="atomic_store_explicit_function"></a>  atomic_store_explicit  
+##  <a name="atomic_store_explicit"></a>  atomic_store_explicit  
  自动将值存储到原子对象中。  
   
 ```
@@ -785,7 +816,7 @@ inline Ty atomic_store_explicit(
 ### <a name="remarks"></a>备注  
  `atomic_store` 将 `Value` 存储到 `Atom` 所指向的对象中（限于 `Order` 指定的 `memory_order`）。  
   
-##  <a name="a-nameatomicthreadfencefunctiona--atomicthreadfence"></a><a name="atomic_thread_fence_function"></a>  atomic_thread_fence  
+##  <a name="atomic_thread_fence"></a>  atomic_thread_fence  
  充当 *fence* — 是强制在加载/存储操作之间进行排序的内存同步基元，没有关联的原子操作。  
   
 ```
@@ -808,7 +839,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 |`memory_order_acq_rel`|fence 既是 acquire fence 也是 release fence。|  
 |`memory_order_seq_cst`|fence 既是 acquire fence 也是 release fence，并且在顺序上保持一致。|  
   
-##  <a name="a-namekilldependencyfunctiona--killdependency"></a><a name="kill_dependency_function"></a>  kill_dependency  
+##  <a name="kill_dependency"></a>  kill_dependency  
  删除依赖关系。  
   
 ```

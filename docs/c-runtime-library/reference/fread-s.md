@@ -1,46 +1,64 @@
 ---
-title: "fread_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fread_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fread_s"
-  - "stdio/fread_s"
-dev_langs: 
-  - "C++"
+title: "fread_s | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fread_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fread_s
+- stdio/fread_s
+dev_langs:
+- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# fread_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6fa9d496bdb5f5d7b4dd4a772778a0f62a484fd8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
-从流中读取数据。  [](../../c-runtime-library/reference/fread.md "fread")[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md) 所述。  
+---
+# <a name="freads"></a>fread_s
+从流读取数据。 这是 [fread](../../c-runtime-library/reference/fread.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_t fread_s(   
@@ -52,44 +70,43 @@ size_t fread_s(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `buffer`  
  数据的存储位置。  
   
  `bufferSize`  
- 需要缓冲区的大小（以字节为单位）。  
+ 目标缓冲区的大小（以字节为单位）。  
   
  `elementSize`  
- 写入字节项的大小。  
+ 要读取的项的大小（以字节为单位）。  
   
  `count`  
- 要读取项目的最大数量。  
+ 要读取的项的最大数量。  
   
  `stream`  
  指向 `FILE` 结构的指针。  
   
-## 返回值  
- `fread_s` 读取到返回缓冲区，`count` 比可能小于 \(全部\) 的项的数目，如果读取错误或文件的结尾，在遇到 `count` 之前。  使用 `feof` 或 `ferror` 函数与一个文件的条件区分错误。  如果 `size` 或 `count` 为 0，则 `fread_s` 返回 0，并且缓冲区内容保持不变。  如果 `stream` or `buffer`是null指针， `fread_s` 则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许执行继续，则该函数设置 `errno` 为 `EINVAL` 并返回0 。  
+## <a name="return-value"></a>返回值  
+ `fread_s` 返回已读取到缓冲区中的（整数）项数，如果在达到 `count` 之前遇到读取错误或文件结尾，数字可能会小于 `count`。 使用 `feof` 或 `ferror` 函数以将错误与文件结尾条件区分开来。 如果 `size` 或 `count` 为 0，则 `fread_s` 返回 0 并且缓冲区内容保持不变。 如果 `stream` 或 `buffer` 为 null 指针，则 `fread_s` 将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 0。  
   
- 有关错误代码的更多信息，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `fread_s` 读取到字节函数 `count` `elementSize` 项从输入 `stream` 且存储在 `buffer`中。与 `stream` 有关的文件指针\(如果有 一个\)由实际读取的字节数增加。  如果特定流在文本模式打开，支架返回换行符对用个换行符替换。  替换没有影响文件指针或返回值的效果。  如果出错，文件指针位置是不确定的。  一个读取项的值不可部分确定。  
+## <a name="remarks"></a>备注  
+ `fread_s` 函数最多从输入 `stream` 中读取 `elementSize` 字节的 `count` 项并将它们存储在 `buffer` 中。  与 `stream` 相关联的文件指针（如果存在）以实际读取的字节数为增量进行递增。 如果在文本模式下打开给定的流，则单一的换行字符替换回车换行符对。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。  
   
- 此函数锁定其他线程。  如果需要一非锁定版本的，请使用 `_fread_nolock`。  
+ 此函数将锁定其他线程。 如果需要非锁定版本，请使用 `_fread_nolock`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`fread_s`|\<stdio.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`fread_s`|\<stdio.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```cpp  
-  
 // crt_fread_s.c  
 // Command line: cl /EHsc /nologo /W4 crt_fread_s.c  
 //  
@@ -142,13 +159,19 @@ int main( void )
 }  
 ```  
   
-  **读取的缓冲区内容在写入之前\/:**  
- **zyxwvutsrqponmlkjihgfe**  
- **编写多 22 项。**   
- **11 个字节读取的元素数为 2**   
- **读取的缓冲区内容在\/编写后：**   
- **zyxwvutsrqponmlkjihgfe**    
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+```Output  
+Contents of buffer before write/read:   
+        zyxwvutsrqponmlkjihgfe  
+  
+Wrote 22 items  
+  
+Number of 11-byte elements read = 2  
+  
+Contents of buffer after write/read:   
+        zyxwvutsrqponmlkjihgfe  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [\_read](../../c-runtime-library/reference/read.md)
+ [_read](../../c-runtime-library/reference/read.md)

@@ -190,10 +190,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 42bd88a29dbefe48c59742ab8fc982355262f66e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>编译器错误 C999 到 C1999
@@ -219,7 +220,7 @@ ms.lasthandoff: 04/24/2017
 |错误 C1012|括号不匹配︰ 缺少*字符*"|  
 |错误 C1013|编译器限制: 左括号太多|  
 |错误 C1014|包含文件太多︰ 深度 =*数*|  
-|错误 C1016|#ifdef / #ifndef 应输入标识符|  
+|错误 C1016|#ifdef/#ifndef 应输入标识符|  
 |[错误 C1017](../../error-messages/compiler-errors-1/fatal-error-c1017.md)|无效的整数常量表达式|  
 |错误 C1018|意外的 #elif|  
 |错误 C1019|意外的 #else|  
@@ -241,6 +242,7 @@ ms.lasthandoff: 04/24/2017
 |错误 C1048|未知的选项*字符串*in*选项*|  
 |错误 C1049|无效的数值参数*值*|  
 |[错误 C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|程序数据库文件*文件*，已过时的格式，将其删除并重新编译|  
+|[错误 C1052](fatal-error-c1052.md)|程序数据库文件*filename*，通过使用 /debug: fastlink; 链接器生成的编译器无法更新此类 PDB 文件; 请删除它或使用 /Fd 来指定不同的 PDB 文件名|  
 |错误 C1053|*函数*︰ 函数太大|  
 |[错误 C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|编译器限制: 初始值设定项嵌套太深|  
 |[错误 C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|编译器限制: 超出键范围|  
@@ -290,16 +292,16 @@ ms.lasthandoff: 04/24/2017
 |错误 C1110|嵌套的模板/泛型定义太多|  
 |错误 C1111|模板/泛型参数太多|  
 |错误 C1112|编译器限制︰`'number`太多宏自变量，只*数*允许|  
-|[错误 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#在上失败，使用*文件*|  
+|[错误 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using 失败上*文件*|  
 |错误 C1114|*文件*: WinRT 不支持 #using 的托管程序集|  
 |[错误 C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|调用 GetProcAddress 失败*函数*|  
 |[错误 C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|调用 CryptoAPI 失败|  
 |[错误 C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自动分配超过*大小*|  
 |[错误 C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|节数超过对象文件格式限制: 请使用 /bigobj 进行编译|  
-|[错误 C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#错误︰*消息*|  
+|[错误 C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error:*消息*|  
 |错误 C1190|托管目标代码需要“/clr”选项|  
 |[错误 C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|*文件*只可以导入在全局范围内|  
-|[错误 C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#在上失败，使用*文件*|  
+|[错误 C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using 失败上*文件*|  
 |错误 C1193|中预期的错误*文件*(*行*) 未达到|  
 |错误 C1195|在同一命令行上使用 /Yu 和 /Yc 与 /clr 选项不兼容|  
 |错误 C1196|*标识符*︰ 类型库中找到的标识符*typelib*不是有效的 c + + 标识符|  

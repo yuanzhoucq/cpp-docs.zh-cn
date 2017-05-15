@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aea0adf064d61e0104bc15f9cc3825dd9f7e186f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cf69d6876ffb96bfd7939eebb4c564f66e98037
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc、_mbbtombc_l
@@ -90,7 +91,7 @@ unsigned int _mbbtombc_l(
  如果 `_mbbtombc` 成功转换 `c`，则它将返回一个多字节字符；否则返回 `c`。  
   
 ## <a name="remarks"></a>备注  
- `_mbbtombc` 函数将一个给定的单字节的多字节字符转换为一个对应的双字节的多字节字符。 要转换的字符必须在 0x20 – 0x7E 或 0xA1 – 0xDF 的范围之内。  
+ `_mbbtombc` 函数将一个给定的单字节的多字节字符转换为一个对应的双字节的多字节字符。 字符必须在范围 0x20-0x7E 或 0xA1-0xDF 要转换。  
   
  输出值受区域设置的 `LC_CTYPE` 类别设置的影响；有关详细信息，请参阅 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 此函数的各个版本均相同，只不过 `_mbbtombc` 对与区域设置相关的行为使用当前区域设置，而 `_mbbtombc_l` 使用传入的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
@@ -104,9 +105,6 @@ unsigned int _mbbtombc_l(
 |`_mbbtombc_l`|\<mbstring.h>|  
   
  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   

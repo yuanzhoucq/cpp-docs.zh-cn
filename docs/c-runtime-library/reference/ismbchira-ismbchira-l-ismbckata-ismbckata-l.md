@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d4832edb810f480236b020ebfe5d620ce7eb8355
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 64a3e897179f22c327a88c4b6a35361341685d17
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
@@ -120,7 +121,7 @@ int _ismbckata_l(
 |`_ismbckata`|双字节片假名：0x8340<=`c`<=0x8396。|  
 |`_ismbckata_l`|双字节片假名：0x8340<=`c`<=0x8396。|  
   
- **END 特定于代码页 932 **  
+ **END 特定于代码页 932**   
   
 ## <a name="requirements"></a>要求  
   
@@ -132,9 +133,6 @@ int _ismbckata_l(
 |`_ismbckata_l`|\<mbstring.h>|  
   
  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   

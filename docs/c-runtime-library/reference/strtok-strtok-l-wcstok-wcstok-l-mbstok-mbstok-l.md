@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 07948b7fc08bbc41e2e899e190842be98746aeab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
@@ -125,7 +126,7 @@ unsigned char *_mbstok(
 > [!IMPORTANT]
 >  这些函数会引发由缓冲区溢出问题带来的潜在威胁。 缓冲区溢出问题是常见的系统攻击方法，使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- 首次调用 `strtok` 时，函数跳过前导分隔符并返回指向 `strToken` 中的第一个标记的指针，终止空字符的标记。 通过对 `strtok` 的一系列调用，可以从 `strToken` 的其余部分中分离出更多标记。 每次调用 `strtok` 都会修改 `strToken`，方法是在通过调用返回 `token` 后插入空字符。 若要读取来自 `strToken` 的下一个标记，请使用 `strToken` 参数的 `NULL` 值调用 `strtok`。 `NULL``strToken` 参数使 `strtok` 在修改的 `strToken` 中搜索下一个标记。 `strDelimit` 实参可以采用从第一个调用到下一个调用的任何值，以使分隔符集有所不同。  
+ 首次调用 `strtok` 时，函数跳过前导分隔符并返回指向 `strToken` 中的第一个标记的指针，终止空字符的标记。 通过对 `strtok` 的一系列调用，可以从 `strToken` 的其余部分中分离出更多标记。 每次调用`strtok`修改`strToken`的方法是插入 null 字符后`token`该调用返回。 若要读取来自 `strToken` 的下一个标记，请使用 `strToken` 参数的 `NULL` 值调用 `strtok`。 `NULL``strToken` 参数使 `strtok` 在修改的 `strToken` 中搜索下一个标记。 `strDelimit` 实参可以采用从第一个调用到下一个调用的任何值，以使分隔符集有所不同。  
   
  输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
@@ -194,9 +195,6 @@ Tokens:
  more  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

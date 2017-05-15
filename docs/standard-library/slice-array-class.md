@@ -1,97 +1,114 @@
 ---
 title: "slice_array 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "slice_array"
-  - "valarray/std::slice_array"
-  - "std.slice_array"
-  - "std::slice_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "slice_array 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- slice_array
+- valarray/std::slice_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# slice_array 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 97770a32fe661daf972753384d69b47badbcb7aa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
-通过提供了子集数组之间的切片操作支持对象的内部，辅助模板类。valarray 切片定义。  
+---
+# <a name="slicearray-class"></a>slice_array 类
+一个内部的辅助模板类，该类通过提供由 valarray 的切分定义的子集阵列之间的操作来支持切分对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-template<class Type>  
-   class slice_array : public slice {  
+template <class Type>  
+class slice_array : public slice {  
 public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator=(  
-      const Type& x  
-   ) const;  
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
+    typedef Type value_type;  
+    void operator=(const valarray<Type>& x) const;
+
+ 
+    void operator=(const Type& x) const;
+
+ 
+    void operator*=(const valarray<Type>& x) const;
+
+ 
+    void operator/=(const valarray<Type>& x) const;
+
+ 
+    void operator%=(const valarray<Type>& x) const;
+
+ 
+    void operator+=(const valarray<Type>& x) const;
+
+ 
+    void operator-=(const valarray<Type>& x) const;
+
+ 
+    void operator^=(const valarray<Type>& x) const;
+
+ 
+    void operator&=(const valarray<Type>& x) const;
+
+ 
+    void operator|=(const valarray<Type>& x) const;
+
+ 
+    void operator<<=(const valarray<Type>& x) const;
+
+ 
+    void operator>>=(const valarray<Type>& x) const;
+
+ 
 // The rest is private or implementation defined  
 }  
 ```  
   
-## 备注  
- 类描述与类一起存储到 [valarray](../standard-library/valarray-class.md)类**\<类型\>**对象的引用，[切片](../standard-library/slice-class.md)对象，描述元素序列 **valarray\<Type\>** 对象中的对象。  
+## <a name="remarks"></a>备注  
+ 该类描述的对象将存储对 [valarray](../standard-library/valarray-class.md)**\<Type>** 对象及 [slice](../standard-library/slice-class.md) 类的对象的引用，它描述了要从 **valarray\<Type>** 对象中选择的元素序列。  
   
- 模板类的某些操作 valarray 直接在程序间接创建，不能用于。  切片写在下方的运算符使用的内部，辅助模板类：  
+ 此模板类由某些 valarray 运算间接创建，无法直接在程序中使用。 切分下标运算符使用的内部辅助模板类：  
   
- `slice_array`\<**类型**\>`valarray`\<**类型**\) 或`operator[]` \(`slice`\)。  
+ `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).  
   
- 通过窗体编写 **slice\_array\<Type\>** 的表达式只构造 [va&#91;sl&#93;](../Topic/valarray::operator.md) 对象切片的 **sl** of valarray **va**。  slice\_array 类成员的行为像函数然后相应的函数签名定义为 **valarray\<Type\>**，但选择的元素序列仅受影响。  顺序控制。slice\_array 由切片构造函数、索引。切片的第一个元素，。的元素和元素之间的距离的三参数定义。  从 **va**valarray 声明的 **va** 的 slice\_array 剪切 \[`slice`\(2，5，3\]\) 选择使用索引 2，5，8，11 和 14 个元素。**va**。  索引必须是有效的过程。可以有效。  
+ 只通过写入 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) 形式的表达式即可为 valarray **va** 的 **sl** 切片构造 **gslice_array\<Type>** 对象。 然后，slice_array 类的成员函数的行为方式就类似于为 **valarray\<Type>** 定义的对应函数签名，只不过仅所选的元素的序列受到影响。 slice_array 控制的序列由构造函数的三个参数切片定义，即切片中第一个元素的索引、元素数以及元素之间的距离。 剪切自 valarray **va**（由 **va**[ `slice`（2，5，3）] 声明）的 slice_array 从**va** 中选择具有索引 2、5、8、11 和 14 的元素。 若要过程有效，索引必须有效。  
   
-## 示例  
- 有关示例的 [slice::slice](../Topic/slice::slice.md) 参见的示例演示如何声明和使用 slice\_array。  
+## <a name="example"></a>示例  
+ 有关如何声明和使用 slice_array 的示例，请参阅 [slice::slice](../standard-library/slice-class.md#slice) 的示例。  
   
-## 要求  
- **Header:** \<valarray\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<valarray>  
   
- **命名空间:**  std  
+ **命名空间：** std  
   
-## 请参阅  
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

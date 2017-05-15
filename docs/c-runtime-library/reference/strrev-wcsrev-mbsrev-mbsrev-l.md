@@ -73,10 +73,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 864c1bab23bdedf856f850411b1ba24813757833
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6e54d8005929d967ff7e35950f2aa9d7c3b01d8e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
@@ -118,7 +119,7 @@ unsigned char *_mbsrev_l(
   
  `_mbsrev` 会验证其参数。 如果 `string1` 或 `string2` 是 null 指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则 `_mbsrev` 返回 `NULL`，并将 `errno` 设置为 `EINVAL`。 `_strrev` 和 `_wcsrev` 不会验证其参数。  
   
- 输出值受区域设置的 `LC_CTYPE` 类别设置的影响；有关详细信息，请参阅 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些函数的版本都相同，只是不带 `_l` 后缀的函数使用当前区域设置，而带有 `_l` 后缀的函数使用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 输出值受区域设置的 `LC_CTYPE` 类别设置的影响；有关详细信息，请参阅 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些函数的版本都相同，只是不带 `_l` 后缀的函数使用当前区域设置，而带有 `_l` 后缀的函数则使用传入的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
 > [!IMPORTANT]
 >  这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
@@ -169,9 +170,6 @@ int main( void )
 ```Output  
 The string "Able was I ere I saw Elba" is a palindrome  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

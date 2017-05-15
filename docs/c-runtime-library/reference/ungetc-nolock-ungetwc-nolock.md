@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 835450387dea050b45dac2e44a12c7df5d5d7023
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock、_ungetwc_nolock
@@ -89,7 +90,7 @@ wint_t _ungetwc_nolock(
  指向 `FILE` 结构的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则其中每个函数都会返回字符参数 `c`*。* 如果无法推送回 `c` 或未读取任何字符，则输入流不改变且 `_ungetc_nolock` 返回 `EOF`；`_ungetwc_nolock` 返回 `WEOF`。 如果 `stream` 为 `NULL`，则将返回 `EOF` 或 `WEOF`，并且 `errno` 将设置为 `EINVAL`。  
+ 如果成功，其中每个函数将返回字符自变量`c`。 如果无法推送回 `c` 或未读取任何字符，则输入流不改变且 `_ungetc_nolock` 返回 `EOF`；`_ungetwc_nolock` 返回 `WEOF`。 如果 `stream` 为 `NULL`，则将返回 `EOF` 或 `WEOF`，并且 `errno` 将设置为 `EINVAL`。  
   
  有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -109,10 +110,7 @@ wint_t _ungetwc_nolock(
 |`_ungetc_nolock`|\<stdio.h>|  
 |`_ungetwc_nolock`|\<stdio.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   

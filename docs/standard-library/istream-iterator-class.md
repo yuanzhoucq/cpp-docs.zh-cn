@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: e5f214501712bd8d6212f465fe82d835ccaf9028
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 37c517bf764e9a9840d549aa9f223ad0942d8c48
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istreamiterator-class"></a>istream_iterator 类
@@ -76,30 +77,30 @@ class istream_iterator
   
 |||  
 |-|-|  
-|[istream_iterator](#istream_iterator__istream_iterator)|构造一个流结尾迭代器作为默认的 `istream_iterator`，或作为一个 `istream_iterator`，以便初始化为它开始读取的迭代器流类型。|  
+|[istream_iterator](#istream_iterator)|构造一个流结尾迭代器作为默认的 `istream_iterator`，或作为一个 `istream_iterator`，以便初始化为它开始读取的迭代器流类型。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[char_type](#istream_iterator__char_type)|为 `istream_iterator` 的字符类型提供的类型。|  
-|[istream_type](#istream_iterator__istream_type)|为 `istream_iterator` 的流类型提供的类型。|  
-|[traits_type](#istream_iterator__traits_type)|为 `istream_iterator` 的字符特征类型提供的类型。|  
+|[char_type](#char_type)|为 `istream_iterator` 的字符类型提供的类型。|  
+|[istream_type](#istream_type)|为 `istream_iterator` 的流类型提供的类型。|  
+|[traits_type](#traits_type)|为 `istream_iterator` 的字符特征类型提供的类型。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator*](#istream_iterator__operator_star)|此解引用运算符返回由 `Type` 定址的、`istream_iterator` 类型的存储对象。|  
-|[operator->](#istream_iterator__operator-_gt_)|返回成员的值（如果有）。|  
-|[operator++](#istream_iterator__operator_add_add)|从输入流提取增量对象，或在递增对象之前复制对象并返回副本。|  
+|[operator*](#op_star)|此解引用运算符返回由 `Type` 定址的、`istream_iterator` 类型的存储对象。|  
+|[operator->](#operator-_gt)|返回成员的值（如果有）。|  
+|[operator++](#op_add_add)|从输入流提取增量对象，或在递增对象之前复制对象并返回副本。|  
   
 ## <a name="requirements"></a>要求  
  **标头：** \<iterator>  
   
  **命名空间：** std  
   
-##  <a name="istream_iterator__char_type"></a>istream_iterator::char_type  
+##  <a name="char_type"></a>istream_iterator::char_type  
  为 `istream_iterator` 的字符类型提供的类型。  
   
 ```
@@ -145,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__istream_iterator"></a>istream_iterator::istream_iterator  
+##  <a name="istream_iterator"></a>istream_iterator::istream_iterator  
  构造一个流结尾迭代器作为默认的 `istream_iterator`，或作为一个 `istream_iterator`，以便初始化为它开始读取的迭代器流类型。  
   
 ```
@@ -197,7 +198,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__istream_type"></a>istream_iterator::istream_type  
+##  <a name="istream_type"></a>istream_iterator::istream_type  
  为 `istream_iterator` 的流类型提供的类型。  
   
 ```
@@ -208,9 +209,9 @@ typedef basic_istream<CharType, Traits> istream_type;
  该类型是 `basic_istream`\< **CharType**, **Traits**> 的同义词。  
   
 ### <a name="example"></a>示例  
-  有关如何声明和使用 `istream_type` 的示例，请参阅 [istream_iterator](#istream_iterator__istream_iterator)。  
+  有关如何声明和使用 `istream_type` 的示例，请参阅 [istream_iterator](#istream_iterator)。  
   
-##  <a name="istream_iterator__operator_star"></a>istream_iterator::operator*  
+##  <a name="op_star"></a>istream_iterator::operator*  
  此解引用运算符返回由 `istream_iterator` 定址的、**Type** 类型的存储对象。  
   
 ```
@@ -252,7 +253,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator-_gt_"></a>istream_iterator::operator-&gt;  
+##  <a name="istream_iterator__operator-_gt"></a>istream_iterator::operator-&gt;  
  返回成员的值（如果有）。  
   
 ```
@@ -299,7 +300,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__operator_add_add"></a>istream_iterator::operator++  
+##  <a name="op_add_add"></a>istream_iterator::operator++  
  从输入流提取增量对象，或在递增对象之前复制对象并返回副本。  
   
 ```
@@ -343,7 +344,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istream_iterator__traits_type"></a>istream_iterator::traits_type  
+##  <a name="traits_type"></a>istream_iterator::traits_type  
  为 `istream_iterator` 的字符特征类型提供的类型。  
   
 ```

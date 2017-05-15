@@ -39,7 +39,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -101,7 +100,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -144,10 +142,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: 123fea75676708aa557a4b4bb5aced1712ca86e4
-ms.lasthandoff: 04/28/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: ed1f641e226f85aefcebf5ecf127c1345dc0b1b2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>编译器警告 C4400 通过 C4599
@@ -162,7 +161,7 @@ ms.lasthandoff: 04/28/2017
   
 |警告|消息|  
 |-------------|-------------|  
-|[编译器警告（等级 1）C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#杂注*宏名称*︰ 应为有效的非空字符串|  
+|[编译器警告（等级 1）C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma*宏名称*︰ 应为有效的非空字符串|  
 |[编译器警告（等级 4）C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)|*类型*︰ 不支持在此类型上的 const/volatile 限定符|  
 |[编译器警告（等级 1）C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)|*位域*︰ 成员是位域|  
 |[编译器警告（等级 1）C4402](../../error-messages/compiler-warnings/compiler-warning-level-1-c4402.md)|必须使用 PTR 运算符|  
@@ -215,14 +214,14 @@ ms.lasthandoff: 04/28/2017
 |编译器警告 （等级 1） C4453|*类型*: [WebHostHidden] 类型不应使用不是公共类型的发布接口上 [WebHostHidden]|  
 |编译器警告 （等级 1） C4454|*函数*而无 [DefaultOverload] 指定重载的多个输入参数的数目。 选取*声明*为默认重载|  
 |编译器警告 （等级 1） C4455|运算符*运算符*︰ 保留文本的后缀不是以下划线开头的标识符|  
-|编译器警告 （等级 3） C4456|声明*标识符*隐藏了以前本地声明|  
-|编译器警告 （等级 3） C4457|声明*标识符*隐藏函数参数|  
-|编译器警告 （等级 3） C4458|声明*标识符*隐藏类成员|  
-|编译器警告 （等级 3） C4459|声明*标识符*隐藏了全局声明|  
+|[编译器警告 （等级 4） C4456](compiler-warning-level-4-c4456.md)|声明*标识符*隐藏了以前本地声明|  
+|[编译器警告 （等级 4） C4457](compiler-warning-level-4-c4457.md)|声明*标识符*隐藏函数参数|  
+|[编译器警告 （等级 4） C4458](compiler-warning-level-4-c4458.md)|声明*标识符*隐藏类成员|  
+|[编译器警告 （等级 4） C4459](compiler-warning-level-4-c4459.md)|声明*标识符*隐藏了全局声明|  
 |[编译器警告（等级 4）C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|WinRT &#124; 托管运算符*运算符*，通过引用传递参数。 WinRT &#124; 托管运算符*运算符*具有不同的语义与 c + + 运算符*cpp_operator*，是否希望按值传递？|  
 |[编译器警告（等级 1）C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|*classname*︰ 此类有终结器 ！*终结器*但没有析构函数 ~*dtor*|  
 |[编译器警告（等级 1）C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|*类型*︰ 无法确定类型的 GUID。 程序可能在运行时失败。|  
-|编译器警告 C4463|溢出;分配*值*到位域的只包含值从*min_value*到*max_value*|  
+|[编译器警告 （等级 4） C4463](compiler-warning-level-4-c4463.md)|溢出;分配*值*到位域的只包含值从*min_value*到*max_value*|  
 |编译器警告 C4464|相对包含路径包含..|  
 |[编译器警告（等级 1）C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|在 /clr 下忽略了浮点控制 pragma|  
 |[编译器警告 （等级 4） C4471](compiler-warning-level-4-c4471.md)|*枚举*︰ 未区分范围的枚举的前向声明必须具有基础类型 (假定为 int)|  
@@ -308,7 +307,7 @@ ms.lasthandoff: 04/28/2017
 |[编译器警告（等级 1）C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|已否决的行为:"*字符串*"替换为*字符串*进程属性|  
 |编译器警告 （等级 4） C4582|*类型*︰ 不隐式调用构造函数|  
 |编译器警告 （等级 4） C4583|*类型*︰ 不隐式调用析构函数|  
-|[编译器警告（等级 1）C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|*class1*︰ 基类的*class2*is 已的基类*class3 移*|  
+|[编译器警告（等级 1）C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|*class1*︰ 基类的*class2*is 已基类的*class3 移*|  
 |编译器警告 （等级 1） C4585|*类*: WinRT 公共 ref class 必须要么都密封或派生自的现有未密封的类|  
 |编译器警告 （等级 1） C4586|*类型*︰ 无法在名为 Windows 顶级命名空间声明为公共类型|  
 |编译器警告 （等级 1） C4587|*anonymous_structure*︰ 行为更改︰ 不再隐式调用构造函数|  

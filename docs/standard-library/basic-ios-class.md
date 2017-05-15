@@ -9,10 +9,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.basic_ios
 - ios/std::basic_ios
 - basic_ios
-- std::basic_ios
+- ios/std::basic_ios::char_type
+- ios/std::basic_ios::int_type
+- ios/std::basic_ios::off_type
+- ios/std::basic_ios::pos_type
+- ios/std::basic_ios::traits_type
+- ios/std::basic_ios::bad
+- ios/std::basic_ios::clear
+- ios/std::basic_ios::copyfmt
+- ios/std::basic_ios::eof
+- ios/std::basic_ios::exceptions
+- ios/std::basic_ios::fail
+- ios/std::basic_ios::fill
+- ios/std::basic_ios::good
+- ios/std::basic_ios::imbue
+- ios/std::basic_ios::init
+- ios/std::basic_ios::move
+- ios/std::basic_ios::narrow
+- ios/std::basic_ios::rdbuf
+- ios/std::basic_ios::rdstate
+- ios/std::basic_ios::set_rdbuf
+- ios/std::basic_ios::setstate
+- ios/std::basic_ios::swap
+- ios/std::basic_ios::tie
+- ios/std::basic_ios::widen
+- ios/std::basic_ios::explicit operator bool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6987d9c75785ebb716324395e0ce295d4155e55f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: df32e4cf1cfddd4e5634880ba6bffc63ddcd90af
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicios-class"></a>basic_ios 类
@@ -77,56 +101,56 @@ class basic_ios : public ios_base
   
 |||  
 |-|-|  
-|[basic_ios](#basic_ios__basic_ios)|构造 `basic_ios` 类。|  
+|[basic_ios](#basic_ios)|构造 `basic_ios` 类。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[char_type](#basic_ios__char_type)|模板参数 `Elem` 的同义词。|  
-|[int_type](#basic_ios__int_type)|`Traits::int_type` 的同义词。|  
-|[off_type](#basic_ios__off_type)|`Traits::off_type` 的同义词。|  
-|[pos_type](#basic_ios__pos_type)|`Traits::pos_type` 的同义词。|  
-|[traits_type](#basic_ios__traits_type)|模板参数 `Traits` 的同义词。|  
+|[char_type](#char_type)|模板参数 `Elem` 的同义词。|  
+|[int_type](#int_type)|`Traits::int_type` 的同义词。|  
+|[off_type](#off_type)|`Traits::off_type` 的同义词。|  
+|[pos_type](#pos_type)|`Traits::pos_type` 的同义词。|  
+|[traits_type](#traits_type)|模板参数 `Traits` 的同义词。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[bad](#basic_ios__bad)|指示流缓冲区的完整性损失。|  
-|[clear](#basic_ios__clear)|清除所有错误标志。|  
-|[copyfmt](#basic_ios__copyfmt)|将标志从一个流复制到另一个流。|  
-|[eof](#basic_ios__eof)|指示是否已到达流的结尾。|  
-|[exceptions](#basic_ios__exceptions)|指示流将引发哪些异常。|  
-|[fail](#basic_ios__fail)|指示从流中提取有效字段失败。|  
-|[fill](#basic_ios__fill)|指定或返回在文本宽度小于流宽度时将使用的字符。|  
-|[good](#basic_ios__good)|指示流处于良好状态。|  
-|[imbue](#basic_ios__imbue)|更改区域设置。|  
-|[init](#basic_ios__init)|通过 `basic_ios` 构造函数调用。|  
-|[move](#basic_ios__move)|将所有值（指向流缓冲区的指针除外）从参数移动到当前对象。|  
-|[narrow](#basic_ios__narrow)|查找给定 `char_type` 的等效字符型。|  
-|[rdbuf](#basic_ios__rdbuf)|将流路由到指定缓冲区。|  
-|[rdstate](#basic_ios__rdstate)|读取标志的位状态。|  
-|[set_rdbuf](#basic_ios__set_rdbuf)|分配流缓冲区作为此流对象的读取缓冲区。|  
-|[setstate](#basic_ios__setstate)|设置其他标志。|  
-|[swap](#basic_ios__swap)|将此 `basic_ios` 对象中的值与另一个 `basic_ios` 对象中的值进行交换。 不会交换指向流缓冲区的指针。|  
-|[tie](#basic_ios__tie)|确保依次处理流。|  
-|[widen](#basic_ios__widen)|查找给定字符型的等效 `char_type`。|  
+|[bad](#bad)|指示流缓冲区的完整性损失。|  
+|[clear](#clear)|清除所有错误标志。|  
+|[copyfmt](#copyfmt)|将标志从一个流复制到另一个流。|  
+|[eof](#eof)|指示是否已到达流的结尾。|  
+|[exceptions](#exceptions)|指示流将引发哪些异常。|  
+|[fail](#fail)|指示从流中提取有效字段失败。|  
+|[fill](#fill)|指定或返回在文本宽度小于流宽度时将使用的字符。|  
+|[good](#good)|指示流处于良好状态。|  
+|[imbue](#imbue)|更改区域设置。|  
+|[init](#init)|通过 `basic_ios` 构造函数调用。|  
+|[move](#move)|将所有值（指向流缓冲区的指针除外）从参数移动到当前对象。|  
+|[narrow](#narrow)|查找给定 `char_type` 的等效字符型。|  
+|[rdbuf](#rdbuf)|将流路由到指定缓冲区。|  
+|[rdstate](#rdstate)|读取标志的位状态。|  
+|[set_rdbuf](#set_rdbuf)|分配流缓冲区作为此流对象的读取缓冲区。|  
+|[setstate](#setstate)|设置其他标志。|  
+|[swap](#swap)|将此 `basic_ios` 对象中的值与另一个 `basic_ios` 对象中的值进行交换。 不会交换指向流缓冲区的指针。|  
+|[tie](#tie)|确保依次处理流。|  
+|[widen](#widen)|查找给定字符型的等效 `char_type`。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[explicit operator bool](#basic_ios__operator_bool)|允许将 `basic_ios` 对象作为作 `bool`。 禁用自动类型转换以防止产生常见的意外副作用。|  
-|[operator void *](#basic_ios__operator_void_star)|指示流是否仍处于良好状态。|  
-|[operator!](#basic_ios__operator_not)|指示流是否完好无损。|  
+|[explicit operator bool](#op_bool)|允许将 `basic_ios` 对象作为作 `bool`。 禁用自动类型转换以防止产生常见的意外副作用。|  
+|[operator void *](#op_void_star)|指示流是否仍处于良好状态。|  
+|[operator!](#op_not)|指示流是否完好无损。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<ios>  
   
  **命名空间：** std  
   
-##  <a name="a-namebasiciosbada--basiciosbad"></a><a name="basic_ios__bad"></a>  basic_ios::bad  
+##  <a name="bad"></a>  basic_ios::bad  
  指示流缓冲区的完整性损失  
   
 ```  
@@ -136,7 +160,7 @@ bool bad() const;
 ### <a name="return-value"></a>返回值  
  如果 `rdstate & badbit` 为非零，则为 `true`，否则为 `false`。  
   
- 有关 `badbit` 的详细信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#ios_base__iostate)。  
+ 有关 `badbit` 的详细信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
   
 ### <a name="example"></a>示例  
   
@@ -158,7 +182,7 @@ int main( void )
   
 ```  
   
-##  <a name="a-namebasiciosbasiciosa--basiciosbasicios"></a><a name="basic_ios__basic_ios"></a>  basic_ios::basic_ios  
+##  <a name="basic_ios"></a>  basic_ios::basic_ios  
  构造 basic_ios 类。  
   
 ```   
@@ -171,16 +195,16 @@ basic_ios();
  用于存储输入或输出元素的标准缓冲区。  
   
 ### <a name="remarks"></a>备注  
- 第一个构造函数通过调用 [init](#basic_ios__init)(_ *Sb*) 可初始化其成员对象。 第二个（受保护的）构造函数取消初始化其成员对象。 稍后对 **init** 的调用必须先初始化此对象，然后才可被安全销毁。  
+ 第一个构造函数通过调用 [init](#init)(_ *Sb*) 可初始化其成员对象。 第二个（受保护的）构造函数取消初始化其成员对象。 稍后对 **init** 的调用必须先初始化此对象，然后才可被安全销毁。  
   
-##  <a name="a-namebasicioschartypea--basicioschartype"></a><a name="basic_ios__char_type"></a>  basic_ios::char_type  
+##  <a name="char_type"></a>  basic_ios::char_type  
  模板参数 **Elem** 的同义词。  
   
 ```   
 typedef Elem char_type;  
 ```  
   
-##  <a name="a-namebasicioscleara--basiciosclear"></a><a name="basic_ios__clear"></a>  basic_ios::clear  
+##  <a name="clear"></a>  basic_ios::clear  
  清除所有错误标志。  
   
 ```   
@@ -196,18 +220,18 @@ void clear(io_state state);
  指定是否应重新引发这个异常。 默认为 `false`（将不重新引发异常）。  
   
 ### <a name="remarks"></a>备注  
- 标志为 **goodbit**、**failbit**、**eofbit** 和 **badbit**。 使用 [good](#basic_ios__good)、[bad](#basic_ios__bad)、[eof](#basic_ios__eof) 和 [fail](#basic_ios__fail) 测试这些标志  
+ 标志为 **goodbit**、**failbit**、**eofbit** 和 **badbit**。 使用 [good](#good)、[bad](#bad)、[eof](#eof) 和 [fail](#fail) 测试这些标志  
   
  成员函数将存储的流状态信息替换为：  
   
- `state` &#124; `(`[rdbuf](#basic_ios__rdbuf) != 0 **goodbit** : **badbit**)  
+ `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)  
   
- 如果 `state`**&**[exceptions](#basic_ios__exceptions) 为非零，则它会抛出类 [failure](../standard-library/ios-base-class.md#ios_base__failure) 的一个对象。  
+ 如果 `state`**&**[exceptions](#exceptions) 为非零，则它会抛出类 [failure](../standard-library/ios-base-class.md#failure) 的一个对象。  
   
 ### <a name="example"></a>示例  
-  请参阅 [rdstate](#basic_ios__rdstate) 和 [getline](../standard-library/string-functions.md#getline) 了解使用 **clear** 的示例。  
+  请参阅 [rdstate](#rdstate) 和 [getline](../standard-library/string-functions.md#getline) 了解使用 **clear** 的示例。  
   
-##  <a name="a-namebasicioscopyfmta--basicioscopyfmt"></a><a name="basic_ios__copyfmt"></a>  basic_ios::copyfmt  
+##  <a name="copyfmt"></a>  basic_ios::copyfmt  
  将标志从一个流复制到另一个流。  
   
 ```   
@@ -216,14 +240,14 @@ const basic_ios<Elem, Traits>& right);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` right`  
+ `right`  
  要复制其标志的流。  
   
 ### <a name="return-value"></a>返回值  
  正在向其复制标志的流的 **this** 对象。  
   
 ### <a name="remarks"></a>备注  
- 成员函数将报告回调 eventÂ erase_event。 然后，它将填充字符、绑定指针和格式设置信息从 ` right` 复制到 **\*this**。 在更改异常掩码之前，它会报告回调事件 copyfmt_event。 复制完成后，如果 **state &**[exceptions](#basic_ios__exceptions) 为非零，则该函数将有效地调用带参数 [rdstate](#basic_ios__rdstate) 的 [clear](#basic_ios__clear)。 它将返回 **\*this**。  
+ 成员函数报告回调事件**擦除\_事件**。 然后，它将填充字符、绑定指针和格式设置信息从 `right` 复制到 **\*this**。 在更改异常掩码之前, 它将报告回调事件**copyfmt_event**。 复制完成后，如果 **state &**[exceptions](#exceptions) 为非零，则该函数将有效地调用带参数 [rdstate](#rdstate) 的 [clear](#clear)。 它将返回 **\*this**。  
   
 ### <a name="example"></a>示例  
   
@@ -247,7 +271,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namebasicioseofa--basicioseof"></a><a name="basic_ios__eof"></a>  basic_ios::eof  
+##  <a name="eof"></a>  basic_ios::eof  
  指示是否已到达流的结尾。  
   
 ```  
@@ -258,7 +282,7 @@ bool eof() const;
  如果已到达流的结尾，则为 `true`，否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 如果 [rdstate](#basic_ios__rdstate) `& eofbit` 为非零，则成员函数将返回 `true`。 有关 `eofbit` 的详细信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#ios_base__iostate)。  
+ 如果 [rdstate](#rdstate) `& eofbit` 为非零，则成员函数将返回 `true`。 有关 `eofbit` 的详细信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
   
 ### <a name="example"></a>示例  
   
@@ -283,7 +307,7 @@ int main( int argc, char* argv[] )
   
 ```  
   
-##  <a name="a-namebasiciosexceptionsa--basiciosexceptions"></a><a name="basic_ios__exceptions"></a>  basic_ios::exceptions  
+##  <a name="exceptions"></a>  basic_ios::exceptions  
  指示流将引发哪些异常。  
   
 ```   
@@ -300,7 +324,7 @@ void exceptions(io_state Newexcept);
  当前指定的用于为流抛出异常的标志。  
   
 ### <a name="remarks"></a>备注  
- 第一个成员函数返回存储的异常掩码。 第二个成员函数在异常掩码中存储 *_Except* 并返回其先前的存储值。 注意，存储新异常掩码会与调用 [clear](#basic_ios__clear)( [rdstate](#basic_ios__rdstate) ) 一样抛出异常。  
+ 第一个成员函数返回存储的异常掩码。 第二个成员函数在异常掩码中存储 *_Except* 并返回其先前的存储值。 注意，存储新异常掩码会与调用 [clear](#clear)( [rdstate](#rdstate) ) 一样抛出异常。  
   
 ### <a name="example"></a>示例  
   
@@ -340,7 +364,7 @@ Exception class: class std::ios_base::failure
 Exception description: ios_base::eofbit set   
 ```  
   
-##  <a name="a-namebasiciosfaila--basiciosfail"></a><a name="basic_ios__fail"></a>  basic_ios::fail  
+##  <a name="fail"></a>  basic_ios::fail  
  指示从流中提取有效字段失败。  
   
 ```  
@@ -348,9 +372,9 @@ bool fail() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果 [rdstate](#basic_ios__rdstate) `& (badbit|failbit)` 为非零，则为 `true`，否则为 `false`。  
+ 如果 [rdstate](#rdstate) `& (badbit|failbit)` 为非零，则为 `true`，否则为 `false`。  
   
- 有关 `failbit` 的详细信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#ios_base__iostate)。  
+ 有关 `failbit` 的详细信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
   
 ### <a name="example"></a>示例  
   
@@ -369,7 +393,7 @@ int main( void )
   
 ```  
   
-##  <a name="a-namebasiciosfilla--basiciosfill"></a><a name="basic_ios__fill"></a>  basic_ios::fill  
+##  <a name="fill"></a>  basic_ios::fill  
  指定或返回在文本宽度小于流宽度时将使用的字符。  
   
 ```   
@@ -414,7 +438,7 @@ xxxxa
 x   
 ```  
   
-##  <a name="a-namebasiciosgooda--basiciosgood"></a><a name="basic_ios__good"></a>  basic_ios::good  
+##  <a name="good"></a>  basic_ios::good  
  指示流处于良好状态。  
   
 ```  
@@ -422,14 +446,14 @@ bool good() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 如果 [rdstate](#basic_ios__rdstate) `== goodbit`（未设置任何状态标志），则为 `true`，否则为 `false`。  
+ 如果 [rdstate](#rdstate) `== goodbit`（未设置任何状态标志），则为 `true`，否则为 `false`。  
   
- 有关 `goodbit` 的详细信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#ios_base__iostate)。  
+ 有关 `goodbit` 的详细信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
   
 ### <a name="example"></a>示例  
-  请参阅 [basic_ios:: bad](#basic_ios__bad)，了解使用 `good` 的示例。  
+  请参阅 [basic_ios:: bad](#bad)，了解使用 `good` 的示例。  
   
-##  <a name="a-namebasiciosimbuea--basiciosimbue"></a><a name="basic_ios__imbue"></a>  basic_ios::imbue  
+##  <a name="imbue"></a>  basic_ios::imbue  
  更改区域设置。  
   
 ```   
@@ -444,11 +468,11 @@ locale imbue(const locale& Loc);
  先前的区域设置。  
   
 ### <a name="remarks"></a>备注  
- 如果 [rdbuf](#basic_ios__rdbuf) 不是空指针，则成员函数将调用  
+ 如果 [rdbuf](#rdbuf) 不是空指针，则成员函数将调用  
   
- `rdbuf`-> [pubimbue](../standard-library/basic-streambuf-class.md#basic_streambuf__pubimbue)(_ *Loc*)  
+ `rdbuf`-> [pubimbue](../standard-library/basic-streambuf-class.md#pubimbue)(_ *Loc*)  
   
- 不管怎样，它都将返回 [ios_base::imbue](../standard-library/ios-base-class.md#ios_base__imbue)(_ *Loc*)。  
+ 不管怎样，它都将返回 [ios_base::imbue](../standard-library/ios-base-class.md#imbue)(_ *Loc*)。  
   
 ### <a name="example"></a>示例  
   
@@ -469,7 +493,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namebasiciosinita--basiciosinit"></a><a name="basic_ios__init"></a>  basic_ios::init  
+##  <a name="init"></a>  basic_ios::init  
  由 basic_ios 构造函数调用。  
   
 ```  
@@ -487,34 +511,34 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 ### <a name="remarks"></a>备注  
  成员函数将值存储在所有成员对象中，因此：  
   
-- [rdbuf](#basic_ios__rdbuf) 返回 *_Sb*。  
+- [rdbuf](#rdbuf) 返回 *_Sb*。  
   
-- [tie](#basic_ios__tie) 返回空指针。  
+- [tie](#tie) 返回空指针。  
   
-- 如果 `_Sb` 为非零，则 [rdstate](#basic_ios__rdstate) 返回 [goodbit](../standard-library/ios-base-class.md#ios_base__iostate)，否则将返回 [badbit](../standard-library/ios-base-class.md#ios_base__iostate)。  
+- 如果 `_Sb` 为非零，则 [rdstate](#rdstate) 返回 [goodbit](../standard-library/ios-base-class.md#iostate)，否则将返回 [badbit](../standard-library/ios-base-class.md#iostate)。  
   
-- [exceptions](#basic_ios__exceptions) 返回 **goodbit**。  
+- [exceptions](#exceptions) 返回 **goodbit**。  
   
-- [flags](../standard-library/ios-base-class.md#ios_base__flags) 返回 [skipws](../standard-library/ios-base-class.md#ios_base__fmtflags) &#124; [dec](../standard-library/ios-base-class.md#ios_base__fmtflags)。  
+- [flags](../standard-library/ios-base-class.md#flags) 返回 [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags)。  
   
-- [width](../standard-library/ios-base-class.md#ios_base__width) 返回 0。  
+- [width](../standard-library/ios-base-class.md#width) 返回 0。  
   
-- [precision](../standard-library/ios-base-class.md#ios_base__precision) 返回 6。  
+- [precision](../standard-library/ios-base-class.md#precision) 返回 6。  
   
-- [fill](#basic_ios__fill) 返回空格字符。  
+- [fill](#fill) 返回空格字符。  
   
-- [getloc](../standard-library/ios-base-class.md#ios_base__getloc) 返回 `locale::classic`。  
+- [getloc](../standard-library/ios-base-class.md#getloc) 返回 `locale::classic`。  
   
-- [iword](../standard-library/ios-base-class.md#ios_base__iword) 返回零，[pword](../standard-library/ios-base-class.md#ios_base__pword) 返回针对所有参数值的空指针。  
+- [iword](../standard-library/ios-base-class.md#iword) 返回零，[pword](../standard-library/ios-base-class.md#pword) 返回针对所有参数值的空指针。  
   
-##  <a name="a-namebasiciosinttypea--basiciosinttype"></a><a name="basic_ios__int_type"></a>  basic_ios::int_type  
+##  <a name="int_type"></a>  basic_ios::int_type  
  **traits_type::int_type** 的同义词。  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
-##  <a name="a-namebasiciosmovea--basiciosmove"></a><a name="basic_ios__move"></a>  basic_ios::move  
+##  <a name="move"></a>  basic_ios::move  
  将所有值（指向流缓冲区的指针除外）从参数移动到当前对象。  
   
 ```   
@@ -526,13 +550,12 @@ void move(basic_ios&& right);
  从中移动值的 `ios_base` 对象。  
   
 ### <a name="remarks"></a>备注  
- 受保护成员函数将存储在 ` right` 中的所有值移动到 `*this`，存储的 `stream buffer pointer` 除外，它将保留在 ` right` 中不作更改并设置为 `*this` 中的空指针。 将存储的 `tie pointer` 设置为 ` right` 中的空指针。  
+ 受保护成员函数将存储在 `right` 中的所有值移动到 `*this`，存储的 `stream buffer pointer` 除外，它将保留在 `right` 中不作更改并设置为 `*this` 中的空指针。 将存储的 `tie pointer` 设置为 `right` 中的空指针。  
   
-##  <a name="a-namebasiciosnarrowa--basiciosnarrow"></a><a name="basic_ios__narrow"></a>  basic_ios::narrow  
+##  <a name="narrow"></a>  basic_ios::narrow  
  查找给定 `char_type` 的等效字符型。  
   
 ```  
- 
 char narrow(char_type Char, char Default = '\0') const;
 ```  
   
@@ -547,7 +570,7 @@ char narrow(char_type Char, char Default = '\0') const;
  给定 `char_type` 的等效 `char`。  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回 [use_facet](../standard-library/basic-filebuf-class.md#basic_filebuf__open)**<**Â **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#ios_base__getloc)( ) )。 `narrow`( `Char`, `Default`)。  
+ 成员函数将返回[use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc](../standard-library/ios-base-class.md#getloc)（)）。`narrow`( `Char`, `Default`).  
   
 ### <a name="example"></a>示例  
   
@@ -568,17 +591,16 @@ int main( )
   y[0] = wcout.narrow( x[0] );  
   cout << y[0] << endl;  
 }  
-  
 ```  
   
-##  <a name="a-namebasiciosofftypea--basiciosofftype"></a><a name="basic_ios__off_type"></a>  basic_ios::off_type  
+##  <a name="off_type"></a>  basic_ios::off_type  
  **traits_type::off_type** 的同义词。  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
-##  <a name="a-namebasiciosoperatorvoidstara--basiciosoperator-void-"></a><a name="basic_ios__operator_void_star"></a>  basic_ios::operator void *  
+##  <a name="op_void_star"></a>  basic_ios::operator void *  
  指示流是否仍处于良好状态。  
   
 ```  
@@ -586,7 +608,7 @@ typedef typename traits_type::off_type off_type;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 仅在 [fail](#basic_ios__fail) 时，该运算符才会返回空指针。  
+ 仅在 [fail](#fail) 时，该运算符才会返回空指针。  
   
 ### <a name="example"></a>示例  
   
@@ -607,7 +629,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namebasiciosoperatornota--basiciosoperator"></a><a name="basic_ios__operator_not"></a>  basic_ios::operator!  
+##  <a name="op_not"></a>  basic_ios::operator!  
  指示流是否完好无损。  
   
 ```   
@@ -615,7 +637,7 @@ bool operator!() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回 [fail](#basic_ios__fail)。  
+ 返回 [fail](#fail)。  
   
 ### <a name="example"></a>示例  
   
@@ -636,7 +658,7 @@ int main( )
 0  
 ```  
   
-##  <a name="a-namebasiciosoperatorboola--basiciosoperator-bool"></a><a name="basic_ios__operator_bool"></a>  basic_ios::operator bool  
+##  <a name="op_bool"></a>  basic_ios::operator bool  
  允许将 `basic_ios` 对象作为作 `bool`。 禁用自动类型转换以防止产生常见的意外副作用。  
   
 ```  
@@ -646,14 +668,14 @@ explicit operator bool() const;
 ### <a name="remarks"></a>备注  
  仅在 `fail``()` 时，此运算符才返回可转换为 `false` 的值。 返回类型只能转换为 `bool`，而不能转换为 `void *` 或其他已知的标量类型。  
   
-##  <a name="a-namebasiciospostypea--basiciospostype"></a><a name="basic_ios__pos_type"></a>  basic_ios::pos_type  
+##  <a name="pos_type"></a>  basic_ios::pos_type  
  **traits_type::pos_type** 的同义词。  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
-##  <a name="a-namebasiciosrdbufa--basiciosrdbuf"></a><a name="basic_ios__rdbuf"></a>  basic_ios::rdbuf  
+##  <a name="rdbuf"></a>  basic_ios::rdbuf  
  将流路由到指定缓冲区。  
   
 ```   
@@ -696,7 +718,7 @@ int main( )
 test2  
 ```  
   
-##  <a name="a-namebasiciosrdstatea--basiciosrdstate"></a><a name="basic_ios__rdstate"></a>  basic_ios::rdstate  
+##  <a name="rdstate"></a>  basic_ios::rdstate  
  读取标志的位状态。  
   
 ```  
@@ -746,7 +768,7 @@ int main( )
 1   
 ```  
   
-##  <a name="a-namebasiciossetstatea--basiciossetstate"></a><a name="basic_ios__setstate"></a>  basic_ios::setstate  
+##  <a name="setstate"></a>  basic_ios::setstate  
  设置其他标志。  
   
 ```   
@@ -758,7 +780,7 @@ void setstate(iostate _State);
  要设置的其他标志。  
   
 ### <a name="remarks"></a>备注  
- 成员函数有效地调用 [clear](#basic_ios__clear)(_ *State* &#124; [rdstate](#basic_ios__rdstate))。  
+ 成员函数有效地调用 [clear](#clear)(_ *State* &#124; [rdstate](#rdstate))。  
   
 ### <a name="example"></a>示例  
   
@@ -794,7 +816,7 @@ int main( )
 1   
 ```  
   
-##  <a name="a-namebasiciossetrdbufa--basiciossetrdbuf"></a><a name="basic_ios__set_rdbuf"></a>  basic_ios::set_rdbuf  
+##  <a name="set_rdbuf"></a>  basic_ios::set_rdbuf  
  分配流缓冲区作为此流对象的读取缓冲区。  
   
 ```   
@@ -803,13 +825,13 @@ basic_streambuf<Elem, Tr>* strbuf)
 ```  
   
 ### <a name="parameters"></a>参数  
- ` strbuf`  
+ `strbuf`  
  要成为读取缓冲区的流缓冲区。  
   
 ### <a name="remarks"></a>备注  
- 受保护的成员函数在 `stream buffer pointer` 中存储 ` strbuf`。它未调用 `clear`。  
+ 受保护的成员函数在 `stream buffer pointer` 中存储 `strbuf`。它未调用 `clear`。  
   
-##  <a name="a-namebasiciostiea--basiciostie"></a><a name="basic_ios__tie"></a>  basic_ios::tie  
+##  <a name="tie"></a>  basic_ios::tie  
  确保依次处理流。  
   
 ```  
@@ -820,11 +842,11 @@ basic_ostream<Elem, Traits>* str);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` str`  
+ `str`  
  一个流。  
   
 ### <a name="return-value"></a>返回值  
- 第一个成员函数返回存储的绑定指针。 第二个成员函数将 ` str` 存储在绑定指针中，并返回其先前的存储值。  
+ 第一个成员函数返回存储的绑定指针。 第二个成员函数将 `str` 存储在绑定指针中，并返回其先前的存储值。  
   
 ### <a name="remarks"></a>备注  
  `tie` 导致两个流同步，使得一个流上的操作在另一个流上的操作完成之后发生。  
@@ -848,14 +870,14 @@ int main( )
   
 ```  
   
-##  <a name="a-namebasiciostraitstypea--basiciostraitstype"></a><a name="basic_ios__traits_type"></a>  basic_ios::traits_type  
+##  <a name="traits_type"></a>  basic_ios::traits_type  
  模板参数 **Traits** 的同义词。  
   
 ```   
 typedef Traits traits_type;  
 ```  
   
-##  <a name="a-namebasicioswidena--basicioswiden"></a><a name="basic_ios__widen"></a>  basic_ios::widen  
+##  <a name="widen"></a>  basic_ios::widen  
  查找给定 `char` 的等效 `char_type`。  
   
 ```   
@@ -870,7 +892,7 @@ char_type widen(char Char) const;
  查找给定 `char` 的等效 `char_type`。  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回 [use_facet](../standard-library/basic-filebuf-class.md#basic_filebuf__open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#ios_base__getloc)). `widen`( `Char`).  
+ 成员函数返回 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).  
   
 ### <a name="example"></a>示例  
   
@@ -893,7 +915,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namebasiciosswapa--basiciosswap"></a><a name="basic_ios__swap"></a>  basic_ios::swap  
+##  <a name="swap"></a>  basic_ios::swap  
  将此 `basic_ios` 对象中的值与另一个 `basic_ios` 对象中的值进行交换。 但是，不会交换指向流缓冲区的指针。  
   
 ```   
@@ -905,7 +927,7 @@ void swap(basic_ios&& right);
  用于交换值的 `basic_ios` 对象。  
   
 ### <a name="remarks"></a>备注  
- 受保护的成员函数交换存储在 ` right` 与 `*this` 中的所有值，存储在 `stream buffer pointer` 中的值除外。  
+ 受保护的成员函数交换存储在 `right` 与 `*this` 中的所有值，存储在 `stream buffer pointer` 中的值除外。  
   
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

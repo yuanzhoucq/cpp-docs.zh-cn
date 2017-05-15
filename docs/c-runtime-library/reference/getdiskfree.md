@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5d4d3fea944955b75002e88e3692d42954612a3a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 725a45288dc39ac36966d877017ad65334800c11
+ms.contentlocale: zh-cn
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="getdiskfree"></a>_getdiskfree
@@ -82,7 +83,7 @@ unsigned _getdiskfree(
  将使用有关驱动器的信息进行填充的 `_diskfree_t` 结构。  
   
 ## <a name="return-value"></a>返回值  
- 如果函数成功，则返回值为&0;。 如果函数失败，则返回值为错误代码。 可以为操作系统返回的任何错误设置 `errno` 值。 有关由 `errno` 指示的错误条件的详细信息，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。  
+ 如果函数成功，则返回值为 0。 如果函数失败，则返回值为错误代码。 可以为操作系统返回的任何错误设置 `errno` 值。 有关由 `errno` 指示的错误条件的详细信息，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。  
   
 ## <a name="remarks"></a>备注  
  `_diskfree_t` 结构在 Direct.h 中定义。  
@@ -120,9 +121,8 @@ struct _diskfree_t {
   
 ## <a name="example"></a>示例  
   
-```  
-  
-      // crt_getdiskfree.c  
+```C  
+// crt_getdiskfree.c  
 // compile with: /c  
 #include <windows.h>  
 #include <direct.h>  
@@ -220,9 +220,6 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 |  E: | The device is not ready.    |                 |              |  
 ======================================================================  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [目录控制](../../c-runtime-library/directory-control.md)

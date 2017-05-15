@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 51b82c6a60eb8024c267e07e1327c8afd7928eea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset、_mbsnbset_l
@@ -104,9 +105,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset` 返回指向修改后的字符串的指针。  
   
 ## <a name="remarks"></a>备注  
- `_mbsnbset` 和 `_mbsnbset_l` 函数最多将 `str` 的前 `count` 个字节设置为 `c`。 如果 `count` 大于 `str` 的长度，则会使用 `str` 的长度而使用 `count`。 如果 `c` 是多字节字符，且不能完全设置到由 `count` 指定的最后一个字节中，则用空白字符填充最后一个字节。 `_mbsnbset` 和 `_mbsnbset_l` 未在 `str` 的末尾放置终止 null。  
+ `_mbsnbset` 和 `_mbsnbset_l` 函数最多将 `str` 的前 `count` 个字节设置为 `c`。 如果 `count` 大于 `str` 的长度，则会使用 `str` 的长度而使用 `count`。 如果 `c` 是多字节字符，且不能完全设置到由 `count` 指定的最后一个字节中，则用空白字符填充最后一个字节。 `_mbsnbset`和`_mbsnbset_l`不放置终止 null 末尾`str`。  
   
- `_mbsnbset` 和 `_mbsnbset_l` 与 `_mbsnset` 相似，但其设置 `count` 字节而非 `c` 的 `count` 字符。  
+ `_mbsnbset`和`_mbsnbset_l`类似于`_mbsnset`，只不过它将设置`count`字节而非`count`字符`c`。  
   
  如果 `str` 为 `NULL` 或 `count` 为零，则此函数将生成无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `NULL`。 此外，如果 `c` 不是有效的多字节字符，则将 `errno` 设置为 `EINVAL`，并改用一个空格。  
   
@@ -155,9 +156,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

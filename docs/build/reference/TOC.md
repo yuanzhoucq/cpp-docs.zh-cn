@@ -398,7 +398,7 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 ### [如何：将多个 PGO 配置文件合并成一个配置文件](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-# [编译器错误 C2001 - C2499](../../error-messages/compiler-errors-1/TOC.md)
+# [编译器错误 C999 - C2499](../../error-messages/compiler-errors-1/TOC.md)
 # [编译器错误 C2500 - C3999](../../error-messages/compiler-errors-2/TOC.md)
 # [编译器警告](../../error-messages/compiler-warnings/TOC.md)
 # [工具错误](../../error-messages/tool-errors/TOC.md)

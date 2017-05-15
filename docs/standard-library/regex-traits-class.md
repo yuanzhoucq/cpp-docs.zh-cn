@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: b41e9b019477fe86645a212ee9f345e0fe8685f7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: b7a7b0cfe5614cb87d82634e6d17643f5509ae13
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regextraits-class"></a>regex_traits 类
@@ -98,11 +99,11 @@ public:
  每个 `regex_traits` 对象包含 `regex_traits::locale` 类型的对象，该对象由它的一些成员函数使用。 默认区域设置是一份 `regex_traits::locale()`副本。 成员函数 `imbue` 替换区域设置对象，而成员函数 `getloc` 返回区域设置对象的副本。  
   
 ## <a name="requirements"></a>要求  
- **标头：**\<regex&1;>  
+ **标头：**\<regex 1>  
   
  **命名空间：** std  
   
-##  <a name="regex_traits__char_class_type"></a>regex_traits::char_class_type  
+##  <a name="char_class_type"></a>regex_traits::char_class_type  
  字符类指示符的类型。  
   
 ```  
@@ -183,7 +184,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__char_type"></a>  regex_traits::char_type  
+##  <a name="char_type"></a>  regex_traits::char_type  
  元素的类型。  
   
 ```  
@@ -264,7 +265,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__getloc"></a>  regex_traits::getloc  
+##  <a name="getloc"></a>  regex_traits::getloc  
  返回存储的区域设置对象。  
   
 ```  
@@ -345,7 +346,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__imbue"></a>  regex_traits::imbue  
+##  <a name="imbue"></a>  regex_traits::imbue  
  更改存储的区域设置对象。  
   
 ```  
@@ -430,7 +431,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__isctype"></a>  regex_traits::isctype  
+##  <a name="isctype"></a>  regex_traits::isctype  
  类成员资格测试。  
   
 ```  
@@ -518,7 +519,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__length"></a>  regex_traits::length  
+##  <a name="length"></a>  regex_traits::length  
  返回以 null 结尾的序列的长度。  
   
 ```  
@@ -603,7 +604,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__locale_type"></a>  regex_traits::locale_type  
+##  <a name="locale_type"></a>  regex_traits::locale_type  
  存储的区域设置对象的类型。  
   
 ```  
@@ -684,7 +685,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__lookup_classname"></a>  regex_traits::lookup_classname  
+##  <a name="lookup_classname"></a>  regex_traits::lookup_classname  
  将序列映射到字符类。  
   
 ```  
@@ -777,7 +778,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__lookup_collatename"></a>  regex_traits::lookup_collatename  
+##  <a name="lookup_collatename"></a>  regex_traits::lookup_collatename  
  将序列映射到排序规则元素。  
   
 ```  
@@ -866,7 +867,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__regex_traits"></a>regex_traits::regex_traits  
+##  <a name="regex_traits"></a>regex_traits::regex_traits  
  构造对象。  
   
 ```  
@@ -947,7 +948,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__size_type"></a>regex_traits::size_type  
+##  <a name="size_type"></a>regex_traits::size_type  
  序列长度的类型。  
   
 ```  
@@ -1030,7 +1031,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__string_type"></a>regex_traits::string_type  
+##  <a name="string_type"></a>regex_traits::string_type  
  元素字符串的类型。  
   
 ```  
@@ -1111,7 +1112,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__transform"></a>regex_traits::transform  
+##  <a name="transform"></a>regex_traits::transform  
  转换为等效顺序序列。  
   
 ```  
@@ -1200,7 +1201,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__transform_primary"></a>regex_traits::transform_primary  
+##  <a name="transform_primary"></a>regex_traits::transform_primary  
  转换为不区分大小写的顺序等效序列。  
   
 ```  
@@ -1289,7 +1290,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__translate"></a>regex_traits::translate  
+##  <a name="translate"></a>regex_traits::translate  
  转换为等效的匹配元素。  
   
 ```  
@@ -1374,7 +1375,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__translate_nocase"></a>  regex_traits::translate_nocase  
+##  <a name="translate_nocase"></a>  regex_traits::translate_nocase  
  转换为不区分大小写的等效匹配序列。  
   
 ```  
@@ -1459,7 +1460,7 @@ class digit == d == true
 hex C == 12  
 ```  
   
-##  <a name="regex_traits__value"></a>  regex_traits::value  
+##  <a name="value"></a>  regex_traits::value  
  将元素转换为数字值。  
   
 ```  

@@ -85,10 +85,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7d8823bfe5650634d3fb079d2910e98409622ec6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 80836179c63da2f62384abd07fe2a4970d9bce55
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
@@ -131,7 +132,7 @@ int _wutime64(
  指向存储时间值的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果更改了文件修改时间，则这些函数均将返回 0。 返回值 –1 指示错误。 如果传递的参数无效，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 -1 并将 `errno` 设置为以下值之一：  
+ 如果更改了文件修改时间，则这些函数均将返回 0。 返回值-1 指示错误。 如果传递的参数无效，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 -1 并将 `errno` 设置为以下值之一：  
   
  `EACCES`  
  路径指定目录或只读文件  
@@ -253,9 +254,6 @@ File time modified
                1 File(s)            935 bytes  
                0 Dir(s)  20,742,955,008 bytes free  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   

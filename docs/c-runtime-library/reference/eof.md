@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 454e4870f63d5a66c67f493e065c328bdb72837e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 79e55c9b1496ef7a6050e5f0ed5a5c05b1616b73
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="eof"></a>_eof
@@ -75,7 +76,7 @@ int _eof(
  引用打开的文件的文件说明符。  
   
 ## <a name="return-value"></a>返回值  
- 如果当前位置是文件尾，则 `_eof` 返回 1；否则返回 0。 返回 –1 值表示错误；在此示例中，调用了无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `errno` 将设置为指示无效文件说明符的 `EBADF`。  
+ 如果当前位置是文件尾，则 `_eof` 返回 1；否则返回 0。 返回值-1 指示错误;在这种情况下，无效参数处理程序调用时中, 所述[参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则 `errno` 将设置为指示无效文件说明符的 `EBADF`。  
   
 ## <a name="remarks"></a>备注  
  `_eof` 函数确定是否已到达与 `fd` 关联的文件的结尾。  
@@ -139,9 +140,6 @@ This file contains some text.
 ```  
 Number of bytes read = 29  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误处理](../../c-runtime-library/error-handling-crt.md)   

@@ -1,123 +1,141 @@
 ---
 title: "gslice_array 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::gslice_array"
-  - "gslice_array"
-  - "valarray/std::gslice_array"
-  - "std.gslice_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gslice_array 类"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- gslice_array
+- valarray/std::gslice_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# gslice_array 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bebbeb68503c4a3838aeab48d530d899fef2b699
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
-支持泛切片的内部，辅助模板类通过提供了泛切片定义子集数组之间的操作 valarray 对象。  
+---
+# <a name="gslicearray-class"></a>gslice_array 类
+一个内部的辅助模板类，该类通过提供由 valarray 的泛切分定义的子集阵列之间的操作来支持泛切分对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-template<class Type>  
-   class gslice_array : public gsplice {  
+template <class Type>  
+class gslice_array : public gsplice {  
 public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator=(  
-      const Type& x  
-   ) const;  
-  
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
+    typedef Type value_type;  
+    void operator=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator=(const Type& x) const;
+
+ 
+ 
+    void operator*=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator/=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator%=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator+=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator-=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator^=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator&=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator|=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator<<=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator>>=(const valarray<Type>& x) const;
+
+ 
+ 
 // The rest is private or implementation defined  
 }  
 ```  
   
-## 备注  
- 类以及对象描述元素序列。**valarrayType\<\>** 对象中 [gslice](../standard-library/gslice-class.md) 类的 **gs**。描述存储为对象类 [valarray](../standard-library/valarray-class.md)**\<类型\>va** 的引用的对象。  
+## <a name="remarks"></a>备注  
+ 该类描述的对象将存储对 [valarray](../standard-library/valarray-class.md)**\<Type>** 类的 **va** 对象及 [gslice](../standard-library/gslice-class.md) 类的 **gs** 对象的引用，它描述了要从 **valarray\<Type>** 对象中选择的元素序列。  
   
- 通过窗体编写 [VA &#91;&#93; gs](../Topic/valarray::operator.md)的表达式只构造 **gslice\_array\<Type\>** 对象。  gslice\_array 类成员的行为像函数然后相应的函数签名定义为 **valarray\<Type\>**，但选择的元素序列仅受影响。  
+ 只通过写入 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) 形式的表达式即可构造 **gslice_array\<Type>** 对象。 然后 gslice_array 类的成员函数的行为方式就类似于为 **valarray\<Type>** 定义的对应的函数签名，只不过仅所选的元素的序列受到影响。  
   
- 模板类的某些操作 valarray 直接在程序间接创建，不能用于。  切片写在下方的运算符使用内部辅助模板类：  
+ 此模板类由某些 valarray 运算间接创建，无法直接在程序中使用。 相反，切分下标运算符使用内部辅助模板类：  
   
- `gslice_array`\<**类型**\>`valarray`\<**类型**\>`operator[]` \(**const** 或**gslice&**\)。  
+ `gslice_array`\<**Type**> `valarray`\<**Type**>:: `operator[]` ( **constgslice&**).  
   
- 通过将窗体的 **va\[gsl\]**的表达式只构造 **gslice\_array\<Type\>** 对象 valarray 切片的 **va**，**gsl**。  gslice\_array 类成员的行为像函数然后相应的函数签名定义为 **valarray\<Type\>**，但选择的元素序列仅受影响。  顺序控制。gslice\_array 由切片构造函数、索引在第一切片的第一个元素，。的每个切片的元素和元素之间的距离的三参数定义。每个切片。  
+ 对于 valarray **va** 的切分 **gsl**，仅通过编写 **va[gsl]** 形式的表达式构造 **gslice_array\<Type>** 对象。 然后 gslice_array 类的成员函数的行为方式就类似于为 **valarray\<Type>** 定义的对应的函数签名，只不过仅所选的元素的序列受到影响。 gslice_array 控制的序列由此切分构造函数的三个参数定义，即第一个切分中第一个元素的索引、每个切分中的元素数和每个切分中元素间的距离。  
   
- 在下面的示例中：  
+ 如下示例中：  
   
 ```  
 const size_t lv[] = {2, 3};  
 const size_t dv[] = {7, 2};  
-const valarray<size_t> len(lv, 2), str(dv, 2);  
+const valarray<size_t> len(lv, 2), str(dv, 2);
+
 // va[gslice(3, len, str)] selects elements with  
 //   indices 3, 5, 7, 10, 12, 14  
 ```  
   
- 索引必须是有效的过程。可以有效。  
+ 若要过程有效，索引必须有效。  
   
-## 示例  
- 有关示例的 [gslice::gslice](../Topic/gslice::gslice.md) 参见的示例演示如何声明和使用 slice\_array。  
+## <a name="example"></a>示例  
+ 有关如何声明和使用 slice_array 的示例，请参阅 [gslice::gslice](../standard-library/gslice-class.md#gslice) 的示例。  
   
-## 要求  
- **Header:** \<valarray\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<valarray>  
   
- **命名空间:**  std  
+ **命名空间：** std  
   
-## 请参阅  
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c9537755f2147d0ded67ecd887414f317952418d
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 4f5e485611b1a8f38375c9a95a959ddf48e3663c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT 类
@@ -105,19 +106,19 @@ public CSimpleStringT<BaseType,
  `StringTraits`  
  确定此字符串类是否需要 C 运行时 (CRT) 库支持和字符串资源的位置。 可以是以下各项之一：  
   
-- **StrTraitATL<> </>** |`char` |**TCHAR、 ChTraitsCRT<> </> ** |`char` |**TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124;`char` &#124;**TCHAR、 ChTraitsCRT < wchar_t** &#124;`char` &#124;**TCHAR >>**  
   
      类要求 CRT 支持并搜索由指定的模块中的资源字符串`m_hInstResource`（应用程序的模块类的成员）。  
   
-- **StrTraitATL<> </>** |`char` |**TCHAR、 ChTraitsOS<> </> ** |`char` |**TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124;`char` &#124;**TCHAR、 ChTraitsOS < wchar_t** &#124;`char` &#124;**TCHAR >>**  
   
      类不需要 CRT 支持和搜索由指定的模块中的资源字符串`m_hInstResource`（应用程序的模块类的成员）。  
   
-- **StrTraitMFC<> </>** |`char` |**TCHAR、 ChTraitsCRT<> </> ** |`char` |**TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124;`char` &#124;**TCHAR、 ChTraitsCRT < wchar_t** &#124;`char` &#124;**TCHAR >>**  
   
      类要求 CRT 支持并使用标准 MFC 搜索算法的资源字符串的搜索。  
   
-- **StrTraitMFC<> </>** |`char` |**TCHAR、 ChTraitsOS<> </> ** |`char` |**TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124;`char` &#124;**TCHAR、 ChTraitsOS < wchar_t** &#124;`char` &#124;**TCHAR >>**  
   
      类不需要 CRT 支持并使用标准 MFC 搜索算法的资源字符串的搜索。  
   
@@ -201,7 +202,7 @@ public CSimpleStringT<BaseType,
  `CString``CStringA`，和`CStringW`导出从 MFC DLL (MFC90。DLL)，永远不会从用户 Dll。 这样做是为了防止`CStringT`从被多次定义。  
   
 > [!NOTE]
->  如果导出时遇到链接器错误`CString`-派生自 MFC 扩展 DLL 在 Visual c + +.NET 2002年中的类，并且应用了解决方法的知识库文章，"链接错误时你导入 CString-Derived 类"(Q309801) 中所述应删除的解决方法代码，因为此问题已修复在 Visual c + +.NET 2003年中。 你可以在 MSDN Library CD-ROM 中或在找到知识库文章[http://support.microsoft.com/support](http://support.microsoft.com/support)。  
+>  如果导出时遇到链接器错误`CString`-派生自 MFC 扩展 DLL 在 Visual c + +.NET 2002年中的类，并且应用了解决方法的知识库文章，"链接错误时你导入 CString-Derived 类"(Q309801) 中所述应删除的解决方法代码，因为此问题已修复在 Visual c + +.NET 2003年中。 你可以找到在知识库文章[http://support.microsoft.com/support](http://support.microsoft.com/support)。  
   
  以下字符串类型是基于 MFC 的应用程序中可用︰  
   
@@ -216,7 +217,7 @@ public CSimpleStringT<BaseType,
 |CStringT 类型|声明|  
 |-------------------|-----------------|  
 |**CAtlStringA**|ANSI 字符键入没有 CRT 支持的字符串。|  
-|**CAtlStringW**|Unicode 字符键入不带 CRT 支持的字符串。|  
+|**CAtlStringW**|Unicode 字符键入没有 CRT 支持的字符串。|  
 |**CAtlString**|没有 CRT 支持 ANSI 和 Unicode 字符类型。|  
   
  以下字符串中可用的类型项目的位置**ATL_CSTRING_NO_CRT**未定义︰  
@@ -335,7 +336,7 @@ int Collate(PCXSTR psz) const throw();
  用于比较的其他字符串。  
   
 ### <a name="return-value"></a>返回值  
- 如果字符串都是相同的则为零< 0="" if="" this="">`CStringT`对象是小于`psz`，或如果此为 1> 0`CStringT`对象是否大于`psz`。  
+ 零; 如果字符串相同，如果此为 < 0`CStringT`对象是小于`psz`，或 > 0，如果此`CStringT`对象是否大于`psz`。  
   
 ### <a name="remarks"></a>备注  
  一般文本函数`_tcscoll`，TCHAR 中定义。H，映射为`strcoll`， `wcscoll`，或`_mbscoll`，取决于在编译时定义的字符集。 每个函数执行区分大小写的字符串比较根据代码页当前正在使用。 有关详细信息，请参阅[strcoll、 wcscoll、 _mbscoll、 _strcoll_l、 _wcscoll_l、 _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。  
@@ -352,7 +353,7 @@ int CollateNoCase(PCXSTR psz) const throw();
  用于比较的其他字符串。  
   
 ### <a name="return-value"></a>返回值  
- 零字符串是否相同 （忽略大小写）， < 0="" if="" this=""> `CStringT`对象是小于`psz`（忽略大小写），或如果此为 1> 0`CStringT`对象是否大于`psz`（忽略大小写）。  
+ 零字符串是否相同 （忽略大小写），如果此为 < 0`CStringT`对象是小于`psz`（忽略大小写），或 > 0，如果此`CStringT`对象是否大于`psz`（忽略大小写）。  
   
 ### <a name="remarks"></a>备注  
  一般文本函数`_tcscoll`，TCHAR 中定义。H，映射为`stricoll`， `wcsicoll`，或`_mbsicoll`，取决于在编译时定义的字符集。 每个函数根据当前正在使用的代码页执行的字符串，不区分大小写的比较。 有关详细信息，请参阅[strcoll、 wcscoll、 _mbscoll、 _strcoll_l、 _wcscoll_l、 _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。  
@@ -372,7 +373,7 @@ int Compare(PCXSTR psz) const;
  用于比较的其他字符串。  
   
 ### <a name="return-value"></a>返回值  
- 如果字符串都是相同的则为零< 0="" if="" this="">`CStringT`对象是小于`psz`，或如果此为 1> 0`CStringT`对象是否大于`psz`。  
+ 零; 如果字符串相同，如果此为 < 0`CStringT`对象是小于`psz`，或 > 0，如果此`CStringT`对象是否大于`psz`。  
   
 ### <a name="remarks"></a>备注  
  一般文本函数`_tcscmp`，TCHAR 中定义。H，映射为`strcmp`， `wcscmp`，或`_mbscmp`，取决于在编译时定义的字符集。 每个函数执行区分大小写的字符串比较，并不受区域设置。 有关详细信息，请参阅[strcmp、 wcscmp、 _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)。  
@@ -396,7 +397,7 @@ int CompareNoCase(PCXSTR psz) const throw();
  用于比较的其他字符串。  
   
 ### <a name="return-value"></a>返回值  
- 零字符串是否相同 （忽略大小写）， <0 if="" this=""></0> `CStringT`对象是小于`psz`（忽略大小写），或 1> 0，如果此`CStringT`对象是否大于`psz`（忽略大小写）。  
+ 零字符串是否相同 （忽略大小写），< 0，如果此`CStringT`对象是小于`psz`（忽略大小写），或 > 0，如果此`CStringT`对象是否大于`psz`（忽略大小写）。  
   
 ### <a name="remarks"></a>备注  
  一般文本函数`_tcsicmp`，TCHAR 中定义。H，映射为`_stricmp`，`_wcsicmp`或`_mbsicmp`，取决于在编译时定义的字符集。 每个函数执行不区分大小写的字符串比较。 取决于比较`LC_CTYPE`方面的区域设置而不是`LC_COLLATE`。 有关详细信息，请参阅[_stricmp、 _wcsicmp、 _mbsicmp、 _stricmp_l、 _wcsicmp_l、 _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)。  
@@ -1429,7 +1430,7 @@ CStringT& Trim();
  要修整目标字符。  
   
  `pszTargets`  
- 指向包含目标字符要修整的字符串的指针。 所有前导空格和尾随匹配项中的字符`pszTarget`将从无法删除`CStringT`对象。  
+ 指向包含目标字符要修整的字符串的指针。 所有前导空格和尾随匹配项中的字符`pszTarget`将从削减`CStringT`对象。  
   
 ### <a name="return-value"></a>返回值  
  返回裁剪后的字符串。  

@@ -1,50 +1,67 @@
 ---
-title: "qsort_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "qsort_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "qsort_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], 排序"
-  - "qsort_s 函数"
-  - "快速排序算法"
-  - "对数组进行排序"
+title: "qsort_s | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- qsort_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- qsort_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++], sorting
+- quick-sort algorithm
+- qsort_s function
+- sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# qsort_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-执行快速排序。  [qsort](../../c-runtime-library/reference/qsort.md) 的一个版本提供安全增强功能，正如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。  
+---
+# <a name="qsorts"></a>qsort_s
+执行快速排序。 这是 [qsort](../../c-runtime-library/reference/qsort.md) 版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增强功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void qsort_s(  
@@ -56,64 +73,64 @@ void qsort_s(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `base`  
  目标数组的开头。  
   
  `num`  
- 元素的数组大小。  
+ 元素中的数组大小。  
   
  `width`  
- 以字节为单位的元素大小。  
+ 元素大小（字节）。  
   
  `compare`  
- 比较函数。  第一个参数是 `context` 指针。  第二个参数是指向将要搜索的 `key`。  第三个参数是指向数组元素与 `key`进行比较。  
+ 比较函数。 第一个参数是 `context` 指针。 第二个参数是一个指向用于搜索的 `key` 的指针。 第三个参数是指向要与 `key`进行比较的数组元素的指针。  
   
  `context`  
- 一个指向上下文的指针，可以是任何 `compare` 例程需要访问的对象。  
+ 指向上下文的指针，可以是 `compare` 例程需要访问的任何对象。  
   
-## 备注  
- `qsort_s` 函数可实现快速排序算法对一个 `num` 元素，每个 `width` 字节数组进行排序。  参数 `base` 是一个指向要排序数组的基类的指针。  `qsort_s` 重写该已排序元素的数组。  参数 `compare` 是指向一用户提供的程序用来比较两个数组元素并返回指定其关系的值。  在排序时，`qsort_s` 调用程序 `compare` 一次或多次，并在每次调用时将指针传给两个数组元素：  
+## <a name="remarks"></a>备注  
+ `qsort_s` 函数实现了一种快速排序算法，对数组中的 `num` 元素（每个元素大小为 `width` 字节）进行排序。 参数 `base` 是指向待排序数组的基项的指针。 `qsort_s` 使用已排序元素覆盖此数组。 参数 `compare` 是指向用户提供的例程的指针，它比较两个数组元素，并返回指定它们关系的值。 `qsort_s` 在排序过程中会一次或多次调用 `compare` 例程，将指针传递给每个调用中的两个数组元素：  
   
 ```  
 compare( context, (void *) & elem1, (void *) & elem2 );  
 ```  
   
- 例程必须比较元素然后返回下列值之一：  
+ 该例程必须比较这些元素，然后返回下列值之一：  
   
-|返回值|说明|  
-|---------|--------|  
-|\< 0|`elem1` 小于 `elem2`|  
+|返回值|描述|  
+|------------------|-----------------|  
+|< 0|`elem1` 小于 `elem2`|  
 |0|`elem1` 等效于 `elem2`|  
-|\> 0|`elem1` 大于 `elem2`|  
+|> 0|`elem1` 大于 `elem2`|  
   
- 正如所定义的比较函数，数组以递增排序。  若要降序排序一个数组，在比较函数中反转“大于”和“小于“的意思。  
+ 数组按比较函数中定义的升序进行排序。 若要以降序对数组进行排序，请反转比较函数中的“大于”和“小于”的意义。  
   
- 如果传递给函数的是无效参数，则调用无效参数处理程序，正如 [参数验证](../../c-runtime-library/parameter-validation.md) 所述。  如果允许执行继续，则这些函数将返回并将 `EINVAL` 设置为 `errno`。  有关更多信息，请参见 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如果传递给此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则返回函数并将 `errno` 设置为 `EINVAL`。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-### 错误情况  
+### <a name="error-conditions"></a>错误条件  
   
-|键|base|compare|num|width|errno|  
-|-------|----------|-------------|---------|-----------|-----------|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|\!\= 0|any|`EINVAL`|  
-|any|any|any|any|\<\= 0|`EINVAL`|  
-|any|any|`NULL`|any|any|`EINVAL`|  
+|密钥|base|compare|num|宽度|errno|  
+|---------|----------|-------------|---------|-----------|-----------|  
+|`NULL`|任何|任何|任何|任何|`EINVAL`|  
+|任何|`NULL`|任何|!= 0|任何|`EINVAL`|  
+|任何|任何|任何|any|<= 0|`EINVAL`|  
+|任何|任何|`NULL`|任何|任何|`EINVAL`|  
   
- `qsort_s` 的方法与 `qsort` 相同，但是具有 `context` 参数并设置为 `errno`。  通过传递一个 `context` 参数，比较函数可以通过元素指针使用对象指针功能地访问对象或不可访问的其他信息。  因为通过使用静态变量共享可用信息传递给 `compare` 函数，`context` 可用于避免重新进入产生的缺陷中，`context` 参数使 `qsort_s`更安全。  
+ `qsort_s` 具有与 `qsort` 相同的行为，但其具有 `context` 参数并设置了 `errno`。 通过传递 `context` 参数，比较函数可以使用对象指针来访问对象功能或通过元素指针无法访问的其他信息。 添加`context`参数将使得`qsort_s`更为安全，因为`context`可用于避免重新进入 bug 引入使用静态变量要共享的信息提供给`compare`函数。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`qsort_s`|\<stdlib.h\> and \<search.h\>|  
+|-------------|---------------------|  
+|`qsort_s`|\<stdlib.h> 和 \<search.h>|  
   
- 有关其他兼容性详细信息，请参阅简介中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
- **Libraries:** 的所有版本 [CRT 库功能](../../c-runtime-library/crt-library-features.md).  
+ **库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
- 下面的示例演示如何在 `qsort_s` ``  函数中使用 `context` 参数。  `context` 参数使更容易执行线程安全排序。  而不是使用必须同步确保线程安全性的静态变量，在每次排序中传递一个不同的 `context` 参数。  在本示例中，语言环境对象被用作 `context` 参数。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用`context`中的参数`qsort_s`函数。 `context` 参数更易于执行线程安全排序。 请在每个排序中传递不同的 `context` 参数（不要使用必须同步的静态变量）来确保线程安全。 在此示例中，区域设置对象被用作 `context` 参数。  
   
 ```  
 // crt_qsort_s.cpp  
@@ -254,7 +271,7 @@ int main( )
 }  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
   
 ```  
 Unsorted input:  
@@ -267,11 +284,8 @@ España Español espantado
 table tablet tableux  
 ```  
   
-## .NET Framework 等效项  
- <xref:System.Collections.ArrayList.Sort%2A>  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [搜索和排序](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)   
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

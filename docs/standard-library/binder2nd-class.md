@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.binder2nd
 - binder2nd
 - xfunctional/std::binder2nd
-- std::binder2nd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f19b476ae903c915d4231621c39a88bf70b08685
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9a2f3f31798d1cdadf00e95b9f393e93a20d29ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binder2nd-class"></a>binder2nd 类
@@ -85,7 +84,7 @@ protected:
 ## <a name="remarks"></a>备注  
  此模板类将二元函数对象 _ *Func* 的副本存储在 **op** 中，并将 `right` 的副本存储在 **value** 中。 它将其成员函数 `operator()` 定义为返回 **op**( `left`, **value**)。  
   
- 如果 `Func` 是 **Operation** 类型的对象且 c 是常量，则 [bind2nd](../standard-library/functional-functions.md#bind2nd_function) ( `Func`, `c` ) 等效于 `binder2nd` 类构造函数 `binder2nd`\< **Operation**> ( `Func`, `c` ) 且更为方便。  
+ 如果 `Func` 是 **Operation** 类型的对象且 c 是常量，则 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) 等效于 `binder2nd` 类构造函数 `binder2nd`\< **Operation**> ( `Func`, `c` ) 且更为方便。  
   
 ## <a name="example"></a>示例  
   

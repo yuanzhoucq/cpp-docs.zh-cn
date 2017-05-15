@@ -50,10 +50,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 00e878414b2aaa71a8cbfc78997e934225f4e6fc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fa03fb135907d9f516544f5f4b202c9f4e779fc3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
@@ -98,7 +99,7 @@ lineNumber);
  若要详细了解 `_CrtSetAllocHook` 如何与其他内存管理函数一起使用，或如何编写自己的客户端定义的挂钩函数，请参阅[编写调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。  
   
 > [!NOTE]
-> 在 `/clr:pure` 下不支持  `_CrtSetAllocHook`。 **/Clr: pure**和**/clr: safe**编译器选项不推荐使用 Visual Studio 2015 中。  
+> 在 `/clr:pure` 下不支持  `_CrtSetAllocHook`。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
 ## <a name="requirements"></a>要求  
   
@@ -113,9 +114,6 @@ lineNumber);
   
 ## <a name="example"></a>示例  
  有关如何使用 `_CrtSetAllocHook` 的示例，请参阅 [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   

@@ -1,55 +1,72 @@
 ---
-title: "log1p，log1pf log1pl2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "log1p"
-  - "log1pf"
-  - "log1pl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "log1p"
-  - "log1pf"
-  - "log1pl"
-  - "math/log1p"
-  - "math/log1pf"
-  - "math/log1pl"
-helpviewer_keywords: 
-  - "log1p 函数"
-  - "log1pf 函数"
-  - "log1pl 函数"
+title: "log1p、log1pf、log1pl2 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- log1p
+- log1pf
+- log1pl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- log1p
+- log1pf
+- log1pl
+- math/log1p
+- math/log1pf
+- math/log1pl
+helpviewer_keywords:
+- log1p function
+- log1pf function
+- log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# log1p，log1pf log1pl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
-计算 1 加上指定的值的自然对数。  
+---
+# <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
+计算 1 加上指定值的自然对数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 double log1p(  
@@ -74,44 +91,44 @@ long double log1pl(
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `x`  
- 浮点参数。  
+ 浮点型参数。  
   
-## 返回值  
- 如果成功，返回的自然 \(以 e 为底\) 日志 \(`x`\+ 1\)。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则返回 (`x`+1) 的自然（以 e 为底）对数。  
   
- 否则，可能会返回以下值之一︰  
+ 否则，可能返回以下值之一：  
   
 |输入|结果|SEH 异常|errno|  
-|--------|--------|------------|-----------|  
-|inf \+|inf \+|||  
-|非规格化数|与输入相同|下溢||  
+|-----------|------------|-------------------|-----------|  
+|+inf|+inf|||  
+|非规格化数|与输入相同|UNDERFLOW||  
 |±0|与输入相同|||  
-|\-1|\-inf|DIVBYZERO|ERANGE|  
-|\< \-1|nan|无效|EDOM|  
-|\-inf|nan|无效|EDOM|  
-|±SNaN|与输入相同|无效||  
-|±QNaN，无限期|与输入相同|||  
+|-1|-inf|DIVBYZERO|ERANGE|  
+|< -1|nan|INVALID|EDOM|  
+|-inf|nan|INVALID|EDOM|  
+|±SNaN|与输入相同|INVALID||  
+|±QNaN, indefinite|与输入相同|||  
   
- `errno` 如果值设置为 ERANGE `x` \=\-1。`errno` 如果值设置为 EDOM `x` \< − 1。  
+ 如果 `x` = -1，则将 `errno` 值设置为 ERANGE。 `errno`如果值设置为 EDOM `x` <-1。  
   
-## 备注  
- `log1p` 函数可能会比使用日志更精确 \(`x`\+ 1\) x 何时接近于 0。  
+## <a name="remarks"></a>备注  
+ x 接近 0 时 `log1p` 函数比使用 log(`x`+1) 更准确。  
   
- 由于 c \+ \+ 允许重载，你可以调用的重载 `log1p` 采用并返回浮点型和长双精度类型。 在 C 程序中， `log1p` 始终采用并返回一个双精度值。  
+ 由于 C++ 支持重载，可以调用采用并返回浮点型和长双精度型的 `log1p` 的重载。 在 C 程序中，`log1p` 始终采用并返回双精度型。  
   
- 如果 `x` 是自然数，此函数将返回的阶乘的对数 \(`x`\-1\)。  
+ 如果 `x` 是自然数，则此函数返回 (`x`-1) 的阶乘的对数。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|函数|C 标头|C\+\+ 标头|  
-|--------|----------|--------------|  
-|`log1p`, `log1pf`,  `log1pl`|\<math.h\>|\<cmath\>|  
+|函数|C 标头|C++ 标头|  
+|--------------|--------------|------------------|  
+|`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
   
- 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [log2，log2f log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
+ [log2、log2f、log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
  [log、logf、log10、log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

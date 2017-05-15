@@ -114,10 +114,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 宏
@@ -162,7 +163,7 @@ _RPTFWn(
  由 `format` 使用的替换参数。  
   
 ## <a name="remarks"></a>备注  
- 所有这些宏均采用 `reportType` 和 `format` 参数。 此外，它们还可能需最多四个附加参数，由追加到宏名称的数字表示。 例如，`_RPT0` 和 `_RPTF0` 不采用附加参数，`_RPT1` 和 `_RPTF1` 采用 `arg1`，`_RPT2` 和 `_RPTF2` 采用 `arg1` 和 `arg2` 等。  
+ 所有这些宏采用`reportType`和`format`参数。 此外，它们还可能需最多四个附加参数，由追加到宏名称的数字表示。 例如，`_RPT0` 和 `_RPTF0` 不采用附加参数，`_RPT1` 和 `_RPTF1` 采用 `arg1`，`_RPT2` 和 `_RPTF2` 采用 `arg1` 和 `arg2` 等。  
   
  `_RPT` 和 `_RPTF` 宏类似于 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函数，因为它们可用于跟踪调试过程中的应用程序的进度。 不过，这些宏比 `printf` 更为灵活，因为它们无需包含在 `#ifdef` 语句中，以防止在零售版本的应用程序中调用它们。 这种灵活性是通过使用 [_DEBUG](../../c-runtime-library/debug.md) 宏实现的；`_RPT` 和 `_RPTF` 宏仅在定义了 `_DEBUG` 标志时可用。 未定义 `_DEBUG` 时，会在预处理过程中删除对这些宏的调用。  
   
@@ -202,9 +203,6 @@ _RPTFWn(
   
 ## <a name="example"></a>示例  
  请参阅 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 主题中的示例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)

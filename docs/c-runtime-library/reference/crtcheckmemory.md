@@ -50,10 +50,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 5563d618b0056de285f66cf428cbcfc6a717ce55
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 82b64afbdd80e9b1433f8f9873b4e295fc2e20c1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
@@ -95,9 +96,6 @@ _ASSERTE( _CrtCheckMemory( ) );
   
 ## <a name="example"></a>示例  
  有关如何使用 `_CrtCheckMemory` 的示例，请参阅 [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- [System::Diagnostics::PerformanceCounter](https://msdn.microsoft.com/en-us/library/system.diagnostics.performancecounter.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   

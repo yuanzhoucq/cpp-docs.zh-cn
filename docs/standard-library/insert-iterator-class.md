@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9ff1d22bafa778db24fb489d33e83b1a553711e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 79e0603aeafe714b891e5564d68cbed6ede89768
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="insertiterator-class"></a>insert_iterator 类
@@ -64,29 +65,29 @@ class insert_iterator;
   
 |||  
 |-|-|  
-|[insert_iterator](#insert_iterator__insert_iterator)|构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。|  
+|[insert_iterator](#insert_iterator)|构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[container_type](#insert_iterator__container_type)|一种类型，代表要对其执行泛型插入的容器。|  
-|[reference](#insert_iterator__reference)|一种类型，此类型提供对关联容器所控制序列中的元素的引用。|  
+|[container_type](#container_type)|一种类型，代表要对其执行泛型插入的容器。|  
+|[reference](#reference)|一种类型，此类型提供对关联容器所控制序列中的元素的引用。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator*](#insert_iterator__operator_star)|取消引用运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|  
-|[operator++](#insert_iterator__operator_add_add)|将 `insert_iterator` 递增到下一个可用来存储值的位置。|  
-|[operator=](#insert_iterator__operator_eq)|赋值运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|  
+|[operator*](#op_star)|取消引用运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|  
+|[operator++](#op_add_add)|将 `insert_iterator` 递增到下一个可用来存储值的位置。|  
+|[operator=](#op_eq)|赋值运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|  
   
 ## <a name="requirements"></a>要求  
  **标头**：\<iterator>  
   
  **命名空间：** std  
   
-##  <a name="insert_iterator__container_type"></a>insert_iterator::container_type  
+##  <a name="container_type"></a>insert_iterator::container_type  
  一种类型，代表要对其执行泛型插入的容器。  
   
 ```
@@ -126,7 +127,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="insert_iterator__insert_iterator"></a>insert_iterator::insert_iterator  
+##  <a name="insert_iterator"></a>insert_iterator::insert_iterator  
  构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。  
   
 ```
@@ -189,7 +190,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_star"></a>insert_iterator::operator*  
+##  <a name="op_star"></a>insert_iterator::operator*  
  取消引用插入迭代器，其返回元素为地址。  
   
 ```
@@ -246,7 +247,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_add_add"></a>insert_iterator::operator++  
+##  <a name="op_add_add"></a>insert_iterator::operator++  
  将 **insert_iterator** 递增到下一个可用来存储值的位置。  
   
 ```
@@ -307,7 +308,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_eq"></a>insert_iterator::operator=  
+##  <a name="op_eq"></a>insert_iterator::operator=  
  将值插入容器并返回更新的迭代器，以指向新元素。  
   
 ```
@@ -386,7 +387,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__reference"></a>insert_iterator::reference  
+##  <a name="reference"></a>insert_iterator::reference  
  一种类型，此类型提供对关联容器所控制序列中的元素的引用。  
   
 ```

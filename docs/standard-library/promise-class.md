@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::promise
+- future/std::promise::promise
+- future/std::promise::get_future
+- future/std::promise::set_exception
+- future/std::promise::set_exception_at_thread_exit
+- future/std::promise::set_value
+- future/std::promise::set_value_at_thread_exit
+- future/std::promise::swap
 dev_langs:
 - C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
@@ -31,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ad79ecc3497182a451ef85ea53c8ec5603fdca69
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2f052d1af76e8f874e2bbe0187a82b838e47f45e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="promise-class"></a>promise 类
@@ -53,34 +61,34 @@ class promise;
   
 |名称|描述|  
 |----------|-----------------|  
-|[promise::promise 构造函数](#promise__promise_constructor)|构造 `promise` 对象。|  
+|[承诺](#promise)|构造 `promise` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[promise::get_future](#promise__get_future_method)|返回与此 promise 关联的 [future](../standard-library/future-class.md)。|  
-|[promise::set_exception](#promise__set_exception_method)|以原子方式设置此 promise 的结果以指示异常。|  
-|[promise::set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)|以原子方式设置此 promise 的结果以指示异常，并且仅在销毁当前线程中的所有线程本地对象后（通常在线程退出时）发出通知。|  
-|[promise::set_value](#promise__set_value_method)|以原子方式设置此 promise 的结果以指示值。|  
-|[promise::set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)|以原子方式设置此 promise 的结果以指示值，并且仅在销毁当前线程中的所有线程本地对象后（通常在线程退出时）发出通知。|  
-|[promise::swap](#promise__swap_method)|用指定的 promise 对象的*关联的异步状态*交换此 promise 的关联的异步状态。|  
+|[get_future](#get_future)|返回与此 promise 关联的 [future](../standard-library/future-class.md)。|  
+|[set_exception](#set_exception)|以原子方式设置此 promise 的结果以指示异常。|  
+|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|以原子方式设置此 promise 的结果以指示异常，并且仅在销毁当前线程中的所有线程本地对象后（通常在线程退出时）发出通知。|  
+|[set_value](#set_value)|以原子方式设置此 promise 的结果以指示值。|  
+|[set_value_at_thread_exit](#set_value_at_thread_exit)|以原子方式设置此 promise 的结果以指示值，并且仅在销毁当前线程中的所有线程本地对象后（通常在线程退出时）发出通知。|  
+|[swap](#swap)|用指定的 promise 对象的*关联的异步状态*交换此 promise 的关联的异步状态。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|说明|  
 |----------|-----------------|  
-|[promise::operator=](#promise__operator_eq)|此 promise 对象的共享状态的分配。|  
+|[promise::operator=](#op_eq)|此 promise 对象的共享状态的分配。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `promise`  
   
 ## <a name="requirements"></a>要求  
- **标头：**future  
+ **标头︰** \<将来 >  
   
  **命名空间：** std  
   
-##  <a name="a-namepromisegetfuturemethoda--promisegetfuture"></a><a name="promise__get_future_method"></a>promise::get_future  
+##  <a name="get_future"></a>promise::get_future  
  返回具有与此 promise 相同的*关联异步状态*的 [future](../standard-library/future-class.md) 对象。  
   
 ```
@@ -92,7 +100,7 @@ future<Ty> get_future();
   
  如果此方法已调用具有相同关联异步状态的承诺对象，则此方法将引发 `future_error` 为 `error_code` 的 `future_already_retrieved`。  
   
-##  <a name="a-namepromiseoperatoreqa--promiseoperator"></a><a name="promise__operator_eq"></a>promise::operator=  
+##  <a name="op_eq"></a>promise::operator=  
  从指定的 `promise` 对象传输*关联异步状态*。  
   
 ```
@@ -109,7 +117,7 @@ promise& operator=(promise&& Other) noexcept;
 ### <a name="remarks"></a>备注  
  此运算符从 `Other` 传输关联异步状态。 传输后，`Other` 为空。  
   
-##  <a name="a-namepromisepromiseconstructora--promisepromise-constructor"></a><a name="promise__promise_constructor"></a>promise::promise 构造函数  
+##  <a name="promise"></a>promise::promise 构造函数  
  构造 `promise` 对象。  
   
 ```
@@ -133,7 +141,7 @@ promise(promise&& Other) noexcept;
   
  第三个构造函数构造 `promise` 对象并从 `Other` 传输关联异步状态，同时保留 `Other` 为空。  
   
-##  <a name="a-namepromisesetexceptionmethoda--promisesetexception"></a><a name="promise__set_exception_method"></a>promise::set_exception  
+##  <a name="set_exception"></a>promise::set_exception  
  以原子方式将异常存储为此 `promise` 对象的结果，并将“关联的异步状态”设置为“就绪”。  
   
 ```
@@ -147,11 +155,11 @@ void set_exception(exception_ptr Exc);
 ### <a name="remarks"></a>备注  
  如果 `promise` 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
   
- 如果已为具有相同的关联异步状态的 `promise` 对象调用 `set_exception`、[set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)、[set_value](#promise__set_value_method) 或 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+ 如果已为具有相同的关联异步状态的 `promise` 对象调用 `set_exception`、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
   
  此方法的结果是，不再阻止在关联的异步状态上受阻的任何线程。  
   
-##  <a name="a-namepromisesetexceptionatthreadexitmethoda--promisesetexceptionatthreadexit"></a><a name="promise__set_exception_at_thread_exit_method"></a>promise::set_exception_at_thread_exit  
+##  <a name="set_exception_at_thread_exit"></a>promise::set_exception_at_thread_exit  
  以原子方式设置此 `promise` 的结果以指示异常，并且仅在当前线程中的所有线程本地对象被销毁后（通常在线程退出时）发出通知。  
   
 ```
@@ -165,11 +173,11 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 ### <a name="remarks"></a>备注  
  如果 promise 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
   
- 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#promise__set_exception_method)、`set_exception_at_thread_exit`、[set_value](#promise__set_value_method) 或 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+ 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、`set_exception_at_thread_exit`、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
   
- 与 [set_exception](#promise__set_exception_method) 相反，此方法在当前线程中的所有线程本地对象被销毁前不会将关联的异步状态设置为已就绪。 通常，在关联的异步状态上受阻的线程会受到阻止，直到当前线程退出。  
+ 与 [set_exception](#set_exception) 相反，此方法在当前线程中的所有线程本地对象被销毁前不会将关联的异步状态设置为已就绪。 通常，在关联的异步状态上受阻的线程会受到阻止，直到当前线程退出。  
   
-##  <a name="a-namepromisesetvaluemethoda--promisesetvalue"></a><a name="promise__set_value_method"></a>promise::set_value  
+##  <a name="set_value"></a>promise::set_value  
  以原子方式将值存储为此 `promise` 对象的结果，并将“关联的异步状态”设置为“就绪”。  
   
 ```
@@ -186,7 +194,7 @@ void promise<void>::set_value();
 ### <a name="remarks"></a>备注  
  如果 `promise` 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
   
- 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#promise__set_exception_method)、[set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)、`set_value` 或 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+ 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、`set_value` 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
   
  此方法的结果是，不再阻止在关联的异步状态上受阻的任何线程。  
   
@@ -198,7 +206,7 @@ void promise<void>::set_value();
   
  对于专用化 `promise<void>`，不存在任何存储的值。  
   
-##  <a name="a-namepromisesetvalueatthreadexitmethoda--promisesetvalueatthreadexit"></a><a name="promise__set_value_at_thread_exit_method"></a>promise::set_value_at_thread_exit  
+##  <a name="set_value_at_thread_exit"></a>promise::set_value_at_thread_exit  
  以原子方式将值存为此 `promise` 对象的结果。  
   
 ```
@@ -215,7 +223,7 @@ void promise<void>::set_value_at_thread_exit();
 ### <a name="remarks"></a>备注  
  如果 promise 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
   
- 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#promise__set_exception_method)、[set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)、[set_value](#promise__set_value_method) 或 `set_value_at_thread_exit`，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+ 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 `set_value_at_thread_exit`，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
   
  与 `set_value` 相反，在当前线程中的所有线程本地对象被销毁前不会将关联的异步状态设置为已就绪。 通常，在关联的异步状态上受阻的线程会受到阻止，直到当前线程退出。  
   
@@ -227,7 +235,7 @@ void promise<void>::set_value_at_thread_exit();
   
  对于专用化 `promise<void>`，不存在任何存储的值。  
   
-##  <a name="a-namepromiseswapmethoda--promiseswap"></a><a name="promise__swap_method"></a>promise::swap  
+##  <a name="swap"></a>promise::swap  
  将此 promise 对象的*关联异步状态*与指定对象的交换。  
   
 ```

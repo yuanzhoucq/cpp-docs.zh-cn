@@ -1,83 +1,100 @@
 ---
-title: "rand_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rand_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "rand_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "加密型安全随机数"
-  - "生成伪随机数"
-  - "数字, 生成伪随机"
-  - "数字, 伪随机"
-  - "伪随机数"
-  - "rand_s 函数"
-  - "随机数, 加密型安全"
-  - "随机数, 生成"
+title: "rand_s | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rand_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- rand_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- generating pseudorandom numbers
+- random numbers, cryptographically secure
+- random numbers, generating
+- rand_s function
+- numbers, pseudorandom
+- cryptographically secure random numbers
+- pseudorandom numbers
+- numbers, generating pseudorandom
 ms.assetid: d6a0be60-997d-4904-8411-8aea6839cc94
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# rand_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5087948c5737f105e9bc694da1e866be659ff18f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-生成一个伪随机数。  [rand](../../c-runtime-library/reference/rand.md) 的一个版本提供安全增强功能，正如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。  
+---
+# <a name="rands"></a>rand_s
+生成一个伪随机数。 这是 [rand](../../c-runtime-library/reference/rand.md) 版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增强功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 errno_t rand_s(   unsigned int* randomValue);  
 ```  
   
-## 返回值  
- 如果成功，则为零；否则为错误代码。  如果输入指针 `randomValue` 是null指针，则这些函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。  如果允许执行继续，则该函数返回 `EINVAL` 并将 `errno` 设置为 `EINVAL`。  如果函数为其他原因失败，\*`randomValue` 设置为 0。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则返回零，否则返回错误代码。 如果输入指针 `randomValue` 为空指针，则此函数将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则函数将返回 `EINVAL`，并且将 `errno` 设置为 `EINVAL`。 如果由于任何其他原因导致函数失败，则 *`randomValue` 设置为 0。  
   
-## 备注  
- `rand_s` 函数将在范围 0 的一伪随机整数为 `UINT_MAX` 输入为指针。  `rand_s` 函数使用操作系统生成加密随机数安全。  它不使用 [srand](../../c-runtime-library/reference/srand.md) 函数生成的种子，也不影响 `rand`使用的随机数的序列。  
+## <a name="remarks"></a>备注  
+ `rand_s` 函数将介于 0 到 `UINT_MAX` 范围内的一个伪随机整数写入输入指针。 `rand_s` 函数使用操作系统生成加密型安全随机数。 它不使用由 [srand](../../c-runtime-library/reference/srand.md) 函数生成的种子，也不影响 `rand` 所使用的随机数序列。  
   
- `rand_s` 函数在下列示例中的常量 `_CRT_RAND_S` 定义在中声明的函数包括之前，语句：  
+ `rand_s` 函数要求在待声明函数的包含语句之前定义常量 `_CRT_RAND_S`，如以下示例所示：  
   
 ```  
 #define _CRT_RAND_S  
 #include <stdlib.h>  
 ```  
   
- `rand_s` 依赖于 [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API，只能在 Windows XP 和更高版本中提供。  
+ `rand_s` 取决于 [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API，它仅 Windows XP 和更高版本中可用。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`rand_s`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`rand_s`|\<stdlib.h>|  
   
- 有关更多信息，请参见[Compatibility](../../c-runtime-library/compatibility.md)。  
+ 有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_rand_s.c  
@@ -127,7 +144,7 @@ int main( void )
 }  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
   
 ```  
 10  
@@ -153,9 +170,6 @@ int main( void )
 65.0712  
 ```  
   
-## .NET Framework 等效项  
- [系统唯一的类](https://msdn.microsoft.com/en-us/library/system.random.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [srand](../../c-runtime-library/reference/srand.md)

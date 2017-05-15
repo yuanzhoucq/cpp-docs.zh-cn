@@ -1,54 +1,71 @@
 ---
-title: "fputc、fputwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fputc"
-  - "fputwc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fputc"
-  - "fputwc"
-  - "_fputtc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fputtc 函数"
-  - "fputc 函数"
-  - "fputtc 函数"
-  - "fputwc 函数"
-  - "流, 将字符写入到"
+title: "fputc、fputwc | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fputc
+- fputwc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fputc
+- fputwc
+- _fputtc
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, writing characters to
+- fputtc function
+- _fputtc function
+- fputwc function
+- fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# fputc、fputwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7eb1bb55bd153f4ef5387b616b72f611e3a50a9f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="fputc-fputwc"></a>fputc、fputwc
 将字符写入流。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int fputc(  
@@ -61,48 +78,48 @@ wint_t fputwc(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `c`  
  要写入的字符。  
   
  `stream`  
  指向 `FILE` 结构的指针。  
   
-## 返回值  
- 这些函数都返回一个写好的字符。  为 `fputc`，`EOF` 的返回值指示错误。  为 `fputwc`，`WEOF` 的返回值指示错误。  如果 `stream` 为 `NULL`, 则函数调用无效参数处理程序, 如  [参数验证](../../c-runtime-library/parameter-validation.md)所述.  如果允许执行继续，则这些函数返回 `EOF` 并将 `errno` 设置为 `EINVAL`。  
+## <a name="return-value"></a>返回值  
+ 其中每个函数都会返回写入的字符。 对于 `fputc`，返回值 `EOF` 指示一个错误。 对于 `fputwc`，返回值 `WEOF` 指示一个错误。 如果 `stream` 为 `NULL`，这些函数则会调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数则返回 `EOF`，并将 `errno` 设置为 `EINVAL`。  
   
- 有关这些内容的更多信息以及其他错误代码，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- 这些功能在关联的文件位置指示器（如果定义）编写单个字符 `c` 并根据需要事先指示。  在 `fputc` 和 `fputwc`中, 文件与 `stream`*.*关联如果文件不支持位置请求或以附加方式打开，字符追加到流的末尾。  
+## <a name="remarks"></a>备注  
+ 其中每个函数将单个字符 `c` 在关联文件位置指示器（如果已定义）所指示的位置写入文件，并根据情况提升指示器。 情况下`fputc`和`fputwc`，与关联文件`stream`。 如果文件不支持定位请求，或在追加模式中打开，则该字符将被追加到流的末尾。  
   
- 如果流在 ANSI 模式中打开，这两个函数具有相同的行为。  `fputc` 当前不支持输出到 UNICODE 流。  
+ 如果在 ANSI 模式下打开流，则这两个函数行为相同。 `fputc` 当前不支持到 UNICODE 流中的输出。  
   
- 与 `_nolock` 后缀的版本与相同，但它们不由其他线程的干扰保护。  有关详细信息，请参阅[\_fputc\_nolock、\_fputwc\_nolock](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md).  
+ 带 `_nolock` 后缀的版本相同，只不过它们可能受到其他线程的影响。 有关详细信息，请参阅 [_fputc_nolock、_fputwc_nolock](../../c-runtime-library/reference/fputc-nolock-fputwc-nolock.md)。  
   
- 实例特定的备注。  
+ 下面是例程特定的备注。  
   
 |例程|备注|  
-|--------|--------|  
-|`fputc`|与 `putc`等效，但是仅实现为函数，而不是函数和宏。|  
-|`fputwc`|`fputc`的宽字符版本。  编写 `c` 作为多字节字符或宽字符，根据 `stream` 是以文本模式还是二进制模式打开。|  
+|-------------|-------------|  
+|`fputc`|等效于 `putc`，但仅作为函数实现，而不是同时作为函数和宏实现。|  
+|`fputwc`|`fputc` 的宽字符版本。 根据 `stream` 是在文本模式还是二进制模式中打开，将 `c` 编写为多字节字符或宽字符。|  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fputtc`|`fputc`|`fputc`|`fputwc`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`fputc`|\<stdio.h\>|  
-|`fputwc`|\<stdio.h\> 或 \<wchar.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`fputc`|\<stdio.h>|  
+|`fputwc`|\<stdio.h> 或 \<wchar.h>|  
   
- 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。  与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用它们。  有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。 与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_fputc.c  
@@ -123,14 +140,11 @@ int main( void )
 }  
 ```  
   
-  **这是一个 fputc 的测试\!\!**   
-## .NET Framework 等效项  
+```Output  
+This is a test of fputc!!  
+```  
   
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fgetc、fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
  [putc、putwc](../../c-runtime-library/reference/putc-putwc.md)

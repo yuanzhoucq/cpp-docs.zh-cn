@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - discrete_distribution
-- std::discrete_distribution
 - random/std::discrete_distribution
-- std::discrete_distribution::reset
 - random/std::discrete_distribution::reset
-- std::discrete_distribution::probabilities
 - random/std::discrete_distribution::probabilities
-- std::discrete_distribution::param
 - random/std::discrete_distribution::param
-- std::discrete_distribution::min
 - random/std::discrete_distribution::min
-- std::discrete_distribution::max
 - random/std::discrete_distribution::max
-- std::discrete_distribution::operator()
 - random/std::discrete_distribution::operator()
-- std::discrete_distribution::param_type
 - random/std::discrete_distribution::param_type
-- std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::probabilities
-- std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator==
-- std::discrete_distribution::param_type::operator!=
 - random/std::discrete_distribution::param_type::operator!=
+- random/std::discrete_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f29f4e98cf23f30383327713973f861b56ae0ce0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 270dd20a29333c64526c103c3eabe847c1c6e3c9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 类
@@ -110,8 +101,8 @@ public:
   
 |||  
 |-|-|  
-|[discrete_distribution::discrete_distribution](#discrete_distribution__discrete_distribution)|`discrete_distribution::param`|  
-|`discrete_distribution::operator()`|[discrete_distribution::param_type](#discrete_distribution__param_type)|  
+|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
+|`discrete_distribution::operator()`|[param_type](#param_type)|  
   
  属性函数 `vector<double> probabilities()` 将返回每个生成的整数的各自概率。  
   
@@ -201,7 +192,7 @@ Distribution for 100 samples:
   
  **命名空间：** std  
   
-##  <a name="a-namediscretedistributiondiscretedistributiona--discretedistributiondiscretedistribution"></a><a name="discrete_distribution__discrete_distribution"></a>  discrete_distribution::discrete_distribution  
+##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
  构造分布。  
   
 ```  
@@ -257,11 +248,11 @@ explicit discrete_distribution(const param_type& parm);
   
 包含 *count*、*low*、*high*、和 *weightfunc* 参数的构造函数基于以下规则构造初始化的分布对象：  
 -  如果 *count* < 1，则 **n** = 1，并且等效于默认构造函数（始终生成零）。  
--  如果 *count* > 0，则 **n** = *count*。 如果 **d** = (*high* - *low*) / **n** 大于零，使用 **d** 均匀子范围，将每个加权值分配如下：`weight[k] = weightfunc(x)`，其中 **x** = *low* + **k**  *d** + **d** / 2，**k** = 0, ..., **n** - 1。  
+-  如果 *count* > 0，则 **n** = *count*。 Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
   
 包含 `param_type` 参数 *parm* 的构造函数将 *parm* 用作存储的参数结构来构造分布对象。  
   
-##  <a name="a-namediscretedistributionparamtypea--discretedistributionparamtype"></a><a name="discrete_distribution__param_type"></a>  discrete_distribution::param_type  
+##  <a name="param_type"></a>  discrete_distribution::param_type  
  存储分布的所有参数。  
   
 ```  

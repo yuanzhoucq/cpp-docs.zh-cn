@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f45a13d9911e82b2b624689fa6b9e5eb4b20d97
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 2645201f1c5dfd7c8f23e86b43ef360ef5cb6e91
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
@@ -70,7 +71,7 @@ int _get_printf_count_output();
  如果支持 `%n`，则为非零值。如果不支持 `%n`，则为 0。  
   
 ## <a name="remarks"></a>备注  
- 如果不支持 `%n`（默认设置），则在任何 `printf` 函数的格式字符串中遇到 `%n` 时，都将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果启用 `%n` 支持（请参阅 [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)），然后 `%n` 的行为将如 [printf 类型字段字符](../../c-runtime-library/printf-type-field-characters.md)中所述。  
+ 如果不支持 `%n`（默认设置），则在任何 `printf` 函数的格式字符串中遇到 `%n` 时，都将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果`%n`启用支持 (请参阅[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 然后`%n`中所述的表现[格式规范语法︰ printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="requirements"></a>要求  
   
@@ -83,5 +84,6 @@ int _get_printf_count_output();
 ## <a name="example"></a>示例  
  请参阅 [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md) 示例。  
   
-## <a name="net-framework-equivalent"></a>NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。
+## <a name="see-also"></a>另请参阅  
+[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)  
+

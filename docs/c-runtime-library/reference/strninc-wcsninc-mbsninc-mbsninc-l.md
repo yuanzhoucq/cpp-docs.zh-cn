@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a019117da70bc81bcf2ffd79c750f8862bc50c0b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8390fc524393f221f32dd3a4b10080c88055a227
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc、_wcsninc、_mbsninc、_mbsninc_l
@@ -125,7 +126,7 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsninc`|`_strninc`|`_mbsninc`|`_wcsninc`|  
   
- `_strninc` 和 `_wcsninc` 是 `_mbsninc` 的单字节字符字符串和宽字符字符串版本。 仅为此映射提供 `_wcsninc` 和 `_strninc`，否则不应该使用它们。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。  
+ `_strninc`和`_wcsninc`是单字节字符的字符串和宽字符字符串新版`_mbsninc`。 仅为此映射提供 `_wcsninc` 和 `_strninc`，否则不应该使用它们。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。  
   
  `_mbsninc_l` 是相同的，只不过它改用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
@@ -139,9 +140,6 @@ unsigned char *_mbsninc(
 |`_wcsninc`|\<tchar.h>|  
   
  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

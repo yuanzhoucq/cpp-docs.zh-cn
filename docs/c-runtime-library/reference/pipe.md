@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0e45008d3f55c11cfa7da2aa4db9ca1277a6f77f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 23bcf7a96dfbfa7719b20f2a035ddcbc93c835ee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pipe"></a>_pipe
@@ -68,11 +69,10 @@ ms.lasthandoff: 02/24/2017
 ## <a name="syntax"></a>语法  
   
 ```  
-  
-      int _pipe(  
-int *pfds,  
-unsigned int psize,  
-int textmode   
+int _pipe(  
+   int *pfds,  
+   unsigned int psize,  
+   int textmode   
 );  
 ```  
   
@@ -87,7 +87,7 @@ int textmode
  文件模式。  
   
 ## <a name="return-value"></a>返回值  
- 如果成功，则返回 0。 返回 –1 以指示错误。 出现错误时，将 `errno` 设置为下列值之一：  
+ 如果成功，则返回 0。 将返回-1 以指示错误。 出现错误时，将 `errno` 设置为下列值之一：  
   
 -   `EMFILE` 指示没有更多可用的文件描述符。  
   
@@ -131,9 +131,8 @@ int textmode
   
 ## <a name="example-1"></a>示例 1  
   
-```  
-  
-      // crt_pipe.c  
+```C  
+// crt_pipe.c  
 /* This program uses the _pipe function to pass streams of  
  * text to spawned processes.  
  */  
@@ -216,9 +215,7 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-## <a name="sample-output"></a>示例输出  
-  
-```  
+```Output  
 Son, what is the square root of 1000?  
 Son, what is the square root of 2000?  
 Son, what iDad, the square root of 1000 is 31.62.  
@@ -240,7 +237,7 @@ Dad, the square root of 8000 is 89.44.
 ## <a name="example-2"></a>示例 2  
  这是一个基本的筛选器应用程序。 它在创建了一个将生成的应用程序的 stdout 指向筛选器的管道后，会生成应用程序 crt_pipe_beeper。 筛选器删除 ASCII 7（蜂鸣）字符。  
   
-```  
+```C  
 // crt_pipe_beeper.c  
   
 #include <stdio.h>  
@@ -259,7 +256,7 @@ int main()
   
  实际的筛选器应用程序：  
   
-```  
+```C  
 // crt_pipe_BeepFilter.C  
 // arguments: crt_pipe_beeper.exe  
   
@@ -352,9 +349,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## <a name="output"></a>输出  
-  
-```  
+```Output  
 This is speaker beep number 1...  
 This is speaker beep number 2...  
 This is speaker beep number 3...  
@@ -366,9 +361,6 @@ This is speaker beep number 8...
 This is speaker beep number 9...  
 This is speaker beep number 10...  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   

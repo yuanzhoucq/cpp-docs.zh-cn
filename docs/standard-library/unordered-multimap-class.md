@@ -10,96 +10,93 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unordered_multimap
-- std::unordered_multimap
 - unordered_map/std::unordered_multimap
-- std::unordered_multimap::allocator_type
 - unordered_map/std::unordered_multimap::allocator_type
-- std::unordered_multimap::const_iterator
 - unordered_map/std::unordered_multimap::const_iterator
-- std::unordered_multimap::const_local_iterator
 - unordered_map/std::unordered_multimap::const_local_iterator
-- std::unordered_multimap::const_pointer
 - unordered_map/std::unordered_multimap::const_pointer
-- std::unordered_multimap::const_reference
 - unordered_map/std::unordered_multimap::const_reference
-- std::unordered_multimap::difference_type
 - unordered_map/std::unordered_multimap::difference_type
-- std::unordered_multimap::hasher
 - unordered_map/std::unordered_multimap::hasher
-- std::unordered_multimap::iterator
 - unordered_map/std::unordered_multimap::iterator
-- std::unordered_multimap::key_equal
 - unordered_map/std::unordered_multimap::key_equal
-- std::unordered_multimap::key_type
 - unordered_map/std::unordered_multimap::key_type
-- std::unordered_multimap::local_iterator
 - unordered_map/std::unordered_multimap::local_iterator
-- std::unordered_multimap::mapped_type
 - unordered_map/std::unordered_multimap::mapped_type
-- std::unordered_multimap::pointer
 - unordered_map/std::unordered_multimap::pointer
-- std::unordered_multimap::reference
 - unordered_map/std::unordered_multimap::reference
-- std::unordered_multimap::size_type
 - unordered_map/std::unordered_multimap::size_type
-- std::unordered_multimap::value_type
 - unordered_map/std::unordered_multimap::value_type
-- std::unordered_multimap::begin
 - unordered_map/std::unordered_multimap::begin
-- std::unordered_multimap::bucket
 - unordered_map/std::unordered_multimap::bucket
-- std::unordered_multimap::bucket_count
 - unordered_map/std::unordered_multimap::bucket_count
-- std::unordered_multimap::bucket_size
 - unordered_map/std::unordered_multimap::bucket_size
-- std::unordered_multimap::cbegin
 - unordered_map/std::unordered_multimap::cbegin
-- std::unordered_multimap::cend
 - unordered_map/std::unordered_multimap::cend
-- std::unordered_multimap::clear
 - unordered_map/std::unordered_multimap::clear
-- std::unordered_multimap::count
 - unordered_map/std::unordered_multimap::count
-- std::unordered_multimap::emplace
 - unordered_map/std::unordered_multimap::emplace
-- std::unordered_multimap::emplace_hint
 - unordered_map/std::unordered_multimap::emplace_hint
-- std::unordered_multimap::empty
 - unordered_map/std::unordered_multimap::empty
-- std::unordered_multimap::end
 - unordered_map/std::unordered_multimap::end
-- std::unordered_multimap::equal_range
 - unordered_map/std::unordered_multimap::equal_range
-- std::unordered_multimap::erase
 - unordered_map/std::unordered_multimap::erase
-- std::unordered_multimap::find
 - unordered_map/std::unordered_multimap::find
-- std::unordered_multimap::get_allocator
 - unordered_map/std::unordered_multimap::get_allocator
-- std::unordered_multimap::hash_function
-- unordered_map/std::unordered_multimap::hash_function
-- std::unordered_multimap::insert
+- unordered_map/std::unordered_multimap::hash
 - unordered_map/std::unordered_multimap::insert
-- std::unordered_multimap::key_eq
 - unordered_map/std::unordered_multimap::key_eq
-- std::unordered_multimap::load_factor
 - unordered_map/std::unordered_multimap::load_factor
-- std::unordered_multimap::max_bucket_count
 - unordered_map/std::unordered_multimap::max_bucket_count
-- std::unordered_multimap::max_load_factor
 - unordered_map/std::unordered_multimap::max_load_factor
-- std::unordered_multimap::max_size
 - unordered_map/std::unordered_multimap::max_size
-- std::unordered_multimap::rehash
 - unordered_map/std::unordered_multimap::rehash
-- std::unordered_multimap::size
 - unordered_map/std::unordered_multimap::size
-- std::unordered_multimap::swap
 - unordered_map/std::unordered_multimap::swap
-- std::unordered_multimap::unordered_multimap
 - unordered_map/std::unordered_multimap::unordered_multimap
-- std::unordered_multimap::operator=
 - unordered_map/std::unordered_multimap::operator=
+- unordered_map/std::unordered_multimap::allocator_type
+- unordered_map/std::unordered_multimap::const_iterator
+- unordered_map/std::unordered_multimap::const_local_iterator
+- unordered_map/std::unordered_multimap::const_pointer
+- unordered_map/std::unordered_multimap::const_reference
+- unordered_map/std::unordered_multimap::difference_type
+- unordered_map/std::unordered_multimap::hasher
+- unordered_map/std::unordered_multimap::iterator
+- unordered_map/std::unordered_multimap::key_equal
+- unordered_map/std::unordered_multimap::key_type
+- unordered_map/std::unordered_multimap::local_iterator
+- unordered_map/std::unordered_multimap::mapped_type
+- unordered_map/std::unordered_multimap::pointer
+- unordered_map/std::unordered_multimap::reference
+- unordered_map/std::unordered_multimap::size_type
+- unordered_map/std::unordered_multimap::value_type
+- unordered_map/std::unordered_multimap::begin
+- unordered_map/std::unordered_multimap::bucket
+- unordered_map/std::unordered_multimap::bucket_count
+- unordered_map/std::unordered_multimap::bucket_size
+- unordered_map/std::unordered_multimap::cbegin
+- unordered_map/std::unordered_multimap::cend
+- unordered_map/std::unordered_multimap::clear
+- unordered_map/std::unordered_multimap::count
+- unordered_map/std::unordered_multimap::emplace
+- unordered_map/std::unordered_multimap::emplace_hint
+- unordered_map/std::unordered_multimap::empty
+- unordered_map/std::unordered_multimap::end
+- unordered_map/std::unordered_multimap::equal_range
+- unordered_map/std::unordered_multimap::erase
+- unordered_map/std::unordered_multimap::find
+- unordered_map/std::unordered_multimap::get_allocator
+- unordered_map/std::unordered_multimap::hash_function
+- unordered_map/std::unordered_multimap::insert
+- unordered_map/std::unordered_multimap::key_eq
+- unordered_map/std::unordered_multimap::load_factor
+- unordered_map/std::unordered_multimap::max_bucket_count
+- unordered_map/std::unordered_multimap::max_load_factor
+- unordered_map/std::unordered_multimap::max_size
+- unordered_map/std::unordered_multimap::rehash
+- unordered_map/std::unordered_multimap::size
+- unordered_map/std::unordered_multimap::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -123,10 +120,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8c27a26f0e65066405694652be9d46937642043f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f268454a196fe0eca5e7c3972db74342bbb96904
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap 类
@@ -159,74 +157,74 @@ class unordered_multimap;
 |||  
 |-|-|  
 |类型定义|描述|  
-|[unordered_multimap::allocator_type](#unordered_multimap__allocator_type)|用于管理存储的分配器的类型。|  
-|[unordered_multimap::const_iterator](#unordered_multimap__const_iterator)|受控序列的常量迭代器的类型。|  
-|[unordered_multimap::const_local_iterator](#unordered_multimap__const_local_iterator)|受控序列的常量存储桶迭代器的类型。|  
-|[unordered_multimap::const_pointer](#unordered_multimap__const_pointer)|元素的常量指针的类型。|  
-|[unordered_multimap::const_reference](#unordered_multimap__const_reference)|元素的常量引用的类型。|  
-|[unordered_multimap::difference_type](#unordered_multimap__difference_type)|两个元素间的带符号距离的类型。|  
-|[unordered_multimap::hasher](#unordered_multimap__hasher)|哈希函数的类型。|  
-|[unordered_multimap::iterator](#unordered_multimap__iterator)|受控序列的迭代器的类型。|  
-|[unordered_multimap::key_equal](#unordered_multimap__key_equal)|比较函数的类型。|  
-|[unordered_multimap::key_type](#unordered_multimap__key_type)|排序键的类型。|  
-|[unordered_multimap::local_iterator](#unordered_multimap__local_iterator)|受控序列的存储桶迭代器的类型。|  
-|[unordered_multimap::mapped_type](#unordered_multimap__mapped_type)|与每个键关联的映射值的类型。|  
-|[unordered_multimap::pointer](#unordered_multimap__pointer)|指向元素的指针的类型。|  
-|[unordered_multimap::reference](#unordered_multimap__reference)|元素的引用的类型。|  
-|[unordered_multimap::size_type](#unordered_multimap__size_type)|两个元素间的无符号距离的类型。|  
-|[unordered_multimap::value_type](#unordered_multimap__value_type)|元素的类型。|  
+|[allocator_type](#allocator_type)|用于管理存储的分配器的类型。|  
+|[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|  
+|[const_local_iterator](#const_local_iterator)|受控序列的常量存储桶迭代器的类型。|  
+|[const_pointer](#const_pointer)|元素的常量指针的类型。|  
+|[const_reference](#const_reference)|元素的常量引用的类型。|  
+|[difference_type](#difference_type)|两个元素间的带符号距离的类型。|  
+|[hasher](#hasher)|哈希函数的类型。|  
+|[iterator](#iterator)|受控序列的迭代器的类型。|  
+|[key_equal](#key_equal)|比较函数的类型。|  
+|[key_type](#key_type)|排序键的类型。|  
+|[local_iterator](#local_iterator)|受控序列的存储桶迭代器的类型。|  
+|[mapped_type](#mapped_type)|与每个键关联的映射值的类型。|  
+|[pointer](#pointer)|指向元素的指针的类型。|  
+|[reference](#reference)|元素的引用的类型。|  
+|[size_type](#size_type)|两个元素间的无符号距离的类型。|  
+|[value_type](#value_type)|元素的类型。|  
   
 |||  
 |-|-|  
 |成员函数|描述|  
-|[unordered_multimap::begin](#unordered_multimap__begin)|指定受控序列的开头。|  
-|[unordered_multimap::bucket](#unordered_multimap__bucket)|获取键值的存储桶编号。|  
-|[unordered_multimap::bucket_count](#unordered_multimap__bucket_count)|获取存储桶数。|  
-|[unordered_multimap::bucket_size](#unordered_multimap__bucket_size)|获取存储桶的大小。|  
-|[unordered_multimap::cbegin](#unordered_multimap__cbegin)|指定受控序列的开头。|  
-|[unordered_multimap::cend](#unordered_multimap__cend)|指定受控序列的末尾。|  
-|[unordered_multimap::clear](#unordered_multimap__clear)|删除所有元素。|  
-|[unordered_multimap::count](#unordered_multimap__count)|查找与指定键匹配的元素数。|  
-|[unordered_multimap::emplace](#unordered_multimap__emplace)|添加就地构造的元素。|  
-|[unordered_multimap::emplace_hint](#unordered_multimap__emplace_hint)|添加就地构造的元素，附带提示。|  
-|[unordered_multimap::empty](#unordered_multimap__empty)|测试元素是否存在。|  
-|[unordered_multimap::end](#unordered_multimap__end)|指定受控序列的末尾。|  
-|[unordered_multimap::equal_range](#unordered_multimap__equal_range)|查找与指定键匹配的范围。|  
-|[unordered_multimap::erase](#unordered_multimap__erase)|移除指定位置处的元素。|  
-|[unordered_multimap::find](#unordered_multimap__find)|查找与指定键匹配的元素。|  
-|[unordered_multimap::get_allocator](#unordered_multimap__get_allocator)|获取存储的分配器对象。|  
-|[unordered_multimap::hash_function](#unordered_multimap__hash_function)|获取存储的哈希函数对象。|  
-|[unordered_multimap::insert](#unordered_multimap__insert)|添加元素。|  
-|[unordered_multimap::key_eq](#unordered_multimap__key_eq)|获取存储的比较函数对象。|  
-|[unordered_multimap::load_factor](#unordered_multimap__load_factor)|对每个存储桶的平均元素数进行计数。|  
-|[unordered_multimap::max_bucket_count](#unordered_multimap__max_bucket_count)|获取最大的存储桶数。|  
-|[unordered_multimap::max_load_factor](#unordered_multimap__max_load_factor)|获取或设置每个存储桶的最多元素数。|  
-|[unordered_multimap::max_size](#unordered_multimap__max_size)|获取受控序列的最大大小。|  
-|[unordered_multimap::rehash](#unordered_multimap__rehash)|重新生成哈希表。|  
-|[unordered_multimap::size](#unordered_multimap__size)|对元素数进行计数。|  
-|[unordered_multimap::swap](#unordered_multimap__swap)|交换两个容器的内容。|  
-|[unordered_multimap::unordered_multimap](#unordered_multimap__unordered_multimap)|构造容器对象。|  
+|[begin](#begin)|指定受控序列的开头。|  
+|[存储桶](#bucket)|获取键值的存储桶编号。|  
+|[bucket_count](#bucket_count)|获取存储桶数。|  
+|[bucket_size](#bucket_size)|获取存储桶的大小。|  
+|[cbegin](#cbegin)|指定受控序列的开头。|  
+|[cend](#cend)|指定受控序列的末尾。|  
+|[clear](#clear)|删除所有元素。|  
+|[count](#count)|查找与指定键匹配的元素数。|  
+|[emplace](#emplace)|添加就地构造的元素。|  
+|[emplace_hint](#emplace_hint)|添加就地构造的元素，附带提示。|  
+|[empty](#empty)|测试元素是否存在。|  
+|[end](#end)|指定受控序列的末尾。|  
+|[equal_range](#equal_range)|查找与指定键匹配的范围。|  
+|[erase](#erase)|移除指定位置处的元素。|  
+|[find](#find)|查找与指定键匹配的元素。|  
+|[get_allocator](#get_allocator)|获取存储的分配器对象。|  
+|[hash_function](#hash)|获取存储的哈希函数对象。|  
+|[insert](#insert)|添加元素。|  
+|[key_eq](#key_eq)|获取存储的比较函数对象。|  
+|[load_factor](#load_factor)|对每个存储桶的平均元素数进行计数。|  
+|[max_bucket_count](#max_bucket_count)|获取最大的存储桶数。|  
+|[max_load_factor](#max_load_factor)|获取或设置每个存储桶的最多元素数。|  
+|[max_size](#max_size)|获取受控序列的最大大小。|  
+|[rehash](#rehash)|重新生成哈希表。|  
+|[size](#size)|对元素数进行计数。|  
+|[swap](#swap)|交换两个容器的内容。|  
+|[unordered_multimap](#unordered_multimap)|构造容器对象。|  
   
 |||  
 |-|-|  
 |运算符|描述|  
-|[unordered_multimap::operator=](#unordered_multimap__operator_eq)|复制哈希表。|  
+|[unordered_multimap::operator=](#op_eq)|复制哈希表。|  
   
 ## <a name="remarks"></a>备注  
- 对象通过调用两个存储对象，即一个 [unordered_multimap::key_equal](#unordered_multimap__key_equal) 类型的比较函数对象和一个 [unordered_multimap::hasher](#unordered_multimap__hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_multimap::key_eq](#unordered_multimap__key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_multimap::hash_function](#unordered_multimap__hash_function)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与模板类 [unordered_map 类](../standard-library/unordered-map-class.md)不同，模板类 `unordered_multimap` 的对象不确保 `key_eq()(X, Y)` 对于受控序列的任意两个元素始终为 false。 （键不需要唯一。）  
+ 对象通过调用两个存储对象，即一个 [unordered_multimap::key_equal](#key_equal) 类型的比较函数对象和一个 [unordered_multimap::hasher](#hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_multimap::key_eq](#key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_multimap::hash_function](#hash)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与模板类 [unordered_map 类](../standard-library/unordered-map-class.md)不同，模板类 `unordered_multimap` 的对象不确保 `key_eq()(X, Y)` 对于受控序列的任意两个元素始终为 false。 （键不需要唯一。）  
   
- 此对象还存储最大加载因子，用于指定每个存储桶的元素的最大所需平均数量。 如果插入元素导致 [unordered_multimap::load_factor](#unordered_multimap__load_factor)`()` 超出最大加载因子，容器将增加存储桶的数量并根据需要重新生成哈希表。  
+ 此对象还存储最大加载因子，用于指定每个存储桶的元素的最大所需平均数量。 如果插入元素导致 [unordered_multimap::load_factor](#load_factor)`()` 超出最大加载因子，容器将增加存储桶的数量并根据需要重新生成哈希表。  
   
  受控序列中元素的实际顺序取决于哈希函数、比较函数、插入顺序、最大加载因子和存储桶的当前数量。 通常无法预测受控序列中的元素顺序。 但是，可以始终确保具有等效顺序的任何元素子集在受控序列中相邻。  
   
- 对象通过 [unordered_multimap::allocator_type](#unordered_multimap__allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此分配器对象必须与 `allocator` 模板类的对象的外部接口相同。 请注意，分配容器对象时不会复制存储的分配器对象。  
+ 对象通过 [unordered_multimap::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此分配器对象必须与 `allocator` 模板类的对象的外部接口相同。 请注意，分配容器对象时不会复制存储的分配器对象。  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<unordered_map>  
   
  **命名空间：** std  
   
-##  <a name="a-nameunorderedmultimapallocatortypea--unorderedmultimapallocatortype"></a><a name="unordered_multimap__allocator_type"></a>  unordered_multimap::allocator_type  
+##  <a name="allocator_type"></a>  unordered_multimap::allocator_type  
  用于管理存储的分配器的类型。  
   
 ```  
@@ -263,7 +261,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmultimapbegina--unorderedmultimapbegin"></a><a name="unordered_multimap__begin"></a>  unordered_multimap::begin  
+##  <a name="begin"></a>  unordered_multimap::begin  
  指定受控序列或存储桶的开头。  
   
 ```  
@@ -332,7 +330,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapbucketa--unorderedmultimapbucket"></a><a name="unordered_multimap__bucket"></a>  unordered_multimap::bucket  
+##  <a name="bucket"></a>  unordered_multimap::bucket  
  获取键值的存储桶编号。  
   
 ```  
@@ -386,7 +384,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmultimapbucketcounta--unorderedmultimapbucketcount"></a><a name="unordered_multimap__bucket_count"></a>  unordered_multimap::bucket_count  
+##  <a name="bucket_count"></a>  unordered_multimap::bucket_count  
  获取存储桶数。  
   
 ```  
@@ -472,7 +470,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultimapbucketsizea--unorderedmultimapbucketsize"></a><a name="unordered_multimap__bucket_size"></a>  unordered_multimap::bucket_size  
+##  <a name="bucket_size"></a>  unordered_multimap::bucket_size  
  获取存储桶的大小  
   
 ```  
@@ -526,7 +524,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmultimapcbegina--unorderedmultimapcbegin"></a><a name="unordered_multimap__cbegin"></a>  unordered_multimap::cbegin  
+##  <a name="cbegin"></a>  unordered_multimap::cbegin  
  返回确定范围中第一个元素地址的 `const` 迭代器。  
   
 ```  
@@ -549,7 +547,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameunorderedmultimapcenda--unorderedmultimapcend"></a><a name="unordered_multimap__cend"></a>  unordered_multimap::cend  
+##  <a name="cend"></a>  unordered_multimap::cend  
  返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
   
 ```  
@@ -562,7 +560,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>备注  
  `cend` 用于测试迭代器是否超过了其范围的末尾。  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的 (non- `const`) 任何类型的容器。  
+ 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -574,7 +572,7 @@ auto i2 = Container.cend();
   
  不应对 `cend` 返回的值取消引用。  
   
-##  <a name="a-nameunorderedmultimapcleara--unorderedmultimapclear"></a><a name="unordered_multimap__clear"></a>  unordered_multimap::clear  
+##  <a name="clear"></a>  unordered_multimap::clear  
  删除所有元素。  
   
 ```  
@@ -582,7 +580,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>备注  
- 此成员函数调用 [unordered_multimap::erase](#unordered_multimap__erase)`(` [unordered_multimap::begin](#unordered_multimap__begin)`(),` [unordered_multimap::end](#unordered_multimap__end)`())`。  
+ 此成员函数调用 [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`。  
   
 ### <a name="example"></a>示例  
   
@@ -640,7 +638,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapconstiteratora--unorderedmultimapconstiterator"></a><a name="unordered_multimap__const_iterator"></a>  unordered_multimap::const_iterator  
+##  <a name="const_iterator"></a>  unordered_multimap::const_iterator  
  受控序列的常量迭代器的类型。  
   
 ```  
@@ -682,7 +680,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapconstlocaliteratora--unorderedmultimapconstlocaliterator"></a><a name="unordered_multimap__const_local_iterator"></a>  unordered_multimap::const_local_iterator  
+##  <a name="const_local_iterator"></a>  unordered_multimap::const_local_iterator  
  受控序列的常量存储桶迭代器的类型。  
   
 ```  
@@ -729,7 +727,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapconstpointera--unorderedmultimapconstpointer"></a><a name="unordered_multimap__const_pointer"></a>  unordered_multimap::const_pointer  
+##  <a name="const_pointer"></a>  unordered_multimap::const_pointer  
  元素的常量指针的类型。  
   
 ```  
@@ -774,7 +772,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapconstreferencea--unorderedmultimapconstreference"></a><a name="unordered_multimap__const_reference"></a>  unordered_multimap::const_reference  
+##  <a name="const_reference"></a>  unordered_multimap::const_reference  
  元素的常量引用的类型。  
   
 ```  
@@ -819,7 +817,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapcounta--unorderedmultimapcount"></a><a name="unordered_multimap__count"></a>  unordered_multimap::count  
+##  <a name="count"></a>  unordered_multimap::count  
  查找与指定键匹配的元素数。  
   
 ```  
@@ -831,7 +829,7 @@ size_type count(const Key& keyval) const;
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 该成员函数返回由 [unordered_multimap::equal_range](#unordered_multimap__equal_range)`(keyval)` 分隔的范围内的元素数量。  
+ 该成员函数返回由 [unordered_multimap::equal_range](#equal_range)`(keyval)` 分隔的范围内的元素数量。  
   
 ### <a name="example"></a>示例  
   
@@ -872,7 +870,7 @@ count('b') == 1
 count('C') == 0  
 ```  
   
-##  <a name="a-nameunorderedmultimapdifferencetypea--unorderedmultimapdifferencetype"></a><a name="unordered_multimap__difference_type"></a>  unordered_multimap::difference_type  
+##  <a name="difference_type"></a>  unordered_multimap::difference_type  
  两个元素间的带符号距离的类型。  
   
 ```  
@@ -930,7 +928,7 @@ end()-begin() == 3
 begin()-end() == -3  
 ```  
   
-##  <a name="a-nameunorderedmultimapemplacea--unorderedmultimapemplace"></a><a name="unordered_multimap__emplace"></a>  unordered_multimap::emplace  
+##  <a name="emplace"></a>  unordered_multimap::emplace  
  使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -951,13 +949,13 @@ iterator emplace(Args&&... args);
 ### <a name="remarks"></a>备注  
  对容器元素的引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。  
   
- 元素的 [value_type](../standard-library/map-class.md#map__value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
   
  在插入期间，如果引发了异常但未发生在容器的哈希函数中，则不会修改此容器。 如果在哈希函数中引发异常，则未定义此结果。  
   
- 有关代码示例，请参阅 [multimap::emplace](../standard-library/multimap-class.md#multimap__emplace)。  
+ 有关代码示例，请参阅 [multimap::emplace](../standard-library/multimap-class.md#emplace)。  
   
-##  <a name="a-nameunorderedmultimapemplacehinta--unorderedmultimapemplacehint"></a><a name="unordered_multimap__emplace_hint"></a>  unordered_multimap::emplace_hint  
+##  <a name="emplace_hint"></a>  unordered_multimap::emplace_hint  
  使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
   
 ```  
@@ -983,11 +981,11 @@ iterator emplace_hint(
   
  在插入期间，如果引发了异常但未发生在容器的哈希函数中，则不会修改此容器。 如果在哈希函数中引发异常，则未定义此结果。  
   
- 元素的 [value_type](../standard-library/map-class.md#map__value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
   
- 有关代码示例，请参阅 [map::emplace_hint](../standard-library/map-class.md#map__emplace_hint)。  
+ 有关代码示例，请参阅 [map::emplace_hint](../standard-library/map-class.md#emplace_hint)。  
   
-##  <a name="a-nameunorderedmultimapemptya--unorderedmultimapempty"></a><a name="unordered_multimap__empty"></a>  unordered_multimap::empty  
+##  <a name="empty"></a>  unordered_multimap::empty  
  测试元素是否存在。  
   
 ```  
@@ -1053,7 +1051,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapenda--unorderedmultimapend"></a><a name="unordered_multimap__end"></a>  unordered_multimap::end  
+##  <a name="end"></a>  unordered_multimap::end  
  指定受控序列的末尾。  
   
 ```  
@@ -1124,7 +1122,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapequalrangea--unorderedmultimapequalrange"></a><a name="unordered_multimap__equal_range"></a>  unordered_multimap::equal_range  
+##  <a name="equal_range"></a>  unordered_multimap::equal_range  
  查找与指定键匹配的范围。  
   
 ```  
@@ -1193,7 +1191,7 @@ equal_range('x'):
 equal_range('b'): [b, 2]  
 ```  
   
-##  <a name="a-nameunorderedmultimaperasea--unorderedmultimaperase"></a><a name="unordered_multimap__erase"></a>  unordered_multimap::erase  
+##  <a name="erase"></a>  unordered_multimap::erase  
  从 unordered_multimap 中的指定位置删除一个元素或元素范围，或者删除与指定键匹配的元素。  
   
 ```  
@@ -1227,9 +1225,9 @@ size_type erase(
  对于第三个成员函数，返回已从 unordered_multimap 中删除的元素数目。  
   
 ### <a name="remarks"></a>备注  
- 有关代码示例，请参阅 [map::erase](../standard-library/map-class.md#map__erase)。  
+ 有关代码示例，请参阅 [map::erase](../standard-library/map-class.md#erase)。  
   
-##  <a name="a-nameunorderedmultimapfinda--unorderedmultimapfind"></a><a name="unordered_multimap__find"></a>  unordered_multimap::find  
+##  <a name="find"></a>  unordered_multimap::find  
  查找与指定键匹配的元素。  
   
 ```  
@@ -1241,7 +1239,7 @@ const_iterator find(const Key& keyval) const;
  要搜索的键值。  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回 [unordered_multimap::equal_range](#unordered_multimap__equal_range)`(keyval).first`。  
+ 成员函数返回 [unordered_multimap::equal_range](#equal_range)`(keyval).first`。  
   
 ### <a name="example"></a>示例  
   
@@ -1287,7 +1285,7 @@ find('A') == false
 find('b') == true: [b, 2]  
 ```  
   
-##  <a name="a-nameunorderedmultimapgetallocatora--unorderedmultimapgetallocator"></a><a name="unordered_multimap__get_allocator"></a>  unordered_multimap::get_allocator  
+##  <a name="get_allocator"></a>  unordered_multimap::get_allocator  
  获取存储的分配器对象。  
   
 ```  
@@ -1324,7 +1322,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmultimaphashfunctiona--unorderedmultimaphashfunction"></a><a name="unordered_multimap__hash_function"></a>  unordered_multimap::hash_function  
+##  <a name="hash"></a>  unordered_multimap::hash_function  
  获取存储的哈希函数对象。  
   
 ```  
@@ -1361,7 +1359,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmultimaphashera--unorderedmultimaphasher"></a><a name="unordered_multimap__hasher"></a>  unordered_multimap::hasher  
+##  <a name="hasher"></a>  unordered_multimap::hasher  
  哈希函数的类型。  
   
 ```  
@@ -1398,7 +1396,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmultimapinserta--unorderedmultimapinsert"></a><a name="unordered_multimap__insert"></a>  unordered_multimap::insert  
+##  <a name="insert"></a>  unordered_multimap::insert  
  将一个元素或元素范围插入到 unordered_multimap 中。  
   
 ```  
@@ -1447,10 +1445,10 @@ IList);
 |参数|描述|  
 |`Val`|要插入到 unordered_multimap 中的元素的值。|  
 |`Where`|开始搜索正确插入点的位置。|  
-|`ValTy`|一种模板参数，它指定 unordered_multimap 可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 元素的参数类型，并将 `Val` 作为参数完美转发。|  
+|`ValTy`|一种模板参数，它指定 unordered_multimap 可用于构造 [value_type](../standard-library/map-class.md#value_type) 元素的参数类型，并将 `Val` 作为参数完美转发。|  
 |`First`|要复制的第一个元素的位置。|  
 |`Last`|要复制的最后一个元素以外的位置。|  
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#map__value_type) 对象的类型的元素。|  
+|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|  
 |`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|  
   
 ### <a name="return-value"></a>返回值  
@@ -1463,17 +1461,17 @@ IList);
   
  在只插入单个元素的过程中，如果引发异常，但是异常并未在容器的哈希函数中发生，则不会修改该容器的状态。 如果在哈希函数中引发异常，则未定义此结果。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。  
   
- 容器的 [value_type](../standard-library/map-class.md#map__value_type) 是属于该容器的 typedef；对于映射，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于映射，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
   
  范围成员函数 (5) 将元素值序列插入到 unordered_multimap 中，它对应于迭代器在范围 `[First, Last)` 中所处理的每一个元素；因此，不会插入 `Last`。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`m.insert(v.begin(), v.end());` 语句会将 `v` 的所有元素插入到 `m` 中。  
   
  初始化表达式列表成员函数 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 将元素复制到 unordered_multimap 中。  
   
- 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [unordered_multimap::emplace](#unordered_multimap__emplace) 和 [unordered_multimap::emplace_hint](#unordered_multimap__emplace_hint)。  
+ 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [unordered_multimap::emplace](#emplace) 和 [unordered_multimap::emplace_hint](#emplace_hint)。  
   
- 有关代码示例，请参阅 [multimap::insert](../standard-library/multiset-class.md#multiset__insert)。  
+ 有关代码示例，请参阅 [multimap::insert](../standard-library/multiset-class.md#insert)。  
   
-##  <a name="a-nameunorderedmultimapiteratora--unorderedmultimapiterator"></a><a name="unordered_multimap__iterator"></a>  unordered_multimap::iterator  
+##  <a name="iterator"></a>  unordered_multimap::iterator  
  受控序列的迭代器的类型。  
   
 ```  
@@ -1515,7 +1513,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapkeyeqa--unorderedmultimapkeyeq"></a><a name="unordered_multimap__key_eq"></a>  unordered_multimap::key_eq  
+##  <a name="key_eq"></a>  unordered_multimap::key_eq  
  获取存储的比较函数对象。  
   
 ```  
@@ -1554,7 +1552,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapkeyequala--unorderedmultimapkeyequal"></a><a name="unordered_multimap__key_equal"></a>  unordered_multimap::key_equal  
+##  <a name="key_equal"></a>  unordered_multimap::key_equal  
  比较函数的类型。  
   
 ```  
@@ -1593,7 +1591,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapkeytypea--unorderedmultimapkeytype"></a><a name="unordered_multimap__key_type"></a>  unordered_multimap::key_type  
+##  <a name="key_type"></a>  unordered_multimap::key_type  
  排序键的类型。  
   
 ```  
@@ -1647,7 +1645,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimaploadfactora--unorderedmultimaploadfactor"></a><a name="unordered_multimap__load_factor"></a>  unordered_multimap::load_factor  
+##  <a name="load_factor"></a>  unordered_multimap::load_factor  
  对每个存储桶的平均元素数进行计数。  
   
 ```  
@@ -1655,7 +1653,7 @@ float load_factor() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 成员函数返回每个存储桶的平均元素数 `(float)`[unordered_multimap::size](#unordered_multimap__size)`() / (float)`[unordered_multimap::bucket_count](#unordered_multimap__bucket_count)`()`。  
+ 成员函数返回每个存储桶的平均元素数 `(float)`[unordered_multimap::size](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()`。  
   
 ### <a name="example"></a>示例  
   
@@ -1714,7 +1712,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameunorderedmultimaplocaliteratora--unorderedmultimaplocaliterator"></a><a name="unordered_multimap__local_iterator"></a>  unordered_multimap::local_iterator  
+##  <a name="local_iterator"></a>  unordered_multimap::local_iterator  
  存储桶迭代器类型。  
   
 ```  
@@ -1761,7 +1759,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapmappedtypea--unorderedmultimapmappedtype"></a><a name="unordered_multimap__mapped_type"></a>  unordered_multimap::mapped_type  
+##  <a name="mapped_type"></a>  unordered_multimap::mapped_type  
  与每个键关联的映射值的类型。  
   
 ```  
@@ -1815,7 +1813,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapmaxbucketcounta--unorderedmultimapmaxbucketcount"></a><a name="unordered_multimap__max_bucket_count"></a>  unordered_multimap::max_bucket_count  
+##  <a name="max_bucket_count"></a>  unordered_multimap::max_bucket_count  
  获取最大的存储桶数。  
   
 ```  
@@ -1901,7 +1899,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultimapmaxloadfactora--unorderedmultimapmaxloadfactor"></a><a name="unordered_multimap__max_load_factor"></a>  unordered_multimap::max_load_factor  
+##  <a name="max_load_factor"></a>  unordered_multimap::max_load_factor  
  获取或设置每个存储桶的最多元素数。  
   
 ```  
@@ -1994,7 +1992,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmultimapmaxsizea--unorderedmultimapmaxsize"></a><a name="unordered_multimap__max_size"></a>  unordered_multimap::max_size  
+##  <a name="max_size"></a>  unordered_multimap::max_size  
  获取受控序列的最大大小。  
   
 ```  
@@ -2028,7 +2026,7 @@ int main()
 max_size() == 536870911  
 ```  
   
-##  <a name="a-nameunorderedmultimapoperatoreqa--unorderedmultimapoperator"></a><a name="unordered_multimap__operator_eq"></a>unordered_multimap::operator=  
+##  <a name="op_eq"></a>unordered_multimap::operator=  
  复制哈希表。  
   
 ```  
@@ -2042,10 +2040,10 @@ unordered_multimap& operator=(unordered_multimap&& right);
 |||  
 |-|-|  
 |参数|描述|  
-|` right`|正在被复制到 unordered_multimap 中的 unordered_multimap。|  
+|`right`|正在被复制到 unordered_multimap 中的 unordered_multimap。|  
   
 ### <a name="remarks"></a>备注  
- 在清除 unordered_multimap 中的任何现有元素后，`operator=` 会将 ` right` 的内容复制或移动到 unordered_multimap 中。  
+ 在清除 unordered_multimap 中的任何现有元素后，`operator=` 会将 `right` 的内容复制或移动到 unordered_multimap 中。  
   
 ### <a name="example"></a>示例  
   
@@ -2084,7 +2082,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-nameunorderedmultimappointera--unorderedmultimappointer"></a><a name="unordered_multimap__pointer"></a>  unordered_multimap::pointer  
+##  <a name="pointer"></a>  unordered_multimap::pointer  
  指向元素的指针的类型。  
   
 ```  
@@ -2129,7 +2127,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapreferencea--unorderedmultimapreference"></a><a name="unordered_multimap__reference"></a>  unordered_multimap::reference  
+##  <a name="reference"></a>  unordered_multimap::reference  
  元素的引用的类型。  
   
 ```  
@@ -2174,7 +2172,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimaprehasha--unorderedmultimaprehash"></a><a name="unordered_multimap__rehash"></a>  unordered_multimap::rehash  
+##  <a name="rehash"></a>  unordered_multimap::rehash  
  重新生成哈希表。  
   
 ```  
@@ -2250,7 +2248,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="a-nameunorderedmultimapsizea--unorderedmultimapsize"></a><a name="unordered_multimap__size"></a>  unordered_multimap::size  
+##  <a name="size"></a>  unordered_multimap::size  
  对元素数进行计数。  
   
 ```  
@@ -2316,7 +2314,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmultimapsizetypea--unorderedmultimapsizetype"></a><a name="unordered_multimap__size_type"></a>  unordered_multimap::size_type  
+##  <a name="size_type"></a>  unordered_multimap::size_type  
  两个元素间的无符号距离的类型。  
   
 ```  
@@ -2351,7 +2349,7 @@ int main()
 size == 0  
 ```  
   
-##  <a name="a-nameunorderedmultimapswapa--unorderedmultimapswap"></a><a name="unordered_multimap__swap"></a>  unordered_multimap::swap  
+##  <a name="swap"></a>  unordered_multimap::swap  
  交换两个容器的内容。  
   
 ```  
@@ -2363,7 +2361,7 @@ void swap(unordered_multimap& right);
  要交换的容器。  
   
 ### <a name="remarks"></a>备注  
- 成员函数交换 `*this` 和 `right`之间的受控序列。 如果为 [unordered_multimap::get_allocator](#unordered_multimap__get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。  
+ 成员函数交换 `*this` 和 `right`之间的受控序列。 如果为 [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。  
   
 ### <a name="example"></a>示例  
   
@@ -2421,7 +2419,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapunorderedmultimapa--unorderedmultimapunorderedmultimap"></a><a name="unordered_multimap__unordered_multimap"></a>  unordered_multimap::unordered_multimap  
+##  <a name="unordered_multimap"></a>  unordered_multimap::unordered_multimap  
  构造容器对象。  
   
 ```  
@@ -2621,7 +2619,7 @@ int main()
  [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmultimapvaluetypea--unorderedmultimapvaluetype"></a><a name="unordered_multimap__value_type"></a>  unordered_multimap::value_type  
+##  <a name="value_type"></a>  unordered_multimap::value_type  
  元素的类型。  
   
 ```  

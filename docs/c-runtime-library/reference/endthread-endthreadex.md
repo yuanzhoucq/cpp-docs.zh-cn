@@ -57,14 +57,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1e2211a34a7cc146d1ce3b791927ffc206edaef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
-终止线程； `_endthread` 终止由 `_beginthread` 创建的线程，  `_endthreadex` 终止由`_beginthreadex`创建的线程。  
+终止线程； `_endthread` 终止由 `_beginthread` 创建的线程，  `_endthreadex` 终止由 `_beginthreadex`创建的线程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -87,7 +88,7 @@ void _endthreadex(
   
  `_endthread` 会自动关闭线程句柄。 （该行为与 Win32 `ExitThread` API 不同。）因此，使用 `_beginthread` 和 `_endthread` 时，请不要通过调用 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API 来显式关闭线程句柄。  
   
- 与 Win32 `ExitThread` API 相同， `_endthreadex` 不会关闭线程句柄。 因此，当你使用 `_beginthreadex` 和 `_endthreadex` 时，必须通过调用 Win32 `CloseHandle` API 来关闭线程句柄。  
+ 与 Win32 `ExitThread` API 相同， `_endthreadex` 不会关闭线程句柄。 因此，当你使用 `_beginthreadex` 和 `_endthreadex`时，必须通过调用 Win32 `CloseHandle` API 来关闭线程句柄。  
   
 > [!NOTE]
 >  `_endthread` 和 `_endthreadex` 会导致 C++ 析构函数在不会调用的线程中处于挂起状态。  
@@ -105,10 +106,7 @@ void _endthreadex(
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md) 的多线程版本。  
   
 ## <a name="example"></a>示例  
- 请参阅 [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md) 示例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 请参阅 [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md)示例。  
   
 ## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   

@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
@@ -103,16 +104,16 @@ unsigned char *_mbsdec_l(
   
 #### <a name="parameters"></a>参数  
  `start`  
- 指向源字符串中任意字符（或 `_mbsdec` 和 _`mbsdec_l` 的任意多字节字符的第一个字节）的指针；在源字符串中 `start` 必须位于 `current` 之前。  
+ 指向任何字符 (或`_mbsdec`和`_mbsdec_l`，任何多字节字符的第一个字节) 中的源字符串;`start`必须位于之前`current`源字符串中。  
   
  `current`  
- 指向源字符串中任意字符（或 `_mbsdec` 和 _`mbsdec_l` 的任意多字节字符的第一个字节）的指针；在源字符串中 `current` 必须位于 `start` 之后。  
+ 指向任何字符 (或`_mbsdec`和`_mbsdec_l`，任何多字节字符的第一个字节) 中的源字符串;`current`必须遵循`start`源字符串中。  
   
  `locale`  
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- `_mbsdec`、_`mbsdec_l`、`_strdec` 和 `_wcsdec` 均将返回一个指向紧接在 `current` 之前的字符的指针；如果 `start` 的值大于或等于 `current` 的值，则 `_mbsdec` 将返回 `NULL`。 `_tcsdec` 映射到这些函数其中之一，其返回值取决于映射。  
+ `_mbsdec``_mbsdec_l`， `_strdec`，和`_wcsdec`每个返回一个指向紧跟字符`current`;`_mbsdec`返回`NULL`如果的值`start`大于或等于该`current`。 `_tcsdec` 映射到这些函数其中之一，其返回值取决于映射。  
   
 ## <a name="remarks"></a>备注  
  `_mbsdec` 和 `_mbsdec_l` 函数返回指向紧接在 `current`（位于包含 `start` 的字符串中）之前的多字节字符的第一个字节的指针。  
@@ -197,9 +198,6 @@ int main()
 }  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

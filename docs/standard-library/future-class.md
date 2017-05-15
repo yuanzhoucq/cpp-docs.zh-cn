@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::future
+- future/std::future::future
+- future/std::future::get
+- future/std::future::share
+- future/std::future::valid
+- future/std::future::wait
+- future/std::future::wait_for
+- future/std::future::wait_until
 dev_langs:
 - C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
@@ -32,10 +39,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6de4fecd3f5f65ac48cbb49f2ed4f874f4283487
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2a062caf9b28a48f2195f96b3a22f95a15c7149e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="future-class"></a>future 类
@@ -55,33 +63,33 @@ class future;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[future::future Constructor](#future__future_constructor)|构造 `future` 对象。|  
+|[future](#future)|构造 `future` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[future::get](#future__get_method)|检索存储在关联异步状态中的结果。|  
-|[future::share](#future__share_method)|将对象转换为 `shared_future`。|  
-|[future::valid](#future__valid_method)|指定对象是否不为空。|  
-|[future::wait](#future__wait_method)|阻止当前线程，直到关联异步状态为准备就绪。|  
-|[future::wait_for](#future__wait_for_method)|进行阻止，直到关联异步状态为准备就绪或已过指定时间。|  
-|[future::wait_until](#future__wait_until_method)|进行阻止，直到关联异步状态为准备就绪或直到指定时间点。|  
+|[get](#get)|检索存储在关联异步状态中的结果。|  
+|[共享](#share)|将对象转换为 `shared_future`。|  
+|[有效](#valid)|指定对象是否不为空。|  
+|[等待](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|  
+|[wait_for](#wait_for)|进行阻止，直到关联异步状态为准备就绪或已过指定时间。|  
+|[wait_until](#wait_until)|进行阻止，直到关联异步状态为准备就绪或直到指定时间点。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[future::operator=](#future__operator_eq)|从指定对象传输关联异步状态。|  
+|[future::operator=](#op_eq)|从指定对象传输关联异步状态。|  
   
 ## <a name="requirements"></a>要求  
- **标头：**future  
+ **标头︰** \<将来 >  
   
  **命名空间：** std  
   
-##  <a name="a-namefuturefutureconstructora--futurefuture-constructor"></a><a name="future__future_constructor"></a>future::future 构造函数  
+##  <a name="future"></a>future::future 构造函数  
  构造 `future` 对象。  
   
 ```
@@ -98,7 +106,7 @@ future(future&& Other) noexcept;
   
  第二个构造函数构造 `future` 对象并从 `Other` 传输关联异步状态。 `Other` 不再具有关联异步状态。  
   
-##  <a name="a-namefuturegetmethoda--futureget"></a><a name="future__get_method"></a>future::get  
+##  <a name="get"></a>future::get  
  检索存储在关联异步状态中的结果。  
   
 ```
@@ -117,7 +125,7 @@ Ty get();
   
  在其他专用化中，此方法会从存储值移动其返回值。 因此，请仅调用此方法一次。  
   
-##  <a name="a-namefutureoperatoreqa--futureoperator"></a><a name="future__operator_eq"></a>future::operator=  
+##  <a name="op_eq"></a>future::operator=  
  从指定对象传输关联异步状态。  
   
 ```
@@ -134,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="remarks"></a>备注  
  传输后，`Right` 不再具有关联异步状态。  
   
-##  <a name="a-namefuturesharemethoda--futureshare"></a><a name="future__share_method"></a>future::share  
+##  <a name="share"></a>future::share  
  将对象转换为 [shared_future](../standard-library/shared-future-class.md) 对象。  
   
 ```
@@ -144,7 +152,7 @@ shared_future<Ty> share();
 ### <a name="return-value"></a>返回值  
  `shared_future(move(*this))`  
   
-##  <a name="a-namefuturevalidmethoda--futurevalid"></a><a name="future__valid_method"></a>future::valid  
+##  <a name="valid"></a>future::valid  
  指定对象是否具有关联异步状态。  
   
 ```
@@ -154,7 +162,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>返回值  
  如果对象有关联的异步状态，则为 `true`；否则为 `false`。  
   
-##  <a name="a-namefuturewaitmethoda--futurewait"></a><a name="future__wait_method"></a>future::wait  
+##  <a name="wait"></a>future::wait  
  阻止当前线程，直到关联异步状态为准备就绪。  
   
 ```cpp  
@@ -164,7 +172,7 @@ void wait() const;
 ### <a name="remarks"></a>备注  
  只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。  
   
-##  <a name="a-namefuturewaitformethoda--futurewaitfor"></a><a name="future__wait_for_method"></a>future::wait_for  
+##  <a name="wait_for"></a>future::wait_for  
  阻止当前线程，直到关联异步状态为准备就绪或已过指定时间间隔。  
   
 ```
@@ -177,12 +185,12 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
  一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定线程阻止的最大时间间隔。  
   
 ### <a name="return-value"></a>返回值  
- 一个 [future_status](../standard-library/future-enums.md#future_status_enumeration)，指示返回的原因。  
+ 一个 [future_status](../standard-library/future-enums.md#future_status)，指示返回的原因。  
   
 ### <a name="remarks"></a>备注  
  只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。  
   
-##  <a name="a-namefuturewaituntilmethoda--futurewaituntil"></a><a name="future__wait_until_method"></a>future::wait_until  
+##  <a name="wait_until"></a>future::wait_until  
  阻止当前线程，直到关联的异步状态为准备就绪或直到指定时间点后。  
   
 ```cpp  
@@ -195,7 +203,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
  一个 [chrono::time_point](../standard-library/time-point-class.md) 对象，指定在其后可取消阻止线程的时间。  
   
 ### <a name="return-value"></a>返回值  
- 一个 [future_status](../standard-library/future-enums.md#future_status_enumeration)，指示返回的原因。  
+ 一个 [future_status](../standard-library/future-enums.md#future_status)，指示返回的原因。  
   
 ### <a name="remarks"></a>备注  
  只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。  

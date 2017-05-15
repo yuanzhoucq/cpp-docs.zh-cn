@@ -1,40 +1,61 @@
 ---
 title: "try_to_lock_t 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mutex/std::try_to_lock_t"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mutex/std::try_to_lock_t
+dev_langs:
+- C++
 ms.assetid: 3e48d632-0387-4871-8257-34efef5d6b83
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# try_to_lock_t 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 1a6427beb2230c437b75e0539c430a7251f5f0ba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
-表示定义一个 [try\_to\_lock](../Topic/try_to_lock%20Variable.md) 对象的 `struct`。  用于选择 [unique\_lock](../standard-library/unique-lock-class.md)一个重载的构造函数。  
+---
+# <a name="trytolockt-structure"></a>try_to_lock_t 结构
+表示一个 `struct`，它可定义 [try_to_lock](../standard-library/mutex-functions.md#try_to_lock) 对象。 用于选择 [unique_lock](../standard-library/unique-lock-class.md) 的重载构造函数之一。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
-struct try_to_lock_t;  
+struct try_to_lock_t;
 ```  
   
-## 要求  
- **标头:** mutex  
+## <a name="requirements"></a>要求  
+ **标头︰** \<互斥体 >  
   
- **命名空间:** std  
+ **命名空间：** std  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex\>](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
+
+
+
+

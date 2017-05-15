@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  在使用编译的代码中**/clr**，此标头被阻止。  
+>  通过使用编译的代码中**/clr**，阻止此标头。  
   
  异步提供程序存储函数调用的结果。 异步返回对象用于检索函数调用的结果。 关联异步状态提供一个异步提供程序和一个或多个异步返回对象之间的通信。  
   
@@ -89,21 +90,21 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="functions"></a>函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[async 函数](../standard-library/future-functions.md#async_function)|表示一个异步提供程序。|  
-|[future_category 函数](../standard-library/future-functions.md#future_category_function)|返回一个描述与 `future` 对象相关联错误的 `error_category` 对象的引用。|  
-|[make_error_code 函数](../standard-library/future-functions.md#make_error_code_function)|创建具有 `error_category` 对象（此对象描述 `future` 错误的特点）的 `error_code`。|  
-|[make_error_condition 函数](../standard-library/future-functions.md#make_error_condition_function)|创建具有 `error_category` 对象（此对象描述 `future` 错误的特点）的 `error_condition`。|  
-|[swap 函数](../standard-library/future-functions.md#swap_function)|将一个 `promise` 对象的关联异步状态与另一对象的关联异步状态交换。|  
+|[async](../standard-library/future-functions.md#async)|表示一个异步提供程序。|  
+|[future_category](../standard-library/future-functions.md#future_category)|返回一个描述与 `future` 对象相关联错误的 `error_category` 对象的引用。|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|创建具有 `error_category` 对象（此对象描述 `future` 错误的特点）的 `error_code`。|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|创建具有 `error_category` 对象（此对象描述 `future` 错误的特点）的 `error_condition`。|  
+|[swap](../standard-library/future-functions.md#swap)|将一个 `promise` 对象的关联异步状态与另一对象的关联异步状态交换。|  
   
 ### <a name="enumerations"></a>枚举  
   
 |名称|描述|  
 |----------|-----------------|  
-|[future_errc 枚举](../standard-library/future-enums.md#future_errc_enumeration)|为 `future_error` 类报告的错误提供符号名称。|  
-|[future_status 枚举](../standard-library/future-enums.md#future_status_enumeration)|为计时等待函数可返回的原因提供符号名称。|  
-|[launch 枚举](../standard-library/future-enums.md#launch_enumeration)|表示描述模板函数 `async` 的可能模式的位掩码类型。|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|为 `future_error` 类报告的错误提供符号名称。|  
+|[future_status](../standard-library/future-enums.md#future_status)|为计时等待函数可返回的原因提供符号名称。|  
+|[启动](../standard-library/future-enums.md#launch)|表示描述模板函数 `async` 的可能模式的位掩码类型。|  
   
 ## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)

@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 561e0e677200e075b94fce0e354691bcdbce1505
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8a7075b9a86aceda75b4934a74b405fc9e27a908
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
@@ -117,7 +118,7 @@ int _ismbcsymbol_l(
   
 |例程|测试条件|代码页 932 示例|  
 |-------------|--------------------|---------------------------|  
-|`_ismbclegal`|有效多字节|当且仅当 `c` 的第一个字节在 0x81 – 0x9F 或 0xE0 – 0xFC 范围内，同时第二个字节在 0x40 - 0x7E 或 0x80 - FC 范围内时返回非零值。|  
+|`_ismbclegal`|有效多字节|当且仅当 `c` 的第一个字节在 0x81 - 0x9F 或 0xE0 - 0xFC 范围内，同时第二个字节在 0x40 - 0x7E 或 0x80 - FC 范围内时返回非零值。|  
 |`_ismbcsymbol`|多字节字符|当且仅当 0x8141<=`c`<=0x81AC 时返回非零值。|  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
@@ -135,9 +136,6 @@ int _ismbcsymbol_l(
 |`_ismbcsymbol,_ismbcsymbol_l`|\<mbstring.h>|  
   
  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   

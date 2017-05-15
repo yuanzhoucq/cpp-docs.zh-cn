@@ -1,52 +1,69 @@
 ---
-title: "_commit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_commit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_commit"
-  - "commit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_commit 函数"
-  - "commit 函数"
-  - "将文件提交到磁盘"
-  - "文件 [C++], 刷新"
-  - "将文件刷新到磁盘"
+title: "_commit | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _commit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _commit
+- commit
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], flushing
+- flushing files to disk
+- commit function
+- _commit function
+- committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _commit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 40d0fdf7d64dca941c952921d1c3107baa910a74
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
-刷新文件直接保存到磁盘。  
+---
+# <a name="commit"></a>_commit
+将文件直接刷新到磁盘。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int _commit(   
@@ -54,29 +71,29 @@ int _commit(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fd`  
- 引用开启文件的描述符。  
+ 引用打开的文件的文件说明符。  
   
-## 返回值  
- 如果文件已成功刷新到磁盘时，`_commit` 返回 0。  返回值 \-1 指示一个错误。  
+## <a name="return-value"></a>返回值  
+ 如果文件已成功刷新到磁盘，则 `_commit` 返回 0。 返回值-1 指示错误。  
   
-## 备注  
- `_commit` 强制函数操作系统编写文件与 `fd` 到磁盘。  确保此调用立即刷新中指定的文件，不在操作系统的判断。  
+## <a name="remarks"></a>备注  
+ `_commit` 函数强制操作系统将与 `fd` 关联的文件写入到磁盘。 此调用可确保立即刷新特定文件，而无需等待操作系统的决定。  
   
- 如果 `fd` 是无效的文件说明符，此函数调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许继续执行, 函数返回 \-1，`errno` 设置为 `EBADF`。  
+ 如果 `fd` 是无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回 -1 并将 `errno` 设置为 `EBADF`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_commit`|\<io.h\>|\<errno.h\>|  
+|-------------|---------------------|----------------------|  
+|`_commit`|\<io.h>|\<errno.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 请参阅  
- [低级别 I\/O](../../c-runtime-library/low-level-i-o.md)   
- [\_creat、\_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_read](../../c-runtime-library/reference/read.md)   
- [\_write](../../c-runtime-library/reference/write.md)
+## <a name="see-also"></a>另请参阅  
+ [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
+ [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_read](../../c-runtime-library/reference/read.md)   
+ [_write](../../c-runtime-library/reference/write.md)

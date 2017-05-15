@@ -1,75 +1,88 @@
 ---
-title: "complex&lt;double&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.complex<double>"
-  - "complex<double>"
-  - "std::complex<double>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "复杂 < 双 > 函数"
+title: "complex&lt;double&gt; | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.complex<double>
+- complex<double>
+- std::complex<double>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# complex&lt;double&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3b5e57b3bda68995f24a21ffedb9d533e7c65a0f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-描述一个对象，该对象存储了两个都为 **double** 类型的有序对象对*，*该有序对象对中的第一个对象表示复数的实部，第二个对象表示复数虚部。  
+---
+# <a name="complexltdoublegt"></a>complex&lt;double&gt;
+描述一个对象，该对象存储了两个都为 **double** *类型的有序对象对，*该有序对象对中的第一个对象表示复数的实部，第二个对象表示复数虚部。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
-template<>  
-   class complex<double> {  
-public:  
-   constexpr complex(  
-      double _RealVal = 0,   
-      double _ImagVal = 0  
-   );  
-  
-   constexpr complex(  
-      const complex<double>& _ComplexNum  
-   );  
-   constexpr explicit complex(  
-      const complex<long double>& _ComplexNum  
-   );  
-   // rest same as template class complex  
-};  
+```
+template <>
+class complex<double> {
+public:
+    constexpr complex(
+    double RealVal = 0,
+    double ImagVal = 0);
+
+constexpr complex(const complex<double>& complexNum);
+
+constexpr explicit complex(const complex<long double>& complexNum);
+// rest same as template class complex
+};
 ```  
   
-#### 参数  
- `_RealVal`  
+#### <a name="parameters"></a>参数  
+ `RealVal`  
  正在构造的复数实部的 **double** 类型值。  
   
- `_ImagVal`  
+ `ImagVal`  
  正在构造的复数虚部的 **double** 类型值。  
   
- `_ComplexNum`  
+ `complexNum`  
  **float** 或 `long double` 类型的复数，其实部和虚部用于初始化正在构造的 **double** 类型的复数。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  **double** 类型的复数。  
   
-## 备注  
- complex 模板类显式专用化为 **double** 类型的 complex 类仅在它所定义构造函数中与模板类不同。 从 **float** 到 **double** 类型的转换可以是隐式的，但从 `long double` 到 **double** 的转换必须是**显式的**。 使用**显式**规则可排除在最初使用赋值语法进行类型转换。  
+## <a name="remarks"></a>备注  
+ complex 模板类显式专用化为 **double** 类型的 complex 类仅在它所定义的构造函数中与模板类不同。 从 **float** 到 **double** 类型的转换可以是隐式的，但从 `long double` 到 **double** 的转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。  
   
- 有关详细信息模板类 `complex`, ，请参阅 [complex 类](../standard-library/complex-class.md)。 有关 `complex` 模板类的成员列表，请参阅。  
+ 有关 `complex` 模板类的详细信息，请参阅 [complex 类](../standard-library/complex-class.md)。 有关 `complex` 模板类的成员列表，请参阅。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // complex_comp_dbl.cpp  
 // compile with: /EHsc  
 #include <complex>  
@@ -109,14 +122,28 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi  
         << " degrees." << endl;  
 }  
+\* Output:   
+Specifying initial real & imaginary parts,  
+ as type double gives c1 = (4,5)  
+Implicit conversion from type float to type double,  
+ gives c2double = (4,5)  
+Explicit conversion from type float to type double,  
+ gives c3longdouble = (4,5)  
+The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312  
+Argument of c3 is recovered from c3 using:  
+ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.  
+*\  
 ```  
   
- **指定初始真实和虚数部分，如类型 double 提供 c1 \= \(4,5\) 从双精度类型，提供 c2double 的浮点类型的隐式转换 \= 从浮点类型双精度类型，提供 c3longdouble \(4,5\) 显式转换 \= \(4，5\) 个 c3 的模数恢复 c3 利用︰ abs \(c3\) \= 6.40312 从 c3 使用恢复 c3 参数︰ arg \(c3\) \= 0.896055 弧度为单位，即 51.3402 度为单位。**   
-## 要求  
- **标头**：\<complex\>  
+## <a name="requirements"></a>要求  
+ **标头**：\<complex>  
   
- **命名空间:** std  
+ **命名空间：** std  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [complex 类](../standard-library/complex-class.md)   
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

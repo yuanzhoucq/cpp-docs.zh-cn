@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0943a0b30643a6dff3d47508f9a514e3e0d441ff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f7bf32d7fa725e1f012b2a793a8091674e1c2e9f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
@@ -115,7 +116,7 @@ unsigned char *_mbsspnp_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- `_strspnp`、`_wcsspnp` 和 `_mbsspnp` 返回指向 `str`（不属于 `charset` 中的字符集）中的第一个字符的指针。 如果 `str` 包含 `charset` 中的所有字符，则每个函数将返回 `NULL`。 对于这些例程，都不会保留返回值来指示错误。  
+ `_strspnp``_wcsspnp`，和`_mbsspnp`返回指向第一个字符的指针`str`，不属于组中的字符`charset`。 其中每个函数返回`NULL`如果`str`完全由字符从组成`charset`。 对于这些例程，都不会保留返回值来指示错误。  
   
 ## <a name="remarks"></a>备注  
  `_mbsspnp` 函数返回指向 `str`（不属于 `charset` 中的字符集）中第一个字符的多字节字符的指针。 `_mbsspnp` 根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。 搜索不包括结尾的 null 字符。  
@@ -163,9 +164,6 @@ int main( void ) {
 ```  
 abbage  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

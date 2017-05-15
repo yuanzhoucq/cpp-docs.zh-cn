@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
@@ -106,7 +107,7 @@ wchar_t *_wtmpnam(
  指针将保留生成的名称，该名称将与函数所返回的名称相同。 这是保存生成的名称的简便方法。  
   
 ## <a name="return-value"></a>返回值  
- 如果失败，则每个函数均返回一个指向生成的名称的指针或 `NULL`。 如果尝试使用 `tmpnam` 执行超过 `TMP_MAX` 次调用（请参阅 STDIO.H），或如果使用 `_tempnam`，但在 TMP 环境变量和 `dir` 参数中指定了无效的目录名称，则可能失败。  
+ 如果失败，则每个函数均返回一个指向生成的名称的指针或 `NULL`。 如果你尝试，则可能发生失败多个`TMP_MAX`（请参阅 STDIO。H） 使用调用`tmpnam`或如果你使用`_tempnam`且存在 TMP 环境变量在和中指定了无效的目录名称`dir`参数。  
   
 > [!NOTE]
 >  由 `tmpnam` 和 `_wtmpnam` 返回的指针指向内部静态缓冲区。 不应调用 [free](../../c-runtime-library/reference/free.md) 来释放这些指针。 对于由 `_tempnam` 和 `_wtempnam` 分配的指针，需要调用 `free`。  
@@ -192,9 +193,6 @@ int main( void )
 \s1gk. is safe to use as a temporary file.  
 C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   

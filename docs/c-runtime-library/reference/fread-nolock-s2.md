@@ -1,47 +1,65 @@
 ---
-title: "_fread_nolock_s2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fread_nolock_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fread_nolock_s"
-  - "stdio/_fread_nolock_s"
-dev_langs: 
-  - "C++"
+title: "_fread_nolock_s2 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fread_nolock_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fread_nolock_s
+- stdio/_fread_nolock_s
+dev_langs:
+- C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# _fread_nolock_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f7f6dff1902777d5c795ac5cb29e1bcfdf3b0eb5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-读取流中的数据，而不锁定其他线程。 此版本的 [fread\_nolock](../../c-runtime-library/reference/fread-nolock.md) 带有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md) 中所述。  
+---
+# <a name="freadnolocks"></a>_fread_nolock_s
+读取流中的数据，而不锁定其他线程。 这是 [fread_nolock](../../c-runtime-library/reference/fread-nolock.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_t _fread_nolock_s(   
@@ -53,7 +71,7 @@ size_t _fread_nolock_s(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `buffer`  
  数据的存储位置。  
   
@@ -69,24 +87,21 @@ size_t _fread_nolock_s(
  `stream`  
  指向 `FILE` 结构的指针。  
   
-## 返回值  
- 请参阅 [fread\_s](../../c-runtime-library/reference/fread-s.md)。  
+## <a name="return-value"></a>返回值  
+ 请参阅 [fread_s](../../c-runtime-library/reference/fread-s.md)。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  此函数为 `fread_s` 的非锁定版本。 它与 `fread_s` 相同，只不过它可能受到其他线程的影响。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |函数|必需的标头|  
-|--------|-----------|  
-|`_fread_nolock_s`|C: \<stdio.h\>; C\+\+: \<cstdio\> 或 \<stdio.h\>|  
+|--------------|---------------------|  
+|`_fread_nolock_s`|C: \<stdio.h>；C++: \<cstdio> 或 \<stdio.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 等效项  
- [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
-  
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [\_read](../../c-runtime-library/reference/read.md)
+ [_read](../../c-runtime-library/reference/read.md)

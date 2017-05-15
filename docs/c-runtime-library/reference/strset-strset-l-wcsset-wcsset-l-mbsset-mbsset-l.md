@@ -86,10 +86,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33fbfa70740b7a179aaf817ad61579d752d351ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9db9c684f27f2cae103cf3071332a5d7fa90e8d9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
@@ -146,7 +147,7 @@ unsigned char *_mbsset_l(
 ## <a name="remarks"></a>备注  
  `_strset` 函数将 `str` 的所有字符（终止 null 字符除外）设置为 `c`（已转换为 `char`）。 `_wcsset` 和 `_mbsset_l` 分别是 `_strset` 的宽字符及多字节字符版本，而且参数和返回值的数据类型会相应地变化。 否则这些函数具有相同行为。  
   
- `_mbsset` 会验证其参数。 如果 `str` 是 null 指针，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `_mbsset` 返回 `NULL`，并将 `errno` 设置为 `EINVAL`。 `_strset` 和 `_wcsset` 不会验证其参数。  
+ `_mbsset` 会验证其参数。 如果 `str` 是 null 指针，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则 `_mbsset` 返回 `NULL`，并将 `errno` 设置为 `EINVAL`。 `_strset` 和 `_wcsset` 不会验证其参数。  
   
  输出值受区域设置的 `LC_CTYPE` 类别设置的影响；有关详细信息，请参阅 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些函数的版本都相同，只是不带 `_l` 后缀的函数使用当前区域设置，而带有 `_l` 后缀的函数则使用传入的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
@@ -195,9 +196,6 @@ int main( void )
 Before: Fill the string with something.  
 After:  *******************************  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

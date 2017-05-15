@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 79282200587a8c116bbcd44db68e809f6dcc0d9c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a9bc5007e94aad8cd8ed65f16ba3f0aaf73faabc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf、_snscanf_l、_snwscanf、_snwscanf_l
@@ -134,7 +135,7 @@ int __cdecl _snwscanf_l(
 ## <a name="return-value"></a>返回值  
  这两个函数都将返回已成功转换并分配的字段的数目；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果在首次转换前到达字符串的结尾，则返回值为 `EOF` 以指示错误。 有关详细信息，请参阅 [sscanf](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)。  
   
- 如果 `input` 或 `format` 是一个 `NULL` 指针，或如果 `length` 小于或等于&0;，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `EOF` 并将 `errno` 设置为 `EINVAL`。  
+ 如果 `input` 或 `format` 是一个 `NULL` 指针，或如果 `length` 小于或等于 0，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `EOF` 并将 `errno` 设置为 `EINVAL`。  
   
  有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -191,9 +192,6 @@ int main( )
 _snscanf converted 2 fields: 15 and 12.000000  
 _snwscanf converted 2 fields: 15 and 12.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)

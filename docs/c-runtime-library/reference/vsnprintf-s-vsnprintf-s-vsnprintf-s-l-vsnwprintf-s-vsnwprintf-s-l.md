@@ -66,10 +66,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 77f03f71842dda7f56ff81b8cd3e369b21d110e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f54fd258fac9ecf82c80943dc4f531ffe950f80c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
@@ -157,7 +158,7 @@ int _vsnwprintf_s(
   
  如果存储数据和终止 null 的所需存储空间超过 `sizeOfBuffer`，则会调用无效参数处理程序（如[参数验证](../../c-runtime-library/parameter-validation.md)所述），除非 `count` 是 [_TRUNCATE](../../c-runtime-library/truncate.md)，这样就会将尽可能多的字符串写入 `buffer` 中并返回 -1。 如果在调用无效参数处理程序后继续执行，这些函数会将 `buffer` 设置为空字符串、`errno` 设置为 `ERANGE`，并返回 -1。  
   
- 如果 `buffer` 或 `format` 是一个 `NULL` 指针，或如果 `count` 小于或等于&0;，则将调用无效参数处理程序。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。  
+ 如果 `buffer` 或 `format` 是一个 `NULL` 指针，或如果 `count` 小于或等于 0，则将调用无效参数处理程序。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
 ### <a name="error-conditions"></a>错误条件  
   
@@ -189,9 +190,6 @@ int _vsnwprintf_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vsntprintf_s`|`_vsnprintf_s`|`_vsnprintf_s`|`_vsnwprintf_s`|  
 |`_vsntprintf_s_l`|`_vsnprintf_s_l`|`_vsnprintf_s_l`|`_vsnwprintf_s_l`|  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="requirements"></a>要求  
   

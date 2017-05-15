@@ -1,49 +1,66 @@
 ---
-title: "fflush | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fflush"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fflush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fflush 函数"
-  - "刷新"
-  - "流, 刷新"
+title: "fflush | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fflush
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fflush
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, flushing
+- flushing
+- fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# fflush
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f2a11a29ba0eec3c66cf23f72e8fe0e7106d5a5c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
+---
+# <a name="fflush"></a>fflush
 刷新流。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int fflush(   
@@ -51,34 +68,36 @@ int fflush(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `stream`  
  指向 `FILE` 结构的指针。  
   
-## 返回值  
- 如果缓冲区刷新成功，则 `fflush` 返回 0 。  指定流没有缓冲区或只读的打开状态的情况下返回 值 0。  返回值 `EOF` 指示一个错误。  
+## <a name="return-value"></a>返回值  
+ 如果已成功刷新缓冲区，`fflush` 将返回 0。 在指定流无缓冲区或处于打开状态以仅供读取的情况下，也会返回值 0。 返回值 `EOF` 指示一个错误。  
   
 > [!NOTE]
->  如果 `fflush` 返回 `EOF`时，数据可能因为写失败丢失而丢失。  在设置关键错误处理程序，最安全的做法是用 `setvbuf` 函数关闭缓冲区或使用底层 I\/O 例程，例如 `_open`，`_close`和 `_write` 替代 I\/O 流函数。  
+>  如果 `fflush` 返回 `EOF`，数据可能已经因写入失败而丢失。 设置一个严重错误的处理程序时，通过 `setvbuf` 函数或使用低级别 I/O 例程（如`_open`、`_close`，和`_write`）而不是流 I/O 函数来关闭缓冲最安全。  
   
-## 备注  
- `fflush` 函数刷新流。  如果关联 `stream` 的文件输出流，`fflush` 将与流关联的缓冲区内容写到文件中。  如果是输入流，`fflush` 清除缓冲区内容。  `fflush` 否定任何先前的调用效果 `ungetc` 对 `stream`。  此外，`fflush(NULL)` 刷新所有输出流。  流在调用之后保持打开。  `fflush` 不会影响未缓冲的流的效果。  
+## <a name="remarks"></a>备注  
+ `fflush` 函数刷新流 `stream`。 如果以写入模式打开流，或者以更新模式打开并且最后一个操作是写入，则流缓冲区的内容会被写入到基础文件，否则设备和缓冲区将被丢弃。 如果在读取模式下打开流或流并不具有缓冲区，则对 `fflush` 的调用不起任何作用，且不保留任何缓冲区。 调用 `fflush` 会使任何以前对流的 `ungetc` 的调用无效。 调用后，该流保持打开状态。  
   
- 这些缓冲区通常由操作系统维护，自动确定最佳时间将数据写入磁盘：当缓冲区已满，当关闭了流，或者当程序正常终止，而无需关闭流时。  运行时库的提交到磁盘的功能，可以确保关键数据直接写入磁盘，而不是操作系统的缓冲区。  无需重写现有的程序，您可以通过链接程序的对象文件与 COMMODE.OBJ 启用此功能。  在生成的可执行文件，调用 `_flushall` 将所有缓冲区的内容写入磁盘中。  只有 `_flushall` 和 `fflush` 受 COMMODE.OBJ 影响。  
+ 如果 `stream` 是 `NULL`，则行为与每个打开流上对 `fflush` 的调用一致。 最后一次操作是写入的所有以写入模式打开的流以及所有以更新模式打开的流都将被刷新。 调用对其他流无效。  
   
- 有关控制提交到磁盘的功能的信息，请参阅 [Stream I\/O](../../c-runtime-library/stream-i-o.md)、[fopen](../../c-runtime-library/reference/fopen-wfopen.md) 和 [\_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)。  
+ 缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。 利用运行时库的提交到磁盘功能，可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 无需重写现有程序，可以通过将程序的对象文件与 COMMODE.OBJ 链接来启用此功能。 在生成的可执行文件中，调用 `_flushall` 会将所有缓冲区的内容写入磁盘中。 仅 `_flushall` 和 `fflush` 受 COMMODE.OBJ 的影响。  
   
- 该函数锁定调用线程并因此是线程安全的。  有关非固定版本，请参见 `_fflush_nolock`。  
+ 有关控制提交到磁盘功能的信息，请参阅[流 I/O](../../c-runtime-library/stream-i-o.md)、[fopen](../../c-runtime-library/reference/fopen-wfopen.md) 和 [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)。  
   
-## 要求  
+ 此函数会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 `_fflush_nolock`。  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`fflush`|\<stdio.h\>|  
+## <a name="requirements"></a>要求  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`fflush`|\<stdio.h>|  
   
-## 示例  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+  
+## <a name="example"></a>示例  
   
 ```  
 // crt_fflush.c  
@@ -107,18 +126,27 @@ int main( void )
 }  
 ```  
   
-  **`这是一项测试 这是一个测试`  `是测试 这是一个四 testEnter`Enter a sentence of four words with scanf: This is a test**  
-**已释放此**   
-**为**  
-**a**  
-**测试**  
-**输入同一个句子获取：This is a test**  
-**这是一个测试**   
-## .NET Framework 等效项  
- [System::IO::FileStream::Flush](https://msdn.microsoft.com/en-us/library/2bw4h516.aspx)  
+```Output  
   
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [fclose、\_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [\_flushall](../../c-runtime-library/reference/flushall.md)   
+      This is a test  
+This is a test  
+  
+```  
+  
+```Output  
+  
+      This is a test  
+This is a testEnter a sentence of four words with scanf: This is a test  
+This  
+is  
+a  
+test  
+Enter the same sentence with gets: This is a test  
+This is a test  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+ [_flushall](../../c-runtime-library/reference/flushall.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

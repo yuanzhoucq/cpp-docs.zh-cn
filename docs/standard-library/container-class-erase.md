@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 0a28e1ff0def707926a67e1fea77f40e9927c0c4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aeb81554bdc50db44e9e8d4ee66369149eceb875
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="container-classerase"></a>Container Class::erase
@@ -56,7 +57,7 @@ iterator erase(
 ```  
   
 ## <a name="remarks"></a>备注  
- 第一个成员函数将移除 _*Where*** 所指向的受控序列的元素。** 第二个成员函数将移除范围 [` first`、` last`) 中的受控序列的元素。 两者都返回一个迭代器，指定已移除的任何元素之外保留的第一个元素或 [end](../standard-library/container-class-end.md)（若此类元素不存在）。  
+ 第一个成员函数删除指向的受控序列的元素*_Where*。 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 两者都返回一个迭代器，指定已移除的任何元素之外保留的第一个元素或 [end](../standard-library/container-class-end.md)（若此类元素不存在）。  
   
  成员函数仅在复制操作引发异常时才引发异常。  
   

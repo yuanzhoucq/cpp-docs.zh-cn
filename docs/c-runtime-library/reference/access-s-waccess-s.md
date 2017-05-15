@@ -1,56 +1,73 @@
 ---
-title: "_access_s、_waccess_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_access_s"
-  - "_waccess_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "waccess_s"
-  - "access_s"
-  - "_waccess_s"
-  - "_access_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_access_s 函数"
-  - "_taccess_s 函数"
-  - "_waccess_s 函数"
-  - "access_s 函数"
-  - "taccess_s 函数"
-  - "waccess_s 函数"
+title: "_access_s、_waccess_s | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _access_s
+- _waccess_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- waccess_s
+- access_s
+- _waccess_s
+- _access_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- access_s function
+- taccess_s function
+- _taccess_s function
+- waccess_s function
+- _access_s function
+- _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# _access_s、_waccess_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 051c2e6a6b0315e2ca4ab3192f28a370d969ec5b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-确定文件读取\/写入访问权限。  [\_access、\_waccess](../../c-runtime-library/reference/access-waccess.md) 的一些版本提供安全增强功能（如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述）。  
+---
+# <a name="accesss-waccesss"></a>_access_s、_waccess_s
+确定文件的读取/写入权限。 这是 [_access、_waccess](../../c-runtime-library/reference/access-waccess.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md) 中所述的安全增强功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 errno_t _access_s(   
@@ -63,58 +80,58 @@ errno_t _waccess_s(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `path`  
  文件或目录路径。  
   
  `mode`  
- 权限设置  
+ 权限设置。  
   
-## 返回值  
- 如果文件包含特定模式，每个函数返回 0。  函数返回了错误代码，则在特定的模式，命名的文件不存在或无法访问。  在这种情况下，函数集合返回代码错误并将 `errno` 设置为相同的值。  
+## <a name="return-value"></a>返回值  
+ 如果该文件具有给定的模式，则每个函数将返回 0。 如果命名文件不存在或无法以指定模式进行访问，则该函数将返回错误代码。 在这种情况下，该函数从如下集合中返回错误代码，并同时将 `errno` 设置为相同的值。  
   
  `EACCES`  
- 访问被拒绝。  文件权限的设置不允许指定的访问权限。  
+ 访问被拒绝。 文件的权限设置不允许指定的访问权限。  
   
  `ENOENT`  
  未找到文件名或路径。  
   
  `EINVAL`  
- 无效参数。  
+ 参数无效。  
   
- 有关更多信息，请参见 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- 当使用文件时，`_access_s` 函数来确定指定的文件是否存在并且可以根据 `mode`值访问。  在使用目录时，`_access_s` 只确定指定的目录是否存在。  在 [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] 和更高版本的操作系统上，所有目录有读取和写入权限。  
+## <a name="remarks"></a>备注  
+ 与文件一起使用时，`_access_s` 函数确定指定的文件是否存在，并且可以按 `mode` 的值指定的方式访问。 与目录一起使用时，`_access_s` 仅确定指定的目录是否存在。 在 [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] 和更高版本的操作系统中，所有目录都具有读取和写入访问权限。  
   
-|模式值|检查文件。|  
-|---------|-----------|  
-|00|仅存在。|  
+|模式值|文件检查内容|  
+|----------------|---------------------|  
+|00|仅检查是否存在。|  
 |02|写入权限。|  
-|04|读权限。|  
-|06|读取和写入许可。|  
+|04|读取权限。|  
+|06|读取和写入权限。|  
   
- 读取或写入文件的权限不足够确保能打开文件。  例如，如果文件被另一进程锁定，它可能不可访问，即使 `_access_s` 返回 0。  
+ 读取或写入文件的权限不足以确保文件的打开功能。 例如，如果文件由另一个进程锁定，则即使 `_access_s` 返回 0，也可能无法对其进行访问。  
   
- `_waccess_s` 是 `_access_s` 的宽字符版本；`_waccess_s` 的 `path` 参数是宽字符字符串。  除此以外，`_waccess_s` 和 `_access_s` 的行为完全相同。  
+ `_waccess_s` 是 `_access_s` 的宽字符版本，其中 `_waccess_s` 的 `path` 参数是宽字符串。 除此以外，`_waccess_s` 和 `_access_s` 的行为完全相同。  
   
- 这些函数验证其参数。  如果 `path` 为 `NULL` 或 `mode` 不指定有效的模式，无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许继续执行，则这些函数将 `errno` 设置为 `EINVAL`，并返回`EINVAL`。  
+ 这些函数验证其参数。 如果 `path` 为 `NULL` 或 `mode` 未指定有效模式，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 `EINVAL`。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_taccess_s`|`_access_s`|`_access_s`|`_waccess_s`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_access_s`|\<io.h\>|\<errno.h\>|  
-|`_waccess_s`|\<wchar.h\> or \<io.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_access_s`|\<io.h>|\<errno.h>|  
+|`_waccess_s`|\<wchar.h> 或 \<io.h>|\<errno.h>|  
   
-## 示例  
- 示例使用 `_access_s` 检查名为 crt\_access\_s.c 的文件以了解其是否存在，并编写是否允许。  
+## <a name="example"></a>示例  
+ 此示例使用 `_access_s` 来检查名为 crt_access_s.c 的文件，以查看其是否存在以及是否允许写入。  
   
 ```  
 // crt_access_s.c  
@@ -151,15 +168,15 @@ int main( void )
 }  
 ```  
   
-  **文件 crt\_access\_s.c 存在。**  
-**文件 crt\_access\_s.c 没有写权限。**   
-## .NET Framework 等效项  
- <xref:System.IO.FileAccess?displayProperty=fullName>  
+```Output  
+File crt_access_s.c exists.  
+File crt_access_s.c does not have write permission.  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [\_access、\_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [\_chmod、\_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_fstat、\_fstat32、\_fstat64、\_fstati64、\_fstat32i64、\_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_stat、\_wstat 函数](../../c-runtime-library/reference/stat-functions.md)
+ [_access、_waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_stat、_wstat 函数](../../c-runtime-library/reference/stat-functions.md)

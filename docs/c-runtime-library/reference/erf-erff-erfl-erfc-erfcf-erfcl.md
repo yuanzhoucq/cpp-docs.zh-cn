@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 78c12c22f85eb9ba50b1ea5a92f6f3bb171e01a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 48718acb6ad8773f876251962fd4b643993c27e8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
@@ -110,7 +111,7 @@ long double erfcl(
   
  ![错误函数 x](../../c-runtime-library/reference/media/crt_erf_formula.PNG "CRT_erf_formula")  
   
- 将补余高斯误差函数定义为 1 – erf(x)。 `erf` 函数返回一个介于 -1.0 到 1.0 之间的值。 无错误返回。 `erfc` 函数返回一个介于 0 到 2 之间的值。 如果 `x` 对于 `erfc` 而言太大，则将 `errno` 变量设置为 `ERANGE`。  
+ 补余高斯误差函数定义为 1-erf （x)。 `erf` 函数返回一个介于 -1.0 到 1.0 之间的值。 无错误返回。 `erfc` 函数返回一个介于 0 到 2 之间的值。 如果 `x` 对于 `erfc` 而言太大，则将 `errno` 变量设置为 `ERANGE`。  
   
  由于 C++ 允许重载，因此你可以调用采用并返回 `erf` 和 `erfc` 类型的 `float` 和 `long double` 重载。 在 C 程序中，`erf` 和 `erfc` 始终采用并返回 `double`。  
   
@@ -120,10 +121,7 @@ long double erfcl(
 |--------------|---------------------|  
 |`erf`, `erff`, `erfl`, `erfc`, `erfcf`, `erfcl`|\<math.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)

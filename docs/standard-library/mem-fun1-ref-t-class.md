@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::mem_fun1_ref_t
-- std::mem_fun1_ref_t
 - mem_fun1_ref_t
-- std.mem_fun1_ref_t
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 32430ca2b66fc9772c01a29451986403c8d1d4b0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 2a16a4ed9133f3d72562053845a99b58cfe2777c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t 类
@@ -77,7 +76,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
  模板类存储 `_Pm` 的副本，它必须是专用成员对象中指向类 **Type** 的成员函数的指针。 它将其成员函数 `operator()` 定义为返回 ( **left**.\* `_Pm`)( **right**)。  
   
 ## <a name="example"></a>示例  
- 通常不直接使用 `mem_fun1_ref_t` 的构造函数；helper 函数 `mem_fun_ref` 用于调整成员函数。 有关如何使用成员函数适配器的示例，请参阅 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)。  
+ 通常不直接使用 `mem_fun1_ref_t` 的构造函数；helper 函数 `mem_fun_ref` 用于调整成员函数。 有关如何使用成员函数适配器的示例，请参阅 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)。  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<functional>  

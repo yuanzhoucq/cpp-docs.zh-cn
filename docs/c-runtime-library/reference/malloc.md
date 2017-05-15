@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f259e869535e00bf0dd4f18e6a4d8d02e4054685
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="malloc"></a>malloc
@@ -93,7 +94,7 @@ void *malloc(
 |[fputs](../../c-runtime-library/reference/fputs-fputws.md)|[_getdcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)||  
 |[fread](../../c-runtime-library/reference/fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)||  
   
- C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 函数为 `malloc` 设置新的处理程序模式。 新的处理程序模式将指示 `malloc` 是否在失败时调用由 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 设置的新处理程序例程。 默认情况下，`malloc` 在失败时不调用新的处理程序例程来分配内存。 可以替代此默认行为，以便在 `malloc` 无法分配内存时，`malloc` 将以 `new` 运算符由于相同原因失败时的同一方法调用新的处理程序例程。 若要覆盖默认值，请调用`_set_new_mode(1)`早期在程序中或链接到与 NEWMODE。OBJ (请参阅[链接选项](../../c-runtime-library/link-options.md))。  
+ C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 函数为 `malloc` 设置新的处理程序模式。 新的处理程序模式将指示 `malloc` 是否在失败时调用由 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 设置的新处理程序例程。 默认情况下，`malloc` 在失败时不调用新的处理程序例程来分配内存。 可以替代此默认行为，以便在 `malloc` 无法分配内存时，`malloc` 将以 `new` 运算符由于相同原因失败时的同一方法调用新的处理程序例程。 若要重写默认值，调用`_set_new_mode(1)`早期在你的程序或与 NEWMODE 的链接。OBJ (请参阅[链接选项](../../c-runtime-library/link-options.md))。  
   
  当应用程序与调试版的 C 运行时库链接时，`malloc` 将解析为 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。 有关堆在调试过程中如何托管的详细信息，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。  
   
@@ -146,9 +147,6 @@ int main( void )
 Memory space allocated for path name  
 Memory freed  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [内存分配](../../c-runtime-library/memory-allocation.md)   

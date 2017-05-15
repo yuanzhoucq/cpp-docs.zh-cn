@@ -50,14 +50,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c7bf8e09b7af4153bae3bfa0f80c002149ff3ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5875a26dc5758674665fba2fde5b51c2ff53420e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="alloca"></a>_alloca
-在堆栈上分配内存。 此函数已弃用，因为一个更安全版本不可用;请参阅[_malloca](../../c-runtime-library/reference/malloca.md)。  
+在堆栈上分配内存。 此函数已弃用，因为一个更安全版本可用;请参阅[_malloca](../../c-runtime-library/reference/malloca.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -77,7 +78,7 @@ void *_alloca(
  如果无法分配空间，将生成堆栈溢出异常。 堆栈溢出异常不是 C++ 异常，它是结构化异常。 必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而使用 C++ 异常处理。  
   
 ## <a name="remarks"></a>备注  
- `_alloca`分配`size`程序堆栈中的字节。 在调用函数退出 （而不是在分配只是将传递超出范围） 时，将自动释放分配的空间。 因此，不通过返回的指针值`_alloca`作为的参数[免费](../../c-runtime-library/reference/free.md)。  
+ `_alloca`分配`size`从程序堆栈的字节。 在调用函数退出 （而不是在分配只是将传递超出范围） 时，会自动释放分配的空间。 因此，不要将传递返回的指针值`_alloca`的自变量作为[免费](../../c-runtime-library/reference/free.md)。  
   
  在异常处理程序 (EH) 中显式调用 `_alloca` 存在一些限制。 在 x86 类处理器上运行的 EH 例程在自己的内存框架中工作：它们在未基于封闭函数堆栈指针当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，在以下任意方案中显式调用 `_alloca` 会导致在返回至调用 EH 例程时程序失败：  
   
@@ -92,7 +93,7 @@ void *_alloca(
 > [!IMPORTANT]
 >  在 Windows XP 中，如果在 try/catch 块内调用了 `_alloca`，则必须在 catch 块中调用 [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)。  
   
- 除了上述限制，当使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项，`_alloca`中不能使用`__except`块。 有关详细信息，请参阅 [/clr 限制](../../build/reference/clr-restrictions.md)。  
+ 除了上述限制，当使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项，`_alloca`不能在`__except`块。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。  
   
 ## <a name="requirements"></a>要求  
   
@@ -157,9 +158,6 @@ int main()
 ```Output  
 Allocated 1000 bytes of stack at 0x0012FB50  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [内存分配](../../c-runtime-library/memory-allocation.md)   

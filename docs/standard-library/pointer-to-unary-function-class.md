@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- xfunctional/std::pointer_to_unary_function
-- pointer_to_unary_function
-- std.pointer_to_unary_function
-- std::pointer_to_unary_function
+- xfunctional/std::pointer_to_unary
+- pointer_to_unary
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f9e9b21833eb3d8c46d9bdf817a29350a77c22d4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 2089886ff915ce9176c883c9dc552f2a45b5c576
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function 类
@@ -73,7 +72,7 @@ public:
  一元函数指针是一个函数对象，且可能会被传递到期望将一元函数作为参数的任何 C++ 标准库算法，但它不可调适。 若要将其与适配器配合使用（如向其绑定值或与求反器配合使用），则必须将其与可促成这种调适的 **argument_type** 和 **result_type** 嵌套类型一起提供。 `pointer_to_unary_function` 执行的转换允许函数适配器与二元函数指针配合使用。  
   
 ## <a name="example"></a>示例  
- 很少直接使用 `pointer_to_unary_function` 的构造函数。 有关如何声明和使用 `pointer_to_unary_function` 适配器谓词的示例，请参阅帮助程序函数 [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)。  
+ 很少直接使用 `pointer_to_unary_function` 的构造函数。 有关如何声明和使用 `pointer_to_unary_function` 适配器谓词的示例，请参阅帮助程序函数 [ptr_fun](../standard-library/functional-functions.md#ptr_fun)。  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<functional>  

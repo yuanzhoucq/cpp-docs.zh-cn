@@ -1,56 +1,74 @@
 ---
-title: "_onexit、_onexit_m | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_onexit"
-  - "_onexit_m"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_onexit"
-  - "onexit_m"
-  - "onexit"
-  - "_onexit_m"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "onexit 函数"
-  - "注册表, 注册退出例程"
-  - "_onexit_m 函数"
-  - "onexit_m 函数"
-  - "_onexit 函数"
-  - "注册退出例程"
-  - "注册为退出时调用"
+title: "_onexit、_onexit_m | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _onexit
+- _onexit_m
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _onexit
+- onexit_m
+- onexit
+- _onexit_m
+dev_langs:
+- C++
+helpviewer_keywords:
+- onexit function
+- registry, registering exit routines
+- _onexit_m function
+- onexit_m function
+- _onexit function
+- registering exit routines
+- registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _onexit、_onexit_m
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 50070672e990333073f5ad7f7ba604110c3a3cfa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-在退出时间注册一个实例被调用。  
+---
+# <a name="onexit-onexitm"></a>_onexit、_onexit_m
+注册在退出时要调用的例程。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 _onexit_t _onexit(  
@@ -61,29 +79,29 @@ _onexit_t_m _onexit_m(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `function`  
- 在退出时，要调用的函数指针。  
+ 指向在退出时要调用的函数的指针。  
   
-## 返回值  
- 如果成功的话，`_onexit` 返回指向函数的指针，如果没有空间存储函数指针，则返回`NULL`。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则 `_onexit` 将返回一个指向此函数的指针；如果没有可用于存储此函数指针的空间，则为 `NULL`。  
   
-## 备注  
- 当程序正常终止时，`_onexit` 函数传递 \(`function`\) 的地址来调用。   `_onexit` 的成功调用将创建按 LIFO（后进先出）顺序执行的函数的注册。  函数传递给 `_onexit` 不能带参数。  
+## <a name="remarks"></a>备注  
+ 当程序正常终止时，向 `_onexit` 函数传递要调用的函数 (`function`) 的地址。 对 `_onexit` 的后续调用将创建一个函数注册表，其中的函数按 LIFO（后进先出）顺序执行。 传递到 `_onexit` 的函数不能接受参数。  
   
- 这种情况下，从 DLL 的内部调用 `_onexit` 时，在`DllMain` 调用 DLL\_PROCESS\_DETACH 之后，注册`_onexit` 的例程运行在动态链接库上。  
+ 如果从 DLL 范围内调用 `_onexit`，则在使用 DLL_PROCESS_DETACH 调用 `_onexit` 之后，向 `DllMain` 注册的例程将会在 DLL 卸载时运行。  
   
- `_onexit` 是Microsoft扩展。  对于 ANSI 可移植性，请使用 [atexit](../../c-runtime-library/reference/atexit.md)。  函数的 `_onexit_m` 版本在混合模式中使用。  
+ `_onexit` 是 Microsoft 扩展。 若要获得 ANSI 可移植性，请使用 [atexit](../../c-runtime-library/reference/atexit.md)。 该函数的 `_onexit_m` 版本适用于混合模式。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_onexit`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_onexit`|\<stdlib.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_onexit.c  
@@ -128,18 +146,15 @@ int fn4()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 This is executed first.  
 This is executed next.  
 ```  
   
-## .NET Framework 等效项  
- [System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_\_dllonexit](../../c-runtime-library/dllonexit.md)
+ [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [__dllonexit](../../c-runtime-library/dllonexit.md)

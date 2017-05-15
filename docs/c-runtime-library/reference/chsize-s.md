@@ -1,50 +1,67 @@
 ---
-title: "_chsize_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chsize_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "chsize_s"
-  - "_chsize_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_chsize_s 函数"
-  - "chsize_s 函数"
-  - "文件 [C++], 更改大小"
+title: "_chsize_s | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chsize_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- chsize_s
+- _chsize_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], changing size
+- chsize_s function
+- _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _chsize_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: eb8292d70a77a5901c710349d6912e46cfda8f63
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-更改文件的大小。  [\_chsize](../../c-runtime-library/reference/chsize.md)[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述）。  
+---
+# <a name="chsizes"></a>_chsize_s
+更改文件大小。 这是 [_chsize](../../c-runtime-library/reference/chsize.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 errno_t _chsize_s(   
@@ -53,42 +70,36 @@ errno_t _chsize_s(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fd`  
- 引用开启文件的描述符。  
+ 引用打开的文件的文件描述符。  
   
  `size`  
  文件的新长度（以字节为单位）。  
   
-## 返回值  
- 如果更改成功，文件大小，`_chsize_s` 返回值 0。  非零返回值指示错误：返回值为 `EACCES` ，如果指定的文件锁定访问，`EBADF` ，如果指定的文件改为只读或说明符无效，`ENOSPC` ，如果设备没有留出空间。，或 `EINVAL` ，如果大小小于零。  `errno` 设置为相同的值。  
+## <a name="return-value"></a>返回值  
+ 如果已成功更改文件大小，则 `_chsize_s` 返回值 0。 非零返回值指示错误：如果指定的文件针对访问权限锁定，则返回值是 `EACCES`，如果指定的文件是只读文件或者该描述符无效，则返回值是 `EBADF`，如果设备上没有可用空间，则返回值是 `ENOSPC`，或者如果大小小于零，则返回值是 `EINVAL`。 将 `errno` 设置为相同的值。  
   
- 有关这些属性和其他的更多信息返回代码示例，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `_chsize_s` 函数扩展或截断文件与 `fd` 为 `size`的指定长度。  文件绑定中打开允许写入的模式。  null 字符 \(“\\ 0 "\) 追加，如果文件是扩展。  如果文件被截断，缩短从文件的结尾的所有数据。文件的原始长度的丢失。  
+## <a name="remarks"></a>备注  
+ `_chsize_s` 函数扩展或截断与 `fd` 关联的文件，以达到 `size` 所指定的长度。 必须在允许写入的模式下打开文件。 如果扩展该文件，将追加 Null 字符 ('\0')。 如果文件被截断，则从缩短的文件的末尾到文件原始长度的所有数据都将丢失。  
   
- `_chsize_s` 大于 4 GB 一个 64 位整数作为文件的大小，并可以处理大文件大小。  `_chsize` 仅限于 32 位文件大小。  
+ `_chsize_s` 采用 64 位整数作为文件大小，因此可以处理大于 4 GB 的文件大小。 `_chsize` 限制为 32 位文件大小。  
   
- 此函数验证其参数。  如果 `fd` 不是一个有效的文件说明符或范围小于零，无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  
+ 此函数验证其参数。 如果 `fd` 不是有效的文件描述符或大小小于零，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_chsize_s`|\<io.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_chsize_s`|\<io.h>|\<errno.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 等效项  
-  
--   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
-  
--   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [\_chsize](../../c-runtime-library/reference/chsize.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [\_creat、\_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_chsize](../../c-runtime-library/reference/chsize.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)

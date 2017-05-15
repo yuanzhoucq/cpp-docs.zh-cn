@@ -53,10 +53,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 99698cf158118a876a3bb78edaaa52f2b9177d0a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a0d8c456f20fc048bab91ec5bc9e1639b93adb6d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT、_ASSERTE、_ASSERT_EXPR 宏
@@ -86,11 +87,11 @@ _ASSERTE(
  要显示为报告一部分的宽字符串。  
   
 ## <a name="remarks"></a>备注  
- `_ASSERT_EXPR`、 `_ASSERT` 和 `_ASSERTE` 宏为应用程序提供了一种简洁明了的机制，用于在调试过程中检查假设。 它们非常灵活，因为无需包含在 `#ifdef` 语句中，可防止在零售版本的应用程序中调用它们。 这种灵活性使用 [_DEBUG](../../c-runtime-library/debug.md) 宏来实现。 `_ASSERT_EXPR``_ASSERT` 和 `_ASSERTE` 仅当在编译时定义 `_DEBUG` 时才可用。 未定义 `_DEBUG` 时，会在预处理过程中删除对这些宏的调用。  
+ `_ASSERT_EXPR`、 `_ASSERT` 和 `_ASSERTE` 宏为应用程序提供了一种简洁明了的机制，用于在调试过程中检查假设。 它们非常灵活，因为无需包含在 `#ifdef` 语句中，可防止在零售版本的应用程序中调用它们。 这种灵活性使用 [_DEBUG](../../c-runtime-library/debug.md) 宏来实现。 `_ASSERT_EXPR`、 `_ASSERT` 和 `_ASSERTE` 仅当在编译时定义 `_DEBUG` 时才可用。 未定义 `_DEBUG` 时，会在预处理过程中删除对这些宏的调用。  
   
- `_ASSERT_EXPR`、`_ASSERT` 和 `_ASSERTE` 会计算其 `booleanExpression` 参数，在结果为 `false` (0) 时，它们会打印诊断消息并调用 [_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 以生成调试报告。 `_ASSERT` 宏会打印简单的诊断消息，  `_ASSERTE` 会在消息中包含失败表达式的字符串表示形式，而 `_ASSERT_EXPR` 会在诊断消息中包含 `message` 字符串。 这些宏在 `booleanExpression` 的计算结果不为零时不执行任何操作。  
+ `_ASSERT_EXPR`、 `_ASSERT` 和 `_ASSERTE` 会计算其 `booleanExpression` 参数，在结果为 `false` (0) 时，它们会打印诊断消息并调用 [_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 以生成调试报告。 `_ASSERT` 宏会打印简单的诊断消息，  `_ASSERTE` 会在消息中包含失败表达式的字符串表示形式，而 `_ASSERT_EXPR` 会在诊断消息中包含 `message` 字符串。 这些宏在 `booleanExpression` 的计算结果不为零时不执行任何操作。  
   
- `_ASSERT_EXPR`、`_ASSERT` 和 `_ASSERTE` 会调用 `_CrtDbgReportW`，这会使所有输出都采用宽字符。 `_ASSERTE` 正确打印 `booleanExpression` 中的 Unicode 字符，而 `_ASSERT_EXPR` 打印 `message` 中的 Unicode 字符。  
+ `_ASSERT_EXPR`、 `_ASSERT` 和 `_ASSERTE` 会调用 `_CrtDbgReportW`，这会使所有输出都采用宽字符。 `_ASSERTE` 可在 `booleanExpression` 中正确打印 Unicode 字符， `_ASSERT_EXPR` 可在 `message`中打印 Unicode 字符。  
   
  因为 `_ASSERTE` 宏会指定失败表达式，并且 `_ASSERT_EXPR` 允许你在生成的报告指定消息，所以它们使用户可以识别问题，而不会引用应用程序源代码。 但是存在一个缺点，即 `message` 打印的每个 `_ASSERT_EXPR` 和 `_ASSERTE` 计算的每个表达式都以字符串常量的形式包含在应用程序的输出（调试版本）文件中。 因此，如果对 `_ASSERT_EXPR` 或 `_ASSERTE`进行大量调用，则这些表达式可能会大大增加输出文件的大小。  
   
@@ -102,9 +103,9 @@ _ASSERTE(
   
  当目标是调试消息窗口并且用户单击“重试”  按钮时， `_CrtDbgReportW` 返回 1，从而使 `_ASSERT_EXPR`、 `_ASSERT` 和 `_ASSERTE` 宏启动调试器（前提是启用了实时 (JIT) 调试）。  
   
- 有关报告过程的详细信息，请参阅 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函数。 有关解决断言失败以及将这些宏用作调试错误处理机制的详细信息，请参阅[使用宏进行验证和报告](/visualstudio/debugger/macros-for-reporting)。  
+ 有关报告过程的详细信息，请参阅 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函数。 有关解决断言失败以及将这些宏用作调试错误处理机制的详细信息，请参阅 [使用宏进行验证和报告](/visualstudio/debugger/macros-for-reporting)。  
   
- 除了 `_ASSERT` 宏之外，[assert](../../c-runtime-library/reference/assert-macro-assert-wassert.md) 宏也可以用于验证程序逻辑。 此宏可在这些库的调试和发布版本中使用。 [_RPT、_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 调试宏还可用于生成调试报告，但它们不计算表达式。 `_RPT` 宏会生成简单报告。 `_RPTF` 宏会在生成的报告中包含源文件以及调用报告宏的位置处的行号。 提供了这些宏的宽字符版本（`_RPTWn`、 `_RPTFWn`）。 宽字符版本与窄字符版本相同，只不过宽字符字符串用于所有字符串参数和输出。  
+ 除了 `_ASSERT` 宏之外， [断言](../../c-runtime-library/reference/assert-macro-assert-wassert.md) 宏可以用于验证程序逻辑。 此宏可在这些库的调试和发布版本中使用。 [_RPT、_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 调试宏还可用于生成调试报告，但它们不计算表达式。 `_RPT` 宏会生成简单报告。 `_RPTF` 宏会在生成的报告中包含源文件以及调用报告宏的位置处的行号。 提供了这些宏的宽字符版本（`_RPTWn`、 `_RPTFWn`）。 宽字符版本与窄字符版本相同，只不过宽字符字符串用于所有字符串参数和输出。  
   
  虽然 `_ASSERT_EXPR`、`_ASSERT` 和 `_ASSERTE` 是宏并且可通过包含 \<crtdbg.h> 来使用，但是在定义 `_DEBUG` 时，应用程序必须与 C 运行时库的调试版本链接，因为这些宏调用其他运行时函数。  
   
@@ -188,9 +189,6 @@ crt_ASSERT_macro.c(58) :
 crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2  
 'I am p1' != 'I am p2'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   

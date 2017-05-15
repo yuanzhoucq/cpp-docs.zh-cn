@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - gamma_distribution
-- std::gamma_distribution
 - random/std::gamma_distribution
-- std::gamma_distribution::reset
 - random/std::gamma_distribution::reset
-- std::gamma_distribution::alpha
 - random/std::gamma_distribution::alpha
-- std::gamma_distribution::beta
 - random/std::gamma_distribution::beta
-- std::gamma_distribution::param
 - random/std::gamma_distribution::param
-- std::gamma_distribution::min
 - random/std::gamma_distribution::min
-- std::gamma_distribution::max
 - random/std::gamma_distribution::max
-- std::gamma_distribution::operator()
 - random/std::gamma_distribution::operator()
-- std::gamma_distribution::param_type
 - random/std::gamma_distribution::param_type
-- std::gamma_distribution::param_type::alpha
 - random/std::gamma_distribution::param_type::alpha
-- std::gamma_distribution::param_type::beta
 - random/std::gamma_distribution::param_type::beta
-- std::gamma_distribution::param_type::operator==
 - random/std::gamma_distribution::param_type::operator==
-- std::gamma_distribution::param_type::operator!=
 - random/std::gamma_distribution::param_type::operator!=
+- random/std::gamma_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -60,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 0194fbc3e45c270ca7537285c5c6b4e768c65a90
-ms.openlocfilehash: ed2b198b9bed7f67284691ca7ec00d09e17f15f7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4dc6623f129a73bde85ab350777f948bce09c091
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 类
@@ -109,8 +98,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[gamma_distribution::gamma_distribution](#gamma_distribution__gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[gamma_distribution::param_type](#gamma_distribution__param_type)|  
+|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
+|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|  
   
 属性函数 `alpha()` 和 `beta()` 返回存储的分布参数 alpha 和 beta 的各自值。  
   
@@ -214,7 +203,7 @@ Distribution for 10 samples:
   
 **命名空间：** std  
   
-##  <a name="a-namegammadistributiongammadistributiona--gammadistributiongammadistribution"></a><a name="gamma_distribution__gamma_distribution"></a>gamma_distribution::gamma_distribution  
+##  <a name="gamma_distribution"></a>gamma_distribution::gamma_distribution  
 构造分布。  
   
 ```  
@@ -239,7 +228,7 @@ beta
   
 第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
   
-##  <a name="a-namegammadistributionparamtypea--gammadistributionparamtype"></a><a name="gamma_distribution__param_type"></a>gamma_distribution::param_type  
+##  <a name="param_type"></a>gamma_distribution::param_type  
 存储分布的参数。  
   
 ```cpp   

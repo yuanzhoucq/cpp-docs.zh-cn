@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - condition_variable/std::condition_variable_any
+- condition_variable/std::condition_variable_any::condition_variable_any
+- condition_variable/std::condition_variable_any::notify_all
+- condition_variable/std::condition_variable_any::notify_one
+- condition_variable/std::condition_variable_any::wait
+- condition_variable/std::condition_variable_any::wait_for
+- condition_variable/std::condition_variable_any::wait_until
 dev_langs:
 - C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a04164eb30bdb0403f131d64a31b9c7d9cb5656f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c72f22ed2962b3d1a200e99ace2c56d69194c78
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 类
@@ -50,26 +57,26 @@ class condition_variable_any;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[condition_variable_any::condition_variable_any Constructor](#condition_variable_any__condition_variable_any_constructor)|构造 `condition_variable_any` 对象。|  
+|[condition_variable_any](#condition_variable_any)|构造 `condition_variable_any` 对象。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[condition_variable_any::notify_all](#condition_variable_any__notify_all_method)|取消阻止正在等待 `condition_variable_any` 对象的所有线程。|  
-|[condition_variable_any::notify_one](#condition_variable_any__notify_one_method)|取消阻止正在等待 `condition_variable_any` 对象的某个线程。|  
-|[condition_variable_any::wait](#condition_variable_any__wait_method)|阻止线程。|  
-|[condition_variable_any::wait_for](#condition_variable_any__wait_for_method)|阻止某个线程，并设置线程阻止的时间间隔。|  
-|[condition_variable_any::wait_until](#condition_variable_any__wait_until_method)|阻止某个线程，并设置线程阻止的最大时间点。|  
+|[notify_all](#notify_all)|取消阻止正在等待 `condition_variable_any` 对象的所有线程。|  
+|[notify_one](#notify_one)|取消阻止正在等待 `condition_variable_any` 对象的某个线程。|  
+|[等待](#wait)|阻止线程。|  
+|[wait_for](#wait_for)|阻止某个线程，并设置线程阻止的时间间隔。|  
+|[wait_until](#wait_until)|阻止某个线程，并设置线程阻止的最大时间点。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** condition_variable  
+ **标头︰** \<condition_variable >  
   
  **命名空间：** std  
   
-##  <a name="a-nameconditionvariableanyconditionvariableanyconstructora--conditionvariableanyconditionvariableany-constructor"></a><a name="condition_variable_any__condition_variable_any_constructor"></a>  condition_variable_any::condition_variable_any 构造函数  
+##  <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any 构造函数  
  构造 `condition_variable_any` 对象。  
   
 ```
@@ -79,21 +86,21 @@ condition_variable_any();
 ### <a name="remarks"></a>备注  
  如果没有足够的内存，构造函数将抛出包含 `not_enough_memory` 错误代码的 [system_error](../standard-library/system-error-class.md) 对象。 如果由于某些其他资源不可用导致无法构造该对象，则构造函数将抛出包含 `resource_unavailable_try_again` 错误代码的 `system_error` 对象。  
   
-##  <a name="a-nameconditionvariableanynotifyallmethoda--conditionvariableanynotifyall"></a><a name="condition_variable_any__notify_all_method"></a>  condition_variable_any::notify_all  
+##  <a name="notify_all"></a>  condition_variable_any::notify_all  
  取消阻止正在等待 `condition_variable_any` 对象的所有线程。  
   
 ```
 void notify_all() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanynotifyonemethoda--conditionvariableanynotifyone"></a><a name="condition_variable_any__notify_one_method"></a>  condition_variable_any::notify_one  
+##  <a name="notify_one"></a>  condition_variable_any::notify_one  
  取消阻止正在 `condition_variable_any` 对象上等待的某个线程。  
   
 ```
 void notify_one() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanywaitmethoda--conditionvariableanywait"></a><a name="condition_variable_any__wait_method"></a>  condition_variable_any::wait  
+##  <a name="wait"></a>  condition_variable_any::wait  
  阻止线程。  
   
 ```
@@ -112,7 +119,7 @@ void wait(Lock& Lck, Predicate Pred);
  返回 `true` 或 `false` 的任何表达式。  
   
 ### <a name="remarks"></a>备注  
- 第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 对 `condition_variable_any` 对象发出信号。 它还可错误唤醒。  
+ 第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 对 `condition_variable_any` 对象发出信号。 它还可错误唤醒。  
   
  第二种方法实际上执行以下代码。  
   
@@ -121,7 +128,7 @@ while (!Pred())
     wait(Lck);
 ```    
   
-##  <a name="a-nameconditionvariableanywaitformethoda--conditionvariableanywaitfor"></a><a name="condition_variable_any__wait_for_method"></a>  condition_variable_any::wait_for  
+##  <a name="wait_for"></a>  condition_variable_any::wait_for  
  阻止某个线程，并设置线程阻止的时间间隔。  
   
 ```
@@ -148,7 +155,7 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
  第二种方法返回值 `Pred`。  
   
 ### <a name="remarks"></a>备注  
- 第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 对 `condition_variable_any` 对象发出信号，或直到已用 `Rel_time` 时间间隔。 它还可错误唤醒。  
+ 第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 对 `condition_variable_any` 对象发出信号，或直到已用 `Rel_time` 时间间隔。 它还可错误唤醒。  
   
  第二种方法实际上执行以下代码。  
   
@@ -160,7 +167,7 @@ while(!Pred())
 return true;
 ```  
   
-##  <a name="a-nameconditionvariableanywaituntilmethoda--conditionvariableanywaituntil"></a><a name="condition_variable_any__wait_until_method"></a>  condition_variable_any::wait_until  
+##  <a name="wait_until"></a>  condition_variable_any::wait_until  
  阻止某个线程，并设置线程阻止的最大时间点。  
   
 ```
@@ -199,7 +206,7 @@ void wait_until(
  返回 `bool` 的方法返回值 `Pred`。  
   
 ### <a name="remarks"></a>备注  
- 第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 对 `condition_variable` 对象发出信号，或直到 `Abs_time`。 它还可错误唤醒。  
+ 第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 对 `condition_variable` 对象发出信号，或直到 `Abs_time`。 它还可错误唤醒。  
   
  第二种方法实际上执行以下代码。  
   

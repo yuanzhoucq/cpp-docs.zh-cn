@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>_1 对象
@@ -54,7 +55,7 @@ namespace placeholders {
 ```  
   
 ## <a name="remarks"></a>备注  
- 对象 `_1, _2, ... _M` 是占位符，可在对由 [bind 函数](../standard-library/functional-functions.md#bind_function)返回的对象的函数调用中分别指定第一、第二、...、第 M 个参数。 使用 `_N` 指定评估绑定表达式时第 N 个参数应插入的位置。  
+ 对象`_1, _2, ... _M`占位符指定第一个，第二个，...，月自变量，分别由返回的对象的函数调用中[绑定](../standard-library/functional-functions.md#bind)。 使用 `_N` 指定评估绑定表达式时第 N 个参数应插入的位置。  
   
  在此次实现中，`M` 的值为 20。  
   
@@ -116,6 +117,6 @@ int main()
  **命名空间：** std  
   
 ## <a name="see-also"></a>另请参阅  
- [bind 函数](../standard-library/functional-functions.md#bind_function)   
+ [绑定](../standard-library/functional-functions.md#bind)   
  [is_placeholder 类](../standard-library/is-placeholder-class.md)
 

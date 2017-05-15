@@ -1,78 +1,89 @@
 ---
-title: "equal_to 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::equal_to"
-  - "equal_to"
-  - "xfunctional/std::equal_to"
-  - "std.equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_to 函数"
-  - "equal_to 结构"
+title: "equal_to 结构 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- equal_to
+- xfunctional/std::equal_to
+dev_langs:
+- C++
+helpviewer_keywords:
+- equal_to function
+- equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# equal_to 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bac0d0114b10fc4ac7a83a60f21db5218cb3f1c8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
-二进制预先表明了进行参数的不等于操作 \(`operator==`\)。  
+---
+# <a name="equalto-struct"></a>equal_to 结构
+一个对其参数执行相等运算 (`operator==`) 的二元谓词。  
   
-## 语法  
-  
-```  
-template<class Type = void>  
-   struct equal_to : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator==  
-template<>  
-   struct equal_to<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            == std::forward<Type2>(Right));  
-   };  
+## <a name="syntax"></a>语法  
   
 ```  
+template <class Type = void>  
+struct equal_to : public binary_function<Type, Type, bool>   
+ {  
+    bool operator()(const Type& Left, const Type& Right) const; 
+ };  
+ 
+// specialized transparent functor for operator== 
+template <>  
+struct equal_to<void>  
+ {  
+    template <class T, class U>  
+    auto operator()(T&& Left, U&& Right) const 
+      ->  decltype(std::forward<T>(Left) == std::forward<U>(Right));
+ };  
+```  
   
-#### 参数  
- `Type`, `Type1`, `Type2`  
- 任何支持`operator==` 使用指定或者推导类型的操作数的类型。  
+#### <a name="parameters"></a>参数  
+ `Type`, `T`, `U`  
+ 支持 `operator==` 接受指定或推断类型的操作数的任何类型。  
   
  `Left`  
- 等于运算的左侧操作数。  未指定的模版需要类型`Type`的左值引用参数。  专有模版确实完美地继承了推断类型`Type1`的左值和右值引用参数。  
+ 相等运算的左操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `T` 的左值和右值引用参数。  
   
  `Right`  
- 等运算的右侧操作数。  未指定的模版需要类型`Type`的左值引用参数。  专有模版确实完美地继承了推断类型`Type2`的左值和右值引用参数。  
+ 相等运算的右操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `U` 的左值和右值引用参数。  
   
-## 返回值  
- `Left` `==` `Right` 的结果。  拥有通过`operator==`返回的类型的专有模版确实完美地遵循了结果。  
+## <a name="return-value"></a>返回值  
+ `Left``==``Right` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator==` 返回的类型。  
   
-## 备注  
- `Type`类型的对象必须相等。  这需要对象的集合中定义的`operator==`满足等价关系的数学性质。  所有内置数字和指针类型都满足此要求。  
+## <a name="remarks"></a>备注  
+ `Type` 类型的对象必须可比较相等性。 这要求在对象集上定义的 `operator==` 满足等价关系的数学性质。 所有内置的数字和指针类型都满足此要求。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // functional_equal_to.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -123,7 +134,11 @@ int main( )
 }  
 ```  
   
-  **The vector v1 \= \( 0 1 4 5 8 9 \)**  
-**The vector v2 \= \( \-0 1 \-4 5 \-8 9 \)**  
-**The result of the element\-wise equal\_to comparison**  
-**between v1 & v2 is: \( 1 1 0 1 0 1 \)**
+```Output  
+The vector v1 = ( 0 1 4 5 8 9 )  
+The vector v2 = ( -0 1 -4 5 -8 9 )  
+The result of the element-wise equal_to comparison  
+between v1 & v2 is: ( 1 1 0 1 0 1 )  
+```
+
+

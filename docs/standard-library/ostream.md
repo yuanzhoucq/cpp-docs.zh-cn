@@ -1,72 +1,92 @@
 ---
-title: "&lt;ostream&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<ostream>"
-  - "<ostream>"
-  - "ostream/std::<ostream>"
-  - "std::<ostream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ostream 标头"
+title: '&lt;ostream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<ostream>
+- <ostream>
+- ostream/std::<ostream>
+- std::<ostream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt;ostream&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4b8e9c4f86ac9bab261824c10a8e6d8c3506bc1a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
-定义模板类 [basic\_ostream](../standard-library/basic-ostream-class.md)，此模板类可调解 iostreams 的插入。  此标头还定义了若干相关的操控程序。  （此标头通常包含在另一个 iostream 标头中。  很少会直接包含它。）  
+---
+# <a name="ltostreamgt"></a>&lt;ostream&gt;
+定义模板类 [basic_ostream](../standard-library/basic-ostream-class.md)，此模板类可调解 iostreams 的插入。 此标头还定义了若干相关的操控程序。 （此标头通常包含在另一个 iostream 标头中。 很少会直接包含它。）  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
 #include <ostream>  
   
 ```  
   
-### Typedef  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[ostream](../Topic/ostream.md)|通过专用于 `char` 的 `basic_ostream` 和专用于 `char` 的 `char_traits` 创建类型。|  
-|[wostream](../Topic/wostream.md)|通过专用于 `wchar_t` 的 `basic_ostream` 和专用于 `wchar_t` 的 `char_traits` 创建类型。|  
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|通过专用于 `char` 的 `basic_ostream` 和专用于 `char` 的 `char_traits` 创建类型。|  
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|通过专用于 `wchar_t` 的 `basic_ostream` 和专用于 `wchar_t` 的 `char_traits` 创建类型。|  
   
-### 操控器  
-  
-|||  
-|-|-|  
-|[endl](../Topic/endl.md)|终止行并刷新缓冲区。|  
-|[结尾](../Topic/ends%20\(Standard%20C++%20Library\).md)|终止字符串。|  
-|[flush](../Topic/flush%20\(Standard%20C++%20Library\).md)|刷新缓冲区。|  
-||将 `basic_ostream` 对象参数左侧的值与 `basic_ostream` 对象参数右侧的值进行交换。|  
-  
-### 运算符  
+### <a name="manipulators"></a>操控器  
   
 |||  
 |-|-|  
-|[运算符 \<\<](../Topic/operator%3C%3C%20\(%3Costream%3E\).md)|将各种类型写入流。|  
+|[endl](../standard-library/ostream-functions.md#endl)|终止行并刷新缓冲区。|  
+|[ends](../standard-library/ostream-functions.md#ends)|终止字符串。|  
+|[flush](../standard-library/ostream-functions.md#flush)|刷新缓冲区。|  
+|[swap](../standard-library/ostream-functions.md#swap)|将 `basic_ostream` 对象参数左侧的值与 `basic_ostream` 对象参数右侧的值进行交换。|  
   
-### 类  
+### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[basic\_ostream](../standard-library/basic-ostream-class.md)|模板类描述控制元素和编码对象插入到流缓存区中的对象。|  
+|[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|将各种类型写入流。|  
   
-## 请参阅  
+### <a name="classes"></a>类  
+  
+|||  
+|-|-|  
+|[basic_ostream](../standard-library/basic-ostream-class.md)|模板类描述控制元素和编码对象插入到流缓存区中的对象。|  
+  
+## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   
  [iostreams 约定](../standard-library/iostreams-conventions.md)
+
+
+
+

@@ -1,55 +1,72 @@
 ---
-title: "_chmod、_wchmod | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chmod"
-  - "_wchmod"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_chmod"
-  - "_wchmod"
-  - "wchmod"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_chmod 函数"
-  - "_wchmod 函数"
-  - "chmod 函数"
-  - "文件权限 [C++]"
-  - "文件 [C++], 更改权限"
-  - "wchmod 函数"
+title: "_chmod、_wchmod | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chmod
+- _wchmod
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _chmod
+- _wchmod
+- wchmod
+dev_langs:
+- C++
+helpviewer_keywords:
+- _chmod function
+- wchmod function
+- file permissions [C++]
+- chmod function
+- files [C++], changing permissions
+- _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _chmod、_wchmod
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c0db1569ea6a90892b7eb3d0d8f08f3c9fcf7115
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="chmod-wchmod"></a>_chmod、_wchmod
 更改文件权限设置。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -63,21 +80,21 @@ int _wchmod(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `filename`  
- 存在文件的名称。  
+ 现有文件的名称。  
   
  `pmode`  
- 文件权限的设置。  
+ 该文件的权限设置。  
   
-## 返回值  
- 如果权限设置更改成功，这些函数返回 0。  返回值– 1 指示失败。  如果找不到指定的文件，`errno` 将设置为 `ENOENT`;如果参数无效，则 `errno` 设置为 `EINVAL`。  
+## <a name="return-value"></a>返回值  
+ 如果成功更改权限设置，这些函数将返回 0。 返回值-1 表示失败。 如果找不到指定的文件，则将 `errno` 设置为 `ENOENT`；如果参数无效，则将 `errno` 设置为 `EINVAL`。  
   
-## 备注  
- `filename` 函数改变由指 `_chmod` 指定的文件权限设置*。*权限控制设置控制文件的读写访问。  整数表达式 `pmode` 包含以下 SYS\\STAT.H定义中的一个或全部清单常数：  
+## <a name="remarks"></a>备注  
+ `_chmod`函数更改指定的文件的权限设置`filename`。 权限设置控制对文件的读取和写入访问权限。 整数表达式 `pmode` 包含在 SYS\Stat.h 中定义的以下清单常量的其中一个或两个。  
   
  `_S_IWRITE`  
- 允许写。  
+ 允许写入。  
   
  `_S_IREAD`  
  允许读取。  
@@ -85,28 +102,28 @@ int _wchmod(
  `_S_IREAD | _S_IWRITE`  
  允许读取和写入。  
   
- 当给定两个常数，则用按位或运算符`OR`联接          `|` \).  如果不授予写权限，此文件是只读的。  注意所有文件始终可读的；生成只写权限是不可能的。  因此，`_S_IWRITE` 和 `_S_IREAD | _S_IWRITE` 是等效的。  
+ 当给定这两个常量时，将使用按位 `OR` 运算符连接它们 ( `|`)。 如果未授予写入权限，则该文件为只读。 注意，所有文件始终具有可读性；不能提供只写权限。 因此，模式 `_S_IWRITE` 和 `_S_IREAD | _S_IWRITE` 是等效的。  
   
- `_wchmod` 是 `_chmod` 的宽字符版本；`_wchmod` 的 `filename` 参数是宽字符字符串。  `_wchmod` 和 `_chmod` 行为相同，否则。  
+ `_wchmod` 是 `_chmod` 的宽字符版本；`filename` 的 `_wchmod` 参数是宽字符字符串。 除此以外，`_wchmod` 和 `_chmod` 的行为完全相同。  
   
- 此函数验证其参数。  如果 `pmode` 不是组合的清单常数也没有并入重写项组常量，函数将会忽略这些。  如果 `filename` 是 `NULL`，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。  如果允许执行继续，`errno`设置为`EINVAL`，并且函数返回\-1。  
+ 此函数验证其参数。 如果 `pmode` 不是清单常量之一的组合或合并了一组替代常量，此函数只需忽略这些。 如果 `filename` 为 `NULL`，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 -1。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|可选标头|  
-|--------|-----------|----------|  
-|`_chmod`|\<io.h\>|\<io.h\>, \<sys\/stat.h\>, \<sys\/types.h\>|  
-|`_wchmod`|\<io.h\> or \<wchar.h\>|\<io.h\>, \<sys\/stat.h\>, \<sys\/types.h\>|  
+|-------------|---------------------|---------------------|  
+|`_chmod`|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
+|`_wchmod`|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_chmod.c  
@@ -170,19 +187,23 @@ int main( void )
 }   
 ```  
   
-  **`行文本。` `行文本。`模式设置为只读的**  
-**拒绝访问。**  
-**模式设置为可读\/可写**   
-## .NET Framework 等效项  
+```Output  
   
--   [System.IO.File::GetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
+A line of text.  
   
--   [System::Security::Permissions::FileIOPermission](https://msdn.microsoft.com/en-us/library/system.security.permissions.fileiopermission.aspx)  
+```  
   
-## 请参阅  
+```Output  
+  
+      A line of text.Mode set to read-only  
+Access is denied.  
+Mode set to read/write  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
- [\_access、\_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [\_creat、\_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_fstat、\_fstat32、\_fstat64、\_fstati64、\_fstat32i64、\_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_stat、\_wstat 函数](../../c-runtime-library/reference/stat-functions.md)
+ [_access、_waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_stat、_wstat 函数](../../c-runtime-library/reference/stat-functions.md)

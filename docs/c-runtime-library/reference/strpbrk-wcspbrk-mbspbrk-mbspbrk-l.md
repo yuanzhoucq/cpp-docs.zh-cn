@@ -1,73 +1,90 @@
 ---
-title: "strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbspbrk"
-  - "wcspbrk"
-  - "_mbspbrk_l"
-  - "strpbrk"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstrpbrk"
-  - "_mbspbrk"
-  - "strpbrk"
-  - "_tcspbrk"
-  - "_ftcspbrk"
-  - "wcspbrk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstrpbrk 函数"
-  - "_ftcspbrk 函数"
-  - "_mbspbrk 函数"
-  - "_mbspbrk_l 函数"
-  - "_tcspbrk 函数"
-  - "字符集 [C++], 扫描字符串以查找字符"
-  - "字符 [C++], 扫描字符串"
-  - "fstrpbrk 函数"
-  - "ftcspbrk 函数"
-  - "mbspbrk 函数"
-  - "mbspbrk_l 函数"
-  - "字符串 [C++], 扫描"
-  - "strpbrk 函数"
-  - "tcspbrk 函数"
-  - "wcspbrk 函数"
+title: "strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbspbrk
+- wcspbrk
+- _mbspbrk_l
+- strpbrk
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstrpbrk
+- _mbspbrk
+- strpbrk
+- _tcspbrk
+- _ftcspbrk
+- wcspbrk
+dev_langs:
+- C++
+helpviewer_keywords:
+- fstrpbrk function
+- _ftcspbrk function
+- _mbspbrk_l function
+- strpbrk function
+- _fstrpbrk function
+- mbspbrk function
+- characters [C++], scanning strings
+- _tcspbrk function
+- wcspbrk function
+- ftcspbrk function
+- character sets [C++], scanning strings for characters
+- strings [C++], scanning
+- tcspbrk function
+- _mbspbrk function
+- mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9eb1dfc77694c9c1b85aa21fe039058facb98c71
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-在指定的字符集扫描字符的字符串。  
+---
+# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
+扫描字符串以查找指定字符集中的字符。  
   
 > [!IMPORTANT]
->  `_mbspbrk` 和 `_mbspbrk_l` 不能在 Windows 运行时执行的应用程序中使用。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  `_mbspbrk` 和 `_mbspbrk_l` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 char *strpbrk(  
@@ -123,9 +140,9 @@ const unsigned char *_mbspbrk_l(
 ); // C++ only  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `str`  
- 以null 终止的搜索字符串。  
+ null 终止的搜索字符串。  
   
  `strCharSet`  
  null 终止的字符集。  
@@ -133,40 +150,40 @@ const unsigned char *_mbspbrk_l(
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 例如，如果两个字符串实参没有相同的字符，返回指向`str`中的`strCharSet`任意字符第一个匹配的指针 或 `NULL` 指针。  
+## <a name="return-value"></a>返回值  
+ 返回指向 `strCharSet` 中的任何字符（属于 `str` 字符集）首次出现位置的指针；如果两个字符串参数没有共同的字符，则返回 `NULL` 指针。  
   
-## 备注  
- `strpbrk` 函数返回指向`str` 中出现的第一个匹配项的指针，该指针属于 `strCharSet`字符集 。  搜索不包括终止空字符。  
+## <a name="remarks"></a>备注  
+ `strpbrk` 函数返回指向 `str` 中的某个字符首次出现位置的指针，该字符属于 `strCharSet` 中的字符集。 搜索不包括终止 null 字符。  
   
- `wcspbrk` 和 `_mbspbrk` 是宽字符，属于 `strpbrk` 的多节字字符版本。  参数和 `wcspbrk` 的返回值是宽字符字符串；`_mbspbrk` 的参数和返回值为多字节字符字符串。  
+ `wcspbrk` 和 `_mbspbrk` 分别是 `strpbrk` 的宽字符及多字节字符版本。 `wcspbrk` 的参数和返回值是宽字符字符串；而 `_mbspbrk` 的则是多字节字符字符串。  
   
- `_mbspbrk`验证其参数。  如果 `str` 或 `strCharSet` 为 `NULL`，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。  如果允许继续执行， `_mbspbrk` 返回 `NULL`并设置`errno` 为 `EINVAL`。  `strpbrk` 和 `wcspbrk` 不验证其参数。  否则这三个函数否则具有相同行为。  
+ `_mbspbrk` 会验证其参数。 如果 `str` 或 `strCharSet` 为 `NULL`，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则 `_mbspbrk` 返回 `NULL`，并将 `errno` 设置为 `EINVAL`。 `strpbrk` 和 `wcspbrk` 不会验证其参数。 否则这三个函数否则具有相同行为。  
   
- `_mbspbrk` 类似于 `_mbscspn`，但 `_mbspbrk` 返回指针而不是类型 [size\_t](../../c-runtime-library/standard-types.md)的值。  
+ `_mbspbrk` 类似于 `_mbscspn`，只不过 `_mbspbrk` 返回一个指针，而不是 [size_t](../../c-runtime-library/standard-types.md) 类型的值。  
   
- 在 C 中，这些函数采用第一个参数的一个 `const` 指针。  在 C\+\+ 中，有两个重载可用。  采用指向 `const` 的指针的重载返回指向 `const` 的指针；采用指向非`const` 的版本的指针返回指向非`const` 的指针。  如果这些函数的 `const` 和非`const` 版本可用，则会定义宏 \_CONST\_CORRECT\_OVERLOADS。  如果这两个 C\+\+ 重载都需要非 `const` 行为，请定义符号 \_CONST\_RETURN。  
+ 在 C 中，这些函数采用第一个参数的一个 `const` 指针。 在 C++ 中，有两个重载可用。 采用指向 `const` 的指针的重载返回指向 `const` 的指针；采用指向非`const` 的版本的指针返回指向非`const` 的指针。 如果这些函数的 `const` 和非`const` 版本可用，则会定义宏 _CONST_CORRECT_OVERLOADS。 如果这两个 C++ 重载都需要非 `const` 行为，请定义符号 _CONST_RETURN。  
   
- 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关更多信息，请参见 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用通过的区域设置参数。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 输出值受区域设置的 `LC_CTYPE` 类别设置的影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用当前区域设置实现与该区域设置相关的行为；带有 `_l` 后缀的版本相同，只不过它使用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|  
-|**无**|**无**|`_mbspbrk_l`|**无**|  
+|**不适用**|**不适用**|`_mbspbrk_l`|**不适用**|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`strpbrk`|\<string.h\>|  
-|`wcspbrk`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strpbrk`|\<string.h>|  
+|`wcspbrk`|\<string.h> 或 \<wchar.h>|  
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_strpbrk.c  
@@ -190,17 +207,20 @@ int main( void )
 }  
 ```  
   
-  **1：3 个人和 2 个男孩吃了 5 头猪**  
-**2：3 个人和 2 个男孩吃了 5 头猪**  
-**3：2 个男孩吃了 5 头猪**  
-**4：5 头猪**   
-## .NET Framework 等效项  
- [System::String::IndexOfAny](https://msdn.microsoft.com/en-us/library/system.string.indexofany.aspx)  
+```Output  
+1: The 3 men and 2 boys ate 5 pigs  
   
-## 请参阅  
+2: 3 men and 2 boys ate 5 pigs  
+  
+3: 2 boys ate 5 pigs  
+  
+4: 5 pigs  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn、wcscspn、\_mbscspn、\_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strchr、wcschr、\_mbschr、\_mbschr\_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
- [strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+ [strcspn、wcscspn、_mbscspn、_mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strchr、wcschr、_mbschr、_mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
+ [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)

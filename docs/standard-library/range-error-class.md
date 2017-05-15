@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f5e834f7a8d03bc539b5f9bbb7af4156744e16fe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 41b99edfa9b99802b2d54b977a17a51678fb2b4d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="rangeerror-class"></a>range_error 类
@@ -56,7 +57,7 @@ public:
 ```  
   
 ## <a name="remarks"></a>备注  
- [what](../standard-library/exception-class.md) 返回的值是 **message**`.`[data](../standard-library/basic-string-class.md#basic_string__data) 的副本。  
+ [what](../standard-library/exception-class.md) 返回的值是 **message**`.`[data](../standard-library/basic-string-class.md#data) 的副本。  
   
 ## <a name="example"></a>示例  
   

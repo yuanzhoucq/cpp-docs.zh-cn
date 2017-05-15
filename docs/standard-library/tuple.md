@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 7771de57070961751e16294bc966e08843baef4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 212b2b5af678bd39b4ecc7d6622c71db20db5a26
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
@@ -60,20 +61,20 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/tuple-operators.md#operator_eq_eq)|比较 `tuple` 对象是否相等|  
-|[operator!=](../standard-library/tuple-operators.md#operator_neq)|比较 `tuple` 对象是否不相等|  
-|[operator<](../standard-library/tuple-operators.md#operator_lt_)|比较 `tuple` 对象是否更小|  
-|[operator<=](../standard-library/tuple-operators.md#operator_lt__eq)|比较 `tuple` 对象是否更小或相等|  
-|[operator>](../standard-library/tuple-operators.md#operator_gt_)|比较 `tuple` 对象是否更大|  
-|[operator>=](../standard-library/tuple-operators.md#operator_gt__eq)|比较 `tuple` 对象是否更大或相等|  
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|比较 `tuple` 对象是否相等|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|比较 `tuple` 对象是否不相等|  
+|[operator<](../standard-library/tuple-operators.md#op_lt)|比较 `tuple` 对象是否更小|  
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|比较 `tuple` 对象是否更小或相等|  
+|[operator>](../standard-library/tuple-operators.md#op_gt)|比较 `tuple` 对象是否更大|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|比较 `tuple` 对象是否更大或相等|  
   
 ### <a name="functions"></a>函数  
   
 |||  
 |-|-|  
-|[get](../standard-library/tuple-functions.md#get_function)|从 `tuple` 对象获取一个元素。|  
-|[make_tuple](../standard-library/tuple-functions.md#make_tuple_function)|从元素值中生成一个 `tuple`。|  
-|[tie](../standard-library/tuple-functions.md#tie_function)|从元素引用中生成一个 `tuple`。|  
+|[get](../standard-library/tuple-functions.md#get)|从 `tuple` 对象获取一个元素。|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|从元素值中生成一个 `tuple`。|  
+|[tie](../standard-library/tuple-functions.md#tie)|从元素引用中生成一个 `tuple`。|  
   
 ## <a name="see-also"></a>另请参阅  
  [\<array>](../standard-library/array.md)

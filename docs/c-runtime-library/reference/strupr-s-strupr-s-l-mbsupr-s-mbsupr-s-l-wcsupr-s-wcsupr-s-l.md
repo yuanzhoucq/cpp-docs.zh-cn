@@ -1,89 +1,106 @@
 ---
-title: "_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strupr_s"
-  - "_strupr_s_l"
-  - "_mbsupr_s"
-  - "_wcsupr_s_l"
-  - "_mbsupr_s_l"
-  - "_wcsupr_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strupr_s"
-  - "mbsupr_s"
-  - "wcsupr_s"
-  - "_mbsupr_s_l"
-  - "mbsupr_s_l"
-  - "wcsupr_s_l"
-  - "_wcsupr_s"
-  - "_tcsupr_s_l"
-  - "_mbsupr_s"
-  - "_tcsupr_s"
-  - "strupr_s_l"
-  - "_wcsupr_s_l"
-  - "_strupr_s"
-  - "_strupr_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsupr_s 函数"
-  - "_mbsupr_s_l 函数"
-  - "_strupr_s 函数"
-  - "_strupr_s_l 函数"
-  - "_tcsupr_s 函数"
-  - "_tcsupr_s_l 函数"
-  - "_wcsupr_s 函数"
-  - "_wcsupr_s_l 函数"
-  - "转换大小写, CRT 函数"
-  - "mbsupr_s 函数"
-  - "mbsupr_s_l 函数"
-  - "字符串转换 [C++], 大小写"
-  - "字符串 [C++], 大小写"
-  - "字符串 [C++], 转换大小写"
-  - "strupr_s 函数"
-  - "strupr_s_l 函数"
-  - "tcsupr_s 函数"
-  - "tcsupr_s_l 函数"
-  - "大写, 将字符串转换为"
-  - "wcsupr_s 函数"
-  - "wcsupr_s_l 函数"
+title: "_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strupr_s
+- _strupr_s_l
+- _mbsupr_s
+- _wcsupr_s_l
+- _mbsupr_s_l
+- _wcsupr_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strupr_s
+- mbsupr_s
+- wcsupr_s
+- _mbsupr_s_l
+- mbsupr_s_l
+- wcsupr_s_l
+- _wcsupr_s
+- _tcsupr_s_l
+- _mbsupr_s
+- _tcsupr_s
+- strupr_s_l
+- _wcsupr_s_l
+- _strupr_s
+- _strupr_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsupr_s_l function
+- strupr_s_l function
+- _wcsupr_s_l function
+- _tcsupr_s_l function
+- mbsupr_s function
+- _wcsupr_s function
+- uppercase, converting strings to
+- tcsupr_s function
+- string conversion [C++], case
+- strupr_s function
+- wcsupr_s_l function
+- _mbsupr_s function
+- _mbsupr_s_l function
+- _strupr_s_l function
+- tcsupr_s_l function
+- strings [C++], case
+- converting case, CRT functions
+- _tcsupr_s function
+- strings [C++], converting case
+- _strupr_s function
+- wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# _strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: da1300ca4ec32d1d771b8a00e0b1cfdf207a58a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-将字符串转换为大写，使用当前区域设置或通过的指定区域设置。  [\_strupr、\_strupr\_l、\_mbsupr、\_mbsupr\_l、\_wcsupr\_l、\_wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) 的这些版本如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md) 所述，其安全得到了增强。  
+---
+# <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l
+通过使用当前区域设置或传入的指定区域设置将字符串转换为大写。 这些版本的 [_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) 具有安全增强功能，如 [CRT 的安全增强功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
   
 > [!IMPORTANT]
->  `_mbsupr_s` 和 `_mbsupr_s_l` 不能在 Windows 运行时执行的应用程序中使用。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  `_mbsupr_s` 和 `_mbsupr_s_l` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 errno_t _strupr_s(  
@@ -142,9 +159,9 @@ errno_t _mbsupr_s_l(
 ); // C++ only  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `str`  
- 大写的字符串。  
+ 大写字符串。  
   
  `numberOfElements`  
  缓冲区的大小。  
@@ -152,44 +169,41 @@ errno_t _mbsupr_s_l(
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 如果成功，则为零；如果失败，则为非零错误代码。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则返回零；如果失败，则返回非零错误代码。  
   
- 这些函数验证其参数。  如果 `str` 是一个 `NULL` 指针，无效参数处理程序将按 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述进行调用。  如果允许执行继续，则函数返回 `EINVAL` 并设置 `errno` 为 `EINVAL`。  如果 `numberOfElements` 比该字符串的长度短，函数仍然返回 `ERANGE` 并将 `errno` 设置为 `ERANGE`。  
+ 这些函数验证其参数。 如果 `str` 是 `NULL` 指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 `EINVAL`，并且将 `errno` 设置为 `EINVAL`。 如果 `numberOfElements` 小于该字符串的长度，则函数返回 `ERANGE`并将 `errno` 设置为 `ERANGE`。  
   
-## 备注  
- `_strupr_s` 函数转换，例如，在 `str` 的所有小写字母转换为大写。  `_wcsupr_s` 是 `_strupr_s`的宽字符版本。  `_mbsupr_s` 是 `_strupr_s`的多字节字符版本。  
+## <a name="remarks"></a>备注  
+ `_strupr_s` 函数将 `str` 中的每个小写字母就地转换为大写。 `_wcsupr_s` 是 `_strupr_s` 的宽字符版本。 `_mbsupr_s` 是`_strupr_s` 的多字节字符版本。  
   
- 转换取决于 `LC_CTYPE` 类别设置区域设置。  其他字符不受影响。  有关`LC_CTYPE`的更多信息, 请参见 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  这些不带 `_l` 后缀的函数使用当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用区域设置通过。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 该转换由区域设置的 `LC_CTYPE` 类别设置确定。 其他字符不受影响。 有关 `LC_CTYPE` 的详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
- 在 C\+\+ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 \(不再需要指定大小参数\)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。  有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
   
- 这些函数的调试版本首先用 0xFD 填充缓冲区。  若要禁用此行为，请使用 [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
+ 这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsupr_s`|`_strupr_s`|`_mbsupr_s`|`_wcsupr_s`|  
 |`_tcsupr_s_l`|`_strupr_s_l`|`_mbsupr_s_l`|`_wcsupr_s_l`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_strupr_s`, `_strupr_s_l`|\<string.h\>|  
-|`_wcsupr_s`, `_wcsupr_s_l`, `_mbsupr_s`, `_mbsupr_s_l`|\<string.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_strupr_s`, `_strupr_s_l`|\<string.h>|  
+|`_wcsupr_s`, `_wcsupr_s_l`, `_mbsupr_s`, `_mbsupr_s_l`|\<string.h> 或 \<wchar.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
- 请参见 [\_strlwr\_s、\_strlwr\_s\_l、\_mbslwr\_s、\_mbslwr\_s\_l、\_wcslwr\_s、\_wcslwr\_s\_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)中的示例。  
+## <a name="example"></a>示例  
+ 请参阅 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md) 中的示例。  
   
-## .NET Framework 等效项  
- [System::String::ToUpper](https://msdn.microsoft.com/en-us/library/system.string.toupper.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [\_strlwr\_s、\_strlwr\_s\_l、\_mbslwr\_s、\_mbslwr\_s\_l、\_wcslwr\_s、\_wcslwr\_s\_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)
+ [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)

@@ -21,6 +21,8 @@
 ### [帮助文件（HTML 帮助）](help-files-html-help.md)
 ### [帮助文件 (WinHelp)](help-files-winhelp.md)
 ### [提示文件](hint-files.md)
+### [属性页 XML 文件](property-page-xml-files.md)
+### [.vcxproj 和 .props 文件结构](vcxproj-file-structure.md)
 ## [使用应用程序向导创建桌面项目](creating-desktop-projects-by-using-application-wizards.md)
 ### [其他语言的向导支持](wizard-support-for-other-languages.md)
 ### [创建自定义向导](creating-a-custom-wizard.md)

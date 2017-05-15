@@ -10,19 +10,20 @@ f1_keywords: []
 ms.assetid: 1d14f312-6f59-4ec7-88ae-95f89a558823
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 14308c0789851af423fd687f88acfe9177d89aff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4f99e943ce0dfa6a8450b795723e9dc209d3770a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 运算符
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>operator!=  
+##  <a name="op_neq"></a>operator!=  
  测试运算符左侧的对象是否不等于右侧的对象。  
   
 ```  
@@ -69,7 +70,7 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="operator_lt_"></a>operator&lt;  
+##  <a name="op_lt"></a>operator&lt;  
  测试运算符左侧的对象是否小于右侧的对象。  
   
 ```  
@@ -117,7 +118,7 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="operator_lt__eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>operator&lt;=  
  测试运算符左侧的对象是否小于或等于右侧的对象。  
   
 ```  
@@ -165,7 +166,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.  
 ```  
   
-##  <a name="operator_eq_eq"></a>operator==  
+##  <a name="op_eq_eq"></a>operator==  
  测试运算符左侧的对象是否等于右侧的对象。  
   
 ```  
@@ -212,7 +213,7 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="operator_gt_"></a>operator&gt;  
+##  <a name="op_gt"></a>operator&gt;  
  测试运算符左侧的对象是否大于右侧的对象。  
   
 ```  
@@ -261,7 +262,7 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="operator_gt__eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>operator&gt;=  
  测试运算符左侧的对象是否大于或等于右侧的对象。  
   
 ```  

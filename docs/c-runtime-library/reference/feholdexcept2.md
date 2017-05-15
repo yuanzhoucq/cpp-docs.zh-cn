@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 210a0a2b353d691916c8f091205518bb67e375df
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feholdexcept"></a>feholdexcept
@@ -65,7 +66,6 @@ ms.lasthandoff: 02/24/2017
 int feholdexcept(  
    fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -73,10 +73,10 @@ int feholdexcept(
  指向 `fenv_t` 对象，以包含浮点环境的副本。  
   
 ## <a name="return-value"></a>返回值  
- 当且仅当函数能够成功启用不间断的浮点异常处理时，返回零。  
+ 当且仅当函数是能够成功启用非停止浮点异常处理，则返回零。  
   
 ## <a name="remarks"></a>备注  
- `feholdexcept` 函数用于存储 `penv` 指向的 `fenv_t` 对象中的当前浮动点环境状态，并设置环境以确保不中断浮点异常执行。 这被称为不间断模式。  此模式将继续，直到使用 [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) 或 [feupdateenv](../../c-runtime-library/reference/feupdateenv.md) 恢复环境。  
+ `feholdexcept` 函数用于存储 `penv` 指向的 `fenv_t` 对象中的当前浮动点环境状态，并设置环境以确保不中断浮点异常执行。 这被称为不间断模式。  此模式将继续，直到使用 [fesetenv](fesetenv1.md) 或 [feupdateenv](../../c-runtime-library/reference/feupdateenv.md) 恢复环境。  
   
  在需要隐藏来自调用方的一个或多个浮点异常的子例程的开头，可以使用此函数。 若要报告异常，只需通过使用 [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md) 清除不需要的异常，然后通过对 `feupdateenv` 的调用结束不间断模式。  
   
@@ -93,5 +93,5 @@ int feholdexcept(
 ## <a name="see-also"></a>另请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [fesetenv](fesetenv1.md)   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

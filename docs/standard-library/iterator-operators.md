@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 636825d8dc49ed0d4d7beaa03328b7a3f20f668e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a369890d41b58fb3865780291822b4e7e045e919
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 运算符
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator+](#operator_add)|  
-|[operator-](#operator-)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|  
+|[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>operator!=  
+##  <a name="op_neq"></a>operator!=  
  测试运算符左侧的迭代器对象是否不等于右侧的迭代器对象。  
   
 ```  
@@ -37,10 +39,10 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  **iterator** 类型的对象。  
   
- ` right`  
+ `right`  
  **iterator** 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -111,7 +113,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>operator==  
+##  <a name="op_eq_eq"></a>operator==  
  测试运算符左侧的迭代器对象是否等于右侧的迭代器对象。  
   
 ```  
@@ -137,10 +139,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  iterator 类型的对象。  
   
- ` right`  
+ `right`  
  iterator 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -149,7 +151,7 @@ bool operator==(
 ### <a name="remarks"></a>备注  
  如果两个迭代器对象对一个容器中的相同元素进行定址，则其中一个迭代器对象等于另一个。 如果两个迭代器指向一个容器中的不同元素，则他们不相等。  
   
- 仅在 ` left` 和 ` right` 都存储同一迭代器时，前两个模板运算符才会返回 true。 仅在 ` left` 和 ` right` 都存储同一流指针时，第三个模板运算符才会返回 true。 第四个模板运算符返回 ` left.equal ( right)`。  
+ 仅在 `left` 和 `right` 都存储同一迭代器时，前两个模板运算符才会返回 true。 仅在 `left` 和 `right` 都存储同一流指针时，第三个模板运算符才会返回 true。 第四个模板运算符返回 ` left.equal ( right)`。  
   
 ### <a name="example"></a>示例  
   
@@ -213,7 +215,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>operator&lt;  
+##  <a name="op_lt"></a>operator&lt;  
  测试运算符左侧的迭代器对象是否小于右侧的迭代器对象。  
   
 ```  
@@ -222,10 +224,10 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  **iterator** 类型的对象。  
   
- ` right`  
+ `right`  
  **iterator** 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -300,7 +302,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>operator&lt;=  
  测试运算符左侧的迭代器对象是否小于或等于右侧的迭代器对象。  
   
 ```  
@@ -309,10 +311,10 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  iterator 类型的对象。  
   
- ` right`  
+ `right`  
  iterator 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -391,7 +393,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>operator&gt;  
+##  <a name="op_gt"></a>operator&gt;  
  测试运算符左侧的迭代器对象是否大于右侧的迭代器对象。  
   
 ```  
@@ -400,10 +402,10 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  iterator 类型的对象。  
   
- ` right`  
+ `right`  
  iterator 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -476,7 +478,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>operator&gt;=  
+##  <a name="op_gt_eq"></a>operator&gt;=  
  测试运算符左侧的迭代器对象是否大于或等于右侧的迭代器对象。  
   
 ```  
@@ -485,10 +487,10 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  iterator 类型的对象。  
   
- ` right`  
+ `right`  
  iterator 类型的对象。  
   
 ### <a name="return-value"></a>返回值  
@@ -567,7 +569,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>operator+  
+##  <a name="op_add"></a>operator+  
  将偏移量添加到迭代器，并返回一个 `move_iterator` 或一个在新偏移位置处对插入元素定址的 `reverse_iterator`。  
   
 ```  
@@ -588,11 +590,11 @@ operator+(
  `_Off`  
  const move_iterator 或 const reverse_iterator 要偏移的位置数。  
   
- ` right`  
+ `right`  
  要偏移的迭代器。  
   
 ### <a name="return-value"></a>返回值  
- 返回 sum ` right` + `_Off`。  
+ 返回 sum `right` + `_Off`。  
   
 ### <a name="example"></a>示例  
   
@@ -643,7 +645,7 @@ The iterator rVPOS1 now points to the fifth element
  in the reversed sequence: 2.  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>operator-  
+##  <a name="operator-"></a>operator-  
  从另一个迭代器中减去一个迭代器并返回差值。  
   
 ```  
@@ -659,19 +661,19 @@ Tdiff operator-(
 ```  
   
 ### <a name="parameters"></a>参数  
- ` left`  
+ `left`  
  迭代器。  
   
- ` right`  
+ `right`  
  迭代器。  
   
 ### <a name="return-value"></a>返回值  
  两个迭代器的差异`.`  
   
 ### <a name="remarks"></a>备注  
- 第一个模板运算符返回 ` left.base() -  right.base()`。  
+ 第一个模板运算符返回 `left.base() - right.base()`。  
   
- 第二个模板运算符返回 ` right.current -  left.current`。  
+ 第二个模板运算符返回 `right.current - left.current`。  
   
  `Tdiff` 由返回表达式的类型决定。 否则，它是 `RandomIterator1::difference_type`。  
   

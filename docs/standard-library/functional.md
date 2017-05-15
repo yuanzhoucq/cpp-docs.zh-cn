@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: dcac506c06aac3c29ba2251af4281a713eec7491
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
@@ -126,22 +127,22 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind_function)|将自变量绑定到可调用对象。|  
-|[bind1st](../standard-library/functional-functions.md#bind1st_function)|一种帮助程序模板类，用于创建适配器，通过将二元函数的第一个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd_function)|一种帮助程序模板类，用于创建适配器，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。|  
-|[bit_and](../standard-library/functional-functions.md#bit_and_function)|返回两个参数的按位逻辑 AND（二元运算符 &）。|  
-|[bit_not](../standard-library/functional-functions.md#bit_not_function)|返回两个参数的按位逻辑求反（二元运算符 ~）。|  
-|[bit_or](../standard-library/functional-functions.md#bit_or_function)|返回两个参数的按位逻辑 OR（运算符 |）。|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor_function)|返回两个参数的按位逻辑 XOR（二元运算符 ^）。|  
-|[cref](../standard-library/functional-functions.md#cref_function)|从变量构造常量 `reference_wrapper`。|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn_function)|生成一个简单的调用包装器。|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun_function)|帮助程序模板函数，在使用指针自变量进行初始化的情况下，用来构造成员函数的函数对象适配器。|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)|帮助程序模板函数，在使用引用自变量进行初始化的情况下，用来构造成员函数的函数对象适配器。|  
-|[not1](../standard-library/functional-functions.md#not1_function)|返回一元谓词的补集。|  
-|[not2](../standard-library/functional-functions.md#not2_function)|返回二元谓词的补集。|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)|帮助程序模板函数，用于将一元和二元函数指针分别转换为一元和二元自适应函数。|  
-|[ref](../standard-library/functional-functions.md#ref_function)|从变量构造常量 `reference_wrapper` 。|  
-|[swap](../standard-library/functional-functions.md#swap_function)|交换两个 `function` 对象。|  
+|[bind](../standard-library/functional-functions.md#bind)|将自变量绑定到可调用对象。|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|一种帮助程序模板类，用于创建适配器，通过将二元函数的第一个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|一种帮助程序模板类，用于创建适配器，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|返回两个参数的按位逻辑 AND（二元运算符 &）。|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|返回两个参数的按位逻辑求反（二元运算符 ~）。|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|返回两个参数的按位逻辑 OR（运算符 |）。|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|返回两个参数的按位逻辑 XOR（二元运算符 ^）。|  
+|[cref](../standard-library/functional-functions.md#cref)|从变量构造常量 `reference_wrapper`。|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|生成一个简单的调用包装器。|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|帮助程序模板函数，在使用指针自变量进行初始化的情况下，用来构造成员函数的函数对象适配器。|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|帮助程序模板函数，在使用引用自变量进行初始化的情况下，用来构造成员函数的函数对象适配器。|  
+|[not1](../standard-library/functional-functions.md#not1)|返回一元谓词的补集。|  
+|[not2](../standard-library/functional-functions.md#not2)|返回二元谓词的补集。|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|帮助程序模板函数，用于将一元和二元函数指针分别转换为一元和二元自适应函数。|  
+|[ref](../standard-library/functional-functions.md#ref)|从变量构造常量 `reference_wrapper` 。|  
+|[swap](../standard-library/functional-functions.md#swap)|交换两个 `function` 对象。|  
   
 ### <a name="structs"></a>结构  
   
@@ -175,8 +176,8 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/functional-operators.md#operator_eq_eq)|不允许对可调用对象进行相等性比较。|  
-|[operator!=](../standard-library/functional-operators.md#operator_neq)|不允许对可调用对象进行不等性比较。|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|不允许对可调用对象进行相等性比较。|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|不允许对可调用对象进行不等性比较。|  
   
 ## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   

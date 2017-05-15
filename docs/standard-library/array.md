@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
@@ -60,19 +61,19 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/array-operators.md#operator_eq_eq)|数组比较，等于|  
-|[operator!=](../standard-library/array-operators.md#operator_neq)|数组比较，不等于|  
-|[operator\<](../standard-library/array-operators.md#operator_lt_)|数组比较，小于|  
-|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|数组比较，大于或等于|  
-|[operator>](../standard-library/array-operators.md#operator_gt_)|数组比较，大于|  
-|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|数组的比较，小于或等于|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|数组比较，等于|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|数组比较，不等于|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|数组比较，小于|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|数组比较，大于或等于|  
+|[operator>](../standard-library/array-operators.md#op_gt)|数组比较，大于|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|数组的比较，小于或等于|  
   
 ### <a name="functions"></a>函数  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get_function)|获取指定的数组元素。|  
-|[swap](../standard-library/array-functions.md#swap_function)|将一个数组的内容与另一个数组的内容进行交换。|  
+|[get](../standard-library/array-functions.md#get)|获取指定的数组元素。|  
+|[swap](../standard-library/array-functions.md#swap)|将一个数组的内容与另一个数组的内容进行交换。|  
   
 ## <a name="see-also"></a>另请参阅  
  [\<tuple>](../standard-library/tuple.md)   

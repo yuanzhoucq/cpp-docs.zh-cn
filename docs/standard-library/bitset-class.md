@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: 2e78e22c04bac149694a4c4f860074296c7b37fc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8e3518fb40cdd3e8bdd14b5ed64f4cc6dbcb1058
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="bitset-class"></a>bitset 类
@@ -77,59 +78,59 @@ class bitset
   
 |||  
 |-|-|  
-|[bitset](#bitset__bitset)|构造 `bitset\<N>` 类的对象并将位初始化为零、某个指定值或从字符串中的字符获取的值。|  
+|[bitset](#bitset)|构造 `bitset\<N>` 类的对象并将位初始化为零、某个指定值或从字符串中的字符获取的值。|  
   
 ### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
-|[element_type](#bitset__element_type)|一个类型，它是 `bool` 数据类型的同义词且可用于引用 `bitset` 中的元素位。|  
+|[element_type](#element_type)|一个类型，它是 `bool` 数据类型的同义词且可用于引用 `bitset` 中的元素位。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[all](#bitset__all)|测试此 `bitset` 中的所有位以确定它们是否都设置为 `true`。|  
-|[any](#bitset__any)|成员函数测试序列中是否有任何位设置为 1。|  
-|[count](#bitset__count)|成员函数返回位序列中设置的位数。|  
-|[flip](#bitset__flip)|反转 `bitset` 中的所有位的值或反转位于指定位置的单个位。|  
-|[none](#bitset__none)|测试 `bitset` 对象中是否不存在任何已设置为 1 的位。|  
-|[reset](#bitset__reset)|将 `bitset` 中的所有位重置为 0 或将位于指定位置的位重置为 0。|  
-|[set](#bitset__set)|将 `bitset` 中的所有位设置为 1 或将位于指定位置的位设置为 1。|  
-|[size](#bitset__size)|返回 `bitset` 对象中的位数。|  
-|[test](#bitset__test)|测试 `bitset` 中指定位置处的位是否设置为 1。|  
-|[to_string](#bitset__to_string)|将 `bitset` 对象转换为字符串表示形式。|  
-|[to_ullong](#bitset__to_ullong)|将 `bitset` 中的位值的总和作为 `unsigned long long` 返回。|  
-|[to_ulong](#bitset__to_ulong)|将 `bitset` 对象转换为 `unsigned long`，如果将后者用于初始化 `bitset`，则会产生包含的位的序列。|  
+|[all](#all)|测试此 `bitset` 中的所有位以确定它们是否都设置为 `true`。|  
+|[any](#any)|成员函数测试序列中是否有任何位设置为 1。|  
+|[count](#count)|成员函数返回位序列中设置的位数。|  
+|[flip](#flip)|反转 `bitset` 中的所有位的值或反转位于指定位置的单个位。|  
+|[none](#none)|测试 `bitset` 对象中是否不存在任何已设置为 1 的位。|  
+|[reset](#reset)|将 `bitset` 中的所有位重置为 0 或将位于指定位置的位重置为 0。|  
+|[set](#set)|将 `bitset` 中的所有位设置为 1 或将位于指定位置的位设置为 1。|  
+|[size](#size)|返回 `bitset` 对象中的位数。|  
+|[test](#test)|测试 `bitset` 中指定位置处的位是否设置为 1。|  
+|[to_string](#to_string)|将 `bitset` 对象转换为字符串表示形式。|  
+|[to_ullong](#to_ullong)|将 `bitset` 中的位值的总和作为 `unsigned long long` 返回。|  
+|[to_ulong](#to_ulong)|将 `bitset` 对象转换为 `unsigned long`，如果将后者用于初始化 `bitset`，则会产生包含的位的序列。|  
   
 ### <a name="member-classes"></a>成员类  
   
 |||  
 |-|-|  
-|[reference](#bitset__reference)|一个代理类，它提供对 `bitset`（用于将单个位作为 `bitset` 类的 `operator[]` 的帮助程序类进行访问和操作）中包含的位的引用。|  
+|[reference](#reference)|一个代理类，它提供对 `bitset`（用于将单个位作为 `bitset` 类的 `operator[]` 的帮助程序类进行访问和操作）中包含的位的引用。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator!=](#bitset__operator_neq)|测试目标 `bitset` 是否与指定的 `bitset` 不相等。|  
-|[operator&=](#bitset__operator_and_eq)|使用逻辑 `AND` 操作执行位组的按位组合。|  
-|[operator<<](#bitset__operator_lshift)|将 `bitset` 中的位移动到左侧指定数目的位置并将结果返回到新的 `bitset`。|  
-|[operator<<=](#bitset__operator_lshift_eq)|将 `bitset` 中的位移动到左侧指定数目的位置并将结果返回到目标 `bitset`。|  
-|[operator==](#bitset__operator_eq_eq)|测试目标 `bitset` 是否与指定的 `bitset` 相等。|  
-|[operator>>](#bitset__operator_rshift)|将 `bitset` 中的位移动到右侧指定数目的位置并将结果返回到新 `bitset`。|  
-|[operator>>=](#bitset__operator_rshift_eq)|将 `bitset` 中的位移动到右侧指定数目的位置并将结果返回到目标 `bitset`。|  
-|[operator&#91;&#93;](#bitset__operator_at)|如果 `bitset` 可修改，则返回对 `bitset` 中指定位置处的位的引用；否则返回该位置处的位值。|  
-|[operator^=](#bitset__operator_xor_eq)|使用独占 `OR` 操作执行位组的按位组合。|  
-|[operator&#124;=](#bitset__operator_or_eq')|使用非独占 `OR` 操作执行位组的按位组合。|  
-|[operator~](#bitset__operator_dtor)|反转目标 `bitset` 中的所有位并返回结果。|  
+|[operator!=](#op_neq)|测试目标 `bitset` 是否与指定的 `bitset` 不相等。|  
+|[operator&=](#op_and_eq)|使用逻辑 `AND` 操作执行位组的按位组合。|  
+|[operator<<](#op_lshift)|将 `bitset` 中的位移动到左侧指定数目的位置并将结果返回到新的 `bitset`。|  
+|[operator<<=](#op_lshift_eq)|将 `bitset` 中的位移动到左侧指定数目的位置并将结果返回到目标 `bitset`。|  
+|[operator==](#op_eq_eq)|测试目标 `bitset` 是否与指定的 `bitset` 相等。|  
+|[operator>>](#op_rshift)|将 `bitset` 中的位移动到右侧指定数目的位置并将结果返回到新 `bitset`。|  
+|[operator>>=](#op_rshift_eq)|将 `bitset` 中的位移动到右侧指定数目的位置并将结果返回到目标 `bitset`。|  
+|[operator&#91;&#93;](#op_at)|如果 `bitset` 可修改，则返回对 `bitset` 中指定位置处的位的引用；否则返回该位置处的位值。|  
+|[operator^=](#op_xor_eq)|使用独占 `OR` 操作执行位组的按位组合。|  
+|[operator&#124;=](#op_or_eq')|使用非独占 `OR` 操作执行位组的按位组合。|  
+|[operator~](#op_dtor)|反转目标 `bitset` 中的所有位并返回结果。|  
   
 ## <a name="requirements"></a>要求  
  **标头：**\<bitset>  
   
  **命名空间：** std  
   
-##  <a name="bitset__all"></a>  bitset::all  
+##  <a name="all"></a>  bitset::all  
  测试此位组中的所有位以确定它们是否都设置为 true。  
   
 ```  
@@ -139,7 +140,7 @@ bool all() const;
 ### <a name="return-value"></a>返回值  
  如果此集中的所有位都为 true，则返回 true。 如果一个或多个位为 false，则返回 **false**。  
   
-##  <a name="bitset__any"></a>  bitset::any  
+##  <a name="any"></a>  bitset::any  
  测试序列中是否有任何位设置为 1。  
   
 ```  
@@ -200,7 +201,7 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="bitset__bitset"></a>  bitset::bitset  
+##  <a name="bitset"></a>  bitset::bitset  
  构造 `bitset\<N>` 类的对象并将位初始化为零、某个指定值或从字符串中的字符获取的值。  
   
 ```  
@@ -235,35 +236,35 @@ explicit bitset(
  使用其二进制表示法初始化正在构造的位组中的位的无符号整数。  
   
  `str`  
- 由&0; 和&1; 组成的用于初始化位组位值的字符串。  
+ 由 0 和 1 组成的用于初始化位组位值的字符串。  
   
  `_CStr`  
- 由&0; 和&1; 组成的用于初始化位组位值的 C 类型字符串。  
+ 由 0 和 1 组成的用于初始化位组位值的 C 类型字符串。  
   
  `_Pos`  
- 字符串中的字符位置，从左到右计数，且从&0; 开始，用于初始化位组中的第一位。  
+ 字符串中的字符位置，从左到右计数，且从 0 开始，用于初始化位组中的第一位。  
   
  `count`  
  字符串中的字符数，用于提供位组中位的初始值。  
   
  `_Zero`  
- 用于表示&0; 的字符。 默认值为“0”。  
+ 用于表示 0 的字符。 默认值为“0”。  
   
  `_One`  
- 用于表示&1; 的字符。 默认值为“1”。  
+ 用于表示 1 的字符。 默认值为“1”。  
   
 ### <a name="remarks"></a>备注  
  可使用三个构造函数构造 `bitset\<N>` 类的对象：  
   
--   第一个构造函数不接受参数，构造 `bitset\<N>` 类的对象并将所有 N 位初始化为默认值&0;。  
+-   第一个构造函数不接受参数，构造 `bitset\<N>` 类的对象并将所有 N 位初始化为默认值 0。  
   
 -   第二个构造函数构造 `bitset\<N>` 类的对象并使用单个 `unsigned long long` 参数初始化所有位。  
   
--   第三个构造函数构造 `bitset\<N>` 类的对象，并将 N 位初始化为与由&0; 和&1; 组成的 c 类型字符字符串中提供的字符相对应的值。 不通过将字符串转换为字符串类型 `bitset<5> b5("01011");` 来调用构造函数  
+-   第三个构造函数构造 `bitset\<N>` 类的对象，并将 N 位初始化为与由 0 和 1 组成的 c 类型字符字符串中提供的字符相对应的值。 不通过将字符串转换为字符串类型 `bitset<5> b5("01011");` 来调用构造函数  
   
  还提供了两个构造函数模板：  
   
--   第一个构造函数模板构造 `bitset\<N>` 类的对象并初始化由&0; 和&1; 组成的字符串中提供的字符中的位。 如果字符串的任何字符为非 0 或非 1，则该构造函数引发 [invalid argument](../standard-library/invalid-argument-class.md) 类的对象。 如果指定的位置 ( `_Pos`) 超出了字符串的长度，则该函数引发 [out_of_range](../standard-library/out-of-range-class.md) 类的对象。 该构造函数只设置位置 `_Pos + j` 处的字符串中的字符为 1 的位组中 *j* 位置处的位。 默认情况下，`_Pos` 是 0。  
+-   第一个构造函数模板构造 `bitset\<N>` 类的对象并初始化由 0 和 1 组成的字符串中提供的字符中的位。 如果字符串的任何字符为非 0 或非 1，则该构造函数引发 [invalid argument](../standard-library/invalid-argument-class.md) 类的对象。 如果指定的位置 ( `_Pos`) 超出了字符串的长度，则该函数引发 [out_of_range](../standard-library/out-of-range-class.md) 类的对象。 该构造函数只设置位置 `_Pos + j` 处的字符串中的字符为 1 的位组中 *j* 位置处的位。 默认情况下，`_Pos` 是 0。  
   
 -   第二个构造函数模板与第一个相似，但是包含用于指定要初始化的位数的其他参数 ( `count`)。 它还拥有两个可选参数，即 `_Zero` 和 `_One`，用于指示 `str` 中的哪些字符要分别转译为表示 0 位或 1 位。  
   
@@ -342,7 +343,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).  
 ```  
   
-##  <a name="bitset__count"></a>  bitset::count  
+##  <a name="count"></a>  bitset::count  
  返回位序列中设置的位数。  
   
 ```  
@@ -397,7 +398,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.  
 ```  
   
-##  <a name="bitset__element_type"></a>  bitset::element_type  
+##  <a name="element_type"></a>  bitset::element_type  
  一个类型，它是 `bool` 数据类型的同义词且可用于引用位组中的元素位。  
   
 ```  
@@ -452,7 +453,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.  
 ```  
   
-##  <a name="bitset__flip"></a>  bitset::flip  
+##  <a name="flip"></a>  bitset::flip  
  反转位组中的所有位的值或反转位于指定位置的单个位。  
   
 ```  
@@ -521,7 +522,7 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.  
 ```  
   
-##  <a name="bitset__none"></a>  bitset::none  
+##  <a name="none"></a>  bitset::none  
  测试位组对象中是否不存在任何已设置为 1 的位。  
   
 ```  
@@ -576,7 +577,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="bitset__operator_neq"></a>  bitset::operator!=  
+##  <a name="op_neq"></a>  bitset::operator!=  
  测试目标位组是否与指定的位组不相等。  
   
 ```  
@@ -634,7 +635,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="bitset__operator_and_eq"></a>  bitset::operator&amp;=  
+##  <a name="op_and_eq"></a>  bitset::operator&amp;=  
  使用 **AND** 逻辑操作执行位组的按位组合。  
   
 ```  
@@ -697,7 +698,7 @@ After bitwise AND combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
 
-##  <a name="bitset__operator_lshift"></a> bitset::operator\<\<    
+##  <a name="op_lshift"></a> bitset::operator\<\<    
   
 将位组中的位向左侧移动指定数目的位置并将结果返回到新的位组。  
   
@@ -713,7 +714,7 @@ bitset\<N> operator<<(size_t _Pos) const;
  将位向左侧移动所需数目的位置后的修改位组。  
   
 ### <a name="remarks"></a>备注  
- 成员运算符函数返回 **bitset**( **\*this**) **<<= pos,**，其中 [<<=](#bitset__operator_lshift_eq) 将位组中的位向左侧移动指定数目的位置并将结果返回到目标位组。  
+ 成员运算符函数返回 **bitset**( **\*this**) **<<= pos,**，其中 [<<=](#op_lshift_eq) 将位组中的位向左侧移动指定数目的位置并将结果返回到目标位组。  
   
 ### <a name="example"></a>示例  
   
@@ -746,7 +747,7 @@ int main( )
 }  
 ```  
   
-##  <a name="bitset__operator_lshift_eq"></a>  bitset::operator&lt;&lt;=  
+##  <a name="op_lshift_eq"></a>  bitset::operator&lt;&lt;=  
  将位组中的位向左侧移动指定数目的位置并将结果返回到目标位组。  
   
 ```  
@@ -789,7 +790,7 @@ After shifting the bits 2 positions to the left,
  the target bitset b1 becomes: ( 11100 ).  
 ```  
   
-##  <a name="bitset__operator_eq_eq"></a>  bitset::operator==  
+##  <a name="op_eq_eq"></a>  bitset::operator==  
  测试目标位组是否与指定的位组相等。  
   
 ```  
@@ -846,7 +847,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="bitset__operator_rshift"></a>  bitset::operator&gt;&gt;  
+##  <a name="op_rshift"></a>  bitset::operator&gt;&gt;  
  将位组中的位向右侧移动指定数目的位置并将结果返回到新的位组。  
   
 ```  
@@ -896,7 +897,7 @@ After shifting the bits 1 position to the right,
  the bitset b3 is: ( 01110 ).  
 ```  
   
-##  <a name="bitset__operator_rshift_eq"></a>  bitset::operator&gt;&gt;=  
+##  <a name="op_rshift_eq"></a>  bitset::operator&gt;&gt;=  
  将位组中的位向右侧移动指定数目的位置并将结果返回到目标位组。  
   
 ```  
@@ -940,7 +941,7 @@ After shifting the bits 2 positions to the right,
  the target bitset b1 becomes: ( 00111 ).  
 ```  
   
-##  <a name="bitset__operator_at"></a>  bitset::operator[]  
+##  <a name="op_at"></a>  bitset::operator[]  
  如果位组可修改，则返回对位组中指定位置处的位的引用；否则返回该位置处的位值。  
   
 ```  
@@ -981,7 +982,7 @@ int main( )
 }  
 ```  
   
-##  <a name="bitset__operator_xor_eq"></a>  bitset::operator^=  
+##  <a name="op_xor_eq"></a>  bitset::operator^=  
  使用独占 `OR` 操作执行位组的按位组合。  
   
 ```  
@@ -1043,7 +1044,7 @@ After bitwise exclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="bitset__operator_or_eq"></a>  bitset::operator&#124;=  
+##  <a name="op_or_eq"></a>  bitset::operator&#124;=  
  使用非独占 `OR` 操作执行位组的按位组合。  
   
 ```  
@@ -1106,7 +1107,7 @@ After bitwise inclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="bitset__operator_dtor"></a>  bitset::operator~  
+##  <a name="op_dtor"></a>  bitset::operator~  
  反转目标位组中的所有位并返回结果。  
   
 ```  
@@ -1149,7 +1150,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).  
 ```  
   
-##  <a name="bitset__reference"></a>  bitset::reference  
+##  <a name="reference"></a>  bitset::reference  
  一个代理类，它提供对位组（用于将单个位作为位组类的 `operator[]` 的帮助程序类进行访问和操作）中包含的位的引用。  
   
 ```  
@@ -1267,7 +1268,7 @@ After flipping the value of the bit at position 4 in bitset b2,
 After a second flip, the value of the position 4 bit in b2 is now: 1.  
 ```  
   
-##  <a name="bitset__reset"></a>  bitset::reset  
+##  <a name="reset"></a>  bitset::reset  
  将位组中的所有位重置为 0 或将位于指定位置的位重置为 0。  
   
 ```  
@@ -1323,7 +1324,7 @@ The collecion of bits obtained from resetting all
  the elements of the bitset b1 is: ( 00000 )  
 ```  
   
-##  <a name="bitset__set"></a>  bitset::set  
+##  <a name="set"></a>  bitset::set  
  将位组中的所有位设置为 1 或将位于指定位置的位设置为 1。  
   
 ```   
@@ -1385,7 +1386,7 @@ The collecion of bits obtained from setting all the
  elements of the bitset b1 is: ( 11111 )  
 ```  
   
-##  <a name="bitset__size"></a>  bitset::size  
+##  <a name="size"></a>  bitset::size  
  返回 bitset 对象中的位数。  
   
 ```  
@@ -1426,7 +1427,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.  
 ```  
   
-##  <a name="bitset__test"></a>  bitset::test  
+##  <a name="test"></a>  bitset::test  
  测试位组中指定位置处的位是否设置为 1。  
   
 ```  

@@ -6,13 +6,33 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- complex/std::abs
+- complex/std::arg
+- complex/std::conj
+- complex/std::cos
+- complex/std::cosh
+- complex/std::exp
+- complex/std::imag
+- complex/std::log
+- complex/std::log10
+- complex/std::norm
+- complex/std::polar
+- complex/std::pow
+- complex/std::real
+- complex/std::sin
+- complex/std::sinh
+- complex/std::sqrt
+- complex/std::tan
+- complex/std::tanh
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
 caps.latest.revision: 14
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9f14b30f38f01570db9a285a94871fc8b1a3aa39
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 928ed213f4605ea1b39d2d5cf92673bc055aaf4a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函数
@@ -25,7 +45,7 @@ ms.lasthandoff: 02/24/2017
 |[real](#real)|[sin](#sin)|[sinh](#sinh)|
 |[sqrt](#sqrt)|[tan](#tan)|[tanh](#tanh)|  
   
-##  <a name="a-nameabsa--abs"></a><a name="abs"></a>  abs  
+##  <a name="abs"></a>  abs  
  计算复数的模数。  
   
 ```  
@@ -34,7 +54,7 @@ Type abs(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定取模的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -108,7 +128,7 @@ Argument of c2 is recovered from c2 using:
 The complex numbers c2 & c3 have the same principal arguments.  
 ```  
   
-##  <a name="a-namearga--arg"></a><a name="arg"></a>  arg  
+##  <a name="arg"></a>  arg  
  从复数中提取自变量。  
   
 ```  
@@ -117,14 +137,14 @@ Type arg(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定参数的复数。  
   
 ### <a name="return-value"></a>返回值  
  复数的参数。  
   
 ### <a name="remarks"></a>备注  
- 参数是在复平面的正实轴中所进行的复矢量的角度。 对于复数 *a + bi*，参数等于反正切值( *b/a*) *。* 该角度从正实轴以逆时针方向测量时为正值，以顺时针方向测量时则为负值。 主体值大于 –pi 且小于或等于 +pi。  
+ *参数*是复杂向量可使与复平面中的正实际轴的角度。 对于复数*a + bi*，该参数是否等于反正切值 (*b / a*)。 该角度从正实轴以逆时针方向测量时为正值，以顺时针方向测量时则为负值。 主体的值为大于-pi 且小于于或等于 + pi。  
   
 ### <a name="example"></a>示例  
   
@@ -191,7 +211,7 @@ Argument of c2 is recovered from c2 using:
 The complex numbers c2 & c3 have the same principal arguments.  
 ```  
   
-##  <a name="a-nameconja--conj"></a><a name="conj"></a>  conj  
+##  <a name="conj"></a>  conj  
  返回复数的复数共轭。  
   
 ```  
@@ -200,14 +220,14 @@ complex<Type> conj(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要返回的复共轭的复数。  
   
 ### <a name="return-value"></a>返回值  
  输入复数的复共轭。  
   
 ### <a name="remarks"></a>备注  
- 复数的复共轭 *a + bi* 为 *a – bi*。 复数及其共轭的乘积是数 *a*2 + *b*2 的 norm。  
+ 复数的复数共轭*a + bi*是*a-bi*。 复数及其共轭的乘积是数 *a*2 + *b*2 的 norm。  
   
 ### <a name="example"></a>示例  
   
@@ -262,7 +282,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25  
 ```  
   
-##  <a name="a-namecosa--cos"></a><a name="cos"></a>  cos  
+##  <a name="cos"></a>  cos  
  返回复数的余弦值。  
   
 ```  
@@ -271,7 +291,7 @@ complex<Type> cos(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其余弦的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -349,7 +369,7 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)  
 ```  
   
-##  <a name="a-namecosha--cosh"></a><a name="cosh"></a>  cosh  
+##  <a name="cosh"></a>  cosh  
  返回复数的双曲余弦值。  
   
 ```  
@@ -358,7 +378,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其双曲余弦的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -436,7 +456,7 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)  
 ```  
   
-##  <a name="a-nameexpa--exp"></a><a name="exp"></a>  exp  
+##  <a name="exp"></a>  exp  
  返回复数的指数函数。  
   
 ```  
@@ -445,7 +465,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其指数的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -504,7 +524,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameimaga--imag"></a><a name="imag"></a>  imag  
+##  <a name="imag"></a>  imag  
  提取复数的虚分量。  
   
 ```  
@@ -513,7 +533,7 @@ Type imag(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要提取其实部的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -552,7 +572,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.  
 ```  
   
-##  <a name="a-nameloga--log"></a><a name="log"></a>  log  
+##  <a name="log"></a>  log  
  返回复数的自然对数。  
   
 ```  
@@ -561,7 +581,7 @@ complex<Type> log(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其自然对数的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -618,7 +638,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namelog10a--log10"></a><a name="log10"></a>  log10  
+##  <a name="log10"></a>  log10  
  返回复数的以 10 为底的对数。  
   
 ```  
@@ -627,7 +647,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定以 10 为底的对数的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -684,7 +704,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namenorma--norm"></a><a name="norm"></a>  norm  
+##  <a name="norm"></a>  norm  
  提取复数的范数。  
   
 ```  
@@ -693,7 +713,7 @@ Type norm(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其 norm 的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -763,7 +783,7 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.  
 ```  
   
-##  <a name="a-namepolara--polar"></a><a name="polar"></a>  polar  
+##  <a name="polar"></a>  polar  
  返回以笛卡尔坐标形式表示的，对应于指定模数和自变量的复数。  
   
 ```  
@@ -782,7 +802,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
  极坐标视图中指定的复数的笛卡尔视图。  
   
 ### <a name="remarks"></a>备注  
- 复数的极坐标视图提供了取模 *r* 和参数，其中这些参数与与实部和虚部笛卡尔组件相关（*a* 和 *b* 通过公式 *a* = r \* cos (  ) 和 b = *r* \* sin () *）。*  
+ 复数的极坐标图形式提供取模*r*和自变量*p*，这些参数将与实部和虚部的笛卡尔组件和*b*公式通过 = r \* cos *p*和*b* = *r* \* sin *p*。  
   
 ### <a name="example"></a>示例  
   
@@ -836,7 +856,7 @@ Argument of c2 is recovered from c2 using:
  arg ( c2 ) = 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="a-namepowa--pow"></a><a name="pow"></a>  pow  
+##  <a name="pow"></a>  pow  
  计算通过进行底数为复数的另一个复数次幂运算获得的复数。  
   
 ```  
@@ -977,7 +997,7 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.  
 ```  
   
-##  <a name="a-namereala--real"></a><a name="real"></a>  real  
+##  <a name="real"></a>  real  
  提取复数的实分量。  
   
 ```  
@@ -986,7 +1006,7 @@ Type real(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要提取其实部的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1025,7 +1045,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.  
 ```  
   
-##  <a name="a-namesina--sin"></a><a name="sin"></a>  sin  
+##  <a name="sin"></a>  sin  
  返回复数的正弦值。  
   
 ```  
@@ -1034,7 +1054,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其正弦的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1043,7 +1063,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 ### <a name="remarks"></a>备注  
  定义复正弦的标识：  
   
- sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) – exp (- *iz*) )  
+ sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )  
   
  sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)  
   
@@ -1112,7 +1132,7 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)  
 ```  
   
-##  <a name="a-namesinha--sinh"></a><a name="sinh"></a>  sinh  
+##  <a name="sinh"></a>  sinh  
  返回复数的双曲正弦值。  
   
 ```  
@@ -1121,7 +1141,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其双曲正弦的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1130,7 +1150,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 ### <a name="remarks"></a>备注  
  定义复双曲正弦的标识：  
   
- sinh ( *z*) = (1/2)\*( exp ( *z*) – exp (- *z*) )  
+ sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )  
   
  sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)  
   
@@ -1199,7 +1219,7 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)  
 ```  
   
-##  <a name="a-namesqrta--sqrt"></a><a name="sqrt"></a>  sqrt  
+##  <a name="sqrt"></a>  sqrt  
  计算复数的平方根。  
   
 ```  
@@ -1208,7 +1228,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  将查找其平方根的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1272,7 +1292,7 @@ The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
  which is 45 degrees.  
 ```  
   
-##  <a name="a-nametana-tan"></a><a name="tan"></a> tan  
+##  <a name="tan"></a> tan  
  返回复数的正切值。  
   
 ```  
@@ -1281,7 +1301,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其正切的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1290,7 +1310,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 ### <a name="remarks"></a>备注  
  定义复正切的标识：  
   
- tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) – exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )  
+ tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )  
   
 ### <a name="example"></a>示例  
   
@@ -1357,7 +1377,7 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)  
 ```  
   
-##  <a name="a-nametanha--tanh"></a><a name="tanh"></a>  tanh  
+##  <a name="tanh"></a>  tanh  
  返回复数的双曲正切值。  
   
 ```  
@@ -1366,7 +1386,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 ```  
   
 ### <a name="parameters"></a>参数  
- ` complexNum`  
+ `complexNum`  
  要确定其双曲正切的复数。  
   
 ### <a name="return-value"></a>返回值  
@@ -1375,7 +1395,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 ### <a name="remarks"></a>备注  
  定义复双曲余切的标识：  
   
- tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) – exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )  
+ tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )  
   
 ### <a name="example"></a>示例  
   

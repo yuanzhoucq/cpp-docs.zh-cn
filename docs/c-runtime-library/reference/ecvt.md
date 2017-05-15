@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a0da341d7dd704c9c1b455c5b3e2e060ba6a3e07
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c3992066b5b305a7b9de6ef47c6ba42e15da2518
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ecvt"></a>_ecvt
@@ -136,9 +137,6 @@ int main( void )
 ```Output  
 source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   

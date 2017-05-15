@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 187561adb3c524e12a851e0537859f0be942be17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 08d76a2e7fb30ffcef7e8fb8b96b5bf42a1454c6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead、_ismbblead_l
@@ -91,7 +92,7 @@ int _ismbblead_l(
  如果整数 `c` 为一个多字节字符的第一个字节，则返回一个非零值。  
   
 ## <a name="remarks"></a>备注  
- 多字节字符由前导字节后跟尾随字节构成。 通过在给定字符集中的特定范围来辨别前导字节。 例如，前导字节范围为 0x81 – 0x9F 和 0xE0 – 0xFC（仅在代码页 932 中）。  
+ 多字节字符由前导字节后跟尾随字节构成。 通过在给定字符集中的特定范围来辨别前导字节。 例如，在代码页 932 唯一，前导字节范围为 0x81-0x9F 和 0xE0-0xFC。  
   
  `_ismbblead` 对与区域设置相关的行为使用当前区域设置。 `_ismbblead_l` 具有相同的效果，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
@@ -105,15 +106,12 @@ int _ismbblead_l(
   
 |例程|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
-|`_ismbblead`|\<mbctype.h&1;> 或 \<mbstring.h&1;>|\<ctype.h>、* \<limits.h&1;>、\<stdlib.h&1;>|  
-|`_ismbblead_l`|\<mbctype.h&1;> 或 \<mbstring.h&1;>|\<ctype.h>、* \<limits.h&1;>、\<stdlib.h&1;>|  
+|`_ismbblead`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
+|`_ismbblead_l`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
   
  \* 适用于测试条件的清单常量。  
   
  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   

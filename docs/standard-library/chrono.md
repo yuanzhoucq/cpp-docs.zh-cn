@@ -37,16 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: c4f886df3ac9af6745f5379741c3d8c82933abe1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c91a494644e2d8d12259c3ee6cd23333eb9bae9e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 包括标准标头 \< chrono > 来定义表示和操作持续时间及时刻的类和函数。  
   
- **（Visual Studio 2015：）**已更改 `steady_clock` 的实现，以便满足 C++ 标准对稳定性和单一性的需求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual C++ 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。  
+ 开始在 Visual Studio 2015 中，实现`steady_clock`已更改，以满足 c + + 标准对稳定性和单一性的需求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual C++ 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,26 +74,26 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="functions"></a>函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[duration_cast 函数](../standard-library/chrono-functions.md#duration_cast_function)|将 `duration` 对象转换为指定类型。|  
-|[time_point_cast 函数](../standard-library/chrono-functions.md#time_point_cast_function)|将 `time_point` 对象转换为指定类型。|  
+|[duration_cast](../standard-library/chrono-functions.md#duration_cast)|将 `duration` 对象转换为指定类型。|  
+|[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|将 `time_point` 对象转换为指定类型。|  
   
 ### <a name="operators"></a>运算符  
   
 |名称|描述|  
 |----------|-----------------|  
 |[operator-](../standard-library/chrono-operators.md#operator-)|用于对 `duration` 和 `time_point` 对象进行减法或求反运算的运算符。|  
-|[operator!=](../standard-library/chrono-operators.md#operator_neq)|与 `duration` 或 `time_point` 对象一起使用的不等运算符。|  
-|[operator modulo](../standard-library/chrono-operators.md#operator_modulo)|用于对 `duration` 对象进行取模操作的运算符。|  
-|[operator*](../standard-library/chrono-operators.md#operator_star)|`duration` 对象的乘法运算符。|  
-|[operator/](../standard-library/chrono-operators.md#operator_)|`duration` 对象的除法运算符。|  
-|[operator+](../standard-library/chrono-operators.md#operator_add)|将 `duration` 和 `time_point` 对象相加。|  
-|[operator&lt;](../standard-library/chrono-operators.md#operator_lt_)|确定一个 `duration` 或 `time_point` 对象是否小于另一个 `duration` 或 `time_point` 对象。|  
-|[operator&lt;=](../standard-library/chrono-operators.md#operator_lt__eq)|确定一个 `duration` 或 `time_point` 对象是否小于或等于另一个 `duration` 或 `time_point` 对象。|  
-|[operator==](../standard-library/chrono-operators.md#operator_eq_eq)|确定两个 `duration` 对象是否表示相同长度的时间间隔，或两个 `time_point` 对象是否表示相同的时间点。|  
-|[operator&gt;](../standard-library/chrono-operators.md#operator_gt_)|确定一个 `duration` 或 `time_point` 对象是否大于另一个 `duration` 或 `time_point` 对象。|  
-|[operator&gt;=](../standard-library/chrono-operators.md#operator_gt__eq)|确定一个 `duration` 或 `time_point` 对象是否大于或等于另一个 `duration` 或 `time_point` 对象。|  
+|[operator!=](../standard-library/chrono-operators.md#op_neq)|与 `duration` 或 `time_point` 对象一起使用的不等运算符。|  
+|[operator modulo](../standard-library/chrono-operators.md#op_modulo)|用于对 `duration` 对象进行取模操作的运算符。|  
+|[operator*](../standard-library/chrono-operators.md#op_star)|`duration` 对象的乘法运算符。|  
+|[operator/](../standard-library/chrono-operators.md#op_div)|`duration` 对象的除法运算符。|  
+|[operator+](../standard-library/chrono-operators.md#op_add)|将 `duration` 和 `time_point` 对象相加。|  
+|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|确定一个 `duration` 或 `time_point` 对象是否小于另一个 `duration` 或 `time_point` 对象。|  
+|[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|确定一个 `duration` 或 `time_point` 对象是否小于或等于另一个 `duration` 或 `time_point` 对象。|  
+|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|确定两个 `duration` 对象是否表示相同长度的时间间隔，或两个 `time_point` 对象是否表示相同的时间点。|  
+|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|确定一个 `duration` 或 `time_point` 对象是否大于另一个 `duration` 或 `time_point` 对象。|  
+|[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|确定一个 `duration` 或 `time_point` 对象是否大于或等于另一个 `duration` 或 `time_point` 对象。|  
   
 ### <a name="predefined-duration-types"></a>预定义的持续时间类型  
  有关在以下 typedefs 中使用的比率类型的详细信息，请参阅 [\<ratio>](../standard-library/ratio.md)。  
@@ -112,9 +113,9 @@ ms.lasthandoff: 02/24/2017
 |Literal|描述|  
 |-------------|-----------------|  
 |chrono::hours operator "" h(unsigned long long Val)|指定整数值形式的小时数。|  
-|chrono::duration<double, ratio\<3600> > operator "" h(long double Val)|指定浮点值形式的小时数。|  
+|chrono:: duration\<双比率\<3600 >> 运算符""h (长双精度 Val)|指定浮点值形式的小时数。|  
 |chrono::minutes (operator "" min)(unsigned long long Val)|指定整数值形式的分钟数。|  
-|chrono::duration<double, ratio\<60> > (operator "" min)( long double Val)|指定浮点值形式的分钟数。|  
+|chrono:: duration\<双比率\<60 >> (运算符""最小值) （长双精度型 Val）|指定浮点值形式的分钟数。|  
 |chrono::seconds operator "" s(unsigned long long Val)|指定整数值形式的分钟数。|  
 |chrono::duration\<double> operator "" s(long double Val)|指定浮点值形式的描述。|  
 |chrono::milliseconds operator "" ms(unsigned long long Val)|指定整数值形式的毫秒数。|  

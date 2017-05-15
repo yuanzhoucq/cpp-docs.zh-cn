@@ -9,10 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.ostreambuf_iterator
 - streambuf/std::ostreambuf_iterator
 - ostreambuf_iterator
-- std::ostreambuf_iterator
+- iterator/std::ostreambuf_iterator::char_type
+- iterator/std::ostreambuf_iterator::ostream_type
+- iterator/std::ostreambuf_iterator::streambuf_type
+- iterator/std::ostreambuf_iterator::traits_type
+- iterator/std::ostreambuf_iterator::failed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 30e8f1c86ebff67c520f4ff303ade831306cede6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2f58e86e76e63d51739558b796e47dc3f5165d3f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 类
@@ -53,7 +57,7 @@ template <class CharType = char class Traits = char_traits <CharType>>
   
 #### <a name="parameters"></a>参数  
  `CharType`  
- 表示 ostreambuf_iterator 字符类型的类型。 此自变量是可选自变量，默认值为 `char`*。*  
+ 表示 ostreambuf_iterator 字符类型的类型。 此参数为可选参数，默认值为 `char`。  
   
  `Traits`  
  表示 ostreambuf_iterator 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*  
@@ -71,31 +75,31 @@ template <class CharType = char class Traits = char_traits <CharType>>
   
 |||  
 |-|-|  
-|[char_type](#ostreambuf_iterator__char_type)|为 `ostreambuf_iterator` 的字符类型提供的类型。|  
+|[char_type](#char_type)|为 `ostreambuf_iterator` 的字符类型提供的类型。|  
 |[ostream_type](#ostreambuf_iterator_ostream_type)|为 `ostream_iterator` 的流类型提供的类型。|  
-|[streambuf_type](#ostreambuf_iterator__streambuf_type)|为 `ostreambuf_iterator` 的流类型提供的类型。|  
-|[traits_type](#ostreambuf_iterator__traits_type)|为 `ostream_iterator` 的字符特征类型提供的类型。|  
+|[streambuf_type](#streambuf_type)|为 `ostreambuf_iterator` 的流类型提供的类型。|  
+|[traits_type](#traits_type)|为 `ostream_iterator` 的字符特征类型提供的类型。|  
   
 ### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[failed](#ostreambuf_iterator__failed)|测试插入到输出流缓冲区的操作是否失败。|  
+|[failed](#failed)|测试插入到输出流缓冲区的操作是否失败。|  
   
 ### <a name="operators"></a>运算符  
   
 |||  
 |-|-|  
-|[operator*](#ostreambuf_iterator__operator_star)|用于实现输出迭代器表达式 * `i` = `x` 的取消引用运算符。|  
-|[operator++](#ostreambuf_iterator__operator_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostreambuf_iterator`。|  
-|[operator=](#ostreambuf_iterator__operator_eq)|此运算符会将一个字符插入到关联的流缓冲区。|  
+|[operator*](#op_star)|用于实现输出迭代器表达式 * `i` = `x` 的取消引用运算符。|  
+|[operator++](#op_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostreambuf_iterator`。|  
+|[operator=](#op_eq)|此运算符会将一个字符插入到关联的流缓冲区。|  
   
 ## <a name="requirements"></a>要求  
  **标头：** \<iterator>  
   
  **命名空间：** std  
   
-##  <a name="a-nameostreambufiteratorchartypea--ostreambufiteratorchartype"></a><a name="ostreambuf_iterator__char_type"></a>  ostreambuf_iterator::char_type  
+##  <a name="char_type"></a>  ostreambuf_iterator::char_type  
  为 `ostreambuf_iterator` 的字符类型提供的类型。  
   
 ```
@@ -143,7 +147,7 @@ The characters written to the output stream
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratorfaileda--ostreambufiteratorfailed"></a><a name="ostreambuf_iterator__failed"></a>  ostreambuf_iterator::failed  
+##  <a name="failed"></a>  ostreambuf_iterator::failed  
  测试插入到输出流缓冲区的操作是否失败。  
   
 ```
@@ -191,7 +195,7 @@ No insertions failed.
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratoroperatorstara--ostreambufiteratoroperator"></a><a name="ostreambuf_iterator__operator_star"></a>ostreambuf_iterator::operator*  
+##  <a name="op_star"></a>ostreambuf_iterator::operator*  
  用于实现输出迭代器表达式 \* *i* = *x* 的非功能性的取消引用运算符。  
   
 ```
@@ -235,7 +239,7 @@ OUT
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratoroperatoraddadda--ostreambufiteratoroperator"></a><a name="ostreambuf_iterator__operator_add_add"></a>ostreambuf_iterator::operator++  
+##  <a name="op_add_add"></a>ostreambuf_iterator::operator++  
  一种非功能性递增运算符，可向调用该运算之前所处理的同一字符返回 ostream 迭代器。  
   
 ```
@@ -280,7 +284,7 @@ OUT
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratoroperatoreqa--ostreambufiteratoroperator"></a><a name="ostreambuf_iterator__operator_eq"></a>ostreambuf_iterator::operator=  
+##  <a name="op_eq"></a>ostreambuf_iterator::operator=  
  此运算符会将一个字符插入到关联的流缓冲区。  
   
 ```
@@ -328,7 +332,7 @@ OUT
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratorostreambufiteratora--ostreambufiteratorostreambufiterator"></a><a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator  
+##  <a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator  
  构造一个 `ostreambuf_iterator`，以便经初始化后向输出流写入字符。  
   
 ```
@@ -381,7 +385,7 @@ These characters are being written to the output stream.
 *\  
 ```  
   
-##  <a name="a-nameostreambufiteratorostreamtypea--ostreambufiteratorostreamtype"></a><a name="ostreambuf_iterator_ostream_type"></a>  ostreambuf_iterator::ostream_type  
+##  <a name="ostreambuf_iterator_ostream_type"></a>  ostreambuf_iterator::ostream_type  
  为 `ostream_iterator` 的流类型提供的类型。  
   
 ```
@@ -394,7 +398,7 @@ typedef basicOstream<CharType, Traits> ostream_type;
 ### <a name="example"></a>示例  
   有关如何声明和使用 `ostream_type` 的示例，请参阅 [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)。  
   
-##  <a name="a-nameostreambufiteratorstreambuftypea--ostreambufiteratorstreambuftype"></a><a name="ostreambuf_iterator__streambuf_type"></a>  ostreambuf_iterator::streambuf_type  
+##  <a name="streambuf_type"></a>  ostreambuf_iterator::streambuf_type  
  为 `ostreambuf_iterator` 的流类型提供的类型。  
   
 ```
@@ -407,7 +411,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 ### <a name="example"></a>示例  
   有关如何声明和使用 `streambuf_type` 的示例，请参阅 [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)。  
   
-##  <a name="a-nameostreambufiteratortraitstypea--ostreambufiteratortraitstype"></a><a name="ostreambuf_iterator__traits_type"></a>  ostreambuf_iterator::traits_type  
+##  <a name="traits_type"></a>  ostreambuf_iterator::traits_type  
  为 `ostream_iterator` 的字符特征类型提供的类型。  
   
 ```

@@ -56,10 +56,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport、_CrtDbgReportW
@@ -106,9 +107,9 @@ int _CrtDbgReportW(
  由 `format` 使用的可选替换参数。  
   
 ## <a name="return-value"></a>返回值  
- 对于所有报告目标，如果发生错误，则 `_CrtDbgReport` 和 `_CrtDbgReportW` 将返回 –1；如果未遇到错误，则返回 0。 但是，当报告目标是调试消息窗口且用户单击了“**重试**”按钮时，这些函数将返回 1。 如果用户在“调试消息”窗口中单击了“**中止**”按钮，这些函数将立即中止且不会返回值。  
+ 对于所有报告目标，`_CrtDbgReport`和`_CrtDbgReportW`返回发生错误时为-1 和 0，如果未不遇到任何错误。 但是，当报告目标是调试消息窗口且用户单击了“**重试**”按钮时，这些函数将返回 1。 如果用户在“调试消息”窗口中单击了“**中止**”按钮，这些函数将立即中止且不会返回值。  
   
- [_RPT、_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 调试宏调用 `_CrtDbgReport` 生成其调试报告。 这些宏以及 [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)、`_RPTW``n` 和 `_RPTFW``n` 的宽字符版本使用 `_CrtDbgReportW` 生成其调试报告。 当 `_CrtDbgReport` 或 `_CrtDbgReportW` 返回 1 时，这些宏将启动调试程序，前提是实时 (JIT) 调试处于启用状态。  
+ [_RPT、_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 调试宏调用 `_CrtDbgReport` 生成其调试报告。 这些宏以及 [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)、`_RPTW n` 和 `_RPTFW n` 的宽字符版本使用 `_CrtDbgReportW` 生成其调试报告。 当 `_CrtDbgReport` 或 `_CrtDbgReportW` 返回 1 时，这些宏将启动调试程序，前提是实时 (JIT) 调试处于启用状态。  
   
 ## <a name="remarks"></a>备注  
  `_CrtDbgReport` 和 `_CrtDbgReportW` 可将调试报告发送到三个不同的目标：调试报告文件、调试监视器（[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 调试程序）或调试消息窗口。 两个配置函数 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 和 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 可用于为每种报告类型指定一个或多个目标。 这些函数允许对每种报告类型的一个或多个报告目标进行单独控制。 例如，它可能指定仅将 `reportType` 的 `_CRT_WARN` 发送到调试监视器，而将 `reportType` 的 `_CRT_ASSERT` 发送到调试消息窗口和用户定义的报告文件。  
@@ -157,16 +158,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  有关如何更改报告函数的示例，请参阅 [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   

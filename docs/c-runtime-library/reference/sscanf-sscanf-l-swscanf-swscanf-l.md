@@ -1,66 +1,83 @@
 ---
-title: "sscanf、_sscanf_l、swscanf、_swscanf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "swscanf"
-  - "sscanf"
-  - "_sscanf_l"
-  - "_swscanf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_sscanf_l"
-  - "_stscanf"
-  - "swscanf"
-  - "_stscanf_l"
-  - "sscanf"
-  - "_swscanf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_sscanf_l 函数"
-  - "_stscanf 函数"
-  - "_stscanf_l 函数"
-  - "_swscanf_l 函数"
-  - "读取数据, 字符串"
-  - "sscanf 函数"
-  - "sscanf_l 函数"
-  - "字符串 [C++], 读取"
-  - "字符串 [C++], 读取数据自"
-  - "stscanf 函数"
-  - "stscanf_l 函数"
-  - "swscanf 函数"
-  - "swscanf_l 函数"
+title: "sscanf、_sscanf_l、swscanf、_swscanf_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- swscanf
+- sscanf
+- _sscanf_l
+- _swscanf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _sscanf_l
+- _stscanf
+- swscanf
+- _stscanf_l
+- sscanf
+- _swscanf_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- swscanf function
+- _stscanf function
+- sscanf function
+- _stscanf_l function
+- _sscanf_l function
+- _swscanf_l function
+- swscanf_l function
+- strings [C++], reading data from
+- stscanf function
+- reading data, strings
+- strings [C++], reading
+- sscanf_l function
+- stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
 caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# sscanf、_sscanf_l、swscanf、_swscanf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: b124ba5aa0fef8efd6d44b405fbc608709e05d72
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-从字符串中读取格式化数据。  提供这些函数的更多安全版本；请参见 [sscanf\_s、\_sscanf\_s\_l、swscanf\_s、\_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。  
+---
+# <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf、_sscanf_l、swscanf、_swscanf_l
+从字符串中读取格式化数据。 这些函数的更安全版本已发布；请参阅 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int sscanf(  
@@ -87,53 +104,53 @@ int _swscanf_l(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `buffer`  
- 已存储的数据  
+ 存储的数据  
   
  `format`  
- 窗体控件字符串。  有关更多信息，请参见[格式规范](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  
+ 窗体控件字符串。 有关详细信息，请参阅[格式规范](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  
   
  `argument`  
- 可选参数  
+ 可选自变量  
   
  `locale`  
  要使用的区域设置  
   
-## 返回值  
- 每个函数返回成功转换并分配的字段数量；返回值不包括已读取但未分配的字段。  返回值为 0 表示未分配字段。  如果出现错误，或者，如果在第一个转换之前到达字符串的末尾，则返回值是 `EOF`。  
+## <a name="return-value"></a>返回值  
+ 每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果在首次转换前到达字符串的结尾，则返回值为 `EOF` 以指示错误。  
   
- 如果 `buffer` 或 `format` 是 `NULL` 指针，无效参数处理器程序将按 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述进行调用。  如果允许执行继续，则这些函数返回 \-1 并将 `errno` 设置为 `EINVAL`。  
+ 如果 `buffer` 或 `format` 是 `NULL` 指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 -1 并将 `errno` 设置为 `EINVAL`。  
   
- 有关这些属性和其他错误代码的信息，请参见 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `sscanf` 函数读取 `buffer` 的数据到每个 `argument`给出的位置。   `argument` 列表中的每个参数必须是指向类型变量的指针，此类型需与`format`中的类型说明符对应。  `format` 参数控制输入字段的解释，并且形式和函数都与 `scanf` 功能的 `format` 参数相同。  如果复制出现在重叠的字符串之间，则该行为不确定。  
+## <a name="remarks"></a>备注  
+ `sscanf` 函数将数据从 `buffer` 读入每个 `argument` 给定的位置。 每个 `argument` 必须为指向类型与 `format` 中的类型说明符对应的变量的指针。 `format` 参数控制输入字段的解释，并且格式和函数与 `scanf` 函数的 `format` 参数相同。 如果复制出现在重叠的字符串之间，则该行为不确定。  
   
 > [!IMPORTANT]
->  用 `sscanf` 读取字符串时，始终指定 `%s` 格式的宽度（例如，`"%32s"` 而非 `"%s"`）；否则，不适当的格式输入可能会导致缓冲区溢出。  
+>  使用 `sscanf` 读取字符串时，请始终指定 `%s` 格式的宽度（例如 `"%32s"` 而不是 `"%s"`）；否则，输入格式不正确很容易导致缓冲区溢出。  
   
- `swscanf` 是 `sscanf` 的宽字符版本；`swscanf` 的参数是宽字符串。  `sscanf`不处理多字节十六进制字符。  `swscanf` 不处理 Unicode 全角十六进制或“兼容性区域”字符。  除此以外，`swscanf` 和 `sscanf` 的行为完全相同。  
+ `swscanf` 是 `sscanf` 的宽字符版本；`swscanf` 的参数是宽字符串。 `sscanf` 不处理多字节十六进制字符。 `swscanf` 不处理 Unicode 全角十六进制或“兼容区”字符。 除此以外，`swscanf` 和 `sscanf` 的行为完全相同。  
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前线程区域设置。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|\_UNICODE & \_MBCS not defined|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|------------------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_stscanf`|`sscanf`|`sscanf`|`swscanf`|  
 |`_stscanf_l`|`_sscanf_l`|`_sscanf_l`|`_swscanf_l`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`sscanf`, `_sscanf_l`|\<stdio.h\>|  
-|`swscanf`, `_swscanf_l`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`sscanf`, `_sscanf_l`|\<stdio.h>|  
+|`swscanf`, `_swscanf_l`|\<stdio.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_sscanf.c  
@@ -167,16 +184,16 @@ int main( void )
 }  
 ```  
   
-  **字符串 \= 15**  
-**字符“\= 1”**  
-**整数：\= 15**  
-**Real：\= 15.000000**   
-## .NET Framework 等效项  
- 请参见 `Parse` 方法，如 [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)。  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [fscanf、\_fscanf\_l、fwscanf、\_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [scanf、\_scanf\_l、wscanf、\_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [snprintf、\_snprintf、\_snprintf\_l、\_snwprintf、\_snwprintf\_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fscanf、_fscanf_l、fwscanf、_fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [scanf、_scanf_l、wscanf、_wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)

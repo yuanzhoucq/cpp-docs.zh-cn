@@ -84,10 +84,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7cba068af7ec6f14970d174d2b3e9b4121d7c40
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9a0a0e0f9b020b635b6de27a1ae111378152291b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
@@ -157,7 +158,7 @@ size_t _mbstrnlen_l(
   
  其中每个函数都将返回 `str` 中的字符数，不包括以 null 结尾的字符。 但是，`strnlen` 和 `strnlen_s` 会将字符串解释为单字节字符字符串，因此即使该字符串包含多字节字符，返回值也始终等于字节数。 `wcsnlen` 和 `wcsnlen_s` 分别是 `strnlen` 和 `strnlen_s` 的宽字符版本；`wcsnlen` 和 `wcsnlen_s` 的参数是宽字符字符串且字符计数以宽字符为单位。 除此以外，`wcsnlen` 和 `strnlen` 的行为完全相同，`strnlen_s` 和 `wcsnlen_s` 也是如此。  
   
- `strnlen`、`wcsnlen,` 和 `_mbsnlen` 不会验证其参数。 如果 `str` 是 `NULL`，则会发生访问冲突。  
+ `strnlen``wcsnlen`，和`_mbsnlen`不会验证其参数。 如果 `str` 是 `NULL`，则会发生访问冲突。  
   
  `strnlen_s` 和 `wcsnlen_s` 将验证其参数。 如果 `str` 是 `NULL`，则函数返回 0。  
   
@@ -188,9 +189,8 @@ size_t _mbstrnlen_l(
   
 ## <a name="example"></a>示例  
   
-```  
-  
-      // crt_strnlen.c  
+```C  
+// crt_strnlen.c  
   
 #include <string.h>  
   
@@ -224,9 +224,6 @@ than the maximum size specified, the maximum size is
 returned rather than the actual size of the string.  
  Length: 100   
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

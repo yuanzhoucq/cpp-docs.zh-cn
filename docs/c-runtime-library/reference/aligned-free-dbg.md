@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 40a42d694d6f0101573cb9b29e5a7571c4863bb0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3522cd33098484194fec8158b26577b9e01dfe62
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
@@ -71,7 +72,7 @@ void _aligned_free_dbg(
  指向返回到 `_aligned_malloc` 或 `_aligned_offset_malloc` 函数的内存块的指针。  
   
 ## <a name="remarks"></a>备注  
- `_aligned_free_dbg` 函数是 [_aligned_free](../../c-runtime-library/reference/aligned-free.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_aligned_free_dbg` 的调用都会减少到对 _`aligned_free` 的调用。 \_`aligned_free` 和 `_aligned_free_dbg` 都可释放基堆中的内存块，但是 `_aligned_free_dbg` 还包含一种调试功能：能够在堆链接列表中保留已释放的块，以便模拟内存不足的情况。  
+ `_aligned_free_dbg` 函数是 [_aligned_free](../../c-runtime-library/reference/aligned-free.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_aligned_free_dbg` 的调用都会减少到对 `_aligned_free` 的调用。 同时`_aligned_free`和`_aligned_free_dbg`释放内存块在基堆中，但`_aligned_free_dbg`还包含一种调试功能︰ 能够保留已释放在堆链接列表，以便模拟内存不足的情况中块。  
   
  在执行释放操作之前，`_aligned_free_dbg` 将在所有指定的文件和块位置上执行有效性检查。 应用程序不应该提供此信息。 当释放内存块时，调试堆管理器自动检查用户部分两侧的缓冲区的完整性，如果发生覆盖，将发出错误报告。 如果设置了 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 标志的 `_CRTDBG_DELAY_FREE_MEM_DF` 位域，则将使用值 0xDD 填充释放的块、为其分配 `_FREE_BLOCK` 块类型，以及将其保留在内存块的堆链接列表中。  
   
@@ -86,9 +87,6 @@ void _aligned_free_dbg(
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   
  有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)

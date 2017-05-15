@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: b5a0a5af02dffea95471a41b9c7bc9726e6beab5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 90a0b43841616414d38d8a24a99c90b2e2c7f689
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
@@ -92,7 +93,7 @@ void * _aligned_realloc_dbg(
  重新分配内存并更改块对齐是错误的。  
   
 ## <a name="remarks"></a>备注  
- `_aligned_realloc_dbg` 是 [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_aligned_realloc_dbg` 的调用都会减少到对 _`aligned_realloc` 的调用。 \_`aligned_realloc` 和 `_aligned_realloc_dbg` 都可重新分配基堆中的内存块，但是 `_aligned_realloc_dbg` 还包含几种调试功能：用于测试泄漏的块的用户部分两侧的缓冲区、用于跟踪特定分配类型的块类型参数，以及用于确定分配请求的源的 `filename`/`linenumber` 信息。  
+ `_aligned_realloc_dbg` 是 [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_aligned_realloc_dbg` 的调用都会减少到对 `_aligned_realloc` 的调用。 `_aligned_realloc` 和 `_aligned_realloc_dbg` 都可重新分配基堆中的内存块，但是 `_aligned_realloc_dbg` 还包含几种调试功能：用于测试泄漏的块的用户部分两侧的缓冲区、用于跟踪特定分配类型的块类型参数，以及用于确定分配请求的源的 `filename`/`linenumber` 信息。  
   
  `_aligned_realloc_dbg` 将使用比请求的 `newSize` 稍多的空间重新分配指定的内存块。 `newSize` 可能会大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 如果移动内存块，将覆盖原始块中的内容。  
   
@@ -112,9 +113,6 @@ void * _aligned_realloc_dbg(
   
 ## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)

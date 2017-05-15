@@ -33,132 +33,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 9dee257bec0f09bd729bf10c4a1468ecb20dfa61
-ms.openlocfilehash: 3629075e5659cb89ab751b011f3ce2cbf89397cc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c7a2d48507c5c6f5f6c469f0a524e6e392bdd166
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="linker-tools-error-lnk2001"></a>链接器工具错误 LNK2001
-无法解析的外部符号"symbol"  
+无法解析的外部符号"*符号*"  
   
- 代码引用链接器无法在库和对象文件中找到的内容 （如函数、 变量或标签）。  
+编译的代码使引用或调用*符号*，但该中的任何库或指定到链接器的对象文件中未定义符号。  
   
- 此错误消息之后为致命错误[LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md)。  
+此错误消息后跟错误[LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md)。 你必须修复所有 LNK2001 和 LNK2019 错误以修复错误 LNK1120。  
   
- **可能的原因**  
+## <a name="possible-causes"></a>可能的原因  
   
--   从 Visual c + + 2003 中，升级托管的库或 web 服务项目时**/Zl**编译器选项添加到**命令行**属性页。 这将导致 LNK2001。  
+有多种方法来获取此错误，但所有这些涉及对函数或变量的链接器无法引用*解决*，或找到的定义。 编译器可标识不符号时*声明*，但不是时它不是*定义*，这是因为定义可能在不同的源文件或库。 如果符号引用，但永远不会定义，链接器将生成错误。  
   
-     若要解决此错误，或者添加 msvcrt.lib 和 msvcmrt.lib 链接器的附加依赖项属性。 或者，删除**/Zl**从**命令行**属性页。 有关详细信息，请参阅[/Zl （省略默认库名）](../../build/reference/zl-omit-default-library-name.md)和[使用项目属性](../../ide/working-with-project-properties.md)。  
+### <a name="coding-issues"></a>编码问题  
   
--   代码的请求的不存在 （符号拼写错误，或使用错误的大小写，例如）。  
+此错误可能由不匹配大小写的源代码或模块定义 (.def) 文件。 例如，如果命名变量`var1`在一个 c + + 源文件，并尝试访问它作为`VAR1`中另一个字符串，会生成此错误。 若要解决此问题，使用一致地拼写和大小写形式的名称。  
   
--   代码请求的内容错误 （使用的混合的版本的库，有些是从一个版本的产品，而其他则来自另一个版本）。  
+可以使用的项目中导致此错误[函数内联](../../error-messages/tool-errors/function-inlining-problems.md)如果源文件中而不是头文件中定义函数。 内联的函数无法查看外部定义它们的源代码文件。 若要解决此问题，请在声明位置的标头中定义的内联的函数。  
   
- **具体的原因**  
+如果不使用从 c + + 程序上调用 C 函数，则可能导致此错误`extern "C"`C 函数声明。 编译器针对 C 和 c + + 代码中，使用不同的内部符号命名约定，它是在解析符号时链接器查找的内部的符号名称。 若要解决此问题，请使用`extern "C"`包装的 C 函数使用在 c + + 代码中，这会导致编译器 C 内部命名约定用于这些符号的所有声明。 编译器选项[/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)和[/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)会导致编译器文件分别编译为 c + + 或 C，而不考虑文件扩展名。 这些选项可能会导致与你所期望的不同的内部函数名称。  
   
- **编码问题**  
+尝试引用函数或不具有外部链接的数据可以导致此错误。 在 c + +，内联函数和`const`数据具有内部链接，除非显式指定为`extern`。 若要解决此问题，请使用显式`extern`声明符号上的定义的源文件外部引用。  
   
--   如果 LNK2001 诊断文本报告`__check_commonlanguageruntime_version`是无法解析的外部符号，请参阅[LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)有关如何解决的信息。  
+此错误可能由[缺少函数体或变量](../../error-messages/tool-errors/missing-function-body-or-variable.md)定义。 声明，但未定义，变量、 函数或类在代码中时，此错误很常见。 编译器仅需要函数原型或`extern`变量声明，以生成没有错误，但链接器的对象文件无法解析对函数的调用或对变量的引用，因为没有函数代码或变量保留的空间。 若要解决此问题，请确保每个引用的函数和变量是完全在中定义的源文件或包含在链接中的库。  
   
--   成员模板的定义是在类的外部。 Visual c + + 具有顺序成员模板必须完全定义封闭类中的限制。 请参阅知识库文章 Q239436 有关 LNK2001 和成员模板的详细信息。  
+使用返回值和参数类型或不匹配函数定义中的调用约定的函数调用可以导致此错误。 在 c + + 对象文件[名称修饰](../../error-messages/tool-errors/name-decoration.md)合并到最终修饰的函数名，作为符号情况下用于匹配解析来自其他对象文件中的调用函数时的调用约定、 类或命名空间范围和返回类型和参数类型的函数。 若要解决此问题，请确保声明、 定义和对所有函数的调用使用相同的作用域、 类型和调用约定。  
   
--   大小写不匹配在您的代码或模块定义 (.def) 文件可能导致 LNK2001。 例如，如果名为变量`var1`在一个 c + + 源文件，并尝试访问其作为`VAR1`在另一个。  
+可以在 c + + 代码导致此错误，当你在类定义中包括的函数原型，但是故障到[包括实施](../../error-messages/tool-errors/missing-function-body-or-variable.md)的函数，然后调用它。 若要解决此问题，请确保提供所有调用声明类的成员的定义。  
   
--   使用的项目[函数内联](../../error-messages/tool-errors/function-inlining-problems.md)尚未在.cpp 文件中定义的函数，而不是在标头文件会导致 LNK2001。  
+尝试从一个抽象基类调用纯虚函数可以导致此错误。 一个纯虚函数不具有基类实现。 若要解决此问题，请确保所有调用虚函数实现。  
   
--   从 c + + 程序中调用 C 函数，而无需使用`extern`"C"（这将导致编译器使用 C 命名约定） 会导致 LNK2001。 编译器选项[/Tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)和[/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)会导致编译器文件分别编译为 c + + 或 C，而不考虑文件扩展名。 这些选项会导致与您期望的不同的函数名称。  
+此错误可能由尝试使用函数内声明的变量 ([局部变量](../../error-messages/tool-errors/automatic-function-scope-variables.md)) 该函数的范围之外。 若要解决此问题，删除对不在作用域，该变量的引用，或将变量移到更高版本的作用域。  
   
--   正在尝试引用函数或不具有外部链接的数据会导致 LNK2001。 在 c + + 内联函数和`const`数据具有内部链接，除非显式指定为`extern`。  
+当生成发布版本的 ATL 项目，生成一条消息，不需要 CRT 启动代码，可以出现此错误。 若要修复此问题，请执行以下操作，  
   
--   一个[缺少函数体或变量](../../error-messages/tool-errors/missing-function-body-or-variable.md)会导致 LNK2001。 只有函数原型或`extern`声明编译器可以继续未生成错误，但由于没有函数代码或变量保留的空间，链接器将无法解析到某个地址的调用或对变量引用。  
+-   删除`_ATL_MIN_CRT`从列表中的预处理器定义以允许要包含的 CRT 启动代码。 请参阅[常规属性页 （项目）](../../ide/general-property-page-project.md)有关详细信息。  
   
--   调用的函数具有与函数声明中不匹配的参数类型会导致 LNK2001。 [名称修饰](../../error-messages/tool-errors/name-decoration.md)将函数的参数合并到最终修饰的函数名。  
+-   如果可能，请删除对需要 CRT 启动代码的 CRT 函数的调用。 相反，使用它们 Win32 的等效项。 例如，使用`lstrcmp`而不是`strcmp`。 需要 CRT 启动代码的已知的函数是一些字符串和浮点函数。  
   
--   错误包含的原型，这会使编译器需要未提供的函数体可以导致 LNK2001。 如果您有一个类和非类的函数实现的`F`，请注意 c + + 范围解析规则。  
+### <a name="compilation-and-link-issues"></a>编译和链接问题  
   
--   在使用 c + + 时，在类定义中包括函数原型和故障转移到[包括实施](../../error-messages/tool-errors/missing-function-body-or-variable.md)个此类函数会导致 LNK2001。  
+当项目缺少对库的引用时，会出现此错误 (。LIB) 或对象 (。OBJ) 文件。 若要解决此问题，请向你的项目添加到所需的库或对象文件的引用。 有关详细信息，请参阅[用作链接器输入的.lib 文件](../../build/reference/dot-lib-files-as-linker-input.md)。  
   
--   尝试从构造函数或析构函数的抽象基类调用纯虚函数会导致 LNK2001。 一个纯虚函数不具有基类实现。  
+如果你使用，可能出现此错误[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)或[/Zl](../../build/reference/zl-omit-default-library-name.md)选项。 指定这些选项时，包含所需的代码的库除非你显式包括其并未链接到项目。 若要解决此问题，显式包含在链接命令行使用的所有库。 如果你看到许多缺少 CRT 或标准库函数名称，当你使用这些选项时，链接中显式包括 CRT 和标准库 Dll 或库文件。  
+
+如果在编译时使用**/clr**选项，可以对.cctor 的缺少引用。 若要解决此问题，请参阅[混合程序集初始化](../../dotnet/initialization-of-mixed-assemblies.md)有关详细信息。  
   
--   尝试使用一个变量在函数内声明 ([局部变量](../../error-messages/tool-errors/automatic-function-scope-variables.md)) 之外，该函数的作用域会导致 LNK2001。  
+如果在生成应用程序的调试版本链接到版本模式库，则可能出现此错误。 同样，如果你使用选项**/MTd**或**/MDd**或定义`_DEBUG`，然后链接到版本库，可以预见，许多潜在未解析的外部对象，在其他问题。 链接发布模式生成带有调试库时也会导致类似问题。 若要解决此问题，请确保你，在调试版本使用的调试库，并在您的零售零售库生成。  
   
--   在生成的 ATL 项目的发布版本时，表示需要 CRT 启动代码。 若要修复，请执行以下操作，  
+如果你的代码为符号引用一个版本的库，但提供到链接器库的不同版本，可以出现此错误。 通常情况下，不能混合对象文件或为不同版本的编译器生成的库。 在新版本中提供的库可能包含不能在包含与早期版本中，反之亦然的库中找到的符号。 若要解决此问题，请将它们链接在一起前生成所有对象文件和库的相同版本的编译器。  
   
-    -   删除`_ATL_MIN_CRT`从列表中预处理器定义以允许 CRT 启动代码以将包括在内。 请参阅[常规配置设置属性页](../../ide/general-property-page-project.md)有关详细信息。  
+-  工具 &#124;选项 &#124;项目 &#124;VC + + 目录对话框中，在库文件的所选内容，下，可更改库搜索顺序。 在项目的属性页对话框中的链接器文件夹还可能包含可能已过期的路径。  
   
-    -   如果可能，请移除对需要 CRT 启动代码的 CRT 函数的调用。 相反，使用 Win32 等效物。 例如，使用`lstrcmp`而不是`strcmp`。 需要 CRT 启动代码的已知的函数是一些字符串和浮点函数。  
+-  新的 SDK 安装 （可能是到其他位置），和搜索顺序不更新为指向新位置时，可能会出现此问题。 通常情况下，应将路径放到新的 SDK 包括和 lib 目录默认 Visual c + + 位置的前面。 此外，包含嵌入的路径的项目可能仍然指向旧路径有效，但已过期的新功能添加到其他位置安装的新版本中。  
   
- **编译和链接问题**  
+-   如果你在命令行上生成，并且已创建你自己的环境变量，则验证工具、 库和标头文件的路径转到的一致版本。 有关详细信息，请参阅[为命令行生成设置路径和环境变量](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
   
--   项目缺少对库的引用 (。LIB) 或对象 (。OBJ) 文件。 请参阅[用作链接器输入的.lib 文件](../../build/reference/dot-lib-files-as-linker-input.md)有关详细信息。  
+目前没有标准[c + + 命名](../../error-messages/tool-errors/name-decoration.md)编译器供应商之间、 甚至同一编译器的不同版本之间。 因此，链接用其他编译器编译的对象文件可能不会产生相同的命名方案，从而导致错误 LNK2001。  
   
--   如果您使用[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)或[/Zl](../../build/reference/zl-omit-default-library-name.md)，包含必需的代码库链接将不会为项目除非显式包含了它们。 (使用编译时**/clr**或**/clr: pure**，您将看到对.cctor 的引用; 请参阅[初始化混合程序集的](../../dotnet/initialization-of-mixed-assemblies.md)有关详细信息。)  
+[混合使用内联和非内联编译选项](../../error-messages/tool-errors/function-inlining-problems.md)在不同模块，则可能导致 LNK2001。 如果使用函数内联开启创建 c + + 库 (**/Ob1**或**/Ob2**) 但描述函数的相应标头文件具有内联关闭 (没有`inline`关键字)，会发生此错误。 若要解决此问题，请定义函数`inline`在其他源文件中包括标头文件中。  
   
--   如果使用 Unicode 和 MFC，您将收到有关无法解析的外部`_WinMain@16`如果你不创建到入口点`wWinMainCRTStartup`; 使用[/ENTRY](../../build/reference/entry-entry-point-symbol.md)。 请参阅[Unicode 编程摘要](../../text/unicode-programming-summary.md)。  
+如果你使用`#pragma inline_depth`编译器指令，请确保你有[2 或更高版本的设置的值](../../error-messages/tool-errors/function-inlining-problems.md)，并确保你还使用[/Ob1](../../build/reference/ob-inline-function-expansion.md)或[/Ob2](../../build/reference/ob-inline-function-expansion.md)编译器选项。  
   
-     请参阅以下知识库文章，位于 MSDN Library 中，有关详细信息。 在 MSDN 库中，单击**搜索**选项卡上，在文本框中，粘贴的文章编号或文章标题，然后单击**列出主题**。 如果您搜索的文章编号，请确保**只搜索标题**选项被清除。  
+如果省略该链接可能出现此错误选项 /NOENTRY 时创建纯资源 DLL。 若要解决此问题，请将 /NOENTRY 选项添加到链接命令。  
   
-    -   Q125750"PRB︰ 错误 LNK2001:_WinMain@16︰ 无法解析的外部符号"  
+如果在项目中使用不正确 /SUBSYSTEM 或 /ENTRY 设置，可以出现此错误。 例如，如果你编写的控制台应用程序，并指定 /SUBSYSTEM:WINDOWS，则无法解析的外部错误生成的`WinMain`。 若要解决此问题，请确保匹配于项目类型的选项。 有关这些选项和入口点的详细信息，请参阅[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)和[/ENTRY](../../build/reference/entry-entry-point-symbol.md)链接器选项。  
   
-    -   Q131204"PRB︰ 错误的项目所选内容上导致 LNK2001 _WinMain@16"  
+### <a name="exported-symbol-issues"></a>导出的符号问题  
   
-    -   Q100639"Unicode 支持在 Microsoft 基础类库"  
+找不到.def 文件中列出的导出时，将出现此错误。 这可能是因为它不存在、 拼写错误，或使用 c + + 修饰名。 .Def 文件将不会修饰的名。 若要解决此问题，删除不需要的导出，并使用`extern "C"`导出符号的声明。  
   
-    -   Q291952"PRB︰ 链接错误 LNK2001︰ 无法解析的外部符号 _main"  
+## <a name="what-is-an-unresolved-external-symbol"></a>无法解析的外部符号是什么？  
   
--   链接与以下库 LIBC.lib 使用 /MT 编译的代码会导致 LNK2001 `_beginthread`， `_beginthreadex`， `_endthread`，和`_endthreadex`。  
+A*符号*是函数或编译的对象文件或库内部使用的全局变量的名称。 符号是*定义*对象文件中的全局变量，或对于函数，其中分配存储已编译的代码的函数体的位置。 *外部符号*是一个符号的*引用*，也就是说，使用或调用在一个对象文件中，但在不同的库或对象文件中定义。 *导出符号*是指由对象文件或定义它的库进行公开。 链接器必须*解决*，或找到的匹配定义，每个引用的对象文件链接到应用程序或 DLL 时的外部符号。 它不能通过任何链接的文件中查找匹配的导出的符号解析的外部符号时，链接器将生成错误。    
   
--   链接要求多线程的库的代码 (任何 MFC 代码或使用编译的代码[/MT](../../build/reference/md-mt-ld-use-run-time-library.md)) 将导致 LNK2001 上[_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md)， `_beginthreadex`， [_endthread](../../c-runtime-library/reference/endthread-endthreadex.md)，和`_endthreadex`。 请参阅以下知识库文章以了解详情︰  
+## <a name="use-the-decorated-name-to-find-the-error"></a>使用修饰的名以找出错误
   
-    -   Q126646"PRB︰ 错误消息︰ 在 __beginthreadex LNK2001 和\__endthreadex"  
+C + + 编译器和链接器使用[名称修饰](../../error-messages/tool-errors/name-decoration.md)，也称为*名称重整*、 来编码关于变量的类型或返回类型、 参数类型、 范围和中的符号名称的函数的调用约定的额外信息。 此修饰的名是链接器搜索用于解析外部符号的符号名称。  
   
-    -   Q128641"信息︰ /Mx 编译器选项和 LIBC、 LIBCMT、 MSVCRT Libs"  
+由于的额外信息变得符号名称的一部分，如果该函数或变量的声明与函数或变量的定义不完全匹配会导致链接错误。 这可能发生即使相同的标头文件用在调用代码和定义的代码中，如果编译的源文件时使用不同的编译器标志。 例如，可能发生此错误，如果你的代码编译为使用`__vectorcall`调用约定，但你链接到期望客户端无法调用它使用默认的库`__cdecl`或`__fastcall`调用约定。 在这种情况下，符号不匹配，因为不同的调用约定   
   
-    -   Q166504"PRB: MFC 和 CRT 必须在调试/发布和静态/动态匹配"  
+为了帮助你找到这种错误的原因，链接器错误消息会显示这两个"友好名称，"使用源、 在代码中 （中括号） 的未解析的外部符号的修饰的名称的名称。 你不需要知道如何将转换要能够将其与其他修饰名称进行比较的修饰的名称。 你可以使用附带编译器要比较的预期的符号名称和实际的符号名称的命令行工具︰  
+
+-   [/导出](../../build/reference/dash-exports.md)和[/符号](../../build/reference/symbols.md)选项的 DUMPBIN 命令行工具可帮助你发现.dll 和对象或库文件中定义了哪些符号。 可以使用此验证导出的修饰的修饰名称链接器搜索的名称匹配。  
   
--   使用编译时**/MD**，对您的源中的"func"的引用将变为一个引用"`__imp__func`"由于所有运行时现在都保留在 DLL 中的对象中。 如果您尝试与静态库 LIBC.lib 或 LIBCMT.lib 链接，您将收到有关 LNK2001 `__imp__func`。 如果您尝试在没有 /MD 的情况下编译时与 MSVCxx.lib 链接则不会始终获得 LNK2001，但您可能有其他问题。  
+在某些情况下，链接器仅报告符号的修饰的名称。 UNDNAME 命令行工具可用于获取修饰名的未修饰的形式。  
   
--   在生成应用程序的调试版本时，与发布模式库链接会导致 LNK2001。 同样，使用**/Mxd**选项 (**/MTd**，或**/MDd**) 和/或定义`_DEBUG`，然后与版本库链接便会提供 （还有其他问题） 可能无法解析的外部对象数量。 链接发布模式生成带有调试库也会导致类似问题。  
+## <a name="additional-resources"></a>其他资源  
   
--   混合版本的 Microsoft 库和编译器产品可能会产生问题。 新的编译器版本的库可能包含不能在包括与以前版本的库中找到的新符号。 您可能想要更改的目录中的搜索路径，或更改它们的顺序，以指向当前版本。  
-  
-     这些工具 |选项 |项目 |VC + + 目录下对话框中，库文件的所选内容，可以更改搜索顺序。 在项目的属性页对话框中的链接器文件夹还可能包含可能已过期的路径。  
-  
-     （也许是到其他位置），安装新的 SDK 和搜索顺序不更新为指向新位置时，可能会出现此问题。 通常情况下，应将路径放到新的 Sdk 的 include 和 lib 目录默认 Visual c + + 位置的前面。 此外，包含嵌入的路径的项目可能仍然指向旧是有效的但已过期的新功能添加到另一个位置安装的新版本的路径。  
-  
--   目前尚没有标准[c + + 命名](../../error-messages/tool-errors/name-decoration.md)编译器供应商之间、 甚至同一编译器的不同版本之间。 因此，链接用其他编译器编译的对象文件可能不会产生相同的命名方案，从而导致错误 LNK2001。  
-  
--   [混合使用内联和非内联编译选项](../../error-messages/tool-errors/function-inlining-problems.md)在不同的模块，则可能导致 LNK2001。 如果打开了函数内联创建 c + + 库 (**/Ob1**或**/Ob2**) 但相应的头文件描述函数内联处于关闭状态 (没有`inline`关键字)，会出现此错误。 若要防止此问题，已定义内联函数与`inline`中要包括在其他文件中的头文件。  
-  
--   如果您使用`#pragma inline_depth`编译器指令，请确保您有[2 或更高版本集的值](../../error-messages/tool-errors/function-inlining-problems.md)，并确保您使用[/Ob1](../../build/reference/ob-inline-function-expansion.md)或[/Ob2](../../build/reference/ob-inline-function-expansion.md)编译器选项。  
-  
--   省略链接选项 /NOENTRY 时创建纯资源 DLL 会导致 LNK2001。  
-  
--   使用 /SUBSYSTEM 或 /ENTRY 设置不正确可能导致 LNK2001。 例如，如果您编写基于字符的应用程序 （控制台应用程序），并指定 /SUBSYSTEM:WINDOWS，则会为无法解析的外部`WinMain`。 有关这些选项和入口点的详细信息，请参阅[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)和[/ENTRY](../../build/reference/entry-entry-point-symbol.md)链接器选项。  
-  
- **导出问题**  
-  
--   当移植应用程序从 16 至 32 或 64 位时，会发生 LNK2001。 当前模块定义 (.def) 文件语法要求`__cdecl`， `__stdcall`，和`__fastcall`函数要导出一节中列出没有下划线 （未修饰名）。 这不同于 16 位语法，其中必须将它们列带下划线 （修饰）。 有关详细信息，请参阅说明[导出](../../build/reference/exports.md)模块定义文件部分。  
-  
--   .Def 文件中列出，但找不到的任何导出将导致 LNK2001。 这可能是因为它不存在、 拼写不正确，或使用 c + + 修饰的名 （.def 文件不采用修饰的名）  
-  
- **解释输出**  
-  
- 如果符号无法解析，可以通过下列指南来获取有关该函数的信息︰  
-  
- 在 x86 平台，名称的调用约定修饰编译在 C 中，或对于 extern"C"c + + 中的名称是︰  
-  
- `__cdecl`  
- 函数具有下划线 (_) 前缀。  
-  
- `__stdcall`  
- 函数具有下划线 (_) 前缀和 @ 后缀后, 跟 dword 对齐参数在堆栈上的大小。  
-  
- `__fastcall`  
- 函数具有 @ 前缀和 @ 后缀后, 跟 dword 对齐参数在堆栈上的大小。  
-  
- 使用 undname.exe 获取修饰名称的未修饰的形式。  
-  
- 一些上面列出的原因的详细信息，请参阅[名称修饰](../../error-messages/tool-errors/name-decoration.md)。
+LNK2001 可能的原因和解决方案的详细信息，请参阅堆栈溢出问题[什么是未定义引用/未解析的外部符号错误以及如何修复此错误？](http://stackoverflow.com/q/12573816/2002113)。  
+
+

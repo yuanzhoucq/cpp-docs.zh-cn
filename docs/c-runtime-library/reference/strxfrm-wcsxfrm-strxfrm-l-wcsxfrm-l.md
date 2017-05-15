@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 92144dbdc043d68d9280d2721a0aaeac3a9e3f1a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: b05ec00ae2144670844cd54de0900aa1412128ff
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
@@ -106,7 +107,7 @@ size_t wcsxfrm_l(
  源字符串。  
   
  `count`  
- 要放入到 `strDest`* 中的最大字符数。*  
+ 最大字符将放入数`strDest`。  
   
  `locale`  
  要使用的区域设置。  
@@ -158,10 +159,7 @@ return( strlen( _string1 ) );
 |`_strxfrm_l`|\<string.h>|  
 |`_wcsxfrm_l`|\<string.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   

@@ -1,59 +1,76 @@
 ---
-title: "pow、powf、powl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "powl"
-  - "pow"
-  - "powf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "powl"
-  - "pow"
-  - "_powl"
-  - "powf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_powl 函数"
-  - "计算指数"
-  - "指数计算"
-  - "幂"
-  - "pow 函数"
-  - "幂, 计算"
-  - "powf 函数"
-  - "powl 函数"
+title: "pow、powf、powl | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- powl
+- pow
+- powf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- powl
+- pow
+- _powl
+- powf
+dev_langs:
+- C++
+helpviewer_keywords:
+- exponential calculations
+- powl function
+- _powl function
+- exponentiation
+- powers, calculating
+- calculating exponentials
+- powf function
+- pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# pow、powf、powl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4400582a792644b928c02db346bc7eae1087dc85
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
-计算`x`提升到`y`。  
+---
+# <a name="pow-powf-powl"></a>pow、powf、powl
+计算 `x` 的 `y` 次幂。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 double pow(  
@@ -90,43 +107,43 @@ long double powl(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `x`  
- 基数。  
+ Base。  
   
  `y`  
- 指数。  
+ Exponent。  
   
-## 返回值  
- 返回 `x`<sup>y</sup>的值。  错误消息在溢出或下溢时不打印。  
+## <a name="return-value"></a>返回值  
+ 返回 `x`<sup>y</sup> 的值。 在溢出或下溢时不输出错误消息。  
   
-|x 和 y 的值|返回pow的值|  
-|--------------|-------------|  
-|`x`\<\>0 和`y` \= 0.0|1|  
-|`x` \= 0.0 和 `y` \= 0.0|1|  
-|`x` \= 0.0 和 `y`\< 0|INF|  
+|x 和 y 的值|pow 的返回值|  
+|-----------------------|-------------------------|  
+|`x` \< > 0 且 `y` = 0.0|1|  
+|`x` = 0.0 且 `y` = 0.0|1|  
+|`x` = 0.0 且 `y` < 0|INF|  
   
-## 备注  
- `pow` 无法识别大于 2<sup>64</sup>的集成浮点值 \(例如，`1.0E100`\)。  
+## <a name="remarks"></a>备注  
+ `pow` 无法识别大于 2<sup>64</sup> 的整型浮点值（如 `1.0E100`）。  
   
- `pow` 具有使用Streaming SIMD Extensions 2\(SSE2\)的实现。  有关使用SSE2实现的信息和限制，请参见 [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
+ `pow` 具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
- 由于 C\+\+ 允许重载，可以调用`pow`的任意重载函数。  在 C 程序中，`pow` 始终采用两个双精度值并返回一个双精度值。  
+ 由于 C++ 允许重载，因此你可以调用 `pow` 的任何不同重载。 在 C 程序中，`pow` 始终采用两个双精度值并返回一个双精度值。  
   
- `pow(int, int)`重载不再可用。  如果使用此重载，编译器会发出 C2668。  若要避免此问题，请将第一个参数转换为`double`、`float`或 `long double`。  
+ `pow(int, int)` 将不再可用。 如果使用此重载，则编译器可以发出 C2668。 若要避免此问题，将第一个参数转换为 `double`、`float` 或 `long double`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`pow`, `powf`, `powl`|\<math.h\>|  
+|-------------|---------------------|  
+|`pow`, `powf`, `powl`|\<math.h>|  
   
- 有关其他兼容性信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_pow.c  
@@ -143,18 +160,15 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 2.0 to the power of 3.0 is 8.0  
 ```  
   
-## .NET Framework 等效项  
- [System::Math::Pow](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
- [exp、expf](../../c-runtime-library/reference/exp-expf.md)   
+ [exp、 expf，资源管理器](../../c-runtime-library/reference/exp-expf.md)   
  [log、logf、log10、log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [sqrt、sqrtf、sqrtl](../../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)   
- [\_CIpow](../../c-runtime-library/cipow.md)
+ [_CIpow](../../c-runtime-library/cipow.md)

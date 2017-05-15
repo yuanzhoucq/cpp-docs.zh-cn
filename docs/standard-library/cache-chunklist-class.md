@@ -1,68 +1,134 @@
 ---
-title: "cache_chunklist 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "allocators/stdext::cache_chunklist"
-  - "stdext.cache_chunklist"
-  - "stdext::cache_chunklist"
-  - "cache_chunklist"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cache_chunklist 类"
+title: "cache_chunklist 类 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- allocators/stdext::cache_chunklist
+- stdext::cache_chunklist
+- cache_chunklist
+- allocators/stdext::cache_chunklist::allocate
+- allocators/stdext::cache_chunklist::deallocate
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache_chunklist class
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# cache_chunklist 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 283186349d84225fdf9d1d52ec04817a12f3d27f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
-定义分配和释放一种大小的内存块的 [块分配程序](../standard-library/allocators-header.md)。  
+---
+# <a name="cachechunklist-class"></a>cache_chunklist 类
+定义分配和释放单个大小内存块的[块分配器](../standard-library/allocators-header.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+template <std::size_t Sz, std::size_t Nelts = 20>  
+class cache_chunklist
 ```  
-template <std::size_t Sz, std::size_t Nelts = 20> class cache_chunklist  
-```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
   
-|参数|说明|  
-|--------|--------|  
-|`Sz`|元素的数目将数组赋的。|  
+|参数|描述|  
+|---------------|-----------------|  
+|`Sz`|数组中要分配的元素数目。|  
   
-## 备注  
- 此模板类使用 `operator new` 块，suballocating 原始分配的内存块分配存储区存储，并在必要时；，其内存块没有正在使用时，它存储在单独空闲列表的释放的存储区域每个区块的，使用 `operator delete` 释放块。  
+## <a name="remarks"></a>备注  
+ 此模板类使用 `operator new` 分配原始内存的区块，并对块进行细分以在必要时为内存块分配存储空间；其将释放的内存块存储在每个区块的独立释放列表中，并在未使用区块的任何内存块时使用 `operator delete` 释放区块。  
   
- 每个存储区保存 `Sz` 字节可用内存和指针与区块它所属的。  每个块包含 `Nelts` 的 `operator new` 和 `operator delete` 所需的存储区、三分球、int 和数据。  
+ 每个内存块保留 `Sz` 个字节的可用内存和指向其所属于的区块的指针。 每个区块保留 `Nelts` 内存块、三个指针、一个 int 以及 `operator new` 和 `operator delete` 所需的数据。  
   
-### 构造函数  
+### <a name="constructors"></a>构造函数  
   
 |||  
 |-|-|  
-|[cache\_chunklist](../Topic/cache_chunklist::cache_chunklist.md)|构造 `cache_chunklist` 类型的对象。|  
+|[cache_chunklist](#cache_chunklist)|构造 `cache_chunklist` 类型的对象。|  
   
-### 成员函数  
+### <a name="member-functions"></a>成员函数  
   
 |||  
 |-|-|  
-|[分配](../Topic/cache_chunklist::allocate.md)|分配内存块。|  
-|[释放](../Topic/cache_chunklist::deallocate.md)|从存储空间开头释放对象中的指定数字中的指定位置。|  
+|[allocate](#allocate)|分配内存块。|  
+|[deallocate](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|  
   
-## 要求  
- **页眉：** \<分配程序\>  
+## <a name="requirements"></a>要求  
+ **标头：**\<allocators>  
   
- **命名空间：**stdext  
+ **命名空间：** stdext  
   
-## 请参阅  
- [\<allocators\>](../standard-library/allocators-header.md)
+##  <a name="allocate"></a>  cache_chunklist::allocate  
+ 分配内存块。  
+  
+```
+void *allocate(std::size_t count);
+```  
+  
+### <a name="parameters"></a>参数  
+  
+|参数|描述|  
+|---------------|-----------------|  
+|`count`|数组中要分配的元素数目。|  
+  
+### <a name="return-value"></a>返回值  
+ 指向已分配对象的指针。  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist  
+ 构造 `cache_chunklist` 类型的对象。  
+  
+```
+cache_chunklist();
+```  
+  
+### <a name="remarks"></a>备注  
+  
+##  <a name="deallocate"></a>  cache_chunklist::deallocate  
+ 从指定位置开始从存储中释放指定数量的的对象。  
+  
+```
+void deallocate(void* ptr, std::size_t count);
+```  
+  
+### <a name="parameters"></a>参数  
+  
+|参数|描述|  
+|---------------|-----------------|  
+|`ptr`|指向要从存储中释放的第一个对象的指针。|  
+|`count`|要从存储中释放的对象数量。|  
+  
+### <a name="remarks"></a>备注  
+  
+## <a name="see-also"></a>另请参阅  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

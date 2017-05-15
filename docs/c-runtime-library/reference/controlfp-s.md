@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 022dd9188a043ccb5a17a3e9040e0c8969acf7ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 4345539f7ecd836280bed94c4bb2b125dfa08107
+ms.contentlocale: zh-cn
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="controlfps"></a>_controlfp_s
@@ -99,7 +100,7 @@ errno_t _controlfp_s(
   
  `_control87` 和 `_controlfp_s` 之间的差异在于它们看待 `DENORMAL` 值的方式。 对于 Intel (x86)、[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 和 ARM 平台，`_control87` 可以设置并清除 DENORMAL OPERAND 异常掩码。 `_controlfp_s` 不会修改 DENORMAL OPERAND 异常掩码。 此示例演示了差别：  
   
-```  
+```C  
 _control87( _EM_INVALID, _MCW_EM );   
 // DENORMAL is unmasked by this call.  
 unsigned int current_word = 0;  
@@ -111,7 +112,7 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
   
  Intel (x86) 派生的平台支持硬盘中的 DENORMAL 输入和输出值。 x86 行为是为了保留 DENORMAL 值。 具有 SSE2 支持的 ARM 平台和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 平台允许刷新DENORMAL 操作数和结果，或强制为零。 `_controlfp_s`、`_controlfp` 和 `_control87` 函数提供更改此行为的掩码。 下面的示例演示此掩码的使用：  
   
-```  
+```C  
 unsigned int current_word = 0;  
 _controlfp_s(&current_word, _DN_SAVE, _MCW_DN);     
 // Denormal values preserved on ARM platforms and on x64 processors with  
@@ -127,9 +128,9 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
  如果未正确设置掩码，则此函数生成无效的参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 `EINVAL` 并将 `errno` 设置为 `EINVAL`。  
   
- 当您使用此函数将忽略[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)来编译，因为公共语言运行时 (CLR) 仅支持默认浮点精度。  
+ 当你使用此函数将忽略[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)来编译，因为公共语言运行时 (CLR) 仅支持默认的浮点精度。  
   
- **十六进制值**  
+### <a name="mask-constants-and-values"></a>掩码常量和值  
   
  对于 `_MCW_EM` 掩码，清除掩码将设置异常，这会允许硬件异常；设置它可隐藏异常。 如果出现 `_EM_UNDERFLOW` 或 `_EM_OVERFLOW`，则在执行下一步浮点指令之前，不会引发任何硬盘异常。 若要在 `_EM_UNDERFLOW` 或 `_EM_OVERFLOW` 后立即生成硬件异常，请调用 FWAIT MASM 指令。  
   
@@ -151,14 +152,12 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
 ## <a name="example"></a>示例  
   
-```  
-  
-      // crt_contrlfp_s.c  
+```C  
+// crt_contrlfp_s.c  
 // processor: x86  
 // This program uses _controlfp_s to output the FP control   
 // word, set the precision to 24 bits, and reset the status to   
 // the default.  
-//  
   
 #include <stdio.h>  
 #include <float.h>  
@@ -193,9 +192,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>输出  
-  
-```  
+```Output  
 Original: 0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 24-bit:   0xa001f  
@@ -203,9 +200,6 @@ Original: 0x9001f
 Default:  0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   

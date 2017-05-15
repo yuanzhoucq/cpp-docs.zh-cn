@@ -2,9 +2,10 @@
 layout: HubPage
 title: "Visual C++ 文档| Microsoft Docs"
 description: "了解如何使用 C++ 针对平台和设备开发应用程序、服务和工具。"
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fa2cdbf2d54994784bfc8a0bd0e542b3f5de309b
 ms.openlocfilehash: a4623b2ccb2ea1f10b8060afa691c20d22a9c181
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---

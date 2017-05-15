@@ -74,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bd731aed33b3c05a55b9a6dc2a365f68a5d343dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4313f785ba5197c3659e74384b7d6ecda8e8c7be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
@@ -152,7 +153,7 @@ _locale_tlocale
  如果 `strToken` 为 `NULL`，但上下文是指向有效上下文指针的指针，则不会有任何错误。  
   
 ## <a name="remarks"></a>备注  
- `strtok_s` 函数查找 `strToken` 中的下一个标记。 `strDelimit` 中的字符组指定在当前调用上的 `strToken` 中找到的可能的标记分隔符。 `wcstok_s` 和 `_mbstok_s` 是 `strtok_s` 的宽字符和多字节字符版本。 `wcstok_s` 和 `_wcstok_s_l` 的参数和返回值是宽字符字符串；而 `_mbstok_s` 和 `_mbstok_s_l` 是多字节字符字符串。 否则这三个函数否则具有相同行为。  
+ `strtok_s` 函数查找 `strToken` 中的下一个标记。 `strDelimit` 中的字符组指定在当前调用上的 `strToken` 中找到的可能的标记分隔符。 `wcstok_s` 和 `_mbstok_s` 分别是 `strtok_s` 的宽字符及多字节字符版本。 `wcstok_s` 和 `_wcstok_s_l` 的参数和返回值是宽字符字符串；而 `_mbstok_s` 和 `_mbstok_s_l` 是多字节字符字符串。 否则这三个函数否则具有相同行为。  
   
  此函数验证其参数。 如果出现错误条件表中的错误条件，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 `NULL`。  
   
@@ -175,8 +176,8 @@ _locale_tlocale
 |-------------|---------------------|  
 |`strtok_s`|\<string.h>|  
 |`_strtok_s_l`|\<string.h>|  
-|`wcstok_s,`<br /><br /> `_wcstok_s_l`|\<string.h> 或 \<wchar.h>|  
-|`_mbstok_s,`<br /><br /> `_mbstok_s_l`|\<mbstring.h>|  
+|`wcstok_s`,<br /><br /> `_wcstok_s_l`|\<string.h> 或 \<wchar.h>|  
+|`_mbstok_s`,<br /><br /> `_mbstok_s_l`|\<mbstring.h>|  
   
  有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
@@ -246,9 +247,6 @@ Tokens:
         time.  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

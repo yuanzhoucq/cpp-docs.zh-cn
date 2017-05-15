@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2a1c5b467ba9f96af0bc8e402715a0a427c73eeb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: cd787e4c18cf947760a31b5ee61f5ce7b83a7a2f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
@@ -110,7 +111,7 @@ unsigned int _mbsnextc_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 其中每个函数均返回 `str`* 中下一个字符的整数值。*  
+ 其中每个函数返回中的下一个字符的整数值`str`。  
   
 ## <a name="remarks"></a>备注  
  `_mbsnextc` 函数返回 `str` 中下一个多字节字符的整数值，而不前移字符串指针。 `_mbsnextc` 根据当前使用的[多字节代码页](../../c-runtime-library/code-pages.md)识别多字节字符序列。  
@@ -125,7 +126,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc` 和 `_wcsnextc` 是 `_mbsnextc` 的单字节字符字符串和宽字符字符串版本。 `_wcsnextc` 返回 `string` 中下一个宽字符的整数值；`_strnextc` 返回 `string` 中下一个单字节字符的整数值。 仅为此映射提供 `_strnextc` 和 `_wcsnextc`，否则不应该使用它们。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。  
+ `_strnextc`和`_wcsnextc`是单字节字符的字符串和宽字符字符串新版`_mbsnextc`。 `_wcsnextc` 返回 `string` 中下一个宽字符的整数值；`_strnextc` 返回 `string` 中下一个单字节字符的整数值。 仅为此映射提供 `_strnextc` 和 `_wcsnextc`，否则不应该使用它们。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。  
   
  `_mbsnextc_l` 是相同的，只不过它改用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
@@ -139,9 +140,6 @@ unsigned int _mbsnextc_l(
 |`_wcsnextc`|\<tchar.h>|  
   
  有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

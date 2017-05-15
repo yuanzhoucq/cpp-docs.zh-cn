@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>输出文件流成员函数
@@ -43,7 +45,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="the-open-function-for-output-streams"></a>输出流的 open 函数  
  若要使用输出文件流 ([ofstream](../standard-library/basic-ofstream-class.md))，则必须将该流与构造函数中的特定磁盘文件或 **open** 函数相关联。 如果使用 **open** 函数，则可以重复使用具有一系列文件的同一流对象。 在任一情况下，描述该文件的参数是相同的。  
   
- 当打开与输出流关联的文件时，通常会指定 **open_mode** 标志。 可以将在 `ios` 类中定义为枚举器的这些标志与按位 OR ( &#124; ) 运算符合并。 有关枚举器的列表，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode)。  
+ 当打开与输出流关联的文件时，通常会指定 **open_mode** 标志。 可以将在 `ios` 类中定义为枚举器的这些标志与按位 OR ( &#124; ) 运算符合并。 有关枚举器的列表，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。  
   
  三种常见的输出流情况涉及模式选项：  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>put 函数  
+## <a name="the-put"></a>Put
  **put** 函数将一个字符写入到输出流。 默认情况下，以下两个语句相同，但第二个受流的格式化参数的影响：  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>write 函数  
+## <a name="the-write"></a>写入
  **write** 函数将内存块写入到输出文件流。 长度参数指定写入的字节数。 此示例可创建输出文件流，并向其写入 `Date` 结构的二进制值：  
   
 ```  
@@ -123,7 +125,7 @@ int main( )
   
  仅当构造函数或 **open** 成员函数打开该文件时，输出流析构函数会自动关闭流的文件。 如果向构造函数传递已打开文件的文件描述符，或使用 **attach** 成员函数，则必须显式关闭该文件。  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a>错误处理函数  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a>错误处理函数  
  使用这些成员函数来测试写入流时是否出现错误：  
   
 |函数|返回值|  

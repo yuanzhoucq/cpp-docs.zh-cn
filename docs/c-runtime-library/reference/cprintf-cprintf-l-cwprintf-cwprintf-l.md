@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
@@ -88,22 +89,18 @@ ms.lasthandoff: 02/24/2017
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  窗体控件字符串。  
   
- `argument`  
- 可选参数。  
+ `argument_list`  
+ 格式字符串的可选参数。  
   
  `locale`  
  要使用的区域设置。  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  打印的字符数。  
   
 ## <a name="remarks"></a>备注  
- 这些函数会格式化一系列字符和值并将其直接输出到控制台，并使用 `_putch` 函数（`_cwprintf` 为 `_putwch`）来输出字符。 每个 `argument`（如果有）根据 `format`中相应的格式规范进行转换和输出。 格式具有与 [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) 函数的 `format` 参数相同的形式和函数。 与 `fprintf`、`printf` 和 `sprintf` 函数不同，`_cprintf` 和 `_cwprintf` 在输出时都不会将换行符转换为回车符–换行符 (CR-LF) 的组合。  
+ 这些函数会格式化一系列字符和值并将其直接输出到控制台，并使用 `_putch` 函数（`_cwprintf` 为 `_putwch`）来输出字符。 在每个自变量`argument_list`（如果有） 进行转换和输出中的相应格式规范根据`format`。 `format`自变量使用[格式规范语法 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 与不同`fprintf`， `printf`，和`sprintf`函数，两者`_cprintf`也不`_cwprintf`会换行字符将转换为回车换行符 (CR-LF) 组合输出时。  
   
- 一个重要区别在于，在 Windows NT 中使用 `_cwprintf` 时，它将显示 Unicode 字符。 与 `_cprintf` 不同，`_cwprintf` 使用当前控制台区域设置。  
+ 一个重要区别在于，`_cwprintf`显示 Unicode 字符在 Windows 中使用时。 与 `_cprintf` 不同，`_cwprintf` 使用当前控制台区域设置。  
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前区域设置。  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)   

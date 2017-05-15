@@ -9,10 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.scoped_allocator_adaptor
 - scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor
-- std::scoped_allocator_adaptor
+- scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
+- scoped_allocator/std::scoped_allocator_adaptor::allocate
+- scoped_allocator/std::scoped_allocator_adaptor::construct
+- scoped_allocator/std::scoped_allocator_adaptor::deallocate
+- scoped_allocator/std::scoped_allocator_adaptor::destroy
+- scoped_allocator/std::scoped_allocator_adaptor::inner_allocator
+- scoped_allocator/std::scoped_allocator_adaptor::max_size
+- scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
+- scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +43,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: f4c343592c2c767d52a66091ecca5b1bd4ae9e88
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3fa8c1304da253183c7f201811238f14d0da3193
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 类
@@ -77,7 +85,7 @@ class scoped_allocator_adaptor;
   
 |名称|描述|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::scoped_allocator_adaptor 构造函数](#scoped_allocator_adaptor__scoped_allocator_adaptor_constructor)|构造 `scoped_allocator_adaptor` 对象。|  
+|[scoped_allocator_adaptor](#scoped_allocator_adaptor)|构造 `scoped_allocator_adaptor` 对象。|  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -100,27 +108,27 @@ class scoped_allocator_adaptor;
   
 |名称|描述|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::rebind 结构](#scoped_allocator_adaptor__rebind_struct)|将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。|  
+|[scoped_allocator_adaptor::rebind 结构](#rebind_struct)|将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。|  
   
 ### <a name="methods"></a>方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::allocate 方法](#scoped_allocator_adaptor__allocate_method)|通过使用 `Outer` 分配器分配内存。|  
-|[scoped_allocator_adaptor::construct 方法](#scoped_allocator_adaptor__construct_method)|构造对象。|  
-|[scoped_allocator_adaptor::deallocate 方法](#scoped_allocator_adaptor__deallocate_method)|通过使用外部分配器释放对象。|  
-|[scoped_allocator_adaptor::destroy 方法](#scoped_allocator_adaptor__destroy_method)|销毁指定的对象。|  
-|[scoped_allocator_adaptor::inner_allocator 方法](#scoped_allocator_adaptor__inner_allocator_method)|检索对类型为 `inner_allocator_type` 的存储对象的引用。|  
-|[scoped_allocator_adaptor::max_size 方法](#scoped_allocator_adaptor__max_size_method)|确定可通过外部分配器分配的对象的最大数目。|  
-|[scoped_allocator_adaptor::outer_allocator 方法](#scoped_allocator_adaptor__outer_allocator_method)|检索对类型为 `outer_allocator_type` 的存储对象的引用。|  
-|[scoped_allocator_adaptor::select_on_container_copy_construction 方法](#scoped_allocator_adaptor__select_on_container_copy_construction_method)|创建一个新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用每个相应分配器的 `select_on_container_copy_construction` 进行初始化。|  
+|[allocate](#allocate)|通过使用 `Outer` 分配器分配内存。|  
+|[construct](#construct)|构造对象。|  
+|[deallocate](#deallocate)|通过使用外部分配器释放对象。|  
+|[destroy](#destroy)|销毁指定的对象。|  
+|[inner_allocator](#inner_allocator)|检索对类型为 `inner_allocator_type` 的存储对象的引用。|  
+|[max_size](#max_size)|确定可通过外部分配器分配的对象的最大数目。|  
+|[outer_allocator](#outer_allocator)|检索对类型为 `outer_allocator_type` 的存储对象的引用。|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|创建一个新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用每个相应分配器的 `select_on_container_copy_construction` 进行初始化。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** \<scoped_allocator&1;>  
+ **标头：** \<scoped_allocator 1>  
   
  **命名空间：** std  
   
-##  <a name="a-namescopedallocatoradaptorallocatemethoda--scopedallocatoradaptorallocate-method"></a><a name="scoped_allocator_adaptor__allocate_method"></a>  scoped_allocator_adaptor::allocate 方法  
+##  <a name="allocate"></a>scoped_allocator_adaptor:: allocate
  通过使用 `Outer` 分配器分配内存。  
   
 ```cpp  
@@ -137,7 +145,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 ### <a name="return-value"></a>返回值  
  第一个成员函数返回 `Outer_traits::allocate(outer_allocator(), count)`。 第二个成员函数返回 `Outer_traits::allocate(outer_allocator(), count, hint)`。  
   
-##  <a name="a-namescopedallocatoradaptorconstructmethoda--scopedallocatoradaptorconstruct-method"></a><a name="scoped_allocator_adaptor__construct_method"></a>  scoped_allocator_adaptor::construct 方法  
+##  <a name="construct"></a>scoped_allocator_adaptor:: construct
  构造对象。  
   
 ```cpp  
@@ -198,7 +206,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
   
  第六种方法的行为与 `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))` 相同。  
   
-##  <a name="a-namescopedallocatoradaptordeallocatemethoda--scopedallocatoradaptordeallocate-method"></a><a name="scoped_allocator_adaptor__deallocate_method"></a>  scoped_allocator_adaptor::deallocate 方法  
+##  <a name="deallocate"></a>scoped_allocator_adaptor:: deallocate
  通过使用外部分配器释放对象。  
   
 ```cpp  
@@ -212,7 +220,7 @@ void deallocate(pointer ptr, size_type count);
  `count`  
  要释放的对象数。  
   
-##  <a name="a-namescopedallocatoradaptordestroymethoda--scopedallocatoradaptordestroy-method"></a><a name="scoped_allocator_adaptor__destroy_method"></a>  scoped_allocator_adaptor::destroy 方法  
+##  <a name="destroy"></a>scoped_allocator_adaptor:: destroy
  销毁指定的对象。  
   
 ```cpp  
@@ -227,7 +235,7 @@ void destroy(Ty* ptr)
 ### <a name="return-value"></a>返回值  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="a-namescopedallocatoradaptorinnerallocatormethoda--scopedallocatoradaptorinnerallocator-method"></a><a name="scoped_allocator_adaptor__inner_allocator_method"></a>  scoped_allocator_adaptor::inner_allocator 方法  
+##  <a name="inner_allocator"></a>scoped_allocator_adaptor:: inner_allocator
  检索对类型为 `inner_allocator_type` 的存储对象的引用。  
   
 ```cpp  
@@ -238,7 +246,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 ### <a name="return-value"></a>返回值  
  对类型为 `inner_allocator_type` 的存储对象的引用。  
   
-##  <a name="a-namescopedallocatoradaptormaxsizemethoda--scopedallocatoradaptormaxsize-method"></a><a name="scoped_allocator_adaptor__max_size_method"></a>  scoped_allocator_adaptor::max_size 方法  
+##  <a name="max_size"></a>scoped_allocator_adaptor:: max_size
  确定可通过外部分配器分配的对象的最大数目。  
   
 ```cpp  
@@ -248,7 +256,7 @@ size_type max_size();
 ### <a name="return-value"></a>返回值  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="a-namescopedallocatoradaptorouterallocatormethoda--scopedallocatoradaptorouterallocator-method"></a><a name="scoped_allocator_adaptor__outer_allocator_method"></a>  scoped_allocator_adaptor::outer_allocator 方法  
+##  <a name="outer_allocator"></a>scoped_allocator_adaptor:: outer_allocator
  检索对类型为 `outer_allocator_type` 的存储对象的引用。  
   
 ```cpp  
@@ -259,7 +267,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 ### <a name="return-value"></a>返回值  
  对类型为 `outer_allocator_type` 的存储对象的引用。  
   
-##  <a name="a-namescopedallocatoradaptorrebindstructa--scopedallocatoradaptorrebind-struct"></a><a name="scoped_allocator_adaptor__rebind_struct"></a>  scoped_allocator_adaptor::rebind 结构  
+##  <a name="rebind_struct"></a>  scoped_allocator_adaptor::rebind 结构  
  将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。  
   
 重新绑定结构 {  
@@ -268,7 +276,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
    typedef scoped_allocator_adaptor\<Other_alloc, Inner...> other;  
    };  
   
-##  <a name="a-namescopedallocatoradaptorscopedallocatoradaptorconstructora--scopedallocatoradaptorscopedallocatoradaptor-constructor"></a><a name="scoped_allocator_adaptor__scoped_allocator_adaptor_constructor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 构造函数  
+##  <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 构造函数  
  构造 `scoped_allocator_adaptor` 对象。  
   
 ```cpp  
@@ -299,7 +307,7 @@ scoped_allocator_adaptor(Outer2&& al,
 ### <a name="remarks"></a>备注  
  第一个构造函数默认构造其存储分配器对象。 后面的三个构造函数中的每一个都会从 `right` 中的相应对象构造其存储分配器对象。 最后一个构造函数从参数列表中相应参数构造其存储分配器对象。  
   
-##  <a name="a-namescopedallocatoradaptorselectoncontainercopyconstructionmethoda--scopedallocatoradaptorselectoncontainercopyconstruction-method"></a><a name="scoped_allocator_adaptor__select_on_container_copy_construction_method"></a>  scoped_allocator_adaptor::select_on_container_copy_construction 方法  
+##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor:: select_on_container_copy_construction
  创建一个新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用每个相应分配器的 `select_on_container_copy_construction` 进行初始化。  
   
 ```cpp  

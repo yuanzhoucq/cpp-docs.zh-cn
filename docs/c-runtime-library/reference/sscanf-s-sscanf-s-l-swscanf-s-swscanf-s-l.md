@@ -1,66 +1,83 @@
 ---
-title: "sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_sscanf_s_l"
-  - "sscanf_s"
-  - "_swscanf_s_l"
-  - "swscanf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_stscanf_s"
-  - "sscanf_s"
-  - "swscanf_s"
-  - "_swscanf_s_l"
-  - "_stscanf_s_l"
-  - "_sscanf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_sscanf_s_l 函数"
-  - "_stscanf_s 函数"
-  - "_stscanf_s_l 函数"
-  - "_swscanf_s_l 函数"
-  - "读取数据, 字符串"
-  - "sscanf_s 函数"
-  - "sscanf_s_l 函数"
-  - "字符串 [C++], 读取"
-  - "字符串 [C++], 读取数据自"
-  - "stscanf_s 函数"
-  - "stscanf_s_l 函数"
-  - "swscanf_s 函数"
-  - "swscanf_s_l 函数"
+title: "sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _sscanf_s_l
+- sscanf_s
+- _swscanf_s_l
+- swscanf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _stscanf_s
+- sscanf_s
+- swscanf_s
+- _swscanf_s_l
+- _stscanf_s_l
+- _sscanf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- stscanf_s_l function
+- stscanf_s function
+- swscanf_s function
+- swscanf_s_l function
+- sscanf_s_l function
+- _stscanf_s_l function
+- strings [C++], reading data from
+- sscanf_s function
+- _swscanf_s_l function
+- _stscanf_s function
+- reading data, strings
+- strings [C++], reading
+- _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 59693a41b76eb7d6d7bae4c50fa320d8f48c78d1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 03/30/2017
 
-读取格式化字符串中的数据。 这些版本的 [sscanf、\_sscanf\_l、swscanf、\_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md) 具有安全增强功能，如中所述 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)。  
+---
+# <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
+从字符串中读取格式化数据。 这些版本的 [sscanf、_sscanf_l、swscanf、_swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md) 具有安全性增强功能，如 [CRT 的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int sscanf_s(  
@@ -87,7 +104,7 @@ int _swscanf_s_l(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `buffer`  
  存储的数据  
   
@@ -100,21 +117,21 @@ int _swscanf_s_l(
  `locale`  
  要使用的区域设置  
   
-## 返回值  
- 其中每个函数将返回成功转换并分配; 的字段数返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 返回值是 `EOF` 是否有错误或如果在第一次转换之前到达字符串结尾。  
+## <a name="return-value"></a>返回值  
+ 每个函数都将返回成功转换并分配的字段数；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果在首次转换前到达字符串的结尾，则返回值为 `EOF` 以指示错误。  
   
- 如果 `buffer` 或 `format` 是 `NULL` 调用指针，无效参数处理程序，如中所述 [参数验证](../../c-runtime-library/parameter-validation.md)。 如果允许继续执行，则这些函数返回 \-1 并将 `errno` 设置为 `EINVAL`  
+ 如果 `buffer` 或 `format` 是 `NULL` 指针，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 -1 并将 `errno` 设置为 `EINVAL`  
   
- 有关这些和其他错误代码的信息，请参阅 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- `sscanf_s` 函数将读取数据从 `buffer` 到由每个给出的位置 `argument`。 格式字符串之后的参数指定指向具有对应于中的类型说明符的类型的变量的指针 `format`。 与安全级别较低版本不同 `sscanf`, ，使用类型字段字符时，缓冲区大小参数是必需 `c`, ，`C`, ，`s`, ，`S`, ，或字符串中包含的控件集 `[]`。 以字符为单位的缓冲区大小必须在每个缓冲区参数，它需要它后立即提供作为一个附加参数。 例如，如果您正在读取为一个字符串，该字符串的缓冲区大小传递，如下所示︰  
+## <a name="remarks"></a>备注  
+ `sscanf_s` 函数将数据从 `buffer` 读入每个 `argument` 给定的位置。 格式字符串之后的参数指定指向类型与 `format` 中的类型说明符相对应的变量的指针。 与不太安全的版本 `sscanf` 不同，使用类型字段字符 `c`、`C`、`s`、`S` 或括在 `[]` 中的字符串控件集时，需要使用缓冲区大小参数。 必须紧跟在需要缓冲区大小的缓冲区参数后提供缓冲区大小（以字符为单位）作为附加参数。 例如，如果你正在读入一个字符串，则将传递该字符串的缓冲区大小，如下所示：  
   
  `wchar_t ws[10];`  
   
  `swscanf_s(in_str, L"%9s", ws, (unsigned)_countof(ws)); // buffer size is 10, width specification is 9`  
   
- 缓冲区大小包括终止 null 字符。 宽度规范字段可能用于确保在中读取的标记可放入缓冲区。 如果未使用任何宽度规范字段，并且读取的标记太大以致缓冲区中无法容纳，则不会向该缓冲区写入任何内容。  
+ 缓冲区大小包括终止 null 字符。 可以使用宽度规范字段来确保读入的标记可放入缓冲区中。 如果未使用任何宽度规范字段，并且读取的标记太大以致缓冲区中无法容纳，则不会向该缓冲区写入任何内容。  
   
  对于字符，可读取单个字符，如下所示：  
   
@@ -122,40 +139,40 @@ int _swscanf_s_l(
   
  `swscanf_s(in_str, L"%c", &wc, 1);`  
   
- 此示例在输入字符串中读取单个字符，并将其存储在宽字符缓冲区中。 在阅读非 null 终止的字符串的多个字符时，无符号的整数用作宽度规范和缓冲区大小。  
+ 此示例从输入字符串读取单个字符，然后将其存储在宽字符缓冲区中。 在读取非 null 终止的字符串的多个字符时，将无符号整数用作宽度规范和缓冲区大小。  
   
  `char c[4];`  
   
  `sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated`  
   
- 有关详细信息，请参阅 [scanf\_s、\_scanf\_s\_l、wscanf\_s、\_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。  
+ 有关详细信息，请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 类型字段字符](../../c-runtime-library/scanf-type-field-characters.md)。  
   
 > [!NOTE]
->  大小参数的类型具有 `unsigned`，而不具有 `size_t`。 在为 64 位目标编译时，使用静态强制转换来转换 `_countof` 或 `sizeof` 结果为正确的大小。  
+>  大小参数的类型具有 `unsigned`，而不具有 `size_t`。 当编译 64 位目标时，使用静态强制转换将 `_countof` 或 `sizeof` 结果转换为正确的大小。  
   
- `format` 参数控件输入解释字段，并具有相同的形式和函数与 `format` 参数 `scanf_s` 函数。 如果在重叠的字符串之间发生复制，则此行为不确定。  
+ `format` 参数控制输入字段的解释，并且格式和函数与 `scanf_s` 函数的 `format` 参数相同。 如果在重叠的字符串之间发生复制，则此行为不确定。  
   
- `swscanf_s` 是的宽字符版本 `sscanf_s;` 参数与 `swscanf_s` 都是宽字符字符串。`sscanf_s` 不处理多字节的十六进制字符。`swscanf_s` 不处理 Unicode 全角十六进制或"兼容性区"字符。 除此以外，`swscanf_s` 和 `sscanf_s` 的行为完全相同。  
+ `swscanf_s` 是 `sscanf_s;` 的宽字符版本；`swscanf_s` 的参数是宽字符串。 `sscanf_s` 不处理多字节十六进制字符。 `swscanf_s` 不处理 Unicode 全角十六进制或“兼容区”字符。 除此以外，`swscanf_s` 和 `sscanf_s` 的行为完全相同。  
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前线程区域设置。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_stscanf_s`|`sscanf_s`|`sscanf_s`|`swscanf_s`|  
 |`_stscanf_s_l`|`_sscanf_s_l`|`_sscanf_s_l`|`_swscanf_s_l`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`sscanf_s`, `_sscanf_s_l`|\<stdio.h\>|  
-|`swscanf_s`, `_swscanf_s_l`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`sscanf_s`, `_sscanf_s_l`|\<stdio.h>|  
+|`swscanf_s`, `_swscanf_s_l`|\<stdio.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_sscanf_s.c  
@@ -189,15 +206,15 @@ int main( void )
 ```  
   
 ```Output  
-字符串 = 15 个字符 = 1 的整数︰ 实际 = 15: = 15.000000  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
 ```  
   
-## .NET Framework 等效项  
- 请参阅 `Parse` 方法，如 [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)。  
-  
-## 请参阅  
- [流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [fscanf、\_fscanf\_l、fwscanf、\_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [scanf、\_scanf\_l、wscanf、\_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [snprintf、\_snprintf、\_snprintf\_l、\_snwprintf、\_snwprintf\_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fscanf、_fscanf_l、fwscanf、_fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [scanf、_scanf_l、wscanf、_wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)

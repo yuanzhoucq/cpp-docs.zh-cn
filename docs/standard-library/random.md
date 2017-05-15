@@ -33,10 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: a817bc264a762d6043b80a68d966a9e8420c72b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 ### <a name="quick-tips"></a>快速提示  
  使用 `<random>` 时，请牢记以下这些提示：  
   
--   在大多数情况下，URNG 将产生必须由分布形成的原始位。 （一个值得注意的例外是 [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle)，因为它直接使用 URNG。）  
+-   在大多数情况下，URNG 将产生必须由分布形成的原始位。 （一个值得注意的例外是 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)，因为它直接使用 URNG。）  
   
 -   无法同时安全地调用 URNG 或分布的单一实例化，因为运行 URNG 或分布是修改操作。 有关详细信息，请参阅 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)。  
   
@@ -74,8 +75,8 @@ ms.lasthandoff: 02/24/2017
   
  `<random>` 标头中提供了许多可选选项，其中任何选项都优于过时的 C 运行时函数 `rand()`。 有关 `rand()` 的问题以及 `<random>` 处理这些不足的方式的信息，请观看[此视频](http://go.microsoft.com/fwlink/LinkId=397615)。  
   
-##  <a name="a-namecodea-examples"></a><a name="code"></a>示例  
- 以下代码示例显示如何生成一些随机数字，本例中有&5; 个是使用生成器用非确定性种子生成的。  
+##  <a name="code"></a>示例  
+ 以下代码示例显示如何生成一些随机数字，本例中有 5 个是使用生成器用非确定性种子生成的。  
   
 ```cpp  
 #include <random>  
@@ -228,9 +229,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 此代码使用测试模板函数演示了两种不同的随机化过程（随机化整数矢量和随机排列索引数据的数组）。 首次调用测试函数时，使用安全加密的、非确定性的、不可设定种子的、不可重复的 URNG `random_device`。 第二次测试运行将 `mersenne_twister_engine` 用作 URNG，以及确定性的 32 位常量种子，这意味着结果是可重复的。 第三次测试运行使用来自 `mersenne_twister_engine` 的 32 位非确定性结果设定 `random_device` 的种子。 第四次测试运行通过使用以 `random_device` 结果填充的[种子序列](../standard-library/seed-seq-class.md)对此进行扩展，这可有效地提供超过 32 位的非确定性随机性（但仍非安全加密的）。 有关详细信息，请继续阅读。  
   
-##  <a name="a-namelistinga-categorized-listing"></a><a name="listing"></a>分类列表  
+##  <a name="listing"></a>分类列表  
   
-###  <a name="a-nameurngsa-uniform-random-number-generators"></a><a name="urngs"></a>均匀随机数生成器  
+###  <a name="urngs"></a>均匀随机数生成器  
  通常根据这些属性来描述 URNG：  
   
 1. **周期长度**：重复生成的数字序列所需的迭代数。 越长越好。  
@@ -241,13 +242,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  以下部分列出了 `<random>` 标头中提供的均匀随机数生成器 (URNG)。  
   
-####  <a name="a-namerda-non-deterministic-generator"></a><a name="rd"></a>非确定性生成器  
+####  <a name="rd"></a>非确定性生成器  
   
 |||  
 |-|-|  
 |[random_device 类](../standard-library/random-device-class.md)|通过使用外部设备，生成非确定性的、安全加密的随机序列。 通常用于为引擎设定种子。 低性能，高质量。 有关更多信息，请参见[备注](#comments)。|  
   
-####  <a name="a-nametypedefsa-engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a>具有预定义参数的引擎 Typedef  
+####  <a name="typedefs"></a>具有预定义参数的引擎 Typedef  
  适用于实例化引擎和引擎适配器。 有关详细信息，请参阅[引擎和分布](#engdist)。  
   
 - `default_random_engine`默认引擎。   
@@ -280,7 +281,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 - `ranlux48_base`用作 `ranlux48` 的基础。   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="a-nameenga-engine-templates"></a><a name="eng"></a>引擎模板  
+####  <a name="eng"></a>引擎模板  
  引擎模板将用作独立的 URNG 或传递给[引擎适配器](#engadapt)的基引擎。 通常，使用[预定义引擎 typedef](#typedefs) 实例化这些模板引擎并将其传递给[分布](#distributions)。 有关详细信息，请参阅[引擎和分布](#engdist)部分。  
   
 |||  
@@ -289,7 +290,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |[mersenne_twister_engine 类](../standard-library/mersenne-twister-engine-class.md)|通过使用梅森旋转算法生成随机序列。 最复杂且质量最高（random_device 类除外）。 性能非常快。|  
 |[subtract_with_carry_engine 类](../standard-library/subtract-with-carry-engine-class.md)|通过使用带进位减法算法生成随机序列。 `linear_congruential_engine` 的改进，但是质量和性能都比 `mersenne_twister_engine` 低得多。|  
   
-####  <a name="a-nameengadapta-engine-adaptor-templates"></a><a name="engadapt"></a>引擎适配器模板  
+####  <a name="engadapt"></a>引擎适配器模板  
  引擎适配器是适应其他（基）引擎的模板。 通常，使用[预定义引擎 typedef](#typedefs) 实例化这些模板引擎并将其传递给[分布](#distributions)。 有关详细信息，请参阅[引擎和分布](#engdist)部分。  
   
 |||  
@@ -300,7 +301,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  [[引擎模板](#eng)]  
   
-###  <a name="a-namedistributionsa-random-number-distributions"></a><a name="distributions"></a>随机数分布  
+###  <a name="distributions"></a>随机数分布  
  以下部分列出了 `<random>` 标头中提供的分布。 这些分布是后处理机制，通常将 URNG 输出用作输入并通过定义的统计概率密度函数分布输出。 有关详细信息，请参阅[引擎和分布](#engdist)部分。  
   
 #### <a name="uniform-distributions"></a>均匀分布  
@@ -330,7 +331,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|  
 |[cauchy_distribution 类](../standard-library/cauchy-distribution-class.md)|产生真（浮点）值的柯西分布。|  
 |[chi_squared_distribution 类](../standard-library/chi-squared-distribution-class.md)|产生真（浮点）值的卡方分布。|  
-|[fisher_f_distribution 类](../standard-library/fisher-f-distribution-class.md)|产生真（浮点）值的 F-分布（也称为 Snedecor 的 F 分布或 Fisher–Snedecor 分布）。|  
+|[fisher_f_distribution 类](../standard-library/fisher-f-distribution-class.md)|产生的 F-分布 （也称为 Snedecor 的 F 分布或 Fisher Snedecor 分布） 的真 （浮点） 值。|  
 |[lognormal_distribution 类](../standard-library/lognormal-distribution-class.md)|产生真（浮点）值的对数正态分布。|  
 |[normal_distribution 类](../standard-library/normal-distribution-class.md)|产生真（浮点）值的正态（高斯）分布。|  
 |[student_t_distribution 类](../standard-library/student-t-distribution-class.md)|产生真（浮点）值的学生 *t*-分布。|  
@@ -376,7 +377,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |`operator<<`|将状态信息写入流。|  
 |`operator>>`|从流中提取状态信息。|  
   
-##  <a name="a-nameengdista-engines-and-distributions"></a><a name="engdist"></a>引擎和分布  
+##  <a name="engdist"></a>引擎和分布  
  有关 `<random>` 中定义的每个模板类类别的信息，请参考以下部分。 这两个模板类类别都采用类型作为参数，并使用共享模板参数名称来描述允许作为实际参数类型的类型的属性，如下所示：  
   
 - `IntType` 指示 `short`、`int`、`long`、`long long`、`unsigned short`、`unsigned int`、`unsigned long` 或 `unsigned long long`。  
@@ -459,13 +460,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  有关详细信息，请参阅本文之前链接的此子主题下面的参考子主题。  
   
-##  <a name="a-namecommentsa-remarks"></a><a name="comments"></a>备注  
+##  <a name="comments"></a>备注  
  Visual Studio 中存在两个非常有用的 URNG（`mt19937` 和 `random_device`），如此比较表中所示：  
   
 |URNG|快速|安全加密|可设定种子|是确定的|  
 |----------|-----------|---------------------|---------------|--------------------|  
-|`mt19937`|是|否|是|是<sup>*</sup>|  
-|`random_device`|No|是|No|No|  
+|`mt19937`|是|No|是|是<sup>*</sup>|  
+|`random_device`|No|是|否|No|  
   
  <sup>* 在提供了已知种子的情况下。</sup>  
   

@@ -1,74 +1,91 @@
 ---
-title: "strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsncpy_s_l"
-  - "wcsncpy_s"
-  - "_strncpy_s_l"
-  - "strncpy_s"
-  - "_mbsncpy_s"
-  - "_wcsncpy_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsncpy_s"
-  - "_wcsncpy_s_l"
-  - "strncpy_s"
-  - "_strncpy_s_l"
-  - "wcsncpy_s"
-  - "_tcsncpy_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnbcpy_s 函数"
-  - "_mbsnbcpy_s_l 函数"
-  - "_strncpy_s_l 函数"
-  - "_tcsncpy_s 函数"
-  - "_tcsncpy_s_l 函数"
-  - "_wcsncpy_s_l 函数"
-  - "复制字符串"
-  - "mbsncpy_s 函数"
-  - "mbsncpy_s_l 函数"
-  - "字符串 [C++], 复制"
-  - "strncpy_s 函数"
-  - "strncpy_s_l 函数"
-  - "wcsncpy_s 函数"
-  - "wcsncpy_s_l 函数"
+title: "strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsncpy_s_l
+- wcsncpy_s
+- _strncpy_s_l
+- strncpy_s
+- _mbsncpy_s
+- _wcsncpy_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsncpy_s
+- _wcsncpy_s_l
+- strncpy_s
+- _strncpy_s_l
+- wcsncpy_s
+- _tcsncpy_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wcsncpy_s_l function
+- _mbsnbcpy_s function
+- _tcsncpy_s_l function
+- mbsncpy_s function
+- strncpy_s_l function
+- _strncpy_s_l function
+- strncpy_s function
+- mbsncpy_s_l function
+- wcsncpy_s function
+- copying strings
+- strings [C++], copying
+- _mbsnbcpy_s_l function
+- _tcsncpy_s function
+- wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
 caps.latest.revision: 47
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 47
----
-# strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3d0d2f76b88f1518b24860b3e8efb7c2214c2845
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-将一个字符串的字符复制给另一个。[strncpy、\_strncpy\_l、wcsncpy、\_wcsncpy\_l、\_mbsncpy、\_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) 的这些版本如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md) 所述，其安全得到了增强。  
+---
+# <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
+将一个字符串的字符复制到另一个字符串。  这些版本的 [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
   
 > [!IMPORTANT]
->  `_mbsncpy_s` 和 `_mbsncpy_s_l` 不能在 Windows 运行时中执行的应用程序中使用。  有关详细信息，请参见 [CRT functions not supported with \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)（CRT 函数不支持使用\/ZW）。  
+>  `_mbsncpy_s` 和 `_mbsncpy_s_l` 无法用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 errno_t strncpy_s(  
@@ -151,38 +168,38 @@ errno_t _mbsncpy_s_l(
 ); // C++ only  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `strDest`  
  目标字符串。  
   
  `numberOfElements`  
- 目标字符串中的字符数。  
+ 目标字符串的大小（以字符为单位）。  
   
  `strSource`  
  源字符串。  
   
  `count`  
- 要复制的字符数，或者[\_TRUNCATE](../../c-runtime-library/truncate.md)。  
+ 要复制的字符数或 [_TRUNCATE](../../c-runtime-library/truncate.md)。  
   
  `locale`  
  要使用的区域设置。  
   
-## 返回值  
- 如果成功则为零，如果截断事件发生，则`STRUNCATE`，否则为错误代码。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为零，如果发生截断，则为 `STRUNCATE`，否则为错误代码。  
   
-### 错误情况  
+### <a name="error-conditions"></a>错误条件  
   
 |`strDest`|`numberOfElements`|`strSource`|返回值|`strDest` 的内容|  
-|---------------|------------------------|-----------------|---------|-------------------|  
-|`NULL`|any|any|`EINVAL`|未修改|  
-|any|any|`NULL`|`EINVAL`|`strDest`\[0\] 设置为 0|  
+|---------------|------------------------|-----------------|------------------|---------------------------|  
+|`NULL`|any|任何|`EINVAL`|未修改|  
+|any|任何|`NULL`|`EINVAL`|`strDest`[0] 设置为 0|  
 |any|0|any|`EINVAL`|未修改|  
-|not `NULL`|太小|any|`ERANGE`|`strDest`\[0\] 设置为 0|  
+|非 `NULL`|过小|任何|`ERANGE`|`strDest`[0] 设置为 0|  
   
-## 备注  
- 这些函数想要复制 `strSource` 的第一个字符 `D` 到 `strDest`，`D` 是 `count`的较小值 和 `strSource`的长度。  如果这些 `D` 字符将适合于 `strDest` （其大小是 `numberOfElements`），仍然留出 null结束符的位置，然后这些字符被复制并追加null结束符；否则，`strDest`\[0\] 设置为在 null 字符和无效的参数调用处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 验证描述。  
+## <a name="remarks"></a>备注  
+ 这些函数尝试将 `strSource` 的前 `D` 个字符复制到 `strDest`，其中 `D` 是 `count` 和 `strSource` 长度中较小的一个。 如果这 `D` 个字符将适合 `strDest`（其大小给定为 `numberOfElements`），并且仍有空间追加 null 终止符，则复制这些字符并追加一个终止 null；否则，`strDest`[0] 设置为 null 字符，并调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。  
   
- 与上面段有异常。  如果 `count` 是 `_TRUNCATE`，则相同数量的 `strSource` 将复制到 `strDest`，同时仍然保留 null 结束符的空间。  
+ 在上段描述的内容中有一个例外。 如果 `count` 是 `_TRUNCATE`，则在仍有空间追加终止 null 时，会尽可能多地将 `strSource` 复制到 `strDest`。  
   
  例如，  
   
@@ -190,49 +207,49 @@ errno_t _mbsncpy_s_l(
   
  `strncpy_s(dst, 5, "a long string", 5);`  
   
- 意味着我们请求 `strncpy_s` 复制五个字符到五个字节的缓冲区；这不会留下 null 结束符的空间，因此 `strncpy_s` 只有0空间的字符串和调用无效参数处理程序。  
+ 意味着我们要求 `strncpy_s` 将五个字符复制到五个字节长的缓冲区中；这将不会为 null 终止符留有空间，因此，`strncpy_s` 将字符串置零，并调用无效的参数处理程序。  
   
- 如果截断行为是必需的，请使用 `_TRUNCATE` 或 \(`size` – 1\):  
+ 如果需要截断行为，使用`_TRUNCATE`或 (`size` -1):  
   
  `strncpy_s(dst, 5, "a long string", _TRUNCATE);`  
   
  `strncpy_s(dst, 5, "a long string", 4);`  
   
- 请注意不同的 `strncpy`，如果 `count` 比 `strSource`的长，目标字符串不用零填充该字符 `count`的长度。  
+ 请注意，与 `strncpy` 不同，如果 `count` 的长度大于 `strSource`，则在达到 `count` 长度前，不会用 null 字符填补目标字符串。  
   
- 如果源和目标字符串重叠，则 `strncpy_s` 的行为未定义。  
+ 如果源和目标字符串重叠，则 `strncpy_s` 的行为是未定义的。  
   
- 如果 `strDest` 或 `strSource` 是 `NULL`，或者 `numberOfElements` 为 0，则是无效参数调用处理程序。  如果允许执行继续，则该函数返回 `EINVAL` 并将 `errno` 设置为 `EINVAL`。  
+ 如果 `strDest` 或 `strSource` 是 `NULL`，或者 `numberOfElements` 是 0，则会调用无效的参数处理程序。 如果允许继续执行，则函数将返回 `EINVAL`，并且将 `errno` 设置为 `EINVAL`。  
   
- `wcsncpy_s` 和 `_mbsncpy_s` 是宽字符，属于 `strncpy_s` 的多节字字符版本。  参数和 `wcsncpy_s` 的返回值和 `mbsncpy_s` 相应地改变。  否则这六个函数具有相同行为。  
+ `wcsncpy_s` 和 `_mbsncpy_s` 分别是 `strncpy_s` 的宽字符及多字节字符版本。 参数和返回值的`wcsncpy_s`和`mbsncpy_s`执行相应变化。 否则这六个函数具有相同行为。  
   
- 输出值受区域设置的 `LC_CTYPE` 类设置影响；有关更多信息，请参见 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。  有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
   
- 在 C\+\+ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 \(不再需要指定大小参数\)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。  有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
   
- 这些函数的调试版本首先用 0xFD 填充缓冲区。  若要禁用此行为，请使用 [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
+ 这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|TCHAR.H 例程|未定义 \_UNICODE & \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncpy_s`|`strncpy_s`|`_mbsnbcpy_s`|`wcsncpy_s`|  
 |`_tcsncpy_s_l`|`_strncpy_s_l`|`_mbsnbcpy_s_l`|`_wcsncpy_s_l`|  
   
 > [!NOTE]
->  \_strncpy\_s\_l， `_wcsncpy_s_l` 和 `_mbsncpy_s_l` 没有区域设置依赖项以及为 `_tcsncpy_s_l` 做准备和不打算直接调用。  
+>  _strncpy_s_l、`_wcsncpy_s_l` 和 `_mbsncpy_s_l` 没有区域设置相关性，仅为 `_tcsncpy_s_l` 提供，不能直接调用。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`strncpy_s`, `_strncpy_s_l`|\<string.h\>|  
-|`wcsncpy_s`, `_wcsncpy_s_l`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbsncpy_s`, `_mbsncpy_s_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strncpy_s`, `_strncpy_s_l`|\<string.h>|  
+|`wcsncpy_s`, `_wcsncpy_s_l`|\<string.h> 或 \<wchar.h>|  
+|`_mbsncpy_s`, `_mbsncpy_s_l`|\<mbstring.h>|  
   
- 有关兼容性的更多信息，请参见[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_strncpy_s_1.cpp  
@@ -328,27 +345,38 @@ int main( void )
 }  
 ```  
   
-  **复制“howdy”的4个字符到10字节缓冲区的 dest**  
- **dest 的新内容：“howd”**  
-**复制“howdy”的5个字符到10字节缓冲区的 dest**  
- **dest 的新内容：“howdy”**  
-**复制“howdy”的6个字符到10字节缓冲区的 dest**  
- **dest 的新内容：“howdy”**  
-**目标缓冲区太小：**  
-**复制“Hi there\!\!”中的10个字符到10字节缓冲区 dest**  
-**无效参数调用处理程序：\(L "缓冲区太小”&& 0\)**  
- **dest 的新内容："**  
-**截断示例：**  
-**通过截断语义复制“How do you do？”10个字节缓冲区 dest**  
- **dest 的新内容：“How do yo”**  
- **截断发生**  
-**通过截断语义复制“Howdy.”到10个字节缓冲区 dest**  
- **dest 的新内容：“Howdy.”**  
- **截断没有发生**  
-**安全模板重载示例：**  
-**无效参数调用处理程序：\(L "缓冲区太小”&& 0\)**  
- **dest 的新内容："**   
-## 示例  
+```Output  
+Copying 4 chars of 'howdy' to 10-byte buffer dest  
+    new contents of dest: 'howd'  
+  
+Copying 5 chars of 'howdy' to 10-byte buffer dest  
+    new contents of dest: 'howdy'  
+  
+Copying 6 chars of 'howdy' to 10-byte buffer dest  
+    new contents of dest: 'howdy'  
+  
+Destination buffer too small:  
+  
+Copying 10 chars of 'Hi there!!' to 10-byte buffer dest  
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
+    new contents of dest: ''  
+  
+Truncation examples:  
+  
+Copying 'How do you do?' to 10-byte buffer dest with truncation semantics  
+    new contents of dest: 'How do yo'  
+    truncation did occur  
+  
+Copying 'Howdy.' to 10-byte buffer dest with truncation semantics  
+    new contents of dest: 'Howdy.'  
+    truncation did not occur  
+  
+Secure template overload example:  
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
+    new contents of dest: ''  
+```  
+  
+## <a name="example"></a>示例  
   
 ```  
 // crt_strncpy_s_2.c  
@@ -381,28 +409,28 @@ int main( void )
 }  
 ```  
   
-  **原始字符串：**  
- **“dogs like cats”**  
-**在 strncpy 之后 \(而非 null 结束符\):**  
- **“mice like cats”**  
-**strncpy 转换为字符串中间：**  
- **”mice love cats“**  
-**在 strncpy\_s 后 \(包含 null 结束符\):**  
- **“mice”**   
-## .NET Framework 等效项  
- [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
+```Output  
+Original string:  
+   'dogs like cats'  
+After strncpy (no null-termination):  
+   'mice like cats'  
+After strncpy into middle of string:  
+   'mice love cats'  
+After strncpy_s (with null-termination):  
+   'mice'  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbcpy、\_mbsnbcpy\_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
- [strcat\_s、wcscat\_s、\_mbscat\_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
- [strcmp、wcscmp、\_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy\_s、wcscpy\_s、\_mbscpy\_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
- [strncat\_s、\_strncat\_s\_l、wcsncat\_s、\_wcsncat\_s\_l、\_mbsncat\_s、\_mbsncat\_s\_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
- [strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [\_strset、\_strset\_l、\_wcsset、\_wcsset\_l、\_mbsset、\_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [_mbsnbcpy、_mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
+ [strcat_s、wcscat_s、_mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
+ [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy_s、wcscpy_s、_mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
+ [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
+ [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

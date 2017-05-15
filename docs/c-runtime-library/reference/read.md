@@ -1,52 +1,69 @@
 ---
-title: "_read | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_read"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_read"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_read 函数"
-  - "数据 [C++], 读取"
-  - "数据 [CRT]"
-  - "文件 [C++], 读取"
-  - "read 函数"
-  - "读取数据 [C++]"
+title: "_read | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _read
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _read
+dev_langs:
+- C++
+helpviewer_keywords:
+- data [CRT]
+- _read function
+- read function
+- data [C++], reading
+- reading data [C++]
+- files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _read
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6387edb05977f90fe9fb2419a1eccb47ac0b7b43
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
-Reads data from a file.  
+---
+# <a name="read"></a>_read
+从文件读取数据。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -57,42 +74,42 @@ Reads data from a file.
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fd`  
- File descriptor referring to the open file.  
+ 引用打开的文件的文件描述符。  
   
  *buffer*  
  数据的存储位置。  
   
  *count*  
- Maximum number of bytes.  
+ 最大字节数。  
   
-## 返回值  
- \_**read** returns the number of bytes read, which might be less than *count* if there are fewer than *count* bytes left in the file or if the file was opened in text mode, in which case each carriage return–line feed \(CR\-LF\) pair is replaced with a single linefeed character.  Only the single linefeed character is counted in the return value.  The replacement does not affect the file pointer.  
+## <a name="return-value"></a>返回值  
+ _**读取**返回读取，这可能会更少的字节数比*计数*如果少于*计数*字节留在文件中，或如果在文本模式下打开该文件，在这种情况下每个回车符返回-换行符 (CR-LF) 对为使用单一的换行的字符替换。 在返回值中仅计算单个换行符。 此替换不影响文件指针。  
   
- If the function tries to read at end of file, it returns 0.  If `fd` is invalid, the file is not open for reading, or the file is locked, the invalid parameter handler is invoked, as described in [参数验证](../../c-runtime-library/parameter-validation.md).  如果允许执行继续，则该函数返回\-1,并将`errno` 设置为 `EBADF`。  
+ 如果函数尝试在文件末尾进行读取，则返回 0。 如果 `fd` 无效、未打开供读取的文件或文件被锁定，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回 -1 并将 `errno` 设置为 `EBADF`。  
   
- 如果*buffer*是**NULL**，则调用无效参数处理程序。  If execution is allowed to continue, the function returns \-1 and `errno` is set to `EINVAL`.  
+ 如果 *buffer* 为 **NULL**，则将调用无效的参数处理程序。 如果允许执行继续，则函数将返回 -1 并将 `errno` 设置为 `EINVAL`。  
   
- For more information about this and other return codes, see [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ 有关此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 备注  
- The `_read` function reads a maximum of *count* bytes into *buffer* from the file associated with `fd`.  The read operation begins at the current position of the file pointer associated with the given file.  After the read operation, the file pointer points to the next unread character.  
+## <a name="remarks"></a>备注  
+ `_read` 函数从与 `fd` 相关联的文件将最大 *count* 字节读入 *buffer*。 读取操作从与给定文件相关联的文件指针的当前位置开始执行。 读取操作完成后，文件指针将指向下一个未读取的字符。  
   
- If the file was opened in text mode, the read terminates when `_read` encounters a CTRL\+Z character, which is treated as an end\-of\-file indicator.  Use [\_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) to clear the end\-of\-file indicator.  
+ 如果文件是在文本模式下打开的，则在 `_read` 遇到 CTRL+Z 字符（被视为文件尾指示符）时，读取将终止。 使用 [_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) 可清除文件尾指示符。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_read`|\<io.h\>|  
+|-------------|---------------------|  
+|`_read`|\<io.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 库  
+## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_read.c  
@@ -132,22 +149,22 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_read.txt  
+## <a name="input-crtreadtxt"></a>输入：crt_read.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 Read 19 bytes from file  
 ```  
   
-## 请参阅  
- [低级别 I\/O](../../c-runtime-library/low-level-i-o.md)   
- [\_creat、\_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+## <a name="see-also"></a>另请参阅  
+ [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
+ [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [fread](../../c-runtime-library/reference/fread.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_write](../../c-runtime-library/reference/write.md)
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_write](../../c-runtime-library/reference/write.md)

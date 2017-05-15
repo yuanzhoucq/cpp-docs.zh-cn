@@ -1,61 +1,79 @@
 ---
-title: "_ftime, _ftime32, _ftime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftime64"
-  - "_ftime"
-  - "_ftime32"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftime32"
-  - "_ftime"
-  - "_ftime64"
-  - "ftime64"
-  - "ftime"
-  - "ftime32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ftime64 函数"
-  - "_ftime64 函数"
-  - "当前时间"
-  - "_ftime 函数"
-  - "ftime 函数"
-  - "_ftime32 函数"
-  - "ftime32 函数"
-  - "时间, 获取当前"
+title: "_ftime、_ftime32、_ftime64 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftime64
+- _ftime
+- _ftime32
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftime32
+- _ftime
+- _ftime64
+- ftime64
+- ftime
+- ftime32
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftime64 function
+- _ftime64 function
+- current time
+- _ftime function
+- ftime function
+- _ftime32 function
+- ftime32 function
+- time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _ftime, _ftime32, _ftime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ed69cd73a42889e56dc258ce66e56db3210dfc95
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
-获取当前时间。  提供这些函数的更多安全版本；请参见 [\_ftime\_s、\_ftime32\_s、\_ftime64\_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)。  
+---
+# <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
+获取当前时间。 提供这些函数的更安全版本；请参阅 [_ftime_s、_ftime32_s、_ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void _ftime(   
@@ -69,42 +87,42 @@ void _ftime64(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `timeptr`  
- 指向`_timeb`，`__timeb32`, 或 `__timeb64` 结构的指针。  
+ 指向 `_timeb`、`__timeb32` 或 `__timeb64` 结构的指针。  
   
-## 备注  
- `_ftime` 函数获取当前本地时间并将其存储结构指向的 `timeptr`*。*`_timeb` `__timeb32`,和 `__timeb64` 结构在SYS\\Timeb.h中定义。  这些包含四个字段，下表中列出。  
+## <a name="remarks"></a>备注  
+ `_ftime`函数获取当前本地时间，并将其存储在通过指向的结构`timeptr`。 `_timeb`， `__timeb32`，和`__timeb64`SYS\Timeb.h 中定义结构。 它们包含下表中列出的四个字段。  
   
  `dstflag`  
- 如果非零，夏时制实际当前用于本地时区。\(说明如何为夏时制参见 [\_tzset](../../c-runtime-library/reference/tzset.md) 确定。\)  
+ 如果本地时区目前正在实行夏令时，则为非零。 （请参阅 [_tzset](../../c-runtime-library/reference/tzset.md) 了解有关如何确定夏令时的解释。）  
   
  `millitm`  
- 和的毫秒。  
+ 秒的分数（以毫秒为单位）。  
   
  `time`  
- 午夜时间为 \(00:00: 00\)，1970 年 1 月 1 日，协调通用时间 \(UTC\)。  
+ 自 1970 年 1 月 1 日午夜 (00: 00:00) 以来的时间（以秒为单位），格式为协调世界时 (UTC)。  
   
  `timezone`  
- 区别在于分钟，移动到西，UTC 与本地时间之间。  值 `timezone` 是从全局变量设置 `_timezone` 的值 \(请参见 `_tzset`\)。  
+ 从东向西，UTC 与本地时间之间的差值（以分钟为单位）。 根据全局变量 `_timezone` 设置的 `timezone` 值（请参阅 `_tzset`）。  
   
- `_ftime64`，使用 `__timeb64` 结构，允许文件创建日期，3000 年 12 月 31 日23:59:59，UTC;而 `_ftime32` 是表示日期2038 年1 月 19 日03:14:07，UTC。  1970 年 1 月 1 日 00:00:00，是所有这些函数的下限的日期范围。  
+ 使用 `__timeb64` 结构的 `_ftime64` 允许文件创建日期最大表示为 3000 年 12 月 31 日 23:59:59，UTC；而 `_ftime32` 只能表示截至 2038 年 1 月 18 日 23:59:59，UTC 之前的日期。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。  
   
- `_ftime` 与 `_ftime64` 等效，`_timeb` 包含 64 位时。  这符合，除非\_`_USE_32BIT_TIME_T` 定义旧行为，在实际情况下为；\_`_ftime` 使用 32 位时，`_timeb` 包含 32 位时。  
+ `_ftime` 与 `_ftime64` 等效，`_timeb` 包含 64 位时间。 除非定义了 `_USE_32BIT_TIME_T`，这种情况下旧行为有效；`_ftime` 使用 32 位时间，`_timeb` 包含 32 位时间。  
   
- `_ftime`验证其参数。  如果 `timeptr` 传递 null 指针，函数会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 所述。  如果允许执行继续，则该函数返回 \-1 并将 `errno` 设置为 `EINVAL`。  
+ `_ftime` 会验证其参数。 如果将 null 指针传递为 `timeptr`，此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`_ftime`|\<sys\/types.h 和\> sys \<\/timeb.h\>|  
-|`_ftime32`|\<sys\/types.h 和\> sys \<\/timeb.h\>|  
-|`_ftime64`|\<sys\/types.h 和\> sys \<\/timeb.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`_ftime`|\<sys/types.h> 和 \<sys/timeb.h>|  
+|`_ftime32`|\<sys/types.h> 和 \<sys/timeb.h>|  
+|`_ftime64`|\<sys/types.h> 和 \<sys/timeb.h>|  
   
- 有关更多兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_ftime.c  
@@ -151,18 +169,18 @@ int main( void )
 }  
 ```  
   
-  **1970 年 1 月 1 日午夜 \(UTC\):1051553334**  
-**230 毫秒**  
-**UTC 与本地时间之间的分钟：480**  
-**夏时制标志 \(1 表示夏时制时间实际上是\):1**  
-**时间是2003年4月28日 11:08:54.230 星期一**    
-## .NET Framework 等效项  
- [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
+```Output  
+Seconds since midnight, January 1, 1970 (UTC): 1051553334  
+Milliseconds: 230  
+Minutes between UTC and local time: 480  
+Daylight savings time flag (1 means Daylight time is in effect): 1  
+The time is Mon Apr 28 11:08:54.230 2003  
+```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
- [asctime、\_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime、\_gmtime32、\_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime、\_localtime32、\_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time、\_time32、\_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime、_localtime32、_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)

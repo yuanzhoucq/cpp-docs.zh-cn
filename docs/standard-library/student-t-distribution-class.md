@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - student_t_distribution
-- std::student_t_distribution
 - random/std::student_t_distribution
 - random/std::student_t_distribution::result_type
 - random/std::student_t_distribution::reset
@@ -19,6 +18,7 @@ f1_keywords:
 - random/std::student_t_distribution::param
 - random/std::student_t_distribution::min
 - random/std::student_t_distribution::max
+- random/std::student_t_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,10 +42,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 61781e74ed9cc5424255b8697800000f8de5eb30
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4075f8852f90ea49f5c9c01f7d82b51766792d7b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution 类
@@ -84,12 +85,12 @@ public:
  浮点结果类型，默认为 `double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
   
 ## <a name="remarks"></a>备注  
- 如果未根据学生的 `double`t*-分布提供和分布任何类型，则模板类将描述产生用户指定的整型值或 * 型值的分布。 下表链接到有关各个成员的文章。  
+ 如果未根据学生的 `double`t*-分布提供和分布任何类型，则模板类将描述产生用户指定的整型值或*  型值的分布。 下表链接到有关各个成员的文章。  
   
 ||||  
 |-|-|-|  
-|[student_t_distribution::student_t_distribution](#student_t_distribution__student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
-|`student_t_distribution::operator()`||[student_t_distribution::param_type](#student_t_distribution__param_type)|  
+|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|  
+|`student_t_distribution::operator()`||[param_type](#param_type)|  
   
  属性函数 `n()` 将返回存储的分布参数 `n` 的值。  
   
@@ -177,7 +178,7 @@ Distribution for 10 samples:
   
  **命名空间：** std  
   
-##  <a name="a-namestudenttdistributionstudenttdistributiona--studenttdistributionstudenttdistribution"></a><a name="student_t_distribution__student_t_distribution"></a>  student_t_distribution::student_t_distribution  
+##  <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution  
  构造分布。  
   
 ```  
@@ -199,7 +200,7 @@ explicit student_t_distribution(const param_type& parm);
   
  第二个构造函数将构造一个从 *parm* 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
   
-##  <a name="a-namestudenttdistributionparamtypea--studenttdistributionparamtype"></a><a name="student_t_distribution__param_type"></a>  student_t_distribution::param_type  
+##  <a name="param_type"></a>  student_t_distribution::param_type  
  存储分布的所有参数。  
 ```cpp    
 struct param_type {  

@@ -35,14 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: 954da8df11c2382887717baa61070acc0b6070b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1095fbeeceb33fd9dedf0ad1217eab1a052f5ba1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="filestatus-class"></a>file_status 类
-包装 [file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type) 和文件 [perms](../standard-library/filesystem-enumerations.md#filesystem__perms)。  
+包装 [file_type](../standard-library/filesystem-enumerations.md#file_type) 和文件 [perms](../standard-library/filesystem-enumerations.md#perms)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -82,25 +83,25 @@ void type(file_type ftype) noexcept
   
  获取或设置 file_type。  
   
-## <a name="permissions"></a>permissions  
+## <a name="permissions"></a>权限  
   
-``cpp  
+```cpp  
 perms permissions() const noexcept  
 void permissions(perms mask) noexcept   
 ```  
   
- Gets or sets the file permissions.  
+ 获取或设置文件权限。  
   
- Use the setter to make a file readonly or remove the readonly attribute.  
+ 使用资源库将文件设置为只读，或删除只读特性。  
   
-## Requirements  
- **Header:** \<filesystem>  
+## <a name="requirements"></a>要求  
+ **标头︰** \<文件系统 >  
   
- **Namespace:** std::experimental::filesystem, std::experimental::filesystem::v1  
+ **Namespace:** std::experimental::filesystem、 std::experimental::filesystem::v1  
   
-## See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [path Class](../standard-library/path-class.md)   
+## <a name="see-also"></a>另请参阅  
+ [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+ [path 类](../standard-library/path-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)
 
 

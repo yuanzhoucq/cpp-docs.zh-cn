@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8310730b9b1c700402cc8d6d35eea3abc893dfe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bd53960a97cc6647008b683e354df664941428e9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="freea"></a>_freea
@@ -78,7 +79,7 @@ void _freea(
 ## <a name="remarks"></a>备注  
  `_freea` 函数释放以前通过调用 [_malloca](../../c-runtime-library/reference/malloca.md) 分配的内存块 (`memblock`)。 `_freea` 检查以确定内存被分配到堆上还是堆栈上。 如果被分配到堆栈上，则 `_freea` 不执行任何操作。 如果被分配到堆上，则已释放的字节数等于分配块时请求的字节数。 如果 `memblock` 是 `NULL`，将忽略指针并立即返回 `_freea`。 尝试释放无效指针（指向并非由 `_malloca` 分配的内存块的指针）可能会影响后续分配请求，并导致错误。  
   
- 如果发现内存被分配到堆上，则 _`freea` 在内部调用 `free`。 内存是在堆上还是在堆栈上由内存中的标记决定，该内存地址紧接所分配的内存。  
+ `_freea`调用`free`内部如果找到，堆上分配内存。 内存是在堆上还是在堆栈上由内存中的标记决定，该内存地址紧接所分配的内存。  
   
  如果在释放内存时发生错误，则根据操作系统中关于错误性质的信息设置 `errno`。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -98,9 +99,6 @@ void _freea(
   
 ## <a name="example"></a>示例  
  请参见 [_malloca](../../c-runtime-library/reference/malloca.md) 的示例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [内存分配](../../c-runtime-library/memory-allocation.md)   

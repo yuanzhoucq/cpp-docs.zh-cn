@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40fe628e045d8aa8930560ba8ab88a9e203022e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 78ec6b782a5dd0c78e3e2724fd06258d17fdbe67
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
@@ -91,7 +92,7 @@ int _mbtowc_l(
  要使用的区域设置。  
   
 ## <a name="return-value"></a>返回值  
- 如果 **mbchar** 不是 **NULL** 并且如果 `mbchar` 指向的对象构成了有效的多字节字符，则 `mbtowc` 返回多字节字符的长度（以字节为单位）。 如果 `mbchar` 是 **NULL** 或其指向的对象是宽字符空字符 (L'\0')，则此函数返回 0。 如果 `mbchar` 指向的对象未构成前 *count* 个字符内的有效多字节字符，则返回 –1。  
+ 如果 **mbchar** 不是 **NULL** 并且如果 `mbchar` 指向的对象构成了有效的多字节字符，则 `mbtowc` 返回多字节字符的长度（以字节为单位）。 如果 `mbchar` 是 **NULL** 或其指向的对象是宽字符空字符 (L'\0')，则此函数返回 0。 如果该对象的`mbchar`指向未形成有效的多字节字符，在第一个*计数*字符，则返回-1。  
   
 ## <a name="remarks"></a>备注  
  如果 `mbchar` 不是 **NULL**，则 `mbtowc` 函数将 `mbchar` 指向的 *count* 个或更少的字节转换为相应的宽字符。 如果 *wchar* 不是 **NULL**，则 `mbtowc` 将生成的宽字符存储在 *wchar* 中。 `mbtowc` 检查的字节数不超过 `MB_CUR_MAX`。 `mbtowc` 将当前区域设置用于与区域设置相关的行为；`_mbtowc_l` 也是一样，只不过它使用传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
@@ -166,9 +167,6 @@ Attempt to convert when target is NULL
 Attempt to convert a NULL pointer to a wide character:  
   Bytes converted: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 等效项  
- 不适用。 若要调用标准 C 函数，请使用 `PInvoke`。 有关详细信息，请参阅[平台调用示例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   

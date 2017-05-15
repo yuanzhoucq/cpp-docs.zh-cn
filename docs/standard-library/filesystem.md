@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 25cfc0cc7c9f22a495b409e6e08d133b0f29ff8e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
@@ -116,7 +117,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="classes"></a>类  
   
-|名称|描述|  
+|名称|说明|  
 |----------|-----------------|  
 |[directory_entry 类](../standard-library/directory-entry-class.md)|描述 `directory_iterator` 或 `recursive_directory_iterator` 返回的对象，并包含路径。|  
 |[directory_iterator 类](../standard-library/directory-iterator-class.md)|描述通过文件系统目录中的文件名排序的输入迭代器。|  
@@ -141,10 +142,10 @@ using namespace std::experimental::filesystem::v1;
   
 |名称|描述|  
 |----------|-----------------|  
-|[copy_options 枚举](../standard-library/filesystem-enumerations.md#filesystem__copy_options)|如果目标文件已存在，则与 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 一起使用的枚举将决定行为。|  
-|[directory_options 枚举](../standard-library/filesystem-enumerations.md#filesystem__directory_options)|为目录迭代器指定选项的枚举。|  
-|[file_type 枚举](../standard-library/filesystem-enumerations.md#filesystem__file_type)|文件类型的枚举。|  
-|[perms 枚举](../standard-library/filesystem-enumerations.md#filesystem__perms)|用于传达权限和权限选项的位掩码类型|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 一起使用的枚举将决定行为。|  
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|为目录迭代器指定选项的枚举。|  
+|[file_type](../standard-library/filesystem-enumerations.md#file_type)|文件类型的枚举。|  
+|[perms](../standard-library/filesystem-enumerations.md#perms)|用于传达权限和权限选项的位掩码类型|  
   
 ## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
