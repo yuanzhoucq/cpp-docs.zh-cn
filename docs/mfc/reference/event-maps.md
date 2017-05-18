@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 4c4777496ce609d7c2fa20da726f211264095b6e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -74,7 +75,7 @@ ms.lasthandoff: 02/24/2017
 |[ON_OLEVERB](#on_oleverb)|指示 OLE 控件处理的自定义谓词。|  
 |[ON_STDOLEVERB](#on_stdoleverb)|重写 OLE 控件的标准谓词映射。|  
   
-##  <a name="a-namedeclareeventmapa--declareeventmap"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
  每个`COleControl`-在程序中的派生的类可提供事件映射来指定您的控件将激发的事件。  
   
 ```   
@@ -89,7 +90,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-namebegineventmapa--begineventmap"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
  开始事件映射的定义。  
   
 ```   
@@ -111,7 +112,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameendeventmapa--endeventmap"></a><a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>END_EVENT_MAP  
  使用`END_EVENT_MAP`宏来结束事件映射的定义。  
   
 ```   
@@ -121,7 +122,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameeventcustoma--eventcustom"></a><a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>EVENT_CUSTOM  
  定义自定义事件的事件映射条目。  
   
 ```   
@@ -183,7 +184,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameeventcustomida--eventcustomid"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
  定义事件触发函数自定义事件属于由指定的调度 ID `dispid`。  
   
 ```   
@@ -220,7 +221,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameonoleverba--onoleverb"></a><a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>ON_OLEVERB  
  此宏定义映射到您的控件的特定成员函数的自定义谓词消息映射条目。  
   
 ```   
@@ -249,7 +250,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>要求  
   **标头**afxole.h  
   
-##  <a name="a-nameonstdoleverba--onstdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
  使用此宏重写标准谓词的默认行为。  
   
 ```   

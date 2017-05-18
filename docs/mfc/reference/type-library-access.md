@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -51,7 +52,7 @@ ms.lasthandoff: 02/24/2017
 |[DECLARE_OLETYPELIB](#declare_oletypelib)|声明 OLE 控件（必须用于类声明中）的 `GetTypeLib` 成员函数。|  
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|实现 OLE 控件（必须用于类实现中）的 `GetTypeLib` 成员函数。|  
   
-##  <a name="a-namedeclareoletypeliba--declareoletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
+##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
  声明`GetTypeLib`控件类的成员函数。  
   
 ```   
@@ -68,7 +69,7 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="requirements"></a>要求  
  **标头：** afxdisp.h  
 
-##  <a name="a-nameimplementoletypeliba--implementoletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
+##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
  实现控件的`GetTypeLib`成员函数。  
   
 ```   

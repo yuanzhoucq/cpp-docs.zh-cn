@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
+ms.contentlocale: zh-cn
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>如何：在通用 Windows 平台应用中使用现有 C++ 代码
@@ -74,7 +76,7 @@ ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
   
 3.  [将 C++ 库移植到 Windows 运行时组件](#BK_WinRTComponent)  
   
-##  <a name="a-namebkwin32dlla-using-a-win32-dll-in-a-universal-windows-platform-app"></a><a name="BK_Win32DLL"></a>在通用 Windows 平台应用中使用 Win32 DLL  
+##  <a name="BK_Win32DLL"></a>在通用 Windows 平台应用中使用 Win32 DLL  
  为了获得更好的安全性和可靠性，通用 Windows 应用在受限的运行时环境中运行，因此不能像在经典 Windows 桌面应用程序中那样使用任何本机 DLL。 如果你有 DLL 的源代码，则可以移植此代码，以便使其在 UWP 上运行。 你首先更改几个项目设置和项目文件元数据，以将此项目标识为 UWP 项目。 你需要使用 /ZW 选项编译库代码，从而启用 C++/CX。 由于与该环境相关的控制更严格，在 UWP 应用中，某些 API 调用是不被允许的。 请参阅[适用于 Windows 运行时应用和通用 Windows 平台 (UWP) 应用的 Win32 和 COM](https://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
   
  以下过程应用于该情况：你的本机 DLL 使用 __declspec(dllexport) 公开函数。  
@@ -209,7 +211,7 @@ ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
   
     ```  
   
-##  <a name="a-namebkstaticliba-using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a>在 UWP 应用中使用本机 C++ 静态库  
+##  <a name="BK_StaticLib"></a>在 UWP 应用中使用本机 C++ 静态库  
  你可以在 UWP 项目中使用本机 C++ 静态库，但有一些限制和局限需要注意。 请首先阅读关于 C++/CX 中静态库的此[主题](https://msdn.microsoft.com/library/hh771041.aspx)。 你可以从 UWP 应用访问静态库中的本机代码，但不建议在此类静态库中创建公共 ref 类型。 如果使用 /ZW 选项编译静态库，则管理员（实际是经过伪装的链接器）会发出警告：  
   
 ```  
@@ -230,7 +232,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
      不要在“解决方案资源管理器”的“引用”节点中添加引用 。 该机制仅适用于 Windows 运行时组件。  
   
-##  <a name="a-namebkwinrtcomponenta-porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a>将 C++ 库移植到 Windows 运行时组件  
+##  <a name="BK_WinRTComponent"></a>将 C++ 库移植到 Windows 运行时组件  
  如果你想要从 UWP 应用使用静态库中的本机 API，并且你具有本机库的源代码，则你可以将代码移植到 Windows 运行时组件。 它将不再是静态库，而将是 DLL。 你可以在任何 C++ UWP 应用中使用它，但与静态库不同，你可以无论何种语言，都能够添加 ref 类型和可用于 UWP 应用代码中的客户端的其他 C++/CX 构造。 因此，你可以从 C#、Visual Basic 或 JavaScript 来访问这些类型。  基本过程是创建 Windows 运行时组件项目，将静态库的代码复制到其中，并解决将代码从标准的 C++ 编译移至 /ZW 编译而引发的任何错误。  
   
 #### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>若要将 C++ 库移植到 Windows 运行时组件  
@@ -257,8 +259,3 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
 ## <a name="see-also"></a>另请参阅  
  [移植到通用 Windows 平台](../porting/porting-to-the-universal-windows-platform-cpp.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

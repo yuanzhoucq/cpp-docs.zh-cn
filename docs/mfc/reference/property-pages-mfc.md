@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 50888697fe01d3a84d9aa4c6f5f92926e4681535
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -72,7 +73,7 @@ ms.lasthandoff: 02/24/2017
 |[END_PROPPAGEIDS](#end_proppageids)|结束属性页 Id 列表。|  
 |[PROPPAGEID](#proppageid)|声明控件类的属性页。|  
   
-##  <a name="a-nameddpcbindexa--ddpcbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex  
+##  <a name="ddp_cbindex"></a>DDP_CBIndex  
  在属性页的 `DoDataExchange` 函数中调用此函数可将整数属性与属性页的组合框中的当前选定项的索引同步。  
   
 ```   
@@ -102,7 +103,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddpcbstringa--ddpcbstring"></a><a name="ddp_cbstring"></a>DDP_CBString  
+##  <a name="ddp_cbstring"></a>DDP_CBString  
  调用此函数在属性页的`DoDataExchange`函数将字符串属性的值与属性页上的组合框中当前所选内容同步。  
   
 ```  
@@ -132,7 +133,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddpcbstringexacta--ddpcbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact  
+##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
  调用此函数在属性页的`DoDataExchange`函数来同步与属性页上的组合框中当前所选内容完全匹配的字符串属性的值。  
   
 ```  
@@ -162,7 +163,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddpchecka--ddpcheck"></a><a name="ddp_check"></a>DDP_Check  
+##  <a name="ddp_check"></a>DDP_Check  
  调用此函数在属性页的`DoDataExchange`函数来同步属性的值与关联的属性页复选框控件。  
   
 ```   
@@ -192,7 +193,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddplbindexa--ddplbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex  
+##  <a name="ddp_lbindex"></a>DDP_LBIndex  
  调用此函数在属性页的`DoDataExchange`函数可将一个整数属性的值与属性页上的列表框中的当前选定的索引同步。  
   
 ```   
@@ -222,7 +223,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddplbstringa--ddplbstring"></a><a name="ddp_lbstring"></a>DDP_LBString  
+##  <a name="ddp_lbstring"></a>DDP_LBString  
  调用此函数在属性页的`DoDataExchange`函数将字符串属性的值与在属性页上的列表框中当前所选内容同步。  
   
 ```   
@@ -252,7 +253,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddplbstringexacta--ddplbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact  
+##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
  调用此函数在属性页的`DoDataExchange`函数来同步与在属性页上的列表框中当前所选内容完全匹配的字符串属性的值。  
   
 ```   
@@ -282,7 +283,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddppostprocessinga--ddppostprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing  
+##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
  调用此函数在属性页的`DoDataExchange`函数，以保存属性值时完成属性值属性页上传输到您的控件。  
   
 ```   
@@ -301,7 +302,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddpradioa--ddpradio"></a><a name="ddp_radio"></a>DDP_Radio  
+##  <a name="ddp_radio"></a>DDP_Radio  
  调用此函数在控件的`DoPropExchange`函数以将该属性的值与关联的属性页单选按钮控件同步。  
   
 ```   
@@ -331,7 +332,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameddptexta--ddptext"></a><a name="ddp_text"></a>DDP_Text  
+##  <a name="ddp_text"></a>DDP_Text  
  调用此函数在控件的`DoDataExchange`函数与关联的属性页控件同步的属性值。  
   
 ```   
@@ -403,7 +404,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-namebeginproppageidsa--beginproppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
+##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
  开始您的控件的属性页 Id 的列表的定义。  
   
 ```   
@@ -425,7 +426,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameendproppageidsa--endproppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS  
+##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
  结束您属性页的 ID 列表的定义。  
   
 ```   
@@ -439,7 +440,7 @@ END_PROPPAGEIDS(class_name)
 ### <a name="requirements"></a>要求  
   **标头**afxctl.h  
   
-##  <a name="a-nameproppageida--proppageid"></a><a name="proppageid"></a>PROPPAGEID  
+##  <a name="proppageid"></a>PROPPAGEID  
  通过您的 OLE 控件将使用的属性页中。  
   
 ```   

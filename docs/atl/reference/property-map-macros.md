@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: fbbed22766f9029456f15c4a554ae91322e6a275
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h  
    
-##  <a name="a-namebeginpropmapa--beginpropmap"></a><a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
  标记对象的属性映射的开始。  
   
 ```
@@ -73,7 +74,7 @@ BEGIN_PROP_MAP(theClass)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing #&103;](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="a-namepropdataentrya--propdataentry"></a><a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
  指示范围内或维度，ActiveX 控件。  
   
 ```
@@ -102,7 +103,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing #&132;](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="a-namepropentrytypea--propentrytype"></a><a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
  使用此宏的属性描述、 DISPID，属性和属性页 CLSID 进入对象的属性映射。  
   
 ```
@@ -130,7 +131,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>示例  
  请参阅示例[BEGIN_PROP_MAP](#begin_prop_map)。  
   
-##  <a name="a-namepropentrytypeexa--propentrytypeex"></a><a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
  类似于[PROP_ENTRY_TYPE](#prop_entry_type)，但允许您指定特定的 IID，如果您的对象支持多个双重接口。  
   
 ```
@@ -163,7 +164,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing #&133;](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="a-nameproppagea--proppage"></a><a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>PROP_PAGE  
  使用此宏属性页 CLSID 进入对象的属性映射。  
   
 ```
@@ -185,7 +186,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing #&134;](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="a-nameendpropmapa--endpropmap"></a><a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>END_PROP_MAP  
  将标记该对象的属性映射的结尾。  
   
 ```

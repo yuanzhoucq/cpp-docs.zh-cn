@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 7e8c664bd6632f480ba53b9dedea914bbc8e4dd7
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/24/2017
   
 - [输入字符串流构造函数](#vclrfinputstringstreamconstructorsanchor9)  
   
-##  <a name="a-namevclrfinputfilestreamconstructorsanchor8a-input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a>输入文件流构造函数  
+##  <a name="vclrfinputfilestreamconstructorsanchor8"></a>输入文件流构造函数  
  有两种创建输入文件流的方法：  
   
 -   使用 `void` 参数构造函数，然后调用 `open` 成员函数：  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
     ifstream myFile("filename");
 ```  
   
-##  <a name="a-namevclrfinputstringstreamconstructorsanchor9a-input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a>输入字符串流构造函数  
+##  <a name="vclrfinputstringstreamconstructorsanchor9"></a>输入字符串流构造函数  
  输入字符串流构造函数需要预分配、预初始化存储的地址：  
   
 ```  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 4ace3bb50d824827071260e3f43cec3cda32742f
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>要求  
  **标头︰** atlbase.h  
    
-##  <a name="a-nameatlcommoduleregisterservera--atlcommoduleregisterserver"></a><a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
  调用此函数可在对象映射中注册所有对象。  
   
 ```
@@ -80,7 +81,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
   
  调用此函数[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)。  
   
-##  <a name="a-nameatlcommoduleunregisterservera--atlcommoduleunregisterserver"></a><a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
  调用此函数可在对象映射中注销所有对象。  
   
 ```
@@ -108,7 +109,7 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
   
  调用此函数[CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)。  
   
-##  <a name="a-nameatlcommoduleregisterclassobjectsa--atlcommoduleregisterclassobjects"></a><a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
  调用此函数可注册类对象。  
   
 ```
@@ -134,7 +135,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) （ATL 7.0 中已过时） 和[CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)。  
   
-##  <a name="a-nameatlcommodulerevokeclassobjectsa--atlcommodulerevokeclassobjects"></a><a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
  调用此函数可从运行对象表中移除类工厂。  
   
 ```
@@ -151,7 +152,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) （ATL 7.0 中已过时） 和[CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)。  
   
-##  <a name="a-nameatlcommodulegetclassobjecta--atlcommodulegetclassobject"></a><a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
  调用此函数可返回类工厂。  
   
 ```

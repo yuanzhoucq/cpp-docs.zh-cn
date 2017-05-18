@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 8947930d20cc65075abe442b233e4c086f10f76e
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -67,7 +68,7 @@ OLE 控件都能够公开的接口连接到其他应用程序。 这些接口只
 |[AfxConnectionAdvise](#afxconnectionadvise)|建立源和接收器之间的连接。|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|将一个源和接收器之间的连接中断。|  
   
-##  <a name="a-namebeginconnectionparta--beginconnectionpart"></a><a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
  使用`BEGIN_CONNECTION_PART`从开始进行额外的连接点的事件和属性的通知连接点超出定义的宏。  
   
 ```   
@@ -87,7 +88,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="a-nameendconnectionparta--endconnectionpart"></a><a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>END_CONNECTION_PART  
  结束连接点的声明。  
   
 ```   
@@ -101,7 +102,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="a-nameconnectioniida--connectioniid"></a><a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>CONNECTION_IID  
  在 `BEGIN_CONNECTION_PART` 和 `END_CONNECTION_PART` 宏之间使用以定义 OLE 控件支持的连接点的接口 ID。  
   
 ```   
@@ -122,7 +123,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="a-namedeclareconnectionmapa--declareconnectionmap"></a><a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
  程序中的每个 `COleControl` 派生类可提供一个连接映射来指定控件支持的额外的连接点。  
   
 ```   
@@ -135,7 +136,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="a-namebeginconnectionmapa--beginconnectionmap"></a><a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
  程序中的每个 `COleControl` 派生类均可提供连接映射来指定控件将支持的连接点。  
   
 ```   
@@ -155,7 +156,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="a-nameendconnectionmapa--endconnectionmap"></a><a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
  结束连接映射的定义。  
   
 ```   
@@ -165,7 +166,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="a-nameconnectionparta--connectionpart"></a><a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>CONNECTION_PART  
  将您的 OLE 控件的连接点映射到一个特定的接口 id。  
   
 ```   
@@ -192,7 +193,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>要求  
   **标头**afxdisp.h  
   
-##  <a name="a-nameafxconnectionadvisea--afxconnectionadvise"></a><a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
  调用此函数可由指定的源之间建立连接`pUnkSrc`，和一个水池，由指定`pUnkSink`。  
   
 ```   
@@ -229,7 +230,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>要求  
  **标头︰** afxctl.h 
 
-##  <a name="a-nameafxconnectionunadvisea--afxconnectionunadvise"></a><a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
  调用此函数可断开连接之间由指定的源的连接`pUnkSrc`，和一个水池，由指定`pUnkSink`。  
   
 ```   

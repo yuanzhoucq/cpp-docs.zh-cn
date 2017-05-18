@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -78,7 +79,7 @@ ms.lasthandoff: 02/24/2017
 ### <a name="requirements"></a>要求  
  **标头︰** atlutil.h  
   
-## <a name="a-nameexecuteaworkerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Execute
+## <a name="execute"></a>WorkerArchetype::Execute
 调用来处理工作项。  
   
   
@@ -100,7 +101,7 @@ void Execute(
  `pOverlapped`  
  一个指向[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)结构，用于创建在何种工作项排队等待的队列。  
   
-## <a name="a-nameinitializea-workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a>WorkerArchetype::Initialize
 调用以初始化工作对象，在任何请求传递给之前`WorkerArchetype::Execute`。  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -113,7 +114,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>返回值  
  返回**TRUE**成功时， **FALSE**失败。  
   
-## <a name="a-namerequesttypea-workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a>WorkerArchetype::RequestType
 Worker 类可以处理的工作项类型的 typedef。  
   
 ```  
@@ -123,7 +124,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>备注  
  此类型必须使用作为第一个参数`WorkerArchetype::Execute`，并且必须能够与 ULONG_PTR 被强制转换。  
   
-## <a name="a-nameterminatea-workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a>WorkerArchetype::Terminate
 被调用的所有请求都传递给后取消初始化 worker 对象`WorkerArchetype::Execute`)。  
     
 ``` 
