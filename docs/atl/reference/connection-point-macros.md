@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: c16b6f2f889745270a51a32a1449add86dec6ecb
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>要求  
  **标头︰** atlcom.h 
    
-##  <a name="a-namebeginconnectionpointmapa--beginconnectionpointmap"></a><a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
+##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
  标记连接点的映射条目的开始。  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing #&101;](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
-##  <a name="a-nameconnectionpointentrya--connectionpointentry-and-connectionpointentryp"></a><a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY 和 CONNECTION_POINT_ENTRY_P  
+##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY 和 CONNECTION_POINT_ENTRY_P  
  指定的接口输入连接点映射到的连接点，以便可以访问它。  
   
 ```
@@ -94,7 +95,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Windowing #&120;](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
-##  <a name="a-nameendconnectionpointmapa--endconnectionpointmap"></a><a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
+##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
  将标记连接点的映射条目的末尾。  
   
 ```

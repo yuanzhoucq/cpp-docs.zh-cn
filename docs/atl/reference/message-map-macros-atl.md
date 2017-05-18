@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 8097982d6574af2ce1ba592dbead8abf6f6433df
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -78,7 +79,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
 
-##  <a name="a-namealtmsgmapa--altmsgmap"></a><a name="alt_msg_map"></a>ALT_MSG_MAP  
+##  <a name="alt_msg_map"></a>ALT_MSG_MAP  
  标记的替换消息映射开头。  
   
 ```
@@ -112,7 +113,7 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
 
-##  <a name="a-namebeginmsgmapa--beginmsgmap"></a><a name="begin_msg_map"></a>BEGIN_MSG_MAP  
+##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP  
  标记默认消息映射的开头。  
   
 ```
@@ -187,7 +188,7 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namechainmsgmapalta--chainmsgmapalt"></a><a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
+##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
  消息映射中定义一个条目。  
   
 ```
@@ -212,7 +213,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namechainmsgmapaltmembera--chainmsgmapaltmember"></a><a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
+##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
  消息映射中定义一个条目。  
   
 ```
@@ -237,7 +238,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namechainmsgmapa--chainmsgmap"></a><a name="chain_msg_map"></a>CHAIN_MSG_MAP  
+##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP  
  消息映射中定义一个条目。  
   
 ```
@@ -270,7 +271,7 @@ CHAIN_MSG_MAP(theChainClass)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namechainmsgmapdynamica--chainmsgmapdynamic"></a><a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC  
+##  <a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC  
  消息映射中定义一个条目。  
   
 ```
@@ -293,7 +294,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namechainmsgmapmembera--chainmsgmapmember"></a><a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
+##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
  消息映射中定义一个条目。  
   
 ```
@@ -326,7 +327,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namecommandcodehandlera--commandcodehandler"></a><a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
+##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
  类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息仅根据通知代码。  
   
 ```
@@ -343,7 +344,7 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namecommandhandlera--commandhandler"></a><a name="command_handler"></a>COMMAND_HANDLER  
+##  <a name="command_handler"></a>COMMAND_HANDLER  
  消息映射中定义一个条目。  
   
 ```
@@ -381,7 +382,7 @@ COMMAND_HANDLER(id, code, func)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namecommandidhandlera--commandidhandler"></a><a name="command_id_handler"></a>COMMAND_ID_HANDLER  
+##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER  
  类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息仅根据菜单项、 控件或加速器的标识符。  
   
 ```
@@ -398,7 +399,7 @@ COMMAND_ID_HANDLER(id, func)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namecommandrangecodehandlera--commandrangecodehandler"></a><a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
+##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
  类似于[COMMAND_RANGE_HANDLER](#command_range_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)具有通过一系列的控件对单个处理程序函数的特定通知代码的消息。  
   
 ```
@@ -424,7 +425,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namecommandrangehandlera--commandrangehandler"></a><a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
+##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
  类似于[COMMAND_HANDLER](#command_handler)，但映射[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)通过一系列的控件对单个处理程序函数的消息。  
   
 ```
@@ -447,7 +448,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namedeclareemptymsgmapa--declareemptymsgmap"></a><a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
+##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
  声明空消息映射。  
   
 ```
@@ -459,7 +460,7 @@ DECLARE_EMPTY_MSG_MAP()
   
  [!code-cpp[NVC_ATL_Windowing #&122;](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]  
   
-##  <a name="a-namedefaultreflectionhandlera--defaultreflectionhandler"></a><a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER  
+##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER  
  提供的默认处理程序将收到的子窗口 （控件） 的反射消息;该处理程序能正确地传递到未处理的消息`DefWindowProc`。  
   
 ```
@@ -469,7 +470,7 @@ DEFAULT_REFLECTION_HANDLER()
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-nameendmsgmapa--endmsgmap"></a><a name="end_msg_map"></a>END_MSG_MAP  
+##  <a name="end_msg_map"></a>END_MSG_MAP  
  将消息映射的结尾标记。  
   
 ```
@@ -495,7 +496,7 @@ END_MSG_MAP()
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-nameforwardnotificationsa--forwardnotifications"></a><a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
+##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
  将转发到父窗口的通知消息。  
   
 ```
@@ -508,7 +509,7 @@ FORWARD_NOTIFICATIONS()
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namemessagehandlera--messagehandler"></a><a name="message_handler"></a>MESSAGE_HANDLER  
+##  <a name="message_handler"></a>MESSAGE_HANDLER  
  消息映射中定义一个条目。  
   
 ```
@@ -544,7 +545,7 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namemessagerangehandlera--messagerangehandler"></a><a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
+##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
  类似于[MESSAGE_HANDLER](#message_handler)，但映射到单个处理程序函数的范围的 Windows 消息。  
   
 ```
@@ -564,7 +565,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namenotifycodehandlera--notifycodehandler"></a><a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
+##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
  类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息仅根据通知代码。  
   
 ```
@@ -581,7 +582,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namenotifyhandlera--notifyhandler"></a><a name="notify_handler"></a>NOTIFY_HANDLER  
+##  <a name="notify_handler"></a>NOTIFY_HANDLER  
  消息映射中定义一个条目。  
   
 ```
@@ -620,7 +621,7 @@ NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namenotifyidhandlera--notifyidhandler"></a><a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
+##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
  类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)消息仅根据控制标识符。  
   
 ```
@@ -637,7 +638,7 @@ NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namenotifyrangecodehandlera--notifyrangecodehandler"></a><a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
  类似于[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)具有通过一系列的控件对单个处理程序函数的特定通知代码的消息。  
   
 ```
@@ -663,7 +664,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namenotifyrangehandlera--notifyrangehandler"></a><a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
+##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
  类似于[NOTIFY_HANDLER](#notify_handler)，但映射[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)通过一系列的控件对单个处理程序函数的消息。  
   
 ```
@@ -686,7 +687,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namereflectnotificationsa--reflectnotifications"></a><a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
+##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
  反映通知消息返回到发送给它们的子窗口 （控件）。  
   
 ```
@@ -699,7 +700,7 @@ REFLECT_NOTIFICATIONS()
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namereflectedcommandcodehandlera--reflectedcommandcodehandler"></a><a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
+##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
  类似于[COMMAND_CODE_HANDLER](#command_code_handler)，但将反映来自父窗口的命令映射。  
   
 ```
@@ -716,7 +717,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
    
-##  <a name="a-namereflectedcommandhandlera--reflectedcommandhandler"></a><a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
+##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
  类似于[COMMAND_HANDLER](#command_handler)，但将反映来自父窗口的命令映射。  
   
 ```
@@ -736,7 +737,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
 
-##  <a name="a-namereflectedcommandidhandlera--reflectedcommandidhandler"></a><a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
+##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
  类似于[COMMAND_ID_HANDLER](#command_id_handler)，但将反映来自父窗口的命令映射。  
   
 ```
@@ -753,7 +754,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
 
-##  <a name="a-namereflectedcommandrangecodehandlera--reflectedcommandrangecodehandler"></a><a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
+##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
  类似于[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)，但将反映来自父窗口的命令映射。  
   
 ```
@@ -776,7 +777,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
 
-##  <a name="a-namereflectedcommandrangehandlera--reflectedcommandrangehandler"></a><a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
+##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
  类似于[COMMAND_RANGE_HANDLER](#command_range_handler)，但将反映来自父窗口的命令映射。  
   
 ```
@@ -796,7 +797,7 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
 
-##  <a name="a-namereflectednotifycodehandlera--reflectednotifycodehandler"></a><a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
+##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
  类似于[NOTIFY_CODE_HANDLER](#notify_code_handler)，但映射反映来自父窗口的通知。  
   
 ```
@@ -813,7 +814,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
 
-##  <a name="a-namereflectednotifyhandlera--reflectednotifyhandler"></a><a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
+##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
  类似于[NOTIFY_HANDLER](#notify_handler)，但映射反映来自父窗口的通知。  
   
 ```
@@ -833,7 +834,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
 
-##  <a name="a-namereflectednotifyidhandlera--reflectednotifyidhandler"></a><a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
+##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
  类似于[NOTIFY_ID_HANDLER](#notify_id_handler)，但映射反映来自父窗口的通知。  
   
 ```
@@ -850,7 +851,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
 
-##  <a name="a-namereflectednotifyrangecodehandlera--reflectednotifyrangecodehandler"></a><a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
  类似于[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)，但映射反映来自父窗口的通知。  
   
 ```
@@ -873,7 +874,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>要求  
  **标头︰** atlwin.h   
   
-##  <a name="a-namereflectednotifyrangehandlera--reflectednotifyrangehandler"></a><a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
+##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
  类似于[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但映射反映来自父窗口的通知。  
   
 ```

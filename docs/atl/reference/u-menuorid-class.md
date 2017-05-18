@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -80,14 +81,14 @@ class _U_MENUorID
 ## <a name="requirements"></a>要求  
  **标头︰** atlwin.h  
   
-##  <a name="a-nameumenuoridmhmenua--umenuoridmhmenu"></a><a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
  类包含传递给其构造函数之一为公共的值`HMENU`数据成员。  
   
 ```
 HMENU m_hMenu;
 ```  
   
-##  <a name="a-nameumenuoridumenuorida--umenuoridumenuorid"></a><a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
  **UINT**参数只是强制转换为`HMENU`中构造函数，并在类的单个数据成员中存储的结果[m_hMenu](#_u_menuorid__m_hmenu)。  
   
 ```

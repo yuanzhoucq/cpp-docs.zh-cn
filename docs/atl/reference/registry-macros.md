@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 3a3abf5ad29b50c7f6708f02fd7c5aa193b3591c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/24/2017
  **标头︰** atlcom.h  
   
     
-##  <a name="a-nameatlstaticregistrya--atlstaticregistry"></a><a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
  一个表示您希望您的对象中的对象以避免依赖于 atl。 的注册代码的符号DLL 中。  
   
 ```
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/24/2017
   
  [!code-cpp[NVC_ATL_EventHandlingSample #&5;](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="a-namedeclarelibida--declarelibid"></a><a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>DECLARE_LIBID  
  若要获取的 ATL 为提供一种*libid*类型库。  
   
 ```
@@ -83,14 +84,14 @@ DECLARE_LIBID( libid )
 ### <a name="example"></a>示例  
  非特性化向导生成的 ATL 项目将有一个使用此宏的示例。  
   
-##  <a name="a-namedeclarenoregistrya--declarenoregistry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
  使用`DECLARE_NO_REGISTRY`如果想要避免任何默认的 ATL 注册为此宏会出现的类。  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="a-namedeclareregistrya--declareregistry"></a><a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>DECLARE_REGISTRY  
  标准类注册进入系统注册表或将其从系统注册表中删除。  
   
 ```
@@ -123,7 +124,7 @@ DECLARE_REGISTRY(
   
  当您创建的对象或控件并使用 ATL 添加类向导时，该向导自动实现基于脚本的注册表的支持，并添加[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)宏的文件。 如果不希望基于脚本的注册表的支持，则需要替换此宏并使用`DECLARE_REGISTRY`。 `DECLARE_REGISTRY`仅将插入到注册表上面所述的五个基本键。 您必须手动编写代码以插入到注册表中的其他密钥。  
   
-##  <a name="a-namedeclareregistryappidresourceida--declareregistryappidresourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
  指定自动注册所需的信息*appid*。  
   
 ```
@@ -145,7 +146,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="example"></a>示例  
  ATL 项目，与添加类代码向导添加的类将具有一个使用此宏的示例。  
   
-##  <a name="a-namedeclareregistryresourcea--declareregistryresource"></a><a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
  获取包含此注册表文件的已命名的资源，并运行脚本以输入到系统注册表对象或从系统注册表中删除它们。  
   
 ```
@@ -168,7 +169,7 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  有关可替换参数和脚本的详细信息，请参阅文章[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。  
   
-##  <a name="a-namedeclareregistryresourceida--declareregistryresourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
  与相同[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)类似，只不过它使用向导生成**UINT**来标识该资源，而不是字符串名称。  
   
 ```

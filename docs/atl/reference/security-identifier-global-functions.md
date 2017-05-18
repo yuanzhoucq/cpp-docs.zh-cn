@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 9e51fe30b0519514df34f1a77b1e731f51047520
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -82,98 +83,98 @@ ms.lasthandoff: 02/24/2017
 ### <a name="requirements"></a>要求  
  **标头︰** atlsecurity.h 
 
-##  <a name="a-nameaccountopsa--sidsaccountops"></a><a name="accountops"></a>Sids::AccountOps  
+##  <a name="accountops"></a>Sids::AccountOps  
  返回 DOMAIN_ALIAS_RID_ACCOUNT_OPS SID。    
   
 ```
 CSid AccountOps() throw(...);
 ```  
   
-##  <a name="a-nameadminsa--sidsadmins"></a><a name="admins"></a>Sids::Admins  
+##  <a name="admins"></a>Sids::Admins  
  返回 DOMAIN_ALIAS_RID_ADMINS SID。  
 ```
 CSid Admins() throw(...);
 ```  
   
-##  <a name="a-nameanonymouslogona--sidsanonymouslogon"></a><a name="anonymouslogon"></a>Sids::AnonymousLogon  
+##  <a name="anonymouslogon"></a>Sids::AnonymousLogon  
  返回 SECURITY_ANONYMOUS_LOGON_RID SID。  
 ```
 CSid AnonymousLogon() throw(...);
 ```  
   
-##  <a name="a-nameauthenticatedusera--sidsauthenticateduser"></a><a name="authenticateduser"></a>Sids::AuthenticatedUser  
+##  <a name="authenticateduser"></a>Sids::AuthenticatedUser  
  返回 SECURITY_AUTHENTICATED_USER_RID SID。  
 ```
 CSid AuthenticatedUser() throw(...);
 ```  
   
-##  <a name="a-namebackupopsa--sidsbackupops"></a><a name="backupops"></a>Sids::BackupOps  
+##  <a name="backupops"></a>Sids::BackupOps  
  返回 DOMAIN_ALIAS_RID_BACKUP_OPS SID。  
 ```
 CSid BackupOps() throw(...);
 ```  
   
-##  <a name="a-namebatcha--sidsbatch"></a><a name="batch"></a>Sids::Batch  
+##  <a name="batch"></a>Sids::Batch  
  返回 SECURITY_BATCH_RID SID。  
 ```
 CSid Batch() throw(...);
 ```  
   
-##  <a name="a-namecreatorgroupa--sidscreatorgroup"></a><a name="creatorgroup"></a>Sids::CreatorGroup  
+##  <a name="creatorgroup"></a>Sids::CreatorGroup  
  返回 SECURITY_CREATOR_GROUP_RID SID。  
 ```
 CSid CreatorGroup() throw(...);
 ```  
   
-##  <a name="a-namecreatorgroupservera--sidscreatorgroupserver"></a><a name="creatorgroupserver"></a>Sids::CreatorGroupServer  
+##  <a name="creatorgroupserver"></a>Sids::CreatorGroupServer  
  返回 SECURITY_CREATOR_GROUP_SERVER_RID SID。  
 ```
 CSid CreatorGroupServer() throw(...);
 ```  
   
-##  <a name="a-namecreatorownera--sidscreatorowner"></a><a name="creatorowner"></a>Sids::CreatorOwner  
+##  <a name="creatorowner"></a>Sids::CreatorOwner  
  返回 SECURITY_CREATOR_OWNER_RID SID。  
 ```
 CSid CreatorOwner() throw(...);
 ```  
   
-##  <a name="a-namecreatorownerservera--sidscreatorownerserver"></a><a name="creatorownerserver"></a>Sids::CreatorOwnerServer  
+##  <a name="creatorownerserver"></a>Sids::CreatorOwnerServer  
  返回 SECURITY_CREATOR_OWNER_SERVER_RID SID。  
 ```
 CSid CreatorOwnerServer() throw(...);
 ```  
   
-##  <a name="a-namedialupa--sidsdialup"></a><a name="dialup"></a>Sids::Dialup  
+##  <a name="dialup"></a>Sids::Dialup  
  返回 SECURITY_DIALUP_RID SID。  
 ```
 CSid Dialup() throw(...);
 ```  
   
-##  <a name="a-nameguestsa--sidsguests"></a><a name="guests"></a>Sids::Guests  
+##  <a name="guests"></a>Sids::Guests  
  返回 DOMAIN_ALIAS_RID_GUESTS SID。  
 ```
 CSid Guests() throw(...);
 ```  
   
-##  <a name="a-nameinteractivea--sidsinteractive"></a><a name="interactive"></a>Sids::Interactive  
+##  <a name="interactive"></a>Sids::Interactive  
  返回 SECURITY_INTERACTIVE_RID SID。  
 ```
 CSid Interactive() throw(...);
 ```  
   
-##  <a name="a-namelocala--sidslocal"></a><a name="local"></a>Sids::Local  
+##  <a name="local"></a>Sids::Local  
  返回 SECURITY_LOCAL_RID SID。  
 ```
 CSid Local() throw(...);
 ```  
   
-##  <a name="a-namenetworka--sidsnetwork"></a><a name="network"></a>Sids::Network  
+##  <a name="network"></a>Sids::Network  
  返回 SECURITY_NETWORK_RID SID。  
 ```
 CSid Network() throw(...);
 ```  
   
-##  <a name="a-namenetworkservicea--sidsnetworkservice"></a><a name="networkservice"></a>Sids::NetworkService  
+##  <a name="networkservice"></a>Sids::NetworkService  
  返回 SECURITY_NETWORK_SERVICE_RID SID。  
 ```
 CSid NetworkService() throw(...);
@@ -184,97 +185,97 @@ CSid NetworkService() throw(...);
   
  与 Perfmon MMC 中的 atl Server CPerfMon 类创建自定义日志计数器，计数器可能不会显示时查看日志文件，但它们将在实时视图中正确显示。 CPerfMon 自定义性能计数器上没有必要的权限来运行"性能日志和警报"服务 (smlogsvc.exe) 下[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]（或更高版本） 的操作系统。 在"NT AUTHORITY\NetworkService"帐户下运行该服务。  
   
-##  <a name="a-namenulla--sidsnull"></a><a name="null"></a>Sids::Null  
+##  <a name="null"></a>Sids::Null  
  返回 SECURITY_NULL_RID SID。  
 ```
 CSid Null() throw(...);
 ```  
   
-##  <a name="a-nameprew2kaccessa--sidsprew2kaccess"></a><a name="prew2kaccess"></a>Sids::PreW2KAccess  
+##  <a name="prew2kaccess"></a>Sids::PreW2KAccess  
  返回 DOMAIN_ALIAS_RID_PREW2KCOMPACCESS SID。  
 ```
 CSid PreW2KAccess() throw(...);
 ```  
   
-##  <a name="a-namepowerusersa--sidspowerusers"></a><a name="powerusers"></a>Sids::PowerUsers  
+##  <a name="powerusers"></a>Sids::PowerUsers  
  返回 DOMAIN_ALIAS_RID_POWER_USERS SID。  
 ```
 CSid PowerUsers() throw(...);
 ```  
   
-##  <a name="a-nameprintopsa--sidsprintops"></a><a name="printops"></a>Sids::PrintOps  
+##  <a name="printops"></a>Sids::PrintOps  
  返回 DOMAIN_ALIAS_RID_PRINT_OPS SID。  
 ```
 CSid PrintOps() throw(...);
 ```  
   
-##  <a name="a-nameproxya--sidsproxy"></a><a name="proxy"></a>Sids::Proxy  
+##  <a name="proxy"></a>Sids::Proxy  
  返回 SECURITY_PROXY_RID SID。  
 ```
 CSid Proxy() throw(...);
 ```  
   
-##  <a name="a-namerasserversa--sidsrasservers"></a><a name="rasservers"></a>Sids::RasServers  
+##  <a name="rasservers"></a>Sids::RasServers  
  返回 DOMAIN_ALIAS_RID_RAS_SERVERS SID。  
 ```
 CSid RasServers() throw(...);
 ```  
   
-##  <a name="a-namereplicatora--sidsreplicator"></a><a name="replicator"></a>Sids::Replicator  
+##  <a name="replicator"></a>Sids::Replicator  
  返回 DOMAIN_ALIAS_RID_REPLICATOR SID。  
 ```
 CSid Replicator() throw(...);
 ```  
   
-##  <a name="a-namerestrictedcodea--sidsrestrictedcode"></a><a name="restrictedcode"></a>Sids::RestrictedCode  
+##  <a name="restrictedcode"></a>Sids::RestrictedCode  
  返回 SECURITY_RESTRICTED_CODE_RID SID。  
 ```
 CSid RestrictedCode() throw(...);
 ```  
   
-##  <a name="a-nameselfa--sidsself"></a><a name="self"></a>Sids::Self  
+##  <a name="self"></a>Sids::Self  
  返回 SECURITY_PRINCIPAL_SELF_RID SID。  
 ```
 CSid Self() throw(...);
 ```  
   
-##  <a name="a-nameserverlogona--sidsserverlogon"></a><a name="serverlogon"></a>Sids::ServerLogon  
+##  <a name="serverlogon"></a>Sids::ServerLogon  
  返回 SECURITY_SERVER_LOGON_RID SID。  
 ```
 CSid ServerLogon() throw(...);
 ```  
   
-##  <a name="a-nameservicea--sidsservice"></a><a name="service"></a>Sids::Service  
+##  <a name="service"></a>Sids::Service  
  返回 SECURITY_SERVICE_RID SID。  
 ```
 CSid Service() throw(...);
 ```  
   
-##  <a name="a-namesystema--sidssystem"></a><a name="system"></a>Sids::System  
+##  <a name="system"></a>Sids::System  
  返回 SECURITY_LOCAL_SYSTEM_RID SID。  
 ```
 CSid System() throw(...);
 ```  
   
-##  <a name="a-namesystemopsa--sidssystemops"></a><a name="systemops"></a>Sids::SystemOps  
+##  <a name="systemops"></a>Sids::SystemOps  
  返回 DOMAIN_ALIAS_RID_SYSTEM_OPS SID。  
 ```
 CSid SystemOps() throw(...);
 ```  
   
-##  <a name="a-nameterminalservera--sidsterminalserver"></a><a name="terminalserver"></a>Sids::TerminalServer  
+##  <a name="terminalserver"></a>Sids::TerminalServer  
  返回 SECURITY_TERMINAL_SERVER_RID SID。  
 ```
 CSid TerminalServer() throw(...);
 ```  
   
-##  <a name="a-nameusersa--sidsusers"></a><a name="users"></a>Sids::Users  
+##  <a name="users"></a>Sids::Users  
  返回 DOMAIN_ALIAS_RID_USERS SID。  
 ```
 CSid Users() throw(...);
 ```  
   
-##  <a name="a-nameworlda--sidsworld"></a><a name="world"></a>Sids::World  
+##  <a name="world"></a>Sids::World  
  返回 SECURITY_WORLD_RID SID。  
 ```
 CSid World() throw(...);

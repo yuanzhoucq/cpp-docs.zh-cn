@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
 ms.openlocfilehash: dbce962873194c1bdcb063537247650cff568e35
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/24/2017
 |[ATL_NOINLINE](#atl_noinline)|指示函数的符号不应为内联。|  
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|如果所有对象都使用单线程模型中，定义。|  
   
-##  <a name="a-nameatlallwarningsa--atlallwarnings"></a><a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
+##  <a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
  这使在项目中的错误的符号转换从以前版本的 atl。  
   
 ```
@@ -88,7 +89,7 @@ ms.lasthandoff: 02/24/2017
   
  生成带有 Visual c + +.NET 2002年的新项目将采用此`#define`在 stdafx.h 文件中设置默认情况下。  
   
-##  <a name="a-nameatlapartmentthreadeda--atlapartmentthreaded"></a><a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
+##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
  如果一个或多个对象使用单元线程处理中定义。  
   
 ```
@@ -98,7 +99,7 @@ _ATL_APARTMENT_THREADED
 ### <a name="remarks"></a>备注  
  指定单元线程处理。 请参阅[指定项目的线程模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)其他线程处理选项，并[选项、 ATL 简单对象向导](../../atl/reference/options-atl-simple-object-wizard.md)有关的说明的线程模型可用于 ATL 对象。  
   
-##  <a name="a-nameatlcstringexplicitconstructorsa--atlcstringexplicitconstructors"></a><a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
+##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
  确保`CString`显式的防止无意的任何转换构造函数。  
   
 ```
@@ -110,7 +111,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  通过对所有构造函数的字符串参数中使用 _T 宏，可以定义 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS 和避免编译错误而不考虑是否定义了 _UNICODE。  
   
-##  <a name="a-nameatlenableptmwarninga--atlenableptmwarning"></a><a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
+##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
  定义此宏，以便强制对成员函数的指针的 ANSI c + + 标准符合语法的使用。 使用此宏会导致在非标准语法用来初始化指向成员函数的指针时生成 C4867 编译器错误。  
   
 ```
@@ -132,7 +133,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  请注意，对于映射添加.字符的宏，不应添加其再次在代码中。  
   
-##  <a name="a-nameatlfreethreadeda--atlfreethreaded"></a><a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
+##  <a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
  如果一个或多个对象使用空闲或非特定线程中定义。  
   
 ```
@@ -142,7 +143,7 @@ _ATL_FREE_THREADED
 ### <a name="remarks"></a>备注  
  指定自由线程处理。 自由线程处理等同于多线程单元模型。 请参阅[指定项目的线程模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)其他线程处理选项，并[选项、 ATL 简单对象向导](../../atl/reference/options-atl-simple-object-wizard.md)有关的说明的线程模型可用于 ATL 对象。  
   
-##  <a name="a-nameatlmultithreadeda--atlmultithreaded"></a><a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
+##  <a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
  指示的项目符号将具有标记为这两种，免费或非特定语言的对象。  
   
 ```
@@ -152,7 +153,7 @@ _ATL_MULTI_THREADED
 ### <a name="remarks"></a>备注  
  如果定义了该符号后，ATL 会中拉入正确同步到的全局数据的访问权限的代码。 新的代码应使用等效宏[_ATL_FREE_THREADED](#_atl_free_threaded)相反。  
   
-##  <a name="a-nameatlnoautomaticnamespacea--atlnoautomaticnamespace"></a><a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
+##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
  这样可以防止使用的默认命名空间的 atl。 作为符号  
   
 ```
@@ -162,7 +163,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 ### <a name="remarks"></a>备注  
  如果未定义此符号，则将执行包括 atlbase.h**使用 ATL 的命名空间**默认情况下，这可能会导致命名冲突。 若要避免此情形，定义此符号。  
   
-##  <a name="a-nameatlnocomsupporta--atlnocomsupport"></a><a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
+##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
  这样可防止 COM 相关的代码与您的项目正在编译符号。  
   
 ```

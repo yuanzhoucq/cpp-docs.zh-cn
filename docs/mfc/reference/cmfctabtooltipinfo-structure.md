@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: b9750cd9369313a3ed6ea9474d401cd0068a75fa
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -72,7 +73,7 @@ struct CMFCTabToolTipInfo
 ## <a name="requirements"></a>要求  
  **标头：** afxbasetabctrl.h  
   
-##  <a name="a-namemntabindexa--cmfctabtooltipinfomntabindex"></a><a name="m_ntabindex"></a>CMFCTabToolTipInfo::m_nTabIndex  
+##  <a name="m_ntabindex"></a>CMFCTabToolTipInfo::m_nTabIndex  
  指定选项卡控件的索引。  
   
 ```  
@@ -87,7 +88,7 @@ int m_nTabIndex;
   
  [!code-cpp[NVC_MFC_MDITabsDemo #&2;](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
   
-##  <a name="a-namemptabwnda--cmfctabtooltipinfomptabwnd"></a><a name="m_ptabwnd"></a>CMFCTabToolTipInfo::m_pTabWnd  
+##  <a name="m_ptabwnd"></a>CMFCTabToolTipInfo::m_pTabWnd  
  指向选项卡控件的指针。  
   
 ```  
@@ -99,7 +100,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
   
  [!code-cpp[NVC_MFC_MDITabsDemo #&2;](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
   
-##  <a name="a-namemstrtexta--cmfctabtooltipinfomstrtext"></a><a name="m_strtext"></a>CMFCTabToolTipInfo::m_strText  
+##  <a name="m_strtext"></a>CMFCTabToolTipInfo::m_strText  
  工具提示文本。  
   
 ```  

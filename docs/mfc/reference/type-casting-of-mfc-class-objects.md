@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/24/2017
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|检查以查看该强制转换是否合法时转换为指向类对象的指针。|  
 |[STATIC_DOWNCAST](#static_downcast)|将一个指针，到对象从一个类的指针的指针的相关类型强制转换。 在调试版本中，将导致**ASSERT**如果对象不是"类型的"目标类型。|  
   
-##  <a name="a-namedynamicdowncasta--dynamicdowncast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
  提供了检查以查看该强制转换是否合法时强制转换为指向类对象的指针的便捷途径。  
   
 ```   
@@ -74,7 +75,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  如果指针引用的对象"类型的"标识的类，该宏将返回相应的指针。 如果不是合法的转换，该宏将返回**NULL**。  
   
-##  <a name="a-namestaticdowncasta--staticdowncast"></a><a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
  强制转换*pobject*的指针到*class_name*对象。  
   
 ```   

@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: db868094a8f10ad05ed6f95bf8a4c8a29a2c941e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 02/24/2017
 
 ---
 
@@ -65,9 +67,4 @@ ms.openlocfilehash: db868094a8f10ad05ed6f95bf8a4c8a29a2c941e
 * 可使用“**其他调试程序命令**”条目将特定调试程序选项传递到 GDB。  例如，你可能需要忽略 SIGILL（非法指令）信号。  那么，可以使用“**句柄**”命令来实现此目的，方法是：  将以下命令添加到如上图中所示的“**其他调试程序命令**”条目：
 
   ```handle SIGILL nostop noprint```
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

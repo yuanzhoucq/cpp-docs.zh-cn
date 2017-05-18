@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
 dev_langs:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
 ms.openlocfilehash: aa57212b602538e4e8d2854c6075562e72472796
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -61,7 +62,7 @@ ms.lasthandoff: 02/24/2017
 |[LPCURL](#lpcurl)|指向常量指针[CUrl](../../atl/reference/curl-class.md)对象。|  
 |[LPURL](#lpurl)|一个指向[CUrl](../../atl/reference/curl-class.md)对象。|  
   
-##  <a name="a-nameatlbasemodulea--atlbasemodule"></a><a name="_atl_base_module"></a>_ATL_BASE_MODULE  
+##  <a name="_atl_base_module"></a>_ATL_BASE_MODULE  
  定义为基于 _ATL_BASE_MODULE70 的 typedef。  
   
 ```   
@@ -73,7 +74,7 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
   
  属于的 ATL 7.0 Module 类的类派生自 _ATL_BASE_MODULE 结构。  ATL Module 类的详细信息，请参阅[COM 模块类](../../atl/com-modules-classes.md)。  
   
-##  <a name="a-nameatlcommodulea--atlcommodule"></a><a name="_atl_com_module"></a>_ATL_COM_MODULE  
+##  <a name="_atl_com_module"></a>_ATL_COM_MODULE  
  定义为基于 _ATL_COM_MODULE70 的 typedef。  
   
 ```   
@@ -83,7 +84,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ### <a name="remarks"></a>备注  
  使用 ATL 项目使用 COM 功能。 基于[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)。  
   
-##  <a name="a-nameatlmodulea--atlmodule"></a><a name="_atl_module"></a>_ATL_MODULE  
+##  <a name="_atl_module"></a>_ATL_MODULE  
  定义为基于 _ATL_MODULE70 的 typedef。  
   
 ```   
@@ -93,7 +94,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 ### <a name="remarks"></a>备注  
  基于[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)。  
   
-##  <a name="a-nameatlwinmodulea--atlwinmodule"></a><a name="_atl_win_module"></a>_ATL_WIN_MODULE  
+##  <a name="_atl_win_module"></a>_ATL_WIN_MODULE  
  定义为基于 _ATL_WIN_MODULE70 的 typedef。  
   
 ```   
@@ -104,20 +105,20 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ### <a name="remarks"></a>备注  
  使用由任何 ATL 项目使用窗口功能。 基于[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)。  
   
-##  <a name="a-nameatlurlporta--atlurlport"></a><a name="atl_url_port"></a>ATL_URL_PORT 
+##  <a name="atl_url_port"></a>ATL_URL_PORT 
   所使用的类型[CUrl](curl-class.md)用于指定端口号。
 ```  
 typedef WORD ATL_URL_PORT;
 ```  
 
-##  <a name="a-nameccomdispatchdrivera--ccomdispatchdriver"></a><a name="ccomdispatchdriver"></a>CComDispatchDriver  
+##  <a name="ccomdispatchdriver"></a>CComDispatchDriver  
  此类管理 COM 接口指针。  
   
 ```   
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;   
 ```  
   
-##  <a name="a-nameccomglobalsthreadmodela--ccomglobalsthreadmodel"></a><a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel  
+##  <a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel  
  调用适当的线程模型的方法，而不考虑要使用的线程模型。  
   
 ```   
@@ -151,7 +152,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
   
  使用`CComObjectThreadModel`中单个对象类。 使用`CComGlobalsThreadModel`中对象的全局可供您的程序，或如果想要保护跨多个线程的模块资源。  
   
-##  <a name="a-nameccomobjectthreadmodela--ccomobjectthreadmodel"></a><a name="ccomobjectthreadmodel"></a>CComObjectThreadModel  
+##  <a name="ccomobjectthreadmodel"></a>CComObjectThreadModel  
  调用适当的线程模型的方法，而不考虑要使用的线程模型。  
   
 ```   
@@ -185,7 +186,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
   
  使用`CComObjectThreadModel`中单个对象类。 使用`CComGlobalsThreadModel`对象，则为中全局可用到您的程序，或者当您想要保护跨多个线程的模块资源。  
   
-##  <a name="a-nameccontainedwindowa--ccontainedwindow"></a><a name="ccontainedwindow"></a>CContainedWindow  
+##  <a name="ccontainedwindow"></a>CContainedWindow  
  此类是专用化**CContainedWindowT。**  
   
 ```   
@@ -195,28 +196,28 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 ### <a name="remarks"></a>备注  
  `CContainedWindow`专用化的[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)。 如果你想要更改的基类或特征，使用`CContainedWindowT`直接。  
   
-##  <a name="a-namecpatha--cpath"></a><a name="cpath"></a>CPath  
+##  <a name="cpath"></a>CPath  
  专用化[CPathT](../../atl/reference/cpatht-class.md)使用`CString`。  
   
 ```   
 typedef CPathT<CString> CPath;   
 ```  
   
-##  <a name="a-namecpathaa--cpatha"></a><a name="cpatha"></a>CPathA  
+##  <a name="cpatha"></a>CPathA  
  专用化[CPathT](../../atl/reference/cpatht-class.md)使用`CStringA`。  
   
 ```   
 typedef CPathT<CStringA> CPathA;   
 ```  
   
-##  <a name="a-namecpathwa--cpathw"></a><a name="cpathw"></a>CPathW  
+##  <a name="cpathw"></a>CPathW  
  专用化[CPathT](../../atl/reference/cpatht-class.md)使用`CStringW`。  
   
 ```   
 typedef ATL::CPathT<CStringW> CPathW;   
 ```  
   
-##  <a name="a-namecsimplevalarraya--csimplevalarray"></a><a name="csimplevalarray"></a>CSimpleValArray  
+##  <a name="csimplevalarray"></a>CSimpleValArray  
  表示用于存储的简单类型的数组。  
   
 ```   
@@ -226,14 +227,14 @@ typedef ATL::CPathT<CStringW> CPathW;
 ### <a name="remarks"></a>备注  
  `CSimpleValArray`提供用于创建和管理包含简单的数据类型的数组。 它是一个简单的 #define 的[CSimpleArray](../../atl/reference/csimplearray-class.md)。  
   
-##  <a name="a-namelpcurla--lpcurl"></a><a name="lpcurl"></a>LPCURL  
+##  <a name="lpcurl"></a>LPCURL  
  指向常量指针[CUrl](../../atl/reference/curl-class.md)对象。  
   
 ```   
 typedef const CUrl* LPCURL;   
 ```  
 
-##  <a name="a-namedefaultthreadtraitsa--defaultthreadtraits"></a><a name="defaultthreadtraits"></a>DefaultThreadTraits
+##  <a name="defaultthreadtraits"></a>DefaultThreadTraits
 默认值的线程特征类。
 
 ### <a name="syntax"></a>语法
@@ -248,7 +249,7 @@ typedef const CUrl* LPCURL;
 ## <a name="remarks"></a>备注
 如果当前项目使用多线程的 CRT，DefaultThreadTraits 被指 CRTThreadTraits。 否则，使用 Win32ThreadTraits。
   
-##  <a name="a-namelpurla--lpurl"></a><a name="lpurl"></a>LPURL  
+##  <a name="lpurl"></a>LPURL  
  一个指向[CUrl](../../atl/reference/curl-class.md)对象。  
   
 ```   

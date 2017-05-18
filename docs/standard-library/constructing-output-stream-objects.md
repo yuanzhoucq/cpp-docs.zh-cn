@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: ca8d4e9a44f4550d02e6d224ce0130d15e81da14
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/24/2017
   
 - [输出字符串流构造函数](#vclrfoutputstringstreamconstructorsanchor2)  
   
-##  <a name="a-namevclrfoutputfilestreamconstructorsanchor1a-output-file-stream-constructors"></a><a name="vclrfoutputfilestreamconstructorsanchor1"></a> 输出文件流构造函数  
+##  <a name="vclrfoutputfilestreamconstructorsanchor1"></a> 输出文件流构造函数  
  可使用以下两种方式之一构造输出文件流：  
   
 -   使用默认的构造函数，然后调用 `open` 成员函数。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
     ofstream myFile("filename", ios_base::out);
 ```  
   
-##  <a name="a-namevclrfoutputstringstreamconstructorsanchor2a-output-string-stream-constructors"></a><a name="vclrfoutputstringstreamconstructorsanchor2"></a>输出字符串流构造函数  
+##  <a name="vclrfoutputstringstreamconstructorsanchor2"></a>输出字符串流构造函数  
  若要构造一个输出字符串流，可以按照以下方法使用 `ostringstream`：  
   
 ```  
