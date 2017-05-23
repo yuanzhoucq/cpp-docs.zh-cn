@@ -26,15 +26,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 9b35cb78e482ad9441939f1d7eae5d214d13ab4f
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
+ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中的 C++ 一致性改进
-
+有关 Update 版本 15.3 中的改进，请参阅 [Visual Studio Update 版本 15.3 中的 bug 修复](#update_153)。
 ## <a name="new-language-features"></a>新语言功能  
 编译器支持通用 constexpr 和聚合的 NSDMI，现具有 C++14 标准版中的全部新增功能。 请注意，编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
@@ -278,16 +279,6 @@ static_assert(test2, "PASS2");
 根据 C++ 标准，在匿名命名空间内部声明的类具有内部链接，因此不能导出。 在 Visual Studio 2015 及更早版本中，此规则不是强制执行的。 在 Visual Studio 2017 中，部分强制执行此规则。 下面的示例在 Visual Studio 2017 中引发错误：“错误 C2201: 'const `anonymous namespace'::S1::`vftable'': 必须具有外部链接才能导出/导入。”
 
 ```cpp
-namespace
-{
-    struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
-}
-```
-
-### <a name="classes-declared-in-anonymous-namespaces"></a>在匿名命名空间内声明的类
-根据 C++ 标准，在匿名命名空间内部声明的类具有内部链接，因此不能导出。 在 Visual Studio 2015 及更早版本中，此规则不是强制执行的。 在 Visual Studio 2017 中，部分强制执行此规则。 下面的示例在 Visual Studio 2017 中引发错误：“错误 C2201: 'const `anonymous namespace'::S1::`vftable'': 必须具有外部链接才能导出/导入。”
-
-```cpp
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
@@ -357,6 +348,241 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
        r2->Value;
 }
 ```
+
+## <a name="update_153"></a> Visual Studio 2017 Update 版本 15.3
+### <a name="calls-to-deleted-member-templates"></a>调用的成员模板已遭删除
+在旧版 Visual Studio 中，在某些情况下，编译器可能无法在对已删除的成员模板执行格式错误的调用时发出错误，这可能会导致运行时故障发生。 下面的代码现在生成错误 C2280："int S<int>::f<int>(void)":正在尝试引用已删除的函数。
+```cpp
+template<typename T> 
+struct S { 
+template<typename U> static int f() = delete; 
+}; 
+ 
+void g() 
+{ 
+decltype(S<int>::f<int>()) i; // this should fail 
+}
+```
+若要修复此错误，请将 i 声明为 `int`。
+
+### <a name="pre-condition-checks-for-type-traits"></a>类型特征的前提条件检查
+为了更严格地遵循标准，Visual Studio 2017 Update 版本 15.3 改进了类型特征的前提条件检查。 此类检查验证的是类型是否可赋值。 下面的代码在 Update 版本 15.3 中生成错误 C2139：
+
+```cpp
+struct S; 
+enum E; 
+ 
+static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
+static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+```
+
+### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>有关从本机到托管的封送的新编译器警告和运行时检查
+从托管函数到本机函数的调用需要执行封送。 虽然 CLR 会执行封送，但并不理解 C++ 语义。 如果通过值传递本机对象，CLR 要么会调用对象的复制构造函数，要么会使用 BitBlt，而这可能会导致未定义的运行时行为发生。 
+ 
+现在，如果编译器能够在编译时知晓含有已删除的复制构造函数的本机对象通过值在本机和托管边界之间传递，则会将发出警告。 如果编译器在编译时不知晓，则会插入运行时检查，以便在出现格式错误的封送时，程序能够立即调用 std::terminate。 在 Update 版本 15.3 中，下面的代码生成错误 C4606："A":通过值跨本机和托管边界传递自变量需要使用有效的复制构造函数。 否则会发生未定义的运行时行为。
+```cpp
+class A 
+{ 
+public: 
+A() : p_(new int) {} 
+~A() { delete p_; } 
+ 
+A(A const &) = delete; 
+A(A &&rhs) { 
+p_ = rhs.p_; 
+} 
+ 
+private: 
+int *p_; 
+}; 
+ 
+#pragma unmanaged 
+ 
+void f(A a) 
+{ 
+} 
+ 
+#pragma managed 
+ 
+int main() 
+{ 
+    f(A()); // This call from managed to native requires marshalling. The CLR doesn't understand C++ and uses BitBlt, which will result in a double-free later. 
+}
+```
+若要修复此错误，请删除 `#pragma managed` 指令以将调用方标记为本机，并避免执行封送。 
+
+### <a name="experimental-api-warning-for-winrt"></a>WinRT 的实验性 API 警告
+为了获取反馈而发布的实验性 WinRT API 使用 `Windows.Foundation.Metadata.ExperimentalAttribute` 进行修饰。 在 Update 版本 15.3 中，编译器会在遇到此特性时生成警告 C4698。 旧版 Windows SDK 中的一些 API 已使用此特性进行修饰，调用这些 API 会开始触发这一编译器警告。 更高版本的 Windows SDK 会从所有已发布的类型中删除此特性。不过，如果使用的是更低版本 SDK，需要对已发布类型的所有调用禁用这些警告。
+下面的代码生成警告 C4698："Windows::Storage::IApplicationDataStatics2::GetForUserAsync" 仅供评估使用，可能会在今后推出的版本中发生变更或遭到删除。
+```cpp
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+```
+
+若要禁用此警告，请添加 #pragma：
+
+```cpp
+#pragma warning(push) 
+#pragma warning(disable:4698) 
+ 
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() 
+ 
+#pragma warning(pop)
+```
+### <a name="out-of-line-definition-of-a-template-member-function"></a>模板成员函数的外部定义 
+Update 版本 15.3 在遇到未在类中声明的模板成员函数的外部定义时生成错误。 下面的代码现在生成错误 C2039："f":不是 "S" 的成员。
+
+```cpp
+struct S {}; 
+ 
+template <typename T> 
+void S::f(T t) {}
+```
+
+若要修复此错误，请在类中添加声明：
+
+```cpp
+struct S { 
+    template <typename T> 
+    void f(T t); 
+}; 
+template <typename T> 
+void S::f(T t) {}
+```
+
+### <a name="attempting-to-take-the-address-of-this-pointer"></a>尝试使用“this”指针的地址
+在 C++ 中，“this”是指向 X 的类型指针的 prvalue。不能使用“this”的地址，也不能将其绑定到左值引用。 在旧版 Visual Studio 中，编译器允许通过执行转换来规避此限制。 在 Update 版本 15.3 中，编译器会生成错误 C2664。
+
+### <a name="conversion-to-an-inaccessible-base-class"></a>转换成不可访问的基类
+如果尝试将类型转换成不可访问的基类，Update 版本 15.3 生成错误。 编译器现在引发  
+错误 C2243：“类型转换”:可以从 "D *" 转换成 "B *"，但其不可访问。 下面的代码格式错误，可能会导致运行时故障发生。 现在，编译器在遇到如下代码时生成错误 C2243：
+
+```cpp
+#include <memory> 
+ 
+class B { }; 
+class D : B { }; // should be public B { }; 
+ 
+void f() 
+{ 
+   std::unique_ptr<B>(new D()); 
+}
+```
+### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>不允许对成员函数的外部定义使用默认自变量
+不允许对模板类中成员函数的外部定义使用默认自变量。  编译器会在 /permissive 下发出警告，并在 /permissive- 下触发硬错误。在旧版 Visual Studio 中，下面错误格式的代码可能会导致运行时故障发生。 Update 版本 15.3 生成警告 C5034："A<T>::f":类模板成员的外部定义不能包含默认自变量。
+```cpp
+ 
+template <typename T> 
+struct A { 
+    T f(T t, bool b = false); 
+}; 
+ 
+template <typename T> 
+T A<T>::f(T t, bool b = false) 
+{ 
+... 
+}
+```
+若要修复此错误，请删除“= false”默认自变量。 
+
+### <a name="use-of-offsetof-with-compound-member-designator"></a>将 offsetof 与复合成员指示符结合使用
+在 Update 版本 15.3 中，使用 /Wall 选项进行编译时，如果使用 offsetof(T, m)（其中 m 是“复合成员指示符”），将会生成警告。 下面的代码格式错误，可能会导致运行时故障发生。 Update 版本 15.3 生成警告 C4841：使用了非标准扩展: offseto 中的复合成员指示符。
+
+```cpp
+  
+struct A { 
+int arr[10]; 
+}; 
+ 
+// warning C4841: non-standard extension used: compound member designator in offsetof 
+constexpr auto off = offsetof(A, arr[2]);
+```
+若要修复此代码，请使用 pragma 禁用此警告，或将此代码更改为不使用 offsetof： 
+
+```cpp
+#pragma warning(push) 
+#pragma warning(disable: 4841) 
+constexpr auto off = offsetof(A, arr[2]); 
+#pragma warning(pop) 
+```
+
+### <a name="using-offsetof-with-static-data-member-or-member-function"></a>将 offsetof 与静态数据成员或成员函数结合使用
+在 Update 版本 15.3 中，使用 offsetof(T, m)（其中 m 表示静态数据成员或成员函数）会导致错误生成。 下面的代码生成错误 C4597：未定义的行为: offsetof 应用于成员函数 "foo"。同时，还生成错误 C4597：未定义的行为: offsetof 应用于静态数据成员 "bar"。
+```cpp
+ 
+#include <cstddef> 
+ 
+struct A { 
+int foo() { return 10; } 
+static constexpr int bar = 0; 
+}; 
+ 
+constexpr auto off = offsetof(A, foo); 
+Constexpr auto off2 = offsetof(A, bar);
+```
+ 
+此代码格式错误，可能会导致运行时故障发生。 若要修复此错误，请将此代码更改为不再调用未定义的行为。 这是 C++ 标准不允许使用的不可移植代码。
+
+### <a name="new-warning-on-declspec-attributes"></a>有关 declspec 特性的新警告
+在 Update 版本 15.3 中，如果在 extern "C" 链接规范前应用了 __declspec(…)，则编译器将不再忽略此特性。 以前，编译器会忽略此特性，进而可能会导致运行时影响。 设置 `/Wall /WX` 选项后，下面的代码生成警告 C4768：已忽略链接规范前的 __declspec 特性。
+
+```cpp
+ 
+__declspec(noinline) extern "C" HRESULT __stdcall
+```
+
+若要修复此警告，请将 extern "C" 前置:
+
+```cpp
+extern "C" __declspec(noinline) HRESULT __stdcall
+```
+
+### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和调用的析构函数已遭删除
+在旧版 Visual Studio 中，在“decltype”相关表达式的上下文中，编译器无法检测对已删除析构函数的调用。 在 Update 版本 15.3 中，下面的代码生成错误 C2280："A<T>::~A(void)":正在尝试引用已删除的函数。
+
+```cpp
+template<typename T> 
+struct A 
+{ 
+   ~A() = delete; 
+}; 
+ 
+template<typename T> 
+auto f() -> A<T>; 
+ 
+template<typename T> 
+auto g(T) -> decltype((f<T>())); 
+ 
+void h() 
+{ 
+   g(42); 
+}
+```
+### <a name="unitialized-const-variables"></a>未初始化的 const 变量
+Visual Studio 2017 RTW 版本包含一个回归，即如果未初始化“const”变量，C++ 编译器不会发出诊断提醒。 Visual Studio 2017 Update 1 修复了此回归。 下面的代码现在生成警告 C4132：“值”:应初始化 const 对象。
+
+```cpp
+const int Value;
+```
+若要修复此错误，请向 `Value` 赋值。
+
+### <a name="empty-declarations"></a>空声明
+Visual Studio 2017 Update 版本 15.3 现在不仅会对内置类型发出警告，还会对所有类型的空声明发出警告。 下面的代码现在对所有四种声明生成第 2 级 C4091 警告：
+
+```cpp
+struct A {};
+template <typename> struct B {};
+enum C { c1, c2, c3 };
+ 
+int;    // warning C4091 : '' : ignored on left of 'int' when no variable is declared
+A;      // warning C4091 : '' : ignored on left of 'main::A' when no variable is declared
+B<int>; // warning C4091 : '' : ignored on left of 'B<int>' when no variable is declared
+C;      // warning C4091 : '' : ignored on left of 'C' when no variable is declared
+```
+
+若要移除这些警告，只需注释掉或删除空声明即可。  如果未命名的对象会造成副作用（如 RAII），应命名对象。
+ 
+在 /Wv:18 下此警告被排除在外，而在警告等级 W2 下此警告默认启用。
+
 
 ## <a name="see-also"></a>另请参阅  
 [Visual C/C++ 语言一致性](visual-cpp-language-conformance.md)  

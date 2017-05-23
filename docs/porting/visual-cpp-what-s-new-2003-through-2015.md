@@ -21,9 +21,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.contentlocale: zh-cn
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -606,7 +607,7 @@ ms.lasthandoff: 02/24/2017
   
      此外，尽管编译器不能进行具体诊断，但内联运算符 new 会被视为格式不正确。  
   
--   **对非类类型调用“operator type**()”（用户定义的转换）**  
+-   对非类类型调用“operator type()”（用户定义的转换）******  
   
      早期版本的编译器允许以无提示忽略的方式对非类类型调用“operator *type*()”。 这种旧行为会导致无提示代码生成错误风险，从而导致不可预知的运行时行为。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2228。  
   

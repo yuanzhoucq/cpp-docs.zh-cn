@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: f09027c947478aa07cbefe13114edde8932c4a2d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 帮助和社区
@@ -40,7 +42,7 @@ ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
   
 ## <a name="samples"></a>示例  
   
-|标题|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[开发人员代码示例](http://go.microsoft.com/fwlink/p/?LinkId=256533)|包含来自 Microsoft 和社区参与者的可下载示例代码。|  
   
@@ -49,10 +51,10 @@ ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
 |标题|说明|  
 |-----------|-----------------|  
 |[Visual C++](visual-cpp-in-visual-studio.md)|包含有关 Visual C++ 的引用和概念文档。 MSDN 库的一部分。|  
-|[Windows 开发人员中心](http://go.microsoft.com/fwlink/p/?LinkId=256534)|包含有关如何使用 C++ 和其他语言来开发面向 [!INCLUDE[win8](build/reference/includes/win8_md.md)] 的应用的信息。 Windows 开发人员中心的一部分, C++ 内容在“文档 > 语言参考”节点下。|  
+|[Windows 开发人员中心](http://go.microsoft.com/fwlink/p/?LinkId=256534)|包含有关如何使用 C++ 和其他语言来开发面向 [!INCLUDE[win8](build/reference/includes/win8_md.md)]的应用的信息。 Windows 开发人员中心的一部分, C++ 内容在“文档 > 语言参考”节点下。|  
   
 ### <a name="online-and-offline-documentation"></a>联机和脱机文档  
- 你可以联机查看 MSDN 库和 Windows 开发人员中心的内容。 此内容经常更新。  
+ 可以联机查看 Microsoft 开发者内容。 此内容会定期更新。 
   
  你还可以在脱机帮助查看器中本地下载和查看内容。 脱机文档通过相关内容的书籍进行组织，这些书籍还会定期更新。 你可在书籍可用时下载你感兴趣的书籍。 有关详细信息，请参阅 [Microsoft Help Viewer](/visualstudio/ide/microsoft-help-viewer)。  
   
@@ -64,8 +66,3 @@ ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
 |[第 9 频道](http://go.microsoft.com/fwlink/p/?LinkId=251694)|包含视频访谈和演讲。 使用第 9 频道主页上的搜索框查找 C++ 内容。|  
 |[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|包含有关 Visual Studio 和相关开发工具的文章和新闻。|  
 |[MSDN 论坛](http://go.microsoft.com/fwlink/p/?LinkId=256538)|官方 Microsoft 论坛，可在上面公布问题，并从 Microsoft 和社区内的专家处获取答案。 使用论坛主页上的搜索框查找与 C++ 特别相关的论坛。|
-
-
-<!--HONumber=Feb17_HO4-->
-
-
