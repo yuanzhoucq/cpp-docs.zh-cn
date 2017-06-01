@@ -124,6 +124,8 @@ ms.lasthandoff: 02/24/2017
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
 一个`CMFCPropertyGridProperty`对象都表示一个属性列表控件中的列表项。  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -1203,7 +1205,7 @@ virtual BOOL OnKillFocus(CWnd*);
  默认情况下，此方法未执行任何操作，并返回`TRUE`。 如果重写此方法时，返回`TRUE`如果属性失去输入的焦点时，框架可以结束编辑操作。  
   
 ##  <a name="onkillselection"></a>CMFCPropertyGridProperty::OnKillSelection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
@@ -1216,7 +1218,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
  默认情况下，此方法没有任何效果。  
   
 ##  <a name="onpossizechanged"></a>CMFCPropertyGridProperty::OnPosSizeChanged  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnPosSizeChanged(CRect);
@@ -1287,7 +1289,7 @@ virtual BOOL OnSetCursor() const;
  This method supports the following variant types: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, and `VT_BSTR`.  
   
 ##  <a name="onsetselection"></a>CMFCPropertyGridProperty::OnSetSelection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnSetSelection(CMFCPropertyGridProperty*);

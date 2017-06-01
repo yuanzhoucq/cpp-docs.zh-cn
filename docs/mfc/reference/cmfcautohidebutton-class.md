@@ -65,7 +65,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 类
 显示或隐藏的按钮[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)，它配置为隐藏。  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -120,7 +121,7 @@ class CMFCAutoHideButton : public CObject
  **标头：** afxautohidebutton.h  
   
 ##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void BringToTop();
@@ -199,7 +200,7 @@ CDockablePane* GetAutoHideWindow() const;
  若要将使用自动隐藏按钮相关联`CDockablePane`，传递`CDockablePane`以参数形式向[CMFCAutoHideButton::Create](#create)方法。  
   
 ##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCAutoHideBar* GetParentToolBar();
@@ -210,7 +211,7 @@ CMFCAutoHideBar* GetParentToolBar();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetRect() const;  
@@ -270,7 +271,7 @@ BOOL IsHorizontal() const;
  设置的方向，该框架[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)对象时创建它。  你可以通过使用控制方向`dwAlignment`中的参数[CMFCAutoHideButton::Create](#create)方法。  
   
 ##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsTop() const;  
@@ -369,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
  一个布尔值，该值指定是否显示自动隐藏按钮。  
   
 ##  <a name="move"></a>CMFCAutoHideButton::Move  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Move(int nOffset);
@@ -381,7 +382,7 @@ void Move(int nOffset);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ReplacePane(CDockablePane* pNewBar);

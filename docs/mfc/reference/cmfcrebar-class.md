@@ -54,7 +54,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 类
 一个`CMFCReBar`对象是提供了布局、 持久性和 rebar 控件的状态信息的控件条。  
-  
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -181,7 +181,7 @@ CReBarCtrl& GetReBarCtrl() const;
  调用此方法以自定义您 rebar 时充分利用 Windows rebar 公共控件功能。  
   
 ##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -198,7 +198,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="canfloat"></a>CMFCReBar::CanFloat  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanFloat() const;  
@@ -209,7 +209,7 @@ virtual BOOL CanFloat() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="enabledocking"></a>CMFCReBar::EnableDocking  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableDocking(DWORD dwDockStyle);
@@ -221,7 +221,7 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT GetReBarBandInfoSize() const;  
@@ -232,7 +232,7 @@ UINT GetReBarBandInfoSize() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -246,7 +246,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual INT_PTR OnToolHitTest(
@@ -263,7 +263,7 @@ virtual INT_PTR OnToolHitTest(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -278,7 +278,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SetPaneAlignment(DWORD dwAlignment);

@@ -62,7 +62,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd`类有关的事件通知用户在屏幕上实现的无模式对话框会显示此功能。  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -288,7 +289,7 @@ BOOL HasSmallCaption() const;
  使用此方法以确定的弹出窗口的小型标题或常规大小标题。 默认情况下，小型标题为 7 个像素高。 通过调用 Windows API 函数获取的常规大小标题的高度`GetSystemMetrics(SM_CYCAPTION)`。  
   
 ##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeShow(CPoint&);
@@ -319,7 +320,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
  如果您想要被通知用户单击通知窗口上的链接时，重写此方法在派生类中。  
   
 ##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCommand(
@@ -336,7 +337,7 @@ virtual BOOL OnCommand(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -348,7 +349,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL ProcessCommand(HWND hwnd);
@@ -442,7 +443,7 @@ void SetTransparency(BYTE nTransparency);
  调用此函数可设置弹出窗口的透明度级别。  
   
 ##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetDialogSize();

@@ -47,6 +47,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog 类
 `CMFCDesktopAlertDialog`类一起配合使用[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)在弹出窗口中显示一个自定义对话框。  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>语法  
   
@@ -93,7 +95,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
  **标头︰** afxDesktopAlertDialog.h  
   
 ##  <a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CreateFromParams(
@@ -110,7 +112,7 @@ BOOL CreateFromParams(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CSize GetDlgSize();
@@ -121,7 +123,7 @@ CSize GetDlgSize();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL HasFocus() const;  
@@ -132,7 +134,7 @@ BOOL HasFocus() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);

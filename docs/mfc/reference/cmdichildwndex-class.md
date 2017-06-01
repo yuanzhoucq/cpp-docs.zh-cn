@@ -101,6 +101,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 类
 `CMDIChildWndEx`类提供的功能的 Windows 多文档界面 (MDI) 子窗口。 扩展功能的[CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)。 当 MDI 应用程序使用特定 MFC 类时，框架需要此类。  
+ 
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ## <a name="syntax"></a>语法  
   
@@ -238,7 +241,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  延迟的窗口位置结构的句柄。  
   
 ##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanShowOnMDITabs();
@@ -348,7 +351,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
  调用此方法以允许停靠到主框架的对齐方式。 您可以传递 CBRS_ALIGN_ 标志的组合 (有关详细信息，请参阅[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking))。  
   
 ##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager();
@@ -427,7 +430,7 @@ CBasePane* GetPane(UINT nID);
  指向窗格中的指针如果找到，否则`NULL`。  
   
 ##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -661,7 +664,7 @@ void RemovePaneFromDockManager(
  指向替换删除窗格中的窗格的指针。  
   
 ##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetRelatedTabGroup(CMFCTabCtrl* p);
@@ -673,7 +676,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ShowPane(

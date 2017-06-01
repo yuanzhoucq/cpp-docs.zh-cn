@@ -410,7 +410,7 @@ int AddPage(LPCTSTR lpszPageLabel);
  新页面的从零开始的索引。  
   
 ##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int AddSeparator(int nGroup);
@@ -496,7 +496,7 @@ CMFCTasksPane();
 ```  
   
 ##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void CollapseAllGroups(BOOL bCollapse = TRUE);
@@ -544,7 +544,7 @@ BOOL CollapseGroup(
  折叠的组不会显示仅分组的标题;隐藏的任务列表。  
   
 ##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -648,7 +648,7 @@ void EnableNavigationToolbar(
  默认情况下，框架不显示导航工具栏。 如果未显示导航工具栏上，导航按钮位于标题的停靠栏上。  
   
 ##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableOffsetCustomControls(BOOL bEnable);
@@ -797,7 +797,7 @@ int GetHorzMargin() const;
  任务窗格和工作区的边缘之间的默认间距是 12 像素。  
   
 ##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetNextPages(CStringList& lstNextPages) const;  
@@ -838,7 +838,7 @@ int GetPagesCount() const;
  在任务窗格中的页的数目。  
   
 ##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPreviousPages(CStringList& lstPrevPages) const;  
@@ -850,7 +850,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;  
@@ -966,7 +966,7 @@ int GetTasksHorzOffset() const;
  任务的默认水平偏移量为 12 像素。  
   
 ##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksIconHorzOffset() const;  
@@ -977,7 +977,7 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksIconVertOffset() const;  
@@ -1001,7 +1001,7 @@ int GetVertMargin() const;
  垂直边距是任务窗格和工作区的边缘之间的空间。 垂直边距的默认值为 12 像素。  
   
 ##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsAccessibilityCompatible();
@@ -1051,7 +1051,7 @@ BOOL IsForwardButtonEnabled() const;
  前进按钮使前进导航历史记录中的任务页。  
   
 ##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsGroupCollapseEnabled() const;  
@@ -1082,7 +1082,7 @@ BOOL IsNavigationToolbarEnabled() const;
  `TRUE`如果启用了导航工具栏;否则为`FALSE`。  
   
 ##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsToolBox() const;  
@@ -1113,7 +1113,7 @@ BOOL IsWrapTasksEnabled() const;
  `TRUE`如果包装任务字符串;，否则为`FALSE`。  
   
 ##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL LoadState(
@@ -1142,7 +1142,7 @@ virtual void OnActivateTasksPanePage();
  重写此方法在派生类自定义任务窗格中的页面的外观。  
   
 ##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCancel();
@@ -1180,7 +1180,7 @@ virtual void OnClickTask(
  重写此方法在派生类来单击某个任务时执行自定义代码。  
   
 ##  <a name="onok"></a>CMFCTasksPane::OnOK  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnOK();
@@ -1225,7 +1225,7 @@ virtual void OnPressHomeButton();
  重写此方法在派生类来执行自定义代码，当用户单击主导航按钮。  
   
 ##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnPressOtherButton(
@@ -1240,7 +1240,7 @@ virtual void OnPressOtherButton(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
@@ -1254,7 +1254,7 @@ virtual BOOL OnSetAccData(long lVal);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -1269,7 +1269,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1283,7 +1283,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RecalcLayout(BOOL bRedraw = TRUE);
@@ -1377,7 +1377,7 @@ BOOL RemoveTask(
  `TRUE`如果该函数成功，则`FALSE`如果`nGroup`或`nTask`无效。  
   
 ##  <a name="savestate"></a>CMFCTasksPane::SaveState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL SaveState(
@@ -1396,7 +1396,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="serialize"></a>CMFCTasksPane::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -1638,7 +1638,7 @@ void SetTasksHorzOffset(int n = -1);
  默认的水平偏移量为 12 像素。  
   
 ##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetTasksIconHorzOffset(int n = -1);
@@ -1650,7 +1650,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetTasksIconVertOffset(int n = -1);
@@ -1736,7 +1736,7 @@ BOOL SetWindowHeight(
  调用[CMFCTasksPane::AddWindow](#addwindow)添加与窗口控件的任务。  
   
 ##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ShowCommandMessageString(UINT uiCmdId);

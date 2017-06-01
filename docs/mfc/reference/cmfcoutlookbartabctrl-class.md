@@ -62,7 +62,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 在 Microsoft Outlook 中具有 **“导航窗格”** 可视外观的选项卡控件。  
-  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -290,7 +290,7 @@ int GetBorderSize() const;
  边框的大小，以像素为单位。  
   
 ##  <a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetVisiblePageButtons() const;  
@@ -447,7 +447,7 @@ BOOL SetToolbarImageList(
  如果未在 Microsoft Office 2003 模式下，不应调用此方法。 有关详细信息，请参阅[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。  
   
 ##  <a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetVisiblePageButtons(int nVisiblePageButtons);
