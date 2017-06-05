@@ -212,6 +212,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 类
 提供在全局级别更改应用程序外观的支持。 `CMFCVisualManager` 类与说明如何绘制应用程序中 GUI 控件的类一起使用，且使用一致样式。 这些其他类称为视觉管理器，从 `CMFCBaseVisualManager`继承而来。  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>语法  
   
@@ -459,7 +461,7 @@ CMFCVisualManager::GetInstance ()->RedrawAll ();
  **标头︰** afxvisualmanager.h  
   
 ##  <a name="adjustframes"></a>CMFCVisualManager::AdjustFrames  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall AdjustFrames();
@@ -468,7 +470,7 @@ static void __stdcall AdjustFrames();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="adjusttoolbars"></a>CMFCVisualManager::AdjustToolbars  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall AdjustToolbars();
@@ -490,7 +492,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
  重写此函数的派生的可视管理器中，并返回`TRUE`如果应始终突出显示三维选项卡。 此方法的默认实现返回`FALSE`。  
   
 ##  <a name="cmfcvisualmanager"></a>CMFCVisualManager::CMFCVisualManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCVisualManager(BOOL bTemporary = FALSE);
@@ -502,7 +504,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="destroyinstance"></a>CMFCVisualManager::DestroyInstance  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
@@ -514,7 +516,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void DoDrawHeaderSortArrow(
@@ -533,7 +535,7 @@ void DoDrawHeaderSortArrow(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="drawcomboborderwinxp"></a>CMFCVisualManager::DrawComboBorderWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawComboBorderWinXP(CDC*,
@@ -553,7 +555,7 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 ### <a name="remarks"></a>备注  
   
 ##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManager::DrawComboDropButtonWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawComboDropButtonWinXP(CDC*,
@@ -573,7 +575,7 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 ### <a name="remarks"></a>备注  
   
 ##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManager::DrawPushButtonWinXP  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawPushButtonWinXP(CDC*,
@@ -593,7 +595,7 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 ### <a name="remarks"></a>备注  
   
 ##  <a name="drawtextonglass"></a>CMFCVisualManager::DrawTextOnGlass  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DrawTextOnGlass(
@@ -618,7 +620,7 @@ virtual BOOL DrawTextOnGlass(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
@@ -677,7 +679,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  重写此方法在派生类中自定义标题栏的文本颜色。 在重写方法中，返回所需的颜色。  
   
 ##  <a name="getcaptionbuttonextraborder"></a>CMFCVisualManager::GetCaptionButtonExtraBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetCaptionButtonExtraBorder() const;  
@@ -688,7 +690,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getdockingpanecaptionextraheight"></a>CMFCVisualManager::GetDockingPaneCaptionExtraHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetDockingPaneCaptionExtraHeight() const;  
@@ -714,7 +716,7 @@ virtual int GetDockingTabsBordersSize();
  重写此方法在自定义可视化管理器，若要更改选项卡式停靠的控件条的边框大小。 默认实现将返回 -1。  
   
 ##  <a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManager::GetHighlightedMenuItemTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -754,7 +756,7 @@ virtual int GetMDITabsBordersSize();
  重写此函数在派生类以自定义 MDITabs 窗口的边框大小。  
   
 ##  <a name="getmenuimagemargin"></a>CMFCVisualManager::GetMenuImageMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetMenuImageMargin() const;  
@@ -765,7 +767,7 @@ virtual int GetMenuImageMargin() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getmenuitemtextcolor"></a>CMFCVisualManager::GetMenuItemTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetMenuItemTextColor(
@@ -827,7 +829,7 @@ virtual int GetPopupMenuBorderSize() const;
  重写此方法以自定义应用程序中的弹出菜单的边框大小。  
   
 ##  <a name="getpopupmenugap"></a>CMFCVisualManager::GetPopupMenuGap  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetPopupMenuGap() const;  
@@ -872,7 +874,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  重写此函数可自定义您的应用程序中的属性列表的文本颜色。  
   
 ##  <a name="getribbonhyperlinktextcolor"></a>CMFCVisualManager::GetRibbonHyperlinkTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
@@ -886,7 +888,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getribbonpopupbordersize"></a>CMFCVisualManager::GetRibbonPopupBorderSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;  
@@ -900,7 +902,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetRibbonQuickAccessToolBarChevronOffset();
@@ -911,7 +913,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getribbonquickaccesstoolbarrightmargin"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetRibbonQuickAccessToolBarRightMargin();
@@ -922,7 +924,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getribbonquickaccesstoolbartextcolor"></a>CMFCVisualManager::GetRibbonQuickAccessToolBarTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
@@ -936,7 +938,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getribbonslidercolors"></a>CMFCVisualManager::GetRibbonSliderColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void GetRibbonSliderColors(
@@ -959,7 +961,7 @@ virtual void GetRibbonSliderColors(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getribbonstatusbartextcolor"></a>CMFCVisualManager::GetRibbonStatusBarTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
@@ -973,7 +975,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManager::GetShowAllMenuItemsHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetShowAllMenuItemsHeight(
@@ -990,7 +992,7 @@ virtual int GetShowAllMenuItemsHeight(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManager::GetSmartDockingBaseGuideColors  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void GetSmartDockingBaseGuideColors(
@@ -1005,7 +1007,7 @@ virtual void GetSmartDockingBaseGuideColors(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManager::GetSmartDockingHighlightToneColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetSmartDockingHighlightToneColor();
@@ -1028,7 +1030,7 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getstatusbarpanetextcolor"></a>CMFCVisualManager::GetStatusBarPaneTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetStatusBarPaneTextColor(
@@ -1092,7 +1094,7 @@ virtual void GetTabFrameColors(
  如果您想要自定义的一组框架在绘制选项卡窗口时使用的颜色，重写此函数在派生类中。  
   
 ##  <a name="gettabhorzmargin"></a>CMFCVisualManager::GetTabHorzMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
@@ -1106,7 +1108,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettabtextcolor"></a>CMFCVisualManager::GetTabTextColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetTabTextColor(
@@ -1125,7 +1127,7 @@ virtual COLORREF GetTabTextColor(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspanegroupcaptionheight"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneGroupCaptionHeight() const;  
@@ -1136,7 +1138,7 @@ int GetTasksPaneGroupCaptionHeight() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspanegroupcaptionhorzoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneGroupCaptionHorzOffset() const;  
@@ -1147,7 +1149,7 @@ int GetTasksPaneGroupCaptionHorzOffset() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspanegroupcaptionvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupCaptionVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneGroupCaptionVertOffset() const;  
@@ -1158,7 +1160,7 @@ int GetTasksPaneGroupCaptionVertOffset() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspanegroupvertoffset"></a>CMFCVisualManager::GetTasksPaneGroupVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneGroupVertOffset() const;  
@@ -1169,7 +1171,7 @@ int GetTasksPaneGroupVertOffset() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspanehorzmargin"></a>CMFCVisualManager::GetTasksPaneHorzMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneHorzMargin() const;  
@@ -1180,7 +1182,7 @@ int GetTasksPaneHorzMargin() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspaneiconhorzoffset"></a>CMFCVisualManager::GetTasksPaneIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneIconHorzOffset() const;  
@@ -1191,7 +1193,7 @@ int GetTasksPaneIconHorzOffset() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspaneiconvertoffset"></a>CMFCVisualManager::GetTasksPaneIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneIconVertOffset() const;  
@@ -1202,7 +1204,7 @@ int GetTasksPaneIconVertOffset() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspanetaskhorzoffset"></a>CMFCVisualManager::GetTasksPaneTaskHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneTaskHorzOffset() const;  
@@ -1213,7 +1215,7 @@ int GetTasksPaneTaskHorzOffset() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettaskspanevertmargin"></a>CMFCVisualManager::GetTasksPaneVertMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksPaneVertMargin() const;  
@@ -1248,7 +1250,7 @@ virtual COLORREF GetToolbarButtonTextColor(
  重写此函数可自定义您的应用程序中的工具栏按钮的文本颜色。  
   
 ##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManager::GetToolBarCustomizeButtonMargin  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetToolBarCustomizeButtonMargin() const;  
@@ -1259,7 +1261,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManager::GetToolbarDisabledColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetToolbarDisabledColor() const;  
@@ -1283,7 +1285,7 @@ virtual COLORREF GetToolbarDisabledTextColor();
  重写此方法中的自定义的可视管理器设置将不可用的工具栏按钮的文本颜色。  
   
 ##  <a name="gettoolbarhighlightcolor"></a>CMFCVisualManager::GetToolbarHighlightColor  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF GetToolbarHighlightColor();
@@ -1294,7 +1296,7 @@ virtual COLORREF GetToolbarHighlightColor();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="gettooltipinfo"></a>CMFCVisualManager::GetToolTipInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL GetToolTipInfo(
@@ -1321,7 +1323,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
  `TRUE`如果自动隐藏按钮重叠;`FALSE`如果不匹配。  
   
 ##  <a name="isautodestroy"></a>CMFCVisualManager::IsAutoDestroy  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsAutoDestroy() const;  
@@ -1332,7 +1334,7 @@ BOOL IsAutoDestroy() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="isdefaultwinxppopupbutton"></a>CMFCVisualManager::IsDefaultWinXPPopupButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;  
@@ -1385,7 +1387,7 @@ BOOL IsFadeInactiveImage() const;
  您可以激活或通过调用来停用光光照效果[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)。 光照效果是什么使不可用的图像看起来较浅。  
   
 ##  <a name="isframemenucheckeditems"></a>CMFCVisualManager::IsFrameMenuCheckedItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsFrameMenuCheckedItems() const;  
@@ -1396,7 +1398,7 @@ BOOL IsFrameMenuCheckedItems() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ishighlightonenotetabs"></a>CMFCVisualManager::IsHighlightOneNoteTabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsHighlightOneNoteTabs() const;  
@@ -1407,7 +1409,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ishighlightwholemenuitem"></a>CMFCVisualManager::IsHighlightWholeMenuItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsHighlightWholeMenuItem();
@@ -1418,7 +1420,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="islayeredribbonkeytip"></a>CMFCVisualManager::IsLayeredRibbonKeyTip  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsLayeredRibbonKeyTip() const;  
@@ -1455,7 +1457,7 @@ virtual BOOL IsOfficeXPStyleMenus() const;
  [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)时它必须绘制菜单和卷影调用此方法。 默认情况下，此方法返回`FALSE`。 如果您想要在 Office XP 中使用类似于弹出菜单的弹出菜单，在重写此方法的自定义的可视管理器并返回`TRUE`。  
   
 ##  <a name="isoffsetpressedbutton"></a>CMFCVisualManager::IsOffsetPressedButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsOffsetPressedButton() const;  
@@ -1476,7 +1478,7 @@ virtual BOOL IsOwnerDrawCaption();
  `TRUE`如果应用程序中的所有框架窗口都的所有者绘制的标题;`FALSE`否则为。  
   
 ##  <a name="isownerdrawmenucheck"></a>CMFCVisualManager::IsOwnerDrawMenuCheck  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsOwnerDrawMenuCheck();
@@ -1497,7 +1499,7 @@ BOOL IsShadowHighlightedImage() const;
  可视化管理器显示在突出显示的图像; 下的阴影时，非零值否则为 0。  
   
 ##  <a name="istoolbarbuttonfillenabled"></a>CMFCVisualManager::IsToolbarButtonFillEnabled  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsToolbarButtonFillEnabled() const;  
@@ -1508,7 +1510,7 @@ BOOL IsToolbarButtonFillEnabled() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="istoolbarroundshape"></a>CMFCVisualManager::IsToolbarRoundShape  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
@@ -1522,7 +1524,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="iswindowsthemingsupported"></a>CMFCVisualManager::IsWindowsThemingSupported  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsWindowsThemingSupported() const;  
@@ -1533,7 +1535,7 @@ virtual BOOL IsWindowsThemingSupported() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onactivateapp"></a>CMFCVisualManager::OnActivateApp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnActivateApp(
@@ -1667,7 +1669,7 @@ virtual void OnDrawButtonBorder(
  工具栏按钮的可能的状态为`ButtonsIsRegular`， `ButtonsIsPressed`，或`ButtonsIsHighlighted`。  
   
 ##  <a name="ondrawbuttonseparator"></a>CMFCVisualManager::OnDrawButtonSeparator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawButtonSeparator(
@@ -1719,7 +1721,7 @@ virtual void OnDrawCaptionBarBorder(
  重写此方法在派生类可以自定义标题栏的边框外观。  
   
 ##  <a name="ondrawcaptionbarbuttonborder"></a>CMFCVisualManager::OnDrawCaptionBarButtonBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCaptionBarButtonBorder(
@@ -1746,7 +1748,7 @@ virtual void OnDrawCaptionBarButtonBorder(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawcaptionbarinfoarea"></a>CMFCVisualManager::OnDrawCaptionBarInfoArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCaptionBarInfoArea(
@@ -1804,7 +1806,7 @@ virtual void OnDrawCaptionButton (
  重写此方法在派生类自定义标题按钮的外观。  
   
 ##  <a name="ondrawcheckbox"></a>CMFCVisualManager::OnDrawCheckBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCheckBox(
@@ -1825,7 +1827,7 @@ virtual void OnDrawCheckBox(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawcheckboxex"></a>CMFCVisualManager::OnDrawCheckBoxEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawCheckBoxEx(
@@ -1918,7 +1920,7 @@ virtual void OnDrawComboDropButton(
  重写此方法在组合框按钮的下拉按钮的外观进行自定义您派生视觉管理器中。  
   
 ##  <a name="ondrawcontrolborder"></a>CMFCVisualManager::OnDrawControlBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -1992,7 +1994,7 @@ virtual void OnDrawEditBorder(
  重写此方法在派生视觉管理器，以自定义的边框`CMFCToolBarEditBoxButton`对象。  
   
 ##  <a name="ondrawexpandingbox"></a>CMFCVisualManager::OnDrawExpandingBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawExpandingBox(
@@ -2100,7 +2102,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
  如果`bIsUp`是`TRUE`，视觉管理器绘制一个上的排序箭头。 如果它是`FALSE`，视觉管理器绘制排序的向下箭头。 重写`OnDrawHeaderCtrlSortArrow`在派生类自定义排序按钮的外观。  
   
 ##  <a name="ondrawmenuarrowoncustomizelist"></a>CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuArrowOnCustomizeList(
@@ -2140,7 +2142,7 @@ virtual void OnDrawMenuBorder(
  此方法的默认实现将显示标准菜单的边框。 重写此方法在派生的视觉管理器自定义菜单边框的外观。  
   
 ##  <a name="ondrawmenucheck"></a>CMFCVisualManager::OnDrawMenuCheck  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuCheck(
@@ -2161,7 +2163,7 @@ virtual void OnDrawMenuCheck(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawmenuitembutton"></a>CMFCVisualManager::OnDrawMenuItemButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuItemButton(
@@ -2182,7 +2184,7 @@ virtual void OnDrawMenuItemButton(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawmenulabel"></a>CMFCVisualManager::OnDrawMenuLabel  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnDrawMenuLabel(
@@ -2199,7 +2201,7 @@ virtual COLORREF OnDrawMenuLabel(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawmenuresizebar"></a>CMFCVisualManager::OnDrawMenuResizeBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuResizeBar(
@@ -2251,7 +2253,7 @@ virtual void OnDrawMenuScrollButton(
  重写此方法在派生的视觉管理器自定义菜单滚动按钮的外观。 当菜单项的总高度超出最大高度的弹出菜单的弹出菜单的边缘上出现的菜单滚动按钮。  
   
 ##  <a name="ondrawmenushadow"></a>CMFCVisualManager::OnDrawMenuShadow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMenuShadow(
@@ -2313,7 +2315,7 @@ virtual void OnDrawMenuSystemButton(
  此方法的默认实现调用[CDC::DrawFrameControl](../../mfc/reference/cdc-class.md#drawframecontrol)与`DFC_CAPTION`类型。 重写此方法在你派生视觉管理器的类以自定义的系统按钮的外观。  
   
 ##  <a name="ondrawminiframeborder"></a>CMFCVisualManager::OnDrawMiniFrameBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawMiniFrameBorder(
@@ -2435,7 +2437,7 @@ virtual COLORREF OnDrawPaneCaption(
  重写此方法在派生的视觉管理器窗格中的标题的外观进行自定义。  
   
 ##  <a name="ondrawpanedivider"></a>CMFCVisualManager::OnDrawPaneDivider  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawPaneDivider(
@@ -2454,7 +2456,7 @@ virtual void OnDrawPaneDivider(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawpopupwindowborder"></a>CMFCVisualManager::OnDrawPopupWindowBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawPopupWindowBorder(
@@ -2469,7 +2471,7 @@ virtual void OnDrawPopupWindowBorder(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManager::OnDrawPopupWindowButtonBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawPopupWindowButtonBorder(
@@ -2486,7 +2488,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManager::OnDrawPopupWindowCaption  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -2662,7 +2664,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  重写此方法在派生类自定义功能区类别的标题栏的外观。 标题栏的详细信息，请参阅[CMFCRibbonContextCaption 类](../../mfc/reference/cmfcribboncontextcaption-class.md)。  
   
 ##  <a name="ondrawribboncategoryscroll"></a>CMFCVisualManager::OnDrawRibbonCategoryScroll  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonCategoryScroll(
@@ -2703,7 +2705,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
  重写此方法在派生的视觉管理器自定义功能区类别选项卡的外观。 有关功能区类别的详细信息，请参阅[CMFCRibbonCategory 类](../../mfc/reference/cmfcribboncategory-class.md)。  
   
 ##  <a name="ondrawribboncheckboxonlist"></a>CMFCVisualManager::OnDrawRibbonCheckBoxOnList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonCheckBoxOnList(
@@ -2724,7 +2726,7 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawribboncolorpalettebox"></a>CMFCVisualManager::OnDrawRibbonColorPaletteBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonColorPaletteBox(
@@ -2776,7 +2778,7 @@ virtual void OnDrawRibbonDefaultPaneButton(
  重写此方法在派生的视觉管理器自定义默认按钮的外观。  
   
 ##  <a name="ondrawribbondefaultpanebuttoncontext"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonDefaultPaneButtonContext(
@@ -2791,7 +2793,7 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawribbondefaultpanebuttonindicator"></a>CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonDefaultPaneButtonIndicator(
@@ -2812,7 +2814,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawribbongalleryborder"></a>CMFCVisualManager::OnDrawRibbonGalleryBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonGalleryBorder(
@@ -2829,7 +2831,7 @@ virtual void OnDrawRibbonGalleryBorder(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawribbongallerybutton"></a>CMFCVisualManager::OnDrawRibbonGalleryButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonGalleryButton(
@@ -2844,7 +2846,7 @@ virtual void OnDrawRibbonGalleryButton(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawribbonkeytip"></a>CMFCVisualManager::OnDrawRibbonKeyTip  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonKeyTip(
@@ -2928,7 +2930,7 @@ virtual void OnDrawRibbonMainPanelFrame(
  重写此方法的派生的可视管理器自定义的框架外观`CMFCRibbonMainPanel`。  
   
 ##  <a name="ondrawribbonmenucheckframe"></a>CMFCVisualManager::OnDrawRibbonMenuCheckFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawRibbonMenuCheckFrame(
@@ -3224,7 +3226,7 @@ virtual COLORREF OnDrawRibbonTabsFrame(
  重写此方法在派生视觉管理器，以自定义一组功能区上的选项卡周围的框中。  
   
 ##  <a name="ondrawscrollbuttons"></a>CMFCVisualManager::OnDrawScrollButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawScrollButtons(
@@ -3272,7 +3274,7 @@ virtual void OnDrawSeparator(
  控件条上使用分隔符来分隔组相关的图标。 此方法的默认实现将显示标准的分隔符。 重写此方法在派生视觉管理器，以自定义分隔符的外观。  
   
 ##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManager::OnDrawShowAllMenuItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawShowAllMenuItems(
@@ -3706,7 +3708,7 @@ virtual void OnDrawTasksGroupCaption(
  重写此方法在派生类以自定义的标题`CMFCTasksPaneTaskGroup`。  
   
 ##  <a name="ondrawtasksgroupicon"></a>CMFCVisualManager::OnDrawTasksGroupIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawTasksGroupIcon(
@@ -3754,7 +3756,7 @@ virtual void OnDrawTearOffCaption(
  重写此方法在派生类以自定义外观的分开的条形图的标题。  
   
 ##  <a name="ondrawtoolboxframe"></a>CMFCVisualManager::OnDrawToolBoxFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawToolBoxFrame(
@@ -3791,7 +3793,7 @@ virtual BOOL OnEraseMDIClientArea(
  重写此方法时要执行自定义代码可视化管理器将清除 MDI 工作区。  
   
 ##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManager::OnErasePopupWindowButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnErasePopupWindowButton(
@@ -3976,7 +3978,7 @@ virtual void OnFillButtonInterior(
  工具栏按钮的可能的状态为`ButtonsIsRegular`， `ButtonsIsPressed`，或`ButtonsIsHighlighted`。  
   
 ##  <a name="onfillcaptionbarbutton"></a>CMFCVisualManager::OnFillCaptionBarButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnFillCaptionBarButton(
@@ -4273,7 +4275,7 @@ virtual void OnFillRibbonMenuFrame(
  重写此方法的派生的可视管理器自定义的菜单栏的外观`CMFCRibbonMainPanel`。  
   
 ##  <a name="onfillribbonquickaccesstoolbarpopup"></a>CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnFillRibbonQuickAccessToolBarPopup(
@@ -4438,7 +4440,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
  重写此方法在派生视觉管理器，以自定义突出显示的菜单命令的外观。  
   
 ##  <a name="onncactivate"></a>CMFCVisualManager::OnNcActivate  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnNcActivate(
@@ -4520,7 +4522,7 @@ static void RedrawAll();
 ```  
   
 ##  <a name="ribboncategorycolortorgb"></a>CMFCVisualManager::RibbonCategoryColorToRGB  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);

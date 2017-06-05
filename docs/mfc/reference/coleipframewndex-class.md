@@ -87,7 +87,8 @@ ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 类
-`COleIPFrameWndEx` 类实现支持 MFC 的 OLE 容器。 必须为您的应用程序中派生就地框架窗口类`COleIPFrameWndEx`类，而不是从它派生[COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类。  
+`COleIPFrameWndEx` 类实现支持 MFC 的 OLE 容器。 必须为您的应用程序中派生就地框架窗口类`COleIPFrameWndEx`类，而不是从它派生[COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)类。 
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
 ## <a name="syntax"></a>语法  
   
@@ -173,7 +174,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
  **标头：** afxoleipframewndex.h  
   
 ##  <a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void AddDockSite();
@@ -182,7 +183,7 @@ void AddDockSite();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="addpane"></a>COleIPFrameWndEx::AddPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL AddPane(
@@ -199,7 +200,7 @@ BOOL AddPane(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="adjustdockinglayout"></a>COleIPFrameWndEx::AdjustDockingLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -211,7 +212,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="dockpane"></a>COleIPFrameWndEx::DockPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void DockPane(
@@ -250,7 +251,7 @@ BOOL DockPaneLeftOf(
  调用此方法以停靠在预定义顺序中的多个窗格对象。 此方法由指定窗格停靠`pBar`左侧的指定窗格中`pLeftOf`。  
   
 ##  <a name="enableautohidepanes"></a>COleIPFrameWndEx::EnableAutoHidePanes  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -264,7 +265,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="enabledocking"></a>COleIPFrameWndEx::EnableDocking  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -278,7 +279,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnablePaneMenu(
@@ -314,7 +315,7 @@ CMFCPopupMenu* GetActivePopup() const;
  使用此方法可获取的指针[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)当前显示的对象。  
   
 ##  <a name="getcontainerframewindow"></a>COleIPFrameWndEx::GetContainerFrameWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 COleCntrFrameWndEx* GetContainerFrameWindow();
@@ -338,7 +339,7 @@ UINT GetDefaultResId() const;
  调用此函数可检索已的资源 ID 指定在框架窗口加载时的菜单资源调用`COleIPFrameWndEx::LoadFrame`。  
   
 ##  <a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CFrameWnd* GetDockFrame();
@@ -349,7 +350,7 @@ CFrameWnd* GetDockFrame();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager();
@@ -360,7 +361,7 @@ CDockingManager* GetDockingManager();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="getmainframe"></a>COleIPFrameWndEx::GetMainFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CFrameWnd* GetMainFrame();
@@ -384,7 +385,7 @@ const CMFCMenuBar* GetMenuBar() const;
  使用此函数来检索指向属于菜单条对象`COleIPFrameWndEx`对象。  
   
 ##  <a name="getpane"></a>COleIPFrameWndEx::GetPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CBasePane* GetPane(UINT nID);
@@ -456,7 +457,7 @@ void InitUserToolbars(
  使用此函数来初始化用于分配给用户动态定义的工具栏的控件 Id 的范围。 参数`uiUserToolbarFirst`和`uiUserToolbarLast`定义允许的工具栏控件 Id 的范围。 若要禁用创建用户定义的工具栏，将设置`uiUserToolbarFirst`或`uiUserToolbarLast`为-1。  
   
 ##  <a name="insertpane"></a>COleIPFrameWndEx::InsertPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL InsertPane(
@@ -488,7 +489,7 @@ BOOL IsMenuBarAvailable() const;
  调用此方法以确定是否在框架窗口维护一个非`NULL`其菜单条对象的指针。  
   
 ##  <a name="ispointneardocksite"></a>COleIPFrameWndEx::IsPointNearDockSite  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsPointNearDockSite(
@@ -507,7 +508,7 @@ BOOL IsPointNearDockSite(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="loadframe"></a>COleIPFrameWndEx::LoadFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL LoadFrame(
@@ -528,7 +529,7 @@ virtual BOOL LoadFrame(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onclosedockingpane"></a>COleIPFrameWndEx::OnCloseDockingPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCloseDockingPane(CDockablePane*);
@@ -542,7 +543,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="oncloseminiframe"></a>COleIPFrameWndEx::OnCloseMiniFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
@@ -570,7 +571,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
  重写此方法以从接收通知`CMFCPopupMenu`对象在处理`WM_DESTROY`消息。  
   
 ##  <a name="oncmdmsg"></a>COleIPFrameWndEx::OnCmdMsg  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCmdMsg(
@@ -662,7 +663,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  重写此方法以提供有关特定菜单项的工具提示信息。  
   
 ##  <a name="onmoveminiframe"></a>COleIPFrameWndEx::OnMoveMiniFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -676,7 +677,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onsetpreviewmode"></a>COleIPFrameWndEx::OnSetPreviewMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnSetPreviewMode(
@@ -691,7 +692,7 @@ virtual void OnSetPreviewMode(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onshowcustomizepane"></a>COleIPFrameWndEx::OnShowCustomizePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowCustomizePane(
@@ -708,7 +709,7 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onshowpanes"></a>COleIPFrameWndEx::OnShowPanes  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -761,7 +762,7 @@ virtual BOOL OnTearOffMenu(
  如果您想要自定义拖曳栏的安装程序，重写此函数。  
   
 ##  <a name="panefrompoint"></a>COleIPFrameWndEx::PaneFromPoint  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CBasePane* PaneFromPoint(
@@ -789,7 +790,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="pretranslatemessage"></a>COleIPFrameWndEx::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -803,7 +804,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="recalclayout"></a>COleIPFrameWndEx::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -815,7 +816,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RemovePaneFromDockManager(
@@ -872,7 +873,7 @@ void SetupToolbarMenu(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="showpane"></a>COleIPFrameWndEx::ShowPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ShowPane(

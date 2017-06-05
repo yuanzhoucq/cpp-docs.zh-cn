@@ -86,6 +86,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 类
 包含一个弹出菜单的工具栏按钮。  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>语法  
   
@@ -221,7 +222,7 @@ CMFCToolBarMenuButton(
  [!code-cpp[NVC_MFC_WordPad #&9;](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]  
   
 ##  <a name="comparewith"></a>CMFCToolBarMenuButton::CompareWith  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;  
@@ -235,7 +236,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="copyfrom"></a>CMFCToolBarMenuButton::CopyFrom  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -314,7 +315,7 @@ void DrawDocumentIcon(
  此方法采用一个文档图标，并将其绘制在所指定的区域中居中显示的菜单按钮`rectImage`。  
   
 ##  <a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableQuickCustomize();
@@ -323,7 +324,7 @@ void EnableQuickCustomize();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="hasbutton"></a>CMFCToolBarMenuButton::HasButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasButton() const;  
@@ -334,7 +335,7 @@ virtual BOOL HasButton() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="havehotborder"></a>CMFCToolBarMenuButton::HaveHotBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HaveHotBorder() const;  
@@ -345,7 +346,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="isborder"></a>CMFCToolBarMenuButton::IsBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsBorder() const;  
@@ -356,7 +357,7 @@ virtual BOOL IsBorder() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="isclickedonmenu"></a>CMFCToolBarMenuButton::IsClickedOnMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsClickedOnMenu() const;  
@@ -367,7 +368,7 @@ BOOL IsClickedOnMenu() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="isquickmode"></a>CMFCToolBarMenuButton::IsQuickMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsQuickMode();
@@ -504,7 +505,7 @@ static BOOL m_bAlwaysCallOwnerDraw;
  如果此成员变量设置为`TRUE`，按钮始终调用[CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage)方法，以在按钮上显示图像。 当`m_bAlwaysCallOwnerDraw`是`FALSE`，按钮自身绘制的图像，如果预定义映像。 否则，它调用`OnDrawMenuImage`。  
   
 ##  <a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnAfterCreatePopupMenu();
@@ -513,7 +514,7 @@ virtual void OnAfterCreatePopupMenu();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onbeforedrag"></a>CMFCToolBarMenuButton::OnBeforeDrag  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeDrag() const;  
@@ -524,7 +525,7 @@ virtual BOOL OnBeforeDrag() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="oncalculatesize"></a>CMFCToolBarMenuButton::OnCalculateSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -543,7 +544,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="oncancelmode"></a>CMFCToolBarMenuButton::OnCancelMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCancelMode();
@@ -552,7 +553,7 @@ virtual void OnCancelMode();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onchangeparentwnd"></a>CMFCToolBarMenuButton::OnChangeParentWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -564,7 +565,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onclick"></a>CMFCToolBarMenuButton::OnClick  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnClick(
@@ -596,7 +597,7 @@ virtual BOOL OnClickMenuItem();
  若要自定义菜单项处理，请重写`OnClickMenuItem`在派生类中`CMFCToolBarMenuButton`类。 您还必须重写[CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu)和替换时要求派生类的实例，并用特殊处理的菜单按钮。  
   
 ##  <a name="oncontexthelp"></a>CMFCToolBarMenuButton::OnContextHelp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -610,7 +611,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondraw"></a>CMFCToolBarMenuButton::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(
@@ -637,7 +638,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton::OnDrawOnCustomizeList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -673,7 +674,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
  当用户从工具栏菜单按钮打开下拉菜单中，将由框架调用此函数。  
   
 ##  <a name="resetimagetodefault"></a>CMFCToolBarMenuButton::ResetImageToDefault  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ResetImageToDefault();
@@ -682,7 +683,7 @@ virtual void ResetImageToDefault();
 ### <a name="remarks"></a>备注  
   
 ##  <a name="savebarstate"></a>CMFCToolBarMenuButton::SaveBarState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SaveBarState();
@@ -692,7 +693,7 @@ virtual void SaveBarState();
  在拖放操作的结果作为创建工具栏按钮时，框架将调用此方法。 此方法调用[CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate)顶级弹出菜单上，这会导致重新创建其菜单的弹出菜单的父按钮的方法。  
   
 ##  <a name="serialize"></a>CMFCToolBarMenuButton::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -759,7 +760,7 @@ void SetMenuPaletteMode(
  在调色板模式下，所有菜单项都显示为多列的调色板。 使用指定的行数`nPaletteRows`。  
   
 ##  <a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetMessageWnd(CWnd* pWndMessage);

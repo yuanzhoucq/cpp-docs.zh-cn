@@ -119,7 +119,8 @@ ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 类
-实现 Windows 弹出菜单功能，并通过添加可拖曳菜单和工具提示等功能进行扩展。  
+实现 Windows 弹出菜单功能，并通过添加可拖曳菜单和工具提示等功能进行扩展。
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
   
 ## <a name="syntax"></a>语法  
   
@@ -246,7 +247,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
  **标头︰** afxpopupmenu.h  
   
 ##  <a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BOOL __stdcall ActivatePopupMenu(
@@ -274,7 +275,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
  `TRUE`如果弹出菜单可以显示空条目;`FALSE`否则为。  
   
 ##  <a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL AreAllCommandsShown() const;  
@@ -314,7 +315,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 -   菜单-`ptScreen`高于命令。  
   
 ##  <a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
@@ -388,7 +389,7 @@ virtual BOOL Create(
  [!code-cpp[NVC_MFC_CustomPages #&1;](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]  
   
 ##  <a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CPane* CreateTearOffBar(
@@ -407,7 +408,7 @@ virtual CPane* CreateTearOffBar(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DefaultMouseClickOnClose() const;  
@@ -453,7 +454,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  如果启用声音，框架将调用[PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426)方法时用户将打开一个弹出菜单，或选择菜单命令。 默认情况下，启用此功能。  
   
 ##  <a name="enableresize"></a>CMFCPopupMenu::EnableResize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableResize(CSize sizeMinResize);
@@ -465,7 +466,7 @@ void EnableResize(CSize sizeMinResize);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableScrolling(BOOL = TRUE);
@@ -477,7 +478,7 @@ void EnableScrolling(BOOL = TRUE);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableVertResize(int nMinResize);
@@ -489,7 +490,7 @@ void EnableVertResize(int nMinResize);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;  
@@ -560,7 +561,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
  弹出菜单第一次显示为透明，并逐渐固化。  
   
 ##  <a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 DROP_DIRECTION GetDropDirection() const;  
@@ -584,7 +585,7 @@ static BOOL GetForceMenuFocus();
  默认情况下，您的应用程序不返回到菜单栏的焦点。 若要更改此设置，请使用[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)。  
   
 ##  <a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BOOL __stdcall GetForceShadow();
@@ -655,7 +656,7 @@ CWnd* GetMessageWnd() const;
  当使用该方法[CMFCPopupMenu::Create](#create)若要创建的弹出菜单，您指定哪些窗口都将接收的菜单消息。  
   
 ##  <a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CWnd* GetParentArea(CRect& rectParentBtn);
@@ -697,7 +698,7 @@ CMFCPopupMenu* GetParentPopupMenu() const;
  具有父对象的弹出菜单`CMFCPopupMenu`对象仅当它是一个子菜单。  
   
 ##  <a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonBaseElement* GetParentRibbonElement() const;  
@@ -721,7 +722,7 @@ CMFCToolBar* GetParentToolBar() const;
  如果`CMFCPopupMenu`为快捷菜单，则它具有不在父级工具栏。  
   
 ##  <a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;  
@@ -745,7 +746,7 @@ CMFCToolBarMenuButton* GetSelItem();
  在弹出菜单的菜单命令由[CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)，或从派生的类`CMFCToolBarMenuButton`。  
   
 ##  <a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL HasBeenResized() const;  
@@ -769,7 +770,7 @@ BOOL HideRarelyUsedCommands() const;
  此方法指定是否可以隐藏弹出菜单只有很少使用的命令，如果启用该配置。 弹出菜单可以隐藏很少使用的命令，如果它有一个父按钮和父窗口派生自[CMFCMenuBar 类](../../mfc/reference/cmfcmenubar-class.md)。 使用[CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus)要启用此功能和[CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus)若要确定当前是否启用此功能。 您必须为父窗口调用这两种方法。  
   
 ##  <a name="incommand"></a>CMFCPopupMenu::InCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL InCommand();
@@ -821,7 +822,7 @@ int InsertSeparator(int iInsertAt = -1);
  如果此方法将失败`iInsertAt`是无效的值。  
   
 ##  <a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsAlwaysClose() const;  
@@ -832,7 +833,7 @@ virtual BOOL IsAlwaysClose() const;
 ### <a name="remarks"></a>备注  
   
 ##  <a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
@@ -858,7 +859,7 @@ BOOL IsCustomizePane();
  应用程序应调用此方法期间[CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)。  
   
 ##  <a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsEscClose();
@@ -882,7 +883,7 @@ virtual BOOL IsIdle() const;
  默认情况下，一个弹出菜单时处于空闲模式显示动画已完成并且用户不滚动的弹出菜单。  
   
 ##  <a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 static UINT __stdcall IsMenuSound();
@@ -906,7 +907,7 @@ BOOL IsQuickCustomize();
  在 QuickCustomize 模式用户选择要直接自定义按钮的工具栏上的按钮。  
   
 ##  <a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsResizeble() const;  
@@ -932,7 +933,7 @@ BOOL IsRightAlign() const;
  菜单对齐不是全局设置和弹出菜单会有所不同。  
   
 ##  <a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsScrollable() const;  
@@ -966,7 +967,7 @@ BOOL IsShown() const;
  `TRUE`弹出菜单是否可见，则否则为`FALSE`。  
   
 ##  <a name="moveto"></a>CMFCPopupMenu::MoveTo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void MoveTo(const CPoint& pt);
@@ -978,7 +979,7 @@ void MoveTo(const CPoint& pt);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnChangeHot(int nHot);
@@ -990,7 +991,7 @@ virtual void OnChangeHot(int nHot);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnChooseItem(UINT uidCmdID);
@@ -1002,7 +1003,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCmdMsg(
@@ -1023,7 +1024,7 @@ virtual BOOL OnCmdMsg(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="postcommand"></a>CMFCPopupMenu::PostCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL PostCommand(UINT uiCommandID);
@@ -1037,7 +1038,7 @@ BOOL PostCommand(UINT uiCommandID);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1051,7 +1052,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -1087,7 +1088,7 @@ BOOL RemoveItem(int iIndex);
  此方法会自动对受移除项的任何分隔符进行排列。 有关框架如何重新排列分隔符的详细信息，请参阅[CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)。  
   
 ##  <a name="savestate"></a>CMFCPopupMenu::SaveState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SaveState();
@@ -1126,7 +1127,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
  请参阅[CMFCPopupMenu::GetAnimationType](#getanimationtype)有关的有效值列表`type`。  
   
 ##  <a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
@@ -1194,7 +1195,7 @@ void SetMaxWidth(int iMaxWidth);
  如果某个菜单命令与关联的文本将不适合的最大宽度，则将被截断并不能容纳的部分替换为三个点。  
   
 ##  <a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetMessageWnd(CWnd* pMsgWnd);
@@ -1206,7 +1207,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
@@ -1218,7 +1219,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
@@ -1230,7 +1231,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ### <a name="remarks"></a>备注  
   
 ##  <a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetQuickMode();
@@ -1277,7 +1278,7 @@ void ShowAllCommands();
  这不是全局设置，并且影响仅当前的弹出菜单。  
   
 ##  <a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void TriggerResize();

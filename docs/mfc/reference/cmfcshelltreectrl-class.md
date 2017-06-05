@@ -54,7 +54,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 类
 `CMFCShellTreeCtrl`类扩展[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)通过显示 Shell 项的层次结构的功能。  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -164,7 +165,7 @@ CMFCShellListCtrl* GetRelatedList() const;
  通过使用`CMFCShellListCtrl`对象一起`CMFCShellTreeCtrl`对象时，您可以创建一个类似于资源管理器中的窗口。 使用方法[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)将两个类相关联。 它们是关联后，框架将自动更新`CMFCShellListCtrl`如果中的选定内容`CMFCShellTreeCtrl`更改。  
   
 ##  <a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnChildNotify(
@@ -185,7 +186,7 @@ virtual BOOL OnChildNotify(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int OnGetItemIcon(
@@ -202,7 +203,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>备注  
   
 ##  <a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
