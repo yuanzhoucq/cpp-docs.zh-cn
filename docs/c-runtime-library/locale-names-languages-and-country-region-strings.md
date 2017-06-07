@@ -57,7 +57,7 @@ locale :: "locale_name"
         | NULL  
 ```  
   
- 首选区域设置名称格式，例如英语（美国）对应的 `en-US` ，或波斯尼亚语（西里尔文，波斯尼亚和黑塞哥维那）对应的 `bs-Cyrl-BA` 。 [Locale Names（区域设置名称）](http://msdn.microsoft.com/library/windows/desktop/dd373814.aspx)中介绍了这一系列区域设置名称。 有关 Windows 操作系统版本支持的区域设置名称的列表，请参阅 **National Language Support (NLS) API Reference（区域语言支持 (NLS) API 参考）** 的“区域性名称” [](http://msdn.microsoft.com/goglobal/bb896001.aspx)列。 该资源列出了支持的语言、脚本和区域设置名称的地区部分。 有关采用非默认排序顺序的受支持的区域设置名称的信息，请参阅 **Sort Order Identifiers（排序顺序标识符）** 中的“区域性名称” [](http://msdn.microsoft.com/library/windows/desktop/dd374060.aspx)列。  
+ 首选区域设置名称格式，例如英语（美国）对应的 `en-US` ，或波斯尼亚语（西里尔文，波斯尼亚和黑塞哥维那）对应的 `bs-Cyrl-BA` 。 [Locale Names（区域设置名称）](http://msdn.microsoft.com/library/windows/desktop/dd373814.aspx)中介绍了这一系列区域设置名称。 有关 Windows 操作系统版本支持的区域设置名称的列表，请参阅  的“区域性名称” [National Language Support (NLS) API Reference（区域语言支持 (NLS) API 参考](http://msdn.microsoft.com/goglobal/bb896001.aspx)列。 该资源列出了支持的语言、脚本和区域设置名称的地区部分。 有关采用非默认排序顺序的受支持的区域设置名称的信息，请参阅  中的“区域性名称” [Sort Order Identifiers（排序顺序标识符)](http://msdn.microsoft.com/library/windows/desktop/dd374060.aspx)列。  
   
  使用语言字符串或语言字符串和国家/地区字符串创建区域设置时，*language*[_*country_region*[.*code_page*]] 格式将存储在类别的区域设置中。 [Language Strings](../c-runtime-library/language-strings.md) 中介绍了一系列受支持的语言字符串，[Country/Region Strings](../c-runtime-library/country-region-strings.md) 中则列出了受支持的国家/地区字符串。 如果指定的语言与指定的国家/地区无关联，则将指定国家/地区的默认语言存储在区域设置中。 我们不建议将区域设置字符串的该格式嵌入到代码中或序列化到存储中，因为操作系统的更新更改这些字符串的可能性要高于区域设置名称格式。  
   
