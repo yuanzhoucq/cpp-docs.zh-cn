@@ -1,18 +1,40 @@
 # [Visual C++ 移植和升级指南](visual-cpp-porting-and-upgrading-guide.md)
+
 ## [Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)
+
 ## [Visual C++ 新增功能（2003 - 2015）](visual-cpp-what-s-new-2003-through-2015.md)
+
 ## [潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)
+
 ## [移植第三方库](porting-third-party-libraries.md)
+
+## [移植数据应用程序](porting-data-applications.md)
+
 ## [移植和升级：示例和案例研究](porting-and-upgrading-examples-and-case-studies.md)
+
 ### [移植指南：MFC Scribble](porting-guide-mfc-scribble.md)
+
 ### [移植指南：COM Spy](porting-guide-com-spy.md)
+
 ### [移植指南：Spy++](porting-guide-spy-increment.md)
+
 ## [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
+
 ### [将代码升级到通用 CRT](upgrade-your-code-to-the-universal-crt.md)
+
 ### [修改 WINVER 和 _WIN32_WINNT](modifying-winver-and-win32-winnt.md)
+
+### [修复库内部的依赖项](fix-your-dependencies-on-library-internals.md)
+
 ### [浮点迁移问题](floating-point-migration-issues.md)
+
 ### [使用 Visual Studio 中的本机多目标来生成旧项目](use-native-multi-targeting.md)
+
 ## [Visual C++ 简介（针对 UNIX 用户）](introduction-to-visual-cpp-for-unix-users.md)
+
 ## [从 UNIX 移植到 Win32](porting-from-unix-to-win32.md)
+
 ## [移植到通用 Windows 平台 (C++)](porting-to-the-universal-windows-platform-cpp.md)
+
 ### [如何在通用 Windows 平台应用中使用现有 C++ 代码](how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)
+
