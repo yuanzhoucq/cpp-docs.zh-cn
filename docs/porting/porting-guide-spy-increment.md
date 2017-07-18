@@ -30,17 +30,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
 此移植案例研究旨在让你了解典型的移植项目、可能遇到的问题类型，以及解决移植问题的一些常用提示和技巧。 这并不是权威的移植指南，因为移植项目的体验很大程度取决于代码的详细信息。  
   
 ## <a name="spy"></a>Spy++  
- Spy++ 是广泛使用的 GUI 诊断工具，适用于提供有关 Windows 桌面上用户界面元素的各种类型信息的 Windows 桌面。 它显示了 Windows 的完整层次结构，并提供有关每个窗口和控件的元数据的访问。 多年来，这款有用的应用程序均与 Visual Studio 一起提供。 我们找到了上次在 Visual C++ 6.0 中编译的旧版本应用程序，并将其移植到了 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]。 对于 Visual Studio 2017 来说，步骤几乎完全相同。
+ Spy++ 是广泛使用的 GUI 诊断工具，适用于提供有关 Windows 桌面上用户界面元素的各种类型信息的 Windows 桌面。 它显示了 Windows 的完整层次结构，并提供有关每个窗口和控件的元数据的访问。 多年来，这款有用的应用程序均与 Visual Studio 一起提供。 我们找到了上次在 Visual C++ 6.0 中编译的旧版本应用程序，并将其移植到了 Visual Studio 2015。 对于 Visual Studio 2017 来说，步骤几乎完全相同。
   
  我们认为这是最典型的移植使用 MFC 和 Win32 API 的 Windows 桌面应用程序的情况，尤其是对于尚未使用从 Visual C++ 6.0 版本开始的任意 Visual C++ 版本进行更新的旧项目。  
   
@@ -84,7 +84,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.  
 ```  
   
- Microsoft 不再为 Windows XP 提供支持，因此，即使 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中允许面向 Windows XP，你仍应在应用程序中逐步取消对此版本的支持，并鼓励你的用户采用新版本的 Windows。  
+ Microsoft 不再为 Windows XP 提供支持，因此，即使 Visual Studio 2015 中允许面向 Windows XP，你仍应在应用程序中逐步取消对此版本的支持，并鼓励你的用户采用新版本的 Windows。  
   
  若要消除此错误，请将“项目属性”设置更新为当前要面向的最低版本的 Windows，以定义 WINVER。 [此处](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx)可找到包含各种 Windows 版本的值的表。  
   

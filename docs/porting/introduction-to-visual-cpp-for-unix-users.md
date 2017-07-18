@@ -32,19 +32,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 7c75629d56e6d8e5291b7d1f7cca9995ab9a50da
-ms.openlocfilehash: d8515fc613f95ae5d6395e33b49482488bcc488d
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 524be35ec1e1db511b7fd4c2ab2b87d83c54325c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ 简介（针对 UNIX 用户）
-本主题为不熟悉 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 但希望有效利用 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 的 UNIX 用户提供相关信息。  
+本主题为不熟悉 Visual C++ 并想要有效率的使用它的 UNIX 用户提供信息。  
   
 ## <a name="getting-started-on-the-command-line"></a>首先使用命令行  
- 可按使用 UNIX 命令行环境的相似方式来使用命令行中的 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]。 利用命令行 C 和 C++ 编译器 (CL.EXE) 以及 NMAKE.EXE、Microsoft 版本的 UNIX make 实用工具等工具从命令提示符中进行编译。  
+ 可按使用 UNIX 命令行环境的相似方式来使用命令行中的 Visual C++。 利用命令行 C 和 C++ 编译器 (CL.EXE) 以及 NMAKE.EXE、Microsoft 版本的 UNIX make 实用工具等工具从命令提示符中进行编译。  
   
- 在 UNIX 中，命令安装在常用文件夹中，例如 /usr/bin。 在 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 中，命令行工具安装在 VC\bin 的安装目录中（通常安装在 Program Files\Microsoft Visual Studio 8\VC\bin 中）。 若要使用命令行工具，请运行位于 Common7\Tools 的安装目录中的 vsvars32.bat。 这会将 bin 目录添加到路径中，并设置从命令行编译 Visual C++ 程序所必需的其他路径。 有关详细信息，请参阅[在命令行上生成](../build/building-on-the-command-line.md)和[演练：在命令行上编译本机 C++ 程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
+ 在 UNIX 中，命令安装在常用文件夹中，例如 /usr/bin。 在 Visual C++ 中，命令行工具安装在 VC\bin 的安装目录中（通常安装在 Program Files\Microsoft Visual Studio 8\VC\bin 中）。 若要使用命令行工具，请运行位于 Common7\Tools 的安装目录中的 vsvars32.bat。 这会将 bin 目录添加到路径中，并设置从命令行编译 Visual C++ 程序所必需的其他路径。 有关详细信息，请参阅[在命令行上生成](../build/building-on-the-command-line.md)和[演练：在命令行上编译本机 C++ 程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
   
 > [!NOTE]
 >  如果通过“开始”菜单中的“Visual Studio 命令行提示符”打开命令提示符，则运行 vsvars32.bat。  
@@ -60,10 +60,10 @@ ms.lasthandoff: 02/24/2017
  单个解决方案中内含的多个项目中存储了包含多个库和可执行文件的应用程序，其中每个库或文件都可以一组不同的编译器选项，或甚至以不同语言生成。 解决方案是容器的抽象概念，用来将多个项目组合在一起。 解决方案的相关信息存储在扩展名为 .sln 的解决方案文件中。 有关详细信息，请参阅[Visual Studio 中的解决方案和项目](/visualstudio/ide/solutions-and-projects-in-visual-studio)和[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
   
 ## <a name="importing-your-existing-code"></a>导入现有代码  
- 可借助 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 来使用设置为用（不用）生成文件进行编译的现有代码，并将它放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 项目。 有关详细信息，请参阅**“从现有代码文件创建项目”向导**。 有关详细信息，请参阅[如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
+ 可借助 Visual C++ 来使用设置为用（不用）生成文件进行编译的现有代码，并将它放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 项目。 有关详细信息，请参阅**“从现有代码文件创建项目”向导**。 有关详细信息，请参阅[如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
   
 ## <a name="creating-a-new-project"></a>创建新项目  
- 可在开发环境中创建新项目。 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 提供了大量提供各种常见项目的标准代码的模板。 可使用应用程序向导为各种应用程序类型生成具有代码大纲的项目。  
+ 可在开发环境中创建新项目。 Visual C++ 提供了大量提供各种常见项目的标准代码的模板。 可使用应用程序向导为各种应用程序类型生成具有代码大纲的项目。  
   
  可以使用**“控制台应用程序 (Win32) 向导”**开始创建空项目。 选择“空项目”复选框。 然后稍后可将新的和现有文件添加到项目。  
   
@@ -83,4 +83,4 @@ ms.lasthandoff: 02/24/2017
  有关详细信息，请参阅[从 UNIX 到 Win32 的迁移](../porting/porting-from-unix-to-win32.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Visual C++ 指导教程](http://msdn.microsoft.com/en-us/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)
+ [生成 C/C++ 程序](../build/building-c-cpp-programs.md)
