@@ -47,7 +47,7 @@ ms.lasthandoff: 04/04/2017
 # <a name="locale"></a>区域设置
 区域设置指你可以用来自定义程序的国家/地区和语言设置。 一些与区域设置相关的类别包括日期和货币值的显示格式。 有关详细信息，请参阅[区域设置类别](../c-runtime-library/locale-categories.md)。  
   
- 在使用不带 `_l` 后缀的函数时，可使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 函数来更改或查询当前的程序或线程区域设置信息的一部分或全部。 带有 `_l` 后缀的函数仅在其执行过程中使用传入的区域设置参数来获取区域设置信息。 若要创建用于带有 `_l` 后缀的函数的区域设置，请使用 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)。 若要释放此区域设置，请使用 [_free_locale](../c-runtime-library/reference/free-locale.md)。 若要获取当前区域设置，请使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).。  
+ 在使用不带 `_l` 后缀的函数时，可使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 函数来更改或查询当前的程序或线程区域设置信息的一部分或全部。 带有 `_l` 后缀的函数仅在其执行过程中使用传入的区域设置参数来获取区域设置信息。 若要创建用于带有 `_l` 后缀的函数的区域设置，请使用 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)。 若要释放此区域设置，请使用 [_free_locale](../c-runtime-library/reference/free-locale.md)。 若要获取当前区域设置，请使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)。  
   
  使用 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 可控制是每个线程都有自己的区域设置，还是程序中的所有线程都共享同一区域设置。 有关详细信息，请参阅[区域设置和代码页](../text/locales-and-code-pages.md)。  
   

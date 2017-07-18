@@ -1,404 +1,789 @@
 # [C/C++ 生成参考](c-cpp-building-reference.md)
+
 # [编译 C/C++ 程序](compiling-a-c-cpp-program.md)
+
 ## [设置编译器选项](setting-compiler-options.md)
+
 ### [编译器命令行语法](compiler-command-line-syntax.md)
+
 #### [CL 文件名语法](cl-filename-syntax.md)
+
 #### [CL 选项的顺序](order-of-cl-options.md)
+
 #### [cl.exe 的返回值](return-value-of-cl-exe.md)
+
 ### [CL 环境变量](cl-environment-variables.md)
+
 ### [CL 命令文件](cl-command-files.md)
+
 ### [快速编译](fast-compilation.md)
+
 ### [CL 调用链接器](cl-invokes-the-linker.md)
+
 ## [编译器选项](compiler-options.md)
+
 ### [按类别列出的编译器选项](compiler-options-listed-by-category.md)
+
 ### [按字母顺序列出的编译器选项](compiler-options-listed-alphabetically.md)
+
 #### [@（指定编译器响应文件）](at-specify-a-compiler-response-file.md)
+
 #### [-AI（指定元数据目录）](ai-specify-metadata-directories.md)
+
 #### [-analyze（代码分析）](analyze-code-analysis.md)
+
 #### [-arch（最小 CPU 体系结构）](arch-minimum-cpu-architecture.md)
+
 ##### [-arch (x86)](arch-x86.md)
+
 ##### [-arch (x64)](arch-x64.md)
+
 ##### [-arch (ARM)](arch-arm.md)
+
 #### [-bigobj（增加 .Obj 文件中的节数）](bigobj-increase-number-of-sections-in-dot-obj-file.md)
+
 #### [-C（在预处理期间保留注释）](c-preserve-comments-during-preprocessing.md)
+
 #### [-c（在不链接的情况下进行编译）](c-compile-without-linking.md)
+
 #### [-cgthreads（代码生成线程）](cgthreads-code-generation-threads.md)
+
 #### [-cgthreads（公共语言运行时编译）](clr-common-language-runtime-compilation.md)
+
 ##### [-clr 限制](clr-restrictions.md)
+
 #### [-D（预处理器定义）](d-preprocessor-definitions.md)
+
 #### [-diagnostics（编译器诊断选项）](diagnostics-compiler-diagnostic-options.md)
+
 #### [/doc（处理文档注释）(C/C++)](doc-process-documentation-comments-c-cpp.md)
+
 #### [-E（预处理到 stdout）](e-preprocess-to-stdout.md)
+
 #### [-EH（异常处理模型）](eh-exception-handling-model.md)
+
 #### [-EP（不使用 #line 指令预处理到 stdout）](ep-preprocess-to-stdout-without-hash-line-directives.md)
+
 #### [-errorReport（报告内部编译器错误）](errorreport-report-internal-compiler-errors.md)
+
 #### [-execution-charset（设置执行字符集）](execution-charset-set-execution-character-set.md)
+
 #### [-F（设置堆栈大小）](f-set-stack-size.md)
+
 #### [输出文件 (-F) 选项](output-file-f-options.md)
+
 ##### [-FA、-Fa（列出文件）](fa-fa-listing-file.md)
+
 ##### [指定路径名](specifying-the-pathname.md)
+
 ##### [-FD（IDE 最小重新生成）](fd-ide-minimal-rebuild.md)
+
 ##### [-Fd（程序数据库文件名）](fd-program-database-file-name.md)
+
 ##### [-Fe（命名 EXE 文件）](fe-name-exe-file.md)
+
 ##### [-Fi（预处理输出文件名）](fi-preprocess-output-file-name.md)
+
 ##### [-FI（命名强制包含文件）](fi-name-forced-include-file.md)
+
 ##### [-Fm（命名映射文件）](fm-name-mapfile.md)
+
 ##### [-Fo（对象文件名）](fo-object-file-name.md)
+
 ##### [-Fp（命名 .Pch 文件）](fp-name-dot-pch-file.md)
+
 ##### [-FR、-Fr（创建 .Sbr 文件）](fr-fr-create-dot-sbr-file.md)
+
 ##### [-FU（命名强制 #using 文件）](fu-name-forced-hash-using-file.md)
+
 ##### [-Fx（合并插入的代码）](fx-merge-injected-code.md)
+
 #### [-favor（针对体系结构详细信息优化）](favor-optimize-for-architecture-specifics.md)
+
 #### [-FC（所诊断源代码文件的完整路径）](fc-full-path-of-source-code-file-in-diagnostics.md)
+
 #### [-fp（指定浮点行为）](fp-specify-floating-point-behavior.md)
+
 #### [-FS（强制同步 PDB 写入）](fs-force-synchronous-pdb-writes.md)
+
 #### [-GA（Windows 应用程序优化）](ga-optimize-for-windows-application.md)
+
 #### [-Gd、-Gr、-Gv、-Gz（调用约定）](gd-gr-gv-gz-calling-convention.md)
+
 #### [-Ge（启用堆栈探测）](ge-enable-stack-probes.md)
+
 #### [-GF（消除重复的字符串）](gf-eliminate-duplicate-strings.md)
+
 #### [-GH（启用 _pexit 挂钩函数）](gh-enable-pexit-hook-function.md)
+
 #### [-Gh（启用 _penter 挂钩函数）](gh-enable-penter-hook-function.md)
+
 #### [-GL（全程序优化）](gl-whole-program-optimization.md)
+
 #### [-Gm（启用最小重新生成）](gm-enable-minimal-rebuild.md)
+
 #### [-GR（启用运行时类型信息）](gr-enable-run-time-type-information.md)
+
 #### [-GS（缓冲区安全检查）](gs-buffer-security-check.md)
+
 #### [-Gs（控制堆栈检查调用）](gs-control-stack-checking-calls.md)
+
 #### [-guard（启用控制流保护）](guard-enable-control-flow-guard.md)
+
 #### [-GT（支持纤程安全的线程本地存储区）](gt-support-fiber-safe-thread-local-storage.md)
+
 #### [-Gw（优化全局数据）](gw-optimize-global-data.md)
+
 #### [-GX（启用异常处理）](gx-enable-exception-handling.md)
+
 #### [-Gy（启用函数级链接）](gy-enable-function-level-linking.md)
+
 #### [-GZ（启用堆栈帧运行时错误检查）](gz-enable-stack-frame-run-time-error-checking.md)
+
 #### [-H（限制外部名称长度）](h-restrict-length-of-external-names.md)
+
 #### [-HELP（编译器命令行帮助）](help-compiler-command-line-help.md)
+
 #### [-homeparams（将寄存器参数复制到堆栈）](homeparams-copy-register-parameters-to-stack.md)
+
 #### [-hotpatch（创建可热修补的映像）](hotpatch-create-hotpatchable-image.md)
+
 #### [-I（附加包含目录）](i-additional-include-directories.md)
+
 #### [-J（默认 char 类型是无符号的）](j-default-char-type-is-unsigned.md)
+
 #### [-kernel（创建内核模式二进制）](kernel-create-kernel-mode-binary.md)
+
 #### [-link（将选项传递到链接器）](link-pass-options-to-linker.md)
+
 #### [-LN（创建 MSIL 模块）](ln-create-msil-module.md)
+
 #### [-MD、-MT、-LD（使用运行时库）](md-mt-ld-use-run-time-library.md)
+
 #### [-MP（使用多个进程生成）](mp-build-with-multiple-processes.md)
+
 #### [/nologo（取消显示启动版权标志）(C/C++)](nologo-suppress-startup-banner-c-cpp.md)
+
 #### [-O 选项（优化代码）](o-options-optimize-code.md)
+
 ##### [-O1、-O2（最小化大小、最大化速度）](o1-o2-minimize-size-maximize-speed.md)
+
 ##### [-Ob（内联函数展开）](ob-inline-function-expansion.md)
+
 ##### [-Od（禁用（调试））](od-disable-debug.md)
+
 ##### [-Og（全局优化）](og-global-optimizations.md)
+
 ##### [-Oi（生成内部函数）](oi-generate-intrinsic-functions.md)
+
 ##### [-Os、-Ot（代码大小优先、代码速度优先）](os-ot-favor-small-code-favor-fast-code.md)
+
 ##### [-Ox（完全优化）](ox-full-optimization.md)
+
 ##### [-Oy（框架指针省略）](oy-frame-pointer-omission.md)
+
 #### [-openmp（启用 OpenMP 2.0 支持）](openmp-enable-openmp-2-0-support.md)
+
 #### [-P（预处理到文件）](p-preprocess-to-a-file.md)
+
 #### [-permissive-（标准符合性）](permissive-standards-conformance.md)
+
 #### [-Q 选项（低级别操作）](q-options-low-level-operations.md)
+
 ##### [-Qfast_transcendentals（强制快速先验）](qfast-transcendentals-force-fast-transcendentals.md)
+
 ##### [-QIfist（取消 _ftol）](qifist-suppress-ftol.md)
+
 ##### [-Qimprecise_fwaits（移除 Try 块中的 fwaits）](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)
+
 ##### [-Qpar（自动并行化程序）](qpar-auto-parallelizer.md)
+
 ##### [-Qpar-report（自动并行化程序报告等级）](qpar-report-auto-parallelizer-reporting-level.md)
+
 ##### [-Qsafe_fp_loads](qsafe-fp-loads.md)
+
 ##### [-Qvec-report（自动矢量化程序报告等级）](qvec-report-auto-vectorizer-reporting-level.md)
+
 #### [-RTC（运行时错误检查）](rtc-run-time-error-checks.md)
+
 #### [-sdl（启用附加安全检查）](sdl-enable-additional-security-checks.md)
+
 #### [-showIncludes（列出包含文件）](showincludes-list-include-files.md)
+
 #### [-source-charset（设置源字符集）](source-charset-set-source-character-set.md)
+
 #### [-std（指定语言标准版本）](std-specify-language-standard-version.md)
+
 #### [-Tc、-Tp、-TC、-TP（指定源文件类型）](tc-tp-tc-tp-specify-source-file-type.md)
+
 #### [-U、-u（未定义符号）](u-u-undefine-symbols.md)
+
 #### [-utf-8（将源和可执行字符集设置为 UTF-8）](utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+
 #### [-V（版本号）](v-version-number.md)
+
 #### [-validate-charset（验证兼容的字符）](validate-charset-validate-for-compatible-characters.md)
+
 #### [-vd（禁用构造置换）](vd-disable-construction-displacements.md)
+
 #### [-vmb、-vmg（表示方法）](vmb-vmg-representation-method.md)
+
 #### [-vmm、-vms、-vmv（通用表示形式）](vmm-vms-vmv-general-purpose-representation.md)
+
 #### [-volatile（volatile 关键字解释）](volatile-volatile-keyword-interpretation.md)
+
 #### [-w, -W0, -W1, -W2, -W3, -W4, -w1, -w2, -w3, -w4, -Wall, -wd, -we, -wo, -Wv, -WX（警告级别）](compiler-option-warning-level.md)
+
 #### [-WL（启用单行诊断）](wl-enable-one-line-diagnostics.md)
+
 #### [-Wp64（检测 64 位可迁移性问题）](wp64-detect-64-bit-portability-issues.md)
+
 #### [-X（忽略标准包含路径）](x-ignore-standard-include-paths.md)
+
 #### [-Y（预编译标头）](y-precompiled-headers.md)
+
 ##### [-Y-（忽略预编译标头选项）](y-ignore-precompiled-header-options.md)
+
 ##### [-Yc（创建预编译标头文件）](yc-create-precompiled-header-file.md)
+
 ##### [-Yd（将调试信息放在对象文件中）](yd-place-debug-information-in-object-file.md)
+
 ##### [-Yl（为调试库插入 PCH 引用）](yl-inject-pch-reference-for-debug-library.md)
+
 ##### [-Yu（使用预编译标头文件）](yu-use-precompiled-header-file.md)
+
 #### [-Z7、-Zi、-ZI（调试信息格式）](z7-zi-zi-debug-information-format.md)
+
 #### [-Za、-Ze（禁用语言扩展）](za-ze-disable-language-extensions.md)
+
 ##### [Microsoft C 和 C++ 扩展](microsoft-extensions-to-c-and-cpp.md)
+
 #### [-Zc（一致性）](zc-conformance.md)
+
 ##### [-Zc:forScope（强制 for 循环范围中的一致性）](zc-forscope-force-conformance-in-for-loop-scope.md)
+
 ##### [-Zc:wchar_t（wchar_t 是本机类型）](zc-wchar-t-wchar-t-is-native-type.md)
+
 ##### [-Zc:auto（推导变量类型）](zc-auto-deduce-variable-type.md)
+
 ##### [-Zc: trigraphs （Trigraphs 替换）](zc-trigraphs-trigraphs-substitution.md)
+
 ##### [-Zc:rvalueCast（强制实施类型转换规则）](zc-rvaluecast-enforce-type-conversion-rules.md)
+
 ##### [-Zc:strictStrings（禁用字符串文本类型转换）](zc-strictstrings-disable-string-literal-type-conversion.md)
+
 ##### [-Zc:inline（移除未引用的 COMDAT）](zc-inline-remove-unreferenced-comdat.md)
+
 ##### [-Zc:implicitNoexcept（隐式异常说明符）](zc-implicitnoexcept-implicit-exception-specifiers.md)
+
 #### [-Zg（生成函数原型）](zg-generate-function-prototypes.md)
+
 #### [-Zl（省略默认库名）](zl-omit-default-library-name.md)
+
 #### [-Zm（指定预编译标头的内存分配限额）](zm-specify-precompiled-header-memory-allocation-limit.md)
+
 #### [-Zo（增强优化调试）](zo-enhance-optimized-debugging.md)
+
 #### [-Zp（结构成员对齐）](zp-struct-member-alignment.md)
+
 #### [-Zs（只进行语法检查）](zs-syntax-check-only.md)
+
 #### [-ZW（Windows 运行时编译）](zw-windows-runtime-compilation.md)
+
 ## [创建预编译标头文件](creating-precompiled-header-files.md)
-### [何时预编译源代码](when-to-precompile-source-code.md)
-### [预编译代码的两种方法](two-choices-for-precompiling-code.md)
-### [预编译标头一致性规则](precompiled-header-consistency-rules.md)
-#### [按文件使用预编译标头的一致性规则](consistency-rules-for-per-file-use-of-precompiled-headers.md)
-#### [-Yc 和 -Yu 的一致性规则](consistency-rules-for-yc-and-yu.md)
-### [在项目中使用预编译标头](using-precompiled-headers-in-a-project.md)
-#### [生成过程中的 PCH 文件](pch-files-in-the-build-process.md)
-#### [PCH 的示例生成文件](sample-makefile-for-pch.md)
-#### [PCH 的示例代码](example-code-for-pch.md)
+
 ## [编译器和链接器中的 Unicode 支持](unicode-support-in-the-compiler-and-linker.md)
+
 # [链接](linking.md)
+
 ## [设置链接器选项](setting-linker-options.md)
+
 ### [链接器命令行语法](linker-command-line-syntax.md)
+
 ### [LINK 命令文件](link-command-files.md)
+
 ### [LINK 环境变量](link-environment-variables.md)
+
 ## [链接器选项](linker-options.md)
+
 ### [编译器控制的 LINK 选项](compiler-controlled-link-options.md)
+
 ### [LINK 输入文件](link-input-files.md)
+
 #### [用作链接器输入的 .Obj 文件](dot-obj-files-as-linker-input.md)
+
 #### [用作链接器输入的 .netmodule 文件](netmodule-files-as-linker-input.md)
+
 ##### [选择 .netmodule 输入文件的格式](choosing-the-format-of-netmodule-input-files.md)
+
 #### [用作链接器输入的 .Lib 文件](dot-lib-files-as-linker-input.md)
+
 #### [用作链接器输入的 .Exp 文件](dot-exp-files-as-linker-input.md)
+
 #### [用作链接器输入的 .Def 文件](dot-def-files-as-linker-input.md)
+
 #### [用作链接器输入的 .Pdb 文件](dot-pdb-files-as-linker-input.md)
+
 #### [用作链接器输入的 .Res 文件](dot-res-files-as-linker-input.md)
+
 #### [用作链接器输入的 .Exe 文件](dot-exe-files-as-linker-input.md)
+
 #### [用作链接器输入的 .Txt 文件](dot-txt-files-as-linker-input.md)
+
 #### [用作链接器输入的 .Ilk 文件](dot-ilk-files-as-linker-input.md)
+
 ### [LINK 输出](link-output.md)
+
 ### [保留字](reserved-words.md)
+
 ### [@（指定链接器响应文件）](at-specify-a-linker-response-file.md)
+
 ### [-ALIGN（节对齐）](align-section-alignment.md)
+
 ### [-ALLOWBIND（禁止 DLL 绑定）](allowbind-prevent-dll-binding.md)
+
 ### [-ALLOWISOLATION（清单查找）](allowisolation-manifest-lookup.md)
+
 ### [-APPCONTAINER（Windows 应用商店应用程序）](appcontainer-windows-store-app.md)
+
 ### [-ASSEMBLYDEBUG（添加 DebuggableAttribute）](assemblydebug-add-debuggableattribute.md)
+
 ### [-ASSEMBLYLINKRESOURCE（链接到 .NET Framework 资源）](assemblylinkresource-link-to-dotnet-framework-resource.md)
+
 ### [-ASSEMBLYMODULE（向程序集添加 MSIL 模块）](assemblymodule-add-a-msil-module-to-the-assembly.md)
+
 ### [-ASSEMBLYRESOURCE（嵌入托管资源）](assemblyresource-embed-a-managed-resource.md)
+
 ### [-BASE（基址）](base-base-address.md)
+
 ### [-CGTHREADS（编译器线程）](cgthreads-compiler-threads.md)
+
 ### [-CLRIMAGETYPE（指定 CLR 映像的类型）](clrimagetype-specify-type-of-clr-image.md)
+
 ### [-CLRUNMANAGEDCODECHECK（添加 SupressUnmanagedCodeSecurityAttribute）](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
+
 ### [-CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
+
 ### [-CLRTHREADATTRIBUTE（设置 CLR 线程特性）](clrthreadattribute-set-clr-thread-attribute.md)
+
 ### [-DEBUG（生成调试信息）](debug-generate-debug-info.md)
+
 ### [-DEBUGTYPE（调试信息选项）](debugtype-debug-info-options.md)
+
 ### [-DEF（指定模块定义文件）](def-specify-module-definition-file.md)
+
 ### [-DEFAULTLIB（指定默认库）](defaultlib-specify-default-library.md)
+
 ### [-DELAY（延迟加载导入设置）](delay-delay-load-import-settings.md)
+
 ### [-DELAYLOAD（延迟加载导入）](delayload-delay-load-import.md)
+
 ### [-DELAYSIGN（为程序集进行部分签名）](delaysign-partially-sign-an-assembly.md)
+
 ### [-DLL（生成 DLL）](dll-build-a-dll.md)
+
 ### [-DRIVER（Windows NT 内核模式驱动程序）](driver-windows-nt-kernel-mode-driver.md)
+
 ### [-DYNAMICBASE（使用地址空间布局随机化）](dynamicbase-use-address-space-layout-randomization.md)
+
 ### [-ENTRY（入口点符号）](entry-entry-point-symbol.md)
+
 ### [-ERRORREPORT（报告内部链接器错误）](errorreport-report-internal-linker-errors.md)
+
 ### [-EXPORT（导出函数）](export-exports-a-function.md)
+
 ### [-FIXED（固定基址）](fixed-fixed-base-address.md)
+
 ### [-FORCE（强制文件输出）](force-force-file-output.md)
+
 ### [-FUNCTIONPADMIN（创建可热修补的映像）](functionpadmin-create-hotpatchable-image.md)
+
 ### [-GENPROFILE, -FASTGENPROFILE（生成经分析检测的生成）](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)
+
 ### [-GUARD（启用防护检查）](guard-enable-guard-checks.md)
+
 ### [-HEAP（设置堆大小）](heap-set-heap-size.md)
+
 ### [-HIGHENTROPYVA（支持 64 位 ASLR）](highentropyva-support-64-bit-aslr.md)
+
 ### [-IDLOUT（命名 MIDL 输出文件）](idlout-name-midl-output-files.md)
+
 ### [-IGNORE（忽略特定警告）](ignore-ignore-specific-warnings.md)
+
 ### [-IGNOREIDL（不将属性处理到 MIDL 中）](ignoreidl-don-t-process-attributes-into-midl.md)
+
 ### [-IMPLIB（命名导入库）](implib-name-import-library.md)
+
 ### [-INCLUDE（强制符号引用）](include-force-symbol-references.md)
+
 ### [-INCREMENTAL（增量链接）](incremental-link-incrementally.md)
+
 ### [-INTEGRITYCHECK（需要签名检查）](integritycheck-require-signature-check.md)
+
 ### [-KEYCONTAINER（指定密钥容器以便为程序集签名）](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+
 ### [-KEYFILE（指定密钥或密钥对以便为程序集签名）](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+
 ### [-LARGEADDRESSAWARE（处理大地址）](largeaddressaware-handle-large-addresses.md)
+
 ### [-LIBPATH（附加的 Libpath）](libpath-additional-libpath.md)
+
 ### [-LTCG（链接时间代码生成）](ltcg-link-time-code-generation.md)
+
 ### [-MACHINE（指定目标平台）](machine-specify-target-platform.md)
+
 ### [-MANIFEST（创建并行程序集清单）](manifest-create-side-by-side-assembly-manifest.md)
+
 ### [-MANIFESTDEPENDENCY（指定清单依赖项）](manifestdependency-specify-manifest-dependencies.md)
+
 ### [-MANIFESTFILE（命名清单文件）](manifestfile-name-manifest-file.md)
+
 ### [-MANIFESTINPUT（指定清单输入）](manifestinput-specify-manifest-input.md)
+
 ### [-MANIFESTUAC（将 UAC 信息嵌入到清单中）](manifestuac-embeds-uac-information-in-manifest.md)
+
 ### [-MAP（生成映射文件）](map-generate-mapfile.md)
+
 ### [-MAPINFO（包含映射文件中的信息）](mapinfo-include-information-in-mapfile.md)
+
 ### [-MERGE（合并节）](merge-combine-sections.md)
+
 ### [-MIDL（指定 MIDL 命令行选项）](midl-specify-midl-command-line-options.md)
+
 ### [-NOASSEMBLY（创建 MSIL 模块）](noassembly-create-a-msil-module.md)
+
 ### [-NODEFAULTLIB（忽略库）](nodefaultlib-ignore-libraries.md)
+
 ### [-NOENTRY（无入口点）](noentry-no-entry-point.md)
+
 ### [-NOLOGO（取消显示启动版权标志）（链接器）](nologo-suppress-startup-banner-linker.md)
+
 ### [-NXCOMPAT（与数据执行保护兼容）](nxcompat-compatible-with-data-execution-prevention.md)
+
 ### [-OPT（优化）](opt-optimizations.md)
+
 ### [-ORDER（按顺序放置函数）](order-put-functions-in-order.md)
+
 ### [-OUT（输出文件名）](out-output-file-name.md)
+
 ### [-PDB（使用程序数据库）](pdb-use-program-database.md)
+
 ### [-PDBALTPATH（使用备用 PDB 路径）](pdbaltpath-use-alternate-pdb-path.md)
+
 ### [-PDBSTRIPPED（去除私有符号）](pdbstripped-strip-private-symbols.md)
+
 ### [-PGD（为按配置文件优化指定数据库）](pgd-specify-database-for-profile-guided-optimizations.md)
+
 ### [-PROFILE（性能工具分析器）](profile-performance-tools-profiler.md)
+
 ### [-RELEASE（设置校验和）](release-set-the-checksum.md)
+
 ### [-SAFESEH（图像具有安全异常处理程序）](safeseh-image-has-safe-exception-handlers.md)
+
 ### [-SECTION（指定节特性）](section-specify-section-attributes.md)
+
 ### [-STACK（堆栈分配）](stack-stack-allocations.md)
+
 ### [-STUB（MS-DOS 存根 (stub) 文件名）](stub-ms-dos-stub-file-name.md)
+
 ### [-SUBSYSTEM（指定子系统）](subsystem-specify-subsystem.md)
+
 ### [-SWAPRUN（将链接器输出加载到交换文件）](swaprun-load-linker-output-to-swap-file.md)
+
 ### [-TLBID（指定类型库的资源 ID）](tlbid-specify-resource-id-for-typelib.md)
+
 ### [-TLBOUT（命名 .TLB 文件）](tlbout-name-dot-tlb-file.md)
+
 ### [-TSAWARE（创建终端服务器识别的应用程序）](tsaware-create-terminal-server-aware-application.md)
+
 ### [-VERBOSE（打印进度消息）](verbose-print-progress-messages.md)
+
 ### [-VERSION（版本信息）](version-version-information.md)
+
 ### [-WHOLEARCHIVE（包括所有库对象文件）](wholearchive-include-all-library-object-files.md)
+
 ### [-WINMD（生成 Windows 元数据）](winmd-generate-windows-metadata.md)
+
 ### [-WINMDFILE（指定 winmd 文件）](winmdfile-specify-winmd-file.md)
+
 ### [-WINMDKEYFILE（指定 winmd 密钥文件）](winmdkeyfile-specify-winmd-key-file.md)
+
 ### [-WINMDKEYCONTAINER（指定密钥容器）](winmdkeycontainer-specify-key-container.md)
+
 ### [-WINMDDELAYSIGN（对 winmd 进行部分签名）](winmddelaysign-partially-sign-a-winmd.md)
+
 ### [-WX（将链接器警告视为错误）](wx-treat-linker-warnings-as-errors.md)
+
 ## [模块定义 (.Def) 文件](module-definition-dot-def-files.md)
+
 ### [模块定义语句的规则](rules-for-module-definition-statements.md)
+
 #### [EXPORTS](exports.md)
+
 #### [LIBRARY](library.md)
+
 #### [HEAPSIZE](heapsize.md)
+
 #### [NAME (C/C++)](name-c-cpp.md)
+
 #### [SECTIONS (C/C++)](sections-c-cpp.md)
+
 #### [STACKSIZE](stacksize.md)
+
 #### [STUB](stub.md)
+
 #### [VERSION (C/C++)](version-c-cpp.md)
+
 ## [延迟加载 DLL 的链接器支持](linker-support-for-delay-loaded-dlls.md)
+
 ### [指定要延迟加载的 DLL](specifying-dlls-to-delay-load.md)
+
 ### [显式卸载延迟加载的 DLL](explicitly-unloading-a-delay-loaded-dll.md)
+
 ### [绑定导入](binding-imports.md)
+
 ### [加载被延迟加载的 DLL 的所有导入](loading-all-imports-for-a-delay-loaded-dll.md)
+
 ### [错误处理和通知](error-handling-and-notification.md)
+
 #### [通知挂钩](notification-hooks.md)
+
 #### [失败挂钩](failure-hooks.md)
+
 #### [异常 (C/C++)](exceptions-c-cpp.md)
+
 ### [转储延迟加载的导入](dumping-delay-loaded-imports.md)
+
 ### [延迟加载 DLL 的约束](constraints-of-delay-loading-dlls.md)
+
 ### [了解 Helper 函数](understanding-the-helper-function.md)
+
 #### [自 Visual C++ 6.0 以来 DLL 延迟加载 Helper 函数所做的更改](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+
 #### [调用约定、参数和返回类型](calling-conventions-parameters-and-return-type.md)
+
 #### [结构和常量定义](structure-and-constant-definitions.md)
+
 #### [计算所需值](calculating-necessary-values.md)
+
 #### [卸载延迟加载的 DLL](unloading-a-delay-loaded-dll.md)
+
 ### [开发自己的 Helper 函数](developing-your-own-helper-function.md)
+
 # [发行版本](release-builds.md)
+
 ## [如何：创建发行版本](how-to-create-a-release-build.md)
+
 ## [创建发行版本时遇到的常见问题](common-problems-when-creating-a-release-build.md)
+
 ## [修复发行版本问题](fixing-release-build-problems.md)
+
 ### [使用 VERIFY 代替 ASSERT](using-verify-instead-of-assert.md)
+
 ### [使用调试版本检查内存改写](using-the-debug-build-to-check-for-memory-overwrite.md)
+
 ### [如何：调试发行版本](how-to-debug-a-release-build.md)
+
 ### [检查内存改写](checking-for-memory-overwrites.md)
+
 # [优化代码](optimizing-your-code.md)
+
 ## [优化杂注和关键字](optimization-pragmas-and-keywords.md)
+
 ## [提高编译器吞吐量](improving-compiler-throughput.md)
+
 ## [为何浮点数可能丢失精度](why-floating-point-numbers-may-lose-precision.md)
+
 ### [IEEE 浮点表示形式](ieee-floating-point-representation.md)
+
 ## [提高时间关键代码的技巧](tips-for-improving-time-critical-code.md)
+
 ## [使用没有 () 的函数名不产生代码](using-function-name-without-parens-produces-no-code.md)
+
 ## [优化最佳做法](optimization-best-practices.md)
+
 # [C/C++ 生成工具](c-cpp-build-tools.md)
+
 ## [BSCMAKE 参考](bscmake-reference.md)
+
 ### [生成浏览信息文件：概述](building-browse-information-files-overview.md)
+
 ### [生成 .Bsc 文件](building-a-dot-bsc-file.md)
+
 #### [创建 .Sbr 文件](creating-an-dot-sbr-file.md)
+
 #### [BSCMAKE 如何生成 .Bsc 文件](how-bscmake-builds-a-dot-bsc-file.md)
+
 ### [BSCMAKE 命令行](bscmake-command-line.md)
+
 ### [BSCMAKE 命令文件（响应文件）](bscmake-command-file-response-file.md)
+
 ### [BSCMAKE 选项](bscmake-options.md)
+
 ### [BSCMAKE 退出代码](bscmake-exit-codes.md)
+
 ## [LIB 引用](lib-reference.md)
+
 ### [LIB 概述](overview-of-lib.md)
+
 #### [如何：在 Visual Studio 开发环境中设置 LIB.EXE 选项](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+
 #### [LIB 输入文件](lib-input-files.md)
+
 #### [LIB 输出文件](lib-output-files.md)
+
 #### [其他 LIB 输出](other-lib-output.md)
+
 #### [库结构](structure-of-a-library.md)
+
 ### [运行 LIB](running-lib.md)
+
 ### [管理库](managing-a-library.md)
+
 ### [提取库成员](extracting-a-library-member.md)
+
 ### [使用导入库和导出文件](working-with-import-libraries-and-export-files.md)
+
 #### [生成导入库和导出文件](building-an-import-library-and-export-file.md)
+
 #### [使用导入库和导出文件](using-an-import-library-and-export-file.md)
+
 ## [EDITBIN 参考](editbin-reference.md)
+
 ### [EDITBIN 命令行](editbin-command-line.md)
+
 ### [EDITBIN 选项](editbin-options.md)
+
 #### [-ALLOWISOLATION](allowisolation.md)
+
 #### [-ALLOWBIND](allowbind.md)
+
 #### [-APPCONTAINER](appcontainer.md)
+
 #### [-BIND](bind.md)
+
 #### [-DYNAMICBASE](dynamicbase.md)
+
 #### [-ERRORREPORT (editbin.exe)](errorreport-editbin-exe.md)
+
 #### [-HEAP](heap.md)
+
 #### [-HIGHENTROPYVA](highentropyva.md)
+
 #### [-INTEGRITYCHECK](integritycheck.md)
+
 #### [-LARGEADDRESSAWARE](largeaddressaware.md)
+
 #### [-NOLOGO (EDITBIN)](nologo-editbin.md)
+
 #### [-NXCOMPAT](nxcompat.md)
+
 #### [-REBASE](rebase.md)
+
 #### [-RELEASE](release.md)
+
 #### [-SECTION (EDITBIN)](section-editbin.md)
+
 #### [-STACK](stack.md)
+
 #### [-SUBSYSTEM](subsystem.md)
+
 #### [-SWAPRUN](swaprun.md)
+
 #### [-TSAWARE](tsaware.md)
+
 #### [-VERSION](version.md)
+
 ## [DUMPBIN 参考](dumpbin-reference.md)
+
 ### [DUMPBIN 命令行](dumpbin-command-line.md)
+
 ### [DUMPBIN 选项](dumpbin-options.md)
+
 #### [-ALL](all.md)
+
 #### [-ARCHIVEMEMBERS](archivemembers.md)
+
 #### [-CLRHEADER](clrheader.md)
+
 #### [-DEPENDENTS](dependents.md)
+
 #### [-DIRECTIVES](directives.md)
+
 #### [-DISASM](disasm.md)
+
 #### [-ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
+
 #### [-EXPORTS](dash-exports.md)
+
 #### [-FPO](fpo.md)
+
 #### [-HEADERS](headers.md)
+
 #### [-IMPORTS (DUMPBIN)](imports-dumpbin.md)
+
 #### [-LINENUMBERS](linenumbers.md)
+
 #### [-LINKERMEMBER](linkermember.md)
+
 #### [-LOADCONFIG](loadconfig.md)
+
 #### [-OUT (DUMPBIN)](out-dumpbin.md)
+
 #### [-PDATA](pdata.md)
+
 #### [-PDBPATH](pdbpath.md)
+
 #### [-RANGE](range.md)
+
 #### [-RAWDATA](rawdata.md)
+
 #### [-RELOCATIONS](relocations.md)
+
 #### [-SECTION (DUMPBIN)](section-dumpbin.md)
+
 #### [-SUMMARY](summary.md)
+
 #### [-SYMBOLS](symbols.md)
+
 #### [-TLS](tls.md)
+
 ## [ERRLOOK 参考](errlook-reference.md)
+
 ### [“值”编辑控件](value-edit-control.md)
+
 ### [“错误消息”编辑控件](error-message-edit-control.md)
+
 ### [“模块”按钮](modules-button.md)
+
 ### [“查找”按钮](look-up-button.md)
+
 ## [修饰名](decorated-names.md)
+
 ## [按配置文件优化](profile-guided-optimizations.md)
+
 ### [性能和诊断中心的按配置文件优化](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)
+
 ### [用于按配置文件手动优化的工具](tools-for-manual-profile-guided-optimization.md)
+
 #### [用于按配置文件优化的环境变量](environment-variables-for-profile-guided-optimizations.md)
+
 ##### [PogoSafeMode](pogosafemode.md)
+
 ##### [VCPROFILE_ALLOC_SCALE](vcprofile-alloc-scale.md)
+
 ##### [VCPROFILE_PATH](vcprofile-path.md)
+
 #### [pgomgr](pgomgr.md)
+
 #### [pgosweep](pgosweep.md)
+
 ### [如何：将多个 PGO 配置文件合并成一个配置文件](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
+
 # [编译器错误 C999 - C2499](../../error-messages/compiler-errors-1/TOC.md)
+
 # [编译器错误 C2500 - C3999](../../error-messages/compiler-errors-2/TOC.md)
+
 # [编译器警告](../../error-messages/compiler-warnings/TOC.md)
+
 # [工具错误](../../error-messages/tool-errors/TOC.md)

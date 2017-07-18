@@ -1,7 +1,7 @@
 ---
 title: "C++ 编译器一致性改进 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 06/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: BrianPeek
-ms.author: brpeek
+author: mikeblome
+ms.author: mblome
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
-ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: d00951204a358ec064f69035b7dd6ac5adc08ed9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 06/08/2017
 
 ---
    
@@ -143,7 +143,7 @@ int main()
 ```
 
 ### <a name="constexpr"></a>constexpr
-当条件性运算的左侧操作数在 constexpr 上下文中无效时，Visual Studio 2017 会正确引发错误。 下列代码在 Visual Studio 2015 中进行编译，但不在 Visual Studio 2017 中进行编译：
+当条件性运算的左侧操作数在 constexpr 上下文中无效时，Visual Studio 2017 会正确引发错误。 以下代码在 Visual Studio 2015 中编译，但在 Visual Studio 2017 中不编译（C3615 constexpr 函数 “f” 无法得出常数表达式）：
 
 ```cpp  
 template<int N>
@@ -154,7 +154,7 @@ struct array
 
 constexpr bool f(const array<1> &arr)
 {
-       return arr.size() == 10 || arr.size() == 11; // error starting in Visual Studio 2017
+       return arr.size() == 10 || arr.size() == 11; // C3615    
 }
 ```
 要更正错误，可将 array::size() 函数声明为 constexpr 或从 f 中删除 constexpr 限定符。 
@@ -355,12 +355,12 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 ```cpp
 template<typename T> 
 struct S { 
-template<typename U> static int f() = delete; 
+   template<typename U> static int f() = delete; 
 }; 
  
 void g() 
 { 
-decltype(S<int>::f<int>()) i; // this should fail 
+   decltype(S<int>::f<int>()) i; // this should fail 
 }
 ```
 若要修复此错误，请将 i 声明为 `int`。
@@ -372,8 +372,8 @@ decltype(S<int>::f<int>()) i; // this should fail
 struct S; 
 enum E; 
  
-static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
-static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+static_assert(!__is_assignable(S, S), "fail"); // C2139 in 15.3
+static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 ```
 
 ### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>有关从本机到托管的封送的新编译器警告和运行时检查
@@ -384,16 +384,16 @@ static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 R
 class A 
 { 
 public: 
-A() : p_(new int) {} 
-~A() { delete p_; } 
+   A() : p_(new int) {} 
+   ~A() { delete p_; } 
  
-A(A const &) = delete; 
-A(A &&rhs) { 
-p_ = rhs.p_; 
+   A(A const &) = delete; 
+   A(A &&rhs) { 
+   p_ = rhs.p_; 
 } 
  
 private: 
-int *p_; 
+   int *p_; 
 }; 
  
 #pragma unmanaged 
@@ -415,7 +415,7 @@ int main()
 为了获取反馈而发布的实验性 WinRT API 使用 `Windows.Foundation.Metadata.ExperimentalAttribute` 进行修饰。 在 Update 版本 15.3 中，编译器会在遇到此特性时生成警告 C4698。 旧版 Windows SDK 中的一些 API 已使用此特性进行修饰，调用这些 API 会开始触发这一编译器警告。 更高版本的 Windows SDK 会从所有已发布的类型中删除此特性。不过，如果使用的是更低版本 SDK，需要对已发布类型的所有调用禁用这些警告。
 下面的代码生成警告 C4698："Windows::Storage::IApplicationDataStatics2::GetForUserAsync" 仅供评估使用，可能会在今后推出的版本中发生变更或遭到删除。
 ```cpp
-Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
 ```
 
 若要禁用此警告，请添加 #pragma：
@@ -435,7 +435,7 @@ Update 版本 15.3 在遇到未在类中声明的模板成员函数的外部定�
 struct S {}; 
  
 template <typename T> 
-void S::f(T t) {}
+void S::f(T t) {} //C2039: 'f': is not a member of 'S'
 ```
 
 若要修复此错误，请在类中添加声明：
@@ -460,7 +460,7 @@ void S::f(T t) {}
 #include <memory> 
  
 class B { }; 
-class D : B { }; // should be public B { }; 
+class D : B { }; // C2243. should be public B { }; 
  
 void f() 
 { 
@@ -477,7 +477,7 @@ struct A {
 }; 
  
 template <typename T> 
-T A<T>::f(T t, bool b = false) 
+T A<T>::f(T t, bool b = false) // C5034
 { 
 ... 
 }
@@ -527,7 +527,7 @@ Constexpr auto off2 = offsetof(A, bar);
 
 ```cpp
  
-__declspec(noinline) extern "C" HRESULT __stdcall
+__declspec(noinline) extern "C" HRESULT __stdcall //C4768
 ```
 
 若要修复此警告，请将 extern "C" 前置:
@@ -535,6 +535,7 @@ __declspec(noinline) extern "C" HRESULT __stdcall
 ```cpp
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
+此警告默认关闭，只影响使用 `/Wall /WX` 编译的代码。
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和调用的析构函数已遭删除
 在旧版 Visual Studio 中，在“decltype”相关表达式的上下文中，编译器无法检测对已删除析构函数的调用。 在 Update 版本 15.3 中，下面的代码生成错误 C2280："A<T>::~A(void)":正在尝试引用已删除的函数。
@@ -557,11 +558,11 @@ void h()
    g(42); 
 }
 ```
-### <a name="unitialized-const-variables"></a>未初始化的 const 变量
+### <a name="uninitialized-const-variables"></a>未初始化的 const 变量
 Visual Studio 2017 RTW 版本包含一个回归，即如果未初始化“const”变量，C++ 编译器不会发出诊断提醒。 Visual Studio 2017 Update 1 修复了此回归。 下面的代码现在生成警告 C4132：“值”:应初始化 const 对象。
 
 ```cpp
-const int Value;
+const int Value; //C4132
 ```
 若要修复此错误，请向 `Value` 赋值。
 
@@ -583,6 +584,108 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
  
 在 /Wv:18 下此警告被排除在外，而在警告等级 W2 下此警告默认启用。
 
+
+### <a name="stdisconvertible-for-array-types"></a>std::is_convertible 用于数组类型
+早期版本的编译器为数组类型提供了不正确的 [std::is_convertible](standard-library/is-convertible-class.md) 结果。 这要求库编写者在使用 `std::is_convertable<…>` 类型特征时，要特殊处理 Visual C++ 编译器。 在下例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 更新版本 15.3 中不通过：
+
+```cpp
+#include <type_traits>
+ 
+using Array = char[1];
+ 
+static_assert(std::is_convertible<Array, Array>::value);
+static_assert((std::is_convertible<const Array, const Array>::value), "");
+static_assert((std::is_convertible<Array&, Array>::value), "");
+static_assert((std::is_convertible<Array, Array&>::value), "");
+```
+
+std::is_convertible<From, To> 是通过检查虚函数定义是否完整计算而得： 
+```cpp 
+   To test() { return std::declval<From>(); }
+``` 
+
+### <a name="private-destructors-and-stdisconstructible"></a>私有析构函数和 std::is_constructible
+在决定 [std::is_constructible](standard-library/is-constructible-class.md) 的结果时，早期版本的编译器会忽略析构函数是否是私有的。 现在会考虑这一点。 在下例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 更新版本 15.3 中不通过：
+
+```cpp
+#include <type_traits>
+ 
+class PrivateDtor {
+   PrivateDtor(int) { }
+private:
+   ~PrivateDtor() { }
+};
+ 
+// This assertion used to succeed. It now correctly fails.
+static_assert(std::is_constructible<PrivateDtor, int>::value);
+```  
+
+私有析构函数导致类型不可构造。 std::is_constructible<T, Args…> 的计算方式类似编写以下声明：
+```cpp 
+   T obj(std::declval<Args>()…)
+``` 
+此调用表示一个析构函数调用。
+
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668：重载决策不明确
+当发现多个候选项（都使用声明和参数依赖查找）时，早期版本的编译器有时无法检测到多义性。 这可能导致选择错误的重载并出现异常的运行时行为。 在下例中，Visual Studio 2017 更新版本 15.3 正确引发 C2668“f”：对重载函数的调用不确定：
+
+```cpp
+namespace N {
+   template<class T>
+   void f(T&, T&);
+ 
+   template<class T>
+   void f();
+}
+ 
+template<class T>
+void f(T&, T&);
+ 
+struct S {};
+void f()
+{
+   using N::f; 
+ 
+   S s1, s2;
+   f(s1, s2); // C2668
+}
+```
+要修复代码，当打算调用::f() 时，请删除正在使用的 N::f 语句。
+
+### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660：局部函数声明与参数依赖查找
+局部函数声明将函数声明隐藏在封闭作用域中，并禁用参数依赖查找。
+但在这种情况中，早期版本的 Visual C++ 编译器会执行参数依赖查找，这有可能导致选择错误的重载，并出现异常的运行时行为。 出现此错误，通常是因为局部函数声明的签名不正确。 在下例中，Visual Studio 2017 更新版本 15.3 正确引发 C2660“f”：函数不具有 2 个参数：
+
+```cpp
+struct S {}; 
+void f(S, int);
+ 
+void g()
+{
+   void f(S); // C2660 'f': function does not take 2 arguments:
+   // or void f(S, int);
+   S s;
+   f(s, 0);
+}
+```
+
+要修改此问题，可以更改 f(S) 签名，也可以删除它。
+
+### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038：初始值设定项列表中的初始化顺序
+类成员按它们声明的顺序，而非按它们在初始值设定项列表中出现的顺序进行初始化。 如果初始值设定项列表的顺序不同于声明顺序，早期版本的编译器不会发出警告。 如果列表中为另一成员初始化所依赖的某成员已被初始化，则可能会造成未定义的运行时行为。 在下例中，Visual Studio 2017 更新版本 15.3（具有 /Wall 或 /WX）引发了警告 C5038：数据成员 “A::y” 将在数据成员 “A::x” 之后被初始化：
+
+```cpp
+struct A
+{
+    A(int a) : y(a), x(y) {} // Initialized in reverse, y reused
+    int x;
+    int y;
+};
+
+```
+要修复此问题，请将初始值设定项列表的顺序设置为与声明顺序相同。 如果一个或两个初始化表达式同时引用基类成员，则会引发类似警告。
+
+请注意，警告默认为关闭，它仅会影响通过 /Wall 或 /WX 编译的代码。
 
 ## <a name="see-also"></a>另请参阅  
 [Visual C/C++ 语言一致性](visual-cpp-language-conformance.md)  

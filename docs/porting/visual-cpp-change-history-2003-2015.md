@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
-ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
@@ -109,7 +109,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **new 和 delete** In previous versions of the library, the implementation-defined operator new 和 delete functions were exported from the runtime library DLL (for example, msvcr120.dll). 这些运算符函数现在始终以静态方式链接到二进制文件，即使是使用运行时库 DLL 时也是如此。  
   
-     这对于本机或混合代码 (/clr) 而言不是一项重大更改，但是对于编译为 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的代码而言，这可能会导致代码无法进行编译。 如果将代码编译为 /clr:pure，可能需要添加 #include \<new> 或 #include \<new.h> 以解决由于此更改导致的生成错误。 请注意，/clr:pure 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中已被弃用，并且可能在未来版本中删除。  
+     这对于本机或混合代码 (/clr) 而言不是一项重大更改，但是对于编译为 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的代码而言，这可能会导致代码无法进行编译。 如果将代码编译为 /clr:pure，可能需要添加 #include \<new> 或 #include \<new.h> 以解决由于此更改导致的生成错误。 请注意，/clr:pure 在 Visual Studio 2015 中已被弃用，并且可能在未来版本中删除。  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/28/2017
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--    **get 和 _getws**  已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
+-   **get 和 _getws**  已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
   
 -   **_cgets 和 _cgetws** 已删除 [_cgets](../c-runtime-library/cgets-cgetws.md) 和 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函数。 作为这些函数替代，请考虑使用 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 和 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 04/28/2017
 ####  <a name="BK_STL"></a>C++ 标准库  
  为了实现新的优化和调试检查，C++ 标准库的 Visual Studio 实现特意破坏了连续两个版本之间的二进制兼容性。 因此，在使用 C++ 标准库时，使用不同版本编译的对象文件和静态库不能混合在同一二进制文件（EXE 或 DLL）中，并且不能在使用不同版本编译的二进制文件之间传递 C++ 标准库对象。 这样混合会发出关于 _MSC_VER 不匹配的链接器错误。 （_MSC_VER 是包含编译器主版本的宏，例如，Visual Studio 2013 的 1800。）此检查无法检测 DLL 混合，也无法检测涉及 Visual C++ 2008 或早期版本的混合。  
   
--   **C++ 标准库包含文件** 对 C++ 标准库标头中的包含结构进行了一些更改。 允许 C++ 标准库标头以未指定的方式相互包含。 一般情况下，编写代码应根据 C++ 标准，谨慎包括需要的所有标头，而不是依赖于哪些 C++ 标准库标头包含哪些其他 C++ 标准库标头。 这使得代码可跨版本和平台进行移植。 至少更改 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 的两个标头才会影响用户代码。 首先，\<string> 不再包括 \<iterator>。 第二，\<tuple> 现在用于声明 std::array 但不包括所有 \<array>，这可能中断代码通过以下代码构造的组合：代码具有名为“array”的变量、你具有 using 指令“using namespace std;”，和你包括了含有 \<tuple> 的 C++ 标准库标头（如 \<functional>），其现在用于声明 std::array。  
+-   **C++ 标准库包含文件** 对 C++ 标准库标头中的包含结构进行了一些更改。 允许 C++ 标准库标头以未指定的方式相互包含。 一般情况下，编写代码应根据 C++ 标准，谨慎包括需要的所有标头，而不是依赖于哪些 C++ 标准库标头包含哪些其他 C++ 标准库标头。 这使得代码可跨版本和平台进行移植。 至少更改 Visual Studio 2015 的两个标头才会影响用户代码。 首先，\<string> 不再包括 \<iterator>。 第二，\<tuple> 现在用于声明 std::array 但不包括所有 \<array>，这可能中断代码通过以下代码构造的组合：代码具有名为“array”的变量、你具有 using 指令“using namespace std;”，和你包括了含有 \<tuple> 的 C++ 标准库标头（如 \<functional>），其现在用于声明 std::array。  
   
 -   **steady_clock** 已更改 [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 实现，以便满足 C++ 标准对稳定性和单一性的需求。 steady_clock 现在以 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 为基础，而 high_resolution_clock 现在是 steady_clock 的 typedef。 因此，在 Visual C++ 中，steady_clock::time_point 现在是 chrono::time_point<steady_clock> 的 typedef；但是，其他实现不一定是这种情况。  
   
@@ -280,7 +280,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **std::allocator::deallocate** 在 Visual C++ 2013 和早期版本中，std::allocator::deallocate(p, n) 忽略了传入用于 n 的参数。  C + + 标准始终要求 n 应等于作为第一个参数传递给调用分配（返回 p）的值。 但是，在当前版本中将检查 n 的值。 在运行时，为 n 传递不同于标准要求的参数的代码可能会崩溃。  
   
--   **hash_map 和 hash_set** 非标准标头文件 hash_map 和 hash_set 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中已被弃用，并且将在未来版本中移除。 请改用 unordered_map 和 unordered_set。  
+-   hash_map 和 hash_set 非标准标头文件 hash_map 和 hash_set 在 Visual Studio 2015 中已被弃用，并且将在未来版本中删除。 请改用 unordered_map 和 unordered_set。  
   
 -   **comparators 和 operator()** 关联容器（\<map> 系列）现在要求其比较运算符具有可调用 const 的函数调用运算符。 现在比较运算符类声明中的以下代码无法进行编译：  
   
@@ -294,7 +294,7 @@ ms.lasthandoff: 04/28/2017
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **类型特征** The old names for 类型特征 from an earlier version of the C++ draft standard have been removed. C++11 中已对这些进行了更改，并且已更新为 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中的 C++11 值。 下表显示了旧名称和新名称。  
+-   **类型特征** The old names for 类型特征 from an earlier version of the C++ draft standard have been removed. C++11 中已对这些内容进行了更改，并且已更新为 Visual Studio 2015 中的 C++11 值。 下表显示了旧名称和新名称。  
   
     |旧名称|新名称|  
     |--------------|--------------|  
@@ -864,7 +864,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **复制构造函数**  
   
-     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 和 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]中，如果该类具有用户定义的移动构造函数，但没有用户定义的复制构造函数，则编译器生成类的复制构造函数。 在 Dev14 中，此隐式生成的复制构造函数也标记为“= delete”。  
+     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 和 Visual Studio 2015 中，如果该类具有用户定义的移动构造函数，但没有用户定义的复制构造函数，则编译器生成类的复制构造函数。 在 Dev14 中，此隐式生成的复制构造函数也标记为“= delete”。  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 

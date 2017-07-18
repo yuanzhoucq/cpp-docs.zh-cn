@@ -1,4 +1,4 @@
-## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源行为准则
+ ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开放源行为准则
 
 此项目采用了 [Microsoft 开放源行为准则](https://opensource.microsoft.com/codeofconduct/)。
 有关详细信息，请参阅[行为准则常见问题解答](https://opensource.microsoft.com/codeofconduct/faq/)或联系 [opencode@microsoft.com](mailto:opencode@microsoft.com) 提出任何其他问题或意见。
@@ -7,7 +7,9 @@
 
 欢迎访问! 此存储库包含正在完善的 Visual C++ 技术文档的相关源文件。 主题发布在 [Visual C++ 文档站点](https://docs.microsoft.com/cpp)上。
 
-Visual Basic 和 Visual C# 相关文档位于 [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) 上的单独存储库中，而 Visual Studio 文档位于 [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs) 上的存储库中。
+此存储库已于 2017 年 6 月 23 日从 Microsoft/vcppdocs 移至 MicrosoftDocs/cpp-docs-pr。
+
+Visual Basic 和 Visual C# 的相关文档位于 [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) 下的不同存储库中，Visual Studio 2017 的相关文档位于 [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs) 下的存储库中。
 
 ## <a name="contributing-to-the-documentation"></a>参与文档
 

@@ -22,10 +22,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 7995451c0c89fbef55bd96291978775f89932f3b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 新增功能（2003 - 2015）
@@ -527,7 +527,7 @@ ms.lasthandoff: 02/24/2017
   
 -   **复制构造函数**  
   
-     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 和 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]中，如果该类具有用户定义的移动构造函数，但没有用户定义的复制构造函数，则编译器生成类的复制构造函数。 在 Dev14 中，此隐式生成的复制构造函数也标记为“= delete”。  
+     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 和 Visual Studio 2015 中，如果该类具有用户定义的移动构造函数，但没有用户定义的复制构造函数，则编译器生成类的复制构造函数。 在 Dev14 中，此隐式生成的复制构造函数也标记为“= delete”。  
   
 ##  <a name="VS_Update1"></a>更新 1 中的符合性改进  
   
@@ -607,7 +607,7 @@ ms.lasthandoff: 02/24/2017
   
      此外，尽管编译器不能进行具体诊断，但内联运算符 new 会被视为格式不正确。  
   
--   对非类类型调用“operator type()”（用户定义的转换）******  
+-   **对非类类型调用“operator *type*()”（用户定义的转换）**  
   
      早期版本的编译器允许以无提示忽略的方式对非类类型调用“operator *type*()”。 这种旧行为会导致无提示代码生成错误风险，从而导致不可预知的运行时行为。 编译器不再接受这种方式编写的代码，因此会发出编译器错误 C2228。  
   
@@ -1389,7 +1389,7 @@ ms.lasthandoff: 02/24/2017
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     若要在编译器删除支持之前继续使用属性化 ATL 代码，可以通过将 `/Wv:18` 或 `/wd:4467` 命令行参数传递给编译器或在源代码中添加 `#pragma warning(disable:4467)` 来禁用此警告。  
+     若要在编译器删除支持之前继续使用属性化 ATL 代码，可以通过将 `/Wv:18` 或 `/wd4467` 命令行参数传递给编译器或在源代码中添加 `#pragma warning(disable:4467)` 来禁用此警告。  
   
      示例 1（之前）  
   
