@@ -26,16 +26,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
+ms.openlocfilehash: 58b5a3f2e5ce491ba7ba185c90bb6b4a2dca3101
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/30/2017
 
 ---
 
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新增功能
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 向 Visual C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中的 250 多个 bug 和已报告问题，其中很多是客户通过 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") 提交的。 感谢你报告 bug！  有关整个 Visual Studio 中新增功能的详细信息，请访问 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中的新增功能](https://go.microsoft.com/fwlink/?linkid=834481)。
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 向 Visual C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中的 250 多个 bug 和已报告问题，其中很多是客户通过 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") 提交的。 感谢你报告 bug！  有关整个 Visual Studio 中新增功能的详细信息，请访问 中的[新增功能[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/?linkid=834481)。
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/01/2017
 * 有关 STL 改进的完整列表，请参阅 [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/)（VS 2017 RTM 中的 STL 修复）。
 
 ### <a name="open-source-library-support"></a>开源库支持  
-Vcpkg 是一款开源命令行工具，能极大简化在 Visual Studio 中获取和生成开源 C++ 静态库和 DLLS 的过程。 有关详细信息，请参阅 [Vcpkg updates: Static linking is now available](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/)（Vcpkg 更新：现支持静态链接）。
+Vcpkg 是一款开源命令行工具，能极大简化在 Visual Studio 中获取和生成开源 C++ 静态库和 DLLS 的过程。 有关详细信息，请参阅 [vcpkg：用于 C++ 的程序包管理器 ](vcpkg.md)。
 
 ### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0  
 CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细信息，请参阅 [CppRestSDK 2.9.0 is available on GitHub](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/)（GitHub 上提供了 CppRestSDK 2.9.0）。
@@ -143,9 +144,9 @@ CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细
 Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含源代码的文件夹中进行编码、生成和调试，而无需创建任何解决方案或项目。 这使得新手使用 Visual Studio 变得异常简单，即使你的项目不是基于 MSBuild。 使用“打开文件夹”，可获得 Visual Studio 为 MSBuild 所提供的强大代码理解、编辑、生成和调试功能。 有关详细信息，请参阅 [Bring your C++ codebase to Visual Studio with “Open Folder”](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/)（使用“打开文件夹”向 Visual Studio 引入 C++ 基本代码）。
 
 * 改进了“打开文件夹”体验。 可通过以下 json 文件自定义体验：
-  -    使用 CppProperties.json 可自定义 IntelliSense 和浏览体验。
-  -    使用 Tasks.json 可自定义生成步骤。 
-  -    使用 Launch.json 可自定义调试体验。
+  - 使用 CppProperties.json 可自定义 IntelliSense 和浏览体验。
+  - 使用 Tasks.json 可自定义生成步骤。 
+  - 使用 Launch.json 可自定义调试体验。
 
 ### <a name="cmake-support-via-open-folder"></a>通过“打开文件夹”支持 CMake
 Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/)（Visual Studio 中的 CMake 支持）和 [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/)（Visual Studio 2017 中的 CMake 支持 - RC.2 更新中的新增内容）。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
