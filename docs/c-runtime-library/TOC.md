@@ -166,7 +166,7 @@
 ## [例程映射](routine-mappings.md)
 # [区域设置名称、语言和国家-地区字符串](locale-names-languages-and-country-region-strings.md)
 ## [语言字符串](language-strings.md)
-## [国家-区域字符串](country-region-strings.md)
+## [国家-地区字符串](country-region-strings.md)
 # [函数系列概述](function-family-overviews.md)
 ## [_exec、_wexec 函数](exec-wexec-functions.md)
 ## [文件名搜索函数](filename-search-functions.md)
