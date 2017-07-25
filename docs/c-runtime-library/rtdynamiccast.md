@@ -1,43 +1,61 @@
 ---
-title: "__RTDynamicCast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__RTDynamicCast"
-apilocation: 
-  - "msvcr90.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-  - "msvcrt.dll"
-  - "msvcr100.dll"
-  - "msvcr80.dll"
-  - "msvcr110_clr0400.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__RTDynamicCast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__RTDynamicCast"
+title: "__RTDynamicCast | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __RTDynamicCast
+apilocation:
+- msvcr90.dll
+- msvcr110.dll
+- msvcr120.dll
+- msvcrt.dll
+- msvcr100.dll
+- msvcr80.dll
+- msvcr110_clr0400.dll
+apitype: DLLExport
+f1_keywords:
+- __RTDynamicCast
+dev_langs:
+- C++
+helpviewer_keywords:
+- __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# __RTDynamicCast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ee7eea2815f3e836f862c9797ab46b909fef8cf8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-[dynamic\_cast](../cpp/dynamic-cast-operator.md) 运算符的运行时实现。  
+---
+# <a name="rtdynamiccast"></a>__RTDynamicCast
+[dynamic_cast](../cpp/dynamic-cast-operator.md) 运算符的运行时实现。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
 PVOID __RTDynamicCast (  
@@ -49,33 +67,33 @@ PVOID __RTDynamicCast (
    ) throw(...)  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `inptr`  
- 一个指向多态对象的指针。  
+ 指向多态对象的指针。  
   
  `VfDelta`  
- 对象中的虚函数指针的偏移。  
+ 对象中的虚函数指针的偏移量。  
   
  `SrcType`  
- `inptr` 参数指向静态类型对象。  
+ 由 `inptr` 参数指向的对象的静态类型。  
   
  `TargetType`  
  转换的预期结果。  
   
  `isReference`  
- 如果输入是引用，为`true`；如果输入为指针，为`false`。  
+如果输入是引用，则为  `true`；如果输入是指针，则为 `false`。  
   
-## 返回值  
- 如果成功，为适当的子对象的指针，否则，为NULL。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为指向适当的子对象的指针；否则为 NULL。  
   
-## 异常  
- `bad_cast()` 如果`dynamic_cast<>` 的输入是引用并且转换失败。  
+## <a name="exceptions"></a>异常  
+ 如果 `bad_cast()` 的输入为引用并且转换失败，则为 `dynamic_cast<>`。  
   
-## 备注  
- 将 `inptr` 转换为 `TargetType`的对象类型。  如果 `TargetType` 是指针，则`inptr` 的类型必须是指针，如果 `TargetType` 是引用，则为左值。  `TargetType` 必须是一个指针或是以前定义的类类型的引用或指向 void 的指针。  
+## <a name="remarks"></a>备注  
+ 将 `inptr` 转换为 `TargetType` 类型的对象。 如果 `TargetType` 是指针，则 `inptr` 类型必须为指针，或者如果 `TargetType` 是引用，则为左值。 `TargetType` 必须是针对以前定义的类类型的指针或引用，或者是指向 void 的指针。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|\_\_RTDynamicCast|rtti.h|
+|-------------|---------------------|  
+|__RTDynamicCast|rtti.h|

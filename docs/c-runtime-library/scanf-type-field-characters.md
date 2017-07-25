@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -42,10 +42,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 82ace58042dd9c7f9cceb0ef0781968532ae7b29
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>scanf 类型字段字符
@@ -63,12 +64,12 @@ ms.lasthandoff: 04/01/2017
 |`i`|一个整数。 如果输入字符串以“0x”或“0X”开始，则为十六进制；如果字符串以“0”开始，则为八进制；其余情况为十进制。|指向 `int`的指针。|不是。|  
 |`o`|八进制整数。|指向 `int`的指针。|不是。|  
 |`p`|十六进制数字中的指针地址。 最大位数读数取决于指针大小（32 或 64 位），指针大小取决于计算机体系结构。 接受“0x”或“0X”作为前缀。|指向 `void*`的指针。|不是。|  
-|`u`|无符号十进制整数。|指向 `unsigned``int`的指针。|不是。|  
+|`u`|无符号十进制整数。|指向 `unsigned int`的指针。|不是。|  
 |`x`|十六进制整数。|指向 `int`的指针。|不是。|  
 |`e`, `E`, `f`, `F`, `g`, `G`|包含可选符号（+ 或 -）的浮点值、包含小数点的一个或多个十进制数字系列，以及后跟可选带符号整数值的可选指数（“e”或“E”）。|指向 `float`的指针。|不是。|  
 |`a`, `A`|由一系列一个或多个包含可选小数点的十六进制数字和后跟十进制值的一个指数（“p”或“P”）所组成的浮点值。|指向 `float`的指针。|不是。|  
 |`n`|未从流或缓冲区读取任何输入。|指向 `int`的指针，其中存储了当前调用 `scanf` 函数或 `wscanf` 函数时从流或缓冲区到该点成功读取的字符数。|不是。|  
-|`s`|字符串，直到第一个空白字符（空格、制表符或换行）。 若要读取未被空格字符分隔的字符串，请使用一组方括号 (`[ ]`)，如 [scanf 宽度规范](../c-runtime-library/scanf-width-specification.md)中所述。|与 `scanf` 函数结合使用时，表示单字节字符数组；与 `wscanf` 函数结合使用时，表示宽字符数组。 无论哪种情况，字符数组都必须具有足够大小以容纳输入字段和自动附加的终止 null 字符。|必需。 大小中包括 null 终止符的占用空间。|  
+|`s`|字符串，直到第一个空白字符（空格、制表符或换行）。 若要读取未被空格字符分隔的字符串，请使用一组方括号 (`[ ]`)，如 [scanf Width Specification](../c-runtime-library/scanf-width-specification.md)等安全版本。|与 `scanf` 函数结合使用时，表示单字节字符数组；与 `wscanf` 函数结合使用时，表示宽字符数组。 无论哪种情况，字符数组都必须具有足够大小以容纳输入字段和自动附加的终止 null 字符。|必需。 大小中包括 null 终止符的占用空间。|  
 |`S`|相反大小字符字符串，直到第一个空白字符（空格、制表符或换行）。 若要读取未被空格字符分隔的字符串，请使用一组方括号 (`[ ]`)，如 [scanf 宽度规范](../c-runtime-library/scanf-width-specification.md)中所述。|与 `scanf` 函数结合使用时，表示宽字符数组；与 `wscanf` 函数结合使用时，表示单字节字符数组。 无论哪种情况，字符数组都必须具有足够大小以容纳输入字段和自动附加的终止 null 字符。|必需。 大小中包括 null 终止符的占用空间。|  
   
   
@@ -85,10 +86,10 @@ scanf_s("%10s %8s", string1, 11, string2, 9);
   
 |若要将字符读取为|使用此函数|使用这些格式说明符|  
 |--------------------------|-----------------------|----------------------------------|  
-|单字节|`scanf` 函数|`c`、`hc` 或 `hC`|  
-|单字节|`wscanf` 函数|`C`、`hc` 或 `hC`|  
-|宽|`wscanf` 函数|`c`、`lc` 或 `lC`|  
-|宽|`scanf` 函数|`C`、`lc` 或 `lC`|  
+|单字节|`scanf` 函数|`c`、 `hc`或 `hC`|  
+|单字节|`wscanf` 函数|`C`、 `hc`或 `hC`|  
+|宽|`wscanf` 函数|`c`、 `lc`或 `lC`|  
+|宽|`scanf` 函数|`C`、 `lc`或 `lC`|  
   
  若要扫描包含 `scanf` 函数和 `wscanf` 函数的字符串，请将上表与格式类型说明符 `s` 和 `S` 结合使用，而不是与 `c` 和 `C`一起使用。  
   

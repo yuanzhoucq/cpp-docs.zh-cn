@@ -1,41 +1,58 @@
 ---
-title: "例程映射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.mappings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tWinMain"
-  - "一般文本映射"
-  - "TCHAR.H 数据类型, 例程映射列表"
+title: "例程映射 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.mappings
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tWinMain
+- TCHAR.H data types, list of routine mappings
+- generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 例程映射
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1b716aacca01e72f917fe4b4083c79d39546b6c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-一般文本例程映射在 TCHAR.H 中定义。  `_tccpy` 和 `_tclen` 映射到 MBCS 模型的函数；它们映射到宏或内联函数在 SBCS 和 Unicode 模型的完整性。  有关一般文本例程的信息，请参见有关对应的 `SBCS`的帮助主题列表，`_MBCS`\-或 `_UNICODE`相关的实例。  
+---
+# <a name="routine-mappings"></a>例程映射
+TCHAR.H 中定义了一般文本例程映射。 `_tccpy` 和 `_tclen` 映射到 MBCS 模型中的函数；出于完整性的考虑，它们将映射到 SBCS 和 Unicode 模型中的宏或内联函数。 有关一般文本例程的信息，请参见与相应的 `SBCS`、`_MBCS` 或 `_UNICODE` 相关的例程的帮助主题。  
   
- 关于下表中左栏列出的单个例程更具体的信息不在此文档中。  但是，您可以轻松查找有关相应的 `SBCS`，`_MBCS` 或 `_UNICODE` 相关的实例。  使用在 **"帮助"** 菜单中的 **"搜索"** 命令查找下面列出的所有一般文本例程。  
+ 本文档中未提供有关下表左列中列出的单个例程的更多特定信息。 但是，您可以轻松查找有关与相应的 `SBCS`、`_MBCS` 或 `_UNICODE` 相关的例程的信息。 使用“**帮助**”菜单上的“**搜索**”命令查找下面列出的任何一般文本例程。  
   
- 查找相关信息，请参见 [TCHAR.H 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
+ 有关相关信息，请参阅 [TCHAR.H 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|一般文本例程映射名|SBCS \(\_UNICODE & MBCS 未定义\)|已定义 \_MBCS|已定义 \_UNICODE|  
-|---------------|-----------------------------------|----------------|-------------------|  
+|一般文本例程名称|SBCS（未定义的 _UNICODE 和 MBCS）|已定义 _MBCS|已定义 _UNICODE|  
+|--------------------------------|-------------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|  
 |`_cputts`|`_cputs`|`_cputs`|`_cputws`|  
@@ -271,9 +288,9 @@ caps.handback.revision: 9
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [一般文本映射](../c-runtime-library/generic-text-mappings.md)   
  [数据类型映射](../c-runtime-library/data-type-mappings.md)   
  [常量和全局变量映射](../c-runtime-library/constant-and-global-variable-mappings.md)   
- [简单一般文本项目](../c-runtime-library/a-sample-generic-text-program.md)   
+ [示例一般文本程序](../c-runtime-library/a-sample-generic-text-program.md)   
  [使用一般文本映射](../c-runtime-library/using-generic-text-mappings.md)
