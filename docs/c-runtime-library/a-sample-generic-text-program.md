@@ -1,34 +1,52 @@
 ---
-title: "简单一般文本项目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_TCHAR 类型"
-  - "映射, TCHAR.H 数据类型"
-  - "一般文本示例 [CRT]"
-  - "TCHAR 类型"
-  - "TCHAR.H 数据类型, 映射"
+title: "示例一般文本程序 | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 简单一般文本项目
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0cdc18215fe80c4165ffa03a5d789af0ebc95b40
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="a-sample-generic-text-program"></a>示例一般文本程序
 **Microsoft 专用**  
   
- 以下程序，GENTEXT.C提供的更详细的 TCHAR.H 图中定义的一般文本映射：  
+ 以下程序 GENTEXT.C 提供了有关 TCHAR.H 中定义的通用文本映射的更详细的说明：  
   
 ```  
 // GENTEXT.C  
@@ -69,7 +87,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- 如果已定义 `_MBCS`，GENTEXT.C 对下面程序 MBCS 的映射：  
+ 如果已定义 `_MBCS`，则 GENTEXT.C 将映射到以下 MBCS 程序：  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -107,7 +125,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- 如果已定义 `_UNICODE`，GENTEXT.C 对程序的以下映射的 Unicode 版本。  有关使用 `wmain` 的更多信息在 Unicode 程序用作替换 `main`，请参见位于 *C 语言参考的*[使用 wmain](../c-language/using-wmain.md)。  
+ 如果已定义 `_UNICODE`，则 GENTEXT.C 将映射到程序的以下 Unicode 版本。 有关将 Unicode 程序中的`wmain` 用作 `main` 的替代的详细信息，请参阅 *C 语言参考*中的[使用 wmain](../c-language/using-wmain.md)。  
   
 ```  
 // crt_unicgtxt.c  
@@ -145,7 +163,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- 如果 `_MBCS` 和 `_UNICODE` 未定义，ASCII 的 GENTEXT.C 映射到单字节代码，如下所示：  
+ 如果 `_MBCS` 和 `_UNICODE` 均未定义，则 GENTEXT.C 将映射到单字节 ASCII 代码，如下所示：  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -184,7 +202,7 @@ int __cdecl main(int argc, char **argv, char **envp)
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [一般文本映射](../c-runtime-library/generic-text-mappings.md)   
  [数据类型映射](../c-runtime-library/data-type-mappings.md)   
  [常量和全局变量映射](../c-runtime-library/constant-and-global-variable-mappings.md)   

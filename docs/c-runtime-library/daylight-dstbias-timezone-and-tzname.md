@@ -1,78 +1,96 @@
 ---
-title: "_daylight、_dstbias、_timezone 和 _tzname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tzname"
-  - "_timezone"
-  - "timezone"
-  - "_daylight"
-  - "_tzname"
-  - "daylight"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "时区"
-  - "时间调整"
-  - "时区变量"
-  - "_tzname 函数"
-  - "_daylight 函数"
-  - "_timezone 函数"
-  - "daylight 函数"
-  - "本地时间调整"
-  - "timezone 函数"
-  - "tzname 函数"
-  - "时区变量"
+title: "_daylight、_dstbias、_timezone 和 _tzname | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- tzname
+- _timezone
+- timezone
+- _daylight
+- _tzname
+- daylight
+dev_langs:
+- C++
+helpviewer_keywords:
+- time zones
+- time adjustments
+- timezone variables
+- _tzname function
+- _daylight function
+- _timezone function
+- daylight function
+- local time adjustments
+- timezone function
+- tzname function
+- time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _daylight、_dstbias、_timezone 和 _tzname
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0b2b40db8d478eeb1570022bd1c901c2c28a883b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-`_daylight`、`_dstbias`、`_timezone`和 `_tzname` 在某些时间和日期例程使本地时间调整。  这些全局变量因有更安全函数版本而被废弃，这被使用来替代全局变量。  
+---
+# <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
+`_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 在某些时间和日期例程中用来调整本地时间。 这些全局变量因安全性更高的函数版本（它们取代了全局变量）而被弃用。  
   
-|全局变量|等效功能|  
-|----------|----------|  
-|`_daylight`|[\_get\_daylight](../c-runtime-library/reference/get-daylight.md)|  
-|`_dstbias`|[\_get\_dstbias](../c-runtime-library/reference/get-dstbias.md)|  
-|`_timezone`|[\_get\_timezone](../c-runtime-library/reference/get-timezone.md)|  
-|`_tzname`|[\_get\_tzname](../c-runtime-library/reference/get-tzname.md)|  
+|全局变量|等效函数|  
+|---------------------|---------------------------|  
+|`_daylight`|[_get_daylight](../c-runtime-library/reference/get-daylight.md)|  
+|`_dstbias`|[_get_dstbias](../c-runtime-library/reference/get-dstbias.md)|  
+|`_timezone`|[_get_timezone](../c-runtime-library/reference/get-timezone.md)|  
+|`_tzname`|[_get_tzname](../c-runtime-library/reference/get-tzname.md)|  
   
- 在 Time.h 按如下方式声明。  
+ 在 Time.h 中按如下方式声明它们。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-extern int _daylight;   
-extern int _dstbias;   
-extern long _timezone;   
+extern int _daylight;   
+extern int _dstbias;   
+extern long _timezone;   
 extern char *_tzname[2];  
 ```  
   
-## 备注  
- 在对 `_ftime`的调用，`localtime`或 `_tzset`值，`_daylight`、`_dstbias`、`_timezone`和 `_tzname` 环境变量 `TZ` 的值确定。  如果不显式设置 `TZ`值，`_tzname[0]` 和 `_tzname[1]` 分别包含 PST“”和“”PDT 默认设置。时间操作函数 \(和\)、[\_tzset](../c-runtime-library/reference/tzset.md)[\_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md)[localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)尝试通过查询的操作系统默认值设置 `_daylight`、`_dstbias` 和 `_timezone` 的值每个变量。  时区全局变量的值如下表所示。  
+## <a name="remarks"></a>备注  
+ 在调用 `_ftime`、`localtime` 或 `_tzset` 时，`_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 的值由 `TZ` 环境变量的值确定。 如果您未显式设置 `TZ` 的值，则 `_tzname[0]` 和 `_tzname[1]` 将分别包含“PST”和“PDT”的默认设置。  时间操作函数（[_tzset](../c-runtime-library/reference/tzset.md)、[_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md)，和 [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)）尝试通过在操作系统中查询每个变量的默认值来设置 `_daylight`、`_dstbias` 和 `_timezone` 的值。 下表显示了时区全局变量的值。  
   
 |变量|值|  
-|--------|-------|  
-|`_daylight`|如果非零，夏时制 \(DST\) 区域 `TZ` 中指定或从操作系统中确定；否则为0。  默认值为 1。|  
-|`_dstbias`|夏时制偏移量|  
-|`_timezone`|协调差异。在中的泛时间以及本地时间之间的秒的格式。  默认值为 28,800。|  
-|`_tzname[0]`|从 `TZ` 派生该环境变量的名称。  默认值为“PST”。|  
-|`_tzname[1]`|从 `TZ` 环境变量派生的DST区域名称。  默认值为“PDT”\(太平洋夏时制时间\)。|  
+|--------------|-----------|  
+|`_daylight`|如果在 `TZ` 中指定或从操作系统确定夏令时 (DST) 时区，则为非零值；否则为 0。 默认值为 1。|  
+|`_dstbias`|夏令时的偏移量。|  
+|`_timezone`|协调世界时和本地时间之间的差异（以秒为单位）。 默认值为 28,800。|  
+|`_tzname[0]`|派生自 `TZ` 环境变量的时区名称。 默认值是“PST”。|  
+|`_tzname[1]`|派生自 `TZ` 环境变量的 DST 时区名称。 默认值为“PDT”（太平洋夏令时）。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [全局变量](../c-runtime-library/global-variables.md)   
- [\_get\_daylight](../c-runtime-library/reference/get-daylight.md)   
- [\_get\_dstbias](../c-runtime-library/reference/get-dstbias.md)   
- [\_get\_timezone](../c-runtime-library/reference/get-timezone.md)   
- [\_get\_tzname](../c-runtime-library/reference/get-tzname.md)
+ [_get_daylight](../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../c-runtime-library/reference/get-dstbias.md)   
+ [_get_timezone](../c-runtime-library/reference/get-timezone.md)   
+ [_get_tzname](../c-runtime-library/reference/get-tzname.md)

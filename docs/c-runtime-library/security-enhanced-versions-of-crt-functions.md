@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 2008eeb968e63929404cda6deaedc23042b86c5e
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 95bf81054110b972c7731415a9032a0b42f813ab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>CRT 函数的安全增强版本
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/04/2017
 |[_gcvt](../c-runtime-library/reference/gcvt.md)|[_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|将浮点值转换为字符串，并将其存储在缓冲区中|  
 |[getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)|[getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|从当前环境中获取值。|  
 |已过时的函数|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|从 `stdin` 流中获取行|  
-|[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)|[_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|将时间从类型 `time_t` 转换为 `struct``tm` 或从类型 `__time64_t` 转换为 `struct tm`|  
+|[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)|[_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm`|  
 |[_itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow](../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)|[_itoa_s、_i64toa_s、_ui64toa_s、_itow_s、_i64tow_s、_ui64tow_s](../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)|将整数转换为字符串|  
 |[_lfind](../c-runtime-library/reference/lfind.md)|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|执行指定键的线性搜索|  
 |[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)|[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|使用本地更正将时间从类型 `time_t` 转换为 `struct tm` 或从类型 `__time64_t` 转换为 `struct tm`|  
