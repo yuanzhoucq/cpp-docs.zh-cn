@@ -1,60 +1,78 @@
 ---
-title: "__pctype_func | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__pctype_func"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr80.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__pctype_func"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__pctype_func"
+title: "__pctype_func |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __pctype_func
+apilocation:
+- msvcrt.dll
+- msvcr110_clr0400.dll
+- msvcr110.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr80.dll
+apitype: DLLExport
+f1_keywords:
+- __pctype_func
+dev_langs:
+- C++
+helpviewer_keywords:
+- __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
 caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# __pctype_func
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 56370402ae31d3ea6f4897eb8a7068ed5e8f9bc4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-检索指向字符分类的信息。  
+---
+# <a name="pctypefunc"></a>__pctype_func
+检索指向字符分类信息数组的指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
 const unsigned short *__pctype_func(  
    )  
 ```  
   
-## 返回值  
- 检索指向字符分类的信息。  
+## <a name="return-value"></a>返回值  
+ 指向字符分类信息数组的指针。  
   
-## 备注  
- 在字符类表仅供内部使用类和类型字符 `char`的各个函数使用信息。  有关更多信息，请参见[\_pctype、\_pwctype、\_wctype、\_mbctype、\_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md) 的`Remarks`一节。  
+## <a name="remarks"></a>备注  
+ 字符分类表中的信息仅供内部使用，并且由对类型 `char` 的字符进行分类的各种函数使用。 有关详细信息，请参阅 [_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md) 中的 `Remarks` 部分。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|\_\_pctype\_func|ctype.h|  
+|-------------|---------------------|  
+|__pctype_func|ctype.h|  
   
-## 请参阅  
- [\_pctype、\_pwctype、\_wctype、\_mbctype、\_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)
+## <a name="see-also"></a>另请参阅  
+ [_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)
