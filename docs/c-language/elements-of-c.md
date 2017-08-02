@@ -1,33 +1,50 @@
 ---
 title: "C 的元素 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "约定, 词法"
-  - "词法约定"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lexical conventions
+- conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# C 的元素
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d9dcf001dc048ed129b36b200fadef3917420d56
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-本节描述 C 编程语言的元素，包括名称、数字和字符用于构造 C 程序。  ANSI C 语法将这些元素标记。  
+---
+# <a name="elements-of-c"></a>C 的元素
+本节介绍 C 编程语言的元素，包括用于构造 C 程序的名称、数字和字符。 ANSI C 语法标记这些组件标记。  
   
- 本节解释如何定义标记，并且编译器如何计算它们。  
+ 本节介绍如何定义标记以及编译器如何计算它们。  
   
- 本文档讨论了下列主题：  
+ 本文讨论了以下主题：  
   
 -   [标记](../c-language/c-tokens.md)  
   
@@ -39,13 +56,13 @@ caps.handback.revision: 8
   
 -   [常量](../c-language/c-constants.md)  
   
--   [字符串](../c-language/c-string-literals.md)  
+-   [字符串文本](../c-language/c-string-literals.md)  
   
 -   [标点和特殊字符](../c-language/punctuation-and-special-characters.md)  
   
- 该部分包括 [三字符组](../c-language/trigraphs.md)、[针对浮点常量的限制](../c-language/limits-on-floating-point-constants.md)、[C\+\+ 整数限制](../c-language/cpp-integer-limits.md) 和 [转义序列](../c-language/escape-sequences.md)的引用表。  
+ 该部分还包括[三元组](../c-language/trigraphs.md)、[浮点常量限制](../c-language/limits-on-floating-point-constants.md)、[C++ 整数限制](../c-language/cpp-integer-limits.md)和[转义序列](../c-language/escape-sequences.md)的引用表。  
   
- 运算符是指定如何操作值的符号（单个字符和字符组合）。  每个符号被解释为单个单元，调用标记。  有关更多信息，请参见[运算符](../c-language/c-operators.md)。  
+ 运算符是指定如何操作值的符号（单个字符和字符组合）。 将每个符号解释为单个单元，称为令牌。 有关详细信息，请参阅[运算符](../c-language/c-operators.md)。  
   
-## 请参阅  
- [C 语言参考](../c-language/c-language-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [C# 语言参考](../c-language/c-language-reference.md)

@@ -1,30 +1,47 @@
 ---
 title: "程序结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C, 程序结构"
-  - "程序结构 [C++], C"
-  - "程序 [C++], 结构"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- program structure [C++], C
+- programs [C++], structure
+- C, program structure
 ms.assetid: b713b5a1-21a2-4e6f-9481-5f8594f1859e
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 程序结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d0012c2b006b9977b3f2ef3bc437e7d3ec5edda4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-本节概述了 C 程序和程序执行。  还引入了对于了解 C 程序和组件来说很重要的术语和功能。  讨论的主题包括：  
+---
+# <a name="program-structure"></a>程序结构
+本节概述了 C 程序和程序执行。 还引入了对于了解 C 程序和组件来说很重要的术语和功能。 讨论的主题包括：  
   
 -   [源文件和源程序](../c-language/source-files-and-source-programs.md)  
   
@@ -36,7 +53,7 @@ caps.handback.revision: 7
   
 -   [命名空间](../c-language/name-spaces.md)  
   
- 由于本节只是为了进行概述，因此讨论的主题仅包含介绍性材料。  有关更详细的解释，请参阅交叉引用信息。  
+ 由于本节只是为了进行概述，因此讨论的主题仅包含介绍性材料。 有关更详细的解释，请参阅交叉引用信息。  
   
-## 请参阅  
- [C 语言参考](../c-language/c-language-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [C# 语言参考](../c-language/c-language-reference.md)

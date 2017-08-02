@@ -1,31 +1,48 @@
 ---
 title: "C 抽象声明符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "抽象声明"
-  - "声明符, abstract"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, abstract
+- abstract declarations
 ms.assetid: 6a556ad7-0555-421a-aa02-294d77cda8b5
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# C 抽象声明符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: cc4c700142f8dd533d98eca6ffb01fa18006a111
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-抽象声明符是没有标识符的声明符，由一个或多个指针、数组或函数修饰符组成。  指针修饰符 \(**\***\) 始终在声明符中的标识符前面；数组 \(**\[ \]**\) 和函数 \( **\( \)** \) 修饰符紧跟在标识符后面。  了解这种情况后，您可以确定标识符将在抽象声明符中显示的位置并相应地解释声明符。  有关复杂声明符的其他信息和示例，请参阅[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)。  通常 `typedef` 可用于简化声明符。  请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。  
+---
+# <a name="c-abstract-declarators"></a>C 抽象声明符
+抽象声明符是没有标识符的声明符，由一个或多个指针、数组或函数修饰符组成。 指针修饰符 (\*) 始终在声明符中的标识符前面；数组 ([ ]) 和函数 ( ( ) ) 修饰符紧跟在标识符后面。 了解这种情况后，您可以确定标识符将在抽象声明符中显示的位置并相应地解释声明符。 有关复杂声明符的其他信息和示例，请参阅[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)。 通常 `typedef` 可用于简化声明符。 请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。  
   
- 抽象声明符可能很复杂。  复杂的抽象声明符中的括号指定一个特定的解释，正如它们为声明中的复杂声明符所做的一样。  
+ 抽象声明符可能很复杂。 复杂的抽象声明符中的括号指定一个特定的解释，正如它们为声明中的复杂声明符所做的一样。  
   
  以下示例阐释了抽象声明符：  
   
@@ -52,7 +69,7 @@ int (*const []) ( unsigned int, ... )
 ```  
   
 > [!NOTE]
->  不允许使用由一组空括号 **\( \)** 组成的抽象声明符，因为它的意义不明确。  无法确定隐含标识符是位于括号内（此时它是未修改类型）还是括号前（此时它是函数类型）。  
+>  不允许使用由一组空括号 ( ) 组成的抽象声明符，因为它的意义不明确。 无法确定隐含标识符是位于括号内（此时它是未修改类型）还是括号前（此时它是函数类型）。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [声明符和变量声明](../c-language/declarators-and-variable-declarations.md)

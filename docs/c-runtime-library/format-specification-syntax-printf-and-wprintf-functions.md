@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c57231375c662134fb1f9bd0252fd3b70f051ba2
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 13650a669837654cccf9185524e88191d90d60ce
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
@@ -97,14 +98,14 @@ ms.lasthandoff: 04/01/2017
 |**x**|整数|无符号十六进制整数；使用“abcdef.”|  
 |**X**|整数|无符号十六进制整数；使用“ABCDEF.”|  
 |**e**|浮点|有符号的值，形式为 [-]*d.dddd*__e±__*dd*[*d*]，其中 *d* 是一个十进制数，*dddd* 是一个或多个十进制数（具体取决于指定的精度），或为默认的六个数，*dd*[*d*] 是两个或三个十进制数（具体取决于[输出格式](../c-runtime-library/set-output-format.md)和指数大小）。|  
-|**E**|浮点|与 **e** 格式相同，只不过指数由 **E** 引入，而不是由 **e** 引入。|  
+|**E**|浮点|与 **e** 格式相同，只不过指数由 **E** 引入，而不是由  **e**  引入。|  
 |**f**|浮点|有符号的值，形式为 [-]*dddd*__.__*dddd*，其中 *dddd* 是一个或多个十进制数。 小数点前的数字位数取决于数字的度量值，小数点后的数字位数取决于请求的精度，或为默认的六位数。|  
 |**F**|浮点|与 **f** 格式相同，只不过 infinity 和 nan 输出为大写形式。|  
 |**g**|浮点|有符号的值将显示为 **f** 或 **e** 格式，取其中对于给定的值和精度更为精简一个。 仅当值的指数小于 -4 或大于等于 *precision* 参数时，才使用 **e** 格式。 截去尾随零，仅当后跟一个或多个数字时，才会显示小数点。|  
 |**G**|浮点|与 **g** 格式相同，只不过指数由 **E** 引入，而不是由 **e** 引入（如果适用）。|  
 |**a**|浮点|有符号的十六进制双精度浮点值，形式为 [-]0x*h.hhhh*__p±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用小写字母），*dd* 是一位指数或多位指数。 精度指定此点后的数字位数。|  
 |**A**|浮点|有符号的十六进制双精度浮点值，形式为 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用大写字母），*dd* 是一位指数或多位指数。 精度指定此点后的数字位数。|  
-|**n**|指向整数的指针|目前成功写入流或缓冲区的字符数。 此值存储在地址作为自变量的整数中。 可通过参数大小规范前缀控制指向的整数的大小。 **n** 说明符默认为禁用；请参阅重要的安全说明了解相关信息。|  
+|**n**|指向整数的指针|目前成功写入流或缓冲区的字符数。 此值存储在地址作为自变量的整数中。 可通过参数大小规范前缀控制指向的整数的大小。 n 说明符默认为禁用；请参阅重要的安全说明了解相关信息。|  
 |**p**|指针类型|将自变量显示为十六进制数中的地址。|  
 |**s**|字符串|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|  
 |**S**|字符串|与 `printf` 函数一起使用时，指定宽字符字符串；与 `wprintf` 函数一起使用时，指定单字节或多字节字符串。 将于第一个空字符之前或达到精度值时显示字符。|  

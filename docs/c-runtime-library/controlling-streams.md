@@ -1,50 +1,67 @@
 ---
 title: "控制流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Controlling Streams"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制流"
-  - "流"
-  - "流, 控制"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Controlling Streams
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, controlling
+- controlling streams
+- streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 控制流
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 4551a4a47e2fbfbb3fdc687103fbd3e4e6a47046
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-[fopen](../c-runtime-library/reference/fopen-wfopen.md) 类型返回 `FILE`对象的地址。  使用此地址作为 `stream` 参数。多种库函数执行在打开文件进行各种运算。  对于 Word，限制所有输入发生，就像每个字符调用 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md)读取，并且，所有输出发生，就像每个字符调用 [fputc](../c-runtime-library/reference/fputc-fputwc.md)编写。  对于 Word，限制所有输入发生，就像每个字符调用 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md)读取，并且，所有输出发生，就像每个字符调用 [fputwc](../c-runtime-library/reference/fputc-fputwc.md)编写。  
+---
+# <a name="controlling-streams"></a>控制流
+[fopen](../c-runtime-library/reference/fopen-wfopen.md) 返回 `FILE` 类型的对象的地址。 您可以将此地址用作多个库函数的 `stream` 参数以对打开的文件执行各种操作。 对于字节流，会像通过调用 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) 读取每个字符一样进行所有输入，并且会像通过调用 [fputc](../c-runtime-library/reference/fputc-fputwc.md) 写入每个字符一样进行所有输出。 对于宽流，会像通过调用 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) 读取每个字符一样进行所有输入，并且会像通过调用 [fputwc](../c-runtime-library/reference/fputc-fputwc.md) 写入每个字符一样进行所有输出。  
   
- 您可以通过 [fclose](../c-runtime-library/reference/fclose-fcloseall.md)调用关闭文件，之后，`FILE` 对象的地址无效。  
+ 可以通过调用 [fclose](../c-runtime-library/reference/fclose-fcloseall.md) 关闭文件，之后，`FILE` 对象的地址将无效。  
   
- `FILE` 对象存储在流的状态，包括：  
+ `FILE` 对象存储流的状态，包括：  
   
--   的错误指示器集合按非零遇到读取或写入错误的函数。  
+-   错误指示器通过遇到读取或写入错误的函数设置非零值。  
   
--   文件尾指示符集合非零。遇到文件的末尾，则读取时的函数。  
+-   文件尾指示器通过在读取时遇到文件尾的函数设置非零值。  
   
--   文件，则可以支持位置请求，文件位置指示器在流指定下计算读取或写入。  
+-   如果文件可以支持定位请求，则文件位置指示器将在流中指定要读取或写入的下一个字节。  
   
--   [流状态](../c-runtime-library/stream-states.md) 指定流是否将接受读取和\/或编写，然后流是否未绑定，面向字节的宽或中。  
+-   [流状态](../c-runtime-library/stream-states.md)指定流是否将接受读取和/或写入，以及流是未绑定的、面向字节的还是面向宽度的。  
   
--   转换状态记住任何部分程序集中的或生成的通用字符多的状态，以及字节序列的所有 Shift 状态文件中的\)。  
+-   转换状态将记住任何部分汇编的或生成的通用多字节字符的状态，以及文件中字节序列的所有移位状态。  
   
--   文件缓冲区指定库函数中使用以提高性能读取和写入操作。流数组对象的地址和大小。  
+-   文件缓冲区指定数组对象的地址和大小，库函数可使用此对象提高对流进行的读取和写入操作的性能。  
   
- 请勿修改以指定用于与该对象的文件存储缓冲区中的 `FILE` 对象或任何值。  不能复制一个 `FILE` 对象和 portably 使用复制的地址作为 `stream` 参数对库函数。  
+ 不要修改存储在 `FILE` 对象中或与该对象一起使用的指定文件缓冲区中的任何值。 不能复制 `FILE` 对象，也不能将副本的地址用作库函数的 `stream` 参数。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件和流](../c-runtime-library/files-and-streams.md)

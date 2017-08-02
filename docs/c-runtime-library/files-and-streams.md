@@ -1,55 +1,72 @@
 ---
 title: "文件和流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件 [C++]"
-  - "流"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++]
+- streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 文件和流
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 81caecba2f34f761706acba58afbfc55058e713b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-程序与目标环境通信通过读取和写入文件。  文件可以是：  
+---
+# <a name="files-and-streams"></a>文件和流
+程序通过读取和写入文件来与目标环境进行通信。 文件可以是：  
   
--   可以重复读取和写入的数据集。  
+-   可重复读取和写入的数据集。  
   
--   程序生成的流 \(如字节管线\)。  
+-   程序生成的字节流（如管线）。  
   
--   接收或发送给一组设备外围的字节流。  
+-   从外围设备接收或发送到外围设备的字节流。  
   
- 前两项是交互式的文件。  文件是通常与应用程序交互的主要方法。  操作所有这些文件的方法与通过调用库函数极为相似。  这些函数的声明包含在大多数标准头 STDIO.H 。  
+ 最后两项是交互式文件。 文件通常是用来与程序进行交互的主要手段。 您操作所有此类文件的方式与调用库函数的方式极为相似。 您包括标准标头 STDIO.H 来声明其中的大多数函数。  
   
- 在能够运行许多文件的操作之前，必须打开文件。  打开文件放在该标准的 C 库中将它与流，数据结构在许多差异的它们在中的各种文件。  在文件类型对象中，库维护每个流的状态。  
+ 必须先打开文件，然后才能对该文件执行许多操作。 打开文件会将其与流、标准 C 库（屏蔽了各种文件之间的许多差异）中的数据结构关联。 库将维护类型 FILE 的对象中的每个流的状态。  
   
- 在程序启动之前，目标环境打开三个文件。  通过调用具有两参数的库函数打开文件[fopen、\_wfopen](../c-runtime-library/reference/fopen-wfopen.md)（`fopen` 函数已弃用，请使用 [fopen\_s、\_wfopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)。\)第一个参数是文件名。  第二个参数为指定的 C 字符串：  
+ 在程序启动前，目标环境将打开三个文件。 可通过将库函数 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) 与两个参数一起调用来打开文件。 （`fopen` 函数已弃用，请改用 [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)。）第一个自变量是文件名。 第二个参数是指定以下内容的 C 字符串：  
   
--   这是您是要读取文件或数据写入或两个都要的地方。  
+-   您是否想从该文件中读取数据和/或将数据写入该文件中。  
   
--   是否生成文件的新内容 \(或创建文件，则以前不存在\) 或者保持现有内容发生。  
+-   您是想为文件生成新内容（或创建文件，如果文件之前不存在）还是保留现有内容。  
   
--   是否对文件的进行编写将修改现有的内容，或只应将字节追加置于文件尾。  
+-   对文件进行写入是否可更改现有内容还是只应在文件尾追加字节。  
   
--   您是否要操作文本流或文件流。  
+-   您是要操作文本流还是二进制流。  
   
- 一旦成功打开文件，然后定位的流是否面向字节的 \(字节流\) 或面向宽度的 \(宽流\)。  流开始断开。  调用特定函数操作流使其面向字节的，而当其他函数时使其面向宽的。  一旦建立，流维护其方向，直到它调用 [fclose](../c-runtime-library/reference/fclose-fcloseall.md) 或 [freopen](../c-runtime-library/reference/freopen-wfreopen.md)关闭。  
+ 一旦成功打开此文件，您就可以确定此流是面向字节的（字节流）还是面向宽度的（宽度流）。 最初，流处于未绑定状态。 调用要对流使用的特定函数可使流成为面向字节的流，而其他函数可使流成为面向宽度的流。 在建立流后，它将维护自己的方向，直至通过调用 [fclose](../c-runtime-library/reference/fclose-fcloseall.md) 或 [freopen](../c-runtime-library/reference/freopen-wfreopen.md) 将其关闭。  
   
- © 1989\-2001 by P.J.  Plauger and Jim Brodie.  保留所有权利。  
+ © 1989-2001（由 P.J. Plauger 和 Jim Brodie 撰写）。 保留所有权利。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文本和二进制流](../c-runtime-library/text-and-binary-streams.md)   
  [字节和宽流](../c-runtime-library/byte-and-wide-streams.md)   
  [控制流](../c-runtime-library/controlling-streams.md)   

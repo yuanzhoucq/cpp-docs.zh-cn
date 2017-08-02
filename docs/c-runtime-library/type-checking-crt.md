@@ -1,44 +1,61 @@
 ---
 title: "类型检查 (CRT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.types"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "检查类型"
-  - "类型检查"
-  - "变量参数函数"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.types
+dev_langs:
+- C++
+helpviewer_keywords:
+- checking type
+- variable argument functions
+- type checking
 ms.assetid: 1ba7590b-d1c0-4636-b6a0-e231395abdad
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 类型检查 (CRT)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: feb455f63b5e55fe055bfe2ad9b0026026fb0626
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-编译器可能对可采用可变数量的实函数的有限类型检查，例如：  
+---
+# <a name="type-checking-crt"></a>类型检查 (CRT)
+编译器对可采用可变数目的自变量的函数执行有限类型检查，如下所示：  
   
-|函数调用|检查类型的参数|  
-|----------|-------------|  
-|`_cprintf_s`, `_cscanf_s`, `printf_s`, `scanf_s`|第一个参数 \(字符串格式\)|  
-|`fprintf_s`, `fscanf_s`, `sprintf_s`, `sscanf_s`|前两个参数 \(文件或缓冲区和格式字符串\)|  
-|`_snprintf_s`|前三参数 \(文件或缓冲区、计数和格式字符串\)|  
-|`_open`|前两个参数 \(和 `_open` 标志\) 路径|  
-|`_sopen_s`|前三参数 \(路径、`_open` 和 Shared 模式\)|  
-|`_execl`, `_execle`, `_execlp`, `_execlpe`|前两个参数 \(第一个参数\) 指针和路径|  
-|`_spawnl`, `_spawnle`, `_spawnlp`, `_spawnlpe`|前三参数模式 \(标志、路径和第一个形指针\)|  
+|函数调用 |类型检查的参数|  
+|-------------------|-----------------------------|  
+|`_cprintf_s`, `_cscanf_s`, `printf_s`, `scanf_s`|第一个参数（格式字符串）|  
+|`fprintf_s`, `fscanf_s`, `sprintf_s`, `sscanf_s`|前两个自变量（文件或缓冲区和格式字符串）|  
+|`_snprintf_s`|前三个自变量（文件或缓冲区、计数和格式字符串）|  
+|`_open`|前两个参数（路径和 `_open` 标志）|  
+|`_sopen_s`|前三个参数（路径、`_open` 标志和共享模式）|  
+|`_execl`, `_execle`, `_execlp`, `_execlpe`|前两个参数（路径和第一个参数指针）|  
+|`_spawnl`, `_spawnle`, `_spawnlp`, `_spawnlpe`|前三个参数（模式标志、路径和第一个参数指针）|  
   
- 编译器对这些函数宽字符副本的相同限制类型检查。  
+ 编译器会对这些函数的宽字符对等执行相同的有限类型检查。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

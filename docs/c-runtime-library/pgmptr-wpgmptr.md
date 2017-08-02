@@ -1,69 +1,86 @@
 ---
 title: "_pgmptr、_wpgmptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pgmptr"
-  - "_pgmptr"
-  - "wpgmptr"
-  - "_wpgmptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_pgmptr 函数"
-  - "_wpgmptr 函数"
-  - "pgmptr 函数"
-  - "wpgmptr 函数"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pgmptr
+- _pgmptr
+- wpgmptr
+- _wpgmptr
+dev_langs:
+- C++
+helpviewer_keywords:
+- wpgmptr function
+- _wpgmptr function
+- _pgmptr function
+- pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _pgmptr、_wpgmptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 221d1bd8259d8922695e9060eb8f2ada63d63631
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-可执行文件的路径。  弃用；使用 [\_get\_pgmptr](../c-runtime-library/reference/get-pgmptr.md) 和 [\_get\_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md)。  
+---
+# <a name="pgmptr-wpgmptr"></a>_pgmptr、_wpgmptr
+可执行文件的路径。 已弃用；使用 [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) 和 [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 extern char *_pgmptr;  
 extern wchar_t *_wpgmptr;  
 ```  
   
-## 备注  
- 当程序解释器从命令行\(Cmd.exe \) 运行时，`_pgmptr` 会自动初始化为可执行文件的完整路径。  例如，如果Hello.exe在C:\\BIN中，C:\\BIN 在路径中，要执行时，将`_pgmptr` 设置为 C:\\BIN\\Hello.exe：  
+## <a name="remarks"></a>备注  
+ 当程序从命令解释器 (Cmd.exe) 中运行时，`_pgmptr` 将自动初始化为可执行文件的完整路径。 例如，如果 Hello.exe 在 C:\BIN 中，而且 C:\BIN 在路径中，则执行时将 `_pgmptr` 设置为 C:\BIN\Hello.exe。  
   
 ```  
 C> hello   
 ```  
   
- 当程序时不是从命令行运行，`_pgmptr` 可能被初始化为程序名称 \(不带文件扩展名的文件的基本名称\) 或文件名、相对路径或完整路径。  
+ 当程序不是从命令行中运行时，`_pgmptr` 可能将初始化为程序名称（不带文件扩展名的基名称）或文件名称、相对路径或完整路径。  
   
- `_wpgmptr`是`_pgmptr` 的宽字符副本，用于使用 `wmain`的程序。  
+ `_wpgmptr` 是 `_pgmptr` 的宽字符版本，可与使用 `wmain` 的程序一起使用。  
   
-### 一般文本例程映射  
+### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
-|Tchar.h 例程|未定义 \_UNICODE 和 \_MBCS|已定义 \_MBCS|已定义 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |变量|必需的标头|  
-|--------|-----------|  
-|`_pgmptr`, `_wpgmptr`|\<stdlib.h\>|  
+|--------------|---------------------|  
+|`_pgmptr`, `_wpgmptr`|\<stdlib.h>|  
   
-## 示例  
- 下面的程序说明 `_pgmptr` 的用法。  
+## <a name="example"></a>示例  
+ 下面的程序说明 `_pgmptr` 的使用。  
   
 ```  
 // crt_pgmptr.c  
@@ -80,7 +97,7 @@ int main( void )
 }  
 ```  
   
- 可以通过更改 `%Fs`为`%S` ，更改`main`为 `wmain`，使用`_wpgmptr`。  
+ 您可通过将 `_wpgmptr` 更改为 `%Fs` 并将 `%S` 更改为 `main`，从而使用 `wmain`。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [全局变量](../c-runtime-library/global-variables.md)

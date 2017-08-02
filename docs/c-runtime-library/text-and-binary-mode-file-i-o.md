@@ -1,48 +1,65 @@
 ---
-title: "文本和二进制模式文件 I/O | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "二进制访问"
-  - "二进制访问, 二进制模式文件 I/O"
-  - "文件 [C++], 打开函数"
-  - "函数 [CRT], 文件访问"
-  - "I/O [CRT], binary"
-  - "I/O [CRT], 文本文件"
-  - "I/O [CRT], 翻译模式"
-  - "文本文件, I/O"
-  - "翻译模式（文件 I/O）"
-  - "翻译, modes"
+title: "文本和二进制模式文件 I/O| Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], open functions
+- I/O [CRT], text files
+- functions [CRT], file access
+- binary access, binary mode file I/O
+- translation, modes
+- I/O [CRT], binary
+- text files, I/O
+- I/O [CRT], translation modes
+- translation modes (file I/O)
+- binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 文本和二进制模式文件 I/O
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a788242344c7cb3b89765e7476fdd23dbf68982d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-文件 I\/O 操作代替这两种变换模式，文本，或二进制，具体取决于文件打开的模式。  数据文件都通常按文本模式处理。  若要控制文件转换模式，一种可以：  
+---
+# <a name="text-and-binary-mode-file-io"></a>文本和二进制模式文件 I/O
+文件 I/O 操作将在文本或二进制这两种转换模式之一中进行，具体取决于文件时在哪种模式下打开的。 数据文件通常在文本模式下处理。 若要控制文件转换模式，可以：  
   
--   打开选定的文件时，请保留当前默认设置并指定该替代模式。  
+-   保留当前默认设置，并且仅在打开选定文件时指定替代模式。  
   
--   使用函数 [\_set\_fmode](../c-runtime-library/reference/set-fmode.md) 更改新打开文件的默认模式。  使用 [\_get\_fmode](../c-runtime-library/reference/get-fmode.md) 查找当前默认模式。  初始默认设置为文本模式 \(`_O_TEXT`\)。  
+-   使用函数 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 更改新打开的文件的默认模式。 使用 [_get_fmode](../c-runtime-library/reference/get-fmode.md) 查找当前默认模式。 初始默认设置为文本模式 (`_O_TEXT`)。  
   
--   通过在程序中设置全局变量[\_fmode](../c-runtime-library/fmode.md)，直接更改默认转换模式。  函数 `_set_fmode` 设置此变量值，也可以直接设置。  
+-   通过在程序中设置全局变量 [_fmode](../c-runtime-library/fmode.md) 来直接更改默认转换模式。 函数 `_set_fmode` 将设置此变量的值，不过也可以直接设置它。  
   
- 当调用一打开文件函数，如 [\_open](../c-runtime-library/reference/open-wopen.md)、[fopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)、[freopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen\_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)、[\_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 或 [\_sopen\_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)时，可通过指定函数 [\_set\_fmode](../c-runtime-library/reference/set-fmode.md)相应的参数来重写 `_fmode` 的当前默认设置。  `stdin`、`stdout`和 `stderr`流默认以文本模式打开；在打开任何一个这些文件时，也可以重写该默认值。  打开文件后，使用 [\_setmode](../c-runtime-library/reference/setmode.md) 使用文件说明符更改转换模式。  
+ 当调用一个文件打开函数（如 [_open](../c-runtime-library/reference/open-wopen.md)、[fopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)、[freopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)、[_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 或 [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)）时，可通过指定函数 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 的相应参数来替代 `_fmode` 的当前默认设置。 默认情况下，`stdin`、`stdout` 和 `stderr` 流始终在文本模式中打开；在打开这些文件中的任一文件时，也可以重写该默认值。 使用 [_setmode](../c-runtime-library/reference/setmode.md) 可在文件打开后利用文件说明符更改转换模式。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [输入和输出](../c-runtime-library/input-and-output.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

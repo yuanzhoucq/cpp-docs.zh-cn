@@ -1,61 +1,78 @@
 ---
 title: "C 逻辑运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "&& 运算符"
-  - "|| 运算符"
-  - "逻辑 AND 运算符"
-  - "逻辑运算符, C"
-  - "逻辑运算符, 表达式序列点"
-  - "逻辑 OR 运算符"
-  - "运算符 [C], 逻辑"
-  - "短路计算"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- logical operators, expression sequence points
+- logical operators, C
+- logical AND operator
+- '|| operator'
+- operators [C], logical
+- short-circuit evaluation
+- '&& operator'
+- logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# C 逻辑运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 91df7af4322fc3fd8022542ffeb0c6b7b2d2e087
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-逻辑运算符执行逻辑与 （**&&**）和逻辑或\( `||` \)操作。  
+---
+# <a name="c-logical-operators"></a>C 逻辑运算符
+逻辑运算符执行逻辑“与”(&&) 和逻辑“或”(`||`) 运算。  
   
  **语法**  
   
- *logical\-AND\-expression*：  
- *独占的”或“表达式*  
+ *logical-AND-expression*：  
+ *inclusive-OR-expression*  
   
- *逻辑与表达式*  **&&** *逻辑或表达式*  
+ *logical-AND-expression*  **&&**  *inclusive-OR-expression*  
   
- *logical\-OR\-expression*：  
- *逻辑与表达式*  
+ *logical-OR-expression*:  
+ *logical-AND-expression*  
   
- *逻辑或表达式*  **&#124;&#124;**  *逻辑与表达式*  
+ *logical-OR-expression* **| |** *logical-AND-expression*  
   
- 逻辑运算符不执行常见的算术转换。  相反，根据其等效性为 0 计算每个操作数。  逻辑运算符的结果不是 0 就是 1。  结果的类型为 `int`。  
+ 逻辑运算符不执行常用算术转换。 相反，它们根据其等效性为 0 计算每个操作数。 逻辑运算的结果不是 0 就是 1。 结果的类型为 `int`。  
   
- C 逻辑运算符如下所述:  
+ C 逻辑运算符如下所述：  
   
 |运算符|描述|  
-|---------|--------|  
-|**&&**|逻辑与运算符生产值 1 （如果两个操作数具有非零值）。  如果其中一个操作数等于 0，则结果是 0。  如果逻辑与运算的第一个操作数等于 0，则第二个操作数不会计算。|  
-|`&#124;&#124;`|逻辑或运算符对其操作数执行“与或”运算。  如果操作时都有 0 值，结果将会 0。  如果其中一个操作数具有非零值，则结果是 1。  如果逻辑 OR 运算的第一个操作数非零值，则第二个操作数不会计算。|  
+|--------------|-----------------|  
+|**&&**|如果两个操作数具有非零值，则逻辑“与”运算符产生值 1。 如果其中一个操作数等于 0，则结果为 0。 如果逻辑“与”运算的第一个操作数等于 0，则不会计算第二个操作数。|  
+|`&#124;&#124;`|逻辑“或”运算符对其操作数执行“与或”运算。 如果两个操作数的值均为 0，则结果为 0。 如果其中一个操作数具有非零值，则结果为 1。 如果逻辑“或”运算的第一个操作数具有非零值，则不会计算第二个操作数。|  
   
- 逻辑与和逻辑或表达式的操作数从左到右进行计算。  如果第一个操作数的值足以确定操作的结果，第二个操作数不计算。  这被称作为“短路计算”。第一个操作数后有一个序列点。  有关更多信息，请参见[序列点](../c-language/c-sequence-points.md)。  
+ 逻辑“与”和逻辑“或”表达式的操作数从左到右进行计算。 如果第一个操作数的值足以确定运算的结果，则不会计算第二个操作数。 这称作“短路计算”。 第一个操作数后有一个序列点。 有关详细信息，请参阅[序列点](../c-language/c-sequence-points.md)。  
   
-## 示例  
- 下面的示例演示了本地运算符：  
+## <a name="examples"></a>示例  
+ 下面的示例演示了逻辑运算符：  
   
 ```  
 int w, x, y, z;  
@@ -64,14 +81,14 @@ if ( x < y && y < z )
     printf( "x is less than z\n" );  
 ```  
   
- 在此示例中，如果 `x` 比 `y` 小于，并 `y` 比 `z`更少，`printf` 函数调用打印消息。  如果 `x` 大于 `y`，则不会计算第二个操作数 \(`y < z`\) 且不会输出任何数据。  请注意这会导致出现问题，在第二个操作数依赖某些其他原因有副作用的情况下。  
+ 在此示例中，如果 `x` 小于 `y`，且 `y` 小于 `z`，则调用 `printf` 函数以输出消息。 如果 `x` 大于 `y`，则不会计算第二个操作数 (`y < z`) 且不会输出任何内容。 请注意，如果第二个操作数具有由于某个其他原因而产生的副作用，这可能会导致出现问题。  
   
 ```  
 printf( "%d" , (x == w || x == y || x == z) );  
 ```  
   
- 在此示例中，如果 `x` 与 `w`、`y` 或 `z` 相等，则为 `printf` 函数的第二个参数的计算为 true，值 1 打印。  否则，它计算结果为 false，打印数值 0。  只要其中的一个条件的计算结果为 true，计算停止。  
+ 在此示例中，如果 `x` 与 `w`、`y` 或 `z` 相等，则 `printf` 函数的第二个参数的计算结果将为 true，并输出值 1。 否则，它的计算结果将为 false，并打印值 0。 只要其中一个条件的计算结果为 true，计算便会停止。  
   
-## 请参阅  
- [逻辑与运算符：&&](../cpp/logical-and-operator-amp-amp.md)   
- [逻辑或运算符：&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)
+## <a name="see-also"></a>另请参阅  
+ [逻辑“与”运算符：&&](../cpp/logical-and-operator-amp-amp.md)   
+ [逻辑“或”运算符：&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

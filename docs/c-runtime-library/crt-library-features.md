@@ -47,10 +47,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="crt-library-features"></a>CRT 库功能
@@ -59,14 +59,14 @@ ms.lasthandoff: 03/07/2017
 ## <a name="c-run-time-libraries-crt"></a>C 运行时库 (CRT)  
  C 运行时库 (CRT) 是集成了 ISO C99 标准库的 C++ 标准库。 实现 CRT 的 Visual C++ 库支持用于 .NET 开发的本机代码开发、本机和托管混合代码以及纯托管代码。 所有版本的 CRT 都支持多线程开发。 大多数的库都支持通过静态链接将库直接链接到代码中，或通过动态链接让代码使用常用 DLL 文件。  
   
- 从 Visual Studio 2015 开始，CRT 已被重构为新的二进制文件。 通用 CRT (UCRT) 包含通过标准 C99 CRT 库导出的函数和全局函数。 UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 静态库、DLL 导入库和 UCRT 的头文件现在 Windows 10 SDK 中提供。 安装 Visual C++ 时，Visual Studio 安装程序将安装使用 UCRT 所需 Windows 10 SDK 的子集。 可以在 Visual Studio 2015 及更高版本支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 重新分发它，以便支持 Windows 10 以外的 Windows 版本。 有关详细信息，请参阅[重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)。  
+ 从 Visual Studio 2015 开始，CRT 已被重构为新的二进制文件。 通用 CRT (UCRT) 包含通过标准 C99 CRT 库导出的函数和全局函数。 UCRT 现为 Windows 组件，并作为 Windows 10 的一部分提供。 静态库、DLL 导入库和 UCRT 的头文件现在 Windows 10 SDK 中提供。 安装 Visual C++ 时，Visual Studio 安装程序将安装使用 UCRT 所需 Windows 10 SDK 的子集。 可以在 Visual Studio 2015 及更高版本支持的任何 Windows 版本上使用 UCRT。 可以使用 vcredist 重新分发它，以便支持 Windows 10 以外的 Windows 版本。 有关详细信息，请参阅 [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md)。  
   
  下表列出了实现 UCRT 的库。  
   
 |库|关联的 DLL|特征|选项|预处理器指令|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
 |libucrt.lib|无|将 UCRT 静态链接到你的代码。|**/MT**|_MT|  
-|libucrtd.lib|无|用于静态链接的 UCRT 调试版本。 不可再发行。|**/ MTd**|_DEBUG, _MT|  
+|libucrtd.lib|无|用于静态链接的 UCRT 调试版本。 不可再发行。|**/MTd**|_DEBUG, _MT|  
 |ucrt.lib|ucrtbase.dll|UCRT 的 DLL 导入库。|**/MD**|_MT, _DLL|  
 |ucrtd.lib|ucrtbased.dll|UCRT 调试版本的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/07/2017
 |库|关联的 DLL|特征|选项|预处理器指令|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
 |libvcruntime.lib|无|静态链接到你的代码。|**/MT**|_MT|  
-|libvcruntimed.lib|无|用于静态链接的调试版本。 不可再发行。|**/ MTd**|_MT, _DEBUG|  
+|libvcruntimed.lib|无|用于静态链接的调试版本。 不可再发行。|**/MTd**|_MT, _DEBUG|  
 |vcruntime.lib|vcruntime\<version>.dll|vcruntime 的 DLL 导入库。|**/MD**|_MT, _DLL|  
 |vcruntimed.lib|vcruntime\<version>d.dll|调试 vcruntime 的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|  
   
@@ -87,8 +87,8 @@ ms.lasthandoff: 03/07/2017
   
 |库|特征|选项|预处理器指令|  
 |-------------|---------------------|------------|-----------------------------|  
-|libcmt.lib|将本机 CRT 启动静态链接到你的代码。|**/MT**|_MT|  
-|libcmtd.lib|静态链接本机 CRT 启动的调试版本。 不可再发行。|**/ MTd**|_DEBUG, _MT|  
+|LIBCMT.lib|将本机 CRT 启动静态链接到你的代码。|**/MT**|_MT|  
+|libcmtd.lib|静态链接本机 CRT 启动的调试版本。 不可再发行。|**/MTd**|_DEBUG, _MT|  
 |msvcrt.lib|与 DLL UCRT 和 vcruntime 一起使用的本机 CRT 启动的静态库。|**/MD**|_MT, _DLL|  
 |msvcrtd.lib|与 DLL UCRT 和 vcruntime 一起使用的本机 CRT 启动调试版本的静态库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|  
 |msvcmrt.lib|与 DLL UCRT 和 vcruntime 一起使用的本机和托管混合 CRT 启动的静态库。|**/clr**||  
@@ -100,7 +100,7 @@ ms.lasthandoff: 03/07/2017
   
  使用静态链接的 CRT 意味着由 C 运行时库保存的任何状态信息对于 CRT 的该实例而言是本地的。 例如，如果当使用静态链接的 CRT 时使用 [strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l](../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md)，则 `strtok` 分析器的位置将与链接到另一个静态 CRT 实例的同一进程（但在不同的 DLL 或 EXE 中）的代码中使用的 `strtok` 状态无关。 相反，动态链接的 CRT 可共享动态链接到 CRT 的进程中的所有代码的状态。 如果使用这些函数新的更安全版本，这一问题则不适用；例如， `strtok_s` 就不存在此问题。  
   
- 由于通过链接到静态 CRT 构建的 DLL 将具有其自己的 CRT 状态，因此不建议以静态方式链接到 DLL 中的 CRT，除非特别需要和需了解这一后果。 例如，如果在加载 DLL（链接到其自己的静态 CRT）的可执行文件中调用 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md)，则转换器将不会捕获由 DLL 中的代码生成的任何硬件异常，但会捕获由主可执行文件中的代码生成的硬件异常。  
+ 由于通过链接到静态 CRT 构建的 DLL 将具有其自己的 CRT 状态，因此不建议以静态方式链接到 DLL 中的 CRT，除非特别需要和需了解这一后果。 例如，如果在加载 DLL（链接到其自己的静态 CRT）的可执行文件中调用 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) ，则转换器将不会捕获由 DLL 中的代码生成的任何硬件异常，但会捕获由主可执行文件中的代码生成的硬件异常。  
   
  如果使用 **/clr** 编译器开关，则将通过静态库 msvcmrt.lib 链接代码。 静态库将提供托管的代码和本机 CRT 之间的代理。 你无法使用静态链接的 CRT（ **/MT** 或 **/MTd** 选项）和 **/clr**。 请改用动态链接的库（**/MD** 或 **/MDd**）。  
   
@@ -116,19 +116,19 @@ ms.lasthandoff: 03/07/2017
   
 |C++ 标准库|特征|选项|预处理器指令|  
 |----------------------------|---------------------|------------|-----------------------------|  
-|LIBCPMT.LIB|多线程, 静态链接|**/MT**|_MT|  
+|LIBCPMT.lib|多线程, 静态链接|**/MT**|_MT|  
 |MSVCPRT.LIB|多线程动态链接（MSVCP\<version>.dll 的导入库）|**/MD**|_MT, _DLL|  
-|LIBCPMTD.LIB|多线程, 静态链接|**/ MTd**|_DEBUG, _MT|  
+|LIBCPMTD.LIB|多线程, 静态链接|**/MTd**|_DEBUG, _MT|  
 |MSVCPRTD.LIB|多线程动态链接（MSVCP\<version>D.DLL 的导入库）|**/MDd**|_DEBUG, _MT, _DLL|  
   
- 当构建项目的发行版时，默认情况下，将链接其中一个基本 C 运行时库（LIBCMT.LIB、MSVCMRT.LIB、MSVCRT.LIB），具体取决于你选择的编译器选项（多线程、DLL、/clr)。 如果在代码中包含其中一个 [C++ 标准库标头文件](../standard-library/cpp-standard-library-header-files.md)，则将在编译时通过 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 自动链接 C++ 标准库。 例如：  
+ 当构建项目的发行版时，默认情况下，将链接其中一个基本 C 运行时库（LIBCMT.LIB、MSVCMRT.LIB、MSVCRT.LIB），具体取决于你选择的编译器选项（多线程、DLL、/clr)。 如果在代码中包含其中一个 [C++ 标准库标头文件](../standard-library/cpp-standard-library-header-files.md)，则将在编译时通过 Visual C++ 自动链接 C++ 标准库。 例如:   
   
 ```  
 #include <ios>   
 ```  
   
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>如果应用程序使用多个 CRT 版本，将存在什么问题？  
- 如果有多个 DLL 或 EXE，则无论是否正在使用不同版本的 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]，你都可以具有多个 CRT。 例如，将 CRT 静态链接到多个 Dll 可能存在相同的问题。 遇到此静态 CRT 问题的开发人员已被告知使用 **/MD** 进行编译，以便使用 CRT DLL。 如果 Dll 跨 DLL 边界传递 CRT 资源，则可能遇到与 CRT 不匹配的问题，需要使用 Visual C++ 重新编译项目。  
+ 如果有多个 DLL 或 EXE，则无论是否正在使用不同版本的 Visual C++，你都可以具有多个 CRT。 例如，将 CRT 静态链接到多个 Dll 可能存在相同的问题。 遇到此静态 CRT 问题的开发人员已被告知使用 **/MD** 进行编译，以便使用 CRT DLL。 如果 Dll 跨 DLL 边界传递 CRT 资源，则可能遇到与 CRT 不匹配的问题，需要使用 Visual C++ 重新编译项目。  
   
  如果程序使用多个版本的 CRT，则跨 DLL 边界传递某些 CRT 对象（如文件句柄、区域设置和环境变量）时需注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
   

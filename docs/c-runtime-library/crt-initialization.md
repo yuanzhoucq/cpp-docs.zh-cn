@@ -1,32 +1,49 @@
 ---
 title: "CRT 初始化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRT 初始化 [C++]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# CRT 初始化
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a4542c86e571a338a08479feedbbb27347776137
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-本主题描述 CRT 如何初始化全局状态用本机代码。  
+---
+# <a name="crt-initialization"></a>CRT 初始化
+本主题介绍 CRT 如何在本机代码中初始化全局状态。  
   
- 默认方式，链接器包括 CRT 库，提供自己的启动代码。  启动此代码初始化 CRT 库，调用全局初始值设定项，然后调用。控制台应用程序用户提供的 `main` 函数。  
+ 默认情况下，链接器包括 CRT 库，此库提供其自己的启动代码。 此启动代码初始化 CRT 库，调用全局初始值设定项，然后调用用于控制台应用程序的用户提供的 `main` 函数。  
   
-## 初始化全局对象  
+## <a name="initializing-a-global-object"></a>初始化全局对象  
  考虑下列代码：  
   
 ```  
@@ -43,13 +60,13 @@ int main()
 }  
 ```  
   
- 根据标准，C\/C\+\+ `func()`，在 `main()` 完成之前，必须调用。  但谁调用了它？  
+ 根据 C/C++ 标准，在执行 `func()` 前必须调用 `main()`。 但哪个项来调用它呢？  
   
- 一种确定此将在 `func()`处设置断点，调试应用程序并且检查堆栈。  因为CRT源代码包含带有 Visual Studio，这也是可能的。  
+ 确定这一点的一个方法是在 `func()` 中设置断点，调试应用程序并检查堆栈。 由于 CRT 源代码是 Visual Studio 附带的，因此可以这样做。  
   
- 在您浏览时堆栈上的函数，您发现 CRT 通过函数指针列表循环并调用每一个。  这些函数类似于 `func()` 或类的实例构造函数。  
+ 在堆栈上浏览函数时，您将发现 CRT 正在循环访问函数指针的列表并在遇到每个指针时对其进行调用。 这些函数类似于 `func()` 或类实例的构造函数。  
   
- CRT 来获取函数指针列表从 Visual C\+\+ 编译器中。  在编译器显示全局初始化表达式时，它会在 `.CRT$XCU` 部分的动态初始值设定 \(其中 `CRT` 为部分名称，`XCU` 是组\)。  \(当 main.cpp编译成C\+\+ 文件而不是C 文件时\)若要获得这些动态初始值设定项列表中运行命令 **dumpbin \/all main.obj**，然后搜索 `.CRT$XCU` 节。  它类似于以下内容：  
+ CRT 从 Visual C++ 编译器中获取函数指针的列表。 当编译器发现全局初始值时，它将在 `.CRT$XCU` 部分（其中，`CRT` 是部分名称，`XCU` 是组名称）中生成一个动态初始值设定项。 若要获取这些动态初始值设定项的列表，请运行命令 dumpbin /all main.obj，然后搜索 `.CRT$XCU` 部分（在将 main.cpp 作为 C++ 文件而不是 C 文件编译时）。 它将类似于以下内容：  
   
 ```  
 SECTION HEADER #6  
@@ -79,15 +96,15 @@ RELOCATIONS #6
   
  CRT 定义两个指针：  
   
--   `.CRT$XCA`中的`__xc_a`  
+-   `__xc_a`中的`.CRT$XCA`  
   
--   `.CRT$XCZ`中的`__xc_z`  
+-   `__xc_z`中的`.CRT$XCZ`  
   
- 两组没有任何其他符号定义除 `__xc_a` 和 `__xc_z`。  
+ 除了 `__xc_a` 和 `__xc_z` 之外，两个组未定义任何其他符号。  
   
- 现在当链接器读取各种 `.CRT` 组中，将一节中将它们按字母顺序对它们。  这意味着在 `.CRT$XCU`将 Visual C\+\+ 编译器\) 的用户定义的表达式初始化全局 \(始终是在 `.CRT$XCA` 之后但在 `.CRT$XCZ`之前。  
+ 现在，当链接器读取各种 `.CRT` 组时，它会将这些组合并在一个部分中并按字母顺序对其进行排序。 这表示用户定义的全局初始值设定项（Visual C++ 编译器将其置于 `.CRT$XCU` 中）将始终出现在 `.CRT$XCA` 之后和 `.CRT$XCZ` 之前。  
   
- 节将类似于以下内容：  
+ 此部分类似于以下内容：  
   
 ```  
 .CRT$XCA  
@@ -99,7 +116,7 @@ RELOCATIONS #6
             __xc_z  
 ```  
   
- 因此，CRT 库使用 `__xc_a`，并且确定全局初始化表达式的开始和结尾。`__xc_z` 列出由于它们在内存中的布局方式，在图像加载后执行。  
+ CRT 库会使用 `__xc_a` 和 `__xc_z` 来确定全局初始值设定项列表的开头和结尾，原因在于这些设定项在图像加载后在内存中布局的方式。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

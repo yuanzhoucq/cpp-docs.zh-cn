@@ -1,49 +1,66 @@
 ---
 title: "文本和二进制流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "二进制流"
-  - "文本流"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- binary streams
+- text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 文本和二进制流
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b3f0a7603c2d3732c693c509e310a5a00a99300f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-文本流包含可被写入一个面向文本显示的一个或多个文本行，以便可读取。  当从文本流读取数据时，程序在每行末读取 `NL` \(换行符\)。  在写入文本流时，程序写入 `NL` 表示行的结尾。  若要在文件文本的目标环境中匹配不同的约定，库函数在程序和文本流之间修改数字和已传送字符的表示。  
+---
+# <a name="text-and-binary-streams"></a>文本和二进制流
+文本流包含一个或多个文本行，这些文本行可写入到面向文本的显示器中以供读取。 当从文本流中进行读取时，程序在每行末尾读取一个 `NL`（换行符）。 在写入文本流时，程序写入一个 `NL` 以表示行的结尾。 为了在目标环境中匹配不同的约定来表示文件中的文本，库函数可以更改在程序和文本流之间传输的字符的数量和表示。  
   
- 因此，文本流中的定位是有限的。  通过调用 [fgetpos](../c-runtime-library/reference/fgetpos.md)或[ftell](../c-runtime-library/reference/ftell-ftelli64.md)获取当前文件位置指示器。  通过调用 [fsetpos](../c-runtime-library/reference/fsetpos.md) 或 [fseek](../c-runtime-library/reference/fseek-fseeki64.md)，在此位置或流的开始或结尾处确定文本流位置。  可能不支持其他位置的更改。  
+ 因此，在文本流中定位是受限的。 可通过调用 [fgetpos](../c-runtime-library/reference/fgetpos.md) 或 [ftell](../c-runtime-library/reference/ftell-ftelli64.md) 获取当前文件位置指示符。 可以将文本流定位到通过这种方式获取的位置，或者通过调用 [fsetpos](../c-runtime-library/reference/fsetpos.md) 或 [fseek](../c-runtime-library/reference/fseek-fseeki64.md)，定位到文本流的开头或结尾。 可能无法很好地支持任何其他位置更改。  
   
- 对于最大可移植，程序不应编写：  
+ 为获得最大的可移植，程序不应写入：  
   
 -   空文件。  
   
 -   行尾的空白字符。  
   
--   部分行 \(在文件尾省略 `NL`\)。  
+-   部分行（通过在文件尾省略 `NL`）。  
   
--   除可打印字符、NL 和 `HT` \(横向制表符\) 之外的字符。  
+-   除可打印字符、NL 和 `HT`（水平制表符）之外的字符。  
   
- 如果您遵循这些规则，创建文件时，从文本流读取字符的序列 \(字节还是作为多字节字符\) 将与要写入的文本流的字符学列匹配。  否则，当关闭时，如果文件为空，库函数删除刚创建的文件。  也可以修改或删除写入文件的字符。  
+ 如果您遵循这些规则，则您从文本流读取的字符序列（作为字节或多字节字符）将与您创建文件时写入到文本流的字符序列匹配。 否则，如果您创建的文件在关闭时是空的，则库函数可以删除该文件。 或者库函数也可更改或删除您写入到该文件的字符。  
   
- 二进制流包含一个或多个字节的任意信息。  可以将任意对象存储的值写入（按字节）二进制流，当写入时，恰好读取对象的值。  库函数不修改程序和二进制流之间传输的字节。  然而，可以追加任意个数的null字节到二进制流的文件中。  程序必须处理这些附加在任何二进制流的末尾的 null 字节。  
+ 二进制流包含一个或多个字节的任意信息。 您可将存储在任意对象中的值写入到一个（面向字节的）二进制流，并读取您在编写二进制流时存储在该对象中的完全相同的内容。 库函数不会更改您在程序和二进制流之间传输的字节。 然而，库函数可以将任意数量的 null 字节追加到您使用二进制流编写的文件。 程序必须在任何二进制流的末尾处理这些附加的 null 字节。  
   
- 因此，定位在一个二进制流被很好地定义,除了相对于流的末尾的定位。  与文本流相似，可以获取和修改当前文件位置指示符。  此外，[ftell](../c-runtime-library/reference/ftell-ftelli64.md) 和 [fseek](../c-runtime-library/reference/fseek-fseeki64.md) 使用从流开始的偏移量的计数，因此，对这些偏移的整型算法产生可预知的结果。  
+ 因此，二进制流内的定位可以明确地进行定义，但相对于流的末尾的定位除外。 与文本流相似，可获取和更改当前的文件定位指示符。 此外，由 [ftell](../c-runtime-library/reference/ftell-ftelli64.md) 和 [fseek](../c-runtime-library/reference/fseek-fseeki64.md) 使用的偏移量从流的开头（字节 0）计算字节数，因此有关这些偏移量的整数算法将产生可预知的结果。  
   
- 字节流将文件视作字节序列。  在程序中，除了上面描述的可能的变化，流类似于字节序列。  
+ 字节流将文件视作一个字节序列。 在程序内部，除了上面所述的可能的更改之外，流类似于相同的字节序列。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件和流](../c-runtime-library/files-and-streams.md)

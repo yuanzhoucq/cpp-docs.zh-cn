@@ -1,36 +1,53 @@
 ---
 title: "字节和宽流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Byte and Wide Streams"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字节流"
-  - "宽流"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Byte and Wide Streams
+dev_langs:
+- C++
+helpviewer_keywords:
+- byte streams
+- wide streams
 ms.assetid: 61ef0587-4cbc-4eb8-aae5-4c298dbbc6f9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 字节和宽流
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c916caf1ee0b39567813921401ee02cbda83d222
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-字节流将文件视作字节序列。  在程序中，流与字节序列是相同的。  
+---
+# <a name="byte-and-wide-streams"></a>字节和宽流
+字节流将文件视作一个字节序列。 在程序中，字节流是相同的字节序列。  
   
- 相反，宽流将文件视作多字节字符的序列，可以具有丰富多样的编码规则。\(如之前描述的，文本和二进制文件仍然被读取和写入。\)在程序中，流类似于对应宽字符的相对应序列。  在标准 C 库内两种表示形式之间的转换。  大体上，转换规则通过修改类别 `LC_CTYPE` 调用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 被改变。  每宽流确定其转换规则，当它变成面向宽，并会保留这些规则，即使 随后更改 `LC_CTYPE` 类别。  
+ 相比之下，宽流将文件视作一个通用的多字节字符序列，可以具有广泛的编码规则。 （文本和二进制文件仍然如前所述进行读取和写入。）在程序中，宽流看起来像相应的宽字符序列。 两种表示形式之间的转换发生在标准 C 库中。 原则上，转换规则可以通过调用更改类别 `LC_CTYPE` 的 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 进行更改。 每个宽流在其变为面向宽度时确定其转换规则，并且即使类别 `LC_CTYPE` 随后发生更改也会保留这些规则。  
   
- 在宽流中定位遭受对于文本流相同的限制。  此外，文件位置指示符可能要面对的一个状态依赖编码。  通常，它包括流中字节偏移量和 `mbstate_t`类型的对象。  因此，唯一可靠的方式获取宽流中的文件的位置是通过调用 [fgetpos](../c-runtime-library/reference/fgetpos.md)，并且，唯一可靠的方法还原位置获得此方法是通过调用 [fsetpos](../c-runtime-library/reference/fsetpos.md)。  
+ 在宽流中进行定位会受到与文本流相同的限制。 此外，文件位置指示器可能必须处理依赖于状态的编码。 通常，它包含流内的字节偏移量和 `mbstate_t` 类型的对象。 因此，获取宽流中的文件位置的唯一可靠方法是调用 [fgetpos](../c-runtime-library/reference/fgetpos.md)，并且还原以这种方法获得的位置的唯一可靠方法是调用 [fsetpos](../c-runtime-library/reference/fsetpos.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [文件和流](../c-runtime-library/files-and-streams.md)   
- [setlocale、\_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)
+ [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

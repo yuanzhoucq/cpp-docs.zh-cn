@@ -1,38 +1,55 @@
 ---
 title: "杂注 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "杂注, 关于杂注"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- pragmas, about pragmas
 ms.assetid: 3ce8aced-53ee-4524-87d0-f998d6977ff5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 杂注
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 61cb8db1d0c39df154862210f1b14669f020ac67
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-**ANSI 3.8.6** 每个识别的 \#pragma 指令的行为。  
+---
+# <a name="pragmas"></a>杂注
+**ANSI 3.8.6** 每个识别的 #pragma 指令的行为。  
   
  以下 [C 杂注](../c-language/c-pragmas.md)是为 Microsoft C 编译器定义的：  
   
 |||||  
 |-|-|-|-|  
-|**alloc\_text**|**data\_seg**|**include\_alias**|`setlocale`|  
-|**auto\_inline**|**function**|**intrinsic**|**warning**|  
-|**check\_stack**|**hdrstop**|**message**||  
-|**code\_seg**|**inline\_depth**|**optimize**||  
-|**comment**|**inline\_recursion**|`pack`||  
+|**alloc_text**|**data_seg**|**include_alias**|`setlocale`|  
+|**auto_inline**|**函数**|**intrinsic**|**warning**|  
+|**check_stack**|**hdrstop**|**message**||  
+|**code_seg**|**inline_depth**|**optimize**||  
+|**comment**|**inline_recursion**|`pack`||  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [预处理指令](../c-language/preprocessing-directives.md)
