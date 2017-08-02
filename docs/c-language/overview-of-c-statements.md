@@ -47,15 +47,15 @@ C 语句由标记、表达式和其他语句组成。 构成另一个语句的�
   
 ## <a name="syntax"></a>语法  
  statement：  
- [labeled-statement](../c-language/goto-and-labeled-statements-c.md)  
+labeled-statement [](../c-language/goto-and-labeled-statements-c.md)  
   
- [compound-statement](../c-language/compound-statement-c.md)  
+ compound-statement[](../c-language/compound-statement-c.md)  
   
- [expression-statement](../c-language/expression-statement-c.md)  
+ expression-statement[](../c-language/expression-statement-c.md)  
   
- [selection-statement](../c-language/if-statement-c.md)  
+ selection-statement[](../c-language/if-statement-c.md)  
   
- [iteration-statement](../c-language/do-while-statement-c.md)  
+ iteration-statement[](../c-language/do-while-statement-c.md)  
   
  [jump-statement](../c-language/break-statement-c.md)  
   
