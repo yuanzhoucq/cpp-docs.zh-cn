@@ -684,6 +684,7 @@
 ## [编译器错误 C3418](compiler-error-c3418.md)
 ## [编译器错误 C3420](compiler-error-c3420.md)
 ## [编译器错误 C3421](compiler-error-c3421.md)
+## [编译器错误 C3446](compiler-error-c3446.md)
 ## [编译器错误 C3450](compiler-error-c3450.md)
 ## [编译器错误 C3451](compiler-error-c3451.md)
 ## [编译器错误 C3452](compiler-error-c3452.md)

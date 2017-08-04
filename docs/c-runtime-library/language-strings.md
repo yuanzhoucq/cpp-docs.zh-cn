@@ -1,101 +1,118 @@
 ---
 title: "语言字符串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.strings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "语言字符串"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.strings
+dev_langs:
+- C++
+helpviewer_keywords:
+- language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# 语言字符串
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: dfbd15b0da6e09b825a1562f006416e975603ab5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-`setlocale` 和 `_create_locale` 功能都可以使用操作系统中的 windows NLS API 支持语言而不需使用 Unicode 代码页。  有关以下操作系统版本所支持的语言的列表，请参见 [多区域语言支持 \(NLS\) API 引用](http://msdn.microsoft.com/goglobal/bb896001.aspx)。  语言字符串可以是所支持的语言列表栏中“语言”  和“语言名称缩写”  中的任何一个值。  C 运行时库的实现也支持这些语言字符串：  
+---
+# <a name="language-strings"></a>Language Strings
+`setlocale` 和 `_create_locale` 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言的列表，请参阅[区域语言支持 (NLS) API 参考](http://msdn.microsoft.com/goglobal/bb896001.aspx)。 语言字符串可以是支持语言列表的“语言”和“语言名称缩写”列中的任意值。 C 运行库实现也支持这些语言字符串：  
   
 |语言字符串|等效区域设置名称|  
-|-----------|--------------|  
-|american|en\-US|  
-|american english|en\-US|  
-|american\-english|en\-US|  
-|australian|en\-AU|  
-|belgian|nl\-BE|  
-|canadian|en\-CA|  
-|chh|zh\-HK|  
-|chi|zh\-SG|  
+|---------------------|----------------------------|  
+|american|zh-CN|  
+|american english|zh-CN|  
+|american-english|zh-CN|  
+|australian|en-AU|  
+|belgian|nl-BE|  
+|canadian|en-CA|  
+|chh|zh-HK|  
+|chi|zh-SG|  
 |chinese|zh|  
-|chinese\-hongkong|zh\-HK|  
-|chinese\-simplified|zh\-CN|  
-|chinese\-singapore|zh\-SG|  
-|chinese\-traditional|zh\-TW|  
-|dutch\-belgian|nl\-BE|  
-|english\-american|en\-US|  
-|english\-aus|en\-AU|  
-|english\-belize|en\-BZ|  
-|english\-can|en\-CA|  
-|english\-caribbean|en\-029|  
-|english\-ire|en\-IE|  
-|english\-jamaica|en\-JM|  
-|english\-nz|en\-NZ|  
-|english\-south africa|en\-ZA|  
-|english\-trinidad y tobago|en\-TT|  
-|english\-uk|en\-GB|  
-|english\-us|en\-US|  
-|english\-usa|en\-US|  
-|french\-belgian|fr\-BE|  
-|french\-canadian|fr\-CA|  
-|french\-luxembourg|fr\-LU|  
-|french\-swiss|fr\-CH|  
-|german\-austrian|de\-AT|  
-|german\-lichtenstein|de\-LI|  
-|german\-luxembourg|de\-LU|  
-|german\-swiss|de\-CH|  
-|爱尔兰英语|en\-IE|  
-|意大利语瑞士|it\-CH|  
-|挪威语|no|  
-|挪威语 \- 博克马尔语|nb\-NO|  
-|挪威语 \- 尼诺斯克语|nn\-NO|  
-|巴西（葡萄牙语）|pt\-BR|  
-|西班牙语 \- 阿根廷|es\-AR|  
-|西班牙语 \- 玻利维亚|es\-BO|  
-|西班牙语 \- 智利|es\-CL|  
-|西班牙语 \- 哥伦比亚|es\-CO|  
-|西班牙语 \- 哥斯达黎加|es\-CR|  
-|西班牙语 \- 多米尼加共和国|es\-DO|  
-|西班牙语 \- 多米尼加共和国|es\-EC|  
-|西班牙语\(萨尔瓦多\)|es\-SV|  
-|西班牙语 \- 危地马拉|es\-GT|  
-|spanish\-honduras|es\-HN|  
-|spanish\-mexican|es\-MX|  
-|spanish\-modern|es\-ES|  
-|spanish\-nicaragua|es\-NI|  
-|spanish\-panama|es\-PA|  
-|spanish\-paraguay|es\-PY|  
-|spanish\-peru|es\-PE|  
-|spanish\-puerto rico|es\-PR|  
-|spanish\-uruguay|es\-UY|  
-|spanish\-venezuela|es\-VE|  
-|swedish\-finland|sv\-FI|  
-|swiss|de\-CH|  
-|uk|en\-GB|  
-|us|en\-US|  
-|usa|en\-US|  
+|chinese-hongkong|zh-HK|  
+|chinese-simplified|zh-CN|  
+|chinese-singapore|zh-SG|  
+|chinese-traditional|zh-TW|  
+|dutch-belgian|nl-BE|  
+|english-american|zh-CN|  
+|english-aus|en-AU|  
+|english-belize|en-BZ|  
+|english-can|en-CA|  
+|english-caribbean|en-029|  
+|english-ire|en-IE|  
+|english-jamaica|en-JM|  
+|english-nz|en-NZ|  
+|english-south africa|en-ZA|  
+|english-trinidad y tobago|en-TT|  
+|english-uk|en-GB|  
+|english-us|zh-CN|  
+|english-usa|zh-CN|  
+|french-belgian|fr-BE|  
+|french-canadian|fr-CA|  
+|french-luxembourg|fr-LU|  
+|french-swiss|fr-CH|  
+|german-austrian|de-AT|  
+|german-lichtenstein|de-LI|  
+|german-luxembourg|de-LU|  
+|german-swiss|de-CH|  
+|irish-english|en-IE|  
+|italian-swiss|it-CH|  
+|norwegian|no|  
+|norwegian-bokmal|nb-NO|  
+|norwegian-nynorsk|nn-NO|  
+|portuguese-brazilian|pt-BR|  
+|spanish-argentina|es-AR|  
+|spanish-bolivia|es-BO|  
+|spanish-chile|es-CL|  
+|spanish-colombia|es-CO|  
+|spanish-costa rica|es-CR|  
+|spanish-dominican republic|es-DO|  
+|spanish-ecuador|es-EC|  
+|spanish-el salvador|es-SV|  
+|spanish-guatemala|es-GT|  
+|spanish-honduras|es-HN|  
+|spanish-mexican|es-MX|  
+|spanish-modern|es-ES|  
+|spanish-nicaragua|es-NI|  
+|spanish-panama|es-PA|  
+|spanish-paraguay|es-PY|  
+|spanish-peru|es-PE|  
+|spanish-puerto rico|es-PR|  
+|spanish-uruguay|es-UY|  
+|spanish-venezuela|es-VE|  
+|swedish-finland|sv-FI|  
+|swiss|de-CH|  
+|uk|en-GB|  
+|us|zh-CN|  
+|usa|zh-CN|  
   
-## 请参阅  
- [区域设置名称、语言和国家\/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [国家\/地区字符串](../c-runtime-library/country-region-strings.md)   
- [setlocale、\_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_create\_locale、\_wcreate\_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)
+## <a name="see-also"></a>另请参阅  
+ [区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
+ [国家/地区字符串 ](../c-runtime-library/country-region-strings.md)  
+ [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

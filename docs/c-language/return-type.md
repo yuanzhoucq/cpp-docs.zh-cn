@@ -1,49 +1,66 @@
 ---
 title: "返回类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据类型 [C++], 函数返回类型"
-  - "函数返回类型"
-  - "函数返回类型, 语法"
-  - "函数 [C++], 返回类型"
-  - "return 关键字 [C++], 函数返回类型"
-  - "返回值 [C++]"
-  - "返回值 [C++], Function 过程"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- function return types
+- return values [C++], function procedures
+- function return types, syntax
+- return values [C++]
+- data types [C++], function return types
+- return keyword [C++], function return types
+- functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 返回类型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 44079c7a9539673fb2d0b1d49e9c50acd51b237b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-函数的返回类型建立由该函数返回的值的大小和类型，并与以下语法中的 type\-specifier 相对应：  
+---
+# <a name="return-type"></a>返回类型
+函数的返回类型建立由该函数返回的值的大小和类型，并与以下语法中的 type-specifier 相对应：  
   
-## 语法  
- *function\-definition*:  
- *declaration\-specifiers*  opt *attribute\-seq* opt *declarator declaration\-list* opt *compound\-statement*  
+## <a name="syntax"></a>语法  
+ function-definition：  
+declaration-specifiers ** optattribute-seq optdeclarator declaration-list optcompound-statement  
   
- \/\* *attribute\-seq* 是 Microsoft 专用的 \*\/  
+ /\* *attribute-seq* 为 Microsoft 专用 */  
   
- *declaration\-specifiers*:  
- *storage\-class\-specifier declaration\-specifiers*  opt  
+ *declaration-specifiers*：  
+storage-class-specifier declaration-specifiers ** opt  
   
- *type\-specifier declaration\-specifiers*  opt  
+ type-specifier declaration-specifiers opt  
   
- *type\-qualifier declaration\-specifiers*  opt  
+ type-qualifier declaration-specifiers opt  
   
- *type\-specifier*:  
+ *type-specifier*：  
  **void**  
   
  **char**  
@@ -62,15 +79,15 @@ caps.handback.revision: 7
   
  **unsigned**  
   
- *struct\-or\-union\-specifier*  
+ *struct-or-union-specifier*  
   
- *enum\-specifier*  
+ *enum-specifier*  
   
- *typedef\-name*  
+ *typedef-name*  
   
- *type\-specifier* 可以指定任何基本、结构或联合类型。  如果不包含 *type\-specifier*，则假定返回类型 `int`。  
+ type-specifier 可以指定任何基本、结构或联合类型。 如果不包含 type-specifier，则假定返回类型 `int`。  
   
- 函数定义中给定的返回类型必须与程序中其他位置的函数声明中的返回类型相匹配。  当执行包含表达式的 `return` 语句时，函数将返回值。  计算该表达式，转换为返回值类型（如果需要）并返回到调用函数的点。  如果使用返回类型 `void` 声明函数，则包含表达式的返回语句会生成警告，并且不计算该表达式。  
+ 函数定义中给定的返回类型必须与程序中其他位置的函数声明中的返回类型相匹配。 当执行包含表达式的 `return` 语句时，函数将返回值。 计算该表达式，转换为返回值类型（如果需要）并返回到调用函数的点。 如果使用返回类型 `void` 声明函数，则包含表达式的返回语句会生成警告，并且不计算该表达式。  
   
  以下示例阐释函数返回值。  
   
@@ -90,7 +107,7 @@ STUDENT sortstu( STUDENT a, STUDENT b )
 }  
 ```  
   
- 该示例定义了带 `typedef` 声明的 `STUDENT` 类型并定义了函数 `sortstu` 以具有 `STUDENT` 返回类型。  函数选择并返回其两个结构参数之一。  在对函数的后续调用中，编译器会检查以确保参数类型是 `STUDENT`。  
+ 该示例定义了带 `STUDENT` 声明的 `typedef` 类型并定义了函数 `sortstu` 以具有 `STUDENT` 返回类型。 函数选择并返回其两个结构参数之一。 在对函数的后续调用中，编译器会检查以确保参数类型是 `STUDENT`。  
   
 > [!NOTE]
 >  通过传递指向结构的指针而不是整个结构来提高效率。  
@@ -110,9 +127,9 @@ char *smallstr( char s1[], char s2[] )
 }  
 ```  
   
- 此示例定义了一个返回指向字符数组的指针的函数。  该函数采用两个字符数组（字符串）作为参数，并返回指向两个字符串中较短的一个字符串的指针。  指向数组的指针将指向第一个数组元素并具有其类型；因此，该函数的返回类型是指向类型 `char` 的指针。  
+ 此示例定义了一个返回指向字符数组的指针的函数。 该函数采用两个字符数组（字符串）作为参数，并返回指向两个字符串中较短的一个字符串的指针。 指向数组的指针将指向第一个数组元素并具有其类型；因此，该函数的返回类型是指向类型 `char` 的指针。  
   
  在调用函数之前，您无需使用 `int` 返回类型声明函数，但建议使用原型，以便启用对参数和返回值的正确类型检查。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [C 函数定义](../c-language/c-function-definitions.md)

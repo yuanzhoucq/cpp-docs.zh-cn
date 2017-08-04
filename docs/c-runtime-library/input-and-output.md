@@ -1,43 +1,60 @@
 ---
 title: "输入和输出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "I/O [CRT]"
-  - "I/O [CRT], 例程"
-  - "I/O 例程"
-  - "输入例程"
-  - "输出例程"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- input routines
+- I/O [CRT]
+- I/O routines
+- I/O [CRT], routines
+- output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 输入和输出
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 79ede2f4d96f0dd985b5b68cf83e641cbba10f3e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-I\/O 进出文件和设备函数读取和写入数据。  文件 I\/O 操作。文本模式或二进制模式发生。  Microsoft 运行库有 I\/O 函数的三种类型：  
+---
+# <a name="input-and-output"></a>输入和输出
+I/O 函数在文件和设备中读取和写入数据。 文件 I/O 操作在文本模式或二进制模式下进行。 Microsoft 运行库有三种类型的 I/O 函数：  
   
--   [I\/O 流](../c-runtime-library/stream-i-o.md) 函数将作为单个字符的数据流。  
+-   [流 I/O](../c-runtime-library/stream-i-o.md) 函数将数据视为单个字符的流。  
   
--   [Low\-level I\/O](../c-runtime-library/low-level-i-o.md)函数直接调用操作系统的底层操作， 而不是I\/O流操作。  
+-   [低级别 I/O](../c-runtime-library/low-level-i-o.md) 函数将为低于流 I/O 提供的操作的低级别操作直接调用操作系统。  
   
--   [控制台和 I\/O 端口](../c-runtime-library/console-and-port-i-o.md) 函数读取或直接写入控制台 \(键盘和屏幕\) 或 I\/O 端口 \(如端口\) 打印。  
+-   [控制台和端口 I/O](../c-runtime-library/console-and-port-i-o.md) 函数直接在控制台（键盘和屏幕）或 I/O 端口（如打印机端口）中进行读取和写入。  
   
     > [!NOTE]
-    >  由于当前函数缓存，并且函数不是低级别，这两种函数的类型通常不兼容。  对于处理特定文件，请使用完全流入或低函数。  
+    >  由于流函数将进行缓冲而底层函数不会这样，因此这两种类型的函数通常是不兼容的。 若要处理特定文件，请以独占方式使用流函数或底层函数。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

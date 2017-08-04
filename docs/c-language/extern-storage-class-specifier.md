@@ -1,34 +1,51 @@
 ---
 title: "extern 存储类说明符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extern 关键字 [C]"
-  - "extern 关键字 [C], 存储类说明符"
-  - "外部链接, extern 修饰符"
-  - "外部链接, 存储类说明符"
-  - "存储类说明符, extern"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extern keyword [C]
+- storage class specifiers, extern
+- extern keyword [C], storage class specifier
+- external linkage, storage-class specifiers
+- external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# extern 存储类说明符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: be8f7e83ef2157157c2cea241eefe49453e0060f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-使用 `extern` 存储类说明符声明的变量是对名称与在程序的任何源文件的外部级别定义的名称相同的变量的引用。  内部 `extern` 声明用于使外部级别变量定义在块中可见。  除非在外部级别另有声明，否则使用 `extern` 关键字声明的变量仅在声明它的块中可见。  
+---
+# <a name="extern-storage-class-specifier"></a>extern 存储类说明符
+使用 `extern` 存储类说明符声明的变量是对名称与在程序的任何源文件的外部级别定义的名称相同的变量的引用。 内部 `extern` 声明用于使外部级别变量定义在块中可见。 除非在外部级别另有声明，否则使用 `extern` 关键字声明的变量仅在声明它的块中可见。  
   
-## 示例  
+## <a name="example"></a>示例  
  此示例阐释内部和外部级别的声明：  
   
 ```  
@@ -76,11 +93,11 @@ void other( void )
 }  
 ```  
   
- 在此示例中，变量 `i` 是使用初始值 1 在外部级别定义的。  `main` 函数中的 `extern` 声明用于声明对外部级别 `i` 的引用。  由于忽略了初始值设定项，因此默认情况下 **static** 变量 `a` 将初始化为 0。  对 `printf` 的调用将输出值 1、0、0 和 0。  
+ 在此示例中，变量 `i` 是使用初始值 1 在外部级别定义的。 `extern` 函数中的 `main` 声明用于声明对外部级别 `i` 的引用。 由于忽略了初始值设定项，因此默认情况下 static 变量 `a` 将初始化为 0。 对 `printf` 的调用将输出值 1、0、0 和 0。  
   
- 在 `other` 函数中，全局变量 `i` 的地址用于初始化 **static** 指针变量 `external_i`。  此用法之所以有效是因为全局变量具有 **static** 生存期，这意味着其地址在程序执行期间不会更改。  接下来，变量 `i` 将重新定义为初始值为 16 的局部变量。  此重新定义不会影响外部级别 `i` 的值（通过对局部变量使用该外部级别的名称来隐藏）。  全局 `i` 的值现在只能在此块中通过指针 `external_i` 间接访问。  将 **auto** 变量 `i` 的地址分配给指针的尝试无效，因为每次输入块时该地址可能都不一样。  变量 `a` 将声明为 **static** 变量并初始化为 2。  此 `a` 不与 `main` 中的 `a` 冲突，因为内部级别的 **static** 变量仅在声明它的块中可见。  
+ 在 `other` 函数中，全局变量 `i` 的地址用于初始化 static 指针变量 `external_i`。 此用法之所以有效是因为全局变量具有 static 生存期，这意味着其地址在程序执行期间不会更改。 接下来，变量 `i` 将重新定义为初始值为 16 的局部变量。 此重新定义不会影响外部级别 `i` 的值（通过对局部变量使用该外部级别的名称来隐藏）。 全局 `i` 的值现在只能在此块中通过指针 `external_i` 间接访问。 将 auto 变量 `i` 的地址分配给指针的尝试无效，因为每次输入块时该地址可能都不一样。 变量 `a` 将声明为 static 变量并初始化为 2。 此 `a` 不与 `main` 中的 `a` 冲突，因为内部级别的 static 变量仅在声明它们的块中可见。  
   
- 变量 `a` 增加了 2，并给出结果 4。  如果在同一程序中再次调用 `other` 函数，则 `a` 的初始值将为 4。  当程序退出然后重新输入声明内部 **static** 变量的块时，这些变量将保留其值。  
+ 变量 `a` 增加了 2，并给出结果 4。 如果在同一程序中再次调用 `other` 函数，则 `a` 的初始值将为 4。 当程序退出然后重新输入声明内部 static 变量的块时，这些变量将保留其值。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [内部级别声明的存储类说明符](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

@@ -1,139 +1,156 @@
 ---
 title: "errno 常量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ENOEXEC"
-  - "ENOMEM"
-  - "E2BIG"
-  - "STRUNCATE"
-  - "ENOENT"
-  - "EMFILE"
-  - "EBADF"
-  - "EDEADLOCK"
-  - "EXDEV"
-  - "EILSEQ"
-  - "EINVAL"
-  - "EDOM"
-  - "EACCES"
-  - "ERANGE"
-  - "ENOSPC"
-  - "EAGAIN"
-  - "EEXIST"
-  - "ECHILD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E2BIG 常量"
-  - "EACCES 常量"
-  - "EAGAIN 常量"
-  - "EBADF 常量"
-  - "ECHILD 常量"
-  - "EDEADLOCK 常量"
-  - "EDOM 常量"
-  - "EEXIST 常量"
-  - "EILSEQ 常量"
-  - "EINVAL 常量"
-  - "EMFILE 常量"
-  - "ENOENT 常量"
-  - "ENOEXEC 常量"
-  - "ENOMEM 常量"
-  - "ENOSPC 常量"
-  - "ERANGE 常量"
-  - "errno 常量"
-  - "EXDEV 常量"
-  - "STRUNCATE 常量"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ENOEXEC
+- ENOMEM
+- E2BIG
+- STRUNCATE
+- ENOENT
+- EMFILE
+- EBADF
+- EDEADLOCK
+- EXDEV
+- EILSEQ
+- EINVAL
+- EDOM
+- EACCES
+- ERANGE
+- ENOSPC
+- EAGAIN
+- EEXIST
+- ECHILD
+dev_langs:
+- C++
+helpviewer_keywords:
+- ENOEXEC constant
+- EBADF constant
+- EAGAIN constant
+- EINVAL constant
+- ENOENT constant
+- errno constants
+- E2BIG constant
+- EMFILE constant
+- EDEADLOCK constant
+- ENOSPC constant
+- EDOM constant
+- ENOMEM constant
+- EACCES constant
+- EEXIST constant
+- STRUNCATE constant
+- ERANGE constant
+- ECHILD constant
+- EXDEV constant
+- EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# errno 常量
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 993d61cf94df06c01623f231f3a4915d0ec8cc41
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-## 语法  
+---
+# <a name="errno-constants"></a>errno 常量
+## <a name="syntax"></a>语法  
   
 ```  
   
 #include <errno.h>  
 ```  
   
-## 备注  
- **errno** 值是在各状态错误情况下为 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 分配的常数。  
+## <a name="remarks"></a>备注  
+ errno 值是在出现各种错误条件时分配给 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的常量。  
   
- ERRNO.H 包含 **errno** 值的定义。  但是，并非所有在 ERRNO.H 的定义都可以在 32 位 Windows 操作系统上使用。  某些 ERRNO.H 中的值仍保持与 UNIX 系列操作系统的兼容性。  
+ ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供定义都可用于 32 位 Windows 操作系统。 ERRNO.H 中的某些值的存在是为了保持与 UNIX 系列操作系统的兼容性。  
   
- 在 32 位 Windows 操作系统的 **errno** 值是XENIX 系统中 **errno**值的子集。  因此，**errno** 值不一定与从 Windows 操作系统调用返回的实际错误代码相同。  若要访问实际操作系统错误代码，请使用 [\_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 变量，此变量包含该值。  
+ 32 位 Windows 操作系统中的 errno 值是 XENIX 系统中的 errno 值的子集。 因此，errno 值不一定与由从 Windows 操作系统进行的系统调用返回的实际错误代码相同。 若要访问实际操作系统错误代码，请使用包含此值的 _doserrno[](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 变量。  
   
- 下列**errno** 值是受支持的：  
+ 下列 errno 值受支持：  
   
  **ECHILD**  
- 未指定的进程。  
+ 没有生成的进程。  
   
  **EAGAIN**  
- 没有其他进程。  尝试创建新进程失败，因为没有更多的进程槽，或者没有足够的内存，或已到达最大嵌套级。  
+ 没有其他进程。 尝试创建新进程失败，原因是没有更多的进程槽、没有足够的内存或者已到达最大嵌套级别。  
   
  **E2BIG**  
- 参数列表太长。  
+ 自变量列表太长。  
   
  **EACCES**  
- 权限被拒绝。  文件权限的设置不允许指定的访问权限。  此错误指示尝试用不兼容的文件属性的方法访问一个文件 \(或，在某些情况下，是目录\)。  
+ 权限被拒绝。 文件的权限设置不允许指定的访问权限。 此错误表示尝试通过与某个文件的特性不兼容的方式访问该文件（或者，在某些情况下为目录）。  
   
- 例如，当尝试从未打开的文件读取，编写只读文件，或者打开目录而不是文件时，发生该错误。  在 MS\-DOS 操作系统版本 3.0 和以后的版本，**EACCES** 也可能表示存在阻塞或共享冲突。  
+ 例如，当尝试从未打开的文件读取、打开现有的只读文件进行写入或打开目录而不是文件时，将会发生错误。 在 MS-DOS 操作系统版本 3.0 以及更高版本下，EACCES 也可能表示锁定或共享冲突。  
   
- 尝试重命名文件或目录重命名来移除现有的目录时也将发生错误。  
+ 在尝试重命名文件或目录或者删除现有目录时也可能发生错误。  
   
  **EBADF**  
- 错误文件号。  有两种可能原因：1\) 被指定的文件描述符不是有效值或不涉及打开文件。2\) 尝试对只读文件或访问设备进行写入操作。  
+ 文件编号错误。 可能有两种原因：1) 指定的文件描述符不是有效值，或者未引用打开的文件。 2) 尝试写入到已打开进行只读访问的文件或设备。  
   
- **死锁**  
- 会发生资源死锁。  算术函数的参数不在函数域中。  
+ **EDEADLOCK**  
+ 将会发生资源死锁。 数学函数的自变量未在函数域中。  
   
  **EDOM**  
- 算术参数。  
+ 数学自变量。  
   
  **EEXIST**  
- 文件存在。  尝试创建已存在的文件。  例如，在 **\_open**调用中，指定**\_O\_CREAT** 和 **\_O\_EXCL**标志，但命名文件已存在。  
+ 文件存在。 尝试创建已存在的文件。 例如，在 _open 调用中指定 _O_CREAT 和 _O_EXCL 标志，但命名的文件已存在。  
   
  **EILSEQ**  
- 非法字节序列 \(例如，MBCS 字符串\)。  
+ 非法字节序列（例如，在 MBCS 字符串中）。  
   
  **EINVAL**  
- 参数无效。  给定函数某个参数的无效值。  例如，在文件的开头之前确定文件指针时，给定原点值 \(通过对 **fseek**的调用\)。  
+ 无效的参数。 为某个函数的自变量之一给定了无效值。 例如，在定位文件指针时为原始位置给定的值（通过调用 fseek）位于文件头的前面。  
   
  **EMFILE**  
- 许多开启文件。  没有其他文件说明符是可用的，因此，无法打开其他文件。  
+ 打开的文件太多。 没有更多文件说明符可用，因此无法打开更多文件。  
   
  **ENOENT**  
- 不存在这样的文件或目录。  指定的文件或目录不存在或无法找到。  只要已指定的文件不存在或路径中的组件不指定现有的目录，都发生此消息。  
+ 没有此文件或目录。 指定的文件或目录不存在或无法找到。 只要指定的文件不存在或路径的组件未指定现有的目录，就可能出现此消息。  
   
  **ENOEXEC**  
- 可执行格式错误。  尝试执行一个不可执行的文件或有一个无效的文件格式的文件。  
+ 执行格式错误。 尝试执行不可执行的文件或具有无效的可执行文件格式的文件。  
   
  **ENOMEM**  
- 不够核心。  没有足够的内存用于尝试的运算符。  例如，当执行子进程的内存不足时，或者，当**\_getcwd** 调用的分配请求未得到满足时，此消息会出现。  
+ 内核不够。 无法为尝试的运算符提供足够的内存。 例如，当可用于执行子进程的内存不足时，或者当无法满足 _getcwd 调用中的分配请求时，就会出现此消息。  
   
  **ENOSPC**  
- 设备上未留下任何空间。  在设备上，没有其他空间用于编写 \(例如，磁盘已满时\)。  
+ 设备上没有剩余空间。 设备上没有可供写入的其他空间（例如，当磁盘已满时）。  
   
  **ERANGE**  
- 结果太大。  算术函数的参数太大，导致结果发生部分或全部有效位丢失。  当参数比预期值大得多时 \(例如，当**\_getcwd**的*缓冲区* 的参数比预期长时\)，此错误也会在其他函数出现。  
+ 结果太大。 数学函数的自变量太大，造成结果中的有效位部分或全部丢失。 当参数大于预期值时（例如，当 _getcwd 的 buffer 参数大于预期值时），在其他函数中也可能发生此错误。  
   
  **EXDEV**  
- 跨设备链接。  尝试将文件移至不同的设备 \(使用 **rename** 函数\)。  
+ 跨设备链接。 尝试将文件移至不同的设备（使用 rename 函数）。  
   
  **STRUNCATE**  
- 字符串复制或串联导致字符串截断。  请参见[\_TRUNCATE](../c-runtime-library/truncate.md)。  
+ 字符串复制或串联导致字符串被截断。 请参阅 [_TRUNCATE](../c-runtime-library/truncate.md)。  
   
- 下列值支持 Posix 的兼容性。  它们非 Posix 系统上的需要值。  
+ 下列值支持 Posix 的兼容性。 它们都是非 Posix 系统上必需的值。  
   
 ```  
 #define E2BIG [argument list too long]  
@@ -217,5 +234,5 @@ caps.handback.revision: 8
 #define EXDEV [cross device link]  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [全局常量](../c-runtime-library/global-constants.md)

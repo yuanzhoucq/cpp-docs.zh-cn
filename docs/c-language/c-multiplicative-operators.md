@@ -1,67 +1,84 @@
 ---
 title: "C 乘法运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "% 运算符"
-  - "/ 运算符"
-  - "/ 运算符, 乘法运算符"
-  - "算术运算符 [C++], 乘法运算符"
-  - "乘法运算符 [C++], 乘法运算符"
-  - "运算符 [C], 乘法"
-  - "余数运算符 (%)"
-  - "斜杠 (/) 运算符"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- arithmetic operators [C++], multiplicative operators
+- / operator
+- / operator, multiplicative operators
+- remainder operator (%)
+- operators [C], multiplication
+- '% operator'
+- slash (/) operator
+- multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# C 乘法运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d56f7d93adf831a72b885919b0b2a4063f03ef41
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-乘法运算符执行乘法 \(**\***\)、除法 \(**\/**\) 和余数 \(`%`\) 运算。  
+---
+# <a name="c-multiplicative-operators"></a>C 乘法运算符
+乘法运算符执行乘法 (\*)、除法 (/) 和余数 (`%`) 运算。  
   
  **语法**  
   
- *multiplicative\-expression*:  
- *cast\-expression*  
+ *multiplicative-expression*：  
+ *cast-expression*  
   
- *multiplicative\-expression*  **\***  *cast\-expression*  
+ *multiplicative-expression*  **\***  *cast-expression*  
   
- *multiplicative\-expression*  **\/**  *cast\-expression*  
+ *multiplicative-expression*  **/**  *cast-expression*  
   
- *multiplicative\-expression*  **%**  *cast\-expression*  
+ *multiplicative-expression*  **%**  *cast-expression*  
   
- 余数操作符 \(`%`\) 的操作数必须是整数。  乘法 \(**\***\) 和除法 \(**\/**\) 运算符可采用整型或浮点类型操作数；操作数的类型可以是不同的。  
+ 余数操作符 (`%`) 的操作数必须是整数。 乘法 (\*) 和除法 (/) 运算符可采用整型或浮点类型操作数；操作数的类型可以是不同的。  
   
- 乘法运算符对操作数执行常用算术转换。  结果的类型是转换后操作数的类型。  
+ 乘法运算符对操作数执行常用算术转换。 结果的类型是转换后操作数的类型。  
   
 > [!NOTE]
 >  由于在溢出或下溢条件不提供由乘法运算符执行的转换，因此，如果乘法操作的结果在转换后不能用操作数类型表示，则信息可能丢失。  
   
  C 乘法运算符的描述如下：  
   
-|运算符|说明|  
-|---------|--------|  
+|运算符|描述|  
+|--------------|-----------------|  
 |**\***|乘法运算符使其两个操作数相乘。|  
-|**\/**|除法运算符使第一个操作数除以第二个操作数。  如果两个整数操作数相除，结果不是整数，则根据下列规则截断它：|  
-||-   根据 ANSI C 标准，被 0 除的结果是不确定的。  Microsoft C 编译器将在编译时或运行时生成错误。|  
+|**/**|除法运算符使第一个操作数除以第二个操作数。 如果两个整数操作数相除，结果不是整数，则根据下列规则截断它：|  
+||-   根据 ANSI C 标准，被 0 除的结果是不确定的。 Microsoft C 编译器将在编译时或运行时生成错误。|  
 ||-   如果两个操作数都为正或无符号，则结果将截断到 0。|  
-||-   如果其中一个操作数为负，则不管操作结果是小于或等于代数商的最大整数还是大于或等于代数商的最小整数，结果均为定义的实现。（请参阅下面的 Microsoft 专用部分。）|  
-|`%`|第一个操作数除以第二个操作数时，余数运算符的结果是余数。  如果除法不精确，则结果将由下列规则确定：|  
+||-   如果其中一个操作数为负，则不管操作结果是小于或等于代数商的最大整数还是大于或等于代数商的最小整数，结果均为定义的实现。 （请参阅下面的 Microsoft 专用部分。）|  
+|`%`|第一个操作数除以第二个操作数时，余数运算符的结果是余数。 如果除法不精确，则结果将由下列规则确定：|  
 ||-   如果右操作数为零，则结果是不确定的。|  
 ||-   如果两个操作数均为正或无符号，则结果为正。|  
-||-   如果其中一个操作数为负，并且结果不精确，则结果将是定义的实现。（请参阅下面的 Microsoft 专用部分。）|  
+||-   如果其中一个操作数为负，并且结果不精确，则结果将是定义的实现。 （请参阅下面的 Microsoft 专用部分。）|  
   
  **Microsoft 专用**  
   
@@ -71,7 +88,7 @@ caps.handback.revision: 8
   
  **结束 Microsoft 专用**  
   
-## 示例  
+## <a name="examples"></a>示例  
  如下所示的声明将用于下列示例：  
   
 ```  
@@ -85,13 +102,13 @@ double x = 2.0, y;
 y = x * i;  
 ```  
   
- 在此示例中，`x` 乘以 `i` 将得到值 20.0。  结果为 **double** 类型。  
+ 在此示例中，`x` 乘以 `i` 将得到值 20.0。 结果为 double 类型。  
   
 ```  
 n = i / j;  
 ```  
   
- 在此示例中，10 除以 3。  结果将被截断到 0，同时产生整数值 3。  
+ 在此示例中，10 除以 3。 结果将被截断到 0，同时产生整数值 3。  
   
 ```  
 n = i % j;  
@@ -101,7 +118,7 @@ n = i % j;
   
  **Microsoft 专用**  
   
- 余数的符号与被除数的符号相同。  例如：  
+ 余数的符号与被除数的符号相同。 例如：  
   
 ```  
 50 % -6 = 2  
@@ -112,5 +129,5 @@ n = i % j;
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [乘法运算符和取模运算符](../cpp/multiplicative-operators-and-the-modulus-operator.md)

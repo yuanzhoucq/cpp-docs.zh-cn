@@ -1,66 +1,83 @@
 ---
 title: "C 按位运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& 运算符, 按位运算符"
-  - "^ 运算符"
-  - "^ 运算符, 按位运算符"
-  - "| 运算符, 按位运算符"
-  - "“and”运算符 (&amp;)"
-  - "AND 运算符"
-  - "按位运算符"
-  - "按位运算符, Visual C"
-  - "运算符 [C], 按位"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- '| operator, bitwise operators'
+- bitwise operators, Visual C
+- bitwise operators
+- operators [C], bitwise
+- ^ operator, bitwise operators
+- AND operator
+- ampersand operator (&)
+- ^ operator
+- '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# C 按位运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 620177616e8b60d910d064d7c345633ac5155020
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-位运算符执行按位与 \(**&**\)，按位异或 \(**^**\)，按位或 \(       **&#124;** ）操作。  
+---
+# <a name="c-bitwise-operators"></a>C 按位运算符
+按位运算符执行按位“与”(&)、按位“异或”(^) 和按位“与或”(&#124;) 运算。  
   
  **语法**  
   
- *“与”表达式*：  
- *相等表达式*  
+ *AND-expression*：  
+ *equality-expression*  
   
- *“与”表达式*  **&** *相等表达式*  
+ *AND-expression*  **&**  *equality-expression*  
   
- *独占的“或”表达式*:  
- *“与”表达式*  
+ *exclusive-OR-expression*：  
+ *AND-expression*  
   
- *独占的“或”表达式* **^**  *“与”表达式*  
+ *exclusive-OR-expression*  **^**  *AND-expression*  
   
- *独占的”或“表达式*：  
- *独占的“或”表达式*  
+ *inclusive-OR-expression*:  
+ *exclusive-OR-expression*  
   
- *独占的”或“表达式* &#124; *独占的“或”表达式*  
+ inclusive-OR-expression &#124; exclusive-OR-expression  
   
- 按位操作的操作符必须是整型的，但是，他们的类型可以不同。  这些运算符执行常见算术转换；该结果的类型是转换后操作数的类型。  
+ 按位运算符的操作数必须具有整数类型，但其类型会不同。 这些运算符执行常用算术转换；结果的类型是转换后操作数的类型。  
   
- C 位运算符如下所述:  
+ C 按位运算符如下所述：  
   
 |运算符|描述|  
-|---------|--------|  
-|**&**|位 AND 运算符 \(&\) 将第一操作数的每一位与第二操作数的相应位相比较。  如果任何一个位是 1，则设置对应的结果位为 1。  否则，相应的结果位设置为 0。|  
-|**^**|按位“异或”运算符 \(^\) 将第一操作数的每一位与第二操作数的相应位相比较。  如果一个位是 0，另一个位是 1，则设置对应的结果位为 1。  否则，相应的结果位设置为 0。|  
-|**&#124;**|按位“异或”运算符 \(^\) 将第一操作数的每一位与第二操作数的相应位相比较。  如果任何一个位是 1，则设置对应的结果位为 1。  否则，相应的结果位设置为 0。|  
+|--------------|-----------------|  
+|**&**|按位“与”运算符将其第一操作数的每个位与其第二操作数的相应位进行比较。 如果两个位均为 1，则对应的结果位将设置为 1。 否则，将对应的结果位设置为 0。|  
+|**^**|按位“异或”运算符将其第一操作数的每个位与其第二操作数的相应位进行比较。 如果一个位是 0，另一个位是 1，则相应的结果位将设置为 1。 否则，将对应的结果位设置为 0。|  
+|**&#124;**|按位“与或”运算符将其第一操作数的每个位与第二操作数的相应位进行比较。 如果其中一个位是 1，则将对应的结果位设置为 1。 否则，将对应的结果位设置为 0。|  
   
-## 示例  
- 这些声明为以下三个示例使用：  
+## <a name="examples"></a>示例  
+ 这些声明用于以下三个示例：  
   
 ```  
 short i = 0xAB00;  
@@ -70,7 +87,7 @@ short n;
 n = i & j;  
 ```  
   
- 该结果分配给在的第一个示例中的 `n` 与`i` \(0xAB00 十六进制\)相同。  
+ 第一个示例中的分配给 `n` 的结果与 `i` 相同（0xAB00 十六进制）。  
   
 ```  
 n = i | j;  
@@ -78,11 +95,11 @@ n = i | j;
 n = i ^ j;  
 ```  
   
- 按位或在第二个示例结果 0xABCD \(十六进制\)，但当按位异或时在第三个示例生成 0xCD \(十六进制\)。  
+ 第二个示例中的按位“与或”生成值 0xABCD（十六进制），而第三个示例中的按位“异或”生成 0xCD（十六进制）。  
   
  **Microsoft 专用**  
   
- 在带符号整数的操作的结果根据 ANSI C 标准实现按位定义。  对于基于 C 编译器，带符号整数的操作按位按位工作方式和在无符号整数的操作相同。  例如， `-16 & 99` 也可表示在十进制中表示为  
+ 根据 ANSI C 标准，对有符号整数进行的按位运算的结果是实现定义的。 对于 Microsoft C 编译器，对有符号整数进行的按位运算与对无符号整数进行的按位运算的工作原理相同。 例如，`-16 & 99` 可用二进制格式表示  
   
 ```  
   11111111 11110000  
@@ -91,11 +108,11 @@ n = i ^ j;
   00000000 01100000  
 ```  
   
- 按位 AND 的结果为十进制的96。  
+ 按位 AND 的结果为 96（十进制）。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
- [按位与运算符：&](../cpp/bitwise-and-operator-amp.md)   
- [按位异或运算符：^](../cpp/bitwise-exclusive-or-operator-hat.md)   
- [按位与或运算符：&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)
+## <a name="see-also"></a>另请参阅  
+ [按位“与”运算符：&](../cpp/bitwise-and-operator-amp.md)   
+ [按位“异或”运算符：^](../cpp/bitwise-exclusive-or-operator-hat.md)   
+ [按位“与或”运算符：&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

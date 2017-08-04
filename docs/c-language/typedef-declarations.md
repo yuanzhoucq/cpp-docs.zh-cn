@@ -1,48 +1,65 @@
 ---
 title: "Typedef 声明 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "声明, typedef"
-  - "typedef 声明"
-  - "类型 [C], 声明"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarations, typedef
+- typedef declarations
+- types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Typedef 声明
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b830afd21fafa487c006c1a6035ffdce0bc8dd7c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-typedef 声明是具有作为存储类的 typedef 的声明。  声明符将成为新类型。  您可以使用 typedef 声明为已由 C 定义的类型或您已声明的类型构造更短和更有意义的名称。  利用 Typedef 名称，您可以封装可能会发生更改的实现详细信息。  
+---
+# <a name="typedef-declarations"></a>Typedef 声明
+typedef 声明是具有作为存储类的 typedef 的声明。 声明符将成为新类型。 您可以使用 typedef 声明为已由 C 定义的类型或您已声明的类型构造更短和更有意义的名称。 利用 Typedef 名称，您可以封装可能会发生更改的实现详细信息。  
   
  typedef 声明的解释方式与变量或函数声明的解释方式相同，只不过标识符没有假定由声明指定的类型，而是成为了该类型的同义词。  
   
-## 语法  
- `declaration`:  
- *declaration\-specifiers init\-declarator\-list*  opt **;**  
+## <a name="syntax"></a>语法  
+ `declaration`：  
+declaration-specifiers init-declarator-list ** opt;  
   
- *declaration\-specifiers*:  
- *storage\-class\-specifier declaration\-specifiers*  opt  
+ *declaration-specifiers*：  
+storage-class-specifier declaration-specifiers ** opt  
   
- *type\-specifier declaration\-specifiers*  opt  
+ type-specifier declaration-specifiers opt  
   
- *type\-qualifier declaration\-specifiers*  opt  
+ type-qualifier declaration-specifiers opt  
   
- *storage\-class\-specifier*:  
+ *storage-class-specifier*：  
  `typedef`  
   
- *type\-specifier*:  
+ *type-specifier*：  
  **void**  
   
  **char**  
@@ -61,18 +78,18 @@ typedef 声明是具有作为存储类的 typedef 的声明。  声明符将成�
   
  **unsigned**  
   
- *struct\-or\-union\-specifier*  
+ *struct-or-union-specifier*  
   
- *enum\-specifier*  
+ *enum-specifier*  
   
- *typedef\-name*  
+ *typedef-name*  
   
- *typedef\-name*:  
+ *typedef-name*：  
  *identifier*  
   
- 请注意，typedef 声明不会创建类型，  而是创建现有类型的同义词或可通过其他方式指定的类型的名称。  当使用 typedef 名称作为类型说明符时，可以将其与特定的类型说明符组合，但不可以将其与其他类型说明符组合。  可接受的修饰符包括 **const** 和 `volatile`。  
+ 请注意，typedef 声明不会创建类型， 而是创建现有类型的同义词或可通过其他方式指定的类型的名称。 当使用 typedef 名称作为类型说明符时，可以将其与特定的类型说明符组合，但不可以将其与其他类型说明符组合。 可接受的修饰符包括 const 和 `volatile`。  
   
- Typedef 名称与普通标识符共享命名空间（有关详细信息，请参阅[命名空间](../c-language/name-spaces.md)）。  因此，程序可以有一个 typedef 名称和一个具有相同名称的本地范围标识符。  例如：  
+ Typedef 名称与普通标识符共享命名空间（有关详细信息，请参阅[命名空间](../c-language/name-spaces.md)）。 因此，程序可以有一个 typedef 名称和一个具有相同名称的本地范围标识符。 例如：  
   
 ```  
 typedef char FlagType;  
@@ -87,7 +104,7 @@ int myproc( int )
 }  
 ```  
   
- 当通过与 typedef 相同的名称声明本地范围标识符时，或者在同一范围内或内部范围内声明结构或联合的成员时，必须指定类型说明符。  以下示例演示了此约束：  
+ 当通过与 typedef 相同的名称声明本地范围标识符时，或者在同一范围内或内部范围内声明结构或联合的成员时，必须指定类型说明符。 以下示例演示了此约束：  
   
 ```  
 typedef char FlagType;  
@@ -106,15 +123,15 @@ const int FlagType;  /* Type specifier required */
 const FlagType;      /* Incomplete specification */  
 ```  
   
- 由于 `FlagType` 被当做该类型的一部分，因此没有要重新声明的标识符。  此声明被视为非法声明，例如  
+ 由于 `FlagType` 被当做该类型的一部分，因此没有要重新声明的标识符。 此声明被视为非法声明，例如  
   
 ```  
 int;  /* Illegal declaration */  
 ```  
   
- 可以使用 typedef 声明任何类型，包括指针、函数和数组类型。  只要定义具有与声明相同的可见性，那么在定义结构或联合类型之前，您就可以为指向结构或联合类型的指针声明 typedef 名称。  
+ 可以使用 typedef 声明任何类型，包括指针、函数和数组类型。 只要定义具有与声明相同的可见性，那么在定义结构或联合类型之前，您就可以为指向结构或联合类型的指针声明 typedef 名称。  
   
- Typedef 名称可用于提高代码可读性。  `signal` 的所有以下三个声明指定了完全相同的类型，第一个声明没有使用任何 typedef 名称。  
+ Typedef 名称可用于提高代码可读性。 `signal` 的所有以下三个声明指定了完全相同的类型，第一个声明没有使用任何 typedef 名称。  
   
 ```  
 typedef void fv( int ), (*pfv)( int );  /* typedef declarations */  
@@ -124,14 +141,14 @@ fv *signal( int, fv * );   /* Uses typedef type */
 pfv signal( int, pfv );    /* Uses typedef type */  
 ```  
   
-## 示例  
+## <a name="examples"></a>示例  
  以下示例演示了 typedef 声明：  
   
 ```  
 typedef int WHOLE; /* Declares WHOLE to be a synonym for int */  
 ```  
   
- 请注意，`WHOLE` 现在可用于变量声明，如 `WHOLE i;` 或 `const WHOLE i;`。  但是，声明 `long WHOLE i;` 是非法的。  
+ 请注意，`WHOLE` 现在可用于变量声明，如 `WHOLE i;` 或 `const WHOLE i;`。 但是，声明 `long WHOLE i;` 是非法的。  
   
 ```  
 typedef struct club   
@@ -141,20 +158,20 @@ typedef struct club
 } GROUP;  
 ```  
   
- 此语句将 `GROUP` 声明为具有三个成员的结构类型。  由于也指定了结构标记 `club`，因此 typedef 名称 \(`GROUP`\) 或结构标记可用于声明。  您必须使用带标记的 struct 关键字，并且不能使用带 typedef 名称的 struct 关键字。  
+ 此语句将 `GROUP` 声明为具有三个成员的结构类型。 由于也指定了结构标记 `club`，因此 typedef 名称 (`GROUP`) 或结构标记可用于声明。 您必须使用带标记的 struct 关键字，并且不能使用带 typedef 名称的 struct 关键字。  
   
 ```  
 typedef GROUP *PG; /* Uses the previous typedef name   
                       to declare a pointer            */  
 ```  
   
- 类型 `PG` 被声明为指向 `GROUP` 类型的指针，而 `GROUP` 类型又被定义为结构类型。  
+ 类型 `PG` 被声明为指向 `GROUP` 类型的指针，而  类型又被定义为结构类型。  
   
 ```  
 typedef void DRAWF( int, int );  
 ```  
   
- 此示例为不返回值并采用两个 int 参数的函数提供了类型 `DRAWF`。  例如，这意味着声明  
+ 此示例为不返回值并采用两个 int 参数的函数提供了类型 `DRAWF`。 例如，这意味着声明  
   
 ```  
 DRAWF box;   
@@ -166,5 +183,7 @@ DRAWF box;
 void box( int, int );  
 ```  
   
-## 请参阅  
- [\(NOTINBUILD\)typedef Specifier](http://msdn.microsoft.com/zh-cn/cc96cf26-ba93-4179-951e-695d1f5fdcf1)
+## <a name="see-also"></a>另请参阅  
+
+
+

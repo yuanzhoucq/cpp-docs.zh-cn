@@ -1,61 +1,78 @@
 ---
 title: "Commit-To-Disk 常量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.constants"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "commit-to-disk 常量"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.constants
+dev_langs:
+- C++
+helpviewer_keywords:
+- commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Commit-To-Disk 常量
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: c8aa858543b100239d0fe2a557b22452a0a0d572
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="commit-to-disk-constants"></a>Commit-To-Disk 常量
 **Microsoft 专用**  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 #include <stdio.h>  
 ```  
   
-## 备注  
- 这些特定于 Microsoft 的常数指定缓冲区与打开文件是否刷新到缓冲区操作系统的或到磁盘。  字符串中的模式指定读写类型类型访问权限 \(**"r"**、**"w"**、**"a"**、**"r\+"**、**"w\+"**，**"a\+"**\)。  
+## <a name="remarks"></a>备注  
+ 这些特定于 Microsoft 的常量指定将与打开的文件关联的缓冲区刷新到操作系统缓冲区还是磁盘。 模式包含在指定读/写访问权限的类型（“r”、“w”、“a”、“r+”、“w+”、“a+”）的字符串中。  
   
- 提交对磁盘模式如下：  
+ 提交到磁盘模式如下所示：  
   
  **c**  
- 编写指定缓冲区中没有的内容记录到磁盘。  此功能只发生在提交对磁盘显式调用 [fflush](../c-runtime-library/reference/fflush.md) [\_flushall](../c-runtime-library/reference/flushall.md) 或函数。  在处理敏感数据时，此模式很有用。  例如，在中，如果程序终止，在对 `fflush` 或 `_flushall`的调用中，您可以确定数据到达后操作系统的缓冲区。  但是，文件，除非打开使用 **c** 选项，数据不可能使到磁盘，则操作系统也终止。  
+ 将指定缓冲区的未写入内容写入磁盘。 此提交到磁盘功能仅在显式调用 [fflush](../c-runtime-library/reference/fflush.md) 或 [_flushall](../c-runtime-library/reference/flushall.md) 函数时生效。 此模式在处理敏感数据时很有用。 例如，如果在调用 `fflush` 或 `_flushall` 后程序终止，您可以确保数据已到达操作系统的缓冲区。 但是，除非文件是使用 c 选项打开的，否则当操作系统也终止时，数据可能从不会将文件传送到磁盘。  
   
  **n**  
- 编写指定缓冲区中未记录的内容。操作系统的缓冲区。  操作系统可以缓存数据然后确定一的最佳时间写入磁盘。  在大多数情况下，此行为为有效的程序行为进行。  但是，数据，则保留重要 \(如或\) 飞机票银行事务信息请考虑使用 **c** 选项。  溢出模式；默认值为 **n**。  
+ 将指定缓冲区的未写入内容写入操作系统的缓冲区。 操作系统可以缓存数据然后确定写入到磁盘的最佳时间。 在大多数情况下，此行为有助于产生有效的程序行为。 但是，如果保留数据很重要（如银行交易或机票信息）请考虑使用 c 选项。 n 模式是默认设置。  
   
 > [!NOTE]
->  **c** 和 **n** 选项不是 ANSI 标准的一部分，但是 Microsoft 的 `fopen`，扩展，因此不应使用 ANSI 可移植性需的位置。  
+>  c 和 n 选项不是 `fopen` 的 ANSI 标准的一部分，而是 Microsoft 扩展，因此不应在需要 ANSI 可移植性的情况下使用。  
   
-## 使用与现有代码的提交对磁盘功能  
- 默认情况下，设置为 [fflush](../c-runtime-library/reference/fflush.md) 的调用或 [\_flushall](../c-runtime-library/reference/flushall.md) 库函数将数据写入操作系统维护的缓冲区。  操作系统决定的最佳时间实际数据写入磁盘。  运行时库的提交到磁盘的功能，可以确保关键数据直接写入磁盘，而不是操作系统的缓冲区。  可以将此功能的现有程序，而无需重写它通过其 COMMODE.OBJ 链接的对象文件。  
+## <a name="using-the-commit-to-disk-feature-with-existing-code"></a>将提交到磁盘功能用于现有代码  
+ 默认情况下，调用 [fflush](../c-runtime-library/reference/fflush.md) 或 [_flushall](../c-runtime-library/reference/flushall.md) 库函数会将数据写入操作系统维护的缓冲区。 操作系统确定将数据实际写入磁盘的最佳时间。 利用运行库的提交到磁盘功能，您可以确保关键数据直接写入磁盘而不是操作系统的缓冲区。 您可以将此功能提供给现有程序，而无需通过将该程序的对象文件与 COMMODE.OBJ 链接来重写程序。  
   
- 在生成的可执行文件中，对 `fflush` 的调用写入缓冲区的内容直接到磁盘，因此，对 `_flushall` 的调用将所有缓冲区内容到磁盘。  这两个函数会很 COMMODE.OBJ 影响的唯一一部分。  
+ 在生成的可执行文件中，调用 `fflush` 会将缓冲区的内容直接写入磁盘，而调用 `_flushall` 会将所有缓冲区的内容写入磁盘。 这两个函数是唯一受 COMMODE.OBJ 影响函的数。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
- [流 I\/O](../c-runtime-library/stream-i-o.md)   
- [\_fdopen、\_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fopen、\_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
+## <a name="see-also"></a>另请参阅  
+ [流 I/O](../c-runtime-library/stream-i-o.md)   
+ [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
  [全局常量](../c-runtime-library/global-constants.md)

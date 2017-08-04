@@ -1,48 +1,65 @@
 ---
 title: "C 位域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "位域"
-  - "位域"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitfields
+- bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# C 位域
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: e0370ea8d0d519ca10f3035c7a84748d0888e8d7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-除了结构或联合的成员的声明符外，结构声明符也可能是指定数目的位，称为“位域”。其长度从字段名称的声明符到冒号。  位域被解释为整型。  
+---
+# <a name="c-bit-fields"></a>C 位域
+除了结构或联合的成员的声明符外，结构声明符也可以是指定数目的位，称为“位域”。 其长度从字段名称的声明符到冒号。 位域被解释为整型类型。  
   
-## 语法  
- *结构声明符*  
- *声明符*  
+## <a name="syntax"></a>语法  
+ *struct-declarator*:  
+ *declarator*  
   
- *类型说明符说明符* 选择               **：** *常数表达式*  
+ type-specifier declarator opt: constant-expression  
   
- *constant\-expression* 指定在位字段宽度。  `declarator` 的“类型说明符”必须是 `unsigned int`、**signed int** 或 `int`，而且“常数表达式”必须是非负整数值。  如果该值为零，则声明没有`declarator`。  不允许位域的数组、指向位域的指针和函数返回位域。  可选 `declarator` 命名位域。  位域只能声明为结构的一部分。  该 address\-of 运算符 \(**&**\) 不能被用于位元\-字段组件。  
+ constant-expression 指定域的宽度（以位为单位）。 `declarator` 的 type-specifier 必须为 `unsigned int`、signed int 或 `int`，而且 constant-expression 必须为非负整数值。 如果值为零，则声明没有任何 `declarator`。 不允许位域的数组、指向位域的指针和返回位域的函数。 可选的 `declarator` 命名位域。 位域只能声明为结构的一部分。 Address-of 运算符 (&) 不能应用于位域组件。  
   
- 未命名位域不可引用，且其内容在运行时是不可预测的。  它们可以出于对齐目的用作“虚拟”字段。  指定了宽度为 0 的一个未命名的位域确保跟在其后在“结构声明列表”的成员的存储在 `int` 边界开始。  
+ 未命名位域不可引用，且其内容在运行时是不可预测的。 它们可以出于对齐目的用作“虚拟”字段。 宽度指定为 0 的未命名位域确保在 struct-declaration-list 中跟在其后的成员的存储在 `int` 边界开始。  
   
- 位域还必须足够长以包含该位模式。  例如，这两种两个语句均不合法：  
+ 位域还必须足够长以包含该位模式。 例如，以下两个语句均不合法：  
   
 ```  
 short a:17;        /* Illegal! */  
 int long y:33;     /* Illegal! */  
 ```  
   
- 此示例定义名为 `screen` 的二维结构数组。  
+ 以下示例定义了一个名为 `screen` 的二维结构数组。  
   
 ```  
 struct   
@@ -54,15 +71,15 @@ struct
 } screen[25][80];  
 ```  
   
- 数组包含 2000 个元素的。  每个元素都是包含四位字段成员的单个结构：`icon`、 `color`、 `underline`和 `blink`。  每个结构的大小是两个字节。  
+ 该数组包含 2,000 个元素。 每个元素都是包含以下四个位域成员的单个结构：`icon`、`color`、`underline` 和 `blink`。 每个结构的大小是两个字节。  
   
- 位域与整数类型有相同的语义。  这意味着位域在表达式中使用方式与同样基类型使用变量的方式完全相同，无论有多少数位在位域。  
+ 位域与整数类型具有相同的语义。 这意味着位域在表达式中的使用方式与同样基类型使用变量的方式完全相同，无论位域中有多少位。  
   
  **Microsoft 专用**  
   
- 定义为 `int` 的位域被视为带符号的位域。  ANSI C 标准的 Microsoft 扩展允许位域的 `char` 和 **long** 类型（**signed** 和 `unsigned`）。  带有基类型**"长"**,**"短"**，或`char` \(**“已签名“**或 `unsigned`\)的未命名位域强制对齐为边界合适到基类型。  
+ 定义为 `int` 的位域被视为带符号的位域。 ANSI C 标准的 Microsoft 扩展允许位域的 `char` 和 long 类型（signed 和 `unsigned`）。 带有基类型 long、short 或 `char`（signed 或 `unsigned`）的未命名位域强制与适于基类型的边界对齐。  
   
- 在整数中按照从最不重要到最重要的位的顺序来分配位域。  在以下代码  
+ 在整数中按照从最高有效位到最低有效位的顺序来分配位域。 在以下代码中  
   
 ```  
 struct mybitfields  
@@ -80,16 +97,16 @@ int main( void );
 }  
 ```  
   
- 该位按如下所示排列:  
+ 这些位将按如下所示排列：  
   
 ```  
 00000001 11110010  
 cccccccb bbbbaaaa  
 ```  
   
- 虽然 8086 处理器的系列在高字节前存储整数值的低字节，上面的整数 `0x01F2` 将被作为由`0x01`紧随的`0xF2` 存储到物理内存中。  
+ 由于 8086 系列处理器将整数值的低字节存储在高字节之前，因此上面的整数 `0x01F2` 将按 `0xF2` 后跟 `0x01` 的形式存储在物理内存中。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构声明](../c-language/structure-declarations.md)

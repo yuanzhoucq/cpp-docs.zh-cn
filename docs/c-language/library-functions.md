@@ -1,25 +1,42 @@
 ---
 title: "库函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 库函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1c57ba02eb88b5097945e1e6c0e7560dc61d0d25
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="library-functions"></a>库函数
 -   [NULL 宏](../c-language/null-macro.md)  
   
 -   [assert 函数输出的诊断](../c-language/diagnostic-printed-by-the-assert-function.md)  
@@ -64,7 +81,7 @@ caps.handback.revision: 9
   
 -   [文件位置错误](../c-language/file-position-errors.md)  
   
--   [perror 函数生成的消息](../c-language/messages-generated-by-the-perror-function.md)  
+-   [由 perror 函数生成的消息](../c-language/messages-generated-by-the-perror-function.md)  
   
 -   [分配零内存](../c-language/allocating-zero-memory.md)  
   
@@ -76,11 +93,11 @@ caps.handback.revision: 9
   
 -   [system 函数](../c-language/system-function.md)  
   
--   [Strerror 函数](../c-language/strerror-function.md)  
+-   [strerror 函数](../c-language/strerror-function.md)  
   
 -   [时区](../c-language/time-zone.md)  
   
 -   [clock 函数](../c-language/clock-function-c.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [实现定义的行为](../c-language/implementation-defined-behavior.md)

@@ -1,73 +1,90 @@
 ---
 title: "标记摘要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 2978cbf6-e66e-46fc-9938-caa052f2ccf7
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 标记摘要
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: bf77442b8bc06b2f862497a2ce8d8d522cff3b6b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-*token*:  
- *keyword*  
+---
+# <a name="summary-of-tokens"></a>标记摘要
+*token*：  
+keyword **  
   
  *identifier*  
   
  *constant*  
   
- *string\-literal*  
+ *string-literal*  
   
  *operator*  
   
  `punctuator`  
   
- *preprocessing\-token*:  
- *header\-name*  
+ preprocessing-token:  
+header-name **  
   
  *identifier*  
   
- *pp\-number*  
+ pp-number  
   
- *character\-constant*  
+ *character-constant*  
   
- *string\-literal*  
+ *string-literal*  
   
- *operator punctuator*  
+ operator punctuator  
   
  不能成为上述项目之一的每个非空白字符  
   
- *header\-name*：  
- **\<**  *path\-spec*  **\> "**  *path spec*  **"**  
+ header-name:  
+\< ****  path-spec  > "  path spec  "  
   
- *path\-spec*:  
+ path-spec:  
  合法文件路径  
   
- *pp\-number*:  
+ pp-number:  
  *digit*  
   
  **.** *digit*  
   
- *pp\-number digit*  
+ pp-number digit  
   
- *pp\-number nondigit*  
+ pp-number nondigit  
   
- *pp\-number*  **e**  *sign*  
+ pp-number  e  sign  
   
- *pp\-number*  **E**  *sign*  
+ pp-number  E  sign  
   
- *pp\-number*  **.**  
+ pp-number  .  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [词法语法](../c-language/lexical-grammar.md)

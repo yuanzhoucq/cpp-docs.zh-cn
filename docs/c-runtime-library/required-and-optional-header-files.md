@@ -1,39 +1,56 @@
 ---
 title: "必需和可选的头文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.headers"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "头文件, 运行时所需的"
-  - "包含文件, 运行时所需的"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.headers
+dev_langs:
+- C++
+helpviewer_keywords:
+- include files, required in run time
+- header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 必需和可选的头文件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 82f325ec2a8e928d721b3b3f16683961634365e2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
-每个运行期程序的说明包括列表所需和选项包括，或标头\(H\)，该例程的文件。  必需的头文件包括需要获得其他例程或定义的例程的函数声明内部调用。  选项头文件通常使用预定义常数、类型定义内联或宏。  下表列出可选文件头内容的一些示例：  
+---
+# <a name="required-and-optional-header-files"></a>必需和可选的头文件
+每个运行时例程的说明包括一个针对该例程的必选和可选包含文件或标头 (.H) 文件的列表。 需包括必需的标头文件以获取此例程的函数声明或由另一个内部调用的例程使用的定义。 通常包括可选标头文件以利用预定义的常量、类型定义或内联宏。 下表列出了可选标头内容的一些示例：  
   
 |定义|示例|  
-|--------|--------|  
-|宏定义|如果库类型程序实现为宏，头文件可在头文件中定义宏，除原始的例程。  例如，`toupper`宏在头文件 CTYPE.H中定义，而函数`_toupper` 声明在 STDLIB.H头文件。|  
-|Predefined 常数|许多库类型程序引用的常量在头文件中定义。  例如，在头文件 FCNTL.H. 定义的`_open` 通常使用常数，如 `_O_CREAT`。|  
-|类型定义|某些库类型程序返回结构或将结构作为参数传递。  例如，流输入\/输出例程使用类型 `FILE`结构，该结构在 STDIO.H. 定义。|  
+|----------------|-------------|  
+|宏定义|如果将库例程作为宏实现，则宏定义可能在原始例程的标头文件之外的其他标头文件中。 例如，在标头文件 CTYPE.H 中定义 `_toupper` 宏，而在 STDLIB.H 中声明函数 `toupper`。|  
+|预定义的常量|许多库例程都引用在标头文件中定义的常量。 例如，`_open` 例程使用常量，如在标头文件 FCNTL.H 中定义的 `_O_CREAT`。|  
+|类型定义|某些库例程返回结构或将结构用作参数。 例如，流输入/输出例程使用在 STDIO.H 中定义的 `FILE` 类型的结构。|  
   
- 运行库头文件中提供了建议 ANSI\/ISO C 标准样式的函数声明。  编译器对在其关联的函数声明后进行定期发生的所有引用的类型检查。  函数声明为 `int`以外，返回值是一些类型，默认的例程特别重要。  在其声明不指定其适当的返回值的例程将由编译器考虑，来返回 `int`，会产生意外的结果。  有关更多信息，请参见 [Type Checking](../c-runtime-library/type-checking-crt.md)。  
+ 运行库标头文件提供 ANSI/ISO C 标准推荐样式的函数声明。 编译器对在其关联的函数声明后发生的任何例程引用执行类型检查。 函数声明对于返回默认的 `int` 类型之外的其他类型的值的例程尤为重要。 未在其声明中指定适当的返回值的例程将由编译器用来返回 `int`，这可能导致出现意外结果。 有关详细信息，请参阅[类型检查](../c-runtime-library/type-checking-crt.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

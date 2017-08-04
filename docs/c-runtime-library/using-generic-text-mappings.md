@@ -1,114 +1,131 @@
 ---
 title: "使用一般文本映射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_UNICODE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_MBCS 数据类型"
-  - "_T 类型"
-  - "_TCHAR 类型"
-  - "_TEXT 类型"
-  - "_TINT 类型"
-  - "_TSCHAR 类型"
-  - "_TUCHAR 类型"
-  - "_TXCHAR 类型"
-  - "_UNICODE 常量"
-  - "一般文本数据类型"
-  - "一般文本映射"
-  - "映射, 一般文本"
-  - "MBCS 数据类型"
-  - "T 类型"
-  - "TCHAR 类型"
-  - "TCHAR.H 数据类型, 映射定义于"
-  - "TEXT 类型"
-  - "TINT 类型"
-  - "TSCHAR 类型"
-  - "TUCHAR 类型"
-  - "TXCHAR 类型"
-  - "UNICODE 常量"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _UNICODE
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TXCHAR type
+- TINT type
+- _TCHAR type
+- TSCHAR type
+- TEXT type
+- TCHAR type
+- TCHAR.H data types, mappings defined in
+- generic-text data types
+- _TINT type
+- TUCHAR type
+- _UNICODE constant
+- TXCHAR type
+- generic-text mappings
+- _TSCHAR type
+- T type
+- mappings, generic-text
+- _TUCHAR type
+- MBCS data type
+- _MBCS data type
+- _TEXT type
+- UNICODE constant
+- _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 使用一般文本映射
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 17a3f4f7be76be9f23160e351466fee4f70b9272
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="using-generic-text-mappings"></a>使用一般文本映射
 **Microsoft 专用**  
   
- 为简化代码的传输，便于在国际上使用， 运行库为许多数据类型、例程和其他对象提供特有的一般文本映射。  这些映射在TCHAR.H 定义。  可以使用这些名称映射编写可以为任何这三种字符集编译的泛型代码：ASCII \(SBCS\) 使用 `#define` 语句，那么，MBCS 或 Unicode，根据清单常数您定义。  一般文本映射是Microsoft扩展与ANSI不兼容的。  
+ 为了简化各种国际市场的代码开发，Microsoft 运行时库为许多数据类型、例程和其他对象提供了 Microsoft 专用的“一般文本”映射。 这些映射在 TCHAR.H 中进行定义。 可以使用这些名称映射来编写可编译全部三种字符集（ASCII (SBCS)、MBCS 或 Unicode）的通用代码：具体取决于使用 `#define` 语句定义的清单常量。 一般文本映射是与 ANSI 不兼容的 Microsoft 扩展。  
   
-### 一般文本映射的预处理器指令  
+### <a name="preprocessor-directives-for-generic-text-mappings"></a>用于一般文本映射的预处理器指令  
   
-|\#define|编译版本|示例|  
-|--------------|----------|--------|  
+|#define|编译的版本|示例|  
+|--------------|----------------------|-------------|  
 |`_UNICODE`|Unicode（宽字符）|`_tcsrev` 映射到 `_wcsrev`|  
 |`_MBCS`|多字节字符|`_tcsrev` 映射到 `_mbsrev`|  
-|无（默认值既未定义`_UNICODE` 也未定义 `_MBCS`）|SBCS \(ASCII\)|`_tcsrev` 映射到 `strrev`|  
+|无（默认值：未定义 `_UNICODE` 和 `_MBCS`）|SBCS (ASCII)|`_tcsrev` 映射到 `strrev`|  
   
- 例如，如果在程序中定义了 `MBCS`，则TCHAR.H 中定义的一般文本函数 `_tcsrev` 映射到 `mbsrev`。或者，如果定义了 `_UNICODE` ，则映射到 `_wcsrev` 。  否则`_tcsrev`  映射到 `strrev`。  
+ 例如，如果已在程序中定义了 `MBCS`，则在 TCHAR.H 中定义的一般文本函数 `_tcsrev` 映射到 `mbsrev`，如果已定义了 `_UNICODE`，则将映射到 `_wcsrev`。 否则，`_tcsrev` 将映射到 `strrev`。  
   
- 一般文本数据类型 `_TCHAR`，还定义在 TCHAR.H，映射到 `char`，则 `_MBCS` 定义，键入 `wchar_t`，则 `_UNICODE` 定义了类型 `char`，则对两个常数进行定义。  在 TCHAR.H 中还提供了其他数据类型映射以方便编程，但 `_TCHAR` 是最有用的。  
+ 如果已定义了 `_MBCS`，则仍在 TCHAR.H 中定义的一般文本数据类型 `_TCHAR` 将映射到类型 `char`，如果定义了 `_UNICODE`，则映射到类型 `wchar_t`，如果未定义任何常量，则映射到 `char`。 TCHAR.H 中提供了其他数据类型映射，可方便地用于编程，但 `_TCHAR` 是最有用的类型。  
   
-### 一般文本数据类型映射  
+### <a name="generic-text-data-type-mappings"></a>一般文本数据类型映射  
   
-|一般文本数据类型名|SBCS \(\_UNICODE, \_MBCS 未定义\)|已定义 \_MBCS|已定义 \_UNICODE|  
-|---------------|------------------------------------|----------------|-------------------|  
+|一般文本数据类型名称|SBCS（未定义的 _UNICODE 和 _MBCS）|已定义 _MBCS|已定义 _UNICODE|  
+|----------------------------------|--------------------------------------------|--------------------|-----------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` 或 `_TEXT`|无效（由预处理器移除）|无效（由预处理器移除）|`L`（将后面的字符或字符串转换成相应的 Unicode 形式）|  
+|`_T` 或 `_TEXT`|无效果（由预处理器删除）|无效果（由预处理器删除）|`L`（将以下字符或字符串转换为其 Unicode 对应项）|  
   
- 对于一般文本例程映射的完整列表，变量和其他对象，请参见 [一般文本映射](../c-runtime-library/generic-text-mappings.md)。  
+ 有关例程、变量和其他对象的一般文本映射的完整列表，请参阅[一般文本映射](../c-runtime-library/generic-text-mappings.md)。  
   
- 下列代码片段阐释了用于映射到 MBCS、 Unicode和 SBCS 模型的 `_TCHAR` 和 `_tcsrev` 的用法。  
+ 以下代码片段说明了用于映射到 MBCS、Unicode 和 SBCS 模型的 `_TCHAR` 和 `_tcsrev` 的使用方法。  
   
 ```  
 _TCHAR *RetVal, *szString;  
 RetVal = _tcsrev(szString);  
 ```  
   
- 如果已定义 `MBCS`，则预处理器映射之前片段为以下代码：  
+ 如果定义了 `MBCS`，则预处理器将前面的片段映射到以下代码：  
   
 ```  
 char *RetVal, *szString;  
 RetVal = _mbsrev(szString);  
 ```  
   
- 如果已定义 `_UNICODE`，则预处理器映射之前片段为以下代码：  
+ 如果定义了 `_UNICODE`，则预处理器将同一片段映射到以下代码：  
   
 ```  
 wchar_t *RetVal, *szString;  
 RetVal = _wcsrev(szString);  
 ```  
   
- 如果既未定义 `_MBCS` 也未定义 `_UNICODE`，则预处理器将此片段映射到ASCII单字节，如下所示：  
+ 如果 `_MBCS` 和 `_UNICODE` 均未定义，则预处理器将片段映射到单字节 ASCII 代码，如下所示：  
   
 ```  
 char *RetVal, *szString;  
 RetVal = strrev(szString);  
 ```  
   
- 因此，您可以编写，维护和编译与三种字符集中任何一种的特定例程一起运行的单个源代码文件。  
+ 因此，可以编写、维护和编译单个源代码文件，来与特定于三种字符集中任何一种的例程一起运行。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [一般文本映射](../c-runtime-library/generic-text-mappings.md)   
  [数据类型映射](../c-runtime-library/data-type-mappings.md)   
  [常量和全局变量映射](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [例程映射](../c-runtime-library/routine-mappings.md)   
- [简单一般文本项目](../c-runtime-library/a-sample-generic-text-program.md)
+ [示例一般文本程序](../c-runtime-library/a-sample-generic-text-program.md)
