@@ -637,7 +637,7 @@
 ## [TN060：新的 Windows 公用控件](tn060-the-new-windows-common-controls.md)
 ## [TN061：ON_NOTIFY 和 WM_NOTIFY 消息](tn061-on-notify-and-wm-notify-messages.md)
 ## [TN062：Windows 控件的消息反射](tn062-message-reflection-for-windows-controls.md)
-## [TN063：调试 Internet 扩展 DLL](tn063-debugging-internet-extension-dlls.md)
+## [TN063：调试 Internet MFC 扩展 DLL](tn063-debugging-internet-extension-dlls.md)
 ## [TN064：ActiveX 控件中的单元模型线程](tn064-apartment-model-threading-in-activex-controls.md)
 ## [TN065：针对 OLE 自动化服务器的双重接口支持](tn065-dual-interface-support-for-ole-automation-servers.md)
 ## [TN066：常见的 MFC 3.x 到 4.0 迁移问题](tn066-common-mfc-3-x-to-4-0-porting-issues.md)
