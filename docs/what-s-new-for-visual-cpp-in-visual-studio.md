@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 中 Visual C++ 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 8/2/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: BrianPeek
-ms.author: brpeek
+author: mblome
+ms.author: mblome
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -26,11 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
-ms.openlocfilehash: 58b5a3f2e5ce491ba7ba185c90bb6b4a2dca3101
+ms.translationtype: HT
+ms.sourcegitcommit: b90891be2ca726bb6cdd28d024cda68494e69af4
+ms.openlocfilehash: 9103da7fb4e10553d2558b15a24bc6a894dd1eff
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 
@@ -48,7 +48,9 @@ ms.lasthandoff: 06/30/2017
 
 ### <a name="new-compiler-switches"></a>新的编译器开关  
 
- -**/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [Standards version switches in the compiler](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/standards-version-switches-in-the-compiler)（编译器中的标准版本开关）。 大多数新的草案标准功能由 /std:c++lates 开关保护。 
+ -**/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [-std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 /std:c++lates 开关保护。 
+
+**Visual Studio 2017 版本 15.3**：**/std:c++17** 选项启用由 Visual C++ 编译器实现的一组 C++17 功能。 此选项禁用 C++ 标准的工作草案和缺陷更新的最新版本中已更改或新的功能的编译器和标准库支持。
 
 -[/permissive-](build/reference/permissive-standards-conformance.md)：启用所有严格标准符合性编译器选项，并禁用大部分特定于 Microsoft 的编译器扩展（但也有一些除外，例如 __declspec(dllimport)）。 （默认情况下为关，但在未来的某个时刻将默认为开。）
 
@@ -67,7 +69,9 @@ ms.lasthandoff: 06/30/2017
 - 版本控制：内置预处理器宏_MSC_VER 的值现在会在每次 Visual C++ 工具集更新时单调更新。 有关详细信息，请参阅 [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)（Visual C++ 编译器版本）。
 - 新工具集布局：编译器和相关生成工具在开发计算机上有了新的位置和目录结构。 新布局支持并行安装多个版本的编译器。 有关详细信息，请参阅 [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/)（Visual Studio“15”中的编译器工具布局）。
 - 改进了诊断：输出窗口现在会显示发生错误的列。 有关详细信息，请参阅 [C++ compiler diagnostics improvements in VS “15” Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/)（VS“15”预览版 5 中的 C++ 编译器诊断改进）。
-- 使用协同例程时，实验关键字 "yield"（在 /await 开关下可用）已被删除。 应更新你的代码，以改为使用“co_yield”。 有关详细信息，请参阅 Visual C++ 团队博客。 
+- 使用协同程序时，实验关键字“yield”（在 /await switch 下可用）已被删除。 应更新代码，以改为使用 `co_yield`。 有关详细信息，请参阅 [Visual C++ 团队博客](https://blogs.msdn.microsoft.com/vcblog/)。 
+
+**Visual Studio 2017 版本 15.3**：对编译器中的诊断进行的其他改进。 有关详细信息，请参阅 [Visual Studio 2017 15.3.0 中的诊断改进](https://blogs.msdn.microsoft.com/vcblog/2017/07/21/diagnostic-improvements-in-vs2017-15-3-0/)。
 
 ## <a name="c-libraries"></a>C++ 库
 
@@ -76,7 +80,7 @@ ms.lasthandoff: 06/30/2017
 * 对 basic_string _ITERATOR_DEBUG_LEVEL != 0 诊断进行了小幅改进。 在字符串机制中进行 IDL 检查现在将报告触发该检查的特定行为。 例如，现在会收到“无法取消引用字符串迭代器，因为其已超出范围（例如末尾迭代器）”，而不是“字符串迭代器不可取消引用”。
 * 性能改进：basic_string::find(char) 重载仅调用 traits::find 一次。 以前会将此操作实施为针对长度为 1 的字符串的常规字符串搜索。
 * 性能改进：basic_string::operator== 现会在比较字符串内容之前检查字符串的大小。
-* 性能改进：删除了 basic_string 中编译器优化程序难以分析的控制耦合。 解决了 VSO# 262848“<string>：reserve() 执行了过多操作”。 请注意，对于所有短字符串，调用 reserve 后即使不执行任何操作仍会耗用资源。
+* 性能改进：删除了 basic_string 中编译器优化程序难以分析的控制耦合。 解决了 VSO# 262848“\<string\>: reserve() 执行了过多操作”。 请注意，对于所有短字符串，调用 reserve 后即使不执行任何操作仍会耗用资源。
 * 我们添加了 \<any\>、\<string_view\>、apply()、make_from_tuple()。
 * 对 std:: vector 进行了全面改进以提高正确性和性能：现可按标准版的要求正确处理插入/定位期间的别名化，在标准版需要时可通过 move_if_noexcept() 和其他逻辑提供强大的异常保障，并且插入/定位执行的元素操作减少。
 * 现在 C++ 标准库会避免取消引用 null 复杂精致指针。
@@ -92,7 +96,74 @@ ms.lasthandoff: 06/30/2017
 * 为提高编译器吞吐量，C++ 标准库标头现不会包含非必需编译器内部函数的声明。
 * 略微改进了针对错误的 bind() 调用的编译器诊断。
 * 将 std::string/std::wstring 的移动构造函数的性能提升了超过 3 倍
-* 有关 STL 改进的完整列表，请参阅 [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/)（VS 2017 RTM 中的 STL 修复）。
+* 有关标准库改进的完整列表，请参阅 [VS 2017 RTM 中的标准库修复](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/)。
+
+#### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 版本 15.3
+
+##### <a name="c17-features"></a>C++17 功能 
+已经实现了几个其他的 C++17 功能。 有关详细信息，请参阅 [Visual C++ 语言一致性](visual-cpp-language-conformance.md)。
+
+##### <a name="other-new-features"></a>其他新增功能
+* 实现了 P0602R0“变体和可选项应传播副本/移动琐碎事项”。
+* 现在，标准库正式允许通过 /GR- 禁用动态 RTTI。 dynamic_pointer_cast() 和 rethrow_if_nested() 本质上需要 dynamic_cast，因此标准库现在将它们在 /GR- 下标记为 =delete。
+* 即使已通过 /GR- 禁用了动态 RTTI，“静态 RTTI”（采用 typeid(SomeType) 形式）仍可用，并为多个标准库组件提供支持。 现在，标准库也支持通过 /D_HAS_STATIC_RTTI=0 禁用此功能。 请注意，这将禁用 std::any、std::function 的 target()、target_type() 和 shared_ptr 的 get_deleter()。
+
+##### <a name="correctness-fixes"></a>正确性修复
+* 现在，标准库容器将其 max_size() 绑定到numeric_limits\<difference_type\>::max() 而不是 size_type 的最大值。这确保来自该容器的迭代器上的 distance() 的结果在 distance() 的返回类型中是可表示的。
+* 修复了缺少的指定 auto_ptr\<void\>。
+* 如果 length 参数不是整数类型，则以前无法编译 meow_n() 算法；现在它们尝试将非整数长度转换为迭代器的 difference_type。
+* normal_distribution\<float\> 不再在标准库中发出关于从双精度型收缩为浮点型的警告。
+* 修复了一些 basic_string 操作，这些操作在检查最大大小溢出时与 npos 而不是 max_size() 进行比较。
+* condition_variable::wait_for(lock, relative_time, predicate) 将在发生虚假唤醒时等待整个相对时间。 现在，它将仅等待单个相对时间间隔。
+* future::get() 现在将根据标准要求使未来无效。
+* iterator_traits\<void \*\> 曾经是一个硬错误，因为它尝试形成 void&;，它现在完全变成了一个空结构，以允许在“is iterator”SFINAE 条件中使用 iterator_traits。
+* 修复了 Clang -Wsystem-headers 报告的一些警告。
+* 还修复了 Clang -Wmicrosoft-exception-spec 报告的“声明中的异常规范与以前的声明不匹配”。
+* 还修复了 Clang 和 C1XX 报告的 mem-initializer-list 排序警告。
+* 当容器本身交换时，无序容器不会交换其哈希计算器或谓词。 现在它们会进行交换。
+* 现在，许多容器交换操作被标记为 noexcept（因为我们的标准库从未打算在检测到 non-propagate_on_container_swap non-equal-allocator 未定义的行为条件时引发异常）。
+* 许多 vector\<bool\> 操作现在被标记为 noexcept。
+* 标准库现在将使用选择退出的转义交错线来强制执行匹配的分配器 value_types（在 C++17 模式中）。
+* 修复了一些将 self-range 插入 basic_strings 会打乱字符串内容的情况。 （注意：标准库仍禁止将 self-range 插入到矢量）。
+* basic_string::shrink_to_fit() 不再受分配器的 propagate_on_container_swap 的影响。
+* std::decay 现在可以处理令人厌恶的函数类型（即 cv 限定和/或引用限定的函数类型）。
+* 更改了 include 指令以正确使用区分大小写和正斜杠，从而提高可移植性。
+* 修复了警告 C4061“枚举‘Kitten’的 switch 中的枚举器‘Meow’未按 case 标签进行显式处理”。 此警告默认关闭，并且已作为警告的标准库的常规策略的一个异常进行了修复。 （标准库是 /W4 清理，但并不会试图成为 /Wall 清理。 许多默认关闭的警告会导致过多的干扰，不打算定期使用。）
+* 改进了 std::list 的调试检查。 列表迭代器现在检查 operator->()，而且 list::unique() 现在将迭代器标记为无效。
+* 修复了元组中的 use-allocator 元编程。
+
+##### <a name="performancethroughput-fixes"></a>性能/吞吐量修复
+* 解决了与 noexcept 的交互，从而防止将 std::atomic 的实现内联到使用结构化异常处理 (SEH) 的函数中的问题。
+* 更改了标准库的内部 _Deallocate() 函数，以优化为较小的代码，从而允许将其内联到更多的位置。
+* 更改了 std::try_lock() 以使用包扩展，而不是递归。
+* 改进了 std::lock() 的死锁避免算法以使用 lock() 操作，而不是在所有锁的 try_lock() 上旋转。
+* 启用了 system_category::message() 中的命名返回值优化。
+* 连接和析取现在实例化 N + 1 类型，而不是 2N + 2 类型。
+* std::function 不再实例化每个类型擦除的可调用项的分配器支持机制，从而提高吞吐量，并缩减将许多不同的 lambda 传递给 std::function 的程序中的 .obj 大小。
+* allocator_traits\<std::allocator\> 包含手动内联的 std::allocator 操作，从而缩减仅通过 allocator_traits 与 std::allocator 交互的代码（即大多数代码）中的代码大小。
+* C++11 最小分配器接口现在由标准库直接调用 allocator_traits 进行处理，而不是将分配器包装在内部类 _Wrap_alloc 中。 这减少了为分配器支持生成的代码大小，提高了优化器在某些情况下对标准库容器进行推理的能力，并提供了更好的调试体验（正如现在看到了分配器类型，而不是调试器中的 _Wrap_alloc\<你的分配器类型\>）。
+* 删除了自定义 allocator::reference 的元编程，实际上不允许自定义的分配器。 （分配器可以使容器使用设想的指针，但不可以使用设想的引用。）
+* 编译器前端已学会在基于范围的 for 循环中展开调试迭代器，从而提高调试版本的性能。
+* shrink_to_fit() 和 reserve() 的 basic_string 的内部收缩路径不再位于重新分配操作的路径中，从而减少所有转变成员的代码大小。
+* basic_string 的内部增长路径不再位于 shrink_to_fit() 的路径中。
+* basic_string 的转变操作现在已纳入到非分配快速路径和分配慢速路径函数，从而使其更有可能将常见的无重新分配的情况内联到调用方中。
+* basic_string 的转变操作现在构造所需状态的重新分配缓冲区，而不是就地调整大小。 例如，在字符串的开头插入现在将在插入之后移动内容一次（向下移动或移动到新分配的缓冲区），而不是在重新分配的情况下移动两次（移动到新分配的缓冲区，然后向下移动）。
+* 在 \<string\> 中调用 C 标准库的操作现在缓存 errno 的地址以消除与 TLS 的重复交互。
+* 简化了 is_pointer 的实现。
+* 完成了将基于函数的表达式 SFINAE 更改为基于 struct/void_t。
+* 标准库算法现在避免使用后增量迭代器。
+* 修复了在 64 位系统上使用 32 位分配器时的截断警告。
+* 通过重复使用缓冲区（如果可能），在非 POCMA 非等分配器情况下，std::vector 移动赋值现在更高效。
+
+##### <a name="readability-and-other-improvements"></a>可读性和其他改进
+* 标准库现在无条件地使用 C++14 constexpr，而不是有条件定义的宏。
+* 标准库现在内部使用别名模板。
+* 标准库现在内部使用 nullptr，而不是 nullptr_t{}。 （已根除 NULL 的内部使用。 正在逐渐清理 0 作为 null 的内部使用。）
+* 标准库现在内部使用 std::move()，而不是在风格上误用 std::forward()。
+* 已将 static_assert(false, "message") 更改为 #error 消息。 这提高了编译器诊断，因为 #error 立即停止编译。
+* 标准库不再将函数标记为 __declspec(dllimport)。 新式链接器技术不再需要此操作。
+* 已将 SFINAE 提取到默认模板参数，与返回类型和函数参数类型相比，这可以减少混乱。
+* \<random\> 中的调试检查现在使用标准库的常用机制，而不是使用将 fputs() 调用到 stderr 的内部函数 _Rng_abort()。 保留此函数的实现以实现二进制兼容性，但在标准库的下一个二进制不兼容版本中已删除。 
 
 ### <a name="open-source-library-support"></a>开源库支持  
 Vcpkg 是一款开源命令行工具，能极大简化在 Visual Studio 中获取和生成开源 C++ 静态库和 DLLS 的过程。 有关详细信息，请参阅 [vcpkg：用于 C++ 的程序包管理器 ](vcpkg.md)。
@@ -112,6 +183,12 @@ CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细
 ## <a name="c-ide"></a>C++ IDE
 
 * 现针对 C++ 本机项目和 C++ /CLI 项目有了更佳的配置更改性能，后者的性能增加更为明显。 第一次激活解决方案配置时，现在的速度会更快，且此解决方案配置的所有后续激活几乎可瞬时完成。
+
+**Visual Studio 2017 版本15.3**：
+* 多个项目和代码向导已按照签名对话框样式重新编写。
+* “添加类”现在直接启动“添加类向导”。 以前此处的其他所有项现在位于“添加”>“新建项”。
+* Win32 项目现在位于“新建项目”对话框中的“Windows 桌面”类别下。
+* Windows 控制台和桌面应用程序模板现在可以在不显示向导的情况下创建项目。 现在，在相同的类别下有一个新的 Windows 桌面向导，显示和以前相同的选项。
 
 ### <a name="intellisense"></a>Intellisense  
 * 现在默认使用全新的基于 SQLite 的数据库引擎。 这将提高数据库操作（如“转到定义”和“查找所有引用”）的速度，并将极大地缩短初始解决方案分析时间。 设置已移至“工具”>“选项”>“文本编辑器”>“C/C++”>“高级”下（之前位于...“C/C++”>“实验”下）。
@@ -136,20 +213,26 @@ CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细
 
 * 实验性的重构功能“更改签名”和“提取函数”现默认可用。
 
-* 我们启用了用于 C++ 项目新的实验性功能“更快的项目加载”。 下次打开 C++ 项目时，加载速度将更快，并且越来越快！
+* 用于 C++ 项目的实验性功能“快速项目加载”。 下次打开 C++ 项目时，加载速度将更快，并且越来越快！
 
 其中一些功能与其他语言通用，有些则特定于 C++。 有关这些新增功能的详细信息，请参阅[发布 Visual Studio “15”](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/)。 
 
+
 ### <a name="support-for-non-msbuild-projects-with-open-folder"></a>支持包含“打开文件夹”的非 MSBuild 项目
-Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含源代码的文件夹中进行编码、生成和调试，而无需创建任何解决方案或项目。 这使得新手使用 Visual Studio 变得异常简单，即使你的项目不是基于 MSBuild。 使用“打开文件夹”，可获得 Visual Studio 为 MSBuild 所提供的强大代码理解、编辑、生成和调试功能。 有关详细信息，请参阅 [Bring your C++ codebase to Visual Studio with “Open Folder”](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/)（使用“打开文件夹”向 Visual Studio 引入 C++ 基本代码）。
+Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含源代码的文件夹中进行编码、生成和调试，而无需创建任何解决方案或项目。 这使得新手使用 Visual Studio 变得异常简单，即使你的项目不是基于 MSBuild。 使用“打开文件夹”，可获得 Visual Studio 为 MSBuild 所提供的强大代码理解、编辑、生成和调试功能。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](ide/non-msbuild-projects.md)。
 
 * 改进了“打开文件夹”体验。 可通过以下 json 文件自定义体验：
   - 使用 CppProperties.json 可自定义 IntelliSense 和浏览体验。
   - 使用 Tasks.json 可自定义生成步骤。 
   - 使用 Launch.json 可自定义调试体验。
 
+**Visual Studio 2017 版本15.3**： 
+* 改进了对备用编译器和生成环境（如 MinGW 和 Cygwin）的支持。 有关详细信息，请参阅[将 MinGW 和 Cygwin 与 Visual C++ 和“打开文件夹”结合使用](https://blogs.msdn.microsoft.com/vcblog/2017/07/19/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/)。
+* 添加了支持，以定义“CppProperties.json”和“CMakeSettings.json”中的全局和特定于配置的环境变量。 “launch.vs.json”中定义的调试配置和“tasks.vs.json”中的任务可以使用这些环境变量。
+* 改进了对 CMake 的 Ninja 生成器的支持，包括轻松定位 64 位平台的能力。
+
 ### <a name="cmake-support-via-open-folder"></a>通过“打开文件夹”支持 CMake
-Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/)（Visual Studio 中的 CMake 支持）和 [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/)（Visual Studio 2017 中的 CMake 支持 - RC.2 更新中的新增内容）。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
+Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](ide/cmake-tools-for-visual-cpp.md)。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
 
 * 无需在根文件夹中创建 CppProperties.json 文件，C++ IntelliSense 便可正常工作。 此外，我们增添了一个新的下拉列表，允许用户在分别由 CMake 和 CppProperties.json 文件提供的配置之间轻松切换。
 
@@ -157,6 +240,7 @@ Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情�
 
   ![Cmake 打开文件夹](media/cmake_cpp.png "CMake 打开文件夹")
 
+**Visual Studio 2017 版本 15.3**：添加了对 CMake Ninja 生成器的支持。 有关详细信息，请参阅 [Visual Studio 中的 CMake 支持 – 2017 15.3 Preview 2 中的新增功能](https://blogs.msdn.microsoft.com/vcblog/2017/06/14/cmake-support-in-visual-studio-whats-new-in-2017-15-3-preview-2/)。 
 
 ## <a name="c-installation-workloads"></a>C++ 安装工作负荷 
 
@@ -167,6 +251,8 @@ Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情�
 
 ### <a name="linux-development-with-c"></a>使用 C++ 的 Linux 开发：  
 热门扩展“[用于 Linux 开发的 Visual C++](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e)”现已纳入 Visual Studio。 此安装提供开发和调试运行在 Linux 环境中的 C++ 应用程序所需的一切信息。  
+
+**Visual Studio 2017 版本 15.2**：跨平台代码共享和类型可视化的改进。 有关详细信息，请参阅[跨平台代码共享和类型可视化的 Linux C++ 改进](https://blogs.msdn.microsoft.com/vcblog/2017/05/10/linux-cross-platform-and-type-visualization/)。
 
 ### <a name="game-development-with-c"></a>使用 C++ 的游戏开发：  
 以 DirectX 或 Cocos2d 为后盾，利用 C++ 的强大功能构建专业游戏。  
@@ -191,6 +277,12 @@ C++ 是通用 Windows 应用工作负荷的可选组件。  当前必须手动�
 用于强制执行 [C++ 核心准则](https://github.com/isocpp/CppCoreGuidelines) 的 C++ 核心检查器现已通过 Visual Studio 分发。 只需在项目“属性”页的“代码分析扩展”对话框中启动检查器，即会在运行代码分析时包含扩展。 
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 属性页") 
+
+**Visual Studio 2017 版本 15.3**：添加了对与资源管理相关的规则的支持。 有关详细信息，请参阅[使用 C++ 核心准则检查器](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
+
+## <a name="unit-testing"></a>单元测试
+
+新的 Visual Studio 扩展使用户可以直接在 Visual Studio 中基于 Google Test 和 Boost.Test 运行单元测试。 有关详细信息，请参阅 [C++ 单元测试更新：宣布 Boost.Test 适配器和改进的 Google Test 支持](https://blogs.msdn.microsoft.com/vcblog/2017/08/04/c-unit-testing-updates-announcing-boost-test-adapter-and-improved-google-test-support/)。
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
 

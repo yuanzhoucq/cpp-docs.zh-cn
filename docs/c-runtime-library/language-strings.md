@@ -33,15 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: dfbd15b0da6e09b825a1562f006416e975603ab5
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="language-strings"></a>Language Strings
-`setlocale` 和 `_create_locale` 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言的列表，请参阅[区域语言支持 (NLS) API 参考](http://msdn.microsoft.com/goglobal/bb896001.aspx)。 语言字符串可以是支持语言列表的“语言”和“语言名称缩写”列中的任意值。 C 运行库实现也支持这些语言字符串：  
+`setlocale` 和 `_create_locale` 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言的列表，请参阅[区域语言支持 (NLS) API 参考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)。 语言字符串可以是支持语言列表的“语言”和“语言名称缩写”列中的任意值。 有关操作系统版本的语言支持的其他信息，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](http://msdn.microsoft.com/goglobal/bb896001.aspx)。   
+  
+C 运行库实现也支持这些语言字符串：  
   
 |语言字符串|等效区域设置名称|  
 |---------------------|----------------------------|  
