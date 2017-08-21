@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfe2d5cb2180585879bba9f912253f71f7aa3805
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: eaa816f145dc46ca45ea761ab52f9c3bb7d9e343
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="c-run-time-library-reference"></a>C 运行时库参考
@@ -76,8 +76,8 @@ Microsoft 运行库为 Microsoft Windows 操作系统的编程提供了例程。
  [运行时错误检查](../c-runtime-library/run-time-error-checking.md)  
  提供指向支持运行时错误检查的函数的链接。  
   
- [运行时库行为](../build/run-time-library-behavior.md)  
- 讨论 CRT DLL 的入口点。  
+ [DLL 和 Visual C++ 运行时库行为](../build/run-time-library-behavior.md)  
+ 讨论用于 DLL 的入口点和启动代码。  
   
  [Visual C++ 库](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
  提供 Visual C++ 附带的各种库链接，其中包括 ATL、MFC、OLE DB 模板、C 运行时库和 C++ 标准库。  
