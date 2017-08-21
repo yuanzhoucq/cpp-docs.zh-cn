@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 5c910e117ea484b6b181b0d81de84cdc22a53fc1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/01/2017
   
 #### <a name="general-changes"></a>常规更改  
   
--   **重构的二进制文件** CRT 库被重构为两个不同的二进制文件、一个通用 CRT (ucrtbase)（其中包含大多数标准功能）和一个 VC 运行时库 (vcruntime140)（其中包含与编译器相关的功能，如异常处理和内部函数）。 如果你使用的是默认项目设置，则此更改不会对你产生影响，因为链接器将自动使用新的默认库。 如果将项目的“链接器”  属性“忽略所有默认库”  设置为“是”  ，或你使用的是命令行上的 /NODEFAULTLIB 链接器选项，则必须更新库的列表（位于“附加依赖项”  属性）以包括新的重构库。 将旧的 CRT 库（libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib）替换为等效的重构库。 对于两个中的每个重构库，都存在静态 (.lib) 和动态 (.dll) 版本，发行（无后缀）和调试版本（使用“d”后缀）。 动态版本具有与之链接的导入库。 两个重构库是通用的 CRT（特别是 ucrtbase.dll 或 .lib、ucrtbased.dll 或 .lib）和 VC 运行时库（libvcruntime.lib、libvcruntime.dll、libvcruntimed.lib 和 libvcruntimed.dll）。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。  
+-   **重构的二进制文件** CRT 库被重构为两个不同的二进制文件、一个通用 CRT (ucrtbase)（其中包含大多数标准功能）和一个 VC 运行时库 (vcruntime)（其中包含与编译器相关的功能，如异常处理和内部函数）。 如果你使用的是默认项目设置，则此更改不会对你产生影响，因为链接器将自动使用新的默认库。 如果将项目的“链接器”  属性“忽略所有默认库”  设置为“是”  ，或你使用的是命令行上的 /NODEFAULTLIB 链接器选项，则必须更新库的列表（位于“附加依赖项”  属性）以包括新的重构库。 将旧的 CRT 库（libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib）替换为等效的重构库。 对于两个中的每个重构库，都存在静态 (.lib) 和动态 (.dll) 版本，发行（无后缀）和调试版本（使用“d”后缀）。 动态版本具有与之链接的导入库。 两个重构库是通用的 CRT（特别是 ucrtbase.dll 或 .lib、ucrtbased.dll 或 .lib）和 VC 运行时库（libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib 和 vcruntimed*version*.dll）。 *version* 在 Visual Studio 2015 和 Visual Studio 2017 中均为 140。 请参阅 [CRT 库的功能](../c-runtime-library/crt-library-features.md)。  
   
 #### <a name="localeh"></a>\<locale.h>  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 06/01/2017
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--   **get 和 _getws**  已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
+-    **get 和 _getws**  已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
   
 -   **_cgets 和 _cgetws** 已删除 [_cgets](../c-runtime-library/cgets-cgetws.md) 和 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函数。 作为这些函数替代，请考虑使用 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 和 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
   
@@ -1423,7 +1423,7 @@ struct S2 : public S1 {
 
 -   **{} 防止发生指针转换**  
 
-下面的代码现在生成错误 C2439："S::p":无法初始化成员    
+下面的代码现在生成错误 C2439："S::p":无法初始化成员   
 ```cpp
 struct S {
     S() : p({ 0 }) {}

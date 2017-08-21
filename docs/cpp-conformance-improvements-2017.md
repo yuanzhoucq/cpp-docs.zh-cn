@@ -26,16 +26,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
-ms.openlocfilehash: d00951204a358ec064f69035b7dd6ac5adc08ed9
+ms.translationtype: HT
+ms.sourcegitcommit: 467fc9fdbdf1df73590e5ca498067eb2a5b5c900
+ms.openlocfilehash: 42b93960a6e0b829f3501c92a081953cf1051be4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/14/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中的 C++ 一致性改进
-有关 Update 版本 15.3 中的改进，请参阅 [Visual Studio Update 版本 15.3 中的 bug 修复](#update_153)。
+
 ## <a name="new-language-features"></a>新语言功能  
 编译器支持通用 constexpr 和聚合的 NSDMI，现具有 C++14 标准版中的全部新增功能。 请注意，编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Visual C++ 语言合规性](visual-cpp-language-conformance.md)中显示编译器当前状态的表。
 
@@ -55,12 +55,33 @@ ms.lasthandoff: 06/08/2017
 
 **通用的基于范围的 for 循环**（不需要编译器开关）基于范围的 for 循环不再需要 begin() 和 end() 返回相同类型的对象。 这使得 end() 能够返回类似于 Ranges-V3 方案中定义的 ranges 所使用的那种 sentinel 对象。 有关详细信息，请参阅 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)（通用化基于范围的 for 循环）和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3)（GitHub 上的 range-v3 库）。 
 
+**Visual Studio 2017 版本15.3**：
+
+**constexpr lambda** 现在可以在常数表达式中使用 Lambda 表达式。 有关详细信息，请参阅 [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf)。
+
+**函数模板中的 if constexpr** 函数模板可以包含 `if constexpr` 语句以启用编译时分支。 有关详细信息，请参阅 [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html)。
+
+**具有初始化表达式的选择语句** `if` 语句可以包括在该语句本身内的块范围中引入变量的初始化表达式。 有关详细信息，请参阅[具有初始化表达式的选择语句](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html)。
+
+**[[maybe_unused]] 和 [[nodiscard]] 属性** 当不使用实体时，新属性不提示警告，或者如果放弃函数调用的返回值，新属性则创建一个警告。 有关详细信息，请参阅 [maybe_unused 属性的用词](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf)和 [unused、nodiscard 和 fallthrough 属性的建议](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf)。
+
+**使用属性命名空间而不重复** 仅在属性列表中启用单个命名空间标识符的新语法。 有关详细信息，请参阅 [C++ 中的属性](cpp/attributes2.md)。
+
+**结构化绑定** 现在可以在单个声明中存储具有其组件各个名称的值，前提是该值是数组、std::tuple 或 std::pair 或者具有所有公共的非静态数据成员。 有关详细信息，请参阅[结构化绑定](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)。
+
+**枚举类值的构造规则** 现在有一种从有作用域的枚举的基础类型到该枚举本身的隐式/非收缩转换，前提是它的定义不引入枚举器，并且源使用列表初始化语法。 有关详细信息，请参阅[枚举类值的构造规则](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)。
+
+**通过值捕获 *this** 现在可以通过值捕获 lambda 表达式中的“\*this”对象。 这样可以在并行和异步操作中实现调用 lambda 的情况，特别是在较新的计算机体系结构中。 有关详细信息，请参阅[通过值执行的 \*this 的 Lambda 捕获为 [=,\*this]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)。
+
+**删除 bool 的 operator++** `bool` 类型不再支持 operator++。 有关详细信息，请参阅[删除弃用的 operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)。
+
+**删除弃用的“register”关键字** 以前弃用（并被 Visual C++ 编译器忽略）的 `register` 关键字现在已从该语言中删除。 有关详细信息，请参阅[删除弃用的 register 关键字](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)。
 
 有关 Visual Studio 2015 Update 3 中一致性改进的完整列表，请参阅 [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx)（Visual C++ 2003 至 2015 中的新增功能）。
 
 ## <a name="bug-fixes"></a>Bug 修复
 ### <a name="copy-list-initialization"></a>复制列表初始化
-Visual Studio 2017 使用并非在 Visual Studio 2015 中捕获的初始值设定项列表正确引发与对象创建相关的编译器错误，并可能导致故障或未定义的运行时行为。  根据 N4594 13.3.1.7p1，在复制列表初始化中，编译器需要考虑用于重载决策的显式构造函数，但是如果实际选择了该重载，则必须引发错误。 
+Visual Studio 2017 使用并非在 Visual Studio 2015 中捕获的初始值设定项列表正确引发与对象创建相关的编译器错误，并可能导致故障或未定义的运行时行为。 根据 N4594 13.3.1.7p1，在复制列表初始化中，编译器需要考虑用于重载决策的显式构造函数，但是如果实际选择了该重载，则必须引发错误。 
 
 以下两个示例在 Visual Studio 2015 中编译，但在 Visual Studio 2017 中不编译。
 ```cpp  
@@ -276,14 +297,14 @@ constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
 ### <a name="classes-declared-in-anonymous-namespaces"></a>在匿名命名空间内声明的类
-根据 C++ 标准，在匿名命名空间内部声明的类具有内部链接，因此不能导出。 在 Visual Studio 2015 及更早版本中，此规则不是强制执行的。 在 Visual Studio 2017 中，部分强制执行此规则。 下面的示例在 Visual Studio 2017 中引发错误：“错误 C2201: 'const `anonymous namespace'::S1::`vftable'': 必须具有外部链接才能导出/导入。”
+根据 C++ 标准，在匿名命名空间内部声明的类具有内部链接，因此不能导出。 在 Visual Studio 2015 及更早版本中，此规则不是强制执行的。 在 Visual Studio 2017 中，部分强制执行此规则。 下面的示例在 Visual Studio 2017 中引发错误：“错误 C2201: const anonymous namespace::S1::vftable: 必须具有外部链接才能导出/导入。”
 
 ```cpp
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
 ### <a name="default-initializers-for-value-class-members-ccli"></a>值类成员的默认初始值设定项 (C++/CLI)
-在 Visual Studio 2015 及更早版本中，编译器允许（但会忽略）值类成员的默认成员初始值设定项。  值类的默认初始化始终对成员执行零初始化；不允许使用默认构造函数。  在 Visual Studio 2017 中，默认成员初始值设定项引发编译器错误，如下例所示：
+在 Visual Studio 2015 及更早版本中，编译器允许（但会忽略）值类成员的默认成员初始值设定项。 值类的默认初始化始终对成员执行零初始化；不允许使用默认构造函数。 在 Visual Studio 2017 中，默认成员初始值设定项引发编译器错误，如下例所示：
 
 ```cpp  
 value struct V
@@ -349,7 +370,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a> Visual Studio 2017 Update 版本 15.3
+## <a name="update_153"></a> Visual Studio 2017 版本 15.3 中的 Bug 修复
 ### <a name="calls-to-deleted-member-templates"></a>调用的成员模板已遭删除
 在旧版 Visual Studio 中，在某些情况下，编译器可能无法在对已删除的成员模板执行格式错误的调用时发出错误，这可能会导致运行时故障发生。 下面的代码现在生成错误 C2280："int S<int>::f<int>(void)":正在尝试引用已删除的函数。
 ```cpp
@@ -366,7 +387,7 @@ void g()
 若要修复此错误，请将 i 声明为 `int`。
 
 ### <a name="pre-condition-checks-for-type-traits"></a>类型特征的前提条件检查
-为了更严格地遵循标准，Visual Studio 2017 Update 版本 15.3 改进了类型特征的前提条件检查。 此类检查验证的是类型是否可赋值。 下面的代码在 Update 版本 15.3 中生成错误 C2139：
+为了更严格地遵循标准，Visual Studio 2017 版本 15.3 改进了类型特征的前提条件检查。 此类检查验证的是类型是否可赋值。 下面的代码在 Update 版本 15.3 中生成错误 C2139：
 
 ```cpp
 struct S; 
@@ -412,7 +433,7 @@ int main()
 若要修复此错误，请删除 `#pragma managed` 指令以将调用方标记为本机，并避免执行封送。 
 
 ### <a name="experimental-api-warning-for-winrt"></a>WinRT 的实验性 API 警告
-为了获取反馈而发布的实验性 WinRT API 使用 `Windows.Foundation.Metadata.ExperimentalAttribute` 进行修饰。 在 Update 版本 15.3 中，编译器会在遇到此特性时生成警告 C4698。 旧版 Windows SDK 中的一些 API 已使用此特性进行修饰，调用这些 API 会开始触发这一编译器警告。 更高版本的 Windows SDK 会从所有已发布的类型中删除此特性。不过，如果使用的是更低版本 SDK，需要对已发布类型的所有调用禁用这些警告。
+为了获取反馈而发布的实验性 WinRT API 使用 `Windows.Foundation.Metadata.ExperimentalAttribute` 进行修饰。 在 Visual Studio 2017 版本 15.3 中，编译器会在遇到此特性时生成警告 C4698。 旧版 Windows SDK 中的一些 API 已使用此特性进行修饰，调用这些 API 会开始触发这一编译器警告。 更高版本的 Windows SDK 会从所有已发布的类型中删除此特性。不过，如果使用的是更低版本 SDK，需要对已发布类型的所有调用禁用这些警告。
 下面的代码生成警告 C4698："Windows::Storage::IApplicationDataStatics2::GetForUserAsync" 仅供评估使用，可能会在今后推出的版本中发生变更或遭到删除。
 ```cpp
 Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
@@ -429,7 +450,7 @@ Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
 #pragma warning(pop)
 ```
 ### <a name="out-of-line-definition-of-a-template-member-function"></a>模板成员函数的外部定义 
-Update 版本 15.3 在遇到未在类中声明的模板成员函数的外部定义时生成错误。 下面的代码现在生成错误 C2039："f":不是 "S" 的成员。
+Visual Studio 2017 版本 15.3 在遇到未在类中声明的模板成员函数的外部定义时生成错误。 下面的代码现在生成错误 C2039："f":不是 "S" 的成员。
 
 ```cpp
 struct S {}; 
@@ -450,11 +471,10 @@ void S::f(T t) {}
 ```
 
 ### <a name="attempting-to-take-the-address-of-this-pointer"></a>尝试使用“this”指针的地址
-在 C++ 中，“this”是指向 X 的类型指针的 prvalue。不能使用“this”的地址，也不能将其绑定到左值引用。 在旧版 Visual Studio 中，编译器允许通过执行转换来规避此限制。 在 Update 版本 15.3 中，编译器会生成错误 C2664。
+在 C++ 中，“this”是指向 X 的类型指针的 prvalue。不能使用“this”的地址，也不能将其绑定到左值引用。 在旧版 Visual Studio 中，编译器允许通过执行转换来规避此限制。 在 Visual Studio 2017 版本 15.3 中，编译器会生成错误 C2664。
 
 ### <a name="conversion-to-an-inaccessible-base-class"></a>转换成不可访问的基类
-如果尝试将类型转换成不可访问的基类，Update 版本 15.3 生成错误。 编译器现在引发  
-错误 C2243：“类型转换”:可以从 "D *" 转换成 "B *"，但其不可访问。 下面的代码格式错误，可能会导致运行时故障发生。 现在，编译器在遇到如下代码时生成错误 C2243：
+如果尝试将类型转换成不可访问的基类，Visual Studio 2017 版本 15.3 会生成错误。 现在，编译器引发“错误 C2243:‘类型转换’: 存在从‘D *’到‘B *’的转换，但不可访问。” 下面的代码格式错误，可能会导致运行时故障发生。 现在，编译器在遇到如下代码时生成错误 C2243：
 
 ```cpp
 #include <memory> 
@@ -468,7 +488,9 @@ void f()
 }
 ```
 ### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>不允许对成员函数的外部定义使用默认自变量
-不允许对模板类中成员函数的外部定义使用默认自变量。  编译器会在 /permissive 下发出警告，并在 /permissive- 下触发硬错误。在旧版 Visual Studio 中，下面错误格式的代码可能会导致运行时故障发生。 Update 版本 15.3 生成警告 C5034："A<T>::f":类模板成员的外部定义不能包含默认自变量。
+不允许对模板类中成员函数的外部定义使用默认参数。编译器将在 /permissive 下发出警告，并在 /permissive- 下发出硬错误。 
+
+在以前版本的 Visual Studio 中，以下格式错误的代码可能会导致发生运行时故障。 Visual Studio 2017 版本 15.3 生成警告 C5034：“A<T>::f”: 类模板成员的外部定义不能包含默认参数：
 ```cpp
  
 template <typename T> 
@@ -485,7 +507,7 @@ T A<T>::f(T t, bool b = false) // C5034
 若要修复此错误，请删除“= false”默认自变量。 
 
 ### <a name="use-of-offsetof-with-compound-member-designator"></a>将 offsetof 与复合成员指示符结合使用
-在 Update 版本 15.3 中，使用 /Wall 选项进行编译时，如果使用 offsetof(T, m)（其中 m 是“复合成员指示符”），将会生成警告。 下面的代码格式错误，可能会导致运行时故障发生。 Update 版本 15.3 生成警告 C4841：使用了非标准扩展: offseto 中的复合成员指示符。
+在 Visual Studio 2017 版本 15.3 中，使用 /Wall 选项进行编译时，如果使用 offsetof(T, m)（其中 m 是“复合成员指示符”），将会生成警告。 下面的代码格式错误，可能会导致运行时发生故障。 Visual Studio 2017 版本 15.3 生成“警告 C4841：使用了非标准扩展: offseto 中的复合成员指示符”：
 
 ```cpp
   
@@ -506,7 +528,7 @@ constexpr auto off = offsetof(A, arr[2]);
 ```
 
 ### <a name="using-offsetof-with-static-data-member-or-member-function"></a>将 offsetof 与静态数据成员或成员函数结合使用
-在 Update 版本 15.3 中，使用 offsetof(T, m)（其中 m 表示静态数据成员或成员函数）会导致错误生成。 下面的代码生成错误 C4597：未定义的行为: offsetof 应用于成员函数 "foo"。同时，还生成错误 C4597：未定义的行为: offsetof 应用于静态数据成员 "bar"。
+在 Visual Studio 2017 版本 15.3 中，使用 offsetof(T, m)（其中 m 表示静态数据成员或成员函数）会导致生成错误。 下面的代码生成错误 C4597：未定义的行为: offsetof 应用于成员函数 "foo"。同时，还生成错误 C4597：未定义的行为: offsetof 应用于静态数据成员 "bar"。
 ```cpp
  
 #include <cstddef> 
@@ -520,10 +542,10 @@ constexpr auto off = offsetof(A, foo);
 Constexpr auto off2 = offsetof(A, bar);
 ```
  
-此代码格式错误，可能会导致运行时故障发生。 若要修复此错误，请将此代码更改为不再调用未定义的行为。 这是 C++ 标准不允许使用的不可移植代码。
+此代码格式错误，可能会导致运行时发生故障。 若要修复此错误，请将此代码更改为不再调用未定义的行为。 这是 C++ 标准不允许使用的不可移植代码。
 
 ### <a name="new-warning-on-declspec-attributes"></a>有关 declspec 特性的新警告
-在 Update 版本 15.3 中，如果在 extern "C" 链接规范前应用了 __declspec(…)，则编译器将不再忽略此特性。 以前，编译器会忽略此特性，进而可能会导致运行时影响。 设置 `/Wall /WX` 选项后，下面的代码生成警告 C4768：已忽略链接规范前的 __declspec 特性。
+在 Visual Studio 2017 版本 15.3 中，如果在 extern "C" 链接规范前应用了 __declspec(…)，则编译器将不再忽略此特性。 以前，编译器会忽略此特性，进而可能会导致运行时影响。 设置 `/Wall /WX` 选项后，下面的代码生成警告 C4768：已忽略链接规范前的 __declspec 特性。
 
 ```cpp
  
@@ -538,7 +560,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 此警告默认关闭，只影响使用 `/Wall /WX` 编译的代码。
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和调用的析构函数已遭删除
-在旧版 Visual Studio 中，在“decltype”相关表达式的上下文中，编译器无法检测对已删除析构函数的调用。 在 Update 版本 15.3 中，下面的代码生成错误 C2280："A<T>::~A(void)":正在尝试引用已删除的函数。
+在旧版 Visual Studio 中，在“decltype”相关表达式的上下文中，编译器无法检测对已删除析构函数的调用。 在 Visual Studio 2017 版本 15.3 中，下面的代码生成“错误 C2280: ‘A<T>::~A(void)’: 正在尝试引用已删除的函数”：
 
 ```cpp
 template<typename T> 
@@ -559,7 +581,7 @@ void h()
 }
 ```
 ### <a name="uninitialized-const-variables"></a>未初始化的 const 变量
-Visual Studio 2017 RTW 版本包含一个回归，即如果未初始化“const”变量，C++ 编译器不会发出诊断提醒。 Visual Studio 2017 Update 1 修复了此回归。 下面的代码现在生成警告 C4132：“值”:应初始化 const 对象。
+Visual Studio 2017 RTW 版本包含一个回归，即如果未初始化“const”变量，C++ 编译器不会发出诊断提醒。 Visual Studio 2017 版本 15.3 修复了此回归。 下面的代码现在生成警告 C4132：“值”:应初始化 const 对象。
 
 ```cpp
 const int Value; //C4132
@@ -567,7 +589,7 @@ const int Value; //C4132
 若要修复此错误，请向 `Value` 赋值。
 
 ### <a name="empty-declarations"></a>空声明
-Visual Studio 2017 Update 版本 15.3 现在不仅会对内置类型发出警告，还会对所有类型的空声明发出警告。 下面的代码现在对所有四种声明生成第 2 级 C4091 警告：
+现在，Visual Studio 2017 版本 15.3 不仅会对内置类型发出警告，还会对所有类型的空声明发出警告。 下面的代码现在对所有四种声明生成第 2 级 C4091 警告：
 
 ```cpp
 struct A {};
@@ -580,13 +602,13 @@ B<int>; // warning C4091 : '' : ignored on left of 'B<int>' when no variable is 
 C;      // warning C4091 : '' : ignored on left of 'C' when no variable is declared
 ```
 
-若要移除这些警告，只需注释掉或删除空声明即可。  如果未命名的对象会造成副作用（如 RAII），应命名对象。
+若要移除这些警告，只需注释掉或删除空声明即可。 如果未命名的对象会造成副作用（如 RAII），应命名对象。
  
 在 /Wv:18 下此警告被排除在外，而在警告等级 W2 下此警告默认启用。
 
 
 ### <a name="stdisconvertible-for-array-types"></a>std::is_convertible 用于数组类型
-早期版本的编译器为数组类型提供了不正确的 [std::is_convertible](standard-library/is-convertible-class.md) 结果。 这要求库编写者在使用 `std::is_convertable<…>` 类型特征时，要特殊处理 Visual C++ 编译器。 在下例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 更新版本 15.3 中不通过：
+早期版本的编译器为数组类型提供了不正确的 [std::is_convertible](standard-library/is-convertible-class.md) 结果。 这要求库编写者在使用 `std::is_convertible<…>` 类型特征时，要特殊处理 Visual C++ 编译器。 在以下示例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 版本 15.3 中不通过：
 
 ```cpp
 #include <type_traits>
@@ -594,9 +616,9 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 using Array = char[1];
  
 static_assert(std::is_convertible<Array, Array>::value);
-static_assert((std::is_convertible<const Array, const Array>::value), "");
-static_assert((std::is_convertible<Array&, Array>::value), "");
-static_assert((std::is_convertible<Array, Array&>::value), "");
+static_assert(std::is_convertible<const Array, const Array>::value, "");
+static_assert(std::is_convertible<Array&, Array>::value, "");
+static_assert(std::is_convertible<Array, Array&>::value, "");
 ```
 
 std::is_convertible<From, To> 是通过检查虚函数定义是否完整计算而得： 
@@ -605,7 +627,7 @@ std::is_convertible<From, To> 是通过检查虚函数定义是否完整计算�
 ``` 
 
 ### <a name="private-destructors-and-stdisconstructible"></a>私有析构函数和 std::is_constructible
-在决定 [std::is_constructible](standard-library/is-constructible-class.md) 的结果时，早期版本的编译器会忽略析构函数是否是私有的。 现在会考虑这一点。 在下例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 更新版本 15.3 中不通过：
+在决定 [std::is_constructible](standard-library/is-constructible-class.md) 的结果时，早期版本的编译器忽略了析构函数是否是私有的。 现在会考虑这一点。 在以下示例中，静态断言在早期版本的 Visual Studio 中是通过的，但在 Visual Studio 2017 版本 15.3 中不通过：
 
 ```cpp
 #include <type_traits>
@@ -627,7 +649,7 @@ static_assert(std::is_constructible<PrivateDtor, int>::value);
 此调用表示一个析构函数调用。
 
 ### <a name="c2668-ambiguous-overload-resolution"></a>C2668：重载决策不明确
-当发现多个候选项（都使用声明和参数依赖查找）时，早期版本的编译器有时无法检测到多义性。 这可能导致选择错误的重载并出现异常的运行时行为。 在下例中，Visual Studio 2017 更新版本 15.3 正确引发 C2668“f”：对重载函数的调用不确定：
+当发现多个候选项（都使用声明和参数依赖查找）时，早期版本的编译器有时无法检测到多义性。 这可能导致选择错误的重载并出现异常的运行时行为。 在以下示例中，Visual Studio 2017 版本 15.3 正确引发 C2668“f”：对重载函数的调用不确定：
 
 ```cpp
 namespace N {
@@ -654,7 +676,7 @@ void f()
 
 ### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660：局部函数声明与参数依赖查找
 局部函数声明将函数声明隐藏在封闭作用域中，并禁用参数依赖查找。
-但在这种情况中，早期版本的 Visual C++ 编译器会执行参数依赖查找，这有可能导致选择错误的重载，并出现异常的运行时行为。 出现此错误，通常是因为局部函数声明的签名不正确。 在下例中，Visual Studio 2017 更新版本 15.3 正确引发 C2660“f”：函数不具有 2 个参数：
+但在这种情况中，早期版本的 Visual C++ 编译器会执行参数依赖查找，这有可能导致选择错误的重载，并出现异常的运行时行为。 出现此错误，通常是因为局部函数声明的签名不正确。 在下例中，Visual Studio 2017 版本 15.3 正确引发 C2660“f”：函数不具有 2 个参数：
 
 ```cpp
 struct S {}; 
@@ -672,7 +694,7 @@ void g()
 要修改此问题，可以更改 f(S) 签名，也可以删除它。
 
 ### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038：初始值设定项列表中的初始化顺序
-类成员按它们声明的顺序，而非按它们在初始值设定项列表中出现的顺序进行初始化。 如果初始值设定项列表的顺序不同于声明顺序，早期版本的编译器不会发出警告。 如果列表中为另一成员初始化所依赖的某成员已被初始化，则可能会造成未定义的运行时行为。 在下例中，Visual Studio 2017 更新版本 15.3（具有 /Wall 或 /WX）引发了警告 C5038：数据成员 “A::y” 将在数据成员 “A::x” 之后被初始化：
+类成员按它们声明的顺序，而非按它们在初始值设定项列表中出现的顺序进行初始化。 如果初始值设定项列表的顺序不同于声明顺序，早期版本的编译器不会发出警告。 如果列表中为另一成员初始化所依赖的某成员已被初始化，则可能会造成未定义的运行时行为。 在以下示例中，Visual Studio 2017 版本 15.3（具有 /Wall）引发了警告 C5038：数据成员“A::y”将在数据成员“A::x”之后被初始化：
 
 ```cpp
 struct A
@@ -685,7 +707,7 @@ struct A
 ```
 要修复此问题，请将初始值设定项列表的顺序设置为与声明顺序相同。 如果一个或两个初始化表达式同时引用基类成员，则会引发类似警告。
 
-请注意，警告默认为关闭，它仅会影响通过 /Wall 或 /WX 编译的代码。
+请注意，警告默认为关闭，它仅会影响通过 /Wall 编译的代码。
 
 ## <a name="see-also"></a>另请参阅  
 [Visual C/C++ 语言一致性](visual-cpp-language-conformance.md)  
