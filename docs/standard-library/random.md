@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,50 +33,50 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.translationtype: MT
+ms.sourcegitcommit: 7af20dfb7907e61334163b52d51afdcd193dbf3d
+ms.openlocfilehash: 2ce26e0518f15a880e5a2479258aadbca6b9932c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
-定义随机数生成设备，从而允许创建均匀分布的随机数。  
+Defines facilities for random number generation, allowing creation of uniformly distributed random numbers.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <random>  
 ```  
   
-## <a name="summary"></a>摘要  
- *随机数生成器*是指可产生伪随机值序列的对象。 可产生在指定范围内均匀分布的值的生成器称为*均匀随机数生成器* (URNG)。 如果模板类具有某些共同的特点，则将旨在充当 URNG 的模板类称为*引擎*（将在本文后面对此进行讨论）。 通过将 URNG 作为自变量传递到分布的 `operator()`，URNG 可以（通常也会）和*分布*一起使用，从而产生以该分布定义的方式分布的值。  
+## <a name="summary"></a>Summary  
+ A *random number generator* is an object that produces a sequence of pseudo-random values. A generator that produces values that are uniformly distributed in a specified range is a *Uniform Random Number Generator* (URNG). A template class designed to function as a URNG is referred to as an *engine* if that class has certain common traits, which are discussed later in this article. A URNG can be—and usually is—combined with a *distribution* by passing the URNG as an argument to the distribution's `operator()` to produce values that are distributed in a manner that is defined by the distribution.  
   
- 这些链接将跳转到本文的主要部分：  
+ These links jump to the major sections of this article:  
   
-- [示例](#code)  
+- [Examples](#code)  
   
-- [分类列表](#listing)  
+- [Categorized Listing](#listing)  
   
-- [引擎和分布](#engdist)  
+- [Engines and Distributions](#engdist)  
   
-- [备注](#comments)  
+- [Remarks](#comments)  
   
-### <a name="quick-tips"></a>快速提示  
- 使用 `<random>` 时，请牢记以下这些提示：  
+### <a name="quick-tips"></a>Quick Tips  
+ Here are some tips to keep in mind when using `<random>`:  
   
--   在大多数情况下，URNG 将产生必须由分布形成的原始位。 （一个值得注意的例外是 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)，因为它直接使用 URNG。）  
+-   For most purposes, URNGs produce raw bits that must be shaped by distributions. (A notable exception to this is [std::shuffle()](../standard-library/algorithm-functions.md#shuffle) because it uses a URNG directly.)  
   
--   无法同时安全地调用 URNG 或分布的单一实例化，因为运行 URNG 或分布是修改操作。 有关详细信息，请参阅 [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)。  
+-   A single instantiation of a URNG or distribution cannot safely be called concurrently because running a URNG or distribution is a modifying operation. For more information, see [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md).  
   
-- 提供了几个引擎的[预定义 typedef](#typedefs)；如果正在使用引擎，则这是创建 URNG 的首选方法。  
+- [Predefined typedefs](#typedefs) of several engines are provided; this is the preferred way to create a URNG if an engine is being used.  
   
--   对于大多数应用程序而言，最有用的配对是 `mt19937` 引擎和 `uniform_int_distribution`，如本文后面的[代码示例](#code)中所示。  
+-   The most useful pairing for most applications is the `mt19937` engine with `uniform_int_distribution`, as shown in the [code example](#code) later in this article.  
   
- `<random>` 标头中提供了许多可选选项，其中任何选项都优于过时的 C 运行时函数 `rand()`。 有关 `rand()` 的问题以及 `<random>` 处理这些不足的方式的信息，请观看[此视频](http://go.microsoft.com/fwlink/LinkId=397615)。  
+ There are many options to choose from in the `<random>` header, and any of them is preferable to the outdated C Runtime function `rand()`. For information about what's wrong with `rand()` and how `<random>` addresses these shortcomings, see [this video](http://go.microsoft.com/fwlink/?LinkId=397615).  
   
-##  <a name="code"></a>示例  
- 以下代码示例显示如何生成一些随机数字，本例中有 5 个是使用生成器用非确定性种子生成的。  
+##  <a name="code"></a> Examples  
+ The following code example shows how to generate some random numbers in this case five of them using a generator created with non-deterministic seed.  
   
 ```cpp  
 #include <random>  
@@ -103,7 +103,7 @@ int main()
 2430338871 3531691818 2723770500 3252414483 3632920437  
 ```  
   
- 虽然这些是高质量随机数字并且此程序每次运行时生成的数字都不一样，但它们不一定在有用范围之内。 若要控制范围，应使用均匀分布，如以下代码所示：  
+ While these are high quality random numbers and different every time this program is run, they are not necessarily in a useful range. To control the range, use a uniform distribution as shown in the following code:  
   
 ```cpp  
 #include <random>  
@@ -128,7 +128,7 @@ int main()
 5 1 6 1 2  
 ```  
   
- 下一个代码示例显示更为实际的一组用例，即使用均匀分布的随机数生成器随机排列矢量内容和数组内容。  
+ The next code example shows a more realistic set of use cases with uniformly distributed random number generators shuffling the contents of a vector and an array.  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd  
@@ -227,254 +227,254 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 --  
 ```  
   
-此代码使用测试模板函数演示了两种不同的随机化过程（随机化整数矢量和随机排列索引数据的数组）。 首次调用测试函数时，使用安全加密的、非确定性的、不可设定种子的、不可重复的 URNG `random_device`。 第二次测试运行将 `mersenne_twister_engine` 用作 URNG，以及确定性的 32 位常量种子，这意味着结果是可重复的。 第三次测试运行使用来自 `mersenne_twister_engine` 的 32 位非确定性结果设定 `random_device` 的种子。 第四次测试运行通过使用以 `random_device` 结果填充的[种子序列](../standard-library/seed-seq-class.md)对此进行扩展，这可有效地提供超过 32 位的非确定性随机性（但仍非安全加密的）。 有关详细信息，请继续阅读。  
+This code demonstrates two different randomizations—randomize a vector of integers and shuffle an array of indexed data—with a test template function. The first call to the test function uses the crypto-secure, non-deterministic, not-seedable, non-repeatable URNG `random_device`. The second test run uses `mersenne_twister_engine` as URNG, with a deterministic 32-bit constant seed, which means the results are repeatable. The third test run seeds `mersenne_twister_engine` with a 32-bit non-deterministic result from `random_device`. The fourth test run expands on this by using a [seed sequence](../standard-library/seed-seq-class.md) filled with `random_device` results, which effectively gives more than 32-bit non-deterministic randomness (but still not crypto-secure). For more information, read on.  
   
-##  <a name="listing"></a>分类列表  
+##  <a name="listing"></a> Categorized Listing  
   
-###  <a name="urngs"></a>均匀随机数生成器  
- 通常根据这些属性来描述 URNG：  
+###  <a name="urngs"></a> Uniform Random Number Generators  
+ URNGs are often described in terms of these properties:  
   
-1. **周期长度**：重复生成的数字序列所需的迭代数。 越长越好。  
+1. **Period length**: How many iterations it takes to repeat the sequence of numbers generated. The longer the better.  
   
-2. **性能**：生成数字的速度和所需的内存量。 越小越好。  
+2. **Performance**: How quickly numbers can be generated and how much memory it takes. The smaller the better.  
   
-3. **质量**：生成的序列与真正的随机数的接近程度。 这通常称为“*随机性*”。  
+3. **Quality**: How close to true random numbers the generated sequence is. This is often called "*randomness*".  
   
- 以下部分列出了 `<random>` 标头中提供的均匀随机数生成器 (URNG)。  
+ The following sections list the uniform random number generators (URNGs) provided in the `<random>` header.  
   
-####  <a name="rd"></a>非确定性生成器  
+####  <a name="rd"></a> Non-Deterministic Generator  
   
 |||  
 |-|-|  
-|[random_device 类](../standard-library/random-device-class.md)|通过使用外部设备，生成非确定性的、安全加密的随机序列。 通常用于为引擎设定种子。 低性能，高质量。 有关更多信息，请参见[备注](#comments)。|  
+|[random_device Class](../standard-library/random-device-class.md)|Generates a non-deterministic, cryptographically secure random sequence by using an external device. Usually used to seed an engine. Low performance, very high quality. For more information, see [Remarks](#comments).|  
   
-####  <a name="typedefs"></a>具有预定义参数的引擎 Typedef  
- 适用于实例化引擎和引擎适配器。 有关详细信息，请参阅[引擎和分布](#engdist)。  
+####  <a name="typedefs"></a> Engine Typedefs with Predefined Parameters  
+ For instantiating engines and engine adaptors. For more information, see [Engines and Distributions](#engdist).  
   
-- `default_random_engine`默认引擎。   
+- `default_random_engine` The default engine.   
  `typedef mt19937 default_random_engine;`  
   
-- `knuth_b`Knuth 引擎。   
+- `knuth_b` Knuth engine.   
  `typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;`  
   
-- `minstd_rand0`1988 最小标准引擎（Lewis、Goodman 和 Miller，1969）。   
+- `minstd_rand0` 1988 minimal standard engine (Lewis, Goodman, and Miller, 1969).   
  `typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;`  
   
-- `minstd_rand`更新的最小标准引擎 `minstd_rand0`（Park、Miller 和 Stockmeyer，1993）。   
+- `minstd_rand` Updated minimal standard engine `minstd_rand0` (Park, Miller, and Stockmeyer, 1993).   
  `typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;`  
   
-- `mt19937`32 位梅森旋转引擎（Matsumoto 和 Nishimura，1998）。   
+- `mt19937` 32-bit Mersenne twister engine (Matsumoto and Nishimura, 1998).   
  `typedef mersenne_twister_engine<unsigned int, 32, 624, 397,      31, 0x9908b0df,      11, 0xffffffff,      7, 0x9d2c5680,      15, 0xefc60000,      18, 1812433253> mt19937;`  
   
-- `mt19937_64`64 位梅森旋转引擎（Matsumoto 和 Nishimura，2000）。   
+- `mt19937_64` 64-bit Mersenne twister engine (Matsumoto and Nishimura, 2000).   
  `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`  
   
-- `ranlux24`24 位 RANLUX 引擎（Martin Lüscher 和 Fred James，1994）。   
+- `ranlux24` 24-bit RANLUX engine (Martin Lüscher and Fred James, 1994).   
  `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`  
   
-- `ranlux24_base`用作 `ranlux24` 的基础。   
+- `ranlux24_base` Used as a base for `ranlux24`.   
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
-- `ranlux48`48 位 RANLUX 引擎（Martin Lüscher 和 Fred James，1994）。   
+- `ranlux48` 48-bit RANLUX engine (Martin Lüscher and Fred James, 1994).   
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`  
   
-- `ranlux48_base`用作 `ranlux48` 的基础。   
+- `ranlux48_base` Used as a base for `ranlux48`.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="eng"></a>引擎模板  
- 引擎模板将用作独立的 URNG 或传递给[引擎适配器](#engadapt)的基引擎。 通常，使用[预定义引擎 typedef](#typedefs) 实例化这些模板引擎并将其传递给[分布](#distributions)。 有关详细信息，请参阅[引擎和分布](#engdist)部分。  
+####  <a name="eng"></a> Engine Templates  
+ Engine templates are used as standalone URNGs or as base engines passed to [engine adaptors](#engadapt). Usually these are instantiated with a [predefined engine typedef](#typedefs) and passed to a [distribution](#distributions). For more information, see the [Engines and Distributions](#engdist) section.  
   
 |||  
 |-|-|  
-|[linear_congruential_engine 类](../standard-library/linear-congruential-engine-class.md)|通过使用线性同余算法生成随机序列。 最简单且质量最低。|  
-|[mersenne_twister_engine 类](../standard-library/mersenne-twister-engine-class.md)|通过使用梅森旋转算法生成随机序列。 最复杂且质量最高（random_device 类除外）。 性能非常快。|  
-|[subtract_with_carry_engine 类](../standard-library/subtract-with-carry-engine-class.md)|通过使用带进位减法算法生成随机序列。 `linear_congruential_engine` 的改进，但是质量和性能都比 `mersenne_twister_engine` 低得多。|  
+|[linear_congruential_engine Class](../standard-library/linear-congruential-engine-class.md)|Generates a random sequence by using the linear congruential algorithm. Most simplistic and lowest quality.|  
+|[mersenne_twister_engine Class](../standard-library/mersenne-twister-engine-class.md)|Generates a random sequence by using the Mersenne twister algorithm. Most complex, and is highest quality except for the random_device class. Very fast performance.|  
+|[subtract_with_carry_engine Class](../standard-library/subtract-with-carry-engine-class.md)|Generates a random sequence by using the subtract-with-carry algorithm. An improvement on `linear_congruential_engine`, but much lower quality and performance than `mersenne_twister_engine`.|  
   
-####  <a name="engadapt"></a>引擎适配器模板  
- 引擎适配器是适应其他（基）引擎的模板。 通常，使用[预定义引擎 typedef](#typedefs) 实例化这些模板引擎并将其传递给[分布](#distributions)。 有关详细信息，请参阅[引擎和分布](#engdist)部分。  
-  
-|||  
-|-|-|  
-|[discard_block_engine 类](../standard-library/discard-block-engine-class.md)|通过丢弃由其基引擎返回的值，生成随机序列。|  
-|[independent_bits_engine 类](../standard-library/independent-bits-engine-class.md)|通过再次从其基引擎返回的值中打包位，生成具有指定位数的随机序列。|  
-|[shuffle_order_engine 类](../standard-library/shuffle-order-engine-class.md)|通过对从其基引擎中返回的值进行重新排序，生成随机序列。|  
-  
- [[引擎模板](#eng)]  
-  
-###  <a name="distributions"></a>随机数分布  
- 以下部分列出了 `<random>` 标头中提供的分布。 这些分布是后处理机制，通常将 URNG 输出用作输入并通过定义的统计概率密度函数分布输出。 有关详细信息，请参阅[引擎和分布](#engdist)部分。  
-  
-#### <a name="uniform-distributions"></a>均匀分布  
+####  <a name="engadapt"></a> Engine Adaptor Templates  
+ Engine adaptors are templates that adapt other (base) engines. Usually these are instantiated with a [predefined engine typedef](#typedefs) and passed to a [distribution](#distributions). For more information, see the [Engines and Distributions](#engdist) section.  
   
 |||  
 |-|-|  
-|[uniform_int_distribution 类](../standard-library/uniform-int-distribution-class.md)|在闭区间 \[a，b]（包含起始值和结束值）范围内产生均匀整数值分布。|  
-|[uniform_real_distribution 类](../standard-library/uniform-real-distribution-class.md)|在半开区间 [a，b)（包含起始值，不包含结束值）范围内产生均匀真（浮点）值分布。|  
-|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|产生 [0，1)（包含起始值，不包含结束值）上给定精度的真（浮点）值的均匀分布。|  
+|[discard_block_engine Class](../standard-library/discard-block-engine-class.md)|Generates a random sequence by discarding values returned by its base engine.|  
+|[independent_bits_engine Class](../standard-library/independent-bits-engine-class.md)|Generates a random sequence with a specified number of bits by repacking bits from the values returned by its base engine.|  
+|[shuffle_order_engine Class](../standard-library/shuffle-order-engine-class.md)|Generates a random sequence by reordering the values returned from its base engine.|  
   
- [[随机数分布](#distributions)]  
+ [[Engine Templates](#eng)]  
   
-#### <a name="bernoulli-distributions"></a>伯努利分布  
+###  <a name="distributions"></a> Random Number Distributions  
+ The following sections list the distributions provided in the `<random>` header. Distributions are a post-processing mechanism, usually using URNG output as input and distributing the output by a defined statistical probability density function. For more information, see the [Engines and Distributions](#engdist) section.  
   
-|||  
-|-|-|  
-|[bernoulli_distribution 类](../standard-library/bernoulli-distribution-class.md)|产生 `bool` 值的伯努利分布。|  
-|[binomial_distribution 类](../standard-library/binomial-distribution-class.md)|产生整数值的二项式分布。|  
-|[geometric_distribution 类](../standard-library/geometric-distribution-class.md)|产生整数值的几何分布。|  
-|[negative_binomial_distribution 类](../standard-library/negative-binomial-distribution-class.md)|产生整数值的负二项式分布。|  
-  
- [[随机数分布](#distributions)]  
-  
-#### <a name="normal-distributions"></a>正态分布  
+#### <a name="uniform-distributions"></a>Uniform Distributions  
   
 |||  
 |-|-|  
-|[cauchy_distribution 类](../standard-library/cauchy-distribution-class.md)|产生真（浮点）值的柯西分布。|  
-|[chi_squared_distribution 类](../standard-library/chi-squared-distribution-class.md)|产生真（浮点）值的卡方分布。|  
-|[fisher_f_distribution 类](../standard-library/fisher-f-distribution-class.md)|产生的 F-分布 （也称为 Snedecor 的 F 分布或 Fisher Snedecor 分布） 的真 （浮点） 值。|  
-|[lognormal_distribution 类](../standard-library/lognormal-distribution-class.md)|产生真（浮点）值的对数正态分布。|  
-|[normal_distribution 类](../standard-library/normal-distribution-class.md)|产生真（浮点）值的正态（高斯）分布。|  
-|[student_t_distribution 类](../standard-library/student-t-distribution-class.md)|产生真（浮点）值的学生 *t*-分布。|  
+|[uniform_int_distribution Class](../standard-library/uniform-int-distribution-class.md)|Produces a uniform integer value distribution across a range in the closed interval \[a, b] (inclusive-inclusive).|  
+|[uniform_real_distribution Class](../standard-library/uniform-real-distribution-class.md)|Produces a uniform real (floating-point) value distribution across a range in the half-open interval [a, b) (inclusive-exclusive).|  
+|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Produces an even distribution of real (floating point) values of a given precision across [0, 1) (inclusive-exclusive).|  
   
- [[随机数分布](#distributions)]  
+ [[Random Number Distributions](#distributions)]  
   
-#### <a name="poisson-distributions"></a>泊松分布  
+#### <a name="bernoulli-distributions"></a>Bernoulli Distributions  
   
 |||  
 |-|-|  
-|[exponential_distribution 类](../standard-library/exponential-distribution-class.md)|产生真（浮点）值的指数分布。|  
-|[extreme_value_distribution 类](../standard-library/extreme-value-distribution-class.md)|产生真（浮点）值的极值分布。|  
-|[gamma_distribution 类](../standard-library/gamma-distribution-class.md)|产生真（浮点）值的 gamma 分布。|  
-|[poisson_distribution 类](../standard-library/poisson-distribution-class.md)|产生整数值的泊松分布。|  
-|[weibull_distribution 类](../standard-library/weibull-distribution-class.md)|产生真（浮点）值的韦伯分布。|  
+|[bernoulli_distribution Class](../standard-library/bernoulli-distribution-class.md)|Produces a Bernoulli distribution of `bool` values.|  
+|[binomial_distribution Class](../standard-library/binomial-distribution-class.md)|Produces a binomial distribution of integer values.|  
+|[geometric_distribution Class](../standard-library/geometric-distribution-class.md)|Produces a geometric distribution of integer values.|  
+|[negative_binomial_distribution Class](../standard-library/negative-binomial-distribution-class.md)|Produces a negative binomial distribution of integer values.|  
   
- [[随机数分布](#distributions)]  
+ [[Random Number Distributions](#distributions)]  
   
-#### <a name="sampling-distributions"></a>示例分布  
-  
-|||  
-|-|-|  
-|[discrete_distribution 类](../standard-library/discrete-distribution-class.md)|产生离散型整数分布。|  
-|[piecewise_constant_distribution 类](../standard-library/piecewise-constant-distribution-class.md)|产生真（浮点）值的分段常数分布。|  
-|[piecewise_linear_distribution 类](../standard-library/piecewise-linear-distribution-class.md)|产生真（浮点）值的分段线性分布。|  
-  
- [[随机数分布](#distributions)]  
-  
-### <a name="utility-functions"></a>实用函数  
- 本部分列出了 `<random>` 标头中提供的一般实用函数。  
+#### <a name="normal-distributions"></a>Normal Distributions  
   
 |||  
 |-|-|  
-|[seed_seq 类](../standard-library/seed-seq-class.md)|生成无偏混合种子序列。 用于避免随机变量流的复制。 在许多 URNG 从引擎中进行实例化时很有用。|  
+|[cauchy_distribution Class](../standard-library/cauchy-distribution-class.md)|Produces a Cauchy distribution of real (floating point) values.|  
+|[chi_squared_distribution Class](../standard-library/chi-squared-distribution-class.md)|Produces a chi-squared distribution of real (floating point) values.|  
+|[fisher_f_distribution Class](../standard-library/fisher-f-distribution-class.md)|Produces an F-distribution (also known as Snedecor's F distribution or the Fisher-Snedecor distribution) of real (floating point) values.|  
+|[lognormal_distribution Class](../standard-library/lognormal-distribution-class.md)|Produces a log-normal distribution of real (floating point) values.|  
+|[normal_distribution Class](../standard-library/normal-distribution-class.md)|Produces a normal (Gaussian) distribution of real (floating point) values.|  
+|[student_t_distribution Class](../standard-library/student-t-distribution-class.md)|Produces a Student's *t*-distribution of real (floating point) values.|  
   
-### <a name="operators"></a>运算符  
- 本部分列出了 `<random>` 标头中提供的运算符。  
+ [[Random Number Distributions](#distributions)]  
+  
+#### <a name="poisson-distributions"></a>Poisson Distributions  
   
 |||  
 |-|-|  
-|`operator==`|测试运算符左侧的 URNG 是否等于右侧的引擎。|  
-|`operator!=`|测试运算符左侧的 URNG 是否不等于右侧的引擎。|  
-|`operator<<`|将状态信息写入流。|  
-|`operator>>`|从流中提取状态信息。|  
+|[exponential_distribution Class](../standard-library/exponential-distribution-class.md)|Produces an exponential distribution of real (floating point) values.|  
+|[extreme_value_distribution Class](../standard-library/extreme-value-distribution-class.md)|Produces an extreme value distribution of real (floating point) values.|  
+|[gamma_distribution Class](../standard-library/gamma-distribution-class.md)|Produces a gamma distribution of real (floating point) values.|  
+|[poisson_distribution Class](../standard-library/poisson-distribution-class.md)|Produces a Poisson distribution of integer values.|  
+|[weibull_distribution Class](../standard-library/weibull-distribution-class.md)|Produces a Weibull distribution of real (floating point) values.|  
   
-##  <a name="engdist"></a>引擎和分布  
- 有关 `<random>` 中定义的每个模板类类别的信息，请参考以下部分。 这两个模板类类别都采用类型作为参数，并使用共享模板参数名称来描述允许作为实际参数类型的类型的属性，如下所示：  
+ [[Random Number Distributions](#distributions)]  
   
-- `IntType` 指示 `short`、`int`、`long`、`long long`、`unsigned short`、`unsigned int`、`unsigned long` 或 `unsigned long long`。  
+#### <a name="sampling-distributions"></a>Sampling Distributions  
   
-- `UIntType` 指示 `unsigned short`、`unsigned int`、`unsigned long` 或 `unsigned long long`。  
+|||  
+|-|-|  
+|[discrete_distribution Class](../standard-library/discrete-distribution-class.md)|Produces a discrete integer distribution.|  
+|[piecewise_constant_distribution Class](../standard-library/piecewise-constant-distribution-class.md)|Produces a piecewise constant distribution of real (floating point) values.|  
+|[piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md)|Produces a piecewise linear distribution of real (floating point) values.|  
   
-- `RealType` 指示 `float`、`double` 或 `long double`。  
+ [[Random Number Distributions](#distributions)]  
   
-### <a name="engines"></a>引擎  
- [引擎模板](#eng)和[引擎适配器模板](#engadapt)是模板，其参数可自定义创建的生成器。  
+### <a name="utility-functions"></a>Utility Functions  
+ This section lists the general utility functions provided in the `<random>` header.  
   
- *引擎*是类或模板类，其实例（生成器）可充当在最小值和最大值之间均匀分布的随机数的源。 通过采用由一些其他的随机数引擎产生的值并对这些值应用某种算法，*引擎适配器*可提供具有不同随机性属性的值的序列。  
+|||  
+|-|-|  
+|[seed_seq Class](../standard-library/seed-seq-class.md)|Generates a non-biased scrambled seed sequence. Used to avoid replication of random variate streams. Useful when many URNGs are instantiated from engines.|  
   
- 每个引擎和引擎适配器都具有以下成员：  
+### <a name="operators"></a>Operators  
+ This section lists the operators provided in the `<random>` header.  
   
-- `typedef``numeric-type``result_type` 是由生成器的 `operator()` 返回的类型。 在实例化时，`numeric-type` 将作为模板参数传递。  
+|||  
+|-|-|  
+|`operator==`|Tests whether the URNG on the left side of the operator is equal to the engine on the right side.|  
+|`operator!=`|Tests whether the URNG on the left side of the operator is not equal to the engine on the right side.|  
+|`operator<<`|Writes state information to a stream.|  
+|`operator>>`|Extracts state information from a stream.|  
   
-- `result_type operator()` 将返回在 `min()` 和 `max()` 之间均匀分布的值。  
+##  <a name="engdist"></a> Engines and Distributions  
+ Refer to the following sections for information about each of these template class categories defined in `<random>`. Both of these template class categories take a type as an argument and use shared template parameter names to describe the properties of the type that are permitted as an actual argument type, as follows:  
   
-- `result_type min()` 将返回由生成器的 `operator()` 返回的最小值。 引擎适配器使用基引擎的 `min()` 结果。  
+- `IntType` indicates a `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long`, or `unsigned long long`.  
   
-- `result_type max()` 将返回由生成器的 `operator()` 返回的最大值。 当 `result_type` 是整（整数值）型时，`max()` 是可实际返回的最大值（包括其本身）；当 `result_type` 是浮点（真值）型时，`max()` 是大于所有可返回的值的最小值（不包括其本身）。 引擎适配器使用基引擎的 `max()` 结果。  
+- `UIntType` indicates `unsigned short`, `unsigned int`, `unsigned long`, or `unsigned long long`.  
   
-- `void seed(result_type s)` 使用种子值 `s` 为生成器设定种子。 对于引擎，默认参数支持的签名为 `void seed(result_type s = default_seed)`（引擎适配器定义单独的 `void seed()`，请参阅下一小节）。  
+- `RealType` indicates a `float`, `double`, or `long double`.  
   
-- `template <class Seq> void seed(Seq& q)` 使用 [seed_seq](../standard-library/seed-seq-class.md)`Seq` 为生成器设定种子。  
+### <a name="engines"></a>Engines  
+ [Engine Templates](#eng) and [Engine Adaptor Templates](#engadapt) are templates whose parameters customize the generator created.  
   
--   具有类似通过调用 `result_type x` 创建设定了种子的生成器的参数 `seed(x)` 的显式构造函数。  
+ An *engine* is a class or template class whose instances (generators) act as a source of random numbers uniformly distributed between a minimum and maximum value. An *engine adaptor* delivers a sequence of values that have different randomness properties by taking values produced by some other random number engine and applying an algorithm of some kind to those values.  
   
--   具有类似通过调用 `seed_seq& seq` 创建设定了种子的生成器的参数 `seed(seq)` 的显式构造函数。  
+ Every engine and engine adaptor has the following members:  
   
-- `void discard(unsigned long long count)` 有效地调用 `operator()``count` 次，然后丢弃每个值。  
+- `typedef` `numeric-type` `result_type` is the type that is returned by the generator's `operator()`. The `numeric-type` is passed as a template parameter on instantiation.  
   
- 此外，**引擎适配器**还支持这些成员（`Engine` 是引擎适配器的第一个模板参数，用于指定基引擎的类型）：  
+- `result_type operator()` returns values that are uniformly distributed between `min()` and `max()`.  
   
--   类似从基引擎的默认构造函数初始化生成器的默认构造函数。  
+- `result_type min()` returns the minimum value that is returned by the generator's `operator()`. Engine adaptors use the base engine's `min()` result.  
   
--   具有参数 `const Engine& eng` 的显式构造函数。 这是为了支持使用基引擎复制构造。  
+- `result_type max()` returns the maximum value that is returned by the generator's `operator()`. When `result_type` is an integral (integer-valued) type, `max()` is the maximum value that can actually be returned (inclusive); when `result_type` is a floating-point (real-valued) type, `max()` is the smallest value greater than all values that can be returned (non-inclusive). Engine adaptors use the base engine's `max()` result.  
   
--   具有参数 `Engine&& eng` 的显式构造函数。 这是为了支持使用基引擎移动构造。  
+- `void seed(result_type s)` seeds the generator with seed value `s`. For engines, the signature is `void seed(result_type s = default_seed)` for default parameter support (engine adaptors define a separate `void seed()`, see next subsection).  
   
-- 使用基引擎的默认种子值初始化生成器的 `void seed()`。  
+- `template <class Seq> void seed(Seq& q)` seeds the generator by using a [seed_seq](../standard-library/seed-seq-class.md)`Seq`.  
   
-- 返回用于构造生成器的基引擎的 `const Engine& base()` 属性函数。  
+-   An explicit constructor with argument `result_type x` that creates a generator seeded as if by calling `seed(x)`.  
   
- 每个引擎都会保留*状态*，该状态可确定通过对 `operator()` 的后续调用将生成的值的序列。 通过使用 `operator==` 和 `operator!=`，可比较从同一类型的引擎中实例化的两个生成器的状态。 如果两个状态的比较结果相等，则它们将生成同一序列的值。 通过使用生成器的 `operator<<`，可将对象的状态作为 32 位无符号的值的序列保存到流中。 保存状态并不会更改状态。 通过使用 `operator>>`，可将保存的状态读取到从同一类型的引擎实例化的生成器中。  
+-   An explicit constructor with argument `seed_seq& seq` that creates a generator seeded as if by calling `seed(seq)`.  
   
-### <a name="distributions"></a>分布  
- [随机数分布](#distributions)是类或模板类，其实例可将从引擎中获得的均匀分布的随机数的流转换为具有特殊分布的随机数的流。 每个分布都具有以下成员：  
+- `void discard(unsigned long long count)` effectively calls `operator()` `count` times and discards each value.  
   
-- `typedef``numeric-type``result_type` 是由分布的 `operator()` 返回的类型。 在实例化时，`numeric-type` 将作为模板参数传递。  
+ **Engine adaptors** additionally support these members (`Engine` is the first template parameter of an engine adaptor, designating the base engine's type):  
   
-- 通过将 `gen` 用作均匀分布的随机值的源和存储的*分布参数*，`template <class URNG> result_type operator()(URNG& gen)` 可返回根据分布的定义分布的值。  
+-   A default constructor to initialize the generator as if from the base engine's default constructor.  
   
-- 通过将 `template <class URNG> result_type operator()(URNG& gen, param_type p)` 用作均匀分布的随机值的源和参数结构 `gen`，`p` 可返回根据分布的定义分布的值。  
+-   An explicit constructor with argument `const Engine& eng`. This is to support copy construction using the base engine.  
   
-- `typedef``unspecified-type``param_type` 是选择性地传递给 `operator()` 的参数包，用于代替存储的参数来生成其返回值。  
+-   An explicit constructor with argument `Engine&& eng`. This is to support move construction using the base engine.  
   
--   `const param&` 构造函数从其参数中初始化存储的参数。  
+- `void seed()` that initializes the generator with the base engine's default seed value.  
   
-- `param_type param() const` 将获取存储的参数。  
+- `const Engine& base()` property function that returns the base engine that was used to construct the generator.  
   
-- `void param(const param_type&)` 将从其参数中设置存储的参数。  
+ Every engine maintains a *state* that determines the sequence of values that will be generated by subsequent calls to `operator()`. The states of two generators instantiated from engines of the same type can be compared by using `operator==` and `operator!=`. If the two states compare as equal, they will generate the same sequence of values. The state of an object can be saved to a stream as a sequence of 32-bit unsigned values by using the `operator<<` of the generator. The state is not changed by saving it. A saved state can be read into generator instantiated from an engine of the same type by using `operator>>`.  
   
-- `result_type min()` 将返回由分布的 `operator()` 返回的最小值。  
+### <a name="distributions"></a>Distributions  
+ A [Random Number Distributions](#distributions) is a class or template class whose instances transform a stream of uniformly distributed random numbers obtained from an engine into a stream of random numbers that have a particular distribution. Every distribution has the following members:  
   
-- `result_type max()` 将返回由分布的 `operator()` 返回的最大值。 当 `result_type` 是整（整数值）型时，`max()` 是可实际返回的最大值（包括其本身）；当 `result_type` 是浮点（真值）型时，`max()` 是大于所有可返回的值的最小值（不包括其本身）。  
+- `typedef` `numeric-type` `result_type` is the type that is returned by the distribution's `operator()`. The `numeric-type` is passed as a template parameter on instantiation.  
   
-- `void reset()` 将丢弃所有缓存的值，以便下一个对 `operator()` 的调用的结果不取决于在调用之前从引擎获得的任何值。  
+- `template <class URNG> result_type operator()(URNG& gen)` returns values that are distributed according to the distribution's definition, by using `gen` as a source of uniformly distributed random values and the stored *parameters of the distribution*.  
   
- 参数结构是指存储分布所需的所有参数的对象。 它包括：  
+- `template <class URNG> result_type operator()(URNG& gen, param_type p)` returns values distributed in accordance with the distribution's definition, using `gen` as a source of uniformly distributed random values and the parameters structure `p`.  
   
-- `typedef``distribution-type``distribution_type`，是其分布的类型。  
+- `typedef` `unspecified-type` `param_type` is the package of parameters optionally passed to `operator()` and is used in place of the stored parameters to generate its return value.  
   
--   一个或多个采用与分布构造函数所采用的参数列表相同的构造函数。  
+-   A `const param&` constructor initializes the stored parameters from its argument.  
   
--   与分布相同的参数访问函数。  
+- `param_type param() const` gets the stored parameters.  
   
--   相等和不相等比较运算符。  
+- `void param(const param_type&)` sets the stored parameters from its argument.  
   
- 有关详细信息，请参阅本文之前链接的此子主题下面的参考子主题。  
+- `result_type min()` returns the minimum value that is returned by the distribution's `operator()`.  
   
-##  <a name="comments"></a>备注  
- Visual Studio 中存在两个非常有用的 URNG（`mt19937` 和 `random_device`），如此比较表中所示：  
+- `result_type max()` returns the maximum value that is returned by the distribution's `operator()`. When `result_type` is an integral (integer-valued) type, `max()` is the maximum value that can actually be returned (inclusive); when `result_type` is a floating-point (real-valued) type, `max()` is the smallest value greater than all values that can be returned (non-inclusive).  
   
-|URNG|快速|安全加密|可设定种子|是确定的|  
+- `void reset()` discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
+  
+ A parameter structure is an object that stores all of the parameters needed for a distribution. It contains:  
+  
+- `typedef` `distribution-type` `distribution_type`, which is the type of its distribution.  
+  
+-   One or more constructors that take the same parameter lists as the distribution constructors take.  
+  
+-   The same parameter-access functions as the distribution.  
+  
+-   Equality and inequality comparison operators.  
+  
+ For more information, see the reference subtopics below this one, linked previously in this article.  
+  
+##  <a name="comments"></a> Remarks  
+ There are two highly useful URNGs in Visual Studio—`mt19937` and `random_device`—as shown in this comparison table:  
+  
+|URNG|Fast|Crypto-secure|Seedable|Deterministic|  
 |----------|-----------|---------------------|---------------|--------------------|  
-|`mt19937`|是|No|是|是<sup>*</sup>|  
-|`random_device`|No|是|否|No|  
+|`mt19937`|Yes|No|Yes|Yes<sup>*</sup>|  
+|`random_device`|No|Yes|No|No|  
   
- <sup>* 在提供了已知种子的情况下。</sup>  
+ <sup>* When provided with a known seed.</sup>  
   
- 虽然 ISO C++ 标准不需要对 `random_device` 进行安全加密，但是在 Visual Studio 中，会对其实现安全加密。 （术语“安全加密”并不暗示保证，但是表示给定随机化算法提供的熵的最低级别，因此也是可预测级别。 有关详细信息，请参阅 Wikipedia 文章[安全加密的伪随机数生成器](http://go.microsoft.com/fwlink/LinkId=398017)。）因为 ISO C++ 标准不需要它，所以其他平台可能会将 `random_device` 实现为简单的伪随机数生成器（非安全加密），并且可能仅适合用作另一个生成器的种子源。 在跨平台代码中使用 `random_device` 时，请查看适用于这些平台的文档。  
+ Although the ISO C++ Standard does not require `random_device` to be cryptographically secure, in Visual Studio it is implemented to be cryptographically secure. (The term "cryptographically secure" does not imply guarantees, but refers to a minimum level of entropy—and therefore, the level of predictability—a given randomization algorithm provides. For more information, see the Wikipedia article [Cryptographically secure pseudorandom number generator](http://go.microsoft.com/fwlink/LinkId=398017).) Because the ISO C++ Standard does not require this, other platforms may implement `random_device` as a simple pseudo-random number generator (not cryptographically secure) and may only be suitable as a seed source for another generator. Check the documentation for those platforms when using `random_device` in cross-platform code.  
   
- 根据定义，`random_device` 结果是不可复制的，而且副作用是，它的运行速度可能会显著慢于其他 URNG。 虽然你可能希望通过对 `random_device` 的调用来为应用程序设定种子，但大多数不需要进行安全加密的应用程序都使用 `mt19937` 或类似引擎，如[代码示例](#code)中所示。  
+ By definition, `random_device` results are not reproducible, and a side-effect is that it may run significantly slower than other URNGs. Most applications that are not required to be cryptographically secure use `mt19937` or a similar engine, although you may want to seed it with a call to `random_device`, as shown in the [code example](#code).  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
