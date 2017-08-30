@@ -1,40 +1,57 @@
 ---
-title: "配置 ARM 处理器的程序 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Configure Visual C++ for ARM processors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 配置 ARM 处理器的程序 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: e021610f381e1987af600de575509c658ae81ff7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/30/2017
 
-文档的本节内容包含有关如何使用面向 ARM 硬件的 Visual C\+\+ 生成工具的信息。  
+---
+# <a name="configure-visual-c-for-arm-processors"></a>Configure Visual C++ for ARM processors
+
+This section of the documentation contains information about how to use the Visual C++ build tools to target ARM hardware.  
   
-## 本节内容  
- [ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)  
- 描述由 ARM 上的 Windows 用于进行注册、调用约定以及处理异常的应用程序二进制接口。  
+## <a name="in-this-section"></a>In This Section  
+
+[Overview of ARM ABI Conventions](../build/overview-of-arm-abi-conventions.md)  
+Describes the application binary interface used by Windows on ARM for register usage, calling conventions and exception handling.  
   
- [Visual C\+\+ ARM 迁移的常见问题](../build/common-visual-cpp-arm-migration-issues.md)  
- 描述了通常被认为可以跨体系结构移植的 C\+\+ 代码元素，但它们为 ARM 产生的结果不同于为 x86 和 x64 产生的结果。  
+[Common Visual C++ ARM Migration Issues](../build/common-visual-cpp-arm-migration-issues.md)  
+Describes C++ code elements that are commonly assumed to be portable across architectures, but which produce different results for ARM than for x86 and x64.  
   
- [ARM 异常处理](../build/arm-exception-handling.md)  
- 描述了在 ARM 上的 Windows 中在结构化异常处理期间用于展开堆栈的编码方案。  
+[ARM Exception Handling](../build/arm-exception-handling.md)  
+Describes the encoding scheme for stack unwinding during structured exception handling in Windows on ARM.  
   
-## 相关章节  
+## <a name="related-sections"></a>Related Sections  
   
-|标题|描述|  
-|--------|--------|  
-|[ARM 内部函数](../intrinsics/arm-intrinsics.md)|描述适用于使用 ARM 体系结构的处理器的编译器内部函数。|
+[ARM Intrinsics](../intrinsics/arm-intrinsics.md)  
+Describes compiler intrinsics for processors that use the ARM architecture.

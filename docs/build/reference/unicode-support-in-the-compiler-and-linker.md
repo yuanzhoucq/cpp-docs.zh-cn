@@ -1,58 +1,75 @@
 ---
-title: "编译器和链接器中的 Unicode 支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCLibrarianTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unicode, Visual C++"
+title: Unicode Support in the Compiler and Linker | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.UseUnicodeResponseFiles
+- VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
+- VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles
+- VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
+dev_langs:
+- C++
+helpviewer_keywords:
+- Unicode, Visual C++
 ms.assetid: acc1d322-56b9-4696-a30e-2af891a4e288
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器和链接器中的 Unicode 支持
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 650d8fd430ff0825f0e2fb08d279c509dc62c5a6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/30/2017
 
-本主题介绍 Visual C\+\+ 生成工具中的 Unicode 支持。  
+---
+# <a name="unicode-support-in-the-compiler-and-linker"></a>Unicode Support in the Compiler and Linker
+This topic describes Unicode support in the Visual C++ build tools.  
   
- 文件名  
- 命令行或编译器指令（如 \#include）中指定的文件名中现在可能包含 Unicode 字符。  
+ Filenames  
+ Filenames specified on the command line or in compiler directives (such as #include) may now contain Unicode characters.  
   
- 源代码文件  
- 现在，标识符、宏、字符串和字符文本以及注释中均支持 Unicode 字符。现在也支持通用字符名称。  
+ Source code files  
+ Unicode characters are now supported in identifiers, macros, string and character literals, and in comments.  Universal character names are also now supported.  
   
- 可按以下编码格式将 Unicode 字符输入到源代码文件中：  
+ Unicode can be input into a source code file in the following encodings:  
   
--   具有或不具有字节顺序标记 \(BOM\) 的 UTF\-16 Little Endian  
+-   UTF-16 little endian with or without byte order mark (BOM)  
   
--   具有或不具有 BOM 的 UTF\-16 Big Endian  
+-   UTF-16 big endian with or without BOM  
   
--   具有 BOM 的 UTF\-8  
+-   UTF-8 with BOM  
   
  Output  
- 在编译期间，编译器以 UTF\-16 格式将诊断输出到控制台。可在控制台显示的字符由控制台窗口属性决定。重定向到文件的编译器输出位于当前 ANSI 控制台代码页中。  
+ During compilation, compiler outputs diagnostics to the console in UTF-16.  The characters that can be displayed at your console depend on the console window properties.  Compiler output redirected to a file is in the current ANSI console codepage.  
   
- 链接器响应文件和 .DEF 文件  
- 响应文件和 DEF 文件可以是具有字节顺序标记的 UTF\-16，也可以是 ANSI。以前仅支持 ANSI。  
+ Linker response files and .DEF files  
+ Response files and DEF files can be either UTF-16 with a Byte Order Mark or ANSI.  Previously only ANSI was supported.  
   
- .asm 和 .cod 转储  
- 默认情况下，.asm 和 .cod 转储为 ANSI 格式，以便兼容 MASM。使用 \/FAu 则输出 UTF\-8。请注意，如果指定 \/FAs，则将只是直接输出混合源文件，而且可能会显示为乱码，例如，当源代码为 UTF\-8 并且未指定 \/FAsu 时。  
+ .asm and .cod dumps  
+ .asm and .cod dumps are in ANSI by default for compatibility with MASM.  Use /FAu to output UTF-8.  Note that if you specify /FAs, the intermingled source will just be directly printed and may look garbled, for example if source code is UTF-8 and you didn't specify /FAsu.  
   
- 可以通过选择合适的工具以及选择**“启用 Unicode 响应文件”**属性（默认为启用）在开发环境中启用 Unicode 文件名（请参见 [如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)）。  有些情况下需要更改此默认值，例如要修改开发环境以便使用不具有 Unicode 支持的编译器时。  
+ You can enable Unicode file names in the development environment (see  [Working with Project Properties](../../ide/working-with-project-properties.md)) by selecting the appropriate tool and by selecting the **Enable Unicode Response Files** property, which is enabled by default. One reason you might change this default is if you modify your development environment to use a compiler that does not have Unicode support.  
   
-## 请参阅  
- [在命令行上生成](../../build/building-on-the-command-line.md)
+## <a name="see-also"></a>See Also  
+ [Build C/C++ code on the command line](../../build/building-on-the-command-line.md)

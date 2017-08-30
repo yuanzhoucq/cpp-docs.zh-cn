@@ -1,92 +1,189 @@
 ---
-title: "演练：在命令行上编译 C 程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "C 程序编译 [C++]"
-  - "命令行应用程序 [C++], C 程序"
-  - "编译程序 [C++]"
-  - "Visual C, 编译"
+title: 'Walkthrough: Compile a C program on the command line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- command-line applications [C++], C programs
+- Visual C, compiling
+- compiling programs [C++]
+- C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 caps.latest.revision: 46
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 31
----
-# 演练：在命令行上编译 C 程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 95cdbe47898fe35da2ec75a8d8e5bdf7905dfa98
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/30/2017
 
-[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中包括一个 C 编译器，可用来创建从基本的控制台程序到 Windows 桌面应用程序的各种程序。  
+---
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Walkthrough: Compile a C program on the command line
+Visual C++ includes a C compiler that you can use to create everything from basic console programs to full Windows Desktop applications, mobile apps, and more.  
   
- 此演练演示如何使用文本编辑器创建一个基本的 C 程序，然后在命令行上对其进行编译。  
+ This walkthrough shows how to create a basic, "Hello, World"-style C program by using a text editor, and then compile it on the command line. If you'd rather work in C++ on the command line, see [Walkthrough: Compiling a Native C++ Program on the Command Line](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). If you'd like to try the Visual Studio IDE instead of using the command line, see [Walkthrough: Working with Projects and Solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) or [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
- 你可以使用自己的 C 程序，而不是键入此演练中所示的示例程序。  也可以使用帮助主题中包含的任何 C 代码示例程序。  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, you must have installed either Visual Studio and the optional Visual C++ components, or the Microsoft Visual C++ Build Tools.  
   
- 默认情况下，Visual C\+\+ 编译器将以 .c 结尾的所有文件视为 C 源代码，将以 .cpp 结尾的所有文件视为 C\+\+ 源代码。  若要强制编译器将所有文件视为 C（而不管文件扩展名如何），请使用 [\/Tc](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) 编译器选项。  
+ Visual Studio is a powerful integrated development environment that supports a full-featured editor, resource managers, debuggers, and compilers for many languages and platforms. For information on these features and  how to download and install Visual Studio, including the free Visual Studio Community edition, see [VisualStudio.com](https://www.visualstudio.com/).  
   
-## 系统必备  
- 你必须了解 C 语言的基础知识。  
+ The Visual Studio Build Tools installs only the command-line compilers, tools, and libraries you need to build C and C++ programs. It's perfect for build labs or classroom exercises and installs relatively quickly. To install only the command-line tools, download [Visual Studio Build Tools](https://go.microsoft.com/fwlink/?linkid=840931) and run the installer. For more information, see [Visual C++ Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
   
-### 创建 C 源文件并在命令行上对其进行编译  
+ Before you can build a C or C++ program on the command line, you must verify that the tools are installed, and that you can access them from the command line. Visual C++ has complex requirements for the command-line environment in order to find the tools, headers, and libraries it uses. **You can't use Visual C++ in a plain command prompt window**. You need a *developer command prompt* window, which is a regular command prompt window that has all the required environment variables set. Fortunately, Visual C++ installs shortcuts for you to launch developer command prompts that have the environment set up for command line builds. Unfortunately, the names of the developer command prompt shortcuts and where they are located are different in almost every version of Visual C++ and on different versions of Windows. Your first walkthrough task is to find the right shortcut to use.  
   
-1.  打开“开发人员命令提示”。  在 Windows 8 中的**“开始”**屏幕上，打开**“Visual Studio Tools”**文件夹，然后选择**“开发人员命令提示”**快捷方式。  在 Windows 的早期版本中，选择**“开始”**按钮，依次展开**“所有程序”**、**Microsoft Visual Studio** 和 **Visual Studio Tools**，然后选择**“开发人员命令提示”**。  
+> [!NOTE]
+>  A developer command prompt shortcut automatically sets the correct paths for the compiler and tools, and for any required headers and libraries. Some of these values are different for each build configuration. You must set these environment values yourself if you don't use one of the shortcuts. For more information, see [Set the Path and Environment Variables for Command-Line Builds](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Because the build environment is complex, we strongly recommend you use a developer command prompt shortcut instead of building your own.  
   
-     根据计算机上的 Windows 版本和系统安全配置，可能必须打开**“开发人员命令提示”**的快捷菜单，然后选择**“以管理员身份运行”**，才能成功生成和运行按下列步骤创建的应用程序。  
+## <a name="open-a-developer-command-prompt"></a>Open a developer command prompt  
   
-    > [!NOTE]
-    >  **“开发人员命令提示”**会自动设置 C 编译器和所需的任何库的正确路径。  应使用它而不是使用普通的“命令提示符”窗口。  有关详细信息，请参阅[为命令行生成设置路径和环境变量](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。  
+1.  If you have installed Visual Studio 2017 on Windows 10, open the Start menu, and then scroll down and open the **Visual Studio 2017** folder (not the Visual Studio 2017 app). Choose **Developer Command Prompt for VS 2017** to open the command prompt window.  
   
-2.  在命令提示符下，创建源文件的目录并使其成为当前工作目录。  例如，键入 **md c:\\simple** 并按 Enter 以创建名为 Simple 的目录，然后键入 **cd c:\\simple** 并按 Enter 以更改到此目录。  
+     If you have installed Microsoft Visual C++ Build Tools 2015 on Windows 10, open the **Start** menu, and then scroll down and open the **Visual C++ Build Tools** folder. Choose **Visual C++ 2015 x86 Native Tools Command Prompt** to open the command prompt window.  
   
-3.  在命令提示符下，键入 **notepad** 并按 Enter。  
+     If you are using a different version of Visual Studio or are running a different version of Windows, look in your Start menu or Start page for a Visual Studio tools folder that contains a developer command prompt shortcut. You can also use the Windows search function to search for "developer command prompt" and choose one that matches your installed version of Visual Studio. Use the shortcut to open the command prompt window.  
   
-4.  在记事本中，输入下列各行。  
+2.  Next, verify that the Visual C++ developer command prompt is set up correctly. In the command prompt window, enter `cl` and verify that the output looks something like this:  
   
-     [!code-cpp[NVC_Walkthrough_Compile_C#100](../build/codesnippet/CPP/walkthrough-compile-a-c-program-on-the-command-line_1.c)]  
+    ```Output  
+    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl  
+    Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86  
+    Copyright (C) Microsoft Corporation.  All rights reserved.  
+    
+    usage: cl [ option... ] filename... [ /link linkoption... ]  
+    
+    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>  
+    ```  
   
-5.  在菜单栏上，依次选择**“文件”**、**“保存”**以打开**“另存为”**对话框。  导航至已创建的目录。  在**“文件名”**框中，输入源文件的名称（例如 simple.c），然后在**“保存类型”**下拉列表中，选择**“所有文件\(\*.\*\)”**。  选择**“保存”**按钮以在工作目录中创建 C 源文件。  
-  
-6.  在命令提示符下，输入 **dir** 并按 Enter。  你应该看到所创建的源文件：  
-  
-  **C:\\simple\>dir**  
- **Volume in drive C has no label.  Volume Serial Number is CC62\-6545**  
- **Directory of C:\\simple**  
-**10\/02\/2012  03:46 PM    \<DIR\>          .  10\/02\/2012  03:46 PM    \<DIR\>          ..  10\/02\/2012  03:36 PM               102 simple.c**  
- **1 File\(s\)            102 bytes**  
- **2 Dir\(s\)  514,900,566,016 bytes free**      在您的计算机上的详细信息将有所不同。  如果看不到源代码文件，请确保你已更改为所创建的目录，并确保以 .c 的文件扩展名将源文件保存在其中。  
-  
-7.  在命令提示符下，指定 **cl** 命令和源文件的名称（例如 **cl simple.c**），然后按 Enter 编译此程序。  cl.exe 编译器将生成一个包含已编译代码的 .obj 文件，然后运行链接器以生成具有源文件名称的可执行程序，但会具有 .exe 文件名扩展（例如 simple.exe）。  
-  
-     你可以在编译器显示的多行输出信息中看到可执行程序的名称。  
-  
-     **输出**  
-  
-  **适用于 x86 的 Microsoft\(R\) C\/C\+\+ 优化编译器版本 17.00.50727.1**  
-**版权所有 \(C\) Microsoft Corporation。  保留所有权利。  simple.c**  
-**Microsoft\(R\) 增量链接器版本 11.00.50727.1**  
-**版权所有 \(C\) Microsoft Corporation。  保留所有权利。  \/out:simple.exe**  
-**simple.obj**      这些工具的版本号取决于 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 的版本以及已安装的任何更新。  
+     There may be differences in the current directory or version numbers, depending on the version of Visual C++ and any updates installed. If this is similar to what you see, then you are ready to build C or C++ programs at the command line.  
   
     > [!NOTE]
-    >  如果遇到错误，如“'cl' 无法识别为内部或外部命令、可操作程序或批处理文件”、错误 C1034或错误 LNK1104，则必须设置编译器和工具的环境。  有关详细信息，请查看步骤 1。  
-    >   
-    >  如果您收到编译器错误或警告，请查看您有错误的源代码，然后将其保存并再次运行编译器。  有关特定错误的详细信息，请在此页上使用搜索框。  
+    >  If you get an error such as "'cl' is not recognized as an internal or external command, operable program or batch file," error C1034, or error LNK1104 when you run the **cl** command, then either you are not using a developer command prompt, or something is wrong with your installation of Visual C++. You must fix this issue before you can continue.  
   
-8.  若要运行程序，请键入不带文件扩展名的名称（例如 **simple**），然后按 Enter。  
+     If you can't find the developer command prompt shortcut, or if you get an error message when you enter `cl`, then your Visual C++ installation may have a problem. Try reinstalling the Visual C++ component in Visual Studio, or reinstall the Visual Studio Build Tools. Don't go on to the next section until this works. For more information about installing and troubleshooting Visual C++, see [Install Visual Studio](/visualstudio/install/install-visual-studio).  
   
-     程序将在显示以下文本后退出：  
+    > [!NOTE]
+    >  Depending on the version of Windows on the computer and the system security configuration, you might have to right-click to open the shortcut menu for the developer command prompt shortcut and then choose **Run as Administrator** to successfully build and run the program that you create by following this walkthrough.  
   
-     `This is a native C program.`  
+## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Create a C source file and compile it on the command line  
   
-## 请参阅  
- [演练：创建 Win32 控制台程序 \(C\+\+\)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)   
- [C 语言参考](../c-language/c-language-reference.md)   
- [生成 C\/C\+\+ 程序](../build/building-c-cpp-programs.md)   
- [兼容性](../c-runtime-library/compatibility.md)
+1.  In the developer command prompt window, enter **cd c:\\** to change the current working directory to the root of your C: drive. Next, enter **md c:\simple** to create a directory, and then enter **cd c:\simple** to change to that directory. This is the directory that will contain your source file and the compiled program.  
+  
+2.  Enter **notepad simple.c** at the developer command prompt. In the Notepad alert dialog that pops up, choose **Yes** to create a new simple.c file in your working directory.  
+  
+3.  In Notepad, enter the following lines of code:  
+  
+    ```C  
+    #include <stdio.h>  
+  
+    int main()  
+    {  
+        printf("Hello, World! This is a native C program compiled on the command line.\n");  
+        return 0;  
+    }   
+    ```  
+  
+4.  On the Notepad menu bar, choose **File**, **Save** to save simple.c in your working directory.  
+  
+5.  Switch back to the developer command prompt window. Enter **dir** at the command prompt to list the contents of the c:\simple directory. You should see the source file simple.c in the directory listing, which looks something like this:  
+  
+    ```Output  
+    C:\simple>dir  
+     Volume in drive C has no label.  
+     Volume Serial Number is CC62-6545  
+  
+     Directory of C:\simple  
+  
+    10/02/2017  03:46 PM    <DIR>          .  
+    10/02/2017  03:46 PM    <DIR>          ..  
+    10/02/2017  03:36 PM               143 simple.c  
+                   1 File(s)            143 bytes  
+                   2 Dir(s)  514,900,566,016 bytes free  
+  
+    ```  
+  
+     The dates and other details will differ on your computer. If you don't see your source code file, simple.c, make sure you've changed to the c:\simple directory you created, and in Notepad, make sure that you saved your source file in this directory. Also make sure that you saved the source code with a .c file name extension, not a .txt extension.  
+  
+6.  To compile your program, enter **cl simple.c** at the developer command prompt.  
+  
+     You can see the executable program name, simple.exe, in the lines of output information that the compiler displays:  
+  
+    ```Output  
+    c:\simple>cl simple.c  
+    Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86  
+    Copyright (C) Microsoft Corporation.  All rights reserved.  
+  
+    simple.c  
+    Microsoft (R) Incremental Linker Version 14.10.25017.0  
+    Copyright (C) Microsoft Corporation.  All rights reserved.  
+  
+    /out:simple.exe  
+    simple.obj  
+    ```  
+  
+    > [!NOTE]
+    >  If you get an error such as "'cl' is not recognized as an internal or external command, operable program or batch file," error C1034, or error LNK1104, your developer command prompt is not set up correctly. For information on how to fix this issue, go back to the **Open a developer command prompt** section.  
+  
+    > [!NOTE]
+    >  If you get a different compiler or linker error or warning, review your source code to correct any errors, then save it and run the compiler again. For information about specific errors, use the search box on this MSDN page to look for the error number.  
+  
+7.  To run your program, enter **simple** at the command prompt.  
+  
+     The program displays this text and then exits:  
+  
+    ```Output  
+    Hello, World! This is a native C program compiled on the command line.  
+    ```  
+  
+     Congratulations, you've just compiled and run a C program by using the command-line.  
+  
+## <a name="next-steps"></a>Next steps  
+ This "Hello, World" example is about as simple as a C program can get. Real world programs have header files and more source files, link in libraries, and do useful work.  
+  
+ You can use the steps in this walkthrough to build your own C code instead of typing the sample code shown. You can also build many C code sample programs that you find elsewhere. To compile a program that has multiple source code files, enter them all on the command line, like this:  
+  
+ `cl file1.c file2.c file3.c`  
+  
+ The compiler outputs a program called file1.exe. To change the name to program1.exe, add an [/out](../build/reference/out-output-file-name.md) linker option:  
+  
+ `cl file1.c file2.c file3.c /link /out:program1.exe`  
+  
+ And to catch more programming mistakes automatically, we recommend you compile by using either the [/W3](../build/reference/compiler-option-warning-level.md) or [/W4](../build/reference/compiler-option-warning-level.md) warning level option:  
+  
+ `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`  
+  
+ The compiler, cl.exe, has many more options you can apply to build, optimize, debug, and analyze your code. For a quick list, enter **cl /?** at the developer command prompt. You can also compile and link separately and apply linker options in more complex build scenarios. For more information on compiler and linker options and usage, see  [C/C++ Building Reference](../build/reference/c-cpp-building-reference.md).  
+  
+ You can use NMAKE and makefiles, or MSBuild and project files to configure and build more complex projects on the command line. For more information on using these tools, see [NMAKE Reference](../build/nmake-reference.md) and [MSBuild](../build/msbuild-visual-cpp.md).  
+  
+ The C and C++ languages are similar, but not the same. The Visual C++ compiler uses a simple rule to determine which language to use when it compiles your code. By default, the Visual C++ compiler treats all files that end in .c as C source code, and all files that end in .cpp as C++ source code. To force the compiler to treat all files as C regardless of file name extension, use the [/Tc](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) compiler option.  
+  
+ The Visual C++ C compiler is generally compatible with the ISO C99 standard, but not strictly compliant. In most cases, portable C code will compile and run as expected. Visual C++ does not support most of the changes in ISO C11. Certain library functions and POSIX function names are deprecated by the Visual C++ compiler. The functions are supported, but the preferred names have changed. For more information, see [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md) and [Compiler Warning (level 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).  
+  
+## <a name="see-also"></a>See Also  
+ [Walkthrough: Creating a Standard C++ Program (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)   
+ [C Language Reference](../c-language/c-language-reference.md)   
+ [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
+ [Compatibility](../c-runtime-library/compatibility.md)

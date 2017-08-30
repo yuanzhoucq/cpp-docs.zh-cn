@@ -1,5 +1,5 @@
 ---
-title: "编译器错误 C3861 |Microsoft 文档"
+title: Compiler Error C3861 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,48 +19,63 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 177890dcd3ff2abf07f5d9e282efd4a9fd7121a7
+ms.translationtype: MT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 445fdf33d5b085f846270c8d4b82696b3752e157
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="compiler-error-c3861"></a>编译器错误 C3861
-“identifier”：找不到标识符  
+# <a name="compiler-error-c3861"></a>Compiler Error C3861
+
+> '*identifier*': identifier not found  
   
-即使使用自变量相关的查找，编译器也无法解析对标识符的引用。  
+The compiler was not able to resolve a reference to an identifier, even using argument-dependent lookup.  
   
-要修复此错误，请检查标识符声明的大小写和拼写。 验证[划分在作用域解析运算符](../../cpp/scope-resolution-operator.md)和命名空间[using 指令](../../cpp/namespaces-cpp.md#using_directives)正确使用。 如果该标识符是在头文件中声明的，请确保在引用之前已包含该头文件。 此外检查该标识符不排除了[条件编译指令](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)。  
+To fix this error, compare use of *identifier* to the identifier declaration for case and spelling. Verify that [scope resolution operators](../../cpp/scope-resolution-operator.md) and namespace [using directives](../../cpp/namespaces-cpp.md#using_directives) are used correctly. If the identifier is declared in a header file, verify that the header is included before the identifier is referenced. If the identifier is meant to be externally visible, make sure that it is declared in any source file that uses it. Also check that the identifier declaration or definition is not excluded by [conditional compilation directives](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md). 
+
+Changes to remove obsolete functions from the C Runtime Library in Visual Studio 2015 can cause C3861. To resolve this error, remove references to these functions or replace them with their secure alternatives, if any. For more information, see [Obsolete Functions](../../c-runtime-library/obsolete-functions.md).  
+
+If error C3861 appears after project migration from older versions of the compiler, you may have issues related to supported Windows versions. Visual C++ no longer supports targeting Windows 95, Windows 98, Windows ME, Windows NT or Windows 2000. If your WINVER or _WIN32_WINNT macros are assigned to one of these versions of Windows, you must modify the macros. For more information, see [Modifying WINVER and _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
   
-## <a name="example"></a>示例  
-下面的示例生成 C3861。  
+## <a name="example"></a>Example  
+
+The following sample generates C3861 because the identifier is not defined.  
   
 ```cpp  
 // C3861.cpp  
 void f2(){}  
 int main() {  
-   f();   // C3861  
+   f();    // C3861  
    f2();   // OK  
 }  
 ```  
   
-## <a name="example"></a>示例  
-C++ 标准库中的异常类现在位于 `std` 命名空间中。  
+## <a name="example"></a>Example  
+
+The following sample generates C3861 because an identifier is only visible in the file scope of its definition, unless it is declared in other source files that use it.  
+  
+```cpp  
+// C3861_a1.cpp
+// Compile with: cl /EHsc /W4 C3861_a1.cpp C3861_a2.cpp  
+#include <iostream>
+// Uncomment the following line to fix:
+// int f();  // declaration makes external function visible
+int main() {  
+   std::cout << f() << std::endl;    // C3861
+}  
+```  
+  
+```cpp  
+// C3861_a2.cpp  
+int f() {  // declared and defined here
+   return 42;  
+}
+```  
+  
+## <a name="example"></a>Example  
+
+Exception classes in the C++ Standard Library require the `std` namespace.  
   
 ```cpp  
 // C3861_b.cpp  
@@ -75,5 +90,19 @@ int main() {
    catch (...) {  
       std::cout << "caught an exception" << std::endl;  
    }  
+}  
+```  
+## <a name="example"></a>Example  
+
+Obsolete functions have been removed from the CRT library.  
+  
+```cpp  
+// C3861_c.cpp  
+#include <stdio.h>  
+int main() {  
+   char line[21]; // room for 20 chars + '\0'  
+   gets( line );  // C3861  
+   // Use gets_s instead.  
+   printf( "The line entered was: %s\n", line );  
 }  
 ```
