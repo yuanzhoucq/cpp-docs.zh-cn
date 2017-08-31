@@ -1,7 +1,7 @@
 ---
-title: "错误 C1083 |Microsoft 文档"
+title: Fatal Error C1083 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -19,94 +19,112 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: bbc5e1f78ca1ea15e65fdd76b7ecd2ea0e195b00
+ms.translationtype: MT
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: 7a894bf381ad1559cd61b5d7aaefce4fe62b1b96
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 08/31/2017
 
 ---
-# <a name="fatal-error-c1083"></a>错误 C1083
-无法打开 filetype 文件:“file”: message  
+# <a name="fatal-error-c1083"></a>Fatal Error C1083
+
+> Cannot open *filetype* file: '*file*': *message*  
   
- 编译器在找不到文件时会生成 C1083 错误。 下面是编译器生成此错误的常见原因。  
+The compiler generates a C1083 error when it can’t find a file it requires. There are many possible causes for this error. An incorrect include search path or missing or misnamed header files are the most common causes, but other file types and issues can also cause C1083. Here are some of the common reasons why the compiler generates this error.  
   
- **指定的文件名称不正确**  
+## <a name="the-specified-file-name-is-wrong"></a>The specified file name is wrong 
   
- 文件名可能键入有误。 例如，  
+The name of a file may be mistyped. For example,  
+
+`#include <algorithm.h>`  
   
-```cpp  
-#include <algorithms.h>  
-```  
+might not find the file you intend. Most C++ Standard Library header files do not have a .h file name extension. The \<algorithm> header would not be found by this `#include` directive. To fix this issue, verify that the correct file name is entered, as in this example:  
+
+`#include <algorithm>`
   
- 可能找不到你想要的文件。 没有的 c + + 标准库头文件名为 algorithms 没有.h 文件扩展名。 通过此 `include` 指令找不到该文件。 若要修复此问题，请验证输入的文件名是否正确。  
+Certain C Runtime Library headers are located in a subdirectory of the standard include directory. For example, to include sys/types.h, you must include the sys subdirectory name in the `#include` directive:  
   
- 某些 C 运行库标头位于标准包含目录的子目录中。 例如，若要包含 sys\types.h，则必须将 sys 子目录名称包含在包含指令中的：  
+`#include <sys/types.h>`  
+
+## <a name="the-file-is-not-included-in-the-include-search-path"></a>The file is not included in the include search path  
   
- `#include <sys\types.h>`  
+The compiler cannot find the file by using the search rules that are indicated by an `#include` or `#import` directive. For example, when a header file name is enclosed by quotation marks,  
   
- **在编译器搜索路径中未包括的文件**  
+`#include "myincludefile.h"`  
   
- 此编译器无法使用 `include` 或 `import` 指令指示的搜索规则找到该文件。 例如，使用引号括起的头文件名  
+this tells the compiler to look for the file in the same directory that contains the source file first, and then look in other locations specified by the build environment. If the quotation marks contain an absolute path, the compiler only looks for the file at that location. If the quotation marks contain a relative path, the compiler looks for the file in the directory relative to the source directory. 
+
+If the name is enclosed by angle brackets,  
   
- `#include "myincludefile.h"`  
+`#include <stdio.h>`  
   
- 告知编译器先在包含源文件的相同目录中查找该文件，然后在生成环境指定的其他位置查找。 如果引号包含绝对路径，则编译器仅在该位置查找文件。 如果引号包含相对路径，则编译器在相对于源目录的目录中查找文件。 如果名称使用尖括号括起，  
+the compiler follows a search path that is defined by the build environment, the **/I** compiler option, the **/X** compiler option, and the **INCLUDE** environment variable. For more information, including specific details about the search order used to find a file, see [#include Directive (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) and [#import Directive](../../preprocessor/hash-import-directive-cpp.md).
+
+If your include files are in another directory relative to your source directory, and you use a relative path in your include directives, you must use double quotes instead of angle brackets. For example, if your header file myheader.h is in a subdirectory of your project sources named headers, then this example fails to find the file and causes C1083:
+
+`#include <headers\myheader.h>`
+
+but this example works:
+
+`#include "headers\myheader.h"`
+
+Relative paths can also be used with directories on the include search path. If you add a directory to the **INCLUDE** environment variable or to your **Include Directories** path in Visual Studio, do not also add part of the path to the include directives. For example, if your header is located at \path\example\headers\myheader.h, and you add \path\example\headers\ to your **Include Directories** path in Visual Studio, but your `#include` directive refers to the file as
   
- `#include <stdio.h>`  
+`#include <headers\myheader.h>`  
+
+then the file is not found. Use the correct path relative to the directory specified in the include search path. In this example, you could change the include search path to \path\example\, or remove the headers\ path segment from the `#include` directive.
+
+## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>The file is in your project, but not the include search path
+
+Even when header files are listed in **Solution Explorer** as part of a project, the files are only found by the compiler when they are referred to by an `#include` or `#import` directive in a source file, and are located in an include search path. Different kinds of builds might use different search paths. The **/X** compiler option can be used to exclude directories from the include search path. This enables different builds to use different include files that have the same name, but are kept in different directories. This is an alternative to conditional compilation by using preprocessor commands. For more information about the **/X** compiler option, see [/X (Ignore Standard Include Paths)](../../build/reference/x-ignore-standard-include-paths.md).  
   
- 编译器遵循生成环境中，定义的搜索路径**/I**编译器选项， **/X**编译器选项和**包括**环境变量。 有关详细信息，包括有关使用查找的文件的搜索顺序的特定详细信息，请参阅[#include 指令 （C/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import 指令](../../preprocessor/hash-import-directive-cpp.md)。  
+To fix this issue, correct the path that the compiler uses to search for the included or imported file. A new project uses default include search paths. You may have to modify the include search path to add a directory for your project. If you are compiling on the command line, add the path to the **INCLUDE** environment variable or the **/I** compiler option to specify the path to the file. 
+
+To set the include directory path in Visual Studio, open the project’s **Property Pages** dialog box. Select **VC++ Directories** under **Configuration Properties** in the left pane, and then edit the **Include Directories** property. For more information about the per-user and per-project directories searched by the compiler in Visual Studio, see [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md). For more information about the **/I** compiler option, see [/I (Additional Include Directories)](../../build/reference/i-additional-include-directories.md).  
   
- 甚至当标头文件列出在**解决方案资源管理器**作为项目的一部分，这些文件仅由编译器时发现它们通过引用`include`或`import`指令并且位于目录搜索路径。 不同种类的生成可能会使用不同搜索路径。 **/X**编译器选项可以用于从包含文件搜索路径中排除目录。 这样不同的生成就可以使用具有相同名称、但保存在不同目录中的不同包含文件。 这是使用预处理器命令进行的条件编译的替代方法。 有关详细信息**/X**编译器选项，请参阅[/X （忽略标准包括路径）](../../build/reference/x-ignore-standard-include-paths.md)。  
+## <a name="the-command-line-include-environment-is-not-set"></a>The command line INCLUDE environment is not set
+
+When the compiler is invoked on the command line, environment variables are often used to specify search paths. If the search path described by the **INCLUDE** environment variable is not set correctly, a C1083 error can be generated. We strongly recommend using a developer command prompt shortcut to set the basic environment for command line builds. For more information, see see [Build C/C++ on the Command Line](../../build/building-on-the-command-line.md). For more information about how to use environment variables, see [How to: Use Environment Variables in a Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).  
+
+## <a name="the-file-may-be-locked-or-in-use"></a>The file may be locked or in use
+
+If you are using another program to edit or access the file, it may have the file locked. Try closing the file in the other program. Sometimes the other program can be Visual Studio itself, if you are using parallel compilation options. If turning off the parallel build option makes the error go away, then this is the problem. Other parallel build systems can also have this issue. Be careful to set file and project dependencies so build order is correct. In some cases, consider creating an intermediate project to force build dependency order for a common file that may be built by multiple projects. Sometimes antivirus programs temporarily lock recently changed files for scanning. If possible, consider excluding your project build directories from the antivirus scanner.
+
+## <a name="the-wrong-version-of-a-file-name-is-included"></a>The wrong version of a file name is included  
   
- 在命令行中调用编译器时，通常会使用环境变量来指定搜索路径。 如果通过描述的搜索路径**包括**环境变量设置不正确，则会生成 C1083 错误。 有关如何使用环境变量的详细信息，请参阅[如何︰ 在生成中使用环境变量](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)。  
+A C1083 error can also indicate that the wrong version of a file is included. For example, a build could include the wrong version of a file that has an `#include` directive for a header file that is not intended for that build. For example, certain files may only apply to x86 builds, or to Debug builds. When the header file is not found, the compiler generates a C1083 error. The fix for this problem is to use the correct file, not to add the header file or directory to the build.  
   
- 若要修复此问题，请更改编译器用于搜索包含或导入的文件的路径。 新项目使用默认搜索路径。 您可能必须修改路径才能为项目添加目录。 如果在命令行上进行编译，设置**包括**环境变量或**/I**编译器选项来指定文件的路径。 若要在 Visual Studio 中设置包含目录路径，请打开项目的**属性页**对话框框中，展开**配置属性**和**VC + + 目录**，然后编辑**包含目录**值。 有关 Visual Studio 中的编译器搜索的每个用户和每个项目目录的详细信息，请参阅[VC + + 目录属性页](../../ide/vcpp-directories-property-page.md)。 有关详细信息**/I**编译器选项，请参阅[/I （附加包含目录）](../../build/reference/i-additional-include-directories.md)。  
+## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>The precompiled headers are not yet precompiled  
   
- **是包含了错误版本的文件名称**  
+When a project is configured to use precompiled headers, the relevant .pch files have to be created so that files that use the header contents can be compiled. For example, the stdafx.cpp file is automatically created in the project directory for new projects. Compile that file first to create the precompiled header files. In the typical build process design, this is done automatically. For more information, see [Creating Precompiled Header Files](../../build/reference/creating-precompiled-header-files.md).  
   
- C1083 错误还可能指示包含了错误版本的文件。 例如，某个生成可能包含错误版本的文件，该文件的 `include` 指令针对不是用于该生成的头文件。 当找不到头文件时，编译器会生成 C1083 错误。 此问题的解决方法是使用正确的文件，而不是向生成添加头文件或目录。  
+## <a name="additional-causes"></a>Additional causes  
   
- **不是尚未预编译预编译标头**  
+- You have installed an SDK or third-party library, but you have not opened a new developer command prompt window after the SDK or library is installed. If the SDK or library adds files to the **INCLUDE** path, you may need to open a new developer command prompt window to pick up these environment variable changes.
+
+- The file uses managed code, but the compiler option **/clr** is not specified. For more information, see [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- 当项目配置为使用预编译标头时，必须创建相关 .pch 文件，以便可以编译使用头内容的文件。 例如，会在项目目录中为新 MFC 项目自动创建 stdafx.cpp 文件。 先编译该文件以创建预编译的头文件。 （在典型生成过程设计中，这是自动完成的。）有关详细信息，请参阅[创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)。  
+- The file is compiled by using a different **/analyze** compiler option setting than is used to precompile the headers. When the headers for a project are precompiled, all should use the same **/analyze** settings. For more information, see [/analyze (Code Analysis)](../../build/reference/analyze-code-analysis.md).  
   
- **其他原因**  
+- The file, the directory, or the disk is read-only.  
   
--   该文件使用托管的代码，但是编译器选项**/clr**未指定。 有关详细信息，请参阅 [/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。  
+- Visual Studio or the command line tools do not have sufficient permissions to read the file or the directory. This can happen, for example, when the project files have different ownership than the process running Visual Studio or the command line tools. Sometimes this issue can be fixed by running Visual Studio or the developer command prompt as Administrator.  
   
--   对文件进行编译使用不同**/ 分析**比使用预编译头编译器选项设置。 (当预编译一个项目的标头时，全都应使用相同**/ 分析**设置。)有关详细信息，请参阅 [/analyze（代码分析）](../../build/reference/analyze-code-analysis.md)。  
+- There are not enough file handles. Close some applications and then recompile. This condition is unusual under typical circumstances. However, it can occur when large projects are built on a computer that has limited physical memory.  
   
--   文件、目录或磁盘为只读。  
-  
--   未授予文件或目录的访问权限。  
-  
--   文件句柄不足。 关闭一些应用程序，然后重新编译。 这种情况一般不常见。 但是，在物理内存有限的计算机上生成大型项目时，可能会发生这种情况。  
-  
- 下面的示例生成 C1083 错误。  
+## <a name="example"></a>Example
+
+The following example generates a C1083 error when the header file `"test.h"` does not exist in the source directory or on the include search path.  
   
 ```  
 // C1083.cpp  
 // compile with: /c  
 #include "test.h"   // C1083 test.h does not exist  
-#include "stdio.h"   // OK  
+#include "stdio.h"  // OK  
 ```  
   
- 有关如何生成 C/c + + 项目，在 IDE 中或命令行上的信息和有关设置环境变量的信息，请参阅[生成 C/c + + 程序](../../build/building-c-cpp-programs.md)。
+For information about how to build C/C++ projects in the IDE or on the command line, and information about setting environment variables, see [Building C/C++ Programs](../../build/building-c-cpp-programs.md).
  
- ## <a name="see-also"></a>另请参阅
- [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)
+## <a name="see-also"></a>See Also
+
+[MSBuild Properties](/visualstudio/msbuild/msbuild-properties)

@@ -1,39 +1,55 @@
 ---
-title: "命名空间 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "namespace_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "全局命名空间"
-  - "命名空间 [C++]"
-  - "命名空间 [C++], C++"
-  - "命名空间 [C++], 全局"
-  - "Visual C++, 命名空间"
+title: Namespaces (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 08/30/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- namespace_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- namespaces [C++], C++
+- namespaces [C++]
+- namespaces [C++], global
+- global namespace
+- Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 命名空间 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/31/2017
 
-命名空间是一个声明性区域，为其内部的标识符（类型、函数和变量等的名称）提供一个范围。  命名空间用于将代码组织到逻辑组中，还可用于避免名称冲突，尤其是在基本代码包括多个库时。  命名空间范围内的所有标识符彼此可见，而没有任何限制。  命名空间之外的标识符可通过使用每个标识符的完全限定名（例如 `std::vector<std::string> vec;`）来访问成员，也可通过单个标识符的 [using 声明](../cpp/using-declaration.md) \(`using std::string`\) 或命名空间中所有标识符的 [using 指令](../misc/using-directive-cpp.md) \(`using namespace std;`\) 来访问成员。  头文件中的代码应始终使用完全限定的命名空间名称。  
+---
+# <a name="namespaces-c"></a>Namespaces (C++)
+A namespace is a declarative region that provides a scope to the identifiers (the names of types, functions, variables, etc) inside it. Namespaces are used to organize code into logical groups and to prevent name collisions that can occur especially when your code base includes multiple libraries. All identifiers at namespace scope are visible to one another without qualification. Identifiers outside the namespace can access the members by using the fully qualified name for each identifier, for example `std::vector<std::string> vec;`, or else by a [using Declaration](../cpp/using-declaration.md) for a single identifier (`using std::string`), or a [using Directive](../cpp/namespaces-cpp.md#using_directives) for all the identifiers in the namespace (`using namespace std;`). Code in header files should always use the fully qualified namespace name.  
   
- 下面的示例演示了一个命名空间声明和命名空间之外的代码可访问其成员的三种方法。  
+ The following example shows a namespace declaration and three ways that code outside the namespace can accesses their members.  
   
-```  
+```cpp  
 namespace ContosoData  
 {      
     class ObjectManager   
@@ -45,45 +61,46 @@ namespace ContosoData
 }  
 ```  
   
- 使用完全限定名：  
+ Use the fully qualified name:  
   
-```  
+```cpp  
 ContosoData::ObjectManager mgr;  
 mgr.DoSomething();  
 ContosoData::Func(mgr);  
 ```  
   
- 使用 using 声明，以将一个标识符引入范围：  
+ Use a using declaration to bring one identifier into scope:  
   
-```  
-using WidgetsUnlimited::ObjectManager;  
+```cpp  
+using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
   
 ```  
   
- 使用 using 指令，以将命名空间中的所有内容引入范围：  
+ Use a using directive to bring everything in the namespace into scope:  
   
-```  
-using namespace WidgetsUnlimited;  
+```cpp  
+using namespace ContosoData;
+  
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
   
 ```  
   
-## using 指令  
- 通过 `using` 指令，可使用**命名空间**中的所有名称，而不需要*命名空间名称*为显式限定符。  如果在一个命名空间中使用多个不同的标识符，则在实现文件中使用 using 指令（即  \*.cpp）；如果仅使用一个或两个标识符，则考虑使用声明，以仅将这些标识符而不是命名空间中的所有标识符引入范围。  如果本地变量的名称与命名空间变量的名称相同，则隐藏命名空间变量。  使命名空间变量具有与全局变量相同的名称是错误的。  
+## <a id="using_directives"></a> using directives  
+ The `using` directive allows all the names in a **namespace** to be used without the *namespace-name* as an explicit qualifier. Use a using directive in an implementation file (i.e. *.cpp) if you are using several different identifiers in a namespace; if you are just using one or two identifiers, then consider a using declaration to only bring those identifiers into scope and not all the identifiers in the namespace. If a local variable has the same name as a namespace variable, the namespace variable is hidden. It is an error to have a namespace variable with the same name as a global variable.  
   
 > [!NOTE]
->  using 指令可以放置在 .cpp 文件的顶部（在文件范围内），或放置在类或函数定义内。  
+>  A using directive can be placed at the top of a .cpp file (at file scope), or inside a class or function definition.  
 >   
->  一般情况下，避免将 using 指令放置在头文件 \(\*.h\) 中，因为任何包含该标头的文件都会将命名空间中的所有内容引入范围，这将导致非常难以调试的名称隐藏和名称冲突问题。  在头文件中，始终使用完全限定名。  如果这些名称太长，可以使用命名空间别名将其缩短。  （请参阅下文。）  
+>  In general, avoid putting using directives in header files (*.h) because any file that includes that header will bring everything in the namespace into scope, which can cause name hiding and name collision problems that are very difficult to debug. Always use fully qualified names in a header file. If those names get too long, you can use a namespace alias to shorten them. (See below.)  
   
-## 声明命名空间和命名空间成员  
- 通常情况下，在头文件中声明一个命名空间。  如果函数实现位于一个单独的文件中，则限定函数名称，如本示例所示。  
+## <a name="declaring-namespaces-and-namespace-members"></a>Declaring namespaces and namespace members  
+ Typically, you declare a namespace in a header file. If your function implementations are in a separate file, then qualify the function names, as in this example.  
   
-```  
+```cpp  
 //contosoData.h   
 #pragma once  
 namespace ContosoDataServer  
@@ -94,26 +111,26 @@ namespace ContosoDataServer
 }  
 ```  
   
- contosodata.cpp 中的函数实现应使用完全限定名，即使将一个 using 指令放置于文件的顶部也是如此：  
+ Function implementations in contosodata.cpp should use the fully qualified name, even if you place a `using` directive at the top of the file:  
   
-```  
+```cpp  
 #include "contosodata.h"  
 using namespace ContosoDataServer;   
   
-void ContosoDataServer::Foo()  
+void ContosoDataServer::Foo() // use fully-qualified name here  
 {  
-   //no qualification because using directive above  
+   // no qualification needed for Bar()  
    Bar();   
 }  
   
 int ContosoDataServer::Bar(){return 0;}  
 ```  
   
- 可以在单个文件中的多个块中声明命名空间，也可在多个文件中声明命名空间。  编译器在预处理过程中将各部分联接在一起，产生的命名空间中包含所有部分中声明的所有成员。  一个相关示例是在标准库中的每个头文件中声明的 std 命名空间。  
+ A namespace can be declared in multiple blocks in a single file, and in multiple files. The compiler joins the parts together during preprocessing and the resulting namespace contains all the members declared in all the parts. An example of this is the std namespace which is declared in each of the header files in the standard library.  
   
- 指定的命名空间的成员可以在定义的名称的[显式限定](../misc/explicit-qualification.md)所声明的命名空间的外部进行定义。  但是，定义必须出现在命名空间中的声明位置之后，该命名空间包含在声明的命名空间中。  例如:  
+ Members of a named namespace can be defined outside the namespace in which they are declared by explicit qualification of the name being defined. However, the definition must appear after the point of declaration in a namespace that encloses the declaration's namespace. For example:  
   
-```  
+```cpp  
 // defining_namespace_members.cpp  
 // C2039 expected  
 namespace V {  
@@ -129,18 +146,18 @@ namespace V {
 }  
 ```  
   
- 当跨多个头文件声明命名空间成员，并且未以正确的顺序包含这些标头时，可能出现此错误。  
+ This error can occur when namespace members are declared across multiple header files, and you have not included those headers in the correct order.  
   
-## 全局命名空间  
- 如果未在显式命名空间中声明某个标识符，则该标识符属于隐式全局命名空间的一部分。  通常情况下，如果可能，尝试避免在全局范围内进行声明，入口点 [main 函数](../c-language/main-function-and-program-execution.md)除外，它必须位于全局命名空间中。  若要显式限定全局标识符，请使用没有名称的范围解析运算符，如 `::SomeFunction(x);` 中所示。  这将使标识符与任何其他命名空间中具有相同名称的任何内容区分开来，并且还有助于使其他人更轻松地了解你的代码。  
+## <a name="the-global-namespace"></a>The global namespace  
+ If an identifier is not declared in an explicit namespace, it is part of the implicit global namespace. In general, try to avoid making declarations at global scope when possible, except for the entry point [main Function](../c-language/main-function-and-program-execution.md), which is required to be in the global namespace. To explicitly qualify a global identifier, use the scope resolution operator with no name, as in `::SomeFunction(x);`. This will differentiate the identifier from anything with the same name in any other namespace, and it will also help to make your code easier for others to understand.  
   
-## Std 命名空间  
- 所有 C\+\+ 标准库类型和函数都在 std 命名空间或嵌套在 std 内的命名空间中进行声明。  
+## <a name="the-std-namespace"></a>The std namespace  
+ All C++ standard library types and functions are declared in the `std` namespace or namespaces nested inside `std`.  
   
-## 嵌套命名空间  
- 可以嵌套命名空间。  普通的嵌套命名空间具有对其父级成员的非限定访问权限，而父成员不具有对嵌套命名空间的非限定访问权限（除非它被声明为内联），如下面的示例所示：  
+## <a name="nested-namespaces"></a>Nested namespaces  
+ Namespaces may be nested. An ordinary nested namespace has unqualified access to its parent’s members, but the parent members do not have unqualified access to the nested namespace (unless it is declared as inline), as shown in the following example:  
   
-```  
+```cpp  
 namespace ContosoDataServer  
 {  
     void Foo();   
@@ -157,12 +174,12 @@ namespace ContosoDataServer
 }  
 ```  
   
- 普通嵌套命名空间可用于封装不属于父命名空间的公共接口的一部分的内部实现详细信息。  
+ Ordinary nested namespaces can be used to encapsulate internal implementation details that are not part of the public interface of the parent namespace.  
   
-## 内联命名空间 \(C\+\+ 11\)  
- 与普通嵌套命名空间不同，内联命名空间的成员会被视为父命名空间的成员。  这一特性使针对重载函数的依赖于参数的查找可以对父命名空间和嵌套内联命名空间中具有重载的函数起作用。  它还可让你在内联命名空间中声明的模板的父命名空间中声明专用化。  下面的示例演示在默认情况下，外部代码如何绑定到内联命名空间：  
+## <a name="inline-namespaces-c-11"></a>Inline namespaces (C++ 11)  
+ In contrast to an ordinary nested namespace, members of an inline namespace are treated as members of the parent namespace. This characteristic enables argument dependent lookup on overloaded functions to work on functions that have overloads in a parent and a nested inline namespace. It also enables you to declare a specialization in a parent namespace for a template that is declared in the inline namespace. The following example shows how external code binds to the inline namespace by default:  
   
-```  
+```cpp  
 //Header.h  
 #include <string>  
   
@@ -194,9 +211,9 @@ int main()
 }  
 ```  
   
- 下面的示例演示如何在内联命名空间中声明的模板的父命名空间中声明专用化：  
+ The following example shows how you can declare a specialization in a parent of a template that is declared in an inline namespace:  
   
-```  
+```cpp  
 namespace Parent  
 {  
     inline namespace new_ns  
@@ -213,13 +230,13 @@ namespace Parent
   
 ```  
   
- 可以将内联命名空间用作版本控制机制，以管理对库的公共接口的更改。  例如，可以创建单个父命名空间，并将接口的每个版本封装到嵌套在父命名空间内的其自己的命名空间中。  保留最新或首选的版本的命名空间限定为内联，并因此以父命名空间的直接成员的形式公开。  调用 Parent::Class 的客户端代码将自动绑定到新代码。  通过使用指向包含该代码的嵌套命名空间的完全限定路径，选择使用较旧版本的客户端仍可以对其进行访问。  
+ You can use inline namespaces as a versioning mechanism to manage changes to the public interface of a library. For example, you can create a single parent namespace, and encapsulate each version of the interface in its own namespace nested inside the parent. The namespace that holds the most recent or preferred version is qualified as inline, and is therefore exposed as if it were a direct member of the parent namespace. Client code that invokes the Parent::Class will automatically bind to the new code. Clients that prefer to use the older version can still access it by using the fully qualified path to the nested namespace that has that code.  
   
- Inline 关键字必须应用到编译单元中命名空间的第一个声明中。  
+ The inline keyword must be applied to the first declaration of the namespace in a compilation unit.  
   
- 下面的示例演示一个接口的两个版本，每个版本位于一个嵌套命名空间中。  通过 `v_10` 接口对 `v_20` 命名空间进行了某些修改，且该命名空间被标记为内联。  使用新库并调用 `Contoso::Funcs::Add` 的客户端代码将调用 v\_20 版本。  尝试调用 `Contoso::Funcs::Divide` 的代码现在将获取一个编译时错误。  如果它们确实需要该函数，则仍可以通过显式调用 `Contoso::v_10::Funcs::Divide` 访问 `v_10` 版本。  
+ The following example shows two versions of an interface, each in a nested namespace. The `v_20` namespace has some modification from the `v_10` interface and is marked as inline. Client code that uses the new library and calls `Contoso::Funcs::Add` will invoke the v_20 version. Code that attempts to call `Contoso::Funcs::Divide` will now get a compile time error. If they really need that function, they can still access the `v_10` version by explicitly calling `Contoso::v_10::Funcs::Divide`.  
   
-```  
+```cpp  
 namespace Contoso  
 {  
     namespace v_10  
@@ -254,29 +271,28 @@ namespace Contoso
   
 ```  
   
-## 命名空间别名  
- 命名空间名称必须是唯一的，这意味着通常它们不应太短。  如果名称的长度使代码难以阅读，或在不能使用 using 指令的头文件中进行键入单调乏味，则可以使用用作实际名称的缩写的命名空间别名。  例如:  
+## <a id="namespace_aliases"></a> Namespace aliases  
+ Namespace names need to be unique, which means that often they should not be too short. If the length of a name makes code difficult to read, or is tedious to type in a header file where using directives can’t be used, then you can make a namespace alias which serves as an abbreviation for the actual name. For example:  
   
-```  
+```cpp  
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
   
 ```  
   
-## 匿名或未命名的命名空间  
- 可以创建显式命名空间，但不为其提供一个名称：  
+## <a name="anonymous-or-unnamed-namespaces"></a>anonymous or unnamed namespaces  
+ You can create an explicit namespace but not give it a name:  
   
-```  
+```cpp  
 namespace  
 {  
     int MyFunc(){}  
 }  
 ```  
   
- 这称为未命名的命名空间或匿名命名空间，在你想要使变量声明对于其他文件中的代码不可见（即  为它们提供内部链接），而不必创建已命名的命名空间时非常有用。  同一文件中的所有代码都可以看到未命名的命名空间中的标识符，但这些标识符以及命名空间本身在该文件外部（或更准确地说，在翻译单元外部）不可见。  
+ This is called an unnamed or anonymous namespace and it is useful when you want to make variable declarations invisible to code in other files (i.e. give them internal linkage) without having to create a named namespace. All code in the same file can see the identifiers in an unnamed namespace but the identifiers, along with the namespace itself, are not visible outside that file—or more precisely outside the translation unit.  
   
-## 备注  
-  
-## 请参阅  
- [声明](../misc/declarations.md)
+## <a name="see-also"></a>See Also  
+ [Declarations and Definitions](declarations-and-definitions-cpp.md)
+
