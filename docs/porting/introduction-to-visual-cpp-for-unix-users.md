@@ -1,5 +1,5 @@
 ---
-title: "Visual C++ 简介（针对 UNIX 用户）| Microsoft Docs"
+title: Introduction to Visual C++ for UNIX Users | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,56 +31,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
-ms.openlocfilehash: 524be35ec1e1db511b7fd4c2ab2b87d83c54325c
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 6eaba7ea947bc6a9c79c67745876bc0d67e73314
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ 简介（针对 UNIX 用户）
-本主题为不熟悉 Visual C++ 并想要有效率的使用它的 UNIX 用户提供信息。  
+# <a name="introduction-to-visual-c-for-unix-users"></a>Introduction to Visual C++ for UNIX Users
+
+This topic provides information for UNIX users who are new to Visual C++ and want to become productive with Visual C++ and the Visual Studio Integrated Development Environment (IDE).  
   
-## <a name="getting-started-on-the-command-line"></a>首先使用命令行  
- 可按使用 UNIX 命令行环境的相似方式来使用命令行中的 Visual C++。 利用命令行 C 和 C++ 编译器 (CL.EXE) 以及 NMAKE.EXE、Microsoft 版本的 UNIX make 实用工具等工具从命令提示符中进行编译。  
+## <a name="getting-started-on-the-command-line"></a>Getting Started on the Command Line  
+
+You can use Visual C++ from the command line in a similar way that you would use a UNIX command-line environment. You compile from the command prompt by using the command-line C and C++ compiler (CL.EXE), linker (LINK.EXE), and other tools, including NMAKE.EXE, the Microsoft version of the UNIX make utility.  
   
- 在 UNIX 中，命令安装在常用文件夹中，例如 /usr/bin。 在 Visual C++ 中，命令行工具安装在 VC\bin 的安装目录中（通常安装在 Program Files\Microsoft Visual Studio 8\VC\bin 中）。 若要使用命令行工具，请运行位于 Common7\Tools 的安装目录中的 vsvars32.bat。 这会将 bin 目录添加到路径中，并设置从命令行编译 Visual C++ 程序所必需的其他路径。 有关详细信息，请参阅[在命令行上生成](../build/building-on-the-command-line.md)和[演练：在命令行上编译本机 C++ 程序](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
+In UNIX, commands are installed in a common folder, such as /usr/bin. In Visual C++, the command-line tools are installed in your Visual Studio installation directory in the VC\bin subdirectory and its subdirectories. Unlike UNIX, these tools are not available in a plain command prompt window. To use the command-line tools, use a developer command prompt shortcut, or run a developer command file such as vcvarsall.bat. This sets up the path and other environment variables that are necessary to compile Visual C++ programs from the command line. For more information, see [Build C/C++ code on the command line](../build/building-on-the-command-line.md) and [Walkthrough: Compiling a Native C++ Program on the Command Line](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
-> [!NOTE]
->  如果通过“开始”菜单中的“Visual Studio 命令行提示符”打开命令提示符，则运行 vsvars32.bat。  
+To open a developer command prompt shortcut, enter *developer command prompt* in the desktop search control and choose the **Developer Command Prompt** result for your version of Visual Studio. To choose a developer command prompt that is preconfigured for a particular host and target architecture, open the **Start** menu (the Windows icon in the corner of the desktop) and then scroll to the folder for your version of Visual Studio, such as **Visual Studio 2017**. Open the folder and choose the command prompt shortcut for your preferred host and target architecture.
   
- 若要使用 Visual Studio 调试器、语句完成等更强大的功能，则需要使用开发环境。  
+To take advantage of more powerful features, such as the Visual Studio debugger, IntelliSense code look-up and statement completion, visual designers, project management, and so on, you need to use the Visual Studio IDE.  
   
-## <a name="debugging-your-code"></a>调试代码  
- 如果使用命令行并在开发工作站上运行应用程序，则在代码遇到内存访问冲突、未处理的异常或其他不可恢复的错误时，将显示运行 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 调试器的对话框。 如果单击“确定”，将启动 Visual Studio 开发环境，并且在故障点之前调试器都将打开。 可按此方法调试应用程序，而且在这种情况下，只有在使用 [/Z7、/Zi、/ZI（调试信息格式）](../build/reference/z7-zi-zi-debug-information-format.md)交换机进行编译时，源代码才可用。 有关详细信息，请参阅[调试本机代码](/visualstudio/debugger/debugging-native-code)和[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
+## <a name="debugging-your-code"></a>Debugging Your Code  
+
+If you use the command line and run your applications on your development workstation, you will see that a dialog box to run the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] debugger is displayed when your code encounters a memory access violation, unhandled exception, or other unrecoverable errors. If you click **OK**, then the Visual Studio development environment is started, and the debugger will open to the point of failure. It is possible to debug your applications this way, and, in this case, your source code would only be available if you compiled with the [/Z7, /Zi, /ZI (Debug Information Format)](../build/reference/z7-zi-zi-debug-information-format.md) switch. For more information, see [Debugging Native Code](/visualstudio/debugger/debugging-native-code) and [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="using-the-development-environment"></a>使用开发环境  
- 使用开发环境更容易在项目中编辑和生成源代码。 项目是指将编译到单个单元（如库或可执行文件）中的源文件和相关文件的集合。 项目还包括文件生成方式的相关信息。 项目的相关信息存储在扩展名为 .prj 的项目文件中。  
+## <a name="using-the-development-environment"></a>Using the Development Environment  
+
+It is easier to use the development environment to edit and build your source code in a *project*. A project is a collection of source and related files that will be compiled into a single unit, such as a library or executable. A project also contains information on how the files are to be built. Information about projects is stored in a project file with the extension .prj.  
   
- 单个解决方案中内含的多个项目中存储了包含多个库和可执行文件的应用程序，其中每个库或文件都可以一组不同的编译器选项，或甚至以不同语言生成。 解决方案是容器的抽象概念，用来将多个项目组合在一起。 解决方案的相关信息存储在扩展名为 .sln 的解决方案文件中。 有关详细信息，请参阅[Visual Studio 中的解决方案和项目](/visualstudio/ide/solutions-and-projects-in-visual-studio)和[使用 Visual Studio IDE 进行 C++ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
+An application that consists of multiple libraries and executables, each potentially built with a different set of compiler options or even in a different language, are stored in multiple projects that are part of a single *solution*. A solution is an abstraction for a container to group multiple projects together. Information about solutions is stored in a solution file with the extension .sln. For more information, see [Solutions and Projects in Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) and [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="importing-your-existing-code"></a>导入现有代码  
- 可借助 Visual C++ 来使用设置为用（不用）生成文件进行编译的现有代码，并将它放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 项目。 有关详细信息，请参阅**“从现有代码文件创建项目”向导**。 有关详细信息，请参阅[如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
+## <a name="importing-your-existing-code"></a>Importing Your Existing Code 
+ 
+You can use Visual C++ to build existing code that is set up to compile with or without a makefile and put it into a [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] project. For more information, see [How to: Create a C++ Project from Existing Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
-## <a name="creating-a-new-project"></a>创建新项目  
- 可在开发环境中创建新项目。 Visual C++ 提供了大量提供各种常见项目的标准代码的模板。 可使用应用程序向导为各种应用程序类型生成具有代码大纲的项目。  
+## <a name="creating-a-new-project"></a>Creating a New Project  
+
+You can create new projects in the development environment. Visual C++ provides numerous templates that provide standard code for various common projects. You can use application wizards to generate projects with code outlines for various application types.  
   
- 可以使用**“控制台应用程序 (Win32) 向导”**开始创建空项目。 选择“空项目”复选框。 然后稍后可将新的和现有文件添加到项目。  
+You can start with an empty project by using the **Console Application (Win32) Wizard**. Select the **Empty Project** check box. You can then add new and existing files to the project later.  
   
- 当创建项目时，必须对其进行命名。 默认情况下，项目名称即为动态链接库 (DLL) 或从此项目生成的可执行文件的名称。 有关详细信息，请参阅[创建解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。  
+When you create a project, you must name the project. By default, the project name equals the name of the dynamic-link library (DLL) or executable that is build from the project. For more information, see [Creating Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).  
   
-## <a name="microsoft-specific-modifiers"></a>Microsoft 专用的修饰符  
- Visual C++ 包含标准 C++ 编程语言的一些扩展。 这些扩展用于指定存储类特性、函数调用约定和基于寻址以及其他用途。 有关所有 Visual C++ 扩展的完整列表，请参阅 [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。  
+## <a name="microsoft-specific-modifiers"></a>Microsoft-Specific Modifiers  
+
+Visual C++ contains several extensions to the standard C++ programming language to support programming for Windows operating systems. These extensions are used to specify storage class attributes, function calling conventions, and based addressing, among other things. For a complete list of all Visual C++ extensions, see [Microsoft-Specific Modifiers](../cpp/microsoft-specific-modifiers.md).  
   
- 可以使用 **/Za** 编译器选项禁用所有特定于 Microsoft 的 C++ 扩展。 如果希望编写可在多个平台上运行的代码，建议使用此选项。 有关 **/Za** 编译器选项的详细信息，请参阅 [/Za、/Ze（禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)。 有关 Visual C++ 一致性的详细信息，请参阅[非标准行为](../cpp/nonstandard-behavior.md)。  
+You can disable all Microsoft-specific extensions to C++ by using the **/Za** compiler option. This option is recommended if you want to write code to run on multiple platforms. For more information on the **/Za** compiler option, see [/Za, /Ze (Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md). For more information on Visual C++ conformance, see [Nonstandard Behavior](../cpp/nonstandard-behavior.md).  
   
-## <a name="precompiled-headers"></a>预编译标头  
- Microsoft C 和 C++ 编译器提供预编译任何 C 或 C++ 代码（包括内联代码）的选项。 使用此性能功能，可以编译稳定的代码正文，在文件中存储已编译的代码状态，并在后续编译过程中将预编译代码和仍在开发的代码合并在一起。 每个后续编译的速度都更快，因为无需重新编译稳定的代码。  
+## <a name="precompiled-headers"></a>Precompiled Headers  
+
+The Microsoft C and C++ compilers provide options for precompiling any C or C++ code, including inline code. Using this performance feature, you can compile a stable body of code, store the compiled state of the code in a file, and, during subsequent compilations, combine the precompiled code with code that is still under development. Each subsequent compilation is faster because the stable code does not need to be recompiled.  
   
- 默认情况下，所有预编译的代码均在文件 **stdafx.h** 和 **stdafx.cpp** 中进行指定。 “新建项目”向导将自动创建这些文件，除非取消选择“预编译标头”选项。 有关预编译标头的详细信息，请参阅[创建预编译标头文件](../build/reference/creating-precompiled-header-files.md)。  
+By default, all precompiled code is specified in the files **stdafx.h** and **stdafx.cpp**. The **New Project** wizard will automatically create these files for you unless you deselect the **Precompiled header** option. For more information on precompiled headers, see [Creating Precompiled Header Files](../build/reference/creating-precompiled-header-files.md).  
   
-## <a name="related-sections"></a>相关章节  
- 有关详细信息，请参阅[从 UNIX 到 Win32 的迁移](../porting/porting-from-unix-to-win32.md)。  
+## <a name="related-sections"></a>Related Sections  
+
+For more information, see [Porting from UNIX to Win32](../porting/porting-from-unix-to-win32.md).  
   
-## <a name="see-also"></a>另请参阅  
- [生成 C/C++ 程序](../build/building-c-cpp-programs.md)
+## <a name="see-also"></a>See Also  
+
+[Building C/C++ Programs](../build/building-c-cpp-programs.md)

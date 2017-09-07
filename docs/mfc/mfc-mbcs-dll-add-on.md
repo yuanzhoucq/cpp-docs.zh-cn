@@ -1,31 +1,56 @@
 ---
-title: "MFC MBCS DLL 加载项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MBCS"
-  - "MFC"
+title: MFC MBCS DLL Add-on | Microsoft Docs
+ms.custom: 
+ms.date: 08/20/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MBCS
+- MFC
 ms.assetid: bebec0ff-e019-42ca-b5df-8c218ac5b54a
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# MFC MBCS DLL 加载项
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 42abd4adfe10b032849bfec391874cd249793c32
+ms.openlocfilehash: f6cf9f0626eb2c25faf473d8177b66368280643e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/31/2017
 
-在 Visual Studio 2015 中，用于多字节字符编码 \(MBCS\) 的 MFC 库包含在 Visual C\+\+ 安装组件中。 在 Visual Studio 安装程序中，Visual C\+\+ 和 MFC 是可选安装配置。 若要确保已安装 MFC，请在安装程序中选择“自定义”，并确保在“编程语言”下选择了“Visual C\+\+”和“用于 C\+\+ 的 Microsoft 基础类”。 如果已安装 Visual Studio，则尝试创建 MFC 项目时，系统将提示你安装 Visual C\+\+ 和\/或 MFC。  
+---
+# <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL Add-on
+ You need the multibyte DLLs in order to build an MFC project in Visual Studio 2015 that has the **Character Set** property set to **Use Multi-Byte Character Set** or **Not Set**.  
+
+**Visual Studio 2013**: Download the DLL at [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770).
+
+**Visual Studio 2015**: The DLL is included in the Visual C++ setup components. Visual C++ and MFC are optional install configurations in Visual Studio setup. To make sure that MFC is installed, choose **Custom** in setup, and under **Programming Languages**, make sure that **Visual C++** and **Microsoft Foundation Classes for C++** are selected. If you have already installed Visual Studio, you will be prompted to install Visual C++ and/or MFC when you attempt to create an MFC project.  
   
- 需要多字节 DLL 来在 Visual Studio 2015 中生成将“字符集”属性设置为“使用多字节字符集”或“未设置”的 MFC 项目。  
+**Visual Studio 2017**: The DLL is installed with the **Desktop Development with C++** workload when you select **MFC and ATL support** from the **Optional Components** pane.
+
   
-## 请参阅  
- [MFC 库版本](../mfc/mfc-library-versions.md)
+## <a name="see-also"></a>See Also  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)
+
+

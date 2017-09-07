@@ -1,11 +1,11 @@
 ---
-title: "wcstombs_s、_wcstombs_s_l | Microsoft 文档"
+title: wcstombs_s, _wcstombs_s_l | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -56,17 +56,18 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c407068c475f866062f8973fbacf70fcf6e6cae9
+ms.translationtype: MT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 913ee4f1b4b9e9c228ef13d78d26742529bbdc0e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="wcstombss-wcstombssl"></a>wcstombs_s、_wcstombs_s_l
-将宽字符序列转换为对应的多字节字符序列。 [wcstombs、_wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) 的一个版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
+# <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
+
+Converts a sequence of wide characters to a corresponding sequence of multibyte characters. A version of [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md) with security enhancements as described in [Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 errno_t wcstombs_s(  
@@ -76,6 +77,7 @@ errno_t wcstombs_s(
    const wchar_t *wcstr,  
    size_t count   
 );  
+
 errno_t _wcstombs_s_l(  
    size_t *pReturnValue,  
    char *mbstr,  
@@ -84,6 +86,7 @@ errno_t _wcstombs_s_l(
    size_t count,  
    _locale_t locale  
 );  
+
 template <size_t size>  
 errno_t wcstombs_s(  
    size_t *pReturnValue,  
@@ -91,6 +94,7 @@ errno_t wcstombs_s(
    const wchar_t *wcstr,  
    size_t count   
 ); // C++ only  
+
 template <size_t size>  
 errno_t _wcstombs_s_l(  
    size_t *pReturnValue,  
@@ -101,74 +105,78 @@ errno_t _wcstombs_s_l(
 ); // C++ only  
 ```  
   
-#### <a name="parameters"></a>参数  
- [out] `pReturnValue`  
- 要转换的字符数。  
+#### <a name="parameters"></a>Parameters  
+
+[out] *pReturnValue*  
+The number of characters converted.  
   
- [out] `mbstr`  
- 生成的已转换多字节字符字符串的缓冲区的地址。  
+[out] *mbstr*  
+The address of a buffer for the resulting converted multibyte character string.  
   
- [in]`sizeInBytes`  
- 缓冲区 `mbstr` 的大小（以字节为单位）。  
+[in] *sizeInBytes*  
+The size in bytes of the *mbstr* buffer.  
   
- [in] `wcstr`  
- 指向要转换的宽字符字符串的指针。  
+[in] *wcstr*  
+Points to the wide character string to be converted.  
   
- [in] `count`  
- 要存储在 `mbstr` 缓冲区中的最大字节数，不包括终止 null 字符或 [_TRUNCATE](../../c-runtime-library/truncate.md)。  
+[in] *count*  
+The maximum number of bytes to store in the *mbstr* buffer, not including the terminating null character, or [_TRUNCATE](../../c-runtime-library/truncate.md).  
   
- [in] `locale`  
- 要使用的区域设置。  
+[in] *locale*  
+The locale to use.  
   
-## <a name="return-value"></a>返回值  
- 如果成功，返回零；如果失败，则返回错误代码。  
+## <a name="return-value"></a>Return Value  
+
+Zero if successful, an error code on failure.  
   
-|错误条件|返回值和 `errno`|  
+|Error condition|Return value and `errno`|  
 |---------------------|------------------------------|  
-|`mbstr` 是 `NULL` 和 `sizeInBytes` > 0|`EINVAL`|  
-|`wcstr` 为 `NULL`|`EINVAL`|  
-|目标缓冲区过小，无法包含转换的字符串（除非 `count` 是 `_TRUNCATE`；请参阅下面的备注）|`ERANGE`|  
+|*mbstr* is `NULL` and *sizeInBytes* > 0|`EINVAL`|  
+|*wcstr* is `NULL`|`EINVAL`|  
+|The destination buffer is too small to contain the converted string (unless *count* is `_TRUNCATE`; see Remarks below)|`ERANGE`|  
   
- 如果发生这些情况中的任何一个，都会调用无效参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，函数将返回错误代码并按表中所示设置 `errno`。  
+If any of these conditions occurs, the invalid parameter exception is invoked as described in [Parameter Validation](../../c-runtime-library/parameter-validation.md) . If execution is allowed to continue, the function returns an error code and sets `errno` as indicated in the table.  
   
-## <a name="remarks"></a>备注  
- `wcstombs_s` 函数将`wcstr` 指向的宽字节字符字符串转换为存储在 `mbstr` 指向的缓冲区中的多字节字符。 在满足以下条件之一前，该转换将一直对每个字符执行：  
+## <a name="remarks"></a>Remarks  
+
+The `wcstombs_s` function converts a string of wide characters pointed to by *wcstr* into multibyte characters stored in the buffer pointed to by *mbstr*. The conversion will continue for each character until one of these conditions is met:  
   
--   遇到 null 宽字符  
+-   A null wide character is encountered  
   
--   遇到无法转换的宽字符  
+-   A wide character that cannot be converted is encountered  
   
--   存储在 `mbstr` 缓冲中的字节数等于 `count`。  
+-   The number of bytes stored in the *mbstr* buffer equals *count*.  
   
- 目标字符串始终以 null 结尾（即使在出错时）。  
+The destination string is always null-terminated (even in the case of an error).  
   
- 如果 `count` 是特殊值 [_TRUNCATE](../../c-runtime-library/truncate.md)，则 `wcstombs_s` 会根据目标缓冲区的容量尽量多地转换字符串，同时仍然为 null 终止符留下空间。  
+If *count* is the special value [_TRUNCATE](../../c-runtime-library/truncate.md), then `wcstombs_s` converts as much of the string as will fit into the destination buffer, while still leaving room for a null terminator. If the string is truncated, the return value is `STRUNCATE`, and the conversion is considered successful.  
   
- 如果 `wcstombs_s` 成功转换了源字符串，它会将转换的字符串（包括 null 终止符）的大小（以字节为单位）放入 `*``pReturnValue`（假定 `pReturnValue` 不是 `NULL`）。 即使 `mbstr` 参数为 `NULL` 并提供了确定所需的缓冲区大小的方法，也会发生这种情况。 请注意，如果 `mbstr` 为 `NULL`，则 `count` 会被忽略。  
+If `wcstombs_s` successfully converts the source string, it puts the size in bytes of the converted string, including the null terminator, into `*pReturnValue` (provided *pReturnValue* is not `NULL`). This occurs even if the *mbstr* argument is `NULL` and provides a way to determine the required buffer size. Note that if *mbstr* is `NULL`, *count* is ignored.  
   
- 如果 `wcstombs_s` 遇到无法转换为多字节字符的宽字符，将会把 0 放入 `*``pReturnValue`，并将目标缓冲区设置为空字符串，将 `errno` 设置为 `EILSEQ`，并返回 `EILSEQ`。  
+If `wcstombs_s` encounters a wide character it cannot convert to a multibyte character, it puts 0 in `*pReturnValue`, sets the destination buffer to an empty string, sets `errno` to `EILSEQ`, and returns `EILSEQ`.  
   
- 如果 `wcstr` 和 `mbstr` 指向的序列重叠，则 `wcstombs_s` 的行为没有定义。  
+If the sequences pointed to by *wcstr* and *mbstr* overlap, the behavior of `wcstombs_s` is undefined.  
   
 > [!IMPORTANT]
->  请确保 `wcstr` 和 `mbstr` 未重叠，并且 `count` 正确地反映了要转换的宽字节的数量。  
+>  Ensure that *wcstr* and *mbstr* do not overlap, and that *count* correctly reflects the number of wide characters to convert.  
   
- `wcstombs_s` 对所有区域设置相关行为使用当前区域设置；`_wcstombs_s_l` 与 `wcstombs` 相同，只不过前者使用的是传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+`wcstombs_s` uses the current locale for any locale-dependent behavior; `_wcstombs_s_l` is identical to `wcstombs` except that it uses the locale passed in instead. For more information, see [Locale](../../c-runtime-library/locale.md).  
   
- 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+In C++, using these functions is simplified by template overloads; the overloads can infer buffer length automatically (eliminating the need to specify a size argument) and they can automatically replace older, non-secure functions with their newer, secure counterparts. For more information, see [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>Requirements  
   
-|例程|必需的标头|  
+|Routine|Required header|  
 |-------------|---------------------|  
 |`wcstombs_s`|\<stdlib.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+For additional compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).  
   
-## <a name="example"></a>示例  
- 本程序演示 `wcstombs_s` 函数的行为。  
+## <a name="example"></a>Example  
+
+This program illustrates the behavior of the `wcstombs_s` function.  
   
-```  
+```C  
 // crt_wcstombs_s.c  
 // This example converts a wide character  
 // string to a multibyte character string.  
@@ -209,11 +217,12 @@ Convert wide-character string:
     Multibyte character: Hello, world.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [数据转换](../../c-runtime-library/data-conversion.md)   
- [区域设置](../../c-runtime-library/locale.md)   
- [_mbclen、mblen、_mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs、_mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc、_mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb_s、_wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+## <a name="see-also"></a>See Also  
+
+[Data Conversion](../../c-runtime-library/data-conversion.md)   
+[Locale](../../c-runtime-library/locale.md)   
+[_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+[mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+[mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+[wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)   
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

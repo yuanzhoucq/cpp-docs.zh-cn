@@ -1,111 +1,134 @@
 ---
-title: "Visual C++ ARM 迁移的常见问题 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Common Visual C++ ARM Migration Issues | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Visual C++ ARM 迁移的常见问题
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 81eb7a76198fa6a306df8a5dc786475cf9186f92
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/30/2017
 
-同一 Visual C\+\+ 源代码与在 x86 或 x64 体系结构可能导致 ARM 体系结构的不同的结果执行。  
+---
+# <a name="common-visual-c-arm-migration-issues"></a>Common Visual C++ ARM Migration Issues
+
+The same Visual C++ source code might produce different results on the ARM architecture than it does on x86 or x64 architectures.  
   
-## 迁移源问题  
- 许多问题可能会遇到时要迁移从 x86 的代码或对 ARM 体系结构的 x64 体系结构与调用可能未定义的源代码构造，实现中定义或未指定的行为有关。  
+## <a name="sources-of-migration-issues"></a>Sources of migration issues  
+
+Many issues that you might encounter when you migrate code from the x86 or x64 architectures to the ARM architecture are related to source-code constructs that might invoke undefined, implementation-defined, or unspecified behavior.  
   
- 未定义的行为  
- C\+\+ 标准不定义，因此，由操作引起的没有合理结果为示例的行为，将浮点值转换为无符号整数或转换为负数或超过位的数目在其提升的类型的值由很多位置。  
+*Undefined Behavior*  
+Behavior that the C++ standard does not define, and that's caused by an operation that has no reasonable result—for example, converting a floating-point value to an unsigned integer, or shifting a value by a number of positions that is negative or exceeds the number of bits in its promoted type.  
   
- 实现中定义的行为  
- 行为 C\+\+ 标准要求编译器供应商定义和文档。  程序可以安全性依赖于实现中定义的行为，因此，即使这样做可能是不可移植的。  实现中定义的行为的示例包括内置数据类型及其对齐要求的大小。  可能受实现中定义的行为的操作影响的示例访问变量参数列表。  
+*Implementation-defined Behavior*  
+Behavior that the C++ standard requires the compiler vendor to define and document. A program can safely rely on implementation-defined behavior, even though doing so might not be portable. Examples of implementation-defined behavior include the sizes of built-in data types and their alignment requirements. An example of an operation that might be affected by implementation-defined behavior is accessing the variable arguments list.  
   
- 未指定的行为。  
- 该行为 C\+\+ 标准特意将不确定。  尽管该行为是不确定，编译器实现依赖未指定的行为的特定调用。  但是，没有编译器供应商的要求预先确定该结果或确保在可比的调用之间一致的行为，因此，不文档的要求。  未指定的行为的示例是子表达式包括函数的参数调用的计算顺序。  
+*Unspecified Behavior*  
+Behavior that the C++ standard leaves intentionally non-deterministic. Although the behavior is considered non-deterministic, particular invocations of unspecified behavior are determined by the compiler implementation. However, there is no requirement for a compiler vendor to predetermine the result or guarantee consistent behavior between comparable invocations, and there is no requirement for documentation. An example of unspecified behavior is the order in which sub-expressions—which include arguments to a function call—are evaluated.  
   
- 其他迁移问题可以在特性化 ARM 和 x86 或与 C\+\+ 标准不同进行交互的 x64 体系结构之间的硬件差异。  例如，x86 和 x64 体系结构的系列记忆模型可以为 `volatile`\-限定变量用于以前完成某些类型的线程间的通信的某些其他属性。  ARM，但体系结构的弱的内存模型不支持此用法，也不 C\+\+ 标准要求\)。  
+Other migration issues can be attributed to hardware differences between ARM and x86 or x64 architectures that interact with the C++ standard differently. For example, the strong memory model of the x86 and x64 architecture gives `volatile`-qualified variables some additional properties that have been used to facilitate certain kinds of inter-thread communication in the past. But the ARM architecture's weak memory model doesn't support this use, nor does the C++ standard require it.  
   
 > [!IMPORTANT]
->  虽然 `volatile` 获取用于实现线程间的通信的有限窗体有关 x86 和 x64 的一些属性，这些附加属性是不够通常实现线程间的通信。  C\+\+ 标准建议此类通信实现使用适当的同步基元。  
+>  Although `volatile` gains some properties that can be used to implement limited forms of inter-thread communication on x86 and x64, these additional properties are not sufficient to implement inter-thread communication in general. The C++ standard recommends that such communication be implemented by using appropriate synchronization primitives instead.  
   
- 由于不同的平台可能不同的方式表示这些行为，移植在平台之间的软件可能很难和合理 bug，则取决于特定平台的行为。  尽管其中许多行为中观察可能出现稳定，依赖它们至少是不可移植的，然后在未定义或未指定的行为情况下，也可以是错误。  中被引用的行为在将来的编译器或 CPU 实现文档不应依赖于，并且可能随着。  
+Because different platforms might express these kinds of behavior differently, porting software between platforms can be difficult and bug-prone if it depends on the behavior of a specific platform. Although many of these kinds of behavior can be observed and might appear stable, relying on them is at least non-portable, and in the cases of undefined or unspecified behavior, is also an error. Even the behavior that's cited in this document should not be relied on, and could change in future compilers or CPU implementations.  
   
-## 示例的迁移问题  
- 本文档的其余部分描述这些 C\+\+ 语言元素不同的情况如何产生在不同的平台不同的结果。  
+## <a name="example-migration-issues"></a>Example migration issues  
+
+The rest of this document describes how the different behavior of these C++ language elements can produce different results on different platforms.  
   
-### 浮点转换为无符号整数  
- 在 ARM 体系结构，浮点值转换为 32 位整数该为整数可以表示的最近的值，如果浮点值为整数可以表示的范围。  在 x86 和 x64 体系结构，将换行，如果该整数为无符号或设置为 \-2147483648，如果该整数签名。  这些结构都不直接支持浮点值转换为更小整数类型；相反，将对 32 位，因此，结果被截断为较小的。  
+### <a name="conversion-of-floating-point-to-unsigned-integer"></a>Conversion of Floating-point to Unsigned Integer  
+
+On the ARM architecture, conversion of a floating-point value to a 32-bit integer saturates to the nearest value that the integer can represent if the floating-point value is outside the range that the integer can represent. On the x86 and x64 architectures, the conversion wraps around if the integer is unsigned, or is set to -2147483648 if the integer is signed. None of these architectures directly support the conversion of floating-point values to smaller integer types; instead, the conversions are performed to 32 bits, and the results are truncated to a smaller size.  
   
- 对 ARM 体系结构，该和截断的组合意味着为无符号类型的转换正确该更小的无符号类型，则该 32 位整数时，但是，导致大于较小的类型可以表示的值的已截断的结果，但太小而无法该该完整 32 位整数。  转换为 32 位带符号整数也可以正常饱和，但是，该类，带符号整数的截断导致 \-1 正该值的 0 和负该类的值。  为更小的有符号整数的转换导致不可预知的已截断的结果。  
+For the ARM architecture, the combination of saturation and truncation means that conversion to unsigned types correctly saturates smaller unsigned types when it saturates a 32-bit integer, but produces a truncated result for values that are larger than the smaller type can represent but too small to saturate the full 32-bit integer. Conversion also saturates correctly for 32-bit signed integers, but truncation of saturated, signed integers results in -1 for positively-saturated values and 0 for negatively-saturated values. Conversion to a smaller signed integer produces a truncated result that's unpredictable.  
   
- 为 x86 和 x64 体系结构；如果不同，太大，一般行为和带符号整数转换的显式估价的组合无符号整数转换的上溢，将截断时，使得大多数移位的结果不可预知。  
+For the x86 and x64 architectures, the combination of wrap-around behavior for unsigned integer conversions and explicit valuation for signed integer conversions on overflow, together with truncation, make the results for most shifts unpredictable if they are too large.  
   
- 这些平台在其所处理的转换 Nan \(不是数字\) 为整数如何也是不同的类型。  在 ARM 上，0x00000000 的 Nan 转换；在 x86 和 x64，它转换为 0x80000000。  
+These platforms also differ in how they handle conversion of NaN (Not-a-Number) to integer types. On ARM, NaN converts to 0x00000000; on x86 and x64, it converts to 0x80000000.  
   
- 浮点转换只能依赖于，如果您知道该值是在整数类型的范围内其强制转换为。  
+Floating-point conversion can only be relied on if you know that the value is within the range of the integer type that it's being converted to.  
   
-### 偏移运算符 \(\<\< \>\>\) 行为  
- 在 ARM 体系结构，因此，在该模式启动重复之前，值可以左侧或右侧将转换为 255 位。  在 x86 和 x64 体系结构，因此，除非该模式的源是一个 64 位变量，该架构被用于循环访问每个多线程的 32;在这种情况下，架构循环访问每个多线程的 64 在 x64 和每个多线程的 256 在 x86 上，软件实现中使用。  例如，对于的 32 位变量的值为 1 x 32 个位置左移，在 ARM 结果为 0，在 x86 结果为 1，因此，在 x64 该结果也是 1。  但是，因此，如果值来源是一个 64 位变量，然后在所有三个平台的结果为 4294967296，值“不包装在周围”，直到转换了 x64 的 64 个位置，或者在 ARM 和 x86 的 256 个位置。  
+### <a name="shift-operator---behavior"></a>Shift Operator (<\< >>) Behavior  
+
+On the ARM architecture, a value can be shifted left or right up to 255 bits before the pattern begins to repeat. On x86 and x64 architectures, the pattern is repeated at every multiple of 32 unless the source of the pattern is a 64-bit variable; in that case, the pattern repeats at every multiple of 64 on x64, and every multiple of 256 on x86, where a software implementation is employed. For example, for a 32-bit variable that has a value of 1 shifted left by 32 positions, on ARM the result is 0, on x86 the result is 1, and on x64 the result is also 1. However, if the source of the value is a 64-bit variable, then the result on all three platforms is 4294967296, and the value doesn't "wrap around" until it's shifted 64 positions on x64, or 256 positions on ARM and x86.  
   
- 由于超过位的数目在源类型移位运算的结果是未定义的，不需要在所有情况下编译器都具有一致的行为。  例如，因此，如果移位的两个操作线程在编译时已知，编译器可以优化程序使用内部实例添加到预先计算用于 shift 然后将其替换为的结果在移位操作位置。  如果表示移位位数太大或负值，内部实例的结果与 shift 表达式的结果可能不同的和执行文件同名受 CPU。  
+Because the result of a shift operation that exceeds the number of bits in the source type is undefined, the compiler is not required to have consistent behavior in all situations. For example, if both operands of a shift are known at compile time, the compiler may optimize the program by using an internal routine to precompute the result of the shift and then substituting the result in place of the shift operation. If the shift amount is too large, or negative, the result of the internal routine might be different than the result of the same shift expression as executed by the CPU.  
   
-### 变量参数 \(varargs\) 行为  
- 在 ARM 体系结构，从在堆栈上传递受对齐取决于变量的形参表。  例如，一个 64 位参数在 64 位边界对齐。  在 x86 和 x64，在堆栈上传递的参数不受对齐。并不严格打包。  此差异可能导致与 `printf` 的一个 variadic 功能添加到要为 ARM 的填充的读取内存地址，如果变量的预期格式参数列表不能正确匹配，因此，即使它可能对于某些值的子集在 x86 或 x64 体系结构的工作。  请看以下示例：  
+### <a name="variable-arguments-varargs-behavior"></a>Variable Arguments (varargs) Behavior  
+
+On the ARM architecture, parameters from the variable arguments list that are passed on the stack are subject to alignment. For example, a 64-bit parameter is aligned on a 64-bit boundary. On x86 and x64, arguments that are passed on the stack are not subject to alignment and pack tightly. This difference can cause a variadic function like `printf` to read memory addresses that were intended as padding on ARM if the expected layout of the variable arguments list is not matched exactly, even though it might work for a subset of some values on the x86 or x64 architectures. Consider this example:  
   
-```  
+```C  
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.  
 // on x86 and x64 this may work for small values because %d will “parse” the low-32 bits of the argument.  
 // on ARM the calling convention will align the 64-bit value and the code will print a random value  
-printf("%d\n", 1LL);  
-  
+printf("%d\n", 1LL);     
 ```  
   
- 在这种情况下，bug 可通过确保修复使用正确的格式规范，以便该参数的对齐方式考虑。  此代码是正确的：  
+In this case, the bug can be fixed by making sure that the correct format specification is used so that that the alignment of the argument is considered. This code is correct:  
   
-```  
+```C  
 // CORRECT: use %I64d for 64-bit integers  
 printf("%I64d\n", 1LL);  
-  
 ```  
   
-### 参数计算顺序  
- 由于 ARM、x86 和 x64 处理器非常不同，它们位于不同的要求。编译器实现，并优化不同的机会。  因此，与其他因素。\(如调用约定和优化设置，编译器可能计算函数参数按其他体系结构的不同顺序，或者更改时其他因素。  这可能导致依赖于给定计算顺序意外更改 app 的行为。  
+### <a name="argument-evaluation-order"></a>Argument evaluation order  
+
+Because ARM, x86, and x64 processors are so different, they can present different requirements to compiler implementations, and also different opportunities for optimizations. Because of this, together with other factors like calling-convention and optimization settings, a compiler might evaluate function arguments in a different order on different architectures or when the other factors are changed. This can cause the behavior of an app that relies on a specific evaluation order to change unexpectedly.  
   
- 这种错误时，会发生函数的参数影响其他参数。在同一函数调用的副作用时。  通常这种依赖项很容易避免，但有时遮盖由很难辩明的依赖项，或者通过运算符重载。  考虑此代码示例：  
+This kind of error can occur when arguments to a function have side effects that impact other arguments to the function in the same call. Usually this kind of dependency is easy to avoid, but it can sometimes be obscured by dependencies that are difficult to discern, or by operator overloading. Consider this code example:  
   
-```  
+```cpp  
 handle memory_handle;  
   
 memory_handle->acquire(*p);  
-  
 ```  
   
- 这种显式定义，但是，如果 `->` 和 `*` 是重载运算符，则此代码会转换为内容类似的内容：  
+This appears well-defined, but if `->` and `*` are overloaded operators, then this code is translated to something that resembles this:  
   
-```  
+```cpp  
 Handle::acquire(operator->(memory_handle), operator*(p));  
 ```  
   
- 此外，如果在 `operator->(memory_handle)` 和 `operator*(p)`之间的依赖项，代码可能依赖于给定计算顺序，因此，即使原始代码类似于没有可能的依赖项。  
+And if there's a dependency between `operator->(memory_handle)` and `operator*(p)`, the code might rely on a specific evaluation order, even though the original code looks like there is no possible dependency.  
   
-### volatile 关键字默认值行为  
- Microsoft C\+\+ 编译器支持通过使用编译器开关，可以指定易失存储器限定符的两个不同解释。  由于在这些结构，的系列记忆设计 **\/volatile:ms** 开关选择确保严格顺序" Microsoft 扩展的变量的语义，x86 和 x64 的传统用例 Microsoft 编译器。  **\/volatile:iso** 开关选择不保证强排序的有效 C\+\+ 标准变量的语义。  
+### <a name="volatile-keyword-default-behavior"></a>volatile Keyword Default Behavior  
+
+The Microsoft C++ compiler supports two different interpretations of the `volatile` storage qualifier that you can specify by using compiler switches. The **/volatile:ms** switch selects the Microsoft extended volatile semantics that guarantee strong ordering, as has been the traditional case for x86 and x64 on the Microsoft compiler because of the strong memory model on those architectures. The **/volatile:iso** switch selects the strict C++ standard volatile semantics that don't guarantee strong ordering.  
   
- 在 ARM 体系结构，该默认值为 **\/volatile:iso**，因为 ARM 处理器具有弱顺序的内存模型，并且，由于 ARM 软件没有依赖于传统的 **\/volatile:ms** 扩展的语义并不通常必须与执行软件的接口。  但是，它仍有时很方便甚至必需的生成武器计划使用扩展语义。  例如，它可能太大于端口每次使用 ISO C\+\+ 语义的程序，或者驱动程序软件可能必须遵循旧语义正常工作。  在这些情况下，可以使用 **\/volatile:ms** 开关；但是，重新创在 ARM 目标的传统变量的语义，编译器或写入周围必须插入到 `volatile` 变量的每个读取的内存障碍强制执行严格顺序，可能会对性能产生负面影响。  
+On the ARM architecture, the default is **/volatile:iso** because ARM processors have a weakly ordered memory model, and because ARM software doesn’t have a legacy of relying on the extended semantics of **/volatile:ms** and doesn't usually have to interface with software that does. However, it's still sometimes convenient or even required to compile an ARM program to use the extended semantics. For example, it may be too costly to port a program to use the ISO C++ semantics, or driver software might have to adhere to the traditional semantics to function correctly. In these cases, you can use the **/volatile:ms** switch; however, to recreate the traditional volatile semantics on ARM targets, the compiler must insert memory barriers around each read or write of a `volatile` variable to enforce strong ordering, which can have a negative impact on performance.  
   
- 在 x86 和 x64 体系结构，该默认值为 **\/volatile:ms**，原因是这些结构已经创建了使用 Microsoft C\+\+ 编译器的许多软件依赖于它们。  当您生成 x86 和 x64 程序时，可以指定 **\/volatile:iso** 开关帮助避免使用传统变量的语义不必要的关系和提升可移植性。  
+On the x86 and x64 architectures, the default is **/volatile:ms** because much of the software that has already been created for these architectures by using the Microsoft C++ compiler relies on them. When you compile x86 and x64 programs, you can specify the **/volatile:iso** switch to help avoid unnecessary reliance on the traditional volatile semantics, and to promote portability.  
   
-## 请参阅  
- [配置 ARM 处理器的程序](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+
+[Configure Visual C++ for ARM processors](../build/configuring-programs-for-arm-processors-visual-cpp.md)

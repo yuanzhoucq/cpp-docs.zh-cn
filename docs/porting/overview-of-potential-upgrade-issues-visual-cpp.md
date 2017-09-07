@@ -1,5 +1,5 @@
 ---
-title: "潜在的升级问题概述 (Visual C++) | Microsoft Docs"
+title: Overview of potential upgrade issues (Visual C++) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,160 +12,160 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 8d1d9d769d4cb7df5c34b42f6c104ef3c2e959bd
-ms.openlocfilehash: 8edf2d66cefca86fe51a64c9a15f83e9de040f63
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 0175894cb7cc220d3e30cf545ce3aa723f0fb8a6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
-多年来，Visual C++ 编译器已历经多次更改，而 C++ 语言本身、C++ 标准库、C 运行时 (CRT) 以及其他库（如 MFC 和 ATL）亦然。 因此，在从 Visual C++ 的早期版本升级应用程序时，可能遇到编译器和链接器错误，以及先前已完全编译的代码中的警告。 原始基本代码越早，发生此类错误的可能性越大。 本概述总结了可能遇到的最常见类型的问题，并提供有关详细信息的链接。  
+# <a name="overview-of-potential-upgrade-issues-visual-c"></a>Overview of potential upgrade issues (Visual C++)
+Over the years, the Visual C++ compiler has undergone many changes, along with changes in the C++ language itself, the C++ Standard Library, the C runtime (CRT), and other libraries such as MFC and ATL. As a result, when upgrading an application from an earlier version of Visual C++ you might encounter compiler and linker errors and warnings in code that previously compiled cleanly. The older the original code base, the greater the potential for such errors. This overview summarizes the most common classes of issues you are likely to encounter, and provides links to more detailed information.  
   
- 注意：过去我们建议应以增量方式执行跨多版本 Visual Studio 的升级，一次执行一个版本。 现在我们不再推荐这种方法。 我们发现，无论基本代码有多早，采用升级至最新版本 Visual Studio 的方法几乎总是更简单。  
+ Note: In the past, we have recommended that upgrades that span several versions of Visual Studio should be performed incrementally one version at a time. We no longer recommend this approach. We have found that it is almost always simpler to upgrade to the most current version of Visual Studio no matter how old the code base.  
   
- 可将有关升级过程的问题或评论发送至 vcupgrade@microsoft.com。  
+ Questions or comments about the upgrade process can be sent to vcupgrade at microsoft.  
   
-## <a name="library-and-toolset-dependencies"></a>库和工具集依赖项  
- 在将应用程序升级至 Visual C++ 编译器的新版本时，强烈建议升级应用程序链接的所有 lib 和 DLL，这在许多情况下是必要的。 这要求你拥有访问源代码的权限，或库供应商能提供使用相同的主版本 Visual C++ 编译器进行编译的新二进制文件。 若下列条件之一为 true，则可跳过此部分，此部分介绍有关二进制兼容性的详细信息。 如果不符合以下任一条件，则可能无法在已升级的应用程序中使用库。 此部分的信息将帮助你了解是否可以继续进行升级。  
+## <a name="library-and-toolset-dependencies"></a>Library and toolset dependencies  
+ When upgrading an application to a new version of the Visual C++ compiler, it is strongly advisable and in many cases necessary to also upgrade all libs and DLLs that the application links to. This requires either that you have access to the source code, or that the library vendor can provide new binary files compiled with the same major version of the Visual C++ compiler. If one of these conditions is true, then you can skip this section, which deals with the details of binary compatibility. If neither of these are the case, then you might not be able to use the libraries in your upgraded application. The information in this section will help you understand whether you can proceed with the upgrade.  
   
-### <a name="toolset"></a>工具集  
- obj 和 lib 文件格式都是定义完善的且很少更改。 有时会对这些文件格式进行添加，但这些添加通常不会影响较新工具集使用由较旧工具集生成的对象文件和库的能力。 但如果使用 /GL（链接时间代码生成/全程序优化）进行编译，则是一个大的例外。 如果使用 /GL 进行编译，生成的对象文件只能使用生成它时所用的同一工具集进行链接。 因此，如果使用 /GL 和 Visual Studio 2017 (v141) 编译器生成对象文件，则必须使用 Visual Studio 2017 (v141) 链接器对其进行链接。 这是由于 /GL 对象中的内部数据结构在各主版本的工具集之间不稳定，且较新的工具集无法识别较旧的数据格式。  
+### <a name="toolset"></a>Toolset  
+ The obj and lib file formats are well-defined and rarely change. Sometimes additions are made to these file formats, but these additions generally do not affect the ability of newer toolsets to consume object files and libraries produced by older toolsets. The one big exception here is if you compile using /GL (Link-Time Code Generation / Whole Program Optimization). If you compile using /GL, the resulting object file can only be linked using the same toolset that was used to produce it. So, if you produce an object file with /GL and using the Visual Studio 2017 (v141) compiler, you must link it using the Visual Studio 2017 (v141) linker. This is because the internal data structures within the /GL objects are not stable across major versions of the toolset and newer toolsets do not understand the older data formats.  
   
- C++ 不具备稳定的应用程序二进制接口 (ABI)。 Visual C++ 为版本的所有次要版本维护稳定的 ABI。 例如，Visual Studio 2017 及其所有更新均兼容二进制文件。 但 ABI 不一定具有跨 Visual C++ 主版本的兼容性（2015 和 2017 除外，它们兼容二进制文件）。 也就是说，可以对 C++ 类型布局、名称修饰、异常处理和 C++ ABI 的其他部件进行重大更改。 因此，如果对象文件具有包含 C++ 链接的外部符号，则该对象文件可能无法与由其他主版本 Visual C++ 工具集生成的对象文件正确链接。 请注意：“可能无效”具有多种可能的结果：链接可能彻底失效（例如，如果名称修饰已更改）；链接可能成功，但在运行时可能无效（例如，如果类型布局已更改）；或在许多情况下，虽然可能出现一些状况，但一切运行正常。 另请注意，尽管 C++ ABI 不稳定，但 COM 所需的 C ABI 和 C++ ABI 的子集是稳定的。  
+ C++ does not have a stable application binary interface (ABI). Visual C++ maintains a stable ABI for all minor versions of a release. For example, Visual Studio 2017 and all its updates are binary compatible. But the ABI is not necessarily compatible across major versions of Visual C++ (except for 2015 and 2017, which _are_ binary compatible). That is, we may make breaking changes to C++ type layout, name decoration, exception handling, and other parts of the C++ ABI. Thus, if you have an object file that has external symbols with C++ linkage, that object file may not link correctly with object files produced with a different major version of the Visual C++ toolset. Note that here, "may not work" has many possible outcomes: the link may  fail entirely (e.g. if name decoration changed), the link may succeed and things may not work at runtime (e.g. if type layout changed), or things may happen to work in many cases and nothing will go wrong. Note also that while the C++ ABI is not stable, the C ABI and the subset of the C++ ABI required for COM are stable.  
   
-### <a name="libraries"></a>库  
+### <a name="libraries"></a>Libraries  
 
- 如果使用 Visual C++ 库标头的特定版本来编译源文件（通过 #including 标头），生成的对象文件必须与相同版本的 Visual C++ 库链接。 例如，如果使用 Visual Studio 2017 \<immintrin.h> 编译源文件，则必须使用 Visual Studio 2017 vcruntime 库进行链接。 同样地，如果使用 Visual Studio 2017 \<iostream> 编译源文件，则必须使用 Visual Studio 2017 标准 C++ 库 msvcprt 进行链接。 不支持混合与匹配。  
+ If you compile a source file using a particular version of the Visual C++ libraries headers (by #including the headers), the resulting object file must be linked with the same version of the Visual C++ libraries. So, for example, if your source file is compiled with the Visual Studio 2017 \<immintrin.h>, you must link with the Visual Studio 2017 vcruntime library. Similarly, if your source file is compiled with the Visual Studio 2017 \<iostream>, you must link with the Visual Studio 2017 Standard C++ library, msvcprt. Mixing-and-matching is not supported.  
   
- 对于 C++ 标准库，从 Visual Studio 2010 起，通过在标准标头中使用 `#pragma detect_mismatch` 显示禁止混合与匹配。 如果尝试链接不兼容的对象文件，或尝试与错误的标准库链接，链接将失败。  
+ For the C++ Standard Library, mixing-and-matching has been explicitly disallowed via use of `#pragma detect_mismatch` in the standard headers since Visual Studio 2010. If you try to link incompatible object files, or if you try to link with the wrong standard library, the link will fail.  
   
- CRT 向来不支持混合与匹配，但通常还是能使用混合与匹配（至少在 Visual Studio 2015 和通用 CRT 之前，都是如此），这是因为 API 接口一直以来的变化不大。 通用 CRT 中断了后向兼容性，以便我们将来维护向后兼容性。 也就是说，将来我们不打算引入新的、已进行版本管理的通用 CRT 二进制文件。 现有的通用 CRT 已更新就绪。  
+ For the CRT, mixing-and-matching was never supported, but it often just worked, at least until Visual Studio 2015 and the Universal CRT, because the API surface did not change much over time. The Universal CRT broke backwards compatibility so that in the future we can maintain backwards compatibility. In other words, we have no plans to introduce new, versioned Universal CRT binaries in the future. Instead, the existing Universal CRT is now updated in-place.  
   
- 为了提供与使用早期版本的 Microsoft C 运行时标头编译的对象文件（和库）的部分链接兼容性，我们提供库 legacy_stdio_definitions.lib，用于 Visual Studio 2015 及更高版本。 此库为大部分从通用 CRT 删除的函数和数据导出提供兼容性符号。 legacy_stdio_definitions.lib 提供的兼容性符号集足以满足大多数依赖项，包括 Windows SDK 所包含的库中的所有依赖项。 但是，对于某些从通用 CRT 删除的符号，则无法提供类似的兼容性符号。 这些符号包括一些函数（如 \__iob_func）和数据导出（如 \__imp\_\__iob、\__imp\_\__pctype、\__imp\_\__mb_cur_max）。  
+ To provide partial link compatibility with object files (and libraries) compiled with older versions of the Microsoft C Runtime headers, we provide a library, legacy_stdio_definitions.lib, with Visual Studio 2015 and later. This library provides compatibility symbols for most of the functions and data exports that were removed from the Universal CRT. The set of compatibility symbols provided by legacy_stdio_definitions.lib is sufficient to satisfy most dependencies, including all of the dependencies in libraries included in the Windows SDK. However, there are some symbols that were removed from the Universal CRT for which it is not possible to provide compatibility symbols like this. These symbols include some functions (e.g., \__iob_func) and the data exports (e.g., \__imp\_\__iob, \__imp\_\__pctype, \__imp\_\__mb_cur_max).  
   
- 如果静态库由较旧版本的 C 运行时标头生成，建议采取下列操作（按以下顺序）：  
+ If you have a static library that was built with an older version of the C Runtime headers, we recommend the following actions (in this order):  
   
-1.  使用 Visual C++ 2017 和通用 CRT 标头重新生成静态库，以支持与通用 CRT 的链接。 这是完全受支持的选项，也是最佳选项。  
+1.  Rebuild the static library using Visual C++ 2017 and the Universal CRT headers to support linking with the Universal CRT. This is the fully supported (and thus best) option.  
   
-2.  如果无法（或不希望）重新生成静态库，可以尝试使用 legacy_stdio_definitions.lib 进行链接。 如果它满足静态库的链接时间依赖项，则需要彻底测试静态库在二进制文件中的使用情况，以确保[对通用 CRT 所做的行为更改](visual-cpp-change-history-2003-2015.md#BK_CRT)不会对其造成不利影响。  
+2.  If you cannot (or do not want to) rebuild the static library, you may try linking with legacy_stdio_definitions.lib. If it satisfies the link-time dependencies of your static library, you will want to thoroughly test the static library as it is used in the binary, to make sure that it is not adversely affected by any of the [behavioral changes that were made to the Universal CRT](visual-cpp-change-history-2003-2015.md#BK_CRT).  
   
-3.  如果 legacy_stdio_definitions.lib 不能满足静态库的依赖项，或库不适用于通用 CRT（由于上述行为更改），则建议将静态库封装到与 Microsoft C 运行时的正确版本链接的 DLL。 例如，如果使用 Visual C++ 2013 生成静态库，则也需要使用 Visual C++ 2013 和 Visual C++ 2013 库来生成此 DLL。 通过将库构建到 DLL 中，可封装实现的详细信息（此详细信息是在特定版本 Microsoft C 运行时上的它的依赖项）。 （注意：需要小心的是 DLL 接口不会泄露其使用的是哪种 C 运行时的详细信息，例如通过返回跨 DLL 边界的 FILE*，或通过返回 malloc 分配的指针并让调用方释放它。）  
+3.  If your static library’s dependencies are not satisfied by legacy_stdio_definitions.lib or if the library does not work with the Universal CRT due to the aforementioned behavioral changes, we would recommend encapsulating your static library into a DLL that you link with the correct version of the Microsoft C Runtime. For example, if the static library was built using Visual C++ 2013, you would want to build this DLL using Visual C++ 2013 and the Visual C++ 2013 libraries as well. By building the library into a DLL, you encapsulate the implementation detail that is its dependency on a particular version of the Microsoft C Runtime. (Note that you will want to be careful that the DLL interface does not leak details of which C Runtime it uses, e.g. by returning a FILE* across the DLL boundary or by returning a malloc-allocated pointer and expecting the caller to free it.)  
   
- 在单个进程中使用多个 CRT 本身不是问题（实际上，大多数进程最终将加载多个 CRT DLL；例如 Windows 操作系统组件依赖于 msvcrt.dll，而 CLR 也依赖于它自己的专用 CRT）。 当混杂不同 CRT 中的状态时，会出现问题。 例如，不应使用 msvcr110.dll!malloc 分配内存，也不应使用 msvcr120.dll!free 取消分配内存，不应尝试使用 msvcr110!fopen 打开文件，也不应尝试使用 msvcr120!fread 读取文件。 只要不混杂不同 CRT 中的状态，就能安全地在单个进程中加载多个 CRT。  
+ Use of multiple CRTs in a single process is not in and of itself problematic (indeed, most processes will end up loading multiple CRT DLLs; for example, Windows operating system components will depend on msvcrt.dll and the CLR will depend on its own private CRT). Problems arise when you jumble state from different CRTs. For example, you should not allocate memory using msvcr110.dll!malloc and attempt to deallocate that memory using msvcr120.dll!free, and you should not attempt to open a FILE using msvcr110!fopen and attempt to read from that FILE using msvcr120!fread. As long as you don’t jumble state from different CRTs, you can safely have multiple CRTs loaded in a single process.  
   
- 有关详细信息，请参阅[将代码升级到通用 CRT](upgrade-your-code-to-the-universal-crt.md)。  
+ For more information, see [Upgrade your code to the Universal CRT](upgrade-your-code-to-the-universal-crt.md).  
   
-## <a name="errors-due-to-project-settings"></a>项目设置导致的错误  
- 要开始升级进程，仅需在最新版本的 Visual Studio 中打开旧的 project/solution/workspace。 Visual Studio 将基于旧的项目设置创建新项目。 如果旧项目具有库，或包含非标准位置的硬编码路径，则当项目使用默认设置时，这些路径中的文件有可能对编译器不可见。 有关详细信息，请参阅[链接器 OutputFile 设置](porting-guide-spy-increment.md#linker_output_settings)。  
+## <a name="errors-due-to-project-settings"></a>Errors due to project settings  
+ To begin the upgrade process, simply open an older project/solution/workspace in the latest version of Visual Studio. Visual Studio will create a new project based on the old project settings. If the older project has library or include paths that are hard-coded to non-standard locations, it is possible that the files in those paths won’t be visible to the compiler when the project uses the default settings. For more information, see [Linker OutputFile setting](porting-guide-spy-increment.md#linker_output_settings).  
   
- 一般情况下，现在是恰当组织项目代码的绝佳时机，以便简化项目维护，并尽可能加快已升级代码编译。 如果已恰当组织源代码，且使用 Visual Studio 2010 或更高版本对旧项目进行编译，则可手动编辑新项目文件，以支持在旧编译器和新编译器上进行编译。 下面的示例演示了如何为 Visual Studio 2015 和 Visual Studio 2017 进行编译：  
+ In general, now is a great time to organize your project code properly in order to simplify project maintenance and help get your upgraded code compiling as quickly as possible. If your source code is already well-organized, and your older project is compiled with Visual Studio 2010 or later, you can manually edit the new project file to support compilation on both the old and new compiler. The following example shows how to compile for both Visual Studio 2015 and Visual Studio 2017:  
   
 ```  
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='14.0'">v140</PlatformToolset>  
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>   
 ```  
   
-### <a name="lnk2019-unresolved-external"></a>LNK2019：无法解析的外部符号  
- 对于无法解析的符号，可能需要修复项目设置。  
+### <a name="lnk2019-unresolved-external"></a>LNK2019: Unresolved external  
+ For unresolved symbols, you might need to fix up your project settings.  
   
--   如果源文件位于非默认位置，你是否将路径添加到了项目的包含目录？  
+-   If the source file is in a non-default location, did you add the path to the project’s include directories?  
   
--   如果在 .lib 文件中定义了外部符号，你是否在项目属性中指定了 lib 路径？正确版本的 .lib 文件是否位于此处？  
+-   If the external is defined in a .lib file, have you specified the lib path in the project properties and is the correct version of the .lib file actually located there?  
   
--   是否尝试链接到由其他版本的 Visual Studio 编译的 .lib 文件？ 如果是，请参阅前面部分中关于库和工具集依赖项的内容。  
+-   Are you attempting to link to a .lib file that was compiled with a different version of Visual Studio? If so, see the previous section on library and toolset dependencies.  
   
--   调用站点处的参数类型是否匹配现有的函数重载？ 验证函数签名和调用函数的代码中的 typedef 的基础类型是否是你需要的类型。  
+-   Do the types of the arguments at the call site actually match an existing overload of the function? Verify the underlying types for any typedefs in the function’s signature and in the code that calls the function are what you expect them to be.  
   
- 若要解决无法解析的符号错误，可以尝试使用 dumpbin.exe 来检查二进制文件中定义的符号。 请尝试使用下面的命令行来查看在库中定义的符号：  
+ To troubleshoot unresolved symbol errors, you can try using dumpbin.exe to examine the symbols defined in a binary. Try the following command line to view symbols defined in a library:  
   
 ```  
 dumpbin.exe /LINKERMEMBER somelibrary.lib  
 ```  
   
-### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）  
- （在 Visual C++ 6.0 和早期版本中，wchar_t 未作为内置类型实现，但在 wchar.h 中声明为用于 unsigned short 的 typedef。）C++ 标准要求 wchar_t 为内置类型。 使用 typedef 版本可能导致可移植性问题。 如果你从 Visual C++ 的早期版本升级并遇到编译器错误 C2664（因为代码尝试将 wchar_t 隐式转换为 unsigned short），则建议更改代码来修正错误，而不是设置 /Zc:wchar_t-。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
+### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t Is Native Type)  
+ (In Visual C++ 6.0 and earlier, wchar_t was not implemented as a built-in type, but was declared in wchar.h as a typedef for unsigned short.) The C++ standard requires that wchar_t be a built-in type. Using the typedef version can cause portability problems. If you upgrade from earlier versions of Visual C++ and encounter compiler error C2664 because the code is trying to implicitly convert a wchar_t to unsigned short, we recommend that you change the code to fix the error, instead of setting /Zc:wchar_t-. For more information, see [/Zc:wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
-### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用链接器选项 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升级。  
- 通过 /NODEFAULTLIB 链接器选项（或“忽略所有默认库”链接器属性），可使链接器不在 CRT 等默认库中自动链接。 这意味着，每个库必须作为输入单独列出。 “项目属性”的“链接器”部分中的“附加依赖项”属性中，提供了此库列表。  
+### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Upgrading with the linker options /NODEFAULTLIB, /ENTRY, and /NOENTRY  
+ The /NODEFAULTLIB linker option (or the Ignore All Default Libraries linker property) tells the linker not to automatically link in the default libraries such as the CRT. This means that each library has to be listed as input individually. This list of libraries is given in the Additional Dependencies property in the Linker section of the Project Properties.  
   
- 在升级过程中，使用此选项的项目会出现问题，因为某些默认库的名称已更改。 由于每个库都需被列在附加依赖项属性或链接器命令行中，因此需要使用当前名称来更新库列表。  
+ Projects that use this option present a problem when upgrading, because the names of some of the default libraries have changed. Because each library has to be listed in the Additional Dependencies property or on the linker command line, you need to update the list of libraries to use the current names.  
   
- 下表显示自 Studio 2015 开始名称已更改的库。 若要升级，需要将第一列中的名称替换为第二列中的名称。  其中有些库是导入库，但这应该没有什么影响。  
+ The following table shows the libraries whose names changed starting with Visual Studio 2015. To upgrade, you need to replace the names in the first column with the names in the second column.  Some of these libraries are import libraries, but that shouldn’t matter.  
   
 |||  
 |-|-|  
-|如果你使用的是：|需要将其替换为：|  
-|libcmt.lib|libucrt.lib、libvcruntime.lib|  
-|libcmtd.lib|libucrtd.lib、libvcruntimed.lib|  
-|msvcrt.lib|ucrt.lib、vcruntime.lib|  
-|msvcrtd.lib|ucrtd.lib、vcruntimed.lib|  
+|If you were using:|You need to replace it with:|  
+|libcmt.lib|libucrt.lib, libvcruntime.lib|  
+|libcmtd.lib|libucrtd.lib, libvcruntimed.lib|  
+|msvcrt.lib|ucrt.lib, vcruntime.lib|  
+|msvcrtd.lib|ucrtd.lib, vcruntimed.lib|  
   
- 使用 /ENTRY 选项或 /NOENTRY 选项也会出现此问题，这两个选项也有绕过默认库的效果。  
+ The same issue applies also if you use the /ENTRY option or the /NOENTRY option, which also have the effect of bypassing the default libraries.  
   
-## <a name="errors-due-to-improved-language-conformance"></a>改进语言符合性带来的错误  
- 多年来，Visual C++ 编译器一直不断改进针对 C++ 标准的符合性。 在 Visual C++ 早期版本中编译的代码可能无法在 Visual Studio 2017 中编译，因为编译器会正确标记先前忽略或显式允许的错误。  
+## <a name="errors-due-to-improved-language-conformance"></a>Errors due to improved language conformance  
+ The Visual C++ compiler has continuously improved its conformance to the C++ standard over the years. Code that compiled in earlier versions of Visual C++ might fail to compile in Visual Studio 2017 because the compiler correctly flags an error that it previously ignored or explicitly allowed.  
   
- 例如，Visual C++ 的早期版本引入了 /Zc:forScope 开关。 它允许不符合循环变量的行为。 现已弃用该开关，并可能在将来版本中将其删除。 强烈建议不要在升级代码时使用该开关。 有关详细信息，请参阅[已弃用 /Zc:forScope](porting-guide-spy-increment.md#deprecated_forscope)。  
+ For example, the /Zc:forScope switch was introduced early in the history of Visual C++. It permits non-conforming behavior for loop variables. That switch is now deprecated and might be removed in future versions. It is highly recommended to not use that switch when upgrading your code. For more information, see [/Zc:forScope- is deprecated](porting-guide-spy-increment.md#deprecated_forscope).  
   
- 升级时一个常见的编译器错误是将非常数参数传递到常数参数。 旧版本的 Visual C++ 并不总是将其标记为错误。 有关详细信息，请参阅[编译器的更严格转换](porting-guide-spy-increment.md#stricter_conversions)。  
+ One example of a common compiler error you might see when upgrading is when a non-const argument is passed to a const parameter. Older versions of Visual C++ did not always flag this as an error. For more information, see [The compiler's more strict conversions](porting-guide-spy-increment.md#stricter_conversions).  
   
- 有关特定符合性改进的详细信息，请参阅 [Visual C++ 更改历史记录 2003 - 2015](visual-cpp-change-history-2003-2015.md) 以及 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。  
+ For more information on specific conformance improvements, see [Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md) and [C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
   
-## <a name="errors-involving-stdinth-integral-types"></a>涉及 \<stdint.h> 整型类型的错误  
- \<stdint.h> 标头定义了 typedef 和宏，它们保证在所有平台上具有指定长度，这与内置整型类型不同。 例如 int32_t 和 int64_t。 Visual C++ 在 Visual Studio 2010 中添加了 \<stdint.h>。 编写于 2010 年之前的代码可能为这些类型提供了专用定义，这些定义可能无法总是与 \<stdint.h> 定义保持一致。  
+## <a name="errors-involving-stdinth-integral-types"></a>Errors involving \<stdint.h> integral types  
+ The \<stdint.h> header defines typedefs and macros that, unlike built-in integral types, are guaranteed to have a specified length on all platforms. Some examples are uint32_t and int64_t. Visual C++ added \<stdint.h> in Visual Studio 2010. Code that was written before 2010 might have provided private definitions for those types and those definitions might not always be consistent with the \<stdint.h> definitions.  
   
- 如果错误为 C2371 且涉及 stdint 类型，这可能意味着该类型在代码或第三方 lib 文件中的标头中定义。  升级时，应消除 \<stdint.h> 类型的任何自定义定义，但应先将自定义定义与当前标准定义进行对比，确保不会引入新问题。  
+ If the error is C2371, and a stdint type is involved, it probably means that the type is defined in a header either in your code or a third-party lib file.  When upgrading, you should eliminate any custom definitions of \<stdint.h> types, but first compare the custom definitions to the current standard definitions to ensure you are not introducing new problems.  
   
- 可按 F12 **转到定义**，查看有问题的类型的定义位置。  
+ You can press F12 **Go to Definition** to see where the type in question is defined.  
   
- 此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++”、“高级”页，并将“显示包含文件”设置为“是”。 然后重新生成项目，并在输出窗口中查看 #includes 列表。  每个标头在包含它的标头下都是缩进的。  
+ The [/showIncludes](../build/reference/showincludes-list-include-files.md) compiler option can be useful here. In the Property Pages dialog box for your project, open the **C/C++**, **Advanced** page and set **Show Includes** to **Yes**. Then rebuild your project and see the list of #includes in the output window.  Each header is indented under the header that includes it.  
   
-## <a name="errors-involving-crt-functions"></a>涉及 CRT 函数的错误  
- 多年来，针对 C 运行时进行了许多更改。 已添加函数的许多安全版本，也删除了函数的一些安全版本。 此外，如前文所述，Microsoft 的 CRT 实现在 Visual Studio 2015 中重构为新的二进制文件和相关的 .lib 文件。  
+## <a name="errors-involving-crt-functions"></a>Errors involving CRT functions  
+ Many changes have been made to the C runtime over the years. Many secure versions of functions have been added, and some have been removed. Also, as described earlier in this article, Microsoft’s implementation of the CRT was refactored in Visual Studio 2015 into new binaries and associated .lib files.  
   
- 如果错误涉及 CRT 函数，请搜索 [Visual C++ 更改历史记录（2003 - 2015）](visual-cpp-change-history-2003-2015.md)或 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)，查阅这些主题中是否包含附加信息。 如果错误为 LNK2019，无法解析的外部对象，请确保未删除函数。 否则，若确定函数仍存在，且调用代码正确，请检查项目是否使用了 /NODEFAULTLIB。 如果是这样，则需更新库列表，以便项目使用新通用 (UCRT) 库。 有关详细信息，请参阅有关库和依赖项的上述部分。  
+ If an error involves a CRT function, search the [Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md) or [C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md) to see if those topics contain any additional information. If the error is LNK2019, unresolved external, make sure the function has not been removed. Otherwise, if you are sure that the function still exists, and the calling code is correct, check to see whether your project uses /NODEFAULTLIB. If so you need to update the list of libraries so that the project uses the new universal (UCRT) libraries. See the section above on Library and dependencies for more information.  
   
- 如果错误涉及 printf 或 scanf，请确保未在不包含 stdio.h 的情况下私下定义这两种函数中的任意一种。 如果是这样，请删除私有定义，或链接到 legacy_stdio_definitions.lib（项目 | 属性 | 链接器 | 链接器输入）。 若要使用 Windows SDk 8.1 或更早的版本进行链接，请添加 legacy_stdio_definitions.lib。  
+ If the error involves printf or scanf, make sure that you are not privately defining either function without including stdio.h. If so, either remove the private definitions or link to legacy_stdio_definitions.lib (Project &#124; Properties &#124; Linker &#124; Linker Input). If you are linking with Windows SDK 8.1 or earlier, then add legacy_stdio_definitions.lib.  
   
- 如果错误涉及格式字符串参数，这可能是由于编译器在强制执行标准方面更严格。 有关详细信息，请参阅更改历史记录。 请密切注意此处的任何错误，因为它们可能表示存在安全风险。  
+ If the error involves format string arguments, this is probably because the compiler is stricter about enforcing the standard. See the change history for more information. Please pay close attention to any errors here because they can potentially represent a security risk.  
   
-## <a name="errors-due-to-changes-in-the-c-standard"></a>C++ 标准中的更改导致的错误  
- C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动语义、新关键字以及其他语言和标准库功能可能导致编译器错误和不同的运行时行为。  
+## <a name="errors-due-to-changes-in-the-c-standard"></a>Errors due to changes in the C++ standard  
+ The C++ standard itself has evolved in ways that are not always backward compatible. The introduction in C++11 of move semantics, new keywords, and other language and standard library features can potentially cause compiler errors and even different runtime behavior.  
   
- 例如，旧 C++ 程序可能包含 iostream.h 标头。 此标头已在 C++ 早期版本中弃用，且最终从 Visual C++ 中彻底删除。 在此情况下，需使用 \<iostream>，并重写代码。 有关详细信息，请参阅[更新旧的 iostreams 代码](porting-guide-spy-increment.md#updating_iostreams_code)。  
+ For example, an old C++ program might include the iostream.h header. This header was deprecated early in the history of C++ and was eventually removed completely from Visual C++. In this case, you will need to use \<iostream> and rewrite your code. For more information, see [Updating old iostreams code](porting-guide-spy-increment.md#updating_iostreams_code).  
   
-### <a name="c4838-narrowing-conversion-warning"></a>C4838：收缩转换警告  
- 目前根据 C++ 标准，将无符号整型值转换为带符号整型值视为收缩转换。 在 Visual Studio 2015 之前，Visual C++ 编译器不会发出此警告。 应检查每个事件，以确保收缩不会影响代码的正确性。  
+### <a name="c4838-narrowing-conversion-warning"></a>C4838: narrowing conversion warning  
+ The C++ standard now specifies that conversions from unsigned to signed integral values are considered as narrowing conversions. The Visual C++ compiler did not raise this warning prior to Visual Studio 2015. You should inspect each occurrence to make sure the narrowing does not impact the correctness of your code.  
   
-## <a name="warnings-to-use-secure-crt-functions"></a>使用安全 CRT 函数的警告  
- 多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 要为解决方案中的所有项目禁用警告，请打开“视图 | 属性管理器”，选择要禁用警告的所有项目，然后右键单击所选项，并选择“属性 | C/C++ | 高级 | 禁用特定警告”。 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。 （请勿包括“C”前缀。）有关详细信息，请参阅[移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。  
+## <a name="warnings-to-use-secure-crt-functions"></a>Warnings to use secure CRT functions  
+ Over the years, secure versions of C runtime functions have been introduced. Although the old, non-secure versions are still available, it is recommended to change your code to use the secure versions. The compiler will issue a warning for usage of the non-secure versions. You can choose to disable or ignore these warnings. To disable the warning for all projects in your solution, open **View &#124; Property Manager**, select all projects for which you want to disable the warning, then right-click on the selected items and choose **Properties &#124; C/C++ &#124; Advanced &#124; Disable Specific Warnings**. Click the drop-down arrow and then click on Edit. Enter 4996 into the text box. (Don't include the 'C' prefix.) For more information, see [Porting to use the Secure CRT](porting-guide-spy-increment.md#porting_to_secure_crt).  
   
-## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>对 Windows API 或已过时 SDK 进行的更改所导致的错误  
- 多年来，已添加若干 Windows API 和数据类型，有时还会对其进行更改或删除。 此外，不属于核心操作系统的其他 SDK 也是添了又删。 因此，较旧的程序可能包含对已不存在的 API 的调用。 它们还可能包含对已不受支持的其它 Microsoft SDK 中 API 的调用。  如果错误涉及 Windows API 或较旧 Microsoft SDK 中的 API，则 API 可能已删除且/或已被更新、更安全的函数取代。  
+## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>Errors due to changes in Windows APIs or obsolete SDKs  
+ Over the years, Windows APIs and data types have been added, and sometimes changed or removed. Also, other SDKs that did not belong to the core operating system have come and gone. Older programs may therefore contain calls to APIs that no longer exist. They may also contain calls to APIs in other Microsoft SDKs that are no longer supported.  If you see an error involving a Windows API or an API from an older Microsoft SDK, it is possible that an API has been removed and/or superseded by a newer, more secure function.  
   
- 若要深入了解当前 API 设置以及特定 Windows API 支持的操作系统最低版本，请参阅 [Windows API Index](https://msdn.microsoft.com/en-us/library/ff818516\(v=vs.85\).aspx)（Windows API 索引），并导航至出现问题的 API。  
+ For more information about the current API set and the minimum supported operating systems for a specific Windows API, see [Windows API Index](https://msdn.microsoft.com/en-us/library/ff818516\(v=vs.85\).aspx) and navigate to the API in question.  
   
-### <a name="windows-version"></a>Windows 版本  
- 在升级直接或间接使用 Windows API 的程序时，需要决定要支持的 Windows 最低版本。 在大多数情况下，Windows 7 是一个不错的选择。 有关详细信息，请参阅[头文件问题](porting-guide-spy-increment.md#header_file_problems)。 WINVER 宏定义设计用于运行程序的 Windows 旧版本。 若 MFC 程序将 WINVER 设置为 0x0501 (Windows XP)，用户将收到警告，因为虽然编译器本身具有 XP 模式，但 MFC 已不再支持 XP。  
+### <a name="windows-version"></a>Windows version  
+ When upgrading a program that uses the Windows API either directly or indirectly, you will need to decide the minimum Windows version to support. In most cases Windows 7 is a good choice. For more information see [Header file problems](porting-guide-spy-increment.md#header_file_problems). The WINVER macro defines the oldest version of Windows that your program is designed to run on. If your MFC program sets WINVER to 0x0501 (Windows XP) you will get a warning because MFC no longer supports XP, even though the compiler itself has an XP mode.  
   
- 有关详细信息，请参阅[更新目标 Windows 版本](porting-guide-spy-increment.md#updating_winver)和[更多过时的头文件](porting-guide-spy-increment.md#outdated_header_files)。  
+ For more information, see [Updating the Target Windows Version](porting-guide-spy-increment.md#updating_winver) and [More outdated header files](porting-guide-spy-increment.md#outdated_header_files).  
   
 ## <a name="atl--mfc"></a>ATL / MFC  
- ATL 和 MFC 是相对稳定的 API，但偶尔对其进行更改。 有关详细信息，请参阅 [Visual C++ 更改历史记录 2003 - 2015](visual-cpp-change-history-2003-2015.md)、[Visual Studio 2017 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)以及[Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)。  
+ ATL and MFC are relatively stable APIs but changes are made occasionally. See the [Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md) for more information and [What's New for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) and [C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
   
-### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>已在 MSVCRTD.lib 中定义 LNK 2005 _DllMain@12  
- MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间的顺序问题。 需要先链接 MFC，使其提供 new 和 delete 运算符。 要修复此错误，请使用 /NODEFAULTLIB 开关来忽略以下默认库：MSVCRTD.lib 和 mfcs140d.lib。 然后将这些相同的 lib 添加为附加依赖项。  
+### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 already defined in MSVCRTD.lib  
+ This error can occur in MFC applications. It indicates an ordering issue between the CRT library and the MFC library. MFC needs to be linked first so that it provides new and delete operators. To fix the error, use the /NODEFAULTLIB switch to Ignore these default libraries: MSVCRTD.lib and mfcs140d.lib. Then add these same libs as additional dependencies.  
   
-## <a name="32-vs-64-bit"></a>32 位和 64 位  
- 如果原始代码针对 32 位系统编译，除了新建 32 位应用外，还可以选择创建 64 位版本。 一般情况下，应首先在 32 位模式下编译程序，然后再尝试使用 64 位模式。 针对 64 位进行编译是直截了当的方法，但在某些情况下，这可能暴露出 32 位版本中隐藏的一些 Bug。  
+## <a name="32-vs-64-bit"></a>32 vs 64 bit  
+ If your original code is compiled for 32-bit systems, you have the option of creating a 64-bit version instead of or in addition to a new 32-bit app. In general, you should get your program compiling in 32-bit mode first, and then attempt 64-bit. Compiling for 64-bit is straightforward, but in some cases it can reveal bugs that were hidden by 32-bit builds.  
   
- 此外，还应注意可能的编译时和运行时问题，这些问题与 printf 和 scanf 函数中的指针大小、时间和大小值以及格式说明符相关。 有关详细信息，请参阅[配置 64 位的程序 (Visual C++)](../build/configuring-programs-for-64-bit-visual-cpp.md) 和 [Visual C++ 64 位迁移的常见问题](../build/common-visual-cpp-64-bit-migration-issues.md)。 有关迁移的其他提示，请参阅[适用于 64 位 Windows 的编程指南](https://msdn.microsoft.com/library/windows/desktop/bb427430\(v=vs.85\).aspx)。  
+ Also, you should be aware of possible compile-time and runtime issues relating to pointer size, time and size values, and format specifiers in printf and scanf functions. For more information, see [Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md) and [Common Visual C++ 64-bit Migration Issues](../build/common-visual-cpp-64-bit-migration-issues.md). For additional migration tips, see [Programming Guide for 64-bit Windows](https://msdn.microsoft.com/library/windows/desktop/bb427430\(v=vs.85\).aspx).  
   
-## <a name="unicode-vs-mbcsascii"></a>Unicode 和 MBCS/ASCII  
- 在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果你认为考虑到开发成本，不值得转换至 Unicode，则可以选择禁用或忽略此警告。 要为解决方案中的所有项目禁用此警告，请打开“视图 | 属性管理器”，选择要禁用警告的所有项目，然后右键单击所选项，并选择“属性 | C/C++ | 高级 | 禁用特定警告”。 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。 （请勿包括“C”前缀。）  
+## <a name="unicode-vs-mbcsascii"></a>Unicode vs MBCS/ASCII  
+ Before Unicode was standardized, many programs used the Multibyte Character Set (MBCS) to represent characters that were not included in the ASCII character set. In older MFC projects, MBCS was the default setting, and when you upgrade such a program, you will see warnings that advise to use Unicode instead. You may choose to disable or ignore the warning if you decide that converting to Unicode is not worth the development cost. To disable it for all projects in your solution, open **View &#124; Property Manager**, select all projects for which you want to disable the warning, then right-click on the selected items and choose **Properties &#124; C/C++ &#124; Advanced &#124; Disable Specific Warnings**. Click the drop-down arrow and then click on Edit. Enter 4996 into the text box. (Don't include the 'C' prefix.)  
   
- 有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 和 Unicode 的常规信息，请参阅 [Visual C++ 中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)，以及[国际化](../c-runtime-library/internationalization.md)。  
+ For more information, see [Porting from MBCS to Unicode](porting-guide-spy-increment.md#porting_to_unicode). For general information about MBCS vs. Unicode, see [Text and Strings in Visual C++](../text/text-and-strings-in-visual-cpp.md) and [Internationalization](../c-runtime-library/internationalization.md) .  
   
-## <a name="see-also"></a>另请参阅  
- [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md) [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)
+## <a name="see-also"></a>See Also  
+ [Upgrading Projects from Earlier Versions of Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md) [C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md)
 
