@@ -1,7 +1,7 @@
 ---
-title: "修改 WINVER 和 _WIN32_WINNT | Microsoft Docs"
+title: Modifying WINVER and _WIN32_WINNT | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/04/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,27 +33,29 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 73c02454c535c030846c5a3dfca74818182baafb
+ms.translationtype: HT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 435b888fdc4a3b69321fd65097c0a232897f83ed
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="modifying-winver-and-win32winnt"></a>修改 WINVER 和 _WIN32_WINNT
-Visual C++ 不再支持面向 Windows 95、Windows 98、Windows ME、Windows NT 或 Windows 2000。 如果你的 **WINVER** 或 **_WIN32_WINNT** 宏分配给了这些 Windows 版本中的一个，则必须修改宏。 升级使用早期版本的 Visual C++ 创建的项目时，你可能会看到与 **WINVER** 或 **_WIN32_WINNT** 宏相关的编译错误（如果这些宏分配给了不再受支持的 Windows 版本）。  
+# <a name="modifying-winver-and-win32winnt"></a>Modifying WINVER and _WIN32_WINNT
+
+Visual C++ no longer supports targeting Windows 95, Windows 98, Windows ME, Windows NT or Windows 2000. If your **WINVER** or **_WIN32_WINNT** macros are assigned to one of these versions of Windows, you must modify the macros. When you upgrade a project that was created by using an earlier version of Visual C++, you may see compilation errors related to the **WINVER** or **_WIN32_WINNT** macros if they are assigned to a version of Windows that is no longer supported.  
   
-## <a name="remarks"></a>备注  
- 若要修改这些宏，请在头文件（例如在创建面向 Windows 的项目时包含的 targetver.h）中添加以下行。  
+## <a name="remarks"></a>Remarks  
+
+To modify the macros, in a header file (for example, targetver.h which is included when you create a project that targets Windows), add the following lines.  
   
-```  
+```C  
 #define WINVER 0x0A00  
 #define _WIN32_WINNT 0x0A00  
 ```  
   
- 这面向 Windows 10 操作系统。 在 Windows 头文件 SDKDDKVer.h（它还定义每个 Windows 版本的宏）中列出了这些值。 应添加 #define 语句，然后才能包括 SDKDDKVer.h。 下面是 Windows 10 版 SDKDDKVer.h（它对每个版本的 Windows 的值进行编码）中的行：  
+This targets the Windows 10 operating system. These values are listed in the Windows header file SDKDDKVer.h, which also defines macros for each Windows version. You should add the #define statement before including SDKDDKVer.h. Here are the lines from the Windows 10 version of SDKDDKVer.h that encode the values for each version of Windows:  
   
-```  
+```C  
 //  
 // _WIN32_WINNT version constants  
 //  
@@ -72,15 +74,16 @@ Visual C++ 不再支持面向 Windows 95、Windows 98、Windows ME、Windows NT 
 #define _WIN32_WINNT_WIN10                  0x0A00 // Windows 10  
 ```  
   
- 如果你查看的 SDKDDKVer.h 的一个副本中没有列出以上所有 Windows 版本，则很可能是由于你正在使用 Windows SDK 的较旧版本。 默认情况下，Visual Studio 2017 中的 Win32 项目使用 Windows 10 SDK。   
+If you don't see all of these versions of Windows listed in a copy of SDKDDKVer.h that you're looking at, you probably are using an older version of the Windows SDK. By default, Win32 projects in Visual Studio 2017 use the Windows 10 SDK.   
   
 > [!NOTE]
->  如果将内部 MFC 头文件包含到应用程序中，则无法保证这些值有效。  
+>  Values are not guaranteed to work if you include internal MFC headers in your application.  
   
- 你还可以使用 **/D** 编译器选项定义此宏。 有关详细信息，请参阅 [/D（预处理器定义）](../build/reference/d-preprocessor-definitions.md)。  
+You can also define this macro by using the **/D** compiler option. For more information, see [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
- 若要深入了解这些宏的含义，请参阅 [使用 Windows 头文件](http://msdn.microsoft.com/library/windows/desktop/aa383745)。  
+For more information about the meanings of these macros, see [Using the Windows Headers](https://msdn.microsoft.com/library/windows/desktop/aa383745).  
   
-## <a name="see-also"></a>另请参阅  
- [先前产品更改](http://msdn.microsoft.com/en-us/91fa1713-0778-4b6b-82f7-0fe0a23ab1db)
+## <a name="see-also"></a>See Also  
+
+[Visual C++ change history](..\porting\visual-cpp-change-history-2003-2015.md)
 

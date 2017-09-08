@@ -1,7 +1,7 @@
 ---
-title: "链接器工具错误 LNK1120 |Microsoft 文档"
+title: Linker Tools Error LNK1120 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,17 +34,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 1809ed4e5950165d6a187fd3c62871c25124663f
+ms.translationtype: MT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: f183981b9c3bccdf2629e8f5f3bd2c1b07b52b6a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="linker-tools-error-lnk1120"></a>链接器工具错误 LNK1120
-*数*未解析的外部对象  
+# <a name="linker-tools-error-lnk1120"></a>Linker Tools Error LNK1120
+*number* unresolved externals  
   
-错误 LNK1120 报告计数 (*数*) 的未解析的外部符号错误的此链接操作。 大多数未解析的单独通过报告的外部符号错误[链接器工具错误 LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)和[链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)，其位于之前此错误消息，一次每个未解析的外部符号错误。  
+Error LNK1120 reports the count (*number*) of unresolved external symbol errors for this link operation. Most unresolved external symbol errors are reported individually by [Linker Tools Error LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) and  [Linker Tools Error LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), which precede this error message, once for each unresolved external symbol error.  
   
-若要修复此错误，更正所有其他的未解析的外部错误或其他它前面的生成输出中的链接器错误。 不再有任何未解析的外部错误时，将不会报告此错误。  
+To fix this error, correct all of the other unresolved external errors or other linker errors that precede it in the build output. This error is not reported when no unresolved external errors remain.  
 
