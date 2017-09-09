@@ -1,5 +1,5 @@
 ---
-title: "remove_pointer 类 |Microsoft Docs"
+title: remove_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_pointer
 - type_traits/std::remove_pointer
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: b9e00cba8b892c9834f56846f698ee59aca523cf
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9efa6c69388dd00d9ac3eae5b7f180b6c2284bb6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removepointer-class"></a>remove_pointer 类
-从指向类型的指针设定类型。  
+# <a name="removepointer-class"></a>remove_pointer Class
+Makes type from pointer to type.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_pointer_t = typename remove_pointer<T>::type;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要修改的类型。  
+ The type to modify.  
   
-## <a name="remarks"></a>备注  
- `remove_pointer<T>` 的实例保留修改后的类型，当 `T1` 为 `T`、`T1*`、`T1* const` 或 `T1* volatile` 形式时，此类型为 `T1* const volatile`，否则为 `T`。  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_pointer<T>` holds a modified-type that is `T1` when `T` is of the form `T1*`, `T1* const`, `T1* volatile`, or `T1* const volatile`, otherwise `T`.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
 remove_pointer_t<int *> == int  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_pointer 类](../standard-library/add-pointer-class.md)
+ [add_pointer Class](../standard-library/add-pointer-class.md)
 

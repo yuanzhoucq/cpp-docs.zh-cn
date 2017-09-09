@@ -1,17 +1,15 @@
 ---
-title: "hash_set 类 | Microsoft Docs"
+title: hash_set Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - hash_set/stdext::hash_set
-- stdext::hash_set
-- hash_set
 - hash_set/stdext::hash_set::allocator_type
 - hash_set/stdext::hash_set::const_iterator
 - hash_set/stdext::hash_set::const_pointer
@@ -55,7 +53,47 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- hash_set class
+- stdext::hash_set
+- stdext::hash_set::allocator_type
+- stdext::hash_set::const_iterator
+- stdext::hash_set::const_pointer
+- stdext::hash_set::const_reference
+- stdext::hash_set::const_reverse_iterator
+- stdext::hash_set::difference_type
+- stdext::hash_set::iterator
+- stdext::hash_set::key_compare
+- stdext::hash_set::key_type
+- stdext::hash_set::pointer
+- stdext::hash_set::reference
+- stdext::hash_set::reverse_iterator
+- stdext::hash_set::size_type
+- stdext::hash_set::value_compare
+- stdext::hash_set::value_type
+- stdext::hash_set::begin
+- stdext::hash_set::cbegin
+- stdext::hash_set::cend
+- stdext::hash_set::clear
+- stdext::hash_set::count
+- stdext::hash_set::crbegin
+- stdext::hash_set::crend
+- stdext::hash_set::emplace
+- stdext::hash_set::emplace_hint
+- stdext::hash_set::empty
+- stdext::hash_set::end
+- stdext::hash_set::equal_range
+- stdext::hash_set::erase
+- stdext::hash_set::find
+- stdext::hash_set::get_allocator
+- stdext::hash_set::insert
+- stdext::hash_set::key_comp
+- stdext::hash_set::lower_bound
+- stdext::hash_set::max_size
+- stdext::hash_set::rbegin
+- stdext::hash_set::rend
+- stdext::hash_set::size
+- stdext::hash_set::swap
+- stdext::hash_set::upper_bound
+- stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 caps.latest.revision: 22
 author: corob-msft
@@ -75,20 +113,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 09217c660c9ef7a0b65cae19620b7de9f78d4928
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9df2786d0deda4879e67701c345a648f47762a04
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="hashset-class"></a>hash_set 类
+# <a name="hashset-class"></a>hash_set Class
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 容器类 hash_set 是 C++ 标准库的扩展，用于存储和快速检索集合中的数据，集合中内含元素的值是唯一的且用作键值。  
+ The container class hash_set is an extension of the C++ Standard Library and is used for the storage and fast retrieval of data from a collection in which the values of the elements contained are unique and serve as the key values.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,   
@@ -97,139 +135,139 @@ template <class Key,
 class hash_set  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Key`  
- 要存储在 hash_set 中的元素数据类型。  
+ The element data type to be stored in the hash_set.  
   
  `Traits`  
- 该类型包括两个函数对象，其中一个是类比较函数，这是一个二元谓词，能够比较作为排序键的两个元素值以确定其相对顺序；另一个是哈希函数，这是一个一元谓词，用于将元素的键值映射到 **size_t** 类型的无符号整数。 此自变量是可选自变量，且默认值为 `hash_compare`*<Key,* **less***\<Key> >*。  
+ The type which includes two function objects, one of class compare that is a binary predicate able to compare two element values as sort keys to determine their relative order and a hash function that is a unary predicate mapping key values of the elements to unsigned integers of type **size_t**. This argument is optional, and the `hash_compare`*<Key,* **less***\<Key> >* is the default value.  
   
  `Allocator`  
- 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_set 的内存分配和解除分配的详细信息。 此自变量是可选自变量，且默认值为 **allocator***\<Key>。*  
+ The type that represents the stored allocator object that encapsulates details about the hash_set's allocation and deallocation of memory. This argument is optional, and the default value is **allocator***\<Key>.*  
   
-## <a name="remarks"></a>备注  
- Hash_set 是：  
+## <a name="remarks"></a>Remarks  
+ The hash_set is:  
   
--   大小可变的关联容器，支持基于关联键值高效检索元素值。 此外，它是简单的关联容器，因为它的元素值即为它的键值。  
+-   An associative container, which a variable size container that supports the efficient retrieval of element values based on an associated key value. Further, it is a simple associative container because its element values are its key values.  
   
--   可逆，因为它提供双向迭代器来访问其元素。  
+-   Reversible, because it provides a bidirectional iterator to access its elements.  
   
--   经过哈希处理，因为其元素分组到了哈希桶中，哈希桶基于应用于元素键值的哈希函数的值。  
+-   Hashed, because its elements are grouped into buckets based on the value of a hash function applied to the key values of the elements.  
   
--   唯一，每个元素必须具有唯一键。 由于 hash_set 也是简单的关联容器，因此其元素也都是唯一的。  
+-   Unique in the sense that each of its elements must have a unique key. Because hash_set is also a simple associative container, its elements are also unique.  
   
--   一个模板类，由于其提供的功能是一般功能，因此与作为元素或键包含的特定数据类型无关。 用于元素和键的数据类型作为类模板以及比较函数和分配器中的参数指定。  
+-   A template class because the functionality it provides is generic and so independent of the specific type of data contained as elements or keys. The data types to be used for elements and keys are, instead, specified as parameters in the class template along with the comparison function and allocator.  
   
- 哈希算法相比于排序的主要优点是效率更高；在排序技术中，时间与容器中元素数的对数成正比，而成功的哈希算法可在恒定的平均时间内执行插入、删除和查找操作。 不能直接更改集中元素的值。 必须先删除旧值，才能插入具有新值的元素。  
+ The main advantage of hashing over sorting is greater efficiency; a successful hashing performs insertions, deletions, and finds in constant average time as compared with a time proportional to the logarithm of the number of elements in the container for sorting techniques. The value of an element in a set may not be changed directly. Instead, you must delete old values and insert elements with new values.  
   
- 容器类型选择通常应根据应用程序所需的搜索和插入的类型。 经过哈希处理的关联容器针对查找、插入和删除操作进行了优化。 与设计良好的哈希函数一起使用时，显式支持这些操作的成员函数较为高效，执行这些操作的时间为平均恒定值，而不取决于容器中元素的数目。 精心设计的哈希函数将生成统一分布的哈希值，并将最大限度地减少冲突数量，据说当非重复键值映射到相同的哈希值时会发生冲突。 在最坏情况下，使用可能是最差的哈希运算，操作数量与序列中的元素数量成比例（线性时间）。  
+ The choice of container type should be based in general on the type of searching and inserting required by the application. Hashed associative containers are optimized for the operations of lookup, insertion and removal. The member functions that explicitly support these operations are efficient when used with a well-designed hash function, performing them in a time that is on average constant and not dependent on the number of elements in the container. A well-designed hash function produces a uniform distribution of hashed values and minimizes the number of collisions, where a collision is said to occur when distinct key values are mapped into the same hashed value. In the worst case, with the worst possible hash function, the number of operations is proportional to the number of elements in the sequence (linear time).  
   
- 当应用程序满足将值与其键关联的条件时，应选择 hash_set 作为关联容器。 Hash_set 的元素是唯一的，并用作其自己的排序键。 此类结构的模型是排序列表，如关键字排序列表，其中关键字只能出现一次。 如果允许关键字多次出现，那么相应的容器结构应该是 hash_multiset。 如果需要将值附加到唯一关键字的列表，则包含此数据的适当结构应为 hash_map。 如果键不唯一，则应选择 hash_multimap 作为容器。  
+ The hash_set should be the associative container of choice when the conditions associating the values with their keys are satisfied by the application. The elements of a hash_set are unique and serve as their own sort keys. A model for this type of structure is an ordered list of, say, words in which the words may occur only once. If multiple occurrences of the words were allowed, then a hash_multiset would be the appropriate container structure. If values need to be attached to a list of unique key words, then a hash_map would be an appropriate structure to contain this data. If instead the keys are not unique, then a hash_multimap would be the container of choice.  
   
- hash_set 通过调用类型 [value_compare](#value_compare) 存储的哈希 **Traits** 对象，对其控制的序列进行排序。 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 *hash_compare\<<Key, less*Key>> 的对象的行为相同。 具体而言，对于类型 Key 的所有值 `key`，调用 Trait( `key` ) 都会对类型 size_t 的值进行分配。  
+ The hash_set orders the sequence it controls by calling a stored hash **Traits** object of type [value_compare](#value_compare). This stored object may be accessed by calling the member function [key_comp](#key_comp). Such a function object must behave the same as an object of class *hash_compare<Key, less\<Key> >.* Specifically, for all values `key` of type Key, the call Trait( `key` ) yields a distribution of values of type size_t.  
   
- 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这会导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f*( *x*, *y*) 是包含两个参数对象（x 和 y）以及一个返回值（true 或 false）的函数对象。 如果二元谓词具有非自反性、反对称性和传递性且等效可传递，对 hash_set 进行的排序将为严格弱排序，其中两个对象 *x* 和 *y* 定义为在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。  
+ In general, the elements need be merely less than comparable to establish this order: so that, given any two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the non-equivalent elements. On a more technical note, the comparison function is a binary predicate that induces a strict weak ordering in the standard mathematical sense. A binary predicate *f*( *x*, *y*) is a function object that has two argument objects x and y and a return value of true or false. An ordering imposed on a hash_set is a strict weak ordering if the binary predicate is irreflexive, antisymmetric, and transitive and if equivalence is transitive, where two objects *x* and *y* are defined to be equivalent when both *f*( *x*, *y*) and *f*( *y*, *x*) are false. If the stronger condition of equality between keys replaces that of equivalence, then the ordering becomes total (in the sense that all the elements are ordered with respect to each other) and the keys matched will be indiscernible from each other.  
   
- 受控序列中元素的实际顺序取决于哈希函数、排序函数和存储在容器对象中的哈希表的当前大小。 无法确定哈希表的当前大小，因此通常无法预测受控序列中元素的顺序。 插入元素不会使迭代器失效，移除元素仅会使专门指向已移除元素的迭代器失效。  
+ The actual order of elements in the controlled sequence depends on the hash function, the ordering function, and the current size of the hash table stored in the container object. You cannot determine the current size of the hash table, so you cannot in general predict the order of elements in the controlled sequence. Inserting elements invalidates no iterators, and removing elements invalidates only those iterators that had specifically pointed at the removed elements.  
   
- hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#insert) 和[hash_set](#hash_set) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能需求比双向迭代器类保证的功能需求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 [ `first`, `last`)。  
+ The iterator provided by the hash_set class is a bidirectional iterator, but the class member functions [insert](#insert) and [hash_set](#hash_set) have versions that take as template parameters a weaker input iterator, whose functionality requirements are more minimal than those guaranteed by the class of bidirectional iterators. The different iterator concepts form a family related by refinements in their functionality. Each iterator concept has its own set of requirements, and the algorithms that work with them must limit their assumptions to the requirements provided by that type of iterator. It may be assumed that an input iterator may be dereferenced to refer to some object and that it may be incremented to the next iterator in the sequence. This is a minimal set of functionality, but it is enough to be able to talk meaningfully about a range of iterators [ `first`, `last`) in the context of the class member functions.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[hash_set](#hash_set)|构造一个空的或者是其他某个 `hash_set` 的全部或部分副本的 `hash_set`。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `hash_set` 类。|  
-|[const_iterator](#const_iterator)|一种类型，此类型提供可读取 `const` 中的 `hash_set` 元素的双向迭代器。|  
-|[const_pointer](#const_pointer)|一种类型，此类型提供指向 `const` 中的 `hash_set` 元素的指针。|  
-|[const_reference](#const_reference)|一种类型，此类型提供对存储在 `const` 中的 `hash_set` 元素的引用（用于读取和执行 `const` 操作）。|  
-|[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取 `const` 中的任何 `hash_set` 元素的双向迭代器。|  
-|[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `hash_set` 中迭代器指向的元素间范围内的元素数量。|  
-|[iterator](#iterator)|一种类型，它提供可读取或修改 `hash_set` 中任何元素的双向迭代器。|  
-|[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_set` 中两个元素的相对顺序。|  
-|[key_type](#key_type)|一种类型，它描述当作为排序键存储为其容量中 `hash_set` 的元素的对象。|  
-|[pointer](#pointer)|一种类型，它提供指向 `hash_set` 中的某个元素的指针。|  
-|[reference](#reference)|一种类型，此类型提供对存储在 `hash_set` 中的元素的引用。|  
-|[reverse_iterator](#reverse_iterator)|一种类型，此类型提供可读取或修改反向 `hash_set` 中的元素的双向迭代器。|  
-|[size_type](#size_type)|可表示 `hash_set` 中元素数量的无符号整数类型。|  
-|[value_compare](#value_compare)|一种类型，它提供两个函数对象：一个是类比较二元谓词，可以比较 `hash_set` 的两个元素值以确定其相对顺序，另一个是一元谓词，可对元素进行哈希处理。|  
-|[value_type](#value_type)|一种类型，它描述当作为值存储为其容量中 `hash_set` 的元素的对象。|  
+|[hash_set](#hash_set)|Constructs a `hash_set` that is empty or that is a copy of all or part of some other `hash_set`.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[begin](#begin)|返回一个迭代器，此迭代器用于发现 `hash_set` 中的第一个元素。|  
-|[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现 `hash_set` 中的第一个元素。|  
-|[cend](#cend)|返回一个常量迭代器，此迭代器用于发现 `hash_set` 中最后一个元素之后的位置。|  
-|[clear](#clear)|清除 `hash_set` 的所有元素。|  
-|[count](#count)|返回 `hash_set` 中其键与指定为参数的键匹配的元素数量。|  
-|[crbegin](#crbegin)|返回一个常量迭代器，此迭代器用于发现反向 `hash_set` 中的第一个元素。|  
-|[crend](#crend)|返回一个常量迭代器，此迭代器用于发现反向 `hash_set` 中最后一个元素之后的位置。|  
-|[emplace](#emplace)|将就地构造的元素插入到 `hash_set`。|  
-|[emplace_hint](#emplace_hint)|将就地构造的元素插入到 `hash_set`，附带位置提示。|  
-|[empty](#empty)|测试 `hash_set` 是否为空。|  
-|[end](#end)|返回一个迭代器，此迭代器用于发现 `hash_set` 中最后一个元素之后的位置。|  
-|[equal_range](#equal_range)|返回一对迭代器，这两个迭代器分别用于发现 `hash_set` 中其键大于指定键的第一个元素，以及 `hash_set` 中其键等于或大于指定键的第一个元素。|  
-|[erase](#erase)|从 `hash_set` 中的指定位置移除一个元素或元素范围，或者移除与指定键匹配的元素。|  
-|[find](#find)|返回一个迭代器，此迭代器用于发现 `hash_set` 中其键与指定键等效的元素的位置。|  
-|[get_allocator](#get_allocator)|返回用于构造 `allocator` 的 `hash_set` 对象的副本。|  
-|[insert](#insert)|将一个元素或元素范围插入到 `hash_set`。|  
-|[key_comp](#key_comp)|检索用于对 `hash_set` 中的键进行排序的比较对象副本。|  
-|[lower_bound](#lower_bound)|返回一个迭代器，此迭代器指向 `hash_set` 中其键等于或大于指定键的第一个元素。|  
-|[max_size](#max_size)|返回 `hash_set` 的最大长度。|  
-|[rbegin](#rbegin)|返回一个迭代器，此迭代器用于发现反向 `hash_set` 中的第一个元素。|  
-|[rend](#rend)|返回一个迭代器，此迭代器用于发现反向 `hash_set` 中最后一个元素之后的位置。|  
-|[size](#size)|返回 `hash_set` 中的元素数量。|  
-|[swap](#swap)|交换两个 `hash_set` 的元素。|  
-|[upper_bound](#upper_bound)|返回一个迭代器，此迭代器指向 `hash_set` 中其键等于或大于指定键的第一个元素。|  
-|[value_comp](#value_comp)|检索哈希特征对象的副本，该哈希特征对象用于对 `hash_set` 中的元素键值进行哈希处理和排序。|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for the `hash_set` object.|  
+|[const_iterator](#const_iterator)|A type that provides a bidirectional iterator that can read a `const` element in the `hash_set`.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a `hash_set`.|  
+|[const_reference](#const_reference)|A type that provides a reference to a `const` element stored in a `hash_set` for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in the `hash_set`.|  
+|[difference_type](#difference_type)|A signed integer type that can be used to represent the number of elements of a `hash_set` in a range between elements pointed to by iterators.|  
+|[iterator](#iterator)|A type that provides a bidirectional iterator that can read or modify any element in a `hash_set`.|  
+|[key_compare](#key_compare)|A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the `hash_set`.|  
+|[key_type](#key_type)|A type that describes an object stored as an element of a `hash_set` in its capacity as sort key.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in a `hash_set`.|  
+|[reference](#reference)|A type that provides a reference to an element stored in a `hash_set`.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a bidirectional iterator that can read or modify an element in a reversed `hash_set`.|  
+|[size_type](#size_type)|An unsigned integer type that can represent the number of elements in a `hash_set`.|  
+|[value_compare](#value_compare)|A type that provides two function objects, a binary predicate of class compare that can compare two element values of a `hash_set` to determine their relative order and a unary predicate that hashes the elements.|  
+|[value_type](#value_type)|A type that describes an object stored as an element of a `hash_set` in its capacity as a value.|  
   
-### <a name="operators"></a>运算符  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[hash_set::operator=](#op_eq)|将一个 `hash_set` 中的元素替换为另一 `hash_set` 副本。|  
+|[begin](#begin)|Returns an iterator that addresses the first element in the `hash_set`.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in the `hash_set`.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a `hash_set`.|  
+|[clear](#clear)|Erases all the elements of a `hash_set`.|  
+|[count](#count)|Returns the number of elements in a `hash_set` whose key matches a parameter-specified key.|  
+|[crbegin](#crbegin)|Returns a const iterator addressing the first element in a reversed `hash_set`.|  
+|[crend](#crend)|Returns a const iterator that addresses the location succeeding the last element in a reversed `hash_set`.|  
+|[emplace](#emplace)|Inserts an element constructed in place into a `hash_set`.|  
+|[emplace_hint](#emplace_hint)|Inserts an element constructed in place into a `hash_set`, with a placement hint.|  
+|[empty](#empty)|Tests if a `hash_set` is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a `hash_set`.|  
+|[equal_range](#equal_range)|Returns a pair of iterators respectively to the first element in a `hash_set` with a key that is greater than a specified key and to the first element in the `hash_set` with a key that is equal to or greater than the key.|  
+|[erase](#erase)|Removes an element or a range of elements in a `hash_set` from specified positions or removes elements that match a specified key.|  
+|[find](#find)|Returns an iterator addressing the location of an element in a `hash_set` that has a key equivalent to a specified key.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object used to construct the `hash_set`.|  
+|[insert](#insert)|Inserts an element or a range of elements into a `hash_set`.|  
+|[key_comp](#key_comp)|Retrieves a copy of the comparison object used to order keys in a `hash_set`.|  
+|[lower_bound](#lower_bound)|Returns an iterator to the first element in a `hash_set` with a key that is equal to or greater than a specified key.|  
+|[max_size](#max_size)|Returns the maximum length of the `hash_set`.|  
+|[rbegin](#rbegin)|Returns an iterator addressing the first element in a reversed `hash_set`.|  
+|[rend](#rend)|Returns an iterator that addresses the location succeeding the last element in a reversed `hash_set`.|  
+|[size](#size)|Returns the number of elements in the `hash_set`.|  
+|[swap](#swap)|Exchanges the elements of two `hash_set`s.|  
+|[upper_bound](#upper_bound)|Returns an iterator to the first element in a `hash_set` that with a key that is equal to or greater than a specified key.|  
+|[value_comp](#value_comp)|Retrieves a copy of the hash traits object used to hash and order element key values in a `hash_set`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<hash_set>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** stdext  
+|||  
+|-|-|  
+|[hash_set::operator=](#op_eq)|Replaces the elements of a `hash_set` with a copy of another `hash_set`.|  
   
-##  <a name="allocator_type"></a>hash_set::allocator_type  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<hash_set>  
+  
+ **Namespace:** stdext  
+  
+##  <a name="allocator_type"></a>  hash_set::allocator_type  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一个类型，它代表 hash_set 对象的分配器类。  
+ A type that represents the allocator class for the hash_set object.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- **allocator_type** 是模板参数 `Allocator` 的同义词。  
+### <a name="remarks"></a>Remarks  
+ **allocator_type** is a synonym for the template parameter `Allocator`.  
   
- 有关 `Allocator` 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md)主题的备注部分。  
+ For more information on `Allocator`, see the Remarks section of the [hash_set Class](../standard-library/hash-set-class.md) topic.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。  
+### <a name="example"></a>Example  
+  See example for [get_allocator](#get_allocator) for an example that uses `allocator_type`.  
   
-##  <a name="begin"></a>hash_set::begin  
+##  <a name="begin"></a>  hash_set::begin  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个迭代器，此迭代器用于发现 hash_set 中的第一个元素。  
+ Returns an iterator that addresses the first element in the hash_set.  
   
 ```  
 const_iterator begin() const;
@@ -237,15 +275,15 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个双向迭代器，发现 hash_set 中第一个元素的位置或空 hash_set 之后的位置。  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the hash_set or the location succeeding an empty hash_set.  
   
-### <a name="remarks"></a>备注  
- 如果 **begin** 的返回值赋给了 `const_iterator`，则无法修改 hash_set 对象中的元素。 如果 **begin** 的返回值赋给了 **iterator**，则可以修改 hash_set 对象中的元素。  
+### <a name="remarks"></a>Remarks  
+ If the return value of **begin** is assigned to a `const_iterator`, the elements in the hash_set object cannot be modified. If the return value of **begin** is assigned to an **iterator**, the elements in the hash_set object can be modified.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_begin.cpp  
@@ -285,26 +323,26 @@ The first element of hs1 is 1
 The first element of hs1 is now 2  
 ```  
   
-##  <a name="cbegin"></a>hash_set::cbegin  
+##  <a name="cbegin"></a>  hash_set::cbegin  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个常量迭代器，此迭代器用于发现 hash_set 中第一个元素的位置。  
+ Returns a const iterator that addresses the first element in the hash_set.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个常量双向迭代器，发现 [hash_set](../standard-library/hash-set-class.md) 中第一个元素的位置或空 `hash_set` 之后的位置。  
+### <a name="return-value"></a>Return Value  
+ A const bidirectional iterator addressing the first element in the [hash_set](../standard-library/hash-set-class.md) or the location succeeding an empty `hash_set`.  
   
-### <a name="remarks"></a>备注  
- 由于使用 `cbegin` 的返回值，因此不能修改 `hash_set` 对象中的元素。  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the `hash_set` object cannot be modified.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_cbegin.cpp  
@@ -332,26 +370,26 @@ int main( )
 The first element of hs1 is 1  
 ```  
   
-##  <a name="cend"></a>hash_set::cend  
+##  <a name="cend"></a>  hash_set::cend  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个常量迭代器，此迭代器用于发现 hash_set 中最后一个元素之后的位置。  
+ Returns a const iterator that addresses the location succeeding the last element in a hash_set.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 用于发现 [hash_set](../standard-library/hash-set-class.md) 中最后一个元素之后的位置的常量双向迭代器。 如果 `hash_set` 为空，则 `hash_set::cend == hash_set::begin`。  
+### <a name="return-value"></a>Return Value  
+ A const bidirectional iterator that addresses the location succeeding the last element in a [hash_set](../standard-library/hash-set-class.md). If the `hash_set` is empty, then `hash_set::cend == hash_set::begin`.  
   
-### <a name="remarks"></a>备注  
- `cend` 用于测试迭代器是否已到达其 `hash_set` 的末尾。 不应对 `cend` 返回的值取消引用。  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has reached the end of its `hash_set`. The value returned by `cend` should not be dereferenced.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_cend.cpp  
@@ -380,21 +418,21 @@ int main( )
 The last element of hs1 is 3  
 ```  
   
-##  <a name="clear"></a>hash_set::clear  
+##  <a name="clear"></a>  hash_set::clear  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 清除 hash_set 的所有元素。  
+ Erases all the elements of a hash_set.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_clear.cpp  
@@ -425,58 +463,58 @@ The size of the hash_set is initially 2.
 The size of the hash_set after clearing is 0.  
 ```  
   
-##  <a name="const_iterator"></a>hash_set::const_iterator  
+##  <a name="const_iterator"></a>  hash_set::const_iterator  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 提供可读取 hash_set 中 **const** 元素的双向迭代器的类型。  
+ A type that provides a bidirectional iterator that can read a **const** element in the hash_set.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- `const_iterator` 类型不能用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关使用 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。  
+### <a name="example"></a>Example  
+  See example for [begin](#begin) for an example that uses `const_iterator`.  
   
-##  <a name="const_pointer"></a>hash_set::const_pointer  
+##  <a name="const_pointer"></a>  hash_set::const_pointer  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，此类型提供指向 hash_set 中的 **const** 元素的指针。  
+ A type that provides a pointer to a **const** element in a hash_set.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>备注  
- `const_pointer` 类型不能用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- 在大多数情况下，应使用 [const_iterator](#const_iterator) 访问 **const** hash_set 对象中的元素。  
+ In most cases, a [const_iterator](#const_iterator) should be used to access the elements in a **const** hash_set object.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-##  <a name="const_reference"></a>hash_set::const_reference  
+##  <a name="const_reference"></a>  hash_set::const_reference  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，此类型提供对用于读取和执行 **const** 操作的 hash_set 中存储的 **const** 元素的引用。  
+ A type that provides a reference to a **const** element stored in a hash_set for reading and performing **const** operations.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_const_ref.cpp  
@@ -510,54 +548,54 @@ int main( )
 The first element in the hash_set is 10.  
 ```  
   
-##  <a name="const_reverse_iterator"></a>hash_set::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  hash_set::const_reverse_iterator  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 提供可读取 hash_set 中任何 **const** 元素的双向迭代器的类型。  
+ A type that provides a bidirectional iterator that can read any **const** element in the hash_set.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问 hash_set。  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is use to iterate through the hash_set in reverse.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例  
+### <a name="example"></a>Example  
+  See the example for [rend](#rend) for an example of how to declare and use the `const_reverse_iterator`  
   
-##  <a name="count"></a>hash_set::count  
+##  <a name="count"></a>  hash_set::count  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回 hash_set 中其键与参数指定的键匹配的元素数量。  
+ Returns the number of elements in a hash_set whose key matches a parameter-specified key.  
   
 ```  
 size_type count(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `key`  
- 要从 hash_set 中进行匹配的元素的键。  
+ The key of the elements to be matched from the hash_set.  
   
-### <a name="return-value"></a>返回值  
- 如果该 hash_set 包含其排序键匹配参数键的元素，则为 1。  
+### <a name="return-value"></a>Return Value  
+ 1 if the hash_set contains an element whose sort key matches the parameter key.  
   
- 如果该 hash_set 不包含具有匹配键的元素，则为 0。  
+ 0 if the hash_set does not contain an element with a matching key.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回在以下范围内的元素数目：  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements in the following range:  
   
- [ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) )。  
+ [ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) ).  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  下面的示例演示如何使用 hash_set::count 成员函数。  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_set::count member function.  
   
 ```  
 // hash_set_count.cpp  
@@ -591,30 +629,30 @@ The number of elements in hs1 with a sort key of 1 is: 1.
 The number of elements in hs1 with a sort key of 2 is: 0.  
 ```  
   
-##  <a name="crbegin"></a>hash_set::crbegin  
+##  <a name="crbegin"></a>  hash_set::crbegin  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个常量迭代器，此迭代器用于发现反向 hash_set 中的第一个元素的位置。  
+ Returns a const iterator addressing the first element in a reversed hash_set.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个常量反向双向迭代器，发现反向 [hash_set](../standard-library/hash-set-class.md) 中的第一个元素位置或发现曾是非反向 `hash_set` 中的最后一个元素位置。  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed [hash_set](../standard-library/hash-set-class.md) or addressing what had been the last element in the unreversed `hash_set`.  
   
-### <a name="remarks"></a>备注  
- `crbegin` 用于反向 hash_set，正如 [hash_set::begin](#begin) 用于 hash_set 一样。  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed hash_set just as [hash_set::begin](#begin) is used with a hash_set.  
   
- 返回值为 `crbegin` 时，无法修改 `hash_set` 对象。  
+ With the return value of `crbegin`, the `hash_set` object cannot be modified.  
   
- `crbegin` 可用于向后循环访问 `hash_set`。  
+ `crbegin` can be used to iterate through a `hash_set` backwards.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_crbegin.cpp  
@@ -643,30 +681,30 @@ int main( )
 The first element in the reversed hash_set is 30.  
 ```  
   
-##  <a name="crend"></a>hash_set::crend  
+##  <a name="crend"></a>  hash_set::crend  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个常量迭代器，此迭代器用于发现反向 hash_set 中最后一个元素之后的位置。  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed hash_set.  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个常量反向双向迭代器，用于发现反向 [hash_set](../standard-library/hash-set-class.md) 中最后一个元素之后的位置（非反向 `hash_set` 中第一个元素之前的位置）。  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [hash_set](../standard-library/hash-set-class.md) (the location that had preceded the first element in the unreversed `hash_set`).  
   
-### <a name="remarks"></a>备注  
- `crend` 用于反向 `hash_set`，正如 [hash_set::end](#end) 用于 `hash_set` 一样。  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed `hash_set` just as [hash_set::end](#end) is used with a `hash_set`.  
   
- 返回值为 `crend` 时，无法修改 `hash_set` 对象。  
+ With the return value of `crend`, the `hash_set` object cannot be modified.  
   
- `crend` 可用于测试反向迭代器是否已到达其 `hash_set` 的末尾。  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its `hash_set`.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_crend.cpp  
@@ -696,25 +734,25 @@ int main( )
 The last element in the reversed hash_set is 10.  
 ```  
   
-##  <a name="difference_type"></a>hash_set::difference_type  
+##  <a name="difference_type"></a>  hash_set::difference_type  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种有符号整数类型，此类型可用于表示 hash_set 中迭代器指向的元素间范围内的元素数量。  
+ A signed integer type that can be used to represent the number of elements of a hash_set in a range between elements pointed to by iterators.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 [ `first`, `last`) 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range [ `first`, `last`) between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- 请注意，尽管 `difference_type` 适用于满足输入迭代器（包括可逆容器支持的双向迭代器的类，如 set）要求的所有迭代器，迭代器之间的减法仅受随机访问容器（如 vector 或 deque）提供的随机访问迭代器支持。  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers such as set, subtraction between iterators is only supported by random-access iterators provided by a random access container, such as vector or deque.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_diff_type.cpp  
@@ -774,12 +812,12 @@ The number '20' occurs 1 times in hash_set hs1.
 The number of elements in the hash_set hs1 is: 2.  
 ```  
   
-##  <a name="emplace"></a>hash_set::emplace  
+##  <a name="emplace"></a>  hash_set::emplace  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 将就地构造的元素插入到 hash_set 中。  
+ Inserts an element constructed in place into a hash_set.  
   
 ```  
 template <class ValTy>  
@@ -788,20 +826,20 @@ emplace(
     ValTy&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|`val`|要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|  
+|Parameter|Description|  
+|`val`|The value of an element to be inserted into the [hash_set](../standard-library/hash-set-class.md) unless the `hash_set` already contains that element or, more generally, an element whose key is equivalently ordered.|  
   
-### <a name="return-value"></a>返回值  
- `emplace` 成员函数返回一个对，其中，如果完成插入操作，则此对的 `bool` 组件返回 `true`，如果 `hash_set` 已包含一个其值在排序中具有等效值的元素，则返回 `false`；此对的迭代器组件返回新元素的插入位置或已包含的元素的位置。  
+### <a name="return-value"></a>Return Value  
+ The `emplace` member function returns a pair whose `bool` component returns `true` if an insertion was make and `false` if the `hash_set` already contained an element whose key had an equivalent value in the ordering, and whose iterator component returns the address where a new element was inserted or where the element was already located.  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_emplace.cpp  
@@ -827,12 +865,12 @@ int main( )
 After the emplace insertion, hs3 contains a.  
 ```  
   
-##  <a name="emplace_hint"></a>hash_set::emplace_hint  
+##  <a name="emplace_hint"></a>  hash_set::emplace_hint  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 将就地构造的元素插入到 hash_set 中。  
+ Inserts an element constructed in place into a hash_set.  
   
 ```  
 template <class ValTy>  
@@ -841,23 +879,23 @@ iterator emplace(
     ValTy&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|`val`|要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|  
-|`_Where`|开始搜索正确插入点的位置。 （如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。）|  
+|Parameter|Description|  
+|`val`|The value of an element to be inserted into the [hash_set](../standard-library/hash-set-class.md) unless the `hash_set` already contains that element or, more generally, an element whose key is equivalently ordered.|  
+|`_Where`|The place to start searching for the correct point of insertion. (Insertion can occur in amortized constant time, instead of logarithmic time, if the insertion point immediately follows `_Where`.)|  
   
-### <a name="return-value"></a>返回值  
- [hash_set::emplace](#emplace) 成员函数返回一个迭代器，此迭代器指向 `hash_set` 中插入的新元素的位置或具有等效顺序的现有元素的所在位置。  
+### <a name="return-value"></a>Return Value  
+ The [hash_set::emplace](#emplace) member function returns an iterator that points to the position where the new element was inserted into the `hash_set`, or where the existing element with equivalent ordering is located.  
   
-### <a name="remarks"></a>备注  
- 如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。  
+### <a name="remarks"></a>Remarks  
+ Insertion can occur in amortized constant time, instead of logarithmic time, if the insertion point immediately follows `_Where`.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_emplace_hint.cpp  
@@ -883,24 +921,24 @@ int main( )
 After the emplace insertion, hs3 contains a.  
 ```  
   
-##  <a name="empty"></a>hash_set::empty  
+##  <a name="empty"></a>  hash_set::empty  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 测试 hash_set 是否为空。  
+ Tests if a hash_set is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果 hash_set 为空，则为 **true**；如果 hash_set 不为空，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_set is empty; **false** if the hash_set is nonempty.  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_empty.cpp  
@@ -932,12 +970,12 @@ The hash_set hs1 is not empty.
 The hash_set hs2 is empty.  
 ```  
   
-##  <a name="end"></a>hash_set::end  
+##  <a name="end"></a>  hash_set::end  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个迭代器，此迭代器用于发现 hash_set 中最后一个元素之后的位置。  
+ Returns an iterator that addresses the location succeeding the last element in a hash_set.  
   
 ```  
 const_iterator end() const;
@@ -945,15 +983,15 @@ const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>返回值  
- 用于发现 hash_set 中最后一个元素之后的位置的双向迭代器。 如果 hash_set 为空，则 hash_set::end == hash_set::begin。  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that addresses the location succeeding the last element in a hash_set. If the hash_set is empty, then hash_set::end == hash_set::begin.  
   
-### <a name="remarks"></a>备注  
- **end** 用于测试迭代器是否已到达 hash_set 的末尾。 不应对 **end** 返回的值取消引用。  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has reached the end of its hash_set. The value returned by **end** should not be dereferenced.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_end.cpp  
@@ -995,12 +1033,12 @@ The last element of hs1 is 3
 The last element of hs1 is now 2  
 ```  
   
-##  <a name="equal_range"></a>hash_set::equal_range  
+##  <a name="equal_range"></a>  hash_set::equal_range  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一对迭代器，这两个迭代器分别用于发现哈希集中其键等于指定键的第一个元素，以及哈希集中其键大于指定键的第一个元素。  
+ Returns a pair of iterators respectively to the first element in a hash set with a key that is equal to a specified key and to the first element in the hash set with a key that is greater than the key.  
   
 ```  
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -1008,19 +1046,19 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `key`  
- 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。  
+ The argument key to be compared with the sort key of an element from the hash_set being searched.  
   
-### <a name="return-value"></a>返回值  
- 一对迭代器，其中第一个是键的 [lower_bound](../standard-library/set-class.md#lower_bound)，第二个是键的 [upper_bound](../standard-library/set-class.md#upper_bound)。  
+### <a name="return-value"></a>Return Value  
+ A pair of iterators where the first is the [lower_bound](../standard-library/set-class.md#lower_bound) of the key and the second is the [upper_bound](../standard-library/set-class.md#upper_bound) of the key.  
   
- 若要访问成员函数返回的 pr 对的第一个迭代器，请使用 `pr`. **first**；若要取消引用下界迭代器，请使用 \*( `pr`. **first**)。 若要访问成员函数返回的 `pr` 对的第二个迭代器，请使用 `pr`. **second**；若要取消引用上界迭代器，请使用 \*( `pr`. **second**)。  
+ To access the first iterator of a pair pr returned by the member function, use `pr`. **first**, and to dereference the lower bound iterator, use \*( `pr`. **first**). To access the second iterator of a pair `pr` returned by the member function, use `pr`. **second**, and to dereference the upper bound iterator, use \*( `pr`. **second**).  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_equal_range.cpp  
@@ -1079,12 +1117,12 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_set hs1 doesn't have an element with a key greater than or equal to 40.  
 ```  
   
-##  <a name="erase"></a>hash_set::erase  
+##  <a name="erase"></a>  hash_set::erase  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 在 hash_set 中从指定位置删除一个元素或一定范围的元素或删除与指定键匹配的元素。  
+ Removes an element or a range of elements in a hash_set from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(iterator _Where);
@@ -1094,29 +1132,29 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Where`  
- 要从 hash_set 中删除的元素的位置。  
+ Position of the element to be removed from the hash_set.  
   
  `first`  
- 要从 hash_set 中删除的第一个元素的位置。  
+ Position of the first element removed from the hash_set.  
   
  `last`  
- 紧接要从 hash_set 中删除的最后一个元素的位置。  
+ Position just beyond the last element removed from the hash_set.  
   
  `key`  
- 要从 hash_set 中删除的元素的键。  
+ The key of the elements to be removed from the hash_set.  
   
-### <a name="return-value"></a>返回值  
- 对于前两个成员函数，则为双向迭代器，它指定已删除的任何元素之外留存的第一个元素，如果此类元素不存在，则为指向 hash_set 末尾的指针。 对于第三个成员函数，则为已从 hash_set 中删除的元素的数目。  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or a pointer to the end of the hash_set if no such element exists. For the third member function, the number of elements that have been removed from the hash_set.  
   
-### <a name="remarks"></a>备注  
- 成员函数从不引发异常。  
+### <a name="remarks"></a>Remarks  
+ The member functions never throw an exception.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  下面的示例演示 hash_set::erase 成员函数的用法。  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_set::erase member function.  
   
 ```  
 // hash_set_erase.cpp  
@@ -1197,12 +1235,12 @@ After another element (unique for hash_set) with a key
 equal to that of the 2nd element is deleted, the hash_set hs3 is: 0 3.  
 ```  
   
-##  <a name="find"></a>hash_set::find  
+##  <a name="find"></a>  hash_set::find  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个迭代器，此迭代器用于发现 hash_set 中其键与指定键等效的元素的位置。  
+ Returns an iterator addressing the location of an element in a hash_set that has a key equivalent to a specified key.  
   
 ```  
 iterator find(const Key& key);
@@ -1210,21 +1248,21 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `key`  
- 要与当前搜索的 hash_set 中元素的排序键匹配的参数键。  
+ The argument key to be matched by the sort key of an element from the hash_set being searched.  
   
-### <a name="return-value"></a>返回值  
- 一个**迭代器**或 `const_iterator`，此迭代器发现等效于指定键的元素的位置，或者如果找不到此键的匹配项，则发现 hash_set 中最后一个元素后面的位置。  
+### <a name="return-value"></a>Return Value  
+ An **iterator** or `const_iterator` that addresses the location of an element equivalent to a specified key or that addresses the location succeeding the last element in the hash_set if no match is found for the key.  
   
-### <a name="remarks"></a>备注  
- 此成员函数返回一个迭代器，此迭代器发现 hash_set 中其排序键与二元谓词下的参数键**等效**的元素的位置，该谓词基于小于比较关系进行顺序。  
+### <a name="remarks"></a>Remarks  
+ The member function returns an iterator that addresses an element in the hash_set whose sort key is **equivalent** to the argument key under a binary predicate that induces an ordering based on a less-than comparability relation.  
   
- 如果将 **find** 的返回值赋给 `const_iterator`，则无法修改 hash_set 对象。 如果 **find** 的返回值赋给 **iterator**，则可以修改 hash_set 对象。  
+ If the return value of **find** is assigned to a `const_iterator`, the hash_set object cannot be modified. If the return value of **find** is assigned to an **iterator**, the hash_set object can be modified.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_find.cpp  
@@ -1274,28 +1312,28 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="get_allocator"></a>hash_set::get_allocator  
+##  <a name="get_allocator"></a>  hash_set::get_allocator  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回用于构造 hash_set 的分配器对象的一个副本。  
+ Returns a copy of the allocator object used to construct the hash_set.  
   
 ```  
 Allocator get_allocator() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- hash_set 用于管理内存的分配器，即模板参数 `Allocator`。  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the hash_set to manage memory, which is the template parameter `Allocator`.  
   
- 有关 `Allocator` 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md)主题的备注部分。  
+ For more information on `Allocator`, see the Remarks section of the [hash_set Class](../standard-library/hash-set-class.md) topic.  
   
-### <a name="remarks"></a>备注  
- hash_set 类的分配器指定类管理存储的方式。 C++ 标准库容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。  
+### <a name="remarks"></a>Remarks  
+ Allocators for the hash_set class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_get_allocator.cpp  
@@ -1350,12 +1388,12 @@ int main( )
 }  
 ```  
   
-##  <a name="hash_set"></a>hash_set::hash_set  
+##  <a name="hash_set"></a>  hash_set::hash_set  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 构造一个空的或者是其他某个 `hash_set` 的全部或部分副本的 `hash_set`。  
+ Constructs a `hash_set` that is empty or that is a copy of all or part of some other `hash_set`.  
   
 ```  
 hash_set();
@@ -1404,42 +1442,42 @@ hash_set(
     const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`Al`|要用于此 `hash_set` 对象的存储分配器类，默认为 `Allocator`。|  
-|`Comp`|用于对 `hash_set` 中元素排序的类型 `const Traits` 的比较函数，默认为 `hash_compare`。|  
-|`Right`|所构造的 `hash_set` 要作为其副本的 `hash_set`。|  
-|`First`|要复制的范围元素中的第一个元素的位置。|  
-|`Last`|要复制的元素范围以外的第一个元素的位置。|  
+|Parameter|Description|  
+|`Al`|The storage allocator class to be used for this `hash_set` object, which defaults to `Allocator`.|  
+|`Comp`|The comparison function of type `const Traits` used to order the elements in the `hash_set`, which defaults to `hash_compare`.|  
+|`Right`|The `hash_set` of which the constructed `hash_set` is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
   
-### <a name="remarks"></a>备注  
- 所有构造函数存储一类分配器对象，此对象管理 `hash_set` 的内存存储，且稍后可通过调用 [hash_set::get_allocator](#get_allocator) 进行返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。  
+### <a name="remarks"></a>Remarks  
+ All constructors store a type of allocator object that manages memory storage for the `hash_set` and that can later be returned by calling [hash_set::get_allocator](#get_allocator). The allocator parameter is often omitted in the class declarations and preprocessing macros used to substitute alternative allocators.  
   
- 所有构造函数对其 hash_set 进行初始化。  
+ All constructors initialize their hash_sets.  
   
- 所有构造函数会存储 `Traits` 类型的函数对象，此对象用于在 `hash_set` 的键之间建立排序，且稍后通过调用 [hash_set::key_comp](#key_comp) 可进行返回。 有关 `Traits` 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md)主题。  
+ All constructors store a function object of type `Traits` that is used to establish an order among the keys of the `hash_set` and that can later be returned by calling [hash_set::key_comp](#key_comp). For more information on `Traits` see the [hash_set Class](../standard-library/hash-set-class.md) topic.  
   
- 第一个构造函数创建一个空的起始 `hash_set`，第二个构造函数指定用于建立元素顺序的比较函数 ( `Comp`) 的类型，第三个构造函数显式指定要使用的分配器类型 ( `Al`)。 关键字 `explicit` 取消了某些种类的自动类型转换。  
+ The first constructor creates an empty initial `hash_set` The second specifies the type of comparison function ( `Comp`) to be used in establishing the order of the elements, and the third explicitly specifies the allocator type ( `Al`) to be used. The key word `explicit` suppresses certain kinds of automatic type conversion.  
   
- 第四个和第五个构造函数指定 `hash_set``Right` 的副本。  
+ The fourth and fifth constructors specify a copy of the `hash_set` `Right`.  
   
- 最后，第六个、第七个和第八个构造函数对元素使用 initializer_list。  
+ The last sixth, seventh, and eighth constructors use an initializer_list for the elements.  
   
- 最后的这些构造函数复制 `hash_set` 的范围 [ `First`, `Last`)，其指定类 Traits 的比较函数类型和分配器的明确性更高。  
+ The last constructors copy the range [ `First`, `Last`) of a `hash_set` with increasing explicitness in specifying the type of comparison function of class Traits and allocator.  
   
- 第八个构造函数移动 `hash_set``Right`。  
+ The eighth constructor moves the `hash_set` `Right`.  
   
- `hash_set` 容器中元素的实际顺序取决于哈希函数、排序函数和哈希表的当前大小，且通常无法进行预测，而在设置容器中则可对其进行预测，因为在设置容器中其仅由排序函数决定。  
+ The actual order of elements in a `hash_set` container depends on the hash function, the ordering function and the current size of the hash table and cannot, in general, be predicted as it could with the set container, where it was determined by the ordering function alone.  
   
-##  <a name="insert"></a>hash_set::insert  
+##  <a name="insert"></a>  hash_set::insert  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 将一个元素或元素范围插入到 `hash_set`。  
+ Inserts an element or a range of elements into a `hash_set`.  
   
 ```  
 pair<iterator, bool> insert(
@@ -1457,76 +1495,76 @@ void insert(
     InputIterator Last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`Val`|要插入 `hash_set` 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|  
-|`Where`|开始搜索正确插入点的位置。 （如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。）|  
-|`First`|要从 `hash_set` 中复制的第一个元素的位置。|  
-|`Last`|要从 `hash_set` 中复制的最后一个元素以外的位置。|  
-|`IList`|从中复制元素的 initializer_list。|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the `hash_set` unless the `hash_set` already contains that element or, more generally, an element whose key is equivalently ordered.|  
+|`Where`|The place to start searching for the correct point of insertion. (Insertion can occur in amortized constant time, instead of logarithmic time, if the insertion point immediately follows `_Where`.)|  
+|`First`|The position of the first element to be copied from a `hash_set`.|  
+|`Last`|The position just beyond the last element to be copied from a `hash_set`.|  
+|`IList`|The initializer_list from which to copy the elements.|  
   
-### <a name="return-value"></a>返回值  
- 第一个 `insert` 成员函数会返回一个对，其中，如果完成插入操作，则此对的 `bool` 组件返回 `true`，如果 `hash_set` 已包含一个其值在排序中具有等效值的元素，则返回 `false`；此对的迭代器组件返回新元素的插入位置或已包含的元素的位置。  
+### <a name="return-value"></a>Return Value  
+ The first `insert` member function returns a pair whose `bool` component returns `true` if an insertion was make and `false` if the `hash_set` already contained an element whose key had an equivalent value in the ordering, and whose iterator component returns the address where a new element was inserted or where the element was already located.  
   
- 若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 若要访问此成员函数返回的 `pr` 对的 `bool` 组件，请使用 `pr.second`；若要对其取消引用，请使用 `*(pr.second)`。  
+ To access the iterator component of a pair `pr` returned by this member function, use `pr.first` and to dereference it, use `*(pr.first)`. To access the `bool` component of a pair `pr` returned by this member function, use `pr.second`, and to dereference it, use `*(pr.second)`.  
   
- 第二个 `insert` 成员函数将返回一个指向 `hash_set` 中新元素的插入位置的迭代器。  
+ The second `insert` member function returns an iterator that points to the position where the new element was inserted into the `hash_set`.  
   
-### <a name="remarks"></a>备注  
- 第三个成员函数在 initializer_list 中插入元素。  
+### <a name="remarks"></a>Remarks  
+ The third member function inserts the elements in an initializer_list.  
   
- 第三个成员函数将元素值序列插入到 `hash_set`，它对应于迭代器在指定 `hash_set` 的范围 [ `First`, `Last`) 中所处理的每一个元素。  
+ The third member function inserts the sequence of element values into a `hash_set` corresponding to each element addressed by an iterator of in the range [ `First`, `Last`) of a specified `hash_set`.  
   
-##  <a name="iterator"></a>hash_set::iterator  
+##  <a name="iterator"></a>  hash_set::iterator  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，此类型提供可读取或修改 hash_set 中的任何元素的双向迭代器。  
+ A type that provides a bidirectional iterator that can read or modify any element in a hash_set.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- **iterator** 类型可用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type **iterator** can be used to modify the value of an element.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 **iterator** 的示例，请参阅 [begin](#begin) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example of how to declare and use **iterator**.  
   
-##  <a name="key_comp"></a>hash_set::key_comp  
+##  <a name="key_comp"></a>  hash_set::key_comp  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 检索哈希特征对象的副本，该哈希特征对象用于对 hash_set 中的元素键值进行哈希处理和排序。  
+ Retrieves a copy of the hash traits object used to hash and order element key values in a hash_set.  
   
 ```  
 key_compare key_comp() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回 hash_set 用来对其元素进行排序的函数对象，即模板参数 `Traits`。  
+### <a name="return-value"></a>Return Value  
+ Returns the function object that a hash_set uses to order its elements, which is the template parameter `Traits`.  
   
- 有关 `Traits` 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md)主题。  
+ For more information on `Traits` see the [hash_set Class](../standard-library/hash-set-class.md) topic.  
   
-### <a name="remarks"></a>备注  
- 存储对象用于定义以下成员函数：  
+### <a name="remarks"></a>Remarks  
+ The stored object defines the member function:  
   
  **bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);  
   
- 如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。  
+ which returns **true** if `_xVal` precedes and is not equal to `_yVal` in the sort order.  
   
- 请注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 皆是模板参数 **Traits** 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。  
+ Note that both [key_compare](#key_compare) and [value_compare](#value_compare) are synonyms for the template parameter **Traits**. Both types are provided for the hash_set and hash_multiset classes, where they are identical, for compatibility with the hash_map and hash_multimap classes, where they are distinct.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_key_comp.cpp  
@@ -1575,58 +1613,58 @@ int main( )
 }  
 ```  
   
-##  <a name="key_compare"></a>hash_set::key_compare  
+##  <a name="key_compare"></a>  hash_set::key_compare  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种提供函数对象的类型，该函数对象可比较两个排序键以确定 hash_set 中两个元素的相对顺序。  
+ A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the hash_set.  
   
 ```  
 typedef Traits key_compare;  
 ```  
   
-### <a name="remarks"></a>备注  
- `key_compare` 是模板参数 `Traits` 的同义词。  
+### <a name="remarks"></a>Remarks  
+ `key_compare` is a synonym for the template parameter `Traits`.  
   
- 有关 `Traits` 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md)主题。  
+ For more information on `Traits` see the [hash_set Class](../standard-library/hash-set-class.md) topic.  
   
- 请注意，`key_compare` 和 [value_compare](#value_compare) 皆是模板参数 **Traits** 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。  
+ Note that both `key_compare` and [value_compare](#value_compare) are synonyms for the template parameter **Traits**. Both types are provided for the set and multiset classes, where they are identical, for compatibility with the map and multimap classes, where they are distinct.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [key_comp](#key_comp) for an example of how to declare and use `key_compare`.  
   
-##  <a name="key_type"></a>hash_set::key_type  
+##  <a name="key_type"></a>  hash_set::key_type  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，此类型将在其容量中存储为 hash_set 元素的对象描述为排序键。  
+ A type that describes an object stored as an element of a hash_set in its capacity as sort key.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- **key_type** 类型是模板参数 `Key` 的同义词。  
+### <a name="remarks"></a>Remarks  
+ **key_type** is a synonym for the template parameter `Key`.  
   
- 有关 `Key` 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md)主题的备注部分。  
+ For more information on `Key`, see the Remarks section of the [hash_set Class](../standard-library/hash-set-class.md) topic.  
   
- 请注意，`key_type` 和 [value_type](#value_type) 皆是模板参数 **Key** 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。  
+ Note that both `key_type` and [value_type](#value_type) are synonyms for the template parameter **Key**. Both types are provided for the hash_set and hash_multiset classes, where they are identical, for compatibility with the hash_map and hash_multimap classes, where they are distinct.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [value_type](#value_type) for an example of how to declare and use `key_type`.  
   
-##  <a name="lower_bound"></a>hash_set::lower_bound  
+##  <a name="lower_bound"></a>  hash_set::lower_bound  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个迭代器，此迭代器指向 hash_set 中其键等于或大于指定键的第一个元素。  
+ Returns an iterator to the first element in a hash_set with a key that is equal to or greater than a specified key.  
   
 ```  
 const_iterator lower_bound(const Key& key) const;
@@ -1634,17 +1672,17 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `key`  
- 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。  
+ The argument key to be compared with the sort key of an element from the hash_set being searched.  
   
-### <a name="return-value"></a>返回值  
- 一个 **iterator** 或 `const_iterator`，其会发现 hash_set 中其键等于或大于参数键的元素的位置，或如果未找到键的匹配项，则发现 hash_set 中最后一个元素之后的位置。  
+### <a name="return-value"></a>Return Value  
+ An **iterator** or `const_iterator` that addresses the location of an element in a hash_set that with a key that is equal to or greater than the argument key or that addresses the location succeeding the last element in the hash_set if no match is found for the key.  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_lower_bound.cpp  
@@ -1694,24 +1732,24 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="max_size"></a>hash_set::max_size  
+##  <a name="max_size"></a>  hash_set::max_size  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回 hash_set 的最大长度。  
+ Returns the maximum length of the hash_set.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- hash_set 的最大可取长度。  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the hash_set.  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_max_size.cpp  
@@ -1732,12 +1770,12 @@ int main( )
 }  
 ```  
   
-##  <a name="op_eq"></a>hash_set::operator=  
+##  <a name="op_eq"></a>  hash_set::operator=  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 将 hash_set 的元素替换为另一个 hash_set 的副本。  
+ Replaces the elements of the hash_set with a copy of another hash_set.  
   
 ```  
 hash_set& operator=(const hash_set& right);
@@ -1745,17 +1783,17 @@ hash_set& operator=(const hash_set& right);
 hash_set& operator=(hash_set&& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|`right`|要复制到 `hash_set` 中的 [hash_set](../standard-library/hash-set-class.md)。|  
+|Parameter|Description|  
+|`right`|The [hash_set](../standard-library/hash-set-class.md) being copied into the `hash_set`.|  
   
-### <a name="remarks"></a>备注  
- 清除 `hash_set` 中的任何现有元素后，`operator=` 会将 `right` 的内容复制或移动到 `hash_set`。  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `hash_set`, `operator=` either copies or moves the contents of `right` into the `hash_set`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_operator_as.cpp  
@@ -1793,30 +1831,30 @@ int main( )
 }  
 ```  
   
-##  <a name="pointer"></a>hash_set::pointer  
+##  <a name="pointer"></a>  hash_set::pointer  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，此类型提供指向 hash_set 中元素的指针。  
+ A type that provides a pointer to an element in a hash_set.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>备注  
- **pointer** 类型可用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- 在大多数情况下，应使用 [iterator](#iterator) 访问 hash_set 对象中的元素。  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a hash_set object.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-##  <a name="rbegin"></a>hash_set::rbegin  
+##  <a name="rbegin"></a>  hash_set::rbegin  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个迭代器，此迭代器用于发现反向 hash_set 中的第一个元素位置。  
+ Returns an iterator addressing the first element in a reversed hash_set.  
   
 ```  
 const_reverse_iterator rbegin() const;
@@ -1824,19 +1862,19 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个反向双向迭代器，用于发现反向 hash_set 中的第一个元素或发现曾是非反向 hash_set 中的最后一个元素位置。  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed hash_set or addressing what had been the last element in the unreversed hash_set.  
   
-### <a name="remarks"></a>备注  
- `rbegin` 用于反向 hash_set，正如 [begin](#begin) 用于 hash_set 一样。  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed hash_set just as [begin](#begin) is used with a hash_set.  
   
- 如果将 `rbegin` 的返回值赋给 `const_reverse_iterator`，则无法修改 hash_set 对象。 如果将 `rbegin` 的返回值赋给 `reverse_iterator`，则可修改 hash_set 对象。  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, then the hash_set object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, then the hash_set object can be modified.  
   
- `rbegin` 可用于向后循环访问 hash_set。  
+ `rbegin` can be used to iterate through a hash_set backwards.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_rbegin.cpp  
@@ -1894,21 +1932,21 @@ The reversed hash_set is: 30 20 10
 After the erasure, the first element in the reversed hash_set is 20.  
 ```  
   
-##  <a name="reference"></a>hash_set::reference  
+##  <a name="reference"></a>  hash_set::reference  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，此类型提供对存储在 hash_set 中的元素的引用。  
+ A type that provides a reference to an element stored in a hash_set.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reference reference;  
 ```  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_reference.cpp  
@@ -1945,12 +1983,12 @@ The first element in the hash_set is 10.
 The first element in the hash_set is now 15.  
 ```  
   
-##  <a name="rend"></a>hash_set::rend  
+##  <a name="rend"></a>  hash_set::rend  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个迭代器，此迭代器用于发现反向 hash_set 中最后一个元素之后的位置。  
+ Returns an iterator that addresses the location succeeding the last element in a reversed hash_set.  
   
 ```  
 const_reverse_iterator rend() const;
@@ -1958,19 +1996,19 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个反向双向迭代器，用于发现反向 hash_set 中最后一个元素之后的位置（非反向 hash_set 中第一个元素之前的位置）。  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed hash_set (the location that had preceded the first element in the unreversed hash_set).  
   
-### <a name="remarks"></a>备注  
- `rend` 用于反向 hash_set，正如 [end](#end) 用于 hash_set 一样。  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed hash_set just as [end](#end) is used with a hash_set.  
   
- 如果将 `rend` 的返回值赋给 `const_reverse_iterator`，则无法修改 hash_set 对象。 如果将 `rend` 的返回值赋给 `reverse_iterator`，则可修改 hash_set 对象。 不应对 `rend` 返回的值取消引用。  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, then the hash_set object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, then the hash_set object can be modified. The value returned by `rend` should not be dereferenced.  
   
- `rend` 可用于测试反向迭代器是否已到达其 hash_set 的末尾。  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its hash_set.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_rend.cpp  
@@ -2031,43 +2069,43 @@ The reversed hash_set is: 30 20 10 .
 After the erasure, the last element in the reversed hash_set is 20.  
 ```  
   
-##  <a name="reverse_iterator"></a>hash_set::reverse_iterator  
+##  <a name="reverse_iterator"></a>  hash_set::reverse_iterator  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，此类型提供可读取或修改反向 hash_set 中的元素的双向迭代器。  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed hash_set.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- `reverse_iterator` 类型用于反向循环访问 hash_set。  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` is use to iterate through the hash_set in reverse.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin) for an example of how to declare and use `reverse_iterator`.  
   
-##  <a name="size"></a>hash_set::size  
+##  <a name="size"></a>  hash_set::size  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回 hash_set 中元素的数目。  
+ Returns the number of elements in the hash_set.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- hash_set 的当前长度。  
+### <a name="return-value"></a>Return Value  
+ The current length of the hash_set.  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_size.cpp  
@@ -2097,44 +2135,44 @@ The hash_set length is 1.
 The hash_set length is now 2.  
 ```  
   
-##  <a name="size_type"></a>hash_set::size_type  
+##  <a name="size_type"></a>  hash_set::size_type  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种无符号整数类型，此类型可表示 hash_set 中的元素数量。  
+ An unsigned integer type that can represent the number of elements in a hash_set.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`  
   
-##  <a name="swap"></a>hash_set::swap  
+##  <a name="swap"></a>  hash_set::swap  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 交换两个 hash_set 的元素。  
+ Exchanges the elements of two hash_sets.  
   
 ```  
 void swap(hash_set& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 参数 hash_set 提供与目标 hash_set 进行交换的元素。  
+ The argument hash_set providing the elements to be swapped with the target hash_set.  
   
-### <a name="remarks"></a>备注  
- 此成员函数不会使得用以在所含元素正进行交换的两个 hash_set 中指定元素的任何引用、指针或迭代器无效。  
+### <a name="remarks"></a>Remarks  
+ The member function invalidates no references, pointers, or iterators that designate elements in the two hash_sets whose elements are being exchanged.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_swap.cpp  
@@ -2188,12 +2226,12 @@ After swapping with hs2, list hs1 is: 200 100.
 After swapping with hs3, list hs1 is: 300.  
 ```  
   
-##  <a name="upper_bound"></a>hash_set::upper_bound  
+##  <a name="upper_bound"></a>  hash_set::upper_bound  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 返回一个迭代器，此迭代器指向 hash_set 中其键大于指定键的第一个元素。  
+ Returns an iterator to the first element in a hash_set that with a key that is greater than a specified key.  
   
 ```  
 const_iterator upper_bound(const Key& key) const;
@@ -2201,17 +2239,17 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `key`  
- 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。  
+ The argument key to be compared with the sort key of an element from the hash_set being searched.  
   
-### <a name="return-value"></a>返回值  
- 一个 **iterator** 或 `const_iterator`，其会发现 hash_set 中其键等于或大于参数键的元素的位置，或如果未找到键的匹配项，则发现 hash_set 中最后一个元素之后的位置。  
+### <a name="return-value"></a>Return Value  
+ An **iterator** or `const_iterator` that addresses the location of an element in a hash_set that with a key that is equal to or greater than the argument key, or that addresses the location succeeding the last element in the hash_set if no match is found for the key.  
   
-### <a name="remarks"></a>备注  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_upper_bound.cpp  
@@ -2261,34 +2299,34 @@ The first element of hs1 with a key greater than
 that of the initial element of hs1 is: 20.  
 ```  
   
-##  <a name="value_comp"></a>hash_set::value_comp  
+##  <a name="value_comp"></a>  hash_set::value_comp  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 检索用于对 hash_set 中的元素值进行排序的比较对象副本。  
+ Retrieves a copy of the comparison object used to order element values in a hash_set.  
   
 ```  
 value_compare value_comp() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回 hash_set 用来对其元素进行排序的函数对象，即模板参数 `Compare`。  
+### <a name="return-value"></a>Return Value  
+ Returns the function object that a hash_set uses to order its elements, which is the template parameter `Compare`.  
   
- 有关 `Compare` 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md)主题的备注部分。  
+ For more information on `Compare`, see the Remarks section of the [hash_set Class](../standard-library/hash-set-class.md) topic.  
   
-### <a name="remarks"></a>备注  
- 存储对象用于定义以下成员函数：  
+### <a name="remarks"></a>Remarks  
+ The stored object defines the member function:  
   
  **bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);  
   
- 如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 **true**。  
+ which returns **true** if `_xVal` precedes and is not equal to `_yVal` in the sort order.  
   
- 请注意，[value_compare](../standard-library/set-class.md#value_compare) 和 [key_compare](../standard-library/set-class.md#key_compare) 皆是模板参数 `Compare` 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。  
+ Note that both [value_compare](../standard-library/set-class.md#value_compare) and [key_compare](../standard-library/set-class.md#key_compare) are synonyms for the template parameter `Compare`. Both types are provided for the hash_set and hash_multiset classes, where they are identical, for compatibility with the hash_map and hash_multimap classes, where they are distinct.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_value_comp.cpp  
@@ -2337,41 +2375,41 @@ int main( )
 }  
 ```  
   
-##  <a name="value_compare"></a>hash_set::value_compare  
+##  <a name="value_compare"></a>  hash_set::value_compare  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，它提供两个函数对象：一个是类比较二元谓词（用于比较 hash_set 的两个元素值以确定其相对顺序），另一个是一元谓词（用于对元素进行哈希处理）。  
+ A type that provides two function objects, a binary predicate of class compare that can compare two element values of a hash_set to determine their relative order and a unary predicate that hashes the elements.  
   
 ```  
 typedef key_compare value_compare;  
 ```  
   
-### <a name="remarks"></a>备注  
- **value_compare** 是模板参数 `Traits` 的同义词。  
+### <a name="remarks"></a>Remarks  
+ **value_compare** is a synonym for the template parameter `Traits`.  
   
- 有关 `Traits` 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md)主题。  
+ For more information on `Traits` see the [hash_set Class](../standard-library/hash-set-class.md) topic.  
   
- 请注意，[key_compare](#key_compare) 和 **value_compare** 皆是模板参数 **Traits** 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。  
+ Note that both [key_compare](#key_compare) and **value_compare** are synonyms for the template parameter **Traits**. Both types are provided for the hash_set and hash_multiset classes, where they are identical, for compatibility with the hash_map and hash_multimap classes, where they are distinct.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员不再出现在 std 命名空间中，而是移入了 stdext 命名空间。 有关详细信息，请参见 [stdext 命名空间](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#value_comp) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [value_comp](#value_comp) for an example of how to declare and use `value_compare`.  
   
-##  <a name="value_type"></a>hash_set::value_type  
+##  <a name="value_type"></a>  hash_set::value_type  
   
 > [!NOTE]
->  此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 一种类型，此类型将在其容量中存储为 hash_set 元素的对象描述为值。  
+ A type that describes an object stored as an element of a hash_set in its capacity as a value.  
   
 ```  
 typedef Key value_type;  
 ```  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_value_type.cpp  
@@ -2407,8 +2445,8 @@ int main( )
 The hash_set has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

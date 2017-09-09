@@ -1,5 +1,5 @@
 ---
-title: "future 类 | Microsoft Docs"
+title: future Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,177 +39,186 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2a062caf9b28a48f2195f96b3a22f95a15c7149e
+helpviewer_keywords:
+- std::future [C++]
+- std::future [C++], future
+- std::future [C++], get
+- std::future [C++], share
+- std::future [C++], valid
+- std::future [C++], wait
+- std::future [C++], wait_for
+- std::future [C++], wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 70ecd59354ed064d91eaeb000b5331bbeca43923
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="future-class"></a>future 类
-描述异步返回对象。  
+# <a name="future-class"></a>future Class
+Describes an *asynchronous return object*.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 class future;
 ```  
   
-## <a name="remarks"></a>备注  
- 每个标准*异步提供程序*返回一个对象，该对象的类型是此模板的实例化。 `future` 对象提供与其关联的异步提供程序的唯一访问权限。 如需多个与同一异步提供程序关联的异步返回对象，请将 `future` 对象复制到 [shared_future](../standard-library/shared-future-class.md) 对象。  
+## <a name="remarks"></a>Remarks  
+ Each standard *asynchronous provider* returns an object whose type is an instantiation of this template. A `future` object provides the only access to the asynchronous provider that it is associated with. If you need multiple asynchronous return objects that are associated with the same asynchronous provider, copy the `future` object to a [shared_future](../standard-library/shared-future-class.md) object.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[future](#future)|构造 `future` 对象。|  
+|[future](#future)|Constructs a `future` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[get](#get)|检索存储在关联异步状态中的结果。|  
-|[共享](#share)|将对象转换为 `shared_future`。|  
-|[有效](#valid)|指定对象是否不为空。|  
-|[等待](#wait)|阻止当前线程，直到关联异步状态为准备就绪。|  
-|[wait_for](#wait_for)|进行阻止，直到关联异步状态为准备就绪或已过指定时间。|  
-|[wait_until](#wait_until)|进行阻止，直到关联异步状态为准备就绪或直到指定时间点。|  
+|[get](#get)|Retrieves the result that is stored in the associated asynchronous state.|  
+|[share](#share)|Converts the object to a `shared_future`.|  
+|[valid](#valid)|Specifies whether the object is not empty.|  
+|[wait](#wait)|Blocks the current thread until the associated asynchronous state is ready.|  
+|[wait_for](#wait_for)|Blocks until the associated asynchronous state is ready or until the specified time has elapsed.|  
+|[wait_until](#wait_until)|Blocks until the associated asynchronous state is ready or until a specified point in time.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[future::operator=](#op_eq)|从指定对象传输关联异步状态。|  
+|[future::operator=](#op_eq)|Transfers the associated asynchronous state from a specified object.|  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<将来 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="future"></a>future::future 构造函数  
- 构造 `future` 对象。  
+##  <a name="future"></a>  future::future Constructor  
+ Constructs a `future` object.  
   
 ```
 future() noexcept;
 future(future&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 一个 `future` 对象。  
+ A `future` object.  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数构造没有关联异步状态的 `future` 对象。  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs a `future` object that has no associated asynchronous state.  
   
- 第二个构造函数构造 `future` 对象并从 `Other` 传输关联异步状态。 `Other` 不再具有关联异步状态。  
+ The second constructor constructs a `future` object and transfers the associated asynchronous state from `Other`. `Other` no longer has an associated asynchronous state.  
   
-##  <a name="get"></a>future::get  
- 检索存储在关联异步状态中的结果。  
+##  <a name="get"></a>  future::get  
+ Retrieves the result that is stored in the associated asynchronous state.  
   
 ```
 Ty get();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果结果为异常，该方法将重新引发它。 否则，会返回结果。  
+### <a name="return-value"></a>Return Value  
+ If the result is an exception, the method rethrows it. Otherwise, the result is returned.  
   
-### <a name="remarks"></a>备注  
- 在检索结果前，该方法会阻止当前线程，直到关联异步状态为准备就绪。  
+### <a name="remarks"></a>Remarks  
+ Before it retrieves the result, this method blocks the current thread until the associated asynchronous state is ready.  
   
- 对于部分专用化 `future<Ty&>`，存储值实际上是对已传递给异步提供程序作为返回值的对象的引用。  
+ For the partial specialization `future<Ty&>`, the stored value is effectively a reference to the object that was passed to the asynchronous provider as the return value.  
   
- 因为专用化 `future<void>` 不存在任何存储值，所以此方法会返回 `void`。  
+ Because no stored value exists for the specialization `future<void>`, the method returns `void`.  
   
- 在其他专用化中，此方法会从存储值移动其返回值。 因此，请仅调用此方法一次。  
+ In other specializations, the method moves its return value from the stored value. Therefore, call this method only once.  
   
-##  <a name="op_eq"></a>future::operator=  
- 从指定对象传输关联异步状态。  
+##  <a name="op_eq"></a>  future::operator=  
+ Transfers an associated asynchronous state from a specified object.  
   
 ```
 future& operator=(future&& Right) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Right`  
- 一个 `future` 对象。  
+ A `future` object.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>备注  
- 传输后，`Right` 不再具有关联异步状态。  
+### <a name="remarks"></a>Remarks  
+ After the transfer, `Right` no longer has an associated asynchronous state.  
   
-##  <a name="share"></a>future::share  
- 将对象转换为 [shared_future](../standard-library/shared-future-class.md) 对象。  
+##  <a name="share"></a>  future::share  
+ Converts the object to a [shared_future](../standard-library/shared-future-class.md) object.  
   
 ```
 shared_future<Ty> share();
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `shared_future(move(*this))`  
   
-##  <a name="valid"></a>future::valid  
- 指定对象是否具有关联异步状态。  
+##  <a name="valid"></a>  future::valid  
+ Specifies whether the object has an associated asynchronous state.  
   
 ```
 bool valid() noexcept;
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果对象有关联的异步状态，则为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the object has an associated asynchronous state; otherwise, `false`.  
   
-##  <a name="wait"></a>future::wait  
- 阻止当前线程，直到关联异步状态为准备就绪。  
+##  <a name="wait"></a>  future::wait  
+ Blocks the current thread until the associated asynchronous state is *ready*.  
   
 ```cpp  
 void wait() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is *ready* only if its asynchronous provider has stored a return value or stored an exception.  
   
-##  <a name="wait_for"></a>future::wait_for  
- 阻止当前线程，直到关联异步状态为准备就绪或已过指定时间间隔。  
+##  <a name="wait_for"></a>  future::wait_for  
+ Blocks the current thread until the associated asynchronous state is *ready* or until a specified time interval has elapsed.  
   
 ```
 template <class Rep, class Period>
 future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Rel_time`  
- 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定线程阻止的最大时间间隔。  
+ A [chrono::duration](../standard-library/duration-class.md) object that specifies a maximum time interval that the thread blocks.  
   
-### <a name="return-value"></a>返回值  
- 一个 [future_status](../standard-library/future-enums.md#future_status)，指示返回的原因。  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>备注  
- 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is ready only if its asynchronous provider has stored a return value or stored an exception.  
   
-##  <a name="wait_until"></a>future::wait_until  
- 阻止当前线程，直到关联的异步状态为准备就绪或直到指定时间点后。  
+##  <a name="wait_until"></a>  future::wait_until  
+ Blocks the current thread until the associated asynchronous state is *ready* or until after a specified time point.  
   
 ```cpp  
 template <class Clock, class Duration>
 future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Abs_time`  
- 一个 [chrono::time_point](../standard-library/time-point-class.md) 对象，指定在其后可取消阻止线程的时间。  
+ A [chrono::time_point](../standard-library/time-point-class.md) object that specifies a time after which the thread can unblock.  
   
-### <a name="return-value"></a>返回值  
- 一个 [future_status](../standard-library/future-enums.md#future_status)，指示返回的原因。  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>备注  
- 只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is *ready* only if its asynchronous provider has stored a return value or stored an exception.  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
 
 

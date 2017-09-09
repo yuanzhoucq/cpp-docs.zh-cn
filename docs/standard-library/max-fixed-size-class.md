@@ -1,5 +1,5 @@
 ---
-title: "max_fixed_size 类 | Microsoft Docs"
+title: max_fixed_size Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::max_fixed_size
-- max_fixed_size
-- stdext::max_fixed_size
 - allocators/stdext::max_fixed_size::allocated
 - allocators/stdext::max_fixed_size::deallocated
 - allocators/stdext::max_fixed_size::full
@@ -20,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- max_fixed_size class
+- stdext::max_fixed_size
+- stdext::max_fixed_size [C++], allocated
+- stdext::max_fixed_size [C++], deallocated
+- stdext::max_fixed_size [C++], full
+- stdext::max_fixed_size [C++], released
+- stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
 caps.latest.revision: 18
 author: corob-msft
@@ -40,126 +43,126 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b819bce3ce817983f8318aa0490884d7bd6e1cad
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fcd356c29a65e8f37547dc242536ff966e6dfa7f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="maxfixedsize-class"></a>max_fixed_size 类
-描述 [max 类](../standard-library/allocators-header.md) 对象，该对象将 [freelist](../standard-library/freelist-class.md) 对象的最大长度限制为固定的最大长度。  
+# <a name="maxfixedsize-class"></a>max_fixed_size Class
+Describes a [max class](../standard-library/allocators-header.md) object that limits a [freelist](../standard-library/freelist-class.md) object to a fixed maximum length.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <std::size_t Max>  
 class max_fixed_size
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Max`|max 类，用于决定要存储于 `freelist` 中的最大元素数目。|  
+|`Max`|The max class that determines the maximum number of elements to store in the `freelist`.|  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[max_fixed_size](#max_fixed_size)|构造 `max_fixed_size` 类型的对象。|  
-  
-### <a name="member-functions"></a>成员函数  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocated](#allocated)|逐量增加已分配的内存块的计数。|  
-|[deallocated](#deallocated)|逐量减小已分配的内存块的计数。|  
-|[full](#full)|返回一个值，该值指定是否应将更多的内存块添加到空闲列表。|  
-|[released](#released)|逐量减小空闲列表上内存块的计数。|  
-|[saved](#saved)|逐量增加空闲列表上内存块的计数。|  
+|[max_fixed_size](#max_fixed_size)|Constructs an object of type `max_fixed_size`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<allocators>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** stdext  
+|||  
+|-|-|  
+|[allocated](#allocated)|Increments the count of allocated memory blocks.|  
+|[deallocated](#deallocated)|Decrements the count of allocated memory blocks.|  
+|[full](#full)|Returns a value that specifies whether more memory blocks should be added to the free list.|  
+|[released](#released)|Decrements the count of memory blocks on the free list.|  
+|[saved](#saved)|Increments the count of memory blocks on the free list.|  
   
-##  <a name="allocated"></a>max_fixed_size::allocated  
- 逐量增加已分配的内存块的计数。  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
+  
+ **Namespace:** stdext  
+  
+##  <a name="allocated"></a>  max_fixed_size::allocated  
+ Increments the count of allocated memory blocks.  
   
 ```
 void allocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|增量值。|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>备注  
- 此成员函数不执行任何操作。 每次调用成功后，`cache_freelist::allocate` 会将此成员函数调用到运算符 `new`。 自变量 `_Nx` 是运算符 `new` 分配的区块中的内存块数。  
+### <a name="remarks"></a>Remarks  
+ The member function does nothing. This member function is called after each successful call by `cache_freelist::allocate` to operator `new`. The argument `_Nx` is the number of memory blocks in the chunk allocated by operator `new`.  
   
-##  <a name="deallocated"></a>max_fixed_size::deallocated  
- 逐量减小已分配的内存块的计数。  
+##  <a name="deallocated"></a>  max_fixed_size::deallocated  
+ Decrements the count of allocated memory blocks.  
   
 ```
 void deallocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|增量值。|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>备注  
- 此成员函数不执行任何操作。 每次调用后，`cache_freelist::deallocate` 会将此成员函数调用到运算符 `delete`。 自变量 `_Nx` 是运算符 `delete` 取消分配的区块中的内存块数。  
+### <a name="remarks"></a>Remarks  
+ The member function does nothing. This member function is called after each call by `cache_freelist::deallocate` to operator `delete`. The argument `_Nx` is the number of memory blocks in the chunk deallocated by operator `delete`.  
   
-##  <a name="full"></a>max_fixed_size::full  
- 返回一个值，该值指定是否应将更多的内存块添加到空闲列表。  
+##  <a name="full"></a>  max_fixed_size::full  
+ Returns a value that specifies whether more memory blocks should be added to the free list.  
   
 ```
 bool full();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果是 `Max <= _Nblocks`，则为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if `Max <= _Nblocks`; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回 `true`，则 `deallocate` 会将内存块放入空闲列表；如果它返回 false，则 `deallocate` 将调用运算符 `delete` 以取消分配块。  
+### <a name="remarks"></a>Remarks  
+ This member function is called by `cache_freelist::deallocate`. If the call returns `true`, `deallocate` puts the memory block on the free list; if it returns false, `deallocate` calls operator `delete` to deallocate the block.  
   
-##  <a name="max_fixed_size"></a>max_fixed_size::max_fixed_size  
- 构造 `max_fixed_size` 类型的对象。  
+##  <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size  
+ Constructs an object of type `max_fixed_size`.  
   
 ```
 max_fixed_size();
 ```  
   
-### <a name="remarks"></a>备注  
- 该构造函数将存储的值 `_Nblocks` 初始化为零。  
+### <a name="remarks"></a>Remarks  
+ This constructor initializes the stored value `_Nblocks` to zero.  
   
-##  <a name="released"></a>max_fixed_size::released  
- 逐量减小空闲列表上内存块的计数。  
+##  <a name="released"></a>  max_fixed_size::released  
+ Decrements the count of memory blocks on the free list.  
   
 ```
 void released();
 ```  
   
-### <a name="remarks"></a>备注  
- 逐量减小存储值 `_Nblocks`。 每当当前 [max 类](../standard-library/allocators-header.md)的 `released` 成员函数从空闲列表中删除内存块时，`cache_freelist::allocate` 将对其进行调用。  
+### <a name="remarks"></a>Remarks  
+ Decrements the stored value `_Nblocks`. The `released` member function of the current [max class](../standard-library/allocators-header.md) is called by `cache_freelist::allocate` whenever it removes a memory block from the free list.  
   
-##  <a name="saved"></a>max_fixed_size::saved  
- 逐量增加空闲列表上内存块的计数。  
+##  <a name="saved"></a>  max_fixed_size::saved  
+ Increments the count of memory blocks on the free list.  
   
 ```
 void saved();
 ```  
   
-### <a name="remarks"></a>备注  
- 此成员函数逐量增加存储值 `_Nblocks`。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。  
+### <a name="remarks"></a>Remarks  
+ This member function increments the stored value `_Nblocks`. This member function is called by `cache_freelist::deallocate` whenever it puts a memory block on the free list.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

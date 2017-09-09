@@ -1,5 +1,5 @@
 ---
-title: "regex_error 类 | Microsoft Docs"
+title: regex_error Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_error
 - regex/std::regex_error
 - regex/std::regex_error::code
 dev_langs:
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: af23c0562720abd15bdaf77edac2b2728c50f617
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b62638529f90240201ae229b6ae647e8a87fdf95
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regexerror-class"></a>regex_error 类
-报告错误的 basic_regex 对象。  
+# <a name="regexerror-class"></a>regex_error Class
+Reports a bad basic_regex object.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class regex_error  
@@ -59,25 +58,25 @@ public:
  };  
 ```  
   
-## <a name="remarks"></a>备注  
- 该类描述一个异常对象，引发该异常的目的是为报告一个构造中的错误或 `basic_regex` 对象的使用错误。  
+## <a name="remarks"></a>Remarks  
+ The class describes an exception object thrown to report an error in the construction or use of a `basic_regex` object.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<regex 1>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
 ##  <a name="code"></a>  regex_error::code  
- 返回错误代码。  
+ Returns the error code.  
   
 ```  
 regex_constants::error_code code() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回传递给对象的构造函数的值。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the value that was passed to the object's constructor.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_error_code.cpp   
@@ -115,20 +114,20 @@ regex error: unbalanced parentheses
 ```  
   
 ##  <a name="regex_error"></a>  regex_error::regex_error  
- 构造对象。  
+ Constructs the object.  
   
 ```  
 regex_error(regex_constants::error_code error);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `error`  
- 错误代码。  
+ The error code.  
   
-### <a name="remarks"></a>备注  
- 构造函数将构造一个保留 `error`值的对象。  
+### <a name="remarks"></a>Remarks  
+ The constructor constructs an object that holds the value `error`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_error_construct.cpp   
@@ -165,13 +164,13 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants 类](../standard-library/regex-constants-class.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
 [\<regex> functions](../standard-library/regex-functions.md)  
-[regex_iterator 类](../standard-library/regex-iterator-class.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
 [\<regex> operators](../standard-library/regex-operators.md)  
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 类](../standard-library/regex-traits-class.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
 

@@ -1,5 +1,5 @@
 ---
-title: "collate 类 | Microsoft 文档"
+title: collate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - locale/std::collate
-- collate
-- Collate
 - locale/std::collate::char_type
 - locale/std::collate::string_type
 - locale/std::collate::compare
@@ -23,7 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- collate class
+- std::collate [C++]
+- std::collate [C++], char_type
+- std::collate [C++], string_type
+- std::collate [C++], compare
+- std::collate [C++], do_compare
+- std::collate [C++], do_hash
+- std::collate [C++], do_transform
+- std::collate [C++], hash
+- std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 caps.latest.revision: 18
 author: corob-msft
@@ -43,71 +49,71 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 070813dde1fc118e35ade636261541e585504c50
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: db02822b3e5e2e5fbf1851c6b8709a4963f70e15
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="collate-class"></a>collate 类
-一种模板类，用于描述一个对象来充当区域设置 facet，以控制字符串中字符的排序和分组、这些字符之间的比较以及字符串的哈希处理。  
+# <a name="collate-class"></a>collate Class
+A template class that describes an object that can serve as a locale facet to control the ordering and grouping of characters within a string, comparisons between them and the hashing of strings.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 class collate : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 在程序中用于对字符进行编码的类型。  
+ The type used within a program to encode characters.  
   
-## <a name="remarks"></a>备注  
- 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **id** 中存储唯一的正值。 在某些语言中，多个字符作为单个字符分组和处理，在其他语言中，单个字符被作为两个字符进行处理。 通过排序规则类提供的排序规则服务，可以在这些情况下进行排序。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.** In some languages, characters are grouped and treated as a single character, and in others, individual characters are treated as if they were two characters. The collating services provided by the collate class provide the way to sort these cases.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[collate](#collate)|用作区域设置 facet 以处理字符串排序转换的 `collate` 类的对象的构造函数。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|一种类型，此类型描述 `CharType` 类型字符。|  
-|[string_type](#string_type)|一种类型，此类型描述包含 `basic_string` 类型字符的 `CharType` 类型字符串。|  
+|[collate](#collate)|The constructor for objects of class `collate` that serves as a locale facet to handle string sorting conventions.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[compare](#compare)|根据两个字符序列的特定于 facet 的规则，比较这两个字符序列是否相等。|  
-|[do_compare](#do_compare)|一种虚拟函数，通过调用此函数可根据两个字符序列的特定于 facet 的规则来比较这两个序列是否相等。|  
-|[do_hash](#do_hash)|一种虚拟函数，通过调用此函数可根据序列的特定于 facet 的规则来确定它们的哈希值。|  
-|[do_transform](#do_transform)|一种虚拟函数，通过调用此函数可将字符序列从区域设置转换为字符串，可使用此字符串与以类似方式从同一区域设置转换的其他字符序列按字典顺序进行比较。|  
-|[hash](#hash)|根据序列的特定于 facet 的规则来确定它们的哈希值。|  
-|[transform](#transform)|将字符序列从区域设置转换为字符串，可使用此字符串与以类似方式从同一区域设置转换的其他字符序列按字典顺序进行比较。|  
+|[char_type](#char_type)|A type that describes a character of type `CharType`.|  
+|[string_type](#string_type)|A type that describes a string of type `basic_string` containing characters of type `CharType`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[compare](#compare)|Compares two character sequences according to their facet-specific rules for equality or inequality.|  
+|[do_compare](#do_compare)|A virtual function called to compare two character sequences according to their facet-specific rules for equality or inequality.|  
+|[do_hash](#do_hash)|A virtual function called to determine the hash value of sequences according to their facet-specific rules.|  
+|[do_transform](#do_transform)|A virtual function called to convert a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.|  
+|[hash](#hash)|Determines the hash value of sequence according to their facet-specific rules.|  
+|[transform](#transform)|Converts a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  collate::char_type  
- 一种类型，此类型描述 **CharType** 类型字符。  
+ A type that describes a character of type **CharType**.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **CharType** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="collate"></a>  collate::collate  
- 用作区域设置 facet 以处理字符串排序转换的 collate 类的对象的构造函数。  
+ The constructor for objects of class collate that serves as a locale facet to handle string sorting conventions.  
   
 ```  
 public:  
@@ -120,26 +126,26 @@ protected:
     size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 用于指定对象的内存管理类型的整数值。  
+ Integer value used to specify the type of memory management for the object.  
   
  `_Locname`  
- 区域设置的名称。  
+ The name of the locale.  
   
-### <a name="remarks"></a>备注  
- `_Refs` 参数可能的值及其含义：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：对象的生存期由包含该对象的区域设置管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：必须手动管理对象的生存期。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定义这些值。  
+-   \> 1: These values are not defined.  
   
- 构造函数初始化与与其基对象**区域设置::**[方面](../standard-library/locale-class.md#facet_class)(`_Refs`)。  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   
 ##  <a name="compare"></a>  collate::compare  
- 根据两个字符序列的特定于 facet 的规则，比较这两个字符序列是否相等。  
+ Compares two character sequences according to their facet-specific rules for equality or inequality.  
   
 ```  
 int compare(const CharType* first1,
@@ -148,34 +154,34 @@ int compare(const CharType* first1,
     const CharType* last2) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first1`  
- 指向第一个序列中要比较的第一个元素的指针。  
+ Pointer to the first element in the first sequence to be compared.  
   
  `last1`  
- 指向第一个序列中要比较的最后一个元素的指针。  
+ Pointer to the last element in the first sequence to be compared.  
   
  `first2`  
- 指向第二个序列中要比较的第一个元素的指针。  
+ Pointer to the first element in the second sequence to be compared.  
   
  `last2`  
- 指向第二个序列中要比较的最后一个元素的指针。  
+ Pointer to the last element in the second sequence to be compared.  
   
-### <a name="return-value"></a>返回值  
- 此成员函数返回：  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   如果第一个序列小于第二个序列，则为 -1。  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   如果第一个序列大于第二个序列，则为 +1。  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   如果两个序列相等，则为 0。  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>备注  
- 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。  
+### <a name="remarks"></a>Remarks  
+ The first sequence compares less if it has the smaller element in the earliest unequal pair in the sequences, or, if no unequal pairs exist, but the first sequence is shorter.  
   
- 成员函数返回 [do_compare](#do_compare)( `first1`, `last1`, `first2`, `last2`)。  
+ The member function returns [do_compare](#do_compare)( `first1`, `last1`, `first2`, `last2`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_compare.cpp  
@@ -201,7 +207,7 @@ int main() {
 ```  
   
 ##  <a name="do_compare"></a>  collate::do_compare  
- 一种虚拟函数，通过调用此函数可根据两个字符序列的特定于 facet 的规则来比较这两个序列是否相等。  
+ A virtual function called to compare two character sequences according to their facet-specific rules for equality or inequality.  
   
 ```  
 virtual int do_compare(const CharType* first1,
@@ -210,103 +216,103 @@ virtual int do_compare(const CharType* first1,
     const CharType* last2) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first1`  
- 指向第一个序列中要比较的第一个元素的指针。  
+ Pointer to the first element in the first sequence to be compared.  
   
  `last1`  
- 指向第一个序列中要比较的最后一个元素的指针。  
+ Pointer to the last element in the first sequence to be compared.  
   
  `first2`  
- 指向第二个序列中要比较的第一个元素的指针。  
+ Pointer to the first element in the second sequence to be compared.  
   
  `last2`  
- 指向第二个序列中要比较的最后一个元素的指针。  
+ Pointer to the last element in the second sequence to be compared.  
   
-### <a name="return-value"></a>返回值  
- 此成员函数返回：  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   如果第一个序列小于第二个序列，则为 -1。  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   如果第一个序列大于第二个序列，则为 +1。  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   如果两个序列相等，则为 0。  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>备注  
- 受保护虚拟成员函数将在序列进行比较 [* first1，Last1) * 与在序列*[first2，last2*)。 它通过应用 **operator<** 比较 **CharType** 类型的相应元素对的值。 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function compares the sequence at [ * first1, Last1)* with the sequence at *[ first2,  last2*). It compares values by applying **operator<** between pairs of corresponding elements of type **CharType**. The first sequence compares less if it has the smaller element in the earliest unequal pair in the sequences or if no unequal pairs exist but the first sequence is shorter.  
   
-### <a name="example"></a>示例  
-  请参阅 [collate:: compare](#compare) 的示例，它调用 `do_compare`。  
+### <a name="example"></a>Example  
+  See the example for [collate::compare](#compare), which calls `do_compare`.  
   
 ##  <a name="do_hash"></a>  collate::do_hash  
- 一种虚拟函数，通过调用此函数可根据序列的特定于 facet 的规则来确定它们的哈希值。  
+ A virtual function called to determine the hash value of sequences according to their facet-specific rules.  
   
 ```  
 virtual long do_hash(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 一个指向序列中具有待定值的第一个字符的指针。  
+ A pointer to the first character in the sequence whose has value is to be determined.  
   
  `last`  
- 一个指向序列中具有待定值的最后一个字符的指针。  
+ A pointer to the last character in the sequence whose has value is to be determined.  
   
-### <a name="return-value"></a>返回值  
- 针对序列的 **long** 类型的哈希值。  
+### <a name="return-value"></a>Return Value  
+ A hash value of type **long** for the sequence.  
   
-### <a name="remarks"></a>备注  
- 哈希值可用于在列表数组中伪随机分布序列等。  
+### <a name="remarks"></a>Remarks  
+ A hash value can be useful, for example, in distributing sequences pseudo-randomly across an array of lists.  
   
-### <a name="example"></a>示例  
-  请参阅 [hash](#hash) 的示例，它调用`do_hash`。  
+### <a name="example"></a>Example  
+  See the example for [hash](#hash), which calls `do_hash`.  
   
 ##  <a name="do_transform"></a>  collate::do_transform  
- 一种虚拟函数，通过调用此函数可将字符序列从区域设置转换为字符串，可使用此字符串与以类似方式从同一区域设置转换的其他字符序列按字典顺序进行比较。  
+ A virtual function called to convert a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.  
   
 ```  
 virtual string_type do_transform(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 指向序列中要转换的第一个字符的指针。  
+ A pointer to the first character in the sequence to be converted.  
   
  `last`  
- 指向序列中要转换的最后一个字符的指针。  
+ A pointer to the last character in the sequence to be converted.  
   
-### <a name="return-value"></a>返回值  
- 一个字符串，为转换后的字符序列。  
+### <a name="return-value"></a>Return Value  
+ A string that is the transformed character sequence.  
   
-### <a name="remarks"></a>备注  
- 受保护的虚拟成员函数将返回 [string_type](#string_type) 类的对象，其受控的序列是序列 [ `first`, `last`) 的副本。 如果一个类派生自 collate\< **CharType**> overrides [do_compare](#do_compare)，还应该重写 `do_transform` 以进行匹配。 传递给 `collate::compare` 时，两个已转换的字符串应产生相同的结果，你会从传递未经转换的字符串中获得此结果以在派生类中进行比较。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function returns an object of class [string_type](#string_type) whose controlled sequence is a copy of the sequence [ `first`, `last`). If a class derived from collate\< **CharType**> overrides [do_compare](#do_compare), it should also override `do_transform` to match. When passed to `collate::compare`, two transformed strings should yield the same result that you would get from passing the untransformed strings to compare in the derived class.  
   
-### <a name="example"></a>示例  
-  请参阅 [transform](#transform) 的示例，它调用 `do_transform`。  
+### <a name="example"></a>Example  
+  See the example for [transform](#transform), which calls `do_transform`.  
   
 ##  <a name="hash"></a>  collate::hash  
- 根据序列的特定于 facet 的规则来确定它们的哈希值。  
+ Determines the hash value of sequence according to their facet-specific rules.  
   
 ```  
 long hash(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 一个指向序列中具有待定值的第一个字符的指针。  
+ A pointer to the first character in the sequence whose has value is to be determined.  
   
  `last`  
- 一个指向序列中具有待定值的最后一个字符的指针。  
+ A pointer to the last character in the sequence whose has value is to be determined.  
   
-### <a name="return-value"></a>返回值  
- 针对序列的 **long** 类型的哈希值。  
+### <a name="return-value"></a>Return Value  
+ A hash value of type **long** for the sequence.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_hash](#do_hash)( `first`, `last`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_hash](#do_hash)( `first`, `last`).  
   
- 哈希值可用于在列表数组中伪随机分布序列等。  
+ A hash value can be useful, for example, in distributing sequences pseudo-randomly across an array of lists.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_hash.cpp  
@@ -335,39 +341,39 @@ int main( )
 ```  
   
 ##  <a name="string_type"></a>  collate::string_type  
- 一种类型，此类型描述包含 **CharType** 类型字符的 `basic_string` 类型字符串。  
+ A type that describes a string of type `basic_string` containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType> string_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类的专用化，该模板类的对象可存储源序列的副本。  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the source sequence.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `string_type` 的示例，请参阅 [transform](#transform)。  
+### <a name="example"></a>Example  
+  For an example of how to declare and use `string_type`, see [transform](#transform).  
   
 ##  <a name="transform"></a>  collate::transform  
- 将字符序列从区域设置转换为字符串，可使用此字符串与以类似方式从同一区域设置转换的其他字符序列按字典顺序进行比较。  
+ Converts a character sequence from a locale to a string that may be used in lexicographical comparisons with other character sequences similarly converted from the same locale.  
   
 ```  
 string_type transform(const CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 指向序列中要转换的第一个字符的指针。  
+ A pointer to the first character in the sequence to be converted.  
   
  `last`  
- 指向序列中要转换的最后一个字符的指针。  
+ A pointer to the last character in the sequence to be converted.  
   
-### <a name="return-value"></a>返回值  
- 一个字符串，包含已转换的字符序列。  
+### <a name="return-value"></a>Return Value  
+ A string that contains the transformed character sequence.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_transform](#do_transform)( `first`, `last`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_transform](#do_transform)( `first`, `last`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // collate_transform.cpp  
@@ -412,8 +418,8 @@ int main( )
 -1-11  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

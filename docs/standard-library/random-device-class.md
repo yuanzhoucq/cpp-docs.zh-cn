@@ -1,5 +1,5 @@
 ---
-title: "random_device 类 | Microsoft Docs"
+title: random_device Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- random_device
 - random/std::random_device
 - random/std::random_device::min
 - random/std::random_device::max
@@ -20,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- random_device class
+- std::random_device [C++]
+- std::random_device [C++], min
+- std::random_device [C++], max
+- std::random_device [C++], entropy
+- std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
 caps.latest.revision: 27
 author: corob-msft
@@ -40,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 842e4f9b53a06373df8e00f64b1ab24a48a5c6b9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a648fa7c939371e0138a9d279ddfefd405e26db6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="randomdevice-class"></a>random_device 类
-从外部设备生成随机序列。  
+# <a name="randomdevice-class"></a>random_device Class
+Generates a random sequence from an external device.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 class random_device {  
@@ -74,24 +77,24 @@ public:
    };  
 ```  
 
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|[random_device](#random_device)|[平均信息量](#entropy)|  
+|[random_device](#random_device)|[entropy](#entropy)|  
 |[random_device::operator()](#op_call)||  
   
-## <a name="remarks"></a>备注  
-该类描述了随机数的源，按 ISO C++ 标准，允许但不要求它为非确定性的或进行安全加密。 在 Visual Studio 实现中，产生的值是非确定性的且进行了安全加密，但是比从引擎和引擎适配器中创建的生成器运行得更慢（例如，对于大多数应用程序而言，会选择高质量且快速的引擎 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)）。  
+## <a name="remarks"></a>Remarks  
+The class describes a source of random numbers, and is allowed but not required to be non-deterministic or cryptographically secure by the ISO C++ Standard. In the Visual Studio implementation the values produced are non-deterministic and cryptographically secure, but runs more slowly than generators created from engines and engine adaptors (such as [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), the high quality and fast engine of choice for most applications).  
   
-`random_device` 结果均匀分布在闭合范围 [`0, 2`<sup>32</sup>) 中。  
+`random_device` results are uniformly distributed in the closed range [ `0, 2`<sup>32</sup>).  
   
-无法保证 `random_device` 产生非阻止调用。  
+`random_device` is not guaranteed to result in a non-blocking call.  
   
-通常，`random_device` 用于设定使用引擎或引擎适配器创建的其他生成器的种子。 有关详细信息，请参见 [\<random>](../standard-library/random.md)。  
+Generally, `random_device` is used to seed other generators created with engines or engine adaptors. For more information, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>示例  
-以下代码演示了此类的基本功能和示例结果。 由于 `random_device` 的非确定性本质，**输出**部分中所示的随机值将不会与你的结果相匹配。 这是正常情况，也是预期的情况。  
+## <a name="example"></a>Example  
+The following code demonstrates basic functionality of this class and example results. Because of the non-deterministic nature of `random_device`, the random values shown in the **Output** section will not match your results. This is normal and expected.  
   
 ```cpp  
 // random_device_engine.cpp   
@@ -123,44 +126,44 @@ a random value == 3633694716
 a random value == 213725214
 ```  
   
-这是简化的示例，不代表此生成器的一般使用案例。 有关更具代表性的代码示例，请参阅 [\<random>](../standard-library/random.md)。  
+This example is simplistic and not representative of the general use-case for this generator. For a more representative code example, see [\<random>](../standard-library/random.md).  
   
-## <a name="requirements"></a>要求  
- **标头：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="random_device"></a>random_device::random_device  
-构造生成器。  
+##  <a name="random_device"></a>  random_device::random_device  
+Constructs the generator.  
   
 ```  
 random_device(const std::string& = "");
 ```  
   
-### <a name="remarks"></a>备注  
-构造函数将按需初始化生成器，从而忽略字符串参数。 如果无法初始化 `random_device`，将引发派生自 [exception](../standard-library/exception-class.md) 的实现定义的类型的值。  
+### <a name="remarks"></a>Remarks  
+The constructor initializes the generator as needed, ignoring the string parameter. Throws a value of an implementation-defined type derived from [exception](../standard-library/exception-class.md) if the `random_device` could not be initialized.  
   
-##  <a name="entropy"></a>random_device::entropy  
-估计源的随机性。  
+##  <a name="entropy"></a>  random_device::entropy  
+Estimates the randomness of the source.  
   
 ```  
 double entropy() const noexcept;  
 ```  
   
-### <a name="remarks"></a>备注  
-成员函数将返回源的随机性的估计（以位为单位）。  
+### <a name="remarks"></a>Remarks  
+The member function returns an estimate of the randomness of the source, as measured in bits.  
   
-##  <a name="op_call"></a>random_device::operator()  
-返回随机值。  
+##  <a name="op_call"></a>  random_device::operator()  
+Returns a random value.  
   
 ```  
 result_type operator()();
 ```  
   
-### <a name="remarks"></a>备注  
-返回由成员函数 `min()` 和 `max()` 确定的在闭区间 [`min, max`] 中均匀分布的值。 如果无法获取随机数，将引发派生自 [exception](../standard-library/exception-class.md) 的实现定义的类型的值。  
+### <a name="remarks"></a>Remarks  
+Returns values uniformly distributed in the closed interval [ `min, max`] as determined by member functions `min()` and `max()`. Throws a value of an implementation-defined type derived from [exception](../standard-library/exception-class.md) if a random number could not be obtained.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

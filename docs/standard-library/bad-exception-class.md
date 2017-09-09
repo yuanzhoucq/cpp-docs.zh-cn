@@ -1,5 +1,5 @@
 ---
-title: "bad_exception 类 | Microsoft 文档"
+title: bad_exception Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- bad_exception
 - exception/std::bad_exception
 dev_langs:
 - C++
@@ -34,39 +33,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7870c00b019718188b80a64e0102638deb76f588
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2b61ecbc5e990f94f7d8fc4078ebaa644d78af88
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="badexception-class"></a>bad_exception 类
-该类描述可从意外处理程序引发的异常。  
+# <a name="badexception-class"></a>bad_exception Class
+The class describes an exception that can be thrown from an unexpected handler.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class bad_exception    : public exception {};  
 ```  
   
-## <a name="remarks"></a>备注  
- 如果 `bad_exception` 包含在函数的引发列表中，则 [unexpected](../standard-library/exception-functions.md#unexpected) 将引发 `bad_exception`，而不是终止或调用使用 [set_unexpected](../standard-library/exception-functions.md#set_unexpected) 指定的其他函数。  
+## <a name="remarks"></a>Remarks  
+ [unexpected](../standard-library/exception-functions.md#unexpected) will throw a `bad_exception` instead of terminating or instead of calling another function specified with [set_unexpected](../standard-library/exception-functions.md#set_unexpected) if `bad_exception` is included in the throw list of a function.  
   
- **what** 返回的值是实现定义的 C 字符串。 无成员函数引发任何异常。  
+ The value returned by **what** is an implementation-defined C string. None of the member functions throw any exceptions.  
   
- 有关通过 `bad_exception` 类继承的成员列表，请参阅 [exception 类](../standard-library/exception-class.md)。  
+ For a list of members inherited by the `bad_exception` class, see [exception Class](../standard-library/exception-class.md).  
   
-## <a name="example"></a>示例  
- 有关引发 `bad_exception` 的 [unexpected](../standard-library/exception-functions.md#unexpected) 的使用示例，请参阅 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。  
+## <a name="example"></a>Example  
+ See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of [unexpected](../standard-library/exception-functions.md#unexpected) throwing a `bad_exception`.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<exception>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<exception>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
-[exception 类](../standard-library/exception-class.md)
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+[exception Class](../standard-library/exception-class.md) [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

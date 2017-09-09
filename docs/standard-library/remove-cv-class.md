@@ -1,5 +1,5 @@
 ---
-title: "remove_cv 类 | Microsoft Docs"
+title: remove_cv Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_cv
 - type_traits/std::remove_cv
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: e8e219b296e352fb5ad2f6e470126bfd2b773355
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 89ce7d66adfa283c711db1563fe5e72b7ba150a8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removecv-class"></a>remove_cv 类
-从类型设置非常量/可变类型。  
+# <a name="removecv-class"></a>remove_cv Class
+Makes non const/volatile type from type.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_cv_t = typename remove_cv<T>::type;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要修改的类型。  
+ The type to modify.  
   
-## <a name="remarks"></a>备注  
- `remove_cv<T>` 的实例保留修改后的类型，当 `T1` 为 `T`、`const T1` 或 `volatile T1` 形式时，此类型为 `const volatile T1`，否则为 `T`。  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_cv<T>` holds a modified-type that is `T1` when `T` is of the form `const T1`, `volatile T1`, or `const volatile T1`, otherwise `T`.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,13 +83,13 @@ int main()
 remove_cv_t<const volatile int> == int  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_const 类](../standard-library/remove-const-class.md)   
- [remove_volatile 类](../standard-library/remove-volatile-class.md)
+ [remove_const Class](../standard-library/remove-const-class.md)   
+ [remove_volatile Class](../standard-library/remove-volatile-class.md)
 

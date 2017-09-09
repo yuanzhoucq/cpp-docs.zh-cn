@@ -1,5 +1,5 @@
 ---
-title: "&lt;regex&gt;运算符 | Microsoft Docs"
+title: '&lt;regex&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,22 +19,22 @@ dev_langs:
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c5bf713f65c26a1a46becf846fa21f17ac867628
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 507f422cf476e7d6c928c22c516ee2e242282b04
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltregexgt-operators"></a>&lt;regex&gt; 运算符
+# <a name="ltregexgt-operators"></a>&lt;regex&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator!=  
- 比较各对象之间是否不等于。  
+##  <a name="op_neq"></a>  operator!=  
+ Not equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -71,26 +71,26 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 迭代器类型。  
+ The iterator type.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `Alloc`  
- allocator 类。  
+ The allocator class.  
   
  `left`  
- 要比较的左边的对象。  
+ The left object to compare.  
   
  `right`  
- 要比较的右边的对象。  
+ The right object to compare.  
   
-### <a name="remarks"></a>备注  
- 各模板运算符返回 `!(left == right)`。  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(left == right)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ne.cpp   
@@ -150,8 +150,8 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
- 比较各对象之间是否存在“小于”关系。  
+##  <a name="op_lt"></a>  operator&lt;  
+ Less than comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -184,26 +184,26 @@ bool operator<(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 迭代器类型。  
+ The iterator type.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `Alloc`  
- allocator 类。  
+ The allocator class.  
   
  `left`  
- 要比较的左边的对象。  
+ The left object to compare.  
   
  `right`  
- 要比较的右边的对象。  
+ The right object to compare.  
   
-### <a name="remarks"></a>备注  
- 各模板运算符将其参数转换为字符串类型，并仅当 `left` 的转换值小于 `right` 的转换值才返回 ture。  
+### <a name="remarks"></a>Remarks  
+ Each template operator converts its arguments to a string type and returns true only if the converted value of `left` compares less than the converted value of `right`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_lt.cpp   
@@ -258,8 +258,8 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="op_lt_lt"></a>operator&lt;&lt;  
- 在流中插入 sub_match。  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+ Inserts a sub_match in a stream.  
   
 ```  
 template <class Elem, class IOtraits, class Alloc, class BidIt>  
@@ -267,29 +267,29 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
     const sub_match<BidIt>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- 元素类型。  
+ The element type.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `Alloc`  
- allocator 类。  
+ The allocator class.  
   
  `BidIt`  
- 迭代器类型。  
+ The iterator type.  
   
  `os`  
- 输出流。  
+ The output stream.  
   
  `right`  
- 要插入的对象。  
+ The object to insert.  
   
-### <a name="remarks"></a>备注  
- 模板运算符返回 `os << right.str()`。  
+### <a name="remarks"></a>Remarks  
+ The template operator returns `os << right.str()`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ins.cpp   
@@ -316,8 +316,8 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
- 比较各对象之间是否存在“小于”或“等于”关系。  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Less than or equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -350,26 +350,26 @@ bool operator<=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 迭代器类型。  
+ The iterator type.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `Alloc`  
- allocator 类。  
+ The allocator class.  
   
  `left`  
- 要比较的左边的对象。  
+ The left object to compare.  
   
  `right`  
- 要比较的右边的对象。  
+ The right object to compare.  
   
-### <a name="remarks"></a>备注  
- 各模板运算符返回 `!(right < left)`。  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(right < left)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_le.cpp   
@@ -424,8 +424,8 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="op_eq_eq"></a>operator==  
- 比较各对象之间是否等于。  
+##  <a name="op_eq_eq"></a>  operator==  
+ Equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -462,34 +462,34 @@ bool operator==(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 迭代器类型。  
+ The iterator type.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `Alloc`  
- allocator 类。  
+ The allocator class.  
   
  `left`  
- 要比较的左边的对象。  
+ The left object to compare.  
   
  `right`  
- 要比较的右边的对象。  
+ The right object to compare.  
   
-### <a name="remarks"></a>备注  
- 每个模板运算符将每个参数转换为字符串类型，并比较转换对象是否相等，然后返回相应结果。  
+### <a name="remarks"></a>Remarks  
+ Each template operator converts each of its arguments to a string type and returns the result of comparing the converted objects for equality.  
   
- 当模板运算符将其参数转换为字符串类型时，它会使用以下转换中适用的第一个转换：  
+ When a template operator converts its arguments to a string type it uses the first of the following transformations that applies:  
   
- 通过调用 `str` 成员函数转化类型为模板类 `match_results` 或 `sub_match` 的专用化的参数；  
+ arguments whose types are a specialization of template class `match_results` or `sub_match` are converted by calling the `str` member function;  
   
- 类型为模板类 `basic_string` 的专用化的函数保持不变；  
+ arguments whose types are a specialization of the template class `basic_string` are unchanged;  
   
- 通过将参数值传递给构造函数，转换所有其他参数类型，以实现适当的模板类 `basic_string` 的专用化。  
+ all other argument types are converted by passing the argument value to the constructor for an appropriate specialization of the template class `basic_string`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_eq.cpp   
@@ -549,8 +549,8 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
- 比较各对象之间是否存在“大于”关系。  
+##  <a name="op_gt"></a>  operator&gt;  
+ Greater than comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -583,26 +583,26 @@ bool operator>(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 迭代器类型。  
+ The iterator type.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `Alloc`  
- allocator 类。  
+ The allocator class.  
   
  `left`  
- 要比较的左边的对象。  
+ The left object to compare.  
   
  `right`  
- 要比较的右边的对象。  
+ The right object to compare.  
   
-### <a name="remarks"></a>备注  
- 各模板运算符返回 `right < left`。  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `right < left`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_gt.cpp   
@@ -657,8 +657,8 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
- 比较各对象之间是否存在“大于”或“等于”关系。  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Greater than or equal comparison for various objects.  
   
 ```  
 template <class BidIt>  
@@ -691,26 +691,26 @@ bool operator>=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 迭代器类型。  
+ The iterator type.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `Alloc`  
- allocator 类。  
+ The allocator class.  
   
  `left`  
- 要比较的左边的对象。  
+ The left object to compare.  
   
  `right`  
- 要比较的右边的对象。  
+ The right object to compare.  
   
-### <a name="remarks"></a>备注  
- 各模板运算符返回 `!(left < right)`。  
+### <a name="remarks"></a>Remarks  
+ Each template operator returns `!(left < right)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__operator_ge.cpp   
@@ -764,14 +764,14 @@ sub >= "aab" == false
 sub >= 'a' == true  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants 类](../standard-library/regex-constants-class.md)  
-[regex_error 类](../standard-library/regex-error-class.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
 [\<regex> functions](../standard-library/regex-functions.md)  
-[regex_iterator 类](../standard-library/regex-iterator-class.md)  
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 类](../standard-library/regex-traits-class.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
 
 

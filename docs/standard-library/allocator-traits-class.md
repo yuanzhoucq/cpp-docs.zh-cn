@@ -1,5 +1,5 @@
 ---
-title: "allocator_traits 类 | Microsoft 文档"
+title: allocator_traits Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,58 +48,77 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d4fdcb8af6fa8b33ee6153563770b9bf00f02942
+helpviewer_keywords:
+- std::allocator_traits [C++]
+- std::allocator_traits [C++], propagate_on_container_move_assignment
+- std::allocator_traits [C++], const_pointer
+- std::allocator_traits [C++], propagate_on_container_swap
+- std::allocator_traits [C++], propagate_on_container_copy_assignment
+- std::allocator_traits [C++], difference_type
+- std::allocator_traits [C++], allocator_type
+- std::allocator_traits [C++], value_type
+- std::allocator_traits [C++], pointer
+- std::allocator_traits [C++], size_type
+- std::allocator_traits [C++], const_void_pointer
+- std::allocator_traits [C++], void_pointer
+- std::allocator_traits [C++], allocate
+- std::allocator_traits [C++], construct
+- std::allocator_traits [C++], deallocate
+- std::allocator_traits [C++], destroy
+- std::allocator_traits [C++], max_size
+- std::allocator_traits [C++], select_on_container_copy_construction
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e76087fe07ce065aeb19de18acc17464e6b4e4a0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatortraits-class"></a>allocator_traits 类
-此模板类描述补充*分配器类型*的对象。 分配器类型是描述分配器对象的任何类型，它用于管理已分配的存储。 具体而言，对于任何分配器类型 `Alloc`，可以使用 `allocator_traits<Alloc>` 来确定支持分配器的容器所需的所有信息。 有关详细信息，请参阅默认的 [allocator 类](../standard-library/allocator-class.md)。  
+# <a name="allocatortraits-class"></a>allocator_traits Class
+The template class describes an object that supplements an *allocator type*. An allocator type is any type that describes an allocator object that is used for managing allocated storage. Specifically, for any allocator type `Alloc`, you can use `allocator_traits<Alloc>` to determine all the information that is needed by an allocator-enabled container. For more information, see the default [allocator Class](../standard-library/allocator-class.md).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Alloc>
 class allocator_traits;
 ```  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Typedefs  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`allocator_traits::allocator_type`|该类型是模板参数 `Alloc`的同义词。|  
-|`allocator_traits::const_pointer`|如果该类型的形式正确，则此类型为 `Alloc::const_pointer`，否则，此类型为 `pointer_traits<pointer>::rebind<const value_type>`。|  
-|`allocator_traits::const_void_pointer`|如果该类型的形式正确，则此类型为 `Alloc::const_void_pointer`，否则，此类型为 `pointer_traits<pointer>::rebind<const void>`。|  
-|`allocator_traits::difference_type`|如果该类型的形式正确，则此类型为 `Alloc::difference_type`，否则，此类型为 `pointer_traits<pointer>::difference_type`。|  
-|`allocator_traits::pointer`|如果该类型的形式正确，则此类型为 `Alloc::pointer`，否则，此类型为 `value_type *`。|  
-|`allocator_traits::propagate_on_container_copy_assignment`|如果该类型的形式正确，则此类型为 `Alloc::propagate_on_container_copy_assignment`，否则，此类型为 `false_type`。|  
-|`allocator_traits::propagate_on_container_move_assignment`|如果该类型的形式正确，则此类型为 `Alloc::propagate_on_container_move_assignment`，否则，此类型为 `false_type`。 如果类型为 true，则支持分配器的容器将在移动赋值上复制其存储的分配器。|  
-|`allocator_traits::propagate_on_container_swap`|如果该类型的形式正确，则此类型为 `Alloc::propagate_on_container_swap`，否则，此类型为 `false_type`。 如果类型为 true，则支持分配器的容器将在交换上交换其存储的分配器。|  
-|`allocator_traits::size_type`|如果该类型的形式正确，则此类型为 `Alloc::size_type`，否则，此类型为 `make_unsigned<difference_type>::type`。|  
-|`allocator_traits::value_type`|此类型是 `Alloc::value_type` 的同义词。|  
-|`allocator_traits::void_pointer`|如果该类型的形式正确，则此类型为 `Alloc::void_pointer`，否则，此类型为 `pointer_traits<pointer>::rebind<void>`。|  
+|`allocator_traits::allocator_type`|This type is a synonym for the template parameter `Alloc`.|  
+|`allocator_traits::const_pointer`|This type is `Alloc::const_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<const value_type>`.|  
+|`allocator_traits::const_void_pointer`|This type is `Alloc::const_void_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<const void>`.|  
+|`allocator_traits::difference_type`|This type is `Alloc::difference_type`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::difference_type`.|  
+|`allocator_traits::pointer`|This type is `Alloc::pointer`, if that type is well-formed; otherwise, this type is `value_type *`.|  
+|`allocator_traits::propagate_on_container_copy_assignment`|This type is `Alloc::propagate_on_container_copy_assignment`, if that type is well-formed; otherwise, this type is `false_type`.|  
+|`allocator_traits::propagate_on_container_move_assignment`|This type is `Alloc::propagate_on_container_move_assignment`, if that type is well-formed; otherwise, this type is `false_type`. If the type holds true, an allocator-enabled container copies its stored allocator on a move assignment.|  
+|`allocator_traits::propagate_on_container_swap`|This type is `Alloc::propagate_on_container_swap`, if that type is well-formed; otherwise, this type is `false_type`. If the type holds true, an allocator-enabled container swaps its stored allocator on a swap.|  
+|`allocator_traits::size_type`|This type is `Alloc::size_type`, if that type is well-formed; otherwise, this type is `make_unsigned<difference_type>::type`.|  
+|`allocator_traits::value_type`|This type is a synonym for `Alloc::value_type`.|  
+|`allocator_traits::void_pointer`|This type is `Alloc::void_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<void>`.|  
   
-### <a name="static-methods"></a>静态方法  
- 以下静态方法调用给定分配器参数上的相应的方法。  
+### <a name="static-methods"></a>Static Methods  
+ The following static methods call the corresponding method on a given allocator parameter.  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[allocate](#allocate)|使用给定的分配器参数分配内存的静态方法。|  
-|[construct](#construct)|使用指定的分配器构造对象的静态方法。|  
-|[deallocate](#deallocate)|使用指定的分配器释放指定的对象数的静态方法。|  
-|[destroy](#destroy)|使用指定的分配器调用对象上的构造函数而不释放其内存的静态方法。|  
-|[max_size](#max_size)|可以分配使用指定的分配器确定对象的最大数目的静态方法。|  
-|[select_on_container_copy_construction](#select_on_container_copy_construction)|在指定的分配器上调用 `select_on_container_copy_construction` 的静态方法。|  
+|[allocate](#allocate)|Static method that allocates memory by using the given allocator parameter.|  
+|[construct](#construct)|Static method that uses a specified allocator to construct an object.|  
+|[deallocate](#deallocate)|Static method that uses a specified allocator to deallocate a specified number of objects.|  
+|[destroy](#destroy)|Static method that uses a specified allocator to call the destructor on an object without deallocating its memory.|  
+|[max_size](#max_size)|Static method that uses a specified allocator to determine the maximum number of objects that can be allocated.|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Static method that calls `select_on_container_copy_construction` on the specified allocator.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="allocate"></a>allocator_traits:: allocate
- 使用给定的分配器参数分配内存的静态方法。  
+##  <a name="allocate"></a>  allocator_traits::allocate
+ Static method that allocates memory by using the given allocator parameter.  
   
 ```cpp  
 static pointer allocate(Alloc& al, size_type count);
@@ -108,46 +127,46 @@ static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `al`  
- 分配器对象。  
+ An allocator object.  
   
  `count`  
- 要分配的元素数量。  
+ The number of elements to allocate.  
   
  `hint`  
- 通过定位在请求之前分配的对象的地址，`const_pointer` 可能帮助分配器满足存储请求。 Null 指针将被视为无提示。  
+ A `const_pointer` that might assist the allocator object in satisfying the request for storage by locating the address of an allocated object prior to the request. A null pointer is treated as no hint.  
   
-### <a name="return-value"></a>返回值  
- 每个方法均返回指向已分配对象的指针。  
+### <a name="return-value"></a>Return Value  
+ Each method returns a pointer to the allocated object.  
   
- 第一种静态方法返回 `al.allocate(count)`。  
+ The first static method returns `al.allocate(count)`.  
   
- 第二种方法返回 `al.allocate(count, hint)`（如果该表达式形式正确）；否则返回 `al.allocate(count)`。  
+ The second method returns `al.allocate(count, hint)`, if that expression is well formed; otherwise it returns `al.allocate(count)`.  
   
-##  <a name="construct"></a>allocator_traits:: construct
- 使用指定的分配器构造对象的静态方法。  
+##  <a name="construct"></a>  allocator_traits::construct
+ Static method that uses a specified allocator to construct an object.  
   
 ```cpp  
 template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `al`  
- 分配器对象。  
+ An allocator object.  
   
  `ptr`  
- 指向要构造对象的位置的指针。  
+ A pointer to the location where the object is to be constructed.  
   
  `args`  
- 传递给对象构造函数的参数列表。  
+ A list of arguments that is passed to the object constructor.  
   
-### <a name="remarks"></a>备注  
- 如果该表达式形式正确，则静态成员函数调用 `al.construct(ptr, args...)`；否则计算 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)` 的结果。  
+### <a name="remarks"></a>Remarks  
+ The static member function calls `al.construct(ptr, args...)`, if that expression is well formed; otherwise it evaluates `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
   
-##  <a name="deallocate"></a>allocator_traits:: deallocate
- 使用指定的分配器释放指定的对象数的静态方法。  
+##  <a name="deallocate"></a>  allocator_traits::deallocate
+ Static method that uses a specified allocator to deallocate a specified number of objects.  
   
 ```cpp  
 static void deallocate(Alloc al,
@@ -155,72 +174,72 @@ static void deallocate(Alloc al,
     size_type count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `al`  
- 分配器对象。  
+ An allocator object.  
   
  `ptr`  
- 指向要释放对象的起始位置的指针。  
+ A pointer to the starting location of the objects to be deallocated.  
   
  `count`  
- 要释放对象的数量。  
+ The number of objects to deallocate.  
   
-### <a name="remarks"></a>备注  
- 此方法调用 `al.deallocate(ptr, count)`。  
+### <a name="remarks"></a>Remarks  
+ This method calls `al.deallocate(ptr, count)`.  
   
- 此方法不会引发任何操作。  
+ This method throws nothing.  
   
-##  <a name="destroy"></a>allocator_traits:: destroy
- 使用指定的分配器调用对象上的构造函数而不释放其内存的静态方法。  
+##  <a name="destroy"></a>  allocator_traits::destroy
+ Static method that uses a specified allocator to call the destructor on an object without deallocating its memory.  
   
 ```cpp  
 template <class Uty>
 static void destroy(Alloc& al, Uty* ptr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `al`  
- 分配器对象。  
+ An allocator object.  
   
  `ptr`  
- 指向对象位置的指针。  
+ A pointer to the location of the object.  
   
-### <a name="remarks"></a>备注  
- 如果该表达式形式正确，则此方法调用 `al.destroy(ptr)`；否则计算 `ptr->~Uty()` 的结果。  
+### <a name="remarks"></a>Remarks  
+ This method calls `al.destroy(ptr)`, if that expression is well formed; otherwise it evaluates `ptr->~Uty()`.  
   
-##  <a name="max_size"></a>allocator_traits:: max_size
- 可以分配使用指定的分配器确定对象的最大数目的静态方法。  
+##  <a name="max_size"></a>  allocator_traits::max_size
+ Static method that uses a specified allocator to determine the maximum number of objects that can be allocated.  
   
 ```cpp  
 static size_type max_size(const Alloc& al);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `al`  
- 分配器对象。  
+ An allocator object.  
   
-### <a name="remarks"></a>备注  
- 如果该表达式形式正确，则此方法返回 `al.max_size()`；否则返回 `numeric_limits<size_type>::max()`。  
+### <a name="remarks"></a>Remarks  
+ This method returns `al.max_size()`, if that expression is well formed; otherwise it returns `numeric_limits<size_type>::max()`.  
   
-##  <a name="select_on_container_copy_construction"></a>allocator_traits:: select_on_container_copy_construction
- 在指定的分配器上调用 `select_on_container_copy_construction` 的静态方法。  
+##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
+ Static method that calls `select_on_container_copy_construction` on the specified allocator.  
   
 ```cpp  
 static Alloc select_on_container_copy_construction(const Alloc& al);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `al`  
- 分配器对象。  
+ An allocator object.  
   
-### <a name="return-value"></a>返回值  
- 如果该类型形式正确，则此方法返回 `al.select_on_container_copy_construction()`；否则返回 `al`。  
+### <a name="return-value"></a>Return Value  
+ This method returns `al.select_on_container_copy_construction()`, if that type is well formed; otherwise it returns `al`.  
   
-### <a name="remarks"></a>备注  
- 此方法用于在所关联的容器为构造副本时指定分配器。  
+### <a name="remarks"></a>Remarks  
+ This method is used to specify an allocator when the associated container is copy-constructed.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)   
  [pointer_traits Struct](../standard-library/pointer-traits-struct.md)   
- [scoped_allocator_adaptor 类](../standard-library/scoped-allocator-adaptor-class.md)
+ [scoped_allocator_adaptor Class](../standard-library/scoped-allocator-adaptor-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "basic_ofstream 类 |Microsoft 文档"
+title: basic_ofstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_ofstream
 - fstream/std::basic_ofstream
 - fstream/std::basic_ofstream::close
 - fstream/std::basic_ofstream::is_open
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_ofstream class
+- std::basic_ofstream [C++]
+- std::basic_ofstream [C++], close
+- std::basic_ofstream [C++], is_open
+- std::basic_ofstream [C++], open
+- std::basic_ofstream [C++], rdbuf
+- std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 caps.latest.revision: 24
 author: corob-msft
@@ -39,37 +43,37 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f77cfe752aa297ea1237a7ac0467267d535ae852
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2f91e9647694de131a144406560d9a3992dc5915
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicofstream-class"></a>basic_ofstream 类
-描述一个对象，该对象可控制将元素和编码对象插入到 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 类的流缓冲区的操作，其中 `Elem` 类型的元素的字符特征由 `Tr` 类确定。  
+# <a name="basicofstream-class"></a>basic_ofstream Class
+Describes an object that controls insertion of elements and encoded objects into a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, with elements of type `Elem`, whose character traits are determined by the class `Tr`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_ofstream : public basic_ostream<Elem, Tr>
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- 文件缓冲区的基本元素。  
+ The basic element of the file buffer.  
   
  `Tr`  
- 文件缓冲区的基本元素的特征（通常是 `char_traits`< `Elem`>）。  
+ The traits of the basic element of the file buffer (usually `char_traits`< `Elem`>).  
   
-## <a name="remarks"></a>备注  
- 当将 `basic_ofstream` 的 `wchar_t` 专用化写入文件时，如果在文本模式下打开该文件，则它将编写 MBCS 序列。 内部表示形式将使用 `wchar_t` 字符的缓冲区。  
+## <a name="remarks"></a>Remarks  
+ When the `wchar_t` specialization of `basic_ofstream` writes to the file, if the file is opened in text mode it will write a MBCS sequence. The internal representation will use a buffer of `wchar_t` characters.  
   
- 该对象存储 `basic_filebuf`< `Elem`, `Tr`> 类的对象。  
+ The object stores an object of class `basic_filebuf`< `Elem`, `Tr`>.  
   
-## <a name="example"></a>示例  
- 下面的示例演示了如何创建 `basic_ofstream` 对象和向其写入文本。  
+## <a name="example"></a>Example  
+ The following example shows how to create a `basic_ofstream` object and write text to it.  
   
 ```  
 // basic_ofstream_class.cpp  
@@ -89,35 +93,35 @@ int main(int argc, char **argv)
 }  
 ```  
   
-### <a name="constructors"></a>构造函数  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_ofstream](#basic_ofstream)|创建 `basic_ofstream` 类型的对象。|  
+|[basic_ofstream](#basic_ofstream)|Creates an object of type `basic_ofstream`.|  
   
-### <a name="member-functions"></a>成员函数  
-  
-|||  
-|-|-|  
-|[close](#close)|关闭文件。|  
-|[is_open](#is_open)|确定文件是否打开。|  
-|[open](#open)|打开文件。|  
-|[rdbuf](#rdbuf)|返回存储的流缓冲区的地址。|  
-|[swap](#swap)|将此 `basic_ofstream` 的内容与提供的 `basic_ofstream` 的内容进行交换。|  
-  
-### <a name="operators"></a>运算符  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|分配此流对象的内容。 这是一种移动赋值，所涉及的 `rvalue reference` 不会留下副本。|  
+|[close](#close)|Closes a file.|  
+|[is_open](#is_open)|Determines if a file is open.|  
+|[open](#open)|Opens a file.|  
+|[rdbuf](#rdbuf)|Returns the address of the stored stream buffer.|  
+|[swap](#swap)|Exchange the contents of this `basic_ofstream` for the contents of the provided `basic_ofstream`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<fstream>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Assigns the content of this stream object. This is a move assignment involving an `rvalue reference` that does not leave a copy behind.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<fstream>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_ofstream"></a>  basic_ofstream::basic_ofstream  
- 创建 `basic_ofstream` 类型的对象。  
+ Creates an object of type `basic_ofstream`.  
   
 ```
 basic_ofstream();
@@ -136,28 +140,28 @@ basic_ofstream(
     basic_ofstream&& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Filename`  
- 要打开的文件的名称。  
+ The name of the file to open.  
   
  `_Mode`  
- [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
- 默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。  
+ The default file opening protection, equivalent to the `shflag` parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
   
  `right`  
- 对 `basic_ofstream` 对象的右值引用用于初始化此 `basic_ofstream` 对象。  
+ The rvalue reference to the `basic_ofstream` object being used to initialize this `basic_ofstream` object.  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数通过调用 [basic_iostream](../standard-library/basic-ostream-class.md)(**sb**) 来初始化基类，其中 **sb** 是类 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 的存储对象。 通过调用 `basic_filebuf`< `Elem`, `Tr`>，它还可以初始化 **sb**。  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [basic_ostream](../standard-library/basic-ostream-class.md)( **sb**), where **sb** is the stored object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. It also initializes **sb** by calling `basic_filebuf`< `Elem`, `Tr`>.  
   
- 通过调用 `basic_ostream`( **sb**)，第二个和第三个构造函数可初始化基类。 它还可以初始化 **sb**，方法是调用 `basic_filebuf`< `Elem`, `Tr`>，然后调用 **sb**。 [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)。 如果后一个函数返回一个空指针，则该构造函数调用 [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。  
+ The second and third constructors initializes the base class by calling `basic_ostream`( **sb**). It also initializes **sb** by calling `basic_filebuf`< `Elem`, `Tr`> and then **sb**. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). If the latter function returns a null pointer, the constructor calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
   
- 第四个构造函数是一个 copy 函数。 它可以初始化具有 `right` 的内容的对象，将其视为右值引用。  
+ The fourth constructor is a copy function. It initializes the object with the contents of `right`, treated as an rvalue reference.  
   
-### <a name="example"></a>示例  
-  下面的示例演示了如何创建 `basic_ofstream` 对象和向其写入文本。  
+### <a name="example"></a>Example  
+  The following example shows how to create a `basic_ofstream` object and write text to it.  
   
 ```  
 // basic_ofstream_ctor.cpp  
@@ -178,32 +182,32 @@ int main(int argc, char **argv)
 ```  
   
 ##  <a name="close"></a>  basic_ofstream::close  
- 关闭文件。  
+ Closes a file.  
   
 ```
 void close();
 ```  
   
-### <a name="remarks"></a>备注  
- 此成员函数调用 [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[close](../standard-library/basic-filebuf-class.md#close)。  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[close](../standard-library/basic-filebuf-class.md#close).  
   
-### <a name="example"></a>示例  
-  有关如何使用 **close** 的示例，请参阅 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example that uses **close**.  
   
 ##  <a name="is_open"></a>  basic_ofstream::is_open  
- 指示文件是否打开。  
+ Indicates whether a file is open.  
   
 ```
 bool is_open() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果文件已打开，则为 `true`，否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the file is open, `false` otherwise.  
   
-### <a name="remarks"></a>备注  
- 此成员函数返回 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ofstream_is_open.cpp  
@@ -226,7 +230,7 @@ int main( )
 ```  
   
 ##  <a name="open"></a>  basic_ofstream::open  
- 打开文件。  
+ Opens a file.  
   
 ```
 void open(
@@ -248,71 +252,71 @@ void open(
     ios_base::openmode _Mode);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Filename`  
- 要打开的文件的名称。  
+ The name of the file to open.  
   
  `_Mode`  
- [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
- 默认文件打开保护，等同于 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 参数。  
+ The default file opening protection, equivalent to the `shflag` parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
   
-### <a name="remarks"></a>备注  
- 此成员函数调用 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`)。 如果该函数返回一个空指针，则该函数调用 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). If that function returns a null pointer, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
   
-### <a name="example"></a>示例  
-  有关如何使用 **open** 的示例，请参阅 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)。  
+### <a name="example"></a>Example  
+  See [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) for an example that uses **open**.  
   
 ##  <a name="op_eq"></a>  basic_ofstream::operator=  
- 分配此流对象的内容。 这是一种移动赋值，所涉及的 `rvalue reference` 不会留下副本。  
+ Assigns the content of this stream object. This is a move assignment involving an `rvalue reference` that does not leave a copy behind.  
   
 ```
 basic_ofstream& operator=(basic_ofstream&& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 对 `basic_ofstream` 对象的右值引用。  
+ An rvalue reference to a `basic_ofstream` object.  
   
-### <a name="return-value"></a>返回值  
- 返回 `*this`。  
+### <a name="return-value"></a>Return Value  
+ Returns `*this`.  
   
-### <a name="remarks"></a>备注  
- 成员运算符使用 `right` 内容替换该对象的内容，被视为右值引用。  
+### <a name="remarks"></a>Remarks  
+ The member operator replaces the contents of the object by using the contents of `right`, treated as an rvalue reference.  
   
 ##  <a name="rdbuf"></a>  basic_ofstream::rdbuf  
- 返回存储的流缓冲区的地址。  
+ Returns the address of the stored stream buffer.  
   
 ```
 basic_filebuf<Elem, Tr> *rdbuf() const
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回存储的流缓冲区的地址。  
+### <a name="return-value"></a>Return Value  
+ Returns the address of the stored stream buffer.  
   
-### <a name="example"></a>示例  
-  有关如何使用 `rdbuf` 的示例，请参阅 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example that uses `rdbuf`.  
   
 ##  <a name="swap"></a>  basic_ofstream::swap  
- 交换两个 `basic_ofstream` 对象的内容。  
+ Exchanges the contents of two `basic_ofstream` objects.  
   
 ```
 void swap(basic_ofstream& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 对另一个 `basic_ofstream` 对象的 `lvalue` 引用。  
+ An `lvalue` reference to another `basic_ofstream` object.  
   
-### <a name="remarks"></a>备注  
- 此成员函数将此对象的内容与 `right` 的内容进行交换。  
+### <a name="remarks"></a>Remarks  
+ The member function exchanges the contents of this object for the contents of `right`.  
   
-## <a name="see-also"></a>另请参阅  
- [basic_ostream 类](../standard-library/basic-ostream-class.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 编程](../standard-library/iostream-programming.md)   
- [iostreams 约定](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [basic_ostream Class](../standard-library/basic-ostream-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

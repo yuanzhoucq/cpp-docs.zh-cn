@@ -1,5 +1,5 @@
 ---
-title: "valarray 类 | Microsoft Docs"
+title: valarray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- valarray
 - valarray/std::valarray
 - valarray/std::valarray::value_type
 - valarray/std::valarray::apply
@@ -25,7 +24,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- valarray class
+- std::valarray [C++]
+- std::valarray [C++], value_type
+- std::valarray [C++], apply
+- std::valarray [C++], cshift
+- std::valarray [C++], free
+- std::valarray [C++], max
+- std::valarray [C++], min
+- std::valarray [C++], resize
+- std::valarray [C++], shift
+- std::valarray [C++], size
+- std::valarray [C++], sum
+- std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 caps.latest.revision: 23
 author: corob-msft
@@ -45,86 +55,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b54bd0f6ca1dcd2efba32817c9c732045775cd8c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d5d6c8c2ea51fc2eb1172cbad773e2269affd058
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="valarray-class"></a>valarray 类
-该模板类描述了一个对象，该对象控制类型 **Type** 的元素序列，这些元素存储为数组并用于执行高速数学运算，且针对计算性能进行了优化。  
+# <a name="valarray-class"></a>valarray Class
+The template class describes an object that controls a sequence of elements of type **Type** that are stored as an array, designed for performing high-speed mathematical operations, and optimized for computational performance.  
   
-## <a name="remarks"></a>备注  
- 此类是一组有序值的数学概念表示形式，元素从 0 开始按顺序编号。 此类描述为一个近容器，因为它支持一些（并非所有）第一类序列容器（如 [vector](../standard-library/vector-class.md)）支持的功能。 它在以下两个重要方面不同于模板类矢量：  
+## <a name="remarks"></a>Remarks  
+ The class is a representation of the mathematical concept of an ordered set of values and the elements are numbered sequentially from zero. The class is described as a near container because it supports some, but not all, of the capabilities that first-class sequence containers, such as [vector](../standard-library/vector-class.md), support. It differs from template class vector in two important ways:  
   
--   它定义了具有相同类型和长度的 **valarray\<Type>** 对象的相应元素之间的大量算术运算，例如 *xarr* = cos( *yarr*) + sin( *zarr*)。  
+-   It defines numerous arithmetic operations between corresponding elements of **valarray\<Type>** objects of the same type and length, such as *xarr* = cos( *yarr*) + sin( *zarr*).  
   
--   通过重载 [operator[]](#op_at)，它定义了各种下标 **valarray\<Type>** 对象的有趣方式。  
+-   It defines a variety of interesting ways to subscript a **valarray\<Type>** object, by overloading [operator&#91;&#93;](#op_at).  
   
- **Type** 类的对象：  
+ An object of class **Type**:  
   
--   具有公共默认构造函数、析构函数、复制构造函数、赋值运算符和常规行为。  
+-   Has a public default constructor, destructor, copy constructor, and assignment operator, with conventional behavior.  
   
--   根据需要，定义适用于浮点类型的算术运算符、数学函数和常规行为。  
+-   Defines the arithmetic operators and math functions, as needed, that are defined for the floating-point types, with conventional behavior.  
   
- 具体而言，复制构造和后跟分配的默认构造之间可能不存在任何细微的差异。 对 **Type** 类的对象执行的所有操作都不会引发异常。  
+ In particular, no subtle differences may exist between copy construction and default construction followed by assignment. None of the operations on objects of class **Type** may throw exceptions.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[valarray](#valarray)|构造一个 `valarray`，其具有特定大小、包含特定值的元素、作为另一个 `valarray` 的副本或另一个 `valarray` 的子集。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[value_type](#value_type)|一种类型，表示存储在 `valarray` 中的元素的类型。|  
+|[valarray](#valarray)|Constructs a `valarray` of a specific size or with elements of a specific value or as a copy of another `valarray` or subset of another `valarray`.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[apply](#apply)|将指定函数应用到 `valarray` 的每个元素。|  
-|[cshift](#cshift)|将 `valarray` 中的所有元素循环移动指定数目的位置。|  
-|[free](#free)|释放 `valarray` 使用的内存。|  
-|[max](#max)|查找 `valarray` 中的最大元素。|  
-|[min](#min)|查找 `valarray` 中的最小元素。|  
-|[resize](#resize)|将 `valarray` 中元素的数量更改为指定数量，根据需要添加或删除元素。|  
-|[shift](#shift)|将 `valarray` 的所有元素移动指定数目的位置。|  
-|[size](#size)|查找 `valarray` 中的元素数目。|  
-|[sum](#sum)|确定长度不为零的 `valarray` 中的所有元素的总和。|  
+|[value_type](#value_type)|A type that represents the type of element stored in a `valarray`.|  
+  
+### <a name="member-functions"></a>Member Functions  
+  
+|||  
+|-|-|  
+|[apply](#apply)|Applies a specified function to each element of a `valarray`.|  
+|[cshift](#cshift)|Cyclically shifts all the elements in a `valarray` by a specified number of positions.|  
+|[free](#free)|Frees the memory used by the `valarray`.|  
+|[max](#max)|Finds the largest element in a `valarray`.|  
+|[min](#min)|Finds the smallest element in a `valarray`.|  
+|[resize](#resize)|Changes the number of elements in a `valarray` to a specified number, adding or removing elements as required.|  
+|[shift](#shift)|Shifts all the elements in a `valarray` by a specified number of positions.|  
+|[size](#size)|Finds the number of elements in a `valarray`.|  
+|[sum](#sum)|Determines the sum of all the elements in a `valarray` of nonzero length.|  
 |[swap](#swap)||  
   
-### <a name="operators"></a>运算符  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!](#op_not)|一个一元运算符，它用于获取 `valarray` 中每个元素的逻辑 `NOT` 值。|  
-|[operator%=](#op_mod_eq)|获取用指定 `valarray` 或元素类型的值对数组元素进行点除所得的余数。|  
-|[operator&=](#op_amp_eq)|获取数组中元素的按位 `AND`，该数组具有指定 `valarray` 中的对应元素或具有元素类型的值。|  
-|[operator>>=](#op_gt_gt_eq)|将 `valarray` 操作数中的每个元素向右移动指定数目的位置，或者按第二个 `valarray` 指定的点算数右移。|  
-|[operator<<=](#op_lt_lt_eq)|将 `valarray` 操作数中的每个元素向左移动指定数目的位置，或者按第二个 `valarray` 指定的点算数左移。|  
-|[operator*=](#op_star_eq)|将指定 `valarray` 的元素或元素类型的值与操作数 `valarray` 进行点乘。|  
-|[operator+](#op_add)|一个一元运算符，该运算符将 `valarray` 中的所有元素相加。|  
-|[operator+=](#op_add_eq)|将指定 `valarray` 的元素或元素类型的值与操作数 `valarray` 进行点加。|  
-|[operator-](#operator-)|一个一元运算符，该运算符将 `valarray` 中的所有元素相减。|  
-|[operator-=](#operator-_eq)|将指定 `valarray` 的元素或元素类型的值与操作数 `valarray` 进行点减。|  
-|[operator/=](#op_div_eq)|将操作数 `valarray` 与指定 `valarray` 的元素或元素类型的值进行点除。|  
-|[operator=](#op_eq)|将元素分配给 `valarray`，其值可以直接指定，也可以作为一些其他 `valarray` 的一部分指定，或由 `slice_array`、`gslice_array`、`mask_array` 或 `indirect_array` 指定。|  
-|[operator[]](#op_at)|返回对指定索引或指定子集处的元素或其值的引用。|  
-|[operator^=](#op_xor_eq)|获取数组与指定 valarray 或元素类型的值进行的按点排除逻辑或运算符 (`XOR`)。|  
-|[operator|=](#op_or_eq)|获取数组中元素的按位 `OR`，该数组具有指定 `valarray` 中的对应元素或具有元素类型的值。|  
-|[operator~](#op_dtor)|一个一元运算符，该运算符获取 `valarray` 中每个元素的按位 `NOT` 值。|  
+|[operator!](#op_not)|A unary operator that obtains the logical `NOT` values of each element in a `valarray`.|  
+|[operator%=](#op_mod_eq)|Obtains the remainder of dividing the elements of an array element-wise either by a specified `valarray` or by a value of the element type.|  
+|[operator&=](#op_amp_eq)|Obtains the bitwise `AND` of elements in an array either with the corresponding elements in a specified `valarray` or with a value of the element type.|  
+|[operator>>=](#op_gt_gt_eq)|Right-shifts the bits for each element of a `valarray` operand a specified number of positions or by an element-wise amount specified by a second `valarray`.|  
+|[operator<<=](#op_lt_lt_eq)|Left-shifts the bits for each element of a `valarray` operand a specified number of positions or by an element-wise amount specified by a second `valarray`.|  
+|[operator*=](#op_star_eq)|Multiplies the elements of a specified `valarray` or a value of the element type, element-wise, to an operand `valarray`.|  
+|[operator+](#op_add)|A unary operator that applies a plus to each element in a `valarray`.|  
+|[operator+=](#op_add_eq)|Adds the elements of a specified `valarray` or a value of the element type, element-wise, to an operand `valarray`.|  
+|[operator-](#operator-)|A unary operator that applies a minus to each element in a `valarray`.|  
+|[operator-=](#operator-_eq)|Subtracts the elements of a specified `valarray` or a value of the element type, element-wise, from an operand `valarray`.|  
+|[operator/=](#op_div_eq)|Divides an operand `valarray` element-wise by the elements of a specified `valarray` or a value of the element type.|  
+|[operator=](#op_eq)|Assigns elements to a `valarray` whose values are specified either directly or as part of some other `valarray` or by a `slice_array`, `gslice_array`, `mask_array`, or `indirect_array`.|  
+|[operator&#91;&#93;](#op_at)|Returns a reference to an element or its value at specified index or a specified subset.|  
+|[operator^=](#op_xor_eq)|Obtains the element-wise exclusive logical or operator ( `XOR`) of an array with either a specified valarray or a value of the element type.|  
+|[operator&#124;=](#op_or_eq)|Obtains the bitwise `OR` of elements in an array either with the corresponding elements in a specified `valarray` or with a value of the element type.|  
+|[operator~](#op_dtor)|A unary operator that obtains the bitwise `NOT` values of each element in a `valarray`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
 ##  <a name="apply"></a>  valarray::apply  
- 将指定函数应用到 valarray 的每个元素。  
+ Applies a specified function to each element of a valarray.  
   
 ```  
 valarray<Type> apply(Type _Func(Type)) const;
@@ -132,20 +142,20 @@ valarray<Type> apply(Type _Func(Type)) const;
 valarray<Type> apply(Type _Func(constType&)) const;
 ```  
   
-### <a name="parameters"></a>参数  
- _Func(Type)  
- 函数对象将应用于操作数 valarray 的每个元素。  
+### <a name="parameters"></a>Parameters  
+ *_Func(Type)*  
+ The function object to be applied to each element of the operand valarray.  
   
- _Func(const Type&)  
- const 的函数对象将应用于操作数 valarray 的每个元素。  
+ *_Func(const Type&)*  
+ The function object for const to be applied to each element of the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- 一个 valarray，它的元素已使 `_Func` 将点算应用到操作数 valarray 的元素。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements have had `_Func` applied element-wise to the elements of the operand valarray.  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回 [valarray](../standard-library/valarray-class.md)**\<Type>** 类的对象，长度为 [size](#size)，其中每个元素 `I` 为 **func**(( **\*this**)[ `I`])。  
+### <a name="remarks"></a>Remarks  
+ The member function returns an object of class [valarray](../standard-library/valarray-class.md)**\<Type>**, of length [size](#size), each of whose elements `I` is **func**(( **\*this**)[ `I`]).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_apply.cpp  
@@ -195,25 +205,25 @@ valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
 ```  
   
 ##  <a name="cshift"></a>  valarray::cshift  
- 将 valarray 中的所有元素以指定位数循环移动。  
+ Cyclically shifts all the elements in a valarray by a specified number of positions.  
   
 ```  
 valarray<Type> cshift(int count) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要向前移动元素的位数。  
+ The number of places the elements are to be shifted forward.  
   
-### <a name="return-value"></a>返回值  
- 一个新 valarray，其中所有元素已向 valarray 前面循环移动 `count` 个位置，左侧对应它在操作数 valarray 中的位置。  
+### <a name="return-value"></a>Return Value  
+ A new valarray in which all the elements have been moved `count` positions cyclically toward the front of the valarray, left with respect to their positions in the operand valarray.  
   
-### <a name="remarks"></a>备注  
- 正值 `count` 将元素向左循环移动 `count` 个位置。  
+### <a name="remarks"></a>Remarks  
+ A positive value of `count` shifts the elements cyclically left `count` places.  
   
- 负值 `count` 将元素向左循环移动 `count` 个位置。  
+ A negative value of `count` shifts the elements cyclically right `count` places.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_cshift.cpp  
@@ -268,14 +278,14 @@ va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
 ```  
   
 ##  <a name="free"></a>  valarray::free  
- 释放 valarray 使用的内存。  
+ Frees the memory used by the valarray.  
   
 ```  
 void free();
 ```  
   
-### <a name="remarks"></a>备注  
- 此非标准函数等效于分配空 valarray。 例如：  
+### <a name="remarks"></a>Remarks  
+ This nonstandard function is equivalent to assigning an empty valarray. For example:  
   
 ```  
 valarray<T> v;  
@@ -285,19 +295,19 @@ v = valarray<T>();
 ```  
   
 ##  <a name="max"></a>  valarray::max  
- 查找 valarray 中的最大元素。  
+ Finds the largest element in a valarray.  
   
 ```  
 Type max() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 操作数 valarray 中的元素最大值。  
+### <a name="return-value"></a>Return Value  
+ The maximum value of the elements in the operand valarray.  
   
-### <a name="remarks"></a>备注  
- 成员函数此方法比较值：应用 **Type** 类的元素对之间的 **operator\<** 或 **operator>**，因此，必须为该 **Type** 元素提供运算符。  
+### <a name="remarks"></a>Remarks  
+ The member function compares values by applying **operator\<** or **operator>** between pairs of elements of class **Type**, for which operators must be provided for the element **Type**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_max.cpp  
@@ -334,19 +344,19 @@ The largest element in the valarray is: 13.
 ```  
   
 ##  <a name="min"></a>  valarray::min  
- 查找 valarray 中的最小元素。  
+ Finds the smallest element in a valarray.  
   
 ```  
 Type min() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 操作数 valarray 中的元素最小值。  
+### <a name="return-value"></a>Return Value  
+ The minimum value of the elements in the operand valarray.  
   
-### <a name="remarks"></a>备注  
- 成员函数此方法比较值：应用 **Type** 类的元素对之间的 **operator\<** 或 **operator>**，因此，必须为该 **Type** 元素提供运算符。  
+### <a name="remarks"></a>Remarks  
+ The member function compares values by applying **operator\<** or **operator>** between pairs of elements of class **Type**, for which operators must be provided for the element **Type**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_min.cpp  
@@ -382,22 +392,22 @@ The smallest element in the valarray is: -9.
 *\  
 ```  
   
-##  <a name="op_not"></a>valarray::operator!  
- 一个一元运算符，该运算符获取 valarray 中每个元素的逻辑 **NOT** 值。  
+##  <a name="op_not"></a>  valarray::operator!  
+ A unary operator that obtains the logical **NOT** values of each element in a valarray.  
   
 ```  
 valarray<bool> operator!() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 布尔值的 valarray，这些布尔值表示操作数 valarray 的元素值的求反运算。  
+### <a name="return-value"></a>Return Value  
+ The valarray of Boolean values that are the negation of the element values of the operand valarray.  
   
-### <a name="remarks"></a>备注  
- 逻辑运算 **NOT** 将对元素进行求反，因为它会将所有零值转换为一个整体，将所有非零值视为一个整体，然后将它们转换为零值。 布尔值的返回 valarray 的大小与操作数 valarray 相同。  
+### <a name="remarks"></a>Remarks  
+ The logical operation **NOT** negates the elements because it converts all zeros into ones and regards all nonzero values as ones and converts them into zeros. The returned valarray of Boolean values is of the same size as the operand valarray.  
   
- 另外，valarray 的元素 `char` 和 `int` 的二进制表示形式内，还有在单个位上进行求反的按位 **NOT**[valarray::operator~](#op_dtor)。  
+ There is also a bitwise **NOT**[valarray::operator~](#op_dtor) that negates on the level of individual bits within the binary representation of `char` and `int` elements of a valarray.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_lognot.cpp  
@@ -436,8 +446,8 @@ The element-by-element result of the logical NOT operator! is the
 *\  
 ```  
   
-##  <a name="op_mod_eq"></a>valarray::operator%=  
- 获取用指定 valarray 或元素类型的值对数组元素进行点除所得的余数。  
+##  <a name="op_mod_eq"></a>  valarray::operator%=  
+ Obtains the remainder of dividing the elements of an array element-wise either by a specified valarray or by a value of the element type.  
   
 ```  
 valarray<Type>& operator%=(const valarray<Type>& right);
@@ -445,14 +455,14 @@ valarray<Type>& operator%=(const valarray<Type>& right);
 valarray<Type>& operator%=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。  
+ The valarray or value of an element type identical to that of the operand valarray that is to divide, element-wise, the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- 一个 valarray，它的元素为用 `right` 对操作数 valarray 进行点除所得的余数  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the remainder from the element-wise division of the operand valarray by `right`  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_rem.cpp  
@@ -498,8 +508,8 @@ The remainders from the element-by-element division is the
 *\  
 ```  
   
-##  <a name="and_eq"></a>valarray::operator&amp;=  
- 获取数组中元素的按位 **AND**，该数组具有指定 valarray 中的对应元素或具有元素类型的值。  
+##  <a name="and_eq"></a>  valarray::operator&amp;=  
+ Obtains the bitwise **AND** of elements in an array either with the corresponding elements in a specified valarray or with a value of the element type.  
   
 ```  
 valarray<Type>& operator&=(const valarray<Type>& right);
@@ -507,19 +517,19 @@ valarray<Type>& operator&=(const valarray<Type>& right);
 valarray<Type>& operator&=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过逻辑 **AND** 与操作数 valarray 进行点算合并。  
+ The valarray or value of an element type identical to that of the operand valarray that is to be combined, element-wise, by the logical **AND** with the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- 一个 valarray，它的元素为用 `right`对操作数 valarray 进行的点算逻辑 **AND**  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise logical **AND** of the operand valarray by `right`  
   
-### <a name="remarks"></a>备注  
- 按位运算仅可用于操作 `char` 和 `int` 数据类型中的位和变体，不可用于更复杂的数据类型（如 **float**、**double**、**longdouble**、`void` 和 `bool` 等）。  
+### <a name="remarks"></a>Remarks  
+ A bitwise operation can only be used to manipulate bits in `char` and `int` data types and variants and not on **float**, **double**, **longdouble**, `void`, `bool`, or other, more complex data types.  
   
- 按位 AND 具有与逻辑 **AND** 相同的事实表，但是按位 AND 适用于单个位级别上的数据类型。 假设有位 b1 和 b2，如果两个位都为 true，则 b1 **AND** b2 为 **true**；如果至少一个为 false，则为 **false**。  
+ The bitwise AND has the same truth table as the logical **AND** but applies to the data type on the level of the individual bits. Given bits *b*1 and *b*2, *b*1 **AND** *b*2 is **true** if both bits are true; **false** if at least one is false.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_bitand.cpp  
@@ -565,8 +575,8 @@ The element-by-element result of the logical AND operator&= is the
 *\  
 ```  
   
-##  <a name="op_gt_gt_eq"></a>valarray::operator&gt;&gt;=  
- 将 valarray 操作数的每个元素的位以指定数位向右移动，或按由第二个 valarray 指定的元素指向值向右移位。  
+##  <a name="op_gt_gt_eq"></a>  valarray::operator&gt;&gt;=  
+ Right-shifts the bits for each element of a valarray operand a specified number of positions or by an element-wise amount specified by a second valarray.  
   
 ```  
 valarray<Type>& operator>>=(const valarray<Type>& right);
@@ -574,17 +584,17 @@ valarray<Type>& operator>>=(const valarray<Type>& right);
 valarray<Type>& operator>>=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 指示右移位数或 valarray（其元素指示右移的元素指向值）。  
+ The value indicating the amount of right shift or valarray whose elements indicate the element-wise amount of right shift.  
   
-### <a name="return-value"></a>返回值  
- 一个 valarray，它的元素按 `right` 中指定的位数向右移动。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements have been shifted right the amount specified in `right`.  
   
-### <a name="remarks"></a>备注  
- 有符号的数字必须保留其符号。  
+### <a name="remarks"></a>Remarks  
+ Signed numbers have their signs preserved.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_rs.cpp  
@@ -630,8 +640,8 @@ The element-by-element result of the right shift is the
 *\  
 ```  
   
-##  <a name="op_lt_lt_eq"></a>valarray::operator&lt;&lt;=  
- 将 valarray 操作数的每个元素的位以指定数位向右移动，或按由第二个 valarray 指定的元素指向值向左移位。  
+##  <a name="op_lt_lt_eq"></a>  valarray::operator&lt;&lt;=  
+ Left-shifts the bits for each element of a valarray operand a specified number of positions or by an element-wise amount specified by a second valarray.  
   
 ```  
 valarray<Type>& operator<<=(const valarray<Type>& right);
@@ -639,17 +649,17 @@ valarray<Type>& operator<<=(const valarray<Type>& right);
 valarray<Type>& operator<<=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 指示左移位数或 valarray（其元素指示左移的元素指向值）。  
+ The value indicating the amount of left shift or valarray whose elements indicate the element-wise amount of left shift.  
   
-### <a name="return-value"></a>返回值  
- 一个 valarray，它的元素已按 `right` 中指定的位数向左移动。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements have been shifted left the amount specified in `right`.  
   
-### <a name="remarks"></a>备注  
- 有符号的数字必须保留其符号。  
+### <a name="remarks"></a>Remarks  
+ Signed numbers have their signs preserved.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_ls.cpp  
@@ -696,8 +706,8 @@ The element-by-element result of the left shift
 *\  
 ```  
   
-##  <a name="op_star_eq"></a>valarray::operator*=  
- 将指定 valarray 的元素或元素类型的值与操作数 valarray 进行点乘。  
+##  <a name="op_star_eq"></a>  valarray::operator*=  
+ Multiplies the elements of a specified valarray or a value of the element type, element-wise, to an operand valarray.  
   
 ```  
 valarray<Type>& operator*=(const valarray<Type>& right);
@@ -705,14 +715,14 @@ valarray<Type>& operator*=(const valarray<Type>& right);
 valarray<Type>& operator*=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点乘。  
+ The valarray or value of an element type identical to that of the operand valarray that is to multiply, element-wise, the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- Valarray 的元素操作数 valarray 的元素指向乘积和`right`。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise product of the operand valarray and `right`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_emult.cpp  
@@ -758,17 +768,17 @@ The element-by-element result of the multiplication is the
 *\  
 ```  
   
-##  <a name="op_add"></a>valarray::operator+  
- 一个一元运算符，该运算符将 valarray 中的所有元素相加。  
+##  <a name="op_add"></a>  valarray::operator+  
+ A unary operator that applies a plus to each element in a valarray.  
   
 ```  
 valarray<Type> operator+() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个 valarray，它的元素是操作数数列的元素的和。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are plus those of the operand array.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_eplus.cpp  
@@ -807,8 +817,8 @@ The element-by-element result of the operator+ is the
 *\  
 ```  
   
-##  <a name="op_add_eq"></a>valarray::operator+=  
- 将指定 valarray 的元素或元素类型的值与操作数 valarray 进行点加。  
+##  <a name="op_add_eq"></a>  valarray::operator+=  
+ Adds the elements of a specified valarray or a value of the element type, element-wise, to an operand valarray.  
   
 ```  
 valarray<Type>& operator+=(const valarray<Type>& right);
@@ -816,14 +826,14 @@ valarray<Type>& operator+=(const valarray<Type>& right);
 valarray<Type>& operator+=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点加。  
+ The valarray or value of an element type identical to that of the operand valarray that is to be added, element-wise, to the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- Valarray 的元素操作数 valarray 的元素指向总和和`right`。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise sum of the operand valarray and `right`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_eadd.cpp  
@@ -870,16 +880,16 @@ The element-by-element result of the sum is the
 ```  
   
 ##  <a name="valarray__operator-"></a>  valarray::operator-  
- 一个一元运算符，该运算符将 valarray 中的所有元素相减。  
+ A unary operator that applies a minus to each element in a valarray.  
   
 ```  
 valarray<Type> operator-() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个 valarray，它的元素是操作数数列的元素的差。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are minus those of the operand array.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_eminus.cpp  
@@ -918,8 +928,8 @@ The element-by-element result of the operator+ is the
 *\  
 ```  
   
-##  <a name="valarray__operator-_eq"></a>valarray::operator-=  
- 将指定 valarray 的元素或元素类型的值与操作数 valarray 进行点减。  
+##  <a name="valarray__operator-_eq"></a>  valarray::operator-=  
+ Subtracts the elements of a specified valarray or a value of the element type, element-wise, from an operand valarray.  
   
 ```  
 valarray<Type>& operator-=(const valarray<Type>& right);
@@ -927,14 +937,14 @@ valarray<Type>& operator-=(const valarray<Type>& right);
 valarray<Type>& operator-=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点减。  
+ The valarray or value of an element type identical to that of the operand valarray that is to be subtracted, element-wise, from the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- Valarray 的元素操作数 valarray 的元素指向差值和`right`。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise difference of the operand valarray and `right`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_esub.cpp  
@@ -980,8 +990,8 @@ The element-by-element result of the difference is the
 *\  
 ```  
   
-##  <a name="op_div_eq"></a>valarray::operator/=  
- 将操作数 valarray 与指定 valarray 的元素或元素类型的值进行点除。  
+##  <a name="op_div_eq"></a>  valarray::operator/=  
+ Divides an operand valarray element-wise by the elements of a specified valarray or a value of the element type.  
   
 ```  
 valarray<Type>& operator/=(const valarray<Type>& right);
@@ -989,14 +999,14 @@ valarray<Type>& operator/=(const valarray<Type>& right);
 valarray<Type>& operator/=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于对操作数 valarray 进行点除。  
+ The valarray or value of an element type identical to that of the operand valarray that is to be divided, element-wise, into the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- 操作数 valarray 的元素指向商其元素的 valarray 除以`right`。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise quotient of the operand valarray divided by `right`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_ediv.cpp  
@@ -1042,8 +1052,8 @@ The element-by-element result of the quotient is the
 *\  
 ```  
   
-##  <a name="op_eq"></a>valarray::operator=  
- 将元素分配给 valarray，其值可以直接指定，也可以作为一些其他 valarray 的一部分指定，或由 slice_array、gslice_array、mask_array 或 indirect_array 指定。  
+##  <a name="op_eq"></a>  valarray::operator=  
+ Assigns elements to a valarray whose values are specified either directly or as part of some other valarray or by a slice_array, gslice_array, mask_array, or indirect_array.  
   
 ```  
 valarray<Type>& operator=(const valarray<Type>& right);
@@ -1061,40 +1071,40 @@ valarray<Type>& operator=(const mask_array<Type>& _Maskarray);
 valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要复制到操作数 valarray 中的 valarray。  
+ The valarray to be copied into the operand valarray.  
   
  `val`  
- 要分配给操作数 valarray 的元素的值。  
+ The value to be assigned to the elements of the operand valarray.  
   
  `_Slicearray`  
- 要复制到操作数 valarray 中的 slice_array。  
+ The slice_array to be copied into the operand valarray.  
   
  `_Gslicearray`  
- 要复制到操作数 valarray 中的 gslice_array。  
+ The gslice_array to be copied into the operand valarray.  
   
  `_Maskarray`  
- 要复制到操作数 valarray 中的 mask_array。  
+ The mask_array to be copied into the operand valarray.  
   
  `_Indarray`  
- 要复制到操作数 valarray 中的 indirect_array。  
+ The indirect_array to be copied into the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- 第一个成员运算符使用 `right` 控制的序列的副本替换受控序列。  
+### <a name="return-value"></a>Return Value  
+ The first member operator replaces the controlled sequence with a copy of the sequence controlled by `right`.  
   
- 第二个成员运算符与第一个成员运算符相同，但前者具有[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ The second member operator is the same as the first, but with an [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
- 第三个成员运算符使用 `val` 的副本替换受控序列的每个元素。  
+ The third member operator replaces each element of the controlled sequence with a copy of `val`.  
   
- 其余成员运算符将替换其参数选择的受控序列的元素，这些参数仅由 [operator[]](#op_at) 生成。  
+ The remaining member operators replace those elements of the controlled sequence selected by their arguments, which are generated only by [operator&#91;&#93;](#op_at).  
   
- 如果替换受控序列中的成员值取决于最初的受控序列中的成员，则结果不可确定。  
+ If the value of a member in the replacement controlled sequence depends on a member in the initial controlled sequence, the result is undefined.  
   
-### <a name="remarks"></a>备注  
- 如果受控序列的长度发生更改，则结果通常不可确定。 但是在此实现中，结果仅仅是使受控序列中元素的任何指针或引用均失效。  
+### <a name="remarks"></a>Remarks  
+ If the length of the controlled sequence changes, the result is generally undefined. In this implementation, however, the effect is merely to invalidate any pointers or references to elements in the controlled sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_assign.cpp  
@@ -1146,8 +1156,8 @@ The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
 *\  
 ```  
   
-##  <a name="op_at"></a>valarray::operator[]  
- 返回对指定索引或指定子集处的元素或其值的引用。  
+##  <a name="op_at"></a>  valarray::operator[]  
+ Returns a reference to an element or its value at specified index or a specified subset.  
   
 ```  
 Type& operator[](size_t _Off);
@@ -1175,35 +1185,35 @@ valarray<Type> operator[](const valarray<bool>& _Boolarray) const;
 valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 要对其进行赋值的元素的索引。  
+ The index of the element to be assigned a value.  
   
  `_Slicearray`  
- 一个 valarray 的 slice_array，它指定要选择或返回到新 valarray 的子集。  
+ A slice_array of a valarray that specifies a subset to be selected or returned to a new valarray.  
   
  `_Gslicearray`  
- 一个 valarray 的 gslice_array，它指定要选择或返回到新 valarray 的子集。  
+ A gslice_array of a valarray that specifies a subset to be selected or returned to a new valarray.  
   
- _Boolarray  
- 一个 valarray 的 bool_array，它指定要选择或返回到新 valarray 的子集。  
+ *_Boolarray*  
+ A bool_array of a valarray that specifies a subset to be selected or returned to a new valarray.  
   
  `_Indarray`  
- 一个 valarray 的 indirect_array，它指定要选择或返回到新 valarray 的子集。  
+ An indirect_array of a valarray that specifies a subset to be selected or returned to a new valarray.  
   
-### <a name="return-value"></a>返回值  
- 对指定索引或指定子集处的元素或其值的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to an element or its value at specified index or a specified subset.  
   
-### <a name="remarks"></a>备注  
- 成员运算符将重载，从而提供多种方法用于从 *\****this** 控制的元素序列中进行选择。 五个成员运算符中的第一组将配合 [operator=](#op_eq)（以及其他赋值运算符）的各种重载进行工作，从而允许受控序列的选择性替换（切片）。 所选的元素必须存在。  
+### <a name="remarks"></a>Remarks  
+ The member operator is overloaded to provide several ways to select sequences of elements from among those controlled by *\****this**. The first group of five member operators work in conjunction with various overloads of [operator=](#op_eq) (and other assigning operators) to allow selective replacement (slicing) of the controlled sequence. The selected elements must exist.  
   
- 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问 valarray 的边界之外的元素，将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error occurs if you attempt to access an element outside the bounds of the valarray.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用此运算符的示例，请参阅 [slice::slice](../standard-library/slice-class.md#slice) 和 [gslice::gslice](../standard-library/gslice-class.md#gslice) 的示例。  
+### <a name="example"></a>Example  
+  See the examples for [slice::slice](../standard-library/slice-class.md#slice) and [gslice::gslice](../standard-library/gslice-class.md#gslice) for an example of how to declare and use the operator.  
   
-##  <a name="op_xor_eq"></a>valarray::operator^=  
- 获取数组与指定 valarray 或元素类型的值进行的点排除逻辑或运算符 (**XOR**)。  
+##  <a name="op_xor_eq"></a>  valarray::operator^=  
+ Obtains the element-wise exclusive logical or operator ( **XOR**) of an array with either a specified valarray or a value of the element type.  
   
 ```  
 valarray<Type>& operator|=(const valarray<Type>& right);
@@ -1211,17 +1221,17 @@ valarray<Type>& operator|=(const valarray<Type>& right);
 valarray<Type>& operator|=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过排他逻辑 **XOR** 与操作数 valarray 进行点算合并。  
+ The valarray or value of an element type identical to that of the operand valarray that is to be combined, element-wise, by the exclusive logical **XOR** with the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- Valarray 的元素的元素指向，专用逻辑**XOR**的操作数 valarray 和`right`。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise, exclusive logical **XOR** of the operand valarray and `right`.  
   
-### <a name="remarks"></a>备注  
- 排他逻辑（或称为 **XOR**）具有以下语义：假设有元素 e1 和 e2，如果其中恰好有一个元素为 true，则 e1 **XOR** e2 为 **true**；如果两个元素都为 false 或都为 true，则为 **false**。  
+### <a name="remarks"></a>Remarks  
+ The exclusive logical or, referred to as **XOR**, has the following semantics: Given elements *e*1 and *e*2, *e*1 **XOR** *e*2 is **true** if exactly one of the elements is true; **false** if both elements are false or if both elements are true.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_exor.cpp  
@@ -1271,8 +1281,8 @@ The element-by-element result of the bitwise XOR operator^= is the
 *\  
 ```  
   
-##  <a name="op_or_eq"></a>valarray::operator&#124;=  
- 获取数组中元素的按位 `OR`，该数组具有指定 valarray 中的对应元素或具有元素类型的值。  
+##  <a name="op_or_eq"></a>  valarray::operator&#124;=  
+ Obtains the bitwise `OR` of elements in an array either with the corresponding elements in a specified valarray or with a value of the element type.  
   
 ```  
 valarray<Type>& operator|=(const valarray<Type>& right);
@@ -1280,19 +1290,19 @@ valarray<Type>& operator|=(const valarray<Type>& right);
 valarray<Type>& operator|=(const Type& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- valarray 或值与操作数 valarray 的 valarray 或值相同的元素类型，用于通过按位 `OR` 与操作数 valarray 进行点算合并。  
+ The valarray or value of an element type identical to that of the operand valarray that is to be combined, element-wise, by the bitwise `OR` with the operand valarray.  
   
-### <a name="return-value"></a>返回值  
- Valarray 的元素与按位`OR`的操作数 valarray 通过`right`。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are the element-wise bitwise `OR` of the operand valarray by `right`.  
   
-### <a name="remarks"></a>备注  
- 按位运算仅可用于操作 `char` 和 `int` 数据类型中的位和变体，不可用于更复杂的数据类型（如 **float**、**double**、**longdouble**、`void` 和 `bool` 等）。  
+### <a name="remarks"></a>Remarks  
+ A bitwise operation can only be used to manipulate bits in `char` and `int` data types and variants and not on **float**, **double**, **longdouble**, `void`, `bool`, or other, more complex data types.  
   
- 按位 `OR` 具有与逻辑 `OR` 相同的事实表，但是按位 OR 适用于单个位级别上的数据类型。 假设有位 b1 和 b2，如果至少有一个位为 true，则 b1 `OR` b2 为 **true**；如果两个位都为 false，则为 **false**。  
+ The bitwise `OR` has the same truth table as the logical `OR` but applies to the data type on the level of the individual bits. Given bits *b*1 and *b*2, *b*1 `OR` *b*2 is **true** if at least one of the bits is true; **false** if both bits are false.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_class_op_bitor.cpp  
@@ -1345,22 +1355,22 @@ The element-by-element result of the logical OR
 *\  
 ```  
   
-##  <a name="op_dtor"></a>valarray::operator~  
- 一个一元运算符，该运算符获取 valarray 中每个元素的按位 **NOT** 值。  
+##  <a name="op_dtor"></a>  valarray::operator~  
+ A unary operator that obtains the bitwise **NOT** values of each element in a valarray.  
   
 ```  
 valarray<Type> operator~() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 布尔值的 valarray，这些布尔值表示操作数 valarray 的元素值的按位 **NOT**。  
+### <a name="return-value"></a>Return Value  
+ The valarray of Boolean values that are the bitwise **NOT** of the element values of the operand valarray.  
   
-### <a name="remarks"></a>备注  
- 按位运算仅可用于操作 `char` 和 `int` 数据类型中的位和变体，不可用于更复杂的数据类型（如 **float**、**double**、**longdouble**、`void` 和 `bool` 等）。  
+### <a name="remarks"></a>Remarks  
+ A bitwise operation can only be used to manipulate bits in `char` and `int` data types and variants and not on **float**, **double**, **longdouble**, `void`, `bool` or other, more complex data types.  
   
- 按位 **NOT** 具有与逻辑 **NOT** 相同的事实表，但是按位 NOT 适用于单个位级别上的数据类型。 假设有位 b，如果 b 为 false，则 ~ *b* 为 true；如果 b 为 true，则为 false。 逻辑 **NOT**[operator!](#op_not) 在元素级别上适用，将所有非零值视为 **true**，结果为布尔值的 valarray。 相反，按位 **NOToperator~** 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。  
+ The bitwise **NOT** has the same truth table as the logical **NOT** but applies to the data type on the level of the individual bits. Given bit *b*, ~ *b* is true if *b* is false and false if *b* is true. The logical **NOT**[operator!](#op_not) applies on an element level, counting all nonzero values as **true**, and the result is a valarray of Boolean values. The bitwise **NOToperator~**, by contrast, can result in a valarray of values other than 0 or 1, depending on outcome of the bitwise operation.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_op_bitnot.cpp  
@@ -1437,7 +1447,7 @@ The element-by-element result of adding one
 ```  
   
 ##  <a name="resize"></a>  valarray::resize  
- 将 valarray 中的元素数更改为指定数量。  
+ Changes the number of elements in a valarray to a specified number.  
   
 ```  
 void resize(
@@ -1448,20 +1458,20 @@ void resize(
     const Type val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Newsize`  
- 调整大小后的 valarray 中的元素数。  
+ The number of elements in the resized valarray.  
   
  `val`  
- 要提供给调整大小后的 valarray 的元素的值。  
+ The value to be given to the elements of the resized valarray.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数使用其默认构造函数初始化元素。  
+### <a name="remarks"></a>Remarks  
+ The first member function initializes elements with their default constructor.  
   
- 受控序列中元素的任何指针或引用都会失效。  
+ Any pointers or references to elements in the controlled sequence are invalidated.  
   
-### <a name="example"></a>示例  
-  下面的示例演示如何使用 valarray::resize 成员函数。  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the valarray::resize member function.  
   
 ```  
 // valarray_resize.cpp  
@@ -1508,25 +1518,25 @@ The number of elements in the resized valarray is: 15.
 ```  
   
 ##  <a name="shift"></a>  valarray::shift  
- 将 valarray 中的所有元素按指定位数移动。  
+ Shifts all the elements in a valarray by a specified number of places.  
   
 ```  
 valarray<Type> shift(int count) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要向前移动元素的位数。  
+ The number of places the elements are to be shifted forward.  
   
-### <a name="return-value"></a>返回值  
- 一个新 valarray，其中所有元素已向 valarray 前面移动 `count` 个位置，左侧对应它在操作数 valarray 中的位置。  
+### <a name="return-value"></a>Return Value  
+ A new valarray in which all the elements have been moved `count` positions toward the front of the valarray, left with respect to their positions in the operand valarray.  
   
-### <a name="remarks"></a>备注  
- 正值 `count` 将元素向左移动 `count` 个位置，用零填充。  
+### <a name="remarks"></a>Remarks  
+ A positive value of `count` shifts the elements left `count` places, with zero fill.  
   
- 负值 `count` 将元素向左移动 `count` 个位置，用零填充。  
+ A negative value of `count` shifts the elements right `count` places, with zero fill.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_shift.cpp  
@@ -1578,17 +1588,17 @@ The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
 ```  
   
 ##  <a name="size"></a>  valarray::size  
- 返回 valarray 中的元素数。  
+ Finds the number of elements in a valarray.  
   
 ```  
 size_t size() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 操作数 valarray 中的元素数。  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the operand valarray.  
   
-### <a name="example"></a>示例  
-  下面的示例演示如何使用 valarray::size 成员函数。  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the valarray::size member function.  
   
 ```  
 // valarray_size.cpp  
@@ -1651,19 +1661,19 @@ The number of elements in the valarray va2 is still: 12.
 ```  
   
 ##  <a name="sum"></a>  valarray::sum  
- 确定长度不为零的 valarray 中的所有元素的总和。  
+ Determines the sum of all the elements in a valarray of nonzero length.  
   
 ```  
 Type sum() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 操作数 valarray 的元素总和。  
+### <a name="return-value"></a>Return Value  
+ The sum of the elements of the operand valarray.  
   
-### <a name="remarks"></a>备注  
- 如果长度大于 1，成员函数会通过应用 **Type** 类的元素对之间的 `operator+=` 将值添加到总和，因此，需要为 **Type** 类的元素提供运算符。  
+### <a name="remarks"></a>Remarks  
+ If the length is greater than one, the member function adds values to the sum by applying `operator+=` between pairs of elements of class **Type**, which operator, consequently, needs be provided for elements of type **Type**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sum.cpp  
@@ -1697,23 +1707,23 @@ The sum of elements in the valarray is: 45.
 ```  
   
 ##  <a name="swap"></a>  valarray::swap  
- 交换两个 `valarray` 的元素。  
+ Exchanges the elements of two `valarray`s.  
   
 ```  
 void swap(valarray& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|一个 `valarray`，提供要交换的元素。|  
+|`right`|A `valarray` providing the elements to be swapped.|  
   
-### <a name="remarks"></a>备注  
- 成员函数交换 `*this` 和 `right` 之间的受控序列。 它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the controlled sequences between `*this` and `right`. It does so in constant time, it throws no exceptions, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences.  
   
 ##  <a name="valarray"></a>  valarray::valarray  
- 构造特定大小的数值数组、带特定值的元素的数值数组、作为另一个数值数组的副本或另一个数值数组的子集的数值数组。  
+ Constructs a valarray of a specific size or with elements of a specific value or as a copy of another valarray or subset of another valarray.  
   
 ```  
 valarray();
@@ -1751,48 +1761,48 @@ valarray(
     initializer_list<Type> IList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Count`  
- 数值数组要包含的元素的数目。  
+ The number of elements to be in the valarray.  
   
  `Val`  
- 要用于初始化数值数组中的元素的值。  
+ The value to be used in initializing the elements in the valarray.  
   
  `Ptr`  
- 指向要用于初始化数值数组中的元素的值的指针。  
+ Pointer to the values to be used to initialize the elements in the valarray.  
   
  `Right`  
- 用于初始化新数值数组的现有数值数组。  
+ An existing valarray to initialize the new valarray.  
   
  `SliceArray`  
- 其元素值要用于初始化要构造的数值数组的元素的 slice_array。  
+ A slice_array whose element values are to be used in initializing the elements of the valarray being constructed.  
   
  `GsliceArray`  
- 其元素值要用于初始化要构造的数值数组的元素的 gslice_array。  
+ A gslice_array whose element values are to be used in initializing the elements of the valarray being constructed.  
   
  `MaskArray`  
- 其元素值要用于初始化要构造的数值数组的元素的 mask_array。  
+ A mask_array whose element values are to be used in initializing the elements of the valarray being constructed.  
   
  `IndArray`  
- 其元素值要用于初始化要构造的数值数组的元素的 indirect_array。  
+ A indirect_array whose element values are to be used in initializing the elements of the valarray being constructed.  
   
  `IList`  
- 包含要复制的元素的 initializer_list。  
+ The initializer_list containing the elements to copy.  
   
-### <a name="remarks"></a>备注  
- 第一个（默认）构造函数将对象初始化为空数组。 接下来的三个构造函数将对象初始化为 `Count` 元素的数组，如下所示：  
+### <a name="remarks"></a>Remarks  
+ The first (default) constructor initializes the object to an empty array. The next three constructors each initialize the object to an array of `Count` elements as follows:  
   
--   对于显式 `valarray(size_t Count)`，使用默认构造函数初始化每个元素。  
+-   For explicit `valarray(size_t Count)`, each element is initialized with the default constructor.  
   
--   对于 `valarray(const Type& Val, Count)`，使用 `Val` 初始化每个元素。  
+-   For `valarray(const Type& Val, Count)`, each element is initialized with `Val`.  
   
--   对于 `valarray(const Type* Ptr, Count)`，使用 `Ptr`[ `I`] 初始化位置 `I` 处的元素。  
+-   For `valarray(const Type* Ptr, Count)`, the element at position `I` is initialized with `Ptr`[ `I`].  
   
- 每个保留的构造函数将对象初始化为 valarray\<Type> 对象，此对象由参数中指定的子集确定。  
+ Each remaining constructor initializes the object to a valarray\<Type> object determined by the subset specified in the argument.  
   
- 最后一个构造函数与倒数第二个构造函数相同，但前者具有[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ The last constructor is the same as the next to last, but with an [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_ctor.cpp  
@@ -1843,16 +1853,16 @@ The operand valarray va is:( 0 2 2 2 2 2 2 2 2 2 )The new valarray initialized f
 ```  
   
 ##  <a name="value_type"></a>  valarray::value_type  
- 一种类型，表示存储在 valarray 中的元素类型。  
+ A type that represents the type of element stored in a valarray.  
   
 ```  
 typedef Type value_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **Type** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Type**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_value_type.cpp  
@@ -1893,7 +1903,7 @@ The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

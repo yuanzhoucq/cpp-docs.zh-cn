@@ -1,5 +1,5 @@
 ---
-title: "is_volatile 类 | Microsoft Docs"
+title: is_volatile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_volatile
 - type_traits/std::is_volatile
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 367ae42b0e5e01cbbb346f1f74ac2ebfef20ce26
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 161de3ab063828faa68c7aa09d10336ab2c22cb5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isvolatile-class"></a>is_volatile 类
-测试类型是否是可变的。  
+# <a name="isvolatile-class"></a>is_volatile Class
+Tests if type is volatile.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_volatile;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果 `Ty` 是 `volatile-qualified`，则类型谓词的实例为 true。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if `Ty` is `volatile-qualified`.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_volatile.cpp   
@@ -95,12 +94,12 @@ is_volatile<int> == false
 is_volatile<volatile int> == true  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_const 类](../standard-library/is-const-class.md)
+ [is_const Class](../standard-library/is-const-class.md)
 

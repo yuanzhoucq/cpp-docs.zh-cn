@@ -1,5 +1,5 @@
 ---
-title: "is_unsigned 类 | Microsoft Docs"
+title: is_unsigned Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_unsigned
 - type_traits/std::is_unsigned
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d3097878bd66a148051865368267b83e7375c399
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a0c2172cee531ce403836e3b6698ee0dfc30621f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isunsigned-class"></a>is_unsigned 类
-测试类型是否为无符号整数。  
+# <a name="isunsigned-class"></a>is_unsigned Class
+Tests if type is unsigned integer.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_unsigned;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果类型 `Ty` 是无符号整型类型或 `cv-qualified` 无符号整型类型，则类型谓词的实例保持为 true，否则保持为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is an unsigned integral type or a `cv-qualified` unsigned integral type, otherwise it holds false.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_unsigned.cpp   
@@ -95,12 +94,12 @@ is_unsigned<unsigned int> == true
 is_unsigned<float> == false  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_signed 类](../standard-library/is-signed-class.md)
+ [is_signed Class](../standard-library/is-signed-class.md)
 

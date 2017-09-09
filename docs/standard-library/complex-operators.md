@@ -1,23 +1,37 @@
 ---
-title: "&lt;complex&gt; 运算符 | Microsoft 文档"
+title: '&lt;complex&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- complex/std::operator!=
+- complex/std::operator&gt;&gt;
+- complex/std::operator&lt;&lt;
+- complex/std::operator*
+- complex/std::operator+
+- complex/std::operator-
+- complex/std::operator/
+- complex/std::operator==
+dev_langs:
+- C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ef11e8bca4971b4fb07669907b2234c90a040ef8
+helpviewer_keywords:
+- std::operator!= (complex)
+- std::operator&gt;&gt; (complex)
+- std::operator&lt;&lt; (complex), std::operator== (complex)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 92d32d428e109c8e52d25328025e98030d5fc304
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 运算符
+# <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
@@ -25,7 +39,7 @@ ms.lasthandoff: 04/29/2017
 |[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 测试两个复数是否不相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
+ Tests for inequality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -45,22 +59,22 @@ bool operator!=(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 将测试其不等性的复数或与复数的参数类型相同的对象。  
+ A complex number or object of its parameter type to be tested for inequality.  
   
  `right`  
- 将测试其不等性的复数或与复数的参数类型相同的对象。  
+ A complex number or object of its parameter type to be tested for inequality.  
   
-### <a name="return-value"></a>返回值  
- 如果数字不相等，则为 **true**；如果数字相等，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the numbers are not equal; **false** if numbers are equal.  
   
-### <a name="remarks"></a>备注  
- 当且仅当实部和虚部都相等时，两个复数才相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Otherwise, they are unequal.  
   
- 重载该操作，以便可以执行比较测试，而无需将数据转换为特定格式。  
+ The operation is overloaded so that comparison tests can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_NE.cpp  
@@ -161,7 +175,7 @@ The complex numbers cl3b & cr3b are equal.
 ```  
   
 ##  <a name="op_star"></a>  operator*  
- 将两个复数相乘，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
+ Multiplies two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -181,20 +195,20 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 两个复数的第一个数或属于复数参数类型的数通过 * 运算相乘。  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be multiplied by the * operation.  
   
  `right`  
- 两个复数的第二个数或属于复数参数类型的数通过 * 运算相乘。  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be multiplied by the * operation.  
   
-### <a name="return-value"></a>返回值  
- 由两个数相乘得出的结果的复数的值和类型由参数输入指定。  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the multiplication of the two numbers whose value and type are specified by the parameter inputs.  
   
-### <a name="remarks"></a>备注  
- 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_mult.cpp  
@@ -255,7 +269,7 @@ int main( )
 ```  
   
 ##  <a name="op_add"></a>  operator+  
- 将两个复数相加，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
+ Adds two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -278,20 +292,20 @@ template <class Type>
 complex<Type> operator+(const complex<Type>& left);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 两个复数的第一个数或属于复数参数类型的数通过 + 运算相加。  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be added by the + operation.  
   
  `right`  
- 两个复数的第二个数或属于复数参数类型的数通过 + 运算相加。  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be added by the + operation.  
   
-### <a name="return-value"></a>返回值  
- 由两个数相加得出的复数的值和类型由参数输入指定。  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the addition of the two numbers whose value and type are specified by the parameter inputs.  
   
-### <a name="remarks"></a>备注  
- 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。 一元运算符返回`left`。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format. The unary operator returns `left`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_add.cpp  
@@ -392,7 +406,7 @@ The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```  
   
 ##  <a name="operator-"></a>  operator-  
- 将两个复数相减，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
+ Subtracts two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```   
 template <class Type>  
@@ -414,22 +428,22 @@ template <class Type>
 complex<Type> operator-(const complex<Type>& left);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 两个复数的第一个数或属于复数参数类型的数通过 - 运算相减。  
+ The first of two complex numbers or a number that is of the parameter type for a complex number that is to be subtracted by the - operation.  
   
  `right`  
- 两个复数的第二个数或属于复数参数类型的数通过 - 运算相减。  
+ The second of two complex numbers or a number that is of the parameter type for a complex number that is to be subtracted by the - operation.  
   
-### <a name="return-value"></a>返回值  
- 由 `right`从 `left` 减去得出的复数，两个数的值由参数输入指定。  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the subtraction of `right` from `left`, the two numbers whose values are specified by the parameter inputs.  
   
-### <a name="remarks"></a>备注  
- 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
- 一元运算符更改复数的符号并返回一个值，其实部是数字输入实部的负值，其虚部是数字输入虚部的负值。  
+ The unary operator changes the sign of a complex number and returns a value whose real part is the negative of the real part of the number input and whose imaginary part is the negative of the imaginary part of the number input.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_sub.cpp  
@@ -530,7 +544,7 @@ The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```  
   
 ##  <a name="op_div"></a>  operator/  
- 将两个复数相除，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
+ Divides two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```   
 template <class Type>  
@@ -549,20 +563,20 @@ complex<Type> operator*(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 复数或属于复数参数类型的数通过 / 运算用分子除以分母。  
+ A complex number or a number that is of the parameter type for a complex number that is the numerator to be divided by the denominator with the / operation.  
   
  `right`  
- 复数或属于复数参数类型的数通过 / 运算用分子除以分母。  
+ A complex number or a number that is of the parameter type for a complex number that is the denominator to be used to divide the numerator with the / operation.  
   
-### <a name="return-value"></a>返回值  
- 用分子除以分母得出的复数的值由参数输入指定。  
+### <a name="return-value"></a>Return Value  
+ The complex number that results from the division of the numerator by the denominator, the values of which are specified by the parameter inputs.  
   
-### <a name="remarks"></a>备注  
- 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_div.cpp  
@@ -646,7 +660,7 @@ The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- 向输出流插入指定的复数。  
+ Inserts a complex number specified into the output stream.  
   
 ```   
 template <class Type, class Elem, class Traits>  
@@ -655,20 +669,20 @@ basic_ostream<Elem, Traits>& operator<<(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Ostr`  
- 要输入到输出流的复数。  
+ The output stream into which the complex number is being entered.  
   
  `right`  
- 要输入到输出流的复数。  
+ The complex number to be entered into the output stream  
   
-### <a name="return-value"></a>返回值  
- 以笛卡尔坐标格式：（*实部、虚部*）将指定复数值写入 `Ostr`。  
+### <a name="return-value"></a>Return Value  
+ Writes the value of the specified complex number to the `Ostr` in a Cartesian format: ( *real part, imaginary part* ).  
   
-### <a name="remarks"></a>备注  
- 对输出流进行重载，以使其接受任何形式的复数，且其默认输出格式为笛卡尔坐标格式。  
+### <a name="remarks"></a>Remarks  
+ The output stream is overloaded so that it will accept any form of a complex number, and its default output format is the Cartesian format.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_insert.cpp  
@@ -704,7 +718,7 @@ The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 测试两个复数是否相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
+ Tests for equality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.  
   
 ```  
  
@@ -724,22 +738,22 @@ bool operator==(
     const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 将测试其不等性的复数或与复数的参数类型相同的对象。  
+ A complex number or object of its parameter type to be tested for inequality.  
   
  `right`  
- 将测试其不等性的复数或与复数的参数类型相同的对象。  
+ A complex number or object of its parameter type to be tested for inequality.  
   
-### <a name="return-value"></a>返回值  
- 如果数字相等，则为 **true**；如果数字不相等，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the numbers are equal; **false** if numbers are not equal.  
   
-### <a name="remarks"></a>备注  
- 当且仅当实部和虚部都相等时，两个复数才相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Otherwise, they are unequal.  
   
- 重载该操作，以便可以执行比较测试，而无需将数据转换为特定格式。  
+ The operation is overloaded so that comparison tests can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_EQ.cpp  
@@ -840,7 +854,7 @@ The complex numbers cl3b & cr3b are equal.
 ```  
   
 ##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
- 从输入流提取一个复值。  
+ Extracts a complex value from the input stream.  
   
 ```  
  
@@ -850,26 +864,26 @@ basic_istream<Elem, Traits>& operator>>(
    complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Istr`  
- 要从中提取复数的输入流。  
+ The input stream from which the complex number is being extracted.  
   
  `right`  
- 正在从输入流提取的复数。  
+ The complex number that is being extracted from the input stream.  
   
-### <a name="return-value"></a>返回值  
- 读取从表示指定复数的值`Istr`并返回到`right`。  
+### <a name="return-value"></a>Return Value  
+ Reads the value of the specified complex number from `Istr` and returns it into `right`.  
   
-### <a name="remarks"></a>备注  
- 有效的输入格式为  
+### <a name="remarks"></a>Remarks  
+ The valid input formats are  
   
-- *（实部、虚部）*  
+- *( real part, imaginary part )*  
   
-- *（实部）*  
+- *( real part )*  
   
-- *实部*  
+- *real part*  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_extract.cpp  
@@ -896,7 +910,7 @@ int main( )
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<complex>](../standard-library/complex.md)
 
 

@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::!=
-- '!='
-- std::operator!=
-- std.operator!=
-- std.!=
-- operator!=
+- std::!=", "!=", "std::operator!=", "std.operator!=", "std.!=", "operator!=
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -40,20 +35,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 327cf7f1b8e2e9ad088dd553b96e403650f7182b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a731b71cf5dd1e7c22889f8c940d6c18f4053c8c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="operator"></a>operator!=
 > [!NOTE]
->  本主题位于 Visual C++ 文档内，作为在 C++ 标准库内使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。  
+>  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
   
- 重载 `operator!=` 以比较 [Container](../standard-library/sample-container-class.md) 模板类的两个对象。  
+ Overloads `operator!=` to compare two objects of template class [Container](../standard-library/sample-container-class.md).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -62,10 +57,10 @@ bool operator!=(
     const Container <Ty>& right);
 ```  
   
-## <a name="return-value"></a>返回值  
- 返回 `!(left == right)`。  
+## <a name="return-value"></a>Return Value  
+ Returns `!(left == right)`.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<sample container>](../standard-library/sample-container.md)
 
 

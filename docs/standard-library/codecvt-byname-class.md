@@ -1,5 +1,5 @@
 ---
-title: "codecvt_byname 类 | Microsoft 文档"
+title: codecvt_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_byname
 - xlocale/std::codecvt_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: cdf0ca3993103dc8070337b98bcacdb3e8c8b9d1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7393eb9bd4ccaa163276ce7df602cddf2b42025e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="codecvtbyname-class"></a>codecvt_byname 类
-一种派生模板类，用于描述一个对象来充当给定区域设置的排序规则 facet，从而检索与转换有关的文化区域特定信息。  
+# <a name="codecvtbyname-class"></a>codecvt_byname Class
+A derived template class that describes an object that can serve as a collate facet of a given locale, enabling the retrieval of information specific to a cultural area concerning conversions.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType, class Byte, class StateType>
@@ -68,25 +67,25 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- 已命名的区域设置。  
+ A named locale.  
   
  `_Refs`  
- 初始引用计数。  
+ An initial reference count.  
   
-## <a name="remarks"></a>备注  
- 构造已命名的区域设置时，将自动创建 Byname facet。  
+## <a name="remarks"></a>Remarks  
+ Byname facets are automatically created when a named locale is constructed.  
   
- 其行为由命名的区域设置 `_Locname` 决定。 每个构造函数使用 [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) 初始化其基对象。  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "time_put 类 | Microsoft Docs"
+title: time_put Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_put
 - xloctime/std::time_put
 - locale/std::time_put::char_type
 - locale/std::time_put::iter_type
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- time_put class
+- std::time_put [C++]
+- std::time_put [C++], char_type
+- std::time_put [C++], iter_type
+- std::time_put [C++], do_put
+- std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 caps.latest.revision: 22
 author: corob-msft
@@ -38,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0331580941a30b8d6ab9468ce95182950478ddcb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 23b872d1a24639f7537dd0941bbcfc9439c57e8d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timeput-class"></a>time_put 类
-此模板类描述一个对象来充当区域设置 facet，以便控制时间值向 `CharType` 类型序列的转换。  
+# <a name="timeput-class"></a>time_put Class
+The template class describes an object that can serve as a locale facet to control conversions of time values to sequences of type `CharType`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType,  
@@ -56,53 +59,53 @@ template <class CharType,
 class time_put : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 在程序中用于对字符进行编码的类型。  
+ The type used within a program to encode characters.  
   
  `OutputIterator`  
- 供时间放置函数写入其输出结果的迭代器类型。  
+ The type of iterator into which the time put functions write their output.  
   
-## <a name="remarks"></a>备注  
- 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **ID** 中存储唯一正值。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[time_put](#time_put)|`time_put` 类型的对象的构造函数。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|  
-|[iter_type](#iter_type)|一种类型，此类型描述输出迭代器。|  
+|[time_put](#time_put)|The constructor for objects of type `time_put`.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[do_put](#do_put)|一种以 `CharType` 序列的形式输出时间和日期信息的虚拟函数。|  
-|[put](#put)|以 `CharType` 的形式输出时间和日期信息。|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an output iterator.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[do_put](#do_put)|A virtual function that outputs time and date information as a sequence of `CharType`s.|  
+|[put](#put)|Outputs time and date information as a sequence of `CharType`s.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  time_put::char_type  
- 一种类型，此类型用于描述区域设置使用的字符。  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **CharType** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="do_put"></a>  time_put::do_put  
- 一种以 **CharType** 序列的形式输出时间和日期信息的虚拟函数。  
+ A virtual function that outputs time and date information as a sequence of **CharType**s.  
   
 ```  
 virtual iter_type do_put(
@@ -113,45 +116,45 @@ virtual iter_type do_put(
     char _Mod = 0) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `next`  
- 一个输出迭代器，其中字符序列表示要插入的时间和日期。  
+ An output iterator where the sequence of characters representing time and date are to be inserted.  
   
  `_Iosbase`  
- 未使用。  
+ Unused.  
   
  `_Pt`  
- 输出的时间和日期信息。  
+ The time and date information being output.  
   
  `_Fmt`  
- 输出格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。  
+ The format of the output. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
  `_Mod`  
- 格式的修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。  
+ A modifier for the format. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
-### <a name="return-value"></a>返回值  
- 插入最后一个元素后第一个位置的迭代器。  
+### <a name="return-value"></a>Return Value  
+ An iterator to the first position after the last element inserted.  
   
-### <a name="remarks"></a>备注  
- 受保护的虚拟成员函数从存储于对象 \* `_Pt`（**tm** 类型）中的时间值生成开始于 `next` 的有序元素。 该函数返回一个迭代器，指定在生成的输出外下一个要插入元素的位置。  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function generates sequential elements beginning at `next` from time values stored in the object \* `_Pt`, of type **tm**. The function returns an iterator designating the next place to insert an element beyond the generated output.  
   
- 通过使用与 `strftime` 相同的规则及 `_Pt` 的最后一个参数生成输出，在数组中生成一系列 `char` 元素。 假定将每个这样的 `char` 元素通过简单的、一对一的映射映射到 **CharType** 类型的等效元素。 如果 `_Mod` 等于零，有效格式为“%F”，其中 F 替换为 `_Fmt`。 否则，有效格式为“%MF”，其中 M 替换为 `_Mod`。  
+ The output is generated by the same rules used by `strftime`, with a last argument of `_Pt`, for generating a series of `char` elements into an array. Each such `char` element is assumed to map to an equivalent element of type **CharType** by a simple, one-to-one mapping. If `_Mod` equals zero, the effective format is "%F", where F is replaced by `_Fmt`. Otherwise, the effective format is "%MF", where M is replaced by `_Mod`.  
   
-### <a name="example"></a>示例  
-  请参阅 [put](#put) 的示例，它调用 `do_put`。  
+### <a name="example"></a>Example  
+  See the example for [put](#put), which calls `do_put`.  
   
 ##  <a name="iter_type"></a>  time_put::iter_type  
- 一种类型，此类型描述输出迭代器。  
+ A type that describes an output iterator.  
   
 ```  
 typedef OutputIterator iter_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **OutputIterator** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **OutputIterator**.  
   
 ##  <a name="put"></a>  time_put::put  
- 以 **CharType** 序列的形式输出时间和日期信息。  
+ Outputs time and date information as a sequence of **CharType**s.  
   
 ```  
 iter_type put(iter_type next,
@@ -169,38 +172,38 @@ iter_type put(iter_type next,
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `next`  
- 一个输出迭代器，其中字符序列表示要插入的时间和日期。  
+ An output iterator where the sequence of characters representing time and date are to be inserted.  
   
  `_Iosbase`  
- 未使用。  
+ Unused.  
   
  `_Fill`  
- 用于间距的 **CharType** 类型字符。  
+ The character of type **CharType** used for spacing.  
   
  `_Pt`  
- 输出的时间和日期信息。  
+ The time and date information being output.  
   
  `_Fmt`  
- 输出格式。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。  
+ The format of the output. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
  `_Mod`  
- 格式的修饰符。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。  
+ A modifier for the format. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
  `first`  
- 输出格式字符串的开头。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。  
+ The beginning of the formatting string for the output. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
  `last`  
- 输出格式字符串的末尾。 有关有效值的范围，请参阅 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。  
+ The end of the formatting string for the output. See [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) for valid values.  
   
-### <a name="return-value"></a>返回值  
- 插入最后一个元素后第一个位置的迭代器。  
+### <a name="return-value"></a>Return Value  
+ An iterator to the first position after the last element inserted.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_put](#do_put)（`next`、`_Iosbase`、`_Fill`、`_Pt`、`_Fmt` 和 `_Mod`）。 第二个成员函数复制到 \* `next` ++ [ `first`, `last`) 间隔中的任何元素而不是百分号 (%)。 在间隔 [ `first`, `last`) 中，对于后跟字符 *C* 的百分号，函数会改为评估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) 并跳过 *C*。但如果 *C* 是集 EOQ # 中的限定符字符（后跟 [ `first`, `last`) 间隔中的字符 `C2`），此函数会改为评估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) 并跳过 `C2`。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). The second member function copies to \* `next` ++ any element in the interval [ `first`, `last`) other than a percent (%). For a percent followed by a character *C* in the interval [ `first`, `last`), the function instead evaluates `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) and skips past *C*. If, however, *C* is a qualifier character from the set EOQ#, followed by a character `C2` in the interval [ `first`, `last`), the function instead evaluates `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) and skips past `C2`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_put_put.cpp  
@@ -245,30 +248,30 @@ strftime( ) = x: 05:30:40 07/04/00
 ```  
   
 ##  <a name="time_put"></a>  time_put::time_put  
- 类型为 `time_put` 的对象的构造函数。  
+ Constructor for objects of type `time_put`.  
   
 ```  
 explicit time_put(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 用于指定对象的内存管理类型的整数值。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>备注  
- `_Refs` 参数可能的值及其含义：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：对象的生存期由包含该对象的区域设置管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：必须手动管理对象的生存期。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定义这些值。  
+-   \> 1: These values are not defined.  
   
- 构造函数初始化与与其基对象[locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。  
+ The constructor initializes its base object with [locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [time_base 类](../standard-library/time-base-class.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [time_base Class](../standard-library/time-base-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

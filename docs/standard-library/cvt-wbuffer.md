@@ -1,40 +1,58 @@
 ---
-title: "&lt;cvt-wbuffer&gt;&lt;/cvt-wbuffer&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext.cvt.<cvt/wbuffer>"
-  - "stdext::cvt::<cvt/wbuffer>"
-  - "<cvt/wbuffer>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvt/wbuffer 标头"
+title: '&lt;cvt-wbuffer&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext.cvt.<cvt/wbuffer>", "stdext::cvt::<cvt/wbuffer>", "<cvt/wbuffer>
+dev_langs:
+- C++
+helpviewer_keywords:
+- cvt/wbuffer header
 ms.assetid: 6e6eb44c-1bc4-4d8c-a4bd-b39c753ce725
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# &lt;cvt/wbuffer&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 16c6e1b36d75fcdf8c6a01bf57771dd8c572d6c1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
-Visual Studio 早期版本中的标头 `<cvt/wstring>` 在 stdext::cvt 命名空间中定义模板类 [wbuffer\_convert 类](../standard-library/wbuffer-convert-class.md)。  为向后兼容性保留标头。  新代码应使用在 `std` 命名空间的 [\<locale\>](../standard-library/locale.md) 中定义的类的版本  
+---
+# <a name="ltcvtwbuffergt"></a>&lt;cvt/wbuffer&gt;
+The header `<cvt/wstring>` in previous versions of Visual Studio defined the template class [wbuffer_convert Class](../standard-library/wbuffer-convert-class.md) in the stdext::cvt namespace. The header is maintained for backward compatibility. New code should use the version of the class that is defined in [\<locale>](../standard-library/locale.md) in the `std` namespace  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #include <cvt/wbuffer>  
   
 ```  
   
-## 请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

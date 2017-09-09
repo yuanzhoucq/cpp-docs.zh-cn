@@ -1,5 +1,5 @@
 ---
-title: "num_get 类 | Microsoft Docs"
+title: num_get Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- num_get
 - xlocnum/std::num_get
 - locale/std::num_get::char_type
 - locale/std::num_get::iter_type
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- num_get class
+- std::num_get [C++]
+- std::num_get [C++], char_type
+- std::num_get [C++], iter_type
+- std::num_get [C++], do_get
+- std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 caps.latest.revision: 18
 author: corob-msft
@@ -38,70 +41,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f8595909a294775034c3e1b725d37bfe0f846a93
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d0b5823b285ace08d64652e22660ea3c9a742e90
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="numget-class"></a>num_get 类
-一种模板类，用于描述一个对象来充当区域设置 facet，以便控制 `CharType` 类型的序列向数值的转换。  
+# <a name="numget-class"></a>num_get Class
+A template class that describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to numeric values.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType, class InputIterator = istreambuf_iterator<CharType>>  
 class num_get : public locale::facet;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 在程序中用于对区域设置中的字符进行编码的类型。  
+ The type used within a program to encode characters in a locale.  
   
  `InputIterator`  
- 数值获取函数从中读取其输入的迭代器类型。  
+ The type of iterator from which the numeric get functions read their input.  
   
-## <a name="remarks"></a>备注  
- 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **ID** 中存储唯一正值。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[num_get](#num_get)|用于从序列提取数值的 `num_get` 类型对象的构造函数。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|  
-|[iter_type](#iter_type)|一种类型，此类型描述输入迭代器。|  
+|[num_get](#num_get)|The constructor for objects of type `num_get` that are used to extract numerical values from sequences.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[do_get](#do_get)|为从字符序列提取数值或布尔值而调用的虚拟函数。|  
-|[get](#get)|从字符序列提取数值或布尔值。|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an input iterator.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[do_get](#do_get)|A virtual function that is called to extracts a numerical or Boolean value from a character sequence.|  
+|[get](#get)|Extracts a numerical or Boolean value from a character sequence.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  num_get::char_type  
- 一种类型，此类型用于描述区域设置使用的字符。  
+ A type that is used to describe a character used by a locale.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **CharType** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="do_get"></a>  num_get::do_get  
- 为从字符序列提取数值或布尔值而调用的虚拟函数。  
+ A virtual function that is called to extracts a numerical or Boolean value from a character sequence.  
   
 ```
 virtual iter_type do_get(
@@ -182,27 +185,27 @@ virtual iter_type do_get(
     bool& val) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 从其中读取数字的字符范围的起始处。  
+ The beginning of the range of characters from which to read the number.  
   
  `last`  
- 从其中读取数字的字符范围的末尾处。  
+ The end of the range of characters from which to read the number.  
   
  `_Iosbase`  
- [Ios_base](../standard-library/ios-base-class.md)，其标志由转换使用。  
+ The [ios_base](../standard-library/ios-base-class.md) whose flags are used by the conversion.  
   
  `_State`  
- 发生故障时向其添加 failbit（请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)）的状态。  
+ The state to which failbit (see [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) is added upon failure.  
   
  `val`  
- 读取的值。  
+ The value that was read.  
   
-### <a name="return-value"></a>返回值  
- 读取值后的迭代器。  
+### <a name="return-value"></a>Return Value  
+ The iterator after the value has been read.  
   
-### <a name="remarks"></a>备注  
- 第一个受保护的虚拟成员函数，  
+### <a name="remarks"></a>Remarks  
+ The first virtual protected member function,  
   
 ```  
 virtual iter_type do_get(
@@ -213,27 +216,27 @@ virtual iter_type do_get(
     long& val) const;
 ```  
   
- 匹配位置开始的连续元素`first`序列中`[first, last)`非空整数已识别的完整，直到输入字段。 如果成功，它将转换此字段为其等效的值类型作为`long`，并将存储中的结果`val`。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，函数将不在 `val` 中存储任何内容，并在 `state` 中设置 `ios_base::failbit`。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `state` 中设置 `ios_base::eofbit`。  
+ matches sequential elements beginning at `first` in the sequence `[first, last)` until it has recognized a complete, nonempty integer input field. If successful, it converts this field to its equivalent value as type `long`, and stores the result in `val`. It returns an iterator designating the first element beyond the numeric input field. Otherwise, the function stores nothing in `val` and sets `ios_base::failbit` in `state`. It returns an iterator designating the first element beyond any prefix of a valid integer input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in `state`.  
   
- 使用 scan 函数匹配和转换文件中一系列 `char` 元素所用的规则来转换整数输入字段。 （假定将每个这样的 `char` 元素通过简单的、一对一的映射映射到 `Elem` 类型的等效元素。）确定等效的扫描转换规格，如下所示：  
+ The integer input field is converted by the same rules used by the scan functions for matching and converting a series of `char` elements from a file. (Each such `char` element is assumed to map to an equivalent element of type `Elem` by a simple, one-to-one, mapping.) The equivalent scan conversion specification is determined as follows:  
   
- 如果 `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)，则转换规格为 `lo`。  
+ If `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), the conversion specification is `lo`.  
   
- 如果 `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex)，则转换规格为 `lx`。  
+ If `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), the conversion specification is `lx`.  
   
- 如果 `iosbase.flags() & ios_base::basefield == 0`，则转换规格为 `li`。  
+ If `iosbase.flags() & ios_base::basefield == 0`, the conversion specification is `li`.  
   
- 否则，转换规格为 `ld`。  
+ Otherwise, the conversion specification is `ld`.  
   
- 调用 [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())` 返回的 [locale facet](../standard-library/locale-class.md#facet_class)`fac` 进一步确定整数输入字段的格式。 尤其是在下列情况下：  
+ The format of an integer input field is further determined by the [locale facet](../standard-library/locale-class.md#facet_class)`fac` returned by the call [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. Specifically:  
   
- `fac.` [numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` 确定如何对任何小数点左侧的数字进行分组  
+ `fac.` [numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` determines how digits are grouped to the left of any decimal point  
   
- `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` 确定将任何小数点左侧的数字进行分组的序列。  
+ `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` determines the sequence that separates groups of digits to the left of any decimal point.  
   
- 如果数字输入字段中没有出现 `fac.thousands_sep()` 的任何实例，则不会采用应用分组约束。 否则，会强制执行 `fac.grouping()` 采用的分组约束，并在扫描转换发生之前删除分隔符。  
+ If no instances of `fac.thousands_sep()` occur in the numeric input field, no grouping constraint is imposed. Otherwise, any grouping constraints imposed by `fac.grouping()` are enforced and separators are removed before the scan conversion occurs.  
   
- 第四个受保护的虚拟成员函数：  
+ The fourth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -244,9 +247,9 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```  
   
- 行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功，它会将数字输入字段转换为 `unsigned long` 类型的值，并将该值存储于 `val`。  
+ behaves the same as the first, except that it replaces a conversion specification of `ld` with `lu`. If successful it converts the numeric input field to a value of type `unsigned long` and stores that value in `val`.  
   
- 第五个受保护的虚拟成员函数：  
+ The fifth virtual protected member function:  
   
 ```
 virtual iter_type do_get(
@@ -257,9 +260,9 @@ virtual iter_type do_get(
     long long& val) const;
 ```  
   
- 行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lld`。 如果成功，它会将数字输入字段转换为 `long long` 类型的值，并将该值存储于 `val`。  
+ behaves the same as the first, except that it replaces a conversion specification of `ld` with `lld`. If successful it converts the numeric input field to a value of type `long long` and stores that value in `val`.  
   
- 第六个受保护的虚拟成员函数：  
+ The sixth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -270,9 +273,9 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```  
 
- 行为与第一个相同，只不过它将转换规格 `ld` 替换为 `llu`。 如果成功，它会将数字输入字段转换为 `unsigned long long` 类型的值，并将该值存储于 `val`。  
+ behaves the same as the first, except that it replaces a conversion specification of `ld` with `llu`. If successful it converts the numeric input field to a value of type `unsigned long long` and stores that value in `val`.  
   
- 第七个受保护的虚拟成员函数：  
+ The seventh virtual protected member function:  
   
 ```
 virtual iter_type do_get(
@@ -283,9 +286,9 @@ virtual iter_type do_get(
     float& val) const;
 ```  
   
- 行为与第一个相同，只不过它旨在匹配完整的非空浮点输入字段。 `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` 确定从小数位分隔整数位的序列。 等效的扫描转换说明符是 `lf`。  
+ behaves the same as the first, except that it endeavors to match a complete, nonempty floating-point input field. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is `lf`.  
   
- 第八个受保护的虚拟成员函数：  
+ The eighth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -296,9 +299,9 @@ virtual iter_type do_get(
     double& val) const;
 ```  
   
- 行为与第一个相同，只不过它旨在匹配完整的非空浮点输入字段。 `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` 确定从小数位分隔整数位的序列。 等效的扫描转换说明符是 `lf`。  
+ behaves the same as the first, except that it endeavors to match a complete, nonempty floating-point input field. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is `lf`.  
   
- 第九个受保护的虚拟成员函数：  
+ The ninth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -309,9 +312,9 @@ virtual iter_type do_get(
     long double& val) const;
 ```  
   
- 行为与第八个相同，只不过等效的扫描转换说明符为 `Lf`。  
+ behaves the same as the eighth, except that the equivalent scan conversion specifier is `Lf`.  
   
- 第十个的受保护的虚拟成员函数︰  
+ The tenth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -322,9 +325,9 @@ virtual iter_type do_get(
     void *& val) const;
 ```  
   
- 行为与第一个相同，只不过等效的扫描转换说明符为 `p`。  
+ behaves the same the first, except that the equivalent scan conversion specifier is `p`.  
   
- 最后一个（第十一个）受保护的虚拟成员函数：  
+ The last (eleventh) virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -335,15 +338,15 @@ virtual iter_type do_get(
     bool& val) const;
 ```  
   
- 行为与第一个相同，只不过它旨在匹配完整的非空布尔输入字段。 如果成功，它会将布尔输入字段转换为 `bool` 类型的值，并将该值存储于 `val`。  
+ behaves the same as the first, except that it endeavors to match a complete, nonempty Boolean input field. If successful it converts the Boolean input field to a value of type `bool` and stores that value in `val`.  
   
- 布尔输入字段采用以下两种形式之一。 如果 `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 为 false，则它与整数输入字段相同，只不过转换的值必须为 0（若为 false）或 1（若为 true）。 否则，该序列必须匹配 `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()`（若为 false）或 `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()`（若为 true）。  
+ A Boolean input field takes one of two forms. If `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) is false, it is the same as an integer input field, except that the converted value must be either 0 (for false) or 1 (for true). Otherwise, the sequence must match either `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (for false), or `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (for true).  
   
-### <a name="example"></a>示例  
-  请参阅 [get](#get) 的示例，其中虚拟成员函数由 `do_get` 调用。  
+### <a name="example"></a>Example  
+  See the example for [get](#get), where the virtual member function is called by `do_get`.  
   
 ##  <a name="get"></a>  num_get::get  
- 从字符序列提取数值或布尔值。  
+ Extracts a numerical or Boolean value from a character sequence.  
   
 ```
 iter_type get(
@@ -424,49 +427,49 @@ iter_type get(
     void *& val) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 从其中读取数字的字符范围的起始处。  
+ The beginning of the range of characters from which to read the number.  
   
  `last`  
- 从其中读取数字的字符范围的末尾处。  
+ The end of the range of characters from which to read the number.  
   
  `_Iosbase`  
- [Ios_base](../standard-library/ios-base-class.md)，其标志由转换使用。  
+ The [ios_base](../standard-library/ios-base-class.md) whose flags are used by the conversion.  
   
  `_State`  
- 发生故障时向其添加 failbit（请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)）的状态。  
+ The state to which failbit (see [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) is added upon failure.  
   
  `val`  
- 读取的值。  
+ The value that was read.  
   
-### <a name="return-value"></a>返回值  
- 读取值后的迭代器。  
+### <a name="return-value"></a>Return Value  
+ The iterator after the value has been read.  
   
-### <a name="remarks"></a>备注  
- 所有成员函数都返回 [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`)。  
+### <a name="remarks"></a>Remarks  
+ All member functions return [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).  
   
- 第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空整数输入字段。 如果成功，它会将此字段转换为与其等效的值作为类型 **long**，并将结果存储在 `val`。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，函数将不在 `val` 中存储任何内容，并在 _ *State* 中设置 `ios_base::failbit`。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 **last**，该函数在 `_State` 中设置 `ios_base::eofbit`。  
+ The first virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty integer input field. If successful, it converts this field to its equivalent value as type **long** and stores the result in `val`. It returns an iterator designating the first element beyond the numeric input field. Otherwise, the function stores nothing in `val` and sets `ios_base::failbit` in _ *State*. It returns an iterator designating the first element beyond any prefix of a valid integer input field. In either case, if the return value equals **last**, the function sets `ios_base::eofbit` in `_State`.  
   
- 使用 scan 函数匹配和转换文件中一系列 `char` 元素所用的规则来转换整数输入字段。 假定将每个这样的 `char` 元素通过简单的、一对一的映射映射到 **CharType** 类型的等效元素。 确定等效的扫描转换规格，如下所示：  
+ The integer input field is converted by the same rules used by the scan functions for matching and converting a series of `char` elements from a file. Each such `char` element is assumed to map to an equivalent element of type **CharType** by a simple, one-to-one mapping. The equivalent scan conversion specification is determined as follows:  
   
--   如果 **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)，则转换规格为 **lo**。  
+-   If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), the conversion specification is **lo**.  
   
--   如果 **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)，则转换规格为 **lx**。  
+-   If **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), the conversion specification is **lx**.  
   
--   如果 **iosbase.flags** & **ios_base::basefield** == 0，则转换规格为 `li`。  
+-   If **iosbase.flags** & **ios_base::basefield** == 0, the conversion specification is `li`.  
   
--   否则，转换规格为 **ld**。  
+-   Otherwise, the conversion specification is **ld**.  
   
- 整数输入字段的格式由 [locale facet](../standard-library/locale-class.md#facet_class)**fac** 进一步确定，后者又由调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 返回。 尤其是在下列情况下：  
+ The format of an integer input field is further determined by the [locale facet](../standard-library/locale-class.md#facet_class)**fac** returned by the call [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Specifically:  
   
-- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) 确定如何对任何小数点左侧的数字进行分组。  
+- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) determines how digits are grouped to the left of any decimal point.  
   
-- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) 确定将任何小数点左侧的数字进行分组的序列。  
+- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) determines the sequence that separates groups of digits to the left of any decimal point.  
   
- 如果 **fac**. `thousands_sep` 的实例都未出现在数字输入字段中，则不会采用分组约束。 否则，会强制执行 **fac**. **grouping** 采用的任何分组约束，并在扫描转换发生之前删除分隔符。  
+ If no instances of **fac**. `thousands_sep` occur in the numeric input field, no grouping constraint is imposed. Otherwise, any grouping constraints imposed by **fac**. **grouping** is enforced and separators are removed before the scan conversion occurs.  
   
- 第二个受保护的虚拟成员函数：  
+ The second virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -476,9 +479,9 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```  
   
- 行为与第一个相同，只不过它将转换规格 **ld** 替换为 **lu**。 如果成功，它会将数字输入字段转换为 `unsigned long` 类型的值，并将该值存储于 `val`。  
+ behaves the same as the first, except that it replaces a conversion specification of **ld** with **lu**. If successful, it converts the numeric input field to a value of type `unsigned long` and stores that value in `val`.  
   
- 第三个受保护的虚拟成员函数：  
+ The third virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -488,9 +491,9 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```  
   
- 行为与第一个相同，只不过它尝试匹配完整的非空浮点输入字段。 **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) 确定从小数位分隔整数位的序列。 等效的扫描转换说明符是 **lf**。  
+ behaves the same as the first, except that it tries to match a complete, nonempty floating-point input field. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is **lf**.  
   
- 第四个受保护的虚拟成员函数：  
+ The fourth virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -500,9 +503,9 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```  
   
- 行为与第三个相同，只不过等效的扫描转换说明符为 **Lf**。  
+ behaves the same the third, except that the equivalent scan conversion specifier is **Lf**.  
   
- 第五个受保护的虚拟成员函数：  
+ The fifth virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -512,9 +515,9 @@ virtual iter_type do_get(iter_type first,
     void *& val) const;
 ```  
   
- 行为与第一个相同，只不过等效的扫描转换说明符为 **p**。  
+ behaves the same the first, except that the equivalent scan conversion specifier is **p**.  
   
- 第六个受保护的虚拟成员函数：  
+ The sixth virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -524,11 +527,11 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```  
   
- 行为与第一个相同，只不过它尝试匹配完整的非空布尔输入字段。 如果成功，它会将布尔输入字段转换为 `bool` 类型的值，并将该值存储于 `val`。  
+ behaves the same as the first, except that it tries to match a complete, nonempty boolean input field. If successful it converts the Boolean input field to a value of type `bool` and stores that value in `val`.  
   
- 布尔输入字段采用以下两种形式之一。 如果 **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 为 **false**，则它与整数输入字段相同，只不过转换的值必须为 0（若为 **false**）或 1（若为 **true**）。 否则，该序列必须匹配 **fac**. [falsename](../standard-library/numpunct-class.md#falsename)（若为 **false**）或 **fac**. [truename](../standard-library/numpunct-class.md#truename)（若为**true**）。  
+ A boolean input field takes one of two forms. If **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) is **false**, it is the same as an integer input field, except that the converted value must be either 0 (for **false**) or 1 (for **true**). Otherwise, the sequence must match either **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (for **false**), or **fac**. [truename](../standard-library/numpunct-class.md#truename) (for **true**).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // num_get_get.cpp  
@@ -561,43 +564,43 @@ int main( )
 ```  
   
 ##  <a name="iter_type"></a>  num_get::iter_type  
- 一种类型，此类型描述输入迭代器。  
+ A type that describes an input iterator.  
   
 ```
 typedef InputIterator iter_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **InputIterator** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **InputIterator**.  
   
 ##  <a name="num_get"></a>  num_get::num_get  
- 用于从序列提取数值的 `num_get` 类型对象的构造函数。  
+ The constructor for objects of type `num_get` that are used to extract numerical values from sequences.  
   
 ```
 explicit num_get(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 用于指定对象的内存管理类型的整数值。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>备注  
- `_Refs` 参数可能的值及其含义：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：对象的生存期由包含该对象的区域设置管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：必须手动管理对象的生存期。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定义这些值。  
+-   \> 1: These values are not defined.  
   
- 由于该析构函数受到保护，可能没有直接的示例。  
+ No direct examples are possible, because the destructor is protected.  
   
- 构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基对象。  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-## <a name="see-also"></a>另请参阅  
- [\<区域设置>](../standard-library/locale.md)   
- [facet 类](../standard-library/locale-class.md#facet_class)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [\<locale>](../standard-library/locale.md)   
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "lock_guard 类 | Microsoft Docs"
+title: lock_guard Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,48 +33,48 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 047c7ab9db009bceafe47bb0ae53b876adad81b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 56bff026e272b14dd6b7a08d23f04f7997e2a570
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lockguard-class"></a>lock_guard 类
-表示可进行实例化以创建其析构函数解锁 `mutex` 的对象的模板。  
+# <a name="lockguard-class"></a>lock_guard Class
+Represents a template that can be instantiated to create an object whose destructor unlocks a `mutex`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Mutex>
 class lock_guard;
 ```  
   
-## <a name="remarks"></a>备注  
- 模板参数 `Mutex` 必须命名为 mutex 类型。  
+## <a name="remarks"></a>Remarks  
+ The template argument `Mutex` must name a *mutex type*.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-typedefs"></a>公共 Typedef  
+### <a name="public-typedefs"></a>Public Typedefs  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`lock_guard::mutex_type`|模板参数 `Mutex` 的同义词。|  
+|`lock_guard::mutex_type`|Synonym for the template argument `Mutex`.|  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock_guard](#lock_guard)|构造 `lock_guard` 对象。|  
-|[lock_guard::~lock_guard 析构函数](#dtorlock_guard_destructor)|解锁传递给构造函数的 `mutex`。|  
+|[lock_guard](#lock_guard)|Constructs a `lock_guard` object.|  
+|[lock_guard::~lock_guard Destructor](#dtorlock_guard_destructor)|Unlocks the `mutex` that was passed to the constructor.|  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<互斥体 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="lock_guard"></a>lock_guard::lock_guard 构造函数  
- 构造 `lock_guard` 对象。  
+##  <a name="lock_guard"></a>  lock_guard::lock_guard Constructor  
+ Constructs a `lock_guard` object.  
   
 ```cpp  
 explicit lock_guard(mutex_type& Mtx);
@@ -82,27 +82,27 @@ explicit lock_guard(mutex_type& Mtx);
 lock_guard(mutex_type& Mtx, adopt_lock_t);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Mtx`  
- 一个 mutex 类型对象。  
+ A *mutex type* object.  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数构造一个 `lock_guard` 类型的对象并锁定 `Mtx`。 如果 `Mtx` 不是递归互斥体，则在调用此构造函数时必须将其解锁。  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object of type `lock_guard` and locks `Mtx`. If `Mtx` is not a recursive mutex, it must be unlocked when this constructor is called.  
   
- 第二个构造函数不会锁定 `Mtx`。 调用此构造函数时，必须锁定 `Mtx`。 此构造函数不会引发异常。  
+ The second constructor does not lock `Mtx`. `Mtx` must be locked when this constructor is called. The constructor throws no exceptions.  
   
-##  <a name="dtorlock_guard_destructor"></a>lock_guard::~lock_guard 析构函数  
- 解锁传递给构造函数的 `mutex`。  
+##  <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard Destructor  
+ Unlocks the `mutex` that was passed to the constructor.  
   
 ```
 ~lock_guard() noexcept;
 ```  
   
-### <a name="remarks"></a>备注  
- 如果析构函数运行时 `mutex` 不存在，则该行为不确定。  
+### <a name="remarks"></a>Remarks  
+ If the `mutex` does not exist when the destructor runs, the behavior is undefined.  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

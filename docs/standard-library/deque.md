@@ -1,5 +1,5 @@
 ---
-title: "&lt;deque&gt; | Microsoft 文档"
+title: '&lt;deque&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<deque>
-- <deque>
-- std.<deque>
+- std::<deque>", "<deque>", "std.<deque>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,50 +33,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5d3ff49236c53f484098cdc075a1d0d5379acb5f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 869fb9c0ed0f975b508fdd805d9b45c5e4793aa5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
-定义容器模板类 deque 和几个支持的模板。  
+Defines the container template class deque and several supporting templates.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <deque>  
   
 ```  
   
-### <a name="operators"></a>运算符  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/deque-operators.md#op_neq)|测试运算符左侧的 deque 对象是否不等于右侧的 deque 对象。|  
-|[operator<](../standard-library/deque-operators.md#op_lt)|测试运算符左侧的 deque 对象是否小于右侧的 deque 对象。|  
-|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|测试运算符左侧的 deque 对象是否小于或等于右侧的 deque 对象。|  
-|[operator==](../standard-library/deque-operators.md#op_eq_eq)|测试运算符左侧的 deque 对象是否等于右侧的 deque 对象。|  
-|[operator>](../standard-library/deque-operators.md#op_gt)|测试运算符左侧的 deque 对象是否大于右侧的 deque 对象。|  
-|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|测试运算符左侧的 deque 对象是否大于或等于右侧的 deque 对象。|  
+|[operator!=](../standard-library/deque-operators.md#op_neq)|Tests if the deque object on the left side of the operator is not equal to the deque object on the right side.|  
+|[operator<](../standard-library/deque-operators.md#op_lt)|Tests if the deque object on the left side of the operator is less than the deque object on the right side.|  
+|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Tests if the deque object on the left side of the operator is less than or equal to the deque object on the right side.|  
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Tests if the deque object on the left side of the operator is equal to the deque object on the right side.|  
+|[operator>](../standard-library/deque-operators.md#op_gt)|Tests if the deque object on the left side of the operator is greater than the deque object on the right side.|  
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Tests if the deque object on the left side of the operator is greater than or equal to the deque object on the right side.|  
   
-### <a name="functions"></a>函数  
-  
-|||  
-|-|-|  
-|[swap](../standard-library/deque-functions.md#swap)|交换两个 deque 的元素。|  
-  
-### <a name="classes"></a>类  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[deque 类](../standard-library/deque-class.md)|序列容器的模板类，可对线性排列中指定类型的元素进行排序，并且和矢量一样，也允许快速随机访问任何元素和在容器后面高效插入和删除。|  
+|[swap](../standard-library/deque-functions.md#swap)|Exchanges the elements of two deques.|  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[deque Class](../standard-library/deque-class.md)|A template class of sequence containers that arrange elements of a given type in a linear arrangement and, like vectors, allow fast random access to any element and efficient insertion and deletion at the back of the container.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

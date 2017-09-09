@@ -1,15 +1,14 @@
 ---
-title: "mersenne_twister_engine 类 | Microsoft Docs"
+title: mersenne_twister_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- mersenne_twister_engine
 - random/std::mersenne_twister_engine
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: bc94cb819bbf71893503f91bb3469a5be771f5cd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f847f0eb599f3696c51f26b885c52927020f702d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 类
-根据梅森旋转算法生成高质量的随机整数序列。  
+# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine Class
+Generates a high quality random sequence of integers based on the Mersenne twister algorithm.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class UIntType,   
@@ -54,33 +53,33 @@ template <class UIntType,
 class mersenne_twister_engine;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `W`  
- **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前置条件**：`2u < W ≤ numeric_limits<UIntType>::digits`  
+ **Word size**. Size of each word, in bits, of the state sequence. **Precondition**: `2u < W ≤ numeric_limits<UIntType>::digits`  
   
  `N`  
- **状态大小**。 状态序列中的元素（值）数量。  
+ **State size**. The number of elements (values) in the state sequence.  
   
  `M`  
- **移位大小**。 每次旋转过程中要跳过的元素数量。 **前置条件**：`0 < M ≤ N`  
+ **Shift size**. The number of elements to skip during each twist. **Precondition**: `0 < M ≤ N`  
   
  `R`  
- **掩码位**。 **前置条件**：`R ≤ W`  
+ **Mask bits**. **Precondition**: `R ≤ W`  
   
  `A`  
- **XOR 掩码**。 **前置条件**：`A ≤ (1u<<W) - 1u`  
+ **XOR mask**. **Precondition**: `A ≤ (1u<<W) - 1u`  
   
  `U`, `S`, `T`, `L`  
- **调和移位参数**。 在混合（调和）过程中用作移位值。 前置条件：`U,S,T,L ≤ W`  
+ **Tempering shift parameters**. Used as shift values during scrambling (tempering). Precondition: `U,S,T,L ≤ W`  
   
  `D`, `B`, `C`  
- **调和位掩码参数**。 在混合（调和）过程中用作位掩码值。 前置条件：`D,B,C ≤ (1u<<W) - 1u`  
+ **Tempering bit mask parameters**. Used as bit mask values during scrambling (tempering). Precondition: `D,B,C ≤ (1u<<W) - 1u`  
   
  `F`  
- **初始化乘法器**。 用于帮助初始化序列。 前置条件：`F ≤ (1u<<W) - 1u`  
+ **Initialization multiplier**. Used to help with initialization of the sequence. Precondition: `F ≤ (1u<<W) - 1u`  
   
 ## <a name="members"></a>Members  
   
@@ -89,20 +88,20 @@ class mersenne_twister_engine;
 |`mersenne_twister_engine::mersenne_twister_engine`|`mersenne_twister_engine::min`|`mersenne_twister_engine::discard`|  
 |`mersenne_twister_engine::operator()`|`mersenne_twister_engine::max`|`mersenne_twister_engine::seed`|  
   
- `default_seed` 是定义为 `5489u` 且用作 `mersenne_twister_engine::seed` 和单个值的构造函数的默认参数值的成员常量。  
+ `default_seed` is a member constant, defined as `5489u`, used as the default parameter value for `mersenne_twister_engine::seed` and the single value constructor.  
   
- 有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>备注  
- 此模板类描述了返回闭区间 [ `0`, `2`<sup>W</sup> - `1`] 上的值的随机数引擎。 它将保留 `W * (N - 1) + R` 位的较大整数值。 它从此较大值中一次提取 `W` 位，当它已使用所有的位时，它将通过对这些位进行移位和混合来旋转该较大值，以便生成可从中进行提取的新位集。 如果已调用 `operator()` 至少 `N` 次，则引擎的状态是所使用的最后一个 `N``W` 位的值，否则是已使用的 `M``W` 位的值和种子的最后一个 `N - M` 值。  
+## <a name="remarks"></a>Remarks  
+ This template class describes a random number engine, returning values on the closed interval [ `0`, `2`<sup>W</sup> - `1`]. It holds a large integral value with `W * (N - 1) + R` bits. It extracts `W` bits at a time from this large value, and when it has used all the bits it twists the large value by shifting and mixing the bits so that it has a new set of bits to extract from. The engine's state is the last `N` `W`-bit values used if `operator()` has been called at least `N` times, otherwise the `M` `W`-bit values that have been used and the last `N - M` values of the seed.  
   
- 通过使用移位值 `N` 和 `M`、旋转值 `R`，以及有条件的 XOR 掩码 `A` 定义的旋转生成的反馈移位寄存器，生成器将旋转它保留的较大值。 另外，将根据由值 `U`、`D`、`S`、`B`、`T`、`C` 和 `L` 定义的位混合矩阵，来混合（调和）原始移位寄存器。  
+ The generator twists the large value that it holds by using a twisted generalized feedback shift register defined by shift values `N` and `M`, a twist value `R`, and a conditional XOR-mask `A`. Additionally, the bits of the raw shift register are scrambled (tempered) according to a bit-scrambling matrix defined by values `U`, `D`, `S`, `B`, `T`, `C`, and `L`.  
   
- 模板自变量 `UIntType` 必须大到足以保留最多 `2`<sup>W</sup> - `1` 个值。其他模板参数的值必须满足以下要求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。  
+ The template argument `UIntType` must be large enough to hold values up to `2`<sup>W</sup> - `1`. The values of the other template arguments must satisfy the following requirements: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
   
- 虽然可以从此引擎直接构造生成器，但是建议使用以下预定义的 typedef 中的一个：  
+ Although you can construct a generator from this engine directly, it is recommended you use one of these predefined typedefs:  
   
- `mt19937`：32 位梅森旋转引擎（Matsumoto 和 Nishimura，1998）。  
+ `mt19937`: 32-bit Mersenne twister engine (Matsumoto and Nishimura, 1998).  
   
 ```  
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,   
@@ -113,7 +112,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;  
 ```  
   
- `mt19937_64`：64 位梅森旋转引擎（Matsumoto 和 Nishimura，2000）。  
+ `mt19937_64`: 64-bit Mersenne twister engine (Matsumoto and Nishimura, 2000).  
   
 ```  
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,   
@@ -124,17 +123,17 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- 有关梅森旋转算法的详细信息，请参阅 Wikipedia 文章[梅森旋转](http://go.microsoft.com/fwlink/LinkId=402356)。  
+ For detailed information about the Mersenne twister algorithm, see the Wikipedia article [Mersenne twister](http://go.microsoft.com/fwlink/LinkId=402356).  
   
-## <a name="example"></a>示例  
- 有关代码示例，请参阅 [\<random>](../standard-library/random.md)。  
+## <a name="example"></a>Example  
+ For a code example, see [\<random>](../standard-library/random.md).  
   
-## <a name="requirements"></a>要求  
- **标头：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

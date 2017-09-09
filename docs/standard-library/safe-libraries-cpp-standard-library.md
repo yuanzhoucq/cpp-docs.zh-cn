@@ -1,5 +1,5 @@
 ---
-title: "安全库：C++ 标准库 | Microsoft Docs"
+title: 'Safe Libraries: C++ Standard Library | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,40 +36,40 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f1698faaf860ab5b1e2e8579d2077c09c2a46114
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cf00775b29ec46c4d356b52edc1e411f2f486aa3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="safe-libraries-c-standard-library"></a>安全库：C++ 标准库
-已对随附于 Visual C++ 的库（包括 C++ 标准库）实施了多项功能增强以使它们更加安全。  
+# <a name="safe-libraries-c-standard-library"></a>Safe Libraries: C++ Standard Library
+Several enhancements have been made to the libraries that ship with Visual C++, including the C++ Standard Library, to make them more secure.  
   
- 已将 C++ 标准库中的多个方法确定为具有潜在的不安全性，因为它们可能导致缓冲区溢出或其他代码缺陷。 建议不要使用这些方法，已创建了更安全的新方法来替代这些方法。 这些新方法均以 `_s`结尾。  
+ Several methods in the C++ Standard Library have been identified as potentially unsafe because they could lead to a buffer overrun or other code defect. The use of these methods is discouraged, and new, more secure methods have been created to replace them. These new methods all end in `_s`.  
   
- 还实施了多项功能增强以提升迭代器和算法的安全性。 有关详细信息，请参阅 [Checked Iterators](../standard-library/checked-iterators.md)、 [Debug Iterator Support](../standard-library/debug-iterator-support.md) 和 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)。  
+ Several enhancements have also been made to make iterators and algorithms more secure. For more information, see [Checked Iterators](../standard-library/checked-iterators.md), [Debug Iterator Support](../standard-library/debug-iterator-support.md) and [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
   
-## <a name="remarks"></a>备注  
- 下表列出了可能不安全的 C++ 标准库方法，以及更安全的等效方法：  
+## <a name="remarks"></a>Remarks  
+ The following table lists the C++ Standard Library methods that are potentially unsafe, as well as their safer equivalent:  
   
-|可能不安全的方法|更安全的等效方法|  
+|Potentially unsafe method|Safer equivalent|  
 |-------------------------------|----------------------|  
 |[copy](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|  
 |[copy](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|  
   
- 如果调用以上任何一种潜在不安全的方法或如果错误使用迭代器，则编译器将生成[编译器警告（3 级）C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 有关如何禁用这些警告的信息，请参阅 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)。  
+ If you call any one of the potentially unsafe methods above, or if you use iterators incorrectly, the compiler will generate [Compiler Warning (level 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). For information on how to disable these warnings, see [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>In This Section  
  [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)  
   
  [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)  
   
  [Checked Iterators](../standard-library/checked-iterators.md)  
   
- [调试迭代器支持](../standard-library/debug-iterator-support.md)  
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)
 
 

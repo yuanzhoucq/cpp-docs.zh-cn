@@ -1,5 +1,5 @@
 ---
-title: "is_object 类 | Microsoft Docs"
+title: is_object Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_object
 - type_traits/std::is_object
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 7c82d8c19dbc87e53c2681c0a4b924f4b265ef1d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a35c0a18d42ddce0b7b7fbf91174bcda10c492a3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isobject-class"></a>is_object 类
-测试类型是否为对象类型。  
+# <a name="isobject-class"></a>is_object Class
+Tests if type is an object type.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_object;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果类型 `Ty` 为引用类型、函数类型或 void、或其中之一的 `cv-qualified` 形式，则类型谓词的实例为 true，否则为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds false if the type `Ty` is a reference type, a function type, or void, or a `cv-qualified` form of one of them, otherwise holds true.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_object.cpp   
@@ -103,12 +102,12 @@ is_object<float()> == false
 is_object<void> == false  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_function 类](../standard-library/is-function-class.md)
+ [is_function Class](../standard-library/is-function-class.md)
 

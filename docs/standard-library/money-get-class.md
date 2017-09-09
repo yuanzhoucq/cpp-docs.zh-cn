@@ -1,16 +1,15 @@
 ---
-title: "money_get 类 | Microsoft Docs"
+title: money_get Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - xlocmon/std::money_get
-- money_get
 - locale/std::money_get::char_type
 - locale/std::money_get::iter_type
 - locale/std::money_get::string_type
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- money_get class
+- std::money_get [C++]
+- std::money_get [C++], char_type
+- std::money_get [C++], iter_type
+- std::money_get [C++], string_type
+- std::money_get [C++], do_get
+- std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 caps.latest.revision: 18
 author: corob-msft
@@ -39,71 +43,71 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 824f12ed51bfd5f29e759a50fb3ead0a669da0ab
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9284988bca7904293a4141630b6465acb719c03b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="moneyget-class"></a>money_get 类
-此模板类描述可用作区域设置 facet 的对象，此对象用于控制 `CharType` 类型序列到货币值的转换。  
+# <a name="moneyget-class"></a>money_get Class
+The template class describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to monetary values.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType, class InputIterator = istreambuf_iterator<CharType>>  
 class money_get : public locale::facet;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 在程序中用于对区域设置中的字符进行编码的类型。  
+ The type used within a program to encode characters in a locale.  
   
  `InputIterator`  
- 获取函数从中读取其输入的迭代器类型。  
+ The type of iterator from which the get functions read their input.  
   
-## <a name="remarks"></a>备注  
- 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **ID** 中存储唯一正值。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[money_get](#money_get)|用于从表示货币值的序列中提取数值的 `money_get` 类型对象的构造函数。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|  
-|[iter_type](#iter_type)|一种类型，此类型描述输入迭代器。|  
-|[string_type](#string_type)|一种类型，此类型描述包含 `CharType` 类型字符的字符串。|  
+|[money_get](#money_get)|The constructor for objects of type `money_get` that are used to extract numerical values from sequences representing monetary values.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[do_get](#do_get)|一种虚拟函数，通过调用此函数可从表示货币值的字符序列提取数值。|  
-|[get](#get)|从表示货币值的字符序列提取数值。|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an input iterator.|  
+|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[do_get](#do_get)|A virtual function called to extracts a numerical value from a character sequence that represents a monetary value.|  
+|[get](#get)|Extracts a numerical value from a character sequence that represents a monetary value.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  money_get::char_type  
- 一种类型，此类型用于描述区域设置使用的字符。  
+ A type that is used to describe a character used by a locale.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **CharType** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-##  <a name="do_get"></a>money_get::do_get  
- 一种虚拟函数，通过调用此函数可从表示货币值的字符序列提取数值。  
+##  <a name="do_get"></a>  money_get::do_get  
+ Virtual function called to extracts a numerical value from a character sequence that represents a monetary value.  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -119,66 +123,66 @@ virtual iter_type do_get(iter_type first,
     string_type& val) const
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `Intl`  
- 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。  
+ A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
   
  `Iosbase`  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `State`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded or not.  
   
  `val`  
- 存储已转换序列的字符串。  
+ A string storing the converted sequence.  
   
-### <a name="return-value"></a>返回值  
- 发现第一个超出货币输入字段的元素的输入迭代器。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the monetary input field.  
   
-### <a name="remarks"></a>备注  
- 第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功，它会将此字段转换为一个包含一个或多个十进制数字的序列（数字前可带负号 ( `-`)），以表示数额，并将结果存储于 [string_type](#string_type) 对象 `val`。 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则，函数将在 `val` 中存储空的序列，并在 `State` 中设置 `ios_base::failbit`。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。  
+### <a name="remarks"></a>Remarks  
+ The first virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty monetary input field. If successful, it converts this field to a sequence of one or more decimal digits, optionally preceded by a minus sign ( `-`), to represent the amount and stores the result in the [string_type](#string_type) object `val`. It returns an iterator designating the first element beyond the monetary input field. Otherwise, the function stores an empty sequence in `val` and sets `ios_base::failbit` in `State`. It returns an iterator designating the first element beyond any prefix of a valid monetary input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in `State`.  
   
- 第二个受保护的虚拟成员函数的行为与第一个相同，只不过如果成功，它会将选择性签名的数字序列转换为 `long double` 类型的值，并将该值存储于 `val`。  
+ The second virtual protected member function behaves the same as the first, except that if successful it converts the optionally signed digit sequence to a value of type `long double` and stores that value in `val`.  
   
- 货币输入字段的格式由[区域设置 facet](../standard-library/locale-class.md#facet_class)**fac** 决定，而后者又有有效调用 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 返回。  
+ The format of a monetary input field is determined by the [locale facet](../standard-library/locale-class.md#facet_class)**fac** returned by the effective call [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).  
   
- 尤其是在下列情况下：  
+ Specifically:  
   
-- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) 确定字段的组件出现的顺序。  
+- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) determines the order in which components of the field occur.  
   
-- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) 确定构成货币符号的元素的序列。  
+- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) determines the sequence of elements that constitutes a currency symbol.  
   
-- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) 确定构成正号的元素的序列。  
+- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) determines the sequence of elements that constitutes a positive sign.  
   
-- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) 确定构成负号的元素的序列。  
+- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) determines the sequence of elements that constitutes a negative sign.  
   
-- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) 确定如何对任何小数点左侧的数字进行分组。  
+- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) determines how digits are grouped to the left of any decimal point.  
   
-- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) 确定将任何小数点左侧的数字进行分组的元素。  
+- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) determines the element that separates groups of digits to the left of any decimal point.  
   
-- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) 确定从小数位分隔整数位的元素。  
+- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) determines the element that separates the integer digits from the fraction digits.  
   
-- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) 确定任何小数点右侧的有效位数。 分析货币金额时，若其小数位比 `frac_digits` 调用的小数位还多，`do_get` 将在占用最多 `frac_digits` 字符后停止分析。  
+- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) determines the number of significant fraction digits to the right of any decimal point. When parsing a monetary amount with more fraction digits than are called for by `frac_digits`, `do_get` stops parsing after consuming at most `frac_digits` characters.  
   
- 如果符号字符串（**fac**. `negative_sign` 或 **fac**. `positive_sign`）具有多个元素，仅第一个元素会在等于 **money_base::sign** 的元素在 ( **fac**. `neg_format`) 格式模式中出现的位置匹配。 剩余所有元素在货币输入字段的末尾匹配。 如果两个字符串都没有第一个元素匹配货币输入字段中的下一个元素，则将符号字符串视为空，且符号为正。  
+ If the sign string ( **fac**. `negative_sign` or **fac**. `positive_sign`) has more than one element, only the first element is matched where the element equal to **money_base::sign** appears in the format pattern ( **fac**. `neg_format`). Any remaining elements are matched at the end of the monetary input field. If neither string has a first element that matches the next element in the monetary input field, the sign string is taken as empty and the sign is positive.  
   
- 如果 **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) 不为零，则字符串 **fac**. `curr_symbol` 必须在等于 **money_base::symbol** 的元素在此格式模式中出现的位置匹配。 否则，如果 **money_base::symbol** 出现在此格式模式末尾，或如果没有符号字符串的元素要进行匹配，则不会匹配货币符号。 否则，将选择性地匹配货币符号。  
+ If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) is nonzero, the string **fac**. `curr_symbol` must match where the element equal to **money_base::symbol** appears in the format pattern. Otherwise, if **money_base::symbol** occurs at the end of the format pattern, and if no elements of the sign string remain to be matched, the currency symbol is not matched. Otherwise, the currency symbol is optionally matched.  
   
- 如果 **fac**. `thousands_sep` 的任何实例都不出现在货币输入字段的值部分（等于 **money_base::value** 的元素在格式模式中出现的位置），则不会采用分组约束。 否则，会强制执行 **fac**. **grouping** 采用的任何分组约束。 请注意，所产生的数字序列表示一个整数，其低位 **fac**. `frac_digits` 十进制数字应位于小数点右侧。  
+ If no instances of **fac**. `thousands_sep` occur in the value portion of the monetary input field (where the element equal to **money_base::value** appears in the format pattern), no grouping constraint is imposed. Otherwise, any grouping constraints imposed by **fac**. **grouping** is enforced. Note that the resulting digit sequence represents an integer whose low-order **fac**. `frac_digits` decimal digits are considered to the right of the decimal point.  
   
- 如果等于 **money_base::space** 的元素未在格式模式的末尾出现，而是在格式模式中出现，则匹配任意空格。 否则，不匹配任何内部空格。 将元素 *ch* 视为空格，前提是 [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc))。 [is](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) 为 **true**）。  
+ Arbitrary white space is matched where the element equal to **money_base::space** appears in the format pattern, if it appears other than at the end of the format pattern. Otherwise, no internal white space is matched. An element *ch* is considered white space if [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [is](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*) is **true**.  
   
-### <a name="example"></a>示例  
-  请参阅 [get](#get) 的示例，它调用 `do_get`。  
+### <a name="example"></a>Example  
+  See the example for [get](#get), which calls `do_get`.  
   
-##  <a name="get"></a>money_get::get  
- 从表示货币值的字符序列提取数值。  
+##  <a name="get"></a>  money_get::get  
+ Extracts a numerical value from a character sequence that represents a monetary value.  
   
 ```
 iter_type get(iter_type first,
@@ -196,32 +200,32 @@ iter_type get(iter_type first,
     string_type& val) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `Intl`  
- 一个布尔值，该值指示在序列中预期的货币符号的类型：如果为国际，则为 **true**，如果为国内，则为 **false**。  
+ A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
   
  `Iosbase`  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required  
   
  `State`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `val`  
- 存储已转换序列的字符串。  
+ A string storing the converted sequence.  
   
-### <a name="return-value"></a>返回值  
- 发现第一个超出货币输入字段的元素的输入迭代器。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the monetary input field.  
   
-### <a name="remarks"></a>备注  
- 两个成员函数都返回 [do_get](#do_get)( `first``,` `last``,` `Intl`, `Iosbase`, `State`, `val`)。  
+### <a name="remarks"></a>Remarks  
+ Both member functions return [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // money_get_get.cpp  
@@ -270,54 +274,54 @@ int main( )
 };  
 ```  
   
-##  <a name="iter_type"></a>money_get::iter_type  
- 一种类型，此类型描述输入迭代器。  
+##  <a name="iter_type"></a>  money_get::iter_type  
+ A type that describes an input iterator.  
   
 ```
 typedef InputIterator iter_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **InputIterator** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **InputIterator**.  
   
-##  <a name="money_get"></a>money_get::money_get  
- 用于从表示货币值的序列中提取数值的 `money_get` 类型对象的构造函数。  
+##  <a name="money_get"></a>  money_get::money_get  
+ The constructor for objects of type `money_get` that are used to extract numerical values from sequences representing monetary values.  
   
 ```
 explicit money_get(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 用于指定对象的内存管理类型的整数值。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>备注  
- `_Refs` 参数可能的值及其含义：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：对象的生存期由包含该对象的区域设置管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：必须手动管理对象的生存期。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定义这些值。  
+-   \> 1: These values are not defined.  
   
- 由于该析构函数受到保护，可能没有直接的示例。  
+ No direct examples are possible, because the destructor is protected.  
   
- 构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( **_***Refs*) 初始化其基对象。  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( **_***Refs*).  
   
 ##  <a name="string_type"></a>  money_get::string_type  
- 一种类型，此类型描述包含 **CharType** 类型字符的字符串。  
+ A type that describes a string containing characters of type **CharType**.  
   
 ```
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 此类型描述 [basic_string](../standard-library/basic-string-class.md) 模板类专用化。  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md).  
   
-## <a name="see-also"></a>另请参阅  
- [\<区域设置>](../standard-library/locale.md)   
- [facet 类](../standard-library/locale-class.md#facet_class)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [\<locale>](../standard-library/locale.md)   
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

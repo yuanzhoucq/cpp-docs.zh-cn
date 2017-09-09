@@ -1,5 +1,5 @@
 ---
-title: "is_integral 类 | Microsoft Docs"
+title: is_integral Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_integral
 - type_traits/std::is_integral
 dev_langs:
 - C++
@@ -35,33 +34,33 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 71e6db05a48cfc5433afc3dda38c3005ad24a7e8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9892390db54cabe7c6bbb1b6df7f55b997eae98a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isintegral-class"></a>is_integral 类
-测试类型是否为整型。  
+# <a name="isintegral-class"></a>is_integral Class
+Tests if type is integral.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_integral;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果类型 `Ty` 是整型类型之一，或整型类型之一的 `cv-qualified` 形式，则类型谓词的实例将为 true，否则为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is one of the integral types, or a `cv-qualified` form of one of the integral types, otherwise it holds false.  
   
- 整型类型是 `bool`、`char`、`unsigned char`、`signed char`、`wchar_t`、`short`、`unsigned short`、`int`、`unsigned int`、`long` 和 `unsigned long` 之一。 此外，若使用提供这些类型的编译器，整型类型还可以是 `long long`、`unsigned long long`、`__int64` 和 `unsigned __int64` 之一。  
+ An integral type is one of `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, and `unsigned long`. In addition, with compilers that provide them, an integral type can be one of `long long`, `unsigned long long`, `__int64`, and `unsigned __int64`.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_integral.cpp   
@@ -94,13 +93,13 @@ is_integral<int> == true
 is_integral<float> == false  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_enum 类](../standard-library/is-enum-class.md)   
- [is_floating_point 类](../standard-library/is-floating-point-class.md)
+ [is_enum Class](../standard-library/is-enum-class.md)   
+ [is_floating_point Class](../standard-library/is-floating-point-class.md)
 

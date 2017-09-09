@@ -1,5 +1,5 @@
 ---
-title: "freelist 类 | Microsoft 文档"
+title: freelist Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,15 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::freelist
-- freelist
 - allocators/stdext::freelist
 - allocators/stdext::freelist::pop
 - allocators/stdext::freelist::push
 dev_langs:
 - C++
 helpviewer_keywords:
-- freelist class
+- stdext::freelist
+- stdext::freelist [C++], pop
+- stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
 caps.latest.revision: 17
 author: corob-msft
@@ -37,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0e08b6f737616cf764f797681c5492840a9b044a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5c7366bbf75bb2bc3de753c4bca23d69d279d1a7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="freelist-class"></a>freelist 类
-管理内存块列表。  
+# <a name="freelist-class"></a>freelist Class
+Manages a list of memory blocks.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <std::size_t Sz, class Max>  
@@ -55,76 +55,76 @@ class freelist
  : public Max
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Sz`|数组中要分配的元素数目。|  
-|`Max`|max 类表示可存储在空闲列表中的元素的最大数量。 max 类可以是 [max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_fixed_size](../standard-library/max-fixed-size-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。|  
+|`Sz`|The number of elements in the array to be allocated.|  
+|`Max`|The max class representing the maximum number of elements to be stored in the free list. The max class can be [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md), or [max_variable_size](../standard-library/max-variable-size-class.md).|  
   
-## <a name="remarks"></a>备注  
- 此模板类管理大小为 `Sz` 的内存块列表，列表的最大长度由传入 `Max` 中的 max 类确定。  
+## <a name="remarks"></a>Remarks  
+ This template class manages a list of memory blocks of size `Sz` with the maximum length of the list determined by the max class passed in `Max`.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[freelist](#freelist)|构造 `freelist` 类型的对象。|  
-  
-### <a name="member-functions"></a>成员函数  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[pop](#pop)|从空闲列表中删除第一个内存块。|  
-|[push](#push)|向列表中添加内存块。|  
+|[freelist](#freelist)|Constructs an object of type `freelist`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<allocators>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** stdext  
+|||  
+|-|-|  
+|[pop](#pop)|Removes the first memory block from the free list.|  
+|[push](#push)|Adds a memory block to the list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
+  
+ **Namespace:** stdext  
   
 ##  <a name="freelist"></a>  freelist::freelist  
- 构造 `freelist` 类型的对象。  
+ Constructs an object of type `freelist`.  
   
 ```
 freelist();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="pop"></a>  freelist::pop  
- 从空闲列表中删除第一个内存块。  
+ Removes the first memory block from the free list.  
   
 ```
 void *pop();
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回指向从列表中删除的内存块的指针。  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the memory block removed from the list.  
   
-### <a name="remarks"></a>备注  
- 如果列表为空，则成员函数将返回 `NULL`。 否则，成员函数从列表中删除第一个内存块。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `NULL` if the list is empty. Otherwise, it removes the first memory block from the list.  
   
 ##  <a name="push"></a>  freelist::push  
- 向列表中添加内存块。  
+ Adds a memory block to the list.  
   
 ```
 bool push(void* ptr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|指向要添加到空闲列表的内存块的指针。|  
+|`ptr`|A pointer to the memory block to be added to the free list.|  
   
-### <a name="return-value"></a>返回值  
- 如果 max 类的 `full` 函数返回 `false`，则为 `true`，否则 `push` 函数返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the `full` function of the max class returns `false`; otherwise, the `push` function returns `false`.  
   
-### <a name="remarks"></a>备注  
- 如果 max 类的 `full` 函数返回 `false`，则此成员函数将 `ptr` 指向的内存块添加到列表表头。  
+### <a name="remarks"></a>Remarks  
+ If the `full` function of the max class returns `false`, this member function adds the memory block pointed to by `ptr` to the head of the list.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

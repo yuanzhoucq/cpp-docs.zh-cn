@@ -1,5 +1,5 @@
 ---
-title: "insert_iterator 类 | Microsoft Docs"
+title: insert_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iterator/std::insert_iterator
-- insert_iterator
 - iterator/std::insert_iterator::container_type
 - iterator/std::insert_iterator::reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- insert_iterator class
-- insert_iterator class, syntax
+- std::insert_iterator [C++]
+- std::insert_iterator [C++], container_type
+- std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 caps.latest.revision: 17
 author: corob-msft
@@ -37,67 +37,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 79e0603aeafe714b891e5564d68cbed6ede89768
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1f4f56297b7247234518cb93600b95698b9e2c5a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="insertiterator-class"></a>insert_iterator 类
-描述满足输出迭代器需求的迭代器适配器。 它是将元素插入到序列而不是覆盖，因此不同于 C++ 序列和关联容器的迭代器所提供的覆盖语义，它可以提供不同的语义。 `insert_iterator` 类会针对要适配的容器类型进行模板化。  
+# <a name="insertiterator-class"></a>insert_iterator Class
+Describes an iterator adaptor that satisfies the requirements of an output iterator. It inserts, rather than overwrites, elements into a sequence and thus provides semantics that are different from the overwrite semantics provided by the iterators of the C++ sequence and associative containers. The `insert_iterator` class is templatized on the type of container being adapted.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Container>  
 class insert_iterator;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Container`  
- 要通过 `insert_iterator` 将元素插入其中的容器类型。  
+ The type of container into which elements are to be inserted by an `insert_iterator`.  
   
-## <a name="remarks"></a>备注  
- **Container** 类型的容器必须满足可变大小容器的需求，并具有一个两个自变量插入成员函数，其中，形式参数分别为 **Container::iterator** 类型和 **Container::value_type** 类型，将返回 **Container::iterator** 类型。 C++ 标准库序列和排序关联容器符合这些需求，可以进行适配以便用于 `insert_iterator`。 对于关联容器，位置自变量将被当做提示来处理，有可能会提高或降低性能，具体取决于该提示的好坏。 `insert_iterator` 必须使用其容器进行初始化。  
+## <a name="remarks"></a>Remarks  
+ The container of type **Container** must satisfy the requirements for a variable-sized container and have a two-argument insert member function where the parameters are of type **Container::iterator** and **Container::value_type** and that returns a type **Container::iterator**. C++ Standard Library sequence and sorted associative containers satisfy these requirements and can be adapted to use with `insert_iterator`s. For associative containers, the position argument is treated as a hint, which has the potential to improve or degrade performance depending on how good the hint is. An `insert_iterator` must always be initialized with its container.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[insert_iterator](#insert_iterator)|构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|一种类型，代表要对其执行泛型插入的容器。|  
-|[reference](#reference)|一种类型，此类型提供对关联容器所控制序列中的元素的引用。|  
+|[insert_iterator](#insert_iterator)|Constructs an `insert_iterator` that inserts an element into a specified position in a container.|  
   
-### <a name="operators"></a>运算符  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|取消引用运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|  
-|[operator++](#op_add_add)|将 `insert_iterator` 递增到下一个可用来存储值的位置。|  
-|[operator=](#op_eq)|赋值运算符，用于实现泛型插入的输出迭代器表达式 * `i` = `x`。|  
+|[container_type](#container_type)|A type that represents the container into which a general insertion is to be made.|  
+|[reference](#reference)|A type that provides a reference to an element in a sequence controlled by the associated container.|  
   
-## <a name="requirements"></a>要求  
- **标头**：\<iterator>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator*](#op_star)|Dereferencing operator used to implement the output iterator expression * `i` = `x` for a general insertion.|  
+|[operator++](#op_add_add)|Increments the `insert_iterator` to the next location into which a value may be stored.|  
+|[operator=](#op_eq)|Assignment operator used to implement the output iterator expression * `i` = `x` for a general insertion.|  
   
-##  <a name="container_type"></a>insert_iterator::container_type  
- 一种类型，代表要对其执行泛型插入的容器。  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<iterator>  
+  
+ **Namespace:** std  
+  
+##  <a name="container_type"></a>  insert_iterator::container_type  
+ A type that represents the container into which a general insertion is to be made.  
   
 ```
 typedef Container container_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **Container** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Container**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_container_type.cpp  
@@ -127,24 +127,24 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="insert_iterator"></a>insert_iterator::insert_iterator  
- 构造一个 `insert_iterator`，以便将元素插入到容器中的指定位置。  
+##  <a name="insert_iterator"></a>  insert_iterator::insert_iterator  
+ Constructs an `insert_iterator` that inserts an element into a specified position in a container.  
   
 ```
 insert_iterator(Container& _Cont, typename Container::iterator _It);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- `insert_iterator` 要将元素插入到其中的容器。  
+ The container into which the `insert_iterator` is to insert elements.  
   
  `_It`  
- 插入位置。  
+ The position for the insertion.  
   
-### <a name="remarks"></a>备注  
- 所有容器都具有由 `insert_iterator` 调用 insert 成员函数。 对于关联容器，位置参数仅是一项建议。 inserter 函数提供了方便插入值的方式。  
+### <a name="remarks"></a>Remarks  
+ All containers have the insert member function called by the `insert_iterator`. For associative containers the position parameter is merely a suggestion. The inserter function provides a convenient way to insert to values.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_insert_iterator.cpp  
@@ -190,20 +190,20 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="op_star"></a>insert_iterator::operator*  
- 取消引用插入迭代器，其返回元素为地址。  
+##  <a name="op_star"></a>  insert_iterator::operator*  
+ Dereferences the insert iterator returning the element is addresses.  
   
 ```
 insert_iterator<Container>& operator*();
 ```  
   
-### <a name="return-value"></a>返回值  
- 此成员函数返回已寻址元素的值。  
+### <a name="return-value"></a>Return Value  
+ The member function returns the value of the element addressed.  
   
-### <a name="remarks"></a>备注  
- 用于实现输出迭代器表达式 **\*Iter** = **value**。 如果 **Iter** 是对序列中元素进行寻址的迭代器，则 **\*Iter** = **value** 会替换该元素的值，且不会改变此序列中元素的总数。  
+### <a name="remarks"></a>Remarks  
+ Used to implement the output iterator expression **\*Iter** = **value**. If **Iter** is an iterator that addresses an element in a sequence, then **\*Iter** = **value** replaces that element with value and does not change the total number of elements in the sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_op_deref.cpp  
@@ -247,8 +247,8 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="op_add_add"></a>insert_iterator::operator++  
- 将 **insert_iterator** 递增到下一个可用来存储值的位置。  
+##  <a name="op_add_add"></a>  insert_iterator::operator++  
+ Increments the **insert_iterator** to the next location into which a value may be stored.  
   
 ```
 insert_iterator<Container>& operator++();
@@ -256,13 +256,13 @@ insert_iterator<Container>& operator++();
 insert_iterator<Container> operator++(int);
 ```  
   
-### <a name="parameters"></a>参数  
- `insert_iterator`，它寻找下一个可用来存储值的位置。  
+### <a name="parameters"></a>Parameters  
+ A `insert_iterator` addressing the next location into which a value may be stored.  
   
-### <a name="remarks"></a>备注  
- 前递增和后递增运算符将返回相同的结果。  
+### <a name="remarks"></a>Remarks  
+ Both preincrementation and postincrementation operators return the same result.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_op_incr.cpp  
@@ -308,8 +308,8 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="op_eq"></a>insert_iterator::operator=  
- 将值插入容器并返回更新的迭代器，以指向新元素。  
+##  <a name="op_eq"></a>  insert_iterator::operator=  
+ Inserts a value into the container and returns the iterator updated to point to the new element.  
   
 ```
 insert_iterator<Container>& operator=(
@@ -319,31 +319,31 @@ insert_iterator<Container>& operator=(
     typename Container::value_type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `val`  
- 要赋给容器的值。  
+ The value to be assigned to the container.  
   
-### <a name="return-value"></a>返回值  
- 对插入到容器中的元素的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the element inserted into the container.  
   
-### <a name="remarks"></a>备注  
- 第一个成员运算符会求值  
+### <a name="remarks"></a>Remarks  
+ The first member operator evaluates  
   
  `Iter = container->insert(Iter, val)`;  
   
  `++Iter;`  
   
- 然后返回 `*this`。  
+ then returns `*this`.  
   
- 第二个成员运算符会求值  
+ The second member operator evaluates  
   
  `Iter = container->insert(Iter, std::move(val));`  
   
  `++Iter;`  
   
- 然后返回 `*this`。  
+ then returns `*this`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_op_assign.cpp  
@@ -387,17 +387,17 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="reference"></a>insert_iterator::reference  
- 一种类型，此类型提供对关联容器所控制序列中的元素的引用。  
+##  <a name="reference"></a>  insert_iterator::reference  
+ A type that provides a reference to an element in a sequence controlled by the associated container.  
   
 ```
 typedef typename Container::reference reference;
 ```  
   
-### <a name="remarks"></a>备注  
- 此类型描述对关联容器控制的序列元素的引用。  
+### <a name="remarks"></a>Remarks  
+ The type describes a reference to an element of the sequence controlled by the associated container.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // insert_iterator_container_reference.cpp  
@@ -433,10 +433,10 @@ The first element in the list L is: 10.
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

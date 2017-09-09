@@ -1,48 +1,52 @@
 ---
-title: "&lt;random&gt; 函数 | Microsoft Docs"
+title: '&lt;random&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
+helpviewer_keywords:
+- std::generate_canonical
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3aebef535acb59046fab53d49051df16bd362c3c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0929e7c6749af19065f42f10ee6c15ab4d4a3e88
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltrandomgt-functions"></a>&lt;random&gt; 函数
+# <a name="ltrandomgt-functions"></a>&lt;random&gt; functions
   
-##  <a name="generate_canonical"></a>generate_canonical  
- 从随机序列返回浮点值。  
+##  <a name="generate_canonical"></a>  generate_canonical  
+ Returns a floating-point value from a random sequence.  
   
 > [!NOTE]
->  ISO C++ 标准声明此函数应返回 [`0`，`1`) 范围中的值。 Visual Studio 尚未与此约束兼容。 请使用 [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md) 作为在此范围中生成值的解决方法。  
+>  The ISO C++ Standard states that this function should return values in the range [ `0`, `1`). Visual Studio is not yet compliant with this constraint. As a workaround to generate values in this range, use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
   
 ```  
 template <class RealType, size_t Bits, class Generator>  
 RealType generate_canonical(Generator& Gen);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `RealType`  
- 浮点整型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
+ The floating point integral type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `Bits`  
- 随机数生成器。  
+ The random number generator.  
   
  `Gen`  
- 随机数生成器。  
+ The random number generator.  
   
-### <a name="remarks"></a>备注  
- 模板函数重复调用 `operator()` 的 `Gen` 并将返回值打包到 `x` 类型的浮点值 `RealType` 中，直到它已收集指定数量的 `x` 中的尾数位。 指定的数量是 `Bits`（必须为非零）和 `RealType` 中尾数位的全部数量两者中的较小值。 第一个调用提供最低序位。 该函数返回 `x`。  
+### <a name="remarks"></a>Remarks  
+ The template function calls `operator()` of `Gen` repeatedly and packs the returned values into a floating-point value `x` of type `RealType` until it has gathered the specified number of mantissa bits in `x`. The specified number is the smaller of `Bits` (which must be nonzero) and the full number of mantissa bits in `RealType`. The first call supplies the lowest-order bits. The function returns `x`.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

@@ -1,49 +1,64 @@
 ---
-title: "&lt;deque&gt; 运算符 | Microsoft 文档"
+title: '&lt;deque&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- deque/std::operator!=
+- deque/std::operator&gt;
+- deque/std::operator&gt;=
+- deque/std::operator&lt;
+- deque/std::operator&lt;=
+- deque/std::operator==
+dev_langs:
+- C++
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9d7f8ff1d198e8608cb5aa96852dc5b263277e02
+helpviewer_keywords:
+- std::operator!= (deque)
+- std::operator&gt; (deque)
+- std::operator&gt;= (deque)
+- std::operator&lt; (deque)
+- std::operator&lt;= (deque)
+- std::operator== (deque)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ab28c65e454f536e40a3a3c78d3d8dfbf4af3a2f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltdequegt-operators"></a>&lt;deque&gt; 运算符
+# <a name="ltdequegt-operators"></a>&lt;deque&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 测试运算符左侧的 deque 对象是否不等于右侧的 deque 对象。  
+ Tests if the deque object on the left side of the operator is not equal to the deque object on the right side.  
   
 ```
 bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
  `right`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>返回值  
- 如果 deque 对象不相等，则为 **true**；如果 deque 对象相等，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque objects are not equal; **false** if the deque objects are equal.  
   
-### <a name="remarks"></a>备注  
- deque 对象之间的比较基于其元素的成对比较。 如果两个 deque 对象具有的元素数量相等且对应元素具有相同的值，则两个列表相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. Two deque objects are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_ne.cpp  
@@ -70,26 +85,26 @@ The deques are not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 测试运算符左侧的 deque 对象是否小于右侧的 deque 对象。  
+ Tests if the deque object on the left side of the operator is less than the deque object on the right side.  
   
 ```
 bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
  `right`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 deque 小于且不等于运算符右侧的 deque，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is less than and not equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- deque 对象之间的比较基于其元素的成对比较。 两个对象之间的小于关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_lt.cpp  
@@ -120,26 +135,26 @@ Deque c1 is less than deque c2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 测试运算符左侧的 deque 对象是否小于或等于右侧的 deque 对象。  
+ Tests if the deque object on the left side of the operator is less than or equal to the deque object on the right side.  
   
 ```
 bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
  `right`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 deque 小于或等于右侧的 deque，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is less than or equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- deque 对象之间的比较基于其元素的成对比较。 两个对象之间的小于或等于关系基于首对不相等元素的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_le.cpp  
@@ -171,26 +186,26 @@ Deque c1 is less than or equal to deque c2.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 测试运算符左侧的 deque 对象是否等于右侧的 deque 对象。  
+ Tests if the deque object on the left side of the operator is equal to the deque object on the right side.  
   
 ```
 bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
  `right`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 deque 等于运算符右侧的 deque，则为 **true**，否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- deque 对象之间的比较基于其元素的成对比较。 如果两个 deque 具有的元素数量相等且对应元素具有相同的值，则两个列表相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. Two deques are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_eq.cpp  
@@ -225,26 +240,26 @@ The deques are not equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 测试运算符左侧的 deque 对象是否大于右侧的 deque 对象。  
+ Tests if the deque object on the left side of the operator is greater than the deque object on the right side.  
   
 ```
 bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
  `right`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 deque 大于运算符右侧的 deque，则为 **true**，否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is greater than the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- deque 对象之间的比较基于其元素的成对比较。 两个对象之间的大于关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_gt.cpp  
@@ -277,26 +292,26 @@ Deque c1 is greater than deque c2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 测试运算符左侧的 deque 对象是否大于或等于右侧的 deque 对象。  
+ Tests if the deque object on the left side of the operator is greater than or equal to the deque object on the right side.  
   
 ```
 bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
  `right`  
- 一个 `deque` 类型的对象。  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 deque 大于或等于右侧的 deque，则为 **true**，否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is greater than or equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- deque 对象之间的比较基于其元素的成对比较。 两个对象之间大于或等于的关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_ge.cpp  
@@ -327,7 +342,7 @@ Deque c1 is greater than or equal to deque c2.
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<deque>](../standard-library/deque.md)
 
 

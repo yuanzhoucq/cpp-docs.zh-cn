@@ -1,5 +1,5 @@
 ---
-title: "codecvt_base 类 | Microsoft 文档"
+title: codecvt_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_base
 - xlocale/std::codecvt_base
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d0c12f0dfb1b0ceb111f3c3313e78dd5c9197f70
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 892bdf1e5169bef9e057ac699ea91eddc184584a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="codecvtbase-class"></a>codecvt_base 类
-一种 codecvt 类的基类，用于定义一种称为 **result** 的枚举类型，此类型用作 facet 成员函数的返回类型以便指示转换结果。  
+# <a name="codecvtbase-class"></a>codecvt_base Class
+A base class for the codecvt class that is used to define an enumeration type referred to as **result**, used as the return type for the facet member functions to indicate the result of a conversion.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 class codecvt_base : public locale::facet {
@@ -63,24 +62,24 @@ protected:
 };
 ```  
   
-## <a name="remarks"></a>备注  
- 此类会描述常用于所有模板类 [codecvt](../standard-library/codecvt-class.md) 专用化的枚举。 枚举结果描述了来自 [do_in](../standard-library/codecvt-class.md#do_in) 或 [do_out](../standard-library/codecvt-class.md#do_out) 可能的返回值：  
+## <a name="remarks"></a>Remarks  
+ The class describes an enumeration common to all specializations of template class [codecvt](../standard-library/codecvt-class.md). The enumeration result describes the possible return values from [do_in](../standard-library/codecvt-class.md#do_in) or [do_out](../standard-library/codecvt-class.md#do_out):  
   
-- 如果内部和外部字符编码之间的转换成功，则为 **ok**。  
+- **ok** if the conversion between internal and external character encodings succeeds.  
   
-- 如果目标大小不足以使转换成功完成，则为 **partial**。  
+- **partial** if the destination is not large enough for the conversion to succeed.  
   
-- 如果源序列格式不正确，则为 **error**。  
+- **error** if the source sequence is ill formed.  
   
-- 如果函数不执行任何转换，则为 **noconv**。  
+- **noconv** if the function performs no conversion.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

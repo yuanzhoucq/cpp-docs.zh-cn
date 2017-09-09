@@ -1,31 +1,48 @@
 ---
-title: "&lt;thread&gt; 运算符 | Microsoft Docs"
+title: '&lt;thread&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- thread/std::operator!=
+- thread/std::operator&gt;
+- thread/std::operator&gt;=
+- thread/std::operator&lt;
+- thread/std::operator&lt;&lt;
+- thread/std::operator&lt;=
+- thread/std::operator==
+dev_langs:
+- C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 04b9f1a76c637f7bca9f230092e51246da0c6075
+helpviewer_keywords:
+- std::operator!= (thread)
+- std::operator&gt; (thread)
+- std::operator&gt;= (thread)
+- std::operator&lt; (thread)
+- std::operator&lt;&lt; (thread)
+- std::operator&lt;= (thread)
+- std::operator== (thread)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7db631d96612a3463a543d063092f0c16b4a7dc0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltthreadgt-operators"></a>&lt;thread&gt; 运算符
+# <a name="ltthreadgt-operators"></a>&lt;thread&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator==](#op_eq_eq)|  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
- 确定一个 `thread::id` 对象是否大于或等于另一个。  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Determines whether one `thread::id` object is greater than or equal to another.  
   
 ```cpp  
 bool operator>= (
@@ -33,21 +50,21 @@ bool operator>= (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左 `thread::id` 对象。  
+ The left `thread::id` object.  
   
  `Right`  
- 正确的 `thread::id` 对象。  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `!(Left < Right)`  
   
-### <a name="remarks"></a>备注  
- 此函数不引发任何异常。  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
-##  <a name="op_gt"></a>operator&gt;  
- 确定一个 `thread::id` 对象是否大于另一个。  
+##  <a name="op_gt"></a>  operator&gt;  
+ Determines whether one `thread::id` object is greater than another.  
   
 ```cpp  
 bool operator> (
@@ -55,21 +72,21 @@ bool operator> (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左 `thread::id` 对象。  
+ The left `thread::id` object.  
   
  `Right`  
- 正确的 `thread::id` 对象。  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `Right < Left`  
   
-### <a name="remarks"></a>备注  
- 此函数不引发任何异常。  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
- 确定一个 `thread::id` 对象是否小于或等于另一个。  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Determines whether one `thread::id` object is less than or equal to another.  
   
 ```cpp  
 bool operator<= (
@@ -77,21 +94,21 @@ bool operator<= (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左 `thread::id` 对象。  
+ The left `thread::id` object.  
   
  `Right`  
- 正确的 `thread::id` 对象。  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `!(Right < Left)`  
   
-### <a name="remarks"></a>备注  
- 此函数不引发任何异常。  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
-##  <a name="op_lt"></a>operator&lt;  
- 确定一个 `thread::id` 对象是否小于另一个。  
+##  <a name="op_lt"></a>  operator&lt;  
+ Determines whether one `thread::id` object is less than another.  
   
 ```cpp  
 bool operator<(
@@ -99,23 +116,23 @@ bool operator<(
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左 `thread::id` 对象。  
+ The left `thread::id` object.  
   
  `Right`  
- 正确的 `thread::id` 对象。  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>返回值  
- 如果在总排序中，`Left` 超过 `Right`，则为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if `Left` precedes `Right` in the total ordering; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 该运算符定义所有 `thread::id` 对象的总排序。 这些对象可以用作关联容器中的键。  
+### <a name="remarks"></a>Remarks  
+ The operator defines a total ordering on all `thread::id` objects. These objects can be used as keys in associative containers.  
   
- 此函数不引发任何异常。  
+ This function does not throw any exceptions.  
   
-##  <a name="op_neq"></a>operator!=  
- 比较两个 `thread::id` 对象是否相等。  
+##  <a name="op_neq"></a>  operator!=  
+ Compares two `thread::id` objects for inequality.  
   
 ```cpp  
 bool operator!= (
@@ -123,21 +140,21 @@ bool operator!= (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左 `thread::id` 对象。  
+ The left `thread::id` object.  
   
  `Right`  
- 正确的 `thread::id` 对象。  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `!(Left == Right)`  
   
-### <a name="remarks"></a>备注  
- 此函数不引发任何异常。  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
-##  <a name="op_eq_eq"></a>operator==  
- 比较两个 `thread::id` 对象是否相等。  
+##  <a name="op_eq_eq"></a>  operator==  
+ Compares two `thread::id` objects for equality.  
   
 ```cpp  
 bool operator== (
@@ -145,21 +162,21 @@ bool operator== (
     thread::id Right) noexcept
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左 `thread::id` 对象。  
+ The left `thread::id` object.  
   
  `Right`  
- 正确的 `thread::id` 对象。  
+ The right `thread::id` object.  
   
-### <a name="return-value"></a>返回值  
- 如果两个对象表示同一个执行线程或者这两个对象都不表示执行线程，则为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the two objects represent the same thread of execution or if neither object represents a thread of execution; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 此函数不引发任何异常。  
+### <a name="remarks"></a>Remarks  
+ This function does not throw any exceptions.  
   
-##  <a name="op_lt_lt"></a>operator&lt;&lt;  
- 将 `thread::id` 对象的文本表示形式插入流。  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+ Inserts a text representation of a `thread::id` object into a stream.  
   
 ```cpp  
 template <class Elem, class Tr>
@@ -167,22 +184,22 @@ basic_ostream<Elem, Tr>& operator<<(
     basic_ostream<Elem, Tr>& Ostr, thread::id Id);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Ostr`  
- 一个 [basic_ostream](../standard-library/basic-ostream-class.md) 对象。  
+ A [basic_ostream](../standard-library/basic-ostream-class.md) object.  
   
  `Id`  
- 一个 `thread::id` 对象。  
+ A `thread::id` object.  
   
-### <a name="return-value"></a>返回值  
- `Ostr`。  
+### <a name="return-value"></a>Return Value  
+ `Ostr`.  
   
-### <a name="remarks"></a>备注  
- 此函数会将 `Id` 插入 `Ostr`。  
+### <a name="remarks"></a>Remarks  
+ This function inserts `Id` into `Ostr`.  
   
- 如果两个`thread::id` 对象相等，这些对象的文本表示形式相同。  
+ If two `thread::id` objects compare equal, the inserted text representations of those objects are the same.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<thread>](../standard-library/thread.md)
 
 

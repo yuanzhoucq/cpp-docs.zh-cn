@@ -1,5 +1,5 @@
 ---
-title: "timed_mutex 类 | Microsoft Docs"
+title: timed_mutex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,106 +37,114 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 40622e83235c4df32ec9afd25905ffdde2b97be7
+helpviewer_keywords:
+- std::timed_mutex [C++]
+- std::timed_mutex [C++], timed_mutex
+- std::timed_mutex [C++], lock
+- std::timed_mutex [C++], try_lock
+- std::timed_mutex [C++], try_lock_for
+- std::timed_mutex [C++], try_lock_until
+- std::timed_mutex [C++], unlock
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3c57c0b274f45b34088698851dc3fe30d784a22b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timedmutex-class"></a>timed_mutex 类
-表示定时互斥体类型。 此类型的对象在程序内通过时间限制阻止强制实现互相排斥。  
+# <a name="timedmutex-class"></a>timed_mutex Class
+Represents a *timed mutex type*. Objects of this type are used to enforce mutual exclusion through time-limited blocking within a program.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 class timed_mutex;
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[timed_mutex](#timed_mutex)|构造未锁定的 `timed_mutex` 对象。|  
-|[timed_mutex::~timed_mutex 构造函数](#dtortimed_mutex_destructor)|释放由 `timed_mutex` 对象使用的任何资源。|  
+|[timed_mutex](#timed_mutex)|Constructs a `timed_mutex` object that's not locked.|  
+|[timed_mutex::~timed_mutex Destructor](#dtortimed_mutex_destructor)|Releases any resources that are used by the `timed_mutex` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|  
-|[try_lock](#try_lock)|在不阻止的情况下尝试获取 `mutex` 的所有权。|  
-|[try_lock_for](#try_lock_for)|尝试获取在指定时间间隔内有效的 `mutex` 的所有权。|  
-|[try_lock_until](#try_lock_until)|尝试获取在指定时间之前有效的 `mutex` 的所有权。|  
-|[unlock](#unlock)|释放 `mutex` 的所有权。|  
+|[lock](#lock)|Blocks the calling thread until the thread obtains ownership of the `mutex`.|  
+|[try_lock](#try_lock)|Attempts to obtain ownership of the `mutex` without blocking.|  
+|[try_lock_for](#try_lock_for)|Attempts to obtain ownership of the `mutex` for a specified time interval.|  
+|[try_lock_until](#try_lock_until)|Attempts to obtain ownership of the `mutex` until a specified time.|  
+|[unlock](#unlock)|Releases ownership of the `mutex`.|  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<互斥体 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="lock"></a>timed_mutex:: lock
- 阻止调用线程，直到线程获取 `mutex` 的所有权。  
+##  <a name="lock"></a>  timed_mutex::lock
+ Blocks the calling thread until the thread obtains ownership of the `mutex`.  
   
 ```cpp  
 void lock();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果调用线程已拥有 `mutex`，则该行为不确定。  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the behavior is undefined.  
   
-##  <a name="timed_mutex"></a>timed_mutex::timed_mutex 构造函数  
- 构造未锁定的 `timed_mutex` 对象。  
+##  <a name="timed_mutex"></a>  timed_mutex::timed_mutex Constructor  
+ Constructs a `timed_mutex` object that is not locked.  
   
 ```cpp  
 timed_mutex();
 ```  
   
-##  <a name="dtortimed_mutex_destructor"></a>timed_mutex::~timed_mutex 析构函数  
- 释放由 `mutex` 对象使用的任何资源。  
+##  <a name="dtortimed_mutex_destructor"></a>  timed_mutex::~timed_mutex Destructor  
+ Releases any resources that are used by the `mutex` object.  
   
 ```cpp  
 ~timed_mutex();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果当析构函数运行时对象被锁定，则该行为不确定。  
+### <a name="remarks"></a>Remarks  
+ If the object is locked when the destructor runs, the behavior is undefined.  
   
-##  <a name="try_lock"></a>timed_mutex:: try_lock
- 在不阻止的情况下尝试获取 `mutex` 的所有权。  
+##  <a name="try_lock"></a>  timed_mutex::try_lock
+ Attempts to obtain ownership of the `mutex` without blocking.  
   
 ```cpp  
 bool try_lock();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功获取 `true` 的所有权，则为 `mutex`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 如果调用线程已拥有 `mutex`，则该行为不确定。  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the behavior is undefined.  
   
-##  <a name="try_lock_for"></a>timed_mutex:: try_lock_for
- 在不阻止的情况下尝试获取 `mutex` 的所有权。  
+##  <a name="try_lock_for"></a>  timed_mutex::try_lock_for
+ Attempts to obtain ownership of the `mutex` without blocking.  
   
 ```cpp  
 template <class Rep, class Period>
 bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Rel_time`  
- 一个 [chrono::duration](../standard-library/duration-class.md) 对象，指定此方法尝试获取 `mutex` 所有权的最大时间量。  
+ A [chrono::duration](../standard-library/duration-class.md) object that specifies the maximum amount of time that the method attempts to obtain ownership of the `mutex`.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功获取 `true` 的所有权，则为 `mutex`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 如果调用线程已拥有 `mutex`，则该行为不确定。  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the behavior is undefined.  
   
-##  <a name="try_lock_until"></a>timed_mutex:: try_lock_until
- 在不阻止的情况下尝试获取 `mutex` 的所有权。  
+##  <a name="try_lock_until"></a>  timed_mutex::try_lock_until
+ Attempts to obtain ownership of the `mutex` without blocking.  
   
 ```cpp  
 template <class Clock, class Duration>
@@ -145,28 +153,28 @@ bool try_lock_for(const chrono::time_point<Clock, Duration>& Abs_time);
 bool try_lock_until(const xtime* Abs_time);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Abs_time`  
- 一个时间点，指定阈值，在此之后此方法不再尝试获取 `mutex` 所有权。  
+ A point in time that specifies the threshold after which the method no longer attempts to obtain ownership of the `mutex`.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功获取 `true` 的所有权，则为 `mutex`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 如果调用线程已拥有 `mutex`，则该行为不确定。  
+### <a name="remarks"></a>Remarks  
+ If the calling thread already owns the `mutex`, the behavior is undefined.  
   
-##  <a name="unlock"></a>timed_mutex:: unlock
- 释放 `mutex` 的所有权。  
+##  <a name="unlock"></a>  timed_mutex::unlock
+ Releases ownership of the `mutex`.  
   
 ```cpp  
 void unlock();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果调用的线程不拥有 `mutex`，则该行为不确定。  
+### <a name="remarks"></a>Remarks  
+ If the calling thread does not own the `mutex`, the behavior is undefined.  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

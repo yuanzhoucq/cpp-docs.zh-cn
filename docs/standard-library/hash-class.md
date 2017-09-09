@@ -1,5 +1,5 @@
 ---
-title: "hash 类 | Microsoft Docs"
+title: hash Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- hash
 - functional/std::hash
 - bitset/std::hash
 - memory/std::hash
@@ -23,7 +22,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- hash class
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
 caps.latest.revision: 21
 author: corob-msft
@@ -43,17 +50,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d549fb7aeed268327122532e6c4390ac931740e7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 23f654c648e834f238143648b59150eebcc73aec
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="hash-class"></a>hash 类
-计算值的哈希代码。  
+# <a name="hash-class"></a>hash Class
+Computes hash code for a value.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -62,10 +69,10 @@ struct hash {
 };  
 ```  
   
-## <a name="remarks"></a>备注  
-此成员对象定义一个哈希函数，适合将 Ty 类型的值映射到索引值的分布。 成员 `operator()` 会返回 *val* 的一个哈希代码，适合用于模板类 `unordered_map`、`unordered_multimap`、`unordered_set` 和 `unordered_multiset`。 此标准库对基本类型提供专用化：Ty 可能为任何标量类型，包括指针类型和枚举类型。 此外，还具有库类型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread` `type_index`、`unique_ptr`、`variant` 和 `vector<bool>` 的专用化。  
+## <a name="remarks"></a>Remarks  
+The function object defines a hash function, suitable for mapping values of type *Ty* to a distribution of index values. The member `operator()` returns a hash code for *val*, suitable for use with template classes `unordered_map`, `unordered_multimap`, `unordered_set`, and `unordered_multiset`. The standard library provides specializations for basic types: *Ty* may be any scalar type, including pointer types and enumeration types. In addition, there are specializations for the library types `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, and `vector<bool>`.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__hash.cpp   
@@ -89,15 +96,15 @@ int main()
 3  
 ```  
   
-## <a name="requirements"></a>要求  
-**标头：**\<functional>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<functional>  
   
-**命名空间：** std  
+**Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<unordered_map>](../standard-library/unordered-map.md)   
- [unordered_multimap 类](../standard-library/unordered-multimap-class.md)   
- [unordered_multiset 类](../standard-library/unordered-multiset-class.md)   
+ [unordered_multimap Class](../standard-library/unordered-multimap-class.md)   
+ [unordered_multiset Class](../standard-library/unordered-multiset-class.md)   
  [<unordered_set>](../standard-library/unordered-set.md)
 
 

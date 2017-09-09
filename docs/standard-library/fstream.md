@@ -1,65 +1,83 @@
 ---
-title: "&lt;fstream&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::<fstream>"
-  - "<fstream>"
-  - "std.<fstream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fstream 标头"
+title: '&lt;fstream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::<fstream>", "<fstream>", "std.<fstream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# &lt;fstream&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 064f9edc439407c625fc5cf8788ad3a83200d7f7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
-定义若干类，这些类支持在存储于外部文件中的序列上的 iostreams 操作。  
+---
+# <a name="ltfstreamgt"></a>&lt;fstream&gt;
+Defines several classes that support iostreams operations on sequences stored in external files.  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #include <fstream>  
   
 ```  
   
-### Typedef  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[filebuf](../Topic/filebuf.md)|专用于 `char` 模板参数的类型 `basic_filebuf`。|  
-|[fstream](../Topic/fstream.md)|专用于 `char` 模板参数的类型 `basic_fstream`。|  
-|[ifstream](../Topic/ifstream.md)|专用于 `char` 模板参数的类型 `basic_ifstream`。|  
-|[ofstream](../Topic/ofstream.md)|专用于 `char` 模板参数的类型 `basic_ofstream`。|  
-|[wfstream](../Topic/wfstream.md)|专用于 `wchar_t` 模板参数的类型 `basic_fstream`。|  
-|[wifstream](../Topic/wifstream.md)|专用于 `wchar_t` 模板参数的类型 `basic_ifstream`。|  
-|[wofstream](../Topic/wofstream.md)|专用于 `wchar_t` 模板参数的类型 `basic_ofstream`。|  
-|[wfilebuf](../Topic/wfilebuf.md)|专用于 `wchar_t` 模板参数的类型 `basic_filebuf`。|  
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|A type `basic_filebuf` specialized on `char` template parameters.|  
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|A type `basic_fstream` specialized on `char` template parameters.|  
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|A type `basic_ifstream` specialized on `char` template parameters.|  
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|A type `basic_ofstream` specialized on `char` template parameters.|  
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|A type `basic_fstream` specialized on `wchar_t` template parameters.|  
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|A type `basic_ifstream` specialized on `wchar_t` template parameters.|  
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|A type `basic_ofstream` specialized on `wchar_t` template parameters.|  
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|A type `basic_filebuf` specialized on `wchar_t` template parameters.|  
   
-### 类  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[basic\_filebuf](../standard-library/basic-filebuf-class.md)|该模板类描述对 **Elem** 类型的元素（其字符特征由类 **Tr** 确定）与外部文件中存储的元素序列之间的来回传输进行控制的流缓冲区。|  
-|[basic\_fstream](../standard-library/basic-fstream-class.md)|该模板类描述一个对象，该对象使用 [basic\_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**\> 类的流缓冲区控制元素和编码对象的插入和提取，具有 **Elem** 类型的元素，其字符特征由 **Tr** 类确定。|  
-|[basic\_ifstream](../standard-library/basic-ifstream-class.md)|该模板类描述一个对象，该对象控制从 [basic\_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**\> 类的流缓冲区提取元素和编码对象，具有 **Elem** 类型的元素，其字符特征由 **Tr** 类确定。|  
-|[basic\_ofstream](../standard-library/basic-ofstream-class.md)|该模板类描述一个对象，该对象控制向 [basic\_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**\> 类的流缓冲区插入元素和编码对象，具有 **Elem** 类型的元素，其字符特征由 **Tr** 类确定。|  
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|The template class describes a stream buffer that controls the transmission of elements of type **Elem**, whose character traits are determined by the class **Tr**, to and from a sequence of elements stored in an external file.|  
+|[basic_fstream](../standard-library/basic-fstream-class.md)|The template class describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, with elements of type **Elem**, whose character traits are determined by the class **Tr**.|  
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|The template class describes an object that controls extraction of elements and encoded objects from a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, with elements of type **Elem**, whose character traits are determined by the class **Tr**.|  
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|The template class describes an object that controls insertion of elements and encoded objects into a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, with elements of type **Elem**, whose character traits are determined by the class **Tr**.|  
   
-## 请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 编程](../standard-library/iostream-programming.md)   
- [iostreams 约定](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
+
+
+
+

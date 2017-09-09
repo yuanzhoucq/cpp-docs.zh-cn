@@ -1,5 +1,5 @@
 ---
-title: "aligned_storage 类 | Microsoft 文档"
+title: aligned_storage Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- aligned_storage
 - type_traits/std::aligned_storage
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 0da44c2fb505b2edbce9e5ccb028a6e167b4cf17
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: aba37911df828d499dd3594e2db0e4fe0916c105
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="alignedstorage-class"></a>aligned_storage 类
-生成适当对齐的类型。  
+# <a name="alignedstorage-class"></a>aligned_storage Class
+Makes suitably aligned type.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <std::size_t Len, std::size_t Align>  
@@ -55,17 +54,17 @@ template <std::size_t Len, std::size_t Align = alignment_of<max_align_t>::value>
 using aligned_storage_t = typename aligned_storage<Len, Align>::type;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Len`  
- 对象大小。  
+ The object size.  
   
  `Align`  
- 对象对齐方式。  
+ The object alignment.  
   
-## <a name="remarks"></a>备注  
- 模板成员 typedef `type` 与对齐方式为 `Align`、大小为 `Len` 的 POD 类型为同义词。 对于某些类型 `T`，`Align` 必须等于 `alignment_of<T>::value`，或为默认对齐方式。  
+## <a name="remarks"></a>Remarks  
+ The template member typedef `type` is a synonym for a POD type with alignment `Align` and size `Len`. `Align` must be equal to `alignment_of<T>::value` for some type `T`, or to the default alignment.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -90,12 +89,12 @@ alignment_of<int> == 4
 aligned to double == 8  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
  [alignment_of Class](../standard-library/alignment-of-class.md)
 

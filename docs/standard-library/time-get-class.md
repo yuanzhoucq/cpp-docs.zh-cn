@@ -1,16 +1,15 @@
 ---
-title: "time_get 类 | Microsoft Docs"
+title: time_get Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - xloctime/std::time_get
-- time_get
 - locale/std::time_get::char_type
 - locale/std::time_get::iter_type
 - locale/std::time_get::date_order
@@ -30,7 +29,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- time_get class
+- std::time_get [C++]
+- std::time_get [C++], char_type
+- std::time_get [C++], iter_type
+- std::time_get [C++], date_order
+- std::time_get [C++], do_date_order
+- std::time_get [C++], do_get
+- std::time_get [C++], do_get_date
+- std::time_get [C++], do_get_monthname
+- std::time_get [C++], do_get_time
+- std::time_get [C++], do_get_weekday
+- std::time_get [C++], do_get_year
+- std::time_get [C++], get
+- std::time_get [C++], get_date
+- std::time_get [C++], get_monthname
+- std::time_get [C++], get_time
+- std::time_get [C++], get_weekday
+- std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 caps.latest.revision: 21
 author: corob-msft
@@ -50,17 +65,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 10a39553b9747ebe336939b641c54780c653c5d6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b4a902f2b06cae219920f90fd1c6a33aa7291ec4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timeget-class"></a>time_get 类
-此模板类描述可用作区域设置 facet 的对象，此对象用于控制 `CharType` 类型序列到时间值的转换。  
+# <a name="timeget-class"></a>time_get Class
+The template class describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to time values.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType,  
@@ -68,77 +83,77 @@ template <class CharType,
 class time_get : public time_base;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 在程序中用于对字符进行编码的类型。  
+ The type used within a program to encode characters.  
   
  `InputIterator`  
- 从中读取时间值的迭代器。  
+ The iterator from which the time values are read.  
   
-## <a name="remarks"></a>备注  
- 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **ID** 中存储唯一正值。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[time_get](#time_get)|`time_get` 类型的对象的构造函数。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|  
-|[iter_type](#iter_type)|一种类型，此类型描述输入迭代器。|  
+|[time_get](#time_get)|The constructor for objects of type `time_get`.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[date_order](#date_order)|返回 facet 使用的日期顺序。|  
-|[do_date_order](#do_date_order)|为返回 facet 使用的日期顺序而调用的受保护虚拟成员函数。|  
-|[do_get](#do_get)|读取字符数据并转换为时间值。|  
-|[do_get_date](#do_get_date)|一种受保护的虚拟成员函数，通过调用此函数可分析作为 `x` 的 `strftime` 说明符所生成日期的字符串。|  
-|[do_get_monthname](#do_get_monthname)|为分析作为月份名称的字符串而调用的受保护虚拟函数。|  
-|[do_get_time](#do_get_time)|一种受保护的虚拟成员函数，通过调用此函数可分析作为 `X` 的 `strftime` 说明符所生成日期的字符串。|  
-|[do_get_weekday](#do_get_weekday)|为分析作为周日期名称的字符串而调用的受保护虚拟成员函数。|  
-|[do_get_year](#do_get_year)|为分析作为年份名称的字符串而调用的受保护虚拟成员函数。|  
-|[get](#get)|从字符数据源读取，并将此数据转换为存储在时间结构中的时间。|  
-|[get_date](#get_date)|分析作为 `x` 的 `strftime` 说明符所生成日期的字符串。|  
-|[get_monthname](#get_monthname)|分析作为月份名称的字符串。|  
-|[get_time](#get_time)|分析作为 `X` 的 `strftime` 说明符所生成日期的字符串。|  
-|[get_weekday](#get_weekday)|分析作为周日期名称的字符串。|  
-|[get_year](#get_year)|分析作为年份名称的字符串。|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an input iterator.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[date_order](#date_order)|Returns the date order used by a facet.|  
+|[do_date_order](#do_date_order)|A protected virtual member function that is called to return the date order used by a facet.|  
+|[do_get](#do_get)|Reads and converts character data to a time value.|  
+|[do_get_date](#do_get_date)|A protected virtual member function that is called to parse a string as the date produced by the `x` specifier for `strftime`.|  
+|[do_get_monthname](#do_get_monthname)|A protected virtual member function that is called to parse a string as the name of the month.|  
+|[do_get_time](#do_get_time)|A protected virtual member function that is called to parse a string as the date produced by the `X` specifier for `strftime`.|  
+|[do_get_weekday](#do_get_weekday)|A protected virtual member function that is called to parse a string as the name of the day of the week.|  
+|[do_get_year](#do_get_year)|A protected virtual member function that is called to parses a string as the name of the year.|  
+|[get](#get)|Reads from a source of character data and converts that data to a time that is stored in a time struct.|  
+|[get_date](#get_date)|Parses a string as the date produced by the `x` specifier for `strftime`.|  
+|[get_monthname](#get_monthname)|Parses a string as the name of the month.|  
+|[get_time](#get_time)|Parses a string as the date produced by the `X` specifier for `strftime`.|  
+|[get_weekday](#get_weekday)|Parses a string as the name of the day of the week.|  
+|[get_year](#get_year)|Parses a string as the name of the year.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  time_get::char_type  
- 一种类型，此类型用于描述区域设置使用的字符。  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **CharType** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="date_order"></a>  time_get::date_order  
- 返回 facet 使用的日期顺序。  
+ Returns the date order used by a facet.  
   
 ```  
 dateorder date_order() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- facet 使用的日期顺序。  
+### <a name="return-value"></a>Return Value  
+ The date order used by a facet.  
   
-### <a name="remarks"></a>备注  
- 此成员函数返回 [do_date_order](#do_date_order)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_date_order](#do_date_order).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_date_order.cpp  
@@ -183,23 +198,23 @@ English_United Kingdom.1252(day, month, year)
 ```  
   
 ##  <a name="do_date_order"></a>  time_get::do_date_order  
- 为返回 facet 使用的日期顺序而调用的受保护虚拟成员函数。  
+ A protected virtual member function that is called to return the date order used by a facet.  
   
 ```  
 virtual dateorder do_date_order() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- facet 使用的日期顺序。  
+### <a name="return-value"></a>Return Value  
+ The date order used by a facet.  
   
-### <a name="remarks"></a>备注  
- 受保护的虚拟成员函数返回类型为 **time_base::dateorder** 的值，该值描述与 [do_get_date](#do_get_date) 匹配的日期组件的顺序。 在此实现中，值为 **time_base::mdy**，对应为 12 月 2 日，1979 年。  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function returns a value of type **time_base::dateorder**, which describes the order in which date components are matched by [do_get_date](#do_get_date). In this implementation, the value is **time_base::mdy**, corresponding to dates of the form December 2, 1979.  
   
-### <a name="example"></a>示例  
-  请参阅 [date_order](#date_order) 示例，它调用 `do_date_order`。  
+### <a name="example"></a>Example  
+  See the example for [date_order](#date_order), which calls `do_date_order`.  
   
 ##  <a name="do_get"></a>  time_get::do_get  
- 读取字符数据并转换为时间值。 接受一个转换说明符和修饰符。  
+ Reads and converts character data to a time value. Accepts one conversion specifier and modifier.  
   
 ```  
 virtual iter_type  
@@ -213,86 +228,86 @@ virtual iter_type
     char mod) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 一个输入迭代器，它指示要转换的序列的开始位置。  
+ An Input iterator that indicates the start of the sequence to convert.  
   
  `last`  
- 一个输入迭代器，它指示序列的结束位置。  
+ An Input iterator that indicates the end of the sequence.  
   
  `iosbase`  
- 一个流对象。  
+ A stream object.  
   
  `state`  
- Iosbase 中设置相应的位掩码元素来指示错误的字段。  
+ A field in iosbase where appropriate bitmask elements are set to indicate errors.  
   
  `ptm`  
- 指向要存储时间的时间结构的指针。  
+ A pointer to the time structure where the time is to be stored.  
   
  `fmt`  
- 一个转换说明符字符。  
+ A conversion specifier character.  
   
  `mod`  
- 一个可选修饰符字符。  
+ An optional modifier character.  
   
-### <a name="return-value"></a>返回值  
- 返回一个迭代器，该迭代器指定第一个未经转换的元素。 转换失败会在 `state` 中设置 `ios_base::failbit` 并返回 `first`。  
+### <a name="return-value"></a>Return Value  
+ Returns an iterator that designates the first unconverted element. A conversion failure sets `ios_base::failbit` in `state` and returns `first`.  
   
-### <a name="remarks"></a>备注  
- 虚拟成员函数将转换并跳过 `[``first``,` `last``)` 范围中的一个或多个输入元素，以便确定存储在 `*pt` 的一个或多个成员中的值。 转换失败会在 `state` 中设置 `ios_base::failbit` 并返回 `first`。 否则，该函数返回指定第一个未转换元素的迭代器。  
+### <a name="remarks"></a>Remarks  
+ The virtual member function converts and skips one or more input elements in the range [`first`, `last`) to determine the values stored in one or more members of `*pt`. A conversion failure sets `ios_base::failbit` in `state` and returns `first`. Otherwise, the function returns an iterator designating the first unconverted element.  
   
- 转换说明符是：  
+ The conversion specifiers are:  
   
- `'a'` 或 `'A'` - 与 [time_get::get_weekday](#get_weekday) 的行为相同。  
+ `'a'` or `'A'` -- behaves the same as [time_get::get_weekday](#get_weekday).  
   
- `'b'`、`'B'` 或 `'h'` -- 与 [time_get::get_monthname](#get_monthname) 的行为相同。  
+ `'b'`, `'B'`, or `'h'` -- behaves the same as [time_get::get_monthname](#get_monthname).  
   
- `'c'` -- 与 `"%b %d %H : %M : %S %Y"` 的行为相同。  
+ `'c'` -- behaves the same as `"%b %d %H : %M : %S %Y"`.  
   
- `'C'` -- 将 [0，99] 范围内的一个十进制输入字段转换为值 `val`，并将 `val * 100 - 1900` 存储在 `pt-&tm_year` 中。  
+ `'C'` -- converts a decimal input field in the range [0, 99] to the value `val` and stores `val * 100 - 1900` in `pt-&tm_year`.  
   
- `'d'` 或 `'e'` -- 转换 [1，31] 范围内的一个十进制输入字段，并且其将值存储在 `pt-&tm_mday` 中。  
+ `'d'` or `'e'` -- converts a decimal input field in the range [1, 31] and stores its value in `pt-&tm_mday`.  
   
- `'D'` -- 与 `"%m / %d / %y"` 的行为相同。  
+ `'D'` -- behaves the same as `"%m / %d / %y"`.  
   
- `'H'` -- 转换 [0，23] 范围内的一个十进制输入字段，并将其值存储在 `pt-&tm_hour` 中。  
+ `'H'` -- converts a decimal input field in the range [0, 23] and stores its value in `pt-&tm_hour`.  
   
- `'I'` -- 转换 [0，11] 范围内的一个十进制输入字段，并将其值存储在 `pt-&tm_hour` 中。  
+ `'I'` -- converts a decimal input field in the range [0, 11] and stores its value in `pt-&tm_hour`.  
   
- `'j'` -- 转换 [1，366] 范围内的一个十进制输入字段，并将其值存储在 `pt-&tm_yday` 中。  
+ `'j'` -- converts a decimal input field in the range [1, 366] and stores its value in `pt-&tm_yday`.  
   
- `'m'` -- 将 [1，12] 范围内的一个十进制输入字段转换为值 `val`，存储 `val - 1`，并将其值存储在 `pt-&tm_mon` 中。  
+ `'m'` -- converts a decimal input field in the range [1, 12] to the value `val` and stores `val - 1` in and stores its value in `pt-&tm_mon`.  
   
- `'M'` -- 转换 [0，59] 范围内的一个十进制输入字段，并将其值存储在 `pt-&tm_min` 中。  
+ `'M'` -- converts a decimal input field in the range [0, 59] and stores its value in `pt-&tm_min`.  
   
- `'n'` 或 `'t'` -- 与 `" "` 的行为相同。  
+ `'n'` or `'t'` -- behaves the same as `" "`.  
   
- `'p'` -- 将“AM”或“am”转换为零，将“PM”或“pm”转换为 12，并将此值添加到 `pt-&tm_hour`。  
+ `'p'` -- converts "AM" or "am" to zero and "PM" or "PM" to 12 and adds this value to `pt-&tm_hour`.  
   
- `'r'` -- 与 `"%I : %M : %S %p"` 的行为相同。  
+ `'r'` -- behaves the same as `"%I : %M : %S %p"`.  
   
- `'R'` -- 与 `"%H %M"` 的行为相同。  
+ `'R'` -- behaves the same as `"%H %M"`.  
   
- `'S'` -- 转换 [0，59] 范围内的一个十进制输入字段，并将其值存储在 `pt-&tm_sec` 中。  
+ `'S'` -- converts a decimal input field in the range [0, 59] and stores its value in `pt-&tm_sec`.  
   
- `'T'` 或 `'X'` -- 与 `"%H : %M : S"` 的行为相同。  
+ `'T'` or `'X'` -- behaves the same as `"%H : %M : S"`.  
   
- `'U'` -- 转换 [0，53] 范围内的一个十进制输入字段，并将其值存储在 `pt-&tm_yday` 中。  
+ `'U'` -- converts a decimal input field in the range [0, 53] and stores its value in `pt-&tm_yday`.  
   
- `'w'` -- 转换 [0，6] 范围内的一个十进制输入字段，并将其值存储在 `pt-&tm_wday` 中。  
+ `'w'` -- converts a decimal input field in the range [0, 6] and stores its value in `pt-&tm_wday`.  
   
- `'W'` -- 转换 [0，53] 范围内的一个十进制输入字段，并将其值存储在 `pt-&tm_yday` 中。  
+ `'W'` -- converts a decimal input field in the range [0, 53] and stores its value in `pt-&tm_yday`.  
   
- `'x'` -- 与 `"%d / %m / %y"` 的行为相同。  
+ `'x'` -- behaves the same as `"%d / %m / %y"`.  
   
- `'y'` -- 将 [0，99] 范围内的一个十进制输入字段转换为值 `val`，并将 `val < 69  val + 100 : val` 存储在 `pt-&tm_year` 中。  
+ `'y'` -- converts a decimal input field in the range [0, 99] to the value `val` and stores `val < 69  val + 100 : val` in `pt-&tm_year`.  
   
- `'Y'` -- 与 [time_get::get_year](#get_year) 的行为相同。  
+ `'Y'` -- behaves the same as [time_get::get_year](#get_year).  
   
- 任何其他转换说明符设置 `state` 中的 `ios_base::failbit` 并返回。 在此实现中，任何修饰符都无效。  
+ Any other conversion specifier sets `ios_base::failbit` in `state` and returns. In this implementation, any modifier has no effect.  
   
 ##  <a name="do_get_date"></a>  time_get::do_get_date  
- 一种受保护的虚拟成员函数，通过调用此函数可分析作为 `strftime` 的 *x* 说明符所生成日期的字符串。  
+ A protected virtual member function that is called to parse a string as the date produced by the *x* specifier for `strftime`.  
   
 ```  
 virtual iter_type do_get_date(iter_type first,
@@ -302,43 +317,43 @@ virtual iter_type do_get_date(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储日期信息的指针。  
+ A pointer to where the date information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配有序元素，直到识别到完整的非空日期输入字段。 如果成功，它将转换此字段为其等效值的组件**tm::tm\_mon**， **tm::tm\_天**，和**tm::tm\_年**，并将存储中的结果`ptm->tm_mon`， `ptm->tm_day`，和`ptm->tm_year`分别。 它将返回一个迭代器，指定第一个超出日期输入字段的元素。 否则，该函数将设置`iosbase::failbit`中`state`。 它将返回一个迭代器，指定第一个超出有效日期输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `state` 中设置 `ios_base::eofbit`。  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty date input field. If successful, it converts this field to its equivalent value as the components **tm::tm\_mon**, **tm::tm\_day**, and **tm::tm\_year**, and stores the results in `ptm->tm_mon`, `ptm->tm_day`, and `ptm->tm_year`, respectively. It returns an iterator designating the first element beyond the date input field. Otherwise, the function sets `iosbase::failbit` in `state`. It returns an iterator designating the first element beyond any prefix of a valid date input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in `state`.  
   
- 日期输入字段的格式依赖于区域设置。 对于默认区域设置，日期输入字段的格式为 MMM DD，YYYY，其中：  
+ The format for the date input field is locale dependent. For the default locale, the date input field has the form MMM DD, YYYY, where:  
   
--   MMM 通过调用 [get_monthname](#get_monthname) 得到，表示月份。  
+-   MMM is matched by calling [get_monthname](#get_monthname), giving the month.  
   
--   DD 是十进制数字的序列，其对应的数值必须在 [1, 31] 范围内，表示月份中的天数。  
+-   DD is a sequence of decimal digits whose corresponding numeric value must be in the range [1, 31], giving the day of the month.  
   
--   YYYY 通过调用 [get_year](#get_year) 得到，表示年份。  
+-   YYYY is matched by calling [get_year](#get_year), giving the year.  
   
- 字面空格和逗号必须匹配输入序列中相应的元素。  
+ The literal spaces and commas must match corresponding elements in the input sequence.  
   
-### <a name="example"></a>示例  
-  请参阅 [get_date](#get_date) 的示例，它调用 `do_get_date`。  
+### <a name="example"></a>Example  
+  See the example for [get_date](#get_date), which calls `do_get_date`.  
   
 ##  <a name="do_get_monthname"></a>  time_get::do_get_monthname  
- 为分析作为月份名称的字符串而调用的受保护虚拟函数。  
+ A protected virtual member function that is called to parse a string as the name of the month.  
   
 ```  
 virtual iter_type do_get_monthname(iter_type first,
@@ -348,35 +363,35 @@ virtual iter_type do_get_monthname(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 未使用。  
+ Unused.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素的输出参数。  
+ An output parameter that sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储月份信息的指针。  
+ A pointer to where the month information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 受保护的虚拟成员函数首先会在序列 [ `first`， `last`) 中尝试匹配有序元素，直到识别到完整的非空月份输入字段。 如果成功，它将转换此字段为其等效值作为组件**tm::tm\_mon**，并将存储中的结果`ptm->tm_mon`。 它将返回一个迭代器，指定第一个超出月份输入字段的元素。 否则，该函数将设置`ios_base::failbit`中*状态*。 它将返回一个迭代器，指定第一个超出月份输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于`last`，函数集`ios_base::eofbit`中*状态*。  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty month input field. If successful, it converts this field to its equivalent value as the component **tm::tm\_mon**, and stores the result in `ptm->tm_mon`. It returns an iterator designating the first element beyond the month input field. Otherwise, the function sets `ios_base::failbit` in *state*. It returns an iterator designating the first element beyond any prefix of a valid month input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in *state*.  
   
- 月份输入字段是匹配最长的一组特定于区域序列的序列，如 1 月、2 月、3 月、4 月等。 转换后的值是自 1 月份以来的月数。  
+ The month input field is a sequence that matches the longest of a set of locale-specific sequences, such as Jan, January, Feb, February, and so on. The converted value is the number of months since January.  
   
-### <a name="example"></a>示例  
-  请参阅 [get_monthname](#get_monthname) 的示例，它调用 `do_get_monthname`。  
+### <a name="example"></a>Example  
+  See the example for [get_monthname](#get_monthname), which calls `do_get_monthname`.  
   
 ##  <a name="do_get_time"></a>  time_get::do_get_time  
- 一种受保护的虚拟成员函数，通过调用此函数可分析作为 `strftime` 的 *X* 说明符所生成日期的字符串。  
+ A protected virtual member function that is called to parse a string as the date produced by the *X* specifier for `strftime`.  
   
 ```  
 virtual iter_type do_get_time(iter_type first,
@@ -386,43 +401,43 @@ virtual iter_type do_get_time(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 未使用。  
+ Unused.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储日期信息的指针。  
+ A pointer to where the date information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 受保护的虚拟成员函数首先会在序列 [ `first`， `last`) 中尝试匹配有序元素，直到识别到完整的非空时间输入字段。 如果成功，它将转换此字段为其等效值的组件**tm::tm_hour**， **tm::tm_min**，和**tm::tm_sec**，并将存储中的结果`ptm->tm_hour`， `ptm->tm_min`，和`ptm->tm_sec`分别。 它将返回一个迭代器，指定第一个超出时间输入字段的元素。 否则，该函数将设置`ios_base::failbit`中*状态*。 它将返回一个迭代器，指定第一个超出时间输入字段的元素。 在任一情况下，如果返回的值等于`last`，函数集`ios_base::eofbit`中*状态*。  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty time input field. If successful, it converts this field to its equivalent value as the components **tm::tm_hour**, **tm::tm_min**, and **tm::tm_sec**, and stores the results in `ptm->tm_hour`, `ptm->tm_min`, and `ptm->tm_sec`, respectively. It returns an iterator designating the first element beyond the time input field. Otherwise, the function sets `ios_base::failbit` in *state*. It returns an iterator designating the first element beyond any prefix of a valid time input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in *state*.  
   
- 在此实现中，时间输入字段采用以下格式：HH:MM:SS，其中：  
+ In this implementation, the time input field has the form HH:MM:SS, where:  
   
--   HH 是十进制数字的序列，其对应的数值必须在 [0，24）范围内，表示小时。  
+-   HH is a sequence of decimal digits whose corresponding numeric value must be in the range [0, 24), giving the hour of the day.  
   
--   MM 是十进制数字的序列，其对应的数值必须在 [0，60）范围内，表示分钟。  
+-   MM is a sequence of decimal digits whose corresponding numeric value must be in the range [0, 60), giving the minutes past the hour.  
   
--   SS 是十进制数字的序列，其对应的数值必须在 [0，60）范围内，表示秒。  
+-   SS is a sequence of decimal digits whose corresponding numeric value must be in the range [0, 60), giving the seconds past the minute.  
   
- 字面冒号必须匹配输入序列中相应的元素。  
+ The literal colons must match corresponding elements in the input sequence.  
   
-### <a name="example"></a>示例  
-  请参阅 [get_time](#get_time) 的示例，它调用 `do_get_time`。  
+### <a name="example"></a>Example  
+  See the example for [get_time](#get_time), which calls `do_get_time`.  
   
 ##  <a name="do_get_weekday"></a>  time_get::do_get_weekday  
- 为分析作为周日期名称的字符串而调用的受保护虚拟成员函数。  
+ A protected virtual member function that is called to parse a string as the name of the day of the week.  
   
 ```  
 virtual iter_type do_get_weekday(iter_type first,
@@ -432,35 +447,35 @@ virtual iter_type do_get_weekday(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储的工作日信息的指针。  
+ A pointer to where the weekday information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 受保护的虚拟成员函数在序列 [`first`，`last`) 的 `first` 中尝试匹配有序元素，直到识别到完整的非空工作日输入字段。 如果成功，它将转换此字段为其等效值作为组件**tm::tm\_wday**，并将存储中的结果`ptm->tm_wday`。 它将返回一个迭代器，指定第一个超出工作日输入字段的元素。 否则，该函数将设置`ios_base::failbit`中*状态*。 它将返回一个迭代器，指定第一个超出有效工作日输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于`last`，函数集`ios_base::eofbit`中*状态*。  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at `first` in the sequence [ `first`, `last`) until it has recognized a complete, nonempty weekday input field. If successful, it converts this field to its equivalent value as the component **tm::tm\_wday**, and stores the result in `ptm->tm_wday`. It returns an iterator designating the first element beyond the weekday input field. Otherwise, the function sets `ios_base::failbit` in *state*. It returns an iterator designating the first element beyond any prefix of a valid weekday input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in *state*.  
   
- 工作日输入字段是匹配最长的一组特定于区域序列的序列，如周日（星期日）、周一（星期一）等。 转换后的值是自星期日以来的天数。  
+ The weekday input field is a sequence that matches the longest of a set of locale-specific sequences, such as Sun, Sunday, Mon, Monday, and so on. The converted value is the number of days since Sunday.  
   
-### <a name="example"></a>示例  
-  请参阅 [get_weekday](#get_weekday) 的示例，它调用 `do_get_weekday`。  
+### <a name="example"></a>Example  
+  See the example for [get_weekday](#get_weekday), which calls `do_get_weekday`.  
   
 ##  <a name="do_get_year"></a>  time_get::do_get_year  
- 为分析作为年份名称的字符串而调用的受保护虚拟成员函数。  
+ A protected virtual member function that is called to parses a string as the name of the year.  
   
 ```  
 virtual iter_type do_get_year(iter_type first,
@@ -470,35 +485,35 @@ virtual iter_type do_get_year(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储的年份信息的指针。  
+ A pointer to where the year information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 受保护的虚拟成员函数在序列 [`first`，`last`) 的 `first` 中尝试匹配有序元素，直到识别到完整的非空年份输入字段。 如果成功，它将转换此字段为其等效值作为组件**tm::tm\_年**，并将存储中的结果`ptm->tm_year`。 它将返回一个迭代器，指定第一个超出年份输入字段的元素。 否则，该函数将设置`ios_base::failbit`中*状态*。 它将返回一个迭代器，指定第一个超出有效年份输入字段的元素。 在任一情况下，如果返回的值等于`last`，函数集`ios_base::eofbit`中*状态*。  
+### <a name="remarks"></a>Remarks  
+ The virtual protected member function tries to match sequential elements beginning at `first` in the sequence [ `first`, `last`) until it has recognized a complete, nonempty year input field. If successful, it converts this field to its equivalent value as the component **tm::tm\_year**, and stores the result in `ptm->tm_year`. It returns an iterator designating the first element beyond the year input field. Otherwise, the function sets `ios_base::failbit` in *state*. It returns an iterator designating the first element beyond any prefix of a valid year input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in *state*.  
   
- 年份输入字段是十进制数字的序列，其对应的数值必须在 [1900, 2036) 范围内。 存储的值为此值减去 1900。 在此实现中，值范围 [69, 136) 表示年份范围 [1969、2036）。 也可使用值范围 [0, 69)，但可能表示年份范围 [1900, 1969) 或 [2000, 2069)，具体取决于转换环境。  
+ The year input field is a sequence of decimal digits whose corresponding numeric value must be in the range [1900, 2036). The stored value is this value minus 1900. In this implementation, values in the range [69, 136) represent the range of years [1969, 2036). Values in the range [0, 69) are also permissible, but may represent either the range of years [1900, 1969) or [2000, 2069), depending on the specific translation environment.  
   
-### <a name="example"></a>示例  
-  请参阅 [get_year](#get_year) 的示例，它调用 `do_get_year`。  
+### <a name="example"></a>Example  
+  See the example for [get_year](#get_year), which calls `do_get_year`.  
   
 ##  <a name="get"></a>  time_get::get  
- 从字符数据源读取，并将此数据转换为存储在时间结构中的时间。 第一个函数接受一个转换说明符和修饰符，而第二个接受多个。  
+ Reads from a source of character data and converts that data to a time that is stored in a time struct. The first function accepts one conversion specifier and modifier, the second accepts several.  
   
 ```  
 iter_type get(
@@ -520,50 +535,50 @@ iter_type get(
     char_type* fmt_last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 一个输入迭代器，它指示从何处开始转换序列。  
+ Input iterator that indicates where the sequence to be converted starts.  
   
  `last`  
- 一个输入迭代器，它指示在何处结束序列转换。  
+ Input iterator that indicates the end of the sequence to be converted.  
   
  `iosbase`  
- 流。  
+ The stream.  
   
  `state`  
- 为流状态设置适当的位掩码元素以指示错误。  
+ The appropriate bitmask elements are set for the stream state to indicate errors.  
   
  `ptm`  
- 一个指针，它指向要存储时间的时间结构。  
+ Pointer to the time structure where the time is to be stored.  
   
  `fmt`  
- 一个转换说明符字符。  
+ A conversion specifier character.  
   
  `mod`  
- 一个可选修饰符字符。  
+ An optional modifier character.  
   
  `fmt_first`  
- 指向格式指令开始的位置。  
+ Points to where the format directives start.  
   
  `fmt_last`  
- 指向格式指令结束的位置。  
+ Points to the end of the format directives.  
   
-### <a name="return-value"></a>返回值  
- 返回一个迭代器用于分配时间结构的数据后的第一个字符`*ptm`。  
+### <a name="return-value"></a>Return Value  
+ Returns an iterator to the first character after the data that was used to assign the time struct `*ptm`.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数返回 `do_get(first, last, iosbase, state, ptm, fmt, mod)`。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns `do_get(first, last, iosbase, state, ptm, fmt, mod)`.  
   
- 第二个成员函数调用以 `[fmt_first, fmt_last)` 分隔的格式的控件下的 `do_get`。 它将格式视为一个字段序列，其中每个字段确定了以 `[first, last)` 分隔的 0 个或多个输入元素的转换。 它返回一个迭代器，指定第一个未转换的元素。 有三种类型的字段：  
+ The second member function calls `do_get` under the control of the format delimited by `[fmt_first, fmt_last)`. It treats the format as a sequence of fields, each of which determines the conversion of zero or more input elements delimited by `[first, last)`. It returns an iterator designating the first unconverted element. There are three kinds of fields:  
   
- 百分号 （%） 格式后, 跟一个可选修饰符`mod`集中 [EOQ #] 后, 跟一个转换说明符`fmt`，替换`first`返回的值与`do_get(first, last, iosbase, state, ptm, fmt, mod)`。 转换失败会在 `state` 中设置 `ios_base::failbit` 并进行返回。  
+ A per cent (%) in the format, followed by an optional modifier `mod` in the set [EOQ#], followed by a conversion specifier `fmt`, replaces `first` with the value returned by `do_get(first, last, iosbase, state, ptm, fmt, mod)`. A conversion failure sets `ios_base::failbit` in `state` and returns.  
   
- 格式中的空白元素会跳过零个或多个输入空白元素。  
+ A whitespace element in the format skips past zero or more input whitespace elements.  
   
- 格式中的任何其他元素必须匹配下一个输入元素，它会被跳过。 匹配失败会在 `state` 中设置 `ios_base::failbit` 并进行返回。  
+ Any other element in the format must match the next input element, which is skipped. A match failure sets `ios_base::failbit` in `state` and returns.  
   
 ##  <a name="get_date"></a>  time_get::get_date  
- 分析作为 `strftime` 的 *x* 说明符所生成日期的字符串。  
+ Parses a string as the date produced by the *x* specifier for `strftime`.  
   
 ```  
 iter_type get_date(iter_type first,
@@ -573,31 +588,31 @@ iter_type get_date(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储日期信息的指针。  
+ A pointer to where the date information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_get_date](#do_get_date)( `first`、`last`、`iosbase`、`state` 和 `ptm`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_date](#do_get_date)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
- 请注意，月份从 0 到 11 进行计算。  
+ Note that months are counted from 0 to 11.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_date.cpp  
@@ -653,7 +668,7 @@ tm_isdst: 0
 ```  
   
 ##  <a name="get_monthname"></a>  time_get::get_monthname  
- 分析作为月份名称的字符串。  
+ Parses a string as the name of the month.  
   
 ```  
 iter_type get_monthname(iter_type first,
@@ -663,29 +678,29 @@ iter_type get_monthname(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 未使用。  
+ Unused.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素的输出参数。  
+ An output parameter that sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储月份信息的指针。  
+ A pointer to where the month information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_get_monthname](#do_get_monthname)( `first`、`last`、`iosbase`、`state` 和 `ptm`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_monthname](#do_get_monthname)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_monthname.cpp  
@@ -741,7 +756,7 @@ tm_isdst: 0
 ```  
   
 ##  <a name="get_time"></a>  time_get::get_time  
- 分析作为 `strftime` 的 *X* 说明符所生成日期的字符串。  
+ Parses a string as the date produced by the *X* specifier for `strftime`.  
   
 ```  
 iter_type get_time(iter_type first,
@@ -751,29 +766,29 @@ iter_type get_time(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 未使用。  
+ Unused.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储日期信息的指针。  
+ A pointer to where the date information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_get_time](#do_get_time)( `first`、`last``iosbase``state` 和 `ptm`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_time](#do_get_time)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_time.cpp  
@@ -818,7 +833,7 @@ tm_hour: 11
 ```  
   
 ##  <a name="get_weekday"></a>  time_get::get_weekday  
- 分析作为周日期名称的字符串。  
+ Parses a string as the name of the day of the week.  
   
 ```  
 iter_type get_weekday(iter_type first,
@@ -828,29 +843,29 @@ iter_type get_weekday(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储的工作日信息的指针。  
+ A pointer to where the weekday information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_get_weekday](#do_get_weekday)( `first`、`last``iosbase``state` 和 `ptm`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_weekday](#do_get_weekday)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_weekday.cpp  
@@ -891,7 +906,7 @@ tm_wday: 3
 ```  
   
 ##  <a name="get_year"></a>  time_get::get_year  
- 分析作为年份名称的字符串。  
+ Parses a string as the name of the year.  
   
 ```  
 iter_type get_year(iter_type first,
@@ -901,29 +916,29 @@ iter_type get_year(iter_type first,
     tm* ptm) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 确定待转换序列开头位置的输入迭代器。  
+ Input iterator addressing the beginning of the sequence to be converted.  
   
  `last`  
- 确定待转换序列末尾位置的输入迭代器。  
+ Input iterator addressing the end of the sequence to be converted.  
   
  `iosbase`  
- 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required.  
   
  `state`  
- 根据操作是否成功，设置流状态的相应位掩码元素。  
+ Sets the appropriate bitmask elements for the stream state according to whether the operations succeeded.  
   
  `ptm`  
- 指向要存储的年份信息的指针。  
+ A pointer to where the year information is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 一个输入迭代器，确定第一个超出输入字段的元素位置。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first element beyond the input field.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_get_year](#do_get_year)( `first`、`last``iosbase``state` 和 `ptm`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_get_year](#do_get_year)( `first`, `last`, `iosbase`, `state`, `ptm`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // time_get_get_year.cpp  
@@ -965,42 +980,42 @@ tm_year: 28
 ```  
   
 ##  <a name="iter_type"></a>  time_get::iter_type  
- 一种类型，此类型描述输入迭代器。  
+ A type that describes an input iterator.  
   
 ```  
 typedef InputIterator iter_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **InputIterator** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **InputIterator**.  
   
 ##  <a name="time_get"></a>  time_get::time_get  
- `time_get` 类型的对象的构造函数。  
+ The constructor for objects of type `time_get`.  
   
 ```  
 explicit time_get(size_t refs = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `refs`  
- 用于指定对象的内存管理类型的整数值。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>备注  
- `refs` 参数可能的值及其含义：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `refs` parameter and their significance are:  
   
--   0：对象的生存期由包含该对象的区域设置管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：必须手动管理对象的生存期。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定义这些值。  
+-   \> 1: These values are not defined.  
   
- 由于该析构函数受到保护，可能没有直接的示例。  
+ No direct examples are possible, because the destructor is protected.  
   
- 构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `refs`) 初始化其基对象。  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `refs`).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [time_base 类](../standard-library/time-base-class.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [time_base Class](../standard-library/time-base-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

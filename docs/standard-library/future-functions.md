@@ -1,5 +1,5 @@
 ---
-title: "&lt;future&gt; 函数 | Microsoft Docs"
+title: '&lt;future&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,21 +15,27 @@ f1_keywords:
 ms.assetid: 1e3acc1e-736a-42dc-ade2-b2fe69aa96bc
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c542e696e0e5ddef350d40b45fe16f4c3a77882d
+helpviewer_keywords:
+- std::async [C++]
+- std::future_category [C++]
+- std::make_error_code [C++]
+- std::make_error_condition [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 96c09f6b90a0c531a7dcc916512247d0fa4084b2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltfuturegt-functions"></a>&lt;future&gt; 函数
+# <a name="ltfuturegt-functions"></a>&lt;future&gt; functions
 ||||  
 |-|-|-|  
 |[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|  
 |[make_error_condition](#make_error_condition)|[swap](#swap)|  
   
-##  <a name="async"></a>async  
- 表示一个异步提供程序。  
+##  <a name="async"></a>  async  
+ Represents an *asynchronous provider*.  
   
 ```
 template <class Fn, class... ArgTypes>
@@ -41,75 +47,75 @@ future<typename result_of<Fn(ArgTypes...)>::type>
     async(launch policy, Fn&& fn, ArgTypes&&... args);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `policy`  
- 一个 [launch](../standard-library/future-enums.md#launch) 值。  
+ A [launch](../standard-library/future-enums.md#launch) value.  
   
-### <a name="remarks"></a>备注  
- 缩写的定义：  
+### <a name="remarks"></a>Remarks  
+ Definitions of abbreviations:  
   
 |||  
 |-|-|  
-|*dfn*|调用 `decay_copy(forward<Fn>(fn))` 的结果。|  
-|*dargs*|调用 `decay_copy(forward<ArgsTypes>(args...))` 的结果。|  
-|*Ty*|`result_of<Fn(ArgTypes...)>::type` 类型。|  
+|*dfn*|The result of calling `decay_copy(forward<Fn>(fn))`.|  
+|*dargs*|The results of the calls `decay_copy(forward<ArgsTypes>(args...))`.|  
+|*Ty*|The type `result_of<Fn(ArgTypes...)>::type`.|  
   
- 第一个模板函数返回 `async(launch::any, fn, args...)`。  
+ The first template function returns `async(launch::any, fn, args...)`.  
   
- 第二个函数返回一个 `future<Ty>` 对象，其关联的异步状态包含一个结果以及 dfn 和 dargs 的值和一个用于管理单独的执行线程的线程对象。  
+ The second function returns a `future<Ty>` object whose *associated asynchronous state* holds a result together with the values of *dfn* and *dargs* and a thread object to manage a separate thread of execution.  
   
- 除非 `decay<Fn>::type` 是一种不同于 launch 的类型，否则第二个函数将不参与重载解析。  
+ Unless `decay<Fn>::type` is a type other than launch, the second function does not participate in overload resolution.  
   
- 如果 `policy` 是 `launch::any`，则函数可能会选择 `launch::async` 或 `launch::deferred`。 在此实现中，函数将使用 `launch::async`。  
+ If `policy` is `launch::any`, the function might choose `launch::async` or `launch::deferred`. In this implementation, the function uses `launch::async`.  
   
- 如果 `policy` 是 `launch::async`，则函数将创建一个计算 `INVOKE(dfn, dargs..., Ty)` 的线程。 函数创建线程后将返回，而不等待结果。 如果系统无法启动新线程，则函数将引发一个错误代码为 `resource_unavailable_try_again` 的 [system_error](../standard-library/system-error-class.md)。  
+ If `policy` is `launch::async`, the function creates a thread that evaluates `INVOKE(dfn, dargs..., Ty)`. The function returns after it creates the thread without waiting for results. If the system can't start a new thread, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `resource_unavailable_try_again`.  
   
- 如果 `policy` 为 `launch::deferred`，则函数会将其关联异步状态标记为包含一个延迟函数并返回。 对任何等待关联异步状态生效的非计时函数的第一次调用都将通过计算 `INVOKE(dfn, dargs..., Ty)` 来调用延迟函数。  
+ If `policy` is `launch::deferred`, the function marks its associated asynchronous state as holding a *deferred function* and returns. The first call to any non-timed function that waits for the associated asynchronous state to be ready in effect calls the deferred function by evaluating `INVOKE(dfn, dargs..., Ty)`.  
   
- 任何情况下，在通过引发异常或正常返回完成 `INVOKE(dfn, dargs..., Ty)` 的计算之前，`future` 对象的关联异步状态不会设置为就绪。 如果引发了异常，则关联异步状态的结果为异常，否则为计算返回的任何值。  
+ In all cases, the associated asynchronous state of the `future` object is not set to *ready* until the evaluation of `INVOKE(dfn, dargs..., Ty)` completes, either by throwing an exception or by returning normally. The result of the associated asynchronous state is an exception if one was thrown, or any value that's returned by the evaluation.  
   
 > [!NOTE]
->  对于一个附加到以 `std::async` 开头的任务的 `future`（或最后一个 [shared_future](../standard-library/shared-future-class.md)），如果任务尚未完成，则析构函数将阻塞；即，如果此线程尚未调用 `.get()` 或 `.wait()` 且任务仍在进行，则析构函数将阻塞。 如果从 `future` 中获得的 `std::async` 移出局部范围，则使用它的其他代码必须知道其析构函数可能在共享状态变成已就绪时阻塞。  
+>  For a `future`—or the last [shared_future](../standard-library/shared-future-class.md)—that's attached to a task started with `std::async`, the destructor blocks if the task has not completed; that is, it blocks if this thread did not yet call `.get()` or `.wait()` and the task is still running. If a `future` obtained from `std::async` is moved outside the local scope, other code that uses it must be aware that its destructor may block for the shared state to become ready.  
   
- 伪函数 `INVOKE` 定义在 [\<functional>](../standard-library/functional.md) 中。  
+ The pseudo-function `INVOKE` is defined in [\<functional>](../standard-library/functional.md).  
   
-##  <a name="future_category"></a>future_category  
- 返回一个描述与 `future` 对象相关联错误特征的 [error_category](../standard-library/error-category-class.md) 对象的引用。  
+##  <a name="future_category"></a>  future_category  
+ Returns a reference to the [error_category](../standard-library/error-category-class.md) object that characterizes errors that are associated with `future` objects.  
   
 ```
 const error_category& future_category() noexcept;
 ```  
   
-##  <a name="make_error_code"></a>make_error_code  
- 创建一个 [error_code](../standard-library/error-code-class.md) 以及一个描述 [future](../standard-library/future-class.md) 错误特征的 [error_category](../standard-library/error-category-class.md) 对象。  
+##  <a name="make_error_code"></a>  make_error_code  
+ Creates an [error_code](../standard-library/error-code-class.md) together with the [error_category](../standard-library/error-category-class.md) object that characterizes [future](../standard-library/future-class.md) errors.  
   
 ```
 inline error_code make_error_code(future_errc Errno) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Errno`  
- 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。  
+ A [future_errc](../standard-library/future-enums.md#future_errc) value that identifies the reported error.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `error_code(static_cast<int>(Errno), future_category());`  
   
-##  <a name="make_error_condition"></a>make_error_condition  
- 创建一个 [error_condition](../standard-library/error-condition-class.md) 以及一个描述 [future](../standard-library/future-class.md) 错误特征的 [error_category](../standard-library/error-category-class.md) 对象。  
+##  <a name="make_error_condition"></a>  make_error_condition  
+ Creates an [error_condition](../standard-library/error-condition-class.md) together with the [error_category](../standard-library/error-category-class.md) object that characterizes [future](../standard-library/future-class.md) errors.  
   
 ```
 inline error_condition make_error_condition(future_errc Errno) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Errno`  
- 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。  
+ A [future_errc](../standard-library/future-enums.md#future_errc) value that identifies the reported error.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `error_condition(static_cast<int>(Errno), future_category());`  
   
-##  <a name="swap"></a>swap  
- 将一个 `promise` 对象的关联异步状态与另一对象的关联异步状态交换。  
+##  <a name="swap"></a>  swap  
+ Exchanges the *associated asynchronous state* of one `promise` object with that of another.  
   
 ```
 template <class Ty>
@@ -119,14 +125,14 @@ template <class Ty, class... ArgTypes>
 void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& Right) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左 `promise` 对象。  
+ The left `promise` object.  
   
  `Right`  
- 正确的 `promise` 对象。  
+ The right `promise` object.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<future>](../standard-library/future.md)
 
 

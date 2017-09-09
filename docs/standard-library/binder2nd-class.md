@@ -1,5 +1,5 @@
 ---
-title: "binder2nd 类 | Microsoft 文档"
+title: binder2nd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- binder2nd
 - xfunctional/std::binder2nd
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 9a2f3f31798d1cdadf00e95b9f393e93a20d29ea
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f9a8fbf0154d9455b18ba6e4b695be9b542ac175
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="binder2nd-class"></a>binder2nd 类
-一种模板类，用于提供构造函数，通过将二元函数的第二个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。  
+# <a name="binder2nd-class"></a>binder2nd Class
+A template class providing a constructor that converts a binary function object into a unary function object by binding the second argument of the binary function to a specified value.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Operation>
@@ -68,25 +67,25 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Func`  
- 要转换为一元函数对象的二元函数对象。  
+ The binary function object to be converted to a unary function object.  
   
  `right`  
- 要将二元函数对象的第二个参数绑定到的值。  
+ The value to which the second argument of the binary function object is to be bound.  
   
  `left`  
- 改编的二元对象将其与第二个参数进行比较的参数值。  
+ The value of the argument that the adapted binary object compares to the fixed value of the second argument.  
   
-## <a name="return-value"></a>返回值  
- 将二元函数对象的第二参数绑定到值 `right.` 生成的一元函数对象  
+## <a name="return-value"></a>Return Value  
+ The unary function object that results from binding the second argument of the binary function object to the value `right.`  
   
-## <a name="remarks"></a>备注  
- 此模板类将二元函数对象 _ *Func* 的副本存储在 **op** 中，并将 `right` 的副本存储在 **value** 中。 它将其成员函数 `operator()` 定义为返回 **op**( `left`, **value**)。  
+## <a name="remarks"></a>Remarks  
+ The template class stores a copy of a binary function object _ *Func* in **op**, and a copy of `right` in **value**. It defines its member function `operator()` as returning **op**( `left`, **value**).  
   
- 如果 `Func` 是 **Operation** 类型的对象且 c 是常量，则 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) 等效于 `binder2nd` 类构造函数 `binder2nd`\< **Operation**> ( `Func`, `c` ) 且更为方便。  
+ If `Func` is an object of type **Operation** and c is a constant, then [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) is equivalent to the `binder2nd` class constructor `binder2nd`\< **Operation**> ( `Func`, `c` ) and more convenient.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_binder2nd.cpp  
@@ -136,14 +135,14 @@ The number of elements in v1 less than 10 is: 2.
 */  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

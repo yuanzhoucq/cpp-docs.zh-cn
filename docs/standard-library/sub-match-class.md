@@ -1,5 +1,5 @@
 ---
-title: "sub_match 类 | Microsoft Docs"
+title: sub_match Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- sub_match
 - regex/std::sub_match
 - regex/std::sub_match::matched
 - regex/std::sub_match::compare
@@ -21,7 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- sub_match class
+- std::sub_match [C++]
+- std::sub_match [C++], matched
+- std::sub_match [C++], compare
+- std::sub_match [C++], length
+- std::sub_match [C++], str
+- std::sub_match [C++], difference_type
+- std::sub_match [C++], iterator
+- std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
 caps.latest.revision: 19
 author: corob-msft
@@ -41,17 +47,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 12d12497fa96d7cf4185ad3664908a56be1078c9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cf13a50f8485a8981b39efec9ee5f785e5a0ab72
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="submatch-class"></a>sub_match 类
-介绍子匹配项。  
+# <a name="submatch-class"></a>sub_match Class
+Describes a submatch.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class BidIt>  
@@ -73,28 +79,28 @@ public:
  };  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `BidIt`  
- 子匹配项的迭代器类型。  
+ The iterator type for submatches.  
   
-## <a name="remarks"></a>备注  
- 此模板类描述一个对象，它指定对的调用中的捕获组匹配的字符序列[regex_match](../standard-library/regex-functions.md#regex_match)或[regex_search](../standard-library/regex-functions.md#regex_search)。 [match_results Class](../standard-library/match-results-class.md) 类型的对象保存这些对象的数组，每个数组用于搜索中所用正则表达式中的每个捕获组。  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that designates a sequence of characters that matched a capture group in a call to [regex_match](../standard-library/regex-functions.md#regex_match) or to [regex_search](../standard-library/regex-functions.md#regex_search). Objects of type [match_results Class](../standard-library/match-results-class.md) hold an array of these objects, one for each capture group in the regular expression that was used in the search.  
   
- 如果捕获组不匹配，则对象的数据成员 `matched` 保持为 false，两个迭代器 `first` 和 `second` （继承自基类 `std::pair`）相等。 如果捕获组匹配，则 `matched` 保持为 true，迭代器 `first` 指向与捕获组匹配的目标序列中第一个字符，迭代器 `second` 与捕获组匹配的目标序列中最后一个字符后紧邻的位置。 请注意，对于长度为零的匹配项，成员 `matched` 保持为 true，两个迭代器将相等并将同时将指向匹配项的位置。  
+ If the capture group was not matched the object's data member `matched` holds false, and the two iterators `first` and `second` (inherited from the base `std::pair`) are equal. If the capture group was matched, `matched` holds true, the iterator `first` points to the first character in the target sequence that matched the capture group, and the iterator `second` points one position past the last character in the target sequence that matched the capture group. Note that for a zero-length match the member `matched` holds true, the two iterators will be equal, and both will point to the position of the match.  
   
- 当捕获组仅由一个断言或一个允许重复次数为零的重复组成时，可能出现长度为零的匹配项。 例如：  
+ A zero-length match can occur when a capture group consists solely of an assertion, or of a repetition that allows zero repeats. For example:  
   
- “^”匹配目标序列“a”； `sub_match` 对象对应捕获组 0 持有两个迭代器，它们均指向序列中第一个字符。  
+ "^" matches the target sequence "a"; the `sub_match` object corresponding to capture group 0 holds iterators that both point to the first character in the sequence.  
   
- “b(a*)b”匹配目标序列“bb”； `sub_match` 对象对应捕获组 0 持有两个迭代器，它们均指向序列中第二个字符。  
+ "b(a*)b" matches the target sequence "bb"; the `sub_match` object corresponding to capture group 1 holds iterators that both point to the second character in the sequence.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<regex 1>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
 ##  <a name="compare"></a>  sub_match::compare  
- 将子匹配项与序列进行比较。  
+ Compare submatch against a sequence.  
   
 ```  
 int compare(const sub_match& right) const;
@@ -102,28 +108,28 @@ int compare(const basic_string<value_type>& str) const;
 int compare(const value_type *ptr) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要比较的子匹配项。  
+ The submatch to compare to.  
   
  `str`  
- 要与之比较的字符串。  
+ The string to compare to.  
   
  `ptr`  
- 要比较的以 null 结尾的序列。  
+ The null-terminated sequence to compare to.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数将匹配序列 `[first, second)` 与匹配序列 `[right.first, right.second)` 进行比较。 第二个成员函数将匹配序列 `[first, second)` 与字符序列 `[right.begin(), right.end())` 进行比较。 第三个成员函数将匹配序列 `[first, second)` 与字符序列 `[right, right + std::char_traits<value_type>::length(right))` 进行比较。  
+### <a name="remarks"></a>Remarks  
+ The first member function compares the matched sequence `[first, second)` to the matched sequence `[right.first, right.second)`. The second member function compares the matched sequence `[first, second)` to the character sequence `[right.begin(), right.end())`. The third member function compares the matched sequence `[first, second)` to the character sequence `[right, right + std::char_traits<value_type>::length(right))`.  
   
- 每个函数的返回结果：  
+ Each function returns:  
   
- 如果匹配序列中的第一个不同值小于操作数序列中的相应元素（如 `std::char_traits<value_type>::compare` 所确定），或二者前缀相同但目标序列较长，则返回一个负值  
+ a negative value if the first differing value in the matched sequence compares less than the corresponding element in the operand sequence (as determined by `std::char_traits<value_type>::compare`), or if the two have a common prefix but the target sequence is longer  
   
- 如果二者的元素一一对应且长度相同，则返回零  
+ zero if the two compare equal element by element and have the same length  
   
- 否则返回正值  
+ a positive value otherwise  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_compare.cpp   
@@ -177,16 +183,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="difference_type"></a>  sub_match::difference_type  
- 迭代器差异的类型。  
+ The type of an iterator difference.  
   
 ```  
 typedef typename iterator_traits<BidIt>::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- typedef 是 `iterator_traits<BidIt>::difference_type`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for `iterator_traits<BidIt>::difference_type`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_difference_type.cpp   
@@ -240,16 +246,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="iterator"></a>  sub_match::iterator  
- 迭代器的类型。  
+ The type of an iterator.  
   
 ```  
 typedef BidIt iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- typedef 是模板类型参数 `Bidit` 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for the template type argument `Bidit`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_iterator.cpp   
@@ -303,16 +309,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="length"></a>  sub_match::length  
- 返回子匹配项的长度。  
+ Returns the length of a submatch.  
   
 ```  
 difference_type length() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 如果没有任何匹配的序列，则成员函数返回匹配的序列的长度或零。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the matched sequence, or zero if there was no matched sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_length.cpp   
@@ -366,16 +372,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="matched"></a>  sub_match::matched  
- 指示是否匹配成功。  
+ Indicates if match succeeded.  
   
 ```  
 bool matched;  
 ```  
   
-### <a name="remarks"></a>备注  
- 仅当与 `true` 关联的捕获组是正则表达式匹配的一部分时，成员才保存 `*this` 。  
+### <a name="remarks"></a>Remarks  
+ The member holds `true` only if the capture group associated with `*this` was part of the regular expression match.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_matched.cpp   
@@ -428,17 +434,17 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="op_basic_string_lt_value_type_gt"></a>sub_match::operator basic_string&lt;value_type&gt;  
- 将子匹配转换为字符串。  
+##  <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;  
+ Casts submatch to a string.  
   
 ```  
 operator basic_string<value_type>() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 该成员运算符将返回 `str()`。  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `str()`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_operator_str.cpp   
@@ -492,16 +498,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="str"></a>  sub_match::str  
- 将子匹配转换为字符串。  
+ Converts submatch to a string.  
   
 ```  
 basic_string<value_type> str() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 `basic_string<value_type>(first, second)`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `basic_string<value_type>(first, second)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_str.cpp   
@@ -555,16 +561,16 @@ compare(sub) == 0
 ```  
   
 ##  <a name="value_type"></a>  sub_match::value_type  
- 元素的类型。  
+ The type of an element.  
   
 ```  
 typedef typename iterator_traits<BidIt>::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- typedef 是 `iterator_traits<BidIt>::value_type`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for `iterator_traits<BidIt>::value_type`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__sub_match_value_type.cpp   
@@ -617,7 +623,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<regex>](../standard-library/regex.md)   
  [sub_match](../standard-library/sub-match-class.md)
 

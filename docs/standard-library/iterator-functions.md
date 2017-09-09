@@ -1,5 +1,5 @@
 ---
-title: "&lt;iterator&gt; 函数 | Microsoft Docs"
+title: '&lt;iterator&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,14 +24,29 @@ f1_keywords:
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
 caps.latest.revision: 16
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 171fd87608b0afed1ebb0c2ae82d6118adff727f
+helpviewer_keywords:
+- std::advance [C++]
+- std::back_inserter [C++]
+- std::begin [C++]
+- std::cbegin [C++]
+- std::cend [C++]
+- std::distance [C++]
+- std::end [C++]
+- std::front_inserter [C++]
+- std::inserter [C++]
+- std::make_checked_array_iterator [C++]
+- std::make_move_iterator [C++]
+- std::make_unchecked_array_iterator [C++]
+- std::next [C++]
+- std::prev [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8bb8fc00d90777a6ce2cfaa3a2e6db879a6e28c9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函数
+# <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; functions
 ||||  
 |-|-|-|  
 |[advance](#advance)|[back_inserter](#back_inserter)|[begin](#begin)|  
@@ -40,8 +55,8 @@ ms.lasthandoff: 04/29/2017
 |[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|  
 |[next](#next)|[prev](#prev)|  
   
-##  <a name="advance"></a>advance  
- 使迭代器递增指定数量的位置。  
+##  <a name="advance"></a>  advance  
+ Increments an iterator by a specified number of positions.  
   
 ```  
 template <class InputIterator, class Distance>  
@@ -50,21 +65,21 @@ void advance(
     Distance Off);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `InIt`  
- 要递增的迭代器，且必须满足输入迭代器的需求。  
+ The iterator that is to be incremented and that must satisfy the requirements for an input iterator.  
   
  `Off`  
- 可转换为迭代器的距离类型的整型值，用于指定要将迭代器位置前移的递增数。  
+ An integral type that is convertible to the iterator's difference type and that specifies the number of increments the position of the iterator is to be advanced.  
   
-### <a name="remarks"></a>备注  
- 前移范围必须非奇数，这种情况下，迭代器必须可解引用或超过结尾。  
+### <a name="remarks"></a>Remarks  
+ The range advanced through must be nonsingular, where the iterators must be dereferenceable or past the end.  
   
- 如果 **InputIterator** 满足双向迭代器类型的需求，则 `Off` 可以是负数。 如果 **InputIterator** 为输入迭代器类型或向前迭代器类型，则 `Off` 必须为非负。  
+ If the **InputIterator** satisfies the requirements for a bidirectional iterator type, then `Off` may be negative. If **InputIterator** is an input or forward iterator type, `Off` must be nonnegative.  
   
- 当 **InputIterator** 满足随机访问迭代器的需求时，前移函数具有固定复杂度；否则具有线性复杂度，因此可能会产生高昂的代价。  
+ The advance function has constant complexity when **InputIterator** satisfies the requirements for a random-access iterator; otherwise, it has linear complexity and so is potentially expensive.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_advance.cpp  
@@ -111,25 +126,25 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.  
 ```  
   
-##  <a name="back_inserter"></a>back_inserter  
- 创建一个可以在指定容器的后面插入元素的迭代器。  
+##  <a name="back_inserter"></a>  back_inserter  
+ Creates an iterator that can insert elements at the back of a specified container.  
   
 ```  
 template <class Container>  
 back_insert_iterator<Container> back_inserter(Container& _Cont);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- 一个容器，将向其执行后插入。  
+ The container into which the back insertion is to be executed.  
   
-### <a name="return-value"></a>返回值  
- 与容器对象 `_Cont` 关联的 `back_insert_iterator`。  
+### <a name="return-value"></a>Return Value  
+ A `back_insert_iterator` associated with the container object `_Cont`.  
   
-### <a name="remarks"></a>备注  
- C++ 标准库中，此自变量必须引用具有成员函数 `push_back`: [deque 类](../standard-library/deque-class.md)、[list 类](../standard-library/list-class.md) 或 [vector 类](../standard-library/vector-class.md) 的三个序列容器中的一个容器。  
+### <a name="remarks"></a>Remarks  
+ Within the C++ Standard Library, the argument must refer to one of the three sequence containers that have the member function `push_back`: [deque Class](../standard-library/deque-class.md), [list Class](../standard-library/list-class.md), or [vector Class](../standard-library/vector-class.md).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_back_inserter.cpp  
@@ -178,8 +193,8 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).  
 ```  
   
-##  <a name="begin"></a>begin  
- 检索一个指向指定容器中第一个元素的迭代器。  
+##  <a name="begin"></a>  begin  
+ Retrieves an iterator to the first element in a specified container.  
   
 ```  
 template <class Container>  
@@ -194,20 +209,20 @@ template <class Ty, class Size>
 Ty *begin(Ty (& array)[Size]);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cont`  
- 容器。  
+ A container.  
   
  `array`  
- `Ty` 类型对象的数组。  
+ An array of objects of type `Ty`.  
   
-### <a name="return-value"></a>返回值  
- 前两个模板函数返回 `cont.begin()`。 第一个函数为非常量；第二个函数为常量。  
+### <a name="return-value"></a>Return Value  
+ The first two template functions return `cont.begin()`. The first function is non-constant; the second one is constant.  
   
- 第三个模板函数返回 `array`。  
+ The third template function returns `array`.  
   
-### <a name="example"></a>示例  
-  当需要多个泛型行为时，我们建议使用此模板函数来代替容器成员 `begin()`。  
+### <a name="example"></a>Example  
+  We recommend that you use this template function in place of container member `begin()` when more generic behavior is required.  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd   
@@ -259,7 +274,7 @@ Output:
 160 106 80 70 53 40 35 23 20 16 10 8 5 4 2 1  
 ```  
   
-  除常规数组外，函数 `reverse_sort` 支持任何类型的容器，因为它调用 `begin()` 的非成员版本。 如果将 `reverse_sort` 编码为使用容器成员 `begin()`：  
+  The function `reverse_sort` supports containers of any kind, in addition to regular arrays, because it calls the non-member version of `begin()`. If `reverse_sort` were coded to use the container member `begin()`:  
   
 ```cpp  
 template <typename C>  
@@ -272,14 +287,14 @@ void reverse_sort(C& c) {
 }  
 ```  
   
- 则向其发送数组时将会导致下列编译器错误：  
+ Then sending an array to it would cause this compiler error:  
   
 ```  
 error C2228: left of '.begin' must have class/struct/union  
 ```  
   
-##  <a name="cbegin"></a>cbegin  
- 检索指向指定容器中第一个元素的常量迭代器。  
+##  <a name="cbegin"></a>  cbegin  
+ Retrieves a const iterator to the first element in a specified container.  
   
 ```  
 template <class Container>  
@@ -287,17 +302,17 @@ auto cbegin(const Container& cont)   `
    -> decltype(cont.begin());
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cont`  
- 容器或 initializer_list。  
+ A container or initializer_list.  
   
-### <a name="return-value"></a>返回值  
- 常量 `cont.begin()`。  
+### <a name="return-value"></a>Return Value  
+ A constant `cont.begin()`.  
   
-### <a name="remarks"></a>备注  
- 此函数适用于 [initializer_list](../standard-library/initializer-list-class.md) 和所有 C++ 标准库容器。  
+### <a name="remarks"></a>Remarks  
+ This function works with all C++ Standard Library containers and with [initializer_list](../standard-library/initializer-list-class.md).  
   
- 可以使用此成员函数替代 `begin()` 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为可修改（非 `const`）容器或支持 `begin()` 与 `cbegin()` 的任何类型的 `initializer_list`。  
+ You can use this member function in place of the `begin()` template function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container or `initializer_list` of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -307,8 +322,8 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>cend  
- 检索指向指定容器中最后元素之后的元素的常量迭代器。  
+##  <a name="cend"></a>  cend  
+ Retrieves a const iterator to the element that follows the last element in the specified container.  
   
 ```  
 template <class Container>  
@@ -316,17 +331,17 @@ auto cend(const Container& cont)   `
    -> decltype(cont.end());
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cont`  
- 容器或 initializer_list。  
+ A container or initializer_list.  
   
-### <a name="return-value"></a>返回值  
- 常量 `cont.end()`。  
+### <a name="return-value"></a>Return Value  
+ A constant `cont.end()`.  
   
-### <a name="remarks"></a>备注  
- 此函数适用于 [initializer_list](../standard-library/initializer-list-class.md) 和所有 C++ 标准库容器。  
+### <a name="remarks"></a>Remarks  
+ This function works with all C++ Standard Library containers and with [initializer_list](../standard-library/initializer-list-class.md).  
   
- 可以使用此成员函数替代 [end()](../standard-library/iterator-functions.md#end) 模板函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为可修改（非 `const`）容器或支持 `end()` 与 `cend()` 的任何类型的 `initializer_list`。  
+ You can use this member function in place of the [end()](../standard-library/iterator-functions.md#end) template function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container or `initializer_list` of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -336,28 +351,28 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="distance"></a>distance  
- 确定两个迭代器定址位置之间的增量数。  
+##  <a name="distance"></a>  distance  
+ Determines the number of increments between the positions addressed by two iterators.  
   
 ```  
 template <class InputIterator>  
 typename iterator_traits<InputIterator>::difference_type distance(InputIterator first, InputIterator last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 第一个迭代器，将要确定其与第二个迭代器之间的距离。  
+ The first iterator whose distance from the second is to be determined.  
   
  `last`  
- 第二个迭代器，将要确定其与第一个迭代器之间的距离。  
+ The second iterator whose distance from the first is to be determined.  
   
-### <a name="return-value"></a>返回值  
- `first` 必须递增到等于 `last` 时的次数。  
+### <a name="return-value"></a>Return Value  
+ The number of times that `first` must be incremented until it equal `last`.  
   
-### <a name="remarks"></a>备注  
- 当 **InputIterator** 满足随机访问迭代器的需求时，distance 函数具有固定复杂度；否则具有线性复杂度，因此可能会产生高昂的代价。  
+### <a name="remarks"></a>Remarks  
+ The distance function has constant complexity when **InputIterator** satisfies the requirements for a random-access iterator; otherwise, it has linear complexity and so is potentially expensive.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_distance.cpp  
@@ -405,8 +420,8 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.  
 ```  
   
-##  <a name="end"></a>end  
- 检索指向指定容器中最后一个元素之后的元素的迭代器。  
+##  <a name="end"></a>  end  
+ Retrieves an iterator to the element that follows the last element in the specified container.  
   
 ```  
 template <class Container>  
@@ -421,42 +436,42 @@ template <class Ty, class Size>
 Ty *end(Ty (& array)[Size]);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cont`  
- 容器。  
+ A container.  
   
  `array`  
- `Ty` 类型对象的数组。  
+ An array of objects of type `Ty`.  
   
-### <a name="return-value"></a>返回值  
- 前两个模板函数返回 `cont.end()`（第一个为非常量函数，第二个为常量函数）。  
+### <a name="return-value"></a>Return Value  
+ The first two template functions return `cont.end()` (the first is non-constant and the second is constant).  
   
- 第三个模板函数返回 `array + Size`。  
+ The third template function returns `array + Size`.  
   
-### <a name="remarks"></a>备注  
- 有关代码示例，请参阅 [begin](../standard-library/iterator-functions.md#begin)。  
+### <a name="remarks"></a>Remarks  
+ For a code example, see [begin](../standard-library/iterator-functions.md#begin).  
   
-##  <a name="front_inserter"></a>front_inserter  
- 创建一个可以在指定容器前面插入元素的迭代器。  
+##  <a name="front_inserter"></a>  front_inserter  
+ Creates an iterator that can insert elements at the front of a specified container.  
   
 ```  
 template <class Container>  
 front_insert_iterator<Container> front_inserter(Container& _Cont);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- 其前部要插入元素的容器对象。  
+ The container object whose front is having an element inserted.  
   
-### <a name="return-value"></a>返回值  
- 与容器对象 `_Cont` 关联的 `front_insert_iterator`。  
+### <a name="return-value"></a>Return Value  
+ A `front_insert_iterator` associated with the container object `_Cont`.  
   
-### <a name="remarks"></a>备注  
- 也可使用 front_insert_iterator 类的成员函数 [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator)。  
+### <a name="remarks"></a>Remarks  
+ The member function [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator) of the front_insert_iterator class may also be used.  
   
- C++ 标准库中，此自变量必须引用具有成员函数 `push_back`: [deque 类](../standard-library/deque-class.md)或“列表类”的两个序列容器中的一个容器。  
+ Within the C++ Standard Library, the argument must refer to one of the two sequence containers that have the member function `push_back`: [deque Class](../standard-library/deque-class.md) or "list Class".  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_front_inserter.cpp  
@@ -503,8 +518,8 @@ After the front insertions, the list L is:
  ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).  
 ```  
   
-##  <a name="inserter"></a>inserter  
- 允许你使用的帮助程序模板函数`inserter(_Cont, _Where)`而不是`insert_iterator<Container>(_Cont, _Where)`。  
+##  <a name="inserter"></a>  inserter  
+ A helper template function that lets you use `inserter(_Cont, _Where)` instead of `insert_iterator<Container>(_Cont, _Where)`.  
   
 ```  
 template <class Container>  
@@ -514,17 +529,17 @@ inserter(
     typename Container::iterator _Where);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- 要向其添加新元素的容器。  
+ The container to which new elements are to be added.  
   
  `_Where`  
- 定位插入点的迭代器。  
+ An iterator locating the point of insertion.  
   
-### <a name="remarks"></a>备注  
- 模板函数返回[insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_inserter.cpp  
@@ -571,11 +586,11 @@ After the insertions, the list L is:
  ( 1 20 30 40 500 ).  
 ```  
   
-##  <a name="make_checked_array_iterator"></a>make_checked_array_iterator  
- 创建可由其他算法使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。  
+##  <a name="make_checked_array_iterator"></a>  make_checked_array_iterator  
+ Creates a [checked_array_iterator](../standard-library/checked-array-iterator-class.md) that can be used by other algorithms.  
   
 > [!NOTE]
->  该函数是 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。  
+>  This function is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.  
   
 ```  
 template <class Iter>  
@@ -586,26 +601,26 @@ checked_array_iterator<Iter>
     size_t Index = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Ptr`  
- 指向目标数组的指针。  
+ A pointer to the destination array.  
   
  `Size`  
- 目标数组的大小。  
+ The size of the destination array.  
   
  `Index`  
- 数组的可选索引。  
+ Optional index into the array.  
   
-### <a name="return-value"></a>返回值  
- `checked_array_iterator` 的一个实例。  
+### <a name="return-value"></a>Return Value  
+ An instance of `checked_array_iterator`.  
   
-### <a name="remarks"></a>备注  
- `make_checked_array_iterator` 函数在 `stdext` 命名空间中定义。  
+### <a name="remarks"></a>Remarks  
+ The `make_checked_array_iterator` function is defined in the `stdext` namespace.  
   
- 此函数采用原始指针（此指针通常会导致有关边界溢出的问题），并将其包装在执行检查的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md) 类中。 由于此类标记为已检查，因此 C++ 标准库不会对此发出警告。 有关详细信息和代码示例，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
+ This function takes a raw pointer—which would ordinarily cause concern about bounds overrun—and wraps it in a [checked_array_iterator](../standard-library/checked-array-iterator-class.md) class that does checking. Because that class is marked as checked, the C++ Standard Library doesn't warn about it. For more information and code examples, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>示例  
-  在下面的示例中，将创建一个 [vector](../standard-library/vector-class.md)，并在其中填充 10 项。 矢量内容通过复制算法复制到数组，随后使用 `make_checked_array_iterator` 指定目标。 这在有意违反边界后进行，因此将触发调试断言失败。  
+### <a name="example"></a>Example  
+  In the following example, a [vector](../standard-library/vector-class.md) is created and populated with 10 items. The contents of the vector are copied into an array by using the copy algorithm, and then `make_checked_array_iterator` is used to specify the destination. This is followed by an intentional violation of the bounds checking so that a debug assertion failure is triggered.  
   
 ```cpp  
 // make_checked_array_iterator.cpp  
@@ -661,8 +676,8 @@ int main()
   
 ```  
   
-##  <a name="make_move_iterator"></a>make_move_iterator  
- 创建一个将所提供的迭代器包含在内作为 `stored` 迭代器的 `move iterator`。  
+##  <a name="make_move_iterator"></a>  make_move_iterator  
+ Creates a `move iterator` that contains the provided iterator as the `stored` iterator.  
   
 ```  
 template <class Iterator>  
@@ -670,18 +685,18 @@ move_iterator<Iterator>
 make_move_iterator(const Iterator& _It);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_It`  
- 存储在新移动迭代器中的迭代器。  
+ The iterator stored in the new move iterator.  
   
-### <a name="remarks"></a>备注  
- 此模板函数返回 `move_iterator``<Iterator>(``_It``)`。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `move_iterator` `<Iterator>(_It)`.  
   
-##  <a name="make_unchecked_array_iterator"></a>make_unchecked_array_iterator  
- 创建可由其他算法使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。  
+##  <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
+ Creates an [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) that can be used by other algorithms.  
   
 > [!NOTE]
->  该函数是 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。  
+>  This function is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.  
   
 ```  
 template <class Iter>  
@@ -689,20 +704,20 @@ unchecked_array_iterator<Iter>
     make_unchecked_array_iterator(Iter Ptr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Ptr`  
- 指向目标数组的指针。  
+ A pointer to the destination array.  
   
-### <a name="return-value"></a>返回值  
- `unchecked_array_iterator` 的一个实例。  
+### <a name="return-value"></a>Return Value  
+ An instance of `unchecked_array_iterator`.  
   
-### <a name="remarks"></a>备注  
- `make_unchecked_array_iterator` 函数在 `stdext` 命名空间中定义。  
+### <a name="remarks"></a>Remarks  
+ The `make_unchecked_array_iterator` function is defined in the `stdext` namespace.  
   
- 该函数采用原始指针并将其包装在不执行检查的类中，因此没有进行任何优化，但它还静默处理编译器警告，例如 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 因此，这是一个有针对性的方法，既可处理未经检查的指针警告，又无需从全局静默处理这些警告或产生检查成本。 有关详细信息和代码示例，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
+ This function takes a raw pointer and wraps it in a class that performs no checking and therefore optimizes away to nothing, but it also silences compiler warnings such as [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Therefore, this is a targeted way to deal with unchecked-pointer warnings without globally silencing them or incurring the cost of checking. For more information and code examples, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>示例  
-  在下面的示例中，将创建一个 [vector](../standard-library/vector-class.md)，并在其中填充 10 项。 矢量内容通过复制算法复制到数组，随后使用 `make_unchecked_array_iterator` 指定目标。  
+### <a name="example"></a>Example  
+  In the following example, a [vector](../standard-library/vector-class.md) is created and populated with 10 items. The contents of the vector are copied into an array by using the copy algorithm, and then `make_unchecked_array_iterator` is used to specify the destination.  
   
 ```cpp  
 // make_unchecked_array_iterator.cpp  
@@ -752,8 +767,8 @@ int main()
   
 ```  
   
-##  <a name="next"></a>next  
- 迭代指定的次数并返回新的迭代器位置。  
+##  <a name="next"></a>  next  
+ Iterates a specified number of times and returns the new iterator position.  
   
 ```  
 template <class InputIterator>  
@@ -762,21 +777,21 @@ InputIterator next(
     typename iterator_traits<InputIterator>::difference_type _Off = 1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 当前位置。  
+ The current position.  
   
  `_Off`  
- 循环访问次数。  
+ The number of times to iterate.  
   
-### <a name="return-value"></a>返回值  
- 循环访问 `_Off` 次后返回新的迭代器位置。  
+### <a name="return-value"></a>Return Value  
+ Returns the new iterator position after iterating `_Off` times.  
   
-### <a name="remarks"></a>备注  
- 模板函数返回 `next` 递增 `_Off` 次数  
+### <a name="remarks"></a>Remarks  
+ The template function returns `next` incremented `_Off` times  
   
-##  <a name="prev"></a>prev  
- 反向迭代指定的次数并返回新的迭代器位置。  
+##  <a name="prev"></a>  prev  
+ Iterates in reverse a specified number of times and returns the new iterator position.  
   
 ```  
 template <class BidirectionalIterator>  
@@ -785,17 +800,17 @@ BidirectionalIterator prev(
     typename iterator_traits<BidirectionalIterator>::difference_type _Off = 1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 当前位置。  
+ The current position.  
   
  `_Off`  
- 循环访问次数。  
+ The number of times to iterate.  
   
-### <a name="remarks"></a>备注  
- 模板函数返回 `next` 递减 `off` 次数。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `next` decremented `off` times.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)
 
 

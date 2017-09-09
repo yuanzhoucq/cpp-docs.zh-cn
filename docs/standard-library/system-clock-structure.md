@@ -1,5 +1,5 @@
 ---
-title: "system_clock 结构 | Microsoft Docs"
+title: system_clock Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,122 +36,122 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 053b2930d25bb7b1ec073764801530860511ac1b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 79e5cf6fa1d5fd952b74fcc2c444f6c169778247
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="systemclock-structure"></a>system_clock 结构
-表示基于系统实时时钟的*时钟类型*。  
+# <a name="systemclock-structure"></a>system_clock Structure
+Represents a *clock type* that is based on the real-time clock of the system.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct system_clock;  
 ```  
   
-## <a name="remarks"></a>备注  
- *时钟类型*用于获取作为 UTC 的当前时间。 该类型包含[持续时间](../standard-library/duration-class.md)的实例化和类模板 [time_point](../standard-library/time-point-class.md)，并定义返回时间的静态成员函数 `now()`。  
+## <a name="remarks"></a>Remarks  
+ A *clock type* is used to obtain the current time as UTC. The type embodies an instantiation of [duration](../standard-library/duration-class.md) and the class template [time_point](../standard-library/time-point-class.md), and defines a static member function `now()` that returns the time.  
   
- 如果首次调用 `now()` 返回的值始终小于或等于后续调用 `now()` 返回的值，则为单调时钟。  
+ A clock is *monotonic* if the value that is returned by a first call to `now()` is always less than or equal to the value that is returned by a subsequent call to `now()`.  
   
- 如果它是单调时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。  
+ A clock is *steady* if it is *monotonic* and if the time between clock ticks is constant.  
   
- 在此实现中，`system_clock` 与 `high_resolution_clock` 是同义词。  
+ In this implementation, a `system_clock` is synonymous with a `high_resolution_clock`.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-typedefs"></a>公共 Typedef  
+### <a name="public-typedefs"></a>Public Typedefs  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`system_clock::duration`|`duration<rep, period>` 的同义词。|  
-|`system_clock::period`|该类型的同义词，用于表示在包含的 `duration` 的实例化中的时钟周期。|  
-|`system_clock::rep`|该类型的同义词，用于表示在包含的 `duration` 的实例化中的时钟计时周期数。|  
-|`system_clock::time_point`|`time_point<Clock, duration>` 的同义词，其中 `Clock` 是时钟类型本身的同义词，或是另一种基于同一时期并具有相同嵌套 `duration` 类型的时钟类型的同义词。|  
+|`system_clock::duration`|A synonym for `duration<rep, period>`.|  
+|`system_clock::period`|A synonym for the type that is used to represent the tick period in the contained instantiation of `duration`.|  
+|`system_clock::rep`|A synonym for the type that is used to represent the number of clock ticks in the contained instantiation of `duration`.|  
+|`system_clock::time_point`|A synonym for `time_point<Clock, duration>`, where `Clock` is a synonym for either the clock type itself or another clock type that is based on the same epoch and has the same nested `duration` type.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[from_time_t](#from_time_t)|静态。 返回最接近指定的时间的 `time_point`。|  
-|[现在](#now)|静态。 返回当前日期。|  
-|[to_time_t](#to_time_t)|静态。 返回最接近指定 `time_point` 的 `time_t` 对象。|  
+|[from_time_t](#from_time_t)|Static. Returns a `time_point` that most closely approximates a specified time.|  
+|[now](#now)|Static. Returns the current time.|  
+|[to_time_t](#to_time_t)|Static. Returns a `time_t` object that most closely approximates a specified `time_point`.|  
   
-### <a name="public-constants"></a>公共常量  
+### <a name="public-constants"></a>Public Constants  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[system_clock::is_monotonic 常量](#is_monotonic_constant)|指定时钟类型是否为单调。|  
-|[system_clock::is_steady 常量](#is_steady_constant)|指定时钟类型是否为稳定。|  
+|[system_clock::is_monotonic Constant](#is_monotonic_constant)|Specifies whether the clock type is monotonic.|  
+|[system_clock::is_steady Constant](#is_steady_constant)|Specifies whether the clock type is steady.|  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<chrono >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
- **命名空间：**std::chrono  
+ **Namespace:** std::chrono  
   
-##  <a name="from_time_t"></a>system_clock:: from_time_t
- 返回 [time_point](../standard-library/time-point-class.md) 的静态方法，此返回值最接近 `Tm` 表示的时间。  
+##  <a name="from_time_t"></a>  system_clock::from_time_t
+ Static method that returns a [time_point](../standard-library/time-point-class.md) that most closely approximates the time that is represented by `Tm`.  
   
 ```  
 static time_point from_time_t(time_t Tm) noexcept;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Tm`  
- 一个 [time_t](../c-runtime-library/standard-types.md) 对象。  
+ A [time_t](../c-runtime-library/standard-types.md) object.  
   
-##  <a name="is_monotonic_constant"></a>  system_clock::is_monotonic 常量  
- 指定时钟类型是否为单调的静态值。  
+##  <a name="is_monotonic_constant"></a>  system_clock::is_monotonic Constant  
+ Static value that specifies whether the clock type is monotonic.  
   
 ```  
 static const bool is_monotonic = false;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 在此实现中，`system_clock::is_monotonic` 始终返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ In this implementation, `system_clock::is_monotonic` always returns `false`.  
   
-### <a name="remarks"></a>备注  
- 如果首次调用 `now()` 返回的值始终小于或等于后续调用 `now()` 返回的值，则为单调时钟。  
+### <a name="remarks"></a>Remarks  
+ A clock is *monotonic* if the value that is returned by a first call to `now()` is always less than or equal to the value that is returned by a subsequent call to `now()`.  
   
-##  <a name="is_steady_constant"></a>  system_clock::is_steady 常量  
- 指定时钟类型是否为*稳定*的静态值。  
+##  <a name="is_steady_constant"></a>  system_clock::is_steady Constant  
+ Static value that specifies whether the clock type is *steady*.  
   
 ```  
 static const bool is_steady = false;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 在此实现中，`system_clock::is_steady` 始终返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ In this implementation, `system_clock::is_steady` always returns `false`.  
   
-### <a name="remarks"></a>备注  
- 如果它是单调[](#is_monotonic_constant)时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。  
+### <a name="remarks"></a>Remarks  
+ A clock is *steady* if it is [monotonic](#is_monotonic_constant) and if the time between clock ticks is constant.  
   
-##  <a name="now"></a>system_clock:: now
- 返回当前时间的静态方法。  
+##  <a name="now"></a>  system_clock::now
+ Static method that returns the current time.  
   
 ```  
 static time_point now() noexcept;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 表示当前对象的 [time_point](../standard-library/time-point-class.md) 对象。  
+### <a name="return-value"></a>Return Value  
+ A [time_point](../standard-library/time-point-class.md) object that represents the current time.  
   
-##  <a name="to_time_t"></a>system_clock:: to_time_t
- 返回 [time_t](../c-runtime-library/standard-types.md) 的静态方法，该返回值最接近 `Time` 表示的时间。  
+##  <a name="to_time_t"></a>  system_clock::to_time_t
+ Static method that returns a [time_t](../c-runtime-library/standard-types.md) that most closely approximates the time that is represented by `Time`.  
   
 ```  
 static time_t to_time_t(const time_point& Time) noexcept;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Time`  
- 一个 [time_point](../standard-library/time-point-class.md) 对象。  
+ A [time_point](../standard-library/time-point-class.md) object.  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
- [steady_clock 结构](../standard-library/steady-clock-struct.md)
+ [steady_clock struct](../standard-library/steady-clock-struct.md)
 

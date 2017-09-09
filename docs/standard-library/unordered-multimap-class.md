@@ -1,5 +1,5 @@
 ---
-title: "unordered_multimap 类 | Microsoft Docs"
+title: unordered_multimap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unordered_multimap
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
 - unordered_map/std::unordered_multimap::const_iterator
@@ -100,7 +99,93 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- unordered_multimap class
+- std::unordered_multimap
+- std::unordered_multimap::allocator_type
+- std::unordered_multimap::const_iterator
+- std::unordered_multimap::const_local_iterator
+- std::unordered_multimap::const_pointer
+- std::unordered_multimap::const_reference
+- std::unordered_multimap::difference_type
+- std::unordered_multimap::hasher
+- std::unordered_multimap::iterator
+- std::unordered_multimap::key_equal
+- std::unordered_multimap::key_type
+- std::unordered_multimap::local_iterator
+- std::unordered_multimap::mapped_type
+- std::unordered_multimap::pointer
+- std::unordered_multimap::reference
+- std::unordered_multimap::size_type
+- std::unordered_multimap::value_type
+- std::unordered_multimap::begin
+- std::unordered_multimap::bucket
+- std::unordered_multimap::bucket_count
+- std::unordered_multimap::bucket_size
+- std::unordered_multimap::cbegin
+- std::unordered_multimap::cend
+- std::unordered_multimap::clear
+- std::unordered_multimap::count
+- std::unordered_multimap::emplace
+- std::unordered_multimap::emplace_hint
+- std::unordered_multimap::empty
+- std::unordered_multimap::end
+- std::unordered_multimap::equal_range
+- std::unordered_multimap::erase
+- std::unordered_multimap::find
+- std::unordered_multimap::get_allocator
+- std::unordered_multimap::hash
+- std::unordered_multimap::insert
+- std::unordered_multimap::key_eq
+- std::unordered_multimap::load_factor
+- std::unordered_multimap::max_bucket_count
+- std::unordered_multimap::max_load_factor
+- std::unordered_multimap::max_size
+- std::unordered_multimap::rehash
+- std::unordered_multimap::size
+- std::unordered_multimap::swap
+- std::unordered_multimap::unordered_multimap
+- std::unordered_multimap::operator=
+- std::unordered_multimap::allocator_type
+- std::unordered_multimap::const_iterator
+- std::unordered_multimap::const_local_iterator
+- std::unordered_multimap::const_pointer
+- std::unordered_multimap::const_reference
+- std::unordered_multimap::difference_type
+- std::unordered_multimap::hasher
+- std::unordered_multimap::iterator
+- std::unordered_multimap::key_equal
+- std::unordered_multimap::key_type
+- std::unordered_multimap::local_iterator
+- std::unordered_multimap::mapped_type
+- std::unordered_multimap::pointer
+- std::unordered_multimap::reference
+- std::unordered_multimap::size_type
+- std::unordered_multimap::value_type
+- std::unordered_multimap::begin
+- std::unordered_multimap::bucket
+- std::unordered_multimap::bucket_count
+- std::unordered_multimap::bucket_size
+- std::unordered_multimap::cbegin
+- std::unordered_multimap::cend
+- std::unordered_multimap::clear
+- std::unordered_multimap::count
+- std::unordered_multimap::emplace
+- std::unordered_multimap::emplace_hint
+- std::unordered_multimap::empty
+- std::unordered_multimap::end
+- std::unordered_multimap::equal_range
+- std::unordered_multimap::erase
+- std::unordered_multimap::find
+- std::unordered_multimap::get_allocator
+- std::unordered_multimap::hash_function
+- std::unordered_multimap::insert
+- std::unordered_multimap::key_eq
+- std::unordered_multimap::load_factor
+- std::unordered_multimap::max_bucket_count
+- std::unordered_multimap::max_load_factor
+- std::unordered_multimap::max_size
+- std::unordered_multimap::rehash
+- std::unordered_multimap::size
+- std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 caps.latest.revision: 28
 author: corob-msft
@@ -120,17 +205,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f268454a196fe0eca5e7c3972db74342bbb96904
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d2bdd2adaff81776050d90fe864f9a6c1d412153
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unorderedmultimap-class"></a>unordered_multimap 类
-此模板类描述用于控制 `std::pair<const Key, Ty>` 类型的变长元素序列的对象。 序列由哈希函数弱排序，哈希函数将此序列分区到称为存储桶的有序序列集中。 在每个存储桶中，比较函数将确定任一元素对是否具有等效顺序。 每个元素存储两个对象，包括一个排序键和一个值。 序列以允许查找、插入和移除任意元素的方式表示，并包含与序列中的元素数量无关的多个操作（常量时间），至少在所有存储桶长度大致相等时如此。 在最坏情况下，当所有元素位于一个存储桶中时，操作数量与序列中的元素数量成比例（线性时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。  
+# <a name="unorderedmultimap-class"></a>unordered_multimap Class
+The template class describes an object that controls a varying-length sequence of elements of type `std::pair<const Key, Ty>`. The sequence is weakly ordered by a hash function, which partitions the sequence into an ordered set of subsequences called buckets. Within each bucket a comparison function determines whether any pair of elements has equivalent ordering. Each element stores two objects, a sort key and a value. The sequence is represented in a way that permits lookup, insertion, and removal of an arbitrary element with a number of operations that can be independent of the number of elements in the sequence (constant time), at least when all buckets are of roughly equal length. In the worst case, when all of the elements are in one bucket, the number of operations is proportional to the number of elements in the sequence (linear time). Moreover, inserting an element invalidates no iterators, and removing an element invalidates only those iterators which point at the removed element.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,  
@@ -141,100 +226,100 @@ template <class Key,
 class unordered_multimap;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`Key`|密钥类型。|  
-|`Ty`|映射类型。|  
-|`Hash`|哈希函数对象类型。|  
-|`Pred`|相等比较函数对象类型。|  
-|`Alloc`|allocator 类。|  
+|Parameter|Description|  
+|`Key`|The key type.|  
+|`Ty`|The mapped type.|  
+|`Hash`|The hash function object type.|  
+|`Pred`|The equality comparison function object type.|  
+|`Alloc`|The allocator class.|  
   
-## <a name="members"></a>成员  
-  
-|||  
-|-|-|  
-|类型定义|描述|  
-|[allocator_type](#allocator_type)|用于管理存储的分配器的类型。|  
-|[const_iterator](#const_iterator)|受控序列的常量迭代器的类型。|  
-|[const_local_iterator](#const_local_iterator)|受控序列的常量存储桶迭代器的类型。|  
-|[const_pointer](#const_pointer)|元素的常量指针的类型。|  
-|[const_reference](#const_reference)|元素的常量引用的类型。|  
-|[difference_type](#difference_type)|两个元素间的带符号距离的类型。|  
-|[hasher](#hasher)|哈希函数的类型。|  
-|[iterator](#iterator)|受控序列的迭代器的类型。|  
-|[key_equal](#key_equal)|比较函数的类型。|  
-|[key_type](#key_type)|排序键的类型。|  
-|[local_iterator](#local_iterator)|受控序列的存储桶迭代器的类型。|  
-|[mapped_type](#mapped_type)|与每个键关联的映射值的类型。|  
-|[pointer](#pointer)|指向元素的指针的类型。|  
-|[reference](#reference)|元素的引用的类型。|  
-|[size_type](#size_type)|两个元素间的无符号距离的类型。|  
-|[value_type](#value_type)|元素的类型。|  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|成员函数|描述|  
-|[begin](#begin)|指定受控序列的开头。|  
-|[存储桶](#bucket)|获取键值的存储桶编号。|  
-|[bucket_count](#bucket_count)|获取存储桶数。|  
-|[bucket_size](#bucket_size)|获取存储桶的大小。|  
-|[cbegin](#cbegin)|指定受控序列的开头。|  
-|[cend](#cend)|指定受控序列的末尾。|  
-|[clear](#clear)|删除所有元素。|  
-|[count](#count)|查找与指定键匹配的元素数。|  
-|[emplace](#emplace)|添加就地构造的元素。|  
-|[emplace_hint](#emplace_hint)|添加就地构造的元素，附带提示。|  
-|[empty](#empty)|测试元素是否存在。|  
-|[end](#end)|指定受控序列的末尾。|  
-|[equal_range](#equal_range)|查找与指定键匹配的范围。|  
-|[erase](#erase)|移除指定位置处的元素。|  
-|[find](#find)|查找与指定键匹配的元素。|  
-|[get_allocator](#get_allocator)|获取存储的分配器对象。|  
-|[hash_function](#hash)|获取存储的哈希函数对象。|  
-|[insert](#insert)|添加元素。|  
-|[key_eq](#key_eq)|获取存储的比较函数对象。|  
-|[load_factor](#load_factor)|对每个存储桶的平均元素数进行计数。|  
-|[max_bucket_count](#max_bucket_count)|获取最大的存储桶数。|  
-|[max_load_factor](#max_load_factor)|获取或设置每个存储桶的最多元素数。|  
-|[max_size](#max_size)|获取受控序列的最大大小。|  
-|[rehash](#rehash)|重新生成哈希表。|  
-|[size](#size)|对元素数进行计数。|  
-|[swap](#swap)|交换两个容器的内容。|  
-|[unordered_multimap](#unordered_multimap)|构造容器对象。|  
+|Type Definition|Description|  
+|[allocator_type](#allocator_type)|The type of an allocator for managing storage.|  
+|[const_iterator](#const_iterator)|The type of a constant iterator for the controlled sequence.|  
+|[const_local_iterator](#const_local_iterator)|The type of a constant bucket iterator for the controlled sequence.|  
+|[const_pointer](#const_pointer)|The type of a constant pointer to an element.|  
+|[const_reference](#const_reference)|The type of a constant reference to an element.|  
+|[difference_type](#difference_type)|The type of a signed distance between two elements.|  
+|[hasher](#hasher)|The type of the hash function.|  
+|[iterator](#iterator)|The type of an iterator for the controlled sequence.|  
+|[key_equal](#key_equal)|The type of the comparison function.|  
+|[key_type](#key_type)|The type of an ordering key.|  
+|[local_iterator](#local_iterator)|The type of a bucket iterator for the controlled sequence.|  
+|[mapped_type](#mapped_type)|The type of a mapped value associated with each key.|  
+|[pointer](#pointer)|The type of a pointer to an element.|  
+|[reference](#reference)|The type of a reference to an element.|  
+|[size_type](#size_type)|The type of an unsigned distance between two elements.|  
+|[value_type](#value_type)|The type of an element.|  
   
 |||  
 |-|-|  
-|运算符|描述|  
-|[unordered_multimap::operator=](#op_eq)|复制哈希表。|  
+|Member Function|Description|  
+|[begin](#begin)|Designates the beginning of the controlled sequence.|  
+|[bucket](#bucket)|Gets the bucket number for a key value.|  
+|[bucket_count](#bucket_count)|Gets the number of buckets.|  
+|[bucket_size](#bucket_size)|Gets the size of a bucket.|  
+|[cbegin](#cbegin)|Designates the beginning of the controlled sequence.|  
+|[cend](#cend)|Designates the end of the controlled sequence.|  
+|[clear](#clear)|Removes all elements.|  
+|[count](#count)|Finds the number of elements matching a specified key.|  
+|[emplace](#emplace)|Adds an element constructed in place.|  
+|[emplace_hint](#emplace_hint)|Adds an element constructed in place, with hint.|  
+|[empty](#empty)|Tests whether no elements are present.|  
+|[end](#end)|Designates the end of the controlled sequence.|  
+|[equal_range](#equal_range)|Finds range that matches a specified key.|  
+|[erase](#erase)|Removes elements at specified positions.|  
+|[find](#find)|Finds an element that matches a specified key.|  
+|[get_allocator](#get_allocator)|Gets the stored allocator object.|  
+|[hash_function](#hash)|Gets the stored hash function object.|  
+|[insert](#insert)|Adds elements.|  
+|[key_eq](#key_eq)|Gets the stored comparison function object.|  
+|[load_factor](#load_factor)|Counts the average elements per bucket.|  
+|[max_bucket_count](#max_bucket_count)|Gets the maximum number of buckets.|  
+|[max_load_factor](#max_load_factor)|Gets or sets the maximum elements per bucket.|  
+|[max_size](#max_size)|Gets the maximum size of the controlled sequence.|  
+|[rehash](#rehash)|Rebuilds the hash table.|  
+|[size](#size)|Counts the number of elements.|  
+|[swap](#swap)|Swaps the contents of two containers.|  
+|[unordered_multimap](#unordered_multimap)|Constructs a container object.|  
   
-## <a name="remarks"></a>备注  
- 对象通过调用两个存储对象，即一个 [unordered_multimap::key_equal](#key_equal) 类型的比较函数对象和一个 [unordered_multimap::hasher](#hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数 [unordered_multimap::key_eq](#key_eq)`()` 访问第一个存储对象；通过调用成员函数 [unordered_multimap::hash_function](#hash)`()` 访问第二个存储对象。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与模板类 [unordered_map 类](../standard-library/unordered-map-class.md)不同，模板类 `unordered_multimap` 的对象不确保 `key_eq()(X, Y)` 对于受控序列的任意两个元素始终为 false。 （键不需要唯一。）  
+|||  
+|-|-|  
+|Operator|Description|  
+|[unordered_multimap::operator=](#op_eq)|Copies a hash table.|  
   
- 此对象还存储最大加载因子，用于指定每个存储桶的元素的最大所需平均数量。 如果插入元素导致 [unordered_multimap::load_factor](#load_factor)`()` 超出最大加载因子，容器将增加存储桶的数量并根据需要重新生成哈希表。  
+## <a name="remarks"></a>Remarks  
+ The object orders the sequence it controls by calling two stored objects, a comparison function object of type [unordered_multimap::key_equal](#key_equal) and a hash function object of type [unordered_multimap::hasher](#hasher). You access the first stored object by calling the member function [unordered_multimap::key_eq](#key_eq)`()`; and you access the second stored object by calling the member function [unordered_multimap::hash_function](#hash)`()`. Specifically, for all values `X` and `Y` of type `Key`, the call `key_eq()(X, Y)` returns true only if the two argument values have equivalent ordering; the call `hash_function()(keyval)` yields a distribution of values of type `size_t`. Unlike template class [unordered_map Class](../standard-library/unordered-map-class.md), an object of template class `unordered_multimap` does not ensure that `key_eq()(X, Y)` is always false for any two elements of the controlled sequence. (Keys need not be unique.)  
   
- 受控序列中元素的实际顺序取决于哈希函数、比较函数、插入顺序、最大加载因子和存储桶的当前数量。 通常无法预测受控序列中的元素顺序。 但是，可以始终确保具有等效顺序的任何元素子集在受控序列中相邻。  
+ The object also stores a maximum load factor, which specifies the maximum desired average number of elements per bucket. If inserting an element causes [unordered_multimap::load_factor](#load_factor)`()` to exceed the maximum load factor, the container increases the number of buckets and rebuilds the hash table as needed.  
   
- 对象通过 [unordered_multimap::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此分配器对象必须与 `allocator` 模板类的对象的外部接口相同。 请注意，分配容器对象时不会复制存储的分配器对象。  
+ The actual order of elements in the controlled sequence depends on the hash function, the comparison function, the order of insertion, the maximum load factor, and the current number of buckets. You cannot in general predict the order of elements in the controlled sequence. You can always be assured, however, that any subset of elements that have equivalent ordering are adjacent in the controlled sequence.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<unordered_map>  
+ The object allocates and frees storage for the sequence it controls through a stored allocator object of type [unordered_multimap::allocator_type](#allocator_type). Such an allocator object must have the same external interface as an object of template class `allocator`. Note that the stored allocator object is not copied when the container object is assigned.  
   
- **命名空间：** std  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<unordered_map>  
+  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  unordered_multimap::allocator_type  
- 用于管理存储的分配器的类型。  
+ The type of an allocator for managing storage.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 `Alloc`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Alloc`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_allocator_type.cpp   
@@ -262,7 +347,7 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="begin"></a>  unordered_multimap::begin  
- 指定受控序列或存储桶的开头。  
+ Designates the beginning of the controlled sequence or a bucket.  
   
 ```  
 iterator begin();
@@ -275,17 +360,17 @@ local_iterator begin(size_type nbucket);
 const_local_iterator begin(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`nbucket`|存储桶编号。|  
+|Parameter|Description|  
+|`nbucket`|The bucket number.|  
   
-### <a name="remarks"></a>备注  
- 前两个编号函数返回向前迭代器，指向序列的第一个元素（或紧邻空序列后的位置）。 最后两个成员函数返回一个向前迭代器，指向存储桶 `nbucket` 的第一个元素（或刚超出空存储桶末尾的位置）。  
+### <a name="remarks"></a>Remarks  
+ The first two member functions return a forward iterator that points at the first element of the sequence (or just beyond the end of an empty sequence). The last two member functions return a forward iterator that points at the first element of bucket `nbucket` (or just beyond the end of an empty bucket).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_begin.cpp   
@@ -331,20 +416,20 @@ int main()
 ```  
   
 ##  <a name="bucket"></a>  unordered_multimap::bucket  
- 获取键值的存储桶编号。  
+ Gets the bucket number for a key value.  
   
 ```  
 size_type bucket(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- 要映射的键值。  
+ The key value to map.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回当前与键值 `keyval`对应的存储桶编号。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the bucket number currently corresponding to the key value `keyval`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_bucket.cpp   
@@ -385,16 +470,16 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="bucket_count"></a>  unordered_multimap::bucket_count  
- 获取存储桶数。  
+ Gets the number of buckets.  
   
 ```  
 size_type bucket_count() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 该成员函数将返回存储桶的当前数量。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the current number of buckets.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_bucket_count.cpp   
@@ -471,20 +556,20 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="bucket_size"></a>  unordered_multimap::bucket_size  
- 获取存储桶的大小  
+ Gets the size of a bucket  
   
 ```  
 size_type bucket_size(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nbucket`  
- 存储桶编号。  
+ The bucket number.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回编号为 `nbucket`的存储桶的大小。  
+### <a name="remarks"></a>Remarks  
+ The member functions returns the size of bucket number `nbucket`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_bucket_size.cpp   
@@ -525,19 +610,19 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="cbegin"></a>  unordered_multimap::cbegin  
- 返回确定范围中第一个元素地址的 `const` 迭代器。  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- `const` 前向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，`cbegin() == cend()`）。  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>备注  
- 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在该示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非 `const`）的容器。  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -548,19 +633,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  unordered_multimap::cend  
- 返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向刚超出范围末尾的位置的 `const` 向前访问迭代器。  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>备注  
- `cend` 用于测试迭代器是否超过了其范围的末尾。  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -570,19 +655,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- 不应对 `cend` 返回的值取消引用。  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  unordered_multimap::clear  
- 删除所有元素。  
+ Removes all elements.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>备注  
- 此成员函数调用 [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`。  
+### <a name="remarks"></a>Remarks  
+ The member function calls [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_clear.cpp   
@@ -639,16 +724,16 @@ empty() == false
 ```  
   
 ##  <a name="const_iterator"></a>  unordered_multimap::const_iterator  
- 受控序列的常量迭代器的类型。  
+ The type of a constant iterator for the controlled sequence.  
   
 ```  
 typedef T1 const_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此类型描述为可用作受控序列的常量向前迭代器的对象。 在此处描述为实现定义的 `T1`类型的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant forward iterator for the controlled sequence. It is described here as a synonym for the implementation-defined type `T1`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_const_iterator.cpp   
@@ -681,16 +766,16 @@ int main()
 ```  
   
 ##  <a name="const_local_iterator"></a>  unordered_multimap::const_local_iterator  
- 受控序列的常量存储桶迭代器的类型。  
+ The type of a constant bucket iterator for the controlled sequence.  
   
 ```  
 typedef T5 const_local_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型描述了可用作存储桶的常量向前迭代器的对象。 在此处描述为实现定义的 `T5`类型的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T5`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_const_local_iterator.cpp   
@@ -728,16 +813,16 @@ int main()
 ```  
   
 ##  <a name="const_pointer"></a>  unordered_multimap::const_pointer  
- 元素的常量指针的类型。  
+ The type of a constant pointer to an element.  
   
 ```  
 typedef Alloc::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型描述了可用作指向受控序列中元素的常量指针的对象。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant pointer to an element of the controlled sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_const_pointer.cpp   
@@ -773,16 +858,16 @@ int main()
 ```  
   
 ##  <a name="const_reference"></a>  unordered_multimap::const_reference  
- 元素的常量引用的类型。  
+ The type of a constant reference to an element.  
   
 ```  
 typedef Alloc::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型将可作为常量引用的对象描述为受控序列中的元素。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant reference to an element of the controlled sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_const_reference.cpp   
@@ -818,20 +903,20 @@ int main()
 ```  
   
 ##  <a name="count"></a>  unordered_multimap::count  
- 查找与指定键匹配的元素数。  
+ Finds the number of elements matching a specified key.  
   
 ```  
 size_type count(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- 要搜索的键值。  
+ Key value to search for.  
   
-### <a name="remarks"></a>备注  
- 该成员函数返回由 [unordered_multimap::equal_range](#equal_range)`(keyval)` 分隔的范围内的元素数量。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements in the range delimited by [unordered_multimap::equal_range](#equal_range)`(keyval)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_count.cpp   
@@ -871,16 +956,16 @@ count('C') == 0
 ```  
   
 ##  <a name="difference_type"></a>  unordered_multimap::difference_type  
- 两个元素间的带符号距离的类型。  
+ The type of a signed distance between two elements.  
   
 ```  
 typedef T3 difference_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 带符号的整数类型描述一个可表示受控序列中任意两个元素的地址之间的差异的对象。 在此处描述为实现定义的 `T3`类型的同义词。  
+### <a name="remarks"></a>Remarks  
+ The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence. It is described here as a synonym for the implementation-defined type `T3`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_difference_type.cpp   
@@ -929,34 +1014,34 @@ begin()-end() == -3
 ```  
   
 ##  <a name="emplace"></a>  unordered_multimap::emplace  
- 使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
 iterator emplace(Args&&... args);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`args`|用于构造要插入到 unordered_multimap 中的元素的转发参数。|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the unordered_multimap.|  
   
-### <a name="return-value"></a>返回值  
- 指向新插入的元素的迭代器。  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
-### <a name="remarks"></a>备注  
- 对容器元素的引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。  
+### <a name="remarks"></a>Remarks  
+ No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
   
- 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ The [value_type](../standard-library/map-class.md#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- 在插入期间，如果引发了异常但未发生在容器的哈希函数中，则不会修改此容器。 如果在哈希函数中引发异常，则未定义此结果。  
+ During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
   
- 有关代码示例，请参阅 [multimap::emplace](../standard-library/multimap-class.md#emplace)。  
+ For a code example, see [multimap::emplace](../standard-library/multimap-class.md#emplace).  
   
 ##  <a name="emplace_hint"></a>  unordered_multimap::emplace_hint  
- 使用位置提示就地插入构造的元素（不执行复制或移动操作）。  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
@@ -965,37 +1050,37 @@ iterator emplace_hint(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`args`|用于构造要插入到 unordered 中的元素的转发参数。|  
-|`where`|有关开始搜索正确插入点的位置的提示。|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the unordered.|  
+|`where`|A hint regarding the place to start searching for the correct point of insertion.|  
   
-### <a name="return-value"></a>返回值  
- 指向新插入的元素的迭代器。  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
-### <a name="remarks"></a>备注  
- 对容器元素的引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。  
+### <a name="remarks"></a>Remarks  
+ No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
   
- 在插入期间，如果引发了异常但未发生在容器的哈希函数中，则不会修改此容器。 如果在哈希函数中引发异常，则未定义此结果。  
+ During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
   
- 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ The [value_type](../standard-library/map-class.md#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- 有关代码示例，请参阅 [map::emplace_hint](../standard-library/map-class.md#emplace_hint)。  
+ For a code example, see [map::emplace_hint](../standard-library/map-class.md#emplace_hint).  
   
 ##  <a name="empty"></a>  unordered_multimap::empty  
- 测试元素是否存在。  
+ Tests whether no elements are present.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 对于空受控序列，该成员函数返回 true。  
+### <a name="remarks"></a>Remarks  
+ The member function returns true for an empty controlled sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_empty.cpp   
@@ -1052,7 +1137,7 @@ empty() == false
 ```  
   
 ##  <a name="end"></a>  unordered_multimap::end  
- 指定受控序列的末尾。  
+ Designates the end of the controlled sequence.  
   
 ```  
 iterator end();
@@ -1065,17 +1150,17 @@ local_iterator end(size_type nbucket);
 const_local_iterator end(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`nbucket`|存储桶编号。|  
+|Parameter|Description|  
+|`nbucket`|The bucket number.|  
   
-### <a name="remarks"></a>备注  
- 前两个成员函数返回一个向前迭代器，它指向刚超出序列末尾的位置。 最后两个成员函数返回一个向前迭代器，它指向刚超出存储桶 `nbucket` 末尾的位置。  
+### <a name="remarks"></a>Remarks  
+ The first two member functions return a forward iterator that points just beyond the end of the sequence. The last two member functions return a forward iterator that points just beyond the end of bucket `nbucket`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_end.cpp   
@@ -1123,7 +1208,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  unordered_multimap::equal_range  
- 查找与指定键匹配的范围。  
+ Finds range that matches a specified key.  
   
 ```  
 std::pair<iterator, iterator>  
@@ -1133,14 +1218,14 @@ std::pair<const_iterator, const_iterator>
     equal_range(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- 要搜索的键值。  
+ Key value to search for.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回一对迭代器 `X` ，以便 `[X.first, X.second)` 仅分隔受控序列中与 `keyval`具有等效排序的那些元素。 如果不存在此类元素，则两个迭代器均为 `end()`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns a pair of iterators `X` such that `[X.first, X.second)` delimits just those elements of the controlled sequence that have equivalent ordering with `keyval`. If no such elements exist, both iterators are `end()`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_equal_range.cpp   
@@ -1192,7 +1277,7 @@ equal_range('b'): [b, 2]
 ```  
   
 ##  <a name="erase"></a>  unordered_multimap::erase  
- 从 unordered_multimap 中的指定位置删除一个元素或元素范围，或者删除与指定键匹配的元素。  
+ Removes an element or a range of elements in a unordered_multimap from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(
@@ -1206,42 +1291,42 @@ size_type erase(
     const key_type& Key);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Where`  
- 要移除的元素的位置。  
+ Position of the element to be removed.  
   
  `First`  
- 要移除的第一个元素的位置。  
+ Position of the first element to be removed.  
   
  `Last`  
- 要移除的刚超出最后一个元素的位置。  
+ Position just beyond the last element to be removed.  
   
  `Key`  
- 要移除的元素的关键值。  
+ The key value of the elements to be removed.  
   
-### <a name="return-value"></a>返回值  
- 对于前两个成员函数，则为双向迭代器，它指定已删除的任何元素之外留存的第一个元素，如果此类元素不存在，则为映射末尾的元素。  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or an element that is the end of the map if no such element exists.  
   
- 对于第三个成员函数，返回已从 unordered_multimap 中删除的元素数目。  
+ For the third member function, returns the number of elements that have been removed from the unordered_multimap.  
   
-### <a name="remarks"></a>备注  
- 有关代码示例，请参阅 [map::erase](../standard-library/map-class.md#erase)。  
+### <a name="remarks"></a>Remarks  
+ For a code example, see [map::erase](../standard-library/map-class.md#erase).  
   
 ##  <a name="find"></a>  unordered_multimap::find  
- 查找与指定键匹配的元素。  
+ Finds an element that matches a specified key.  
   
 ```  
 const_iterator find(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- 要搜索的键值。  
+ Key value to search for.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [unordered_multimap::equal_range](#equal_range)`(keyval).first`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [unordered_multimap::equal_range](#equal_range)`(keyval).first`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_find.cpp   
@@ -1286,16 +1371,16 @@ find('b') == true: [b, 2]
 ```  
   
 ##  <a name="get_allocator"></a>  unordered_multimap::get_allocator  
- 获取存储的分配器对象。  
+ Gets the stored allocator object.  
   
 ```  
 Alloc get_allocator() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 该成员函数将返回存储的分配器对象。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored allocator object.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_get_allocator.cpp   
@@ -1323,16 +1408,16 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="hash"></a>  unordered_multimap::hash_function  
- 获取存储的哈希函数对象。  
+ Gets the stored hash function object.  
   
 ```  
 Hash hash_function() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回存储的哈希函数对象。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored hash function object.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_hash_function.cpp   
@@ -1360,16 +1445,16 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="hasher"></a>  unordered_multimap::hasher  
- 哈希函数的类型。  
+ The type of the hash function.  
   
 ```  
 typedef Hash hasher;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 `Hash`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Hash`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_hasher.cpp   
@@ -1397,7 +1482,7 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="insert"></a>  unordered_multimap::insert  
- 将一个元素或元素范围插入到 unordered_multimap 中。  
+ Inserts an element or a range of elements into an unordered_multimap.  
   
 ```  
 // (1) single element  
@@ -1438,50 +1523,50 @@ void insert(
 IList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`Val`|要插入到 unordered_multimap 中的元素的值。|  
-|`Where`|开始搜索正确插入点的位置。|  
-|`ValTy`|一种模板参数，它指定 unordered_multimap 可用于构造 [value_type](../standard-library/map-class.md#value_type) 元素的参数类型，并将 `Val` 作为参数完美转发。|  
-|`First`|要复制的第一个元素的位置。|  
-|`Last`|要复制的最后一个元素以外的位置。|  
-|`InputIterator`|满足[输入迭代器](../standard-library/input-iterator-tag-struct.md)需求的模板函数自变量，该输入迭代器指向可用于构造 [value_type](../standard-library/map-class.md#value_type) 对象的类型的元素。|  
-|`IList`|从中复制元素的 [initializer_list](../standard-library/initializer-list.md)。|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the unordered_multimap.|  
+|`Where`|The place to start searching for the correct point of insertion.|  
+|`ValTy`|Template parameter that specifies the argument type that the unordered_multimap can use to construct an element of [value_type](../standard-library/map-class.md#value_type), and perfect-forwards `Val` as an argument.|  
+|`First`|The position of the first element to be copied.|  
+|`Last`|The position just beyond the last element to be copied.|  
+|`InputIterator`|Template function argument that meets the requirements of an [input iterator](../standard-library/input-iterator-tag-struct.md) that points to elements of a type that can be used to construct [value_type](../standard-library/map-class.md#value_type) objects.|  
+|`IList`|The [initializer_list](../standard-library/initializer-list.md) from which to copy the elements.|  
   
-### <a name="return-value"></a>返回值  
- 单个元素插入成员函数 (1) 和 (2) 返回迭代器，该迭代器指向将新元素插入到 unordered_multimap 中的位置。  
+### <a name="return-value"></a>Return Value  
+ The single-element-insert member functions, (1) and (2), return an iterator to the position where the new element was inserted into the unordered_multimap.  
   
- 附带提示的单个元素成员函数 (3) 和 (4) 返回迭代器，该迭代器指向将新元素插入到 unordered_multimap 中的位置。  
+ The single-element-with-hint member functions, (3) and (4), return an iterator that points to the position where the new element was inserted into the unordered_multimap.  
   
-### <a name="remarks"></a>备注  
- 指针或引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。  
+### <a name="remarks"></a>Remarks  
+ No pointers or references are invalidated by this function, but it may invalidate all iterators to the container.  
   
- 在只插入单个元素的过程中，如果引发异常，但是异常并未在容器的哈希函数中发生，则不会修改该容器的状态。 如果在哈希函数中引发异常，则未定义此结果。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。  
+ During the insertion of just one element, if an exception is thrown but does not occur in the container's hash function, the container's state is not modified. If the exception is thrown in the hash function, the result is undefined. During the insertion of multiple elements, if an exception is thrown, the container is left in an unspecified but valid state.  
   
- 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于映射，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。  
+ The [value_type](../standard-library/map-class.md#value_type) of a container is a typedef that belongs to the container, and for map, `map<K, V>::value_type` is `pair<const K, V>`. The value of an element is an ordered pair in which the first component is equal to the key value and the second component is equal to the data value of the element.  
   
- 范围成员函数 (5) 将元素值序列插入到 unordered_multimap 中，它对应于迭代器在范围 `[First, Last)` 中所处理的每一个元素；因此，不会插入 `Last`。 容器成员函数 `end()` 是指容器中最后一个元素之后的位置，例如，`m.insert(v.begin(), v.end());` 语句会将 `v` 的所有元素插入到 `m` 中。  
+ The range member function (5) inserts the sequence of element values into an unordered_multimap that corresponds to each element addressed by an iterator in the range `[First, Last)`; therefore, `Last` does not get inserted. The container member function `end()` refers to the position just after the last element in the container—for example, the statement `m.insert(v.begin(), v.end());` inserts all elements of `v` into `m`.  
   
- 初始化表达式列表成员函数 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 将元素复制到 unordered_multimap 中。  
+ The initializer list member function (6) uses an [initializer_list](../standard-library/initializer-list.md) to copy elements into the unordered_multimap.  
   
- 有关就地构造的元素的插入（即不会执行复制或移动操作），请参阅 [unordered_multimap::emplace](#emplace) 和 [unordered_multimap::emplace_hint](#emplace_hint)。  
+ For insertion of an element constructed in place—that is, no copy or move operations are performed—see [unordered_multimap::emplace](#emplace) and [unordered_multimap::emplace_hint](#emplace_hint).  
   
- 有关代码示例，请参阅 [multimap::insert](../standard-library/multiset-class.md#insert)。  
+ For a code example, see [multimap::insert](../standard-library/multiset-class.md#insert).  
   
 ##  <a name="iterator"></a>  unordered_multimap::iterator  
- 受控序列的迭代器的类型。  
+ The type of an iterator for the controlled sequence.  
   
 ```  
 typedef T0 iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型描述为可用作受控序列的前向迭代器的对象。 在此处描述为实现定义的 `T0`类型的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a forward iterator for the controlled sequence. It is described here as a synonym for the implementation-defined type `T0`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_iterator.cpp   
@@ -1514,16 +1599,16 @@ int main()
 ```  
   
 ##  <a name="key_eq"></a>  unordered_multimap::key_eq  
- 获取存储的比较函数对象。  
+ Gets the stored comparison function object.  
   
 ```  
 Pred key_eq() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回存储的比较函数对象。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored comparison function object.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_key_eq.cpp   
@@ -1553,16 +1638,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_equal"></a>  unordered_multimap::key_equal  
- 比较函数的类型。  
+ The type of the comparison function.  
   
 ```  
 typedef Pred key_equal;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 `Pred`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Pred`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_key_equal.cpp   
@@ -1592,16 +1677,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_type"></a>  unordered_multimap::key_type  
- 排序键的类型。  
+ The type of an ordering key.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 `Key`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Key`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_key_type.cpp   
@@ -1646,16 +1731,16 @@ int main()
 ```  
   
 ##  <a name="load_factor"></a>  unordered_multimap::load_factor  
- 对每个存储桶的平均元素数进行计数。  
+ Counts the average elements per bucket.  
   
 ```  
 float load_factor() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数返回每个存储桶的平均元素数 `(float)`[unordered_multimap::size](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `(float)`[unordered_multimap::size](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()`, the average number of elements per bucket.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_load_factor.cpp   
@@ -1713,16 +1798,16 @@ int main()
 ```  
   
 ##  <a name="local_iterator"></a>  unordered_multimap::local_iterator  
- 存储桶迭代器类型。  
+ The type of a bucket iterator.  
   
 ```  
 typedef T4 local_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此类型描述可用作存储桶的向前迭代器的对象。 在此处描述为实现定义的 `T4`类型的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T4`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_local_iterator.cpp   
@@ -1760,16 +1845,16 @@ int main()
 ```  
   
 ##  <a name="mapped_type"></a>  unordered_multimap::mapped_type  
- 与每个键关联的映射值的类型。  
+ The type of a mapped value associated with each key.  
   
 ```  
 typedef Ty mapped_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 `Ty`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Ty`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_mapped_type.cpp   
@@ -1814,16 +1899,16 @@ int main()
 ```  
   
 ##  <a name="max_bucket_count"></a>  unordered_multimap::max_bucket_count  
- 获取最大的存储桶数。  
+ Gets the maximum number of buckets.  
   
 ```  
 size_type max_bucket_count() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 该成员函数将返回当前允许的最大存储桶数。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the maximum number of buckets currently permitted.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_max_bucket_count.cpp   
@@ -1900,7 +1985,7 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_load_factor"></a>  unordered_multimap::max_load_factor  
- 获取或设置每个存储桶的最多元素数。  
+ Gets or sets the maximum elements per bucket.  
   
 ```  
 float max_load_factor() const;
@@ -1909,14 +1994,14 @@ float max_load_factor() const;
 void max_load_factor(float factor);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `factor`  
- 新的最大加载因子。  
+ The new maximum load factor.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数将返回存储的最大加载因子。 第二个成员函数将用 `factor`替换已存储的最大加载因子。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored maximum load factor. The second member function replaces the stored maximum load factor with `factor`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_max_load_factor.cpp   
@@ -1993,16 +2078,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_size"></a>  unordered_multimap::max_size  
- 获取受控序列的最大大小。  
+ Gets the maximum size of the controlled sequence.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 该成员函数将返回对象可控制的最长序列的长度。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the longest sequence that the object can control.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_max_size.cpp   
@@ -2026,8 +2111,8 @@ int main()
 max_size() == 536870911  
 ```  
   
-##  <a name="op_eq"></a>unordered_multimap::operator=  
- 复制哈希表。  
+##  <a name="op_eq"></a>  unordered_multimap::operator=  
+ Copies a hash table.  
   
 ```  
 unordered_multimap& operator=(const unordered_multimap& right);
@@ -2035,17 +2120,17 @@ unordered_multimap& operator=(const unordered_multimap& right);
 unordered_multimap& operator=(unordered_multimap&& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`right`|正在被复制到 unordered_multimap 中的 unordered_multimap。|  
+|Parameter|Description|  
+|`right`|The unordered_multimap being copied into the unordered_multimap.|  
   
-### <a name="remarks"></a>备注  
- 在清除 unordered_multimap 中的任何现有元素后，`operator=` 会将 `right` 的内容复制或移动到 unordered_multimap 中。  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a unordered_multimap, `operator=` either copies or moves the contents of `right` into the unordered_multimap.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_multimap_operator_as.cpp  
@@ -2083,16 +2168,16 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  unordered_multimap::pointer  
- 指向元素的指针的类型。  
+ The type of a pointer to an element.  
   
 ```  
 typedef Alloc::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型描述了可用作指向受控序列中元素的指针的对象。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a pointer to an element of the controlled sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_pointer.cpp   
@@ -2128,16 +2213,16 @@ int main()
 ```  
   
 ##  <a name="reference"></a>  unordered_multimap::reference  
- 元素的引用的类型。  
+ The type of a reference to an element.  
   
 ```  
 typedef Alloc::reference reference;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型描述了可用作对受控序列中元素的引用的对象。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a reference to an element of the controlled sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_reference.cpp   
@@ -2173,20 +2258,20 @@ int main()
 ```  
   
 ##  <a name="rehash"></a>  unordered_multimap::rehash  
- 重新生成哈希表。  
+ Rebuilds the hash table.  
   
 ```  
 void rehash(size_type nbuckets);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nbuckets`  
- 请求的存储桶数。  
+ The requested number of buckets.  
   
-### <a name="remarks"></a>备注  
- 成员函数将存储桶数更改为至少 `nbuckets` 并根据需要重新生成哈希表。  
+### <a name="remarks"></a>Remarks  
+ The member function alters the number of buckets to be at least `nbuckets` and rebuilds the hash table as needed.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_rehash.cpp   
@@ -2249,16 +2334,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="size"></a>  unordered_multimap::size  
- 对元素数进行计数。  
+ Counts the number of elements.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回受控序列的长度。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the controlled sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_size.cpp   
@@ -2315,16 +2400,16 @@ empty() == false
 ```  
   
 ##  <a name="size_type"></a>  unordered_multimap::size_type  
- 两个元素间的无符号距离的类型。  
+ The type of an unsigned distance between two elements.  
   
 ```  
 typedef T2 size_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 无符号的整数类型描述可表示任何受控序列长度的对象。 在此处描述为实现定义的 `T2`类型的同义词。  
+### <a name="remarks"></a>Remarks  
+ The unsigned integer type describes an object that can represent the length of any controlled sequence. It is described here as a synonym for the implementation-defined type `T2`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_size_type.cpp   
@@ -2350,20 +2435,20 @@ size == 0
 ```  
   
 ##  <a name="swap"></a>  unordered_multimap::swap  
- 交换两个容器的内容。  
+ Swaps the contents of two containers.  
   
 ```  
 void swap(unordered_multimap& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要交换的容器。  
+ The container to swap with.  
   
-### <a name="remarks"></a>备注  
- 成员函数交换 `*this` 和 `right`之间的受控序列。 如果为 [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`，则它在固定时间内执行此操作，它仅在对类型 `Tr` 的存储特征对象进行复制时引发异常，并且不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the controlled sequences between `*this` and `right`. If [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`, it does so in constant time, it throws an exception only as a result of copying the stored traits object of type `Tr`, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences. Otherwise, it performs a number of element assignments and constructor calls proportional to the number of elements in the two controlled sequences.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_swap.cpp   
@@ -2420,7 +2505,7 @@ int main()
 ```  
   
 ##  <a name="unordered_multimap"></a>  unordered_multimap::unordered_multimap  
- 构造容器对象。  
+ Constructs a container object.  
   
 ```  
 unordered_multimap(
@@ -2469,33 +2554,33 @@ unordered_multimap(
     const Allocator& Al = Alloc());
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`InputIterator`|迭代器类型。|  
-|`Al`|要存储的分配器对象。|  
-|`Comp`|要存储的比较函数对象。|  
-|`Hash`|要存储的哈希函数对象。|  
-|`Bucket_count`|存储桶的最少数量。|  
-|`Right`|要复制的容器。|  
-|`IList`|从中复制元素的 initializer_list。|  
+|Parameter|Description|  
+|`InputIterator`|The iterator type.|  
+|`Al`|The allocator object to store.|  
+|`Comp`|The comparison function object to store.|  
+|`Hash`|The hash function object to store.|  
+|`Bucket_count`|The minimum number of buckets.|  
+|`Right`|The container to copy.|  
+|`IList`|The initializer_list from which to copy the elements.|  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数指定通过 `Right` 控制的序列副本。 第二个构造函数指定空的受控序列。 第三个构造函数。 通过移动 `Right` 指定序列副本。 第四、第五、第六、第七和第八个构造函数对成员使用 initializer_list。 第九个构造函数插入元素值 `[First, Last)` 的序列。  
+### <a name="remarks"></a>Remarks  
+ The first constructor specifies a copy of the sequence controlled by `Right`. The second constructor specifies an empty controlled sequence. The third constructor. specifies a copy of the sequence by moving `Right`. The fourth, fifth, sixth, seventh, and eighth constructors use an initializer_list for the members. The ninth constructor inserts the sequence of element values `[First, Last)`.  
   
- 所有构造函数还初始化若干存储的值。 对于复制构造函数，值从 `Right` 获取。 否则：  
+ All constructors also initialize several stored values. For the copy constructor, the values are obtained from `Right`. Otherwise:  
   
- 存储桶的最少数量是参数 `Bucket_count`（如果有）；否则为此处说明的默认值 `N0`。  
+ The minimum number of buckets is the argument `Bucket_count`, if present; otherwise it is a default value described here as the implementation-defined value `N0`.  
   
- 哈希函数对象是参数 `Hash`（如果有）；否则为 `Hash()`。  
+ The hash function object is the argument `Hash`, if present; otherwise it is `Hash()`.  
   
- 比较函数对象是参数 `Comp`（如果有）；否则为 `Pred()`。  
+ The comparison function object is the argument `Comp`, if present; otherwise it is `Pred()`.  
   
- 分配器对象是参数 `Al`（如果有）；否则为 `Alloc()`。  
+ The allocator object is the argument `Al`, if present; otherwise, it is `Alloc()`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_construct.cpp   
@@ -2620,16 +2705,16 @@ int main()
 ```  
   
 ##  <a name="value_type"></a>  unordered_multimap::value_type  
- 元素的类型。  
+ The type of an element.  
   
 ```  
 typedef std::pair<const Key, Ty> value_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型描述了受控序列的元素。  
+### <a name="remarks"></a>Remarks  
+ The type describes an element of the controlled sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_value_type.cpp   
@@ -2673,10 +2758,10 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<unordered_map>](../standard-library/unordered-map.md)   
- [容器](../cpp/containers-modern-cpp.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+ [Containers](../cpp/containers-modern-cpp.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

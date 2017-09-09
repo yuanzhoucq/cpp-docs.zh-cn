@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<system_error>
-- std::<system_error>
-- <system_error>
-- system_error
+- std::<system_error>", "<system_error>", "system_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,74 +33,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8f3441306b21ca1111cf2fd2d377a1b233e7ad86
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c2c7c690a05fc47dc2e3a40457a5361a1c0b3278
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
-包括定义异常类 `system_error` 的标头 `<system_error>` 以及处理低级别系统错误的相关模板。  
+Include the header `<system_error>` to define the exception class `system_error` and related templates for processing low-level system errors.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <system_error>  
 ```  
   
-### <a name="objects"></a>对象  
+### <a name="objects"></a>Objects  
   
 |||  
 |-|-|  
-|[generic_category](../standard-library/system-error-functions.md#generic_category)|表示一般错误的类别。|  
-|[system_category](../standard-library/system-error-functions.md#system_category)|表示因低级别系统溢出而引起的错误类别。|  
+|[generic_category](../standard-library/system-error-functions.md#generic_category)|Represents the category for generic errors.|  
+|[system_category](../standard-library/system-error-functions.md#system_category)|Represents the category for errors caused by low-level system overflows.|  
   
-### <a name="typedefs"></a>Typedef  
-  
-|||  
-|-|-|  
-|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|一种表示枚举的类型，用于为所有由 `<errno.h>` 中的 Posix 定义的错误代码宏提供符号名称。|  
-  
-### <a name="functions"></a>函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|创建一个 `error_code` 对象。|  
-|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|创建一个 `error_condition` 对象。|  
+|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|A type that represents the enumeration that provides the symbolic names for all the error-code macros defined by Posix in `<errno.h>`.|  
   
-### <a name="operators"></a>运算符  
-  
-|||  
-|-|-|  
-|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|测试运算符左侧的对象是否等于右侧的对象。|  
-|[operator!=](../standard-library/system-error-operators.md#op_neq)|测试运算符左侧的对象是否不等于右侧的对象。|  
-|[operator<](../standard-library/system-error-operators.md#op_lt)|测试一个对象是否小于要比较的传入对象。|  
-  
-### <a name="enumerations"></a>枚举  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[errc](../standard-library/system-error-enums.md#errc)|为 `<errno.h>` 中的 Posix 定义的所有错误代码宏提供符号名称。|  
+|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Creates an `error_code` object.|  
+|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Creates an `error_condition` object.|  
   
-### <a name="classes-and-structs"></a>类和结构  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[error_category](../standard-library/error-category-class.md)|表示描述错误代码类别的对象的抽象、公用基。|  
-|[error_code](../standard-library/error-code-class.md)|表示特定于实现的低级别系统错误。|  
-|[error_condition](../standard-library/error-condition-class.md)|表示用户定义的错误代码。|  
-|[is_error_code_enum](../standard-library/is-error-code-enum-class.md)|表示测试 [error_code](../standard-library/error-code-class.md) 枚举的类型谓词。|  
-|[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|表示测试 [error_condition Class](../standard-library/error-condition-class.md) 枚举的类型谓词。|  
-|[system_error](../standard-library/system-error-class.md)|表示为报告低级别系统溢出而引发的所有异常的基类。|  
+|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Tests if the object on the left side of the operator is equal to the object on the right side.|  
+|[operator!=](../standard-library/system-error-operators.md#op_neq)|Tests if the object on the left side of the operator is not equal to the object on the right side.|  
+|[operator<](../standard-library/system-error-operators.md#op_lt)|Tests if an object is less than the object passed in for comparison.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<system_error>  
+### <a name="enumerations"></a>Enumerations  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[errc](../standard-library/system-error-enums.md#errc)|Provides symbolic names for all the error-code macros defined by Posix in `<errno.h>`.|  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+### <a name="classes-and-structs"></a>Classes and Structs  
+  
+|||  
+|-|-|  
+|[error_category](../standard-library/error-category-class.md)|Represents the abstract, common base for objects that describes a category of error codes.|  
+|[error_code](../standard-library/error-code-class.md)|Represents low-level system errors that are implementation-specific.|  
+|[error_condition](../standard-library/error-condition-class.md)|Represents user-defined error codes.|  
+|[is_error_code_enum](../standard-library/is-error-code-enum-class.md)|Represents a type predicate that tests for the [error_code Class](../standard-library/error-code-class.md) enumeration.|  
+|[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Represents a type predicate that tests for the [error_condition Class](../standard-library/error-condition-class.md) enumeration.|  
+|[system_error](../standard-library/system-error-class.md)|Represents the base class for all exceptions thrown to report a low-level system overflow.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<system_error>  
+  
+ **Namespace:** std  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

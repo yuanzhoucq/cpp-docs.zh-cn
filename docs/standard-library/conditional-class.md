@@ -1,5 +1,5 @@
 ---
-title: "conditional 类 | Microsoft 文档"
+title: conditional Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- conditional
 - type_traits/std::conditional
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: b7e187e8ddbb4a9457b5fe9eddda152464d7518d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ac4654577ee1869050a2750587bdef36f170432e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="conditional-class"></a>conditional 类
-根据指定的条件，从两种类型之中选择其中一种。  
+# <a name="conditional-class"></a>conditional Class
+Selects one of two types, depending on the specified condition.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <bool B, class T1, class T2>  
@@ -55,25 +54,25 @@ template <bool _Test, class _T1, class _T2>
 using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `B`  
- 用于确定所选类型的值。  
+ The value that determines the selected type.  
   
  `T1`  
- 当 B 为 true 时的类型结果。  
+ The type result when B is true.  
   
  `T2`  
- 当 B 为 false 时的类型结果。  
+ The type result when B is false.  
   
-## <a name="remarks"></a>备注  
- 当 `conditional<B, T1, T2>::type` 的计算结果为 `T1` 时，模板成员 typedef `B` 的计算结果为 `true`，当 `T2` 的计算结果为 `B` ，其计算结果为 `false`。  
+## <a name="remarks"></a>Remarks  
+ The template member typedef `conditional<B, T1, T2>::type` evaluates to `T1` when `B` evaluates to `true`, and evaluates to `T2` when `B` evaluates to `false`.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "&lt;exception&gt; | Microsoft 文档"
+title: '&lt;exception&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <exception>
-- std::<exception>
-- std.<exception>
+- <exception>", "std::<exception>", "std.<exception>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,55 +33,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 1d4ccc904c1f6011231e668194a9d84499fee934
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 09f4cf1012d42a802bcb673f2c3a55019888e751
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
-定义与异常处理相关的若干类型和函数。 异常处理用于系统可从错误中恢复的情形。 它提供了将控制权从函数返回给程序的一种方法。 合并异常处理的目标是提高程序的可靠性，同时提供一种有序地从错误中恢复的方法。  
+Defines several types and functions related to the handling of exceptions. Exception handling is used in situations in which the system can recover from an error. It provides a means for control to be returned from a function to the program. The objective of incorporating exception handling is to increase the program's robustness while providing a way to recover from an error in an orderly fashion.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <exception>  
   
 ```  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|该类型描述指向异常的指针。|  
-|[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|该类型描述指向适合用作 `terminate_handler` 的函数的指针。|  
-|[unexpected_handler](../standard-library/exception-typedefs.md#unexpected_handler)|该类型描述指向适合用作 `unexpected_handler` 的函数的指针。|  
+|[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|A type that describes a pointer to an exception.|  
+|[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|A type that describes a pointer to a function suitable for use as a `terminate_handler`.|  
+|[unexpected_handler](../standard-library/exception-typedefs.md#unexpected_handler)|A type that describes a pointer to a function suitable for use as an `unexpected_handler`.|  
   
-### <a name="functions"></a>函数  
-  
-|||  
-|-|-|  
-|[current_exception](../standard-library/exception-functions.md#current_exception)|获取指向当前异常的指针。|  
-|[get_terminate](../standard-library/exception-functions.md#get_terminate)|获取当前的 `terminate_handler` 函数。|  
-|[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|获取当前的 `unexpected_handler` 函数。|  
-|[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|创建保留异常副本的 `exception_ptr` 对象。|  
-|[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|引发作为参数传递的异常。|  
-|[set_terminate](../standard-library/exception-functions.md#set_terminate)|建立程序终止时要调用的新 `terminate_handler`。|  
-|[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|建立遇到意外异常时要调用的新 `unexpected_handler`。|  
-|[terminate](../standard-library/exception-functions.md#terminate)|调用终止处理程序。|  
-|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|仅当引发的异常当前正在处理时返回 **true**。|  
-|[unexpected](../standard-library/exception-functions.md#unexpected)|调用意外处理程序。|  
-  
-### <a name="classes"></a>类  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[bad_exception 类](../standard-library/bad-exception-class.md)|该类描述可从 `unexpected_handler` 引发的异常。|  
-|[exception 类](../standard-library/exception-class.md)|该类用作某些表达式和 C++ 标准库所引发的所有异常的基类。|  
+|[current_exception](../standard-library/exception-functions.md#current_exception)|Obtains a pointer to the current exception.|  
+|[get_terminate](../standard-library/exception-functions.md#get_terminate)|Obtains the current `terminate_handler` function.|  
+|[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|Obtains the current `unexpected_handler` function.|  
+|[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|Creates an `exception_ptr` object that holds a copy of an exception.|  
+|[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|Throws an exception passed as a parameter.|  
+|[set_terminate](../standard-library/exception-functions.md#set_terminate)|Establishes a new `terminate_handler` to be called at the termination of the program.|  
+|[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Establishes a new `unexpected_handler` to be when an unexpected exception is encountered.|  
+|[terminate](../standard-library/exception-functions.md#terminate)|Calls a terminate handler.|  
+|[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Returns **true** only if a thrown exception is being currently processed.|  
+|[unexpected](../standard-library/exception-functions.md#unexpected)|Calls an unexpected handler.|  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[bad_exception Class](../standard-library/bad-exception-class.md)|The class describes an exception that can be thrown from an `unexpected_handler`.|  
+|[exception Class](../standard-library/exception-class.md)|The class serves as the base class for all exceptions thrown by certain expressions and by the C++ Standard Library.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

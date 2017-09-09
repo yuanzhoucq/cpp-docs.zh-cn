@@ -1,5 +1,5 @@
 ---
-title: "messages_byname 类 | Microsoft Docs"
+title: messages_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- messages_byname
 - xlocmes/std::messages_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 014346887441678f53872aa7b791931e89361a5c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5bc3f2ed4f97c1beaead7510a0c5c09f5bd91e9b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="messagesbyname-class"></a>messages_byname 类
-该派生模板类描述一个可充当给定区域设置的信息 facet 的对象，从而检索本地化消息。  
+# <a name="messagesbyname-class"></a>messages_byname Class
+The derived template class describes an object that can serve as a message facet of a given locale, enabling the retrieval of localized messages.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType>
@@ -64,23 +63,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- 已命名的区域设置。  
+ A named locale.  
   
  `_Refs`  
- 初始引用计数。  
+ An initial reference count.  
   
-## <a name="remarks"></a>备注  
- 其行为由已命名的区域设置 `_Locname` 决定。 每个构造函数通过 [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`) 初始化其基对象。  
+## <a name="remarks"></a>Remarks  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

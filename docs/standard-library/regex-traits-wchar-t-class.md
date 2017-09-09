@@ -1,5 +1,5 @@
 ---
-title: "regex_traits&lt;wchar_t&gt; 类 | Microsoft Docs"
+title: regex_traits&lt;wchar_t&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,39 +33,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 1fc36c417982eee0a08b54631e53c4161ea91206
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ae4c5f27ccfa714272050cccb7f6332b7893b473
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; 类
-用于 wchar_t 的 regex_traits 的专用化。  
+# <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; Class
+Specialization of regex_traits for wchar_t.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <>  
 class regex_traits<wchar_t>  
 ```  
   
-## <a name="remarks"></a>备注  
- 此类是类型为 `wchar_t` 的元素的 [regex_traits](../standard-library/regex-traits-class.md) 模板类的显式专用化（以便它可以充分利用操作此类型对象的库函数）。  
+## <a name="remarks"></a>Remarks  
+ The class is an explicit specialization of template class [regex_traits](../standard-library/regex-traits-class.md) for elements of type `wchar_t` (so that it can take advantage of library functions that manipulate objects of this type).  
   
-## <a name="requirements"></a>要求  
- **标头：**\<regex&1;>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants 类](../standard-library/regex-constants-class.md)  
-[regex_error 类](../standard-library/regex-error-class.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
 [\<regex> functions](../standard-library/regex-functions.md)  
-[regex_iterator 类](../standard-library/regex-iterator-class.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
 [\<regex> operators](../standard-library/regex-operators.md)  
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 类](../standard-library/regex-traits-class.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
 

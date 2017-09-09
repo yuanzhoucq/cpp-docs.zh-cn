@@ -1,5 +1,5 @@
 ---
-title: "out_of_range 类 | Microsoft Docs"
+title: out_of_range Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- out_of_range
 - stdexcept/std::out_of_range
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 416f866ead1e3e4468136ebbdef1b5d7750691d4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cfdc765f6246574ee09118e70654aac2ec81e205
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="outofrange-class"></a>out_of_range 类
-此类用作引发报告无效自变量的所有异常的基类。  
+# <a name="outofrange-class"></a>out_of_range Class
+The class serves as the base class for all exceptions thrown to report an argument that is out of its valid range.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class out_of_range : public logic_error {  
@@ -56,10 +55,10 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>备注  
- [what](../standard-library/exception-class.md) 返回的值是 **message**`.`[data](../standard-library/basic-string-class.md#data) 的副本。  
+## <a name="remarks"></a>Remarks  
+ The value returned by [what](../standard-library/exception-class.md) is a copy of **message**`.`[data](../standard-library/basic-string-class.md#data).  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // out_of_range.cpp  
@@ -83,19 +82,19 @@ int main() {
 }  
 ```  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
   
 ```  
 Caught: invalid string position  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<stdexcept>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<stdexcept>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [logic_error 类](../standard-library/logic-error-class.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [logic_error Class](../standard-library/logic-error-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

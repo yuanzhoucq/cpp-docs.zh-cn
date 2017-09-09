@@ -1,5 +1,5 @@
 ---
-title: "duration_values 结构 | Microsoft 文档"
+title: duration_values Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,76 +34,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b170debfdb4759b41963bc0faca13b3db11ad39a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 71c90fc57ee4e7b6bb7628426401dd72ec3de20f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="durationvalues-structure"></a>duration_values 结构
-为[持续时间](../standard-library/duration-class.md)模板参数 `Rep` 提供指定值。  
+# <a name="durationvalues-structure"></a>duration_values Structure
+Provides specific values for the [duration](../standard-library/duration-class.md) template parameter `Rep`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Rep>  
 struct duration_values;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[max](#max)|静态。 指定类型 `Rep` 的值上限。|  
-|[min](#min)|静态。 指定类型 `Rep` 的值下限。|  
-|[零](#zero)|静态。 返回 `Rep(0)`。|  
+|[max](#max)|Static. Specifies the upper limit for a value of type `Rep`.|  
+|[min](#min)|Static. Specifies the lower limit for a value of type `Rep`.|  
+|[zero](#zero)|Static. Returns `Rep(0)`.|  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<chrono >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
- **命名空间：**std::chrono  
+ **Namespace:** std::chrono  
   
 ##  <a name="max"></a>  duration_values::max  
- 返回类型 `Ref` 的值上限的静态方法。  
+ Static method that returns the upper bound for values of type `Ref`.  
   
 ```  
 static constexpr Rep max();
 ```  
   
-### <a name="return-value"></a>返回值  
- 实际上，返回 `numeric_limits<Rep>::max()`。  
+### <a name="return-value"></a>Return Value  
+ In effect, returns `numeric_limits<Rep>::max()`.  
   
-### <a name="remarks"></a>备注  
- 当 `Rep` 是用户定义类型时，返回值必须大于 [duration_values::zero](#zero)。  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must be greater than [duration_values::zero](#zero).  
   
 ##  <a name="min"></a>  duration_values::min  
- 返回类型值下限的静态方法`Ref`。  
+ Static method that returns the lower bound for values of type `Ref`.  
   
 ```  
 static constexpr Rep min();
 ```  
   
-### <a name="return-value"></a>返回值  
- 实际上，返回 `numeric_limits<Rep>::lowest()`。  
+### <a name="return-value"></a>Return Value  
+ In effect, returns `numeric_limits<Rep>::lowest()`.  
   
-### <a name="remarks"></a>备注  
- 当 `Rep` 是用户定义类型时，返回值必须小于或等于 [duration_values::zero](#zero)。  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must be less than or equal to [duration_values::zero](#zero).  
   
 ##  <a name="zero"></a>  duration_values::zero  
- 返回 `Rep(0)`。  
+ Returns `Rep(0)`.  
   
 ```  
 static constexpr Rep zero();
 ```  
   
-### <a name="remarks"></a>备注  
- 当 `Rep` 是用户定义类型时，返回值必须表示正无穷大。  
+### <a name="remarks"></a>Remarks  
+ When `Rep` is a user-defined type, the return value must represent the additive infinity.  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 
 

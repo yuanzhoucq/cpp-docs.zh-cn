@@ -1,5 +1,5 @@
 ---
-title: "is_class 类 | Microsoft Docs"
+title: is_class Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_class
 - type_traits/std::is_class
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: af9a1513e7fac1dbcf36273f02ca26c0f9a7df6a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 354bfac206cbfc39005ef850870f0e2fac1e2f57
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isclass-class"></a>is_class 类
-测试类型是否为一个类。  
+# <a name="isclass-class"></a>is_class Class
+Tests if type is a class.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_class;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果类型 `Ty` 是定义为 `class` 或 `struct` 的类型、或者是其中一个的 `cv-qualified` 形式，则类型谓词的实例为 true；否则为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a type defined as a `class` or a `struct`, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_class.cpp   
@@ -89,13 +88,13 @@ is_class<trivial> == true
 is_class<int> == false  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_compound 类](../standard-library/is-compound-class.md)   
- [is_union 类](../standard-library/is-union-class.md)
+ [is_compound Class](../standard-library/is-compound-class.md)   
+ [is_union Class](../standard-library/is-union-class.md)
 

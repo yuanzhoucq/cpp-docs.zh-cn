@@ -1,5 +1,5 @@
 ---
-title: "&lt;new&gt; 运算符 | Microsoft Docs"
+title: '&lt;new&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,21 +12,21 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 52633103180338b6db7b96f2d76391f58e1f4c35
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e5e0dc48d0aeb09da07654043addd81b096bbcc6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnewgt-operators"></a>&lt;new&gt; 运算符
+# <a name="ltnewgt-operators"></a>&lt;new&gt; operators
 ||||  
 |-|-|-|  
-|[运算符 delete](#op_delete)|[运算符 delete[]](#op_delete_arr)|[运算符 new](#op_new)|  
-|[运算符 new[]](#op_new_arr)|  
+|[operator delete](#op_delete)|[operator delete[]](#op_delete_arr)|[operator new](#op_new)|  
+|[operator new[]](#op_new_arr)|  
   
-##  <a name="op_delete"></a>运算符 delete  
- 由 delete 表达式调用来解除单个对象的存储空间分配的函数。  
+##  <a name="op_delete"></a>  operator delete  
+ The function called by a delete expression to deallocate storage for individual of objects.  
   
 ```
 void operator delete(void* ptr) throw();
@@ -38,24 +38,24 @@ void operator delete(void* ptr,
     const std::nothrow_t&) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 其值由删除呈现为无效的指针。  
+ The pointer whose value is to be rendered invalid by the deletion.  
   
-### <a name="remarks"></a>备注  
- 第一个函数由 delete 表达式调用，以将 `ptr` 的值呈现为无效。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需行为接受 `ptr` 的值，该值为 NULL 或由对[操作符 new](../standard-library/new-operators.md#op_new)(**size_t**) 的早期调用返回。  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a delete expression to render the value of `ptr` invalid. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
- `ptr` 的 NULL 值的默认行为是不执行任何操作。 `ptr` 的任何其他值必须为调用之前返回的值，如上所述。 `ptr` 的此类非空值的默认行为是回收早期调用分配的存储空间。 未指定在什么条件下部分或全部此类回收的存储由对 `operator new`( **size_t**)、任何 `calloc`( **size_t**), `malloc`( **size_t**) 或 `realloc`( **void\***, **size_t**) 的后续调用分配。  
+ The default behavior for a null value of `ptr` is to do nothing. Any other value of `ptr` must be a value returned earlier by a call as previously described. The default behavior for such a nonnull value of `ptr` is to reclaim storage allocated by the earlier call. It is unspecified under what conditions part or all of such reclaimed storage is allocated by a subsequent call to `operator new`( **size_t**), or to any of `calloc`( **size_t**), `malloc`( **size_t**), or `realloc`( **void\***, **size_t**).  
   
- 第二个函数由对应于 **new**( **std::size_t**) 形式的新表达式的 placement delete 表达式调用。 它不执行任何操作。  
+ The second function is called by a placement delete expression corresponding to a new expression of the form **new**( **std::size_t**). It does nothing.  
   
- 第三个函数由对应于 **new**( **std::size_t**, **conststd::nothrow_t&**) 形式的新表达式的 placement delete 表达式调用。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需行为接受 `ptr` 的值，该值为 NULL 或由对 `operator new`(**size_t**) 的早期调用返回。 默认行为是评估 **delete**( `ptr`)。  
+ The third function is called by a placement delete expression corresponding to a new expression of the form **new**( **std::size_t**, **conststd::nothrow_t&**). The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to `operator new`( **size_t**). The default behavior is to evaluate **delete**( `ptr`).  
   
-### <a name="example"></a>示例  
-  有关使用 `operator delete` 的示例，请参阅[运算符 new](../standard-library/new-operators.md#op_new)。  
+### <a name="example"></a>Example  
+  See [operator new](../standard-library/new-operators.md#op_new) for an example that use `operator delete`.  
   
-##  <a name="op_delete_arr"></a>运算符 delete[]  
- 由 delete 表达式调用来解除对象数组的存储空间分配的函数。  
+##  <a name="op_delete_arr"></a>  operator delete[]  
+ The function called by a delete expression to deallocate storage for an array of objects.  
   
 ```
 void operator delete[](void* ptr) throw();
@@ -67,22 +67,22 @@ void operator delete[](void* ptr,
     const std::nothrow_t&) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 其值由删除呈现为无效的指针。  
+ The pointer whose value is to be rendered invalid by the deletion.  
   
-### <a name="remarks"></a>备注  
- 第一个函数由 `delete[]` 表达式调用，以将 `ptr` 的值呈现为无效。 该函数为可替换，因为该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需行为接受 `ptr` 的值，该值为 NULL 或由对[运算符new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**) 的早期调用返回。 `ptr` 的 NULL 值的默认行为是不执行任何操作。 `ptr` 的任何其他值必须为调用之前返回的值，如上所述。 `ptr` 的此类非空值的默认行为是回收早期调用分配的存储空间。 未指定在什么条件下部分或全部此类回收的存储由对 [operator new](../standard-library/new-operators.md#op_new)( **size_t**)、任何 `calloc`( **size_t**), `malloc`( **size_t**) 或 `realloc`( **void\***, **size_t**) 的后续调用分配。  
+### <a name="remarks"></a>Remarks  
+ The first function is called by an `delete[]` expression to render the value of `ptr` invalid. The function is replaceable because the program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **size_t**). The default behavior for a null value of `ptr` is to do nothing. Any other value of `ptr` must be a value returned earlier by a call as previously described. The default behavior for such a nonnull value of `ptr` is to reclaim storage allocated by the earlier call. It is unspecified under what conditions part or all of such reclaimed storage is allocated by a subsequent call to [operator new](../standard-library/new-operators.md#op_new)( **size_t**), or to any of `calloc`( **size_t**), `malloc`( **size_t**), or `realloc`( **void\***, **size_t**).  
   
- 第二个函数由对应于 `new[]`( **std::size_t**) 形式的 `new[]` 表达式的 placement `delete[]` 表达式调用。 它不执行任何操作。  
+ The second function is called by a placement `delete[]` expression corresponding to a `new[]` expression of the form `new[]`( **std::size_t**). It does nothing.  
   
- 第三个函数由对应于 `new[]`( **std::size_t**, **const std::nothrow_t&**) 形式的 `new[]` 表达式的 placement delete 表达式调用。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需行为为接受 `ptr` 的值，该值为 NULL 或由对运算符 `new[]`(**size_t**) 的早期调用返回。 默认行为是评估 `delete[]`( `ptr`)。  
+ The third function is called by a placement delete expression corresponding to a `new[]` expression of the form `new[]`( **std::size_t**, **const std::nothrow_t&**). The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to operator `new[]`( **size_t**). The default behavior is to evaluate `delete[]`( `ptr`).  
   
-### <a name="example"></a>示例  
-  有关 `operator delete[]` 的使用示例，请参阅[运算符 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。  
+### <a name="example"></a>Example  
+  See [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) for examples of the use of `operator delete[]`.  
   
-##  <a name="op_new"></a>运算符 new  
- 由 new 表达式调用来为单个对象分配存储空间的函数。  
+##  <a name="op_new"></a>  operator new  
+ The function called by a new-expression to allocate storage for individual objects.  
   
 ```
 void* operator new(std::size_t count) throw(bad_alloc);
@@ -94,46 +94,46 @@ void* operator new(std::size_t count,
     void* ptr) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要分配的存储的字节数。  
+ The number of bytes of storage to be allocated.  
   
  `ptr`  
- 要返回的指针。  
+ The pointer to be returned.  
   
-### <a name="return-value"></a>返回值  
- 指向新分配内存的最小字节地址的指针。 或 `ptr.`  
+### <a name="return-value"></a>Return Value  
+ A pointer to the lowest byte address of the newly-allocated storage. Or `ptr.`  
   
-### <a name="remarks"></a>备注  
- 第一个函数由 new 表达式调用，以便分配 `count` 个字节的存储，适当对齐该存储以表示该大小的任何对象。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义 alternate 函数，因此该程序为可替换。  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a new expression to allocate `count` bytes of storage suitably aligned to represent any object of that size. The program can define an alternate function with this function signature that replaces the default version defined by the C++ Standard Library and so is replaceable.  
   
- 仅在按照请求分配存储时，所需的行为才为返回非空指针。 每个此类分配都会向不与任何其他已分配的存储连接的存储生成指针。 未指定连续调用分配的存储的顺序和连续性。 未指定存储的初始值。 返回的指针指向已分配的存储的开始（最小字节地址）。 如果计数为零，则返回的值不与该函数返回的任何其他值相等。  
+ The required behavior is to return a nonnull pointer only if storage can be allocated as requested. Each such allocation yields a pointer to storage disjoint from any other allocated storage. The order and contiguity of storage allocated by successive calls is unspecified. The initial stored value is unspecified. The returned pointer points to the start (lowest byte address) of the allocated storage. If count is zero, the value returned does not compare equal to any other value returned by the function.  
   
- 默认行为是执行一个循环。 在此循环中，该函数会首先尝试分配请求的存储。 未指定该尝试是否涉及调用 `malloc`( **size_t**)。 如果尝试成功，则该函数将返回已分配存储的指针。 否则，该函数将调用指定的[新处理程序](../standard-library/new-typedefs.md#new_handler)。 返回被调用的函数时，将重复该循环。 尝试分配请求的存储成功时或未返回被调用的函数时，循环将终止。  
+ The default behavior is to execute a loop. Within the loop, the function first attempts to allocate the requested storage. Whether the attempt involves a call to `malloc`( **size_t**) is unspecified. If the attempt is successful, the function returns a pointer to the allocated storage. Otherwise, the function calls the designated [new handler](../standard-library/new-typedefs.md#new_handler). If the called function returns, the loop repeats. The loop terminates when an attempt to allocate the requested storage is successful or when a called function does not return.  
   
- 新处理程序所需的行为是执行以下操作之一：  
+ The required behavior of a new handler is to perform one of the following operations:  
   
--   使更多存储可用于分配，然后返回。  
+-   Make more storage available for allocation and then return.  
   
--   调用 **abort** 或**exit**( `int`)。  
+-   Call either **abort** or **exit**( `int`).  
   
--   引发一个 **bad_alloc** 类型的对象。  
+-   Throw an object of type **bad_alloc.**  
   
- [新处理程序](../standard-library/new-typedefs.md#new_handler)的默认行为是引发一个 `bad_alloc` 类型的对象。 空指针指定新的默认处理程序。  
+ The default behavior of a [new handler](../standard-library/new-typedefs.md#new_handler) is to throw an object of type `bad_alloc`. A null pointer designates the default new handler.  
   
- 未指定通过连续调用 `operator new`( **size_t**) 分配的存储的顺序和连续性，因为那里存储着初始值。  
+ The order and contiguity of storage allocated by successive calls to `operator new`( **size_t**) is unspecified, as are the initial values stored there.  
   
- 第一个函数由 placement new 表达式调用，以便分配 `count` 个字节的存储，适当对齐该存储以表示该大小的任何对象。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义 alternate 函数，因此该程序为可替换。  
+ The second function is called by a placement new expression to allocate `count` bytes of storage suitably aligned to represent any object of that size. The program can define an alternate function with this function signature that replaces the default version defined by the C++ Standard Library and so is replaceable.  
   
- 如果该函数成功，则默认行为是返回 `operator new`( `count`)。 否则，它返回空指针。  
+ The default behavior is to return `operator new`( `count`) if that function succeeds. Otherwise, it returns a null pointer.  
   
- 第三个函数由 **new** ( *args*) T 形式的 placement **new** 表达式调用。此处，*args* 包含单个对象指针。 这可用于构造已知地址的对象。 该函数返回 *ptr*。  
+ The third function is called by a placement **new** expression, of the form **new** ( *args*) T. Here, *args* consists of a single object pointer. This can be useful for constructing an object at a known address. The function returns *ptr*.  
   
- 若要释放 `operator new` 分配的存储，请调用[运算符 delete](../standard-library/new-operators.md#op_delete)。  
+ To free storage allocated by `operator new`, call [operator delete](../standard-library/new-operators.md#op_delete).  
   
- 有关 new 的引发或非引发行为的信息，请参阅 [new 和 delete 运算符](../cpp/new-and-delete-operators.md)。  
+ For information on throwing or nonthrowing behavior of new, see [The new and delete Operators](../cpp/new-and-delete-operators.md).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_op_new.cpp  
@@ -176,8 +176,8 @@ int main( )
 }  
 ```  
   
-##  <a name="op_new_arr"></a>operator new[]  
- 由 new 表达式调用来为对象数组分配存储空间的分配函数。  
+##  <a name="op_new_arr"></a>  operator new[]  
+ The allocation function called by a new expression to allocate storage for an array of objects.  
   
 ```
 void* operator new[](std::size_t count) throw(std::bad_alloc);
@@ -189,28 +189,28 @@ void* operator new[](std::size_t count,
     void* ptr) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要为数组对象分配的存储的字节数。  
+ The number of bytes of storage to be allocated for the array object.  
   
  `ptr`  
- 要返回的指针。  
+ The pointer to be returned.  
   
-### <a name="return-value"></a>返回值  
- 指向新分配内存的最小字节地址的指针。 或 `ptr.`  
+### <a name="return-value"></a>Return Value  
+ A pointer to the lowest byte address of the newly-allocated storage. Or `ptr.`  
   
-### <a name="remarks"></a>备注  
- 第一个函数由 `new[]` 表达式调用，以便分配 `count` 个字节的存储，适当对齐该存储以表示该大小或更小的任何数组对象。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 所需的行为与 [operator new](../standard-library/new-operators.md#op_new)( **size_t**) 的行为相同。 默认行为是返回 `operator new`( `count`)。  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a `new[]` expression to allocate `count` bytes of storage suitably aligned to represent any array object of that size or smaller. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is the same as for [operator new](../standard-library/new-operators.md#op_new)( **size_t**). The default behavior is to return `operator new`( `count`).  
   
- 第二个函数由 placement `new[]` 表达式调用，以便分配 `count` 个字节的存储，适当对齐该存储以表示该大小的任何数组对象。 该程序可以通过替换 C++ 标准库定义的默认版本的函数签名定义函数。 如果该函数成功，则默认行为是返回 **operatornew**( `count`)。 否则，它返回空指针。  
+ The second function is called by a placement `new[]` expression to allocate `count` bytes of storage suitably aligned to represent any array object of that size. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The default behavior is to return **operatornew**( `count`) if that function succeeds. Otherwise, it returns a null pointer.  
   
- 第三个函数由 **new** ( *args*) **T**[ **N**] 形式的 placement `new[]` 函数调用。 此处，*args* 包含单个对象指针。 该函数返回 `ptr`。  
+ The third function is called by a placement `new[]` expression, of the form **new** ( *args*) **T**[ **N**]. Here, *args* consists of a single object pointer. The function returns `ptr`.  
   
- 若要释放 `operator new[]` 分配的存储，请调用[运算符 delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)。  
+ To free storage allocated by `operator new[]`, call [operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr).  
   
- 有关 new 的引发或非引发行为的信息，请参阅 [new 和 delete 运算符](../cpp/new-and-delete-operators.md)。  
+ For information on throwing or nonthrowing behavior of new, see [The new and delete Operators](../cpp/new-and-delete-operators.md).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_op_alloc.cpp  
@@ -251,7 +251,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<new>](../standard-library/new.md)
 
 
