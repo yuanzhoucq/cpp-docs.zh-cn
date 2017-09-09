@@ -1,83 +1,100 @@
 ---
-title: "CL 环境变量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe 编译器, 环境变量"
-  - "环境变量, CL 编译器"
-  - "INCLUDE 环境变量"
-  - "LIBPATH 环境变量"
+title: CL Environment Variables | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cl
+dev_langs:
+- C++
+helpviewer_keywords:
+- INCLUDE environment variable
+- cl.exe compiler, environment variables
+- LIBPATH environment variable
+- environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# CL 环境变量
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: 0a70eb5486b80be0451be89549b51c7335cd03fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
-CL 工具使用以下环境变量:  
+---
+# <a name="cl-environment-variables"></a>CL Environment Variables
+The CL tool uses the following environment variables:  
   
--   CL 和 \_CL\_（如果已定义）。  CL 工具会将 CL 环境变量中定义的选项和参数预置到命令行参数前面，并在处理之前附加 \_CL\_ 中定义的选项和参数。  
+-   CL and _CL\_, if defined. The CL tool prepends the options and arguments defined in the CL environment variable to the command line arguments, and appends the options and arguments defined in _CL\_, before processing.  
   
--   INCLUDE，必须指向 Visual C\+\+ 安装的 \\include 子目录。  
+-   INCLUDE, which must point to the \include subdirectory of your Visual C++ installation.  
   
--   LIBPATH，指定用于搜索使用 [\#using](../../preprocessor/hash-using-directive-cpp.md) 引用的元数据文件的目录。  有关 LIBPATH 的详细信息，请参阅 `#using`。  
+-   LIBPATH, which specifies directories to search for metadata files referenced with [#using](../../preprocessor/hash-using-directive-cpp.md). See `#using` for more information on LIBPATH.  
   
- 可以使用以下语法设置 CL 或 \_CL\_ 环境变量：  
+ You can set the CL or _CL\_ environment variable using the following syntax:  
   
 ```  
 SET CL=[ [option] ... [file] ...] [/link link-opt ...]  
 SET _CL_=[ [option] ... [file] ...] [/link link-opt ...]  
 ```  
   
- 有关 CL 和 \_CL\_ 环境变量的参数的详细信息，请参阅[编译器命令行语法](../../build/reference/compiler-command-line-syntax.md)。  
+ For details on the arguments to the CL and _CL\_ environment variables, see [Compiler Command-Line Syntax](../../build/reference/compiler-command-line-syntax.md).  
   
- 可以使用这些环境变量定义最常使用的文件和选项，并使用命令行为特定用途定义特定文件和选项。  CL 和 \_CL\_ 环境变量限制为 1024 个字符（命令行输入限制）。  
+ You can use these environment variables to define the files and options you use most often and use the command line to define specific files and options for specific purposes. The CL and _CL\_ environment variables are limited to 1024 characters (the command-line input limit).  
   
- 不能使用 \/D 选项定义使用等号 \(\=\) 的符号。  可以将等号替换为数字符号 \(\#\)。  通过这种方式，可以使用 CL 或 \_CL\_ 环境变量定义定义具有显式值的预处理器常量（例如，`/DDEBUG#1` 可定义 `DEBUG=1`）。  
+ You cannot use the /D option to define a symbol that uses an equal sign (=). You can substitute the number sign (#) for an equal sign. In this way, you can use the CL or _CL_environment variables to define preprocessor constants with explicit values—for example, `/DDEBUG#1` to define `DEBUG=1`.  
   
- 有关相关信息，请参阅[设置环境变量](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。  
+ For related information, see [Set Environment Variables](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
-## 示例  
- 下面是设置 CL 环境变量的示例：  
+## <a name="examples"></a>Examples  
+ The following is an example of setting the CL environment variable:  
   
 ```  
 SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ  
 ```  
   
- 设置此环境变量时，如果在命令行处输入 `CL INPUT.C`，则这是有效的命令：  
+ When this environment variable is set, if you enter `CL INPUT.C` at the command line, this is the effective command:  
   
 ```  
 CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C  
 ```  
   
- 下面的示例使普通 CL 命令编译源文件 FILE1.c 和 FILE2.c，然后链接对象文件 FILE1.obj、FILE2.obj 和 FILE3.obj：  
+ The following example causes a plain CL command to compile the source files FILE1.c and FILE2.c, and then link the object files FILE1.obj, FILE2.obj, and FILE3.obj:  
   
 ```  
 SET CL=FILE1.C FILE2.C  
 SET _CL_=FILE3.OBJ  
 CL  
-  
 ```  
   
- 这与下面的命令行的效果相同：  
+ This has the same effect as the following command line:  
   
 ```  
 CL FILE1.C FILE2.C FILE3.OBJ  
 ```  
   
-## 请参阅  
- [设置编译器选项](../../build/reference/setting-compiler-options.md)   
- [编译器选项](../../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+ [Setting Compiler Options](../../build/reference/setting-compiler-options.md)   
+ [Compiler Options](../../build/reference/compiler-options.md)
+
