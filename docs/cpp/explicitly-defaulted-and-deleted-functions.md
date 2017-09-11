@@ -1,59 +1,76 @@
 ---
-title: "显式默认设置的函数和已删除的函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Explicitly Defaulted and Deleted Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 显式默认设置的函数和已删除的函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 24e7432f8797e1f7835e62c179ef32bca85f7532
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-在 C\+\+11 中，默认函数和已删除函数使你可以显式控制是否自动生成特殊成员函数。  已删除的函数还可为您提供简单语言，以防止所有类型的函数（特殊成员函数和普通成员函数以及非成员函数）的参数中出现有问题的类型提升，这会导致意外的函数调用。  
+---
+# <a name="explicitly-defaulted-and-deleted-functions"></a>Explicitly Defaulted and Deleted Functions
+In C++11, defaulted and deleted functions give you explicit control over whether the special member functions are automatically generated. Deleted functions also give you simple language to prevent problematic type promotions from occurring in arguments to functions of all types—special member functions, as well as normal member functions and non-member functions—which would otherwise cause an unwanted function call.  
   
-## 显式默认设置的函数和已删除函数的好处  
- 在 C\+\+ 中，如果某个类型未声明它本身，则编译器将自动为该类型生成默认构造函数、复制构造函数、复制赋值运算符和析构函数。  这些函数称为*特殊成员函数*，它们使 C\+\+ 中的简单用户定义类型的行为如同 C 中的结构。  也就是说，可以创建、复制和销毁它们而无需任何额外编码工作。  C\+\+11 会将移动语义引入语言中，并将移动构造函数和移动赋值运算符添加到编译器可自动生成的特殊成员函数的列表中。  
+## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Benefits of explicitly defaulted and deleted functions  
+ In C++, the compiler automatically generates the default constructor, copy constructor, copy-assignment operator, and destructor for a type if it does not declare its own. These functions are known as the *special member functions*, and they are what make simple user-defined types in C++ behave like structures do in C. That is, you can create, copy, and destroy them without any additional coding effort. C++11 brings move semantics to the language and adds the move constructor and move-assignment operator to the list of special member functions that the compiler can automatically generate.  
   
- 这对于简单类型非常方便，但是复杂类型通常自己定义一个或多个特殊成员函数，这可以阻止自动生成其他特殊成员函数。  实践操作：  
+ This is convenient for simple types, but complex types often define one or more of the special member functions themselves, and this can prevent other special member functions from being automatically generated. In practice:  
   
--   如果显式声明了任何构造函数，则不会自动生成默认构造函数。  
+-   If any constructor is explicitly declared, then no default constructor is automatically generated.  
   
--   如果显式声明了虚拟析构函数，则不会自动生成默认析构函数。  
+-   If a virtual destructor is explicitly declared, then no default destructor is automatically generated.  
   
--   如果显式声明了移动构造函数或移动赋值运算符，则：  
+-   If a move constructor or move-assignment operator is explicitly declared, then:  
   
-    -   不自动生成复制构造函数。  
+    -   No copy constructor is automatically generated.  
   
-    -   不自动生成复制赋值运算符。  
+    -   No copy-assignment operator is automatically generated.  
   
--   如果显式声明了复制构造函数、复制赋值运算符、移动构造函数、移动赋值运算符或析构函数，则：  
+-   If a copy constructor, copy-assignment operator, move constructor, move-assignment operator, or destructor is explicitly declared, then:  
   
-    -   不自动生成移动构造函数。  
+    -   No move constructor is automatically generated.  
   
-    -   不自动生成移动赋值运算符。  
+    -   No move-assignment operator is automatically generated.  
   
 > [!NOTE]
->  此外，C\+\+11 标准指定将以下附加规则：  
+>  Additionally, the C++11 standard specifies the following additional rules:  
 >   
->  -   如果显式声明了复制构造函数或析构函数，则弃用复制赋值运算符的自动生成。  
-> -   如果显式声明了复制赋值运算符或析构函数，则弃用复制构造函数的自动生成。  
+>  -   If a copy constructor or destructor is explicitly declared, then automatic generation of the copy-assignment operator is deprecated.  
+> -   If a copy-assignment operator or destructor is explicitly declared, then automatic generation of the copy constructor is deprecated.  
 >   
->  在这两种情况下，Visual Studio 将继续隐式自动生成所需的函数且不发出警告。  
+>  In both cases, Visual Studio continues to automatically generate the necessary functions implicitly, and does not emit a warning.  
   
- 这些规则的结果也可能泄漏到对象层次结构中。  例如，如果基类因某种原因无法拥有可从派生类调用的默认构造函数 \- 也就是说，一个不采用任何参数的 `public` 或 `protected` 构造函数 \- 那么从基类派生的类将无法自动生成它自己的默认构造函数。  
+ The consequences of these rules can also leak into object hierarchies. For example, if for any reason a base class fails to have a default constructor that's callable from a deriving class—that is, a `public` or `protected` constructor that takes no parameters—then a class that derives from it cannot automatically generate its own default constructor.  
   
- 这些规则可能会使本应直接的内容、用户定义类型和常见 C\+\+ 惯例的实现变得复杂 — 例如，通过以私有方式复制构造函数和复制赋值运算符，而不定义它们，使用户定义类型不可复制。  
+ These rules can complicate the implementation of what should be straight-forward, user-defined types and common C++ idioms—for example, making a user-defined type non-copyable by declaring the copy constructor and copy-assignment operator privately and not defining them.  
   
 ```  
 struct noncopyable  
@@ -66,17 +83,17 @@ private:
 };  
 ```  
   
- 在 C\+\+11 之前，此代码段是不可复制的类型的惯例形式。  但是，它具有几个问题：  
+ Before C++11, this code snippet was the idiomatic form of non-copyable types. However, it has several problems:  
   
--   复制构造函数必须以私有方式进行声明以隐藏它，但因为它进行了完全声明，所以会阻止自动生成默认构造函数。  如果你需要默认构造函数，则必须显式定义一个（即使它不执行任何操作）。  
+-   The copy constructor has to be declared privately to hide it, but because it’s declared at all, automatic generation of the default constructor is prevented. You have to explicitly define the default constructor if you want one, even if it does nothing.  
   
--   即使显式定义的默认构造函数不执行任何操作，编译器也会将它视为重要内容。  其效率低于自动生成的默认构造函数，并且会阻止 `noncopyable` 成为真正的 POD 类型。  
+-   Even if the explicitly-defined default constructor does nothing, it's considered non-trivial by the compiler. It's less efficient than an automatically generated default constructor and prevents `noncopyable` from being a true POD type.  
   
--   尽管复制构造函数和复制赋值运算符在外部代码中是隐藏的，但成员函数和 `noncopyable` 的友元仍可以看见并调用它们。  如果它们进行了声明但是未定义，则调用它们会导致链接器错误。  
+-   Even though the copy constructor and copy-assignment operator are hidden from outside code, the member functions and friends of `noncopyable` can still see and call them. If they are declared but not defined, calling them causes a linker error.  
   
--   虽然这是广为接受的惯例，但是除非你了解用于自动生成特殊成员函数的所有规则，否则意图不明确。  
+-   Although this is a commonly accepted idiom, the intent is not clear unless you understand all of the rules for automatic generation of the special member functions.  
   
- 在 C\+\+11 中，不可复制的习语可通过更直接的方法实现。  
+ In C++11, the non-copyable idiom can be implemented in a way that is more straightforward.  
   
 ```  
 struct noncopyable  
@@ -87,22 +104,22 @@ struct noncopyable
 };  
 ```  
   
- 请注意如何解决与 C\+\+11 之前的惯例有关的问题：  
+ Notice how the problems with the pre-C++11 idiom are resolved:  
   
--   仍可通过声明复制构造函数来阻止生成默认构造函数，但可通过将其显式设置为默认值进行恢复。  
+-   Generation of the default constructor is still prevented by declaring the copy constructor, but you can bring it back by explicitly defaulting it.  
   
--   显式设置的默认特殊成员函数仍被视为不重要的，因此性能不会下降，并且不会阻止 `noncopyable` 成为真正的 POD 类型。  
+-   Explicitly defaulted special member functions are still considered trivial, so there is no performance penalty, and `noncopyable` is not prevented from being a true POD type.  
   
--   复制构造函数和复制赋值运算符是公共的，但是已删除。  定义或调用已删除函数是编译时错误。  
+-   The copy constructor and copy-assignment operator are public but deleted. It is a compile-time error to define or call a deleted function.  
   
--   对于了解 `=default` 和 `=delete` 的人来说，意图是非常清楚的。  你不必了解用于自动生成特殊成员函数的规则。  
+-   The intent is clear to anyone who understands `=default` and `=delete`. You don't have to understand the rules for automatic generation of special member functions.  
   
- 对于创建不可移动、只能动态分配或无法动态分配的用户定义类型，存在类似惯例。  所有这些惯例都具有 C\+\+11 之前的实现，这些实现会遭受类似问题，并且可在 C\+\+11 中通过按照默认和已删除特殊成员函数实现它们，以类似方式进行解决。  
+ Similar idioms exist for making user-defined types that are non-movable, that can only be dynamically allocated, or that cannot be dynamically allocated. Each of these idioms have pre-C++11 implementations that suffer similar problems, and that are similarly resolved in C++11 by implementing them in terms of defaulted and deleted special member functions.  
   
-## 显式默认设置的函数  
- 可以默认设置任何特殊成员函数 — 以显式声明特殊成员函数使用默认实现、定义具有非公共访问限定符的特殊成员函数或恢复其他情况下被阻止其自动生成的特殊成员函数。  
+## <a name="explicitly-defaulted-functions"></a>Explicitly defaulted functions  
+ You can default any of the special member functions—to explicitly state that the special member function uses the default implementation, to define the special member function with a non-public access qualifier, or to reinstate a special member function whose automatic generation was prevented by other circumstances.  
   
- 可通过如此示例所示进行声明来默认设置特殊成员函数：  
+ You default a special member function by declaring it as in this example:  
   
 ```  
 struct widget  
@@ -115,15 +132,12 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;  
 ```  
   
- 请注意，只要特殊成员函数可内联，便可以在类主体外部默认设置它。  
+ Notice that you can default a special member function outside the body of a class as long as it’s inlinable.  
   
- 由于普通特殊成员函数的性能优势，因此我们建议你在需要默认行为时首选自动生成的特殊成员函数而不是空函数体。  你可以通过显式默认设置特殊成员函数，或通过不声明它（也不声明其他会阻止它自动生成的特殊成员函数），来实现此目的。  
+ Because of the performance benefits of trivial special member functions, we recommend that you prefer automatically generated special member functions over empty function bodies when you want the default behavior. You can do this either by explicitly defaulting the special member function, or by not declaring it (and also not declaring other special member functions that would prevent it from being automatically generated.)  
   
-> [!NOTE]
->  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 不支持默认的移动构造函数或移动赋值运算符作为 C\+\+11 标准授权。  有关详细信息，请参阅 [支持 C\+\+11\/14\/17 功能](../cpp/support-for-cpp11-14-17-features-modern-cpp.md)中的“默认函数和已删除的函数”一节。  
-  
-## 已删除的函数  
- 可以删除特殊成员函数以及普通成员函数和非成员函数，以阻止定义或调用它们。  通过删除特殊成员函数，可以更简洁地阻止编译器生成不需要的特殊成员函数。  必须在声明函数时将其删除；不能在这之后通过声明一个函数然后不再使用的方式来将其删除。  
+## <a name="deleted-functions"></a>Deleted functions  
+ You can delete special member functions as well as normal member functions and non-member functions to prevent them from being defined or called. Deleting of special member functions provides a cleaner way of preventing the compiler from generating special member functions that you don’t want. The function must be deleted as it is declared; it cannot be deleted afterwards in the way that a function can be declared and then later defaulted.  
   
 ```  
 struct widget  
@@ -133,7 +147,7 @@ struct widget
 };  
 ```  
   
- 删除普通成员函数或非成员函数可阻止有问题的类型提升导致调用意外函数。  这可发挥作用的原因是，已删除的函数仍参与重载决策，并提供比提升类型之后可能调用的函数更好的匹配。  函数调用将解析为更具体的但可删除的函数，并会导致编译器错误。  
+ Deleting of normal member function or non-member functions prevents problematic type promotions from causing an unintended function to be called. This works because deleted functions still participate in overload resolution and provide a better match than the function that could be called after the types are promoted. The function call resolves to the more-specific—but deleted—function and causes a compiler error.  
   
 ```  
 // deleted overload prevents call through type promotion of float to double from succeeding.  
@@ -141,7 +155,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- 请注意，在前面的示例中，使用 `call_with_true_double_only` 参数调用 `float` 将导致编译器错误，但使用 `call_with_true_double_only` 参数调用 `int` 不会导致编译器错误；在 `int` 示例中，此参数将从 `int` 提升到 `double`，并成功调用函数的 `double` 版本，即使这可能并不是预期目的。  若要确保使用非双精度参数对此函数进行的任何调用均会导致编译器错误，您可以声明已删除的函数的模板版本。  
+ Notice in the preceding sample that calling `call_with_true_double_only` by using a `float` argument would cause a compiler error, but calling `call_with_true_double_only` by using an `int` argument would not; in the `int` case, the argument will be promoted from `int` to `double` and successfully call the `double` version of the function, even though that might not be what’s intended. To ensure that any call to this function by using a non-double argument causes a compiler error, you can declare a template version of the function that’s deleted.  
   
 ```  
 template < typename T >  

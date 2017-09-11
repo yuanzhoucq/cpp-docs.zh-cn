@@ -1,44 +1,59 @@
 ---
-title: "错误和异常处理（现代 C++） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Errors and Exception Handling (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 错误和异常处理（现代 C++）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 4f2e5173d1179e404cfbe13a19bf84d1ac5a865c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-在现代 c + +，在大多数情况下，报告和处理逻辑错误和运行时错误的首选的方式是使用异常。 当堆栈可能包含检测到错误的函数具有要知道如何处理它的上下文的函数之间的多个函数调用时，也是如此。 异常为检测到错误，无法传递调用堆栈中向上传递信息的代码提供正式的定义完善的方式。  
+---
+# <a name="errors-and-exception-handling-modern-c"></a>Errors and Exception Handling (Modern C++)
+In modern C++, in most scenarios, the preferred way to report and handle both logic errors and runtime errors is to use exceptions. This is especially true when the stack might contain several function calls between the function that detects the error and the function that has the context to know how to handle it. Exceptions provide a formal, well-defined way for code that detects errors to pass the information up the call stack.  
   
- 程序错误数通常分为两类︰ 逻辑错误而引起编程错误，例如，"索引超出范围"错误，而且不受控制的程序员来说，例如，运行时错误"网络服务不可用"错误。 在 C 样式编程中，在 COM 中，错误报告进行管理，通过返回一个值，表示错误代码或特定的功能，状态代码或设置调用方可以根据需要检索每个函数调用以查看是否已报告错误后的全局变量。 例如，COM 编程使用 HRESULT 返回值来传递给调用方的错误，并且 Win32 API 有 GetLastError 函数以检索已报告的调用堆栈的最后一个错误。 在这两种情况下，它由调用方识别的代码，并相应地对它做出响应。 如果调用方不显式处理的错误代码，该程序可能会崩溃而不发出警告，或继续执行用错误的数据并生成错误的结果。  
+ Program errors are generally divided into two categories: logic errors that are caused by programming mistakes, for example, an "index out of range" error, and runtime errors that are beyond the control of programmer, for example, a "network service unavailable" error. In C-style programming and in COM, error reporting is managed either by returning a value that represents an error code or a status code for a particular function, or by setting a global variable that the caller may optionally retrieve after every function call to see whether errors were reported. For example, COM programming uses the HRESULT return value to communicate errors to the caller, and the Win32 API has the GetLastError function to retrieve the last error that was reported by the call stack. In both of these cases, it's up to the caller to recognize the code and respond to it appropriately. If the caller doesn't explicitly handle the error code, the program might crash without warning, or continue to execute with bad data and produce incorrect results.  
   
- 在现代 c + + 中，异常都被首选以下原因引起的︰  
+ Exceptions are preferred in modern C++ for the following reasons:  
   
--   异常会强制调用代码以识别出现错误，并处理它。 未经处理的异常停止程序执行。  
+-   An exception forces calling code to recognize an error condition and handle it. Unhandled exceptions stop program execution.  
   
--   异常跳转到可以处理错误的调用堆栈中的点。 中间函数可以让异常传播。 它们不需要与其他层协调一致。  
+-   An exception jumps to the point in the call stack that can handle the error. Intermediate functions can let the exception propagate. They do not have to coordinate with other layers.  
   
--   异常堆栈展开机制销毁根据定义完善的规则的作用域中的所有对象后将引发异常。  
+-   The exception stack-unwinding mechanism destroys all objects in scope according to well-defined rules after an exception is thrown.  
   
--   异常实现完全分离之间检测到错误的代码和处理该错误代码。  
+-   An exception enables a clean separation between the code that detects the error and the code that handles the error.  
   
- 以下简化的示例演示引发和捕获异常，c + + 中的必需语法。  
+ The following simplified example shows the necessary syntax for throwing and catching exceptions in C++.  
   
 ```cpp  
-  
 #include <stdexcept>  
 #include <limits>  
 #include <iostream>  
@@ -73,41 +88,42 @@ int main()
   
 ```  
   
- 在 c + + 异常类似于 C# 和 Java 等语言中。 在 `try` 块，如果引发异常 *引发* 将 *捕获* 通过第一个关联 `catch` 块的类型与匹配的异常。 换而言之，执行将从跳 `throw` 语句 `catch` 语句。 如果找到没有任何可用的 catch 块，则 `std::terminate` 调用并退出程序。 在 c + +，可能会引发任何类型;但是，我们建议您引发派生的类型直接或间接从 `std::exception`。 在前面的示例中，异常类型， [invalid_argument](../standard-library/invalid-argument-class.md), ，标准库中定义 [\< stdexcept>](../standard-library/stdexcept.md) 标头文件。 C + + 未提供，并且不需要， `finally` 块来确保如果引发了异常，释放所有资源。 资源获取即是初始化 (RAII) 习语，使用了智能指针，提供所需的功能的资源清理。 有关详细信息，请参阅 [如何︰ 设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。 有关 c + + 堆栈展开机制的信息，请参阅 [异常和堆栈展开](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。  
+ Exceptions in C++ resemble those in languages such as C# and Java. In the `try` block, if an exception is *thrown* it will be *caught* by the first associated `catch` block whose type matches that of the exception. In other words, execution jumps from the `throw` statement to the `catch` statement. If no usable catch block is found, `std::terminate` is invoked and the program exits. In C++, any type may be thrown; however, we recommend that you throw a type that derives directly or indirectly from `std::exception`. In the previous example, the exception type, [invalid_argument](../standard-library/invalid-argument-class.md), is defined in the standard library in the [\<stdexcept>](../standard-library/stdexcept.md) header file. C++ does not provide, and does not require, a `finally` block to make sure that all resources are released if an exception is thrown. The resource acquisition is initialization (RAII) idiom, which uses smart pointers, provides the required functionality for resource cleanup. For more information, see [How to: Design for Exception Safety](../cpp/how-to-design-for-exception-safety.md). For information about the C++ stack-unwinding mechanism, see [Exceptions and Stack Unwinding](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
   
-## <a name="basic-guidelines"></a>基本指南  
- 可靠的错误处理是任何编程语言中具有挑战性。 尽管异常提供了多种功能，可支持良好的错误处理，但它们不能为您做的所有工作。 若要实现异常机制的好处，例外情况请记住，设计您的代码。  
+## <a name="basic-guidelines"></a>Basic guidelines  
+ Robust error handling is challenging in any programming language. Although exceptions provide several features that support good error handling, they can't do all the work for you. To realize the benefits of the exception mechanism, keep exceptions in mind as you design your code.  
   
--   使用断言来检查有应永远不会发生的错误。 使用异常来检查有错误，可能会发生，例如，在公共函数的输入参数验证错误。 有关详细信息，请参阅节 **异常与。断言**。  
+-   Use asserts to check for errors that should never occur. Use exceptions to check for errors that might occur, for example, errors in input validation on parameters of public functions. For more information, see the section titled **Exceptions vs. Assertions**.  
   
--   使用异常的代码可处理该错误可能由一个或多个干预的函数调用分隔的代码中检测到错误时。 考虑是否将处理该错误的代码是紧密耦合到检测到它的代码时改为使用性能关键循环中的错误代码。 有关何时不使用异常的详细信息，请参阅 [(NOTINBUILD) 何时不使用异常](http://msdn.microsoft.com/zh-cn/e810df8b-2217-4e81-bae5-02f0a69f1346)。  
+-   Use exceptions when the code that handles the error might be separated from the code that detects the error by one or more intervening function calls. Consider whether to use error codes instead in performance-critical loops when code that handles the error is tightly-coupled to the code that detects it. 
   
--   对于每个函数可能会引发或传播异常，提供一个三个异常保证︰ 增强保证、 基本保证或 nothrow (noexcept) 保证。 有关详细信息，请参阅 [如何︰ 设计异常安全性](../cpp/how-to-design-for-exception-safety.md)。  
+-   For every function that might throw or propagate an exception, provide one of the three exception guarantees: the strong guarantee, the basic guarantee, or the nothrow (noexcept) guarantee. For more information, see [How to: Design for Exception Safety](../cpp/how-to-design-for-exception-safety.md).  
   
--   通过值引发异常，通过引用捕获它们。 不会捕获您不能处理。 有关详细信息，请参阅 [引发和捕获异常 （c + +） (NOTINBUILD) 准则](http://msdn.microsoft.com/zh-cn/0a9b0a3a-64c5-43f5-a080-fca69b89e839)。  
+-   Throw exceptions by value, catch them by reference. Don’t catch what you can't handle. 
   
--   不要使用 C + + 11 中弃用的异常规范。 有关详细信息，请参阅节 **异常规范和 noexcept**。  
+-   Don't use exception specifications, which are deprecated in C++11. For more information, see the section titled **Exception specifications and noexcept**.  
   
--   适用时，请使用标准库异常类型。 派生自定义异常类型从 [exception 类](../standard-library/exception-class1.md) 层次结构。 有关详细信息，请参阅 [(NOTINBUILD) 如何︰ 使用标准库异常对象](http://msdn.microsoft.com/zh-cn/ad1fb785-ed4e-4d94-8e84-964353aed7b6)。  
+-   Use standard library exception types when they apply. Derive custom exception types from the [exception Class](../standard-library/exception-class.md) hierarchy.  
   
--   不允许异常从析构函数转义或内存释放函数。  
+-   Don't allow exceptions to escape from destructors or memory-deallocation functions.  
   
-## <a name="exceptions-and-performance"></a>异常和性能  
- 异常机制具有很少的性能开销，如果不引发任何异常。 如果引发异常，成本的堆栈遍历和展开是大概相当于函数调用的开销。 附加数据结构所需跟踪后的调用堆栈 `try` 输入块时，和其他说明所需展开堆栈，如果引发了异常。 但是，在大多数情况下，在性能和内存占用量的开销并不重要。 在性能上配置例外的副作用是可能具有重要价值仅在非常受内存限制的系统上或在性能关键循环错误可能会定期进行，并且处理它的代码紧密耦合到其报告的代码。 在任何情况下，不可能知道的异常的实际成本而无需分析和测量。 即使在极少情况下时的成本是很重要，您可以衡量它提高的正确性、 更轻松的可维护性和提供设计良好的异常策略的其他优点。  
+## <a name="exceptions-and-performance"></a>Exceptions and performance  
+ The exception mechanism has a very minimal performance cost if no exception is thrown. If an exception is thrown, the cost of the stack traversal and unwinding is roughly comparable to the cost of a function call. Additional data structures are required to track the call stack after a `try` block is entered, and additional instructions are required to unwind the stack if an exception is thrown. However, in most scenarios, the cost in performance and memory footprint is not significant. The adverse effect of exceptions on performance is likely to be significant only on very memory-constrained systems, or in performance-critical loops where an error is likely to occur regularly and the code to handle it is tightly coupled to the code that reports it. In any case, it's impossible to know the actual cost of exceptions without profiling and measuring. Even in those rare cases when the cost is significant, you can weigh it against the increased correctness, easier maintainability, and other advantages that are provided by a well-designed exception policy.  
   
-## <a name="exceptions-vs-assertions"></a>与断言异常  
- 异常和断言两种不同机制来检测在程序运行时错误。 使用断言来在不应可从您的代码是否正确，则返回 true 的开发过程中测试条件。 没有任何意义，在该错误指示在代码中必须保持不变，因为使用异常处理此类错误并不表示该程序是否在运行时从恢复的条件。 断言处停止执行该语句，以便您可以检查调试器; 中的程序状态异常将继续从第一个适当的 catch 处理程序的执行。 使用异常来检查可能会在运行时中，即使您的代码正确，例如，"文件找不到"或"内存不足。"的错误条件 您可能想要从这些条件，恢复，即使恢复只输出到日志消息并退出该程序。 始终检查通过使用异常的公共函数的参数。 即使您的函数是错误的您可能没有完全控制用户可能会传递给它的参数。  
+## <a name="exceptions-vs-assertions"></a>Exceptions vs. assertions  
+ Exceptions and asserts are two distinct mechanisms for detecting run-time errors in a program. Use asserts to test for conditions during development that should never be true if all your code is correct. There is no point in handling such an error by using an exception because the error indicates that something in the code has to be fixed, and doesn't represent a condition that the program has to recover from at run time. An assert stops execution at the statement so that you can inspect the program state in the debugger; an exception continues execution from the first appropriate catch handler. Use exceptions to check error conditions that might occur at run time even if your code is correct, for example, "file not found" or "out of memory." You might want to recover from these conditions, even if the recovery just outputs a message to a log and ends the program. Always check arguments to public functions by using exceptions. Even if your function is error-free, you might not have complete control over arguments that a user might pass to it.  
   
-## <a name="c-exceptions-versus-windows-seh-exceptions"></a>与 Windows SEH 异常的 c + + 异常  
- C 和 c + + 程序可以使用的结构化的异常处理 (SEH) 机制，Windows 操作系统中。 中的概念类似 c + + 异常类似，只不过 SEH 使用 `__try`, ，`__except`, ，和 `__finally` 构造而不是 `try` 和 `catch`。 在 Visual c + +，c + + 异常用于 SEH 实现。 但是，当您编写 c + + 代码，使用 c + + 异常语法。  
+## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++ exceptions versus Windows SEH exceptions  
+ Both C and C++ programs can use the structured exception handling (SEH) mechanism in the Windows operating system. The concepts in SEH resemble those in C++ exceptions, except that SEH uses the `__try`, `__except`, and `__finally` constructs instead of `try` and `catch`. In Visual C++, C++ exceptions are implemented for SEH. However, when you write C++ code, use the C++ exception syntax.  
   
- 有关 SEH 详细信息，请参阅 [结构化异常处理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)。  
+ For more information about SEH, see [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md).  
   
-## <a name="exception-specifications-and-noexcept"></a>异常规范和 noexcept  
- 异常规范是 c + + 中引入提升以任何方式来指定函数可能引发的异常。 但是，异常规范事实证明，在实践中，有问题，并且 C + + 11 草稿标准中已弃用。 我们建议您不要使用除异常规范 `throw()`, ，指示该异常，允许进行转义的异常。 如果必须使用类型的异常规范 `throw(`*类型*`)`, ，请注意， [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 偏离以某些方式的标准。 有关详细信息，请参阅 [异常规范 （引发）](../cpp/exception-specifications-throw-cpp.md)。  `noexcept` 说明符在 C + + 11 中引入的首选替代为 `throw()`。  
+## <a name="exception-specifications-and-noexcept"></a>Exception specifications and noexcept  
+ Exception specifications were introduced in C++ as a way to specify the exceptions that a function might throw. However, exception specifications proved problematic in practice, and are deprecated in the C++11 draft standard. We recommend that you do not use exception specifications except for `throw()`, which indicates that the function allows no exceptions to escape. If you must use exception specifications of the type `throw(`*type*`)`, be aware that Visual C++ departs from the standard in certain ways. For more information, see [Exception Specifications (throw)](../cpp/exception-specifications-throw-cpp.md). The `noexcept` specifier is introduced in C++11 as the preferred alternative to `throw()`.  
   
-## <a name="see-also"></a>另请参阅  
- [如何︰ 异常和非异常代码之间的接口](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
- [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 语言参考](../cpp/cpp-language-reference.md)   
- [C + + 标准库](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [How to: Interface Between Exceptional and Non-Exceptional Code](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)
+

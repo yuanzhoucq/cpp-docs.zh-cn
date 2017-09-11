@@ -1,29 +1,46 @@
 ---
-title: "本地声明名称的名称解析 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Locally Declared Names | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 本地声明名称的名称解析
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 767daf6f58a0389b14ea547fd912431734c41850
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-通过和不通过模板参数都可引用模板名称本身。  在类模板的范围内，名称本身引用模板。  在模板专用化或部分专用化的范围中，名称单独引用专用化或部分专用化。  也可以通过适当的模板参数引用模板的其他专用化或部分专用化。  
+---
+# <a name="name-resolution-for-locally-declared-names"></a>Name Resolution for Locally Declared Names
+The template's name itself can be referred to with or without the template arguments. In the scope of a class template, the name itself refers to the template. In the scope of a template specialization or partial specialization, the name alone refers to the specialization or partial specialization. Other specializations or partial specializations of the template can also be referenced, with the appropriate template arguments.  
   
-## 示例  
- 以下代码演示在专用化或部分专用化的范围内以不同的方式解释类模板的名称 A。  
+## <a name="example"></a>Example  
+ The following code shows that the class template's name A is interpreted differently in the scope of a specialization or partial specialization.  
   
 ```  
 // template_name_resolution3.cpp  
@@ -43,10 +60,10 @@ template<> class A<int> {
 };  
 ```  
   
-## 示例  
- 在模板参数与另一个对象之间出现名称冲突的情况下，模板参数可隐藏也可不隐藏。  下列规则将帮助确定优先顺序。  
+## <a name="example"></a>Example  
+ In the case of a name conflict between a template parameter and another object, the template parameter can or cannot be hidden. The following rules will help determine precedence.  
   
- 模板参数位于从其首先出现的位置开始一直到类或函数末尾的范围中。  如果名称再次出现在模板参数列表或基类列表中，则它将引用同一类型。  在标准 C\+\+ 中，无法在同一范围中声明与模板参数相同的其他名称。  Microsoft 扩展允许在模板范围内重新定义模板参数。  以下示例演示在类模板的基规范中使用模板参数。  
+ The template parameter is in scope from the point where it first appears until the end of the class or function template. If the name appears again in the template argument list or in the list of base classes, it refers to the same type. In standard C++, no other name that is identical to the template parameter can be declared in the same scope. A Microsoft extension allows the template parameter to be redefined in the scope of the template. The following example shows using the template parameter in the base specification of a class template.  
   
 ```  
 // template_name_resolution4.cpp  
@@ -62,8 +79,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 当在类模板外定义模板的成员函数时，可以使用不同的模板参数名称。  如果模板成员函数定义与声明对模板参数使用了不同的名称，并且定义中使用的名称与声明的其他成员冲突，则模板声明中的成员优先。  
+## <a name="example"></a>Example  
+ When defining a template's member functions outside the class template, a different template parameter name can be used. If the template member function definition uses a different name for the template parameter than the declaration does, and the name used in the definition conflicts with another member of the declaration, the member in the template declaration takes precedence.  
   
 ```  
 // template_name_resolution5.cpp  
@@ -92,9 +109,12 @@ int main() {
 }  
 ```  
   
-  **Z::Z\(\)**   
-## 示例  
- 在声明模板的命名空间外定义模板函数或成员函数时，模板参数将优先于命名空间中其他成员的名称。  
+```Output  
+Z::Z()  
+```  
+  
+## <a name="example"></a>Example  
+ When defining a template function or member function outside the namespace in which the template was declared, the template argument takes precedence over the names of other members of the namespace.  
   
 ```  
 // template_name_resolution6.cpp  
@@ -122,9 +142,12 @@ int main() {
 }  
 ```  
   
-  **C\<T\>::g**   
-## 示例  
- 在位于模板类声明之外的定义中，如果模板类具有不依赖于模板参数的基类，并且该基类或其成员之一与模板参数的名称相同，则该基类或成员名称将隐藏模板参数。  
+```Output  
+C<T>::g  
+```  
+  
+## <a name="example"></a>Example  
+ In definitions that are outside of the template class declaration, if a template class has a base class that does not depend on a template argument and if the base class or one of its members has the same name as a template argument, then the base class or member name hides the template argument.  
   
 ```  
 // template_name_resolution7.cpp  
@@ -155,7 +178,10 @@ int main() {
 }  
 ```  
   
-  **Base**  
-**1**   
-## 请参阅  
- [名称解析](../cpp/templates-and-name-resolution.md)
+```Output  
+Base  
+1  
+```  
+  
+## <a name="see-also"></a>See Also  
+ [Name Resolution](../cpp/templates-and-name-resolution.md)

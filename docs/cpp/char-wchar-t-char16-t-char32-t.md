@@ -1,44 +1,58 @@
 ---
-title: "char、wchar_t、char16_t、char32_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "char_cpp"
-  - "char16_t_cpp"
-  - "whchar_t_cpp"
-  - "char32_t_cpp"
-dev_langs: 
-  - "C++"
+title: char, wchar_t, char16_t, char32_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- char_cpp
+- char16_t_cpp
+- whchar_t_cpp
+- char32_t_cpp
+dev_langs:
+- C++
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
 caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# char、wchar_t、char16_t、char32_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ed34959adc927aefd97299704285994897f4e6ef
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-类型 char、wchar\_t、char16\_t 和 char32\_t 是内置类型，可表示字母数字字符，以及非字母数字的标志符号和非打印字符。  大小方面，char 是 8 位、wchar\_t 和 char16\_t 是 16 位，而 char32\_t 是 32 位。  
+---
+# <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
+The types char, wchar_t, char16_t and char32_t are built in types that represent alphanumeric characters as well as non-alphanumeric glyphs and non-printing characters. char is eight bits in size, wchar_t and char16_t are 16 bits in size, and char32_t is 32 bits.  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
-```vb  
-char     ch1{ 'a' };  
-wchar_t  ch2{ 'a' }; // or {L'a'}  
-char16_t ch3{ L'a' };// or {L'a'}  
-char32_t ch4{ L'a' };// or {L'a'}  
+```cpp  
+char     ch1{ 'a' };    wchar_t  ch2{ 'a' }; // or {L'a'}    char16_t ch3{ L'a' };// or {L'a'}    char32_t ch4{ L'a' };// or {L'a'}  
 ```  
   
-## 备注  
- `char` 类型是 C 和 C\+\+ 中的原始字符类型。  它可以用于存储 ASCII 字符集或所有 ISO\-8859 字符集或 UTF\-8 字符集中的字符。  类型 `unsigned char` 通常用于表示不是 C\+\+ 中的内置类型的*字节*。  Char 类型不适用于很多语言的文本。  一般情况下，现代程序应使用一种宽字符类型来表示文本。  Unicode 是  
+## <a name="remarks"></a>Remarks  
+ The `char` type was the original character type in C and C++. It can be used to store characters from the ASCII character set or any of the ISO-8859 character sets, or the UTF-8 character set. The type `unsigned char` is often used to represent a *byte* which is not a built-in type in C++. The char type is not suitable for text in many languages. In general, modern programs should use one of the wide character types to represent text. Unicode is the  
   
- 在 C\+\+ 标准库中，basic\_string 类型专用于窄字符串和宽字符串。  当字符类型为 char 时，使用 std::string，字符类型为 wchar\_t 时，则使用 std::wstring。  其他表示文本的类型，包括 std::stringstream 和 std::cout 均可专用于窄字符串和宽字符串。  
+ In the C++ standard library, the basic_string type is specialized for both narrow and wide strings. Use std::string when the characters are of type char, and std::wstring when the characters are of type wchar_t. Other types that represent text, including std::stringstream and std::cout have specializations for narrow and wide strings.  
   
-## 要求
+## <a name="requirements"></a>Requirements

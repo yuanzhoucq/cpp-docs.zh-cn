@@ -1,68 +1,85 @@
 ---
-title: "模板和名称解析 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Templates and Name Resolution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 模板和名称解析
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 2918ddc1cf8c0910e5cb16268c0adb40ca4507ce
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-在模板定义中，有三种类型的名称。  
+---
+# <a name="templates-and-name-resolution"></a>Templates and Name Resolution
+In template definitions, there are three types of names.  
   
--   本部声明的名称，包括模板本身的名称以及在模板定义中声明的任何名称。  
+-   Locally declared names, including the name of the template itself and any names declared inside the template definition.  
   
--   模板定义之外的封闭范围中的名称。  
+-   Names from the enclosing scope outside the template definition.  
   
--   在某种程度上依赖于模板参数的名称（称为依赖名称）。  
+-   Names that depend in some way on the template arguments, referred to as dependent names.  
   
- 尽管前两个名称也属于类和函数范围，但模板定义中需要针对名称解析的特殊规则来处理依赖名称的提高的复杂性。  原因在于，在对模板进行实例化前，编译器几乎不知道这些名称，因为它们可能是依赖于所使用的模板参数的完全不同的类型。  将根据常用规则，在模板的定义点上查找非依赖名称。  将为所有模板专用化查找这些名称（独立于模板参数）一次。  在将模板实例化并为每个专用化单独查找模板之前，将不会查找依赖名称。  
+ While the first two names also pertain to class and function scopes, special rules for name resolution are required in template definitions to deal with the added complexity of dependent names. This is because the compiler knows little about these names until the template is instantiated, because they could be totally different types depending on which template arguments are used. Nondependent names are looked up according to the usual rules and at the point of definition of the template. These names, being independent of the template arguments, are looked up once for all template specializations. Dependent names are not looked up until the template is instantiated and are looked up separately for each specialization.  
   
- 如果某个类型依赖于模板参数，则该类型属于依赖类型。  具体而言，如果类型是以下项，则属于依赖类型：  
+ A type is dependent if it depends on the template arguments. Specifically, a type is dependent if it is:  
   
--   模板参数本身：  
+-   The template argument itself:  
   
     ```  
     T  
     ```  
   
--   具有包括依赖类型的限定的限定名：  
+-   A qualified name with a qualification including a dependent type:  
   
     ```  
     T::myType  
     ```  
   
--   当非限定部分标识依赖类型时的限定名：  
+-   A qualified name if the unqualified part identifies a dependent type:  
   
     ```  
     N::T  
     ```  
   
--   其基类型属于依赖类型的不变或可变类型：  
+-   A const or volatile type for which the base type is a dependent type:  
   
     ```  
     const T  
     ```  
   
--   基于依赖类型的指针、引用、数组或函数指针类型：  
+-   A pointer, reference, array, or function pointer type based on a dependent type:  
   
     ```  
     T *, T &, T [10], T (*)()  
     ```  
   
--   大小基于模板参数的数组：  
+-   An array whose size is based on a template parameter:  
   
     ```  
     template <int arg> class X {  
@@ -70,16 +87,16 @@ caps.handback.revision: 6
     }  
     ```  
   
--   从模板参数构造的模板类型：  
+-   a template type constructed from a template parameter:  
   
     ```  
     T<int>, MyTemplate<T>  
     ```  
   
-## 类型依赖和值依赖  
- 模板参数上的名称和表达式依赖项分为类型依赖项或值依赖项，具体取决于模板参数是类型参数还是值参数。  此外，在模板参数上有类型依赖项的模板中声明的任何标识符都被视为依赖值，使用值依赖表达式初始化的整数类型或枚举类型也是如此。  
+## <a name="type-dependence-and-value-dependence"></a>Type Dependence and Value Dependence  
+ Names and expressions dependent on a template parameter are categorized as type dependent or value dependent, depending on whether the template parameter is a type parameter or a value parameter. Also, any identifiers declared in a template with a type dependent on the template argument are considered value dependent, as is a integral or enumeration type initialized with a value-dependent expression.  
   
- 类型依赖和值依赖表达式是涉及类型依赖或值依赖的变量的表达式。  这些表达式可能有不同的语义，具体取决于用于模板的参数。  
+ Type-dependent and value-dependent expressions are expressions that involve variables that are type dependent or value dependent. These expressions can have semantics that differ, depending on the parameters used for the template.  
   
-## 请参阅  
- [模板](../cpp/templates-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Templates](../cpp/templates-cpp.md)

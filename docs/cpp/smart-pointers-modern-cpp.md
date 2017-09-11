@@ -1,125 +1,141 @@
 ---
-title: "智能指针（现代 C++） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Smart Pointers (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 caps.latest.revision: 26
-caps.handback.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 智能指针（现代 C++）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 6b25a9c39f09aef0958c475b663151b97285a6fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-在现代 C\+\+ 编程中，标准库包含智能指针，该指针用于确保程序不存在内存和资源泄漏且是异常安全的。  
+---
+# <a name="smart-pointers-modern-c"></a>Smart Pointers (Modern C++)
+In modern C++ programming, the Standard Library includes *smart pointers*, which are used to help ensure that programs are free of memory and resource leaks and are exception-safe.  
   
-## 智能指针的使用  
- 智能指针是在 [\<memory\>](../standard-library/memory.md) 标头文件中的 `std` 命名空间中定义的。  它们对 [RAII](../cpp/objects-own-resources-raii.md) 或“获取资源即初始化”编程惯用法至关重要。  此习惯用法的主要目的是确保资源获取与对象初始化同时发生，从而能够创建该对象的所有资源并在某行代码中准备就绪。  实际上，RAII 的主要原则是为将任何堆分配资源（例如，动态分配内存或系统对象句柄）的所有权提供给其析构函数包含用于删除或释放资源的代码以及任何相关清理代码的堆栈分配对象。  
+## <a name="uses-for-smart-pointers"></a>Uses for smart pointers  
+ Smart pointers are defined in the `std` namespace in the [\<memory>](../standard-library/memory.md) header file. They are crucial to the [RAII](../cpp/objects-own-resources-raii.md) or *Resource Acquisition Is Initialialization* programming idiom. The main goal of this idiom is to ensure that resource acquisition occurs at the same time that the object is initialized, so that all resources for the object are created and made ready in one line of code. In practical terms, the main principle of RAII is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles—to a stack-allocated object whose destructor contains the code to delete or free the resource and also any associated cleanup code.  
   
- 大多数情况下，当初始化原始指针或资源句柄以指向实际资源时，会立即将指针传递给智能指针。  在现代 C\+\+ 中，原始指针仅用于范围有限的小代码块、循环或者性能至关重要且不会混淆所有权的 Helper 函数中。  
+ In most cases, when you initialize a raw pointer or resource handle to point to an actual resource, pass the pointer to a smart pointer immediately. In modern C++, raw pointers are only used in small code blocks of limited scope, loops, or helper functions where performance is critical and there is no chance of confusion about ownership.  
   
- 下面的示例将原始指针声明与智能指针声明进行了比较。  
+ The following example compares a raw pointer declaration to a smart pointer declaration.  
   
  [!code-cpp[smart_pointers_intro#1](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_1.cpp)]  
   
- 如示例所示，智能指针是你在堆栈上声明的类模板，并可通过使用指向某个堆分配的对象的原始指针进行初始化。  在初始化智能指针后，它将拥有原始的指针。  这意味着智能指针负责删除原始指针指定的内存。  智能指针析构函数包括要删除的调用，并且由于在堆栈上声明了智能指针，当智能指针超出范围时将调用其析构函数，尽管堆栈上的某处将进一步引发异常。  
+ As shown in the example, a smart pointer is a class template that you declare on the stack, and initialize by using a raw pointer that points to a heap-allocated object. After the smart pointer is initialized, it owns the raw pointer. This means that the smart pointer is responsible for deleting the memory that the raw pointer specifies. The smart pointer destructor contains the call to delete, and because the smart pointer is declared on the stack, its destructor is invoked when the smart pointer goes out of scope, even if an exception is thrown somewhere further up the stack.  
   
- 通过使用熟悉的指针运算符（`->` 和 `*`）访问封装指针，智能指针类将重载这些运算符以返回封装的原始指针。  
+ Access the encapsulated pointer by using the familiar pointer operators, `->` and `*`, which the smart pointer class overloads to return the encapsulated raw pointer.  
   
- C\+\+ 智能指针思路类似于在语言（如 C\#）中创建对象的过程：创建对象后让系统负责在正确的时间将其删除。  不同之处在于，单独的垃圾回收器不在后台运行；按照标准 C\+\+ 范围规则对内存进行管理，以使运行时环境更快速更有效。  
+ The C++ smart pointer idiom resembles object creation in languages such as C#: you create the object and then let the system take care of deleting it at the correct time. The difference is that no separate garbage collector runs in the background; memory is managed through the standard C++ scoping rules so that the runtime environment is faster and more efficient.  
   
 > [!IMPORTANT]
->  请始终在单独的代码行上创建智能指针，而绝不在参数列表中创建智能指针，这样就不会由于某些参数列表分配规则而发生轻微泄露资源的情况。  
+>  Always create smart pointers on a separate line of code, never in a parameter list, so that a subtle resource leak won't occur due to certain parameter list allocation rules.  
   
- 下面的示例演示了如何使用标准模板库中的 `unique_ptr` 智能指针类型将指针封装到大型对象。  
+ The following example shows how a `unique_ptr` smart pointer type from the C++ Standard Library could be used to encapsulate a pointer to a large object.  
   
  [!code-cpp[smart_pointers_intro#2](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]  
   
- 此示例演示如何使用智能指针执行以下关键步骤。  
+ The example demonstrates the following essential steps for using smart pointers.  
   
-1.  将智能指针声明为一个自动（局部）变量。（不要对智能指针本身使用 `new` 或 `malloc` 表达式。）  
+1.  Declare the smart pointer as an automatic (local) variable. (Do not use the `new` or `malloc` expression on the smart pointer itself.)  
   
-2.  在类型参数中，指定封装指针的指向类型。  
+2.  In the type parameter, specify the pointed-to type of the encapsulated pointer.  
   
-3.  在智能指针构造函数中将原始指针传递至 `new` 对象。（某些实用工具函数或智能指针构造函数可为你执行此操作。）  
+3.  Pass a raw pointer to a `new`-ed object in the smart pointer constructor. (Some utility functions or smart pointer constructors do this for you.)  
   
-4.  使用重载的 `->` 和 `*` 运算符访问对象。  
+4.  Use the overloaded `->` and `*` operators to access the object.  
   
-5.  允许智能指针删除对象。  
+5.  Let the smart pointer delete the object.  
   
- 智能指针的设计原则是在内存和性能上尽可能高效。  例如，`unique_ptr` 中的唯一数据成员是封装的指针。  这意味着，`unique_ptr` 与该指针的大小完全相同，不是四个字节就是八个字节。  使用重载了 \* 和 \-\> 运算符的智能指针访问封装指针的速度不会明显慢于直接访问原始指针的速度。  
+ Smart pointers are designed to be as efficient as possible both in terms of memory and performance. For example, the only data member in `unique_ptr` is the encapsulated pointer. This means that `unique_ptr` is exactly the same size as that pointer, either four bytes or eight bytes. Accessing the encapsulated pointer by using the smart pointer overloaded * and -> operators is not significantly slower than accessing the raw pointers directly.  
   
- 智能指针具有通过使用“点”表示法访问的成员函数。  例如，一些 STL 智能指针具有释放指针所有权的重置成员函数。  如果你想要在智能指针超出范围之前释放其内存将很有用，这会很有用，如以下示例所示：  
+ Smart pointers have their own member functions, which are accessed by using “dot” notation. For example, some C++ Standard Library smart pointers have a reset member function that releases ownership of the pointer. This is useful when you want to free the memory owned by the smart pointer before the smart pointer goes out of scope, as shown in the following example.  
   
  [!code-cpp[smart_pointers_intro#3](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]  
   
- 智能指针通常提供直接访问其原始指针的方法。  STL 智能指针拥有一个用于此目的的 `get` 成员函数，`CComPtr` 拥有一个公共的 `p` 类成员。  通过提供对基础指针的直接访问，你可以使用智能指针管理你自己的代码中的内存，还能将原始指针传递给不支持智能指针的代码。  
+ Smart pointers usually provide a way to access their  raw pointer directly. C++ Standard Library smart pointers have a `get` member function for this purpose, and `CComPtr` has a public `p` class member. By providing direct access to the underlying pointer, you can use the smart pointer to manage memory in your own code and still pass the raw pointer to code that does not support smart pointers.  
   
  [!code-cpp[smart_pointers_intro#4](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]  
   
-## 智能指针的类型  
- 下一节总结了 Windows 编程环境中可用的不同类型的智能指针，并说明了何时使用它们。  
+## <a name="kinds-of-smart-pointers"></a>Kinds of Smart Pointers  
+ The following section summarizes the different kinds of smart pointers that are available in the Windows programming environment and describes when to use them.  
   
- **C\+\+ 标准库智能指针**  
- 使用这些智能指针作为将指针封装为纯旧 C\+\+ 对象 \(POCO\) 的首选项。  
+ **C++ Standard Library Smart Pointers**  
+ Use these smart pointers as a first choice for encapsulating pointers to plain old C++ objects (POCO).  
   
--   `unique_ptr`    
-    只允许基础指针的一个所有者。  除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。  可以移到新所有者，但不会复制或共享。  替换已弃用的 `auto_ptr`。  与 `boost::scoped_ptr` 比较。  `unique_ptr` 小巧高效；大小等同于一个指针且支持 rvalue 引用，从而可实现快速插入和对 STL 集合的检索。  头文件：`<memory>`。  有关更多信息，请参见[如何：创建和使用 unique\_ptr 实例](../cpp/how-to-create-and-use-unique-ptr-instances.md)和[unique\_ptr 类](../standard-library/unique-ptr-class.md)。  
+-   `unique_ptr`   
+     Allows exactly one owner of the underlying pointer. Use as the default choice for POCO unless you know for certain that you require a `shared_ptr`. Can be moved to a new owner, but not copied or shared. Replaces `auto_ptr`, which is deprecated. Compare to `boost::scoped_ptr`. `unique_ptr` is small and efficient; the size is one pointer and it supports rvalue references for fast insertion and retrieval from C++ Standard Library collections. Header file: `<memory>`. For more information, see [How to: Create and Use unique_ptr Instances](../cpp/how-to-create-and-use-unique-ptr-instances.md) and [unique_ptr Class](../standard-library/unique-ptr-class.md).  
   
--   `shared_ptr`    
-    采用引用计数的智能指针。  如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。  直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。  大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。  头文件：`<memory>`。  有关更多信息，请参见[如何：创建和使用 shared\_ptr 实例](../cpp/how-to-create-and-use-shared-ptr-instances.md)和[shared\_ptr 类](../standard-library/shared-ptr-class.md)。  
+-   `shared_ptr`   
+     Reference-counted smart pointer. Use when you want to assign one raw pointer to multiple owners, for example, when you return a copy of a pointer from a container but want to keep the original. The raw pointer is not deleted until all `shared_ptr` owners have gone out of scope or have otherwise given up ownership. The size is two pointers; one for the object and one for the shared control block that contains the reference count. Header file: `<memory>`. For more information, see [How to: Create and Use shared_ptr Instances](../cpp/how-to-create-and-use-shared-ptr-instances.md) and [shared_ptr Class](../standard-library/shared-ptr-class.md).  
   
--   `weak_ptr`    
-    结合 `shared_ptr` 使用的特例智能指针。  `weak_ptr` 提供对一个或多个 `shared_ptr` 实例拥有的对象的访问，但不参与引用计数。  如果你想要观察某个对象但不需要其保持活动状态，请使用该实例。  在某些情况下，需要断开 `shared_ptr` 实例间的循环引用。  头文件：`<memory>`。  有关更多信息，请参见[如何：创建和使用共享 weak\_ptr 实例](../cpp/how-to-create-and-use-weak-ptr-instances.md)和[weak\_ptr 类](../standard-library/weak-ptr-class.md)。  
+-   `weak_ptr`   
+    Special-case smart pointer for use in conjunction with `shared_ptr`. A `weak_ptr` provides access to an object that is owned by one or more `shared_ptr` instances, but does not participate in reference counting. Use when you want to observe an object, but do not require it to remain alive. Required in some cases to break circular references between `shared_ptr` instances. Header file: `<memory>`. For more information, see [How to: Create and Use weak_ptr Instances](../cpp/how-to-create-and-use-weak-ptr-instances.md) and [weak_ptr Class](../standard-library/weak-ptr-class.md).  
   
- **COM 对象的智能指针（经典 Windows 编程）**  
- 当你使用 COM 对象时，请将接口指针包装到适当的智能指针类型中。  活动模板库 \(ATL\) 针对各种目的定义了多种智能指针。  你还可以使用 `_com_ptr_t` 智能指针类型，编译器在从 .tlb 文件创建包装器类时会使用该类型。  无需包含 ATL 标头文件时，它是最好的选择。  
+ **Smart Pointers for COM Objects (Classic Windows Programming)**  
+ When you work with COM objects, wrap the interface pointers in an appropriate smart pointer type. The Active Template Library (ATL) defines several smart pointers for various purposes. You can also use the `_com_ptr_t` smart pointer type, which the compiler uses when it creates wrapper classes from .tlb files. It's the best choice when you do not want to include the ATL header files.  
   
  [CComPtr Class](../atl/reference/ccomptr-class.md)  
- 除非你无法使用 ATL，否则使用此类型。  使用 `AddRef` 和 `Release` 方法执行引用计数。  有关详细信息，请参阅[如何：创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。  
+ Use this unless you cannot use ATL. Performs reference counting by using the `AddRef` and `Release` methods. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComQIPtr Class](../atl/reference/ccomqiptr-class.md)  
- 类似于 `CComPtr`，但还提供了用于在 COM 对象上调用 `QueryInterface` 的简化语法。  有关详细信息，请参阅[如何：创建和使用 CComPtr 和 CComQIPtr 实例](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。  
+ Resembles `CComPtr` but also provides simplified syntax for calling `QueryInterface` on COM objects. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
   
  [CComHeapPtr Class](../atl/reference/ccomheapptr-class.md)  
- 指向使用 `CoTaskMemFree` 释放内存的对象的智能指针。  
+ Smart pointer to objects that use `CoTaskMemFree` to free memory.  
   
  [CComGITPtr Class](../atl/reference/ccomgitptr-class.md)  
- 从全局接口表 \(GIT\) 获取的接口的智能指针。  
+ Smart pointer for interfaces that are obtained from the global interface table (GIT).  
   
- [\_com\_ptr\_t 类](../cpp/com-ptr-t-class.md)  
- 在功能上类似于 `CComQIPtr`，但不依赖于 ATL 标头。  
+ [_com_ptr_t Class](../cpp/com-ptr-t-class.md)  
+ Resembles `CComQIPtr` in functionality but does not depend on ATL headers.  
   
- **POCO 对象的 ATL 智能指针**  
- 除 COM 对象的智能指针外，ATL 还为纯旧 C\+\+ 对象定义了智能指针和智能指针集合。  在经典 Windows 编程中，这些类型可用于替代 STL 集合，尤其是不要求代码可移植性或不需要混合 STL 和 ATL 的编程模型时。  
+ **ATL Smart Pointers for POCO Objects**  
+ In addition to smart pointers for COM objects, ATL also defines smart pointers, and collections of smart pointers, for plain old C++ objects. In classic Windows programming, these types are useful alternatives to the C++ Standard Library collections, especially when code portability is not required or when you do not want to mix the programming models of the C++ Standard Library and ATL.  
   
  [CAutoPtr Class](../atl/reference/cautoptr-class.md)  
- 通过转移副本所有权增强唯一所有权的智能指针。  等同于已弃用的 `std::auto_ptr` 类。  
+ Smart pointer that enforces unique ownership by transferring ownership on copy. Comparable to the deprecated `std::auto_ptr` Class.  
   
  [CHeapPtr Class](../atl/reference/cheapptr-class.md)  
- 使用 C [malloc](../c-runtime-library/reference/malloc.md) 函数分配的对象的智能指针。  
+ Smart pointer for objects that are allocated by using the C [malloc](../c-runtime-library/reference/malloc.md) function.  
   
  [CAutoVectorPtr Class](../atl/reference/cautovectorptr-class.md)  
- 使用 `new[]` 分配的数组的智能指针。  
+ Smart pointer for arrays that are allocated by using `new[]`.  
   
  [CAutoPtrArray Class](../atl/reference/cautoptrarray-class.md)  
- 封装一个 `CAutoPtr` 元素数组的类。  
+ Class that encapsulates an array of `CAutoPtr` elements.  
   
  [CAutoPtrList Class](../atl/reference/cautoptrlist-class.md)  
- 封装用于操作 `CAutoPtr` 节点列表的方法的类。  
+ Class that encapsulates methods for manipulating a list of `CAutoPtr` nodes.  
   
-## 请参阅  
- [欢迎回到 C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+ 语言参考](../cpp/cpp-language-reference.md)   
- [C\+\+ 标准库](../standard-library/cpp-standard-library-reference.md)   
- [概述:在 C\+\+ 的内存管理](http://msdn.microsoft.com/zh-cn/2201885d-3d91-4a6e-aaa6-7a554e0362a8)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)   
+

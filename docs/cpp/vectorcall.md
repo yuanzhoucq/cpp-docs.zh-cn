@@ -1,43 +1,60 @@
 ---
-title: "__vectorcall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: __vectorcall | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# __vectorcall
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: c1478412f985d61a0bbd4635c7467a24b9074124
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-**Microsoft 专用**  
+---
+# <a name="vectorcall"></a>__vectorcall
+**Microsoft Specific**  
   
- `__vectorcall` 调用约定指定尽可能在寄存器中传递函数的参数。  `__vectorcall` 对参数使用的寄存器的数目多于 [\_\_fastcall](../cpp/fastcall.md) 或默认的 [x64 调用约定](../build/overview-of-x64-calling-conventions.md)对参数使用的寄存器的数目。  `__vectorcall` 调用约定仅受到包括流式处理 SIMD 扩展 2 \(SSE2\) 和更高版本的 x86 和 x64 处理器上的本机代码的支持。  使用 `__vectorcall` 可使传递多个浮点或 SIMD 矢量参数的函数加速，并执行利用寄存器中加载的参数的操作。  以下列表显示了 `__vectorcall` 的 x86 和 x64 实现所共有的功能。  本文的后面部分解释了这些差异。  
+ The `__vectorcall` calling convention specifies that arguments to functions are to be passed in registers, when possible. `__vectorcall` uses more registers for arguments than [__fastcall](../cpp/fastcall.md) or the default [x64 calling convention](../build/overview-of-x64-calling-conventions.md) use. The `__vectorcall` calling convention is only supported in native code on x86 and x64 processors that include Streaming SIMD Extensions 2 (SSE2) and above. Use `__vectorcall` to speed functions that pass several floating-point or SIMD vector arguments and perform operations that take advantage of the arguments loaded in registers. The following list shows the features that are common to the x86 and x64 implementations of `__vectorcall`. The differences are explained later in this article.  
   
-|元素|实现|  
-|--------|--------|  
-|C 名称修饰约定|函数名的前缀为两个“at”符号 \(@@\)，后接参数列表中的字节数（以十进制形式表示）。|  
-|大小写转换约定|不执行任何大小写转换。|  
+|Element|Implementation|  
+|-------------|--------------------|  
+|C name-decoration convention|Function names are suffixed with two "at" signs (@@) followed by the number of bytes (in decimal) in the parameter list.|  
+|Case-translation convention|No case translation is performed.|  
   
- 使用 [\/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) 编译器选项将导致模块中的每个函数编译为 `__vectorcall`，除非函数是成员函数、利用冲突调用约定特性进行声明、使用 `vararg` 变量参数列表或具有名称 `main`。  
+ Using the [/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) compiler option causes each function in the module to compile as `__vectorcall` unless the function is a member function, is declared with a conflicting calling convention attribute, uses a `vararg` variable argument list, or has the name `main`.  
   
- 您可通过寄存器在 `__vectorcall` 函数中传递三种参数：整数类型值、矢量类型值和同类矢量聚合 \(HVA\) 值。  
+ You can pass three kinds of arguments by register in `__vectorcall` functions: *integer type* values, *vector type* values, and *homogeneous vector aggregate* (HVA) values.  
   
- 整数类型满足两个要求：它适合处理器的本机寄存器大小（例如，x86 计算机上的 4 个字节或 x64 计算机上的 8 个字节），而且它可以转换成与寄存器长度一样的整数，并且不用更改其位表示形式就能转换回来。  例如，所有可以提升到 x86 上的 `int`（x64 上的 `long long`）\- 例如，`char` 或 `short`（或可转换为 `int`（x64 上的 `long long`））是整数类型，它们无需更改即可返回其原始类型。  整数类型包括指针、引用和小于或等于 4 个字节（x64 上为 8 个字节）的 `struct` 或 `union` 类型。  在 x64 平台上，更大的 `struct` 和 `union` 类型通过引用传递给调用方所分配的内存；在 x86 平台上，通过堆栈上的值传递它们。  
+ An integer type satisfies two requirements: it fits in the native register size of the processor—for example, 4 bytes on an x86 machine or 8 bytes on an x64 machine—and it’s convertible to an integer of register length and back again without changing its bit representation. For example, any type that can be promoted to `int` on x86 (`long long` on x64)—for example, a `char` or `short`—or that can be cast to `int` (`long long` on x64) and back to its original type without change is an integer type. Integer types include pointer, reference, and `struct` or `union` types of 4 bytes (8 bytes on x64) or less. On x64 platforms, larger `struct` and `union` types are passed by reference to memory allocated by the caller; on x86 platforms, they are passed by value on the stack.  
   
- 矢量类型是一个浮点类型（例如，`float` 或 `double`）或一个 SIMD 矢量类型（例如，`__m128` 或 `__m256`）。  
+ A vector type is either a floating-point type—for example, a `float` or `double`—or an SIMD vector type—for example, `__m128` or `__m256`.  
   
- HVA 类型是复合类型，包含四个具有相同矢量类型的数据成员。  HVA 类型具有和其成员的矢量类型相同的对齐要求。  这是有关 HVA `struct` 定义的示例，该定义包含三个相同的矢量类型且具有 32 字节对齐方式：  
+ An HVA type is a composite type of up to four data members that have identical vector types. An HVA type has the same alignment requirement as the vector type of its members. This is an example of an HVA `struct` definition that contains three identical vector types and has 32-byte alignment:  
   
 ```cpp  
 typedef struct {  
@@ -48,13 +65,13 @@ typedef struct {
   
 ```  
   
- 使用头文件中的 `__vectorcall` 关键字对函数进行显式声明，以使独立编译的代码在链接时不会出错。  函数必须为使用 `__vectorcall` 的原型，而不能使用 `vararg` 可变长度参数列表。  
+ Declare your functions explicitly with the `__vectorcall` keyword in header files to allow separately compiled code to link without errors. Functions must be prototyped to use `__vectorcall`, and can’t use a `vararg` variable length argument list.  
   
- 成员函数可以通过使用 `__vectorcall` 说明符进行声明。  通过寄存器传递隐藏的 `this` 指针作为第一个整数类型参数。  
+ A member function may be declared by using the `__vectorcall` specifier. The hidden `this` pointer is passed by register as the first integer type argument.  
   
- 在 ARM 计算机上，`__vectorcall` 由编译器接受和忽略。  
+ On ARM machines, `__vectorcall` is accepted and ignored by the compiler.  
   
- 对于非静态类成员函数，如果函数是超行定义的，则调用约定修饰符不必在超行定义中指定。  也就是说，对于类非静态成员，在定义时假定声明期间指定的调用约定。  给定此类定义：  
+ For non-static class member functions, if the function is defined out-of-line, the calling convention modifier does not have to be specified on the out-of-line definition. That is, for class non-static members, the calling convention specified during declaration is assumed at the point of definition. Given this class definition:  
   
 ```cpp  
 struct MyClass {  
@@ -62,38 +79,38 @@ struct MyClass {
 };  
 ```  
   
- 此：  
+ this:  
   
 ```cpp  
 void MyClass::mymethod() { return; }  
 ```  
   
- 等效于此：  
+ is equivalent to this:  
   
 ```cpp  
 void __vectorcall MyClass::mymethod() { return; }  
 ```  
   
- 必须在创建指向 `__vectorcall` 函数的指针时，指定`__vectorcall` 调用约定修饰符。  下一个示例针对指向 `__vectorcall` 函数的指针创建 `typedef`，该函数采用四个 `double` 参数并返回一个 `__m256` 值：  
+ The `__vectorcall` calling convention modifier must be specified when a pointer to a `__vectorcall` function is created. The next example creates a `typedef` for a pointer to a `__vectorcall` function that takes four `double` arguments and returns an `__m256` value:  
   
 ```cpp  
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);  
 ```  
   
-## x64 上的 \_\_vectorcall 约定  
- x64 上的 `__vectorcall` 调用约定扩展标准 x64 调用约定以利用其他寄存器。  根据参数列表中的位置将整数类型参数和矢量类型参数映射到寄存器。  将 HVA 参数分配给未使用的矢量寄存器。  
+## <a name="vectorcall-convention-on-x64"></a>__vectorcall convention on x64  
+ The `__vectorcall` calling convention on x64 extends the standard x64 calling convention to take advantage of additional registers. Both integer type arguments and vector type arguments are mapped to registers based on position in the argument list. HVA arguments are allocated to unused vector registers.  
   
- 当前四个参数（按从左到右的顺序）都是整数类型参数时，它们将传递到对应该位置的寄存器，即 RCX、RDX、R8 或 R9。  隐藏的 `this` 指针被视为第一个整数类型参数。  当前四个参数之一中的 HVA 参数无法传入可用寄存器时，对调用方分配的内存的引用将传入相应的整数类型寄存器。  第四个参数位置之后的整数类型参数在堆栈上传递。  
+ When any of the first four arguments in order from left to right are integer type arguments, they are passed in the register that corresponds to that position—RCX, RDX, R8, or R9. A hidden `this` pointer is treated as the first integer type argument. When an HVA argument in one of the first four arguments can’t be passed in the available registers, a reference to caller-allocated memory is passed in the corresponding integer type register instead. Integer type arguments after the fourth parameter position are passed on the stack.  
   
- 当前六个参数（按从左到右的顺序）都是矢量类型参数时，将根据参数位置通过 0 到 5 的 SSE 矢量寄存器中的值传递它们。  浮点和 `__m128` 类型在 XMM 寄存器中传递，而 `__m256` 类型在 YMM 寄存器中传递。  这与标准 x64 调用约定不同，因为矢量类型是通过值而不是引用传递的，并且还使用了其他寄存器。  为矢量类型参数分配的影子堆栈空间固定为 8 个字节，而 [\/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) 选项不适用。  在第七个参数位置和后面的参数位置的矢量类型参数在堆栈上通过对由调用方分配的内存的引用进行传递。  
+ When any of the first six arguments in order from left to right are vector type arguments, they are passed by value in SSE vector registers 0 to 5 according to argument position. Floating-point and `__m128` types are passed in XMM registers, and `__m256` types are passed in YMM registers. This differs from the standard x64 calling convention, because the vector types are passed by value instead of by reference, and additional registers are used. The shadow stack space allocated for vector type arguments is fixed at 8 bytes, and the [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) option does not apply. Vector type arguments in the seventh and later parameter positions are passed on the stack by reference to memory allocated by the caller.  
   
- 在为矢量参数分配寄存器后，只要整个 HVA 有足量的可用寄存器，HVA 参数的数据成员就会以升序分配给未使用的矢量寄存器 XMM0 至 XMM5（或者，对于 `__m256` 类型，为 YMM0 至 YMM5）。  如果没有足够多的可用寄存器，HVA 参数将通过对由调用方分配的内存的引用进行传递。  HVA 参数的影子堆栈空间固定为 8 个字节，且带有未定义的内容。  在参数列表中按从左到右的顺序将 HVA 参数分配给寄存器，并且这些参数可处于任意位置。  位于未分配给矢量寄存器的前四个参数位置中的任一位置的 HVA 参数将通过由对应于该位置的整数寄存器中的引用进行传递。  在第四个参数位置后通过引用传递的 HVA 参数将被推入堆栈。  
+ After registers are allocated for vector arguments, the data members of HVA arguments are allocated, in ascending order, to unused vector registers XMM0 to XMM5 (or YMM0 to YMM5, for `__m256` types), as long as there are enough registers available for the entire HVA. If not enough registers are available, the HVA argument is passed by reference to memory allocated by the caller. The stack shadow space for an HVA argument is fixed at 8 bytes with undefined content. HVA arguments are assigned to registers in order from left to right in the parameter list, and may be in any position. HVA arguments in one of the first four argument positions that are not assigned to vector registers are passed by reference in the integer register that corresponds to that position. HVA arguments passed by reference after the fourth parameter position are pushed on the stack.  
   
- 如果可能，`__vectorcall` 函数的结果将由寄存器中的值返回。  整数类型的结果（包括小于或等于 8 字节的结构或联合）按 RAX 中的值返回。  根据大小，矢量类型结果在 XMM0 或 YMM0 中按值返回。  HVA 结果具有每个由 XMM0:XMM3 或 YMM0:YMM3 寄存器中的值返回的数据元素，取决于元素大小。  不适合对应的寄存器的结果类型将通过对由调用方分配的内存的引用返回。  
+ Results of `__vectorcall` functions are returned by value in registers when possible. Results of integer type, including structs or unions of 8 bytes or less, are returned by value in RAX. Vector type results are returned by value in XMM0 or YMM0, depending on size. HVA results have each data element returned by value in registers XMM0:XMM3 or YMM0:YMM3, depending on element size. Result types that don't fit in the corresponding registers are returned by reference to memory allocated by the caller.  
   
- 堆栈在 `__vectorcall` 的 x64 实现中由调用方保持。  调用方 prolog 和 epilog 代码分配并清除被调用函数的堆栈。  参数从右向左推入堆栈；并且为传递到寄存器中的参数分配影子堆栈空间。  
+ The stack is maintained by the caller in the x64 implementation of `__vectorcall`. The caller prolog and epilog code allocates and clears the stack for the called function. Arguments are pushed on the stack from right to left, and shadow stack space is allocated for arguments passed in registers.  
   
- 示例：  
+ Examples:  
   
 ```cpp  
 // crt_vc64.c  
@@ -190,20 +207,20 @@ int __cdecl main( void )
   
 ```  
   
-## x86 上的 \_\_vectorcall 约定  
- `__vectorcall` 调用约定遵循 32 位整数类型参数的 `__fastcall` 约定，并利用矢量类型和 HVA 参数的 SSE 矢量寄存器。  
+## <a name="vectorcall-convention-on-x86"></a>__vectorcall convention on x86  
+ The `__vectorcall` calling convention follows the `__fastcall` convention for 32-bit integer type arguments, and takes advantage of the SSE vector registers for vector type and HVA arguments.  
   
- 将在参数列表中从左至右发现的前两个整数类型参数分别放入 ECX 和 EDX 中。  隐藏的 `this` 指针被视为第一个整数类型参数，并且被传入 ECX。  前六个矢量类型参数通过 XMM 或 YMM 寄存器中的 SSE 矢量寄存器 0 到 5（具体取决于参数大小）中的值传递。  
+ The first two integer type arguments found in the parameter list from left to right are placed in ECX and EDX, respectively. A hidden `this` pointer is treated as the first integer type argument, and is passed in ECX. The first six vector type arguments are passed by value through SSE vector registers 0 to 5, in the XMM or YMM registers, depending on argument size.  
   
- 前六个矢量类型参数（按从左至右的顺序）按 SSE 矢量寄存器 0 到 5 中的值传递。  浮点和 `__m128` 类型在 XMM 寄存器中传递，而 `__m256` 类型在 YMM 寄存器中传递。  不会为寄存器传入的矢量类型参数分配影子堆栈空间。  第七个矢量类型参数和后面的矢量类型参数在堆栈上通过对由调用方分配的内存的引用进行传递。  编译器错误 [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) 的限制不适用于这些参数。  
+ The first six vector type arguments in order from left to right are passed by value in SSE vector registers 0 to 5. Floating-point and `__m128` types are passed in XMM registers, and `__m256` types are passed in YMM registers. No shadow stack space is allocated for vector type arguments passed by register. The seventh and subsequent vector type arguments are passed on the stack by reference to memory allocated by the caller. The limitation of compiler error [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) does not apply to these arguments.  
   
- 在为矢量参数分配寄存器后，只要整个 HVA 有足量的可用寄存器，HVA 参数的数据成员就会以升序分配给未使用的矢量寄存器 XMM0 至 XMM5（或者，对于 `__m256` 类型，为 YMM0 至 YMM5）。  如果没有足量的可用寄存器，则 HVA 参数将在堆栈上通过对由调用方分配的内存的引用进行传递。  不会为 HVA 参数分配堆栈影子空间。  在参数列表中按从左到右的顺序将 HVA 参数分配给寄存器，并且这些参数可处于任意位置。  
+ After registers are allocated for vector arguments, the data members of HVA arguments are allocated in ascending order to unused vector registers XMM0 to XMM5 (or YMM0 to YMM5, for `__m256` types), as long as there are enough registers available for the entire HVA. If not enough registers are available, the HVA argument is passed on the stack by reference to memory allocated by the caller. No stack shadow space for an HVA argument is allocated. HVA arguments are assigned to registers in order from left to right in the parameter list, and may be in any position.  
   
- 如果可能，`__vectorcall` 函数的结果将由寄存器中的值返回。  整数类型的结果（包括小于或等于 4 字节的结构或联合）按 EAX 中的值返回。  小于或等于 8 字节的整数类型结构或联合由 EDX:EAX 中的值返回。  根据大小，矢量类型结果在 XMM0 或 YMM0 中按值返回。  HVA 结果具有每个由 XMM0:XMM3 或 YMM0:YMM3 寄存器中的值返回的数据元素，取决于元素大小。  其他结果类型通过对由调用方分配的内存的引用返回。  
+ Results of `__vectorcall` functions are returned by value in registers when possible. Results of integer type, including structs or unions of 4 bytes or less, are returned by value in EAX. Integer type structs or unions of 8 bytes or less are returned by value in EDX:EAX. Vector type results are returned by value in XMM0 or YMM0, depending on size. HVA results have each data element returned by value in registers XMM0:XMM3 or YMM0:YMM3, depending on element size. Other result types are returned by reference to memory allocated by the caller.  
   
- `__vectorcall` 的 x86 实现遵循由调用方从右向左推入堆栈的参数的约定，而调用的函数可在其返回之前清除堆栈。  仅将未置于寄存器上的参数推入堆栈。  
+ The x86 implementation of `__vectorcall` follows the convention of arguments pushed on the stack from right to left by the caller, and the called function clears the stack just before it returns. Only arguments that are not placed in registers are pushed on the stack.  
   
- 示例：  
+ Examples:  
   
 ```cpp  
 // crt_vc86.c  
@@ -296,8 +313,8 @@ int __cdecl main( void )
   
 ```  
   
- **结束 Microsoft 专用**  
+ **End Microsoft Specific**  
   
-## 请参阅  
- [参数传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Argument Passing and Naming Conventions](../cpp/argument-passing-and-naming-conventions.md)   
+ [Keywords](../cpp/keywords-cpp.md)

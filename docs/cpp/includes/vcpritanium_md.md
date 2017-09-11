@@ -15,8 +15,8 @@ translation.priority.ht:
 - zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
-ms.openlocfilehash: ce20ab16c3c82900b1547aa9a4f9b4c5c325ba98
+ms.openlocfilehash: 91fc7553888d77b2d1284f7b09031c99c0eab37a
 ms.contentlocale: zh-cn
 
 ---
-Visual C++ 2008
+Itanium
