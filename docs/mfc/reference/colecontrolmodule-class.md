@@ -1,5 +1,5 @@
 ---
-title: "COleControlModule 类 |Microsoft 文档"
+title: COleControlModule Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE control modules
-- MFC ActiveX controls, OLE control modules
-- COleControlModule class
-- control modules
+- OLE control modules [MFC]
+- MFC ActiveX controls [MFC], OLE control modules
+- COleControlModule class [MFC]
+- control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
 caps.latest.revision: 23
 author: mikeblome
@@ -36,28 +36,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 2e77c386875d25f47f0cc07eb3b7d315f1678c56
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b90d95781f579a8f8f93d76684b52d67b95a2223
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colecontrolmodule-class"></a>COleControlModule 类
-可以派生出 OLE 控件模块对象的基类。  
+# <a name="colecontrolmodule-class"></a>COleControlModule Class
+The base class from which you derive an OLE control module object.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleControlModule : public CWinApp  
 ```  
   
-## <a name="remarks"></a>备注  
- 此类提供用于初始化控制模块的成员函数。 使用 Microsoft 基础类每个 OLE 控件模块只能包含一个对象，派生自`COleControlModule`。 其他 c + + 中的全局对象在构造时，将构造此对象。 声明派生`COleControlModule`全局级别的对象。  
+## <a name="remarks"></a>Remarks  
+ This class provides member functions for initializing your control module. Each OLE control module that uses the Microsoft Foundation classes can only contain one object derived from `COleControlModule`. This object is constructed when other C++ global objects are constructed. Declare your derived `COleControlModule` object at the global level.  
   
- 有关详细信息使用`COleControlModule`类，请参阅[CWinApp](../../mfc/reference/cwinapp-class.md)类和文章[ActiveX 控件](../../mfc/mfc-activex-controls.md)。  
+ For more information on using the `COleControlModule` class, see the [CWinApp](../../mfc/reference/cwinapp-class.md) class and the article [ActiveX Controls](../../mfc/mfc-activex-controls.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -68,12 +68,12 @@ class COleControlModule : public CWinApp
   
  `COleControlModule`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxctl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 TESTHELP](../../visual-cpp-samples.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample TESTHELP](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

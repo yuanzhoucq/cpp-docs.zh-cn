@@ -1,51 +1,69 @@
 ---
-title: "早期操作系统中的 CImage 限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CImage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImage 类, 限制"
+title: CImage Limitations with Earlier Operating Systems | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CImage
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImage class [MFC], limitations
 ms.assetid: 4bedaab8-7dd1-4c91-ab35-b75fb56765b0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 早期操作系统中的 CImage 限制
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d571d10243a8be1e1151651a139de8aeee07c8ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-许多 `CImage` 函数仅适用于 Windows 新版本：Windows 95\/98 或 Windows NT 4.0、Windows 2000。  本文介绍某些方法的版本限制。  
+---
+# <a name="cimage-limitations-with-earlier-operating-systems"></a>CImage Limitations with Earlier Operating Systems
+Many `CImage` functions work only with newer versions of Windows: Windows 95/98 or Windows NT 4.0, or Windows 2000. This article describes the version limitations of certain methods.  
   
- [CImage::PlgBlt](../Topic/CImage::PlgBlt.md) 和 [CImage::MaskBlt](../Topic/CImage::MaskBlt.md) 只与 Windows NT 4.0 或更高版本一起使用。  它们在运行 Windows 95\/98 或更高版本的应用程序上不起作用。  
+ [CImage::PlgBlt](../atl-mfc-shared/reference/cimage-class.md#plgblt) and [CImage::MaskBlt](../atl-mfc-shared/reference/cimage-class.md#maskblt) work with only Windows NT 4.0 or later. They will not work on applications running on Windows 95/98 or later.  
   
- [CImage::AlphaBlend](../Topic/CImage::AlphaBlend.md) 和 [CImage::TransparentBlt](../Topic/CImage::TransparentBlt.md) 仅适用于 Windows 2000 或之后版本和 Windows 98 或之后版本，因为您必须使用这些方法链接 msimg32.lib。\(该库仅适用于运行 Windows 2000 或之后版本和 Windows 98 或之后版本的应用程序。\)  
+ [CImage::AlphaBlend](../atl-mfc-shared/reference/cimage-class.md#alphablend) and [CImage::TransparentBlt](../atl-mfc-shared/reference/cimage-class.md#transparentblt) work with only Windows 2000 or later and Windows 98 or later because you must link with msimg32.lib to use these methods. (This library is available only to applications running Windows 2000 or later and Windows 98 or later.)  
   
- 可以包含 `AlphaBlend` 和 `TransparentBlt` 在 Windows 95 或 Windows NT 4.0 上运行的应用程序时，如果，没有调用这些方法。  如果应用程序包括了这些方法，并且必须运行在以前的操作系统，您必须使用链接器的 [\/delayload](../build/reference/delayload-delay-load-import.md) 来延迟加载 msimg32.lib。  只要应用程序运行在 Windows NT 4.0 或 Windows 95 上时不调用其中任一方法，它不会尝试加载 msimg32.lib。  您可以可使用 `CImage::IsTransparencySupported` 方法检查是否支持透明度。  
+ You can include `AlphaBlend` and `TransparentBlt` in an application that runs on Windows 95 or Windows NT 4.0 only if these methods never get called. If your application includes these methods, and it must run on earlier operating systems, you must use the linker's [/delayload](../build/reference/delayload-delay-load-import.md) to delay the loading of msimg32.lib. As long as your application does not call one of these methods while running under Windows NT 4.0 or Windows 95, it will not attempt to load msimg32.lib. You can check the whether transparency support is available using the `CImage::IsTransparencySupported` method.  
   
-## 示例  
- [!code-cpp[NVC_MFCDocViewSDI#8](../mfc/codesnippet/CPP/cimage-limitations-with-earlier-operating-systems_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocViewSDI#8](../mfc/codesnippet/cpp/cimage-limitations-with-earlier-operating-systems_1.cpp)]  
   
- 若要编译调用这些方法的应用程序，请在 \#including 任何系统头文件前插入 \#define \_WIN32\_WINNT 语句，指出 Windows 版本大于或等于 5.0:  
+ To compile an application that calls these methods, insert a #define _WIN32_WINNT statement before #including any system headers, indicating that the version of Windows is equal to or greater than 5.0:  
   
- [!code-cpp[NVC_MFCDocViewSDI#9](../mfc/codesnippet/CPP/cimage-limitations-with-earlier-operating-systems_2.h)]  
+ [!code-cpp[NVC_MFCDocViewSDI#9](../mfc/codesnippet/cpp/cimage-limitations-with-earlier-operating-systems_2.h)]  
   
- 如果应用程序不需要运行在比 Windows 2000 或 Windows 98 更老的系统上，则可不使用 **\/delayload** 直接链接到 msimg32.lib。  
+ If your application does not need to run on an operating system older than Windows 2000 or Windows 98, you can link directly to msimg32.lib without using **/delayload**.  
   
- [CImage::Draw](../Topic/CImage::Draw.md) 在用于 Windows 2000 和 Windows 98 和用于 Windows NT 4.0 或 Windows 95 时行为不同。  
+ [CImage::Draw](../atl-mfc-shared/reference/cimage-class.md#draw) behaves differently when used with Windows 2000 and Windows 98 than it does with Windows NT 4.0 or Windows 95.  
   
- 如果伴随值小于 0x0500 的 \_WIN32\_WINNT 编译应用程序， **Draw** 将会起作用，但是，它在运行 Windows 2000 和 Windows 98 上或之后的系统上时不会自动处理透明度。  
+ If you compile your application with _WIN32_WINNT set to a value less than 0x0500, **Draw** will work, but it will not handle transparency automatically on systems running Windows 2000 and Windows 98 and later.  
   
- 如果伴随值大于 0x0500 的 \_WIN32\_WINNT 编译应用程序设， **Draw** 在运行 Windows 2000 或 Windows 98 或之后的系统上时将自动处理透明度。  在 Windows NT 4.0 和 Windows 95上它还将起作用，但无需透明度支持;但是，必须使用 **\/delayload** 延迟加载 msimg32.LIB，如上为 `AlphaBlend` 和 `TransparentBlt` 所述。  
+ If you compile your application with _WIN32_WINNT set to 0x0500 or greater, **Draw** will handle transparency automatically on systems running Windows 2000 or Windows 98 and later. It will also work, but without transparency support, with Windows NT 4.0 and Windows 95; however, you must use **/delayload** to delay the loading of msimg32.LIB, as described above for `AlphaBlend` and `TransparentBlt`.  
   
-## 请参阅  
+## <a name="see-also"></a>See Also  
  [CImage Class](../atl-mfc-shared/reference/cimage-class.md)
+

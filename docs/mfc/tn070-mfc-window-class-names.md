@@ -1,57 +1,76 @@
 ---
-title: "TN070：MFC 窗口类名称 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.classes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TN070"
-  - "窗口类名称"
+title: 'TN070: MFC Window Class Names | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- window class names [MFC]
+- TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN070：MFC 窗口类名称
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c9d4b8de69ffca813a03f34fd56cbde3955ddf5b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn070-mfc-window-class-names"></a>TN070: MFC Window Class Names
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- MFC Windows 使用反射功能的 Windows 动态创建的类名。  MFC 提供框架窗口、视图及应用程序生产的弹出窗口动态生成类名。  MFC 应用程序和控件生成的 Windows 对话框具有所提供的名称相关窗口的类。  
+ MFC windows use a dynamically created class name that reflects the features of the window. MFC generates class names dynamically for frame windows, views, and popup windows produced by the application. Dialog boxes and controls produced by an MFC application have the Windows-supplied name for the class of window in question.  
   
- 通过注册自己的窗口类并将它替换动态提供的类名。[PreCreateWindow](../Topic/CWnd::PreCreateWindow.md)重写。  这些提供 MFC 提供的类名将成为了两下面的某一种形式：  
+ You can replace the dynamically provided class name by registering your own window class and using it in an override of [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Their MFC-supplied class names fit one of the two following forms:  
   
 ```  
 Afx:%x:%x  
 Afx:%x:%x:%x:%x:%x  
 ```  
   
- `%x` 替换字符的十六进制数字从 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 结构的数据填充。  MFC 使用此技术，以便需要相同的 **WNDCLASS** 结构的多个 C\+\+ 类可以共享同一注册的窗口类。  与大多数简单的 Win32 应用程序，" MFC 应用程序只有一个 **WNDPROC**，因此，可以容易地共享 **WNDCLASS** 结构保存时间和内存。  显示的 `%x` 字符的可替换的值前面如下：  
+ The hex digits that replace the `%x` characters are filled in from data from the [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure. MFC uses this technique so that multiple C++ classes requiring identical **WNDCLASS** structures can share the same registered window class. Unlike most simple Win32 applications, MFC applications have only one **WNDPROC**, so you can easily share **WNDCLASS** structures to save time and memory. The replaceable values for the `%x` characters shown above are as follows:  
   
--   **WNDCLASS.hInstance**  
+- **WNDCLASS.hInstance**  
   
--   **WNDCLASS.style**  
+- **WNDCLASS.style**  
   
--   **WNDCLASS.hCursor**  
+- **WNDCLASS.hCursor**  
   
--   **WNDCLASS.hbrBackground**  
+- **WNDCLASS.hbrBackground**  
   
--   **WNDCLASS.hIcon**  
+- **WNDCLASS.hIcon**  
   
- 使用第一 \(`Afx:%x:%x`\)，而 **hCursor**、**hbrBackground**和 **hIcon** 是所有 **NULL**时。  
+ The first form (`Afx:%x:%x`) is used when **hCursor**, **hbrBackground**, and **hIcon** are all **NULL**.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)   
- [TN020：ID 命名和编号约定](../mfc/tn020-id-naming-and-numbering-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)   
+ [TN020: ID Naming and Numbering Conventions](../mfc/tn020-id-naming-and-numbering-conventions.md)
+
+

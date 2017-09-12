@@ -1,64 +1,83 @@
 ---
-title: "对话框数据交换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "取消数据交换"
-  - "捕获用户输入"
-  - "CDataExchange 类, 使用 DDX"
-  - "对话框数据交换 (DDX), 取消"
-  - "对话框数据交换 (DDX), 数据交换机制"
-  - "对话框数据"
-  - "对话框数据, 检索"
-  - "对话框, 数据交换"
-  - "对话框, 初始化"
-  - "对话框, 使用 DDX 检索用户输入"
-  - "DoDataExchange 方法"
-  - "初始化对话框"
-  - "检索对话框数据"
-  - "传输对话框数据"
-  - "UpdateData 方法"
-  - "用户输入, 从 MFC 对话框检索"
+title: Dialog Data Exchange | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing dialog boxes
+- canceling data exchange
+- dialog box data, retrieving
+- DDX (dialog data exchange), data exchange mechanism
+- dialog boxes [MFC], initializing
+- dialog boxes [MFC], retrieving user input using DDX
+- dialog box data
+- dialog boxes [MFC], data exchange
+- CDataExchange class [MFC], using DDX
+- DoDataExchange method [MFC]
+- user input [MFC], retrieving from MFC dialog boxes
+- capturing user input [MFC]
+- transferring dialog box data
+- DDX (dialog data exchange), canceling
+- UpdateData method [MFC]
+- retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 对话框数据交换
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fbb20507f4412ee32309d178ab473375bec1d29
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-如果使用 DDX 机制，可设置对话框对象的成员变量的初始值，通常在 `OnInitDialog` 处理程序或此对话框构造函数中。  在立即显示对话框之前，框架的 DDX 机制转移成员变量的值到对话框的控件，在对话框中，当对话框自己响应 `DoModal` 或 **创建** 时出现在它们出现的位置。  `CDialog` 中的 `OnInitDialog` 的默认实现调用  `CWnd` 类的 `UpdateData` 成员函数初始化在对话框中的控件。  
+---
+# <a name="dialog-data-exchange"></a>Dialog Data Exchange
+If you use the DDX mechanism, you set the initial values of the dialog object's member variables, typically in your `OnInitDialog` handler or the dialog constructor. Immediately before the dialog is displayed, the framework's DDX mechanism transfers the values of the member variables to the controls in the dialog box, where they appear when the dialog box itself appears in response to `DoModal` or **Create**. The default implementation of `OnInitDialog` in `CDialog` calls the `UpdateData` member function of class `CWnd` to initialize the controls in the dialog box.  
   
- 当用户单击 OK 按钮时，从空间到成员变量的值得转移机制是相同的\(或者，每次调用 `UpdateData` 成员函数时，使用的参数为 **TRUE**\) 。  对话框数据验证机制验证指定验证规则的所有数据项。  
+ The same mechanism transfers values from the controls to the member variables when the user clicks the OK button (or whenever you call the `UpdateData` member function with the argument **TRUE**). The dialog data validation mechanism validates any data items for which you specified validation rules.  
   
- 下图演示对话框数据交换。  
+ The following figure illustrates dialog data exchange.  
   
- ![对话框数据交换](../mfc/media/vc379d1.png "vc379D1")  
-对话框数据交换  
+ ![Dialog box data exchange](../mfc/media/vc379d1.gif "vc379d1")  
+Dialog Data Exchange  
   
- `UpdateData` 在两个方向运行，根据传递给它的 **BOOL** 参数。  若要执行交换， `UpdateData` 设置 `CDataExchange` 对象并调用对话框类 `CDialog` 的 `DoDataExchange` 成员函数的重写。  `DoDataExchange` 采用 `CDataExchange` 类型的参数。  `CDataExchange` 对象将传递到 `UpdateData` 表示上下文交换，如交换指示的一样定义此类信息。  
+ `UpdateData` works in both directions, as specified by the **BOOL** parameter passed to it. To carry out the exchange, `UpdateData` sets up a `CDataExchange` object and calls your dialog class's override of `CDialog`'s `DoDataExchange` member function. `DoDataExchange` takes an argument of type `CDataExchange`. The `CDataExchange` object passed to `UpdateData` represents the context of the exchange, defining such information as the direction of the exchange.  
   
- 当您 \(或代码向导\) 重写 `DoDataExchange` 时，可以指定每个数据成员 \(控件\) 调用一个 DDX 功能。  每 DDX 幻术知道如何根据通过 `UpdateData` 传递 `CDataExchange` 参数到 `DoDataExchange` 的上下文中双向交换数据。  
+ When you (or a Code wizard) override `DoDataExchange`, you specify a call to one DDX function per data member (control). Each DDX function knows how to exchange data in both directions based on the context supplied by the `CDataExchange` argument passed to your `DoDataExchange` by `UpdateData`.  
   
- MFC 提供许多 DDX 函数用于不同类型的交换。  下面的示例演示两 DDX 函数和一 DDV 函数调用的 `DoDataExchange` 重写：  
+ MFC provides many DDX functions for different kinds of exchange. The following example shows a `DoDataExchange` override in which two DDX functions and one DDV function are called:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/CPP/dialog-data-exchange_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]  
   
- `DDX_` 和 `DDV_` 行是数据映射。  示例显示的 DDX 和 DDV 函数分别为复选框控件和编辑框控件。  
+ The `DDX_` and `DDV_` lines are a data map. The sample DDX and DDV functions shown are for a check-box control and an edit-box control, respectively.  
   
- 如果用户取消模式对话框，`OnCancel` 成员函数终止对话框，同时 `DoModal` 返回 **IDCANCEL** 值。  在这种情况下，在对话框和对话框对象之间没有数据交换。  
+ If the user cancels a modal dialog box, the `OnCancel` member function terminates the dialog box and `DoModal` returns the value **IDCANCEL**. In that case, no data is exchanged between the dialog box and the dialog object.  
   
-## 请参阅  
- [对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)   
- [对话框数据验证](../mfc/dialog-data-validation.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Dialog Data Validation](../mfc/dialog-data-validation.md)
+
+

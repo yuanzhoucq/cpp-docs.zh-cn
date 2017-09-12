@@ -1,35 +1,54 @@
 ---
-title: "关闭文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件 [C++], 关闭"
-  - "MFC [C++], 文件操作"
+title: Closing Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, file operations
+- files [MFC], closing
 ms.assetid: 8415a3a8-3c75-45b0-ac2a-d5385f49bdb3
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 关闭文件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 893cdd50e3bf23585acf7cff7c81392c79f9b8f6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-像往常一样在 I\/O 操作，完成了文件，必须关闭它。  
+---
+# <a name="closing-files"></a>Closing Files
+As usual in I/O operations, once you finish with a file, you must close it.  
   
-#### 关闭单个文件  
+#### <a name="to-close-a-file"></a>To close a file  
   
-1.  使用 **关闭** 成员函数。  如果需要此函数，关闭文件系统上文件并刷新缓冲区。  
+1.  Use the **Close** member function. This function closes the file-system file and flushes buffers if necessary.  
   
- 如果分配上的 [CFile](../mfc/reference/cfile-class.md) \(如帧对象在 [打开文件](../mfc/opening-files.md)显示的示例中\)，则对象将自动关闭并销毁在超出范围。  注意删除 `CFile` 对象，不会在文件系统中的物理文件。  
+ If you allocated the [CFile](../mfc/reference/cfile-class.md) object on the frame (as in the example shown in [Opening Files](../mfc/opening-files.md)), the object will automatically be closed and then destroyed when it goes out of scope. Note that deleting the `CFile` object does not delete the physical file in the file system.  
   
-## 请参阅  
- [文件](../mfc/files-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Files](../mfc/files-in-mfc.md)
+
+

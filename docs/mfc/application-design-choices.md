@@ -1,96 +1,115 @@
 ---
-title: "应用程序设计选择 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序设计 [C++], 设计目标"
-  - "应用程序设计 [C++], Internet 应用程序"
-  - "应用程序 [MFC], Internet"
-  - "客户端应用程序 [C++], 与 Internet 上的服务器应用程序"
-  - "设计"
-  - "Internet [C++], 与 Intranet"
-  - "Internet 应用程序 [C++], 设计应用程序"
-  - "服务器应用程序, 与 Internet 上的客户端应用程序"
+title: Application Design Choices | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- design
+- application design [MFC], design goals
+- application design [MFC], Internet applications
+- Internet applications [MFC], designing applications
+- Internet [MFC], vs. intranets
+- applications [MFC], Internet
+- server applications [MFC], vs. client applications on Internet
+- client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 应用程序设计选择
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 03501a90e5c16af6a95e5e2dd9f4b898244eb984
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当对编程时，对于 Internet，本文讨论某些考虑设计问题。  
+---
+# <a name="application-design-choices"></a>Application Design Choices
+This article discusses some of the design issues to consider when programming for the Internet.  
   
- 本文涵盖的主题包括：  
+ Topics covered in this article include:  
   
--   [Intranet 与 Internet](#_core_intranet_versus_internet)  
+-   [Intranet Versus Internet](#_core_intranet_versus_internet)  
   
--   [客户端或服务器应用程序](#_core_client_or_server_application)  
+-   [Client or Server Application](#_core_client_or_server_application)  
   
--   [网页：HTML 中，对活动文档，ActiveX 控件](#_core_the_web_page.3a_.html.2c_.activex_documents.2c_.activex_controls)  
+-   [](#_core_the_web_page)  
   
--   [浏览器或独立应用程序](#_core_browser_or_stand.2d.alone_application)  
+-   [Browser or Stand-Alone Application](#_core_browser_or_standalone)  
   
--   [Internet 上的 COM](#_core_com_on_the_internet)  
+-   [COM on the Internet](#_core_com_on_the_internet)  
   
--   [客户数据下载服务](#_core_client_data_download_services)  
+-   [Client Data Download Services](#_core_client_data_download_services)  
   
- 如果您准备开始立即写入程序，请参见 [在 MFC 应用程序](../mfc/writing-mfc-applications.md)。  
+ If you are ready to start writing your program now, see [Writing MFC Applications](../mfc/writing-mfc-applications.md).  
   
-##  <a name="_core_intranet_versus_internet"></a> Intranet 与 Internet  
- Internet 上运行的多种应用程序和为用户可访问的。浏览器和 Internet 访问。  企业 Intranet 还实现，使用 TCP\/IP 协议和 Web 浏览器，是的公司网络。  Intranet 提供了方便地升级，主要源。公司范围信息。  它们可用于升级软件，用于传递和组成表调查，对于客户支持和的信息发送。  下表比较了 Internet 和 Intranet 的功能。  
+##  <a name="_core_intranet_versus_internet"></a> Intranet Versus Internet  
+ Many applications run on the Internet and are accessible to anyone with a browser and Internet access. Businesses are also implementing intranets, which are company-wide networks using TCP/IP protocols and Web browsers. Intranets offer an easily upgradeable, central source for company-wide information. They can be used for upgrading software, for delivering and tabulating surveys, for customer support, and for information delivery. The following table compares features of the Internet and intranets.  
   
 |Internet|Intranet|  
 |--------------|--------------|  
-|低带宽|高带宽|  
-|数据和降低系统的安全|为数据和系统的控制权限|  
-|最小的控件内容|高内容控件|  
+|Low bandwidth|High bandwidth|  
+|Reduced security of data and systems|Controlled access to data and systems|  
+|Minimal control of content|High control of content|  
   
-##  <a name="_core_client_or_server_application"></a> 客户端或服务器应用程序  
- 应用程序可以运行在客户端计算机或服务器计算机上。  应用程序服务器上还存储，在 Internet 和运行所下载然后在客户端计算机上。  MFC WinInet 类用于客户端应用程序可以将文件下载。  MFC 和异步名字对象类用于下载文件和控件的属性。  ActiveX 控件和活动文档的类用于客户端应用程序和服务器上下载。从客户端运行的应用程序。  
+##  <a name="_core_client_or_server_application"></a> Client or Server Application  
+ Your application may run on a client computer or on a server computer. Your application may also be stored on a server, and then downloaded across the Internet and run on a client computer. MFC WinInet classes are used for client applications to download files. MFC and asynchronous moniker classes are used to download files and control properties. Classes for ActiveX controls and Active documents are used for client applications and for applications that are downloaded from the server to run on a client.  
   
-##  <a name="_core_the_web_page.3a_.html.2c_.activex_documents.2c_.activex_controls"></a> 网页：HTML 中，对活动文档，ActiveX 控件  
- Microsoft 提供多种方法可在网页上将内容  网页可以使用标准 HTML 或者 HTML 扩展名，例如对象标记，提供动态内容 \(如 ActiveX 控件。  
+##  <a name="_core_the_web_page"></a> The Web Page: HTML, Active Documents, ActiveX Controls  
+ Microsoft offers several ways of providing content on a Web page. Web pages can use standard HTML or HTML extensions, such as the object tag, to provide dynamic content such as ActiveX controls.  
   
- 典型 Web 浏览器显示 HTML 页。  活动文档也可以以启用 COM 的浏览器的简单单击接口的应用程序数据。  活动文档服务器可以查看文档，在整个工作区执行的完整框架，使用其自己的菜单和工具栏。  
+ Web browsers typically display HTML pages. Active documents can also display your application's data in the simple point-and-click interface of a COM-enabled browser. Your Active document server can display your document, full frame in the entire client area, with its own menus and toolbars.  
   
- 您编写 ActiveX 控件在网页可以从服务器下载异步和显示。  您可以使用脚本语言 \(在 VBScript 将信息发送到服务器之前执行客户端验证。  
+ ActiveX controls you write can be downloaded asynchronously from the server and displayed on a Web page. You can use a scripting language such as VBScript to perform client-side validation before sending information to the server.  
   
-##  <a name="_core_browser_or_stand.2d.alone_application"></a> 浏览器或独立应用程序  
- 可以编写在 HTML 页和活动文档服务器嵌入在浏览器显示的 ActiveX 控件。  可以编写一个包含按钮提交请求在 Web 服务器上运行应用 ISAPI 程序的 HTML 页。  使用浏览器应用程序中，可以编写使用 Internet 协议下载文件和信息向用户的独立应用程序，那么，没有。  
+##  <a name="_core_browser_or_standalone"></a> Browser or Stand-Alone Application  
+ You can write ActiveX controls that are embedded in an HTML page and Active document servers that are viewed in a browser. You can write HTML pages that contain a button to submit a request to run your ISAPI application on a Web server. You can write a stand-alone application that uses Internet protocols to download files and display the information to your user, without ever using a browser application.  
   
-##  <a name="_core_com_on_the_internet"></a> Internet 上的 COM  
- ActiveX 控件、活动文档和异步都使用名字对象 \(COM 组件对象模型 \(COM\) 技术\)。  
+##  <a name="_core_com_on_the_internet"></a> COM on the Internet  
+ ActiveX controls, Active documents, and asynchronous monikers all use COM (Component Object Model) technologies.  
   
- ActiveX 控件提供动态内容了文档和页面在 Internet 网站。  使用活动文档，COM 可生成 ActiveX 控件和功能文档框架。  
+ ActiveX controls provide dynamic content to documents and pages on Internet sites. With COM you can build ActiveX controls and full-frame documents using Active documents.  
   
- 异步名字对象在一个 Internet 环境提供功能使控件正常执行，包括一个增量表示进度或下载数据。  控件必须也可以正常使用可能同时异步检索其数据的其他控件一起使用。  
+ Asynchronous monikers provide features to enable a control to perform well in an Internet environment, including an incremental or progressive means to download data. Controls must also work well with other controls that may also be retrieving their data asynchronously at the same time.  
   
-##  <a name="_core_client_data_download_services"></a> 客户数据下载服务  
- 将帮助转交客户数据的两组 API 是和 WinINet 异步名字对象。  如果您有大 .gif 和 .avi 文件和 ActiveX 控件在 HTML 页中，可以提高对用户的响应速度通过异步下载，使用名字对象或异步使用 WinInet。  
+##  <a name="_core_client_data_download_services"></a> Client Data Download Services  
+ Two sets of APIs that will help transfer data to your client are WinInet and asynchronous monikers. If you have large .gif and .avi files and ActiveX controls on your HTML page, you can increase the responsiveness to the user by downloading asynchronously, either by using asynchronous monikers or using WinInet asynchronously.  
   
- 在 Internet 上常见任务传输数据。  如果已经使用可用技术 \(例如，在中，如果您具有一 ActiveX 控件\)，可以使用异步名字对象进度呈现数据作为其下载。  类似使用 HTTP、FTP 和地鼠，常用的 Internet 协议可以使用 WinInet 传输数据。  方法提供两个协议无关，并且提供抽象层使用为 Winsock 和 TCP\/IP。  可以直接将使用 [WinSock](../mfc/windows-sockets-in-mfc.md)。  
+ A common task on the Internet is transferring data. If you are already using Active technology (for example, if you have an ActiveX control), you can use asynchronous monikers to progressively render data as it downloads. You can use WinInet to transfer data using common Internet protocols like HTTP, FTP, and gopher. Both methods provide protocol independence, and provide an abstract layer to using WinSock and TCP/IP. You can still use [WinSock](../mfc/windows-sockets-in-mfc.md) directly.  
   
- 下表总结了使用 MFC 多种传输在 Internet 上的数据。  
+ The following table summarizes several ways of using MFC to transfer data across the Internet.  
   
-|使用协议。|在这些条件下|使用这些类|  
-|-----------|------------|-----------|  
-|[使用异步下载的 Internet 名字对象](../mfc/asynchronous-monikers-on-the-internet.md)|对于使用 COM、ActiveX 控件和任何 Internet 协议的异步传输。|[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)，[CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)|  
-|[WinInet](../mfc/win32-internet-extensions-wininet.md)|有关 HTTP、FTP 和地鼠的 Internet 协议。  数据可以是同步或异步和在整个系统存储在缓存中。|[CInternetSession](../mfc/reference/cinternetsession-class.md) [CFtpFileFind](../mfc/reference/cftpfilefind-class.md) [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)，、和许多。|  
-|[WinSock](../mfc/windows-sockets-in-mfc.md)|对于最大效率和控件。  了解 Word 和套接 TCP\/IP 协议的 Requires 了解。|[CSocket](../mfc/reference/csocket-class.md)，[CAsyncSocket](../mfc/reference/casyncsocket-class.md)|  
+|Use this protocol|Under these conditions|Using these classes|  
+|-----------------------|----------------------------|-------------------------|  
+|[Internet Downloading Using Asynchronous Monikers](../mfc/asynchronous-monikers-on-the-internet.md)|For asynchronous transfer using COM, ActiveX controls, and any Internet protocol.|[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md), [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)|  
+|[WinInet](../mfc/win32-internet-extensions-wininet.md)|For Internet protocols for HTTP, FTP, and gopher. Data can be transferred synchronously or asynchronously and is stored in a system-wide cache.|[CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpFileFind](../mfc/reference/cftpfilefind-class.md), [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md), and many more.|  
+|[WinSock](../mfc/windows-sockets-in-mfc.md)|For maximum efficiency and control. Requires understanding of sockets and TCP/IP protocols.|[CSocket](../mfc/reference/csocket-class.md), [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|  
   
-## 请参阅  
- [MFC Internet 编程任务](../mfc/mfc-internet-programming-tasks.md)   
- [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)   
- [Win32 Internet 扩展 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Internet 上的异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Asynchronous Monikers on the Internet](../mfc/asynchronous-monikers-on-the-internet.md)
+
+

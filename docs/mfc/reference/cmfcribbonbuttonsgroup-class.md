@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonButtonsGroup 类 |Microsoft 文档"
+title: CMFCRibbonButtonsGroup Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonButtonsGroup class
+- CMFCRibbonButtonsGroup [MFC], CMFCRibbonButtonsGroup
+- CMFCRibbonButtonsGroup [MFC], AddButton
+- CMFCRibbonButtonsGroup [MFC], AddButtons
+- CMFCRibbonButtonsGroup [MFC], GetButton
+- CMFCRibbonButtonsGroup [MFC], GetCount
+- CMFCRibbonButtonsGroup [MFC], GetImageSize
+- CMFCRibbonButtonsGroup [MFC], GetRegularSize
+- CMFCRibbonButtonsGroup [MFC], HasImages
+- CMFCRibbonButtonsGroup [MFC], OnDrawImage
+- CMFCRibbonButtonsGroup [MFC], RemoveAll
+- CMFCRibbonButtonsGroup [MFC], SetImages
+- CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
 caps.latest.revision: 34
 author: mikeblome
@@ -47,170 +58,170 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 2d8909ca63bd1d9121e1126d46a08312521cc4ac
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 24349fa0775db80b5e0365525cee4954c9e0d7b8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 类
-`CMFCRibbonButtonsGroup`类使您可以将一组功能区按钮组织到组。 组中的所有按钮在水平位置上直接彼此相邻并位于边框中。  
+# <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup Class
+The `CMFCRibbonButtonsGroup` class allows you to organize a set of ribbon buttons into a group. All buttons in the group are directly adjacent to each other horizontally and enclosed in a border.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup](#cmfcribbonbuttonsgroup)|构造 `CMFCRibbonButtonsGroup` 对象。|  
+|[CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup](#cmfcribbonbuttonsgroup)|Constructs a `CMFCRibbonButtonsGroup` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonButtonsGroup::AddButton](#addbutton)|向组中添加一个按钮。|  
-|[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|向组中添加按钮的列表。|  
-|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|返回一个指针，到位于指定索引处的按钮。|  
-|[CMFCRibbonButtonsGroup::GetCount](#getcount)|返回组中的按钮数。|  
-|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|返回功能区组中的普通图像的图像大小 (重写[CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)。)|  
-|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|返回功能区元素的常规大小 (重写[CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|  
-|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|报告是否`CMFCRibbonButtonsGroup`对象包含的工具栏图像。|  
-|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|绘制指定的按钮，具体取决于该按钮是否正常，突出显示或已禁用的相应映像。|  
-|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|删除所有按钮从`CMFCRibbonButtonsGroup`对象。|  
-|[CMFCRibbonButtonsGroup::SetImages](#setimages)|将图像分配给组。|  
-|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|设置父`CMFCRibbonCategory`的`CMFCRibbonButtonsGroup`对象，并在其中的所有按钮 (将重写[CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory)。)|  
+|[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Adds a button to a group.|  
+|[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Adds a list of buttons to a group.|  
+|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|Returns a pointer to the button that is located at a specified index.|  
+|[CMFCRibbonButtonsGroup::GetCount](#getcount)|Returns the number of buttons in the group.|  
+|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|Returns the image size of the normal images in the ribbon group (overrides [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|  
+|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|Returns the regular size of the ribbon element (overrides [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
+|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|Reports whether the `CMFCRibbonButtonsGroup` object contains toolbar images.|  
+|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|Draws the appropriate image for a specified button, depending on whether the button is normal, highlighted or disabled.|  
+|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|Removes all buttons from the `CMFCRibbonButtonsGroup` object.|  
+|[CMFCRibbonButtonsGroup::SetImages](#setimages)|Assigns images to the group.|  
+|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|Sets the parent `CMFCRibbonCategory` of the `CMFCRibbonButtonsGroup` object and all the buttons within it (overrides [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|  
   
-## <a name="remarks"></a>备注  
- 组派生自[CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md)可以作为单个实体进行操作。 您可以在任何面板或弹出菜单上定位组。  
+## <a name="remarks"></a>Remarks  
+ The group is derived from [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) and can be manipulated as a single entity. You can position the group on any panel or popup menu.  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用各种方法`CMFCRibbonButtonsGroup`类。 该示例演示如何构造`CMFCRibbonButtonsGroup`对象、 将图像分配给功能区按钮组并向功能区按钮的组添加一个按钮。 此代码段属于[绘制客户端示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonButtonsGroup` class. The example shows how to construct a `CMFCRibbonButtonsGroup` object, assign images to the group of ribbon buttons, and add a button to the group of ribbon buttons. This code snippet is part of the [Draw Client sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient #&2;](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonButtonsGroup](../../mfc/reference/cmfcribbonbuttonsgroup-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxribbonbuttonsgroup.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonbuttonsgroup.h  
   
-##  <a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton  
- 向组中添加一个按钮。  
+##  <a name="addbutton"></a>  CMFCRibbonButtonsGroup::AddButton  
+ Adds a button to a group.  
   
 ```  
 void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 指向一个按钮来添加的指针。  
+ A pointer to a button to add.  
   
-##  <a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons  
- 向组中添加按钮的列表。  
+##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
+ Adds a list of buttons to a group.  
   
 ```  
 void AddButtons(
     const CList<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& lstButtons);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lstButtons`  
- 指向您想要添加的按钮的指针的列表。  
+ A list of pointers to the buttons that you want to add.  
   
-##  <a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
- 构造 `CMFCRibbonButtonsGroup` 对象。  
+##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
+ Constructs a `CMFCRibbonButtonsGroup` object.  
   
 ```  
 CMFCRibbonButtonsGroup();
 CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 指定用于添加对新创建的按钮`CMFCRibbonButtonsGroup`对象。  
+ Specifies a button to add to the newly created `CMFCRibbonButtonsGroup` object.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton  
- 返回一个指针，到位于指定索引处的按钮。  
+##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton  
+ Returns a pointer to the button that is located at a specified index.  
   
 ```  
 CMFCRibbonBaseElement* GetButton(int i) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `i`  
- 按钮以返回一个从零开始的索引。  
+ A zero-based index of a button to return.  
   
-### <a name="return-value"></a>返回值  
- 一个指向位于指定索引处的按钮。 `NULL`如果指定的索引超出范围。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the button that is located at the specified index. `NULL` if the specified index is out of range.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount  
- 返回组中的按钮数。  
+##  <a name="getcount"></a>  CMFCRibbonButtonsGroup::GetCount  
+ Returns the number of buttons in the group.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 组中的按钮数。  
+### <a name="return-value"></a>Return Value  
+ The number of buttons in the group.  
   
-##  <a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize  
- 检索受保护的源映像大小`CMFCToolBarImages`成员`m_Images`。  
+##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize  
+ Retrieves the source image size of the protected `CMFCToolBarImages` member `m_Images`.  
   
 ```  
 const CSize GetImageSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果存在，或返回的工具栏图像，图像大小`CSize`的如果不为零。  
+### <a name="return-value"></a>Return Value  
+ Returns the source image size of the toolbar images, if any are present, or a `CSize` of zero if not.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize  
- 检索的功能区组元素的最大可能大小。  
+##  <a name="getregularsize"></a>  CMFCRibbonButtonsGroup::GetRegularSize  
+ Retrieves the maximum possible size of the ribbon group element.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 功能区组的设备上下文的指针。  
+ Pointer to the device context of the ribbon group.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages  
- 报告是否`CMFCRibbonButtonsGroup`对象包含的工具栏图像。  
+##  <a name="hasimages"></a>  CMFCRibbonButtonsGroup::HasImages  
+ Reports whether the `CMFCRibbonButtonsGroup` object contains toolbar images.  
   
 ```  
 BOOL HasImages() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果返回 TRUE 的受保护`CMFCToolBarImages`成员`m_Images`不包含任何图像或 false。  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE if the protected `CMFCToolBarImages` member `m_Images` contains any images, or FALSE if not.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage  
- 绘制指定的按钮，具体取决于该按钮是否正常，突出显示或已禁用的相应映像。  
+##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage  
+ Draws the appropriate image for a specified button, depending on whether the button is normal, highlighted or disabled.  
   
 ```  
 virtual void OnDrawImage(
@@ -220,32 +231,32 @@ virtual void OnDrawImage(
     int nImageIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针`CMFCRibbonButtonsGroup`对象。  
+ Pointer to the device context of the `CMFCRibbonButtonsGroup` object.  
   
  [in] `rectImage`  
- 在其中绘制图像的矩形。  
+ The rectangle within which to draw the image.  
   
  [in] `pButton`  
- 若要绘制图像的按钮。  
+ The button for which to draw the image.  
   
  [in] `nImageIndex`  
- （在一个正常、 突出显示或已禁用按钮以及三个图像数组） 的按钮上绘制的图像的索引。  
+ The index of the image to draw on the button (in one of the three image arrays for normal, highlighted or disabled buttons).  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll  
- 删除所有按钮从`CMFCRibbonButtonsGroup`对象。  
+##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll  
+ Removes all buttons from the `CMFCRibbonButtonsGroup` object.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages  
- 将图像分配给功能区按钮的组。  
+##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages  
+ Assigns images to the group of ribbon buttons.  
   
 ```  
 void SetImages(
@@ -254,36 +265,36 @@ void SetImages(
     CMFCToolBarImages* pDisabledImages);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pImages`  
- 常规映像。  
+ Regular images.  
   
  [in] `pHotImages`  
- 热的图像。  
+ Hot images.  
   
  [in] `pDisabledImages`  
- 已禁用的图像。  
+ Disabled images.  
   
-### <a name="remarks"></a>备注  
- 调用`SetImages`将按钮添加到组之前。 映像的数目必须大于或等于要添加到组的按钮数。  
+### <a name="remarks"></a>Remarks  
+ Call `SetImages` before you add buttons to a group. The number of images must be greater or equal to the number of buttons to be added to the group.  
   
 > [!NOTE]
->  热映像是当用户悬停在按钮上时显示的图像。 已禁用的图像是按钮被禁用时，将显示的图像。  
+>  Hot images are images that are displayed when the user hovers over the button. Disabled images are images that are displayed when the button is disabled.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory  
- 设置父`CMFCRibbonCategory`的`CMFCRibbonButtonsGroup`对象，并在其中的所有按钮。  
+##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory  
+ Sets the parent `CMFCRibbonCategory` of the `CMFCRibbonButtonsGroup` object and all the buttons within it.  
   
 ```  
 virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pCategory`  
- 指向要设置的父类别 （功能区控件中的选项卡式的组被称为类别）。  
+ Pointer to the parent category to set (the tabbed groups in ribbon controls are called categories).  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

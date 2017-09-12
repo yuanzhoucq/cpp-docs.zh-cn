@@ -1,100 +1,119 @@
 ---
-title: "MFC ActiveX 控件：序列化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_wVerMinor"
-  - "DoPropExchange"
-  - "_wVerMajor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoPropExchange 方法"
-  - "ExchangeVersion 方法"
-  - "GetVersion 方法"
-  - "MFC ActiveX 控件, 序列化"
-  - "MFC ActiveX 控件, 版本支持"
-  - "版本控制 ActiveX 控件"
-  - "wVerMajor 全局常量"
-  - "wVerMinor 全局常量"
+title: 'MFC ActiveX Controls: Serializing | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _wVerMinor
+- DoPropExchange
+- _wVerMajor
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], version support
+- wVerMinor global constant [MFC]
+- GetVersion method [MFC]
+- ExchangeVersion method [MFC]
+- MFC ActiveX controls [MFC], serializing
+- DoPropExchange method [MFC]
+- versioning ActiveX controls
+- wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC ActiveX 控件：序列化
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4594131d8814122b93b0132dc2c5e121cae2e3ba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文讨论如何序列化 ActiveX 控件。  序列化是读取或编写过程到持久性存储媒体，例如磁盘文件。  Microsoft 基础类 \(MFC\) \(MFC\) 库为 `CObject`的类序列化提供内置支持。  `COleControl` 到 ActiveX 控件支持此属性通过使用交换机制。  
+---
+# <a name="mfc-activex-controls-serializing"></a>MFC ActiveX Controls: Serializing
+This article discusses how to serialize an ActiveX control. Serialization is the process of reading from or writing to a persistent storage medium, such as a disk file. The Microsoft Foundation Class (MFC) Library provides built-in support for serialization in class `CObject`. `COleControl` extends this support to ActiveX controls through the use of a property exchange mechanism.  
   
- ActiveX 控件的序列化重写实现。[COleControl::DoPropExchange](../Topic/COleControl::DoPropExchange.md) 此函数，在控件调用对象的加载和保存过程中，全部存储属性实现具有一个成员或变量一个成员变量的更改通知。  
+ Serialization for ActiveX controls is implemented by overriding [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). This function, called during the loading and saving of the control object, stores all properties implemented with a member variable or a member variable with change notification.  
   
- 以下主题包含关联的主要问题。序列化 ActiveX 控件：  
+ The following topics cover the main issues related to serializing an ActiveX control:  
   
--   实现 `DoPropExchange` 函数序列化控件对象中  
+-   Implementing `DoPropExchange` function to serialize your control object  
   
--   [自定义序列化过程](#_core_customizing_the_default_behavior_of_dopropexchange)  
+-   [Customizing the Serialization Process](#_core_customizing_the_default_behavior_of_dopropexchange)  
   
--   [实现生成支持](#_core_implementing_version_support)  
+-   [Implementing Version Support](#_core_implementing_version_support)  
   
-##  <a name="_core_implementing_the_dopropexchange_function"></a> 实现DoPropExchange函数  
- 在将 ActiveX 控件向导生成控件项目时，若干默认处理程序函数会自动添加到控件类，包括 [COleControl::DoPropExchange](../Topic/COleControl::DoPropExchange.md)的默认实现。  下面的示例演示代码添加到类。创建 ActiveX 控件向导：  
+##  <a name="_core_implementing_the_dopropexchange_function"></a> Implementing the DoPropExchange Function  
+ When you use the ActiveX Control Wizard to generate the control project, several default handler functions are automatically added to the control class, including the default implementation of [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). The following example shows the code added to classes created with the ActiveX Control Wizard:  
   
- [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]  
   
- 如果希望属性不可变，通过添加修改调用 `DoPropExchange` 向属性交换函数。  下面的示例演示自定义布尔 CircleShape 属性的序列化，CircleShape 属性具有默认值：**TRUE**  
+ If you want to make a property persistent, modify `DoPropExchange` by adding a call to the property exchange function. The following example demonstrates the serialization of a custom Boolean CircleShape property, where the CircleShape property has a default value of **TRUE**:  
   
- [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_2.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]  
   
- 下表列出了可以使用序列化控件的属性的属性交换函数：  
+ The following table lists the possible property exchange functions you can use to serialize the control's properties:  
   
-|交换函数属性|用途|  
-|------------|--------|  
-|**PX\_Blob\( \)**|序列化类型的二进制大对象 \(BLOB\) \(BLOB\) 数据属性。|  
-|**PX\_Bool\( \)**|序列化布尔值类型属性。|  
-|**PX\_Color\( \)**|序列化类型颜色属性。|  
-|**PX\_Currency\( \)**|序列化类型 **CY** \(货币\) 属性。|  
-|**PX\_Double\( \)**|序列化类型 **double** 的属性。|  
-|**PX\_Font\( \)**|序列化字体类型属性。|  
-|**PX\_Float\( \)**|序列化类型 **浮动** 的属性。|  
-|**PX\_IUnknown\( \)**|序列化 `LPUNKNOWN`类型的属性。|  
-|**PX\_Long\( \)**|序列化类型 **long** 的属性。|  
-|**PX\_Picture\( \)**|序列化类型图片属性。|  
-|**PX\_Short\( \)**|序列化类型 **short** 的属性。|  
-|**PX\_String\( \)**|序列化 `CString` 类型的属性。|  
-|**PX\_ULong\( \)**|序列化类型 **ULONG** 的属性。|  
-|**PX\_UShort\( \)**|序列化类型 **USHORT** 的属性。|  
+|Property exchange functions|Purpose|  
+|---------------------------------|-------------|  
+|**PX_Blob( )**|Serializes a type Binary Large Object (BLOB) data property.|  
+|**PX_Bool( )**|Serializes a type Boolean property.|  
+|**PX_Color( )**|Serializes a type color property.|  
+|**PX_Currency( )**|Serializes a type **CY** (currency) property.|  
+|**PX_Double( )**|Serializes a type **double** property.|  
+|**PX_Font( )**|Serializes a Font type property.|  
+|**PX_Float( )**|Serializes a type **float** property.|  
+|**PX_IUnknown( )**|Serializes a property of type `LPUNKNOWN`.|  
+|**PX_Long( )**|Serializes a type **long** property.|  
+|**PX_Picture( )**|Serializes a type Picture property.|  
+|**PX_Short( )**|Serializes a type **short** property.|  
+|**PXstring( )**|Serializes a type `CString` property.|  
+|**PX_ULong( )**|Serializes a type **ULONG** property.|  
+|**PX_UShort( )**|Serializes a type **USHORT** property.|  
   
- 有关这些属性交换函数的更多信息，请参见" *MFC 参考"中的*[OLE 控件持久性](../mfc/reference/persistence-of-ole-controls.md)。  
+ For more information on these property exchange functions, see [Persistence of OLE Controls](../mfc/reference/persistence-of-ole-controls.md) in the *MFC Reference*.  
   
-##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> 自定义 DoPropExchange 默认行为  
- **DoPropertyExchange** 的默认实现 \(如上一代主题中演示\) 调用基类 `COleControl`。  这序列化 `COleControl`自动支持的一组属性，与序列化只有控件的自定义属性使用更多的存储空间。  删除此对象允许调用序列化您视为的那些属性。  任何常用属性指定控件实现了不序列化，当加载或保存控件中对象时，除非显式添加 **PX\_** 调用它们。  
+##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Customizing the Default Behavior of DoPropExchange  
+ The default implementation of **DoPropertyExchange** (as shown in the previous topic) makes a call to base class `COleControl`. This serializes the set of properties automatically supported by `COleControl`, which uses more storage space than serializing only the custom properties of the control. Removing this call allows your object to serialize only those properties you consider important. Any stock property states the control has implemented will not be serialized when saving or loading the control object unless you explicitly add **PX_** calls for them.  
   
-##  <a name="_core_implementing_version_support"></a> 实现生成支持  
- 版本支持允许经过变动的 ActiveX 控件添加新的元素属性并仍然能够检测和加载控件的早期版本创建的持久性的状态。  使控件的版本可用作为其持久性数据的一部分，在控件调用 [COleControl::ExchangeVersion](../Topic/COleControl::ExchangeVersion.md) 的 `DoPropExchange` 函数。  使用 ActiveX 控件向导，如果 ActiveX 控件创建此调用自动插入。  它，则版本支持不是必需的，可移除。  但是，在控件大小的成本。版本支持提供的灵活性非常少 \(4 字节\)。  
+##  <a name="_core_implementing_version_support"></a> Implementing Version Support  
+ Version support enables a revised ActiveX control to add new persistent properties, and still be able to detect and load the persistent state created by an earlier version of the control. To make a control's version available as part of its persistent data, call [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) in the control's `DoPropExchange` function. This call is automatically inserted if the ActiveX control was created using the ActiveX Control Wizard. It can be removed if version support is not needed. However, the cost in control size is very small (4 bytes) for the added flexibility that version support provides.  
   
- 如果控件未使用创建 ActiveX 控件向导，添加一个对 `COleControl::ExchangeVersion` 的调用。通过插入下面的行从 `DoPropExchange` 函数的开头 \(在对 `COleControl::DoPropExchange`的调用之前\):  
+ If the control was not created with the ActiveX Control Wizard, add a call to `COleControl::ExchangeVersion` by inserting the following line at the beginning of your `DoPropExchange` function (before the call to `COleControl::DoPropExchange`):  
   
- [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_2.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- 可以使用 `DWORD` 作为所有版本号。  ActiveX 控件向导使用的项目生成 **\_wVerMinor** 和 **\_wVerMajor** 为默认。  这些是项目中的 ActiveX 控件类实现文件定义的全局常数。  在 `DoPropExchange` 函数的其余部分中，可以随时调用 [CPropExchange::GetVersion](../Topic/CPropExchange::GetVersion.md) 检索所保存或检索的版本。  
+ You can use any `DWORD` as the version number. Projects generated by the ActiveX Control Wizard use **_wVerMinor** and **_wVerMajor** as the default. These are global constants defined in the implementation file of the project's ActiveX control class. Within the remainder of your `DoPropExchange` function, you can call [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) at any time to retrieve the version you are saving or retrieving.  
   
- 在下面的示例中，版本 1 拥有此示例控件只有一个“ReleaseDate”属性。  版本 2 添加了“OriginalDate”属性。  如果控件被标记以前版本加载持久状态，初始化新属性的成员变量为默认值。  
+ In the following example, version 1 of this sample control has only a "ReleaseDate" property. Version 2 adds an "OriginalDate" property. If the control is instructed to load the persistent state from the old version, it initializes the member variable for the new property to a default value.  
   
- [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_5.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- 默认情况下，控件中“转换”旧数据到最新的格式。  例如，在中，如果控件的 2 版由加载 1 版本保存的数据，将编写生成 2 格式，并在再次保存。  如果希望控件的格式保存数据持续读取，将 **FALSE** 作为第三个参数，则调用 `ExchangeVersion`。  第三个参数是可选的和 **TRUE** 是默认方法。  
+ By default, a control "converts" old data to the latest format. For example, if version 2 of a control loads data that was saved by version 1, it will write the version 2 format when it is saved again. If you want the control to save data in the format last read, pass **FALSE** as a third parameter when calling `ExchangeVersion`. This third parameter is optional and is **TRUE** by default.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

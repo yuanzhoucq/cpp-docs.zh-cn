@@ -1,5 +1,5 @@
 ---
-title: "CVSListBox 类 |Microsoft 文档"
+title: CVSListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CVSListBox::PreTranslateMessage method
-- CVSListBox class
+- CVSListBox [MFC], CVSListBox
+- CVSListBox [MFC], AddItem
+- CVSListBox [MFC], EditItem
+- CVSListBox [MFC], GetCount
+- CVSListBox [MFC], GetItemData
+- CVSListBox [MFC], GetItemText
+- CVSListBox [MFC], GetSelItem
+- CVSListBox [MFC], RemoveItem
+- CVSListBox [MFC], SelectItem
+- CVSListBox [MFC], SetItemData
+- CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
 caps.latest.revision: 30
 author: mikeblome
@@ -46,66 +55,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4527249fc1a22a1db0623ea46954065fcbd071f4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d84db3fe2c27925db01188f43a3d467e6119ca2b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cvslistbox-class"></a>CVSListBox 类
-`CVSListBox`类支持可编辑列表控件。  
+# <a name="cvslistbox-class"></a>CVSListBox Class
+The `CVSListBox` class supports an editable list control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CVSListBox : public CVSListBoxBase  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::CVSListBox](#cvslistbox)|构造 `CVSListBox` 对象。|  
-|`CVSListBox::~CVSListBox`|析构函数。|  
+|[CVSListBox::CVSListBox](#cvslistbox)|Constructs a `CVSListBox` object.|  
+|`CVSListBox::~CVSListBox`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::AddItem](#additem)|将字符串添加到列表控件。 （重写 `CVSListBoxBase::AddItem`。）|  
-|[CVSListBox::EditItem](#edititem)|启动列表控件项的文本编辑操作。 （重写 `CVSListBoxBase::EditItem`。）|  
-|[CVSListBox::GetCount](#getcount)|检索字符串的可编辑列表控件中的数量。 （重写 `CVSListBoxBase::GetCount`。）|  
-|[CVSListBox::GetItemData](#getitemdata)|检索与可编辑列表控件项相关联的特定于应用程序的 32 位值。 （重写 `CVSListBoxBase::GetItemData`。）|  
-|[CVSListBox::GetItemText](#getitemtext)|检索可编辑列表控件项的文本。 （重写 `CVSListBoxBase::GetItemText`。）|  
-|[CVSListBox::GetSelItem](#getselitem)|检索可编辑列表控件中当前选定项的从零开始索引。 （重写 `CVSListBoxBase::GetSelItem`。）|  
-|`CVSListBox::PreTranslateMessage`|翻译窗口消息之前被发送到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关详细信息和方法语法，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CVSListBoxBase::PreTranslateMessage`。）|  
-|[CVSListBox::RemoveItem](#removeitem)|从可编辑列表控件中移除一个项。 （重写 `CVSListBoxBase::RemoveItem`。）|  
-|[CVSListBox::SelectItem](#selectitem)|选择一个可编辑列表控件字符串。 （重写 `CVSListBoxBase::SelectItem`。）|  
-|[CVSListBox::SetItemData](#setitemdata)|将特定于应用程序的 32 位值与可编辑列表控件项相关联。 （重写 `CVSListBoxBase::SetItemData`。）|  
+|[CVSListBox::AddItem](#additem)|Adds a string to a list control. (Overrides `CVSListBoxBase::AddItem`.)|  
+|[CVSListBox::EditItem](#edititem)|Starts an edit operation on the text of a list control item. (Overrides `CVSListBoxBase::EditItem`.)|  
+|[CVSListBox::GetCount](#getcount)|Retrieves the number of strings in an editable list control. (Overrides `CVSListBoxBase::GetCount`.)|  
+|[CVSListBox::GetItemData](#getitemdata)|Retrieves an application-specific 32-bit value that is associated with an editable list control item. (Overrides `CVSListBoxBase::GetItemData`.)|  
+|[CVSListBox::GetItemText](#getitemtext)|Retrieves the text of an editable list control item. (Overrides `CVSListBoxBase::GetItemText`.)|  
+|[CVSListBox::GetSelItem](#getselitem)|Retrieves the zero-based index of the currently selected item in an editable list control. (Overrides `CVSListBoxBase::GetSelItem`.)|  
+|`CVSListBox::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For more information and method syntax, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CVSListBoxBase::PreTranslateMessage`.)|  
+|[CVSListBox::RemoveItem](#removeitem)|Removes an item from an editable list control. (Overrides `CVSListBoxBase::RemoveItem`.)|  
+|[CVSListBox::SelectItem](#selectitem)|Selects an editable list control string. (Overrides `CVSListBoxBase::SelectItem`.)|  
+|[CVSListBox::SetItemData](#setitemdata)|Associates an application-specific 32-bit value with an editable list control item. (Overrides `CVSListBoxBase::SetItemData`.)|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::GetListHwnd](#getlisthwnd)|返回当前的嵌入式的列表视图控件的句柄。|  
+|[CVSListBox::GetListHwnd](#getlisthwnd)|Returns the handle to the current embedded list view control.|  
   
-## <a name="remarks"></a>备注  
- `CVSListBox`类提供了一组使用户能够创建、 修改、 删除或重新排列列表控件中的项的编辑按钮。  
+## <a name="remarks"></a>Remarks  
+ The `CVSListBox` class provides a set of edit buttons that enable the user to create, modify, delete, or rearrange the items in a list control.  
   
- 下面是可编辑列表控件的图片。 标题为"Item2"的第二个列表项选择进行编辑。  
+ The following is a picture of the editable list control. The second list entry, which is titled "Item2", is selected for editing.  
   
- ![CVSListBox 控件](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
+ ![CVSListBox control](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
   
- 如果您使用资源编辑器添加可编辑列表控件，请注意，**工具箱**编辑器窗格中不提供的预定义的可编辑列表控件。 相反，如添加静态控件**分组框**控件。 框架使用静态控件作为占位符，以指定的大小和位置的可编辑列表控件。  
+ If you use the resource editor to add an editable list control, notice that the **Toolbox** pane of the editor does not provide a predefined editable list control. Instead, add a static control such as the **Group Box** control. The framework uses the static control as a placeholder to specify the size and position of the editable list control.  
   
- 若要在对话框模板中使用的可编辑列表控件，声明`CVSListBox`变量在对话框类中。 若要支持该变量与控件之间的数据交换，定义`DDX_Control`中的宏项`DoDataExchange`对话框中的方法。 默认情况下，如果编辑按钮没有创建可编辑列表控件。 使用继承的 CVSListBoxBase::SetStandardButtons 方法启用编辑按钮。  
+ To use an editable list control in a dialog box template, declare a `CVSListBox` variable in your dialog box class. To support data exchange between the variable and the control, define a `DDX_Control` macro entry in the `DoDataExchange` method of the dialog box. By default, the editable list control is created without edit buttons. Use the inherited CVSListBoxBase::SetStandardButtons method to enable the edit buttons.  
   
- 有关详细信息，请参阅示例目录中，`New Controls`示例的 Page3.cpp 和 Page3.h 文件。  
+ For more information, see the Samples directory, the `New Controls` sample, the Page3.cpp and Page3.h files.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -118,11 +127,11 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxvslistbox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
- 将字符串添加到列表控件。  
+##  <a name="additem"></a>  CVSListBox::AddItem  
+ Adds a string to a list control.  
   
 ```  
 virtual int AddItem(
@@ -131,156 +140,156 @@ virtual int AddItem(
     int iIndex=-1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `strIext`  
- 对字符串的引用。  
+ A reference to a string.  
   
  [in] `dwData`  
- 与字符串相关联的特定于应用程序的 32 位值。 默认值为 0。  
+ An application-specific 32-bit value that is associated with the string. The default value is 0.  
   
  [in] `iIndex`  
- 将保存的字符串的位置的从零开始的索引。 如果`iIndex`参数为-1，则字符串添加到列表的末尾。 默认值为 -1。  
+ The zero-based index of the position that will hold the string. If the `iIndex` parameter is -1, the string is added to the end of the list. The default value is -1.  
   
-### <a name="return-value"></a>返回值  
- 列表控件中的位置的字符串的从零开始索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the position of the string in the list control.  
   
-### <a name="remarks"></a>备注  
- 使用[CVSListBox::GetItemData](#getitemdata)方法来检索由指定的值`dwData`参数。 此值可以是特定于应用程序的整数或与其他数据的指针。  
+### <a name="remarks"></a>Remarks  
+ Use the [CVSListBox::GetItemData](#getitemdata) method to retrieve the value that is specified by the `dwData` parameter. This value can be an application-specific integer or a pointer to other data.  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
- 构造 `CVSListBox` 对象。  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
+ Constructs a `CVSListBox` object.  
   
 ```  
 CVSListBox();
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
- 启动列表控件项的文本编辑操作。  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
+ Starts an edit operation on the text of a list control item.  
   
 ```  
 virtual BOOL EditItem(int iIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 列表控件项的从零开始索引。  
+ Zero-based index of a list control item.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果编辑操作成功，则启动否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the edit operation starts successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 在用户开始编辑操作，通过双击某一项，标签或通过按**F2**或**空格键**键的项具有焦点时。  
+### <a name="remarks"></a>Remarks  
+ The user starts an edit operation either by double-clicking the label of an item, or by pressing the **F2** or **SPACEBAR** key when an item has the focus.  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
- 检索字符串的可编辑列表控件中的数量。  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
+ Retrieves the number of strings in an editable list control.  
   
 ```  
 virtual int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 列表控件中的项数。  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list control.  
   
-### <a name="remarks"></a>备注  
- 请注意，此计数是一个大于最后一项的索引值因为此索引是从零开始。  
+### <a name="remarks"></a>Remarks  
+ Note that the count is one greater than the index value of the last item because the index is zero-based.  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
- 检索与可编辑列表控件项相关联的特定于应用程序的 32 位值。  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
+ Retrieves an application-specific 32-bit value that is associated with an editable list control item.  
   
 ```  
 virtual DWORD_PTR GetItemData(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 可编辑列表控件项的从零开始的索引。  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>返回值  
- 该键与指定的项相关联的 32 位值。  
+### <a name="return-value"></a>Return Value  
+ The 32-bit value that is associated with the specified item.  
   
-### <a name="remarks"></a>备注  
- 使用[CVSListBox::SetItemData](#setitemdata)或[CVSListBox::AddItem](#additem)方法来将 32 位的值与列表控件项相关联。 此值可以是特定于应用程序的整数或与其他数据的指针。  
+### <a name="remarks"></a>Remarks  
+ Use the [CVSListBox::SetItemData](#setitemdata) or [CVSListBox::AddItem](#additem) method to associate the 32-bit value with the list control item. This value can be an application-specific integer or a pointer to other data.  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
- 检索可编辑列表控件项的文本。  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
+ Retrieves the text of an editable list control item.  
   
 ```  
 virtual CString GetItemText(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 可编辑列表控件项的从零开始的索引。  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>返回值  
- 一个[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含指定项的文本。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that contains the text of the specified item.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
- 返回当前的嵌入式的列表视图控件的句柄。  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
+ Returns the handle to the current embedded list view control.  
   
 ```  
 virtual HWND GetListHwnd() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 嵌入式的列表视图控件的句柄。  
+### <a name="return-value"></a>Return Value  
+ A handle to the embedded list view control.  
   
-### <a name="remarks"></a>备注  
- 使用此方法来检索支持嵌入在列表视图控件的句柄`CVSListBox`类。  
+### <a name="remarks"></a>Remarks  
+ Use this method to retrieve a handle to the embedded list view control that supports the `CVSListBox` class.  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
- 检索可编辑列表控件中当前选定项的从零开始索引。  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
+ Retrieves the zero-based index of the currently selected item in an editable list control.  
   
 ```  
 virtual int GetSelItem() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，当前选定的项的从零开始索引否则为-1。  
+### <a name="return-value"></a>Return Value  
+ If this method is successful, the zero-based index of the currently selected item; otherwise, -1.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
- 从可编辑列表控件中移除一个项。  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
+ Removes an item from an editable list control.  
   
 ```  
 virtual BOOL RemoveItem(int iIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 可编辑列表控件项的从零开始的索引。  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果指定的项被删除;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified item is removed; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
- 选择一个可编辑列表控件字符串。  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
+ Selects an editable list control string.  
   
 ```  
 virtual BOOL SelectItem(int iItem);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- 可编辑列表控件项的从零开始的索引。  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 此方法可选择指定的项，并且如有必要，滚动到视图中的项。  
+### <a name="remarks"></a>Remarks  
+ This method selects the specified item, and if it is required, scrolls the item into view.  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
- 将特定于应用程序的 32 位值与可编辑列表控件项相关联。  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
+ Associates an application-specific 32-bit value with an editable list control item.  
   
 ```  
 virtual void SetItemData(
@@ -288,16 +297,16 @@ virtual void SetItemData(
     DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 可编辑列表控件项的从零开始的索引。  
+ The zero-based index of an editable list control item.  
   
  [in] `dwData`  
- 一个 32 位值。 此值可以是特定于应用程序的整数或与其他数据的指针。  
+ A 32-bit value. This value can be an application-specific integer or a pointer to other data.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

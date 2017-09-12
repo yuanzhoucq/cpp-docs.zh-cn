@@ -1,92 +1,111 @@
 ---
-title: "用户界面元素 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, 用户界面"
-  - "用户界面"
-  - "用户界面, 创建"
+title: User Interface Elements (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, user interface
+- user interfaces, creating
+- user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 用户界面元素 (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 957f5a89d015dbc023cd5dd464ae1fb9176166fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-使用 Microsoft 基础类 \(MFC\) \(MFC\) 库，有关如何创建应用程序的用户界面 \(UI\) 的信息，请参见下列主题。  
+---
+# <a name="user-interface-elements-mfc"></a>User Interface Elements (MFC)
+For information about how to create the user interface for your application by using the Microsoft Foundation Class (MFC) Library, see the following topics.  
   
-## 本节内容  
- [ActiveX 控件](../mfc/activex-controls.md)  
- 描述如何使用一组件对象模型 \(COM\) 的可重用的软件组件 \(COM\)，支持多种的 OLE 功能，并且可以自定义以容纳许多软件要求  
+## <a name="in-this-section"></a>In This Section  
+ [ActiveX Controls](../mfc/activex-controls.md)  
+ Describes how to use reusable software component based on the Component Object Model (COM), which supports a wide variety of OLE functionality and can be customized to fit many software needs  
   
- [剪贴板](../mfc/clipboard.md)  
- 描述如何实现 Windows 剪贴板。支持的 MFC 应用程序。  
+ [Clipboard](../mfc/clipboard.md)  
+ Describes how to implement support for the Windows Clipboard in MFC applications.  
   
- [控件](../mfc/controls-mfc.md)  
- 介绍 Windows 公共控件，其中包括所有者描述的控件、ActiveX 控件和 MFC 库提供的其他控件。  
+ [Controls](../mfc/controls-mfc.md)  
+ Describes Windows common controls, including owner-drawn controls, ActiveX controls, and other control classes supplied by the MFC Library.  
   
- [控件条](../mfc/control-bars.md)  
- 描述工具栏、状态栏、对话栏的功能。  
+ [Control Bars](../mfc/control-bars.md)  
+ Describes functionality of toolbars, status bars, and dialog bars.  
   
- [对话栏](../mfc/dialog-bars.md)  
- 描述可以包含任何控件的控件条。  
+ [Dialog Bars](../mfc/dialog-bars.md)  
+ Describes a kind of control bar that can contain any kind of control.  
   
- [对话框](../mfc/dialog-boxes.md)  
- 描述如何使用创建对话框编辑器和代码向导。  
+ [Dialog Boxes](../mfc/dialog-boxes.md)  
+ Describes how to create dialog boxes by using the editors and code wizards.  
   
- [文档\/视图体系结构](../mfc/document-view-architecture.md)  
- 在 MFC 数据描述管理。  
+ [Document/View Architecture](../mfc/document-view-architecture.md)  
+ Describes data management in MFC.  
   
- [窗体视图](../mfc/form-views-mfc.md)  
- 描述如何支持窗体添加到应用程序。  
+ [Form Views](../mfc/form-views-mfc.md)  
+ Describes how to add forms support to your application.  
   
- [HTML 帮助：为程序提供区分上下文的帮助](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
- 使用 HTML 帮助，描述如何将上下文相关帮助添加到应用程序。  
+ [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
+ Describes how to add context-sensitive help to your applications by using HTML Help.  
   
- [MDI 选项卡式组](../mfc/mdi-tabbed-groups.md)  
- 使多文档界面 \(MDI\) \(MDI\) 应用程序以显示一个或多个选项卡式选项卡式窗口的窗口 \(或组，称为 *制表符分隔的组*\) 的 MDI 工作区。  
+ [MDI Tabbed Groups](../mfc/mdi-tabbed-groups.md)  
+ Enables multiple document interface (MDI) applications to display one or more tabbed windows (or groups of tabbed windows, which are known as *tabbed groups*) in the MDI client area.  
   
- [菜单](../mfc/menus-mfc.md)  
- 描述如何添加到菜单的用户界面。  
+ [Menus](../mfc/menus-mfc.md)  
+ Describes how to add menus to your user interface.  
   
  [OLE](../mfc/ole-mfc.md)  
- 提供指向讨论对象链接与嵌入的主题。  
+ Provides links to topics that discuss object linking and embedding.  
   
- [打印和打印预览](../mfc/printing-and-print-preview.md)  
- 描述打印的 MFC 可从应用程序的支持以及打印预览。  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)  
+ Describes MFC support for printing and print preview from your applications.  
   
- [属性表](../mfc/property-sheets-mfc.md)  
- 描述如何使用属性表管理大量在对话框的控件。  
+ [Property Sheets](../mfc/property-sheets-mfc.md)  
+ Describes how to use property sheets to manage large numbers of control in a dialog box.  
   
- [功能区设计器 \(MFC\)](../mfc/ribbon-designer-mfc.md)  
- 描述创建和修改的功能区 UI 资源的 MFC 支持。  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)  
+ Describes MFC support for creating and modifying ribbon UI resources.  
   
- [状态栏](../mfc/status-bars.md)  
- 介绍如何使用应用程序状态栏。  
+ [Status Bars](../mfc/status-bars.md)  
+ Describes how to use status bars in your applications.  
   
- [工具提示](../mfc/tool-tips.md)  
- 描述如何实现工具提示来帮助使用的应用程序的用户。  
+ [Tool Tips](../mfc/tool-tips.md)  
+ Describes how to implement tool tips to assist users in using your applications.  
   
- [工具栏](../mfc/toolbars.md)  
- 描述有关在 MFC 如何的基本使用工具栏。  
+ [Toolbars](../mfc/toolbars.md)  
+ Describes the fundamentals about how to use toolbars in MFC.  
   
- [可视化管理器](../mfc/visualization-manager.md)  
- 是可将应用程序中的任何绘图代码的类。  
+ [Visualization Manager](../mfc/visualization-manager.md)  
+ Acts as one class where you can put all the drawing code for your application.  
   
- [窗口](../mfc/windows.md)  
- MFC 中描述如何使用窗口的基础知识。  
+ [Windows](../mfc/windows.md)  
+ Describes the fundamentals about how to use windows in MFC.  
   
-## 相关章节  
- [MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)  
- 提供 MFC 库的参考信息。  MFC 是构成应用程序框架，它是为 Windows API 编写的应用程序框架的一组类。
+## <a name="related-sections"></a>Related Sections  
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)  
+ Provides reference material for the MFC Library. MFC is a set of classes that constitute an application framework, which is the framework of an application written for the Windows API.
+
+

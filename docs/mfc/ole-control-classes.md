@@ -1,77 +1,96 @@
 ---
-title: "OLE 控件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 类 [C++]"
-  - "ActiveX 控件类 [C++]"
-  - "ActiveX 控件 [C++], OLE 控件类"
-  - "自定义控件 [MFC], 类"
-  - "OLE 控件类 [C++]"
-  - "OLE 控件 [C++], 类"
-  - "可重用组件类"
+title: OLE Control Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- custom controls [MFC], classes
+- ActiveX controls [MFC], OLE control classes
+- ActiveX control classes [MFC]
+- OLE controls [MFC], classes
+- OLE control classes [MFC]
+- reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE 控件类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a81de0a104d188f50c112d9f199ca04e315af920
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-这些是用于，则编写 OLE 控件的主类。  在一个 OLE 控件模块的 `COleControlModule` 类类似于应用程序的类。[CWinApp](../mfc/reference/cwinapp-class.md) 每模块实现一个或多个；OLE 控件这些控件由 `COleControl` 对象表示。  使用 `CConnectionPoint` 对象，这些控件与其容器进行通信。  
+---
+# <a name="ole-control-classes"></a>OLE Control Classes
+These are the primary classes you use when writing OLE controls. The `COleControlModule` class in an OLE control module is like the [CWinApp](../mfc/reference/cwinapp-class.md) class in an application. Each module implements one or more OLE controls; these controls are represented by `COleControl` objects. These controls communicate with their containers using `CConnectionPoint` objects.  
   
- 而 `COlePropertyPage` 和 `CPropExchange` 类来帮助您实现属性页和属性的控件，`CPictureHolder` 和 `CFontHolder` 类封装图片和字体的 COM 接口。  
+ The `CPictureHolder` and `CFontHolder` classes encapsulate COM interfaces for pictures and fonts, while the `COlePropertyPage` and `CPropExchange` classes help you implement property pages and property persistence for your control.  
   
  [COleControlModule](../mfc/reference/colecontrolmodule-class.md)  
- 将 OLE 控制模块的 `CWinApp` 类。  从 `COleControlModule` 类派生了 OLE 开发控制模块对象。  为初始化 OLE 控制模块提供成员函数。  
+ Replaces the `CWinApp` class for your OLE control module. Derive from the `COleControlModule` class to develop an OLE control module object. It provides member functions for initializing your OLE control's module.  
   
  [COleControl](../mfc/reference/colecontrol-class.md)  
- 从 `COleControl` 类派生一开发 OLE 控件。  从 `CWnd`派生，此类都继承一窗口窗口对象的所有功能和额外的 OLE 特定功能，例如事件触发和功能支持方法和属性。  
+ Derive from the `COleControl` class to develop an OLE control. Derived from `CWnd`, this class inherits all the functionality of a Windows window object plus additional OLE-specific functionality, such as event firing and the ability to support methods and properties.  
   
  [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)  
- `CConnectionPoint` 定义用于与其他 OLE 对象通信的接口（称为“连接点”）的特殊类型。  连接点在其他对象实现可以启动的操作，例如事件触发和更改通知的输出接口。  
+ The `CConnectionPoint` class defines a special type of interface used to communicate with other OLE objects, called a connection point. A connection point implements an outgoing interface that is able to initiate actions on other objects, such as firing events and change notifications.  
   
  [CPictureHolder](../mfc/reference/cpictureholder-class.md)  
- 封装 Windows 图片对象和 `IPicture` COM 接口的功能；用于实现 OLE 图片控件的自定义属性。  
+ Encapsulates the functionality of a Windows picture object and the `IPicture` COM interface; used to implement the custom Picture property of an OLE control.  
   
  [CFontHolder](../mfc/reference/cfontholder-class.md)  
- 实现常用字体属性并封装 Windows 字体对象和 `IFont` 接口的功能。  
+ Encapsulates the functionality of a Windows font object and the `IFont` COM interface; used to implement the stock Font property of an OLE control.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
- 用于在图形界面（类似于对话框）中显示自定义控件的属性。  
+ Displays the properties of an OLE control in a graphical interface, similar to a dialog box.  
   
  [CPropExchange](../mfc/reference/cpropexchange-class.md)  
- 支持 OLE 控件持久性的实现。  类似于对话框的 [CDataExchange](../mfc/reference/cdataexchange-class.md)。  
+ Supports the implementation of property persistence for your OLE controls. Analogous to [CDataExchange](../mfc/reference/cdataexchange-class.md) for dialog boxes.  
   
  [CMonikerFile](../mfc/reference/cmonikerfile-class.md)  
- 将名字对象也可以构成的对象的字符串表示形式以及同步名字对象是绑定到一名称的流。  
+ Takes a moniker, or a string representation that it can make into a moniker, and binds it synchronously to the stream for which the moniker is a name.  
   
  [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)  
- 类似 Works 于 `CMonikerFile`;但是，该异步绑定的对象。名字对象是一名称的流。  
+ Works similarly to `CMonikerFile`; however, it binds the moniker asynchronously to the stream for which the moniker is a name.  
   
  [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)  
- 实现可异步加载的 OLE 控件属性。  
+ Implements an OLE control property that can be loaded asynchronously.  
   
  [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md)  
- 实现异步传输并在内存文件中缓冲的 OLE 控件属性。  
+ Implements an OLE control property transferred asynchronously and cached in a memory file.  
   
  [COleCmdUI](../mfc/reference/colecmdui-class.md)  
- 接收自在其容器允许活动文档的用户界面的命令 \(如 FileNew，打开，打印，等等\)，并允许在活动文档容器接收自的用户界面的命令。  
+ Allows an Active document to receive commands that originate in its container's user interface (such as FileNew, Open, Print, and so on), and allows a container to receive commands that originate in the Active document's user interface.  
   
  [COleSafeArray](../mfc/reference/colesafearray-class.md)  
- 与任意类型和维度的数组一起使用的类。  
+ Works with arrays of arbitrary type and dimension.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

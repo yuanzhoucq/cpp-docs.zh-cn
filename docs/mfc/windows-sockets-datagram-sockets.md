@@ -1,41 +1,60 @@
 ---
-title: "Windows 套接字：数据报套接字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据报套接字 [C++]"
-  - "套接字 [C++], 双向数据流"
-  - "套接字 [C++], 数据报"
-  - "Windows 套接字 [C++], 双向数据流"
-  - "Windows 套接字 [C++], 数据报"
+title: 'Windows Sockets: Datagram Sockets | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], datagram
+- Windows Sockets [MFC], bi-directional data flow
+- datagram sockets [MFC]
+- Windows Sockets [MFC], datagram
+- sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Windows 套接字：数据报套接字
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e48863aae635f8855cec24ebab023d07aeba12a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文介绍数据报套接字，可用两个 Windows 套接字的类型之一。\(其他类型为 [流套接字](../mfc/windows-sockets-stream-sockets.md)。\)  
+---
+# <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Datagram Sockets
+This article describes datagram sockets, one of the two Windows Socket types available. (The other type is the [stream socket](../mfc/windows-sockets-stream-sockets.md).)  
   
- 数据报套接字支持没有确保排序或 unduplicated 的双向数据流。  数据报也不保证会是可靠；它们可能无法达到。  数据报数据可能达到中失败和副本可能，但在数据记录的边界，而记录，只要小于接收器的内部大小限制。  您负责管理先后顺序和可靠性。可靠性 \(往往是好、在局域网 \[\]，但这样小于在 \[\] 广域网 WAN，例如 Internet。\)  
+ Datagram sockets support a bidirectional data flow that is not guaranteed to be sequenced or unduplicated. Datagrams also are not guaranteed to be reliable; they can fail to arrive. Datagram data may arrive out of order and possibly duplicated, but record boundaries in the data are preserved, as long as the records are smaller than the receiver's internal size limit. You are responsible for managing sequencing and reliability. (Reliability tends to be good on local-area networks [LAN] but less so on wide-area networks [WAN], such as the Internet.)  
   
- 数据报“无连接”，即，显式连接未生成；将信息发送数据报到指定的套接字，并可以接收来自指定的套接字的消息。  
+ Datagrams are "connectionless", that is, no explicit connection is established; you send a datagram message to a specified socket and you can receive messages from a specified socket.  
   
- 数据报套接字的网络系统时钟保持示例是在中同步的应用程序。  这演示数据报套接字的其他功能。那些至少设置的：到大量的网络地址的消息广播。  
+ An example of a datagram socket is an application that keeps system clocks on the network synchronized. This illustrates an additional capability of datagram sockets in at least some settings: broadcasting messages to a large number of network addresses.  
   
- 数据报套接字数据流的方向与记录套接字好。  有关数据报套接字的更多信息，请参见 Windows 套接字规范，[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中可用。  
+ Datagram sockets are better than stream sockets for record-oriented data. For more information about datagram sockets, see the Windows Sockets specification, available in the Windows SDK.  
   
-## 请参阅  
- [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)   
- [Windows 套接字：背景](../mfc/windows-sockets-background.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+
+

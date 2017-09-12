@@ -1,5 +1,5 @@
 ---
-title: "标准命令和窗口 Id |Microsoft 文档"
+title: Standard Command and Window IDs | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,29 +33,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: d308f3f9efc5933124460d9839a0e94fffa60b4a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 30a36f5b71a99888eff47c539c9bf3534481e71d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="standard-command-and-window-ids"></a>标准命令和窗口 ID
-Microsoft 基础类库定义了 Afxres.h 中的很多标准命令和窗口 ID。 这些 ID 在资源编辑器和“属性”窗口中最常使用，用来将消息映射到处理程序函数。 所有标准命令都有**ID_**前缀。 例如，当您使用菜单编辑器时，您通常将绑定文件打开菜单项的标准`ID_FILE_OPEN`命令 id。  
+# <a name="standard-command-and-window-ids"></a>Standard Command and Window IDs
+The Microsoft Foundation Class Library defines a number of standard command and window IDs in Afxres.h. These IDs are most commonly used within the resource editors and the Properties window to map messages to your handler functions. All standard commands have an             **ID_** prefix. For example, when you use the menu editor, you normally bind the File Open menu item to the standard             `ID_FILE_OPEN` command ID.  
   
- 对于大多数标准命令，应用程序代码不需要引用命令 ID，因为框架本身可处理通过其主框架类中的消息映射命令 ( `CWinThread`， `CWinApp`， `CView`， **CDocument**，依此类推)。  
+ For most standard commands, application code does not need to refer to the command ID, because the framework itself handles the commands through message maps in its primary framework classes (                `CWinThread`,                 `CWinApp`,                 `CView`,                 **CDocument**, and so on).  
   
- 除了标准命令 Id 之外还具有一个前缀定义了许多其他标准 Id 的**AFX_ID**。 这些 Id 包括标准窗口 Id (前缀**AFX_IDW_**)，字符串 Id (前缀**AFX_IDS_**)，和若干其他类型。  
+ In addition to standard command IDs, a number of other standard IDs are defined which have a prefix of                 **AFX_ID**. These IDs include standard window IDs (prefix                 **AFX_IDW_**), string IDs (prefix                 **AFX_IDS_**), and several other types.  
   
- 开头的 Id **AFX_ID**前缀很少使用的程序员，但可能需要重写也引用框架函数时，请参考这些 Id **AFX_ID**s。  
+ IDs that begin with the                 **AFX_ID** prefix are rarely used by programmers, but you might need to refer to these IDs when overriding framework functions that also refer to the                 **AFX_ID**s.  
   
- ID 在此引用中不单独记录。 您可以找到有关它们的详细信息在技术说明[20](../../mfc/tn020-id-naming-and-numbering-conventions.md)， [21](../../mfc/tn021-command-and-message-routing.md)，和[22](../../mfc/tn022-standard-commands-implementation.md)。  
+ IDs are not individually documented in this reference. You can find more information on them in Technical Notes                 [20](../../mfc/tn020-id-naming-and-numbering-conventions.md),                 [21](../../mfc/tn021-command-and-message-routing.md), and                 [22](../../mfc/tn022-standard-commands-implementation.md).  
   
 > [!NOTE]
->  标头文件 Afxres.h 间接包含在 Afxwin.h 中。 您必须将以下语句显式包含在应用程序的资源脚本 (.rc) 文件中：  
+>  The header file Afxres.h is indirectly included in Afxwin.h. You must explicitly include the following statement in your application's resource script (.rc) file:  
   
- [!code-cpp[NVC_MFC_Utilities #&47;](../../mfc/codesnippet/cpp/standard-command-and-window-ids_1.h)]  
+ [!code-cpp[NVC_MFC_Utilities#47](../../mfc/codesnippet/cpp/standard-command-and-window-ids_1.h)]  
   
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

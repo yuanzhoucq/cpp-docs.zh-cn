@@ -1,42 +1,61 @@
 ---
-title: "使用热键控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHotKeyCtrl 类, using"
-  - "热键控件"
+title: Using a Hot Key Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHotKeyCtrl class [MFC], using
+- hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用热键控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9590d2ea6c374523b2d369f50affab16b7467331
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-热键一控件的典型用法遵循以下模式：  
+---
+# <a name="using-a-hot-key-control"></a>Using a Hot Key Control
+Typical usage of a hot key control follows the pattern below:  
   
--   创建控件。  如果控件在对话框模板指定的，该对话框自动创建，创建时。\(您应具有对应于这些热键控件。\) 的对话框类的 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) 一个成员或者，可以使用 [创建](../Topic/CHotKeyCtrl::Create.md) 成员函数创建控件作为一个子窗口的所有窗口。  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) member in your dialog class that corresponds to the hot key control.) Alternatively, you can use the [Create](../mfc/reference/chotkeyctrl-class.md#create) member function to create the control as a child window of any window.  
   
--   如果要设置控件的默认值，请调用成员函数。[SetHotKey](../Topic/CHotKeyCtrl::SetHotKey.md) 如果要禁止某些 Shift 状态，调用 [SetRules](../Topic/CHotKeyCtrl::SetRules.md)。  若要在对话框的控件，一个好时机执行在此对话框的函数 [OnInitDialog](../Topic/CDialog::OnInitDialog.md)。  
+-   If you want to set a default value for the control, call the [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey) member function. If you want to prohibit certain shift states, call [SetRules](../mfc/reference/chotkeyctrl-class.md#setrules). For controls in a dialog box, a good time to do this is in the dialog box's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   用户与控件交互按一热组合键，则这些热键控件具有焦点时。  通过用户单击对话框的按钮。然后指示由于此任务完成的，而。  
+-   The user interacts with the control by pressing a hot key combination when the hot key control has focus. The user then somehow indicates that this task is complete, perhaps by clicking a button in the dialog box.  
   
--   当程序收到通知时用户选择热键，应使用 [GetHotKey](../Topic/CHotKeyCtrl::GetHotKey.md) 热键成员函数从控件检索虚拟键 Shift 和状态值。  
+-   When your program is notified that the user has selected a hot key, it should use the member function [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) to retrieve the virtual key and shift state values from the hot key control.  
   
--   一旦知道密钥用户选择，您可以设置这些热键使用 [热键设置](../mfc/setting-a-hot-key.md)中介绍的方法之一。  
+-   Once you know what key the user selected, you can set the hot key using one of the methods described in [Setting a Hot Key](../mfc/setting-a-hot-key.md).  
   
--   热键如果控件在对话框，将自动销毁它和 `CHotKeyCtrl` 对象。  否则，您需要确保正确销毁控件和 `CHotKeyCtrl` 对象。  
+-   If the hot key control is in a dialog box, it and the `CHotKeyCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CHotKeyCtrl` object are properly destroyed.  
   
-## 请参阅  
- [使用 CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

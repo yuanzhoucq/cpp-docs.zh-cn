@@ -1,5 +1,5 @@
 ---
-title: "类型库访问 |Microsoft 文档"
+title: Type Library Access | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- type libraries, accessing
+- type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 caps.latest.revision: 14
 author: mikeblome
@@ -33,68 +33,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c531cfd358a6f049754b55a5bc8902ad5a37d975
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="type-library-access"></a>类型库访问
-类型库向其他 OLE 感知的应用程序公开 OLE 控件的接口。 如果将公开一个或多个接口，则每个 OLE 控件都必须具有类型库。  
+# <a name="type-library-access"></a>Type Library Access
+Type libraries expose the interfaces of an OLE control to other OLE-aware applications. Each OLE control must have a type library if one or more interfaces are to be exposed.  
   
- 下列宏允许 OLE 控件提供对其自己的类型库的访问：  
+ The following macros allow an OLE control to provide access to its own type library:  
   
-### <a name="type-library-access"></a>类型库访问  
+### <a name="type-library-access"></a>Type Library Access  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|声明 OLE 控件（必须用于类声明中）的 `GetTypeLib` 成员函数。|  
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|实现 OLE 控件（必须用于类实现中）的 `GetTypeLib` 成员函数。|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declares a `GetTypeLib` member function of an OLE control (must be used in the class declaration).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implements a `GetTypeLib` member function of an OLE control (must be used in the class implementation).|  
   
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
- 声明`GetTypeLib`控件类的成员函数。  
+##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
+ Declares the `GetTypeLib` member function of your control class.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 与类型库相关的控件类的名称。  
+ The name of the control class related to the type library.  
   
-### <a name="remarks"></a>备注  
- 在控件类头文件中使用此宏。  
+### <a name="remarks"></a>Remarks  
+ Use this macro in the control class header file.  
 
-### <a name="requirements"></a>要求  
- **标头：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
- 实现控件的`GetTypeLib`成员函数。  
+##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
+ Implements the control's `GetTypeLib` member function.  
   
 ```   
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 与类型库相关的控件类的名称。  
+ The name of the control class related to the type library.  
   
  *tlid*  
- 类型库 ID 号。  
+ The ID number of the type library.  
   
  `wVerMajor`  
- 类型库主版本号。  
+ The type library major version number.  
   
  `wVerMinor`  
- 类型库次版本号。  
+ The type library minor version number.  
   
-### <a name="remarks"></a>备注  
- 此宏必须出现在使用任何控件类的实现文件`DECLARE_OLETYPELIB`宏。  
+### <a name="remarks"></a>Remarks  
+ This macro must appear in the implementation file for any control class that uses the `DECLARE_OLETYPELIB` macro.  
 
-### <a name="requirements"></a>要求  
- **标头：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
    
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

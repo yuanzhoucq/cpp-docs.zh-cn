@@ -1,5 +1,5 @@
 ---
-title: "CDaoIndexInfo 结构 |Microsoft 文档"
+title: CDaoIndexInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
-- CDaoIndexInfo structure
+- CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 92206d8d8f9b2315fb859e2712a83d32a4c293ad
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ee0d6e1e47f1e171d625781f9c53125e832a915a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 结构
-`CDaoIndexInfo`结构包含有关为数据访问对象 (DAO) 定义的索引对象的信息。  
+# <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo Structure
+The `CDaoIndexInfo` structure contains information about an index object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoIndexInfo {  
@@ -64,74 +64,74 @@ struct CDaoIndexInfo {
 };   
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 唯一地命名字段对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
+ Uniquely names the field object. For details, see the topic "Name Property" in DAO Help.  
   
  `m_pFieldInfos`  
- 指向数组的指针[CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md)对象指示哪些 tabledef 或记录集字段在索引中的键字段。 每个对象标识在索引中的一个字段。 默认索引排序为升序。 Index 对象可以表示为每个记录的索引键的一个或多个字段。 可以对这些进行升序、 降序或组合。  
+ A pointer to an array of [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) objects indicating which tabledef or recordset fields are key fields in an index. Each object identifies one field in the index. The default index ordering is ascending. An index object can have one or more fields representing index keys for each record. These can be ascending, descending, or a combination.  
   
  `m_nFields`  
- 存储在中的字段数`m_pFieldInfos`。  
+ The number of fields stored in `m_pFieldInfos`.  
   
  *m_bPrimary*  
- 如果主属性为**TRUE**，索引对象都表示主索引。 主索引包含唯一标识表中预定义顺序中的所有记录的一个或多个字段。 索引字段必须是唯一的因为索引对象的唯一属性也设置为**TRUE**在 DAO 中。 如果主索引由多个字段组成，每个字段可以包含重复值，但所有索引的字段值的每个组合必须是唯一。 主索引包含表的键，并且通常包含的主键相同的字段。  
+ If the Primary property is **TRUE**, the index object represents a primary index. A primary index consists of one or more fields that uniquely identify all records in a table in a predefined order. Because the index field must be unique, the Unique property of the Index object is also set to **TRUE** in DAO. If the primary index consists of more than one field, each field can contain duplicate values, but each combination of values from all the indexed fields must be unique. A primary index consists of a key for the table and usually contains the same fields as the primary key.  
   
- 当设置表的主键时，主键被自动定义为表的主索引。 有关详细信息，请参阅"主属性"和"唯一 Property"DAO 帮助中的主题。  
+ When you set a primary key for a table, the primary key is automatically defined as the primary index for the table. For more information, see the topics "Primary Property" and "Unique Property" in DAO Help.  
   
 > [!NOTE]
->  可以有，最多一个主索引的表。  
+>  There can be, at most, one primary index on a table.  
   
  *m_bUnique*  
- 指示索引对象是否表示一个表的唯一索引。 如果此属性为**TRUE**，index 对象代表中是唯一的索引。 唯一索引包含在逻辑上排列中唯一的、 预定义顺序的表中的所有记录的一个或多个字段。 如果该索引包含的一个字段，该字段中的值必须是唯一的整个表。 如果索引包含多个字段，每个字段可以包含重复值，但所有索引的字段值的每个组合必须唯一。  
+ Indicates whether an index object represents a unique index for a table. If this property is **TRUE**, the index object represents an index that is unique. A unique index consists of one or more fields that logically arrange all records in a table in a unique, predefined order. If the index consists of one field, values in that field must be unique for the entire table. If the index consists of more than one field, each field can contain duplicate values, but each combination of values from all the indexed fields must be unique.  
   
- 如果 Unique 和主索引对象的属性设置为**TRUE**，索引是唯一和主要︰ 它唯一地标识表中预定义的逻辑顺序中的所有记录。 如果主属性设置为**FALSE**，该索引是辅助索引。 辅助索引 （密钥和非键） 在逻辑上排列预定义顺序中的记录，但不作为表中的记录的标识符。  
+ If both the Unique and Primary properties of an index object are set to **TRUE**, the index is unique and primary: It uniquely identifies all records in the table in a predefined, logical order. If the Primary property is set to **FALSE**, the index is a secondary index. Secondary indexes (both key and nonkey) logically arrange records in a predefined order without serving as an identifier for records in the table.  
   
- 有关详细信息，请参阅"主属性"和"唯一 Property"DAO 帮助中的主题。  
+ For more information, see the topics "Primary Property" and "Unique Property" in DAO Help.  
   
  *m_bClustered*  
- 指示索引对象是否表示一个表的聚集的索引。 如果此属性为**TRUE**，索引对象都表示一个聚集的索引; 否则，不允许。 聚集的索引包含一个或多个非键字段、 合起来看，排列中预定义顺序的表中的所有记录。 对于非聚集索引，表中的数据按原义存储在聚集索引按指定的顺序。 聚集的索引提供了高效访问表中的记录。 有关详细信息，请参阅主题 DAO 帮助中的"群集属性"。  
+ Indicates whether an index object represents a clustered index for a table. If this property is **TRUE**, the index object represents a clustered index; otherwise, it does not. A clustered index consists of one or more nonkey fields that, taken together, arrange all records in a table in a predefined order. With a clustered index, the data in the table is literally stored in the order specified by the clustered index. A clustered index provides efficient access to records in a table. For more information, see the topic "Clustered Property" in DAO Help.  
   
 > [!NOTE]
->  对于使用 Microsoft Jet 数据库引擎，因为 Jet 数据库引擎不支持聚集的索引的数据库时将忽略群集属性。  
+>  The Clustered property is ignored for databases that use the Microsoft Jet database engine because the Jet database engine does not support clustered indexes.  
   
  *m_bIgnoreNulls*  
- 指示是否在其索引字段中具有 Null 值的记录的索引条目。 如果此属性为**TRUE**，值为 Null 的字段没有任何索引条目。 若要使搜索更快地使用的字段的记录，您可以定义字段的索引。 如果不允许在索引的字段中的 Null 项和期待的许多条目为 Null，则可以设置到的索引对象的 IgnoreNulls 属性**TRUE**以减少这些索引使用的存储空间量。 IgnoreNulls 属性设置以及所需的属性的设置一起确定具有 Null 索引值的记录是否索引条目，如下表所示。  
+ Indicates whether there are index entries for records that have Null values in their index fields. If this property is **TRUE**, fields with Null values do not have an index entry. To make searching for records using a field faster, you can define an index for the field. If you allow Null entries in an indexed field and expect many of the entries to be Null, you can set the IgnoreNulls property for the index object to **TRUE** to reduce the amount of storage space that the index uses. The IgnoreNulls property setting and the Required property setting together determine whether a record with a Null index value has an index entry, as the following table shows.  
   
-|IgnoreNulls|必需|在索引字段中，则为 null|  
+|IgnoreNulls|Required|Null in index field|  
 |-----------------|--------------|-------------------------|  
-|True|False|允许为 null 值未添加的索引条目。|  
-|False|False|允许为 null 值已添加的索引条目。|  
-|True 或 False|True|不允许; 的 null 值未添加的索引条目。|  
+|True|False|Null value allowed; no index entry added.|  
+|False|False|Null value allowed; index entry added.|  
+|True or False|True|Null value not allowed; no index entry added.|  
   
- 有关详细信息，请参阅主题 DAO 帮助中的"IgnoreNulls 属性"。  
+ For more information, see the topic "IgnoreNulls Property" in DAO Help.  
   
  `m_bRequired`  
- 指示是否 DAO index 对象需要非 Null 值。 如果此属性为**TRUE**，index 对象不允许 Null 值。 有关详细信息，请参阅主题 DAO 帮助中的"所需属性"。  
+ Indicates whether a DAO index object requires a non-Null value. If this property is **TRUE**, the index object does not allow a Null value. For more information, see the topic "Required Property" in DAO Help.  
   
 > [!TIP]
->  在可以设置此属性对于 DAO index 对象或 field 对象 （包含按 tabledef、 记录集或 querydef 对象中），则将其设置为字段对象。 在此索引对象之前检查字段对象的属性设置的有效性。  
+>  When you can set this property for either a DAO index object or a field object (contained by a tabledef, recordset, or querydef object), set it for the field object. The validity of the property setting for a field object is checked before that of an index object.  
   
  *m_bForeign*  
- 指示索引对象是否表示一个表中的外键。 如果此属性为**TRUE**，索引表示一个表中的外键。 外键包括一个或多个表中的字段外，用于唯一标识主表中的行。 Microsoft Jet 数据库引擎创建外部表的索引对象和设置外属性后创建的关系，将强制引用完整性。 有关详细信息，请参阅主题 DAO 帮助中的"外属性"。  
+ Indicates whether an index object represents a foreign key in a table. If this property is **TRUE**, the index represents a foreign key in a table. A foreign key consists of one or more fields in a foreign table that uniquely identify a row in a primary table. The Microsoft Jet database engine creates an index object for the foreign table and sets the Foreign property when you create a relationship that enforces referential integrity. For more information, see the topic "Foreign Property" in DAO Help.  
   
  *m_lDistinctCount*  
- 指示索引对象的关联的表中包含的唯一值的个数。 检查非重复计数属性以确定的唯一值或在索引中的键数。 任意键是只计算一次，即使在索引允许重复的值可能是该值的多个匹配项。 此信息很有用的应用程序尝试通过评估索引信息优化数据访问。 唯一值的数目也称为是索引对象的基数。 DistinctCount 属性不会始终反映实际的密钥数在特定时间。 例如，由事务回滚引起的更改将不会立即反映在非重复计数属性。 有关详细信息，请参阅主题 DAO 帮助中的"非重复计数属性"。  
+ Indicates the number of unique values for the index object that are included in the associated table. Check the DistinctCount property to determine the number of unique values, or keys, in an index. Any key is counted only once, even though there may be multiple occurrences of that value if the index permits duplicate values. This information is useful in applications that attempt to optimize data access by evaluating index information. The number of unique values is also known as the cardinality of an index object. The DistinctCount property will not always reflect the actual number of keys at a particular time. For example, a change caused by a transaction rollback will not be reflected immediately in the DistinctCount property. For more information, see the topic "DistinctCount Property" in DAO Help.  
   
-## <a name="remarks"></a>备注  
- 对主、 辅助数据库，并且所有上面引用指示如何通过返回的信息`GetIndexInfo`类中的成员函数[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo)和[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)。  
+## <a name="remarks"></a>Remarks  
+ The references to Primary, Secondary, and All above indicate how the information is returned by the `GetIndexInfo` member function in classes [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) and [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
   
- 索引对象不由 MFC 类表示。 相反，DAO 对象类的基础 MFC 对象[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)包含称为索引集合的索引对象的集合。 这些类提供成员函数来访问各个项的索引信息，或可以访问它们同时与`CDaoIndexInfo`对象通过调用`GetIndexInfo`包含对象的成员函数。  
+ Index objects are not represented by an MFC class. Instead, DAO objects underlying MFC objects of class [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contain a collection of index objects, called the Indexes collection. These classes supply member functions to access individual items of index information, or you can access them all at once with a `CDaoIndexInfo` object by calling the `GetIndexInfo` member function of the containing object.  
   
- `CDaoIndexInfo`具有一个构造函数和析构函数以便正确地分配和解除分配中的索引字段信息`m_pFieldInfos`。  
+ `CDaoIndexInfo` has a constructor and a destructor in order to properly allocate and deallocate the index field information in `m_pFieldInfos`.  
   
- 检索的信息`GetIndexInfo`tabledef 对象成员函数将存储在`CDaoIndexInfo`结构。 调用`GetIndexInfo`包含 tabledef 对象的索引集合中存储的索引对象的成员函数。 `CDaoIndexInfo`此外定义了`Dump`成员函数在调试生成。 您可以使用`Dump`转储的内容`CDaoIndexInfo`对象。  
+ Information retrieved by the `GetIndexInfo` member function of a tabledef object is stored in a `CDaoIndexInfo` structure. Call the `GetIndexInfo` member function of the containing tabledef object in whose Indexes collection the index object is stored. `CDaoIndexInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoIndexInfo` object.  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)
 
 

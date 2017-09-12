@@ -1,58 +1,77 @@
 ---
-title: "OLE 服务器类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM 组件, 类"
-  - "组件类"
-  - "OLE 服务器应用程序, 服务器类"
-  - "OLE 服务器文档"
+title: OLE Server Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], server classes
+- OLE server documents
+- COM components, classes [MFC]
+- component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE 服务器类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c5aa81cf501b54004e2f46760f0af3caff1c38e4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-服务器应用使用这些类。  服务器文档从 `COleServerDoc` 派生而不是从 **CDocument**。  请注意，由于 `COleServerDoc` 派生自 `COleLinkingDoc`，所以服务器文档也可支持链接的容器。  
+---
+# <a name="ole-server-classes"></a>OLE Server Classes
+These classes are used by server applications. Server documents are derived from `COleServerDoc` rather than from **CDocument**. Note that because `COleServerDoc` is derived from `COleLinkingDoc`, server documents can also be containers that support linking.  
   
- `COleServerItem` 类表示在其他文档中嵌入或链接的文档或部分。  
+ The `COleServerItem` class represents a document or portion of a document that can be embedded in another document or linked to.  
   
- `COleIPFrameWnd` 和 `COleResizeBar` 支持就地编辑对象时，在容器时，并且 `COleTemplateServer` 支持文件为\/视图匹配，因此从其他应用程序的 OLE 对象进行编辑。  
+ `COleIPFrameWnd` and `COleResizeBar` support in-place editing while the object is in a container, and `COleTemplateServer` supports creation of document/view pairs so OLE objects from other applications can be edited.  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- 用作基类、服务器应用程序类的文档。  `COleServerDoc` 对象通过交互提供大多数服务器支持为 `COleServerItem` 对象。  使用类库的文档\/视图结构，编辑功能的可视化对象提供。  
+ Used as the base class for server-application document classes. `COleServerDoc` objects provide the bulk of server support through interactions with `COleServerItem` objects. Visual editing capability is provided using the class library's document/view architecture.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
- `COleClientItem` 和 `COleServerItem`的抽象基类。  从 `CDocItem` 派生的类对象表示文档的一部分。  
+ Abstract base class of `COleClientItem` and `COleServerItem`. Objects of classes derived from `CDocItem` represent parts of documents.  
   
  [COleServerItem](../mfc/reference/coleserveritem-class.md)  
- 用于 OLE 接口表示到 `COleServerDoc` 项。  通常具有 `COleServerDoc` 对象，故表示文档中的嵌入式片段。  在对文档的各个部分支持连接，如果可以在多个 `COleServerItem` 对象，每个都代表一个指向文档的服务器。  
+ Used to represent the OLE interface to `COleServerDoc` items. There is usually one `COleServerDoc` object, which represents the embedded part of a document. In servers that support links to parts of documents, there can be many `COleServerItem` objects, each of which represents a link to a portion of the document.  
   
  [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- 当服务器文档采用后，编辑为视图提供框架窗口。  
+ Provides the frame window for a view when a server document is being edited in place.  
   
  [COleResizeBar](../mfc/reference/coleresizebar-class.md)  
- 为就地调整提供标准的用户界面。  此类对象与 `COleIPFrameWnd` 对象共同始终使用。  
+ Provides the standard user interface for in-place resizing. Objects of this class are always used in conjunction with `COleIPFrameWnd` objects.  
   
  [COleTemplateServer](../mfc/reference/coletemplateserver-class.md)  
- 使用框架的文档\/视图结构，用于创建文档。  `COleTemplateServer` 对象最为关联 `CDocTemplate`委托对象的工作。  
+ Used to create documents using the framework's document/view architecture. A `COleTemplateServer` object delegates most of its work to an associated `CDocTemplate` object.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- 异常由 OLE 处理的故障。  容器和服务器使用该类。  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

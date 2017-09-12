@@ -1,5 +1,5 @@
 ---
-title: "CMenu 类 |Microsoft 文档"
+title: CMenu Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -53,12 +53,45 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HMENU
-- menus, class
-- menus, base class
-- menus, creating
-- menus, managing
-- CMenu class
+- CMenu [MFC], CMenu
+- CMenu [MFC], AppendMenu
+- CMenu [MFC], Attach
+- CMenu [MFC], CheckMenuItem
+- CMenu [MFC], CheckMenuRadioItem
+- CMenu [MFC], CreateMenu
+- CMenu [MFC], CreatePopupMenu
+- CMenu [MFC], DeleteMenu
+- CMenu [MFC], DeleteTempMap
+- CMenu [MFC], DestroyMenu
+- CMenu [MFC], Detach
+- CMenu [MFC], DrawItem
+- CMenu [MFC], EnableMenuItem
+- CMenu [MFC], FromHandle
+- CMenu [MFC], GetDefaultItem
+- CMenu [MFC], GetMenuContextHelpId
+- CMenu [MFC], GetMenuInfo
+- CMenu [MFC], GetMenuItemCount
+- CMenu [MFC], GetMenuItemID
+- CMenu [MFC], GetMenuItemInfo
+- CMenu [MFC], GetMenuState
+- CMenu [MFC], GetMenuString
+- CMenu [MFC], GetSafeHmenu
+- CMenu [MFC], GetSubMenu
+- CMenu [MFC], InsertMenu
+- CMenu [MFC], InsertMenuItem
+- CMenu [MFC], LoadMenu
+- CMenu [MFC], LoadMenuIndirect
+- CMenu [MFC], MeasureItem
+- CMenu [MFC], ModifyMenu
+- CMenu [MFC], RemoveMenu
+- CMenu [MFC], SetDefaultItem
+- CMenu [MFC], SetMenuContextHelpId
+- CMenu [MFC], SetMenuInfo
+- CMenu [MFC], SetMenuItemBitmaps
+- CMenu [MFC], SetMenuItemInfo
+- CMenu [MFC], TrackPopupMenu
+- CMenu [MFC], TrackPopupMenuEx
+- CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 caps.latest.revision: 22
 author: mikeblome
@@ -78,103 +111,103 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0cb607262df58905d63298cdf2d7e88d281108f1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 902032515ca36489587928560d9ae2d85a611ef7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmenu-class"></a>CMenu 类
-封装 Windows `HMENU`。  
+# <a name="cmenu-class"></a>CMenu Class
+An encapsulation of the Windows `HMENU`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMenu : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenu::CMenu](#cmenu)|构造 `CMenu` 对象。|  
+|[CMenu::CMenu](#cmenu)|Constructs a `CMenu` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenu::AppendMenu](#appendmenu)|将新的项追加到此菜单的末尾。|  
-|[CMenu::Attach](#attach)|将附加的 Windows 菜单句柄`CMenu`对象。|  
-|[CMenu::CheckMenuItem](#checkmenuitem)|旁边放置一个复选标记，或从弹出菜单的菜单项中删除复选标记。|  
-|[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|将菜单项旁边的单选按钮，并从所有组中的其他菜单项中移除的单选按钮。|  
-|[CMenu::CreateMenu](#createmenu)|创建一个空的菜单，并将其附加到`CMenu`对象。|  
-|[CMenu::CreatePopupMenu](#createpopupmenu)|创建一个空的弹出菜单，并将其附加到`CMenu`对象。|  
-|[CMenu::DeleteMenu](#deletemenu)|从菜单中删除指定的项。 如果菜单项具有关联的弹出菜单，销毁弹出菜单的句柄并释放由它的内存。|  
-|[CMenu::DeleteTempMap](#deletetempmap)|删除任何临时`CMenu`创建的对象`FromHandle`成员函数。|  
-|[CMenu::DestroyMenu](#destroymenu)|销毁附加到的菜单`CMenu`对象并释放任何菜单占用的内存。|  
-|[CMenu::Detach](#detach)|分离从 Windows 菜单句柄`CMenu`对象并返回的句柄。|  
-|[CMenu::DrawItem](#drawitem)|由框架在所有者绘制菜单更改的可视方面时调用。|  
-|[CMenu::EnableMenuItem](#enablemenuitem)|启用、 禁用，或将使变灰 （灰色） 菜单项。|  
-|[CMenu::FromHandle](#fromhandle)|返回一个指向`CMenu`提供了 Windows 菜单句柄的对象。|  
-|[CMenu::GetDefaultItem](#getdefaultitem)|确定指定的菜单上的默认菜单项。|  
-|[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|检索与菜单相关联的帮助上下文 ID。|  
-|[CMenu::GetMenuInfo](#getmenuinfo)|检索特定菜单上的信息。|  
-|[CMenu::GetMenuItemCount](#getmenuitemcount)|确定弹出窗口或顶级菜单中的项的数目。|  
-|[CMenu::GetMenuItemID](#getmenuitemid)|获取位于指定位置的菜单项的菜单项标识符。|  
-|[CMenu::GetMenuItemInfo](#getmenuiteminfo)|检索有关菜单项的信息。|  
-|[CMenu::GetMenuState](#getmenustate)|在弹出菜单中返回指定的菜单项或项的数目的状态。|  
-|[CMenu::GetMenuString](#getmenustring)|检索指定的菜单项的标签。|  
-|[CMenu::GetSafeHmenu](#getsafehmenu)|返回`m_hMenu`包装此`CMenu`对象。|  
-|[CMenu::GetSubMenu](#getsubmenu)|检索指向弹出菜单的指针。|  
-|[CMenu::InsertMenu](#insertmenu)|在移动该菜单下的其他项的指定位置插入新菜单项。|  
-|[CMenu::InsertMenuItem](#insertmenuitem)|在菜单中指定位置插入新菜单项。|  
-|[CMenu::LoadMenu](#loadmenu)|从可执行文件中加载的菜单资源，并将其附加到`CMenu`对象。|  
-|[CMenu::LoadMenuIndirect](#loadmenuindirect)|从内存中的菜单模板加载一个菜单，并将其附加到`CMenu`对象。|  
-|[CMenu::MeasureItem](#measureitem)|由框架调用以确定菜单维度，创建一个所有者绘制菜单时。|  
-|[CMenu::ModifyMenu](#modifymenu)|更改现有菜单项中指定的位置。|  
-|[CMenu::RemoveMenu](#removemenu)|从指定的菜单中删除具有关联的弹出菜单的菜单项。|  
-|[CMenu::SetDefaultItem](#setdefaultitem)|将指定菜单默认菜单项设置。|  
-|[CMenu::SetMenuContextHelpId](#setmenucontexthelpid)|设置要与菜单相关联的帮助上下文 ID。|  
-|[CMenu::SetMenuInfo](#setmenuinfo)|在特定的菜单上设置的信息。|  
-|[CMenu::SetMenuItemBitmaps](#setmenuitembitmaps)|将指定的选中标记位图与菜单项相关联。|  
-|[CMenu::SetMenuItemInfo](#setmenuiteminfo)|更改菜单项有关的信息。|  
-|[CMenu::TrackPopupMenu](#trackpopupmenu)|在指定位置显示浮动的弹出菜单，并在弹出菜单上跟踪选定的项。|  
-|[CMenu::TrackPopupMenuEx](#trackpopupmenuex)|在指定位置显示浮动的弹出菜单，并在弹出菜单上跟踪选定的项。|  
+|[CMenu::AppendMenu](#appendmenu)|Appends a new item to the end of this menu.|  
+|[CMenu::Attach](#attach)|Attaches a Windows menu handle to a `CMenu` object.|  
+|[CMenu::CheckMenuItem](#checkmenuitem)|Places a check mark next to or removes a check mark from a menu item in the pop-up menu.|  
+|[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|Places a radio button next to a menu item and removes the radio button from all of the other menu items in the group.|  
+|[CMenu::CreateMenu](#createmenu)|Creates an empty menu and attaches it to a `CMenu` object.|  
+|[CMenu::CreatePopupMenu](#createpopupmenu)|Creates an empty pop-up menu and attaches it to a `CMenu` object.|  
+|[CMenu::DeleteMenu](#deletemenu)|Deletes a specified item from the menu. If the menu item has an associated pop-up menu, destroys the handle to the pop-up menu and frees the memory used by it.|  
+|[CMenu::DeleteTempMap](#deletetempmap)|Deletes any temporary `CMenu` objects created by the `FromHandle` member function.|  
+|[CMenu::DestroyMenu](#destroymenu)|Destroys the menu attached to a `CMenu` object and frees any memory that the menu occupied.|  
+|[CMenu::Detach](#detach)|Detaches a Windows menu handle from a `CMenu` object and returns the handle.|  
+|[CMenu::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-drawn menu changes.|  
+|[CMenu::EnableMenuItem](#enablemenuitem)|Enables, disables, or dims (grays) a menu item.|  
+|[CMenu::FromHandle](#fromhandle)|Returns a pointer to a `CMenu` object given a Windows menu handle.|  
+|[CMenu::GetDefaultItem](#getdefaultitem)|Determines the default menu item on the specified menu.|  
+|[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|Retrieves the help context ID associated with the menu.|  
+|[CMenu::GetMenuInfo](#getmenuinfo)|Retrieves information on a specific menu.|  
+|[CMenu::GetMenuItemCount](#getmenuitemcount)|Determines the number of items in a pop-up or top-level menu.|  
+|[CMenu::GetMenuItemID](#getmenuitemid)|Obtains the menu-item identifier for a menu item located at the specified position.|  
+|[CMenu::GetMenuItemInfo](#getmenuiteminfo)|Retrieves information about a menu item.|  
+|[CMenu::GetMenuState](#getmenustate)|Returns the status of the specified menu item or the number of items in a pop-up menu.|  
+|[CMenu::GetMenuString](#getmenustring)|Retrieves the label of the specified menu item.|  
+|[CMenu::GetSafeHmenu](#getsafehmenu)|Returns the `m_hMenu` wrapped by this `CMenu` object.|  
+|[CMenu::GetSubMenu](#getsubmenu)|Retrieves a pointer to a pop-up menu.|  
+|[CMenu::InsertMenu](#insertmenu)|Inserts a new menu item at the specified position, moving other items down the menu.|  
+|[CMenu::InsertMenuItem](#insertmenuitem)|Inserts a new menu item at the specified position in a menu.|  
+|[CMenu::LoadMenu](#loadmenu)|Loads a menu resource from the executable file and attaches it to a `CMenu` object.|  
+|[CMenu::LoadMenuIndirect](#loadmenuindirect)|Loads a menu from a menu template in memory and attaches it to a `CMenu` object.|  
+|[CMenu::MeasureItem](#measureitem)|Called by the framework to determine menu dimensions when an owner-drawn menu is created.|  
+|[CMenu::ModifyMenu](#modifymenu)|Changes an existing menu item at the specified position.|  
+|[CMenu::RemoveMenu](#removemenu)|Deletes a menu item with an associated pop-up menu from the specified menu.|  
+|[CMenu::SetDefaultItem](#setdefaultitem)|Sets the default menu item for the specified menu.|  
+|[CMenu::SetMenuContextHelpId](#setmenucontexthelpid)|Sets the help context ID to be associated with the menu.|  
+|[CMenu::SetMenuInfo](#setmenuinfo)|Sets information on a specific menu.|  
+|[CMenu::SetMenuItemBitmaps](#setmenuitembitmaps)|Associates the specified check-mark bitmaps with a menu item.|  
+|[CMenu::SetMenuItemInfo](#setmenuiteminfo)|Changes information about a menu item.|  
+|[CMenu::TrackPopupMenu](#trackpopupmenu)|Displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu.|  
+|[CMenu::TrackPopupMenuEx](#trackpopupmenuex)|Displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenu::operator HMENU](#operator_hmenu)|检索菜单对象的句的柄。|  
-|[CMenu::operator ！ =](#operator_neq)|确定两个菜单对象是否不相等。|  
-|[CMenu::operator = =](#operator_eq_eq)|确定两个菜单对象是否相等。|  
+|[CMenu::operator HMENU](#operator_hmenu)|Retrieves the handle of the menu object.|  
+|[CMenu::operator !=](#operator_neq)|Determines if two menu objects are not equal.|  
+|[CMenu::operator ==](#operator_eq_eq)|Determines if two menu objects are equal.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenu::m_hMenu](#m_hmenu)|指定附加到的 Windows 菜单的句柄`CMenu`对象。|  
+|[CMenu::m_hMenu](#m_hmenu)|Specifies the handle to the Windows menu attached to the `CMenu` object.|  
   
-## <a name="remarks"></a>备注  
- 它提供用于创建、 跟踪、 更新和销毁菜单的成员函数。  
+## <a name="remarks"></a>Remarks  
+ It provides member functions for creating, tracking, updating, and destroying a menu.  
   
- 创建`CMenu`对象上以本地的堆栈帧，然后调用`CMenu`的成员函数以操作新菜单上，根据需要。 接下来，调用[CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu)若要将菜单设置为一个窗口，后面紧跟调用`CMenu`对象的[分离](#detach)成员函数。 `CWnd::SetMenu`成员函数设置到新菜单的窗口的菜单、 导致窗口重绘以反映菜单更改，并还会将菜单的所有权传递到窗口。 调用**分离**分离`HMENU`从`CMenu`对象，这样，当本地`CMenu`变量超出范围，`CMenu`对象析构函数不会尝试销毁它不再拥有一个菜单。 销毁窗口时，将自动销毁本身的菜单。  
+ Create a `CMenu` object on the stack frame as a local, then call `CMenu`'s member functions to manipulate the new menu as needed. Next, call [CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu) to set the menu to a window, followed immediately by a call to the `CMenu` object's [Detach](#detach) member function. The `CWnd::SetMenu` member function sets the window's menu to the new menu, causes the window to be redrawn to reflect the menu change, and also passes ownership of the menu to the window. The call to **Detach** detaches the `HMENU` from the `CMenu` object, so that when the local `CMenu` variable passes out of scope, the `CMenu` object destructor does not attempt to destroy a menu it no longer owns. The menu itself is automatically destroyed when the window is destroyed.  
   
- 你可以使用[LoadMenuIndirect](#loadmenuindirect)成员函数来创建中的菜单的模板在内存中，但通过资源通过调用创建一个菜单[LoadMenu](#loadmenu)更易于维护，并可以创建菜单资源本身，并将其修改菜单编辑器。  
+ You can use the [LoadMenuIndirect](#loadmenuindirect) member function to create a menu from a template in memory, but a menu created from a resource by a call to [LoadMenu](#loadmenu) is more easily maintained, and the menu resource itself can be created and modified by the menu editor.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMenu`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="appendmenu"></a>CMenu::AppendMenu  
- 将新的项追加到末尾的菜单。  
+##  <a name="appendmenu"></a>  CMenu::AppendMenu  
+ Appends a new item to the end of a menu.  
   
 ```  
 BOOL AppendMenu(
@@ -189,94 +222,94 @@ BOOL AppendMenu(
     const CBitmap* pBmp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nFlags`  
- 添加到菜单时，请指定有关新的菜单项的状态信息。 它包含一个或多个备注部分中列出的值。  
+ Specifies information about the state of the new menu item when it is added to the menu. It consists of one or more of the values listed in the Remarks section.  
   
  `nIDNewItem`  
- 指定新的菜单项的命令 ID 或者，如果`nFlags`设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 `nIDNewItem`忽略参数 （不需要） 如果`nFlags`设置为**MF_SEPARATOR**。  
+ Specifies either the command ID of the new menu item or, if `nFlags` is set to **MF_POPUP**, the menu handle ( `HMENU`) of a pop-up menu. The `nIDNewItem` parameter is ignored (not needed) if `nFlags` is set to **MF_SEPARATOR**.  
   
  `lpszNewItem`  
- 指定新的菜单项的内容。 `nFlags`参数用于解释`lpszNewItem`方式如下︰  
+ Specifies the content of the new menu item. The `nFlags` parameter is used to interpret `lpszNewItem` in the following way:  
   
-|nFlags|LpszNewItem 的解释|  
+|nFlags|Interpretation of lpszNewItem|  
 |------------|-----------------------------------|  
-|`MF_OWNERDRAW`|包含应用程序提供 32 位值，应用程序可以用来维护与菜单项关联的附加数据。 在处理时，此 32 位的值是应用程序`WM_MEASUREITEM`和`WM_DRAWITEM`消息。 值存储在**itemData**提供与这些消息的结构的成员。|  
-|**MF_STRING**|包含指向以 null 结尾的字符串的指针。 这是默认解释。|  
-|**MF_SEPARATOR**|`lpszNewItem` （不需要），则忽略参数。|  
+|`MF_OWNERDRAW`|Contains an application-supplied 32-bit value that the application can use to maintain additional data associated with the menu item. This 32-bit value is available to the application when it processes `WM_MEASUREITEM` and `WM_DRAWITEM` messages. The value is stored in the **itemData** member of the structure supplied with those messages.|  
+|**MF_STRING**|Contains a pointer to a null-terminated string. This is the default interpretation.|  
+|**MF_SEPARATOR**|The `lpszNewItem` parameter is ignored (not needed).|  
   
  *pBmp*  
- 指向`CBitmap`将用作菜单项的对象。  
+ Points to a `CBitmap` object that will be used as the menu item.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 应用程序可以通过设置中的值指定菜单项的状态`nFlags`。 当`nIDNewItem`指定弹出菜单中，它将成为追加到的菜单的一部分。 如果该菜单将被销毁，附加的菜单还将被销毁。 应从分离附加的菜单`CMenu`对象以避免冲突。 请注意， **MF_STRING**和`MF_OWNERDRAW`不是有效的位图版本`AppendMenu`。  
+### <a name="remarks"></a>Remarks  
+ The application can specify the state of the menu item by setting values in `nFlags`. When `nIDNewItem` specifies a pop-up menu, it becomes part of the menu to which it is appended. If that menu is destroyed, the appended menu will also be destroyed. An appended menu should be detached from a `CMenu` object to avoid conflict. Note that **MF_STRING** and `MF_OWNERDRAW` are not valid for the bitmap version of `AppendMenu`.  
   
- 以下列表描述可能在中设置的标志`nFlags`:  
+ The following list describes the flags that may be set in `nFlags`:  
   
-- **MF_CHECKED**用作与开关**MF_UNCHECKED**放置项旁边的默认复选标记。 当应用程序提供选中标记位图 (请参阅[SetMenuItemBitmaps](#setmenuitembitmaps)成员函数)，显示"复选标记"位图。  
+- **MF_CHECKED** Acts as a toggle with **MF_UNCHECKED** to place the default check mark next to the item. When the application supplies check-mark bitmaps (see the [SetMenuItemBitmaps](#setmenuitembitmaps) member function), the "check mark on" bitmap is displayed.  
   
-- **MF_UNCHECKED**充当与一个切换开关**MF_CHECKED**删除项旁边的复选标记。 当应用程序提供选中标记位图 (请参阅`SetMenuItemBitmaps`成员函数)，显示"复选标记关闭"位图。  
+- **MF_UNCHECKED** Acts as a toggle with **MF_CHECKED** to remove a check mark next to the item. When the application supplies check-mark bitmaps (see the `SetMenuItemBitmaps` member function), the "check mark off" bitmap is displayed.  
   
-- **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
+- **MF_DISABLED** Disables the menu item so that it cannot be selected but does not dim it.  
   
-- `MF_ENABLED`启用菜单项，以便它可以选择并将其还原从其灰显状态。  
+- `MF_ENABLED` Enables the menu item so that it can be selected and restores it from its dimmed state.  
   
-- **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
+- **MF_GRAYED** Disables the menu item so that it cannot be selected and dims it.  
   
-- **MF_MENUBARBREAK**将置于新行在静态菜单或弹出菜单中的新列中的项。 用垂直的分隔线，将与旧列分隔新的弹出菜单列。  
+- **MF_MENUBARBREAK** Places the item on a new line in static menus or in a new column in pop-up menus. The new pop-up menu column will be separated from the old column by a vertical dividing line.  
   
-- **MF_MENUBREAK**将置于新行在静态菜单或弹出菜单中的新列中的项。 无分隔线位于各列之间。  
+- **MF_MENUBREAK** Places the item on a new line in static menus or in a new column in pop-up menus. No dividing line is placed between the columns.  
   
-- `MF_OWNERDRAW`指定项目的所有者描述项。 当首次显示菜单时，拥有菜单窗口接收`WM_MEASUREITEM`消息，检索的高度和宽度的菜单项。 `WM_DRAWITEM`消息是发送每当所有者必须更新菜单项的可视外观。 此选项不是有效的顶级菜单项。  
+- `MF_OWNERDRAW` Specifies that the item is an owner-draw item. When the menu is displayed for the first time, the window that owns the menu receives a `WM_MEASUREITEM` message, which retrieves the height and width of the menu item. The `WM_DRAWITEM` message is the one sent whenever the owner must update the visual appearance of the menu item. This option is not valid for a top-level menu item.  
   
-- **MF_POPUP**指定菜单项具有与之相关联的弹出菜单。 ID 参数指定是要与项相关联的弹出菜单的句柄。 这用于将顶级的弹出菜单或分层的弹出菜单添加到弹出菜单项。  
+- **MF_POPUP** Specifies that the menu item has a pop-up menu associated with it. The ID parameter specifies a handle to a pop-up menu that is to be associated with the item. This is used for adding either a top-level pop-up menu or a hierarchical pop-up menu to a pop-up menu item.  
   
-- **MF_SEPARATOR**绘制水平的分隔线。 仅可在弹出菜单。 无法灰显，禁用，或突出显示此行。 其他参数将被忽略。  
+- **MF_SEPARATOR** Draws a horizontal dividing line. Can only be used in a pop-up menu. This line cannot be dimmed, disabled, or highlighted. Other parameters are ignored.  
   
-- **MF_STRING**指定菜单项是字符字符串。  
+- **MF_STRING** Specifies that the menu item is a character string.  
   
- 每个以下的组列出标志是互斥的不能一起使用︰  
+ Each of the following groups lists flags that are mutually exclusive and cannot be used together:  
   
-- **MF_DISABLED**， `MF_ENABLED`，和**MF_GRAYED**  
+- **MF_DISABLED**, `MF_ENABLED`, and **MF_GRAYED**  
   
-- **MF_STRING**， `MF_OWNERDRAW`， **MF_SEPARATOR**，和位图版本  
+- **MF_STRING**, `MF_OWNERDRAW`, **MF_SEPARATOR**, and the bitmap version  
   
-- **MF_MENUBARBREAK**和**MF_MENUBREAK**  
+- **MF_MENUBARBREAK** and **MF_MENUBREAK**  
   
-- **MF_CHECKED**和**MF_UNCHECKED**  
+- **MF_CHECKED** and **MF_UNCHECKED**  
   
- 每当驻留在的菜单 （无论窗口会显示），一个窗口发生更改时，应用程序应调用[CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)。  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application should call [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar).  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::CreateMenu](#createmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="attach"></a>CMenu::Attach  
- 将附加到现有 Windows 菜单`CMenu`对象。  
+##  <a name="attach"></a>  CMenu::Attach  
+ Attaches an existing Windows menu to a `CMenu` object.  
   
 ```  
 BOOL Attach(HMENU hMenu);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hMenu`  
- 指定一个 Windows 菜单的句柄。  
+ Specifies a handle to a Windows menu.  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功，则非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation was successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果已附加到一个菜单，不应该调用此函数`CMenu`对象。 菜单句柄存储在`m_hMenu`数据成员。  
+### <a name="remarks"></a>Remarks  
+ This function should not be called if a menu is already attached to the `CMenu` object. The menu handle is stored in the `m_hMenu` data member.  
   
- 如果你想要操作的菜单已与窗口关联，则可以使用[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)函数可获取菜单的句柄。  
+ If the menu you want to manipulate is already associated with a window, you can use the [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu) function to get a handle to the menu.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
- 添加到的复选标记，或从弹出菜单中的菜单项中删除复选标记。  
+##  <a name="checkmenuitem"></a>  CMenu::CheckMenuItem  
+ Adds check marks to or removes check marks from menu items in the pop-up menu.  
   
 ```  
 UINT CheckMenuItem(
@@ -284,34 +317,34 @@ UINT CheckMenuItem(
     UINT nCheck);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDCheckItem`  
- 指定要检查的菜单项，所确定的那样`nCheck`。  
+ Specifies the menu item to be checked, as determined by `nCheck`.  
   
  `nCheck`  
- 指定如何检查菜单项以及如何确定在菜单中的项的位置。 `nCheck`参数可以是的组合**MF_CHECKED**或**MF_UNCHECKED**与**MF_BYPOSITION**或**MF_BYCOMMAND**标志。 可以使用按位 OR 运算符组合这些标志。 它们具有以下含义︰  
+ Specifies how to check the menu item and how to determine the item's position in the menu. The `nCheck` parameter can be a combination of **MF_CHECKED** or **MF_UNCHECKED** with **MF_BYPOSITION** or **MF_BYCOMMAND** flags. These flags can be combined by using the bitwise OR operator. They have the following meanings:  
   
-- **MF_BYCOMMAND**指定参数提供的命令 ID 的现有的菜单项。 这是默认设置。  
+- **MF_BYCOMMAND** Specifies that the parameter gives the command ID of the existing menu item. This is the default.  
   
-- **MF_BYPOSITION**指定参数提供现有的菜单项的位置。 第一项位于位置 0。  
+- **MF_BYPOSITION** Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.  
   
-- **MF_CHECKED**用作与开关**MF_UNCHECKED**放置项旁边的默认复选标记。  
+- **MF_CHECKED** Acts as a toggle with **MF_UNCHECKED** to place the default check mark next to the item.  
   
-- **MF_UNCHECKED**充当与一个切换开关**MF_CHECKED**删除项旁边的复选标记。  
+- **MF_UNCHECKED** Acts as a toggle with **MF_CHECKED** to remove a check mark next to the item.  
   
-### <a name="return-value"></a>返回值  
- 项的前一状态︰ **MF_CHECKED**或**MF_UNCHECKED**，或如果菜单项不存在的 0xFFFFFFFF。  
+### <a name="return-value"></a>Return Value  
+ The previous state of the item: **MF_CHECKED** or **MF_UNCHECKED**, or 0xFFFFFFFF if the menu item did not exist.  
   
-### <a name="remarks"></a>备注  
- `nIDCheckItem`参数指定要修改的项。  
+### <a name="remarks"></a>Remarks  
+ The `nIDCheckItem` parameter specifies the item to be modified.  
   
- `nIDCheckItem`参数可识别的弹出菜单项，以及菜单项。 检查弹出菜单项不需任何特殊步骤。 无法检查顶级菜单项。 必须按位置检查的弹出菜单项，因为它不具有与之关联的菜单项标识符。  
+ The `nIDCheckItem` parameter may identify a pop-up menu item as well as a menu item. No special steps are required to check a pop-up menu item. Top-level menu items cannot be checked. A pop-up menu item must be checked by position since it does not have a menu-item identifier associated with it.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::GetMenuState](#getmenustate)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::GetMenuState](#getmenustate).  
   
-##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
- 检查指定的菜单项，并使其单选项。  
+##  <a name="checkmenuradioitem"></a>  CMenu::CheckMenuRadioItem  
+ Checks a specified menu item and makes it a radio item.  
   
 ```  
 BOOL CheckMenuRadioItem(
@@ -321,42 +354,42 @@ BOOL CheckMenuRadioItem(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDFirst`  
- 指定 (ID 或偏移量，具体取决于的值作为`nFlags`) 中的单选按钮组的第一个菜单项。  
+ Specifies (as an ID or offset, depending on the value of `nFlags`) the first menu item in the radio button group.  
   
  `nIDLast`  
- 指定 (ID 或偏移量，具体取决于的值作为`nFlags`) 中的单选按钮组的最后一个菜单项。  
+ Specifies (as an ID or offset, depending on the value of `nFlags`) the last menu item in the radio button group.  
   
  `nIDItem`  
- 指定 (ID 或偏移量，具体取决于的值作为`nFlags`) 将检查与单选按钮组中的项。  
+ Specifies (as an ID or offset, depending on the value of `nFlags`) the item in the group which will be checked with a radio button.  
   
  `nFlags`  
- 指定解释`nIDFirst`， `nIDLast`，和`nIDItem`方式如下︰  
+ Specifies interpretation of `nIDFirst`, `nIDLast`, and `nIDItem` in the following way:  
   
-|nFlags|解释|  
+|nFlags|Interpretation|  
 |------------|--------------------|  
-|**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
-|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零否则为 0  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0  
   
-### <a name="remarks"></a>备注  
- 同时，该函数取消选中关联组中的所有其他菜单项，并清除这些项的单选项类型标志。 将显示已选中的项，而不选中标记位图使用单选按钮 （或项目符号） 位图。  
+### <a name="remarks"></a>Remarks  
+ At the same time, the function unchecks all other menu items in the associated group and clears the radio-item type flag for those items. The checked item is displayed using a radio button (or bullet) bitmap instead of a check mark bitmap.  
   
-### <a name="example"></a>示例  
-  请参阅示例[ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range)。  
+### <a name="example"></a>Example  
+  See the example for [ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range).  
   
-##  <a name="cmenu"></a>CMenu::CMenu  
- 创建一个空的菜单，并将其附加到`CMenu`对象。  
+##  <a name="cmenu"></a>  CMenu::CMenu  
+ Creates an empty menu and attaches it to a `CMenu` object.  
   
 ```  
 CMenu();
 ```  
   
-### <a name="remarks"></a>备注  
- 直到你调用的创建或加载成员函数之一，才会创建菜单**CMenu:**  
+### <a name="remarks"></a>Remarks  
+ The menu is not created until you call one of the create or load member functions of **CMenu:**  
   
 - [CreateMenu](#createmenu)  
   
@@ -366,50 +399,50 @@ CMenu();
   
 - [LoadMenuIndirect](#loadmenuindirect)  
   
-- [附加](#attach)  
+- [Attach](#attach)  
   
-##  <a name="createmenu"></a>CMenu::CreateMenu  
- 创建一个菜单，并将其附加到`CMenu`对象。  
+##  <a name="createmenu"></a>  CMenu::CreateMenu  
+ Creates a menu and attaches it to the `CMenu` object.  
   
 ```  
 BOOL CreateMenu();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则创建菜单则不为否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu was created successfully; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 菜单是最初为空。 可通过使用添加菜单项`AppendMenu`或`InsertMenu`成员函数。  
+### <a name="remarks"></a>Remarks  
+ The menu is initially empty. Menu items can be added by using the `AppendMenu` or `InsertMenu` member function.  
   
- 如果菜单分配给一个窗口，它将自动销毁销毁窗口时。  
+ If the menu is assigned to a window, it is automatically destroyed when the window is destroyed.  
   
- 在退出之前, 应用程序必须释放系统资源与菜单关联，如果菜单未分配给一个窗口。 应用程序通过调用释放菜单[DestroyMenu](#destroymenu)成员函数。  
+ Before exiting, an application must free system resources associated with a menu if the menu is not assigned to a window. An application frees a menu by calling the [DestroyMenu](#destroymenu) member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
- 创建弹出菜单，并将其附加到`CMenu`对象。  
+##  <a name="createpopupmenu"></a>  CMenu::CreatePopupMenu  
+ Creates a pop-up menu and attaches it to the `CMenu` object.  
   
 ```  
 BOOL CreatePopupMenu();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果已成功创建弹出菜单; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the pop-up menu was successfully created; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 菜单是最初为空。 可通过使用添加菜单项`AppendMenu`或`InsertMenu`成员函数。 应用程序可以添加到现有菜单或弹出菜单的弹出菜单。 `TrackPopupMenu`可能使用成员函数，来显示此菜单为浮动的弹出菜单以及跟踪的弹出菜单上选择。  
+### <a name="remarks"></a>Remarks  
+ The menu is initially empty. Menu items can be added by using the `AppendMenu` or `InsertMenu` member function. The application can add the pop-up menu to an existing menu or pop-up menu. The `TrackPopupMenu` member function may be used to display this menu as a floating pop-up menu and to track selections on the pop-up menu.  
   
- 如果菜单分配给一个窗口，它将自动销毁销毁窗口时。 如果菜单添加到现有菜单中，它将自动销毁该菜单时销毁。  
+ If the menu is assigned to a window, it is automatically destroyed when the window is destroyed. If the menu is added to an existing menu, it is automatically destroyed when that menu is destroyed.  
   
- 在退出之前, 应用程序必须释放系统资源与弹出菜单关联，如果菜单未分配给一个窗口。 应用程序通过调用释放菜单[DestroyMenu](#destroymenu)成员函数。  
+ Before exiting, an application must free system resources associated with a pop-up menu if the menu is not assigned to a window. An application frees a menu by calling the [DestroyMenu](#destroymenu) member function.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::CreateMenu](#createmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="deletemenu"></a>CMenu::DeleteMenu  
- 从菜单中删除的项。  
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu  
+ Deletes an item from the menu.  
   
 ```  
 BOOL DeleteMenu(
@@ -417,97 +450,97 @@ BOOL DeleteMenu(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- 指定是要删除所确定的那样的菜单项`nFlags`。  
+ Specifies the menu item that is to be deleted, as determined by `nFlags`.  
   
  `nFlags`  
- 用于解释`nPosition`方式如下︰  
+ Is used to interpret `nPosition` in the following way:  
   
-|nFlags|NPosition 的解释|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
-|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果菜单项具有关联的弹出菜单中，`DeleteMenu`销毁弹出菜单的句柄并释放使用弹出菜单的内存。  
+### <a name="remarks"></a>Remarks  
+ If the menu item has an associated pop-up menu, `DeleteMenu` destroys the handle to the pop-up menu and frees the memory used by the pop-up menu.  
   
- 每当驻留在的菜单 （无论窗口会显示），一个窗口发生更改时，应用程序必须调用[CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)。  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application must call [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar).  
   
-### <a name="example"></a>示例  
-  请参阅示例[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
- 自动调用`CWinApp`空闲时间处理程序中，删除任何临时`CMenu`创建的对象[FromHandle](#fromhandle)成员函数。  
+##  <a name="deletetempmap"></a>  CMenu::DeleteTempMap  
+ Called automatically by the `CWinApp` idle-time handler, deletes any temporary `CMenu` objects created by the [FromHandle](#fromhandle) member function.  
   
 ```  
 static void PASCAL DeleteTempMap();
 ```  
   
-### <a name="remarks"></a>备注  
- `DeleteTempMap`分离附加到一个临时的 Windows 菜单对象`CMenu`对象在删除之前`CMenu`对象。  
+### <a name="remarks"></a>Remarks  
+ `DeleteTempMap` detaches the Windows menu object attached to a temporary `CMenu` object before deleting the `CMenu` object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="destroymenu"></a>CMenu::DestroyMenu  
- 销毁菜单和任何使用的 Windows 资源。  
+##  <a name="destroymenu"></a>  CMenu::DestroyMenu  
+ Destroys the menu and any Windows resources that were used.  
   
 ```  
 BOOL DestroyMenu();
 ```  
   
-### <a name="return-value"></a>返回值  
- 当菜单被破坏; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu is destroyed; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 从分离菜单`CMenu`对象被销毁之前。 Windows`DestroyMenu`自动调用函数`CMenu`析构函数。  
+### <a name="remarks"></a>Remarks  
+ The menu is detached from the `CMenu` object before it is destroyed. The Windows `DestroyMenu` function is automatically called in the `CMenu` destructor.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::CreateMenu](#createmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="detach"></a>CMenu::Detach  
- 分离从一个 Windows 菜单`CMenu`对象并返回的句柄。  
+##  <a name="detach"></a>  CMenu::Detach  
+ Detaches a Windows menu from a `CMenu` object and returns the handle.  
   
 ```  
 HMENU Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 句柄，类型`HMENU`，到 Windows 菜单中，如果成功，否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ The handle, of type `HMENU`, to a Windows menu, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- `m_hMenu`数据成员设置为**NULL**。  
+### <a name="remarks"></a>Remarks  
+ The `m_hMenu` data member is set to **NULL**.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="drawitem"></a>CMenu::DrawItem  
- 由框架在所有者绘制菜单更改的可视方面时调用。  
+##  <a name="drawitem"></a>  CMenu::DrawItem  
+ Called by the framework when a visual aspect of an owner-drawn menu changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 指向的指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关所需的绘图的类型的信息。  
+ A pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>备注  
- `itemAction`的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。 重写该成员函数以实现所有者描述的绘图`CMenu`对象。 应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`之前的此成员函数终止。  
+### <a name="remarks"></a>Remarks  
+ The `itemAction` member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed. Override this member function to implement drawing for an owner-draw `CMenu` object. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the termination of this member function.  
   
- 请参阅[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)有关的说明`DRAWITEMSTRUCT`结构。  
+ See [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) for a description of the `DRAWITEMSTRUCT` structure.  
   
-### <a name="example"></a>示例  
- 下面的代码是从 MFC [CTRLTEST](../../visual-cpp-samples.md)示例︰  
+### <a name="example"></a>Example  
+ The following code is from the MFC [CTRLTEST](../../visual-cpp-samples.md) sample:  
   
- [!code-cpp[NVC_MFCWindowing # 24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
+ [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
- 启用、 禁用，或调低亮度菜单项。  
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem  
+ Enables, disables, or dims a menu item.  
   
 ```  
 UINT EnableMenuItem(
@@ -515,60 +548,60 @@ UINT EnableMenuItem(
     UINT nEnable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nIDEnableItem*  
- 指定要启用的菜单项所确定的那样`nEnable`。 弹出菜单项，以及标准菜单项，可以指定此参数。  
+ Specifies the menu item to be enabled, as determined by `nEnable`. This parameter can specify pop-up menu items as well as standard menu items.  
   
  `nEnable`  
- 指定要执行的操作。 它可以是的组合**MF_DISABLED**， `MF_ENABLED`，或**MF_GRAYED**，与**MF_BYCOMMAND**或**MF_BYPOSITION**。 可以使用按位 OR 运算符组合这些值。 这些值的含义如下︰  
+ Specifies the action to take. It can be a combination of **MF_DISABLED**, `MF_ENABLED`, or **MF_GRAYED**, with **MF_BYCOMMAND** or **MF_BYPOSITION**. These values can be combined by using the bitwise OR operator. These values have the following meanings:  
   
-- **MF_BYCOMMAND**指定参数提供的命令 ID 的现有的菜单项。 这是默认设置。  
+- **MF_BYCOMMAND** Specifies that the parameter gives the command ID of the existing menu item. This is the default.  
   
-- **MF_BYPOSITION**指定参数提供现有的菜单项的位置。 第一项位于位置 0。  
+- **MF_BYPOSITION** Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.  
   
-- **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
+- **MF_DISABLED** Disables the menu item so that it cannot be selected but does not dim it.  
   
-- `MF_ENABLED`启用菜单项，以便它可以选择并将其还原从其灰显状态。  
+- `MF_ENABLED` Enables the menu item so that it can be selected and restores it from its dimmed state.  
   
-- **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
+- **MF_GRAYED** Disables the menu item so that it cannot be selected and dims it.  
   
-### <a name="return-value"></a>返回值  
- 以前的状态 ( **MF_DISABLED**， `MF_ENABLED`，或**MF_GRAYED**) 或为-1 是否有效。  
+### <a name="return-value"></a>Return Value  
+ Previous state ( **MF_DISABLED**, `MF_ENABLED`, or **MF_GRAYED**) or -1 if not valid.  
   
-### <a name="remarks"></a>备注  
- [CreateMenu](#createmenu)， [InsertMenu](#insertmenu)， [ModifyMenu](#modifymenu)，和[LoadMenuIndirect](#loadmenuindirect)成员函数还可以菜单项的设置状态 （启用、 禁用，或灰显）。  
+### <a name="remarks"></a>Remarks  
+ The [CreateMenu](#createmenu), [InsertMenu](#insertmenu), [ModifyMenu](#modifymenu), and [LoadMenuIndirect](#loadmenuindirect) member functions can also set the state (enabled, disabled, or dimmed) of a menu item.  
   
- 使用**MF_BYPOSITION**值需要应用程序使用正确`CMenu`。 如果`CMenu`的菜单栏时，受影响的顶级菜单项 （在菜单栏中的项）。 若要设置弹出窗口或嵌套的弹出菜单，按位置中的项的状态，应用程序必须指定`CMenu`的弹出菜单。  
+ Using the **MF_BYPOSITION** value requires an application to use the correct `CMenu`. If the `CMenu` of the menu bar is used, a top-level menu item (an item in the menu bar) is affected. To set the state of an item in a pop-up or nested pop-up menu by position, an application must specify the `CMenu` of the pop-up menu.  
   
- 当应用程序指定了**MF_BYCOMMAND**标志，Windows 将检查隶属于的所有弹出菜单项`CMenu`; 因此，除非存在重复的菜单项时，使用`CMenu`的菜单栏就足够。  
+ When an application specifies the **MF_BYCOMMAND** flag, Windows checks all pop-up menu items that are subordinate to the `CMenu`; therefore, unless duplicate menu items are present, using the `CMenu` of the menu bar is sufficient.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CMenu::FromHandle  
- 返回一个指向`CMenu`赋予一个菜单的 Windows 句柄的对象。  
+##  <a name="fromhandle"></a>  CMenu::FromHandle  
+ Returns a pointer to a `CMenu` object given a Windows handle to a menu.  
   
 ```  
 static CMenu* PASCAL FromHandle(HMENU hMenu);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hMenu`  
- 菜单 Windows 句柄。  
+ A Windows handle to a menu.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针`CMenu`这可能是临时的还是永久。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CMenu` that may be temporary or permanent.  
   
-### <a name="remarks"></a>备注  
- 如果`CMenu`对象尚未附加到 Windows 菜单对象，一个临时`CMenu`创建对象并将其附加。  
+### <a name="remarks"></a>Remarks  
+ If a `CMenu` object is not already attached to the Windows menu object, a temporary `CMenu` object is created and attached.  
   
- 此临时`CMenu`对象只有在应用程序在其事件循环，删除这段时间的所有临时对象具有空闲时间的下一步时才有效。  
+ This temporary `CMenu` object is only valid until the next time the application has idle time in its event loop, at which time all temporary objects are deleted.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::CreateMenu](#createmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
- 确定指定的菜单上的默认菜单项。  
+##  <a name="getdefaultitem"></a>  CMenu::GetDefaultItem  
+ Determines the default menu item on the specified menu.  
   
 ```  
 UINT GetDefaultItem(
@@ -576,89 +609,89 @@ UINT GetDefaultItem(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *gmdiFlags*  
- 值，该值指定该函数搜索菜单项的方式。 此参数可以为 none、 一个，或以下值的组合︰  
+ Value specifying how the function searches for menu items. This parameter can be none, one, or a combination of the following values:  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**GMDI_GOINTOPOPUPS**|指定，是否默认项目是指打开一个子菜单，该函数是相应的子菜单以递归方式在其中进行搜索。 如果子菜单中没有默认项，则返回的值标识用于打开子菜单项。<br /><br /> 默认情况下，该函数返回在指定菜单上，不管它是用于打开子菜单项的第一个默认项。|  
-|**GMDI_USEDISABLED**|指定，该函数是返回一个默认项，即使它处于禁用状态。<br /><br /> 默认情况下，该函数将跳过已禁用或显示为灰色的项。|  
+|**GMDI_GOINTOPOPUPS**|Specifies that, if the default item is one that opens a submenu, the function is to search in the corresponding submenu recursively. If the submenu has no default item, the return value identifies the item that opens the submenu.<br /><br /> By default, the function returns the first default item on the specified menu, regardless of whether it is an item that opens a submenu.|  
+|**GMDI_USEDISABLED**|Specifies that the function is to return a default item, even if it is disabled.<br /><br /> By default, the function skips disabled or grayed items.|  
   
  `fByPos`  
- 值，该值指定是否检索菜单项的标识符或其位置。 如果此参数为**FALSE**，返回标识符。 否则，返回的位置。  
+ Value specifying whether to retrieve the menu item's identifier or its position. If this parameter is **FALSE**, the identifier is returned. Otherwise, the position is returned.  
   
-### <a name="return-value"></a>返回值  
- 如果函数成功，则返回值是标识符或菜单项的位置。 如果函数失败，返回值为-1。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is the identifier or position of the menu item. If the function fails, the return value is - 1.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 函数的行为[GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 function [GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976), as described in the Windows SDK.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::InsertMenu](#insertmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
- 检索与 ID 关联的上下文帮助`CMenu`。  
+##  <a name="getmenucontexthelpid"></a>  CMenu::GetMenuContextHelpId  
+ Retrieves the context help ID associated with `CMenu`.  
   
 ```  
 DWORD GetMenuContextHelpId() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 与当前关联 ID 的上下文帮助`CMenu`如果它有一个; 否则为零。  
+### <a name="return-value"></a>Return Value  
+ The context help ID currently associated with `CMenu` if it has one; zero otherwise.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::InsertMenu](#insertmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
- 检索一个菜单的信息。  
+##  <a name="getmenuinfo"></a>  CMenu::GetMenuInfo  
+ Retrieves information for a menu.  
   
 ```  
 BOOL GetMenuInfo(LPMENUINFO lpcmi) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpcmi`  
- 指向的指针[MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575)结构，它包含菜单上的信息。  
+ A pointer to a [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) structure containing information for the menu.  
   
-### <a name="return-value"></a>返回值  
- 如果函数成功，返回值为非零值;否则，返回值为零。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is nonzero; otherwise, the return value is zero.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可检索有关菜单上的信息。  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve information about the menu.  
   
-##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
- 确定弹出窗口或顶级菜单中的项的数目。  
+##  <a name="getmenuitemcount"></a>  CMenu::GetMenuItemCount  
+ Determines the number of items in a pop-up or top-level menu.  
   
 ```  
 UINT GetMenuItemCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则菜单中的项的数目否则为-1。  
+### <a name="return-value"></a>Return Value  
+ The number of items in the menu if the function is successful; otherwise -1.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
- 获取位于位置定义的菜单项的菜单项标识符`nPos`。  
+##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID  
+ Obtains the menu-item identifier for a menu item located at the position defined by `nPos`.  
   
 ```  
 UINT GetMenuItemID(int nPos) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 指定的位置 （从零开始） 的菜单项正在检索其 ID。  
+ Specifies the position (zero-based) of the menu item whose ID is being retrieved.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功的弹出菜单中指定的项的项 ID。 如果指定的项是一个弹出菜单 （而不是弹出菜单中的项），则返回值为-1。 如果`nPos`对应于**分隔符**菜单项，返回值为 0。  
+### <a name="return-value"></a>Return Value  
+ The item ID for the specified item in a pop-up menu if the function is successful. If the specified item is a pop-up menu (as opposed to an item within the pop-up menu), the return value is -1. If `nPos` corresponds to a **SEPARATOR** menu item, the return value is 0.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::InsertMenu](#insertmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
- 检索有关菜单项的信息。  
+##  <a name="getmenuiteminfo"></a>  CMenu::GetMenuItemInfo  
+ Retrieves information about a menu item.  
   
 ```  
 BOOL GetMenuItemInfo(
@@ -667,27 +700,27 @@ BOOL GetMenuItemInfo(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `uItem`  
- 标识符或要获取其相关信息的菜单项的位置。 此参数的含义取决于值`ByPos`。  
+ Identifier or position of the menu item to get information about. The meaning of this parameter depends on the value of `ByPos`.  
   
  `lpMenuItemInfo`  
- 指向的指针[MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]，包含有关菜单上的信息。  
+ A pointer to a [MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578), as described in the Windows SDK, that contains information about the menu.  
   
  `fByPos`  
- 值，该值指定的含义`nIDItem`。 默认情况下，`ByPos`是**FALSE**，指示该 uItem 是菜单项标识符。 如果`ByPos`未设置为**FALSE**，它指示菜单项位置。  
+ Value specifying the meaning of `nIDItem`. By default, `ByPos` is **FALSE**, which indicates that uItem is a menu item identifier. If `ByPos` is not set to **FALSE**, it indicates a menu item position.  
   
-### <a name="return-value"></a>返回值  
- 如果函数成功，则返回值不为零。 如果函数失败，则返回值为零。 若要获得扩展的错误信息，请使用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is nonzero. If the function fails, the return value is zero. To get extended error information, use the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), as described in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 函数[GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 请注意，在的 MFC 实现`GetMenuItemInfo`，不要使用菜单的句柄。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the of the Win32 function [GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980), as described in the Windows SDK. Note that in the MFC implementation of `GetMenuItemInfo`, you do not use a handle to a menu.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="getmenustate"></a>CMenu::GetMenuState  
- 在弹出菜单中返回指定的菜单项或项的数目的状态。  
+##  <a name="getmenustate"></a>  CMenu::GetMenuState  
+ Returns the status of the specified menu item or the number of items in a pop-up menu.  
   
 ```  
 UINT GetMenuState(
@@ -695,41 +728,41 @@ UINT GetMenuState(
     UINT nFlags) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nID`  
- 指定的菜单项 ID，由`nFlags`。  
+ Specifies the menu item ID, as determined by `nFlags`.  
   
  `nFlags`  
- 指定的性质`nID`。 它可以是以下值之一︰  
+ Specifies the nature of `nID`. It can be one of the following values:  
   
-- **MF_BYCOMMAND**指定参数提供的命令 ID 的现有的菜单项。 这是默认设置。  
+- **MF_BYCOMMAND** Specifies that the parameter gives the command ID of the existing menu item. This is the default.  
   
-- **MF_BYPOSITION**指定参数提供现有的菜单项的位置。 第一项位于位置 0。  
+- **MF_BYPOSITION** Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.  
   
-### <a name="return-value"></a>返回值  
- 值为 0xFFFFFFFF，如果指定的项不存在。 如果*nId*标识弹出菜单中，高序位字节包含弹出菜单中的项的数目，低序位字节包含弹出菜单与关联的菜单标志。 否则返回值都属于以下列表中的值的掩码 （布尔值或） (此掩码准确地描述菜单的状态项*nId*标识):  
+### <a name="return-value"></a>Return Value  
+ The value 0xFFFFFFFF if the specified item does not exist. If *nId* identifies a pop-up menu, the high-order byte contains the number of items in the pop-up menu and the low-order byte contains the menu flags associated with the pop-up menu. Otherwise the return value is a mask (Boolean OR) of the values from the following list (this mask describes the status of the menu item that *nId* identifies):  
   
-- **MF_CHECKED**用作与开关**MF_UNCHECKED**放置项旁边的默认复选标记。 当应用程序提供选中标记位图 (请参阅`SetMenuItemBitmaps`成员函数)，显示"复选标记"位图。  
+- **MF_CHECKED** Acts as a toggle with **MF_UNCHECKED** to place the default check mark next to the item. When the application supplies check-mark bitmaps (see the `SetMenuItemBitmaps` member function), the "check mark on" bitmap is displayed.  
   
-- **MF_DISABLED**禁用菜单项，以便它不能选择，但不是 dim 它。  
+- **MF_DISABLED** Disables the menu item so that it cannot be selected but does not dim it.  
   
-- `MF_ENABLED`启用菜单项，以便它可以选择并将其还原从其灰显状态。 请注意此常量的值为 0;使用此值时，应用程序不应测试针对失败的 0。  
+- `MF_ENABLED` Enables the menu item so that it can be selected and restores it from its dimmed state. Note that the value of this constant is 0; an application should not test against 0 for failure when using this value.  
   
-- **MF_GRAYED**禁用菜单项，以便它不能同时选择和它的模糊。  
+- **MF_GRAYED** Disables the menu item so that it cannot be selected and dims it.  
   
-- **MF_MENUBARBREAK**将置于新行在静态菜单或弹出菜单中的新列中的项。 用垂直的分隔线，将与旧列分隔新的弹出菜单列。  
+- **MF_MENUBARBREAK** Places the item on a new line in static menus or in a new column in pop-up menus. The new pop-up menu column will be separated from the old column by a vertical dividing line.  
   
-- **MF_MENUBREAK**将置于新行在静态菜单或弹出菜单中的新列中的项。 无分隔线位于各列之间。  
+- **MF_MENUBREAK** Places the item on a new line in static menus or in a new column in pop-up menus. No dividing line is placed between the columns.  
   
-- **MF_SEPARATOR**绘制水平的分隔线。 仅可在弹出菜单。 无法灰显，禁用，或突出显示此行。 其他参数将被忽略。  
+- **MF_SEPARATOR** Draws a horizontal dividing line. Can only be used in a pop-up menu. This line cannot be dimmed, disabled, or highlighted. Other parameters are ignored.  
   
-- **MF_UNCHECKED**充当与一个切换开关**MF_CHECKED**删除项旁边的复选标记。 当应用程序提供选中标记位图 (请参阅`SetMenuItemBitmaps`成员函数)，显示"复选标记关闭"位图。 请注意此常量的值为 0;使用此值时，应用程序不应测试针对失败的 0。  
+- **MF_UNCHECKED** Acts as a toggle with **MF_CHECKED** to remove a check mark next to the item. When the application supplies check-mark bitmaps (see the `SetMenuItemBitmaps` member function), the "check mark off" bitmap is displayed. Note that the value of this constant is 0; an application should not test against 0 for failure when using this value.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="getmenustring"></a>CMenu::GetMenuString  
- 将指定的菜单项的标签复制到指定的缓冲区。  
+##  <a name="getmenustring"></a>  CMenu::GetMenuString  
+ Copies the label of the specified menu item to the specified buffer.  
   
 ```  
 int GetMenuString(
@@ -744,65 +777,65 @@ int GetMenuString(
     UINT nFlags) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDItem`  
- 在菜单中，根据的值中指定的整数标识符的菜单项或菜单项的偏移量`nFlags`。  
+ Specifies the integer identifier of the menu item or the offset of the menu item in the menu, depending on the value of `nFlags`.  
   
  `lpString`  
- 指向以将接收标签的缓冲区。  
+ Points to the buffer that is to receive the label.  
   
  `rString`  
- 对引用`CString`是接收复制的菜单字符串的对象。  
+ A reference to a `CString` object that is to receive the copied menu string.  
   
  `nMaxCount`  
- 指定要复制的标签的最大长度 （以字符为单位）。 如果标签的长度超过中指定的最大`nMaxCount`，额外的字符将被截断。  
+ Specifies the maximum length (in characters) of the label to be copied. If the label is longer than the maximum specified in `nMaxCount`, the extra characters are truncated.  
   
  `nFlags`  
- 指定的解释`nIDItem`参数。 它可以是以下值之一︰  
+ Specifies the interpretation of the `nIDItem` parameter. It can be one of the following values:  
   
-|nFlags|NIDItem 的解释|  
+|nFlags|Interpretation of nIDItem|  
 |------------|-------------------------------|  
-|**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
-|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
-### <a name="return-value"></a>返回值  
- 指定的实际将复制到缓冲区，不包括 null 终止符的字符数。  
+### <a name="return-value"></a>Return Value  
+ Specifies the actual number of characters copied to the buffer, not including the null terminator.  
   
-### <a name="remarks"></a>备注  
- `nMaxCount`参数应为一个大于中的标签，以适应终止字符串的 null 字符的字符数。  
+### <a name="remarks"></a>Remarks  
+ The `nMaxCount` parameter should be one larger than the number of characters in the label to accommodate the null character that terminates a string.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::InsertMenu](#insertmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
- 返回`HMENU`包装此`CMenu`对象，或**NULL** `CMenu`指针。  
+##  <a name="getsafehmenu"></a>  CMenu::GetSafeHmenu  
+ Returns the `HMENU` wrapped by this `CMenu` object, or a **NULL**`CMenu` pointer.  
   
 ```  
 HMENU GetSafeHmenu() const;  
 ```  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::LoadMenu](#loadmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
- 检索`CMenu`的弹出菜单的对象。  
+##  <a name="getsubmenu"></a>  CMenu::GetSubMenu  
+ Retrieves the `CMenu` object of a pop-up menu.  
   
 ```  
 CMenu* GetSubMenu(int nPos) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 指定菜单中包含的弹出菜单的位置。 位置值从 0 开始，第一个菜单项。 无法在此函数中使用弹出菜单的标识符。  
+ Specifies the position of the pop-up menu contained in the menu. Position values start at 0 for the first menu item. The pop-up menu's identifier cannot be used in this function.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针`CMenu`对象，其`m_hMenu`成员包含弹出菜单的句柄，如果一个弹出菜单位于给定位置; 否则为**NULL**。 如果`CMenu`对象不存在，则将创建一个临时。 `CMenu`应不会存储返回的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CMenu` object whose `m_hMenu` member contains a handle to the pop-up menu if a pop-up menu exists at the given position; otherwise **NULL**. If a `CMenu` object does not exist, then a temporary one is created. The `CMenu` pointer returned should not be stored.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::TrackPopupMenu](#trackpopupmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::TrackPopupMenu](#trackpopupmenu).  
   
-##  <a name="insertmenu"></a>CMenu::InsertMenu  
- 在指定位置插入新菜单项`nPosition`菜单中向下移动其他项。  
+##  <a name="insertmenu"></a>  CMenu::InsertMenu  
+ Inserts a new menu item at the position specified by `nPosition` and moves other items down the menu.  
   
 ```  
 BOOL InsertMenu(
@@ -819,50 +852,50 @@ BOOL InsertMenu(
     const CBitmap* pBmp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- 指定要在其前面新菜单项是要插入的菜单项。 `nFlags`参数可以用于解释`nPosition`通过以下方式︰  
+ Specifies the menu item before which the new menu item is to be inserted. The `nFlags` parameter can be used to interpret `nPosition` in the following ways:  
   
-|nFlags|NPosition 的解释|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
-|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。 如果`nPosition`为-1，新的菜单项追加到菜单的末尾。|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0. If `nPosition` is -1, the new menu item is appended to the end of the menu.|  
   
  `nFlags`  
- 指定如何`nPosition`被解释且添加到菜单时指定有关新的菜单项的状态信息。 有关可能设置的标志的列表，请参阅[AppendMenu](#appendmenu)成员函数。 若要指定多个值，使用按位 OR 运算符合并它们与**MF_BYCOMMAND**或**MF_BYPOSITION**标志。  
+ Specifies how `nPosition` is interpreted and specifies information about the state of the new menu item when it is added to the menu. For a list of the flags that may be set, see the [AppendMenu](#appendmenu) member function. To specify more than one value, use the bitwise OR operator to combine them with the **MF_BYCOMMAND** or **MF_BYPOSITION** flag.  
   
  `nIDNewItem`  
- 指定新的菜单项的命令 ID 或者，如果`nFlags`设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 `nIDNewItem`忽略参数 （不需要） 如果`nFlags`设置为**MF_SEPARATOR**。  
+ Specifies either the command ID of the new menu item or, if `nFlags` is set to **MF_POPUP**, the menu handle ( `HMENU`) of the pop-up menu. The `nIDNewItem` parameter is ignored (not needed) if `nFlags` is set to **MF_SEPARATOR**.  
   
  `lpszNewItem`  
- 指定新的菜单项的内容。 `nFlags`可以用于解释`lpszNewItem`通过以下方式︰  
+ Specifies the content of the new menu item. `nFlags` can be used to interpret `lpszNewItem` in the following ways:  
   
-|nFlags|LpszNewItem 的解释|  
+|nFlags|Interpretation of lpszNewItem|  
 |------------|-----------------------------------|  
-|`MF_OWNERDRAW`|包含应用程序提供 32 位值，应用程序可以用来维护与菜单项关联的附加数据。 此 32 位的值是在应用程序**itemData**由提供的结构的成员[WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925)和[WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923)消息。 菜单项最初显示或更改时，会发送这些消息。|  
-|**MF_STRING**|包含指向以 null 结尾的字符串的长指针。 这是默认解释。|  
-|**MF_SEPARATOR**|`lpszNewItem` （不需要），则忽略参数。|  
+|`MF_OWNERDRAW`|Contains an application-supplied 32-bit value that the application can use to maintain additional data associated with the menu item. This 32-bit value is available to the application in the **itemData** member of the structure supplied by the [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) and [WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923) messages. These messages are sent when the menu item is initially displayed or is changed.|  
+|**MF_STRING**|Contains a long pointer to a null-terminated string. This is the default interpretation.|  
+|**MF_SEPARATOR**|The `lpszNewItem` parameter is ignored (not needed).|  
   
  *pBmp*  
- 指向`CBitmap`将用作菜单项的对象。  
+ Points to a `CBitmap` object that will be used as the menu item.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 应用程序可以通过设置中的值指定菜单项的状态`nFlags`。  
+### <a name="remarks"></a>Remarks  
+ The application can specify the state of the menu item by setting values in `nFlags`.  
   
- 每当驻留在的菜单 （无论窗口会显示），一个窗口发生更改时，应用程序应调用`CWnd::DrawMenuBar`。  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application should call `CWnd::DrawMenuBar`.  
   
- 当`nIDNewItem`指定弹出菜单中，它将成为在插入的菜单的一部分。 如果该菜单将被销毁，插入菜单上也将被销毁。 应从分离插入的菜单`CMenu`对象以避免冲突。  
+ When `nIDNewItem` specifies a pop-up menu, it becomes part of the menu in which it is inserted. If that menu is destroyed, the inserted menu will also be destroyed. An inserted menu should be detached from a `CMenu` object to avoid conflict.  
   
- 如果多文档界面 (MDI) 子窗口最大化的活动点和应用程序将弹出菜单插入 MDI 应用程序的菜单通过调用此函数并指定**MF_BYPOSITION**标志，该菜单是插入得更远留比预期的一个位置。 这是因为活动的 MDI 子窗口的控件菜单插入 MDI 框架窗口的菜单栏的第一个位置。 若要正确放置菜单上，应用程序必须将 1 添加到否则将使用的位置值。 应用程序可以使用**WM_MDIGETACTIVE**消息，以确定当前处于活动状态的子窗口是否最大化。  
+ If the active multiple document interface (MDI) child window is maximized and an application inserts a pop-up menu into the MDI application's menu by calling this function and specifying the **MF_BYPOSITION** flag, the menu is inserted one position farther left than expected. This happens because the Control menu of the active MDI child window is inserted into the first position of the MDI frame window's menu bar. To position the menu properly, the application must add 1 to the position value that would otherwise be used. An application can use the **WM_MDIGETACTIVE** message to determine whether the currently active child window is maximized.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
- 在菜单中指定位置插入新菜单项。  
+##  <a name="insertmenuitem"></a>  CMenu::InsertMenuItem  
+ Inserts a new menu item at the specified position in a menu.  
   
 ```  
 BOOL InsertMenuItem(
@@ -871,104 +904,104 @@ BOOL InsertMenuItem(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `uItem`  
- 请参阅说明`uItem`中[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ See description of `uItem` in [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) in the Windows SDK.  
   
  `lpMenuItemInfo`  
- 请参阅说明`lpmii`中**InsertMenuItem**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ See description of `lpmii` in **InsertMenuItem** in the Windows SDK.  
   
  `fByPos`  
- 请参阅说明`fByPosition`中**InsertMenuItem**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ See description of `fByPosition` in **InsertMenuItem** in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 此函数包装[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)、 中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This function wraps [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), described in the Windows SDK.  
   
-##  <a name="loadmenu"></a>CMenu::LoadMenu  
- 从应用程序的可执行文件中加载的菜单资源，并将其附加到`CMenu`对象。  
+##  <a name="loadmenu"></a>  CMenu::LoadMenu  
+ Loads a menu resource from the application's executable file and attaches it to the `CMenu` object.  
   
 ```  
 BOOL LoadMenu(LPCTSTR lpszResourceName);  
 BOOL LoadMenu(UINT nIDResource);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszResourceName`  
- 指向以 null 结尾的字符串，其中包含要加载的菜单资源名称。  
+ Points to a null-terminated string that contains the name of the menu resource to load.  
   
  `nIDResource`  
- 指定要加载该菜单资源的菜单 ID。  
+ Specifies the menu ID of the menu resource to load.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则加载该菜单资源则不为否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu resource was loaded successfully; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 在退出之前, 应用程序必须释放系统资源与菜单关联，如果菜单未分配给一个窗口。 应用程序通过调用释放菜单[DestroyMenu](#destroymenu)成员函数。  
+### <a name="remarks"></a>Remarks  
+ Before exiting, an application must free system resources associated with a menu if the menu is not assigned to a window. An application frees a menu by calling the [DestroyMenu](#destroymenu) member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
- 从内存中的菜单模板加载资源并将其附加到`CMenu`对象。  
+##  <a name="loadmenuindirect"></a>  CMenu::LoadMenuIndirect  
+ Loads a resource from a menu template in memory and attaches it to the `CMenu` object.  
   
 ```  
 BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpMenuTemplate*  
- 指向菜单模板 (即单个[MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583)结构和一个或多个集合[MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581)结构)。 有关这些两个结构的详细信息，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Points to a menu template (which is a single [MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583) structure and a collection of one or more [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) structures). For more information on these two structures, see the Windows SDK.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则加载该菜单资源则不为否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu resource was loaded successfully; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 菜单模板是标题后跟一个或多个集合[MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581)结构，其中每个可能包含一个或多个菜单项和弹出菜单。  
+### <a name="remarks"></a>Remarks  
+ A menu template is a header followed by a collection of one or more [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) structures, each of which may contain one or more menu items and pop-up menus.  
   
- 版本号应为 0。  
+ The version number should be 0.  
   
- **MtOption**标志应包括**MF_END**弹出列表中的最后一项和主列表中的最后一项。 请参阅`AppendMenu`其他标志的成员函数。 **MtId**成员必须省略从**MENUITEMTEMPLATE**结构时**MF_POPUP**中指定**mtOption**。  
+ The **mtOption** flags should include **MF_END** for the last item in a pop-up list and for the last item in the main list. See the `AppendMenu` member function for other flags. The **mtId** member must be omitted from the **MENUITEMTEMPLATE** structure when **MF_POPUP** is specified in **mtOption**.  
   
- 为分配的空间**MENUITEMTEMPLATE**结构必须足够大小以容纳**mtString**以包含菜单项以 null 结尾的字符串的名称。  
+ The space allocated for the **MENUITEMTEMPLATE** structure must be large enough for **mtString** to contain the name of the menu item as a null-terminated string.  
   
- 在退出之前, 应用程序必须释放系统资源与菜单关联，如果菜单未分配给一个窗口。 应用程序通过调用释放菜单[DestroyMenu](#destroymenu)成员函数。  
+ Before exiting, an application must free system resources associated with a menu if the menu is not assigned to a window. An application frees a menu by calling the [DestroyMenu](#destroymenu) member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="m_hmenu"></a>CMenu::m_hMenu  
- 指定`HMENU`窗口菜单的句柄附加到`CMenu`对象。  
+##  <a name="m_hmenu"></a>  CMenu::m_hMenu  
+ Specifies the `HMENU` handle of the Windows menu attached to the `CMenu` object.  
   
 ```  
 HMENU m_hMenu;  
 ```  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::LoadMenu](#loadmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="measureitem"></a>CMenu::MeasureItem  
- 创建一个带所有者绘制样式的菜单时由框架调用。  
+##  <a name="measureitem"></a>  CMenu::MeasureItem  
+ Called by the framework when a menu with the owner-draw style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- 指向的指针`MEASUREITEMSTRUCT`结构。  
+ A pointer to a `MEASUREITEMSTRUCT` structure.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此成员函数没有任何影响。 重写该成员函数，并填写`MEASUREITEMSTRUCT`结构以通知 Windows 菜单的维度。  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the menu's dimensions.  
   
- 请参阅[CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)有关的说明`MEASUREITEMSTRUCT`结构。  
+ See [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) for a description of the `MEASUREITEMSTRUCT` structure.  
   
-### <a name="example"></a>示例  
- 下面的代码是从 MFC [CTRLTEST](../../visual-cpp-samples.md)示例︰  
+### <a name="example"></a>Example  
+ The following code is from the MFC [CTRLTEST](../../visual-cpp-samples.md) sample:  
   
- [!code-cpp[NVC_MFCWindowing # 31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
+ [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="modifymenu"></a>CMenu::ModifyMenu  
- 更改指定的位置处的现有菜单项`nPosition`。  
+##  <a name="modifymenu"></a>  CMenu::ModifyMenu  
+ Changes an existing menu item at the position specified by `nPosition`.  
   
 ```  
 BOOL ModifyMenu(
@@ -985,89 +1018,89 @@ BOOL ModifyMenu(
     const CBitmap* pBmp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- 指定要更改的菜单项。 `nFlags`参数可以用于解释`nPosition`通过以下方式︰  
+ Specifies the menu item to be changed. The `nFlags` parameter can be used to interpret `nPosition` in the following ways:  
   
-|nFlags|NPosition 的解释|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
-|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
  `nFlags`  
- 指定如何`nPosition`解释，并提供有关必须对菜单项所做的更改的信息。 可以设置的标志的列表，请参阅[AppendMenu](#appendmenu)成员函数。  
+ Specifies how `nPosition` is interpreted and gives information about the changes to be made to the menu item. For a list of flags that may be set, see the [AppendMenu](#appendmenu) member function.  
   
  `nIDNewItem`  
- 指定修改后的菜单项的命令 ID 或者，如果`nFlags`设置为**MF_POPUP**，菜单句柄 ( `HMENU`) 的弹出菜单。 `nIDNewItem`忽略参数 （不需要） 如果`nFlags`设置为**MF_SEPARATOR**。  
+ Specifies either the command ID of the modified menu item or, if `nFlags` is set to **MF_POPUP**, the menu handle ( `HMENU`) of a pop-up menu. The `nIDNewItem` parameter is ignored (not needed) if `nFlags` is set to **MF_SEPARATOR**.  
   
  `lpszNewItem`  
- 指定新的菜单项的内容。 `nFlags`参数可以用于解释`lpszNewItem`通过以下方式︰  
+ Specifies the content of the new menu item. The `nFlags` parameter can be used to interpret `lpszNewItem` in the following ways:  
   
-|nFlags|LpszNewItem 的解释|  
+|nFlags|Interpretation of lpszNewItem|  
 |------------|-----------------------------------|  
-|`MF_OWNERDRAW`|包含应用程序提供 32 位值，应用程序可以用来维护与菜单项关联的附加数据。 在处理时，此 32 位的值是应用程序**MF_MEASUREITEM**和**MF_DRAWITEM**。|  
-|**MF_STRING**|包含的长指针到以 null 结尾的字符串或`CString`。|  
-|**MF_SEPARATOR**|`lpszNewItem` （不需要），则忽略参数。|  
+|`MF_OWNERDRAW`|Contains an application-supplied 32-bit value that the application can use to maintain additional data associated with the menu item. This 32-bit value is available to the application when it processes **MF_MEASUREITEM** and **MF_DRAWITEM**.|  
+|**MF_STRING**|Contains a long pointer to a null-terminated string or to a `CString`.|  
+|**MF_SEPARATOR**|The `lpszNewItem` parameter is ignored (not needed).|  
   
  *pBmp*  
- 指向`CBitmap`将用作菜单项的对象。  
+ Points to a `CBitmap` object that will be used as the menu item.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 应用程序的设置中的值将指定菜单项的新状态`nFlags`。 如果此函数取代弹出菜单与菜单项关联，它将销毁旧的弹出菜单和释放使用弹出菜单的内存。  
+### <a name="remarks"></a>Remarks  
+ The application specifies the new state of the menu item by setting values in `nFlags`. If this function replaces a pop-up menu associated with the menu item, it destroys the old pop-up menu and frees the memory used by the pop-up menu.  
   
- 当`nIDNewItem`指定弹出菜单中，它将成为在插入的菜单的一部分。 如果该菜单将被销毁，插入菜单上也将被销毁。 应从分离插入的菜单`CMenu`对象以避免冲突。  
+ When `nIDNewItem` specifies a pop-up menu, it becomes part of the menu in which it is inserted. If that menu is destroyed, the inserted menu will also be destroyed. An inserted menu should be detached from a `CMenu` object to avoid conflict.  
   
- 每当驻留在的菜单 （无论窗口会显示），一个窗口发生更改时，应用程序应调用`CWnd::DrawMenuBar`。 若要更改现有的菜单项的属性，是使用要快得多`CheckMenuItem`和`EnableMenuItem`成员函数。  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application should call `CWnd::DrawMenuBar`. To change the attributes of existing menu items, it is much faster to use the `CheckMenuItem` and `EnableMenuItem` member functions.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::InsertMenu](#insertmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
- 使用此运算符将检索的句柄`CMenu`对象。  
+##  <a name="operator_hmenu"></a>  CMenu::operator HMENU  
+ Use this operator to retrieve the handle of the `CMenu` object.  
   
 ```  
 operator HMENU() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功的句柄`CMenu`对象; 否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the `CMenu` object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>备注  
- 句柄可用于直接调用 Windows Api。  
+### <a name="remarks"></a>Remarks  
+ You can use the handle to call Windows APIs directly.  
   
-##  <a name="operator_neq"></a>CMenu::operator ！ =  
- 确定两个菜单是否逻辑上不相等。  
+##  <a name="operator_neq"></a>  CMenu::operator !=  
+ Determines if two menus are logically not equal.  
   
 ```  
 BOOL operator!=(const CMenu& menu) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `menu`  
- A`CMenu`比较的对象。  
+ A `CMenu` object for comparison.  
   
-### <a name="remarks"></a>备注  
- 测试在左侧的菜单对象是否不等于右侧的菜单对象。  
+### <a name="remarks"></a>Remarks  
+ Tests if a menu object on the left side is not equal to a menu object on the right side.  
   
-##  <a name="operator_eq_eq"></a>CMenu::operator = =  
- 确定两个菜单是否逻辑上相等。  
+##  <a name="operator_eq_eq"></a>  CMenu::operator ==  
+ Determines if two menus are logically equal.  
   
 ```  
 BOOL operator==(const CMenu& menu) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `menu`  
- A`CMenu`比较的对象。  
+ A `CMenu` object for comparison.  
   
-### <a name="remarks"></a>备注  
- 测试在左侧的菜单对象是否相等 (方面`HMENU`值) 到右侧上的菜单对象。  
+### <a name="remarks"></a>Remarks  
+ Tests if a menu object on the left side is equal (in terms of the `HMENU` value) to a menu object on the right side.  
   
-##  <a name="removemenu"></a>CMenu::RemoveMenu  
- 从菜单中删除具有关联的弹出菜单的菜单项。  
+##  <a name="removemenu"></a>  CMenu::RemoveMenu  
+ Deletes a menu item with an associated pop-up menu from the menu.  
   
 ```  
 BOOL RemoveMenu(
@@ -1075,31 +1108,31 @@ BOOL RemoveMenu(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- 指定要删除的菜单项。 `nFlags`参数可以用于解释`nPosition`通过以下方式︰  
+ Specifies the menu item to be removed. The `nFlags` parameter can be used to interpret `nPosition` in the following ways:  
   
-|nFlags|NPosition 的解释|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
-|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
  `nFlags`  
- 指定如何`nPosition`解释。  
+ Specifies how `nPosition` is interpreted.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 它不会销毁弹出菜单的句柄，以便可以重用菜单。 在调用此函数时之前, 应用程序可能调用`GetSubMenu`成员函数来检索弹出窗口`CMenu`以供重复使用的对象。  
+### <a name="remarks"></a>Remarks  
+ It does not destroy the handle for a pop-up menu, so the menu can be reused. Before calling this function, the application may call the `GetSubMenu` member function to retrieve the pop-up `CMenu` object for reuse.  
   
- 每当驻留在的菜单 （无论窗口会显示），一个窗口发生更改时，应用程序必须调用`CWnd::DrawMenuBar`。  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application must call `CWnd::DrawMenuBar`.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::InsertMenu](#insertmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
- 将指定菜单默认菜单项设置。  
+##  <a name="setdefaultitem"></a>  CMenu::SetDefaultItem  
+ Sets the default menu item for the specified menu.  
   
 ```  
 BOOL SetDefaultItem(
@@ -1107,61 +1140,61 @@ BOOL SetDefaultItem(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `uItem`  
- 标识符或新的默认菜单项或-1 表示没有默认的项目的位置。 此参数的含义取决于值`fByPos`。  
+ Identifier or position of the new default menu item or - 1 for no default item. The meaning of this parameter depends on the value of `fByPos`.  
   
  `fByPos`  
- 值，该值指定的含义`uItem`。 如果此参数为**FALSE**，`uItem`是菜单项标识符。 否则，它是菜单项位置。  
+ Value specifying the meaning of `uItem`. If this parameter is **FALSE**, `uItem` is a menu item identifier. Otherwise, it is a menu item position.  
   
-### <a name="return-value"></a>返回值  
- 如果函数成功，则返回值不为零。 如果函数失败，则返回值为零。 若要获得扩展的错误信息，请使用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is nonzero. If the function fails, the return value is zero. To get extended error information, use the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), as described in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 函数的行为[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 function [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996), as described in the Windows SDK.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::InsertMenu](#insertmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
- 将使用上下文帮助 ID 相关联`CMenu`。  
+##  <a name="setmenucontexthelpid"></a>  CMenu::SetMenuContextHelpId  
+ Associates a context help ID with `CMenu`.  
   
 ```  
 BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwContextHelpId`  
- 要将与相关联的上下文帮助 ID `CMenu`。  
+ Context help ID to associate with `CMenu`.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零否则为 0  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0  
   
-### <a name="remarks"></a>备注  
- 在菜单中的所有项都共享此标识符，不能附加到各个菜单项的帮助上下文标识符。  
+### <a name="remarks"></a>Remarks  
+ All items in the menu share this identifier — it is not possible to attach a help context identifier to the individual menu items.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMenu::InsertMenu](#insertmenu)。  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
- 设置为菜单的信息。  
+##  <a name="setmenuinfo"></a>  CMenu::SetMenuInfo  
+ Sets information for a menu.  
   
 ```  
 BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpcmi`  
- 指向的指针[MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575)结构，它包含菜单上的信息。  
+ A pointer to a [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) structure containing information for the menu.  
   
-### <a name="return-value"></a>返回值  
- 如果函数成功，返回值为非零值;否则，返回值为零。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is nonzero; otherwise, the return value is zero.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可设置有关菜单上的特定信息。  
+### <a name="remarks"></a>Remarks  
+ Call this function to set specific information about the menu.  
   
-##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
- 将指定的位图与菜单项相关联。  
+##  <a name="setmenuitembitmaps"></a>  CMenu::SetMenuItemBitmaps  
+ Associates the specified bitmaps with a menu item.  
   
 ```  
 BOOL SetMenuItemBitmaps(
@@ -1171,43 +1204,43 @@ BOOL SetMenuItemBitmaps(
     const CBitmap* pBmpChecked);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- 指定要更改的菜单项。 `nFlags`参数可以用于解释`nPosition`通过以下方式︰  
+ Specifies the menu item to be changed. The `nFlags` parameter can be used to interpret `nPosition` in the following ways:  
   
-|nFlags|NPosition 的解释|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|指定参数提供的命令 ID 的现有的菜单项。 这是默认值，如果既没有**MF_BYCOMMAND**也不**MF_BYPOSITION**设置。|  
-|**MF_BYPOSITION**|指定参数提供现有的菜单项的位置。 第一项位于位置 0。|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
  `nFlags`  
- 指定如何`nPosition`解释。  
+ Specifies how `nPosition` is interpreted.  
   
  `pBmpUnchecked`  
- 指定要使用适用于未选中的菜单项的位图。  
+ Specifies the bitmap to use for menu items that are not checked.  
   
  `pBmpChecked`  
- 指定要用于选中的菜单项的位图。  
+ Specifies the bitmap to use for menu items that are checked.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 选中或取消选中菜单项是否，Windows 将显示菜单项旁边的相应位图。  
+### <a name="remarks"></a>Remarks  
+ Whether the menu item is checked or unchecked, Windows displays the appropriate bitmap next to the menu item.  
   
- 如果任一`pBmpUnchecked`或`pBmpChecked`是**NULL**，则 Windows 将显示相应的属性的菜单项旁边的执行任何操作。 如果两个参数均**NULL**，在项被选中且未选中的项时移除复选标记时，Windows 将使用默认复选标记。  
+ If either `pBmpUnchecked` or `pBmpChecked` is **NULL**, then Windows displays nothing next to the menu item for the corresponding attribute. If both parameters are **NULL**, Windows uses the default check mark when the item is checked and removes the check mark when the item is unchecked.  
   
- 菜单已销毁时，将不会销毁这些位图;应用程序必须将其销毁。  
+ When the menu is destroyed, these bitmaps are not destroyed; the application must destroy them.  
   
- Windows **GetMenuCheckMarkDimensions**函数将检索默认复选标记用于菜单项的尺寸。 应用程序使用这些值来确定使用此函数提供的位图的适当大小。 获取的大小，创建你的位图，然后将其设置。  
+ The Windows **GetMenuCheckMarkDimensions** function retrieves the dimensions of the default check mark used for menu items. The application uses these values to determine the appropriate size for the bitmaps supplied with this function. Get the size, create your bitmaps, and then set them.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 32](../../mfc/reference/codesnippet/cpp/cmenu-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#32](../../mfc/reference/codesnippet/cpp/cmenu-class_12.cpp)]  
   
- [!code-cpp[NVC_MFCWindowing # 33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
+ [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
- 更改菜单项有关的信息。  
+##  <a name="setmenuiteminfo"></a>  CMenu::SetMenuItemInfo  
+ Changes information about a menu item.  
   
 ```  
 BOOL SetMenuItemInfo(
@@ -1216,21 +1249,21 @@ BOOL SetMenuItemInfo(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `uItem`  
- 请参阅说明`uItem`中[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ See description of `uItem` in [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) in the Windows SDK.  
   
  `lpMenuItemInfo`  
- 请参阅说明`lpmii`中**SetMenuItemInfo**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ See description of `lpmii` in **SetMenuItemInfo** in the Windows SDK.  
   
  `fByPos`  
- 请参阅说明`fByPosition`中**SetMenuItemInfo**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ See description of `fByPosition` in **SetMenuItemInfo** in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 此函数包装[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)、 中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This function wraps [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), described in the Windows SDK.  
   
-##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
- 在指定位置显示浮动的弹出菜单，并在弹出菜单上跟踪选定的项。  
+##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
+ Displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu.  
   
 ```  
 BOOL TrackPopupMenu(
@@ -1241,33 +1274,33 @@ BOOL TrackPopupMenu(
     LPCRECT lpRect = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nFlags`  
- 指定屏幕位置和鼠标位置的标志。 请参阅[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002)有关可用标志的列表。  
+ Specifies screen-position and mouse-position flags. See [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) for a list of available flags.  
   
  *x*  
- 指定屏幕坐标中的弹出菜单的水平位置。 根据值`nFlags`参数，菜单可以为左对齐、 右对齐或居中相对于此位置。  
+ Specifies the horizontal position in screen coordinates of the pop-up menu. Depending on the value of the `nFlags` parameter, the menu can be left-aligned, right-aligned, or centered relative to this position.  
   
  *y*  
- 在屏幕上指定菜单的顶部屏幕坐标的垂直位置。  
+ Specifies the vertical position in screen coordinates of the top of the menu on the screen.  
   
  `pWnd`  
- 标识拥有的弹出菜单的窗口。 此参数不能为**NULL**，即使**TPM_NONOTIFY**指定标志。 此窗口接收所有**WM_COMMAND**从菜单的消息。 在 Windows 版本 3.1 和更高版本中，该窗口不会收到**WM_COMMAND**消息直到`TrackPopupMenu`返回。 在 Windows 3.0 中，该窗口才接收**WM_COMMAND**消息之前`TrackPopupMenu`返回。  
+ Identifies the window that owns the pop-up menu. This parameter cannot be **NULL**, even if the **TPM_NONOTIFY** flag is specified. This window receives all **WM_COMMAND** messages from the menu. In Windows versions 3.1 and later, the window does not receive **WM_COMMAND** messages until `TrackPopupMenu` returns. In Windows 3.0, the window receives **WM_COMMAND** messages before `TrackPopupMenu` returns.  
   
  `lpRect`  
- 已忽略。  
+ Ignored.  
   
-### <a name="return-value"></a>返回值  
- 此方法返回的结果调用[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="return-value"></a>Return Value  
+ This method returns the result of calling [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 浮动的弹出菜单可以出现在屏幕上的任意位置。  
+### <a name="remarks"></a>Remarks  
+ A floating pop-up menu can appear anywhere on the screen.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
- 在指定位置显示浮动的弹出菜单，并在弹出菜单上跟踪选定的项。  
+##  <a name="trackpopupmenuex"></a>  CMenu::TrackPopupMenuEx  
+ Displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu.  
   
 ```  
 BOOL TrackPopupMenuEx(
@@ -1278,34 +1311,34 @@ BOOL TrackPopupMenuEx(
     LPTPMPARAMS lptpm);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `fuFlags`  
- 指定扩展菜单的各种功能。 所有值的列表和它们的含义，请参阅[TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  
+ Specifies various functions for the extended menu. For a listing of all values and their meaning, see [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
   
  *x*  
- 指定屏幕坐标中的弹出菜单的水平位置。  
+ Specifies the horizontal position in screen coordinates of the pop-up menu.  
   
  *y*  
- 在屏幕上指定菜单的顶部屏幕坐标的垂直位置。  
+ Specifies the vertical position in screen coordinates of the top of the menu on the screen.  
   
  `pWnd`  
- 指向拥有的弹出菜单和菜单创建接收消息窗口的指针。 此窗口可以是从当前应用程序的任何窗口，但不能为**NULL**。 如果指定**TPM_NONOTIFY**中`fuFlags`参数，该函数不会发送到任何消息`pWnd`。 该函数必须返回指向对窗口`pWnd`接收**WM_COMMAND**消息。  
+ A pointer to the window owning the pop-up menu and receiving the messages from the created menu. This window can be any window from the current application but cannot be **NULL**. If you specify **TPM_NONOTIFY** in the `fuFlags` parameter, the function does not send any messages to `pWnd`. The function must return for the window pointed to by `pWnd` to receive the **WM_COMMAND** message.  
   
  *lptpm*  
- 指向[TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586)结构，它指定屏幕菜单区域不应重叠。 此参数可以为**NULL**。  
+ Pointer to a [TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586) structure that specifies an area of the screen the menu should not overlap. This parameter can be **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 如果指定**TPM_RETURNCMD**中`fuFlags`参数，返回值是用户选定的项的菜单项标识符。 如果用户取消菜单不做任何选择，或者如果发生错误，则返回值为 0。  
+### <a name="return-value"></a>Return Value  
+ If you specify **TPM_RETURNCMD** in the `fuFlags` parameter, the return value is the menu-item identifier of the item that the user selected. If the user cancels the menu without making a selection, or if an error occurs, then the return value is 0.  
   
- 如果不指定**TPM_RETURNCMD**中`fuFlags`参数，返回值表示非零，如果函数成功，0 失败。 若要获得扩展的错误信息，调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ If you do not specify **TPM_RETURNCMD** in the `fuFlags` parameter, the return value is nonzero if the function succeeds and 0 if it fails. To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>备注  
- 浮动的弹出菜单可以出现在屏幕上的任意位置。 创建弹出菜单时处理错误的详细信息，请参阅[TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  
+### <a name="remarks"></a>Remarks  
+ A floating pop-up menu can appear anywhere on the screen. For more information on handling errors when creating the pop-up menu, see [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 CTRLTEST](../../visual-cpp-samples.md)   
- [MFC 示例 DYNAMENU](../../visual-cpp-samples.md)   
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CObject 类](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLTEST](../../visual-cpp-samples.md)   
+ [MFC Sample DYNAMENU](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

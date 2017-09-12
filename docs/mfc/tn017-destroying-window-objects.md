@@ -1,102 +1,121 @@
 ---
-title: "TN017：销毁窗口对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.objects"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "销毁窗口"
-  - "PostNcDestroy 方法"
-  - "TN017"
+title: 'TN017: Destroying Window Objects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.objects
+dev_langs:
+- C++
+helpviewer_keywords:
+- destroying windows
+- TN017
+- PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# TN017：销毁窗口对象
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c388ed164c934c1945418115781b51a7e251aa50
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-此注释说明使用 [CWnd::PostNcDestroy](../Topic/CWnd::PostNcDestroy.md) 方法。  如果要执行的自定义的 `CWnd`分配派生的对象，请使用此方法。  此注释还说明您为什么使用 [CWnd::DestroyWindow](../Topic/CWnd::DestroyWindow.md) 销毁 C\+\+. Windows 窗体对象而不是 `delete` 运算符。  
+---
+# <a name="tn017-destroying-window-objects"></a>TN017: Destroying Window Objects
+This note describes the use of the [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) method. Use this method if you want to do customized allocation of `CWnd`-derived objects. This note also explains why you should use [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) to destroy a C++ Windows object instead of the `delete` operator.  
   
- 如果您遵守本主题中的准则，您会具有较少形清理问题。  这些问题可能会导致问题，例如忘记删除\/免费的C\+ \+内存，像`HWND`免费的系统资源，或者释放对象的次数太多。  
+ If you follow the guidelines in this topic, you will have few cleanup problems. These problems can result from issues such as forgetting to delete/free C++ memory, forgetting to free system resources like `HWND`s, or freeing objects too many times.  
   
-## 问题  
- 每个窗口对象 \(从 `CWnd`派生的类的对象。\) 表示两个 C.C\+\+ 对象和 `HWND`。  C\+\+ 对象在应用程序内存段分配，并在 `HWND`中分配由 Windows 系统资源管理器。  由于有多种方式销毁窗口对象，我们必须提供防止系统资源或内存泄漏的一组规则。  这些规则还必须防止对象和窗口句柄被销毁多次。  
+## <a name="the-problem"></a>The Problem  
+ Each windows object (object of a class derived from `CWnd`) represents both a C++ object and an `HWND`. C++ objects are allocated in the application's heap and `HWND`s are allocated in system resources by the window manager. Because there are several ways to destroy a window object, we must provide a set of rules that prevent system resource or memory leaks. These rules must also prevent objects and Windows handles from being destroyed more than one time.  
   
-## 销毁窗口  
- 下面是两个允许方式销毁窗口对象：  
+## <a name="destroying-windows"></a>Destroying Windows  
+ The following are the two permitted ways to destroy a Windows object:  
   
--   调用 `CWnd::DestroyWindow` 或 Windows API `DestroyWindow`。  
+-   Calling `CWnd::DestroyWindow` or the Windows API `DestroyWindow`.  
   
--   显式删除使用 `delete` 运算符。  
+-   Explicitly deleting with the `delete` operator.  
   
- 第一个用例 \(这是迄今为止最常见。  此情况下应用，即使代码不直接调用 `DestroyWindow`。  如果用户直接关闭一框架窗口时，此操作将生成消息 `WM_CLOSE`，这样，到此消息的默认响应是调用 `DestroyWindow.` ，则销毁时父窗口，窗口中调用其所有子级的 `DestroyWindow`。  
+ The first case is by far the most common. This case applies even if your code does not call `DestroyWindow` directly. When the user directly closes a frame window, this action generates the `WM_CLOSE` message, and the default response to this message is to call `DestroyWindow.` When a parent window is destroyed, Windows calls `DestroyWindow` for all its children.  
   
- 第二种情况，请使用窗口的 `delete` 运算符对象，应该很少见的。  以下是使用 `delete` 的情形是正确的选择。  
+ The second case, the use of the `delete` operator on Windows objects, should be rare. The following are some cases where using `delete` is the correct choice.  
   
-## 与 CWnd::PostNcDestroy 的自动清理  
- 当系统窗口销毁一个窗口时，窗口上发送到 Windows 为 `WM_NCDESTROY`。  该消息的默认 `CWnd` 处理程序为 [CWnd::OnNcDestroy](../Topic/CWnd::OnNcDestroy.md)。  `OnNcDestroy` 将分离从 C\+\+ 对象的 `HWND` 并调用虚函数 `PostNcDestroy`。  这些类中替代此函数删除 C\+\+ 对象。  
+## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Auto Cleanup with CWnd::PostNcDestroy  
+ When the system destroys a Windows window, the last Windows message sent to the window is `WM_NCDESTROY`. The default `CWnd` handler for that message is [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` will detach the `HWND` from the C++ object and call the virtual function `PostNcDestroy`. Some classes override this function to delete the C++ object.  
   
- `CWnd::PostNcDestroy` 的默认实现不执行任何操作，提供窗口对象 \(在堆栈帧在分配或嵌入其他对象。  这对于在堆中分配，且不包含任何其他对象的设计窗口对象不正确。  换言之，用于其他 C\+\+ 对象未嵌入的窗口对象不正确。  
+ The default implementation of `CWnd::PostNcDestroy` does nothing, which is appropriate for window objects that are allocated on the stack frame or embedded in other objects. This is not appropriate for window objects that are designed to be allocated on the heap without any other objects. In other words, it is not appropriate for window objects that are not embedded in other C++ objects.  
   
- 堆上重写中单独的分配方式执行 `delete this`的 `PostNcDestroy` 方法的类。  此语句将释放任何内存与 C\+\+ 对象。  即使默认 `CWnd` 析构函数调用 `DestroyWindow`，如果 `m_hWnd` 不为 null，这不导致无限递归，因为在处理清理阶段是分离并 NULL。  
+ Those classes that are designed to be allocated alone on the heap override the `PostNcDestroy` method to perform a `delete this`. This statement will free any memory associated with the C++ object. Even though the default `CWnd` destructor calls `DestroyWindow` if `m_hWnd` is non-NULL, this does not lead to infinite recursion because the handle will be detached and NULL during the cleanup phase.  
   
 > [!NOTE]
->  系统调用 `CWnd::PostNcDestroy`，通常在处理 Windows 消息 `WM_NCDESTROY` 后，`HWND` 对象和 C\+\+ Windows 不再连接。  如果失败，系统还将调用在大多数调用 [CWnd::Create](../Topic/CWnd::Create.md) 的实现的 `CWnd::PostNcDestroy`。  自动清理规则将在本主题后面进行介绍。  
+>  The system usually calls `CWnd::PostNcDestroy` after it processes the Windows `WM_NCDESTROY` message and the `HWND` and the C++ window object are no longer connected. The system will also call `CWnd::PostNcDestroy` in the implementation of most [CWnd::Create](../mfc/reference/cwnd-class.md#create) calls if failure occurs. The auto cleanup rules are described later in this topic.  
   
-## 自动清理类  
- 下列类不会自动清理设计。  它们通常嵌入到其他 C\+\+ 对象或在堆栈：  
+## <a name="auto-cleanup-classes"></a>Auto Cleanup Classes  
+ The following classes are not designed for auto-cleanup. They are typically embedded in other C++ objects or on the stack:  
   
--   所有标准 Windows 控件 \(`CStatic`、`CEdit`，`CListBox`，依此类推\)。  
+-   All standard Windows controls (`CStatic`, `CEdit`, `CListBox`, and so on).  
   
--   直接从 `CWnd` 派生的任何子窗口 \(例如，自定义控件\)。  
+-   Any child windows derived directly from `CWnd` (for example, custom controls).  
   
--   拆分窗口 \(`CSplitterWnd`\)。  
+-   Splitter windows (`CSplitterWnd`).  
   
--   默认控制条 \(从 `CControlBar`派生的类，该类使控制条的对象自动删除参见 [技术说明 31](../mfc/tn031-control-bars.md) \)。  
+-   Default control bars (classes derived from `CControlBar`, see [Technical Note 31](../mfc/tn031-control-bars.md) for enabling auto-delete for control bar objects).  
   
--   对堆栈帧上的模式对话框 \(`CDialog`\) 的对话框。  
+-   Dialogs (`CDialog`) designed for modal dialogs on the stack frame.  
   
--   所有标准对话框中除 `CFindReplaceDialog`。  
+-   All the standard dialogs except `CFindReplaceDialog`.  
   
--   ClassWizard 创建的默认对话框。  
+-   The default dialogs created by ClassWizard.  
   
- 下列类会自动清理设计。  它们通常在单独堆分配：  
+ The following classes are designed for auto-cleanup. They are typically allocated by themselves on the heap:  
   
--   主框架窗口 \(直接或间接从 `CFrameWnd`派生\)。  
+-   Main frame windows (derived directly or indirectly from `CFrameWnd`).  
   
--   窗口 \(直接或间接从 `CView`派生\)。  
+-   View windows (derived directly or indirectly from `CView`).  
   
- 如果要规矩这些冲突，必须派生类中重写 `PostNcDestroy` 方法。  若要添加自动清理到类中，然后实现 `delete this`调用基类。  若要从类移除自动清理，请调用 `CWnd::PostNcDestroy` 而不直接是直接基类的 `PostNcDestroy` 方法。  
+ If you want to break these rules, you must override the `PostNcDestroy` method in your derived class. To add auto-cleanup to your class, call your base class and then do a `delete this`. To remove auto-cleanup from your class, call `CWnd::PostNcDestroy` directly instead of the `PostNcDestroy` method of your direct base class.  
   
- 最常见更改自动清理行为是创建在堆可以赋予的无模式对话框。  
+ The most common use of changing auto cleanup behavior is to create a modeless dialog that can be allocated on the heap.  
   
-## 当调用 Delete 时：  
- 建议您调用 `DestroyWindow`，销毁窗口对象方法或 C\+\+ 全局 `DestroyWindow` API。  
+## <a name="when-to-call-delete"></a>When to Call delete  
+ We recommend that you call `DestroyWindow` to destroy a Windows object, either the C++ method or the global `DestroyWindow` API.  
   
- 请勿调用全局 `DestroyWindow` API 销毁 MDI 子窗口。  而应使用 `CWnd::DestroyWindow`。  
+ Do not call the global `DestroyWindow` API to destroy a MDI Child window. You should use the virtual method `CWnd::DestroyWindow` instead.  
   
- 对于 C\+\+ 不执行自动清理的窗口对象，使用 `delete` 运算符会导致内存泄漏，如果尝试调用 `CWnd::~CWnd` 析构函数时为 `DestroyWindow`，如果 VTBL 不正确指向派生类。  因为系统找不到相应销毁方法调用，则会发生这种情况。  使用 `delete` 而不是 `DestroyWindow` 来避免这些问题。  由于这是一细微的错误，请编译调试模式将生成以下警告您是危险的。  
+ For C++ Window objects that do not perform auto-cleanup, using the `delete` operator can cause a memory leak when you try to call `DestroyWindow` in the `CWnd::~CWnd` destructor if the VTBL does not point to the correctly derived class. This occurs because the system cannot find the appropriate destroy method to call. Using `DestroyWindow` instead of `delete` avoids these problems. Because this can be a subtle error, compiling in debug mode will generate the following warning if you are at risk.  
   
 ```  
 Warning: calling DestroyWindow in CWnd::~CWnd  
-   OnDestroy or PostNcDestroy in derived class will not be called  
+    OnDestroy or PostNcDestroy in derived class will not be called  
 ```  
   
- 对于 C\+\+ 来自动清理的窗口对象，您必须调用 `DestroyWindow`。  如果直接使用 `delete` 运算符，MFC 诊断内存分配器将通知您释放内存两次。  两个 byte 是第显式调用和间接调用 `PostNcDestroy`中自动清理实现的 `delete this`。  
+ In the case of C++ Windows objects that do perform auto-cleanup, you must call `DestroyWindow`. If you use the `delete` operator directly, the MFC diagnostic memory allocator will notify you that you are freeing memory two times. The two occurrences are your first explicit call and the indirect call to `delete this` in the auto-cleanup implementation of `PostNcDestroy`.  
   
- 在调用非自动清理对象的 `DestroyWindow` 之后，C\+\+ 对象，`m_hWnd`，但为 NULL。  在调用自动清理对象的 `DestroyWindow` 之后，将转到 C\+\+ 对象，释放由 `PostNcDestroy`C\+\+ 实现的自动清理的删除运算符。  
+ After calling `DestroyWindow` on a non-auto-cleanup object, the C++ object will still be around, but `m_hWnd` will be NULL. After calling `DestroyWindow` on an auto-cleanup object, the C++ object will be gone, freed by the C++ delete operator in the auto-cleanup implementation of `PostNcDestroy`.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

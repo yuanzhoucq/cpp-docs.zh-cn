@@ -1,119 +1,138 @@
 ---
-title: "功能区设计器 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.ribbon.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 功能区设计器"
-  - "功能区设计器 (MFC)"
+title: Ribbon Designer (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.ribbon.F1
+dev_langs:
+- C++
+helpviewer_keywords:
+- Ribbon Designer (MFC)
+- MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 功能区设计器 (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21372eebe92c9cba42d25f79b9e2ffc32f43f019
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-功能区设计器可用于在 MFC 应用程序中创建和自定义功能区。  功能区是一种将命令整理成逻辑组的用户界面 \(UI\) 元素。  这些组显示在窗口顶部条带中的独立选项卡上。  功能区取代了菜单栏和工具栏。  功能区可以显著提高应用程序的可用性。  有关详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/?LinkId=129233)。  下图展示了一个功能区。  
+---
+# <a name="ribbon-designer-mfc"></a>Ribbon Designer (MFC)
+The Ribbon Designer lets you create and customize ribbons in MFC applications. A ribbon is a user interface (UI) element that organizes commands into logical groups. These groups appear on separate tabs in a strip across the top of the window. The ribbon replaces the menu bar and toolbars. A ribbon can significantly improve application usability. For more information, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233). The following illustration shows a ribbon.  
   
- ![MFC 功能区资源控件](../mfc/media/ribbon_no_callouts.png "Ribbon\_No\_Callouts")  
+ ![MFC Ribbon Resource Control](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- 在早期版本的 Visual Studio 中，必须通过编写使用 MFC 功能区类（如 [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md)）的代码来创建功能区。  在 [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] 中，功能区设计器提供生成功能区的替代方法。 首先，创建功能区并将其自定义为资源。  然后从 MFC 应用程序中的代码加载功能区资源。  你甚至可以将功能区资源和 MFC 功能区类一起使用。  例如，你可以创建功能区资源，然后在运行时通过使用代码以编程方式向其添加更多元素。  
+ In earlier versions of Visual Studio, ribbons had to be created by writing code that uses the MFC ribbon classes such as [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], the ribbon designer provides an alternative method for building ribbons. First, create and customize a ribbon as a resource. Then load the ribbon resource from code in the MFC application. You can even use ribbon resources and MFC ribbon classes together. For example, you can create a ribbon resource, and then programmatically add more elements to it at runtime by using code.  
   
-## 了解功能区设计器  
- 功能区设计器创建功能区并将其作为资源进行存储。  创建功能区资源时，功能区设计器将执行以下三项操作：  
+## <a name="understanding-the-ribbon-designer"></a>Understanding the Ribbon Designer  
+ The ribbon designer creates and stores the ribbon as a resource. When you create a ribbon resource, the ribbon designer does these three things:  
   
--   在项目资源定义脚本 \(\*.rc\) 中添加一个条目。  在下面的示例中，`IDR_RIBBON` 是标识功能区资源的唯一名称，`RT_RIBBON_XML` 是资源类型，`ribbon.mfcribbon-ms` 是资源文件的名称。  
+-   Adds an entry in the project resource definition script (*.rc). In the following example, `IDR_RIBBON` is the unique name that identifies the ribbon resource, `RT_RIBBON_XML` is the resource type, and `ribbon.mfcribbon-ms` is the name of the resource file.  
   
-    ```  
-    IDR_RIBBON             RT_RIBBON_XML                      "res\\ribbon.mfcribbon-ms"  
-    ```  
+ ```  
+    IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
+ ```  
   
--   将命令 ID 的定义添加到 resource.h。  
+-   Adds the definitions of Command IDs to resource.h.  
   
-    ```  
-    #define IDR_RIBBON            307  
-    ```  
+ ```  
+ #define IDR_RIBBON            307  
+ ```  
   
--   创建一个包含 XML 代码的功能区资源文件 \(\*.mfcribbon\-ms\)，该代码用于定义功能区的按钮、控件和属性。  对功能区设计器中功能区的更改将以 XML 形式存储在资源文件中。  下面的代码示例展示 \*.mfcribbon ms 文件的部分内容：  
+-   Creates a ribbon resource file (*.mfcribbon-ms) that contains the XML code that defines the ribbon's buttons, controls, and attributes. Changes to the ribbon in the ribbon designer are stored in the resource file as XML. The following code example shows part of the contents of a \*.mfcribbon-ms file:  
   
-    ```  
-    <RIBBON_BAR>  
-      <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
-      <IMAGE>  
-        <ID>  
-          <NAME>IDB_BUTTONS</NAME>  
-          <VALUE>113</VALUE>  
-        </ID> …  
-    ```  
+ ```  
+ <RIBBON_BAR>  
+ <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
+ <IMAGE>  
+ <ID>  
+ <NAME>IDB_BUTTONS</NAME>  
+ <VALUE>113</VALUE>  
+ </ID>   
+ ```  
   
- 要使用 MFC 应用程序中的功能区资源，请通过调用 [CMFCRibbonBar::LoadFromResource](../Topic/CMFCRibbonBar::LoadFromResource.md) 加载资源。  
+ To use the ribbon resource in your MFC application, load the resource by calling [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
   
-## 使用功能区设计器创建功能区  
- 可通过两种方式向 MFC 项目添加功能区资源：  
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Creating a Ribbon By Using the Ribbon Designer  
+ These are the two ways to add a ribbon resource to your MFC project:  
   
--   创建 MFC 应用程序，并配置 MFC 项目向导以创建功能区。  有关详细信息，请参阅[演练：使用 MFC 创建功能区应用程序](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)。  
+-   Create an MFC application and configure the MFC Project Wizard to create the ribbon. For more information, see [Walkthrough: Creating a Ribbon Application By Using MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
   
--   在现有 MFC 项目中，创建功能区资源并加载该资源。  有关详细信息，请参阅[演练：更新 MFC 随意画图应用程序（第 1 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。  
+-   In an existing MFC project, create a ribbon resource and load it. For more information, see [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
- 如果你的项目已经有手动编码的功能区，MFC 提供一些功能，可用于将现有功能区转换为功能区资源。  有关详细信息，请参阅[如何：将现有 MFC 功能区转换为功能区资源](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)。  
+ If your project already has a manually coded ribbon, MFC has functions that you can use to convert the existing ribbon to a ribbon resource. For more information, see [How to: Convert an Existing MFC Ribbon to a Ribbon Resource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
   
 > [!NOTE]
->  不能在基于对话框的应用程序中创建功能区。  有关详细信息，请参阅 [MFC 应用程序向导的应用程序类型](../mfc/reference/application-type-mfc-application-wizard.md)。  
+>  Ribbons cannot be created in dialog-based applications. For more information, see [Application Type, MFC Application Wizard](../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## 自定义功能区  
- 要在功能区设计器中打开功能区，请双击资源视图中的功能区资源。  在设计器中，可以添加、删除和自定义功能区、“应用程序”按钮或快速访问工具栏上的元素。  另外还可以将事件链接到（例如，按钮单击事件和菜单事件）到应用程序中的某个方法。  
+## <a name="customizing-ribbons"></a>Customizing Ribbons  
+ To open a ribbon in the ribbon designer, double-click the ribbon resource in Resource View. In the designer, you can add, remove, and customize elements on the ribbon, the Application button, or the quick access toolbar. You can also link events, for example, button-click events and menu events, to a method in your application.  
   
- 下图展示了功能区设计器中的各种组件。  
+ The following illustration shows the various components in the ribbon designer.  
   
- ![MFC 功能区设计器](../mfc/media/ribbon_designer.png "Ribbon\_Designer")  
+ ![MFC Ribbon Designer](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
--   **工具箱：**包含可拖动到设计器图面的控件。  
+- **Toolbox:** Contains controls that can be dragged to the designer surface.  
   
--   **设计器图面：**包含功能区资源的可视表示形式。  
+- **Designer Surface:** Contains the visual representation of the ribbon resource.  
   
--   **属性窗口：**列示在设计器图面上选定的项的属性。  
+- **Properties window:** Lists the attributes of the item that is selected on the designer surface.  
   
--   **资源视图窗口：**显示项目中包括功能区资源在内的资源。  
+- **Resource View window:** Displays the resources that include ribbon resources, in your project.  
   
--   **功能区编辑器工具栏：**包含用于预览功能区以及更改其可视主题的命令。  
+- **Ribbon Editor Toolbar:** Contains commands that let you preview the ribbon and change its visual theme.  
   
- 以下主题介绍如何使用功能区设计器中的功能：  
+ The following topics describe how to use the features in the ribbon designer:  
   
--   [如何：自定义应用程序按钮](../mfc/how-to-customize-the-application-button.md)  
+- [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
--   [如何：自定义快速访问工具栏](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
--   [如何：添加功能区控件和事件处理程序](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
+- [How to: Add Ribbon Controls and Event Handlers](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
--   [如何：从 MFC 应用程序中加载功能区资源](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [How to: Load a Ribbon Resource from an MFC Application](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
-## 功能区元素的定义  
- ![MFC 功能区](../mfc/media/ribbon.png "Ribbon")  
+## <a name="definitions-of-ribbon-elements"></a>Definitions of Ribbon Elements  
+ ![MFC Ribbon](../mfc/media/ribbon.png "ribbon")  
   
--   **应用程序按钮：**显示在功能区左上角的按钮。  “应用程序”按钮取代“文件”菜单，即使在功能区最小化时也可见。  单击该按钮时，将显示一个包含命令列表的菜单。  
+- **Application button:** The button that appears on the upper-left corner of a ribbon. The Application button replaces the File menu and is visible even when the ribbon is minimized. When the button is clicked, a menu that has a list of commands is displayed.  
   
--   **快速访问工具栏：**一个显示常用命令的可自定义的小工具栏。  
+- **Quick Access toolbar:** A small, customizable toolbar that displays frequently used commands.  
   
--   **类别**：表示功能区选项卡的内容的逻辑分组。  
+- **Category**: The logical grouping that represents the contents of a ribbon tab.  
   
--   **类别默认按钮：**功能区最小化时，显示在功能区上的按钮。  单击该按钮时，类别将以菜单的形式重新出现。  
+- **Category Default button:** The button that appears on the ribbon when the ribbon is minimized. When the button is clicked, the category reappears as a menu.  
   
--   **面板：**显示一组相关控件的功能区栏区域。  每个功能区类别都包含一个或多个功能区面板。  
+- **Panel:** An area of the ribbon bar that displays a group of related controls. Every ribbon category contains one or more ribbon panels.  
   
--   **功能区元素：**面板中的控件，例如，按钮和组合框。  要查看功能区上可能承载的各种控件，请参阅 [RibbonGadgets 示例：功能区的小工具应用程序](../top/visual-cpp-samples.md)。  
+- **Ribbon elements:** Controls in the panels, for example, buttons and combo boxes. To see the various controls that can be hosted on a ribbon, see [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md).  
   
-## 请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)   
- [Working with Resource Files](../mfc/working-with-resource-files.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Working with Resource Files](../windows/working-with-resource-files.md)
+
+

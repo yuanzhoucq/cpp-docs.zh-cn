@@ -1,5 +1,5 @@
 ---
-title: "连接映射 |Microsoft 文档"
+title: Connection Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,168 +33,168 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 8947930d20cc65075abe442b233e4c086f10f76e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6bbb1b543b73aeff21485504788c24b97e603b4e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="connection-maps"></a>连接映射
-OLE 控件都能够公开的接口连接到其他应用程序。 这些接口只在该控件允许从容器的访问。 如果 OLE 控件想要访问的其他 OLE 对象的外部接口，必须建立的连接点。 此连接点允许传出外部调度映射，如事件映射或通知函数的访问控制。  
+# <a name="connection-maps"></a>Connection Maps
+OLE controls are able to expose interfaces to other applications. These interfaces only allow access from a container into that control. If an OLE control wants to access external interfaces of other OLE objects, a connection point must be established. This connection point allows a control outgoing access to external dispatch maps, such as event maps or notification functions.  
   
- Microsoft 基础类库提供了一个编程模型，支持连接点。 在此模型中，"连接映射"用于指定接口或 OLE 控件的连接点。 连接映射包含每个连接点的一个宏。 连接映射的详细信息，请参阅[CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md)类。  
+ The Microsoft Foundation Class Library offers a programming model that supports connection points. In this model, "connection maps" are used to designate interfaces or connection points for the OLE control. Connection maps contain one macro for each connection point. For more information on connection maps, see the [CConnectionPoint](../../mfc/reference/cconnectionpoint-class.md) class.  
   
- 通常情况下，控件将支持只是两个连接点︰ 一个用于事件，另一个用于属性通知。 这些功能通过实现`COleControl`和需要任何额外工作由控件编写器的基类。 必须手动添加您想要在您的类中实现的任何其他连接点。 若要支持连接映射和点，MFC 提供了下列宏︰  
+ Typically, a control will support just two connection points: one for events and one for property notifications. These are implemented by the `COleControl` base class and require no additional work by the control writer. Any additional connection points you want to implement in your class must be added manually. To support connection maps and points, MFC provides the following macros:  
   
-### <a name="connection-map-declaration-and-demarcation"></a>连接映射声明和划分  
-  
-|||  
-|-|-|  
-|[BEGIN_CONNECTION_PART](#begin_connection_part)|声明的嵌入的类中实现 （必须在类声明中使用） 的其他连接点。|  
-|[END_CONNECTION_PART](#end_connection_part)|结束连接点 （必须在类声明中使用） 的声明。|  
-|[CONNECTION_IID](#connection_iid)|指定控件的连接点的接口 ID。|  
-|[DECLARE_CONNECTION_MAP](#declare_connection_map)|声明连接映射，将使用的类 （必须在类声明中使用） 中。|  
-|[BEGIN_CONNECTION_MAP](#begin_connection_map)|开始连接映射 （必须在类实现中使用） 的定义。|  
-|[END_CONNECTION_MAP](#end_connection_map)|结束连接映射 （必须在类实现中使用） 的定义。|  
-|[CONNECTION_PART](#connection_part)|在控件的连接映射中指定的连接点。|  
-  
- 以下函数帮助中的接收器建立和断开连接使用连接点︰  
-  
-### <a name="initializationtermination-of-connection-points"></a>初始化/终止的连接点  
+### <a name="connection-map-declaration-and-demarcation"></a>Connection Map Declaration and Demarcation  
   
 |||  
 |-|-|  
-|[AfxConnectionAdvise](#afxconnectionadvise)|建立源和接收器之间的连接。|  
-|[AfxConnectionUnadvise](#afxconnectionunadvise)|将一个源和接收器之间的连接中断。|  
+|[BEGIN_CONNECTION_PART](#begin_connection_part)|Declares an embedded class that implements an additional connection point (must be used in the class declaration).|  
+|[END_CONNECTION_PART](#end_connection_part)|Ends the declaration of a connection point (must be used in the class declaration).|  
+|[CONNECTION_IID](#connection_iid)|Specifies the interface ID of the control's connection point.|  
+|[DECLARE_CONNECTION_MAP](#declare_connection_map)|Declares that a connection map will be used in a class (must be used in the class declaration).|  
+|[BEGIN_CONNECTION_MAP](#begin_connection_map)|Begins the definition of a connection map (must be used in the class implementation).|  
+|[END_CONNECTION_MAP](#end_connection_map)|Ends the definition of a connection map (must be used in the class implementation).|  
+|[CONNECTION_PART](#connection_part)|Specifies a connection point in the control's connection map.|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
- 使用`BEGIN_CONNECTION_PART`从开始进行额外的连接点的事件和属性的通知连接点超出定义的宏。  
+ The following functions assist a sink in establishing and disconnecting a connection using connection points:  
+  
+### <a name="initializationtermination-of-connection-points"></a>Initialization/Termination of Connection Points  
+  
+|||  
+|-|-|  
+|[AfxConnectionAdvise](#afxconnectionadvise)|Establishes a connection between a source and a sink.|  
+|[AfxConnectionUnadvise](#afxconnectionunadvise)|Breaks a connection between a source and a sink.|  
+  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
+ Use the `BEGIN_CONNECTION_PART` macro to begin the definition of additional connection points beyond the event and property notification connection points.  
   
 ```   
 BEGIN_CONNECTION_PART(theClass, localClass)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 指定它的连接点这样的控件类的名称。  
+ Specifies the name of the control class whose connection point this is.  
   
  *localClass*  
- 指定实现连接点的局部类的名称。  
+ Specifies the name of the local class that implements the connection point.  
   
-### <a name="remarks"></a>备注  
- 在定义您的类的成员函数声明 (.h) 文件中，启动的连接点`BEGIN_CONNECTION_PART`宏，然后添加`CONNECTION_IID`宏，并想要实现，并完成连接点映射与任何其他成员函数`END_CONNECTION_PART`宏。  
+### <a name="remarks"></a>Remarks  
+ In the declaration (.h) file that defines the member functions for your class, start the connection point with the `BEGIN_CONNECTION_PART` macro, then add the `CONNECTION_IID` macro and any other member functions you wish to implement, and complete the connection point map with the `END_CONNECTION_PART` macro.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
- 结束连接点的声明。  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
+ Ends the declaration of your connection point.  
   
 ```   
 END_CONNECTION_PART(localClass)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *localClass*  
- 指定实现连接点的局部类的名称。  
+ Specifies the name of the local class that implements the connection point.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
- 在 `BEGIN_CONNECTION_PART` 和 `END_CONNECTION_PART` 宏之间使用以定义 OLE 控件支持的连接点的接口 ID。  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
+ Use between the `BEGIN_CONNECTION_PART` and `END_CONNECTION_PART` macros to define an interface ID for a connection point supported by your OLE control.  
   
 ```   
 CONNECTION_IID(iid)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `iid`  
- 接口的接口 ID 由连接点调用。  
+ The interface ID of the interface called by the connection point.  
   
-### <a name="remarks"></a>备注  
- `iid` 参数是一个接口 ID，用于标识连接点在其连接的接收器中调用的接口。 例如:   
+### <a name="remarks"></a>Remarks  
+ The `iid` argument is an interface ID used to identify the interface that the connection point will call on its connected sinks. For example:  
   
- [!code-cpp[NVC_MFCConnectionPoints #&10;](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
+ [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
- 指定调用 `ISinkInterface` 接口的连接点。  
+ specifies a connection point that calls the `ISinkInterface` interface.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
- 程序中的每个 `COleControl` 派生类可提供一个连接映射来指定控件支持的额外的连接点。  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
+ Each `COleControl`-derived class in your program can provide a connection map to specify additional connection points that your control supports.  
   
 ```   
 DECLARE_CONNECTION_MAP() 
 ```  
   
-### <a name="remarks"></a>备注  
- 如果控件支持额外的点，请在类声明的末尾使用 `DECLARE_CONNECTION_MAP` 宏。 然后，在定义类的成员函数的 .cpp 文件中，使用 `BEGIN_CONNECTION_MAP` 宏、控件的每个连接点的 `CONNECTION_PART` 宏和 `END_CONNECTION_MAP` 宏声明连接映射的结尾。  
+### <a name="remarks"></a>Remarks  
+ If your control supports additional points, use the `DECLARE_CONNECTION_MAP` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_CONNECTION_MAP` macro, `CONNECTION_PART` macros for each of the control's connection points, and the `END_CONNECTION_MAP` macro to declare the end of the connection map.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
- 程序中的每个 `COleControl` 派生类均可提供连接映射来指定控件将支持的连接点。  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
+ Each `COleControl`-derived class in your program can provide a connection map to specify connection points that your control will support.  
   
 ```   
 BEGIN_CONNECTION_MAP(theClass, theBase)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 指定连接映射所属的控件类的名称。  
+ Specifies the name of the control class whose connection map this is.  
   
  *theBase*  
- 指定 `theClass` 的基类的名称。  
+ Specifies the name of the base class of `theClass`.  
   
-### <a name="remarks"></a>备注  
- 在实现 (。定义您的类的成员函数的 CPP) 文件启动连接映射与`BEGIN_CONNECTION_MAP`宏，然后为每个使用连接点添加宏条目[CONNECTION_PART](#connection_part)宏。 最后，完成连接映射与[END_CONNECTION_MAP](#end_connection_map)宏。  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.CPP) file that defines the member functions for your class, start the connection map with the `BEGIN_CONNECTION_MAP` macro, then add macro entries for each of your connection points using the [CONNECTION_PART](#connection_part) macro. Finally, complete the connection map with the [END_CONNECTION_MAP](#end_connection_map) macro.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
- 结束连接映射的定义。  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
+ Ends the definition of your connection map.  
   
 ```   
 END_CONNECTION_MAP()  
 ```  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
- 将您的 OLE 控件的连接点映射到一个特定的接口 id。  
+##  <a name="connection_part"></a>  CONNECTION_PART  
+ Maps a connection point for your OLE control to a specific interface ID.  
   
 ```   
 CONNECTION_PART(theClass, iid, localClass)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 指定它的连接点这样的控件类的名称。  
+ Specifies the name of the control class whose connection point this is.  
   
  `iid`  
- 接口的接口 ID 由连接点调用。  
+ The interface ID of the interface called by the connection point.  
   
  *localClass*  
- 指定实现连接点的局部类的名称。  
+ Specifies the name of the local class that implements the connection point.  
   
-### <a name="remarks"></a>备注  
- 例如:   
+### <a name="remarks"></a>Remarks  
+ For example:  
   
- [!code-cpp[NVC_MFCConnectionPoints #&2;](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
- 实现连接映射，与连接点，调用`IID_ISinkInterface`接口。  
+ implements a connection map, with a connection point, that calls the `IID_ISinkInterface` interface .  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
- 调用此函数可由指定的源之间建立连接`pUnkSrc`，和一个水池，由指定`pUnkSink`。  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
+ Call this function to establish a connection between a source, specified by `pUnkSrc`, and a sink, specified by `pUnkSink`.  
   
 ```   
 BOOL AFXAPI AfxConnectionAdvise(
@@ -205,33 +205,33 @@ BOOL AFXAPI AfxConnectionAdvise(
     DWORD FAR* pdwCookie);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pUnkSrc`  
- 指向调用接口的对象的指针。  
+ A pointer to the object that calls the interface.  
   
  `pUnkSink`  
- 指向实现该接口的对象的指针。  
+ A pointer to the object that implements the interface.  
   
  `iid`  
- 连接的接口 ID。  
+ The interface ID of the connection.  
   
  `bRefCount`  
- **TRUE**指示创建连接应导致的引用计数的`pUnkSink`要递增。 **FALSE**指示不应递增引用计数。  
+ **TRUE** indicates that creating the connection should cause the reference count of `pUnkSink` to be incremented. **FALSE** indicates that the reference count should not be incremented.  
   
  `pdwCookie`  
- 一个指向`DWORD`连接标识符的返回位置。 此值应作为传递`dwCookie`参数`AfxConnectionUnadvise`断开连接时。  
+ A pointer to a `DWORD` where a connection identifier is returned. This value should be passed as the `dwCookie` parameter to `AfxConnectionUnadvise` when disconnecting the connection.  
   
-### <a name="return-value"></a>返回值  
- 非零，如果已建立连接;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a connection was established; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCConnectionPoints #&8;](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头︰** afxctl.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
- 调用此函数可断开连接之间由指定的源的连接`pUnkSrc`，和一个水池，由指定`pUnkSink`。  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
+ Call this function to disconnect a connection between a source, specified by `pUnkSrc`, and a sink, specified by `pUnkSink`.  
   
 ```   
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -242,31 +242,31 @@ BOOL AFXAPI AfxConnectionUnadvise(
     DWORD dwCookie); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pUnkSrc`  
- 指向调用接口的对象的指针。  
+ A pointer to the object that calls the interface.  
   
  `pUnkSink`  
- 指向实现该接口的对象的指针。  
+ A pointer to the object that implements the interface.  
   
  `iid`  
- 连接点接口的接口 ID。  
+ The interface ID of the connection point interface.  
   
  `bRefCount`  
- **TRUE**指示断开连接的连接应导致的引用计数的`pUnkSink`要递减。 **FALSE**指示不应递减引用计数。  
+ **TRUE** indicates that disconnecting the connection should cause the reference count of `pUnkSink` to be decremented. **FALSE** indicates that the reference count should not be decremented.  
   
  `dwCookie`  
- 返回的连接标识符`AfxConnectionAdvise`。  
+ The connection identifier returned by `AfxConnectionAdvise`.  
   
-### <a name="return-value"></a>返回值  
- 非零，如果连接已断开连接;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a connection was disconnected; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCConnectionPoints #&9;](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头︰** afxctl.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h 
 
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

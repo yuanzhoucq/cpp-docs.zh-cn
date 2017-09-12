@@ -1,63 +1,82 @@
 ---
-title: "OLE 通用对话框类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 类 [C++]"
-  - "通用对话框类"
-  - "对话框类 [C++], OLE"
-  - "OLE 通用对话框类 [C++]"
+title: OLE Common Dialog Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- dialog classes [MFC], OLE
+- OLE common dialog classes [MFC]
+- common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE 通用对话框类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f0f67a3f736eee501b15cb28defd9dd1826bef18
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-这些类将实现许多常用 OLE 的标准 OLE 对话框处理任务。  它们用于 OLE 功能还提供一致的用户界面。  
+---
+# <a name="ole-common-dialog-classes"></a>OLE Common Dialog Classes
+These classes handle common OLE tasks by implementing a number of standard OLE dialog boxes. They also provide a consistent user interface for OLE functionality.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- 用于 OLE 对话框由框架包含所有常见的实现。  以用户界面类的所有对话框类从该基类派生。  `COleDialog` 不能被一起使用。  
+ Used by the framework to contain common implementations for all OLE dialog boxes. All dialog box classes in the user-interface category are derived from this base class. `COleDialog` cannot be used directly.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
- 查看插入对话框，插入的新链接的或嵌入的 OLE 项标准的用户界面。  
+ Displays the Insert Object dialog box, the standard user interface for inserting new OLE linked or embedded items.  
   
  [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
- 将显示特殊的编辑粘贴命令，对话框实现特定标准的用户界面。  
+ Displays the Paste Special dialog box, the standard user interface for implementing the Edit Paste Special command.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
- 显示编辑链接标准对话框，用户接口有关链接的更改的信息。  
+ Displays the Edit Links dialog box, the standard user interface for modifying information about linked items.  
   
  [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
- 显示更改图标对话框中，更改的标准图标用户界面与 OLE 嵌入式或链接的项。  
+ Displays the Change Icon dialog box, the standard user interface for changing the icon associated with an OLE embedded or linked item.  
   
  [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
- 显示对话框转换，转换的标准 OLE 项用户界面从一个类型到另一个。  
+ Displays the Convert dialog box, the standard user interface for converting OLE items from one type to another.  
   
  [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
- 封装 Windows 公共OLE对话框。  通用 OLE 属性对话框提供一种简便方法来显示和修改一个 OLE 文档项的一些属性与 Windows 标准。  
+ Encapsulates the Windows common OLE Properties dialog box. Common OLE Properties dialog boxes provide an easy way to display and modify the properties of an OLE document item in a manner consistent with Windows standards.  
   
  [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
- 显示更新对话框，更新所有链接的标准的用户界面在文档。  对话框包含一个进度指示器输出指示关闭进程与完成。  
+ Displays the Update dialog box, the standard user interface for updating all links in a document. The dialog box contains a progress indicator to indicate how close the update procedure is to completion.  
   
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
- 显示源更改对话框，将链接的目标或源标准的用户界面。  
+ Displays the Change Source dialog box, the standard user interface for changing the destination or source of a link.  
   
  [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
- 显示不响应服务器忙碌和的服务器对话框，处理的调用标准的用户界面为正忙应用程序。  通常自动显示 `COleMessageFilter` 实现。  
+ Displays the Server Busy and Server Not Responding dialog boxes, the standard user interface for handling calls to busy applications. Usually displayed automatically by the `COleMessageFilter` implementation.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

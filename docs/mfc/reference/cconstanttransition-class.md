@@ -1,5 +1,5 @@
 ---
-title: "CConstantTransition 类 |Microsoft 文档"
+title: CConstantTransition Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CConstantTransition class
+- CConstantTransition [MFC], CConstantTransition
+- CConstantTransition [MFC], Create
+- CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
 caps.latest.revision: 17
 author: mikeblome
@@ -37,68 +39,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: e6c8b8e27cd6618a7dfe690a58ba470a667adf1d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 593aba4c3494e697ebef42cf86fd200ed46a8afd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cconstanttransition-class"></a>CConstantTransition 类
-封装常量转换。  
+# <a name="cconstanttransition-class"></a>CConstantTransition Class
+Encapsulates a constant transition.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CConstantTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|构造转换对象并初始化其持续时间。|  
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|Constructs a transition object and initializes its duration.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CConstantTransition::Create](#create)|调用转换库来创建封装的转换 COM 对象。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
+|[CConstantTransition::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CConstantTransition::m_duration](#m_duration)|过渡的持续时间。|  
+|[CConstantTransition::m_duration](#m_duration)|The duration of the transition.|  
   
-## <a name="remarks"></a>备注  
- 常量在转换期间，动画变量的值保持为默认值在过渡的持续时间内。 因为所有的转换会自动清除，建议为它们分配使用 new 运算符。 封装 IUIAnimationTransition 创建的 COM 对象是通过 CAnimationController::AnimateGroup，直到则，则为 NULL。 在创建此 COM 对象不起作用后，请更改成员变量。  
+## <a name="remarks"></a>Remarks  
+ During a constant transition, the value of an animation variable remains at the initial value over the duration of the transition. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  `CConstantTransition`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
- 构造转换对象并初始化其持续时间。  
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
+ Constructs a transition object and initializes its duration.  
   
 ```  
 CConstantTransition (UI_ANIMATION_SECONDS duration);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `duration`  
- 过渡的持续时间。  
+ The duration of the transition.  
   
-##  <a name="create"></a>CConstantTransition::Create  
- 调用转换库来创建封装的转换 COM 对象。  
+##  <a name="create"></a>  CConstantTransition::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -106,20 +108,20 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pLibrary`  
- 一个指向[IUIAnimationTransitionLibrary 接口](https://msdn.microsoft.com/library/windows/desktop/dd371897)，后者定义一个标准转换的库。  
+ A pointer to an [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), which defines a library of standard transitions.  
 
-### <a name="return-value"></a>返回值  
- 如果成功，则创建转换，则返回 TRUE否则为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="m_duration"></a>CConstantTransition::m_duration  
- 过渡的持续时间。  
+##  <a name="m_duration"></a>  CConstantTransition::m_duration  
+ The duration of the transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

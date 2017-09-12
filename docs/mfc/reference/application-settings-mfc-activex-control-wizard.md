@@ -1,51 +1,71 @@
 ---
-title: "应用程序设置, MFC ActiveX 控件向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控件向导, 应用程序设置"
+title: Application Settings, MFC ActiveX Control Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.appset
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 应用程序设置, MFC ActiveX 控件向导
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e4fb7cc0e9c07d1f1996531bfc4c5b2c05146a2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-使用此 MFC ActiveX 控件向导的页面来设计基本功能并将其添加到新的 MFC ActiveX 项目。 这些设置适用于应用程序本身，而非任何特定功能或控件元素。  
+---
+# <a name="application-settings-mfc-activex-control-wizard"></a>Application Settings, MFC ActiveX Control Wizard
+Use this page of the MFC ActiveX Control Wizard to design and add basic features to a new MFC ActiveX project. These settings apply to the application itself and not to any specific feature or element of the control.  
   
- **运行时许可证**  
- 选择此功能来生成用户许可证文件以与控件一起分发。 该许可证时文本文件，*projname*.lic。 文件必须位于和控件的 DLL 相同的路径中，从而使控件的实例能够在设计时环境中创建。 你通常将此文件和控件一起分发，但你的用户不会分发它。  
+ **Run-time license**  
+ Select this option to generate a user license file to distribute with the control. The license is a text file, *projname*.lic. This file must be in the same directory as the control's DLL to allow an instance of the control to be created in a design-time environment. You usually distribute this file with your control, but your customers do not distribute it.  
   
- **生成帮助文件**  
- 选择此选项来生成存根的帮助文件，并配置该项目为控件包含帮助。 没有使用此选项创建的默认项目仅生成“关于”框，该框在用户右键单击控件、使用 F1 或单击控件容器上的“帮助”时显示。  
+ **Generate help files**  
+ Select this option to generate stubbed help files and configure the project to include help for your control. A default project, created without this option, generates only an **About** box that is displayed when the user right clicks the control, uses F1, or clicks **Help** on the control's container.  
   
 > [!NOTE]
->  帮助的显示方式取决于控件与其容器交互的方式。 如果将帮助包含在容器中，则必须处理控件和容器间的消息以适当地显示帮助。  
+>  How help is displayed depends on how your control interacts with its container. If you include help with your container, you must handle messages between the control and the container to display the help appropriately.  
   
- 当使用向导生成帮助文件时，项目包括以下内容：  
+ When you generate help files using the wizard, your project includes the following:  
   
--   文件 .vcxproj 包含代码以在创建项目时配置帮助文件。  
+-   The file .vcxproj contains code to build and configure the help file when the project is built.  
   
--   文件 *projnamePropPage*.cpp 包含构造函数中的 [SetHelpInfo](../Topic/COlePropertyPage::SetHelpInfo.md) 函数。  
+-   The file *projnamePropPage*.cpp file includes a [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) function in the constructor.  
   
--   文件 projname.hpj 是帮助编译器使用的帮助项目文件，创建 ActiveX 控件的帮助文件。 .hpj 文件是包含有关生成帮助文件和帮助文件所含其他文件（如位图）路径信息的文本文件。  
+-   The file projname.hpj, is the help project file used by the help compiler to create the ActiveX control's help file. The .hpj file is a text file containing the information about building your help file and the paths to the additional files (for example, bitmaps) the help file includes.  
   
--   该项目包括 HLP 目录以包含项目帮助位图文件和帮助主题文件 \(*projname*.rtf\)。 本主题包括很多 ActiveX 控件支持的常见属性、事件和方法的标准帮助主题。 可编辑 .rtf 文件以添加或删除特定帮助主题。  
+-   The project includes the HLP directory to contain the project help bitmap files and the help topic file (*projname*.rtf). This help topic file contains the standard help topics for the common properties, events, and methods supported by many ActiveX controls. You can edit the .rtf file to add or remove specific help topics.  
   
-## 请参阅  
- [MFC ActiveX 控件向导](../../mfc/reference/mfc-activex-control-wizard.md)   
- [MFC ActiveX 控件向导的控件名称](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
- [MFC ActiveX 控件向导控件设置](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "类型的 MFC 类对象的转换 |Microsoft 文档"
+title: Type Casting of MFC Class Objects | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,11 +13,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- macros, type casting
-- pointers, type casting
-- type casts
-- casting types
-- macros, casting pointers
+- macros [MFC], type casting
+- pointers [MFC], type casting
+- type casts [MFC]
+- casting types [MFC]
+- macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
 caps.latest.revision: 15
 author: mikeblome
@@ -37,69 +37,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ffd816499e0075a70c87552165867a97218122fa
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="type-casting-of-mfc-class-objects"></a>MFC 类对象的类型强制转换
-类型强制转换宏提供了一种方法将给定的指针到指向特定的类，无论有检查转换合法的对象的指针转换。  
+# <a name="type-casting-of-mfc-class-objects"></a>Type Casting of MFC Class Objects
+Type casting macros provide a way to cast a given pointer to a pointer that points to an object of specific class, with or without checking that the cast is legal.  
   
- 下表列出了 MFC 类型强制转换宏。  
+ The following table lists the MFC type casting macros.  
   
-### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>强制转换到 MFC 类对象的指针的宏  
+### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Macros That Cast Pointers to MFC Class Objects  
   
 |||  
 |-|-|  
-|[DYNAMIC_DOWNCAST](#dynamic_downcast)|检查以查看该强制转换是否合法时转换为指向类对象的指针。|  
-|[STATIC_DOWNCAST](#static_downcast)|将一个指针，到对象从一个类的指针的指针的相关类型强制转换。 在调试版本中，将导致**ASSERT**如果对象不是"类型的"目标类型。|  
+|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Casts a pointer to a pointer to a class object while checking to see if the cast is legal.|  
+|[STATIC_DOWNCAST](#static_downcast)|Casts a pointer to an object from one class to a pointer of a related type. In a debug build, causes an **ASSERT** if the object is not a "kind of" the target type.|  
   
-##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
- 提供了检查以查看该强制转换是否合法时强制转换为指向类对象的指针的便捷途径。  
+##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST  
+ Provides a handy way to cast a pointer to a pointer to a class object while checking to see if the cast is legal.  
   
 ```   
 DYNAMIC_DOWNCAST(class, pointer)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `class`  
- 类的名称。  
+ The name of a class.  
   
  `pointer`  
- 若要强制转换为指向类型的对象的指针的指针`class`。  
+ A pointer to be cast to a pointer to an object of type `class`.  
   
-### <a name="remarks"></a>备注  
- 该宏将强制转换`pointer`参数指向的对象的指针`class`参数的类型。  
+### <a name="remarks"></a>Remarks  
+ The macro will cast the `pointer` parameter to a pointer to an object of the `class` parameter's type.  
   
- 如果指针引用的对象"类型的"标识的类，该宏将返回相应的指针。 如果不是合法的转换，该宏将返回**NULL**。  
+ If the object referenced by the pointer is a "kind of" the identified class, the macro returns the appropriate pointer. If it is not a legal cast, the macro returns **NULL**.  
   
-##  <a name="static_downcast"></a>STATIC_DOWNCAST  
- 强制转换*pobject*的指针到*class_name*对象。  
+##  <a name="static_downcast"></a>  STATIC_DOWNCAST  
+ Casts *pobject* to a pointer to a *class_name* object.  
   
 ```   
 STATIC_DOWNCAST(class_name, pobject)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 要强制转换为类的名称。  
+ The name of the class being cast to.  
   
  *pobject*  
- 要强制转换为指向的指针的指针*class_name*对象。  
+ The pointer to be cast to a pointer to a *class_name* object.  
   
-### <a name="remarks"></a>备注  
- *pobject*必须将**NULL**，或指向的对象的类中派生出来，直接或间接从*class_name*。 在与应用程序的生成**_DEBUG**定义预处理器符号后，该宏将**ASSERT**如果*pobject*不是**NULL**，或如果它指向一个对象，不是"类型的"中指定的类*class_name*参数 (请参阅[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof))。 在非**_DEBUG**版本中，该宏执行不进行任何类型检查的强制转换。  
+### <a name="remarks"></a>Remarks  
+ *pobject* must either be **NULL**, or point to an object of a class which is derived directly, or indirectly, from *class_name*. In builds of your application with the **_DEBUG** preprocessor symbol defined, the macro will **ASSERT** if *pobject* is not **NULL**, or if it points to an object that is not a "kind of" the class specified in the *class_name* parameter (see [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). In non- **_DEBUG** builds, the macro performs the cast without any type checking.  
   
- 中指定的类*class_name*参数必须派生自`CObject`，并且必须使用`DECLARE_DYNAMIC`和`IMPLEMENT_DYNAMIC`、`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`，或`DECLARE_SERIAL`和`IMPLEMENT_SERIAL`宏文章中所述[CObject 类︰ 从 CObject 派生类](../../mfc/deriving-a-class-from-cobject.md)。  
+ The class specified in the *class_name* parameter must be derived from `CObject` and must use the `DECLARE_DYNAMIC` and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros as explained in the article [CObject Class: Deriving a Class from CObject](../../mfc/deriving-a-class-from-cobject.md).  
   
- 例如，可能会强制转换为指针`CMyDoc`，称为`pMyDoc`的指针到**CDocument**使用以下表达式︰  
+ For example, you might cast a pointer to `CMyDoc`, called `pMyDoc`, to a pointer to **CDocument** using this expression:  
   
- [!code-cpp[NVC_MFCDocView #&197;](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#197](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]  
   
- 如果`pMyDoc`不指向对象直接或间接派生自**CDocument**，该宏将**ASSERT**。  
+ If `pMyDoc` does not point to an object derived directly or indirectly from **CDocument**, the macro will **ASSERT**.  
   
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

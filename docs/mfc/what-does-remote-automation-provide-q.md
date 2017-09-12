@@ -1,34 +1,51 @@
 ---
-title: "远程自动化提供什么？ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "远程自动化, DCOM"
+title: What Does Remote Automation Provide? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 269ad218-e164-40ef-9b87-25fcc8ba21de
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 远程自动化提供什么？
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48da6339cea7c8a39d93641fa5c5a59d0a63e207
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-远程的自动化允许程序调用 `IDispatch` 实现从一台机器到另一台。  它还支持自动化需要的其他接口，特别是支持集合的 **IEnumVARIANT** 。  它不能提供分布其他 COM 接口 \( **IUnknown**，\)的能力，并且，像常规自动化，它包含封送仅支持自动化支持的那些数据类型。  
+---
+# <a name="what-does-remote-automation-provide"></a>What Does Remote Automation Provide?
+Remote Automation allows programs to invoke `IDispatch` implementations on one machine from another. It also supports other interfaces required by Automation, specifically **IEnumVARIANT** for collection support. It does not provide the ability to distribute any other COM interface (except **IUnknown**, of course) and, like regular Automation, it contains marshaling support only for those data types supported by Automation.  
   
- 此组功能允许程序访问方法和属性，包括在一个可访问的网络节点上运行的对象的返回集合或进一步自动化对象。  如果客户端也运行相应的软件，服务器可能会响应客户端，再次使用自动化功能 \(这仅为 32 位和 64 位客户端工作，是概念上类似于事件，尽管它不使用相同的机制\)。  
+ This set of facilities allows a program to access the methods and properties, including those that return collections or further automation objects, of an object running on an accessible network node. If the client machine is also running the appropriate software, it is possible for the server to call back to the client, again using Automation facilities (this works for 32-bit and 64-bit clients only, and is conceptually similar to events, although it does not use the same mechanism).  
   
- 对于应用程序作为远程的自动化服务器是可操作的，必须实现为可执行的 \(也就是说为“本地服务器”而不是“inproc 服务器”\)。  
+ For an application to be operable as a Remote Automation server, it must be implemented as an executable (that is, as a "local server" rather than as an "inproc server").  
   
-## 请参阅  
- [远程自动化的适用条件](../mfc/where-does-remote-automation-fit-in-q.md)   
- [DCOM 历史记录](../mfc/history-of-dcom.md)
+## <a name="see-also"></a>See Also  
+ [Where Does Remote Automation Fit In](where-does-remote-automation-fit-in-q.md)   
+ [History of DCOM](../mfc/history-of-dcom.md)
+

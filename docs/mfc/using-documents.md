@@ -1,66 +1,85 @@
 ---
-title: "使用文档 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据 [MFC], 文档"
-  - "数据 [MFC], 读取"
-  - "文档/视图体系结构 [C++], 文档"
-  - "文档 [C++]"
-  - "文档 [C++], C++ 应用程序"
-  - "文件 [C++]"
-  - "文件 [C++], 写入"
-  - "打印 [MFC], 文档"
-  - "读取数据 [C++], 文档和视图"
-  - "视图 [C++], C++ 应用程序"
-  - "写入文件 [C++]"
+title: Using Documents | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], C++ applications
+- data [MFC], reading
+- documents [MFC]
+- files [MFC], writing to
+- data [MFC], documents
+- files [MFC]
+- views [MFC], C++ applications
+- document/view architecture [MFC], documents
+- reading data [MFC], documents and views
+- printing [MFC], documents
+- writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 使用文档
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc12ddaff980b92c5174b2de7a5f6a122e4f5a08
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-文档和视图：  
+---
+# <a name="using-documents"></a>Using Documents
+Working together, documents and views:  
   
--   包含，管理，并显示特定的 [数据](../mfc/managing-data-with-document-data-variables.md)。  
+-   Contain, manage, and display your application-specific [data](../mfc/managing-data-with-document-data-variables.md).  
   
--   操作为数据提供一个接口中的 [文档数据变量](../mfc/managing-data-with-document-data-variables.md)。  
+-   Provide an interface consisting of [document data variables](../mfc/managing-data-with-document-data-variables.md) for manipulating the data.  
   
--   运行 [文本和读取文件](../mfc/serializing-data-to-and-from-files.md)。  
+-   Participate in [writing and reading files](../mfc/serializing-data-to-and-from-files.md).  
   
--   运行 [正在打印](../mfc/role-of-the-view-in-printing.md)。  
+-   Participate in [printing](../mfc/role-of-the-view-in-printing.md).  
   
--   [句柄](../mfc/handling-commands-in-the-document.md) 大多数应用程序的命令和消息。  
+-   [Handle](../mfc/handling-commands-in-the-document.md) most of your application's commands and messages.  
   
- 文档在管理更具体涉及到的数据。  存储数据，通常，文档中类成员变量。  视图使用这些变量访问数据的显示和更新。  文档的默认序列化机制进出文件管理读取和写入数据。  文档也可以处理命令 \(，但 **WM\_COMMAND**以外的不是窗口消息\)。  
+ The document is particularly involved in managing data. Store your data, normally, in document class member variables. The view uses these variables to access the data for display and update. The document's default serialization mechanism manages reading and writing the data to and from files. Documents can also handle commands (but not Windows messages other than **WM_COMMAND**).  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [派生类从 CDocument 文档](../mfc/deriving-a-document-class-from-cdocument.md)  
+-   [Deriving a document class from CDocument](../mfc/deriving-a-document-class-from-cdocument.md)  
   
--   [与文档数据变量的托管数据](../mfc/managing-data-with-document-data-variables.md)  
+-   [Managing data with document data variables](../mfc/managing-data-with-document-data-variables.md)  
   
--   [序列化进出文件中的数据](../mfc/serializing-data-to-and-from-files.md)  
+-   [Serializing data to and from files](../mfc/serializing-data-to-and-from-files.md)  
   
--   [对于序列化机制](../mfc/bypassing-the-serialization-mechanism.md)  
+-   [Bypassing the serialization mechanism](../mfc/bypassing-the-serialization-mechanism.md)  
   
--   [处理文档中的命令](../mfc/handling-commands-in-the-document.md)  
+-   [Handling commands in the document](../mfc/handling-commands-in-the-document.md)  
   
--   [OnNewDocument 成员函数](../Topic/CDocument::OnNewDocument.md)  
+-   [The OnNewDocument member function](../mfc/reference/cdocument-class.md#onnewdocument)  
   
--   [DeleteContents 成员函数](../Topic/CDocument::DeleteContents.md)  
+-   [The DeleteContents member function](../mfc/reference/cdocument-class.md#deletecontents)  
   
-## 请参阅  
- [文档\/视图体系结构](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

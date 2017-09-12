@@ -1,57 +1,76 @@
 ---
-title: "使用 CRichEditCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRichEditCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl 类, using"
-  - "Rich Edit 控件, using"
+title: Using CRichEditCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRichEditCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC], using
+- CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 CRichEditCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccf20f2b621e2b000ca28b380339ff479dac0ace
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-丰富的编辑控件是用户可输入和编辑文本。  文本可分配字符和段落格式，并且可以包括嵌入的 OLE 对象。  Rich Edit 控件 MFC 中由 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) 类。  
+---
+# <a name="using-cricheditctrl"></a>Using CRichEditCtrl
+A rich edit control is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting, and can include embedded OLE objects. The rich edit control is represented in MFC by the [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) class.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Rich Edit 控件的概述。](../mfc/overview-of-the-rich-edit-control.md)  
+-   [Overview of the Rich Edit Control](../mfc/overview-of-the-rich-edit-control.md)  
   
--   [类与丰富的编辑控件](../mfc/classes-related-to-rich-edit-controls.md)  
+-   [Classes Related to Rich Edit Controls](../mfc/classes-related-to-rich-edit-controls.md)  
   
--   [Rich Edit 控件示例](../mfc/rich-edit-control-examples.md)  
+-   [Rich Edit Control Examples](../mfc/rich-edit-control-examples.md)  
   
--   [Rich Edit 控件的字符格式。](../mfc/character-formatting-in-rich-edit-controls.md)  
+-   [Character Formatting in Rich Edit Controls](../mfc/character-formatting-in-rich-edit-controls.md)  
   
--   [Rich Edit 控件中段落的格式。](../mfc/paragraph-formatting-in-rich-edit-controls.md)  
+-   [Paragraph Formatting in Rich Edit Controls](../mfc/paragraph-formatting-in-rich-edit-controls.md)  
   
--   [中丰富的编辑控件中当前选择](../mfc/current-selection-in-a-rich-edit-control.md)  
+-   [Current Selection in a Rich Edit Control](../mfc/current-selection-in-a-rich-edit-control.md)  
   
--   [中丰富的编辑控件的 Word 中断](../mfc/word-breaks-in-rich-edit-controls.md)  
+-   [Word Breaks in a Rich Edit Control](../mfc/word-breaks-in-rich-edit-controls.md)  
   
--   [在 Rich Edit 控件的剪贴板操作](../mfc/clipboard-operations-in-rich-edit-controls.md)  
+-   [Clipboard Operations in Rich Edit Controls](../mfc/clipboard-operations-in-rich-edit-controls.md)  
   
--   [Rich Edit 控件流操作的。](../mfc/stream-operations-in-rich-edit-controls.md)  
+-   [Stream Operations in Rich Edit Controls](../mfc/stream-operations-in-rich-edit-controls.md)  
   
--   [Rich Edit 控件的输出。](../mfc/printing-in-rich-edit-controls.md)  
+-   [Printing in Rich Edit Controls](../mfc/printing-in-rich-edit-controls.md)  
   
--   [无底丰富的编辑控件](../mfc/bottomless-rich-edit-controls.md)  
+-   [Bottomless Rich Edit Controls](../mfc/bottomless-rich-edit-controls.md)  
   
--   [通过丰富的编辑控件的通知](../mfc/notifications-from-a-rich-edit-control.md)  
+-   [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md)  
   
-## 请参阅  
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

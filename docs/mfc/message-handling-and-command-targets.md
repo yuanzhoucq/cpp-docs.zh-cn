@@ -1,73 +1,81 @@
 ---
-title: "消息处理和命令目标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IOleCommandTarget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令传送, 命令目标"
-  - "命令目标"
-  - "IOleCommandTarget 接口"
-  - "消息处理, 活动文档"
+title: Message Handling and Command Targets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IOleCommandTarget
+dev_langs:
+- C++
+helpviewer_keywords:
+- command targets [MFC]
+- message handling [MFC], active documents
+- IOleCommandTarget interface [MFC]
+- command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 消息处理和命令目标
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76940076c98329a33be2d1908c332a08939848a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-命令安排 `IOleCommandTarget` 接口定义一个简单的可扩展机制查询和执行命令。  因为它完全取决于标准的命令，此机制比简单自动化的 `IDispatch` ;命令最少有参数，而且，类型信息而不是包含类型 \(安全性为命令参数减少\)。  
+---
+# <a name="message-handling-and-command-targets"></a>Message Handling and Command Targets
+The command dispatch interface `IOleCommandTarget` defines a simple and extensible mechanism to query and execute commands. This mechanism is simpler than Automation's `IDispatch` because it relies entirely on a standard set of commands; commands rarely have arguments, and no type information is involved (type safety is diminished for command arguments as well).  
   
- 在命令调度接口设计，每个命令属于自己使用 **GUID**标识“命令组”。  因此，无论在该组中可以定义新组和定义所有命令，而无需任何需要与 Microsoft 或其他供应商。\(这在本质上是定义与 **dispinterface** 相同表示以及在自动的 **dispIDs**。  存在重叠，其中，尽管此路由命令机制规模可仅用于。命令传送和不为脚本\/可编程性用作自动化句柄。\)  
+ In the command dispatch interface design, each command belongs to a "command group" which is itself identified with a **GUID**. Therefore, anyone can define a new group and define all the commands within that group without any need to coordinate with Microsoft or any other vendor. (This is essentially the same means of definition as a **dispinterface** plus **dispIDs** in Automation. There is overlap here, although this command routing mechanism is only for command routing and not for scripting/programmability on a large scale as Automation handles.)  
   
- `IOleCommandTarget` 处理以下情况：  
+ `IOleCommandTarget` handles the following scenarios:  
   
--   当对象是就地激活，因此，只有对象的工具栏通常显示对象的和工具栏可能具有特定的按钮与 **打印打印**、**预览**，**保存**、`New`时，**缩放**和其他命令的容器。\(标准对象就地激活建议从它们的工具栏这样的按钮或至少会禁用它们。  此设计允许启用这些命令，仍将路由到正确的处理程序。\)目前，此对象没有机制可以将这些命令的容器。  
+-   When an object is in-place activated, only the object's toolbars are typically displayed and the object's toolbars may have buttons for some of the container commands like **Print**, **Print Preview**, **Save**, `New`, **Zoom**, and others. (In-place activation standards recommend that objects remove such buttons from their toolbars, or at least disable them. This design allows those commands to be enabled and yet routed to the right handler.) Currently, there is no mechanism for the object to dispatch these commands to the container.  
   
--   在活动文档处于活动文档容器 \(例如容器\) 嵌入 Office 活页夹，可能需要这样将命令发送 **打印**、**页 安装**，为 **属性**和其他包含的活动文档。  
+-   When an active document is embedded in an active document container (such as Office Binder), the container may need to send commands such **Print**, **Page Setup**, **Properties**, and others to the contained active document.  
   
- 此简单命令传送可以通过现有自动标准和 `IDispatch`进行处理。  但是，系统开销与 `IDispatch` 比需要几个否认更多，因此，`IOleCommandTarget` 提供更简单方式实现相同的用途：  
+ This simple command routing could be handled through existing Automation standards and `IDispatch`. However, the overhead involved with `IDispatch` is more than is necessary here, so `IOleCommandTarget` provides a simpler means to achieve the same ends:  
   
- `interface IOleCommandTarget : IUnknown`  
+```  
+interface IOleCommandTarget : IUnknown  
+    {  
+    HRESULT QueryStatus(  
+        [in] GUID *pguidCmdGroup,  
+        [in] ULONG cCmds,  
+        [in,out][size_is(cCmds)] OLECMD *prgCmds,  
+        [in,out] OLECMDTEXT *pCmdText);  
+    HRESULT Exec(  
+        [in] GUID *pguidCmdGroup,  
+        [in] DWORD nCmdID,  
+        [in] DWORD nCmdExecOpt,  
+        [in] VARIANTARG *pvaIn,  
+        [in,out] VARIANTARG *pvaOut);  
+    }  
+```  
   
- `{`  
+ The `QueryStatus` method here tests whether a particular set of commands, the set being identified with a **GUID**, is supported. This call fills an array of **OLECMD** values (structures) with the supported list of commands as well as returning text describing the name of a command and/or status information. When the caller wishes to invoke a command, it can pass the command (and the set **GUID**) to **Exec** along with options and arguments, getting back a return value.  
   
- `HRESULT QueryStatus(`  
-  
- `[in] GUID *pguidCmdGroup,`  
-  
- `[in] ULONG cCmds,`  
-  
- `[in,out][size_is(cCmds)] OLECMD *prgCmds,`  
-  
- `[in,out] OLECMDTEXT *pCmdText);`  
-  
- `HRESULT Exec(`  
-  
- `[in] GUID *pguidCmdGroup,`  
-  
- `[in] DWORD nCmdID,`  
-  
- `[in] DWORD nCmdExecOpt,`  
-  
- `[in] VARIANTARG *pvaIn,`  
-  
- `[in,out] VARIANTARG *pvaOut);`  
-  
- `}`  
-  
- 这里 `QueryStatus` 方法测试特定组命令，标识与 **GUID**，是否支持。  此调用填充 **OLECMD** 值 \(结构\) 与支持命令的列表以及返回描述命令和状态信息的名称的文本。  当调用方希望调用命令时，它可将命令传递 \(集合\) 和 **GUID**为 **Exec**，以及选项和参数。获取返回返回值。  
-  
-## 请参阅  
- [活动文档容器](../mfc/active-document-containers.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containers](../mfc/active-document-containers.md)
+
+

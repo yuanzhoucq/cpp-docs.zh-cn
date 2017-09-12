@@ -1,5 +1,5 @@
 ---
-title: "WINDOWPLACEMENT 结构 |Microsoft 文档"
+title: WINDOWPLACEMENT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINDOWPLACEMENT structure
+- WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 62cf7003f43d50d5998dd527ae5ad7b10ab95686
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e26448daeff10c576944e5d9af79fa08a67b86c4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="windowplacement-structure"></a>WINDOWPLACEMENT 结构
-`WINDOWPLACEMENT`结构包含一个窗口的布局信息在屏幕上**。**  
+# <a name="windowplacement-structure"></a>WINDOWPLACEMENT Structure
+The `WINDOWPLACEMENT` structure contains information about the placement of a window on the screen**.**  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagWINDOWPLACEMENT {     /* wndpl */  
@@ -56,54 +56,54 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 } WINDOWPLACEMENT;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  *length*  
- 以字节为单位，该结构的指定的长度，**。**  
+ Specifies the length, in bytes, of the structure**.**  
   
  `flags`  
- 指定用于控制最小化的窗口和窗口还原时所依据的方法的位置的标志。 此成员可以是一个或两个以下标志︰  
+ Specifies flags that control the position of the minimized window and the method by which the window is restored. This member can be one or both of the following flags:  
   
-- **WPF_SETMINPOSITION**指定可以指定 x 和 y 的位置的最小化窗口**。** 必须为此标志指定在中设置坐标**ptMinPosition**成员。  
+- **WPF_SETMINPOSITION** Specifies that the x- and y-positions of the minimized window can be specified**.** This flag must be specified if the coordinates are set in the **ptMinPosition** member.  
   
-- **WPF_RESTORETOMAXIMIZED**指定，还原窗口中将会最大化，无论是否它被最大化之前被最小化。 此设置是有效仅还原窗口中的下一次。 它不会更改默认还原操作行为。 此标志则仅当**SW_SHOWMINIMIZED**为指定值**showCmd**成员。  
+- **WPF_RESTORETOMAXIMIZED** Specifies that the restored window will be maximized, regardless of whether it was maximized before it was minimized. This setting is valid only the next time the window is restored. It does not change the default restoration behavior. This flag is valid only when the **SW_SHOWMINIMIZED** value is specified for the **showCmd** member.  
   
  *showCmd*  
- 指定窗口中的当前显示状态。 此成员可以是下列值之一︰  
+ Specifies the current show state of the window. This member can be one of the following values:  
   
-- **SW_HIDE**隐藏窗口，并将激活传递到另一个窗口。  
+- **SW_HIDE** Hides the window and passes activation to another window.  
   
-- **SW_MINIMIZE**最小化指定的窗口，并激活系统的列表中的顶级窗口。  
+- **SW_MINIMIZE** Minimizes the specified window and activates the top-level window in the system's list.  
   
-- **SW_RESTORE**激活并显示一个窗口。 如果该窗口已最小化，则最大化，Windows 将其还原到其原始大小和位置 (与相同**SW_SHOWNORMAL**)。  
+- **SW_RESTORE** Activates and displays a window. If the window is minimized or maximized, Windows restores it to its original size and position (same as **SW_SHOWNORMAL**).  
   
-- **SW_SHOW**激活窗口，并将其显示在其当前大小和位置。  
+- **SW_SHOW** Activates a window and displays it in its current size and position.  
   
-- **SW_SHOWMAXIMIZED**激活窗口，并将其显示为最大化的窗口。  
+- **SW_SHOWMAXIMIZED** Activates a window and displays it as a maximized window.  
   
-- **SW_SHOWMINIMIZED**激活窗口，并将其显示为图标。  
+- **SW_SHOWMINIMIZED** Activates a window and displays it as an icon.  
   
-- **SW_SHOWMINNOACTIVE**以图标形式显示的窗口。 当前处于活动状态窗口将保持活动状态。  
+- **SW_SHOWMINNOACTIVE** Displays a window as an icon. The window that is currently active remains active.  
   
-- **SW_SHOWNA**在其当前状态显示一个窗口。 当前处于活动状态窗口将保持活动状态。  
+- **SW_SHOWNA** Displays a window in its current state. The window that is currently active remains active.  
   
-- **SW_SHOWNOACTIVATE**显示一个窗口中的最新的大小和位置。 当前处于活动状态窗口将保持活动状态。  
+- **SW_SHOWNOACTIVATE** Displays a window in its most recent size and position. The window that is currently active remains active.  
   
-- **SW_SHOWNORMAL**激活并显示一个窗口。 如果该窗口已最小化，则最大化，Windows 将其还原到其原始大小和位置 (与相同**SW_RESTORE**)。  
+- **SW_SHOWNORMAL** Activates and displays a window. If the window is minimized or maximized, Windows restores it to its original size and position (same as **SW_RESTORE**).  
   
  *ptMinPosition*  
- 窗口中最小化时指定窗口的左上角的位置。  
+ Specifies the position of the window's top-left corner when the window is minimized.  
   
  `ptMaxPosition`  
- 最大化窗口时，请指定窗口的左上角的位置。  
+ Specifies the position of the window's top-left corner when the window is maximized.  
   
  *rcNormalPosition*  
- 当窗口处于正常 （还原） 的位置，请指定窗口的坐标。  
+ Specifies the window's coordinates when the window is in the normal (restored) position.  
   
-## <a name="requirements"></a>要求  
- **标头：** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::SetWindowPlacement](../../mfc/reference/cwnd-class.md#setwindowplacement)
 
 

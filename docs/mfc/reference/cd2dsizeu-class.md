@@ -1,5 +1,5 @@
 ---
-title: "CD2DSizeU 类 |Microsoft 文档"
+title: CD2DSizeU Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DSizeU class
+- CD2DSizeU [MFC], CD2DSizeU
+- CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
 caps.latest.revision: 18
 author: mikeblome
@@ -36,52 +37,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a43ea5448a0b0d09d4cf27eafb01a4d4b610e4f5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7e1154fb1de34355574ec0ac41a799286cdbc23d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dsizeu-class"></a>CD2DSizeU 类
-D2D1_SIZE_U 包装器。  
+# <a name="cd2dsizeu-class"></a>CD2DSizeU Class
+A wrapper for D2D1_SIZE_U.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DSizeU : public D2D1_SIZE_U;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|已重载。 构造`CD2DSizeU`对象从`D2D1_SIZE_U`对象。|  
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Overloaded. Constructs a `CD2DSizeU` object from `D2D1_SIZE_U` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|返回`boolean`值，该值指示表达式是否包含无效数据 ( `null`)。|  
+|[CD2DSizeU::IsNull](#isnull)|Returns a `boolean` value that indicates whether an expression contains no valid data ( `null`).|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSizeU::operator CSize](#operator_csize)|将转换`CD2DSizeU`到`CSize`对象。|  
+|[CD2DSizeU::operator CSize](#operator_csize)|Converts `CD2DSizeU` to `CSize` object.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_SIZE_U`  
   
  [CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU  
- 构造 CD2DSizeU 对象从 CSize 对象。  
+##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
+ Constructs a CD2DSizeU object from CSize object.  
   
 ```  
 CD2DSizeU(const CSize& size);  
@@ -94,36 +95,36 @@ CD2DSizeU(
     UINT32 cy = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `size`  
- 源的大小  
+ source size  
   
  `cx`  
- 源宽度  
+ source width  
   
  `cy`  
- 源高度  
+ source height  
   
-##  <a name="isnull"></a>CD2DSizeU::IsNull  
- 返回一个布尔值，该值指示表达式是否包含无效数据 (Null)。  
+##  <a name="isnull"></a>  CD2DSizeU::IsNull  
+ Returns a Boolean value that indicates whether an expression contains no valid data (Null).  
   
 ```  
 BOOL IsNull() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果宽度和高度都为空;，则返回 TRUE否则为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if width and height are empty; otherwise FALSE.  
   
-##  <a name="operator_csize"></a>CD2DSizeU::operator CSize  
- 将 CD2DSizeU 转换成 CSize 对象。  
+##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
+ Converts CD2DSizeU to CSize object.  
   
 ```  
 operator CSize();
 ```   
   
-### <a name="return-value"></a>返回值  
- D2D 大小的当前值。  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D size.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

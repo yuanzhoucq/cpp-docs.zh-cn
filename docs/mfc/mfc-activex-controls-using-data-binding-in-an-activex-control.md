@@ -1,142 +1,160 @@
 ---
-title: "MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "bindable"
-  - "requestedit"
-  - "defaultbind"
-  - "displaybind"
-  - "dispid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "绑定控件 [C++], MFC ActiveX"
-  - "控件 [MFC], 数据绑定"
-  - "数据绑定 [C++], MFC ActiveX 控件"
-  - "数据绑定控件 [C++], MFC ActiveX 控件"
-  - "MFC ActiveX 控件, 数据绑定"
+title: 'MFC ActiveX Controls: Using Data Binding in an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- bindable
+- requestedit
+- defaultbind
+- displaybind
+- dispid
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], data binding
+- data binding [MFC], MFC ActiveX controls
+- data-bound controls [MFC], MFC ActiveX controls
+- controls [MFC], data binding
+- bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23904fa0438e9dff02365a4631d361644bf666b2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-使用 ActiveX 控件的更强大的功用之一是数据绑定，其允许控件属性与数据库中的特定字段绑定。  当用户修改此绑定属性的数据时，控件通知数据库和更新请求的记录字段。  之后数据库是成功还是失败的通知了请求控件。  
+---
+# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX Controls: Using Data Binding in an ActiveX Control
+One of the more powerful uses of ActiveX controls is data binding, which allows a property of the control to bind with a specific field in a database. When a user modifies data in this bound property, the control notifies the database and requests that the record field be updated. The database then notifies the control of the success or failure of the request.  
   
- 本文包含任务的控件一侧。  实现与数据库交互的数据绑定是控件容器的责任。  您如何在容器中管理数据库交互超出了本文档的范围。  您如何准备数据绑定控件在本文的其余部分解释。  
+ This article covers the control side of your task. Implementing the data binding interactions with the database is the responsibility of the control container. How you manage the database interactions in your container is beyond the scope of this documentation. How you prepare the control for data binding is explained in the rest of this article.  
   
- ![数据绑定控件的概念图](../mfc/media/vc374v1.png "vc374V1")  
-数据绑定控件的概念图  
+ ![Conceptual diagram of a data&#45;bound control](../mfc/media/vc374v1.gif "vc374v1")  
+Conceptual Diagram of a Data-Bound Control  
   
- `COleControl` 类提供两个成员函数简化了数据绑定的实现过程。  第一个函数，[BoundPropertyRequestEdit](../Topic/COleControl::BoundPropertyRequestEdit.md)，用于请求权限更改属性值。  在属性值成功更改后，第二个函数，[BoundPropertyChanged](../Topic/COleControl::BoundPropertyChanged.md) 被调用。  
+ The `COleControl` class provides two member functions that make data binding an easy process to implement. The first function, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), is used to request permission to change the property value. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), the second function, is called after the property value has been successfully changed.  
   
- 本文涵盖以下主题：  
+ This article covers the following topics:  
   
--   [创建一个 Bindable Stock （备用）属性](#vchowcreatingbindablestockproperty)  
+-   [Creating a Bindable Stock Property](#vchowcreatingbindablestockproperty)  
   
--   [创建 Bindable 的 get\/set 方法](#vchowcreatingbindablegetsetmethod)  
+-   [Creating a Bindable Get/Set Method](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a> 创建一个 Bindable Stock （备用）属性  
- 创建数据绑定的常用属性是可以的，尽管更可能的是您将想要选择 [bindable get\/set 方法](#vchowcreatingbindablegetsetmethod)。  
-  
-> [!NOTE]
->  默认情况下，常用属性具有 **bindable** 和 **requestedit** 特性。  
-  
-#### 使用"添加属性向导"，添加绑定属性  
-  
-1.  使用 [MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md) 开始项目。  
-  
-2.  右击控件的接口节点。  
-  
-     此操作打开快捷菜单。  
-  
-3.  从快捷菜单中，单击**“添加”**，然后单击**“添加属性”**。  
-  
-4.  从 **属性 名称** 下拉列表项选择一个实体。  例如，可以选择 **文本**。  
-  
-     由于 **文本** 是常用属性，**bindable** 和 **requestedit** 特性都已被检查了。  
-  
-5.  从 **IDL 特性** 选项卡上中选择下列复选框： **displaybind** 和 **defaultbind** 以便在项目的 .IDL 文件中为属性定义添加这些特性。  这些特性使控件向用户可见并使常用属性默认为绑定的属性。  
-  
- 此时，控件可以显示来自数据源的数据，但是，用户不能更新数据字段。  如果希望控件也可以更新数据，请更改 `OnOcmCommand` [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) 函数如下所示：  
-  
- [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
-  
- 现在可以生成项目，将注册控件。  在在对话框中插入控件，**Data Field** 和 **Data Source （数据源）** 属性已添加，并且您可以选择一个数据源和字段在控件中显示。  
-  
-##  <a name="vchowcreatingbindablegetsetmethod"></a> 创建 Bindable 的 get\/set 方法  
- 除了数据绑定的 get\/set 方法之外，您也可以创建 [常用属性绑定](#vchowcreatingbindablestockproperty)  
+##  <a name="vchowcreatingbindablestockproperty"></a> Creating a Bindable Stock Property  
+ It is possible to create a data-bound stock property, although it is more likely that you will want a [bindable get/set method](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  此过程假定您拥有一个 Windows 控件的子类 ActiveX 控件的项目。  
+>  Stock properties have the **bindable** and **requestedit** attributes by default.  
   
-#### 使用"添加属性向导"，添加绑定的 get\/set 方法  
+#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>To add a bindable stock property using the Add Property Wizard  
   
-1.  加载控件项目。  
+1.  Begin a project using the [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md).  
   
-2.  在 **控件设置** 页中，选择将控件子类化的的窗口类。  例如，您可能想要子类化编辑控件。  
+2.  Right-click the interface node for your control.  
   
-3.  加载控件项目。  
+     This opens the shortcut menu.  
   
-4.  右击控件的接口节点。  
+3.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     此操作打开快捷菜单。  
+4.  Select one of the entries from the **Property Name** drop-down list. For example, you can select **Text**.  
   
-5.  从快捷菜单中，单击**“添加”**，然后单击**“添加属性”**。  
+     Because **Text** is a stock property, the **bindable** and **requestedit** attributes are already checked.  
   
-6.  在**“属性名称”**框中键入属性的名称。  对于此示例，使用 `MyProp`。  
+5.  Select the following check boxes from the **IDL Attributes** tab: **displaybind** and **defaultbind** to add the attributes to the property definition in the project's .IDL file. These attributes make the control visible to the user and make the stock property the default bindable property.  
   
-7.  从**“属性类型”**下拉列表中选择数据类型。  对于此示例，使用 **short**。  
+ At this point, your control can display data from a data source, but the user will not be able to update data fields. If you want your control to also be able to update data, change the `OnOcmCommand` [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) function to look as follows:  
   
-8.  对于 **Implementation Type**，单击 **Get\/Set Methods**。  
+ [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
   
-9. 从 IDL 特性选项卡上中选择下列复选框： **bindable**, **requestedit**，**displaybind**, 和 **defaultbind**以便在项目的 .IDL 文件中为属性定义添加这些特性。  这些特性使控件向用户可见并使常用属性默认为绑定的属性。  
+ You can now build the project, which will register the control. When you insert the control in a dialog box, the **Data Field** and **Data Source** properties will have been added and you can now select a data source and field to display in the control.  
   
-10. 单击**“完成”**。  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Creating a Bindable Get/Set Method  
+ In addition to a data-bound get/set method, you can also create a [bindable stock property](#vchowcreatingbindablestockproperty).  
   
-11. 修改 `SetMyProp` 函数的主体，以便包含以下代码：  
+> [!NOTE]
+>  This procedure assumes you have an ActiveX control project that subclasses a Windows control.  
   
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]  
+#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>To add a bindable get/set method using the Add Property Wizard  
   
-12. 传递给 `BoundPropertyChanged` 和 `BoundPropertyRequestEdit` 函数的参数作为属性的调度标识符，其也是在 .idl 文件中传递给属性的 ID \(\) 特性的参数。  
+1.  Load your control's project.  
   
-13. 修改 [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) 函数，使其包含以下代码：  
+2.  On the **Control Settings** page, select a window class for the control to subclass. For example, you may want to subclass an EDIT control.  
   
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
+3.  Load your control's project.  
   
-14. 修改 `OnDraw` 函数，使其包含以下代码：  
+4.  Right-click the interface node for your control.  
   
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]  
+     This opens the shortcut menu.  
   
-15. 为控件类头文件的头文件的公用部分，为成员变量添加以下定义 \(构造函数\) ：  
+5.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]  
+6.  Type the property name in the **Property Name** box. Use `MyProp` for this example.  
   
-16. 使以下一行作为 `DoPropExchange` 函数的最后一行：  
+7.  Select a data type from the **Property Type** drop-down list box. Use **short** for this example.  
   
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]  
+8.  For **Implementation Type**, click **Get/Set Methods**.  
   
-17. 修改 `OnResetState` 函数，使其包含以下代码：  
+9. Select the following check boxes from the IDL Attributes tab: **bindable**, **requestedit**, **displaybind**, and **defaultbind** to add the attributes to the property definition in the project's .IDL file. These attributes make the control visible to the user and make the stock property the default bindable property.  
   
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]  
+10. Click **Finish**.  
   
-18. 修改 `GetMyProp` 函数，使其包含以下代码：  
+11. Modify the body of the `SetMyProp` function so that it contains the following code:  
   
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/CPP/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]  
+     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]  
   
- 现在可以生成项目，将注册控件。  在在对话框中插入控件，**Data Field** 和 **Data Source （数据源）** 属性已添加，并且您可以选择一个数据源和字段在控件中显示。  
+12. The parameter passed to the `BoundPropertyChanged` and `BoundPropertyRequestEdit` functions is the dispid of the property, which is the parameter passed to the id() attribute for the property in the .IDL file.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
- [数据绑定控件（ADO 和 RDO）](../data/ado-rdo/data-bound-controls-ado-and-rdo.md)
+13. Modify the [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) function so it contains the following code:  
+  
+     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]  
+  
+14. Modify the `OnDraw` function so that it contains the following code:  
+  
+     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]  
+  
+15. To the public section of the header file the header file for your control class, add the following definitions (constructors) for member variables:  
+  
+     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]  
+  
+16. Make the following line the last line in the `DoPropExchange` function:  
+  
+     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]  
+  
+17. Modify the `OnResetState` function so that it contains the following code:  
+  
+     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]  
+  
+18. Modify the `GetMyProp` function so that it contains the following code:  
+  
+     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]  
+  
+ You can now build the project, which will register the control. When you insert the control in a dialog box, the **Data Field** and **Data Source** properties will have been added and you can now select a data source and field to display in the control.  
+  
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+
+

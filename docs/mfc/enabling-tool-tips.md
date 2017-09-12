@@ -1,37 +1,56 @@
 ---
-title: "启用工具提示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "启用工具提示"
-  - "初始化工具提示"
-  - "工具提示 [C++], 启用"
-  - "工具提示 [C++], 初始化"
+title: Enabling Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing tool tips [MFC]
+- enabling tool tips [MFC]
+- tool tips [MFC], initializing
+- tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 启用工具提示
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ee1005229690073748667706bc3ce6b8609b0ea8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-可以启用窗口的子控件的工具提示 \(如支持在窗体视图或对话框的控件\)。  
+---
+# <a name="enabling-tool-tips"></a>Enabling Tool Tips
+You can enable tool tip support for the child controls of a window (such as the controls on a form view or dialog box).  
   
-### 支持针对窗口的子控件的工具提示  
+### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>To enable tool tips for the child controls of a window  
   
-1.  调用要提供工具提示窗口的 `EnableToolTips`。  
+1.  Call `EnableToolTips` for the window for which you want to provide tool tips.  
   
-2.  可在 [TTN\_NEEDTEXT 通知](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) 处理程序的每个控件提供字符串。  处理程序为例如包含子控件的 Windows 消息映射 \(，窗体视图类\)。  该处理程序应调用标识控件并将 **pszText** 指定工具提示控件使用文本的函数。  
+2.  Provide a string for each control in your [TTN_NEEDTEXT notification](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) handler. The handler is in the message map of the window that contains the child controls (for example, your form view class). This handler should call a function that identifies the control and sets **pszText** to specify the text used by the tool tip control.  
   
-## 请参阅  
- [Windows 中不是从 CFrameWnd 派生的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

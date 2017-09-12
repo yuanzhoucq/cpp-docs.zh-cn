@@ -1,60 +1,79 @@
 ---
-title: "服务器：服务器项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "体系结构 [C++], 服务器项"
-  - "OLE 服务器应用程序, 服务器项"
-  - "服务器项"
-  - "服务器项, 实现"
-  - "服务器 [C++], 服务器项"
+title: 'Servers: Server Items | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- server items, implementing
+- servers [MFC], server items
+- architecture [MFC], server-item
+- server items
+- OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 服务器：服务器项
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccdaf2febe91c683996eb4e2e14309f68675293b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当容器启动服务器，以便用户可编辑嵌入式或链接的 OLE 项，服务器应用创建“服务器项目”。服务器项目中，是派生自 `COleServerItem`的类对象，提供文档服务器和容器之间应用程序的接口。  
+---
+# <a name="servers-server-items"></a>Servers: Server Items
+When a container launches a server so that a user can edit an embedded or linked OLE item, the server application creates a "server item." The server item, which is an object of a class derived from `COleServerItem`, provides an interface between the server document and the container application.  
   
- `COleServerItem` 类通常定义受 OLE 调用的若干可重写的成员函数，而响应从容器的请求。  服务器项目可以表示一部分服务器文档或整个文档。  将 OLE 项容器中嵌入文档时，服务器项目表示整个服务器文档。  当 OLE 项链接时，服务器项目可以表示服务器文档或整个文档的部分，根据链接是部分还是全部。  
+ The `COleServerItem` class defines several overridable member functions that are called by OLE, usually in response to requests from the container. Server items can represent part of the server document or the entire document. When an OLE item is embedded in the container document, the server item represents the entire server document. When the OLE item is linked, the server item can represent a part of the server document or the whole document, depending on whether the link is to a part or to the whole.  
   
- 在 [HIERSVR](../top/visual-cpp-samples.md) 示例，例如，服务器项类，具有 **CServerItem**，是指向类 **CServerNode**对象的一个成员。  **CServerNode** 对象在 HIERSVR 应用程序文档的一个节点，是棵树。  当 **CServerNode** 对象是根节点时，**CServerItem** 对象表示整个文档。  当 **CServerNode** 对象是子节点时，**CServerItem** 对象表示文档的一部分。  有关此函数的示例，请参见MFC OLE [HIERSVR](../top/visual-cpp-samples.md) 示例。  
+ In the [HIERSVR](../visual-cpp-samples.md) sample, for example, the server-item class, **CServerItem**, has a member that is a pointer to an object of the class **CServerNode**. The **CServerNode** object is a node in the HIERSVR application's document, which is a tree. When the **CServerNode** object is the root node, the **CServerItem** object represents the whole document. When the **CServerNode** object is a child node, the **CServerItem** object represents a part of the document. See the MFC OLE sample [HIERSVR](../visual-cpp-samples.md) for an example of this interaction.  
   
-##  <a name="_core_implementing_server_items"></a> 实现服务器项目  
- 如果使用应用程序向导产生“应用程序的起始代码”，则必须对包含在程序启动的服务器项代码是选择某个服务器选项从 OLE 选项页的所有。  如果您将服务器项到现有应用程序，请执行以下步骤：  
+##  <a name="_core_implementing_server_items"></a> Implementing Server Items  
+ If you use the application wizard to produce "starter" code for your application, all you have to do to include server items in your starter code is to choose one of the server options from the OLE Options page. If you are adding server items to an existing application, perform the following steps:  
   
-#### 实现服务器项目  
+#### <a name="to-implement-a-server-item"></a>To implement a server item  
   
-1.  从 `COleServerItem` 派生一个类。  
+1.  Derive a class from `COleServerItem`.  
   
-2.  在派生类中，重写 `OnDraw` 成员函数。  
+2.  In your derived class, override the `OnDraw` member function.  
   
-     `OnDraw` 呈现框架调用 OLE 项到图元文件。  容器应用程序使用此元文件呈现项。  应用程序的视图类还具有 `OnDraw` 成员函数，用于呈现项，当服务器应用是活动的。  
+     The framework calls `OnDraw` to render the OLE item into a metafile. The container application uses this metafile to render the item. Your application's view class also has an `OnDraw` member function, which is used to render the item when the server application is active.  
   
-3.  服务器实现重写 `OnGetEmbeddedItem` 类的文档。  有关的详细信息，请参见 [服务器：实现服务器文档](../mfc/servers-implementing-server-documents.md) 文章和 MFC OLE 示例 [HIERSVR](../top/visual-cpp-samples.md)。  
+3.  Implement an override of `OnGetEmbeddedItem` for your server-document class. For further information, see the article [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md) and the MFC OLE sample [HIERSVR](../visual-cpp-samples.md).  
   
-4.  实现服务器项类的 `OnGetExtent` 成员函数。  框架调用该函数检索项的大小。  默认实现不执行任何操作。  
+4.  Implement your server-item class's `OnGetExtent` member function. The framework calls this function to retrieve the size of the item. The default implementation does nothing.  
   
-##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> 服务器项结构的提示  
- 如 [实现服务器项目](#_core_implementing_server_items)中注明，服务器应用程序必须可以呈现在容器应用程序使用的元文件项的两个视图和在服务器中。  在 Microsoft 基础类库的应用程序体系结构中，视图类的 `OnDraw` 成员函数的方式呈现项，则在编辑时 \(请参见 [CView::OnDraw](../Topic/CView::OnDraw.md) 在 *类库参考*\)。  服务器项的 `OnDraw` 项元文件呈现到任何其他的情况 \(请参见 [COleServerItem::OnDraw](../Topic/COleServerItem::OnDraw.md)\)。  
+##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> A Tip for Server-Item Architecture  
+ As noted in [Implementing Server Items](#_core_implementing_server_items), server applications must be able to render items both in the server's view and in a metafile used by the container application. In the Microsoft Foundation Class Library's application architecture, the view class's `OnDraw` member function renders the item when it is being edited (see [CView::OnDraw](../mfc/reference/cview-class.md#ondraw) in the *Class Library Reference*). The server item's `OnDraw` renders the item into a metafile in all other cases (see [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
   
- 您可以通过中编写服务器类文档的帮助器函数和调用来避免复制的代码从在视图和服务器项类的 `OnDraw` 函数。  MFC OLE 示例 [HIERSVR](../top/visual-cpp-samples.md) 使用此策略：函数 **CServerView::OnDraw** 和 **CServerItem::OnDraw** 都调用 **CServerDoc::DrawTree** 的方式呈现项。  
+ You can avoid duplication of code by writing helper functions in your server-document class and calling them from the `OnDraw` functions in your view and server-item classes. The MFC OLE sample [HIERSVR](../visual-cpp-samples.md) uses this strategy: the functions **CServerView::OnDraw** and **CServerItem::OnDraw** both call **CServerDoc::DrawTree** to render the item.  
   
- 因为它们在不同条件下，绘制视图和项均具有 `OnDraw` 成员函数。  视图必须考虑这些因素进行缩放，以选择大小和范围、剪辑和用户界面元素 ，例如滚动条。  服务器项，另一方面，始终绘制整个 OLE 对象。  
+ The view and the item both have `OnDraw` member functions because they draw under different conditions. The view must take into account such factors as zooming, selection size and extent, clipping, and user-interface elements such as scroll bars. The server item, on the other hand, always draws the entire OLE object.  
   
- 有关更多信息，请参见、[CView::OnDraw](../Topic/CView::OnDraw.md)[COleServerItem](../mfc/reference/coleserveritem-class.md)、[COleServerItem::OnDraw](../Topic/COleServerItem::OnDraw.md)和在  *类库引用*中的[COleServerDoc::OnGetEmbeddedItem](../Topic/COleServerDoc::OnGetEmbeddedItem.md)。  
+ For more information, see [CView::OnDraw](../mfc/reference/cview-class.md#ondraw), [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw), and [COleServerDoc::OnGetEmbeddedItem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) in the *Class Library Reference*.  
   
-## 请参阅  
- [服务器](../mfc/servers.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)
+
+

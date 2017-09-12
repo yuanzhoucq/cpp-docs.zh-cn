@@ -1,5 +1,5 @@
 ---
-title: "CComboBox 类 |Microsoft 文档"
+title: CComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -65,8 +65,57 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- combo boxes, CComboBox objects
-- CComboBox class
+- CComboBox [MFC], CComboBox
+- CComboBox [MFC], AddString
+- CComboBox [MFC], Clear
+- CComboBox [MFC], CompareItem
+- CComboBox [MFC], Copy
+- CComboBox [MFC], Create
+- CComboBox [MFC], Cut
+- CComboBox [MFC], DeleteItem
+- CComboBox [MFC], DeleteString
+- CComboBox [MFC], Dir
+- CComboBox [MFC], DrawItem
+- CComboBox [MFC], FindString
+- CComboBox [MFC], FindStringExact
+- CComboBox [MFC], GetComboBoxInfo
+- CComboBox [MFC], GetCount
+- CComboBox [MFC], GetCueBanner
+- CComboBox [MFC], GetCurSel
+- CComboBox [MFC], GetDroppedControlRect
+- CComboBox [MFC], GetDroppedState
+- CComboBox [MFC], GetDroppedWidth
+- CComboBox [MFC], GetEditSel
+- CComboBox [MFC], GetExtendedUI
+- CComboBox [MFC], GetHorizontalExtent
+- CComboBox [MFC], GetItemData
+- CComboBox [MFC], GetItemDataPtr
+- CComboBox [MFC], GetItemHeight
+- CComboBox [MFC], GetLBText
+- CComboBox [MFC], GetLBTextLen
+- CComboBox [MFC], GetLocale
+- CComboBox [MFC], GetMinVisible
+- CComboBox [MFC], GetTopIndex
+- CComboBox [MFC], InitStorage
+- CComboBox [MFC], InsertString
+- CComboBox [MFC], LimitText
+- CComboBox [MFC], MeasureItem
+- CComboBox [MFC], Paste
+- CComboBox [MFC], ResetContent
+- CComboBox [MFC], SelectString
+- CComboBox [MFC], SetCueBanner
+- CComboBox [MFC], SetCurSel
+- CComboBox [MFC], SetDroppedWidth
+- CComboBox [MFC], SetEditSel
+- CComboBox [MFC], SetExtendedUI
+- CComboBox [MFC], SetHorizontalExtent
+- CComboBox [MFC], SetItemData
+- CComboBox [MFC], SetItemDataPtr
+- CComboBox [MFC], SetItemHeight
+- CComboBox [MFC], SetLocale
+- CComboBox [MFC], SetMinVisibleItems
+- CComboBox [MFC], SetTopIndex
+- CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 caps.latest.revision: 25
 author: mikeblome
@@ -86,145 +135,145 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6cd8407f3c70469afa256d8fb7608b7de43b6c72
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dfedd307ab71d780e9a6ae03dea2608580319f60
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccombobox-class"></a>CComboBox 类
-提供 Windows 组合框功能。  
+# <a name="ccombobox-class"></a>CComboBox Class
+Provides the functionality of a Windows combo box.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CComboBox : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CComboBox::CComboBox](#ccombobox)|构造 `CComboBox` 对象。|  
+|[CComboBox::CComboBox](#ccombobox)|Constructs a `CComboBox` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[Ccombobox::](#addstring)|将字符串添加到组合框，或在列表框的排序位置的列表框中列表的末尾**CBS_SORT**样式。|  
-|[CComboBox::Clear](#clear)|删除 （清除） 当前选定内容，如果有的话，编辑控件中。|  
-|[CComboBox::CompareItem](#compareitem)|由框架调用以确定新列表项的已排序的所有者描述组合框中的相对位置。|  
-|[CComboBox::Copy](#copy)|如果有的话，到在剪贴板中复制当前选定内容， **CF_TEXT**格式。|  
-|[CComboBox::Create](#create)|创建组合框，并将其附加到`CComboBox`对象。|  
-|[CComboBox::Cut](#cut)|删除 （操作会剪切） 当前选定内容，如果任何，正在编辑控制，并将复制到剪贴板中删除的文本**CF_TEXT**格式。|  
-|[CComboBox::DeleteItem](#deleteitem)|从一个所有者描述的组合框中删除列表项时，由框架调用。|  
-|[CComboBox::DeleteString](#deletestring)|从组合框的列表中删除一个字符串。|  
-|[CComboBox::Dir](#dir)|将文件名称的列表添加到组合框的列表框中。|  
-|[CComboBox::DrawItem](#drawitem)|由框架在所有者描述的组合框中更改的可视方面时调用。|  
-|[CComboBox::FindString](#findstring)|查找包含组合框列表框中指定的前缀的第一个字符串。|  
-|[CComboBox::FindStringExact](#findstringexact)|查找第一个列表框中的字符串 （组合框） 与指定的字符串匹配。|  
-|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|有关检索信息`CComboBox`对象。|  
-|[CComboBox::GetCount](#getcount)|检索在组合框的列表框中的项的数目。|  
-|[CComboBox::GetCueBanner](#getcuebanner)|获取组合框控件显示的提示文本。|  
-|[CComboBox::GetCurSel](#getcursel)|如果有的话，组合框列表框中，检索的当前选定项的索引。|  
-|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|检索下拉组合框的可见 （已关闭删除） 的列表框的屏幕坐标。|  
-|[CComboBox::GetDroppedState](#getdroppedstate)|确定下拉组合框的列表框中是可见的 （向下删除）。|  
-|[CComboBox::GetDroppedWidth](#getdroppedwidth)|检索允许组合框的下拉列表框部分的宽度的最小。|  
-|[CComboBox::GetEditSel](#geteditsel)|获取组合框编辑控件中当前所选内容的起始和结束字符位置。|  
-|[CComboBox::GetExtendedUI](#getextendedui)|确定一个组合框是否具有默认用户界面或扩展的用户界面。|  
-|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|返回以像素为单位可水平滚动的组合框的列表框部分的宽度。|  
-|[CComboBox::GetItemData](#getitemdata)|检索与指定的组合框项关联的应用程序提供 32 位值。|  
-|[CComboBox::GetItemDataPtr](#getitemdataptr)|检索与指定的组合框项关联的应用程序提供 32 位指针。|  
-|[CComboBox::GetItemHeight](#getitemheight)|检索在组合框的列表项的高度。|  
-|[CComboBox::GetLBText](#getlbtext)|从组合框的列表中获取的字符串。|  
-|[CComboBox::GetLBTextLen](#getlbtextlen)|获取组合框的列表框中的字符串的长度。|  
-|[CComboBox::GetLocale](#getlocale)|检索一个组合框的区域设置标识符。|  
-|[CComboBox::GetMinVisible](#getminvisible)|获取当前的组合框的下拉列表中的可见项的最小数目。|  
-|[CComboBox::GetTopIndex](#gettopindex)|在组合框的列表框部分中返回的第一个可见项的索引。|  
-|[CComboBox::InitStorage](#initstorage)|预分配项和组合框的列表框部分中的字符串的内存块的能力。|  
-|[CComboBox::InsertString](#insertstring)|将字符串插入组合框的列表框。|  
-|[CComboBox::LimitText](#limittext)|限制用户可以输入到组合框编辑控件的文本的长度。|  
-|[CComboBox::MeasureItem](#measureitem)|由框架调用以确定组合框维度，创建一个所有者描述的组合框时。|  
-|[CComboBox::Paste](#paste)|将数据从剪贴板插入当前光标位置处的编辑控件。 只有当剪贴板包含中的数据插入数据**CF_TEXT**格式。|  
-|[CComboBox::ResetContent](#resetcontent)|中移除所有项从列表框中字符和编辑组合框控件。|  
-|[CComboBox::SelectString](#selectstring)|搜索的字符串的组合框列表框中，如果找到该字符串，在列表框中选择字符串，并将字符串复制到编辑控件。|  
-|[CComboBox::SetCueBanner](#setcuebanner)|设置为组合框控件显示的提示文本。|  
-|[CComboBox::SetCurSel](#setcursel)|组合框的列表框中选择一个字符串。|  
-|[CComboBox::SetDroppedWidth](#setdroppedwidth)|设置允许组合框的下拉列表框部分的宽度的最小。|  
-|[CComboBox::SetEditSel](#seteditsel)|选择组合框编辑控件中的字符。|  
-|[CComboBox::SetExtendedUI](#setextendedui)|选择默认用户界面或组合框具有扩展的用户界面**CBS_DROPDOWN**或**CBS_DROPDOWNLIST**样式。|  
-|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|以组合框的列表框部分可被水平滚动的像素为单位设置宽度。|  
-|[CComboBox::SetItemData](#setitemdata)|设置与组合框中指定的项关联的 32 位值。|  
-|[CComboBox::SetItemDataPtr](#setitemdataptr)|设置与组合框中指定的项关联的 32 位指针。|  
-|[CComboBox::SetItemHeight](#setitemheight)|设置的列表项的高度以组合框或组合框的编辑控件 （或静态文本） 部分的高度。|  
-|[CComboBox::SetLocale](#setlocale)|设置组合框的区域设置标识符。|  
-|[CComboBox::SetMinVisibleItems](#setminvisibleitems)|设置当前的组合框的下拉列表中的可见项的最小数目。|  
-|[CComboBox::SetTopIndex](#settopindex)|告知组合框，以在顶部显示具有指定索引的项的列表框部分。|  
-|[CComboBox::ShowDropDown](#showdropdown)|显示或隐藏具有组合框的列表框**CBS_DROPDOWN**或**CBS_DROPDOWNLIST**样式。|  
+|[CComboBox::AddString](#addstring)|Adds a string to the end of the list in the list box of a combo box, or at the sorted position for list boxes with the **CBS_SORT** style.|  
+|[CComboBox::Clear](#clear)|Deletes (clears) the current selection, if any, in the edit control.|  
+|[CComboBox::CompareItem](#compareitem)|Called by the framework to determine the relative position of a new list item in a sorted owner-drawn combo box.|  
+|[CComboBox::Copy](#copy)|Copies the current selection, if any, onto the Clipboard in **CF_TEXT** format.|  
+|[CComboBox::Create](#create)|Creates the combo box and attaches it to the `CComboBox` object.|  
+|[CComboBox::Cut](#cut)|Deletes (cuts) the current selection, if any, in the edit control and copies the deleted text onto the Clipboard in **CF_TEXT** format.|  
+|[CComboBox::DeleteItem](#deleteitem)|Called by the framework when a list item is deleted from an owner-drawn combo box.|  
+|[CComboBox::DeleteString](#deletestring)|Deletes a string from the list box of a combo box.|  
+|[CComboBox::Dir](#dir)|Adds a list of file names to the list box of a combo box.|  
+|[CComboBox::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-drawn combo box changes.|  
+|[CComboBox::FindString](#findstring)|Finds the first string that contains the specified prefix in the list box of a combo box.|  
+|[CComboBox::FindStringExact](#findstringexact)|Finds the first list-box string (in a combo box) that matches the specified string.|  
+|[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Retrieves information about the `CComboBox` object.|  
+|[CComboBox::GetCount](#getcount)|Retrieves the number of items in the list box of a combo box.|  
+|[CComboBox::GetCueBanner](#getcuebanner)|Gets the cue text that is displayed for a combo box control.|  
+|[CComboBox::GetCurSel](#getcursel)|Retrieves the index of the currently selected item, if any, in the list box of a combo box.|  
+|[CComboBox::GetDroppedControlRect](#getdroppedcontrolrect)|Retrieves the screen coordinates of the visible (dropped down) list box of a drop-down combo box.|  
+|[CComboBox::GetDroppedState](#getdroppedstate)|Determines whether the list box of a drop-down combo box is visible (dropped down).|  
+|[CComboBox::GetDroppedWidth](#getdroppedwidth)|Retrieves the minimum allowed width for the drop-down list-box portion of a combo box.|  
+|[CComboBox::GetEditSel](#geteditsel)|Gets the starting and ending character positions of the current selection in the edit control of a combo box.|  
+|[CComboBox::GetExtendedUI](#getextendedui)|Determines whether a combo box has the default user interface or the extended user interface.|  
+|[CComboBox::GetHorizontalExtent](#gethorizontalextent)|Returns the width in pixels that the list-box portion of the combo box can be scrolled horizontally.|  
+|[CComboBox::GetItemData](#getitemdata)|Retrieves the application-supplied 32-bit value associated with the specified combo-box item.|  
+|[CComboBox::GetItemDataPtr](#getitemdataptr)|Retrieves the application-supplied 32-bit pointer that is associated with the specified combo-box item.|  
+|[CComboBox::GetItemHeight](#getitemheight)|Retrieves the height of list items in a combo box.|  
+|[CComboBox::GetLBText](#getlbtext)|Gets a string from the list box of a combo box.|  
+|[CComboBox::GetLBTextLen](#getlbtextlen)|Gets the length of a string in the list box of a combo box.|  
+|[CComboBox::GetLocale](#getlocale)|Retrieves the locale identifier for a combo box.|  
+|[CComboBox::GetMinVisible](#getminvisible)|Gets the minimum number of visible items in the drop-down list of the current combo box.|  
+|[CComboBox::GetTopIndex](#gettopindex)|Returns the index of the first visible item in the list-box portion of the combo box.|  
+|[CComboBox::InitStorage](#initstorage)|Preallocates blocks of memory for items and strings in the list-box portion of the combo box.|  
+|[CComboBox::InsertString](#insertstring)|Inserts a string into the list box of a combo box.|  
+|[CComboBox::LimitText](#limittext)|Limits the length of the text that the user can enter into the edit control of a combo box.|  
+|[CComboBox::MeasureItem](#measureitem)|Called by the framework to determine combo box dimensions when an owner-drawn combo box is created.|  
+|[CComboBox::Paste](#paste)|Inserts the data from the Clipboard into the edit control at the current cursor position. Data is inserted only if the Clipboard contains data in **CF_TEXT** format.|  
+|[CComboBox::ResetContent](#resetcontent)|Removes all items from the list box and edit control of a combo box.|  
+|[CComboBox::SelectString](#selectstring)|Searches for a string in the list box of a combo box and, if the string is found, selects the string in the list box and copies the string to the edit control.|  
+|[CComboBox::SetCueBanner](#setcuebanner)|Sets the cue text that is displayed for a combo box control.|  
+|[CComboBox::SetCurSel](#setcursel)|Selects a string in the list box of a combo box.|  
+|[CComboBox::SetDroppedWidth](#setdroppedwidth)|Sets the minimum allowed width for the drop-down list-box portion of a combo box.|  
+|[CComboBox::SetEditSel](#seteditsel)|Selects characters in the edit control of a combo box.|  
+|[CComboBox::SetExtendedUI](#setextendedui)|Selects either the default user interface or the extended user interface for a combo box that has the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.|  
+|[CComboBox::SetHorizontalExtent](#sethorizontalextent)|Sets the width in pixels that the list-box portion of the combo box can be scrolled horizontally.|  
+|[CComboBox::SetItemData](#setitemdata)|Sets the 32-bit value associated with the specified item in a combo box.|  
+|[CComboBox::SetItemDataPtr](#setitemdataptr)|Sets the 32-bit pointer associated with the specified item in a combo box.|  
+|[CComboBox::SetItemHeight](#setitemheight)|Sets the height of list items in a combo box or the height of the edit-control (or static-text) portion of a combo box.|  
+|[CComboBox::SetLocale](#setlocale)|Sets the locale identifier for a combo box.|  
+|[CComboBox::SetMinVisibleItems](#setminvisibleitems)|Sets the minimum number of visible items in the drop-down list of the current combo box.|  
+|[CComboBox::SetTopIndex](#settopindex)|Tells the list-box portion of the combo box to display the item with the specified index at the top.|  
+|[CComboBox::ShowDropDown](#showdropdown)|Shows or hides the list box of a combo box that has the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.|  
   
-## <a name="remarks"></a>备注  
- 组合框包含与静态控件或编辑控件组合在一个列表框。 控件的列表框部分可能会显示在所有时间或可能仅下拉当用户选择控件旁边的下拉箭头。  
+## <a name="remarks"></a>Remarks  
+ A combo box consists of a list box combined with either a static control or edit control. The list-box portion of the control may be displayed at all times or may only drop down when the user selects the drop-down arrow next to the control.  
   
- 列表框中的当前选定的项 （如果有） 显示在静态或者编辑控件。 此外，如果组合框的下拉列表样式，用户可以在列表中，键入项目之一的初始字符和列表框中，如果可见，将突出显示该初始字符的下一项。  
+ The currently selected item (if any) in the list box is displayed in the static or edit control. In addition, if the combo box has the drop-down list style, the user can type the initial character of one of the items in the list, and the list box, if visible, will highlight the next item with that initial character.  
   
- 下表比较了三个的组合框[样式](../../mfc/reference/combo-box-styles.md)。  
+ The following table compares the three combo-box [styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   
-|样式|在列表框中是可见的|静态或编辑控件|  
+|Style|When is list box visible|Static or edit control|  
 |-----------|-------------------------------|-----------------------------|  
-|简单|Always|Edit|  
-|Drop-down|当下拉|Edit|  
-|下拉列表|当下拉|Static|  
+|Simple|Always|Edit|  
+|Drop-down|When dropped down|Edit|  
+|Drop-down list|When dropped down|Static|  
   
- 你可以创建`CComboBox`通过对话框模板或直接在代码中的对象。 在这两种情况下，第一次调用的构造函数`CComboBox`构造`CComboBox`对象; 然后调用[创建](#create)成员函数以创建控件并将其附加到`CComboBox`对象。  
+ You can create a `CComboBox` object from either a dialog template or directly in your code. In both cases, first call the constructor `CComboBox` to construct the `CComboBox` object; then call the [Create](#create) member function to create the control and attach it to the `CComboBox` object.  
   
- 如果你想要处理 Windows 通知消息发送到其父组合框 (通常从派生的类`CDialog`)，将消息映射条目和消息处理程序成员函数添加到每条消息的父类。  
+ If you want to handle Windows notification messages sent by a combo box to its parent (usually a class derived from `CDialog`), add a message-map entry and message-handler member function to the parent class for each message.  
   
- 每个消息映射条目采用以下形式︰  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`**,**`memberFxn`**)**  
   
- 其中`id`指定发送通知的组合框控件的子窗口 ID 和`memberFxn`是父成员函数编写以处理通知的名称。  
+ where `id` specifies the child-window ID of the combo-box control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- 父元素的函数原型如下所示︰  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- 无法预测将发送某些通知的顺序。 具体而言， **CBN_SELCHANGE**之前或之后，可能会出现通知**CBN_CLOSEUP**通知。  
+ The order in which certain notifications will be sent cannot be predicted. In particular, a **CBN_SELCHANGE** notification may occur either before or after a **CBN_CLOSEUP** notification.  
   
- 潜在的消息映射条目如下所示︰  
+ Potential message-map entries are the following:  
   
-- **ON_CBN_CLOSEUP** (Windows 3.1 及更高版本。)组合框的列表框中已关闭。 此通知消息不会发送具有组合框[CBS_SIMPLE](../../mfc/reference/combo-box-styles.md)样式。  
+- **ON_CBN_CLOSEUP** (Windows 3.1 and later.) The list box of a combo box has closed. This notification message is not sent for a combo box that has the [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
-- **ON_CBN_DBLCLK**用户双击某个字符串的组合框列表框中。 此通知消息将只发送与组合框**CBS_SIMPLE**样式。 有关带有的组合框[CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md)或[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)样式，不能出现一次双击因为一次单击隐藏列表框。  
+- **ON_CBN_DBLCLK** The user double-clicks a string in the list box of a combo box. This notification message is only sent for a combo box with the **CBS_SIMPLE** style. For a combo box with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, a double-click cannot occur because a single click hides the list box.  
   
-- **ON_CBN_DROPDOWN**组合框的列表框中即将下拉列表 （要使其可见）。 此通知消息可能仅为组合框与**CBS_DROPDOWN**或**CBS_DROPDOWNLIST**样式。  
+- **ON_CBN_DROPDOWN** The list box of a combo box is about to drop down (be made visible). This notification message can occur only for a combo box with the **CBS_DROPDOWN** or **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_EDITCHANGE**用户已执行可能更改编辑控件一部分组合框中的文本的操作。 与不同**CBN_EDITUPDATE** ，此消息之后发送消息 Windows 更新屏幕。 它不会发送如果组合框中具有**CBS_DROPDOWNLIST**样式。  
+- **ON_CBN_EDITCHANGE** The user has taken an action that may have altered the text in the edit-control portion of a combo box. Unlike the **CBN_EDITUPDATE** message, this message is sent after Windows updates the screen. It is not sent if the combo box has the **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_EDITUPDATE**组合框的编辑控件部分即将显示修改后的文本。 控件设置文本格式后但在其显示文本之前，此通知消息被发送。 它不会发送如果组合框中具有**CBS_DROPDOWNLIST**样式。  
+- **ON_CBN_EDITUPDATE** The edit-control portion of a combo box is about to display altered text. This notification message is sent after the control has formatted the text but before it displays the text. It is not sent if the combo box has the **CBS_DROPDOWNLIST** style.  
   
-- **ON_CBN_ERRSPACE**组合框无法分配足够的内存来满足特定的请求。  
+- **ON_CBN_ERRSPACE** The combo box cannot allocate enough memory to meet a specific request.  
   
-- **ON_CBN_SELENDCANCEL** (Windows 3.1 及更高版本。)指示应取消用户的选择。 用户单击的项，然后单击另一个窗口或控件隐藏组合框的列表框。 此通知消息发送之前**CBN_CLOSEUP**通知消息，以指示应忽略用户的选择。 **CBN_SELENDCANCEL**或**CBN_SELENDOK**发送通知消息即使**CBN_CLOSEUP**不发送通知消息 (在带有的组合框的情况下为**CBS_SIMPLE**样式)。  
+- **ON_CBN_SELENDCANCEL** (Windows 3.1 and later.) Indicates the user's selection should be canceled. The user clicks an item and then clicks another window or control to hide the list box of a combo box. This notification message is sent before the **CBN_CLOSEUP** notification message to indicate that the user's selection should be ignored. The **CBN_SELENDCANCEL** or **CBN_SELENDOK** notification message is sent even if the **CBN_CLOSEUP** notification message is not sent (as in the case of a combo box with the **CBS_SIMPLE** style).  
   
-- **ON_CBN_SELENDOK**用户选择某一项然后按 ENTER 键或单击向下箭头键以隐藏组合框的列表框。 此通知消息发送之前**CBN_CLOSEUP**消息，以指示，用户的选择应视为有效。 **CBN_SELENDCANCEL**或**CBN_SELENDOK**发送通知消息即使**CBN_CLOSEUP**不发送通知消息 (在带有的组合框的情况下为**CBS_SIMPLE**样式)。  
+- **ON_CBN_SELENDOK** The user selects an item and then either presses the ENTER key or clicks the DOWN ARROW key to hide the list box of a combo box. This notification message is sent before the **CBN_CLOSEUP** message to indicate that the user's selection should be considered valid. The **CBN_SELENDCANCEL** or **CBN_SELENDOK** notification message is sent even if the **CBN_CLOSEUP** notification message is not sent (as in the case of a combo box with the **CBS_SIMPLE** style).  
   
-- **ON_CBN_KILLFOCUS**组合框失去输入的焦点。  
+- **ON_CBN_KILLFOCUS** The combo box is losing the input focus.  
   
-- **ON_CBN_SELCHANGE**组合框列表框中的选择即将因用户在列表框中单击或通过使用箭头键更改所选内容而更改。 当处理此消息，在组合框编辑控件中的文本，仅可通过检索`GetLBText`或另一个类似函数。 `GetWindowText`不能使用。  
+- **ON_CBN_SELCHANGE** The selection in the list box of a combo box is about to be changed as a result of the user either clicking in the list box or changing the selection by using the arrow keys. When processing this message, the text in the edit control of the combo box can only be retrieved via `GetLBText` or another similar function. `GetWindowText` cannot be used.  
   
-- **ON_CBN_SETFOCUS**组合框接收到输入的焦点。  
+- **ON_CBN_SETFOCUS** The combo box receives the input focus.  
   
- 如果你创建`CComboBox`（通过对话框资源） 对话框中的对象`CComboBox`当用户关闭对话框中，将自动销毁对象。  
+ If you create a `CComboBox` object within a dialog box (through a dialog resource), the `CComboBox` object is automatically destroyed when the user closes the dialog box.  
   
- 如果您嵌入`CComboBox`另一个窗口中的对象的对象，不需要将其销毁。 如果你创建`CComboBox`对象在堆栈上，自动销毁。 如果你创建`CComboBox`使用堆上的对象**新**函数，必须调用**删除**上要在销毁 Windows 组合框时销毁它的对象。  
+ If you embed a `CComboBox` object within another window object, you do not need to destroy it. If you create the `CComboBox` object on the stack, it is destroyed automatically. If you create the `CComboBox` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the Windows combo box is destroyed.  
   
- **请注意**如果你想要处理`WM_KEYDOWN`和`WM_CHAR`的消息，你具有子类化组合框的编辑和列表框控件中，派生的类`CEdit`和`CListBox`，并将这些消息的处理程序添加到派生的类。 有关详细信息，请参阅[http://support.microsoft.com/default.aspxscid=kb;en-us;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)和[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。  
+ **Note** If you want to handle `WM_KEYDOWN` and `WM_CHAR` messages, you have to subclass the combo box's edit and list box controls, derive classes from `CEdit` and `CListBox`, and add handlers for those messages to the derived classes. For more information, see [http://support.microsoft.com/default.aspxscid=kb;en-us;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) and [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -233,97 +282,97 @@ class CComboBox : public CWnd
   
  `CComboBox`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="addstring"></a>Ccombobox::  
- 将字符串添加到组合框的列表框中。  
+##  <a name="addstring"></a>  CComboBox::AddString  
+ Adds a string to the list box of a combo box.  
   
 ```  
 int AddString(LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- 指向要添加的以 null 结尾的字符串。  
+ Points to the null-terminated string that is to be added.  
   
-### <a name="return-value"></a>返回值  
- 如果返回值是大于或等于 0，它是到列表框中的字符串的从零开始索引。 返回值是**CB_ERR**如果发生错误; 返回值是**CB_ERRSPACE**如果没有足够的空间来存储新的字符串。  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index to the string in the list box. The return value is **CB_ERR** if an error occurs; the return value is **CB_ERRSPACE** if insufficient space is available to store the new string.  
   
-### <a name="remarks"></a>备注  
- 如果使用列表框不创建了[CBS_SORT](../../mfc/reference/combo-box-styles.md)样式，则字符串添加到列表的末尾。 否则为该字符串插入到列表中，并对列表进行排序。  
+### <a name="remarks"></a>Remarks  
+ If the list box was not created with the [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, the string is added to the end of the list. Otherwise, the string is inserted into the list, and the list is sorted.  
   
 > [!NOTE]
->  Windows **ComboBoxEx** 控件不支持此函数。 此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
- 若要插入列表中的特定位置的一个字符串，请使用[InsertString](#insertstring)成员函数。  
+ To insert a string into a specific location within the list, use the [InsertString](#insertstring) member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#3](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
   
-##  <a name="ccombobox"></a>CComboBox::CComboBox  
- 构造 `CComboBox` 对象。  
+##  <a name="ccombobox"></a>  CComboBox::CComboBox  
+ Constructs a `CComboBox` object.  
   
 ```  
 CComboBox();
 ```  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
   
-##  <a name="clear"></a>CComboBox::Clear  
- 删除 （清除） 当前选定内容，如果有的话，组合框编辑控件中。  
+##  <a name="clear"></a>  CComboBox::Clear  
+ Deletes (clears) the current selection, if any, in the edit control of the combo box.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>备注  
- 若要删除当前所选内容并将放到剪贴板上的已删除的内容，使用[剪切](#cut)成员函数。  
+### <a name="remarks"></a>Remarks  
+ To delete the current selection and place the deleted contents onto the Clipboard, use the [Cut](#cut) member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#4](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
   
-##  <a name="compareitem"></a>CComboBox::CompareItem  
- 由框架调用以确定已排序的所有者描述组合框的列表框部分中的新项的相对位置。  
+##  <a name="compareitem"></a>  CComboBox::CompareItem  
+ Called by the framework to determine the relative position of a new item in the list-box portion of a sorted owner-draw combo box.  
   
 ```  
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpCompareItemStruct`  
- 指向的长指针[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)结构。  
+ A long pointer to a [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) structure.  
   
-### <a name="return-value"></a>返回值  
- 指示中所述的两个项的相对位置`COMPAREITEMSTRUCT`结构。 它可以是任何以下值︰  
+### <a name="return-value"></a>Return Value  
+ Indicates the relative position of the two items described in the `COMPAREITEMSTRUCT` structure. It can be any of the following values:  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|- 1|项 2 之前进行排序的第 1 项。|  
-|0|项 1 和 2 的项进行排序相同。|  
-|1|项 2 后进行排序的第 1 项。|  
+|- 1|Item 1 sorts before item 2.|  
+|0|Item 1 and item 2 sort the same.|  
+|1|Item 1 sorts after item 2.|  
   
- 请参阅[CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)有关的说明`COMPAREITEMSTRUCT`。  
+ See [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) for a description of `COMPAREITEMSTRUCT`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此成员函数没有任何影响。 如果你创建一个带有所有者描述组合框**LBS_SORT**样式，你必须重写该成员函数以帮助 framework 排序新项添加到列表框中。  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. If you create an owner-draw combo box with the **LBS_SORT** style, you must override this member function to assist the framework in sorting new items added to the list box.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#5](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
   
-##  <a name="copy"></a>CComboBox::Copy  
- 如果有的话，组合框到剪贴板中的编辑控件中复制当前选定内容**CF_TEXT**格式。  
+##  <a name="copy"></a>  CComboBox::Copy  
+ Copies the current selection, if any, in the edit control of the combo box onto the Clipboard in **CF_TEXT** format.  
   
 ```  
 void Copy();
 ```  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#6](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
   
-##  <a name="create"></a>CComboBox::Create  
- 创建组合框，并将其附加到`CComboBox`对象。  
+##  <a name="create"></a>  CComboBox::Create  
+ Creates the combo box and attaches it to the `CComboBox` object.  
   
 ```  
 virtual BOOL Create(
@@ -333,100 +382,100 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定组合框的样式。 应用的任意组合[组合框样式](../../mfc/reference/combo-box-styles.md)在框中。  
+ Specifies the style of the combo box. Apply any combination of [combo-box styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) to the box.  
   
  `rect`  
- 指向的位置和大小的组合框。 可以是[RECT 结构](../../mfc/reference/rect-structure1.md)或`CRect`对象。  
+ Points to the position and size of the combo box. Can be a [RECT structure](../../mfc/reference/rect-structure1.md) or a `CRect` object.  
   
  `pParentWnd`  
- 指定组合框的父窗口 (通常`CDialog`)。 它不能**NULL**。  
+ Specifies the combo box's parent window (usually a `CDialog`). It must not be **NULL**.  
   
  `nID`  
- 指定组合框控件 id。  
+ Specifies the combo box's control ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 构造`CComboBox`两个步骤中的对象。 首先，调用的构造函数，然后调用**创建**，它创建 Windows 组合框，并将其附加到`CComboBox`对象。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CComboBox` object in two steps. First, call the constructor and then call **Create**, which creates the Windows combo box and attaches it to the `CComboBox` object.  
   
- 当**创建**执行 Windows 发送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)到组合框的消息。  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the combo box.  
   
- 默认情况下，通过处理这些消息的消息[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)， [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)， [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成员函数中`CWnd`基类。 若要扩展的默认消息处理，从派生类`CComboBox`、 将消息映射添加到新的类中，和重写前面的消息处理程序成员函数。 重写`OnCreate`，例如，若要为新类执行所需的初始化。  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, derive a class from `CComboBox`, add a message map to the new class, and override the preceding message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- 将应用以下[窗口样式](../../mfc/reference/window-styles.md)到组合框控件。 :  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a combo-box control. :  
   
-- **WS_CHILD**始终  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE**通常  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED**很少  
+- **WS_DISABLED** Rarely  
   
-- **WS_VSCROLL**若要添加的列表框中组合框的垂直滚动  
+- **WS_VSCROLL** To add vertical scrolling for the list box in the combo box  
   
-- **WS_HSCROLL**若要添加水平滚动的列表框中组合框  
+- **WS_HSCROLL** To add horizontal scrolling for the list box in the combo box  
   
-- **WS_GROUP**与组控件  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP**要包括在 tab 键顺序中的组合框  
+- **WS_TABSTOP** To include the combo box in the tabbing order  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
   
-##  <a name="cut"></a>CComboBox::Cut  
- 删除 （操作会剪切） 当前选定内容，如果任何，组合框中编辑控制，并将复制到剪贴板中删除的文本**CF_TEXT**格式。  
+##  <a name="cut"></a>  CComboBox::Cut  
+ Deletes (cuts) the current selection, if any, in the combo-box edit control and copies the deleted text onto the Clipboard in **CF_TEXT** format.  
   
 ```  
 void Cut();
 ```  
   
-### <a name="remarks"></a>备注  
- 若要删除当前所选内容，而无需将到剪贴板上删除的文本，调用[清除](#clear)成员函数。  
+### <a name="remarks"></a>Remarks  
+ To delete the current selection without placing the deleted text onto the Clipboard, call the [Clear](#clear) member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#7](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
   
-##  <a name="deleteitem"></a>CComboBox::DeleteItem  
- 当用户从所有者描述中删除项时，由框架调用`CComboBox`对象或销毁组合框。  
+##  <a name="deleteitem"></a>  CComboBox::DeleteItem  
+ Called by the framework when the user deletes an item from an owner-draw `CComboBox` object or destroys the combo box.  
   
 ```  
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpDeleteItemStruct`  
- 向 Windows 的长指针[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)结构，它包含有关已删除的项的信息。 请参阅[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)有关此结构的说明。  
+ A long pointer to a Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) structure that contains information about the deleted item. See [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) for a description of this structure.  
   
-### <a name="remarks"></a>备注  
- 此函数的默认实现不执行任何操作。 重写此函数可根据需要重绘组合框。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. Override this function to redraw the combo box as needed.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
-##  <a name="deletestring"></a>CComboBox::DeleteString  
- 删除位置中的项`nIndex`从组合框。  
+##  <a name="deletestring"></a>  CComboBox::DeleteString  
+ Deletes the item in position `nIndex` from the combo box.  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 指定要删除的字符串的索引。  
+ Specifies the index to the string that is to be deleted.  
   
-### <a name="return-value"></a>返回值  
- 如果返回值是大于或等于 0，则会在列表中剩余的字符串的计数。 返回值是**CB_ERR**如果`nIndex`指定列表中的索引大于项的数目。  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, then it is a count of the strings remaining in the list. The return value is **CB_ERR** if `nIndex` specifies an index greater than the number of items in the list.  
   
-### <a name="remarks"></a>备注  
- 后面的所有项`nIndex`现在下移一个位置。 例如，如果组合框包含两个项，则删除第一项将导致剩余的项现在处于的第一个位置。 `nIndex`= 0 中的第一个位置的项。  
+### <a name="remarks"></a>Remarks  
+ All items following `nIndex` now move down one position. For example, if a combo box contains two items, deleting the first item will cause the remaining item to now be in the first position. `nIndex`=0 for the item in the first position.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
   
-##  <a name="dir"></a>CComboBox::Dir  
- 将文件名或驱动器的列表添加到组合框的列表框中。  
+##  <a name="dir"></a>  CComboBox::Dir  
+ Adds a list of filenames or drives to the list box of a combo box.  
   
 ```  
 int Dir(
@@ -434,59 +483,59 @@ int Dir(
     LPCTSTR lpszWildCard);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `attr`  
- 可以是任意组合的`enum`值中所述[cfile:: Getstatus](../../mfc/reference/cfile-class.md#getstatus)或以下值的任意组合︰  
+ Can be any combination of the `enum` values described in [CFile::GetStatus](../../mfc/reference/cfile-class.md#getstatus) or any combination of the following values:  
   
-- **DDL_READWRITE**可以读取或写入到文件。  
+- **DDL_READWRITE** File can be read from or written to.  
   
-- **DDL_READONLY**可以从读取但不是会写入到文件。  
+- **DDL_READONLY** File can be read from but not written to.  
   
-- **DDL_HIDDEN**文件将被隐藏，未出现在目录列表。  
+- **DDL_HIDDEN** File is hidden and does not appear in a directory listing.  
   
-- **DDL_SYSTEM**文件是系统文件。  
+- **DDL_SYSTEM** File is a system file.  
   
-- **DDL_DIRECTORY**指定的名称`lpszWildCard`指定的目录。  
+- **DDL_DIRECTORY** The name specified by `lpszWildCard` specifies a directory.  
   
-- **DDL_ARCHIVE**已存档文件。  
+- **DDL_ARCHIVE** File has been archived.  
   
-- **DDL_DRIVES**包括与指定的名称匹配的所有驱动器`lpszWildCard`。  
+- **DDL_DRIVES** Include all drives that match the name specified by `lpszWildCard`.  
   
-- **DDL_EXCLUSIVE**独占标志。 如果设置独占标志，仅指定类型的文件会列出。 否则，除"正常"的文件之外还列出指定类型的文件。  
+- **DDL_EXCLUSIVE** Exclusive flag. If the exclusive flag is set, only files of the specified type are listed. Otherwise, files of the specified type are listed in addition to "normal" files.  
   
  `lpszWildCard`  
- 指向文件规范的字符串。 字符串可以包含通配符 (例如，*。\*)。  
+ Points to a file-specification string. The string can contain wildcards (for example, *.\*).  
   
-### <a name="return-value"></a>返回值  
- 如果返回值是大于或等于 0，则最后一个文件名添加到列表中的从零开始的索引。 返回值是**CB_ERR**如果发生错误; 返回值是**CB_ERRSPACE**如果没有足够的空间来存储新的字符串。  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index of the last filename added to the list. The return value is **CB_ERR** if an error occurs; the return value is **CB_ERRSPACE** if insufficient space is available to store the new strings.  
   
-### <a name="remarks"></a>备注  
- Windows **ComboBoxEx** 控件不支持此函数。 此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
   
-##  <a name="drawitem"></a>CComboBox::DrawItem  
- 由框架的所有者描述组合框中更改的可视方面时调用。  
+##  <a name="drawitem"></a>  CComboBox::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw combo box changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 指向的指针[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构，其中包含有关所需的绘图的类型的信息。  
+ A pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>备注  
- **ItemAction**的成员`DRAWITEMSTRUCT`结构定义要执行的绘制操作。 请参阅[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)有关此结构的说明。  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed. See [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) for a description of this structure.  
   
- 默认情况下，此成员函数没有任何影响。 重写该成员函数以实现所有者描述的绘图`CComboBox`对象。 此成员函数将终止之前，应用程序应还原选择的显示上下文中提供的所有图形设备接口 (GDI) 对象`lpDrawItemStruct`。  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CComboBox` object. Before this member function terminates, the application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct`.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
   
-##  <a name="findstring"></a>CComboBox::FindString  
- 找到，但不会选择第一个字符串，其中包含一个组合框的列表框中指定的前缀。  
+##  <a name="findstring"></a>  CComboBox::FindString  
+ Finds, but doesn't select, the first string that contains the specified prefix in the list box of a combo box.  
   
 ```  
 int FindString(
@@ -494,24 +543,24 @@ int FindString(
     LPCTSTR lpszString) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nStartAfter`  
- 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nStartAfter`。 如果为-1，从开始处搜索整个列表框。  
+ Contains the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nStartAfter`. If -1, the entire list box is searched from the beginning.  
   
  `lpszString`  
- 指向以 null 结尾的字符串，其中包含要搜索的前缀。 搜索是独立的因此此字符串可以包含任何组合的大写和小写字母。  
+ Points to the null-terminated string that contains the prefix to search for. The search is case independent, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>返回值  
- 如果返回值是大于或等于 0，则匹配项的从零开始索引。 它是**CB_ERR**如果搜索未成功。  
+### <a name="return-value"></a>Return Value  
+ If the return value is greater than or equal to 0, it is the zero-based index of the matching item. It is **CB_ERR** if the search was unsuccessful.  
   
-### <a name="remarks"></a>备注  
- Windows **ComboBoxEx** 控件不支持此函数。 此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
-##  <a name="findstringexact"></a>CComboBox::FindStringExact  
- 调用`FindStringExact`成员函数，以便查找第一个列表框中的字符串 （组合框） 中指定的字符串匹配`lpszFind`。  
+##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
+ Call the `FindStringExact` member function to find the first list-box string (in a combo box) that matches the string specified in `lpszFind`.  
   
 ```  
 int FindStringExact(
@@ -519,54 +568,54 @@ int FindStringExact(
     LPCTSTR lpszFind) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndexStart`  
- 指定要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nIndexStart`。 如果`nIndexStart`为-1，从开始处搜索整个列表框。  
+ Specifies the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nIndexStart`. If `nIndexStart` is -1, the entire list box is searched from the beginning.  
   
  `lpszFind`  
- 指向要搜索的以 null 结尾的字符串。 此字符串可以包含完整的文件名，包括扩展名。 搜索不区分大小写，因此此字符串可以包含任何组合的大写和小写字母。  
+ Points to the null-terminated string to search for. This string can contain a complete filename, including the extension. The search is not case sensitive, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>返回值  
- 匹配的项的从零开始索引或**CB_ERR**如果搜索未成功。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the matching item, or **CB_ERR** if the search was unsuccessful.  
   
-### <a name="remarks"></a>备注  
- 如果组合框但没有创建了一个所有者绘制样式[CBS_HASSTRINGS](../../mfc/reference/combo-box-styles.md)样式，`FindStringExact`尝试与双字值的值相匹配`lpszFind`。  
+### <a name="remarks"></a>Remarks  
+ If the combo box was created with an owner-draw style but without the [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `FindStringExact` attempts to match the doubleword value against the value of `lpszFind`.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
   
-##  <a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
- 检索信息`CComboBox`对象。  
+##  <a name="getcomboboxinfo"></a>  CComboBox::GetComboBoxInfo  
+ Retrieves information for the `CComboBox` object.  
   
 ```  
 BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pcbi*  
- 指向的指针[COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798)结构。  
+ A pointer to the [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) structure.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功后， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) message, as described in the Windows SDK.  
   
-##  <a name="getcount"></a>CComboBox::GetCount  
- 调用此成员函数以检索在组合框的列表框部分中的项的数目。  
+##  <a name="getcount"></a>  CComboBox::GetCount  
+ Call this member function to retrieve the number of items in the list-box portion of a combo box.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 项的数目。 因此返回的计数是一个大于 （索引是从零开始） 的最后一项的索引值。 它是**CB_ERR**如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ The number of items. The returned count is one greater than the index value of the last item (the index is zero-based). It is **CB_ERR** if an error occurs.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#14](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
   
-##  <a name="getcuebanner"></a>CComboBox::GetCueBanner  
- 获取组合框控件显示的提示文本。  
+##  <a name="getcuebanner"></a>  CComboBox::GetCueBanner  
+ Gets the cue text that is displayed for a combo box control.  
   
 ```  
 CString GetCueBanner() const;  
@@ -576,193 +625,193 @@ BOOL GetCueBanner(
     int cchText) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[out] `lpszText`|为接收提示横幅文本的缓冲区的指针。|  
-|[in] `cchText`|缓冲区的大小，`lpszText`参数指向。|  
+|[out] `lpszText`|Pointer to a buffer that receives the cue banner text.|  
+|[in] `cchText`|Size of the buffer that the `lpszText` parameter points to.|  
   
-### <a name="return-value"></a>返回值  
- 在第一个重载中， [CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含提示横幅文本，如果存在; 否则为`CString`长度为零的对象。  
+### <a name="return-value"></a>Return Value  
+ In the first overload, a [CString](../../atl-mfc-shared/using-cstring.md) object that contains the cue banner text if it exists; otherwise, a `CString` object that has zero length.  
   
- - 或 -  
+ -or-  
   
- 在第二个重载中，`true`如果此方法成功; 否则为`false`。  
+ In the second overload, `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 提示文本是组合框控件的输入区域中显示的提示。 直至用户提供输入，则会显示的提示文本。  
+### <a name="remarks"></a>Remarks  
+ Cue text is a prompt that is displayed in the input area of the combo box control. The cue text is displayed until the user provides input.  
   
- 此方法可发送[CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) message, which is described in the Windows SDK.  
   
-##  <a name="getcursel"></a>CComboBox::GetCurSel  
- 调用此成员函数可确定选择组合框中的哪一项。  
+##  <a name="getcursel"></a>  CComboBox::GetCurSel  
+ Call this member function to determine which item in the combo box is selected.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 组合框，列表框中当前选定项的从零开始索引或**CB_ERR**如果未不选定任何项。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the currently selected item in the list box of a combo box, or **CB_ERR** if no item is selected.  
   
-### <a name="remarks"></a>备注  
- `GetCurSel`返回到列表的索引。  
+### <a name="remarks"></a>Remarks  
+ `GetCurSel` returns an index into the list.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#15](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
   
-##  <a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
- 调用`GetDroppedControlRect`成员函数可检索下拉组合框的可见 （删除下） 列表框中的屏幕坐标。  
+##  <a name="getdroppedcontrolrect"></a>  CComboBox::GetDroppedControlRect  
+ Call the `GetDroppedControlRect` member function to retrieve the screen coordinates of the visible (dropped-down) list box of a drop-down combo box.  
   
 ```  
 void GetDroppedControlRect(LPRECT lprect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lprect*  
- 指向[RECT 结构](../../mfc/reference/rect-structure1.md)，是否要接收坐标。  
+ Points to the [RECT structure](../../mfc/reference/rect-structure1.md) that is to receive the coordinates.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#16](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
   
-##  <a name="getdroppedstate"></a>CComboBox::GetDroppedState  
- 调用`GetDroppedState`成员函数来确定下拉组合框的列表框中是可见的 （向下删除）。  
+##  <a name="getdroppedstate"></a>  CComboBox::GetDroppedState  
+ Call the `GetDroppedState` member function to determine whether the list box of a drop-down combo box is visible (dropped down).  
   
 ```  
 BOOL GetDroppedState() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果列表框中可见; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the list box is visible; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#17](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
   
-##  <a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
- 调用此函数可检索的最小的允许宽度，以像素为单位，组合框的列表框。  
+##  <a name="getdroppedwidth"></a>  CComboBox::GetDroppedWidth  
+ Call this function to retrieve the minimum allowable width, in pixels, of the list box of a combo box.  
   
 ```  
 int GetDroppedWidth() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，最小的允许宽度，以像素为单位;否则为**CB_ERR**。  
+### <a name="return-value"></a>Return Value  
+ If successful, the minimum allowable width, in pixels; otherwise, **CB_ERR**.  
   
-### <a name="remarks"></a>备注  
- 此函数仅适用于组合框[CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md)或[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)样式。  
+### <a name="remarks"></a>Remarks  
+ This function only applies to combo boxes with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
- 默认情况下，下拉列表框中允许的最小宽度为 0。 可以通过调用设置允许的最小宽度[SetDroppedWidth](#setdroppedwidth)。 组合框的列表框部分显示时，其宽度为较大的允许的最小宽度或组合框宽度。  
+ By default, the minimum allowable width of the drop-down list box is 0. The minimum allowable width can be set by calling [SetDroppedWidth](#setdroppedwidth). When the list-box portion of the combo box is displayed, its width is the larger of the minimum allowable width or the combo box width.  
   
-### <a name="example"></a>示例  
-  请参阅示例[SetDroppedWidth](#setdroppedwidth)。  
+### <a name="example"></a>Example  
+  See the example for [SetDroppedWidth](#setdroppedwidth).  
   
-##  <a name="geteditsel"></a>CComboBox::GetEditSel  
- 获取组合框编辑控件中当前所选内容的起始和结束字符位置。  
+##  <a name="geteditsel"></a>  CComboBox::GetEditSel  
+ Gets the starting and ending character positions of the current selection in the edit control of a combo box.  
   
 ```  
 DWORD GetEditSel() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个 32 位值，之后的高序位字中的选定内容的末尾包含低序位字中的起始位置和未选定的第一个字符的位置。 如果此函数使用而无需编辑控件，组合框上**CB_ERR**返回。  
+### <a name="return-value"></a>Return Value  
+ A 32-bit value that contains the starting position in the low-order word and the position of the first nonselected character after the end of the selection in the high-order word. If this function is used on a combo box without an edit control, **CB_ERR** is returned.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#18](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
   
-##  <a name="getextendedui"></a>CComboBox::GetExtendedUI  
- 调用`GetExtendedUI`成员函数，以确定一个组合框的默认用户界面或扩展的用户界面。  
+##  <a name="getextendedui"></a>  CComboBox::GetExtendedUI  
+ Call the `GetExtendedUI` member function to determine whether a combo box has the default user interface or the extended user interface.  
   
 ```  
 BOOL GetExtendedUI() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果组合框中具有扩展的用户界面中; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the combo box has the extended user interface; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 可以通过以下方式确定扩展的用户界面︰  
+### <a name="remarks"></a>Remarks  
+ The extended user interface can be identified in the following ways:  
   
--   单击静态控件将显示仅与组合框的列表框[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)样式。  
+-   Clicking the static control displays the list box only for combo boxes with the [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
--   按向下箭头键显示 （F4 为禁用） 的列表框。  
+-   Pressing the DOWN ARROW key displays the list box (F4 is disabled).  
   
- 静态控件中滚动才被禁用时的项列表不可见 （箭头将禁用键）。  
+ Scrolling in the static control is disabled when the item list is not visible (arrow keys are disabled).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#19](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
   
-##  <a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
- 从组合框检索以依据组合框的列表框部分可以水平滚动的像素为单位的宽度。  
+##  <a name="gethorizontalextent"></a>  CComboBox::GetHorizontalExtent  
+ Retrieves from the combo box the width in pixels by which the list-box portion of the combo box can be scrolled horizontally.  
   
 ```  
 UINT GetHorizontalExtent() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 组合框，以像素为单位的列表框部分可滚动宽度。  
+### <a name="return-value"></a>Return Value  
+ The scrollable width of the list-box portion of the combo box, in pixels.  
   
-### <a name="remarks"></a>备注  
- 这是仅适用于组合框的列表框部分具有水平滚动条。  
+### <a name="remarks"></a>Remarks  
+ This is applicable only if the list-box portion of the combo box has a horizontal scroll bar.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#20](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
   
-##  <a name="getitemdata"></a>CComboBox::GetItemData  
- 检索与指定的组合框项关联的应用程序提供 32 位值。  
+##  <a name="getitemdata"></a>  CComboBox::GetItemData  
+ Retrieves the application-supplied 32-bit value associated with the specified combo-box item.  
   
 ```  
 DWORD_PTR GetItemData(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含组合框的列表框中的项的从零开始索引。  
+ Contains the zero-based index of an item in the combo box's list box.  
   
-### <a name="return-value"></a>返回值  
- 该项目，与关联的 32 位值或**CB_ERR**如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ The 32-bit value associated with the item, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>备注  
- 32 位值可以设置与`dwItemData`参数[SetItemData](#setitemdata)成员函数调用。 使用`GetItemDataPtr`成员函数要检索的 32 位值是否为指针 ( **void\***)。  
+### <a name="remarks"></a>Remarks  
+ The 32-bit value can be set with the `dwItemData` parameter of a [SetItemData](#setitemdata) member function call. Use the `GetItemDataPtr` member function if the 32-bit value to be retrieved is a pointer ( **void\***).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
-##  <a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
- 检索与为指针指定的组合框项关联的应用程序提供 32 位值 ( **void\***)。  
+##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
+ Retrieves the application-supplied 32-bit value associated with the specified combo-box item as a pointer ( **void\***).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含组合框的列表框中的项的从零开始索引。  
+ Contains the zero-based index of an item in the combo box's list box.  
   
-### <a name="return-value"></a>返回值  
- 检索一个指针，则为-1，如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ Retrieves a pointer, or -1 if an error occurs.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#22](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
   
-##  <a name="getitemheight"></a>CComboBox::GetItemHeight  
- 调用`GetItemHeight`成员函数以检索在组合框的列表项的高度。  
+##  <a name="getitemheight"></a>  CComboBox::GetItemHeight  
+ Call the `GetItemHeight` member function to retrieve the height of list items in a combo box.  
   
 ```  
 int GetItemHeight(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 指定组合框的高度是要检索的组件。 如果`nIndex`参数的值为-1，检索的组合框的编辑控件 （或静态文本） 部分的高度。 如果组合框中具有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md)样式，`nIndex`指定其高度是要检索的列表项的从零开始索引。 否则为`nIndex`应设置为 0。  
+ Specifies the component of the combo box whose height is to be retrieved. If the `nIndex` parameter is -1, the height of the edit-control (or static-text) portion of the combo box is retrieved. If the combo box has the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `nIndex` specifies the zero-based index of the list item whose height is to be retrieved. Otherwise, `nIndex` should be set to 0.  
   
-### <a name="return-value"></a>返回值  
- 以像素为单位，组合框中指定的项的高度。 返回值是 **CB_ERR** 如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ The height, in pixels, of the specified item in a combo box. The return value is **CB_ERR** if an error occurs.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#23](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
   
-##  <a name="getlbtext"></a>CComboBox::GetLBText  
- 从组合框的列表中获取的字符串。  
+##  <a name="getlbtext"></a>  CComboBox::GetLBText  
+ Gets a string from the list box of a combo box.  
   
 ```  
 int GetLBText(
@@ -774,89 +823,89 @@ void GetLBText(
     CString& rString) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含要复制的列表框中字符串的从零开始的索引。  
+ Contains the zero-based index of the list-box string to be copied.  
   
  `lpszText`  
- 指向以将接收字符串的缓冲区。 缓冲区必须具有足够空间的字符串和终止 null 字符。  
+ Points to a buffer that is to receive the string. The buffer must have sufficient space for the string and a terminating null character.  
   
  `rString`  
- 对引用`CString`。  
+ A reference to a `CString`.  
   
-### <a name="return-value"></a>返回值  
- 不包括终止 null 字符的字符串的长度 （以字节为单位）。 如果`nIndex`未指定有效的索引，则返回值是**CB_ERR**。  
+### <a name="return-value"></a>Return Value  
+ The length (in bytes) of the string, excluding the terminating null character. If `nIndex` does not specify a valid index, the return value is **CB_ERR**.  
   
-### <a name="remarks"></a>备注  
- 此成员的第二种形式函数填充`CString`用项的文本的对象。  
+### <a name="remarks"></a>Remarks  
+ The second form of this member function fills a `CString` object with the item's text.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#24](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
   
-##  <a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
- 获取组合框的列表框中的字符串的长度。  
+##  <a name="getlbtextlen"></a>  CComboBox::GetLBTextLen  
+ Gets the length of a string in the list box of a combo box.  
   
 ```  
 int GetLBTextLen(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含列表框中字符串的从零开始的索引。  
+ Contains the zero-based index of the list-box string.  
   
-### <a name="return-value"></a>返回值  
- 以字节为单位，不包括终止 null 字符的字符串的长度。 如果`nIndex`未指定有效的索引，则返回值是**CB_ERR**。  
+### <a name="return-value"></a>Return Value  
+ The length of the string in bytes, excluding the terminating null character. If `nIndex` does not specify a valid index, the return value is **CB_ERR**.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CComboBox::GetLBText](#getlbtext)。  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetLBText](#getlbtext).  
   
-##  <a name="getlocale"></a>CComboBox::GetLocale  
- 检索使用组合框的区域设置。  
+##  <a name="getlocale"></a>  CComboBox::GetLocale  
+ Retrieves the locale used by the combo box.  
   
 ```  
 LCID GetLocale() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 组合框中的字符串的区域设置标识符 (LCID) 值。  
+### <a name="return-value"></a>Return Value  
+ The locale identifier (LCID) value for the strings in the combo box.  
   
-### <a name="remarks"></a>备注  
- 则使用区域设置，例如，若要确定已排序的组合框中的字符串的排序顺序。  
+### <a name="remarks"></a>Remarks  
+ The locale is used, for example, to determine the sort order of the strings in a sorted combo box.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CComboBox::SetLocale](#setlocale)。  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::SetLocale](#setlocale).  
   
-##  <a name="getminvisible"></a>CComboBox::GetMinVisible  
- 获取当前的组合框控件的下拉列表中的可见项的最小数目。  
+##  <a name="getminvisible"></a>  CComboBox::GetMinVisible  
+ Gets the minimum number of visible items in the drop-down list of the current combo box control.  
   
 ```  
 int GetMinVisible() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前的下拉列表中的可见项的最小数目。  
+### <a name="return-value"></a>Return Value  
+ The minimum number of visible items in the current drop-down list.  
   
-### <a name="remarks"></a>备注  
- 此方法可发送[CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, which is described in the Windows SDK.  
   
-##  <a name="gettopindex"></a>CComboBox::GetTopIndex  
- 检索在组合框的列表框部分中的第一个可见项的从零开始索引。  
+##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
+ Retrieves the zero-based index of the first visible item in the list-box portion of the combo box.  
   
 ```  
 int GetTopIndex() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，组合框的列表框部分中的第一个可见项的从零开始索引**CB_ERR**否则为。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the first visible item in the list-box portion of the combo box if successful, **CB_ERR** otherwise.  
   
-### <a name="remarks"></a>备注  
- 最初，0 项位于顶部的列表框中，但如果滚动列表框中，另一项可能在顶部。  
+### <a name="remarks"></a>Remarks  
+ Initially, item 0 is at the top of the list box, but if the list box is scrolled, another item may be at the top.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#25](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
   
-##  <a name="initstorage"></a>CComboBox::InitStorage  
- 在组合框的列表框部分中存储的列表框项的分配内存。  
+##  <a name="initstorage"></a>  CComboBox::InitStorage  
+ Allocates memory for storing list box items in the list-box portion of the combo box.  
   
 ```  
 int InitStorage(
@@ -864,28 +913,28 @@ int InitStorage(
     UINT nBytes);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nItems`  
- 指定要添加的项的数目。  
+ Specifies the number of items to add.  
   
  `nBytes`  
- 以字节为单位，分配项字符串中指定内存的量。  
+ Specifies the amount of memory, in bytes, to allocate for item strings.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，最大项数的组合框的列表框部分可以存储之前需要内存重新分配，否则**CB_ERRSPACE**，这意味着没有足够的内存是可用。  
+### <a name="return-value"></a>Return Value  
+ If successful, the maximum number of items that the list-box portion of the combo box can store before a memory reallocation is needed, otherwise **CB_ERRSPACE**, meaning not enough memory is available.  
   
-### <a name="remarks"></a>备注  
- 将大量的项添加到列表框部分之前调用此函数`CComboBox`。  
+### <a name="remarks"></a>Remarks  
+ Call this function before adding a large number of items to the list-box portion of the `CComboBox`.  
   
- 仅 Windows 95/98:`wParam`参数最多为 16 位值。 这意味着列表框不能包含多个 32,767 的项。 尽管限制项的数目，则列表框中的项的总大小仅受可用内存。  
+ Windows 95/98 only: The `wParam` parameter is limited to 16-bit values. This means list boxes cannot contain more than 32,767 items. Although the number of items is restricted, the total size of the items in a list box is limited only by available memory.  
   
- 此函数可帮助加快拥有大量的项 (超过 100) 的列表框的初始化。 它预分配指定的数量的内存，因此后续[AddString](#addstring)， [InsertString](#insertstring)，和[Dir](#dir)函数采用最短的时间。 你可以使用估计值的参数。 如果你要估计得高一些，一些额外的内存分配;如果你低估，正常分配用于超过预分配的量的项。  
+ This function helps speed up the initialization of list boxes that have a large number of items (more than 100). It preallocates the specified amount of memory so that subsequent [AddString](#addstring), [InsertString](#insertstring), and [Dir](#dir) functions take the shortest possible time. You can use estimates for the parameters. If you overestimate, some extra memory is allocated; if you underestimate, the normal allocation is used for items that exceed the preallocated amount.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#26](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
   
-##  <a name="insertstring"></a>CComboBox::InsertString  
- 将字符串插入组合框的列表框。  
+##  <a name="insertstring"></a>  CComboBox::InsertString  
+ Inserts a string into the list box of a combo box.  
   
 ```  
 int InsertString(
@@ -893,93 +942,93 @@ int InsertString(
     LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含一个索引（该索引从零开始），该索引指向列表框中将接收字符串的位置。 如果此参数为-1，则字符串被添加到列表的末尾。  
+ Contains the zero-based index to the position in the list box that will receive the string. If this parameter is -1, the string is added to the end of the list.  
   
  `lpszString`  
- 指向要插入的以 null 结尾的字符串。  
+ Points to the null-terminated string that is to be inserted.  
   
-### <a name="return-value"></a>返回值  
- 插入该字符串的位置的索引（索引从零开始）。 返回值是 **CB_ERR** 如果发生错误。 如果没有足够空间可用于存储新的字符串，则返回值为 **CB_ERRSPACE** 。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the position at which the string was inserted. The return value is **CB_ERR** if an error occurs. The return value is **CB_ERRSPACE** if insufficient space is available to store the new string.  
   
-### <a name="remarks"></a>备注  
- 与不同[AddString](#addstring)成员函数，`InsertString`成员函数不会导致与列表[CBS_SORT](../../mfc/reference/combo-box-styles.md)样式进行排序。  
+### <a name="remarks"></a>Remarks  
+ Unlike the [AddString](#addstring) member function, the `InsertString` member function does not cause a list with the [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style to be sorted.  
   
 > [!NOTE]
->  Windows **ComboBoxEx** 控件不支持此函数。 此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
   
-##  <a name="limittext"></a>CComboBox::LimitText  
- 限制用户可以输入到组合框编辑控件的文本的长度以字节为单位。  
+##  <a name="limittext"></a>  CComboBox::LimitText  
+ Limits the length in bytes of the text that the user can enter into the edit control of a combo box.  
   
 ```  
 BOOL LimitText(int nMaxChars);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMaxChars`  
- 指定用户可以输入的文本的长度 （以字节为单位）。 如果此参数为 0，则会将文本长度设置为 65535 字节。  
+ Specifies the length (in bytes) of the text that the user can enter. If this parameter is 0, the text length is set to 65,535 bytes.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为非 0。 如果调用了带有样式的组合框[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)或而无需编辑控件组合框，则返回值为**CB_ERR**。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful. If called for a combo box with the style [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or for a combo box without an edit control, the return value is **CB_ERR**.  
   
-### <a name="remarks"></a>备注  
- 如果组合框没有样式[CBS_AUTOHSCROLL](../../mfc/reference/combo-box-styles.md)，设置文本限制为大于编辑控件的大小将产生任何影响。  
+### <a name="remarks"></a>Remarks  
+ If the combo box does not have the style [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), setting the text limit to be larger than the size of the edit control will have no effect.  
   
- `LimitText`仅限制用户可以输入的文本。 它不起任何文本已在编辑控件时发送消息，也不会影响复制到编辑控件中，选中列表框中的字符串文本的长度。  
+ `LimitText` only limits the text the user can enter. It has no effect on any text already in the edit control when the message is sent, nor does it affect the length of the text copied to the edit control when a string in the list box is selected.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#28](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
   
-##  <a name="measureitem"></a>CComboBox::MeasureItem  
- 创建带有所有者绘制样式的组合框时，由框架调用。  
+##  <a name="measureitem"></a>  CComboBox::MeasureItem  
+ Called by the framework when a combo box with an owner-draw style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- 指向的长指针[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)结构。  
+ A long pointer to a [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此成员函数没有任何影响。 重写该成员函数，并填写`MEASUREITEMSTRUCT`结构以通知 Windows 的维度的列表框中组合框。 如果使用创建组合框[CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md)样式，框架会调用此成员函数为列表框中的每个项。 否则，此成员是只能调用一次。  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the dimensions of the list box in the combo box. If the combo box is created with the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, the framework calls this member function for each item in the list box. Otherwise, this member is called only once.  
   
- 使用**CBS_OWNERDRAWFIXED**中创建一个所有者描述的组合框样式[SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem)成员函数`CWnd`涉及进一步编程注意事项。 请参阅中的讨论[技术注意 14](../../mfc/tn014-custom-controls.md)。  
+ Using the **CBS_OWNERDRAWFIXED** style in an owner-draw combo box created with the [SubclassDlgItem](../../mfc/reference/cwnd-class.md#subclassdlgitem) member function of `CWnd` involves further programming considerations. See the discussion in [Technical Note 14](../../mfc/tn014-custom-controls.md).  
   
- 请参阅[CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)有关的说明`MEASUREITEMSTRUCT`结构。  
+ See [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) for a description of the `MEASUREITEMSTRUCT` structure.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#29](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
   
-##  <a name="paste"></a>CComboBox::Paste  
- 将数据从剪贴板插入当前光标位置处的组合框编辑控件。  
+##  <a name="paste"></a>  CComboBox::Paste  
+ Inserts the data from the Clipboard into the edit control of the combo box at the current cursor position.  
   
 ```  
 void Paste();
 ```  
   
-### <a name="remarks"></a>备注  
- 只有当剪贴板包含中的数据插入数据**CF_TEXT**格式。  
+### <a name="remarks"></a>Remarks  
+ Data is inserted only if the Clipboard contains data in **CF_TEXT** format.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#30](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
   
-##  <a name="resetcontent"></a>CComboBox::ResetContent  
- 中移除所有项从列表框中字符和编辑组合框控件。  
+##  <a name="resetcontent"></a>  CComboBox::ResetContent  
+ Removes all items from the list box and edit control of a combo box.  
   
 ```  
 void ResetContent();
 ```  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#31](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
   
-##  <a name="selectstring"></a>CComboBox::SelectString  
- 组合框，列表框中的字符串搜索，并找到该字符串，如果在列表框中选择字符串并将其复制到编辑控件。  
+##  <a name="selectstring"></a>  CComboBox::SelectString  
+ Searches for a string in the list box of a combo box, and if the string is found, selects the string in the list box and copies it to the edit control.  
   
 ```  
 int SelectString(
@@ -987,99 +1036,99 @@ int SelectString(
     LPCTSTR lpszString);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nStartAfter`  
- 包含要搜索的第一项之前的项的从零开始索引。 如果搜索到达搜索列表框的底部，它将继续从列表框的顶部回由指定的项`nStartAfter`。 如果为-1，从开始处搜索整个列表框。  
+ Contains the zero-based index of the item before the first item to be searched. When the search reaches the bottom of the list box, it continues from the top of the list box back to the item specified by `nStartAfter`. If -1, the entire list box is searched from the beginning.  
   
  `lpszString`  
- 指向以 null 结尾的字符串，其中包含要搜索的前缀。 搜索是独立的因此此字符串可以包含任何组合的大写和小写字母。  
+ Points to the null-terminated string that contains the prefix to search for. The search is case independent, so this string can contain any combination of uppercase and lowercase letters.  
   
-### <a name="return-value"></a>返回值  
- 如果已找到该字符串的选定项的从零开始的索引。 如果搜索未成功，则返回值是**CB_ERR**且未更改当前所选内容。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the selected item if the string was found. If the search was unsuccessful, the return value is **CB_ERR** and the current selection is not changed.  
   
-### <a name="remarks"></a>备注  
- 仅当其初始字符 （从起始点） 与匹配的前缀字符串中的字符，选择一个字符串。  
+### <a name="remarks"></a>Remarks  
+ A string is selected only if its initial characters (from the starting point) match the characters in the prefix string.  
   
- 请注意，`SelectString`和`FindString`成员函数查找字符串，但`SelectString`成员函数还将选择字符串。  
+ Note that the `SelectString` and `FindString` member functions both find a string, but the `SelectString` member function also selects the string.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#32](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
   
-##  <a name="setcuebanner"></a>CComboBox::SetCueBanner  
- 设置为组合框控件显示的提示文本。  
+##  <a name="setcuebanner"></a>  CComboBox::SetCueBanner  
+ Sets the cue text that is displayed for a combo box control.  
   
 ```  
 BOOL SetCueBanner(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in]*lpszText*|为包含提示文本的以 null 结尾的缓冲区的指针。|  
+|[in] *lpszText*|Pointer to a null-terminated buffer that contains the cue text.|  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 提示文本是组合框控件的输入区域中显示的提示。 直至用户提供输入，则会显示的提示文本。  
+### <a name="remarks"></a>Remarks  
+ Cue text is a prompt that is displayed in the input area of the combo box control. The cue text is displayed until the user provides input.  
   
- 此方法可发送[CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>示例  
- 下面的代码示例定义变量， `m_combobox`，即用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_combobox`, that is used to programmatically access the combo box control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CComboBox_s&#1; 1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
-### <a name="example"></a>示例  
- 下面的代码示例设置组合框控件的提示横幅。  
+### <a name="example"></a>Example  
+ The following code example sets the cue banner for the combo box control.  
   
- [!code-cpp[NVC_MFC_CComboBox_s&#1; 2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="setcursel"></a>CComboBox::SetCurSel  
- 组合框的列表框中选择一个字符串。  
+##  <a name="setcursel"></a>  CComboBox::SetCurSel  
+ Selects a string in the list box of a combo box.  
   
 ```  
 int SetCurSel(int nSelect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nSelect`  
- 指定要选择的字符串的从零开始的索引。 如果为-1，删除任何当前的选择列表框中，并清除编辑控件。  
+ Specifies the zero-based index of the string to select. If -1, any current selection in the list box is removed and the edit control is cleared.  
   
-### <a name="return-value"></a>返回值  
- 如果消息已成功中选定的项的从零开始的索引。 返回值是**CB_ERR**如果`nSelect`大于列表中的项的数目或如果`nSelect`设置为-1，清除选择。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the item selected if the message is successful. The return value is **CB_ERR** if `nSelect` is greater than the number of items in the list or if `nSelect` is set to -1, which clears the selection.  
   
-### <a name="remarks"></a>备注  
- 如有必要，列表框中滚动到视图字符串中 （如果该列表框是可见的）。 组合框编辑控件中的文本更改以反映新的选择。 删除任何以前的选择列表框中。  
+### <a name="remarks"></a>Remarks  
+ If necessary, the list box scrolls the string into view (if the list box is visible). The text in the edit control of the combo box is changed to reflect the new selection. Any previous selection in the list box is removed.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#33](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
   
-##  <a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
- 调用此函数可设置的最小的允许宽度，以像素为单位，组合框的列表框。  
+##  <a name="setdroppedwidth"></a>  CComboBox::SetDroppedWidth  
+ Call this function to set the minimum allowable width, in pixels, of the list box of a combo box.  
   
 ```  
 int SetDroppedWidth(UINT nWidth);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- 组合框，以像素为单位的列表框部分的最小允许宽度。  
+ The minimum allowable width of the list-box portion of the combo box, in pixels.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，新宽度的列表框中，否则**CB_ERR**。  
+### <a name="return-value"></a>Return Value  
+ If successful, the new width of the list box, otherwise **CB_ERR**.  
   
-### <a name="remarks"></a>备注  
- 此函数仅适用于组合框[CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md)或[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)样式。  
+### <a name="remarks"></a>Remarks  
+ This function only applies to combo boxes with the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
- 默认情况下，下拉列表框中允许的最小宽度为 0。 组合框的列表框部分显示时，其宽度为较大的允许的最小宽度或组合框宽度。  
+ By default, the minimum allowable width of the drop-down list box is 0. When the list-box portion of the combo box is displayed, its width is the larger of the minimum allowable width or the combo box width.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#34](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
   
-##  <a name="seteditsel"></a>CComboBox::SetEditSel  
- 选择组合框编辑控件中的字符。  
+##  <a name="seteditsel"></a>  CComboBox::SetEditSel  
+ Selects characters in the edit control of a combo box.  
   
 ```  
 BOOL SetEditSel(
@@ -1087,70 +1136,70 @@ BOOL SetEditSel(
     int nEndChar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nStartChar`  
- 指定的起始位置。 如果起始位置设置为-1，则将移除任何现有的选择。  
+ Specifies the starting position. If the starting position is set to -1, then any existing selection is removed.  
   
  `nEndChar`  
- 指定的结束位置。 如果结束位置到最后一个设置为-1，然后从起始位置的所有文本选择编辑控件中的字符。  
+ Specifies the ending position. If the ending position is set to -1, then all text from the starting position to the last character in the edit control is selected.  
   
-### <a name="return-value"></a>返回值  
- 如果该成员函数成功，则非零否则为 0。 它是**CB_ERR**如果`CComboBox`具有[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)样式或不是列表框。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the member function is successful; otherwise 0. It is **CB_ERR** if `CComboBox` has the [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style or does not have a list box.  
   
-### <a name="remarks"></a>备注  
- 位置是从零开始。 若要选择的编辑控件的第一个字符，你可以指定 0 的起始位置。 结束位置后的字符只是要选择的最后一个字符。 例如，若要选择的编辑控件的前四个字符，会使用 0 的起始位置和结束位置的 4。  
+### <a name="remarks"></a>Remarks  
+ The positions are zero-based. To select the first character of the edit control, you specify a starting position of 0. The ending position is for the character just after the last character to select. For example, to select the first four characters of the edit control, you would use a starting position of 0 and an ending position of 4.  
   
 > [!NOTE]
->  Windows **ComboBoxEx** 控件不支持此函数。 此控件的详细信息，请参阅[ComboBoxEx 控件](http://msdn.microsoft.com/library/windows/desktop/bb775738)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+>  This function is not supported by the Windows **ComboBoxEx** control. For more information on this control, see [ComboBoxEx Controls](http://msdn.microsoft.com/library/windows/desktop/bb775738) in the Windows SDK.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CComboBox::GetEditSel](#geteditsel)。  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetEditSel](#geteditsel).  
   
-##  <a name="setextendedui"></a>CComboBox::SetExtendedUI  
- 调用`SetExtendedUI`成员函数以选择的默认用户界面或组合框具有扩展的用户界面[CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md)或[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)样式。  
+##  <a name="setextendedui"></a>  CComboBox::SetExtendedUI  
+ Call the `SetExtendedUI` member function to select either the default user interface or the extended user interface for a combo box that has the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
 ```  
 int SetExtendedUI(BOOL bExtended = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bExtended*  
- 指定组合框是否应使用扩展的用户界面或默认用户界面。 值为**TRUE**选择扩展用户界面; 如果值为**FALSE**选择标准用户界面。  
+ Specifies whether the combo box should use the extended user interface or the default user interface. A value of **TRUE** selects the extended user interface; a value of **FALSE** selects the standard user interface.  
   
-### <a name="return-value"></a>返回值  
- **CB_OKAY**如果操作成功，或**CB_ERR**如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ **CB_OKAY** if the operation is successful, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>备注  
- 可以通过以下方式确定扩展的用户界面︰  
+### <a name="remarks"></a>Remarks  
+ The extended user interface can be identified in the following ways:  
   
--   单击静态控件将显示仅与组合框的列表框**CBS_DROPDOWNLIST**样式。  
+-   Clicking the static control displays the list box only for combo boxes with the **CBS_DROPDOWNLIST** style.  
   
--   按向下箭头键显示 （F4 为禁用） 的列表框。  
+-   Pressing the DOWN ARROW key displays the list box (F4 is disabled).  
   
- 项列表不可见时，静态控件中滚动会禁用 （禁用箭头键）。  
+ Scrolling in the static control is disabled when the item list is not visible (the arrow keys are disabled).  
   
-### <a name="example"></a>示例  
-  请参阅示例[CComboBox::GetExtendedUI](#getextendedui)。  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetExtendedUI](#getextendedui).  
   
-##  <a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
- 设置的宽度，以像素为单位，所依据的组合框的列表框部分可被滚动水平。  
+##  <a name="sethorizontalextent"></a>  CComboBox::SetHorizontalExtent  
+ Sets the width, in pixels, by which the list-box portion of the combo box can be scrolled horizontally.  
   
 ```  
 void SetHorizontalExtent(UINT nExtent);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nExtent*  
- 指定所依据的组合框的列表框部分可以水平滚动的像素数。  
+ Specifies the number of pixels by which the list-box portion of the combo box can be scrolled horizontally.  
   
-### <a name="remarks"></a>备注  
- 如果列表框的宽度小于此值，水平滚动条将水平滚动列表框中的项。 如果列表框的宽度等于或大于此值，将会隐藏水平滚动条或组合框中具有[CBS_DISABLENOSCROLL](../../mfc/reference/combo-box-styles.md)样式，禁用。  
+### <a name="remarks"></a>Remarks  
+ If the width of the list box is smaller than this value, the horizontal scroll bar will horizontally scroll items in the list box. If the width of the list box is equal to or greater than this value, the horizontal scroll bar is hidden or, if the combo box has the [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, disabled.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#35](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
   
-##  <a name="setitemdata"></a>CComboBox::SetItemData  
- 设置与组合框中指定的项关联的 32 位值。  
+##  <a name="setitemdata"></a>  CComboBox::SetItemData  
+ Sets the 32-bit value associated with the specified item in a combo box.  
   
 ```  
 int SetItemData(
@@ -1158,24 +1207,24 @@ int SetItemData(
     DWORD_PTR dwItemData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含要设置的项的从零开始索引。  
+ Contains a zero-based index to the item to set.  
   
  `dwItemData`  
- 包含要与项关联的新值。  
+ Contains the new value to associate with the item.  
   
-### <a name="return-value"></a>返回值  
- **CB_ERR**如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>备注  
- 使用`SetItemDataPtr`成员函数，如果 32 位项将是指针。  
+### <a name="remarks"></a>Remarks  
+ Use the `SetItemDataPtr` member function if the 32-bit item is to be a pointer.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
-##  <a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
- 设置与为指定的指针的组合框中指定的项关联的 32 位值 ( **void\***)。  
+##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
+ Sets the 32-bit value associated with the specified item in a combo box to be the specified pointer ( **void\***).  
   
 ```  
 int SetItemDataPtr(
@@ -1183,24 +1232,24 @@ int SetItemDataPtr(
     void* pData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含项的从零开始索引。  
+ Contains a zero-based index to the item.  
   
  `pData`  
- 包含要与项关联的指针。  
+ Contains the pointer to associate with the item.  
   
-### <a name="return-value"></a>返回值  
- **CB_ERR**如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>备注  
- 此指针就保持有效的组合框中，整个生命周期的即使在添加或删除项时，可能会更改项的组合框内的相对位置。 因此，可以更改在框中的项的索引，但指针保持可靠。  
+### <a name="remarks"></a>Remarks  
+ This pointer remains valid for the life of the combo box, even though the item's relative position within the combo box might change as items are added or removed. Hence, the item's index within the box can change, but the pointer remains reliable.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#37](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
   
-##  <a name="setitemheight"></a>CComboBox::SetItemHeight  
- 调用`SetItemHeight`成员函数将列表项的高度设置组合框或组合框的编辑控件 （或静态文本） 部分的高度。  
+##  <a name="setitemheight"></a>  CComboBox::SetItemHeight  
+ Call the `SetItemHeight` member function to set the height of list items in a combo box or the height of the edit-control (or static-text) portion of a combo box.  
   
 ```  
 int SetItemHeight(
@@ -1208,123 +1257,123 @@ int SetItemHeight(
     UINT cyItemHeight);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 指定是否已设置的列表项的高度或组合框的编辑控件 （或静态文本） 部分的高度。  
+ Specifies whether the height of list items or the height of the edit-control (or static-text) portion of the combo box is set.  
   
- 如果组合框中具有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/combo-box-styles.md)样式，`nIndex`指定其高度，则为设置; 否则为列表项的从零开始索引`nIndex`必须是 0 和将设置项的所有列表的高度。  
+ If the combo box has the [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style, `nIndex` specifies the zero-based index of the list item whose height is to be set; otherwise, `nIndex` must be 0 and the height of all list items will be set.  
   
- 如果`nIndex`为-1，编辑控件的高度或组合框的静态文本一部分将设置。  
+ If `nIndex` is -1, the height of the edit-control or static-text portion of the combo box is to be set.  
   
  `cyItemHeight`  
- 以像素为单位，组合框组件由标识指定的高度， `nIndex`。  
+ Specifies the height, in pixels, of the combo-box component identified by `nIndex`.  
   
-### <a name="return-value"></a>返回值  
- **CB_ERR**如果索引或高度为无效; 否则为 0。  
+### <a name="return-value"></a>Return Value  
+ **CB_ERR** if the index or height is invalid; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 组合框的编辑控件 （或静态文本） 部分的高度设置独立于列表项的高度。 应用程序必须确保编辑控件 （或静态文本） 部分的高度不小于的特定列表框项的高度。  
+### <a name="remarks"></a>Remarks  
+ The height of the edit-control (or static-text) portion of the combo box is set independently of the height of the list items. An application must ensure that the height of the edit-control (or static-text) portion is not smaller than the height of a particular list-box item.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#38](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
   
-##  <a name="setlocale"></a>CComboBox::SetLocale  
- 设置此组合框的区域设置标识符。  
+##  <a name="setlocale"></a>  CComboBox::SetLocale  
+ Sets the locale identifier for this combo box.  
   
 ```  
 LCID SetLocale(LCID nNewLocale);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nNewLocale`  
- 新区域设置标识符 (LCID) 要设置的值的组合框。  
+ The new locale identifier (LCID) value to set for the combo box.  
   
-### <a name="return-value"></a>返回值  
- 此组合框以前区域设置标识符 (LCID) 的值。  
+### <a name="return-value"></a>Return Value  
+ The previous locale identifier (LCID) value for this combo box.  
   
-### <a name="remarks"></a>备注  
- 如果**SetLocale**不调用，默认值从系统获取区域设置。 可以使用控制面板中的修改此系统默认区域设置区域 （或国际） 应用程序。  
+### <a name="remarks"></a>Remarks  
+ If **SetLocale** is not called, the default locale is obtained from the system. This system default locale can be modified by using Control Panel's Regional (or International) application.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#39](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
   
-##  <a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
- 在下拉列表中当前的组合框控件设置可见项的最小数目。  
+##  <a name="setminvisibleitems"></a>  CComboBox::SetMinVisibleItems  
+ Sets the minimum number of visible items in the drop-down list of the current combo box control.  
   
 ```  
 BOOL SetMinVisibleItems(int iMinVisible);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iMinVisible`|指定可见项的最小数目。|  
+|[in] `iMinVisible`|Specifies the minimum number of visible items.|  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 此方法可发送[CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>示例  
- 下面的代码示例定义变量， `m_combobox`，即用于以编程方式访问组合框控件。 此变量将在下一个示例中使用。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_combobox`, that is used to programmatically access the combo box control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CComboBox_s&#1; 1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
-### <a name="example"></a>示例  
- 下面的代码示例在一个组合框控件的下拉列表中插入 20 个项。 然后，它指定当用户按下的下拉箭头时，显示最少 10 项。  
+### <a name="example"></a>Example  
+ The following code example inserts 20 items into the drop-down list of a combo box control. Then it specifies that a minimum of 10 items be displayed when a user presses the drop-down arrow.  
   
- [!code-cpp[NVC_MFC_CComboBox_s&#1; 2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
+ [!code-cpp[NVC_MFC_CComboBox_s1#2](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="settopindex"></a>CComboBox::SetTopIndex  
- 确保特定项的组合框的列表框部分中可见。  
+##  <a name="settopindex"></a>  CComboBox::SetTopIndex  
+ Ensures that a particular item is visible in the list-box portion of the combo box.  
   
 ```  
 int SetTopIndex(int nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 指定列表框项的从零开始索引。  
+ Specifies the zero-based index of the list-box item.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为零或**CB_ERR**如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ Zero if successful, or **CB_ERR** if an error occurs.  
   
-### <a name="remarks"></a>备注  
- 系统滚动列表框中指定的任意一项之前`nIndex`显示顶部的列表框或最大滚动范围已达到。  
+### <a name="remarks"></a>Remarks  
+ The system scrolls the list box until either the item specified by `nIndex` appears at the top of the list box or the maximum scroll range has been reached.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CComboBox # 40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
   
-##  <a name="showdropdown"></a>CComboBox::ShowDropDown  
- 显示或隐藏具有组合框的列表框[CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md)或[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)样式。  
+##  <a name="showdropdown"></a>  CComboBox::ShowDropDown  
+ Shows or hides the list box of a combo box that has the [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) or [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
 ```  
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bShowIt*  
- 指定是否可显示或隐藏下拉列表框。 值为**TRUE**显示列表框。 值为**FALSE**隐藏列表框。  
+ Specifies whether the drop-down list box is to be shown or hidden. A value of **TRUE** shows the list box. A value of **FALSE** hides the list box.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此样式组合框将显示列表框。  
+### <a name="remarks"></a>Remarks  
+ By default, a combo box of this style will show the list box.  
   
- 此成员函数不起使用创建一个组合框[CBS_SIMPLE](../../mfc/reference/combo-box-styles.md)样式。  
+ This member function has no effect on a combo box created with the [CBS_SIMPLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CComboBox::GetDroppedState](#getdroppedstate)。  
+### <a name="example"></a>Example  
+  See the example for [CComboBox::GetDroppedState](#getdroppedstate).  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 CTRLBARS](../../visual-cpp-samples.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [CButton 类](../../mfc/reference/cbutton-class.md)   
- [CEdit 类](../../mfc/reference/cedit-class.md)   
- [CListBox 类](../../mfc/reference/clistbox-class.md)   
- [CScrollBar 类](../../mfc/reference/cscrollbar-class.md)   
- [CStatic 类](../../mfc/reference/cstatic-class.md)   
- [CDialog 类](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CScrollBar Class](../../mfc/reference/cscrollbar-class.md)   
+ [CStatic Class](../../mfc/reference/cstatic-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

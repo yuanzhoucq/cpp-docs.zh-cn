@@ -1,66 +1,88 @@
 ---
-title: "用户定义的工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "用户定义的工具（MFC 扩展）"
+title: User-defined Tools | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 用户定义的工具
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4bab2e4ce2537b0fd7d06536c20a9b85f56e636d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 支持用户定义的工具。  用户定义的工具为执行外部的特定命令，用户指定的程序。  可以使用自定义过程取决管理用户定义的工具。  但是，在中，如果应用程序将从 [CWinAppEx Class](../mfc/reference/cwinappex-class.md)对象，未派生您无法使用此过程。  有关自定义项的更多信息，请参见 [MFC 自定义](../mfc/customization-for-mfc.md)。  
+---
+# <a name="user-defined-tools"></a>User-defined Tools
+MFC supports user-defined tools. A user-defined tool is a special command that executes an external, user-specified program. You can use the customization process to manage user-defined tools. However, you cannot use this process if your application object is not derived from [CWinAppEx Class](../mfc/reference/cwinappex-class.md). For more information about customization, see [Customization for MFC](../mfc/customization-for-mfc.md).  
   
- 如果启用用户定义的工具，支持自定义对话框自动包含 **工具** 选项卡。  下图显示 **工具** 页。  
+ If you enabled user-defined tools support, the customization dialog box automatically includes the **Tools** tab. The following illustration shows the **Tools** page.  
   
- ![“自定义”对话框中的“工具”选项卡](../mfc/media/custdialogboxtoolstab.png "CustDialogBoxToolsTab")  
-自定义对话框工具"选项卡  
+ ![Tools tab in the Customize dialog box](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab")  
+Customization dialog box Tools tab  
   
-## 启用用户定义的工具支持  
- 在应用程序中启用用户定义的工具，调用 [CWinAppEx::EnableUserTools](../Topic/CWinAppEx::EnableUserTools.md)。  但是，必须首先定义在应用程序的资源文件中多常数用作参数。此调用。  
+## <a name="enabling-user-defined-tools-support"></a>Enabling user-defined tools support  
+ To enable user-defined tools in an application, call [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools). However, you must first define several constants in the resource files of your application to use as parameters for this call.  
   
- 在资源编辑器中创建使用适当的命令 ID. 的假的命令  在下面的示例中，我们使用 **ID\_TOOLS\_ENTRY** 作为命令 ID.  此命令 ID。指示框架将插入用户定义的工具一个或多个菜单中的位置。  
+ In the resource editor create a dummy command that uses an appropriate command ID. In the following example, we use **ID_TOOLS_ENTRY** as the command ID. This command ID marks a location in one or more menus where the framework will insert the user-defined tools.  
   
- 在字符串表必须预留一些后续 ID 表示用户定义的工具。  可以留出的字符串的数量与的用户工具的最大数字等于的用户可定义。  在下面的示例中，**ID\_USER\_TOOL1** 通过这些名为 **ID\_USER\_TOOL10**。  
+ You must set aside some consecutive IDs in the string table to represent the user-defined tools. The number of strings that you set aside is equal to the maximum number of user tools that the users can define. In the following example, these are named **ID_USER_TOOL1** through **ID_USER_TOOL10**.  
   
- 可以为用户提供帮助。建议选择目录和参数将被作为工具的程序外部的。  为此，请创建一个资源编辑器的两个弹出菜单。  在下面这些示例中名为 **IDR\_MENU\_ARGS** 和 **IDR\_MENU\_DIRS**。  对于这些菜单中的所有命令，请定义一字符串应用程序在字符串表中。  字符串资源的 ID 必须相等与 . 命令 ID  
+ You can offer suggestions to the users to help them select directories and arguments for the external programs that will be called as tools. To do this, create two popup menus in the resource editor. In the following example these are named **IDR_MENU_ARGS** and **IDR_MENU_DIRS**. For each command in these menus, define a string in your application string table. The resource ID of the string must be equal to the command ID.  
   
- 也可以从 [CUserTool Class](../mfc/reference/cusertool-class.md) 创建的派生类替换默认实现。  为此，请传递派生类的运行时信息作为第四个参数。CWinAppEx::EnableUserTools，而不是 RUNTIME\_CLASS \([CUserTool Class](../mfc/reference/cusertool-class.md)\)。  
+ You can also create a derived class from [CUserTool Class](../mfc/reference/cusertool-class.md) to replace the default implementation. To do this, pass the runtime information for your derived class as the fourth parameter in CWinAppEx::EnableUserTools, instead of RUNTIME_CLASS([CUserTool Class](../mfc/reference/cusertool-class.md)).  
   
- 在定义了相应的常数后，请调用 [CWinAppEx::EnableUserTools](../Topic/CWinAppEx::EnableUserTools.md) 启用用户定义的工具。  
+ After you define the appropriate constants, call [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools) to enable user-defined tools.  
   
- 下面的方法调用添加演示如何使用这些常数：  
+ The following method call shows how to use these constants:  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo#1](../mfc/codesnippet/CPP/user-defined-tools_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#1](../mfc/codesnippet/cpp/user-defined-tools_1.cpp)]  
   
- 在此示例中，"工具选项卡将是包含在 **自定义** 对话框。  框架将替换任何命令与任意菜单的命令 ID **ID\_TOOLS\_ENTRY** 的集当前定义的用户工具，每当用户打开该菜单。  命令 ID **ID\_USER\_TOOL1** 通过 **ID\_USER\_TOOL10** 保留为用户定义的工具使用。  类处理 [CUserTool Class](../mfc/reference/cusertool-class.md) 调用用户工具。  **自定义** 对话框工具的选项卡在参数和目录输入字段右侧的按钮访问菜单 **IDR\_MENU\_ARGS** 和 **IDR\_MENU\_DIRS**。，当用户选择这些菜单之一中的命令，框架将筛选器追加到相应的文本框有资源 ID 等于 . 命令 ID 的字符串  
+ In this example, the tools tab will be included on the **Customization** dialog box. The framework will replace any command that matches the command ID **ID_TOOLS_ENTRY** in any menu with the set of currently defined user tools whenever a user opens that menu. The command IDs **ID_USER_TOOL1** through **ID_USER_TOOL10** are reserved for use for user-defined tools. The class [CUserTool Class](../mfc/reference/cusertool-class.md) handles calls to the user tools. The tool tab of the **Customization** dialog box provides buttons to the right of the argument and directory entry fields to access the menus **IDR_MENU_ARGS** and **IDR_MENU_DIRS**.When a user selects a command from one of these menus, the framework appends to the appropriate text box the string that has the resource ID equal to the command ID.  
   
-### 包括预定义的工具  
- 如果预定义要在应用程序启动的某些工具，必须重写应用程序主窗口有关的方法。[CFrameWnd::LoadFrame](../Topic/CFrameWnd::LoadFrame.md) 在该方法，您必须执行下列步骤。  
+### <a name="including-predefined-tools"></a>Including predefined tools  
+ If you want to predefine some tools on the application startup, you must override the [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) method of the main window of your application. In that method, you must perform the following steps.  
   
-##### 添加新工具。LoadFrame  
+##### <a name="to-add-new-tools-in-loadframe"></a>To add new tools in LoadFrame  
   
-1.  获取一个指向对象通过调用 [CUserToolsManager Class](../mfc/reference/cusertoolsmanager-class.md)[CWinAppEx::GetUserToolsManager](../Topic/CWinAppEx::GetUserToolsManager.md)。  
+1.  Obtain a pointer to the [CUserToolsManager Class](../mfc/reference/cusertoolsmanager-class.md) object by calling [CWinAppEx::GetUserToolsManager](../mfc/reference/cwinappex-class.md#getusertoolsmanager).  
   
-2.  对于要创建的每个工具，调用 [CUserToolsManager::CreateNewTool](../Topic/CUserToolsManager::CreateNewTool.md)。  此方法返回指向 [CUserTool Class](../mfc/reference/cusertool-class.md) 对象并将新创建用户工具。工具的内部集合。  如果针对 [CUserTool Class](../mfc/reference/cusertool-class.md) 派生类提供的运行时信息为 [CWinAppEx::EnableUserTools](../Topic/CWinAppEx::EnableUserTools.md)[CUserToolsManager::CreateNewTool](../Topic/CUserToolsManager::CreateNewTool.md) 第四个参数，将实例化并返回该类的实例。  
+2.  For every tool that you want to create, call [CUserToolsManager::CreateNewTool](../mfc/reference/cusertoolsmanager-class.md#createnewtool). This method returns a pointer to a [CUserTool Class](../mfc/reference/cusertool-class.md) object and adds the newly created user tool to the internal collection of tools. If you provided the runtime information for a derived class of [CUserTool Class](../mfc/reference/cusertool-class.md) as the fourth parameter of [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools), [CUserToolsManager::CreateNewTool](../mfc/reference/cusertoolsmanager-class.md#createnewtool) will instantiate and return an instance of that class instead.  
   
-3.  对于每工具，通过设置 `CUserTool::m_strLabel` 来设置其文本标签并通过调用 `CUserTool::SetCommand`将其命令。  [CUserTool Class](../mfc/reference/cusertool-class.md) 的默认实现。在对 `SetCommand`的调用中指定程序自动检索可用图标。  
+3.  For each tool, set its text label by setting `CUserTool::m_strLabel` and set its command by calling `CUserTool::SetCommand`. The default implementation of [CUserTool Class](../mfc/reference/cusertool-class.md) automatically retrieves available icons from the program that is specified in the call to `SetCommand`.  
   
-## 请参阅  
- [MFC 自定义](../mfc/customization-for-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Customization for MFC](../mfc/customization-for-mfc.md)   
  [CUserTool Class](../mfc/reference/cusertool-class.md)   
  [CUserToolsManager Class](../mfc/reference/cusertoolsmanager-class.md)   
  [CWinAppEx Class](../mfc/reference/cwinappex-class.md)
+
+
+
+
+

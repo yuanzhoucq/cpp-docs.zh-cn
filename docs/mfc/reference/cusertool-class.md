@@ -1,5 +1,5 @@
 ---
-title: "CUserTool 类 |Microsoft 文档"
+title: CUserTool Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CUserTool class
+- CUserTool [MFC], CopyIconToClipboard
+- CUserTool [MFC], DrawToolIcon
+- CUserTool [MFC], GetCommand
+- CUserTool [MFC], GetCommandId
+- CUserTool [MFC], Invoke
+- CUserTool [MFC], Serialize
+- CUserTool [MFC], SetCommand
+- CUserTool [MFC], SetToolIcon
+- CUserTool [MFC], LoadDefaultIcon
+- CUserTool [MFC], m_strArguments
+- CUserTool [MFC], m_strInitialDirectory
+- CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
 caps.latest.revision: 25
 author: mikeblome
@@ -46,80 +57,80 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 2e0b082be6aac7314d8251f89b42ed09e44e2f3d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80a4110cd3eda51f51aad444a3c6a5bb9e40ede7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cusertool-class"></a>CUserTool 类
-用户工具是运行外部应用程序的菜单项。 **工具**的选项卡上**自定义**对话框中 ( [CMFCToolBarsCustomizeDialog 类](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 使用户可以添加用户工具，并指定名称、 命令、 参数以及为每个用户工具的初始目录。  
+# <a name="cusertool-class"></a>CUserTool Class
+A user tool is a menu item that runs an external application. The **Tools** tab of the **Customize** dialog box ( [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) enables the user to add user tools, and to specify the name, command, arguments, and initial directory for each user tool.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CUserTool : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||  
-|[CUserTool::DrawToolIcon](#drawtoolicon)|在指定的矩形中绘制用户工具图标。|  
-|[CUserTool::GetCommand](#getcommand)|返回一个字符串，包含与用户工具关联的命令的文本。|  
-|[CUserTool::GetCommandId](#getcommandid)|返回的菜单项的用户工具的命令 ID。|  
-|[CUserTool::Invoke](#invoke)|执行与用户工具关联的命令。|  
-|[CUserTool::Serialize](#serialize)|从存档读取该对象或将该对象写入存档。 (重写[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)。)|  
-|[CUserTool::SetCommand](#setcommand)|设置与用户工具关联的命令。|  
-|[CUserTool::SetToolIcon](#settoolicon)|用户工具图标，从该工具关联的应用程序加载。|  
+|[CUserTool::DrawToolIcon](#drawtoolicon)|Draws the user tool icon in a specified rectangle.|  
+|[CUserTool::GetCommand](#getcommand)|Returns a string that contains the text of the command associated with the user tool.|  
+|[CUserTool::GetCommandId](#getcommandid)|Returns the command ID of the menu item of the user tool.|  
+|[CUserTool::Invoke](#invoke)|Executes the command associated with the user tool.|  
+|[CUserTool::Serialize](#serialize)|Reads or writes this object from or to an archive. (Overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CUserTool::SetCommand](#setcommand)|Sets the command associated with the user tool.|  
+|[CUserTool::SetToolIcon](#settoolicon)|Loads the icon for the user tool from the application associated with the tool.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CUserTool::LoadDefaultIcon](#loaddefaulticon)|加载用户工具的默认图标。|  
+|[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Loads the default icon for a user tool.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CUserTool::m_strArguments](#m_strarguments)|用户工具命令行参数。|  
-|[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|用户工具初始目录。|  
-|[CUserTool::m_strLabel](#m_strlabel)|该工具的菜单项中显示的工具名称。|  
+|[CUserTool::m_strArguments](#m_strarguments)|The command-line arguments for the user tool.|  
+|[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|The initial directory for the user tool.|  
+|[CUserTool::m_strLabel](#m_strlabel)|The tool name that is displayed in the menu item for the tool.|  
   
-## <a name="remarks"></a>备注  
- 有关如何启用应用程序中的用户工具的详细信息，请参阅[CUserToolsManager 类](../../mfc/reference/cusertoolsmanager-class.md)。  
+## <a name="remarks"></a>Remarks  
+ For more information about how to enable user tools in your application, see [CUserToolsManager Class](../../mfc/reference/cusertoolsmanager-class.md).  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何创建一个工具，来自`CUserToolsManager`对象，请设置`m_strLabel`成员变量，并设置用户工具运行的应用程序。 此代码段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to create a tool from a `CUserToolsManager` object, set the `m_strLabel` member variable, and set the application that the user tool runs. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&35;](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CUserTool](../../mfc/reference/cusertool-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxusertool.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxusertool.h  
   
-##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
+##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 BOOL CopyIconToClipboard();
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
- 在指定的矩形的中心绘制用户工具图标。  
+##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon  
+ Draws the user tool icon at the center of a specified rectangle.  
   
 ```  
 void DrawToolIcon(
@@ -127,130 +138,130 @@ void DrawToolIcon(
     const CRect& rectImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `rectImage`  
- 指定的区域的坐标，以显示图标。  
+ Specifies the coordinates of the area to display the icon.  
   
-##  <a name="getcommand"></a>CUserTool::GetCommand  
- 返回一个字符串，包含与用户工具关联的命令的文本。  
+##  <a name="getcommand"></a>  CUserTool::GetCommand  
+ Returns a string that contains the text of the command associated with the user tool.  
   
 ```  
 const CString& GetCommand() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对引用`CString`对象，其中包含与用户工具关联的命令的文本。  
+### <a name="return-value"></a>Return Value  
+ A reference to `CString` object that contains the text of the command associated with the user tool.  
   
-##  <a name="getcommandid"></a>CUserTool::GetCommandId  
- 返回用户工具的命令 ID。  
+##  <a name="getcommandid"></a>  CUserTool::GetCommandId  
+ Returns the command ID of the user tool.  
   
 ```  
 UINT GetCommandId() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 此用户工具的命令 ID。  
+### <a name="return-value"></a>Return Value  
+ The command ID of this user tool.  
   
-##  <a name="invoke"></a>CUserTool::Invoke  
- 执行与用户工具关联的命令。  
+##  <a name="invoke"></a>  CUserTool::Invoke  
+ Executes the command associated with the user tool.  
   
 ```  
 virtual BOOL Invoke();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则执行此命令所非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the command was executed successfully; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 调用[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)执行与用户工具关联的命令。 该函数将失败，该命令是否为空，或如果[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)失败。  
+### <a name="remarks"></a>Remarks  
+ Calls [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) to execute a command associated with the user tool. The function fails if the command is empty or if [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) fails.  
   
-##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
- 加载用户工具的默认图标。  
+##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
+ Loads the default icon for a user tool.  
   
 ```  
 virtual HICON LoadDefaultIcon();
 ```  
   
-### <a name="return-value"></a>返回值  
- 加载图标的句柄 ( `HICON`)，或`NULL`如果无法加载默认图标。  
+### <a name="return-value"></a>Return Value  
+ A handle to the loaded icon ( `HICON`), or `NULL` if the default icon cannot be loaded.  
   
-### <a name="remarks"></a>备注  
- 无法从该工具的可执行文件加载用户定义的工具的图标时，框架将调用此方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it is unable to load an icon for a user-defined tool from the executable file of the tool.  
   
- 重写此方法以提供您自己的默认工具图标。  
+ Override this method to supply your own default tool icon.  
   
-##  <a name="m_strarguments"></a>CUserTool::m_strArguments  
- 用户工具命令行参数。  
+##  <a name="m_strarguments"></a>  CUserTool::m_strArguments  
+ The command-line arguments for the user tool.  
   
 ```  
 CString m_strArguments;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此字符串传递给该工具，当您调用[CUserTool::Invoke](#invoke)或当用户单击此工具与关联的命令。  
+### <a name="remarks"></a>Remarks  
+ This string is passed to the tool when you call [CUserTool::Invoke](#invoke) or when a user clicks the command associated with this tool.  
   
-##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
- 指定用户工具的初始目录。  
+##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory  
+ Specifies the initial directory for the user tool.  
   
 ```  
 CString m_strInitialDirectory;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此变量指定当您调用时，该工具执行中的初始目录[CUserTool::Invoke](#invoke)或当用户单击此工具与关联的命令。  
+### <a name="remarks"></a>Remarks  
+ This variable specifies the initial directory that the tool executes in when you call [CUserTool::Invoke](#invoke) or when a user clicks the command associated with this tool.  
   
-##  <a name="m_strlabel"></a>CUserTool::m_strLabel  
- 该工具的菜单项中显示的标签。  
+##  <a name="m_strlabel"></a>  CUserTool::m_strLabel  
+ The label that is displayed in the menu item for the tool.  
   
 ```  
 CString m_strLabel;  
 ```  
   
-##  <a name="serialize"></a>CUserTool::Serialize  
+##  <a name="serialize"></a>  CUserTool::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setcommand"></a>CUserTool::SetCommand  
- 设置用户工具运行的应用程序。  
+##  <a name="setcommand"></a>  CUserTool::SetCommand  
+ Sets the application that the user tool runs.  
   
 ```  
 void SetCommand(LPCTSTR lpszCmd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszCmd`  
- 指定要与用户工具相关联的新应用程序。  
+ Specifies the new application to be associated with the user tool.  
   
-### <a name="remarks"></a>备注  
- 调用此方法以设置新运行的应用程序用户工具。 该方法将销毁旧图标并从给定的应用程序加载新建图标。 如果它无法从应用程序加载一个图标，它通过调用加载用户工具的默认图标[CUserTool::LoadDefaultIcon](#loaddefaulticon)。  
+### <a name="remarks"></a>Remarks  
+ Call this method to set a new application that the user tool runs. The method destroys the old icon and loads a new icon from the given application. If it cannot load an icon from the application, it loads the default icon for a user tool by calling [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
   
-##  <a name="settoolicon"></a>CUserTool::SetToolIcon  
- 用户工具图标，从该工具使用的应用程序加载。  
+##  <a name="settoolicon"></a>  CUserTool::SetToolIcon  
+ Loads the icon for the user tool from the application that the tool uses.  
   
 ```  
 virtual HICON SetToolIcon();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向加载图标的句柄。  
+### <a name="return-value"></a>Return Value  
+ A handle to the loaded icon.  
   
-### <a name="remarks"></a>备注  
- 调用此方法以加载菜单项上显示的图标。 此方法搜索该工具使用的可执行文件中的图标。 如果它没有默认图标，图标由[CUserTool::LoadDefaultIcon](#loaddefaulticon)改为使用。  
+### <a name="remarks"></a>Remarks  
+ Call this method to load the icon to be displayed on the menu item. This method searches for the icon in the executable file that the tool uses. If it does not have a default icon, the icon provided by [CUserTool::LoadDefaultIcon](#loaddefaulticon) is used instead.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)   
- [CUserToolsManager 类](../../mfc/reference/cusertoolsmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)   
+ [CUserToolsManager Class](../../mfc/reference/cusertoolsmanager-class.md)
 

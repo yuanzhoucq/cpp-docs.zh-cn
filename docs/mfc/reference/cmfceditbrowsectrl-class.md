@@ -1,5 +1,5 @@
 ---
-title: "CMFCEditBrowseCtrl 类 |Microsoft 文档"
+title: CMFCEditBrowseCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,9 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCEditBrowseCtrl::PreTranslateMessage method
-- CMFCEditBrowseCtrl constructor
-- CMFCEditBrowseCtrl class
+- CMFCEditBrowseCtrl [MFC], EnableBrowseButton
+- CMFCEditBrowseCtrl [MFC], EnableFileBrowseButton
+- CMFCEditBrowseCtrl [MFC], EnableFolderBrowseButton
+- CMFCEditBrowseCtrl [MFC], GetMode
+- CMFCEditBrowseCtrl [MFC], OnAfterUpdate
+- CMFCEditBrowseCtrl [MFC], OnBrowse
+- CMFCEditBrowseCtrl [MFC], OnChangeLayout
+- CMFCEditBrowseCtrl [MFC], OnDrawBrowseButton
+- CMFCEditBrowseCtrl [MFC], OnIllegalFileName
+- CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
 caps.latest.revision: 33
 author: mikeblome
@@ -46,81 +53,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5c5650da677a442628049c9ef4b41c2142cfb2c2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c235654d7298705f448729a43cf66c5851b6ab29
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 类
-`CMFCEditBrowseCtrl`类支持编辑浏览控件，它是有选择性地包含浏览按钮可编辑文本框。 当用户单击浏览按钮时，此控件会执行自定义操作或显示包含文件浏览器或文件夹浏览器的标准对话框。  
+# <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl Class
+The `CMFCEditBrowseCtrl` class supports the edit browse control, which is an editable text box that optionally contains a browse button. When the user clicks the browse button, the control performs a custom action or displays a standard dialog box that contains a file browser or a folder browser.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCEditBrowseCtrl : public CEdit  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|默认构造函数。|  
-|`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|析构函数。|  
+|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Default constructor.|  
+|`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|启用或禁用 （隐藏） 浏览按钮。|  
-|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|使浏览按钮并将编辑浏览控件放入*文件浏览*模式。|  
-|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|使浏览按钮并将编辑浏览控件放入*文件夹浏览*模式。|  
-|[CMFCEditBrowseCtrl::GetMode](#getmode)|返回当前的浏览模式。|  
-|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|编辑浏览控件更新用的浏览操作的结果后，由框架调用。|  
-|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|在用户单击浏览按钮之后，由框架调用。|  
-|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|重绘当前编辑浏览控件。|  
-|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|由框架来绘制浏览按钮调用。|  
-|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|在编辑控件中输入了非法的文件名称时，由框架调用。|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|翻译窗口消息之前被发送到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关语法和详细信息，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|  
-|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|设置自定义映像的浏览按钮。|  
+|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Enables or disables (hides) the browse button.|  
+|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Enables the browse button and puts the edit browse control in *file browse* mode.|  
+|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Enables the browse button and puts the edit browse control in *folder browse* mode.|  
+|[CMFCEditBrowseCtrl::GetMode](#getmode)|Returns the current browse mode.|  
+|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Called by the framework after the edit browse control is updated with the result of a browse action.|  
+|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Called by the framework after the user clicks the browse button.|  
+|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Redraws the current edit browse control.|  
+|[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Called by the framework to draw the browse button.|  
+|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Called by the framework when an illegal file name was entered in the edit control.|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For syntax and more information, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Sets a custom image for the browse button.|  
   
-## <a name="remarks"></a>备注  
- 使用编辑浏览控件选择文件或文件夹名称。 （可选） 使用该控件才能执行如自定义操作显示的对话框。 你可以显示或不显示浏览按钮，并在按钮上应用的自定义标签或图像。  
+## <a name="remarks"></a>Remarks  
+ Use an edit browse control to select a file or folder name. Optionally, use the control to perform a custom action such as to display a dialog box. You can display or not display the browse button, and you can apply a custom label or image on the button.  
   
- *浏览模式*的编辑浏览控件将确定是否显示浏览按钮并单击按钮时，会发生何种操作。 有关详细信息，请参阅[GetMode](#getmode)方法。  
+ The *browse mode* of the edit browse control determines whether it displays a browse button and what action occurs when the button is clicked. For more information, see the [GetMode](#getmode) method.  
   
- `CMFCEditBrowseCtrl`类支持以下模式。  
+ The `CMFCEditBrowseCtrl` class supports the following modes.  
   
  `custom mode`  
- 在用户单击浏览按钮时执行自定义操作。 例如，可以显示特定于应用程序的对话框。  
+ A custom action is performed when the user clicks the browse button. For example, you can display an application-specific dialog box.  
   
  `file mode`  
- 当用户单击浏览按钮，将显示标准文件选择对话框。  
+ A standard file selection dialog box is displayed when the user clicks the browse button.  
   
  `folder mode`  
- 当用户单击浏览按钮，将显示一个标准文件夹选择对话框。  
+ A standard folder selection dialog box is displayed when the user clicks the browse button.  
   
-## <a name="how-to-specify-an-edit-browse-control"></a>如何︰ 指定编辑浏览控件  
- 执行以下步骤以将应用程序中的编辑浏览控件合并︰  
+## <a name="how-to-specify-an-edit-browse-control"></a>How-To: Specify an Edit Browse Control  
+ Perform the following steps to incorporate an edit browse control in your application:  
   
-1.  如果您想要实现自定义浏览模式下，派生您自己的类从`CMFCEditBrowseCtrl`类，然后重写[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)方法。 在重写方法中，执行自定义浏览操作，并使用结果更新编辑浏览控件。  
+1.  If you want to implement a custom browse mode, derive your own class from the `CMFCEditBrowseCtrl` class and then override the [CMFCEditBrowseCtrl::OnBrowse](#onbrowse) method. In the overridden method, execute a custom browse action and update the edit browse control with the result.  
   
-2.  嵌入任何一个`CMFCEditBrowseCtrl`对象或父窗口对象的派生的编辑浏览控件对象。  
+2.  Embed either the `CMFCEditBrowseCtrl` object or the derived edit browse control object into the parent window object.  
   
-3.  如果您使用**类向导**若要创建一个对话框中，添加一个编辑控件 ( `CEdit`) 到对话框的窗体。 此外，添加一个变量来访问标头文件中的控件。 在标头文件中，将从变量的类型更改`CEdit`到`CMFCEditBrowseCtrl`。 编辑浏览控件将自动创建。 如果不使用**类向导**，添加`CMFCEditBrowseCtrl`变量与头文件，然后调用其`Create`方法。  
+3.  If you use the **Class Wizard** to create a dialog box, add an edit control ( `CEdit`) to the dialog box form. Also, add a variable to access the control in your header file. In your header file, change the type of the variable from `CEdit` to `CMFCEditBrowseCtrl`. The edit browse control will be created automatically. If you do not use the **Class Wizard**, add a `CMFCEditBrowseCtrl` variable to your header file and then call its `Create` method.  
   
-4.  如果将编辑浏览控件添加到对话框中，使用**ClassWizard**工具来设置数据交换。  
+4.  If you add an edit browse control to a dialog box, use the **ClassWizard** tool to set up data exchange.  
   
-5.  调用[EnableFolderBrowseButton](#enablefolderbrowsebutton)， [EnableFileBrowseButton](#enablefilebrowsebutton)，或[EnableBrowseButton](#enablebrowsebutton)方法来设置浏览模式并显示浏览按钮。 调用[GetMode](#getmode)方法来获取当前的浏览模式。  
+5.  Call the [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton), or [EnableBrowseButton](#enablebrowsebutton) method to set the browse mode and display the browse button. Call the [GetMode](#getmode) method to obtain the current browse mode.  
   
-6.  若要为浏览按钮提供自定义映像，请调用[SetBrowseButtonImage](#setbrowsebuttonimage)方法或重写[OnDrawBrowseButton](#ondrawbrowsebutton)方法。  
+6.  To provide a custom image for the browse button, call the [SetBrowseButtonImage](#setbrowsebuttonimage) method or override the [OnDrawBrowseButton](#ondrawbrowsebutton) method.  
   
-7.  若要从编辑浏览控件中删除浏览按钮，调用[EnableBrowseButton](#enablebrowsebutton)方法`bEnable`参数设置为`FALSE`。  
+7.  To remove the browse button from the edit browse control, call the [EnableBrowseButton](#enablebrowsebutton) method with the `bEnable` parameter set to `FALSE`.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -131,17 +138,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  [CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md)  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用这两种方法`CMFCEditBrowseCtrl`类︰`EnableFolderBrowseButton`和`EnableFileBrowseButton`。 此示例摘自[新控件示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use two methods in the `CMFCEditBrowseCtrl` class: `EnableFolderBrowseButton` and `EnableFileBrowseButton`. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #&6;](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls #&7;](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxeditbrowsectrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxeditbrowsectrl.h  
   
-##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
- 显示或不在当前的编辑浏览控件上显示浏览按钮。  
+##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton  
+ Displays or does not display the browse button on the current edit browse control.  
   
 ```  
 void EnableBrowseButton(
@@ -149,20 +156,20 @@ void EnableBrowseButton(
     LPCTSTR szLabel=_T("..."));
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- `TRUE`若要显示浏览按钮;`FALSE`不希望显示浏览按钮。 默认值为 `TRUE`。  
+ `TRUE` to display the browse button; `FALSE` not to display the browse button. The default value is `TRUE`.  
   
  `szLabel`  
- 在浏览按钮显示标签。 默认值是" **...**".  
+ The label that is displayed on the browse button. The default value is " **...**".  
   
-### <a name="remarks"></a>备注  
- 如果`bEnable`参数是`TRUE`，实现一个自定义操作，以便在单击浏览按钮时执行。 若要实现自定义操作，从派生类`CMFCEditBrowseCtrl`类，然后重写其[OnBrowse](#onbrowse)方法。  
+### <a name="remarks"></a>Remarks  
+ If the `bEnable` parameter is `TRUE`, implement a custom action to perform when the browse button is clicked. To implement a custom action, derive a class from the `CMFCEditBrowseCtrl` class and then override its [OnBrowse](#onbrowse) method.  
   
- 如果`bEnable`参数是`TRUE`，该控件的浏览模式是`BrowseMode_Default`; 否则为浏览模式是`BrowseMode_None`。 有关浏览模式的详细信息，请参阅[GetMode](#getmode)方法。  
+ If the `bEnable` parameter is `TRUE`, the browse mode of the control is `BrowseMode_Default`; otherwise, the browse mode is `BrowseMode_None`. For more information about browse modes, see the [GetMode](#getmode) method.  
   
-##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
- 在当前的编辑浏览控件中显示浏览按钮并将控件放入*文件浏览*模式。  
+##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton  
+ Displays the browse button on the current edit browse control and puts the control in *file browse* mode.  
   
 ```  
 void EnableFileBrowseButton(
@@ -171,85 +178,85 @@ void EnableFileBrowseButton(
     DWORD dwFlags = OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszDefExt`  
- 指定在文件选择对话框中使用的默认文件扩展名。 默认值为 `NULL`。  
+ Specifies the default file name extension that is used in the file selection dialog box. The default value is `NULL`.  
   
  `lpszFilter`  
- 指定在文件选择对话框中使用的默认筛选器字符串。 默认值为 `NULL`。  
+ Specifies the default filter string that is used in the file selection dialog box. The default value is `NULL`.  
   
  `dwFlags`  
- 对话框标志。 默认值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的按位组合 (OR)。  
+ Dialog box flags. The default value is a bitwise combination (OR) of OFN_HIDEREADONLY and OFN_OVERWRITEPROMPT.  
   
-### <a name="remarks"></a>备注  
- 当编辑浏览控件处于文件浏览模式，并且在用户单击浏览按钮时，该控件将显示标准文件选择对话框。  
+### <a name="remarks"></a>Remarks  
+ When the edit browse control is in file browse mode and the user clicks the browse button, the control displays the standard file selection dialog box.  
   
- 有关可用标志的完整列表，请参阅[OPENFILENAME 结构](https://msdn.microsoft.com/library/ms646839.aspx)。  
+ For a full list of available flags, see [OPENFILENAME structure](https://msdn.microsoft.com/library/ms646839.aspx).  
   
-##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
- 在当前的编辑浏览控件中显示浏览按钮并将控件放入*文件夹浏览*模式。  
+##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+ Displays the browse button on the current edit browse control and puts the control in *folder browse* mode.  
   
 ```  
 void EnableFolderBrowseButton();
 ```  
   
-### <a name="remarks"></a>备注  
- 当编辑浏览控件在文件夹浏览模式中并且用户单击浏览按钮时，该控件将显示标准文件夹选择对话框。  
+### <a name="remarks"></a>Remarks  
+ When the edit browse control is in folder browse mode and the user clicks the browse button, the control displays the standard folder selection dialog box.  
   
-##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
- 检索当前的编辑浏览控件的浏览模式。  
+##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode  
+ Retrieves the browse mode of the current edit browse control.  
   
 ```  
 CMFCEditBrowseCtrl::BrowseMode GetMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指定当前的编辑模式的枚举值之一浏览控件。 浏览模式将确定是否框架显示浏览按钮，当用户单击该按钮时采取的操作。  
+### <a name="return-value"></a>Return Value  
+ One of the enumeration values that specifies the current mode of the edit browse control. The browse mode determines whether the framework displays the browse button and what action occurs when a user clicks that button.  
   
- 下表列出可能的返回值。  
+ The following table lists the possible return values.  
   
-|值|说明|  
+|Value|Description|  
 |-----------|-----------------|  
-|`BrowseMode_Default`|`custom mode`。 不执行程序员定义的操作。|  
-|`BrowseMode_File`|`file mode`。 显示标准文件浏览器对话框。|  
-|`BrowseMode_Folder`|`folder mode`。 显示标准文件夹浏览器对话框。|  
-|`BrowseMode_None`|不显示浏览按钮。|  
+|`BrowseMode_Default`|`custom mode`. A programmer-defined action is performed.|  
+|`BrowseMode_File`|`file mode`. The standard file browser dialog box is displayed.|  
+|`BrowseMode_Folder`|`folder mode`. The standard folder browser dialog box is displayed.|  
+|`BrowseMode_None`|The browse button is not displayed.|  
   
-### <a name="remarks"></a>备注  
- 默认情况下，`CMFCEditBrowseCtrl`对象初始化为`BrowseMode_None`模式。 修改使用浏览模式[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)， [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)，和[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)方法。  
+### <a name="remarks"></a>Remarks  
+ By default, a `CMFCEditBrowseCtrl` object is initialized to `BrowseMode_None` mode. Modify the browse mode with the [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), and [CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton) methods.  
   
-##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
- 编辑浏览控件更新用的浏览操作的结果后，由框架调用。  
+##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate  
+ Called by the framework after the edit browse control is updated with the result of a browse action.  
   
 ```  
 virtual void OnAfterUpdate();
 ```  
   
-### <a name="remarks"></a>备注  
- 重写此方法在派生类来实现自定义操作。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to implement a custom action.  
   
-##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
- 在用户单击编辑浏览控件的浏览按钮之后，由框架调用。  
+##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse  
+ Called by the framework after the user clicks the browse button of the edit browse control.  
   
 ```  
 virtual void OnBrowse();
 ```  
   
-### <a name="remarks"></a>备注  
- 使用此方法以执行自定义代码，当用户单击编辑浏览控件的浏览按钮。 派生您自己的类从`CMFCEditBrowseCtrl`类并重写其`OnBrowse`方法。 在该方法中，实现自定义浏览操作，并 （可选） 更新编辑浏览控件的文本框。 在您的应用程序，使用[EnableBrowseButton](#enablebrowsebutton)方法，以将编辑浏览控件放入*自定义浏览*模式。  
+### <a name="remarks"></a>Remarks  
+ Use this method to execute custom code when the user clicks the browse button of the edit browse control. Derive your own class from the `CMFCEditBrowseCtrl` class and override its `OnBrowse` method. In that method, implement a custom browse action and optionally update the text box of the edit browse control. In your application, use the [EnableBrowseButton](#enablebrowsebutton) method to put the edit browse control in *custom browse* mode.  
   
-##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
- 重绘当前编辑浏览控件。  
+##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout  
+ Redraws the current edit browse control.  
   
 ```  
 virtual void OnChangeLayout();
 ```  
   
-### <a name="remarks"></a>备注  
- 在浏览模式的编辑浏览控件发生更改时，框架将调用此方法。 有关详细信息，请参阅[CMFCEditBrowseCtrl::GetMode](#getmode)。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the browse mode of the edit browse control changes. For more information, see [CMFCEditBrowseCtrl::GetMode](#getmode).  
   
-##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
- 由框架用于绘制编辑浏览控件上的浏览按钮调用。  
+##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton  
+ Called by the framework to draw the browse button on the edit browse control.  
   
 ```  
 virtual void OnDrawBrowseButton(
@@ -259,24 +266,24 @@ virtual void OnDrawBrowseButton(
     BOOL bIsButtonHot);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  `Rect`  
- 浏览按钮的边框。  
+ The bounding rectangle of the browse button.  
   
  `bIsButtonPressed`  
- `TRUE`如果按下了按钮;否则为`FALSE`。  
+ `TRUE` if the button is pressed; otherwise, `FALSE`.  
   
  `bIsButtonHot`  
- `TRUE`如果该按钮将突出显示;，否则为`FALSE`。  
+ `TRUE` if the button is highlighted; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 重写此函数在派生类自定义浏览按钮的外观。  
+### <a name="remarks"></a>Remarks  
+ Override this function in a derived class to customize the appearance of the browse button.  
   
-##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
- 在浏览按钮编辑浏览控件上设置自定义映像。  
+##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage  
+ Sets a custom image on the browse button of the edit browse control.  
   
 ```  
 void SetBrowseButtonImage(
@@ -291,39 +298,39 @@ void SetBrowseButtonImage(
 void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hIcon`  
- 图标的句柄。  
+ The handle of an icon.  
   
  `hBitmap`  
- 位图的句柄。  
+ The handle of a bitmap.  
   
  `uiBmpResId`  
- 一个位图资源 ID。  
+ The resource ID of a bitmap.  
   
  `bAutoDestroy`  
- `TRUE`当此方法退出; 中删除指定的图标或位图否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` to delete the specified icon or bitmap when this method exits; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 此方法用于将自定义映像应用到浏览按钮。 默认情况下，该框架时，获取标准映像编辑浏览控件是否处于*文件浏览*或*文件夹浏览*模式。  
+### <a name="remarks"></a>Remarks  
+ Use this method to apply a custom image to the browse button. By default, the framework obtains a standard image when the edit browse control is in *file browse* or *folder browse* mode.  
   
-##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
- 在编辑控件中输入了非法的文件名称时，由框架调用。  
+##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName  
+ Called by the framework when an illegal file name was entered in the edit control.  
   
 ```  
 virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `strFileName`  
- 指定非法的文件名。  
+ Specifies the illegal file name.  
   
-### <a name="return-value"></a>返回值  
- 应返回`FALSE`如果进一步文件对话框，可以通过此文件名。 在这种情况下，焦点返回设置到编辑控件和用户应继续编辑。 显示有关非法文件名告知用户一个消息框的默认实现，并返回`FALSE`。 你可以重写此方法，更正文件名，并返回`TRUE`进行进一步处理。  
+### <a name="return-value"></a>Return Value  
+ Should return `FALSE` if this file name can not be passed further to the file dialog. In this case, focus is set back to the edit control and the user should continue editing. The default implementation displays a message box telling the user about the illegal file name and returns `FALSE`. You can override this method, correct the file name, and return `TRUE` for further processing.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

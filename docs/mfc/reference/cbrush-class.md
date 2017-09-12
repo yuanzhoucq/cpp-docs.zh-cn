@@ -1,5 +1,5 @@
 ---
-title: "CBrush 类 |Microsoft 文档"
+title: CBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,8 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- brushes, CBrush class
-- CBrush class
+- CBrush [MFC], CBrush
+- CBrush [MFC], CreateBrushIndirect
+- CBrush [MFC], CreateDIBPatternBrush
+- CBrush [MFC], CreateHatchBrush
+- CBrush [MFC], CreatePatternBrush
+- CBrush [MFC], CreateSolidBrush
+- CBrush [MFC], CreateSysColorBrush
+- CBrush [MFC], FromHandle
+- CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 caps.latest.revision: 21
 author: mikeblome
@@ -44,68 +51,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: efcbe2757de3a7e4621e2b20c88726ead111cf8c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23a816363af6f77ff498890a4e4cca8ecc17d53a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbrush-class"></a>CBrush 类
-封装一个 Windows 图形设备接口 (GDI) 画笔。  
+# <a name="cbrush-class"></a>CBrush Class
+Encapsulates a Windows graphics device interface (GDI) brush.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBrush : public CGdiObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::CBrush](#cbrush)|构造 `CBrush` 对象。|  
+|[CBrush::CBrush](#cbrush)|Constructs a `CBrush` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|初始化具有样式、 颜色和模式中指定的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。|  
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|与设备无关位图 (DIB) 所指定的模式初始化画笔。|  
-|[CBrush::CreateHatchBrush](#createhatchbrush)|初始化具有指定阴影的模式和颜色的画笔。|  
-|[CBrush::CreatePatternBrush](#createpatternbrush)|初始化画笔的位图指定的模式。|  
-|[CBrush::CreateSolidBrush](#createsolidbrush)|初始化具有指定实色的画笔。|  
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|创建一个画笔，它为默认系统颜色。|  
-|[CBrush::FromHandle](#fromhandle)|返回一个指向`CBrush`对象时给出到了 Windows 句柄`HBRUSH`对象。|  
-|[CBrush::GetLogBrush](#getlogbrush)|获取[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Initializes a brush with the style, color, and pattern specified in a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.|  
+|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Initializes a brush with a pattern specified by a device-independent bitmap (DIB).|  
+|[CBrush::CreateHatchBrush](#createhatchbrush)|Initializes a brush with the specified hatched pattern and color.|  
+|[CBrush::CreatePatternBrush](#createpatternbrush)|Initializes a brush with a pattern specified by a bitmap.|  
+|[CBrush::CreateSolidBrush](#createsolidbrush)|Initializes a brush with the specified solid color.|  
+|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Creates a brush that is the default system color.|  
+|[CBrush::FromHandle](#fromhandle)|Returns a pointer to a `CBrush` object when given a handle to a Windows `HBRUSH` object.|  
+|[CBrush::GetLogBrush](#getlogbrush)|Gets a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::operator HBRUSH](#operator_hbrush)|返回附加到的 Windows 句柄`CBrush`对象。|  
+|[CBrush::operator HBRUSH](#operator_hbrush)|Returns the Windows handle attached to the `CBrush` object.|  
   
-## <a name="remarks"></a>备注  
- 若要使用`CBrush`对象，请构造`CBrush`对象，并将其传递给任何`CDC`需要画笔的成员函数。  
+## <a name="remarks"></a>Remarks  
+ To use a `CBrush` object, construct a `CBrush` object and pass it to any `CDC` member function that requires a brush.  
   
- 画笔可以实线、 印记，或图案。  
+ Brushes can be solid, hatched, or patterned.  
   
- 有关详细信息`CBrush`，请参阅[图形对象](../../mfc/graphic-objects.md)。  
+ For more information on `CBrush`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CBrush`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
- 构造 `CBrush` 对象。  
+##  <a name="cbrush"></a>  CBrush::CBrush  
+ Constructs a `CBrush` object.  
   
 ```  
 CBrush(); 
@@ -114,66 +121,66 @@ CBrush(int nIndex, COLORREF crColor);
 explicit CBrush(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 指定为 RGB 颜色的画笔的前景色。 如果影线画笔，此参数指定阴影的颜色。  
+ Specifies the foreground color of the brush as an RGB color. If the brush is hatched, this parameter specifies the color of the hatching.  
   
  `nIndex`  
- 指定画笔的阴影样式。 它可以是下列值之一︰  
+ Specifies the hatch style of the brush. It can be any one of the following values:  
   
-- `HS_BDIAGONAL`为 45 度 （从左到右） 的向下阴影  
+- `HS_BDIAGONAL` Downward hatch (left to right) at 45 degrees  
   
-- `HS_CROSS`水平和垂直交叉影线  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`45 度交叉影线  
+- `HS_DIAGCROSS` Crosshatch at 45 degrees  
   
-- `HS_FDIAGONAL`向上阴影 （从左到右） 设为 45 度  
+- `HS_FDIAGONAL` Upward hatch (left to right) at 45 degrees  
   
-- `HS_HORIZONTAL`水平阴影  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`垂直阴影  
+- `HS_VERTICAL` Vertical hatch  
   
  `pBitmap`  
- 指向`CBitmap`对象，它指定与画笔绘制的位图。  
+ Points to a `CBitmap` object that specifies a bitmap with which the brush paints.  
   
-### <a name="remarks"></a>备注  
- `CBrush`具有四个重载构造函数。不带任何参数的构造函数构造未初始化`CBrush`必须进行初始化，然后才能使用的对象。  
+### <a name="remarks"></a>Remarks  
+ `CBrush` has four overloaded constructors.The constructor with no arguments constructs an uninitialized `CBrush` object that must be initialized before it can be used.  
   
- 如果您使用不带任何参数的构造函数，必须初始化生成`CBrush`对象[CreateSolidBrush](#createsolidbrush)， [CreateHatchBrush](#createhatchbrush)， [CreateBrushIndirect](#createbrushindirect)， [CreatePatternBrush](#createpatternbrush)，或[CreateDIBPatternBrush](#createdibpatternbrush)。 如果您使用不采用参数的构造函数之一，则无需初始化是所必需。 如果遇到错误，而不带任何参数的构造函数将始终会成功，带有参数的构造函数可以引发异常。  
+ If you use the constructor with no arguments, you must initialize the resulting `CBrush` object with [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), or [CreateDIBPatternBrush](#createdibpatternbrush). If you use one of the constructors that takes arguments, then no further initialization is necessary. The constructors with arguments can throw an exception if errors are encountered, while the constructor with no arguments will always succeed.  
   
- 使用单个构造函数[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数构造实心画笔用指定颜色。 颜色指定 RGB 值，并可以利用构造`RGB`WINDOWS 中的宏。H。  
+ The constructor with a single [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter constructs a solid brush with the specified color. The color specifies an RGB value and can be constructed with the `RGB` macro in WINDOWS.H.  
   
- 带有两个参数的构造函数构造阴影画笔。 `nIndex`参数指定的索引的阴影模式。 `crColor`参数指定的颜色。  
+ The constructor with two parameters constructs a hatch brush. The `nIndex` parameter specifies the index of a hatched pattern. The `crColor` parameter specifies the color.  
   
- 使用构造函数`CBitmap`参数构造模式的画笔。 此参数用于标识位图。 假定已创建使用位图[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)。 位图来填充模式中使用的最小大小为 8 x 8 像素。  
+ The constructor with a `CBitmap` parameter constructs a patterned brush. The parameter identifies a bitmap. The bitmap is assumed to have been created by using [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), or [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). The minimum size for a bitmap to be used in a fill pattern is 8 pixels by 8 pixels.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&21;](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
- 初始化具有样式、 颜色和模式中指定的画笔[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构。  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
+ Initializes a brush with a style, color, and pattern specified in a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpLogBrush*  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，其中包含有关画笔的信息。  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure that contains information about the brush.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 画笔随后可以选择作为任何设备上下文的当前画笔。  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- 使用当前的文本和背景颜色绘制字符使用 （1 平面） 1 位 / 像素的单色位图创建画笔。 将使用当前的文本颜色绘制像素为单位表示的位设置为 0。 将当前的背景色绘制像素为单位表示的位设置为 1。  
+ A brush created using a monochrome (1 plane, 1 bit per pixel) bitmap is drawn using the current text and background colors. Pixels represented by a bit set to 0 will be drawn with the current text color. Pixels represented by a bit set to 1 will be drawn with the current background color.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&22;](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
- 与设备无关位图 (DIB) 所指定的模式初始化画笔。  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
+ Initializes a brush with the pattern specified by a device-independent bitmap (DIB).  
   
 ```  
 BOOL CreateDIBPatternBrush(
@@ -186,49 +193,49 @@ BOOL CreateDIBPatternBrush(
     UINT nUsage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *hPackedDIB*  
- 标识一个全局内存对象，包含已打包的设备无关位图 (DIB)。  
+ Identifies a global-memory object containing a packed device-independent bitmap (DIB).  
   
  *nUsage*  
- 指定是否**bmiColors []**字段[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)数据结构 （是的"打包 DIB"的一部分） 到当前已实现的逻辑调色板包含显式 RGB 值或索引。 参数必须为下列值之一︰  
+ Specifies whether the **bmiColors[]** fields of the [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) data structure (a part of the "packed DIB") contain explicit RGB values or indices into the currently realized logical palette. The parameter must be one of the following values:  
   
-- **DIB_PAL_COLORS**颜色表包含 16 位索引的数组。  
+- **DIB_PAL_COLORS** The color table consists of an array of 16-bit indexes.  
   
-- **DIB_RGB_COLORS**颜色表包含文本的 RGB 值。  
+- **DIB_RGB_COLORS** The color table contains literal RGB values.  
   
  *lpPackedDIB*  
- 指向已打包 DIB 组成`BITMAPINFO`紧跟定义位图的像素的字节数组的结构。  
+ Points to a packed DIB consisting of a `BITMAPINFO` structure immediately followed by an array of bytes defining the pixels of the bitmap.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 随后可为任何支持光栅操作的设备上下文被选择画笔。  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected for any device context that supports raster operations.  
   
- 在两个版本处理 DIB 的方式的不同之处︰  
+ The two versions differ in the way you handle the DIB:  
   
--   在第一个版本中，若要获取 DIB 的句柄您调用 Windows **GlobalAlloc**函数分配的全局内存块，然后用已打包 DIB 填充内存。  
+-   In the first version, to obtain a handle to the DIB you call the Windows **GlobalAlloc** function to allocate a block of global memory and then fill the memory with the packed DIB.  
   
--   在第二个版本中，它不需要调用**GlobalAlloc**分配内存来存放打包 DIB。  
+-   In the second version, it is not necessary to call **GlobalAlloc** to allocate memory for the packed DIB.  
   
- 已打包的 DIB 组成`BITMAPINFO`紧跟定义位图的像素的字节数组的数据结构。 位图用作填充模式应为 8 x 8 像素。 如果位图大于，Windows 将创建使用只有对应于前 8 行和 8 个列中与位图左上角的像素位的填充模式。  
+ A packed DIB consists of a `BITMAPINFO` data structure immediately followed by the array of bytes that defines the pixels of the bitmap. Bitmaps used as fill patterns should be 8 pixels by 8 pixels. If the bitmap is larger, Windows creates a fill pattern using only the bits corresponding to the first 8 rows and 8 columns of pixels in the upper-left corner of the bitmap.  
   
- 当应用程序选择两种颜色 DIB 图案画笔入单色设备上下文时，Windows 将忽略在 DIB 中指定的颜色，并改为显示使用设备上下文的当前文本和背景色的模式画笔。 使用的文本颜色来显示像素映射到第一种颜色 （按 DIB 颜色表中的偏移量 0） 的 DIB。 使用背景色显示映射到 （按颜色表中的偏移量 1） 的第二个颜色的像素为单位。  
+ When an application selects a two-color DIB pattern brush into a monochrome device context, Windows ignores the colors specified in the DIB and instead displays the pattern brush using the current text and background colors of the device context. Pixels mapped to the first color (at offset 0 in the DIB color table) of the DIB are displayed using the text color. Pixels mapped to the second color (at offset 1 in the color table) are displayed using the background color.  
   
- 有关使用以下 Windows 功能的信息，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]:  
+ For information about using the following Windows functions, see the Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (仅为与 Windows 的版本早于 3.0 编写的应用程序兼容性提供此函数; 使用**CreateDIBPatternBrushPt**函数。)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (This function is provided only for compatibility with applications written for versions of Windows earlier than 3.0; use the **CreateDIBPatternBrushPt** function.)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) （此函数应基于 Win32 的应用程序。）  
+- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (This function should be used for Win32-based applications.)  
   
 - [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView 第&23;](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
- 初始化具有指定阴影的模式和颜色的画笔。  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
+ Initializes a brush with the specified hatched pattern and color.  
   
 ```  
 BOOL CreateHatchBrush(
@@ -236,176 +243,176 @@ BOOL CreateHatchBrush(
     COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 指定画笔的阴影样式。 它可以是下列值之一︰  
+ Specifies the hatch style of the brush. It can be any one of the following values:  
   
-- `HS_BDIAGONAL`为 45 度 （从左到右） 的向下阴影  
+- `HS_BDIAGONAL` Downward hatch (left to right) at 45 degrees  
   
-- `HS_CROSS`水平和垂直交叉影线  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`45 度交叉影线  
+- `HS_DIAGCROSS` Crosshatch at 45 degrees  
   
-- `HS_FDIAGONAL`向上阴影 （从左到右） 设为 45 度  
+- `HS_FDIAGONAL` Upward hatch (left to right) at 45 degrees  
   
-- `HS_HORIZONTAL`水平阴影  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`垂直阴影  
+- `HS_VERTICAL` Vertical hatch  
   
  `crColor`  
- 指定为 RGB 颜色 （阴影的颜色） 的背景色的画笔。 请参阅[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
+ Specifies the foreground color of the brush as an RGB color (the color of the hatches). See [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) in the Windows SDK for more information.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 画笔随后可以选择作为任何设备上下文的当前画笔。  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&24;](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
- 初始化画笔的位图指定的模式。  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
+ Initializes a brush with a pattern specified by a bitmap.  
   
 ```  
 BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pBitmap`  
- 标识一个位图。  
+ Identifies a bitmap.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 随后可为任何支持光栅操作的设备上下文被选择画笔。 由标识位图`pBitmap`通常通过使用初始化[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)函数。  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected for any device context that supports raster operations. The bitmap identified by `pBitmap` is typically initialized by using the [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), or [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) function.  
   
- 位图用作填充模式应为 8 x 8 像素。 如果位图大于，Windows 将只使用对应的前 8 行和列中与位图左上角的像素的位。  
+ Bitmaps used as fill patterns should be 8 pixels by 8 pixels. If the bitmap is larger, Windows will only use the bits corresponding to the first 8 rows and columns of pixels in the upper-left corner of the bitmap.  
   
- 图案画笔可以删除而不会影响相关联的位图。 这意味着位图可用来创建任意数量的图案画笔。  
+ A pattern brush can be deleted without affecting the associated bitmap. This means the bitmap can be used to create any number of pattern brushes.  
   
- 使用当前的文本和背景颜色绘制字符使用单色位图 （1 颜色平面，1 位 / 像素） 创建的画笔。 使用当前的文本颜色绘制像素为单位表示的位设置为 0。 当前的背景色绘制像素为单位表示的位设置为 1。  
+ A brush created using a monochrome bitmap (1 color plane, 1 bit per pixel) is drawn using the current text and background colors. Pixels represented by a bit set to 0 are drawn with the current text color. Pixels represented by a bit set to 1 are drawn with the current background color.  
   
- 有关使用[CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508)，Windows 函数，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For information about using [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), a Windows function, see the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&25;](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
- 初始化具有指定实色的画笔。  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
+ Initializes a brush with a specified solid color.  
   
 ```  
 BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)结构，它指定画笔的颜色。 颜色指定 RGB 值，并可以利用构造`RGB`WINDOWS 中的宏。H。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure that specifies the color of the brush. The color specifies an RGB value and can be constructed with the `RGB` macro in WINDOWS.H.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 画笔随后可以选择作为任何设备上下文的当前画笔。  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- 当应用程序已完成使用由创建画笔`CreateSolidBrush`，它应选择从设备上下文画笔。  
+ When an application has finished using the brush created by `CreateSolidBrush`, it should select the brush out of the device context.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CBrush::CBrush](#cbrush)。  
+### <a name="example"></a>Example  
+  See the example for [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
- 初始化画笔颜色。  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
+ Initializes a brush color.  
   
 ```  
 BOOL CreateSysColorBrush(int nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 指定颜色索引。 此值对应于用来绘制一个 21 窗口元素的颜色。 请参阅[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关值的列表。  
+ Specifies a color index. This value corresponds to the color used to paint one of the 21 window elements. See [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) in the Windows SDK for a list of values.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 画笔随后可以选择作为任何设备上下文的当前画笔。  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- 当应用程序已完成使用由创建画笔`CreateSysColorBrush`，它应选择从设备上下文画笔。  
+ When an application has finished using the brush created by `CreateSysColorBrush`, it should select the brush out of the device context.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&26;](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
- 返回一个指向`CBrush`对象时给出到了 Windows 句柄[HBRUSH](#operator_hbrush)对象。  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
+ Returns a pointer to a `CBrush` object when given a handle to a Windows [HBRUSH](#operator_hbrush) object.  
   
 ```  
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hBrush`  
- `HANDLE`为 Windows GDI 画笔。  
+ `HANDLE` to a Windows GDI brush.  
   
-### <a name="return-value"></a>返回值  
- 一个指向`CBrush`对象成功，否则为如果**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CBrush` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 如果`CBrush`对象尚未附加到该句柄，一种临时`CBrush`创建对象并将其连接。 此临时`CBrush`对象是否有效，直到下一步该应用程序在其事件循环内有空闲时间。 此时，将删除所有临时图形对象。 换而言之，仅在一个窗口消息的处理过程的临时对象有效。  
+### <a name="remarks"></a>Remarks  
+ If a `CBrush` object is not already attached to the handle, a temporary `CBrush` object is created and attached. This temporary `CBrush` object is valid only until the next time the application has idle time in its event loop. At this time, all temporary graphic objects are deleted. In other words, the temporary object is valid only during the processing of one window message.  
   
- 有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CBrush::CBrush](#cbrush)。  
+### <a name="example"></a>Example  
+  See the example for [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
- 调用此成员函数以检索`LOGBRUSH`结构。  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
+ Call this member function to retrieve the `LOGBRUSH` structure.  
   
 ```  
 int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pLogBrush`  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)结构，其中包含有关画笔的信息。  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure that contains information about the brush.  
   
-### <a name="return-value"></a>返回值  
- 如果函数成功，和`pLogBrush`是有效的指针，则返回值是存储到缓冲区的字节数。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, and `pLogBrush` is a valid pointer, the return value is the number of bytes stored into the buffer.  
   
- 如果函数成功，和`pLogBrush`是**NULL**，则返回值是包含该函数的信息所需的字节数将存储到缓冲区。  
+ If the function succeeds, and `pLogBrush` is **NULL**, the return value is the number of bytes required to hold the information the function would store into the buffer.  
   
- 如果函数失败，则返回值为 0。  
+ If the function fails, the return value is 0.  
   
-### <a name="remarks"></a>备注  
- `LOGBRUSH`结构定义样式、 颜色和画笔的模式。  
+### <a name="remarks"></a>Remarks  
+ The `LOGBRUSH` structure defines the style, color, and pattern of a brush.  
   
- 例如，调用`GetLogBrush`特定颜色或位图的模式相匹配。  
+ For example, call `GetLogBrush` to match the particular color or pattern of a bitmap.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&27;](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
- 使用此运算符将获得附加的 Windows GDI 句柄的`CBrush`对象。  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
+ Use this operator to get the attached Windows GDI handle of the `CBrush` object.  
   
 ```  
 operator HBRUSH() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，Windows GDI 对象的句柄由表示`CBrush`对象; 否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CBrush` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 此运算符被强制转换运算符，它支持直接使用`HBRUSH`对象。  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HBRUSH` object.  
   
- 有关使用图形对象的详细信息，请参阅[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&28;](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 PROPDLG](../../visual-cpp-samples.md)   
- [CGdiObject 类](../../mfc/reference/cgdiobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CBitmap 类](../../mfc/reference/cbitmap-class.md)   
- [CDC 类](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample PROPDLG](../../visual-cpp-samples.md)   
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CBitmap Class](../../mfc/reference/cbitmap-class.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)
 

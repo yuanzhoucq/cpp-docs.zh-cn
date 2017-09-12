@@ -1,5 +1,5 @@
 ---
-title: "DRAWITEMSTRUCT 结构 |Microsoft 文档"
+title: DRAWITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DRAWITEMSTRUCT structure
+- DRAWITEMSTRUCT structure [MFC]
 ms.assetid: ba9ef1d4-aebb-45e9-b956-4b81a02e50f7
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bd47b12f6401cb6603855fa153fe268bfe68914c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65319e8cf34302a37ba030705ec701698abd54bf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT 结构
-`DRAWITEMSTRUCT` 结构提供有关所有者窗口必须确定如何绘制所有者描述的控件或菜单项的信息。  
+# <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT Structure
+The `DRAWITEMSTRUCT` structure provides information the owner window must have to determine how to paint an owner-drawn control or menu item.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagDRAWITEMSTRUCT {  
@@ -59,69 +59,69 @@ typedef struct tagDRAWITEMSTRUCT {
 } DRAWITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- 控件类型。 控件类型的值如下所示：  
+ The control type. The values for control types are as follows:  
   
-- **ODT_BUTTON** 所有者描述的按钮  
+- **ODT_BUTTON** Owner-drawn button  
   
-- **ODT_COMBOBOX** 所有者描述的组合框  
+- **ODT_COMBOBOX** Owner-drawn combo box  
   
-- **ODT_LISTBOX** 所有者描述的列表框  
+- **ODT_LISTBOX** Owner-drawn list box  
   
-- **ODT_MENU** 所有者描述的菜单  
+- **ODT_MENU** Owner-drawn menu  
   
-- **ODT_LISTVIEW** 列表视图控件  
+- **ODT_LISTVIEW** List view control  
   
-- **ODT_STATIC** 所有者描述的静态控件  
+- **ODT_STATIC** Owner-drawn static control  
   
-- **ODT_TAB** 选项卡控件  
+- **ODT_TAB** Tab control  
   
  `CtlID`  
- 组合框、列表框或按钮的控件 ID。 此成员不适用于菜单。  
+ The control ID for a combo box, list box, or button. This member is not used for a menu.  
   
  `itemID`  
- 菜单的菜单项 ID 或者列表框或组合框中的项的索引。 对于空列表框或组合框，此成员为负值，它仅允许应用程序在 **rcItem** 成员指定的坐标处绘制聚焦框，即使控件中没有项。 因此用户可看到列表框或组合框中是否有输入焦点。 **itemAction** 成员中的位设置确定，即使列表框或组合框具有输入焦点是否仍将绘制矩形。  
+ The menu-item ID for a menu or the index of the item in a list box or combo box. For an empty list box or combo box, this member is a negative value, which allows the application to draw only the focus rectangle at the coordinates specified by the **rcItem** member even though there are no items in the control. The user can thus be shown whether the list box or combo box has the input focus. The setting of the bits in the **itemAction** member determines whether the rectangle is to be drawn as though the list box or combo box has input focus.  
   
  `itemAction`  
- 定义所需的绘制操作。 这将是以下一个或多个位：  
+ Defines the drawing action required. This will be one or more of the following bits:  
   
-- **ODA_DRAWENTIRE** 当需要绘制整个控件时，将设置此位。  
+- **ODA_DRAWENTIRE** This bit is set when the entire control needs to be drawn.  
   
-- **ODA_FOCUS** 当控件获得或失去输入焦点时，将设置此位。 应检查 **ItemState** 成员以确定控件是否有焦点。  
+- **ODA_FOCUS** This bit is set when the control gains or loses input focus. The **itemState** member should be checked to determine whether the control has focus.  
   
-- **ODA_SELECT** 仅当选择状态发生更改时，才设置此位。 应检查 **ItemState** 成员以确定新的选择状态。  
+- **ODA_SELECT** This bit is set when only the selection status has changed. The **itemState** member should be checked to determine the new selection state.  
   
  *itemState*  
- 当前绘图操作发生后，请指定该项的可视状态。 也就是说，如果菜单项将为灰显，则将设置 **ODS_GRAYED** 状态标志。 新标志如下所示：  
+ Specifies the visual state of the item after the current drawing action takes place. That is, if a menu item is to be dimmed, the state flag **ODS_GRAYED** will be set. The state flags are as follows:  
   
-- **ODS_CHECKED** 如果要检查菜单项，则将设置此位。 此位仅适用于菜单。  
+- **ODS_CHECKED** This bit is set if the menu item is to be checked. This bit is used only in a menu.  
   
-- **ODS_DISABLED** 如果要将项绘制为禁用，则将设置此位。  
+- **ODS_DISABLED** This bit is set if the item is to be drawn as disabled.  
   
-- **ODS_FOCUS** 如果项目具有输入焦点，则将设置此位。  
+- **ODS_FOCUS** This bit is set if the item has input focus.  
   
-- **ODS_GRAYED** 如果项目将为灰显，则将设置此位。 此位仅适用于菜单。  
+- **ODS_GRAYED** This bit is set if the item is to be dimmed. This bit is used only in a menu.  
   
-- **ODS_SELECTED** 如果项的状态为选中，则将设置此位。  
+- **ODS_SELECTED** This bit is set if the item's status is selected.  
   
-- **ODS_COMBOBOXEDIT** 绘图发生在 ownerdrawn 组合框的选择字段（编辑控件）中。  
+- **ODS_COMBOBOXEDIT** The drawing takes place in the selection field (edit control) of an ownerdrawn combo box.  
   
-- **ODS_DEFAULT** 该项为默认项。  
+- **ODS_DEFAULT** The item is the default item.  
   
  `hwndItem`  
- 指定组合框、列表框和按钮的控件的窗口句柄。 指定包含菜单项的菜单的句柄 (`HMENU`)。  
+ Specifies the window handle of the control for combo boxes, list boxes, and buttons. Specifies the handle of the menu (`HMENU`) that contains the item for menus.  
   
  `hDC`  
- 标识设备上下文。 在控件上执行绘制操作时，必须使用此设备上下文。  
+ Identifies a device context. This device context must be used when performing drawing operations on the control.  
   
  *rcItem*  
- 由定义要绘制的控件边界的 `hDC` 成员指定的设备上下文中的矩形。 Windows 会自动剪裁所有者在设备上下文中绘制的关于组合框、列表框和按钮的任何内容，但它不会剪切菜单项。 绘制菜单项时，所有者不能在 **rcItem** 成员定义的矩形边界之外进行绘制。  
+ A rectangle in the device context specified by the `hDC` member that defines the boundaries of the control to be drawn. Windows automatically clips anything the owner draws in the device context for combo boxes, list boxes, and buttons, but it does not clip menu items. When drawing menu items, the owner must not draw outside the boundaries of the rectangle defined by the **rcItem** member.  
   
  `itemData`  
- 对于组合框或列表框，此成员包含通过以下其中一项传递到列表框的值：  
+ For a combo box or list box, this member contains the value that was passed to the list box by one of the following:  
   
-- [Ccombobox::](../../mfc/reference/ccombobox-class.md#addstring)  
+- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
 - [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)  
   
@@ -129,7 +129,7 @@ typedef struct tagDRAWITEMSTRUCT {
   
 - [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)  
   
- 对于菜单，此成员包含通过以下其中一项传递到菜单的值：  
+ For a menu, this member contains the value that was passed to the menu by one of the following:  
   
 - [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
   
@@ -137,14 +137,14 @@ typedef struct tagDRAWITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
-## <a name="remarks"></a>备注  
- 所有者描述的控件或菜单项的所有者窗口接收指向此结构的指针作为 `lParam` 消息的 `WM_DRAWITEM` 参数。  
+## <a name="remarks"></a>Remarks  
+ The owner window of the owner-drawn control or menu item receives a pointer to this structure as the `lParam` parameter of the `WM_DRAWITEM` message.  
   
-## <a name="requirements"></a>要求  
- **标头：** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)
 
 

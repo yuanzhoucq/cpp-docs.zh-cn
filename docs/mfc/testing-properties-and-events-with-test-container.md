@@ -1,68 +1,87 @@
 ---
-title: "使用测试容器测试属性和事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件测试容器"
-  - "ActiveX 控件 [C++], 测试"
-  - "调试 ActiveX 控件"
-  - "属性 [MFC], 测试"
-  - "测试容器"
-  - "测试, 测试容器"
-  - "tstcon32.exe"
+title: Testing Properties and Events with Test Container | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- testing, test containers
+- tstcon32.exe
+- debugging ActiveX controls
+- test container
+- ActiveX Control Test Container
+- ActiveX controls [MFC], testing
+- properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 使用测试容器测试属性和事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b3edf6c89e6d960ad2aad3058364755b53be07db
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-测试容器应用程序，提供在 Visual C\+\+ 中，为测试和调试的 ActiveX 控件的 ActiveX 控件容器。  测试容器允许控件可以通过更改其属性，调用方法和激发其事件测试控件的功能。  测试容器可以查看数据并通知绑定记录。测试 ActiveX 控件的持久性功能提供功能：您可以将属性设置为，substorage 到流或重载以及检查存储的流数据。  本节描述如何使用测试容器的基本功能。  对于附加信息，选择 **帮助** 菜单，当运行时测试容器。  
+---
+# <a name="testing-properties-and-events-with-test-container"></a>Testing Properties and Events with Test Container
+The Test Container application, shipped in Visual C++, is an ActiveX control container for testing and debugging ActiveX controls. Test Container allows the control developer to test the control's functionality by changing its properties, invoking its methods, and firing its events. Test Container can display logs of data-binding notifications and also provides facilities for testing an ActiveX control's persistence functionality: you can save properties to a stream or to substorage, reload them, and examine the stored stream data. This section describes how to use the basic features of Test Container. For additional information, select the **Help** menu while running Test Container.  
   
-### 访问 ActiveX 控件测试容器  
+### <a name="to-access-the-activex-control-test-container"></a>To access the ActiveX Control Test Container  
   
-1.  创建[TSTCON Sample: ActiveX Control Test Container](../top/visual-cpp-samples.md)。  
+1.  Build the [TSTCON Sample: ActiveX Control Test Container](../visual-cpp-samples.md).  
   
-### 测试ActiveX 控件  
+### <a name="to-test-your-activex-control"></a>To test your ActiveX control  
   
-1.  在测试容器的**编辑** 菜单上，单击 **Insert New Control**。  
+1.  On the **Edit** menu of Test Container, click **Insert New Control**.  
   
-2.  在 **Insert New Control** 框中，选择控件并单击 **确定**。  控件将出现在控件容器。  
+2.  In the **Insert Control** box, select the desired control and click **OK**. The control will appear in the control container.  
   
     > [!NOTE]
-    >  如果控件在 **插入控件** 对话框没有列出，则确保您已注册它与测试容器 **文件** 菜单上的 **Register Controls** 命令。  
+    >  If your control is not listed in the **Insert Control** dialog box, make sure you have registered it with the **Register Controls** command from the **File** menu of Test Container.  
   
- 此时可以测试控件的属性或事件。  
+ At this point you can test your control's properties or events.  
   
-#### 测试属性  
+#### <a name="to-test-properties"></a>To test properties  
   
-1.  从**Control**菜单中单击**“Invoke Methods”（调用方法）**。  
+1.  On the **Control** menu, click **Invoke Methods**.  
   
-2.  在 **方法名称** 下拉列表中，选择您要测试的属性的 PropPut 方法。  
+2.  In the **Method Name** drop-down list, select the PropPut method for the property you want to test.  
   
-3.  修改 **参数值** 或 **参数类型** 并单击 **设置数值** 按钮。  
+3.  Modify the **Parameter Value** or **Parameter Type** and click on the **Set Value** button.  
   
-4.  单击 **调用** 将新值传递给对象。  
+4.  Click **Invoke** to apply the new value to the object.  
   
-     如果属性包含新值  
+     The property now contains the new value.  
   
-#### 测试事件和事件指定信息的目标。  
+#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>To test events and specify the destination of event information.  
   
-1.  在**“工具”**菜单上，单击**“选项”**。  
+1.  On the **Options** menu, click **Logging**.  
   
-2.  指定事件信息的目标。  
+2.  Specify the destination of event information.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
- [如何：调试 ActiveX 控件](../Topic/How%20to:%20Debug%20an%20ActiveX%20Control.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [How to: Debug an ActiveX Control](/visualstudio/debugger/how-to-debug-an-activex-control)
+
+

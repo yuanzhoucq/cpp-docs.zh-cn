@@ -1,498 +1,517 @@
 ---
-title: "TN022：标准命令实现 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.commands"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令, 标准"
-  - "ID_APP_ABOUT 命令"
-  - "ID_APP_EXIT 命令"
-  - "ID_CONTEXT_HELP 命令"
-  - "ID_DEFAULT_HELP 命令"
-  - "ID_EDIT_CLEAR 命令"
-  - "ID_EDIT_CLEAR_ALL 命令"
-  - "ID_EDIT_COPY 命令"
-  - "ID_EDIT_CUT 命令"
-  - "ID_EDIT_FIND 命令"
-  - "ID_EDIT_PASTE 命令"
-  - "ID_EDIT_PASTE_LINK 命令"
-  - "ID_EDIT_PASTE_SPECIAL 命令"
-  - "ID_EDIT_REDO 命令"
-  - "ID_EDIT_REPEAT 命令"
-  - "ID_EDIT_REPLACE 命令"
-  - "ID_EDIT_SELECT_ALL 命令"
-  - "ID_EDIT_UNDO 命令"
-  - "ID_FILE_CLOSE 命令"
-  - "ID_FILE_NEW 命令"
-  - "ID_FILE_OPEN 命令"
-  - "ID_FILE_PAGE_SETUP 命令"
-  - "ID_FILE_PRINT 命令"
-  - "ID_FILE_PRINT_PREVIEW 命令"
-  - "ID_FILE_PRINT_SETUP 命令"
-  - "ID_FILE_SAVE 命令"
-  - "ID_FILE_SAVE_AS 命令"
-  - "ID_FILE_SAVE_COPY_AS 命令"
-  - "ID_FILE_UPDATE 命令"
-  - "ID_HELP 命令"
-  - "ID_HELP_INDEX 命令"
-  - "ID_HELP_USING 命令"
-  - "ID_INDICATOR_CAPS 命令"
-  - "ID_INDICATOR_EXT 命令"
-  - "ID_INDICATOR_KANA 命令"
-  - "ID_INDICATOR_NUM 命令"
-  - "ID_INDICATOR_OVR 命令"
-  - "ID_INDICATOR_REC 命令"
-  - "ID_INDICATOR_SCRL 命令"
-  - "ID_NEXT_PANE 命令"
-  - "ID_OLE_EDIT_LINKS 命令"
-  - "ID_OLE_INSERT_NEW 命令"
-  - "ID_OLE_VERB_FIRST 命令"
-  - "ID_PREV_PANE 命令"
-  - "ID_VIEW_STATUS_BAR 命令"
-  - "ID_VIEW_TOOLBAR 命令"
-  - "ID_WINDOW_ARRANGE 命令"
-  - "ID_WINDOW_CASCADE 命令"
-  - "ID_WINDOW_NEW 命令"
-  - "ID_WINDOW_SPLIT 命令"
-  - "ID_WINDOW_TILE_HORZ 命令"
-  - "ID_WINDOW_TILE_VERT 命令"
-  - "标准命令"
-  - "TN022"
+title: 'TN022: Standard Commands Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.commands
+dev_langs:
+- C++
+helpviewer_keywords:
+- ID_PREV_PANE command [MFC]
+- ID_APP_EXIT command [MFC]
+- ID_NEXT_PANE command [MFC]
+- ID_INDICATOR_REC command [MFC]
+- ID_WINDOW_SPLIT command [MFC]
+- ID_FILE_PRINT_PREVIEW command [MFC]
+- ID_WINDOW_CASCADE command [MFC]
+- ID_FILE_CLOSE command [MFC]
+- ID_FILE_SAVE_COPY_AS command [MFC]
+- ID_WINDOW_ARRANGE command [MFC]
+- ID_EDIT_FIND command [MFC]
+- ID_FILE_OPEN command [MFC]
+- ID_FILE_PAGE_SETUP command [MFC]
+- ID_OLE_VERB_FIRST command [MFC]
+- ID_EDIT_UNDO command [MFC]
+- ID_EDIT_CLEAR command [MFC]
+- ID_INDICATOR_CAPS command [MFC]
+- ID_HELP_INDEX command [MFC]
+- commands [MFC], standard
+- ID_FILE_PRINT_SETUP command [MFC]
+- ID_DEFAULT_HELP command [MFC]
+- ID_INDICATOR_SCRL command [MFC]
+- ID_FILE_PRINT command [MFC]
+- ID_INDICATOR_OVR command [MFC]
+- ID_INDICATOR_KANA command [MFC]
+- ID_EDIT_COPY command [MFC]
+- ID_EDIT_REDO command [MFC]
+- ID_EDIT_PASTE command [MFC]
+- ID_OLE_INSERT_NEW command [MFC]
+- ID_OLE_EDIT_LINKS command [MFC]
+- ID_EDIT_PASTE_SPECIAL command [MFC]
+- ID_INDICATOR_EXT command [MFC]
+- ID_HELP_USING command [MFC]
+- standard commands
+- ID_VIEW_STATUS_BAR command [MFC]
+- ID_FILE_SAVE_AS command [MFC]
+- ID_EDIT_CLEAR_ALL command [MFC]
+- ID_WINDOW_NEW command [MFC]
+- ID_CONTEXT_HELP command [MFC]
+- ID_EDIT_REPLACE command [MFC]
+- ID_WINDOW_TILE_HORZ command [MFC]
+- ID_APP_ABOUT command [MFC]
+- TN022
+- ID_VIEW_TOOLBAR command [MFC]
+- ID_HELP command [MFC]
+- ID_WINDOW_TILE_VERT command [MFC]
+- ID_EDIT_CUT command [MFC]
+- ID_FILE_UPDATE command [MFC]
+- ID_EDIT_REPEAT command [MFC]
+- ID_FILE_SAVE command [MFC]
+- ID_EDIT_PASTE_LINK command [MFC]
+- ID_EDIT_SELECT_ALL command [MFC]
+- ID_FILE_NEW command [MFC]
+- ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN022：标准命令实现
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a5ffc2b860eb0e3eb70457d4fcf773b8c2d91894
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn022-standard-commands-implementation"></a>TN022: Standard Commands Implementation
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此注释说明 MFC 提供了的标准实现命令 2.0。  因为它描述用于的标准机制实现许多命令，首先读取 [技术说明 21](../mfc/tn021-command-and-message-routing.md)。  
+ This note describes the standard command implementations provided by MFC 2.0. Read [Technical Note 21](../mfc/tn021-command-and-message-routing.md) first because it describes the mechanisms used to implement many of the standard commands.  
   
- 此说明 MFC 假定结构、API 和常用编程实践的知识。  文档以及仅使用未证明的“实现”API 进行描述。  这不是开始了解的功能安装或如何编程在 MFC。  Visual C\+\+ 参考一般信息和 API 文档有关的详细信息。  
+ This description assumes knowledge of the MFC architectures, APIs, and common programming practice. Documented as well as undocumented "implementation only" APIs are described. This is not a place to start learning about the features of or how to program in MFC. Refer to Visual C++ for more general information and for details of documented APIs.  
   
-## 问题  
- MFC 定义在头文件 AFXRES.H. 的许多标准命令 ID。  这些命令 Framework 支持的更改。  了解框架类在哪里和如何处理这些命令不仅将演示框架如何在内部工作，但提供有用有关自定义标准实现并指导您实现自己的命令处理程序的几种方法。  
+## <a name="the-problem"></a>The Problem  
+ MFC defines many standard command IDs in the header file AFXRES.H. Framework support for these commands varies. Understanding where and how the framework classes handle these commands will not only show you how the framework works internally but will provide useful information on how to customize the standard implementations and teach you a few techniques for implementing your own command handlers.  
   
-## 此技术说明内容  
- 每个命令 ID。两节中进行说明：  
+## <a name="contents-of-this-technical-note"></a>Contents of This Technical Note  
+ Each command ID is described in two sections:  
   
--   标题：命令的目的 \(例如，**ID\_FILE\_SAVE**\) 后跟的命令 ID 的符号 \(例如，“保存当前文件”\) 由冒号分隔。  
+-   The title: the symbolic name of the command ID (for example, **ID_FILE_SAVE**) followed by the purpose of the command (for example, "saves the current document") separated by a colon.  
   
--   类实现命令的一个或多个段落，描述，以及默认实现  
+-   One or more paragraphs describing which classes implement the command, and what the default implementation does  
   
- 大多数默认命令实现是事先设定框架中的基类消息映射。  具有显式连结的某些命令要求在派生类中实现。  这些已描述在“注释”下。  如果在 AppWizard 选择正确的选项，这些默认处理程序。将连接生成的主干应用程序。  
+ Most default command implementations are prewired in the framework's base class message map. There are some command implementations that require explicit wiring in your derived class. These are described under "Note". If you chose the right options in AppWizard, these default handlers will be connected for you in the generated skeleton application.  
   
-## 命名约定  
- 标准命令执行简单的命名约定 \(也建议您使用。  大多数标准命令在标准排列应用程序的菜单栏中。  命令开头的符号以“标准弹出菜单名称”后面的 ID\_ 的，后跟菜单项的名称。  符号带有下划线的字符区分词义大写的。  对于没有标准的命令菜单项命名一个逻辑，该命令名是定义的以 ID\_“”\(例如，**ID\_NEXT\_PANE**。\)  
+## <a name="naming-convention"></a>Naming Convention  
+ Standard commands follow a simple naming convention that we recommend you use if possible. Most standard commands are located in standard places in an application's menu bar. The symbolic name of the command starts with "ID_" followed by the standard pop-up menu name, followed by the menu item name. The symbolic name is in upper case with underscore word-breaks. For commands that do not have standard menu item names, a logical command name is defined starting with "ID_" (for example, **ID_NEXT_PANE**).  
   
- 我们应使用前缀“ID\_”指示旨在绑定到菜单项，工具栏按钮或其他命令用户界面对象的命令。  处理“ID\_”命令处理程序应使用 `ON_COMMAND`，并且命令机制 MFC 的 `ON_UPDATE_COMMAND_UI` 结构。  
+ We use the prefix "ID_" to indicate commands that are designed to be bound to menu items, toolbar buttons, or other command user-interface objects. Command handlers handling "ID_" commands should use the `ON_COMMAND` and `ON_UPDATE_COMMAND_UI` mechanisms of the MFC command architecture.  
   
- 建议为后面没有跟命令结构不需要菜单特定代码启用和禁用了菜单项使用标准“IDM\_”前缀。  当然特定命令应是小型自 MFC 命令菜单按照结构数不但使命令处理程序更强大 \(因为这些工具栏的使用\)，但允许命令处理程序可重用代码。  
+ We recommend you use the standard "IDM_" prefix for menu items which do not follow the command architecture and need menu-specific code to enable and disable them. Of course the number of menu specific commands should be small since following the MFC command architecture not only makes command handlers more powerful (since they will work with toolbars) but makes the command handler code reusable.  
   
-## ID 范围  
- 有关详细信息参考 [技术说明 20](../mfc/tn020-id-naming-and-numbering-conventions.md) 在使用 MFC 中的 ID 范围。  
+## <a name="id-ranges"></a>ID Ranges  
+ Please refer to [Technical Note 20](../mfc/tn020-id-naming-and-numbering-conventions.md) for more details on the use of ID ranges in MFC.  
   
- 标准 MFC 命令在范围 0xE000 内为 0xEFFF。  因为它们发生在库的将来版本，更改不要依靠特定值这些 ID。  
+ MFC standard commands fall in the range 0xE000 to 0xEFFF. Please do not rely on the specific values of these IDs since they are subject to change in future versions of the library.  
   
- 应用程序应定义在其范围 0x8000 的命令。0xDFFF。  
+ Your application should define its commands in the range 0x8000 to 0xDFFF.  
   
-## 标准命令 ID  
- 对于每个命令 ID，可以在文件 PROMPTS.RC 找到的消息行命令提示字符串。  该菜单提示的字符串 ID 必须与命令 ID 的 .  
+## <a name="standard-command-ids"></a>Standard Command IDs  
+ For each command ID, there is a standard message line prompt string that can be found in the file PROMPTS.RC. The string ID for that menu prompt must be the same as for the command ID.  
   
--   创建新 ID\_FILE\_NEW\/空文档。  
-  
-    > [!NOTE]
-    >  必须连接到此 `CWinApp`派生的类启用此功能的消息映射。  
-  
-     `CWinApp::OnFileNew` 根据文档模板的数量在应用程序的不同实现此命令。  如果只有一个 `CDocTemplate`，`CWinApp::OnFileNew` 将创建一个类型的文档，以及相应的帧和视图类。  
-  
-     如果有多个 `CDocTemplate`，`CWinApp::OnFileNew` 将提示包含允许使用的文档类型自己的对话框 \(**AFX\_IDD\_NEWTYPEDLG**\) 用户选择。  选择的 `CDocTemplate` 用来创建文档。  
-  
-     `ID_FILE_NEW` 的公共自定义是提供文档类型不同和更图形的选择。  在这种情况下您在消息映射来实现您自己和 **CMyApp::OnFileNew** 放置它而不是 `CWinApp::OnFileNew`。  不需要调用基类实现。  
-  
-     `ID_FILE_NEW` 的其他常见自定义是为每种类型创建文档的单独的命令。  在这种情况下您应定义新的命令 ID，例如 ID\_FILE\_NEW\_CHART 和 ID\_FILE\_NEW\_SHEET。  
-  
--   ID\_FILE\_OPEN 打开现有文档。  
+-   ID_FILE_NEW   Creates a new/empty document.  
   
     > [!NOTE]
-    >  必须连接到此 `CWinApp`派生的类启用此功能的消息映射。  
+    >  You must connect this to your `CWinApp`-derived class's message map to enable this functionality.  
   
-     `CWinApp::OnFileOpen` 没有名为 **CWinApp::DoPromptFileName** 的一个非常简单实现后跟 `CWinApp::OpenDocumentFile` 的文件的文件或路径名打开。  `CWinApp` 实现标准 FileOpen 定期引发 **DoPromptFileName** 对话框并填充它与当前文档模板获取的文件扩展名。  
+     `CWinApp::OnFileNew` implements this command differently depending on the number of document templates in the application. If there is only one `CDocTemplate`, `CWinApp::OnFileNew` will create a new document of that type, as well as the proper frame and view class.  
   
-     `ID_FILE_OPEN` 的公共自定义为自定义 FileOpen 对话框或添加其他文件筛选器。  建议用来自定义这将替换默认实现用自己的 FileOpen 对话框，并调用的文件或路径名称的 `CWinApp::OpenDocumentFile`。  不需要调用基类。  
+     If there is more than one `CDocTemplate`, `CWinApp::OnFileNew` will prompt the user with a dialog (**AFX_IDD_NEWTYPEDLG**) letting them select which document type to use. The selected `CDocTemplate` is used to create the document.  
   
--   ID\_FILE\_CLOSE 关闭当前打开的文档。  
+     One common customization of `ID_FILE_NEW` is to provide a different and more graphical choice of document types. In this case you can implement your own **CMyApp::OnFileNew** and place it in your message map instead of `CWinApp::OnFileNew`. There is no need to call the base class implementation.  
   
-     调用**CDocument::OnFileClose** `CDocument::SaveModified` 提示用户保存文档，如果修改了然后调用 `OnCloseDocument`。  结束的任何逻辑，包括损坏文档，在例程 `OnCloseDocument` 完成。  
+     Another common customization of `ID_FILE_NEW` is to provide a separate command for creating a document of each type. In this case you should define new command IDs, for example ID_FILE_NEW_CHART and ID_FILE_NEW_SHEET.  
   
-    > [!NOTE]
-    >  **ID\_FILE\_CLOSE** 操作与 `WM_CLOSE` 或 **SC\_CLOSE** 消息系统命令发送到不同的文档框架窗口。  当这是显示文档的最后一帧，窗口关闭窗口将关闭文档。  关闭与 **ID\_FILE\_CLOSE** 的文档不仅将关闭文档，但下关闭显示文档的任何框架窗口。  
-  
--   ID\_FILE\_SAVE 保存当前文件。  
-  
-     实现用于 **OnFileSave** 和 **OnFileSaveAs**使用的帮助器例程 **CDocument::DoSave**。  即如果您保存未在的文档 \(DllEntryPoint 没有路径名，则 FileNew\) 或从预保存只读文档读取 **OnFileSave** 逻辑，将像 **ID\_FILE\_SAVE\_AS** 命令并要求用户提供新的文件名。  打开文件并保存实际执行进程通过虚函数 `OnSaveDocument`完成。  
-  
-     有两种自 **ID\_FILE\_SAVE**定义常见原因。  对于不保存的文档，从用户界面中移除 **ID\_FILE\_SAVE** 菜单项和工具栏按钮。  还要确保错误文档 \(即从不调用 `CDocument::SetModifiedFlag`\)，而框架不会保存文档。  除磁盘文件以外，在保存对在某处的文档，请定义该操作的命令。  
-  
-     对于 `COleServerDoc`，**ID\_FILE\_SAVE** 用于保存文件 \(用于正常情况\) 文档和文件更新使用 \(用于嵌入的文档\)。  
-  
-     如果文档数据在单独的磁盘文件中，但是，您不希望使用默认 **CDocument** 实现序列化，则应重写 `CDocument::OnSaveDocument` 而不是 **OnFileSave**。  
-  
--   ID\_FILE\_SAVE\_AS 保存当前文件在不同的文件名。下  
-  
-     **CDocument::OnFileSaveAs** 实现 **CDocument::DoSave** 使用 Helper 例程和 **OnFileSave**。  如果文档保存之前，**OnFileSaveAs** 没有文件名在命令处理正 **ID\_FILE\_SAVE**。  **COleServerDoc::OnFileSaveAs** 实现逻辑将常规数据文件或保存表示 OLE 对象的服务器文档嵌入其他应用程序作为独立的文件。  
-  
-     如果自 **ID\_FILE\_SAVE**定义逻辑，您可能希望的方式与自 **ID\_FILE\_SAVE\_AS** 定义或“另存为”操作可能不适用于文档。  如果不需要的，可从菜单栏移除菜单项。  
-  
--   ID\_FILE\_SAVE\_COPY\_AS 副本保存当前文件以新的名称下。  
-  
-     **COleServerDoc::OnFileSaveCopyAs** 实现非常类似于 **CDocument::OnFileSaveAs**，除此之外，此文档对象不是“连接”到基础文件中 \<Import 保存之后。  即，如果“修改的内存中文档”，在“保存，修改仍为”之前。  此外，此命令不会影响存储的路径名或标题的效果在文档中。  
-  
--   通知 ID\_FILE\_UPDATE 容器保存嵌入的文档。  
-  
-     `COleServerDoc::OnUpdateDocument` 实现 notifiies 容器应当保存嵌入。  容器然后调用相应的 OLE 嵌入 API 以保存对象。  
-  
--   ID\_FILE\_PAGE\_SETUP 调用特定的页面设置\/布局对话框。  
-  
-     目前没有此对话框的标准，并且，框架没有此命令的默认实现。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_FILE\_PRINT\_SETUP 调用标准的打印对话框设置。  
+-   ID_FILE_OPEN   Opens an existing document.  
   
     > [!NOTE]
-    >  必须连接到此 `CWinApp`派生的类启用此功能的消息映射。  
+    >  You must connect this to your `CWinApp`-derived class's message map to enable this functionality.  
   
-     此调用命令允许用户自定义文档或至多至少全部文档的打印机和打印设置本应用程序中标准的打印对话框设置。  必须使用控制面板中更改整个系统的默认打印机设置。  
+     `CWinApp::OnFileOpen` has a very simple implementation of calling **CWinApp::DoPromptFileName** followed by `CWinApp::OpenDocumentFile` with the file or path name of the file to open. The `CWinApp` implementation routine **DoPromptFileName** brings up the standard FileOpen dialog and fills it with the file extensions obtained from the current document templates.  
   
-     `CWinApp::OnFilePrintSetup` 具有创建 `CPrintDialog` 对象并调用 **CWinApp::DoPrintDialog** 实现函数的一个非常简单实现。  它设置了应用程序默认打印机打印机设置。  
+     One common customization of `ID_FILE_OPEN` is to customize the FileOpen dialog or add additional file filters. The recommended way to customize this is to replace the default implementation with your own FileOpen dialog, and call `CWinApp::OpenDocumentFile` with the document's file or path name. There is no need to call the base class.  
   
-     此命令对自定义常用的是允许每文档打印机设置，应存储的文档，则保存。  若要执行应将 **CDocument** 类的消息映射处理程序创建 `CPrintDialog` 对象，将它初始化与适当的打印机的此特性 \(通常是 **hDevMode** 和 **hDevNames**\)，请调用 **CPrintDialog::DoModal,** 并保存更改的打印机设置。  对于一种可靠的实现，您应查看 **CWinApp::DoPrintDialog** 的实现用于检测错误，而且处理敏感默认跟踪和系统范围内打印机的 **CWinApp::UpdatePrinterSelection** 更改。  
+-   ID_FILE_CLOSE   Closes the currently open document.  
   
--   当前文件的 ID\_FILE\_PRINT 标准输出  
-  
-    > [!NOTE]
-    >  必须连接到此 `CView`派生的类启用此功能的消息映射。  
-  
-     此命令更加正确打印当前文件，或开始晒印方法，涉及调用标准的打印对话框和运行打印引擎。  
-  
-     **CView::OnFilePrint** 实现该命令和主要输出循环。  它调用虚 `CView::OnPreparePrinting` 为用户的提示。打印的对话框。  然后准备输出 DC 转到打印机，输出进度对话框引发 \(**AFX\_IDD\_PRINTDLG**\)，然后发送 `StartDoc` 转义打印机。  **CView::OnFilePrint** 还包含页主要面向打印循环。  对于每页，它将调用的 `CView::OnPrepareDC` 虚后跟 `StartPage` 转义并调用该页的虚拟 `CView::OnPrint`。  完成后，`CView::OnEndPrinting` 虚调用，并且，输出进度对话框关闭。  
-  
-     打印架构的 MFC 设计功能的打印和打印预览的多种不同方式。  您通常会发现各种 `CView` 重写函数足够用于分页面向打印所有任务。  对于使用的打印机。应用非分页只放置到输出，则查找需要替换 **ID\_FILE\_PRINT** 实现。  
-  
--   ID\_FILE\_PRINT\_PREVIEW 输入当前文件的打印预览模式。  
+     **CDocument::OnFileClose** calls `CDocument::SaveModified` to prompt the user to save the document if it has been modified and then calls `OnCloseDocument`. All the closing logic, including destroying the document, is done in the `OnCloseDocument` routine.  
   
     > [!NOTE]
-    >  必须连接到此 `CView`派生的类启用此功能的消息映射。  
+    >  **ID_FILE_CLOSE** acts differently from a `WM_CLOSE` message or an **SC_CLOSE** system command sent to the documents frame window. Closing a window will close the document only if that is the last frame window showing the document. Closing the document with **ID_FILE_CLOSE** will not only close the document but will close down all frame windows showing the document.  
   
-     **CView::OnFilePrintPreview** 通过调用文档的帮助器函数启动打印预览模式 **CView::DoPrintPreview**。  像 **OnFilePrint** 是打印循环的，主要引擎**CView::DoPrintPreview** 是打印预览循环的主要引擎。  
+-   ID_FILE_SAVE   Saves the current document.  
   
-     打印预览操作可以自定义用各种方法通过将不同的参数传递到 **DoPrintPreview**。   参考 [技术说明 30](../mfc/tn030-customizing-printing-and-print-preview.md)，讨论某些打印预览详细信息以及如何自定义它。  
+     The implementation uses a helper routine **CDocument::DoSave** which is used for both **OnFileSave** and **OnFileSaveAs**. If you save a document that has not been saved before (that is, it does not have a path name, as in the case of FileNew) or that was read from a read-only document, the **OnFileSave** logic will act like the **ID_FILE_SAVE_AS** command and ask the user to provide a new file name. The actual process of opening the file and doing the saving is done through the virtual function `OnSaveDocument`.  
   
--   **ID\_FILE\_MRU\_FILE1**…**FILE16** 范围 MRU 文件的 `list`命令 ID。  
+     There are two common reasons to customize **ID_FILE_SAVE**. For documents that do not save, simply remove the **ID_FILE_SAVE** menu items and toolbar buttons from your user interface. Also make sure that you never dirty your document (that is, never call `CDocument::SetModifiedFlag`) and the framework will never cause the document to be saved. For documents that save to someplace other than a disk file, define a new command for that operation.  
   
-     **CWinApp::OnUpdateRecentFileMenu** 是一个使用 `ON_UPDATE_COMMAND_UI` 机制 \(更高级使用的更新命令用户界面处理程序。  在菜单资源，只需定义。ID **ID\_FILE\_MRU\_FILE1**的一个菜单项。  初始菜单项仍为禁用。  
+     In the case of a `COleServerDoc`, **ID_FILE_SAVE** is used both for file save (for normal documents) and file update (for embedded documents).  
   
-     当增大 MRU 列表，更多菜单项添加到列表中。  `CWinApp` 实现标准默认为四最近使用的文件中标准限制。  通过调用具有更大或较小值更改默认的 `CWinApp::LoadStdProfileSettings`。  MRU 列表存储在应用程序的 .ini 文件。  列表在应用程序的 `InitInstance` 函数中调用 `LoadStdProfileSettings`和加载您是否保存，以便在应用程序退出时。  MRU 更新命令用户界面处理程序还会将绝对路径显示的相对路径。"文件"菜单。  
+     If your document data is stored in individual disk files, but you don't want to use the default **CDocument** serialize implementation, you should override `CDocument::OnSaveDocument` instead of **OnFileSave**.  
   
-     **CWinApp::OnOpenRecentFile** 是执行实际命令的 `ON_COMMAND` 处理程序。  它从 MRU 列表获取文件名并调用 `CWinApp::OpenDocumentFile`，完成打开文件并更新 MRU 列出所有工作。  
+-   ID_FILE_SAVE_AS   Saves the current document under a different file name.  
   
-     不建议使用此命令处理程序的自定义。  
+     The **CDocument::OnFileSaveAs** implementation uses the same **CDocument::DoSave** helper routine as **OnFileSave**. The **OnFileSaveAs** command is handled just as **ID_FILE_SAVE** if the documents had no file name before the save. **COleServerDoc::OnFileSaveAs** implements the logic to save a normal document data file or to save a server document representing an OLE object embedded in some other application as a separate file.  
   
--   ID\_EDIT\_CLEAR 清除当前选择  
+     If you customize the logic of **ID_FILE_SAVE**, you will probably want to customize **ID_FILE_SAVE_AS** in a similar fashion or the operation of "Save As" may not apply to your document. You can remove the menu item from your menu bar if it is not needed.  
   
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
+-   ID_FILE_SAVE_COPY_AS   Saves a copy current document under a new name.  
   
-     使用 `CEdit::Clear`中，`CEditView` 提供此命令的实现。  此外，如果不存在当前选择，命令被禁用。  
+     The **COleServerDoc::OnFileSaveCopyAs** implementation is very similar to **CDocument::OnFileSaveAs**, except that the document object is not "attached" to the underlying file after the save. That is, if the in-memory document was "modified" before the save, it is still "modified". In addition, this command has no effect on the path name or title stored in the document.  
   
-     如果您选择此命令实现，建议您使用此命令 ID.  
+-   ID_FILE_UPDATE   Notifies the container to save an embedded document.  
   
--   ID\_EDIT\_CLEAR\_ALL 清除整个文档。  
+     The `COleServerDoc::OnUpdateDocument` implementation simply notifiies the container that the embedding should be saved. The container then calls the appropriate OLE APIs in order to save the embedded object.  
   
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
+-   ID_FILE_PAGE_SETUP   Invokes an application-specific page setup/layout dialog.  
   
-     如果您选择此命令实现，建议您使用此命令 ID.  有关示例实现参见 MFC 教程示例 [自由曲线](../top/visual-cpp-samples.md)。  
+     Currently there is no standard for this dialog, and the framework has no default implementation of this command.  
   
--   ID\_EDIT\_COPY将当前所选内容复制到剪贴板。  
+     If you choose to implement this command, we recommend you use this command ID.  
   
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     `CEditView` 提供此命令的实现，使用 `CEdit::Copy`，复制当前选择的文本。剪贴板用作 CF\_TEXT。  此外，如果不存在当前选择，命令被禁用。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_EDIT\_CUT将当前所选内容剪切到剪贴板。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     `CEditView` 提供此命令的实现，使用 `CEdit::Cut`，剪切当前选择的文本。剪贴板用作 CF\_TEXT。  此外，如果不存在当前选择，命令被禁用。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_EDIT\_FIND 开始查找操作，生成无模式对话框的外观。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     `CEditView` 提供此命令的实现，此实现调用 Helper 函数使用 **OnEditFindReplace**，并查找\/替换以前存储在私有变量中实现的设置。  `CFindReplaceDialog` 类用于管理的用户提示无模式对话框。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_EDIT\_PASTE 当前插入剪贴板的内容。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     `CEditView` 提供此命令的实现，将替换选定的文本当前剪贴板数据使用 `CEdit::Paste`。  如果在，剪贴板的 **CF\_TEXT** 命令被禁用。  
-  
-     **COleClientDoc** 此为命令提供一个 UI 更新命令处理程序。  如果剪贴板不包含可嵌入的 OLE 项\/对象，命令将处于禁用状态。  您负责编写实际命令的处理程序可以执行实际内容。  如果 OLE 应用程序还可以将其他格式，您应提供视图或文档的更新命令用户界面处理程序 \(即的某处，在命令目标路由的 **COleClientDoc** 之前\)。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
-     对于替换标准 OLE 实现，请使用 `COleClientItem::CanPaste`。  
-  
--   ID\_EDIT\_PASTE\_LINK 从当前插入剪贴板内容的链接。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     `COleDocument` 此为命令提供一个 UI 更新命令处理程序。  如果剪贴板不包含可链接的 OLE 项\/对象，命令将处于禁用状态。  您负责编写实际命令的处理程序可以执行实际内容。  如果 OLE 应用程序还可以将其他格式，您应提供视图或文档的更新命令用户界面处理程序 \(即的某处，在命令目标路由的  `COleDocument` 之前\)。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
-     对于替换标准 OLE 实现，请使用 `COleClientItem::CanPasteLink`。  
-  
--   ID\_EDIT\_PASTE\_SPECIAL 具有选项的当前插入剪贴板的内容。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  MFC 不提供此对话框。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_EDIT\_REPEAT 重复上次操作。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     `CEditView` 提供此命令的实现对于最后查找操作。  使用最后一个找到实现的私有变量。  如果找到，不能尝试，命令被禁用。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_EDIT\_REPLACE 开始替换操作，使无模式中替换"对话框。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     `CEditView` 提供此命令的实现，此实现调用 Helper 函数使用 **OnEditFindReplace**，并查找\/替换以前存储在私有变量中实现的设置。  `CFindReplaceDialog` 类用于管理的用户提示无模式对话框。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_EDIT\_SELECT\_ALL 选择整个文档。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     `CEditView` 提供此命令的实现，选择文档中的所有文本。  如果未选择，的文本命令被禁用。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_EDIT\_UNDO 撤消上一操作。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     使用 `CEdit::Undo`中，`CEditView` 提供此命令的实现。  如果 `CEdit::CanUndo` 返回错误，命令被禁用。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_EDIT\_REDO 重做次操作。  
-  
-     目前没有此命令的标准实现。  必须实现此每个 `CView`的派生类。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   ID\_WINDOW\_NEW 打开活动文档的其他窗口。  
-  
-     **CMDIFrameWnd::OnWindowNew** 实现此功能强大的功能。使用当前文件的文档模板创建包含当前文档的其他视图中的其他帧。  
-  
-     与最多个文档界面 \(MDI\) \(MDI\) 窗口菜单命令，因此，如果不活动 MDI 子窗口，命令被禁用。  
-  
-     不建议使用此命令处理程序的自定义。  如果希望提供创建附加视图或框架窗口的命令，可能再好些发明自己的命令。  可以克隆从 **CMDIFrameWnd::OnWindowNew** 生成代码以及修改它以特定框架和显示设置的类。  
-  
--   ID\_WINDOW\_ARRANGE 图标排列在 MDI 窗口的底部。  
-  
-     `CMDIFrameWnd` 实现中实现辅助函数 **OnMDIWindowCmd**的 MDI 此标准命令。  因此此帮助程序映射到命令 ID MDI 窗口消息，并且可共享的代码。  
-  
-     与\(MDI\) 窗口菜单命令，因此，如果不活动 MDI 子窗口，命令被禁用。  
-  
-     不建议使用此命令处理程序的自定义。  
-  
--   ID\_WINDOW\_CASCADE 层叠窗口，使其重叠。  
-  
-     `CMDIFrameWnd` 实现中实现辅助函数 **OnMDIWindowCmd**的 MDI 此标准命令。  因此此帮助程序映射到命令 ID MDI 窗口消息，并且可共享的代码。  
-  
-     与\(MDI\) 窗口菜单命令，因此，如果不活动 MDI 子窗口，命令被禁用。  
-  
-     不建议使用此命令处理程序的自定义。  
-  
--   ID\_WINDOW\_TILE\_HORZ 水平平铺窗口。  
-  
-     此命令在 `CMDIFrameWnd` 实现类似，**ID\_WINDOW\_CASCADE**，但不同的 MDI 窗口消息为操作使用。  
-  
-     则应挑选应用程序默认的平铺方向。  您可以通过更改“窗口平铺”菜单项的 ID 执行为 **ID\_WINDOW\_TILE\_HORZ** 或 **ID\_WINDOW\_TILE\_VERT**。  
-  
--   ID\_WINDOW\_TILE\_VERT 垂直平铺窗口。  
-  
-     此命令在 `CMDIFrameWnd` 实现类似，**ID\_WINDOW\_CASCADE**，但不同的 MDI 窗口消息为操作使用。  
-  
-     则应挑选应用程序默认的平铺方向。  您可以通过更改“窗口平铺”菜单项的 ID 执行为 **ID\_WINDOW\_TILE\_HORZ** 或 **ID\_WINDOW\_TILE\_VERT**。  
-  
--   ID\_WINDOW\_SPLIT 为拆分的键盘界面。  
-  
-     `CView` 处理 `CSplitterWnd` 实现使用此命令。  如果视图是拆分窗口的一部分，则此命令将委托给实现函数 `CSplitterWnd::DoKeyboardSplit`。  这将使得键盘用户或拆分 unsplit 拆分窗口的模式会将拆分器。  
-  
-     如果视图不在拆分，禁用此命令。  
-  
-     不建议使用此命令处理程序的自定义。  
-  
--   ID\_APP\_ABOUT 调用对话框。  
-  
-     没有一应用程序的标准实现"关于"框。  默认 AppWizard 创建的应用程序将为应用程序创建一个自定义对话框类并使用它作为框。  AppWizard 还需要编写处理此命令并调用对话框的常用的命令处理程序。  
-  
-     您几乎总是实现此命令。  
-  
--   ID\_APP\_EXIT   退出应用程序。  
-  
-     **CWinApp::OnAppExit** 通过将 `WM_CLOSE` 消息处理此命令添加到应用程序的主窗口。  标准关闭应用程序 \(错误的文件的提示等\) 由 `CFrameWnd` 实现处理。  
-  
-     不建议使用此命令处理程序的自定义。  `CWinApp::SaveAllModified` 或 `CFrameWnd` 结束的逻辑建议重写。  
-  
-     如果您选择此命令实现，建议您使用此命令 ID.  
-  
--   列出 ID\_HELP\_INDEX 帮助主题从 .HLP 文件。  
+-   ID_FILE_PRINT_SETUP   Invoke the standard Print Setup dialog.  
   
     > [!NOTE]
-    >  必须连接到此 `CWinApp`派生的类启用此功能的消息映射。  
+    >  You must connect this to your `CWinApp`-derived class's message map to enable this functionality.  
   
-     `CWinApp::OnHelpIndex`。通过调用 `CWinApp::WinHelp`处理此命令。  
+     This command invokes the standard print setup dialog that allows the user to customize the printer and print settings for at least this document or at most all the documents in this application. You must use the Control Panel to change the default printer settings for the entire system.  
   
-     不建议使用此命令处理程序的自定义。  
+     `CWinApp::OnFilePrintSetup` has a very simple implementation creating a `CPrintDialog` object and calling the **CWinApp::DoPrintDialog** implementation function. This sets the application default printer setup.  
   
--   ID\_HELP\_USING 显示帮助说明如何使用帮助。  
+     The common need for customizing this command is to allow for per-document printer settings, which should be stored with the document when saved. To do this you should add a message-map handler in your **CDocument** class that creates a `CPrintDialog` object, initializes it with the appropriate printer attributes (usually **hDevMode** and **hDevNames**), call the **CPrintDialog::DoModal,** and save the changed printer settings. For a robust implementation, you should look at the implementation of **CWinApp::DoPrintDialog** for detecting errors and **CWinApp::UpdatePrinterSelection** for dealing with sensible defaults and tracking system-wide printer changes.  
   
-    > [!NOTE]
-    >  必须连接到此 `CWinApp`派生的类启用此功能的消息映射。  
-  
-     `CWinApp::OnHelpUsing`。通过调用 `CWinApp::WinHelp`处理此命令。  
-  
-     不建议使用此命令处理程序的自定义。  
-  
--   ID\_CONTEXT\_HELP 恩特斯 SHIFT\-F1 帮助模式。  
+-   ID_FILE_PRINT   Standard printing of the current document  
   
     > [!NOTE]
-    >  必须连接到此 `CWinApp`派生的类启用此功能的消息映射。  
+    >  You must connect this to your `CView`-derived class's message map to enable this functionality.  
   
-     `CWinApp::OnContextHelp` 通过设置帮助模式光标，输入一模式循环和等待用户选择窗口处理此命令获取帮助。   有关更多详细信息在" MFC 参考 [技术说明 28](../mfc/tn028-context-sensitive-help-support.md) 帮助实现。  
+     This command prints the current document, or more correctly, starts the printing process, which involves invoking the standard print dialog and running the print engine.  
   
-     不建议使用此命令处理程序的自定义。  
+     **CView::OnFilePrint** implements this command and the main print loop. It calls the virtual `CView::OnPreparePrinting` to prompt of the user with the print dialog. It then prepares the output DC to go to the printer, brings up the printing progress dialog (**AFX_IDD_PRINTDLG**), and sends the `StartDoc` escape to the printer. **CView::OnFilePrint** also contains the main page-oriented print loop. For each page, it calls the virtual `CView::OnPrepareDC` followed by a `StartPage` escape and calling the virtual `CView::OnPrint` for that page. When complete, the virtual `CView::OnEndPrinting` is called, and the printing progress dialog is closed.  
   
--   ID\_HELP 为在当前上下文的帮助  
+     The MFC printing architecture is designed to hook in many different ways for printing and print preview. You will normally find the various `CView` overridable functions adequate for any page-oriented printing tasks. Only in the case of an application that uses the printer for non-page oriented output, should you find the need to replace the **ID_FILE_PRINT** implementation.  
   
-    > [!NOTE]
-    >  必须连接到此 `CWinApp`派生的类启用此功能的消息映射。  
-  
-     `CWinApp::OnHelp` 通过获取当前应用程序上下文的帮助上下文处理此命令。  此处理简单的" F1 帮助，消息框上的帮助等。   有关更多详细信息在" MFC 参考 [技术说明 28](../mfc/tn028-context-sensitive-help-support.md) 帮助实现。  
-  
-     不建议使用此命令处理程序的自定义。  
-  
--   ID\_DEFAULT\_HELP 显示默认上下文的帮助  
+-   ID_FILE_PRINT_PREVIEW   Enter print-preview mode for the current document.  
   
     > [!NOTE]
-    >  必须连接到此 `CWinApp`派生的类启用此功能的消息映射。  
+    >  You must connect this to your `CView`-derived class's message map to enable this functionality.  
   
-     此命令映射通常为 `CWinApp::OnHelpIndex`。  
+     **CView::OnFilePrintPreview** starts the print preview mode by calling the documented helper function **CView::DoPrintPreview**. **CView::DoPrintPreview** is the main engine for the print preview loop, just as **OnFilePrint** is the main engine for the printing loop.  
   
-     可提供不同的命令处理默认程序帮助和帮助索引之间的差异是否需要。  
+     The print preview operation can be customized in a variety of ways by passing different parameters to **DoPrintPreview**. Please refer to [Technical Note 30](../mfc/tn030-customizing-printing-and-print-preview.md), which discusses some of the details of print preview and how to customize it.  
   
--   ID\_NEXT\_PANE 转到下窗格  
+-   **ID_FILE_MRU_FILE1**...**FILE16** A range of command IDs for the File MRU `list`.  
   
-     `CView` 处理 `CSplitterWnd` 实现使用此命令。  如果视图是拆分窗口的一部分，则此命令将委托给实现函数**CSplitterWnd::OnNextPaneCmd.**。  这是移动活动视图移到在拆分的下一个窗格。  
+     **CWinApp::OnUpdateRecentFileMenu** is a update command UI handler that is one of the more advanced uses of the `ON_UPDATE_COMMAND_UI` mechanism. In your menu resource, you need only define a single menu item with ID **ID_FILE_MRU_FILE1**. That menu item remains initially disabled.  
   
-     禁用此命令，则不在拆分视图或未转到的下一个窗格。  
+     As the MRU list grows, more menu items are added to the list. The standard `CWinApp` implementation defaults to the standard limit of the four most recently used files. You can change the default by calling `CWinApp::LoadStdProfileSettings` with a larger or smaller value. The MRU list is stored in the application's .INI file. The list is loaded in your application's `InitInstance` function if you call `LoadStdProfileSettings`, and is saved when your application exits. The MRU update command UI handler also will convert absolute paths to relative paths for display on the file menu.  
   
-     不建议使用此命令处理程序的自定义。  
+     **CWinApp::OnOpenRecentFile** is the `ON_COMMAND` handler that performs the actual command. It simply gets the file name from the MRU list and calls `CWinApp::OpenDocumentFile`, which does all the work of opening the file and updating the MRU list.  
   
--   ID\_PREV\_PANE 转到上窗格  
+     Customization of this command handler is not recommended.  
   
-     `CView` 处理 `CSplitterWnd` 实现使用此命令。  如果视图是拆分窗口的一部分，则此命令将委托给实现函数**CSplitterWnd::OnNextPaneCmd.**。  这是移动活动视图移到在拆分的前一个窗格。  
+-   ID_EDIT_CLEAR   Clears the current selection  
   
-     禁用此命令，则不在拆分视图或未转到的前一个窗格。  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
   
-     不建议使用此命令处理程序的自定义。  
+     `CEditView` provides an implementation of this command using `CEdit::Clear`. The command is disabled if there is no current selection.  
   
--   ID\_OLE\_INSERT\_NEW 插入新的 OLE 对象  
+     If you choose to implement this command, we recommend you use this command ID.  
   
-     目前没有此命令的标准实现。  此 `CView`必须实现 \(插入新的 OLE 项\/对象的派生类在当前选择。  
+-   ID_EDIT_CLEAR_ALL   Clears the entire document.  
   
-     任何 OLE 客户端应用程序应执行此命令。  AppWizard，用 OLE 选项，将创建 **OnInsertObject** 的主干中视图类的实现必须完成。  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
   
-     为此命令的完整实现参见 MFC OLE 示例 [OCLIENT](../top/visual-cpp-samples.md) 示例。  
+     If you choose to implement this command, we recommend you use this command ID. See the MFC Tutorial sample [SCRIBBLE](../visual-cpp-samples.md) for an example implementation.  
   
--   OLE ID\_OLE\_EDIT\_LINKS 编辑链接  
+-   ID_EDIT_COPY   Copies the current selection to the Clipboard.  
   
-     `COleDocument` 处理此命令使用 MFC 提供的标准 OLE 链接对话框中实现。  此对话框的实现通过 `COleLinksDialog` 类访问。  如果文件不包含任何当前命令链接，禁用。  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
   
-     不建议使用此命令处理程序的自定义。  
+     `CEditView` provides an implementation of this command, which copies the currently selected text to the Clipboard as CF_TEXT using `CEdit::Copy`. The command is disabled if there is no current selection.  
   
--   之前的 ID\_OLE\_VERB\_FIRST… OLE 谓词的 ID 范围  
+     If you choose to implement this command, we recommend you use this command ID.  
   
-     `COleDocument` 对于当前选定 OLE 项的或对象支持的谓词中使用此命令 ID 范围。  这必须是范围，因为给定的 OLE 项\/对象类型可以支持零一个或多个自定义谓词。  在应用程序菜单，应具有 ID **ID\_OLE\_VERB\_FIRST**的菜单项。  当程序运行，菜单将更新为包含相应的谓词菜单。许多谓词的说明 \(或弹出菜单\)。  OLE 菜单的管理都由 `AfxOleSetEditMenu`处理，执行此命令的更新命令用户界面处理程序。  
+-   ID_EDIT_CUT   Cuts the current selection to the Clipboard.  
   
-     不处理的每显式命令处理程序的范围的命令 ID。  **COleDocument::OnCmdMsg** 重写捕获此范围的任何命令 ID，并将它们更改为从零开始的数字谓词并启动该谓词的服务器 \(使用 `COleClientItem::DoVerb`\)。  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
   
-     建议不使用自定义或使用此命令 ID 范围的其他使用方式。  
+     `CEditView` provides an implementation of this command, which cuts the currently selected text to the Clipboard as CF_TEXT using `CEdit::Cut`. The command is disabled if there is no current selection.  
   
--   ID\_VIEW\_TOOLBAR 在打开和关闭之间切换工具栏  
+     If you choose to implement this command, we recommend you use this command ID.  
   
-     `CFrameWnd` 处理此命令和命令用户界面更新处理程序切换工具栏的可视状态。  工具栏必须是帧的子窗口使用 `AFX_IDW_TOOLBAR`子窗口的 ID。  命令处理程序生效。切换工具栏窗口的可见性。  `CFrameWnd::RecalcLayout` 在其新状态用于绘制使用工具栏的框架窗口。  当工具栏，可见时，该更新命令用户界面处理程序检查菜单项。  
+-   ID_EDIT_FIND   Begins the find operation, brings up the modeless find dialog.  
   
-     不建议使用此命令处理程序的自定义。  如果希望添加其他的工具栏，您将需要修改克隆和命令处理程序与命令更新 UI 此处理程序的命令。  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
   
--   ID\_VIEW\_STATUS\_BAR 在打开和关闭之间切换状态栏  
+     `CEditView` provides an implementation of this command, which calls the implementation helper function **OnEditFindReplace** to use and store the previous find/replace settings in private implementation variables. The `CFindReplaceDialog` class is used to manage the modeless dialog for prompting the user.  
   
-     此命令在 `CFrameWnd` 实现类似，**ID\_VIEW\_TOOLBAR**，但使用不同的子窗口 ID \(**AFX\_IDW\_STATUS\_BAR**\)。  
+     If you choose to implement this command, we recommend you use this command ID.  
   
-## 更新命令处理程序  
- 若干标准命令 ID 用作指示器在状态栏。  在应用程序空闲时间期间，使用这些相同的更新命令用户界面处理机制显示它们的当前视觉状态。  因为它们不能由用户 \(即选择不可以按下状态栏窗格\)，然后它没有意义具有这些命令 ID 的 `ON_COMMAND` 处理程序。  
+-   ID_EDIT_PASTE   Inserts the current Clipboard contents.  
   
--   **ID\_INDICATOR\_CAPS** :Caps Lock 指示符。  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
   
--   **ID\_INDICATOR\_NUM** :NUM Lock 指示符。  
+     `CEditView` provides an implementation of this command, which copies the current Clipboard data replacing the selected text using `CEdit::Paste`. The command is disabled if there is no **CF_TEXT** in the Clipboard.  
   
--   **ID\_INDICATOR\_SCRL** : SCRL lock 指示。  
+     **COleClientDoc** just provides a update command UI handler for this command. If the Clipboard does not contain an embeddable OLE item/object, the command will be disabled. You are responsible for writing the handler for the actual command to do the actual pasting. If your OLE application can also paste other formats, you should provide your own update command UI handler in your view or document (that is, somewhere before **COleClientDoc** in the command target routing).  
   
--   **ID\_INDICATOR\_KANA** :KANA Lock 指示符 \(仅和对应于系统\)。  
+     If you choose to implement this command, we recommend you use this command ID.  
   
- 所有这三这些 **CFrameWnd::OnUpdateKeyIndicator**，使用命令 ID 映射到相应的虚拟键的实现帮助程序中实现。  常见实现启用或禁用 \(为禁用状态窗格没有文本\) \= `CCmdUI` 对象根据相应的虚拟键是否当前被锁定。  
+     For replacing the standard OLE implementation, use `COleClientItem::CanPaste`.  
   
- 不建议使用此命令处理程序的自定义。  
+-   ID_EDIT_PASTE_LINK   Inserts a link from the current Clipboard contents.  
   
--   **ID\_INDICATOR\_EXT : EXT**结束的选择指示符。  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
   
--   **ID\_INDICATOR\_OVR : OV**和**R**罢工指示符。  
+     `COleDocument` just provides a update command UI handler for this command. If the Clipboard does not contain linkable OLE item/object, the command will be disabled. You are responsible for writing the handler for the actual command to do the actual pasting. If your OLE application can also paste other formats, you should provide your own update command UI handler in your view or document (that is, somewhere before `COleDocument` in the command target routing).  
   
--   ording 指示器的**ID\_INDICATOR\_REC : REC**。  
+     If you choose to implement this command, we recommend you use this command ID.  
   
- 目前没有这些指示器的标准实现。  
+     For replacing the standard OLE implementation, use `COleClientItem::CanPasteLink`.  
   
- 如果您选择实现这些指示器，建议在状态栏使用这些指示器 ID 和维护排序指示符 \(即此顺序：EXT，和，数字，SCRL，OVR，REC\)。  
+-   ID_EDIT_PASTE_SPECIAL   Inserts the current Clipboard contents with options.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class. MFC does not provide this dialog.  
+  
+     If you choose to implement this command, we recommend you use this command ID.  
+  
+-   ID_EDIT_REPEAT   Repeats the last operation.  
+  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
+  
+     `CEditView` provides an implementation of this command to repeat the last find operation. The private implementation variables for the last find are used. The command is disabled if a find cannot be attempted.  
+  
+     If you choose to implement this command, we recommend you use this command ID.  
+  
+-   ID_EDIT_REPLACE   Begins the replace operation, brings up the modeless replace dialog.  
+  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
+  
+     `CEditView` provides an implementation of this command, which calls the implementation helper function **OnEditFindReplace** to use and store the previous find/replace settings in private implementation variables. The `CFindReplaceDialog` class is used to manage the modeless dialog that prompts the user.  
+  
+     If you choose to implement this command, we recommend you use this command ID.  
+  
+-   ID_EDIT_SELECT_ALL   Selects the entire document.  
+  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
+  
+     `CEditView` provides an implementation of this command, which selects all the text in the document. The command is disabled if there is no text to select.  
+  
+     If you choose to implement this command, we recommend you use this command ID.  
+  
+-   ID_EDIT_UNDO   Undoes the last operation.  
+  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
+  
+     `CEditView` provides an implementation of this command, using `CEdit::Undo`. The command is disabled if `CEdit::CanUndo` returns FALSE.  
+  
+     If you choose to implement this command, we recommend you use this command ID.  
+  
+-   ID_EDIT_REDO   Redoes the last operation.  
+  
+     Currently there is no standard implementation for this command. You must implement this for each `CView`-derived class.  
+  
+     If you choose to implement this command, we recommend you use this command ID.  
+  
+-   ID_WINDOW_NEW   Opens another window on the active document.  
+  
+     **CMDIFrameWnd::OnWindowNew** implements this powerful feature by using the document template of the current document to create another frame containing another view of the current document.  
+  
+     Like most multiple document interface (MDI) Window menu commands, the command is disabled if there is no active MDI child window.  
+  
+     Customization of this command handler is not recommended. If you wish to provide a command that creates additional views or frame windows, you will probably be better off inventing your own command. You can clone the code from **CMDIFrameWnd::OnWindowNew** and modify it to the specific frame and view classes of your liking.  
+  
+-   ID_WINDOW_ARRANGE   Arranges icons at the bottom of an MDI window.  
+  
+     `CMDIFrameWnd` implements this standard MDI command in an implementation helper function **OnMDIWindowCmd**. This helper maps command IDs to MDI Windows messages and can therefore share a lot of code.  
+  
+     Like most MDI Window menu commands, the command is disabled if there is no active MDI child window.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_WINDOW_CASCADE   Cascades windows so they overlap.  
+  
+     `CMDIFrameWnd` implements this standard MDI command in an implementation helper function **OnMDIWindowCmd**. This helper maps command IDs to MDI Windows messages and can therefore share a lot of code.  
+  
+     Like most MDI Window menu commands, the command is disabled if there is no active MDI child window.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_WINDOW_TILE_HORZ   Tiles windows horizontally.  
+  
+     This command is implemented in `CMDIFrameWnd` just like **ID_WINDOW_CASCADE**, except a different MDI Windows message is used for the operation.  
+  
+     You should pick the default tile orientation for your application. You can do this by changing the ID for the Window "Tile" menu item to either **ID_WINDOW_TILE_HORZ** or **ID_WINDOW_TILE_VERT**.  
+  
+-   ID_WINDOW_TILE_VERT   Tiles windows vertically.  
+  
+     This command is implemented in `CMDIFrameWnd` just like **ID_WINDOW_CASCADE**, except a different MDI Windows message is used for the operation.  
+  
+     You should pick the default tile orientation for your application. You can do this by changing the ID for the Window "Tile" menu item to either **ID_WINDOW_TILE_HORZ** or **ID_WINDOW_TILE_VERT**.  
+  
+-   ID_WINDOW_SPLIT   Keyboard interface to splitter.  
+  
+     `CView` handles this command for the `CSplitterWnd` implementation. If the view is part of a splitter window, this command will delegate to the implementation function `CSplitterWnd::DoKeyboardSplit`. This will place the splitter in a mode that will allow keyboard users to split or unsplit a splitter window.  
+  
+     This command is disabled if the view is not in a splitter.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_APP_ABOUT   Invokes the About dialog box.  
+  
+     There is no standard implementation for an application's About box. The default AppWizard-created application will create a custom dialog class for your application and use it as your About box. AppWizard will also write the trivial command handler which handles this command and invokes the dialog.  
+  
+     You will almost always implement this command.  
+  
+-   ID_APP_EXIT   Exit the application.  
+  
+     **CWinApp::OnAppExit** handles this command by sending a `WM_CLOSE` message to the application's main window. The standard shutting down of the application (prompting for dirty files and so on) is handled by the `CFrameWnd` implementation.  
+  
+     Customization of this command handler is not recommended. Overriding `CWinApp::SaveAllModified` or the `CFrameWnd` closing logic is recommended.  
+  
+     If you choose to implement this command, we recommend you use this command ID.  
+  
+-   ID_HELP_INDEX   Lists Help topics from .HLP file.  
+  
+    > [!NOTE]
+    >  You must connect this to your `CWinApp`-derived class's message map to enable this functionality.  
+  
+     `CWinApp::OnHelpIndex` handles this command by trivially calling `CWinApp::WinHelp`.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_HELP_USING   Displays help on how to use Help.  
+  
+    > [!NOTE]
+    >  You must connect this to your `CWinApp`-derived class's message map to enable this functionality.  
+  
+     `CWinApp::OnHelpUsing` handles this command by trivially calling `CWinApp::WinHelp`.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_CONTEXT_HELP   Enters SHIFT-F1 help mode.  
+  
+    > [!NOTE]
+    >  You must connect this to your `CWinApp`-derived class's message map to enable this functionality.  
+  
+     `CWinApp::OnContextHelp` handles this command by setting the help mode cursor, entering a modal loop and waiting for the user to select a window to get help on. Please refer to [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) for more details on the MFC Help implementation.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_HELP   Gives help on the current context  
+  
+    > [!NOTE]
+    >  You must connect this to your `CWinApp`-derived class's message map to enable this functionality.  
+  
+     `CWinApp::OnHelp` handles this command by getting the right help context for the current application context. This handles simple F1 help, help on message boxes and so on. Please refer to [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) for more details on the MFC help implementation.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_DEFAULT_HELP   Displays default help for context  
+  
+    > [!NOTE]
+    >  You must connect this to your `CWinApp`-derived class's message map to enable this functionality.  
+  
+     This command is usually mapped to `CWinApp::OnHelpIndex`.  
+  
+     A different command handler can be provided if a distinction between default Help and the Help index is desired.  
+  
+-   ID_NEXT_PANE   Goes to next pane  
+  
+     `CView` handles this command for the `CSplitterWnd` implementation. If the view is part of a splitter window, this command will delegate to the implementation function **CSplitterWnd::OnNextPaneCmd**. This will move the active view to the next pane in the splitter.  
+  
+     This command is disabled if the view is not in a splitter or there is no next pane to go to.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_PREV_PANE   Goes to previous pane  
+  
+     `CView` handles this command for the `CSplitterWnd` implementation. If the view is part of a splitter window, this command will delegate to the implementation function **CSplitterWnd::OnNextPaneCmd**. This will move the active view to the previous pane in the splitter.  
+  
+     This command is disabled if the view is not in a splitter or there is no previous pane to go to.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_OLE_INSERT_NEW   Inserts a new OLE object  
+  
+     Currently there is no standard implementation for this command. You must implement this for your `CView`-derived class to insert a new OLE item/object at the current selection.  
+  
+     All OLE client applications should implement this command. AppWizard, with the OLE option, will create a skeleton implementation of **OnInsertObject** in your view class that you will have to complete.  
+  
+     See the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) example for a complete implementation of this command.  
+  
+-   ID_OLE_EDIT_LINKS   Edits OLE links  
+  
+     `COleDocument` handles this command by using the MFC-provided implementation of the standard OLE links dialog. The implementation of this dialog is accessed through the `COleLinksDialog` class. If the current document does not contain any links, the command is disabled.  
+  
+     Customization of this command handler is not recommended.  
+  
+-   ID_OLE_VERB_FIRST...LAST   An ID range for OLE verbs  
+  
+     `COleDocument` uses this command ID range for the verbs supported by the currently selected OLE item/object. This must be a range since a given OLE item/object type can support zero or more custom verbs. In your application's menu, you should have one menu item with the ID of **ID_OLE_VERB_FIRST**. When the program is run, the menu will be updated with the appropriate menu verb description (or pop-up menu with many verbs). The management of the OLE menu is handled by `AfxOleSetEditMenu`, done in the update command UI handler for this command.  
+  
+     There are no explicit command handlers for handling each of the command ID in this range. **COleDocument::OnCmdMsg** is overridden to trap all command IDs in this range, turn them into zero-based verb numbers, and launch the server for that verb (using `COleClientItem::DoVerb`).  
+  
+     Customization or other use of this command ID range is not recommended.  
+  
+-   ID_VIEW_TOOLBAR   Toggles the toolbar on and off  
+  
+     `CFrameWnd` handles this command and the update-command UI handler to toggle the visible state of the toolbar. The toolbar must be a child window of the frame with child window ID of `AFX_IDW_TOOLBAR`. The command handler actually toggles the visibility of the toolbar window. `CFrameWnd::RecalcLayout` is used to redraw the frame window with the toolbar in its new state. The update-command UI handler checks the menu item when the toolbar is visible.  
+  
+     Customization of this command handler is not recommended. If you wish to add additional toolbars, you will want to clone and modify the command handler and the update-command UI handler for this command.  
+  
+-   ID_VIEW_STATUS_BAR   Toggles the status bar on and off  
+  
+     This command is implemented in `CFrameWnd` just like **ID_VIEW_TOOLBAR**, except a different child window ID (**AFX_IDW_STATUS_BAR**) is used.  
+  
+## <a name="update-only-command-handlers"></a>Update-Only Command Handlers  
+ Several standard command IDs are used as indicators in status bars. These use the same update-command UI handling mechanism to display their current visual state during application idle time. Since they can't be selected by the user (that is, you cannot push a status bar pane), then it makes no sense to have an `ON_COMMAND` handler for these command IDs.  
+  
+-   **ID_INDICATOR_CAPS** : CAP lock indicator.  
+  
+-   **ID_INDICATOR_NUM** : NUM lock indicator.  
+  
+-   **ID_INDICATOR_SCRL** : SCRL lock indicator.  
+  
+-   **ID_INDICATOR_KANA** : KANA lock indicator (applicable only to Japanese systems).  
+  
+ All three of these are implemented in **CFrameWnd::OnUpdateKeyIndicator**, an implementation helper that uses the command ID to map to the appropriate Virtual Key. A common implementation enables or disables (for status panes disabled = no text) the `CCmdUI` object depending on whether the appropriate Virtual Key is currently locked.  
+  
+ Customization of this command handler is not recommended.  
+  
+-   **ID_INDICATOR_EXT : EXT**ended select indicator.  
+  
+-   **ID_INDICATOR_OVR : OV**e**R**strike indicator.  
+  
+-   **ID_INDICATOR_REC : REC**ording indicator.  
+  
+ Currently there is no standard implementation for these indicators.  
+  
+ If you choose to implement these indicators, we recommend you use these indicator IDs and maintaining the ordering of the indicators in your status bar (that is, in this order: EXT, CAP, NUM, SCRL, OVR, REC).  
+  
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

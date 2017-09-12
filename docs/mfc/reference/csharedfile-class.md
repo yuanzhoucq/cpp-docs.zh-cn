@@ -1,5 +1,5 @@
 ---
-title: "CSharedFile 类 |Microsoft 文档"
+title: CSharedFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- memory files
-- CSharedFile class
-- shared memory files
+- CSharedFile [MFC], CSharedFile
+- CSharedFile [MFC], Detach
+- CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
 caps.latest.revision: 21
 author: mikeblome
@@ -39,51 +39,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f812b2c7b8e3b158068bf3fdab0a327460056251
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 996656224ab793ae0eacf7d5d3ce0b92ec403359
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csharedfile-class"></a>CSharedFile 类
-[CMemFile](../../mfc/reference/cmemfile-class.md)-支持的派生的类共享内存文件。  
+# <a name="csharedfile-class"></a>CSharedFile Class
+The [CMemFile](../../mfc/reference/cmemfile-class.md)-derived class that supports shared memory files.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSharedFile : public CMemFile  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSharedFile::CSharedFile](#csharedfile)|构造 `CSharedFile` 对象。|  
+|[CSharedFile::CSharedFile](#csharedfile)|Constructs a `CSharedFile` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSharedFile::Detach](#detach)|关闭共享的内存文件并返回其内存块的句柄。|  
-|[CSharedFile::SetHandle](#sethandle)|将共享的内存文件附加到的内存块。|  
+|[CSharedFile::Detach](#detach)|Closes the shared memory file and returns the handle of its memory block.|  
+|[CSharedFile::SetHandle](#sethandle)|Attaches the shared memory file to a memory block.|  
   
-## <a name="remarks"></a>备注  
- 内存文件行为磁盘文件类似，只不过该文件存储在 RAM 中，而不是在磁盘上。 内存文件可用于快速临时存储或传输原始字节或序列化的独立进程之间的对象。  
+## <a name="remarks"></a>Remarks  
+ Memory files behave like disk files except that the file is stored in RAM rather than on disk. A memory file is useful for fast temporary storage or for transferring raw bytes or serialized objects between independent processes.  
   
- 共享的内存文件中，为它们的内存分配与其他内存文件中不同[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函数。 `CSharedFile`类将数据存储在全局范围内分配的内存块 (使用创建**GlobalAlloc**)，并且该内存块可以共享使用 DDE、 剪贴板上或其他 OLE/COM 统一数据传输操作，例如，使用`IDataObject`。  
+ Shared memory files differ from other memory files in that memory for them is allocated with the [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows function. The `CSharedFile` class stores data in a globally allocated memory block (created using **GlobalAlloc**), and this memory block can be shared using DDE, the Clipboard, or other OLE/COM uniform data transfer operations, for example, using `IDataObject`.  
   
- **GlobalAlloc**返回`HGLOBAL`处理而不是指向内存，如所返回的指针的指针[malloc](../../c-runtime-library/reference/malloc.md)。 `HGLOBAL`句柄需要某些应用程序中。 例如，若要将数据放在剪贴板上需要`HGLOBAL`处理。  
+ **GlobalAlloc** returns an `HGLOBAL` handle rather than a pointer to memory, such as the pointer returned by [malloc](../../c-runtime-library/reference/malloc.md). The `HGLOBAL` handle is needed in certain applications. For example, to put data on the Clipboard you need an `HGLOBAL` handle.  
   
- 请注意，`CSharedFile`不使用内存映射文件，并不能两个进程之间直接共享的数据。  
+ Please note that `CSharedFile` does not use memory-mapped files, and the data cannot be directly shared between processes.  
   
- `CSharedFile`对象自动分配自己的内存，或者可以将附加到您自己的内存块`CSharedFile`对象通过调用[CSharedFile::SetHandle](#sethandle)。 在任一情况下，自动增长的内存文件的内存分配中`nGrowBytes`-如果大小为增量`nGrowBytes`是否不为零。  
+ `CSharedFile` objects can automatically allocate their own memory or you can attach your own memory block to the `CSharedFile` object by calling [CSharedFile::SetHandle](#sethandle). In either case, memory for growing the memory file automatically is allocated in `nGrowBytes`-sized increments if `nGrowBytes` is not zero.  
   
- 有关详细信息，请参阅文章[MFC 中的文件](../../mfc/files-in-mfc.md)和[文件处理](../../c-runtime-library/file-handling.md)中*运行时库参考*。  
+ For more information, see the article [Files in MFC](../../mfc/files-in-mfc.md) and [File Handling](../../c-runtime-library/file-handling.md) in the *Run-Time Library Reference*.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -92,11 +92,11 @@ class CSharedFile : public CMemFile
   
  `CSharedFile`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxadv.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxadv.h  
   
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
- 构造`CSharedFile`对象，并为它分配内存。  
+##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
+ Constructs a `CSharedFile` object and allocates memory for it.  
   
 ```  
 CSharedFile(
@@ -104,28 +104,28 @@ CSharedFile(
     UINT nGrowBytes = 4096);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nAllocFlags*  
- 指示分配内存的方式的标志。 请参阅[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)有关有效的标志值的列表。  
+ Flags indicating how memory is to be allocated. See [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) for a list of valid flag values.  
   
  `nGrowBytes`  
- 内存分配的增量以字节为单位。  
+ The memory allocation increment in bytes.  
   
-##  <a name="detach"></a>CSharedFile::Detach  
- 调用此函数会关闭内存文件并使其脱离对象从内存块。  
+##  <a name="detach"></a>  CSharedFile::Detach  
+ Call this function to close the memory file and detach it from the memory block.  
   
 ```  
 HGLOBAL Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 内存块，其中包含内存文件的内容的句柄。  
+### <a name="return-value"></a>Return Value  
+ The handle of the memory block that contains the contents of the memory file.  
   
-### <a name="remarks"></a>备注  
- 您可以通过调用重新打开它[SetHandle](#sethandle)，使用返回的句柄**分离**。  
+### <a name="remarks"></a>Remarks  
+ You can reopen it by calling [SetHandle](#sethandle), using the handle returned by **Detach**.  
   
-##  <a name="sethandle"></a>CSharedFile::SetHandle  
- 调用此函数可将附加到的全局内存块`CSharedFile`对象。  
+##  <a name="sethandle"></a>  CSharedFile::SetHandle  
+ Call this function to attach a block of global memory to the `CSharedFile` object.  
   
 ```  
 void SetHandle(
@@ -133,18 +133,18 @@ void SetHandle(
     BOOL bAllowGrow = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *hGlobalMemory*  
- 要附加到的全局内存的句柄`CSharedFile`。  
+ Handle to the global memory to be attached to the `CSharedFile`.  
   
  `bAllowGrow`  
- 指定是否可以增长的内存块。  
+ Specifies whether the memory block is allowed to grow.  
   
-### <a name="remarks"></a>备注  
- 如果`bAllowGrow`非零值，增加了大小的内存块根据需要，例如，如果尝试进行更多的字节写入文件比已分配内存块。  
+### <a name="remarks"></a>Remarks  
+ If `bAllowGrow` is nonzero, the size of the memory block is increased as necessary, for example, if an attempt is made to write more bytes to the file than were allocated for the memory block.  
   
-## <a name="see-also"></a>另请参阅  
- [CMemFile 类](../../mfc/reference/cmemfile-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CMemFile 类](../../mfc/reference/cmemfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CMemFile Class](../../mfc/reference/cmemfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMemFile Class](../../mfc/reference/cmemfile-class.md)
 

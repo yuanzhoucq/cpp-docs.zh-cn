@@ -1,43 +1,62 @@
 ---
-title: "文档模板类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.document"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文档模板, 类"
+title: Document-Template Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.document
+dev_langs:
+- C++
+helpviewer_keywords:
+- document templates [MFC], classes
 ms.assetid: 901749e9-8048-44a0-b5e2-361554650a73
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 文档模板类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17f1db1526b42d2aafde65e6725dd4199b35fd71
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当新的文档或视图创建时，文档模板对象协调文件为显示框架窗口对象。  
+---
+# <a name="document-template-classes"></a>Document-Template Classes
+Document-template objects coordinate the creation of document, view, and frame window objects when a new document or view is created.  
   
  [CDocTemplate](../mfc/reference/cdoctemplate-class.md)  
- 文档模板的基类。  可以直接将不使用该类；相反，您使用从该类派生的其他文档模板类之一。  
+ The base class for document templates. You will never use this class directly; instead, you use one of the other document-template classes derived from this class.  
   
  [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)  
- 文档的模板在多文档界面 \(MDI\) 。  MDI 应用程序可以同时打开了多个文档。  
+ A template for documents in the multiple document interface (MDI). MDI applications can have multiple documents open at a time.  
   
  [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)  
- 文档的模板处于单文档界面 \(SDI\) 。  SDI 应用程序一次只能处于打开的文档。  
+ A template for documents in the single document interface (SDI). SDI applications have only one document open at a time.  
   
-## 相关的类  
+## <a name="related-class"></a>Related Class  
  [CCreateContext](../mfc/reference/ccreatecontext-structure.md)  
- 结构传递文档模板的窗口协调文件、创建函数提供视图和框架窗口对象。  
+ A structure passed by a document template to window-creation functions to coordinate the creation of document, view, and frame-window objects.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

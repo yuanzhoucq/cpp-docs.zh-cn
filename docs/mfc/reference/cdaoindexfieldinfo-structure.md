@@ -1,5 +1,5 @@
 ---
-title: "CDaoIndexFieldInfo 结构 |Microsoft 文档"
+title: CDaoIndexFieldInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoIndexFieldInfo structure
+- CDaoIndexFieldInfo structure [MFC]
 - DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
 caps.latest.revision: 12
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 975b3a704936adc9d4205938bb2c757ab650f0d9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a19ae81acc1fc002e7af5a377753dc1ffaf9226
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo 结构
-`CDaoIndexFieldInfo`结构包含有关为数据访问对象 (DAO) 定义的索引字段对象的信息。  
+# <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo Structure
+The `CDaoIndexFieldInfo` structure contains information about an index field object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoIndexFieldInfo  
@@ -54,25 +54,25 @@ struct CDaoIndexFieldInfo
 };  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 唯一地命名索引字段对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
+ Uniquely names the index field object. For details, see the topic "Name Property" in DAO Help.  
   
  *m_bDescending*  
- 指示由索引对象定义的索引顺序。 **TRUE**如果降序顺序。  
+ Indicates the index ordering defined by the index object. **TRUE** if the order is descending.  
   
-## <a name="remarks"></a>备注  
- Index 对象可以具有多个字段，指示在编制索引 tabledef 对象 （或基于表格的记录集） 的字段。 到更高版本的主副本的引用指示如何在返回的信息`m_pFieldInfos`的成员[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)获取通过调用对象`GetIndexInfo`类的成员函数[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)。  
+## <a name="remarks"></a>Remarks  
+ An index object can have a number of fields, indicating which fields a tabledef (or a recordset based on a table) is indexed on. The references to Primary above indicate how the information is returned in the `m_pFieldInfos` member of a [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) object obtained by calling the `GetIndexInfo` member function of class [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
   
- 索引对象和索引的字段对象不由 MFC 类表示。 相反，DAO 对象类的基础 MFC 对象[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)包含称为索引集合的索引对象的集合。 每个索引对象，包含的字段对象的集合。 这些类提供成员函数来访问各个项的索引信息，或可以访问它们同时与`CDaoIndexInfo`对象通过调用`GetIndexInfo`包含对象的成员函数。 `CDaoIndexInfo`对象，然后，有一个数据成员， `m_pFieldInfos`，，它指向的数组`CDaoIndexFieldInfo`对象。  
+ Index objects and index field objects are not represented by an MFC class. Instead, the DAO objects underlying MFC objects of class [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contain a collection of index objects, called the Indexes collection. Each index object, in turn, contains a collection of field objects. These classes supply member functions to access individual items of index information, or you can access them all at once with a `CDaoIndexInfo` object by calling the `GetIndexInfo` member function of the containing object. The `CDaoIndexInfo` object, then, has a data member, `m_pFieldInfos`, that points to an array of `CDaoIndexFieldInfo` objects.  
   
- 调用`GetIndexInfo`在其索引集合是包含 tabledef 或记录集对象的成员函数存储您感兴趣的索引对象。 然后，访问`m_pFieldInfos`的成员[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)对象。 长度`m_pFieldInfos`数组存储在`m_nFields`。 `CDaoIndexFieldInfo`此外定义了`Dump`成员函数在调试生成。 您可以使用`Dump`转储的内容`CDaoIndexFieldInfo`对象。  
+ Call the `GetIndexInfo` member function of the containing tabledef or recordset object in whose Indexes collection is stored the index object you are interested in. Then access the `m_pFieldInfos` member of the [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) object. The length of the `m_pFieldInfos` array is stored in `m_nFields`. `CDaoIndexFieldInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoIndexFieldInfo` object.  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)   
  [CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
 

@@ -1,5 +1,5 @@
 ---
-title: "事件接收器映射 |Microsoft 文档"
+title: Event Sink Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- event sink maps
+- event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
 caps.latest.revision: 14
 author: mikeblome
@@ -33,228 +33,228 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 33bf66d18b499787a34b2da501bb3e8ead255459
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 97e0a23daee3fc9e0312ef603f80c064fa07edf7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="event-sink-maps"></a>事件接收器映射
-当嵌入 OLE 控件触发事件时，控件的容器将使用 MFC 提供的名为“事件接收器映射”的机制接收事件。 此事件接收器映射为每个特定事件指定处理程序函数，以及这些事件的参数。 事件接收器映射的详细信息，请参阅文章[ActiveX 控件容器](../../mfc/activex-control-containers.md)。  
+# <a name="event-sink-maps"></a>Event Sink Maps
+When an embedded OLE control fires an event, the control's container receives the event using a mechanism, called an "event sink map," supplied by MFC. This event sink map designates handler functions for each specific event, as well as parameters of those events. For more information on event sink maps, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="event-sink-maps"></a>事件接收器映射  
+### <a name="event-sink-maps"></a>Event Sink Maps  
   
 |||  
 |-|-|  
-|[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|启动事件接收器映射的定义。|  
-|[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|声明事件接收器映射。|  
-|[END_EVENTSINK_MAP](#end_eventsink_map)|结束事件接收器映射的定义。|  
-|[ON_EVENT](#on_event)|为特定事件定义事件处理程序。|  
-|[ON_EVENT_RANGE](#on_event_range)|为一组 OLE 控件触发的特定事件定义事件处理程序。|  
-|[ON_EVENT_REFLECT](#on_event_reflect)|在控件的容器处理控件触发的事件之前接收这些事件。|  
-|[ON_PROPNOTIFY](#on_propnotify)|定义处理程序来处理来自 OLE 控件的属性通知。|  
-|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|定义处理程序来处理来自一组 OLE 控件的属性通知。|  
-|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|在控件的容器处理控件发送的属性通知之前接收这些通知。|  
+|[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|Starts the definition of an event sink map.|  
+|[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|Declares an event sink map.|  
+|[END_EVENTSINK_MAP](#end_eventsink_map)|Ends the definition of an event sink map.|  
+|[ON_EVENT](#on_event)|Defines an event handler for a specific event.|  
+|[ON_EVENT_RANGE](#on_event_range)|Defines an event handler for a specific event fired from a set of OLE controls.|  
+|[ON_EVENT_REFLECT](#on_event_reflect)|Receives events fired by the control before they are handled by the control's container.|  
+|[ON_PROPNOTIFY](#on_propnotify)|Defines a handler for handling property notifications from an OLE control.|  
+|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Defines a handler for handling property notifications from a set of OLE controls.|  
+|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Receives property notifications sent by the control before they are handled by the control's container.|  
   
-##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
- 开始事件接收器映射的定义。  
+##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
+ Begins the definition of your event sink map.  
   
 ```   
 BEGIN_EVENTSINK_MAP(theClass, baseClass)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 指定此列类型的事件接收器映射的控件类的名称。  
+ Specifies the name of the control class whose event sink map this is.  
   
  `baseClass`  
- 指定 `theClass` 的基类的名称。  
+ Specifies the name of the base class of `theClass`.  
   
-### <a name="remarks"></a>备注  
- 在定义您的类的成员函数的实现 (.cpp) 文件，启动事件接收器映射与`BEGIN_EVENTSINK_MAP`宏，然后添加宏条目为每个事件通知，并完成事件接收器映射与`END_EVENTSINK_MAP`宏。  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the event sink map with the `BEGIN_EVENTSINK_MAP` macro, then add macro entries for each event to be notified of, and complete the event sink map with the `END_EVENTSINK_MAP` macro.  
   
- 事件接收器映射和 OLE 控件容器的详细信息，请参阅文章[ActiveX 控件容器](../../mfc/activex-control-containers.md)。  
+ For more information on event sink maps and OLE control containers, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
- OLE 容器可以提供事件接收器映射来指定将接收通知您的容器的事件。  
+##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
+ An OLE container can provide an event sink map to specify the events your container will be notified of.  
   
 ```   
 DECLARE_EVENTSINK_MAP()   
 ```  
   
-### <a name="remarks"></a>备注  
- 使用`DECLARE_EVENTSINK_MAP`宏在类声明的末尾。 然后，在。CPP 文件中定义的成员函数的类，请使用`BEGIN_EVENTSINK_MAP`宏，宏项，为每个事件、 通知和`END_EVENTSINK_MAP`宏声明事件接收器列表的末尾。  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_EVENTSINK_MAP` macro at the end of your class declaration. Then, in the .CPP file that defines the member functions for the class, use the `BEGIN_EVENTSINK_MAP` macro, macro entries for each of the events to be notified of, and the `END_EVENTSINK_MAP` macro to declare the end of the event sink list.  
   
- 事件接收器映射的详细信息，请参阅文章[ActiveX 控件容器](../../mfc/activex-control-containers.md)。  
+ For more information on event sink maps, see the article [ActiveX Control Containers](../../mfc/activex-control-containers.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
- 结束事件接收器映射的定义。  
+##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP  
+ Ends the definition of your event sink map.  
   
 ```   
 END_EVENTSINK_MAP()   
 ```  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event"></a>ON_EVENT  
- 使用`ON_EVENT`由 OLE 控件触发宏来定义事件的事件处理程序函数。  
+##  <a name="on_event"></a>  ON_EVENT  
+ Use the `ON_EVENT` macro to define an event handler function for an event fired by an OLE control.  
   
 ```   
 ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams) 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 此事件接收器映射所属的类。  
+ The class to which this event sink map belongs.  
   
  `id`  
- OLE 控件的控件 ID。  
+ The control ID of the OLE control.  
   
  `dispid`  
- 由该控件激发的事件调度 ID。  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- 指向成员函数处理该事件的指针。 此函数应具有**BOOL**返回类型，并且与该事件的参数相匹配的参数类型 (请参阅`vtsParams`)。 该函数应返回**TRUE**来表示该事件处理，否则为**FALSE**。  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type, and parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- 一系列**VTS_**指定事件的参数的类型的常量。 这些是如调度映射条目中使用的同一个常量`DISP_FUNCTION`。  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>备注  
- `vtsParams`参数是以空格分隔的值列表**VTS_**常量。 一个或多个由空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如：  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation #&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 指定包含后跟一个短整数列表**BOOL**。  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- 有关列表的**VTS_**常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event_range"></a>ON_EVENT_RANGE  
- 使用`ON_EVENT_RANGE`由任何具有连续的 Id 范围中的控件 ID 的 OLE 控件触发宏来定义事件的事件处理程序函数。  
+##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
+ Use the `ON_EVENT_RANGE` macro to define an event handler function for an event fired by any OLE control having a control ID within a contiguous range of IDs.  
   
 ```   
 ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 此事件接收器映射所属的类。  
+ The class to which this event sink map belongs.  
   
  `idFirst`  
- 在范围内的第一个 OLE 控件的控件 ID。  
+ The control ID of the first OLE control in the range.  
   
  `idLast`  
- 在范围内的最后一个 OLE 控件的控件 ID。  
+ The control ID of the last OLE control in the range.  
   
  `dispid`  
- 由该控件激发的事件调度 ID。  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- 指向成员函数处理该事件的指针。 此函数应具有**BOOL**返回类型，类型的第一个参数**UINT** （适用于控件 ID) 和与该事件的参数相匹配的其他参数类型 (请参阅`vtsParams`)。 该函数应返回**TRUE**来表示该事件处理，否则为**FALSE**。  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type, a first parameter of type **UINT** (for the control ID), and additional parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- 一系列**VTS_**指定事件的参数的类型的常量。 第一个常量的类型应为**VTS_I4**，为控件 id。 这些是如调度映射条目中使用的同一个常量`DISP_FUNCTION`。  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. The first constant should be of type **VTS_I4**, for the control ID. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>备注  
- `vtsParams`参数是以空格分隔的值列表**VTS_**常量。 一个或多个由空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如：  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation #&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 指定包含后跟一个短整数列表**BOOL**。  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- 有关列表的**VTS_**常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="example"></a>示例  
- 下面的示例演示一个事件处理程序，三个控件实现的 MouseDown 事件 (`IDC_MYCTRL1`通过`IDC_MYCTRL3`)。 事件处理程序函数， `OnRangeMouseDown`，在对话框类的头文件中声明 ( `CMyDlg`) 为︰  
+### <a name="example"></a>Example  
+ The following example demonstrates an event handler, for the MouseDown event, implemented for three controls ( `IDC_MYCTRL1` through `IDC_MYCTRL3`). The event handler function, `OnRangeMouseDown`, is declared in the header file of the dialog class ( `CMyDlg`) as:  
   
- [!code-cpp[NVC_MFCAutomation #&12;](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
+ [!code-cpp[NVC_MFCAutomation#12](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
   
- 下面的代码是在对话框类的实现文件中定义的。  
+ The code below is defined in the implementation file of the dialog class.  
   
- [!code-cpp[NVC_MFCAutomation #&13;](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
- `ON_EVENT_REFLECT`宏，使用在事件接收器映射 OLE 控件的包装器类时接收之前它们均由该控件的容器处理控件触发的事件。  
+##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
+ The `ON_EVENT_REFLECT` macro, when used in the event sink map of an OLE control's wrapper class, receives events fired by the control before they are handled by the control's container.  
   
 ```   
 ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams) 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 此事件接收器映射所属的类。  
+ The class to which this event sink map belongs.  
   
  dispid  
- 由该控件激发的事件调度 ID。  
+ The dispatch ID of the event fired by the control.  
   
  `pfnHandler`  
- 指向成员函数处理该事件的指针。 此函数应具有**BOOL**返回类型和与该事件的参数相匹配的参数类型 (请参阅`vtsParams`)。 该函数应返回**TRUE**来表示该事件处理，否则为**FALSE**。  
+ Pointer to a member function that handles the event. This function should have a **BOOL** return type and parameter types that match the event's parameters (see `vtsParams`). The function should return **TRUE** to indicate the event was handled; otherwise **FALSE**.  
   
  `vtsParams`  
- 一系列**VTS_**指定事件的参数的类型的常量。 这些是如调度映射条目中使用的同一个常量`DISP_FUNCTION`。  
+ A sequence of **VTS_** constants that specifies the types of the parameters for the event. These are the same constants that are used in dispatch map entries such as `DISP_FUNCTION`.  
   
-### <a name="remarks"></a>备注  
- `vtsParams`参数是以空格分隔的值列表**VTS_**常量。  
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants.  
   
- 一个或多个由空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如：  
+ One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation #&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 指定包含后跟一个短整数列表**BOOL**。  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- 有关列表的**VTS_**常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
- 使用`ON_PROPNOTIFY`宏来定义一个事件接收器映射条目，来处理来自 OLE 控件的属性通知。  
+##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
+ Use the `ON_PROPNOTIFY` macro to define an event sink map entry for handling property notifications from an OLE control.  
   
 ```   
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)  
  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 此事件接收器映射所属的类。  
+ The class to which this event sink map belongs.  
   
  `id`  
- OLE 控件的控件 ID。  
+ The control ID of the OLE control.  
   
  `dispid`  
- 在通知中所涉及的属性的调度 ID。  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- 处理的成员函数指针**OnRequestEdit**此属性的通知。 此函数应具有**BOOL**返回类型和一个**BOOL\* **参数。 此函数应将参数设置为**TRUE**以允许要更改的属性和**FALSE**不允许。 该函数应返回**TRUE**以指示通知的处理; 否则为**FALSE**。  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and a **BOOL\*** parameter. This function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- 处理的成员函数指针**OnChanged**此属性的通知。 此函数应该拥有**BOOL**返回类型和一个**UINT**参数。 该函数应返回**TRUE**以指示通知的处理; 否则为**FALSE**。  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and a **UINT** parameter. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
-### <a name="remarks"></a>备注  
- `vtsParams`参数是以空格分隔的值列表**VTS_**常量。 一个或多个由空格 （而不是逗号） 分隔这些值指定函数的参数列表。 例如:   
+### <a name="remarks"></a>Remarks  
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example:  
   
- [!code-cpp[NVC_MFCAutomation #&11;](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 指定包含后跟一个短整数列表**BOOL**。  
+ specifies a list containing a short integer followed by a **BOOL**.  
   
- 有关列表的**VTS_**常量，请参阅[EVENT_CUSTOM](event-maps.md#event_custom)。  
+ For a list of the **VTS_** constants, see [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
- 使用`ON_PROPNOTIFY_RANGE`宏来定义用于处理来自任何具有连续的 Id 范围中的控件 ID 的 OLE 控件的属性通知事件接收器映射项。  
+##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
+ Use the `ON_PROPNOTIFY_RANGE` macro to define an event sink map entry for handling property notifications from any OLE control having a control ID within a contiguous range of IDs.  
   
 ```  
  
@@ -262,30 +262,30 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 此事件接收器映射所属的类。  
+ The class to which this event sink map belongs.  
   
  `idFirst`  
- 在范围内的第一个 OLE 控件的控件 ID。  
+ The control ID of the first OLE control in the range.  
   
  `idLast`  
- 在范围内的最后一个 OLE 控件的控件 ID。  
+ The control ID of the last OLE control in the range.  
   
  `dispid`  
- 在通知中所涉及的属性的调度 ID。  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- 处理的成员函数指针**OnRequestEdit**此属性的通知。 此函数应具有**BOOL**返回类型和**UINT**和**BOOL\* **参数。 该函数应将参数设置为**TRUE**以允许要更改的属性和**FALSE**不允许。 该函数应返回**TRUE**以指示通知的处理; 否则为**FALSE**。  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and **UINT** and **BOOL\*** parameters. The function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- 处理的成员函数指针**OnChanged**此属性的通知。 此函数应该拥有**BOOL**返回类型和一个**UINT**参数。 该函数应返回**TRUE**以指示通知的处理; 否则为**FALSE**。  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and a **UINT** parameter. The function should return **TRUE** to indicate that notification was handled; otherwise **FALSE**.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
- `ON_PROPNOTIFY_REFLECT`宏，当使用在事件接收器映射 OLE 控件的包装器类的属性通知接收之前它们均由该控件的容器处理由控件发送。  
+##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
+ The `ON_PROPNOTIFY_REFLECT` macro, when used in the event sink map of an OLE control's wrapper class, receives property notifications sent by the control before they are handled by the control's container.  
   
 ```  
  
@@ -293,22 +293,22 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 此事件接收器映射所属的类。  
+ The class to which this event sink map belongs.  
   
  `dispid`  
- 在通知中所涉及的属性的调度 ID。  
+ The dispatch ID of the property involved in the notification.  
   
  `pfnRequest`  
- 处理的成员函数指针**OnRequestEdit**此属性的通知。 此函数应具有**BOOL**返回类型和一个**BOOL\* **参数。 此函数应将参数设置为**TRUE**以允许要更改的属性和**FALSE**不允许。 该函数应返回**TRUE**以指示通知的处理; 否则为**FALSE**。  
+ Pointer to a member function that handles the **OnRequestEdit** notification for this property. This function should have a **BOOL** return type and a **BOOL\*** parameter. This function should set the parameter to **TRUE** to allow the property to change and **FALSE** to disallow. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
  `pfnChanged`  
- 处理的成员函数指针**OnChanged**此属性的通知。 此函数应该拥有**BOOL**返回类型和任何参数。 该函数应返回**TRUE**以指示通知的处理; 否则为**FALSE**。  
+ Pointer to a member function that handles the **OnChanged** notification for this property. The function should have a **BOOL** return type and no parameters. The function should return **TRUE** to indicate the notification was handled; otherwise **FALSE**.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
     
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

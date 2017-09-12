@@ -1,53 +1,72 @@
 ---
-title: "异常：从您自己的函数引发异常 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "异常, 引发"
-  - "函数 [C++], 引发异常"
-  - "引发异常, 从函数"
+title: 'Exceptions: Throwing Exceptions from Your Own Functions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- throwing exceptions [MFC], from functions
+- functions [MFC], throwing exceptions
+- exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 异常：从您自己的函数引发异常
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a67bebf4f9f71ae86a5c0bcbe3716c96ced6b56
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-使用异常本身处理示例捕捉 MFC 或其他库中的函数引发的异常是可能的。  除了捕获库代码引发异常之外，如果您编写的函数可以遇到异常条件，您可以在您自己的代码中抛出异常。  
+---
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceptions: Throwing Exceptions from Your Own Functions
+It is possible to use the MFC exception-handling paradigm solely to catch exceptions thrown by functions in MFC or other libraries. In addition to catching exceptions thrown by library code, you can throw exceptions from your own code if you are writing functions that can encounter exceptional conditions.  
   
- 在异常引发时，当前函数的执行停止并直接跳转到最内层的异常框架的 **catch** 块。  异常机制跳过从函数退出的正常路径。  因此，必须确保删除处于正常退出将删除的那些存储区。  
+ When an exception is thrown, execution of the current function is stopped and jumps directly to the **catch** block of the innermost exception frame. The exception mechanism bypasses the normal exit path from a function. Therefore, you must be sure to delete those memory blocks that would be deleted in a normal exit.  
   
-#### 抛出异常  
+#### <a name="to-throw-an-exception"></a>To throw an exception  
   
-1.  使用一个 MFC 的帮助程序函数，例如 `AfxThrowMemoryException`。  这些函数引发适当类型的预分配的异常对象。  
+1.  Use one of the MFC helper functions, such as `AfxThrowMemoryException`. These functions throw a preallocated exception object of the appropriate type.  
   
-     在下面示例中，函数尝试分配两个存储区，如果任何一个分配失败则引发异常：  
+     In the following example, a function tries to allocate two memory blocks and throws an exception if either allocation fails:  
   
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
   
-     如果第一个分配失败，您可以简单抛出内存异常。  如果第一个分配成功，但第二个失败，则必须在抛出异常之前释放第一次分配的块。  如果两这都分配成功，通常可以正常运行，当退出函数时释放块。  
+     If the first allocation fails, you can simply throw the memory exception. If the first allocation is successful but the second one fails, you must free the first allocation block before throwing the exception. If both allocations succeed, you can proceed normally and free the blocks when exiting the function.  
   
-     \- 或 \-  
+     - or -  
   
-2.  使用用户定义的异常指示问题情况。  可以抛出任何类型项，甚至整个类，按您的意愿。  
+2.  Use a user-defined exception to indicate a problem condition. You can throw an item of any type, even an entire class, as your exception.  
   
-     以下示例尝试通过波形设备播放声音，如果失败则抛出异常。  
+     The following example attempts to play a sound through a wave device and throws an exception if there is a failure.  
   
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
   
 > [!NOTE]
->  MFC 的默认异常处理仅适用于指向 `CException` 对象 的指针\( 以及 `CException` 派生类的对象。\)  上面的例子跳过 MFC 的异常机制。  
+>  MFC's default handling of exceptions applies only to pointers to `CException` objects (and objects of `CException`-derived classes). The example above bypasses MFC's exception mechanism.  
   
-## 请参阅  
- [异常处理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

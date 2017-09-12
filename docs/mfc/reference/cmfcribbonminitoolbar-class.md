@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonMiniToolBar 类 |Microsoft 文档"
+title: CMFCRibbonMiniToolBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonMiniToolBar class
+- CMFCRibbonMiniToolBar [MFC], IsContextMenuMode
+- CMFCRibbonMiniToolBar [MFC], IsRibbonMiniToolBar
+- CMFCRibbonMiniToolBar [MFC], SetCommands
+- CMFCRibbonMiniToolBar [MFC], Show
+- CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
 caps.latest.revision: 24
 author: mikeblome
@@ -39,49 +43,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7c69880578c0aba88a8463112f4d1e05f6032497
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 60386835a2b309fd6672091202ed052061e27368
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 类
-实现上下文快捷工具栏。  
+# <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar Class
+Implements a contextual popup toolbar.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|默认构造函数。|  
-|`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|析构函数。|  
+|`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Default constructor.|  
+|`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonMiniToolBar::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
+|`CMFCRibbonMiniToolBar::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
-|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|（重写 `CMFCPopupMenu::IsRibbonMiniToolBar`。）|  
-|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|设置要在工具栏上显示的命令的列表。|  
-|[CMFCRibbonMiniToolBar::Show](#show)|在指定的屏幕坐标上显示浮动工具栏。|  
-|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|显示浮动工具栏以及上下文菜单。|  
+|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Overrides `CMFCPopupMenu::IsRibbonMiniToolBar`.)|  
+|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Sets the list of commands to be displayed on the toolbar.|  
+|[CMFCRibbonMiniToolBar::Show](#show)|Displays the mini toolbar at the specified screen coordinates.|  
+|[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Displays the mini toolbar together with a context menu.|  
   
-## <a name="remarks"></a>备注  
- 通常于用户在文档中选择对象后显示浮动工具栏。 例如，用户在文字处理程序中选择文本块后，应用程序将显示包含文本格式设置命令的浮动工具栏。  
+## <a name="remarks"></a>Remarks  
+ The mini toolbar is typically displayed after the user selects an object in a document. For example, after the user selects a block of text in a word processing program, the application displays a mini toolbar that contains text formatting commands.  
   
- 鼠标指针位于浮动工具栏边界之外时，浮动工具栏将变透明。  
+ The mini toolbar becomes transparent when the mouse pointer is out of the bounds of the mini toolbar.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -98,11 +102,11 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
  [CMFCRibbonMiniToolBar](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxRibbonMiniToolBar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonMiniToolBar.h  
   
-##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
- 设置要在工具栏上显示的命令的列表。  
+##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands  
+ Sets the list of commands to be displayed on the toolbar.  
   
 ```  
 void SetCommands(
@@ -110,23 +114,23 @@ void SetCommands(
     const CList<UINT,UINT>& lstCommands);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pRibbonBar`  
- 浮动工具栏搜索要显示的按钮的功能区栏。  
+ The ribbon bar that the mini toolbar searches for the buttons to display.  
   
  [in] `lstCommands`  
- 要显示在浮动工具栏上的命令列表。 所有功能区类别搜索以查找关联的按钮。  
+ The list of commands to be displayed on the mini toolbar. All ribbon categories are searched to find the associated buttons.  
   
-### <a name="remarks"></a>备注  
- 使用此函数可设置要显示在浮动工具栏的命令列表。  
+### <a name="remarks"></a>Remarks  
+ Use this function to set the list of commands to be displayed in the mini toolbar.  
   
-### <a name="example"></a>示例  
- 下面的示例演示如何使用`SetCommands`方法`CMFCRibbonMiniToolBar`类。 此代码段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `SetCommands` method of the `CMFCRibbonMiniToolBar` class. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo #&9;](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
- 在指定的屏幕坐标上显示浮动工具栏。  
+##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show  
+ Displays the mini toolbar at the specified screen coordinates.  
   
 ```  
 BOOL Show(
@@ -134,18 +138,18 @@ BOOL Show(
     int y);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `x`  
- 指定屏幕坐标中的微型工具栏的水平位置。  
+ Specifies the horizontal position of the mini toolbar in screen coordinates.  
   
  [in] `y`  
- 在屏幕坐标中指定该微型工具栏上的垂直位置。  
+ Specifies the vertical position of the mini toolbar in screen coordinates.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则显示浮动工具栏否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the mini toolbar was displayed successfully; otherwise, `FALSE`.  
   
-##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
- 显示浮动工具栏以及上下文菜单。  
+##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
+ Displays the mini toolbar together with a context menu.  
   
 ```  
 BOOL ShowWithContextMenu(
@@ -155,48 +159,48 @@ BOOL ShowWithContextMenu(
     CWnd* pWndOwner);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `x`  
- 在屏幕坐标中指定的上下文菜单的水平位置。  
+ Specifies the horizontal position of the context menu in screen coordinates.  
   
  [in] `y`  
- 在屏幕坐标中指定的上下文菜单的垂直位置。  
+ Specifies the vertical position of the context menu in screen coordinates.  
   
  [in] `uiMenuResID`  
- 指定要显示的上下文菜单的资源 ID。  
+ Specifies the resource ID of the context menu to display.  
   
  [in] `pWndOwner`  
- 标识接收来自上下文菜单上的消息窗口的窗口。  
+ Identifies the window which receives messages from the context menu.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则在显示上下文菜单否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the context menu was displayed successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 此函数用于显示具有一个上下文菜单的浮动工具栏。 上下文菜单为微型工具栏下方的定位 15 像素。  
+### <a name="remarks"></a>Remarks  
+ Use this function to display a mini toolbar that has a context menu. The context menu is positioned 15 pixels below the mini toolbar.  
   
-##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 BOOL IsContextMenuMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual BOOL IsRibbonMiniToolBar() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

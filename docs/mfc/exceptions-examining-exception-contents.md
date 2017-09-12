@@ -1,41 +1,60 @@
 ---
-title: "异常：检查异常内容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "捕捉块, MFC 函数异常"
-  - "CException 类, 类异常"
-  - "异常处理, MFC"
-  - "引发异常, 异常内容"
-  - "try-catch 异常处理, 异常内容"
-  - "try-catch 异常处理, MFC 函数异常"
+title: 'Exceptions: Examining Exception Contents | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception handling [MFC], MFC
+- try-catch exception handling [MFC], MFC function exceptions
+- catch blocks, MFC function exceptions
+- CException class [MFC], class exceptions
+- try-catch exception handling [MFC], exception contents
+- throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 异常：检查异常内容
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 22ceae611fe0b5326e673e7845be9cfa2b68fbf0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-虽然 **catch** 块的参数可以为几乎任何数据类型，MFC 函数引发从类派生类型的异常的 `CException`。  为了捕捉 MFC 函数引发的异常，然后，编写参数是指向 `CException` 对象的 **catch** 块 \(或从 `CException`派生的对象，如 `CMemoryException`\)。  根据异常的确切类型，您可以检查异常对象的数据成员。收集信息的异常信息的特定原因。  
+---
+# <a name="exceptions-examining-exception-contents"></a>Exceptions: Examining Exception Contents
+Although a **catch** block's argument can be of almost any data type, the MFC functions throw exceptions of types derived from the class `CException`. To catch an exception thrown by an MFC function, then, you write a **catch** block whose argument is a pointer to a `CException` object (or an object derived from `CException`, such as `CMemoryException`). Depending on the exact type of the exception, you can examine the data members of the exception object to gather information about the specific cause of the exception.  
   
- 例如，`CFileException` 类型具有 `m_cause` 数据成员，包含一枚举类型指定文件异常的原因。  可以返回值的一些示例包括 **CFileException::fileNotFound** 和 **CFileException::readOnly**。  
+ For example, the `CFileException` type has the `m_cause` data member, which contains an enumerated type that specifies the cause of the file exception. Some examples of the possible return values are **CFileException::fileNotFound** and **CFileException::readOnly**.  
   
- 下面的示例演示如何检查 `CFileException`的内容。  其他异常类型可能类似进行检查。  
+ The following example shows how to examine the contents of a `CFileException`. Other exception types can be examined similarly.  
   
- [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/CPP/exceptions-examining-exception-contents_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]  
   
- 有关更多信息，请参见 [异常：版本在异常对象](../mfc/exceptions-freeing-objects-in-exceptions.md) 和 [异常：捕获异常和删除](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
+ For more information, see [Exceptions: Freeing Objects in Exceptions](../mfc/exceptions-freeing-objects-in-exceptions.md) and [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-## 请参阅  
- [异常处理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

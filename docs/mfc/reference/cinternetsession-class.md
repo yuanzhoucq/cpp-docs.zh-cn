@@ -1,5 +1,5 @@
 ---
-title: "CInternetSession 类 |Microsoft 文档"
+title: CInternetSession Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,8 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CInternetSession class
-- Internet sessions
+- CInternetSession [MFC], CInternetSession
+- CInternetSession [MFC], Close
+- CInternetSession [MFC], EnableStatusCallback
+- CInternetSession [MFC], GetContext
+- CInternetSession [MFC], GetCookie
+- CInternetSession [MFC], GetCookieLength
+- CInternetSession [MFC], GetFtpConnection
+- CInternetSession [MFC], GetGopherConnection
+- CInternetSession [MFC], GetHttpConnection
+- CInternetSession [MFC], OnStatusCallback
+- CInternetSession [MFC], OpenURL
+- CInternetSession [MFC], SetCookie
+- CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
 caps.latest.revision: 25
 author: mikeblome
@@ -48,85 +59,85 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9544044c34c27ebb366ac8e3ee7fe0ffe4bd61b2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cinternetsession-class"></a>CInternetSession 类
-创建和初始化一个或多个同时 Internet 会话，并说明与代理服务器的连接（如果需要）。  
+# <a name="cinternetsession-class"></a>CInternetSession Class
+Creates and initializes a single or several simultaneous Internet sessions and, if necessary, describes your connection to a proxy server.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CInternetSession : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetSession::CInternetSession](#cinternetsession)|构造 `CInternetSession` 对象。|  
+|[CInternetSession::CInternetSession](#cinternetsession)|Constructs a `CInternetSession` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetSession::Close](#close)|当 Internet 会话已终止，则关闭 Internet 连接。|  
-|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|建立状态回调例程。|  
-|[CInternetSession::GetContext](#getcontext)|当 Internet 会话已终止，则关闭 Internet 连接。|  
-|[CInternetSession::GetCookie](#getcookie)|返回指定的 URL 和所有其父级 Url 的 cookie。|  
-|[CInternetSession::GetCookieLength](#getcookielength)|检索指定存储在缓冲区中的 cookie 的长度的变量。|  
-|[Cinternetsession:: Getftpconnection](#getftpconnection)|打开与服务器的 FTP 会话。 登录用户。|  
-|[CInternetSession::GetGopherConnection](#getgopherconnection)|将打开 gopher 服务器的应用程序尝试打开的连接。|  
-|[CInternetSession::GetHttpConnection](#gethttpconnection)|打开 HTTP 服务器的应用程序尝试打开的连接。|  
-|[CInternetSession::OnStatusCallback](#onstatuscallback)|启用状态回调后，请更新操作的状态。|  
-|[Cinternetsession:: Openurl](#openurl)|分析并打开一个 URL。|  
-|[CInternetSession::SetCookie](#setcookie)|为指定的 URL 中设置了 cookie。|  
-|[CInternetSession::SetOption](#setoption)|设置 Internet 会话选项。|  
+|[CInternetSession::Close](#close)|Closes the Internet connection when the Internet session is terminated.|  
+|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Establishes a status callback routine.|  
+|[CInternetSession::GetContext](#getcontext)|Closes the Internet connection when the Internet session is terminated.|  
+|[CInternetSession::GetCookie](#getcookie)|Returns cookies for the specified URL and all its parent URLs.|  
+|[CInternetSession::GetCookieLength](#getcookielength)|Retrieves the variable specifying the length of the cookie stored in the buffer.|  
+|[CInternetSession::GetFtpConnection](#getftpconnection)|Opens an FTP session with a server. Logs on the user.|  
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|Opens a gopher server for an application that is trying to open a connection.|  
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|Opens an HTTP server for an application that is trying to open a connection.|  
+|[CInternetSession::OnStatusCallback](#onstatuscallback)|Updates the status of an operation when status callback is enabled.|  
+|[CInternetSession::OpenURL](#openurl)|Parses and opens a URL.|  
+|[CInternetSession::SetCookie](#setcookie)|Sets a cookie for the specified URL.|  
+|[CInternetSession::SetOption](#setoption)|Sets options for the Internet session.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetSession::operator HINTERNET](#operator_hinternet)|当前的 Internet 会话句柄。|  
+|[CInternetSession::operator HINTERNET](#operator_hinternet)|A handle to the current Internet session.|  
   
-## <a name="remarks"></a>备注  
- 如果应用程序的持续时间内，必须维护你的 Internet 连接，则可以创建`CInternetSession`类的成员[CWinApp](../../mfc/reference/cwinapp-class.md)。  
+## <a name="remarks"></a>Remarks  
+ If your Internet connection must be maintained for the duration of an application, you can create a `CInternetSession` member of the class [CWinApp](../../mfc/reference/cwinapp-class.md).  
   
- 一旦已建立 Internet 会话，就可以调用[OpenURL](#openurl)。 `CInternetSession`然后为您分析该 URL，通过调用全局函数[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)。 而不考虑其协议类型、`CInternetSession`解释 URL，并为你管理。 它可以处理针对与 URL 资源"file://"标识的本地文件的请求。 `OpenURL`将返回一个指向[CStdioFile](../../mfc/reference/cstdiofile-class.md)如果名称传递给它的对象是本地文件。  
+ Once you have established an Internet session, you can call [OpenURL](#openurl). `CInternetSession` then parses the URL for you by calling the global function [AfxParseURL](internet-url-parsing-globals.md#afxparseurl). Regardless of its protocol type, `CInternetSession` interprets the URL and manages it for you. It can handle requests for local files identified with the URL resource "file://". `OpenURL` will return a pointer to a [CStdioFile](../../mfc/reference/cstdiofile-class.md) object if the name you pass it is a local file.  
   
- 如果打开上 Internet 服务器使用的 URL `OpenURL`，你可以从网站读取信息。 如果你想要在文件位于服务器上执行的特定于服务 （如 HTTP、 FTP 或 gopher） 操作，必须建立与该服务器适当的连接。 若要打开特定种类的直接到特定服务的连接，请使用以下成员函数之一︰  
+ If you open a URL on an Internet server using `OpenURL`, you can read information from the site. If you want to perform service-specific (for example, HTTP, FTP, or gopher) actions on files located on a server, you must establish the appropriate connection with that server. To open a particular kind of connection directly to a particular service, use one of the following member functions:  
   
-- [GetGopherConnection](#getgopherconnection)以打开 gopher 服务的连接。  
+- [GetGopherConnection](#getgopherconnection) to open a connection to a gopher service.  
   
-- [GetHttpConnection](#gethttpconnection)打开对 HTTP 服务的连接。  
+- [GetHttpConnection](#gethttpconnection) to open a connection to an HTTP service.  
   
-- [GetFtpConnection](#getftpconnection)以打开与 FTP 服务建立连接。  
+- [GetFtpConnection](#getftpconnection) to open a connection to an FTP service.  
   
- [SetOption](#setoption)允许你设置查询选项的会话中，如超时值的重试次数，依次类推。  
+ [SetOption](#setoption) allows you to set the query options of your session, such as time-out values, number of retries, and so on.  
   
- `CInternetSession`成员函数[SetCookie](#setcookie)， [GetCookie](#getcookie)，和[GetCookieLength](#getcookielength)提供用于管理 Win32 cookie 数据库，通过该服务器和脚本保留有关客户端工作站的状态信息的方法。  
+ `CInternetSession` member functions [SetCookie](#setcookie), [GetCookie](#getcookie), and [GetCookieLength](#getcookielength) provide the means to manage a Win32 cookie database, through which servers and scripts maintain state information about the client workstation.  
   
- 有关基本 Internet 编程任务的详细信息，请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)。 有关使用 MFC WinInet 类的常规信息，请参阅文章[使用 WinInet Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。  
+ For more information about basic Internet programming tasks, see the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md). For general information about using the MFC WinInet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 > [!NOTE]
-> `CInternetSession`将引发[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)为不受支持的服务类型。 当前支持只能使用以下服务类型︰ FTP、 HTTP、 gopher 和文件。  
+> `CInternetSession` will throw an [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) for unsupported service types. Only the following service types are currently supported: FTP, HTTP, gopher, and file.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CInternetSession`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="cinternetsession"></a>CInternetSession::CInternetSession  
- 此成员函数调用时`CInternetSession`创建对象。  
+##  <a name="cinternetsession"></a>  CInternetSession::CInternetSession  
+ This member function is called when a `CInternetSession` object is created.  
   
 ```  
 CInternetSession(
@@ -138,95 +149,95 @@ CInternetSession(
     DWORD dwFlags = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrAgent`  
- 指向用于标识应用程序或调用 Internet 函数 （例如，"Microsoft Internet 浏览器"） 的实体的名称的字符串的指针。 如果`pstrAgent`是**NULL** （默认值） 时，框架会调用全局函数[AfxGetAppName](application-information-and-management.md#afxgetappname)，这将返回包含应用程序的名称的以 null 结尾的字符串。 某些协议使用此字符串来标识应用程序到服务器。  
+ A pointer to a string that identifies the name of the application or entity calling the Internet functions (for example, "Microsoft Internet Browser"). If `pstrAgent` is **NULL** (the default), the framework calls the global function [AfxGetAppName](application-information-and-management.md#afxgetappname), which returns a null-terminated string containing an application's name. Some protocols use this string to identify your application to the server.  
   
  `dwContext`  
- 操作上下文标识符。 `dwContext`标识返回的操作的状态信息[CInternetSession::OnStatusCallback](#onstatuscallback)。 默认值设置为 1;但是，你可以显式分配操作的特定的上下文 ID。 对象和做的任何工作将与该上下文 id。  
+ The context identifier for the operation. `dwContext` identifies the operation's status information returned by [CInternetSession::OnStatusCallback](#onstatuscallback). The default is set to 1; however, you can explicitly assign a specific context ID for the operation. The object and any work it does will be associated with that context ID.  
   
  `dwAccessType`  
- 所需访问权限的类型。 以下是有效的值，可以提供一种︰  
+ The type of access required. The following are valid values, exactly one of which may be supplied:  
   
-- **INTERNET_OPEN_TYPE_PRECONFIG**连接使用注册表中的预配置的设置。 此访问类型被设置为默认值。 若要连接通过 TIS 代理，设置`dwAccessType`为此值; 你然后注册表正确设置。  
+- **INTERNET_OPEN_TYPE_PRECONFIG** Connect using preconfigured settings in the registry. This access type is set as the default. To connect through a TIS proxy, set `dwAccessType` to this value; you then set the registry appropriately.  
   
-- `INTERNET_OPEN_TYPE_DIRECT`直接连接到 Internet。  
+- `INTERNET_OPEN_TYPE_DIRECT` Connect directly to Internet.  
   
-- `INTERNET_OPEN_TYPE_PROXY`连接通过 CERN 代理。  
+- `INTERNET_OPEN_TYPE_PROXY` Connect through a CERN proxy.  
   
- 有关如何通过不同类型的代理的连接的信息，请参阅[典型 FTP 客户端应用程序中的步骤](../../mfc/steps-in-a-typical-ftp-client-application.md)。  
+ For information on connecting with different types of proxies, see [Steps in a Typical FTP Client Application](../../mfc/steps-in-a-typical-ftp-client-application.md).  
   
  *pstrProxyName*  
- 首选 CERN 代理服务器的名称如果`dwAccessType`被设置为`INTERNET_OPEN_TYPE_PROXY`。 默认值是**NULL**。  
+ The name of the preferred CERN proxy if `dwAccessType` is set as `INTERNET_OPEN_TYPE_PROXY`. The default is **NULL**.  
   
  *pstrProxyBypass*  
- 指向包含的服务器地址的可选列表的字符串的指针。 使用代理服务器访问时，可能会绕过这些地址。 如果**NULL**提供值，将从注册表中读取跳过列表。 此参数是有意义才`dwAccessType`设置为`INTERNET_OPEN_TYPE_PROXY`。  
+ A pointer to a string containing an optional list of server addresses. These addresses may be bypassed when using proxy access. If a **NULL** value is supplied, the bypass list will be read from the registry. This parameter is meaningful only if `dwAccessType` is set to `INTERNET_OPEN_TYPE_PROXY`.  
   
  `dwFlags`  
- 指示各种缓存选项。 默认值设置为 0。 可能的值包括︰  
+ Indicates various caching options. The default is set to 0. The possible values include:  
   
-- `INTERNET_FLAG_DONT_CACHE`本地或在任何网关服务器，则不缓存数据。  
+- `INTERNET_FLAG_DONT_CACHE` Do not cache the data, either locally or in any gateway servers.  
   
-- `INTERNET_FLAG_OFFLINE`下载操作通过永久性缓存仅对结果满意。 如果在缓存中不存在此项，则返回相应的错误代码。 此标志可以与的按位组合`OR`( **|**) 运算符。  
+- `INTERNET_FLAG_OFFLINE` Download operations are satisfied through the persistent cache only. If the item does not exist in the cache, an appropriate error code is returned. This flag may be combined with the bitwise `OR` ( **&#124;**) operator.  
   
-### <a name="remarks"></a>备注  
- **CInternetSession**是由应用程序调用的第一个 Internet 函数。 它将初始化内部数据结构，并为将来的调用，从应用程序做好准备。  
+### <a name="remarks"></a>Remarks  
+ **CInternetSession** is the first Internet function called by an application. It initializes internal data structures and prepares for future calls from the application.  
   
- 如果可以打开无 Internet 连接，`CInternetSession`引发[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)。  
+ If no Internet connection can be opened, `CInternetSession` throws an [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
-### <a name="example"></a>示例  
-  请参阅示例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
+### <a name="example"></a>Example  
+  See the example for [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
   
-##  <a name="close"></a>CInternetSession::Close  
- 调用此成员函数，你的应用程序完成后使用`CInternetSession`对象。  
+##  <a name="close"></a>  CInternetSession::Close  
+ Call this member function when your application has finished using the `CInternetSession` object.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="example"></a>示例  
-  请参阅示例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
+### <a name="example"></a>Example  
+  See the example for [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
   
-##  <a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
- 调用此成员函数以启用状态回调。  
+##  <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback  
+ Call this member function to enable status callback.  
   
 ```  
 BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- 指定是启用还是禁用回调。 默认值是**TRUE**。  
+ Specifies whether callback is enabled or disabled. The default is **TRUE**.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，则通过检查引发确定失败的原因[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>备注  
- 处理时状态回调，你可以在应用程序的状态栏中提供有关操作的操作 （如名称解析，连接到服务器上，依次类推） 的进度的状态。 显示操作状态时尤其需要长期操作。  
+### <a name="remarks"></a>Remarks  
+ When handling status callback, you can provide status about the progress of the operation (such as resolving name, connecting to server, and so on) in the status bar of the application. Displaying operation status is especially desirable during a long-term operation.  
   
- 因为回调在请求处理期间发生，应用程序应该花尽可能回调，以防止数据吞吐量下降到网络中的最小时间。 例如，将出现一个对话框，在回调中可能是此类较长的操作，服务器终止请求。  
+ Because callbacks occur during the request's processing, the application should spend as little time as possible in the callback to prevent degradation of data throughput to the network. For example, putting up a dialog box in a callback may be such a lengthy operation that the server terminates the request.  
   
- 无法删除状态回调，只要任何回调处于挂起状态。  
+ The status callback cannot be removed as long as any callbacks are pending.  
   
- 若要以异步方式处理的任何操作，必须创建你自己的线程，或使用无需 MFC WinInet 函数中。  
+ To handle any operations asynchronously, you must either create your own thread or use the WinInet functions without MFC.  
   
-##  <a name="getcontext"></a>CInternetSession::GetContext  
- 调用此成员函数可获取特定应用程序会话的上下文值。  
+##  <a name="getcontext"></a>  CInternetSession::GetContext  
+ Call this member function to get the context value for a particular application session.  
   
 ```  
 DWORD_PTR GetContext() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 应用程序定义的上下文标识符。  
+### <a name="return-value"></a>Return Value  
+ The application-defined context Identifier.  
   
-### <a name="remarks"></a>备注  
- [OnStatusCallback](#onstatuscallback)使用返回的上下文 ID **GetContext**来报告特定应用程序的状态。 例如，当用户激活涉及返回状态信息的 Internet 请求，状态回调会使用该特定请求报告状态的上下文 ID。 如果用户激活两个单独 Internet 请求，两者都涉及返回状态信息`OnStatusCallback`上下文标识符用于返回有关其相应的请求的状态。 因此，该上下文标识符用于所有的状态回调操作，并且与该会话，直到在会话结束相关联。  
+### <a name="remarks"></a>Remarks  
+ [OnStatusCallback](#onstatuscallback) uses the context ID returned by **GetContext** to report the status of a particular application. For example, when a user activates an Internet request that involves returning status information, the status callback uses the context ID to report status on that particular request. If the user activates two separate Internet requests that both involve returning status information, `OnStatusCallback` uses the context identifiers to return status about their corresponding requests. Consequently, the context identifier is used for all status callback operations, and it is associated with the session until the session is ended.  
   
- 有关异步操作的详细信息，请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)。  
+ For more information about asynchronous operations, see the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md).  
   
-##  <a name="getcookie"></a>CInternetSession::GetCookie  
- 此成员函数实现的 Win32 函数的行为[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+##  <a name="getcookie"></a>  CInternetSession::GetCookie  
+ This member function implements the behavior of the Win32 function [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), as described in the Windows SDK.  
   
 ```  
 static BOOL GetCookie(
@@ -242,31 +253,31 @@ static BOOL GetCookie(
     CString& strCookieData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrUrl`  
- 指向包含 URL 的字符串的指针。  
+ A pointer to a string containing the URL.  
   
  `pstrCookieName`  
- 指向包含要获取为指定的 URL 的 cookie 的名称的字符串的指针。  
+ A pointer to a string containing the name of the cookie to get for the specified URL.  
   
  `pstrCookieData`  
- 在第一个重载中，指向包含接收的 cookie 数据的缓冲区的地址的字符串的指针。 此值可为**NULL**。 在第二个重载中，对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)对象以便接收的 cookie 数据。  
+ In the first overload, a pointer to a string containing the address of the buffer that receives the cookie data. This value can be **NULL**. In the second overload, a reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object to receive the cookie data.  
   
  `dwBufLen`  
- 指定的大小变量`pstrCookieData`缓冲区。 如果函数成功，缓冲区接收复制到的数据量`pstrCookieData`缓冲区。 如果`pstrCookieData`是**NULL**，该参数会接收一个值，指定所需的所有 cookie 数据复制的缓冲区的大小。  
+ The variable specifying the size of the `pstrCookieData` buffer. If the function succeeds, the buffer receives the amount of data copied to the `pstrCookieData` buffer. If `pstrCookieData` is **NULL**, this parameter receives a value that specifies the size of the buffer necessary to copy all the cookie data.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**如果成功，或**FALSE**否则为。 如果调用失败，调用 Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以确定错误的原因。 应用以下的错误值︰  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** if successful, or **FALSE** otherwise. If the call fails, call the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) to determine the cause of the error. The following error values apply:  
   
-- **ERROR_NO_MORE_ITEMS**没有为指定的 URL 的任何 cookie，并且所有父级。  
+- **ERROR_NO_MORE_ITEMS** There is no cookie for the specified URL and all its parents.  
   
-- **ERROR_INSUFFICIENT_BUFFER**中传递的值`dwBufLen`不足，无法将复制所有 cookie 数据。 返回的值`dwBufLen`方案来获取所有数据缓冲区的大小。  
+- **ERROR_INSUFFICIENT_BUFFER** The value passed in `dwBufLen` is insufficient to copy all the cookie data. The value returned in `dwBufLen` is the size of the buffer necessary to get all the data.  
   
-### <a name="remarks"></a>备注  
- 在第二个重载中，MFC cookie 数据检索到所提供`CString`对象。  
+### <a name="remarks"></a>Remarks  
+ In the second overload, MFC retrieves the cookie data into the supplied `CString` object.  
   
-##  <a name="getcookielength"></a>CInternetSession::GetCookieLength  
- 调用此成员函数可获取存储在缓冲区中的 cookie 的长度。  
+##  <a name="getcookielength"></a>  CInternetSession::GetCookieLength  
+ Call this member function to get the length of the cookie stored in the buffer.  
   
 ```  
 static DWORD GetCookieLength(
@@ -274,21 +285,21 @@ static DWORD GetCookieLength(
     LPCTSTR pstrCookieName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrUrl`  
- 指向包含 URL 的字符串的指针  
+ A pointer to a string containing the URL  
   
  `pstrCookieName`  
- 指向包含的 cookie 名称的字符串的指针。  
+ A pointer to a string containing the name of the cookie.  
   
-### <a name="return-value"></a>返回值  
- A`DWORD`值，该值指示该 cookie，存储在缓冲区中的长度。 如果任何 cookie 零由同名`pstrCookieName`存在。  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value indicating the length of the cookie, stored in the buffer. Zero if no cookie with the name indicated by `pstrCookieName` exists.  
   
-### <a name="remarks"></a>备注  
- 使用此值[GetCookie](#getcookie)。  
+### <a name="remarks"></a>Remarks  
+ This value is used by [GetCookie](#getcookie).  
   
-##  <a name="getftpconnection"></a>Cinternetsession:: Getftpconnection  
- 调用此成员函数以建立 FTP 连接并获取指向的指针`CFtpConnection`对象。  
+##  <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection  
+ Call this member function to establish an FTP connection and get a pointer to a `CFtpConnection` object.  
   
 ```  
 CFtpConnection* GetFtpConnection(
@@ -299,40 +310,40 @@ CFtpConnection* GetFtpConnection(
     BOOL bPassive = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrServer`  
- 指向包含 FTP 服务器名称的字符串的指针。  
+ A pointer to a string containing the FTP server name.  
   
  `pstrUserName`  
- 指向以 null 结尾的字符串，指定要登录的用户的名称。 如果**NULL**，默认值是匿名的。  
+ Pointer to a null-terminated string that specifies the name of the user to log in. If **NULL**, the default is anonymous.  
   
  `pstrPassword`  
- 指向一个以 null 结尾的字符串，指定要用于登录的密码的指针。 如果这两个`pstrPassword`和`pstrUserName`是**NULL**，默认匿名密码是用户的电子邮件名称。 如果`pstrPassword`是**NULL** （或空字符串），但`pstrUserName`不**NULL**，使用空白密码。 下表描述的四个可能的设置的行为`pstrUserName`和`pstrPassword`:  
+ A pointer to a null-terminated string that specifies the password to use to log in. If both `pstrPassword` and `pstrUserName` are **NULL**, the default anonymous password is the user's email name. If `pstrPassword` is **NULL** (or an empty string) but `pstrUserName` is not **NULL**, a blank password is used. The following table describes the behavior for the four possible settings of `pstrUserName` and `pstrPassword`:  
   
-|`pstrUserName`|`pstrPassword`|发送到 FTP 服务器的用户名|发送到 FTP 服务器的密码|  
+|`pstrUserName`|`pstrPassword`|Username sent to FTP server|Password sent to FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL**或""|**NULL**或""|"匿名"|用户的电子邮件名称|  
-|非- **NULL**字符串|**NULL**或""|`pstrUserName`|" "|  
-|**NULL**非**NULL**字符串|**错误**|**错误**||  
-|非- **NULL**字符串|非- **NULL**字符串|`pstrUserName`|`pstrPassword`|  
+|**NULL** or " "|**NULL** or " "|"anonymous"|User's email name|  
+|Non- **NULL** String|**NULL** or " "|`pstrUserName`|" "|  
+|**NULL** Non- **NULL** String|**ERROR**|**ERROR**||  
+|Non- **NULL** String|Non- **NULL** String|`pstrUserName`|`pstrPassword`|  
   
  `nPort`  
- 一个数字，标识要使用服务器上的 TCP/IP 端口。  
+ A number that identifies the TCP/IP port to use on the server.  
   
  `bPassive`  
- 为此 FTP 会话指定被动还是主动模式。 如果设置为**TRUE**，它将设置 Win32 API`dwFlag`到**INTERNET_FLAG_PASSIVE**。  
+ Specifies passive or active mode for this FTP session. If set to **TRUE**, it sets the Win32 API `dwFlag` to **INTERNET_FLAG_PASSIVE**.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针[CFtpConnection](../../mfc/reference/cftpconnection-class.md)对象。 如果调用失败，则通过检查引发确定失败的原因[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CFtpConnection](../../mfc/reference/cftpconnection-class.md) object. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>备注  
- `GetFtpConnection`连接到 FTP 服务器，并创建并返回一个指向**CFTPConnection**对象。 它不执行任何服务器上的特定操作。 如果你想要读取或写入到文件，例如，必须执行这些操作作为单独的步骤。 请参阅类[CFtpConnection](../../mfc/reference/cftpconnection-class.md)和[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)有关搜索文件，打开文件、 和读取或写入文件。 请参阅文章[使用 WinInet Internet 编程](../../mfc/win32-internet-extensions-wininet.md)中执行常见的 FTP 连接任务的步骤。  
+### <a name="remarks"></a>Remarks  
+ `GetFtpConnection` connects to an FTP server, and creates and returns a pointer to a **CFTPConnection** object. It does not perform any specific operation on the server. If you intend to read or write to files, for example, you must perform those operations as separate steps. See the classes [CFtpConnection](../../mfc/reference/cftpconnection-class.md) and [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) for information about searching for files, opening files, and reading or writing to files. See the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md) for steps in performing common FTP connection tasks.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
+### <a name="example"></a>Example  
+  See the example for [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
   
-##  <a name="getgopherconnection"></a>CInternetSession::GetGopherConnection  
- 调用此成员函数以建立新 gopher 连接并获取指向的指针`CGopherConnection`对象。  
+##  <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection  
+ Call this member function to establish a new gopher connection and get a pointer to a `CGopherConnection` object.  
   
 ```  
 CGopherConnection* GetGopherConnection(
@@ -342,27 +353,27 @@ CGopherConnection* GetGopherConnection(
     INTERNET_PORT nPort = INTERNET_INVALID_PORT_NUMBER);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrServer`  
- 指向包含 gopher 服务器名称的字符串的指针。  
+ A pointer to a string containing the gopher server name.  
   
  `pstrUserName`  
- 指向包含的用户名称的字符串的指针。  
+ A pointer to a string containing the user name.  
   
  `pstrPassword`  
- 指向包含的访问密码的字符串的指针。  
+ A pointer to a string containing the access password.  
   
  `nPort`  
- 一个数字，标识要使用服务器上的 TCP/IP 端口。  
+ A number that identifies the TCP/IP port to use on the server.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)对象。 如果调用失败，则通过检查引发确定失败的原因[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) object. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>备注  
- `GetGopherConnection`连接到 gopher 服务器，并创建并返回一个指向`CGopherConnection`对象。 它不执行任何服务器上的特定操作。 如果你想要读取或写入数据，例如，必须执行这些操作作为单独的步骤。 请参阅类[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)， [CGopherFile](../../mfc/reference/cgopherfile-class.md)，和[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)有关搜索文件，打开文件、 和读取或写入文件。 关于浏览 FTP 站点的信息，请参阅成员函数[OpenURL](#openurl)。 请参阅文章[使用 WinInet Internet 编程](../../mfc/win32-internet-extensions-wininet.md)中执行常见 gopher 连接任务的步骤。  
+### <a name="remarks"></a>Remarks  
+ `GetGopherConnection` connects to a gopher server, and creates and returns a pointer to a `CGopherConnection` object. It does not perform any specific operation on the server. If you intend to read or write data, for example, you must perform those operations as separate steps. See the classes [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), and [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) for information about searching for files, opening files, and reading or writing to files. For information about browsing an FTP site, see the member function [OpenURL](#openurl). See the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md) for steps in performing common gopher connection tasks.  
   
-##  <a name="gethttpconnection"></a>CInternetSession::GetHttpConnection  
- 调用此成员函数以建立 HTTP 连接并获取指向的指针`CHttpConnection`对象。  
+##  <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection  
+ Call this member function to establish an HTTP connection and get a pointer to a `CHttpConnection` object.  
   
 ```  
 CHttpConnection* GetHttpConnection(
@@ -380,30 +391,30 @@ CHttpConnection* GetHttpConnection(
     LPCTSTR pstrPassword = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrServer`  
- 指向包含 HTTP 服务器名称的字符串的指针。  
+ A pointer to a string containing the HTTP server name.  
   
  `nPort`  
- 一个数字，标识要使用服务器上的 TCP/IP 端口。  
+ A number that identifies the TCP/IP port to use on the server.  
   
  `pstrUserName`  
- 指向包含的用户名称的字符串的指针。  
+ A pointer to a string containing the user name.  
   
  `pstrPassword`  
- 指向包含的访问密码的字符串的指针。  
+ A pointer to a string containing the access password.  
   
  *dwflags*  
- 任意组合**INTERNET_ FLAG_\***标志。 请参阅中的表**备注**部分[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)有关的说明`dwFlags`值。  
+ Any combination of the **INTERNET_ FLAG_\*** flags. See the table in the **Remarks** section of [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) for a description of `dwFlags` values.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针[CHttpConnection](../../mfc/reference/chttpconnection-class.md)对象。 如果调用失败，则通过检查引发确定失败的原因[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CHttpConnection](../../mfc/reference/chttpconnection-class.md) object. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>备注  
- `GetHttpConnection`连接到 HTTP 服务器，并创建，并返回一个指向`CHttpConnection`对象。 它不执行任何服务器上的特定操作。 如果你想要查询 HTTP 标头，例如，必须执行此操作作为一个单独的步骤。 请参阅类[CHttpConnection](../../mfc/reference/chttpconnection-class.md)和[CHttpFile](../../mfc/reference/chttpfile-class.md)有关操作的信息可通过使用与 HTTP 服务器的连接执行。 关于浏览 HTTP 站点的信息，请参阅成员函数[OpenURL](#openurl)。 请参阅文章[使用 WinInet Internet 编程](../../mfc/win32-internet-extensions-wininet.md)中执行常见的 HTTP 连接任务的步骤。  
+### <a name="remarks"></a>Remarks  
+ `GetHttpConnection` connects to an HTTP server, and creates and returns a pointer to a `CHttpConnection` object. It does not perform any specific operation on the server. If you intend to query an HTTP header, for example, you must perform this operation as a separate step. See the classes [CHttpConnection](../../mfc/reference/chttpconnection-class.md) and [CHttpFile](../../mfc/reference/chttpfile-class.md) for information about operations you can perform by using a connection to an HTTP server. For information about browsing an HTTP site, see the member function [OpenURL](#openurl). See the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md) for steps in performing common HTTP connection tasks.  
   
-##  <a name="onstatuscallback"></a>CInternetSession::OnStatusCallback  
- 由框架更新的状态，启用状态回调和操作处于挂起状态时调用此成员函数。  
+##  <a name="onstatuscallback"></a>  CInternetSession::OnStatusCallback  
+ This member function is called by the framework to update the status when status callback is enabled and an operation is pending.  
   
 ```  
 virtual void OnStatusCallback(
@@ -413,50 +424,50 @@ virtual void OnStatusCallback(
     DWORD dwStatusInformationLength);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwContext`  
- 应用程序提供的上下文值。  
+ The context value supplied by the application.  
   
  `dwInternetStatus`  
- 状态代码，它指示正在进行回调的原因。 请参阅**备注**有关可能的值的表。  
+ A status code which indicates why the callback is being made. See **Remarks** for a table of possible values.  
   
  `lpvStatusInformation`  
- 指向包含与此回调相关的信息的缓冲区的指针。  
+ A pointer to a buffer containing information pertinent to this callback.  
   
  `dwStatusInformationLength`  
- `lpvStatusInformation` 的大小。  
+ The size of `lpvStatusInformation`.  
   
-### <a name="remarks"></a>备注  
- 必须先调用[EnableStatusCallback](#enablestatuscallback)要利用的状态回调。  
+### <a name="remarks"></a>Remarks  
+ You must first call [EnableStatusCallback](#enablestatuscallback) to take advantage of status callback.  
   
- `dwInternetStatus`参数指示正在执行的操作，并确定的内容`lpvStatusInformation`将。 `dwStatusInformationLength`指示中包括的数据的长度`lpvStatusInformation`。 以下状态的值`dwInternetStatus`，如下所示定义︰  
+ The `dwInternetStatus` parameter indicates the operation being performed and determines what the contents of `lpvStatusInformation` will be. `dwStatusInformationLength` indicates the length of the data included in `lpvStatusInformation`. The following status values for `dwInternetStatus` are defined as follows:  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|`INTERNET_STATUS_RESOLVING_NAME`|查找名称中包含的 IP 地址`lpvStatusInformation`。|  
-|`INTERNET_STATUS_NAME_RESOLVED`|已成功找到中包含的名称的 IP 地址`lpvStatusInformation`。|  
-|`INTERNET_STATUS_CONNECTING_TO_SERVER`|连接到的套接字地址 ( [SOCKADDR](../../mfc/reference/sockaddr-structure.md)) 指向`lpvStatusInformation`。|  
-|`INTERNET_STATUS_CONNECTED_TO_SERVER`|已成功连接到的套接字地址 ( `SOCKADDR`) 指向`lpvStatusInformation`。|  
-|`INTERNET_STATUS_SENDING_REQUEST`|向服务器发送信息请求。 `lpvStatusInformation`参数是**NULL**。|  
-|**INTERNET_STATUS_ REQUEST_SENT**|已成功发送到服务器的信息请求。 `lpvStatusInformation`参数是**NULL**。|  
-|`INTERNET_STATUS_RECEIVING_RESPONSE`|正在等待服务器响应请求。 `lpvStatusInformation`参数是**NULL**。|  
-|`INTERNET_STATUS_RESPONSE_RECEIVED`|已成功从服务器收到的响应。 `lpvStatusInformation`参数是**NULL**。|  
-|`INTERNET_STATUS_CLOSING_CONNECTION`|关闭到服务器的连接。 `lpvStatusInformation`参数是**NULL**。|  
-|`INTERNET_STATUS_CONNECTION_CLOSED`|已成功关闭了连接到服务器。 `lpvStatusInformation`参数是**NULL**。|  
-|`INTERNET_STATUS_HANDLE_CREATED`|使用 Win32 API 函数[InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363)以指示它已创建新的句柄。 这允许应用程序调用 Win32 函数[InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350)从另一个线程，如果连接时间太长。 请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关这些函数的详细信息。|  
-|`INTERNET_STATUS_HANDLE_CLOSING`|已成功终止此句柄值。|  
+|`INTERNET_STATUS_RESOLVING_NAME`|Looking up the IP address of the name contained in `lpvStatusInformation`.|  
+|`INTERNET_STATUS_NAME_RESOLVED`|Successfully found the IP address of the name contained in `lpvStatusInformation`.|  
+|`INTERNET_STATUS_CONNECTING_TO_SERVER`|Connecting to the socket address ( [SOCKADDR](../../mfc/reference/sockaddr-structure.md)) pointed to by `lpvStatusInformation`.|  
+|`INTERNET_STATUS_CONNECTED_TO_SERVER`|Successfully connected to the socket address ( `SOCKADDR`) pointed to by `lpvStatusInformation`.|  
+|`INTERNET_STATUS_SENDING_REQUEST`|Sending the information request to the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|**INTERNET_STATUS_ REQUEST_SENT**|Successfully sent the information request to the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_RECEIVING_RESPONSE`|Waiting for the server to respond to a request. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_RESPONSE_RECEIVED`|Successfully received a response from the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_CLOSING_CONNECTION`|Closing the connection to the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_CONNECTION_CLOSED`|Successfully closed the connection to the server. The `lpvStatusInformation` parameter is **NULL**.|  
+|`INTERNET_STATUS_HANDLE_CREATED`|Used by the Win32 API function [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) to indicate that it has created the new handle. This lets the application call the Win32 function [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) from another thread if the connect is taking too long. See the Windows SDKfor more information about these functions.|  
+|`INTERNET_STATUS_HANDLE_CLOSING`|Successfully terminated this handle value.|  
   
- 重写该成员函数以之前执行的状态回调例程需要执行一些操作。  
+ Override this member function to require some action before a status callback routine is performed.  
   
 > [!NOTE]
->  状态回调需要线程状态保护。 如果在共享库中使用 MFC，请重写的开头添加以下行︰  
+>  Status callbacks need thread-state protection. If you are using MFC in a shared library, add the following line to the beginning of your override:  
   
- [!code-cpp[NVC_MFCHtmlHttp # 8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]  
+ [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]  
   
- 有关异步操作的详细信息，请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)。  
+ For more information about asynchronous operations, see the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md).  
   
-##  <a name="openurl"></a>Cinternetsession:: Openurl  
- 调用此成员函数将指定的请求发送到 HTTP 服务器，并允许客户端指定其他 RFC822 MIME 或要连同请求一起发送 HTTP 标头。  
+##  <a name="openurl"></a>  CInternetSession::OpenURL  
+ Call this member function to send the specified request to the HTTP server and allow the client to specify additional RFC822, MIME, or HTTP headers to send along with the request.  
   
 ```  
 CStdioFile* OpenURL(
@@ -467,64 +478,64 @@ CStdioFile* OpenURL(
     DWORD dwHeadersLength = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pstrURL*  
- 指向要开始读取的 url 的名称的指针。 仅 Url 开头文件:，ftp:，gopher:，或 http︰ 支持。 **Assert 语句**如果*pszURL*是**NULL**。  
+ A pointer to the name of the URL to begin reading. Only URLs beginning with file:, ftp:, gopher:, or http: are supported. **ASSERTS** if *pszURL* is **NULL**.  
   
  `dwContext`  
- 使用回调中返回的句柄传递应用程序定义的值。  
+ An application-defined value passed with the returned handle in callback.  
   
  `dwFlags`  
- 描述如何处理此连接的标志。 请参阅**备注**有关有效的标志的详细信息。 有效标志包括︰  
+ The flags describing how to handle this connection. See **Remarks** for more information about the valid flags. The valid flags are:  
   
-- **INTERNET_FLAG_TRANSFER_ASCII**默认值。 将文件传输为 ASCII 文本。  
+- **INTERNET_FLAG_TRANSFER_ASCII** The default. Transfer the file as ASCII text.  
   
-- **INTERNET_FLAG_TRANSFER_BINARY**传输该文件为二进制文件。  
+- **INTERNET_FLAG_TRANSFER_BINARY** Transfer the file as a binary file.  
   
-- `INTERNET_FLAG_RELOAD`即使本地缓存，请从网络中获取数据。  
+- `INTERNET_FLAG_RELOAD` Get the data from the wire even if it is locally cached.  
   
-- `INTERNET_FLAG_DONT_CACHE`本地或在任何网关，则不缓存数据。  
+- `INTERNET_FLAG_DONT_CACHE` Do not cache the data, either locally or in any gateways.  
   
-- `INTERNET_FLAG_SECURE`此标志将适用于仅 HTTP 请求。 它会请求使用安全套接字层或百分比在网络上的安全事务  
+- `INTERNET_FLAG_SECURE` This flag is applicable to HTTP requests only. It requests secure transactions on the wire with Secure Sockets Layer or PCT.  
   
-- **INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT**如果可能，请重复使用的生成的新请求服务器的现有连接**OpenUrl**而不是创建每个连接请求的新会话。  
+- **INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT** If possible, reuse the existing connections to the server for new requests generated by **OpenUrl** instead of creating a new session for each connection request.  
   
-- **INTERNET_FLAG_PASSIVE**用于 FTP 站点。 使用被动 FTP 语义。 与使用[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)的`OpenURL`。  
+- **INTERNET_FLAG_PASSIVE** Used for an FTP site. Uses passive FTP semantics. Used with [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) of `OpenURL`.  
   
  `pstrHeaders`  
- 指向包含要发送到 HTTP 服务器的标头的字符串的指针。  
+ A pointer to a string containing the headers to be sent to the HTTP server.  
   
  *dwHeadersLength*  
- 以字符为单位，其他标头的长度。 如果这是-1l 和`pstrHeaders`为非**NULL**，然后`pstrHeaders`假定为零终止，并计算长度。  
+ The length, in characters, of the additional headers. If this is -1L and `pstrHeaders` is non- **NULL**, then `pstrHeaders` is assumed to be zero terminated and the length is calculated.  
   
-### <a name="return-value"></a>返回值  
- 返回 FTP、 GOPHER、 HTTP 和文件类型 Internet 服务的文件句柄。 返回**NULL**如果分析失败。  
+### <a name="return-value"></a>Return Value  
+ Returns a file handle for FTP, GOPHER, HTTP, and FILE-type Internet services only. Returns **NULL** if parsing was unsuccessful.  
   
- 指针的`OpenURL`取决于返回*pszURL*的服务类型。 下表说明了可能的指针`OpenURL`可以返回。  
+ The pointer that `OpenURL` returns depends on *pszURL*'s type of service. The table below illustrates the possible pointers `OpenURL` can return.  
   
-|URL 类型|返回|  
+|URL type|Returns|  
 |--------------|-------------|  
 |file://|**CStdioFile\***|  
 |http://|**CHttpFile\***|  
 |gopher://|**CGopherFile\***|  
-|ftp: / /|**CInternetFile\***|  
+|ftp://|**CInternetFile\***|  
   
-### <a name="remarks"></a>备注  
- 参数`dwFlags`必须包括**INTERNET_FLAG_TRANSFER_ASCII**或**INTERNET_FLAG_TRANSFER_BINARY**，但不是两者。 可以与的按位组合的剩余标志`OR`运算符 ( **|**)。  
+### <a name="remarks"></a>Remarks  
+ The parameter `dwFlags` must include either **INTERNET_FLAG_TRANSFER_ASCII** or **INTERNET_FLAG_TRANSFER_BINARY**, but not both. The remaining flags can be combined with the bitwise `OR` operator ( **&#124;**).  
   
- `OpenURL`其包装的 Win32 函数**InternetOpenURL**，允许仅下载、 检索和从 Internet 服务器读取数据。 `OpenURL`允许远程位置上的没有对文件进行操作，因此它需要否[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)对象。  
+ `OpenURL`, which wraps the Win32 function **InternetOpenURL**, allows only downloading, retrieving, and reading the data from an Internet server. `OpenURL` allows no file manipulation on a remote location, so it requires no [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) object.  
   
- 若要使用特定于连接的 (即，特定于协议的) 函数，如对文件进行写入，你必须打开会话，然后打开特定种类的连接，然后使用该连接所需模式中打开文件。 请参阅`CInternetConnection`有关特定于连接的函数的详细信息。  
+ To use connection-specific (that is, protocol-specific) functions, such as writing to a file, you must open a session, then open a particular kind of connection, then use that connection to open a file in the desired mode. See `CInternetConnection` for more information about connection-specific functions.  
   
-##  <a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
- 使用此运算符将获取当前的 Internet 会话的 Windows 句柄。  
+##  <a name="operator_hinternet"></a>  CInternetSession::operator HINTERNET  
+ Use this operator to get the Windows handle for the current Internet session.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="setcookie"></a>CInternetSession::SetCookie  
- 为指定的 URL 中设置了 cookie。  
+##  <a name="setcookie"></a>  CInternetSession::SetCookie  
+ Sets a cookie for the specified URL.  
   
 ```  
 static BOOL SetCookie(
@@ -533,24 +544,24 @@ static BOOL SetCookie(
     LPCTSTR pstrCookieData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrUrl`  
- 一个以 null 结尾的字符串，指定应为其设置 cookie 的 URL 指向的指针。  
+ A pointer to a null-terminated string that specifies the URL for which the cookie should be set.  
   
  `pstrCookieName`  
- 指向包含的 cookie 名称的字符串的指针。  
+ A pointer to a string containing the name of the cookie.  
   
  `pstrCookieData`  
- 指向包含要替换的 URL 关联的实际字符串数据的字符串的指针。  
+ A pointer to a string containing the actual string data to associate with the URL.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**如果成功，或**FALSE**否则为。 若要获取特定的错误代码，调用**时出错。**  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** if successful, or **FALSE** otherwise. To get the specific error code, call **GetLastError.**  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), as described in the Windows SDK.  
   
-##  <a name="setoption"></a>CInternetSession::SetOption  
- 调用此成员函数以设置 Internet 会话选项。  
+##  <a name="setoption"></a>  CInternetSession::SetOption  
+ Call this member function to set options for the Internet session.  
   
 ```  
 BOOL SetOption(
@@ -566,34 +577,34 @@ BOOL SetOption(
     DWORD dwFlags = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwOption`  
- 要设置的 Internet 选项。 请参阅[选项标志](http://msdn.microsoft.com/library/windows/desktop/aa385328)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关的可能的选项列表。  
+ The Internet option to set. See [Option Flags](http://msdn.microsoft.com/library/windows/desktop/aa385328) in the Windows SDKfor a list of the possible options.  
   
  `lpBuffer`  
- 包含的选项设置的缓冲区。  
+ A buffer that contains the option setting.  
   
  *dwBufferLength*  
- 长度`lpBuffer`或的大小`dwValue`。  
+ The length of `lpBuffer` or the size of `dwValue`.  
   
  `dwValue`  
- A `DWORD` ，其中包含的选项设置。  
+ A `DWORD` that contains the option setting.  
   
  `dwFlags`  
- 指示各种缓存选项。 默认值设置为 0。 可能的值包括︰  
+ Indicates various caching options. The default is set to 0. The possible values include:  
   
-- `INTERNET_FLAG_DONT_CACHE`本地或在任何网关服务器，则不缓存数据。  
+- `INTERNET_FLAG_DONT_CACHE` Do not cache the data, either locally or in any gateway servers.  
   
-- `INTERNET_FLAG_OFFLINE`下载操作通过永久性缓存仅对结果满意。 如果在缓存中不存在此项，则返回相应的错误代码。 此标志可以与的按位组合`OR`( **|**) 运算符。  
+- `INTERNET_FLAG_OFFLINE` Download operations are satisfied through the persistent cache only. If the item does not exist in the cache, an appropriate error code is returned. This flag may be combined with the bitwise `OR` ( **&#124;**) operator.  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功，值为**TRUE**返回。 如果出现了错误，值为**FALSE**返回。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
+### <a name="return-value"></a>Return Value  
+ If the operation was successful, a value of **TRUE** is returned. If an error occurred, a value of **FALSE** is returned. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
   
-## <a name="see-also"></a>另请参阅  
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)   
- [CHttpConnection 类](../../mfc/reference/chttpconnection-class.md)   
- [CFtpConnection 类](../../mfc/reference/cftpconnection-class.md)   
- [CGopherConnection 类](../../mfc/reference/cgopherconnection-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [CHttpConnection Class](../../mfc/reference/chttpconnection-class.md)   
+ [CFtpConnection Class](../../mfc/reference/cftpconnection-class.md)   
+ [CGopherConnection Class](../../mfc/reference/cgopherconnection-class.md)
 

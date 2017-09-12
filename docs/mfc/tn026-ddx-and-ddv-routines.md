@@ -1,243 +1,286 @@
 ---
-title: "TN026：DDX 和 DDV 例程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DDX"
-  - "DDV"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DDV（对话框数据验证）, 过程"
-  - "对话框数据交换 (DDX), 过程"
-  - "TN026"
+title: 'TN026: DDX and DDV Routines | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DDX
+- DDV
+dev_langs:
+- C++
+helpviewer_keywords:
+- DDX (dialog data exchange), procedures
+- TN026
+- DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN026：DDX 和 DDV 例程
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3e12612a13fd24f4a19ba0c1950b651088896a72
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX and DDV Routines
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此注释说明对话框数据交换 \(DDX\) 和对话框数据验证 \(DDV\) 体系结构。  还描述如何编写 DDX\_ 或 DDV\_ 过程，以及如何扩展类向导用于例程。  
+ This note describes the dialog data exchange (DDX) and dialog data validation (DDV) architecture. It also describes how you write a DDX_ or DDV_ procedure and how you can extend ClassWizard to use your routines.  
   
-## 对话框数据交换的概述。  
- 所有的对话框数据函数完成与 C\+\+ 代码。  无特殊的资源或魔术宏。  机制的重点不是在每一对话框类重写执行对话框数据交换和验证的虚函数。  它始终被找到以此形式：  
+## <a name="overview-of-dialog-data-exchange"></a>Overview of Dialog Data Exchange  
+ All dialog data functions are done with C++ code. There are no special resources or magic macros. The heart of the mechanism is a virtual function that is overridden in every dialog class that does dialog data exchange and validation. It is always found in this form:  
   
 ```  
 void CMyDialog::DoDataExchange(CDataExchange* pDX)  
 {  
-    CDialog::DoDataExchange(pDX);    // call base class  
-  
-    //{{AFX_DATA_MAP(CMyDialog)  
-        <data_exchange_function_call>  
-        <data_validation_function_call>  
-    //}}AFX_DATA_MAP  
+    CDialog::DoDataExchange(pDX);
+*// call base class  
+ *//{{AFX_DATA_MAP(CMyDialog)  
+ <data_exchange_function_call>  
+ <data_validation_function_call> *//}}AFX_DATA_MAP  
 }  
 ```  
   
- 特定格式 AFX 注释允许 ClassWizard 定位和编辑此函数中的代码。  代码与兼容 ClassWizard 应放置在特殊形式注释。  
+ The special format AFX comments allow ClassWizard to locate and edit the code within this function. Code that is not compatible with ClassWizard should be placed outside of the special format comments.  
   
- 在上面的示例中，\<data\_exchange\_function\_call\> 窗体：  
-  
-```  
-DDX_Custom(pDX, nIDC, field);  
-```  
-  
- 并 \<data\_validation\_function\_call\> 是可选的和形式：  
+ In the above example, <data_exchange_function_call> is in the form:  
   
 ```  
-DDV_Custom(pDX, field, ...);  
+DDX_Custom(pDX,
+    nIDC,
+    field);
 ```  
   
- 多个 DDX\_\/DDV\_对在每个 `DoDataExchange` 可以包含函数。  
+ and <data_validation_function_call> is optional and is in the form:  
   
- 为任何对话框数据交换 \(DDE\) 例程和对话框数据验证例程参见“列表 afxdd\_.h”随 MFC。  
+```  
+DDV_Custom(pDX,
+    field, ...);
+```  
   
- 对话框数据是：在 **CMyDialog** 类的数据成员。  在类似的结构或的任何未存储。  
+ More than one DDX_/DDV_ pair may be included in each `DoDataExchange` function.  
   
-## 注释  
- 尽管我们调用此数据“对话框”，所有功能可在派生自 `CWnd` 的任何类和没有限制到对话框。  
+ See 'afxdd_.h' for a list of all the dialog data exchange routines and dialog data validation routines provided with MFC.  
   
- 初始值数据中标准 C\+\+ 构造函数设置，通常在具有 `//{{AFX_DATA_INIT` 和 `//}}AFX_DATA_INIT` 的注释块。  
+ Dialog data is just that: member data in the **CMyDialog** class. It is not stored in a struct or anything similar.  
   
- `CWnd::UpdateData` 是在调用来执行初始化和错误处理对 `DoDataExchange`的操作。  
+## <a name="notes"></a>Notes  
+ Although we call this "dialog data," all features are available in any class derived from `CWnd` and are not limited to just dialogs.  
   
- 可以随时调用 `CWnd::UpdateData` 进行数据交换和验证。  默认 `UpdateData`\(真\) 在默认 `CDialog::OnOK` 处理程序和 `UpdateData`。默认调用 `CDialog::OnInitDialog`\(错误\) 调用。  
+ Initial values of data are set in the standard C++ constructor, usually in a block with `//{{AFX_DATA_INIT` and `//}}AFX_DATA_INIT` comments.  
   
- DDV\_ 例程应紧跟该 *字段的*DDX\_ 例程。  
+ `CWnd::UpdateData` is the operation that does the initialization and error handling around the call to `DoDataExchange`.  
   
-## 它如何工作？  
- 不需要了解下面即可使用对话框数据。  但是，了解这如何在后台工作可帮助您编写自己交换或验证过程。  
+ You can call `CWnd::UpdateData` at any time to perform data exchange and validation. By default `UpdateData`(TRUE) is called in the default `CDialog::OnOK` handler and `UpdateData`(FALSE) is called in the default `CDialog::OnInitDialog`.  
   
- `DoDataExchange` 成员函数非常类似 `Serialize` 成员函数 \(它获取或设置与应用\/或窗体外部 \(在本例在对话框的控件中的数据从运行\)\/至在类的数据成员。  参数 `pDX` 是执行上下文数据交换和参数与 `CArchive` 类似于 `CObject::Serialize`。  `pDX` \( `CDataExchange` 对象\)。具有方向标记就像具有方向 `CArchive` 标志：  
+ The DDV_ routine should immediately follow the DDX_ routine for that *field*.  
   
--   如果 **\!m\_bSaveAndValidate**，然后为控件状态加载数据。  
+## <a name="how-does-it-work"></a>How Does It Work  
+ You do not need to understand the following in order to use dialog data. However, understanding how this works behind the scenes will help you write your own exchange or validation procedure.  
   
--   如果 `m_bSaveAndValidate`，然后将从控件的数据状态。  
+ The `DoDataExchange` member function is much like the `Serialize` member function - it is responsible for getting or setting data to/from an external form (in this case controls in a dialog) from/to member data in the class. The `pDX` parameter is the context for doing data exchange and is similar to the `CArchive` parameter to `CObject::Serialize`. The `pDX` (a `CDataExchange` object) has a direction flag much like `CArchive` has a direction flag:  
   
- 在设置 `m_bSaveAndValidate` 时，只验证发生。  `m_bSaveAndValidate` 的值取决于 `CWnd::UpdateData`的 BOOL 参数。  
+-   If **!m_bSaveAndValidate**, then load the data state into the controls.  
   
- 有其他 `CDataExchange` 的三个成员：  
+-   If `m_bSaveAndValidate`, then set the data state from the controls.  
   
--   `m_pDlgWnd`:包含控件的窗口 \(通常对话框\)。  这是为了避免全局函数。必须通过的 this”为每个 DDX\_ DDX\/DDV 例程和 DDV\_ 的调用方。  
+ Validation only occurs when `m_bSaveAndValidate` is set. The value of `m_bSaveAndValidate` is determined by the BOOL parameter to `CWnd::UpdateData`.  
   
--   `PrepareCtrl`和 `PrepareEditCtrl`:控件用于一对话框数据交换准备。  存储的设置焦点该手柄，并且在验证失败。  `PrepareCtrl` 为 nonedit 控件使用，而 `PrepareEditCtrl` 用于编辑控件。  
+ There are three other interesting `CDataExchange` members:  
   
--   **未通过**:调用在引发通知用户的消息之后。输入错误。  该例程将焦点还原到最后一控件 \(从 `PrepareCtrl`\/`PrepareEditCtrl`\) 最后调用并引发异常。  该成员函数。从 DDX\_ 和 DDV\_ 例程调用。  
+- `m_pDlgWnd`: The window (usually a dialog) that contains the controls. This is to prevent callers of the DDX_ and DDV_ global functions from having to pass 'this' to every DDX/DDV routine.  
   
-## 用户扩展  
- 有多种方法来扩展默认 DDX\/DDV 机制。  您可以：  
+- `PrepareCtrl`, and `PrepareEditCtrl`: Prepares a dialog control for data exchange. Stores that control's handle for setting the focus if a validation fails. `PrepareCtrl` is used for nonedit controls and `PrepareEditCtrl` is used for edit controls.  
   
--   添加新数据类型。  
+- **Fail**: Called after bringing up a message box alerting the user to the input error. This routine will restore the focus to the last control (the last call to `PrepareCtrl`/`PrepareEditCtrl`) and throw an exception. This member function may be called from both DDX_ and DDV_ routines.  
   
-    ```  
-    CTime  
-    ```  
+## <a name="user-extensions"></a>User Extensions  
+ There are several ways to extend the default DDX/DDV mechanism. You can:  
   
--   添加新的 DDX\_ 交换过程 \(???\)。  
+-   Add new data types.  
   
-    ```  
-    void PASCAL DDX_Time(CDataExchange* pDX, int nIDC, CTime& tm);  
-    ```  
+ ```  
+    CTime 
+ ```  
   
--   新添加的验证过程 DDV\_ \(???\)。  
+-   Add new exchange procedures (DDX_).  
   
-    ```  
-    void PASCAL DDV_TimeFuture(CDataExchange* pDX, CTime tm, BOOL bFuture);  
-    // make sure time is in the future or past  
-    ```  
+ ```  
+    void PASCAL DDX_Time(CDataExchange* pDX,
+    int nIDC,
+    CTime& tm);
+
+ ```  
   
--   传递任意表达式来验证过程。  
+-   Add new validation procedures (DDV_).  
   
-    ```  
-    DDV_MinMax(pDX, age, 0, m_maxAge);  
-    ```  
+ ```  
+    void PASCAL DDV_TimeFuture(CDataExchange* pDX,
+    CTime tm,
+    BOOL bFuture);
+*// make sure time is in the future or past  
+ ```  
+  
+-   Pass arbitrary expressions to the validation procedures.  
+  
+ ```  
+    DDV_MinMax(pDX,
+    age,
+    0,
+    m_maxAge);
+
+ ```  
   
     > [!NOTE]
-    >  这样任意表达式不受"编辑并 ClassWizard 不得将在特定格式注释外 \(\/\/ {AFX\_DATA\_MAP \(CMyClass\)\)。  
+    >  Such arbitrary expressions cannot be edited by ClassWizard and therefore should be moved outside of the special format comments (//{{AFX_DATA_MAP(CMyClass)).  
   
- 具有 **DoDialogExchange** 成员函数包括条件或任何其他的有效 C\+\+ 语句用交互进行交换和验证函数调用。  
+ Have the **DoDialogExchange** member function include conditionals or any other valid C++ statements with intermixed exchange and validation function calls.  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  
-DDX_Check(pDX, IDC_SEX, m_bFemale);  
-DDX_Text(pDX, IDC_EDIT1, m_age);  
+DDX_Check(pDX,
+    IDC_SEX,
+    m_bFemale);
+
+DDX_Text(pDX,
+    IDC_EDIT1,
+    m_age);
+
 //}}AFX_DATA_MAP  
 if (m_bFemale)  
-    DDV_MinMax(pDX, age, 0, m_maxFemaleAge);  
+    DDV_MinMax(pDX,
+    age,
+    0,
+    m_maxFemaleAge);
+
 else  
-    DDV_MinMax(pDX, age, 0, m_maxMaleAge);  
+    DDV_MinMax(pDX,
+    age,
+    0,
+    m_maxMaleAge);
 ```  
   
 > [!NOTE]
->  如上所述，此代码不受 ClassWizard 编辑，只应在特定格式注释。  
+>  As shown above, such code cannot be edited by ClassWizard and should be used only outside of the special format comments.  
   
-## ClassWizard 支持  
- ClassWizard 可以集成支持的子集 DDX\/DDV 自定义您自己 DDX\_ 和 DDV\_ 到例程 ClassWizard 用户界面。  如果打算重新使用特殊 DDX 和 DDV 例程在项目或在多项目，这样做只花费有利的。  
+## <a name="classwizard-support"></a>ClassWizard Support  
+ ClassWizard supports a subset of DDX/DDV customizations by allowing you to integrate your own DDX_ and DDV_ routines into the ClassWizard user interface. Doing this is only cost beneficial if you plan to reuse particular DDX and DDV routines in a project or in many projects.  
   
- 若要执行此，特定输入在 DDX.CLW \(Visual C\+\+ 版本存储在 APSTUDIO.INI 的此信息\) 或项目中 .CLW 文件。  特定输入可以输入在项目的 .CLW 文件的通用信息。\] 部分或在 DDX.CLW 文件的节 \[ExtraDDX\] \\Program Files\\Microsoft Visual Studio\\Visual C \+\+\\bin 目录中。  如果不存在，您可能需要创建 DDX.CLW 文件。  如果您在某项目计划只使用自定义 DDX\_\/DDV\_例程中，将项添加到项目 .CLW 文件的 \[通用信息\] 部分。  如果您计划对许多项目的例程，添加输入到 DDX.CLW 的 \[ExtraDDX\] 部分。  
+ To do this, special entries are made in DDX.CLW (previous versions of Visual C++ stored this information in APSTUDIO.INI) or in your project's .CLW file. The special entries can be entered either in the [General Info] section of your project's .CLW file or in the [ExtraDDX] section of the DDX.CLW file in the \Program Files\Microsoft Visual Studio\Visual C++\bin directory. You may need to create the DDX.CLW file if it doesn't already exist. If you plan to use the custom DDX_/DDV_ routines only in a certain project, add the entries to the [General Info] section of your project .CLW file instead. If you plan to use the routines on many projects, add the entries to the [ExtraDDX] section of DDX.CLW.  
   
- 这些输入特定常规格式为：  
+ The general format of these special entries is:  
   
 ```  
 ExtraDDXCount=n  
 ```  
   
- n 位置是数字 ExtraDDX?下面的行  
+ where n is the number of ExtraDDX lines to follow  
   
 ```  
-ExtraDDX?=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>  
+ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>  
 [;<DDV_Proc>; <prompt1>; <arg1>; [<prompt2>; <fmt2>]]  
 ```  
   
- 位置？第 N 是 1 \- 指示 DDX 输入定义列表。  
+ where  is a number 1 - n indicating which DDX type in the list that is being defined.  
   
- 每个字段通过分隔“;”字符。  字段及其用途介绍。  
+ Each field is delimited by a ';' character. The fields and their purpose are described below.  
   
- \<键\>  
- \= 指示单字符的列表的对话框此控制变量的类型。  
+ \<keys>  
+ = list of single characters indicating for which dialog controls this variable type is allowed.  
   
- 13，E \= 编辑  
+ E = edit  
   
- C\# \= 两个状态复选框  
+ C = two-state check box  
   
- c \= 三种状态复选框  
+ c = tri-state check box  
   
- \= R 首先单选按钮组中  
+ R = first radio button in a group  
   
- 左 \= nonsorted 列表框  
+ L = nonsorted list box  
   
- \= l 排序列表框  
+ l = sorted list box  
   
- \= M 组合框 \(与编辑项\)  
+ M = combo box (with edit item)  
   
- " \= nonsorted 拉列表  
+ N = nonsorted drop list  
   
- n \= 排序的下拉列表  
+ n = sorted drop list  
   
- 对于通常 DDX 例程使用传输“控件的”属性 \= 1，如果插入 DDX 应被添加到列表默认 \(开头是向尾\)。  
+ 1 = if the DDX insert should be added to head of list (default is add to tail) This is generally used for DDX routines that transfer the 'Control' property.  
   
- \<VB 键\>  
- 此字段仅用于控件 \(VBX 产品在 16 位 VBX 控件在 32 位产品不支持\)  
+ \<vb-keys>  
+ This field is used only in the 16-bit product for VBX controls (VBX controls are not supported in the 32-bit product)  
   
- \<提示\>  
- 中的字符串。属性组合框 \(不是引号\)  
+ \<prompt>  
+ String to place in the Property combo box (no quotes)  
   
- \<type\>  
- 单个类型的标识符可以发出在头文件。  在上面的示例中，我们 DDX\_Time 与这将设置为 CTime。  
+ \<type>  
+ Single identifier for type to emit in the header file. In our example above with DDX_Time, this would be set to CTime.  
   
- \<VB 键\>  
- 不使用此版本，应总是为空  
+ \<vb-keys>  
+ Not used in this version and should always be empty  
   
- \<initValue\>  
- 初始值 \- 0 或 null。  如果为空白，则初始化行写入不在\/\/{实现文件的 AFX\_DATA\_INIT 节。  为保证该具有构造函数正确的初始值的 C\+\+ 对象使用空白输入 \(如 `CString`，`CTime`，等等\)。  
+ \<initValue>  
+ Initial value — 0 or blank. If it is blank, then no initialization line will be written in the //{{AFX_DATA_INIT section of the implementation file. A blank entry should be used for C++ objects (such as `CString`, `CTime`, and so on) that have constructors that guarantee correct initialization.  
   
- \<DDX\_Proc\>  
- DDX\_ 过程的唯一标识符。  C\+\+ 函数名称必须以“DDX\_ 开头，”，但不包括“DDX\_”在 \<DDX\_Proc\> 标识符。  在上面的示例中，\<DDX\_Proc\> 标识符是时间。  当 ClassWizard 编写函数调用。在中实现文件{AFX\_DATA\_MAP 节，它附加此名称为 DDX\_，从而达到 DDX\_Time。  
+ <DDX_Proc>  
+ Single identifier for the DDX_ procedure. The C++ function name must start with "DDX_," but don't include "DDX_" in the <DDX_Proc> identifier. In the example above, the <DDX_Proc> identifier would be Time. When ClassWizard writes the function call to the implementation file in the {{AFX_DATA_MAP section, it appends this name to DDX_, thus arriving at DDX_Time.  
   
- \<注释\>  
- 注释显示在对话框使用此变量的 DDX。  放置希望此处的所有文本和通常提供描述 DDX\/DDV 对执行的操作\)。  
+ \<comment>  
+ Comment to show in dialog for variable with this DDX. Place any text you would like here, and usually provide something that describes the operation performed by the DDX/DDV pair.  
   
- \<DDV\_Proc\>  
- 输入的 DDV 部分是可选的。  不是所有的 DDX 例程具有相应的 DDV 例程。  通常，是非常方便。包括阶段验证作为转发的组成部分。  这通常是这样，因此 DDV 例程不需要任何参数时，因为类向导不支持 DDV 例程不带任何参数。  
+ <DDV_Proc>  
+ The DDV portion of the entry is optional. Not all DDX routines have corresponding DDV routines. Often, it is more convenient to include the validation phase as an integral part of the transfer. This is often the case when your DDV routine doesn't require any parameters, because ClassWizard does not support DDV routines without any parameters.  
   
- \<arg\>  
- DDV\_ 过程的唯一标识符。  C\+\+ 函数名称必须以“DDV\_”开头，但不包括“DDX\_”在 \<DDX\_Proc\> 标识符。  
+ \<arg>  
+ Single identifier for the DDV_ procedure. The C++ function name must start with "DDV_", but do not include "DDX_" in the <DDX_Proc> identifier.  
   
- 后跟 1 或 2 DDV args:  
+ followed by 1 or 2 DDV args:  
   
- \<promptX\>  
- 为位置的字符串在编辑项上 \( & 与快捷键\)  
+ \<promptX>  
+ string to place above the edit item (with & for accelerator)  
   
- \<fmtX\>  
- arg 类型的格式字符，一  
+ \<fmtX>  
+ format character for the arg type, one of  
   
- \= d int  
+ d = int  
   
- \= u 未签名  
+ u = unsigned  
   
- \= D 长期 int \(即\)。  
+ D = long int (that is, long)  
   
- \= U 长时间未签名 \(即一\)  
+ U = long unsigned (that is, DWORD)  
   
- f 为浮点数  
+ f = float  
   
- 双重 F \=  
+ F = double  
   
- \= 字符串。  
+ s = string  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

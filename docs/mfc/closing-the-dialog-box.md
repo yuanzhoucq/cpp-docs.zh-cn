@@ -1,31 +1,50 @@
 ---
-title: "关闭对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "对话框, 关闭"
-  - "MFC 对话框, 关闭"
+title: Closing the Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], closing
+- dialog boxes [MFC], closing
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 关闭对话框
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 689ef21296daafdd865787ac995c9f2872ebfd76
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当用户选择该按钮，通常是"确定"按钮还是"取消按钮之一，所以模式对话框关闭。  选择或取消"按钮时导致窗口发送对话框对象中带有按钮的 ID 的 **BN\_CLICKED** 控件通知消息，**IDOK** 或 **IDCANCEL**。  `CDialog` 为这些消息提供默认处理程序函数：`OnOK` 和 `OnCancel`。  默认处理程序调用 `EndDialog` 成员函数关闭对话框窗口。  还可以从您的代码中调用 `EndDialog`。  有关更多信息，请参见 `CDialog` 类的成员函数[SubclassDlgItem](../Topic/CDialog::EndDialog.md) *MFC 参考*。  
+---
+# <a name="closing-the-dialog-box"></a>Closing the Dialog Box
+A modal dialog box closes when the user chooses one of its buttons, typically the OK button or the Cancel button. Choosing the OK or Cancel button causes Windows to send the dialog object a **BN_CLICKED** control-notification message with the button's ID, either **IDOK** or **IDCANCEL**. `CDialog` provides default handler functions for these messages: `OnOK` and `OnCancel`. The default handlers call the `EndDialog` member function to close the dialog window. You can also call `EndDialog` from your own code. For more information, see the [EndDialog](../mfc/reference/cdialog-class.md#enddialog) member function of class `CDialog` in the *MFC Reference*.  
   
- 排列关闭和删除非模式对话框，重写 `PostNcDestroy` 并调用 **this** 的指针 **删除** 运算符。  [销毁对话框](../mfc/destroying-the-dialog-box.md) 解释了接下来发生的情况。  
+ To arrange for closing and deleting a modeless dialog box, override `PostNcDestroy` and invoke the **delete** operator on the **this** pointer. [Destroying the Dialog Box](../mfc/destroying-the-dialog-box.md) explains what happens next.  
   
-## 请参阅  
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

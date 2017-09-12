@@ -1,121 +1,140 @@
 ---
-title: "Windows 套接字：使用类 CAsyncSocket | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAsyncSocket"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAsyncSocket 类, 编程模型"
-  - "SOCKET 句柄"
-  - "套接字 [C++], 异步操作"
-  - "套接字 [C++], 在 Unicode 和 MBCS 字符串之间转换"
-  - "Windows 套接字 [C++], 异步"
-  - "Windows 套接字 [C++], 转换 Unicode 和 MBCS 字符串"
+title: 'Windows Sockets: Using Class CAsyncSocket | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAsyncSocket
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAsyncSocket class [MFC], programming model
+- Windows Sockets [MFC], asynchronous
+- sockets [MFC], converting between Unicode and MBCS strings
+- SOCKET handle
+- sockets [MFC], asynchronous operation
+- Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Windows 套接字：使用类 CAsyncSocket
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3da7de4b5612d2d28fc40ba055aaa7f465846473
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文说明如何使用类。[CAsyncSocket](../mfc/reference/casyncsocket-class.md) 请注意此类封装 Windows 套接字 API 在很低。  `CAsyncSocket` 由详细知道网络通信的程序员使用，但需要回调使用网络事件通知的。  基于此假设，本文只提供的基本指令。  则可能应考虑使用 `CAsyncSocket`，则需要 Windows 套接字的方便处理在 MFC 应用程序的多个网络协议，但是不想为了牺牲灵活性。  还可能认为您可以比使用 `CSocket`类可以通过直接通信编程可以获得更佳的效率"更为一般性的备用模型。  
+---
+# <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Using Class CAsyncSocket
+This article explains how to use class [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Be aware that this class encapsulates the Windows Sockets API at a very low level. `CAsyncSocket` is for use by programmers who know network communications in detail but want the convenience of callbacks for notification of network events. Based on this assumption, this article provides only basic instruction. You should probably consider using `CAsyncSocket` if you want Windows Sockets' ease of dealing with multiple network protocols in an MFC application but do not want to sacrifice flexibility. You might also feel that you can get better efficiency by programming the communications more directly yourself than you could using the more general alternative model of class `CSocket`.  
   
- `CAsyncSocket`记录在*MFC Reference*中。  Visual C\+\+ 还提供 Windows 套接字规范，位于 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  详细信息留到您。  Visual C\+\+ 不提供 `CAsyncSocket`的示例应用程序。  
+ `CAsyncSocket` is documented in the *MFC Reference*. Visual C++ also supplies the Windows Sockets specification, located in the Windows SDK. The details are left to you. Visual C++ does not supply a sample application for `CAsyncSocket`.  
   
- 如果不指定熟知有关网络通信不需简单解决方案，使用 `CArchive` 对象的类。[CSocket](../mfc/reference/csocket-class.md) 参见 [Windows 套接字：将存档的套接字](../mfc/windows-sockets-using-sockets-with-archives.md)。更多信息。  
+ If you are not highly knowledgeable about network communications and want a simple solution, use class [CSocket](../mfc/reference/csocket-class.md) with a `CArchive` object. See [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md) for more information.  
   
- 本文包含：  
+ This article covers:  
   
--   创建和使用 `CAsyncSocket` 对象。  
+-   Creating and using a `CAsyncSocket` object.  
   
--   [与 CAsyncSocket 的职责](#_core_your_responsibilities_with_casyncsocket)。  
+-   [Your responsibilities with CAsyncSocket](#_core_your_responsibilities_with_casyncsocket).  
   
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> 创建和使用 CAsyncSocket 对象  
+##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> Creating and Using a CAsyncSocket Object  
   
-#### 使用 CAsyncSocket  
+#### <a name="to-use-casyncsocket"></a>To use CAsyncSocket  
   
-1.  构造对象并使用 [CAsyncSocket](../mfc/reference/casyncsocket-class.md) 对象创建基础 **SOCKET** 句柄。  
+1.  Construct a [CAsyncSocket](../mfc/reference/casyncsocket-class.md) object and use the object to create the underlying **SOCKET** handle.  
   
-     套接字创建执行两阶段 MFC 构造形式。  
+     Creation of a socket follows the MFC pattern of two-stage construction.  
   
-     例如：  
+     For example:  
   
-     [!CODE [NVC_MFCSimpleSocket#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#3)]  
+     [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]  
   
-     \- 或 \-  
+     -or-  
   
-     [!CODE [NVC_MFCSimpleSocket#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#4)]  
+     [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
-     上面第一的构造函数在堆栈上创建 `CAsyncSocket` 对象。  第二个构造函数创建堆的 `CAsyncSocket`。  上面第一个 [创建](../Topic/CAsyncSocket::Create.md) 调用使用默认参数创建流套接字。  第二个调用 **创建** 创建具有指定端口和地址的数据报套接字。\(您可以使用任一构造方法的 **创建** 版本。）  
+     The first constructor above creates a `CAsyncSocket` object on the stack. The second constructor creates a `CAsyncSocket` on the heap. The first [Create](../mfc/reference/casyncsocket-class.md#create) call above uses the default parameters to create a stream socket. The second **Create** call creates a datagram socket with a specified port and address. (You can use either **Create** version with either construction method.)  
   
-     对 **创建** 的参数为：  
+     The parameters to **Create** are:  
   
-    -   “端口”:短的整数。  
+    -   A "port": a short integer.  
   
-         对于服务器套接字，必须指定端口。  对于套接字，客户通常接受此参数的默认值，允许 Windows 套接字选择端口。  
+         For a server socket, you must specify a port. For a client socket, you typically accept the default value for this parameter, which lets Windows Sockets select a port.  
   
-    -   套接字类型：**SOCK\_STREAM** \(默认值\) 或 **SOCK\_DGRAM**。  
+    -   A socket type: **SOCK_STREAM** (the default) or **SOCK_DGRAM**.  
   
-    -   套接字“Address”，如“”或 ftp.microsoft.com“128.56.22.8”。  
+    -   A socket "address," such as "ftp.microsoft.com" or "128.56.22.8".  
   
-         这种网络上的 Internet 协议 \(IP\) 地址。  您可能总是将依赖于该参数的默认值。  
+         This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.  
   
-     术语“端口套接字”和“地址”。[Windows 套接字：端口和套接字 Addresses](../mfc/windows-sockets-ports-and-socket-addresses.md)解释。  
+     The terms "port" and "socket address" are explained in [Windows Sockets: Ports and Socket Addresses](../mfc/windows-sockets-ports-and-socket-addresses.md).  
   
-2.  如果套接字是客户，可以使用 [CAsyncSocket::Connect](../Topic/CAsyncSocket::Connect.md)，请连接服务器套接字的套接字。对象，  
+2.  If the socket is a client, connect the socket object to a server socket, using [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect).  
   
-     \- 或 \-  
+     -or-  
   
-     如果套接字是服务器，请设置套接字开始侦听 \(带有 [CAsyncSocket::Listen](../Topic/CAsyncSocket::Listen.md)\) 用于从客户端连接尝试。  在收到请求之后连接，请接受它与 [CAsyncSocket::Accept](../Topic/CAsyncSocket::Accept.md)。  
+     If the socket is a server, set the socket to begin listening (with [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) for connect attempts from a client. Upon receiving a connection request, accept it with [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).  
   
-     在接受连接后，可以执行此任务。验证密码。  
+     After accepting a connection, you can perform such tasks as validating passwords.  
   
     > [!NOTE]
-    >  **接受** 成员函数采用到新，空 `CSocket` 对象的引用作为参数。  在调用 **接受**之前，您必须构建此对象。  如果此套接字对象超出范围，将关闭这些连接。  请勿调用套接此新的 Word 对象的 **创建**。  有关示例，请参见的文章 [Windows 套接字：操作的顺序](../mfc/windows-sockets-sequence-of-operations.md)。  
+    >  The **Accept** member function takes a reference to a new, empty `CSocket` object as its parameter. You must construct this object before you call **Accept**. If this socket object goes out of scope, the connection closes. Do not call **Create** for this new socket object. For an example, see the article [Windows Sockets: Sequence of Operations](../mfc/windows-sockets-sequence-of-operations.md).  
   
-3.  通过调用封装 Windows 套接字 API 函数的 `CAsyncSocket` 对象的成员函数与其他套接字的通信。  
+3.  Carry out communications with other sockets by calling the `CAsyncSocket` object's member functions that encapsulate the Windows Sockets API functions.  
   
-     参见 Windows 套接字规范和类" *MFC 参考"中的*[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。  
+     See the Windows Sockets specification and class [CAsyncSocket](../mfc/reference/casyncsocket-class.md) in the *MFC Reference*.  
   
-4.  销毁 `CAsyncSocket` 对象。  
+4.  Destroy the `CAsyncSocket` object.  
   
-     如果在堆栈上创建了套接字对象，其调用析构函数的函数，当包含超出范围。  使用 **new** 运算符，如果要创建在堆的套接字对象，就得销毁对象，使用 **删除** 运算符。  
+     If you created the socket object on the stack, its destructor is called when the containing function goes out of scope. If you created the socket object on the heap, using the **new** operator, you are responsible for using the **delete** operator to destroy the object.  
   
-     析构函数在销毁对象前调用对象的成员函数。[关闭](../Topic/CAsyncSocket::Close.md)  
+     The destructor calls the object's [Close](../mfc/reference/casyncsocket-class.md#close) member function before destroying the object.  
   
- 有关此序列的代码示例 \(实际上为 `CSocket` 对象\)，请参见 [Windows 套接字：操作的顺序](../mfc/windows-sockets-sequence-of-operations.md)。  
+ For an example of this sequence in code (actually for a `CSocket` object), see [Windows Sockets: Sequence of Operations](../mfc/windows-sockets-sequence-of-operations.md).  
   
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a> 你的CAsyncSocket 的职责。  
- 在 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)类创建对象时，对象封装 Windows **SOCKET** 句柄并提供该句柄的操作。  当您使用 `CAsyncSocket`时，必须处理可能面临，则直接使用 API 的所有问题。  例如：  
+##  <a name="_core_your_responsibilities_with_casyncsocket"></a> Your Responsibilities with CAsyncSocket  
+ When you create an object of class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), the object encapsulates a Windows **SOCKET** handle and supplies operations on that handle. When you use `CAsyncSocket`, you must deal with all the issues you might face if using the API directly. For example:  
   
--   “阻止”方案。  
+-   "Blocking" scenarios.  
   
--   发送和接收的计算机之间的字节顺序差异。  
+-   Byte order differences between the sending and receiving machines.  
   
--   转换在 Unicode 和多字节字符集 \(MBCS\) 字符串之间。  
+-   Converting between Unicode and multibyte character set (MBCS) strings.  
   
- 有关这些术语的定义和附加信息，请参见 [Windows 套接字：阻止](../mfc/windows-sockets-blocking.md)，[Windows 套接字：字节顺序](../mfc/windows-sockets-byte-ordering.md)，[Windows 套接字：转换字符串](../mfc/windows-sockets-converting-strings.md)。  
+ For definitions of these terms and additional information, see [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md), [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).  
   
- 尽管这些问题，类 **CAsycnSocket** 可能为您正确的选择，如果应用程序要求所有的灵活性和控件可以获取。  否则，应考虑使用 `CSocket` 类。  `CSocket` 隐藏您从大量的详细信息：它正在发送 Windows 消息在调用期间锁定并可以访问 `CArchive`，管理字节顺序差异和字符串转换您的。  
+ Despite these issues, class **CAsycnSocket** may be the right choice for you if your application requires all the flexibility and control you can get. If not, you should consider using class `CSocket` instead. `CSocket` hides a lot of detail from you: it pumps Windows messages during blocking calls and gives you access to `CArchive`, which manages byte order differences and string conversion for you.  
   
- 有关详细信息，请参阅：  
+ For more information, see:  
   
--   [Windows 套接字：背景](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## 请参阅  
- [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

@@ -1,116 +1,134 @@
 ---
-title: "MFC ActiveX 控件：向 ActiveX 控件添加常用事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EVENT__STOCK_ERROR"
-  - "EVENT__STOCK_READYSTATECHANGE"
-  - "ReadyStateChange"
-  - "EVENT__STOCK_MOUSEMOVE"
-  - "EVENT__STOCK_MOUSEUP"
-  - "EVENT__STOCK_DBLCLICK"
-  - "KeyPress"
-  - "EVENT__STOCK_KEYDOWN"
-  - "EVENT__STOCK"
-  - "EVENT__STOCK_MOUSEDOWN"
-  - "EVENT__STOCK_KEYPRESS"
-  - "EVENT__STOCK_CLICK"
-  - "EVENT__STOCK_KEYUP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EVENT_STOCK 前缀"
-  - "EVENT_STOCK_CLICK 事件"
-  - "EVENT_STOCK_DBLCLICK 事件"
-  - "EVENT_STOCK_ERROREVENT 事件"
-  - "EVENT_STOCK_KEYDOWN 事件"
-  - "EVENT_STOCK_KEYPRESS 事件"
-  - "EVENT_STOCK_KEYPRESS 宏"
-  - "EVENT_STOCK_KEYUP 事件"
-  - "EVENT_STOCK_MOUSEDOWN 事件"
-  - "EVENT_STOCK_MOUSEMOVE 事件"
-  - "EVENT_STOCK_MOUSEUP 事件"
-  - "EVENT_STOCK_READYSTATECHANGE 事件"
-  - "事件 [C++], 常用"
-  - "FireClick 事件"
-  - "FireDblClick 事件"
-  - "FireError 事件"
-  - "FireKeyDown 事件"
-  - "FireKeyPress 事件"
-  - "FireKeyUp 事件"
-  - "FireMouseDown 事件"
-  - "FireMouseMove 事件"
-  - "FireMouseUp 事件"
-  - "KeyPress 事件"
-  - "MFC ActiveX 控件, 事件"
-  - "ReadyStateChange 事件"
+title: 'MFC ActiveX Controls: Adding Stock Events to an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- EVENT__STOCK_ERROR
+- EVENT__STOCK_READYSTATECHANGE
+- ReadyStateChange
+- EVENT__STOCK_MOUSEMOVE
+- EVENT__STOCK_MOUSEUP
+- EVENT__STOCK_DBLCLICK
+- KeyPress
+- EVENT__STOCK_KEYDOWN
+- EVENT__STOCK
+- EVENT__STOCK_MOUSEDOWN
+- EVENT__STOCK_KEYPRESS
+- EVENT__STOCK_CLICK
+- EVENT__STOCK_KEYUP
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], events
+- KeyPress event
+- FireDblClick event
+- FireMouseDown event
+- events [MFC], stock
+- FireKeyPress event
+- EVENT_STOCK_MOUSEMOVE event
+- EVENT_STOCK_CLICK event
+- FireClick event
+- FireKeyUp event
+- FireMouseUp event
+- EVENT_STOCK_ERROREVENT event
+- EVENT_STOCK_KEYDOWN event
+- EVENT_STOCK_MOUSEDOWN event
+- EVENT_STOCK_KEYPRESS macro [MFC]
+- EVENT_STOCK_KEYUP event
+- EVENT_STOCK_DBLCLICK event
+- FireError event
+- FireKeyDown event
+- ReadyStateChange event
+- EVENT_STOCK_MOUSEUP event
+- FireMouseMove event
+- EVENT_STOCK prefix
+- EVENT_STOCK_READYSTATECHANGE event
+- EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC ActiveX 控件：向 ActiveX 控件添加常用事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4768b4ccefa1c8aa62925214828b1267960c4f85
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-常用事件与自定义事件不同它们由类 [COleControl](../mfc/reference/colecontrol-class.md)自动触发。  `COleControl` 包含预定义的成员函数将事件激发由常见操作。  在控件、和键盘事件更改的 `COleControl` 包含单和双击实现的一些常见操作。鼠标按钮的状态。  事件从事件的映射项始终由 **EVENT\_STOCK** 前缀开头。  
+---
+# MFC ActiveX Controls: Adding Stock Events to an ActiveX Control
+Stock events differ from custom events in that they are automatically fired by class [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contains predefined member functions that fire events resulting from common actions. Some common actions implemented by `COleControl` include single- and double-clicks on the control, keyboard events, and changes in the state of the mouse buttons. Event map entries for stock events are always preceded by the **EVENT_STOCK** prefix.  
   
-##  <a name="_core_stock_events_supported_by_classwizard"></a> 添加事件向导支持常用的事件  
- `COleControl` 类提供了十常用事件，列出了在下表中。  指定可以使用 [添加事件向导](../ide/add-event-wizard.md)中，控件所需的事件。  
+##  <a name="_core_stock_events_supported_by_classwizard"></a> Stock Events Supported by the Add Event Wizard  
+ The `COleControl` class provides ten stock events, listed in the following table. You can specify the events you want in your control using the [Add Event Wizard](../ide/add-event-wizard.md).  
   
-### 常用事件  
+### Stock Events  
   
-|Event|Firing函数|注释|  
-|-----------|--------------|--------|  
-|单击|**void FireClick \(\)**|激发，当控件捕获鼠标后，所有 **BUTTONUP** \(退出，中间或右对齐\) 接收消息，而按钮释放位于控件上方。  股票 MouseDown 事件和 MouseUp 此事件之前发生。<br /><br /> 事件映射项：**EVENT\_STOCK\_CLICK\( \)**|  
-|DblClick|**void FireDblClick \(\)**|类似于，但引发单击 **BUTTONDBLCLK** 消息时接收。<br /><br /> 事件映射项：**EVENT\_STOCK\_DBLCLICK\( \)**|  
-|错误|**void FireError\( SCODE  , LPCSTR  , UINT**  *scode* `lpszDescription` `nHelpID`  **\= 0 \)**|激发发生错误，在 ActiveX 控件中生成该方法调用或属性访问的范围之外。<br /><br /> 事件映射项：**EVENT\_STOCK\_ERROREVENT\( \)**|  
-|KeyDown|**void FireKeyDown\( short**  `nChar` **, short**  `nShiftState`  **\)**|激发，当 `WM_SYSKEYDOWN` 或 `WM_KEYDOWN` 接收消息。<br /><br /> 事件映射项：**EVENT\_STOCK\_KEYDOWN\( \)**|  
-|KeyPress|**void FireKeyPress\( short\***  `pnChar`  **\)**|当 `WM_CHAR` 收消息时激发。<br /><br /> 事件映射项：**EVENT\_STOCK\_KEYPRESS\( \)**|  
-|KeyUp|**void FireKeyUp\( short**  `nChar` **, short**  `nShiftState`  **\)**|当 `WM_SYSKEYUP` 或 `WM_KEYUP` 接收消息激发。<br /><br /> 事件映射项：**EVENT\_STOCK\_KEYUP\( \)**|  
-|MouseDown|**void FireMouseDown\( short**  `nButton` **, short**  `nShiftState` *x* *y*  **\) , float  , float**|如果任何 **BUTTONDOWN** \(中间或右对齐\) 接收激发。  此事件在引发之前，鼠标捕获。<br /><br /> 事件映射项：**EVENT\_STOCK\_MOUSEDOWN\( \)**|  
-|MouseMove|**void FireMouseMove\( short**  `nButton` **, short**  `nShiftState` *x* *y*  **\) , float  , float**|当 `WM_MOUSEMOVE` 收消息时激发。<br /><br /> 事件映射项：**EVENT\_STOCK\_MOUSEMOVE\( \)**|  
-|MouseUp|**void FireMouseUp\( short**  `nButton` **, short**  `nShiftState` *x* *y*  **\) , float  , float**|如果任何 **BUTTONUP** \(中间或右对齐\) 接收激发。  此事件在引发之前，释放鼠标捕获。<br /><br /> 事件映射项： **EVENT\_STOCK\_MOUSEUP\( \)**|  
-|ReadyStateChange|**void FireReadyStateChange \(\)**|当为就绪状态的下一个控件切换由于数据量来接收激发。<br /><br /> 事件映射项：**EVENT\_STOCK\_READYSTATECHANGE\( \)**|  
+|Event|Firing function|Comments|  
+|-----------|---------------------|--------------|  
+|Click|**void FireClick( )**|Fired when the control captures the mouse, any **BUTTONUP** (left, middle, or right) message is received, and the button is released over the control. The stock MouseDown and MouseUp events occur before this event.<br /><br /> Event map entry: **EVENT_STOCK_CLICK( )**|  
+|DblClick|**void FireDblClick( )**|Similar to Click but fired when a **BUTTONDBLCLK** message is received.<br /><br /> Event map entry: **EVENT_STOCK_DBLCLICK( )**|  
+|Error|**void FireError( SCODE**  *scode* **, LPCSTR**  `lpszDescription` **, UINT**  `nHelpID`  **= 0 )**|Fired when an error occurs within your ActiveX control outside of the scope of a method call or property access.<br /><br /> Event map entry: **EVENT_STOCK_ERROREVENT( )**|  
+|KeyDown|**void FireKeyDown( short**  `nChar` **, short**  `nShiftState`  **)**|Fired when a `WM_SYSKEYDOWN` or `WM_KEYDOWN` message is received.<br /><br /> Event map entry: **EVENT_STOCK_KEYDOWN( )**|  
+|KeyPress|**void FireKeyPress( short\***  `pnChar`  **)**|Fired when a `WM_CHAR` message is received.<br /><br /> Event map entry: **EVENT_STOCK_KEYPRESS( )**|  
+|KeyUp|**void FireKeyUp( short**  `nChar` **, short**  `nShiftState`  **)**|Fired when a `WM_SYSKEYUP` or `WM_KEYUP` message is received.<br /><br /> Event map entry: **EVENT_STOCK_KEYUP( )**|  
+|MouseDown|**void FireMouseDown( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|Fired if any **BUTTONDOWN** (left, middle, or right) is received. The mouse is captured immediately before this event is fired.<br /><br /> Event map entry: **EVENT_STOCK_MOUSEDOWN( )**|  
+|MouseMove|**void FireMouseMove( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|Fired when a `WM_MOUSEMOVE` message is received.<br /><br /> Event map entry: **EVENT_STOCK_MOUSEMOVE( )**|  
+|MouseUp|**void FireMouseUp( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|Fired if any **BUTTONUP** (left, middle, or right) is received. The mouse capture is released before this event is fired.<br /><br /> Event map entry: **EVENT_STOCK_MOUSEUP( )**|  
+|ReadyStateChange|**void FireReadyStateChange( )**|Fired when a control transitions to the next ready state due to the amount of data received.<br /><br /> Event map entry: **EVENT_STOCK_READYSTATECHANGE( )**|  
   
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a> 添加使用"添加事件向导的一个常用事件  
- 添加股票事件比添加自定义事件，因此实际事件激发由基类自动处理，`COleControl`少工作。  下面过程添加常用事件。使用 [MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)，可能已刻意的控件。  当按下了键时和控件是活动的时，KeyPress 事件，调用，触发。  此过程还使用添加其他常用事件。  KeyPress 选择替换重写常用的事件名称。  
+##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Adding a Stock Event Using the Add Event Wizard  
+ Adding stock events requires less work than adding custom events because the firing of the actual event is handled automatically by the base class, `COleControl`. The following procedure adds a stock event to a control that was developed using [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md). The event, called KeyPress, fires when a key is pressed and the control is active. This procedure can also be used to add other stock events. Substitute the selected stock event name for KeyPress.  
   
-#### 使用"添加事件向导，将库存中 KeyPress 事件  
+#### To add the KeyPress stock event using the Add Event Wizard  
   
-1.  加载控件项目。  
+1.  Load your control's project.  
   
-2.  在"类视图"中，右击该 ActiveX 控件类打开快捷菜单。  
+2.  In Class View, right-click your ActiveX control class to open the shortcut menu.  
   
-3.  从快捷菜单中单击“添加”，然后单击“添加事件”。  
+3.  From the shortcut menu, click **Add** and then click **Add Event**.  
   
-     这将打开"添加事件向导"。  
+     This opens the Add Event Wizard.  
   
-4.  在 **Event Name** 拉列表中选择 `KeyPress`。  
+4.  In the **Event Name** drop-down list, select `KeyPress`.  
   
-5.  单击**“完成”**。  
+5.  Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a> 添加事件向导"提供常用事件更改  
- 因为股票事件由控件的基类处理，添加事件向导既不更改类声明。  它向控件添加事件的事件映射并在其 .idl 的输入文件。  下列代码行添加到控件的事件映射，位于控件类实现 \(.cpp\) 文件：  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> Add Event Wizard Changes for Stock Events  
+ Because stock events are handled by the control's base class, the Add Event Wizard does not change your class declaration in any way. It adds the event to the control's event map and makes an entry in its .IDL file. The following line is added to the control's event map, located in the control class implementation (.CPP) file:  
   
- [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- 添加此代码激发 KeyPress 事件，当 `WM_CHAR` 接收消息时，控件处于活动状态。  KeyPress 事件可以通过调用函数触发在其他时间调用 \(例如，`FireKeyPress`\) 从控件代码内。  
+ Adding this code fires a KeyPress event when a `WM_CHAR` message is received and the control is active. The KeyPress event can be fired at other times by calling its firing function (for example, `FireKeyPress`) from within the control code.  
   
- 添加事件向导向控件添加以下代码行的 .idl 文件：  
+ The Add Event Wizard adds the following line of code to the control's .IDL file:  
   
- [!code-cpp[NVC_MFC_AxUI#6](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-events-to-an-activex-control_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#6](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_2.idl)]  
   
- 此行将 KeyPress 事件与其标准调度 ID 并允许容器预期 KeyPress 事件。  
+ This line associates the KeyPress event with its standard dispatch ID and allows the container to anticipate the KeyPress event.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
- [MFC ActiveX 控件：方法](../mfc/mfc-activex-controls-methods.md)   
+## See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

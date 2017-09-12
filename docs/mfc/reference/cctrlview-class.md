@@ -1,5 +1,5 @@
 ---
-title: "CCtrlView 类 |Microsoft 文档"
+title: CCtrlView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,9 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- views, and common controls
-- controls [MFC], common
-- CCtrlView class
+- CCtrlView [MFC], CCtrlView
+- CCtrlView [MFC], OnDraw
+- CCtrlView [MFC], PreCreateWindow
+- CCtrlView [MFC], m_dwDefaultStyle
+- CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
 caps.latest.revision: 20
 author: mikeblome
@@ -41,48 +43,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 569044de59dc3ccd73157abc86855beef57cb558
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 925476d11c5d4d892a6a18b34c27dd018b0a4883
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cctrlview-class"></a>CCtrlView 类
-使文档视图体系结构适应 Windows 98 和 Windows NT 版本 3.51 及更高版本所支持的公共控件。  
+# <a name="cctrlview-class"></a>CCtrlView Class
+Adapts the document-view architecture to the common controls supported by Windows 98 and Windows NT versions 3.51 and later.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCtrlView : public CView  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCtrlView::CCtrlView](#cctrlview)|构造 `CCtrlView` 对象。|  
+|[CCtrlView::CCtrlView](#cctrlview)|Constructs a `CCtrlView` object.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCtrlView::OnDraw](#ondraw)|由框架用于绘制使用指定的设备上下文调用。|  
-|[CCtrlView::PreCreateWindow](#precreatewindow)|在创建附加到此 `CCtrlView` 对象的 Windows 窗口之前调用。|  
+|[CCtrlView::OnDraw](#ondraw)|Called by the framework to draw using the specified device context.|  
+|[CCtrlView::PreCreateWindow](#precreatewindow)|Called before the creation of the Windows window attached to this `CCtrlView` object.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|包含视图类的默认样式。|  
-|[CCtrlView::m_strClass](#m_strclass)|包含视图类的窗口类名称。|  
+|[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Contains the default style for the view class.|  
+|[CCtrlView::m_strClass](#m_strclass)|Contains the Windows class name for the view class.|  
   
-## <a name="remarks"></a>备注  
- 此类`CCtrlView`及其派生类， [CEditView](../../mfc/reference/ceditview-class.md)， [CListView](../../mfc/reference/clistview-class.md)， [CTreeView](../../mfc/reference/ctreeview-class.md)，和[CRichEditView](../../mfc/reference/cricheditview-class.md)，调整的文档视图体系结构适应 Windows 95/98 和 Windows NT 版本 3.51 及更高版本所支持的新公共控件。 在文档视图体系结构的详细信息，请参阅[文档/视图体系结构](../../mfc/document-view-architecture.md)。  
+## <a name="remarks"></a>Remarks  
+ The class `CCtrlView` and its derivatives, [CEditView](../../mfc/reference/ceditview-class.md), [CListView](../../mfc/reference/clistview-class.md), [CTreeView](../../mfc/reference/ctreeview-class.md), and [CRichEditView](../../mfc/reference/cricheditview-class.md), adapt the document-view architecture to the new common controls supported by Windows 95/98 and Windows NT versions 3.51 and later. For more information on the document-view architecture, see [Document/View Architecture](../../mfc/document-view-architecture.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -93,11 +95,11 @@ class CCtrlView : public CView
   
  `CCtrlView`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
- 构造 `CCtrlView` 对象。  
+##  <a name="cctrlview"></a>  CCtrlView::CCtrlView  
+ Constructs a `CCtrlView` object.  
   
 ```  
 CCtrlView(
@@ -105,74 +107,74 @@ CCtrlView(
     DWORD dwStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszClass`  
- 视图类的窗口类名称。  
+ Windows class name of the view class.  
   
  `dwStyle`  
- 视图类的样式。  
+ Style of the view class.  
   
-### <a name="remarks"></a>备注  
- 创建新的框架窗口或拆分窗口时，框架将调用构造函数。 重写[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)以便初始化视图，在附加文档之后。 调用[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)或[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)若要创建 Windows 对象。  
+### <a name="remarks"></a>Remarks  
+ The framework calls the constructor when a new frame window is created or a window is split. Override [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) to initialize the view after the document is attached. Call [CWnd::Create](../../mfc/reference/cwnd-class.md#create) or [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) to create the Windows object.  
   
-##  <a name="m_strclass"></a>CCtrlView::m_strClass  
- 包含视图类的窗口类名称。  
+##  <a name="m_strclass"></a>  CCtrlView::m_strClass  
+ Contains the Windows class name for the view class.  
   
 ```  
 CString m_strClass;  
 ```  
   
-##  <a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
- 包含视图类的默认样式。  
+##  <a name="m_dwdefaultstyle"></a>  CCtrlView::m_dwDefaultStyle  
+ Contains the default style for the view class.  
   
 ```  
 DWORD m_dwDefaultStyle;  
 ```  
   
-### <a name="remarks"></a>备注  
- 创建一个窗口时应用此样式。  
+### <a name="remarks"></a>Remarks  
+ This style is applied when a window is created.  
   
-##  <a name="ondraw"></a>CCtrlView::OnDraw  
- 由框架调用以绘制内容的`CCtrlView`对象使用指定的设备上下文。  
+##  <a name="ondraw"></a>  CCtrlView::OnDraw  
+ Called by the framework to draw the contents of the `CCtrlView` object using the specified device context.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向在其中绘制发生的设备上下文的指针。  
+ A pointer to the device context in which the drawing occurs.  
   
-### <a name="remarks"></a>备注  
- `OnDraw`通常是为了屏幕显示，并传递由指定屏幕设备上下文调用`pDC`。  
+### <a name="remarks"></a>Remarks  
+ `OnDraw` is typically called for screen display, passing a screen device context specified by `pDC`.  
   
-##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
- 在创建附加到此 `CWnd` 对象的 Windows 窗口之前调用。  
+##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
+ Called before the creation of the Windows window attached to this `CWnd` object.  
   
 ```  
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *cs*  
- 一个[CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603)结构。  
+ A [CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603) structure.  
   
-### <a name="return-value"></a>返回值  
- 如果应继续窗口创建; 非零值0，以指示创建失败。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the window creation should continue; 0 to indicate creation failure.  
   
-### <a name="remarks"></a>备注  
- 永远不会直接调用此函数。  
+### <a name="remarks"></a>Remarks  
+ Never call this function directly.  
   
- 此函数的默认实现可检查**NULL**窗口类名称，并从替换相应的默认值。 重写该成员函数以修改`CREATESTRUCT`结构创建窗口之前。  
+ The default implementation of this function checks for a **NULL** window class name and substitutes an appropriate default. Override this member function to modify the `CREATESTRUCT` structure before the window is created.  
   
- 每个类派生自`CCtrlView`将其自身的功能添加到其重写`PreCreateWindow`。 按照设计，这些派生`PreCreateWindow`未记录。 若要确定适合于每个类和样式之间的相互依赖项的样式，可以检查应用程序的基类的 MFC 源代码。 如果您选择替代`PreCreateWindow`，您可以确定是否使用应用程序的基类中的样式提供您需要通过从 MFC 源代码收集的信息的功能。  
+ Each class derived from `CCtrlView` adds its own functionality to its override of `PreCreateWindow`. By design, these derivations of `PreCreateWindow` are not documented. To determine the styles appropriate to each class and the interdependencies between the styles, you can examine the MFC source code for your application's base class. If you choose to override `PreCreateWindow`, you can determine whether the styles used in your application's base class provide the functionality you need by using information gathered from the MFC source code.  
   
- 更改窗口样式的详细信息，请参阅[更改由 MFC 创建的窗口的样式](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
+ For more information on changing window styles, see the [Changing the Styles of a Window Created by MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
   
-## <a name="see-also"></a>另请参阅  
- [CView 类](../../mfc/reference/cview-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CTreeView 类](../../mfc/reference/ctreeview-class.md)   
- [CListView 类](../../mfc/reference/clistview-class.md)   
- [CRichEditView 类](../../mfc/reference/cricheditview-class.md)
+## <a name="see-also"></a>See Also  
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CTreeView Class](../../mfc/reference/ctreeview-class.md)   
+ [CListView Class](../../mfc/reference/clistview-class.md)   
+ [CRichEditView Class](../../mfc/reference/cricheditview-class.md)
 

@@ -1,41 +1,60 @@
 ---
-title: "创建窗口 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWnd 对象"
-  - "CWnd 对象, 创建"
-  - "对象创建 [C++], 窗口"
-  - "窗口 [C++], 创建"
+title: Creating Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- object creation [MFC], windows
+- windows [MFC], creating
+- CWnd objects [MFC]
+- CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 创建窗口
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f1f65f36d9cfa11a415edc3c8d926503aad4c767
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-框架自动创建在计划需要框架的大多数窗口。  [文档\/视图创建](../mfc/document-view-creation.md) 演示框架如何创建框架窗口与文档和视图。  为私有，但您可以创建自己拥有子窗口 \(包括 Windows 框架窗口或视图。以及框架提供的窗口中。  
+---
+# <a name="creating-windows"></a>Creating Windows
+The framework automatically creates most of the windows you need in a framework program. [Document/View Creation](../mfc/document-view-creation.md) shows how the framework creates the frame windows associated with documents and views. But for special purposes you can create your own windows — including your own child windows of frame windows or views — in addition to the windows supplied by the framework.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   C\+\+ Windows[“分类”寄存器"窗口](../mfc/registering-window-classes.md) \(而不是对象\)  
+-   [Registering window "classes"](../mfc/registering-window-classes.md) (as opposed to C++ window objects)  
   
--   [常规窗口创建序列](../mfc/general-window-creation-sequence.md)  
+-   [General window creation sequence](../mfc/general-window-creation-sequence.md)  
   
--   [窗口销毁的对象](../mfc/destroying-window-objects.md)  
+-   [Destroying window objects](../mfc/destroying-window-objects.md)  
   
--   [与 Window 对象一起使用](../mfc/working-with-window-objects.md)  
+-   [Working with window objects](../mfc/working-with-window-objects.md)  
   
-## 请参阅  
- [窗口对象](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

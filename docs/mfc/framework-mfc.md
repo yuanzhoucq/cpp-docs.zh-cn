@@ -1,60 +1,78 @@
 ---
-title: "框架 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "API [C++], 由 MFC Win32 封装"
-  - "应用程序框架 [C++], 关于 MFC 应用程序框架"
-  - "封装的 Win32 API"
-  - "封装 [C++]"
-  - "封装 [C++], Win32 API"
-  - "MFC [C++], 应用程序框架"
-  - "Win32 [C++], 由 MFC 执行的 API 封装"
-  - "Windows API [C++], 由 MFC 执行的封装"
-  - "包装类, 解释的"
+title: Framework (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- encapsulation [MFC], Win32 API
+- MFC, application framework
+- wrapper classes [MFC], explained
+- Win32 [MFC], API encapsulation by MFC
+- application framework [MFC], about MFC application framework
+- APIs [MFC], encapsulation by MFC Win32
+- encapsulation [MFC]
+- Windows API [MFC], encapsulation by MFC
+- encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 框架 (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a4c0add4e7bb64ffd3aac08500bc05cd9aad502
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-使用 Microsoft 基础类库 \(MFC\) 框架使用某个主类和多个 Visual C\+\+ 的主要工具。  某些类封装 Win32 应用程序编程接口 \(API\) 的一个主要部分。  其他类封装应用程序概念，如文档、视图和应用程序。  仍然有一些其他提供封装 OLE 功能以及 ODBC 和 DAO 的数据访问功能。  
+---
+# <a name="framework-mfc"></a>Framework (MFC)
+Your work with the Microsoft Foundation Class (MFC) Library framework is based largely on a few major classes and several Visual C++ tools. Some classes encapsulate a large portion of the Win32 application programming interface (API). Other classes encapsulate application concepts such as documents, views, and the application itself. Still others encapsulate OLE features and ODBC and DAO data-access functionality.  
   
- 例如，Windows Win32 的概念。MFC `CWnd`类封装。  也就是说 C\+\+ 类调用的 `CWnd` 封装或“包装”表示 Windows `HWND` 的窗口句柄。  同样，`CDialog` 类封装 Win32 对话框。  
+ For example, Win32's concept of window is encapsulated by MFC class `CWnd`. That is, a C++ class called `CWnd` encapsulates or "wraps" the `HWND` handle that represents a Windows window. Likewise, class `CDialog` encapsulates Win32 dialog boxes.  
   
- 封装表示 C\+\+ 类 `CWnd`，例如，包含 `HWND`类型的成员变量，并封装，函数采用 `HWND` 作为参数的调用对 Win32 类的成员函数。  类成员函数通常具有与 Win32 函数进行封装的名称。  
+ Encapsulation means that the C++ class `CWnd`, for example, contains a member variable of type `HWND`, and the class's member functions encapsulate calls to Win32 functions that take an `HWND` as a parameter. The class member functions typically have the same name as the Win32 function they encapsulate.  
   
-## 本节内容  
- [SDI 和 MDI](../mfc/sdi-and-mdi.md)  
+## <a name="in-this-section"></a>In This Section  
+ [SDI and MDI](../mfc/sdi-and-mdi.md)  
   
- [文档、视图和框架](../mfc/documents-views-and-the-framework.md)  
+ [Documents, Views, and the Framework](../mfc/documents-views-and-the-framework.md)  
   
- [向导和资源编辑器](../mfc/wizards-and-the-resource-editors.md)  
+ [Wizards and Resource Editors](../mfc/wizards-and-the-resource-editors.md)  
   
-## 相关章节  
- [基于框架生成](../mfc/building-on-the-framework.md)  
+## <a name="in-related-sections"></a>In Related Sections  
+ [Building on the Framework](../mfc/building-on-the-framework.md)  
   
- [框架如何调用您的代码](../mfc/how-the-framework-calls-your-code.md)  
+ [How the Framework Calls Your Code](../mfc/how-the-framework-calls-your-code.md)  
   
- [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)  
   
- [文档模板和文档\/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)  
   
- [消息处理和映射](../mfc/message-handling-and-mapping.md)  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)  
   
- [窗口对象](../mfc/window-objects.md)  
+ [Window Objects](../mfc/window-objects.md)  
   
-## 请参阅  
- [使用类编写 Windows 应用程序](../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

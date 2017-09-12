@@ -1,5 +1,5 @@
 ---
-title: "CAnimationManagerEventHandler 类 |Microsoft 文档"
+title: CAnimationManagerEventHandler Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationManagerEventHandler class
+- CAnimationManagerEventHandler [MFC], CAnimationManagerEventHandler
+- CAnimationManagerEventHandler [MFC], CreateInstance
+- CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
+- CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
 caps.latest.revision: 18
 author: mikeblome
@@ -38,64 +41,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e62d676c073998718b4df47223d1679b1187d66e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0d30450abc72a4557a84ac9394fdea413c7175af
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 类
-实现回调，它在动画管理器状态更改时由动画 API 调用。  
+# <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler Class
+Implements a callback, which is called by the Animation API when a status of an animation manager is changed.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase<CAnimationManagerEventHandler>;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|构造 `CAnimationManagerEventHandler` 对象。|  
+|[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|Constructs a `CAnimationManagerEventHandler` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|创建的一个实例`CAnimationManagerEventHandler`对象。|  
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|动画管理器的状态发生更改时调用。 （重写 `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`。）|  
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|存储事件路由的动画控制器的指针。|  
+|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Creates an instance of `CAnimationManagerEventHandler` object.|  
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Called when a status of animation manager has changed. (Overrides `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Stores a pointer to animation controller to route events.|  
   
-## <a name="remarks"></a>备注  
- 创建并调用 CAnimationController::EnableAnimationManagerEvent 时传递给 IUIAnimationManager::SetManagerEventHandler 方法，此事件处理程序。  
+## <a name="remarks"></a>Remarks  
+ This event handler is created and passed to IUIAnimationManager::SetManagerEventHandler method, when you call CAnimationController::EnableAnimationManagerEvent.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CUIAnimationCallbackBase`  
   
  `CUIAnimationManagerEventHandlerBase`  
   
  `CAnimationManagerEventHandler`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler  
+##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
- 构造 CAnimationManagerEventHandler 对象。  
+ Constructs a CAnimationManagerEventHandler object.  
   
 ```  
 CAnimationManagerEventHandler();
 ```  
   
-##  <a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
- 创建 CAnimationManagerEventHandler 对象的实例。  
+ Creates an instance of CAnimationManagerEventHandler object.  
   
 ```  
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -103,20 +106,20 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
     IUIAnimationManagerEventHandler** ppManagerEventHandler);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- 一个指向动画控制器，它将接收此事件。  
+ A pointer to animation controller, which will receive events.  
   
  `ppManagerEventHandler`  
- 输出。 如果该方法成功，则包含指向将处理状态更新为动画管理器的 COM 对象的指针。  
+ Output. If the method succeeds it contains a pointer to COM object that will handle status updates to an animation manager.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged  
+##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
- 动画管理器的状态发生更改时调用。  
+ Called when a status of animation manager has changed.  
   
 ```  
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -124,29 +127,29 @@ IFACEMETHOD(OnManagerStatusChanged)(
   UI_ANIMATION_MANAGER_STATUS previousStatus);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `newStatus`  
- 新的状态。  
+ New status.  
   
  `previousStatus`  
- 以前的状态。  
+ Previous status.  
   
-### <a name="return-value"></a>返回值  
- 当前实现始终返回，则为 S_OK;  
+### <a name="return-value"></a>Return Value  
+ Current implementation always returns S_OK;  
   
-##  <a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
- 存储事件路由的动画控制器的指针。  
+ Stores a pointer to animation controller to route events.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- 一个指向动画控制器，它将接收此事件。  
+ A pointer to animation controller, which will receive events.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

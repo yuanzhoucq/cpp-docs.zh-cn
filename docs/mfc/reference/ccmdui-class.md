@@ -1,5 +1,5 @@
 ---
-title: "CCmdUI 类 |Microsoft 文档"
+title: CCmdUI Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,15 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- user interfaces, updating
-- states, updating user interface object
-- updating user interfaces for commands
-- commands [C++], updating UI
-- CCmdUI class
-- toolbars [C++], updating
-- command user interface
-- menus [C++], updating as context changes
-- buttons [C++], updating as context changes
+- CCmdUI [MFC], ContinueRouting
+- CCmdUI [MFC], Enable
+- CCmdUI [MFC], SetCheck
+- CCmdUI [MFC], SetRadio
+- CCmdUI [MFC], SetText
+- CCmdUI [MFC], m_nID
+- CCmdUI [MFC], m_nIndex
+- CCmdUI [MFC], m_pMenu
+- CCmdUI [MFC], m_pOther
+- CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 caps.latest.revision: 21
 author: mikeblome
@@ -52,185 +53,185 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 45490a6af635c095e2a057dd2360240a4eac85a9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fd43998877d4a5929103993c221961ba258b9b17
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccmdui-class"></a>CCmdUI 类
-只能在使用`ON_UPDATE_COMMAND_UI`中的处理程序`CCmdTarget`-派生类。  
+# <a name="ccmdui-class"></a>CCmdUI Class
+Is used only within an `ON_UPDATE_COMMAND_UI` handler in a `CCmdTarget`-derived class.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCmdUI  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCmdUI::ContinueRouting](#continuerouting)|告知继续路由当前消息的处理程序项链的命令传送机制。|  
-|[CCmdUI::Enable](#enable)|启用或禁用此命令的用户界面项。|  
-|[CCmdUI::SetCheck](#setcheck)|设置此命令的用户界面项的复选状态。|  
-|[CCmdUI::SetRadio](#setradio)|如`SetCheck`成员函数，但对单选组操作。|  
-|[CCmdUI::SetText](#settext)|设置此命令的用户界面项的文本。|  
+|[CCmdUI::ContinueRouting](#continuerouting)|Tells the command-routing mechanism to continue routing the current message down the chain of handlers.|  
+|[CCmdUI::Enable](#enable)|Enables or disables the user-interface item for this command.|  
+|[CCmdUI::SetCheck](#setcheck)|Sets the check state of the user-interface item for this command.|  
+|[CCmdUI::SetRadio](#setradio)|Like the `SetCheck` member function, but operates on radio groups.|  
+|[CCmdUI::SetText](#settext)|Sets the text for the user-interface item for this command.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCmdUI::m_nID](#m_nid)|用户界面对象的 ID。|  
-|[CCmdUI::m_nIndex](#m_nindex)|用户界面对象的索引。|  
-|[CCmdUI::m_pMenu](#m_pmenu)|指向所代表的菜单`CCmdUI`对象。|  
-|[CCmdUI::m_pOther](#m_pother)|指向以发送通知的窗口对象。|  
-|[CCmdUI::m_pSubMenu](#m_psubmenu)|指向由包含子菜单`CCmdUI`对象。|  
+|[CCmdUI::m_nID](#m_nid)|The ID of the user-interface object.|  
+|[CCmdUI::m_nIndex](#m_nindex)|The index of the user-interface object.|  
+|[CCmdUI::m_pMenu](#m_pmenu)|Points to the menu represented by the `CCmdUI` object.|  
+|[CCmdUI::m_pOther](#m_pother)|Points to the window object that sent the notification.|  
+|[CCmdUI::m_pSubMenu](#m_psubmenu)|Points to the contained sub-menu represented by the `CCmdUI` object.|  
   
-## <a name="remarks"></a>备注  
- `CCmdUI`没有基类。  
+## <a name="remarks"></a>Remarks  
+ `CCmdUI` does not have a base class.  
   
- 当你的应用程序的用户会菜单、 每个菜单项需要知道是否它应显示为已启用或禁用拉取。 菜单命令的目标提供此信息通过实现`ON_UPDATE_COMMAND_UI`处理程序。 对于每个应用程序中的命令用户界面对象，使用属性窗口创建每个处理程序的消息映射条目和函数原型。  
+ When a user of your application pulls down a menu, each menu item needs to know whether it should be displayed as enabled or disabled. The target of a menu command provides this information by implementing an `ON_UPDATE_COMMAND_UI` handler. For each of the command user-interface objects in your application, use the Properties window to create a message-map entry and function prototype for each handler.  
   
- 框架在请求，则它菜单，搜索并调用每个`ON_UPDATE_COMMAND_UI`处理程序中，每个处理程序调用`CCmdUI`成员函数如**启用**和**检查**，框架然后相应地显示每个菜单项。  
+ When the menu is pulled down, the framework searches for and calls each `ON_UPDATE_COMMAND_UI` handler, each handler calls `CCmdUI` member functions such as **Enable** and **Check**, and the framework then appropriately displays each menu item.  
   
- 菜单项可以将其替换控件条按钮或其他命令的用户界面对象而无需更改的代码内`ON_UPDATE_COMMAND_UI`处理程序。  
+ A menu item can be replaced with a control-bar button or other command user-interface object without changing the code within the `ON_UPDATE_COMMAND_UI` handler.  
   
- 下表总结了影响`CCmdUI`的成员函数具有对各种命令用户界面项。  
+ The following table summarizes the effect `CCmdUI`'s member functions have on various command user-interface items.  
   
-|用户界面项|启用|SetCheck|SetRadio|SetText|  
+|User-Interface Item|Enable|SetCheck|SetRadio|SetText|  
 |--------------------------|------------|--------------|--------------|-------------|  
-|Menu item|启用或禁用|选中或取消选中|检查使用的一个点|设置项的文本|  
-|工具栏按钮|启用或禁用|选中后，请取消选择，或不确定|与相同`SetCheck`|（不适用）|  
-|状态栏窗格|使文字可见或不可见|集弹出或正常边框|与相同`SetCheck`|设置窗格中的文本|  
-|中的普通按钮`CDialogBar`|启用或禁用|选中或取消选中复选框|与相同`SetCheck`|设置按钮文本|  
-|在正常控制`CDialogBar`|启用或禁用|（不适用）|（不适用）|设置窗口文本|  
+|Menu item|Enables or disables|Checks or unchecks|Checks using a dot|Sets item text|  
+|Toolbar button|Enables or disables|Selects, unselects, or indeterminate|Same as `SetCheck`|(Not applicable)|  
+|Status-bar pane|Makes text visible or invisible|Sets pop-out or normal border|Same as `SetCheck`|Sets pane text|  
+|Normal button in `CDialogBar`|Enables or disables|Checks or unchecks check box|Same as `SetCheck`|Sets button text|  
+|Normal control in `CDialogBar`|Enables or disables|(Not applicable)|(Not applicable)|Sets window text|  
   
- 有关使用此类的详细信息，请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)。  
+ For more on the use of this class, see [How to Update User-Interface Objects](../../mfc/how-to-update-user-interface-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CCmdUI`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
- 调用此成员函数以告知继续路由当前消息的处理程序项链的命令传送机制。  
+##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting  
+ Call this member function to tell the command-routing mechanism to continue routing the current message down the chain of handlers.  
   
 ```  
 void ContinueRouting();
 ```  
   
-### <a name="remarks"></a>备注  
- 这是一个高级的成员函数，应与结合使用`ON_COMMAND_EX`处理程序返回**FALSE**。 有关详细信息，请参阅[技术注意 6](../../mfc/tn006-message-maps.md)。  
+### <a name="remarks"></a>Remarks  
+ This is an advanced member function that should be used in conjunction with an `ON_COMMAND_EX` handler that returns **FALSE**. For more information, see [Technical Note 6](../../mfc/tn006-message-maps.md).  
   
-##  <a name="enable"></a>CCmdUI::Enable  
- 调用此成员函数以启用或禁用此命令的用户界面项。  
+##  <a name="enable"></a>  CCmdUI::Enable  
+ Call this member function to enable or disable the user-interface item for this command.  
   
 ```  
 virtual void Enable(BOOL bOn = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bOn`  
- **TRUE**以启用项， **FALSE**以禁用它。  
+ **TRUE** to enable the item, **FALSE** to disable it.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 46](../../mfc/codesnippet/cpp/ccmdui-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#46](../../mfc/codesnippet/cpp/ccmdui-class_1.cpp)]  
   
- [!code-cpp[NVC_MFCDocView # 47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="m_nid"></a>CCmdUI::m_nID  
- 菜单项、 工具栏按钮或由其他用户界面对象的 ID`CCmdUI`对象。  
+##  <a name="m_nid"></a>  CCmdUI::m_nID  
+ The ID of the menu item, toolbar button, or other user-interface object represented by the `CCmdUI` object.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
- 菜单项、 工具栏按钮或由其他用户界面对象的索引`CCmdUI`对象。  
+##  <a name="m_nindex"></a>  CCmdUI::m_nIndex  
+ The index of the menu item, toolbar button, or other user-interface object represented by the `CCmdUI` object.  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
- 指针 (的`CMenu`类型) 所表示的菜单`CCmdUI`对象。  
+##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu  
+ Pointer (of `CMenu` type) to the menu represented by the `CCmdUI` object.  
   
 ```  
 CMenu* m_pMenu;  
 ```  
   
-### <a name="remarks"></a>备注  
- **NULL**如果该项不是一个菜单。  
+### <a name="remarks"></a>Remarks  
+ **NULL** if the item is not a menu.  
   
-##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
- 指针 (的`CMenu`类型) 所表示的包含子菜单`CCmdUI`对象。  
+##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu  
+ Pointer (of `CMenu` type) to the contained sub-menu represented by the `CCmdUI` object.  
   
 ```  
 CMenu* m_pSubMenu;  
 ```  
   
-### <a name="remarks"></a>备注  
- **NULL**如果该项不是一个菜单。 如果子菜单是一个弹出窗口，`m_nID`包含弹出菜单中的第一项的 ID。 有关详细信息，请参阅[技术说明 21](../../mfc/tn021-command-and-message-routing.md)。  
+### <a name="remarks"></a>Remarks  
+ **NULL** if the item is not a menu. If the sub menu is a pop-up, `m_nID` contains the ID of the first item in the pop-up menu. For more information, see [Technical Note 21](../../mfc/tn021-command-and-message-routing.md).  
   
-##  <a name="m_pother"></a>CCmdUI::m_pOther  
- 指针 (类型的`CWnd`) 到窗口对象，如工具或状态栏中，发送通知。  
+##  <a name="m_pother"></a>  CCmdUI::m_pOther  
+ Pointer (of type `CWnd`) to the window object, such as a tool or status bar, that sent the notification.  
   
 ```  
 CWnd* m_pOther;  
 ```  
   
-### <a name="remarks"></a>备注  
- **NULL**项是否菜单或非`CWnd`对象。  
+### <a name="remarks"></a>Remarks  
+ **NULL** if the item is a menu or a non- `CWnd` object.  
   
-##  <a name="setcheck"></a>CCmdUI::SetCheck  
- 调用此成员函数可将此命令的用户界面项设置为相应的复选状态。  
+##  <a name="setcheck"></a>  CCmdUI::SetCheck  
+ Call this member function to set the user-interface item for this command to the appropriate check state.  
   
 ```  
 virtual void SetCheck(int nCheck = 1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nCheck`  
- 指定要设置的复选状态。 如果 0，取消选中;如果 1，检查;，如果月 2 日，将设置不确定。  
+ Specifies the check state to set. If 0, unchecks; if 1, checks; and if 2, sets indeterminate.  
   
-### <a name="remarks"></a>备注  
- 此成员函数适用于菜单项和工具栏按钮。 确定状态仅适用于工具栏按钮。  
+### <a name="remarks"></a>Remarks  
+ This member function works for menu items and toolbar buttons. The indeterminate state applies only to toolbar buttons.  
   
-##  <a name="setradio"></a>CCmdUI::SetRadio  
- 调用此成员函数可将此命令的用户界面项设置为相应的复选状态。  
+##  <a name="setradio"></a>  CCmdUI::SetRadio  
+ Call this member function to set the user-interface item for this command to the appropriate check state.  
   
 ```  
 virtual void SetRadio(BOOL bOn = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bOn`  
- **TRUE**以启用项; 否则为**FALSE**。  
+ **TRUE** to enable the item; otherwise **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 此成员函数执行操作如`SetCheck`，只不过它充当单选按钮组的一部分的用户界面项上的操作。 取消选中组中的其他项不是自动除非项目本身维护单选按钮组的行为。  
+### <a name="remarks"></a>Remarks  
+ This member function operates like `SetCheck`, except that it operates on user-interface items acting as part of a radio group. Unchecking the other items in the group is not automatic unless the items themselves maintain the radio-group behavior.  
   
-##  <a name="settext"></a>CCmdUI::SetText  
- 调用此成员函数以设置此命令的用户界面项的文本。  
+##  <a name="settext"></a>  CCmdUI::SetText  
+ Call this member function to set the text of the user-interface item for this command.  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 指向一个文本字符串的指针。  
+ A pointer to a text string.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 MDI](../../visual-cpp-samples.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDI](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)
 

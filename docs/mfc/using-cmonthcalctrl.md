@@ -1,43 +1,62 @@
 ---
-title: "使用 CMonthCalCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CMonthCalCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMonthCalCtrl 类, 关于 CMonthCalCtrl 类"
+title: Using CMonthCalCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CMonthCalCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 CMonthCalCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 07073616c183eb6f67e09483b16c672bf52cd927
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-月历控件 \([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)\) 实现类似于月历的用户界面。  这为用户提供了输入或选择日期直观和非常明显的方法。  通过使用现有的数据类型，该控件还为应用程序提供了使用方法获取并设置控件中的日期信息。  默认情况下，日历控件显示当前月份的日和月。  但是，用户可以滚动到上一个月和下一个月并选择特定月和年。  
+---
+# <a name="using-cmonthcalctrl"></a>Using CMonthCalCtrl
+The month calendar control ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implements a calendar-like user interface. This provides the user with a very intuitive and recognizable method of entering or selecting a date. The control also provides the application with the means to obtain and set the date information in the control using existing data types. By default, the month calendar control displays the current day and month. However, the user is able to scroll to the previous and next months and select a specific month and/or year.  
   
 > [!NOTE]
->  若要在你的项目中使用 `CMonthCalCtrl` 类，必须包括 AFXDTCTL.H，通常在 STDAFX.H。  
+>  To use the `CMonthCalCtrl` class in your project, you must include AFXDTCTL.H, usually in STDAFX.H.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [创建月历控件](../mfc/creating-the-month-calendar-control.md)  
+-   [Creating the Month Calendar Control](../mfc/creating-the-month-calendar-control.md)  
   
--   [月历控件示例](../mfc/month-calendar-control-examples.md)  
+-   [Month Calendar Control Examples](../mfc/month-calendar-control-examples.md)  
   
--   [处理月历控件中的通知消息](../mfc/processing-notification-messages-in-month-calendar-controls.md)  
+-   [Processing Notification Messages in Month Calendar Controls](../mfc/processing-notification-messages-in-month-calendar-controls.md)  
   
--   [设置月历控件的日状态](../mfc/setting-the-day-state-of-a-month-calendar-control.md)  
+-   [Setting the Day State of a Month Calendar Control](../mfc/setting-the-day-state-of-a-month-calendar-control.md)  
   
-## 请参阅  
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

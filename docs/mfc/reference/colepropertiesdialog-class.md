@@ -1,5 +1,5 @@
 ---
-title: "COlePropertiesDialog 类 |Microsoft 文档"
+title: COlePropertiesDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,12 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE Object Properties dialog box
-- Object Properties dialog box
-- dialog boxes, OLE
-- OLE documents, modifying properties
-- property pages, OLE
-- COlePropertiesDialog class
+- COlePropertiesDialog [MFC], COlePropertiesDialog
+- COlePropertiesDialog [MFC], DoModal
+- COlePropertiesDialog [MFC], OnApplyScale
+- COlePropertiesDialog [MFC], m_gp
+- COlePropertiesDialog [MFC], m_lp
+- COlePropertiesDialog [MFC], m_op
+- COlePropertiesDialog [MFC], m_psh
+- COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
 caps.latest.revision: 23
 author: mikeblome
@@ -47,57 +49,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 1a53c1e65504049e35fdec8065de279ca41fe342
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc7087042379010d572d3bf1753813ddb1233bf2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 类
-封装 Windows 公共 OLE“对象属性”对话框。  
+# <a name="colepropertiesdialog-class"></a>COlePropertiesDialog Class
+Encapsulates the Windows common OLE Object Properties dialog box.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COlePropertiesDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|构造 `COlePropertiesDialog` 对象。|  
+|[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Constructs a `COlePropertiesDialog` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePropertiesDialog::DoModal](#domodal)|显示对话框中，并允许用户进行选择。|  
-|[COlePropertiesDialog::OnApplyScale](#onapplyscale)|缩放的文档项的已更改时由框架调用。|  
+|[COlePropertiesDialog::DoModal](#domodal)|Displays the dialog box and allows the user to make a selection.|  
+|[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Called by the framework when the scaling of the document item has changed.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePropertiesDialog::m_gp](#m_gp)|用于初始化的"常规"页的结构`COlePropertiesDialog`对象。|  
-|[COlePropertiesDialog::m_lp](#m_lp)|用于初始化的"链接"页的结构`COlePropertiesDialog`对象。|  
-|[COlePropertiesDialog::m_op](#m_op)|用于初始化的结构`COlePropertiesDialog`对象。|  
-|[COlePropertiesDialog::m_psh](#m_psh)|使用以添加其他自定义属性页面的结构。|  
-|[COlePropertiesDialog::m_vp](#m_vp)|用于自定义的"视图"页的结构`COlePropertiesDialog`对象。|  
+|[COlePropertiesDialog::m_gp](#m_gp)|A structure used to initialize the "General" page of a `COlePropertiesDialog` object.|  
+|[COlePropertiesDialog::m_lp](#m_lp)|A structure used to initialize the "Link" page of a `COlePropertiesDialog` object.|  
+|[COlePropertiesDialog::m_op](#m_op)|A structure used to initialize the `COlePropertiesDialog` object.|  
+|[COlePropertiesDialog::m_psh](#m_psh)|A structure used to add additional custom property pages.|  
+|[COlePropertiesDialog::m_vp](#m_vp)|A structure used to customize the "View" page of a `COlePropertiesDialog` object.|  
   
-## <a name="remarks"></a>备注  
- 常见的 OLE 对象属性对话框中可以方便地显示和修改 OLE 文档项以与 Windows 标准一致的方式的属性。 这些属性及其他包括表示的文档项，用于在项的链接上显示的图标和缩放图像，及信息 （如果该项目链接） 的选项的文件的信息。  
+## <a name="remarks"></a>Remarks  
+ Common OLE Object Properties dialog boxes provide an easy way to display and modify the properties of an OLE document item in a manner consistent with Windows standards. These properties include, among others, information on the file represented by the document item, options for displaying the icon and image scaling, and information on the item's link (if the item is linked).  
   
- 若要使用`COlePropertiesDialog`对象，请首先创建对象使用`COlePropertiesDialog`构造函数。 在构造对话框后，调用`DoModal`成员函数以显示对话框中，并允许用户修改项的任何属性。 `DoModal`返回用户是否选择确定 ( **IDOK**) 或取消 ( **IDCANCEL**) 按钮。 除了确定按钮和取消按钮，没有应用按钮。 当用户选择应用时，对文档项的属性进行任何更改都应用到的项和其映像会自动更新，但将保持活动状态。  
+ To use a `COlePropertiesDialog` object, first create the object using the `COlePropertiesDialog` constructor. After the dialog box has been constructed, call the `DoModal` member function to display the dialog box and allow the user to modify any properties of the item. `DoModal` returns whether the user selected the OK ( **IDOK**) or the Cancel ( **IDCANCEL**) button. In addition to the OK and Cancel buttons, there is an Apply button. When the user selects Apply, any changes made to the properties of the document item are applied to the item and its image is automatically updated, but remains active.  
   
- [M_psh](#m_psh)数据成员是一个指向**PROPSHEETHEADER**结构，在大多数情况下不需要显式访问。 一个例外是当你需要默认常规、 视图和链接页之外的其他属性页。 在这种情况下，你可以修改`m_psh`数据成员，以包括自定义页面之前调用`DoModal`成员函数。  
+ The [m_psh](#m_psh) data member is a pointer to a **PROPSHEETHEADER** structure, and in most cases you will not need to access it explicitly. One exception is when you need additional property pages beyond the default General, View, and Link pages. In this case, you can modify the `m_psh` data member to include your custom pages before calling the `DoModal` member function.  
   
- OLE 对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
+ For more information on OLE dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,11 +114,11 @@ class COlePropertiesDialog : public COleDialog
   
  `COlePropertiesDialog`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
- 创建一个 `COlePropertiesDialog` 对象。  
+##  <a name="colepropertiesdialog"></a>  COlePropertiesDialog::COlePropertiesDialog  
+ Creates a `COlePropertiesDialog` object.  
   
 ```  
 COlePropertiesDialog(
@@ -126,114 +128,114 @@ COlePropertiesDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 指向正在访问其属性的文档项的指针。  
+ Pointer to the document item whose properties are being accessed.  
   
  *nScaleMin*  
- 最小缩放比例文档项图像的百分比。  
+ Minimum scaling percentage for the document item image.  
   
  *nScaleMax*  
- 最大缩放比例文档项图像的百分比。  
+ Maximum scaling percentage for the document item image.  
   
  `pParentWnd`  
- 对话框的父或所有者的指针。  
+ Pointer to the dialog box's parent or owner.  
   
-### <a name="remarks"></a>备注  
- 派生您常用的 OLE 对象属性对话框类，从`COlePropertiesDialog`为了实现你的文档项的缩放比例。 此类的实例由实现任何对话框将不支持的文档项的缩放。  
+### <a name="remarks"></a>Remarks  
+ Derive your common OLE Object Properties dialog class from `COlePropertiesDialog` in order to implement scaling for your document items. Any dialog boxes implemented by an instance of this class will not support scaling of the document item.  
   
- 默认情况下，常见的 OLE 对象属性对话框中有三个默认页︰  
+ By default, the common OLE Object Properties dialog box has three default pages:  
   
--   常规  
+-   General  
   
-     此页包含有关所选的文档项表示的文件系统信息。 从此页中，用户可以将选定的项转换为另一种类型。  
+     This page contains system information for the file represented by the selected document item. From this page, the user can convert the selected item to another type.  
   
--   视图  
+-   View  
   
-     此页包含用于显示项、 更改的图标和更改图像的缩放选项。  
+     This page contains options for displaying the item, changing the icon, and changing the scaling of the image.  
   
 -   Link  
   
-     此页包含用于更改链接的项的位置和更新链接的项的选项。 从此页中，用户可以断开的选定项的链接。  
+     This page contains options for changing the location of the linked item and updating the linked item. From this page, the user can break the link of the selected item.  
   
- 若要添加之外提供的默认页，修改[m_psh](#m_psh)成员变量的构造函数在退出之前你`COlePropertiesDialog`-派生类。 这是的高级的实现`COlePropertiesDialog`构造函数。  
+ To add pages beyond those provided by default, modify the [m_psh](#m_psh) member variable before exiting the constructor of your `COlePropertiesDialog`-derived class. This is an advanced implementation of the `COlePropertiesDialog` constructor.  
   
-##  <a name="domodal"></a>COlePropertiesDialog::DoModal  
- 调用此成员函数，以显示 Windows 公共 OLE 对象属性对话框，并允许用户查看和/或更改的文档项的各种属性。  
+##  <a name="domodal"></a>  COlePropertiesDialog::DoModal  
+ Call this member function to display the Windows common OLE Object Properties dialog box and allow the user to view and/or change the various properties of the document item.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>返回值  
- **IDOK**或**IDCANCEL**如果成功; 否则为 0。 **IDOK**和**IDCANCEL**是指示用户是否选中确定或取消按钮的常量。  
+### <a name="return-value"></a>Return Value  
+ **IDOK** or **IDCANCEL** if successful; otherwise 0. **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
   
- 如果**IDCANCEL**返回，可以调用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函数来确定是否发生了错误。  
+ If **IDCANCEL** is returned, you can call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
   
-##  <a name="m_gp"></a>COlePropertiesDialog::m_gp  
- 类型的结构[OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297)，可用来初始化 OLE 对象属性对话框中的常规页。  
+##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
+ A structure of type [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), used to initialize the General page of the OLE Object Properties dialog box.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此页显示的类型和大小的嵌入，并允许对转换对话框中的用户访问权限。 此页还显示链接目标的对象是否是链接。  
+### <a name="remarks"></a>Remarks  
+ This page shows the type and size of an embedding and allows the user access to the Convert dialog box. This page also shows the link destination if the object is a link.  
   
- 有关详细信息**OLEUIGNRLPROPS**结构，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on the **OLEUIGNRLPROPS** structure, see the Windows SDK.  
   
-##  <a name="m_lp"></a>COlePropertiesDialog::m_lp  
- 类型的结构[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)，可用来初始化 OLE 对象属性对话框中的链接页。  
+##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
+ A structure of type [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), used to initialize the Link page of the OLE Object Properties dialog box.  
   
 ```  
 OLEUILINKPROPS m_lp;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此页显示链接的项的位置，并允许用户更新或中断，项的链接。  
+### <a name="remarks"></a>Remarks  
+ This page shows the location of the linked item and allows the user to update, or break, the link to the item.  
   
- 有关详细信息**OLEUILINKPROPS**结构，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on the **OLEUILINKPROPS** structure, see the Windows SDK.  
   
-##  <a name="m_op"></a>COlePropertiesDialog::m_op  
- 类型的结构[OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199)，可用来初始化的常见的 OLE 对象属性对话框。  
+##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
+ A structure of type [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), used to initialize the common OLE Object Properties dialog box.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此结构还包含用于初始化的常规、 链接和视图页的成员。  
+### <a name="remarks"></a>Remarks  
+ This structure contains members used to initialize the General, Link, and View pages.  
   
- 有关详细信息，请参阅**OLEUIOBJECTPROPS**和[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the **OLEUIOBJECTPROPS** and [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) structures in the Windows SDK.  
   
-##  <a name="m_psh"></a>COlePropertiesDialog::m_psh  
- 类型的结构[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)，其成员存储对话框对象的特征。  
+##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
+ A structure of type [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), whose members store the characteristics of the dialog object.  
   
 ```  
 PROPSHEETHEADER m_psh;  
 ```  
   
-### <a name="remarks"></a>备注  
- 后构造`COlePropertiesDialog`对象时，可以使用`m_psh`设置对话框之前调用的各个方面`DoModal`成员函数。  
+### <a name="remarks"></a>Remarks  
+ After constructing a `COlePropertiesDialog` object, you can use `m_psh` to set various aspects of the dialog box before calling the `DoModal` member function.  
   
- 如果你修改`m_psh`数据成员直接，您将重写任何默认行为。  
+ If you modify the `m_psh` data member directly, you will override any default behavior.  
   
- 有关详细信息**PROPSHEETHEADER**结构，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on the **PROPSHEETHEADER** structure, see the Windows SDK.  
   
-##  <a name="m_vp"></a>COlePropertiesDialog::m_vp  
- 类型的结构[OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751)，可用来初始化 OLE 对象属性对话框中的视图页。  
+##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
+ A structure of type [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), used to initialize the View page of the OLE Object Properties dialog box.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此页面允许用户切换"内容"和"图标"视图的对象，并更改其容器内缩放。 当以图标形式显示对象时，它还允许对更改图标对话框中的用户访问权限。  
+### <a name="remarks"></a>Remarks  
+ This page allows the user to toggle between "content" and "iconic" views of the object, and change its scaling within the container. It also allows the user access to the Change Icon dialog box when the object is being displayed as an icon.  
   
- 有关详细信息**OLEUIVIEWPROPS**结构，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on the **OLEUIVIEWPROPS** structure, see the Windows SDK.  
   
-##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
- 缩放值已经发生更改，并选择确定或应用，由框架调用。  
+##  <a name="onapplyscale"></a>  COlePropertiesDialog::OnApplyScale  
+ Called by the framework when the scaling value has changed and either OK or Apply was selected.  
   
 ```  
 virtual BOOL OnApplyScale(
@@ -242,29 +244,29 @@ virtual BOOL OnApplyScale(
     BOOL bRelativeToOrig);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 指向正在访问其属性的文档项的指针。  
+ Pointer to the document item whose properties are being accessed.  
   
  `nCurrentScale`  
- 对话框比例数字值。  
+ Numerical value of the dialog scale.  
   
  *bRelativeToOrig*  
- 指示缩放是适用于文档项的原始大小。  
+ Indicates whether scaling applies to the original size of the document item.  
   
-### <a name="return-value"></a>返回值  
- 如果处理; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if handled; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 默认实现不执行任何操作。 你必须重写此函数可启用缩放控件。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing. You must override this function to enable the scaling controls.  
   
 > [!NOTE]
->  常见的 OLE 对象属性对话框中将显示之前，框架调用此函数带**NULL**为`pItem`和 a-1 表示`nCurrentScale`。 这样做是为了确定是否应启用缩放控件。  
+>  Before the common OLE Object Properties dialog box is displayed, the framework calls this function with a **NULL** for `pItem` and a - 1 for `nCurrentScale`. This is done to determine if the scaling controls should be enabled.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 CIRC](../../visual-cpp-samples.md)   
- [COleDialog 类](../../mfc/reference/coledialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleDialog 类](../../mfc/reference/coledialog-class.md)   
- [CPropertyPage 类](../../mfc/reference/cpropertypage-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CIRC](../../visual-cpp-samples.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [CPropertyPage Class](../../mfc/reference/cpropertypage-class.md)
 

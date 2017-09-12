@@ -1,70 +1,89 @@
 ---
-title: "简单数据类型类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据类 [C++]"
-  - "标量类 [C++]"
-  - "简单数据类型类"
+title: Simple Data Type Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- scalar classes [MFC]
+- data classes [MFC]
+- simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 简单数据类型类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a7ef67ee14f2dfc5971ac3a0dcdfa34f5ec2cb2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-下列类封装坐标绘制、字符串、时间和日期信息，从而允许使用 C\+\+ 语法的方便使用。  在类库中，这些对象可以广泛用作Windows类成员函数的参数。  由于 `CPoint`、`CSize`和 `CRect`，分别对应于 **POINT**、**SIZE**和 `RECT` 结构，在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中，您可以使用这些 C\+\+ 类对象，并使用 C 语言结构。  类通过其成员函数提供有用的接口。  `CStringT` 提供了非常灵活的动态字符串。  `CTime`、`COleDateTime`、`CTimeSpan`和 **COleTimeSpan** 对象表示日期和时间值。  有关这些类的更多信息，请参见文章 [日期和时间](../atl-mfc-shared/date-and-time.md)。  
+---
+# <a name="simple-data-type-classes"></a>Simple Data Type Classes
+The following classes encapsulate drawing coordinates, character strings, and time and date information, allowing convenient use of C++ syntax. These objects are used widely as parameters to the member functions of Windows classes in the class library. Because `CPoint`, `CSize`, and `CRect` correspond to the **POINT**, **SIZE**, and `RECT` structures, respectively, in the Windows SDK, you can use objects of these C++ classes wherever you can use these C-language structures. The classes provide useful interfaces through their member functions. `CStringT` provides very flexible dynamic character strings. `CTime`, `COleDateTime`, `CTimeSpan`, and **COleTimeSpan** represent time and date values. For more information about these classes, see the article [Date and Time](../atl-mfc-shared/date-and-time.md).  
   
- 以**COle**开头的类是 由OLE 提供的数据类型的封装。  这些数据类型可在 Windows 程序中使用，不管其他 OLE 功能是否被使用。  
+ The classes that begin with "**COle**" are encapsulations of data types provided by OLE. These data types can be used in Windows programs regardless of whether other OLE features are used.  
   
- [CStringT 类](../atl-mfc-shared/reference/cstringt-class.md)  
- 保留字符串。  
+ [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)  
+ Holds character strings.  
   
  [CTime](../atl-mfc-shared/reference/ctime-class.md)  
- 保留绝对时间和日期的值。  
+ Holds absolute time and date values.  
   
  [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)  
- OLE 自动化类型**DATE**的包装。  表示日期和时间值。  
+ Wrapper for the OLE automation type **DATE**. Represents date and time values.  
   
  [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)  
- 保持相对日期和时间值。  
+ Holds relative time and date values.  
   
  [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)  
- 表示相关的 `COleDateTime` 值，如 `COleDateTime` 两个值之间的差异。  
+ Holds relative `COleDateTime` values, such as the difference between two `COleDateTime` values.  
   
  [CPoint](../atl-mfc-shared/reference/cpoint-class.md)  
- 保持坐标 \(x，y\) 对。  
+ Holds coordinate (x, y) pairs.  
   
  [CSize](../atl-mfc-shared/reference/csize-class.md)  
- 保持疏远，相对位置或匹配的值。  
+ Holds distance, relative positions, or paired values.  
   
  [CRect](../atl-mfc-shared/reference/crect-class.md)  
- 保留矩形区域坐标。  
+ Holds coordinates of rectangular areas.  
   
- [C图像列表](../mfc/reference/cimagelist-class.md)  
- 提供 Windows 图像列表控件的功能。  图像列表与列表控件和树控件一起使用。  它们还可以用于存储和存档一组相同大小的位图。  
+ [CImageList](../mfc/reference/cimagelist-class.md)  
+ Provides the functionality of the Windows image list. Image lists are used with list controls and tree controls. They can also be used to store and archive a set of same-sized bitmaps.  
   
  [COleVariant](../mfc/reference/colevariant-class.md)  
- OLE 自动化类型**VARIANT**的包装。  在 **VARIANT**中可以存储多格式数据。  
+ Wrapper for the OLE automation type **VARIANT**. Data in **VARIANT**s can be stored in many formats.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
- OLE 自动化类型 **CURRENCY**的包装，使用定点算术类型，小数点前 15 位和 小数点后4 位。  
+ Wrapper for the OLE automation type **CURRENCY**, a fixed-point arithmetic type, with 15 digits before the decimal point and 4 digits after.  
   
 > [!NOTE]
->  从 Visual C\+\+ .NET 开始，`CRect`、`CSize`和 `CPoint` 可以在 ATL 或 MFC 应用程序中修改。  此外，`CStringT` 中添加一独立 MFC 提供类似于 `CString`的类。  有关共享的公共类更多信息，请参见 [共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)。  
+>  Beginning with Visual C++ .NET, `CRect`, `CSize`, and `CPoint` have been modified to be usable in either ATL or MFC applications. In addition, `CStringT` has been added to provide an MFC-independent `CString`-like class. For more information on shared utility classes, see [Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md).  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -1,133 +1,150 @@
 ---
-title: "多页文档 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPrintInfo 结构, 多页文档"
-  - "文档页与打印机页"
-  - "文档, 分页"
-  - "文档, 打印"
-  - "DoPreparePrinting 方法和分页"
-  - "多页文档"
-  - "OnBeginPrinting 方法"
-  - "OnDraw 方法, 打印"
-  - "OnEndPrinting 方法"
-  - "OnPrepareDC 方法"
-  - "OnPreparePrinting 方法"
-  - "OnPrint 方法"
-  - "重写, 查看用于打印的类函数"
-  - "pages, 打印"
-  - "分页"
-  - "分页, 打印多页文档"
-  - "打印机模式"
-  - "打印机, 打印机模式"
-  - "打印 [MFC], 多页文档"
-  - "打印 [MFC], 分页"
-  - "打印 [MFC], 协议"
-  - "protocols, 打印协议"
+title: Multipage Documents | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- pagination [MFC]
+- overriding [MFC], View class functions for printing
+- OnPrepareDC method [MFC]
+- CPrintInfo structure [MFC], multipage documents
+- OnEndPrinting method [MFC]
+- protocols [MFC], printing protocol
+- document pages vs. printer pages [MFC]
+- printer mode [MFC]
+- printing [MFC], multipage documents
+- printers [MFC], printer mode
+- documents [MFC], printing
+- OnPreparePrinting method [MFC]
+- OnPrint method [MFC]
+- DoPreparePrinting method and pagination [MFC]
+- OnDraw method [MFC], printing
+- pagination [MFC], printing multipage documents
+- printing [MFC], protocol
+- pages [MFC], printing
+- OnBeginPrinting method [MFC]
+- multipage documents [MFC]
+- printing [MFC], pagination
+- documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 多页文档
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 517911dfcd6efd3b237b31357435bf7f46cc2b13
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文描述窗口打印协议并阐释了如何打印包含多页的文档。  本文涵盖以下主题：  
+---
+# <a name="multipage-documents"></a>Multipage Documents
+This article describes the Windows printing protocol and explains how to print documents that contain more than one page. The article covers the following topics:  
   
--   [打印协议](#_core_the_printing_protocol)  
+-   [Printing protocol](#_core_the_printing_protocol)  
   
--   [重写视图类函数](#_core_overriding_view_class_functions)  
+-   [Overriding view class functions](#_core_overriding_view_class_functions)  
   
--   [分页](#_core_pagination)  
+-   [Pagination](#_core_pagination)  
   
--   [打印机页与文档页](#_core_printer_pages_vs.._document_pages)  
+-   [Printer pages vs. document pages](#_core_printer_pages_vs.._document_pages)  
   
--   [打印时分页](#_core_print.2d.time_pagination)  
+-   [Print-time pagination](#_core_print.2d.time_pagination)  
   
-##  <a name="_core_the_printing_protocol"></a> 打印协议  
- 打印多页文档，框架和视图按下列方式交互。  框架首先演示 **打印** 对话框，创建打印机的设备上下文，并且调用 [CDC](../mfc/reference/cdc-class.md) [StartDoc](../Topic/CDC::StartDoc.md) 对象的成员函数。  然后，文档的每页框架，需要 `CDC` 对象的函数 [为 StartPage](../Topic/CDC::StartPage.md) 成员，指示视图对象打印页，然后调用 [EndPage](../Topic/CDC::EndPage.md) 成员函数。  如果必须在启动某个特定页之前更改打印机模式，视图称为 [ResetDC](../Topic/CDC::ResetDC.md)，更新包含新打印机模式信息的结构。[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 在整个文档打印时，框架调用[EndDoc](../Topic/CDC::EndDoc.md)成员函数。  
+##  <a name="_core_the_printing_protocol"></a> The Printing Protocol  
+ To print a multipage document, the framework and view interact in the following manner. First the framework displays the **Print** dialog box, creates a device context for the printer, and calls the [StartDoc](../mfc/reference/cdc-class.md#startdoc) member function of the [CDC](../mfc/reference/cdc-class.md) object. Then, for each page of the document, the framework calls the [StartPage](../mfc/reference/cdc-class.md#startpage) member function of the `CDC` object, instructs the view object to print the page, and calls the [EndPage](../mfc/reference/cdc-class.md#endpage) member function. If the printer mode must be changed before starting a particular page, the view calls [ResetDC](../mfc/reference/cdc-class.md#resetdc), which updates the [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure containing the new printer mode information. When the entire document has been printed, the framework calls the [EndDoc](../mfc/reference/cdc-class.md#enddoc) member function.  
   
-##  <a name="_core_overriding_view_class_functions"></a> 重写视图类函数  
- [CView](../mfc/reference/cview-class.md) 类定义在打印期间，由框架调用的成员函数。  通过在重写视图类的这些函数，则提供框架的打印逻辑和视图类的打印逻辑之间建立连接。  下表列出这些成员函数。  
+##  <a name="_core_overriding_view_class_functions"></a> Overriding View Class Functions  
+ The [CView](../mfc/reference/cview-class.md) class defines several member functions that are called by the framework during printing. By overriding these functions in your view class, you provide the connections between the framework's printing logic and your view class's printing logic. The following table lists these member functions.  
   
-### 打印的 CView 的可重写的函数  
+### <a name="cviews-overridable-functions-for-printing"></a>CView's Overridable Functions for Printing  
   
-|Name|重写的原因|  
-|----------|-----------|  
-|[OnPreparePrinting](../Topic/CView::OnPreparePrinting.md)|到打印对话框插入值，尤其是文档的长度|  
-|[OnBeginPrinting](../Topic/CView::OnBeginPrinting.md)|分配字体 GDI 或其他资源|  
-|[OnPrepareDC](../Topic/CView::OnPrepareDC.md)|为给定的页上下文的时间打印设备调整特性，或者执行分页|  
-|[OnPrint](../Topic/CView::OnPrint.md)|打印某一特定页|  
-|[OnEndPrinting](../Topic/CView::OnEndPrinting.md)|释放 GDI 资源|  
+|Name|Reason for overriding|  
+|----------|---------------------------|  
+|[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|To insert values in the Print dialog box, especially the length of the document|  
+|[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|To allocate fonts or other GDI resources|  
+|[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)|To adjust attributes of the device context for a given page, or to do print-time pagination|  
+|[OnPrint](../mfc/reference/cview-class.md#onprint)|To print a given page|  
+|[OnEndPrinting](../mfc/reference/cview-class.md#onendprinting)|To deallocate GDI resources|  
   
- 可以在其他函数中执行与打印相关的处理，但这些函数是驱动打印过程的文件。  
+ You can do printing-related processing in other functions as well, but these functions are the ones that drive the printing process.  
   
- 下图演示晒印方法涉及的步骤并显示每一个 `CView` 打印成员函数的位置调用。  本文的其余部分将更详细地说明这些步骤的大部分。  晒印方法的附加部分，文章 [GDI 资源分配](../mfc/allocating-gdi-resources.md)中描述。  
+ The following figure illustrates the steps involved in the printing process and shows where each of `CView`'s printing member functions are called. The rest of this article explains most of these steps in more detail. Additional parts of the printing process are described in the article [Allocating GDI Resources](../mfc/allocating-gdi-resources.md).  
   
- ![打印循环过程](../Image/vc37C71.gif "vc37C71")  
-打印循环  
+ ![Printing loop process](../mfc/media/vc37c71.gif "vc37c71")  
+The Printing Loop  
   
-##  <a name="_core_pagination"></a> 分页  
- 框架存储许多位于 [CPrintInfo](../mfc/reference/cprintinfo-structure.md) 结构中的有关打印作业的信息。  `CPrintInfo` 中的值与分页；这些值可以被访问，如下表所示。  
+##  <a name="_core_pagination"></a> Pagination  
+ The framework stores much of the information about a print job in a [CPrintInfo](../mfc/reference/cprintinfo-structure.md) structure. Several of the values in `CPrintInfo` pertain to pagination; these values are accessible as shown in the following table.  
   
-### 在 CPrintInfo 存储的页数信息  
+### <a name="page-number-information-stored-in-cprintinfo"></a>Page Number Information Stored in CPrintInfo  
   
-|成员变量或。<br /><br /> 函数名|引用的页面|  
-|--------------------|-----------|  
-|`GetMinPage`\/`SetMinPage`|文档第一页|  
-|`GetMaxPage`\/`SetMaxPage`|文档之前页|  
-|`GetFromPage`|要打印的第一页|  
-|`GetToPage`|要打印的最后一页|  
-|`m_nCurPage`|当前打印的页|  
+|Member variable or<br /><br /> function name(s)|Page number referenced|  
+|-----------------------------------------------|----------------------------|  
+|`GetMinPage`/`SetMinPage`|First page of document|  
+|`GetMaxPage`/`SetMaxPage`|Last page of document|  
+|`GetFromPage`|First page to be printed|  
+|`GetToPage`|Last page to be printed|  
+|`m_nCurPage`|Page currently being printed|  
   
- 页码开始显示 1，即，第一页的第 1，而不是 0。  有关这些和 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)的其他成员的更多信息，请参见 *MFC 参考*。  
+ Page numbers start at 1, that is, the first page is numbered 1, not 0. For more information about these and other members of [CPrintInfo](../mfc/reference/cprintinfo-structure.md), see the *MFC Reference*.  
   
- 在晒印方法开头，则框架调用视图的 [OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) 成员函数传递，指向 `CPrintInfo` 结构。  应用程序向导提供调用 [DoPreparePrinting](../Topic/CView::DoPreparePrinting.md)`OnPreparePrinting` 的实现，`CView`的其他成员函数。  `DoPreparePrinting` 是显示打印对话框并且创建打印机设备上下文的函数。  
+ At the beginning of the printing process, the framework calls the view's [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) member function, passing a pointer to a `CPrintInfo` structure. The Application Wizard provides an implementation of `OnPreparePrinting` that calls [DoPreparePrinting](../mfc/reference/cview-class.md#doprepareprinting), another member function of `CView`. `DoPreparePrinting` is the function that displays the Print dialog box and creates a printer device context.  
   
- 此时应用程序无法知道文档中有多少页。  为文档的第一个和最后一个页使用文档的默认值 1 和 0xFFFF。  如果您知道页面文档具有多少，在将其发送给 `DoPreparePrinting`之前，请重写 `OnPreparePrinting` 并调用 [SetMaxPage](../Topic/CPrintInfo::SetMaxPage.md) `CPrintInfo` 结构。  这可以指定文档的长度。  
+ At this point the application doesn't know how many pages are in the document. It uses the default values 1 and 0xFFFF for the numbers of the first and last page of the document. If you know how many pages your document has, override `OnPreparePrinting` and call [SetMaxPage]--brokenlink--(reference/cprintinfo-class.md#setmaxpage) for the `CPrintInfo` structure before you send it to `DoPreparePrinting`. This lets you specify the length of your document.  
   
- `DoPreparePrinting`然后显示打印的对话框。  当返回时，`CPrintInfo` 结构包含用户指定的值。  如果仅打印选定范围的用户希望页，即或她在打印对话框可以指定开始日期和数字。端页  使用 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)的 `GetFromPage` 和 `GetToPage` 函数检索框架，这些值。  如果用户未指定页范围，框架调用 `GetMinPage` 和 `GetMaxPage` 并使用返回的值打印整个文档。  
+ `DoPreparePrinting` then displays the Print dialog box. When it returns, the `CPrintInfo` structure contains the values specified by the user. If the user wishes to print only a selected range of pages, he or she can specify the starting and ending page numbers in the Print dialog box. The framework retrieves these values using the `GetFromPage` and `GetToPage` functions of [CPrintInfo](../mfc/reference/cprintinfo-structure.md). If the user doesn't specify a page range, the framework calls `GetMinPage` and `GetMaxPage` and uses the values returned to print the entire document.  
   
- 对于要打印文档的每页，框架调用在类视图和[OnPrepareDC](../Topic/CView::OnPrepareDC.md) [OnPrint](../Topic/CView::OnPrint.md)的两个成员函数，并将函数每两个参数：到 [CDC](../mfc/reference/cdc-class.md) 对象的指针以及指向 `CPrintInfo` 结构。  每次框架调用 `OnPrepareDC` 和 `OnPrint`，它将 `CPrintInfo` 结构的 `m_nCurPage` 成员的值不同。  此框架调用应打印的页的视图。  
+ For each page of a document to be printed, the framework calls two member functions in your view class, [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) and [OnPrint](../mfc/reference/cview-class.md#onprint), and passes each function two parameters: a pointer to a [CDC](../mfc/reference/cdc-class.md) object and a pointer to a `CPrintInfo` structure. Each time the framework calls `OnPrepareDC` and `OnPrint`, it passes a different value in the `m_nCurPage` member of the `CPrintInfo` structure. In this way the framework tells the view which page should be printed.  
   
- [OnPrepareDC](../Topic/CView::OnPrepareDC.md) 成员函数用于屏幕显示。  在绘制前，它所做调整到设备上下文。  `OnPrepareDC` 在打印中充当类似的效果，但两个差异：首先，`CDC` 对象表示一台打印机设备上下文 \(而不是屏幕设备上下文，并且，接下来，`CPrintInfo` 对象将作为第二个参数。\(此参数是 **NULL**，当 `OnPrepareDC` 为屏幕显示调用时。\)重写 `OnPrepareDC` 将调整到根据哪些设备上下文要打印的页。  例如，您可以移动视区原点和剪辑区域确保文档的相应部分印出。  
+ The [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) member function is also used for screen display. It makes adjustments to the device context before drawing takes place. `OnPrepareDC` serves a similar role in printing, but there are a couple of differences: first, the `CDC` object represents a printer device context instead of a screen device context, and second, a `CPrintInfo` object is passed as a second parameter. (This parameter is **NULL** when `OnPrepareDC` is called for screen display.) Override `OnPrepareDC` to make adjustments to the device context based on which page is being printed. For example, you can move the viewport origin and the clipping region to ensure that the appropriate portion of the document gets printed.  
   
- [OnPrint](../Topic/CView::OnPrint.md) 成员函数执行页的实际打印。  文章 [默认打印如何完成](../mfc/how-default-printing-is-done.md) 演示框架如何用打印机打印设备上下文调用 [OnDraw](../Topic/CView::OnDraw.md) 来执行打印。  更确切地说，`CPrintInfo` 结构和设备上下文的框架调用 `OnPrint` 和 `OnPrint` 传递 `OnDraw`的设备上下文。  重写 `OnPrint` 实现应只完成在打印期间和不为屏幕显示的所有呈现。  例如，打印页眉或页脚 \(文章 [页眉和页脚](../mfc/headers-and-footers.md)。更多信息。\)  然后从要执行呈现的 `OnPrint` 重写中调用 `OnDraw` 共有屏幕显示和打印。  
+ The [OnPrint](../mfc/reference/cview-class.md#onprint) member function performs the actual printing of the page. The article [How Default Printing Is Done](../mfc/how-default-printing-is-done.md) shows how the framework calls [OnDraw](../mfc/reference/cview-class.md#ondraw) with a printer device context to perform printing. More precisely, the framework calls `OnPrint` with a `CPrintInfo` structure and a device context, and `OnPrint` passes the device context to `OnDraw`. Override `OnPrint` to perform any rendering that should be done only during printing and not for screen display. For example, to print headers or footers (see the article [Headers and Footers](../mfc/headers-and-footers.md) for more information). Then call `OnDraw` from the override of `OnPrint` to do the rendering common to both screen display and printing.  
   
- 事实，`OnDraw` 执行屏幕显示和打印的呈现表示应用程序 WYSIWYG:“所见即所获取”。但是，假设不编写 WYSIWYG 应用程序。  例如，假设使用用粗体供打印，但显示控制代码可以将屏幕上的粗体文本的文本编辑器。  在这种情况下，可为屏幕显示强使用 `OnDraw`。  当重写 `OnPrint`时，请重写调用与调用 `OnDraw` 对绘制单独函数。  函数文档绘制方式显示它在纸张，使用屏幕上不显示的特性。  
+ The fact that `OnDraw` does the rendering for both screen display and printing means that your application is WYSIWYG: "What you see is what you get." However, suppose you aren't writing a WYSIWYG application. For example, consider a text editor that uses a bold font for printing but displays control codes to indicate bold text on the screen. In such a situation, you use `OnDraw` strictly for screen display. When you override `OnPrint`, substitute the call to `OnDraw` with a call to a separate drawing function. That function draws the document the way it appears on paper, using the attributes that you don't display on the screen.  
   
-##  <a name="_core_printer_pages_vs.._document_pages"></a> 打印机页与文档页  
- 当引用页面时，页面区分打印机的概念和页之间建立文档的概念有时是必需的。  从打印机的角度，页是一幅的。  但是，一张纸文档的页不一定相同。  例如，在中，如果要打印新闻稿，将折叠一张表，进行可能包含两种文档的第一个和最后一个页，并行。  同样，如果打印电子表格，文档根本不包含页。  不过，一张在其上可能包含 1 至第 20 行，6 至 10 列。  
+##  <a name="_core_printer_pages_vs.._document_pages"></a> Printer Pages vs. Document Pages  
+ When you refer to page numbers, it's sometimes necessary to distinguish between the printer's concept of a page and a document's concept of a page. From the point of view of the printer, a page is one sheet of paper. However, one sheet of paper doesn't necessarily equal one page of the document. For example, if you're printing a newsletter, where the sheets are to be folded, one sheet of paper might contain both the first and last pages of the document, side by side. Similarly, if you're printing a spreadsheet, the document doesn't consist of pages at all. Instead, one sheet of paper might contain rows 1 through 20, columns 6 through 10.  
   
- 在 [CPrintInfo](../mfc/reference/cprintinfo-structure.md) 结构的所有页面引用打印机页。  框架调用一次 `OnPrepareDC` 和 `OnPrint` 将通过打印机的每张进行的。  当您重写函数 [OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) 指定文档的长度时，必须使用打印机页。  如果存在一个一对一的通信 \(即一台打印机页等于一文档页\)，则这非常容易。  如果，另一方面，文档页和打印机页不直接对应，您必须强制转换它们之间。  例如，考虑打印电子表格。  当重写 `OnPreparePrinting`时，必须计算需要多少个进行打印整个电子表格然后使用该值，当调用 `CPrintInfo`的 `SetMaxPage` 成员函数。  相似，当重写 `OnPrepareDC`时，必须将 `m_nCurPage` 变为显示在该特定表然后相应地对表进行调整视区的源范围的行和列。  
+ All the page numbers in the [CPrintInfo](../mfc/reference/cprintinfo-structure.md) structure refer to printer pages. The framework calls `OnPrepareDC` and `OnPrint` once for each sheet of paper that will pass through the printer. When you override the [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) function to specify the length of the document, you must use printer pages. If there is a one-to-one correspondence (that is, one printer page equals one document page), then this is easy. If, on the other hand, document pages and printer pages do not directly correspond, you must translate between them. For example, consider printing a spreadsheet. When overriding `OnPreparePrinting`, you must calculate how many sheets of paper will be required to print the entire spreadsheet and then use that value when calling the `SetMaxPage` member function of `CPrintInfo`. Similarly, when overriding `OnPrepareDC`, you must translate `m_nCurPage` into the range of rows and columns that will appear on that particular sheet and then adjust the viewport origin accordingly.  
   
-##  <a name="_core_print.2d.time_pagination"></a> 打印时分页  
- 在某些情况下，类视图不能预先知道文档多长时间直到实际打印。  例如，假定应用程序不是WYSIWYG，这样，在屏幕的文档的长度不对应在打印时其长度。  
+##  <a name="_core_print.2d.time_pagination"></a> Print-Time Pagination  
+ In some situations, your view class may not know in advance how long the document is until it has actually been printed. For example, suppose your application isn't WYSIWYG, so a document's length on the screen doesn't correspond to its length when printed.  
   
- 在重写视图类时，[OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) 这导致问题：，因为您不知道文档的长度，可以不传递值。[CPrintInfo](../mfc/reference/cprintinfo-structure.md) 结构中的 `SetMaxPage` 函数。  如果用户未指定页码在停止使用打印对话框，框架时不知道停止打印循环。  在结束时，唯一方式决定打印时将停止循环输出文档和发现。  视图类必须检查文档末尾，并在打印时，然后通知框架，在结束时到达。  
+ This causes a problem when you override [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) for your view class: you can't pass a value to the `SetMaxPage` function of the [CPrintInfo](../mfc/reference/cprintinfo-structure.md) structure, because you don't know the length of a document. If the user doesn't specify a page number to stop at using the Print dialog box, the framework doesn't know when to stop the print loop. The only way to determine when to stop the print loop is to print out the document and see when it ends. Your view class must check for the end of the document while it is being printed, and then inform the framework when the end is reached.  
   
- 框架时依赖视图类的函数 [OnPrepareDC](../Topic/CView::OnPrepareDC.md) 调用就会停止。  在对 `OnPrepareDC`的每次调用，则框架检查调用 `m_bContinuePrinting`后的 `CPrintInfo` 结构的成员。  默认值为**TRUE.**。只要保持，因此延续框架打印循环。  如果设置为 **FALSE**，框架已停止。  执行打印时分页、重写 `OnPrepareDC` 检查文档末尾是否已到达和 `m_bContinuePrinting` 设置为 **FALSE**，则具有。  
+ The framework relies on your view class's [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) function to tell it when to stop. After each call to `OnPrepareDC`, the framework checks a member of the `CPrintInfo` structure called `m_bContinuePrinting`. Its default value is **TRUE.** As long as it remains so, the framework continues the print loop. If it is set to **FALSE**, the framework stops. To perform print-time pagination, override `OnPrepareDC` to check whether the end of the document has been reached, and set `m_bContinuePrinting` to **FALSE** when it has.  
   
- 如果当前页比 1.，大于 `OnPrepareDC` 的默认实现将 `m_bContinuePrinting` 设置为 **FALSE**。  这意味着，如果文档的长度不指定，则假定文档框架中早已一页。  这样的一个后果是必须注意，如果调用 `OnPrepareDC`的基类版本。  不要假设，`m_bContinuePrinting` 将为 **TRUE** 之后调用基类版本。  
+ The default implementation of `OnPrepareDC` sets `m_bContinuePrinting` to **FALSE** if the current page is greater than 1. This means that if the length of the document wasn't specified, the framework assumes the document is one page long. One consequence of this is that you must be careful if you call the base class version of `OnPrepareDC`. Do not assume that `m_bContinuePrinting` will be **TRUE** after calling the base class version.  
   
-### 您想进一步了解什么？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [页眉和页脚](../mfc/headers-and-footers.md)  
+-   [Headers and footers](../mfc/headers-and-footers.md)  
   
--   [分配 GDI 资源](../mfc/allocating-gdi-resources.md)  
+-   [Allocating GDI resources](../mfc/allocating-gdi-resources.md)  
   
-## 请参阅  
- [打印](../mfc/printing.md)   
+## <a name="see-also"></a>See Also  
+ [Printing](../mfc/printing.md)   
  [CView Class](../mfc/reference/cview-class.md)   
- [CDC 类](../mfc/reference/cdc-class.md)
+ [CDC Class](../mfc/reference/cdc-class.md)

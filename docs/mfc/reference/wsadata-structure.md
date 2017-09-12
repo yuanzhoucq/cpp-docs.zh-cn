@@ -1,74 +1,92 @@
 ---
-title: "WSADATA 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WSADATA"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WSADATA 结构"
+title: WSADATA Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WSADATA
+dev_langs:
+- C++
+helpviewer_keywords:
+- WSADATA structure [MFC]
 ms.assetid: 80cc60e5-f9ae-4290-8ed5-07003136627d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# WSADATA 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d640639aaf048173547cbeaf4f40d2041c026768
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-`WSADATA` 结构存储 Windows 套接字调用返回的初始化信息对 `AfxSocketInit` 全局函数。  
+---
+# <a name="wsadata-structure"></a>WSADATA Structure
+The `WSADATA` structure is used to store Windows Sockets initialization information returned by a call to the `AfxSocketInit` global function.  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      struct WSAData {  
-   WORD wVersion;  
-   WORD wHighVersion;  
-   char szDescription[WSADESCRIPTION_LEN+1];  
-   char szSystemStatus[WSASYSSTATUS_LEN+1];  
-   unsigned short iMaxSockets;  
-   unsigned short iMaxUdpDg;  
-   char FAR * lpVendorInfo;  
+struct WSAData {  
+    WORD wVersion;  
+    WORD wHighVersion;  
+    char szDescription[WSADESCRIPTION_LEN+1];  
+    char szSystemStatus[WSASYSSTATUS_LEN+1];  
+    unsigned short iMaxSockets;  
+    unsigned short iMaxUdpDg;  
+    char FAR* lpVendorInfo;  
 };  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>Parameters  
  *wVersion*  
- Windows 套接规范的 Word 版本 Windows 套接字 DLL 希望调用方使用。  
+ The version of the Windows Sockets specification that the Windows Sockets DLL expects the caller to use.  
   
  *wHighVersion*  
- 此 DLL。支持 Windows 套接字规范的最高版本 \(也编码如上所述\)。  通常，这与 **wVersion**。  
+ The highest version of the Windows Sockets specification that this DLL can support (also encoded as above). Normally, this is the same as **wVersion**.  
   
- *szDescription*。  
- Windows 套接字 DLL 复制 Windows 套接字实现的 null 终止的 ASCII 字符串，包括提供商标识。  文本 \(长度为 256 个字符\) 可包含任何字符，但提供商警告控件包括控件和格式设置字符：最可能使用此应用程序将为显示它 \(可能会被截断\) 在状态消息。  
+ *szDescription*  
+ A null-terminated ASCII string into which the Windows Sockets DLL copies a description of the Windows Sockets implementation, including vendor identification. The text (up to 256 characters in length) can contain any characters, but vendors are cautioned against including control and formatting characters: the most likely use that an application will put this to is to display it (possibly truncated) in a status message.  
   
  *szSystemStatus*  
- Windows 套接字 DLL 复制相关状态或配置信息的 null 终止的 ASCII 字符串。  当信息可能是有用或对用户支撑杆，Windows 套接字 DLL 应使用该字段；不应视为 **szDescription** 字段用于的扩展。  
+ A null-terminated ASCII string into which the Windows Sockets DLL copies relevant status or configuration information. The Windows Sockets DLL should use this field only if the information might be useful to the user or support staff; it should not be considered as an extension of the **szDescription** field.  
   
  *iMaxSockets*  
- 一个过程可能打开套接字的最大数目。  Windows 套接字实现可以对所有进程的套接字提供分配一种全局池；或者，它会分配套接字的每个处理资源。  数字可以很好地反映 Windows 套接字 DLL 或网络软件配置的方式。  应用程序编写器可以使用此值作为一个粗暴表示 Windows 套接字实现是由应用程序可用。  例如，服务器可能检查 X Windows **iMaxSockets**，在首次启动：如果小于 8，应用程序将显示一条提示用户的错误消息重新配置网络软件。\(这是 **szSystemStatus** 文本可能使用的情况\)。显然不能保证某特定应用程序中实际 **iMaxSockets** 分配套接字，因为可以有正在使用其他 Windows 套接 Word 的应用程序。  
+ The maximum number of sockets that a single process can potentially open. A Windows Sockets implementation can provide a global pool of sockets for allocation to any process; alternately, it can allocate per-process resources for sockets. The number can well reflect the way in which the Windows Sockets DLL or the networking software was configured. Application writers can use this number as a crude indication of whether the Windows Sockets implementation is usable by the application. For example, an X Windows server might check **iMaxSockets** when first started: if it is less than 8, the application would display an error message instructing the user to reconfigure the networking software. (This is a situation in which the **szSystemStatus** text might be used.) Obviously there is no guarantee that a particular application can actually allocate **iMaxSockets** sockets, since there can be other Windows Sockets applications in use.  
   
  *iMaxUdpDg*  
- 大小在可由 Windows 套接字应用程序发送或接收的最大用户数据报协议 \(UDP\) \(UDP\) 数据报的字节。  如果实现不实现的限制，**iMaxUdpDg** 为零。  在 Berkeley 套接字实现的许多，有 8192 字节一个隐式限制。的如有必要，将的数据报 UDP \(\)  Windows 套接字实现可以实现根据片段组装重新分配缓冲区的限制的，例如。  **iMaxUdpDg** 由符合 CLS 的最小值，匹配的，适合的 Windows 套接字实现的是 512。  请注意，无论值 **iMaxUdpDg**，它是不妥当尝试发送大于最大网络上传输单元 \(MTU\) 的一广播数据报。\(Windows 套接字 API 未提供一种机制，MTU 查看，但不必须小于 512 字节。\)  
+ The size in bytes of the largest User Datagram Protocol (UDP) datagram that can be sent or received by a Windows Sockets application. If the implementation imposes no limit, **iMaxUdpDg** is zero. In many implementations of Berkeley sockets, there is an implicit limit of 8192 bytes on UDP datagrams (which are fragmented if necessary). A Windows Sockets implementation can impose a limit based, for instance, on the allocation of fragment reassembly buffers. The minimum value of **iMaxUdpDg** for a compliant Windows Sockets implementation is 512. Note that regardless of the value of **iMaxUdpDg**, it is inadvisable to attempt to send a broadcast datagram that is larger than the Maximum Transmission Unit (MTU) for the network. (The Windows Sockets API does not provide a mechanism to discover the MTU, but it must be no less than 512 bytes.)  
   
  *lpVendorInfo*  
- 对卖方细节数据结构中较指针。  此结构的定义 \(如果提供\) 超出 Windows 套接字规范的范围。  
+ A far pointer to a vendor-specific data structure. The definition of this structure (if supplied) is beyond the scope of the Windows Sockets specification.  
   
 > [!NOTE]
->  在 MFC 中，`WSADATA` 结构由 `AfxSocketInit` 函数返回，在 `InitInstance` 函数调用。  如果您之后，需要使用其中的信息可以检索和存储结构以程序。  
+>  In MFC, the `WSADATA` structure is returned by the `AfxSocketInit` function, which you call in your `InitInstance` function. You can retrieve the structure and store it in your program if you need to use information from it later.  
   
-## 要求  
- **标头：**winsock2.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winsock2.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [AfxSocketInit](../Topic/AfxSocketInit.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CBaseTabbedPane 类 |Microsoft 文档"
+title: CBaseTabbedPane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,7 +42,34 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBaseTabbedPane class
+- CBaseTabbedPane [MFC], AddTab
+- CBaseTabbedPane [MFC], AllowDestroyEmptyTabbedPane
+- CBaseTabbedPane [MFC], ApplyRestoredTabInfo
+- CBaseTabbedPane [MFC], CanFloat
+- CBaseTabbedPane [MFC], CanSetCaptionTextToTabName
+- CBaseTabbedPane [MFC], ConvertToTabbedDocument
+- CBaseTabbedPane [MFC], DetachPane
+- CBaseTabbedPane [MFC], EnableSetCaptionTextToTabName
+- CBaseTabbedPane [MFC], FillDefaultTabsOrderArray
+- CBaseTabbedPane [MFC], FindBarByTabNumber
+- CBaseTabbedPane [MFC], FindPaneByID
+- CBaseTabbedPane [MFC], FloatTab
+- CBaseTabbedPane [MFC], GetDefaultTabsOrder
+- CBaseTabbedPane [MFC], GetFirstVisibleTab
+- CBaseTabbedPane [MFC], GetMinSize
+- CBaseTabbedPane [MFC], GetPaneIcon
+- CBaseTabbedPane [MFC], GetPaneList
+- CBaseTabbedPane [MFC], GetTabArea
+- CBaseTabbedPane [MFC], GetTabsNum
+- CBaseTabbedPane [MFC], GetUnderlyingWindow
+- CBaseTabbedPane [MFC], GetVisibleTabsNum
+- CBaseTabbedPane [MFC], HasAutoHideMode
+- CBaseTabbedPane [MFC], IsHideSingleTab
+- CBaseTabbedPane [MFC], RecalcLayout
+- CBaseTabbedPane [MFC], RemovePane
+- CBaseTabbedPane [MFC], SetAutoDestroy
+- CBaseTabbedPane [MFC], SetAutoHideMode
+- CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 caps.latest.revision: 26
 author: mikeblome
@@ -63,78 +90,78 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b72804dd8b2ca2253caff4cebf5b0631ae6040c6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 675d504f3c27c8ef681d42b1569b0b1127f0ad07
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 类
-扩展功能的[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)以支持创建选项卡式窗口。  
+# <a name="cbasetabbedpane-class"></a>CBaseTabbedPane Class
+Extends the functionality of the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) to support the creation of tabbed windows.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBaseTabbedPane : public CDockablePane  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`CBaseTabbedPane::CBaseTabbedPane`|默认构造函数。|  
+|`CBaseTabbedPane::CBaseTabbedPane`|Default constructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseTabbedPane::AddTab](#addtab)|选项卡式窗格中添加一个新选项卡。|  
-|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|指定是否可销毁一个空的选项卡式的窗格。|  
-|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|将从注册表中，加载到选项卡式窗格中的选项卡上设置应用。|  
-|[CBaseTabbedPane::CanFloat](#canfloat)|确定是否可以浮动窗格。 (重写[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)。)|  
-|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|确定选项卡式窗格的标题是否应为活动选项卡显示相同的文本。|  
-|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(重写[CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument)。)|  
-|[CBaseTabbedPane::DetachPane](#detachpane)|将一个或多个可停靠窗格转换为 MDI 选项卡式文档。|  
-|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|启用或禁用选项卡式窗格中的活动选项卡上的标签文本同步标题文本的能力。|  
-|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|将内部的 tab 键顺序还原到默认状态。|  
-|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|返回所在的选项卡中，当按从零开始的 tab 键索引标识选项卡的窗格。|  
+|[CBaseTabbedPane::AddTab](#addtab)|Adds a new tab to a tabbed pane.|  
+|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Specifies whether an empty tabbed pane can be destroyed.|  
+|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Applies tab settings, which are loaded from the registry, to a tabbed pane.|  
+|[CBaseTabbedPane::CanFloat](#canfloat)|Determines whether the pane can float. (Overrides [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
+|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determines whether the caption for the tabbed pane should display the same text as the active tab.|  
+|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Overrides [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|  
+|[CBaseTabbedPane::DetachPane](#detachpane)|Converts one or more dockable panes to MDI tabbed documents.|  
+|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Enables or disables the ability of the tabbed pane to synchronize caption text with the label text on the active tab.|  
+|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Restores the internal tab order to a default state.|  
+|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Returns a pane that resides in a tab when the tab is identified by a zero-based tab index.|  
 |||  
-|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|返回由窗格 ID 标识的窗格|  
-|[CBaseTabbedPane::FloatTab](#floattab)|仅当窗格中当前驻留在拆离的选项卡中时浮动窗格。|  
-|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|在窗格中返回选项卡的默认顺序。|  
-|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|检索指向第一个显示的选项卡。|  
-|[CBaseTabbedPane::GetMinSize](#getminsize)|检索允许大小为窗格中的最小。 (重写[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。)|  
-|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|返回窗格中图标的句柄。 (重写[CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon)。)|  
-|[CBaseTabbedPane::GetPaneList](#getpanelist)|在选项卡式窗格中返回所包含的窗格的列表。|  
-|[CBaseTabbedPane::GetTabArea](#gettabarea)|返回的顶部和底部的选项卡区域的边界矩形。|  
-|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|在选项卡上的窗口中返回的选项卡的计数。|  
-|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|获取基础 （包装） 选项卡窗口。|  
-|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|返回显示的标签的计数。|  
-|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|确定是否可以为自动隐藏模式切换选项卡式窗格。|  
-|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|确定是否选项卡式窗格中处于隐藏状态，如果只显示一个选项卡。|  
-|`CBaseTabbedPane::LoadSiblingPaneIDs`|在序列化期间在内部使用。|  
-|[CBaseTabbedPane::RecalcLayout](#recalclayout)|重新计算窗格中的布局信息。 (重写[CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout)。)|  
-|[CBaseTabbedPane::RemovePane](#removepane)|从选项卡式窗格中删除一个窗格。|  
-|`CBaseTabbedPane::SaveSiblingBarIDs`|在序列化期间在内部使用。|  
-|`CBaseTabbedPane::Serialize`|(重写[CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6)。)|  
-|`CBaseTabbedPane::SerializeTabWindow`|在序列化期间在内部使用。|  
-|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|确定是否将自动销毁选项卡式的控件条。|  
-|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|切换停靠窗格之间显示和自动隐藏模式。 (重写[CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode)。)|  
-|[CBaseTabbedPane::ShowTab](#showtab)|显示或隐藏选项卡。|  
+|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Returns a pane that is identified by the pane ID.|  
+|[CBaseTabbedPane::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab.|  
+|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Returns the default order of tabs in the pane.|  
+|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Retrieves a pointer to the first displayed tab.|  
+|[CBaseTabbedPane::GetMinSize](#getminsize)|Retrieves the minimum allowed size for the pane. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|Returns a handle to the pane icon. (Overrides [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|  
+|[CBaseTabbedPane::GetPaneList](#getpanelist)|Returns a list of panes that are contained in the tabbed pane.|  
+|[CBaseTabbedPane::GetTabArea](#gettabarea)|Returns the bounding rectangles for the top and bottom tab areas.|  
+|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Returns the count of tabs in a tab window.|  
+|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Gets the underlying (wrapped) tab window.|  
+|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Returns the count of displayed tabs.|  
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Determines whether the tabbed pane can be switched to auto-hide mode.|  
+|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Determines whether the tabbed pane is hidden if only one tab is displayed.|  
+|`CBaseTabbedPane::LoadSiblingPaneIDs`|Used internally during serialization.|  
+|[CBaseTabbedPane::RecalcLayout](#recalclayout)|Recalculates layout information for the pane. (Overrides [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
+|[CBaseTabbedPane::RemovePane](#removepane)|Removes a pane from the tabbed pane.|  
+|`CBaseTabbedPane::SaveSiblingBarIDs`|Used internally during serialization.|  
+|`CBaseTabbedPane::Serialize`|(Overrides [CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::SerializeTabWindow`|Used internally during serialization.|  
+|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Determines whether the tabbed control bar will be destroyed automatically.|  
+|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Toggles the docking pane between displayed and auto-hide mode. (Overrides [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  
+|[CBaseTabbedPane::ShowTab](#showtab)|Shows or hides a tab.|  
   
-## <a name="remarks"></a>备注  
- 此类是一个抽象类，不能实例化。 它实现的服务所共有的所有类型的选项卡式窗格。  
+## <a name="remarks"></a>Remarks  
+ This class is an abstract class and cannot be instantiated. It implements the services that are common to all kinds of tabbed panes.  
   
- 目前，该库中包括两个选项卡式的窗格派生的类︰ [CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)和[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。  
+ Currently, the library includes two derived tabbed pane classes: [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md) and [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
- 一个`CBaseTabbedPane`对象包装到指针[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)对象。 [CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)随后将成为选项卡式窗格中的子窗口。  
+ A `CBaseTabbedPane` object wraps a pointer to a [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) object. [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) then becomes a child window of the tabbed pane.  
   
- 有关如何创建选项卡式的窗格的详细信息，请参阅[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)， [CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)，和[CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)。  
+ For more information about how to create tabbed panes, see [CDockablePane Class](../../mfc/reference/cdockablepane-class.md), [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md), and [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -149,11 +176,11 @@ class CBaseTabbedPane : public CDockablePane
   
  `CBaseTabbedPane`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxBaseTabbedPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxBaseTabbedPane.h  
   
-##  <a name="addtab"></a>CBaseTabbedPane::AddTab  
- 选项卡式窗格中添加一个新选项卡。  
+##  <a name="addtab"></a>  CBaseTabbedPane::AddTab  
+ Adds a new tab to a tabbed pane.  
   
 ```  
 virtual BOOL AddTab(
@@ -163,88 +190,88 @@ virtual BOOL AddTab(
     BOOL bDetachable = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
- [in][out]`pNewBar`  
- 指向添加窗格中的指针。 在调用此方法后，该指针可能会失效。 有关详细信息，请参阅“备注”部分。  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pNewBar`  
+ A pointer to the pane to add. This pointer may become invalid after you call this method. For more information, see the Remarks section.  
   
  [in] `bVisible`  
- `TRUE`若要使选项卡可见;否则为`FALSE`。  
+ `TRUE` to make the tab visible; otherwise, `FALSE`.  
   
  [in] `bSetActive`  
- `TRUE`若要使活动选项卡; 选项卡否则为`FALSE`。  
+ `TRUE` to make the tab the active tab; otherwise, `FALSE`.  
   
  [in] `bDetachable`  
- `TRUE`若要使选项卡可插拔;否则为`FALSE`。  
+ `TRUE` to make the tab detachable; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果窗格中已成功添加为一个选项卡，并不被销毁过程中。 `FALSE`如果添加窗格中是一个对象类型的`CBaseTabbedPane`。 有关详细信息，请参阅“备注”部分。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was successfully added as a tab and was not destroyed in the process. `FALSE` if the pane being added is an object of type `CBaseTabbedPane`. For more information, see the Remarks section.  
   
-### <a name="remarks"></a>备注  
- 调用此方法可作为新的选项卡上选项卡式窗格中添加一个窗格。 如果`pNewBar`指向类型的对象`CBaseTabbedPane`，所有选项卡都已复制到选项卡式窗格中，然后`pNewBar`被销毁。 因此，`pNewBar`变为无效指针，不应使用。  
+### <a name="remarks"></a>Remarks  
+ Call this method to add a pane as a new tab on a tabbed pane. If `pNewBar` points to an object of type `CBaseTabbedPane`, all its tabs are copied onto the tabbed pane and then `pNewBar` is destroyed. Thus, `pNewBar` becomes an invalid pointer and should not be used.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
- 指定是否可销毁一个空的选项卡式的窗格。  
+##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
+ Specifies whether an empty tabbed pane can be destroyed.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果可销毁一个空的选项卡式的窗格;否则为`FALSE`。 默认实现始终返回`TRUE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if an empty tabbed pane can be destroyed; otherwise, `FALSE`. The default implementation always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 如果不允许空的选项卡式窗格中，将其销毁，框架隐藏窗格。  
+### <a name="remarks"></a>Remarks  
+ If an empty tabbed pane is not allowed to be destroyed, the framework hides the pane instead.  
   
-##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
- 从注册表加载选项卡上的设置，并将其应用到选项卡式窗格。  
+##  <a name="applyrestoredtabinfo"></a>  CBaseTabbedPane::ApplyRestoredTabInfo  
+ Loads tab settings from the registry and applies them to a tabbed pane.  
   
 ```  
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bUseTabIndexes`  
- 框架在内部使用此参数。  
+ This parameter is used internally by the framework.  
   
-### <a name="remarks"></a>备注  
- 重新停靠状态信息从注册表加载时，将由框架调用此方法。 此方法获取有关 tab 键顺序和选项卡式窗格中的选项卡名称的信息。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when it reloads docking state information from the registry. The method obtains information about tab order and tab names for a tabbed pane.  
   
-##  <a name="canfloat"></a>CBaseTabbedPane::CanFloat  
- 指定是否可以浮动选项卡式的窗格。  
+##  <a name="canfloat"></a>  CBaseTabbedPane::CanFloat  
+ Specifies whether the tabbed pane can float.  
   
 ```  
 virtual BOOL CanFloat() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果窗格可以浮动;，否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can float; otherwise, `FALSE`.  
   
-##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
- 确定选项卡式窗格的标题是否应为活动选项卡显示相同的文本。  
+##  <a name="cansetcaptiontexttotabname"></a>  CBaseTabbedPane::CanSetCaptionTextToTabName  
+ Determines whether the caption for the tabbed pane should display the same text as the active tab.  
   
 ```  
 virtual BOOL CanSetCaptionTextToTabName() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果将选项卡式窗格中的标题文本设置为活动选项卡; 的文本否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the caption text of the tabbed pane is set to the text of the active tab; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 该方法用于确定是否显示的文本上的选项卡式的窗格标题重复项的标签的活动选项卡。 您可以启用或禁用此功能通过调用[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)。  
+### <a name="remarks"></a>Remarks  
+ The method is used to determine whether the text displayed on the tabbed pane caption duplicates the label of the active tab. You can enable or disable this functionality by calling [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).  
   
-##  <a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
- 将一个或多个可停靠窗格转换为 MDI 选项卡式文档。  
+##  <a name="converttotabbeddocument"></a>  CBaseTabbedPane::ConvertToTabbedDocument  
+ Converts one or more dockable panes to MDI tabbed documents.  
   
 ```  
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bActiveTabOnly`  
- 当转换选项卡式窗格中时，指定`TRUE`转换仅活动选项卡。 指定`FALSE`要转换的窗格中的所有选项卡。  
+ When you convert a tabbed pane, specify `TRUE` to convert only the active tab. Specify `FALSE` to convert all tabs in the pane.  
   
-##  <a name="detachpane"></a>CBaseTabbedPane::DetachPane  
- 分离一个窗格从选项卡式窗格。  
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
+ Detaches a pane from the tabbed pane.  
   
 ```  
 virtual BOOL DetachPane(
@@ -252,59 +279,59 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 指针，指向分离窗格中。  
+ Pointer to the pane to detach.  
   
  [in] `bHide`  
- 指定它分离之后，该框架是否隐藏窗格中的布尔型参数。  
+ Boolean parameter that specifies whether the framework hides the pane after it is detached.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果框架成功分离窗格中;`FALSE`如果`pBar`是`NULL`或引用了不在选项卡式窗格中的窗格。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the framework successfully detaches the pane; `FALSE` if `pBar` is `NULL` or refers to a pane that is not in the tabbed pane.  
   
-### <a name="remarks"></a>备注  
- 框架尽可能浮动分离窗格。 有关详细信息，请参阅[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)。  
+### <a name="remarks"></a>Remarks  
+ The framework floats the detached pane if possible. For more information, see [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
   
-##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
- 启用或禁用选项卡式窗格中的活动选项卡上的标签文本同步标题文本的能力。  
+##  <a name="enablesetcaptiontexttotabname"></a>  CBaseTabbedPane::EnableSetCaptionTextToTabName  
+ Enables or disables the ability of the tabbed pane to synchronize caption text with the label text on the active tab.  
   
 ```  
 virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要与活动选项卡标题; 同步的选项卡式的窗格标题否则为`FALSE`。  
+ `TRUE` to synchronize the tabbed pane caption with the active tab caption; otherwise, `FALSE`.  
   
-##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
- 将内部的 tab 键顺序还原到默认状态。  
+##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
+ Restores the internal tab order to a default state.  
   
 ```  
 void FillDefaultTabsOrderArray();
 ```  
   
-### <a name="remarks"></a>备注  
- 在该框架将 Outlook 栏还原到初始状态时，调用此方法。  
+### <a name="remarks"></a>Remarks  
+ This method is called when the framework restores an Outlook bar to an initial state.  
   
-##  <a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
- 返回由窗格 ID 标识的窗格  
+##  <a name="findpanebyid"></a>  CBaseTabbedPane::FindPaneByID  
+ Returns a pane identified by the pane ID.  
   
 ```  
 virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uBarID`  
- 指定要查找窗格中的 ID。  
+ Specifies the ID of the pane to find.  
   
-### <a name="return-value"></a>返回值  
- 指向如果它; 如果未找到窗格中的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the pane if it was found; otherwise, `NULL`.  
   
-### <a name="remarks"></a>备注  
- 此方法将在窗格中的所有选项卡，并返回具有指定 ID 的一个`uBarID`参数。  
+### <a name="remarks"></a>Remarks  
+ This method compares all tabs in the pane and returns the one with the ID specified by the `uBarID` parameter.  
   
-##  <a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
- 返回驻留在一个选项卡的窗格。  
+##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
+ Returns a pane that resides in a tab.  
   
 ```  
 virtual CWnd* FindBarByTabNumber(
@@ -312,21 +339,21 @@ virtual CWnd* FindBarByTabNumber(
     BOOL bGetWrappedBar = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nTabNum`  
- 指定要检索的选项卡的从零开始索引。  
+ Specifies the zero-based index of the tab to retrieve.  
   
  [in] `bGetWrappedBar`  
- `TRUE`若要返回而不是重试。 窗格中窗格中的基础 （包装） 窗口否则为`FALSE`。 这仅适用于派生自的窗格[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)。  
+ `TRUE` to return the underlying (wrapped) window of the pane instead of the pane itself; otherwise `FALSE`. This only applies to panes derived from [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
-### <a name="return-value"></a>返回值  
- 如果找到窗格中，则返回到要搜索窗格中的有效指针;否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ If the pane is found, then a valid pointer to the pane being searched for is returned; otherwise, `NULL`.  
   
-### <a name="remarks"></a>备注  
- 调用此方法以检索位于指定的选项卡的窗格`nTabNum`参数。  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the pane residing in the tab specified by the `nTabNum` parameter.  
   
-##  <a name="floattab"></a>CBaseTabbedPane::FloatTab  
- 仅当窗格中当前驻留在拆离的选项卡中时浮动窗格。  
+##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab  
+ Floats a pane, but only if the pane currently resides in a detachable tab.  
   
 ```  
 virtual BOOL FloatTab(
@@ -336,84 +363,84 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
- [in][out]`pBar`  
- 指向为浮点型窗格中的指针。  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pBar`  
+ A pointer to the pane to float.  
   
  [in] `nTabID`  
- 指定为 float 选项卡的从零开始索引。  
+ Specifies the zero-based index of the tab to float.  
   
  [in] `dockMethod`  
- 指定要用于使窗格浮动的方法。 有关详细信息，请参阅“备注”部分。  
+ Specifies the method to use to make the pane float. For more information, see the Remarks section.  
   
  [in] `bHide`  
- `TRUE`若要在浮动; 之前隐藏窗格否则为`FALSE`。  
+ `TRUE` to hide the pane before floating; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果窗格中浮动。否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane floated; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 调用此方法以浮动窗格当前所驻留的可拆分选项卡中。  
+### <a name="remarks"></a>Remarks  
+ Call this method to float a pane that currently resides in a detachable tab.  
   
- 如果您想要以编程方式分离窗格中，指定`DM_SHOW`为`dockMethod`参数。 如果您想要 float 以前浮动的同一位置中窗格中，指定`DM_DBL_CLICK`作为`dockMethod`参数。  
+ If you want to detach a pane programmatically, specify `DM_SHOW` for the `dockMethod` parameter. If you want to float the pane in the same position where it floated previously, specify `DM_DBL_CLICK` as the `dockMethod` parameter.  
   
-##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
- 在窗格中返回选项卡的默认顺序。  
+##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
+ Returns the default order of tabs in the pane.  
   
 ```  
 const CArray<int,int>& GetDefaultTabsOrder();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个`CArray`对象，它指定在窗格中的选项卡的默认顺序。  
+### <a name="return-value"></a>Return Value  
+ A `CArray` object that specifies the default order of tabs in the pane.  
   
-### <a name="remarks"></a>备注  
- Outlook 栏重置为初始状态时，框架将调用此方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when an Outlook bar is reset to an initial state.  
   
-##  <a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
- 检索指向第一个显示的选项卡。  
+##  <a name="getfirstvisibletab"></a>  CBaseTabbedPane::GetFirstVisibleTab  
+ Retrieves a pointer to the first displayed tab.  
   
 ```  
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTabNum`  
- 对整数的引用。 此方法将第一个显示的选项卡的从零开始索引写入此参数，则为-1 如果不需要显示选项卡上找到。  
+ A reference to an integer. This method writes the zero-based index of the first displayed tab to this parameter, or -1 if no displayed tab is found.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，指向第一个显示选项卡;否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the first displayed tab; otherwise, `NULL`.  
   
-##  <a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
- 检索允许大小为窗格中的最小。  
-  
-```  
-virtual void GetMinSize(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>参数  
- [out] `size`  
- 一个`CSize`用允许的大小的最小填充的对象。  
-  
-### <a name="remarks"></a>备注  
- 如果最小窗格大小的统一管理处于活动状态 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize))，`size`用允许的活动选项卡大小的最小填充。 否则为`size`的返回值填充[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。  
-  
-##  <a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
- 检索允许大小为窗格中的最小。  
+##  <a name="getminsize"></a>  CBaseTabbedPane::GetMinSize  
+ Retrieves the minimum allowed size for the pane.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `size`  
- 一个`CSize`用允许的大小的最小填充的对象。  
+ A `CSize` object that is filled with the minimum allowed size.  
   
-### <a name="remarks"></a>备注  
- 如果最小窗格大小的统一管理处于活动状态 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize))，`size`用允许的活动选项卡大小的最小填充。 否则为`size`的返回值填充[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。  
+### <a name="remarks"></a>Remarks  
+ If consistent handling of minimum pane sizes is active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` is filled with the minimum allowed size for the active tab. Otherwise, `size` is filled with the return value of [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
-##  <a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
- 在选项卡式窗格中返回所包含的窗格的列表。  
+##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
+ Retrieves the minimum allowed size for the pane.  
+  
+```  
+virtual void GetMinSize(CSize& size) const;  
+```  
+  
+### <a name="parameters"></a>Parameters  
+ [out] `size`  
+ A `CSize` object that is filled with the minimum allowed size.  
+  
+### <a name="remarks"></a>Remarks  
+ If consistent handling of minimum pane sizes is active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` is filled with the minimum allowed size for the active tab. Otherwise, `size` is filled with the return value of [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+  
+##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
+ Returns a list of panes that are contained in the tabbed pane.  
   
 ```  
 virtual void GetPaneList(
@@ -421,15 +448,15 @@ virtual void GetPaneList(
     CRuntimeClass* pRTCFilter = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `lst`  
- 一个`CObList`充满窗格，其中包含在选项卡式窗格中。  
+ A `CObList` that is filled with the panes that are contained in the tabbed pane.  
   
  [in] `pRTCFilter`  
- 如果不是`NULL`，返回的列表包含均属于指定的运行时类的窗格。  
+ If it is not `NULL`, the returned list contains only panes that are of the specified runtime class.  
   
-##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
- 返回的顶部和底部的选项卡区域的边界矩形。  
+##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
+ Returns the bounding rectangles for the top and bottom tab areas.  
   
 ```  
 virtual void GetTabArea(
@@ -437,108 +464,108 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- 接收的上部选项卡区域的屏幕坐标。  
+ Receives the screen coordinates of the upper tab area.  
   
  [out] `rectTabAreaBottom`  
- 接收较低的选项卡区域的屏幕坐标。  
+ Receives the screen coordinates of the lower tab area.  
   
-### <a name="remarks"></a>备注  
- 调用此方法来确定的上限和下限的选项卡区域的屏幕坐标中的边界矩形。  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine the bounding rectangles, in screen coordinates, for the upper and lower tab areas.  
   
-##  <a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
- 在选项卡上的窗口中返回的选项卡的计数。  
+##  <a name="gettabsnum"></a>  CBaseTabbedPane::GetTabsNum  
+ Returns the count of tabs in a tab window.  
   
 ```  
 virtual int GetTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 在选项卡式窗格中的选项卡的数目。  
+### <a name="return-value"></a>Return Value  
+ The number of tabs in the tabbed pane.  
   
-##  <a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
- 获取基础 （包装） 选项卡窗口。  
+##  <a name="getunderlyingwindow"></a>  CBaseTabbedPane::GetUnderlyingWindow  
+ Gets the underlying (wrapped) tab window.  
   
 ```  
 virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向基础选项卡窗口的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the underlying tab window.  
   
-##  <a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
- 返回可见选项卡的计数。  
+##  <a name="getvisibletabsnum"></a>  CBaseTabbedPane::GetVisibleTabsNum  
+ Returns the count of visible tabs.  
   
 ```  
 virtual int GetVisibleTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 可见选项卡，将大于或等于零的数目。  
+### <a name="return-value"></a>Return Value  
+ The number of visible tabs, which will be greater than or equal to zero.  
   
-### <a name="remarks"></a>备注  
- 调用此方法以确定在选项卡式窗格中可见选项卡的数目。  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine the number of visible tabs in the tabbed pane.  
   
-##  <a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
- 确定选项卡式窗格是否可以切换为自动隐藏模式。  
+##  <a name="hasautohidemode"></a>  CBaseTabbedPane::HasAutoHideMode  
+ Determines whether the tabbed pane can be switched to autohide mode.  
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果窗格中可以切换到自动隐藏模式;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be switched to autohide mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 如果禁用了自动隐藏模式下，没有 pin 按钮将显示在选项卡式的窗格标题。  
+### <a name="remarks"></a>Remarks  
+ If autohide mode is disabled, no pin button is displayed on the tabbed pane caption.  
   
-##  <a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
- 确定是否选项卡式窗格中处于隐藏状态，如果只显示一个选项卡。  
+##  <a name="ishidesingletab"></a>  CBaseTabbedPane::IsHideSingleTab  
+ Determines whether the tabbed pane is hidden if only one tab is displayed.  
   
 ```  
 virtual BOOL IsHideSingleTab() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果只有一个可见选项卡; 时未显示选项卡窗口否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab window is not shown when there is only one visible tab; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 如果窗格中将不显示，因为只有一个选项卡处于打开状态，可以调用此方法以确定是否正常工作选项卡式窗格。  
+### <a name="remarks"></a>Remarks  
+ If the pane is not displayed because only one tab is open, you can call this method to determine whether the tabbed pane is working correctly.  
   
-##  <a name="removepane"></a>CBaseTabbedPane::RemovePane  
- 从选项卡式窗格中删除一个窗格。  
+##  <a name="removepane"></a>  CBaseTabbedPane::RemovePane  
+ Removes a pane from the tabbed pane.  
   
 ```  
 virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
-### <a name="parameters"></a>参数  
- [in][out]`pBar`  
- 指向删除选项卡式窗格中窗格中的指针。  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pBar`  
+ A pointer to the pane to remove from the tabbed pane.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果已成功从选项卡式窗格中删除窗格中，并且选项卡式窗格中是否仍然有效。 `FALSE`如果已从选项卡式窗格和选项卡式窗格中删除最后一个窗格，是即将销毁。 如果返回值是`FALSE`，不要再使用选项卡式窗格。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was successfully removed from the tabbed pane and if the tabbed pane is still valid. `FALSE` if the last pane has been removed from the tabbed pane and the tabbed pane is about to be destroyed. If the return value is `FALSE`, do not use the tabbed pane any more.  
   
-### <a name="remarks"></a>备注  
- 调用此方法以删除指定的窗格`pBar`从选项卡式窗格中的参数。  
+### <a name="remarks"></a>Remarks  
+ Call this method to remove the pane specified by the `pBar` parameter from the tabbed pane.  
   
-##  <a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
- 确定是否将自动销毁选项卡式的控件条。  
+##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
+ Determines whether the tabbed control bar will be destroyed automatically.  
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoDestroy`  
- `TRUE`如果动态创建的选项卡式窗格中，您不控制其生命周期。否则为`FALSE`。  
+ `TRUE` if the tabbed pane was created dynamically and you are not controlling its lifetime; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 设置自动销毁模式设置为`TRUE`如果动态创建选项卡式窗格中，并且您不控制其生存期。 如果自动销毁模式是`TRUE`，框架将自动销毁选项卡式的窗格。  
+### <a name="remarks"></a>Remarks  
+ Set the auto-destroy mode to `TRUE` if you create a tabbed pane dynamically and if you are not controlling its lifetime. If auto-destroy mode is `TRUE`, the tabbed pane will be destroyed automatically by the framework.  
   
-##  <a name="showtab"></a>CBaseTabbedPane::ShowTab  
- 显示或隐藏选项卡。  
+##  <a name="showtab"></a>  CBaseTabbedPane::ShowTab  
+ Shows or hides a tab.  
   
 ```  
 virtual BOOL ShowTab(
@@ -548,39 +575,39 @@ virtual BOOL ShowTab(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 指向以显示或隐藏窗格中的指针。  
+ A pointer to the pane to show or hide.  
   
  [in] `bShow`  
- `TRUE`若要显示窗格;`FALSE`要隐藏窗格。  
+ `TRUE` to show the pane; `FALSE` to hide the pane.  
   
  [in] `bDelay`  
- `TRUE`若要延迟的选项卡布局中; 调整否则为`FALSE`。  
+ `TRUE` to delay the adjustment of the tab layout; otherwise, `FALSE`.  
   
  [in] `bActivate`  
- `TRUE`若要使活动选项卡; 选项卡否则为`FALSE`。  
+ `TRUE` to make the tab the active tab; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果选项卡已显示或隐藏成功，则，否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab was either shown or hidden successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 当调用此方法时，一个窗格所示，或者隐藏的具体取决于值`bShow`参数。 如果隐藏选项卡，并且它是基本选项卡窗口中的最后一个可见选项卡，则隐藏选项卡式窗格。 如果没有以前没有的选项卡可见时显示一个选项卡，将显示选项卡式窗格。  
+### <a name="remarks"></a>Remarks  
+ When you call this method, a pane is either shown or hidden, depending on the value of the `bShow` parameter. If you hide a tab and it is the last visible tab in the underlying tab window, the tabbed pane is hidden. If you show a tab when there were previously no tabs visible, the tabbed pane is shown.  
   
-##  <a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
- 重新计算窗格中的布局信息。  
+##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
+ Recalculates layout information for the pane.  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果浮动的窗格中，此方法通知框架，以调整到最小化框架的当前大小窗格的大小。  
+### <a name="remarks"></a>Remarks  
+ If the pane is floating, this method notifies the framework to resize the pane to the current size of the mini-frame.  
   
- 如果停靠窗格中，此方法没有任何效果。  
+ If the pane is docked, this method does nothing.  
   
-##  <a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
- 在选项卡式窗格中的可插拔窗格的设置自动隐藏模式。  
+##  <a name="setautohidemode"></a>  CBaseTabbedPane::SetAutoHideMode  
+ Sets the auto-hide mode for detachable panes in the tabbed pane.  
   
 ```  
 virtual CMFCAutoHideToolBar* SetAutoHideMode(
@@ -590,31 +617,31 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
     BOOL bUseTimer = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bMode`  
- `TRUE`若要启用自动隐藏模式;`FALSE`若要启用正则停靠模式。  
+ `TRUE` to enable auto-hide mode; `FALSE` to enable regular docking mode.  
   
  [in] `dwAlignment`  
- 指定要创建自动隐藏窗格中的对齐方式。 有关可能的值的列表，请参阅[CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)。  
+ Specifies the alignment of the auto-hide pane that is to be created. For a list of possible values, see [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
- [in][out]`pCurrAutoHideBar`  
- 指向当前自动隐藏工具栏上的指针。 可以是`NULL`。  
+ [in] [out] `pCurrAutoHideBar`  
+ A pointer to the current auto-hide toolbar. Can be `NULL`.  
   
  [in] `bUseTimer`  
- 指定是否使用自动隐藏效果，当用户切换窗格中，为自动隐藏模式，或立即隐藏窗格。  
+ Specifies whether to use the auto-hide effect when the user switches the pane to auto-hide mode, or to hide the pane immediately.  
   
-### <a name="return-value"></a>返回值  
- 切换到自动隐藏模式时创建的自动隐藏工具栏的指针或`NULL`如果创建没有工具栏。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the auto-hide toolbar that is created when switching to auto-hide mode, or `NULL` if no toolbar is created.  
   
-### <a name="remarks"></a>备注  
- 当用户选择 pin 按钮以切换到自动隐藏模式或正则停靠模式下的选项卡式窗格中，框架将调用此方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a user chooses the pin button to switch the tabbed pane to auto-hide mode or to regular docking mode.  
   
- 自动隐藏模式设置为在选项卡式窗格中每个可插拔窗格中。 非可拆分的窗格将被忽略。 有关详细信息，请参阅[CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach)。  
+ Auto-hide mode is set for each detachable pane in the tabbed pane. Panes that are non-detachable are ignored. For more information, see [CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).  
   
- 调用此方法以编程方式切换到自动隐藏模式的选项卡式的窗格。 窗格中必须停靠到主框架窗口 ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider)必须返回到的有效指针[CPaneDivider](../../mfc/reference/cpanedivider-class.md))。  
+ Call this method to switch a tabbed pane to auto-hide mode programmatically. The pane must be docked to the main frame window ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) must return a valid pointer to the [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
 

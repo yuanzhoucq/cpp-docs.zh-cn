@@ -1,5 +1,5 @@
 ---
-title: "CAnimationValue 类 |Microsoft 文档"
+title: CAnimationValue Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationValue class
+- CAnimationValue [MFC], CAnimationValue
+- CAnimationValue [MFC], AddTransition
+- CAnimationValue [MFC], GetValue
+- CAnimationValue [MFC], GetVariable
+- CAnimationValue [MFC], SetDefaultValue
+- CAnimationValue [MFC], GetAnimationVariableList
+- CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
 caps.latest.revision: 17
 author: mikeblome
@@ -41,88 +47,88 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 083c8be9a0d9d518d5353b6d02c0050944312805
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: da4240aaa77b40875a111f95ebed0812d2971016
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationvalue-class"></a>CAnimationValue 类
-实现有一个值的动画对象功能。  
+# <a name="canimationvalue-class"></a>CAnimationValue Class
+Implements the functionality of animation object that has one value.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationValue : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::CAnimationValue](#canimationvalue)|已重载。 构造 CAnimationValue 对象。|  
+|[CAnimationValue::CAnimationValue](#canimationvalue)|Overloaded. Constructs a CAnimationValue object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::AddTransition](#addtransition)|添加转换应用于一个值。|  
-|[CAnimationValue::GetValue](#getvalue)|已重载。 检索当前值。|  
-|[CAnimationValue::GetVariable](#getvariable)|提供对封装的动画变量的访问。|  
-|[CAnimationValue::SetDefaultValue](#setdefaultvalue)|设置默认值。|  
+|[CAnimationValue::AddTransition](#addtransition)|Adds a transition to be applied to a value.|  
+|[CAnimationValue::GetValue](#getvalue)|Overloaded. Retrieves the current value.|  
+|[CAnimationValue::GetVariable](#getvariable)|Provides access to encapsulated animation variable.|  
+|[CAnimationValue::SetDefaultValue](#setdefaultvalue)|Sets default value.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|将封装的动画变量放入列表。 (重写[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|  
+|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Puts the encapsulated animation variable into a list. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::operator 双](#operator_double)|提供了之间 CAnimationValue 和双精度型的转换。|  
-|[CAnimationValue::operator INT32](#operator_int32)|提供了 CAnimationValue 和 INT32 之间的转换。|  
-|[CAnimationValue::operator =](#operator_eq)|已重载。 将一个 INT32 值分配给 CAnimationValue。|  
+|[CAnimationValue::operator DOUBLE](#operator_double)|Provides conversion between CAnimationValue and DOUBLE.|  
+|[CAnimationValue::operator INT32](#operator_int32)|Provides conversion between CAnimationValue and INT32.|  
+|[CAnimationValue::operator=](#operator_eq)|Overloaded. Assigns an INT32 value to CAnimationValue.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationValue::m_value](#m_value)|表示动画值的封装的动画变量。|  
+|[CAnimationValue::m_value](#m_value)|The encapsulated animation variable that represents animation value.|  
   
-## <a name="remarks"></a>备注  
- CAnimationValue 类封装单个 CAnimationVariable 对象，并可以表示在应用程序中的单个动画的值。 例如，可以使用此类为动画的透明度 （淡入淡出效果） 角度 （以旋转对象），或任何其他用例时您需要创建一个动画，具体取决于单个动画值。 若要在应用程序中使用此类，只是实例化此类的对象、 将其添加到动画控制器使用 CAnimationController::AddAnimationObject 和调用为每个转换的 AddTransition 要应用到的值。  
+## <a name="remarks"></a>Remarks  
+ The CAnimationValue class encapsulates a single CAnimationVariable object and can represent in applications a single animated value. For example, you can use this class for animated transparency (fade effect), angle (to rotate objects), or for any other case when you need to create an animation depending on a single animated value. To use this class in application, just instantiate an object of this class, add it to animation controller using CAnimationController::AddAnimationObject and call AddTransition for each transition to be applied to the value.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)  
   
  `CAnimationValue`
   
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationValue::AddTransition  
- 添加转换应用于一个值。  
+##  <a name="addtransition"></a>  CAnimationValue::AddTransition  
+ Adds a transition to be applied to a value.  
   
 ```  
 void AddTransition(CBaseTransition* pTransition);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pTransition`  
- 指向转换对象的指针。  
+ A pointer to transition object.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可将切换添加到内部列表应用于的动画变量的转换。 当您添加转换时，它们将不会立即应用并存储在内部列表。 转换将应用 （添加到情节提要为特定值） 当您调用 CAnimationController::AnimateGroup。  
+### <a name="remarks"></a>Remarks  
+ Call this function to add a transition to internal list of transitions to be applied to an animation variable. When you add transitions, they are not applied immediately and stored in an internal list. Transitions are applied (added to a storyboard for a particular value) when you call CAnimationController::AnimateGroup.  
   
-##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
- 构造 CAnimationValue 对象。  
+##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue  
+ Constructs a CAnimationValue object.  
   
 ```  
 CAnimationValue();
@@ -135,24 +141,24 @@ CAnimationValue(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dblDefaultValue`  
- 指定默认值。  
+ Specifies default value.  
   
  `nGroupID`  
- 指定组的 id。  
+ Specifies Group ID.  
   
  `nObjectID`  
- 指定的对象 id。  
+ Specifies Object ID.  
   
  `dwUserData`  
- 指定用户定义的数据。  
+ specifies user-defined data.  
   
-### <a name="remarks"></a>备注  
- 构造使用默认属性 CAnimationValue 对象︰ 组 ID 和对象 ID 的默认值设置为 0。  
+### <a name="remarks"></a>Remarks  
+ Constructs CAnimationValue object with default properties: default value, Group ID and Object ID are set to 0.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
- 将封装的动画变量放入列表。  
+##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList  
+ Puts the encapsulated animation variable into a list.  
   
 ```  
 virtual void GetAnimationVariableList(
@@ -160,109 +166,109 @@ virtual void GetAnimationVariableList(
     CAnimationVariable*>& lst);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lst`  
- 当函数返回时，它包含指向 CAnimationVariable 表示动画的值的指针。  
+ When the function returns, it contains a pointer to CAnimationVariable representing the animated value.  
   
-##  <a name="getvalue"></a>CAnimationValue::GetValue  
- 检索当前值。  
+##  <a name="getvalue"></a>  CAnimationValue::GetValue  
+ Retrieves the current value.  
   
 ```  
 BOOL GetValue(DOUBLE& dblValue);  
 BOOL GetValue(INT32& nValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dblValue`  
- 输出。 当函数返回时它会包含动画变量的当前值。  
+ Output. When the function returns it contains a current value of animation variable.  
   
  `nValue`  
- 输出。 当函数返回时它会包含动画变量的当前值。  
+ Output. When the function returns it contains a current value of animation variable.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则检索到的当前值，则返回 TRUE否则为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if the current value was retrieved successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可检索当前值。 此实现调用封装的 COM 对象，并且如果调用失败，此方法返回在构造函数中或使用 SetDefaultValue 以前设置的默认值。  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve the current value. This implementation calls the encapsulated COM object, and if the call fails, this method returns the default value that was previously set in constructor or with SetDefaultValue.  
   
-##  <a name="getvariable"></a>CAnimationValue::GetVariable  
- 提供对封装的动画变量的访问。  
+##  <a name="getvariable"></a>  CAnimationValue::GetVariable  
+ Provides access to encapsulated animation variable.  
   
 ```  
 CAnimationVariable& GetVariable();
 ```  
   
-### <a name="return-value"></a>返回值  
- 对封装的动画变量的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated animation variable.  
   
-### <a name="remarks"></a>备注  
- 使用此方法访问封装的动画变量。 从 CAnimationVariable 您有权访问基础 IUIAnimationVariable 对象，其指针可以为 NULL，如果尚未创建动画变量。  
+### <a name="remarks"></a>Remarks  
+ Use this method to access the encapsulated animation variable. From CAnimationVariable you get access to underlying IUIAnimationVariable object, whose pointer can be NULL if animation variable has not been created.  
   
-##  <a name="m_value"></a>CAnimationValue::m_value  
- 表示动画值的封装的动画变量。  
+##  <a name="m_value"></a>  CAnimationValue::m_value  
+ The encapsulated animation variable that represents animation value.  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="operator_double"></a>CAnimationValue::operator 双  
- 提供了之间 CAnimationValue 和双精度型的转换。  
+##  <a name="operator_double"></a>  CAnimationValue::operator DOUBLE  
+ Provides conversion between CAnimationValue and DOUBLE.  
   
 ```  
 operator DOUBLE();
 ```   
   
-### <a name="return-value"></a>返回值  
- 动画值的当前值。  
+### <a name="return-value"></a>Return Value  
+ Current value of Animation Value.  
   
-### <a name="remarks"></a>备注  
- 提供了之间 CAnimationValue 和双精度型的转换。 此方法在内部调用 GetValue，不会检查有错误。 如果 GetValue 失败，则返回的值将包含在构造函数或使用 SetDefaultValue 以前设置的默认值。  
+### <a name="remarks"></a>Remarks  
+ Provides conversion between CAnimationValue and DOUBLE. This method internally calls GetValue and doesn't check for errors. If GetValue fails, the returned value will contain a default value previously set in constructor or with SetDefaultValue.  
   
-##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
- 提供了 CAnimationValue 和 INT32 之间的转换。  
+##  <a name="operator_int32"></a>  CAnimationValue::operator INT32  
+ Provides conversion between CAnimationValue and INT32.  
   
 ```  
 operator INT32();
 ```   
   
-### <a name="return-value"></a>返回值  
- 动画值作为整数的当前值。  
+### <a name="return-value"></a>Return Value  
+ Current value of Animation Value as integer.  
   
-### <a name="remarks"></a>备注  
- 提供了 CAnimationValue 和 INT32 之间的转换。 此方法在内部调用 GetValue，不会检查有错误。 如果 GetValue 失败，则返回的值将包含在构造函数或使用 SetDefaultValue 以前设置的默认值。  
+### <a name="remarks"></a>Remarks  
+ Provides conversion between CAnimationValue and INT32. This method internally calls GetValue and doesn't check for errors. If GetValue fails, the returned value will contain a default value previously set in constructor or with SetDefaultValue.  
   
-##  <a name="operator_eq"></a>CAnimationValue::operator =  
- 将一个双精度值分配给 CAnimationValue。  
+##  <a name="operator_eq"></a>  CAnimationValue::operator=  
+ Assigns a DOUBLE value to CAnimationValue.  
   
 ```  
 void operator=(DOUBLE dblVal);  
 void operator=(INT32 nVal);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dblVal`  
- 指定要分配给动画值的值。  
+ Specifies the value to be assigned to Animation Value.  
   
  `nVal`  
- 指定要分配给动画值的值。  
+ Specifies the value to be assigned to Animation Value.  
   
-### <a name="remarks"></a>备注  
- 将一个双精度值分配给 CAnimationValue。 此值设置为封装的动画变量的默认值。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 此动画对象，您需要重新启用这些事件。  
+### <a name="remarks"></a>Remarks  
+ Assigns a DOUBLE value to CAnimationValue. This value is set as a default value for encapsulated animation variable. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
- 设置默认值。  
+##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue  
+ Sets default value.  
   
 ```  
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dblDefaultValue`  
- 指定默认值。  
+ Specifies the default value.  
   
-### <a name="remarks"></a>备注  
- 使用此方法以设置默认值。 在尚未启动动画和/或尚未创建基础 COM 对象时，默认值被返回到应用程序。 如果已创建封装在 CAnimationVarible 的基础 COM 对象，此方法将重新创建它，因此您可能需要再次调用 EnableValueChanged/EnableIntegerValueChanged 方法。  
+### <a name="remarks"></a>Remarks  
+ Use this method to set a default value. A default value is returned to application when animation has not been started and/or underlying COM object has not been created. If the underlying COM object encapsulated in CAnimationVarible was already created, this method recreates it, therefore you might need to call EnableValueChanged/EnableIntegerValueChanged methods again.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CSmartDockingInfo 类 |Microsoft 文档"
+title: CSmartDockingInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSmartDockingInfo class
+- CSmartDockingInfo [MFC], CopyTo
+- CSmartDockingInfo [MFC], m_bUseThemeColorInShading
+- CSmartDockingInfo [MFC], m_clrBaseBackground
+- CSmartDockingInfo [MFC], m_clrToneDest
+- CSmartDockingInfo [MFC], m_clrToneSrc
+- CSmartDockingInfo [MFC], m_clrTransparent
+- CSmartDockingInfo [MFC], m_nCentralGroupOffset
+- CSmartDockingInfo [MFC], m_sizeTotal
+- CSmartDockingInfo [MFC], m_uiMarkerBmpResID
+- CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
 caps.latest.revision: 27
 author: mikeblome
@@ -44,174 +53,174 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 9ae735b202299d26b98ec763f65c3f8772d9b914
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 004a49c00566369a14f89c9c383799a3461a9a05
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 类
-定义智能停靠标记的外观。  
+# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
+Defines the appearance of smart docking markers.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSmartDockingInfo : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CSmartDockingInfo::CSmartDockingInfo`|默认构造函数。|  
+|`CSmartDockingInfo::CSmartDockingInfo`|Default constructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmartDockingInfo::CopyTo](#copyto)|将当前智能停靠信息参数复制到提供[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)对象。|  
+|[CSmartDockingInfo::CopyTo](#copyto)|Copies the current smart docking info parameters into the provided [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) object.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|指定是否使用当前的主题颜色时，框架显示智能停靠标记。|  
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|指定智能停靠标记的基本的背景的色。|  
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|指定将替换的颜色`m_clrToneSrc`智能停靠标记位图中。|  
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|指定的智能停靠标记位图的颜色。|  
-|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|指定的智能停靠标记位图的颜色时是透明的。|  
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|指定从中心小组矩形的边界的智能停靠标记的中央组偏移量。|  
-|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|指定组中的所有智能停靠标记的总大小。|  
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|定义的框架用于不突出显示的智能停靠标记的位图的资源 Id。|  
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|定义的框架用于智能停靠标记突出显示的位图的资源 Id。|  
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Specifies whether to use the current theme color when the framework displays smart docking markers.|  
+|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Specifies the base background color of smart docking markers.|  
+|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Specifies the color that replaces `m_clrToneSrc` in smart docking marker bitmaps.|  
+|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Specifies the color of smart docking marker bitmaps.|  
+|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Specifies the color of smart docking marker bitmaps when they are transparent.|  
+|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Specifies the offset of the central group of smart docking markers from the boundaries of the central group rectangle.|  
+|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Specifies the total size of all smart docking markers in a group.|  
+|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Defines the resource IDs of the bitmaps that the framework uses for smart docking markers that are not highlighted.|  
+|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Defines the resource IDs of the bitmaps that the framework uses for smart docking markers that are highlighted.|  
   
-## <a name="remarks"></a>备注  
- Framework 句柄的内部智能停靠标记。 下图显示标准智能停靠标记︰  
+## <a name="remarks"></a>Remarks  
+ The framework handles smart docking markers internally. The following illustration shows the standard smart docking markers:  
   
- ![标准智能停靠标记](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
+ ![Standard markers for smart docking](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
   
- 在此图中，在左侧的图像显示不具有停靠到启用了选项卡上的中央组智能停靠标记。 在中间的图像显示右边缘的智能停靠标记。 在右侧的图像显示停靠到启用了一个选项卡具有一个中央组智能停靠标记。 中央组智能停靠标记有一个主位图和五个智能停靠标记位图。  
+ In this figure, the image on the left shows a central group smart docking marker that does not have docking to a tab enabled. The image in the middle shows a right edge smart docking marker. The image on the right shows a central group smart docking marker that does have docking to a tab enabled. The central group smart docking marker has a main bitmap and five smart docking marker bitmaps.  
   
- 您可以自定义智能停靠标记的以下参数︰  
+ You can customize the following parameters of smart docking markers:  
   
--   颜色。 例如，您可以使用任何用户定义的颜色替换在图中标记的蓝色颜色。  
+-   Color. For example, you can replace the blue color of the markers in the figure with any user-defined color.  
   
--   透明度颜色。  
+-   Transparency color.  
   
--   从边框的边框的中央的组中的智能停靠标记的偏移量。  
+-   Offset of a smart docking marker in the central group from the border of the bounding rectangle.  
   
--   用于表示中央组的主位图。  
+-   The main bitmap that represents the central group.  
   
--   表示正则和突出显示的位图智能停靠标记。  
+-   The bitmaps that represents the regular and highlighted smart docking markers.  
   
- 下图显示具有自定义智能停靠标记的示例︰  
+ The following illustration shows an example of smart docking markers that have been customized:  
   
- ![自定义智能停靠标记](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
+ ![Custom markers for smart docking](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxDockingManager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxDockingManager.h  
   
-##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
- 将当前智能停靠参数复制到提供[CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)对象。  
+##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
+ Copies the current smart docking parameters into the provided [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) object.  
   
 ```  
 void CopyTo(CSmartDockingInfo& params);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `params`  
- 类型的对象`CSmartDockingInfo`并且填充了当前智能停靠参数。  
+ An object of type `CSmartDockingInfo` that is populated with the current smart docking parameters.  
   
-##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
- 指定是否使用当前的主题颜色时，框架显示智能停靠标记。  
+##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
+ Specifies whether to use the current theme color when the framework displays smart docking markers.  
   
 ```  
 BOOL m_bUseThemeColorInShading;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果`TRUE`，标记使用当前的主题颜色绘制; 否则使用一种淡蓝色颜色绘制标记。  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, the markers are drawn using the current theme color; otherwise the markers are drawn with a light blue color.  
   
- 默认值为 `FALSE`。  
+ The default value is `FALSE`.  
   
-##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
- 指定智能停靠标记的基本的背景的色。  
+##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
+ Specifies the base background color of smart docking markers.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
- 指定将替换的颜色`m_clrToneSrc`智能停靠标记位图中。  
+##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
+ Specifies the color that will replace `m_clrToneSrc` in smart docking marker bitmaps.  
   
 ```  
 COLORREF m_clrToneDest;  
 ```  
   
-### <a name="remarks"></a>备注  
- 设置此值以编程方式更改标记位图的颜色。 例如，如果您想要更改的颜色随该框架提供的标准标记，将此值设置为所需的颜色。 默认情况下， [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)设置为 RGB （61、 123、 241） （略带蓝色颜色）。  
+### <a name="remarks"></a>Remarks  
+ Set this value to change the color of marker bitmaps programmatically. For example, if you want to change the color of the standard markers provided with the framework, set this value to the desired color. By default, [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) is set to RGB (61, 123, 241) (a bluish color).  
   
- 若要更改自定义标记的颜色，您必须同时指定`m_clrToneDest`和`m_clrToneSrc`。  
+ To change the color of custom markers, you must specify both `m_clrToneDest` and `m_clrToneSrc`.  
   
-##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
- 指定的智能停靠标记位图的颜色。  
+##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
+ Specifies the color of smart docking marker bitmaps.  
   
 ```  
 COLORREF m_clrToneSrc;  
 ```  
   
-### <a name="remarks"></a>备注  
- 仅当你想要将自定义位图的颜色替换为另一种颜色时，才设置此值。 不需要设置此值，如果您要更改一种标准 （框架提供） 的颜色标记。  
+### <a name="remarks"></a>Remarks  
+ Set this value only when you want to replace the color of a custom bitmap with another color. You do not have to set this value if you are changing the color of a standard (framework provided) marker.  
   
- 使用`(COLORREF)-1`将智能停靠组的成员保留为空。  
+ Use `(COLORREF)-1` to leave a member of the smart docking group empty.  
   
-##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
- 指定的智能停靠标记位图的颜色时是透明的。  
+##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
+ Specifies the color of smart docking marker bitmaps when they are transparent.  
   
 ```  
 COLORREF m_clrTransparent;  
 ```  
   
-### <a name="remarks"></a>备注  
- 在停靠组中显示自定义标记和自定义位图时，必须设置此值。  
+### <a name="remarks"></a>Remarks  
+ You must set this value when you display custom markers and custom bitmaps in the docking group.  
   
-##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
- 指定中央智能停靠标记的组和中央组合矩形的边界之间的偏移量。  
+##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
+ Specifies the offset between the central group of smart docking markers and the boundaries of the central group rectangle.  
   
 ```  
 int m_nCentralGroupOffset;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果您想要更改自定义标记和中央智能停靠标记的组的边界之间的默认偏移量，请指定此值。 默认偏移量为 5 个像素。  
+### <a name="remarks"></a>Remarks  
+ Specify this value if you want to change the default offset between custom markers and the bounds of the central group of smart docking markers. The default offset is 5 pixels.  
   
-##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
- 指定将在中央组包含所有智能停靠标记的边框的总大小。  
+##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
+ Specifies the total size of a bounding rectangle that encloses all smart docking markers in the central group.  
   
 ```  
 CSize m_sizeTotal;  
 ```  
   
-### <a name="remarks"></a>备注  
- 设置`m_sizeTotal`到中央组标记的边框的大小。 您需要指定此值，如果您正在使用的自定义位图标记。  
+### <a name="remarks"></a>Remarks  
+ Set `m_sizeTotal` to the size of the bounding rectangle of the central group marker. You are required to specify this value if you are using custom bitmaps for markers.  
   
-##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
- 定义的用于非突出显示自定义智能停靠标记的位图的资源 Id。  
+##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
+ Defines the resource IDs of the bitmaps that are used for non-highlighted custom smart docking markers.  
   
 ```  
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
-### <a name="remarks"></a>备注  
- 使用的资源 Id 表示智能停靠标记的位图来填充此数组。 `AFX_SD_MARKERS_NUM`当前定义为 5。 如下所示填充数组︰  
+### <a name="remarks"></a>Remarks  
+ Fill this array with the resource IDs of the bitmaps representing the smart docking markers. `AFX_SD_MARKERS_NUM` is currently defined as 5. You fill the array as follows:  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -223,15 +232,15 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
- 定义的用于突出显示的自定义智能停靠标记的位图的资源 Id。  
+##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
+ Defines the resource IDs of the bitmaps that are used for highlighted custom smart docking markers.  
   
 ```  
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];  
 ```  
   
-### <a name="remarks"></a>备注  
- 使用的资源 Id 表示突出显示的智能停靠标记的位图来填充此数组。 `AFX_SD_MARKERS_NUM`当前定义为 5。 如下所示填充数组︰  
+### <a name="remarks"></a>Remarks  
+ Fill this array with the resource IDs of the bitmaps representing the highlighted smart docking markers. `AFX_SD_MARKERS_NUM` is currently defined as 5. You fill the array as follows:  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   
@@ -243,8 +252,8 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CObject 类](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

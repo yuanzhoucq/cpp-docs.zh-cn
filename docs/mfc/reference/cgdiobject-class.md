@@ -1,5 +1,5 @@
 ---
-title: "CGdiObject 类 |Microsoft 文档"
+title: CGdiObject Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,13 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- brushes, base class for
-- fonts, base class for
-- regions, base class for
-- pens, base class for
-- palettes, base class for
-- CGdiObject class
-- GDI objects, base class for
+- CGdiObject [MFC], CGdiObject
+- CGdiObject [MFC], Attach
+- CGdiObject [MFC], CreateStockObject
+- CGdiObject [MFC], DeleteObject
+- CGdiObject [MFC], DeleteTempMap
+- CGdiObject [MFC], Detach
+- CGdiObject [MFC], FromHandle
+- CGdiObject [MFC], GetObject
+- CGdiObject [MFC], GetObjectType
+- CGdiObject [MFC], GetSafeHandle
+- CGdiObject [MFC], UnrealizeObject
+- CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
 caps.latest.revision: 21
 author: mikeblome
@@ -52,172 +57,172 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7fb0cd49c6a20263a5cae305b7f08f2733033ff2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 22934f43c8b5aed5861649392537cad52165a5a3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cgdiobject-class"></a>CGdiObject 类
-为各种 Windows 图形设备接口 (GDI) 对象（如位图、区域、画笔、笔、调色板和字体）提供基类。  
+# <a name="cgdiobject-class"></a>CGdiObject Class
+Provides a base class for various kinds of Windows graphics device interface (GDI) objects such as bitmaps, regions, brushes, pens, palettes, and fonts.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CGdiObject : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGdiObject::CGdiObject](#cgdiobject)|构造 `CGdiObject` 对象。|  
+|[CGdiObject::CGdiObject](#cgdiobject)|Constructs a `CGdiObject` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGdiObject::Attach](#attach)|Windows GDI 将对象附加到`CGdiObject`对象。|  
-|[CGdiObject::CreateStockObject](#createstockobject)|检索 Windows 预定义的股票钢笔、 画笔或字体之一的句柄。|  
-|[CGdiObject::DeleteObject](#deleteobject)|删除 Windows GDI 对象附加到`CGdiObject`通过释放与对象关联的所有系统存储内存中的对象。|  
-|[CGdiObject::DeleteTempMap](#deletetempmap)|删除任何临时`CGdiObject`由创建的对象`FromHandle`。|  
-|[CGdiObject::Detach](#detach)|Windows GDI 从分离对象`CGdiObject`对象，并返回 Windows GDI 对象的句柄。|  
-|[CGdiObject::FromHandle](#fromhandle)|返回一个指向`CGdiObject`提供给 Windows GDI 对象的句柄的对象。|  
-|[CGdiObject::GetObject](#getobject)|填充的缓冲区时，用于描述 Windows GDI 对象的数据附加到`CGdiObject`对象。|  
-|[CGdiObject::GetObjectType](#getobjecttype)|检索的 GDI 对象的类型。|  
-|[CGdiObject::GetSafeHandle](#getsafehandle)|返回`m_hObject`除非`this`是`NULL`，在这种情况下`NULL`返回。|  
-|[CGdiObject::UnrealizeObject](#unrealizeobject)|重置画笔的原点或重置逻辑调色板。|  
+|[CGdiObject::Attach](#attach)|Attaches a Windows GDI object to a `CGdiObject` object.|  
+|[CGdiObject::CreateStockObject](#createstockobject)|Retrieves a handle to one of the Windows predefined stock pens, brushes, or fonts.|  
+|[CGdiObject::DeleteObject](#deleteobject)|Deletes the Windows GDI object attached to the `CGdiObject` object from memory by freeing all system storage associated with the object.|  
+|[CGdiObject::DeleteTempMap](#deletetempmap)|Deletes any temporary `CGdiObject` objects created by `FromHandle`.|  
+|[CGdiObject::Detach](#detach)|Detaches a Windows GDI object from a `CGdiObject` object and returns a handle to the Windows GDI object.|  
+|[CGdiObject::FromHandle](#fromhandle)|Returns a pointer to a `CGdiObject` object given a handle to a Windows GDI object.|  
+|[CGdiObject::GetObject](#getobject)|Fills a buffer with data that describes the Windows GDI object attached to the `CGdiObject` object.|  
+|[CGdiObject::GetObjectType](#getobjecttype)|Retrieves the type of the GDI object.|  
+|[CGdiObject::GetSafeHandle](#getsafehandle)|Returns `m_hObject` unless `this` is `NULL`, in which case `NULL` is returned.|  
+|[CGdiObject::UnrealizeObject](#unrealizeobject)|Resets the origin of a brush or resets a logical palette.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGdiObject::operator ！ =](#operator_neq)|确定两个 GDI 对象在逻辑上非是否相等。|  
-|[CGdiObject::operator = =](#operator_eq_eq)|确定两个 GDI 对象是否在逻辑上相等。|  
-|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|检索`HANDLE`对附加的 Windows GDI 对象。|  
+|[CGdiObject::operator !=](#operator_neq)|Determines if two GDI objects are logically not equal.|  
+|[CGdiObject::operator ==](#operator_eq_eq)|Determines if two GDI objects are logically equal.|  
+|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Retrieves a `HANDLE` to the attached Windows GDI object.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGdiObject::m_hObject](#m_hobject)|一个`HANDLE`包含`HBITMAP`， `HPALETTE`， `HRGN`， `HBRUSH`， `HPEN`，或`HFONT`附加到此对象。|  
+|[CGdiObject::m_hObject](#m_hobject)|A `HANDLE` containing the `HBITMAP`, `HPALETTE`, `HRGN`, `HBRUSH`, `HPEN`, or `HFONT` attached to this object.|  
   
-## <a name="remarks"></a>备注  
- 切勿创建`CGdiObject`直接。 相反，您创建一个对象从其派生类之一，如`CPen`或`CBrush`。  
+## <a name="remarks"></a>Remarks  
+ You never create a `CGdiObject` directly. Rather, you create an object from one of its derived classes, such as `CPen` or `CBrush`.  
   
- 有关详细信息`CGdiObject`，请参阅[图形对象](../../mfc/graphic-objects.md)。  
+ For more information on `CGdiObject`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CGdiObject`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="attach"></a>CGdiObject::Attach  
- Windows GDI 将对象附加到`CGdiObject`对象。  
+##  <a name="attach"></a>  CGdiObject::Attach  
+ Attaches a Windows GDI object to a `CGdiObject` object.  
   
 ```  
 BOOL Attach(HGDIOBJ hObject);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hObject`  
- 一个`HANDLE`对 Windows GDI 对象 (例如，`HPEN`或`HBRUSH`)。  
+ A `HANDLE` to a Windows GDI object (for example, `HPEN` or `HBRUSH`).  
   
-### <a name="return-value"></a>返回值  
- 如果附件成功，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if attachment is successful; otherwise 0.  
   
-##  <a name="cgdiobject"></a>CGdiObject::CGdiObject  
- 构造 `CGdiObject` 对象。  
+##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject  
+ Constructs a `CGdiObject` object.  
   
 ```  
 CGdiObject();
 ```  
   
-### <a name="remarks"></a>备注  
- 切勿创建`CGdiObject`直接。 相反，您创建一个对象从其派生类之一，如`CPen`或**Cbrush**。  
+### <a name="remarks"></a>Remarks  
+ You never create a `CGdiObject` directly. Rather, you create an object from one of its derived classes, such as `CPen` or **Cbrush**.  
   
-##  <a name="createstockobject"></a>CGdiObject::CreateStockObject  
- 检索到其中一个预定义的股票 Windows GDI 钢笔、 画笔或字体的句柄和 GDI 将对象附加到`CGdiObject`对象。  
+##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
+ Retrieves a handle to one of the predefined stock Windows GDI pens, brushes, or fonts, and attaches the GDI object to the `CGdiObject` object.  
   
 ```  
 BOOL CreateStockObject(int nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 一个常数，它指定所需的常用对象的类型。 请参阅参数*fnObject*为[GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关适当的值的说明。  
+ A constant specifying the type of stock object desired. See the parameter *fnObject* for [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) in the Windows SDK for a description of appropriate values.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 调用此函数具有一个将派生的类，这些类对应于 Windows GDI 对象类型，如`CPen`为常用的画笔。  
+### <a name="remarks"></a>Remarks  
+ Call this function with one of the derived classes that corresponds to the Windows GDI object type, such as `CPen` for a stock pen.  
   
-##  <a name="deleteobject"></a>CGdiObject::DeleteObject  
- 释放与 Windows GDI 对象相关联的所有系统存储内存中删除附加的 Windows GDI 对象。  
+##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
+ Deletes the attached Windows GDI object from memory by freeing all system storage associated with the Windows GDI object.  
   
 ```  
 BOOL DeleteObject();
 ```  
   
-### <a name="return-value"></a>返回值  
- 已成功删除的 GDI 对象; 如果非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the GDI object was successfully deleted; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 与关联的存储`CGdiObject`对象不受此调用。 应用程序不应调用`DeleteObject`上`CGdiObject`实际选入设备上下文的对象。  
+### <a name="remarks"></a>Remarks  
+ The storage associated with the `CGdiObject` object is not affected by this call. An application should not call `DeleteObject` on a `CGdiObject` object that is currently selected into a device context.  
   
- 当删除图案画笔时，不会删除相关联画笔的位图。 必须单独删除位图。  
+ When a pattern brush is deleted, the bitmap associated with the brush is not deleted. The bitmap must be deleted independently.  
   
-##  <a name="deletetempmap"></a>CGdiObject::DeleteTempMap  
- 自动调用`CWinApp`空闲时间处理程序中，`DeleteTempMap`删除任何临时`CGdiObject`由创建的对象`FromHandle`。  
+##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
+ Called automatically by the `CWinApp` idle-time handler, `DeleteTempMap` deletes any temporary `CGdiObject` objects created by `FromHandle`.  
   
 ```  
 static void PASCAL DeleteTempMap();
 ```  
   
-### <a name="remarks"></a>备注  
- `DeleteTempMap`分离 Windows GDI 对象附加到一个临时`CGdiObject`之前删除对象`CGdiObject`对象。  
+### <a name="remarks"></a>Remarks  
+ `DeleteTempMap` detaches the Windows GDI object attached to a temporary `CGdiObject` object before deleting the `CGdiObject` object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&175;](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
-##  <a name="detach"></a>CGdiObject::Detach  
- Windows GDI 从分离对象`CGdiObject`对象，并返回 Windows GDI 对象的句柄。  
+##  <a name="detach"></a>  CGdiObject::Detach  
+ Detaches a Windows GDI object from a `CGdiObject` object and returns a handle to the Windows GDI object.  
   
 ```  
 HGDIOBJ Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个`HANDLE`向 Windows GDI 对象分离; 否则为**NULL**如果连接没有 GDI 对象。  
+### <a name="return-value"></a>Return Value  
+ A `HANDLE` to the Windows GDI object detached; otherwise **NULL** if no GDI object is attached.  
   
-##  <a name="fromhandle"></a>CGdiObject::FromHandle  
- 返回一个指向`CGdiObject`提供给 Windows GDI 对象的句柄的对象。  
+##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
+ Returns a pointer to a `CGdiObject` object given a handle to a Windows GDI object.  
   
 ```  
 static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hObject`  
- 一个`HANDLE`对 Windows GDI 对象。  
+ A `HANDLE` to a Windows GDI object.  
   
-### <a name="return-value"></a>返回值  
- 一个指向`CGdiObject`这可能是临时的还是永久。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CGdiObject` that may be temporary or permanent.  
   
-### <a name="remarks"></a>备注  
- 如果`CGdiObject`对象尚未附加到 Windows GDI 对象，一个临时`CGdiObject`创建对象并将其连接。  
+### <a name="remarks"></a>Remarks  
+ If a `CGdiObject` object is not already attached to the Windows GDI object, a temporary `CGdiObject` object is created and attached.  
   
- 此临时`CGdiObject`对象直到下次该应用程序在其事件循环中，删除这段时间所有临时的图形对象有空闲时间才有效。 另一种说法是一个窗口消息处理过程才有效临时对象。  
+ This temporary `CGdiObject` object is only valid until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. Another way of saying this is that the temporary object is only valid during the processing of one window message.  
   
-##  <a name="getobject"></a>CGdiObject::GetObject  
- 定义指定的对象的数据填充缓冲区。  
+##  <a name="getobject"></a>  CGdiObject::GetObject  
+ Fills a buffer with data that defines a specified object.  
   
 ```  
 int GetObject(
@@ -225,149 +230,149 @@ int GetObject(
     LPVOID lpObject) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nCount`  
- 指定要将复制到的字节数`lpObject`缓冲区。  
+ Specifies the number of bytes to copy into the `lpObject` buffer.  
   
  `lpObject`  
- 指向用户提供的缓冲区，则要接收的信息。  
+ Points to a user-supplied buffer that is to receive the information.  
   
-### <a name="return-value"></a>返回值  
- 检索的字节数;否则 0 如果检测到错误发生。  
+### <a name="return-value"></a>Return Value  
+ The number of bytes retrieved; otherwise 0 if an error occurs.  
   
-### <a name="remarks"></a>备注  
- 此函数检索其类型取决于图形对象的类型的数据结构，如以下列表所示︰  
+### <a name="remarks"></a>Remarks  
+ The function retrieves a data structure whose type depends on the type of graphic object, as shown by the following list:  
   
-|对象|缓冲区类型|  
+|Object|Buffer type|  
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
 |`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
-|`CBitmap`|[位图](../../mfc/reference/bitmap-structure.md)|  
+|`CBitmap`|[BITMAP](../../mfc/reference/bitmap-structure.md)|  
 |`CPalette`|**WORD**|  
-|`CRgn`|不支持|  
+|`CRgn`|Not supported|  
   
- 如果对象是`CBitmap`对象，`GetObject`返回宽度、 高度和位图的颜色的格式信息。 可以使用检索实际位数[CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits)。  
+ If the object is a `CBitmap` object, `GetObject` returns only the width, height, and color format information of the bitmap. The actual bits can be retrieved by using [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
   
- 如果对象是`CPalette`对象，`GetObject`检索**WORD**调色板中指定的条目数。 该函数不会检索[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)结构，它定义调色板。 应用程序可以通过调用获取调色板条目的信息[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)。  
+ If the object is a `CPalette` object, `GetObject` retrieves a **WORD** that specifies the number of entries in the palette. The function does not retrieve the [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure that defines the palette. An application can get information on palette entries by calling [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
   
-##  <a name="getobjecttype"></a>CGdiObject::GetObjectType  
- 检索的 GDI 对象的类型。  
+##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
+ Retrieves the type of the GDI object.  
   
 ```  
 UINT GetObjectType() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 类型的对象，如果成功，则否则为 0。 值可以是以下项之一︰  
+### <a name="return-value"></a>Return Value  
+ The type of the object, if successful; otherwise 0. The value can be one of the following:  
   
-- **OBJ_BITMAP**位图  
+- **OBJ_BITMAP** Bitmap  
   
-- **OBJ_BRUSH**画笔  
+- **OBJ_BRUSH** Brush  
   
-- **OBJ_FONT**字体  
+- **OBJ_FONT** Font  
   
-- **OBJ_PAL**调色板  
+- **OBJ_PAL** Palette  
   
-- **OBJ_PEN**笔  
+- **OBJ_PEN** Pen  
   
-- **OBJ_EXTPEN**扩展笔  
+- **OBJ_EXTPEN** Extended pen  
   
-- **OBJ_REGION**区域  
+- **OBJ_REGION** Region  
   
-- **OBJ_DC**设备上下文  
+- **OBJ_DC** Device context  
   
-- **OBJ_MEMDC**内存设备上下文  
+- **OBJ_MEMDC** Memory device context  
   
-- **OBJ_METAFILE**图元文件  
+- **OBJ_METAFILE** Metafile  
   
-- **OBJ_METADC**图元文件设备上下文  
+- **OBJ_METADC** Metafile device context  
   
-- **OBJ_ENHMETAFILE**增强型图元文件  
+- **OBJ_ENHMETAFILE** Enhanced metafile  
   
-- **OBJ_ENHMETADC**增强型图元文件设备上下文  
+- **OBJ_ENHMETADC** Enhanced-metafile device context  
   
-##  <a name="getsafehandle"></a>CGdiObject::GetSafeHandle  
- 返回`m_hObject`除非**这**是**NULL**，在这种情况下**NULL**返回。  
+##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
+ Returns `m_hObject` unless **this** is **NULL**, in which case **NULL** is returned.  
   
 ```  
 HGDIOBJ GetSafeHandle() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个`HANDLE`对附加的 Windows GDI 对象; 否则为**NULL**如果连接没有任何对象。  
+### <a name="return-value"></a>Return Value  
+ A `HANDLE` to the attached Windows GDI object; otherwise **NULL** if no object is attached.  
   
-### <a name="remarks"></a>备注  
- 这是常规的句柄接口模式的一部分，是有用**NULL**有效或特殊值，当一个句柄。  
+### <a name="remarks"></a>Remarks  
+ This is part of the general handle interface paradigm and is useful when **NULL** is a valid or special value for a handle.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled).  
   
-##  <a name="m_hobject"></a>CGdiObject::m_hObject  
- 一个`HANDLE`包含`HBITMAP`， **HRGN**， `HBRUSH`， `HPEN`， `HPALETTE`，或**HFONT**附加到此对象。  
+##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
+ A `HANDLE` containing the `HBITMAP`, **HRGN**, `HBRUSH`, `HPEN`, `HPALETTE`, or **HFONT** attached to this object.  
   
 ```  
 HGDIOBJ m_hObject;  
 ```  
   
-##  <a name="operator_neq"></a>CGdiObject::operator ！ =  
- 确定两个 GDI 对象在逻辑上非是否相等。  
+##  <a name="operator_neq"></a>  CGdiObject::operator !=  
+ Determines if two GDI objects are logically not equal.  
   
 ```  
 BOOL operator!=(const CGdiObject& obj) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `obj`  
- 一个指向现有`CGdiObject`。  
+ A pointer to an existing `CGdiObject`.  
   
-### <a name="remarks"></a>备注  
- 确定在左侧的 GDI 对象是否不等于右侧的 GDI 对象。  
+### <a name="remarks"></a>Remarks  
+ Determines if a GDI object on the left side is not equal to a GDI object on the right side.  
   
-##  <a name="operator_eq_eq"></a>CGdiObject::operator = =  
- 确定两个 GDI 对象是否在逻辑上相等。  
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator ==  
+ Determines if two GDI objects are logically equal.  
   
 ```  
 BOOL operator==(const CGdiObject& obj) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `obj`  
- 对现有的引用`CGdiObject`。  
+ A reference to an existing `CGdiObject`.  
   
-### <a name="remarks"></a>备注  
- 确定在左侧的 GDI 对象是否等于右侧的 GDI 对象。  
+### <a name="remarks"></a>Remarks  
+ Determines if a GDI object on the left side is equal to a GDI object on the right side.  
   
-##  <a name="operator_hgdiobj"></a>CGdiObject::operator HGDIOBJ  
- 检索`HANDLE`对附加的 Windows GDI 对象; 否则为**NULL**如果连接没有任何对象。  
+##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
+ Retrieves a `HANDLE` to the attached Windows GDI object; otherwise **NULL** if no object is attached.  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
-##  <a name="unrealizeobject"></a>CGdiObject::UnrealizeObject  
- 重置画笔的原点或重置逻辑调色板。  
+##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject  
+ Resets the origin of a brush or resets a logical palette.  
   
 ```  
 BOOL UnrealizeObject();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 虽然`UnrealizeObject`是成员函数的`CGdiObject`类，它应只对调用`CBrush`或`CPalette`对象。  
+### <a name="remarks"></a>Remarks  
+ While `UnrealizeObject` is a member function of the `CGdiObject` class, it should be invoked only on `CBrush` or `CPalette` objects.  
   
- 有关`CBrush`对象，`UnrealizeObject`指示系统在重置给定画笔的原点选入设备上下文的下一个时间。 如果对象是`CPalette`对象，`UnrealizeObject`指示系统，就好像它有没有以前已意识到实现调色板。 下一次应用程序调用[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)函数指定的调色板中，系统完全重新映射到系统调色板逻辑的调色板。  
+ For `CBrush` objects, `UnrealizeObject` directs the system to reset the origin of the given brush the next time it is selected into a device context. If the object is a `CPalette` object, `UnrealizeObject` directs the system to realize the palette as though it had not previously been realized. The next time the application calls the [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette) function for the specified palette, the system completely remaps the logical palette to the system palette.  
   
- `UnrealizeObject`函数不应与常用的对象使用。 `UnrealizeObject`必须调用函数，只要设置新的画笔原点 (通过[CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg)函数)。 `UnrealizeObject`不得调用函数，为当前选定的画笔或当前所选的任何上下文中显示的调色板。  
+ The `UnrealizeObject` function should not be used with stock objects. The `UnrealizeObject` function must be called whenever a new brush origin is set (by means of the [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) function). The `UnrealizeObject` function must not be called for the currently selected brush or currently selected palette of any display context.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CBitmap 类](../../mfc/reference/cbitmap-class.md)   
- [CBrush 类](../../mfc/reference/cbrush-class.md)   
- [CFont 类](../../mfc/reference/cfont-class.md)   
- [CPalette 类](../../mfc/reference/cpalette-class.md)   
- [CPen 类](../../mfc/reference/cpen-class.md)   
- [CRgn 类](../../mfc/reference/crgn-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CBitmap Class](../../mfc/reference/cbitmap-class.md)   
+ [CBrush Class](../../mfc/reference/cbrush-class.md)   
+ [CFont Class](../../mfc/reference/cfont-class.md)   
+ [CPalette Class](../../mfc/reference/cpalette-class.md)   
+ [CPen Class](../../mfc/reference/cpen-class.md)   
+ [CRgn Class](../../mfc/reference/crgn-class.md)
 

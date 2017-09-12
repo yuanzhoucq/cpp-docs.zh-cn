@@ -1,44 +1,63 @@
 ---
-title: "框架如何调用您的代码 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序特定的事件 [C++]"
-  - "命令处理, 调用处理程序和 MFC 中的代码"
-  - "命令传送, 框架"
-  - "命令传送, MFC"
-  - "控制流 [C++], MFC 框架和您的代码"
-  - "事件 [C++], MFC 中的命令传送"
-  - "事件 [C++], 事件驱动的编程"
-  - "MFC [C++], 调用代码"
-  - "MFC [C++], 调用代码自"
+title: How the Framework Calls Your Code | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow [MFC], MFC framework and your code
+- events [MFC], command routing in MFC
+- command routing [MFC], framework
+- command handling [MFC], calling handlers and code in MFC
+- events [MFC], event-driven programming
+- MFC, calling code from
+- MFC, calling code
+- application-specific events [MFC]
+- command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 框架如何调用您的代码
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d43c78de9b61fd09db9c9e46b8517bae81a9fc4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-了解源代码之间的关系对了解MFC 框架是关键的。  当应用程序运行时，大多数控件流位于框架的代码。  框架管理从窗口接收消息的消息循环，以便在用户选择命令并编辑视图中的数据。  框架可以单独处理事件的根本不依赖代码。  例如，框架会如何关闭窗口并退出应用程序响应用户命令。  因为该处理任务，这些框架使用消息处理程序和 C\+\+ 虚拟函数提供了机会响应这些事件。  但代码不是控件，然而框架是。  
+---
+# <a name="how-the-framework-calls-your-code"></a>How the Framework Calls Your Code
+It is crucial to understand the relationship between your source code and the code in the MFC framework. When your application runs, most of the flow of control resides in the framework's code. The framework manages the message loop that gets messages from Windows as the user chooses commands and edits data in a view. Events that the framework can handle by itself do not rely on your code at all. For example, the framework knows how to close windows and how to exit the application in response to user commands. As it handles these tasks, the framework uses message handlers and C++ virtual functions to give you opportunities to respond to these events as well. Your code is not in control, however; the framework is.  
   
- 框架将调用特定于事件的代码。  例如，当用户选择菜单命令时，框架将沿 C\+\+ 对象序列的命令：当前的视图和框架窗口、文档与视图，文档的文档模板和应用程序对象。  如果其中某个对象可以处理命令，调用相应的消息处理函数。  对于所有给定命令，名为的代码可能是允许或可能是框架。  
+ The framework calls your code for application-specific events. For example, when the user chooses a menu command, the framework routes the command along a sequence of C++ objects: the current view and frame window, the document associated with the view, the document's document template, and the application object. If one of these objects can handle the command, it does so, calling the appropriate message-handler function. For any given command, the code called may be yours or it may be the framework's.  
   
- 此排列是某些熟悉的体验的程序员传统编程或窗口的事件驱动编程。  
+ This arrangement is somewhat familiar to programmers experienced with traditional programming for Windows or event-driven programming.  
   
- 在相关主题，将读取框架完成，但初始化并运行应用程序，然后清理时终止应用程序。  您还学习代码在何处编写条件。  
+ In related topics, you will read what the framework does as it initializes and runs the application and then cleans up as the application terminates. You will also understand where the code you write fits in.  
   
- 有关更多信息，请参见 [类 CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md) 和 [文档模板和文档\/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)。  
+ For more information, see [Class CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md) and [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## 请参阅  
- [基于框架生成](../mfc/building-on-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)
+
+

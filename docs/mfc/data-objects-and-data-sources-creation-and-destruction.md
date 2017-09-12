@@ -1,93 +1,111 @@
 ---
-title: "数据对象和数据源：创建和销毁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据对象 [C++], 创建"
-  - "数据对象 [C++], 销毁"
-  - "数据源对象 [C++], 创建"
-  - "数据源对象 [C++], 销毁"
-  - "数据源 [C++], 和数据对象"
-  - "数据源 [C++], 创建"
-  - "数据源 [C++], 销毁"
-  - "数据源 [C++], 角色"
-  - "销毁数据对象"
-  - "析构 [C++], 数据对象"
-  - "析构 [C++], 数据源"
-  - "对象创建 [C++], 数据源对象"
+title: 'Data Objects and Data Sources: Creation and Destruction | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- destroying data objects [MFC]
+- object creation [MFC], data source objects
+- data sources [MFC], and data objects
+- data source objects [MFC], creating
+- destruction [MFC], data sources
+- data source objects [MFC], destroying
+- data objects [MFC], creating
+- data objects [MFC], destroying
+- data sources [MFC], role
+- data sources [MFC], destroying
+- destruction [MFC], data objects
+- data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 数据对象和数据源：创建和销毁
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0117f2ea3ab82b9748a611f9b1c52e2e089cabb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-如文章[数据对象和数据源 \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) 中所述，数据对象和数据源表示数据传输双方。  本文介绍何时创建和销毁这些对象和源以正确地执行数据传输，包括：  
+---
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>Data Objects and Data Sources: Creation and Destruction
+As explained in the article [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md), data objects and data sources represent both sides of a data transfer. This article explains when to create and destroy these objects and sources to perform your data transfers properly, including:  
   
--   [创建数据对象](#_core_creating_data_objects)  
+-   [Creating data objects](#_core_creating_data_objects)  
   
--   [销毁数据对象](#_core_destroying_data_objects)  
+-   [Destroying data objects](#_core_destroying_data_objects)  
   
--   [创建数据源](#_core_creating_data_sources)  
+-   [Creating data sources](#_core_creating_data_sources)  
   
--   [销毁数据源](#_core_destroying_data_sources)  
+-   [Destroying data sources](#_core_destroying_data_sources)  
   
-##  <a name="_core_creating_data_objects"></a> 创建数据对象  
- 数据对象由目标应用程序（客户端或服务器）使用。  目标应用程序中的数据对象是源应用程序与目标应用程序之间的连接的一端。  目标应用程序中的数据对象用于访问数据源中的数据并与之交互。  
+##  <a name="_core_creating_data_objects"></a> Creating Data Objects  
+ Data objects are used by the destination application — either the client or the server. A data object in the destination application is one end of a connection between the source application and the destination application. A data object in the destination application is used to access and interact with the data in the data source.  
   
- 有两种常见的需要数据对象的情况。  第一种情况是使用拖放将数据放在应用程序中时。  第二种情况是从“编辑”菜单中选择“粘贴”或“选择性粘贴”时。  
+ There are two common situations where a data object is needed. The first situation is when data is dropped in your application using drag and drop. The second situation is when Paste or Paste Special is chosen from the Edit menu.  
   
- 在拖放情况下，您无需创建数据对象。  指向现有数据对象的指针将传递到 `OnDrop` 函数。  此数据对象将由框架作为拖放操作一部分创建，还将由框架销毁。  在通过其他方式进行粘贴时并不总是这样。  有关详细信息，请参阅[销毁数据对象](#_core_destroying_data_objects)。  
+ In a drag-and-drop situation, you do not need to create a data object. A pointer to an existing data object will be passed to your `OnDrop` function. This data object is created by the framework as part of the drag-and-drop operation and will also be destroyed by it. This is not always the case when pasting is done by another method. For more information, see [Destroying Data Objects](#_core_destroying_data_objects).  
   
- 如果应用程序要执行粘贴或选择性粘贴操作，您应创建 `COleDataObject` 对象并调用其 `AttachClipboard` 成员函数。  这会将数据对象与剪贴板上的数据关联。  您之后可在粘贴函数中使用此数据对象。  
+ If the application is performing a paste or paste special operation, you should create a `COleDataObject` object and call its `AttachClipboard` member function. This associates the data object with the data on the Clipboard. You can then use this data object in your paste function.  
   
-##  <a name="_core_destroying_data_objects"></a> 销毁数据对象  
- 如果您按照[创建对象数据](#_core_creating_data_objects)中描述的方案操作，销毁数据对象是数据传输次要的一面。  在粘贴函数中创建的数据对象将在粘贴函数返回时由 MFC 销毁。  
+##  <a name="_core_destroying_data_objects"></a> Destroying Data Objects  
+ If you follow the scheme described in [Creating Data Objects](#_core_creating_data_objects), destroying data objects is a trivial aspect of data transfers. The data object that was created in your paste function will be destroyed by MFC when your paste function returns.  
   
- 如果您按照另一种方法处理粘贴操作，则务必在粘贴操作完成后销毁数据对象。  在销毁数据对象之前，任何应用程序均无法成功将数据复制到剪贴板。  
+ If you follow another method of handling paste operations, make sure the data object is destroyed after your paste operation is complete. Until the data object is destroyed, it will be impossible for any application to successfully copy data to the Clipboard.  
   
-##  <a name="_core_creating_data_sources"></a> 创建数据源  
- 数据源由数据传输源使用，该源可以是数据传输客户端或数据传输服务器端。  源应用程序中的数据源是源应用程序与目标应用程序之间的连接的一端。  目标应用程序中的数据对象用于与数据源中的数据交互。  
+##  <a name="_core_creating_data_sources"></a> Creating Data Sources  
+ Data sources are used by the source of the data transfer, which can be either the client or the server side of the data transfer. A data source in the source application is one end of a connection between the source application and the destination application. A data object in the destination application is used to interact with the data in the data source.  
   
- 当应用程序需要将数据复制到剪贴板时，将创建数据源。  一个典型方案运行如下：  
+ Data sources are created when an application needs to copy data to the Clipboard. A typical scenario runs like this:  
   
-1.  用户选择某数据。  
+1.  The user selects some data.  
   
-2.  用户从**“编辑”**菜单中选择**“复制”**（或**“剪切”**）或开始拖放操作。  
+2.  The user chooses **Copy** (or **Cut**) from the **Edit** menu or begins a drag-and-drop operation.  
   
-3.  根据程序的设计，应用程序将创建 `COleDataSource` 对象或从派生自 `COleDataSource` 的类创建对象。  
+3.  Depending on the design of the program, the application creates either a `COleDataSource` object or an object from a class derived from `COleDataSource`.  
   
-4.  选定数据将插入数据源，方式为调用 `COleDataSource::CacheData` 或 `COleDataSource::DelayRenderData` 组中的函数之一。  
+4.  The selected data is inserted into the data source by calling one of the functions in the `COleDataSource::CacheData` or `COleDataSource::DelayRenderData` groups.  
   
-5.  应用程序将调用属于步骤 3 中所创建对象的 `SetClipboard` 成员函数（或 `DoDragDrop` 成员函数，如果这是一个拖放操作）。  
+5.  The application calls the `SetClipboard` member function (or the `DoDragDrop` member function if this is a drag-and-drop operation) belonging to the object created in step 3.  
   
-6.  如果这是**“剪切”**操作或 `DoDragDrop` 返回 `DROPEFFECT_MOVE`，则将从文档中删除步骤 1 中所选的数据。  
+6.  If this is a **Cut** operation or `DoDragDrop` returns `DROPEFFECT_MOVE`, the data selected in step 1 is deleted from the document.  
   
- 此方案将由 MFC OLE 示例 [OCLIENT](../top/visual-cpp-samples.md) 和 [HIERSVR](../top/visual-cpp-samples.md) 实现。  为每个应用程序的 `CView` 派生类（`GetClipboardData` 和 `OnGetClipboardData` 函数除外）查找源。  这两个函数位于 `COleClientItem` 或 `COleServerItem` 派生类实现中。  这些示例程序提供了一个很好的如何实现这些概念的示例。  
+ This scenario is implemented by the MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md). Look at the source for each application's `CView`-derived class for all but the `GetClipboardData` and `OnGetClipboardData` functions. These two functions are in either the `COleClientItem` or `COleServerItem`-derived class implementations. These sample programs provide a good example of how to implement these concepts.  
   
- 如果您修改拖放操作的默认行为，则将出现您可能需要创建 `COleDataSource` 对象的另一种情况。  有关详细信息，请参阅[拖放：自定义](../mfc/drag-and-drop-customizing.md)文章。  
+ One other situation in which you might want to create a `COleDataSource` object occurs if you are modifying the default behavior of a drag-and-drop operation. For more information, see the [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md) article.  
   
-##  <a name="_core_destroying_data_sources"></a> 销毁数据源  
- 数据源必须由当前负责它们的应用程序销毁。  在将数据源转交给 OLE 的情况下，如调用 [COleDataSource::DoDragDrop](../Topic/COleDataSource::DoDragDrop.md)，你需要调用 **pDataSrc\-\>InternalRelease**。  例如:  
+##  <a name="_core_destroying_data_sources"></a> Destroying Data Sources  
+ Data sources must be destroyed by the application currently responsible for them. In situations where you hand the data source to OLE, such as calling [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), you need to call **pDataSrc->InternalRelease**. For example:  
   
- [!CODE [NVC_MFCListView#1](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCListView#1)]  
+ [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   
- 如果您未将数据源转交给 OLE，则您将负责销毁它，与任何典型的 C\+\+ 对象一样。  
+ If you have not handed your data source to OLE, then you are responsible for destroying it, as with any typical C++ object.  
   
- 有关详细信息，请参阅[拖放](../mfc/drag-and-drop-ole.md)、[剪贴板](../mfc/clipboard.md)和[操作数据对象和数据源](../mfc/data-objects-and-data-sources-manipulation.md)。  
+ For more information, see [Drag and Drop](../mfc/drag-and-drop-ole.md), [Clipboard](../mfc/clipboard.md), and [Manipulating Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md).  
   
-## 请参阅  
- [数据对象和数据源 \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject Class](../mfc/reference/coledataobject-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

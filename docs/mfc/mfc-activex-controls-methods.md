@@ -1,53 +1,72 @@
 ---
-title: "MFC ActiveX 控件：方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控件, 方法"
+title: 'MFC ActiveX Controls: Methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC ActiveX 控件：方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d4142b38abaed1bda6c1069da9e64e92328db222
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-ActiveX 控件激发事件通信在自身及其控件容器之间。  容器还可以与控件进行通信通过方法和属性。  方法也调用函数。  
+---
+# <a name="mfc-activex-controls-methods"></a>MFC ActiveX Controls: Methods
+An ActiveX control fires events to communicate between itself and its control container. A container can also communicate with a control by means of methods and properties. Methods are also called functions.  
   
- 方法和属性提供的导出的接口供其他应用程序使用的数据，如的自动化客户程序和 ActiveX 控件容器。  有关 ActiveX 控件属性的更多信息，请参见知识库文章 [MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)。  
+ Methods and properties provide an exported interface for use by other applications, such as Automation clients and ActiveX control containers. For more information on ActiveX control properties, see the article [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md).  
   
- 方法非常相似在使用中并且打算为 C.C\+\+ 类的成员函数。  具有控件可以执行方法的两种类型：常用和自定义。  类似于常用事件，常用方法是 [COleControl](../mfc/reference/colecontrol-class.md) 提供的实现的方法。  有关常用方法的更多信息，请参见知识库文章 [MFC ActiveX 控件：添加常用方法](../mfc/mfc-activex-controls-adding-stock-methods.md)。  自定义方法，定义由开发人员，允许控件的其他自定义项。  有关更多信息，请参见知识库文章 [MFC ActiveX 控件：添加自定义方法](../mfc/mfc-activex-controls-adding-custom-methods.md)。  
+ Methods are similar in use and purpose to the member functions of a C++ class. There are two types of methods your control can implement: stock and custom. Similar to stock events, stock methods are those methods for which [COleControl](../mfc/reference/colecontrol-class.md) provides an implementation. For more information on stock methods, see the article [MFC ActiveX Controls: Adding Stock Methods](../mfc/mfc-activex-controls-adding-stock-methods.md). Custom methods, defined by the developer, allow additional customization of the control. For more information, see the article [MFC ActiveX Controls: Adding Custom Methods](../mfc/mfc-activex-controls-adding-custom-methods.md).  
   
- Microsoft 基础类库 \(MFC\) 实现允许控件支持和库存自定义方法的机制。  第一部分是类 `COleControl`。  从 `CWnd`派生，`COleControl` 成员函数支持的所有 ActiveX 控件共有的常用方法。  此机制的第二部分是计划映射。  计划映射与消息映射；但是，不是消息标识映射到 Windows 的函数，计划映射映射虚成员函数为 IDS IDispatch。  
+ The Microsoft Foundation Class Library (MFC) implements a mechanism that allows your control to support stock and custom methods. The first part is class `COleControl`. Derived from `CWnd`, `COleControl` member functions support stock methods that are common to all ActiveX controls. The second part of this mechanism is the dispatch map. A dispatch map is similar to a message map; however, instead of mapping a function to a Windows message ID, a dispatch map maps virtual member functions to IDispatch IDS.  
   
- 为了能够正确支持的控件的各种方法，其类必须声明计划映射。  这是在控件类标题中的下列代码行 \(完成。H\) 文件：  
+ For a control to support various methods properly, its class must declare a dispatch map. This is accomplished by the following line of code located in control class header (.H) file:  
   
- [!code-cpp[NVC_MFC_AxUI#13](../mfc/codesnippet/CPP/mfc-activex-controls-methods_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#13](../mfc/codesnippet/cpp/mfc-activex-controls-methods_1.h)]  
   
- 映射计划的主要目的生成外部调用方使用的方法名称 \(例如容器\) 和实现方法控件类的成员函数之间的关系。  在计划映射后声明，在控件的实现 \(.cpp\) 文件所定义。  以下代码行定义计划映射：  
+ The main purpose of the dispatch map is to establish the relationship between the method names used by an external caller (such as the container) and the member functions of the control's class that implement the methods. After the dispatch map has been declared, it needs to be defined in the control's implementation (.CPP) file. The following lines of code define the dispatch map:  
   
- [!code-cpp[NVC_MFC_AxUI#14](../mfc/codesnippet/CPP/mfc-activex-controls-methods_2.cpp)]  
-[!code-cpp[NVC_MFC_AxUI#15](../mfc/codesnippet/CPP/mfc-activex-controls-methods_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#14](../mfc/codesnippet/cpp/mfc-activex-controls-methods_2.cpp)]  
+[!code-cpp[NVC_MFC_AxUI#15](../mfc/codesnippet/cpp/mfc-activex-controls-methods_3.cpp)]  
   
- 如果将使用 [MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md) 创建项目，这些行自动添加了。  如果未使用 MFC ActiveX 控件向导，您必须手动添加这些行。  
+ If you used the [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md) to create the project, these lines were added automatically. If the MFC ActiveX Control Wizard was not used, you must add these lines manually.  
   
- 下列文章详细讨论方法：  
+ The following articles discuss methods in detail:  
   
--   [MFC ActiveX 控件：添加常用方法](../mfc/mfc-activex-controls-adding-stock-methods.md)  
+-   [MFC ActiveX Controls: Adding Stock Methods](../mfc/mfc-activex-controls-adding-stock-methods.md)  
   
--   [MFC ActiveX 控件：添加自定义方法](../mfc/mfc-activex-controls-adding-custom-methods.md)  
+-   [MFC ActiveX Controls: Adding Custom Methods](../mfc/mfc-activex-controls-adding-custom-methods.md)  
   
--   [MFC ActiveX 控件：从方法返回的错误代码](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
+-   [MFC ActiveX Controls: Returning Error Codes From a Method](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

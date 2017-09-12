@@ -1,48 +1,67 @@
 ---
-title: "对 Rebar 控件使用图像列表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "图像列表 [C++], rebar 控件"
-  - "rebar 控件, 图像列表"
+title: Using an Image List with a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], rebar controls
+- rebar controls [MFC], image lists
 ms.assetid: 1a5836ac-019a-46aa-8741-b35c3376b839
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 对 Rebar 控件使用图像列表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2f705dcbc58eae33688197066e5e59874ddb761
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-每个rebar 带可以包含在其他事中的从关联的图像列表里的图像。  以下过程详细描述在rebar带显示图像的必要步骤。  
+---
+# <a name="using-an-image-list-with-a-rebar-control"></a>Using an Image List with a Rebar Control
+Each rebar band can contain, among other things, an image from an associated image list. The following procedure details the necessary steps for displaying an image in a rebar band.  
   
-### 在rebar带中显示图像  
+### <a name="to-display-images-in-a-rebar-band"></a>To display images in a rebar band  
   
-1.  附加图像列表到 rebar 控件，通过调用 [SetImageList](../Topic/CReBarCtrl::SetImageList.md)，将指针传递给现有图像列表。  
+1.  Attach an image list to your rebar control object by making a call to [SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist), passing a pointer to an existing image list.  
   
-2.  修改 **REBARBANDINFO** 结构以分配图像到 rebar 带：  
+2.  Modify the **REBARBANDINFO** structure to assign an image to a rebar band:  
   
-    -   按位设置 **fMask** 成员设置为 **RBBIM\_IMAGE**，使用按位 OR 运算符以包含需要的标志。  
+    -   Set the **fMask** member to **RBBIM_IMAGE**, using the bitwise OR operator to include additional flags as necessary.  
   
-    -   将 `iImage` 成员设置为要显示图像的图像列表索引。  
+    -   Set the `iImage` member to the image list index of the image to be displayed.  
   
-3.  初始化其余的数据成员，如大小，文本和包含子窗口的句柄，使用必要的信息。  
+3.  Initialize any remaining data members, such as the size, text, and handle of the contained child window, with the necessary information.  
   
-4.  插入新的带区 \(使用图像\)，调用[CReBarCtrl::InsertBand](../Topic/CReBarCtrl::InsertBand.md)，将传递**REBARBANDINFO** 结构。  
+4.  Insert the new band (with the image) with a call to [CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband), passing the **REBARBANDINFO** structure.  
   
- 下面的示例假定两个图像的现有图像列表对象附加到 rebar 控件对象 \(`m_wndReBar`\)。  新的rebar带 \(定义带 `rbi`\)，其中包含第一个图像，添加一个对`InsertBand`的调用：  
+ The following example assumes that an existing image list object with two images was attached to the rebar control object (`m_wndReBar`). A new rebar band (defined by `rbi`), containing the first image, is added with a call to `InsertBand`:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/CPP/using-an-image-list-with-a-rebar-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]  
   
-## 请参阅  
- [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

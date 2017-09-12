@@ -1,41 +1,60 @@
 ---
-title: "框架中的对话框组件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "对话框类, 对话框组件"
-  - "对话框模板, MFC 框架"
-  - "MFC 对话框, 关于 MFC 对话框"
-  - "MFC 对话框, 创建"
-  - "MFC 对话框, 对话框资源"
+title: Dialog-Box Components in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], creating
+- dialog classes [MFC], dialog box components
+- MFC dialog boxes [MFC], about MFC dialog boxes
+- dialog templates [MFC], MFC framework
+- MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 框架中的对话框组件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: febab670bf86f87701da0d6ea23784fa56979137
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在 MFC 框架，对话框有两个组件：  
+---
+# <a name="dialog-box-components-in-the-framework"></a>Dialog-Box Components in the Framework
+In the MFC framework, a dialog box has two components:  
   
--   指定对话框的控件及其位置的对话框模板资源。  
+-   A dialog-template resource that specifies the dialog box's controls and their placement.  
   
-     对话框资源存储窗口创建对话框窗口和显示该对话框的模板。  模板指定对话框的特性，其中包括其大小、位置、样式和对话框控件的类型和位置。  您通常使用作为资源存储的对话框模板，但您也可以创建自己内存中的模板。  
+     The dialog resource stores a dialog template from which Windows creates the dialog window and displays it. The template specifies the dialog box's characteristics, including its size, location, style, and the types and positions of the dialog box's controls. You will usually use a dialog template stored as a resource, but you can also create your own template in memory.  
   
--   对话框类，从中派生对话框，[CDialog](../mfc/reference/cdialog-class.md)用于管理提供编程接口。  
+-   A dialog class, derived from [CDialog](../mfc/reference/cdialog-class.md), to provide a programmatic interface for managing the dialog box.  
   
-     对话框是窗口，然后附加到窗口时，窗口显示。  当对话框创建窗口时，对话框模板资源将用作模板用于创建子窗口控件的对话框。  
+     A dialog box is a window and will be attached to a Windows window when visible. When the dialog window is created, the dialog-template resource is used as a template for creating child window controls for the dialog box.  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

@@ -1,123 +1,142 @@
 ---
-title: "异常：从 MFC 异常宏转换 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "捕捉块, 分隔"
-  - "CException 类, 删除 CException 类对象"
-  - "转换, 使用 MFC 宏编写的代码"
-  - "转换异常"
-  - "异常处理, 转换异常"
-  - "异常对象"
-  - "异常对象, 删除"
-  - "异常, 转换"
-  - "异常, 删除异常对象"
-  - "关键字 [C++], 宏"
-  - "宏, C++ 关键字"
+title: 'Exceptions: Converting from MFC Exception Macros | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- converting exceptions [MFC]
+- exception objects [MFC]
+- conversions [MFC], code written with MFC macros
+- keywords [MFC], macros
+- macrosv, C++ keywords
+- exception objects [MFC], deleting
+- CException class [MFC], deleting CException class objects
+- exceptions [MFC], converting
+- exceptions [MFC], deleting exception objects
+- catch blocks [MFC], delimiting
+- exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 异常：从 MFC 异常宏转换
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 41f83358d6a472a01a32ccf9b86d62481f6e03a7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-这是一个高级主题。  
+---
+# <a name="exceptions-converting-from-mfc-exception-macros"></a>Exceptions: Converting from MFC Exception Macros
+This is an advanced topic.  
   
- 本文说明如何转换现有代码编写使用 Microsoft 基础类 \- 宏 **TRY**，**CATCH**，**THROW**，等使用异常处理关键字 **try**、**catch**和 `throw`的 C\+\+。  主题包括：  
+ This article explains how to convert existing code written with Microsoft Foundation Class macros — **TRY**, **CATCH**, **THROW**, and so on — to use the C++ exception-handling keywords **try**, **catch**, and `throw`. Topics include:  
   
--   [转换优点](#_core_advantages_of_converting)  
+-   [Conversion advantages](#_core_advantages_of_converting)  
   
--   [转换与异常宏使用 C\+\+ 异常的代码](#_core_doing_the_conversion)  
+-   [Converting code with exception macros to use C++ exceptions](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a> 转换的优点  
- 您可能不需要转换现有代码，所以，虽然您应该知道在宏实现在 MFC 3.0 版及实现之间的差异。早期版本。  这些差异和后续更改。代码行为在 [异常：指向异常宏在版本 3.0 中的更改](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)讨论。  
+##  <a name="_core_advantages_of_converting"></a> Advantages of Converting  
+ You probably do not need to convert existing code, although you should be aware of differences between the macro implementations in MFC version 3.0 and the implementations in earlier versions. These differences and subsequent changes in code behavior are discussed in [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
- 转换的主要优点是：  
+ The principal advantages of converting are:  
   
--   代码使用异常处理关键字的 C\+\+ 编译为一个稍微小的 .EXE 或 .DLL。  
+-   Code that uses the C++ exception-handling keywords compiles to a slightly smaller .EXE or .DLL.  
   
--   异常处理关键字的 C\+\+ 更通用的：可以处理这些属性可以复制任意数据类型的异常 \(`int`、**浮动**，`char`，依此类推\)，则宏，而只需要处理异常从其派生的类和 `CException` 类。  
+-   The C++ exception-handling keywords are more versatile: They can handle exceptions of any data type that can be copied (`int`, **float**, `char`, and so on), whereas the macros handle exceptions only of class `CException` and classes derived from it.  
   
- 当异常超出范围时，宏和关键字之间的主要差异在于该代码使用宏“自动”删除所捕获的异常。  使用关键字的代码不，因此，必须显式删除所捕获的异常。  有关更多信息，请参见知识库文章 [异常：捕获异常和删除](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
+ The major difference between the macros and the keywords is that code using the macros "automatically" deletes a caught exception when the exception goes out of scope. Code using the keywords does not, so you must explicitly delete a caught exception. For more information, see the article [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
- 另一不同之处是语法。  宏和关键字的语法在三个方面不同：  
+ Another difference is syntax. The syntax for macros and keywords differs in three respects:  
   
-1.  宏的参数和异常声明：  
+1.  Macro arguments and exception declarations:  
   
-     **CATCH** 宏调用具有以下语法：  
+     A **CATCH** macro invocation has the following syntax:  
   
-     **CATCH\(** *exception\_class*，*exception\_object\_pointer\_name* \#\#\#\)  
+     **CATCH(** *exception_class*, *exception_object_pointer_name* **)**  
   
-     请注意是类名和名称对象指针间的逗号。  
+     Notice the comma between the class name and the object pointer name.  
   
-     **catch** 关键字的异常声明使用此语法：  
+     The exception declaration for the **catch** keyword uses this syntax:  
   
-     **catch\(** *exception\_type* *exception\_name*\#\#\#\)  
+     **catch(** *exception_type* *exception_name***)**  
   
-     此异常声明语句指示异常类型的 catch 块中处理。  
+     This exception declaration statement indicates the type of exception the catch block handles.  
   
-2.  Catch 块中的一个：  
+2.  Delimitation of catch blocks:  
   
-     宏，**CATCH** 宏 \(带有参数\) 开始第一个 Catch 块；`AND_CATCH` 宏开始后续 catch 块，catch 块，`END_CATCH` 宏终止序列。  
+     With the macros, the **CATCH** macro (with its arguments) begins the first catch block; the `AND_CATCH` macro begins subsequent catch blocks, and the `END_CATCH` macro terminates the sequence of catch blocks.  
   
-     关键字，**catch** 关键字 \(使用的异常声明\) 开始每个 catch 块。  没有复制为 `END_CATCH` 宏；catch 块的右大括号。结束  
+     With the keywords, the **catch** keyword (with its exception declaration) begins each catch block. There is no counterpart to the `END_CATCH` macro; the catch block ends with its closing brace.  
   
-3.  引发表达式：  
+3.  The throw expression:  
   
-     宏使用 `THROW_LAST` 重新引发当前异常。  `throw` 关键字，而参数，这具有同样的效果。  
+     The macros use `THROW_LAST` to re-throw the current exception. The `throw` keyword, with no argument, has the same effect.  
   
-##  <a name="_core_doing_the_conversion"></a> 执行转换。  
+##  <a name="_core_doing_the_conversion"></a> Doing the Conversion  
   
-#### 转换代码使用宏使用的 C\+\+ 异常处理关键字  
+#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>To convert code using macros to use the C++ exception-handling keywords  
   
-1.  查找 MFC 宏 **TRY**、**CATCH**、`AND_CATCH`、`END_CATCH`、**THROW**和 `THROW_LAST`的所有匹配项。  
+1.  Locate all occurrences of the MFC macros **TRY**, **CATCH**, `AND_CATCH`, `END_CATCH`, **THROW**, and `THROW_LAST`.  
   
-2.  替换或删除以下宏的所有匹配项：  
+2.  Replace or delete all occurrences of the following macros:  
   
-     **TRY** \(请用 **try**替换它。\)  
+     **TRY** (Replace it with **try**)  
   
-     **CATCH** \(请用 **catch**替换它。\)  
+     **CATCH** (Replace it with **catch**)  
   
-     `AND_CATCH` \(用 **catch**替换它。\)  
+     `AND_CATCH` (Replace it with **catch**)  
   
-     `END_CATCH` \(其删除。\)  
+     `END_CATCH` (Delete it)  
   
-     **THROW** \(用 `throw`替换它。\)  
+     **THROW** (Replace it with `throw`)  
   
-     `THROW_LAST` \(将 `throw`替换为该\)  
+     `THROW_LAST` (Replace it with `throw`)  
   
-3.  修改的参数，以便形成有效的异常声明。  
+3.  Modify the macro arguments so that they form valid exception declarations.  
   
-     例如，若要更改  
+     For example, change  
   
-     [!code-cpp[NVC_MFCExceptions#6](../mfc/codesnippet/CPP/exceptions-converting-from-mfc-exception-macros_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#6](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]  
   
-     设置为  
+     to  
   
-     [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/CPP/exceptions-converting-from-mfc-exception-macros_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]  
   
-4.  修改在执行 catch 块中的代码，以便根据需要删除异常对象。  有关更多信息，请参见知识库文章 [异常：捕获异常和删除](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
+4.  Modify the code in the catch blocks so that it deletes exception objects as necessary. For more information, see the article [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
- 使用 MFC 宏异常，这是异常处理代码的示例。  请注意，因为在下面示例中的代码使用宏，将引发异常 `e` 自动删除：  
+ Here is an example of exception-handling code using MFC exception macros. Note that because the code in the following example uses the macros, the exception `e` is deleted automatically:  
   
- [!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/CPP/exceptions-converting-from-mfc-exception-macros_3.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_3.cpp)]  
   
- 在下一示例中的代码使用了 C\+\+ 异常关键字，因此，必须显式删除异常：  
+ The code in the next example uses the C++ exception keywords, so the exception must be explicitly deleted:  
   
- [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/CPP/exceptions-converting-from-mfc-exception-macros_4.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]  
   
- 有关更多信息，请参见 [异常：使用 MFC 宏和 C\+\+ 异常](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)。  
+ For more information, see [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).  
   
-## 请参阅  
- [异常处理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

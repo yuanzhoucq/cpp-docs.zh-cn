@@ -1,47 +1,65 @@
 ---
-title: "ATL 向导添加的 ATL 支持的详细信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.atl.support"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, MFC 项目"
-  - "MFC, ATL 支持"
+title: Details of ATL Support Added by the ATL Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.atl.support
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, ATL support
+- ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# ATL 向导添加的 ATL 支持的详细信息
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 44532e102ab648ad553917b2b6a8a5307fc20f93
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当[向已有 MFC 可执行文件或 DLL 添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)时，Visual C\+\+ 对现有 MFC 项目做如下修改（此例中，项目称为 `MFCEXE`）：  
+---
+# <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Details of ATL Support Added by the ATL Wizard
+When you [add ATL support to an existing MFC executable or DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ makes the following modifications to the existing MFC project (in this example, the project is called `MFCEXE`):  
   
--   添加两个新文件（.idl 文件和 .rgs 文件，用于注册服务器）。  
+-   Two new files (an .idl file and an .rgs file, used to register the server) are added.  
   
--   在主应用程序头文件和实现文件（Mfcexe.h 和 Mfcexe.cpp）中添加一个新类（从 **CAtlMFCModule** 导出）。  除了此新类外，还向 `InitInstance` 中添加注册用的代码。  还向 `ExitInstance` 函数中添加用于撤消类对象的代码。  最后，在实现文件中包括头文件中的两个新头文件（Initguid.h 和 Mfcexe\_i.c），声明并初始化 **CAtlMFCModule** 导出类的新 GUID。  
+-   In the main application header and implementation files (Mfcexe.h and Mfcexe.cpp), a new class (derived from **CAtlMFCModule**) is added. In addition to the new class, code is added to `InitInstance` for registration. Code is also added to the `ExitInstance` function for revoking the class object. In the header file, Finally, two new header files (Initguid.h and Mfcexe_i.c) are included in the implementation file, declaring and initializing the new GUIDs for the **CAtlMFCModule**-derived class.  
   
--   为正确注册服务器，向项目的资源文件中添加新 .rgs 文件的项。  
+-   To register the server properly, an entry for the new .rgs file is added to the project's resource file.  
   
-## DLL 项目注意事项  
- 向 MFC DLL 项目添加 ATL 支持时，将会发现有些差异。  向 **DLLRegisterServer** 和 **DLLUnregisterServer** 函数中添加用于注册和注销 DLL 的代码。  还向 [DllCanUnloadNow](../Topic/CAtlDllModuleT::DllCanUnloadNow.md) 和 [DllGetClassObject](../Topic/CAtlDllModuleT::DllGetClassObject.md) 中添加代码。  
+## <a name="notes-for-dll-projects"></a>Notes for DLL Projects  
+ When you add ATL support to an MFC DLL project, you will see some differences. Code is added to the **DLLRegisterServer** and **DLLUnregisterServer** functions for registering and unregistering the DLL. Code is also added to [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) and [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
   
-## 请参阅  
- [MFC 项目中的 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
- [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [添加类](../../ide/adding-a-class-visual-cpp.md)   
- [添加成员函数](../../ide/adding-a-member-function-visual-cpp.md)   
- [添加成员变量](../../ide/adding-a-member-variable-visual-cpp.md)   
- [重写虚函数](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 消息处理程序](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [导航类结构](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [ATL Support in an MFC Project](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "CDocTemplate 类 |Microsoft 文档"
+title: CDocTemplate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- document templates
-- templates, document
-- CDocTemplate class
+- CDocTemplate [MFC], CDocTemplate
+- CDocTemplate [MFC], AddDocument
+- CDocTemplate [MFC], CloseAllDocuments
+- CDocTemplate [MFC], CreateNewDocument
+- CDocTemplate [MFC], CreateNewFrame
+- CDocTemplate [MFC], CreateOleFrame
+- CDocTemplate [MFC], CreatePreviewFrame
+- CDocTemplate [MFC], GetDocString
+- CDocTemplate [MFC], GetFirstDocPosition
+- CDocTemplate [MFC], GetNextDoc
+- CDocTemplate [MFC], InitialUpdateFrame
+- CDocTemplate [MFC], LoadTemplate
+- CDocTemplate [MFC], MatchDocType
+- CDocTemplate [MFC], OpenDocumentFile
+- CDocTemplate [MFC], RemoveDocument
+- CDocTemplate [MFC], SaveAllModified
+- CDocTemplate [MFC], SetContainerInfo
+- CDocTemplate [MFC], SetDefaultTitle
+- CDocTemplate [MFC], SetPreviewInfo
+- CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 caps.latest.revision: 22
 author: mikeblome
@@ -56,103 +73,103 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 56ad45a061986c320e14054a2c77683cb5d89ac2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66dd645ba2146fd8f8910deb4bc9c3e3bbe1ee8c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdoctemplate-class"></a>CDocTemplate 类
-定义文档模板基本功能的抽象基类。  
+# <a name="cdoctemplate-class"></a>CDocTemplate Class
+An abstract base class that defines the basic functionality for document templates.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocTemplate : public CCmdTarget  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保护的构造函数  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocTemplate::CDocTemplate](#cdoctemplate)|构造 `CDocTemplate` 对象。|  
+|[CDocTemplate::CDocTemplate](#cdoctemplate)|Constructs a `CDocTemplate` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocTemplate::AddDocument](#adddocument)|将文档添加到模板。|  
-|[CDocTemplate::CloseAllDocuments](#closealldocuments)|关闭与此模板关联的所有文档。|  
-|[CDocTemplate::CreateNewDocument](#createnewdocument)|创建新文档。|  
-|[CDocTemplate::CreateNewFrame](#createnewframe)|创建新的框架窗口包含文档和视图。|  
-|[CDocTemplate::CreateOleFrame](#createoleframe)|创建已启用 OLE 的框架窗口。|  
-|[CDocTemplate::CreatePreviewFrame](#createpreviewframe)|创建一个子框架用于丰富预览。|  
-|[CDocTemplate::GetDocString](#getdocstring)|检索与文档类型关联的字符串。|  
-|[CDocTemplate::GetFirstDocPosition](#getfirstdocposition)|检索与此模板关联的第一个文档的位置。|  
-|[CDocTemplate::GetNextDoc](#getnextdoc)|检索文档以及下一个位置。|  
-|[CDocTemplate::InitialUpdateFrame](#initialupdateframe)|初始化框架窗口中，并根据需要使其可见。|  
-|[CDocTemplate::LoadTemplate](#loadtemplate)|加载的资源给定`CDocTemplate`或派生类。|  
-|[CDocTemplate::MatchDocType](#matchdoctype)|确定文档类型与此模板之间的匹配的置信度。|  
-|[CDocTemplate::OpenDocumentFile](#opendocumentfile)|打开文件以指定的路径名。|  
-|[CDocTemplate::RemoveDocument](#removedocument)|从模板中删除文档。|  
-|[CDocTemplate::SaveAllModified](#saveallmodified)|保存与此模板关联的已修改的所有文档。|  
-|[CDocTemplate::SetContainerInfo](#setcontainerinfo)|在编辑就地 OLE 项时，请确定 OLE 容器的资源。|  
-|[CDocTemplate::SetDefaultTitle](#setdefaulttitle)|文档窗口的标题栏中显示的默认标题。|  
-|[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|安装程序进程外的预览处理程序。|  
-|[CDocTemplate::SetServerInfo](#setserverinfo)|当服务器文档嵌入或编辑适当地确定资源和类。|  
+|[CDocTemplate::AddDocument](#adddocument)|Adds a document to a template.|  
+|[CDocTemplate::CloseAllDocuments](#closealldocuments)|Closes all documents associated with this template.|  
+|[CDocTemplate::CreateNewDocument](#createnewdocument)|Creates a new document.|  
+|[CDocTemplate::CreateNewFrame](#createnewframe)|Creates a new frame window containing a document and view.|  
+|[CDocTemplate::CreateOleFrame](#createoleframe)|Creates an OLE-enabled frame window.|  
+|[CDocTemplate::CreatePreviewFrame](#createpreviewframe)|Creates a child frame used for Rich Preview.|  
+|[CDocTemplate::GetDocString](#getdocstring)|Retrieves a string associated with the document type.|  
+|[CDocTemplate::GetFirstDocPosition](#getfirstdocposition)|Retrieves the position of the first document associated with this template.|  
+|[CDocTemplate::GetNextDoc](#getnextdoc)|Retrieves a document and the position of the next one.|  
+|[CDocTemplate::InitialUpdateFrame](#initialupdateframe)|Initializes the frame window, and optionally makes it visible.|  
+|[CDocTemplate::LoadTemplate](#loadtemplate)|Loads the resources for a given `CDocTemplate` or derived class.|  
+|[CDocTemplate::MatchDocType](#matchdoctype)|Determines the degree of confidence in the match between a document type and this template.|  
+|[CDocTemplate::OpenDocumentFile](#opendocumentfile)|Opens a file specified by a pathname.|  
+|[CDocTemplate::RemoveDocument](#removedocument)|Removes a document from a template.|  
+|[CDocTemplate::SaveAllModified](#saveallmodified)|Saves all documents associated with this template which have been modified.|  
+|[CDocTemplate::SetContainerInfo](#setcontainerinfo)|Determines the resources for OLE containers when editing an in-place OLE item.|  
+|[CDocTemplate::SetDefaultTitle](#setdefaulttitle)|Displays the default title in the document window's title bar.|  
+|[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|Setups out of process preview handler.|  
+|[CDocTemplate::SetServerInfo](#setserverinfo)|Determines the resources and classes when the server document is embedded or edited in-place.|  
   
-## <a name="remarks"></a>备注  
- 通常在您的应用程序实现中创建一个或多个文档模板`InitInstance`函数。 文档模板定义了三种类型的类之间的关系︰  
+## <a name="remarks"></a>Remarks  
+ You usually create one or more document templates in the implementation of your application's `InitInstance` function. A document template defines the relationships among three types of classes:  
   
--   一个文档类，该类派生自**CDocument**。  
+-   A document class, which you derive from **CDocument**.  
   
--   视图类，该类显示上面列出的文档类中的数据。 可派生自此类，从`CView`， `CScrollView`， `CFormView`，或`CEditView`。 (您还可以使用`CEditView`直接。)  
+-   A view class, which displays data from the document class listed above. You can derive this class from `CView`, `CScrollView`, `CFormView`, or `CEditView`. (You can also use `CEditView` directly.)  
   
--   框架窗口类，包含的视图。 对于单文档界面 (SDI) 应用程序，则此类派生自`CFrameWnd`。 对于多文档界面 (MDI) 应用程序，派生自此类，从`CMDIChildWnd`。 如果您不需要自定义框架窗口的行为，则可以使用`CFrameWnd`或`CMDIChildWnd`直接而不用派生您自己的类。  
+-   A frame window class, which contains the view. For a single document interface (SDI) application, you derive this class from `CFrameWnd`. For a multiple document interface (MDI) application, you derive this class from `CMDIChildWnd`. If you don't need to customize the behavior of the frame window, you can use `CFrameWnd` or `CMDIChildWnd` directly without deriving your own class.  
   
- 应用程序具有它支持的文档的每种类型的一个文档模板。 例如，如果您的应用程序支持电子表格和文本文档，该应用程序将有两个文档模板对象。 每个文档模板负责创建和管理其类型的所有文档。  
+ Your application has one document template for each type of document that it supports. For example, if your application supports both spreadsheets and text documents, the application has two document template objects. Each document template is responsible for creating and managing all the documents of its type.  
   
- 文档模板存储指向`CRuntimeClass`文档、 视图和框架窗口类的对象。 这些`CRuntimeClass`构造的文档模板时所指定的对象。  
+ The document template stores pointers to the `CRuntimeClass` objects for the document, view, and frame window classes. These `CRuntimeClass` objects are specified when constructing a document template.  
   
- 文档模板包含与文档类型 （如菜单、 图标或快捷键对应表资源） 一起使用的资源的 ID。 文档模板还具有包含文档类型的附加信息的字符串。 其中包括文档类型 （例如，"工作表"） 和文件扩展名 (例如，".xls") 的名称。 （可选） 它可以包含应用程序的用户界面、 Windows 文件管理器中，和对象链接和嵌入 (OLE) 支持使用其他字符串。  
+ The document template contains the ID of the resources used with the document type (such as menu, icon, or accelerator table resources). The document template also has strings containing additional information about its document type. These include the name of the document type (for example, "Worksheet") and the file extension (for example, ".xls"). Optionally, it can contain other strings used by the application's user interface, the Windows File Manager, and Object Linking and Embedding (OLE) support.  
   
- 如果您的应用程序是 OLE 容器和/或服务器，文档模板还定义称为就地激活期间使用的菜单的 ID。 如果您的应用程序是 OLE 服务器，文档模板定义的工具栏和菜单在就地激活过程中使用的 ID。 通过调用指定以下其他 OLE 资源`SetContainerInfo`和`SetServerInfo`。  
+ If your application is an OLE container and/or server, the document template also defines the ID of the menu used during in-place activation. If your application is an OLE server, the document template defines the ID of the toolbar and menu used during in-place activation. You specify these additional OLE resources by calling `SetContainerInfo` and `SetServerInfo`.  
   
- 因为`CDocTemplate`是一个抽象类不能直接使用该类。 典型的应用程序使用两种状态之一`CDocTemplate`的派生类提供的 Microsoft 基础类库︰ `CSingleDocTemplate`，用来实现 SDI、 和`CMultiDocTemplate`，用来实现 MDI。 有关使用文档模板，请参阅这些类的详细信息。  
+ Because `CDocTemplate` is an abstract class, you cannot use the class directly. A typical application uses one of the two `CDocTemplate`-derived classes provided by the Microsoft Foundation Class Library: `CSingleDocTemplate`, which implements SDI, and `CMultiDocTemplate`, which implements MDI. See those classes for more information on using document templates.  
   
- 如果您的应用程序需要从根本上不同于 SDI 或 MDI 用户界面模式，可以派生您自己的类从`CDocTemplate`。  
+ If your application requires a user-interface paradigm that is fundamentally different from SDI or MDI, you can derive your own class from `CDocTemplate`.  
   
- 有关详细信息`CDocTemplate`，请参阅[文档模板和文档/视图创建过程](../../mfc/document-templates-and-the-document-view-creation-process.md)。  
+ For more information on `CDocTemplate`, see [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocTemplate`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="adddocument"></a>CDocTemplate::AddDocument  
- 使用此函数将文档添加到模板。  
+##  <a name="adddocument"></a>  CDocTemplate::AddDocument  
+ Use this function to add a document to a template.  
   
 ```  
 virtual void AddDocument(CDocument* pDoc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- 指向要添加的文档的指针。  
+ A pointer to the document to be added.  
   
-### <a name="remarks"></a>备注  
- 派生的类[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)和[CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)重写此函数。 如果派生您自己的文档模板类从`CDocTemplate`，派生的类必须重写此函数。  
+### <a name="remarks"></a>Remarks  
+ The derived classes [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) and [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) override this function. If you derive your own document-template class from `CDocTemplate`, your derived class must override this function.  
   
-##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
- 构造 `CDocTemplate` 对象。  
+##  <a name="cdoctemplate"></a>  CDocTemplate::CDocTemplate  
+ Constructs a `CDocTemplate` object.  
   
 ```  
 CDocTemplate (
@@ -162,11 +179,11 @@ CDocTemplate (
     CRuntimeClass* pViewClass);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDResource`  
- 指定与文档类型一起使用的资源的 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
+ Specifies the ID of the resources used with the document type. This may include menu, icon, accelerator table, and string resources.  
   
- 字符串资源都包括达七个 \n 字符分隔的子字符串 （'\n' 字符需要作为一个占位符，不含一个子字符串时; 但是，不需要尾随的 '\n' 字符）;这些子字符串说明了文档类型。 子字符串的信息，请参阅[GetDocString](#getdocstring)。 应用程序的资源文件中可以找到该字符串资源。 例如:   
+ The string resource consists of up to seven substrings separated by the '\n' character (the '\n' character is needed as a place holder if a substring is not included; however, trailing '\n' characters are not necessary); these substrings describe the document type. For information on the substrings, see [GetDocString](#getdocstring). This string resource is found in the application's resource file. For example:  
   
  `// MYCALC.RC`  
   
@@ -178,48 +195,48 @@ CDocTemplate (
   
  `END`  
   
- 请注意，该字符串开头的 '\n' 字符;这是因为第一个子字符串不用于 MDI 应用程序，因此不包括在内。 您可以编辑使用字符串编辑器; 此字符串整个字符串不是作为七个不同的项作为单个条目在字符串编辑器中，将出现。  
+ Note that the string begins with a '\n' character; this is because the first substring is not used for MDI applications and so is not included. You can edit this string using the string editor; the entire string appears as a single entry in the String Editor, not as seven separate entries.  
   
  `pDocClass`  
- 指向`CRuntimeClass`文档类的对象。 此类是**CDocument**的派生类定义来表示你的文档。  
+ Points to the `CRuntimeClass` object of the document class. This class is a **CDocument**-derived class you define to represent your documents.  
   
  `pFrameClass`  
- 指向`CRuntimeClass`的框架窗口类的对象。 此类可以是`CFrameWnd`-派生的类，也可以是`CFrameWnd`本身如果希望为您的主框架窗口默认行为。  
+ Points to the `CRuntimeClass` object of the frame window class. This class can be a `CFrameWnd`-derived class, or it can be `CFrameWnd` itself if you want default behavior for your main frame window.  
   
  `pViewClass`  
- 指向`CRuntimeClass`视图类的对象。 此类是`CView`的派生类定义以显示您的文档。  
+ Points to the `CRuntimeClass` object of the view class. This class is a `CView`-derived class you define to display your documents.  
   
-### <a name="remarks"></a>备注  
- 使用此成员函数来构造`CDocTemplate`对象。 动态分配`CDocTemplate`对象，并将其传递给[CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)从`InitInstance`应用程序类的成员函数。  
+### <a name="remarks"></a>Remarks  
+ Use this member function to construct a `CDocTemplate` object. Dynamically allocate a `CDocTemplate` object and pass it to [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) from the `InitInstance` member function of your application class.  
   
-##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
- 调用该成员函数以关闭所有打开的文档。  
+##  <a name="closealldocuments"></a>  CDocTemplate::CloseAllDocuments  
+ Call this member function to close all open documents.  
   
 ```  
 virtual void CloseAllDocuments(BOOL bEndSession);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bEndSession`  
- 指定在正在结束会话。 它是**TRUE**如果会话正在结束; 否则为**FALSE**。  
+ Specifies whether or not the session is being ended. It is **TRUE** if the session is being ended; otherwise **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 此成员函数通常用作文件退出命令的一部分。 此函数的默认实现调用[CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents)成员函数删除文档的数据，然后关闭所有视图的框架窗口附加到文档。  
+### <a name="remarks"></a>Remarks  
+ This member function is typically used as part of the File Exit command. The default implementation of this function calls the [CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents) member function to delete the document's data and then closes the frame windows for all the views attached to the document.  
   
- 如果你希望要求用户执行的特殊清理处理之前关闭文档，重写此函数。 例如，如果文档表示数据库中的记录，您可能想要重写此函数以关闭该数据库。  
+ Override this function if you want to require the user to perform special cleanup processing before the document is closed. For example, if the document represents a record in a database, you may want to override this function to close the database.  
   
-##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
- 调用该成员函数以创建与此文档模板关联的类型的新文档。  
+##  <a name="createnewdocument"></a>  CDocTemplate::CreateNewDocument  
+ Call this member function to create a new document of the type associated with this document template.  
   
 ```  
 virtual CDocument* CreateNewDocument();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向新创建的文档的指针或**NULL**如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created document, or **NULL** if an error occurs.  
   
-##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
- 创建新的框架窗口包含文档和视图。  
+##  <a name="createnewframe"></a>  CDocTemplate::CreateNewFrame  
+ Creates a new frame window containing a document and view.  
   
 ```  
 virtual CFrameWnd* CreateNewFrame(
@@ -227,23 +244,23 @@ virtual CFrameWnd* CreateNewFrame(
     CFrameWnd* pOther);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- 新的框架窗口应引用的文档。 可以是**NULL**。  
+ The document to which the new frame window should refer. Can be **NULL**.  
   
  `pOther`  
- 新的框架窗口是以数据为基础的框架窗口。 可以是**NULL**。  
+ The frame window on which the new frame window is to be based. Can be **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 指向新创建的框架窗口中，或**NULL**如果发生错误。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created frame window, or **NULL** if an error occurs.  
   
-### <a name="remarks"></a>备注  
- `CreateNewFrame`使用`CRuntimeClass`对象传递给构造函数可与视图和附加的文档创建一个新的框架窗口。 如果`pDoc`参数是**NULL**，框架将输出跟踪消息。  
+### <a name="remarks"></a>Remarks  
+ `CreateNewFrame` uses the `CRuntimeClass` objects passed to the constructor to create a new frame window with a view and document attached. If the `pDoc` parameter is **NULL**, the framework outputs a TRACE message.  
   
- `pOther`参数用于实现新建窗口命令。 它提供了新的框架窗口的模型所依据的框架窗口。 通常会创建新的框架窗口不可见。 调用此函数可创建新文件，并打开文件的标准框架实现之外的框架窗口。  
+ The `pOther` parameter is used to implement the Window New command. It provides a frame window on which to model the new frame window. The new frame window is usually created invisible. Call this function to create frame windows outside the standard framework implementation of File New and File Open.  
   
-##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
- 创建 OLE 框架窗口。  
+##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
+ Creates an OLE frame window.  
   
 ```  
 CFrameWnd* CreateOleFrame(
@@ -252,24 +269,24 @@ CFrameWnd* CreateOleFrame(
     BOOL bCreateView);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 指向框架的父窗口的指针。  
+ A pointer to the frame's parent window.  
   
  `pDoc`  
- 指向新的 OLE 框架窗口应引用的文档的指针。  
+ A pointer to the document to which the new OLE frame window should refer.  
   
  `bCreateView`  
- 确定是否以及框架创建一个视图。  
+ Determines whether a view is created along with the frame.  
   
-### <a name="return-value"></a>返回值  
- 框架窗口，如果成功，则指向的指针否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a frame window if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 如果`bCreateView`为零，则创建一个空框架。  
+### <a name="remarks"></a>Remarks  
+ If `bCreateView` is zero, an empty frame is created.  
   
-##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
- 检索与文档类型关联的字符串。  
+##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
+ Retrieves a string associated with the document type.  
   
 ```  
 virtual BOOL GetDocString(
@@ -277,73 +294,73 @@ virtual BOOL GetDocString(
     enum DocStringIndex index) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rString`  
- 对引用`CString`函数返回时，将包含字符串的对象。  
+ A reference to a `CString` object that will contain the string when the function returns.  
   
- *索引*  
- 要检索的字符串，描述文档类型的子字符串的索引。 此参数可以具有下列值之一：  
+ *index*  
+ An index of the substring being retrieved from the string that describes the document type. This parameter can have one of the following values:  
   
-- **CDocTemplate::windowTitle**将出现在应用程序窗口标题栏 (例如，"Microsoft Excel") 的名称。 仅在 SDI 应用程序的文档模板中提供。  
+- **CDocTemplate::windowTitle** Name that appears in the application window's title bar (for example, "Microsoft Excel"). Present only in the document template for SDI applications.  
   
-- **CDocTemplate::docName**默认文档名称 （例如，"表"） 的根。 每当用户选择新建命令，从文件菜单 （例如，"Sheet1"或"Sheet2"） 时，此根，加上一个数字，用于这种类型的一个新文档的默认名称。 如果未指定，"无标题"用作默认值。  
+- **CDocTemplate::docName** Root for the default document name (for example, "Sheet"). This root, plus a number, is used for the default name of a new document of this type whenever the user chooses the New command from the File menu (for example, "Sheet1" or "Sheet2"). If not specified, "Untitled" is used as the default.  
   
-- **CDocTemplate::fileNewName**此文档类型的名称。 如果应用程序支持多个文档的类型，此字符串被显示在文件新建对话框中 （例如，"工作表"）。 如果未指定，该文档类型不可使用新建文件命令。  
+- **CDocTemplate::fileNewName** Name of this document type. If the application supports more than one type of document, this string is displayed in the File New dialog box (for example, "Worksheet"). If not specified, the document type is inaccessible using the File New command.  
   
-- **CDocTemplate::filterName**文档类型和通配符筛选器匹配的此类型的文档的说明。 此字符串将显示在列表的文件类型下拉列表中打开文件对话框中 （例如，"工作表 (*.xls)"）。 如果未指定，该文档类型不可使用文件打开命令。  
+- **CDocTemplate::filterName** Description of the document type and a wildcard filter matching documents of this type. This string is displayed in the List Files Of Type drop-down list in the File Open dialog box (for example, "Worksheets (*.xls)"). If not specified, the document type is inaccessible using the File Open command.  
   
-- **CDocTemplate::filterExt**扩展对于此类型 (例如，".xls") 的文档。 如果未指定，该文档类型不可使用文件打开命令。  
+- **CDocTemplate::filterExt** Extension for documents of this type (for example, ".xls"). If not specified, the document type is inaccessible using the File Open command.  
   
-- **CDocTemplate::regFileTypeId**由 Windows 维护到注册数据库中存储的文档类型标识符。 此字符串是仅供内部使用 (例如，"ExcelWorksheet")。 如果未指定，则无法使用 Windows 文件管理器注册的文档类型。  
+- **CDocTemplate::regFileTypeId** Identifier for the document type to be stored in the registration database maintained by Windows. This string is for internal use only (for example, "ExcelWorksheet"). If not specified, the document type cannot be registered with the Windows File Manager.  
   
-- **CDocTemplate::regFileTypeName**在注册数据库中存储的文档类型的名称。 此字符串可能会显示在对话框中的应用程序访问注册数据库 （例如，"Microsoft Excel 工作表"）。  
+- **CDocTemplate::regFileTypeName** Name of the document type to be stored in the registration database. This string may be displayed in dialog boxes of applications that access the registration database (for example, "Microsoft Excel Worksheet").  
   
-### <a name="return-value"></a>返回值  
- 如果指定的子字符串; 如果未找到，则为非否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified substring was found; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可检索描述文档类型的特定子字符串。 包含这些子字符串的字符串存储在文档模板和派生自该应用程序的资源文件中的字符串。 框架调用此函数可获取它需要的应用程序的用户界面的字符串。 如果已指定文件扩展名的应用程序的文档，框架还调用此函数时将条目添加到 Windows 注册数据库;这样，要打开 Windows 文件管理器的文档。  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve a specific substring describing the document type. The string containing these substrings is stored in the document template and is derived from a string in the resource file for the application. The framework calls this function to get the strings it needs for the application's user interface. If you have specified a filename extension for your application's documents, the framework also calls this function when adding an entry to the Windows registration database; this allows documents to be opened from the Windows File Manager.  
   
- 调用此函数，仅当派生您自己的类从`CDocTemplate`。  
+ Call this function only if you are deriving your own class from `CDocTemplate`.  
   
-##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
- 检索与此模板关联的第一个文档的位置。  
+##  <a name="getfirstdocposition"></a>  CDocTemplate::GetFirstDocPosition  
+ Retrieves the position of the first document associated with this template.  
   
 ```  
 virtual POSITION GetFirstDocPosition() const = 0;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个**位置**值，该值可用于循环访问与此文档模板; 关联的文档的列表或**NULL**如果列表为空。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used to iterate through the list of documents associated with this document template; or **NULL** if the list is empty.  
   
-### <a name="remarks"></a>备注  
- 使用此函数来获取与此模板关联的文档的列表中的第一个文档的位置。 使用**位置**形式的参数值[CDocTemplate::GetNextDoc](#getnextdoc)来循环访问与模板关联的文档的列表。  
+### <a name="remarks"></a>Remarks  
+ Use this function to get the position of the first document in the list of documents associated with this template. Use the **POSITION** value as an argument to [CDocTemplate::GetNextDoc](#getnextdoc) to iterate through the list of documents associated with the template.  
   
- [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)和[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)都重写此纯虚函数。 从中派生的任何类`CDocTemplate`还必须重写此函数。  
+ [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) and [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) both override this pure virtual function. Any class you derive from `CDocTemplate` must also override this function.  
   
-##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
- 检索标识的列表元素`rPos`，然后设置`rPos`到**位置**列表中的下一个条目的值。  
+##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
+ Retrieves the list element identified by `rPos`, then sets `rPos` to the **POSITION** value of the next entry in the list.  
   
 ```  
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向与此模板关联的文档的列表中的下一个文档的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next document in the list of documents associated with this template.  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rPos`  
- 对引用**位置**的以前调用返回值[GetFirstDocPosition](#getfirstdocposition)或`GetNextDoc`。  
+ A reference to a **POSITION** value returned by a previous call to [GetFirstDocPosition](#getfirstdocposition) or `GetNextDoc`.  
   
-### <a name="remarks"></a>备注  
- 如果检索的元素则在列表中，最后的新值`rPos`设置为**NULL**。  
+### <a name="remarks"></a>Remarks  
+ If the retrieved element is the last in the list, then the new value of `rPos` is set to **NULL**.  
   
- 您可以使用`GetNextDoc`在向前迭代循环中，如果您建立的初始位置，通过调用[GetFirstDocPosition](#getfirstdocposition)。  
+ You can use `GetNextDoc` in a forward iteration loop if you establish the initial position with a call to [GetFirstDocPosition](#getfirstdocposition).  
   
- 您必须确保您**位置**值表示列表中的有效位置。 如果该值无效，Microsoft 基础类库的调试版本断言。  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
-##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
- 初始化框架窗口中，并根据需要使其可见。  
+##  <a name="initialupdateframe"></a>  CDocTemplate::InitialUpdateFrame  
+ Initializes the frame window, and optionally makes it visible.  
   
 ```  
 virtual void InitialUpdateFrame(
@@ -352,33 +369,33 @@ virtual void InitialUpdateFrame(
     BOOL bMakeVisible = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pFrame`  
- 需要初始更新框架窗口。  
+ The frame window that needs the initial update.  
   
  `pDoc`  
- 框架将关联到该文档。 可以是**NULL**。  
+ The document to which the frame is associated. Can be **NULL**.  
   
  `bMakeVisible`  
- 表示框架应变得可见并处于活动状态。  
+ Indicates whether the frame should become visible and active.  
   
-### <a name="remarks"></a>备注  
- 调用**IntitialUpdateFrame**创建与新帧后`CreateNewFrame`。 调用此函数在接收该框架窗口中将导致视图及其`OnInitialUpdate`调用。 此外，如果没有以前的活动视图，框架窗口的主视图进行身份验证活动状态，则主视图是子 id 为视图**AFX_IDW_PANE_FIRST**。 最后，框架窗口中变为可见如果`bMakeVisible`为非零。 如果`bMakeVisible`为零，当前焦点和框架窗口的可见状态将保持不变。  
+### <a name="remarks"></a>Remarks  
+ Call **IntitialUpdateFrame** after creating a new frame with `CreateNewFrame`. Calling this function causes the views in that frame window to receive their `OnInitialUpdate` calls. Also, if there was not previously an active view, the primary view of the frame window is made active; the primary view is a view with a child ID of **AFX_IDW_PANE_FIRST**. Finally, the frame window is made visible if `bMakeVisible` is non-zero. If `bMakeVisible` is zero, the current focus and visible state of the frame window will remain unchanged.  
   
- 不需要使用的框架实现文件新建和打开文件时调用此函数。  
+ It is not necessary to call this function when using the framework's implementation of File New and File Open.  
   
-##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
- 加载的资源给定`CDocTemplate`或派生类。  
+##  <a name="loadtemplate"></a>  CDocTemplate::LoadTemplate  
+ Loads the resources for a given `CDocTemplate` or derived class.  
   
 ```  
 virtual void LoadTemplate();
 ```  
   
-### <a name="remarks"></a>备注  
- 此成员函数由框架调用以针对加载资源给定`CDocTemplate`或派生类。 通常情况下它在构造期间，除时调用全局正在构建模板。 在这种情况下，对调用`LoadTemplate`延迟直至[CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)调用。  
+### <a name="remarks"></a>Remarks  
+ This member function is called by the framework to load the resources for a given `CDocTemplate` or derived class. Normally it is called during construction, except when the template is being constructed globally. In that case, the call to `LoadTemplate` is delayed until [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) is called.  
   
-##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
- 确定文档类型与此模板之间的匹配的置信度。  
+##  <a name="matchdoctype"></a>  CDocTemplate::MatchDocType  
+ Determines the degree of confidence in the match between a document type and this template.  
   
 ```  
 virtual Confidence MatchDocType(
@@ -386,15 +403,15 @@ virtual Confidence MatchDocType(
     CDocument*& rpDocMatch);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszPathName`  
- 要确定其类型的文件的路径名。  
+ Pathname of the file whose type is to be determined.  
   
  `rpDocMatch`  
- 如果指定的文件，则分配匹配的文档，文档的指针`lpszPathName`已打开。  
+ Pointer to a document that is assigned the matching document, if the file specified by `lpszPathName` is already open.  
   
-### <a name="return-value"></a>返回值  
- 取值范围为**置信度**枚举，它按以下方式定义︰  
+### <a name="return-value"></a>Return Value  
+ A value from the **Confidence** enumeration, which is defined as follows:  
   
 ```  
 enum Confidence  
@@ -408,19 +425,19 @@ enum Confidence
     };  
 ```  
   
-### <a name="remarks"></a>备注  
- 使用此函数来确定要用于打开文件的文档模板的类型。 如果您的应用程序支持多个文件类型，例如，您可以使用此函数来确定哪种可用的文档模板适用于给定文件通过调用`MatchDocType`对于每个模板中打开，并选择模板根据置信度值返回。  
+### <a name="remarks"></a>Remarks  
+ Use this function to determine the type of document template to use for opening a file. If your application supports multiple file types, for example, you can use this function to determine which of the available document templates is appropriate for a given file by calling `MatchDocType` for each template in turn, and choosing a template according to the confidence value returned.  
   
- 如果指定的文件`lpszPathName`已经打开，此函数将返回**CDocTemplate::yesAlreadyOpen** ，并将该文件的复制**CDocument**对象处的对象置于`rpDocMatch`。  
+ If the file specified by `lpszPathName` is already open, this function returns **CDocTemplate::yesAlreadyOpen** and copies the file's **CDocument** object into the object at `rpDocMatch`.  
   
- 如果该文件不是打开中的扩展，但`lpszPathName`匹配所指定的扩展**CDocTemplate::filterExt**，此函数将返回**CDocTemplate::yesAttemptNative** ，并设置`rpDocMatch`到**NULL**。 有关详细信息**CDocTemplate::filterExt**，请参阅[CDocTemplate::GetDocString](#getdocstring)。  
+ If the file is not open but the extension in `lpszPathName` matches the extension specified by **CDocTemplate::filterExt**, this function returns **CDocTemplate::yesAttemptNative** and sets `rpDocMatch` to **NULL**. For more information on **CDocTemplate::filterExt**, see [CDocTemplate::GetDocString](#getdocstring).  
   
- 如果任何情况下为 true，则该函数将返回**CDocTemplate::yesAttemptForeign**。  
+ If neither case is true, the function returns **CDocTemplate::yesAttemptForeign**.  
   
- 默认实现不会返回**CDocTemplate::maybeAttemptForeign**或**CDocTemplate::maybeAttemptNative**。 重写此函数可实现适合您的应用程序，可能使用从这两个值的类型匹配的逻辑**置信度**枚举。  
+ The default implementation does not return **CDocTemplate::maybeAttemptForeign** or **CDocTemplate::maybeAttemptNative**. Override this function to implement type-matching logic appropriate to your application, perhaps using these two values from the **Confidence** enumeration.  
   
-##  <a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
- 打开由路径指定一个文件。  
+##  <a name="opendocumentfile"></a>  CDocTemplate::OpenDocumentFile  
+ Opens a file specified by a path.  
   
 ```  
 virtual CDocument* OpenDocumentFile(LPCTSTR lpszPathName) = 0;  
@@ -430,75 +447,75 @@ virtual CDocument* OpenDocumentFile(
     BOOL bAddToMRU) = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPathName`  
- 指针，指向包含要打开的文档的文件的路径。  
+ Pointer to the path of the file that contains the document to be opened.  
   
  [in] `bAddToMRU`  
- `TRUE`指示的文档是一个最新的文件;`FALSE`指示该文档不是最新的文件之一。  
+ `TRUE` indicates the document is one of the most recent files; `FALSE` indicates the document is not one of the most recent files.  
   
-### <a name="return-value"></a>返回值  
- 指向由名为其文件文档的指针`lpszPathName`;`NULL`如果不成功。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document whose file is named by `lpszPathName`; `NULL` if unsuccessful.  
   
-### <a name="remarks"></a>备注  
- 打开指定其路径的文件`lpszPathName`。 如果`lpszPathName`是`NULL`，创建新文件，其中包含与此模板关联的类型的文档。  
+### <a name="remarks"></a>Remarks  
+ Opens the file whose path is specified by `lpszPathName`. If `lpszPathName` is `NULL`, a new file that contains a document of the type associated with this template is created.  
   
-##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
- 删除所指向的文档`pDoc`从与此模板关联的文档的列表。  
+##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
+ Removes the document pointed to by `pDoc` from the list of documents associated with this template.  
   
 ```  
 virtual void RemoveDocument(CDocument* pDoc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- 指向要删除的文档的指针。  
+ Pointer to the document to be removed.  
   
-### <a name="remarks"></a>备注  
- 派生的类`CMultiDocTemplate`和`CSingleDocTemplate`重写此函数。 如果派生您自己的文档模板类从`CDocTemplate`，派生的类必须重写此函数。  
+### <a name="remarks"></a>Remarks  
+ The derived classes `CMultiDocTemplate` and `CSingleDocTemplate` override this function. If you derive your own document-template class from `CDocTemplate`, your derived class must override this function.  
   
-##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
- 保存已修改的所有文档。  
+##  <a name="saveallmodified"></a>  CDocTemplate::SaveAllModified  
+ Saves all documents that have been modified.  
   
 ```  
 virtual BOOL SaveAllModified();
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零如果成功，则否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Non-zero if successful; otherwise 0.  
   
-##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
- 在编辑就地 OLE 项时，请确定 OLE 容器的资源。  
+##  <a name="setcontainerinfo"></a>  CDocTemplate::SetContainerInfo  
+ Determines the resources for OLE containers when editing an in-place OLE item.  
   
 ```  
 void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDOleInPlaceContainer`  
- 使用嵌入的对象被激活时的资源 ID。  
+ The ID of the resources used when an embedded object is activated.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可设置的 OLE 对象位于就地激活时使用的资源。 这些资源可能包括菜单和快捷键表。 通常调用此函数[cwinapp:: Initinstance](../../mfc/reference/cwinapp-class.md#initinstance)您应用程序的功能。  
+### <a name="remarks"></a>Remarks  
+ Call this function to set the resources to be used when an OLE object is in-place activated. These resources may include menus and accelerator tables. This function is usually called in the [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) function of your application.  
   
- 与关联的菜单`nIDOleInPlaceContainer`包含允许激活的就地项，若要合并的菜单与容器应用程序的菜单的分隔符。 有关合并服务器和容器菜单的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
+ The menu associated with `nIDOleInPlaceContainer` contains separators that allow the menu of the activated in-place item to merge with the menu of the container application. For more information about merging server and container menus, see the article [Menus and Resources (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
- 调用此函数可加载文档的默认标题并将其显示在文档的标题栏中。  
+##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
+ Call this function to load the document's default title and display it in the document's title bar.  
   
 ```  
 virtual void SetDefaultTitle(CDocument* pDocument) = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pDocument*  
- 指向其标题是要设置的文档的指针。  
+ Pointer to the document whose title is to be set.  
   
-### <a name="remarks"></a>备注  
- 默认标题的信息，请参阅的说明**CDocTemplate::docName**中[CDocTemplate::GetDocString](#getdocstring)。  
+### <a name="remarks"></a>Remarks  
+ For information on the default title, see the description of **CDocTemplate::docName** in [CDocTemplate::GetDocString](#getdocstring).  
   
-##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
- 当服务器文档嵌入或编辑适当地确定资源和类。  
+##  <a name="setserverinfo"></a>  CDocTemplate::SetServerInfo  
+ Determines the resources and classes when the server document is embedded or edited in-place.  
   
 ```  
 void SetServerInfo(
@@ -508,26 +525,26 @@ void SetServerInfo(
     CRuntimeClass* pOleViewClass = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nIDOleEmbedding*  
- 在一个单独的窗口中打开嵌入的对象时使用的资源 ID。  
+ The ID of the resources used when an embedded object is opened in a separate window.  
   
  `nIDOleInPlaceServer`  
- 就地激活嵌入的对象时使用的资源的 ID。  
+ The ID of the resources used when an embedded object is activated in-place.  
   
  *pOleFrameClass*  
- 指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构，它包含在就地激活发生时创建的框架窗口对象的类信息。  
+ Pointer to a [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure containing class information for the frame window object created when in-place activation occurs.  
   
  *pOleViewClass*  
- 指向`CRuntimeClass`结构，其中包含执行了就地激活时创建的视图对象的类信息。  
+ Pointer to a `CRuntimeClass` structure containing class information for the view object created when in-place activation occurs.  
   
-### <a name="remarks"></a>备注  
- 调用此成员函数可确定当用户请求激活嵌入对象时，服务器应用程序将使用的资源。 这些资源由菜单和快捷键对应表组成。 通常调用此函数`InitInstance`您的应用程序。  
+### <a name="remarks"></a>Remarks  
+ Call this member function to identify resources that will be used by the server application when the user requests activation of an embedded object. These resources consist of menus and accelerator tables. This function is usually called in the `InitInstance` of your application.  
   
- 与关联的菜单`nIDOleInPlaceServer`包含允许服务器菜单合并的容器的菜单的分隔符。 有关合并服务器和容器菜单的详细信息，请参阅文章[菜单和资源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
+ The menu associated with `nIDOleInPlaceServer` contains separators that allow the server menu to merge with the menu of the container. For more information about merging server and container menus, see the article [Menus and Resources (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
- 创建一个子框架用于丰富预览。  
+##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
+ Creates a child frame used for Rich Preview.  
   
 ```  
 CFrameWnd* CreatePreviewFrame(
@@ -535,20 +552,20 @@ CFrameWnd* CreatePreviewFrame(
     CDocument* pDoc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 指向父窗口 （通常由外壳中提供） 的指针。  
+ A pointer to a parent window (usually provided by the Shell).  
   
  `pDoc`  
- 指向其内容时，将可预览的文档对象的指针。  
+ A pointer to a document object, whose content will be previewed.  
   
-### <a name="return-value"></a>返回值  
- 指向的有效指针`CFrameWnd`对象，或`NULL`如果创建失败。  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to a `CFrameWnd` object, or `NULL` if the creation fails.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
- 设置外进程预览处理程序。  
+##  <a name="setpreviewinfo"></a>  CDocTemplate::SetPreviewInfo  
+ Sets up the out of process preview handler.  
   
 ```  
 void SetPreviewInfo(
@@ -557,28 +574,28 @@ void SetPreviewInfo(
     CRuntimeClass* pPreviewViewClass = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDPreviewFrame`  
- 指定的预览帧的资源 ID。  
+ Specifies a resource ID of the preview frame.  
   
  `pPreviewFrameClass`  
- 指定指向预览帧的运行时类信息结构的指针。  
+ Specifies a pointer to a runtime class information structure of the preview frame.  
   
  `pPreviewViewClass`  
- 指定为预览视图的运行时类信息结构的指针。  
+ Specifies a pointer to a runtime class information structure of the preview view.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CSingleDocTemplate 类](../../mfc/reference/csingledoctemplate-class.md)   
- [CMultiDocTemplate 类](../../mfc/reference/cmultidoctemplate-class.md)   
- [CDocument 类](../../mfc/reference/cdocument-class.md)   
- [CView 类](../../mfc/reference/cview-class.md)   
- [CScrollView 类](../../mfc/reference/cscrollview-class.md)   
- [CEditView 类](../../mfc/reference/ceditview-class.md)   
- [CFormView 类](../../mfc/reference/cformview-class.md)   
- [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)   
- [CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSingleDocTemplate Class](../../mfc/reference/csingledoctemplate-class.md)   
+ [CMultiDocTemplate Class](../../mfc/reference/cmultidoctemplate-class.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CScrollView Class](../../mfc/reference/cscrollview-class.md)   
+ [CEditView Class](../../mfc/reference/ceditview-class.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [CMDIChildWnd Class](../../mfc/reference/cmdichildwnd-class.md)
 

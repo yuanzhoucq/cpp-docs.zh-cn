@@ -1,91 +1,109 @@
 ---
-title: "MEASUREITEMSTRUCT 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MEASUREITEMSTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MEASUREITEMSTRUCT 结构"
+title: MEASUREITEMSTRUCT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MEASUREITEMSTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- MEASUREITEMSTRUCT structure [MFC]
 ms.assetid: d141ace4-47cb-46b5-a81c-ad2c5e5a8501
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# MEASUREITEMSTRUCT 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6eb06380885269ba55c187e1151d296808ccbe08
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-`MEASUREITEMSTRUCT` 结构通知窗口的所有者描述的控件或菜单项的大小。  
+---
+# <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT Structure
+The `MEASUREITEMSTRUCT` structure informs Windows of the dimensions of an owner-drawn control or menu item.  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagMEASUREITEMSTRUCT {  
-   UINT CtlType;  
-   UINT CtlID;  
-   UINT itemID;  
-   UINT itemWidth;  
-   UINT itemHeight;  
-   DWORD itemData  
+typedef struct tagMEASUREITEMSTRUCT {  
+    UINT CtlType;  
+    UINT CtlID;  
+    UINT itemID;  
+    UINT itemWidth;  
+    UINT itemHeight;  
+    DWORD itemData  
 } MEASUREITEMSTRUCT;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- 包含控件类型。  控件类型的值如下所示：  
+ Contains the control type. The values for control types are as follows:  
   
--   所有者描述**ODT\_COMBOBOX** 组合框  
+- **ODT_COMBOBOX** Owner-draw combo box  
   
--   所有者描述列表框**ODT\_LISTBOX**  
+- **ODT_LISTBOX** Owner-draw list box  
   
--   所有者描述**ODT\_MENU** 菜单  
+- **ODT_MENU** Owner-draw menu  
   
  `CtlID`  
- 包含组合框、列表框或按钮的控件 ID。  此成员对于菜单使用。  
+ Contains the control ID for a combo box, list box, or button. This member is not used for a menu.  
   
  `itemID`  
- 包含菜单的项目标识或变量高度组合框或列表框的列表框项 ID。  此成员不用于固定高度的组合框或列表框，或者为按钮。  
+ Contains the menu-item ID for a menu or the list-box-item ID for a variable-height combo box or list box. This member is not used for a fixed-height combo box or list box, or for a button.  
   
  *itemWidth*  
- 指定菜单项的宽度。  则从返回消息之前，所有者描述菜单项的所有者必须填充该成员。  
+ Specifies the width of a menu item. The owner of the owner-draw menu item must fill this member before it returns from the message.  
   
  *itemHeight*  
- 在列表框或下拉菜单指定单个项的高度。  在从消息之前返回，所有者描述组合框、列表框或菜单项的所有者必须填写此成员。  列表框项的最大事高度为 255。  
+ Specifies the height of an individual item in a list box or a menu. Before it returns from the message, the owner of the owner-draw combo box, list box, or menu item must fill out this member. The maximum height of a list box item is 255.  
   
  `itemData`  
- 对于组合框或列表框，此成员包含传递到下面列表框之一：  
+ For a combo box or list box, this member contains the value that was passed to the list box by one of the following:  
   
--   [CComboBox::AddString](../Topic/CComboBox::AddString.md)  
+- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
--   [CComboBox::InsertString](../Topic/CComboBox::InsertString.md)  
+- [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)  
   
--   [CListBox::AddString](../Topic/CListBox::AddString.md)  
+- [CListBox::AddString](../../mfc/reference/clistbox-class.md#addstring)  
   
--   [CListBox::InsertString](../Topic/CListBox::InsertString.md)  
+- [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)  
   
- 对于菜单，该成员包含传递到菜单下列操作之一：  
+ For a menu, this member contains the value that was passed to the menu by one of the following:  
   
--   [CMenu::AppendMenu](../Topic/CMenu::AppendMenu.md)  
+- [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
   
--   [CMenu::InsertMenu](../Topic/CMenu::InsertMenu.md)  
+- [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)  
   
--   [CMenu::ModifyMenu](../Topic/CMenu::ModifyMenu.md)  
+- [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- 这允许窗口正确处理与控件的交互。  未完成 `MEASUREITEMSTRUCT` 结构的相应成员会导致控件的不正确的操作。  
+ This allows Windows to process user interaction with the control correctly. Failure to fill out the proper members in the `MEASUREITEMSTRUCT` structure will cause improper operation of the control.  
   
-## 要求  
- **页眉：** 指令  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnMeasureItem](../Topic/CWnd::OnMeasureItem.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)
+
+

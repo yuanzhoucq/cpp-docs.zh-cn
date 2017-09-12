@@ -1,5 +1,5 @@
 ---
-title: "SYSTEMTIME 结构&1; |Microsoft 文档"
+title: SYSTEMTIME Structure1 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- SYSTEMTIME structure
+- SYSTEMTIME structure [MFC]
 ms.assetid: 9aaef4d6-de79-4fa1-8158-86b245ef5bff
 caps.latest.revision: 15
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 298b2673a3eb05525683f8269fcd415d5be1c80a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 16af580a7aea15814d1e45f4854d5ded946ebdf0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="systemtime-structure1"></a>SYSTEMTIME 结构&1;
-`SYSTEMTIME`结构表示的日期和时间用于月、 日、 年、 工作日、 小时、 分钟、 秒和毫秒为单位的各个成员。  
+# <a name="systemtime-structure1"></a>SYSTEMTIME Structure1
+The `SYSTEMTIME` structure represents a date and time using individual members for the month, day, year, weekday, hour, minute, second, and millisecond.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct _SYSTEMTIME {  
@@ -58,39 +58,39 @@ typedef struct _SYSTEMTIME {
 } SYSTEMTIME;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  *wYear*  
- 当前年份。  
+ The current year.  
   
  *wMonth*  
- 当前所处月份;一月表示为 1。  
+ The current month; January is 1.  
   
  *wDayOfWeek*  
- 当前日期是星期几;星期日为 0，星期一是 1，依此类推。  
+ The current day of the week; Sunday is 0, Monday is 1, and so on.  
   
  *wDay*  
- 当前日期的月份。  
+ The current day of the month.  
   
  *wHour*  
- 当前的小时数。  
+ The current hour.  
   
  *wMinute*  
- 当前的一分钟。  
+ The current minute.  
   
  *wSecond*  
- 当前第二个。  
+ The current second.  
   
  *wMilliseconds*  
- 当前的毫秒。  
+ The current millisecond.  
   
-## <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&39;](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#39](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]  
   
-## <a name="requirements"></a>要求  
- **标头︰** winbase.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winbase.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
 
 

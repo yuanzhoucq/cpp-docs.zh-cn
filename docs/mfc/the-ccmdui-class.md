@@ -1,38 +1,57 @@
 ---
-title: "CCmdUI 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCmdUI"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCmdUI 类, 菜单更新"
-  - "工具栏 [C++], 更新"
-  - "更新处理程序"
-  - "更新用户界面对象"
-  - "用户界面对象, 更新"
+title: The CCmdUI Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCmdUI
+dev_langs:
+- C++
+helpviewer_keywords:
+- updating user interface objects [MFC]
+- user interface objects [MFC], updating
+- CCmdUI class [MFC], menu updating
+- update handlers [MFC]
+- toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# CCmdUI 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 85c95a24e5c42e0d90d6f3b90ae22f10eec18f8d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当发送更新命令给其处理程序时，框架会传递给处理程序一个指向 `CCmdUI` 对象的指针 \(或 `CCmdUI`的对象派生类\)。  此对象表示发出命令的菜单项或工具栏按钮或其他用户界面对象。  更新处理程序是通过指针调用 `CCmdUI` 结构中成员函数来更新用户界面对象。  例如，这是一个用来清除所有菜单项的更新程序的例子：  
+---
+# <a name="the-ccmdui-class"></a>The CCmdUI Class
+When it routes an update command to its handler, the framework passes the handler a pointer to a `CCmdUI` object (or to an object of a `CCmdUI`-derived class). This object represents the menu item or toolbar button or other user-interface object that generated the command. The update handler calls member functions of the `CCmdUI` structure through the pointer to update the user-interface object. For example, here is an update handler for the Clear All menu item:  
   
- [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/CPP/the-ccmdui-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]  
   
- 此处理程序调用一个对象的 **启用** 成员函数，用于访问菜单项。  **启用** 使项可以使用。  
+ This handler calls the **Enable** member function of an object with access to the menu item. **Enable** makes the item available for use.  
   
-## 请参阅  
- [如何：更新用户界面对象](../mfc/how-to-update-user-interface-objects.md)
+## <a name="see-also"></a>See Also  
+ [How to: Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md)
+
+

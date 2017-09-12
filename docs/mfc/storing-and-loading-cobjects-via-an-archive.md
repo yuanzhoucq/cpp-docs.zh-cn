@@ -1,51 +1,70 @@
 ---
-title: "通过存档存储和加载 CObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArchive 类, 存储和加载对象"
-  - "CObject 类, CArchive 对象"
-  - "CObjects"
-  - "CObjects, 通过存档加载"
-  - "Serialize 方法, 与 CArchive 运算符"
+title: Storing and Loading CObjects via an Archive | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- CObjects [MFC], loading through archives
+- CArchive class [MFC], storing and loading objects
+- Serialize method, vs. CArchive operators
+- CObject class [MFC], CArchive objects
+- CObjects [MFC]
 ms.assetid: a829b6dd-bc31-47e0-8108-fbb946722db9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 通过存档存储和加载 CObject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eee40784ef6b8270efc631d9f585371a15b0f33a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-存储和加载的 `CObject`s 和存档需要通过额外的注意事项。  在某些情况下，您应调用对象的 `Serialize` 函数，`CArchive` 对象是 `Serialize` 调用参数，而不是使用 `CArchive`的 **\<\<** 或 **\>\>** 运算符相反。  需要谨记的重要情况为 `CArchive` **\>\>** 运算符构造在根据 `CRuntimeClass` 信息内存的 `CObject` 以前写入文件由存储的存档。  
+---
+# <a name="storing-and-loading-cobjects-via-an-archive"></a>Storing and Loading CObjects via an Archive
+Storing and loading `CObject`s via an archive requires extra consideration. In certain cases, you should call the `Serialize` function of the object, where the `CArchive` object is a parameter of the `Serialize` call, as opposed to using the **<\<** or **>>** operator of the `CArchive`. The important fact to keep in mind is that the `CArchive` **>>** operator constructs the `CObject` in memory based on `CRuntimeClass` information previously written to the file by the storing archive.  
   
- 因此，无论是使用 `CArchive` **\<\<**，然后 **\>\>** 运算符，与调用 `Serialize`，确定是否 *需要* 将存档动态地重新构造基于以前存储的信息的 `CRuntimeClass` 对象。  在 `Serialize` 例子中，添加以下函数：  
+ Therefore, whether you use the `CArchive` **<\<** and **>>** operators, versus calling `Serialize`, depends on whether you *need* the loading archive to dynamically reconstruct the object based on previously stored `CRuntimeClass` information. Use the `Serialize` function in the following cases:  
   
--   将反序列化对象，则预先知道对象的具体类。  
+-   When deserializing the object, you know the exact class of the object beforehand.  
   
--   将反序列化对象时，已经为其分配的内存。  
+-   When deserializing the object, you already have memory allocated for it.  
   
 > [!CAUTION]
->  使用 `Serialize` 函数，则加载对象，使用 `Serialize` 函数，还必须存储对象。  使用 `Serialize` 函数，使用 **CArchive \>\>** 运算符，请不要使用 `CArchive` 存储**\<\<** 运算符然后加载要或存储然后加载要使用 `Serialize` 函数。  
+>  If you load the object using the `Serialize` function, you must also store the object using the `Serialize` function. Don't store using the `CArchive` **<<** operator and then load using the `Serialize` function, or store using the `Serialize` function and then load using **CArchive >>** operator.  
   
- 以下示例演示了该例子。  
+ The following example illustrates the cases:  
   
- [!code-cpp[NVC_MFCSerialization#36](../mfc/codesnippet/CPP/storing-and-loading-cobjects-via-an-archive_1.h)]  
+ [!code-cpp[NVC_MFCSerialization#36](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_1.h)]  
   
- [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/CPP/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
   
- 总之，序列化定义了，则类嵌入的 t 为 **CObjec**成员，则 *不*应为该对象使用 `CArchive` **\<\<** 和 **\>\>** 运算符，而应调用 `Serialize` 函数。  此外，如果可序列化，类定义一个指向 `CObject` \(或从 `CObject`派生的对象。\) 为成员，即，但构造在其自己的构造函数，因此上述其他对象还应调用 `Serialize`。  
+ In summary, if your serializable class defines an embedded **CObjec**t as a member, you should *not* use the `CArchive` **<\<** and **>>** operators for that object, but should call the `Serialize` function instead. Also, if your serializable class defines a pointer to a `CObject` (or an object derived from `CObject`) as a member, but constructs this other object in its own constructor, you should also call `Serialize`.  
   
-## 请参阅  
- [序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md)
+
+

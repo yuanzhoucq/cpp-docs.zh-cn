@@ -1,5 +1,5 @@
 ---
-title: "CPaneDialog 类 |Microsoft 文档"
+title: CPaneDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,14 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPaneDialog::OnLButtonDblClk method
-- CPaneDialog::OnLButtonDown method
-- CPaneDialog::CreateObject method
-- CPaneDialog::OnUpdateCmdUI method
-- CPaneDialog constructor
-- CPaneDialog::OnEraseBkgnd method
-- CPaneDialog class
-- CPaneDialog::OnWindowPosChanging method
+- CPaneDialog [MFC], Create
+- CPaneDialog [MFC], HandleInitDialog
+- CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
 caps.latest.revision: 27
 author: mikeblome
@@ -44,50 +39,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 85c7e338382758dd809fb770c5ab14860e362da8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f31dc26c1262da98b87489f96ba6192bf901dc26
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpanedialog-class"></a>CPaneDialog 类
-`CPaneDialog`类支持无模式可停靠对话框。  
+# <a name="cpanedialog-class"></a>CPaneDialog Class
+The `CPaneDialog` class supports a modeless, dockable dialog box.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPaneDialog : public CDockablePane  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CPaneDialog::CPaneDialog`|默认构造函数。|  
-|`CPaneDialog::~CPaneDialog`|析构函数。|  
+|`CPaneDialog::CPaneDialog`|Default constructor.|  
+|`CPaneDialog::~CPaneDialog`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPaneDialog::Create](#create)|创建可停靠对话框中，并将其附加到`CPaneDialog`对象。|  
-|`CPaneDialog::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CPaneDialog::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CPaneDialog::HandleInitDialog](#handleinitdialog)|处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。 (将重新定义`CBasePane::HandleInitDialog`。)|  
-|`CPaneDialog::OnEraseBkgnd`|处理[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)消息。 (将重新定义[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)。)|  
-|`CPaneDialog::OnLButtonDblClk`|处理[需知道 WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606)消息。 (将重新定义[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk)。)|  
-|`CPaneDialog::OnLButtonDown`|处理[WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607)消息。 (将重新定义[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)。)|  
-|`CPaneDialog::OnUpdateCmdUI`|由框架来更新对话框窗口调用。 (重写[CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
-|`CPaneDialog::OnWindowPosChanging`|处理[WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653)消息。 (将重新定义[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)。)|  
-|[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|指定是 OLE 控件容器的对话框模板。|  
+|[CPaneDialog::Create](#create)|Creates a dockable dialog box and attaches it to a `CPaneDialog` object.|  
+|`CPaneDialog::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CPaneDialog::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CPaneDialog::HandleInitDialog](#handleinitdialog)|Handles the [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message. (Redefines `CBasePane::HandleInitDialog`.)|  
+|`CPaneDialog::OnEraseBkgnd`|Handles the [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) message. (Redefines [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
+|`CPaneDialog::OnLButtonDblClk`|Handles the [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) message. (Redefines [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
+|`CPaneDialog::OnLButtonDown`|Handles the [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) message. (Redefines [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Called by the framework to update the dialog box window. (Overrides [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnWindowPosChanging`|Handles the [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) message. (Redefines [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
+|[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Specifies the template for a dialog box that is an OLE control container.|  
   
-## <a name="remarks"></a>备注  
- 构造`CPaneDialog`两个步骤中的对象。 首先，构建您的代码中的对象。 其次，调用[CPaneDialog::Create](#create)。 必须指定有效的资源模板名称或模板 ID，并将指针传递到父窗口。 否则，在创建过程将失败。 对话框中必须指定的 WS_CHILD 和 WS_VISIBLE 样式。 我们建议你同时指定 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS 样式。 有关详细信息，请参阅[窗口样式](window-styles.md)。  
+## <a name="remarks"></a>Remarks  
+ Construct a `CPaneDialog` object in two steps. First, construct the object in your code. Second, call [CPaneDialog::Create](#create). You must specify a valid resource template name or template ID and pass a pointer to the parent window. Otherwise, the creation process fails. The dialog box must specify the WS_CHILD and WS_VISIBLE style. We recommend that you also specify the WS_CLIPCHILDREN and WS_CLIPSIBLINGS styles. For more information, see [Window Styles](window-styles.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,11 +97,11 @@ class CPaneDialog : public CDockablePane
   
  [CPaneDialog](../../mfc/reference/cpanedialog-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxpanedialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpanedialog.h  
   
-##  <a name="create"></a>CPaneDialog::Create  
- 创建停靠的对话框中，并将其附加到`CPaneDialog`对象。  
+##  <a name="create"></a>  CPaneDialog::Create  
+ Creates a docking dialog box and attaches it to a `CPaneDialog` object.  
   
 ```  
 BOOL Create(
@@ -143,47 +138,47 @@ BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszWindowName`  
- 停靠对话框中的名称。  
+ The name of the docking dialog box.  
   
  [in] `pParentWnd`  
- 指向父窗口。  
+ Points to the parent window.  
   
  [in] `bHasGripper`  
- `TRUE`若要创建停靠对话框中，用标题 （控制手柄）;否则为`FALSE`。  
+ `TRUE` to create the docking dialog box with a caption (gripper); otherwise, `FALSE`.  
   
  [in] `lpszTemplateName`  
- 资源对话框模板的名称。  
+ The name of the resource dialog template.  
   
  [in] `nStyle`  
- 窗口样式。  
+ The Windows style.  
   
  [in] `nID`  
- 控件 id。  
+ The control ID.  
   
  [in] `nIDTemplate`  
- 对话框模板资源 ID。  
+ The resource ID of the dialog template.  
   
  [in] `dwTabbedStyle`  
- 当用户将另一个控件窗格拖动到此控件窗格标题上时结果的选项卡式窗口的样式。 默认值为 `AFX_CBRS_REGULAR_TABS`。 有关详细信息，请参阅备注部分的[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
+ The style of the tabbed window that results when the user drags another control pane onto the caption of this control pane. The default value is `AFX_CBRS_REGULAR_TABS`. For more information, see the Remarks section of the [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) method.  
   
  [in] `dwControlBarStyle`  
- 其他样式特性。 默认值为 `AFX_DEFAULT_DOCKING_PANE_STYLE`。 有关详细信息，请参阅备注部分的[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
+ Additional style attributes. The default value is `AFX_DEFAULT_DOCKING_PANE_STYLE`. For more information, see the Remarks section of the [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) method.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>示例  
- 下面的示例演示如何使用`Create`中的方法`CPaneDialog`类。 此示例摘自[设置窗格大小示例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method in the `CPaneDialog` class. This example is part of the [Set Pane Size sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_SetPaneSize #&2;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
-[!code-cpp[NVC_MFC_SetPaneSize #&3;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
+[!code-cpp[NVC_MFC_SetPaneSize#3](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
-##  <a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
- 处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。  
+##  <a name="handleinitdialog"></a>  CPaneDialog::HandleInitDialog  
+ Handles the [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message.  
   
 ```  
 afx_msg LRESULT HandleInitDialog(
@@ -191,41 +186,41 @@ afx_msg LRESULT HandleInitDialog(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wParam`  
- 要接收的默认键盘焦点的控件的句柄。  
+ Handle to the control that is to receive the default keyboard focus.  
   
  [in] `lParam`  
- 指定附加的初始化数据。  
+ Specifies additional initialization data.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。 此外，`TRUE`将键盘焦点设置为指定的控件`wParam`参数;`FALSE`可防止设置默认键盘焦点。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`. In addition, `TRUE` sets the keyboard focus to the control specified by the `wParam` parameter; `FALSE` prevents setting the default keyboard focus.  
   
-### <a name="remarks"></a>备注  
- 该框架使用此方法来初始化控件和对话框中的外观。 然后再显示对话框中，框架将调用此方法。  
+### <a name="remarks"></a>Remarks  
+ The framework uses this method to initialize controls and the appearance of a dialog box. The framework calls this method before it displays the dialog box.  
   
-##  <a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
- 指定是 OLE 控件容器的对话框模板。  
+##  <a name="setoccdialoginfo"></a>  CPaneDialog::SetOccDialogInfo  
+ Specifies the template for a dialog box that is an OLE control container.  
   
 ```  
 virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pOccDialogInfo`  
- 到对话框模板用于创建对话框对象的指针。 此参数的值随后传递到[COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)方法。  
+ Pointer to a dialog box template that is used to create the dialog box object. The value of this parameter is subsequently passed into the [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) method.  
   
-### <a name="return-value"></a>返回值  
- 总是为 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 此方法支持[COccManager](../../mfc/reference/coccmanager-class.md)类，该类管理 OLE 控件站点和 ActiveX 控件。 _AFX_OCC_DIALOG_INFO 结构 afxocc.h 标头文件中定义。  
+### <a name="remarks"></a>Remarks  
+ This method supports the [COccManager](../../mfc/reference/coccmanager-class.md) class, which manages OLE control sites and ActiveX controls. The _AFX_OCC_DIALOG_INFO structure is defined in the afxocc.h header file.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)   
- [窗口样式](../../mfc/reference/window-styles.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
 
 

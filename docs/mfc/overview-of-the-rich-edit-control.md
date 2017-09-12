@@ -1,38 +1,57 @@
 ---
-title: "Rich Edit 控件概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Rich Edit 控件"
+title: Overview of the Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC]
 ms.assetid: ad589b9f-a3fd-4820-bf1f-6b1965997e68
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Rich Edit 控件概述
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a65d8829007bdb1fae17a74236dc9ca95ed5f278
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="overview-of-the-rich-edit-control"></a>Overview of the Rich Edit Control
 > [!IMPORTANT]
->  如果在对话框使用丰富的编辑控件 \(无论应用程序是否是 SDI，MDI 或基于对话框\)，必须一次调用 [AfxInitRichEdit](../Topic/AfxInitRichEdit.md)，在显示对话框之前。  调用此函数的典型排列程序的 `InitInstance` 成员函数。  不需要调用它，仅首次调用时每次显示对话框。  如果您使用 `CRichEditView`，您不必调用 `AfxInitRichEdit`。  
+>  If you are using a rich edit control in a dialog box (regardless of whether your application is SDI, MDI, or dialog-based), you must call [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) once before the dialog box is displayed. A typical place to call this function is in your program's `InitInstance` member function. You do not need to call it for each time you display the dialog box, only the first time. You do not have to call `AfxInitRichEdit` if you are working with `CRichEditView`.  
   
- Rich Edit 控件 \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) 提供用于格式化文本提供编程接口。  但是，应用程序必须实现任何必需用户界面的组件具有格式设置操作用户活动。  也就是说将选定文本更改的字符或段落特性的 Rich Edit 控件支持。  特性字符的一些示例为粗体，将使用斜体、字体系列和磅值。  段落对齐特性的示例包括、Margins 和制表位。  但是，将由提供用户界面的属性，不论为工具栏按钮、菜单项或对话框格式化符号。  也具有查询当前选定方面的 Rich Edit 控件的函数。  如果选定具有粗体字符格式特性，使用这些函数显示特性的当前设置，例如，在设置 UI 命令的选中标记。  
+ Rich edit controls ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) provide a programming interface for formatting text. However, an application must implement any user interface components necessary to make formatting operations available to the user. That is, the rich edit control supports changing the character or paragraph attributes of the selected text. Some examples of character attributes are bold, italics, font family, and point size. Examples of paragraph attributes include alignment, margins, and tab stops. However, it is up to you to provide the user interface, whether that is toolbar buttons, menu items, or a format character dialog box. There are also functions to query the rich edit control for the attributes of the current selection. Use these functions to display the current settings for the attributes, for example, setting a check mark on the command UI if the selection has the bold character formatting attribute.  
   
- 有关字符和段落格式设置的更多信息，请参见 [格式字符](../mfc/character-formatting-in-rich-edit-controls.md) 后和 [段落格式](../mfc/paragraph-formatting-in-rich-edit-controls.md) 本主题。  
+ For more information on character and paragraph formatting, see [Character Formatting](../mfc/character-formatting-in-rich-edit-controls.md) and [Paragraph Formatting](../mfc/paragraph-formatting-in-rich-edit-controls.md) later in this topic.  
   
- Rich Edit 控件支持使用的几乎任何操作并通知消息的多行编辑控件相同。  因此，已使用控件编辑的应用程序可以轻松更改使用丰富的编辑控件。  其他消息和通知启用应用程序访问功能特有 Rich Edit 控件。  有关内容控件的信息，请参见[CEdit](../mfc/reference/cedit-class.md)。  
+ Rich edit controls support almost all of the operations and notification messages used with multiline edit controls. Thus, applications that already use edit controls can be easily changed to use rich edit controls. Additional messages and notifications enable applications to access the functionality unique to rich edit controls. For information about edit controls, see [CEdit](../mfc/reference/cedit-class.md).  
   
- 通知有关的更多信息，请参见 [通过丰富的编辑控件的通知](../mfc/notifications-from-a-rich-edit-control.md) 本主题后。  
+ For more information on notifications, see [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md) later in this topic.  
   
-## 请参阅  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "COleCurrency 类 |Microsoft 文档"
+title: COleCurrency Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,10 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- fixed-point numbers
-- numbers, fixed-point
-- CURRENCY
-- COleCurrency class
+- COleCurrency [MFC], COleCurrency
+- COleCurrency [MFC], Format
+- COleCurrency [MFC], GetStatus
+- COleCurrency [MFC], ParseCurrency
+- COleCurrency [MFC], SetCurrency
+- COleCurrency [MFC], SetStatus
+- COleCurrency [MFC], m_cur
+- COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
 caps.latest.revision: 24
 author: mikeblome
@@ -45,76 +49,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 38dbd45818f53430db37bb5807c255494c4a9896
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 423cb540de41430d615c11fe0640a0273b095222
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colecurrency-class"></a>COleCurrency 类
-封装 OLE 自动化的 `CURRENCY` 数据类型。  
+# <a name="colecurrency-class"></a>COleCurrency Class
+Encapsulates the `CURRENCY` data type of OLE automation.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleCurrency  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleCurrency::COleCurrency](#colecurrency)|构造 `COleCurrency` 对象。|  
+|[COleCurrency::COleCurrency](#colecurrency)|Constructs a `COleCurrency` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleCurrency::Format](#format)|生成带格式的字符串表示形式`COleCurrency`对象。|  
-|[COleCurrency::GetStatus](#getstatus)|获取此的状态 （有效期）`COleCurrency`对象。|  
-|[COleCurrency::ParseCurrency](#parsecurrency)|读取**货币**从字符串的值并将的值设置`COleCurrency`。|  
-|[COleCurrency::SetCurrency](#setcurrency)|设置此值`COleCurrency`对象。|  
-|[COleCurrency::SetStatus](#setstatus)|此设置的状态 （有效期）`COleCurrency`对象。|  
+|[COleCurrency::Format](#format)|Generates a formatted string representation of a `COleCurrency` object.|  
+|[COleCurrency::GetStatus](#getstatus)|Gets the status (validity) of this `COleCurrency` object.|  
+|[COleCurrency::ParseCurrency](#parsecurrency)|Reads a **CURRENCY** value from a string and sets the value of `COleCurrency`.|  
+|[COleCurrency::SetCurrency](#setcurrency)|Sets the value of this `COleCurrency` object.|  
+|[COleCurrency::SetStatus](#setstatus)|Sets the status (validity) for this `COleCurrency` object.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[运算符 =](#operator_eq)|副本`COleCurrency`值。|  
-|[运算符 +、-](#operator_plus_minus)|添加、 相减，并且更改符号`COleCurrency`值。|  
-|[运算符 + =、 =](#operator_plus_minus_eq)|添加并减去`COleCurrency`从此值`COleCurrency`对象。|  
-|[运算符 * /](#operator_star)|刻度`COleCurrency`的整数值的值。|  
-|[运算符 * =、 / =](#operator_star_div_eq)|可以扩展这`COleCurrency`的整数值的值。|  
-|[运算符](#operator_stream)|输出`COleCurrency`值赋给`CArchive`或`CDumpContext`。|  
-|[运算符 >>](#operator_stream)|输入`COleCurrency`对象从`CArchive`。|  
-|[运算符货币](#operator_currency)|将转换`COleCurrency`值到**货币**。|  
-|[运算符 = =、<,></,><=,></=,>](#colecurrency_relational_operators)|比较两个`COleCurrency`值。|  
+|[operator =](#operator_eq)|Copies a `COleCurrency` value.|  
+|[operator +, -](#operator_plus_minus)|Adds, subtracts, and changes sign of `COleCurrency` values.|  
+|[operator +=, -=](#operator_plus_minus_eq)|Adds and subtracts a `COleCurrency` value from this `COleCurrency` object.|  
+|[operator */](#operator_star)|Scales a `COleCurrency` value by an integer value.|  
+|[operator *=, /=](#operator_star_div_eq)|Scales this `COleCurrency` value by an integer value.|  
+|[operator <<](#operator_stream)|Outputs a `COleCurrency` value to `CArchive` or `CDumpContext`.|  
+|[operator >>](#operator_stream)|Inputs a `COleCurrency` object from `CArchive`.|  
+|[operator CURRENCY](#operator_currency)|Converts a `COleCurrency` value into a **CURRENCY**.|  
+|[operator ==, <, <=, etc.](#colecurrency_relational_operators)|Compares two `COleCurrency` values.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleCurrency::m_cur](#m_cur)|包含基础**货币**此`COleCurrency`对象。|  
-|[COleCurrency::m_status](#m_status)|包含此状态`COleCurrency`对象。|  
+|[COleCurrency::m_cur](#m_cur)|Contains the underlying **CURRENCY** for this `COleCurrency` object.|  
+|[COleCurrency::m_status](#m_status)|Contains the status of this `COleCurrency` object.|  
   
-## <a name="remarks"></a>备注  
- **COleCurrency**没有基类的类。  
+## <a name="remarks"></a>Remarks  
+ **COleCurrency** does not have a base class.  
   
- **货币**实现为一个 8 字节，2 的补数的整数值乘以 10000。 这产生了一个定点数数字，小数点左侧有 15 位数，右侧有 4 位数。 **货币**数据类型是非常有用，对于涉及资金，计算或任何定点计算准确性至关重要。 它是有关的可能类型之一`VARIANT`OLE 自动化的数据类型。  
+ **CURRENCY** is implemented as an 8-byte, two's-complement integer value scaled by 10,000. This gives a fixed-point number with 15 digits to the left of the decimal point and 4 digits to the right. The **CURRENCY** data type is extremely useful for calculations involving money, or for any fixed-point calculation where accuracy is important. It is one of the possible types for the `VARIANT` data type of OLE automation.  
   
- **COleCurrency**还实现了此定点类型一些基本算术运算。 支持的操作已经被选来控制在定点计算期间出现的舍入误差。  
+ **COleCurrency** also implements some basic arithmetic operations for this fixed-point type. The supported operations have been selected to control the rounding errors which occur during fixed-point calculations.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `COleCurrency`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-##  <a name="colecurrency"></a>COleCurrency::COleCurrency  
- 构造**COleCurrency**对象。  
+##  <a name="colecurrency"></a>  COleCurrency::COleCurrency  
+ Constructs a **COleCurrency** object.  
   
 ```  
 COleCurrency();  
@@ -128,76 +132,76 @@ COleCurrency(
     long nFractionalUnits);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cySrc`  
- 一个**货币**值复制到新**COleCurrency**对象。  
+ A **CURRENCY** value to be copied into the new **COleCurrency** object.  
   
  `curSrc`  
- 现有**COleCurrency**对象复制到新**COleCurrency**对象。  
+ An existing **COleCurrency** object to be copied into the new **COleCurrency** object.  
   
  *varSrc*  
- 现有**VARIANT**数据结构 (可能是`COleVariant`对象) 要转换为货币值 ( `VT_CY`) 并将其复制到新**COleCurrency**对象。  
+ An existing **VARIANT** data structure (possibly a `COleVariant` object) to be converted to a currency value ( `VT_CY`) and copied into the new **COleCurrency** object.  
   
  `nUnits`, `nFractionalUnits`  
- 指示要复制到新的单位和 （以 1/10，效果尤其) 的值的小数部分**COleCurrency**对象。  
+ Indicate the units and fractional part (in 1/10,000's) of the value to be copied into the new **COleCurrency** object.  
   
-### <a name="remarks"></a>备注  
- 所有这些构造函数创建新**COleCurrency**对象初始化为指定的值。 遵循这些构造函数的简要说明。 除非另行说明，新的状态**COleCurrency**项将被设置为有效。  
+### <a name="remarks"></a>Remarks  
+ All of these constructors create new **COleCurrency** objects initialized to the specified value. A brief description of each of these constructors follows. Unless otherwise noted, the status of the new **COleCurrency** item is set to valid.  
   
-- COleCurrency() 构造**COleCurrency**对象初始化为 0 （零）。  
+- COleCurrency() Constructs a **COleCurrency** object initialized to 0 (zero).  
   
-- COleCurrency (`cySrc`) 构造**COleCurrency**对象从[货币](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)值。  
+- COleCurrency(`cySrc`) Constructs a **COleCurrency** object from a [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) value.  
   
-- COleCurrency (`curSrc`) 构造**COleCurrency**对象从现有**COleCurrency**对象。 新对象具有与源对象相同的状态。  
+- COleCurrency(`curSrc`) Constructs a **COleCurrency** object from an existing **COleCurrency** object. The new object has the same status as the source object.  
   
-- COleCurrency (`varSrc`) 构造**COleCurrency**对象。 尝试将转换[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)结构或`COleVariant`对象传递给货币 ( `VT_CY`) 值。 如果此转换成功，转换后的值复制到新**COleCurrency**对象。 如果不是，值**COleCurrency**对象设置为零 (0) 和其状态设置为无效。  
+- COleCurrency(`varSrc`) Constructs a **COleCurrency** object. Attempts to convert a [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) structure or `COleVariant` object to a currency ( `VT_CY`) value. If this conversion is successful, the converted value is copied into the new **COleCurrency** object. If it is not, the value of the **COleCurrency** object is set to zero (0) and its status to invalid.  
   
-- `COleCurrency(`nUnits`, `nFractionalUnits') 构造**COleCurrency**中指定的数字部分对象。 如果数值的小数部分的绝对值大于 10000，对单元进行适当的调整。 请注意，通过指定的单位和小数部分有符号长值。  
+- `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a **COleCurrency** object from the specified numerical components. If the absolute value of the fractional part is greater than 10,000, the appropriate adjustment is made to the units. Note that the units and fractional part are specified by signed long values.  
   
- 有关详细信息，请参阅[货币](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)和[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)中的条目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) and [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) entries in the Windows SDK.  
   
-### <a name="example"></a>示例  
- 下面的示例显示的零参数和两个参数构造函数的效果︰  
+### <a name="example"></a>Example  
+ The following examples show the effects of the zero-parameter and two-parameter constructors:  
   
- [!code-cpp[NVC_MFCOleContainer #&10;](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
+ [!code-cpp[NVC_MFCOleContainer#10](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
   
-##  <a name="format"></a>COleCurrency::Format  
- 调用该成员函数以创建货币值的格式的表示。  
+##  <a name="format"></a>  COleCurrency::Format  
+ Call this member function to create a formatted representation of the currency value.  
   
 ```  
 CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const; 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 指示区域设置的标志。 仅以下标志是与货币相关︰  
+ Indicates flags for locale settings. Only the following flag is relevant to currency:  
   
-- **LOCALE_NOUSEROVERRIDE**使用系统默认区域设置，而不是自定义用户设置。  
+- **LOCALE_NOUSEROVERRIDE** Use the system default locale settings, rather than custom user settings.  
   
  `lcid`  
- 指示要用于转换的区域设置 ID。  
+ Indicates locale ID to use for the conversion.  
   
-### <a name="return-value"></a>返回值  
- 一个`CString`，它包含格式的货币值。  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the formatted currency value.  
   
-### <a name="remarks"></a>备注  
- 设置使用本地语言规范 （区域设置 Id） 的值的格式。 货币符号不包括在返回的值。 如果此状态**COleCurrency**对象为 null，则返回值为空字符串。 如果状态为无效，则返回字符串将由字符串资源指定**IDS_INVALID_CURRENCY**。  
+### <a name="remarks"></a>Remarks  
+ It formats the value using the local language specifications (locale IDs). A currency symbol is not included in the value returned. If the status of this **COleCurrency** object is null, the return value is an empty string. If the status is invalid, the return string is specified by the string resource **IDS_INVALID_CURRENCY**.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&11;](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#11](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
   
-##  <a name="getstatus"></a>COleCurrency::GetStatus  
- 调用此成员函数以获取状态 （有效期） 的给定**COleCurrency**对象。  
+##  <a name="getstatus"></a>  COleCurrency::GetStatus  
+ Call this member function to get the status (validity) of a given **COleCurrency** object.  
   
 ```  
 CurrencyStatus GetStatus() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回此状态**COleCurrency**值。  
+### <a name="return-value"></a>Return Value  
+ Returns the status of this **COleCurrency** value.  
   
-### <a name="remarks"></a>备注  
- 返回值由`CurrencyStatus`枚举中定义的类型**COleCurrency**类。  
+### <a name="remarks"></a>Remarks  
+ The return value is defined by the `CurrencyStatus` enumerated type that is defined within the **COleCurrency** class.  
   
 ```  
 enum CurrencyStatus {
@@ -207,53 +211,53 @@ enum CurrencyStatus {
     };  
 ```  
   
- 有关这些状态值的简要说明，请参阅下面的列表︰  
+ For a brief description of these status values, see the following list:  
   
-- **COleCurrency::valid**指示此**COleCurrency**对象是否有效。  
+- **COleCurrency::valid** Indicates that this **COleCurrency** object is valid.  
   
-- **COleCurrency::invalid**指示此**COleCurrency**对象无效; 也就是说，其值可能不正确。  
+- **COleCurrency::invalid** Indicates that this **COleCurrency** object is invalid; that is, its value may be incorrect.  
   
-- **COleCurrency::null**指示此**COleCurrency**对象为 null，即，已为此对象中提供任何值。 (这是"null"数据库意义上的"having 没有值，"，而不 c + + **NULL**。)  
+- **COleCurrency::null** Indicates that this **COleCurrency** object is null, that is, that no value has been supplied for this object. (This is "null" in the database sense of "having no value," as opposed to the C++ **NULL**.)  
   
- 状态**COleCurrency**对象是在以下情况下无效︰  
+ The status of a **COleCurrency** object is invalid in the following cases:  
   
--   如果其值设置从**VARIANT**或`COleVariant`无法转换为货币值的值。  
+-   If its value is set from a **VARIANT** or `COleVariant` value that could not be converted to a currency value.  
   
--   如果此对象已出现溢出或下溢在过程中遇到算术赋值运算，例如`+=`或** \* = **。  
+-   If this object has experienced an overflow or underflow during an arithmetic assignment operation, for example `+=` or **\*=**.  
   
--   如果无效的值分配给此对象。  
+-   If an invalid value was assigned to this object.  
   
--   如果已显式设置此对象的状态为无效的使用[SetStatus](#setstatus)。  
+-   If the status of this object was explicitly set to invalid using [SetStatus](#setstatus).  
   
- 有关可能会将状态设置为无效，请参阅以下的成员函数的操作的详细信息︰  
+ For more information on operations that may set the status to invalid, see the following member functions:  
   
 - [COleCurrency](#colecurrency)  
   
-- [运算符 =](#operator_eq)  
+- [operator =](#operator_eq)  
   
-- [运算符 +-](#operator_plus_minus)  
+- [operator + -](#operator_plus_minus)  
   
-- [operator + = 和 =](#operator_plus_minus_eq)  
+- [operator += and -=](#operator_plus_minus_eq)  
   
-- [运算符 * /](#operator_star)  
+- [operator * /](#operator_star)  
   
-- [运算符 * = 和 / =](#operator_star_div_eq)  
+- [operator *= and /=](#operator_star_div_eq)  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&12;](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
-##  <a name="m_cur"></a>COleCurrency::m_cur  
- 基础[货币](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)此结构**COleCurrency**对象。  
+##  <a name="m_cur"></a>  COleCurrency::m_cur  
+ The underlying [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) structure for this **COleCurrency** object.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
->  更改中的值**货币**访问此函数返回的指针的结构将此值更改**COleCurrency**对象。 不会更改此状态**COleCurrency**对象。  
+>  Changing the value in the **CURRENCY** structure accessed by the pointer returned by this function will change the value of this **COleCurrency** object. It does not change the status of this **COleCurrency** object.  
   
- 有关详细信息，请参阅[货币](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)中的条目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) entry in the Windows SDK.  
   
-##  <a name="m_status"></a>COleCurrency::m_status  
- 此数据成员的类型是枚举的类型`CurrencyStatus`，其定义内**COleCurrency**类。  
+##  <a name="m_status"></a>  COleCurrency::m_status  
+ The type of this data member is the enumerated type `CurrencyStatus`, which is defined within the **COleCurrency** class.  
   
 ```  
 enum CurrencyStatus{  
@@ -263,44 +267,44 @@ enum CurrencyStatus{
 };  
 ```  
   
-### <a name="remarks"></a>备注  
- 有关这些状态值的简要说明，请参阅下面的列表︰  
+### <a name="remarks"></a>Remarks  
+ For a brief description of these status values, see the following list:  
   
-- **COleCurrency::valid**指示此**COleCurrency**对象是否有效。  
+- **COleCurrency::valid** Indicates that this **COleCurrency** object is valid.  
   
-- **COleCurrency::invalid**指示此**COleCurrency**对象无效; 也就是说，其值可能不正确。  
+- **COleCurrency::invalid** Indicates that this **COleCurrency** object is invalid; that is, its value may be incorrect.  
   
-- **COleCurrency::null**指示此**COleCurrency**对象为 null，即，已为此对象中提供任何值。 (这是"null"数据库意义上的"having 没有值，"，而不 c + + **NULL**。)  
+- **COleCurrency::null** Indicates that this **COleCurrency** object is null, that is, that no value has been supplied for this object. (This is "null" in the database sense of "having no value," as opposed to the C++ **NULL**.)  
   
- 状态**COleCurrency**对象是在以下情况下无效︰  
+ The status of a **COleCurrency** object is invalid in the following cases:  
   
--   如果其值设置从**VARIANT**或`COleVariant`无法转换为货币值的值。  
+-   If its value is set from a **VARIANT** or `COleVariant` value that could not be converted to a currency value.  
   
--   如果此对象已出现溢出或下溢在过程中遇到算术赋值运算，例如`+=`或** \* = **。  
+-   If this object has experienced an overflow or underflow during an arithmetic assignment operation, for example `+=` or **\*=**.  
   
--   如果无效的值分配给此对象。  
+-   If an invalid value was assigned to this object.  
   
--   如果已显式设置此对象的状态为无效的使用[SetStatus](#setstatus)。  
+-   If the status of this object was explicitly set to invalid using [SetStatus](#setstatus).  
   
- 有关可能会将状态设置为无效，请参阅以下的成员函数的操作的详细信息︰  
+ For more information on operations that may set the status to invalid, see the following member functions:  
   
 - [COleCurrency](#colecurrency)  
   
-- [运算符 =](#operator_eq)  
+- [operator =](#operator_eq)  
   
-- [运算符 +、-](#operator_plus_minus)  
+- [operator +, -](#operator_plus_minus)  
   
-- [运算符 + =、 =](#operator_plus_minus_eq)  
+- [operator +=, -=](#operator_plus_minus_eq)  
   
-- [运算符 * /](#operator_star)  
+- [operator */](#operator_star)  
   
-- [运算符 * =、 / =](#operator_star_div_eq)  
+- [operator *=, /=](#operator_star_div_eq)  
   
     > [!CAUTION]
-    >  此数据成员是针对高级编程情况。 应使用内联成员函数[GetStatus](#getstatus)和[SetStatus](#setstatus)。 请参阅`SetStatus`有关显式设置此数据成员的其他注意事项。  
+    >  This data member is for advanced programming situations. You should use the inline member functions [GetStatus](#getstatus) and [SetStatus](#setstatus). See `SetStatus` for further cautions regarding explicitly setting this data member.  
   
-##  <a name="operator_eq"></a>COleCurrency::operator =  
- 这些重载的赋值运算符将源货币值复制到此**COleCurrency**对象。  
+##  <a name="operator_eq"></a>  COleCurrency::operator =  
+ These overloaded assignment operators copy the source currency value into this **COleCurrency** object.  
   
 ```  
 const COleCurrency& operator=(CURRENCY cySrc);  
@@ -308,22 +312,22 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   const COleCurrency& operator=(const VARIANT& varSrc);
 ```  
   
-### <a name="remarks"></a>备注  
- 每个运算符的简要说明如下所示︰  
+### <a name="remarks"></a>Remarks  
+ A brief description of each operator follows:  
   
-- **运算符 = (** `cySrc` **)** `CURRENCY`值复制到**COleCurrency**对象并将其状态设置为有效。  
+- **operator =(** `cySrc` **)** The `CURRENCY` value is copied into the **COleCurrency** object and its status is set to valid.  
   
-- **运算符 = (** `curSrc` **)**的值和状态的现有操作数**COleCurrency**对象复制到此**COleCurrency**对象。  
+- **operator =(** `curSrc` **)** The value and status of the operand, an existing **COleCurrency** object are copied into this **COleCurrency** object.  
   
-- **运算符 = (** *varSrc* **)**如果的转换`VARIANT`值 (或[COleVariant](../../mfc/reference/colevariant-class.md)对象) 为货币 ( `VT_CY`) 是成功，转换后的值被复制到此**COleCurrency**对象并将其状态设置为有效。 如果此转换不成功，值**COleCurrency**对象设置为 0，其状态设置为无效。  
+- **operator =(** *varSrc* **)** If the conversion of the `VARIANT` value (or [COleVariant](../../mfc/reference/colevariant-class.md) object) to a currency ( `VT_CY`) is successful, the converted value is copied into this **COleCurrency** object and its status is set to valid. If the conversion is not successful, the value of the **COleCurrency** object is set to 0 and its status to invalid.  
   
- 有关详细信息，请参阅[货币](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)和[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)中的条目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [CURRENCY](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e) and [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) entries in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&15;](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
   
-##  <a name="operator_plus_minus"></a>COleCurrency::operator +、-  
- 这些运算符使您得以加法和减法两个**COleCurrency**值或者从彼此和要更改的符号**COleCurrency**值。  
+##  <a name="operator_plus_minus"></a>  COleCurrency::operator +, -  
+ These operators allow you to add and subtract two **COleCurrency** values to and from each other and to change the sign of a **COleCurrency** value.  
   
 ```  
 COleCurrency operator+(const COleCurrency& cur) const;  
@@ -331,80 +335,80 @@ COleCurrency operator-(const COleCurrency& cur) const;
 COleCurrency operator-() const;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果任一操作数是 null，所生成的状态**COleCurrency**值为 null。  
+### <a name="remarks"></a>Remarks  
+ If either of the operands is null, the status of the resulting **COleCurrency** value is null.  
   
- 如果算术运算溢出，导致**COleCurrency**值无效。  
+ If the arithmetic operation overflows, the resulting **COleCurrency** value is invalid.  
   
- 如果操作数为无效，另一个是不为 null，所生成的状态**COleCurrency**值无效。  
+ If the operand is invalid and the other is not null, the status of the resulting **COleCurrency** value is invalid.  
   
- 有关有效、 无效的并且为 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。  
+ For more information on the valid, invalid, and null status values, see the [m_status](#m_status) member variable.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&16;](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
   
-##  <a name="operator_plus_minus_eq"></a>COleCurrency::operator + =、 =  
- 允许您加法和减法**COleCurrency**值与此**COleCurrency**对象。  
+##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=, -=  
+ Allow you to add and subtract a **COleCurrency** value to and from this **COleCurrency** object.  
   
 ```  
 const COleCurrency& operator+=(const COleCurrency& cur);  
 const COleCurrency& operator-=(const COleCurrency& cur);
 ```  
   
-### <a name="remarks"></a>备注  
- 如果任一操作数是 null，此状态**COleCurrency**对象设置为 null。  
+### <a name="remarks"></a>Remarks  
+ If either of the operands is null, the status of this **COleCurrency** object is set to null.  
   
- 如果算术运算溢出，此状态**COleCurrency**对象设置为无效。  
+ If the arithmetic operation overflows, the status of this **COleCurrency** object is set to invalid.  
   
- 如果任一操作数无效，且另一个则不为 null，此状态**COleCurrency**对象设置为无效。  
+ If either of the operands is invalid and the other is not null, the status of this **COleCurrency** object is set to invalid.  
   
- 有关有效、 无效的并且为 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。  
+ For more information on the valid, invalid, and null status values, see the [m_status](#m_status) member variable.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&17;](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="operator_star"></a>COleCurrency::operator * 和 /  
- 允许您扩展**COleCurrency**由一个整数值的值。  
+##  <a name="operator_star"></a>  COleCurrency::operator * and /  
+ Allow you to scale a **COleCurrency** value by an integral value.  
   
 ```  
 COleCurrency operator*(long nOperand) const;  
 COleCurrency operator/(long nOperand) const;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果**COleCurrency**操作数为 null，所生成的状态**COleCurrency**值为 null。  
+### <a name="remarks"></a>Remarks  
+ If the **COleCurrency** operand is null, the status of the resulting **COleCurrency** value is null.  
   
- 如果算术运算溢出或下溢时，所生成的状态**COleCurrency**值无效。  
+ If the arithmetic operation overflows or underflows, the status of the resulting **COleCurrency** value is invalid.  
   
- 如果**COleCurrency**操作数是无效的所生成的状态**COleCurrency**值无效。  
+ If the **COleCurrency** operand is invalid, the status of the resulting **COleCurrency** value is invalid.  
   
- 有关有效、 无效的并且为 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。  
+ For more information on the valid, invalid, and null status values, see the [m_status](#m_status) member variable.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&18;](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="operator_star_div_eq"></a>COleCurrency::operator * =、 / =  
- 允许您扩展这**COleCurrency**由一个整数值的值。  
+##  <a name="operator_star_div_eq"></a>  COleCurrency::operator *=, /=  
+ Allow you to scale this **COleCurrency** value by an integral value.  
   
 ```  
 const COleCurrency& operator*=(long nOperand);  
 const COleCurrency& operator/=(long nOperand);
 ```  
   
-### <a name="remarks"></a>备注  
- 如果**COleCurrency**操作数为 null，此状态**COleCurrency**对象设置为 null。  
+### <a name="remarks"></a>Remarks  
+ If the **COleCurrency** operand is null, the status of this **COleCurrency** object is set to null.  
   
- 如果算术运算溢出，此状态**COleCurrency**对象设置为无效。  
+ If the arithmetic operation overflows, the status of this **COleCurrency** object is set to invalid.  
   
- 如果**COleCurrency**操作数是无效的此状态**COleCurrency**对象设置为无效。  
+ If the **COleCurrency** operand is invalid, the status of this **COleCurrency** object is set to invalid.  
   
- 有关有效、 无效的并且为 null 的状态值的详细信息，请参阅[m_status](#m_status)成员变量。  
+ For more information on the valid, invalid, and null status values, see the [m_status](#m_status) member variable.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&19;](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#19](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
   
-##  <a name="operator_stream"></a>COleCurrency::operator &lt; &lt;，&gt;&gt;  
- 支持诊断转储和存储到存档中。  
+##  <a name="operator_stream"></a>  COleCurrency::operator &lt;&lt;, &gt;&gt;  
+ Supports diagnostic dumping and storing to an archive.  
   
 ```  
 friend CDumpContext& operator<<(
@@ -420,20 +424,20 @@ friend CArchive& operator>>(
     COleCurrency& curSrc);
 ```  
   
-### <a name="remarks"></a>备注  
- 提取 ( ** >> **) 运算符支持从存档加载。  
+### <a name="remarks"></a>Remarks  
+ The extraction ( **>>**) operator supports loading from an archive.  
   
-##  <a name="operator_currency"></a>COleCurrency::operator 货币  
- 返回`CURRENCY`从此复制其值的结构**COleCurrency**对象。  
+##  <a name="operator_currency"></a>  COleCurrency::operator CURRENCY  
+ Returns a `CURRENCY` structure whose value is copied from this **COleCurrency** object.  
   
 ```  
 operator CURRENCY() const; 
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="parsecurrency"></a>COleCurrency::ParseCurrency  
- 调用此成员函数来分析要读取的货币值的字符串。  
+##  <a name="parsecurrency"></a>  COleCurrency::ParseCurrency  
+ Call this member function to parse a string to read a currency value.  
   
 ```  
 BOOL ParseCurrency(
@@ -445,37 +449,37 @@ throw(CMemoryException*);
 throw(COleException*);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpszCurrency*  
- 指向以 null 结尾的字符串，即要分析的指针。  
+ A pointer to the null-terminated string which is to be parsed.  
   
  `dwFlags`  
- 表示标志的区域设置，可能是以下标志︰  
+ Indicates flags for locale settings, possibly the following flag:  
   
-- **LOCALE_NOUSEROVERRIDE**使用系统默认区域设置，而不是自定义用户设置。  
+- **LOCALE_NOUSEROVERRIDE** Use the system default locale settings, rather than custom user settings.  
   
  `lcid`  
- 指示要用于转换的区域设置 ID。  
+ Indicates locale ID to use for the conversion.  
   
-### <a name="return-value"></a>返回值  
- 如果此字符串已成功转换为货币值，否则为 0，非零值。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the string was successfully converted to a currency value, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 它使用本地语言规范 （区域设置 Id） 的源字符串中的非数字字符的含义。  
+### <a name="remarks"></a>Remarks  
+ It uses local language specifications (locale IDs) for the meaning of nonnumeric characters in the source string.  
   
- 区域设置 ID 值的讨论，请参阅[支持多种语言](http://msdn.microsoft.com/en-us/47dc5add-232c-4268-b977-43e12da81ede)。  
+ For a discussion of locale ID values, see [Supporting Multiple Languages](http://msdn.microsoft.com/en-us/47dc5add-232c-4268-b977-43e12da81ede).  
   
- 如果成功转换为一种货币的字符串值，此值**COleCurrency**对象设置为该值，而其状态设置为有效。  
+ If the string was successfully converted to a currency value, the value of this **COleCurrency** object is set to that value and its status to valid.  
   
- 如果字符串无法转换为货币值或数值溢出，此状态时**COleCurrency**对象无效。  
+ If the string could not be converted to a currency value or if there was a numerical overflow, the status of this **COleCurrency** object is invalid.  
   
- 如果字符串转换失败由于内存分配错误，此函数将引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md)。 在任何其他错误状态下，此函数将引发[COleException](../../mfc/reference/coleexception-class.md)。  
+ If the string conversion failed due to memory allocation errors, this function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md). In any other error state, this function throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&13;](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#13](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
   
-##  <a name="colecurrency_relational_operators"></a>COleCurrency 关系运算符  
- 比较两个货币值，并返回非零，如果条件为 true;否则为 0。  
+##  <a name="colecurrency_relational_operators"></a>  COleCurrency Relational Operators  
+ Compare two currency values and return nonzero if the condition is true; otherwise 0.  
   
 ```  
 BOOL operator==(const COleCurrency& cur) const;  
@@ -486,16 +490,16 @@ BOOL operator<=(const COleCurrency& cur) const;
 BOOL operator>=(const COleCurrency& cur) const;  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  排序操作的返回值 ( ** < **， ** \< = **， ** > **， ** >= **) 是不确定，如果其中一个操作数的状态为 null 或无效。 相等运算符 ( `==`， `!=`) 考虑操作数的状态。  
+>  The return value of the ordering operations ( **<**, **\<=**, **>**, **>=**) is undefined if the status of either operand is null or invalid. The equality operators ( `==`, `!=`) consider the status of the operands.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&20;](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#20](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
   
-##  <a name="setcurrency"></a>COleCurrency::SetCurrency  
- 调用此成员函数以设置单位和小数部分的这一部分**COleCurrency**对象。  
+##  <a name="setcurrency"></a>  COleCurrency::SetCurrency  
+ Call this member function to set the units and fractional part of this **COleCurrency** object.  
   
 ```  
 void SetCurrency(
@@ -503,31 +507,31 @@ void SetCurrency(
     long nFractionalUnits);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nUnits`, `nFractionalUnits`  
- 指示要复制到此的单位和 （以 1/10，效果尤其) 的值的小数部分**COleCurrency**对象。  
+ Indicate the units and fractional part (in 1/10,000's) of the value to be copied into this **COleCurrency** object.  
   
-### <a name="remarks"></a>备注  
- 数值的小数部分的绝对值大于 10000，如果中的第三个下面的示例所示的单位进行适当调整。  
+### <a name="remarks"></a>Remarks  
+ If the absolute value of the fractional part is greater than 10,000, the appropriate adjustment is made to the units, as shown in the third of the following examples.  
   
- 请注意，通过指定的单位和小数部分有符号长值。 下面的示例的第四个演示当参数具有不同的符号时，会发生什么情况。  
+ Note that the units and fractional part are specified by signed long values. The fourth of the following examples shows what happens when the parameters have different signs.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&14;](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#14](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
   
-##  <a name="setstatus"></a>COleCurrency::SetStatus  
- 调用此成员函数可设置的状态 （有效期） **COleCurrency**对象。  
+##  <a name="setstatus"></a>  COleCurrency::SetStatus  
+ Call this member function to set the status (validity) of this **COleCurrency** object.  
   
 ```  
 void SetStatus(CurrencyStatus  status  );
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *status*  
- 为此新的状态**COleCurrency**对象。  
+ The new status for this **COleCurrency** object.  
   
-### <a name="remarks"></a>备注  
- *状态*参数的值由定义`CurrencyStatus`枚举类型，在其中定义**COleCurrency**类。  
+### <a name="remarks"></a>Remarks  
+ The *status* parameter value is defined by the `CurrencyStatus` enumerated type, which is defined within the **COleCurrency** class.  
   
 ```  
 enum CurrencyStatus {
@@ -537,18 +541,18 @@ enum CurrencyStatus {
     };  
 ```  
   
- 有关这些状态值的简要说明，请参阅下面的列表︰  
+ For a brief description of these status values, see the following list:  
   
-- **COleCurrency::valid**指示此**COleCurrency**对象是否有效。  
+- **COleCurrency::valid** Indicates that this **COleCurrency** object is valid.  
   
-- **COleCurrency::invalid**指示此**COleCurrency**对象无效; 也就是说，其值可能不正确。  
+- **COleCurrency::invalid** Indicates that this **COleCurrency** object is invalid; that is, its value may be incorrect.  
   
-- **COleCurrency::null**指示此**COleCurrency**对象为 null，即，已为此对象中提供任何值。 (这是"null"数据库意义上的"having 没有值，"，而不 c + + **NULL**。)  
+- **COleCurrency::null** Indicates that this **COleCurrency** object is null, that is, that no value has been supplied for this object. (This is "null" in the database sense of "having no value," as opposed to the C++ **NULL**.)  
   
     > [!CAUTION]
-    >  此函数是针对高级编程情况。 此函数不会更改此对象中的数据。 通常将用于将状态设置为 null 或无效。 请注意，赋值运算符 ([运算符 =](#operator_eq)) 和[SetCurrency](#setcurrency)确实要设置的基于源值的对象的状态。  
+    >  This function is for advanced programming situations. This function does not alter the data in this object. It will most often be used to set the status to null or invalid. Note that the assignment operator ( [operator =](#operator_eq)) and [SetCurrency](#setcurrency) do set the status to of the object based on the source value(s).  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleVariant 类](../../mfc/reference/colevariant-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleVariant Class](../../mfc/reference/colevariant-class.md)
 

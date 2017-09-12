@@ -1,5 +1,5 @@
 ---
-title: "LOGPEN 结构 |Microsoft 文档"
+title: LOGPEN Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LOGPEN structure
+- LOGPEN structure [MFC]
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f3868d2ac6a7b18cfe43f7da8865aed0a3ecf88d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d87f885848fd7f77b05475de0ab99e1214e474a7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="logpen-structure"></a>LOGPEN 结构
-`LOGPEN`结构定义样式、 宽度和钢笔颜色、 图形对象用于绘制线条和边框。 [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)函数使用`LOGPEN`结构。  
+# <a name="logpen-structure"></a>LOGPEN Structure
+The `LOGPEN` structure defines the style, width, and color of a pen, a drawing object used to draw lines and borders. The [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) function uses the `LOGPEN` structure.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagLOGPEN {  /* lgpn */  
@@ -53,42 +53,42 @@ typedef struct tagLOGPEN {  /* lgpn */
 } LOGPEN;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  *lopnStyle*  
- 指定的笔类型。 此成员可以是下列值之一︰  
+ Specifies the pen type. This member can be one of the following values:  
   
-- **PS_SOLID**创建实心笔。  
+- **PS_SOLID** Creates a solid pen.  
   
-- **PS_DASH**创建虚线的钢笔。 （仅当钢笔的宽度为 1 时有效）。  
+- **PS_DASH** Creates a dashed pen. (Valid only when the pen width is 1.)  
   
-- **PS_DOT**创建的以点分隔的钢笔。 （仅当钢笔的宽度为 1 时有效）。  
+- **PS_DOT** Creates a dotted pen. (Valid only when the pen width is 1.)  
   
-- **PS_DASHDOT**创建具有交替出现的短划线和点的钢笔。 （仅当钢笔的宽度为 1 时有效）。  
+- **PS_DASHDOT** Creates a pen with alternating dashes and dots. (Valid only when the pen width is 1.)  
   
-- **PS_DASHDOTDOT**创建具有交替出现的短划线和双点的钢笔。 （仅当钢笔的宽度为 1 时有效）。  
+- **PS_DASHDOTDOT** Creates a pen with alternating dashes and double dots. (Valid only when the pen width is 1.)  
   
-- **PS_NULL**创建 null 钢笔。  
+- **PS_NULL** Creates a null pen.  
   
-- **PS_INSIDEFRAME**创建钢笔绘制由指定的绑定矩形的 GDI 输出函数的闭合形状的框架内一条线条 (例如，**椭圆**，**矩形**， `RoundRect`， `Pie`，和`Chord`成员函数)。 此样式时使用 GDI 输出未指定的绑定矩形的函数 (例如，`LineTo`成员函数)，框架不受限制的笔在绘图区域。  
+- **PS_INSIDEFRAME** Creates a pen that draws a line inside the frame of closed shapes produced by GDI output functions that specify a bounding rectangle (for example, the **Ellipse**, **Rectangle**, `RoundRect`, `Pie`, and `Chord` member functions). When this style is used with GDI output functions that do not specify a bounding rectangle (for example, the `LineTo` member function), the drawing area of the pen is not limited by a frame.  
   
-     如果笔有**PS_INSIDEFRAME**样式和不匹配逻辑的颜色表中，一种颜色的颜色笔绘制并用抖色。 **PS_SOLID**笔样式不能用于与抖色创建钢笔。 **PS_INSIDEFRAME**样式等同于**PS_SOLID**钢笔的宽度是否小于或等于 1。  
+     If a pen has the **PS_INSIDEFRAME** style and a color that does not match a color in the logical color table, the pen is drawn with a dithered color. The **PS_SOLID** pen style cannot be used to create a pen with a dithered color. The **PS_INSIDEFRAME** style is identical to **PS_SOLID** if the pen width is less than or equal to 1.  
   
-     当**PS_INSIDEFRAME**样式用于生成由函数以外的 GDI 对象**椭圆**，**矩形**，和`RoundRect`，则行可能不会完全在指定范围内。  
+     When the **PS_INSIDEFRAME** style is used with GDI objects produced by functions other than **Ellipse**, **Rectangle**, and `RoundRect`, the line may not be completely inside the specified frame.  
   
  *lopnWidth*  
- 指定钢笔的宽度，使用逻辑单位。 如果**lopnWidth**成员为 0，笔为 1 个像素宽而不考虑当前的映射模式光栅设备上。  
+ Specifies the pen width, in logical units. If the **lopnWidth** member is 0, the pen is 1 pixel wide on raster devices regardless of the current mapping mode.  
   
  *lopnColor*  
- 指定的钢笔颜色。  
+ Specifies the pen color.  
   
-## <a name="remarks"></a>备注  
- **Y**中的值[点](../../mfc/reference/point-structure1.md)结构**lopnWidth**成员未使用。  
+## <a name="remarks"></a>Remarks  
+ The **y** value in the [POINT](../../mfc/reference/point-structure1.md) structure for the **lopnWidth** member is not used.  
   
-## <a name="requirements"></a>要求  
- **标头︰** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)
 
 

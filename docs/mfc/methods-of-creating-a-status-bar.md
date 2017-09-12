@@ -1,44 +1,63 @@
 ---
-title: "创建状态栏的方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBar 类, 与 CStatusBarCtrl"
-  - "CStatusBarCtrl 类, 创建"
-  - "CStatusBarCtrl 类, 与 CStatusBar"
-  - "方法 [MFC]"
-  - "方法 [MFC], 创建状态栏"
-  - "状态栏, 创建"
+title: Methods of Creating a Status Bar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStatusBar class [MFC], vs. CStatusBarCtrl
+- methods [MFC], creating status bars
+- CStatusBarCtrl class [MFC], vs. CStatusBar
+- CStatusBarCtrl class [MFC], creating
+- methods [MFC]
+- status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 创建状态栏的方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6a6e89b3082bd373ae7210f7a353543ed8525da4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 提供了两类创建状态栏：\(打包 Windows 公共控件 API\) 的 [CStatusBar](../mfc/reference/cstatusbar-class.md) 和 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)。  `CStatusBar` 提供所有状态栏公共控件的功能，其与菜单和工具栏自动交互，因此，在处理很多必需的公共控件设置和您的；结构但是，所得到的可执行的常规大于使用创建 `CStatusBarCtrl`。  
+---
+# <a name="methods-of-creating-a-status-bar"></a>Methods of Creating a Status Bar
+MFC provides two classes to create status bars: [CStatusBar](../mfc/reference/cstatusbar-class.md) and [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (which wraps the Windows common control API). `CStatusBar` provides all of the functionality of the status bar common control, it automatically interacts with menus and toolbars, and it handles many of the required common control settings and structures for you; however, your resulting executable usually will be larger than that created by using `CStatusBarCtrl`.  
   
- `CStatusBarCtrl` 通常会带来较小的可执行文件中，因此，您可能更愿意使用 `CStatusBarCtrl`，则不应将状态栏 MFC 体系结构。  如果计划使用 `CStatusBarCtrl` 和集成 MFC 状态栏结构，必须小心注意其他的传达状态栏控件处理到 MFC。  此通信不非常困难；但是，它是不必要的额外工作，使用 `CStatusBar`。  
+ `CStatusBarCtrl` usually results in a smaller executable, and you may prefer to use `CStatusBarCtrl` if you do not intend to integrate the status bar into the MFC architecture. If you plan to use `CStatusBarCtrl` and integrate the status bar into the MFC architecture, you must take additional care to communicate status bar control manipulations to MFC. This communication is not difficult; however, it is additional work that is unneeded when you use `CStatusBar`.  
   
- Visual C\+\+ 提供两种状态栏使用公共控件。  
+ Visual C++ provides two ways to take advantage of the status bar common control.  
   
--   使用 `CStatusBar`创建状态栏，然后调用 [CStatusBar::GetStatusBarCtrl](../Topic/CStatusBar::GetStatusBarCtrl.md) 获取对 `CStatusBarCtrl` 成员函数的访问权限。  
+-   Create the status bar using `CStatusBar`, and then call [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl) to get access to the `CStatusBarCtrl` member functions.  
   
--   使用 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) 构造函数，创建状态栏。  
+-   Create the status bar using [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)'s constructor.  
   
- 任一方法允许您为状态栏控件的成员函数的访问。  当您调用 `CStatusBar::GetStatusBarCtrl`时，它返回对 `CStatusBarCtrl` 对象的引用，以便可以使用为设置成员函数。  使用 `CStatusBar`，请参见 [CStatusBar](../mfc/reference/cstatusbar-class.md) 有关构造和创建状态栏的信息。  
+ Either method will give you access to the member functions of the status bar control. When you call `CStatusBar::GetStatusBarCtrl`, it returns a reference to a `CStatusBarCtrl` object so you can use either set of member functions. See [CStatusBar](../mfc/reference/cstatusbar-class.md) for information on constructing and creating a status bar using `CStatusBar`.  
   
-## 请参阅  
- [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

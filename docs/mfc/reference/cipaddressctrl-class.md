@@ -1,5 +1,5 @@
 ---
-title: "CIPAddressCtrl 类 |Microsoft 文档"
+title: CIPAddressCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,12 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- IP address control
-- Internet address edit box
-- CIPAddressCtrl class
-- Internet protocol address box
-- common controls, Internet Explorer 4.0
-- Internet Explorer 4.0 common controls
+- CIPAddressCtrl [MFC], CIPAddressCtrl
+- CIPAddressCtrl [MFC], ClearAddress
+- CIPAddressCtrl [MFC], Create
+- CIPAddressCtrl [MFC], CreateEx
+- CIPAddressCtrl [MFC], GetAddress
+- CIPAddressCtrl [MFC], IsBlank
+- CIPAddressCtrl [MFC], SetAddress
+- CIPAddressCtrl [MFC], SetFieldFocus
+- CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
 caps.latest.revision: 22
 author: mikeblome
@@ -48,51 +51,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b3849580c7bfd07f241e55cc48144959566d7d09
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f895fb30442e4a0546201004eadba91deeff464
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cipaddressctrl-class"></a>CIPAddressCtrl 类
-提供 Windows 公共 IP 地址控件的功能。  
+# <a name="cipaddressctrl-class"></a>CIPAddressCtrl Class
+Provides the functionality of the Windows common IP Address control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CIPAddressCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|构造 `CIPAddressCtrl` 对象。|  
+|[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Constructs a `CIPAddressCtrl` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CIPAddressCtrl::ClearAddress](#clearaddress)|清除 IP 地址控件的内容。|  
-|[CIPAddressCtrl::Create](#create)|创建 IP 地址控件，并将其附加到`CIPAddressCtrl`对象。|  
-|[CIPAddressCtrl::CreateEx](#createex)|创建具有指定的 Windows 扩展样式的 IP 地址控件并将其附加到`CIPAddressCtrl`对象。|  
-|[CIPAddressCtrl::GetAddress](#getaddress)|检索 IP 地址控件中的所有四个字段的地址值。|  
-|[CIPAddressCtrl::IsBlank](#isblank)|确定 IP 地址控件中的所有字段都为空。|  
-|[CIPAddressCtrl::SetAddress](#setaddress)|设置 IP 地址控件中的所有四个字段的地址值。|  
-|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|将键盘焦点设置为 IP 地址控件中指定的字段。|  
-|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|设置 IP 地址控件中指定的字段的范围。|  
+|[CIPAddressCtrl::ClearAddress](#clearaddress)|Clears the contents of the IP Address Control.|  
+|[CIPAddressCtrl::Create](#create)|Creates an IP Address Control and attaches it to a `CIPAddressCtrl` object.|  
+|[CIPAddressCtrl::CreateEx](#createex)|Creates an IP Address control with the specified Windows extended styles and attaches it to a `CIPAddressCtrl` object.|  
+|[CIPAddressCtrl::GetAddress](#getaddress)|Retrieves the address values for all four fields in the IP Address Control.|  
+|[CIPAddressCtrl::IsBlank](#isblank)|Determines if all fields in the IP Address Control are empty.|  
+|[CIPAddressCtrl::SetAddress](#setaddress)|Sets the address values for all four fields in the IP Address Control.|  
+|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|Sets the keyboard focus to the specified field in the IP Address Control.|  
+|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|Sets the range in the specified field in the IP Address Control.|  
   
-## <a name="remarks"></a>备注  
- IP 地址控件的控件类似于一个编辑控件，也允许您输入和操作中 Internet 协议 (IP) 格式的数字地址。  
+## <a name="remarks"></a>Remarks  
+ An IP Address control, a control similar to an edit control, allows you to enter and manipulate a numerical address in Internet Protocol (IP) format.  
   
- 此控件 (并因此`CIPAddressCtrl`类) 仅适用于运行在 Microsoft Internet Explorer 4.0 及更高版本的程序。 它们还将在未来版本的 Windows 和 Windows NT 下可用。  
+ This control (and therefore the `CIPAddressCtrl` class) is available only to programs running under Microsoft Internet Explorer 4.0 and later. They will also be available under future versions of Windows and Windows NT.  
   
- 有关 IP 地址控件的详细信息，请参阅[IP 地址控件](http://msdn.microsoft.com/library/windows/desktop/bb761372)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more general information about the IP Address Control, see [IP Address Controls](http://msdn.microsoft.com/library/windows/desktop/bb761372) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -101,28 +104,28 @@ class CIPAddressCtrl : public CWnd
   
  `CIPAddressCtrl`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
- 创建一个 `CIPAddressCtrl` 对象。  
+##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
+ Creates a `CIPAddressCtrl` object.  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
- 清除 IP 地址控件的内容。  
+##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress  
+ Clears the contents of the IP Address Control.  
   
 ```  
 void ClearAddress();
 ```  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), as described in the Windows SDK.  
   
-##  <a name="create"></a>CIPAddressCtrl::Create  
- 创建 IP 地址控件，并将其附加到`CIPAddressCtrl`对象。  
+##  <a name="create"></a>  CIPAddressCtrl::Create  
+ Creates an IP Address Control and attaches it to a `CIPAddressCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -132,33 +135,33 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- IP 地址控件的样式。 适用窗口样式的组合。 必须包括**WS_CHILD**因为该控件必须是子窗口的样式。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关 windows 样式的列表。  
+ The IP Address control's style. Apply a combination of window styles. You must include the **WS_CHILD** style because the control must be a child window. See [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the Windows SDK for a list of windows styles.  
   
  `rect`  
- 对 IP 地址控件的大小和位置的引用。 它可为[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
+ A reference to the IP Address Control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- 指向 IP 地址控件的父窗口的指针。 它不能**NULL。**  
+ A pointer to the IP Address Control's parent window. It must not be **NULL.**  
   
  `nID`  
- IP 地址控件的 id。  
+ The IP Address Control's ID.  
   
-### <a name="return-value"></a>返回值  
- 如果初始化成功，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 您构造`CIPAddressCtrl`两个步骤中的对象。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CIPAddressCtrl` object in two steps.  
   
-1.  调用构造函数，创建`CIPAddressCtrl`对象。  
+1.  Call the constructor, which creates the `CIPAddressCtrl` object.  
   
-2.  调用**创建**，后者可创建 IP 地址控件。  
+2.  Call **Create**, which creates the IP Address Control.  
   
- 如果您想要扩展的窗口样式用于您的控件，调用[CreateEx](#createex)而不是**创建**。  
+ If you want to use extended windows styles with your control, call [CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
- 调用此函数可创建的控件 （子窗口），并将其与关联`CIPAddressCtrl`对象。  
+##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
+ Call this function to create a control (a child window) and associate it with the `CIPAddressCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -169,30 +172,30 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- IP 地址控件的样式。 适用窗口样式的组合。 必须包括**WS_CHILD**因为该控件必须是子窗口的样式。 请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关 windows 样式的列表。  
+ The IP Address control's style. Apply a combination of window styles. You must include the **WS_CHILD** style because the control must be a child window. See [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) in the Windows SDK for a list of windows styles.  
   
  `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构的结构描述的大小和窗口，在中创建的工作区坐标位置`pParentWnd`。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 指向控件的父级的窗口的指针。  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 控件的子窗口 id。  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是[创建](#create)应用扩展的窗口样式、 指定的 Windows 扩展的样式前言**WS_EX_**。  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
- 检索 IP 地址控件中的所有四个字段的地址值。  
+##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
+ Retrieves the address values for all four fields in the IP Address Control.  
   
 ```  
 int GetAddress(
@@ -204,50 +207,50 @@ int GetAddress(
 int GetAddress(DWORD& dwAddress);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nField0`  
- 字段 0 值对发件人已打包的 IP 地址的引用。  
+ A reference to the field 0 value from a packed IP address.  
   
  `nField1`  
- 对字段 1 值来自已打包的 IP 地址的引用。  
+ A reference to the field 1 value from a packed IP address.  
   
  `nField2`  
- 为字段 2 值来自已打包的 IP 地址的引用。  
+ A reference to the field 2 value from a packed IP address.  
   
  `nField3`  
- 对字段 3 值来自已打包的 IP 地址的引用。  
+ A reference to the field 3 value from a packed IP address.  
   
  `dwAddress`  
- 为地址的引用`DWORD`接收的 IP 地址的值。 请参阅**备注**的表，其中显示如何`dwAddress`进行填充。  
+ A reference to the address of a `DWORD` value that receives the IP address. See **Remarks** for a table that shows how `dwAddress` is filled.  
   
-### <a name="return-value"></a>返回值  
- 在 IP 地址控件中的非空字段数。  
+### <a name="return-value"></a>Return Value  
+ The number of non-blank fields in the IP Address Control.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 在第一个原型更高版本中，域 0 到 3 之间的控件中读取的数字左到右分别，填充的四个参数。 在上面的第二个原型`dwAddress`，如下所示填充。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), as described in the Windows SDK. In the first prototype above, the numbers in fields 0 through 3 of the control, read left to right respectively, populate the four parameters. In the second prototype above, `dwAddress` is populated as follows.  
   
-|字段|包含的字段值的位|  
+|Field|Bits containing the field value|  
 |-----------|-------------------------------------|  
-|0|24 到 31 之间|  
-|1|16 到 23|  
-|2|8 到 15|  
-|3|0 到 7|  
+|0|24 through 31|  
+|1|16 through 23|  
+|2|8 through 15|  
+|3|0 through 7|  
   
-##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
- 确定 IP 地址控件中的所有字段都为空。  
+##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
+ Determines if all fields in the IP Address Control are empty.  
   
 ```  
 BOOL IsBlank() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果所有的 IP 地址控件字段都是空，则为非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if all of the IP Address Control fields are empty; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), as described in the Windows SDK.  
   
-##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
- 设置 IP 地址控件中的所有四个字段的地址值。  
+##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
+ Sets the address values for all four fields in the IP Address Control.  
   
 ```  
 void SetAddress(
@@ -259,48 +262,48 @@ void SetAddress(
 void SetAddress(DWORD dwAddress);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nField0`  
- 从已打包的 IP 地址的字段 0 值。  
+ The field 0 value from a packed IP address.  
   
  `nField1`  
- 从已打包的 IP 地址的字段 1 值。  
+ The field 1 value from a packed IP address.  
   
  `nField2`  
- 从已打包的 IP 地址的字段 2 值。  
+ The field 2 value from a packed IP address.  
   
  `nField3`  
- 从已打包的 IP 地址的字段 3 值。  
+ The field 3 value from a packed IP address.  
   
  `dwAddress`  
- 一个`DWORD`值，该值包含新的 IP 地址。 请参阅**备注**的表，其中显示了`DWORD`填充值。  
+ A `DWORD` value that contains the new IP address. See **Remarks** for a table that shows how the `DWORD` value is filled.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 在第一个原型更高版本中，域 0 到 3 之间的控件中读取的数字左到右分别，填充的四个参数。 在上面的第二个原型`dwAddress`，如下所示填充。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), as described in the Windows SDK. In the first prototype above, the numbers in fields 0 through 3 of the control, read left to right respectively, populate the four parameters. In the second prototype above, `dwAddress` is populated as follows.  
   
-|字段|包含的字段值的位|  
+|Field|Bits containing the field value|  
 |-----------|-------------------------------------|  
-|0|24 到 31 之间|  
-|1|16 到 23|  
-|2|8 到 15|  
-|3|0 到 7|  
+|0|24 through 31|  
+|1|16 through 23|  
+|2|8 through 15|  
+|3|0 through 7|  
   
-##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
- 将键盘焦点设置为 IP 地址控件中指定的字段。  
+##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus  
+ Sets the keyboard focus to the specified field in the IP Address Control.  
   
 ```  
 void SetFieldFocus(WORD nField);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nField`  
- 从零开始的字段焦点应设置为的索引。 如果此值大于字段数，则会将焦点设置到第一个空白字段。 如果所有字段都均非空，则会将焦点设置到第一个字段。  
+ Zero-based field index to which the focus should be set. If this value is greater than the number of fields, focus is set to the first blank field. If all fields are non-blank, focus is set to the first field.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), as described in the Windows SDK.  
   
-##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
- 设置 IP 地址控件中指定的字段的范围。  
+##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
+ Sets the range in the specified field in the IP Address Control.  
   
 ```  
 void SetFieldRange(
@@ -309,22 +312,22 @@ void SetFieldRange(
     BYTE nUpper);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nField`  
- 将应用范围的从零开始的字段索引。  
+ Zero-based field index to which the range will be applied.  
   
  `nLower`  
- 对接收此 IP 地址控件中的指定字段的下限的整数的引用。  
+ A reference to an integer receiving the lower limit of the specified field in this IP Address Control.  
   
  `nUpper`  
- 对接收此 IP 地址控件中的指定字段的上限的整数的引用。  
+ A reference to an integer receiving the upper limit of the specified field in this IP Address Control.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 使用两个参数，`nLower`和`nUpper`，以指示该字段的下限和上限限制而不是*wRange* Win32 消息所使用的参数。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), as described in the Windows SDK. Use the two parameters, `nLower` and `nUpper`, to indicate the lower and upper limits of the field, instead of the *wRange* parameter used with the Win32 message.  
   
-## <a name="see-also"></a>另请参阅  
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

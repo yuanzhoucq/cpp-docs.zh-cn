@@ -1,45 +1,64 @@
 ---
-title: "CStatusBarCtrl 的设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl 类, 设置"
-  - "状态栏控件, 设置"
+title: Settings for the CStatusBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bar controls [MFC], settings
+- CStatusBarCtrl class [MFC], settings
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# CStatusBarCtrl 的设置
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d7a94d4f8943c35c3adfad13314bc7b44d05efeb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) "状态"窗口的默认位置位于父窗口的底部，但您可指定 `CCS_TOP` 样式使其显示在父窗口的工作区的顶部。  
+---
+# <a name="settings-for-the-cstatusbarctrl"></a>Settings for the CStatusBarCtrl
+The default position of a [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) status window is along the bottom of the parent window, but you can specify the `CCS_TOP` style to have it appear at the top of the parent window's client area.  
   
- 还可以指定 **SBARS\_SIZEGRIP**。样式包含调整手柄在 `CStatusBarCtrl` 状态窗口的右端。  调整手柄类似大小调整边框；是用户可以通过单击和拖动来调整父窗口的矩形区域。  
+ You can specify the **SBARS_SIZEGRIP** style to include a sizing grip at the right end of the `CStatusBarCtrl` status window. A sizing grip is similar to a sizing border; it is a rectangular area that the user can click and drag to resize the parent window.  
   
 > [!NOTE]
->  如果组合使用 `CCS_TOP` 和样式，发生 **SBARS\_SIZEGRIP** 的调整手柄不工作，即使系统绘制在"状态"窗口。  
+>  If you combine the `CCS_TOP` and **SBARS_SIZEGRIP** styles, the resulting sizing grip is not functional even though the system draws it in the status window.  
   
- "状态"窗口的窗口过程会自动设置控件窗口的初始大小和位置。  宽度与其父窗口的工作区。  高度根据当前选择到"状态"窗口的上下文和设备在窗口边框的宽度字体的指标。  
+ The window procedure for the status window automatically sets the initial size and position of the control window. The width is the same as that of the parent window's client area. The height is based on the metrics of the font that is currently selected into the status window's device context and on the width of the window's borders.  
   
- 窗口过程自动调整窗口范围状态的，只要它接收 `WM_SIZE` 消息。  通常，当父，窗口大小的改变时，父 `WM_SIZE` 消息发送到"状态"窗口。  
+ The window procedure automatically adjusts the size of the status window whenever it receives a `WM_SIZE` message. Typically, when the size of the parent window changes, the parent sends a `WM_SIZE` message to the status window.  
   
- 通过调用 [SetMinHeight](../Topic/CStatusBarCtrl::SetMinHeight.md)设置状态窗口中绘图区的最小高度，指定最小高度 \(以像素为单位\)。  绘图区域不包括窗口边框。  
+ You can set the minimum height of a status window's drawing area by calling [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), specifying the minimum height in pixels. The drawing area does not include the window's borders.  
   
- 通过调用 [GetBorders](../Topic/CStatusBarCtrl::GetBorders.md)状态检索窗口边框的宽度。  该成员函数的包含指针到接收的水平、垂直范围的边界和边框的宽度矩形之间的三个元素的数组。  
+ You retrieve the widths of the borders of a status window by calling [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). This member function includes the pointer to a three-element array that receives the width of the horizontal border, the vertical border, and the border between rectangles.  
   
-## 请参阅  
- [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

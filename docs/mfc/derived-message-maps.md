@@ -1,48 +1,67 @@
 ---
-title: "派生消息映射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "派生消息映射"
-  - "消息处理, 派生消息处理程序"
-  - "消息映射, 派生"
-  - "消息, 路由"
+title: Derived Message Maps | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handling [MFC], derived message handlers
+- messages, routing
+- message maps [MFC]], derived
+- derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 派生消息映射
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76817ca4892bbdba9d67434d4c95741b690c3be3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-消息处理过程期间，检查类的消息映射不是消息映射文章的末尾。  如果类 `CMyView` \(从 `CView`派生\) 消息没有匹配输入将会发生什么？  
+---
+# <a name="derived-message-maps"></a>Derived Message Maps
+During message handling, checking a class's own message map is not the end of the message-map story. What happens if class `CMyView` (derived from `CView`) has no matching entry for a message  
   
- 记住 `CView` 是 `CMyView` 的基类，依次从 `CWnd` 派生。  因此，*为*`CView` 并且 `CMyView` *为*`CWnd`。  这些类都有各自的消息映射。  下面图像“视图层次结构”显示类的分层关系，但请记住 `CMyView` 对象是具有所有三个类特性的单个对象。  
+ Keep in mind that `CView`, the base class of `CMyView`, is derived in turn from `CWnd`. Thus `CMyView` *is* a `CView` and *is* a `CWnd`. Each of those classes has its own message map. The figure "A View Hierarchy" below shows the hierarchical relationship of the classes, but keep in mind that a `CMyView` object is a single object that has the characteristics of all three classes.  
   
- ![视图层次结构](../mfc/media/vc38621.png "vc38621")  
-视图层次结构  
+ ![Hierarchy of a view](../mfc/media/vc38621.gif "vc38621")  
+A View Hierarchy  
   
- 因此，如果消息在类 `CMyView` 消息映射不能匹配，则该框架还搜索其直接基类的消息映射。  在消息映射的开始 `BEGIN_MESSAGE_MAP` 宏指定两个类名作为其参数：  
+ So if a message can't be matched in class `CMyView`'s message map, the framework also searches the message map of its immediate base class. The `BEGIN_MESSAGE_MAP` macro at the start of the message map specifies two class names as its arguments:  
   
- [!CODE [NVC_MFCMessageHandling#2](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#2)]  
+ [!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]  
   
- 第一个参数属于命名消息映射的类。  第二个参数提供与直接基类 — `CView` 的连接 — 因此框架也可以搜索其消息映射。  
+ The first argument names the class to which the message map belongs. The second argument provides a connection with the immediate base class — `CView` here — so the framework can search its message map, too.  
   
- 在基类中提供的消息处理程序因此由派生类继承。  这非常类似于常规的虚拟成员函数，而不需要使用所有的处理程序虚成员函数。  
+ The message handlers provided in a base class are thus inherited by the derived class. This is very similar to normal virtual member functions without needing to make all handler member functions virtual.  
   
- 如果在任何基类消息映射中未找到处理程序，则默认执行消息处理。  如果消息是命令，框架发送到下一个命令目标。  如果是标准 Windows 消息，将消息传递给适当的默认窗口程序。  
+ If no handler is found in any of the base-class message maps, default processing of the message is performed. If the message is a command, the framework routes it to the next command target. If it is a standard Windows message, the message is passed to the appropriate default window procedure.  
   
- 若要加快匹配消息映射，框架缓存可能重新将接收相同消息的最近匹配。  这其中一个结果是框架高效处理未处理的消息。  消息映射比使用虚函数的实现有更高的空间利用率。  
+ To speed message-map matching, the framework caches recent matches on the likelihood that it will receive the same message again. One consequence of this is that the framework processes unhandled messages quite efficiently. Message maps are also more space-efficient than implementations that use virtual functions.  
   
-## 请参阅  
- [框架如何搜索消息映射](../mfc/how-the-framework-searches-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Searches Message Maps](../mfc/how-the-framework-searches-message-maps.md)
+
+

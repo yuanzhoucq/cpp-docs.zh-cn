@@ -1,52 +1,71 @@
 ---
-title: "文档模板和文档/视图创建过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocTemplate 类"
-  - "文档模板, 和视图"
-  - "文档/视图体系结构, 创建文档/视图"
-  - "图标, 对于多个文档模板"
-  - "MFC, 文档模板"
-  - "多个文档模板"
-  - "单个文档模板"
-  - "模板, 文档模板"
+title: Document Templates and the Document-View Creation Process | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- icons, for multiple document templates
+- document templates [MFC], and views
+- document/view architecture [MFC], creating document/view
+- single document template
+- MFC, document templates
+- multiple document template
+- CDocTemplate class [MFC]
+- templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 文档模板和文档/视图创建过程
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a9df24e536d134962d189ed45a869bf793ae7b0a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-若要管理创建及其相关视图的复杂进程和文档框架窗口，框架使用两个文档模板类： 在SDI应用程序中[CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)和[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) 对 MDI 应用程序。  `CSingleDocTemplate` 可以同时创建和存储一个类型的文档。  `CMultiDocTemplate` 保留多个同一类型的打开文档的列表。  
+---
+# <a name="document-templates-and-the-documentview-creation-process"></a>Document Templates and the Document/View Creation Process
+To manage the complex process of creating documents with their associated views and frame windows, the framework uses two document template classes: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) for SDI applications and [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) for MDI applications. A `CSingleDocTemplate` can create and store one document of one type at a time. A `CMultiDocTemplate` keeps a list of many open documents of one type.  
   
- 某些应用程序可以支持多文档类型。  例如，应用程序可能支持文本文档和图件。  在这种应用程序中，当用户选择文件菜单上的新命令时，一个对话框会显示可能的要打开的新文件的列表。  对于每个支持的文档类型，应用程序使用不同的文档模板对象。  下图说明了支持两种文档类型和显示多个打开文档的MDI 应用程序的配置。  
+ Some applications support multiple document types. For example, an application might support text documents and graphics documents. In such an application, when the user chooses the New command on the File menu, a dialog box shows a list of possible new document types to open. For each supported document type, the application uses a distinct document template object. The following figure illustrates the configuration of an MDI application that supports two document types and shows several open documents.  
   
- ![具有两种文档类型的 MDI 应用程序](../mfc/media/vc387h1.png "vc387H1")  
-包含两个文档类型的 MDI 应用程序  
+ ![MDI application that has two document types](../mfc/media/vc387h1.gif "vc387h1")  
+An MDI Application with Two Document Types  
   
- 文档模板将应用程序对象创建和维护。  在应用程序的 `InitInstance` 函数执行时的一个关键任务是构造一个或多个正确的文档模板类型。  此功能在[创建文档模板](../mfc/document-template-creation.md)中描述。  应用程序对象在其模板列表中，存储了一个指向每个文件模板的指针并且为增加文件模板提供一个接口。  
+ Document templates are created and maintained by the application object. One of the key tasks performed during your application's `InitInstance` function is to construct one or more document templates of the appropriate kind. This feature is described in [Document Template Creation](../mfc/document-template-creation.md). The application object stores a pointer to each document template in its template list and provides an interface for adding document templates.  
   
- 如果需要支持两个或多个文档类型，则必须为每个文档类型添加一额外的调用[AddDocTemplate](../Topic/CWinApp::AddDocTemplate.md)。  
+ If you need to support two or more document types, you must add an extra call to [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) for each document type.  
   
- 根据其在应用程序文档模板列表中的位置，为每个文档模板注册一个图标。  文档模板的顺序是由调用`AddDocTemplate`来添加他们的顺序所决定的。  MFC 假定，应用程序的第一个图标资源是应用程序图标，下一个图标资源是第一文档图标，依此类推。  
+ An icon is registered for each document template based on its position in the application's list of document templates. The order of the document templates is determined by the order they are added with calls to `AddDocTemplate`. MFC assumes that the first Icon resource in the application is the application icon, the next Icon resource is the first document icon, and so on.  
   
- 例如，文档模板是应用程序中的第三个。  如果在应用程序的图标资源位于索引 3 处，则该图标是用于文档模板。  否则，图标索引值为 0 ，则作为默认图标。  
+ For example, a document template is the third of three for the application. If there is an Icon resource in the application at index 3, that icon is used for the document template. If not, the icon at index 0 is used as a default.  
   
-## 请参阅  
- [常规 MFC 主题](../mfc/general-mfc-topics.md)   
- [文档模板创建](../mfc/document-template-creation.md)   
- [文档\/视图创建](../mfc/document-view-creation.md)   
- [MFC 对象之间的关系](../mfc/relationships-among-mfc-objects.md)   
- [创建新文档、窗口和视图](../mfc/creating-new-documents-windows-and-views.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Relationships Among MFC Objects](../mfc/relationships-among-mfc-objects.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

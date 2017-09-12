@@ -1,5 +1,5 @@
 ---
-title: "CMFCTabCtrl 类 |Microsoft 文档"
+title: CMFCTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -63,14 +63,55 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTabCtrl::SwapTabs method
-- CMFCTabCtrl constructor
-- CMFCTabCtrl::MoveTab method
-- CMFCTabCtrl::GetTabFromPoint method
-- CMFCTabCtrl::PreTranslateMessage method
-- CMFCTabCtrl::RecalcLayout method
-- CMFCTabCtrl class
-- CMFCTabCtrl::IsPtInTabArea method
+- CMFCTabCtrl [MFC], ActivateMDITab
+- CMFCTabCtrl [MFC], AllowDestroyEmptyTabbedPane
+- CMFCTabCtrl [MFC], AutoSizeWindow
+- CMFCTabCtrl [MFC], CalcRectEdit
+- CMFCTabCtrl [MFC], Create
+- CMFCTabCtrl [MFC], EnableActiveTabCloseButton
+- CMFCTabCtrl [MFC], EnableInPlaceEdit
+- CMFCTabCtrl [MFC], EnableTabDocumentsMenu
+- CMFCTabCtrl [MFC], EnsureVisible
+- CMFCTabCtrl [MFC], GetDocumentIcon
+- CMFCTabCtrl [MFC], GetFirstVisibleTabNum
+- CMFCTabCtrl [MFC], GetResizeMode
+- CMFCTabCtrl [MFC], GetScrollBar
+- CMFCTabCtrl [MFC], GetTabArea
+- CMFCTabCtrl [MFC], GetTabMaxWidth
+- CMFCTabCtrl [MFC], GetTabsHeight
+- CMFCTabCtrl [MFC], GetTabsRect
+- CMFCTabCtrl [MFC], GetWndArea
+- CMFCTabCtrl [MFC], HideActiveWindowHorzScrollBar
+- CMFCTabCtrl [MFC], HideInactiveWindow
+- CMFCTabCtrl [MFC], HideNoTabs
+- CMFCTabCtrl [MFC], HideSingleTab
+- CMFCTabCtrl [MFC], IsActiveInMDITabGroup
+- CMFCTabCtrl [MFC], IsActiveTabBoldFont
+- CMFCTabCtrl [MFC], IsActiveTabCloseButton
+- CMFCTabCtrl [MFC], IsDrawFrame
+- CMFCTabCtrl [MFC], IsFlatFrame
+- CMFCTabCtrl [MFC], IsFlatTab
+- CMFCTabCtrl [MFC], IsLeftRightRounded
+- CMFCTabCtrl [MFC], IsMDITabGroup
+- CMFCTabCtrl [MFC], IsOneNoteStyle
+- CMFCTabCtrl [MFC], IsSharedScroll
+- CMFCTabCtrl [MFC], IsTabDocumentsMenu
+- CMFCTabCtrl [MFC], IsVS2005Style
+- CMFCTabCtrl [MFC], ModifyTabStyle
+- CMFCTabCtrl [MFC], OnDragEnter
+- CMFCTabCtrl [MFC], OnDragOver
+- CMFCTabCtrl [MFC], OnShowTabDocumentsMenu
+- CMFCTabCtrl [MFC], SetActiveInMDITabGroup
+- CMFCTabCtrl [MFC], SetActiveTab
+- CMFCTabCtrl [MFC], SetActiveTabBoldFont
+- CMFCTabCtrl [MFC], SetDrawFrame
+- CMFCTabCtrl [MFC], SetFlatFrame
+- CMFCTabCtrl [MFC], SetImageList
+- CMFCTabCtrl [MFC], SetResizeMode
+- CMFCTabCtrl [MFC], SetTabMaxWidth
+- CMFCTabCtrl [MFC], StopResize
+- CMFCTabCtrl [MFC], SynchronizeScrollBar
+- CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 caps.latest.revision: 33
 author: mikeblome
@@ -90,130 +131,130 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 595ff7fbcd55f3b756ce650e02b6247b898d7629
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 435157fe230a29763a6e068e72a2b4d668651fcc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
-`CMFCTabCtrl`类提供的选项卡控件的功能。 选项卡控件在其顶部或底部显示具有平面或三维选项卡的可停靠窗口。 选项卡可以显示文本和图像，并可在处于活动状态时更改颜色。  
+The `CMFCTabCtrl` class provides functionality for a tab control. The tab control displays a dockable window with flat or three-dimensional tabs at its top or bottom. The tabs can display text and an image and can change color when active.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCTabCtrl : public CMFCBaseTabCtrl  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCTabCtrl::CMFCTabCtrl`|默认构造函数。|  
-|`CMFCTabCtrl::~CMFCTabCtrl`|析构函数。|  
+|`CMFCTabCtrl::CMFCTabCtrl`|Default constructor.|  
+|`CMFCTabCtrl::~CMFCTabCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTabCtrl::ActivateMDITab](#activatemditab)|显示当前选项卡控件指定选项卡，并将焦点设置在该选项卡上。|  
+|[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Displays the specified tab of the current tab control and sets the focus on that tab.|  
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||  
-|[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|指定是否要调整大小的工作区的所有选项卡控件窗口时用户界面元素的选项卡控件更改框架。|  
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|压缩指定的选项卡区域的大小。 （重写 `CMFCBaseTabCtrl::CalcRectEdit`。）|  
-|[CMFCTabCtrl::Create](#create)|创建选项卡上的控件并将其附加到`CMFCTabCtrl`对象。|  
-|`CMFCTabCtrl::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|显示或隐藏关闭按钮 ( **X**) 在活动选项卡上。|  
-|[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|启用或禁用可编辑的选项卡标签。 (重写[CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit)。)|  
-|[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|将替换两个滚动窗口选项卡包含用于将打开一个菜单选项卡式窗口的按钮的按钮。|  
-|[CMFCTabCtrl::EnsureVisible](#ensurevisible)|确保可见选项卡。|  
-|[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|检索与选项卡式窗口弹出菜单中的选项卡相关联的符号。|  
-|[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|检索当前选项卡控件中可见第一个选项卡的索引。|  
-|[CMFCTabCtrl::GetResizeMode](#getresizemode)|检索一个值，指定如何调整大小的当前选项卡控件。|  
-|[CMFCTabCtrl::GetScrollBar](#getscrollbar)|检索指向与选项卡控件关联的滚动栏对象的指针。|  
-|[CMFCTabCtrl::GetTabArea](#gettabarea)|检索位于顶部或底部的选项卡控件的选项卡标签区域的边框。 (重写[CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea)。)|  
-|`CMFCTabCtrl::GetTabFromPoint`|检索包含指定的点的选项卡。 (重写[CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint)。)|  
-|[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|检索一个选项卡的最大宽度。|  
-|[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|检索当前选项卡控件的选项卡区域的高度。|  
-|[CMFCTabCtrl::GetTabsRect](#gettabsrect)|检索限定当前选项卡控件的选项卡区域的矩形。 (重写[CMFCBaseTabCtrl::GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect)。)|  
-|`CMFCTabCtrl::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CMFCTabCtrl::GetWndArea](#getwndarea)|检索当前选项卡控件的工作区的边界。|  
-|[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)|如果任何活动窗口将隐藏水平滚动条。|  
-|[CMFCTabCtrl::HideInactiveWindow](#hideinactivewindow)|指定是否要显示非活动状态的选项卡控件窗口框架。|  
-|[CMFCTabCtrl::HideNoTabs](#hidenotabs)|启用或禁用绘制选项卡区域，如果没有可见的选项卡。|  
-|[CMFCTabCtrl::HideSingleTab](#hidesingletab)|启用或禁用单个选项卡式的窗口时绘制一个选项卡。 (重写[CMFCBaseTabCtrl::HideSingleTab](../../mfc/reference/cmfcbasetabctrl-class.md#hidesingletab)。)|  
-|[CMFCTabCtrl::IsActiveInMDITabGroup](#isactiveinmditabgroup)|指示选项卡控件当前选项卡是否为多个文档接口选项卡组活动选项卡。|  
-|[CMFCTabCtrl::IsActiveTabBoldFont](#isactivetabboldfont)|指示是否使用加粗字体显示活动选项卡的文本。|  
-|[CMFCTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)|指示是否关闭按钮 ( **X**) 显示在活动选项卡或选项卡区域的右上角上。|  
-|[CMFCTabCtrl::IsDrawFrame](#isdrawframe)|指示是否选项卡式的窗口周围绘制一个帧矩形嵌入窗格。|  
-|[CMFCTabCtrl::IsFlatFrame](#isflatframe)|指示选项卡区域周围的框架是平面或 3D。|  
-|[CMFCTabCtrl::IsFlatTab](#isflattab)|指示当前选项卡控件中选项卡的外观是否平面。|  
-|[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|指示是否舍入的左侧和右侧当前选项卡控件中的选项卡的外观。|  
-|[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|指示当前选项卡控件是否包含的多文档界面窗口的工作区中。|  
-|[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|指示是否在 Microsoft OneNote 样式中显示当前选项卡控件。|  
-|`CMFCTabCtrl::IsPtInTabArea`|确定某个点是否在选项卡区域内。 (重写[CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea)。)|  
-|[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|指示当前选项卡控件是否有可以滚动作为一个组，其选项卡的滚动条。|  
-|[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|指示选项卡控件显示滚动按钮或显示的选项卡式窗口菜单的按钮。|  
-|[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|指示是否在 Visual Studio.NET 2005年的样式显示选项卡。|  
-|[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|当前选项卡控件中指定选项卡的外观。|  
-|`CMFCTabCtrl::MoveTab`|将一个选项卡移动到另一个选项卡位置。 (重写[CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab)。)|  
-|[CMFCTabCtrl::OnDragEnter](#ondragenter)|第一次光标拖到选项卡控制窗口中时由框架调用。|  
-|[CMFCTabCtrl::OnDragOver](#ondragover)|由框架调用在拖动操作期间当鼠标移到放置目标窗口。 (重写[CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover)。)|  
-|[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|显示的选项卡式窗口的弹出菜单时，一直等待，直到用户选择一个选项卡，并使活动选项卡的所选选项卡。|  
-|`CMFCTabCtrl::PreTranslateMessage`|翻译窗口消息之前被发送到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 (重写[CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)。)|  
-|`CMFCTabCtrl::RecalcLayout`|重新计算选项卡控件的内部布局。 (重写[CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)。)|  
-|[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|将选项卡控件当前选项卡设置为在多文档界面选项卡组活动选项卡。|  
-|[CMFCTabCtrl::SetActiveTab](#setactivetab)|激活选项卡。 (重写[CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)。)|  
-|[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|启用或禁用使用活动选项卡上的加粗字体。|  
-|[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|启用或禁用周围嵌入栏 drawinga 帧矩形。|  
-|[CMFCTabCtrl::SetFlatFrame](#setflatframe)|指定是否以选项卡区域的周围绘制以平面或 3D 的框架。|  
-|[CMFCTabCtrl::SetImageList](#setimagelist)|指定图像列表。 (重写[CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist)。)|  
-|[CMFCTabCtrl::SetResizeMode](#setresizemode)|指定如何调整大小的当前选项卡控件，然后重新显示该控件。|  
-|[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)|在选项卡式窗口中指定的最大的选项卡宽度。|  
-|[CMFCTabCtrl::StopResize](#stopresize)|终止当前的大小调整操作选项卡控件上。|  
-|`CMFCTabCtrl::SwapTabs`|交换一对选项卡。 (重写[CMFCBaseTabCtrl::SwapTabs](../../mfc/reference/cmfcbasetabctrl-class.md#swaptabs)。)|  
-|[CMFCTabCtrl::SynchronizeScrollBar](#synchronizescrollbar)|在显示平面选项卡的选项卡控件上绘制的水平滚动条。|  
+|[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Specifies whether the framework is to resize the client area of all tab control windows when a user interface element of the tab control changes.|  
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Deflates the size of the specified tab area. (Overrides `CMFCBaseTabCtrl::CalcRectEdit`.)|  
+|[CMFCTabCtrl::Create](#create)|Creates the tab control and attaches it to the `CMFCTabCtrl` object.|  
+|`CMFCTabCtrl::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Shows or hides a Close button ( **X**) on the active tab.|  
+|[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Enables or disables editable tab labels. (Overrides [CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|  
+|[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|Replaces two buttons that scroll the window tabs with a button that opens a menu of tabbed windows.|  
+|[CMFCTabCtrl::EnsureVisible](#ensurevisible)|Ensures that a tab is visible.|  
+|[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|Retrieves the symbol that is associated with a tab in a popup menu of tabbed windows.|  
+|[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|Retrieves the index of the first tab that is visible in the current tab control.|  
+|[CMFCTabCtrl::GetResizeMode](#getresizemode)|Retrieves a value that specifies how the current tab control can be resized.|  
+|[CMFCTabCtrl::GetScrollBar](#getscrollbar)|Retrieves a pointer to the scroll bar object that is associated with the tab control.|  
+|[CMFCTabCtrl::GetTabArea](#gettabarea)|Retrieves the bounding rectangle of the tab label area at the top or bottom of the tab control. (Overrides [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|  
+|`CMFCTabCtrl::GetTabFromPoint`|Retrieves the tab that contains a specified point. (Overrides [CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|  
+|[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|Retrieves the maximum width of a tab.|  
+|[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|Retrieves the height of the tab area of the current tab control.|  
+|[CMFCTabCtrl::GetTabsRect](#gettabsrect)|Retrieves a rectangle that bounds the tab area of the current tab control. (Overrides [CMFCBaseTabCtrl::GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect).)|  
+|`CMFCTabCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCTabCtrl::GetWndArea](#getwndarea)|Retrieves the boundary of the client area of the current tab control.|  
+|[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)|Hides the horizontal scroll bar, if any, of the active window.|  
+|[CMFCTabCtrl::HideInactiveWindow](#hideinactivewindow)|Specifies whether the framework is to display inactive tab control windows.|  
+|[CMFCTabCtrl::HideNoTabs](#hidenotabs)|Enables or disables drawing the tab area if there are no visible tabs.|  
+|[CMFCTabCtrl::HideSingleTab](#hidesingletab)|Enables or disables drawing a tab when there is a single tabbed window. (Overrides [CMFCBaseTabCtrl::HideSingleTab](../../mfc/reference/cmfcbasetabctrl-class.md#hidesingletab).)|  
+|[CMFCTabCtrl::IsActiveInMDITabGroup](#isactiveinmditabgroup)|Indicates whether the current tab of a tab control is the active tab in an multiple document interface tab group.|  
+|[CMFCTabCtrl::IsActiveTabBoldFont](#isactivetabboldfont)|Indicates whether the text of the active tab is displayed using a bold font.|  
+|[CMFCTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)|Indicates whether the Close button ( **X**) is displayed on an active tab or the upper-right corner of the tab area.|  
+|[CMFCTabCtrl::IsDrawFrame](#isdrawframe)|Indicates whether the tabbed window draws a frame rectangle around embedded panes.|  
+|[CMFCTabCtrl::IsFlatFrame](#isflatframe)|Indicates whether the frame around the tab area is flat or 3D.|  
+|[CMFCTabCtrl::IsFlatTab](#isflattab)|Indicates whether the appearance of the tabs in the current tab control is flat or not.|  
+|[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|Indicates whether the appearance of the left and right side of a tab in the current tab control is rounded.|  
+|[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|Indicates whether the current tab control is contained in the client area of a multiple-document interface window.|  
+|[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|Indicates whether the current tab control is displayed in the style of Microsoft OneNote.|  
+|`CMFCTabCtrl::IsPtInTabArea`|Determines if a point is inside the tab area. (Overrides [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|  
+|[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|Indicates whether the current tab control has a scroll bar that can scroll its tabs as a group.|  
+|[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|Indicates whether the tab control displays scroll buttons or a button that displays a menu of tabbed windows.|  
+|[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|Indicates whether tabs are displayed in the style of Visual Studio .NET 2005.|  
+|[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|Specifies the appearance of tabs in the current tab control.|  
+|`CMFCTabCtrl::MoveTab`|Moves a tab to another tab position. (Overrides [CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab).)|  
+|[CMFCTabCtrl::OnDragEnter](#ondragenter)|Called by the framework when the cursor is first dragged into the tab control window.|  
+|[CMFCTabCtrl::OnDragOver](#ondragover)|Called by the framework during a drag operation when the mouse is moved over the drop target window. (Overrides [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
+|[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Displays a popup menu of tabbed windows, waits until the user selects a tab, and makes the selected tab the active tab.|  
+|`CMFCTabCtrl::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::RecalcLayout`|Recalculates the internal layout of the tab control. (Overrides [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
+|[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Sets the current tab of a tab control as the active tab in an multiple document interface tab group.|  
+|[CMFCTabCtrl::SetActiveTab](#setactivetab)|Activates a tab. (Overrides [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
+|[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Enables or disables use of a bold font on active tabs.|  
+|[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|Enables or disables drawinga frame rectangle around an embedded bar.|  
+|[CMFCTabCtrl::SetFlatFrame](#setflatframe)|Specifies whether to draw a flat or a 3D frame around the tab area.|  
+|[CMFCTabCtrl::SetImageList](#setimagelist)|Specifies an image list. (Overrides [CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist).)|  
+|[CMFCTabCtrl::SetResizeMode](#setresizemode)|Specifies how the current tab control can be resized and then redisplays the control.|  
+|[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)|Specifies the maximum tab width in a tabbed window.|  
+|[CMFCTabCtrl::StopResize](#stopresize)|Terminates the current resize operation on the tab control.|  
+|`CMFCTabCtrl::SwapTabs`|Swaps a pair of tabs. (Overrides [CMFCBaseTabCtrl::SwapTabs](../../mfc/reference/cmfcbasetabctrl-class.md#swaptabs).)|  
+|[CMFCTabCtrl::SynchronizeScrollBar](#synchronizescrollbar)|Draws a horizontal scroll bar on a tab control that displays flat tabs.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|防止失去焦点时插入并启用一个新选项卡中的活动视图。|  
+|[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Prevents the active view from losing focus when a new tab is inserted and enabled.|  
   
-## <a name="remarks"></a>备注  
- `CMFCTabCtrl`类支持︰  
+## <a name="remarks"></a>Remarks  
+ The `CMFCTabCtrl` class supports:  
   
--   选项卡包括 3D、 平齐，和平面共享水平滚动条控件样式。  
+-   Tab control styles that include 3D, flat, and flat with a shared horizontal scroll bar.  
   
--   选项卡位于顶部或底部的窗口中。  
+-   Tabs located at the top or the bottom of the window.  
   
--   显示文本、 图像或文本和图像的选项卡。  
+-   Tabs that display text, images, or text and images.  
   
--   选项卡处于活动状态时更改颜色的选项卡。  
+-   Tabs that change color when the tab is active.  
   
--   可调整的选项卡的边框大小更改。  
+-   Border size changes for adjustable tabs.  
   
--   可拆分的选项卡式的窗口。  
+-   Detachable tabbed windows.  
   
- `CMFCTabCtrl`类可以用于对话框中，但适用于在应用程序使用停靠控件条类似[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]和[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]。 有关详细信息，请参阅[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)。  
+ The `CMFCTabCtrl` class can be used with a dialog box, but is intended for applications that use docking control bars like [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] and [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. For more information, see [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
- 请按照上述步骤以添加可调整大小，在您的应用程序中的选项卡控件停靠在操作︰  
+ Follow these steps to add a resizable, docking tab control in your application:  
   
-1.  创建的实例[CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)。  
+1.  Create an instance of [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md).  
   
-2.  调用[CDockablePane::Create](../../mfc/reference/cdockablepane-class.md#create)。  
+2.  Call [CDockablePane::Create](../../mfc/reference/cdockablepane-class.md#create).  
   
-3.  使用[CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab)或[cmfcbasetabctrl:: Inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)可以添加新选项卡。  
+3.  Use [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) or [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) to add new tabs.  
   
-4.  调用[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) ，以便可以将当前的停靠选项卡控件停靠的主框架窗口。  
+4.  Call [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) so that the current docking tab control can dock at the main frame window.  
   
-5.  调用[CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane)停靠在主框架选项卡式窗口。  
+5.  Call [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane) to dock the tabbed window at the main frame.  
   
- 有关如何创建作为停靠控件条条选项卡式的窗口的示例，请参阅[CTabbedPane 类](../../mfc/reference/ctabbedpane-class.md)。 若要使用`CMFCTabCtrl`作为非停靠控件，创建`CMFCTabCtrl`对象，然后调用[CMFCTabCtrl::Create](#create)。  
+ For an example of how to create a tabbed window as a docking control bar, see [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md). To use `CMFCTabCtrl` as a non-docking control, create a `CMFCTabCtrl` object and then call [CMFCTabCtrl::Create](#create).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -224,53 +265,53 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
  [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用各种方法`CMFCTabCtrl`用于配置类`CMFCTabCtrl`对象。 该示例说明如何添加选项卡、 活动选项卡上显示关闭按钮、 启用可编辑的选项卡标签和显示选项卡式的窗口标签的弹出菜单。 此示例摘自[状态收集样本](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCTabCtrl` class to configure a `CMFCTabCtrl` object. The example explains how to add a tab, show the Close button on the active tab, enable editable tab labels, and display a pop-up menu of tabbed window labels. This example is part of the [State Collection sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StateCollection #&1;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_StateCollection #&3;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxtabctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtabctrl.h  
   
-##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
- 显示当前选项卡控件指定选项卡，并将焦点设置在该选项卡上。  
+##  <a name="activatemditab"></a>  CMFCTabCtrl::ActivateMDITab  
+ Displays the specified tab of the current tab control and sets the focus on that tab.  
   
 ```  
 void ActivateMDITab(int nTab = -1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nTab`  
- 选项卡显示，或者为-1 以指定当前处于活动状态选项卡的从零开始索引。  
+ The zero-based index of a tab to display, or -1 to specify the currently active tab.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 总是为 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
- 指定是否要调整大小的工作区的所有选项卡控件窗口时用户界面元素的选项卡控件更改框架。  
+##  <a name="autosizewindow"></a>  CMFCTabCtrl::AutoSizeWindow  
+ Specifies whether the framework is to resize the client area of all tab control windows when a user interface element of the tab control changes.  
   
 ```  
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoSize`  
- `TRUE`若要自动调整大小选项卡控件窗口中︰否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` to automatically resize tab control windows; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCTabCtrl::Create  
- 创建选项卡上的控件并将其附加到`CMFCTabCtrl`对象。  
+##  <a name="create"></a>  CMFCTabCtrl::Create  
+ Creates the tab control and attaches it to the `CMFCTabCtrl` object.  
   
 ```  
 BOOL Create(
@@ -282,175 +323,175 @@ BOOL Create(
     BOOL bCloseBtn=FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `style`  
- 选项卡控件的样式。 有关更多信息，请参见“备注”。  
+ The style of the tab control. For more information, see Remarks.  
   
  [in] `rect`  
- 限定选项卡控件的矩形。  
+ A rectangle that bounds the tab control.  
   
  [in] `pParentWnd`  
- 指向父窗口的指针。 不得为 `NULL`。  
+ A pointer to a parent window. Must not be `NULL`.  
   
  [in] `nID`  
- 选项卡控件的 ID。  
+ The ID of the tab control.  
   
  [in] `location`  
- 选项卡的位置。 默认值为 `LOCATION_BOTTOM`。 有关更多信息，请参见“备注”。  
+ The location of tabs. The default value is `LOCATION_BOTTOM`. For more information, see Remarks.  
   
  [in] `bCloseBtn`  
- `TRUE`若要显示在选项卡; 关闭按钮否则为`FALSE`。 默认值为 `FALSE`。  
+ `TRUE` to display a close button on the tab; otherwise, `FALSE`. The default value is `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 下表描述了可为指定值`style`参数。  
+### <a name="remarks"></a>Remarks  
+ The following table describes the values you can specify for the `style` parameter.  
   
-|样式|描述|  
+|Style|Description|  
 |-----------|-----------------|  
-|STYLE_3D|创建具有三维外观的选项卡控件。|  
-|STYLE_FLAT|带有平面选项卡创建选项卡控件。|  
-|STYLE_FLAT_SHARED_HORZ_SCROLL|带有平面选项卡和滚动条可滚动选项卡，如果它们剪裁的父窗口创建选项卡控件。|  
-|STYLE_3D_ONENOTE|创建选项卡控件中的 Microsoft OneNote 样式。|  
-|STYLE_3D_VS2005|在样式中的 Microsoft Visual Studio 2005 创建选项卡控件。|  
-|STYLE_3D_ROUNDED|带有圆角的选项卡样式的 Microsoft Visual Studio 2005 创建选项卡控件。|  
-|STYLE_3D_ROUNDED_SCROLL|创建带有圆角的选项卡和 Microsoft Visual Studio 2005 样式的滚动按钮选项卡控件。|  
+|STYLE_3D|Creates a tab control with a three-dimensional appearance.|  
+|STYLE_FLAT|Creates a tab control with flat tabs.|  
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Creates a tab control with flat tabs and a scroll bar that can scroll the tabs if they are clipped by a parent window.|  
+|STYLE_3D_ONENOTE|Creates a tab control in the style of Microsoft OneNote.|  
+|STYLE_3D_VS2005|Creates a tab control in the style of Microsoft Visual Studio 2005.|  
+|STYLE_3D_ROUNDED|Creates a tab control with rounded tabs in the style of Microsoft Visual Studio 2005.|  
+|STYLE_3D_ROUNDED_SCROLL|Creates a tab control with rounded tabs and scroll buttons in the style of Microsoft Visual Studio 2005.|  
   
- 下表列出了可为指定值`location`参数。  
+ The following table lists the values you can specify for the `location` parameter.  
   
-|位置|描述|  
+|Location|Description|  
 |--------------|-----------------|  
-|LOCATION_BOTTOM|选项卡位于底部的选项卡控件。|  
-|LOCATION_TOP|选项卡位于顶部的选项卡控件。|  
+|LOCATION_BOTTOM|Tabs are located at the bottom of the tab control.|  
+|LOCATION_TOP|Tabs are located at the top of the tab control.|  
   
-### <a name="example"></a>示例  
- 下面的示例演示如何使用`Create`中的方法`CMFCTabCtrl`类。 此示例摘自[状态收集样本](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method in the `CMFCTabCtrl` class. This example is part of the [State Collection sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StateCollection #&1;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_StateCollection #&2;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
   
-##  <a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
- 压缩指定的选项卡区域的大小。  
+##  <a name="calcrectedit"></a>  CMFCTabCtrl::CalcRectEdit  
+ Deflates the size of the specified tab area.  
   
 ```  
 virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rectEdit`  
- 一个指定的选项卡区域的矩形。  
+ A rectangle that specifies the area of a tab.  
   
-### <a name="remarks"></a>备注  
- 当您更改的选项卡标签时，调用此方法。 此方法压缩的左侧和右侧指定的矩形的一半的当前选项卡高度，并压缩顶部和底部一个单位。  
+### <a name="remarks"></a>Remarks  
+ This method is called when you change the label of a tab. This method deflates the left and right sides of the specified rectangle by one-half the current tab height, and deflates the top and bottom by one unit.  
   
-##  <a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
- 显示或隐藏关闭按钮 ( **X**) 在活动选项卡上。  
+##  <a name="enableactivetabclosebutton"></a>  CMFCTabCtrl::EnableActiveTabCloseButton  
+ Shows or hides a Close button ( **X**) on the active tab.  
   
 ```  
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`在活动选项卡; 上显示关闭按钮`FALSE`要在选项卡区域的右上角上显示关闭按钮。 默认值为 `TRUE`。  
+ `TRUE` to display the Close button on the active tab; `FALSE` to display the Close button on the upper-right corner of the tab area. The default value is `TRUE`.  
   
-##  <a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
- 启用或禁用可编辑的选项卡标签。  
+##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
+ Enables or disables editable tab labels.  
   
 ```  
 virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要启用可编辑的选项卡标签;`FALSE`禁用可编辑的选项卡标签。  
+ `TRUE` to enable editable tab labels; `FALSE` to disable editable tab labels.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
- 一个用户界面，使用两个按钮来滚动窗口选项卡和显示选项卡式窗口弹出菜单的接口之间切换。  
+##  <a name="enabletabdocumentsmenu"></a>  CMFCTabCtrl::EnableTabDocumentsMenu  
+ Toggles between a user interface that uses two buttons to scroll the window tabs and an interface that displays a pop-up menu of tabbed windows.  
   
 ```  
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要显示的选项卡式的窗口标签; 一个弹出菜单`FALSE`显示向前和向后滚动按钮。 默认值为 `TRUE`。  
+ `TRUE` to display a pop-up menu of tabbed window labels; `FALSE` to display forward and backward scroll buttons. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 当用户单击选项卡标签时，框架将显示相应的选项卡式的窗口。 如果选项卡标签可见，而无需更改其位置后打开此选项卡式的窗口。 如果用户从弹出菜单中选择一个文档和相应的选项卡式的窗口已关闭屏幕，选项卡式的窗口将成为第一个选项卡。  
+### <a name="remarks"></a>Remarks  
+ When the user clicks a tab label, the framework displays the corresponding tabbed window. If the tab label is visible, the tabbed window is opened without changing its position. If the user selects a document from the pop-up menu and the corresponding tabbed window is off screen, the tabbed window becomes the first tab.  
   
-##  <a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
- 确保可见选项卡。  
+##  <a name="ensurevisible"></a>  CMFCTabCtrl::EnsureVisible  
+ Ensures that a tab is visible.  
   
 ```  
 virtual BOOL EnsureVisible(int iTab);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则`FALSE`如果`iTab`是无效的参数索引。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if it is successful; `FALSE` if the `iTab` parameter index is invalid.  
   
-### <a name="remarks"></a>备注  
- 使用此方法以确保指定的选项卡是可见。 如有必要，将滚动选项卡控件。  
+### <a name="remarks"></a>Remarks  
+ Use this method to guarantee that the specified tab is visible. The tab control will scroll if it is required.  
   
-##  <a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
- 检索与选项卡式窗口的弹出菜单中的选项卡相关联的映像。  
+##  <a name="getdocumenticon"></a>  CMFCTabCtrl::GetDocumentIcon  
+ Retrieves the image that is associated with a tab in a pop-up menu of tabbed windows.  
   
 ```  
 static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nCmdID`  
- 在选项卡式窗口的弹出菜单的选项卡的命令 ID。  
+ The command ID of a tab in a pop-up menu of tabbed windows.  
   
-### <a name="return-value"></a>返回值  
- 位图图像的句柄。  
+### <a name="return-value"></a>Return Value  
+ The handle of a bitmap image.  
   
-##  <a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
- 检索当前选项卡控件中可见第一个选项卡的索引。  
+##  <a name="getfirstvisibletabnum"></a>  CMFCTabCtrl::GetFirstVisibleTabNum  
+ Retrieves the index of the first tab that is visible in the current tab control.  
   
 ```  
 virtual int GetFirstVisibleTabNum() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 在选项卡控件的选项卡的从零开始的索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of a tab in the tab control.  
   
-### <a name="remarks"></a>备注  
- 只有当选项卡控件显示在样式中的 Microsoft OneNote 时，请使用此方法。 使用[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)方法，以确定该样式。  
+### <a name="remarks"></a>Remarks  
+ Use this method only when the tab control is displayed in the style of Microsoft OneNote. Use the [CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle) method to determine the style.  
   
-##  <a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
- 检索一个值，指定如何调整大小的当前选项卡控件。  
+##  <a name="getresizemode"></a>  CMFCTabCtrl::GetResizeMode  
+ Retrieves a value that specifies how the current tab control can be resized.  
   
 ```  
 ResizeMode GetResizeMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 其中一个`CMFCTabCtrl::ResizeMode`枚举值，该值指定如何调整大小选项卡控件。 有关可能的值的列表，请参阅备注部分的[CMFCTabCtrl::SetResizeMode](#setresizemode)方法。  
+### <a name="return-value"></a>Return Value  
+ One of the `CMFCTabCtrl::ResizeMode` enumeration values that specifies how the tab control can be resized. For a list of possible values, see the Remarks section of the [CMFCTabCtrl::SetResizeMode](#setresizemode) method.  
   
-##  <a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
- 检索指向与选项卡控件关联的滚动栏对象的指针。  
+##  <a name="getscrollbar"></a>  CMFCTabCtrl::GetScrollBar  
+ Retrieves a pointer to the scroll bar object that is associated with the tab control.  
   
 ```  
 CScrollBar* GetScrollBar();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一种指向滚动条对象，或者`NULL`如果不通过使用创建选项卡控件`STYLE_FLAT_SHARED_HORZ_SCROLL`样式。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a scrollbar object, or a `NULL` if the tab control was not created by using the `STYLE_FLAT_SHARED_HORZ_SCROLL` style.  
   
-### <a name="remarks"></a>备注  
- 此方法用于访问选项卡控件嵌入的滚动条。 仅当有选项卡控件时创建了一个滚动条对象`STYLE_FLAT_SHARED_HORZ_SCROLL`样式。  
+### <a name="remarks"></a>Remarks  
+ Use this method to access the tab control's embedded scroll bar. A scroll bar object is created only when the tab control has the `STYLE_FLAT_SHARED_HORZ_SCROLL` style.  
   
-##  <a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
- 检索位于顶部或底部的选项卡控件的选项卡标签区域的边框。  
+##  <a name="gettabarea"></a>  CMFCTabCtrl::GetTabArea  
+ Retrieves the bounding rectangle of the tab label area at the top or bottom of the tab control.  
   
 ```  
 void GetTabArea(
@@ -458,295 +499,295 @@ void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- 此方法返回时，本参考包含限定顶部的选项卡标签区域的矩形。 矩形是在工作区坐标。 此引用为空，如果没有选项卡标签区域存在顶部的选项卡控件。  
+ When this method returns, this reference contains a rectangle that bounds the top tab label area. The rectangle is in client coordinates. This reference is empty if no tab label area exists at the top of the tab control.  
   
  [out] `rectTabAreaBottom`  
- 此方法返回时，本参考包含限定底部选项卡上标签区域的矩形。 矩形是在工作区坐标。 此引用为空，如果没有选项卡标签区域存在底部的选项卡控件。  
+ When this method returns, this reference contains a rectangle that bounds the bottom tab label area. The rectangle is in client coordinates. This reference is empty if no tab label area exists at the bottom of the tab control.  
   
-### <a name="remarks"></a>备注  
- 使用此方法来确定的大小和选项卡区域在选项卡式窗口中的位置。  
+### <a name="remarks"></a>Remarks  
+ Use this method to determine the size and position of the tab area in the tabbed window.  
   
-##  <a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
- 检索一个选项卡的最大宽度。  
+##  <a name="gettabmaxwidth"></a>  CMFCTabCtrl::GetTabMaxWidth  
+ Retrieves the maximum width of a tab.  
   
 ```  
 int GetTabMaxWidth() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 选项卡上，以像素为单位的最大宽度。 如果返回值为 0，则选项卡宽度没有限制。  
+### <a name="return-value"></a>Return Value  
+ Maximum width of a tab, in pixels. If the return value is 0, the tab width is unlimited.  
   
-### <a name="remarks"></a>备注  
- 使用[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)方法来将最大的选项卡宽度设置。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth) method to set maximum tab width.  
   
-##  <a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
- 检索当前选项卡控件的选项卡区域的高度。  
+##  <a name="gettabsheight"></a>  CMFCTabCtrl::GetTabsHeight  
+ Retrieves the height of the tab area of the current tab control.  
   
 ```  
 virtual int GetTabsHeight() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果任何选项卡是可见的或为零会显示任何选项卡的选项卡区域的高度。  
+### <a name="return-value"></a>Return Value  
+ The height of the tab area if any tab is visible, or zero if no tab is visible.  
   
-##  <a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
- 检索限定当前选项卡控件的选项卡区域的矩形。  
+##  <a name="gettabsrect"></a>  CMFCTabCtrl::GetTabsRect  
+ Retrieves a rectangle that bounds the tab area of the current tab control.  
   
 ```  
 virtual void GetTabsRect(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `rect`  
- 此方法返回时，`rect`参数包含限定选项卡区域的矩形。  
+ When this method returns, the `rect` parameter contains a rectangle that bounds the tab area.  
   
-##  <a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
- 检索当前选项卡控件的工作区的边界。  
+##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
+ Retrieves the boundary of the client area of the current tab control.  
   
 ```  
 void GetWndArea(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in, out] `rect`  
- 此方法返回时，此参数包含限定当前选项卡控件的矩形。  
+ When this method returns, this parameter contains a rectangle that bounds the current tab control.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
- 如果有的话，在活动窗口将隐藏水平滚动条。  
+##  <a name="hideactivewindowhorzscrollbar"></a>  CMFCTabCtrl::HideActiveWindowHorzScrollBar  
+ Hides the horizontal scroll bar, if any, in the active window.  
   
 ```  
 void HideActiveWindowHorzScrollBar();
 ```  
   
-### <a name="remarks"></a>备注  
- 使用此方法要阻止选项卡控件闪烁选项卡控件页之间切换用户时。  
+### <a name="remarks"></a>Remarks  
+ Use this method to prevent the tab control from blinking when the user switches between tab control pages.  
   
-##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
- 指定框架是否显示非活动状态的选项卡控件窗口。  
+##  <a name="hideinactivewindow"></a>  CMFCTabCtrl::HideInactiveWindow  
+ Specifies whether the framework displays inactive tab control windows.  
   
 ```  
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`不希望显示非活动窗口;`FALSE`以显示非活动窗口。 默认值为 `TRUE`。  
+ `TRUE` not to display an inactive window; `FALSE` to display an inactive window. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
- 启用或禁用的选项卡区域图画，如果没有可见的选项卡。  
+##  <a name="hidenotabs"></a>  CMFCTabCtrl::HideNoTabs  
+ Enables or disables drawing of the tab area if there are no visible tabs.  
   
 ```  
 void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`若要启用绘制选项卡区域;`FALSE`禁止绘图。 默认值为 `TRUE`。  
+ `TRUE` to enable drawing the tab area; `FALSE` to disable drawing. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
- 启用或禁用选项卡上绘图，如果没有单一的选项卡式的窗口。  
+##  <a name="hidesingletab"></a>  CMFCTabCtrl::HideSingleTab  
+ Enables or disables tab drawing if there is a single tabbed window.  
   
 ```  
 virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`若要不绘制单个选项卡式窗口; 一个选项卡`FALSE`要绘制一个选项卡。 默认值为 `TRUE`。  
+ `TRUE` to not draw a tab for a single tabbed window; `FALSE` to draw a single tab. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
- 指示选项卡控件当前选项卡是否为多文档界面选项卡组活动选项卡。  
+##  <a name="isactiveinmditabgroup"></a>  CMFCTabCtrl::IsActiveInMDITabGroup  
+ Indicates whether the current tab of a tab control is the active tab in a multiple document interface tab group.  
   
 ```  
 BOOL IsActiveInMDITabGroup() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果选项卡控件当前选项卡是 MDI 选项卡组; 在活动选项卡否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current tab of a tab control is the active tab in an MDI tab group; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 可以将任一垂直或水平选项卡分组的多个文档窗口，并轻松地无序播放文档从一个选项卡组到另一个。  
+### <a name="remarks"></a>Remarks  
+ You can organize multiple document windows into either vertical or horizontal tab groups and easily shuffle documents from one tab group to another.  
   
-##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
- 指示是否使用加粗字体显示活动选项卡的文本。  
+##  <a name="isactivetabboldfont"></a>  CMFCTabCtrl::IsActiveTabBoldFont  
+ Indicates whether the text of the active tab is displayed using a bold font.  
   
 ```  
 BOOL IsActiveTabBoldFont() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果使用加粗字体; 显示活动选项卡否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the active tab is displayed using the bold font; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 使用[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)方法，以更改活动选项卡上的字体。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont) method to change the active tab font.  
   
-##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
- 指示是否关闭按钮 ( **X**) 将显示在活动选项卡或选项卡区域的右上角上。  
+##  <a name="isactivetabclosebutton"></a>  CMFCTabCtrl::IsActiveTabCloseButton  
+ Indicates whether the Close button ( **X**) is displayed on an active tab or on the upper-right corner of the tab area.  
   
 ```  
 virtual BOOL IsActiveTabCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果关闭按钮显示在活动选项卡;`FALSE`如果上选项卡区域的右上角显示关闭按钮。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the Close button is displayed on the active tab; `FALSE` if the Close button is displayed on the upper-right corner of the tab area.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
- 指示是否选项卡式的窗口周围绘制一个帧矩形嵌入窗格。  
+##  <a name="isdrawframe"></a>  CMFCTabCtrl::IsDrawFrame  
+ Indicates whether the tabbed window draws a frame rectangle around embedded panes.  
   
 ```  
 BOOL IsDrawFrame() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果绘制帧矩形;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a frame rectangle is drawn; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 使用[CMFCTabCtrl::SetDrawFrame](#setdrawframe)方法来启用或禁用绘制帧矩形。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetDrawFrame](#setdrawframe) method to enable or disable drawing a frame rectangle.  
   
-##  <a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
- 指示选项卡区域周围的框架是平面或 3D。  
+##  <a name="isflatframe"></a>  CMFCTabCtrl::IsFlatFrame  
+ Indicates whether the frame around the tab area is flat or 3D.  
   
 ```  
 BOOL IsFlatFrame() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果选项卡区域周围的框架保持不变;`FALSE`如果帧为三维图表。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame around the tab area is flat; `FALSE` if the frame is three-dimensional.  
   
-### <a name="remarks"></a>备注  
- 使用[CMFCTabCtrl::SetFlatFrame](#setflatframe)方法，以更改如何绘制帧。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetFlatFrame](#setflatframe) method to change how the frame is drawn.  
   
-##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
- 指示当前选项卡控件中选项卡的外观是否平面。  
+##  <a name="isflattab"></a>  CMFCTabCtrl::IsFlatTab  
+ Indicates whether the appearance of the tabs in the current tab control is flat or not.  
   
 ```  
 virtual BOOL IsFlatTab() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前选项卡控件中选项卡的外观保持不变;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the appearance of the tabs in the current tab control is flat; otherwise, `FALSE`.  
   
-##  <a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
- 指示是否舍入的左侧和右侧当前选项卡控件中的选项卡的外观。  
+##  <a name="isleftrightrounded"></a>  CMFCTabCtrl::IsLeftRightRounded  
+ Indicates whether the appearance of the left and right side of a tab in the current tab control is rounded.  
   
 ```  
 virtual BOOL IsLeftRightRounded() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果每个选项卡的面被舍入;，否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the sides of each tab is rounded; otherwise, `FALSE`.  
   
-##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
- 指示当前选项卡控件是否包含的多文档界面窗口的工作区中。  
+##  <a name="ismditabgroup"></a>  CMFCTabCtrl::IsMDITabGroup  
+ Indicates whether the current tab control is contained in the client area of a multiple-document interface window.  
   
 ```  
 virtual BOOL IsMDITabGroup() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前的选项卡控件是在 MDI 客户端区域窗口中;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current tab control is in an MDI client area window; otherwise, `FALSE`.  
   
-##  <a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
- 指示是否在 Microsoft OneNote 样式中显示当前选项卡控件。  
+##  <a name="isonenotestyle"></a>  CMFCTabCtrl::IsOneNoteStyle  
+ Indicates whether the current tab control is displayed in the style of Microsoft OneNote.  
   
 ```  
 virtual BOOL IsOneNoteStyle() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果该选项卡控件显示在样式中的 Microsoft OneNote;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control is displayed in the style of Microsoft OneNote; otherwise, `FALSE`.  
   
-##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
- 指示当前选项卡控件是否有可以滚动作为一个组，其选项卡的滚动条。  
+##  <a name="issharedscroll"></a>  CMFCTabCtrl::IsSharedScroll  
+ Indicates whether the current tab control has a scroll bar that can scroll its tabs as a group.  
   
 ```  
 BOOL IsSharedScroll() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果该选项卡控件具有共享的滚动条;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control has a shared scroll bar; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 此方法返回`TRUE`如果`style`参数[CMFCTabCtrl::Create](#create)方法是 STYLE_FLAT_SHARED_HORZ_SCROLL。  
+### <a name="remarks"></a>Remarks  
+ This method returns `TRUE` if the `style` parameter of the [CMFCTabCtrl::Create](#create) method is STYLE_FLAT_SHARED_HORZ_SCROLL.  
   
-##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
- 指示选项卡控件显示滚动按钮或显示的选项卡式窗口菜单的按钮。  
+##  <a name="istabdocumentsmenu"></a>  CMFCTabCtrl::IsTabDocumentsMenu  
+ Indicates whether the tab control displays scroll buttons or a button that displays a menu of tabbed windows.  
   
 ```  
 BOOL IsTabDocumentsMenu() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果使用的选项卡式的窗口标签; 的弹出菜单滚动选项卡式的窗口`FALSE`如果选项卡式的窗口的滚动量使用向前和向后滚动按钮。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabbed windows are scrolled using a popup menu of tabbed window labels; `FALSE` if tabbed windows are scrolled using forward and backward scroll buttons.  
   
-### <a name="remarks"></a>备注  
- 使用[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)方法，以指定的滚动方法选项卡式窗口。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu) method to specify the method of scrolling tabbed windows.  
   
-##  <a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
- 指示是否使用 Visual Studio 2005 的样式绘制选项卡。  
+##  <a name="isvs2005style"></a>  CMFCTabCtrl::IsVS2005Style  
+ Indicates whether tabs are drawn using the style of Visual Studio 2005.  
   
 ```  
 virtual BOOL IsVS2005Style() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果使用 Visual Studio 2005; 的样式绘制选项卡否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabs are drawn using the style of Visual Studio 2005; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 使用`style`参数[CMFCTabCtrl::Create](#create)方法，以指定如何绘制选项卡。  
+### <a name="remarks"></a>Remarks  
+ Use the `style` parameter of the [CMFCTabCtrl::Create](#create) method to specify how tabs are drawn.  
   
-##  <a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
- 防止失去焦点时插入并启用一个新选项卡中的活动视图。  
+##  <a name="m_benableactivate"></a>  CMFCTabCtrl::m_bEnableActivate  
+ Prevents the active view from losing focus when a new tab is inserted and enabled.  
   
 ```  
 static BOOL m_bEnableActivate;  
 ```  
   
-### <a name="remarks"></a>备注  
- 焦点通常均由一个新选项卡式窗口时插入并将其激活选项卡。 设置`CMFCTabCtrl::m_bEnableActivate`到成员变量`FALSE`以保留原始的焦点。 默认值为 `TRUE`。  
+### <a name="remarks"></a>Remarks  
+ The focus is usually taken by a new tabbed window when the tab is inserted and made active. Set the `CMFCTabCtrl::m_bEnableActivate` member variable to `FALSE` to retain the original focus. The default value is `TRUE`.  
   
-##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
- 当前选项卡控件中指定选项卡的外观。  
+##  <a name="modifytabstyle"></a>  CMFCTabCtrl::ModifyTabStyle  
+ Specifies the appearance of tabs in the current tab control.  
   
 ```  
 BOOL ModifyTabStyle(Style style);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `style`  
- 指定选项卡控件的外观的枚举值之一。 有关详细信息，请参阅备注中的表。  
+ One of the enumeration values that specifies the appearance of the tab control. For more information, see the table in Remarks.  
   
-### <a name="return-value"></a>返回值  
- 总是为 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 值`style`参数可以是下列其中一项`CMFCTabCtrl::Style`枚举。  
+### <a name="remarks"></a>Remarks  
+ The value of the `style` parameter can be one of the following `CMFCTabCtrl::Style` enumerations.  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|STYLE_3D|显示具有圆角的三维、 矩形选项卡。|  
-|STYLE_3D_ONENOTE|显示三维选项卡具有一个垂直边和倾斜的一端和，有了圆形角。|  
-|STYLE_3D_ROUNDED|显示具有倾斜边，并使用圆角的三维选项卡。|  
-|STYLE_3D_ROUNDED_SCROLL|显示具有倾斜边，并使用圆角的三维选项卡。 如果有更多选项卡不是可以显示在同一时间，框架将显示一个下拉箭头和选项卡以使处于活动状态的菜单。|  
-|STYLE_3D_SCROLLED|显示三维，矩形的选项卡。 如果有更多选项卡不是可以显示在同一时间，框架将显示一个下拉箭头和选项卡以使处于活动状态的菜单。|  
-|STYLE_3D_VS2005|显示三维效果，舍入具有倾斜的一端和一个垂直边的选项卡。|  
-|STYLE_FLAT|显示二维具有倾斜左侧和右侧的选项卡。|  
-|STYLE_FLAT_SHARED_HORZ_SCROLL|显示二维选项卡。 如果有更多选项卡不是可以显示在同一时间，框架将显示在选项卡区域末端滚动箭头。|  
+|STYLE_3D|Displays three-dimensional, rectangular tabs that have round corners.|  
+|STYLE_3D_ONENOTE|Displays three-dimensional tabs that have one vertical side and one slanted side and that have rounded corners.|  
+|STYLE_3D_ROUNDED|Displays three-dimensional tabs that have slanted sides and rounded corners.|  
+|STYLE_3D_ROUNDED_SCROLL|Displays three-dimensional tabs that have slanted sides and rounded corners. If there are more tabs than can be displayed at the same time, the framework displays a drop-down arrow and a menu of tabs to make active.|  
+|STYLE_3D_SCROLLED|Displays three-dimensional, rectangular tabs. If there are more tabs than can be displayed at the same time, the framework displays a drop-down arrow and a menu of tabs to make active.|  
+|STYLE_3D_VS2005|Displays three-dimensional, rounded tabs that have one slanted side and one vertical side.|  
+|STYLE_FLAT|Displays two-dimensional tabs that have slanted left and right sides.|  
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Displays two-dimensional tabs. If there are more tabs than can be displayed at the same time, the framework displays scroll arrows at the ends of the tab area.|  
   
-##  <a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
- 由框架调用拖放操作期间当光标首次进入当前选项卡控件的窗口。  
+##  <a name="ondragenter"></a>  CMFCTabCtrl::OnDragEnter  
+ Called by the framework during a drag-and-drop operation when the cursor first enters the window of the current tab control.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -755,26 +796,26 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDataObject`  
- 指向包含在用户拖动的数据的数据对象。  
+ Points to a data object that contains data that the user drags.  
   
  [in] `dwKeyState`  
- 包含修改键的状态。 此参数是下列值的按位组合 (OR): `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。 有关详细信息，请参阅**消息参数**部分[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
+ Contains the state of the modifier keys. This parameter is a bitwise combination (OR) of the following values: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, and `MK_RBUTTON`. For more information, see the **Message Parameters** section of [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
   
  [in] `point`  
- 包含当前工作区坐标中光标的位置。  
+ Contains the current location of the cursor in client coordinates.  
   
-### <a name="return-value"></a>返回值  
- 始终`DROPEFFECT_NONE`，这意味着拖放目标不能接受的数据。  
+### <a name="return-value"></a>Return Value  
+ Always `DROPEFFECT_NONE`, which means that the drop target cannot accept the data.  
   
-### <a name="remarks"></a>备注  
- 使用此方法来支持拖放操作。 重写此方法以实现您自己的自定义行为。  
+### <a name="remarks"></a>Remarks  
+ Use this method to support a drag-and-drop operation. Override this method to implement your own custom behavior.  
   
- 默认情况下，此方法仅调用`CMFCTabCtrl::OnDragOver`，而后者始终返回`DROPEFFECT_NONE`。  
+ By default, this method only calls `CMFCTabCtrl::OnDragOver`, which always returns `DROPEFFECT_NONE`.  
   
-##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
- 由框架调用在拖动操作期间当鼠标移到放置目标窗口。  
+##  <a name="ondragover"></a>  CMFCTabCtrl::OnDragOver  
+ Called by the framework during a drag operation when the mouse is moved over the drop target window.  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -783,96 +824,96 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)拖放目标上方的对象。  
+ Pointer to a [COleDataObject](../../mfc/reference/coledataobject-class.md) object that is being dragged over the drop target.  
   
  [in] `dwKeyState`  
- 状态的修改键，这是一个按位组合 （或者） `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。 有关详细信息，请参见"消息参数"[有关鼠标输入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
+ The state of the modifier keys, which is a bitwise combination (OR) of `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, and `MK_RBUTTON`. For more information, see "Message Parameters" in [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
   
  [in] `point`  
- 当前的鼠标位置。  
+ The current mouse position.  
   
-### <a name="return-value"></a>返回值  
- 总是为 `DROPEFFECT_NONE`。  
+### <a name="return-value"></a>Return Value  
+ Always `DROPEFFECT_NONE`.  
   
-### <a name="remarks"></a>备注  
- 重写此方法使用您的自定义实现。 有关详细信息，请参阅[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)方法。  
+### <a name="remarks"></a>Remarks  
+ Override this method with your custom implementation. For more information, see the [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover) method.  
   
-##  <a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
- 显示弹出菜单选项卡式窗口，一直等待，直到用户选择一个选项卡，并使活动选项卡的所选选项卡。  
+##  <a name="onshowtabdocumentsmenu"></a>  CMFCTabCtrl::OnShowTabDocumentsMenu  
+ Displays a pop-up menu of tabbed windows, waits until the user selects a tab, and makes the selected tab the active tab.  
   
 ```  
 virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 显示弹出菜单的位置的坐标。  
+ The coordinates of where to display the pop-up menu.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
- 将选项卡控件当前选项卡设置为多文档界面选项卡组活动选项卡。  
+##  <a name="setactiveinmditabgroup"></a>  CMFCTabCtrl::SetActiveInMDITabGroup  
+ Sets the current tab of a tab control as the active tab in a multiple document interface tab group.  
   
 ```  
 void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bActive`  
- `TRUE`若要使活动选项卡; 的当前选项卡`FALSE`以使当前选项卡处于非活动状态。  
+ `TRUE` to make the current tab the active tab; `FALSE` to make the current tab inactive.  
   
-### <a name="remarks"></a>备注  
- 可以将任一垂直或水平选项卡分组的多个文档窗口，并轻松地无序播放文档从一个选项卡组到另一个。  
+### <a name="remarks"></a>Remarks  
+ You can organize multiple document windows into either vertical or horizontal tab groups and easily shuffle documents from one tab group to another.  
   
-##  <a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
- 激活选项卡。  
+##  <a name="setactivetab"></a>  CMFCTabCtrl::SetActiveTab  
+ Activates a tab.  
   
 ```  
 virtual BOOL SetActiveTab(int iTab);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 指定要激活的选项卡的从零开始索引。  
+ Specifies the zero-based index of the tab to activate.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果已激活; 指定选项卡`FALSE`如果指定`iTab`参数值无效。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified tab was made active; `FALSE` if the specified `iTab` parameter value is invalid.  
   
-### <a name="remarks"></a>备注  
- 此方法不会发送`AFX_WM_CHANGE_ACTIVE_TAB`发送到父窗口的选项卡控件通知。  
+### <a name="remarks"></a>Remarks  
+ This method does not send the `AFX_WM_CHANGE_ACTIVE_TAB` notification to the parent window of the tab control.  
   
- `SetActiveTab`方法将自动调用[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)方法，以防止屏幕闪烁。  
+ The `SetActiveTab` method automatically calls the [CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) method to prevent the screen from blinking.  
   
-##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
- 启用或禁用使用活动选项卡上的加粗字体。  
+##  <a name="setactivetabboldfont"></a>  CMFCTabCtrl::SetActiveTabBoldFont  
+ Enables or disables use of a bold font on active tabs.  
   
 ```  
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bIsBold`  
- `TRUE`使用加粗字体显示的标签的活动选项卡;`FALSE`若要使用的标准字体来显示标签。 默认值为 `TRUE`。  
+ `TRUE` to use a bold font to display the label of the active tab; `FALSE` to use the standard font to display the label. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
- 指定是否嵌入栏周围绘制一个帧的矩形。  
+##  <a name="setdrawframe"></a>  CMFCTabCtrl::SetDrawFrame  
+ Specifies whether a frame rectangle is drawn around an embedded bar.  
   
 ```  
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bDraw`  
- `TRUE`若要显示嵌入的栏; 周围的帧矩形否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` to display a frame rectangle around an embedded bar; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
- 指定是否以选项卡区域的周围绘制以平面或 3D 的框架。  
+##  <a name="setflatframe"></a>  CMFCTabCtrl::SetFlatFrame  
+ Specifies whether to draw a flat or a 3D frame around the tab area.  
   
 ```  
 void SetFlatFrame(
@@ -880,17 +921,17 @@ void SetFlatFrame(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bFlat`  
- `TRUE`以选项卡区域; 的周围绘制一个平面 (2D) 框架`FALSE`绘制三维 (3D) 框架。 默认值为 `TRUE`。  
+ `TRUE` to draw a flat (2D) frame around the tab area; `FALSE` to draw a three-dimensional (3D) frame. The default value is `TRUE`.  
   
  [in] `bRepaint`  
- `TRUE`若要立即; 重绘窗口否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` to redraw the window immediately; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
- 指定图像列表。  
+##  <a name="setimagelist"></a>  CMFCTabCtrl::SetImageList  
+ Specifies an image list.  
   
 ```  
 virtual BOOL SetImageList(
@@ -901,93 +942,93 @@ virtual BOOL SetImageList(
 virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 一个包含图像列表的位图资源的 ID。  
+ The ID of a bitmap resource that contains the image list.  
   
  [in] `cx`  
- 每个图像，以像素为单位的宽度。 默认值为 15。  
+ The width of each image, in pixels. The default value is 15.  
   
  [in] `clrTransp`  
- 透明图像颜色。 是这种颜色的图像的部分将是透明的。 默认值为颜色洋红 RGB(255,0,255)。  
+ The transparent image color. The parts of the image that are this color will be transparent. The default value is the color magenta, RGB(255,0,255).  
   
  [in] `hImageList`  
- 指向一个预加载的图像列表的句柄。  
+ A handle to a preloaded image list.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功。 `FALSE`如果使用的平面样式创建选项卡控件或第一个方法重载无法加载由指定的位图`uiID`参数。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful. `FALSE` if the tab control is created by using a flat style or if the first method overload cannot load the bitmap that is specified by the `uiID` parameter.  
   
-### <a name="remarks"></a>备注  
- 此方法用于设置选项卡控件的图像列表。 选项卡标签旁边显示的图像列表中的图像。 此方法将重新计算的选项卡高度，以便选项卡设置为包含图像和文本。  
+### <a name="remarks"></a>Remarks  
+ Use this method to set an image list for the tab control. The images from the image list are displayed next to the tab label. This method recalculates the tab height so that the tab is sized to contain both the image and the text.  
   
- 使用[cmfcbasetabctrl:: Addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)选项卡控件来指定要显示的图像的索引将继承的方法。  
+ Use the [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) method that is inherited by the tab control to specify the index of the image to display.  
   
-##  <a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
- 指定如何调整大小的当前选项卡控件，然后重新显示该控件。  
+##  <a name="setresizemode"></a>  CMFCTabCtrl::SetResizeMode  
+ Specifies how the current tab control can be resized and then redisplays the control.  
   
 ```  
 void SetResizeMode(ResizeMode resizeMode);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `resizeMode`  
- 其中一个`CMFCTabCtrl::ResizeMode`枚举值，该值指定如何调整大小选项卡控件。 有关可能的值的列表，请参阅备注中的表。  
+ One of the `CMFCTabCtrl::ResizeMode` enumeration values that specifies how the tab control can be resized. For a list of possible values, see the table in Remarks.  
   
-### <a name="remarks"></a>备注  
- `resizeMode`参数可以是下列其中一项`ResizeMode`枚举值。  
+### <a name="remarks"></a>Remarks  
+ The `resizeMode` parameter can be one of the following `ResizeMode` enumeration values.  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|RESIZE_NO|无法调整大小选项卡控件。|  
-|RESIZE_VERT|垂直但不是进行水平，可以调整大小选项卡控件。|  
-|RESIZE_HORIZ|可以调整大小选项卡控件，水平但不是进行垂直。|  
+|RESIZE_NO|The tab control cannot be resized.|  
+|RESIZE_VERT|The tab control can be resized vertically but not horizontally.|  
+|RESIZE_HORIZ|The tab control can be resized horizontally but not vertically.|  
   
-##  <a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
- 在选项卡式窗口中指定的最大的选项卡宽度。  
+##  <a name="settabmaxwidth"></a>  CMFCTabCtrl::SetTabMaxWidth  
+ Specifies the maximum tab width in a tabbed window.  
   
 ```  
 void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nTabMaxWidth`  
- 最大的选项卡宽度，以像素为单位。  
+ The maximum tab width, in pixels.  
   
-### <a name="remarks"></a>备注  
- 使用此方法来限制每个选项卡中选项卡式窗口的宽度。 此方法是在选项卡拥有很长的标签非常有用。 [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)类构造函数将初始化为 0，这实际上意味着宽度不受限制的最大的选项卡宽度。  
+### <a name="remarks"></a>Remarks  
+ Use this method to limit the width of each tab in a tabbed window. This method is useful if tabs have very long labels. The [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) class constructor initializes the maximum tab width to 0, which actually means that the width is not limited.  
   
-##  <a name="stopresize"></a>CMFCTabCtrl::StopResize  
- 终止当前的大小调整操作选项卡控件上。  
+##  <a name="stopresize"></a>  CMFCTabCtrl::StopResize  
+ Terminates the current resize operation on the tab control.  
   
 ```  
 void StopResize(BOOL bCancel);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bCancel`  
- `TRUE`放弃当前的大小调整操作;`FALSE`完成当前，调整大小操作。 在任一情况下，框架会停止绘制调整大小矩形。  
+ `TRUE` to abandon the current resize operation; `FALSE` to complete the current resize operation. In either case, the framework stops drawing the resize rectangle.  
   
-##  <a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
- 在显示平面选项卡的选项卡控件上绘制的水平滚动条。  
+##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
+ Draws a horizontal scroll bar on a tab control that displays flat tabs.  
   
 ```  
 BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `pScrollInfo`  
- 指向[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构或`NULL`。 此方法返回时，并且此参数不是`NULL`，该结构包含滚动条的所有参数。 默认值为 `NULL`。  
+ Pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure or `NULL`. When this method returns, and if this parameter is not `NULL`, the structure contains all the parameters of the scroll bar. The default value is `NULL`.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果此方法成功，则否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 此方法会影响显示平面选项卡的选项卡控件。 滚动条在同一时间会影响所有选项卡。  
+### <a name="remarks"></a>Remarks  
+ This method affects only a tab control that displays flat tabs. The scroll bar influences all the tabs at the same time.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)   
- [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)   
- [CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)
 

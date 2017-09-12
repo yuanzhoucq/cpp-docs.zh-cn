@@ -1,49 +1,68 @@
 ---
-title: "调节按钮样式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl 类, 样式"
-  - "数值调节钮控件, 样式"
-  - "样式, CSpinButtonCtrl"
-  - "样式, 数值调节钮控件"
+title: Spin Button Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- styles [MFC], CSpinButtonCtrl
+- CSpinButtonCtrl class [MFC], styles
+- styles [MFC], spin button control
+- spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 调节按钮样式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f13ad271270af4c5eb5bcc12d62c3397d8edb8fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-许多旋转按钮 \([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)\) 设置由样式控制。  使用 **属性** 窗口在对话框编辑器，您可以设置以下样式。  
+---
+# <a name="spin-button-styles"></a>Spin Button Styles
+Many of the settings for a spin button ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) are controlled by styles. You can set the following styles using the **Properties** window in the dialog editor.  
   
--   水平或垂直的**方向**。  控件的方向箭头按钮。  与 `UDS_HORZ` 样式。  
+-   **Orientation** Either Vertical or Horizontal. Controls the orientation of the arrow buttons. Associated with the `UDS_HORZ` style.  
   
--   **对齐**一独立，左侧或右侧。  旋转按钮控件的位置。  左右位置"合作者旁边的旋转按钮。  合作者窗口的宽度会降低将旋转按钮。  与 `UDS_ALIGNLEFT` 和 `UDS_ALIGNRIGHT` 样式。  
+-   **Alignment** One of Unattached, Left, or Right. Controls the location of the spin button. Left and Right position the spin button next to the buddy window. The width of the buddy window is decreased to accommodate the spin button. Associated with the `UDS_ALIGNLEFT` and `UDS_ALIGNRIGHT` styles.  
   
--   **Auto Buddy** 自动选中上一个窗口，窗口中的区分合作者到旋转按钮。  在对话框模板，这是前在 Tab 键顺序中的数值调节钮按钮的控件。  与 `UDS_AUTOBUDDY` 样式。  
+-   **Auto Buddy** Automatically selects the previous window in Z-order as buddy window to the spin button. In a dialog template, this is the control which precedes the spin button in the tab order. Associated with the `UDS_AUTOBUDDY` style.  
   
--   在当前位置，更改**Set Buddy Integer** 使旋转控件增大和递减合作者窗口的标题。  与 `UDS_SETBUDDYINT` 样式。  
+-   **Set Buddy Integer** Causes the spin control to increment and decrement the caption of the buddy window as the current position changes. Associated with the `UDS_SETBUDDYINT` style.  
   
--   **No Thousands** 不插入千位分隔符在"合作者窗口的标题的值。  与 `UDS_NOTHOUSANDS` 样式。  
+-   **No Thousands** Does not insert the thousands separator in the value in the caption of the buddy window. Associated with the `UDS_NOTHOUSANDS` style.  
   
     > [!NOTE]
-    >  设置了此样式，则要使用对话框数据交换 \(DDX\) 合作者从控件获取整数值。  `DDX_Text` 不接受嵌入一次分隔符。  
+    >  Set this style if you want to use dialog data exchange (DDX) to get the integer value from the buddy control. `DDX_Text` does not accept embedded thousand separators.  
   
--   在值超出控件的范围外，递增或递减**换行**生成位置到“包装”。  与 `UDS_WRAP` 样式。  
+-   **Wrap** Causes the position to "wrap" as the value is incremented or decremented beyond the range of the control. Associated with the `UDS_WRAP` style.  
   
--   在向上键和向下键按下时，**Arrow Keys** 将会旋转按钮递增或递减位置。  与 `UDS_ARROWKEYS` 样式。  
+-   **Arrow Keys** Causes the spin button to increment or decrement the position when the UP ARROW and DOWN ARROW keys are pressed. Associated with the `UDS_ARROWKEYS` style.  
   
-## 请参阅  
- [使用 CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

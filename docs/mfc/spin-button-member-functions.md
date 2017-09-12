@@ -1,40 +1,59 @@
 ---
-title: "调节钮成员函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl 类, 方法"
-  - "数值调节钮控件, 方法"
+title: Spin Button Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- spin button control, methods
+- CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 调节钮成员函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5582767fb0a68f41664499bdb31b5ae06c3379cf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-有若干成员函数可用为数值调节钮控件 \(\)。[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) 使用这些函数将会旋转按钮的以下特性。  
+---
+# <a name="spin-button-member-functions"></a>Spin Button Member Functions
+There are several member functions available for the spin control ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). Use these functions to change the following attributes of the spin button.  
   
--   **加速**可以调整位置的更改速率，当用户按住箭头按钮。  若要包含加速时，请使用 [SetAccel](../Topic/CSpinButtonCtrl::SetAccel.md) [GetAccel](../Topic/CSpinButtonCtrl::GetAccel.md) 和成员函数。  
+-   **Acceleration** You can adjust the rate at which the position changes when the user holds down the arrow button. To work with acceleration, use the [SetAccel](../mfc/reference/cspinbuttonctrl-class.md#setaccel) and [GetAccel](../mfc/reference/cspinbuttonctrl-class.md#getaccel) member functions.  
   
--   **基项**可以将 \(10 或 16\) 使用的基本显示在合作者窗口的标题的位置。  若要与基本使用，请使用 [GetBase](../Topic/CSpinButtonCtrl::GetBase.md) [SetBase](../Topic/CSpinButtonCtrl::SetBase.md) 和成员函数。  
+-   **Base** You can change the base (either 10 or 16) used to display the position in the caption of the buddy window. To work with the base, use the [GetBase](../mfc/reference/cspinbuttonctrl-class.md#getbase) and [SetBase](../mfc/reference/cspinbuttonctrl-class.md#setbase) member functions.  
   
--   **Buddy Window** 可以动态设置合作者窗口。  若要查询或者改变控件是的合作者窗口，并使用 [GetBuddy](../Topic/CSpinButtonCtrl::GetBuddy.md) [SetBuddy](../Topic/CSpinButtonCtrl::SetBuddy.md) 成员函数。  
+-   **Buddy Window** You can dynamically set the buddy window. To query or change which control is the buddy window, use the [GetBuddy](../mfc/reference/cspinbuttonctrl-class.md#getbuddy) and [SetBuddy](../mfc/reference/cspinbuttonctrl-class.md#setbuddy) member functions.  
   
--   **位置** 您可以查询和更改位置。  若要直接与位置使用，请使用 [GetPos](../Topic/CSpinButtonCtrl::GetPos.md) [SetPos](../Topic/CSpinButtonCtrl::SetPos.md) 和成员函数。  因为合作者控件的标题可能更改 \(例如，在以下情况下是合作者编辑控件\)，使用 `GetPos` 检索当前标题并相应地调整的位置。  
+-   **Position** You can query and change the position. To work directly with position, use the [GetPos](../mfc/reference/cspinbuttonctrl-class.md#getpos) and [SetPos](../mfc/reference/cspinbuttonctrl-class.md#setpos) member functions. Since the caption of the buddy control may have changed (for example, in the case that the buddy is an edit control), `GetPos` retrieves the current caption and adjusts the position accordingly.  
   
--   **范围**可以将最大并旋转，的最低的位置按。  默认情况下，最大次数设置为 0，最小设置为 100。  因为默认最大值比默认的最小位数小于，箭头的按钮操作却不够直观。  通常，可以使用 [SetRange](../Topic/CSpinButtonCtrl::SetRange.md) 成员函数，则将设置范围。  查询范围使用 [GetRange](../Topic/CSpinButtonCtrl::GetRange.md)。  
+-   **Range** You can change the maximum and minimum positions for the spin button. By default, the maximum is set to 0, and the minimum is set to 100. Since the default maximum is less than the default minimum, the actions of the arrow buttons is counter-intuitive. Typically, you will set the range using the [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) member function. To query the range use [GetRange](../mfc/reference/cspinbuttonctrl-class.md#getrange).  
   
-## 请参阅  
- [使用 CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

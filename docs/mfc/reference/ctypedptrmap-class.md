@@ -1,5 +1,5 @@
 ---
-title: "CTypedPtrMap 类 |Microsoft 文档"
+title: CTypedPtrMap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,11 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- type-safe collections
-- template classes, CTypedPtrMap class
-- maps
-- CTypedPtrMap class
-- pointer maps
+- CTypedPtrMap [MFC], GetNextAssoc
+- CTypedPtrMap [MFC], Lookup
+- CTypedPtrMap [MFC], RemoveKey
+- CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 caps.latest.revision: 23
 author: mikeblome
@@ -42,67 +41,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 919d751c6ffe4b10ffad047f1b6be832bf49a1af
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 519ab5ff8a1e959d58862f8f6f49a275cb86058d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap Class
-为 `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`和 `CMapStringToPtr`指针映射类的对象提供安全类型“包装器”。  
+Provides a type-safe "wrapper" for objects of the pointer-map classes `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, and `CMapStringToPtr`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class BASE_CLASS, class KEY, class VALUE>  
 class CTypedPtrMap : public BASE_CLASS  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- 类型化的指针映射类; 基类必须为指针映射类 ( `CMapPtrToPtr`， `CMapPtrToWord`， `CMapWordToPtr`，或`CMapStringToPtr`)。  
+ Base class of the typed pointer map class; must be a pointer map class ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, or `CMapStringToPtr`).  
   
  `KEY`  
- 用作到映射的键的对象类。  
+ Class of the object used as the key to the map.  
   
  `VALUE`  
- 存储在映射中的对象的类。  
+ Class of the object stored in the map.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|获取用于循环的下一个元素。|  
-|[CTypedPtrMap::Lookup](#lookup)|返回`KEY`基于`VALUE`。|  
-|[CTypedPtrMap::RemoveKey](#removekey)|移除由键指定的元素。|  
-|[CTypedPtrMap::SetAt](#setat)|将元素插入到映射;如果找到匹配项，将替换现有元素。|  
+|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Gets the next element for iterating.|  
+|[CTypedPtrMap::Lookup](#lookup)|Returns a `KEY` based on a `VALUE`.|  
+|[CTypedPtrMap::RemoveKey](#removekey)|Removes an element specified by a key.|  
+|[CTypedPtrMap::SetAt](#setat)|Inserts an element into the map; replaces an existing element if a matching key is found.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTypedPtrMap::operator]](#operator_at)|将元素插入到映射。|  
+|[CTypedPtrMap::operator [ ]](#operator_at)|Inserts an element into the map.|  
   
-## <a name="remarks"></a>备注  
- 当您使用`CTypedPtrMap`，c + + 类型检查功能可帮助消除错误引起的不匹配的指针类型。  
+## <a name="remarks"></a>Remarks  
+ When you use `CTypedPtrMap`, the C++ type-checking facility helps eliminate errors caused by mismatched pointer types.  
   
- 因为所有`CTypedPtrMap`函数将以内联方式，使用此模板不会严重影响的大小或代码的速度。  
+ Because all `CTypedPtrMap` functions are inline, use of this template does not significantly affect the size or speed of your code.  
   
- 有关详细信息使用`CTypedPtrMap`，请参阅文章[集合](../../mfc/collections.md)和[基于模板的类](../../mfc/template-based-classes.md)。  
+ For more information on using `CTypedPtrMap`, see the articles [Collections](../../mfc/collections.md) and [Template-Based Classes](../../mfc/template-based-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `BASE_CLASS`  
   
  `CTypedPtrMap`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtempl.h  
   
-##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
- 检索处的地图元素`rNextPosition`，然后更新`rNextPosition`来指代映射中的下一个元素。  
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
+ Retrieves the map element at `rNextPosition`, then updates `rNextPosition` to refer to the next element in the map.  
   
 ```  
 void GetNextAssoc(
@@ -111,120 +110,120 @@ void GetNextAssoc(
     VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rPosition`  
- 指定对引用**位置**返回先前值`GetNextAssoc`或`BASE_CLASS` **:: GetStartPosition**调用。  
+ Specifies a reference to a **POSITION** value returned by a previous `GetNextAssoc` or `BASE_CLASS`**::GetStartPosition** call.  
   
- *密钥*  
- 指定地图的键的类型的模板参数。  
+ *KEY*  
+ Template parameter specifying the type of the map's keys.  
   
  `rKey`  
- 指定的检索的元素返回的键。  
+ Specifies the returned key of the retrieved element.  
   
- *值*  
- 指定的映射值的类型的模板参数。  
+ *VALUE*  
+ Template parameter specifying the type of the map's values.  
   
  `rValue`  
- 指定检索的元素的返回的值。  
+ Specifies the returned value of the retrieved element.  
   
-### <a name="remarks"></a>备注  
- 此函数是最适用于循环访问映射中的所有元素。 请注意，位置序列并不一定为键值序列相同。  
+### <a name="remarks"></a>Remarks  
+ This function is most useful for iterating through all the elements in the map. Note that the position sequence is not necessarily the same as the key value sequence.  
   
- 如果检索的元素则在映射中，最后的新值`rNextPosition`设置为**NULL**。  
+ If the retrieved element is the last in the map, then the new value of `rNextPosition` is set to **NULL**.  
   
- 此内联函数将调用`BASE_CLASS` **:: GetNextAssoc**。  
+ This inline function calls `BASE_CLASS`**::GetNextAssoc**.  
   
-##  <a name="lookup"></a>CTypedPtrMap::Lookup  
- `Lookup`使用哈希算法来快速找到完全匹配的密钥的地图元素。  
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
+ `Lookup` uses a hashing algorithm to quickly find the map element with a key that matches exactly.  
   
 ```  
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- 指定此地图的类的基类的模板参数。  
+ Template parameter specifying the base class of this map's class.  
   
  `key`  
- 要查找的元素的键。  
+ The key of the element to be looked up.  
   
- *值*  
- 指定此地图中的存储值的类型的模板参数。  
+ *VALUE*  
+ Template parameter specifying the type of values stored in this map.  
   
  `rValue`  
- 指定检索的元素的返回的值。  
+ Specifies the returned value of the retrieved element.  
   
-### <a name="return-value"></a>返回值  
- 如果该元素; 如果未找到，则为非否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the element was found; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此内联函数将调用`BASE_CLASS` **:: 查找**。  
+### <a name="remarks"></a>Remarks  
+ This inline function calls `BASE_CLASS`**::Lookup**.  
   
-##  <a name="operator_at"></a>CTypedPtrMap::operator]  
- 仅在赋值语句 （左值） 的左侧，可以使用此运算符。  
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]  
+ This operator can be used only on the left side of an assignment statement (an l-value).  
   
 ```  
 VALUE& operator[ ](base_class ::base_arg_key key);
 ```  
   
-### <a name="parameters"></a>参数  
- *值*  
- 指定此地图中的存储值的类型的模板参数。  
+### <a name="parameters"></a>Parameters  
+ *VALUE*  
+ Template parameter specifying the type of values stored in this map.  
   
  `BASE_CLASS`  
- 指定此地图的类的基类的模板参数。  
+ Template parameter specifying the base class of this map's class.  
   
  `key`  
- 要查找或创建在映射中的元素的键。  
+ The key of the element to be looked up or created in the map.  
   
-### <a name="remarks"></a>备注  
- 如果没有地图元素与指定的键，则创建一个新的元素。 等效于此运算符的没有"右侧"（右值），因为一个密钥可能无法找到在映射中的可能性。 使用`Lookup`元素检索的成员函数。  
+### <a name="remarks"></a>Remarks  
+ If there is no map element with the specified key, then a new element is created. There is no "right side" (r-value) equivalent to this operator because there is a possibility that a key may not be found in the map. Use the `Lookup` member function for element retrieval.  
   
-##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
- 此成员函数将调用`BASE_CLASS` **:: RemoveKey**。  
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
+ This member function calls `BASE_CLASS`**::RemoveKey**.  
   
 ```  
 BOOL RemoveKey(KEY key);
 ```  
   
-### <a name="parameters"></a>参数  
- *密钥*  
- 指定地图的键的类型的模板参数。  
+### <a name="parameters"></a>Parameters  
+ *KEY*  
+ Template parameter specifying the type of the map's keys.  
   
  `key`  
- 要移除的元素键。  
+ Key for the element to be removed.  
   
-### <a name="return-value"></a>返回值  
- 如果找到并成功移除，则将该条目，则为非否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the entry was found and successfully removed; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 有关更详细的备注，请参阅[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)。  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
   
-##  <a name="setat"></a>CTypedPtrMap::SetAt  
- 此成员函数将调用`BASE_CLASS` **:: SetAt**。  
+##  <a name="setat"></a>  CTypedPtrMap::SetAt  
+ This member function calls `BASE_CLASS`**::SetAt**.  
   
 ```  
 void SetAt(KEY key, VALUE newValue);
 ```  
   
-### <a name="parameters"></a>参数  
- *密钥*  
- 指定地图的键的类型的模板参数。  
+### <a name="parameters"></a>Parameters  
+ *KEY*  
+ Template parameter specifying the type of the map's keys.  
   
  `key`  
- 指定 newValue 的键值。  
+ Specifies the key value of the newValue.  
   
  `newValue`  
- 指定是将新元素的值的对象指针。  
+ Specifies the object pointer that is the value of the new element.  
   
-### <a name="remarks"></a>备注  
- 有关更详细的备注，请参阅[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)。  
+### <a name="remarks"></a>Remarks  
+ For more detailed remarks, see [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例收集](../../visual-cpp-samples.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CMapPtrToPtr 类](../../mfc/reference/cmapptrtoptr-class.md)   
- [CMapPtrToWord 类](../../mfc/reference/cmapptrtoword-class.md)   
- [CMapWordToPtr 类](../../mfc/reference/cmapwordtoptr-class.md)   
- [CMapStringToPtr 类](../../mfc/reference/cmapstringtoptr-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMapPtrToPtr Class](../../mfc/reference/cmapptrtoptr-class.md)   
+ [CMapPtrToWord Class](../../mfc/reference/cmapptrtoword-class.md)   
+ [CMapWordToPtr Class](../../mfc/reference/cmapwordtoptr-class.md)   
+ [CMapStringToPtr Class](../../mfc/reference/cmapstringtoptr-class.md)
 

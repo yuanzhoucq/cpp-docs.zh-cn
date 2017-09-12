@@ -1,74 +1,92 @@
 ---
-title: "控件条 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CControlBar 类, MFC 控件条"
-  - "CDialogBar 类, 控件条"
-  - "命令栏, 类型"
-  - "控件条 [C++]"
-  - "控件条 [C++], 类型"
-  - "CStatusBar 类, 控件条"
-  - "CToolBar 类, 控件条"
-  - "对话栏, 控件条"
-  - "MFC, 控件条"
-  - "状态栏, 控件条"
-  - "工具栏 [C++], 控件条"
+title: Control Bars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- command bars [MFC], types of
+- toolbars [MFC], control bars
+- control bars [MFC]
+- MFC, control bars
+- control bars [MFC], types of
+- CDialogBar class [MFC], control bars
+- status bars [MFC], control bars
+- CControlBar class [MFC], MFC control bars
+- dialog bars [MFC], control bars
+- CToolBar class [MFC], control bars
+- CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 控件条
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a85a895af5ccc7d66855e27cbe37aa3809affd2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-“控件条”是工具栏、状态栏、对话栏的总称。  MFC中的`CToolBar`，`CStatusBar`，`CDialogBar`，`COleResizeBar`和**CReBar** 类都是从实现了通用功能的类[CControlBar](../mfc/reference/ccontrolbar-class.md)派生而来。  
+---
+# <a name="control-bars"></a>Control Bars
+"Control bar" is the general name for toolbars, status bars, and dialog bars. MFC classes `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, and **CReBar** derive from class [CControlBar](../mfc/reference/ccontrolbar-class.md), which implements their common functionality.  
   
- 控件条是显示多行控件的窗口，用来给用户选择，执行命令或者得到程序信息。  控件栏类型包含控件条工具栏和状态栏、对话栏的类型。  
+ Control bars are windows that display rows of controls with which users can select options, execute commands, or obtain program information. Types of control bars include toolbars, dialog bars, and status bars.  
   
--   工具栏，在类 [CToolBar](../mfc/reference/ctoolbar-class.md)中。  
+-   Toolbars, in class [CToolBar](../mfc/reference/ctoolbar-class.md)  
   
--   状态栏，在类 [CStatusBar](../mfc/reference/cstatusbar-class.md)中。  
+-   Status bars, in class [CStatusBar](../mfc/reference/cstatusbar-class.md)  
   
--   对话栏，在类[CDialogBar](../mfc/reference/cdialogbar-class.md)中。  
+-   Dialog bars, in class [CDialogBar](../mfc/reference/cdialogbar-class.md)  
   
--   Rebars，在类[CReBar](../mfc/reference/crebar-class.md)中。  
+-   Rebars, in class [CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  MFC 4.0 版，工具栏、状态栏和工具提示，的实现是通过在 comctl32.dll中使用系统函数实现的而不是像之前那样MFC特定的实现。  在 MFC 6.0 版，添加了也包装了comctl32.dll 功能的**CReBar**类。  
+>  As of MFC version 4.0, toolbars, status bars, and tool tips are implemented using system functionality implemented in the comctl32.dll instead of the previous implementation specific to MFC. In MFC version 6.0, **CReBar**, which also wraps comctl32.dll functionality, was added.  
   
- 随后是控件条类型的简介。  有关的详细信息，请参见以下链接。  
+ Brief introductions to the control-bar types follow. For further information, see the links below.  
   
-## 控件条  
- 控件条通过提供一步、快速指令操作，极大提升了程序的可用性。  `CControlBar` 类提供了所有工具栏、状态栏、对话栏的通用功能。  `CControlBar` 用于提供在控件条的父框架窗口中定位它的功能。  由于一个控件条通常是父框架窗口的子窗口，则其是客户端视图或 MDI 框架窗口视图的“兄妹”。  控件条对象使用父窗口客户端矩形的信息来定位自己。  然后它修改父的其余矩形窗口客户端，以便客户端或 MDI 视图窗口客户填充客户端窗口的其余部分。  
-  
-> [!NOTE]
->  如果控件条上的按钮没有 **COMMAND** 或 **UPDATE\_COMMAND\_UI** 处理程序，框架会自动禁用按钮。  
-  
-## 工具栏  
- 工具栏是显示执行命令行的位图的按钮控件条。  按工具栏按钮等效于选择菜单项；如果该菜单项具有和工具栏按钮有相同的ID，它就会调用映射到菜单项的相同的处理程序。  可将按钮配置为点击按钮、单选按钮或复选框。  工具栏到框架窗口的顶部对齐，但MFC 工具栏可以“停靠”到其父窗口的任何一边或在迷你框架窗口中浮动。  工具栏也同样可以“浮动”，并且你用鼠标拖动改变其大小。  当用户移到鼠标到工具栏的按钮的工具栏上，其显示工具提示。  工具提示是一个小的简单描述按钮作用的弹出窗口。  
+## <a name="control-bars"></a>Control Bars  
+ Control bars greatly enhance a program's usability by providing quick, one-step command actions. Class `CControlBar` provides the common functionality of all toolbars, status bars, and dialog bars. `CControlBar` provides the functionality for positioning the control bar in its parent frame window. Because a control bar is usually a child window of a parent frame window, it is a "sibling" to the client view or MDI client of the frame window. A control-bar object uses information about its parent window's client rectangle to position itself. Then it alters the parent's remaining client-window rectangle so that the client view or MDI client window fills the rest of the client window.  
   
 > [!NOTE]
->  自 MFC 4.0 版，[CToolBar](../mfc/reference/ctoolbar-class.md) 类使用窗口工具栏公共控件。  `CToolBar` 包含了[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)。  但是较早的工具栏仍然被支持。  参见文章 [工具栏](../mfc/mfc-toolbar-implementation.md)。  
+>  If a button on the control bar doesn't have a **COMMAND** or **UPDATE_COMMAND_UI** handler, the framework automatically disables the button.  
   
-## 状态栏  
- 状态栏是包含文本输出窗格或“指示器”的控件条。输出窗格通常作为状态指示器，用作消息行。  消息行的示例包括了命令帮助消息行，其简短解释了在最左侧的，由MFC应用向导创建的默认状态栏中的选择菜单或工具条命令。  状态指示示例包括 Scroll Lock、Num Lock 和其他键。  状态栏通常对齐到框架窗口的底部。  请参见 [CStatusBar](../mfc/reference/cstatusbar-class.md) 类和[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)类。  
+## <a name="toolbars"></a>Toolbars  
+ A toolbar is a control bar that displays a row of bitmapped buttons that carry out commands. Pressing a toolbar button is equivalent to choosing a menu item; it calls the same handler mapped to a menu item if that menu item has the same ID as the toolbar button. The buttons can be configured to appear and behave as pushbuttons, radio buttons, or check boxes. A toolbar is usually aligned to the top of a frame window, but an MFC toolbar can "dock" to any side of its parent window or float in its own mini-frame window. A toolbar can also "float" and you can change its size and drag it with a mouse. A toolbar can also display tool tips as the user moves the mouse over the toolbar's buttons. A tool tip is a tiny popup window that briefly describes the button's purpose.  
   
-## 对话栏  
- 对话栏是一个控制条，基于对话框模板资源，使用无模式对话框的功能。  对话栏可以包含 Windows 、自定义的或 ActiveX 控件。  在对话框中，用户可以在控件之间切换。  对话栏可以对齐到框架窗口的顶部，底部，左部或右部，也能在自己的框架窗口中浮动。  参见[CDialogBar](../mfc/reference/cdialogbar-class.md)类。  
+> [!NOTE]
+>  As of MFC version 4.0, class [CToolBar](../mfc/reference/ctoolbar-class.md) uses the Windows toolbar common control. A `CToolBar` contains a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md). Older toolbars are still supported, however. See the article [ToolBars](../mfc/mfc-toolbar-implementation.md).  
   
-## Rebars  
- [rebar](../mfc/using-crebarctrl.md)是提供控件布局、持久性和状态信息的控件条。  rebar 对象可以包含各种其他子窗口，通常各种控件，包括编辑框、工具栏和列表框。  rebar 对象可以在在指定的位图上显示其的子窗口。  其可以自动也可以通过单击和拖动手柄栏来调整大小。  参见[CReBar](../mfc/reference/crebar-class.md)类。  
+## <a name="status-bars"></a>Status Bars  
+ A status bar is a control bar that contains text-output panes, or "indicators." The output panes are commonly used as message lines and as status indicators. Message line examples include the command help-message lines that briefly explain the selected menu or toolbar command in the leftmost pane of the default status bar created by the MFC Application Wizard. Status indicator examples include the SCROLL LOCK, NUM LOCK, and other keys. Status bars are usually aligned to the bottom of a frame window. See class [CStatusBar](../mfc/reference/cstatusbar-class.md) and class [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md).  
   
-## 请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)
+## <a name="dialog-bars"></a>Dialog Bars  
+ A dialog bar is a control bar, based on a dialog-template resource, with the functionality of a modeless dialog box. Dialog bars can contain Windows, custom, or ActiveX controls. As in a dialog box, the user can tab among the controls. Dialog bars can be aligned to the top, bottom, left, or right side of a frame window and they can also be floated in their own frame window. See class [CDialogBar](../mfc/reference/cdialogbar-class.md).  
+  
+## <a name="rebars"></a>Rebars  
+ A [rebar](../mfc/using-crebarctrl.md) is a control bar that provides docking, layout, state, and persistence information for rebar controls. A rebar object can contain a variety of child windows, usually other controls, including edit boxes, toolbars, and list boxes. A rebar object can display its child windows over a specified bitmap. It can be automatically or manually resized by clicking or dragging its gripper bar. See class [CReBar](../mfc/reference/crebar-class.md).  
+  
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

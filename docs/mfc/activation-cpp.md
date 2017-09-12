@@ -1,58 +1,76 @@
 ---
-title: "Activation (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "激活对象"
-  - "激活 [C++]"
-  - "激活 [C++], 嵌入的 OLE 项"
-  - "文档, OLE"
-  - "嵌入对象"
-  - "就地激活"
-  - "就地激活, 嵌入的和链接的项"
-  - "OLE [C++], 激活"
-  - "OLE [C++], 编辑"
-  - "OLE [C++], 就地激活"
-  - "OLE 激活"
-  - "OLE 项, 可视化编辑"
-  - "OLE 服务器应用程序, 激活"
-  - "可视化编辑"
-  - "可视化编辑, 激活"
+title: Activation (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], activation
+- OLE items [MFC], visual editing
+- activation [MFC]
+- OLE [MFC], in-place activation
+- OLE [MFC], activation
+- in-place activation, embedded and linked items
+- activating objects
+- visual editing, activation
+- visual editing
+- documents [MFC], OLE
+- embedded objects [MFC]
+- OLE [MFC], editing
+- in-place activation
+- activation [MFC], embedded OLE items
+- OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Activation (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0c5d9a92de6d15b4034d44bf4a07a9526eeb3fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文说明激活影响可视编辑 OLE 项。  在用户将此容器文档后面的一个 OLE 项，则可能需要使用。  为此，该用户双击项，激活该项。  激活的最常见的激活编辑。  许多当前 OLE 项，那么，当激活的编辑，在当前框架窗口使菜单和工具栏对属于更改反映创建项的服务器应用的转换。  此行为，即就地激活，允许用户编辑受复合文档中嵌入的所有项，而无需使文档容器的窗口。  
+---
+# <a name="activation-c"></a>Activation (C++)
+This article explains the role of activation in the visual editing of OLE items. After a user has embedded an OLE item in a container document, it may need to be used. To do this, the user double-clicks the item, which activates that item. The most frequent activity for activation is editing. Many current OLE items, when activated for editing, cause the menus and toolbars in the current frame window to change to reflect those belonging to the server application that created the item. This behavior, known as in-place activation, allows the user to edit any embedded item in a compound document without leaving the container document's window.  
   
- 编辑可在单独窗口的嵌入的 OLE 项也是可能的。  则容器或服务器应用不支持就地激活，则会发生。  在这种情况下，那么，当用户双击嵌入的项时，服务器应用在单独窗口启动，并嵌入项显示为自己的文档。  用户编辑此窗口中的项。  完成编辑时，用户关闭并返回到服务器应用容器应用程序。  
+ It is also possible to edit embedded OLE items in a separate window. This will happen if either the container or server application does not support in-place activation. In this case, when the user double-clicks an embedded item, the server application is launched in a separate window and the embedded item appears as its own document. The user edits the item in this window. When editing is complete, the user closes the server application and returns to the container application.  
   
- 或者，用户可以选择打开“编辑”。在 **编辑** 菜单上的 **\<object Open\>**  命令。  这将在单独窗口的对象。  
+ As an alternative, the user can choose "open editing" with the **\<object> Open** command on the **Edit** menu. This opens the object in a separate window.  
   
 > [!NOTE]
->  编辑可在单独窗口的嵌入项位于生成 OLE 1 的标准行为，并且，某些 OLE 应用程序可能只支持编辑此样式。  
+>  Editing embedded items in a separate window was standard behavior in version 1 of OLE, and some OLE applications may support only this style of editing.  
   
- 就地激活提升一个文档为中心创建文档的方法。  复合用户可以将文档作为单个实体，工作，还不在应用程序之间进行切换。  但是，仅用于激活就地嵌入项，而为链接的项：在单独的窗口必须编辑它们。  这是因为，为链接的项在不同的位置实际上存储。  也就是说，编辑的链接项。数据的上下文中实际出现的数据存储。  编辑可在单独窗口的链接项的提醒用户数据所属的其他文档。  
+ In-place activation promotes a document-centric approach to document creation. The user can treat a compound document as a single entity, working on it without switching between applications. However, in-place activation is used only for embedded items, not for linked items: they must be edited in a separate window. This is because a linked item is actually stored in a different place. The editing of a linked item takes place within the actual context of the data, that is, where the data is stored. Editing a linked item in a separate window reminds the user that the data belongs to another document.  
   
- MFC 不支持嵌套的就地激活。  如果生成服务器\/容器应用，该服务器\/容器，并在其他容器和激活就地嵌入，它无法激活就地嵌入对象内部。  
+ MFC does not support nested in-place activation. If you build a container/server application, and that container/server is embedded in another container and in-place activated, it cannot in-place activate objects embedded inside it.  
   
- 发生到嵌入的项，当用户双击其依赖为项定义的谓词。  有关信息，请参见 [激活：谓词](../mfc/activation-verbs.md)。  
+ What happens to an embedded item when the user double-clicks it depends on the verbs defined for the item. For information, see [Activation: Verbs](../mfc/activation-verbs.md).  
   
-## 请参阅  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [容器](../mfc/containers.md)   
- [服务器](../mfc/servers.md)
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)
+
+

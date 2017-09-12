@@ -1,65 +1,84 @@
 ---
-title: "服务器：实现就地框架窗口 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架窗口, 实现"
-  - "框架窗口, 就地"
-  - "就地框架窗口"
-  - "OLE 服务器应用程序, 框架窗口"
-  - "服务器, 就地框架窗口"
+title: 'Servers: Implementing In-Place Frame Windows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], implementing
+- OLE server applications [MFC], frame windows
+- servers, in-place frame windows
+- frame windows [MFC], in-place
+- in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 服务器：实现就地框架窗口
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ec5978a315be40d0db3cd3e52ff09e0bbc2635b2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文说明了必须实现执行在可视化编辑服务器应用的就地框架窗口，则可以不使用应用程序向导创建应用服务器。  代替使用本文所述的过程位置，可以使用从应用程序向导生成的应用程序或的现有框架窗口就地类 Visual C\+\+ 附带。  
+---
+# <a name="servers-implementing-in-place-frame-windows"></a>Servers: Implementing In-Place Frame Windows
+This article explains what you must do to implement in-place frame windows in your visual editing server application if you do not use the application wizard to create your server application. In place of following the procedure outlined in this article, you could use an existing in-place frame-window class from either an application wizard-generated application or a sample provided with Visual C++.  
   
-#### 声明一就地框架窗口类  
+#### <a name="to-declare-an-in-place-frame-window-class"></a>To declare an in-place frame-window class  
   
-1.  从 `COleIPFrameWnd`派生一就地框架窗口类。  
+1.  Derive an in-place frame-window class from `COleIPFrameWnd`.  
   
-    -   使用 `DECLARE_DYNCREATE` 宏。类的头文件。  
+    -   Use the `DECLARE_DYNCREATE` macro in your class header file.  
   
-    -   使用 `IMPLEMENT_DYNCREATE` 宏。类实现 \(.cpp\) 文件。  这使得此类对象由框架创建。  
+    -   Use the `IMPLEMENT_DYNCREATE` macro in your class implementation (.cpp) file. This allows objects of this class to be created by the framework.  
   
-2.  声明框架窗口类的 `COleResizeBar` 成员。  如果要支持在服务器应用的就地，调整这是需要的。  
+2.  Declare a `COleResizeBar` member in the frame-window class. This is needed if you want to support in-place resizing in server applications.  
   
-     `OnCreate` 消息声明处理程序 \(使用 **属性** 窗口\)，并调用 `COleResizeBar` 的 **创建** 成员，因此，如果定义其。  
+     Declare an `OnCreate` message handler (using the **Properties** window), and call **Create** for your `COleResizeBar` member, if you've defined it.  
   
-3.  如果有一个工具栏，请声明框架窗口类的 `CToolBar` 成员。  
+3.  If you have a toolbar, declare a `CToolBar` member in the frame-window class.  
   
-     当服务器活动发生时，请重写 `OnCreateControlBars` 成员函数创建工具栏。  例如：  
+     Override the `OnCreateControlBars` member function to create a toolbar when the server is active in place. For example:  
   
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/CPP/servers-implementing-in-place-frame-windows_1.cpp)]  
+     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]  
   
-     在步骤 5. 后此讨论，请参见代码的讨论。  
+     See the discussion of this code following step 5.  
   
-4.  就地此框架窗口类的将头文件包括在主 .cpp 文件。  
+4.  Include the header file for this in-place frame-window class in your main .cpp file.  
   
-5.  在应用程序类的 `InitInstance`，请调用文档模板对象的 `SetServerInfo` 函数指定在打开和就地编辑和就地框架窗口的资源。  
+5.  In `InitInstance` for your application class, call the `SetServerInfo` function of the document template object to specify the resources and in-place frame window to be used in open and in-place editing.  
   
- 函数调用序列。**if** 语句创建提供从服务器资源的工具栏。  此时，窗口工具栏是容器的层次结构的一部分。  由于此工具栏是从 `CToolBar`派生的，它会将其消息给其所有者，容器应用程序的框架窗口，因此，除非更改所有者。  因此对 `SetOwner` 的调用是必需的。  此调用将命令发送是服务器的就地框架窗口的窗口消息，使传递到服务器。  这样服务器响应上了工具栏的操作。  
+ The series of function calls in the **if** statement creates the toolbar from the resources the server provided. At this point, the toolbar is part of the container's window hierarchy. Because this toolbar is derived from `CToolBar`, it will pass its messages to its owner, the container application's frame window, unless you change the owner. That is why the call to `SetOwner` is necessary. This call changes the window where commands are sent to be the server's in-place frame window, causing the messages to be passed to the server. This allows the server to react to operations on the toolbar that it provides.  
   
- 工具栏的位图 ID 应与在服务器应用就地定义的其他资源。  参见 [菜单和资源：服务器添加](../mfc/menus-and-resources-server-additions.md)。有关详细信息。  
+ The ID for the toolbar bitmap should be the same as the other in-place resources defined in your server application. See [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md) for details.  
   
- 有关更多信息，请参见、[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)[COleResizeBar](../mfc/reference/coleresizebar-class.md)[CDocTemplate::SetServerInfo](../Topic/CDocTemplate::SetServerInfo.md) 和在 *类库引用*。  
+ For more information, see [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), and [CDocTemplate::SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) in the *Class Library Reference*.  
   
-## 请参阅  
- [服务器](../mfc/servers.md)   
- [服务器：实现服务器](../mfc/servers-implementing-a-server.md)   
- [服务器：实现服务器文档](../mfc/servers-implementing-server-documents.md)   
- [服务器：服务器项](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

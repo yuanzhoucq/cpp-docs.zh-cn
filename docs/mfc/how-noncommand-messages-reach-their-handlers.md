@@ -1,33 +1,52 @@
 ---
-title: "非命令消息如何到达其处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "消息处理 [C++], 非命令消息"
-  - "消息 [C++], 路由"
-  - "非命令消息"
-  - "Windows 消息 [C++], 路由"
+title: How Noncommand Messages Reach Their Handlers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], routing
+- noncommand messages
+- Windows messages [MFC], routing
+- message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 非命令消息如何到达其处理程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 512c69c81e2d2226fd3336a911e62c21e4ad67ad
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-与命令，标准 Windows 消息没有通过命令系统目标。路由，但是由窗口发送消息的窗口通常处理。  窗口可能是主框架窗口、MDI 子窗口、标准控件、对话框、视图，或者子窗口。  
+---
+# <a name="how-noncommand-messages-reach-their-handlers"></a>How Noncommand Messages Reach Their Handlers
+Unlike commands, standard Windows messages do not get routed through a chain of command targets but are usually handled by the window to which Windows sends the message. The window might be a main frame window, an MDI child window, a standard control, a dialog box, a view, or some other kind of child window.  
   
- 在运行时，所有 Windows 窗口附加到有自己关联的和消息映射处理程序函数的窗口对象 \(直接或间接从 `CWnd`派生\)。  框架使用消息映射\) \- 关于为命令 \- 映射传入消息给处理程序。  
+ At run time, each Windows window is attached to a window object (derived directly or indirectly from `CWnd`) that has its own associated message map and handler functions. The framework uses the message map — as for a command — to map incoming messages to handlers.  
   
-## 请参阅  
- [框架如何调用处理程序](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

@@ -1,39 +1,58 @@
 ---
-title: "对话框数据验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据验证 [C++], 对话框"
-  - "数据验证 [C++], 消息框"
-  - "DDV（对话框数据验证）[C++]"
-  - "对话框 [C++], 验证数据"
-  - "验证数据 [C++], 对话框数据输入"
-  - "验证数据 [C++], 消息框"
+title: Dialog Data Validation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- validating data [MFC], message boxes
+- data validation [MFC], dialog boxes
+- dialog boxes [MFC], validating data
+- validating data [MFC], dialog box data entry
+- DDV (dialog data validation) [MFC]
+- data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 对话框数据验证
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5aebbd1b0f72717d134643762e238a6fb985695f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-可以指定要验证以及数据交换。通过调用 DDV 函数，如该示例所示在 [对话框数据交换](../mfc/dialog-data-exchange.md)。  示例中的 `DDV_MaxChars` 调用验证。文本框控件中输入的字符串的长度不超过 20 个字符。  DDV 函数通常通知具有 MessageBox 的用户，并且在验证失败的问题在控件上并将焦点置于，因此用户可以重新输入数据。  必须在同一控件的 DDX 函数之后调用特定控件的 DDV 函数。  
+---
+# <a name="dialog-data-validation"></a>Dialog Data Validation
+You can specify validation in addition to data exchange by calling DDV functions, as shown in the example in [Dialog Data Exchange](../mfc/dialog-data-exchange.md). The `DDV_MaxChars` call in the example validates that the string entered in the text-box control is not longer than 20 characters. The DDV function typically alerts the user with a message box if the validation fails and puts the focus on the offending control so the user can reenter the data. A DDV function for a given control must be called immediately after the DDX function for the same control.  
   
- 您还可以定义自己的自定义 DDV DDX 和例程。  有关详细信息和 DDV 上的 DDX 和其他特性，请参见 [MFC 技术说明 26](../mfc/tn026-ddx-and-ddv-routines.md)。  
+ You can also define your own custom DDX and DDV routines. For details on this and other aspects of DDX and DDV, see [MFC Technical Note 26](../mfc/tn026-ddx-and-ddv-routines.md).  
   
- [添加成员变量向导](../ide/add-member-variable-wizard.md) 编写中所有数据映射的 DDX 和 DDV 调用您的。  
+ The [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) will write all of the DDX and DDV calls in the data map for you.  
   
-## 请参阅  
- [对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)   
- [对话框数据交换](../mfc/dialog-data-exchange.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Dialog Data Exchange](../mfc/dialog-data-exchange.md)
+
+

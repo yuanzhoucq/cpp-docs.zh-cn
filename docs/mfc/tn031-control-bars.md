@@ -1,232 +1,254 @@
 ---
-title: "TN031：控件条 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.bars"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控件条, 样式"
-  - "CStatusBar 类, 技术说明 31 用法"
-  - "CControlBar 类, 技术说明 31 用法"
-  - "CControlBar 类, 派生自"
-  - "控件条, 类"
-  - "CDialogBar 类, 技术说明 31 用法"
-  - "CToolBar 类, 技术说明 31 用法"
-  - "TN031"
-  - "样式, 控件条"
+title: 'TN031: Control Bars | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.bars
+dev_langs:
+- C++
+helpviewer_keywords:
+- control bars [MFC], styles
+- CStatusBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], Tech Note 31 usage
+- CControlBar class [MFC], deriving from
+- control bars [MFC], classes [MFC]
+- CDialogBar class [MFC], Tech Note 31 usage
+- CToolBar class [MFC], Tech Note 31 usage
+- TN031
+- styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TN031：控件条
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96602bc469bb7aab112833a68c999d69e39df36c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn031-control-bars"></a>TN031: Control Bars
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此注释描述 MFC 中的控件条类：常规 [CControlBar](#_mfcnotes_ccontrolbar)、[CStatusBar](#_mfcnotes_cstatusbar)、[CToolBar](#_mfcnotes_ctoolbar)、[CDialogBar](#_mfcnotes_cdialogbar) 和 **CDockBar**。  
+ This note describes the control bar classes in MFC: the general [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar), and **CDockBar**.  
   
- `CControlBar`  
+## <a name="_mfcnotes_ccontrolbar"></a> CControlBar 
   
- **ControlBar** 是 `CWnd` 派生类，其：  
+ A **ControlBar** is a `CWnd`-derived class that:  
   
--   与框架窗口的顶端或底端对齐。  
+-   Is aligned to the top or bottom of a frame window.  
   
--   可能包含为基于 HWND 的控件（例如，`CDialogBar`）或基于非 `HWND`（例如，`CToolBar`、`CStatusBar`）的项的子项。  
+-   May contain child items that are either HWND-based controls (for example, `CDialogBar`) or non-`HWND` based items (for example, `CToolBar`, `CStatusBar`).  
   
- 控件条支持附加样式：  
+ Control bars support the additional styles:  
   
--   `CBRS_TOP` （默认值）将控件条固定到顶端。  
+- `CBRS_TOP` (The default) pin the control bar to the top.  
   
--   `CBRS_BOTTOM` 将控件条固定到底端。  
+- `CBRS_BOTTOM` Pin the control bar to the bottom.  
   
--   `CBRS_NOALIGN` 当父级重设大小时，将不会重新定位控件条。  
+- `CBRS_NOALIGN` Do not reposition the control bar when the parent resizes.  
   
- 从 `CControlBar` 派生的类提供更有趣的实现：  
+ Classes derived from `CControlBar` provide more interesting implementations:  
   
--   `CStatusBar` 一个状态栏，项是包含文本的状态栏窗格。  
+- `CStatusBar` A status bar, items are status bar panes containing text.  
   
--   `CToolBar` 一个工具栏，项是行内对齐的位图按钮。  
+- `CToolBar` A toolbar, items are bitmap buttons aligned in a row.  
   
--   `CDialogBar` 一个像工具栏一样的框架，其中包含标准窗口控件（通过对话框模板资源创建）。  
+- `CDialogBar` A toolbar-like frame containing standard windows controls (created from a dialog template resource).  
   
--   **CDockBar** 其他 `CControlBar` 派生对象的通用停靠区域。 此类中可用的特定成员函数和变量可能在将来的版本中发生更改。  
+- **CDockBar** A generalized docking area for other `CControlBar` derived objects. The specific member functions and variables available in this class are likely to change in future releases.  
   
- 所有控件条对象\/窗口都将是某个父框架窗口的子窗口。 它们通常将作为同级添加到框架的工作区（例如，MDI 客户端或视图）。 控件条的子窗口 ID 很重要。 控件条的默认布局仅对 ID 位于 **AFX\_IDW\_CONTROLBAR\_FIRST** 到 **AFX\_IDW\_CONTROLBAR\_LAST** 范围的控件条起作用。 请注意，即使具有 256 个控件条 ID，其中前 32 个控件条 ID 也是特定的，因为它们由打印预览体系结构直接支持。  
+ All control bar objects/windows will be child windows of some parent frame window. They are usually added as a sibling to the client area of the frame (for example, an MDI Client or view). The child window ID of a control bar is important. The default layout of control bar only works for control bars with IDs in the range of **AFX_IDW_CONTROLBAR_FIRST** to **AFX_IDW_CONTROLBAR_LAST**. Note that even though there is a range of 256 control bar IDs, the first 32 of these control bar IDs are special since they are directly supported by the print preview architecture.  
   
- `CControlBar` 类将提供具有下列作用的标准实现：  
+ The `CControlBar` class gives standard implementation for:  
   
--   将控件条对齐到框架的顶端、底端或任一端。  
+-   Aligning the control bar to the top, bottom, or either side of the frame.  
   
--   分配控件项数组。  
+-   Allocating control item arrays.  
   
--   支持派生类的实现。  
+-   Supporting the implementation of derived classes.  
   
- C\+\+ 控件条对象一般将作为 `CFrameWnd` 派生类的成员嵌入，并且将在销毁父 `HWND` 和对象时得到清理。 如果需要在堆上分配控件条对象，则可以将 **m\_bAutoDestruct** 成员设置为 **TRUE**，以便在销毁 `HWND` 时使控件条“删除此项”。  
+ C++ control bar objects will usually be embedded as members of a `CFrameWnd` derived class, and will be cleaned up when the parent `HWND` and object are destroyed. If you need to allocate a control bar object on the heap, you can simply set the **m_bAutoDestruct** member to **TRUE** to make the control bar "**delete this**" when the `HWND` is destroyed.  
   
 > [!NOTE]
->  如果创建自己的 `CControlBar` 派生类，而不使用 MFC 的派生类之一（如 `CStatusBar`、`CToolBar` 或 `CDialogBar`），则您需要设置 `m_dwStyle` 数据成员。 这可通过重写 **Create** 来完成：  
+>  If you create your own `CControlBar`-derived class, rather than using one of MFC's derived classes, such as `CStatusBar`, `CToolBar`, or `CDialogBar`, you will need to set the `m_dwStyle` data member. This can be done in the override of **Create**:  
   
 ```  
 // CMyControlBar is derived from CControlBar  
-BOOL CMyControlBar::Create( CWnd* pParentWnd, DWORD dwStyle, UINT nID )  
+BOOL CMyControlBar::Create(CWnd* pParentWnd,
+    DWORD dwStyle,
+    UINT nID)  
 {  
-   m_dwStyle = dwStyle;  
-  
-   .  
-   .  
-   .  
+    m_dwStyle = dwStyle;  
+ 
+ .  
+ .  
+ .  
 }  
 ```  
   
- **控件条布局算法**  
+ **Control Bar Layout Algorithm**  
   
- 控件条的布局算法非常简单。 框架窗口将一条 **WM\_SIZEPARENT** 消息发送给控件条范围内的所有子级。 除此消息之外，还将传递指向父级矩形工作区的指针。 此信息发送给处于 Z 顺序的子级。 控件条子级使用此信息来确定自己的位置并缩减父级工作区的范围。 常规工作区剩下的最后一个矩形（小于控件条）将用于确定主要工作区窗口的位置（通常是 MDI 客户端、视图或拆分窗口）。  
+ The control bar layout algorithm is very simple. The frame window sends a message **WM_SIZEPARENT** to all children in the control bar range. Along with this message, a pointer to the parent's client rectangle is passed. This message is sent to children in Z-order. The control-bar children use this information to position themselves and to decrease the size of the parent's client area. The final rectangle that is left for the normal client area (less control bars) is used to position the main client window (usually an MDI client, view or splitter window).  
   
- 有关更多详细信息，请参阅 `CWnd::RepositionBars` 和 `CFrameWnd::RecalcLayout`。  
+ See `CWnd::RepositionBars` and `CFrameWnd::RecalcLayout` for more details.  
   
- MFC 私有 Windows 消息（包括 **WM\_SIZEPARENT**）记录在[技术说明 24](../mfc/tn024-mfc-defined-messages-and-resources.md) 中。  
+ MFC private Windows messages, including **WM_SIZEPARENT**, are documented in [Technical Note 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
- `CStatusBar`  
+## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar  
   
- 状态栏是具有一行文本输出窗格的控件条。 使用文本输出窗格的常见方法有两种：  
+ A status bar is a control bar that has a row of text output panes. There are two common ways to use text output panes:  
   
--   作为消息行  
+-   As a message line  
   
-     （例如，标准菜单帮助消息行）。 这些通常是通过从 0 开始编制的索引进行访问的  
+     (for example, the standard menu help message line). These are usually accessed by a 0-based indexed  
   
--   作为状态指示器  
+-   As status indicators  
   
-     （例如，CAP、NUM 和 SCRL 指示器）。 这些一般按字符串\/命令 ID 进行访问。  
+     (for example, the CAP, NUM and SCRL indicators). These are usually accessed by string/command ID.  
   
- 状态栏的字体为 10 磅 MS Sans Serif（由 Windows 界面应用程序设计指南或与 10 磅非等宽字体最匹配的字体映射程序指定。） 在某些 Windows 版本（如日语版本）上，所选字体不同。  
+ The font for the status bar is 10-point MS Sans Serif (dictated by the Windows Interface Application Design Guide or the font mappers best match of a 10-point Swiss proportional font). On certain versions of Windows, such as the Japanese edition, the fonts selected are different.  
   
- 状态栏使用的颜色还与 Windows 界面应用程序设计指南建议的颜色保持一致。 这些颜色未经过硬编码，将动态更改以响应控制面板中的用户自定义。  
+ The colors used in the status bar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|项|Windows 颜色值|默认 RGB|  
-|-------|-----------------|------------|  
-|状态栏背景|**COLOR\_BTNFACE**|RGB\(192, 192, 192\)|  
-|状态栏文本|**COLOR\_BTNTEXT**|RGB\(000, 000, 000\)|  
-|状态栏上边缘\/左边缘|**COLOR\_BTNHIGHLIGHT**|RGB\(255, 255, 255\)|  
-|状态栏下边缘\/右边缘|**COLOR\_BTNSHADOW**|RGB\(128, 128, 128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|Status bar background|**COLOR_BTNFACE**|RGB(192, 192, 192)|  
+|Status bar text|**COLOR_BTNTEXT**|RGB(000, 000, 000)|  
+|Status bar top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255, 255, 255)|  
+|Status bar bot/right edges|**COLOR_BTNSHADOW**|RGB(128, 128, 128)|  
   
- **CStatusBar 的 CCmdUI 支持**  
+ **CCmdUI Support for CStatusBar**  
   
- 指示器一般是通过 `ON_UPDATE_COMMAND_UI` 机制进行更新的。 空闲时，状态栏将调用具有指示器窗格字符串 ID 的 `ON_UPDATE_COMMAND_UI` 处理程序。  
+ The way indicators are usually updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the status bar will call the `ON_UPDATE_COMMAND_UI` handler with the string ID of the indicator pane.  
   
- `ON_UPDATE_COMMAND_UI` 处理程序可调用：  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**：启用或禁用此窗格。 禁用窗格看上去与启用窗格完全一样，但文本不可见（即，禁用了文本指示器）。  
+- **Enable**: To enable or disable the pane. A disabled pane looks exactly like an enabled pane but the text is invisible (that is, turns off the text indicator).  
   
--   **SetText**：更改文本。 请慎用此设置，因为此窗格不会自动重设大小。  
+- **SetText**: To change the text. Be careful if you use this because the pane will not automatically resize.  
   
- 有关创建 `CStatusBar` 和自定义 API 的详细信息，请参阅*类库参考*中的 [CStatusBar](../mfc/reference/cstatusbar-class.md) 类。 状态栏的大部分自定义应在状态栏最初可见之前完成。  
+ Refer to class [CStatusBar](../mfc/reference/cstatusbar-class.md) in the *Class Library Reference* for details about `CStatusBar` creation and customization APIs. Most customization of status bars should be done before the status bar is initially made visible.  
   
- 状态栏仅支持一个伸缩窗格，通常是第一个窗格。 该窗格的大小确实最小。 如果状态栏大于所有窗格的最小大小，则任何多余的宽度都将提供给此伸缩窗格。 由于第一个窗格是伸缩窗格，因此具有状态栏的默认应用程序已与 CAP、NUM 和 SCRL 的指示器右对齐。  
+ The status bar supports only one stretchy pane, usually the first pane. The size of that pane is really a minimum size. If the status bar is bigger than the minimum size of all the panes, any extra width will be given to the stretchy pane. The default application with a status bar has right-aligned indicators for CAP, NUM and SCRL since the first pane is stretchy.  
   
- `CToolBar`  
+## <a name="_mfcnotes_ctoolbar"></a>  CToolBar  
   
- 工具栏是具有一行位图按钮（可能包含分隔符）的控件条。 支持两种样式的按钮：按键和复选框按钮。 单选按钮组功能可以使用复选框按钮和 `ON_UPDATE_COMMAND_UI` 生成。  
+ A toolbar is a control bar with a row of bitmap buttons that may include separators. Two styles of buttons are supported: pushbuttons and check box buttons. Radio group functionality can be built with check box buttons and `ON_UPDATE_COMMAND_UI`.  
   
- 工具栏中的所有位图按钮均来自一个位图。 此位图必须包含每个按钮的一个图像或字形。 通常图像\/字形在位图中的顺序与它们在屏幕上绘制的顺序相同。 （这可以使用自定义 API 进行更改。）  
+ All the bitmap buttons in the toolbar are taken from one bitmap. This bitmap must contain one image or glyph for each button. Typically the order of the images/glyphs in the bitmap is the same order they will be drawn on the screen. (This can be changed using the customization APIs.)  
   
- 每个按钮的大小必须相同。 默认值为标准的 24x22 像素。 每个图像\/字形的大小必须相同，并且必须在位图中并行。 默认图像\/字形大小为 16x15 像素。 因此，对于具有 10 个按钮（使用标准大小）的工具栏，您需要一个宽 160 像素、高 15 像素的位图。  
+ Each button must be the same size. The default is the standard 24x22 pixels. Each image/glyph must be the same size and must be side-by-side in the bitmap. The default image/glyph size is 16x15 pixels. Therefore, for a toolbar with 10 buttons (using standard sizes), you need a bitmap that is 160 pixels wide and 15 pixels high.  
   
- 每个按钮都有且只有一个图像\/字形。 不同的按钮状态和样式（例如，已按、抬起、按下、已禁用、已禁用并按下、不确定）都是在算法上通过这一个图像\/字形生成。 任何颜色位图或 DIB 均可在理论中使用。 如果原始图像是灰色阴影，则生成不同按钮状态的算法最适用。 有关示例，请查看 MFC 常规示例 [CLIPART](../top/visual-cpp-samples.md) 中提供的标准工具栏按钮和工具栏按钮剪贴画。  
+ Each button has one and only one image/glyph. The different button states and styles (for example, pressed, up, down, disabled, disabled down, indeterminate) are algorithmically generated from that one image/glyph. Any color bitmap or DIB can be used in theory. The algorithm for generating the different button states works best if the original image is shades of gray. Look at the standard toolbar buttons and the toolbar button clipart provided in MFC General sample [CLIPART](../visual-cpp-samples.md) for examples.  
   
- 工具栏使用的颜色还与 Windows 界面应用程序设计指南建议的颜色也保持一致。 这些颜色未经过硬编码，将动态更改以响应控制面板中的用户自定义。  
+ The colors used in the toolbar are also consistent with the recommendation of the Windows Interface Application Design Guide. These colors are not hard coded and are changed dynamically in response to user customization in Control Panel.  
   
-|项|Windows 颜色值|默认 RGB|  
-|-------|-----------------|------------|  
-|工具栏背景|**COLOR\_BTNFACE**|RGB\(192,192,192\)|  
-|工具栏按钮上边缘\/左边缘|**COLOR\_BTNHIGHLIGHT**|RGB\(255,255,255\)|  
-|工具栏按钮下边缘\/右边缘|**COLOR\_BTNSHADOW**|RGB\(128,128,128\)|  
+|Item|Windows COLOR value|Default RGB|  
+|----------|-------------------------|-----------------|  
+|ToolBar background|**COLOR_BTNFACE**|RGB(192,192,192)|  
+|ToolBar buttons top/left edges|**COLOR_BTNHIGHLIGHT**|RGB(255,255,255)|  
+|ToolBar buttons bot/right edges|**COLOR_BTNSHADOW**|RGB(128,128,128)|  
   
- 此外，将对工具栏位图按钮重新着色，如同它们是标准 Windows 按钮控件一样。 当从资源加载位图时将会进行此重新着色，从而响应“控制面板”中的用户自定义带来的系统颜色的更改。 将自动为工具栏位图中的下列颜色重新着色，因此应慎用这些颜色。 如果您不希望为位图的部分重新着色，则请使用最接近已映射 RGB 值之一的颜色。 映射是基于精确的 RGB 值完成的。  
+ In addition, the toolbar bitmap buttons are recolored as though they were standard Windows button controls. This recoloring occurs when the bitmap is loaded from the resource and in response to a change in system colors in response to user customization in Control Panel. The following colors in a toolbar bitmap will be recolored automatically so they should be used with caution. If you do not wish to have a portion of your bitmap recolored, then use a color that closely approximates one of the mapped RGB values. The mapping is done based on exact RGB values.  
   
-|RGB 值|动态映射的颜色值|  
-|-----------|--------------|  
-|RGB\(000, 000, 000\)|COLOR\_BTNTEXT|  
-|RGB\(128, 128, 128\)|COLOR\_BTNSHADOW|  
-|RGB\(192, 192, 192\)|COLOR\_BTNFACE|  
-|RGB\(255, 255, 255\)|COLOR\_BTNHIGHLIGHT|  
+|RGB value|Dynamically mapped COLOR value|  
+|---------------|------------------------------------|  
+|RGB(000, 000, 000)|COLOR_BTNTEXT|  
+|RGB(128, 128, 128)|COLOR_BTNSHADOW|  
+|RGB(192, 192, 192)|COLOR_BTNFACE|  
+|RGB(255, 255, 255)|COLOR_BTNHIGHLIGHT|  
   
- 有关创建 `CToolBar` 和自定义 API 的详细信息，请参阅*类库参考*中的 [CToolBar](../mfc/reference/ctoolbar-class.md) 类。 工具栏的大部分自定义应在工具栏最初可见之前完成。  
+ Refer to class [CToolBar](../mfc/reference/ctoolbar-class.md) the *Class Library Reference* for details about the `CToolBar` creation and customization APIs. Most customization of toolbars should be done before the toolbar is initially made visible.  
   
- 自定义 API 可用于调整按钮 ID、样式、分隔线宽度以及什么按钮使用什么图像\/字形。 默认情况下不需要使用这些 API。  
+ The customization APIs can be used to adjust the button IDs, styles, spacer width and which image/glyph is used for what button. By default you do not need to use these APIs.  
   
-## CToolBar 的 CCmdUI 支持  
- 工具栏按钮始终是通过 `ON_UPDATE_COMMAND_UI` 机制进行更新的。 空闲时，此工具栏将使用按钮的命令 ID 调用 `ON_UPDATE_COMMAND_UI` 处理程序。 将不会为分隔符调用 `ON_UPDATE_COMMAND_UI`，但将为按键和复选框按钮调用此处理程序。  
+## <a name="ccmdui-support-for-ctoolbar"></a>CCmdUI Support for CToolBar  
+ The way toolbar buttons are always updated is through the `ON_UPDATE_COMMAND_UI` mechanism. On idle time, the toolbar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of that button. `ON_UPDATE_COMMAND_UI` is not called for separators, but it is called for pushbuttons and check box buttons.  
   
- `ON_UPDATE_COMMAND_UI` 处理程序可调用：  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   **Enable**：启用或禁用按钮。 这对按键和复选框按钮同样起作用。  
+- **Enable**: To enable or disable the button. This works equally for pushbuttons and check box buttons.  
   
--   `SetCheck`：设置按钮的复选状态。 为工具栏按钮调用此会将该按钮转换为复选框按钮。`SetCheck` 将采用可以为 0（未选中）、1（已选中）或 2（不确定）的参数  
+- `SetCheck`: To set the check state of a button. Calling this for a toolbar button will turn it into a check box button. `SetCheck` takes a parameter which can be 0 (not checked), 1 (checked) or 2 (indeterminate)  
   
--   `SetRadio`：`SetCheck` 的速记。  
+- `SetRadio`: Shorthand for `SetCheck`.  
   
- 复选框按钮为“自动”复选框按钮；也就是说，如果用户按它们，则它们将立即更改状态。 “已选中”是按下状态。 无内置用户界面方式将按钮更改为“不确定”状态；此操作必须通过代码来完成。  
+ Check box buttons are "AUTO" check box buttons; that is, when the user presses them they will immediately change state. Checked is the down or depressed state. There is no built-in user interface way to change a button into the "indeterminate" state; that must be done through code.  
   
- 自定义 API 将允许您更改指定工具栏按钮的状态，您最好针对工具栏按钮代表的命令更改 `ON_UPDATE_COMMAND_UI` 处理程序中的这些状态。 记住，空闲处理将使用 `ON_UPDATE_COMMAND_UI` 处理程序更改工具栏按钮的状态，因此通过 SetButtonStyle 对这些状态所做的任何更改可能在下次空闲后丢失。  
+ The customization APIs will permit you to change the state of a given toolbar button, preferably you should change these states in the `ON_UPDATE_COMMAND_UI` handler for the command the toolbar button represents. Remember, the idle processing will change the state of toolbar buttons with the `ON_UPDATE_COMMAND_UI` handler, so any changes to these states made through SetButtonStyle may get lost after the next idle.  
   
- 工具栏按钮将像常规按钮或菜单项一样发送 **WM\_COMMAND** 消息，并且这些按钮一般将由提供 `ON_COMMAND` 处理程序的同一个类中的 `ON_UPDATE_COMMAND_UI` 处理程序进行处理。  
+ Toolbar buttons will send **WM_COMMAND** messages like normal buttons or menu items and are normally handled by an `ON_COMMAND` handler in the same class that provides the `ON_UPDATE_COMMAND_UI` handler.  
   
- 用于显示状态的工具栏按钮样式（TBBS\_ 值）有 4 种：  
+ There are four Toolbar button styles (TBBS_ values) used for display states:  
   
--   TBBS\_CHECKED：   复选框当前处于选中状态（按下）。  
+-   TBBS_CHECKED:   Check box is currently checked (down).  
   
--   TBBS\_INDETERMINATE：   复选框的状态当前不确定。  
+-   TBBS_INDETERMINATE:   Check box is currently indeterminate.  
   
--   TBBS\_DISABLED：   当前已禁用按钮。  
+-   TBBS_DISABLED:   Button is currently disabled.  
   
--   TBBS\_PRESSED：   当前已按下按钮。  
+-   TBBS_PRESSED:   Button is currently pressed.  
   
- 下列 TBBS 值表示的是 6 种正式的 Windows 界面应用程序设计指南按钮样式：  
+ The six official Windows Interface Application Design Guide button styles are represented by the following TBBS values:  
   
--   抬起 \= 0  
+-   Up = 0  
   
--   鼠标按下 \= TBBS\_PRESSED（&#124; 任何其他样式）  
+-   Mouse Down = TBBS_PRESSED (&#124; any other style)  
   
--   已禁用 \= TBBS\_DISABLED  
+-   Disabled = TBBS_DISABLED  
   
--   按下 \= TBBS\_CHECKED  
+-   Down = TBBS_CHECKED  
   
--   按下并且已禁用 \= TBBS\_CHECKED &#124; TBBS\_DISABLED  
+-   Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED  
   
--   不确定 \= TBBS\_INDETERMINATE  
+-   Indeterminate = TBBS_INDETERMINATE  
   
 ##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar  
- 对话栏是包含标准 Windows 控件的控件条。 其行为类似于一个对话框：它包含控件并且支持使用 Tab 键在控件之间进行切换。 它还使用对话框模板来表示对话栏。  
+ A dialog bar is a control bar that contains standard Windows controls. It acts like a dialog in that it contains the controls and supports tabbing between them. It also acts like a dialog in that it uses a dialog template to represent the bar.  
   
- `CDialogBar` 用于打印预览工具栏，该工具栏包含标准按键控件。  
+ A `CDialogBar` is used for the print-preview toolbar, which contains standard pushbutton controls.  
   
- `CDialogBar` 的用法类似于 `CFormView`。 您必须定义对话栏的对话模框板并移除 **WS\_CHILD** 之外的所有样式。 请注意，对话框必须是不可见的。  
+ Using a `CDialogBar` is like using a `CFormView`. You must define a dialog template for the dialog bar and remove all the styles except **WS_CHILD**. Note that the dialog must not be visible.  
   
- `CDialogBar` 的控件通知将发送给控件条的父级（如工具栏按钮）。  
+ The control notifications for a `CDialogBar` will be sent to the parent of the control bar (just like toolbar buttons).  
   
-## CDialogBar 的 CCmdUI 支持  
- 对话栏按钮应该通过 `ON_UPDATE_COMMAND_UI` 处理程序机制进行更新。 空闲时，对话栏将调用具有 ID \>\= 0x8000（即，命令 ID 的范围）的所有按钮的命令 ID 的 `ON_UPDATE_COMMAND_UI` 处理程序。  
+## <a name="ccmdui-support-for-cdialogbar"></a>CCmdUI Support for CDialogBar  
+ Dialog bar buttons should be updated through the `ON_UPDATE_COMMAND_UI` handler mechanism. At idle time, the dialog bar will call the `ON_UPDATE_COMMAND_UI` handler with the command ID of all the buttons that have a ID >= 0x8000 (that is, in the range of command IDs).  
   
- `ON_UPDATE_COMMAND_UI` 处理程序可调用：  
+ The `ON_UPDATE_COMMAND_UI` handler can call:  
   
--   Enable：启用或禁用按钮。  
+-   Enable: to enable or disable the button.  
   
--   SetText：更改按钮的文本。  
+-   SetText: to change the text of the button.  
   
- 自定义可通过标准窗口管理器 API 来完成。  
+ Customization can be done through standard window manager APIs.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

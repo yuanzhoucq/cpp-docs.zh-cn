@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonBaseElement 类 |Microsoft 文档"
+title: CMFCRibbonBaseElement Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -127,7 +127,119 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonBaseElement class
+- CMFCRibbonBaseElement [MFC], AddToKeyList
+- CMFCRibbonBaseElement [MFC], AddToListBox
+- CMFCRibbonBaseElement [MFC], CanBeAddedToQuickAccessToolBar
+- CMFCRibbonBaseElement [MFC], CanBeCompacted
+- CMFCRibbonBaseElement [MFC], CanBeStretched
+- CMFCRibbonBaseElement [MFC], CanBeStretchedHorizontally
+- CMFCRibbonBaseElement [MFC], CleanUpSizes
+- CMFCRibbonBaseElement [MFC], ClosePopupMenu
+- CMFCRibbonBaseElement [MFC], CopyFrom
+- CMFCRibbonBaseElement [MFC], DestroyCtrl
+- CMFCRibbonBaseElement [MFC], DrawImage
+- CMFCRibbonBaseElement [MFC], Find
+- CMFCRibbonBaseElement [MFC], FindByData
+- CMFCRibbonBaseElement [MFC], FindByID
+- CMFCRibbonBaseElement [MFC], FindByOriginal
+- CMFCRibbonBaseElement [MFC], GetCompactSize
+- CMFCRibbonBaseElement [MFC], GetData
+- CMFCRibbonBaseElement [MFC], GetDescription
+- CMFCRibbonBaseElement [MFC], GetDroppedDown
+- CMFCRibbonBaseElement [MFC], GetElements
+- CMFCRibbonBaseElement [MFC], GetElementsByID
+- CMFCRibbonBaseElement [MFC], GetHighlighted
+- CMFCRibbonBaseElement [MFC], GetID
+- CMFCRibbonBaseElement [MFC], GetImageSize
+- CMFCRibbonBaseElement [MFC], GetIntermediateSize
+- CMFCRibbonBaseElement [MFC], GetKeys
+- CMFCRibbonBaseElement [MFC], GetKeyTipRect
+- CMFCRibbonBaseElement [MFC], GetKeyTipSize
+- CMFCRibbonBaseElement [MFC], GetLocationInGroup
+- CMFCRibbonBaseElement [MFC], GetMenuKeys
+- CMFCRibbonBaseElement [MFC], GetNotifyID
+- CMFCRibbonBaseElement [MFC], GetOriginal
+- CMFCRibbonBaseElement [MFC], GetParentCategory
+- CMFCRibbonBaseElement [MFC], GetParentPanel
+- CMFCRibbonBaseElement [MFC], GetParentRibbonBar
+- CMFCRibbonBaseElement [MFC], GetParentWnd
+- CMFCRibbonBaseElement [MFC], GetPressed
+- CMFCRibbonBaseElement [MFC], GetQuickAccessToolBarID
+- CMFCRibbonBaseElement [MFC], GetRect
+- CMFCRibbonBaseElement [MFC], GetRegularSize
+- CMFCRibbonBaseElement [MFC], GetSize
+- CMFCRibbonBaseElement [MFC], GetText
+- CMFCRibbonBaseElement [MFC], GetToolTipText
+- CMFCRibbonBaseElement [MFC], GetTopLevelRibbonBar
+- CMFCRibbonBaseElement [MFC], HasCompactMode
+- CMFCRibbonBaseElement [MFC], HasFocus
+- CMFCRibbonBaseElement [MFC], HasIntermediateMode
+- CMFCRibbonBaseElement [MFC], HasLargeMode
+- CMFCRibbonBaseElement [MFC], HasMenu
+- CMFCRibbonBaseElement [MFC], HitTest
+- CMFCRibbonBaseElement [MFC], IsAlignByColumn
+- CMFCRibbonBaseElement [MFC], IsAlwaysLargeImage
+- CMFCRibbonBaseElement [MFC], IsAutoRepeatMode
+- CMFCRibbonBaseElement [MFC], IsChecked
+- CMFCRibbonBaseElement [MFC], IsCompactMode
+- CMFCRibbonBaseElement [MFC], IsDefaultMenuLook
+- CMFCRibbonBaseElement [MFC], IsDisabled
+- CMFCRibbonBaseElement [MFC], IsDroppedDown
+- CMFCRibbonBaseElement [MFC], IsFocused
+- CMFCRibbonBaseElement [MFC], IsGalleryIcon
+- CMFCRibbonBaseElement [MFC], IsHighlighted
+- CMFCRibbonBaseElement [MFC], IsIntermediateMode
+- CMFCRibbonBaseElement [MFC], IsLargeMode
+- CMFCRibbonBaseElement [MFC], IsMenuMode
+- CMFCRibbonBaseElement [MFC], IsPressed
+- CMFCRibbonBaseElement [MFC], IsQATMode
+- CMFCRibbonBaseElement [MFC], IsSeparator
+- CMFCRibbonBaseElement [MFC], IsShowGroupBorder
+- CMFCRibbonBaseElement [MFC], IsShowTooltipOnBottom
+- CMFCRibbonBaseElement [MFC], IsTabStop
+- CMFCRibbonBaseElement [MFC], IsTextAlwaysOnRight
+- CMFCRibbonBaseElement [MFC], IsVisible
+- CMFCRibbonBaseElement [MFC], IsWholeRowHeight
+- CMFCRibbonBaseElement [MFC], NotifyCommand
+- CMFCRibbonBaseElement [MFC], NotifyHighlightListItem
+- CMFCRibbonBaseElement [MFC], OnAddToQAToolbar
+- CMFCRibbonBaseElement [MFC], OnAfterChangeRect
+- CMFCRibbonBaseElement [MFC], OnAutoRepeat
+- CMFCRibbonBaseElement [MFC], OnCalcTextSize
+- CMFCRibbonBaseElement [MFC], OnChangeMenuHighlight
+- CMFCRibbonBaseElement [MFC], OnDraw
+- CMFCRibbonBaseElement [MFC], OnDrawKeyTip
+- CMFCRibbonBaseElement [MFC], OnDrawMenuImage
+- CMFCRibbonBaseElement [MFC], OnDrawOnList
+- CMFCRibbonBaseElement [MFC], OnKey
+- CMFCRibbonBaseElement [MFC], OnMenuKey
+- CMFCRibbonBaseElement [MFC], OnRTLChanged
+- CMFCRibbonBaseElement [MFC], OnShow
+- CMFCRibbonBaseElement [MFC], OnShowPopupMenu
+- CMFCRibbonBaseElement [MFC], PostMenuCommand
+- CMFCRibbonBaseElement [MFC], Redraw
+- CMFCRibbonBaseElement [MFC], SetACCData
+- CMFCRibbonBaseElement [MFC], SetCompactMode
+- CMFCRibbonBaseElement [MFC], SetData
+- CMFCRibbonBaseElement [MFC], SetDefaultMenuLook
+- CMFCRibbonBaseElement [MFC], SetDescription
+- CMFCRibbonBaseElement [MFC], SetID
+- CMFCRibbonBaseElement [MFC], SetInitialMode
+- CMFCRibbonBaseElement [MFC], SetKeys
+- CMFCRibbonBaseElement [MFC], SetOriginal
+- CMFCRibbonBaseElement [MFC], SetParentCategory
+- CMFCRibbonBaseElement [MFC], SetParentMenu
+- CMFCRibbonBaseElement [MFC], SetParentRibbonBar
+- CMFCRibbonBaseElement [MFC], SetRect
+- CMFCRibbonBaseElement [MFC], SetText
+- CMFCRibbonBaseElement [MFC], SetTextAlwaysOnRight
+- CMFCRibbonBaseElement [MFC], SetToolTipText
+- CMFCRibbonBaseElement [MFC], SetVisible
+- CMFCRibbonBaseElement [MFC], StretchHorizontally
+- CMFCRibbonBaseElement [MFC], StretchToWholeRow
+- CMFCRibbonBaseElement [MFC], UpdateTooltipInfo
+- CMFCRibbonBaseElement [MFC], OnProcessKey
+- CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 caps.latest.revision: 34
 author: mikeblome
@@ -147,195 +259,195 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c596d7ef6ba87ca0f084c03856cf4f54dc8eac49
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 598454ba44dd00d83046bb67cb5024ca64e07400
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
-`CMFCRibbonBaseElement`类是可以将添加到的所有元素的基类[功能区栏](../../mfc/reference/cmfcribbonbar-class.md)。 功能区元素的示例包括功能区按钮、功能区复选框和功能区组合框。  
+# <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement Class
+The `CMFCRibbonBaseElement` class is the base class for all elements that you can add to a [ribbon bar](../../mfc/reference/cmfcribbonbar-class.md). Examples of ribbon elements are ribbon buttons, ribbon check boxes, and ribbon combo boxes.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonBaseElement : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonBaseElement`|构造 `CMFCRibbonBaseElement` 对象。|  
+|`CMFCRibbonBaseElement`|Constructs a `CMFCRibbonBaseElement` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|将功能区元素上方的键提示添加到数组的键提示。|  
-|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|将功能区元素添加到指定的功能区命令列表框中。|  
-|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|指示是否可以将功能区元素添加到快速访问工具栏。|  
-|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|指示是否可以压缩功能区元素的大小。|  
-|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|指示是否功能区元素的高度可垂直方向上增加到功能区行的高度。|  
-|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|指示是否可以更改功能区元素的宽度。|  
-|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|清理的功能区元素的维度设置。|  
-|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|关闭功能区元素的弹出菜单。|  
-|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|将指定的状态复制`CMFCRibbonBaseElement`与当前对象。|  
-|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|销毁功能区元素。|  
-|[CMFCRibbonBaseElement::DrawImage](#drawimage)|绘制图像可查看功能区元素。|  
-|[CMFCRibbonBaseElement::Find](#find)|如果指向当前对象，指定的指针返回到功能区元素。|  
-|[CMFCRibbonBaseElement::FindByData](#findbydata)|如果它包含指定的数据，检索到功能区元素的指针。|  
-|[CMFCRibbonBaseElement::FindByID](#findbyid)|检索指向功能区元素的指针，如果该元素由指定的命令 id 标识。|  
-|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|检索指向功能区元素的指针，如果其原始功能区元素都与匹配的指定功能区元素。|  
-|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|返回功能区元素的压缩大小。|  
-|[CMFCRibbonBaseElement::GetData](#getdata)|检索与功能区元素关联的用户定义数据。|  
-|[CMFCRibbonBaseElement::GetDescription](#getdescription)|返回功能区元素的说明。|  
-|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|检索指向功能区元素的指针，如果向下删除其弹出菜单。|  
-|[CMFCRibbonBaseElement::GetElements](#getelements)|将当前的功能区元素添加到指定的数组。|  
-|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|将当前的功能区元素添加到指定的数组，如果当前的功能区元素中包含指定的命令 id。|  
-|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|检索指向功能区元素的指针，如果它被突出显示。|  
-|[CMFCRibbonBaseElement::GetID](#getid)|返回功能区元素的命令 ID。|  
-|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|返回功能区元素的图像大小。|  
-|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|返回处于中间状态的功能区元素的大小。|  
-|[CMFCRibbonBaseElement::GetKeys](#getkeys)|返回与功能区元素关联的快捷键提示。|  
-|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|检索的功能区元素的快捷键提示边界矩形。|  
-|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|检索快捷键提示文本的大小。|  
-|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|指示在功能区组中的功能区元素的显示位置。|  
-|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|返回与按钮关联的键提示。|  
-|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|检索的功能区元素的通知命令 ID。|  
-|[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|检索原始的功能区元素。|  
-|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|检索的功能区元素的功能区类别。|  
-|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|检索包含功能区元素的功能区面板。|  
-|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|检索的功能区元素的父功能区栏。|  
-|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|检索的功能区元素的父窗口。|  
-|[CMFCRibbonBaseElement::GetPressed](#getpressed)|如果用户当前按，检索指向功能区元素的指针。|  
-|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|在该文件位于快速访问工具栏时检索的功能区元素的命令 ID。|  
-|[CMFCRibbonBaseElement::GetRect](#getrect)|返回功能区元素的边框。|  
-|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|返回功能区元素的常规大小。|  
-|[CMFCRibbonBaseElement::GetSize](#getsize)|返回功能区元素的当前大小。|  
-|[CMFCRibbonBaseElement::GetText](#gettext)|返回与功能区元素相关联的文本。|  
-|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|返回功能区元素的工具提示文本。|  
-|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|检索的功能区元素的顶部级别功能区栏。|  
-|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|指定功能区元素是否有压缩模式。|  
-|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|指示父元素是否具有键盘焦点。|  
-|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|指定功能区元素是否有中间模式。|  
-|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|指定功能区元素是否具有大型的模式。|  
-|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|指示是否功能区元素有一个菜单。|  
-|[CMFCRibbonBaseElement::HitTest](#hittest)|如果指定的点位于，检索指向功能区元素的指针。|  
-|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|表示功能区元素是否与其他功能区元素垂直对齐。|  
-|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|指示是否功能区元素映像大小始终为大。|  
-|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|表示功能区元素是否是以自动重复模式。|  
-|[CMFCRibbonBaseElement::IsChecked](#ischecked)|指定是否已选中的功能区元素。|  
-|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|指定功能区元素是否是以简洁模式。|  
+|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Adds a keytip for the ribbon element to an array of keytips.|  
+|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Adds a ribbon element to the specified ribbon commands list box.|  
+|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indicates whether the ribbon element can be added to the quick access toolbar.|  
+|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indicates whether the size of the ribbon element can be compact.|  
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indicates whether the height of the ribbon element can increase vertically to the height of a ribbon row.|  
+|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indicates whether the width of the ribbon element can change.|  
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Cleans up the dimension settings for the ribbon element.|  
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Closes the popup menu for the ribbon element.|  
+|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copies the state of the specified `CMFCRibbonBaseElement` to the current object.|  
+|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Destroys the ribbon element.|  
+|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Draws the image for the ribbon element.|  
+|[CMFCRibbonBaseElement::Find](#find)|Returns the specified pointer to the ribbon element if it points to the current object.|  
+|[CMFCRibbonBaseElement::FindByData](#findbydata)|Retrieves a pointer to the ribbon element if it contains the specified data.|  
+|[CMFCRibbonBaseElement::FindByID](#findbyid)|Retrieves a pointer to the ribbon element if that element is identified by the specified command ID.|  
+|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Retrieves a pointer to the ribbon element if its original ribbon element matches the specified ribbon element.|  
+|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Returns the compact size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetData](#getdata)|Retrieves the user-defined data associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetDescription](#getdescription)|Returns the description of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Retrieves a pointer to the ribbon element if its pop-up menu is dropped down.|  
+|[CMFCRibbonBaseElement::GetElements](#getelements)|Adds the current ribbon element to the specified array.|  
+|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Adds the current ribbon element to the specified array if the current ribbon element contains the specified command ID.|  
+|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|Retrieves a pointer to the ribbon element if it is highlighted.|  
+|[CMFCRibbonBaseElement::GetID](#getid)|Returns the command ID of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|Returns the image size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Returns the size of the ribbon element in its intermediate state.|  
+|[CMFCRibbonBaseElement::GetKeys](#getkeys)|Returns the keytip associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Retrieves the keytip boundary rectangle for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Retrieves the size of the keytip text.|  
+|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|Indicates the display location of the ribbon element in a ribbon group.|  
+|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Returns the keytips associated with a button.|  
+|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|Retrieves the notification command ID for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|Retrieves the original ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|Retrieves the ribbon category for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Retrieves the ribbon panel that contains the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|Retrieves the parent ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Retrieves the parent window for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetPressed](#getpressed)|Retrieves a pointer to the ribbon element if the user currently presses it.|  
+|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Retrieves the command ID of the ribbon element when it is located in the quick access toolbar.|  
+|[CMFCRibbonBaseElement::GetRect](#getrect)|Returns the bounding rectangle of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Returns the regular size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetSize](#getsize)|Returns the current size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetText](#gettext)|Returns the text associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|Returns tooltip text of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Retrieves the top level ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Specifies whether the ribbon element has a compact mode.|  
+|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indicates whether the parent element has keyboard focus.|  
+|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Specifies whether the ribbon element has an intermediate mode.|  
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Specifies whether the ribbon element has a large mode.|  
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Indicates whether the ribbon element has a menu.|  
+|[CMFCRibbonBaseElement::HitTest](#hittest)|Retrieves a pointer to the ribbon element if the specified point is located in it.|  
+|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Indicates whether the ribbon element is aligned vertically with other ribbon elements.|  
+|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indicates whether the ribbon element image size is always large.|  
+|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indicates whether the ribbon element is in auto repeat mode.|  
+|[CMFCRibbonBaseElement::IsChecked](#ischecked)|Specifies whether the ribbon element is checked.|  
+|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Specifies whether the ribbon element is in a compact mode.|  
 |[CMFCRibbonBaseElement::IsDefaultMenuLook](#isdefaultmenulook)||  
-|[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|指定是否禁用功能区元素。|  
-|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|确定是否显示弹出菜单的功能区元素，并且拉下。|  
-|[CMFCRibbonBaseElement::IsFocused](#isfocused)|指定功能区元素是否具有焦点。|  
-|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|指示是否在功能区库中包含的功能区元素。|  
-|[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|指定是否会突出显示功能区元素。|  
-|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|指示当前图像可查看功能区元素是否为中间的大小。|  
-|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|指示是否当前图像的功能区元素为大尺寸。|  
-|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|指示是否在菜单中包含的功能区元素。|  
-|[CMFCRibbonBaseElement::IsPressed](#ispressed)|指示用户是否已单击功能区元素。|  
-|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|指示是否在快速访问工具栏中包含的功能区元素。|  
-|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|指示是否显示分隔符的功能区元素。|  
-|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|指示是否显示常见的边框的组中包含的功能区元素。|  
-|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|指示工具提示将显示在功能区元素。|  
-|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|指示是否可以使用键盘选择功能区元素。|  
-|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|指示是否在右侧显示功能区元素的文本。|  
-|[CMFCRibbonBaseElement::IsVisible](#isvisible)|指示当前是否显示功能区元素。|  
-|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|指示的功能区元素显示 heigth 是否与包含它的功能区面板的显示高度相同。|  
-|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|将命令通知发送到功能区元素的父窗口。|  
-|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|当用户将突出显示在列表中找到的功能区元素时，请通知功能区栏与父窗口。|  
-|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|将功能区元素添加到指定的快速访问工具栏。|  
-|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|更新的功能区元素的工具提示。|  
-|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|更新对持续的用户输入的响应的功能区元素。|  
-|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|计算功能区元素的文本的大小。|  
-|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|由框架调用，当突出显示的菜单中找到的功能区元素发生更改。|  
-|[CMFCRibbonBaseElement::OnDraw](#ondraw)|由框架调用以绘制功能区元素。|  
-|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|由框架用于绘制上方功能区元素的键提示调用。|  
-|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|功能区元素的菜单图像绘制时由框架调用。|  
-|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|由框架的功能区元素绘制命令列表框中调用。|  
-|[CMFCRibbonBaseElement::OnKey](#onkey)|当用户按快捷键提示和功能区元素具有焦点时由框架调用。|  
+|[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|Specifies whether the ribbon element is disabled.|  
+|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determines whether the ribbon element displays a popup menu and is dropped down.|  
+|[CMFCRibbonBaseElement::IsFocused](#isfocused)|Specifies whether the ribbon element has the focus.|  
+|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Indicates whether the ribbon element is contained in a ribbon gallery.|  
+|[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|Specifies whether ribbon element is highlighted.|  
+|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|Indicates whether the current image for the ribbon element is intermediate size.|  
+|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|Indicates whether the current image for the ribbon element is large sized.|  
+|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|Indicates whether the ribbon element is contained in a menu.|  
+|[CMFCRibbonBaseElement::IsPressed](#ispressed)|Indicates whether the user has clicked the ribbon element.|  
+|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indicates whether the ribbon element is contained in the quick access toolbar.|  
+|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|Indicates whether the ribbon element is a display separator.|  
+|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indicates whether the ribbon element is contained in a group that displays a common border.|  
+|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|Indicates whether the tooltip is displayed under the ribbon element.|  
+|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|Indicates whether the ribbon element can be selected with the keyboard.|  
+|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|Indicates whether the text for the ribbon element is displayed on the right.|  
+|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Indicates whether the ribbon element is currently displayed.|  
+|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indicates whether the display heigth of the ribbon element is the same as the display height of the ribbon panel that contains it.|  
+|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Sends a command notification to the parent window of the ribbon element.|  
+|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Notifies the parent window of the ribbon bar when a user highlights a ribbon element that is located in a list.|  
+|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Adds the ribbon element to the specified quick access toolbar.|  
+|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Updates the tooltip for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Updates the ribbon element in response to sustained user input.|  
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calculates the size of the text for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Called by the framework when the highlight changes for a ribbon element that is located in a menu.|  
+|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Called by the framework to draw the ribbon element.|  
+|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Called by the framework to draw the keytip for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Called by the framework when the menu image for the ribbon element is drawn.|  
+|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Called by the framework to draw the ribbon element in a commands list box.|  
+|[CMFCRibbonBaseElement::OnKey](#onkey)|Called by the framework when the user presses a keytip and the ribbon element has the focus.|  
 |[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||  
-|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|在布局更改方向时由框架调用。|  
-|[CMFCRibbonBaseElement::OnShow](#onshow)|由框架来显示或隐藏功能区元素调用。|  
-|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|当功能区元素将显示弹出菜单时由框架调用。|  
+|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|Called by the framework when the layout changes direction.|  
+|[CMFCRibbonBaseElement::OnShow](#onshow)|Called by the framework to show or hide the ribbon element.|  
+|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Called by the framework when the ribbon element is going to display a popup menu.|  
 |[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||  
-|[CMFCRibbonBaseElement::Redraw](#redraw)|更新的功能区元素的显示。|  
-|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|设置功能区元素的可访问性数据。|  
-|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|设置的功能区元素的显示大小。|  
-|[CMFCRibbonBaseElement::SetData](#setdata)|将与功能区元素关联的数据项。|  
+|[CMFCRibbonBaseElement::Redraw](#redraw)|Updates the display for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Sets the accessibility data for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|Sets the display size for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetData](#setdata)|Associates a data item with the ribbon element.|  
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||  
-|[CMFCRibbonBaseElement::SetDescription](#setdescription)|设置功能区元素的说明。|  
-|[CMFCRibbonBaseElement::SetID](#setid)|设置的功能区元素的命令 ID。|  
-|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|设置的功能区元素的初始显示大小。|  
-|[CMFCRibbonBaseElement::SetKeys](#setkeys)|设置快捷键的功能区元素的提示。|  
-|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|设置的功能区元素的原始功能区元素。|  
-|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|设置的功能区元素的父类别。|  
-|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|设置父菜单的功能区元素的容器。|  
-|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|设置的功能区元素的父功能区栏。|  
-|[CMFCRibbonBaseElement::SetRect](#setrect)|设置维度用于他显示功能区元素的矩形。|  
-|[CMFCRibbonBaseElement::SetText](#settext)|设置功能区元素的文本。|  
-|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|设置要在右侧显示的功能区元素的文本。|  
-|[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|设置的功能区元素的工具提示文本。|  
-|[CMFCRibbonBaseElement::SetVisible](#setvisible)|设置的功能区元素的可见性状态。|  
-|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|拉伸功能区元素的宽度。|  
-|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|更改为指定的行高度的功能区元素的显示高度。|  
-|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|通过使用功能区元素命令资源更新的工具提示文本。|  
+|[CMFCRibbonBaseElement::SetDescription](#setdescription)|Sets the description for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetID](#setid)|Sets the command ID of the ribbon element.|  
+|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|Sets the initial display size for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetKeys](#setkeys)|Sets a keytip for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Sets the original ribbon element for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Sets the parent category for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Sets the parent menu container for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Sets the parent ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetRect](#setrect)|Sets the dimensions fot he display rectangle for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetText](#settext)|Sets the text for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Sets the text for the ribbon element to display on the right.|  
+|[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|Sets the tooltip text for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetVisible](#setvisible)|Sets the visibility state of the ribbon element.|  
+|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Stretches the width of the ribbon element.|  
+|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Changes the display height of the ribbon element to the specified row height.|  
+|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Updates the tooltip text by using the command resource for the ribbon element.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|当用户按快捷键由框架调用。|  
-|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|在功能区元素接收或失去输入的焦点时由框架调用。|  
+|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Called by the framework when the user presses a shortcut key.|  
+|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Called by the framework when a ribbon element receives or loses the input focus.|  
   
-## <a name="remarks"></a>备注  
- `CMFCRibbonBaseElement`类定义包括命令 ID、 文本标签、 工具提示文本、 元素说明和状态 （可以是已设定焦点、 突出显示、 按下、 禁用、 选中，或拉下） 的所有功能区元素共有的属性。  
+## <a name="remarks"></a>Remarks  
+ The `CMFCRibbonBaseElement` class defines the properties that are common to all ribbon elements that include command ID, text label, tooltip text, element description, and state (which can be focused, highlighted, pressed, disabled, checked, or dropped down).  
   
- 通过定义功能区元素的图像大小`RibbonImageType`成员，可以是下列值之一︰  
+ The image size of a ribbon element is defined by the `RibbonImageType` member, which can be one of the following values:  
   
 - `RibbonImageLarge`  
   
 - `RibbonImageSmall`  
   
- 根据其大小，功能区元素才会显示是小型或大型图像。  
+ Depending on its size, a ribbon element displays either a small or large image.  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用各种方法`CMFCRibbonBaseElement`类。 该示例演示如何获取`CMFCRibbonBaseElement`对象从`CMFCRibbonStatusBar`类，将功能区元素的描述设置、 设置文本、 设置快捷键提示，并设置的功能区元素的工具提示文本。 此代码段属于[绘制客户端示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonBaseElement` class. The example shows how to get a `CMFCRibbonBaseElement` object from a `CMFCRibbonStatusBar` class, set the description for the ribbon element, set the text, set a keytip, and set the tooltip text for the ribbon element. This code snippet is part of the [Draw Client sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient #&8;](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]  
-[!code-cpp[NVC_MFC_DrawClient #&9;](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]  
+[!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头：** afxbaseribbonelement.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbaseribbonelement.h  
   
-##  <a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
- 将功能区元素上方的键提示添加到数组的键提示。  
+##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList  
+ Adds a keytip for the ribbon element to an array of keytips.  
   
 ```  
 virtual void AddToKeyList(
     CArray<CMFCRibbonKeyTip*, CMFCRibbonKeyTip*>& arElems);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `arElems`  
- 引用[CArray](../../mfc/reference/carray-class.md)的键提示。  
+ Reference to a [CArray](../../mfc/reference/carray-class.md) of keytips.  
   
-### <a name="remarks"></a>备注  
- 启用功能区键提示功能后，框架将显示功能区键提示，当用户按下 alt 或 F10 键。  
+### <a name="remarks"></a>Remarks  
+ When the ribbon keytips feature is enabled, the framework displays ribbon keytips when the user presses the ALT key or the F10 key.  
   
-##  <a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
- 将功能区元素添加到指定的功能区命令列表框中。  
+##  <a name="addtolistbox"></a>  CMFCRibbonBaseElement::AddToListBox  
+ Adds a ribbon element to the specified ribbon commands list box.  
   
 ```  
 virtual int AddToListBox(
@@ -343,114 +455,114 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pWndListBox`  
- 指向命令列表框中。  
+ Pointer to a commands list box.  
   
  [in] `bDeep`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 添加功能区元素的从零开始索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the added ribbon element.  
   
-### <a name="remarks"></a>备注  
- 框架将功能区元素添加到命令列表框中，以使用户能够自定义用户界面。  
+### <a name="remarks"></a>Remarks  
+ The framework adds ribbon elements to a commands list box to enable the user to customize the user interface.  
   
-##  <a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
- 指示是否可以将功能区元素添加到快速访问工具栏。  
+##  <a name="canbeaddedtoquickaccesstoolbar"></a>  CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
+ Indicates whether the ribbon element can be added to the quick access toolbar.  
   
 ```  
 virtual BOOL CanBeAddedToQuickAccessToolBar() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果可以添加该元素;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the element can be added; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
- 指示是否可以压缩功能区元素的大小。  
+##  <a name="canbecompacted"></a>  CMFCRibbonBaseElement::CanBeCompacted  
+ Indicates whether the size of the ribbon element can be compact.  
   
 ```  
 virtual BOOL CanBeCompacted() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素的大小可以压缩;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the size of the ribbon element can be compact; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 在功能区元素的大小可以是 compact、 中级、 或大型。  
+### <a name="remarks"></a>Remarks  
+ The size of a ribbon element can be compact, intermediate, or large.  
   
-##  <a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched  
- 指示是否功能区元素的高度可垂直方向上增加到功能区行的高度。  
+##  <a name="canbestretched"></a>  CMFCRibbonBaseElement::CanBeStretched  
+ Indicates whether the height of the ribbon element can increase vertically to the height of a ribbon row.  
   
 ```  
 virtual BOOL CanBeStretched();
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`TRUE`。 重写此方法以指示是否功能区元素的高度可垂直方向上增加到功能区行的高度。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method to indicate whether the height of the ribbon element can increase vertically to the height of a ribbon row.  
   
-##  <a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
- 指示是否可以更改功能区元素的宽度。  
+##  <a name="canbestretchedhorizontally"></a>  CMFCRibbonBaseElement::CanBeStretchedHorizontally  
+ Indicates whether the width of the ribbon element can change.  
   
 ```  
 virtual BOOL CanBeStretchedHorizontally();
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`FALSE`。 重写此方法以指示是否可以更改功能区元素的宽度。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the width of the ribbon element can change.  
   
-##  <a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes  
- 清理的功能区元素的维度设置。  
+##  <a name="cleanupsizes"></a>  CMFCRibbonBaseElement::CleanUpSizes  
+ Cleans up the dimension settings for the ribbon element.  
   
 ```  
 virtual void CleanUpSizes();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法没有任何效果。 重写此方法在派生类重置功能区元素的维度设置。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to reset the dimension settings for the ribbon element.  
   
-##  <a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu  
- 关闭功能区元素的弹出菜单。  
+##  <a name="closepopupmenu"></a>  CMFCRibbonBaseElement::ClosePopupMenu  
+ Closes the pop-up menu for the ribbon element.  
   
 ```  
 virtual void ClosePopupMenu();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
- 将指定的状态复制[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)与当前对象。  
+##  <a name="copyfrom"></a>  CMFCRibbonBaseElement::CopyFrom  
+ Copies the state of the specified [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) to the current object.  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 源[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)对象。  
+ The source [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) object.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
- 销毁功能区元素。  
+##  <a name="destroyctrl"></a>  CMFCRibbonBaseElement::DestroyCtrl  
+ Destroys the ribbon element.  
   
 ```  
 virtual void DestroyCtrl();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法没有任何效果。 重写此方法在派生类来销毁功能区元素中。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to destroy the ribbon element.  
   
-##  <a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage  
- 绘制图像可查看功能区元素。  
+##  <a name="drawimage"></a>  CMFCRibbonBaseElement::DrawImage  
+ Draws the image for the ribbon element.  
   
 ```  
 virtual void DrawImage(
@@ -459,157 +571,157 @@ virtual void DrawImage(
     CRect rectImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针。  
+ Pointer to a device context.  
   
  [in] `type`  
- 某一图像类型枚举值。 请参阅可能的值列表的备注部分。  
+ An image type enumerated value. See the Remarks section for a list of possible values.  
   
  [in] `rectImage`  
- 图像的矩形。  
+ The image rectangle.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法没有任何效果。 重写此方法在派生类来绘制图像可查看功能区元素中。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to draw the image for the ribbon element.  
   
- 下表列出的可能值为`type`参数︰  
+ The following table lists possible values for the `type` parameter:  
   
  `RibbonImageLarge`  
- 大型 32 x 32 像素的图像大小。  
+ Large 32x32 pixel image size.  
   
  `RibbonImageSmall`  
- 小型 16 x 16 像素图像大小。  
+ Small 16x16 pixel image size.  
   
-##  <a name="find"></a>CMFCRibbonBaseElement::Find  
- 如果它指向当前对象，则返回指定的指针。  
+##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
+ Returns the specified pointer if it points to the current object.  
   
 ```  
 virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pElement`  
- 指向功能区元素的指针。  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>返回值  
- 指向功能区元素如果`pElement`指向当前对象; 否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if `pElement` points to the current object; otherwise `NULL`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
- 如果它包含指定的数据，检索到功能区元素的指针。  
+##  <a name="findbydata"></a>  CMFCRibbonBaseElement::FindByData  
+ Retrieves a pointer to the ribbon element if it contains the specified data.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 与功能区元素关联的数据。  
+ The data associated with a ribbon element.  
   
-### <a name="return-value"></a>返回值  
- 指向包含指定的数据; 如果的功能区元素的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it contains the specified data; otherwise `NULL`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
- 检索指向功能区元素的指针，如果该元素由指定的命令 id 标识。  
+##  <a name="findbyid"></a>  CMFCRibbonBaseElement::FindByID  
+ Retrieves a pointer to the ribbon element if that element is identified by the specified command ID.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 功能区元素的命令 ID。  
+ Command ID for a ribbon element.  
   
-### <a name="return-value"></a>返回值  
- 如果该元素确定由指定的命令 ID; 的功能区元素指向的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if that element is identified by the specified command ID; otherwise `NULL`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
- 如果其原始功能区元素匹配的指定功能区元素中检索到当前功能区元素的指针。  
+##  <a name="findbyoriginal"></a>  CMFCRibbonBaseElement::FindByOriginal  
+ Retrieves a pointer to the current ribbon element if its original ribbon element matches the specified ribbon element.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pOriginal`  
- 指向功能区元素的指针。  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>返回值  
- 指向其原始功能区元素都与匹配的指定功能区元素; 如果的功能区元素的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if its original ribbon element matches the specified ribbon element; otherwise `NULL`.  
   
-### <a name="remarks"></a>备注  
- 复制到另一个容器的功能区元素保留指向原始的功能区元素的指针。  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize  
- 返回功能区元素的压缩大小。  
+##  <a name="getcompactsize"></a>  CMFCRibbonBaseElement::GetCompactSize  
+ Returns the compact size of the ribbon element.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>返回值  
- 功能区元素的压缩大小。  
+### <a name="return-value"></a>Return Value  
+ The compact size of a ribbon element.  
   
 > [!NOTE]
->  压缩大小的含义的功能区元素将被截断 （它将显示一个小图像，或者不包含文本的图像）。  
+>  The compact size means that the ribbon element is truncated (it displays a small image, or an image without a text).  
   
-##  <a name="getdata"></a>CMFCRibbonBaseElement::GetData  
- 检索与功能区元素关联的用户定义数据。  
+##  <a name="getdata"></a>  CMFCRibbonBaseElement::GetData  
+ Retrieves the user-defined data associated with the ribbon element.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 与功能区元素关联的用户定义数据。  
+### <a name="return-value"></a>Return Value  
+ The user-defined data associated with the ribbon element.  
   
-##  <a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
- 返回功能区元素的说明。  
+##  <a name="getdescription"></a>  CMFCRibbonBaseElement::GetDescription  
+ Returns the description of the ribbon element.  
   
 ```  
 virtual CString GetDescription() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 功能区元素说明。 描述将显示在状态栏中，或在工具提示，或在菜单按钮下，如果功能区元素位于[CMFCRibbonMainPanel 类](../../mfc/reference/cmfcribbonmainpanel-class.md)。  
+### <a name="return-value"></a>Return Value  
+ The ribbon element description. The description is displayed either on the status bar, or in a tooltip, or under the menu button if the ribbon element is located on the [CMFCRibbonMainPanel Class](../../mfc/reference/cmfcribbonmainpanel-class.md).  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
- 检索指向功能区元素的指针，如果向下删除其弹出菜单。  
+##  <a name="getdroppeddown"></a>  CMFCRibbonBaseElement::GetDroppedDown  
+ Retrieves a pointer to the ribbon element if its pop-up menu is dropped down.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
-### <a name="return-value"></a>返回值  
- 功能区元素的弹出菜单已下拉; 如果指向的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if its pop-up menu is dropped down; otherwise `NULL`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
- 将当前的功能区元素添加到指定的数组。  
+##  <a name="getelements"></a>  CMFCRibbonBaseElement::GetElements  
+ Adds the current ribbon element to the specified array.  
   
 ```  
 virtual void GetElements(
     CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in, out] `arElements`  
- 功能区元素的数组。  
+ An array of ribbon elements.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
- 将当前的功能区元素添加到指定的数组，如果当前的功能区元素中包含指定的命令 id。  
+##  <a name="getelementsbyid"></a>  CMFCRibbonBaseElement::GetElementsByID  
+ Adds the current ribbon element to the specified array if the current ribbon element contains the specified command ID.  
   
 ```  
 virtual void GetElementsByID(
@@ -617,73 +729,73 @@ virtual void GetElementsByID(
     CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 命令 ID 的功能区元素。  
+ Command ID of a ribbon element.  
   
  [in] `arElements`  
- 功能区元素的数组。  
+ An array of ribbon elements.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
- 检索指向功能区元素的指针，如果它被突出显示。  
+##  <a name="gethighlighted"></a>  CMFCRibbonBaseElement::GetHighlighted  
+ Retrieves a pointer to the ribbon element if it is highlighted.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetHighlighted();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向它被突出显示; 如果为功能区元素的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it is highlighted; otherwise `NULL`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getid"></a>CMFCRibbonBaseElement::GetID  
- 返回功能区元素的命令 ID。  
+##  <a name="getid"></a>  CMFCRibbonBaseElement::GetID  
+ Returns the command ID of the ribbon element.  
   
 ```  
 UINT GetID() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 功能区元素的命令 ID。  
+### <a name="return-value"></a>Return Value  
+ The command ID of the ribbon element.  
   
-##  <a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize  
- 返回功能区元素的图像大小。  
+##  <a name="getimagesize"></a>  CMFCRibbonBaseElement::GetImageSize  
+ Returns the image size of the ribbon element.  
   
 ```  
 virtual CSize GetImageSize(RibbonImageType R) const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 功能区元素的图像大小。  
+### <a name="return-value"></a>Return Value  
+ The image size of the ribbon element.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize  
- 返回处于中间状态的功能区元素的大小。  
+##  <a name="getintermediatesize"></a>  CMFCRibbonBaseElement::GetIntermediateSize  
+ Returns the size of the ribbon element in its intermediate state.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>返回值  
- 在中间状态的功能区元素的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of the ribbon element in its intermediate state.  
   
-##  <a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
- 返回与功能区元素关联的快捷键提示。  
+##  <a name="getkeys"></a>  CMFCRibbonBaseElement::GetKeys  
+ Returns the keytip associated with the ribbon element.  
   
 ```  
 LPCTSTR GetKeys() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 与功能区元素关联的快捷键提示。  
+### <a name="return-value"></a>Return Value  
+ A keytip associated with the ribbon element.  
   
-##  <a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
- 检索的功能区元素的快捷键提示边界矩形。  
+##  <a name="getkeytiprect"></a>  CMFCRibbonBaseElement::GetKeyTipRect  
+ Retrieves the keytip boundary rectangle for the ribbon element.  
   
 ```  
 virtual CRect GetKeyTipRect(
@@ -691,710 +803,710 @@ virtual CRect GetKeyTipRect(
     BOOL bIsMenu);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针。  
+ Pointer to a device context.  
   
  [in] `bIsMenu`  
- `TRUE`如果功能区元素才会显示一个弹出菜单。否则为`FALSE`。  
+ `TRUE` if the ribbon element displays a pop-up menu; otherwise `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- 始终返回一个矩形，有 0 值。  
+### <a name="return-value"></a>Return Value  
+ Always returns a rectangle with 0 values.  
   
-### <a name="remarks"></a>备注  
- 重写此方法在派生类来返回快捷键提示边界矩形。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to return the keytip boundary rectangle.  
   
-##  <a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
- 检索快捷键提示文本的大小。  
+##  <a name="getkeytipsize"></a>  CMFCRibbonBaseElement::GetKeyTipSize  
+ Retrieves the size of the keytip text.  
   
 ```  
 virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针。  
+ Pointer to a device context.  
   
-### <a name="return-value"></a>返回值  
- 快捷键提示文本的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of the keytip text.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
- 指示在功能区组中的功能区元素的显示位置。  
+##  <a name="getlocationingroup"></a>  CMFCRibbonBaseElement::GetLocationInGroup  
+ Indicates the display location of the ribbon element in a ribbon group.  
   
 ```  
 RibbonElementLocation GetLocationInGroup() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个`RibbonElementLocation`枚举值。 下表列出可能的值。  
+### <a name="return-value"></a>Return Value  
+ A `RibbonElementLocation` enumerated value. The following table lists possible values.  
   
-|值|描述|  
+|Value|Description|  
 |-----------|-----------------|  
-|`RibbonElementNotInGroup`|功能区元素不包含在功能区组中。|  
-|`RibbonElementSingleInGroup`|功能区元素显示为功能区组中的唯一项目。|  
-|`RibbonElementFirstInGroup`|功能区元素将显示在功能区组的左端。|  
-|`RibbonElementLastInGroup`|功能区元素将显示在功能区组的右端。|  
-|`RibbonElementMiddleInGroup`|功能区组的任意一端上未显示功能区元素。|  
+|`RibbonElementNotInGroup`|The ribbon element is not contained in a ribbon group.|  
+|`RibbonElementSingleInGroup`|The ribbon element is displayed as the only item in a ribbon group.|  
+|`RibbonElementFirstInGroup`|The ribbon element is displayed on the left end of a ribbon group.|  
+|`RibbonElementLastInGroup`|The ribbon element is displayed on the right end of a ribbon group.|  
+|`RibbonElementMiddleInGroup`|The ribbon element is not displayed on either end of a ribbon group.|  
   
-### <a name="remarks"></a>备注  
- 功能区元素组仅水平对齐。  
+### <a name="remarks"></a>Remarks  
+ Ribbon element groups are only aligned horizontally.  
   
-##  <a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
- 返回功能区元素菜单快捷键提示。  
+##  <a name="getmenukeys"></a>  CMFCRibbonBaseElement::GetMenuKeys  
+ Returns the menu keytip for the ribbon element.  
   
 ```  
 LPCTSTR GetMenuKeys() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 菜单快捷键提示与功能区元素相关联。  
+### <a name="return-value"></a>Return Value  
+ The menu keytip associated with the ribbon element.  
   
-### <a name="remarks"></a>备注  
- 在调用时，菜单快捷键提示将显示一个弹出菜单。  
+### <a name="remarks"></a>Remarks  
+ When invoked, a menu keytip displays a pop-up menu.  
   
-##  <a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
- 检索的功能区元素的通知命令 ID。  
+##  <a name="getnotifyid"></a>  CMFCRibbonBaseElement::GetNotifyID  
+ Retrieves the notification command ID for the ribbon element.  
   
 ```  
 virtual UINT GetNotifyID();
 ```  
   
-### <a name="return-value"></a>返回值  
- 通知命令 id。  
+### <a name="return-value"></a>Return Value  
+ The notification command ID.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
- 检索原始的功能区元素。  
+##  <a name="getoriginal"></a>  CMFCRibbonBaseElement::GetOriginal  
+ Retrieves the original ribbon element.  
   
 ```  
 CMFCRibbonBaseElement* GetOriginal() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向原始的功能区元素的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the original ribbon element.  
   
-### <a name="remarks"></a>备注  
- 复制到另一个容器的功能区元素保留指向原始的功能区元素的指针。  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
- 检索的功能区元素的功能区类别。  
+##  <a name="getparentcategory"></a>  CMFCRibbonBaseElement::GetParentCategory  
+ Retrieves the ribbon category for the ribbon element.  
   
 ```  
 CMFCRibbonCategory* GetParentCategory() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向功能区类别的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon category.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
- 检索包含功能区元素的功能区面板。  
+##  <a name="getparentpanel"></a>  CMFCRibbonBaseElement::GetParentPanel  
+ Retrieves the ribbon panel that contains the ribbon element.  
   
 ```  
 virtual CMFCRibbonPanel* GetParentPanel() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向功能区面板，其中包含功能区元素的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon panel that contains the ribbon element.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
- 检索的功能区元素的父功能区栏。  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonBaseElement::GetParentRibbonBar  
+ Retrieves the parent ribbon bar for the ribbon element.  
   
 ```  
 CMFCRibbonBar* GetParentRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向功能区元素的父功能区栏的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent ribbon bar for the ribbon element.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
- 检索的功能区元素的父窗口。  
+##  <a name="getparentwnd"></a>  CMFCRibbonBaseElement::GetParentWnd  
+ Retrieves the parent window for the ribbon element.  
   
 ```  
 virtual CWnd* GetParentWnd() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向此方法已成功; 如果的功能区元素的父窗口的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent window for the ribbon element if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>备注  
- 功能区元素的父窗口是[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)或[CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581)。  
+### <a name="remarks"></a>Remarks  
+ The parent window for a ribbon element is a [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) or a [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
-##  <a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
- 如果用户当前按，检索指向功能区元素的指针。  
+##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
+ Retrieves a pointer to the ribbon element if the user currently presses it.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetPressed();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向用户当前按下它; 如果的功能区元素的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if the user currently presses it; otherwise, `NULL`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
- 在该文件位于快速访问工具栏时检索的功能区元素的命令 ID。  
+##  <a name="getquickaccesstoolbarid"></a>  CMFCRibbonBaseElement::GetQuickAccessToolBarID  
+ Retrieves the command ID of the ribbon element when it is located in the quick access toolbar.  
   
 ```  
 virtual UINT GetQuickAccessToolBarID() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 功能区元素时该文件位于快速访问工具栏命令 ID。  
+### <a name="return-value"></a>Return Value  
+ The command ID of the ribbon element when it is located in the quick access toolbar.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
- 返回功能区元素的边框。  
+##  <a name="getrect"></a>  CMFCRibbonBaseElement::GetRect  
+ Returns the bounding rectangle of the ribbon element.  
   
 ```  
 CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 功能区元素的边框。 矩形的位置是父级的在功能区控件的坐标。  
+### <a name="return-value"></a>Return Value  
+ The bounding rectangle of the ribbon element. The position of the rectangle is in the coordinates of the parent Ribbon control.  
   
-##  <a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize  
- 返回功能区元素的常规大小。  
+##  <a name="getregularsize"></a>  CMFCRibbonBaseElement::GetRegularSize  
+ Returns the regular size of the ribbon element.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC) = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>返回值  
- 功能区元素的常规大小。  
+### <a name="return-value"></a>Return Value  
+ The regular size of the ribbon element.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  正则大小为功能区元素的最大可能大小。  
+>  The regular size is the maximal possible size of the ribbon element.  
   
-##  <a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
- 返回功能区元素的当前大小。  
+##  <a name="getsize"></a>  CMFCRibbonBaseElement::GetSize  
+ Returns the current size of the ribbon element.  
   
 ```  
 virtual CSize GetSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>返回值  
- 功能区元素的当前大小。  
+### <a name="return-value"></a>Return Value  
+ The current size of the ribbon element.  
   
-##  <a name="gettext"></a>CMFCRibbonBaseElement::GetText  
- 返回与功能区元素相关联的文本。  
+##  <a name="gettext"></a>  CMFCRibbonBaseElement::GetText  
+ Returns the text associated with the ribbon element.  
   
 ```  
 LPCTSTR GetText() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 与功能区元素关联的文本。  
+### <a name="return-value"></a>Return Value  
+ The text associated with the ribbon element.  
   
-##  <a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText  
- 返回功能区元素的工具提示文本。  
+##  <a name="gettooltiptext"></a>  CMFCRibbonBaseElement::GetToolTipText  
+ Returns tooltip text of the ribbon element.  
   
 ```  
 virtual CString GetToolTipText() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 功能区元素的工具提示文本。  
+### <a name="return-value"></a>Return Value  
+ The tooltip text of the ribbon element.  
   
-##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
- 检索的功能区元素的顶部级别功能区栏。  
+##  <a name="gettoplevelribbonbar"></a>  CMFCRibbonBaseElement::GetTopLevelRibbonBar  
+ Retrieves the top level ribbon bar for the ribbon element.  
   
 ```  
 CMFCRibbonBar* GetTopLevelRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则为功能区元素的顶部级别功能区栏指向的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the top level ribbon bar for the ribbon element if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode  
- 指定功能区元素是否有压缩模式。  
+##  <a name="hascompactmode"></a>  CMFCRibbonBaseElement::HasCompactMode  
+ Specifies whether the ribbon element has a compact mode.  
   
 ```  
 virtual BOOL HasCompactMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素具有简洁的模式。 否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has a compact mode. `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  在压缩模式下，元素才会显示一个小图像。  
+>  In the compact mode, an element displays a small image only.  
   
-##  <a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode  
- 指定功能区元素是否有中间模式。  
+##  <a name="hasintermediatemode"></a>  CMFCRibbonBaseElement::HasIntermediateMode  
+ Specifies whether the ribbon element has an intermediate mode.  
   
 ```  
 virtual BOOL HasIntermediateMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素具有中间另一模式，`FALSE`否则为。 在中间的模式中，元素的图像的右侧显示的小图像和文本。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has an intermediate mode, `FALSE` otherwise. In the intermediate mode, an element displays a small image and text on the right of the image.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode  
- 确定功能区元素是否有大型模式。  
+##  <a name="haslargemode"></a>  CMFCRibbonBaseElement::HasLargeMode  
+ Determines whether the ribbon element has a large mode.  
   
 ```  
 virtual BOOL HasLargeMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素具有大型的模式。 否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has a large mode. `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 在大型模式下，元素可能需要父面板的最大高度。  
+### <a name="remarks"></a>Remarks  
+ In the large mode, an element can take the full height of the parent panel.  
   
-##  <a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu  
- 指示是否功能区元素有一个菜单。  
+##  <a name="hasmenu"></a>  CMFCRibbonBaseElement::HasMenu  
+ Indicates whether the ribbon element has a menu.  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`FALSE`。 重写此方法在派生类，以指示功能区元素是否具有一个菜单。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method in a derived class to indicate whether the ribbon element has a menu.  
   
-##  <a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
- 如果指定的点位于，检索指向功能区元素的指针。  
+##  <a name="hittest"></a>  CMFCRibbonBaseElement::HitTest  
+ Retrieves a pointer to the ribbon element if the specified point is located in it.  
   
 ```  
 virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 如果存在，则为功能区元素指向的指针否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it exists; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回有效的指针到功能区元素时存在。 重写此方法以指示是否点驻留在功能区元素。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns a valid pointer to the ribbon element when it exists. Override this method to indicate if the point resides in the ribbon element.  
   
-##  <a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
- 表示功能区元素是否与其他功能区元素垂直对齐。  
+##  <a name="isalignbycolumn"></a>  CMFCRibbonBaseElement::IsAlignByColumn  
+ Indicates whether the ribbon element is aligned vertically with other ribbon elements.  
   
 ```  
 virtual BOOL IsAlignByColumn() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`TRUE`。 重写此方法在派生类，以指示是否与其他功能区元素的派生的功能区元素垂直对齐。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method in a derived class to indicate whether the derived ribbon element is aligned vertically with other ribbon elements.  
   
-##  <a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage  
- 指示是否功能区元素映像大小始终为大。  
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonBaseElement::IsAlwaysLargeImage  
+ Indicates whether the ribbon element image size is always large.  
   
 ```  
 virtual BOOL IsAlwaysLargeImage() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素图像大小始终是大;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element image size is always large; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 大图像大小为 32 x 32 像素。  
+### <a name="remarks"></a>Remarks  
+ Large image size is 32 x 32 pixels.  
   
-##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
- 表示功能区元素是否是以自动重复模式。  
+##  <a name="isautorepeatmode"></a>  CMFCRibbonBaseElement::IsAutoRepeatMode  
+ Indicates whether the ribbon element is in auto repeat mode.  
   
 ```  
 virtual BOOL IsAutoRepeatMode(int& nDelay) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nDelay`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`FALSE`。 重写此方法以指示功能区元素是否是以自动重复模式。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the ribbon element is in auto repeat mode.  
   
- 在自动重复模式的功能区元素响应以设定间隔，以毫秒为单位，对持续的用户输入。  
+ In auto repeat mode, the ribbon element responds at a set interval, measured in milliseconds, to sustained user input.  
   
-##  <a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
- 指定是否已选中的功能区元素。  
+##  <a name="ischecked"></a>  CMFCRibbonBaseElement::IsChecked  
+ Specifies whether the ribbon element is checked.  
   
 ```  
 virtual BOOL IsChecked() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果已选中的功能区元素;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is checked; otherwise `FALSE`.  
   
-##  <a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
- 指定功能区元素是否是以简洁模式。  
+##  <a name="iscompactmode"></a>  CMFCRibbonBaseElement::IsCompactMode  
+ Specifies whether the ribbon element is in a compact mode.  
   
 ```  
 BOOL IsCompactMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素在简洁的模式;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is in a compact mode; otherwise `FALSE`.  
   
-##  <a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
- 指示是否设置的功能区元素显示为弹出命令。  
+##  <a name="isdefaultmenulook"></a>  CMFCRibbonBaseElement::IsDefaultMenuLook  
+ Indicates whether the ribbon element is set to appear as a pop-up command.  
   
 ```  
 BOOL IsDefaultMenuLook() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素设置为显示为弹出命令;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is set to appear as a pop-up command; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
- 指定是否禁用功能区元素。  
+##  <a name="isdisabled"></a>  CMFCRibbonBaseElement::IsDisabled  
+ Specifies whether the ribbon element is disabled.  
   
 ```  
 virtual BOOL IsDisabled() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果禁用了功能区元素;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is disabled; otherwise `FALSE`.  
   
-##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
- 指定功能区元素是否显示弹出菜单，并向下删除。  
+##  <a name="isdroppeddown"></a>  CMFCRibbonBaseElement::IsDroppedDown  
+ Specifies whether the ribbon element displays a pop-up menu and is dropped down.  
   
 ```  
 virtual BOOL IsDroppedDown() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素已下拉并显示一个弹出菜单;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is dropped down and displays a pop-up menu; otherwise `FALSE`.  
   
-##  <a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
- 指定功能区元素是否具有焦点。  
+##  <a name="isfocused"></a>  CMFCRibbonBaseElement::IsFocused  
+ Specifies whether the ribbon element has the focus.  
   
 ```  
 virtual BOOL IsFocused() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素具有焦点，则否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has the focus; otherwise `FALSE`.  
   
-##  <a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
- 指示是否在功能区库中包含的功能区元素。  
+##  <a name="isgalleryicon"></a>  CMFCRibbonBaseElement::IsGalleryIcon  
+ Indicates whether the ribbon element is contained in a ribbon gallery.  
   
 ```  
 virtual BOOL IsGalleryIcon() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`FALSE`。 重写此方法在派生类，以指示是否在功能区库中包含的功能区元素中。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method in a derived class to indicate whether the ribbon element is contained in a ribbon gallery.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
- 指定是否会突出显示功能区元素。  
+##  <a name="ishighlighted"></a>  CMFCRibbonBaseElement::IsHighlighted  
+ Specifies whether ribbon element is highlighted.  
   
 ```  
 virtual BOOL IsHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果突出显示功能区元素;，否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is highlighted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
- 指示当前图像可查看功能区元素是否为中间的大小。  
+##  <a name="isintermediatemode"></a>  CMFCRibbonBaseElement::IsIntermediateMode  
+ Indicates whether the current image for the ribbon element is intermediate size.  
   
 ```  
 BOOL IsIntermediateMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果此图像可查看功能区元素中间的大小;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image for the ribbon element is intermediate size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 中间的图像大小为 16 x 16 像素。  
+### <a name="remarks"></a>Remarks  
+ Intermediate image size is 16 x 16 pixels.  
   
-##  <a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
- 指示当前图像可查看功能区元素是否为大尺寸。  
+##  <a name="islargemode"></a>  CMFCRibbonBaseElement::IsLargeMode  
+ Indicates whether the current image for the ribbon element is large size.  
   
 ```  
 BOOL IsLargeMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果此图像可查看功能区元素大的大小;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image for the ribbon element is large size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 大图像大小为 32 x 32 像素。  
+### <a name="remarks"></a>Remarks  
+ Large image size is 32 x 32 pixels.  
   
-##  <a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
- 指示是否在菜单中包含的功能区元素。  
+##  <a name="ismenumode"></a>  CMFCRibbonBaseElement::IsMenuMode  
+ Indicates whether the ribbon element is contained in a menu.  
   
 ```  
 BOOL IsMenuMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素包含在一个菜单;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in a menu; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
- 指示用户是否已单击功能区元素。  
+##  <a name="ispressed"></a>  CMFCRibbonBaseElement::IsPressed  
+ Indicates whether the user has clicked the ribbon element.  
   
 ```  
 virtual BOOL IsPressed() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果用户单击功能区元素中;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the user has clicked the ribbon element; otherwise `FALSE`.  
   
-##  <a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
- 指示是否在快速访问工具栏中包含的功能区元素。  
+##  <a name="isqatmode"></a>  CMFCRibbonBaseElement::IsQATMode  
+ Indicates whether the ribbon element is contained in the quick access toolbar.  
   
 ```  
 BOOL IsQATMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素包含在快速访问工具栏中;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in the quick access toolbar; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
- 指示是否显示分隔符的功能区元素。  
+##  <a name="isseparator"></a>  CMFCRibbonBaseElement::IsSeparator  
+ Indicates whether the ribbon element is a display separator.  
   
 ```  
 virtual BOOL IsSeparator() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`功能区元素是否显示分隔符，则否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is a display separator; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
- 指示是否显示常见的边框的组中包含的功能区元素。  
+##  <a name="isshowgroupborder"></a>  CMFCRibbonBaseElement::IsShowGroupBorder  
+ Indicates whether the ribbon element is contained in a group that displays a common border.  
   
 ```  
 BOOL IsShowGroupBorder() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果显示常见的边框; 组中包含的功能区元素否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in a group that displays a common border; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
- 指示工具提示将显示在功能区元素。  
+##  <a name="isshowtooltiponbottom"></a>  CMFCRibbonBaseElement::IsShowTooltipOnBottom  
+ Indicates whether the tooltip is displayed under the ribbon element.  
   
 ```  
 virtual BOOL IsShowTooltipOnBottom() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果在功能区元素，则显示工具提示`FALSE`如果指针旁显示工具提示。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tooltip is displayed under the ribbon element; `FALSE` if the tooltip is displayed near the pointer.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
- 指示是否可以使用键盘选择功能区元素。  
+##  <a name="istabstop"></a>  CMFCRibbonBaseElement::IsTabStop  
+ Indicates whether the ribbon element can be selected with the keyboard.  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`TRUE`。 重写此方法以指示是否可以使用键盘选择功能区元素。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method to indicate whether the ribbon element can be selected with the keyboard.  
   
-##  <a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
- 指示是否在右侧显示功能区元素的文本。  
+##  <a name="istextalwaysonright"></a>  CMFCRibbonBaseElement::IsTextAlwaysOnRight  
+ Indicates whether the text for the ribbon element is displayed on the right.  
   
 ```  
 BOOL IsTextAlwaysOnRight() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果功能区元素的文本显示在右侧;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the text for the ribbon element is displayed on the right; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
- 指示当前是否显示功能区元素。  
+##  <a name="isvisible"></a>  CMFCRibbonBaseElement::IsVisible  
+ Indicates whether the ribbon element is currently displayed.  
   
 ```  
 BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前显示的功能区元素;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is currently displayed; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
- 指示是否功能区元素的显示高度为与包含它的功能区面板的显示高度相同。  
+##  <a name="iswholerowheight"></a>  CMFCRibbonBaseElement::IsWholeRowHeight  
+ Indicates whether the display height of the ribbon element is the same as the display height of the ribbon panel that contains it.  
   
 ```  
 virtual BOOL IsWholeRowHeight() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`FALSE`。 重写此方法以表示功能区元素的显示高度是否与包含它的功能区面板的显示高度相同。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the display height of the ribbon element is the same as the display height of the ribbon panel that contains it.  
   
-##  <a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
- 将命令通知发送到功能区元素的父窗口。  
+##  <a name="notifycommand"></a>  CMFCRibbonBaseElement::NotifyCommand  
+ Sends a command notification to the parent window of the ribbon element.  
   
 ```  
 BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bWithDelay`  
- `TRUE`若要将命令通知添加到父窗口; 的消息队列`FALSE`立即将消息发送到父窗口。  
+ `TRUE` to add the command notification to the message queue of the parent window; `FALSE` to send the message immediately to the parent window.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果消息已发送;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the message was sent; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
- 当用户将突出显示在列表中找到的功能区元素时，请通知功能区栏与父窗口。  
+##  <a name="notifyhighlightlistitem"></a>  CMFCRibbonBaseElement::NotifyHighlightListItem  
+ Notifies the parent window of the ribbon bar when a user highlights a ribbon element that is located in a list.  
   
 ```  
 virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 在列表中的功能区元素的索引。  
+ The index of the ribbon element in the list.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
- 将功能区元素添加到指定的快速访问工具栏。  
+##  <a name="onaddtoqatoolbar"></a>  CMFCRibbonBaseElement::OnAddToQAToolbar  
+ Adds the ribbon element to the specified quick access toolbar.  
   
 ```  
 virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `qat`  
- 快速访问工具栏中。  
+ The quick access toolbar.  
   
-### <a name="return-value"></a>返回值  
- 始终返回`TRUE`，用于指示功能区元素已添加到快速访问工具栏。  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE` indicating the ribbon element was added to the quick access toolbar.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
- 更新的功能区元素的工具提示。  
+##  <a name="onafterchangerect"></a>  CMFCRibbonBaseElement::OnAfterChangeRect  
+ Updates the tooltip for the ribbon element.  
   
 ```  
 virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法将更新的功能区元素的工具提示。 重写此方法之后进行更新的功能区元素已更改其显示矩形。  
+### <a name="remarks"></a>Remarks  
+ By default this method updates the tooltip for the ribbon element. Override this method to update the ribbon element after its display rectangle has changed.  
   
-##  <a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
- 更新对持续的用户输入的响应的功能区元素。  
+##  <a name="onautorepeat"></a>  CMFCRibbonBaseElement::OnAutoRepeat  
+ Updates the ribbon element in response to sustained user input.  
   
 ```  
 virtual BOOL OnAutoRepeat();
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`FALSE`。 重写此方法用于处理长时间的用户输入。  
+### <a name="remarks"></a>Remarks  
+ By default this method always return `FALSE`. Override this method to process sustained user input.  
   
-##  <a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize  
- 计算功能区元素的文本的大小。  
+##  <a name="oncalctextsize"></a>  CMFCRibbonBaseElement::OnCalcTextSize  
+ Calculates the size of the text for the ribbon element.  
   
 ```  
 virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法没有任何效果。 重写此方法以计算在功能区元素的文本的大小。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to calculate the size of the text for the ribbon element.  
   
-##  <a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
- 由框架调用，当突出显示的菜单中找到的功能区元素发生更改。  
+##  <a name="onchangemenuhighlight"></a>  CMFCRibbonBaseElement::OnChangeMenuHighlight  
+ Called by the framework when the highlight changes for a ribbon element that is located in a menu.  
   
 ```  
 virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar  
     CMFCRibbonBaseElement* pHot);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pPanelMenuBar`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `pHot`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法没有任何效果。 重写此方法以更新突出显示发生更改时位于一个菜单的功能区元素。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to update a ribbon element that is located in a menu when the highlight changes.  
   
-##  <a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw  
- 由框架调用以绘制功能区元素。  
+##  <a name="ondraw"></a>  CMFCRibbonBaseElement::OnDraw  
+ Called by the framework to draw the ribbon element.  
   
 ```  
 virtual void OnDraw(CDC* pDC) = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>备注  
- 如果你想要自定义的特定功能区元素绘制，重写此方法在派生类中。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want to customize the drawing of a specific ribbon element.  
   
-##  <a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
- 由框架用于绘制上方功能区元素的键提示调用。  
+##  <a name="ondrawkeytip"></a>  CMFCRibbonBaseElement::OnDrawKeyTip  
+ Called by the framework to draw the keytip for the ribbon element.  
   
 ```  
 virtual void OnDrawKeyTip(
@@ -1403,20 +1515,20 @@ virtual void OnDrawKeyTip(
     BOOL bIsMenu);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针。  
+ Pointer to a device context.  
   
  [in] `rect`  
- 快捷键提示的边界矩形。  
+ Boundary rectangle for the keytip.  
   
  [in] `bIsMenu`  
- `TRUE`如果快捷键提示适用于一个弹出菜单按钮;否则为`FALSE`。  
+ `TRUE` if the keytip is for a pop-up menu button; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage  
- 功能区元素的菜单图像绘制时由框架调用。  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonBaseElement::OnDrawMenuImage  
+ Called by the framework when the menu image for the ribbon element is drawn.  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -1424,20 +1536,20 @@ virtual BOOL OnDrawMenuImage(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针。  
+ Pointer to a device context.  
   
  [in] `rect`  
- 菜单图像的矩形。  
+ Menu image rectangle.  
   
-### <a name="return-value"></a>返回值  
- 始终返回`TRUE`以指示已绘制图像。  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE` to indicate the image was drawn.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
- 由框架的功能区元素绘制命令列表框中调用。  
+##  <a name="ondrawonlist"></a>  CMFCRibbonBaseElement::OnDrawOnList  
+ Called by the framework to draw the ribbon element in a commands list box.  
   
 ```  
 virtual void OnDrawOnList(
@@ -1449,152 +1561,152 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 功能区元素的设备上下文的指针。  
+ Pointer to a device context for the ribbon element.  
   
  [in] `strText`  
- 显示文本。  
+ The display text.  
   
  [in] `nTextOffset`  
- 以像素为单位，从列表框中显示文本到左侧的距离。  
+ Distance, in pixels, from the left side of the list box to the display text.  
   
  [in] `rect`  
- 功能区元素显示矩形。  
+ The display rectangle for the ribbon element.  
   
  [in] `bIsSelected`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `bHighlighted`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
- 命令列表框中将显示功能区元素，以使用户能够自定义快速访问工具栏。  
+### <a name="remarks"></a>Remarks  
+ The commands list box displays ribbon elements to enable users to customize the quick access toolbar.  
   
-##  <a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
- 当用户按快捷键提示和功能区元素具有焦点时由框架调用。  
+##  <a name="onkey"></a>  CMFCRibbonBaseElement::OnKey  
+ Called by the framework when the user presses a keytip and the ribbon element has the focus.  
   
 ```  
 virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bIsMenuKey`  
- `TRUE`如果快捷键提示会显示一个弹出菜单;否则为`FALSE`。  
+ `TRUE` if the keytip displays a pop-up menu; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果事件已得到处理。否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the event was handled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
- 当用户在主面板上按菜单快捷键提示，由框架调用。  
+##  <a name="onmenukey"></a>  CMFCRibbonBaseElement::OnMenuKey  
+ Called by the framework when the user presses a menu keytip on the main panel.  
   
 ```  
 virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nUpperChar`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`FALSE`。 重写此方法，当用户按下主面板上的菜单快捷键提示时进行响应。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to respond when a user presses a menu keytip on the main panel.  
   
-##  <a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
- 当用户按快捷键由框架调用。  
+##  <a name="onprocesskey"></a>  CMFCRibbonBaseElement::OnProcessKey  
+ Called by the framework when the user presses a shortcut key.  
   
 ```  
 virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 如果您想要处理的快捷键的功能区元素，重写此方法。  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want the ribbon element to process a shortcut key.  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
- 在布局更改方向时由框架调用。  
+##  <a name="onrtlchanged"></a>  CMFCRibbonBaseElement::OnRTLChanged  
+ Called by the framework when the layout changes direction.  
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bIsRTL`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法没有任何效果。 重写此方法以在布局更改方向时调整功能区元素。 默认布局方向是从左到右。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to adjust the ribbon element when the layout changes direction. The default layout direction is left-to-right.  
   
-##  <a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
- 在功能区元素接收或失去输入的焦点时由框架调用。  
+##  <a name="onsetfocus"></a>  CMFCRibbonBaseElement::OnSetFocus  
+ Called by the framework when a ribbon element receives or loses the input focus.  
   
 ```  
 virtual void OnSetFocus(BOOL B);
 ```  
   
-### <a name="remarks"></a>备注  
- 如果您希望您的应用程序处理的功能区元素的焦点更改重写此方法在派生类中。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want your application to handle a change in the focus of a ribbon element.  
   
-##  <a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
- 由框架来显示或隐藏功能区元素调用。  
+##  <a name="onshow"></a>  CMFCRibbonBaseElement::OnShow  
+ Called by the framework to show or hide the ribbon element.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法没有任何效果。 重写此方法以显示或隐藏功能区元素。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to show or hide the ribbon element.  
   
-##  <a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
- 在功能区元素将显示一个弹出菜单之前，由框架调用。  
+##  <a name="onshowpopupmenu"></a>  CMFCRibbonBaseElement::OnShowPopupMenu  
+ Called by the framework before the ribbon element shows a pop-up menu.  
   
 ```  
 virtual void OnShowPopupMenu();
 ```  
   
-### <a name="remarks"></a>备注  
- 此方法通知功能区栏与父窗口的功能区元素将显示一个弹出菜单。  
+### <a name="remarks"></a>Remarks  
+ This method notifies the parent window of the ribbon bar that the ribbon element will show a pop-up menu.  
   
-##  <a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
- 关闭功能区元素的弹出菜单，并将关闭消息发送到父菜单。  
+##  <a name="postmenucommand"></a>  CMFCRibbonBaseElement::PostMenuCommand  
+ Closes the pop-up menu for the ribbon element and sends a close message to the parent menu.  
   
 ```  
 void PostMenuCommand(UINT uiCmdId);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- 未使用的参数。  
+ The parameter is not used.  
   
-### <a name="remarks"></a>备注  
- 如果功能区元素位于一个弹出菜单上，将只发送了关闭消息。  
+### <a name="remarks"></a>Remarks  
+ The close message is only sent if the ribbon element is located on a pop-up menu.  
   
-##  <a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
- 更新的功能区元素的显示。  
+##  <a name="redraw"></a>  CMFCRibbonBaseElement::Redraw  
+ Updates the display for the ribbon element.  
   
 ```  
 virtual void Redraw();
 ```  
   
-### <a name="remarks"></a>备注  
- 此方法通过调用重绘功能区元素的显示矩形[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)与`RDW_INVALIDATE`， `RDW_ERASE`，和`RDW_UPDATENOW`标记集。  
+### <a name="remarks"></a>Remarks  
+ This method redraws the display rectangle for the ribbon element by calling [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) with the `RDW_INVALIDATE`, `RDW_ERASE`, and `RDW_UPDATENOW` flags set.  
   
-##  <a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData  
- 设置功能区元素的可访问性数据。  
+##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData  
+ Sets the accessibility data for the ribbon element.  
   
 ```  
 virtual BOOL SetACCData(
@@ -1602,105 +1714,105 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParent`  
- 功能区元素的父窗口。  
+ The parent window for the ribbon element.  
   
  `data`  
- 功能区元素的可访问性数据。  
+ The accessibility data for the ribbon element.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法将设置功能区元素的可访问性数据，并始终返回 `TRUE`。 重写此方法以设置可访问性数据并返回一个指示成功或失败的值。  
+### <a name="remarks"></a>Remarks  
+ By default this method sets the accessibility data for the ribbon element and always returns `TRUE`. Override this method to set the accessibility data and return a value that indicates success or failure.  
   
-##  <a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
- 设置的功能区元素的显示大小。  
+##  <a name="setcompactmode"></a>  CMFCRibbonBaseElement::SetCompactMode  
+ Sets the display size for the ribbon element.  
   
 ```  
 virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bCompactMode`  
- `TRUE`若要减小功能区元素，则显示值`FALSE`增加的功能区元素的显示大小。  
+ `TRUE` to reduce the display size of the ribbon element; `FALSE` to increase the display size of the ribbon element.  
   
-### <a name="remarks"></a>备注  
- 下表总结了此方法的逻辑。  
+### <a name="remarks"></a>Remarks  
+ The following table summarizes the logic for this method.  
   
-|`bCompactMode`|当前功能区元素大小|新的功能区元素大小|  
+|`bCompactMode`|Current ribbon element size|New ribbon element size|  
 |--------------------|---------------------------------|-----------------------------|  
-|`TRUE`|精简|没有变化。|  
-|`TRUE`|中间|如有可能进行压缩。|  
-|`TRUE`|大|如有可能的中间。|  
-|`FALSE`|精简|中间它是否可以;否则为大。|  
+|`TRUE`|Compact|No change.|  
+|`TRUE`|Intermediate|Compact if it is possible.|  
+|`TRUE`|Large|Intermediate if it is possible.|  
+|`FALSE`|Compact|Intermediate if it is possible; otherwise large.|  
   
-##  <a name="setdata"></a>CMFCRibbonBaseElement::SetData  
- 将与功能区元素关联的数据项。  
+##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData  
+ Associates a data item with the ribbon element.  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 数据值。  
+ The data value.  
   
-##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
- 设置要显示为弹出命令的功能区元素。  
+##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
+ Sets the ribbon element to appear as a pop-up command.  
   
 ```  
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bIsDefaultMenuLook`  
- `TRUE`若要设置的功能区元素显示为弹出命令;否则为`FALSE`。  
+ `TRUE` to set the ribbon element to appear as a pop-up command; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription  
- 设置功能区元素的说明。  
+##  <a name="setdescription"></a>  CMFCRibbonBaseElement::SetDescription  
+ Sets the description for the ribbon element.  
   
 ```  
 virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- 对功能区元素的说明。  
+ The description for the ribbon element.  
   
-### <a name="remarks"></a>备注  
- 上的状态栏中，或为工具提示，或者在菜单按钮下，框架将显示新的说明。  
+### <a name="remarks"></a>Remarks  
+ The framework displays the new description either on the status bar, or in the tooltip, or under the menu button.  
   
-##  <a name="setid"></a>CMFCRibbonBaseElement::SetID  
- 设置的功能区元素的命令 ID。  
+##  <a name="setid"></a>  CMFCRibbonBaseElement::SetID  
+ Sets the command ID of the ribbon element.  
   
 ```  
 virtual void SetID(UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 命令 ID。  
+ The command ID.  
   
-##  <a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
- 设置的功能区元素的初始显示大小。  
+##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
+ Sets the initial display size for the ribbon element.  
   
 ```  
 virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bOneRow`  
- `TRUE`若要限制要压缩或中间; 的功能区元素的显示大小否则为`FALSE`。  
+ `TRUE` to limit the display size for the ribbon element to compact or intermediate; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 功能区元素的显示大小可以是紧凑、 中级、 或大型。  
+### <a name="remarks"></a>Remarks  
+ The display size of ribbon elements can be compact, intermediate, or large.  
   
-##  <a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
- 设置的功能区元素的键提示。  
+##  <a name="setkeys"></a>  CMFCRibbonBaseElement::SetKeys  
+ Sets the keytips for the ribbon element.  
   
 ```  
 virtual void SetKeys(
@@ -1708,95 +1820,95 @@ virtual void SetKeys(
     LPCTSTR lpszMenuKeys=NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszKeys`  
- 功能区元素的快捷键提示。  
+ The keytip for the ribbon element.  
   
  [in] `lpszMenuKeys`  
- 功能区元素的弹出菜单的快捷键提示。  
+ The keytip for the pop-up menu of the ribbon element.  
   
-##  <a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
- 设置的功能区元素的原始功能区元素。  
+##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
+ Sets the original ribbon element for the ribbon element.  
   
 ```  
 virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pOriginal`  
- 指向功能区元素的指针。  
+ Pointer to a ribbon element.  
   
-### <a name="remarks"></a>备注  
- 复制到另一个容器的功能区元素保留指向原始的功能区元素的指针。  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory  
- 设置的功能区元素的父类别。  
+##  <a name="setparentcategory"></a>  CMFCRibbonBaseElement::SetParentCategory  
+ Sets the parent category for the ribbon element.  
   
 ```  
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- 指向功能区类别。  
+ Pointer to a ribbon category.  
   
-### <a name="remarks"></a>备注  
- 功能区控件中的选项卡式的组被称为类别。  
+### <a name="remarks"></a>Remarks  
+ The tabbed groups in ribbon controls are called categories.  
   
-##  <a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
- 设置父菜单的功能区元素的容器。  
+##  <a name="setparentmenu"></a>  CMFCRibbonBaseElement::SetParentMenu  
+ Sets the parent menu container for the ribbon element.  
   
 ```  
 virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuBar`  
- 父菜单中。  
+ The parent menu.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
- 设置的功能区元素的父功能区栏。  
+##  <a name="setparentribbonbar"></a>  CMFCRibbonBaseElement::SetParentRibbonBar  
+ Sets the parent ribbon bar for the ribbon element.  
   
 ```  
 virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pRibbonBar`  
- 指针，指向父功能区栏。  
+ Pointer to the parent ribbon bar.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
- 设置的功能区元素的显示矩形的尺寸。  
+##  <a name="setrect"></a>  CMFCRibbonBaseElement::SetRect  
+ Sets the dimensions of the display rectangle for the ribbon element.  
   
 ```  
 void SetRect(CRect rect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- 矩形的尺寸。  
+ The dimensions of the rectangle.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settext"></a>CMFCRibbonBaseElement::SetText  
- 设置文本和快捷键的功能区元素的提示。  
+##  <a name="settext"></a>  CMFCRibbonBaseElement::SetText  
+ Sets the text and keytip for the ribbon element.  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- 文本和快捷键的功能区元素的提示。  
+ The text and keytip for the ribbon element.  
   
-### <a name="remarks"></a>备注  
- 若要设置上方功能区元素的键提示，请追加换行转义序列跟快捷键提示字符`lpszText`。  
+### <a name="remarks"></a>Remarks  
+ To set the keytip for the ribbon element, append the newline escape sequence followed by the keytip characters to `lpszText`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```  
 //Set the text for the ribbon element  
@@ -1807,55 +1919,55 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))  
 ```  
   
-##  <a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
- 设置要在右侧显示的功能区元素的文本。  
+##  <a name="settextalwaysonright"></a>  CMFCRibbonBaseElement::SetTextAlwaysOnRight  
+ Sets the text for the ribbon element to display on the right.  
   
 ```  
 virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`在右侧; 上显示文本否则为`FALSE`。  
+ `TRUE` to display the text on the right; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
- 设置的功能区元素的工具提示文本。  
+##  <a name="settooltiptext"></a>  CMFCRibbonBaseElement::SetToolTipText  
+ Sets the tooltip text for the ribbon element.  
   
 ```  
 virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- 工具提示文本。  
+ The tooltip text.  
   
-##  <a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
- 设置的功能区元素的可见性。  
+##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
+ Sets the visibility of the ribbon element.  
   
 ```  
 void SetVisible(BOOL bIsVisible);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bIsVisible`  
- `TRUE`若要显示的功能区元素;`FALSE`隐藏功能区元素。  
+ `TRUE` to display the ribbon element; `FALSE` to hide the ribbon element.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
- 拉伸功能区元素的宽度。  
+##  <a name="stretchhorizontally"></a>  CMFCRibbonBaseElement::StretchHorizontally  
+ Stretches the width of the ribbon element.  
   
 ```  
 virtual void StretchHorizontally();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法在调试生成中生成断言失败，并因此不应调用。 重写此方法以拉伸功能区元素的宽度。  
+### <a name="remarks"></a>Remarks  
+ By default this method generates an assertion failure in debug builds and therefore should not be called. Override this method to stretch the width of the ribbon element.  
   
-##  <a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
- 更改为指定的行高度的功能区元素的显示高度。  
+##  <a name="stretchtowholerow"></a>  CMFCRibbonBaseElement::StretchToWholeRow  
+ Changes the display height of the ribbon element to the specified row height.  
   
 ```  
 virtual BOOL StretchToWholeRow(
@@ -1863,41 +1975,41 @@ virtual BOOL StretchToWholeRow(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `nHeight`  
- 行的高度。  
+ The height of the row.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果已设置的显示高度;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display height was set; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 重写此方法以更改到指定的行高度的功能区元素的显示高度。  
+### <a name="remarks"></a>Remarks  
+ Override this method to change the display height of the ribbon element to the specified row height.  
   
-##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
- 通过使用功能区元素命令资源更新的工具提示文本。  
+##  <a name="updatetooltipinfo"></a>  CMFCRibbonBaseElement::UpdateTooltipInfo  
+ Updates the tooltip text by using the command resource for the ribbon element.  
   
 ```  
 virtual void UpdateTooltipInfo();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
- 指示父元素是否具有键盘焦点。  
+##  <a name="hasfocus"></a>  CMFCRibbonBaseElement::HasFocus  
+ Indicates whether the parent element has keyboard focus.  
   
 ```  
 virtual BOOL HasFocus() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果已设定焦点的功能区元素是;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is focused; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

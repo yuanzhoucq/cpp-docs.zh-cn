@@ -1,40 +1,59 @@
 ---
-title: "MFC 中的属性表和属性页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控件 [MFC], 属性表"
-  - "属性页, MFC"
-  - "属性表, MFC"
-  - "选项卡对话框"
+title: Property Sheets and Property Pages in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages [MFC], MFC
+- controls [MFC], property sheets
+- property sheets, MFC
+- tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC 中的属性表和属性页
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bd2a171b535dcf83b88958e784129e2cbd0b16f4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-属性表，也称为对话框选项卡，是包含属性页"对话框。  基于每个属性页对话框模板资源并包含控件。  它用上带有选项卡的页面位于顶部。  选项卡命名页并指示其用途。  用户单击属性表的选项卡选择一组控件。  
+---
+# <a name="property-sheets-and-property-pages-in-mfc"></a>Property Sheets and Property Pages in MFC
+A property sheet, also known as a tab dialog box, is a dialog box that contains property pages. Each property page is based on a dialog template resource and contains controls. It is enclosed on a page with a tab on top. The tab names the page and indicates its purpose. Users click a tab in the property sheet to select a set of controls.  
   
- 使用组合页在属性表的控件到有意义的集合。  包含属性表通常具有自己的一些控件。  这些应用于所有页。  
+ Use pages to group the controls in the property sheet into meaningful sets. The contained property sheet typically has several controls of its own. These apply to all pages.  
   
- 属性表基于类。[CPropertySheet](../mfc/reference/cpropertysheet-class.md) 属性页类基于 [CPropertyPage](../mfc/reference/cpropertypage-class.md)。  
+ Property sheets are based on class [CPropertySheet](../mfc/reference/cpropertysheet-class.md). Property pages are based on class [CPropertyPage](../mfc/reference/cpropertypage-class.md).  
   
- 属性表是一般用于修改某些外部对象的属性特定的对话框，如视图的当前选择。  属性表有三个主要部分：包含的对话框、一个或多个属性页显示一次一个选项卡中的用户单击选择该页的每个页面顶部。  属性表可将多个更改的组或选项类似的情况下是很有用的。  属性表组合一种轻松了解信息的方式。  
+ A property sheet is a special kind of dialog box that is generally used to modify the attributes of some external object, such as the current selection in a view. The property sheet has three main parts: the containing dialog box, one or more property pages shown one at a time, and a tab at the top of each page that the user clicks to select that page. Property sheets are useful for situations where you have several similar groups of settings or options to change. A property sheet groups information in an easily understood manner.  
   
 > [!NOTE]
->  使用 `CPropertySheet::DoModal`时，在您尝试查看表属性，系统可能发生首次异常。  这发生异常，因为系统会尝试更改对象的 [窗口样式](../mfc/reference/window-styles.md)，在对象之前创建的。  有关此异常的更多信息，以及如何避免它或处理它，请参见 [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md)。  
+>  When you are trying to show a property sheet by using `CPropertySheet::DoModal`, the system might generate a first-chance exception. This exception occurs because the system is trying to change the [Window Styles](../mfc/reference/styles-used-by-mfc.md#window-styles) of the object before the object has been created. For more information about this exception, and also how to avoid it or handle it, see [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal).  
   
-## 请参阅  
- [属性表](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

@@ -1,42 +1,61 @@
 ---
-title: "创建无模式属性表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Create 方法 [C++], 属性表"
-  - "无模式属性表"
-  - "属性表, 无模式"
+title: Creating a Modeless Property Sheet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modeless property sheets
+- property sheets, modeless
+- Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 创建无模式属性表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb93a55b9da82f75a1bdaab5818e11ae0e075d5f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-通常，创建的属性表将有模式的。  当使用一模式属性表时，用户必须在使用应用程序的其他部分之前关闭属性表。  本文描述可使用创建无模式属性表允许用户保存打开，如果使用属性表应用程序的其他部分的方法。  
+---
+# <a name="creating-a-modeless-property-sheet"></a>Creating a Modeless Property Sheet
+Normally, the property sheets you create will be modal. When using a modal property sheet, the user must close the property sheet before using any other part of the application. This article describes methods you can use to create a modeless property sheet that allows the user to keep the property sheet open while using other parts of the application.  
   
- 显示属性表用作无模式对话框而不是作为模式对话框，而不是调用 [CPropertySheet::Create](../Topic/CPropertySheet::Create.md)[DoModal](../Topic/CPropertySheet::DoModal.md)。  必须还实现一些额外的任务支持无模式属性表。  
+ To display a property sheet as a modeless dialog box instead of as a modal dialog box, call [CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create) instead of [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). You must also implement some extra tasks to support a modeless property sheet.  
   
- 其中一个是任务。它修改的属性表和外部对象之间交换数据属性表时打开。  这通常是与标准任务无模式对话框中。  此任务的一部分实现通信通道属性设置适用于的无模式属性表和外部对象的。  如果从无模式属性表，[CPropertySheet](../mfc/reference/cpropertysheet-class.md) 派生类此实现更加容易。  本文假定您这样做。  
+ One of the additional tasks is exchanging data between the property sheet and the external object it is modifying when the property sheet is open. This is generally the same task as for standard modeless dialog boxes. Part of this task is implementing a channel of communication between the modeless property sheet and the external object to which the property settings apply. This implementation is far easier if you derive a class from [CPropertySheet](../mfc/reference/cpropertysheet-class.md) for your modeless property sheet. This article assumes you have done so.  
   
- 通信的方法的无模式属性表和外部对象 \(视图中当前选定之间例如，\) 将定义从属性表的指针到外部对象。  定义一个函数调用 \(类似于 `SetMyExternalObject`\)。`CPropertySheet`\- 更改指针的派生类，每当从外部对象的焦点更改为另一个架构。  `SetMyExternalObject` 函数需要重置属性设置每个页的以反映最近选择的外部对象。  为此，`SetMyExternalObject` 函数绑定可以访问 [CPropertyPage](../mfc/reference/cpropertypage-class.md) 属于 `CPropertySheet` 类的对象。  
+ One method for communicating between the modeless property sheet and the external object (the current selection in a view, for example) is to define a pointer from the property sheet to the external object. Define a function (called something like `SetMyExternalObject`) in the `CPropertySheet`-derived class to change the pointer whenever the focus changes from one external object to another. The `SetMyExternalObject` function needs to reset the settings for each property page to reflect the newly selected external object. To accomplish this, the `SetMyExternalObject` function must be able to access the [CPropertyPage](../mfc/reference/cpropertypage-class.md) objects belonging to the `CPropertySheet` class.  
   
- 最方便的方式提供对在属性表中属性页将嵌入 `CPropertySheet`的 `CPropertyPage` 对象派生的对象。  嵌入 `CPropertyPage` 中 `CPropertySheet`对象派生的对象与模式对话框的典型方式不同，属性表的所有者创建 `CPropertyPage` 对象并将其传递给属性表通过 [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md)。  
+ The most convenient way to provide access to property pages within a property sheet is to embed the `CPropertyPage` objects in the `CPropertySheet`-derived object. Embedding `CPropertyPage` objects in the `CPropertySheet`-derived object differs from the typical design for modal dialog boxes, where the owner of the property sheet creates the `CPropertyPage` objects and passes them to the property sheet via [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage).  
   
- 具有确定的许多用户界面选择何时在应用非模式属性表设置的外部对象。  重写是应用当前属性页上的设置，只要用户更改任何值。  另一种方法是提供应用按钮，允许用户在提交之前累计在属性页上更改到外部对象。  有关方法处理应用按钮的信息，请参见 [处理应用按钮](../mfc/handling-the-apply-button.md)文章。  
+ There are many user-interface alternatives for determining when the settings of the modeless property sheet should be applied to an external object. One alternative is to apply the settings of the current property page whenever the user changes any value. Another alternative is to provide an Apply button, which allows the user to accumulate changes in the property pages before committing them to the external object. For information on ways to handle the Apply button, see the article [Handling the Apply Button](../mfc/handling-the-apply-button.md).  
   
-## 请参阅  
- [属性表](../mfc/property-sheets-mfc.md)   
- [交换数据](../mfc/exchanging-data.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)   
+ [Exchanging Data](../mfc/exchanging-data.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

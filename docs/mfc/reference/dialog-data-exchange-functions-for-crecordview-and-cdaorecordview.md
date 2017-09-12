@@ -1,5 +1,5 @@
 ---
-title: "对话框数据交换函数 CRecordView 和 CDaoRecordView 的 |Microsoft 文档"
+title: Dialog Data Exchange Functions for CRecordView and CDaoRecordView | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,12 +22,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DDX_Field functions
-- ODBC [C++], dialog data exchange (DDX) support
-- DDX (dialog data exchange) [C++], database support
-- DDX (dialog data exchange) [C++], functions
-- databases [C++], dialog data exchange (DDX) support
-- DAO [C++], dialog data exchange (DDX) support
+- DDX_Field functions [MFC]
+- ODBC [MFC], dialog data exchange (DDX) support
+- DDX (dialog data exchange) [MFC], database support
+- DDX (dialog data exchange) [MFC], functions
+- databases [MFC], dialog data exchange (DDX) support
+- DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 caps.latest.revision: 13
 author: mikeblome
@@ -47,37 +47,37 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c6256e6a510e3640bfdfd43cace5afbdec72b849
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b9321b9e63e6509fb71dfb09040212fdf974830e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的对话框数据交换函数
-本主题列出了用于之间交换数据的 DDX_Field 函数[CRecordset](../../mfc/reference/crecordset-class.md)和[CRecordView](../../mfc/reference/crecordview-class.md)窗体或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)窗体。  
+# <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Dialog Data Exchange Functions for CRecordView and CDaoRecordView
+This topic lists the DDX_Field functions used to exchange data between a [CRecordset](../../mfc/reference/crecordset-class.md) and a [CRecordView](../../mfc/reference/crecordview-class.md) form or a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) and a [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) form.  
   
 > [!NOTE]
->  DDX_Field 函数是与 DDX 函数类似，因为它们与交换数据窗体中的控件。 但与 DDX，在交换数据与视图关联的记录集对象的字段中，而不是使用记录视图本身的字段。 有关详细信息，请参阅类`CRecordView`和`CDaoRecordView`。  
+>  DDX_Field functions are like DDX functions in that they exchange data with controls in a form. But unlike DDX, they exchange data with the fields of the view's associated recordset object rather than with fields of the record view itself. For more information, see classes `CRecordView` and `CDaoRecordView`.  
   
-### <a name="ddxfield-functions"></a>DDX_Field 函数  
+### <a name="ddxfield-functions"></a>DDX_Field Functions  
   
 |||  
 |-|-|  
-|[DDX_FieldCBIndex](#ddx_fieldcbindex)|记录集字段数据成员和组合框中当前所选内容的索引之间传输整型数据[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)。|  
-|[DDX_FieldCBString](#ddx_fieldcbstring)|传输`CString`数据之间的记录集字段数据成员和编辑控件的组合框中`CRecordView`或`CDaoRecordView`。 在将数据从记录集移到控件，此函数在开头指定字符串中字符的组合框中选择的项。|  
-|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|传输`CString`数据之间的记录集字段数据成员和编辑控件的组合框中`CRecordView`或`CDaoRecordView`。 在将数据从记录集移到控件，此函数在与指定的字符串完全匹配组合框中选择的项。|  
-|[DDX_FieldCheck](#ddx_fieldcheck)|传输布尔数据之间的记录集字段数据成员和处于的复选框`CRecordView`或`CDaoRecordView`。|  
-|[DDX_FieldLBIndex](#ddx_fieldlbindex)|记录集字段数据成员和列表框中当前所选内容的索引之间传输整型数据`CRecordView`或`CDaoRecordView`。|  
-|[DDX_FieldLBString](#ddx_fieldlbstring)|管理的传输[CString](../../atl-mfc-shared/reference/cstringt-class.md)的列表框控件和记录集的字段数据成员之间的数据。 在将数据从记录集移到控件，此函数的开头指定字符串中字符的列表框中选择的项。|  
-|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|管理的传输`CString`的列表框控件和记录集的字段数据成员之间的数据。 当将数据从记录集移到控件，此函数会选择与指定的字符串完全匹配的第一项。|  
-|[DDX_FieldRadio](#ddx_fieldradio)|记录集字段数据成员和一组中的单选按钮之间传输整型数据`CRecordView`或`CDaoRecordView`。|  
-|[DDX_FieldScroll](#ddx_fieldscroll)|设置或获取在滚动条控件的滚动位置`CRecordView`或`CDaoRecordView`。 从调用你[DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)函数。|  
-|[DDX_FieldSlider](#ddx_fieldslider)|同步记录视图中的滑块控件的滚动块位置和`int`的记录集字段数据成员。 |
-|[DDX_FieldText](#ddx_fieldtext)|重载的版本都是可用于传输`int`， **UINT**，**长**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float**， **double**，**短**， [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)，和[COleCurrency](../../mfc/reference/colecurrency-class.md)数据之间的记录集字段数据成员并编辑框中`CRecordView`或`CDaoRecordView`。|  
+|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Transfers integer data between a recordset field data member and the index of the current selection in a combo box in a [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|  
+|[DDX_FieldCBString](#ddx_fieldcbstring)|Transfers `CString` data between a recordset field data member and the edit control of a combo box in a `CRecordView` or `CDaoRecordView`. When moving data from the recordset to the control, this function selects the item in the combo box that begins with the characters in the specified string.|  
+|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Transfers `CString` data between a recordset field data member and the edit control of a combo box in a `CRecordView` or `CDaoRecordView`. When moving data from the recordset to the control, this function selects the item in the combo box that exactly matches the specified string.|  
+|[DDX_FieldCheck](#ddx_fieldcheck)|Transfers Boolean data between a recordset field data member and a check box in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Transfers integer data between a recordset field data member and the index of the current selection in a list box in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldLBString](#ddx_fieldlbstring)|Manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between a list-box control and the field data members of a recordset. When moving data from the recordset to the control, this function selects the item in the list box that begins with the characters in the specified string.|  
+|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Manages the transfer of `CString` data between a list-box control and the field data members of a recordset. When moving data from the recordset to the control, this function selects the first item that exactly matches the specified string.|  
+|[DDX_FieldRadio](#ddx_fieldradio)|Transfers integer data between a recordset field data member and a group of radio buttons in a `CRecordView` or `CDaoRecordView`.|  
+|[DDX_FieldScroll](#ddx_fieldscroll)|Sets or gets the scroll position of a scroll bar control in a `CRecordView` or `CDaoRecordView`. Call from your [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) function.|  
+|[DDX_FieldSlider](#ddx_fieldslider)|Synchronizes the thumb position of a slider control in a record view and an `int` field data member of a recordset. |
+|[DDX_FieldText](#ddx_fieldtext)|Overloaded versions are available for transferring `int`, **UINT**, **long**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **short**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), and [COleCurrency](../../mfc/reference/colecurrency-class.md) data between a recordset field data member and an edit box in a `CRecordView` or `CDaoRecordView`.|  
   
-##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
- `DDX_FieldCBIndex`函数同步的组合框控件中的记录视图的列表框控件中的选定项的索引和`int`与记录视图关联的记录集字段数据成员。  
+##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex  
+ The `DDX_FieldCBIndex` function synchronizes the index of the selected item in the list box control of a combo box control in a record view and an `int` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBIndex(
@@ -93,34 +93,34 @@ void AFXAPI DDX_FieldCBIndex(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *索引*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。  
+ *index*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 在将数据从记录集移到控件，此函数将在基于中指定的值控制设置所选内容*索引*。 在从记录集到控件的传输，如果记录集字段为 Null，MFC 设置的值的索引为 0。 在从控件到记录集的传输，控件是否为空或未选定任何项，记录集字段设置为 0。  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the selection in the control based on the value specified in *index*. On a transfer from the recordset to the control, if the recordset field is Null, MFC sets the value of the index to 0. On a transfer from control to recordset, if the control is empty or if no item is selected, the recordset field is set to 0.  
   
- 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。 该示例将类似的`DDX_FieldCBIndex`。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. The example would be similar for `DDX_FieldCBIndex`.  
 
-### <a name="requirements"></a>要求  
- **标头︰** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
- `DDX_FieldCBString`函数管理的传输[CString](../../atl-mfc-shared/reference/cstringt-class.md)记录视图中的组合框控件的编辑控件之间的数据和`CString`与记录视图关联的记录集字段数据成员。  
+##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
+ The `DDX_FieldCBString` function manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between the edit control of a combo box control in a record view and a `CString` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBString(
@@ -136,34 +136,34 @@ void AFXAPI DDX_FieldCBString(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *值*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。  
+ *value*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 此函数时将数据从记录集移到控件，组合框中指定的字符串中的字符开头的第一行中设置当前所选内容*值*。 从记录集的传输到该控件，在如果记录集字段为 Null，从组合框中删除任何所选内容和组合框编辑控件将设置为空。 在从控件到记录集的传输，控件是否为空，记录集字段设置为 Null 如果字段允许。  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the current selection in the combo box to the first row that begins with the characters in the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the combo box and the edit control of the combo box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null if the field permits.  
   
- 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。 该示例包括调用`DDX_FieldCBString`。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. The example includes a call to `DDX_FieldCBString`.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
- `DDX_FieldCBStringExact`函数管理的传输[CString](../../atl-mfc-shared/reference/cstringt-class.md)记录视图中的组合框控件的编辑控件之间的数据和`CString`与记录视图关联的记录集字段数据成员。  
+## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
+ The `DDX_FieldCBStringExact` function manages the transfer of [CString](../../atl-mfc-shared/reference/cstringt-class.md) data between the edit control of a combo box control in a record view and a `CString` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldCBStringExact(
@@ -179,34 +179,34 @@ void AFXAPI DDX_FieldCBStringExact(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *值*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。  
+ *value*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 此函数时将数据从记录集移到控件，组合框中指定的字符串完全匹配的第一行中设置当前所选内容*值*。 从记录集的传输到该控件，在如果记录集字段为 NULL，从组合框中删除任何所选内容和组合框的编辑框将设置为空。 在从控件到记录集的传输，控件是否为空，记录集字段设置为 NULL。  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the current selection in the combo box to the first row that exactly matches the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is NULL, any selection is removed from the combo box and the edit box of the combo box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to NULL.  
   
- 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。 调用`DDX_FieldCBStringExact`类似。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldCBStringExact` would be similar.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
- `DDX_FieldCheck`函数管理的传输`int`之间复选框控件在对话框中，数据窗体视图或控件视图对象和`int`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
+ The `DDX_FieldCheck` function manages the transfer of `int` data between a check box control in a dialog box, form view, or control view object and an `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -222,29 +222,29 @@ void AFXAPI DDX_FieldCheck(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 与控件属性关联的复选框控件资源 ID。  
+ The resource ID of the check box control associated with the control property.  
   
- *值*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *value*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_FieldCheck`调用时，*值*设置为当前状态的复选框控件，或控件的状态设置为*值*，取决于传输的方向。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_FieldCheck` is called, *value* is set to the current state of the check box control, or the control's state is set to *value*, depending on the direction of transfer.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
- `DDX_FieldLBIndex`函数同步在记录视图的列表框控件中的选定项的索引和`int`与记录视图关联的记录集字段数据成员。  
+##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
+ The `DDX_FieldLBIndex` function synchronizes the index of the selected item in a list box control in a record view and an `int` field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -260,34 +260,34 @@ void AFXAPI DDX_FieldLBIndex(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *索引*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。  
+ *index*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 在将数据从记录集移到控件，此函数将在基于中指定的值控制设置所选内容*索引*。 在从记录集到控件的传输，如果记录集字段为 Null，MFC 设置的值的索引为 0。 在从控件到记录集的传输，控件是否为空，记录集字段设置为 0。  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the selection in the control based on the value specified in *index*. On a transfer from the recordset to the control, if the recordset field is Null, MFC sets the value of the index to 0. On a transfer from control to recordset, if the control is empty, the recordset field is set to 0.  
   
- 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
- `DDX_FieldLBString`将列表框控件的当前所选内容复制到记录视图中[CString](../../atl-mfc-shared/reference/cstringt-class.md)与记录视图关联的记录集字段数据成员。  
+##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString  
+ The `DDX_FieldLBString` copies the current selection of a list box control in a record view to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBString(
@@ -303,34 +303,34 @@ void AFXAPI DDX_FieldLBString(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *值*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。  
+ *value*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 按反向执行，此函数所设置的列表框中指定的字符串的字符开头的第一行中的当前选择*值*。 在从记录集到控件的传输，如果记录集字段为 Null，任何选择被删除从列表框。 在从控件到记录集的传输，控件是否为空，记录集字段设置为 Null。  
+### <a name="remarks"></a>Remarks  
+ In the reverse direction, this function sets the current selection in the list box to the first row that begins with the characters in the string specified by *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the list box. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。 调用`DDX_FieldLBString`类似。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldLBString` would be similar.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
- `DDX_FieldLBStringExact`函数将当前选择的列表框控件复制到记录视图中[CString](../../atl-mfc-shared/reference/cstringt-class.md)与记录视图关联的记录集字段数据成员。  
+##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact  
+ The `DDX_FieldLBStringExact` function copies the current selection of a list box control in a record view to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) field data member of a recordset associated with the record view.  
   
 ```  
 void AFXAPI DDX_FieldLBStringExact(
@@ -346,34 +346,34 @@ void AFXAPI DDX_FieldLBStringExact(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *值*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。  
+ *value*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 按反向执行，此函数所设置的列表框中指定的字符串完全匹配的第一行中的当前选择*值*。 在从记录集到控件的传输，如果记录集字段为 Null，任何选择被删除从列表框。 在从控件到记录集的传输，控件是否为空，记录集字段设置为 Null。  
+### <a name="remarks"></a>Remarks  
+ In the reverse direction, this function sets the current selection in the list box to the first row that exactly matches the string specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, any selection is removed from the list box. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。 调用`DDX_FieldLBStringExact`类似。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldLBStringExact` would be similar.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
- `DDX_FieldRadio`函数将从零开始`int`的一组记录视图中的单选按钮中的当前所选的单选按钮的记录视图的记录集的成员变量。  
+##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
+ The `DDX_FieldRadio` function associates a zero-based `int` member variable of a record view's recordset with the currently selected radio button in a group of radio buttons in the record view.  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -389,34 +389,34 @@ void AFXAPI DDX_FieldRadio(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- ID 的第一个组中 (使用样式**WS_GROUP**) 中的相邻的单选按钮控件的[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of the first in a group (with style **WS_GROUP**) of adjacent radio button controls in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *值*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。  
+ *value*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 如果从记录集字段传输到视图中，此函数会打开*第 n 个*单选按钮 （从零开始），然后关闭其他按钮。 按反向执行，此函数将记录集字段设置为当前在 （选中） 上的单选按钮的序号。 在从记录集到控件的传输，如果记录集字段为 Null，则选择没有按钮。 在从控件到记录集的传输，如果没有控件被选定，记录集字段设置为 Null 如果字段允许的。  
+### <a name="remarks"></a>Remarks  
+ When transferring from the recordset field to the view, this function turns on the *nth* radio button (zero-based) and turns off the other buttons. In the reverse direction, this function sets the recordset field to the ordinal number of the radio button that is currently on (checked). On a transfer from the recordset to the control, if the recordset field is Null, no button is selected. On a transfer from control to recordset, if no control is selected, the recordset field is set to Null if the field permits that.  
   
- 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。 调用`DDX_FieldRadio`类似。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldRadio` would be similar.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
- `DDX_FieldScroll`函数同步记录视图中滚动条控件的滚动位置和`int`字段数据成员的记录集与记录视图 （或你选择将其映射到任何整数变量） 关联。  
+##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
+ The `DDX_FieldScroll` function synchronizes the scroll position of a scroll bar control in a record view and an `int` field data member of a recordset associated with the record view (or with whatever integer variable you choose to map it to).  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -432,36 +432,36 @@ void AFXAPI DDX_FieldScroll(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *nIDC\**  
- ID 的第一个组中 (使用样式**WS_GROUP**) 中的相邻的单选按钮控件的[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of the first in a group (with style **WS_GROUP**) of adjacent radio button controls in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *值*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。  
+ *value*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当将数据从记录集移到控件，此函数会将滚动条控件的滚动位置设置中指定的值为*值*。 在从记录集到控件的传输，如果记录集字段为 Null，滚动条控件设置为 0。 在从控件到记录集的传输，控件是否为空，记录集字段的值为 0。  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the control, this function sets the scroll position of the scroll bar control to the value specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, the scroll bar control is set to 0. On a transfer from control to recordset, if the control is empty, the value of the recordset field is 0.  
   
- 如果你正在使用基于 ODBC 的类，请使用第一个版本。 如果你正在使用基于 DAO 的类，请使用第二个版本。  
+ Use the first version if you are working with the ODBC-based classes. Use the second version if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。 调用`DDX_FieldScroll`类似。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldScroll` would be similar.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>名称 ="ddx_fieldslider"1></a> DDX_FieldSlider
-`DDX_FieldSlider`函数同步记录视图中的滑块控件的滚动块位置和`int`字段数据成员的记录集与记录视图 （或你选择将其映射到任何整数变量） 关联。  
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+The `DDX_FieldSlider` function synchronizes the thumb position of a slider control in a record view and an `int` field data member of a recordset associated with the record view (or with whatever integer variable you choose to map it to).  
    
-### <a name="syntax"></a>语法  
+### <a name="syntax"></a>Syntax  
   ```
    void AFXAPI DDX_FieldSlider(  
        CDataExchange* pDX,  
@@ -475,39 +475,39 @@ void AFXAPI DDX_FieldSlider(
      int& value,  
      CDaoRecordset* pRecordset );  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 滑块控件的资源 ID。  
+ The resource ID of the slider control.  
   
- *值*  
- 对要进行交换的值的引用。 此参数会保存或将用于设置滑块控件的滚动块的当前位置。  
+ *value*  
+ A reference to the value to be exchanged. This parameter holds or will be used to set the slider control's current thumb position.  
   
  `pRecordset`  
- 到关联的指针`CRecordset`或`CDaoRecordset`与其交换数据的对象。  
+ A pointer to the associated `CRecordset` or `CDaoRecordset` object with which data is exchanged.  
    
-### <a name="remarks"></a>备注  
- 当将数据从记录集移到滑块，此函数会将滑块的位置设置中指定的值为*值*。 在从记录集到控件的传输，如果记录集字段为 Null，滑块控件的位置设置为 0。 在从控件到记录集的传输，控件是否为空，记录集字段的值为 0。  
+### <a name="remarks"></a>Remarks  
+ When moving data from the recordset to the slider, this function sets the position of the slider to the value specified in *value*. On a transfer from the recordset to the control, if the recordset field is Null, the slider control's position is set to 0. On a transfer from the control to the recordset, if the control is empty, the value of the recordset field is 0.  
   
- `DDX_FieldSlider`不交换与滑块控件支持的设置范围，而不是只需的位置的范围信息。  
+ `DDX_FieldSlider` does not exchange range information with slider controls capable of setting a range rather than simply a position.  
   
- 如果你正在使用基于 ODBC 的类，请使用函数的第一个重写。 第二个重写使用基于 DAO 的类。  
+ Use the first override of the function if you are working with the ODBC-based classes. Use the second override with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX`CRecordView`和`CDaoRecordView`字段，请参阅[记录视图](../../data/record-views-mfc-data-access.md)。 滑块控件有关的信息，请参阅[使用 CSliderCtrl](../using-csliderctrl.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../dialog-data-exchange-and-validation.md). For examples and more information about DDX for `CRecordView` and `CDaoRecordView` fields, see [Record Views](../../data/record-views-mfc-data-access.md). For information about slider controls, see [Using CSliderCtrl](../using-csliderctrl.md).  
    
-### <a name="example"></a>示例  
- 请参阅[DDX_FieldText](#ddx_fieldtext)常规 DDX_Field 例如。 调用`DDX_FieldSlider`类似。  
+### <a name="example"></a>Example  
+ See [DDX_FieldText](#ddx_fieldtext) for a general DDX_Field example. Calls to `DDX_FieldSlider` would be similar.  
    
-### <a name="requirements"></a>要求  
- **标头︰** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
    
-### <a name="see-also"></a>另请参阅  
- [宏和全局函数](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
   
-##  <a name="ddx_fieldtext"></a>DDX_FieldText  
- `DDX_FieldText`函数管理的传输`int`，**短**，**长**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float**， **double**， **BOOL**，或**字节**编辑框控件和记录集的字段数据成员之间的数据。  
+##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
+ The `DDX_FieldText` function manages the transfer of `int`, **short**, **long**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, or **BYTE** data between an edit box control and the field data members of a recordset.  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -619,35 +619,35 @@ void AFXAPI DDX_FieldText(
     CDaoRecordset* pRecordset);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 中的控件的 ID [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象。  
+ The ID of a control in the [CRecordView](../../mfc/reference/crecordview-class.md) or [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) object.  
   
- *值*  
- 对中关联的字段数据成员的引用`CRecordset`或`CDaoRecordset`对象。 值的数据类型取决于其的重载版本`DDX_FieldText`你使用。  
+ *value*  
+ A reference to a field data member in the associated `CRecordset` or `CDaoRecordset` object. The data type of value depends on which of the overloaded versions of `DDX_FieldText` you use.  
   
  `pRecordset`  
- 指向的指针[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)与其交换数据的对象。 此指针使`DDX_FieldText`以检测并设置 Null 值。  
+ A pointer to the [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object with which data is exchanged. This pointer enables `DDX_FieldText` to detect and set Null values.  
   
-### <a name="remarks"></a>备注  
- 有关[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象，`DDX_FieldText`还管理传输[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)，和[COleCurrency](../../mfc/reference/colecurrency-class.md)值。 一个空的编辑框控件指示 Null 值。 从记录集到控件的传输，如果记录集字段为 Null，编辑框设置为空。 在从控件到记录集的传输，控件是否为空，记录集字段设置为 Null。  
+### <a name="remarks"></a>Remarks  
+ For [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objects, `DDX_FieldText` also manages transferring [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), and [COleCurrency](../../mfc/reference/colecurrency-class.md) values. An empty edit box control indicates a Null value. On a transfer from the recordset to the control, if the recordset field is Null, the edit box is set to empty. On a transfer from control to recordset, if the control is empty, the recordset field is set to Null.  
   
- 使用的版本与[CRecordset](../../mfc/reference/crecordset-class.md)参数，如果你正在使用基于 ODBC 的类。 使用的版本与[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)参数，如果你正在使用基于 DAO 的类。  
+ Use the versions with [CRecordset](../../mfc/reference/crecordset-class.md) parameters if you are working with the ODBC-based classes. Use the versions with [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) parameters if you are working with the DAO-based classes.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 有关示例和更多信息的 DDX [CRecordView](../../mfc/reference/crecordview-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)字段，请参阅文章[记录视图](../../data/record-views-mfc-data-access.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For examples and more information about DDX for [CRecordView](../../mfc/reference/crecordview-class.md) and [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) fields, see the article [Record Views](../../data/record-views-mfc-data-access.md).  
   
-### <a name="example"></a>示例  
- 以下`DoDataExchange`函数[CRecordView](../../mfc/reference/crecordview-class.md)包含`DDX_FieldText`函数调用以三种数据类型︰`IDC_COURSELIST`是一个组合框; 其他两个控件的编辑框。 对于 DAO 编程， *m_pSet*参数是一个指向[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。  
+### <a name="example"></a>Example  
+ The following `DoDataExchange` function for a [CRecordView](../../mfc/reference/crecordview-class.md) contains `DDX_FieldText` function calls for three data types: `IDC_COURSELIST` is a combo box; the other two controls are edit boxes. For DAO programming, the *m_pSet* parameter is a pointer to a [CRecordset](../../mfc/reference/crecordset-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
   
- [!code-cpp[NVC_MFCDatabase # 43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
 
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
     
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

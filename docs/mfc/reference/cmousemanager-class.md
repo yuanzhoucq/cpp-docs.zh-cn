@@ -1,5 +1,5 @@
 ---
-title: "CMouseManager 类 |Microsoft 文档"
+title: CMouseManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMouseManager class
+- CMouseManager [MFC], AddView
+- CMouseManager [MFC], GetViewDblClickCommand
+- CMouseManager [MFC], GetViewIconId
+- CMouseManager [MFC], GetViewIdByName
+- CMouseManager [MFC], GetViewNames
+- CMouseManager [MFC], LoadState
+- CMouseManager [MFC], SaveState
+- CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
 caps.latest.revision: 26
 author: mikeblome
@@ -42,52 +49,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7ba50f976f6cf9d6b701e39304c50507cfa34cc5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 598da1c2745c1fccc281b5215bdb26108e829fcc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmousemanager-class"></a>CMouseManager 类
-允许用户将不同的命令与特定相关联[CView](../../mfc/reference/cview-class.md)对象当用户在视图内双击。  
+# <a name="cmousemanager-class"></a>CMouseManager Class
+Allows a user to associate different commands with a particular [CView](../../mfc/reference/cview-class.md) object when the user double-clicks inside that view.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMouseManager : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMouseManager::AddView](#addview)|添加`CView`对象传递给**自定义**对话框。 **自定义**对话框中，用户可以将一次双击与命令相关联的每个列出的视图。|  
-|[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|返回当用户双击提供视图内执行的命令。|  
-|[CMouseManager::GetViewIconId](#getviewiconid)|返回与提供的视图 ID 关联的图标|  
-|[CMouseManager::GetViewIdByName](#getviewidbyname)|返回与提供的视图名称相关联的视图 ID。|  
-|[CMouseManager::GetViewNames](#getviewnames)|检索所有添加的视图名称的列表。|  
-|[CMouseManager::LoadState](#loadstate)|加载`CMouseManager`状态从 Windows 注册表。|  
-|[CMouseManager::SaveState](#savestate)|写入`CMouseManager`状态对 Windows 注册表。|  
-|[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|将提供的命令和提供的视图相关联。|  
+|[CMouseManager::AddView](#addview)|Adds a `CView` object to the **Customization** dialog box. The **Customization** dialog box enables the user to associate a double-click with a command for each of the listed views.|  
+|[CMouseManager::GetViewDblClickCommand](#getviewdblclickcommand)|Returns the command that is executed when the user double-clicks inside the provided view.|  
+|[CMouseManager::GetViewIconId](#getviewiconid)|Returns the icon associated with the provided view ID.|  
+|[CMouseManager::GetViewIdByName](#getviewidbyname)|Returns the view ID associated with the provided view name.|  
+|[CMouseManager::GetViewNames](#getviewnames)|Retrieves a list of all added view names.|  
+|[CMouseManager::LoadState](#loadstate)|Loads the `CMouseManager` state from the Windows registry.|  
+|[CMouseManager::SaveState](#savestate)|Writes the `CMouseManager` state to the Windows registry.|  
+|[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|Associates the provided command and the provided view.|  
   
-## <a name="remarks"></a>备注  
- `CMouseManager`类维护一套`CView`对象。 标识每个视图按名称和 id。 这些视图所示**自定义**对话框。 用户可以更改与通过任何视图关联的命令**自定义**对话框。 当用户双击该视图中执行关联的命令。 若要从编码的角度来看支持此功能，必须处理`WM_LBUTTONDBLCLK`消息并调用[CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick)为此，代码中的函数`CView`对象...  
+## <a name="remarks"></a>Remarks  
+ The `CMouseManager` class maintains a collection of `CView` objects. Each view is identified by a name and by an ID. These views are shown in the **Customization** dialog box. The user can change the command that is associated with any view through the **Customization** dialog box. The associated command is executed when the user double-clicks in that view. To support this from a coding perspective, you must process the `WM_LBUTTONDBLCLK` message and call the [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick) function in the code for that `CView` object..  
   
- 不应创建`CMouseManager`手动对象。 它将创建由您的应用程序框架。 它将负责销毁自动在用户退出应用程序时。 若要获取指向鼠标管理器为应用程序的指针，调用[CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager)。  
+ You should not create a `CMouseManager` object manually. It will be created by the framework of your application. It will also be destroyed automatically when the user exits the application. To get a pointer to the mouse manager for your application, call [CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMouseManager`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxmousemanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmousemanager.h  
   
-##  <a name="addview"></a>CMouseManager::AddView  
- 注册[CView](../../mfc/reference/cview-class.md)对象[CMouseManager 类](../../mfc/reference/cmousemanager-class.md)以支持自定义鼠标行为。  
+##  <a name="addview"></a>  CMouseManager::AddView  
+ Registers a [CView](../../mfc/reference/cview-class.md) object with the [CMouseManager Class](../../mfc/reference/cmousemanager-class.md) to support custom mouse behavior.  
   
 ```  
 BOOL AddView(
@@ -102,139 +109,139 @@ BOOL AddView(
     UINT uiIconId = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iViewId`  
- 视图 id。  
+ A view ID.  
   
  [in] `uiViewNameResId`  
- 资源字符串 ID，可引用视图名称。  
+ A resource string ID that references the view name.  
   
  [in] `uiIconId`  
- 视图图标 id。  
+ A view icon ID.  
   
  [in] `iId`  
- 视图 id。  
+ A view ID.  
   
  [in] `lpszViewName`  
- 视图名称。  
+ A view name.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 若要支持自定义鼠标行为，必须用注册视图`CMouseManager`对象。 任何对象派生自`CView`类可以使用鼠标管理器进行注册。 字符串和与视图关联的图标显示在**鼠标**的选项卡上**自定义**对话框。  
+### <a name="remarks"></a>Remarks  
+ In order to support custom mouse behavior, a view must be registered with the `CMouseManager` object. Any object derived from the `CView` class can be registered with the mouse manager. The string and icon associated with a view are displayed in the **Mouse** tab of the **Customize** dialog box.  
   
- 它负责程序员也要创建和维护视图 Id 诸如`iViewId`和`iId`。  
+ It is the responsibility of the programmer to create and maintain view IDs such as `iViewId` and `iId`.  
   
- 有关如何提供自定义鼠标行为的详细信息，请参阅[键盘和鼠标自定义](../../mfc/keyboard-and-mouse-customization.md)。  
+ For more information about how to provide custom mouse behavior, see [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md).  
   
-### <a name="example"></a>示例  
- 下面的示例演示如何检索一个指向`CMouseManager`对象使用`CWinAppEx::GetMouseManager`方法和`AddView`中的方法`CMouseManager`类。 此代码段属于[状态收集样本](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a pointer to a `CMouseManager` object by using the `CWinAppEx::GetMouseManager` method and the `AddView` method in the `CMouseManager` class. This code snippet is part of the [State Collection sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StateCollection #&4;](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
   
-##  <a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
- 返回当用户双击提供视图内执行的命令。  
+##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand  
+ Returns the command that is executed when the user double-clicks inside the provided view.  
   
 ```  
 UINT GetViewDblClickCommand(int iId) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iId`  
- 视图 id。  
+ The view ID.  
   
-### <a name="return-value"></a>返回值  
- 如果视图是与命令; 相关联的命令标识符否则为 0。  
+### <a name="return-value"></a>Return Value  
+ The command identifier if the view is associated with a command; otherwise 0.  
   
-##  <a name="getviewiconid"></a>CMouseManager::GetViewIconId  
- 检索与视图 id。 关联的图标  
+##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId  
+ Retrieves the icon associated with a view ID.  
   
 ```  
 UINT GetViewIconId(int iViewId) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iViewId`  
- 视图 id。  
+ The view ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则一个图标资源标识符否则为 0。  
+### <a name="return-value"></a>Return Value  
+ An icon resource identifier if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此方法将失败，如果使用未首先注册视图[CMouseManager::AddView](#addview)。  
+### <a name="remarks"></a>Remarks  
+ This method will fail if the view is not first registered by using [CMouseManager::AddView](#addview).  
   
-##  <a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
- 检索与视图名称相关联的视图 ID。  
+##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName  
+ Retrieves the view ID associated with a view name.  
   
 ```  
 int GetViewIdByName(LPCTSTR lpszName) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 视图的名称。  
+ The view name.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则视图 ID否则为 0。  
+### <a name="return-value"></a>Return Value  
+ A view ID if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此方法搜索通过视图通过使用已注册[CMouseManager::AddView](#addview)。  
+### <a name="remarks"></a>Remarks  
+ This method searches through views registered by using [CMouseManager::AddView](#addview).  
   
-##  <a name="getviewnames"></a>CMouseManager::GetViewNames  
- 检索所有已注册的视图名称的列表。  
+##  <a name="getviewnames"></a>  CMouseManager::GetViewNames  
+ Retrieves a list of all the registered view names.  
   
 ```  
 void GetViewNames(CStringList& listOfNames) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `listOfNames`  
- 对引用`CStringList`对象。  
+ A reference to `CStringList` object.  
   
-### <a name="remarks"></a>备注  
- 此方法填充参数`listOfNames`通过使用已注册的所有视图的名称与[CMouseManager::AddView](#addview)。  
+### <a name="remarks"></a>Remarks  
+ This method fills the parameter `listOfNames` with the names of all the views registered by using [CMouseManager::AddView](#addview).  
   
-##  <a name="loadstate"></a>CMouseManager::LoadState  
- 加载的状态[CMouseManager 类](../../mfc/reference/cmousemanager-class.md)注册表中。  
+##  <a name="loadstate"></a>  CMouseManager::LoadState  
+ Loads the state of the [CMouseManager Class](../../mfc/reference/cmousemanager-class.md) from the registry.  
   
 ```  
 BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 注册表项的路径。  
+ A path of a registry key.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 从注册表中加载的状态信息包括已注册的视图、 视图标识符和关联的命令。 如果该参数`lpszProfileName`是`NULL`，此函数加载`CMouseManager`控制的默认注册表位置中的数据[CWinAppEx 类](../../mfc/reference/cwinappex-class.md)。  
+### <a name="remarks"></a>Remarks  
+ The state information loaded from the registry includes the registered views, view identifiers, and the associated commands. If the parameter `lpszProfileName` is `NULL`, this function loads the `CMouseManager` data from the default registry location controlled by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md).  
   
- 在大多数情况下，无需直接调用此函数。 它是作为工作区初始化过程的一部分调用。 有关工作区初始化过程的详细信息，请参阅[CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)。  
+ In most cases, you do not have to call this function directly. It is called as a part of the workspace initialization process. For more information about the workspace initialization process, see [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="savestate"></a>CMouseManager::SaveState  
- 将状态的写入[CMouseManager 类](../../mfc/reference/cmousemanager-class.md)到注册表。  
+##  <a name="savestate"></a>  CMouseManager::SaveState  
+ Writes the state of the [CMouseManager Class](../../mfc/reference/cmousemanager-class.md) to the registry.  
   
 ```  
 BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 注册表项的路径。  
+ A path of a registry key.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 写入到注册表的状态信息包括所有已注册的视图、 视图标识符和关联的命令。 如果该参数`lpszProfileName`是`NULL`，此函数会写入`CMouseManager`到默认注册表位置由控制数据[CWinAppEx 类](../../mfc/reference/cwinappex-class.md)。  
+### <a name="remarks"></a>Remarks  
+ The state information written to the registry includes all registered views, view identifiers, and the associated commands. If the parameter `lpszProfileName` is `NULL`, this function writes the `CMouseManager` data to the default registry location controlled by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md).  
   
- 在大多数情况下，无需直接调用此函数。 它是作为工作区中的序列化过程的一部分调用。 有关工作区中的序列化过程的详细信息，请参阅[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)。  
+ In most cases, you do not have to call this function directly. It is called as a part of the workspace serialization process. For more information about the workspace serialization process, see [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
- 将自定义命令与首次注册到鼠标管理器的视图相关联。  
+##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk  
+ Associates a custom command with a view that is first registered with the mouse manager.  
   
 ```  
 void SetCommandForDblClk(
@@ -242,23 +249,23 @@ void SetCommandForDblClk(
     UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iViewId`  
- 视图的标识符。  
+ The view identifier.  
   
  [in] `uiCmd`  
- 命令标识符。  
+ The command identifier.  
   
-### <a name="remarks"></a>备注  
- 为了将自定义命令相关联的视图，您必须首先注册该视图通过使用[CMouseManager::AddView](#addview)。 `AddView`方法需要一个视图标识符作为输入参数。 一旦您注册一个视图，就可以调用`CMouseManager::SetCommandForDblClk`带有的相同视图标识符输入参数提供给`AddView`。 此后，当用户双击鼠标在已注册的视图中，应用程序将执行由命令`uiCmd.`以支持自定义鼠标行为，您还需要自定义注册到鼠标管理器的视图。 有关自定义鼠标行为的详细信息，请参阅 [键盘和鼠标自定义]--brokenlink-(.../ 鼠标和键盘 customization.md）。  
+### <a name="remarks"></a>Remarks  
+ In order to associate a custom command with a view, you must first register the view by using [CMouseManager::AddView](#addview). The `AddView` method requires a view identifier as an input parameter. Once you register a view, you can call `CMouseManager::SetCommandForDblClk` with the same view identifier input parameter that you supplied to `AddView`. Thereafter, when the user double-clicks the mouse in the registered view, the application will execute the command indicated by `uiCmd.` To support the custom mouse behavior, you will also need to customize the view registered with the mouse manager. For more information about custom mouse behavior, see [Keyboard and Mouse Customization]--brokenlink--(../mouse-and-keyboard-customization.md).  
   
- 如果`uiCmd`设置为 0，指定的视图将不再与命令相关联。  
+ If `uiCmd` is set to 0, the specified view is no longer associated with a command.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)   
- [键盘和鼠标自定义](../../mfc/keyboard-and-mouse-customization.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)   
+ [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md)
 
 
 

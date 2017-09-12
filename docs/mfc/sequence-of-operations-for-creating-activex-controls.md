@@ -1,45 +1,64 @@
 ---
-title: "用于创建 ActiveX 控件的操作顺序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件 [C++], 创建"
-  - "MFC ActiveX 控件 [C++], 创建"
-  - "OLE 控件 [C++], MFC"
-  - "序列 [C++]"
-  - "序列 [C++], 用于创建 ActiveX 控件"
+title: Sequence of Operations for Creating ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], creating
+- ActiveX controls [MFC], creating
+- sequence [MFC], for creating ActiveX controls
+- OLE controls [MFC], MFC
+- sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 用于创建 ActiveX 控件的操作顺序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c293e5add988ef1b2dbe1ab976b2ac1c04d08d1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-下表显示效果和框架的效果在创建 ActiveX 控件 \(以前称为 OLE 控件\)。  
+---
+# <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequence of Operations for Creating ActiveX Controls
+The following table shows your role and the framework's role in creating ActiveX controls (formerly known as OLE controls).  
   
-### 创建ActiveX 控件  
+### <a name="creating-activex-controls"></a>Creating ActiveX Controls  
   
-|任务|You do|框架|  
-|--------|------------|--------|  
-|创建 ActiveX 控件框架。|运行 MFC ActiveX 控件向导创建控件。  指定可以在选项页需选项。  控件包含可选的类型和名称在项目，授权，subclassing 框和一个方法。|MFC ActiveX 控件向导"创建 ActiveX 控件的文件与基本功能，包括应用程序源文件、控件和属性页或页面；一个资源文件；一个项目文件；另，所有类型定制的规范。|  
-|有关什么控件和 ActiveX 控件向导提供，而无需添加自己的代码行。|生成 ActiveX 控件和测试其与 Internet Explorer 或 [TSTCON 示例](../top/visual-cpp-samples.md)。|运行控件可以调整大小和移动。  它还可以调用的 **“关于”框** 方法 \(如果选择\)。|  
-|实现控件方法和属性。|通过添加成员函数提供一公开的接口实现控件特定方法和属性来控制数据。  在确定时，添加成员变量存储数据结构并使用事件处理程序引发事件。|框架已定义映射的控件支持事件，属性和方法，使您侧重属性和方法如何执行。  默认属性页是可见的，并提供关于框的默认方法。|  
-|构造控件的属性页或页。|使用 Visual C\+\+ 资源编辑器可视方式编辑控件属性页的接口：<br /><br /> -   创建其他的属性页。<br />-   创建并编辑位图、图标和光标。<br /><br /> 还可以测试在对话框编辑器的属性页。|MFC 应用程序向导"创建的默认资源文件提供所需的多个资源。  Visual C\+\+ 允许您编辑现有资源并轻松和视觉上添加新的资源。|  
-|测试控件的事件、方法和属性。|重新生成控件并使用测试容器测试处理程序正常工作。|可以调用控件的方法，并通过属性页操作通过其属性连接或测试容器。  另外，使用测试容器为从控件接收通知和激发的径赛由控件的容器。|  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Create an ActiveX control framework.|Run the MFC ActiveX Control Wizard to create your control. Specify the options you want in the options pages. Options include the type and name of the control in the project, licensing, subclassing, and an About Box method.|The MFC ActiveX Control Wizard creates the files for an ActiveX control with basic functionality, including source files for your application, control, and property page or pages; a resource file; a project file; and others, all tailored to your specifications.|  
+|See what the control and the ActiveX Control Wizard offer without adding a line of your own code.|Build the ActiveX control and test it with Internet Explorer or the [TSTCON sample](../visual-cpp-samples.md).|The running control has the ability to be resized and moved. It also has an **About Box** method (if chosen) that can be invoked.|  
+|Implement the control's methods and properties.|Implement your control-specific methods and properties by adding member functions to provide an exposed interface to the control's data. Add member variables to hold data structures and use event handlers to fire events when you determine.|The framework has already defined a map to support the control's events, properties, and methods, leaving you to focus on how the properties and methods are implemented. The default property page is viewable and a default About Box method is supplied.|  
+|Construct the control's property page or pages.|Use the Visual C++ resource editors to visually edit the control's property page interface:<br /><br /> -   Create additional property pages.<br />-   Create and edit bitmaps, icons, and cursors.<br /><br /> You can also test the property page(s) in the dialog editor.|The default resource file created by the MFC Application Wizard supplies many of the resources you need. Visual C++ lets you edit existing resources and add new resources easily and visually.|  
+|Test the control's events, methods, and properties.|Rebuild the control and use Test Container to test that your handlers work correctly.|You can invoke the control's methods and manipulate its properties through the property page interface or through Test Container. In addition, use Test Container to track events fired from the control and notifications received by the control's container.|  
   
-## 请参阅  
- [基于框架生成](../mfc/building-on-the-framework.md)   
- [用于生成 MFC 应用程序的操作顺序](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [用于创建 OLE 应用程序的操作顺序](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [用于创建数据库应用程序的操作顺序](../mfc/sequence-of-operations-for-creating-database-applications.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)   
+ [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
+ [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
+ [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+

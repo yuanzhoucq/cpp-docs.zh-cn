@@ -1,45 +1,64 @@
 ---
-title: "MAPI | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "电子邮件, 启用"
-  - "启用针对邮件的应用程序"
-  - "启用针对 MAPI 的应用程序"
-  - "邮件, 启用您的应用程序"
-  - "MFC 中的 MAPI 支持"
-  - "MAPI, MFC"
-  - "消息传递, 客户端应用程序"
+title: MAPI | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messaging [MFC], client applications
+- enabling applications for MAPI [MFC]
+- MAPI support in MFC
+- e-mail [MFC], enabling
+- mail [MFC], enabling your application
+- MAPI, MFC
+- enabling applications for mail [MFC]
 ms.assetid: 193449f7-b131-4ab0-9301-8d4f6cd1e7c4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MAPI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0805f8d1d76795305152a3af98d71682297cb65
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文介绍消息客户端应用程序开发人员执行 Microsoft 消息处理应用程序编程接口 \(MAPI\) 。  在类 **CDocument**中MFC 提供支持 MAPI的一部分，但不封装整个 API。  有关详细信息，请参阅 [MAPI Support in MFC](../mfc/mapi-support-in-mfc.md)。  
+---
+# <a name="mapi"></a>MAPI
+This article describes the Microsoft Messaging Application Programming Interface (MAPI) for client message application developers. MFC supplies support for a subset of MAPI in class **CDocument** but does not encapsulate the entire API. For more information, see [MAPI Support in MFC](../mfc/mapi-support-in-mfc.md).  
   
- MAPI 为邮件实现和邮件识别应用程序使用的创建、操作、传输和存储邮件消息的的一组函数。  为应用开发人员工具定义邮件消息的目的和内容并在它们所存储邮件消息的管理中提供灵活性。  MAPI 还提供公共接口，该接口时应用程序开发人员可以创建邮件实现和邮件识别应用程序，这是独立的基础消息系统。  
+ MAPI is a set of functions that mail-enabled and mail-aware applications use to create, manipulate, transfer, and store mail messages. It gives application developers the tools to define the purpose and content of mail messages and gives them flexibility in their management of stored mail messages. MAPI also provides a common interface that application developers can use to create mail-enabled and mail-aware applications independent of the underlying messaging system.  
   
- 客户端传报程序用作交互提供可相互关系的 Microsoft Windows 消息系统 \(WMS\)。  此交互通常包括 从匹配的CLS请求服务器，例如消息和存储通讯簿。  
+ Messaging clients provide a human interface for interaction with the Microsoft Windows Messaging System (WMS). This interaction typically includes requesting services from MAPI-compliant providers such as message stores and address books.  
   
- 有关 MAPI 的更多信息，请参见在 Win32 消息 \(MAPI\) 的指导下的本文 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]  
+ For more information about MAPI, see the articles under Guide in Win32 Messaging (MAPI) of the Windows SDK.  
   
-## 本节内容  
- [MFC 中支持MAPI](../mfc/mapi-support-in-mfc.md)  
+## <a name="in-this-section"></a>In This Section  
+ [MAPI Support in MFC](../mfc/mapi-support-in-mfc.md)  
   
-## 请参阅  
- [CDocument::OnFileSendMail](../Topic/CDocument::OnFileSendMail.md)   
- [CDocument::OnUpdateFileSendMail](../Topic/CDocument::OnUpdateFileSendMail.md)   
- [COleDocument::OnFileSendMail](../Topic/COleDocument::OnFileSendMail.md)
+## <a name="see-also"></a>See Also  
+ [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)   
+ [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)   
+ [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
+
+

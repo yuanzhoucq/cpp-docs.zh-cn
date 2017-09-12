@@ -1,5 +1,5 @@
 ---
-title: "应用程序控制 |Microsoft 文档"
+title: Application Control | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- application control
+- application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 caps.latest.revision: 12
 author: mikeblome
@@ -33,167 +33,167 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 5e48437920f56cdfd119c1d703db585616881833
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6022078118092b17b38a014eace7736328c6af83
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="application-control"></a>应用程序控件
-OLE 需要大量控制应用程序和它们的对象。 OLE 系统 Dll 必须能够启动并自动发布的应用程序，协调其生产和修改的对象，依次类推。 本主题中的函数满足这些要求。 除了调用由 OLE 系统 Dll，这些函数有时必须由应用程序以及调用。 
+# <a name="application-control"></a>Application Control
+OLE requires substantial control over applications and their objects. The OLE system DLLs must be able to launch and release applications automatically, coordinate their production and modification of objects, and so on. The functions in this topic meet those requirements. In addition to being called by the OLE system DLLs, these functions must sometimes be called by applications as well. 
   
-### <a name="application-control"></a>应用程序控件  
+### <a name="application-control"></a>Application Control  
   
 |||  
 |-|-|  
-|[AfxOleCanExitApp](#afxolecanexitapp)|指示应用程序是否可以终止。|  
-|[AfxOleGetMessageFilter](#afxolegetmessagefilter)|检索应用程序的当前消息筛选器。|  
-|[AfxOleGetUserCtrl](#afxolegetuserctrl)|检索当前用户控件标志。|  
-|[AfxOleSetUserCtrl](#afxolesetuserctrl)|设置或清除用户控件标志。|  
-|[AfxOleLockApp](#afxolelockapp)|框架的全局应用程序中的活动对象数计数递增 1。|  
-|[AfxOleLockControl](#afxolelockcontrol)| 锁定指定控件的类工厂。 |
-|[AfxOleUnlockApp](#afxoleunlockapp)|递减的应用程序中的活动对象数的框架的计数。| 
-|[AfxOleUnlockControl](#afxoleunlockcontrol)| 解除锁定指定控件的类工厂。 |
-|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|OLE 系统注册表中注册服务器。|  
-|[AfxOleSetEditMenu](#afxoleseteditmenu)|实现的用户界面*typename*对象命令。|  
+|[AfxOleCanExitApp](#afxolecanexitapp)|Indicates whether the application can terminate.|  
+|[AfxOleGetMessageFilter](#afxolegetmessagefilter)|Retrieves the application's current message filter.|  
+|[AfxOleGetUserCtrl](#afxolegetuserctrl)|Retrieves the current user-control flag.|  
+|[AfxOleSetUserCtrl](#afxolesetuserctrl)|Sets or clears the user-control flag.|  
+|[AfxOleLockApp](#afxolelockapp)|Increments the framework's global count of the number of active objects in an application.|  
+|[AfxOleLockControl](#afxolelockcontrol)| Locks the class factory of the specified control. |
+|[AfxOleUnlockApp](#afxoleunlockapp)|Decrements the framework's count of the number of active objects in an application.| 
+|[AfxOleUnlockControl](#afxoleunlockcontrol)| Unlocks the class factory of the specified control. |
+|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Registers a server in the OLE system registry.|  
+|[AfxOleSetEditMenu](#afxoleseteditmenu)|Implements the user interface for the *typename* Object command.|  
 
   
-##  <a name="afxolecanexitapp"></a>AfxOleCanExitApp  
- 指示应用程序是否可以终止。  
+##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp  
+ Indicates whether the application can terminate.  
   
 ```   
 BOOL AFXAPI AfxOleCanExitApp(); 
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果应用程序退出，则为非零；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the application can exit; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果存在对应用程序的对象的未处理引用，则应用程序不应终止。 全局函数 `AfxOleLockApp` 和 `AfxOleUnlockApp` 分别对应用程序对象引用计数器进行递增和递减。 当此计数器为非零时，应用程序不应终止。 如果计数器为非零，当用户从系统菜单选择“关闭”或从“文件”菜单选择“退出”时，应用程序的主窗口将会隐藏（不销毁）。 框架调用此函数**cframewnd:: Onclose**。  
+### <a name="remarks"></a>Remarks  
+ An application should not terminate if there are outstanding references to its objects. The global functions `AfxOleLockApp` and `AfxOleUnlockApp` increment and decrement, respectively, a counter of references to the application's objects. The application should not terminate when this counter is nonzero. If the counter is nonzero, the application's main window is hidden (not destroyed) when the user chooses Close from the system menu or Exit from the File menu. The framework calls this function in **CFrameWnd::OnClose**.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCAutomation # 2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
 
-## <a name="requirements"></a>要求  
- **标头**: afxdisp.h 
+## <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h 
 
-##  <a name="afxolegetmessagefilter"></a>AfxOleGetMessageFilter  
- 检索应用程序的当前消息筛选器。  
+##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter  
+ Retrieves the application's current message filter.  
   
 ```   
 COleMessageFilter* AFXAPI AfxOleGetMessageFilter(); 
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向当前消息筛选器的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current message filter.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可访问当前 `COleMessageFilter` 派生的对象，这与调用 `AfxGetApp` 来访问当前应用程序对象一样。  
+### <a name="remarks"></a>Remarks  
+ Call this function to access the current `COleMessageFilter`-derived object, just as you would call `AfxGetApp` to access the current application object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCAutomation # 3](../../mfc/codesnippet/cpp/application-control_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#3](../../mfc/codesnippet/cpp/application-control_2.cpp)]  
   
- [!code-cpp[NVC_MFCAutomation # 4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头**: afxwin.h 
+### <a name="requirements"></a>Requirements  
+ **Header**: afxwin.h 
 
-##  <a name="afxolegetuserctrl"></a>AfxOleGetUserCtrl  
- 检索当前用户控件标志。  
+##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl  
+ Retrieves the current user-control flag.  
   
 ```   
 BOOL AFXAPI AfxOleGetUserCtrl(); 
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果用户位于应用程序控件内，则不为零；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user is in control of the application; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果用户已显式打开或创建新文档，则用户将位于应用程序控件内。 如果应用程序不是由 OLE 系统 DLL 启动的 - 换句话说，如果用户使用系统 Shell 启动了应用程序，则用户也将位于控件内。  
+### <a name="remarks"></a>Remarks  
+ The user is in control of the application when the user has explicitly opened or created a new document. The user is also in control if the application was not launched by the OLE system DLLs — in other words, if the user launched the application with the system shell.  
 
-### <a name="requirements"></a>要求  
- **标头**: afxdisp.h
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>AfxOleSetUserCtrl  
- 设置或清除用户控件标志，参考 》 中所述`AfxOleGetUserCtrl`。  
+##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl  
+ Sets or clears the user-control flag, which is explained in the reference for `AfxOleGetUserCtrl`.  
   
 ```  
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bUserCtrl*  
- 指定是否要设置或清除用户控件标志。  
+ Specifies whether the user-control flag is to be set or cleared.  
   
-### <a name="remarks"></a>备注  
- 框架调用此函数时在用户创建或加载一个文档，但不是在加载或通过间接操作时，例如从容器应用程序加载嵌入的对象创建文档时。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function when the user creates or loads a document, but not when a document is loaded or created through an indirect action such as loading an embedded object from a container application.  
   
- 如果你的应用程序中的其他操作应将用户放在应用程序的控制，请调用此函数。  
+ Call this function if other actions in your application should put the user in control of the application.  
 
-### <a name="requirements"></a>要求  
- **标头**: afxdisp.h
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>AfxOleLockApp  
- 框架的全局应用程序中的活动对象数计数递增 1。  
+##  <a name="afxolelockapp"></a>  AfxOleLockApp  
+ Increments the framework's global count of the number of active objects in the application.  
   
 ```   
 void AFXAPI AfxOleLockApp(); 
 ```  
   
-### <a name="remarks"></a>备注  
- 框架保留计数的对象数的应用程序中处于活动状态。 `AfxOleLockApp`和`AfxOleUnlockApp`函数分别递增和递减此计数。  
+### <a name="remarks"></a>Remarks  
+ The framework keeps a count of the number of objects active in an application. The `AfxOleLockApp` and `AfxOleUnlockApp` functions, respectively, increment and decrement this count.  
   
- 当用户尝试关闭具有活动对象的应用程序-应用程序的活动对象计数为非零值-framework 会隐藏从用户的视图，而不是完全关闭应用程序。 `AfxOleCanExitApp`函数指示是否可以终止应用程序。  
+ When the user attempts to close an application that has active objects — an application for which the count of active objects is nonzero — the framework hides the application from the user's view instead of completely shutting it down. The `AfxOleCanExitApp` function indicates whether the application can terminate.  
   
- 调用`AfxOleLockApp`从公开 OLE 接口，如果不希望出现在客户端应用程序仍在使用时销毁该对象的任何对象。 此外调用`AfxOleUnlockApp`的任何对象调用析构函数中`AfxOleLockApp`构造函数中。 默认情况下， `COleDocument` （和派生类） 自动锁定和解锁应用程序。  
+ Call `AfxOleLockApp` from any object that exposes OLE interfaces, if it would be undesirable for that object to be destroyed while still being used by a client application. Also call `AfxOleUnlockApp` in the destructor of any object that calls `AfxOleLockApp` in the constructor. By default, `COleDocument` (and derived classes) automatically lock and unlock the application.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCAutomation # 5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头**: afxdisp.h
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>AfxOleUnlockApp  
- 递减的应用程序中的活动对象的框架的计数。  
+##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp  
+ Decrements the framework's count of active objects in the application.  
   
 ```   
 void AFXAPI AfxOleUnlockApp(); 
 ```  
   
-### <a name="remarks"></a>备注  
- 请参阅`AfxOleLockApp`有关进一步信息。  
+### <a name="remarks"></a>Remarks  
+ See `AfxOleLockApp` for further information.  
   
- 当活动对象数为零时， **AfxOleOnReleaseAllObjects**调用。  
+ When the number of active objects reaches zero, **AfxOleOnReleaseAllObjects** is called.  
   
-### <a name="example"></a>示例  
- 请参阅示例[AfxOleLockApp](#afxolelockapp)。  
+### <a name="example"></a>Example  
+ See the example for [AfxOleLockApp](#afxolelockapp).  
 
-### <a name="requirements"></a>要求  
- **标头**: afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h  
 
  ## <a name="afxolelockcontrol"></a>AfxOleLockControl
-锁定指定控件的类工厂，以便与此控件关联的动态创建的数据保留在内存中。  
+Locks the class factory of the specified control so that dynamically created data associated with the control remains in memory.  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );  
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- 控件的唯一类 ID。  
+ The unique class ID of the control.  
   
  `lpszProgID`  
- 控件的唯一程序 ID。  
+ The unique program ID of the control.  
    
-### <a name="return-value"></a>返回值  
- 如果控件的类工厂成功锁定，则不为零；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the class factory of the control was successfully locked; otherwise 0.  
    
-### <a name="remarks"></a>备注  
- 这可以明显加速控件的显示。 例如，一旦在对话框中创建控件并使用 `AfxOleLockControl` 锁定控件，则无需在每次显示或销毁对话框时创建和删除它。 如果用户反复打开并关闭对话框，则锁定控件可以显著提高性能。 准备销毁控件时，请调用 `AfxOleUnlockControl`。  
+### <a name="remarks"></a>Remarks  
+ This can significantly speed up display of the controls. For example, once you create a control in a dialog box and lock the control with `AfxOleLockControl`, you do not need to create and kill it again every time the dialog is shown or destroyed. If the user opens and closes a dialog box repeatedly, locking your controls can significantly enhance performance. When you are ready to destroy the control, call `AfxOleUnlockControl`.  
    
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
 ```cpp
 // Starts and locks control's (Microsoft Calendar) class factory. 
 // Control will remain in memory for lifetime of
@@ -202,15 +202,15 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
-### <a name="requirements"></a>要求  
- **标头︰**<afxwin.h></afxwin.h>  
+### <a name="requirements"></a>Requirements  
+ **Header:** <afxwin.h>  
    
-### <a name="see-also"></a>另请参阅  
- [宏和全局函数](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [AfxOleUnlockControl](#afxoleunlockcontrol)
  
-##  <a name="afxoleregisterserverclass"></a>AfxOleRegisterServerClass  
- 此函数，可在 OLE 系统注册表中注册你的服务器。  
+##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass  
+ This function allows you to register your server in the OLE system registry.  
   
 ```   
 BOOL AFXAPI AfxOleRegisterServerClass(
@@ -223,59 +223,59 @@ BOOL AFXAPI AfxOleRegisterServerClass(
     LPCTSTR* rglpszOverwrite = NULL); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- 引用为服务器的 OLE 类 id。  
+ Reference to the server's OLE class ID.  
   
  `lpszClassName`  
- 指向包含的服务器的对象的类名称的字符串的指针。  
+ Pointer to a string containing the class name of the server's objects.  
   
  *lpszShortTypeName*  
- 指向包含服务器的对象类型，如"图表。"的短名称的字符串  
+ Pointer to a string containing the short name of the server's object type, such as "Chart."  
   
  *lpszLongTypeName*  
- 指向包含服务器的对象类型，如"Microsoft Excel 5.0 图表。"的长名称的字符串  
+ Pointer to a string containing the long name of the server's object type, such as "Microsoft Excel 5.0 Chart."  
   
  `nAppType`  
- 从获取的值**OLE_APPTYPE**枚举，指定 OLE 应用程序的类型。 可能的值如下所示︰  
+ A value, taken from the **OLE_APPTYPE** enumeration, specifying the type of OLE application. Possible values are the following:  
   
-- `OAT_INPLACE_SERVER`服务器具有完全服务器用户界面。  
+- `OAT_INPLACE_SERVER` Server has full server user-interface.  
   
-- `OAT_SERVER`服务器支持仅嵌入。  
+- `OAT_SERVER` Server supports only embedding.  
   
-- `OAT_CONTAINER`容器支持链接到嵌入。  
+- `OAT_CONTAINER` Container supports links to embeddings.  
   
-- `OAT_DISPATCH_OBJECT``IDispatch`-支持的对象。  
+- `OAT_DISPATCH_OBJECT` `IDispatch`-capable object.  
   
  `rglpszRegister`  
- 指向密钥和要添加到 OLE 系统注册表中，如果不找到任何现有值的键的值表示的字符串的指针的数组。  
+ Array of pointers to strings representing the keys and values to be added to the OLE system registry if no existing values for the keys are found.  
   
  `rglpszOverwrite`  
- 指向密钥和值要添加到 OLE 系统注册表中，如果该注册表包含给定的键的现有值表示的字符串的指针的数组。  
+ Array of pointers to strings representing the keys and values to be added to the OLE system registry if the registry contains existing values for the given keys.  
   
-### <a name="return-value"></a>返回值  
- 如果成功注册的服务器类; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the server class is successfully registered; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 大多数应用程序可以使用**COleTemplateServer::Register**注册应用程序的文档类型。 如果你的应用程序的系统注册表格式不适合的典型模式，则可以使用`AfxOleRegisterServerClass`获得更多控制。  
+### <a name="remarks"></a>Remarks  
+ Most applications can use **COleTemplateServer::Register** to register the application's document types. If your application's system-registry format does not fit the typical pattern, you can use `AfxOleRegisterServerClass` for more control.  
   
- 注册表包含键和值的一组。 `rglpszRegister`和`rglpszOverwrite`自变量是指向字符串的指针的数组，其中每个包括的一个键和值隔开**NULL**字符 ( `'\0'`)。 每个这些字符串可以有其位置标记的字符序列的可替换参数`%1`通过`%5`。  
+ The registry consists of a set of keys and values. The `rglpszRegister` and `rglpszOverwrite` arguments are arrays of pointers to strings, each consisting of a key and a value separated by a **NULL** character ( `'\0'`). Each of these strings can have replaceable parameters whose places are marked by the character sequences `%1` through `%5`.  
   
- 符号填充了如下︰  
+ The symbols are filled in as follows:  
   
-|符号|值|  
+|Symbol|Value|  
 |------------|-----------|  
-|%1|类 ID，其格式为字符串|  
-|%2|类名|  
-|%3|可执行文件路径|  
-|%4|Short 类型名称|  
-|%5|Long 类型名称|  
+|%1|Class ID, formatted as a string|  
+|%2|Class name|  
+|%3|Path to executable file|  
+|%4|Short type name|  
+|%5|Long type name|  
 
-### <a name="requirements"></a>要求  
- **标头**: afxdisp.h
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>AfxOleSetEditMenu  
- 实现的用户界面*typename*对象命令。  
+##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu  
+ Implements the user interface for the *typename* Object command.  
   
 ```   
 void AFXAPI AfxOleSetEditMenu(
@@ -287,60 +287,60 @@ void AFXAPI AfxOleSetEditMenu(
     UINT nIDConvert = 0); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pClient`  
- 指向客户端 OLE 项的指针。  
+ A pointer to the client OLE item.  
   
  `pMenu`  
- 指向要更新的菜单对象的指针。  
+ A pointer to the menu object to be updated.  
   
  *iMenuItem*  
- 要更新的菜单项的索引。  
+ The index of the menu item to be updated.  
   
  `nIDVerbMin`  
- 对应于主谓词命令 ID。  
+ The command ID that corresponds to the primary verb.  
   
  *nIDVerbMax*  
- 命令 ID 对应到最后一个谓词。  
+ The command ID that corresponds to the last verb.  
   
  *nIDConvert*  
- 转换菜单项的 ID。  
+ ID for the Convert menu item.  
   
-### <a name="remarks"></a>备注  
- 如果服务器能够识别仅主谓词，则菜单项将成为"谓词*typename*对象"和`nIDVerbMin`当用户选择命令发送命令。 如果服务器能够识别的多个谓词，则菜单项将成为" *typename*对象"，并列出所有谓词子菜单显示当用户选择命令。 当用户从子菜单中，选择谓词`nIDVerbMin`如果选择第一个谓词，发送`nIDVerbMin`+ 1 发送第二项操作是否选择，依此类推。 默认值`COleDocument`实现自动处理此功能。  
+### <a name="remarks"></a>Remarks  
+ If the server recognizes only a primary verb, the menu item becomes "verb *typename* Object" and the `nIDVerbMin` command is sent when the user chooses the command. If the server recognizes several verbs, then the menu item becomes " *typename* Object" and a submenu listing all the verbs appears when the user chooses the command. When the user chooses a verb from the submenu, `nIDVerbMin` is sent if the first verb is chosen, `nIDVerbMin` + 1 is sent if the second verb is chosen, and so forth. The default `COleDocument` implementation automatically handles this feature.  
   
- 下面的语句必须在你的客户端应用程序资源脚本 (。RC) 文件︰  
+ You must have the following statement in your client's application resource script (.RC) file:  
   
- **#include \<afxolecl.rc 1>**  
+ **#include \<afxolecl.rc>**  
 
-### <a name="requirements"></a>要求  
- **标头**: afxole.h 
+### <a name="requirements"></a>Requirements  
+ **Header**: afxole.h 
 
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 
-## <a name="afxoleunlockcontrol"></a>AfxOleUnlockControl
-解除锁定指定控件的类工厂。  
+## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
+Unlocks the class factory of the specified control.  
    
-### <a name="syntax"></a>语法  
+### <a name="syntax"></a>Syntax  
   ```
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );  
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- 控件的唯一类 ID。  
+ The unique class ID of the control.  
   
  `lpszProgID`  
- 控件的唯一程序 ID。  
+ The unique program ID of the control.  
    
-### <a name="return-value"></a>返回值  
- 如果该控件的类工厂成功锁定，则非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the class factory of the control was successfully unlocked; otherwise 0.  
    
-### <a name="remarks"></a>备注  
- 控件处于锁定状态与`AfxOleLockControl`，以便与控件关联的动态创建的数据保留在内存中。 这可以显著加快显示控件因为控件不需要创建和销毁每次显示。 准备销毁控件时，请调用 `AfxOleUnlockControl`。  
+### <a name="remarks"></a>Remarks  
+ A control is locked with `AfxOleLockControl`, so that dynamically created data associated with the control remains in memory. This can significantly speed up display of the control because the control need not be created and destroyed every time it is displayed. When you are ready to destroy the control, call `AfxOleUnlockControl`.  
    
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
  ```cpp
 // Unlock control's (Microsoft Calendar Control) class factory.
 
@@ -348,11 +348,11 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 ```
    
-### <a name="requirements"></a>要求  
- **标头︰**<afxwin.h></afxwin.h>  
+### <a name="requirements"></a>Requirements  
+ **Header:** <afxwin.h>  
    
-### <a name="see-also"></a>另请参阅  
- [宏和全局函数](mfc-macros-and-globals.md)  
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)  
  [AfxOleLockControl](#afxolelockcontrol)
 
 

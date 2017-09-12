@@ -1,80 +1,99 @@
 ---
-title: "菜单和资源：服务器添加 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDP_OLE_INIT_FAILED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "快捷键表 [C++], 服务器应用程序"
-  - "IDP_OLE_INIT_FAILED 宏"
-  - "OLE 初始化失败"
-  - "OLE 服务器应用程序, 菜单和资源"
-  - "OLE 可视化编辑服务器"
-  - "资源 [MFC], 服务器应用程序"
-  - "服务器应用程序, 快捷键表"
-  - "服务器应用程序, OLE 菜单和资源"
-  - "服务器, 菜单添加"
-  - "字符串编辑, 可视化编辑应用程序"
-  - "字符串表, 可视化编辑应用程序"
-  - "可视化编辑, 应用程序菜单和资源"
+title: 'Menus and Resources: Server Additions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDP_OLE_INIT_FAILED
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE visual editing servers [MFC]
+- accelerator tables [MFC], server applications
+- visual editing [MFC], application menus and resources
+- server applications [MFC], accelerator table
+- string tables [MFC], visual editing applications
+- servers [MFC], menu additions
+- resources [MFC], server applications
+- OLE server applications [MFC], menus and resources
+- string editing [MFC], visual editing applications
+- IDP_OLE_INIT_FAILED macro [MFC]
+- server applications [MFC], OLE menus and resources
+- OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 菜单和资源：服务器添加
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dfbeb53251242f545f35908c051ab18192965124
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文说明需要对菜单和在可视化编辑服务器\(组件\) 应用程序其他资源的更改 。  服务器应用程序要求很多额外的资源到菜单结构以及其他资源，因为它可以以三种模式之一启动：独立，嵌入或到位  正如 [菜单和资源 \(OLE\)](../mfc/menus-and-resources-ole.md) 文章所述，具有四组菜单中最大值。  对于MDI 全服务器应用使用所有这四个，而对于小型服务器只使用三个。  应用程序向导将为您服务器的类型创建需要的菜单布局。  一些自定义项可能是必需的。  
+---
+# <a name="menus-and-resources-server-additions"></a>Menus and Resources: Server Additions
+This article explains the changes that need to be made to the menus and other resources in a visual editing server (component) application. A server application requires many additions to the menu structure and other resources because it can be started in one of three modes: stand alone, embedded, or in place. As described in the [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md) article, there are a maximum of four sets of menus. All four are used for an MDI full-server application, while only three are used for a miniserver. The application wizard will create the menu layout necessary for the type of server you want. Some customization may be necessary.  
   
- 如果不使用应用程序向导，您可能希望查看 HIERSVR.RC，MFC 示例应用程序 [HIERSVR](../top/visual-cpp-samples.md)的资源脚本，查看将如何实现这些更改。  
+ If you do not use the application wizard, you may want to look at HIERSVR.RC, the resource script for the MFC sample application [HIERSVR](../visual-cpp-samples.md), to see how these changes are implemented.  
   
- 本文涵盖的主题包括：  
+ Topics covered in this article include:  
   
--   [服务器菜单添置](#_core_server_menu_additions)  
+-   [Server Menu Additions](#_core_server_menu_additions)  
   
--   [快捷键表添置](#_core_server_application_accelerator_table_additions)  
+-   [Accelerator Table Additions](#_core_server_application_accelerator_table_additions)  
   
--   [字符串表添置](../mfc/menus-and-resources-container-additions.md)  
+-   [String Table Additions](../mfc/menus-and-resources-container-additions.md)  
   
--   [Miniservert添置](#_core_mini.2d.server_additions)  
+-   [Miniserver Additions](#_core_mini.2d.server_additions)  
   
-##  <a name="_core_server_menu_additions"></a> 服务器菜单添置  
- 服务器\(组件\) 应用程序必须添加菜单资源以支持 OLE 可视化编辑。  在应用程序处于独立模式运行无需更改时使用菜单，但是，必须在建立应用程序之前添加两个新的菜单资源：一个支持就地激活的和一个支持服务器完全打开。  full\-和 miniserver 应用程序使用全部的菜单资源。  
+##  <a name="_core_server_menu_additions"></a> Server Menu Additions  
+ Server (component) applications must have menu resources added to support OLE visual editing. The menus used when the application is run in stand-alone mode do not have to be changed, but you must add two new menu resources before building the application: one to support in-place activation and one to support the server being fully open. Both menu resources are used by full- and miniserver applications.  
   
--   若要支持就地激活，必须创建类似于当在独立模式下运行时使用的菜单资源。  此菜单差异在于窗口和文件项 \(及任何其他菜单项处理应用程序，而不是数据\) 丢失。  容器应用程序将提供这些菜单项。  有关此菜单合并的技术的更多信息和实例，请参阅文章 [菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。  
+-   To support in-place activation, you must create a menu resource that is very similar to the menu resource used when run in stand-alone mode. The difference in this menu is that the File and Window items (and any other menu items that deal with the application, and not the data) are missing. The container application will supply these menu items. For more information on, and an example of, this menu-merging technique, see the article [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md).  
   
--   若要支持完全打开激活，必须创建菜单资源基本等效于独立模式使用的运行时使用的菜单资源。  该菜单资源的唯一更改是某些项时重说反映服务器在复合文档嵌入项运行的情况。  
+-   To support fully open activation, you must create a menu resource nearly identical to the menu resource used when run in stand-alone mode. The only modification to this menu resource is that some items are reworded to reflect the fact that the server is operating on an item embedded in a compound document.  
   
- 除了列出的更改外本文中，资源文件需要包括 AFXOLESV.RC，需要在 Microsoft 基础类库实现所必需的。  此文件在 MFC \\Include 子目录。  
+ In addition to the changes listed in this article, your resource file needs to include AFXOLESV.RC, which is required for the Microsoft Foundation Class Library implementation. This file is in the MFC\Include subdirectory.  
   
-##  <a name="_core_server_application_accelerator_table_additions"></a> 服务器应用程序快捷键对应表添置  
- 必须将两个新的快捷键表资源到服务器应用；它们直接对应于前面描述的新菜单资源。  当服务器应用适当激活时，使用第一个快捷键表。  包括在视图中的快捷键对应表中所有输入除这些附加对文件及窗口菜单。  
+##  <a name="_core_server_application_accelerator_table_additions"></a> Server Application Accelerator Table Additions  
+ Two new accelerator table resources must be added to server applications; they correspond directly to the new menu resources previously described. The first accelerator table is used when the server application is activated in place. It consists of all the entries in the view's accelerator table except those tied to the File and Window menus.  
   
- 第二个表都接近视图中的快捷键对应表的准确副本。  进行的任何差异并行更改在 [服务器添加菜单](#_core_server_menu_additions)提到的完全打开菜单上。  
+ The second table is nearly an exact copy of the view's accelerator table. Any differences parallel changes made in the fully open menu mentioned in [Server Menu Additions](#_core_server_menu_additions).  
   
- 对于这些快捷键表更改的示例中，比较与 **IDR\_MAINFRAME** 的 **IDR\_HIERSVRTYPE\_SRVR\_IP** 和 **IDR\_HIERSVRTYPE\_SRVR\_EMB** 在快捷键表 MFC OLE 示例包括文件的 HIERSVR.RC [HIERSVR](../top/visual-cpp-samples.md)。  文件和窗口快捷键从就地表消失和并将它们复制在嵌入的表中。  
+ For an example of these accelerator table changes, compare the **IDR_HIERSVRTYPE_SRVR_IP** and **IDR_HIERSVRTYPE_SRVR_EMB** accelerator tables with **IDR_MAINFRAME** in the HIERSVR.RC file included in the MFC OLE sample [HIERSVR](../visual-cpp-samples.md). The File and Window accelerators are missing from the in-place table and exact copies of them are in the embedded table.  
   
-##  <a name="_core_string_table_additions_for_server_applications"></a> 服务器应用的字符串表添置  
- 在服务器应用只需要一个字符串添加的表 \- 表示的字符串初始化 OLE 失败。  例如，这是应用程序向导生成的字符串表项：  
+##  <a name="_core_string_table_additions_for_server_applications"></a> String Table Additions for Server Applications  
+ Only one string table addition is necessary in a server application — a string to signify that the OLE initialization failed. As an example, here is the string-table entry that the application wizard generates:  
   
 |ID|String|  
 |--------|------------|  
-|**IDP\_OLE\_INIT\_FAILED**|OLE 初始化失败。  请确保 OLE 库是正确的版本。|  
+|**IDP_OLE_INIT_FAILED**|OLE initialization failed. Make sure that the OLE libraries are the correct version.|  
   
-##  <a name="_core_mini.2d.server_additions"></a> Miniservert添置  
- 和以上所列的full\-servers添加同样适用于miniservers。  由于 miniserver 在独立模式无法运行，其主菜单更小。  通过应用程序向导创建的主菜单只有文件菜单，只包含项退出和关于项。  嵌入的资源和本地菜单和快捷键 miniservers 的与full\-servers相同。  
+##  <a name="_core_mini.2d.server_additions"></a> Miniserver Additions  
+ The same additions apply for miniservers as those listed above for full-servers. Because a miniserver cannot be run in stand-alone mode, its main menu is much smaller. The main menu created by the application wizard has only a File menu, containing only the items Exit and About. Embedded and in-place menus and accelerators for miniservers are the same as those for full-servers.  
   
-## 请参阅  
- [菜单和资源 \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)
+## <a name="see-also"></a>See Also  
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Menus and Resources: Menu Merging](../mfc/menus-and-resources-menu-merging.md)
+
+

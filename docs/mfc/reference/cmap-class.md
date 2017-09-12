@@ -1,11 +1,11 @@
 ---
-title: "CMap 类 |Microsoft 文档"
+title: CMap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,9 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dictionary mapping class
-- collection classes, dictionary mapping
-- CMap class
+- CMap [MFC], CPair
+- CMap [MFC], CMap
+- CMap [MFC], GetCount
+- CMap [MFC], GetHashTableSize
+- CMap [MFC], GetNextAssoc
+- CMap [MFC], GetSize
+- CMap [MFC], GetStartPosition
+- CMap [MFC], InitHashTable
+- CMap [MFC], IsEmpty
+- CMap [MFC], Lookup
+- CMap [MFC], PGetFirstAssoc
+- CMap [MFC], PGetNextAssoc
+- CMap [MFC], PLookup
+- CMap [MFC], RemoveAll
+- CMap [MFC], RemoveKey
+- CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
 caps.latest.revision: 24
 author: mikeblome
@@ -52,158 +65,159 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
-ms.lasthandoff: 04/01/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7e9ba0ffe6ed0175b97234fa41c9812052b94df
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmap-class"></a>CMap 类
-将唯一键映射到值的字典集合类。  
+# <a name="cmap-class"></a>CMap Class
+A dictionary collection class that maps unique keys to values.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : public CObject  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `KEY`  
- 用作到映射的键的对象类。  
+ Class of the object used as the key to the map.  
   
  `ARG` *_* `KEY`  
- 数据类型用于`KEY`自变量; 通常指`KEY`。  
+ Data type used for `KEY` arguments; usually a reference to `KEY`.  
   
  `VALUE`  
- 存储在映射中的对象类。  
+ Class of the object stored in the map.  
   
  `ARG` *_* `VALUE`  
- 数据类型用于`VALUE`自变量; 通常指`VALUE`。  
+ Data type used for `VALUE` arguments; usually a reference to `VALUE`.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-structures"></a>公共结构  
+### <a name="public-structures"></a>Public Structures  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::CPair](#cpair)|一个包含密钥值和关联的对象的值的嵌套的结构。|  
+|[CMap::CPair](#cpair)|A nested structure containing a key value and the value of the associated object.|  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::CMap](#cmap)|构造键映射到值的集合。|  
+|[CMap::CMap](#cmap)|Constructs a collection that maps keys to values.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::GetCount](#getcount)|在此地图中返回元素的数。|  
-|[CMap::GetHashTableSize](#gethashtablesize)|返回哈希表中的元素数。|  
-|[CMap::GetNextAssoc](#getnextassoc)|获取循环的下一个元素。|  
-|[CMap::GetSize](#getsize)|在此地图中返回元素的数。|  
-|[CMap::GetStartPosition](#getstartposition)|返回的第一个元素的位置。|  
-|[CMap::InitHashTable](#inithashtable)|初始化哈希表，并指定其大小。|  
-|[CMap::IsEmpty](#isempty)|空映射条件 （没有元素） 的测试。|  
-|[CMap::Lookup](#lookup)|查找映射到给定键的值。|  
-|[CMap::PGetFirstAssoc](#pgetfirstassoc)|返回指向第一个元素的指针。|  
-|[CMap::PGetNextAssoc](#pgetnextassoc)|获取一个指向下一个元素的循环。|  
-|[CMap::PLookup](#plookup)|将指针返回到其值与指定的值匹配的键。|  
-|[CMap::RemoveAll](#removeall)|从此映射中移除所有元素。|  
-|[CMap::RemoveKey](#removekey)|移除由键指定的元素。|  
-|[CMap::SetAt](#setat)|将元素插入到映射;如果找到匹配的键，将替换现有元素。|  
+|[CMap::GetCount](#getcount)|Returns the number of elements in this map.|  
+|[CMap::GetHashTableSize](#gethashtablesize)|Returns the number of elements in the hash table.|  
+|[CMap::GetNextAssoc](#getnextassoc)|Gets the next element for iterating.|  
+|[CMap::GetSize](#getsize)|Returns the number of elements in this map.|  
+|[CMap::GetStartPosition](#getstartposition)|Returns the position of the first element.|  
+|[CMap::InitHashTable](#inithashtable)|Initializes the hash table and specifies its size.|  
+|[CMap::IsEmpty](#isempty)|Tests for the empty-map condition (no elements).|  
+|[CMap::Lookup](#lookup)|Looks up the value mapped to a given key.|  
+|[CMap::PGetFirstAssoc](#pgetfirstassoc)|Returns a pointer to the first element.|  
+|[CMap::PGetNextAssoc](#pgetnextassoc)|Gets a pointer to the next element for iterating.|  
+|[CMap::PLookup](#plookup)|Returns a pointer to a key whose value matches the specified value.|  
+|[CMap::RemoveAll](#removeall)|Removes all the elements from this map.|  
+|[CMap::RemoveKey](#removekey)|Removes an element specified by a key.|  
+|[CMap::SetAt](#setat)|Inserts an element into the map; replaces an existing element if a matching key is found.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::operator]](#operator_at)|将元素插入到映射 — 运算符替换`SetAt`。|  
+|[CMap::operator [ ]](#operator_at)|Inserts an element into the map — operator substitution for `SetAt`.|  
   
-## <a name="remarks"></a>备注  
- 一旦已插入到映射的键 / 值对 （元素），你可以高效地检索或删除使用该密钥来访问它的对。 此外可以循环访问映射中的所有元素。  
+## <a name="remarks"></a>Remarks  
+ Once you have inserted a key-value pair (element) into the map, you can efficiently retrieve or delete the pair using the key to access it. You can also iterate over all the elements in the map.  
   
- 类型的变量的**位置**用于对项的备用访问。 你可以使用**位置**"记住"条目和循环通过映射。 你可能会认为此迭代是根据键值; 顺序不存在。 检索元素的序列是不确定的。  
+ A variable of type **POSITION** is used for alternate access to entries. You can use a **POSITION** to "remember" an entry and to iterate through the map. You might think that this iteration is sequential by key value; it is not. The sequence of retrieved elements is indeterminate.  
   
- 全局帮助器函数，此类调用某些成员函数必须进行自定义的大部分使用`CMap`类。 请参阅[集合类帮助器](../../mfc/reference/collection-class-helpers.md)中的宏和全局函数部分`MFC``Reference`。  
+ Certain member functions of this class call global helper functions that must be customized for most uses of the `CMap` class. See [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md) in the Macros and Globals section of the `MFC Reference`.  
   
- `CMap`重写[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)用于支持序列化和转储的其元素。 如果映射存储到存档使用`Serialize`，每个地图元素将依次序列化。 默认实现`SerializeElements`帮助器函数执行的位写入。 有关指针集合项的序列化信息派生自`CObject`或其他用户定义类型，请参阅[如何︰ 创建类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。  
+ `CMap` overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) to support serialization and dumping of its elements. If a map is stored to an archive using `Serialize`, each map element is serialized in turn. The default implementation of the `SerializeElements` helper function does a bitwise write. For information about serialization of pointer collection items derived from `CObject` or other user defined types, see [How to: Make a Type-Safe Collection](../../mfc/how-to-make-a-type-safe-collection.md).  
   
- 如果你需要映射 （键和值） 中的各个元素的诊断转储，你必须设置为 1 或更高版本的转储上下文的深度。  
+ If you need a diagnostic dump of the individual elements in the map (the keys and values), you must set the depth of the dump context to 1 or greater.  
   
- 当`CMap`对象被删除，或时删除其元素，键和值都将被删除。  
+ When a `CMap` object is deleted, or when its elements are removed, the keys and values both are removed.  
   
- 映射类派生是类似于列表派生。 请参阅文章[集合](../../mfc/collections.md)有关特殊用途列表类派生的图例。  
+ Map class derivation is similar to list derivation. See the article [Collections](../../mfc/collections.md) for an illustration of the derivation of a special-purpose list class.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMap`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtempl.h  
   
-##  <a name="cmap"></a>CMap::CMap  
- 构造一个空的映射。  
+##  <a name="cmap"></a>  CMap::CMap  
+ Constructs an empty map.  
   
 ```  
 CMap(INT_PTR nBlockSize = 10);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nBlockSize`  
- 指定扩展映射的内存分配粒度。  
+ Specifies the memory-allocation granularity for extending the map.  
   
-### <a name="remarks"></a>备注  
- 随着映射后，内存分配的单位`nBlockSize`条目。  
+### <a name="remarks"></a>Remarks  
+ As the map grows, memory is allocated in units of `nBlockSize` entries.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCollections # 56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="cpair"></a>CMap::CPair  
- 包含一个密钥值和关联的对象的值。  
+##  <a name="cpair"></a>  CMap::CPair  
+ Contains a key value and the value of the associated object.  
   
-### <a name="remarks"></a>备注  
- 这是在类中的嵌套的结构[CMap](../../mfc/reference/cmap-class.md)。  
+### <a name="remarks"></a>Remarks  
+ This is a nested structure within class [CMap](../../mfc/reference/cmap-class.md).  
   
- 结构组成两个字段︰  
+ The structure is composed of two fields:  
   
-- **密钥**与键类型的实际值。  
+- **key** The actual value of the key type.  
   
-- **值**关联的对象的值。  
+- **value** The value of the associated object.  
   
- 它用于存储中的返回值[CMap::PLookup](#plookup)， [CMap::PGetFirstAssoc](#pgetfirstassoc)，和[CMap::PGetNextAssoc](#pgetnextassoc)。  
+ It is used to store the return values from [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), and [CMap::PGetNextAssoc](#pgetnextassoc).  
   
-### <a name="example"></a>示例  
- 有关用法的一个示例，请参阅示例[CMap::PLookup](#plookup)。  
+### <a name="example"></a>Example  
+ For an example of usage, see the example for [CMap::PLookup](#plookup).  
   
-##  <a name="getcount"></a>CMap::GetCount  
- 检索映射中的元素的数目。  
+##  <a name="getcount"></a>  CMap::GetCount  
+ Retrieves the number of elements in the map.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 元素数量。  
+### <a name="return-value"></a>Return Value  
+ The number of elements.  
   
-### <a name="example"></a>示例  
- 请参阅示例[CMap::Lookup](#lookup)。  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
- 确定地图哈希表中的元素数。  
+##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
+ Determines the number of elements in the hash table for the map.  
   
 ```  
 UINT GetHashTableSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 哈希表中的元素数。  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the hash table.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCollections # 57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
- 检索处的地图元素`rNextPosition`，然后更新`rNextPosition`来引用映射中的下一个元素。  
+##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
+ Retrieves the map element at `rNextPosition`, then updates `rNextPosition` to refer to the next element in the map.  
   
 ```  
 void GetNextAssoc(
@@ -212,168 +226,168 @@ void GetNextAssoc(
     VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rNextPosition`  
- 指定对引用**位置**通过前一个返回值`GetNextAssoc`或`GetStartPosition`调用。  
+ Specifies a reference to a **POSITION** value returned by a previous `GetNextAssoc` or `GetStartPosition` call.  
   
- *密钥*  
- 指定地图的键的类型的模板参数。  
+ *KEY*  
+ Template parameter specifying the type of the map's key.  
   
  `rKey`  
- 指定检索的元素返回的密钥。  
+ Specifies the returned key of the retrieved element.  
   
- *值*  
- 指定地图的值的类型的模板参数。  
+ *VALUE*  
+ Template parameter specifying the type of the map's value.  
   
  `rValue`  
- 指定检索的元素的返回的值。  
+ Specifies the returned value of the retrieved element.  
   
-### <a name="remarks"></a>备注  
- 此函数是最适用于循环访问映射中的所有元素。 请注意，位置序列不一定是相同的密钥值序列。  
+### <a name="remarks"></a>Remarks  
+ This function is most useful for iterating through all the elements in the map. Note that the position sequence is not necessarily the same as the key value sequence.  
   
- 如果检索的元素的是在映射中，最后然后的新值`rNextPosition`设置为**NULL**。  
+ If the retrieved element is the last in the map, then the new value of `rNextPosition` is set to **NULL**.  
   
-### <a name="example"></a>示例  
- 请参阅示例[CMap::SetAt](#setat)。  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="getsize"></a>CMap::GetSize  
- 返回地图元素的数。  
+##  <a name="getsize"></a>  CMap::GetSize  
+ Returns the number of map elements.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 在映射中的项的数目。  
+### <a name="return-value"></a>Return Value  
+ The number of items in the map.  
   
-### <a name="remarks"></a>备注  
- 调用此方法以检索在映射中的元素的数目。  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the map.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCollections # 58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CMap::GetStartPosition  
- 通过返回启动映射迭代**位置**值，可以传递给`GetNextAssoc`调用。  
+##  <a name="getstartposition"></a>  CMap::GetStartPosition  
+ Starts a map iteration by returning a **POSITION** value that can be passed to a `GetNextAssoc` call.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- A**位置**值，该值指示来循环映射; 的起始位置或**NULL**如果映射为空。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that indicates a starting position for iterating the map; or **NULL** if the map is empty.  
   
-### <a name="remarks"></a>备注  
- 迭代序列是不可预测的;因此，"映射中的第一个元素"必须没有特别的意义。  
+### <a name="remarks"></a>Remarks  
+ The iteration sequence is not predictable; therefore, the "first element in the map" has no special significance.  
   
-### <a name="example"></a>示例  
- 请参阅示例[CMap::SetAt](#setat)。  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="inithashtable"></a>CMap::InitHashTable  
- 初始化哈希表。  
+##  <a name="inithashtable"></a>  CMap::InitHashTable  
+ Initializes the hash table.  
   
 ```  
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hashSize`  
- 哈希表中的条目数。  
+ Number of entries in the hash table.  
   
  `bAllocNow`  
- 如果**TRUE**，分配哈希表初始化; 在需要时否则分配表。  
+ If **TRUE**, allocates the hash table upon initialization; otherwise the table is allocated when needed.  
   
-### <a name="remarks"></a>备注  
- 为了获得最佳性能，哈希表大小应为质数。 为了尽量减少冲突，则大小应为大致大于最大预期的数据集的 20%。  
+### <a name="remarks"></a>Remarks  
+ For best performance, the hash table size should be a prime number. To minimize collisions, the size should be roughly 20 percent larger than the largest anticipated data set.  
   
-### <a name="example"></a>示例  
- 请参阅示例[CMap::Lookup](#lookup)。  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="isempty"></a>CMap::IsEmpty  
- 确定是否映射为空。  
+##  <a name="isempty"></a>  CMap::IsEmpty  
+ Determines whether the map is empty.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果此映射不包含任何元素; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this map contains no elements; otherwise 0.  
   
-### <a name="example"></a>示例  
- 请参阅示例[CMap::RemoveAll](#removeall)。  
+### <a name="example"></a>Example  
+ See the example for [CMap::RemoveAll](#removeall).  
   
-##  <a name="lookup"></a>CMap::Lookup  
- 查找映射到给定键的值。  
+##  <a name="lookup"></a>  CMap::Lookup  
+ Looks up the value mapped to a given key.  
   
 ```  
 BOOL Lookup(ARG_KEY key, VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- 指定的类型的模板参数`key`值。  
+ Template parameter specifying the type of the `key` value.  
   
  `key`  
- 指定标识要查找的元素的键。  
+ Specifies the key that identifies the element to be looked up.  
   
- *值*  
- 指定要查找的值的类型。  
+ *VALUE*  
+ Specifies the type of the value to be looked up.  
   
  `rValue`  
- 接收的查阅到值。  
+ Receives the looked-up value.  
   
-### <a name="return-value"></a>返回值  
- 如果该元素; 如果未找到则不为否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the element was found; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- `Lookup`使用哈希算法来快速查找与给定的键完全匹配的密钥的地图元素。  
+### <a name="remarks"></a>Remarks  
+ `Lookup` uses a hashing algorithm to quickly find the map element with a key that exactly matches the given key.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCollections # 58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>CMap::operator]  
- 一个方便替换`SetAt`成员函数。  
+##  <a name="operator_at"></a>  CMap::operator [ ]  
+ A convenient substitute for the `SetAt` member function.  
   
 ```  
 VALUE& operator[](arg_key key);
 ```  
   
-### <a name="parameters"></a>参数  
- *值*  
- 指定的映射值的类型的模板参数。  
+### <a name="parameters"></a>Parameters  
+ *VALUE*  
+ Template parameter specifying the type of the map value.  
   
  `ARG_KEY`  
- 指定的密钥值的类型的模板参数。  
+ Template parameter specifying the type of the key value.  
   
  `key`  
- 用于从映射中检索的值的键。  
+ The key used to retrieve the value from the map.  
   
-### <a name="remarks"></a>备注  
- 因此它可以仅在赋值语句 （左值） 的左侧使用。 如果没有地图元素与指定的键，则会创建一个新的元素。  
+### <a name="remarks"></a>Remarks  
+ Thus it can be used only on the left side of an assignment statement (an l-value). If there is no map element with the specified key, then a new element is created.  
   
- 没有等效于此运算符的任何"右侧"（右值），因为一个密钥可能无法找到在映射中的可能。 使用`Lookup`元素检索的成员函数。  
+ There is no "right side" (r-value) equivalent to this operator because there is a possibility that a key may not be found in the map. Use the `Lookup` member function for element retrieval.  
   
-### <a name="example"></a>示例  
- 请参阅示例[CMap::Lookup](#lookup)。  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
- 返回 map 对象的第一个条目。  
+##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
+ Returns the first entry of the map object.  
   
 ```  
 const CPair* PGetFirstAssoc() const; 
 CPair* PGetFirstAssoc();  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向映射; 中的第一个条目请参阅[CMap::CPair](#cpair)。 如果映射不包含任何项，则值是**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first entry in the map; see [CMap::CPair](#cpair). If the map contains no entries, the value is **NULL**.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可返回 map 对象中的第一个元素的指针。  
+### <a name="remarks"></a>Remarks  
+ Call this function to return a pointer the first element in the map object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCollections # 59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
- 检索指向的地图元素`pAssocRec`。  
+##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
+ Retrieves the map element pointed to by `pAssocRec`.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -381,104 +395,104 @@ const CPair *PGetNextAssoc(const CPair* pAssocRet) const;
 CPair *PGetNextAssoc(const CPair* pAssocRet);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pAssocRet*  
- 指向先前返回一个映射条目[PGetNextAssoc](#pgetnextassoc)或[CMap::PGetFirstAssoc](#pgetfirstassoc)调用。  
+ Points to a map entry returned by a previous [PGetNextAssoc](#pgetnextassoc) or [CMap::PGetFirstAssoc](#pgetfirstassoc) call.  
   
-### <a name="return-value"></a>返回值  
- 指向映射; 中的下一个条目请参阅[CMap::CPair](#cpair)。 如果该元素为地图中的最后一个，则值是**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next entry in the map; see [CMap::CPair](#cpair). If the element is the last in the map, the value is **NULL**.  
   
-### <a name="remarks"></a>备注  
- 调用此方法以循环访问映射中的所有元素。 检索通过调用的第一个元素`PGetFirstAssoc`，然后循环访问映射到的连续调用`PGetNextAssoc`。  
+### <a name="remarks"></a>Remarks  
+ Call this method to iterate through all the elements in the map. Retrieve the first element with a call to `PGetFirstAssoc` and then iterate through the map with successive calls to `PGetNextAssoc`.  
   
-### <a name="example"></a>示例  
- 请参阅示例[CMap::PGetFirstAssoc](#pgetfirstassoc)。  
+### <a name="example"></a>Example  
+ See the example for [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="plookup"></a>CMap::PLookup  
- 查找映射到给定键的值。  
+##  <a name="plookup"></a>  CMap::PLookup  
+ Finds the value mapped to a given key.  
   
 ```  
 const CPair* PLookup(ARG_KEY key) const;
 CPair* PLookup(ARG_KEY key);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `key`  
- 要搜索的元素键。  
+ Key for the element to be searched for.  
   
-### <a name="return-value"></a>返回值  
- 指向密钥结构;请参阅[CMap::CPair](#cpair)。 如果不找到任何匹配项，则`CMap::PLookup`返回`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a key structure; see [CMap::CPair](#cpair). If no match is found, `CMap::PLookup` returns `NULL`.  
   
-### <a name="remarks"></a>备注  
- 调用此方法可搜索的地图元素与给定的键完全匹配的密钥。  
+### <a name="remarks"></a>Remarks  
+ Call this method to search for a map element with a key that exactly matches the given key.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCollections # 60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>CMap::RemoveAll  
- 从此映射中移除所有的值，通过调用全局帮助器函数**DestructElements**。  
+##  <a name="removeall"></a>  CMap::RemoveAll  
+ Removes all the values from this map by calling the global helper function **DestructElements**.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果映射已经为空，该函数能正常工作。  
+### <a name="remarks"></a>Remarks  
+ The function works correctly if the map is already empty.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCollections # 61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>CMap::RemoveKey  
- 查找与提供的键; 相对应的映射条目然后，如果找到该键中, 移除的项。  
+##  <a name="removekey"></a>  CMap::RemoveKey  
+ Looks up the map entry corresponding to the supplied key; then, if the key is found, removes the entry.  
   
 ```  
 BOOL RemoveKey(ARG_KEY key);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- 指定的键类型的模板参数。  
+ Template parameter specifying the type of the key.  
   
  `key`  
- 要移除的元素键。  
+ Key for the element to be removed.  
   
-### <a name="return-value"></a>返回值  
- 如果该条目已成功找到并移除; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the entry was found and successfully removed; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- **DestructElements**帮助器函数用于删除的项。  
+### <a name="remarks"></a>Remarks  
+ The **DestructElements** helper function is used to remove the entry.  
   
-### <a name="example"></a>示例  
- 请参阅示例[CMap::SetAt](#setat)。  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="setat"></a>CMap::SetAt  
- 主要方法将一个元素插入映射中。  
+##  <a name="setat"></a>  CMap::SetAt  
+ The primary means to insert an element in a map.  
   
 ```  
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- 指定的类型的模板参数`key`参数。  
+ Template parameter specifying the type of the `key` parameter.  
   
  `key`  
- 指定新元素的键。  
+ Specifies the key of the new element.  
   
  `ARG_VALUE`  
- 指定的类型的模板参数`newValue`参数。  
+ Template parameter specifying the type of the `newValue` parameter.  
   
  `newValue`  
- 指定新的元素的值。  
+ Specifies the value of the new element.  
   
-### <a name="remarks"></a>备注  
- 首先，查找键。 如果找到该键，则相应的值发生更改;否则创建一个新的键 / 值对。  
+### <a name="remarks"></a>Remarks  
+ First, the key is looked up. If the key is found, then the corresponding value is changed; otherwise a new key-value pair is created.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCollections # 62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例收集](../../visual-cpp-samples.md)   
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)  
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)  
 

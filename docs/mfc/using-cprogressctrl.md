@@ -1,45 +1,64 @@
 ---
-title: "使用 CProgressCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CProgressCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CProgressCtrl 类, using"
-  - "进度控件 [C++]"
-  - "进度控件 [C++], CProgressCtrl"
-  - "进度控件 [C++], using"
+title: Using CProgressCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CProgressCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- progress controls [MFC]
+- CProgressCtrl class [MFC], using
+- progress controls [MFC], CProgressCtrl
+- progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 CProgressCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4ac13a3cf70b84ee271682b6023c188f0fd740c5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-进度栏控件用于指示较长操作的进度。  该控件由一个矩形构成，当操作进行时，该矩形逐渐填充系统突出显示颜色。  
+---
+# <a name="using-cprogressctrl"></a>Using CProgressCtrl
+You can use the progress control to indicate the progress of a lengthy operation. It is a rectangle that is gradually filled with the system highlight color as the operation progresses.  
   
- 进度在 MFC 类由 [CProgressCtrl](../mfc/reference/cprogressctrl-class.md)。  
+ The progress control is represented in MFC by class [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).  
   
- 在最初创建进度时，应指定其大小和位置、父窗口 \(通常对话框 ID.\) 和  通过 `dwStyle` 参数，可以为控件指定不同窗口样式和样式。它如何填充。  
+ When you initially create the progress control, you specify its size and position, parent window (usually a dialog box), and ID. By using the `dwStyle` parameter, you can also specify various window styles for the control and styles for how it fills.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [进度控件的样式](../mfc/styles-for-the-progress-control.md)  
+-   [Styles for the Progress Control](../mfc/styles-for-the-progress-control.md)  
   
--   [进度控件的设置](../mfc/settings-for-the-progress-control.md)  
+-   [Settings for the Progress Control](../mfc/settings-for-the-progress-control.md)  
   
--   [操作进度控件](../mfc/manipulating-the-progress-control.md)  
+-   [Manipulating the Progress Control](../mfc/manipulating-the-progress-control.md)  
   
-## 请参阅  
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

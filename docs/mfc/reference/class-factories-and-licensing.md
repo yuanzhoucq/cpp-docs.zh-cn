@@ -1,5 +1,5 @@
 ---
-title: "类工厂和许可 |Microsoft 文档"
+title: Class Factories and Licensing | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- class factories, and licensing
+- class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
 caps.latest.revision: 13
 author: mikeblome
@@ -33,53 +33,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 17a99edadeb7a5bd923126bce7fbef50313e1867
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0971f2ddbe9bc0efc531c6de5eb54e25f8d66a7a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="class-factories-and-licensing"></a>类工厂和许可
-为了创建 OLE 控件的实例，容器应用程序调用了控件的类工厂的成员函数。 由于控件是实际 OLE 对象，类工厂将负责创建控件的实例。 每个 OLE 控件类必须有一个类工厂。  
+# <a name="class-factories-and-licensing"></a>Class Factories and Licensing
+To create an instance of your OLE control, a container application calls a member function of the control's class factory. Because your control is an actual OLE object, the class factory is responsible for creating instances of your control. Every OLE control class must have a class factory.  
   
- OLE 控件的另一个重要功能是强制使用许可证。 ControlWizard 可让您在控件项目的创建过程中包含授权。 有关控件授权的详细信息，请参阅文章[ActiveX 控件︰ 许可 ActiveX 控件](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)。  
+ Another important feature of OLE controls is their ability to enforce a license. ControlWizard allows you to incorporate licensing during the creation of your control project. For more information on control licensing, see the article [ActiveX Controls: Licensing An ActiveX Control](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
   
- 下表列出了用于声明和实现控件的类工厂以及为控件授权的几个宏和函数。  
+ The following table lists several macros and functions used to declare and implement your control's class factory and to license of your control.  
   
-### <a name="class-factories-and-licensing"></a>类工厂和许可  
+### <a name="class-factories-and-licensing"></a>Class Factories and Licensing  
   
 |||  
 |-|-|  
-|[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|声明 OLE 控件或属性页的类工厂。|  
-|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|实现控件的 `GetClassID` 函数并声明类工厂的实例。|  
-|[BEGIN_OLEFACTORY](#begin_olefactory)|开始任何授权函数的声明。|  
-|[END_OLEFACTORY](#end_olefactory)|结束任何授权函数的声明。|  
-|[AfxVerifyLicFile](#afxverifylicfile)|确认控件是否已获得在特定计算机上使用的授权。|  
+|[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|Declares the class factory for an OLE control or property page.|  
+|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|Implements the control's `GetClassID` function and declares an instance of the class factory.|  
+|[BEGIN_OLEFACTORY](#begin_olefactory)|Begins the declaration of any licensing functions.|  
+|[END_OLEFACTORY](#end_olefactory)|Ends the declaration of any licensing functions.|  
+|[AfxVerifyLicFile](#afxverifylicfile)|Verifies whether a control is licensed for use on a particular computer.|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
- 声明类工厂和`GetClassID`控件类的成员函数。  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
+ Declares a class factory and the `GetClassID` member function of your control class.  
   
 ```   
 DECLARE_OLECREATE_EX(class_name)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 控件类的名称。  
+ The name of the control class.  
   
-### <a name="remarks"></a>备注  
- 在控件类标头文件中的控件，不支持授权使用此宏。  
+### <a name="remarks"></a>Remarks  
+ Use this macro in the control class header file for a control that does not support licensing.  
   
- 请注意此宏提供下面的代码示例相同的目的︰  
+ Note that this macro serves the same purpose as the following code sample:  
   
- [!code-cpp[NVC_MFCAxCtl # 14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
+ [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
-### <a name="requirements"></a>要求  
-  **标头**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
- 实现控件的类工厂和[GetClassID](../../mfc/reference/colecontrol-class.md#getclassid)控件类的成员函数。  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
+ Implements your control's class factory and the [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) member function of your control class.  
   
 ```   
 IMPLEMENT_OLECREATE_EX(
@@ -98,55 +98,55 @@ IMPLEMENT_OLECREATE_EX(
     b8)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 控件属性页类的名称。  
+ The name of the control property page class.  
   
  *external_name*  
- 向应用程序公开的对象名称。  
+ The object name exposed to applications.  
   
- *l、 w1、 w2、 b1、 b2、 b3、 b4、 b5、 b6、 b7、 b8*  
- 类的组件**CLSID**。 有关这些参数的详细信息，请参阅备注[IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
+ *l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8*  
+ Components of the class's **CLSID**. For more information on these parameters, see the Remarks for [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate).  
   
-### <a name="remarks"></a>备注  
- 此宏必须出现在任何使用的控件类的实现文件`DECLARE_OLECREATE_EX`宏或`BEGIN_OLEFACTORY`和`END_OLEFACTORY`宏。 外部名称是向其他应用程序公开 OLE 控件的标识符。 容器使用此名称请求此控件类的对象。  
+### <a name="remarks"></a>Remarks  
+ This macro must appear in the implementation file for any control class that uses the `DECLARE_OLECREATE_EX` macro or the `BEGIN_OLEFACTORY` and `END_OLEFACTORY` macros. The external name is the identifier of the OLE control that is exposed to other applications. Containers use this name to request an object of this control class.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
- 开始你的控件类的标头文件中类工厂的声明。  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
+ Begins the declaration of your class factory in the header file of your control class.  
   
 ``` 
 BEGIN_OLEFACTORY(class_name)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 指定的控件类这是其类工厂的名称。  
+ Specifies the name of the control class whose class factory this is.  
   
-### <a name="remarks"></a>备注  
- 声明的授权函数的类工厂应开始后立即`BEGIN_OLEFACTORY`。  
+### <a name="remarks"></a>Remarks  
+ Declarations of class factory licensing functions should begin immediately after `BEGIN_OLEFACTORY`.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY  
- 结束控件的类工厂的声明。  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
+ Ends the declaration of your control's class factory.  
   
 ```  
 END_OLEFACTORY(class_name)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 这是其类工厂的控件类名称。  
+ The name of the control class whose class factory this is.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
- 调用此函数可验证通过名为的许可证文件`pszLicFileName`对 OLE 控件有效。  
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
+ Call this function to verify that the license file named by `pszLicFileName` is valid for the OLE control.  
   
 ```   
 BOOL AFXAPI AfxVerifyLicFile(
@@ -156,30 +156,30 @@ BOOL AFXAPI AfxVerifyLicFile(
     UINT cch = -1); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hInstance`  
- 与授权控件关联的 DLL 的实例句柄。  
+ The instance handle of the DLL associated with the licensed control.  
   
  `pszLicFileName`  
- 指向以 null 结尾的字符串包含许可证文件名。  
+ Points to a null-terminated character string containing the license filename.  
   
  `pszLicFileContents`  
- 指向一个字节序列，其中必须与许可证文件的开头处的顺序匹配。  
+ Points to a byte sequence that must match the sequence found at the beginning of the license file.  
   
  `cch`  
- 中的字符数`pszLicFileContents`。  
+ Number of characters in `pszLicFileContents`.  
   
-### <a name="return-value"></a>返回值  
- 如果许可证文件存在且开始中的字符序列则不为`pszLicFileContents`; 否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the license file exists and begins with the character sequence in `pszLicFileContents`; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果`cch`为-1，此函数使用︰  
+### <a name="remarks"></a>Remarks  
+ If `cch` is -1, this function uses:  
   
- [!code-cpp[NVC_MFC_Utilities # 36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
-### <a name="requirements"></a>要求  
-  **标头**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
 
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

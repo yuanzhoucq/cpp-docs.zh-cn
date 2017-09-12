@@ -1,11 +1,11 @@
 ---
-title: "COleSafeArray 类 |Microsoft 文档"
+title: COleSafeArray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -41,10 +41,33 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleSafeArray class
-- arrays [C++], safe
-- safe arrays
-- ODBC, safe arrays
+- COleSafeArray [MFC], COleSafeArray
+- COleSafeArray [MFC], AccessData
+- COleSafeArray [MFC], AllocData
+- COleSafeArray [MFC], AllocDescriptor
+- COleSafeArray [MFC], Attach
+- COleSafeArray [MFC], Clear
+- COleSafeArray [MFC], Copy
+- COleSafeArray [MFC], Create
+- COleSafeArray [MFC], CreateOneDim
+- COleSafeArray [MFC], Destroy
+- COleSafeArray [MFC], DestroyData
+- COleSafeArray [MFC], DestroyDescriptor
+- COleSafeArray [MFC], Detach
+- COleSafeArray [MFC], GetByteArray
+- COleSafeArray [MFC], GetDim
+- COleSafeArray [MFC], GetElement
+- COleSafeArray [MFC], GetElemSize
+- COleSafeArray [MFC], GetLBound
+- COleSafeArray [MFC], GetOneDimSize
+- COleSafeArray [MFC], GetUBound
+- COleSafeArray [MFC], Lock
+- COleSafeArray [MFC], PtrOfIndex
+- COleSafeArray [MFC], PutElement
+- COleSafeArray [MFC], Redim
+- COleSafeArray [MFC], ResizeOneDim
+- COleSafeArray [MFC], UnaccessData
+- COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
 caps.latest.revision: 22
 author: mikeblome
@@ -64,151 +87,152 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 3cb6fa49e3adf7e14c34baf7feb64d12e54f2758
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48ea7a57242a87b93349273be0b1e6fb284c7d18
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colesafearray-class"></a>COleSafeArray 类
-与任意类型和维度的数组一起使用的类。  
+# <a name="colesafearray-class"></a>COleSafeArray Class
+A class for working with arrays of arbitrary type and dimension.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleSafeArray : public tagVARIANT  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleSafeArray::COleSafeArray](#colesafearray)|构造 `COleSafeArray` 对象。|  
+|[COleSafeArray::COleSafeArray](#colesafearray)|Constructs a `COleSafeArray` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleSafeArray::AccessData](#accessdata)|检索指向数组数据的指针。|  
-|[COleSafeArray::AllocData](#allocdata)|为数组分配内存。|  
-|[COleSafeArray::AllocDescriptor](#allocdescriptor)|为安全数组描述符分配内存。|  
-|[COleSafeArray::Attach](#attach)|使现有可以控制**VARIANT**数组`COleSafeArray`对象。|  
-|[COleSafeArray::Clear](#clear)|释放基础中的所有数据**VARIANT**。|  
-|[COleSafeArray::Copy](#copy)|创建现有数组的副本。|  
-|[COleSafeArray::Create](#create)|创建一个安全的数组。|  
-|[COleSafeArray::CreateOneDim](#createonedim)|创建一维`COleSafeArray`对象。|  
-|[COleSafeArray::Destroy](#destroy)|会破坏现有的数组。|  
-|[COleSafeArray::DestroyData](#destroydata)|会破坏安全数组中的数据。|  
-|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|销毁安全数组的描述符。|  
-|[COleSafeArray::Detach](#detach)|分离**VARIANT**数组`COleSafeArray`对象 （以便不会释放数据）。|  
-|[COleSafeArray::GetByteArray](#getbytearray)|将复制到的安全数组的内容[CByteArray](../../mfc/reference/cbytearray-class.md)。|  
-|[COleSafeArray::GetDim](#getdim)|返回数组中的维数。|  
-|[COleSafeArray::GetElement](#getelement)|检索安全数组的单一元素。|  
-|[COleSafeArray::GetElemSize](#getelemsize)|返回的大小，以字节为单位的安全数组中的一个元素。|  
-|[COleSafeArray::GetLBound](#getlbound)|返回为任何维度安全数组的下限。|  
-|[COleSafeArray::GetOneDimSize](#getonedimsize)|返回的元素数中的一维`COleSafeArray`对象。|  
-|[COleSafeArray::GetUBound](#getubound)|返回的安全数组的任何维度的上限。|  
-|[COleSafeArray::Lock](#lock)|一个数组中的锁计数递增&1; 并将指向数组数据的指针放在数组描述符。|  
-|[COleSafeArray::PtrOfIndex](#ptrofindex)|返回指向已索引的元素的指针。|  
-|[COleSafeArray::PutElement](#putelement)|将单个元素分配到数组。|  
-|[COleSafeArray::Redim](#redim)|更改安全数组的最低有效 （最右边） 绑定。|  
-|[COleSafeArray::ResizeOneDim](#resizeonedim)|一维中的元素数更改`COleSafeArray`对象。|  
-|[COleSafeArray::UnaccessData](#unaccessdata)|减少锁计数数组的并使无效检索指针`AccessData`。|  
-|[COleSafeArray::Unlock](#unlock)|减少锁计数的一个数组，以便可以释放或调整其大小。|  
+|[COleSafeArray::AccessData](#accessdata)|Retrieves a pointer to the array data.|  
+|[COleSafeArray::AllocData](#allocdata)|Allocates memory for the array.|  
+|[COleSafeArray::AllocDescriptor](#allocdescriptor)|Allocates memory for the safe array descriptor.|  
+|[COleSafeArray::Attach](#attach)|Gives control of the existing **VARIANT** array to the `COleSafeArray` object.|  
+|[COleSafeArray::Clear](#clear)|Frees all data in the underlying **VARIANT**.|  
+|[COleSafeArray::Copy](#copy)|Creates a copy of an existing array.|  
+|[COleSafeArray::Create](#create)|Creates a safe array.|  
+|[COleSafeArray::CreateOneDim](#createonedim)|Creates a one-dimensional `COleSafeArray` object.|  
+|[COleSafeArray::Destroy](#destroy)|Destroys an existing array.|  
+|[COleSafeArray::DestroyData](#destroydata)|Destroys data in a safe array.|  
+|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|Destroys a descriptor of a safe array.|  
+|[COleSafeArray::Detach](#detach)|Detaches the **VARIANT** array from the `COleSafeArray` object (so that the data will not be freed).|  
+|[COleSafeArray::GetByteArray](#getbytearray)|Copies the contents of the safe array into a [CByteArray](../../mfc/reference/cbytearray-class.md).|  
+|[COleSafeArray::GetDim](#getdim)|Returns the number of dimensions in the array.|  
+|[COleSafeArray::GetElement](#getelement)|Retrieves a single element of the safe array.|  
+|[COleSafeArray::GetElemSize](#getelemsize)|Returns the size, in bytes, of one element in a safe array.|  
+|[COleSafeArray::GetLBound](#getlbound)|Returns the lower bound for any dimension of a safe array.|  
+|[COleSafeArray::GetOneDimSize](#getonedimsize)|Returns the number of elements in the one-dimensional `COleSafeArray` object.|  
+|[COleSafeArray::GetUBound](#getubound)|Returns the upper bound for any dimension of a safe array.|  
+|[COleSafeArray::Lock](#lock)|Increments the lock count of an array and places a pointer to the array data in the array descriptor.|  
+|[COleSafeArray::PtrOfIndex](#ptrofindex)|Returns a pointer to the indexed element.|  
+|[COleSafeArray::PutElement](#putelement)|Assigns a single element into the array.|  
+|[COleSafeArray::Redim](#redim)|Changes the least significant (rightmost) bound of a safe array.|  
+|[COleSafeArray::ResizeOneDim](#resizeonedim)|Changes the number of elements in a one-dimensional `COleSafeArray` object.|  
+|[COleSafeArray::UnaccessData](#unaccessdata)|Decrements the lock count of an array and invalidates the pointer retrieved by `AccessData`.|  
+|[COleSafeArray::Unlock](#unlock)|Decrements the lock count of an array so it can be freed or resized.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|访问基础**VARIANT**结构`COleSafeArray`对象。|  
-|[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|访问基础**VARIANT**结构`COleSafeArray`对象。|  
-|[COleSafeArray::operator =](#operator_eq)|将值插入复制`COleSafeArray`对象 ( **SAFEARRAY**， **VARIANT**， `COleVariant`，或`COleSafeArray`数组)。|  
-|[COleSafeArray::operator = =](#operator_eq_eq)|比较两个变体的数组 ( **SAFEARRAY**，**变体**， `COleVariant`，或`COleSafeArray`数组)。|  
-|[COleSafeArray::operator&lt;&lt;](#operator_lt_lt)|输出的内容`COleSafeArray`转储上下文的对象。|  
+|[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Accesses the underlying **VARIANT** structure of the `COleSafeArray` object.|  
+|[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Accesses the underlying **VARIANT** structure of the `COleSafeArray` object.|  
+|[COleSafeArray::operator =](#operator_eq)|Copies values into a `COleSafeArray` object ( **SAFEARRAY**, **VARIANT**, `COleVariant`, or `COleSafeArray` array).|  
+|[COleSafeArray::operator ==](#operator_eq_eq)|Compares two variant arrays ( **SAFEARRAY**, **VARIANT**, `COleVariant`, or `COleSafeArray` arrays).|  
+|[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|Outputs the contents of a `COleSafeArray` object to the dump context.|  
   
-## <a name="remarks"></a>备注  
- `COleSafeArray`派生自 OLE **VARIANT**结构。 OLE **SAFEARRAY**成员函数是可通过`COleSafeArray`以及为一组的成员函数专为字节的一维数组。  
+## <a name="remarks"></a>Remarks  
+ `COleSafeArray` derives from the OLE **VARIANT** structure. The OLE **SAFEARRAY** member functions are available through `COleSafeArray`, as well as a set of member functions specifically designed for one-dimensional arrays of bytes.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `tagVARIANT`  
   
  `COleSafeArray`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-##  <a name="accessdata"></a>COleSafeArray::AccessData  
- 检索指向数组数据的指针。  
+##  <a name="accessdata"></a>  COleSafeArray::AccessData  
+ Retrieves a pointer to the array data.  
   
 ```  
 void AccessData(void** ppvData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ppvData`  
- 指向数组数据的指针指向的指针。  
+ A pointer to a pointer to the array data.  
   
-### <a name="remarks"></a>备注  
- 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&26;](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#26](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
   
-##  <a name="allocdata"></a>COleSafeArray::AllocData  
- 为安全数组分配内存。  
+##  <a name="allocdata"></a>  COleSafeArray::AllocData  
+ Allocates memory for a safe array.  
   
 ```  
 void AllocData();
 ```  
   
-### <a name="remarks"></a>备注  
- 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor  
- 为安全数组的描述符分配内存。  
+##  <a name="allocdescriptor"></a>  COleSafeArray::AllocDescriptor  
+ Allocates memory for the descriptor of a safe array.  
   
 ```  
 void AllocDescriptor(DWORD dwDims);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwDims`  
- 安全数组中的维度数。  
+ Number of dimensions in the safe array.  
   
-### <a name="remarks"></a>备注  
- 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="attach"></a>COleSafeArray::Attach  
- 在现有的数据将控制权**VARIANT**数组`COleSafeArray`对象。  
+##  <a name="attach"></a>  COleSafeArray::Attach  
+ Gives control of the data in an existing **VARIANT** array to the `COleSafeArray` object.  
   
 ```  
 void Attach(VARIANT& varSrc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *varSrc*  
- 一个**VARIANT**对象。 *VarSrc*参数都必须具有[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)**VT_ARRAY**。  
+ A **VARIANT** object. The *varSrc* parameter must have the [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)**VT_ARRAY**.  
   
-### <a name="remarks"></a>备注  
- 源**VARIANT**的类型设置为`VT_EMPTY`。 如果有的话，此函数将清除当前数组数据。  
+### <a name="remarks"></a>Remarks  
+ The source **VARIANT**'s type is set to `VT_EMPTY`. This function clears the current array data, if any.  
   
-### <a name="example"></a>示例  
-  请参阅示例[COleSafeArray::AccessData](#accessdata)。  
+### <a name="example"></a>Example  
+  See the example for [COleSafeArray::AccessData](#accessdata).  
   
-##  <a name="clear"></a>COleSafeArray::Clear  
- 清除安全数组。  
+##  <a name="clear"></a>  COleSafeArray::Clear  
+ Clears the safe array.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>备注  
- 函数通过设置清除安全数组`VARTYPE`对象与`VT_EMPTY`。 发布的当前内容和数组将被释放。  
+### <a name="remarks"></a>Remarks  
+ The function clears a safe array by setting the `VARTYPE` of the object to `VT_EMPTY`. The current contents are released and the array is freed.  
   
-##  <a name="colesafearray"></a>COleSafeArray::COleSafeArray  
- 构造 `COleSafeArray` 对象。  
+##  <a name="colesafearray"></a>  COleSafeArray::COleSafeArray  
+ Constructs a `COleSafeArray` object.  
   
 ```  
 COleSafeArray();
@@ -229,43 +253,43 @@ COleSafeArray(const VARIANT& varSrc);
 COleSafeArray(const COleVariant& varSrc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `saSrc`  
- 现有`COleSafeArray`对象或**SAFEARRAY**要复制到新`COleSafeArray`对象。  
+ An existing `COleSafeArray` object or **SAFEARRAY** to be copied into the new `COleSafeArray` object.  
   
  `vtSrc`  
- **VARTYPE**新`COleSafeArray`对象。  
+ The **VARTYPE** of the new `COleSafeArray` object.  
   
  `psaSrc`  
- 一个指向**SAFEARRAY**要复制到新`COleSafeArray`对象。  
+ A pointer to a **SAFEARRAY** to be copied into the new `COleSafeArray` object.  
   
  *varSrc*  
- 现有**VARIANT**或`COleVariant`对象复制到新`COleSafeArray`对象。  
+ An existing **VARIANT** or `COleVariant` object to be copied into the new `COleSafeArray` object.  
   
  `pSrc`  
- 一个指向**VARIANT**对象复制到新`COleSafeArray`对象。  
+ A pointer to a **VARIANT** object to be copied into the new `COleSafeArray` object.  
   
-### <a name="remarks"></a>备注  
- 所有这些构造函数创建新`COleSafeArray`对象。 如果没有任何参数，一个空`COleSafeArray`创建对象 ( `VT_EMPTY`)。 如果`COleSafeArray`复制从另一个数组其[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)称为隐式 ( `COleSafeArray`， `COleVariant`，或**VARIANT**)，则**VARTYPE**的源数组中保留，并且无需指定。 如果`COleSafeArray`复制从另一个数组其**VARTYPE**未知的 ( **SAFEARRAY**)，则**VARTYPE**必须以指定`vtSrc`参数。  
+### <a name="remarks"></a>Remarks  
+ All of these constructors create new `COleSafeArray` objects. If there is no parameter, an empty `COleSafeArray` object is created ( `VT_EMPTY`). If the `COleSafeArray` is copied from another array whose [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) is known implicitly (a `COleSafeArray`, `COleVariant`, or **VARIANT**), the **VARTYPE** of the source array is retained and need not be specified. If the `COleSafeArray` is copied from another array whose **VARTYPE** is not known ( **SAFEARRAY**), the **VARTYPE** must be specified in the `vtSrc` parameter.  
   
- 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="copy"></a>COleSafeArray::Copy  
- 创建现有安全数组的副本。  
+##  <a name="copy"></a>  COleSafeArray::Copy  
+ Creates a copy of an existing safe array.  
   
 ```  
 void Copy(LPSAFEARRAY* ppsa);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *ppsa*  
- 指向用于返回新数组描述符中的某个位置的指针。  
+ Pointer to a location in which to return the new array descriptor.  
   
-### <a name="remarks"></a>备注  
- 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="create"></a>COleSafeArray::Create  
- 分配并初始化该数组的数据。  
+##  <a name="create"></a>  COleSafeArray::Create  
+ Allocates and initializes the data for the array.  
   
 ```  
 void Create(
@@ -280,27 +304,27 @@ void Create(
     SAFEARRAYBOUND* rgsabounds);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `vtSrc`  
- 该数组的基类型 (即， **VARTYPE**的数组的每个元素)。 **VARTYPE**被限制为 variant 类型的一个子集。 既不**VT_ARRAY**和**VT_BYREF**标志可设置。 `VT_EMPTY`和**VT_NULL**不是数组的有效基类型。 所有其他类型是合法的。  
+ The base type of the array (that is, the **VARTYPE** of each element of the array). The **VARTYPE** is restricted to a subset of the variant types. Neither the **VT_ARRAY** nor the **VT_BYREF** flag can be set. `VT_EMPTY` and **VT_NULL** are not valid base types for the array. All other types are legal.  
   
  `dwDims`  
- 数组中的维度数。 可进行更改后创建数组时， [Redim](#redim)。  
+ Number of dimensions in the array. This can be changed after the array is created with [Redim](#redim).  
   
  *rgElements*  
- 指向数组的每个维度的数组的元素数的指针。  
+ Pointer to an array of the number of elements for each dimension in the array.  
   
  *rgsabounds*  
- 对某个向量边界 （一个用于每个维度） 的指针为数组分配。  
+ Pointer to a vector of bounds (one for each dimension) to allocate for the array.  
   
-### <a name="remarks"></a>备注  
- 如有必要，则此函数将清除当前数组数据。 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ This function will clear the current array data if necessary. On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&27;](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="createonedim"></a>COleSafeArray::CreateOneDim  
- 创建一个新一维`COleSafeArray`对象。  
+##  <a name="createonedim"></a>  COleSafeArray::CreateOneDim  
+ Creates a new one-dimensional `COleSafeArray` object.  
   
 ```  
 void CreateOneDim(
@@ -310,101 +334,101 @@ void CreateOneDim(
     long nLBound = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `vtSrc`  
- 该数组的基类型 (即， **VARTYPE**的数组的每个元素)。  
+ The base type of the array (that is, the **VARTYPE** of each element of the array).  
   
  `dwElements`  
- 数组中的元素数。 可进行更改后创建数组时， [ResizeOneDim](#resizeonedim)。  
+ Number of elements in the array. This can be changed after the array is created with [ResizeOneDim](#resizeonedim).  
   
  `pvSrcData`  
- 指向要复制到数组的数据的指针。  
+ Pointer to the data to copy into the array.  
   
  *nLBound*  
- 数组的下限。  
+ The lower bound of the array.  
   
-### <a name="remarks"></a>备注  
- 该函数分配和初始化数组，如果复制指定的数据的数据指针`pvSrcData`不是**NULL**。  
+### <a name="remarks"></a>Remarks  
+ The function allocates and initializes the data for the array, copying the specified data if the pointer `pvSrcData` is not **NULL**.  
   
- 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)。  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&28;](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#28](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
   
-##  <a name="destroy"></a>COleSafeArray::Destroy  
- 会破坏现有的数组描述符和数组中的所有数据。  
+##  <a name="destroy"></a>  COleSafeArray::Destroy  
+ Destroys an existing array descriptor and all the data in the array.  
   
 ```  
 void Destroy();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果对象存储在数组中，将释放的每个对象。 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ If objects are stored in the array, each object is released. On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="destroydata"></a>COleSafeArray::DestroyData  
- 会破坏安全数组中的所有数据。  
+##  <a name="destroydata"></a>  COleSafeArray::DestroyData  
+ Destroys all the data in a safe array.  
   
 ```  
 void DestroyData();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果对象存储在数组中，将释放的每个对象。 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ If objects are stored in the array, each object is released. On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="destroydescriptor"></a>COleSafeArray::DestroyDescriptor  
- 销毁安全数组的描述符。  
+##  <a name="destroydescriptor"></a>  COleSafeArray::DestroyDescriptor  
+ Destroys a descriptor of a safe array.  
   
 ```  
 void DestroyDescriptor();
 ```  
   
-### <a name="remarks"></a>备注  
- 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="detach"></a>COleSafeArray::Detach  
- 分离**VARIANT**中的数据`COleSafeArray`对象。  
+##  <a name="detach"></a>  COleSafeArray::Detach  
+ Detaches the **VARIANT** data from the `COleSafeArray` object.  
   
 ```  
 VARIANT Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 基础**VARIANT**中的值`COleSafeArray`对象。  
+### <a name="return-value"></a>Return Value  
+ The underlying **VARIANT** value in the `COleSafeArray` object.  
   
-### <a name="remarks"></a>备注  
- 该函数将安全数组中的数据分离通过设置[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)对象与`VT_EMPTY`。 它是通过调用 Windows 函数中释放数组的调用方负责[VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835)。  
+### <a name="remarks"></a>Remarks  
+ The function detaches the data in a safe array by setting the [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) of the object to `VT_EMPTY`. It is the caller's responsibility to free the array by calling the Windows function [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835).  
   
- 该函数将引发错误时， [COleException](../../mfc/reference/coleexception-class.md)。  
+ On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>示例  
-  请参阅示例[COleSafeArray::PutElement](#putelement)。  
+### <a name="example"></a>Example  
+  See the example for [COleSafeArray::PutElement](#putelement).  
   
-##  <a name="getbytearray"></a>COleSafeArray::GetByteArray  
- 将复制到的安全数组的内容`CByteArray`。  
+##  <a name="getbytearray"></a>  COleSafeArray::GetByteArray  
+ Copies the contents of the safe array into a `CByteArray`.  
   
 ```  
 void GetByteArray(CByteArray& bytes);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bytes`  
- 对引用[CByteArray](../../mfc/reference/cbytearray-class.md)对象。  
+ A reference to a [CByteArray](../../mfc/reference/cbytearray-class.md) object.  
   
-##  <a name="getdim"></a>COleSafeArray::GetDim  
- 返回中的维度数`COleSafeArray`对象。  
+##  <a name="getdim"></a>  COleSafeArray::GetDim  
+ Returns the number of dimensions in the `COleSafeArray` object.  
   
 ```  
 DWORD GetDim();
 ```  
   
-### <a name="return-value"></a>返回值  
- 安全数组中的维度数。  
+### <a name="return-value"></a>Return Value  
+ The number of dimensions in the safe array.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&27;](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="getelement"></a>COleSafeArray::GetElement  
- 检索安全数组的单一元素。  
+##  <a name="getelement"></a>  COleSafeArray::GetElement  
+ Retrieves a single element of the safe array.  
   
 ```  
 void GetElement(
@@ -412,33 +436,33 @@ void GetElement(
     void* pvData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rgIndices`  
- 指向数组的每个维度的索引数组的指针。  
+ Pointer to an array of indexes for each dimension of the array.  
   
  `pvData`  
- 指向要放置该数组的元素的位置的指针。  
+ Pointer to the location to place the element of the array.  
   
-### <a name="remarks"></a>备注  
- 此函数将自动调用 windows 函数`SafeArrayLock`和`SafeArrayUnlock`之前和之后检索的元素。 如果数据元素是字符串、 对象或变量，该函数将元素复制正确的方式。 该参数`pvData`应指向一个较大足够缓冲区包含的元素。  
+### <a name="remarks"></a>Remarks  
+ This function automatically calls the windows functions `SafeArrayLock` and `SafeArrayUnlock` before and after retrieving the element. If the data element is a string, object, or variant, the function copies the element in the correct way. The parameter `pvData` should point to a large enough buffer to contain the element.  
   
- 该函数将引发错误时， [CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
+ On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&29;](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#29](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
   
-##  <a name="getelemsize"></a>COleSafeArray::GetElemSize  
- 检索中的元素的大小`COleSafeArray`对象。  
+##  <a name="getelemsize"></a>  COleSafeArray::GetElemSize  
+ Retrieves the size of an element in a `COleSafeArray` object.  
   
 ```  
 DWORD GetElemSize();
 ```  
   
-### <a name="return-value"></a>返回值  
- 大小 （以字节为单位的安全数组的元素）。  
+### <a name="return-value"></a>Return Value  
+ The size, in bytes, of the elements of a safe array.  
   
-##  <a name="getlbound"></a>COleSafeArray::GetLBound  
- 返回的任何维度的下限`COleSafeArray`对象。  
+##  <a name="getlbound"></a>  COleSafeArray::GetLBound  
+ Returns the lower bound for any dimension of a `COleSafeArray` object.  
   
 ```  
 void GetLBound(
@@ -446,34 +470,34 @@ void GetLBound(
     long* pLBound);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwDim`  
- 要为其获取下限数组维度。  
+ The array dimension for which to get the lower bound.  
   
  *pLBound*  
- 指向要返回下限的位置的指针。  
+ Pointer to the location to return the lower bound.  
   
-### <a name="remarks"></a>备注  
- 该函数将引发错误时， [COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&30;](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#30](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
   
-##  <a name="getonedimsize"></a>COleSafeArray::GetOneDimSize  
- 返回的元素数中的一维`COleSafeArray`对象。  
+##  <a name="getonedimsize"></a>  COleSafeArray::GetOneDimSize  
+ Returns the number of elements in the one-dimensional `COleSafeArray` object.  
   
 ```  
 DWORD GetOneDimSize();
 ```  
   
-### <a name="return-value"></a>返回值  
- 安全的一维数组中的元素数。  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the one-dimensional safe array.  
   
-### <a name="example"></a>示例  
-  请参阅示例[COleSafeArray::CreateOneDim](#createonedim)。  
+### <a name="example"></a>Example  
+  See the example for [COleSafeArray::CreateOneDim](#createonedim).  
   
-##  <a name="getubound"></a>COleSafeArray::GetUBound  
- 返回的安全数组的任何维度的上限。  
+##  <a name="getubound"></a>  COleSafeArray::GetUBound  
+ Returns the upper bound for any dimension of a safe array.  
   
 ```  
 void GetUBound(
@@ -481,52 +505,52 @@ void GetUBound(
     long* pUBound);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwDim`  
- 要为其获取上限的数组维度。  
+ The array dimension for which to get the upper bound.  
   
  *pUBound*  
- 指向要返回上界的位置的指针。  
+ Pointer to the location to return the upper bound.  
   
-### <a name="remarks"></a>备注  
- 该函数将引发错误时， [COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCOleContainer #&31;](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#31](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
   
-##  <a name="lock"></a>COleSafeArray::Lock  
- 数组和数组描述符中的数组数据的指针的位置的锁计数递增。  
+##  <a name="lock"></a>  COleSafeArray::Lock  
+ Increments the lock count of an array and place a pointer to the array data in the array descriptor.  
   
 ```  
 void Lock();
 ```  
   
-### <a name="remarks"></a>备注  
- 错误时，它将引发[COleException](../../mfc/reference/coleexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ On error, it throws a [COleException](../../mfc/reference/coleexception-class.md).  
   
- 数组描述符中的指针的有效截止`Unlock`调用。 调用`Lock`可以嵌套; 相同数目的求助电话`Unlock`所需。  
+ The pointer in the array descriptor is valid until `Unlock` is called. Calls to `Lock` can be nested; an equal number of calls to `Unlock` are required.  
   
- 当锁定时，不能删除数组。  
+ An array cannot be deleted while it is locked.  
   
-##  <a name="operator_lpcvariant"></a>COleSafeArray::operator LPCVARIANT  
- 调用此强制转换运算符来访问基础**VARIANT**此结构`COleSafeArray`对象。  
+##  <a name="operator_lpcvariant"></a>  COleSafeArray::operator LPCVARIANT  
+ Call this casting operator to access the underlying **VARIANT** structure for this `COleSafeArray` object.  
   
 ```  
 operator LPCVARIANT() const;  
 ```  
   
-##  <a name="operator_lpvariant"></a>COleSafeArray::operator LPVARIANT  
- 调用此强制转换运算符来访问基础**VARIANT**此结构`COleSafeArray`对象。  
+##  <a name="operator_lpvariant"></a>  COleSafeArray::operator LPVARIANT  
+ Call this casting operator to access the underlying **VARIANT** structure for this `COleSafeArray` object.  
   
 ```  
 operator LPVARIANT();
 ```   
   
-### <a name="remarks"></a>备注  
- 请注意，更改中的值**VARIANT**访问此函数返回的指针的结构将此值更改`COleSafeArray`对象。  
+### <a name="remarks"></a>Remarks  
+ Note that changing the value in the **VARIANT** structure accessed by the pointer returned by this function will change the value of this `COleSafeArray` object.  
   
-##  <a name="operator_eq"></a>COleSafeArray::operator =  
- 这些重载的赋值运算符将源值复制到此`COleSafeArray`对象。  
+##  <a name="operator_eq"></a>  COleSafeArray::operator =  
+ These overloaded assignment operators copy the source value into this `COleSafeArray` object.  
   
 ```  
 COleSafeArray& operator=(const COleSafeArray& saSrc);  
@@ -535,17 +559,17 @@ COleSafeArray& operator=(const VARIANT& varSrc);
 COleSafeArray& operator=(const COleVariant& varSrc);
 ```  
   
-### <a name="remarks"></a>备注  
- 每个运算符的简要说明如下所示︰  
+### <a name="remarks"></a>Remarks  
+ A brief description of each operator follows:  
   
-- **运算符 = (** *saSrc* **)**将复制的现有`COleSafeArray`到此对象的对象。  
+- **operator =(** *saSrc* **)** Copies an existing `COleSafeArray` object into this object.  
   
-- **运算符 = (** *varSrc***)**将复制的现有**VARIANT**或`COleVariant`到此对象的数组。  
+- **operator =(** *varSrc***)** Copies an existing **VARIANT** or `COleVariant` array into this object.  
   
-- **运算符 = (** `pSrc` **)**副本**VARIANT**数组对象访问`pSrc`到此对象。  
+- **operator =(** `pSrc` **)** Copies the **VARIANT** array object accessed by `pSrc` into this object.  
   
-##  <a name="operator_eq_eq"></a>COleSafeArray::operator = =  
- 此运算符比较两个数组 ( **SAFEARRAY**， **VARIANT**， `COleVariant`，或`COleSafeArray`数组)，并返回非零，如果它们相等; 否则为 0。  
+##  <a name="operator_eq_eq"></a>  COleSafeArray::operator ==  
+ This operator compares two arrays ( **SAFEARRAY**, **VARIANT**, `COleVariant`, or `COleSafeArray` arrays) and returns nonzero if they are equal; otherwise 0.  
   
 ```  
 BOOL operator==(const SAFEARRAY& saSrc) const;  BOOL operator==(LPCSAFEARRAY pSrc) const;  
@@ -561,15 +585,16 @@ BOOL operator==(LPCVARIANT pSrc) const;  BOOL operator==(const COleVariant& varS
  The `COleSafeArray` insertion (<<) operator supports diagnostic dumping and storing of a `COleSafeArray` object to an archive.  
   
 ```  
-CDumpContext & AFXAPI 运算符<( CDumpContext& dc, cdumpcontext&=""></( CDumpContext& dc,>  
-    COleSafeArray & saSrc）;
+CDumpContext& AFXAPI operator<<( CDumpContext& dc,  
+    COleSafeArray& saSrc);
 ```  
   
 ##  <a name="ptrofindex"></a>  COleSafeArray::PtrOfIndex  
  Returns a pointer to the element specified by the index values.  
   
 ```  
-void PtrOfIndex (长*rgIndices，void** ppvData);
+void PtrOfIndex( long* rgIndices,  
+    void** ppvData);
 ```  
   
 ### Parameters  
@@ -583,7 +608,8 @@ void PtrOfIndex (长*rgIndices，void** ppvData);
  Assigns a single element into the array.  
   
 ```  
-void PutElement (长*rgIndices，void* pvData);
+void PutElement( long* rgIndices,  
+    void* pvData);
 ```  
   
 ### Parameters  
@@ -607,7 +633,7 @@ void PutElement (长*rgIndices，void* pvData);
  Changes the least significant (rightmost) bound of a safe array.  
   
 ```  
-void Redim (SAFEARRAYBOUND * psaboundNew);
+void Redim(SAFEARRAYBOUND* psaboundNew);
 ```  
   
 ### Parameters  
@@ -621,7 +647,7 @@ void Redim (SAFEARRAYBOUND * psaboundNew);
  Changes the number of elements in a one-dimensional `COleSafeArray` object.  
   
 ```  
-void ResizeOneDim (DWORD dwElements);
+void ResizeOneDim(DWORD dwElements);
 ```  
   
 ### Parameters  

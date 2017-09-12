@@ -1,93 +1,112 @@
 ---
-title: "TN003：将 Windows 句柄映射到对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mapping"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "句柄映射"
-  - "映射, 针对对象的 Windows 句柄"
-  - "TN003"
-  - "针对对象的 Windows 句柄 [C++]"
+title: 'TN003: Mapping of Windows Handles to Objects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mapping
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN003
+- handle maps
+- Windows handles to objects [MFC]
+- mappings [MFC]], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# TN003：将 Windows 句柄映射到对象
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b1ae730c803bd8c8e4e3f5c5a700ccfb52fb738e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-此注释说明映射支持窗口对象句柄到 C\+\+ 对象的 MFC 例程。  
+---
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapping of Windows Handles to Objects
+This note describes the MFC routines that support mapping Windows object handles to C++ objects.  
   
-## 问题  
- 窗口对象由 MFC 类包装窗口对象处理 C\+\+ 对象的各 [HANDLE](http://msdn.microsoft.com/library/windows/desktop/aa383751) 对象通常表示。  将 MFC 类库函数的句柄可以找到包装窗口对象具有特殊句柄的 C\+\+ 对象。  但是，有时对象没有 C\+\+. \+\+ 包装对象，并且这些时系统创建临时对象作为 C\+\+ 包装。  
+## <a name="the-problem"></a>The Problem  
+ Windows objects are typically represented by various [HANDLE](http://msdn.microsoft.com/library/windows/desktop/aa383751) objects The MFC classes wrap Windows object handles with C++ objects. The handle wrapping functions of the MFC class library let you find the C++ object that is wrapping the Windows object that has a particular handle. However, sometimes an object does not have a C++ wrapper object and at these times the system creates a temporary object to act as the C++ wrapper.  
   
- 窗口对象使用以及句柄映射\) 如下所示：  
+ The Windows objects that use handle maps are as follows:  
   
--   HWND \([CWnd](../mfc/reference/cwnd-class.md) 和 `CWnd`派生类\)  
+-   HWND ([CWnd](../mfc/reference/cwnd-class.md) and `CWnd`-derived classes)  
   
--   HDC \([CDC](../mfc/reference/cdc-class.md) 和 `CDC`派生类\)  
+-   HDC ([CDC](../mfc/reference/cdc-class.md) and `CDC`-derived classes)  
   
--   HMENU \([CMenu](../mfc/reference/cmenu-class.md)\)  
+-   HMENU ([CMenu](../mfc/reference/cmenu-class.md))  
   
--   HPEN \([CGdiObject](../mfc/reference/cgdiobject-class.md)\)  
+-   HPEN ([CGdiObject](../mfc/reference/cgdiobject-class.md))  
   
--   HBRUSH \(`CGdiObject`\)  
+-   HBRUSH (`CGdiObject`)  
   
--   HFONT \(`CGdiObject`\)  
+-   HFONT (`CGdiObject`)  
   
--   HBITMAP \(`CGdiObject`\)  
+-   HBITMAP (`CGdiObject`)  
   
--   HPALETTE \(`CGdiObject`\)  
+-   HPALETTE (`CGdiObject`)  
   
--   HRGN \(`CGdiObject`\)  
+-   HRGN (`CGdiObject`)  
   
--   HIMAGELIST \([CImageList](../mfc/reference/cimagelist-class.md)\)  
+-   HIMAGELIST ([CImageList](../mfc/reference/cimagelist-class.md))  
   
--   套接字 \([CSocket](../mfc/reference/csocket-class.md)\)  
+-   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- 将处理对上述任一对象，可以查找通过调用静态方法包装处理 `FromHandle`的 MFC 对象。  例如调用 `hWnd`将 HWND，以下行将返回换行显示 `hWnd`的指针为 `CWnd` :  
+ Given a handle to any one of these objects, you can find the MFC object that wraps the handle by calling the static method `FromHandle`. For example, given an HWND called `hWnd`, the following line will return a pointer to the `CWnd` that wraps `hWnd`:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- 如果 `hWnd` 没有特定的包装对象，临时 `CWnd` 创建一个 `hWnd`包装。  这样就可以从获取所有图柄的有效 C\+\+ 对象。  
+ If `hWnd` does not have a specific wrapper object, a temporary `CWnd` is created to wrap `hWnd`. This makes it possible to obtain a valid C++ object from any handle.  
   
- 在具有包装对象后，则可以从包装类的公共成员变量中检索其处理。  对于 `CWnd`，`m_hWnd` 对象包含该的 HWND。  
+ After you have a wrapper object, you can retrieve its handle from a public member variable of the wrapper class. In the case of a `CWnd`, `m_hWnd` contains the HWND for that object.  
   
-## 附加指向 MFC 对象的句柄  
- 将新创建包装对象的句柄和的句柄窗口对象，可以通过调用 `Attach` 函数将两者关联起来如此示例所示：  
+## <a name="attaching-handles-to-mfc-objects"></a>Attaching Handles to MFC Objects  
+ Given a newly created handle-wrapper object and a handle to a Windows object, you can associate the two by calling the `Attach` function as in this example:  
   
 ```  
 CWnd myWnd;  
-myWnd.Attach(hWnd);  
+myWnd.Attach(hWnd);
 ```  
   
- 这使得关联在 `myWnd` 和 `hWnd`的永久映射的一项。  调用 `CWnd::FromHandle(hWnd)` 将返回指向 `myWnd`。  当 `myWnd` 删除，析构函数通过调用 Windows 函数 [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) 自动销毁 `hWnd`。  如果不希望发生，必须从 `myWnd` 分离 `hWnd`，则销毁之前 `myWnd` \(通常，在离开 `myWnd` 定义\) 的大小时。  `Detach` 方法进行此操作。  
+ This makes an entry in the permanent map associating `myWnd` and `hWnd`. Calling `CWnd::FromHandle(hWnd)` will now return a pointer to `myWnd`. When `myWnd` is deleted, the destructor will automatically destroy `hWnd` by calling the Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) function. If this is not desired, `hWnd` must be detached from `myWnd` before `myWnd` is destroyed (normally when leaving the scope at which `myWnd` was defined). The `Detach` method does this.  
   
 ```  
-myWnd.Detach();  
+myWnd.Detach();
 ```  
   
-## 更多关于临时对象  
- 创建临时对象，只要为没有一个包装 `FromHandle` 对象的句柄。  这些临时对象从他们的句柄分离并由 `DeleteTempMap` 函数删除。  默认方法 [CWinThread::OnIdle](../Topic/CWinThread::OnIdle.md) 自动调用支持临时句柄映射的每一个类的 `DeleteTempMap`。  这意味着您不能假定为临时对象的指针中有效的自点从指针获取函数的退出。  
+## <a name="more-about-temporary-objects"></a>More About Temporary Objects  
+ Temporary objects are created whenever `FromHandle` is given a handle that does not already have a wrapper object. These temporary objects are detached from their handle and deleted by the `DeleteTempMap` functions. By default [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) automatically calls `DeleteTempMap` for each class that supports temporary handle maps. This means that you cannot assume a pointer to a temporary object will be valid past the point of exit from the function where the pointer was obtained.  
   
-## 包装对象和多个线程  
- 临时和永久性对象维护每个线程。  即一线程无法访问其他线程 C\+\+ 的包装对象，这与该测试是临时的或永久的。  
+## <a name="wrapper-objects-and-multiple-threads"></a>Wrapper Objects and Multiple Threads  
+ Both temporary and permanent objects are maintained on a per-thread basis. That is, one thread cannot access another thread's C++ wrapper objects, regardless of whether it is temporary or permanent.  
   
- 要传递一个从线程中的这些对象。另一个，请总是发送它们。这些本机 `HANDLE` 类型。  将 C 文件 . 从一个线程的对象包装到另一个通常导致意外的结果。  
+ To pass these objects from one thread to another, always send them as their native `HANDLE` type. Passing a C++ wrapper object from one thread to another will often cause unexpected results.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

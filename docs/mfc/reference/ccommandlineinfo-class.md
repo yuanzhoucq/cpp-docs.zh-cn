@@ -1,5 +1,5 @@
 ---
-title: "CCommandLineInfo 类 |Microsoft 文档"
+title: CCommandLineInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,12 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCommandLineInfo class
-- command line, parsing
-- parsing, command-line arguments
-- argv argument
-- startup code, parsing command-line arguments
-- application flags [C++]
+- CCommandLineInfo [MFC], CCommandLineInfo
+- CCommandLineInfo [MFC], ParseParam
+- CCommandLineInfo [MFC], m_bRunAutomated
+- CCommandLineInfo [MFC], m_bRunEmbedded
+- CCommandLineInfo [MFC], m_bShowSplash
+- CCommandLineInfo [MFC], m_nShellCommand
+- CCommandLineInfo [MFC], m_strDriverName
+- CCommandLineInfo [MFC], m_strFileName
+- CCommandLineInfo [MFC], m_strPortName
+- CCommandLineInfo [MFC], m_strPrinterName
+- CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
 caps.latest.revision: 21
 author: mikeblome
@@ -50,131 +55,131 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
-ms.openlocfilehash: a5b104e4ad0a0b9ce1933e7d8057f4d0fae46b77
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f54c7bf6e7c0c13028317237b46da41acb357bcd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/21/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccommandlineinfo-class"></a>CCommandLineInfo 类
-辅助在应用程序启动时分析命令行。  
+# <a name="ccommandlineinfo-class"></a>CCommandLineInfo Class
+Aids in parsing the command line at application startup.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCommandLineInfo : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCommandLineInfo::CCommandLineInfo](#ccommandlineinfo)|构造一个默认`CCommandLineInfo`对象。|  
+|[CCommandLineInfo::CCommandLineInfo](#ccommandlineinfo)|Constructs a default `CCommandLineInfo` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCommandLineInfo::ParseParam](#parseparam)|重写此回调以分析各个参数。|  
+|[CCommandLineInfo::ParseParam](#parseparam)|Override this callback to parse individual parameters.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|指示命令行`/Automation`发现选项。|  
-|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|指示命令行`/Embedding`发现选项。|  
-|[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|指示是否应显示初始屏幕。|  
-|[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|表示要处理的 shell 命令。|  
-|[CCommandLineInfo::m_strDriverName](#m_strdrivername)|指示该驱动程序名称在 shell 命令为打印;否则为空。|  
-|[CCommandLineInfo::m_strFileName](#m_strfilename)|指示要打开或打印的文件名称新建或 DDE shell 命令是否为空。|  
-|[CCommandLineInfo::m_strPortName](#m_strportname)|选项指示的端口名称在 shell 命令为打印;否则为空。|  
-|[CCommandLineInfo::m_strPrinterName](#m_strprintername)|指示打印机名称在 shell 命令为打印;否则为空。|  
-|[CCommandLineInfo::m_strRestartIdentifier](#m_strrestartidentifier)|如果重新启动管理器重新启动该应用程序重新启动管理器指示重新启动唯一标识符。|  
+|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Indicates the command-line `/Automation` option was found.|  
+|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Indicates the command-line `/Embedding` option was found.|  
+|[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|Indicates if a splash screen should be shown.|  
+|[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|Indicates the shell command to be processed.|  
+|[CCommandLineInfo::m_strDriverName](#m_strdrivername)|Indicates the driver name if the shell command is Print To; otherwise empty.|  
+|[CCommandLineInfo::m_strFileName](#m_strfilename)|Indicates the file name to be opened or printed; empty if the shell command is New or DDE.|  
+|[CCommandLineInfo::m_strPortName](#m_strportname)|Indicates the port name if the shell command is Print To; otherwise empty.|  
+|[CCommandLineInfo::m_strPrinterName](#m_strprintername)|Indicates the printer name if the shell command is Print To; otherwise empty.|  
+|[CCommandLineInfo::m_strRestartIdentifier](#m_strrestartidentifier)|Indicates the unique restart identifier for the restart manager if the restart manager restarted the application.|  
   
-## <a name="remarks"></a>备注  
- MFC 应用程序通常会创建此类中的本地实例[InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)其应用程序对象的函数。 接着将此对象传递给[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)，它将重复调用[ParseParam](#parseparam)以填充`CCommandLineInfo`对象。 `CCommandLineInfo`接着将对象传递给[CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)来处理的命令行参数和标志。  
+## <a name="remarks"></a>Remarks  
+ An MFC application will typically create a local instance of this class in the [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) function of its application object. This object is then passed to [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline), which repeatedly calls [ParseParam](#parseparam) to fill the `CCommandLineInfo` object. The `CCommandLineInfo` object is then passed to [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand) to handle the command-line arguments and flags.  
   
- 您可以使用此对象将封装的以下命令行选项和参数︰  
+ You can use this object to encapsulate the following command-line options and parameters:  
   
-|命令行参数|执行命令|  
+|Command-line argument|Command executed|  
 |----------------------------|----------------------|  
-|*app*|新文件。|  
-|*应用程序*文件名|打开文件。|  
-|*应用程序*`/p`文件名|打印到默认打印机的文件。|  
-|*应用程序* `/pt` filename 打印机驱动程序端口|打印文件复制到指定的打印机。|  
-|*app*`/dde`|启动和 await DDE 命令。|  
-|*app*`/Automation`|启动为 OLE 自动化服务器。|  
-|*app*`/Embedding`|启动时若要编辑嵌入的 OLE 项。|  
-|*app*`/Register`<br /><br /> *app*`/Regserver`|通知应用程序执行注册的任何任务。|  
-|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|通知应用程序执行任何取消注册任务。|  
+|*app*|New file.|  
+|*app* filename|Open file.|  
+|*app* `/p` filename|Print file to default printer.|  
+|*app* `/pt` filename printer driver port|Print file to the specified printer.|  
+|*app* `/dde`|Start up and await DDE command.|  
+|*app* `/Automation`|Start up as an OLE automation server.|  
+|*app* `/Embedding`|Start up to edit an embedded OLE item.|  
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informs the application to perform any registration tasks.|  
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informs the application to perform any un-registration tasks.|  
   
- 派生新类从`CCommandLineInfo`以处理其他标志和参数值。 重写[ParseParam](#parseparam)来处理新的标志。  
+ Derive a new class from `CCommandLineInfo` to handle other flags and parameter values. Override [ParseParam](#parseparam) to handle the new flags.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CCommandLineInfo`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
- 此构造函数创建`CCommandLineInfo`具有默认值对象。  
+##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo  
+ This constructor creates a `CCommandLineInfo` object with default values.  
   
 ```  
 CCommandLineInfo();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下显示初始屏幕 ( `m_bShowSplash=TRUE`) 和执行在文件菜单上的新建命令 ( `m_nShellCommand` **= NewFile**)。  
+### <a name="remarks"></a>Remarks  
+ The default is to show the splash screen ( `m_bShowSplash=TRUE`) and to execute the New command on the File menu ( `m_nShellCommand`**=NewFile**).  
   
- 应用程序框架将调用[ParseParam](#parseparam)以填充此对象的数据成员。  
+ The application framework calls [ParseParam](#parseparam) to fill data members of this object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
- 指示`/Automation`标志在命令行上找到。  
+##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated  
+ Indicates that the `/Automation` flag was found on the command line.  
   
 ```  
 BOOL m_bRunAutomated;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果`TRUE`，这意味着为 OLE 自动化服务器启动。  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, this means start up as an OLE automation server.  
   
-##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
- 指示`/Embedding`标志在命令行上找到。  
+##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded  
+ Indicates that the `/Embedding` flag was found on the command line.  
   
 ```  
 BOOL m_bRunEmbedded;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果`TRUE`，这意味着启动以进行编辑嵌入的 OLE 项。  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, this means start up for editing an embedded OLE item.  
   
-##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
- 指示应显示初始屏幕。  
+##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash  
+ Indicates that the splash screen should be displayed.  
   
 ```  
 BOOL m_bShowSplash;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果`TRUE`，这意味着初始屏幕，此应用程序应显示在启动过程。 默认实现[ParseParam](#parseparam)将此数据成员设置为`TRUE`如果[m_nShellCommand](#m_nshellcommand)是否等同于`CCommandLineInfo::FileNew`。  
+### <a name="remarks"></a>Remarks  
+ If `TRUE`, this means the splash screen for this application should be displayed during startup. The default implementation of [ParseParam](#parseparam) sets this data member to `TRUE` if [m_nShellCommand](#m_nshellcommand) is equal to `CCommandLineInfo::FileNew`.  
   
-##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
- 指示此实例的应用程序 shell 命令。  
+##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand  
+ Indicates the shell command for this instance of the application.  
   
 ```  
 m_nShellCommand;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此数据成员的类型是以下中定义的枚举的类型`CCommandLineInfo`类。  
+### <a name="remarks"></a>Remarks  
+ The type for this data member is the following enumerated type, which is defined in the `CCommandLineInfo` class.  
   
 ```  
 enum {  
@@ -190,83 +195,83 @@ enum {
     };  
 ```  
   
- 有关这些值的简要说明，请参阅下面的列表。  
+ For a brief description of these values, see the following list.  
   
-- `CCommandLineInfo::FileNew`指示在命令行上找到了任何文件的名称。  
+- `CCommandLineInfo::FileNew` Indicates that no file name was found on the command line.  
   
-- `CCommandLineInfo::FileOpen`表示找在命令行文件名称，但是以下标志未找到命令行上︰ `/p`， `/pt`， `/dde`。  
+- `CCommandLineInfo::FileOpen` Indicates that a file name was found on the command line and that none of the following flags were found on the command line: `/p`, `/pt`, `/dde`.  
   
-- `CCommandLineInfo::FilePrint`指示`/p`标志在命令行上找到。  
+- `CCommandLineInfo::FilePrint` Indicates that the `/p` flag was found on the command line.  
   
-- `CCommandLineInfo::FilePrintTo`指示`/pt`标志在命令行上找到。  
+- `CCommandLineInfo::FilePrintTo` Indicates that the `/pt` flag was found on the command line.  
   
-- `CCommandLineInfo::FileDDE`指示`/dde`标志在命令行上找到。  
+- `CCommandLineInfo::FileDDE` Indicates that the `/dde` flag was found on the command line.  
   
-- `CCommandLineInfo::AppRegister`指示`/Register`或`/Regserver`标志找到命令行上，并要求应用程序以注册。  
+- `CCommandLineInfo::AppRegister` Indicates that the `/Register` or `/Regserver` flag was found on the command line and the application was asked to register.  
   
-- `CCommandLineInfo::AppUnregister`指示`/Unregister`或`/Unregserver`向应用程序已请求取消注册。  
+- `CCommandLineInfo::AppUnregister` Indicates that the `/Unregister` or `/Unregserver` application was asked to unregister.  
   
-- `CCommandLineInfo::RestartByRestartManager`指示重新启动管理器已重新启动该应用程序。  
+- `CCommandLineInfo::RestartByRestartManager` Indicates that the application was restarted by the restart manager.  
   
-- `CCommandLineInfo::FileNothing`关闭新的 MDI 子窗口在启动时显示。 按照设计，应用程序向导生成的 MDI 应用程序在启动时显示的新的子窗口。 若要关闭此功能，应用程序可以使用`CCommandLineInfo::FileNothing`作为外壳命令时，它调用[ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)。 `ProcessShellCommand`由调用`InitInstance( )`所有`CWinApp`派生的类。  
+- `CCommandLineInfo::FileNothing` Turns off the display of a new MDI child window on startup. By design, Application Wizard-generated MDI applications display a new child window on startup. To turn off this feature, an application can use `CCommandLineInfo::FileNothing` as the shell command when it calls [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand` is called by the `InitInstance( )` of all `CWinApp` derived classes.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&55;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
- 在命令行上存储的第三个非标志参数的值。  
+##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName  
+ Stores the value of the third non-flag parameter on the command line.  
   
 ```  
 CString m_strDriverName;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此参数通常是打印到 shell 命令的打印机驱动程序的名称。 默认实现[ParseParam](#parseparam)设置数据成员只有`/pt`标志在命令行上找到。  
+### <a name="remarks"></a>Remarks  
+ This parameter is typically the name of the printer driver for a Print To shell command. The default implementation of [ParseParam](#parseparam) sets this data member only if the `/pt` flag was found on the command line.  
   
-##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
- 在命令行上存储的第一个非标志参数的值。  
+##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName  
+ Stores the value of the first non-flag parameter on the command line.  
   
 ```  
 CString m_strFileName;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此参数通常是文件的要打开的名称。  
+### <a name="remarks"></a>Remarks  
+ This parameter is typically the name of the file to open.  
   
-##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
- 在命令行上存储的第四个非标志参数的值。  
+##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName  
+ Stores the value of the fourth non-flag parameter on the command line.  
   
 ```  
 CString m_strPortName;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此参数通常是打印到 shell 命令的打印机端口的名称。 默认实现[ParseParam](#parseparam)设置数据成员只有`/pt`标志在命令行上找到。  
+### <a name="remarks"></a>Remarks  
+ This parameter is typically the name of the printer port for a Print To shell command. The default implementation of [ParseParam](#parseparam) sets this data member only if the `/pt` flag was found on the command line.  
   
-##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
- 在命令行上存储的第二个非标志参数的值。  
+##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName  
+ Stores the value of the second non-flag parameter on the command line.  
   
 ```  
 CString m_strPrinterName;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此参数通常是打印到 shell 命令的打印机的名称。 默认实现[ParseParam](#parseparam)设置数据成员只有`/pt`标志在命令行上找到。  
+### <a name="remarks"></a>Remarks  
+ This parameter is typically the name of the printer for a Print To shell command. The default implementation of [ParseParam](#parseparam) sets this data member only if the `/pt` flag was found on the command line.  
   
-##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
- 唯一的重新启动命令行上的标识符。  
+##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier  
+ The unique restart identifier on the command line.  
   
 ```  
 CString m_strRestartIdentifier;  
 ```  
   
-### <a name="remarks"></a>备注  
- 重新启动标识符是唯一的应用程序的每个实例。  
+### <a name="remarks"></a>Remarks  
+ The restart identifier is unique for each instance of the application.  
   
- 如果重新启动管理器退出应用程序，并且配置为重新启动它，重新启动管理器会执行的应用程序从命令行中使用的重启标识符作为可选参数中。 当重新启动管理器使用的重启标识符时，该应用程序可以重新打开以前打开的文档，并恢复自动保存文件。  
+ If the restart manager exits the application and is configured to restart it, the restart manager executes the application from the command line with the restart identifier as an optional parameter. When the restart manager uses the restart identifier, the application can reopen the previously open documents and recover autosaved files.  
   
-##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
- 框架调用此函数可分析/解释从命令行的各个参数。 第二个版本不同于第一个只在 Unicode 项目中。  
+##  <a name="parseparam"></a>  CCommandLineInfo::ParseParam  
+ The framework calls this function to parse/interpret individual parameters from the command line. The second version differs from the first only in Unicode projects.  
   
 ```  
 virtual void ParseParam(
@@ -281,44 +286,44 @@ virtual void ParseParam(
     BOOL bLast);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pszParam`  
- 参数或标志。  
+ The parameter or flag.  
   
  *bFlag*  
- 指示是否`pszParam`是参数还是一个标志。  
+ Indicates whether `pszParam` is a parameter or a flag.  
   
  `bLast`  
- 指示这是最后一个参数或在命令行上的标志。  
+ Indicates if this is the last parameter or flag on the command line.  
   
-### <a name="remarks"></a>备注  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)调用`ParseParam`一次为每个参数或在命令行上的标志，传递的参数`pszParam`。 如果该参数的第一个字符是**-**' **/**，则将删除和*bFlag*设置为`TRUE`。 最后一个参数，在分析时`bLast`设置为`TRUE`。  
+### <a name="remarks"></a>Remarks  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) calls `ParseParam` once for each parameter or flag on the command line, passing the argument to `pszParam`. If the first character of the parameter is a ' **-**' or a ' **/**', then it is removed and *bFlag* is set to `TRUE`. When parsing the final parameter, `bLast` is set to `TRUE`.  
   
- 此函数的默认实现将识别以下标志︰ `/p`， `/pt`， `/dde`， `/Automation`，和`/Embedding`下, 表中所示︰  
+ The default implementation of this function recognizes the following flags: `/p`, `/pt`, `/dde`, `/Automation`, and `/Embedding`, as shown in the following table:  
   
-|命令行参数|执行命令|  
+|Command-line argument|Command executed|  
 |----------------------------|----------------------|  
-|*app*|新文件。|  
-|*应用程序*文件名|打开文件。|  
-|*应用程序*`/p`文件名|打印到默认打印机的文件。|  
-|*应用程序* `/pt` filename 打印机驱动程序端口|打印文件复制到指定的打印机。|  
-|*app*`/dde`|启动和 await DDE 命令。|  
-|*app*`/Automation`|启动为 OLE 自动化服务器。|  
-|*app*`/Embedding`|启动时若要编辑嵌入的 OLE 项。|  
-|*app*`/Register`<br /><br /> *app*`/Regserver`|通知应用程序执行注册的任何任务。|  
-|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|通知应用程序执行任何取消注册任务。|  
+|*app*|New file.|  
+|*app* filename|Open file.|  
+|*app* `/p` filename|Print file to default printer.|  
+|*app* `/pt` filename printer driver port|Print file to the specified printer.|  
+|*app* `/dde`|Start up and await DDE command.|  
+|*app* `/Automation`|Start up as an OLE automation server.|  
+|*app* `/Embedding`|Start up to edit an embedded OLE item.|  
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informs the application to perform any registration tasks.|  
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informs the application to perform any un-registration tasks.|  
   
- 此信息存储在[m_bRunAutomated](#m_brunautomated)， [m_bRunEmbedded](#m_brunembedded)，和[m_nShellCommand](#m_nshellcommand)。 标志标记通过以下任一方法正斜杠**/**或连字符**-**。  
+ This information is stored in [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), and [m_nShellCommand](#m_nshellcommand). Flags are marked by either a forward-slash ' **/**' or hyphen ' **-**'.  
   
- 默认实现将放到第一个非标志参数[m_strFileName](#m_strfilename)。 情况下`/pt`标志，默认实现将第二、 第三和第四个非标志参数转换[m_strPrinterName](#m_strprintername)， [m_strDriverName](#m_strdrivername)，和[m_strPortName](#m_strportname)分别。  
+ The default implementation puts the first non-flag parameter into [m_strFileName](#m_strfilename). In the case of the `/pt` flag, the default implementation puts the second, third, and fourth non-flag parameters into [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), and [m_strPortName](#m_strportname), respectively.  
   
- 默认实现还将设置[m_bShowSplash](#m_bshowsplash)到`TRUE`仅对于新文件。 如果是新文件，用户已经采取操作涉及应用程序本身。 在任何其他情况下，包括打开现有文件使用命令行程序，用户执行任何操作涉及直接到该文件。 以文档为中心的角度来看，在不需要宣布启动的应用程序初始屏幕。  
+ The default implementation also sets [m_bShowSplash](#m_bshowsplash) to `TRUE` only in the case of a new file. In the case of a new file, the user has taken action involving the application itself. In any other case, including opening existing files using the shell, the user action involves the file directly. In a document-centric standpoint, the splash screen does not need to announce the application starting up.  
   
- 重写此函数在派生类来处理其他标志和参数值中。  
+ Override this function in your derived class to handle other flag and parameter values.  
   
-## <a name="see-also"></a>另请参阅  
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)   
  [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
 

@@ -1,72 +1,90 @@
 ---
-title: "异常：3.0 版本中对异常宏的修改 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 异常处理, 升级注意事项"
-  - "CATCH 宏"
-  - "异常, 更改了什么"
-  - "THROW_LAST 宏"
+title: 'Exceptions: Changes to Exception Macros in Version 3.0 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ exception handling [MFC], upgrade considerations
+- CATCH macro [MFC]
+- exceptions [MFC], what's changed
+- THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 异常：3.0 版本中对异常宏的修改
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d3046dae0bad83d8fffc98e5c93573c4efb9d919
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-这是一个高级主题。  
+---
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceptions: Changes to Exception Macros in Version 3.0
+This is an advanced topic.  
   
- 在 MFC 3.0 版及更高版本中，异常处理宏已经改为使用 C\+\+ 异常。  本文说明了这些更改将如何影响现有的代码使用宏的行为。  
+ In MFC version 3.0 and later, the exception-handling macros have been changed to use C++ exceptions. This article tells how those changes can affect the behavior of existing code that uses the macros.  
   
- 本文涵盖以下主题：  
+ This article covers the following topics:  
   
--   [异常类型和 CATCH 宏](#_core_exception_types_and_the_catch_macro)  
+-   [Exception types and the CATCH macro](#_core_exception_types_and_the_catch_macro)  
   
--   [重新抛出异常](#_core_re.2d.throwing_exceptions)  
+-   [Re-throwing exceptions](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a> 异常类型和 CATCH 宏  
- MFC 在早期版本中，宏 **CATCH** 使用 MFC 运行时类型信息确定异常类型；异常类型是确定的，也就是说，在 catch 处确定了。  如果有 C\+\+ 异常，而异常类型总是由抛出异常对象的类型处确定。  极少数情况下，这将导致抛出对象的指针与抛出对象的类型的不兼容。  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Exception Types and the CATCH Macro  
+ In earlier versions of MFC, the **CATCH** macro used MFC run-time type information to determine an exception's type; the exception's type is determined, in other words, at the catch site. With C++ exceptions, however, the exception's type is always determined at the throw site by the type of the exception object that is thrown. This will cause incompatibilities in the rare case where the type of the pointer to the thrown object differs from the type of the thrown object.  
   
- 下面的示例阐释了 MFC 3.0 版及早期版本之间的差异造成的结果：  
+ The following example illustrates the consequence of this difference between MFC version 3.0 and earlier versions:  
   
- [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]  
   
- 此代码块在版本 3.0有不同表现，因为控件始终传递给第一个 **catch** 块以匹配异常声明。  抛出表达式表达式的结果。  
+ This code behaves differently in version 3.0 because control always passes to the first **catch** block with a matching exception-declaration. The result of the throw expression  
   
- [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- 抛出**CException\***，即使被构造为**CCustomException**。  在 MFC 2.5 版及更早版本中的**CATCH** 使用 `CObject::IsKindOf` 宏测试运行时的类型。  因为表达式。  
+ is thrown as a **CException\***, even though it is constructed as a **CCustomException**. The **CATCH** macro in MFC versions 2.5 and earlier uses `CObject::IsKindOf` to test the type at run time. Because the expression  
   
- [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
- 为 true，第一个 Catch 块捕捉异常。  在版本 3.0中，使用 C\+\+ 异常实现许多异常处理的宏，第二个 Catch 块与抛出的 `CException`匹配。  
+ is true, the first catch block catches the exception. In version 3.0, which uses C++ exceptions to implement many of the exception-handling macros, the second catch block matches the thrown `CException`.  
   
- 这样的代码很少见。  当异常对象传递到接受**CException\***的另一个函数时，执行“pre\-throw”过程，最后抛出异常。  
+ Code like this is uncommon. It usually appears when an exception object is passed to another function that accepts a generic **CException\***, performs "pre-throw" processing, and finally throws the exception.  
   
- 为了解决此问题，则将函数抛出表达式移到调用代码中，在生成异常时，抛出为编译器所知的实际类型的异常。  
+ To work around this problem, move the throw expression from the function to the calling code and throw an exception of the actual type known to the compiler at the time the exception is generated.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a> 重新抛出异常  
- catch 块不会抛出相同异常的指针。  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Re-Throwing Exceptions  
+ A catch block cannot throw the same exception pointer that it caught.  
   
- 例如，此代码在旧版本有效，但是，在 3.0 版本会有意外结果：  
+ For example, this code was valid in previous versions, but will have unexpected results with version 3.0:  
   
- [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- 使用 catch 块的 **THROW** 删除指针 `e`，因此外部catch 块将接收了无效的指针。  使用 `THROW_LAST` 重新抛出 `e`。  
+ Using **THROW** in the catch block causes the pointer `e` to be deleted, so that the outer catch site will receive an invalid pointer. Use `THROW_LAST` to re-throw `e`.  
   
- 有关更多信息，请参见 [异常：捕获和删除异常](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
+ For more information, see [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-## 请参阅  
- [异常处理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

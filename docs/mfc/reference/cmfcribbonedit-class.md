@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonEdit 类 |Microsoft 文档"
+title: CMFCRibbonEdit Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,7 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonEdit class
+- CMFCRibbonEdit [MFC], CMFCRibbonEdit
+- CMFCRibbonEdit [MFC], CanBeStretched
+- CMFCRibbonEdit [MFC], CMFCRibbonEdit
+- CMFCRibbonEdit [MFC], CopyFrom
+- CMFCRibbonEdit [MFC], CreateEdit
+- CMFCRibbonEdit [MFC], DestroyCtrl
+- CMFCRibbonEdit [MFC], DropDownList
+- CMFCRibbonEdit [MFC], EnableSpinButtons
+- CMFCRibbonEdit [MFC], GetCompactSize
+- CMFCRibbonEdit [MFC], GetEditText
+- CMFCRibbonEdit [MFC], GetIntermediateSize
+- CMFCRibbonEdit [MFC], GetTextAlign
+- CMFCRibbonEdit [MFC], GetWidth
+- CMFCRibbonEdit [MFC], HasCompactMode
+- CMFCRibbonEdit [MFC], HasFocus
+- CMFCRibbonEdit [MFC], HasLargeMode
+- CMFCRibbonEdit [MFC], HasSpinButtons
+- CMFCRibbonEdit [MFC], IsHighlighted
+- CMFCRibbonEdit [MFC], OnAfterChangeRect
+- CMFCRibbonEdit [MFC], OnDraw
+- CMFCRibbonEdit [MFC], OnDrawLabelAndImage
+- CMFCRibbonEdit [MFC], OnDrawOnList
+- CMFCRibbonEdit [MFC], OnEnable
+- CMFCRibbonEdit [MFC], OnHighlight
+- CMFCRibbonEdit [MFC], OnKey
+- CMFCRibbonEdit [MFC], OnLButtonDown
+- CMFCRibbonEdit [MFC], OnLButtonUp
+- CMFCRibbonEdit [MFC], OnRTLChanged
+- CMFCRibbonEdit [MFC], OnShow
+- CMFCRibbonEdit [MFC], Redraw
+- CMFCRibbonEdit [MFC], SetACCData
+- CMFCRibbonEdit [MFC], SetEditText
+- CMFCRibbonEdit [MFC], SetTextAlign
+- CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 caps.latest.revision: 25
 author: mikeblome
@@ -68,92 +101,92 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 03eb96bf971b53a2100e6f93bac2f0641f0298e1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 29bb4a52a17779f4e62a9b528a6d86a78ca3ecef
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 类
-在功能区栏上实现位于编辑控件。  
+# <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit Class
+Implements an edit control that is located on a ribbon bar.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonEdit : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|构造 `CMFCRibbonEdit` 对象。|  
+|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Constructs a `CMFCRibbonEdit` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonEdit::CanBeStretched](#canbestretched)|指示是否的高度`CMFCRibbonEdit`控件可以垂直方向上增加到功能区行的高度。|  
-|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|构造 `CMFCRibbonEdit` 对象。|  
-|[CMFCRibbonEdit::CopyFrom](#copyfrom)|将指定的状态复制`CMFCRibbonEdit`对象与当前`CMFCRibbonEdit`对象。|  
-|[CMFCRibbonEdit::CreateEdit](#createedit)|创建一个新文本框`CMFCRibbonEdit`对象。|  
-|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|销毁`CMFCRibbonEdit`对象。|  
-|[CMFCRibbonEdit::DropDownList](#dropdownlist)|下拉列表框。|  
-|[CMFCRibbonEdit::EnableSpinButtons](#enablespinbuttons)|启用并设置文本框的数值调节钮的范围。|  
-|[CMFCRibbonEdit::GetCompactSize](#getcompactsize)|检索的压缩大小`CFMCRibbonEdit`对象。|  
-|[CMFCRibbonEdit::GetEditText](#getedittext)|检索在文本框中的文本。|  
-|[CMFCRibbonEdit::GetIntermediateSize](#getintermediatesize)|检索的中间大小`CMFCRibbonEdit`对象。|  
-|[CMFCRibbonEdit::GetTextAlign](#gettextalign)|检索文本框中文本的对齐方式。|  
-|[CMFCRibbonEdit::GetWidth](#getwidth)|检索的宽度，以像素为单位的`CMFCRibbonEdit`控件。|  
-|[CMFCRibbonEdit::HasCompactMode](#hascompactmode)|指示是否显示大小调整为`CMFCRibbonEdit`控件均可以是 compact。|  
-|[CMFCRibbonEdit::HasFocus](#hasfocus)|指示是否`CMFCRIbbonEdit`控件具有焦点。|  
-|[CMFCRibbonEdit::HasLargeMode](#haslargemode)|指示是否显示大小调整为`CMFCRibbonEdit`控件可能很大。|  
-|[CMFCRibbonEdit::HasSpinButtons](#hasspinbuttons)|指示文本框是否具有数值调节钮。|  
-|[CMFCRibbonEdit::IsHighlighted](#ishighlighted)|指示是否`CMFCRibbonEdit`突出显示控件。|  
-|[CMFCRibbonEdit::OnAfterChangeRect](#onafterchangerect)|由框架调用时的显示矩形的尺寸`CMFCRibbonEdit`控制的更改。|  
-|[CMFCRibbonEdit::OnDraw](#ondraw)|由框架调用以绘制`CMFCRibbonEdit`控件。|  
-|[CMFCRibbonEdit::OnDrawLabelAndImage](#ondrawlabelandimage)|由框架调用以绘制标签和图像的`CMFCRibbonEdit`控件。|  
-|[CMFCRibbonEdit::OnDrawOnList](#ondrawonlist)|由框架调用以绘制`CMFCRibbonEdit`命令列表框中的控件。|  
-|[CMFCRibbonEdit::OnEnable](#onenable)|由框架调用以启用或禁用`CMFCRibbonEdit`控件。|  
-|[CMFCRibbonEdit::OnHighlight](#onhighlight)|当鼠标指针进入或离开的边界由框架调用`CMFCRibbonEdit`控件。|  
-|[CMFCRibbonEdit::OnKey](#onkey)|由框架调用，当用户按快捷键提示和`CMFCRibbonEdit`控件具有焦点。|  
-|[CMFCRibbonEdit::OnLButtonDown](#onlbuttondown)|由框架调用以更新`CMFCRibbonEdit`控制当用户按鼠标左键在控件上。|  
-|[CMFCRibbonEdit::OnLButtonUp](#onlbuttonup)|在用户释放鼠标左键时由框架调用。|  
-|[CMFCRibbonEdit::OnRTLChanged](#onrtlchanged)|由框架调用以更新`CMFCRibbonEdit`控制布局时更改方向。|  
-|[CMFCRibbonEdit::OnShow](#onshow)|由框架调用以显示或隐藏`CMFCRibbonEdit`控件。|  
-|[CMFCRibbonEdit::Redraw](#redraw)|更新的显示`CMFCRibbonEdit`控件。|  
-|[CMFCRibbonEdit::SetACCData](#setaccdata)|设置的可访问性数据`CMFCRibbonEdit`对象。|  
-|[CMFCRibbonEdit::SetEditText](#setedittext)|在文本框中设置的文本。|  
-|[CMFCRibbonEdit::SetTextAlign](#settextalign)|设置文本框中的文本对齐方式。|  
-|[CMFCRibbonEdit::SetWidth](#setwidth)|设置文本框的宽度`CMFCRibbonEdit`控件。|  
+|[CMFCRibbonEdit::CanBeStretched](#canbestretched)|Indicates whether the height of the `CMFCRibbonEdit` control can increase vertically to the height of a ribbon row.|  
+|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Constructs a `CMFCRibbonEdit` object.|  
+|[CMFCRibbonEdit::CopyFrom](#copyfrom)|Copies the state of the specified `CMFCRibbonEdit` object to the current `CMFCRibbonEdit` object.|  
+|[CMFCRibbonEdit::CreateEdit](#createedit)|Creates a new text box for the `CMFCRibbonEdit` object.|  
+|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|Destroys the `CMFCRibbonEdit` object.|  
+|[CMFCRibbonEdit::DropDownList](#dropdownlist)|Drops down a list box.|  
+|[CMFCRibbonEdit::EnableSpinButtons](#enablespinbuttons)|Enables and sets the range of the spin button for the text box.|  
+|[CMFCRibbonEdit::GetCompactSize](#getcompactsize)|Retrieves the compact size of the `CFMCRibbonEdit` object.|  
+|[CMFCRibbonEdit::GetEditText](#getedittext)|Retrieves the text in the text box.|  
+|[CMFCRibbonEdit::GetIntermediateSize](#getintermediatesize)|Retrieves the intermediate size of the `CMFCRibbonEdit` object.|  
+|[CMFCRibbonEdit::GetTextAlign](#gettextalign)|Retrieves the alignment of the text in the text box.|  
+|[CMFCRibbonEdit::GetWidth](#getwidth)|Retrieves the width, in pixels, of the `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::HasCompactMode](#hascompactmode)|Indicates whether the display size for the `CMFCRibbonEdit` control can be compact.|  
+|[CMFCRibbonEdit::HasFocus](#hasfocus)|Indicates whether the `CMFCRIbbonEdit` control has the focus.|  
+|[CMFCRibbonEdit::HasLargeMode](#haslargemode)|Indicates whether the display size for the `CMFCRibbonEdit` control can be large.|  
+|[CMFCRibbonEdit::HasSpinButtons](#hasspinbuttons)|Indicates whether the text box has a spin button.|  
+|[CMFCRibbonEdit::IsHighlighted](#ishighlighted)|Indicates whether the `CMFCRibbonEdit` control is highlighted.|  
+|[CMFCRibbonEdit::OnAfterChangeRect](#onafterchangerect)|Called by the framework when the dimensions of the display rectangle for the `CMFCRibbonEdit` control changes.|  
+|[CMFCRibbonEdit::OnDraw](#ondraw)|Called by the framework to draw the `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::OnDrawLabelAndImage](#ondrawlabelandimage)|Called by the framework to draw the label and image for the `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::OnDrawOnList](#ondrawonlist)|Called by the framework to draw the `CMFCRibbonEdit` control in a commands list box.|  
+|[CMFCRibbonEdit::OnEnable](#onenable)|Called by the framework to enable or disable the `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::OnHighlight](#onhighlight)|Called by the framework when the pointer enters or leaves the bounds of the `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::OnKey](#onkey)|Called by the framework when the user presses a keytip and the `CMFCRibbonEdit` control has the focus.|  
+|[CMFCRibbonEdit::OnLButtonDown](#onlbuttondown)|Called by the framework to update the `CMFCRibbonEdit` control when the user presses the left mouse button on the control.|  
+|[CMFCRibbonEdit::OnLButtonUp](#onlbuttonup)|Called by the framework when the user releases the left mouse button.|  
+|[CMFCRibbonEdit::OnRTLChanged](#onrtlchanged)|Called by the framework to update the `CMFCRibbonEdit` control when the layout changes direction.|  
+|[CMFCRibbonEdit::OnShow](#onshow)|Called by the framework to show or hide the `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::Redraw](#redraw)|Updates the display of the `CMFCRibbonEdit` control.|  
+|[CMFCRibbonEdit::SetACCData](#setaccdata)|Sets the accessibility data for the `CMFCRibbonEdit` object.|  
+|[CMFCRibbonEdit::SetEditText](#setedittext)|Sets the text in the text box.|  
+|[CMFCRibbonEdit::SetTextAlign](#settextalign)|Sets the text alignment of the text box.|  
+|[CMFCRibbonEdit::SetWidth](#setwidth)|Sets the width of the text box for the `CMFCRibbonEdit` control.|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何构造`CMFCRibbonEdit`对象、 显示数字显示按钮旁边的编辑控件，并设置编辑控件的文本。 此代码段属于[MS Office 2007 演示示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCRibbonEdit` object, show spin buttons next to the edit control, and set the text of the edit control. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo #&7;](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxRibbonEdit.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonEdit.h  
   
-##  <a name="canbestretched"></a>CMFCRibbonEdit::CanBeStretched  
- 指示是否的高度[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件可以垂直方向上增加到功能区行的高度。  
+##  <a name="canbestretched"></a>  CMFCRibbonEdit::CanBeStretched  
+ Indicates whether the height of the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control can increase vertically to the height of a ribbon row.  
   
 ```  
 virtual BOOL CanBeStretched();
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmfcribbonedit"></a>CMFCRibbonEdit::CMFCRibbonEdit  
- 构造[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
+##  <a name="cmfcribbonedit"></a>  CMFCRibbonEdit::CMFCRibbonEdit  
+ Constructs a [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) object.  
   
 ```  
 CMFCRibbonEdit(
@@ -165,38 +198,38 @@ CMFCRibbonEdit(
 CMFCRibbonEdit();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 命令 ID`CMFCRibbonEdit`控件。  
+ Command ID for the `CMFCRibbonEdit` control.  
   
  [in] `nWidth`  
- 宽度 （像素） 的文本框中`CMFCRibbonEdit`控件。  
+ The width, in pixels, of the text box for the `CMFCRibbonEdit` control.  
   
  [in] `lpszLabel`  
- 标签`CMFCRibbonEdit`控件。  
+ The label for the `CMFCRibbonEdit` control.  
   
  [in] `nImage`  
- 要使用的小图像索引`CMFCRibbonEdit`控件。 由父功能区类别进行维护的较小的图像的集合。  
+ Index of the small image to use for the `CMFCRibbonEdit` control. The collection of small images is maintained by the parent ribbon category.  
   
-### <a name="remarks"></a>备注  
- `CMFCRibbonEdit`控件不使用较大的图像。  
+### <a name="remarks"></a>Remarks  
+ The `CMFCRibbonEdit` control does not use a large image.  
   
-##  <a name="copyfrom"></a>CMFCRibbonEdit::CopyFrom  
- 将指定的状态复制[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象与当前[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
+##  <a name="copyfrom"></a>  CMFCRibbonEdit::CopyFrom  
+ Copies the state of the specified [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) object to the current [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) object.  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 源 `CMFCRibbonEdit` 对象。  
+ The source `CMFCRibbonEdit` object.  
   
-### <a name="remarks"></a>备注  
- `src`参数的类型必须为`CMFCRibbonEdit`。  
+### <a name="remarks"></a>Remarks  
+ The `src` parameter must be of type `CMFCRibbonEdit`.  
   
-##  <a name="createedit"></a>CMFCRibbonEdit::CreateEdit  
- 创建一个新文本框[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
+##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
+ Creates a new text box for the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) object.  
   
 ```  
 virtual CMFCRibbonRichEditCtrl* CreateEdit(
@@ -204,20 +237,20 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
     DWORD dwEditStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 指向的父窗口的指针`CMFCRibbonEdit`对象。  
+ A pointer to the parent window of the `CMFCRibbonEdit` object.  
   
  [in] `dwEditStyle`  
- 指定文本框中的样式。 您可以组合使用备注部分中列出的窗口样式[编辑控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775464)Windows SDK 中介绍。  
+ Specifies the style of the text box. You can combine the window styles listed in the Remarks section with the [edit control styles](http://msdn.microsoft.com/library/windows/desktop/bb775464) that are described in the Windows SDK.  
   
-### <a name="return-value"></a>返回值  
- 新的文本框中，如果此方法已成功，则指向的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new text box if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>备注  
- 重写此方法在派生类中创建一个自定义文本框中。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to create a custom text box.  
   
- 您可以将应用以下[窗口样式](../../mfc/reference/window-styles.md)的文本框中︰  
+ You can apply the following [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a text box:  
   
 - **WS_CHILD**  
   
@@ -229,27 +262,27 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
   
 - **WS_TABSTOP**  
   
-##  <a name="destroyctrl"></a>CMFCRibbonEdit::DestroyCtrl  
- 销毁[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
+##  <a name="destroyctrl"></a>  CMFCRibbonEdit::DestroyCtrl  
+ Destroys the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) object.  
   
 ```  
 virtual void DestroyCtrl();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="dropdownlist"></a>CMFCRibbonEdit::DropDownList  
- 下拉列表框。  
+##  <a name="dropdownlist"></a>  CMFCRibbonEdit::DropDownList  
+ Drops down a list box.  
   
 ```  
 virtual void DropDownList();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法没有任何效果。 重写此方法以下拉列表框。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to drop down a list box.  
   
-##  <a name="enablespinbuttons"></a>CMFCRibbonEdit::EnableSpinButtons  
- 启用并设置文本框的数值调节钮的范围。  
+##  <a name="enablespinbuttons"></a>  CMFCRibbonEdit::EnableSpinButtons  
+ Enables and sets the range of the spin button for the text box.  
   
 ```  
 void EnableSpinButtons(
@@ -257,200 +290,200 @@ void EnableSpinButtons(
     int nMax);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nMin`  
- 数值调节钮的最小值。  
+ The minimum value of the spin button.  
   
  [in] `nMax`  
- 数值调节钮的最大值。  
+ The maximum value of the spin button.  
   
-### <a name="remarks"></a>备注  
- 数值调节钮显示向上和向下箭头并使用户能够浏览一组固定的值。  
+### <a name="remarks"></a>Remarks  
+ Spin buttons display an up and down arrow and enable users to move through a fixed set of values.  
   
-##  <a name="getcompactsize"></a>CMFCRibbonEdit::GetCompactSize  
- 检索的压缩大小[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
+##  <a name="getcompactsize"></a>  CMFCRibbonEdit::GetCompactSize  
+ Retrieves the compact size of the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) object.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文指针`CMFCRibbonEdit`对象。  
+ Pointer to a device context for the `CMFCRibbonEdit` object.  
   
-### <a name="return-value"></a>返回值  
- 尺寸紧凑`CMFCRibbonEdit`对象。  
+### <a name="return-value"></a>Return Value  
+ The compact size of the `CMFCRibbonEdit` object.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getedittext"></a>CMFCRibbonEdit::GetEditText  
- 检索在文本框中的文本。  
+##  <a name="getedittext"></a>  CMFCRibbonEdit::GetEditText  
+ Retrieves the text in the text box.  
   
 ```  
 CString GetEditText() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 中的文本框的文本。  
+### <a name="return-value"></a>Return Value  
+ The text in the text box.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonEdit::GetIntermediateSize  
- 检索的中间大小[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
+##  <a name="getintermediatesize"></a>  CMFCRibbonEdit::GetIntermediateSize  
+ Retrieves the intermediate size of the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) object.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文指针`CMFCRibbonEdit`对象。  
+ Pointer to a device context for the `CMFCRibbonEdit` object.  
   
-### <a name="return-value"></a>返回值  
- 中间的大小`CMFCRibbonEdit`对象。  
+### <a name="return-value"></a>Return Value  
+ The intermediate size of the `CMFCRibbonEdit` object.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettextalign"></a>CMFCRibbonEdit::GetTextAlign  
- 检索文本框中文本的对齐方式。  
+##  <a name="gettextalign"></a>  CMFCRibbonEdit::GetTextAlign  
+ Retrieves the alignment of the text in the text box.  
   
 ```  
 int GetTextAlign() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 文本对齐方式的枚举值。 请参阅备注部分中有关可能的值。  
+### <a name="return-value"></a>Return Value  
+ A text alignment enumerated value. See the Remarks section for possible values.  
   
-### <a name="remarks"></a>备注  
- 返回的值是下面的编辑控件样式之一︰  
+### <a name="remarks"></a>Remarks  
+ The returned value is one of the following edit control styles:  
   
-- **ES_LEFT**为左对齐  
+- **ES_LEFT** for left alignment  
   
-- **ES_CENTER**为居中对齐  
+- **ES_CENTER** for center alignment  
   
-- **ES_RIGHT**为右对齐  
+- **ES_RIGHT** for right alignment  
   
- 有关这些样式的详细信息，请参阅[编辑控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+ For more information about these styles, see [Edit Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
-##  <a name="getwidth"></a>CMFCRibbonEdit::GetWidth  
- 检索的宽度，以像素为单位的[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
+##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
+ Retrieves the width, in pixels, of the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
   
 ```  
 int GetWidth(BOOL bInFloatyMode = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bInFloatyMode`  
- `TRUE`如果`CMFCRibbonEdit`控件是否处于浮动模式; 否则为`FALSE`。  
+ `TRUE` if the `CMFCRibbonEdit` control is in floating mode; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- 宽度，以像素为单位的`CMFCRibbonEdit`控件。  
+### <a name="return-value"></a>Return Value  
+ The width, in pixels, of the `CMFCRibbonEdit` control.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hascompactmode"></a>CMFCRibbonEdit::HasCompactMode  
- 指示是否显示大小调整为[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件均可以是 compact。  
+##  <a name="hascompactmode"></a>  CMFCRibbonEdit::HasCompactMode  
+ Indicates whether the display size for the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control can be compact.  
   
 ```  
 virtual BOOL HasCompactMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`TRUE`。 重写此方法以指示是否可以压缩的显示大小。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method to indicate whether the display size can be compact.  
   
-##  <a name="hasfocus"></a>CMFCRibbonEdit::HasFocus  
- 指示是否[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件具有焦点。  
+##  <a name="hasfocus"></a>  CMFCRibbonEdit::HasFocus  
+ Indicates whether the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control has the focus.  
   
 ```  
 virtual BOOL HasFocus() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果`CMFCRibbonEdit`控件具有焦点; 否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `CMFCRibbonEdit` control has the focus; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="haslargemode"></a>CMFCRibbonEdit::HasLargeMode  
- 指示是否显示大小调整为[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件可能很大。  
+##  <a name="haslargemode"></a>  CMFCRibbonEdit::HasLargeMode  
+ Indicates whether the display size for the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control can be large.  
   
 ```  
 virtual BOOL HasLargeMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下此方法始终返回`FALSE`。 重写此方法以指示是否显示大小可能会大。  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the display size can be large.  
   
-##  <a name="hasspinbuttons"></a>CMFCRibbonEdit::HasSpinButtons  
- 指示文本框是否具有数值调节钮。  
+##  <a name="hasspinbuttons"></a>  CMFCRibbonEdit::HasSpinButtons  
+ Indicates whether the text box has a spin button.  
   
 ```  
 virtual BOOL HasSpinButtons() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果文本框具有数值调节钮;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the text box has a spin button; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ishighlighted"></a>CMFCRibbonEdit::IsHighlighted  
- 指示是否[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)突出显示控件。  
+##  <a name="ishighlighted"></a>  CMFCRibbonEdit::IsHighlighted  
+ Indicates whether the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control is highlighted.  
   
 ```  
 virtual BOOL IsHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果`CMFCRibbonEdit`控件是突出显示; 否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `CMFCRibbonEdit` control is highlighted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonEdit::OnAfterChangeRect  
- 由框架调用时的显示矩形的尺寸[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制更改。  
+##  <a name="onafterchangerect"></a>  CMFCRibbonEdit::OnAfterChangeRect  
+ Called by the framework when the dimensions of the display rectangle for the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control change.  
   
 ```  
 virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文指针`CMFCRibbonEdit`控件。  
+ Pointer to a device context for the `CMFCRibbonEdit` control.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondraw"></a>CMFCRibbonEdit::OnDraw  
- 由框架调用以绘制[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
+##  <a name="ondraw"></a>  CMFCRibbonEdit::OnDraw  
+ Called by the framework to draw the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文指针`CMFCRibbonEdit`控件。  
+ Pointer to a device context for the `CMFCRibbonEdit` control.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawlabelandimage"></a>CMFCRibbonEdit::OnDrawLabelAndImage  
- 由框架调用以绘制标签和图像的[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
+##  <a name="ondrawlabelandimage"></a>  CMFCRibbonEdit::OnDrawLabelAndImage  
+ Called by the framework to draw the label and image for the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
   
 ```  
 virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文指针`CMFCRibbonEdit`控件。  
+ Pointer to a device context for the `CMFCRibbonEdit` control.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonEdit::OnDrawOnList  
- 由框架调用以绘制[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)命令列表框中的控件。  
+##  <a name="ondrawonlist"></a>  CMFCRibbonEdit::OnDrawOnList  
+ Called by the framework to draw the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control in a commands list box.  
   
 ```  
 virtual void OnDrawOnList(
@@ -462,134 +495,134 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文指针`CMFCRibbonEdit`控件。  
+ Pointer to a device context for the `CMFCRibbonEdit` control.  
   
  [in] `strText`  
- 显示文本[ ](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit class")。  
+ The display text [](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit class").  
   
  [in] `nTextOffset`  
- 以像素为单位，从列表框中显示文本到左侧的距离。  
+ Distance, in pixels, from the left side of the list box to the display text.  
   
  [in] `rect`  
- 有关显示矩形`CMFCRibbonEdit`控件。  
+ The display rectangle for the `CMFCRibbonEdit` control.  
   
  [in] `bIsSelected`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `bHighlighted`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
- 命令列表框中显示功能区控件，以使用户能够自定义快速访问工具栏。  
+### <a name="remarks"></a>Remarks  
+ The commands list box displays ribbon controls to enable users to customize the quick access toolbar.  
   
-##  <a name="onenable"></a>CMFCRibbonEdit::OnEnable  
- 由框架调用以启用或禁用[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
+##  <a name="onenable"></a>  CMFCRibbonEdit::OnEnable  
+ Called by the framework to enable or disable the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
   
 ```  
 virtual void OnEnable(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要启用控件;`FALSE`要禁用控件。  
+ `TRUE` to enable the control; `FALSE` to disable the control.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onhighlight"></a>CMFCRibbonEdit::OnHighlight  
- 当鼠标指针进入或离开的边界由框架调用[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
+##  <a name="onhighlight"></a>  CMFCRibbonEdit::OnHighlight  
+ Called by the framework when the pointer enters or leaves the bounds of the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
   
 ```  
 virtual void OnHighlight(BOOL bHighlight);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bHighlight`  
- `TRUE`如果指针的界限内`CMFCRibbonEdit`控件的指针; 否则为`FALSE`。  
+ `TRUE` if the pointer is in the bounds of the `CMFCRibbonEdit` control; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onkey"></a>CMFCRibbonEdit::OnKey  
- 由框架调用，当用户按快捷键提示和[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件具有焦点。  
+##  <a name="onkey"></a>  CMFCRibbonEdit::OnKey  
+ Called by the framework when the user presses a keytip and the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control has the focus.  
   
 ```  
 virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bIsMenuKey`  
- `TRUE`如果快捷键提示会显示一个弹出菜单;否则为`FALSE`。  
+ `TRUE` if the keytip displays a pop-up menu; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- 如果已处理事件，则 `TRUE`，否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the event was handled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onlbuttondown"></a>CMFCRibbonEdit::OnLButtonDown  
- 由框架调用以更新[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制当用户按鼠标左键在控件上。  
+##  <a name="onlbuttondown"></a>  CMFCRibbonEdit::OnLButtonDown  
+ Called by the framework to update the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control when the user presses the left mouse button on the control.  
   
 ```  
 virtual void OnLButtonDown(CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onlbuttonup"></a>CMFCRibbonEdit::OnLButtonUp  
- 在用户释放鼠标左键时由框架调用。  
+##  <a name="onlbuttonup"></a>  CMFCRibbonEdit::OnLButtonUp  
+ Called by the framework when the user releases the left mouse button.  
   
 ```  
 virtual void OnLButtonUp(CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonEdit::OnRTLChanged  
- 由框架调用以更新[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制布局时更改方向。  
+##  <a name="onrtlchanged"></a>  CMFCRibbonEdit::OnRTLChanged  
+ Called by the framework to update the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control when the layout changes direction.  
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bIsRTL`  
- `TRUE`如果布局，则从右到左;`FALSE`如果是从左到右的布局。  
+ `TRUE` if the layout is right-to-left; `FALSE` if the layout is left-to-right.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onshow"></a>CMFCRibbonEdit::OnShow  
- 由框架调用以显示或隐藏[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
+##  <a name="onshow"></a>  CMFCRibbonEdit::OnShow  
+ Called by the framework to show or hide the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- `TRUE`若要显示的控件;`FALSE`将隐藏该控件。  
+ `TRUE` to show the control; `FALSE` to hide the control.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="redraw"></a>CMFCRibbonEdit::Redraw  
- 更新的显示[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
+##  <a name="redraw"></a>  CMFCRibbonEdit::Redraw  
+ Updates the display of the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
   
 ```  
 virtual void Redraw();
 ```  
   
-### <a name="remarks"></a>备注  
- 此方法将重新绘制的显示矩形`CMFCRibbonEdit`对象通过间接调用[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)与`RDW_INVALIDATE`， `RDW_ERASE`，和`RDW_UPDATENOW`标记集。  
+### <a name="remarks"></a>Remarks  
+ This method redraws the display rectangle for the `CMFCRibbonEdit` object by indirectly calling [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) with the `RDW_INVALIDATE`, `RDW_ERASE`, and `RDW_UPDATENOW` flags set.  
   
-##  <a name="setaccdata"></a>CMFCRibbonEdit::SetACCData  
- 设置的可访问性数据[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)对象。  
+##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
+ Sets the accessibility data for the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) object.  
   
 ```  
 virtual BOOL SetACCData(
@@ -597,53 +630,53 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParent`  
- 父窗口的指针`CMFCRibbonEdit`对象。  
+ Pointer to the parent window for the `CMFCRibbonEdit` object.  
   
  `data`  
- 可访问性数据`CMFCRibbonEdit`对象。  
+ The accessibility data for the `CMFCRibbonEdit` object.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setedittext"></a>CMFCRibbonEdit::SetEditText  
- 在文本框中设置的文本。  
+##  <a name="setedittext"></a>  CMFCRibbonEdit::SetEditText  
+ Sets the text in the text box.  
   
 ```  
 void SetEditText(CString strText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `strText`  
- 文本框的文本。  
+ The text for the text box.  
   
-##  <a name="settextalign"></a>CMFCRibbonEdit::SetTextAlign  
- 设置文本框中的文本对齐方式。  
+##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
+ Sets the text alignment of the text box.  
   
 ```  
 void SetTextAlign(int nAlign);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nAlign`  
- 文本对齐方式的枚举值。 请参阅备注部分中有关可能的值。  
+ A text alignment enumerated value. See the Remarks section for possible values.  
   
-### <a name="remarks"></a>备注  
- 该参数`nAlign`是一个以下编辑控件样式︰  
+### <a name="remarks"></a>Remarks  
+ The parameter `nAlign` is one of the following edit control styles:  
   
-- **ES_LEFT**为左对齐  
+- **ES_LEFT** for left alignment  
   
-- **ES_CENTER**为居中对齐  
+- **ES_CENTER** for center alignment  
   
-- **ES_RIGHT**为右对齐  
+- **ES_RIGHT** for right alignment  
   
- 有关这些样式的详细信息，请参阅[编辑控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+ For more information about these styles, see [Edit Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
-##  <a name="setwidth"></a>CMFCRibbonEdit::SetWidth  
- 设置文本框的宽度[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控件。  
+##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
+ Sets the width of the text box for the [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) control.  
   
 ```  
 void SetWidth(
@@ -651,18 +684,18 @@ void SetWidth(
     BOOL bInFloatyMode = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nWidth`  
- 以像素为单位，在文本框的宽度。  
+ The width, in pixels, of the text box.  
   
  `bInFloatyMode`  
- `TRUE`若要设置为浮动的模式; 宽度`FALSE`设置常规显示模式的宽度。  
+ `TRUE` to set the width for floating mode; `FALSE` to set the width for regular mode.  
   
-### <a name="remarks"></a>备注  
- `CMFCRibbonEdit`在控件有两个宽度，具体取决于其显示模式︰ 浮动模式和常规显示模式。  
+### <a name="remarks"></a>Remarks  
+ The `CMFCRibbonEdit` control has two widths depending on its display mode: floating mode and regular mode.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)   
- [CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)   
+ [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)

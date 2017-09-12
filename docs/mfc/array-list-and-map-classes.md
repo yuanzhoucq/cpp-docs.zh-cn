@@ -1,40 +1,59 @@
 ---
-title: "数组、列表和映射类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], 类"
-  - "集合类, 列表"
-  - "集合类, 映射"
-  - "列表类"
-  - "映射类"
+title: Array, List, and Map Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [MFC], classes
+- list classes [MFC]
+- collection classes [MFC], maps
+- map classes [MFC]
+- collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 数组、列表和映射类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28ed43e1451c484dc2bb3ed08e1db194f77075de
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-对于处理数据聚合，类库提供集合类、数组 \(可保存各种对象和预定义类型的列表和映射一组\)。  动态集合大小。  这些类可在所有程序，则编写为 Windows。  但是，它们为实现定义应用程序的文档框架类的数据结构是最有用的。  可以轻松地从这些派生专用的集合类，还可以创建自己的模板类。  有关这些方法的更多信息，请参见知识库文章 [集合](../mfc/collections.md)。  有关集合类模板的列表，请参见 [数组、列表以及映射的模板类](../mfc/template-classes-for-arrays-lists-and-maps.md)文章。  
+---
+# <a name="array-list-and-map-classes"></a>Array, List, and Map Classes
+For handling aggregates of data, the class library provides a group of collection classes — arrays, lists, and maps — that can hold a variety of object and predefined types. The collections are dynamically sized. These classes can be used in any program, whether written for Windows or not. However, they are most useful for implementing the data structures that define your document classes in the application framework. You can readily derive specialized collection classes from these, or you can create them based on the template classes. For more information about these approaches, see the article [Collections](../mfc/collections.md). For a list of the template collection classes, see the article [Template Classes for Arrays, Lists, and Maps](../mfc/template-classes-for-arrays-lists-and-maps.md).  
   
- 数组是连续存储在内存的一维数据结构。  它们支持非常快 RAM，因为任何给定元素内存地址可以通过将元素的索引是元素的大小并将结果计算为数组的基址。  但是，数组将非常大，则必须插入元素为数组，因为，超出插入元素的整个数组必须移动留出空间要插入的元素。  数组可根据需要增长和收缩。  
+ Arrays are one-dimensional data structures that are stored contiguously in memory. They support very fast random access since the memory address of any given element can be calculated by multiplying the index of the element by the size of an element and adding the result to the base address of the array. But arrays are very expensive if you have to insert elements into the array, since the entire array past the element inserted has to be moved to make room for the element to be inserted. Arrays can grow and shrink as necessary.  
   
- 数组类似于列表，但截然不同地存储。  列表中的每个元素也包括一个指向上一条和下一元素，使其一双向链接列表。  因为这样做只涉及更改指针的数组，它很大程度上快添加或删除项。  但是，在任何搜索开始一致，因为需要列表的末尾，搜索列表的开销可能会很大的。  
+ Lists are similar to arrays but are stored very differently. Each element in a list also includes a pointer to the previous and next elements, making it a doubly linked list. It is very fast to add or delete items because doing so only involves changing a few pointers. However, searching a list can be expensive since all searches need to start at one of the list's ends.  
   
- 映射关联一个键值对数据值。  例如，映射的键可以为字符串和数据指针到列表。  将请求映射该指针与特定字符串。  映射为键，因为外观，使用哈希表查找映射快。  添加和移除项来快。  映射通常与其他数据结构作为访问索引。  MFC 使用映射调用 [消息映射](../mfc/mapping-messages.md) 的特殊映射窗口消息为指向该消息的处理程序函数。  
+ Maps relate a key value to a data value. For instance, the key of a map could be a string and the data a pointer into a list. You would ask the map to give you the pointer associated with a particular string. Map lookups are fast because maps use hash tables for key lookups. Adding and deleting items is also fast. Maps are often used with other data structures as auxiliary indices. MFC uses a special kind of map called a [message map](../mfc/mapping-messages.md) to map Windows messages to a pointer to the handler function for that message.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

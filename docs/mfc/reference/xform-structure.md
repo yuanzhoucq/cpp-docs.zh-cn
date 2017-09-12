@@ -1,5 +1,5 @@
 ---
-title: "XFORM 结构 |Microsoft 文档"
+title: XFORM Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- XFORM structure
+- XFORM structure [MFC]
 ms.assetid: 4fb4ef5b-05d2-4884-82d1-1cb8f7be6302
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2d23b3838f1e2dcabb2affb96fa6f18942581ff8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f5a82c21f031035f5f9591feb0c3d61eb9193f7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="xform-structure"></a>XFORM 结构
-`XFORM`结构具有以下形式︰  
+# <a name="xform-structure"></a>XFORM Structure
+The `XFORM` structure has the following form:  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct  tagXFORM {  /* xfrm */  
@@ -56,21 +56,21 @@ typedef struct  tagXFORM {  /* xfrm */
 } XFORM;  
 ```  
   
-## <a name="remarks"></a>备注  
- `XFORM`结构指定页面空间转换到世界空间。 **EDx**和**eDy**成员分别指定水平和垂直转换组件。 下表显示如何使用其他成员，具体取决于该操作︰  
+## <a name="remarks"></a>Remarks  
+ The `XFORM` structure specifies a world-space to page-space transformation. The **eDx** and **eDy** members specify the horizontal and vertical translation components, respectively. The following table shows how the other members are used, depending on the operation:  
   
-|操作|eM11|eM12|eM21|eM22|  
+|Operation|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|旋转角度的余弦值|旋转角度的正弦值|负旋转角度的正弦值|旋转角度的余弦值|  
-|**缩放**|水平缩放的组件|Nothing|Nothing|垂直缩放分量|  
-|**倾斜对象**|Nothing|水平比例常量|垂直比例常量|Nothing|  
-|**反射**|水平反射组件|Nothing|Nothing|垂直反射组件|  
+|`Rotation`|Cosine of rotation angle|Sine of rotation angle|Negative sine of rotation angle|Cosine of rotation angle|  
+|**Scaling**|Horizontal scaling component|Nothing|Nothing|Vertical scaling component|  
+|**Shear**|Nothing|Horizontal proportionality constant|Vertical proportionality constant|Nothing|  
+|**Reflection**|Horizontal reflection component|Nothing|Nothing|Vertical reflection component|  
   
-## <a name="requirements"></a>要求  
- **标头︰** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)
 
 

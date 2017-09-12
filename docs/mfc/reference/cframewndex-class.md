@@ -1,5 +1,5 @@
 ---
-title: "Cframewndex 由类 |Microsoft 文档"
+title: CFrameWndEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -100,7 +100,92 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFrameWndEx class
+- CFrameWndEx [MFC], ActiveItemRecalcLayout
+- CFrameWndEx [MFC], AddPane
+- CFrameWndEx [MFC], AdjustDockingLayout
+- CFrameWndEx [MFC], DelayUpdateFrameMenu
+- CFrameWndEx [MFC], DockPane
+- CFrameWndEx [MFC], DockPaneLeftOf
+- CFrameWndEx [MFC], EnableAutoHidePanes
+- CFrameWndEx [MFC], EnableDocking
+- CFrameWndEx [MFC], EnableFullScreenMainMenu
+- CFrameWndEx [MFC], EnableFullScreenMode
+- CFrameWndEx [MFC], EnableLoadDockState
+- CFrameWndEx [MFC], EnablePaneMenu
+- CFrameWndEx [MFC], GetActivePopup
+- CFrameWndEx [MFC], GetDefaultResId
+- CFrameWndEx [MFC], GetDockingManager
+- CFrameWndEx [MFC], GetMenuBar
+- CFrameWndEx [MFC], GetPane
+- CFrameWndEx [MFC], GetRibbonBar
+- CFrameWndEx [MFC], GetTearOffBars
+- CFrameWndEx [MFC], GetToolbarButtonToolTipText
+- CFrameWndEx [MFC], InsertPane
+- CFrameWndEx [MFC], IsFullScreen
+- CFrameWndEx [MFC], IsMenuBarAvailable
+- CFrameWndEx [MFC], IsPointNearDockSite
+- CFrameWndEx [MFC], IsPrintPreview
+- CFrameWndEx [MFC], LoadFrame
+- CFrameWndEx [MFC], NegotiateBorderSpace
+- CFrameWndEx [MFC], OnActivate
+- CFrameWndEx [MFC], OnActivateApp
+- CFrameWndEx [MFC], OnChangeVisualManager
+- CFrameWndEx [MFC], OnClose
+- CFrameWndEx [MFC], OnCloseDockingPane
+- CFrameWndEx [MFC], OnCloseMiniFrame
+- CFrameWndEx [MFC], OnClosePopupMenu
+- CFrameWndEx [MFC], OnCmdMsg
+- CFrameWndEx [MFC], OnContextHelp
+- CFrameWndEx [MFC], OnCreate
+- CFrameWndEx [MFC], OnDestroy
+- CFrameWndEx [MFC], OnDrawMenuImage
+- CFrameWndEx [MFC], OnDrawMenuLogo
+- CFrameWndEx [MFC], OnDWMCompositionChanged
+- CFrameWndEx [MFC], OnExitSizeMove
+- CFrameWndEx [MFC], OnGetMinMaxInfo
+- CFrameWndEx [MFC], OnIdleUpdateCmdUI
+- CFrameWndEx [MFC], OnLButtonDown
+- CFrameWndEx [MFC], OnLButtonUp
+- CFrameWndEx [MFC], OnMenuButtonToolHitTest
+- CFrameWndEx [MFC], OnMenuChar
+- CFrameWndEx [MFC], OnMouseMove
+- CFrameWndEx [MFC], OnMoveMiniFrame
+- CFrameWndEx [MFC], OnNcActivate
+- CFrameWndEx [MFC], OnNcCalcSize
+- CFrameWndEx [MFC], OnNcHitTest
+- CFrameWndEx [MFC], OnNcMouseMove
+- CFrameWndEx [MFC], OnNcPaint
+- CFrameWndEx [MFC], OnPaneCheck
+- CFrameWndEx [MFC], OnPostPreviewFrame
+- CFrameWndEx [MFC], OnPowerBroadcast
+- CFrameWndEx [MFC], OnSetMenu
+- CFrameWndEx [MFC], OnSetPreviewMode
+- CFrameWndEx [MFC], OnSetText
+- CFrameWndEx [MFC], OnShowCustomizePane
+- CFrameWndEx [MFC], OnShowPanes
+- CFrameWndEx [MFC], OnShowPopupMenu
+- CFrameWndEx [MFC], OnSize
+- CFrameWndEx [MFC], OnSizing
+- CFrameWndEx [MFC], OnSysColorChange
+- CFrameWndEx [MFC], OnTearOffMenu
+- CFrameWndEx [MFC], OnToolbarContextMenu
+- CFrameWndEx [MFC], OnToolbarCreateNew
+- CFrameWndEx [MFC], OnToolbarDelete
+- CFrameWndEx [MFC], OnUpdateFrameMenu
+- CFrameWndEx [MFC], OnUpdateFrameTitle
+- CFrameWndEx [MFC], OnUpdatePaneMenu
+- CFrameWndEx [MFC], OnWindowPosChanged
+- CFrameWndEx [MFC], PaneFromPoint
+- CFrameWndEx [MFC], PreTranslateMessage
+- CFrameWndEx [MFC], RecalcLayout
+- CFrameWndEx [MFC], RemovePaneFromDockManager
+- CFrameWndEx [MFC], SetDockState
+- CFrameWndEx [MFC], SetPrintPreviewFrame
+- CFrameWndEx [MFC], SetupToolbarMenu
+- CFrameWndEx [MFC], ShowFullScreen
+- CFrameWndEx [MFC], ShowPane
+- CFrameWndEx [MFC], UpdateCaption
+- CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
 caps.latest.revision: 39
 author: mikeblome
@@ -120,123 +205,123 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b2106c3067a0164395eddab0e8b156728697d5bb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 92d23cfd44526943b0427efa1ae13b76788b7753
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cframewndex-class"></a>Cframewndex 由类
-实现 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。 它扩展[CFrameWnd](../../mfc/reference/cframewnd-class.md)类。  
+# <a name="cframewndex-class"></a>CFrameWndEx Class
+Implements the functionality of a Windows single document interface (SDI) overlapped or popup frame window, and provides members for managing the window. It extends the [CFrameWnd](../../mfc/reference/cframewnd-class.md) class.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFrameWndEx : public CFrameWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|调整 OLE 客户端项和框架的客户端区域的布局。|  
-|`CFrameWndEx::AddDockSite`|不使用此方法。|  
-|[CFrameWndEx::AddPane](#addpane)|在扩展管理器注册的控件条。|  
-|[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|重新计算所有窗格的停靠到框架窗口的布局。|  
-|[CFrameWndEx::DelayUpdateFrameMenu](#delayupdateframemenu)|设置框架菜单，然后在命令处理在空闲时才更新它。|  
-|[CFrameWndEx::DockPane](#dockpane)|指定的窗格停靠到框架窗口。|  
-|[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|将一个窗格停靠到另一个窗格的左侧。|  
-|[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|停靠到主框架窗口的指定边时，请启用窗格的自动隐藏模式。|  
-|[Cframewndex:: Enabledocking](#enabledocking)|使属于框架窗口窗格的停靠。|  
-|[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|显示或隐藏全屏幕模式中的主菜单。|  
-|[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|启用框架窗口的全屏显示模式。|  
-|[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|启用或禁用的插接状态的加载。|  
-|[CFrameWndEx::EnablePaneMenu](#enablepanemenu)|启用或禁用窗格中菜单上的自动处理。|  
-|[CFrameWndEx::GetActivePopup](#getactivepopup)|返回一个指向当前所显示的弹出菜单。|  
-|[CFrameWndEx::GetDefaultResId](#getdefaultresid)|返回指定框架加载框架窗口时的资源 ID。|  
-|[CFrameWndEx::GetDockingManager](#getdockingmanager)|检索[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)框架窗口的对象。|  
-|[CFrameWndEx::GetMenuBar](#getmenubar)|返回一个指向附加到框架窗口的菜单栏对象的指针。|  
-|[CFrameWndEx::GetPane](#getpane)|将指针返回到窗格中具有指定 id。|  
-|[CFrameWndEx::GetRibbonBar](#getribbonbar)|检索该框架的功能区栏控件。|  
-|[CFrameWndEx::GetTearOffBars](#gettearoffbars)|返回处于拖曳状态的窗格对象的列表。|  
-|[CFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|当应用程序将显示一个工具栏按钮的工具提示时，由框架调用。|  
-|[CFrameWndEx::InsertPane](#insertpane)|注册的扩展管理器窗格。|  
-|[CFrameWndEx::IsFullScreen](#isfullscreen)|确定在全屏幕模式下是否为框架窗口中。|  
-|[CFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|确定指示菜单栏中对象的指针是否有效。|  
-|[CFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|指示是否将点是否位于对齐区域中。|  
-|[CFrameWndEx::IsPrintPreview](#isprintpreview)|指示框架窗口在打印预览模式下。|  
-|[CFrameWndEx::LoadFrame](#loadframe)|若要创建框架窗口和加载其资源的构造后调用此方法。|  
-|[CFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|实现 OLE 客户端边框协商。|  
-|[CFrameWndEx::OnActivate](#onactivate)|当用户输入切换到或离开该框架时，框架将调用此方法。|  
-|[CFrameWndEx::OnActivateApp](#onactivateapp)|选择或取消选择该应用程序时由框架调用。|  
-|[CFrameWndEx::OnChangeVisualManager](#onchangevisualmanager)|当对该框架的更改不需要对可视化管理器更改时由框架调用。|  
-|[CFrameWndEx::OnClose](#onclose)|框架调用此方法以关闭该框架。|  
-|[CFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|当用户单击由框架调用**关闭**停靠窗格上的按钮。|  
-|[CFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|当用户单击由框架调用**关闭**浮动的微型框架窗口上的按钮。|  
-|[CFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|当活动的弹出菜单处理 WM_DESTROY 消息时由框架调用。|  
-|[CFrameWndEx::OnCmdMsg](#oncmdmsg)|调度命令消息。|  
-|[CFrameWndEx::OnContextHelp](#oncontexthelp)|由框架调用以显示上下文相关帮助。|  
-|[CFrameWndEx::OnCreate](#oncreate)|由框架创建框架之后调用。|  
-|[CFrameWndEx::OnDestroy](#ondestroy)|销毁框架时，由框架调用。|  
-|[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|当应用程序绘制菜单项关联的图像时由框架调用。|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|由框架调用时`CMFCPopupMenu`对象进程[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)消息。|  
-|[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|当启用或禁用了桌面窗口管理器 (DWM) 复合，由框架调用。|  
-|[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|由框架调用，当框架停止移动或调整其大小。|  
-|[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|当框架调整大小，以设置窗口维度限制时，由框架调用。|  
-|[CFrameWndEx::OnIdleUpdateCmdUI](#onidleupdatecmdui)|由框架要更新的框架显示，在命令处理处于空闲状态时调用。|  
-|[CFrameWndEx::OnLButtonDown](#onlbuttondown)|当用户按鼠标左键，框架将调用此方法。|  
-|[CFrameWndEx::OnLButtonUp](#onlbuttonup)|当用户释放鼠标左键，框架将调用此方法。|  
-|[CFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|由框架调用时`CMFCToolBarButton`对象进程`WM_NCHITTEST`消息。|  
-|[CFrameWndEx::OnMenuChar](#onmenuchar)|由框架调用时将显示一个菜单，并且用户按一个键，它与某个命令不对应。|  
-|[CFrameWndEx::OnMouseMove](#onmousemove)|当鼠标指针移动时，框架将调用此方法。|  
-|[CFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|当一个窗格窗口将由框架调用。|  
-|[CFrameWndEx::OnNcActivate](#onncactivate)|必须重新绘制的帧的非工作区，以说明处于活动状态的更改时由框架调用。|  
-|[CFrameWndEx::OnNcCalcSize](#onnccalcsize)|当必须计算的大小和工作区的位置时由框架调用。|  
-|[CFrameWndEx::OnNcHitTest](#onnchittest)|当指针移动，或按下或释放鼠标按钮时由框架调用。|  
-|[CFrameWndEx::OnNcMouseMove](#onncmousemove)|当指针移动在非工作区中，由框架调用。|  
-|[CFrameWndEx::OnNcPaint](#onncpaint)|必须绘制的非工作区时，由框架调用。|  
-|[CFrameWndEx::OnPaneCheck](#onpanecheck)|由框架来控制窗格的可见性调用。|  
-|[CFrameWndEx::OnPostPreviewFrame](#onpostpreviewframe)|用户已更改打印预览模式时，由框架调用。|  
-|[CFrameWndEx::OnPowerBroadcast](#onpowerbroadcast)|电源管理事件发生时由框架调用。|  
-|[CFrameWndEx::OnSetMenu](#onsetmenu)|由框架来替换框架窗口菜单调用。|  
-|[CFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|由框架来设置该框架的打印预览模式调用。|  
-|[CFrameWndEx::OnSetText](#onsettext)|由框架用于设置文本的一个窗口调用。|  
-|[CFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|快速自定义时由框架调用启用窗格。|  
-|[CFrameWndEx::OnShowPanes](#onshowpanes)|由框架，以显示或隐藏窗格调用。|  
-|[CFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|当启用弹出菜单后，由框架调用。|  
-|[CFrameWndEx::OnSize](#onsize)|帧的大小发生更改后，框架调用此方法。|  
-|[CFrameWndEx::OnSizing](#onsizing)|当用户调整该框架，框架将调用此方法。|  
-|[CFrameWndEx::OnSysColorChange](#onsyscolorchange)|系统颜色更改时由框架调用。|  
-|[CFrameWndEx::OnTearOffMenu](#ontearoffmenu)|当启用具有拖曳栏菜单由框架调用。|  
-|[CFrameWndEx::OnToolbarContextMenu](#ontoolbarcontextmenu)|由框架来构建一个工具栏上的上下文菜单调用。|  
-|[CFrameWndEx::OnToolbarCreateNew](#ontoolbarcreatenew)|框架调用此方法以创建一个新的工具栏。|  
-|[CFrameWndEx::OnToolbarDelete](#ontoolbardelete)|删除工具栏时由框架调用。|  
-|[CFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|由框架后，若要设置帧菜单调用。|  
-|[CFrameWndEx::OnUpdateFrameTitle](#onupdateframetitle)|框架调用此方法以更新框架窗口的标题栏。|  
-|[CFrameWndEx::OnUpdatePaneMenu](#onupdatepanemenu)|由框架来更新窗格中菜单调用。|  
-|[CFrameWndEx::OnWindowPosChanged](#onwindowposchanged)|当帧大小、 位置或 z-顺序因窗口管理方法调用而发生更改时由框架调用。|  
-|[CFrameWndEx::PaneFromPoint](#panefrompoint)|返回包含指定的点的停靠窗格。|  
-|[CFrameWndEx::PreTranslateMessage](#pretranslatemessage)|之前对它们处理特定的窗口消息。|  
-|[CFrameWndEx::RecalcLayout](#recalclayout)|调整该框架及其子窗口的布局。|  
-|[CFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|注销一个窗格，并将其从扩展管理器中的内部列表中删除。|  
-|[CFrameWndEx::SetDockState](#setdockstate)|将停靠布局还原到存储在注册表中的插接状态。|  
-|[CFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|设置打印预览框架窗口。|  
-|[CFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|插入用户定义的命令到工具栏菜单。|  
-|[CFrameWndEx::ShowFullScreen](#showfullscreen)|切换全屏显示模式和常规模式之间的主框架。|  
-|[CFrameWndEx::ShowPane](#showpane)|显示或隐藏指定窗格。|  
-|[CFrameWndEx::UpdateCaption](#updatecaption)|由要更新的窗口框架标题的框架调用。|  
-|[CFrameWndEx::WinHelp](#winhelp)|调用任一`WinHelp`应用程序或上下文相关帮助。|  
+|[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Adjusts the layout of the OLE client item and the frame's client area.|  
+|`CFrameWndEx::AddDockSite`|This method is not used.|  
+|[CFrameWndEx::AddPane](#addpane)|Registers a control bar with the docking manager.|  
+|[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Recalculates the layout of all panes that are docked to the frame window.|  
+|[CFrameWndEx::DelayUpdateFrameMenu](#delayupdateframemenu)|Sets the frame menu and then updates it when command processing is idle.|  
+|[CFrameWndEx::DockPane](#dockpane)|Docks the specified pane to the frame window.|  
+|[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Docks one pane to the left of another pane.|  
+|[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Enables the auto-hide mode for the panes when they are docked to the specified sides of the main frame window.|  
+|[CFrameWndEx::EnableDocking](#enabledocking)|Enables the docking of the panes that belong to the frame window.|  
+|[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Shows or hides the main menu in a full screen mode.|  
+|[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Enables the full screen mode for the frame window.|  
+|[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Enables or disables the loading of the docking state.|  
+|[CFrameWndEx::EnablePaneMenu](#enablepanemenu)|Enables or disables the automatic handling of the pane menu.|  
+|[CFrameWndEx::GetActivePopup](#getactivepopup)|Returns a pointer to the currently displayed pop-up menu.|  
+|[CFrameWndEx::GetDefaultResId](#getdefaultresid)|Returns the resource ID that you specified when the framework loaded the frame window.|  
+|[CFrameWndEx::GetDockingManager](#getdockingmanager)|Retrieves the [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) object for the frame window.|  
+|[CFrameWndEx::GetMenuBar](#getmenubar)|Returns a pointer to the menu bar object attached to the frame window.|  
+|[CFrameWndEx::GetPane](#getpane)|Returns a pointer to the pane that has the specified ID.|  
+|[CFrameWndEx::GetRibbonBar](#getribbonbar)|Retrieves the ribbon bar control for the frame.|  
+|[CFrameWndEx::GetTearOffBars](#gettearoffbars)|Returns a list of pane objects that are in a tear-off state.|  
+|[CFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Called by the framework when the application displays the tooltip for a toolbar button.|  
+|[CFrameWndEx::InsertPane](#insertpane)|Registers a pane with the docking manager.|  
+|[CFrameWndEx::IsFullScreen](#isfullscreen)|Determines whether the frame window is in full screen mode.|  
+|[CFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Determines whether the pointer to the menu bar object is valid.|  
+|[CFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Indicates whether the point is located in an alignment zone.|  
+|[CFrameWndEx::IsPrintPreview](#isprintpreview)|Indicates whether the frame window is in print preview mode.|  
+|[CFrameWndEx::LoadFrame](#loadframe)|This method is called after construction to create the frame window and load its resources.|  
+|[CFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Implements OLE client border negotiation.|  
+|[CFrameWndEx::OnActivate](#onactivate)|The framework calls this method when user input is switched to or away from the frame.|  
+|[CFrameWndEx::OnActivateApp](#onactivateapp)|Called by the framework when the application is either selected or deselected.|  
+|[CFrameWndEx::OnChangeVisualManager](#onchangevisualmanager)|Called by the framework when a change to the frame requires a change to the visual manager.|  
+|[CFrameWndEx::OnClose](#onclose)|The framework calls this method to close the frame.|  
+|[CFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Called by the framework when the user clicks the **Close** button on a docking pane.|  
+|[CFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Called by the framework when the user clicks the **Close** button on a floating mini frame window.|  
+|[CFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Called by the framework when an active pop-up menu processes a WM_DESTROY message.|  
+|[CFrameWndEx::OnCmdMsg](#oncmdmsg)|Dispatches command messages.|  
+|[CFrameWndEx::OnContextHelp](#oncontexthelp)|Called by the framework to display context related help.|  
+|[CFrameWndEx::OnCreate](#oncreate)|Called by the framework after the frame is created.|  
+|[CFrameWndEx::OnDestroy](#ondestroy)|Called by the framework when the frame is destroyed.|  
+|[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Called by the framework when the application draws the image associated with a menu item.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Called by the framework when a `CMFCPopupMenu` object processes a [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message.|  
+|[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Called by the framework when Desktop Window Manager (DWM) composition has been enabled or disabled.|  
+|[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Called by the framework when the frame stops moving or resizing.|  
+|[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Called by the framework when the frame is resized to set window dimension limits.|  
+|[CFrameWndEx::OnIdleUpdateCmdUI](#onidleupdatecmdui)|Called by the framework to update the frame display when command processing is idle.|  
+|[CFrameWndEx::OnLButtonDown](#onlbuttondown)|The framework calls this method when the user presses the left mouse button.|  
+|[CFrameWndEx::OnLButtonUp](#onlbuttonup)|The framework calls this method when the user releases the left mouse button.|  
+|[CFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Called by the framework when a `CMFCToolBarButton` object processes a `WM_NCHITTEST` message.|  
+|[CFrameWndEx::OnMenuChar](#onmenuchar)|Called by the framework when a menu is displayed and the user presses a key that does not correspond to a command.|  
+|[CFrameWndEx::OnMouseMove](#onmousemove)|The framework calls this method when the pointer moves.|  
+|[CFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|Called by the framework when a pane window moves.|  
+|[CFrameWndEx::OnNcActivate](#onncactivate)|Called by the framework when the non-client area of the frame must be redrawn to indicate a change in the active state.|  
+|[CFrameWndEx::OnNcCalcSize](#onnccalcsize)|Called by the framework when the size and position of the client area must be calculated.|  
+|[CFrameWndEx::OnNcHitTest](#onnchittest)|Called by the framework when the pointer moves or when a mouse button is pressed or released.|  
+|[CFrameWndEx::OnNcMouseMove](#onncmousemove)|Called by the framework when the pointer moves in a non-client area.|  
+|[CFrameWndEx::OnNcPaint](#onncpaint)|Called by the framework when the non-client area must be painted.|  
+|[CFrameWndEx::OnPaneCheck](#onpanecheck)|Called by the framework to control the visibility of a pane.|  
+|[CFrameWndEx::OnPostPreviewFrame](#onpostpreviewframe)|Called by the framework when the user has changed the print preview mode.|  
+|[CFrameWndEx::OnPowerBroadcast](#onpowerbroadcast)|Called by the framework when a power management event occurs.|  
+|[CFrameWndEx::OnSetMenu](#onsetmenu)|Called by the framework to replace the frame window menu.|  
+|[CFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Called by the framework to set the print preview mode for the frame.|  
+|[CFrameWndEx::OnSetText](#onsettext)|Called by the framework to set the text of a window.|  
+|[CFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|Called by the framework when a quick customize pane is enabled.|  
+|[CFrameWndEx::OnShowPanes](#onshowpanes)|Called by the framework to show or hide panes.|  
+|[CFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Called by the framework when a pop-up menu is enabled.|  
+|[CFrameWndEx::OnSize](#onsize)|The framework calls this method after the frame's size changes.|  
+|[CFrameWndEx::OnSizing](#onsizing)|The framework calls this method when the user resizes the frame.|  
+|[CFrameWndEx::OnSysColorChange](#onsyscolorchange)|Called by the framework when the system colors change.|  
+|[CFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Called by the framework when a menu that has a tear-off bar is enabled.|  
+|[CFrameWndEx::OnToolbarContextMenu](#ontoolbarcontextmenu)|Called by the framework to build a toolbar context menu.|  
+|[CFrameWndEx::OnToolbarCreateNew](#ontoolbarcreatenew)|The framework calls this method to create a new toolbar.|  
+|[CFrameWndEx::OnToolbarDelete](#ontoolbardelete)|Called by the framework when a toolbar is deleted.|  
+|[CFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Called by the framework to set the frame menu.|  
+|[CFrameWndEx::OnUpdateFrameTitle](#onupdateframetitle)|The framework calls this method to update the title bar of the frame window.|  
+|[CFrameWndEx::OnUpdatePaneMenu](#onupdatepanemenu)|Called by the framework to update the pane menu.|  
+|[CFrameWndEx::OnWindowPosChanged](#onwindowposchanged)|Called by the framework when the frame size, position, or z-order has changed because of a call to a window management method.|  
+|[CFrameWndEx::PaneFromPoint](#panefrompoint)|Returns the docking pane that contains the specified point.|  
+|[CFrameWndEx::PreTranslateMessage](#pretranslatemessage)|Handles specific window messages before they are dispatched.|  
+|[CFrameWndEx::RecalcLayout](#recalclayout)|Adjusts the layout of the frame and its child windows.|  
+|[CFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Unregisters a pane and removes it from the internal list in the docking manager.|  
+|[CFrameWndEx::SetDockState](#setdockstate)|Restores the docking layout to the docking state stored in the registry.|  
+|[CFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Sets the print preview frame window.|  
+|[CFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Inserts user-defined commands into a toolbar menu.|  
+|[CFrameWndEx::ShowFullScreen](#showfullscreen)|Switches the main frame between the full screen and the regular modes.|  
+|[CFrameWndEx::ShowPane](#showpane)|Shows or hides the specified pane.|  
+|[CFrameWndEx::UpdateCaption](#updatecaption)|Called by the framework to update the window frame caption.|  
+|[CFrameWndEx::WinHelp](#winhelp)|Invokes either the `WinHelp` application or context related help.|  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何从类继承`CFrameWndEx`类。 该示例阐释了子类化，请在方法签名以及如何重写`OnShowPopupMenu`方法。 此代码段属于[Word 板示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to inherit a class from the `CFrameWndEx` class. The example illustrates the method signatures in the subclass, and how to override the `OnShowPopupMenu` method. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad #&3;](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]  
-[!code-cpp[NVC_MFC_WordPad #&4;](../../mfc/reference/codesnippet/cpp/cframewndex-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#3](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]  
+[!code-cpp[NVC_MFC_WordPad#4](../../mfc/reference/codesnippet/cpp/cframewndex-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -245,22 +330,22 @@ class CFrameWndEx : public CFrameWnd
   
  [CFrameWnd](../../mfc/reference/cframewnd-class.md)  
   
- [Cframewndex 由](../../mfc/reference/cframewndex-class.md)  
+ [CFrameWndEx](../../mfc/reference/cframewndex-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头：** afxframewndex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxframewndex.h  
   
-##  <a name="activeitemrecalclayout"></a>CFrameWndEx::ActiveItemRecalcLayout  
- 调整 OLE 客户端项和框架的客户端区域的布局。  
+##  <a name="activeitemrecalclayout"></a>  CFrameWndEx::ActiveItemRecalcLayout  
+ Adjusts the layout of the OLE client item and the frame's client area.  
   
 ```  
 void ActiveItemRecalcLayout();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addpane"></a>CFrameWndEx::AddPane  
- 在扩展管理器注册的控件条。  
+##  <a name="addpane"></a>  CFrameWndEx::AddPane  
+ Registers a control bar with the docking manager.  
   
 ```  
 BOOL AddPane(
@@ -268,45 +353,45 @@ BOOL AddPane(
     BOOL bTail=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 若要注册控件状态栏窗格。  
+ A control bar pane to register.  
   
  [in] `bTail`  
- `TRUE`如果您想要将控件状态栏窗格添加到列表; 的末尾`FALSE`否则为。  
+ `TRUE` if you want to add the control bar pane to the end of the list; `FALSE` otherwise.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功注册控制栏;，`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the control bar was successfully registered; `FALSE` otherwise.  
   
-##  <a name="adjustdockinglayout"></a>CFrameWndEx::AdjustDockingLayout  
- 重新计算所有窗格的停靠到框架窗口的布局。  
+##  <a name="adjustdockinglayout"></a>  CFrameWndEx::AdjustDockingLayout  
+ Recalculates the layout of all panes that are docked to the frame window.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hdwp`  
- 指向一个结构，包含多个窗口的位置的句柄。 。  
+ A handle to a structure that contains the positions of multiple windows. .  
   
-### <a name="remarks"></a>备注  
- 通过初始化 hdwp 结构[BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672)方法。  
+### <a name="remarks"></a>Remarks  
+ The hdwp structure is initialized by the [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) method.  
   
-##  <a name="delayupdateframemenu"></a>CFrameWndEx::DelayUpdateFrameMenu  
- 设置框架菜单，然后在命令处理在空闲时才更新它。  
+##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
+ Sets the frame menu and then updates it when command processing is idle.  
   
 ```  
 virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `hMenuAlt`  
- 替代菜单上的句柄。  
+ Handle to an alternative menu.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="dockpane"></a>CFrameWndEx::DockPane  
- 指定的窗格停靠到框架窗口。  
+##  <a name="dockpane"></a>  CFrameWndEx::DockPane  
+ Docks the specified pane to the frame window.  
   
 ```  
 void DockPane(
@@ -315,18 +400,18 @@ void DockPane(
     LPCRECT lpRect=NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 指向要停靠控件条的指针。  
+ A pointer to the control bar to be docked.  
   
  [in] `nDockBarID`  
- 框架窗口停靠到的一侧的 ID。  
+ The ID of the side of the frame window to dock to.  
   
  [in] `lpRect`  
- 指向常量的 Rect 结构，它指定窗口的屏幕位置和大小的指针。  
+ A pointer to a constant Rect structure that specifies the window's screen position and size.  
   
-### <a name="remarks"></a>备注  
- `nDockBarID`参数可以具有下列值之一︰  
+### <a name="remarks"></a>Remarks  
+ The `nDockBarID` parameter can have one of the following values:  
   
 -   AFX_IDW_DOCKBAR_TOP  
   
@@ -336,8 +421,8 @@ void DockPane(
   
 -   AFX_IDW_DOCKBAR_RIGHT  
   
-##  <a name="dockpaneleftof"></a>CFrameWndEx::DockPaneLeftOf  
- 指定的窗格停靠到另一个窗格的左侧。  
+##  <a name="dockpaneleftof"></a>  CFrameWndEx::DockPaneLeftOf  
+ Docks the specified pane to the left of another pane.  
   
 ```  
 BOOL DockPaneLeftOf(
@@ -345,60 +430,60 @@ BOOL DockPaneLeftOf(
     CPane* pLeftOf);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 指向要停靠的窗格中对象的指针。  
+ A pointer to the pane object to be docked.  
   
  [in] `pLeftOf`  
- 指向要停靠指定窗格的左侧窗格中的指针`pBar`。  
+ A pointer to the pane to the left of which to dock the pane specified by `pBar`.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果`pBar`成功停靠。 否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if `pBar` is docked successfully. `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 该方法采用由指定工具栏`pBar`参数，并在工具栏上的左侧指定的停靠`pLeftOf`参数。  
+### <a name="remarks"></a>Remarks  
+ The method takes the toolbar specified by the `pBar` parameter and docks it at the left side of the toolbar specified by `pLeftOf` parameter.  
   
-##  <a name="enableautohidepanes"></a>CFrameWndEx::EnableAutoHidePanes  
- 启用自动隐藏窗格中的模式停靠到的主框架窗口的指定一侧时。  
+##  <a name="enableautohidepanes"></a>  CFrameWndEx::EnableAutoHidePanes  
+ Enables auto-hide mode for the pane when it is docked to the specified side of the main frame window.  
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `dwDockStyle`  
- 指定要将窗格停靠到主框架窗口的面。  
+ Specifies the side of the main frame window to which to dock the pane.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果一个栏窗格成功停靠到由指定的框架窗口端`dwDockStyle`，`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a bar pane is successfully docked to the frame window side that is specified by `dwDockStyle`, `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- `dwDockStyle`可以具有下列值之一︰  
+### <a name="remarks"></a>Remarks  
+ `dwDockStyle` can have one of the following values:  
   
--   CBRS_ALIGN_TOP︰ 使控件条要停靠到框架窗口的工作区的顶部。  
+-   CBRS_ALIGN_TOP: allows the control bar to be docked to the top of the client area of a frame window.  
   
--   CBRS_ALIGN_BOTTOM︰ 使控件条要停靠到框架窗口的工作区的底部。  
+-   CBRS_ALIGN_BOTTOM: allows the control bar to be docked to the bottom of the client area of a frame window.  
   
--   CBRS_ALIGN_LEFT︰ 使控件条要停靠到框架窗口的工作区的左侧。  
+-   CBRS_ALIGN_LEFT: allows the control bar to be docked to the left side of the client area of a frame window.  
   
--   CBRS_ALIGN_RIGHT︰ 使控件条要停靠框架窗口的工作区的右侧。  
+-   CBRS_ALIGN_RIGHT: allows the control bar to be docked to the right side of the client area of a frame window.  
   
-##  <a name="enabledocking"></a>Cframewndex:: Enabledocking  
- 启用框架窗口的窗格的停靠。  
+##  <a name="enabledocking"></a>  CFrameWndEx::EnableDocking  
+ Enables the docking of the panes of the frame window.  
   
 ```  
 BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `dwDockStyle`  
- 指定主框架窗口窗格栏的停靠位置的面。  
+ Specifies the side of the main frame window where the pane bar docks.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果一个栏可以在指定一侧成功停靠窗格。 否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a bar pane can be successfully docked at the specified side. `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- `dwDockStyle`参数可以具有下列值之一︰  
+### <a name="remarks"></a>Remarks  
+ The `dwDockStyle` parameter can have one of the following values:  
   
 -   CBRS_ALIGN_TOP  
   
@@ -408,48 +493,48 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
 -   CBRS_ALIGN_RIGHT  
   
-##  <a name="enablefullscreenmainmenu"></a>CFrameWndEx::EnableFullScreenMainMenu  
- 显示或隐藏全屏幕模式中的主菜单。  
+##  <a name="enablefullscreenmainmenu"></a>  CFrameWndEx::EnableFullScreenMainMenu  
+ Shows or hides the main menu in a full screen mode.  
   
 ```  
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnableMenu`  
- `TRUE`若要在全屏幕模式下，显示主菜单`FALSE`否则为。  
+ `TRUE` to show the main menu in a full screen mode, `FALSE` otherwise.  
   
-##  <a name="enablefullscreenmode"></a>CFrameWndEx::EnableFullScreenMode  
- 启用框架窗口的全屏显示模式。  
+##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
+ Enables the full-screen mode for the frame window.  
   
 ```  
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiFullScreenCmd`  
- 启用和禁用全屏显示模式的命令的 ID。  
+ The ID of a command that enables and disables the full screen mode.  
   
-### <a name="remarks"></a>备注  
- 在全屏幕模式下，隐藏所有停靠控件条、 工具栏和菜单，活动视图一起调整大小以占用全屏幕。  
+### <a name="remarks"></a>Remarks  
+ In the full-screen mode, all docking control bars, toolbars and menu are hidden and the active view is resized to occupy the full-screen.  
   
- 启用全屏显示模式时，您必须指定启用或禁用全屏幕模式的命令 ID。 您可以调用`EnableFullScreenMode`主框架从`OnCreate`函数。 框架窗口正在切换到全屏模式下，框架将使用一个具有指定的命令 ID 的按钮创建浮动工具栏  
+ When you enable the full-screen mode, you must specify an ID of the command that enables or disables the full-screen mode. You can call `EnableFullScreenMode` from the main frame's `OnCreate` function. When a frame window is being switched to a full-screen mode, the framework creates a floating toolbar with one button that has the specified command ID.  
   
- 如果您想要保留在屏幕上的主菜单中，调用[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)。  
+ If you want to keep the main menu on the screen, call [CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
   
-##  <a name="enableloaddockstate"></a>CFrameWndEx::EnableLoadDockState  
- 启用或禁用的插接状态的加载。  
+##  <a name="enableloaddockstate"></a>  CFrameWndEx::EnableLoadDockState  
+ Enables or disables the loading of the docking state.  
   
 ```  
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要启用的插接状态的加载`FALSE`禁用的插接状态的加载。  
+ `TRUE` to enable the loading of the docking state, `FALSE` to disable the loading of the docking state.  
   
-##  <a name="enablepanemenu"></a>CFrameWndEx::EnablePaneMenu  
- 启用或禁用窗格中菜单上的自动处理。  
+##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
+ Enables or disables the automatic handling of the pane menu.  
   
 ```  
 void EnablePaneMenu(
@@ -461,106 +546,106 @@ void EnablePaneMenu(
     BOOL bViewMenuShowsToolbarsOnly=FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要启用的自动处理方式的控制条弹出菜单。`FALSE`若要禁用的弹出菜单栏控件的自动处理。  
+ `TRUE` to enable the automatic handling of the control bar pop-up menus; `FALSE` to disable the automatic handling of the control bar pop-up menus.  
   
  [in] `uiCustomizeCmd`  
- 命令 ID**自定义**菜单项。  
+ The command ID of the **Customize** menu item.  
   
  [in] `strCustomizeLabel`  
- 要为显示的标签**自定义**菜单项  
+ The label to be displayed for the **Customize** menu item  
   
  [in] `uiViewToolbarsMenuEntryID`  
- 在将控件条中打开弹出菜单的工具栏菜单项的 ID。  
+ The ID of a toolbar menu item that opens the pop-up menu in the control bar.  
   
  [in] `bContextMenuShowsToolbarsOnly`  
- 如果`TRUE`，上下文菜单栏控件将显示仅工具栏的列表。 如果`FALSE`，菜单上显示的工具栏和停靠栏的列表。  
+ If `TRUE`, the control bar context menu displays the list of toolbars only. If `FALSE`, the menu displays the list of the toolbars and the docking bars.  
   
  [in] `bViewMenuShowsToolbarsOnly`  
- 如果`TRUE`，控件条菜单显示的工具栏只的列表。 如果`FALSE`，菜单上显示的工具栏和停靠栏的列表。  
+ If `TRUE`, the control bar menu displays the list of the toolbars only. If `FALSE`, the menu displays the list of the toolbars and the docking bars.  
   
-##  <a name="getactivepopup"></a>CFrameWndEx::GetActivePopup  
- 返回一个指向当前所显示的弹出菜单。  
+##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
+ Returns a pointer to the currently displayed pop-up menu.  
   
 ```  
 CMFCPopupMenu* GetActivePopup() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个指向当前所显示的弹出菜单。否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the currently displayed pop-up menu; otherwise `NULL`.  
   
-##  <a name="getdefaultresid"></a>CFrameWndEx::GetDefaultResId  
- 返回指定框架加载框架窗口时的资源 ID。  
+##  <a name="getdefaultresid"></a>  CFrameWndEx::GetDefaultResId  
+ Returns the resource ID that you specified when the framework loaded the frame window.  
   
 ```  
 UINT GetDefaultResId() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 资源 ID 值指定的用户，该框架加载框架窗口的时间。 如果框架窗口没有菜单栏，则为零。  
+### <a name="return-value"></a>Return Value  
+ The resource ID value that the user specified when the framework loaded the frame window. Zero if the frame window does not have a menu bar.  
   
-##  <a name="getdockingmanager"></a>CFrameWndEx::GetDockingManager  
- 检索[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)框架窗口的对象。  
+##  <a name="getdockingmanager"></a>  CFrameWndEx::GetDockingManager  
+ Retrieves the [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) object for the frame window.  
   
 ```  
 CDockingManager* GetDockingManager();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个指向[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md).  
   
-### <a name="remarks"></a>备注  
- 框架窗口创建，并使用[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)对象以管理子窗口停靠。  
+### <a name="remarks"></a>Remarks  
+ The frame window creates and uses a [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) object to manage child window docking.  
   
-##  <a name="getmenubar"></a>CFrameWndEx::GetMenuBar  
- 返回一个指向附加到框架窗口的菜单栏对象的指针。  
+##  <a name="getmenubar"></a>  CFrameWndEx::GetMenuBar  
+ Returns a pointer to the menu bar object attached to the frame window.  
   
 ```  
 const CMFCMenuBar* GetMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向附加到框架窗口的菜单栏中对象的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the menu bar object attached to the frame window.  
   
-##  <a name="getpane"></a>CFrameWndEx::GetPane  
- 将指针返回到窗格中具有指定 id。  
+##  <a name="getpane"></a>  CFrameWndEx::GetPane  
+ Returns a pointer to the pane that has the specified ID.  
   
 ```  
 CBasePane* GetPane(UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 控件 id。  
+ The control ID.  
   
-### <a name="return-value"></a>返回值  
- 指向窗格中，具有指定的 ID 的指针 `NULL`如果没有此类窗格中存在。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the pane that has the specified ID. `NULL` if no such pane exists.  
   
-##  <a name="getribbonbar"></a>CFrameWndEx::GetRibbonBar  
- 检索该框架的功能区栏控件。  
+##  <a name="getribbonbar"></a>  CFrameWndEx::GetRibbonBar  
+ Retrieves the ribbon bar control for the frame.  
   
 ```  
 CMFCRibbonBar* GetRibbonBar();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向[CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)的帧。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) for the frame.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettearoffbars"></a>CFrameWndEx::GetTearOffBars  
- 返回处于拖曳状态的窗格对象的列表。  
+##  <a name="gettearoffbars"></a>  CFrameWndEx::GetTearOffBars  
+ Returns a list of pane objects that are in a tear-off state.  
   
 ```  
 const CObList& GetTearOffBars() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对引用`CObList`对象，其中包含指向处于拖曳状态窗格中对象的指针的集合。  
+### <a name="return-value"></a>Return Value  
+ A reference to `CObList` object that contains a collection of pointers to the pane objects that are in a tear-off state.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CFrameWndEx::GetToolbarButtonToolTipText  
- 当应用程序将显示一个工具栏按钮的工具提示时，由框架调用。  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CFrameWndEx::GetToolbarButtonToolTipText  
+ Called by the framework when the application displays the tooltip for a toolbar button.  
   
 ```  
 virtual BOOL GetToolbarButtonToolTipText(
@@ -568,21 +653,21 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString& strTTText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 一个指向工具栏按钮。  
+ A pointer to a toolbar button.  
   
  [in] `strTTText`  
- 要为按钮显示的工具提示文本。  
+ The tooltip text to display for the button.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果尚未显示工具提示。 否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tooltip has been displayed. `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。 如果你想要显示的工具栏按钮的工具提示，重写此方法。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing. Override this method if you want to display the tooltip for the toolbar button.  
   
-##  <a name="insertpane"></a>CFrameWndEx::InsertPane  
- 将窗格插入到控件条列表中并注册到停靠管理器。  
+##  <a name="insertpane"></a>  CFrameWndEx::InsertPane  
+ Inserts a pane into a list of control bars and registers it with the docking manager.  
   
 ```  
 BOOL InsertPane(
@@ -591,47 +676,47 @@ BOOL InsertPane(
     BOOL bAfter=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pControlBar`  
- 将插入到控件栏列表中并注册到停靠管理器的指向控件条的指针。  
+ A pointer to a control bar to be inserted into the list of control bars and registered with the docking manager.  
   
  `pTarget`  
- 在其之前或之后插入窗格的指向控件条的指针。  
+ A pointer to a control bar before or after which to insert the pane.  
   
  `bAfter`  
- `TRUE`如果您想要插入`pControlBar`后`pTarget`，`FALSE`否则为。  
+ `TRUE` if you want to insert `pControlBar` after `pTarget`, `FALSE` otherwise.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果控件条已成功地插入并注册，`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the control bar was successfully inserted and registered, `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 必须使用注册每个控件条[CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)，从而能够在停靠布局的一部分。  
+### <a name="remarks"></a>Remarks  
+ You must register each control bar by using the [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) to take a part in the docking layout.  
   
-##  <a name="isfullscreen"></a>CFrameWndEx::IsFullScreen  
- 确定在全屏幕模式下是否为框架窗口中。  
+##  <a name="isfullscreen"></a>  CFrameWndEx::IsFullScreen  
+ Determines whether the frame window is in full screen mode.  
   
 ```  
 BOOL IsFullScreen() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果框架窗口处于全屏显示模式;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame window is in full screen mode; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 可以通过调用设置全屏显示模式[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)方法。  
+### <a name="remarks"></a>Remarks  
+ You can set the full screen mode by calling the [CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) method.  
   
-##  <a name="ismenubaravailable"></a>CFrameWndEx::IsMenuBarAvailable  
- 确定指示菜单栏中对象的指针是否有效。  
+##  <a name="ismenubaravailable"></a>  CFrameWndEx::IsMenuBarAvailable  
+ Determines whether the pointer to the menu bar object is valid.  
   
 ```  
 BOOL IsMenuBarAvailable() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果框架窗口包含一个菜单栏;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame window has a menu bar; otherwise `FALSE`.  
   
-##  <a name="ispointneardocksite"></a>CFrameWndEx::IsPointNearDockSite  
- 确定是否将点位于对齐区域。  
+##  <a name="ispointneardocksite"></a>  CFrameWndEx::IsPointNearDockSite  
+ Determines whether the point is located in an alignment zone.  
   
 ```  
 BOOL IsPointNearDockSite(
@@ -640,48 +725,48 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 点的位置。  
+ The position of the point.  
   
  [out] `dwBarAlignment`  
- 该点的对齐位置。 请参阅备注部分中有关可能的值的表。  
+ Where the point is aligned. See the table in the Remarks section for possible values.  
   
  [out] `bOuterEdge`  
- `TRUE`如果点是否位于，接近边框;`FALSE`如果点位于工作区中。  
+ `TRUE` if the point is located close to the frame border; `FALSE` if the point is located in a client area.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果该点位于在对齐区域;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the point is located in an alignment zone; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 下表列出的可能值`dwBarAlignment`参数。  
+### <a name="remarks"></a>Remarks  
+ The following table lists the possible values for the `dwBarAlignment` parameter.  
   
  `CBRS_ALIGN_TOP`  
- 顶部对齐。  
+ Aligned to the top.  
   
  `CBRS_ALIGN_RIGHT`  
- 右对齐方式。  
+ Aligned to the right.  
   
  `CBRS_ALIGN_BOTTOM`  
- 底部对齐。  
+ Aligned to the bottom.  
   
  `CBRS_ALIGN_LEFT`  
- 左对齐方式。  
+ Aligned to the left.  
   
-##  <a name="isprintpreview"></a>CFrameWndEx::IsPrintPreview  
- 确定是否在框架窗口在打印预览模式下。  
+##  <a name="isprintpreview"></a>  CFrameWndEx::IsPrintPreview  
+ Determines whether the frame window is in print preview mode.  
   
 ```  
 BOOL IsPrintPreview();
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果框架窗口在打印预览模式;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame window is in print preview mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="loadframe"></a>CFrameWndEx::LoadFrame  
- 若要创建框架窗口和加载其资源的构造后调用此方法。  
+##  <a name="loadframe"></a>  CFrameWndEx::LoadFrame  
+ This method is called after construction to create the frame window and load its resources.  
   
 ```  
 virtual BOOL LoadFrame(
@@ -691,26 +776,26 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nIDResource`  
- 用于加载所有框架资源的资源 ID。  
+ The resource ID that is used to load all frame resources.  
   
  [in] `dwDefaultStyle`  
- 默认框架窗口样式。  
+ The default frame window style.  
   
  [in] `pParentWnd`  
- 向父窗口的框架的指针。  
+ Pointer to the parent window of the frame.  
   
  [in] `pContext`  
- 指向[CCreateContext 结构](../../mfc/reference/ccreatecontext-structure.md)框架应用程序创建期间使用的类。  
+ Pointer to a [CCreateContext Structure](../../mfc/reference/ccreatecontext-structure.md) class that is used by the framework during application creation.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="negotiateborderspace"></a>CFrameWndEx::NegotiateBorderSpace  
- 实现 OLE 客户端边框协商。  
+##  <a name="negotiateborderspace"></a>  CFrameWndEx::NegotiateBorderSpace  
+ Implements OLE client border negotiation.  
   
 ```  
 virtual BOOL NegotiateBorderSpace(
@@ -718,30 +803,30 @@ virtual BOOL NegotiateBorderSpace(
     LPRECT lpRectBorder);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nBorderCmd`  
- 边界协商命令。 请参阅备注部分中有关可能的值。  
+ The border negotiation command. See the Remarks section for possible values.  
   
  [in, out] `lpRectBorder`  
- 边框的尺寸。  
+ Dimensions of the border.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果必须重新计算布局;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the layout must be recalculated; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 下表列出的可能值`nBorderCmd`参数。  
+### <a name="remarks"></a>Remarks  
+ The following table lists the possible values for the `nBorderCmd` parameter.  
   
  `borderGet`  
- 获取 OLE 客户端的可用空间。  
+ Get available OLE client space.  
   
  `borderRequest`  
- 请求 OLE 客户端空间。  
+ Request OLE client space.  
   
  `borderSet`  
- OLE 客户端空间设置。  
+ Set OLE client space.  
   
-##  <a name="onactivate"></a>CFrameWndEx::OnActivate  
- 当用户输入切换到或离开该框架时，框架将调用此方法。  
+##  <a name="onactivate"></a>  CFrameWndEx::OnActivate  
+ The framework calls this method when user input is switched to or away from the frame.  
   
 ```  
 afx_msg void OnActivate(
@@ -750,30 +835,30 @@ afx_msg void OnActivate(
     BOOL bMinimized);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nState`  
- 是否框架是活动状态还是处于非活动状态。 请参阅备注部分中有关可能的值的表。  
+ Whether the frame is active or inactive. See the table in the Remarks section for possible values.  
   
  [in] `pWndOther`  
- 指针，指向要切换与当前实例的用户输入的另一个窗口。  
+ Pointer to another window that is switching user input with the current one.  
   
  [in] `bMinimized`  
- 该框架最小化的状态。 `TRUE`如果该框架最小化;，否则为`FALSE`。  
+ The minimized state of the frame. `TRUE` if the frame is minimized; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 下表列出的可能值`nState`参数。  
+### <a name="remarks"></a>Remarks  
+ The following table lists the possible values for the `nState` parameter.  
   
  `WA_ACTIVE`  
- 通过鼠标单击之外的方法选定的帧。  
+ The frame is selected by a method other than a mouse click.  
   
  `WA_CLICKACTIVE`  
- 通过鼠标单击选定的帧。  
+ The frame is selected by a mouse click.  
   
  `WA_INACTIVE`  
- 未选定的帧。  
+ The frame is not selected.  
   
-##  <a name="onactivateapp"></a>CFrameWndEx::OnActivateApp  
- 选择或取消选择该应用程序时由框架调用。  
+##  <a name="onactivateapp"></a>  CFrameWndEx::OnActivateApp  
+ Called by the framework when the application is either selected or deselected.  
   
 ```  
 afx_msg void OnActivateApp(
@@ -781,17 +866,17 @@ afx_msg void OnActivateApp(
     DWORD dwThreadID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bActive`  
- `TRUE`如果选择的应用程序;，`FALSE`如果未选择应用程序。  
+ `TRUE` if the application is selected; `FALSE` if the application is not selected.  
   
  [in] `dwThreadID`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onchangevisualmanager"></a>CFrameWndEx::OnChangeVisualManager  
- 当对该框架的更改不需要对可视化管理器更改时由框架调用。  
+##  <a name="onchangevisualmanager"></a>  CFrameWndEx::OnChangeVisualManager  
+ Called by the framework when a change to the frame requires a change to the visual manager.  
   
 ```  
 afx_msg LRESULT OnChangeVisualManager(
@@ -799,70 +884,70 @@ afx_msg LRESULT OnChangeVisualManager(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wParam`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lParam`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 0。  
+### <a name="return-value"></a>Return Value  
+ Always returns 0.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onclose"></a>CFrameWndEx::OnClose  
- 框架调用此方法以关闭该框架。  
+##  <a name="onclose"></a>  CFrameWndEx::OnClose  
+ The framework calls this method to close the frame.  
   
 ```  
 afx_msg void OnClose();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果框架在打印预览模式下，它将发送的 Windows 消息以关闭打印预览中;否则，如果框架承载 OLE 客户端，客户端将停用。  
+### <a name="remarks"></a>Remarks  
+ If the frame is in print preview mode, it sends a Windows message to close the print preview; otherwise, if the frame hosts an OLE client, the client is deactivated.  
   
-##  <a name="onclosedockingpane"></a>CFrameWndEx::OnCloseDockingPane  
- 当用户单击由框架调用**关闭**停靠窗格上的按钮。  
+##  <a name="onclosedockingpane"></a>  CFrameWndEx::OnCloseDockingPane  
+ Called by the framework when the user clicks the **Close** button on a docking pane.  
   
 ```  
 virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果可以关闭停靠栏。 `FALSE`否则  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the docking bar can be closed. `FALSE` otherwise  
   
-### <a name="remarks"></a>备注  
- 默认实现没有任何影响。 如果你想要处理的停靠栏隐藏，重写此方法。  
+### <a name="remarks"></a>Remarks  
+ The default implement does nothing. Override this method if you want to handle the hiding of the docking bar.  
   
-##  <a name="oncloseminiframe"></a>CFrameWndEx::OnCloseMiniFrame  
- 当用户单击由框架调用**关闭**浮动的微型框架窗口上的按钮。  
+##  <a name="oncloseminiframe"></a>  CFrameWndEx::OnCloseMiniFrame  
+ Called by the framework when the user clicks the **Close** button on a floating mini frame window.  
   
 ```  
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果可以关闭浮动的微型框架窗口。 否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a floating mini frame window can be closed. `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 默认实现不执行任何操作。 如果您想要处理的浮动的微型框架窗口隐藏，重写此方法。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing. Override this method if you want to process the hiding of a floating mini frame window.  
   
-##  <a name="onclosepopupmenu"></a>CFrameWndEx::OnClosePopupMenu  
- 当活动的弹出菜单处理 WM_DESTROY 消息时由框架调用。  
+##  <a name="onclosepopupmenu"></a>  CFrameWndEx::OnClosePopupMenu  
+ Called by the framework when an active pop-up menu processes a WM_DESTROY message.  
   
 ```  
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pMenuPopup`  
- 指向一个弹出菜单的指针。  
+ A pointer to a pop-up menu.  
   
-### <a name="remarks"></a>备注  
- 当它即将关闭窗口时，框架将发送会收到 WM_DESTROY 消息。 重写此方法，如果你想要处理来自通知`CMFCPopupMenu`隶属于框架窗口中的对象时`CMFCPopupMenu`处理对象`WM_DESTROY`框架窗口正在关闭时所发送消息。  
+### <a name="remarks"></a>Remarks  
+ The framework sends a WM_DESTROY message when it is about to close the window. Override this method if you want to handle notifications from `CMFCPopupMenu` objects that belong to the frame window when a `CMFCPopupMenu` object is processing a `WM_DESTROY` message sent by the framework when the window is being closed.  
   
-##  <a name="oncmdmsg"></a>CFrameWndEx::OnCmdMsg  
- 调度命令消息。  
+##  <a name="oncmdmsg"></a>  CFrameWndEx::OnCmdMsg  
+ Dispatches command messages.  
   
 ```  
 virtual BOOL OnCmdMsg(
@@ -872,61 +957,61 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 命令 ID。  
+ The command ID.  
   
  [in] `nCode`  
- 命令消息类别。  
+ Command message category.  
   
  [in, out] `pExtra`  
- 对命令对象的指针。  
+ Pointer to a command object.  
   
  [in, out] `pHandlerInfo`  
- 指向命令处理程序结构的指针。  
+ Pointer to a command handler structure.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果已处理的命令消息;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the command message was handled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="oncontexthelp"></a>CFrameWndEx::OnContextHelp  
- 由框架用于显示与上下文相关帮助调用。  
+##  <a name="oncontexthelp"></a>  CFrameWndEx::OnContextHelp  
+ Called by the framework to display context-related help.  
   
 ```  
 afx_msg void OnContextHelp();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="oncreate"></a>CFrameWndEx::OnCreate  
- 由框架创建框架之后调用。  
+##  <a name="oncreate"></a>  CFrameWndEx::OnCreate  
+ Called by the framework after the frame is created.  
   
 ```  
 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpCreateStruct`  
- 一个指向[CREATESTRUCT 结构](../../mfc/reference/createstruct-structure.md)针对新帧。  
+ A pointer to the [CREATESTRUCT Structure](../../mfc/reference/createstruct-structure.md) for the new frame.  
   
-### <a name="return-value"></a>返回值  
- 0，则继续框架创建;销毁框架的-1。  
+### <a name="return-value"></a>Return Value  
+ 0 to continue with the frame creation; -1 to destroy the frame.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondestroy"></a>CFrameWndEx::OnDestroy  
- 销毁框架时，由框架调用。  
+##  <a name="ondestroy"></a>  CFrameWndEx::OnDestroy  
+ Called by the framework when the frame is destroyed.  
   
 ```  
 afx_msg void OnDestroy();
 ```  
   
-### <a name="remarks"></a>备注  
- 快捷键对应表及其所有窗口会被销毁。  
+### <a name="remarks"></a>Remarks  
+ The accelerator table and all windows are destroyed.  
   
-##  <a name="ondrawmenuimage"></a>CFrameWndEx::OnDrawMenuImage  
- 当应用程序绘制菜单项关联的图像时由框架调用。  
+##  <a name="ondrawmenuimage"></a>  CFrameWndEx::OnDrawMenuImage  
+ Called by the framework when the application draws the image associated with a menu item.  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -935,24 +1020,24 @@ virtual BOOL OnDrawMenuImage(
     const CRect& rectImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `pMenuButton`  
- 指向正在呈现其图像的菜单按钮的指针。  
+ A pointer to a menu button whose image is being rendered.  
   
  [in] `rectImage`  
- 一个指向`Rect`结构，它指定屏幕位置和图像的大小。  
+ A pointer to a `Rect` structure that specifies the screen position and size of the image.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果框架成功呈现图像;`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the framework successfully renders the image; `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 重写此方法，如果您想要自定义属于拥有的菜单栏的菜单项的图像渲染`CFrameWndEx`派生的对象。  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to customize the image rendering for the menu items that belong to the menu bar owned by the `CFrameWndEx` derived object.  
   
-##  <a name="ondrawmenulogo"></a>CFrameWndEx::OnDrawMenuLogo  
- 由框架调用时`CMFCPopupMenu`对象处理 WM_PAINT 消息。  
+##  <a name="ondrawmenulogo"></a>  CFrameWndEx::OnDrawMenuLogo  
+ Called by the framework when a `CMFCPopupMenu` object processes a WM_PAINT message.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -961,21 +1046,21 @@ virtual void OnDrawMenuLogo(
     const CRect& rectLogo);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `pMenu`  
- 菜单项的指针。  
+ A pointer to the menu item.  
   
  [in] `rectLogo`  
- 与某个常量引用`CRect`结构，它指定屏幕位置和大小菜单徽标。  
+ A reference to a constant `CRect` structure that specifies the screen position and size of the menu logo.  
   
-### <a name="remarks"></a>备注  
- 重写此函数，如果您想要的弹出菜单中属于拥有的菜单栏上显示一个徽标`CFrameWndEx`派生的对象。  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want to display a logo on the pop-up menu that belongs to the menu bar owned by the `CFrameWndEx` derived object.  
   
-##  <a name="ondwmcompositionchanged"></a>CFrameWndEx::OnDWMCompositionChanged  
- 当启用或禁用了桌面窗口管理器 (DWM) 复合，由框架调用。  
+##  <a name="ondwmcompositionchanged"></a>  CFrameWndEx::OnDWMCompositionChanged  
+ Called by the framework when Desktop Window Manager (DWM) composition has been enabled or disabled.  
   
 ```  
 afx_msg LRESULT OnDWMCompositionChanged(
@@ -983,20 +1068,20 @@ afx_msg LRESULT OnDWMCompositionChanged(
     LPARAM lp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wp`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lp`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 0。  
+### <a name="return-value"></a>Return Value  
+ Always returns 0.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onexitsizemove"></a>CFrameWndEx::OnExitSizeMove  
- 由框架调用，当框架停止移动或调整其大小。  
+##  <a name="onexitsizemove"></a>  CFrameWndEx::OnExitSizeMove  
+ Called by the framework when the frame stops moving or resizing.  
   
 ```  
 LRESULT OnExitSizeMove(
@@ -1004,33 +1089,33 @@ LRESULT OnExitSizeMove(
     LPARAM lp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wp`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lp`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 0。  
+### <a name="return-value"></a>Return Value  
+ Always returns 0.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ongetminmaxinfo"></a>CFrameWndEx::OnGetMinMaxInfo  
- 当框架调整大小，以设置窗口维度限制时，由框架调用。  
+##  <a name="ongetminmaxinfo"></a>  CFrameWndEx::OnGetMinMaxInfo  
+ Called by the framework when the frame is resized to set window dimension limits.  
   
 ```  
 afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpMMI`  
- 指向[MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605)结构。  
+ Pointer to a [MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605) structure.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onidleupdatecmdui"></a>CFrameWndEx::OnIdleUpdateCmdUI  
- 由框架要更新的框架显示，在命令处理处于空闲状态时调用。  
+##  <a name="onidleupdatecmdui"></a>  CFrameWndEx::OnIdleUpdateCmdUI  
+ Called by the framework to update the frame display when command processing is idle.  
   
 ```  
 afx_msg LRESULT OnIdleUpdateCmdUI(
@@ -1038,20 +1123,20 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
     LPARAM lParam = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wParam`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lParam`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 0。  
+### <a name="return-value"></a>Return Value  
+ Always returns 0.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onlbuttondown"></a>CFrameWndEx::OnLButtonDown  
- 当用户按鼠标左键，框架将调用此方法。  
+##  <a name="onlbuttondown"></a>  CFrameWndEx::OnLButtonDown  
+ The framework calls this method when the user presses the left mouse button.  
   
 ```  
 afx_msg void OnLButtonDown(
@@ -1059,17 +1144,17 @@ afx_msg void OnLButtonDown(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nFlags`  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数`wParam`中[WM_LBUTTONDOWN 通知](http://msdn.microsoft.com/library/windows/desktop/ms645607)。  
+ Indicates whether the user pressed modifier keys. For possible values see the parameter `wParam` in [WM_LBUTTONDOWN Notification](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
   
  [in] `point`  
- 指定的 x 和指针的 y 坐标，相对于窗口的左上角。  
+ Specifies the x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onlbuttonup"></a>CFrameWndEx::OnLButtonUp  
- 当用户释放鼠标左键，框架将调用此方法。  
+##  <a name="onlbuttonup"></a>  CFrameWndEx::OnLButtonUp  
+ The framework calls this method when the user releases the left mouse button.  
   
 ```  
 afx_msg void OnLButtonUp(
@@ -1077,17 +1162,17 @@ afx_msg void OnLButtonUp(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nFlags`  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数`wParam`中[WM_LBUTTONUP 通知](http://msdn.microsoft.com/library/windows/desktop/ms645608)。  
+ Indicates whether the user pressed modifier keys. For possible values see the parameter `wParam` in [WM_LBUTTONUP Notification](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
   
  [in] `point`  
- 指定的 x 和指针的 y 坐标，相对于窗口的左上角。  
+ Specifies the x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onmenubuttontoolhittest"></a>CFrameWndEx::OnMenuButtonToolHitTest  
- 由框架调用时`CMFCToolBarButton`对象进程`WM_NCHITTEST`消息。  
+##  <a name="onmenubuttontoolhittest"></a>  CFrameWndEx::OnMenuButtonToolHitTest  
+ Called by the framework when a `CMFCToolBarButton` object processes a `WM_NCHITTEST` message.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1095,21 +1180,21 @@ virtual BOOL OnMenuButtonToolHitTest(
     TOOLINFO* pTI);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 一个指向工具栏按钮。  
+ A pointer to the tool bar button.  
   
  [out] `pTI`  
- 指向工具信息结构的指针。  
+ A pointer to a tool information structure.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果应用程序填充`pTI`参数。 否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the application fills the `pTI` parameter. `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 如果您想要提供有关特定菜单项的工具提示信息，请重写此方法。  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to provide a tooltip information about a specific menu item.  
   
-##  <a name="onmenuchar"></a>CFrameWndEx::OnMenuChar  
- 由框架调用时将显示一个菜单，并且用户按一个键，它与某个命令不对应。  
+##  <a name="onmenuchar"></a>  CFrameWndEx::OnMenuChar  
+ Called by the framework when a menu is displayed and the user presses a key that does not correspond to a command.  
   
 ```  
 afx_msg LRESULT OnMenuChar(
@@ -1118,32 +1203,32 @@ afx_msg LRESULT OnMenuChar(
     CMenu* pMenu);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- 按下的键的字符代码。  
+ Character code of the pressed key.  
   
  [in] `nFlags`  
- 包含`MF_POPUP`标志显示的菜单为子菜单; 如果包含`MF_SYSMENU`如果显示的菜单控件菜单的标志。  
+ Contains the `MF_POPUP` flag if the menu displayed is a submenu; contains the `MF_SYSMENU` flag if the menu displayed is a control menu.  
   
  [in] `pMenu`  
- 指向一个菜单。  
+ Pointer to a menu.  
   
-### <a name="return-value"></a>返回值  
- 高序位字必须是下列值之一。  
+### <a name="return-value"></a>Return Value  
+ The high-order word must be one of the following values.  
   
  `0`  
- 框架应忽略击键。  
+ The framework should ignore the keystroke.  
   
  `1`  
- 框架应关闭菜单。  
+ The framework should close the menu.  
   
  `2`  
- 框架应选择其中一个菜单中显示的项。 低序位字包含要选择的命令的 ID。  
+ The framework should select one of the items displayed in the menu. The low-order word contains the ID of the command to select.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onmousemove"></a>CFrameWndEx::OnMouseMove  
- 当鼠标指针移动时，框架将调用此方法。  
+##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
+ The framework calls this method when the pointer moves.  
   
 ```  
 afx_msg void OnMouseMove(
@@ -1151,49 +1236,49 @@ afx_msg void OnMouseMove(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nFlags`  
- 指示用户是否按下修改键。 有关可能的值，请参阅参数`wParam`中[WM_MOUSEMOVE 通知](http://msdn.microsoft.com/library/windows/desktop/ms645616)。  
+ Indicates whether a user pressed modifier keys. For possible values see the parameter `wParam` in [WM_MOUSEMOVE Notification](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
   
  [in] `point`  
- 指定的 x 和 y 坐标相对于窗口的左上角的指针。  
+ Specifies the x and y coordinates of the pointer relative to the upper-left corner of the window.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onmoveminiframe"></a>CFrameWndEx::OnMoveMiniFrame  
- 当一个窗格窗口将由框架调用。  
+##  <a name="onmoveminiframe"></a>  CFrameWndEx::OnMoveMiniFrame  
+ Called by the framework when a pane window moves.  
   
 ```  
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pFrame`  
- 指向[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)窗格窗口。  
+ Pointer to the [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md) pane window.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果未停靠窗格窗口。，`FALSE`如果已停靠窗格窗口。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane window was not docked; `FALSE` if the pane window was docked.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onncactivate"></a>CFrameWndEx::OnNcActivate  
- 必须重新绘制的帧的非工作区，以说明处于活动状态的更改时由框架调用。  
+##  <a name="onncactivate"></a>  CFrameWndEx::OnNcActivate  
+ Called by the framework when the non-client area of the frame must be redrawn to indicate a change in the active state.  
   
 ```  
 afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bActive`  
- `TRUE`若要绘制活动状态，则框架`FALSE`要绘制的帧处于非活动状态。  
+ `TRUE` to draw the frame active; `FALSE` to draw the frame inactive.  
   
-### <a name="return-value"></a>返回值  
- 非零值，继续使用默认处理;若要阻止正在停用的非工作区为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero to continue with default processing; 0 to prevent the non-client area from being deactivated.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onnccalcsize"></a>CFrameWndEx::OnNcCalcSize  
- 当必须计算的大小和工作区的位置时由框架调用。  
+##  <a name="onnccalcsize"></a>  CFrameWndEx::OnNcCalcSize  
+ Called by the framework when the size and position of the client area must be calculated.  
   
 ```  
 afx_msg void OnNcCalcSize(
@@ -1201,33 +1286,33 @@ afx_msg void OnNcCalcSize(
     NCCALCSIZE_PARAMS FAR* lpncsp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bCalcValidRects`  
- `TRUE`当应用程序必须指定一个有效的客户端区域;否则为`FALSE`。  
+ `TRUE` when the application must specify a valid client area; otherwise, `FALSE`.  
   
  [in] `lpncsp`  
- 指向`NCCALCSIZE_PARAMS`结构，其中包含框架维度更改。  
+ Pointer to a `NCCALCSIZE_PARAMS` structure that contains frame dimension changes.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onnchittest"></a>CFrameWndEx::OnNcHitTest  
- 当指针移动，或按下或释放鼠标按钮时由框架调用。  
+##  <a name="onnchittest"></a>  CFrameWndEx::OnNcHitTest  
+ Called by the framework when the pointer moves or when a mouse button is pressed or released.  
   
 ```  
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 以屏幕坐标表示的指针的位置。  
+ The location of the pointer in screen coordinates.  
   
-### <a name="return-value"></a>返回值  
- 一个指针，命中枚举的值。 有关可能的值的列表，请参阅[WM_NCHITTEST 通知进行](http://msdn.microsoft.com/library/windows/desktop/ms645618)。  
+### <a name="return-value"></a>Return Value  
+ A pointer hit enumerated value. For a list of possible values see [WM_NCHITTEST Notification](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onncmousemove"></a>CFrameWndEx::OnNcMouseMove  
- 当指针移动在非工作区中，由框架调用。  
+##  <a name="onncmousemove"></a>  CFrameWndEx::OnNcMouseMove  
+ Called by the framework when the pointer moves in a non-client area.  
   
 ```  
 afx_msg void OnNcMouseMove(
@@ -1235,42 +1320,42 @@ afx_msg void OnNcMouseMove(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nHitTest`  
- 一个指针，命中枚举的值。 有关可能的值的列表，请参阅[WM_NCHITTEST 通知进行](http://msdn.microsoft.com/library/windows/desktop/ms645618)。  
+ A pointer hit enumerated value. For a list of possible values see [WM_NCHITTEST Notification](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
   
  [in] `point`  
- 以屏幕坐标表示的指针的位置。  
+ The location of the pointer in screen coordinates.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onncpaint"></a>CFrameWndEx::OnNcPaint  
- 必须绘制的非工作区时，由框架调用。  
+##  <a name="onncpaint"></a>  CFrameWndEx::OnNcPaint  
+ Called by the framework when the non-client area must be painted.  
   
 ```  
 afx_msg void OnNcPaint();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onpanecheck"></a>CFrameWndEx::OnPaneCheck  
- 由框架来控制窗格的可见性调用。  
+##  <a name="onpanecheck"></a>  CFrameWndEx::OnPaneCheck  
+ Called by the framework to control the visibility of a pane.  
   
 ```  
 afx_msg BOOL OnPaneCheck(UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 一个窗格的控件 ID。  
+ Control ID of a pane.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果该命令已得到处理。`FALSE`继续命令处理。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the command was handled; `FALSE` to continue with command processing.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onpostpreviewframe"></a>CFrameWndEx::OnPostPreviewFrame  
- 在用户更改打印预览模式时，由框架调用。  
+##  <a name="onpostpreviewframe"></a>  CFrameWndEx::OnPostPreviewFrame  
+ Called by the framework when the user changes the print preview mode.  
   
 ```  
 afx_msg LRESULT OnPostPreviewFrame(
@@ -1278,20 +1363,20 @@ afx_msg LRESULT OnPostPreviewFrame(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wParam`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lParam`  
- `TRUE`打印预览模式，则该框架时`FALSE`时打印预览模式处于关闭状态。  
+ `TRUE` when the frame is in print preview mode; `FALSE` when print preview mode is off.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 0。  
+### <a name="return-value"></a>Return Value  
+ Always returns 0.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onpowerbroadcast"></a>CFrameWndEx::OnPowerBroadcast  
- 电源管理事件发生时由框架调用。  
+##  <a name="onpowerbroadcast"></a>  CFrameWndEx::OnPowerBroadcast  
+ Called by the framework when a power management event occurs.  
   
 ```  
 afx_msg LRESULT OnPowerBroadcast(
@@ -1299,20 +1384,20 @@ afx_msg LRESULT OnPowerBroadcast(
     LPARAM lp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wp`  
- 电源管理事件。 有关可能的值的列表，请参阅[WM_POWERBROADCAST 消息](http://msdn.microsoft.com/library/windows/desktop/aa373247)。  
+ The power management event. For a list of possible values see [WM_POWERBROADCAST Message](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
   
  [in] `lp`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 导致调用默认窗口过程。  
+### <a name="return-value"></a>Return Value  
+ Result from calling the default window procedure.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsetmenu"></a>CFrameWndEx::OnSetMenu  
- 由框架来替换框架窗口菜单调用。  
+##  <a name="onsetmenu"></a>  CFrameWndEx::OnSetMenu  
+ Called by the framework to replace the frame window menu.  
   
 ```  
 afx_msg LRESULT OnSetMenu(
@@ -1322,25 +1407,25 @@ afx_msg LRESULT OnSetMenu(
 BOOL OnSetMenu(HMENU hmenu);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wp`  
- 新框架窗口菜单的句柄。  
+ Handle to the new frame window menu.  
   
  [in] `lp`  
- 新窗口菜单的句柄。  
+ Handle to the new window menu.  
   
  [in] `hmenu`  
- 新框架窗口菜单的句柄。  
+ Handle to the new frame window menu.  
   
-### <a name="return-value"></a>返回值  
- `LRESULT`是调用默认窗口过程的结果。  
+### <a name="return-value"></a>Return Value  
+ `LRESULT` is the result from calling the default window procedure.  
   
- `BOOL`是`TRUE`如果事件处理; 否则为`FALSE`。  
+ `BOOL` is `TRUE` if the event was handled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsetpreviewmode"></a>CFrameWndEx::OnSetPreviewMode  
- 由框架来设置该框架的打印预览模式调用。  
+##  <a name="onsetpreviewmode"></a>  CFrameWndEx::OnSetPreviewMode  
+ Called by the framework to set the print preview mode for the frame.  
   
 ```  
 virtual void OnSetPreviewMode(
@@ -1348,17 +1433,17 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bPreview`  
- `TRUE`若要启用打印预览，则为`FALSE`禁用打印预览。  
+ `TRUE` to enable print preview; `FALSE` to disable print preview.  
   
  [in] `pState`  
- 指向`CPrintPreviewState`框架状态结构。  
+ Pointer to a `CPrintPreviewState` frame state structure.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsettext"></a>CFrameWndEx::OnSetText  
- 由框架用于设置文本的一个窗口调用。  
+##  <a name="onsettext"></a>  CFrameWndEx::OnSetText  
+ Called by the framework to set the text of a window.  
   
 ```  
 afx_msg LRESULT OnSetText(
@@ -1366,20 +1451,20 @@ afx_msg LRESULT OnSetText(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wParam`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lParam`  
- 为窗口中的文本指针。  
+ Pointer to the text for the window.  
   
-### <a name="return-value"></a>返回值  
- 从调用返回值[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572)。  
+### <a name="return-value"></a>Return Value  
+ Return value from a call to [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onshowcustomizepane"></a>CFrameWndEx::OnShowCustomizePane  
- 在显示时由框架调用`QuickCustomizePane`。  
+##  <a name="onshowcustomizepane"></a>  CFrameWndEx::OnShowCustomizePane  
+ Called by the framework when it displays a `QuickCustomizePane`.  
   
 ```  
 virtual BOOL OnShowCustomizePane(
@@ -1387,59 +1472,59 @@ virtual BOOL OnShowCustomizePane(
     UINT uiToolbarID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuPane`  
- 一个指向快速自定义窗格。  
+ A pointer to the quick customize pane.  
   
  [in] `uiToolbarID`  
- 要自定义工具栏上的控件 ID。  
+ The control ID of the toolbar to customize.  
   
-### <a name="return-value"></a>返回值  
- 此方法始终返回`TRUE`。  
+### <a name="return-value"></a>Return Value  
+ This method always return `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 快速自定义菜单是时，将显示您单击工具栏上的自定义按钮的弹出菜单  
+### <a name="remarks"></a>Remarks  
+ The quick customize menu is a pop-up menu that appears when you click the toolbar’s customize button  
   
-##  <a name="onshowpanes"></a>CFrameWndEx::OnShowPanes  
- 由框架，以显示或隐藏窗格调用。  
+##  <a name="onshowpanes"></a>  CFrameWndEx::OnShowPanes  
+ Called by the framework to show or hide panes.  
   
 ```  
 virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- `TRUE`如果应用程序显示窗格;`FALSE`否则为。  
+ `TRUE` if the application shows the panes; `FALSE` otherwise.  
   
-### <a name="return-value"></a>返回值  
- 此方法始终返回`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ This method always return `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认实现显示窗格如果`bShow`是`TRUE`、 隐藏窗格时，或者当`bShow`是`FALSE`，而且窗格可见。  
+### <a name="remarks"></a>Remarks  
+ The default implementation shows the panes if `bShow` is `TRUE` and the panes are hidden or when `bShow` is `FALSE` and the panes are visible.  
   
- 默认实现会隐藏窗格，如果`bShow`是`TRUE`，而且窗格可见时，或者当`bShow`是`FALSE`、 隐藏窗格。  
+ The default implementation hides the panes if `bShow` is `TRUE` and the panes are visible or when `bShow` is `FALSE` and the panes are hidden.  
   
- 重写此方法在派生类时要执行自定义代码框架显示或隐藏窗格。  
+ Override this method in a derived class to execute custom code when the framework shows or hides panes.  
   
-##  <a name="onshowpopupmenu"></a>CFrameWndEx::OnShowPopupMenu  
- 在显示弹出菜单时由框架调用。  
+##  <a name="onshowpopupmenu"></a>  CFrameWndEx::OnShowPopupMenu  
+ Called by the framework when it displays a pop-up menu.  
   
 ```  
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pMenu`  
- 指向一个弹出菜单的指针。  
+ A pointer to a pop-up menu.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果弹出菜单是否可见。否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pop-up menu is visible; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 重写此方法在派生类来执行自定义代码时，框架显示一个弹出菜单中。 例如，重写此方法可以更改的弹出菜单中的命令的背景色。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to execute custom code when the framework displays a pop-up menu. For example, override this method to change the background color of the commands in a pop-up menu.  
   
-##  <a name="onsize"></a>CFrameWndEx::OnSize  
- 由框架调用帧的大小发生更改后。  
+##  <a name="onsize"></a>  CFrameWndEx::OnSize  
+ Called by the framework after the frame's size changes.  
   
 ```  
 afx_msg void OnSize(
@@ -1448,20 +1533,20 @@ afx_msg void OnSize(
     int cy);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nType`  
- 调整大小的类型。 有关可能的值，请参阅参数`wParam`中[WM_SIZE 通知](http://msdn.microsoft.com/library/windows/desktop/ms632646)。  
+ The type of resizing. For possible values see the parameter `wParam` in [WM_SIZE Notification](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
   
  [in] `cx`  
- 以像素为单位的框架的新宽度。  
+ New width of the frame in pixels.  
   
  [in] `cy`  
- 以像素为单位的框架的新高度。  
+ New height of the frame in pixels.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsizing"></a>CFrameWndEx::OnSizing  
- 当用户调整该框架由框架调用。  
+##  <a name="onsizing"></a>  CFrameWndEx::OnSizing  
+ Called by the framework when the user resizes the frame.  
   
 ```  
 afx_msg void OnSizing(
@@ -1469,26 +1554,26 @@ afx_msg void OnSizing(
     LPRECT pRect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `fwSide`  
- 移动的帧边缘。 请参阅参数`wParam`中[WM_SIZING 通知](http://msdn.microsoft.com/library/windows/desktop/ms632647)。  
+ The edge of the frame that is moved. See the parameter `wParam` in [WM_SIZING Notification](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
   
  [in, out] `pRect`  
- 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](../../mfc/reference/rect-structure1.md)结构，其中包含框架的坐标。  
+ Pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) or [RECT](../../mfc/reference/rect-structure1.md) structure that contains the frame's coordinates.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsyscolorchange"></a>CFrameWndEx::OnSysColorChange  
- 系统颜色更改时由框架调用。  
+##  <a name="onsyscolorchange"></a>  CFrameWndEx::OnSysColorChange  
+ Called by the framework when the system colors change.  
   
 ```  
 void OnSysColorChange();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ontearoffmenu"></a>CFrameWndEx::OnTearOffMenu  
- 当应用程序显示一个菜单，具有拖曳栏时由框架调用。  
+##  <a name="ontearoffmenu"></a>  CFrameWndEx::OnTearOffMenu  
+ Called by the framework when the application displays a menu that has a tear-off bar.  
   
 ```  
 virtual BOOL OnTearOffMenu(
@@ -1496,23 +1581,23 @@ virtual BOOL OnTearOffMenu(
     CPane* pBar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuPopup`  
- 指向一个弹出菜单的指针。  
+ A pointer to a pop-up menu.  
   
  [in] `pBar`  
- 指向拖曳栏的指针。  
+ A pointer to a tear-off bar.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果启用了弹出菜单用拖曳条;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pop-up menu with the tear-off bar is enabled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 重写此方法在派生类来执行自定义代码时，框架显示的控件条。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to execute custom code when the framework displays a control bar.  
   
- 默认实现不执行任何操作并返回`TRUE`。  
+ The default implementation does nothing and returns `TRUE`.  
   
-##  <a name="ontoolbarcontextmenu"></a>CFrameWndEx::OnToolbarContextMenu  
- 由框架来构建一个工具栏的弹出菜单调用。  
+##  <a name="ontoolbarcontextmenu"></a>  CFrameWndEx::OnToolbarContextMenu  
+ Called by the framework to build a toolbar pop-up menu.  
   
 ```  
 afx_msg LRESULT OnToolbarContextMenu(
@@ -1520,20 +1605,20 @@ afx_msg LRESULT OnToolbarContextMenu(
     LPARAM lp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wp`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lp`  
- 未使用此参数。  
+ This parameter is not used.  
   
-### <a name="return-value"></a>返回值  
- 始终返回 1。  
+### <a name="return-value"></a>Return Value  
+ Always returns 1.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ontoolbarcreatenew"></a>CFrameWndEx::OnToolbarCreateNew  
- 框架调用此方法以创建一个新的工具栏。  
+##  <a name="ontoolbarcreatenew"></a>  CFrameWndEx::OnToolbarCreateNew  
+ The framework calls this method to create a new toolbar.  
   
 ```  
 afx_msg LRESULT OnToolbarCreateNew(
@@ -1541,20 +1626,20 @@ afx_msg LRESULT OnToolbarCreateNew(
     LPARAM lp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `wp`  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lp`  
- 为工具栏上的标题栏的文本指针。  
+ Pointer to the text for the title bar of the toolbar.  
   
-### <a name="return-value"></a>返回值  
- 指向新的工具栏中;或`NULL`如果不创建一个工具栏。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the new toolbar; or `NULL` if a toolbar was not created.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ontoolbardelete"></a>CFrameWndEx::OnToolbarDelete  
- 删除工具栏时由框架调用。  
+##  <a name="ontoolbardelete"></a>  CFrameWndEx::OnToolbarDelete  
+ Called by the framework when a toolbar is deleted.  
   
 ```  
 afx_msg LRESULT OnToolbarDelete(
@@ -1562,72 +1647,72 @@ afx_msg LRESULT OnToolbarDelete(
     LPARAM lp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in]  
- 未使用此参数。  
+ This parameter is not used.  
   
  [in] `lp`  
- 到工具栏上的指针。  
+ Pointer to a toolbar.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果工具栏已被删除;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar was deleted; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onupdateframemenu"></a>CFrameWndEx::OnUpdateFrameMenu  
- 由框架后，若要设置帧菜单调用。  
+##  <a name="onupdateframemenu"></a>  CFrameWndEx::OnUpdateFrameMenu  
+ Called by the framework to set the frame menu.  
   
 ```  
 virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `hMenuAlt`  
- 备用菜单上的句柄。  
+ Handle to the alternative menu.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onupdateframetitle"></a>CFrameWndEx::OnUpdateFrameTitle  
- 框架调用此方法以更新框架窗口的标题栏。  
+##  <a name="onupdateframetitle"></a>  CFrameWndEx::OnUpdateFrameTitle  
+ The framework calls this method to update the title bar of the frame window.  
   
 ```  
 virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bAddToTitle`  
- `TRUE`若要添加到框架窗口标题栏; 活动文档的标题否则`FALSE.`  
+ `TRUE` to add the active document title to the frame window title bar; otherwise `FALSE.`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onupdatepanemenu"></a>CFrameWndEx::OnUpdatePaneMenu  
- 由框架来更新窗格中菜单调用。  
+##  <a name="onupdatepanemenu"></a>  CFrameWndEx::OnUpdatePaneMenu  
+ Called by the framework to update the pane menu.  
   
 ```  
 afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pCmdUI`  
- 指向窗格用户界面对象的指针。  
+ Pointer to the pane user interface object.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onwindowposchanged"></a>CFrameWndEx::OnWindowPosChanged  
- 当帧大小、 位置或 z-顺序因窗口管理方法调用而发生更改时由框架调用。  
+##  <a name="onwindowposchanged"></a>  CFrameWndEx::OnWindowPosChanged  
+ Called by the framework when the frame size, position, or z-order has changed because of a call to a window management method.  
   
 ```  
 afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpwndpos`  
- 指向[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)结构，其中包含新的大小和位置。  
+ Pointer to a [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) structure that contains the new size and position.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="panefrompoint"></a>CFrameWndEx::PaneFromPoint  
- 搜索每个窗格中，针对给定的点。  
+##  <a name="panefrompoint"></a>  CFrameWndEx::PaneFromPoint  
+ Searches each pane for the given point.  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -1643,62 +1728,62 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 若要检查点的屏幕坐标。  
+ The screen coordinates of the point to check.  
   
  [in] `nSensitivity`  
- 搜索点时，请按此量展开每个控件条的边框。  
+ Expand the bounding rectangle of each control bar by this amount when searching for point.  
   
  [in] `bExactBar`  
- `TRUE`若要忽略`nSensitivity`参数; 否则为`FALSE`。  
+ `TRUE` to ignore the `nSensitivity` parameter; otherwise, `FALSE`.  
   
  [in] `pRTCBarType`  
- 如果不是`NULL`，则方法会搜索指定类型的控件条。  
+ If not `NULL`, the method searches only the control bars of the specified type.  
   
  [out] `dwAlignment`  
- 如果成功，此参数包含指定的点与最接近的控件条的一端。 否则，此参数未初始化。  
+ If successful, this parameter contains the side of the control bar that is closest to the specified point. Otherwise, this parameter is not initialized.  
   
-### <a name="return-value"></a>返回值  
- 一个指向包含的控件条`point`;`NULL`如果不找到任何控件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a control bar that contains the `point`; `NULL` if no control is found.  
   
-### <a name="remarks"></a>备注  
- 此方法在你的应用程序中搜索所有控件条`point`。  
+### <a name="remarks"></a>Remarks  
+ This method searches all the control bars in your application for a `point`.  
   
- 使用`nSensitivity`以提高搜索区域的大小。 使用`pRTCBarType`来限制方法搜索的控件条的类型。  
+ Use `nSensitivity` to increase the size of the search area. Use `pRTCBarType` to restrict the types of control bars that the method searches.  
   
-##  <a name="pretranslatemessage"></a>CFrameWndEx::PreTranslateMessage  
- 之前对它们处理特定的窗口消息。  
+##  <a name="pretranslatemessage"></a>  CFrameWndEx::PreTranslateMessage  
+ Handles specific window messages before they are dispatched.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pMsg`  
- 一个指向[MSG](../../mfc/reference/msg-structure1.md)结构，其中包含要处理的消息。  
+ A pointer to a [MSG](../../mfc/reference/msg-structure1.md) structure that contains the message to process.  
   
-### <a name="return-value"></a>返回值  
- 非零如果消息已处理并且不应将调度;如果消息未得到处理，并且应调度为 0。  
+### <a name="return-value"></a>Return Value  
+ Non-zero if the message was handled and should not be dispatched; 0 if the message was not handled and should be dispatched.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="recalclayout"></a>CFrameWndEx::RecalcLayout  
- 调整该框架及其子窗口的布局。  
+##  <a name="recalclayout"></a>  CFrameWndEx::RecalcLayout  
+ Adjusts the layout of the frame and its child windows.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bNotify`  
- 指定是否向 OLE 客户端项的布局更改的相关通知。  
+ Specifies whether to notify the OLE client item about the layout change.  
   
-### <a name="remarks"></a>备注  
- 框架窗口的大小已更改或控件条是显示还是隐藏时，调用此方法。  
+### <a name="remarks"></a>Remarks  
+ This method is called when the size of the frame window has changed or when control bars are displayed or hidden.  
   
-##  <a name="removepanefromdockmanager"></a>CFrameWndEx::RemovePaneFromDockManager  
- 注销一个窗格，并将其从扩展管理器中删除。  
+##  <a name="removepanefromdockmanager"></a>  CFrameWndEx::RemovePaneFromDockManager  
+ Unregisters a pane and removes it from the docking manager.  
   
 ```  
 void RemovePaneFromDockManager(
@@ -1709,53 +1794,53 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 指向控件的状态栏窗格中，若要删除的指针。  
+ A pointer to the control bar pane to remove.  
   
  [in] `bDestroy`  
- `TRUE`若要删除它; 后销毁控件条`FALSE`否则为。  
+ `TRUE` to destroy the control bar after removing it; `FALSE` otherwise.  
   
  [in] `bAdjustLayout`  
- `TRUE`若要调整停靠布局;`FALSE`否则为。  
+ `TRUE` to adjust the docking layout; `FALSE` otherwise.  
   
  [in] `bAutoHide`  
- `TRUE`如果控件条处于自动隐藏模式;`FALSE`否则为。  
+ `TRUE` if the control bar is in auto-hide mode; `FALSE` otherwise.  
   
  [in] `pBarReplacement`  
- 指向替换删除窗格中的窗格的指针。  
+ A pointer to a pane that replaces the removed pane.  
   
-### <a name="remarks"></a>备注  
- 使用此方法从框架窗口的停靠布局中删除的控件条。  
+### <a name="remarks"></a>Remarks  
+ Use this method to remove a control bar from the docking layout of the frame window.  
   
- [CDockingManager 类](../../mfc/reference/cdockingmanager-class.md)处理控件条的布局。 您必须通过使用与扩展管理器注册每个控件条[CFrameWndEx::AddPane](#addpane)方法或[CFrameWndEx::InsertPane](#insertpane)方法。  
+ The [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) handles the layout of control bars. You must register each control bar with the docking manager by using the [CFrameWndEx::AddPane](#addpane) method or the [CFrameWndEx::InsertPane](#insertpane) method.  
   
-##  <a name="setdockstate"></a>CFrameWndEx::SetDockState  
- 将停靠布局还原到存储在注册表中的插接状态。  
+##  <a name="setdockstate"></a>  CFrameWndEx::SetDockState  
+ Restores the docking layout to the docking state stored in the registry.  
   
 ```  
 void SetDockState(const CDockState& state);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `state`  
- 插接状态。 忽略此参数。  
+ The docking state. This parameter is ignored.  
   
-##  <a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame  
- 设置打印预览框架窗口。  
+##  <a name="setprintpreviewframe"></a>  CFrameWndEx::SetPrintPreviewFrame  
+ Sets the print preview frame window.  
   
 ```  
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 到打印预览框架窗口的指针。  
+ Pointer to a print preview frame window.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setuptoolbarmenu"></a>CFrameWndEx::SetupToolbarMenu  
- 插入用户定义的命令到工具栏菜单。  
+##  <a name="setuptoolbarmenu"></a>  CFrameWndEx::SetupToolbarMenu  
+ Inserts user-defined commands into a toolbar menu.  
   
 ```  
 void SetupToolbarMenu(
@@ -1764,28 +1849,28 @@ void SetupToolbarMenu(
     const UINT uiViewUserToolbarCmdLast);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `menu`  
- 一个`CMenu`要修改对象。  
+ A `CMenu` object to be modified.  
   
  [in] `uiViewUserToolbarCmdFirst`  
- 第一个用户定义的命令。  
+ The first user-defined command.  
   
  [in] `uiViewUserToolbarCmdLast`  
- 上次执行用户定义的命令。  
+ The last user-defined command.  
   
-### <a name="remarks"></a>备注  
- 框架将存储在列表中的用户定义的命令。 使用`uiViewUserToolbarCmdFirst`和`uiViewUserToolbarCmdList`来指定要插入的命令的索引。  
+### <a name="remarks"></a>Remarks  
+ The framework stores user-defined commands in a list. Use `uiViewUserToolbarCmdFirst` and `uiViewUserToolbarCmdList` to specify the indexes of the commands to insert.  
   
-##  <a name="showfullscreen"></a>CFrameWndEx::ShowFullScreen  
- 切换全屏显示模式和常规显示模式之间的主框架。  
+##  <a name="showfullscreen"></a>  CFrameWndEx::ShowFullScreen  
+ Switches the main frame between full-screen mode and regular mode.  
   
 ```  
 void ShowFullScreen();
 ```  
   
-##  <a name="showpane"></a>CFrameWndEx::ShowPane  
- 显示或隐藏指定窗格。  
+##  <a name="showpane"></a>  CFrameWndEx::ShowPane  
+ Shows or hides the specified pane.  
   
 ```  
 void ShowPane(
@@ -1795,30 +1880,30 @@ void ShowPane(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 指向控件条以显示或隐藏的指针。  
+ A pointer to the control bar to show or hide.  
   
  [in] `bShow`  
- 如果`TRUE`，该应用程序显示控件条。 否则，该应用程序隐藏的控件条。  
+ If `TRUE`, the application shows the control bar. Otherwise, the application hides the control bar.  
   
  [in] `bDelay`  
- 如果`TRUE`，延迟到框架将调用停靠布局的调整[CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)。 否则，立即重新计算停靠布局。  
+ If `TRUE`, delay the adjustment of the docking layout until the framework calls [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). Otherwise, recalculate the docking layout immediately.  
   
  [in] `bActivate`  
- 如果`TRUE`，使控件条处于活动状态。 否则，显示处于不活动状态的控件条。  
+ If `TRUE`, make the control bar active. Otherwise, display the control bar in an inactive state.  
   
-##  <a name="updatecaption"></a>CFrameWndEx::UpdateCaption  
- 由要更新的窗口框架标题的框架调用。  
+##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
+ Called by the framework to update the window frame caption.  
   
 ```  
 void UpdateCaption();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="winhelp"></a>CFrameWndEx::WinHelp  
- 调用 WinHelp 的应用程序或上下文相关帮助。  
+##  <a name="winhelp"></a>  CFrameWndEx::WinHelp  
+ Invokes either the WinHelp application or context related help.  
   
 ```  
 virtual void WinHelp(
@@ -1826,17 +1911,17 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwData`  
- 取决于数据`nCmd`参数。 有关可能的值的列表，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
+ Data that depends on the `nCmd` parameter. For a list of possible values see [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
   
  `nCmd`  
- 帮助命令。 有关可能的值的列表，请参阅[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
+ The help command. For a list of possible values see [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 

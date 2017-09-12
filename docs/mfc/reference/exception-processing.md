@@ -1,5 +1,5 @@
 ---
-title: "异常处理 |Microsoft 文档"
+title: Exception Processing | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,14 +13,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- macros, exception handling
-- DAO (Data Access Objects), exceptions
-- OLE exceptions, MFC functions
-- exceptions, processing
-- exception macros
+- macros [MFC], exception handling
+- DAO (Data Access Objects), exceptions [MFC]
+- OLE exceptions [MFC], MFC functions
+- exceptions [MFC], processing
+- exception macros [MFC]
 - termination functions, MFC
 - MFC, exceptions
-- exceptions, MFC throwing functions
+- exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 caps.latest.revision: 16
 author: mikeblome
@@ -40,281 +40,281 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: fc136efaa6312edf3edfa8420411eda73e1c2468
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 69cc68402930b677c6585602c0e6575e18db64a9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="exception-processing"></a>异常处理
-程序执行时，可以发生的异常条件和称为"异常"的错误数。 其中可能包括耗尽内存、 资源分配错误和文件中查找失败。  
+# <a name="exception-processing"></a>Exception Processing
+When a program executes, a number of abnormal conditions and errors called "exceptions" can occur. These may include running out of memory, resource allocation errors, and failure to find files.  
   
- Microsoft 基础类库使用模仿密切一个由 ANSI 标准委员会建议用于 c + + 异常处理方案。 在调用函数可能会遇到反常情况之前，必须设置的异常处理程序。 如果该函数时遇到异常条件，则会引发异常并将控制传递到异常处理程序。  
+ The Microsoft Foundation Class Library uses an exception-handling scheme that is modeled closely after the one proposed by the ANSI standards committee for C++. An exception handler must be set up before calling a function that may encounter an abnormal situation. If the function encounters an abnormal condition, it throws an exception and control is passed to the exception handler.  
   
- 包含带有 Microsoft 基础类库的几个宏都将设置异常处理程序。 全局函数中的大量帮助引发专用的异常并终止程序，如有必要。 这些宏和全局函数分为以下类别︰  
+ Several macros included with the Microsoft Foundation Class Library will set up exception handlers. A number of other global functions help to throw specialized exceptions and terminate programs, if necessary. These macros and global functions fall into the following categories:  
   
-- 异常宏，结构异常处理程序。  
+- Exception macros, which structure your exception handler.  
   
-- Exception-throwing 函数)，其生成特定类型的异常。  
+- Exception-throwing functions), which generate exceptions of specific types.  
   
-- 终止函数，这会使程序终止。  
+- Termination functions, which cause program termination.  
   
- 有关示例和更多详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+ For examples and more details, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="exception-macros"></a>异常宏  
-  
-|||  
-|-|-|  
-|[重](#try)|指定异常处理的代码的块。|  
-|[捕获](#catch)|将捕获的异常从前面的代码块指定**重**块。|  
-|[CATCH_ALL](#catch_all)|指定的用于捕获所有异常从前面的代码块**重**块。|  
-|[AND_CATCH](#and_catch)|指定的用于捕获从前面的其他异常类型的代码块**重**块。|  
-|[AND_CATCH_ALL](#and_catch_all)|指定的用于捕获中前面引发其他所有其他异常类型的代码块**重**块。|  
-|[END_CATCH](#end_catch)|结束最后**捕获**或`AND_CATCH`代码块。|  
-|[END_CATCH_ALL](#end_catch_all)|结束最后`CATCH_ALL`代码块。|  
-|[引发](#throw)|将指定的异常引发。|  
-|[THROW_LAST](#throw_last)|会引发到下一步的外部处理程序当前已处理的异常。|  
-  
-### <a name="exception-throwing-functions"></a>异常引发函数  
+### <a name="exception-macros"></a>Exception Macros  
   
 |||  
 |-|-|  
-|[AfxThrowArchiveException](#afxthrowarchiveexception)|引发存档异常。|  
-|[AfxThrowFileException](#afxthrowfileexception)|将引发文件异常。|  
-|[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|将引发无效参数异常。|
-|[AfxThrowMemoryException](#afxthrowmemoryexception)|将引发内存异常。|  
-|[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|会引发不受支持的异常。|  
-|[AfxThrowResourceException](#afxthrowresourceexception)|会引发 Windows 未找到资源的异常。|  
-|[AfxThrowUserException](#afxthrowuserexception)|在用户启动程序操作中引发异常。|  
+|[TRY](#try)|Designates a block of code for exception processing.|  
+|[CATCH](#catch)|Designates a block of code for catching an exception from the preceding **TRY** block.|  
+|[CATCH_ALL](#catch_all)|Designates a block of code for catching all exceptions from the preceding **TRY** block.|  
+|[AND_CATCH](#and_catch)|Designates a block of code for catching additional exception types from the preceding **TRY** block.|  
+|[AND_CATCH_ALL](#and_catch_all)|Designates a block of code for catching all other additional exception types thrown in a preceding **TRY** block.|  
+|[END_CATCH](#end_catch)|Ends the last **CATCH** or `AND_CATCH` code block.|  
+|[END_CATCH_ALL](#end_catch_all)|Ends the last `CATCH_ALL` code block.|  
+|[THROW](#throw)|Throws a specified exception.|  
+|[THROW_LAST](#throw_last)|Throws the currently handled exception to the next outer handler.|  
   
- 专门为 OLE 异常，MFC 提供了两个异常引发函数︰  
-  
-### <a name="ole-exception-functions"></a>OLE 异常函数  
-  
-|||  
-|-|-|  
-|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|引发在 OLE 自动化函数中的异常。|  
-|[AfxThrowOleException](#afxthrowoleexception)|引发 OLE 异常。|  
-  
- 若要支持数据库异常，数据库类提供两个异常类，`CDBException`和`CDaoException`，和全局函数，以支持异常类型︰  
-  
-### <a name="dao-exception-functions"></a>DAO 异常函数  
+### <a name="exception-throwing-functions"></a>Exception-Throwing Functions  
   
 |||  
 |-|-|  
-|[AfxThrowDAOException](#afxthrowdaoexception)|引发[CDaoException](../../mfc/reference/cdaoexception-class.md)从你自己的代码。|  
-|[AfxThrowDBException](#afxthrowdbexception)|引发[CDBException](../../mfc/reference/cdbexception-class.md)从你自己的代码。|  
+|[AfxThrowArchiveException](#afxthrowarchiveexception)|Throws an archive exception.|  
+|[AfxThrowFileException](#afxthrowfileexception)|Throws a file exception.|  
+|[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|Throws an invalid argument exception.|
+|[AfxThrowMemoryException](#afxthrowmemoryexception)|Throws a memory exception.|  
+|[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|Throws a not-supported exception.|  
+|[AfxThrowResourceException](#afxthrowresourceexception)|Throws a Windows resource-not-found exception.|  
+|[AfxThrowUserException](#afxthrowuserexception)|Throws an exception in a user-initiated program action.|  
   
- MFC 提供了以下的终止函数︰  
+ MFC provides two exception-throwing functions specifically for OLE exceptions:  
   
-### <a name="termination-functions"></a>终止函数  
+### <a name="ole-exception-functions"></a>OLE Exception Functions  
   
 |||  
 |-|-|  
-|[AfxAbort](#afxabort)|调用终止应用程序时出现错误时发生。|  
+|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Throws an exception within an OLE automation function.|  
+|[AfxThrowOleException](#afxthrowoleexception)|Throws an OLE exception.|  
   
-##  <a name="try"></a>重  
- 将设置**重**块。  
+ To support database exceptions, the database classes provide two exception classes, `CDBException` and `CDaoException`, and global functions to support the exception types:  
+  
+### <a name="dao-exception-functions"></a>DAO Exception Functions  
+  
+|||  
+|-|-|  
+|[AfxThrowDAOException](#afxthrowdaoexception)|Throws a [CDaoException](../../mfc/reference/cdaoexception-class.md) from your own code.|  
+|[AfxThrowDBException](#afxthrowdbexception)|Throws a [CDBException](../../mfc/reference/cdbexception-class.md) from your own code.|  
+  
+ MFC provides the following termination function:  
+  
+### <a name="termination-functions"></a>Termination Functions  
+  
+|||  
+|-|-|  
+|[AfxAbort](#afxabort)|Called to terminate an application when a fatal error occurs.|  
+  
+##  <a name="try"></a>  TRY  
+ Sets up a **TRY** block.  
   
 ```   
 TRY   
 ```  
   
-### <a name="remarks"></a>备注  
- A**重**块标识的可能会引发异常的代码块。 在下面的示例处理这些异常**捕获**和`AND_CATCH`块。 允许递归︰ 异常可能会传递给为外部**重**块，请忽略它们，或使用`THROW_LAST`宏。 结束**重**块`END_CATCH`或`END_CATCH_ALL`宏。  
+### <a name="remarks"></a>Remarks  
+ A **TRY** block identifies a block of code that might throw exceptions. Those exceptions are handled in the following **CATCH** and `AND_CATCH` blocks. Recursion is allowed: exceptions may be passed to an outer **TRY** block, either by ignoring them or by using the `THROW_LAST` macro. End the **TRY** block with an `END_CATCH` or `END_CATCH_ALL` macro.  
   
- 有关详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+ For more information, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>示例  
- 请参阅示例[捕获](#catch)。  
+### <a name="example"></a>Example  
+ See the example for [CATCH](#catch).  
 
-### <a name="requirements"></a>要求
-标头：afx.h
+### <a name="requirements"></a>Requirements
+Header: afx.h
 
-##  <a name="catch"></a>捕获  
- 定义的捕获引发在前面的第一个异常类型的代码块**重**块。  
+##  <a name="catch"></a>  CATCH  
+ Defines a block of code that catches the first exception type thrown in the preceding **TRY** block.  
   
 ```   
 CATCH(exception_class, exception_object_pointer_name)  
  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *exception_class*  
- 指定要测试的异常类型。 标准异常类的列表，请参阅类[CException](../../mfc/reference/cexception-class.md)。  
+ Specifies the exception type to test for. For a list of standard exception classes, see class [CException](../../mfc/reference/cexception-class.md).  
   
  *exception_object_pointer_name*  
- 为将由宏创建的异常对象指针指定名称。 你可以使用指针名访问中的异常对象**捕获**块。 已为您声明此变量。  
+ Specifies a name for an exception-object pointer that will be created by the macro. You can use the pointer name to access the exception object within the **CATCH** block. This variable is declared for you.  
   
-### <a name="remarks"></a>备注  
- 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部帧。 结束**重**块`END_CATCH`宏。  
+### <a name="remarks"></a>Remarks  
+ The exception-processing code can interrogate the exception object, if appropriate, to get more information about the specific cause of the exception. Invoke the `THROW_LAST` macro to shift processing to the next outer exception frame. End the **TRY** block with an `END_CATCH` macro.  
   
- 如果*exception_class*是类`CException`，然后将捕获所有异常类型。 你可以使用[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)成员函数来确定抛出的特定异常。 更好的方法来捕获的异常的几种类型是使用顺序`AND_CATCH`语句，每个都有不同的异常类型。  
+ If *exception_class* is the class `CException`, then all exception types will be caught. You can use the [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) member function to determine which specific exception was thrown. A better way to catch several kinds of exceptions is to use sequential `AND_CATCH` statements, each with a different exception type.  
   
- 异常对象指针是由宏创建的。 不需要自行声明。  
+ The exception object pointer is created by the macro. You do not need to declare it yourself.  
   
 > [!NOTE]
->  **捕获**块被定义为用大括号分隔的 c + + 作用域。 如果您在此范围中声明变量，则只能在该范围中访问它们。 这也适用于*exception_object_pointer_name*。  
+>  The **CATCH** block is defined as a C++ scope delineated by braces. If you declare variables in this scope, they are accessible only within that scope. This also applies to *exception_object_pointer_name*.  
   
- 有关异常的详细信息和**捕获**宏，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+ For more information on exceptions and the **CATCH** macro, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCExceptions # 26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL  
- 定义的捕获引发在前面的所有异常类型的代码块**重**块。  
+##  <a name="catch_all"></a>  CATCH_ALL  
+ Defines a block of code that catches all exception types thrown in the preceding **TRY** block.  
   
 ```   
 CATCH_ALL(exception_object_pointer_name)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *exception_object_pointer_name*  
- 为将由宏创建的异常对象指针指定名称。 您可以使用指针名访问 `CATCH_ALL` 块中的异常对象。 已为您声明此变量。  
+ Specifies a name for an exception-object pointer that will be created by the macro. You can use the pointer name to access the exception object within the `CATCH_ALL` block. This variable is declared for you.  
   
-### <a name="remarks"></a>备注  
- 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用 `THROW_LAST` 宏以将处理移动到下一个外部帧。 如果你使用`CATCH_ALL`，结束**重**块`END_CATCH_ALL`宏。  
+### <a name="remarks"></a>Remarks  
+ The exception-processing code can interrogate the exception object, if appropriate, to get more information about the specific cause of the exception. Invoke the `THROW_LAST` macro to shift processing to the next outer exception frame. If you use `CATCH_ALL`, end the **TRY** block with an `END_CATCH_ALL` macro.  
   
 > [!NOTE]
->  `CATCH_ALL` 块被定义为用大括号分隔的 C ++ 范围。 如果您在此范围中声明变量，则只能在该范围中访问它们。  
+>  The `CATCH_ALL` block is defined as a C++ scope delineated by braces. If you declare variables in this scope, they are accessible only within that scope.  
   
- 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+ For more information on exceptions, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>示例  
- 请参阅示例[cfile:: Abort](../../mfc/reference/cfile-class.md#abort)。  
+### <a name="example"></a>Example  
+ See the example for [CFile::Abort](../../mfc/reference/cfile-class.md#abort).  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
 
-##  <a name="and_catch"></a>AND_CATCH  
- 定义的用于捕获中前面引发其他异常的代码块**重**块。  
+##  <a name="and_catch"></a>  AND_CATCH  
+ Defines a block of code for catching additional exception types thrown in a preceding **TRY** block.  
   
 ```   
 AND_CATCH(exception_class, exception_object_pointer_name)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *exception_class*  
- 指定要测试的异常类型。 标准异常类的列表，请参阅类[CException](../../mfc/reference/cexception-class.md)。  
+ Specifies the exception type to test for. For a list of standard exception classes, see class [CException](../../mfc/reference/cexception-class.md).  
   
  *exception_object_pointer_name*  
- 将由宏创建的异常对象指针名称。 您可以使用指针名访问 `AND_CATCH` 块中的异常对象。 已为您声明此变量。  
+ A name for an exception-object pointer that will be created by the macro. You can use the pointer name to access the exception object within the `AND_CATCH` block. This variable is declared for you.  
   
-### <a name="remarks"></a>备注  
- 使用**捕获**宏来捕获一个异常类型，则`AND_CATCH`宏来捕获每个后续的类型。 结束**重**块`END_CATCH`宏。  
+### <a name="remarks"></a>Remarks  
+ Use the **CATCH** macro to catch one exception type, then the `AND_CATCH` macro to catch each subsequent type. End the **TRY** block with an `END_CATCH` macro.  
   
- 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用`THROW_LAST`宏内的`AND_CATCH`阻止 shift 处理到下一步的外部异常帧。 `AND_CATCH`标记的前面末尾**捕获**或`AND_CATCH`块。  
+ The exception-processing code can interrogate the exception object, if appropriate, to get more information about the specific cause of the exception. Call the `THROW_LAST` macro within the `AND_CATCH` block to shift processing to the next outer exception frame. `AND_CATCH` marks the end of the preceding **CATCH** or `AND_CATCH` block.  
   
 > [!NOTE]
->  `AND_CATCH`块被定义为 c + + 作用域 （用大括号分开）。 如果您声明此范围中的变量，请记住，它们只能在该作用域中访问。 这也适用于*exception_object_pointer_name*变量。  
+>  The `AND_CATCH` block is defined as a C++ scope (delineated by curly braces). If you declare variables in this scope, remember that they are accessible only within that scope. This also applies to the *exception_object_pointer_name* variable.  
   
-### <a name="example"></a>示例  
- 请参阅示例[捕获](#catch)。  
+### <a name="example"></a>Example  
+ See the example for [CATCH](#catch).  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL  
- 定义的用于捕获中前面引发其他异常的代码块**重**块。  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
+ Defines a block of code for catching additional exception types thrown in a preceding **TRY** block.  
   
 ```   
 AND_CATCH_ALL(exception_object_pointer_name)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *exception_object_pointer_name*  
- 将由宏创建的异常对象指针名称。 您可以使用指针名访问 `AND_CATCH_ALL` 块中的异常对象。 已为您声明此变量。  
+ A name for an exception-object pointer that will be created by the macro. You can use the pointer name to access the exception object within the `AND_CATCH_ALL` block. This variable is declared for you.  
   
-### <a name="remarks"></a>备注  
- 使用**捕获**宏来捕获一个异常类型，则`AND_CATCH_ALL`宏来捕获其他所有后续的类型。 如果你使用`AND_CATCH_ALL`，结束**重**块`END_CATCH_ALL`宏。  
+### <a name="remarks"></a>Remarks  
+ Use the **CATCH** macro to catch one exception type, then the `AND_CATCH_ALL` macro to catch all other subsequent types. If you use `AND_CATCH_ALL`, end the **TRY** block with an `END_CATCH_ALL` macro.  
   
- 适当时，异常处理代码可以询问异常对象以获取有关异常的具体原因的详细信息。 调用`THROW_LAST`宏内的`AND_CATCH_ALL`阻止 shift 处理到下一步的外部异常帧。 `AND_CATCH_ALL`标记的前面末尾**捕获**或`AND_CATCH_ALL`块。  
+ The exception-processing code can interrogate the exception object, if appropriate, to get more information about the specific cause of the exception. Call the `THROW_LAST` macro within the `AND_CATCH_ALL` block to shift processing to the next outer exception frame. `AND_CATCH_ALL` marks the end of the preceding **CATCH** or `AND_CATCH_ALL` block.  
   
 > [!NOTE]
->  `AND_CATCH_ALL`块被定义为 c + + 作用域 （用大括号分隔）。 如果您声明此范围中的变量，请记住，它们只能在该作用域中访问。  
+>  The `AND_CATCH_ALL` block is defined as a C++ scope (delineated by braces). If you declare variables in this scope, remember that they are accessible only within that scope.  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="end_catch"></a>END_CATCH  
- 标记的最后一个结束**捕获**或`AND_CATCH`块。  
+##  <a name="end_catch"></a>  END_CATCH  
+ Marks the end of the last **CATCH** or `AND_CATCH` block.  
   
 ```   
 END_CATCH  
 ```  
   
-### <a name="remarks"></a>备注  
- 有关详细信息`END_CATCH`宏，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information on the `END_CATCH` macro, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL  
- 标记的最后一个结束`CATCH_ALL`或`AND_CATCH_ALL`块。  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL  
+ Marks the end of the last `CATCH_ALL` or `AND_CATCH_ALL` block.  
   
 ```   
 END_CATCH_ALL  
 ```  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="throw"></a>THROW (MFC)  
- 将指定的异常引发。  
+##  <a name="throw"></a>  THROW (MFC)  
+ Throws the specified exception.  
   
 ```   
 THROW(exception_object_pointer) 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *exception_object_pointer*  
- 指向异常对象派生自`CException`。  
+ Points to an exception object derived from `CException`.  
   
-### <a name="remarks"></a>备注  
- **引发**中断程序的执行，将控件传递到关联**捕获**阻止在程序中。 如果你未提供**捕获**阻止，则控制权传递给一个打印错误消息并退出的 Microsoft 基础类库模块。  
+### <a name="remarks"></a>Remarks  
+ **THROW** interrupts program execution, passing control to the associated **CATCH** block in your program. If you have not provided the **CATCH** block, then control is passed to a Microsoft Foundation Class Library module that prints an error message and exits.  
   
- 有关详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+ For more information, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="throw_last"></a>THROW_LAST  
- 异常引发回下一个外部**捕获**块。  
+##  <a name="throw_last"></a>  THROW_LAST  
+ Throws the exception back to the next outer **CATCH** block.  
   
 ```   
 THROW_LAST()   
 ```  
   
-### <a name="remarks"></a>备注  
- 此宏可以引发本地创建的异常。 如果你尝试引发异常，你只需捕获，它通常将超出范围，而且被删除。 与`THROW_LAST`，此异常正确传递到下一步**捕获**处理程序。  
+### <a name="remarks"></a>Remarks  
+ This macro allows you to throw a locally created exception. If you try to throw an exception that you have just caught, it will normally go out of scope and be deleted. With `THROW_LAST`, the exception is passed correctly to the next **CATCH** handler.  
   
- 有关详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+ For more information, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>示例  
- 请参阅示例[cfile:: Abort](../../mfc/reference/cfile-class.md#abort)。  
+### <a name="example"></a>Example  
+ See the example for [CFile::Abort](../../mfc/reference/cfile-class.md#abort).  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
- 引发存档异常。  
+##  <a name="afxthrowarchiveexception"></a>  AfxThrowArchiveException  
+ Throws an archive exception.  
   
 ```   
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cause`  
- 指定一个整数，指示该异常的原因。 有关可能的值的列表，请参阅[CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)。  
+ Specifies an integer that indicates the reason for the exception. For a list of the possible values, see [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).  
   
  `lpszArchiveName`  
- 指向包含的名称的字符串`CArchive`导致异常，（如果可用） 的对象。  
+ Points to a string containing the name of the `CArchive` object that caused the exception (if available).  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowfileexception"></a>AfxThrowFileException  
- 将引发文件异常。  
+##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
+ Throws a file exception.  
   
 ```   
 void AfxThrowFileException(
@@ -323,93 +323,93 @@ void AfxThrowFileException(
     LPCTSTR lpszFileName = NULL); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cause`  
- 指定一个整数，指示该异常的原因。 有关可能的值的列表，请参阅[CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause)。  
+ Specifies an integer that indicates the reason for the exception. For a list of the possible values, see [CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause).  
   
  `lOsError`  
- 包含操作系统错误号 （如果可用），它指示异常的原因。 请参阅你操作系统手册了解错误代码的列表。  
+ Contains the operating-system error number (if available) that states the reason for the exception. See your operating-system manual for a listing of error codes.  
   
  `lpszFileName`  
- 指向包含导致异常，（如果可用） 文件的名称的字符串。  
+ Points to a string containing the name of the file that caused the exception (if available).  
   
-### <a name="remarks"></a>备注  
- 你负责确定基于操作系统错误代码的原因。  
+### <a name="remarks"></a>Remarks  
+ You are responsible for determining the cause based on the operating-system error code.  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
-将引发无效参数异常。  
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
+Throws an invalid argument exception.  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```
 void AfxThrowInvalidArgException( );  
 ```  
    
-### <a name="remarks"></a>备注  
- 使用无效参数时，调用此函数。  
+### <a name="remarks"></a>Remarks  
+ This function is called when invalid arguments are used.  
    
-### <a name="requirements"></a>要求  
- **标头：** afx.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
    
-### <a name="see-also"></a>另请参阅  
- [宏和全局函数](mfc-macros-and-globals.md)   
- [CInvalidArgException 类](cinvalidargexception-class.md)   
- [引发](#throw)
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
+ [CInvalidArgException Class](cinvalidargexception-class.md)   
+ [THROW](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
- 将引发内存异常。  
+##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException  
+ Throws a memory exception.  
   
 ```   
 void AfxThrowMemoryException(); 
 ```  
   
-### <a name="remarks"></a>备注  
- 如果调用此函数对基础系统内存分配器的调用 (如`malloc`和[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函数) 失败。 不需要调用它的**新**因为**新**自动将引发内存异常，如果内存分配失败。  
+### <a name="remarks"></a>Remarks  
+ Call this function if calls to underlying system memory allocators (such as `malloc` and the [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows function) fail. You do not need to call it for **new** because **new** will throw a memory exception automatically if the memory allocation fails.  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
- 将引发异常时不支持的功能请求的结果。  
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
+ Throws an exception that is the result of a request for an unsupported feature.  
   
 ```  
 void AfxThrowNotSupportedException(); 
 ```  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException  
- 将资源异常引发。  
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
+ Throws a resource exception.  
   
 ```   
 void  AfxThrowResourceException(); 
 ```  
   
-### <a name="remarks"></a>备注  
- 无法加载 Windows 资源时，通常会调用此函数。  
+### <a name="remarks"></a>Remarks  
+ This function is normally called when a Windows resource cannot be loaded.  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowuserexception"></a>AfxThrowUserException  
- 引发异常来停止最终用户操作。  
+##  <a name="afxthrowuserexception"></a>  AfxThrowUserException  
+ Throws an exception to stop an end-user operation.  
   
 ```   
 void AfxThrowUserException(); 
 ```  
   
-### <a name="remarks"></a>备注  
- 通常后立即调用此函数`AfxMessageBox`已向用户报告错误。  
+### <a name="remarks"></a>Remarks  
+ This function is normally called immediately after `AfxMessageBox` has reported an error to the user.  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
- 使用此函数将在 OLE 自动化函数中引发异常。  
+##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
+ Use this function to throw an exception within an OLE automation function.  
   
 ```   
 void AFXAPI AfxThrowOleDispatchException(
@@ -423,51 +423,51 @@ void AFXAPI AfxThrowOleDispatchException(
     UINT nHelpID = -1); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `wCode`  
- 特定于应用程序的错误代码。  
+ An error code specific to your application.  
   
  `lpszDescription`  
- 错误的文字说明。  
+ Verbal description of the error.  
   
  `nDescriptionID`  
- 错误文字说明的资源 ID。  
+ Resource ID for the verbal error description.  
   
  `nHelpID`  
- 应用程序的帮助 (.HLP) 文件的帮助上下文。  
+ A help context for your application's help (.HLP) file.  
   
-### <a name="remarks"></a>备注  
- 提供给此函数的信息可由驱动应用程序（Microsoft Visual Basic 或其他 OLE 自动化客户端应用程序）显示。  
+### <a name="remarks"></a>Remarks  
+ The information provided to this function can be displayed by the driving application (Microsoft Visual Basic or another OLE automation client application).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCExceptions # 25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxthrowoleexception"></a>AfxThrowOleException  
- 创建类型的对象`COleException`并引发异常。  
+##  <a name="afxthrowoleexception"></a>  AfxThrowOleException  
+ Creates an object of type `COleException` and throws an exception.  
   
 ``` 
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `sc`  
- 指示该异常的原因的 OLE 状态代码。  
+ An OLE status code that indicates the reason for the exception.  
   
  `hr`  
- 指示该异常的原因的结果代码的句柄。  
+ Handle to a result code that indicates the reason for the exception.  
   
-### <a name="remarks"></a>备注  
- 采用的版本`HRESULT`如自变量将该结果代码转换为相应`SCODE`。 有关详细信息`HRESULT`和`SCODE`，请参阅[COM 错误代码的结构](http://msdn.microsoft.com/library/windows/desktop/ms690088)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ The version that takes an `HRESULT` as an argument converts that result code into the corresponding `SCODE`. For more information on `HRESULT` and `SCODE`, see [Structure of COM Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) in the Windows SDK.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException  
- 调用此函数引发异常的类型[CDaoException](../../mfc/reference/cdaoexception-class.md)从你自己的代码。  
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
+ Call this function to throw an exception of type [CDaoException](../../mfc/reference/cdaoexception-class.md) from your own code.  
   
 ```   
 void AFXAPI AfxThrowDaoException(
@@ -475,23 +475,23 @@ void AFXAPI AfxThrowDaoException(
     SCODE scode = S_OK); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nAfxDaoError`  
- 表示扩展错误代码 DAO 的整数值，这可以值之一列入[CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)。  
+ An integer value representing a DAO extended error code, which can be one of the values listed under [CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).  
   
  *scode*  
- OLE 错误代码，从 DAO，类型的`SCODE`。 有关信息，请参阅[CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)。  
+ An OLE error code from DAO, of type `SCODE`. For information, see [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).  
   
-### <a name="remarks"></a>备注  
- 框架还调用`AfxThrowDaoException`。 在你调用中，可以传递的参数之一或两者。 例如，如果您想要提升之一错误中定义**CDaoException::nAfxDaoError**但你不关心*scode*参数，将传递中的有效代码`nAfxDaoError`参数并接受默认值为*scode*。  
+### <a name="remarks"></a>Remarks  
+ The framework also calls `AfxThrowDaoException`. In your call, you can pass one of the parameters or both. For example, if you want to raise one of the errors defined in **CDaoException::nAfxDaoError** but you do not care about the *scode* parameter, pass a valid code in the `nAfxDaoError` parameter and accept the default value for *scode*.  
   
- 有关与 MFC DAO 类相关的异常的信息，请参阅类`CDaoException`在本书和文章[异常︰ 数据库异常](../../mfc/exceptions-database-exceptions.md)。  
+ For information about exceptions related to the MFC DAO classes, see class `CDaoException` in this book and the article [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdb.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdb.h  
   
-##  <a name="afxthrowdbexception"></a>AfxThrowDBException  
- 调用此函数引发异常的类型`CDBException`从你自己的代码。  
+##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
+ Call this function to throw an exception of type `CDBException` from your own code.  
   
 ```  
 void AfxThrowDBException(
@@ -500,41 +500,41 @@ void AfxThrowDBException(
     HSTMT hstmt);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nRetCode`  
- 类型的值**某一 RETCODE**，定义类型的错误导致引发异常。  
+ A value of type **RETCODE**, defining the type of error that caused the exception to be thrown.  
   
  `pdb`  
- 指向的指针`CDatabase`表示异常与之关联的数据源连接的对象。  
+ A pointer to the `CDatabase` object that represents the data source connection with which the exception is associated.  
   
  `hstmt`  
- 一个 ODBC **HSTMT**指定异常与之关联的语句句柄的句柄。  
+ An ODBC **HSTMT** handle that specifies the statement handle with which the exception is associated.  
   
-### <a name="remarks"></a>备注  
- 框架调用`AfxThrowDBException`当它收到一个 ODBC**某一 RETCODE**从调用 ODBC API 函数，并解释**某一 RETCODE**为一个异常情况，而不是 expectable 错误。 例如，数据访问操作可能会由于磁盘读取错误而失败。  
+### <a name="remarks"></a>Remarks  
+ The framework calls `AfxThrowDBException` when it receives an ODBC **RETCODE** from a call to an ODBC API function and interprets the **RETCODE** as an exceptional condition rather than an expectable error. For example, a data access operation might fail because of a disk read error.  
   
- 璝惠**某一 RETCODE**值由 ODBC，请参阅第 8 章"检索状态和错误的信息，" [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 有关 MFC 扩展到这些代码的信息，请参阅类[CDBException](../../mfc/reference/cdbexception-class.md)。  
+ For information about the **RETCODE** values defined by ODBC, see Chapter 8, "Retrieving Status and Error Information," in the Windows SDK. For information about MFC extensions to these codes, see class [CDBException](../../mfc/reference/cdbexception-class.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afx.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h  
   
-##  <a name="afxabort"></a>AfxAbort  
- 由 MFC 提供的默认终止函数。  
+##  <a name="afxabort"></a>  AfxAbort  
+ The default termination function supplied by MFC.  
   
 ```   
 void  AfxAbort(); 
 ```  
   
-### <a name="remarks"></a>备注  
- `AfxAbort`在内部调用由 MFC 成员函数是错误，例如不能处理未捕获的异常时。 你可以调用`AfxAbort`遇到出现灾难性错误无法恢复时的罕见情况。  
+### <a name="remarks"></a>Remarks  
+ `AfxAbort` is called internally by MFC member functions when there is a fatal error, such as an uncaught exception that cannot be handled. You can call `AfxAbort` in the rare case when you encounter a catastrophic error from which you cannot recover.  
   
-### <a name="example"></a>示例  
- 请参阅示例[捕获](#catch)。  
+### <a name="example"></a>Example  
+ See the example for [CATCH](#catch).  
 
-### <a name="requirements"></a>要求  
-  **标头**afx.h   
+### <a name="requirements"></a>Requirements  
+  **Header** afx.h   
   
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)   
- [CException 类](../../mfc/reference/cexception-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)
 

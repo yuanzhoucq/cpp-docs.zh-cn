@@ -1,5 +1,5 @@
 ---
-title: "CMFCPropertyPage 类 |Microsoft 文档"
+title: CMFCPropertyPage Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,10 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertyPage::PreTranslateMessage method
-- CMFCPropertyPage::CreateObject method
-- CMFCPropertyPage class
-- CMFCPropertyPage::OnSetActive method
+- CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
 caps.latest.revision: 30
 author: mikeblome
@@ -38,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0e9cdfa8a98c034839fac119c828cf1b92a1867a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 70f39e3c8eb89ea6e5c772d5b1ca147da0244d8c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 类
-`CMFCPropertyPage`类支持的弹出菜单显示在属性页上。  
+# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage Class
+The `CMFCPropertyPage` class supports the display of pop-up menus on a property page.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPropertyPage : public CPropertyPage  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|构造 `CMFCPropertyPage` 对象。|  
-|`CMFCPropertyPage::~CMFCPropertyPage`|析构函数。|  
+|[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|Constructs a `CMFCPropertyPage` object.|  
+|`CMFCPropertyPage::~CMFCPropertyPage`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCPropertyPage::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCPropertyPage::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|`CMFCPropertyPage::OnSetActive`|由用户选择和成为活动页面页时，将由框架调用此成员函数。 (重写[cpropertypage:: Onsetactive](../../mfc/reference/cpropertypage-class.md#onsetactive)。)|  
-|`CMFCPropertyPage::PreTranslateMessage`|翻译窗口消息之前被发送到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 有关详细信息和方法语法，请参阅[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 （重写 `CPropertyPage::PreTranslateMessage`。）|  
+|`CMFCPropertyPage::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCPropertyPage::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|`CMFCPropertyPage::OnSetActive`|This member function is called by the framework when the page is chosen by the user and becomes the active page. (Overrides [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
+|`CMFCPropertyPage::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For more information and method syntax, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CPropertyPage::PreTranslateMessage`.)|  
   
-## <a name="remarks"></a>备注  
- `CMFCPropertyPage`类表示一个属性表中，也称为选项卡对话框中的各个页。  
+## <a name="remarks"></a>Remarks  
+ The `CMFCPropertyPage` class represents individual pages of a property sheet, otherwise known as a tab dialog box.  
   
- 使用`CMFCPropertyPage`类一起[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)类。 若要在属性页上使用菜单，替换所有出现的`CPropertyPage`类`CMFCPropertyPage`类。  
+ Use the `CMFCPropertyPage` class together with the [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) class. To use menus on a property page, replace all occurrences of the `CPropertyPage` class with the `CMFCPropertyPage` class.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -90,11 +87,11 @@ class CMFCPropertyPage : public CPropertyPage
   
  [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxpropertypage.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpropertypage.h  
   
-##  <a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage  
- 构造 `CMFCPropertyPage` 对象。  
+##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage  
+ Constructs a `CMFCPropertyPage` object.  
   
 ```  
 CMFCPropertyPage(
@@ -107,23 +104,23 @@ CMFCPropertyPage(
     UINT nIDCaption=0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDTemplate`  
- 此页面的模板的资源 ID。  
+ Resource ID of the template for this page.  
   
  `nIDCaption`  
- 资源 ID 的标签将放入有关此页选项卡。 如果为 0，名称来自的此页的对话框模板中。 默认值为 0。  
+ Resource ID of the label to put in the tab for this page. If 0, the name is obtained from the dialog box template for this page. The default value is 0.  
   
  `lpszTemplateName`  
- 指向此页面模板的名称。 不能为`NULL`。  
+ Points to the name of the template for this page. Cannot be `NULL`.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
- 有关构造函数参数的详细信息，请参阅[CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)。  
+### <a name="remarks"></a>Remarks  
+ For more information about the constructor parameters, see [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCPropertySheet 类](../../mfc/reference/cmfcpropertysheet-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPropertySheet Class](../../mfc/reference/cmfcpropertysheet-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonLabel 类 |Microsoft 文档"
+title: CMFCRibbonLabel Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonLabel class
+- CMFCRibbonLabel [MFC], CMFCRibbonLabel
+- CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
 caps.latest.revision: 21
 author: mikeblome
@@ -36,45 +37,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b93e0f6c46818515c8d6bcd8d71b78dcaa435ea6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c778ed32d761f895c4a5f95c319198748983f1be
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 类
-实现功能区的不可单击文本标签。  
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel Class
+Implements a non-clickable text label for a ribbon.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonLabel : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|构造并初始化`CMFCRibbonLabel`对象与指定的文本字符串。|  
-|`CMFCRibbonLabel::~CMFCRibbonLabel`|析构函数。|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Constructs and initializes a `CMFCRibbonLabel` object with the specified text string.|  
+|`CMFCRibbonLabel::~CMFCRibbonLabel`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonLabel::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCRibbonLabel::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|确定当前的功能区标签元素的可访问性数据。 (重写[CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)。)|  
+|`CMFCRibbonLabel::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonLabel::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determines the accessibility data for the current ribbon label element. (Overrides [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
-### <a name="remarks"></a>备注  
- 创建功能区的标签后，将其添加到一个面板，通过调用[CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
+### <a name="remarks"></a>Remarks  
+ After you create a ribbon label, add it to a panel by calling [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
- 不能将功能区标签添加到快速访问工具栏。  
+ You cannot add a ribbon label to the Quick Access Toolbar.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -83,11 +84,11 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxRibbonLabel.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
- 构造并初始化[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)显示指定的文本字符串的对象。  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
+ Constructs and initializes a [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) object that displays the specified text string.  
   
 ```  
 CMFCRibbonLabel(
@@ -95,15 +96,15 @@ CMFCRibbonLabel(
     BOOL bIsMultiLine = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- 要在标签中显示的文本。  
+ The text to appear in the label.  
   
  [in] `bIsMultiLine`  
- `TRUE`若要指定标签是多行标签;否则为`FALSE`。  
+ `TRUE` to specify that the label is a multi-line label; otherwise, `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
- 确定当前的功能区标签元素的可访问性数据。  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
+ Determines the accessibility data for the current ribbon label element.  
   
 ```  
 virtual BOOL SetACCData(
@@ -111,18 +112,18 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- 表示当前的功能区标签的父窗口。  
+ Represents the parent window of the current ribbon label.  
   
  [out] `data`  
- 类型的对象`CAccessibilityData`并且填充了当前的功能区标签的可访问性数据。  
+ An object of type `CAccessibilityData` that is populated with the accessibility data of the current ribbon label.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果`data`参数已成功地填充了当前的功能区标签的可访问性数据; 否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current ribbon label; otherwise, `FALSE`.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
 

@@ -1,104 +1,122 @@
 ---
-title: "MFC 类向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.wizards.classwizard"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 类向导"
-  - "向导 (MFC)"
+title: MFC Class Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.wizards.classwizard
+dev_langs:
+- C++
+helpviewer_keywords:
+- wizards (MFC)
+- MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MFC 类向导
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d163ea30b71096e457595804bad01a6004e609f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-允许向项目的类中添加消息和消息处理程序。  还可以启动其他向导或将类添加到您的项目。  
+---
+# <a name="mfc-class-wizard"></a>MFC Class Wizard
+Lets you add messages and message handlers to classes in your project. You can also start other wizards or add a class to your project.  
   
- 要打开“MFC 类向导”，请在“项目”菜单上单击“类向导”。  要使用键盘快捷方式打开向导，请键入 CTRL\+SHIFT\+X。  
+ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard**. To open the wizard with a keyboard shortcut, type CTRL+SHIFT+X.  
   
-## UIElement 列表  
- **项目**  
- 解决方案中项目的名称。  
+## <a name="uielement-list"></a>UIElement List  
+ **Project**  
+ The name of a project in your solution.  
   
- 可从下拉列表框中选择您解决方案中的其他方案。  
+ You can select other projects in your solution from the drop-down list box.  
   
- **类名**  
- 项目中类的名称。  
+ **Class name**  
+ The name of a class in your project.  
   
- 当在**“类名称”**列表中选择一个类别时，来自类别的数据来填充**“MFC 类向导”**中的控件。  更改控件的值，会影响选定的类中的数据。  
+ When you select a class in the **Class name** list, data from the class populates the controls in the **MFC Class Wizard**. When you change the value of a control, data in the selected class is affected.  
   
- **添加类**  
- 可以从几个源之一添加类。  
+ **Add Class**  
+ Lets you add a class from one of several sources.  
   
- 根据您的选择启动**“MFC 添加类向导”**、**“从类型库向导添加类”**、**“从 ActiveX 控件向导添加类”**或**“MFC ODBC 使用者向导”**。  
+ Depending on your selection, the **MFC Add Class Wizard**, **Add Class From Typelib Wizard**, **Add Class From ActiveX Control Wizard**, or **MFC ODBC Consumer Wizard** is started.  
   
- **基类**  
- 显示在**“类名称”**中的类的基类。  
+ **Base class**  
+ The base class of the class that is displayed in **Class name**.  
   
- **类声明**  
- 其中已声明**“类名称”**类的类。  
+ **Class declaration**  
+ The class in which the **Class name** class is declared.  
   
- 如果其中的名称与**“类实现”**中的名称不一样，则会显示**“类声明”**框。  
+ The **Class declaration** box is displayed only if the name in it differs from the name in **Class implementation**.  
   
- **资源**  
- **“类名称”**中资源 ID（如果有）。  否则**“资源”**框为空。  
+ **Resource**  
+ The ID of the resource in **Class name**, if any. Otherwise, the **Resource** box is empty.  
   
- **类实现**  
- 包含**“类名称”**中类的实现的文件的名称。  
+ **Class implementation**  
+ The name of the file that contains the implementation of the class in **Class name**.  
   
- 您可以通过单击箭头选择一个不同的实现文件。  下表列出了可用的选项。  
+ You can select a different implementation file by clicking the arrow. The following table lists the available options.  
   
-|选项|说明|  
-|--------|--------|  
-|**打开文件**|退出类向导并打开当前的类实现文件。|  
-|**打开所在的文件夹**|打开包含当前类实现文件的文件夹。|  
-|**将完整路径复制到剪贴板**|将当前实现文件文件的路径复制到剪贴板。|  
+|Option|Description|  
+|------------|-----------------|  
+|**Open File**|Exits the class wizard and opens the current class implementation file.|  
+|**Open Containing Folder**|Opens the folder that contains the current class implementation file.|  
+|**Copy Full Path to Clipboard**|Copies the path of the current implementation file to the Clipboard.|  
   
- **命令**  
- 允许添加、删除、编辑或搜索命令和其消息处理程序。  
+ **Commands**  
+ Lets you add, delete, edit, or search for a command and its message handler.  
   
- 若要添加处理程序，单击**“添加处理程序”**，或双击**“对象 ID”**或**“消息”**列表中的项目。  在**“成员函数”**列表中显示的所得函数名称、ID 和消息。  
+ To add a handler, click **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.  
   
- 要删除处理程序，在**“成员函数”**列表中选择一个项目，然后单击**“删除处理程序”**。  
+ To delete a handler, select an item in the **Member functions** list and then click **Delete Handler**.  
   
- 若要修改处理程序，双击**“成员函数”**列表中相应的项目。  或者，在列表框中选择一个项，然后单击**“编辑代码”**。  
+ To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then click **Edit Code**.  
   
- **消息**  
- 允许添加、删除、编辑或搜索消息和其消息处理程序。  
+ **Messages**  
+ Lets you add, delete, edit, or search for a message and its message handler.  
   
- 若要添加处理程序，单击**“添加处理程序”**，或双击**“消息”**列表中的项目。  
+ To add a handler, click **Add Handler**, or double-click an item in the **Messages** list.  
   
- 若要添加自定义消息，单击**“添加自定义消息”**，或按 Enter 键，然后在**“添加自定义消息”**对话框中指定值。  此外，在该对话框中，您还可以选择**“注册消息”**来处理在整个操作系统中保证唯一的新窗口消息。  
+ To add a custom message, click **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.  
   
- **虚函数**  
- 允许添加、删除、编辑或搜索一个虚拟的函数或重写的虚函数。  
+ **Virtual Functions**  
+ Lets you add, delete, edit, or search for a virtual function, or an overridden virtual function.  
   
- **成员变量**  
- 可以添加、删除、编辑或搜索成员变量。  
+ **Member Variables**  
+ Lets you add, delete, edit, or search for a member variable.  
   
- **方法**  
- 允许添加、删除或搜索一个方法以及转到方法的定义或方法的声明。  
+ **Methods**  
+ Lets you add, delete, or search for a method, and also go to the definition or declaration of a method.  
   
- 若要添加方法，单击**“添加方法”**，然后在**“添加方法”**对话框中指定值。  
+ To add a method, click **Add Method**, and then specify values in the **Add Method** dialog box.  
   
- 要删除方法，在**“方法”**列表中选择一个项目，然后单击**“删除方法”**。  
+ To delete a method, select an item in the **Methods** list and then click **Delete Method**.  
   
- 要显示生命，在**“方法”**列表中选择一个项目，然后单击**“转到声明”**。  
+ To display a declaration, select an item in the **Methods** list and then click **Go to Declaration.**  
   
- 若要显示一个定义，双击**“方法”**列表中的项目。  或者，在**“方法”**列表中选择一个项，然后单击**“转到定义”**按钮。  
+ To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then click the **Go to Definition** button.  
   
-## 请参阅  
- [添加类](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
+

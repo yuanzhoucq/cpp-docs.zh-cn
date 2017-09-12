@@ -1,44 +1,63 @@
 ---
-title: "从图像列表拖动图像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList 类, 拖动图像自"
-  - "从图像列表拖动图像"
-  - "图像列表 [C++], 拖动图像自"
-  - "图像 [C++], 从图像列表拖动"
+title: Dragging Images from an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], dragging images from
+- dragging images from image lists [MFC]
+- image lists [MFC], dragging images from
+- images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 从图像列表拖动图像
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 15c483b33b5f2f3fa127b93343797747de093351
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-包含[CImageList](../mfc/reference/cimagelist-class.md) 将函数的图像在屏幕上。  函数将图像拖动的成功，在 Color 和，而任何转换光标。  被遮掩的和撕下伪面具的图像可以拖动。  
+---
+# <a name="dragging-images-from-an-image-list"></a>Dragging Images from an Image List
+[CImageList](../mfc/reference/cimagelist-class.md) includes functions for dragging an image on the screen. The dragging functions move an image smoothly, in color, and without any flashing of the cursor. Both masked and unmasked images can be dragged.  
   
- [BeginDrag](../Topic/CImageList::BeginDrag.md) 成员函数开始拖动操作。  包括参数拖动图像的索引和作用点的位置在映像中。  作用点是要拖动到的函数识别为图像的确切屏幕位置的一个像素。  通常，应用程序设置的作用点时，使用鼠标光标的作用点进行匹配。  [DragMove](../Topic/CImageList::DragMove.md) 成员函数移到图像新位置。  
+ The [BeginDrag](../mfc/reference/cimagelist-class.md#begindrag) member function begins a drag operation. The parameters include the index of the image to drag and the location of the hot spot within the image. The hot spot is a single pixel that the dragging functions recognize as the exact screen location of the image. Typically, an application sets the hot spot so that it coincides with the hot spot of the mouse cursor. The [DragMove](../mfc/reference/cimagelist-class.md#dragmove) member function moves the image to a new location.  
   
- [DragEnter](../Topic/CImageList::DragEnter.md) 成员函数设置拖动图像的初始位置。窗口中并绘制图像位置。  包括参数的指针到窗口中绘制图像和最初指定的位置坐标窗口内的。  坐标相对于控件的工作区的左上角来表示。  上述情况同样适用于所有图像拖动函数为协调作为参数。  这意味着必须抵消窗口元素的宽度，例如边框、标题栏和菜单栏，指定坐标。  如果指定 **NULL** 窗口句柄，而调用 `DragEnter`，则拖动的函数在设备上下文绘制图像与桌面窗口，并且，坐标系是相对于屏幕的左上角。  
+ The [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) member function sets the initial position of the drag image within a window and draws the image at the position. The parameters include a pointer to the window in which to draw the image and a point that specifies the coordinates of the initial position within the window. The coordinates are relative to the window's upper-left corner, not the client area. The same is true for all of the image-dragging functions that take coordinates as parameters. This means you must compensate for the widths of window elements, such as the border, title bar, and menu bar, when specifying the coordinates. If you specify a **NULL** window handle when calling `DragEnter`, the dragging functions draw the image in the device context associated with the desktop window, and the coordinates are relative to the upper-left corner of the screen.  
   
- `DragEnter` 锁定其他更新到特定窗口在拖动操作过程。  如果需要在一个拖动操作时执行任何绘图，如突出显示拖放操作的目标，可以使用 [DragLeave](../Topic/CImageList::DragLeave.md) 成员函数，您可以暂时隐藏拖动的图像。  还可以使用 [DragShowNoLock](../Topic/CImageList::DragShowNolock.md) 成员函数。  
+ `DragEnter` locks all other updates to the given window during the drag operation. If you need to do any drawing during a drag operation, such as highlighting the target of a drag-and-drop operation, you can temporarily hide the dragged image by using the [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) member function. You can also use the [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) member function.  
   
- 当执行拖动图像时，则请调用 [EndDrag](../Topic/CImageList::EndDrag.md)。  
+ Call [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) when you're done dragging the image.  
   
- [SetDragCursorImage](../Topic/CImageList::SetDragCursorImage.md) 成员函数通过将特定图像生成新图像拖动 \(通常鼠标光标图像\)。当拖动图像。  由于将在拖动操作的函数时使用新的图像，您应使用 Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) 函数在调用 `SetDragCursorImage`后隐藏实际鼠标光标。  否则，系统可能看起来具有拖动操作的持续时间的两鼠标光标。  
+ The [SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) member function creates a new drag image by combining the given image (typically a mouse cursor image) with the current drag image. Because the dragging functions use the new image during a drag operation, you should use the Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) function to hide the actual mouse cursor after calling `SetDragCursorImage`. Otherwise, the system may appear to have two mouse cursors for the duration of the drag operation.  
   
- 当应用程序调用 `BeginDrag`时，系统会创建一个临时的，在图像列表和复制指定的拖动图像对生成列表。  使用 [GetDragImage](../Topic/CImageList::GetDragImage.md) 成员函数，则可以检索指向临时拖动图像列表。  函数来检索当前位置拖动和拖动图像相对于的偏移量位置拖动。  
+ When an application calls `BeginDrag`, the system creates a temporary, internal image list and copies the specified drag image to the internal list. You can retrieve a pointer to the temporary drag image list by using the [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) member function. The function also retrieves the current drag position and the offset of the drag image relative to the drag position.  
   
-## 请参阅  
- [使用 CImageList](../mfc/using-cimagelist.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

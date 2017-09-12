@@ -1,97 +1,115 @@
 ---
-title: "变量参数类型常量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VTS_YPOS_HIMETRIC"
-  - "VTS_PICTURE"
-  - "VTS_FONT"
-  - "VTS_XPOS_HIMETRIC"
-  - "VTS_XPOS_PIXELS"
-  - "VTS_XSIZE_HIMETRIC"
-  - "VTS_YPOS_PIXELS"
-  - "VTS_TRISTATE"
-  - "VTS_HANDLE"
-  - "VTS_YSIZE_HIMETRIC"
-  - "VTS_COLOR"
-  - "VTS_OPTEXCLUSIVE"
-  - "VTS_YSIZE_PIXELS"
-  - "VTS_XSIZE_PIXELS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "变量数据常量"
-  - "变量"
-  - "变量, 参数类型常量"
-  - "VTS_COLOR 常量"
-  - "VTS_FONT 常量"
-  - "VTS_HANDLE 常量"
-  - "VTS_OPTEXCLUSIVE 常量"
-  - "VTS_PICTURE 常量"
-  - "VTS_TRISTATE 常量"
-  - "VTS_XPOS_HIMETRIC 常量"
-  - "VTS_XPOS_PIXELS 常量"
-  - "VTS_XSIZE_HIMETRIC 常量"
-  - "VTS_XSIZE_PIXELS 常量"
-  - "VTS_YPOS_HIMETRIC 常量"
-  - "VTS_YPOS_PIXELS 常量"
-  - "VTS_YSIZE_HIMETRIC 常量"
-  - "VTS_YSIZE_PIXELS 常量"
+title: Variant Parameter Type Constants | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VTS_YPOS_HIMETRIC
+- VTS_PICTURE
+- VTS_FONT
+- VTS_XPOS_HIMETRIC
+- VTS_XPOS_PIXELS
+- VTS_XSIZE_HIMETRIC
+- VTS_YPOS_PIXELS
+- VTS_TRISTATE
+- VTS_HANDLE
+- VTS_YSIZE_HIMETRIC
+- VTS_COLOR
+- VTS_OPTEXCLUSIVE
+- VTS_YSIZE_PIXELS
+- VTS_XSIZE_PIXELS
+dev_langs:
+- C++
+helpviewer_keywords:
+- VTS_XPOS_HIMETRIC constant [MFC]
+- VTS_FONT constant [MFC]
+- VTS_XPOS_PIXELS constant [MFC]
+- VTS_COLOR constant [MFC]
+- Variants [MFC]
+- VTS_YPOS_PIXELS constant [MFC]
+- VTS_YSIZE_HIMETRIC constant [MFC]
+- VTS_YPOS_HIMETRIC constant [MFC]
+- Variants, parameter type constants
+- Variant data constants [MFC]
+- VTS_PICTURE constant [MFC]
+- VTS_TRISTATE constant [MFC]
+- VTS_XSIZE_HIMETRIC constant [MFC]
+- VTS_HANDLE constant [MFC]
+- VTS_XSIZE_PIXELS constant [MFC]
+- VTS_OPTEXCLUSIVE constant [MFC]
+- VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 变量参数类型常量
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 394a652f516012c5154bf978bb9a7ef4d7514b6b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本主题列出一用于设计的不同参数类型使用 Microsoft 基础类库类的新的 OLE 控件的常数。  
+---
+# <a name="variant-parameter-type-constants"></a>Variant Parameter Type Constants
+This topic lists new constants that indicate variant parameter types designed for use with the OLE control classes of the Microsoft Foundation Class Library.  
   
- 下面是类常量的列表：  
+ The following is a list of class constants:  
   
-##  <a name="_mfc_variant_data_constants"></a> 不同的常数数据  
+##  <a name="_mfc_variant_data_constants"></a> Variant Data Constants  
   
--   **VTS\_COLOR** 32 位整数用于显示 RGB 颜色值。  
+-   **VTS_COLOR** A 32-bit integer used to represent a RGB color value.  
   
--   对字体 OLE 对象的 **IFontDisp** 接口的指针**VTS\_FONT**。  
+-   **VTS_FONT** A pointer to the                         **IFontDisp** interface of an OLE font object.  
   
--   **VTS\_HANDLE**窗口句柄值。  
+-   **VTS_HANDLE** A Windows handle value.  
   
--   将 OLE 图片对象的 `IPictureDisp` 接口的指针**VTS\_PICTURE**。  
+-   **VTS_PICTURE** A pointer to the                         `IPictureDisp` interface of an OLE picture object.  
   
--   打算用于在一组控件的控件的**VTS\_OPTEXCLUSIVE** 16 位值，如单选按钮。  此通知类型容器，如果一个控件组中具有 **TRUE** 值，另必须是 **FALSE**。  
+-   **VTS_OPTEXCLUSIVE** A 16-bit value used for a control that is intended to be used in a group of controls, such as radio buttons. This type tells the container that if one control in a group has a                         **TRUE** value, all others must be                         **FALSE**.  
   
--   用于可以具有三个可能值之一的属性**VTS\_TRISTATE** 16 位带符号整数 \(，选择清除不可用\)，例如，复选框。  
+-   **VTS_TRISTATE** A 16-bit signed integer used for properties that can have one of three possible values (selected, cleared, unavailable), for example, a check box.  
   
--   **HIMETRIC** 中单元用于表示沿 x 轴的位置**VTS\_XPOS\_HIMETRIC** 32 位无符号整数。  
+-   **VTS_XPOS_HIMETRIC** A 32-bit unsigned integer used to represent a position along the x-axis in                         **HIMETRIC** units.  
   
--   **HIMETRIC** 中单元用于表示沿 Y 轴移动的位置**VTS\_YPOS\_HIMETRIC** 32 位无符号整数。  
+-   **VTS_YPOS_HIMETRIC** A 32-bit unsigned integer used to represent a position along the y-axis in                         **HIMETRIC** units.  
   
--   以像素用于表示沿 x 轴的位置**VTS\_XPOS\_PIXELS** 32 位无符号整数。  
+-   **VTS_XPOS_PIXELS** A 32-bit unsigned integer used to represent a position along the x-axis in pixels.  
   
--   以像素用于表示沿 Y 轴移动的位置**VTS\_YPOS\_PIXELS** 32 位无符号整数。  
+-   **VTS_YPOS_PIXELS** A 32-bit unsigned integer used to represent a position along the y-axis in pixels.  
   
--   **VTS\_XSIZE\_PIXELS** 32 位无符号整数用于表示屏幕对象的宽度 \(以像素为单位\)。  
+-   **VTS_XSIZE_PIXELS** A 32-bit unsigned integer used to represent the width of a screen object in pixels.  
   
--   **VTS\_YSIZE\_PIXELS** 32 位无符号整数用于表示屏幕对象的高度 \(以像素为单位\)。  
+-   **VTS_YSIZE_PIXELS** A 32-bit unsigned integer used to represent the height of a screen object in pixels.  
   
--   **VTS\_XSIZE\_HIMETRIC** 32 位无符号整数用于表示屏幕对象的宽度。**HIMETRIC** 单元的。  
+-   **VTS_XSIZE_HIMETRIC** A 32-bit unsigned integer used to represent the width of a screen object in                         **HIMETRIC** units.  
   
--   **VTS\_YSIZE\_HIMETRIC** 32 位无符号整数用于表示屏幕对象的高度单位在 **HIMETRIC** 的。  
+-   **VTS_YSIZE_HIMETRIC** A 32-bit unsigned integer used to represent the height of a screen object in                         **HIMETRIC** units.  
   
     > [!NOTE]
-    >  除了 **VTS\_FONT** 和 **VTS\_PICTURE**之外，其他不同的常数的所有不同类型定义，提供了指向不同的常数。数据，  使用 **VTS\_P**`constantname` 约定，这些常量名为。  例如，**VTS\_PCOLOR** 是指向 **VTS\_COLOR** 常数。  
+    >  Additional variant constants have been defined for all variant types, with the exception of                             **VTS_FONT** and                             **VTS_PICTURE**, that provide a pointer to the variant data constant. These constants are named using the                             **VTS_P**`constantname` convention. For example,                             **VTS_PCOLOR** is a pointer to a                             **VTS_COLOR** constant.  
   
-## 要求  
- "头部：" afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-## 请参阅  
- [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
+

@@ -1,37 +1,56 @@
 ---
-title: "与 Rich Edit 控件相关的类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类 [C++], 与 Rich Edit 控件相关"
-  - "CRichEditCtrl 类, 相关类"
-  - "CRichEditCtrlItem 类和 CRichEditCtrl"
-  - "CRichEditDoc 类, Rich Edit 控件"
-  - "CRichEditView 类, 和 CRichEditCtrl"
-  - "Rich Edit 控件, 和 CRichEditDoc"
-  - "Rich Edit 控件, 和 CRichEditItem"
-  - "Rich Edit 控件, 和 CRichEditView"
-  - "Rich Edit 控件, 类相关于"
+title: Classes Related to Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC], and CRichEditItem
+- CRichEditCtrl class [MFC], related classes
+- CRichEditDoc class [MFC], Rich Edit controls
+- rich edit controls [MFC], classes related to
+- classes [MFC], related to rich edit controls
+- rich edit controls [MFC], and CRichEditView
+- CRichEditCtrlItem class and CRichEditCtrl
+- rich edit controls [MFC], and CRichEditDoc
+- CRichEditView class [MFC], and CRichEditCtrl
 ms.assetid: 4b31c2cc-6ea1-4146-b7c5-b0b5b419f14d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 与 Rich Edit 控件相关的类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6af735aef323afb52ba6a1c06ccfb27312d0b903
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-[CRichEditView](../mfc/reference/cricheditview-class.md)、[CRichEditDoc](../mfc/reference/cricheditdoc-class.md) 和 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) 类提供了 MFC 文档\/视图结构的上下文中的富编辑控件 \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) 的功能。  `CRichEditView` 保留文本和文本的格式。  `CRichEditDoc` 保留视图中的 OLE 项的客户列表。  `CRichEditCntrItem` 提供容器对 OLE 客户端项的访问。  要修改 `CRichEditView`的内容，请使用 [CRichEditView::GetRichEditCtrl](../Topic/CRichEditView::GetRichEditCtrl.md) 访问基础 Rich Edit 控件。  
+---
+# <a name="classes-related-to-rich-edit-controls"></a>Classes Related to Rich Edit Controls
+The [CRichEditView](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), and [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) classes provide the functionality of the rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) within the context of MFC's document/view architecture. `CRichEditView` maintains the text and formatting characteristic of text. `CRichEditDoc` maintains the list of OLE client items that are in the view. `CRichEditCntrItem` provides container-side access to the OLE client item. To modify the contents of a `CRichEditView`, use [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) to access the underlying rich edit control.  
   
-## 请参阅  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

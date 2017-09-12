@@ -1,5 +1,5 @@
 ---
-title: "CMFCColorPopupMenu 类 |Microsoft 文档"
+title: CMFCColorPopupMenu Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCColorPopupMenu class
+- CMFCColorPopupMenu [MFC], CMFCColorPopupMenu
+- CMFCColorPopupMenu [MFC], CreateTearOffBar
+- CMFCColorPopupMenu [MFC], GetMenuBar
+- CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
 caps.latest.revision: 19
 author: mikeblome
@@ -38,56 +41,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 14076d78eaf86ef01e68656685dd2fd102d96311
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dad4b16f70a9fd604f7af1d53d60994729223fde
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 类
-表示一个用户用于选择文档或应用程序中的颜色的弹出菜单。  
+# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu Class
+Represents a pop-up menu that users use to select colors in a document or application.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCColorPopupMenu : public CMFCPopupMenu  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
-  
-|||  
-|-|-|  
-|名称|说明|  
-|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|构造 `CMFCColorPopupMenu` 对象。|  
-|`CMFCColorPopupMenu::~CMFCColorPopupMenu`|析构函数。|  
-  
-### <a name="public-methods"></a>公共方法  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名称|描述|  
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|创建一个可停靠拖曳颜色栏。 (重写[CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar)。)|  
-|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|返回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)嵌入到弹出菜单。 (重写[CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar)。)|  
-|`CMFCColorPopupMenu::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CMFCColorPopupMenu::SetPropList](#setproplist)|设置的属性网格控件对象嵌入的`CMFCColorBar`对象。|  
+|Name|Description|  
+|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Constructs a `CMFCColorPopupMenu` object.|  
+|`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Destructor.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名称|描述|  
-|`m_bEnabledInCustomizeMode`|一个布尔值，确定是否显示颜色栏。|  
-|`m_wndColorBar`|`CMFCColorBar`对象，它提供颜色选择。|  
+|Name|Description|  
+|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Creates a dockable tear-off color bar. (Overrides [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|  
+|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Returns the [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) that is embedded inside the pop-up menu. (Overrides [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|  
+|`CMFCColorPopupMenu::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCColorPopupMenu::SetPropList](#setproplist)|Sets the property grid control object of the embedded `CMFCColorBar` object.|  
   
-### <a name="remarks"></a>备注  
- 此类继承的弹出菜单功能`CMFCPopupMenu`类，并管理`CMFCColorBar`对象，它提供颜色选择。 自定义模式工具栏框架时与`m_bEnabledInCustomizeMode`成员设置为`FALSE`，颜色栏对象不会显示。 有关自定义模式的详细信息，请参阅[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
+### <a name="data-members"></a>Data Members  
   
- 有关详细信息`CMFCColorBar`，请参阅[CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)。  
+|||  
+|-|-|  
+|Name|Description|  
+|`m_bEnabledInCustomizeMode`|A Boolean value that determines whether to show the color bar.|  
+|`m_wndColorBar`|The `CMFCColorBar` object that provides color selection.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+### <a name="remarks"></a>Remarks  
+ This class inherits the pop-up menu functionality of the `CMFCPopupMenu` class and manages a `CMFCColorBar` object that provides color selection. When the toolbar framework is in customization mode and the `m_bEnabledInCustomizeMode` member is set to `FALSE`, the color bar object is not shown. For more information about customization mode, see [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
+  
+ For more information about `CMFCColorBar`, see [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md).  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,11 +105,11 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
  [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxcolorpopupmenu.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcolorpopupmenu.h  
   
-##  <a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu  
- 构造 `CMFCColorPopupMenu` 对象。  
+##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu  
+ Constructs a `CMFCColorPopupMenu` object.  
   
 ```  
 CMFCColorPopupMenu(
@@ -146,63 +149,63 @@ CMFCColorPopupMenu(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `colors`  
- 框架显示弹出菜单的颜色的数组。  
+ An array of colors that the framework displays on the pop-up menu.  
   
  [in] `color`  
- 默认值选择颜色。  
+ The default selected color.  
   
  [in] `lpszAutoColor`  
- 文本标签*自动*（默认值） 颜色按钮或`NULL`。  
+ The text label of the *automatic* (default) color button, or `NULL`.  
   
- 自动按钮的标准标签是**自动**。  
+ The standard label for the automatic button is **Automatic**.  
   
  [in] `lpszOtherColor`  
- 文本标签*其他*按钮，用于显示其他颜色选项，或`NULL`。  
+ The text label of the *other* button, which displays more color choices, or `NULL`.  
   
- 其他按钮的标准标签是**更多颜色...**.  
+ The standard label for the other button is **More Colors...**.  
   
  [in] `lpszDocColors`  
- 文档颜色按钮文本标签。 文档颜色调色板列出所有文档当前使用的颜色。  
+ The text label of the document colors button. The document colors palette lists all the colors that the document currently uses.  
   
  [in] `lstDocColors`  
- 文档当前使用的颜色的列表。  
+ A list of colors that the document currently uses.  
   
  [in] `nColumns`  
- 对颜色数组具有的列数。  
+ The number of columns that the array of colors has.  
   
  [in] `nHorzDockRows`  
- 在颜色栏具有水平停靠时的行数。  
+ The number of rows that the color bar has when it is docked horizontally.  
   
  [in] `nVertDockColumns`  
- 在颜色栏具有垂直停靠时的列数。  
+ The number of columns that the color bar has when it is docked vertically.  
   
  [in] `colorAutomatic`  
- 在框架应用时单击自动按钮的默认颜色。  
+ The default color that the framework applies when you click the automatic button.  
   
  [in] `uiCommandID`  
- 颜色条控制命令 id。  
+ The color bar control command ID.  
   
  [in] `bStdColorDlg`  
- 一个布尔值，该值指示是否显示标准系统颜色对话框中或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)对话框。  
+ A Boolean that indicates whether to show the standard system color dialog box or the [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialog box.  
   
  [in] `pParentBtn`  
- 一个指向父按钮。  
+ A pointer to a parent button.  
   
  [in] `nID`  
- 命令 ID。  
+ The command ID.  
   
-### <a name="remarks"></a>备注  
- 每个重载构造函数集`m_bEnabledInCustomizeMode`成员`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ Each overloaded constructor sets the `m_bEnabledInCustomizeMode` member to `FALSE`.  
   
-### <a name="example"></a>示例  
- 下面的示例演示如何构造`CMFCColorPopupMenu`对象。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCColorPopupMenu` object.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&34;](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
   
-##  <a name="createtearoffbar"></a>CMFCColorPopupMenu::CreateTearOffBar  
- 创建一个可停靠拖曳颜色栏。  
+##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar  
+ Creates a dockable tear-off color bar.  
   
 ```  
 virtual CPane* CreateTearOffBar(
@@ -211,46 +214,46 @@ virtual CPane* CreateTearOffBar(
     LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|[in] `pWndMain`|分离式栏的父级窗口的指针。|  
-|[in] `uiID`|分离式栏的命令 ID。|  
-|[in] `lpszName`|分离式栏窗口文本。|  
+|Parameter|Description|  
+|[in] `pWndMain`|Pointer to the parent window of the tear-off bar.|  
+|[in] `uiID`|The command ID of the tear-off bar.|  
+|[in] `lpszName`|The window text of the tear-off bar.|  
   
-### <a name="return-value"></a>返回值  
- 指向新的拖曳控件条对象的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new tear-off control bar object.  
   
-### <a name="remarks"></a>备注  
- 此方法创建[CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)对象并将其强制转换[CPane 类](../../mfc/reference/cpane-class.md)指针。 可以将此值强制转换回[CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)通过中所述的强制转换宏的指针[MFC 类对象的类型强制转换](../../mfc/reference/type-casting-of-mfc-class-objects.md)。  
+### <a name="remarks"></a>Remarks  
+ This method creates a [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) object and casts it to a [CPane Class](../../mfc/reference/cpane-class.md) pointer. You can cast this value back to a [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) pointer by using one of the casting macros described in [Type Casting of MFC Class Objects](../../mfc/reference/type-casting-of-mfc-class-objects.md).  
   
-##  <a name="getmenubar"></a>CMFCColorPopupMenu::GetMenuBar  
- 返回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)嵌入到弹出菜单。  
+##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar  
+ Returns the [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) that is embedded inside the pop-up menu.  
   
 ```  
 virtual CMFCPopupMenuBar* GetMenuBar();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向嵌入的`CMFCPopupMenuBar`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the embedded `CMFCPopupMenuBar`.  
   
-### <a name="remarks"></a>备注  
- 嵌入的颜色弹出菜单还拥有[CMFCPopupMenuBar 类](../../mfc/reference/cmfcpopupmenubar-class.md)对象。 如果您的应用程序使用另一个嵌入的类型，重写此方法在派生类中。  
+### <a name="remarks"></a>Remarks  
+ The color pop-up menu has an embedded [CMFCPopupMenuBar Class](../../mfc/reference/cmfcpopupmenubar-class.md) object. Override this method in a derived class if your application uses a different embedded type.  
   
-##  <a name="setproplist"></a>CMFCColorPopupMenu::SetPropList  
- 设置的属性网格控件对象嵌入的`CMFCColorBar`对象。  
+##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList  
+ Sets the property grid control object of the embedded `CMFCColorBar` object.  
   
 ```  
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pWndList`  
- 为属性网格控件对象的指针。  
+ Pointer to a property grid control object.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

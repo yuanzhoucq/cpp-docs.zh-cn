@@ -1,31 +1,50 @@
 ---
-title: "窗口过程入口点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "入口点, 窗口过程"
-  - "MFC, 管理状态数据"
-  - "状态管理, 窗口过程"
-  - "窗口过程入口点"
+title: Window Procedure Entry Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- state management, window procedures
+- MFC, managing state data
+- window procedure entry points
+- entry points, window procedures
 ms.assetid: a6b46a7f-6e42-45f2-9ae6-82e19fc57148
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 窗口过程入口点
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2807d55133f499413a2737c7876ad0bf00b511d8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-若要保护 MFC 窗口过程模块，静态链接具有特定窗口过程实现。  当模块连接到MFC时，链接操作自动发生。  此窗口过程使用 `AFX_MANAGE_STATE` 宏可正确设置的有效模块状态，则调用 **AfxWndProc**，而委托的适当成员函数 `CWnd``WindowProc` 派生的对象。  
+---
+# <a name="window-procedure-entry-points"></a>Window Procedure Entry Points
+To protect MFC window procedures, a module static links with a special window procedure implementation. The linkage occurs automatically when the module is linked with MFC. This window procedure uses the `AFX_MANAGE_STATE` macro to properly set the effective module state, then it calls **AfxWndProc**, which in turn delegates to the `WindowProc` member function of the appropriate `CWnd`-derived object.  
   
-## 请参阅  
- [管理 MFC 模块的状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)
+## <a name="see-also"></a>See Also  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+

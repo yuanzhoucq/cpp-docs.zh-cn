@@ -1,5 +1,5 @@
 ---
-title: "CInterpolatorBase 类 |Microsoft 文档"
+title: CInterpolatorBase Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CInterpolatorBase class
+- CInterpolatorBase [MFC], CInterpolatorBase
+- CInterpolatorBase [MFC], CreateInstance
+- CInterpolatorBase [MFC], GetDependencies
+- CInterpolatorBase [MFC], GetDuration
+- CInterpolatorBase [MFC], GetFinalValue
+- CInterpolatorBase [MFC], InterpolateValue
+- CInterpolatorBase [MFC], InterpolateVelocity
+- CInterpolatorBase [MFC], SetCustomInterpolator
+- CInterpolatorBase [MFC], SetDuration
+- CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
 caps.latest.revision: 19
 author: mikeblome
@@ -44,66 +53,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 44c67eef38b34a2a3cf677b42a40304c01668b42
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 258c0403dee25d1b3e08a954010d186880c8f734
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cinterpolatorbase-class"></a>CInterpolatorBase 类
-实现回调，它在必须计算动画变量的新值时由动画 API 调用。  
+# <a name="cinterpolatorbase-class"></a>CInterpolatorBase Class
+Implements a callback, which is called by the Animation API when it has to calculate a new value of an animation variable.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|构造`CInterpolatorBase`对象。|  
+|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Constructs the `CInterpolatorBase` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInterpolatorBase::CreateInstance](#createinstance)|创建的一个实例`CInterpolatorBase`，并将存储指向自定义内插器，将处理事件的指针。|  
-|[CInterpolatorBase::GetDependencies](#getdependencies)|获取该内插器依赖项。 （重写 `CUIAnimationInterpolatorBase::GetDependencies`。）|  
-|[CInterpolatorBase::GetDuration](#getduration)|获取该内插器持续时间。 （重写 `CUIAnimationInterpolatorBase::GetDuration`。）|  
-|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|获取该内插器导致的最终值。 （重写 `CUIAnimationInterpolatorBase::GetFinalValue`。）|  
-|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|内插给定的偏移量处的值 (重写`CUIAnimationInterpolatorBase::InterpolateValue`。)|  
-|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|内插在给定的偏移量的速度 (重写`CUIAnimationInterpolatorBase::InterpolateVelocity`。)|  
-|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|存储自定义内插器，将处理事件的指针。|  
-|[CInterpolatorBase::SetDuration](#setduration)|设置内插器的持续时间 (重写`CUIAnimationInterpolatorBase::SetDuration`。)|  
-|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|设置内插器的初始值和速度。 （重写 `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`。）|  
+|[CInterpolatorBase::CreateInstance](#createinstance)|Creates an instance of `CInterpolatorBase` and stores a pointer to custom interpolator, which will be handling events.|  
+|[CInterpolatorBase::GetDependencies](#getdependencies)|Gets the interpolator's dependencies. (Overrides `CUIAnimationInterpolatorBase::GetDependencies`.)|  
+|[CInterpolatorBase::GetDuration](#getduration)|Gets the interpolator's duration. (Overrides `CUIAnimationInterpolatorBase::GetDuration`.)|  
+|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Gets the final value to which the interpolator leads. (Overrides `CUIAnimationInterpolatorBase::GetFinalValue`.)|  
+|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Interpolates the value at a given offset (Overrides `CUIAnimationInterpolatorBase::InterpolateValue`.)|  
+|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Interpolates the velocity at a given offset (Overrides `CUIAnimationInterpolatorBase::InterpolateVelocity`.)|  
+|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Stores a pointer to custom interpolator, which will be handling events.|  
+|[CInterpolatorBase::SetDuration](#setduration)|Sets the interpolator's duration (Overrides `CUIAnimationInterpolatorBase::SetDuration`.)|  
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Sets the interpolator's initial value and velocity. (Overrides `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.)|  
   
-## <a name="remarks"></a>备注  
- 此处理程序被创建并传递到`IUIAnimationTransitionFactory::CreateTransition`时`CCustomTransition`正在作为动画初始化过程的一部分创建对象 (由启动`CAnimationController::AnimateGroup`)。 通常不需要直接使用此类情况下，它只是 routs 的所有事件`CCustomInterpolator`-派生的类，其指针传递到构造函数`CCustomTransition`。  
+## <a name="remarks"></a>Remarks  
+ This handler is created and passed to `IUIAnimationTransitionFactory::CreateTransition` when a `CCustomTransition` object is being created as a part of animation initialization process (started by `CAnimationController::AnimateGroup`). Usually you don't need to use this class directly, it just routs all events to a `CCustomInterpolator`-derived class, whose pointer is passed to constructor of `CCustomTransition`.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CUIAnimationCallbackBase`  
   
  `CUIAnimationInterpolatorBase`  
   
  `CInterpolatorBase`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
- 构造 CInterpolatorBase 对象。  
+##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase  
+ Constructs the CInterpolatorBase object.  
   
 ```  
 CInterpolatorBase();
 ```  
   
-##  <a name="createinstance"></a>CInterpolatorBase::CreateInstance  
- 创建的 CInterpolatorBase 实例并将存储指向自定义内插器，将处理事件的指针。  
+##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance  
+ Creates an instance of CInterpolatorBase and stores a pointer to custom interpolator, which will be handling events.  
   
 ```  
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -111,17 +120,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
     IUIAnimationInterpolator** ppHandler);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pInterpolator`  
- 自定义内插器指向的指针。  
+ A pointer to custom interpolator.  
   
  `ppHandler`  
- 输出。 当函数返回时包含指向 CInterpolatorBase 实例的指针。  
+ Output. Contains a pointer to instance of CInterpolatorBase when the function returns.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-##  <a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
- 获取该内插器依赖项。  
+##  <a name="getdependencies"></a>  CInterpolatorBase::GetDependencies  
+ Gets the interpolator's dependencies.  
   
 ```  
 IFACEMETHOD(GetDependencies)(
@@ -130,49 +139,49 @@ IFACEMETHOD(GetDependencies)(
     __out UI_ANIMATION_DEPENDENCIES* durationDependencies);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `initialValueDependencies`  
- 输出。 各个方面该内插器依赖于初始的值传递给 SetInitialValueAndVelocity。  
+ Output. Aspects of the interpolator that depend on the initial value passed to SetInitialValueAndVelocity.  
   
  `initialVelocityDependencies`  
- 输出。 取决于初始速度该内插器方面传递给 SetInitialValueAndVelocity。  
+ Output. Aspects of the interpolator that depend on the initial velocity passed to SetInitialValueAndVelocity.  
   
  `durationDependencies`  
- 输出。 该内插器方面的持续时间在依赖于传递给 SetDuration。  
+ Output. Aspects of the interpolator that depend on the duration passed to SetDuration.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从一个 GetDependencies 方法将返回 FALSE，则返回 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the GetDependencies method.  
   
-##  <a name="getduration"></a>CInterpolatorBase::GetDuration  
- 获取该内插器持续时间。  
+##  <a name="getduration"></a>  CInterpolatorBase::GetDuration  
+ Gets the interpolator's duration.  
   
 ```  
 IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `duration`  
- 输出。 该转换，以秒为单位的持续时间。  
+ Output. The duration of the transition, in seconds.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 GetDuration 方法将返回 FALSE，则返回 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the GetDuration method.  
   
-##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
- 获取该内插器导致的最终值。  
+##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue  
+ Gets the final value to which the interpolator leads.  
   
 ```  
 IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `value`  
- 输出。 变量在转换结束最终值。  
+ Output. The final value of a variable at the end of the transition.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 GetFinalValue 方法将返回 FALSE，则返回 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the GetFinalValue method.  
   
-##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
- 给定的偏移量处的值的内插  
+##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue  
+ Interpolates the value at a given offset  
   
 ```  
 IFACEMETHOD(InterpolateValue)(
@@ -180,18 +189,18 @@ IFACEMETHOD(InterpolateValue)(
   __out DOUBLE* value);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `offset`  
- 转换的开始的偏移量。 偏移量始终为大于或等于零且小于过渡的持续时间。 如果转换的持续时间为零，不调用此方法。  
+ The offset from the start of the transition. The offset is always greater than or equal to zero and less than the duration of the transition. This method is not called if the duration of the transition is zero.  
   
  `value`  
- 输出。 内插的值。  
+ Output. The interpolated value.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 InterpolateValue 方法将返回 FALSE，则返回 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the InterpolateValue method.  
   
-##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
- 内插在给定的偏移量的速度  
+##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity  
+ Interpolates the velocity at a given offset  
   
 ```  
 IFACEMETHOD(InterpolateVelocity)(
@@ -199,43 +208,43 @@ IFACEMETHOD(InterpolateVelocity)(
   __out DOUBLE* velocity);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `offset`  
- 转换的开始的偏移量。 偏移量始终是大于或等于零且小于或等于过渡的持续时间。 如果转换的持续时间为零，不调用此方法。  
+ The offset from the start of the transition. The offset is always greater than or equal to zero and less than or equal to the duration of the transition. This method is not called if the duration of the transition is zero.  
   
  `velocity`  
- 输出。 偏移量处变量的速度。  
+ Output. The velocity of the variable at the offset.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 InterpolateVelocity 方法将返回 FALSE，则返回 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the InterpolateVelocity method.  
   
-##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
- 存储自定义内插器，将处理事件的指针。  
+##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator  
+ Stores a pointer to custom interpolator, which will be handling events.  
   
 ```  
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pInterpolator`  
- 自定义内插器指向的指针。  
+ A pointer to custom interpolator.  
   
-##  <a name="setduration"></a>CInterpolatorBase::SetDuration  
- 将内插器的持续时间设置  
+##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
+ Sets the interpolator's duration  
   
 ```  
 IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `duration`  
- 过渡的持续时间。  
+ The duration of the transition.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现 SetDuration 方法将返回 FALSE，则返回 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the SetDuration method.  
   
-##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
- 设置内插器的初始值和速度。  
+##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity  
+ Sets the interpolator's initial value and velocity.  
   
 ```  
 IFACEMETHOD(SetInitialValueAndVelocity)(
@@ -243,16 +252,16 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
   __in DOUBLE initialVelocity);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `initialValue`  
- 在转换开始的变量的值。  
+ The value of the variable at the start of the transition.  
   
  `initialVelocity`  
- 该变量在转换开始的速度。  
+ The velocity of the variable at the start of the transition.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 SetInitialValueAndVelocity 方法将返回 FALSE，则返回 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. It returns E_FAIL if CCustomInterpolator is not set, or custom implementation returns FALSE from the SetInitialValueAndVelocity method.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

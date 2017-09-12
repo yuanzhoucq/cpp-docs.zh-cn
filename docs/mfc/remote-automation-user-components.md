@@ -1,31 +1,50 @@
 ---
-title: "远程自动化用户组件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], 自动化"
-  - "远程自动化 [C++], 用户组件"
+title: Remote Automation User Components | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DLLs [MFC], Automation
+- Remote Automation [MFC], user components
 ms.assetid: 601591cc-a442-440a-988e-baf3284b0d46
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 远程自动化用户组件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 29735b6e515f5d6c04cfcc0014a9f69cc1a22cb4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-您将需要确保每台客户端包含客户端程序和它所需的任何支持 DLL。  还需要确保服务器应用程序和它所需服务器计算机上的任何支持 DLL。  最后，您需要确保服务器程序在每台客户端注册，然后 RAC 管理器可以运行配置连接。  如果程序注册自 \(大多数为是\)，则只需对客户端的服务器程序注册它。  失败时，可能必须执行您提供的注册表，或者手动编辑注册表。  
+---
+# <a name="remote-automation-user-components"></a>Remote Automation User Components
+You will need to ensure that each client machine contains your client program and any support DLLs it requires. You will also need to ensure that the server application and any support DLLs it requires are present on the server machine. Finally, you will need to ensure that your server program is registered on each client machine before RAC Manager can be run to configure the connection. If the program is self-registering (as most will be), you need only execute the server program on the client machine to register it. Failing that, you may have to execute a registration file that you provide, or manually edit the registry.  
   
-## 请参阅  
- [自动化管理器 \(MFC\)](../mfc/automation-manager-mfc.md)   
- [远程自动化连接管理器](../mfc/remote-automation-connection-manager.md)   
- [远程自动化安装](../mfc/remote-automation-installation.md)
+## <a name="see-also"></a>See Also  
+ [Automation Manager (MFC)](../mfc/automation-manager-mfc.md)   
+ [Remote Automation Connection Manager](../mfc/remote-automation-connection-manager.md)   
+ [Remote Automation Installation](../mfc/remote-automation-installation.md)
+
+

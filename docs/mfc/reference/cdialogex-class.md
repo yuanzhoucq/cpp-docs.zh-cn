@@ -1,5 +1,5 @@
 ---
-title: "CDialogEx 类 |Microsoft 文档"
+title: CDialogEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDialogEx class
-- CDialogEx::PreTranslateMessage method
+- CDialogEx [MFC], CDialogEx
+- CDialogEx [MFC], SetBackgroundColor
+- CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
 caps.latest.revision: 27
 author: mikeblome
@@ -38,46 +39,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: c12aa0152fdbf83e423b944a0100045962ddb704
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63da5d8ae72d64020ee336dc4d8b3b0bceb428ff
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialogex-class"></a>CDialogEx 类
-`CDialogEx`类指定对话框的背景色和背景图像。  
+# <a name="cdialogex-class"></a>CDialogEx Class
+The `CDialogEx` class specifies the background color and background image of a dialog box.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDialogEx : public CDialog  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogEx::CDialogEx](#cdialogex)|构造 `CDialogEx` 对象。|  
-|`CDialogEx::~CDialogEx`|析构函数。|  
+|[CDialogEx::CDialogEx](#cdialogex)|Constructs a `CDialogEx` object.|  
+|`CDialogEx::~CDialogEx`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|设置对话框的背景色。|  
-|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|设置对话框的背景图像。|  
+|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Sets the background color of the dialog box.|  
+|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Sets the background image of the dialog box.|  
   
-## <a name="remarks"></a>备注  
- 若要使用`CDialogEx`类，则从`CDialogEx`类而不是`CDialog`类派生对话框类。  
+## <a name="remarks"></a>Remarks  
+ To use the `CDialogEx` class, derive your dialog box class from the `CDialogEx` class instead of the `CDialog` class.  
   
- 对话框图像存储在资源文件中。 该框架将自动删除从资源文件加载的任何图像。 若要以编程方式删除当前的背景图像，请调用[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法或实现`OnDestroy`事件处理程序。 当您调用[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法，请传入`HBITMAP`参数作为图像图柄。 如果`CDialogEx`标记是`m_bAutoDestroyBmp`，`TRUE`对象将取得图像的所有权并将其删除。  
+ Dialog box images are stored in a resource file. The framework automatically deletes any image that is loaded from the resource file. To programmatically delete the current background image, call the [CDialogEx::SetBackgroundImage](#setbackgroundimage) method or implement an `OnDestroy` event handler. When you call the [CDialogEx::SetBackgroundImage](#setbackgroundimage) method, pass in an `HBITMAP` parameter as the image handle. The `CDialogEx` object will take ownership of the image and delete it if the `m_bAutoDestroyBmp` flag is `TRUE`.  
   
- 一个`CDialogEx`对象可以是父级的[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象。 [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象调用`CDialogEx::SetActiveMenu`方法时[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象将会打开。 此后，`CDialogEx`对象处理任何菜单事件，直到[CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)对象已关闭。  
+ A `CDialogEx` object can be a parent of a [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object. The [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object calls the `CDialogEx::SetActiveMenu` method when the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object opens. Afterward, the `CDialogEx` object handles any menu event until the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object is closed.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,11 +89,11 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdialogex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
- 构造 `CDialogEx` 对象。  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
+ Constructs a `CDialogEx` object.  
   
 ```  
 CDialogEx(
@@ -105,25 +106,25 @@ CDialogEx(
     CWnd* pParentWnd=NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nIDTemplate`  
- 对话框模板资源 ID。  
+ The resource ID of a dialog box template.  
   
  [in] `lpszTemplateName`  
- 对话框模板资源名称。  
+ The resource name of a dialog box template.  
   
  [in] `pParent`  
- 指向父窗口的指针。 默认值为 `NULL`。  
+ A pointer to the parent window. The default value is `NULL`.  
   
  [in] `pParentWnd`  
- 指向父窗口的指针。 默认值为 `NULL`。  
+ A pointer to the parent window. The default value is `NULL`.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
- 设置对话框的背景色。  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
+ Sets the background color of the dialog box.  
   
 ```  
 void SetBackgroundColor(
@@ -131,17 +132,17 @@ void SetBackgroundColor(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- RGB 颜色值。  
+ An RGB color value.  
   
  [in] `bRepaint`  
- `TRUE`若要立即更新屏幕上。否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` to immediately update the screen; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
- 设置对话框的背景图像。  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
+ Sets the background image of the dialog box.  
   
 ```  
 void SetBackgroundImage(
@@ -157,31 +158,31 @@ BOOL SetBackgroundImage(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `hBitmap`  
- 背景图像句柄。  
+ A handle to the background image.  
   
  [in] `uiBmpResId`  
- 背景图像的资源 ID。  
+ The resource ID of the background image.  
   
  [in] `location`  
- 其中一个`CDialogEx::BackgroundLocation`指定的映像的位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 默认值为 BACKGR_TILE。  
+ One of the `CDialogEx::BackgroundLocation` values that specify the location of the image. Valid values include BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT, and BACKGR_BOTTOMRIGHT. The default value is BACKGR_TILE.  
   
  [in] `bAutoDestroy`  
- `TRUE`若要自动销毁的背景图像;否则为`FALSE`。  
+ `TRUE` to automatically destroy the background image; otherwise, `FALSE`.  
   
  [in] `bRepaint`  
- `TRUE`若要立即重绘对话框;否则为`FALSE`。  
+ `TRUE` to immediately redraw the dialog box; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- 第二个方法重载的语法中，`TRUE`如果方法成功，否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ In the second method overload syntax, `TRUE` if the method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 您指定的图像不拉伸以适合对话框的工作区。  
+### <a name="remarks"></a>Remarks  
+ The image that you specify is not stretched to fit the dialog box client area.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)   
- [CContextMenuManager 类](../../mfc/reference/ccontextmenumanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)   
+ [CContextMenuManager Class](../../mfc/reference/ccontextmenumanager-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "COleDropSource 类 |Microsoft 文档"
+title: COleDropSource Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- drag operations
-- drop target, dragging data to
-- COleDropSource class
-- drag and drop, drop source
+- COleDropSource [MFC], COleDropSource
+- COleDropSource [MFC], GiveFeedback
+- COleDropSource [MFC], OnBeginDrag
+- COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
 caps.latest.revision: 24
 author: mikeblome
@@ -41,112 +41,112 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f3d0e5b7184cf305459173065b8e1cc07e032aef
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80bdf496877f0f0c78ca2d3cb3ea75dfe729a2c0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledropsource-class"></a>COleDropSource 类
-允许将数据拖动到放置目标。  
+# <a name="coledropsource-class"></a>COleDropSource Class
+Allows data to be dragged to a drop target.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDropSource : public CCmdTarget  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDropSource::COleDropSource](#coledropsource)|构造 `COleDropSource` 对象。|  
+|[COleDropSource::COleDropSource](#coledropsource)|Constructs a `COleDropSource` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDropSource::GiveFeedback](#givefeedback)|在拖放操作过程中更改光标。|  
-|[COleDropSource::OnBeginDrag](#onbegindrag)|在拖放操作过程中处理鼠标捕获。|  
-|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|检查以确定拖动是否也应继续。|  
+|[COleDropSource::GiveFeedback](#givefeedback)|Changes the cursor during a drag-and-drop operation.|  
+|[COleDropSource::OnBeginDrag](#onbegindrag)|Handles mouse capture during a drag-and-drop operation.|  
+|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Checks to see whether dragging should continue.|  
   
-## <a name="remarks"></a>备注  
- [COleDropTarget](../../mfc/reference/coledroptarget-class.md)类处理拖放操作的接收部分。 `COleDropSource`对象负责确定在拖动操作开始时，在拖动操作过程中提供的反馈以及确定结束拖放操作时。  
+## <a name="remarks"></a>Remarks  
+ The [COleDropTarget](../../mfc/reference/coledroptarget-class.md) class handles the receiving portion of the drag-and-drop operation. The `COleDropSource` object is responsible for determining when a drag operation begins, providing feedback during the drag operation, and determining when the drag operation ends.  
   
- 若要使用`COleDropSource`对象，只需调用构造函数。 这简化了过程确定哪些事件，如鼠标单击开始拖动操作使用[COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop)， [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)，或[COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop)函数。 这些函数将创建`COleDropSource`为您的对象。 你可能想要修改的默认行为`COleDropSource`可重写函数。 由框架，将在适当的时候调用这些成员函数。  
+ To use a `COleDropSource` object, just call the constructor. This simplifies the process of determining what events, such as a mouse click, begin a drag operation using [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), or [COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) function. These functions will create a `COleDropSource` object for you. You might want to modify the default behavior of the `COleDropSource` overridable functions. These member functions will be called at the appropriate times by the framework.  
   
- 拖放操作的详细信息使用 OLE，请参阅文章[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
+ For more information on drag-and-drop operations using OLE, see the article [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
- 有关详细信息，请参阅[IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleDropSource`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
- 构造 `COleDropSource` 对象。  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
+ Constructs a `COleDropSource` object.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
- 由框架调用之后调用[COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)或[COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)。  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
+ Called by the framework after calling [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) or [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
 virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dropEffect`  
- 如果与所选数据这一时刻发生放置，你想要向用户显示的效果，通常表示什么会发生。 通常情况下，这是到最新的调用所返回的值[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)或[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)。 它可以是一个或多项操作︰  
+ The effect you would like to display to the user, usually indicating what would happen if a drop occurred at this point with the selected data. Typically, this is the value returned by the most recent call to [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) or [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). It can be one or more of the following:  
   
-- `DROPEFFECT_NONE`将不允许放置。  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`将执行复制操作。  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`将执行移动操作。  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`将建立到原始数据放置的数据的链接。  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`拖动滚动操作将要发生或者问题发生在目标中。  
+- `DROPEFFECT_SCROLL` A drag scroll operation is about to occur or is occurring in the target.  
   
-### <a name="return-value"></a>返回值  
- 返回**DRAGDROP_S_USEDEFAULTCURSORS**拖动过程中，如果**NOERROR**如果不是。  
+### <a name="return-value"></a>Return Value  
+ Returns **DRAGDROP_S_USEDEFAULTCURSORS** if dragging is in progress, **NOERROR** if it is not.  
   
-### <a name="remarks"></a>备注  
- 重写此函数向有关如果放置这个时候发生，会发生什么情况的用户提供反馈。 默认实现使用的 OLE 默认光标。 拖放操作的详细信息使用 OLE，请参阅文章[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
+### <a name="remarks"></a>Remarks  
+ Override this function to provide feedback to the user about what would happen if a drop occurred at this point. The default implementation uses the OLE default cursors. For more information on drag-and-drop operations using OLE, see the article [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
- 有关详细信息，请参阅[IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723)， [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)，和[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), and [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) in the Windows SDK.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
- 由框架在事件发生时无法开始拖动操作，例如，按下鼠标左键。  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
+ Called by the framework when an event occurs that could begin a drag operation, such as pressing the left mouse button.  
   
 ```  
 virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 指向以包含所选的数据的窗口。  
+ Points to the window that contains the selected data.  
   
-### <a name="return-value"></a>返回值  
- 如果拖动允许，否则为 0，非零值。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if dragging is allowed, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果您想要修改拖动进程启动的方式，重写此函数。 默认实现捕获到鼠标，并保留在拖动模式，直到用户单击鼠标左键或右键按钮，或点击 esc 键，此时会释放鼠标。  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want to modify the way the dragging process is started. The default implementation captures the mouse and stays in drag mode until the user clicks the left or right mouse button or hits ESC, at which time it releases the mouse.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
- 拖动开始后，此函数是重复调用，由框架直到取消或完成拖动操作。  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
+ After dragging has begun, this function is called repeatedly by the framework until the drag operation is either canceled or completed.  
   
 ```  
 virtual SCODE QueryContinueDrag(
@@ -154,28 +154,28 @@ virtual SCODE QueryContinueDrag(
     DWORD dwKeyState);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bEscapePressed*  
- 指出是否自上次调用以来按 ESC 键`COleDropSource::QueryContinueDrag`。  
+ States whether the ESC key has been pressed since the last call to `COleDropSource::QueryContinueDrag`.  
   
  `dwKeyState`  
- 包含在键盘上的修改键的状态。 这是以下任意数量的组合︰ **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ Contains the state of the modifier keys on the keyboard. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
-### <a name="return-value"></a>返回值  
- **DRAGDROP_S_CANCEL**如果按下 ESC 键或右键，或者拖动启动之前，将引发左侧的按钮。 **DRAGDROP_S_DROP**是否应进行拖放操作。 否则为`S_OK`。  
+### <a name="return-value"></a>Return Value  
+ **DRAGDROP_S_CANCEL** if the ESC key or right button is pressed, or left button is raised before dragging starts. **DRAGDROP_S_DROP** if a drop operation should occur. Otherwise `S_OK`.  
   
-### <a name="remarks"></a>备注  
- 重写此函数将取消您想要更改哪些拖动的点或 drop 时发生。  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want to change the point at which dragging is canceled or a drop occurs.  
   
- 默认实现将启动拖放或取消拖动，如下所示。 按下 ESC 键或鼠标按钮时，它会取消拖动操作。 鼠标左键拖动已开始后引发时，它启动拖放操作。 否则，它将返回`S_OK`并执行任何进一步的操作。  
+ The default implementation initiates the drop or cancels the drag as follows. It cancels a drag operation when the ESC key or the right mouse button is pressed. It initiates a drop operation when the left mouse button is raised after dragging has started. Otherwise, it returns `S_OK` and performs no further operations.  
   
- 因为频繁地调用此函数时，应尽可能多地进行优化。  
+ Because this function is called frequently, it should be optimized as much as possible.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   
- [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   
- [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

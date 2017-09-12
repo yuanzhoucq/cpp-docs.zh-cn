@@ -1,5 +1,5 @@
 ---
-title: "CSliderCtrl 类 |Microsoft 文档"
+title: CSliderCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,10 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Windows common controls [C++], CSliderCtrl
-- slider controls, CSliderCtrl class
-- CSliderCtrl class, common controls
-- CSliderCtrl class
+- CSliderCtrl [MFC], CSliderCtrl
+- CSliderCtrl [MFC], ClearSel
+- CSliderCtrl [MFC], ClearTics
+- CSliderCtrl [MFC], Create
+- CSliderCtrl [MFC], CreateEx
+- CSliderCtrl [MFC], GetBuddy
+- CSliderCtrl [MFC], GetChannelRect
+- CSliderCtrl [MFC], GetLineSize
+- CSliderCtrl [MFC], GetNumTics
+- CSliderCtrl [MFC], GetPageSize
+- CSliderCtrl [MFC], GetPos
+- CSliderCtrl [MFC], GetRange
+- CSliderCtrl [MFC], GetRangeMax
+- CSliderCtrl [MFC], GetRangeMin
+- CSliderCtrl [MFC], GetSelection
+- CSliderCtrl [MFC], GetThumbLength
+- CSliderCtrl [MFC], GetThumbRect
+- CSliderCtrl [MFC], GetTic
+- CSliderCtrl [MFC], GetTicArray
+- CSliderCtrl [MFC], GetTicPos
+- CSliderCtrl [MFC], GetToolTips
+- CSliderCtrl [MFC], SetBuddy
+- CSliderCtrl [MFC], SetLineSize
+- CSliderCtrl [MFC], SetPageSize
+- CSliderCtrl [MFC], SetPos
+- CSliderCtrl [MFC], SetRange
+- CSliderCtrl [MFC], SetRangeMax
+- CSliderCtrl [MFC], SetRangeMin
+- CSliderCtrl [MFC], SetSelection
+- CSliderCtrl [MFC], SetThumbLength
+- CSliderCtrl [MFC], SetTic
+- CSliderCtrl [MFC], SetTicFreq
+- CSliderCtrl [MFC], SetTipSide
+- CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 caps.latest.revision: 22
 author: mikeblome
@@ -71,82 +101,82 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 745dc253ac0837ffc62f47db2038e6302b83b558
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae609da71c2f805c75e3d8c0bca0011b5b84651a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csliderctrl-class"></a>CSliderCtrl 类
-提供 Windows 公共滑块控件的功能。  
+# <a name="csliderctrl-class"></a>CSliderCtrl Class
+Provides the functionality of the Windows common slider control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSliderCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSliderCtrl::CSliderCtrl](#csliderctrl)|构造 `CSliderCtrl` 对象。|  
+|[CSliderCtrl::CSliderCtrl](#csliderctrl)|Constructs a `CSliderCtrl` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSliderCtrl::ClearSel](#clearsel)|清除在滑块控件中当前的选择。|  
-|[CSliderCtrl::ClearTics](#cleartics)|从滑块控件中移除当前的刻度线。|  
-|[CSliderCtrl::Create](#create)|创建滑块控件，并将其附加到`CSliderCtrl`对象。|  
-|[CSliderCtrl::CreateEx](#createex)|创建指定的 Windows 扩展样式的滑块控件，并将其附加到`CSliderCtrl`对象。|  
-|[CSliderCtrl::GetBuddy](#getbuddy)|检索给定位置处的滑块控件合作者窗口的句柄。|  
-|[CSliderCtrl::GetChannelRect](#getchannelrect)|检索滑块控件的通道的大小。|  
-|[CSliderCtrl::GetLineSize](#getlinesize)|检索滑块控件的行大小。|  
-|[CSliderCtrl::GetNumTics](#getnumtics)|检索滑块控件中的刻度的数。|  
-|[CSliderCtrl::GetPageSize](#getpagesize)|检索滑块控件的页大小。|  
-|[CSliderCtrl::GetPos](#getpos)|检索将滑块的当前位置。|  
-|[CSliderCtrl::GetRange](#getrange)|检索滑块的最小和最大位置。|  
-|[CSliderCtrl::GetRangeMax](#getrangemax)|检索滑块的最大位置。|  
-|[CSliderCtrl::GetRangeMin](#getrangemin)|检索滑块的最小位置。|  
-|[CSliderCtrl::GetSelection](#getselection)|检索当前所选内容的范围。|  
-|[CSliderCtrl::GetThumbLength](#getthumblength)|检索当前 trackbar 控件中的滑块的长度。|  
-|[CSliderCtrl::GetThumbRect](#getthumbrect)|检索滑块控件的滚动块的大小。|  
-|[CSliderCtrl::GetTic](#gettic)|检索指定的刻度线的位置。|  
-|[CSliderCtrl::GetTicArray](#getticarray)|检索的滑块控件的刻度标记位置的数组。|  
-|[CSliderCtrl::GetTicPos](#getticpos)|检索指定的刻度线，客户端坐标中的位置。|  
-|[CSliderCtrl::GetToolTips](#gettooltips)|如果有的话，请检索分配给滑块控件的工具提示控件的句柄。|  
-|[CSliderCtrl::SetBuddy](#setbuddy)|将窗口分配为合作者窗口的滑块控件。|  
-|[CSliderCtrl::SetLineSize](#setlinesize)|设置滑块控件的行大小。|  
-|[CSliderCtrl::SetPageSize](#setpagesize)|设置滑块控件的页大小。|  
-|[CSliderCtrl::SetPos](#setpos)|设置滑块的当前位置。|  
-|[CSliderCtrl::SetRange](#setrange)|设置滑块的最小和最大位置。|  
-|[CSliderCtrl::SetRangeMax](#setrangemax)|设置滑块的最大位置。|  
-|[CSliderCtrl::SetRangeMin](#setrangemin)|设置滑块的最小位置。|  
-|[CSliderCtrl::SetSelection](#setselection)|设置当前所选内容的范围。|  
-|[CSliderCtrl::SetThumbLength](#setthumblength)|设置当前的 trackbar 控件中的滑块的长度。|  
-|[CSliderCtrl::SetTic](#settic)|设置指定的刻度线的位置。|  
-|[CSliderCtrl::SetTicFreq](#setticfreq)|设置刻度线的频率，每个滑块控件递增的标记。|  
-|[CSliderCtrl::SetTipSide](#settipside)|位置 trackbar 控件工具提示控件使用。|  
-|[CSliderCtrl::SetToolTips](#settooltips)|将工具提示控件分配给滑块控件。|  
+|[CSliderCtrl::ClearSel](#clearsel)|Clears the current selection in a slider control.|  
+|[CSliderCtrl::ClearTics](#cleartics)|Removes the current tick marks from a slider control.|  
+|[CSliderCtrl::Create](#create)|Creates a slider control and attaches it to a `CSliderCtrl` object.|  
+|[CSliderCtrl::CreateEx](#createex)|Creates a slider control with the specified Windows extended styles and attaches it to a `CSliderCtrl` object.|  
+|[CSliderCtrl::GetBuddy](#getbuddy)|Retrieves the handle to a slider control buddy window at a given location.|  
+|[CSliderCtrl::GetChannelRect](#getchannelrect)|Retrieves the size of the slider control's channel.|  
+|[CSliderCtrl::GetLineSize](#getlinesize)|Retrieves the line size of a slider control.|  
+|[CSliderCtrl::GetNumTics](#getnumtics)|Retrieves the number of tick marks in a slider control.|  
+|[CSliderCtrl::GetPageSize](#getpagesize)|Retrieves the page size of a slider control.|  
+|[CSliderCtrl::GetPos](#getpos)|Retrieves the current position of the slider.|  
+|[CSliderCtrl::GetRange](#getrange)|Retrieves the minimum and maximum positions for a slider.|  
+|[CSliderCtrl::GetRangeMax](#getrangemax)|Retrieves the maximum position for a slider.|  
+|[CSliderCtrl::GetRangeMin](#getrangemin)|Retrieves the minimum position for a slider.|  
+|[CSliderCtrl::GetSelection](#getselection)|Retrieves the range of the current selection.|  
+|[CSliderCtrl::GetThumbLength](#getthumblength)|Retrieves the length of the slider in the current trackbar control.|  
+|[CSliderCtrl::GetThumbRect](#getthumbrect)|Retrieves the size of the slider control's thumb.|  
+|[CSliderCtrl::GetTic](#gettic)|Retrieves the position of the specified tick mark.|  
+|[CSliderCtrl::GetTicArray](#getticarray)|Retrieves the array of tick mark positions for a slider control.|  
+|[CSliderCtrl::GetTicPos](#getticpos)|Retrieves the position of the specified tick mark, in client coordinates.|  
+|[CSliderCtrl::GetToolTips](#gettooltips)|Retrieves the handle to the tooltip control assigned to the slider control, if any.|  
+|[CSliderCtrl::SetBuddy](#setbuddy)|Assigns a window as the buddy window for a slider control.|  
+|[CSliderCtrl::SetLineSize](#setlinesize)|Sets the line size of a slider control.|  
+|[CSliderCtrl::SetPageSize](#setpagesize)|Sets the page size of a slider control.|  
+|[CSliderCtrl::SetPos](#setpos)|Sets the current position of the slider.|  
+|[CSliderCtrl::SetRange](#setrange)|Sets the minimum and maximum positions for a slider.|  
+|[CSliderCtrl::SetRangeMax](#setrangemax)|Sets the maximum position for a slider.|  
+|[CSliderCtrl::SetRangeMin](#setrangemin)|Sets the minimum position for a slider.|  
+|[CSliderCtrl::SetSelection](#setselection)|Sets the range of the current selection.|  
+|[CSliderCtrl::SetThumbLength](#setthumblength)|Sets the length of the slider in the current trackbar control.|  
+|[CSliderCtrl::SetTic](#settic)|Sets the position of the specified tick mark.|  
+|[CSliderCtrl::SetTicFreq](#setticfreq)|Sets the frequency of tick marks per slider control increment.|  
+|[CSliderCtrl::SetTipSide](#settipside)|Positions a tooltip control used by a trackbar control.|  
+|[CSliderCtrl::SetToolTips](#settooltips)|Assigns a tooltip control to a slider control.|  
   
-## <a name="remarks"></a>备注  
- "滑块控件"(也称为 trackbar) 是一个窗口，其中包含滑块和可选刻度线。 当用户移滑块，使用鼠标或箭头键时，控件将发送通知消息来指示更改。  
+## <a name="remarks"></a>Remarks  
+ A "slider control" (also known as a trackbar) is a window containing a slider and optional tick marks. When the user moves the slider, using either the mouse or the direction keys, the control sends notification messages to indicate the change.  
   
- 当您希望用户选择一个离散值或位于一个范围中的一组连续值时，滑动控件很有用。 例如，您可能使用滑块控件允许用户通过将滑块移动到给定刻度线来设置重复速率。  
+ Slider controls are useful when you want the user to select a discrete value or a set of consecutive values in a range. For example, you might use a slider control to allow the user to set the repeat rate of the keyboard by moving the slider to a given tick mark.  
   
- 此控件 (因此`CSliderCtrl`类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。  
+ This control (and therefore the `CSliderCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- 在创建它时指定的增量移动滑块。 例如，如果您指定滑块应具有五个范围，滑块只能占用 6 个位置︰ 左侧的滑块控件和每个增量的范围中的一个位置的位置。 通常，这些位置中的每个位置将用一个刻度线标识。  
+ The slider moves in increments that you specify when you create it. For example, if you specify that the slider should have a range of five, the slider can only occupy six positions: a position at the left side of the slider control and one position for each increment in the range. Typically, each of these positions is identified by a tick mark.  
   
- 通过使用构造函数创建滑块和**创建**成员函数`CSliderCtrl`。 在创建滑块控件，你可以使用中的成员函数`CSliderCtrl`更改许多其属性。 可进行的更改包括设置滑块的最小和最大位置、绘制刻度线、设置选择范围以及重新定位滑块。  
+ You create a slider by using the constructor and the **Create** member function of `CSliderCtrl`. Once you have created a slider control, you can use member functions in `CSliderCtrl` to change many of its properties. Changes that you can make include setting the minimum and maximum positions for the slider, drawing tick marks, setting a selection range, and repositioning the slider.  
   
- 有关详细信息使用`CSliderCtrl`，请参阅[控件](../../mfc/controls-mfc.md)和[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。  
+ For more information on using `CSliderCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -155,33 +185,33 @@ class CSliderCtrl : public CWnd
   
  `CSliderCtrl`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="clearsel"></a>CSliderCtrl::ClearSel  
- 清除在滑块控件中当前的选择。  
+##  <a name="clearsel"></a>  CSliderCtrl::ClearSel  
+ Clears the current selection in a slider control.  
   
 ```  
 void ClearSel(BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bRedraw`  
- 重绘标志。 如果此参数为**TRUE**，滑块在重绘后清除所选内容; 否则为滑块不在重绘。  
+ Redraw flag. If this parameter is **TRUE**, the slider is redrawn after the selection is cleared; otherwise the slider is not redrawn.  
   
-##  <a name="cleartics"></a>CSliderCtrl::ClearTics  
- 从滑块控件中移除当前的刻度线。  
+##  <a name="cleartics"></a>  CSliderCtrl::ClearTics  
+ Removes the current tick marks from a slider control.  
   
 ```  
 void ClearTics(BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bRedraw`  
- 重绘标志。 如果此参数为**TRUE**，刻度线清除后重绘滑块; 否则滑块不在重绘。  
+ Redraw flag. If this parameter is **TRUE**, the slider is redrawn after the tick marks are cleared; otherwise the slider is not redrawn.  
   
-##  <a name="create"></a>CSliderCtrl::Create  
- 创建滑块控件，并将其附加到`CSliderCtrl`对象。  
+##  <a name="create"></a>  CSliderCtrl::Create  
+ Creates a slider control and attaches it to a `CSliderCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -191,31 +221,31 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定滑块控件的样式。 应用的任意组合[滑块控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)、 中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]，到控件。  
+ Specifies the slider control's style. Apply any combination of [slider control styles](http://msdn.microsoft.com/library/windows/desktop/bb760147), described in the Windows SDK, to the control.  
   
  `rect`  
- 指定滑块控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。  
+ Specifies the slider control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- 通常指定滑块控件的父窗口`CDialog`。 它不能**NULL**。  
+ Specifies the slider control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- 指定滑块控件的 id。  
+ Specifies the slider control's ID.  
   
-### <a name="return-value"></a>返回值  
- 如果初始化成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 构造`CSliderCtrl`中两个步骤。 首先，调用的构造函数，然后调用**创建**，它创建滑块控件，并将其附加到`CSliderCtrl`对象。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CSliderCtrl` in two steps. First, call the constructor, and then call **Create**, which creates the slider control and attaches it to the `CSliderCtrl` object.  
   
- 具体取决于设置的值`dwStyle`，滑块控件可以具有垂直或水平方向。 它可以具有刻度线在任意一侧边，还是两者皆否。 此外可以用于指定的连续值范围。  
+ Depending on the values set for `dwStyle`, the slider control can have either a vertical or horizontal orientation. It can have tick marks on either side, both sides, or neither. It can also be used to specify a range of consecutive values.  
   
- 若要将扩展的窗口样式应用于滑块控件，调用[CreateEx](#createex)而不是**创建**。  
+ To apply extended window styles to the slider control, call [CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CSliderCtrl::CreateEx  
- 创建控件 （子窗口），并将其与关联`CSliderCtrl`对象。  
+##  <a name="createex"></a>  CSliderCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CSliderCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -226,118 +256,118 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 指定滑块控件的样式。 应用的任意组合[滑块控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)、 中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]，到控件。  
+ Specifies the slider control's style. Apply any combination of [slider control styles](http://msdn.microsoft.com/library/windows/desktop/bb760147), described in the Windows SDK, to the control.  
   
  `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 指向控件的父级的窗口的指针。  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 控件的子窗口 id。  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是[创建](#create)将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
- 构造 `CSliderCtrl` 对象。  
+##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl  
+ Constructs a `CSliderCtrl` object.  
   
 ```  
 CSliderCtrl();
 ```  
   
-##  <a name="getbuddy"></a>CSliderCtrl::GetBuddy  
- 检索给定位置处的滑块控件合作者窗口的句柄。  
+##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy  
+ Retrieves the handle to a slider control buddy window at a given location.  
   
 ```  
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `fLocation`  
- 一个布尔值，该值指示这两个合作者窗口句柄来检索。 可以是以下值之一：  
+ A Boolean value that indicates which of two buddy window handles to retrieve. Can be one of the following values:  
   
-- **TRUE**检索左侧的滑块合作者窗口的句柄。 如果滑块控件使用`TBS_VERT`样式，该消息将检索滑块上面合作者。  
+- **TRUE** Retrieves the handle to the buddy to the left of the slider. If the slider control uses the `TBS_VERT` style, the message will retrieve the buddy above the slider.  
   
-- **FALSE**检索右侧的滑块合作者窗口的句柄。 如果滑块控件使用`TBS_VERT`样式，该消息将检索滑块下方合作者。  
+- **FALSE** Retrieves the handle to the buddy to the right of the slider. If the slider control uses the `TBS_VERT` style, the message will retrieve the buddy below the slider.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针[CWnd](../../mfc/reference/cwnd-class.md)合作者窗口通过指定的位置处的对象`fLocation`，或**NULL**如果没有合作者窗口存在在指定的位置。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the buddy window at the location specified by `fLocation`, or **NULL** if no buddy window exists at that location.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), as described in the Windows SDK. For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
   
-##  <a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
- 检索的大小和位置的滑块控件的通道的绑定矩形。  
+##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
+ Retrieves the size and position of the bounding rectangle for a slider control's channel.  
   
 ```  
 void GetChannelRect(LPRECT lprc) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lprc`  
- 指向的指针[CRect](../../atl-mfc-shared/reference/crect-class.md)在函数返回时包含的大小和位置的通道的对象的边框。  
+ A pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that contains the size and position of the channel's bounding rectangle when the function returns.  
   
-### <a name="remarks"></a>备注  
- 通道是通过将滑块移和选择范围时，其中包含突出显示的区域。  
+### <a name="remarks"></a>Remarks  
+ The channel is the area over which the slider moves and which contains the highlight when a range is selected.  
   
-##  <a name="getlinesize"></a>CSliderCtrl::GetLineSize  
- 检索滑块控件的行的大小。  
+##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize  
+ Retrieves the size of the line for a slider control.  
   
 ```  
 int GetLineSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 滑块控件的行的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of a line for the slider control.  
   
-### <a name="remarks"></a>备注  
- 行大小会影响多少滑块移对应**TB_LINEUP**和**TB_LINEDOWN**通知。 行大小的默认设置为 1。  
+### <a name="remarks"></a>Remarks  
+ The line size affects how much the slider moves for the **TB_LINEUP** and **TB_LINEDOWN** notifications. The default setting for the line size is 1.  
   
-##  <a name="getnumtics"></a>CSliderCtrl::GetNumTics  
- 检索滑块控件中的刻度的数。  
+##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics  
+ Retrieves the number of tick marks in a slider control.  
   
 ```  
 UINT GetNumTics() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 滑块控件中的刻度数。  
+### <a name="return-value"></a>Return Value  
+ The number of tick marks in the slider control.  
   
-##  <a name="getpagesize"></a>CSliderCtrl::GetPageSize  
- 检索滑块控件的页的大小。  
+##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize  
+ Retrieves the size of the page for a slider control.  
   
 ```  
 int GetPageSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 滑块控件的页面大小。  
+### <a name="return-value"></a>Return Value  
+ The size of a page for the slider control.  
   
-### <a name="remarks"></a>备注  
- 页大小会影响多少的滑块移对应**TB_PAGEUP**和**TB_PAGEDOWN**通知。  
+### <a name="remarks"></a>Remarks  
+ The page size affects how much the slider moves for the **TB_PAGEUP** and **TB_PAGEDOWN** notifications.  
   
-##  <a name="getpos"></a>CSliderCtrl::GetPos  
- 检索将滑块的滑块控件中的当前位置。  
+##  <a name="getpos"></a>  CSliderCtrl::GetPos  
+ Retrieves the current position of the slider in a slider control.  
   
 ```  
 int GetPos() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前位置。  
+### <a name="return-value"></a>Return Value  
+ The current position.  
   
-##  <a name="getrange"></a>CSliderCtrl::GetRange  
- 检索的最大和最小职位滑块的滑块控件。  
+##  <a name="getrange"></a>  CSliderCtrl::GetRange  
+ Retrieves the maximum and minimum positions for the slider in a slider control.  
   
 ```  
 void GetRange(
@@ -345,38 +375,38 @@ void GetRange(
     int& nMax) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMin`  
- 对一个整数，它接收的最小位置引用。  
+ Reference to an integer that receives the minimum position.  
   
  `nMax`  
- 对一个整数，它接收的最大位置引用。  
+ Reference to an integer that receives the maximum position.  
   
-### <a name="remarks"></a>备注  
- 此函数将值复制到引用的整数`nMin`和`nMax`。  
+### <a name="remarks"></a>Remarks  
+ This function copies the values into the integers referenced by `nMin` and `nMax`.  
   
-##  <a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
- 检索滑块控件中的滑块的最大位置。  
+##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax  
+ Retrieves the maximum position for the slider in a slider control.  
   
 ```  
 int GetRangeMax() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 控件的最大位置。  
+### <a name="return-value"></a>Return Value  
+ The control's maximum position.  
   
-##  <a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
- 检索滑块控件中的滑块的最小位置。  
+##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin  
+ Retrieves the minimum position for the slider in a slider control.  
   
 ```  
 int GetRangeMin() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 控件的最小位置。  
+### <a name="return-value"></a>Return Value  
+ The control's minimum position.  
   
-##  <a name="getselection"></a>CSliderCtrl::GetSelection  
- 检索在滑块控件中当前所选内容的起始和结束位置。  
+##  <a name="getselection"></a>  CSliderCtrl::GetSelection  
+ Retrieves the starting and ending positions of the current selection in a slider control.  
   
 ```  
 void GetSelection(
@@ -384,92 +414,92 @@ void GetSelection(
     int& nMax) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMin`  
- 对一个整数，它接收当前所选内容的起始位置的引用。  
+ Reference to an integer that receives the starting position of the current selection.  
   
  `nMax`  
- 对一个整数，它接收当前所选内容的结束位置的引用。  
+ Reference to an integer that receives the ending position of the current selection.  
   
-##  <a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
- 检索当前 trackbar 控件中的滑块的长度。  
+##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength  
+ Retrieves the length of the slider in the current trackbar control.  
   
 ```  
 int GetThumbLength() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 将滑块，以像素为单位的长度。  
+### <a name="return-value"></a>Return Value  
+ The length of the slider, in pixels.  
   
-### <a name="remarks"></a>备注  
- 此方法可发送[TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) message, which is described in the Windows SDK.  
   
-##  <a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
- 检索的大小和滑块控件中的滑块 （滚动块） 的绑定矩形的位置。  
+##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
+ Retrieves the size and position of the bounding rectangle for the slider (thumb) in a slider control.  
   
 ```  
 void GetThumbRect(LPRECT lprc) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lprc`  
- 指向的指针`CRect`对象，它在函数返回时包含滑块的绑定矩形。  
+ A pointer to a `CRect` object that contains the bounding rectangle for the slider when the function returns.  
   
-##  <a name="gettic"></a>CSliderCtrl::GetTic  
- 检索刻度线的滑块控件中的位置。  
+##  <a name="gettic"></a>  CSliderCtrl::GetTic  
+ Retrieves the position of a tick mark in a slider control.  
   
 ```  
 int GetTic(int nTic) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nTic`  
- 确定刻度线的从零开始索引。  
+ Zero-based index identifying a tick mark.  
   
-### <a name="return-value"></a>返回值  
- 指定的刻度线或 1 如果的位置`nTic`未指定的有效索引。  
+### <a name="return-value"></a>Return Value  
+ The position of the specified tick mark or - 1 if `nTic` does not specify a valid index.  
   
-##  <a name="getticarray"></a>CSliderCtrl::GetTicArray  
- 检索一个数组，包含滑块控件的刻度线的位置的地址。  
+##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray  
+ Retrieves the address of the array containing the positions of tick marks for a slider control.  
   
 ```  
 DWORD* GetTicArray() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个数组，包含滑块控件的刻度线位置的地址。  
+### <a name="return-value"></a>Return Value  
+ The address of the array containing tick mark positions for the slider control.  
   
-##  <a name="getticpos"></a>CSliderCtrl::GetTicPos  
- 检索刻度线的滑块控件中的当前物理位置。  
+##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos  
+ Retrieves the current physical position of a tick mark in a slider control.  
   
 ```  
 int GetTicPos(int nTic) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nTic`  
- 确定刻度线的从零开始索引。  
+ Zero-based index identifying a tick mark.  
   
-### <a name="return-value"></a>返回值  
- 物理位置，在客户端坐标中，指定的刻度线或 1 如果`nTic`未指定的有效索引。  
+### <a name="return-value"></a>Return Value  
+ The physical position, in client coordinates, of the specified tick mark or - 1 if `nTic` does not specify a valid index.  
   
-##  <a name="gettooltips"></a>CSliderCtrl::GetToolTips  
- 如果有的话，请检索分配给滑块控件的工具提示控件的句柄。  
+##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips  
+ Retrieves the handle to the tooltip control assigned to the slider control, if any.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向的指针[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)对象，或**NULL**如果工具提示未被使用。 如果滑块控件不使用**TBS_TOOLTIPS**样式，则返回值是**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) object, or **NULL** if tooltips are not in use. If the slider control does not use the **TBS_TOOLTIPS** style, the return value is **NULL**.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 请注意，此成员函数返回`CToolTipCtrl`对象而不是控件的句柄。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), as described in the Windows SDK. Note that this member function returns a `CToolTipCtrl` object instead of a handle to a control.  
   
- 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
   
-##  <a name="setbuddy"></a>CSliderCtrl::SetBuddy  
- 将窗口分配为合作者窗口的滑块控件。  
+##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
+ Assigns a window as the buddy window for a slider control.  
   
 ```  
 CWnd* SetBuddy(
@@ -477,72 +507,72 @@ CWnd* SetBuddy(
     BOOL fLocation = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pWndBuddy`  
- 指向的指针`CWnd`将作为滑块控件合作者设置的对象。  
+ A pointer to a `CWnd` object that will be set as the slider control's buddy.  
   
  `fLocation`  
- 值，该值指定在显示合作者窗口的位置。 此值可以是以下项之一︰  
+ Value specifying the location at which to display the buddy window. This value can be one of the following:  
   
-- **TRUE**合作者将跟踪条的左侧出现，如果 trackbar 控件使用`TBS_HORZ`样式。 如果使用 trackbar`TBS_VERT`合作者上方 trackbar 控件的样式。  
+- **TRUE** The buddy will appear to the left of the trackbar if the trackbar control uses the `TBS_HORZ` style. If the trackbar uses the `TBS_VERT` style, the buddy appears above the trackbar control.  
   
-- **FALSE**合作者将显示跟踪条右侧如果 trackbar 控件使用`TBS_HORZ`样式。 如果使用 trackbar`TBS_VERT`合作者如下所示 trackbar 控件的样式。  
+- **FALSE** The buddy will appear to the right of the trackbar if the trackbar control uses the `TBS_HORZ` style. If the trackbar uses the `TBS_VERT` style, the buddy appears below the trackbar control.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针[CWnd](../../mfc/reference/cwnd-class.md)之前分配给该位置的滑块控件的对象。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that was previously assigned to the slider control at that location.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 请注意，此成员函数使用指向`CWnd`对象，而不是作为其返回值和参数的窗口句柄。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), as described in the Windows SDK. Note that this member function uses pointers to `CWnd` objects, rather than window handles for both its return value and parameter.  
   
- 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
   
-##  <a name="setlinesize"></a>CSliderCtrl::SetLineSize  
- 设置滑块控件的行的大小。  
+##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
+ Sets the size of the line for a slider control.  
   
 ```  
 int SetLineSize(int nSize);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nSize`  
- 滑块控件的新行大小。  
+ The new line size of the slider control.  
   
-### <a name="return-value"></a>返回值  
- 以前的行大小。  
+### <a name="return-value"></a>Return Value  
+ The previous line size.  
   
-### <a name="remarks"></a>备注  
- 行大小会影响多少滑块移对应**TB_LINEUP**和**TB_LINEDOWN**通知。  
+### <a name="remarks"></a>Remarks  
+ The line size affects how much the slider moves for the **TB_LINEUP** and **TB_LINEDOWN** notifications.  
   
-##  <a name="setpagesize"></a>CSliderCtrl::SetPageSize  
- 设置滑块控件的页的大小。  
+##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize  
+ Sets the size of the page for a slider control.  
   
 ```  
 int SetPageSize(int nSize);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nSize`  
- 滑块控件的新的页大小。  
+ The new page size of the slider control.  
   
-### <a name="return-value"></a>返回值  
- 以前的页面大小。  
+### <a name="return-value"></a>Return Value  
+ The previous page size.  
   
-### <a name="remarks"></a>备注  
- 页大小会影响多少的滑块移对应**TB_PAGEUP**和**TB_PAGEDOWN**通知。  
+### <a name="remarks"></a>Remarks  
+ The page size affects how much the slider moves for the **TB_PAGEUP** and **TB_PAGEDOWN** notifications.  
   
-##  <a name="setpos"></a>CSliderCtrl::SetPos  
- 滑块控件中的设置将滑块的当前位置。  
+##  <a name="setpos"></a>  CSliderCtrl::SetPos  
+ Sets the current position of the slider in a slider control.  
   
 ```  
 void SetPos(int nPos);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 指定新滚动条的位置。  
+ Specifies the new slider position.  
   
-##  <a name="setrange"></a>CSliderCtrl::SetRange  
- 滑块控件中的滑块设置范围 （最小和最大位置）。  
+##  <a name="setrange"></a>  CSliderCtrl::SetRange  
+ Sets the range (minimum and maximum positions) for the slider in a slider control.  
   
 ```  
 void SetRange(
@@ -551,18 +581,18 @@ void SetRange(
     BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMin`  
- 滑块的最小位置。  
+ Minimum position for the slider.  
   
  `nMax`  
- 滑块的最大位置。  
+ Maximum position for the slider.  
   
  `bRedraw`  
- 重绘标志中。 如果此参数为**TRUE**，滑块在重绘后此范围被设置; 否则滑块不在重绘。  
+ The redraw flag. If this parameter is **TRUE**, the slider is redrawn after the range is set; otherwise the slider is not redrawn.  
   
-##  <a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
- 滑块控件中的滑块设置的最大范围。  
+##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax  
+ Sets the maximum range for the slider in a slider control.  
   
 ```  
 void SetRangeMax(
@@ -570,15 +600,15 @@ void SetRangeMax(
     BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMax`  
- 滑块的最大位置。  
+ Maximum position for the slider.  
   
  `bRedraw`  
- 重绘标志中。 如果此参数为**TRUE**，滑块在重绘后此范围被设置; 否则滑块不在重绘。  
+ The redraw flag. If this parameter is **TRUE**, the slider is redrawn after the range is set; otherwise the slider is not redrawn.  
   
-##  <a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
- 滑块控件中的滑块设置最小的范围。  
+##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin  
+ Sets the minimum range for the slider in a slider control.  
   
 ```  
 void SetRangeMin(
@@ -586,15 +616,15 @@ void SetRangeMin(
     BOOL bRedraw = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMin`  
- 滑块的最小位置。  
+ Minimum position for the slider.  
   
  `bRedraw`  
- 重绘标志中。 如果此参数为**TRUE**，滑块在重绘后此范围被设置; 否则滑块不在重绘。  
+ The redraw flag. If this parameter is **TRUE**, the slider is redrawn after the range is set; otherwise the slider is not redrawn.  
   
-##  <a name="setselection"></a>CSliderCtrl::SetSelection  
- 滑块控件中的设置当前所选内容的起始和结束位置。  
+##  <a name="setselection"></a>  CSliderCtrl::SetSelection  
+ Sets the starting and ending positions for the current selection in a slider control.  
   
 ```  
 void SetSelection(
@@ -602,105 +632,105 @@ void SetSelection(
     int nMax);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMin`  
- 滑块的起始位置。  
+ Starting position for the slider.  
   
  `nMax`  
- 滑块的结束位置。  
+ Ending position for the slider.  
   
-##  <a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
- 设置当前的 trackbar 控件中的滑块的长度。  
+##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength  
+ Sets the length of the slider in the current trackbar control.  
   
 ```  
 void SetThumbLength(int nLength);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `nLength`|将滑块，以像素为单位的长度。|  
+|[in] `nLength`|Length of the slider, in pixels.|  
   
-### <a name="remarks"></a>备注  
- 此方法要求 trackbar 控件设置为[TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147)样式。  
+### <a name="remarks"></a>Remarks  
+ This method requires that the trackbar control be set to [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) style.  
   
- 此方法可发送[TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>示例  
- 下面的代码示例定义变量， `m_sliderCtrl`，即用于访问当前 trackbar 控件。 该示例还定义一个变量， `thumbLength`，即用于存储 trackbar 控件水平滚动块组件的默认长度。 在下一步的示例中使用这些变量。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_sliderCtrl`, that is used to access the current trackbar control. The example also defines a variable, `thumbLength`, that is used to store the default length of the trackbar control's thumb component. These variables are used in the next example.  
   
- [!code-cpp[NVC_MFC_CSliderCtrl_s&#1; 1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CSliderCtrl_s1#1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]  
   
-### <a name="example"></a>示例  
- 下面的代码示例将 trackbar 控件水平滚动块组件设置为两次其默认长度。  
+### <a name="example"></a>Example  
+ The following code example sets the trackbar control's thumb component to twice its default length.  
   
- [!code-cpp[NVC_MFC_CSliderCtrl_s&#1; 2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
   
-##  <a name="settic"></a>CSliderCtrl::SetTic  
- 滑块控件中的设置的刻度线的位置。  
+##  <a name="settic"></a>  CSliderCtrl::SetTic  
+ Sets the position of a tick mark in a slider control.  
   
 ```  
 BOOL SetTic(int nTic);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nTic`  
- 刻度线的位置。 此参数必须指定是正数值。  
+ Position of the tick mark. This parameter must specify a positive value.  
   
-### <a name="return-value"></a>返回值  
- 如果设置刻度线; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the tick mark is set; otherwise 0.  
   
-##  <a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
- 设置与的刻度线显示在滑块的频率。  
+##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq  
+ Sets the frequency with which tick marks are displayed in a slider.  
   
 ```  
 void SetTicFreq(int nFreq);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nFreq*  
- 刻度线的频率。  
+ Frequency of the tick marks.  
   
-### <a name="remarks"></a>备注  
- 例如，如果频率设置为 2，刻度线被显示为滑块的范围中的每个其他递增。 默认设置为频率为 1 （即，与刻度线关联的范围中每个增量是）。  
+### <a name="remarks"></a>Remarks  
+ For example, if the frequency is set to 2, a tick mark is displayed for every other increment in the slider's range. The default setting for the frequency is 1 (that is, every increment in the range is associated with a tick mark).  
   
- 你必须创建与控件`TBS_AUTOTICKS`要使用此函数样式。 有关详细信息，请参阅[CSliderCtrl::Create](#create)。  
+ You must create the control with the `TBS_AUTOTICKS` style to use this function. For more information, see [CSliderCtrl::Create](#create).  
   
-##  <a name="settipside"></a>CSliderCtrl::SetTipSide  
- 位置 trackbar 控件工具提示控件使用。  
+##  <a name="settipside"></a>  CSliderCtrl::SetTipSide  
+ Positions a tooltip control used by a trackbar control.  
   
 ```  
 int SetTipSide(int nLocation);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nLocation`  
- 表示在显示工具提示控件的位置的值。 有关可能的值的列表，请参阅 Win32 消息[TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Value representing the location at which to display the tooltip control. For a list of possible values, see the Win32 message [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), as described in the Windows SDK.  
   
-### <a name="return-value"></a>返回值  
- 一个表示工具提示控件的前一个位置的值。 返回的值等于的可能值之一`nLocation`。  
+### <a name="return-value"></a>Return Value  
+ A value that represents the tooltip control's previous location. The return value equals one of the possible values for `nLocation`.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为**TBM_SETTIPSIDE**中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 滑块控件使用**TBS_TOOLTIPS**样式显示工具提示。 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message **TBM_SETTIPSIDE**, as described in the Windows SDK. Slider controls that use the **TBS_TOOLTIPS** style display tooltips. For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
   
-##  <a name="settooltips"></a>CSliderCtrl::SetToolTips  
- 将工具提示控件分配给滑块控件。  
+##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
+ Assigns a tooltip control to a slider control.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pWndTip`  
- 指向的指针[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)对象，其中包含用于与滑块控件的工具提示。  
+ A pointer to a [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) object containing the tooltips to use with the slider control.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的 Win32 消息行为[TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 与创建滑块控件时**TBS_TOOLTIPS**样式，它创建显示滑块的当前位置的滑块旁边显示的默认工具提示控件。 滑块控件样式的说明，请参阅[Trackbar 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), as described in the Windows SDK. When a slider control is created with the **TBS_TOOLTIPS** style, it creates a default tooltip control that appears next to the slider, displaying the slider's current position. For a description of the slider control styles, see [Trackbar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760147) in the Windows SDK.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CProgressCtrl 类](../../mfc/reference/cprogressctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CProgressCtrl Class](../../mfc/reference/cprogressctrl-class.md)
 

@@ -1,58 +1,78 @@
 ---
-title: "如何：添加重新启动管理器支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "重启管理器"
-  - "C++, 应用程序崩溃支持"
+title: 'How to: Add Restart Manager Support | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Restart manager [MFC]
+- C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 如何：添加重新启动管理器支持
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 13369ead9b6aac2e91f03a9e9939153ec1f94caf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-重新启动管理器是添加到用于 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 的 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 的一项功能。 如果发生意外关闭或重启，重新启动管理器将为你的应用程序添加支持。 重新启动管理器的行为取决于应用程序的类型。 如果你的应用程序是文档编辑器，则重新启动管理器让应用程序能够自动保存任何打开文档的状态和内容，并在意外关闭后重启应用程序。 如果你的应用程序不是文档编辑器，则重新启动管理器将重启该应用程序，但无法默认保存应用程序的状态。  
+---
+# <a name="how-to-add-restart-manager-support"></a>How to: Add Restart Manager Support
+The restart manager is a feature added to [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] for [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. The restart manager adds support for your application if it unexpectedly closes or restarts. The behavior of the restart manager depends on the type of your application. If your application is a document editor, the restart manager enabled your application to automatically save the state and content of any open documents and restarts your application after an unexpected closure. If your application is not a document editor, the restart manager will restart the application, but it cannot save the state of the application by default.  
   
- 重启后，如果应用程序采用 Unicode 编码，则该应用程序将显示任务对话框。 如果是 ANSI 应用程序，则该应用程序将显示 Windows 消息框。 此时，用户可以选择是否要还原自动保存的文档。 如果用户不还原自动保存的文档，则重新启动管理器将放弃临时文件。  
+ After restart, the application displays a task dialog box if the application is Unicode. If it is an ANSI application, the application displays a Windows Message box. At this point, the user chooses whether to restore the automatically saved documents. If the user does not restore the automatically saved documents, the restart manager discards the temporary files.  
   
 > [!NOTE]
->  可以重写重新启动管理器保存数据和重启应用程序的默认行为。  
+>  You can override the default behavior of the restart manager for saving data and restarting the application.  
   
- 默认情况下，当通过 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中的项目向导创建的 MFC 应用程序在具有 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 的计算机上运行时，这些应用程序支持重新启动管理器。 如果不希望你的应用程序支持重新启动管理器，可以在新项目向导中禁用重新启动管理器。  
+ By default, MFC applications created by using the project wizard in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] support the restart manager when the applications are run on a computer that has [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. If you do not want your application to support the restart manager, you can disable the restart manager in the new project wizard.  
   
-### 向现有应用程序添加重新启动管理器支持  
+### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>To Add Support For the Restart Manager to an Existing Application  
   
-1.  打开 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中的现有 MFC 应用程序。  
+1.  Open an existing MFC application in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
   
-2.  打开主应用程序的源文件。 默认情况下，这是与你的应用程序具有相同名称的 .cpp 文件。 例如，MyProject 的主应用程序源文件为 MyProject.cpp。  
+2.  Open the source file for your main application. By default this is the .cpp file that has the same name as your application. For example, the main application source file for MyProject is MyProject.cpp.  
   
-3.  找到主应用程序的构造函数。 例如，如果你的项目是 MyProject，则构造函数为 `CMyProjectApp::CMyProjectApp()`。  
+3.  Find the constructor for your main application. For example, if your project is MyProject, the constructor is `CMyProjectApp::CMyProjectApp()`.  
   
-4.  将以下代码行添加到你的构造函数。  
+4.  Add the following line of code to your constructor.  
   
-    ```  
+ ```  
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
-    ```  
+ ```  
   
-5.  请确保应用程序的 `InitInstance` 方法将调用其父 `InitInstance` 方法：[CWinApp::InitInstance](../Topic/CWinApp::InitInstance.md) 或 `CWinAppEx::InitInstance`。`InitInstance` 方法负责检查 `m_dwRestartManagerSupportFlags` 参数。  
+5.  Make sure the `InitInstance` method of your application calls its parent `InitInstance` method: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) or `CWinAppEx::InitInstance`. The `InitInstance` method is responsible for checking the `m_dwRestartManagerSupportFlags` parameter.  
   
-6.  编译并运行应用程序。  
+6.  Compile and run your application.  
   
-## 请参阅  
+## <a name="see-also"></a>See Also  
  [CDataRecoveryHandler Class](../mfc/reference/cdatarecoveryhandler-class.md)   
- [CWinApp::m\_dwRestartManagerSupportFlags](../Topic/CWinApp::m_dwRestartManagerSupportFlags.md)   
+ [CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)   
  [CWinApp Class](../mfc/reference/cwinapp-class.md)   
- [CWinApp::m\_nAutosaveInterval](../Topic/CWinApp::m_nAutosaveInterval.md)   
- [CDocument::OnDocumentEvent](../Topic/CDocument::OnDocumentEvent.md)
+ [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)   
+ [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
+
+

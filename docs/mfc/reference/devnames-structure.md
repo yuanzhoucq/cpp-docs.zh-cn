@@ -1,5 +1,5 @@
 ---
-title: "DEVNAMES 结构 |Microsoft 文档"
+title: DEVNAMES Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DEVNAMES
+- DEVNAMES [MFC]
 ms.assetid: aac97f60-2169-471a-ba5d-c0baed9eed9a
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 698a338c94dfa402dd51fa4f683b92a5d30cc0cd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 451e2942c22ab57fd39ac6bc3eca2e88869516d5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="devnames-structure"></a>DEVNAMES 结构
-`DEVNAMES` 结构包含标识打印机的驱动程序、设备和输出端口名称的字符串。  
+# <a name="devnames-structure"></a>DEVNAMES Structure
+The `DEVNAMES` structure contains strings that identify the driver, device, and output-port names for a printer.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagDEVNAMES { /* dvnm */  
@@ -56,27 +56,27 @@ typedef struct tagDEVNAMES { /* dvnm */
 } DEVNAMES;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  *wDriverOffset*  
- （输入/输出）指定字符相对于包含设备驱动程序文件名（无扩展名）的不以 null 结尾的字符串的偏移量。 对于输入，此字符串用于确定打印机最初显示在对话框中。  
+ (Input/Output) Specifies the offset in characters to a null-terminated string that contains the filename (without the extension) of the device driver. On input, this string is used to determine the printer to display initially in the dialog box.  
   
  *wDeviceOffset*  
- （输入/输出）指定字符相对于包含设备名称的以 null 结尾的字符串（最大值为包含 null 的 32 个字节）的偏移量。 此字符串必须等于**dmDeviceName**的成员[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)结构。  
+ (Input/Output) Specifies the offset in characters to the null-terminated string (maximum of 32 bytes including the null) that contains the name of the device. This string must be identical to the **dmDeviceName** member of the [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure.  
   
  *wOutputOffset*  
- （输入/输出）指定字符相对于包含物理输出媒体（输出端口）的 DOS 设备名称的以 null 结尾的字符串的偏移量。  
+ (Input/Output) Specifies the offset in characters to the null-terminated string that contains the DOS device name for the physical output medium (output port).  
   
  *wDefault*  
- 指定 `DEVNAMES` 结构中包含的字符串是否标识默认打印机。 此字符串用于验证默认打印机自上次打印操作以来是否更改。 对于输入，如果**DN_DEFAULTPRN**设置了标志，其他值`DEVNAMES`针对当前默认打印机检查结构。 如果任意字符串不匹配，则将显示警告消息，通知用户文档可能需要重新设置格式。 在输出时， **wDefault**成员已更改时，才显示打印设置对话框中，并且用户选择确定按钮。 **DN_DEFAULTPRN**如果选择默认打印机设置标志。 如果选择特定打印机，则将不会设置此标志。 此成员的所有其他位将保留供“打印对话框”过程内部使用。  
+ Specifies whether the strings contained in the `DEVNAMES` structure identify the default printer. This string is used to verify that the default printer has not changed since the last print operation. On input, if the **DN_DEFAULTPRN** flag is set, the other values in the `DEVNAMES` structure are checked against the current default printer. If any of the strings do not match, a warning message is displayed informing the user that the document may need to be reformatted. On output, the **wDefault** member is changed only if the Print Setup dialog box was displayed and the user chose the OK button. The **DN_DEFAULTPRN** flag is set if the default printer was selected. If a specific printer is selected, the flag is not set. All other bits in this member are reserved for internal use by the Print Dialog box procedure.  
   
-## <a name="remarks"></a>备注  
- **PrintDlg**函数使用这些字符串初始化系统定义打印对话框中的成员。 当用户关闭对话框后，此结构中将返回有关选定打印机的信息。  
+## <a name="remarks"></a>Remarks  
+ The **PrintDlg** function uses these strings to initialize members in the system-defined Print dialog box. When the user closes the dialog box, information about the selected printer is returned in this structure.  
   
-## <a name="requirements"></a>要求  
- **标头︰** commdlg.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** commdlg.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPrintDialog::CreatePrinterDC](../../mfc/reference/cprintdialog-class.md#createprinterdc)
 
 

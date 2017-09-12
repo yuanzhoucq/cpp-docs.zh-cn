@@ -1,5 +1,5 @@
 ---
-title: "CHtmlEditDoc 类 |Microsoft 文档"
+title: CHtmlEditDoc Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHtmlEditDoc class
+- CHtmlEditDoc [MFC], CHtmlEditDoc
+- CHtmlEditDoc [MFC], GetView
+- CHtmlEditDoc [MFC], IsModified
+- CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
 caps.latest.revision: 24
 author: mikeblome
@@ -38,39 +41,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1d9651c5009fd8f4c742c6b9bf08e32bd67c7d30
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 82ed2f0bf3c702919a50a2240706496ea2885740
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chtmleditdoc-class"></a>CHtmlEditDoc 类
-与[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)，提供了 MFC 文档视图体系结构的上下文中的 web 浏览器编辑平台功能。  
+# <a name="chtmleditdoc-class"></a>CHtmlEditDoc Class
+With [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), provides the functionality of the WebBrowser editing platform within the context of the MFC document-view architecture.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CHtmlEditDoc : public CDocument  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|构造 `CHtmlEditDoc` 对象。|  
+|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Constructs a `CHtmlEditDoc` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHtmlEditDoc::GetView](#getview)|检索`CHtmlEditView`对象附加到此文档。|  
-|[CHtmlEditDoc::IsModified](#ismodified)|返回关联的视图 WebBrowser 控件是否包含已由用户修改的文档。|  
-|[CHtmlEditDoc::OpenURL](#openurl)|打开一个 URL。|  
+|[CHtmlEditDoc::GetView](#getview)|Retrieves the `CHtmlEditView` object attached to this document.|  
+|[CHtmlEditDoc::IsModified](#ismodified)|Returns whether the associated view's WebBrowser control contains a document that has been modified by the user.|  
+|[CHtmlEditDoc::OpenURL](#openurl)|Opens a URL.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -79,49 +82,49 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
   
  `CHtmlEditDoc`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxhtml.h  
   
-##  <a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  
- 构造**CHtmlEditDoc**对象。  
+##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
+ Constructs a **CHtmlEditDoc** object.  
   
 ```  
 CHtmlEditDoc();
 ```  
   
-##  <a name="getview"></a>CHtmlEditDoc::GetView  
- 检索[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)对象附加到此文档。  
+##  <a name="getview"></a>  CHtmlEditDoc::GetView  
+ Retrieves the [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) object attached to this document.  
   
 ```  
 virtual CHtmlEditView* GetView() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 将指针返回到文档的**CHtmlEditView**对象。  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the document's **CHtmlEditView** object.  
   
-##  <a name="ismodified"></a>CHtmlEditDoc::IsModified  
- 返回关联的视图 WebBrowser 控件是否包含已由用户修改的文档。  
+##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
+ Returns whether the associated view's WebBrowser control contains a document that has been modified by the user.  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
-##  <a name="openurl"></a>CHtmlEditDoc::OpenURL  
- 打开一个 URL。  
+##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL  
+ Opens a URL.  
   
 ```  
 virtual BOOL OpenURL(LPCTSTR lpszURL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszURL`  
- 要打开的 URL。  
+ The URL to open.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-## <a name="see-also"></a>另请参阅  
- [HTMLEdit 示例](../../visual-cpp-samples.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [HTMLEdit Sample](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

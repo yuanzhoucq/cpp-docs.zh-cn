@@ -1,42 +1,61 @@
 ---
-title: "用于创建 OLE 应用程序的操作顺序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序 [OLE]"
-  - "应用程序 [OLE], 创建"
-  - "OLE 应用程序 [C++]"
-  - "OLE 应用程序 [C++], 创建"
+title: Sequence of Operations for Creating OLE Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE applications [MFC], creating
+- OLE applications [MFC]
+- applications [OLE], creating
+- applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 用于创建 OLE 应用程序的操作顺序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b52e194220ad1384def52e0a099fe82503bdf2a9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-下表显示了角色和框架的角色在创建链接和 OLE 嵌入应用程序。  这些表示选项可用而不是执行步骤序列。  
+---
+# <a name="sequence-of-operations-for-creating-ole-applications"></a>Sequence of Operations for Creating OLE Applications
+The following table shows your role and the framework's role in creating OLE linking and embedding applications. These represent options available rather than a sequence of steps to perform.  
   
-### 创建应用程序  
+### <a name="creating-ole-applications"></a>Creating OLE Applications  
   
-|任务|You do|框架|  
-|--------|------------|--------|  
-|创建 COM 组件|运行神奇应用程序。  选择 **Full\-server** 或 **Mini\-server**。**复合文档支持** 选项卡。|框架生成启用了 COM 组件功能的主干应用程序。  所有 COM 功能可以传输到仅使用稍作修改现有应用程序。|  
-|从头创建容器应用程序。|运行神奇应用程序。  选择 **复合文档支持** 选项卡中的 **容器 \(O\)**。  使用类视图，进入源代码编辑器。  填写 COM 处理程序函数的代码。|框架生成可以将 COM 组件的主干应用程序 \(\) 服务器应用程序创建的 COM 对象。|  
-|从头创建支持自动化的应用程序。|运行神奇应用程序。  从 **高级功能** 选项卡选择 **自动化 \(U\)**。  使用类视图公开方法和属性。应用程序自动化。|框架生成可能由其他应用激活和自动化程序的主干应用程序。|  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Create a COM component.|Run the MFC Application Wizard. Choose **Full-server** or **Mini-server** in the **Compound Document Support** tab.|The framework generates a skeleton application with COM component capability enabled. All of the COM capability can be transferred to your existing application with only slight modification.|  
+|Create a container application from scratch.|Run the MFC Application Wizard. Choose **Container** in the **Compound Document Support** tab. Using Class View, go to the source code editor. Fill in code for your COM handler functions.|The framework generates a skeleton application that can insert COM objects created by COM component (server) applications.|  
+|Create an application that supports Automation from scratch.|Run the MFC Application Wizard. Choose **Automation** from the **Advanced Features** tab. Use Class View to expose methods and properties in your application for automation.|The framework generates a skeleton application that can be activated and automated by other applications.|  
   
-## 请参阅  
- [基于框架生成](../mfc/building-on-the-framework.md)   
- [用于生成 MFC 应用程序的操作顺序](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [用于创建 ActiveX 控件的操作顺序](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
- [用于创建数据库应用程序的操作顺序](../mfc/sequence-of-operations-for-creating-database-applications.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)   
+ [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
+ [Sequence of Operations for Creating ActiveX Controls](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
+ [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+

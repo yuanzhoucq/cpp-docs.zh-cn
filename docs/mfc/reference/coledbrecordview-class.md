@@ -1,5 +1,5 @@
 ---
-title: "COleDBRecordView 类 |Microsoft 文档"
+title: COleDBRecordView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC, OLE DB
-- COleDBRecordView class
+- COleDBRecordView [MFC], COleDBRecordView
+- COleDBRecordView [MFC], OnGetRowset
+- COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
 caps.latest.revision: 20
 author: mikeblome
@@ -38,50 +39,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4c4bfa973b7ff7fb2b93e5fcc60cf18325986a8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledbrecordview-class"></a>COleDBRecordView 类
-显示控件中数据库记录的视图。  
+# <a name="coledbrecordview-class"></a>COleDBRecordView Class
+A view that displays database records in controls.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDBRecordView : public CFormView  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保护的构造函数  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|构造 `COleDBRecordView` 对象。|  
+|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|Constructs a `COleDBRecordView` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|返回一个标准`HRESULT`值。|  
-|[COleDBRecordView::OnMove](#onmove)|当前记录 （如果更新），可以在更新数据源，然后移动到指定的记录 （下一步、 上一个、 第一个或最后一个）。|  
+|[COleDBRecordView::OnGetRowset](#ongetrowset)|Returns a standard `HRESULT` value.|  
+|[COleDBRecordView::OnMove](#onmove)|Updates the current record (if dirty) on the data source and then moves to the specified record (next, previous, first, or last).|  
   
-## <a name="remarks"></a>备注  
- 视图是直接连接到窗体视图`CRowset`对象。 该视图通过对话框模板资源创建和显示的字段`CRowset`对话框模板的控件中的对象。 `COleDBRecordView`对象使用对话框数据交换 (DDX) 和导航功能内置于`CRowset`，以自动进行的窗体上的控件和行集的字段之间的数据移动。 `COleDBRecordView`此外提供了一个默认实现来移动第一个下, 一步上, 一个或最后一个记录和用于更新当前上视图的记录的接口。  
+## <a name="remarks"></a>Remarks  
+ The view is a form view directly connected to a `CRowset` object. The view is created from a dialog template resource and displays the fields of the `CRowset` object in the dialog template's controls. The `COleDBRecordView` object uses dialog data exchange (DDX), and the navigational functionality built into `CRowset`, to automate the movement of data between the controls on the form and the fields of the rowset. `COleDBRecordView` also supplies a default implementation for moving to the first, next, previous, or last record and an interface for updating the record currently on view.  
   
- 您可以使用与的 DDX 函数**COleDbRecordView**直接从数据库记录集获取数据并将其显示在对话框控件。 应使用**DDX_\***方法 (如`DDX_Text`)，而不**DDX_Field\* **函数 (如`DDX_FieldText`) 与**COleDbRecordView**。 `DDX_FieldText`不会使用**COleDbRecordView**因为`DDX_FieldText`采用类型的其他自变量**CRecordset\*** (有关`CRecordView`) 或**CDaoRecordset\* ** (有关`CDaoRecordView`)。  
+ You can use DDX functions with **COleDbRecordView** to get data directly from the database recordset and display it in a dialog control. You should use the **DDX_\*** methods (such as `DDX_Text`), not the **DDX_Field\*** functions (such as `DDX_FieldText`) with **COleDbRecordView**. `DDX_FieldText` will not work with **COleDbRecordView** because `DDX_FieldText` takes an additional argument of type **CRecordset\*** (for `CRecordView`) or **CDaoRecordset\*** (for `CDaoRecordView`).  
   
 > [!NOTE]
->  如果你正在使用的数据访问对象 (DAO) 类，而不是 OLE DB 使用者模板类，可以使用类[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)相反。 有关详细信息，请参阅文章[概述︰ 数据库编程](../../data/data-access-programming-mfc-atl.md)。  
+>  If you are working with the Data Access Objects (DAO) classes rather than the OLE DB Consumer Template classes, use class [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) instead. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`将跟踪的行集中的用户的位置，以便记录视图可以更新用户界面。 如果用户移到行集中的任意一端，记录视图禁用用户界面对象 — 如菜单项或工具栏按钮-移动进一步方向相同。  
+ `COleDBRecordView` keeps track of the user's position in the rowset so that the record view can update the user interface. When the user moves to either end of the rowset, the record view disables user interface objects — such as menu items or toolbar buttons — for moving further in the same direction.  
   
- 有关行集类的详细信息，请参阅[使用 OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)文章。  
+ For more information about rowset classes, see the [Using OLE DB Consumer Templates](../../data/oledb/ole-db-consumer-templates-cpp.md) article.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -96,85 +97,85 @@ class COleDBRecordView : public CFormView
   
  `COleDBRecordView`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxoledb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxoledb.h  
   
-##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
- 构造 `COleDBRecordView` 对象。  
+##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
+ Constructs a `COleDBRecordView` object.  
   
 ```  
 COleDBRecordView(LPCTSTR lpszTemplateName);  
 COleDBRecordView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- 包含是对话框模板资源的名称的以 null 结尾的字符串。  
+ Contains a null-terminated string that is the name of a dialog-template resource.  
   
  `nIDTemplate`  
- 包含对话框模板资源的 ID 号。  
+ Contains the ID number of a dialog-template resource.  
   
-### <a name="remarks"></a>备注  
- 当你创建一种类型的对象派生自`COleDBRecordView`，调用的构造函数，以创建视图对象并标识该视图所基于的对话框资源之一。 按名称 （向构造函数传递一个字符串作为自变量） 或由其 ID (pass 作为自变量的无符号整数)，你可以标识资源。  
+### <a name="remarks"></a>Remarks  
+ When you create an object of a type derived from `COleDBRecordView`, invoke one of the constructors to create the view object and identify the dialog resource on which the view is based. You can identify the resource either by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument).  
   
 > [!NOTE]
->  在派生的类*必须*提供其自己的构造函数。 在构造函数中，调用构造函数中， `COleDBRecordView::COleDBRecordView`、 资源名称或 ID 为作为自变量。  
+>  Your derived class *must* supply its own constructor. In the constructor, invoke the constructor, `COleDBRecordView::COleDBRecordView`, with the resource name or ID as an argument.  
   
-##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
- 返回的句柄**CRowset<> </>**与记录视图关联的对象。  
+##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
+ Returns a handle for the **CRowset<>** object associated with the record view.  
   
 ```  
 virtual CRowset<>* OnGetRowset() = 0;  
  
 ```  
   
-### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT` value.  
   
-### <a name="remarks"></a>备注  
- 你必须重写该成员函数以构造或中获取行集对象并返回到原来的句柄。 如果声明与 ClassWizard 记录视图类，向导会为你编写的默认重写。 ClassWizard 的默认实现返回存储在记录视图中，如果存在的行集句柄。 如果不是，构造类型的行集对象使用指定 ClassWizard 和调用其**打开**成员函数以打开该表或运行查询，然后返回该对象的句柄。  
+### <a name="remarks"></a>Remarks  
+ You must override this member function to construct or obtain a rowset object and return a handle to it. If you declare your record view class with ClassWizard, the wizard writes a default override for you. ClassWizard's default implementation returns the rowset handle stored in the record view if one exists. If not, it constructs a rowset object of the type you specified with ClassWizard and calls its **Open** member function to open the table or run the query, and then returns a handle to the object.  
   
 > [!NOTE]
->  上一步 MFC 7.0`OnGetRowset`返回一个指向`CRowset`。 如果有调用的代码`OnGetRowset`，你需要返回类型更改为模板化类**CRowset<>**。  
+>  Previous to MFC 7.0, `OnGetRowset` returned a pointer to `CRowset`. If you have code that calls `OnGetRowset`, you need to change the return type to the templatized class **CRowset<>**.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDatabase # 38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
   
- 有关详细信息和示例，请参阅文章[记录视图︰ 使用记录视图](../../data/using-a-record-view-mfc-data-access.md)。  
+ For more information and examples, see the article [Record Views: Using a Record View](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>COleDBRecordView::OnMove  
- 移动到另一条记录中的行集和显示其字段的记录控件中查看。  
+##  <a name="onmove"></a>  COleDBRecordView::OnMove  
+ Moves to a different record in the rowset and display its fields in the controls of the record view.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDMoveCommand`  
- 以下标准命令 ID 值之一︰  
+ One of the following standard command ID values:  
   
-- `ID_RECORD_FIRST`— 将移动到记录集的第一个记录。  
+- `ID_RECORD_FIRST` — Move to the first record in the recordset.  
   
-- `ID_RECORD_LAST`— 将移动到最后一个记录的记录集。  
+- `ID_RECORD_LAST` — Move to the last record in the recordset.  
   
-- `ID_RECORD_NEXT`— 将移动到记录集的下一个记录。  
+- `ID_RECORD_NEXT` — Move to the next record in the recordset.  
   
-- `ID_RECORD_PREV`— 将移动到上一记录的记录集。  
+- `ID_RECORD_PREV` — Move to the previous record in the recordset.  
   
-### <a name="return-value"></a>返回值  
- 如果移动已成功; 则为非 0如果移动请求被拒绝则否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the move was successful; otherwise 0 if the move request was denied.  
   
-### <a name="remarks"></a>备注  
- 默认实现调用相应**移动**成员函数`CRowset`与记录视图关联的对象。  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the appropriate **Move** member function of the `CRowset` object associated with the record view.  
   
- 默认情况下，`OnMove`更新数据源上的当前记录，如果用户具有在记录视图中更改它。  
+ By default, `OnMove` updates the current record on the data source if the user has changed it in the record view.  
   
- 应用程序向导会使用第一条记录、 最后一条记录下, 一条记录，以及上一条记录菜单项创建菜单资源。 如果选择可停靠工具栏选项，则应用程序向导还会使用按钮对应这些命令中创建工具栏。  
+ The Application Wizard creates a menu resource with First Record, Last Record, Next Record, and Previous Record menu items. If you select the Dockable Toolbar option, The Application Wizard also creates a toolbar with buttons corresponding to these commands.  
   
- 如果移动记录集中的最后一条记录，记录视图将继续显示最后一条记录。 如果向后移过会将第一条记录，记录视图将继续显示第一条记录。  
+ If you move past the last record in the recordset, the record view continues to display the last record. If you move backward past the first record, the record view continues to display the first record.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

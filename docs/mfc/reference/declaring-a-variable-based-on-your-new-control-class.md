@@ -1,5 +1,5 @@
 ---
-title: "声明变量基于新控件类 |Microsoft 文档"
+title: Declaring a Variable Based on Your New Control Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- variables, control classes
-- control classes, variables
-- classes [C++], declaring variables based on
+- variables [MFC], control classes
+- control classes [MFC], variables
+- classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
 caps.latest.revision: 9
 author: mikeblome
@@ -35,47 +35,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: a5777019ca87616fbb7c6a0d27140b3fabbf7fde
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94098a33b5f3f311d6ddd78d5b3569eb645deea3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="declaring-a-variable-based-on-your-new-control-class"></a>声明基于新控件类的变量
-一旦创建了 MFC 控件类，可以声明基于它的变量。 若要为新的变量提供上下文，必须打开对话框编辑器并编辑想要使用您的可重用控件的对话框。 此外，对话框中必须已具有与其相关联的类。 有关使用对话框编辑器的信息，请参阅[对话框编辑器](../../windows/dialog-editor.md)。  
+# <a name="declaring-a-variable-based-on-your-new-control-class"></a>Declaring a Variable Based on Your New Control Class
+Once you have created an MFC control class, you can declare a variable based on it. To provide a context for the new variable, you must open the dialog editor and edit the dialog box in which you want to use your reusable control. Also, the dialog box must already have a class associated with it. For information on using the dialog editor, see [Dialog Editor](../../windows/dialog-editor.md).  
   
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>若要将基于可重用类的变量声明  
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>To declare a variable based on your reusable class  
   
-1.  在编辑时对话框中，将作为新控件的基类相同类型的控件上从拖到对话框控件工具栏。  
+1.  While editing the dialog box, drag a control of the same type as the base class of your new control from the Controls toolbar onto the dialog box.  
   
-2.  将鼠标指针放在拖动的控件。  
+2.  Place the mouse pointer over the dropped control.  
   
-3.  在按住 CTRL 键，双击该控件。  
+3.  While pressing the CTRL key, double-click the control.  
   
-     [添加成员变量](../../ide/add-member-variable-wizard.md)对话框随即出现。  
+     The [Add Member Variable](../../ide/add-member-variable-wizard.md) dialog box appears.  
   
-4.  在**访问**框中，选择正确的访问权限为您的控件。  
+4.  In the **Access** box, select the correct access for your control.  
   
-5.  单击**控制变量**复选框。  
+5.  Click the **Control variable** check box.  
   
-6.  在**变量名**框中，键入一个名称。  
+6.  In the **Variable name** box, type a name.  
   
-7.  在下**类别**，请单击**控件**。  
+7.  Under **Category**, click **Control**.  
   
-8.  在**控件 ID**列表中，选取你添加的控件。 **变量类型**列表应显示正确的变量类型和**控件类型**框应显示正确的控件类型。  
+8.  In the **Control ID** list, pick the control that you added. The **Variable type** list should display the correct variable type, and the **Control type** box should display the correct control type.  
   
-9. 在**注释**框中，添加要在代码中显示的注释。  
+9. In the **Comment** box, add any comment you want to appear in your code.  
   
-10. 单击“确定”。  
+10. Click **OK**.  
   
-## <a name="see-also"></a>另请参阅  
- [消息映射到函数](../../mfc/reference/mapping-messages-to-functions.md)   
- [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [添加类](../../ide/adding-a-class-visual-cpp.md)   
- [添加成员函数](../../ide/adding-a-member-function-visual-cpp.md)   
- [添加成员变量](../../ide/adding-a-member-variable-visual-cpp.md)   
- [重写虚函数](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 消息处理程序](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [导航类结构](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

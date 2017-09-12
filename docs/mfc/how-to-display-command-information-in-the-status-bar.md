@@ -1,35 +1,54 @@
 ---
-title: "如何：在状态栏中显示命令信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "显示命令状态"
-  - "提示 [C++]"
-  - "状态栏, 显示命令信息"
-  - "状态栏, 消息区域"
+title: 'How to: Display Command Information in the Status Bar | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- prompts [MFC]
+- displaying command status [MFC]
+- status bars [MFC], message area
+- status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 如何：在状态栏中显示命令信息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed04870c904c0b2cbe01686282bbfe8b4f1b1cb4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在运行应用程序向导创建应用程序的主干时，您可以支持在工具栏和状态栏。  在应用程序向导的可支持两个。  将状态栏存在，则应用程序自动提供有用反馈，当用户将指针移动到项上在菜单上。  当选中菜单项，显示突出时，在应用程序状态栏将自动显示一个提示字符串。  例如，在中，当用户将指针移到 **剪切** 命令的指针在 **编辑** 菜单时，状态栏在剪贴板可能显示“选择剪切并将其放入”在状态栏的消息大小。  提示来帮助用户了解菜单项的目的。  当用户单击工具栏按钮，这也有效。  
+---
+# <a name="how-to-display-command-information-in-the-status-bar"></a>How to: Display Command Information in the Status Bar
+When you run the Application Wizard to create the skeleton of your application, you can support a toolbar and a status bar. Just one option in the Application Wizard supports both. When a status bar is present, the application automatically provides helpful feedback as the user moves the pointer over items on the menus. The application automatically displays a prompt string in the status bar when the menu item is highlighted. For example, when the user moves the pointer over the **Cut** command on the **Edit** menu, the status bar might display "Cuts the selection and puts it on the Clipboard" in the message area of the status bar. The prompt helps the user understand the purpose of the menu item. This also works when the user clicks a toolbar button.  
   
- 可以添加到该状态栏帮助您通过定义添加到程序的菜单项的提示字符串。  在编辑菜单项的属性。菜单编辑器时，若要执行此操作，请提供的提示字符串。  您定义的字符串在应用程序资源文件存储；它们具有与命令它们解释的 ID。  
+ You can add to this status-bar help by defining prompt strings for menu items that you add to the program. To do this, provide the prompt strings when you edit the properties of the menu item in the menu editor. The strings you define are stored in the application resource file; they have the same IDs as the commands they explain.  
   
- 默认情况下，应用程序向导将 `AFX_IDS_IDLEMESSAGE`标准的，ID“准备”消息，显示，当程序等待新消息时。  如果在应用程序向导指定上下文相关帮助选项，消息为“更改对于帮助，按 F1”。  
+ By default, the Application Wizard adds `AFX_IDS_IDLEMESSAGE`, the ID for a standard "Ready" message, which is displayed when the program is waiting for new messages. If you specify the Context-Sensitive Help option in the Application Wizard, the message is changed to "For Help, press F1."  
   
-## 请参阅  
- [消息处理和映射](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

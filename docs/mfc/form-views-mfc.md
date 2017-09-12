@@ -1,75 +1,93 @@
 ---
-title: "窗体视图 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序 [MFC], 基于窗体"
-  - "窗体 [C++]"
-  - "窗体 [C++], 添加到应用程序"
-  - "基于窗体的应用程序"
-  - "用户界面, 窗体"
+title: Form Views (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- user interfaces [MFC], forms
+- forms [MFC]
+- applications [MFC], forms-based
+- forms-based applications [MFC]
+- forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 窗体视图 (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f17483b98313575fcd9aea122e8c51ce5fd8920
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-您可以将该窗体添加到支持 MFC 库的任何 Visual C\+\+ 应用程序，包括 [基于窗体的应用程序](../mfc/reference/creating-a-forms-based-mfc-application.md) \(视图类从 `CFormView`派生\) 中。  如果您最初创建时不应用程序窗体支持，Visual C\+\+ 会将的这种支持，在插入新窗体。  在 SDI 或 MDI 应用程序，实现默认，[文档\/视图结构](../mfc/document-view-architecture.md)，当用户选择 `New` 命令 \(默认情况下，在 **文件** 菜单\)，Visual C\+\+ 会提示用户从可用选择窗体。  
+---
+# <a name="form-views-mfc"></a>Form Views (MFC)
+You can add forms to any Visual C++ application that supports the MFC libraries, including a [forms-based application](../mfc/reference/creating-a-forms-based-mfc-application.md) (one whose view class is derived from `CFormView`). If you did not initially create your application to support forms, Visual C++ will add this support for you when you insert a new form. In an SDI or MDI application, which implements the default [document/view architecture](../mfc/document-view-architecture.md), when the user chooses the `New` command (by default, on the **File** menu), Visual C++ prompts the user to choose from the available forms.  
   
- SDI 应用程序，那么，当用户选择 `New` 命令时，窗体的当前实例继续运行，但应用程序的新实例。选择窗体的创建，如果一种没有找到。  在 MDI 应用程序，那么，当用户选择 `New` 命令时，窗体的当前实例继续运行。  
+ With an SDI application, when the user chooses the `New` command, the current instance of the form continues to run but a new instance of the application with the selected form is created if one is not found. In an MDI application, the current instance of the form continues to run when the user chooses the `New` command.  
   
 > [!NOTE]
->  可以插入窗体到基于对话框的应用程序 \(对话框类视图基于 `CDialog` 类未实现\) 的一。  但是，不带文档\/视图结构，Visual C\+\+ 不自动实现 **文件** &#124;**新建** 功能。  您必须为用户创建一种显示附加的窗体，如通过实现带有各属性页的选项卡式对话框。  
+>  You can insert a form into a dialog-based application (one whose dialog class is based on `CDialog` and one in which no view class is implemented). However, without the document/view architecture, Visual C++ does not automatically implement the **File**&#124;**New** functionality. You must create a way for the user to view additional forms, such as by implementing a tabbed dialog box with various property pages.  
   
- 在插入新窗体到应用程序时，Visual C\+\+ 将执行下列操作：  
+ When you insert a new form into your application, Visual C++ does the following:  
   
--   创建根据您选择的一个样式类窗体类 \(`CFormView`、`CRecordView`、`CDaoRecordView`或 `CDialog`\)。  
+-   Creates a class based on one of the form-style classes that you choose (`CFormView`, `CRecordView`, `CDaoRecordView`, or `CDialog`).  
   
--   创建具有适当的样式 \(或您的对话框资源可以使用没有与类\) 的现有对话框资源。  
+-   Creates a dialog resource with appropriate styles (or you can use an existing dialog resource that has not yet been associated with a class).  
   
-     如果选择一个现有对话框资源，通过使用的属性页对话框，您可能需要设置这些样式。  对话框的样式必须包括：  
+     If you choose an existing dialog resource, you may need to set these styles by using the Properties page for the dialog box. Styles for a dialog box must include:  
   
-     **WS\_CHILD**\=On  
+     **WS_CHILD**=On  
   
-     `WS_BORDER`\=Off  
+     `WS_BORDER`=Off  
   
-     **WS\_VISIBLE**\=Off  
+     **WS_VISIBLE**=Off  
   
-     **WS\_CAPTION\=**  
+     **WS_CAPTION=**Off  
   
- 对于基于文档\/视图体系结构还的应用程序，则 **New Form** 命令 \(右击类视图中\):  
+ For applications based on the document/view architecture, the **New Form** command (right-click in Class View) also:  
   
--   创建 **CDocument**\- 基类  
+-   Creates a **CDocument**-based class  
   
-     除了使新的类，创建可以将现有的任意 **CDocument**\- 项目中的基类。  
+     Instead of having a new class created, you can use any existing **CDocument**-based class in your project.  
   
--   生成文档模板 \(从 **CDocument**派生\)。字符串、菜单和图标资源。  
+-   Generates a document template (derived from **CDocument**) with string, menu, and icon resources.  
   
-     还可以创建基于模板的新类。  
+     You can also create a new class on which to base the template.  
   
--   调用添加到应用程序中的 `InitInstance` 代码的 **AddDocumentTemplate**。  
+-   Adds a call to **AddDocumentTemplate** in your application's `InitInstance` code.  
   
-     Visual C\+\+ 将所创建，将该窗体添加到提供窗体列表的每个新窗体中提供此代码，当用户选择 `New` 命令时。  此代码包括在一起构成新窗体对象关联文档、视图和帧类的窗体关联的资源 ID 和名称。  
+     Visual C++ adds this code for each new form you create, which adds the form to the list of available forms when the user chooses the `New` command. This code includes the form's associated resource ID and the names of the associated document, view, and frame classes that together make up the new form object.  
   
-     文档模板用作文档之间的连接，框架窗口和视图。  对于单个文件，可以创建许多模板。  
+     Document templates serve as the connection between documents, frame windows, and views. For a single document, you can create many templates.  
   
- 有关详细信息，请参阅：  
+ For more information, see:  
   
--   [创建基于窗体的应用程序](../mfc/reference/creating-a-forms-based-mfc-application.md)  
+-   [Create a Forms-Based Application](../mfc/reference/creating-a-forms-based-mfc-application.md)  
   
--   [将一个窗体添加到项目中](../mfc/inserting-a-form-into-a-project.md)  
+-   [Inserting a Form into a Project](../mfc/inserting-a-form-into-a-project.md)  
   
-## 请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

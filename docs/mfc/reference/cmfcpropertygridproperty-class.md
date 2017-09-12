@@ -1,5 +1,5 @@
 ---
-title: "CMFCPropertyGridProperty 类 |Microsoft 文档"
+title: CMFCPropertyGridProperty Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -94,7 +94,86 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertyGridProperty class
+- CMFCPropertyGridProperty [MFC], CMFCPropertyGridProperty
+- CMFCPropertyGridProperty [MFC], AddOption
+- CMFCPropertyGridProperty [MFC], AddSubItem
+- CMFCPropertyGridProperty [MFC], AdjustButtonRect
+- CMFCPropertyGridProperty [MFC], AdjustInPlaceEditRect
+- CMFCPropertyGridProperty [MFC], AllowEdit
+- CMFCPropertyGridProperty [MFC], CreateInPlaceEdit
+- CMFCPropertyGridProperty [MFC], CreateSpinControl
+- CMFCPropertyGridProperty [MFC], Enable
+- CMFCPropertyGridProperty [MFC], EnableSpinControl
+- CMFCPropertyGridProperty [MFC], Expand
+- CMFCPropertyGridProperty [MFC], FormatProperty
+- CMFCPropertyGridProperty [MFC], GetData
+- CMFCPropertyGridProperty [MFC], GetDescription
+- CMFCPropertyGridProperty [MFC], GetExpandedSubItems
+- CMFCPropertyGridProperty [MFC], GetHierarchyLevel
+- CMFCPropertyGridProperty [MFC], GetName
+- CMFCPropertyGridProperty [MFC], GetNameTooltip
+- CMFCPropertyGridProperty [MFC], GetOption
+- CMFCPropertyGridProperty [MFC], GetOptionCount
+- CMFCPropertyGridProperty [MFC], GetOriginalValue
+- CMFCPropertyGridProperty [MFC], GetParent
+- CMFCPropertyGridProperty [MFC], GetRect
+- CMFCPropertyGridProperty [MFC], GetSubItem
+- CMFCPropertyGridProperty [MFC], GetSubItemsCount
+- CMFCPropertyGridProperty [MFC], GetValue
+- CMFCPropertyGridProperty [MFC], GetValueTooltip
+- CMFCPropertyGridProperty [MFC], HitTest
+- CMFCPropertyGridProperty [MFC], IsAllowEdit
+- CMFCPropertyGridProperty [MFC], IsEnabled
+- CMFCPropertyGridProperty [MFC], IsExpanded
+- CMFCPropertyGridProperty [MFC], IsGroup
+- CMFCPropertyGridProperty [MFC], IsInPlaceEditing
+- CMFCPropertyGridProperty [MFC], IsModified
+- CMFCPropertyGridProperty [MFC], IsParentExpanded
+- CMFCPropertyGridProperty [MFC], IsSelected
+- CMFCPropertyGridProperty [MFC], IsVisible
+- CMFCPropertyGridProperty [MFC], OnClickButton
+- CMFCPropertyGridProperty [MFC], OnClickName
+- CMFCPropertyGridProperty [MFC], OnClickValue
+- CMFCPropertyGridProperty [MFC], OnCloseCombo
+- CMFCPropertyGridProperty [MFC], OnDblClk
+- CMFCPropertyGridProperty [MFC], OnDrawButton
+- CMFCPropertyGridProperty [MFC], OnDrawDescription
+- CMFCPropertyGridProperty [MFC], OnDrawExpandBox
+- CMFCPropertyGridProperty [MFC], OnDrawName
+- CMFCPropertyGridProperty [MFC], OnDrawValue
+- CMFCPropertyGridProperty [MFC], OnEdit
+- CMFCPropertyGridProperty [MFC], OnEndEdit
+- CMFCPropertyGridProperty [MFC], OnKillSelection
+- CMFCPropertyGridProperty [MFC], OnPosSizeChanged
+- CMFCPropertyGridProperty [MFC], OnRClickName
+- CMFCPropertyGridProperty [MFC], OnRClickValue
+- CMFCPropertyGridProperty [MFC], OnSelectCombo
+- CMFCPropertyGridProperty [MFC], OnSetCursor
+- CMFCPropertyGridProperty [MFC], OnSetSelection
+- CMFCPropertyGridProperty [MFC], OnUpdateValue
+- CMFCPropertyGridProperty [MFC], PushChar
+- CMFCPropertyGridProperty [MFC], Redraw
+- CMFCPropertyGridProperty [MFC], RemoveAllOptions
+- CMFCPropertyGridProperty [MFC], RemoveSubItem
+- CMFCPropertyGridProperty [MFC], ResetOriginalValue
+- CMFCPropertyGridProperty [MFC], SetData
+- CMFCPropertyGridProperty [MFC], SetDescription
+- CMFCPropertyGridProperty [MFC], SetName
+- CMFCPropertyGridProperty [MFC], SetOriginalValue
+- CMFCPropertyGridProperty [MFC], SetValue
+- CMFCPropertyGridProperty [MFC], Show
+- CMFCPropertyGridProperty [MFC], CreateCombo
+- CMFCPropertyGridProperty [MFC], HasButton
+- CMFCPropertyGridProperty [MFC], Init
+- CMFCPropertyGridProperty [MFC], IsSubItem
+- CMFCPropertyGridProperty [MFC], IsValueChanged
+- CMFCPropertyGridProperty [MFC], OnCtlColor
+- CMFCPropertyGridProperty [MFC], OnDestroyWindow
+- CMFCPropertyGridProperty [MFC], OnKillFocus
+- CMFCPropertyGridProperty [MFC], m_strFormatDouble
+- CMFCPropertyGridProperty [MFC], m_strFormatFloat
+- CMFCPropertyGridProperty [MFC], m_strFormatLong
+- CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 caps.latest.revision: 35
 author: mikeblome
@@ -114,148 +193,148 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e0a8dfc9d4475947e65c827d7ff9a37a429b7feb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ca0c203e98086cef37708eb9f290b76ae550cf9f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
-一个`CMFCPropertyGridProperty`对象都表示一个属性列表控件中的列表项。  
+# <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty Class
+A `CMFCPropertyGridProperty` object represents a list item in a property list control.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
    
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPropertyGridProperty : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|构造 `CMFCPropertyGridProperty` 对象。|  
-|`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|析构函数。|  
+|[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Constructs a `CMFCPropertyGridProperty` object.|  
+|`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPropertyGridProperty::AddOption](#addoption)|将新列表项添加到属性列表控件。|  
-|[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|将子项目添加到一个属性。|  
-|[CMFCPropertyGridProperty::AdjustButtonRect](#adjustbuttonrect)|由父属性列表控件来告知要调整大小的嵌入按钮的边框的属性。|  
-|[CMFCPropertyGridProperty::AdjustInPlaceEditRect](#adjustinplaceeditrect)|检索用于设置属性值的文本框和可选数值调节钮控件的边界。|  
-|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|使属性是可编辑或只读的。|  
-|[CMFCPropertyGridProperty::CreateInPlaceEdit](#createinplaceedit)|由框架来创建可编辑的控件属性的调用。|  
-|[CMFCPropertyGridProperty::CreateSpinControl](#createspincontrol)|由框架来创建可编辑的数值调节钮控件调用。|  
-|[CMFCPropertyGridProperty::Enable](#enable)|启用或禁用一个属性。|  
-|[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)|启用或禁用用于修改属性值的数值调节钮控件。|  
-|[CMFCPropertyGridProperty::Expand](#expand)|展开或折叠包含子属性的属性。|  
-|[CMFCPropertyGridProperty::FormatProperty](#formatproperty)|设置属性值的文本表示形式的格式。|  
-|[CMFCPropertyGridProperty::GetData](#getdata)|检索`DWORD`与属性关联的值。|  
-|[CMFCPropertyGridProperty::GetDescription](#getdescription)|检索的属性说明。|  
-|[CMFCPropertyGridProperty::GetExpandedSubItems](#getexpandedsubitems)|检索扩展的子项目数。|  
-|[CMFCPropertyGridProperty::GetHierarchyLevel](#gethierarchylevel)|检索属性的层次结构级别的从零开始索引。|  
-|[CMFCPropertyGridProperty::GetName](#getname)|检索属性的名称。|  
-|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|由框架来显示工具提示中的属性名称调用。|  
-|[CMFCPropertyGridProperty::GetOption](#getoption)|检索由索引指定的选项的文本。|  
-|[CMFCPropertyGridProperty::GetOptionCount](#getoptioncount)|检索属于某个属性的选项数。|  
-|[CMFCPropertyGridProperty::GetOriginalValue](#getoriginalvalue)|检索当前属性的初始值。|  
-|[CMFCPropertyGridProperty::GetParent](#getparent)|检索指向一个父属性。|  
-|[CMFCPropertyGridProperty::GetRect](#getrect)|检索一个属性的绑定矩形。|  
-|[CMFCPropertyGridProperty::GetSubItem](#getsubitem)|检索由从零开始的索引标识的子属性。|  
-|[CMFCPropertyGridProperty::GetSubItemsCount](#getsubitemscount)|检索子项目数。|  
-|`CMFCPropertyGridProperty::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CMFCPropertyGridProperty::GetValue](#getvalue)|检索属性值。|  
-|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|由框架来检索属性值，然后在工具提示中显示的文本表示调用。|  
-|[CMFCPropertyGridProperty::HitTest](#hittest)|指向对应于对应于一个点的属性列表项的属性对象。|  
-|[CMFCPropertyGridProperty::IsAllowEdit](#isallowedit)|指示属性是否可编辑。|  
-|[CMFCPropertyGridProperty::IsEnabled](#isenabled)|指示属性是否是启用还是禁用。|  
-|[CMFCPropertyGridProperty::IsExpanded](#isexpanded)|指示属性是否是展开还是折叠。|  
-|[CMFCPropertyGridProperty::IsGroup](#isgroup)|指示当前属性是否表示一组。|  
-|[CMFCPropertyGridProperty::IsInPlaceEditing](#isinplaceediting)|指示当前属性是否可编辑。|  
-|[CMFCPropertyGridProperty::IsModified](#ismodified)|指示是否修改当前属性。|  
-|[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|指示是否展开当前属性的父级。|  
-|[CMFCPropertyGridProperty::IsSelected](#isselected)|指示是否选择当前属性。|  
-|[CMFCPropertyGridProperty::IsVisible](#isvisible)|指示当前属性是否可见。|  
-|[CMFCPropertyGridProperty::OnClickButton](#onclickbutton)|当用户单击属性中包含的按钮时，由框架调用。|  
-|[CMFCPropertyGridProperty::OnClickName](#onclickname)|当用户单击某个属性的名称字段由父属性列表控件调用。|  
-|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|当用户单击某个属性的值字段由父属性列表控件调用。|  
-|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|当关闭属性中包含一个组合框时，由框架调用。|  
-|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|当用户双击某个属性时，由框架调用。|  
-|[CMFCPropertyGridProperty::OnDrawButton](#ondrawbutton)|由框架来绘制按钮的属性中包含调用。|  
-|[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|由框架以显示属性说明调用。|  
-|[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|调用由框架后，若要绘制展开框控件附近包含子属性的属性。|  
-|[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|由框架以显示属性名称调用。|  
-|[CMFCPropertyGridProperty::OnDrawValue](#ondrawvalue)|由框架调用以显示属性值。|  
-|[CMFCPropertyGridProperty::OnEdit](#onedit)|当用户要修改属性值时由框架调用。|  
-|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|当用户完成时由框架调用修改属性值。|  
+|[CMFCPropertyGridProperty::AddOption](#addoption)|Adds a new list item to a property list control.|  
+|[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Adds a child item to a property.|  
+|[CMFCPropertyGridProperty::AdjustButtonRect](#adjustbuttonrect)|Called by the parent property list control to tell a property to resize the bounding rectangle of an embedded button.|  
+|[CMFCPropertyGridProperty::AdjustInPlaceEditRect](#adjustinplaceeditrect)|Retrieves the boundaries of the text box and optional spin button control that are used to set a property value.|  
+|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|Makes a property either editable or read-only.|  
+|[CMFCPropertyGridProperty::CreateInPlaceEdit](#createinplaceedit)|Called by the framework to create an editable control for a property.|  
+|[CMFCPropertyGridProperty::CreateSpinControl](#createspincontrol)|Called by the framework to create an editable spin button control.|  
+|[CMFCPropertyGridProperty::Enable](#enable)|Enables or disables a property.|  
+|[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)|Enables or disables a spin button control that is used to modify a property value.|  
+|[CMFCPropertyGridProperty::Expand](#expand)|Expands or collapses a property that contains sub-properties.|  
+|[CMFCPropertyGridProperty::FormatProperty](#formatproperty)|Formats the text representation of a property value.|  
+|[CMFCPropertyGridProperty::GetData](#getdata)|Retrieves a `DWORD` value that is associated with a property.|  
+|[CMFCPropertyGridProperty::GetDescription](#getdescription)|Retrieves a property description.|  
+|[CMFCPropertyGridProperty::GetExpandedSubItems](#getexpandedsubitems)|Retrieves the number of expanded sub-items.|  
+|[CMFCPropertyGridProperty::GetHierarchyLevel](#gethierarchylevel)|Retrieves the zero-based index of the property's hierarchy level.|  
+|[CMFCPropertyGridProperty::GetName](#getname)|Retrieves the name of the property.|  
+|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|Called by the framework to display the name of the property in a tooltip.|  
+|[CMFCPropertyGridProperty::GetOption](#getoption)|Retrieves the text of the option that is specified by an index.|  
+|[CMFCPropertyGridProperty::GetOptionCount](#getoptioncount)|Retrieves the number of options that belong to a property.|  
+|[CMFCPropertyGridProperty::GetOriginalValue](#getoriginalvalue)|Retrieves the initial value of the current property.|  
+|[CMFCPropertyGridProperty::GetParent](#getparent)|Retrieves a pointer to a parent property.|  
+|[CMFCPropertyGridProperty::GetRect](#getrect)|Retrieves the bounding rectangle of a property.|  
+|[CMFCPropertyGridProperty::GetSubItem](#getsubitem)|Retrieves a sub-property identified by a zero-based index.|  
+|[CMFCPropertyGridProperty::GetSubItemsCount](#getsubitemscount)|Retrieves the number of sub-items.|  
+|`CMFCPropertyGridProperty::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCPropertyGridProperty::GetValue](#getvalue)|Retrieves a property value.|  
+|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|Called by the framework to retrieve the text representation of the property value that is then displayed in a tooltip.|  
+|[CMFCPropertyGridProperty::HitTest](#hittest)|Points to the property object that corresponds to the property list item that corresponds to a point.|  
+|[CMFCPropertyGridProperty::IsAllowEdit](#isallowedit)|Indicates whether a property is editable.|  
+|[CMFCPropertyGridProperty::IsEnabled](#isenabled)|Indicates whether a property is enabled or disabled.|  
+|[CMFCPropertyGridProperty::IsExpanded](#isexpanded)|Indicates whether a property is expanded or collapsed.|  
+|[CMFCPropertyGridProperty::IsGroup](#isgroup)|Indicates whether the current property represents a group.|  
+|[CMFCPropertyGridProperty::IsInPlaceEditing](#isinplaceediting)|Indicates whether the current property is editable.|  
+|[CMFCPropertyGridProperty::IsModified](#ismodified)|Indicates whether the current property is modified.|  
+|[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|Indicates whether the parents of the current property are expanded.|  
+|[CMFCPropertyGridProperty::IsSelected](#isselected)|Indicates whether the current property is selected.|  
+|[CMFCPropertyGridProperty::IsVisible](#isvisible)|Indicates whether the current property is visible.|  
+|[CMFCPropertyGridProperty::OnClickButton](#onclickbutton)|Called by the framework when the user clicks a button that is contained in a property.|  
+|[CMFCPropertyGridProperty::OnClickName](#onclickname)|Called by a parent property list control when a user clicks the name field of a property.|  
+|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|Called by a parent property list control when a user clicks the value field of a property.|  
+|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|Called by the framework when a combo box that is contained in a property is closed.|  
+|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|Called by the framework when the user double clicks a property.|  
+|[CMFCPropertyGridProperty::OnDrawButton](#ondrawbutton)|Called by the framework to draw a button that is contained in a property.|  
+|[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|Called by the framework to display the property description.|  
+|[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|Called by the framework to draw an expand box control near a property that contains sub-properties.|  
+|[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|Called by the framework to display the property name.|  
+|[CMFCPropertyGridProperty::OnDrawValue](#ondrawvalue)|Called by the framework to display the property value.|  
+|[CMFCPropertyGridProperty::OnEdit](#onedit)|Called by the framework when the user is about to modify a property value.|  
+|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|Called by the framework when the user is finished modifying a property value.|  
 |[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||  
 |[CMFCPropertyGridProperty::OnPosSizeChanged](#onpossizechanged)||  
-|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|在用户单击属性名称区域中的鼠标按钮时由框架调用。|  
-|[CMFCPropertyGridProperty::OnRClickValue](#onrclickvalue)|在用户单击属性值区域中的鼠标按钮时由框架调用。|  
-|[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|当用户从可编辑的组合框中选择某个项时，由框架调用。|  
-|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|当鼠标指针移动到的属性项由框架调用。|  
+|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|Called by the framework when the user clicks the right mouse button in the property name area.|  
+|[CMFCPropertyGridProperty::OnRClickValue](#onrclickvalue)|Called by the framework when the user clicks the right mouse button in the property value area.|  
+|[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|Called by the framework when the user selects an item from the editable combo box.|  
+|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|Called by the framework when the mouse pointer moves to a property item.|  
 |[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||  
-|[CMFCPropertyGridProperty::OnUpdateValue](#onupdatevalue)|当可编辑属性值已更改时由框架调用。|  
-|[CMFCPropertyGridProperty::PushChar](#pushchar)|当选择了属性和用户输入新字符时，从属性列表控件调用。|  
-|[CMFCPropertyGridProperty::Redraw](#redraw)|重绘该属性。|  
-|[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|从属性中删除所有选项 （项）。|  
-|[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|删除指定的子项目。|  
-|[Cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue)|还原已编辑属性的原始值。|  
-|[CMFCPropertyGridProperty::SetData](#setdata)|将相关联`DWORD`与属性的值。|  
-|[CMFCPropertyGridProperty::SetDescription](#setdescription)|指定描述当前属性的文本。|  
-|[CMFCPropertyGridProperty::SetName](#setname)|设置属性的名称。|  
-|[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)|设置可编辑属性的原始值。|  
-|[CMFCPropertyGridProperty::SetValue](#setvalue)|设置属性网格属性的值。|  
-|[CMFCPropertyGridProperty::Show](#show)|显示或隐藏属性。|  
+|[CMFCPropertyGridProperty::OnUpdateValue](#onupdatevalue)|Called by the framework when the value of an editable property has changed.|  
+|[CMFCPropertyGridProperty::PushChar](#pushchar)|Called from the property list control when the property is selected and the user enters a new character.|  
+|[CMFCPropertyGridProperty::Redraw](#redraw)|Redraws the property.|  
+|[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|Removes all options (items) from a property.|  
+|[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|Removes the specified sub-item.|  
+|[CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue)|Restores the original value of an edited property.|  
+|[CMFCPropertyGridProperty::SetData](#setdata)|Associates a `DWORD` value with a property.|  
+|[CMFCPropertyGridProperty::SetDescription](#setdescription)|Specifies the text that describes the current property.|  
+|[CMFCPropertyGridProperty::SetName](#setname)|Sets the name of a property.|  
+|[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)|Sets the original value of an editable property.|  
+|[CMFCPropertyGridProperty::SetValue](#setvalue)|Sets the value of a property grid property.|  
+|[CMFCPropertyGridProperty::Show](#show)|Shows or hides a property.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPropertyGridProperty::CreateCombo](#createcombo)|由框架将组合框添加到一个属性调用。|  
-|[CMFCPropertyGridProperty::HasButton](#hasbutton)|指示属性是否包含一个按钮。|  
-|[CMFCPropertyGridProperty::Init](#init)|由框架来初始化属性对象调用。|  
-|[CMFCPropertyGridProperty::IsSubItem](#issubitem)|指示指定的属性是否为当前属性的子项目。|  
-|[CMFCPropertyGridProperty::IsValueChanged](#isvaluechanged)|指示是否已更改的当前属性的值。|  
-|[CMFCPropertyGridProperty::OnCtlColor](#onctlcolor)|它必须检索用于填充某个属性的背景色的画笔时由框架调用。|  
-|[CMFCPropertyGridProperty::OnDestroyWindow](#ondestroywindow)|由框架销毁属性时，或编辑完成时调用。|  
-|[CMFCPropertyGridProperty::OnKillFocus](#onkillfocus)|该属性没有输入的焦点时，由框架调用。|  
+|[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Called by the framework to add a combo box to a property.|  
+|[CMFCPropertyGridProperty::HasButton](#hasbutton)|Indicates whether a property contains a button.|  
+|[CMFCPropertyGridProperty::Init](#init)|Called by the framework to initialize a property object.|  
+|[CMFCPropertyGridProperty::IsSubItem](#issubitem)|Indicates whether the specified property is a sub-item of the current property.|  
+|[CMFCPropertyGridProperty::IsValueChanged](#isvaluechanged)|Indicates whether the value of the current property has changed.|  
+|[CMFCPropertyGridProperty::OnCtlColor](#onctlcolor)|Called by the framework when it must retrieve a brush to fill the background color of a property.|  
+|[CMFCPropertyGridProperty::OnDestroyWindow](#ondestroywindow)|Called by the framework when a property is destroyed or when editing is finished.|  
+|[CMFCPropertyGridProperty::OnKillFocus](#onkillfocus)|Called by the framework when the property loses the input focus.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|双精度类型的值的格式字符串。|  
-|[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|浮点类型的值的格式字符串。|  
-|[CMFCPropertyGridProperty::m_strFormatLong](#m_strformatlong)|长时间格式的字符串值的类型。|  
-|[CMFCPropertyGridProperty::m_strFormatShort](#m_strformatshort)|Short 类型的值的格式字符串。|  
+|[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Format string for a value of type double.|  
+|[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Format string for a value of type float.|  
+|[CMFCPropertyGridProperty::m_strFormatLong](#m_strformatlong)|Format string for a value of type long.|  
+|[CMFCPropertyGridProperty::m_strFormatShort](#m_strformatshort)|Format string for a value of type short.|  
   
-## <a name="remarks"></a>备注  
- 使用`CMFCPropertyGridProperty`对象来表示一个属性，然后将您添加到属性列表控件。 有关详细信息，请参阅[CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)。  
+## <a name="remarks"></a>Remarks  
+ Use a `CMFCPropertyGridProperty` object to represent a property, which you then add to a property list control. For more information, see [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
- 属性对象可以表示数据类型，如字符串、 日期和布尔值或整数值。 它可以包含子属性，或它可以包含如组合框控件或按钮控件。  
+ A property object can represent data types such as strings, dates, and Boolean or integer values. It can contain child properties, or it can contain a control such as a combo box or a button control.  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何构造`CMFCPropertyGridProperty`对象。 该示例还演示如何使用各种方法`CMFCPropertyGridProperty`类来添加一个选项、 添加子项目、 启用的属性和显示属性。 此示例摘自[新控件示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCPropertyGridProperty` object. The example also demonstrates how to use various methods in the `CMFCPropertyGridProperty` class to add an option, add a sub-item, enable a property, and show a property. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #&27;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxpropertygridctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpropertygridctrl.h  
   
-##  <a name="addoption"></a>CMFCPropertyGridProperty::AddOption  
- 将新列表项添加到属性列表控件。  
+##  <a name="addoption"></a>  CMFCPropertyGridProperty::AddOption  
+ Adds a new list item to a property list control.  
   
 ```  
 BOOL AddOption(
@@ -263,53 +342,53 @@ BOOL AddOption(
     BOOL bInsertUnique=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszOption`  
- 列表项 （选项） 来添加。  
+ The list item (option) to add.  
   
  [in] `bInsertUnique`  
- `TRUE`将添加到列表项仅当它尚不存在;否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` to add the list item only if it does not already exist; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`这意味着，添加列表项。 否则为`FALSE`，这意味着，此列表项不是添加，因为`bInsertUnique`参数是`TRUE`和由指定的项列表`lpszOption`参数已存在。  
+### <a name="return-value"></a>Return Value  
+ `TRUE`, which means that the list item is added. Otherwise, `FALSE`, which means that the list item is not added because the `bInsertUnique` parameter is `TRUE` and the list item specified by the `lpszOption` parameter already exists.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addsubitem"></a>CMFCPropertyGridProperty::AddSubItem  
- 将子项目添加到一个属性。  
+##  <a name="addsubitem"></a>  CMFCPropertyGridProperty::AddSubItem  
+ Adds a child item to a property.  
   
 ```  
 BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pProp`  
- 指针，指向要添加的属性。  
+ Pointer to a property to add.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果指定的属性已成功添加为子属性。 `FALSE`如果未将添加该属性，因为它已在父属性中发生。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified property is successfully added as a child property. `FALSE` if the property is not added because it already occurs in the parent property.  
   
-### <a name="remarks"></a>备注  
- 使用此方法创建的属性的父级和子级的层次结构列表。 子属性添加之后，父属性将自动显示由加号 （+） 展开框控件。 当用户单击加号时，父属性将展开并显示任何子属性项。  
+### <a name="remarks"></a>Remarks  
+ Use this method to create a hierarchical list of parent and child properties. After a child property is added, the parent property automatically displays an expand box control that is designated by a plus sign (+). When the user clicks the plus sign, the parent property expands and displays any child property items.  
   
-##  <a name="adjustbuttonrect"></a>CMFCPropertyGridProperty::AdjustButtonRect  
- 由父属性列表控件来告知要调整大小的嵌入按钮的边框的属性。  
+##  <a name="adjustbuttonrect"></a>  CMFCPropertyGridProperty::AdjustButtonRect  
+ Called by the parent property list control to tell a property to resize the bounding rectangle of an embedded button.  
   
 ```  
 virtual void AdjustButtonRect();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法︰  
+### <a name="remarks"></a>Remarks  
+ By default, this method:  
   
--   调整宽度按钮等于按钮的高度加上 3 个像素。  
+-   Adjusts the width of the button equal to the height of the button plus 3 pixels.  
   
--   将按钮的边框移到该属性的右边缘  
+-   Moves the bounding rectangle of the button to the right edge of the property  
   
--   将该属性的上边缘下方的按钮 1 像素。  
+-   Shifts the button 1 pixel below the top edge of the property.  
   
-##  <a name="adjustinplaceeditrect"></a>CMFCPropertyGridProperty::AdjustInPlaceEditRect  
- 检索用于设置属性值的文本框和可选数值调节钮控件的边界。  
+##  <a name="adjustinplaceeditrect"></a>  CMFCPropertyGridProperty::AdjustInPlaceEditRect  
+ Retrieves the boundaries of the text box and optional spin button control that are used to set a property value.  
   
 ```  
 virtual void AdjustInPlaceEditRect(
@@ -317,31 +396,31 @@ virtual void AdjustInPlaceEditRect(
     CRect& rectSpin);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `rectEdit`  
- 当此方法返回时，指定属性值的文本框中的边界的矩形。  
+ When this method returns, a rectangle that specifies the boundaries of the text box for the property value.  
   
  [out] `rectSpin`  
- 当此方法返回时，指定属性值数值调节钮控件的边界的矩形。 或者，如果属性不支持数值调节钮，为空矩形。  
+ When this method returns, a rectangle that specifies the boundaries of the spin button control for the property value. Or, if the property does not support a spin button, an empty rectangle.  
   
-### <a name="remarks"></a>备注  
- 属性的值区域包含文本框的和可能*选项按钮*，例如，数值调节钮控件。 此方法计算的维度的文本框和选项按钮，然后在指定的参数中返回这些值。  
+### <a name="remarks"></a>Remarks  
+ The value area of a property consists of a text box and possibly an *option button*, such as a spin button control. This method calculates the dimensions of the text box and option button and then returns those values in the specified parameters.  
   
-##  <a name="allowedit"></a>CMFCPropertyGridProperty::AllowEdit  
- 使属性是可编辑或只读的。  
+##  <a name="allowedit"></a>  CMFCPropertyGridProperty::AllowEdit  
+ Makes a property either editable or read-only.  
   
 ```  
 void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bAllow`  
- `TRUE`若要使该属性可编辑;`FALSE`以只读方式进行属性。 默认值为 `TRUE`。  
+ `TRUE` to make the property editable; `FALSE` to make the property read-only. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmfcpropertygridproperty"></a>CMFCPropertyGridProperty::CMFCPropertyGridProperty  
- 构造 `CMFCPropertyGridProperty` 对象。  
+##  <a name="cmfcpropertygridproperty"></a>  CMFCPropertyGridProperty::CMFCPropertyGridProperty  
+ Constructs a `CMFCPropertyGridProperty` object.  
   
 ```  
 CMFCPropertyGridProperty(
@@ -360,38 +439,38 @@ CMFCPropertyGridProperty(
     LPCTSTR lpszValidChars=NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `strGroupName`  
- 组名称。 一个*组*是相关属性在属性网格控件的集合。 如果层次结构方式显示控件*组名*显示为组上方的行中类别标题。  
+ The group name. A *group* is a collection of related properties in a property grid control. If the control is displayed hierarchically, the *group name* is displayed as a category title in the row above the group.  
   
  [in] `dwData`  
- 应用程序特定的数据，如整数或其他与属性关联的数据的指针。 默认值为 0。  
+ Application-specific data, such as an integer or a pointer to other data that is associated with the property. The default value is 0.  
   
  [in] `strName`  
- 属性的名称。  
+ The name of the property.  
   
  [in] `varValue`  
- 属性值。  
+ The property value.  
   
  [in] `lpszDescr`  
- 属性说明。 默认值为 `NULL`。  
+ The property description. The default value is `NULL`.  
   
  [in] `lpszEditMask`  
- 编辑掩码中，如果属性为 masked 的 edit 控件。 默认值为 `NULL`。  
+ The edit mask, if the property is a masked edit control. The default value is `NULL`.  
   
  [in] `lpszEditTemplate`  
- 编辑模板中，如果属性为 masked 的 edit 控件。 默认值为 `NULL`。  
+ The edit template, if the property is a masked edit control. The default value is `NULL`.  
   
  [in] `lpszValidChars`  
- 有效字符，如果该属性是掩码的编辑控件的列表。 默认值为 `NULL`。  
+ A list of valid characters, if the property is a masked edit control. The default value is `NULL`.  
   
  [in] `bIsValueList`  
- `TRUE`如果该属性表示的值; 列表`FALSE`如果该属性表示的单个值。 默认值为 `FALSE`。  
+ `TRUE` if the property represents a list of values; `FALSE` if the property represents a single value. The default value is `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="createcombo"></a>CMFCPropertyGridProperty::CreateCombo  
- 由框架将组合框添加到一个属性调用。  
+##  <a name="createcombo"></a>  CMFCPropertyGridProperty::CreateCombo  
+ Called by the framework to add a combo box to a property.  
   
 ```  
 virtual CComboBox* CreateCombo(
@@ -399,20 +478,20 @@ virtual CComboBox* CreateCombo(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 组合框的父窗口的指针。  
+ Pointer to the parent window of the combo box.  
   
  [in] `rect`  
- 组合框的边框。  
+ The bounding rectangle of the combo box.  
   
-### <a name="return-value"></a>返回值  
- 指向新[CComboBox](../../mfc/reference/ccombobox-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a new [CComboBox](../../mfc/reference/ccombobox-class.md) object.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="createinplaceedit"></a>CMFCPropertyGridProperty::CreateInPlaceEdit  
- 由框架来创建可编辑的控件属性的调用。  
+##  <a name="createinplaceedit"></a>  CMFCPropertyGridProperty::CreateInPlaceEdit  
+ Called by the framework to create an editable control for a property.  
   
 ```  
 virtual CWnd* CreateInPlaceEdit(
@@ -420,53 +499,53 @@ virtual CWnd* CreateInPlaceEdit(
     BOOL& bDefaultFormat);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rectEdit`  
- 可编辑控件的边框。  
+ The bounding rectangle of the editable control.  
   
  [in] `bDefaultFormat`  
- `TRUE`若要使用的默认属性格式设置的可编辑的控件，则文本否则为`FALSE`。  
+ `TRUE` to use the default property format to set the text of the editable control; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则可编辑的控件指向的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the editable control if this method succeeds; otherwise, `NULL`.  
   
-### <a name="remarks"></a>备注  
- 此方法使用的值`varValue`， `lpszEditMask`， `lpszEditTemplate`，和`lpszValidChars`中指定的参数[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)类构造函数。 默认情况下，此方法支持`varValue`variant 类型。 This includes `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, and `VT_BOOL`.  
+### <a name="remarks"></a>Remarks  
+ This method uses the values of the `varValue`, `lpszEditMask`, `lpszEditTemplate`, and `lpszValidChars` parameters that are specified in the [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) class constructor. By default, this method supports the `varValue` variant types. This includes `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, and `VT_BOOL`.  
   
- 此方法创建[CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) ，如果一个或多个控制`lpszEditMask`， `lpszEditTemplate`，或`lpszValidChars`指定参数; 否则，它将造成[CEdit](../../mfc/reference/cedit-class.md)控件。  
+ This method creates a [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) control if one or more of the `lpszEditMask`, `lpszEditTemplate`, or `lpszValidChars` parameters are specified; otherwise, it creates a [CEdit](../../mfc/reference/cedit-class.md) control.  
   
-##  <a name="createspincontrol"></a>CMFCPropertyGridProperty::CreateSpinControl  
- 由框架来创建可编辑的数值调节钮控件调用。  
+##  <a name="createspincontrol"></a>  CMFCPropertyGridProperty::CreateSpinControl  
+ Called by the framework to create an editable spin button control.  
   
 ```  
 virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rectSpin`  
- 定义在何处创建可编辑的数值调节钮控件的矩形。  
+ A rectangle that defines where the editable spin button control is created.  
   
-### <a name="return-value"></a>返回值  
- 指向一个新的指针[CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)被强制转换为指向的指针的对象[CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a new [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) object that is cast as a pointer to a [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) object.  
   
-### <a name="remarks"></a>备注  
- 调用[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)方法以显示可编辑的数值调节钮控件的属性的右边缘。  
+### <a name="remarks"></a>Remarks  
+ Call the [CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol) method to display an editable spin button control at the right edge of the property.  
   
-##  <a name="enable"></a>CMFCPropertyGridProperty::Enable  
- 启用或禁用一个属性。  
+##  <a name="enable"></a>  CMFCPropertyGridProperty::Enable  
+ Enables or disables a property.  
   
 ```  
 void Enable(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要启用您的属性。`FALSE`若要禁用的属性。 被禁用的属性不响应鼠标或键盘输入。 默认值为 `TRUE`。  
+ `TRUE` to enable the property; `FALSE` to disable the property. Disabled properties do not respond to mouse or keyboard input. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablespincontrol"></a>CMFCPropertyGridProperty::EnableSpinControl  
- 启用或禁用用于修改属性值的数值调节钮控件。  
+##  <a name="enablespincontrol"></a>  CMFCPropertyGridProperty::EnableSpinControl  
+ Enables or disables a spin button control that is used to modify a property value.  
   
 ```  
 void EnableSpinControl(
@@ -475,265 +554,265 @@ void EnableSpinControl(
     int nMax=0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要启用数值调节钮控件;`FALSE`禁用数值调节钮控件。 默认值为 `TRUE`。  
+ `TRUE` to enable the spin button control; `FALSE` to disable the spin button control. The default value is `TRUE`.  
   
  [in] `nMin`  
- 数值调节钮控件最小值。 默认值为 0。  
+ The minimum value of the spin button control. The default value is 0.  
   
  [in] `nMax`  
- 数值调节钮控件最大值。 默认值为 0。  
+ The maximum value of the spin button control. The default value is 0.  
   
-### <a name="remarks"></a>备注  
- 将要编辑属性时，框架会自动创建数值调节钮控件。  
+### <a name="remarks"></a>Remarks  
+ The framework automatically creates a spin button control when a property is about to be edited.  
   
- 属性类型，它由指定`varValue`参数[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)构造函数中，必须是支持的变体类型。 否则，此方法在调试模式中断言。 支持的类型包括`VT_INT`， `VT_UINT`， `VT_I2`， `VT_I4`， `VT_UI2`，和`VT_UI4`。  
+ The property type, which is specified by the `varValue` parameter of the [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) constructor, must be a supported variant type. Otherwise, this method asserts in debug mode. The supported types include `VT_INT`, `VT_UINT`, `VT_I2`, `VT_I4`, `VT_UI2`, and `VT_UI4`.  
   
-##  <a name="expand"></a>CMFCPropertyGridProperty::Expand  
- 展开或折叠包含子属性的属性。  
+##  <a name="expand"></a>  CMFCPropertyGridProperty::Expand  
+ Expands or collapses a property that contains sub-properties.  
   
 ```  
 void Expand(BOOL bExpand=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bExpand`  
- `TRUE`若要展开您的属性。如果为 FALSE，则若要折叠属性。 默认值为 `TRUE`。  
+ `TRUE` to expand the property; FALSE to collapse the property. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="formatproperty"></a>CMFCPropertyGridProperty::FormatProperty  
- 设置属性值的文本表示形式的格式。  
+##  <a name="formatproperty"></a>  CMFCPropertyGridProperty::FormatProperty  
+ Formats the text representation of a property value.  
   
 ```  
 virtual CString FormatProperty();
 ```  
   
-### <a name="return-value"></a>返回值  
- 属性值的文本表示形式。  
+### <a name="return-value"></a>Return Value  
+ The text representation of the property value.  
   
-### <a name="remarks"></a>备注  
- 显示的属性值之前，将由框架调用此方法。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework before the property value is displayed.  
   
-##  <a name="getdata"></a>CMFCPropertyGridProperty::GetData  
- 检索`DWORD`与属性关联的值。  
+##  <a name="getdata"></a>  CMFCPropertyGridProperty::GetData  
+ Retrieves a `DWORD` value that is associated with a property.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个 `DWORD` 值。  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value.  
   
-### <a name="remarks"></a>备注  
- 返回的数据是一个应用程序特定值，例如数字或其他数据的指针。 指定的数据值在构造属性时或当您调用[CMFCPropertyGridProperty::SetData](#setdata)方法。  
+### <a name="remarks"></a>Remarks  
+ The data that is returned is an application-specific value, such as a number or a pointer to other data. Specify the data value when you construct the property or when you call the [CMFCPropertyGridProperty::SetData](#setdata) method.  
   
-##  <a name="getdescription"></a>CMFCPropertyGridProperty::GetDescription  
- 检索的属性说明。  
+##  <a name="getdescription"></a>  CMFCPropertyGridProperty::GetDescription  
+ Retrieves a property description.  
   
 ```  
 const CString& GetDescription() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 包含属性说明的文本字符串。  
+### <a name="return-value"></a>Return Value  
+ A text string that contains the property description.  
   
-### <a name="remarks"></a>备注  
- 属性列表控件还使用此方法来显示的属性的说明。  
+### <a name="remarks"></a>Remarks  
+ Property list control also uses this method to display the description of the property.  
   
-##  <a name="getexpandedsubitems"></a>CMFCPropertyGridProperty::GetExpandedSubItems  
- 检索扩展的子项目数。  
+##  <a name="getexpandedsubitems"></a>  CMFCPropertyGridProperty::GetExpandedSubItems  
+ Retrieves the number of expanded sub-items.  
   
 ```  
 int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `bIncludeHidden`|`TRUE`若要将隐藏子项包含到计数中;否则为`FALSE`。 默认值为 `TRUE`。|  
+|[in] `bIncludeHidden`|`TRUE` to include the hidden sub-items in the count; otherwise, `FALSE`. The default value is `TRUE`.|  
   
-### <a name="return-value"></a>返回值  
- 展开子项目数。  
+### <a name="return-value"></a>Return Value  
+ The number of expanded sub-items.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethierarchylevel"></a>CMFCPropertyGridProperty::GetHierarchyLevel  
- 检索属性的层次结构级别的从零开始索引。  
+##  <a name="gethierarchylevel"></a>  CMFCPropertyGridProperty::GetHierarchyLevel  
+ Retrieves the zero-based index of the property's hierarchy level.  
   
 ```  
 int GetHierarchyLevel() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 该属性的层次结构级别。  
+### <a name="return-value"></a>Return Value  
+ The property's hierarchical level.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getname"></a>CMFCPropertyGridProperty::GetName  
- 检索属性的名称。  
+##  <a name="getname"></a>  CMFCPropertyGridProperty::GetName  
+ Retrieves the name of the property.  
   
 ```  
 LPCTSTR GetName() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向包含的属性名称的字符串指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a string that contains the name of the property.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getnametooltip"></a>CMFCPropertyGridProperty::GetNameTooltip  
- 由框架来显示工具提示中的属性名称调用。  
+##  <a name="getnametooltip"></a>  CMFCPropertyGridProperty::GetNameTooltip  
+ Called by the framework to display the name of the property in a tooltip.  
   
 ```  
 virtual CString GetNameTooltip();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个包含属性名称的字符串。 默认情况下，返回值为空字符串。  
+### <a name="return-value"></a>Return Value  
+ A string that contains the property name. By default, the return value is the empty string.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getoption"></a>CMFCPropertyGridProperty::GetOption  
- 检索由索引指定的选项的文本。  
+##  <a name="getoption"></a>  CMFCPropertyGridProperty::GetOption  
+ Retrieves the text of the option that is specified by an index.  
   
 ```  
 LPCTSTR GetOption(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- （选项） 来检索的属性列表项的从零开始的索引。  
+ The zero-based index of the property list item (option) to retrieve.  
   
-### <a name="return-value"></a>返回值  
- 包含选项文本的字符串指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a string that contains the option text.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getoptioncount"></a>CMFCPropertyGridProperty::GetOptionCount  
- 检索属于某个属性的选项数。  
+##  <a name="getoptioncount"></a>  CMFCPropertyGridProperty::GetOptionCount  
+ Retrieves the number of options that belong to a property.  
   
 ```  
 int GetOptionCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 属性控件中包含的属性列表项 （选项） 的数目。  
+### <a name="return-value"></a>Return Value  
+ The number of property list items (options) that are contained in the property control.  
   
-### <a name="remarks"></a>备注  
- 调用[CMFCPropertyGridProperty::AddOption](#addoption)方法将项添加到的属性列表。 调用[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)方法移除所有项。  
+### <a name="remarks"></a>Remarks  
+ Call the [CMFCPropertyGridProperty::AddOption](#addoption) method to add items to the property list. Call the [CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions) method to remove all items.  
   
-##  <a name="getoriginalvalue"></a>CMFCPropertyGridProperty::GetOriginalValue  
- 检索当前属性的初始值。  
+##  <a name="getoriginalvalue"></a>  CMFCPropertyGridProperty::GetOriginalValue  
+ Retrieves the initial value of the current property.  
   
 ```  
 const COleVariant& GetOriginalValue() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前属性的原始值。  
+### <a name="return-value"></a>Return Value  
+ The original value of the current property.  
   
-### <a name="remarks"></a>备注  
- 此方法用于撤消更改当前属性的值的编辑操作的效果。  
+### <a name="remarks"></a>Remarks  
+ Use this method to undo the effect of an edit operation that changes the value of the current property.  
   
- 设置当前属性的原始值[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)构造函数中，通过修改[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)方法，并通过重置[cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue)方法。  
+ The original value of the current property is set by the [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) constructor, modified by the [CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue) method, and reset by the [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) method.  
   
-##  <a name="getparent"></a>CMFCPropertyGridProperty::GetParent  
- 检索指向一个父属性。  
+##  <a name="getparent"></a>  CMFCPropertyGridProperty::GetParent  
+ Retrieves a pointer to a parent property.  
   
 ```  
 CMFCPropertyGridProperty* GetParent() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向父属性对象的指针或`NULL`顶级属性。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a parent property object, or `NULL` for the top-level property.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getrect"></a>CMFCPropertyGridProperty::GetRect  
- 检索一个属性的绑定矩形。  
+##  <a name="getrect"></a>  CMFCPropertyGridProperty::GetRect  
+ Retrieves the bounding rectangle of a property.  
   
 ```  
 CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它描述的绑定矩形。  
+### <a name="return-value"></a>Return Value  
+ A [CRect](../../atl-mfc-shared/reference/crect-class.md) object that describes the bounding rectangle.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsubitem"></a>CMFCPropertyGridProperty::GetSubItem  
- 检索由从零开始的索引标识的子属性。  
+##  <a name="getsubitem"></a>  CMFCPropertyGridProperty::GetSubItem  
+ Retrieves a sub-property identified by a zero-based index.  
   
 ```  
 CMFCPropertyGridProperty* GetSubItem(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 要检索的属性的从零开始的索引。 此参数是无效的如果该值小于零或大于或等于子属性的数目。  
+ The zero-based index of the property to retrieve. This parameter is invalid if it is less than zero or greater than or equal to the number of sub-properties.  
   
-### <a name="return-value"></a>返回值  
- 指向为此属性的子项的属性对象的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a property object that is a child item of this property.  
   
- - 或 -  
+ -or-  
   
- 在零售模式下，`NULL`如果`nIndex`参数无效。 在调试模式下，此方法断言。  
+ In retail mode, `NULL` if the `nIndex` parameter is invalid. In debug mode, this method asserts.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsubitemscount"></a>CMFCPropertyGridProperty::GetSubItemsCount  
- 检索子项目数。  
+##  <a name="getsubitemscount"></a>  CMFCPropertyGridProperty::GetSubItemsCount  
+ Retrieves the number of sub-items.  
   
 ```  
 int GetSubItemsCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 子项目数。  
+### <a name="return-value"></a>Return Value  
+ The number of child items.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvalue"></a>CMFCPropertyGridProperty::GetValue  
- 检索属性值。  
+##  <a name="getvalue"></a>  CMFCPropertyGridProperty::GetValue  
+ Retrieves a property value.  
   
 ```  
 virtual const _variant_t& GetValue() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个包含属性值的变量。  
+### <a name="return-value"></a>Return Value  
+ A variant that contains the property value.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvaluetooltip"></a>CMFCPropertyGridProperty::GetValueTooltip  
- 由框架来检索属性值，然后在工具提示中显示的文本表示调用。  
+##  <a name="getvaluetooltip"></a>  CMFCPropertyGridProperty::GetValueTooltip  
+ Called by the framework to retrieve the text representation of the property value that is then displayed in a tooltip.  
   
 ```  
 virtual CString GetValueTooltip();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个`CString`对象，其中包含的文本表示形式的属性值。 默认情况下，此值为空字符串。  
+### <a name="return-value"></a>Return Value  
+ A `CString` object containing the textual representation of the property value. By default, this value is the empty string.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasbutton"></a>CMFCPropertyGridProperty::HasButton  
- 指示属性是否包含一个按钮。  
+##  <a name="hasbutton"></a>  CMFCPropertyGridProperty::HasButton  
+ Indicates whether a property contains a button.  
   
 ```  
 virtual BOOL HasButton() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果某个属性包含按钮 （或属性列表） 中;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a property contains a button (or property list); otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hittest"></a>CMFCPropertyGridProperty::HitTest  
- 指向对应于对应于一个点的属性列表项的属性对象。  
+##  <a name="hittest"></a>  CMFCPropertyGridProperty::HitTest  
+ Points to the property object that corresponds to the property list item that corresponds to a point.  
   
 ```  
 CMFCPropertyGridProperty* HitTest(
@@ -747,246 +826,246 @@ CMFCPropertyGridProperty* HitTest(
     BOOL bPropsOnly=FALSE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 要测试，请在工作区坐标的点。 此参数通常是当前鼠标指针位置。  
+ The point to test, in client coordinates. This parameter is typically the current mouse pointer location.  
   
  [in] `pt`  
- 要测试，请在工作区坐标的点。  
+ The point to test, in client coordinates.  
   
  [out] `pnArea`  
- 此方法返回时，指示指定的点所在的区域。 有关更多信息，请参见“备注”。 默认值为 `NULL`。  
+ When this method returns, indicates the area that contains the specified point. For more information, see Remarks. The default value is `NULL`.  
   
  [in] `bPropsOnly`  
- `TRUE`若要测试的任何区域属性控件; 中`FALSE`测试仅描述区域。 默认值为 `FALSE`。  
+ `TRUE` to test any area in the property control; `FALSE` to test only the description area. The default value is `FALSE`.  
   
-### <a name="return-value"></a>返回值  
- 与属性的对象的指针或`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a property object or `NULL`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法测试属性的子项，如果任一属性项中找不到指定的点。  
+### <a name="remarks"></a>Remarks  
+ By default, this method tests property sub-items if the specified point is not found within any of the property items.  
   
- 下表列出了可能会返回给值`pnArea`参数。  
+ The following table lists the values that can be returned to the `pnArea` parameter.  
   
-|区域|描述|  
+|Area|Description|  
 |----------|-----------------|  
-|`ClickArea::ClickExpandBox`|展开框控件由下面一个加号 （+）。|  
-|`ClickArea::ClickName`|属性名称。|  
-|`ClickArea::ClickValue`|属性值。|  
+|`ClickArea::ClickExpandBox`|The expand box control, which is designated by a plus sign (+).|  
+|`ClickArea::ClickName`|The property name.|  
+|`ClickArea::ClickValue`|The property value.|  
   
-##  <a name="init"></a>CMFCPropertyGridProperty::Init  
- 由框架来初始化属性对象调用。  
+##  <a name="init"></a>  CMFCPropertyGridProperty::Init  
+ Called by the framework to initialize a property object.  
   
 ```  
 void Init();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isallowedit"></a>CMFCPropertyGridProperty::IsAllowEdit  
- 指示属性是否可编辑。  
+##  <a name="isallowedit"></a>  CMFCPropertyGridProperty::IsAllowEdit  
+ Indicates whether a property is editable.  
   
 ```  
 BOOL IsAllowEdit() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果该属性是可编辑;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the property is editable; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isenabled"></a>CMFCPropertyGridProperty::IsEnabled  
- 指示属性是否是启用还是禁用。  
+##  <a name="isenabled"></a>  CMFCPropertyGridProperty::IsEnabled  
+ Indicates whether a property is enabled or disabled.  
   
 ```  
 BOOL IsEnabled() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果启用该属性;`FALSE`如果该属性处于禁用状态。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the property is enabled; `FALSE` if the property is disabled.  
   
-### <a name="remarks"></a>备注  
- 指示属性是否是启用还是禁用。  
+### <a name="remarks"></a>Remarks  
+ Tells whether a property is enabled or disabled.  
   
-##  <a name="isexpanded"></a>CMFCPropertyGridProperty::IsExpanded  
- 指示属性是否是展开还是折叠。  
+##  <a name="isexpanded"></a>  CMFCPropertyGridProperty::IsExpanded  
+ Indicates whether a property is expanded or collapsed.  
   
 ```  
 BOOL IsExpanded() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果该属性处于展开状态;，`FALSE`如果该属性处于折叠状态。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the property is expanded; `FALSE` if the property is collapsed.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isgroup"></a>CMFCPropertyGridProperty::IsGroup  
- 指示当前属性是否表示一组。  
+##  <a name="isgroup"></a>  CMFCPropertyGridProperty::IsGroup  
+ Indicates whether the current property represents a group.  
   
 ```  
 BOOL IsGroup() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前的属性对象表示一组;`FALSE`如果该属性表示一个值。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current property object represents a group; `FALSE` if the property represents a value.  
   
-### <a name="remarks"></a>备注  
- 一个*组*是相关属性在属性网格控件的集合。 如果层次结构方式显示控件*组名*显示为组上方的行中类别标题。  
+### <a name="remarks"></a>Remarks  
+ A *group* is a collection of related properties in a property grid control. If the control is displayed hierarchically, the *group name* is displayed as a category title in the row above the group.  
   
-##  <a name="isinplaceediting"></a>CMFCPropertyGridProperty::IsInPlaceEditing  
- 指示当前属性是否可编辑。  
+##  <a name="isinplaceediting"></a>  CMFCPropertyGridProperty::IsInPlaceEditing  
+ Indicates whether the current property is editable.  
   
 ```  
 BOOL IsInPlaceEditing() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前的属性是可编辑;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current property is editable; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ismodified"></a>CMFCPropertyGridProperty::IsModified  
- 指示是否修改当前属性。  
+##  <a name="ismodified"></a>  CMFCPropertyGridProperty::IsModified  
+ Indicates whether the current property is modified.  
   
 ```  
 BOOL IsModified() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果属性修改;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the property is modified; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isparentexpanded"></a>CMFCPropertyGridProperty::IsParentExpanded  
- 指示是否展开当前属性的父级。  
+##  <a name="isparentexpanded"></a>  CMFCPropertyGridProperty::IsParentExpanded  
+ Indicates whether the parents of the current property are expanded.  
   
 ```  
 BOOL IsParentExpanded() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果展开所有父级的当前属性;，`FALSE`如果父属性处于折叠状态。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if all parents of the current property are expanded; `FALSE` if the parent properties are collapsed.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isselected"></a>CMFCPropertyGridProperty::IsSelected  
- 指示是否选择当前属性。  
+##  <a name="isselected"></a>  CMFCPropertyGridProperty::IsSelected  
+ Indicates whether the current property is selected.  
   
 ```  
 virtual BOOL IsSelected() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前的属性处于选中状态，，否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current property is selected; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="issubitem"></a>CMFCPropertyGridProperty::IsSubItem  
- 指示指定的属性是否为当前属性的子项目。  
+##  <a name="issubitem"></a>  CMFCPropertyGridProperty::IsSubItem  
+ Indicates whether the specified property is a sub-item of the current property.  
   
 ```  
 BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pProp`  
- 属性指向的指针。  
+ A pointer to a property.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果指定的属性为子项目的当前属性;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified property is a sub-item of the current property; otherwise, `FALSE`.  
   
-##  <a name="isvaluechanged"></a>CMFCPropertyGridProperty::IsValueChanged  
- 指示是否已更改的当前属性的值。  
+##  <a name="isvaluechanged"></a>  CMFCPropertyGridProperty::IsValueChanged  
+ Indicates whether the value of the current property has changed.  
   
 ```  
 virtual BOOL IsValueChanged() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前属性值已更改;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the value of the current property has changed; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isvisible"></a>CMFCPropertyGridProperty::IsVisible  
- 指示当前属性是否可见。  
+##  <a name="isvisible"></a>  CMFCPropertyGridProperty::IsVisible  
+ Indicates whether the current property is visible.  
   
 ```  
 BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前属性为可见，则否则为`FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current property is visible; otherwise; `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_strformatdouble"></a>CMFCPropertyGridProperty::m_strFormatDouble  
- 包含双精度类型的值的格式字符串。  
+##  <a name="m_strformatdouble"></a>  CMFCPropertyGridProperty::m_strFormatDouble  
+ Holds a format string for a value of type double.  
   
 ```  
 static CString m_strFormatDouble;  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_strformatfloat"></a>CMFCPropertyGridProperty::m_strFormatFloat  
- 包含浮点类型的值的格式字符串。  
+##  <a name="m_strformatfloat"></a>  CMFCPropertyGridProperty::m_strFormatFloat  
+ Holds a format string for a value of type float.  
   
 ```  
 static CString m_strFormatFloat;  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_strformatlong"></a>CMFCPropertyGridProperty::m_strFormatLong  
- 保存的 long 类型值的格式字符串。  
+##  <a name="m_strformatlong"></a>  CMFCPropertyGridProperty::m_strFormatLong  
+ Holds a format string for a value of type long.  
   
 ```  
 static CString m_strFormatLong;  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_strformatshort"></a>CMFCPropertyGridProperty::m_strFormatShort  
- 保存 short 类型的值的格式字符串。  
+##  <a name="m_strformatshort"></a>  CMFCPropertyGridProperty::m_strFormatShort  
+ Holds a format string for a value of type short.  
   
 ```  
 static CString m_strFormatShort;  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onclickbutton"></a>CMFCPropertyGridProperty::OnClickButton  
- 当用户单击属性中包含的按钮时，由框架调用。  
+##  <a name="onclickbutton"></a>  CMFCPropertyGridProperty::OnClickButton  
+ Called by the framework when the user clicks a button that is contained in a property.  
   
 ```  
 virtual void OnClickButton(CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 工作区坐标中的点。  
+ A point, in client coordinates.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing.  
   
-##  <a name="onclickname"></a>CMFCPropertyGridProperty::OnClickName  
- 当用户单击某个属性的名称字段由父属性列表控件调用。  
+##  <a name="onclickname"></a>  CMFCPropertyGridProperty::OnClickName  
+ Called by a parent property list control when a user clicks the name field of a property.  
   
 ```  
 virtual void OnClickName(CPoint C);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `C`|工作区坐标中的点。|  
+|[in] `C`|A point, in client coordinates.|  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing.  
   
-##  <a name="onclickvalue"></a>CMFCPropertyGridProperty::OnClickValue  
- 当用户单击某个属性的值字段由父属性列表控件调用。  
+##  <a name="onclickvalue"></a>  CMFCPropertyGridProperty::OnClickValue  
+ Called by a parent property list control when a user clicks the value field of a property.  
   
 ```  
 virtual BOOL OnClickValue(
@@ -994,30 +1073,30 @@ virtual BOOL OnClickValue(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiMsg`  
- 鼠标消息。  
+ A mouse message.  
   
  [in] `point`  
- 工作区坐标中的点。  
+ A point, in client coordinates.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果指定的鼠标消息处理通过此方法。否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified mouse message is processed by this method; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法返回`FALSE`如果 current 属性不可编辑。 否则为编辑或与此属性关联的数值调节钮控件处理指定的鼠标消息，并且该方法将返回`TRUE`。  
+### <a name="remarks"></a>Remarks  
+ By default, this method returns `FALSE` if the current property is not editable. Otherwise, the edit or spin control that is associated with this property processes the specified mouse message, and then this method returns `TRUE`.  
   
-##  <a name="onclosecombo"></a>CMFCPropertyGridProperty::OnCloseCombo  
- 当关闭属性中包含一个组合框时，由框架调用。  
+##  <a name="onclosecombo"></a>  CMFCPropertyGridProperty::OnCloseCombo  
+ Called by the framework when a combo box that is contained in a property is closed.  
   
 ```  
 virtual void OnCloseCombo();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onctlcolor"></a>CMFCPropertyGridProperty::OnCtlColor  
- 它必须检索用于填充某个属性的背景色的画笔时由框架调用。  
+##  <a name="onctlcolor"></a>  CMFCPropertyGridProperty::OnCtlColor  
+ Called by the framework when it must retrieve a brush to fill the background color of a property.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -1025,46 +1104,46 @@ virtual HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针。  
+ Pointer to a device context.  
   
  [in] `nCtlColor`  
- （未使用此参数。）  
+ (This parameter is not used.)  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则画笔的句柄否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ The handle to a brush if this method is successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondblclk"></a>CMFCPropertyGridProperty::OnDblClk  
- 当用户双击某个属性时，由框架调用。  
+##  <a name="ondblclk"></a>  CMFCPropertyGridProperty::OnDblClk  
+ Called by the framework when the user double clicks a property.  
   
 ```  
 virtual BOOL OnDblClk(CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 工作区坐标中的点。  
+ A point, in client coordinates.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法在属性列表控件中选择下一个属性项。  
+### <a name="remarks"></a>Remarks  
+ By default, this method selects the next property item in the property list control.  
   
-##  <a name="ondestroywindow"></a>CMFCPropertyGridProperty::OnDestroyWindow  
- 由框架销毁属性时，或编辑完成时调用。  
+##  <a name="ondestroywindow"></a>  CMFCPropertyGridProperty::OnDestroyWindow  
+ Called by the framework when a property is destroyed or when editing is finished.  
   
 ```  
 virtual void OnDestroyWindow();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawbutton"></a>CMFCPropertyGridProperty::OnDrawButton  
- 由框架来绘制按钮的属性中包含调用。  
+##  <a name="ondrawbutton"></a>  CMFCPropertyGridProperty::OnDrawButton  
+ Called by the framework to draw a button that is contained in a property.  
   
 ```  
 virtual void OnDrawButton(
@@ -1072,17 +1151,17 @@ virtual void OnDrawButton(
     CRect rectButton);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `rectButton`  
- 指定要绘制一个按钮的边框。  
+ A bounding rectangle that specifies where to draw a button.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawdescription"></a>CMFCPropertyGridProperty::OnDrawDescription  
- 由框架用于绘制的属性说明调用。  
+##  <a name="ondrawdescription"></a>  CMFCPropertyGridProperty::OnDrawDescription  
+ Called by the framework to draw the property description.  
   
 ```  
 virtual void OnDrawDescription(
@@ -1090,18 +1169,18 @@ virtual void OnDrawDescription(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `rect`  
- 指定要绘制的属性说明的位置的边界矩形。  
+ A bounding rectangle that specifies where to draw the property description.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法中使用父属性列表控件的字体绘制的属性名称和描述。 在常规样式中绘制的属性说明且用粗体样式绘制的属性名称。  
+### <a name="remarks"></a>Remarks  
+ By default, this method draws the property name and description in the font used by the parent property list control. The property description is drawn in regular style and the property name is drawn in bold style.  
   
-##  <a name="ondrawexpandbox"></a>CMFCPropertyGridProperty::OnDrawExpandBox  
- 调用由框架后，若要绘制展开框控件附近包含子属性的属性。  
+##  <a name="ondrawexpandbox"></a>  CMFCPropertyGridProperty::OnDrawExpandBox  
+ Called by the framework to draw an expand box control near a property that contains sub-properties.  
   
 ```  
 virtual void OnDrawExpandBox(
@@ -1109,18 +1188,18 @@ virtual void OnDrawExpandBox(
     CRect rectExpand);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `rectExpand`  
- 指定要绘制展开框控件的边框。  
+ A bounding rectangle that specifies where to draw the expand box control.  
   
-### <a name="remarks"></a>备注  
- 单击展开框控件，以展开或折叠子属性的列表。 展开框控件由正方形，其中包含一个加号 （+） 或减号 （-）。 加号指示该属性可将展开以显示子属性的列表。 负号指示可以折叠列表以显示仅属性。  
+### <a name="remarks"></a>Remarks  
+ Click the expand box control to expand or collapse a list of sub-properties. The expand box control is designated by a square that contains a plus (+) or minus (-) sign. A plus sign indicates that the property can be expanded to show a list of sub-properties. A minus sign indicates that the list can be collapsed to show only the property.  
   
-##  <a name="ondrawname"></a>CMFCPropertyGridProperty::OnDrawName  
- 由框架以显示属性名称调用。  
+##  <a name="ondrawname"></a>  CMFCPropertyGridProperty::OnDrawName  
+ Called by the framework to display the property name.  
   
 ```  
 virtual void OnDrawName(
@@ -1128,17 +1207,17 @@ virtual void OnDrawName(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `rect`  
- 指定要绘制的属性名称的边框。  
+ A bounding rectangle that specifies where to draw the property name.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawvalue"></a>CMFCPropertyGridProperty::OnDrawValue  
- 由框架调用以显示属性值。  
+##  <a name="ondrawvalue"></a>  CMFCPropertyGridProperty::OnDrawValue  
+ Called by the framework to display the property value.  
   
 ```  
 virtual void OnDrawValue(
@@ -1146,108 +1225,108 @@ virtual void OnDrawValue(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `rect`  
- 指定要绘制的属性值的位置的边界矩形。  
+ A bounding rectangle that specifies where to draw the property value.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onedit"></a>CMFCPropertyGridProperty::OnEdit  
- 当用户要修改属性值时由框架调用。  
+##  <a name="onedit"></a>  CMFCPropertyGridProperty::OnEdit  
+ Called by the framework when the user is about to modify a property value.  
   
 ```  
 virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lptClick`  
- （未使用此参数。）指向一个点，在工作区坐标的指针。  
+ (This parameter is not used.) A pointer to a point, in client coordinates.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果编辑操作成功，则启动否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the edit operation starts successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 当用户将要修改属性值时，将由框架调用此函数。 默认情况下，此方法启动适当的编辑器的组合框控件或数值调节钮控件。  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework when the user is about to modify a property value. By default, this method starts the appropriate editor for a combo box control or a spin control.  
   
-##  <a name="onendedit"></a>CMFCPropertyGridProperty::OnEndEdit  
- 当用户完成时由框架调用修改属性值。  
+##  <a name="onendedit"></a>  CMFCPropertyGridProperty::OnEndEdit  
+ Called by the framework when the user is finished modifying a property value.  
   
 ```  
 virtual BOOL OnEndEdit();
 ```  
   
-### <a name="return-value"></a>返回值  
- 此方法始终返回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ This method always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法将销毁当前的编辑控件，然后返回`TRUE`。  
+### <a name="remarks"></a>Remarks  
+ By default, this method destroys the current editing control and then returns `TRUE`.  
   
-##  <a name="onkillfocus"></a>CMFCPropertyGridProperty::OnKillFocus  
- 该属性没有输入的焦点时，由框架调用。  
+##  <a name="onkillfocus"></a>  CMFCPropertyGridProperty::OnKillFocus  
+ Called by the framework when the property loses the input focus.  
   
 ```  
 virtual BOOL OnKillFocus(CWnd*);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `CWnd`|（未使用。）指向窗口的指针。|  
+|[in] `CWnd`|(Not used.) Pointer to a window.|  
   
-### <a name="return-value"></a>返回值  
- 此方法始终返回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ This method always returns `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法未执行任何操作，并返回`TRUE`。 如果重写此方法时，返回`TRUE`如果属性失去输入的焦点时，框架可以结束编辑操作。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing and then returns `TRUE`. If you override this method, return `TRUE` if the framework can end the edit operation when the property loses the input focus.  
   
-##  <a name="onkillselection"></a>CMFCPropertyGridProperty::OnKillSelection  
+##  <a name="onkillselection"></a>  CMFCPropertyGridProperty::OnKillSelection  
 
   
 ```  
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `CMFCPropertyGridProperty*`  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing.  
   
-##  <a name="onpossizechanged"></a>CMFCPropertyGridProperty::OnPosSizeChanged  
+##  <a name="onpossizechanged"></a>  CMFCPropertyGridProperty::OnPosSizeChanged  
 
   
 ```  
 virtual void OnPosSizeChanged(CRect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `CRect`  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing.  
   
-##  <a name="onrclickname"></a>CMFCPropertyGridProperty::OnRClickName  
- 在用户单击属性名称区域中的鼠标按钮时由框架调用。  
+##  <a name="onrclickname"></a>  CMFCPropertyGridProperty::OnRClickName  
+ Called by the framework when the user clicks the right mouse button in the property name area.  
   
 ```  
 virtual void OnRClickName(CPoint C);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `C`|工作区坐标中的点。|  
+|[in] `C`|A point, in client coordinates.|  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing.  
   
-##  <a name="onrclickvalue"></a>CMFCPropertyGridProperty::OnRClickValue  
- 在用户单击属性值区域中的鼠标按钮时由框架调用。  
+##  <a name="onrclickvalue"></a>  CMFCPropertyGridProperty::OnRClickValue  
+ Called by the framework when the user clicks the right mouse button in the property value area.  
   
 ```  
 virtual void OnRClickValue(
@@ -1255,102 +1334,102 @@ virtual void OnRClickValue(
     BOOL B);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `C`|工作区坐标中的点。|  
-|[in] `B`|一个布尔值。|  
+|[in] `C`|A point, in client coordinates.|  
+|[in] `B`|A Boolean.|  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法不执行任何操作和`B`参数的任何预定义的用途。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing and the `B` parameter has no predefined purpose.  
   
-##  <a name="onselectcombo"></a>CMFCPropertyGridProperty::OnSelectCombo  
- 当用户从可编辑的组合框中选择某个项时，由框架调用。  
+##  <a name="onselectcombo"></a>  CMFCPropertyGridProperty::OnSelectCombo  
+ Called by the framework when the user selects an item from the editable combo box.  
   
 ```  
 virtual void OnSelectCombo();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法使用所选的项的文本来更新的属性值。  
+### <a name="remarks"></a>Remarks  
+ By default, this method uses the text of the selected item to update the property value.  
   
-##  <a name="onsetcursor"></a>CMFCPropertyGridProperty::OnSetCursor  
- 当鼠标指针移动到的属性项由框架调用。  
+##  <a name="onsetcursor"></a>  CMFCPropertyGridProperty::OnSetCursor  
+ Called by the framework when the mouse pointer moves to a property item.  
   
 ```  
 virtual BOOL OnSetCursor() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前属性为 variant 类型或值列表，并且此方法成功加载插入点 （i 形） 的鼠标光标;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current property is a variant type or a list of values, and this method successfully loads the insertion point (I-beam) mouse cursor; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
  This method supports the following variant types: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, and `VT_BSTR`.  
   
-##  <a name="onsetselection"></a>CMFCPropertyGridProperty::OnSetSelection  
+##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection  
 
   
 ```  
 virtual void OnSetSelection(CMFCPropertyGridProperty*);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `CMFCPropertyGridProperty*`  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing.  
   
-##  <a name="onupdatevalue"></a>CMFCPropertyGridProperty::OnUpdateValue  
- 当可编辑属性值已更改时由框架调用。  
+##  <a name="onupdatevalue"></a>  CMFCPropertyGridProperty::OnUpdateValue  
+ Called by the framework when the value of an editable property has changed.  
   
 ```  
 virtual BOOL OnUpdateValue();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="pushchar"></a>CMFCPropertyGridProperty::PushChar  
- 当选择了属性和用户输入新字符时，从属性列表控件调用。  
+##  <a name="pushchar"></a>  CMFCPropertyGridProperty::PushChar  
+ Called from the property list control when the property is selected and the user enters a new character.  
   
 ```  
 virtual BOOL PushChar(UINT nChar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- 一个字符。  
+ A character.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果编辑操作想继续操作;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the edit operation is continuing; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 此方法支持的属性，则值的列表，或者以下变量类型之一︰ `VT_INT`， `VT_I2`， `VT_I4`， `VT_UINT`， `VT_UI1`， `VT_UI2`， `VT_UI4`， `VT_R4`， `VT_R8`，和`VT_BSTR`。  
+### <a name="remarks"></a>Remarks  
+ This method supports a property that is either a list of values or one of the following variant types: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, and `VT_BSTR`.  
   
-##  <a name="redraw"></a>CMFCPropertyGridProperty::Redraw  
- 重绘该属性。  
+##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw  
+ Redraws the property.  
   
 ```  
 void Redraw();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removealloptions"></a>CMFCPropertyGridProperty::RemoveAllOptions  
- 从属性中删除所有选项 （项）。  
+##  <a name="removealloptions"></a>  CMFCPropertyGridProperty::RemoveAllOptions  
+ Removes all options (items) from a property.  
   
 ```  
 void RemoveAllOptions();
 ```  
   
-### <a name="remarks"></a>备注  
- 选项也称为为属性列表控件的列表项。  
+### <a name="remarks"></a>Remarks  
+ Options are also known as the list items of a property list control.  
   
-##  <a name="removesubitem"></a>CMFCPropertyGridProperty::RemoveSubItem  
- 删除指定的子项目。  
+##  <a name="removesubitem"></a>  CMFCPropertyGridProperty::RemoveSubItem  
+ Removes the specified sub-item.  
   
 ```  
 BOOL RemoveSubItem(
@@ -1358,56 +1437,56 @@ BOOL RemoveSubItem(
     BOOL bDelete=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pProp`  
- 指向属性个子项的指针。  
+ Pointer to a property sub-item.  
   
  [in] `bDelete`  
- `TRUE`若要删除指定的属性对象`pProp`参数; 否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` to delete the property object that is specified by the `pProp` parameter; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
- 指定`FALSE`为`bDelete`参数，如果你想要移动指定的子项目; 即，删除子项目，然后将其添加到其他位置。  
+### <a name="remarks"></a>Remarks  
+ Specify `FALSE` for the `bDelete` parameter if you intend to move the specified sub-item; that is, remove the sub-item and then add it elsewhere.  
   
-##  <a name="resetoriginalvalue"></a>Cmfcpropertygridproperty:: Resetoriginalvalue  
- 还原已编辑属性的原始值。  
+##  <a name="resetoriginalvalue"></a>  CMFCPropertyGridProperty::ResetOriginalValue  
+ Restores the original value of an edited property.  
   
 ```  
 virtual void ResetOriginalValue();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdata"></a>CMFCPropertyGridProperty::SetData  
- 将相关联`DWORD`与属性的值。  
+##  <a name="setdata"></a>  CMFCPropertyGridProperty::SetData  
+ Associates a `DWORD` value with a property.  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 特定于应用程序的 32 位值，如整数或与其他数据的指针。  
+ An application-specific 32-bit value, such as an integer or a pointer to other data.  
   
-### <a name="remarks"></a>备注  
- 使用[CMFCPropertyGridProperty::GetData](#getdata)方法来检索`DWORD`值。 使用[CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata)方法来查找与指定的关联的属性列表项`DWORD`值。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCPropertyGridProperty::GetData](#getdata) method to retrieve the `DWORD` value. Use the [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) method to locate the property list item that is associated with the specified `DWORD` value.  
   
-##  <a name="setdescription"></a>CMFCPropertyGridProperty::SetDescription  
- 指定描述当前属性的文本。  
+##  <a name="setdescription"></a>  CMFCPropertyGridProperty::SetDescription  
+ Specifies the text that describes the current property.  
   
 ```  
 void SetDescription(const CString& strDescr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `strDescr`  
- 描述当前属性的文本。  
+ Text that describes the current property.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setname"></a>CMFCPropertyGridProperty::SetName  
- 设置属性的名称。  
+##  <a name="setname"></a>  CMFCPropertyGridProperty::SetName  
+ Sets the name of a property.  
   
 ```  
 void SetName(
@@ -1415,44 +1494,44 @@ void SetName(
     BOOL bRedraw=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 属性名称。  
+ The property name.  
   
  [in] `bRedraw`  
- `TRUE`若要立即; 重绘属性否则为`FALSE`。 默认值为 `TRUE`。  
+ `TRUE` to redraw the property immediately; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setoriginalvalue"></a>CMFCPropertyGridProperty::SetOriginalValue  
- 设置可编辑属性的原始值。  
+##  <a name="setoriginalvalue"></a>  CMFCPropertyGridProperty::SetOriginalValue  
+ Sets the original value of an editable property.  
   
 ```  
 virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `varValue`  
- 一个值。  
+ A value.  
   
-### <a name="remarks"></a>备注  
- 使用[cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue)方法来重置已编辑属性的原始值。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) method to reset the original value of an edited property.  
   
-##  <a name="setvalue"></a>CMFCPropertyGridProperty::SetValue  
- 设置属性网格属性的值。  
+##  <a name="setvalue"></a>  CMFCPropertyGridProperty::SetValue  
+ Sets the value of a property grid property.  
   
 ```  
 virtual void SetValue(const _variant_t& varValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `varValue`  
- 对一个值的引用。  
+ A reference to a value.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="show"></a>CMFCPropertyGridProperty::Show  
- 显示或隐藏属性。  
+##  <a name="show"></a>  CMFCPropertyGridProperty::Show  
+ Shows or hides a property.  
   
 ```  
 void Show(
@@ -1460,15 +1539,15 @@ void Show(
     BOOL bAdjustLayout=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- `TRUE`若要显示的当前属性及其子项;`FALSE`隐藏当前属性和它的子项。 默认值为 `TRUE`。  
+ `TRUE` to display the current property and its sub-items; `FALSE` to hide the current property and its sub-items. The default value is `TRUE`.  
   
  [in] `bAdjustLayout`  
- `TRUE`若要重新计算如何绘制标签和一个属性值，然后绘制您的属性。`FALSE`用现有计算来绘制该属性。 默认值为 `TRUE`。  
+ `TRUE` to recalculate how to draw the label and value of a property and then draw the property; `FALSE` to use existing calculations to draw the property. The default value is `TRUE`.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)
 

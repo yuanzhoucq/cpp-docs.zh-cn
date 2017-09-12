@@ -1,75 +1,94 @@
 ---
-title: "文件 I/O 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "磁盘文件类"
-  - "文件 I/O 类 [C++]"
-  - "I/O [C++], MFC 类"
-  - "I/O [MFC], 类"
-  - "内存文件类"
-  - "OLE 流"
-  - "套接字类"
-  - "stdio 类"
-  - "stream 类"
-  - "已转换的 stream 类"
+title: File I-O Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.file
+dev_langs:
+- C++
+helpviewer_keywords:
+- disk file classes [MFC]
+- stdio classes [MFC]
+- OLE streams [MFC]
+- I/O [MFC], MFC classes
+- translated stream classes [MFC]
+- file I/O classes [MFC]
+- I/O [MFC], classes
+- sockets classes [MFC]
+- stream classes [MFC]
+- memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 文件 I/O 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e6bcb29b88d170ad2b50c8db0b21c500825adfdc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-这些类提供一个接口以传统磁盘文件、文件、内存流活动和 Windows 套接字。  从 `CFile` 派生的所有类可用于以 `CArchive` 对象执行序列化。  
+---
+# <a name="file-io-classes"></a>File I/O Classes
+These classes provide an interface to traditional disk files, in-memory files, Active streams, and Windows sockets. All of the classes derived from `CFile` can be used with a `CArchive` object to perform serialization.  
   
- 使用以下，类特定`CArchive` 和 `CFile`，因此，如果您编写自己输入\/输出处理。  通常不需要从这些类派生。  如果使用应用程序框架，**打开** 和 **保存** 命令的默认实现。**文件** 菜单中处理文件 I\/O \(使用 `CArchive`类\)，因此，只要，重写文档的 `Serialize` 函数提供有关文档的方式的详细信息序列化其内容。  有关类文件并序列化的更多信息，请参见 [MFC 中的文件](../mfc/files-in-mfc.md) 文章和文章 [序列化](../mfc/serialization-in-mfc.md)。  
+ Use the following classes, particularly `CArchive` and `CFile`, if you write your own input/output processing. Normally you do not need to derive from these classes. If you use the application framework, the default implementations of the **Open** and **Save** commands on the **File** menu will handle file I/O (using class `CArchive`), as long as you override your document's `Serialize` function to supply details about how a document serializes its contents. For more information about the file classes and serialization, see the article [Files in MFC](../mfc/files-in-mfc.md) and the article [Serialization](../mfc/serialization-in-mfc.md).  
   
  [CFile](../mfc/reference/cfile-class.md)  
- 提供一个接口以二进制文件磁盘文件。  
+ Provides a file interface to binary disk files.  
   
  [CStdioFile](../mfc/reference/cstdiofile-class.md)  
- 提供 `CFile` 接口。缓存的磁盘文件流，通常在文本模式。  
+ Provides a `CFile` interface to buffered stream disk files, usually in text mode.  
   
  [CMemFile](../mfc/reference/cmemfile-class.md)  
- 提供 `CFile` 接口。内存文件。  
+ Provides a `CFile` interface to in-memory files.  
   
  [CSharedFile](../mfc/reference/csharedfile-class.md)  
- 提供 `CFile` 接口共享内存文件。  
+ Provides a `CFile` interface to shared in-memory files.  
   
  [COleStreamFile](../mfc/reference/colestreamfile-class.md)  
- 使用 COM `IStream` 接口提供对复合文件 `CFile` 的访问。  
+ Uses the COM `IStream` interface to provide `CFile` access to compound files.  
   
  [CSocketFile](../mfc/reference/csocketfile-class.md)  
- 提供一个 `CFile` 接口给 Windows 套接字。  
+ Provides a `CFile` interface to a Windows Socket.  
   
-## 相关类  
+## <a name="related-classes"></a>Related Classes  
  [CArchive](../mfc/reference/carchive-class.md)  
- 与`CFile`对象协作通过序列化实现对象的持久性存储 \(请参见[CObject::Serialize](../Topic/CObject::Serialize.md)\)。  
+ Cooperates with a `CFile` object to implement persistent storage for objects through serialization (see [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
  [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- 存档异常。  
+ An archive exception.  
   
  [CFileException](../mfc/reference/cfileexception-class.md)  
- 面向文件的异常。  
+ A file-oriented exception.  
   
  [CFileDialog](../mfc/reference/cfiledialog-class.md)  
- 用于打开或保存文件提供标准对话框。  
+ Provides a standard dialog box for opening or saving a file.  
   
  [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- 保留最近使用的文件列表\(MRU\)。  
+ Maintains the most recently used (MRU) file list.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

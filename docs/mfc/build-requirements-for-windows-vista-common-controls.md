@@ -1,50 +1,67 @@
 ---
-title: "Windows Vista 公共控件的生成要求 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "公共控件 (MFC)"
-  - "公共控件 (MFC), 生成要求"
+title: Build Requirements for Windows Vista Common Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- common controls (MFC), build requirements
+- common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Windows Vista 公共控件的生成要求
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 604e0ae364c8316fea386c1bb7160fc9030c0a67
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-Microsoft 基础类 \(MFC\) \(MFC\) 库支持 Windows 公共控件版本 6.1。  公共控件在 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 中，该库包括在 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]中。  库提供引发现有类中的新方法并支持 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 公共控件的新的类和方法。  在生成应用程序时，应该按照下一节中介绍的编译和迁移要求。  
+---
+# <a name="build-requirements-for-windows-vista-common-controls"></a>Build Requirements for Windows Vista Common Controls
+The Microsoft Foundation Class (MFC) library supports Windows Common Controls version 6.1. The common controls are included in [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] and the library is included in the [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. The library provides new methods that enhance existing classes, and new classes and methods that support [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] common controls. When you build your application, you should follow the compilation and migration requirements that are described in the following sections.  
   
-## 汇编要求  
+## <a name="compilation-requirements"></a>Compilation Requirements  
   
-### 支持的版本  
- 尽管其他方法支持以前的操作系统，有些新的类和方法仅支持 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 和更高版本。  在每个方法主题中的 `Requirements` 一节的说明指定最低要求时的操作系统是 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]。  
+### <a name="supported-versions"></a>Supported Versions  
+ Some new classes and methods support only [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] and later, while other methods also support earlier operating systems. A note in the `Requirements` section of each method topic specifies when the minimum required operating system is [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)].  
   
- 即使计算机不在运行 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]，则可在 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 中运行的应用 MFC 程序，如果您具有的计算机上版本 6.1 MFC 头文件。  但是，用于 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 而专门设计了常用控件在该系统仅运行和由以前的操作系统上忽略。  
+ Even if your computer does not run [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], you can build an MFC application that will run on [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] if you have the version 6.1 MFC header files on your computer. However, common controls that are designed specifically for [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] operate only on that system, and are ignored by earlier operating systems.  
   
-### 支持的字符集  
- 新 Windows 公共控件仅支持 Unicode 字符集而不是 ANSI 字符集。  如果在命令行中生成应用程序，请使用以下两个定义 \(\/D\) 编译器选项指定 Unicode 字符集为基础：  
+### <a name="supported-character-sets"></a>Supported Character Sets  
+ The new Windows common controls support only the Unicode character set, and not the ANSI character set. If you build your application on the command line, use both of the following define (/D) compiler options to specify Unicode as the underlying character set:  
   
 ```  
 /D_UNICODE /DUNICODE  
 ```  
   
- 如果您在 Visual Studio 集成开发环境 \(IDE\) \(IDE\) 的应用程序，指定 **Unicode 字符集** 选项 **字符集** 属性。**常规** 节点项目属性。  
+ If you build your application in the Visual Studio integrated development environment (IDE), specify the **Unicode Character Set** option of the **Character Set** property in the **General** node of the project properties.  
   
- 几个 MFC 方法 ANSI 版本为否决的开始使用 Windows 公共控件版本 6.1。  有关详细信息，请参阅[弃用的 ANSI API](../mfc/deprecated-ansi-apis.md)。  
+ The ANSI version of several MFC methods have been deprecated starting with Windows Common Controls version 6.1. For more information, see [Deprecated ANSI APIs](../mfc/deprecated-ansi-apis.md).  
   
-## 迁移要求  
- 如果您使用 Visual Studio IDE 生成使用 Windows 公共控件版本 6.1 的新 MFC 应用程序上时，IDE 将自动声明适当的清单。  但是，迁移，如果您从早期版本的 Visual Studio 的一个现有 MFC 应用程序，而且您要使用新的公共控件，IDE 不会自动提供截然不同信息升级应用程序。  相反，必须手动插入在 stdafx.h 文件的以下源代码：  
+## <a name="migration-requirements"></a>Migration Requirements  
+ If you use the Visual Studio IDE to build a new MFC application that uses Windows Common Controls version 6.1, the IDE automatically declares an appropriate manifest. However, if you migrate an existing MFC application from an earlier version of Visual Studio and you want to use the new common controls, the IDE does not automatically provide manifest information to upgrade your application. Instead, you must manually insert the following source code in your stdafx.h file:  
   
 ```  
 #ifdef UNICODE  
@@ -60,7 +77,9 @@ Microsoft 基础类 \(MFC\) \(MFC\) 库支持 Windows 公共控件版本 6.1。 
 #endif  
 ```  
   
-## 请参阅  
- [常规 MFC 主题](../mfc/general-mfc-topics.md)   
- [层次结构图](../mfc/hierarchy-chart.md)   
- [弃用的 ANSI API](../mfc/deprecated-ansi-apis.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
+ [Hierarchy Chart](../mfc/hierarchy-chart.md)   
+ [Deprecated ANSI APIs](../mfc/deprecated-ansi-apis.md)
+
+

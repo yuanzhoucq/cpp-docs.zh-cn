@@ -1,5 +1,5 @@
 ---
-title: "CClientDC 类 |Microsoft 文档"
+title: CClientDC Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,10 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CClientDC class
-- device contexts, client area
-- client-area device context
-- CDC class, device contexts for client areas
+- CClientDC [MFC], CClientDC
+- CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
 caps.latest.revision: 22
 author: mikeblome
@@ -39,86 +37,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 619bed4d31994bde8464ad710e9f050d6ba0696a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d3948274f1862de8f5cc8191140940ed97cdb02c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cclientdc-class"></a>CClientDC 类
-负责调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在构造时和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在析构时。  
+# <a name="cclientdc-class"></a>CClientDC Class
+Takes care of calling the Windows functions [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) at construction time and [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) at destruction time.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CClientDC : public CDC  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|构造`CClientDC`对象连接到`CWnd`。|  
+|[CClientDC::CClientDC](#cclientdc)|Constructs a `CClientDC` object connected to the `CWnd`.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|`HWND`此窗口的`CClientDC`是否有效。|  
+|[CClientDC::m_hWnd](#m_hwnd)|The `HWND` of the window for which this `CClientDC` is valid.|  
   
-## <a name="remarks"></a>备注  
- 这意味着，与关联的设备上下文`CClientDC`对象是一个窗口的工作区。  
+## <a name="remarks"></a>Remarks  
+ This means that the device context associated with a `CClientDC` object is the client area of a window.  
   
- 有关详细信息`CClientDC`，请参阅[设备上下文](../../mfc/device-contexts.md)。  
+ For more information on `CClientDC`, see [Device Contexts](../../mfc/device-contexts.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CDC](../../mfc/reference/cdc-class.md)  
   
  `CClientDC`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cclientdc"></a>CClientDC::CClientDC  
- 构造`CClientDC`访问的工作区的对象[CWnd](../../mfc/reference/cwnd-class.md)指向`pWnd`。  
+##  <a name="cclientdc"></a>  CClientDC::CClientDC  
+ Constructs a `CClientDC` object that accesses the client area of the [CWnd](../../mfc/reference/cwnd-class.md) pointed to by `pWnd`.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 设备上下文对象将访问其工作区窗口中。  
+ The window whose client area the device context object will access.  
   
-### <a name="remarks"></a>备注  
- 构造函数调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)。  
+### <a name="remarks"></a>Remarks  
+ The constructor calls the Windows function [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- 异常 (类型的`CResourceException`) 如果则会引发 Windows`GetDC`调用将失败。 设备上下文可能不可用，如果 Windows 已分配所有可用的设备上下文。 您的应用程序都可用在 Windows 下任何给定时间的五个常见显示上下文争用。  
+ An exception (of type `CResourceException`) is thrown if the Windows `GetDC` call fails. A device context may not be available if Windows has already allocated all of its available device contexts. Your application competes for the five common display contexts available at any given time under Windows.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&42;](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
- `HWND`的`CWnd`指针，用于构造`CClientDC`对象。  
+##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
+ The `HWND` of the `CWnd` pointer used to construct the `CClientDC` object.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>备注  
- `m_hWnd`是一个受保护的变量。  
+### <a name="remarks"></a>Remarks  
+ `m_hWnd` is a protected variable.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CClientDC::CClientDC](#cclientdc)。  
+### <a name="example"></a>Example  
+  See the example for [CClientDC::CClientDC](#cclientdc).  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 MDI](../../visual-cpp-samples.md)   
- [CDC 类](../../mfc/reference/cdc-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CDC 类](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDI](../../visual-cpp-samples.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)
 

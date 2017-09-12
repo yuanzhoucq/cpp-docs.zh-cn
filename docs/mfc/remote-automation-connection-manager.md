@@ -1,37 +1,56 @@
 ---
-title: "远程自动化连接管理器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自动化客户端, 针对远程自动化的配置"
-  - "自动化服务器, 针对远程自动化的配置"
-  - "RAC 管理器工具"
-  - "注册表, 远程自动化"
-  - "远程自动化连接管理器"
-  - "远程自动化, 配置客户端和服务器计算机"
+title: Remote Automation Connection Manager | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation clients [MFC], configuring for Remote Automation
+- registry [MFC], remote Automation
+- Automation servers [MFC], configuring for Remote Automation
+- Remote Automation Connection Manager [MFC]
+- Remote Automation [MFC], configuring client and server machines
+- RAC Manager tool [MFC]
 ms.assetid: 562eb7bc-f95c-46ad-ac97-f0dfa98362af
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 远程自动化连接管理器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7c4d783aabc56bf33ce334b037a0489ef38220c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-若要配置客户端和服务器机器，则需要进行注册表更改。  而不是手动执行此，使用远程自动化连接 \(RAC\) 管理器工具更为方便。  此工具，RACMGR32 .EXE，以及 RACREG32 .DLL 外，还需要复制到您选择的所有目录。  通过将其放入路径，使用运行可能从任务栏中执行。  或者，在开头菜单中创建快捷方式或将对它引用。  
+---
+# <a name="remote-automation-connection-manager"></a>Remote Automation Connection Manager
+To configure both client and server machines, you need to make registry changes. Rather than doing this by hand, it is far easier to use the Remote Automation Connection (RAC) Manager tool. This tool, RACMGR32.EXE, along with RACREG32.DLL, needs to be copied to any directory you choose. By putting it in the PATH, it can be executed from the taskbar using Run. Alternatively, you can create a shortcut to it or place a reference to it on the Start menu.  
   
- RACMGR32 在 Visual Basic 编写的并需要某些 Visual Basic 支持 DLL。  这些文件位于目录放置和在 CD\-ROM 中 RACMGR32 相同。  由 Visual C\+\+ 企业版中设置安装这些文件的版本与 Visual Basic Enterprise Edition 5.0 的这些等效或接近。  Visual C\+\+ Setup 以复制 Visual Basic 文件的新版本到系统目录。  对于 Windows 9x，该目录通常是 C:\\Windows\\System.  对于 Windows 2000 和 Windows NT，它通常是 C:\\WINNT\\system32.  设置也用操作系统注册这些文件。  可以从 Visual Basic 安装中移除它们。  
+ RACMGR32 is written in Visual Basic and therefore needs some Visual Basic support DLLs. These files are placed in the same directory as RACMGR32.EXE on the CD-ROM. The versions of these files that are installed by the Setup for Visual C++ Enterprise Edition are equivalent or more recent than those that shipped with Visual Basic Enterprise Edition 5.0. The Visual C++ Setup copies the new versions of the Visual Basic files to your system directory. For Windows 9x, this directory is typically C:\Windows\System. For Windows NT and Windows 2000, it is typically C:\WINNT\system32. Setup also registers these files with the operating system. You may remove them from your Visual Basic installation.  
   
-## 请参阅  
- [自动化管理器 \(MFC\)](../mfc/automation-manager-mfc.md)   
- [远程自动化用户组件](../mfc/remote-automation-user-components.md)   
- [远程自动化安装](../mfc/remote-automation-installation.md)
+## <a name="see-also"></a>See Also  
+ [Automation Manager (MFC)](../mfc/automation-manager-mfc.md)   
+ [Remote Automation User Components](../mfc/remote-automation-user-components.md)   
+ [Remote Automation Installation](../mfc/remote-automation-installation.md)
+
+

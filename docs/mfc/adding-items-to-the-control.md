@@ -1,37 +1,56 @@
 ---
-title: "向控件添加项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 类, 添加项"
+title: Adding Items to the Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 向控件添加项
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d0b2eed5ed31d8f18c8d37ce6facfb7f44ab3e3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-若要向列表控件添加项 \([CListCtrl](../mfc/reference/clistctrl-class.md)\)，具体根据信息称为 [InsertItem](../Topic/CListCtrl::InsertItem.md) 成员函数的几个版本之一，则具有。  一个版本采用您准备的 [LV\_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) 结构。  由于 `LV_ITEM` 结构包含过多成员，则更多的控制。列表控件项的特性。  
+---
+# <a name="adding-items-to-the-control"></a>Adding Items to the Control
+To add items to the list control ([CListCtrl](../mfc/reference/clistctrl-class.md)), call one of several versions of the [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) member function, depending on what information you have. One version takes a [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) structure that you prepare. Because the `LV_ITEM` structure contains numerous members, you have greater control over the attributes of the list control item.  
   
- 两个关键成员 \(随报表视图\) `LV_ITEM` 结构是 `iItem` 和 `iSubItem` 成员。  `iItem` 成员是引用结构项的从零开始的索引，而 `iSubItem` 成员是从一开始的子项的索引或零，则结构包含有关项目中的项的信息。  利用这两个成员。确定，每个项目类型，和值显示子项列表控件的信息，请在"视图时。  有关更多信息，请参见 [CListCtrl::SetItem](../Topic/CListCtrl::SetItem.md)。  
+ Two important members (in regard to the report view) of the `LV_ITEM` structure are the `iItem` and `iSubItem` members. The `iItem` member is the zero-based index of the item the structure is referencing and the `iSubItem` member is the one-based index of a subitem, or zero if the structure contains information about an item. With these two members you determine, per item, the type and value of subitem information that is displayed when the list control is in report view. For more information, see [CListCtrl::SetItem](../mfc/reference/clistctrl-class.md#setitem).  
   
- 附加成员指定项的文本、图标、状态和项数据。“项数据”是由应用程序定义的值与列表视图项。  有关`LV_ITEM`结构的更多信息，请参见[CListCtrl::GetItem](../Topic/CListCtrl::GetItem.md)。  
+ Additional members specify the item's text, icon, state, and item data. "Item data" is an application-defined value associated with a list view item. For more information about the `LV_ITEM` structure, see [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem).  
   
- `InsertItem` 的其他版本采用一个或多个单独值，与 `LV_ITEM` 结构的相应成员，使您可以初始化希望只支持的这些成员。  通常，列表控件管理列表项的存储，但是，可以存储在某些应用程序的信息，使用回调“项”。有关更多信息，请参见本主题中的 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]的 [回调项和回调掩码](../mfc/callback-items-and-the-callback-mask.md) 和 [回调项和回调掩码](http://msdn.microsoft.com/library/windows/desktop/bb774736)。  
+ Other versions of `InsertItem` take one or more separate values, corresponding to members in the `LV_ITEM` structure, allowing you to initialize only those members you want to support. Generally, the list control manages storage for list items, but you can store some of the information in your application instead, using "callback items." For more information, see [Callback Items and the Callback Mask](../mfc/callback-items-and-the-callback-mask.md) in this topic and [Callback Items and the Callback Mask](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK.  
   
- 有关更多信息，请参见 [添加列表视图项和子项](http://msdn.microsoft.com/library/windows/desktop/bb774736)。  
+ For more information, see [Adding List-View Items and Subitems](http://msdn.microsoft.com/library/windows/desktop/bb774736).  
   
-## 请参阅  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

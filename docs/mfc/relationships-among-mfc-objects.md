@@ -1,62 +1,81 @@
 ---
-title: "MFC 对象之间的关系 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 对象关系"
-  - "MFC, 键对象之间的关系"
-  - "对象 [C++], 关系"
-  - "关系, MFC 对象"
+title: Relationships Among MFC Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, relationships between key objects
+- objects [MFC], relationships
+- relationships, MFC objects
+- MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# MFC 对象之间的关系
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66df0ca425038c60927822b14aba1cb6379488c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-若要帮助在中心将文档\/视图创建过程，请考虑一运行程序：用于包含框架窗口、文档的视图和视图与文档。  
+---
+# <a name="relationships-among-mfc-objects"></a>Relationships Among MFC Objects
+To help put the document/view creation process in perspective, consider a running program: a document, the frame window used to contain the view, and the view associated with the document.  
   
--   文档保留该文档和指针"视图到文档的文档的列表创建模板。  
+-   A document keeps a list of the views of that document and a pointer to the document template that created the document.  
   
--   视图将指向该文档是它的父框架窗口的子级。  
+-   A view keeps a pointer to its document and is a child of its parent frame window.  
   
--   文档框架窗口保留一个指向当前活动视图。  
+-   A document frame window keeps a pointer to its current active view.  
   
--   文档模板将其打开文档的列表。  
+-   A document template keeps a list of its open documents.  
   
--   应用程序保留其文档模板的列表。  
+-   The application keeps a list of its document templates.  
   
--   窗口记录所有打开的窗口，以便它可以发送到。  
+-   Windows keeps track of all open windows so it can send messages to them.  
   
- 这些关系在文档\/视图创建时生成。  下表显示在运行的程序的对象如何访问其他对象。  所有对象可以获取指向应用程序通过调用全局函数 [AfxGetApp](../Topic/AfxGetApp.md)。  
+ These relationships are established during document/view creation. The following table shows how objects in a running program can access other objects. Any object can obtain a pointer to the application object by calling the global function [AfxGetApp](../mfc/reference/application-information-and-management.md#afxgetapp).  
   
-### 能够对其他应用程序中的对象  
+### <a name="gaining-access-to-other-objects-in-your-application"></a>Gaining Access to Other Objects in Your Application  
   
-|从对象|如何访问其他对象|  
-|---------|--------------|  
-|Document|使用 [GetFirstViewPosition](../Topic/CDocument::GetFirstViewPosition.md) [GetNextView](../Topic/CDocument::GetNextView.md) 和访问文档的列表视图。<br /><br /> 调用获取文档模板的 [GetDocTemplate](../Topic/CDocument::GetDocTemplate.md)。|  
-|视图|调用获取文档中的 [GetDocument](../Topic/CView::GetDocument.md)。<br /><br /> 调用获取框架窗口中 [GetParentFrame](../Topic/CWnd::GetParentFrame.md)。|  
-|文档框架窗口|调用获取当前视图的 [GetActiveView](../Topic/CFrameWnd::GetActiveView.md)。<br /><br /> 调用 [GetActiveDocument](../Topic/CFrameWnd::GetActiveDocument.md) 获取文档附加到当前的视图。|  
-|MDI帧窗口|调用获取当前有效的 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)的 [MDIGetActive](../Topic/CMDIFrameWnd::MDIGetActive.md)。|  
+|From object|How to access other objects|  
+|-----------------|---------------------------------|  
+|Document|Use [GetFirstViewPosition](../mfc/reference/cdocument-class.md#getfirstviewposition) and [GetNextView](../mfc/reference/cdocument-class.md#getnextview) to access the document's view list.<br /><br /> Call [GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate) to get the document template.|  
+|View|Call [GetDocument](../mfc/reference/cview-class.md#getdocument) to get the document.<br /><br /> Call [GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe) to get the frame window.|  
+|Document frame window|Call [GetActiveView](../mfc/reference/cframewnd-class.md#getactiveview) to get the current view.<br /><br /> Call [GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument) to get the document attached to the current view.|  
+|MDI frame window|Call [MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive) to get the currently active [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).|  
   
- 通常，框架窗口具有视图，但是，在某些情况下，在拆分窗口，则框架窗口包含多个视图。  框架窗口保留一个指向当前活动视图；其他视图，在激活后，指针更新。  
+ Typically, a frame window has one view, but sometimes, as in splitter windows, the same frame window contains multiple views. The frame window keeps a pointer to the currently active view; the pointer is updated any time another view is activated.  
   
 > [!NOTE]
->  指针到主框架窗口在应用程序对象的成员变量存储。[m\_pMainWnd](../Topic/CWinThread::m_pMainWnd.md) 对 `OnFileNew` 的调用在 `CWinApp` 的 `InitInstance` 成员函数的重写设置了 `m_pMainWnd`。  如果您不调用 `OnFileNew`，您必须将 `InitInstance` 变量的值。\(SDI\) COM 组件 \(服务器\) 应用程序无法将变量设置，如果 \/Embedding 命令行上。\)注意 `m_pMainWnd` 现在是类 `CWinThread` 的成员而不是 `CWinApp`。  
+>  A pointer to the main frame window is stored in the [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) member variable of the application object. A call to `OnFileNew` in your override of the `InitInstance` member function of `CWinApp` sets `m_pMainWnd` for you. If you do not call `OnFileNew`, you must set the variable's value in `InitInstance` yourself. (SDI COM component (server) applications may not set the variable if /Embedding is on the command line.) Note that `m_pMainWnd` is now a member of class `CWinThread` rather than `CWinApp`.  
   
-## 请参阅  
- [文档模板和文档\/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [文档模板创建](../mfc/document-template-creation.md)   
- [文档\/视图创建](../mfc/document-view-creation.md)   
- [创建新文档、窗口和视图](../mfc/creating-new-documents-windows-and-views.md)
+## <a name="see-also"></a>See Also  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

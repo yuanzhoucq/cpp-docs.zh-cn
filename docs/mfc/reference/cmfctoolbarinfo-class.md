@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBarInfo 类 |Microsoft 文档"
+title: CMFCToolBarInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarInfo class
+- CMFCToolBarInfo [MFC], m_uiColdResID
+- CMFCToolBarInfo [MFC], m_uiDisabledResID
+- CMFCToolBarInfo [MFC], m_uiHotResID
+- CMFCToolBarInfo [MFC], m_uiLargeColdResID
+- CMFCToolBarInfo [MFC], m_uiLargeDisabledResID
+- CMFCToolBarInfo [MFC], m_uiLargeHotResID
+- CMFCToolBarInfo [MFC], m_uiMenuDisabledResID
+- CMFCToolBarInfo [MFC], m_uiMenuResID
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
 caps.latest.revision: 22
 author: mikeblome
@@ -42,104 +49,104 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a9e66ffa0b5a751a7e5711ed20927a6adcede45d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8fca818372c2eea28b9246ade814ef72d62259fb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo 类
-包含处于不同状态的工具栏图像的资源 ID。 `CMFCToolBarInfo`是用作参数的帮助器类[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  
+# <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo Class
+Contains the resource IDs of toolbar images in various states. `CMFCToolBarInfo` is a helper class that is used as a parameter of the [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) method.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarInfo  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|包含正则 （冷） 的工具栏图像的工具栏位图的资源 ID。|  
-|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|包含已禁用的工具栏图像的工具栏位图的资源 ID。|  
-|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|包含所选 （热） 的工具栏图像的工具栏位图的资源 ID。|  
-|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|包含的大型、 常规的工具栏图像的工具栏位图的资源 ID。|  
-|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|资源 ID 的工具栏位图，其中包含很大，禁用的工具栏图像。|  
-|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|包含大、 所选的工具栏图像的工具栏位图的资源 ID。|  
-|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|包含禁用的菜单图像的工具栏位图的资源 ID。|  
-|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|包含菜单图像的工具栏位图的资源 ID。|  
+|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Resource ID of the toolbar bitmap that contains regular (cold) toolbar images.|  
+|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Resource ID of the toolbar bitmap that contains disabled toolbar images.|  
+|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|Resource ID of the toolbar bitmap that contains selected (hot) toolbar images.|  
+|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|Resource ID of the toolbar bitmap that contains large, regular toolbar images.|  
+|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|Resource ID of the toolbar bitmap that contains large, disabled toolbar images.|  
+|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|Resource ID of the toolbar bitmap that contains large, selected toolbar images.|  
+|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|Resource ID of the toolbar bitmap that contains disabled menu images.|  
+|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|Resource ID of the toolbar bitmap that contains menu images.|  
   
-## <a name="remarks"></a>备注  
- 完整工具栏位图包含，它具有固定大小的小型的工具栏图像 （按钮）。 存储在每个资源 ID`CMFCToolBarInfo`对象是包含一套完整的 （如示例中，选择、 已禁用大或菜单的图像） 的单个状态中的工具栏图像的位图。  
+## <a name="remarks"></a>Remarks  
+ A full toolbar bitmap consists of small toolbar images (buttons) of a fixed size. Each resource ID that is stored in a `CMFCToolBarInfo` object is a bitmap that contains a full set of toolbar images in a single state (for example, selected, disabled, large, or menu images).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxtoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbar.h  
   
-##  <a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
- 指定的工具栏上的所有常规按钮图像的资源 ID。  
+##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID  
+ Specifies a resource ID for all the regular button images of a toolbar.  
   
 ```  
 UINT m_uiColdResID;  
 ```  
   
-##  <a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
- 指定工具栏的按钮不可用的图像的资源 ID。  
+##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID  
+ Specifies a resource ID for the button-unavailable images of a toolbar.  
   
 ```  
 UINT m_uiDisabledResID;  
 ```  
   
-##  <a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
- 指定的工具栏上的所有突出显示的按钮图像的资源 ID。  
+##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID  
+ Specifies a resource ID for all the highlighted button images of a toolbar.  
   
 ```  
 UINT m_uiHotResID  
 ```  
   
-##  <a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
- 指定的工具栏上的所有大型的常规按钮图像的资源 ID。  
+##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID  
+ Specifies a resource ID for all the large regular button images of a toolbar.  
   
 ```  
 UINT m_uiLargeColdResID  
 ```  
   
-##  <a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
- 指定的工具栏上的所有大型的禁用的按钮图像的资源 ID。  
+##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID  
+ Specifies a resource ID for all the large disabled button images of a toolbar.  
   
 ```  
 UINT m_uiLargeDisabledResID;  
 ```  
   
-##  <a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
- 指定的工具栏上的所有大突出显示图像的资源 ID。  
+##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID  
+ Specifies a resource ID for all the large highlighted images of a toolbar.  
   
 ```  
 UINT m_uiLargeHotResID;  
 ```  
   
-##  <a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
- 指定工具栏的命令不可用的图像的资源 ID。  
+##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID  
+ Specifies a resource ID for the command-unavailable images of a toolbar.  
   
 ```  
 UINT m_uiMenuDisabledResID;  
 ```  
   
-##  <a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
- 指定工具栏的所有正则菜单项图像的资源 ID。  
+##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID  
+ Specifies a resource ID for all the regular menu item images of a toolbar.  
   
 ```  
 UINT m_uiMenuResID;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)
 

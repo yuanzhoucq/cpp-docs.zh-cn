@@ -1,177 +1,201 @@
 ---
-title: "TN062：Windows 控件的消息反射 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "消息反射"
-  - "通知消息"
-  - "ON_CONTROL_REFLECT 宏"
-  - "ON_CONTROL_REFLECT_EX 宏"
-  - "ON_NOTIFY 消息"
-  - "ON_NOTIFY_REFLECT 消息"
-  - "ON_NOTIFY_REFLECT_EX 消息"
-  - "ON_UPDATE_COMMAND_UI_REFLECT 宏"
-  - "ON_WM_CHARTOITEM_REFLECT 宏"
-  - "ON_WM_COMPAREITEM_REFLECT 宏"
-  - "ON_WM_CTLCOLOR_REFLECT 宏"
-  - "ON_WM_DELETEITEM_REFLECT 宏"
-  - "ON_WM_DRAWITEM_REFLECT 宏"
-  - "ON_WM_HSCROLL_REFLECT 宏"
-  - "ON_WM_MEASUREITEM_REFLECT 宏"
-  - "ON_WM_PARENTNOTIFY_REFLECT 宏"
-  - "ON_WM_VKEYTOITEM_REFLECT 宏"
-  - "ON_WM_VSCROLL_REFLECT 宏"
-  - "TN062"
-  - "WM_COMMAND"
-  - "WM_CTLCOLOR 消息"
-  - "WM_NOTIFY 消息"
+title: 'TN062: Message Reflection for Windows Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_WM_VKEYTOITEM_REFLECT macro [MFC]
+- ON_WM_DRAWITEM_REFLECT macro [MFC]
+- ON_WM_VSCROLL_REFLECT macro [MFC]
+- ON_NOTIFY_REFLECT message [MFC]
+- ON_CONTROL_REFLECT_EX macro [MFC]
+- ON_UPDATE_COMMAND_UI_REFLECT macro [MFC]
+- ON_NOTIFY_REFLECT_EX message [MFC]
+- ON_WM_HSCROLL_REFLECT macro [MFC]
+- message reflection [MFC]
+- ON_WM_COMPAREITEM_REFLECT macro [MFC]
+- ON_WM_MEASUREITEM_REFLECT macro [MFC]
+- ON_NOTIFY message [MFC]
+- WM_COMMAND [MFC]
+- WM_CTLCOLOR message [MFC]
+- TN062 [MFC]
+- ON_WM_CHARTOITEM_REFLECT macro [MFC]
+- ON_WM_CTLCOLOR_REFLECT macro [MFC]
+- ON_WM_DELETEITEM_REFLECT macro [MFC]
+- notification messages [MFC]
+- ON_WM_PARENTNOTIFY_REFLECT macro [MFC]
+- WM_NOTIFY message [MFC]
+- ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN062：Windows 控件的消息反射
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7cc2af2bf3b5604f36d7c669f462c1293a51ac9f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Message Reflection for Windows Controls
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此技术声明介绍反射消息，在 MFC 4.0 的新功能。  它还包含创建使用消息反射的一个简单的可重用控件的方向。  
+ This technical note describes message reflection, a new feature in MFC 4.0. It also contains directions for creating a simple reusable control that uses message reflection.  
   
- 此技术声明不讨论反射消息时，该应用于 ActiveX 控件 \(以前调用 OLE 控件\)。   参见文章 [ActiveX 控件：的 Subclassing 窗口控制](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。  
+ This technical note does not discuss message reflection as it applies to ActiveX controls (formerly called OLE controls). Please see the article [ActiveX Controls: Subclassing a Windows Control](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
- **消息反射是什么？**  
+ **What Is Message Reflection**  
   
- Windows 控件频繁发送通知消息到其父窗口。  例如，许多控件颜色控件发送通知消息 \(其变量或`WM_CTLCOLOR` 之一\) 向其父允许父提供绘制控件的背景的画笔。  
+ Windows controls frequently send notification messages to their parent windows. For instance, many controls send a control color notification message (`WM_CTLCOLOR` or one of its variants) to their parent to allow the parent to supply a brush for painting the background of the control.  
   
- 在窗口和在 4.0 版之前的 MFC，父窗口，通常，对话框负责处理这些信息。  这意味着的消息处理代码需要在父窗口的类，并且在需要处理该消息的每类必须复制。  采用上面的示例中，每一对话框具有自定义背景的需要的控件必须处理控件颜色通知消息。  重用代码要容易的多，如果要处理自己的背景色的控件类可能编写。  
+ In Windows and in MFC before version 4.0, the parent window, often a dialog box, is responsible for handling these messages. This means that the code for handling the message needs to be in the parent window's class and that it has to be duplicated in every class that needs to handle that message. In the case above, every dialog box that wanted controls with custom backgrounds would have to handle the control color notification message. It would be much easier to reuse code if a control class could be written that would handle its own background color.  
   
- 在 MFC 4.0，旧机制仍然工作 \- 父窗口可以处理控件通知消息。  此外，但是，MFC 4.0 实现重用通过提供调用“子控件窗口或父窗口使这些通知消息已得到处理的反射消息”功能，或者在两个。  在控件背景色的示例中，您现在可以编写通过处理反映的 `WM_CTLCOLOR` 消息为自己设置的背景颜色 \- 所有无需依赖父的控件类。（注释因为消息反射由 MFC 实现，而不是必须的反射消息窗口中，从 `CWnd` 派生可以工作的父窗口类。）  
+ In MFC 4.0, the old mechanism still works — parent windows can handle notification messages. In addition, however, MFC 4.0 facilitates reuse by providing a feature called "message reflection" that allows these notification messages to be handled in either the child control window or the parent window, or in both. In the control background color example, you can now write a control class that sets its own background color by handling the reflected `WM_CTLCOLOR` message — all without relying on the parent. (Note that since message reflection is implemented by MFC, not by Windows, the parent window class must be derived from `CWnd` for message reflection to work.)  
   
- MFC 旧的版本执行操作类似于反射消息提供通过虚函数为某些消息，例如列表框的所有者描述 \(`WM_DRAWITEM`消息，等等\)。  新消息反射机制是通用和一致。  
+ Older versions of MFC did something similar to message reflection by providing virtual functions for a few messages, such as messages for owner-drawn list boxes (`WM_DRAWITEM`, and so on). The new message reflection mechanism is generalized and consistent.  
   
- 反射是消息与 MFC 版本的向后兼容 4.0 在编写代码之前。  
+ Message reflection is backward compatible with code written for versions of MFC before 4.0.  
   
- 如果您提供了处理程序的值的消息特定消息，或域，在父窗口的类，则将重写反映了相同的消息的消息处理程序提供了您不调用基类中函数处理程序自己的处理程序。  例如，如果您处理对话框类中的 `WM_CTLCOLOR`，用于处理要重写任何反射消息处理程序。  
+ If you have supplied a handler for a specific message, or for a range of messages, in your parent window's class, it will override reflected message handlers for the same message provided you don't call the base class handler function in your own handler. For example, if you handle `WM_CTLCOLOR` in your dialog box class, your handling will override any reflected message handlers.  
   
- 如果，在父窗口类，接下来提供特定的 **WM\_NOTIFY** 消息或字符范围中的 **WM\_NOTIFY** 消息处理程序，处理程序将调用，才发送这些消息的子控件没通过 **ON\_NOTIFY\_REFLECT\(\)**具有反射消息处理程序。  如果在消息映射使用 **ON\_NOTIFY\_REFLECT\_EX\(\)**，消息处理程序也可能不允许父窗口处理消息。  如果处理程序返回 **FALSE**，消息将由父级处理，而 **TRUE** 的调用不返回，允许父元素处理它。  注意反射消息在通知消息之前进行处理。  
+ If, in your parent window class, you supply a handler for a specific **WM_NOTIFY** message or a range of **WM_NOTIFY** messages, your handler will be called only if the child control sending those messages does not have a reflected message handler through **ON_NOTIFY_REFLECT()**. If you use **ON_NOTIFY_REFLECT_EX()** in your message map, your message handler may or may not allow the parent window to handle the message. If the handler returns **FALSE**, the message will be handled by the parent as well, while a call that returns **TRUE** does not allow the parent to handle it. Note that the reflected message is handled before the notification message.  
   
- 当 **WM\_NOTIFY** 发送时，控件提供第一个机会处理它。  如果其他反射的信息发送，父窗口具有第一个机会处理它，然后控件将收到反射消息。  为此，在控件类的信息映射需要处理程序函数和适当的输入。  
+ When a **WM_NOTIFY** message is sent, the control is offered the first chance to handle it. If any other reflected message is sent, the parent window has the first chance to handle it and the control will receive the reflected message. To do so, it will need a handler function and an appropriate entry in the control's class message map.  
   
- 反射消息的消息映射宏为某些通知行为不同：它通常具有 **\_REFLECT** 追加到其名称。  例如，处理将在父的 **WM\_NOTIFY** 消息，可以在父的消息映射使用 `ON_NOTIFY` 宏。  若要处理在子控件的反射消息，请使用 **ON\_NOTIFY\_REFLECT** 宏在子控件的消息映射。  有时，参数不同。  注意 ClassWizard 通常可以添加您的消息映射项和提供摘要函数实现以正确的参数。  
+ The message-map macro for reflected messages is slightly different than for regular notifications: it has **_REFLECT** appended to its usual name. For instance, to handle a **WM_NOTIFY** message in the parent, you use the macro `ON_NOTIFY` in the parent's message map. To handle the reflected message in the child control, use the **ON_NOTIFY_REFLECT** macro in the child control's message map. In some cases, the parameters are different, as well. Note that ClassWizard can usually add the message-map entries for you and provide skeleton function implementations with correct parameters.  
   
- 有关新的 **WM\_NOTIFY** 消息的信息，请参见 [TN061:ON\_NOTIFY 和 WM\_NOTIFY 消息](../mfc/tn061-on-notify-and-wm-notify-messages.md)。  
+ See [TN061: ON_NOTIFY and WM_NOTIFY Messages](../mfc/tn061-on-notify-and-wm-notify-messages.md) for information on the new **WM_NOTIFY** message.  
   
- **输入和消息映射处理程序函数原型反映的消息**  
+ **Message-Map Entries and Handler Function Prototypes for Reflected Messages**  
   
- 若要处理中反映的控件通知消息，使用宏和消息映射函数原型在下表中列出。  
+ To handle a reflected control notification message, use the message-map macros and function prototypes listed in the table below.  
   
- ClassWizard 通常可以将这些消息映射项和提供摘要函数的实现。  有关如何定义反射消息的处理程序的信息，请参见 [为反射消息定义的消息处理程序](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)。  
+ ClassWizard can usually add these message-map entries for you and provide skeleton function implementations. See [Defining a Message Handler for a Reflected Message](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) for information about how to define handlers for reflected messages.  
   
- 从消息名称若要转换为反映的宏名称，请添加在前面追加 **ON\_** 和 **\_REFLECT**。  例如，`WM_CTLCOLOR` 成为 **ON\_WM\_CTLCOLOR\_REFLECT**。\(显示的信息可能反映，请在宏执行输入相反的转换在下表中。\)  
+ To convert from the message name to the reflected macro name, prepend **ON_** and append **_REFLECT**. For example, `WM_CTLCOLOR` becomes **ON_WM_CTLCOLOR_REFLECT**. (To see which messages can be reflected, do the opposite conversion on the macro entries in the table below.)  
   
- 为上述规则的三以下情况例外：  
+ The three exceptions to the rule above are as follows:  
   
--   **WM\_COMMAND** 通知的宏为 **ON\_CONTROL\_REFLECT**。  
+-   The macro for **WM_COMMAND** notifications is **ON_CONTROL_REFLECT**.  
   
--   反射 **WM\_NOTIFY** 的宏为 **ON\_NOTIFY\_REFLECT**。  
+-   The macro for **WM_NOTIFY** reflections is **ON_NOTIFY_REFLECT**.  
   
--   `ON_UPDATE_COMMAND_UI` 反映的是 **ON\_UPDATE\_COMMAND\_UI\_REFLECT**宏。  
+-   The macro for `ON_UPDATE_COMMAND_UI` reflections is **ON_UPDATE_COMMAND_UI_REFLECT**.  
   
- 在上述每一个特例，必须指定成员处理程序函数的名称。  在其他情况下，您必须为函数处理程序使用标准名称。  
+ In each of the above special cases, you must specify the name of the handler member function. In the other cases, you must use the standard name for your handler function.  
   
- 函数的参数和返回值的含义文档在或函数名称下或者使用 **开** 的函数名加上了在前面。  例如，**CtlColor** 将在 `OnCtlColor`文档。  若干反射消息处理程序在比父窗口相同的处理程序所需的参数。  只需对名称在下面的表提供形参名称的文档中。  
+ The meanings of the parameters and return values of the functions are documented under either the function name or the function name with **On** prepended. For instance, **CtlColor** is documented in `OnCtlColor`. Several reflected message handlers need fewer parameters than the similar handlers in a parent window. Just match the names in the table below with the names of the formal parameters in the documentation.  
   
-|映射项|函数原型|  
-|---------|----------|  
-|**ON\_CONTROL\_REFLECT\(**  `wNotifyCode` **,**  `memberFxn` **\)**|**afx\_msg void**  `memberFxn`  **\( \);**|  
-|**ON\_NOTIFY\_REFLECT\(**  `wNotifyCode` **,**  `memberFxn` **\)**|**afx\_msg void**  `memberFxn`  **\( NMHDR \***  `pNotifyStruct` **, LRESULT\***  *结果*  **\);**|  
-|**ON\_UPDATE\_COMMAND\_UI\_REFLECT\(**  `memberFxn` **\)**|**afx\_msg void**  `memberFxn`  **\( CCmdUI\***  `pCmdUI`  **\);**|  
-|**ON\_WM\_CTLCOLOR\_REFLECT\( \)**|**afx\_msg HBRUSH CtlColor \( CDC\***  `pDC` **, UINT**  `nCtlColor`  **\);**|  
-|**ON\_WM\_DRAWITEM\_REFLECT\( \)**|**afx\_msg void DrawItem \( LPDRAWITEMSTRUCT** `lpDrawItemStruct`  **\);**|  
-|**ON\_WM\_MEASUREITEM\_REFLECT\( \)**|**afx\_msg void MeasureItem \( LPMEASUREITEMSTRUCT**  `lpMeasureItemStruct`  **\);**|  
-|**ON\_WM\_DELETEITEM\_REFLECT\( \)**|**afx\_msg void DeleteItem \( LPDELETEITEMSTRUCT**  `lpDeleteItemStruct`  **\);**|  
-|**ON\_WM\_COMPAREITEM\_REFLECT\( \)**|**afx\_msg int CompareItem \( LPCOMPAREITEMSTRUCT**  `lpCompareItemStruct`  **\);**|  
-|**ON\_WM\_CHARTOITEM\_REFLECT\( \)**|**afx\_msg int CharToItem \( UINT**  `nKey` **, UINT**  `nIndex`  **\);**|  
-|**ON\_WM\_VKEYTOITEM\_REFLECT\( \)**|**afx\_msg int VKeyToItem \( UINT**  `nKey` **, UINT**  `nIndex`  **\);**|  
-|**ON\_WM\_HSCROLL\_REFLECT\( \)**|**afx\_msg void HScroll \( UINT**  `nSBCode` **, UINT**  `nPos`  **\);**|  
-|**ON\_WM\_VSCROLL\_REFLECT\( \)**|**afx\_msg void VScroll \( UINT**  `nSBCode` **, UINT**  `nPos`  **\);**|  
-|**ON\_WM\_PARENTNOTIFY\_REFLECT\( \)**|**afx\_msg void ParentNotify \( UINT**  `message` **, LPARAM**  `lParam`  **\);**|  
+|Map entry|Function prototype|  
+|---------------|------------------------|  
+|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|  
+|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR \*** `pNotifyStruct` **, LRESULT\*** *result* **);**|  
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI\*** `pCmdUI` **);**|  
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor ( CDC\*** `pDC` **, UINT** `nCtlColor` **);**|  
+|**ON_WM_DRAWITEM_REFLECT( )**|**afx_msg void DrawItem ( LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|  
+|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem ( LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|  
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem ( LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|  
+|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem ( LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|  
+|**ON_WM_CHARTOITEM_REFLECT( )**|**afx_msg int CharToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|  
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**afx_msg int VKeyToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|  
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|  
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|  
+|**ON_WM_PARENTNOTIFY_REFLECT( )**|**afx_msg void ParentNotify ( UINT** `message` **, LPARAM** `lParam` **);**|  
   
- **ON\_NOTIFY\_REFLECT** 和 **ON\_CONTROL\_REFLECT** 宏具有允许多个对象中的变体 \(如控件及其父级\) 处理已提供的信息。  
+ The **ON_NOTIFY_REFLECT** and **ON_CONTROL_REFLECT** macros have variations that allow more than one object (such as the control and its parent) to handle a given message.  
   
-|映射项|函数原型|  
-|---------|----------|  
-|**ON\_NOTIFY\_REFLECT\_EX\(**  `wNotifyCode` **,**  `memberFxn` **\)**|**afx\_msg BOOL**  `memberFxn`  **\( NMHDR \***  `pNotifyStruct` **, LRESULT\***  *结果*  **\);**|  
-|**ON\_CONTROL\_REFLECT\_EX\(**  `wNotifyCode` **,**  `memberFxn`  **\)**|**afx\_msg BOOL**  `memberFxn`  **\( \);**|  
+|Map entry|Function prototype|  
+|---------------|------------------------|  
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR \*** `pNotifyStruct` **, LRESULT\*** *result* **);**|  
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|  
   
-## 处理反射消息：可重用控件的示例  
- 此简单示例创建一个名为 `CYellowEdit`的可重用控件。  控件有效与标准编辑控件相同，但它在黄色背景的黑色文本。  添加将允许 `CYellowEdit` 控件显示的不同颜色的成员函数非常容易。  
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Handling Reflected Messages: An Example of a Reusable control  
+ This simple example creates a reusable control called `CYellowEdit`. The control works the same as a regular edit control except that it displays black text on a yellow background. It would be easy to add member functions that would allow the `CYellowEdit` control to display different colors.  
   
-#### 尝试创建可重用的控件的示例  
+#### <a name="to-try-the-example-that-creates-a-reusable-control"></a>To try the example that creates a reusable control  
   
-1.  创建在一个现有的应用程序的对话框。  有关详细信息，请参阅 [窗口编辑器](../mfc/dialog-editor.md) 接口主题。  
+1.  Create a new dialog box in an existing application. For more information, see the [dialog editor](../windows/dialog-editor.md) topic.  
   
-     您必须对开发可重用控件的应用程序。  如果不需要使用一种现有的应用程序，使用 AppWizard，创建了基于对话框的应用程序。  
+     You must have an application in which to develop the reusable control. If you don't have an existing application to use, create a dialog-based application using AppWizard.  
   
-2.  在项目加载到 Visual C\+\+，请使用类向导基于 `CEdit`创建名为 `CYellowEdit` 的新类。  
+2.  With your project loaded into Visual C++, use ClassWizard to create a new class called `CYellowEdit` based on `CEdit`.  
   
-3.  添加三的成员变量添加到 `CYellowEdit` 类。  之前都为保持文本颜色和背景色的 **COLORREF** 变量。  第三将会保存绘制背景画笔的 `CBrush` 对象。  当销毁时，`CBrush` 对象您允许将一次创建画笔，仅引用它。此后和自动销毁画笔 `CYellowEdit` 控件。  
+3.  Add three member variables to your `CYellowEdit` class. The first two will be **COLORREF** variables to hold the text color and the background color. The third will be a `CBrush` object that will hold the brush for painting the background. The `CBrush` object allows you to create the brush once, merely referencing it after that, and to destroy the brush automatically when the `CYellowEdit` control is destroyed.  
   
-4.  通过将构造函数初始化成员变量：  
+4.  Initialize the member variables by writing the constructor as follows:  
   
-    ```  
-    CYellowEdit::CYellowEdit()  
-    {  
-       m_clrText = RGB( 0, 0, 0 );  
-       m_clrBkgnd = RGB( 255, 255, 0 );  
-       m_brBkgnd.CreateSolidBrush( m_clrBkgnd );  
-    }  
-    ```  
+ ```  
+    CYellowEdit::CYellowEdit() 
+ {  
+    m_clrText = RGB(0,
+    0,
+    0);
+
+    m_clrBkgnd = RGB(255,
+    255,
+    0);
+
+    m_brBkgnd.CreateSolidBrush(m_clrBkgnd);
+
+ }  
+ ```  
   
-5.  使用 ClassWizard，请添加反射的 `WM_CTLCOLOR` 消息处理程序添加到 `CYellowEdit` 类。  请注意光标消息名称前面的等号中可以处理消息的列表以指示该消息已得到反映。  这在中描述。[为反射消息定义的消息处理程序](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
+5.  Using ClassWizard, add a handler for the reflected `WM_CTLCOLOR` message to your `CYellowEdit` class. Note that the equal sign in front of the message name in the list of messages you can handle indicates that the message is reflected. This is described in [Defining a Message Handler for a Reflected Message](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
   
-     ClassWizard 添加下面消息映射宏和函数的主干：  
+     ClassWizard adds the following message-map macro and skeleton function for you:  
   
-    ```  
-    ON_WM_CTLCOLOR_REFLECT()  
-  
-    // Note: other code will be in between....  
-  
+ ```  
+    ON_WM_CTLCOLOR_REFLECT() 
+ *// Note: other code will be in between....  
+ 
     HBRUSH CYellowEdit::CtlColor(CDC* pDC, UINT nCtlColor)   
-    {  
-       // TODO: Change any attributes of the DC here  
+ { *// TODO: Change any attributes of the DC here  
+ *// TODO: Return a non-NULL brush if the *//   parent's handler should not be called  
+    return NULL;  
+ }  
+ ```  
   
-       // TODO: Return a non-NULL brush if the  
-       //   parent's handler should not be called  
-       return NULL;  
-    }  
-    ```  
+6.  Replace the body of the function with the following code. The code specifies the text color, the text background color, and the background color for rest of the control.  
   
-6.  将函数的主体的代码替换为以下代码：  代码对于其他控件指定文本颜色、文本背景色和背景色。  
-  
-    ```  
-    pDC->SetTextColor( m_clrText );   // text  
-    pDC->SetBkColor( m_clrBkgnd );   // text bkgnd  
+ ```  
+    pDC->SetTextColor(m_clrText);
+*// text  
+    pDC->SetBkColor(m_clrBkgnd);
+*// text bkgnd  
     return m_brBkgnd;            // ctl bkgnd  
-    ```  
+ ```  
   
-7.  在创建对话框中的 Edit 控件，然后附加到成员变量双击编辑控件，按住 Ctrl 键按下时。  在"添加成员变量"对话框，请完成变量名称并选择“控件”类别，然后“CYellowEdit”变量的类型。  不要忘记设置对话框中的 Tab 键顺序。  此外，确保到包含 `CYellowEdit` 控件的标头文件对话框中的头文件。  
+7.  Create an edit control in your dialog box, then attach it to a member variable by double-clicking the edit control while holding a control key down. In the Add Member Variable dialog box, finish the variable name and choose "Control" for the category, then "CYellowEdit" for the variable type. Don't forget to set the tab order in the dialog box. Also, be sure to include the header file for the `CYellowEdit` control in your dialog box's header file.  
   
-8.  生成并运行应用程序。  编辑控件将以黄色背景。  
+8.  Build and run your application. The edit control will have a yellow background.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

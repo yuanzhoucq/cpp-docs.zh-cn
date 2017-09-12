@@ -1,64 +1,83 @@
 ---
-title: "按任务划分的 Internet 信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, Internet 应用程序"
+title: Internet Information by Task | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 按任务划分的 Internet 信息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8e847bcb7852a0338b07d26759fba9448e564bfd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本主题列出的任务顺序基于要完成的任务。  
+---
+# <a name="internet-information-by-task"></a>Internet Information by Task
+The tasks listed in this topic are sorted based on the task you want to accomplish.  
   
- 任务本主题列出以下类别：  
+ The following categories of tasks are listed in this topic:  
   
--   [ActiveX 控件、文档和异步任务名字对象](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)  
+-   [ActiveX Controls, Documents and Asynchronous Moniker Tasks](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)  
   
--   [WinInet 任务](#_core_wininet_tasks)  
+-   [WinInet Tasks](#_core_wininet_tasks)  
   
-## 你希望做什么？  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
-###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX 控件、文档和异步任务名字对象  
+###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX Controls, Documents and Asynchronous Moniker Tasks  
   
--   [了解活动文档](../mfc/active-documents-on-the-internet.md)  
+-   [Learn about Active documents](../mfc/active-documents-on-the-internet.md)  
   
--   [了解异步名字对象](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Learn about Asynchronous Monikers](../mfc/asynchronous-monikers-on-the-internet.md)  
   
--   [了解 ActiveX 控件会在 Internet 上下文](../mfc/activex-controls-on-the-internet.md)  
+-   [Learn about ActiveX controls in the Internet context](../mfc/activex-controls-on-the-internet.md)  
   
--   [活动 Internet 上下文了解文档。](../mfc/active-documents-on-the-internet.md)  
+-   [Learn about Active documents in the Internet context](../mfc/active-documents-on-the-internet.md)  
   
--   [优化 ActiveX 控件](../mfc/mfc-activex-controls-optimization.md)  
+-   [Optimize an ActiveX control](../mfc/mfc-activex-controls-optimization.md)  
   
--   [创建 MFC 和 ATL 控件签名的 CAB 文件](http://msdn.microsoft.com/zh-cn/14e50724-2505-4258-ae6b-326b706de409)  
+-   [Create Signed CAB Files for MFC and ATL Controls](http://msdn.microsoft.com/en-us/14e50724-2505-4258-ae6b-326b706de409)  
   
-###  <a name="_core_wininet_tasks"></a> WinInet 任务  
+###  <a name="_core_wininet_tasks"></a> WinInet Tasks  
   
--   [了解 WinInet，Internet 访问的 Win32 API 函数](../mfc/wininet-basics.md)  
+-   [Learn about WinInet, the Win32 API functions for Internet access](../mfc/wininet-basics.md)  
   
--   [评审的内容涉及使用 WinInet 编程](../mfc/win32-internet-extensions-wininet.md)  
+-   [Review what's involved with WinInet programming](../mfc/win32-internet-extensions-wininet.md)  
   
--   [使用 MFC WinInet 类，将 Internet 客户端应用程序，](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
+-   [Write an Internet client application, using MFC WinInet classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
   
--   [写入 FTP 客户端应用程序](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [Write an FTP client application](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
--   [编写 HTTP 客户端应用程序](../mfc/steps-in-a-typical-http-client-application.md)  
+-   [Write an HTTP client application](../mfc/steps-in-a-typical-http-client-application.md)  
   
--   [编写 Gopher 工具客户端应用程序](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [Write a Gopher client application](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
-## 请参阅  
- [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

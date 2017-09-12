@@ -1,150 +1,169 @@
 ---
-title: "控件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "按钮, MFC 控件类"
-  - "控件类"
-  - "控件类, MFC"
-  - "控件 [C++], MFC 控件类"
-  - "控件 [MFC]"
-  - "列表框, MFC 控件类"
-  - "静态显示控件"
-  - "文本, 控制输入"
-  - "用户输入, MFC 控件类"
+title: Control Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.control
+dev_langs:
+- C++
+helpviewer_keywords:
+- static display controls [MFC]
+- control classes [MFC]
+- buttons, MFC control classes
+- controls [MFC], MFC control classes
+- controls [MFC]
+- list boxes [MFC], MFC control classes
+- control classes [MFC], MFC
+- text, controls for input [MFC]
+- user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 控件类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dad536746997bbad1d506bac0676a277d760b126
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-控件封装类范围从静态文本控件的标准 Windows 控件添加到控件树。  此外，MFC 提供一些新控件，包括按钮的位图以及控件条。  
+---
+# <a name="control-classes"></a>Control Classes
+Control classes encapsulate a wide variety of standard Windows controls ranging from static text controls to tree controls. In addition, MFC provides some new controls, including buttons with bitmaps and control bars.  
   
- 类名“**Ctrl**”结尾的控件是中的新 Windows 95 和 Windows NT 3.51 版。  
+ The controls whose class names end in "**Ctrl**" were new in Windows 95 and Windows NT version 3.51.  
   
-## 静态显示控件  
+## <a name="static-display-controls"></a>Static Display Controls  
  [CStatic](../mfc/reference/cstatic-class.md)  
- 静态显示窗口。  静态控件用于标记，将或分隔在对话框或窗口中其他控件"  它们还显示图形图像而不是文本或复选框。  
+ A static-display window. Static controls are used to label, box, or separate other controls in a dialog box or window. They may also display graphical images rather than text or a box.  
   
-## 文本控件  
+## <a name="text-controls"></a>Text Controls  
  [CEdit](../mfc/reference/cedit-class.md)  
- 编辑 Text 控件窗口。  编辑控件用于接受用户输入的文本。  
+ An editable-text control window. Edit controls are used to accept textual input from the user.  
   
  [CIPAddressCtrl](../mfc/reference/cipaddressctrl-class.md)  
- 支持操作的 Internet 协议 \(IP\) 地址一个编辑框。  
+ Supports an edit box for manipulating an Internet Protocol (IP) address.  
   
  [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)  
- 用户可以输入和编辑文本的控件。  不同于由 `CEdit`封装的控件，为 Rich Edit 控件支持字符和段落格式和 OLE 对象。  
+ A control in which the user can enter and edit text. Unlike the control encapsulated in `CEdit`, a rich edit control supports character and paragraph formatting and OLE objects.  
   
-## 表示数字的控件  
+## <a name="controls-that-represent-numbers"></a>Controls That Represent Numbers  
  [CSliderCtrl](../mfc/reference/csliderctrl-class.md)  
- 滑块包含的控件，用户移动选定值或值集。  
+ A control containing a slider, which the user moves to select a value or set of values.  
   
  [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)  
- 用户可以单击来递增或递减值的一对箭头按钮。  
+ A pair of arrow buttons the user can click to increment or decrement a value.  
   
  [CProgressCtrl](../mfc/reference/cprogressctrl-class.md)  
- 从左到右显示逐渐填充指示操作进度的矩形。  
+ Displays a rectangle that is gradually filled from left to right to indicate the progress of an operation.  
   
  [CScrollBar](../mfc/reference/cscrollbar-class.md)  
- 滚动条控件窗口。  类提供一滚动条的功能，用作在对话框或窗口的控件，用户可以指定范围内的某个位置。  
+ A scroll-bar control window. The class provides the functionality of a scroll bar, for use as a control in a dialog box or window, through which the user can specify a position within a range.  
   
-## 按钮  
+## <a name="buttons"></a>Buttons  
  [CButton](../mfc/reference/cbutton-class.md)  
- 按钮控件窗口。  类提供一个按钮、复选框和单选按钮提供了一个编程接口在对话框或窗口。  
+ A button control window. The class provides a programmatic interface for a push button, check box, or radio button in a dialog box or window.  
   
- [C位图按钮](../mfc/reference/cbitmapbutton-class.md)  
- 使用位图的按钮而不是文本标题。  
+ [CBitmapButton](../mfc/reference/cbitmapbutton-class.md)  
+ A button with a bitmap rather than a text caption.  
   
-## 列表  
+## <a name="lists"></a>Lists  
  [CListBox](../mfc/reference/clistbox-class.md)  
- 列表框控制窗口。  列表框显示用户可以显示和选择的项列表。  
+ A list-box control window. A list box displays a list of items that the user can view and select.  
   
- [C拖动列表框](../mfc/reference/cdraglistbox-class.md)  
- 提供 Windows 列表框生成的功能；允许用户移动列表框项，例如文件名和字符串，在列表框中。  列表框提供此功能为项列表是有用的 \(按字母顺序之外，如包括路径名或文件的项目中。  
+ [CDragListBox](../mfc/reference/cdraglistbox-class.md)  
+ Provides the functionality of a Windows list box; allows the user to move list box items, such as filenames and string literals, within the list box. List boxes with this capability are useful for an item list in an order other than alphabetical, such as include pathnames or files in a project.  
   
  [CComboBox](../mfc/reference/ccombobox-class.md)  
- 组合框控件窗口。  组合框包含一个编辑控件以及列表框。  
+ A combo-box control window. A combo box consists of an edit control plus a list box.  
   
- [C组合框前](../mfc/reference/ccomboboxex-class.md)  
- 通过为图像列表提供支持扩展组合框控件。  
+ [CComboBoxEx](../mfc/reference/ccomboboxex-class.md)  
+ Extends the combo box control by providing support for image lists.  
   
- [C检查列表框](../mfc/reference/cchecklistbox-class.md)  
- 单击每一项旁边显示项列表与复选框的，用户可以选中或清除。，  
+ [CCheckListBox](../mfc/reference/cchecklistbox-class.md)  
+ Displays a list of items with check boxes, which the user can check or clear, next to each item.  
   
  [CListCtrl](../mfc/reference/clistctrl-class.md)  
- 显示项的集合，包括图标和标签的每个，某些文件类似于资源管理器右窗格。  
+ Displays a collection of items, each consisting of an icon and a label, in a manner similar to the right pane of File Explorer.  
   
  [CTreeCtrl](../mfc/reference/ctreectrl-class.md)  
- 图标显示一个分层列表，并将标签的一些文件类似于资源管理器左窗格。  
+ Displays a hierarchical list of icons and labels arranged in a manner similar to the left pane of File Explorer.  
   
-## 工具栏和状态栏  
+## <a name="toolbars-and-status-bars"></a>Toolbars and Status Bars  
  [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
- 提供 Windows 工具栏公共控件的功能。  大多数 MFC 程序使用 [CToolBar](../mfc/reference/ctoolbar-class.md) 而不是此类。  
+ Provides the functionality of the Windows toolbar common control. Most MFC programs use [CToolBar](../mfc/reference/ctoolbar-class.md) instead of this class.  
   
- [CStatusBarCtrl（C状态栏按Ctrl）](../mfc/reference/cstatusbarctrl-class.md)  
- 水平的 Windows，通常分为窗格，应用程序可在其中显示状态信息。  大多数 MFC 程序使用 [CStatusBar](../mfc/reference/cstatusbar-class.md) 而不是此类。  
+ [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
+ A horizontal window, usually divided into panes, in which an application can display status information. Most MFC programs use [CStatusBar](../mfc/reference/cstatusbar-class.md) instead of this class.  
   
-## 混合控件  
+## <a name="miscellaneous-controls"></a>Miscellaneous Controls  
  [CAnimateCtrl](../mfc/reference/canimatectrl-class.md)  
- 显示简单的视频剪辑。  
+ Displays a simple video clip.  
   
- [CToolTipCtrl（C工具提示按Ctrl）](../mfc/reference/ctooltipctrl-class.md)  
- 描述显示工具的用途单行文本。应用程序的小型弹出窗口。  
+ [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)  
+ A small pop-up window that displays a single line of text describing the purpose of a tool in an application.  
   
  [CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)  
- 支持扩展编辑控件或简单的日历控件接口，允许用户选择特定日期或时间值。  
+ Supports either an extended edit control, or a simple calendar interface control, that allows a user to choose a specific date or time value.  
   
- [C的头部Ctrl](../mfc/reference/cheaderctrl-class.md)  
- 显示标题或列标签的。  
+ [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)  
+ Displays titles or labels for columns.  
   
  [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)  
- 支持允许用户选择日期的日历接口的简单控件。  
+ Supports a simple calendar interface control that allows a user to select a date.  
   
  [CTabCtrl](../mfc/reference/ctabctrl-class.md)  
- 具有用户可以单击的选项卡的控件，类似于笔记本中的分隔。  
+ A control with tabs on which the user can click, analogous to the dividers in a notebook.  
   
  [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)  
- 允许用户创建一热组合键，用户可以按快速执行操作。  
+ Enables the user to create a hot key combination, which the user can press to perform an action quickly.  
   
  [CLinkCtrl](../mfc/reference/clinkctrl-class.md)  
- 不同的文本 renders 和启动相应的应用程序，用户单击嵌入链接。  
+ Renders marked-up text and launches appropriate applications when the user clicks the embedded link.  
   
  [CHtmlEditCtrl](../mfc/reference/chtmleditctrl-class.md)  
- 提供 MFC 窗口中的 WebBrowser ActiveX 控件功能。  
+ Provides the functionality of the WebBrowser ActiveX control in an MFC window.  
   
-## 相关类  
- [C图像列表](../mfc/reference/cimagelist-class.md)  
- 提供 Windows 图像列表的功能。  图像列表与控件列表和树控件。  它们还可以用于存储和存档一组相同大小的位图。  
+## <a name="related-classes"></a>Related Classes  
+ [CImageList](../mfc/reference/cimagelist-class.md)  
+ Provides the functionality of the Windows image list. Image lists are used with list controls and tree controls. They can also be used to store and archive a set of same-sized bitmaps.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- 所有基的类演示与 Windows 控件。  根据视图控件的下面。  
+ The base class for all views associated with Windows controls. The views based on controls are described below.  
   
  [CEditView](../mfc/reference/ceditview-class.md)  
- 包含一个标准 Windows 编辑控件的视图。  
+ A view that contains a Windows standard edit control.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- 包含丰富 Windows 编辑控件的视图。  
+ A view that contains a Windows rich edit control.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- Windows 包含一个列表控件的视图。  
+ A view that contains a Windows list control.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- 窗口包含一个树控件的视图。  
+ A view that contains a Windows tree control.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

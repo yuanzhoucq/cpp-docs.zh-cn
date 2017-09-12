@@ -1,53 +1,72 @@
 ---
-title: "随时可用的数组类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], 类"
-  - "类 [C++], 数组"
-  - "集合类, 数组"
+title: Ready-to-Use Array Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.array
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [MFC], classes
+- collection classes [MFC], arrays
+- classes [MFC], array
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 随时可用的数组类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c4df6fab7c108a07bd11d33723978a8721f51de5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-以下类可供使用数组类。  
+---
+# <a name="ready-to-use-array-classes"></a>Ready-to-Use Array Classes
+The following classes are ready-to-use array classes.  
   
  [CByteArray](../mfc/reference/cbytearray-class.md)  
- 存储 **BYTE** 类型的数组中的元素。  
+ Stores elements of type **BYTE** in an array.  
   
  [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- 存储 `DWORD` 类型元素的数组中。  
+ Stores elements of type `DWORD` in an array.  
   
  [CObArray](../mfc/reference/cobarray-class.md)  
- 存储指向类 `CObject` 对象或类对象中的数组 `CObject` 中派生的。  
+ Stores pointers to objects of class `CObject` or to objects of classes derived from `CObject` in an array.  
   
  [CPtrArray](../mfc/reference/cptrarray-class.md)  
- 存储指针为 `void` \(泛指针\) 数组中。  
+ Stores pointers to `void` (generic pointers) in an array.  
   
  [CUIntArray](../mfc/reference/cuintarray-class.md)  
- 存储 **UINT** 类型的数组中的元素。  
+ Stores elements of type **UINT** in an array.  
   
  [CWordArray](../mfc/reference/cwordarray-class.md)  
- 存储 **WORD** 类型的数组中的元素。  
+ Stores elements of type **WORD** in an array.  
   
  [CStringArray](../mfc/reference/cstringarray-class.md)  
- 在数组中存储 `CString` 对象。  
+ Stores `CString` objects in an array.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

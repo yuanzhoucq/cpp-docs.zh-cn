@@ -1,5 +1,5 @@
 ---
-title: "CMFCCustomColorsPropertyPage 类 |Microsoft 文档"
+title: CMFCCustomColorsPropertyPage Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCCustomColorsPropertyPage class
+- CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
 caps.latest.revision: 23
 author: mikeblome
@@ -35,49 +35,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fa534f22438b7be37e7893e545c3e060df69384f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80168e699ec8005e08ab36327b76a108682dc8f9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 类
-表示可以在颜色对话框中选择自定义颜色的属性页。  
+# <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage Class
+Represents a property page that can select custom colors in a color dialog box.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCCustomColorsPropertyPage : public CPropertyPage  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
-  
-|||  
-|-|-|  
-|名称|说明|  
-|`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|默认构造函数。|  
-  
-### <a name="public-methods"></a>公共方法  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名称|描述|  
-|`CMFCCustomColorsPropertyPage::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCCustomColorsPropertyPage::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CMFCCustomColorsPropertyPage::Setup](#setup)|设置属性页上的颜色组件。|  
+|Name|Description|  
+|`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|Default constructor.|  
   
-### <a name="remarks"></a>备注  
- `CMFCColorDialog`类使用此类显示自定义颜色属性页。 有关详细信息`CMFCColorDialog`，请参阅[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。  
+### <a name="public-methods"></a>Public Methods  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何构造`CMFCCustomColorsPropertyPage`对象，并将属性页上的颜色组件。  
+|||  
+|-|-|  
+|Name|Description|  
+|`CMFCCustomColorsPropertyPage::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCCustomColorsPropertyPage::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCCustomColorsPropertyPage::Setup](#setup)|Sets the color components of the property page.|  
   
- [!code-cpp[NVC_MFC_RibbonApp #&35;](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
+### <a name="remarks"></a>Remarks  
+ The `CMFCColorDialog` class uses this class to display the custom color property page. For more information about `CMFCColorDialog`, see [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCCustomColorsPropertyPage` object and set the color components of the property page.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -90,11 +90,11 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
   
  [CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxcustomcolorspropertypage.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcustomcolorspropertypage.h  
   
-##  <a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
- 设置属性页上的颜色组件。  
+##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup  
+ Sets the color components of the property page.  
   
 ```  
 void Setup(
@@ -103,21 +103,21 @@ void Setup(
     BYTE B);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|[in] `R`|红色组件的 RGB 值。|  
-|[in] `G`|绿色组件的 RGB 值。|  
-|[in] `B`|蓝色组件的 RGB 值。|  
+|Parameter|Description|  
+|[in] `R`|The red component of the RGB value.|  
+|[in] `G`|The green component of the RGB value.|  
+|[in] `B`|The blue component of the RGB value.|  
   
-### <a name="remarks"></a>备注  
- 此方法将更新当前 RGB 和关联的 HLS （色调、 亮度和饱和度） 颜色值的属性页。 [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)方法调用此方法，当框架初始化颜色对话框中，或者用户按下鼠标左键。 有关详细信息`CMFCColorDialog`，请参阅[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。  
+### <a name="remarks"></a>Remarks  
+ This method updates the current RGB and the associated HLS (hue, lightness, and saturation) color values of the property page. The [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) method calls this method when the framework initializes the color dialog box or the user presses the left mouse button. For more information about `CMFCColorDialog`, see [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)   
- [CMFCStandardColorsPropertyPage 类](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md)   
+ [CMFCStandardColorsPropertyPage Class](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)
 

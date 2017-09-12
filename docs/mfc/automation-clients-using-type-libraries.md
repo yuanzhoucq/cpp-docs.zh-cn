@@ -1,71 +1,90 @@
 ---
-title: "自动化客户端：使用类型库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MkTypLib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".odl 文件"
-  - "自动化客户端, 类型库"
-  - "类 [C++], 调度"
-  - "客户端, 自动化"
-  - "调度类"
-  - "MkTypLib 工具"
-  - "ODL（对象描述语言）"
-  - "ODL 文件"
-  - "类型库, 自动化客户端"
+title: 'Automation Clients: Using Type Libraries | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MkTypLib
+dev_langs:
+- C++
+helpviewer_keywords:
+- clients, Automation
+- dispatch class [MFC]
+- Automation clients, type libraries
+- type libraries, Automation clients
+- ODL (Object Description Language)
+- ODL files
+- classes [MFC], dispatch
+- MkTypLib tool
+- .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 自动化客户端：使用类型库
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 461e5fbd90f157cd149016d813b679cbc3ca6177
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-如果客户端操作的服务器对象，自动化客户必须包含有关服务器对象的属性和方法的信息。  属性具有数据类型；方法通常返回值和参数接受。  客户端需要有关所有数据类型的信息的静态绑定到这些服务器对象类型。  
+---
+# <a name="automation-clients-using-type-libraries"></a>Automation Clients: Using Type Libraries
+Automation clients must have information about server objects' properties and methods if the clients are to manipulate the servers' objects. Properties have data types; methods often return values and accept parameters. The client requires information about the data types of all of these in order to statically bind to the server object type.  
   
- 此类型传递信息可以采用多种方法。  建议的方法是创建类型库。  
+ This type information can be made known in several ways. The recommended way is to create a type library.  
   
- 有关 [MkTypLib](http://msdn.microsoft.com/library/windows/desktop/aa366797)的信息，请参见 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+ For information on [MkTypLib](http://msdn.microsoft.com/library/windows/desktop/aa366797), see the Windows SDK.  
   
- Visual C\+\+ 可读取类型库文件和创建从 [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)计划派生的类。  该类对象\) 这些服务器对象的属性和操作。  应用程序调用此对象的属性设置和操作，因此，从 `COleDispatchDriver` 继承的功能发送这些调用 OLE 系统，然后发送到服务器对象。  
+ Visual C++ can read a type-library file and create a dispatch class derived from [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). An object of that class has properties and operations duplicating those of the server object. Your application calls this object's properties and operations, and functionality inherited from `COleDispatchDriver` routes these calls to the OLE system, which in turn routes them to the server object.  
   
- Visual C\+\+ 会自动维护了此类型库文件，则选择。包括自动化，在创建项目。  在每个生成一部分，将生成与 MkTypLib .tlb 文件。  
+ Visual C++ automatically maintains this type-library file for you if you chose to include Automation when the project was created. As part of each build, the .tlb file will be built with MkTypLib.  
   
-### 创建计划类从类型库 \(.tlb\) 文件  
+### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>To create a dispatch class from a type-library (.tlb) file  
   
-1.  在类视图或解决方案资源管理器中，右击该项目并单击 **添加** 然后在快捷菜单中单击 **添加类**。  
+1.  In either Class View or Solution Explorer, right-click the project and click **Add** and then click **Add Class** on the shortcut menu.  
   
-2.  在 **添加类** 对话框中，选择左窗格中的 **Visual C\+\+\/MFC** 文件夹。  选择从右窗格中的 **TypeLib 中的 MFC 类** 图标并单击 **打开**。  
+2.  In the **Add Class** dialog box, select the **Visual C++/MFC** folder in the left pane. Select the **MFC Class From TypeLib** icon from the right pane and click **Open**.  
   
-3.  在 **从类型库添加类向导** 对话框中，从 **Available type libraries** 下拉列表的类型库。  **接口** 框显示接口可用于选择的类型库。  
-  
-    > [!NOTE]
-    >  可以选择从多个类型库的接口。  
-  
-     选择接口，双击其或单击 **添加** 按钮。  当您这样，名称调度类将显示在 **Generated classes** 框。  您可以编辑 `Class` 框的类名。  
-  
-     **文件** 框显示类将声明的文件。\(您可以编辑此文件名\)。  如果愿意在目录和实现信息编写中的现有文件或标头为项目目录外，还可以用来浏览按钮选择其他文件。  
+3.  In the **Add Class From Typelib Wizard** dialog box, select a type library from the **Available type libraries** drop-down list. The **Interfaces** box displays the interfaces available for the selected type library.  
   
     > [!NOTE]
-    >  选择接口的所有调度类将被放入指定的文件在此处。  如果在单独的头需要接口声明，您必须对要创建的每个头文件使用此向导。  
+    >  You can select interfaces from more than one type library.  
+  
+     To select interfaces, double-click them or click the **Add** button. When you do so, names for the dispatch classes will appear in the **Generated classes** box. You can edit the class names in the `Class` box.  
+  
+     The **File** box displays the file in which the class will be declared. (you can edit this file name as well). You can also use the browse button to select other files, if you prefer to have the header and implementation information written in existing files or in a directory other than the project directory.  
   
     > [!NOTE]
-    >  某些类型库信息以 .DLL、.ocx 或 .OLB 文件扩展名的文件可以存储。  
+    >  All the dispatch classes for the selected interfaces will be put into the file specified here. If you want the interfaces to be declared in separate headers, you must run this wizard for each header file you want to create.  
   
-4.  单击**“完成”**。  
+    > [!NOTE]
+    >  Some type library information may be stored in files with .DLL, .OCX, or .OLB file extensions.  
   
-     使用指定类和文件名，向导将编写调度类的代码。  
+4.  Click **Finish**.  
   
-## 请参阅  
- [自动化客户端](../mfc/automation-clients.md)
+     The wizard will then write the code for your dispatch classes using the specified class and file names.  
+  
+## <a name="see-also"></a>See Also  
+ [Automation Clients](../mfc/automation-clients.md)
+
+

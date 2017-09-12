@@ -1,137 +1,156 @@
 ---
-title: "对话框类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通用对话框类"
-  - "对话框类"
-  - "OLE 通用对话框类"
-  - "属性表类"
-  - "选项卡对话框"
+title: Dialog Box Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheet classes
+- dialog box classes
+- OLE common dialog classes
+- common dialog classes [MFC]
+- tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 对话框类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 534f360915b0909b6dac97e6cc7afaae7ae38835
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-`CDialog` 类及其派生类封装对话框功能。  因为对话框是特定窗口，`CDialog` 派生自 `CWnd`。  从 `CDialog` 类派生对话框或提供标准对话框使用的通用对话框类，例如打开或保存文件，打印，选择字体或颜色，开始搜索和替换操作或执行多种 OLE 关联的操作。  
+---
+# <a name="dialog-box-classes"></a>Dialog Box Classes
+Class `CDialog` and its derived classes encapsulate dialog-box functionality. Since a dialog box is a special kind of window, `CDialog` is derived from `CWnd`. Derive your dialog classes from `CDialog` or use one of the common dialog classes for standard dialog boxes, such as opening or saving a file, printing, selecting a font or color, initiating a search-and-replace operation, or performing various OLE-related operations.  
   
  [CDialog](../mfc/reference/cdialog-class.md)  
- 所有对话框的基类，控件模式和无模式。  
+ The base class for all dialog boxes, both modal and modeless.  
   
  [CDataExchange](../mfc/reference/cdataexchange-class.md)  
- 提供的对话框数据交换和验证信息。  
+ Supplies data exchange and validation information for dialog boxes.  
   
-## 通用对话框  
- 这些对话框类封装 Windows 通用对话框"  这些提供复杂对话框的易于使用的实现。  
+## <a name="common-dialogs"></a>Common Dialogs  
+ These dialog box classes encapsulate the Windows common dialog boxes. They provide easy-to-use implementations of complicated dialog boxes.  
   
  [CCommonDialog](../mfc/reference/ccommondialog-class.md)  
- 所有通用对话框的基类。  
+ Base class for all common dialog boxes.  
   
  [CFileDialog](../mfc/reference/cfiledialog-class.md)  
- 用于打开或保存文件提供标准对话框。  
+ Provides a standard dialog box for opening or saving a file.  
   
  [CColorDialog](../mfc/reference/ccolordialog-class.md)  
- 用于选择颜色提供标准对话框。  
+ Provides a standard dialog box for selecting a color.  
   
  [CFontDialog](../mfc/reference/cfontdialog-class.md)  
- 为选择字体提供标准对话框。  
+ Provides a standard dialog box for selecting a font.  
   
  [CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)  
- 搜索和替换操作提供标准对话框。  
+ Provides a standard dialog box for a search-and-replace operation.  
   
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
- 打印文件为提供标准对话框。  
+ Provides a standard dialog box for printing a file.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- 提供了 Windows 2000 的属性表。  
+ Provides a Windows 2000 Print property sheet.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
- 封装 Windows 公用页设置对话框中提供的其他服务支持设置和修改边距的打印。  
+ Encapsulates the services provided by the Windows common Page Setup dialog box with additional support for setting and modifying print margins.  
   
-## OLE 通用对话框  
- OLE 添加几个通用对话框的窗口。  这些类封装 OLE 通用对话框"  
+## <a name="ole-common-dialogs"></a>OLE Common Dialogs  
+ OLE adds several common dialog boxes to Windows. These classes encapsulate the OLE common dialog boxes.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- 用于 OLE 对话框由框架包含所有常见的实现。  以用户界面类的所有对话框类从该基类派生。  无法直接使用`COleDialog`。  
+ Used by the framework to contain common implementations for all OLE dialog boxes. All dialog box classes in the user-interface category are derived from this base class. `COleDialog` cannot be used directly.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
- 查看插入对话框，插入的新链接的或嵌入的 OLE 项标准的用户界面。  
+ Displays the Insert Object dialog box, the standard user interface for inserting new OLE linked or embedded items.  
   
  [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
- 将显示特殊的编辑粘贴命令，对话框实现特定标准的用户界面。  
+ Displays the Paste Special dialog box, the standard user interface for implementing the Edit Paste Special command.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
- 显示编辑链接标准对话框，用户接口有关链接的更改的信息。  
+ Displays the Edit Links dialog box, the standard user interface for modifying information about linked items.  
   
  [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
- 显示更改图标对话框中，更改的标准图标用户界面与 OLE 嵌入式或链接的项。  
+ Displays the Change Icon dialog box, the standard user interface for changing the icon associated with an OLE embedded or linked item.  
   
  [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
- 显示对话框转换，转换的标准 OLE 项用户界面从一个类型到另一个。  
+ Displays the Convert dialog box, the standard user interface for converting OLE items from one type to another.  
   
  [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
- 封装 Windows 常用 OLE 属性对话框。  通用 OLE 属性对话框提供一种简便方法来显示和修改一个 OLE 文档项的一些属性与 Windows 标准。  
+ Encapsulates the Windows common OLE Properties dialog box. Common OLE Properties dialog boxes provide an easy way to display and modify the properties of an OLE document item in a manner consistent with Windows standards.  
   
  [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
- 显示更新对话框，更新所有链接的标准的用户界面在文档。  对话框包含一个进度指示器输出指示关闭进程与完成。  
+ Displays the Update dialog box, the standard user interface for updating all links in a document. The dialog box contains a progress indicator to indicate how close the update procedure is to completion.  
   
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
- 显示源更改对话框，将链接的目标或源标准的用户界面。  
+ Displays the Change Source dialog box, the standard user interface for changing the destination or source of a link.  
   
  [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
- 显示不响应服务器忙碌和的服务器对话框，处理的调用标准的用户界面为正忙应用程序。  通常自动显示已被 [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) 实现。  
+ Displays the Server Busy and Server Not Responding dialog boxes, the standard user interface for handling calls to busy applications. Usually displayed automatically by the [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) implementation.  
   
-## 属性表类  
- 属性表类允许应用程序使用属性表，也称为选项卡式对话框。  属性表是一个有效方法组织在一个对话框中大量控件。  
+## <a name="property-sheet-classes"></a>Property Sheet Classes  
+ The property sheet classes allow your applications to use property sheets, also known as tabbed dialogs. Property sheets are an efficient way to organize a large number of controls in a single dialog box.  
   
  [CPropertyPage](../mfc/reference/cpropertypage-class.md)  
- 提供在属性表中的单个页。  从每页的 `CPropertyPage` 派生的类中添加一个属性表。  
+ Provides the individual pages within a property sheet. Derive a class from `CPropertyPage` for each page to be added to your property sheet.  
   
  [CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
- 对于多个属性页提供框架。  从 `CPropertySheet` 派生类属性表快速实现属性表。  
+ Provides the frame for multiple property pages. Derive your property sheet class from `CPropertySheet` to implement your property sheets quickly.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
- 显示一个 OLE 控件的属性了一个图形界面的，类似于对话框。  
+ Displays the properties of an OLE control in a graphical interface, similar to a dialog box.  
   
-## 基于 HTML 的对话框类  
+## <a name="html-based-dialog-classes"></a>HTML-based Dialog Classes  
  [CDHtmlDialog](../mfc/reference/cdhtmldialog-class.md)  
- 用于创建实现它们与 HTML 的用户界面而不是对话框的对话框资源。  
+ Used to create dialog boxes that implement their user interface with HTML rather than dialog resources.  
   
  [CMultiPageDHtmlDialog](../mfc/reference/cmultipagedhtmldialog-class.md)  
- 显示多个行句柄从 HTML 页和每页的事件。  
+ Displays multiple HTML pages sequentially and handles the events from each page.  
   
-## 相关类  
- 这些类也不是其本身而言对话框，但是，它们使用对话框模板并有许多对话框行为。  
+## <a name="related-classes"></a>Related Classes  
+ These classes are not dialog boxes per se, but they use dialog box templates and have much of the behavior of dialog boxes.  
   
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
- 基于对话框模板的控件条。  
+ A control bar that is based on a dialog box template.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- 布局是在对话框模板定义的滚动视图。  从 `CFormView` 派生的类来实现基于对话框模板的用户界面。  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- 提供直接连接的一个窗体向视图数据访问对象 \(DAO\) \(DAO\) 记录集对象。  同所有窗体视图中，`CDaoRecordView` 基于对话框模板。  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- 提供直接连接的一个窗体向视图开放式数据库连接 \(ODBC\) 记录集对象。  同所有窗体视图中，`CRecordView` 基于对话框模板。  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- 包含有关打印或打印预览作业的结构信息。  使用 [CView](../mfc/reference/cview-class.md)体系结构由打印。  
+ A structure containing information about a print or print preview job. Used by the printing architecture of [CView](../mfc/reference/cview-class.md).  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

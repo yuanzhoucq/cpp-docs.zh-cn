@@ -1,47 +1,66 @@
 ---
-title: "Windows 套接字：转换字符串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "套接字 [C++], 多字节字符串转换问题"
-  - "字符串转换, 多字节字符串"
-  - "Windows 套接字 [C++], 多字节字符串转换"
+title: 'Windows Sockets: Converting Strings | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], multibyte character string conversion
+- sockets [MFC], multibyte character string conversion issues
+- string conversion, multibyte character strings
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Windows 套接字：转换字符串
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fae6b9a092324ead56304b5498d6792873b377ff
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文和两指南手册演示 Windows Sockets 编程的一些问题。  本文包含转换字符串。  其他问题。[Windows 套接字：阻止](../mfc/windows-sockets-blocking.md) [Windows 套接字：字节顺序](../mfc/windows-sockets-byte-ordering.md)和报表。  
+---
+# <a name="windows-sockets-converting-strings"></a>Windows Sockets: Converting Strings
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers converting strings. The other issues are covered in [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md) and [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md).  
   
- 如果使用或派生自类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，将需要管理这些问题。  如果使用或派生自类[CSocket](../mfc/reference/csocket-class.md)，MFC 为您管理这些。  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## 转换字符串  
- 如果在使用的通信使用 ANSI 字符串存储不同的宽字符格式，如 Unicode 或的多字节字符集 \(MBCS\) 应用程序之间，或者是其中一个应用程序之间字符串时，必须管理转换在 `CAsyncSocket`的下面。  `CArchive` 对象使用 `CSocket` 对象来管理类上述转换 [CString](../atl-mfc-shared/reference/cstringt-class.md)的功能。  有关更多信息，请参见 Windows 套接字规范，位于 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+## <a name="converting-strings"></a>Converting Strings  
+ If you communicate between applications that use strings stored in different wide-character formats, such as Unicode or multibyte character sets (MBCS), or between one of these and an application using ANSI character strings, you must manage the conversions yourself under `CAsyncSocket`. The `CArchive` object used with a `CSocket` object manages this conversion for you through the capabilities of class [CString](../atl-mfc-shared/reference/cstringt-class.md). For more information, see the Windows Sockets specification, located in the Windows SDK.  
   
- 有关详细信息，请参阅：  
+ For more information, see:  
   
--   [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows 套接字：背景](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## 请参阅  
- [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

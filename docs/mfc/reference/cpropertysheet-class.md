@@ -1,5 +1,5 @@
 ---
-title: "CPropertySheet 类 |Microsoft 文档"
+title: CPropertySheet Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,10 +37,29 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, tabs
-- CPropertySheet class
-- property sheets, CPropertySheet class
-- tab dialog boxes
+- CPropertySheet [MFC], CPropertySheet
+- CPropertySheet [MFC], AddPage
+- CPropertySheet [MFC], Construct
+- CPropertySheet [MFC], Create
+- CPropertySheet [MFC], DoModal
+- CPropertySheet [MFC], EnableStackedTabs
+- CPropertySheet [MFC], EndDialog
+- CPropertySheet [MFC], GetActiveIndex
+- CPropertySheet [MFC], GetActivePage
+- CPropertySheet [MFC], GetPage
+- CPropertySheet [MFC], GetPageCount
+- CPropertySheet [MFC], GetPageIndex
+- CPropertySheet [MFC], GetTabControl
+- CPropertySheet [MFC], MapDialogRect
+- CPropertySheet [MFC], OnInitDialog
+- CPropertySheet [MFC], PressButton
+- CPropertySheet [MFC], RemovePage
+- CPropertySheet [MFC], SetActivePage
+- CPropertySheet [MFC], SetFinishText
+- CPropertySheet [MFC], SetTitle
+- CPropertySheet [MFC], SetWizardButtons
+- CPropertySheet [MFC], SetWizardMode
+- CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 caps.latest.revision: 30
 author: mikeblome
@@ -60,72 +79,72 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: bfd4280a9163023ff9b824aee0d37fd50e2fb678
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5cf630931822f68677179cf3edaa0ac1f79d0b43
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpropertysheet-class"></a>CPropertySheet 类
-表示属性表，也称为选项卡对话框。  
+# <a name="cpropertysheet-class"></a>CPropertySheet Class
+Represents property sheets, also known as tab dialog boxes.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPropertySheet : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPropertySheet::CPropertySheet](#cpropertysheet)|构造 `CPropertySheet` 对象。|  
+|[CPropertySheet::CPropertySheet](#cpropertysheet)|Constructs a `CPropertySheet` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[Cpropertysheet:: Addpage](#addpage)|向属性表添加页面。|  
-|[CPropertySheet::Construct](#construct)|构造 `CPropertySheet` 对象。|  
-|[CPropertySheet::Create](#create)|显示无模式属性表。|  
-|[CPropertySheet::DoModal](#domodal)|显示模式属性表。|  
-|[Cpropertysheet:: Enablestackedtabs](#enablestackedtabs)|指示属性表是使用堆积或滚动选项卡。|  
-|[CPropertySheet::EndDialog](#enddialog)|终止属性表。|  
-|[CPropertySheet::GetActiveIndex](#getactiveindex)|检索的活动页面的属性表的索引。|  
-|[CPropertySheet::GetActivePage](#getactivepage)|返回活动页对象。|  
-|[CPropertySheet::GetPage](#getpage)|检索指向指定页。|  
-|[CPropertySheet::GetPageCount](#getpagecount)|检索的属性表中的页数。|  
-|[CPropertySheet::GetPageIndex](#getpageindex)|检索的属性表指定页的索引。|  
-|[CPropertySheet::GetTabControl](#gettabcontrol)|检索指向选项卡控件的指针。|  
-|[CPropertySheet::MapDialogRect](#mapdialogrect)|将矩形的对话框单位转换为屏幕单位。|  
-|[Cpropertysheet:: Oninitdialog](#oninitdialog)|重写以增加属性表初始化。|  
-|[CPropertySheet::PressButton](#pressbutton)|模拟所选的属性表中指定的按钮。|  
-|[CPropertySheet::RemovePage](#removepage)|从属性表删除页。|  
-|[CPropertySheet::SetActivePage](#setactivepage)|以编程方式设置活动的页对象。|  
-|[CPropertySheet::SetFinishText](#setfinishtext)|设置完成按钮的文本。|  
-|[CPropertySheet::SetTitle](#settitle)|设置的属性表的标题。|  
-|[CPropertySheet::SetWizardButtons](#setwizardbuttons)|使向导按钮。|  
-|[CPropertySheet::SetWizardMode](#setwizardmode)|使向导模式。|  
+|[CPropertySheet::AddPage](#addpage)|Adds a page to the property sheet.|  
+|[CPropertySheet::Construct](#construct)|Constructs a `CPropertySheet` object.|  
+|[CPropertySheet::Create](#create)|Displays a modeless property sheet.|  
+|[CPropertySheet::DoModal](#domodal)|Displays a modal property sheet.|  
+|[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Indicates whether the property sheet uses stacked or scrolling tabs.|  
+|[CPropertySheet::EndDialog](#enddialog)|Terminates the property sheet.|  
+|[CPropertySheet::GetActiveIndex](#getactiveindex)|Retrieves the index of the active page of the property sheet.|  
+|[CPropertySheet::GetActivePage](#getactivepage)|Returns the active page object.|  
+|[CPropertySheet::GetPage](#getpage)|Retrieves a pointer to the specified page.|  
+|[CPropertySheet::GetPageCount](#getpagecount)|Retrieves the number of pages in the property sheet.|  
+|[CPropertySheet::GetPageIndex](#getpageindex)|Retrieves the index of the specified page of the property sheet.|  
+|[CPropertySheet::GetTabControl](#gettabcontrol)|Retrieves a pointer to a tab control.|  
+|[CPropertySheet::MapDialogRect](#mapdialogrect)|Converts the dialog-box units of a rectangle to screen units.|  
+|[CPropertySheet::OnInitDialog](#oninitdialog)|Override to augment property sheet initialization.|  
+|[CPropertySheet::PressButton](#pressbutton)|Simulates the choice of the specified button in a property sheet.|  
+|[CPropertySheet::RemovePage](#removepage)|Removes a page from the property sheet.|  
+|[CPropertySheet::SetActivePage](#setactivepage)|Programmatically sets the active page object.|  
+|[CPropertySheet::SetFinishText](#setfinishtext)|Sets the text for the Finish button.|  
+|[CPropertySheet::SetTitle](#settitle)|Sets the caption of the property sheet.|  
+|[CPropertySheet::SetWizardButtons](#setwizardbuttons)|Enables the wizard buttons.|  
+|[CPropertySheet::SetWizardMode](#setwizardmode)|Enables the wizard mode.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)结构。 提供对基本的属性表参数访问。|  
+|[CPropertySheet::m_psh](#m_psh)|The Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) structure. Provides access to basic property sheet parameters.|  
   
-## <a name="remarks"></a>备注  
- 属性表组成`CPropertySheet`对象和一个或多个[CPropertyPage](../../mfc/reference/cpropertypage-class.md)对象。 框架显示属性表作为具有一组选项卡索引和一个区域，它包含当前所选的页面的窗口。 用户导航到特定页通过使用相应的选项卡。  
+## <a name="remarks"></a>Remarks  
+ A property sheet consists of a `CPropertySheet` object and one or more [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objects. The framework displays a property sheet as a window with a set of tab indices and an area that contains the currently selected page. The user navigates to a specific page by using the appropriate tab.  
   
- `CPropertySheet`提供对扩展的支持[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)结构在中引入[!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)]和 Windows NT 2000。 该结构包含其他标志和支持使用"水印"背景位图的成员。  
+ `CPropertySheet` provides support for the expanded [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) structure introduced in [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] and Windows NT 2000. The structure contains additional flags and members that support using a "watermark" background bitmap.  
   
- 若要在你的属性表对象中自动显示这些新映像，请将有效值的位图和调色板映像传递对的调用中[CPropertySheet::Construct](#construct)或[CPropertySheet::CPropertySheet](#cpropertysheet)。  
+ To display these new images automatically in your property sheet object, pass valid values for the bitmap and palette images in the call to [CPropertySheet::Construct](#construct) or [CPropertySheet::CPropertySheet](#cpropertysheet).  
   
- 即使`CPropertySheet`不派生自[CDialog](../../mfc/reference/cdialog-class.md)，管理`CPropertySheet`对象就像管理`CDialog`对象。 例如，需要两个部分构成构造属性表的创建︰ 调用的构造函数，然后调用[DoModal](#domodal)模式属性表或[创建](#create)无模式属性表。 `CPropertySheet`有两种类型的构造函数︰ [CPropertySheet::Construct](#construct)和[CPropertySheet::CPropertySheet](#cpropertysheet)。  
+ Even though `CPropertySheet` is not derived from [CDialog](../../mfc/reference/cdialog-class.md), managing a `CPropertySheet` object is like managing a `CDialog` object. For example, creation of a property sheet requires two-part construction: call the constructor, and then call [DoModal](#domodal) for a modal property sheet or [Create](#create) for a modeless property sheet. `CPropertySheet` has two types of constructors: [CPropertySheet::Construct](#construct) and [CPropertySheet::CPropertySheet](#cpropertysheet).  
   
- 构造时`CPropertySheet`对象时，某些[窗口样式](../../mfc/reference/window-styles.md)可能会导致首次异常出现。 这将导致从系统尝试创建该工作表之前更改的属性表样式。 若要避免此异常，请确保在创建时设置以下样式你`CPropertySheet`:  
+ When you construct a `CPropertySheet` object, some [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) can cause a first-chance exception to occur. This results from the system trying to change the style of the property sheet before the sheet is created. To avoid this exception, make sure that you set the following styles when you create your `CPropertySheet`:  
   
 -   DS_3DLOOK  
   
@@ -135,7 +154,7 @@ class CPropertySheet : public CWnd
   
 -   WS_TABSTOP  
   
- 以下样式是可选的并不会导致首次异常︰  
+ The following styles are optional, and will not cause the first-chance exception:  
   
 -   DS_SHELLFONT  
   
@@ -143,17 +162,17 @@ class CPropertySheet : public CWnd
   
 -   WS_CLIPCHILDREN  
   
- 任何其他`Window Styles`程序以及禁止的而应启用它们。  
+ Any other `Window Styles` are forbidden and you should not enable them.  
   
- 之间交换数据`CPropertySheet`对象和外部对象是类似于与交换数据`CDialog`对象。 重要的区别是属性表的这些设置通常是的成员变量`CPropertyPage`对象而不是`CPropertySheet`对象本身。  
+ Exchanging data between a `CPropertySheet` object and an external object is similar to exchanging data with a `CDialog` object. The important difference is that the settings of a property sheet are typically member variables of the `CPropertyPage` objects rather than of the `CPropertySheet` object itself.  
   
- 你可以创建一种称为向导，指导用户完成了操作，例如设置设备，或创建新闻稿的步骤的属性页中的序列与包含属性表的选项卡对话框。 在向导类型选项卡对话框中，属性页没有选项卡上，且仅一个属性页可见一次。 此外，而不是**确定**和**立即应用**按钮，向导类型选项卡对话框具有**回**按钮，**下一步**或**完成**按钮，**取消**按钮，和一个**帮助**按钮。  
+ You can create a type of tab dialog box called a wizard, which consists of a property sheet with a sequence of property pages that guide the user through the steps of an operation, such as setting up a device or creating a newsletter. In a wizard-type tab dialog box, the property pages do not have tabs, and only one property page is visible at a time. Also, instead of having **OK** and **Apply Now** buttons, a wizard-type tab dialog box has a **Back** button, a **Next** or **Finish** button, a **Cancel** button, and a **Help** button.  
   
- 若要创建向导类型对话框中，按照相同步骤，你可以按照创建标准属性表，但调用[SetWizardMode](#setwizardmode)之前调用[DoModal](#domodal)。 若要启用的向导按钮，调用[SetWizardButtons](#setwizardbuttons)，使用标志自定义它们的功能和外观。 若要启用**完成**按钮，调用[SetFinishText](#setfinishtext)用户已在向导的最后一页上执行操作后。  
+ To create a wizard-type dialog box, follow the same steps that you would follow to create a standard property sheet, but call [SetWizardMode](#setwizardmode) before you call [DoModal](#domodal). To enable the wizard buttons, call [SetWizardButtons](#setwizardbuttons), using flags to customize their function and appearance. To enable the **Finish** button, call [SetFinishText](#setfinishtext) after the user has taken action on the last page of the wizard.  
   
- 有关如何使用`CPropertySheet`对象，请参阅文章[属性表和属性页](../../mfc/property-sheets-and-property-pages-in-mfc.md)。 此外，请参阅知识库文章 Q146916︰ 如何︰ 使用标准按钮创建无模式 CPropertySheet 和文章 Q300606︰ 如何︰ 设计可调整大小的 MFC 属性表。  
+ For more information about how to use `CPropertySheet` objects, see the article [Property Sheets and Property Pages](../../mfc/property-sheets-and-property-pages-in-mfc.md). Also, see Knowledge Base article Q146916 : HOWTO: Create a Modeless CPropertySheet with Standard Buttons and article Q300606 : HOWTO: Design a Resizable MFC Property Sheet.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -162,36 +181,36 @@ class CPropertySheet : public CWnd
   
  `CPropertySheet`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="addpage"></a>Cpropertysheet:: Addpage  
- 在属性表中添加与最右边的选项卡提供的页。  
+##  <a name="addpage"></a>  CPropertySheet::AddPage  
+ Adds the supplied page with the rightmost tab in the property sheet.  
   
 ```  
 void AddPage(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pPage`  
- 指向以页后，可以添加到属性表。 不能为**NULL**。  
+ Points to the page to be added to the property sheet. Cannot be **NULL**.  
   
-### <a name="remarks"></a>备注  
- 将页面添加到你希望它们出现的从左到右顺序属性表。  
+### <a name="remarks"></a>Remarks  
+ Add pages to the property sheet in the left-to-right order you want them to appear.  
   
- `AddPage`将添加[CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)对象传递给`CPropertySheet`对象的页的列表，但不是实际创建页窗口。 框架推迟的页的窗口的创建，直到用户选择该页面。  
+ `AddPage` adds the [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) object to the `CPropertySheet` object's list of pages but does not actually create the window for the page. The framework postpones creation of the window for the page until the user selects that page.  
   
- 当你添加属性页使用`AddPage`、`CPropertySheet`父级的`CPropertyPage`。 若要从属性页中获取到属性表的访问权限，调用[CWnd::GetParent](../../mfc/reference/cwnd-class.md#getparent)。  
+ When you add a property page using `AddPage`, the `CPropertySheet` is the parent of the `CPropertyPage`. To gain access to the property sheet from the property page, call [CWnd::GetParent](../../mfc/reference/cwnd-class.md#getparent).  
   
- 不需要等到创建属性表窗口调用`AddPage`。 通常，你可以将调用`AddPage`之前调用[DoModal](#domodal)或[创建](#create)。  
+ It is not necessary to wait until creation of the property sheet window to call `AddPage`. Typically, you will call `AddPage` before calling [DoModal](#domodal) or [Create](#create).  
   
- 如果调用`AddPage`之后显示的属性页，选项卡行将反映新添加的页。  
+ If you call `AddPage` after displaying the property page, the tab row will reflect the newly added page.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 不得超过 129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]  
   
-##  <a name="construct"></a>CPropertySheet::Construct  
- 构造 `CPropertySheet` 对象。  
+##  <a name="construct"></a>  CPropertySheet::Construct  
+ Constructs a `CPropertySheet` object.  
   
 ```  
 void Construct(
@@ -224,42 +243,42 @@ void Construct(
     HBITMAP hbmHeader = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDCaption`  
- 要用于属性表标题的 ID。  
+ ID of the caption to be used for the property sheet.  
   
  `pParentWnd`  
- 到属性表的父窗口的指针。 如果**NULL**，父窗口将应用程序的主窗口。  
+ Pointer to the parent window of the property sheet. If **NULL**, the parent window will be the main window of the application.  
   
  `iSelectPage`  
- 最初将成为在最前面的页的索引。 默认值为添加到表中的第一页。  
+ The index of the page that will initially be on top. Default is the first page added to the sheet.  
   
  `pszCaption`  
- 指向包含要用于属性表的标题的字符串的指针。 不能为**NULL**。  
+ Pointer to a string containing the caption to be used for the property sheet. Cannot be **NULL**.  
   
  `hbmWatermark`  
- 在属性页水印位图的句柄。  
+ Handle to the watermark bitmap of the property page.  
   
  `hpalWatermark`  
- 水印位图和/或标头位图的调色板的句柄。  
+ Handle to the palette of the watermark bitmap and/or header bitmap.  
   
  `hbmHeader`  
- 属性页的标头位图的句柄。  
+ Handle to the header bitmap of the property page.  
   
-### <a name="remarks"></a>备注  
- 如果类构造函数之一不已调用，则调用此成员函数。 例如，调用`Construct`声明或分配的数组时`CPropertySheet`对象。 对于数组，必须调用`Construct`数组中每个成员。  
+### <a name="remarks"></a>Remarks  
+ Call this member function if one of the class constructors has not already been called. For example, call `Construct` when you declare or allocate arrays of `CPropertySheet` objects. In the case of arrays, you must call `Construct` for each member in the array.  
   
- 若要显示属性表，请调用[DoModal](#domodal)或[创建](#create)。 将在属性表的标题栏中放置的第一个参数中包含的字符串。  
+ To display the property sheet, call [DoModal](#domodal) or [Create](#create). The string contained in the first parameter will be placed in the caption bar for the property sheet.  
   
- 如果你使用的第三个或第四个原型，你可以自动显示水印和/或标头的图像`Construct`，列出更高版本，且您传递有效的值`hbmWatermark`， `hpalWatermark`，和/或`hbmHeader`参数。  
+ You can display watermark and/or header images automatically if you use the third or fourth prototypes of `Construct`, listed above, and you pass valid values for the `hbmWatermark`, `hpalWatermark`, and/or `hbmHeader` parameters.  
   
-### <a name="example"></a>示例  
- 下面的示例演示在什么情况下，您将调用`Construct`。  
+### <a name="example"></a>Example  
+ The following example demonstrates under what circumstances you would call `Construct`.  
   
- [!code-cpp[NVC_MFCDocView # 130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]  
   
-##  <a name="cpropertysheet"></a>CPropertySheet::CPropertySheet  
- 构造 `CPropertySheet` 对象。  
+##  <a name="cpropertysheet"></a>  CPropertySheet::CPropertySheet  
+ Constructs a `CPropertySheet` object.  
   
 ```  
 CPropertySheet();
@@ -295,40 +314,40 @@ CPropertySheet(
     HBITMAP hbmHeader = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDCaption`  
- 要用于属性表标题的 ID。  
+ ID of the caption to be used for the property sheet.  
   
  `pParentWnd`  
- 指向属性表的父窗口。 如果**NULL**，父窗口将应用程序的主窗口。  
+ Points to the parent window of the property sheet. If **NULL**, the parent window will be the main window of the application.  
   
  `iSelectPage`  
- 最初将成为在最前面的页的索引。 默认值为添加到表中的第一页。  
+ The index of the page that will initially be on top. Default is the first page added to the sheet.  
   
  `pszCaption`  
- 指向包含要用于属性表的标题的字符串。 不能为**NULL**。  
+ Points to a string containing the caption to be used for the property sheet. Cannot be **NULL**.  
   
  `hbmWatermark`  
- 属性表的背景位图句柄。  
+ A handle to the background bitmap of the property sheet.  
   
  `hpalWatermark`  
- 水印位图和/或标头位图的调色板的句柄。  
+ A handle to the palette of the watermark bitmap and/or header bitmap.  
   
  `hbmHeader`  
- 属性页的标头位图句柄。  
+ A handle to the header bitmap of the property page.  
   
-### <a name="remarks"></a>备注  
- 若要显示属性表，请调用[DoModal](#domodal)或[创建](#create)。 将在属性表的标题栏中放置的第一个参数中包含的字符串。  
+### <a name="remarks"></a>Remarks  
+ To display the property sheet, call [DoModal](#domodal) or [Create](#create). The string contained in the first parameter will be placed in the caption bar for the property sheet.  
   
- 如果你有多个参数 （例如，如果你使用的数组），使用[构造](#construct)而不是`CPropertySheet`。  
+ If you have multiple parameters (for example, if you are using an array), use [Construct](#construct) instead of `CPropertySheet`.  
   
- 如果你使用的第三个或第四个原型，你可以自动显示水印和/或标头的图像`CPropertySheet`、 更高版本，并将有效的值传递`hbmWatermark`， `hpalWatermark`，和/或`hbmHeader`参数。  
+ You can display watermark and/or header images automatically if you use the third or fourth prototypes of `CPropertySheet`, above, and you pass valid values for the `hbmWatermark`, `hpalWatermark`, and/or `hbmHeader` parameters.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
   
-##  <a name="create"></a>CPropertySheet::Create  
- 显示无模式属性表。  
+##  <a name="create"></a>  CPropertySheet::Create  
+ Displays a modeless property sheet.  
   
 ```  
 virtual BOOL Create(CWnd* pParentWnd = NULL,
@@ -336,56 +355,56 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
     DWORD dwExStyle = 0);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 指向以父窗口。 如果**NULL**，父情况是桌面。  
+ Points to parent window. If **NULL**, parent is the desktop.  
   
  `dwStyle`  
- 属性表的窗口样式。 有关可用样式的完整列表，请参阅[窗口样式](../../mfc/reference/window-styles.md)。  
+ Window styles for property sheet. For a complete list of available styles, see [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  `dwExStyle`  
- 属性表的扩展的窗口样式。 有关可用样式的完整列表，请参阅[扩展窗口样式](../../mfc/reference/extended-window-styles.md)  
+ Extended window styles for property sheet. For a complete list of available styles, see [Extended Window Styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则创建属性表则不为否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the property sheet is created successfully; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 调用**创建**可以是在构造函数中，或后调用的构造函数可以调用它。  
+### <a name="remarks"></a>Remarks  
+ The call to **Create** can be inside the constructor, or you can call it after the constructor is invoked.  
   
- 默认样式，表示通过将传递为-1 表示`dwStyle`，实际**WS_SYSMENU |**`WS_POPUP`**|WS_CAPTION |DS_MODALFRAME |DS_CONTEXTHELP |WS_VISIBLE**。 默认值扩展窗口样式，表示通过将 0 作为传递`dwExStyle`，实际**WS_EX_DLGMODALFRAME**。  
+ The default style, expressed by passing -1 as `dwStyle`, is actually **WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE**. The default extended window style, expressed by passing 0 as `dwExStyle`, is actually **WS_EX_DLGMODALFRAME**.  
   
- **创建**成员函数将在创建属性表后立即返回。 若要销毁属性表，调用[cwnd:: Destroywindow](../../mfc/reference/cwnd-class.md#destroywindow)。  
+ The **Create** member function returns immediately after creating the property sheet. To destroy the property sheet, call [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
   
- 无模式属性表显示通过调用**创建**没有确定、 取消，立即应用和帮助按钮，模式属性表一样。 必须由用户创建所需的按钮。  
+ Modeless property sheets displayed with a call to **Create** do not have OK, Cancel, Apply Now, and Help buttons as modal property sheets do. Desired buttons must be created by the user.  
   
- 若要显示模式属性表，请调用[DoModal](#domodal)相反。  
+ To display a modal property sheet, call [DoModal](#domodal) instead.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 132](../../mfc/codesnippet/cpp/cpropertysheet-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#132](../../mfc/codesnippet/cpp/cpropertysheet-class_4.cpp)]  
   
- [!code-cpp[NVC_MFCDocView # 133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]  
   
-##  <a name="domodal"></a>CPropertySheet::DoModal  
- 显示模式属性表。  
+##  <a name="domodal"></a>  CPropertySheet::DoModal  
+ Displays a modal property sheet.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>返回值  
- `IDOK`或`IDCANCEL`如果函数是与成功; 否则为 0 或-1。 如果已建立属性表作为向导 (请参阅[SetWizardMode](#setwizardmode))，`DoModal`返回`ID_WIZFINISH`或`IDCANCEL`。  
+### <a name="return-value"></a>Return Value  
+ `IDOK` or `IDCANCEL` if the function was successful; otherwise 0 or -1. If the property sheet has been established as a wizard (see [SetWizardMode](#setwizardmode)), `DoModal` returns either `ID_WIZFINISH` or `IDCANCEL`.  
   
-### <a name="remarks"></a>备注  
- 返回值对应于关闭属性表控件的 ID。 此函数返回后，将销毁 windows 对应于属性表和所有页。 对象本身仍存在。 通常情况下，将检索数据从[CPropertyPage](../../mfc/reference/cpropertypage-class.md)对象后`DoModal`返回`IDOK`。  
+### <a name="remarks"></a>Remarks  
+ The return value corresponds to the ID of the control that closed the property sheet. After this function returns, the windows corresponding to the property sheet and all the pages will have been destroyed. The objects themselves will still exist. Typically, you will retrieve data from the [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objects after `DoModal` returns `IDOK`.  
   
- 若要显示无模式属性表，请调用[创建](#create)相反。  
+ To display a modeless property sheet, call [Create](#create) instead.  
   
- 从其相应的对话框资源创建属性页时，它可能会导致首次异常。 这将导致从之前创建页面对话框资源的样式更改为所需的样式的属性页。 因为资源通常是只读的这将导致异常。 系统处理异常，并使已修改的资源的副本。 首次异常因此被忽略。  
+ When a property page is created from its corresponding dialog resource, it can cause a first-chance exception. This results from the property page changing the style of the dialog resource to the required style before the page is created. Because resources are generally read-only, this causes an exception. The system handles the exception, and makes a copy of the modified resource. The first-chance exception can therefore be ignored.  
   
 > [!NOTE]
->  如果你正在使用异步异常处理模型进行编译，操作系统必须处理此异常。 有关异常处理模型的详细信息，请参阅[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md)。 在这种情况下，不换行调用`CPropertySheet::DoModal`与 c + + try catch 块在其中 catch 处理所有异常，例如， `catch (...)`。 此块将处理适用于操作系统和原因不可预知的行为的异常。 但是，你可以安全地使用 c + + 异常处理与特定异常类型或结构化的异常处理的访问冲突异常通过传递到操作系统。  
+>  This exception must be handled by the operating system if you are compiling with the asynchronous exception handling model. For more information about exception handling models, see [/EH (Exception Handling Model)](../../build/reference/eh-exception-handling-model.md). In this case, do not wrap calls to `CPropertySheet::DoModal` with a C++ try-catch block in which the catch handles all exceptions, for example, `catch (...)`. This block would handle the exception intended for the operating system, and cause unpredictable behavior. However, you can safely use C++ exception handling with specific exception types or structured exception handling where the Access Violation exception is passed through to the operating system.  
   
- 若要避免生成此首次异常，你可以手动保证属性表有正确[窗口样式](../../mfc/reference/window-styles.md)。 你需要设置一个属性表的以下样式︰  
+ To avoid generating this first-chance exception, you can manually guarantee that the property sheet has the correct [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles). You need to set the following styles for a property sheet:  
   
 -   DS_3DLOOK  
   
@@ -395,7 +414,7 @@ virtual INT_PTR DoModal();
   
 -   WS_TABSTOP  
   
- 你可以使用以下可选样式，而不会导致首次异常︰  
+ You can use the following optional styles without causing a first-chance exception:  
   
 -   DS_SHELLFONT  
   
@@ -403,284 +422,284 @@ virtual INT_PTR DoModal();
   
 -   WS_CLIPCHILDREN  
   
- 禁用所有其他 Windows 样式，因为它们不是与属性表兼容。 此建议不适用于扩展样式。 适当地设置这些标准样式可以保证在属性表没有要修改和将避免生成首次异常。  
+ Disable all other Windows styles because they are not compatible with property sheets. This advice does not apply to extended styles. Setting these standard styles appropriately will guarantee that the property sheet does not have to be modified and will avoid generating the first-chance exception.  
   
-### <a name="example"></a>示例  
-  请参阅示例[cpropertysheet:: Addpage](#addpage)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::AddPage](#addpage).  
   
-##  <a name="enablestackedtabs"></a>Cpropertysheet:: Enablestackedtabs  
- 指示是否堆栈中的属性表选项卡的行。  
+##  <a name="enablestackedtabs"></a>  CPropertySheet::EnableStackedTabs  
+ Indicates whether to stack rows of tabs in a property sheet.  
   
 ```  
 void EnableStackedTabs(BOOL bStacked);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bStacked`  
- 指示是否属性表中启用堆积选项卡。 通过设置来禁用堆积的行标记`bStacked`到**FALSE**。  
+ Indicates whether stacked tabs are enabled in the property sheet. Disable stacked rows of tags by setting `bStacked` to **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，如果属性表具有更多选项卡而不能显示在宽度属性表的单个行中选项卡将堆积在多行。 若要使用滚动选项卡而不是堆叠选项卡，调用`EnableStackedTabs`与`bStacked`设置为**FALSE**之前调用[DoModal](#domodal)或[创建](#create)。  
+### <a name="remarks"></a>Remarks  
+ By default, if a property sheet has more tabs than will fit in a single row in the width of the property sheet, the tabs will stack in multiple rows. To use scrolling tabs instead of stacking tabs, call `EnableStackedTabs` with `bStacked` set to **FALSE** before calling [DoModal](#domodal) or [Create](#create).  
   
- 必须调用`EnableStackedTabs`在创建模式或无模式属性表。 将在此样式`CPropertySheet`-派生类中，消息处理程序编写为`WM_CREATE`。 中的重写版本[CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)，调用**EnableStackedTabs (FALSE)**之前调用基类实现。  
+ You must call `EnableStackedTabs` when you create a modal or a modeless property sheet. To incorporate this style in a `CPropertySheet`-derived class, write a message handler for `WM_CREATE`. In the overridden version of [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), call **EnableStackedTabs( FALSE )** before calling the base class implementation.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
   
-##  <a name="enddialog"></a>CPropertySheet::EndDialog  
- 终止属性表。  
+##  <a name="enddialog"></a>  CPropertySheet::EndDialog  
+ Terminates the property sheet.  
   
 ```  
 void EndDialog(int nEndID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nEndID*  
- 要用作返回值的属性表的标识符。  
+ Identifier to be used as return value of the property sheet.  
   
-### <a name="remarks"></a>备注  
- 按下确定、 取消或关闭按钮时，将由框架调用此成员函数。 调用此成员函数，如果发生事件时，应关闭属性表。  
+### <a name="remarks"></a>Remarks  
+ This member function is called by the framework when the OK, Cancel, or Close button is pressed. Call this member function if an event occurs that should close the property sheet.  
   
- 此成员函数仅用于模式对话框。  
+ This member function is only used with a modal dialog box.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CPropertySheet::PressButton](#pressbutton)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::PressButton](#pressbutton).  
   
-##  <a name="getactiveindex"></a>CPropertySheet::GetActiveIndex  
- 获取属性表窗口的活动页的索引号，然后与的参数中使用返回的索引号`GetPage`。  
+##  <a name="getactiveindex"></a>  CPropertySheet::GetActiveIndex  
+ Gets the index number of the property sheet window's active page and then uses the returned index number as the parameter for `GetPage`.  
   
 ```  
 int GetActiveIndex() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 活动页的索引号。  
+### <a name="return-value"></a>Return Value  
+ The index number of the active page.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CPropertySheet::GetActivePage](#getactivepage)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="getactivepage"></a>CPropertySheet::GetActivePage  
- 检索属性表窗口的活动页。  
+##  <a name="getactivepage"></a>  CPropertySheet::GetActivePage  
+ Retrieves the property sheet window's active page.  
   
 ```  
 CPropertyPage* GetActivePage() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向的活动页面的指针。  
+### <a name="return-value"></a>Return Value  
+ The pointer to the active page.  
   
-### <a name="remarks"></a>备注  
- 使用此成员函数以活动页面上执行某些操作。  
+### <a name="remarks"></a>Remarks  
+ Use this member function to perform some action on the active page.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]  
   
-##  <a name="getpage"></a>CPropertySheet::GetPage  
- 将指针返回到此属性表中的指定页。  
+##  <a name="getpage"></a>  CPropertySheet::GetPage  
+ Returns a pointer to the specified page in this property sheet.  
   
 ```  
 CPropertyPage* GetPage(int nPage) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPage`  
- 索引所需的页上，从 0 开始。 必须是介于 0 和一个小于 （含） 的属性表中的页面数之间。  
+ Index of the desired page, starting at 0. Must be between 0 and one less than the number of pages in the property sheet, inclusive.  
   
-### <a name="return-value"></a>返回值  
- 指向对应的页面的指针`nPage`参数。  
+### <a name="return-value"></a>Return Value  
+ The pointer to the page corresponding to the `nPage` parameter.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
   
-##  <a name="getpagecount"></a>CPropertySheet::GetPageCount  
- 确定当前属性表中的页面数。  
+##  <a name="getpagecount"></a>  CPropertySheet::GetPageCount  
+ Determines the number of pages currently in the property sheet.  
   
 ```  
 int GetPageCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 属性表中的页面数。  
+### <a name="return-value"></a>Return Value  
+ The number of pages in the property sheet.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
   
-##  <a name="getpageindex"></a>CPropertySheet::GetPageIndex  
- 检索属性表中指定的页的索引号。  
+##  <a name="getpageindex"></a>  CPropertySheet::GetPageIndex  
+ Retrieves the index number of the specified page in the property sheet.  
   
 ```  
 int GetPageIndex(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pPage`  
- 指向包含要查找的索引的页面。 不能为**NULL**。  
+ Points to the page with the index to be found. Cannot be **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 页的索引号。  
+### <a name="return-value"></a>Return Value  
+ The index number of a page.  
   
-### <a name="remarks"></a>备注  
- 例如，你将使用`GetPageIndex`来获取的页索引，以便使用[SetActivePage](#setactivepage)或[GetPage](#getpage)。  
+### <a name="remarks"></a>Remarks  
+ For example, you would use `GetPageIndex` to get the page index in order to use [SetActivePage](#setactivepage) or [GetPage](#getpage).  
   
-### <a name="example"></a>示例  
-  请参阅示例[CPropertySheet::GetActivePage](#getactivepage)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="gettabcontrol"></a>CPropertySheet::GetTabControl  
- 检索指向选项卡控件执行操作特定于选项卡控件 (即，使用中的 Api 的任何[CTabCtrl](../../mfc/reference/ctabctrl-class.md))。  
+##  <a name="gettabcontrol"></a>  CPropertySheet::GetTabControl  
+ Retrieves a pointer to a tab control to do something specific to the tab control (that is, to use any of the APIs in [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).  
   
 ```  
 CTabCtrl* GetTabControl() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向选项卡控件的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a tab control.  
   
-### <a name="remarks"></a>备注  
- 如果你想要将位图添加到每个选项卡，在初始化期间，例如，调用此成员函数。  
+### <a name="remarks"></a>Remarks  
+ For example, call this member function if you want to add bitmaps to each of the tabs during initialization.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]  
   
-##  <a name="m_psh"></a>CPropertySheet::m_psh  
- 其成员存储的特征的结构[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)。  
+##  <a name="m_psh"></a>  CPropertySheet::m_psh  
+ A structure whose members store the characteristics of [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).  
   
-### <a name="remarks"></a>备注  
- 使用此结构来初始化属性表的外观，它构造之后，但它显示为带之前[DoModal](#domodal)成员函数。 例如，设置`dwSize`的成员`m_psh`你想要具有的属性表的大小。  
+### <a name="remarks"></a>Remarks  
+ Use this structure to initialize the appearance of the property sheet after it is constructed but before it is displayed with the [DoModal](#domodal) member function. For example, set the `dwSize` member of `m_psh` to the size you want the property sheet to have.  
   
- 此结构，包括其成员的列表的详细信息请参阅**PROPSHEETHEADER**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on this structure, including a listing of its members, see **PROPSHEETHEADER** in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]  
   
-##  <a name="mapdialogrect"></a>CPropertySheet::MapDialogRect  
- 将矩形的对话框单位转换为屏幕单位。  
+##  <a name="mapdialogrect"></a>  CPropertySheet::MapDialogRect  
+ Converts the dialog-box units of a rectangle to screen units.  
   
 ```  
 void MapDialogRect(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)包含对话框中的对象要转换的坐标。  
+ Points to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that contains the dialog-box coordinates to be converted.  
   
-### <a name="remarks"></a>备注  
- 在派生自的平均宽度和高度的用于对话框文本的字体中字符的当前对话框基本单位方面阐述对话框单位。 一个水平单元是对话框基本宽度单位 （） 的四分之一，一个垂直单元的八分之一对话框基的高度单元。  
+### <a name="remarks"></a>Remarks  
+ Dialog-box units are stated in terms of the current dialog-box base unit derived from the average width and height of characters in the font used for dialog-box text. One horizontal unit is one-fourth of the dialog-box base-width unit, and one vertical unit is one-eighth of the dialog-box base height unit.  
   
- [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows 函数将返回系统字体的大小信息，但你可以指定不同的字体的每个属性表，如果你使用**DS_SETFONT**资源定义文件中的样式。 [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows 函数中, 所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]，使用此对话框中的相应的字体。  
+ The [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows function returns size information for the system font, but you can specify a different font for each property sheet if you use the **DS_SETFONT** style in the resource-definition file. The [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows function, described in the Windows SDK, uses the appropriate font for this dialog box.  
   
- `MapDialogRect`成员函数将替换中的对话框单元`lpRect`与屏幕单位 （像素），以便可以使用矩形来创建一个对话框，或将控件放在一个框内。  
+ The `MapDialogRect` member function replaces the dialog-box units in `lpRect` with screen units (pixels) so that the rectangle can be used to create a dialog box or position a control within a box.  
   
-##  <a name="oninitdialog"></a>Cpropertysheet:: Oninitdialog  
- 替代来增加属性表初始化。  
+##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog  
+ Overrides to augment property sheet initialization.  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指定应用程序是否已将输入的焦点设置到其中一个属性表中的控件。 如果**OnInitDialog**返回非零，则 Windows 会将输入的焦点设置到属性表中的第一个控件。 只有当它已显式设置为它的一个属性表中控件的输入的焦点，则该应用程序可以返回 0。  
+### <a name="return-value"></a>Return Value  
+ Specifies whether the application has set the input focus to one of the controls in the property sheet. If **OnInitDialog** returns nonzero, Windows sets the input focus to the first control in the property sheet. The application can return 0 only if it has explicitly set the input focus to one of the controls in the property sheet.  
   
-### <a name="remarks"></a>备注  
- 此成员函数调用以响应**WM_INITDIALOG**消息。 此消息将发送到属性表期间[创建](#create)或[DoModal](#domodal)调用，在显示属性表之前立即发生。  
+### <a name="remarks"></a>Remarks  
+ This member function is called in response to the **WM_INITDIALOG** message. This message is sent to the property sheet during the [Create](#create) or [DoModal](#domodal) calls, which occur immediately before the property sheet is displayed.  
   
- 如果你需要执行特殊处理，在初始化属性表时，重写该成员函数。 在重写的版本中，首先调用基类`OnInitDialog`但忽略其返回值。 通常将返回**TRUE**从你重写的成员函数。  
+ Override this member function if you need to perform special processing when the property sheet is initialized. In the overridden version, first call the base class `OnInitDialog` but disregard its return value. You will normally return **TRUE** from your overridden member function.  
   
- 此成员函数不需要一个消息映射条目。  
+ You do not need a message-map entry for this member function.  
   
-##  <a name="pressbutton"></a>CPropertySheet::PressButton  
- 模拟所选的属性表中指定的按钮。  
+##  <a name="pressbutton"></a>  CPropertySheet::PressButton  
+ Simulates the choice of the specified button in a property sheet.  
   
 ```  
 void PressButton(int nButton);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nButton`  
- nButton︰ 标识要按下的按钮。 此参数可以是以下值之一︰  
+ nButton : Identifies the button to be pressed. This parameter can be one of the following values:  
   
-- **PSBTN_BACK**选择后退按钮。  
+- **PSBTN_BACK** Chooses the Back button.  
   
-- **PSBTN_NEXT**选择下一步按钮。  
+- **PSBTN_NEXT** Chooses the Next button.  
   
-- **PSBTN_FINISH**选择完成按钮。  
+- **PSBTN_FINISH** Chooses the Finish button.  
   
-- **PSBTN_OK**选择确定按钮。  
+- **PSBTN_OK** Chooses the OK button.  
   
-- **PSBTN_APPLYNOW**选择立即应用按钮。  
+- **PSBTN_APPLYNOW** Chooses the Apply Now button.  
   
-- **PSBTN_CANCEL**选择取消按钮。  
+- **PSBTN_CANCEL** Chooses the Cancel button.  
   
-- **PSBTN_HELP**选择帮助按钮。  
+- **PSBTN_HELP** Chooses the Help button.  
   
-### <a name="remarks"></a>备注  
- 请参阅[PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) Windows SDK Pressbutton 消息有关的详细信息。  
+### <a name="remarks"></a>Remarks  
+ See [PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597) for more information about the Windows SDK Pressbutton message.  
   
- 调用`PressButton`不会发送[PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552)到框架在属性页上的通知。 若要发送此通知时，调用[CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok)。  
+ A call to `PressButton` will not send the [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) notification from a property page to the framework. To send this notification, call [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]  
   
-##  <a name="removepage"></a>CPropertySheet::RemovePage  
- 从属性表删除页，并销毁关联的窗口。  
+##  <a name="removepage"></a>  CPropertySheet::RemovePage  
+ Removes a page from the property sheet and destroys the associated window.  
   
 ```  
 void RemovePage(CPropertyPage* pPage);  
 void RemovePage(int nPage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pPage`  
- 指向以页后，可以从属性表中删除。 不能为`NULL`。  
+ Points to the page to be removed from the property sheet. Cannot be `NULL`.  
   
  `nPage`  
- 要删除的页的索引。 必须是介于 0 和一个小于 （含） 的属性表中的页面数之间。  
+ Index of the page to be removed. Must be between 0 and one less than the number of pages in the property sheet, inclusive.  
   
-### <a name="remarks"></a>备注  
- [CPropertyPage](../../mfc/reference/cpropertypage-class.md)对象本身不会被销毁之前的所有者`CPropertySheet`窗口已关闭。  
+### <a name="remarks"></a>Remarks  
+ The [CPropertyPage](../../mfc/reference/cpropertypage-class.md) object itself is not destroyed until the owner of the `CPropertySheet` window is closed.  
   
-##  <a name="setactivepage"></a>CPropertySheet::SetActivePage  
- 更改的活动页面。  
+##  <a name="setactivepage"></a>  CPropertySheet::SetActivePage  
+ Changes the active page.  
   
 ```  
 BOOL SetActivePage(int nPage);  
 BOOL SetActivePage(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPage`  
- 要设置的页的索引。 它必须是介于 0 和一个小于 （含） 的属性表中的页面数之间。  
+ Index of the page to set. It must be between 0 and one less than the number of pages in the property sheet, inclusive.  
   
  `pPage`  
- 指向要设置的属性表中的页。 它不能是**NULL**。  
+ Points to the page to set in the property sheet. It cannot be **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则激活属性表则不为否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the property sheet is activated successfully; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 例如，使用`SetActivePage`如果在一页上的用户的操作会导致另一个页面会在活动页面。  
+### <a name="remarks"></a>Remarks  
+ For example, use `SetActivePage` if a user's action on one page should cause another page to become the active page.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CPropertySheet::GetActivePage](#getactivepage)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="setfinishtext"></a>CPropertySheet::SetFinishText  
- 设置中完成命令按钮的文本。  
+##  <a name="setfinishtext"></a>  CPropertySheet::SetFinishText  
+ Sets the text in the Finish command button.  
   
 ```  
 void SetFinishText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 指向要显示在完成命令按钮的文本。  
+ Points to the text to be displayed on the Finish command button.  
   
-### <a name="remarks"></a>备注  
- 调用`SetFinishText`以在完成命令按钮上显示文本和隐藏下一步和后退按钮后用户在完成向导的最后一页上的操作。  
+### <a name="remarks"></a>Remarks  
+ Call `SetFinishText` to display the text on the Finish command button and hide the Next and Back buttons after the user completes action on the last page of the wizard.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="settitle"></a>CPropertySheet::SetTitle  
- 指定属性表的标题 （框架窗口的标题栏中显示的文本）。  
+##  <a name="settitle"></a>  CPropertySheet::SetTitle  
+ Specifies the property sheet's caption (the text displayed in the title bar of a frame window).  
   
 ```  
 void SetTitle(
@@ -688,76 +707,76 @@ void SetTitle(
     UINT nStyle = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nStyle`  
- 指定的属性表标题的样式。 必须指定的样式，0 或作为**PSH_PROPTITLE**。 如果将样式设置为**PSH_PROPTITLE**，在指定为标题文本之后显示单词"属性"。 例如，调用`SetTitle`("简单" **PSH_PROPTITLE**) 将导致在属性表标题的"简单属性。  
+ Specifies the style of the property sheet title. The style must be specified at 0 or as **PSH_PROPTITLE**. If the style is set as **PSH_PROPTITLE**, the word "Properties" appears after the text specified as the caption. For example, calling `SetTitle`("Simple", **PSH_PROPTITLE**) will result in a property sheet caption of "Simple Properties."  
   
  `lpszText`  
- 指向要将其用于在属性表的标题栏中标题的文本。  
+ Points to the text to be used as the caption in the title bar of the property sheet.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，属性表的属性表构造函数中使用标题参数。  
+### <a name="remarks"></a>Remarks  
+ By default, a property sheet uses the caption parameter in the property sheet constructor.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]  
   
-##  <a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons  
- 启用或禁用向导属性表中的后退、 下一步或完成按钮。  
+##  <a name="setwizardbuttons"></a>  CPropertySheet::SetWizardButtons  
+ Enables or disables the Back, Next, or Finish button in a wizard property sheet.  
   
 ```  
 void SetWizardButtons(DWORD dwFlags);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 一组自定义的函数和向导按钮外观的标志。 此参数可以是以下值的组合︰  
+ A set of flags that customize the function and appearance of the wizard buttons. This parameter can be a combination of the following values:  
   
-- **PSWIZB_BACK**后退按钮  
+- **PSWIZB_BACK** Back button  
   
-- **PSWIZB_NEXT**下一步按钮  
+- **PSWIZB_NEXT** Next button  
   
-- **PSWIZB_FINISH**完成按钮  
+- **PSWIZB_FINISH** Finish button  
   
-- **PSWIZB_DISABLEDFINISH**已禁用完成按钮  
+- **PSWIZB_DISABLEDFINISH** Disabled Finish button  
   
-### <a name="remarks"></a>备注  
- 调用`SetWizardButtons`仅对话框已打开，则后不能调用`SetWizardButtons`之前调用[DoModal](#domodal)。 通常情况下，应调用`SetWizardButtons`从[cpropertypage:: Onsetactive](../../mfc/reference/cpropertypage-class.md#onsetactive)。  
+### <a name="remarks"></a>Remarks  
+ Call `SetWizardButtons` only after the dialog is open; you can't call `SetWizardButtons` before you call [DoModal](#domodal). Typically, you should call `SetWizardButtons` from [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).  
   
- 如果你想要更改完成按钮上的文本或隐藏下一步和后退按钮一次该用户已完成向导中，调用[SetFinishText](#setfinishtext)。 请注意下, 一步完成以及共享相同的按钮。 你可以显示完成或下一步按钮一次，但不是两者。  
+ If you want to change the text on the Finish button or hide the Next and Back buttons once the user has completed the wizard, call [SetFinishText](#setfinishtext). Note that the same button is shared for Finish and Next. You can display a Finish or a Next button at one time, but not both.  
   
-### <a name="example"></a>示例  
- A`CPropertySheet`有三个向导属性页︰ `CStylePage`， `CColorPage`，和`CShapePage`。  下面的代码片段演示如何启用和禁用**回**和**下一步**向导属性页上的按钮。  
+### <a name="example"></a>Example  
+ A `CPropertySheet` has three wizard property pages: `CStylePage`, `CColorPage`, and `CShapePage`.  The code fragment below shows how to enable and disable the **Back** and **Next** buttons on the wizard property page.  
   
- [!code-cpp[NVC_MFCDocView # 140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]  
+ [!code-cpp[NVC_MFCDocView#140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]  
   
- [!code-cpp[NVC_MFCDocView # 141](../../mfc/codesnippet/cpp/cpropertysheet-class_14.cpp)]  
+ [!code-cpp[NVC_MFCDocView#141](../../mfc/codesnippet/cpp/cpropertysheet-class_14.cpp)]  
   
- [!code-cpp[NVC_MFCDocView # 138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
+ [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="setwizardmode"></a>CPropertySheet::SetWizardMode  
- 确定为向导的属性页。  
+##  <a name="setwizardmode"></a>  CPropertySheet::SetWizardMode  
+ Establishes a property page as a wizard.  
   
 ```  
 void SetWizardMode();
 ```  
   
-### <a name="remarks"></a>备注  
- 向导属性页的关键特征是，在用户导航下一步使用或完成、 后退、 和取消按钮而不是选项卡。  
+### <a name="remarks"></a>Remarks  
+ A key characteristic of a wizard property page is that the user navigates using Next or Finish, Back, and Cancel buttons instead of tabs.  
   
- 调用`SetWizardMode`之前调用[DoModal](#domodal)。 调用后`SetWizardMode`，`DoModal`将返回**ID_WIZFINISH** （如果用户关闭与完成按钮） 或**IDCANCEL**。  
+ Call `SetWizardMode` before calling [DoModal](#domodal). After you call `SetWizardMode`, `DoModal` will return either **ID_WIZFINISH** (if the user closes with the Finish button) or **IDCANCEL**.  
   
- `SetWizardMode`设置 PSH_WIZARD 标志。  
+ `SetWizardMode` sets the PSH_WIZARD flag.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)   
- [MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)   
- [MFC 示例 PROPDLG](../../visual-cpp-samples.md)   
- [MFC 示例 SNAPVW](../../visual-cpp-samples.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CMNCTRL1](../../visual-cpp-samples.md)   
+ [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
+ [MFC Sample PROPDLG](../../visual-cpp-samples.md)   
+ [MFC Sample SNAPVW](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

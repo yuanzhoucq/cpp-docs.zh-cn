@@ -1,193 +1,233 @@
 ---
-title: "演练：向应用程序添加 CTaskDialog | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTaskDialog, 添加"
-  - "演练 [C++], 对话框"
+title: 'Walkthrough: Adding a CTaskDialog to an Application | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTaskDialog, adding
+- walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# 演练：向应用程序添加 CTaskDialog
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f33e4f4d12d5c561de6c2a932586b856b015f739
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本演练介绍了 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md)，并演示如何将其添加到应用程序中。  
+---
+# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Walkthrough: Adding a CTaskDialog to an Application
+This walkthrough introduces the [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) and shows you how to add one to your application.  
   
- `CTaskDialog` 是一个任务对话框，用于取代 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 中的 Windows 消息框。`CTaskDialog` 改进了原始消息框并添加了功能。[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 仍支持 Windows 消息框。  
+ The `CTaskDialog` is a task dialog box that replaces the Windows message box in [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. The `CTaskDialog` improves the original message box and adds functionality. The Windows message box is still supported in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
   
 > [!NOTE]
->  早于 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 的 Windows 版本不支持 `CTaskDialog`。 如果你想要向在早期版本的 Windows 上运行你的应用程序的用户显示一条消息，则必须编写备用对话框选项的程序。 可以使用静态方法 [CTaskDialog::IsSupported](../Topic/CTaskDialog::IsSupported.md) 在运行时确定用户的计算机能否显示 `CTaskDialog`。 此外，仅当应用程序使用 Unicode 库生成时，`CTaskDialog` 才可用。  
+>  Versions of Windows earlier than [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] do not support the `CTaskDialog`. You must program an alternative dialog box option if you want to show a message to a user who runs your application on an earlier version of Windows. You can use the static method [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) to determine at run time whether a user's computer can display a `CTaskDialog`. In addition, the `CTaskDialog` is only available when your application is built with the Unicode library.  
   
- `CTaskDialog` 支持使用多种可选元素来收集和显示信息。 例如，`CTaskDialog` 可以显示命令链接、自定义按钮、自定义图标和页脚。`CTaskDialog` 还具有多种方法，可查询任务对话框状态以确定用户选择的可选元素。  
+ The `CTaskDialog` supports several optional elements to gather and display information. For example, a `CTaskDialog` can display command links, customized buttons, customized icons, and a footer. The `CTaskDialog` also has several methods that enable you to query the state of the task dialog box to determine what optional elements the user selected.  
   
-## 系统必备  
- 你需要以下组件来完成本演练：  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
   
--   [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
   
-## 将 Windows 消息框替换为 CTaskDialog  
- 以下过程演示了将要替换 Windows 消息框的 `CTaskDialog` 最基本的用法。 此示例还更改了与任务对话框关联的图标。 更改该图标会使 `CTaskDialog` 的外观与 Windows 消息框相同。  
+## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Replacing a Windows Message Box with a CTaskDialog  
+ The following procedure demonstrates the most basic use of the `CTaskDialog`, which is to replace the Windows message box. This example also changes the icon associated with the task dialog box. Changing the icon makes the `CTaskDialog` appear identical to the Windows message box.  
   
-#### 将 Windows 消息框替换为 CTaskDialog 的步骤  
+#### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>To Replace a Windows Message Box with a CTaskDialog  
   
-1.  使用默认设置创建一个新的 MFC 应用程序项目。 将其命名为 `MyProject`。  
+1.  Create a new MFC Application project with the default settings. Call it `MyProject`.  
   
-2.  使用**解决方案资源管理器**打开文件 MyProject.cpp。  
+2.  Use the **Solution Explorer** to open the file MyProject.cpp.  
   
-3.  在包含列表后面添加 `#include "afxtaskdialog.h"`。  
+3.  Add `#include "afxtaskdialog.h"` after the list of includes.  
   
-4.  查找 `CMyProjectApp::InitInstance` 方法。 在 `return TRUE;` 语句的前面插入以下代码行。 此代码将创建我们在 Windows 消息框或 `CTaskDialog` 中使用的字符串。  
+4.  Find the method `CMyProjectApp::InitInstance`. Insert the following lines of code before the `return TRUE;` statement. This code creates the strings that we use in either the Windows message box or in the `CTaskDialog`.  
   
-    ```  
-    CString message("My message to the user");  
-    CString dialogTitle("My Task Dialog title");  
+ ```  
+    CString message("My message to the user");
+
+    CString dialogTitle("My Task Dialog title");
+
     CString emptyString;  
-    ```  
+ ```  
   
-5.  在步骤 4 中的代码的后面添加以下代码。 此代码可保证用户的计算机支持 `CTaskDialog`。 如果不支持该对话框，应用程序将改为显示 Windows 消息框。  
+5.  Add the following code after the code from step 4. This code guarantees that the user's computer supports the `CTaskDialog`. If the dialog is not supported, the application displays a Windows message box instead.  
   
-    ```  
+ ```  
     if (CTaskDialog::IsSupported())  
-    {  
+ {  
+ 
+ }  
+    else 
+ {  
+    AfxMessageBox(message);
+
+ }  
+ ```  
   
-    }  
-    else  
-    {  
-       AfxMessageBox(message);  
-    }  
-    ```  
+6.  Insert the following code between the brackets after the `if` statement from step 5. This code creates the `CTaskDialog`.  
   
-6.  在步骤 5 中 `if` 语句后面的括号之间插入以下代码。 此代码将创建 `CTaskDialog`。  
+ ```  
+    CTaskDialog taskDialog(message,
+    emptyString,
+    dialogTitle,
+    TDCBF_OK_BUTTON);
+
+ ```  
   
-    ```  
-    CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);  
-    ```  
+7.  On the next line, add the following code. This code sets the warning icon.  
   
-7.  在下一行上，添加以下代码。 此代码将设置警告图标。  
+ ```  
+    taskDialog.SetMainIcon(TD_WARNING_ICON);
+
+ ```  
   
-    ```  
-    taskDialog.SetMainIcon(TD_WARNING_ICON);  
-    ```  
+8.  On the next line, add the following code. This code displays the task dialog box.  
   
-8.  在下一行上，添加以下代码。 此代码将显示任务对话框。  
+ ```  
+    taskDialog.DoModal();
+
+ ```  
   
-    ```  
-    taskDialog.DoModal();  
-    ```  
+ You can omit step 7 if you do not want the `CTaskDialog` to display the same icon as the Windows message box. If you omit that step, the `CTaskDialog` has no icon when the application displays it.  
   
- 如果不希望 `CTaskDialog` 显示与 Windows 消息框相同的图标，可以忽略步骤 7。 如果忽略该步骤，当应用程序显示 `CTaskDialog` 时，该对话框没有图标。  
+ Compile and run the application. The application displays the task dialog box after it starts.  
   
- 编译并运行该应用程序。 在启动后，应用程序将显示任务对话框。  
+## <a name="adding-functionality-to-the-ctaskdialog"></a>Adding Functionality to the CTaskDialog  
+ The following procedure shows you how to add functionality to the `CTaskDialog` that you created in the previous procedure. The example code shows you how to execute specific instructions based on the user's selections.  
   
-## 向 CTaskDialog 添加功能  
- 以下过程演示如何向在前述过程中创建的 `CTaskDialog` 添加功能。 示例代码演示如何基于用户选择执行特定指令。  
+#### <a name="to-add-functionality-to-the-ctaskdialog"></a>To Add Functionality to the CTaskDialog  
   
-#### 向 CTaskDialog 添加功能的步骤  
+1.  Navigate to the **Resource View**. If you cannot see the **Resource View**, you can open it from the **View** menu.  
   
-1.  导航到“资源视图”。 如果看不到“资源视图”，可以从“视图”菜单中打开它。  
+2.  Expand the **Resource View** until you can select the **String Table** folder. Expand it and double-click the **String Table** entry.  
   
-2.  展开“资源视图”，直到能够选择“字符串表”文件夹。 展开该文件夹并双击“字符串表”条目。  
+3.  Scroll to the bottom of the string table and add a new entry. Change the ID to `TEMP_LINE1`. Set the caption to **Command Line 1**.  
   
-3.  滚动到字符串表的底部并添加一个新条目。 将 ID 更改为 `TEMP_LINE1`。 将标题设置为 **Command Line 1**。  
+4.  Add another new entry. Change the ID to `TEMP_LINE2`. Set the caption to **Command Line 2**.  
   
-4.  再添加一个新条目。 将 ID 更改为 `TEMP_LINE2`。 将标题设置为 **Command Line 2**。  
+5.  Navigate back to MyProject.cpp.  
   
-5.  导航回到 MyProject.cpp。  
+6.  After `CString emptyString;`, add the following code:  
   
-6.  在 `CString emptyString;` 的后面添加以下代码：  
+ ```  
+    CString expandedLabel("Hide extra information");
+
+    CString collapsedLabel("Show extra information");
+
+    CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
+
+ ```  
   
-    ```  
-    CString expandedLabel("Hide extra information");  
-    CString collapsedLabel("Show extra information");  
-    CString expansionInfo("This is the additional information to the user,\nextended over two lines.");  
-    ```  
+7.  Find the `taskDialog.DoModal()` statement and replace that statement with the following code. This code updates the task dialog box and adds new controls:  
   
-7.  找到 `taskDialog.DoModal()` 语句并替换为以下代码。 此代码将更新任务对话框并添加新控件：  
+ ```  
+    taskDialog.SetMainInstruction(L"Warning");
+
+ taskDialog.SetCommonButtons(TDCBF_YES_BUTTON | TDCBF_NO_BUTTON | TDCBF_CANCEL_BUTTON);
+
+    taskDialog.LoadCommandControls(TEMP_LINE1,
+    TEMP_LINE2);
+
+    taskDialog.SetExpansionArea(expansionInfo,
+    collapsedLabel,
+    expandedLabel);
+
+    taskDialog.SetFooterText(L"This is the a small footnote to the user");
+
+    taskDialog.SetVerificationCheckboxText(L"Remember your selection");
+
+ ```  
   
-    ```  
-    taskDialog.SetMainInstruction(L"Warning");  
-    taskDialog.SetCommonButtons(TDCBF_YES_BUTTON | TDCBF_NO_BUTTON | TDCBF_CANCEL_BUTTON);  
-    taskDialog.LoadCommandControls(TEMP_LINE1, TEMP_LINE2);  
-    taskDialog.SetExpansionArea(expansionInfo, collapsedLabel, expandedLabel);  
-    taskDialog.SetFooterText(L"This is the a small footnote to the user");  
-    taskDialog.SetVerificationCheckboxText(L"Remember your selection");  
-    ```  
+8.  Add the following line of code that displays the task dialog box to the user and retrieves the user's selection:  
   
-8.  添加以下代码行，该代码将向用户显示任务对话框并检索用户的选择：  
+ ```  
+    INT_PTR result = taskDialog.DoModal();
+
+ ```  
   
-    ```  
-    INT_PTR result = taskDialog.DoModal();  
-    ```  
+9. Insert the following code after the call to `taskDialog.DoModal()`. This section of code processes the user's input:  
   
-9. 在调用 `taskDialog.DoModal()` 之后，插入以下代码。 此段代码将处理用户的输入：  
-  
-    ```  
-    if (taskDialog.GetVerificationCheckboxState() )  
-    {  
-       // PROCESS IF the user selects the verification checkbox   
-    }  
-  
+ ```  
+    if (taskDialog.GetVerificationCheckboxState())  
+ { *// PROCESS IF the user selects the verification checkbox   
+ }  
+ 
     switch (result)  
-    {  
-       case TEMP_LINE1:  
-          // PROCESS IF the first command line  
-          break;  
-       case TEMP_LINE2:  
-          // PROCESS IF the second command line  
-          break;  
-       case IDYES:  
-          // PROCESS IF the user clicks yes  
-          break;  
-       case IDNO:  
-          // PROCESS IF the user clicks no  
-          break;  
-       case IDCANCEL:  
-          // PROCESS IF the user clicks cancel  
-          break;  
-       default:  
-          // This case should not be hit because closing the dialog box results in IDCANCEL  
-          break;  
-    }  
-    ```  
+ {  
+    case TEMP_LINE1: *// PROCESS IF the first command line  
+    break; 
+    case TEMP_LINE2: *// PROCESS IF the second command line  
+    break; 
+    case IDYES: *// PROCESS IF the user clicks yes  
+    break; 
+    case IDNO: *// PROCESS IF the user clicks no  
+    break; 
+    case IDCANCEL: *// PROCESS IF the user clicks cancel  
+    break; 
+    default: *// This case should not be hit because closing the dialog box results in IDCANCEL  
+    break; 
+ }  
+ ```  
   
- 在步骤 9 的代码中，将以 PROCESS IF 开头的注释替换为要在指定条件下执行的代码。  
+ In the code in step 9, replace the comments that start with PROCESS IF with the code that you want to execute under the specified conditions.  
   
- 编译并运行该应用程序。 应用程序将显示使用新控件和其他信息的任务对话框。  
+ Compile and run the application. The application displays the task dialog box that uses the new controls and additional information.  
   
-## 显示 CTaskDialog 而不创建 CTaskDialog 对象  
- 以下过程演示如何在不先创建 `CTaskDialog` 对象的情况下显示 `CTaskDialog`。 本示例继续前面的过程。  
+## <a name="displaying-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Displaying a CTaskDialog Without Creating a CTaskDialog Object  
+ The following procedure shows you how to display a `CTaskDialog` without first creating a `CTaskDialog` object. This example continues the previous procedures.  
   
-#### 显示 CTaskDialog 而不创建 CTaskDialog 对象的步骤  
+#### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>To Display a CTaskDialog Without Creating a CTaskDialog Object  
   
-1.  打开 MyProject.cpp 文件（如果尚未打开）。  
+1.  Open the MyProject.cpp file if it is not already open.  
   
-2.  导航到 `if (CTaskDialog::IsSupported())` 语句的右括号处。  
+2.  Navigate to the closing bracket for the `if (CTaskDialog::IsSupported())` statement.  
   
-3.  直接在 `if` 语句的右括号前面（`else` 块的前面）插入以下代码：  
+3.  Insert the following code immediately before the closing bracket of the `if` statement (before the `else` block):  
   
-    ```  
-    HRESULT result2 = CTaskDialog::ShowDialog(L"My error message", L"Error", L"New Title", TEMP_LINE1, TEMP_LINE2);  
-    ```  
+ ```  
+    HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
+    L"Error",
+    L"New Title",
+    TEMP_LINE1,
+    TEMP_LINE2);
+
+ ```  
   
- 编译并运行该应用程序。 应用程序将显示两个任务对话框。 第一个对话框来自“向 CTaskDialog 添加功能的步骤”过程；第二个对话框来自上一个过程。  
+ Compile and run the application. The application displays two task dialog boxes. The first dialog box is from the To Add Functionality to the CTaskDialog procedure; the second dialog box is from the last procedure.  
   
- 这些示例并未演示 `CTaskDialog` 的所有可用选项，但是可以帮助你入门。 有关该类的完整描述，请参阅 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md)。  
+ These examples do not demonstrate all the available options for a `CTaskDialog`, but should help you get started. See [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) for a full description of the class.  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)   
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
  [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md)   
- [CTaskDialog::CTaskDialog](../Topic/CTaskDialog::CTaskDialog.md)
+ [CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)
+
+

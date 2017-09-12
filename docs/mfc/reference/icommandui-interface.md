@@ -1,5 +1,5 @@
 ---
-title: "ICommandUI 界面 |Microsoft 文档"
+title: ICommandUI Interface | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ICommandUI interface
+- ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 caps.latest.revision: 24
 author: mikeblome
@@ -41,109 +41,109 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1db6b3fa58639140322816c37103566353b15633
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 31f76aabfcfcd9f5497e0eb6ba1c2352eee32aa0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="icommandui-interface"></a>ICommandUI 接口
-管理用户界面命令。  
+# <a name="icommandui-interface"></a>ICommandUI Interface
+Manages user interface commands.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 interface class ICommandUI  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[icommandui__Check](#check)|将此命令的用户界面项设置为相应的复选状态。|  
-|[ICommandUI::ContinueRouting](#continuerouting)|告知命令路由机制，继续传送当前消息的处理程序链的下方。|  
-|[ICommandUI::Enabled](#enabled)|启用或禁用此命令的用户界面项。|  
-|[ICommandUI::ID](#id)|获取所表示的用户界面对象的 ID`ICommandUI`对象。|  
-|[ICommandUI::Index](#index)|获取所表示的用户界面对象的索引`ICommandUI`对象。|  
-|[ICommandUI::Radio](#radio)|将此命令的用户界面项设置为相应的复选状态。|  
-|[ICommandUI::Text](#text)|设置此命令的用户界面项的文本。|  
+|[icommandui__Check](#check)|Sets the user interface item for this command to the appropriate check state.|  
+|[ICommandUI::ContinueRouting](#continuerouting)|Tells the command-routing mechanism to continue routing the current message down the chain of handlers.|  
+|[ICommandUI::Enabled](#enabled)|Enables or disables the user interface item for this command.|  
+|[ICommandUI::ID](#id)|Gets the ID of the user interface object represented by the `ICommandUI` object.|  
+|[ICommandUI::Index](#index)|Gets the index of the user interface object represented by the `ICommandUI` object.|  
+|[ICommandUI::Radio](#radio)|Sets the user interface item for this command to the appropriate check state.|  
+|[ICommandUI::Text](#text)|Sets the text of the user interface item for this command.|  
   
-## <a name="remarks"></a>备注  
- 此接口提供方法和属性，管理用户界面命令。 `ICommandUI`类似于[CCmdUI 类](../../mfc/reference/ccmdui-class.md)，只不过`ICommandUI`用于 MFC 应用程序与.NET 组件进行互操作。  
+## <a name="remarks"></a>Remarks  
+ This interface provides methods and properties that manage user interface commands. `ICommandUI` is similar to [CCmdUI Class](../../mfc/reference/ccmdui-class.md), except that `ICommandUI` is used for MFC applications that interoperate with .NET components.  
   
- `ICommandUI`在中使用`ON_UPDATE_COMMAND_UI`中的处理程序[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)的派生类。 当应用程序的用户激活 （选择或单击） 菜单上，每个菜单项将显示为已启用或禁用。 每个菜单命令的目标提供此信息通过实现`ON_UPDATE_COMMAND_UI`处理程序。 对于每个应用程序中的命令用户界面对象，使用属性窗口来创建消息映射项和每个处理程序的函数原型。  
+ `ICommandUI` is used within an `ON_UPDATE_COMMAND_UI` handler in an [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-derived class. When a user of an application activates (selects or clicks) a menu, each menu item is displayed as enabled or disabled. The target of each menu command provides this information by implementing an `ON_UPDATE_COMMAND_UI` handler. For each of the command user interface objects in your application, use the Properties window to create a message-map entry and function prototype for each handler.  
   
- 有关详细信息如何`ICommandUI`接口使用在命令路由，请参阅[如何︰ 向 Windows 窗体控件添加命令传送](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。  
+ For more information on how the `ICommandUI` interface is used in command routing, see [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
- 有关使用 Windows 窗体的详细信息，请参阅[在 MFC 中使用 Windows 窗体用户控件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- 在 MFC 中如何管理用户界面命令的详细信息，请参阅[CCmdUI 类](../../mfc/reference/ccmdui-class.md)。  
+ For more information on how user interface commands are managed in MFC, see [CCmdUI Class](../../mfc/reference/ccmdui-class.md).  
   
-## <a name="check"></a>ICommandUI::Check  
-将此命令的用户界面项设置为相应的复选状态。
+## <a name="check"></a> ICommandUI::Check  
+Sets the user interface item for this command to the appropriate check state.
 ```
 property UICheckState Check;
 ```
-## <a name="remarks"></a>备注  
-此属性将此命令的用户界面项设置为相应的复选状态。 将检查设置为以下值︰  
-- 0 不选取  
-- 1 检查  
-- 不确定设置&2;  
+## <a name="remarks"></a>Remarks  
+This property sets the user interface item for this command to the appropriate check state. Set Check to the following values:  
+- 0 Uncheck  
+- 1 Check  
+- 2 Set indeterminate  
 
-## <a name="continuerouting"></a>ICommandUI::ContinueRouting   
-告知命令路由机制，继续传送当前消息的处理程序链的下方。
+## <a name="continuerouting"></a> ICommandUI::ContinueRouting   
+Tells the command routing mechanism to continue routing the current message down the chain of handlers.
 ```
 void ContinueRouting();
 ```
-## <a name="remarks"></a>备注
-这是一个高级的成员函数，应使用结合的 ON_COMMAND_EX 处理程序，则返回 FALSE。 有关详细信息，请参阅技术注意 TN006︰ 消息映射。
+## <a name="remarks"></a>Remarks
+This is an advanced member function that should be used in conjunction with an ON_COMMAND_EX handler that returns FALSE. For more information, see Technical Note TN006: Message Maps.
 
-## <a name="enabled"></a>ICommandUI::Enabled 
-启用或禁用此命令的用户界面项。
+## <a name="enabled"></a> ICommandUI::Enabled 
+Enables or disables the user interface item for this command.
 ```
 property bool Enabled;
 ```
-## <a name="remarks"></a>备注
-此属性启用或禁用此命令的用户界面项。 将已启用对设置为 true 以启用该项目，为 false，则将其禁用。
+## <a name="remarks"></a>Remarks
+This property enables or disables the user interface item for this command. Set Enabled to TRUE to enable the item, FALSE to disable it.
 
-## <a name="id"></a>ICommandUI::ID  
-获取此 ICommandUI 对象所表示的用户界面对象的 ID。
+## <a name="id"></a> ICommandUI::ID  
+Gets the ID of the user interface object represented by the ICommandUI object.
 ```
 property unsigned int ID;
 ```
-## <a name="remarks"></a>备注
-此属性获取菜单项、 工具栏按钮或由 ICommandUI 对象代表其他用户界面对象的 ID （句柄）。
+## <a name="remarks"></a>Remarks
+This property gets the ID (a handle) of the menu item, toolbar button, or other user interface object represented by the ICommandUI object.
 
-## <a name="index"></a>ICommandUI::Index   
-获取此 ICommandUI 对象所表示的用户界面对象的索引。
+## <a name="index"></a> ICommandUI::Index   
+Gets the index of the user interface object represented by the ICommandUI object.
 ```
 property unsigned int Index;
 ```
-## <a name="remarks"></a>备注
-此属性获取菜单项、 工具栏按钮或由 ICommandUI 对象代表其他用户界面对象的索引 （句柄）。
+## <a name="remarks"></a>Remarks
+This property gets the index (a handle) of the menu item, toolbar button, or other user interface object represented by the ICommandUI object.
 
-## <a name="radio"></a>ICommandUI::Radio 
-将此命令的用户界面项设置为相应的复选状态。
+## <a name="radio"></a> ICommandUI::Radio 
+Sets the user interface item for this command to the appropriate check state.
 ```
 property bool Radio;
 ```
-## <a name="remarks"></a>备注
-此属性将此命令的用户界面项设置为相应的复选状态。 将广播到设置为 true 以启用项;否则为 FALSE。
+## <a name="remarks"></a>Remarks
+This property sets the user interface item for this command to the appropriate check state. Set Radio to TRUE to enable the item; otherwise FALSE.
 
-## <a name="text"></a>ICommandUI::Text 
-设置此命令的用户界面项的文本。
+## <a name="text"></a> ICommandUI::Text 
+Sets the text of the user interface item for this command.
 ```
 property String^ Text;
 ```
-## <a name="remarks"></a>备注
-此属性设置为此命令的用户界面项的文本。 将文本设置为文本字符串句柄。
+## <a name="remarks"></a>Remarks
+This property sets the text of the user interface item for this command. Set Text to a text string handle.
 
-## <a name="requirements"></a>要求  
- **标头︰** afxwinforms.h (在程序集 atlmfc\lib\mfcmifc80.dll 中定义)  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
   
-## <a name="see-also"></a>另请参阅  
- [CCmdUI 类](../../mfc/reference/ccmdui-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdUI Class](../../mfc/reference/ccmdui-class.md)
 

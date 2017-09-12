@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonStatusBar 类 |Microsoft 文档"
+title: CMFCRibbonStatusBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,7 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonStatusBar class
+- CMFCRibbonStatusBar [MFC], AddDynamicElement
+- CMFCRibbonStatusBar [MFC], AddElement
+- CMFCRibbonStatusBar [MFC], AddExtendedElement
+- CMFCRibbonStatusBar [MFC], AddSeparator
+- CMFCRibbonStatusBar [MFC], Create
+- CMFCRibbonStatusBar [MFC], CreateEx
+- CMFCRibbonStatusBar [MFC], FindByID
+- CMFCRibbonStatusBar [MFC], FindElement
+- CMFCRibbonStatusBar [MFC], GetCount
+- CMFCRibbonStatusBar [MFC], GetElement
+- CMFCRibbonStatusBar [MFC], GetExCount
+- CMFCRibbonStatusBar [MFC], GetExElement
+- CMFCRibbonStatusBar [MFC], GetExtendedArea
+- CMFCRibbonStatusBar [MFC], GetSpace
+- CMFCRibbonStatusBar [MFC], IsBottomFrame
+- CMFCRibbonStatusBar [MFC], IsExtendedElement
+- CMFCRibbonStatusBar [MFC], IsInformationMode
+- CMFCRibbonStatusBar [MFC], RecalcLayout
+- CMFCRibbonStatusBar [MFC], RemoveAll
+- CMFCRibbonStatusBar [MFC], RemoveElement
+- CMFCRibbonStatusBar [MFC], SetInformation
+- CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
 caps.latest.revision: 37
 author: mikeblome
@@ -56,70 +77,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8fc2ec14c3f6320f45128bf36824ce7f9b8de9c5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b3cefc802ce404c8b4a19091faecea3b0fc0d365
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 类
-`CMFCRibbonStatusBar`类实现的状态栏控件可以显示功能区元素。  
+# <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar Class
+The `CMFCRibbonStatusBar` class implements a status bar control that can display ribbon elements.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonStatusBar : public CMFCRibbonBar  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|将动态元素添加到功能区状态栏。|  
-|[CMFCRibbonStatusBar::AddElement](#addelement)|将新的功能区元素添加到功能区状态栏。|  
-|[CMFCRibbonStatusBar::AddExtendedElement](#addextendedelement)|将功能区元素添加到功能区状态栏扩展区域中。|  
-|[CMFCRibbonStatusBar::AddSeparator](#addseparator)|向功能区状态栏的分隔符。|  
-|[CMFCRibbonStatusBar::Create](#create)|创建功能区状态栏。|  
-|[CMFCRibbonStatusBar::CreateEx](#createex)|创建功能区状态栏扩展样式。|  
+|[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|Adds a dynamic element to the ribbon status bar.|  
+|[CMFCRibbonStatusBar::AddElement](#addelement)|Adds a new ribbon element to the ribbon status bar.|  
+|[CMFCRibbonStatusBar::AddExtendedElement](#addextendedelement)|Adds a ribbon element to the extended area of the ribbon status bar.|  
+|[CMFCRibbonStatusBar::AddSeparator](#addseparator)|Adds a separator to the ribbon status bar.|  
+|[CMFCRibbonStatusBar::Create](#create)|Creates a ribbon status bar.|  
+|[CMFCRibbonStatusBar::CreateEx](#createex)|Creates a ribbon status bar with an extended style.|  
 |[CMFCRibbonStatusBar::FindByID](#findbyid)||  
-|[CMFCRibbonStatusBar::FindElement](#findelement)|返回一个指向具有指定的命令 ID 的元素|  
-|[CMFCRibbonStatusBar::GetCount](#getcount)|返回位于功能区状态栏的主区域中的元素数目。|  
-|[CMFCRibbonStatusBar::GetElement](#getelement)|返回指向位于指定索引处的元素的指针。|  
-|[CMFCRibbonStatusBar::GetExCount](#getexcount)|返回位于功能区状态栏扩展区域中的元素数目。|  
-|[CMFCRibbonStatusBar::GetExElement](#getexelement)|返回指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。|  
+|[CMFCRibbonStatusBar::FindElement](#findelement)|Returns a pointer to the element that has the specified command ID.|  
+|[CMFCRibbonStatusBar::GetCount](#getcount)|Returns the number of elements that are located in the main area of the ribbon status bar.|  
+|[CMFCRibbonStatusBar::GetElement](#getelement)|Returns a pointer to the element that is located at a specified index.|  
+|[CMFCRibbonStatusBar::GetExCount](#getexcount)|Returns the number of elements that are located in the extended area of the ribbon status bar.|  
+|[CMFCRibbonStatusBar::GetExElement](#getexelement)|Returns a pointer to the element that is located at a specified index in the extended area of the ribbon status bar.|  
 |[CMFCRibbonStatusBar::GetExtendedArea](#getextendedarea)||  
 |[CMFCRibbonStatusBar::GetSpace](#getspace)||  
 |[CMFCRibbonStatusBar::IsBottomFrame](#isbottomframe)||  
 |[CMFCRibbonStatusBar::IsExtendedElement](#isextendedelement)||  
-|[CMFCRibbonStatusBar::IsInformationMode](#isinformationmode)|确定是否为功能区状态栏启用信息模式。|  
-|[CMFCRibbonStatusBar::RecalcLayout](#recalclayout)|(重写[CMFCRibbonBar::RecalcLayout](../../mfc/reference/cmfcribbonbar-class.md#recalclayout)。)|  
-|[CMFCRibbonStatusBar::RemoveAll](#removeall)|从功能区状态栏中移除所有元素。|  
-|[CMFCRibbonStatusBar::RemoveElement](#removeelement)|移除具有指定的命令 ID 从功能区状态栏的元素。|  
-|[CMFCRibbonStatusBar::SetInformation](#setinformation)|启用或禁用功能区状态栏的信息模式。|  
+|[CMFCRibbonStatusBar::IsInformationMode](#isinformationmode)|Determines whether information mode is enabled for the ribbon status bar.|  
+|[CMFCRibbonStatusBar::RecalcLayout](#recalclayout)|(Overrides [CMFCRibbonBar::RecalcLayout](../../mfc/reference/cmfcribbonbar-class.md#recalclayout).)|  
+|[CMFCRibbonStatusBar::RemoveAll](#removeall)|Removes all elements from the ribbon status bar.|  
+|[CMFCRibbonStatusBar::RemoveElement](#removeelement)|Removes the element that has a specified command ID from the ribbon status bar.|  
+|[CMFCRibbonStatusBar::SetInformation](#setinformation)|Enables or disables the information mode for the ribbon status bar.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|显示功能区的状态栏当启用此信息模式上显示的信息字符串。|  
+|[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|Displays the information string that appears on the ribbon status bar when the information mode is enabled.|  
   
-## <a name="remarks"></a>备注  
- 通过使用功能区状态栏的内置的上下文菜单，用户可以更改功能区状态栏上的功能区元素的可见性。 您可以动态添加或移除元素。  
+## <a name="remarks"></a>Remarks  
+ Users can change the visibility of ribbon elements on a ribbon status bar by using the built-in context menu for the ribbon status bar. You can add or remove elements dynamically.  
   
- 功能区状态栏有两个区域︰ 主区域和扩展的区域。 扩展的区域显示在功能区状态栏的右侧，并显示在另一种颜色，比主区域。  
+ A ribbon status bar has two areas: a main area and an extended area. The extended area is displayed on the right side of the ribbon status bar and appears in a different color than the main area does.  
   
- 通常情况下，状态栏的主区域显示状态通知并扩展的区域显示视图控件。 尽可能长时间时在用户调整大小功能区状态栏扩展的区域仍然可见。  
+ Typically, the main area of the status bar displays status notifications, and the extended area displays view controls. The extended area remains visible as long as possible when the user resizes the ribbon status bar.  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用各种方法`CMFCRibbonStatusBar`类。 该示例演示如何将新的功能区元素添加到功能区状态栏，将功能区元素添加到功能区状态栏扩展区域中添加一个分隔符，并启用功能区状态栏的常规模式。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonStatusBar` class. The example shows how to add a new ribbon element to the ribbon status bar, add a ribbon element to the extended area of the ribbon status bar, add a separator, and enable the regular mode for the ribbon status bar.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&15;](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]  
-[!code-cpp[NVC_MFC_RibbonApp #&16;](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]  
+[!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -134,25 +155,25 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
  [CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxribbonstatusbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonstatusbar.h  
   
-##  <a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
- 将动态元素添加到功能区状态栏。  
+##  <a name="adddynamicelement"></a>  CMFCRibbonStatusBar::AddDynamicElement  
+ Adds a dynamic element to the ribbon status bar.  
   
 ```  
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pElement`  
- 一个指向动态元素。  
+ A pointer to a dynamic element.  
   
-### <a name="remarks"></a>备注  
- 与正则元素不同的动态元素不是可自定义和状态栏的自定义菜单上不显示它们。  
+### <a name="remarks"></a>Remarks  
+ Unlike regular elements, dynamic elements are not customizable and the customize menu of the status bar does not display them.  
   
-##  <a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
- 将新的功能区元素添加到功能区状态栏。  
+##  <a name="addelement"></a>  CMFCRibbonStatusBar::AddElement  
+ Adds a new ribbon element to the ribbon status bar.  
   
 ```  
 void AddElement(
@@ -161,18 +182,18 @@ void AddElement(
     BOOL bIsVisible=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pElement`  
- 指向添加的元素的指针。  
+ A pointer to the added element.  
   
  [in] `lpszLabel`  
- 元素文本标签。  
+ A text label of the element.  
   
  [in] `bIsVisible`  
- `TRUE`如果您想要将元素添加为可见，`FALSE`如果您想要添加的元素为隐藏。  
+ `TRUE` if you want to add the element as visible, `FALSE` if you want to add the element as hidden.  
   
-##  <a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
- 将功能区元素添加到功能区状态栏扩展区域中。  
+##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
+ Adds a ribbon element to the extended area of the ribbon status bar.  
   
 ```  
 void AddExtendedElement(
@@ -181,31 +202,31 @@ void AddExtendedElement(
     BOOL bIsVisible=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pElement`  
- 指向添加的元素的指针。  
+ A pointer to the added element.  
   
  [in] `lpszLabel`  
- 元素文本标签。  
+ The text label of the element.  
   
  [in] `bIsVisible`  
- `TRUE`如果您想要将元素添加为可见，`FALSE`如果您想要添加的元素为隐藏。  
+ `TRUE` if you want to add the element as visible, `FALSE` if you want to add the element as hidden.  
   
-### <a name="remarks"></a>备注  
- 扩展区域位于状态栏控件的右侧。  
+### <a name="remarks"></a>Remarks  
+ The extended area is on the right side of the status bar control.  
   
-##  <a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
- 向功能区状态栏的分隔符。  
+##  <a name="addseparator"></a>  CMFCRibbonStatusBar::AddSeparator  
+ Adds a separator to the ribbon status bar.  
   
 ```  
 void AddSeparator();
 ```  
   
-### <a name="remarks"></a>备注  
- 框架在方法之后添加分隔符[CMFCRibbonStatusBar::AddElement](#addelement)。 将插入的最后一个元素。  
+### <a name="remarks"></a>Remarks  
+ The framework adds a separator after the method [CMFCRibbonStatusBar::AddElement](#addelement). inserts the last element.  
   
-##  <a name="create"></a>CMFCRibbonStatusBar::Create  
- 创建功能区状态栏。  
+##  <a name="create"></a>  CMFCRibbonStatusBar::Create  
+ Creates a ribbon status bar.  
   
 ```  
 BOOL Create(
@@ -214,21 +235,21 @@ BOOL Create(
     UINT nID=AFX_IDW_STATUS_BAR);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
- 指向父窗口的指针。  
+ A pointer to the parent window.  
   
  [in] `dwStyle`  
- 逻辑或组合的控件样式。  
+ A logical OR combination of control styles.  
   
  [in] `nID`  
- 状态栏控件 ID。  
+ The control ID of the status bar.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，创建状态栏`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the status bar is created successfully, `FALSE` otherwise.  
   
-##  <a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
- 创建功能区状态栏扩展样式。  
+##  <a name="createex"></a>  CMFCRibbonStatusBar::CreateEx  
+ Creates a ribbon status bar that has an extended style.  
   
 ```  
 BOOL CreateEx(
@@ -238,168 +259,168 @@ BOOL CreateEx(
     UINT nID=AFX_IDW_STATUS_BAR);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 指向父窗口的指针。  
+ A pointer to the parent window.  
   
  `dwCtrlStyle`  
- 创建状态栏对象的其他样式逻辑或组合。  
+ A logical OR combination of additional styles for creating the status bar object.  
   
  `dwStyle`  
- 状态栏控件样式。  
+ The control style of the status bar.  
   
  `nID`  
- 状态栏控件 ID。  
+ The control ID of the status bar.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，创建状态栏`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the status bar is created successfully, `FALSE` otherwise.  
   
-##  <a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
  [in] `BOOL`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
- 返回一个指向具有指定的命令 ID 的元素  
+##  <a name="findelement"></a>  CMFCRibbonStatusBar::FindElement  
+ Returns a pointer to the element that has the specified command ID.  
   
 ```  
 CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 元素的 ID。  
+ The ID of the element.  
   
-### <a name="return-value"></a>返回值  
- 指向具有指定的命令 ID 的元素的指针 `NULL`如果没有此类元素。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the element that has the specified command ID. `NULL` if there is no such element.  
   
-##  <a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
- 返回位于功能区状态栏的主区域中的元素数目。  
+##  <a name="getcount"></a>  CMFCRibbonStatusBar::GetCount  
+ Returns the number of elements that are located in the main area of the ribbon status bar.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 位于功能区状态栏的主区域中的元素数目。  
+### <a name="return-value"></a>Return Value  
+ The number of elements that are located in the main area of the ribbon status bar.  
   
-##  <a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
- 返回指向位于指定索引处的元素的指针。  
+##  <a name="getelement"></a>  CMFCRibbonStatusBar::GetElement  
+ Returns a pointer to the element that is located at a specified index.  
   
 ```  
 CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 指定该元素位于状态栏控件的主区域中的从零开始索引。  
+ Specifies a zero-based index of an element that is located in the main area of the status bar control.  
   
-### <a name="return-value"></a>返回值  
- 指向位于指定索引处的元素的指针。 `NULL`如果索引为负或超过状态栏中的元素数。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the element that is located at the specified index. `NULL` if the index is negative or exceeds the number of elements in the status bar.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
- 返回位于功能区状态栏扩展区域中的元素数目。  
+##  <a name="getexcount"></a>  CMFCRibbonStatusBar::GetExCount  
+ Returns the number of elements that are located in the extended area of the ribbon status bar.  
   
 ```  
 int GetExCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 位于功能区状态栏扩展区域中的元素数目。  
+### <a name="return-value"></a>Return Value  
+ The number of elements that are located in the extended area of the ribbon status bar.  
   
-##  <a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
- 返回指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。 扩展区域位于状态栏控件的右侧。  
+##  <a name="getexelement"></a>  CMFCRibbonStatusBar::GetExElement  
+ Returns a pointer to the element that is located at a specified index in the extended area of the ribbon status bar. The extended area is on the right side of the status bar control.  
   
 ```  
 CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 指定元素的索引（从零开始），该元素位于状态栏控件的扩展区域中。  
+ Specifies the zero-based index of an element that is located in the extended area of the status bar control.  
   
-### <a name="return-value"></a>返回值  
- 一个指向元素的指针，该元素位于功能区状态栏扩展区域中的指定索引处。 如果 `NULL` 为负或超过功能区状态栏的扩展区域中的元素数，则为 `nIndex`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the element that is located at a specified index in the extended area of the ribbon status bar. `NULL` if `nIndex` is negative or exceeds the number of elements in the extended area of the ribbon status bar.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
+##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 int GetSpace() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
+##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 BOOL IsBottomFrame() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
+##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pElement`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
- 确定是否为功能区状态栏启用信息模式。  
+##  <a name="isinformationmode"></a>  CMFCRibbonStatusBar::IsInformationMode  
+ Determines whether information mode is enabled for the ribbon status bar.  
   
 ```  
 BOOL IsInformationMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果状态栏可采用的信息模式;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the status bar can work in information mode; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 在信息模式下，状态栏隐藏所有正则窗格，并显示一个消息字符串。  
+### <a name="remarks"></a>Remarks  
+ In information mode, the status bar hides all regular panes and displays a message string.  
   
-##  <a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
- 显示功能区的状态栏当启用此信息模式上显示的字符串。  
+##  <a name="ondrawinformation"></a>  CMFCRibbonStatusBar::OnDrawInformation  
+ Displays the string that appears on the ribbon status bar when the information mode is enabled.  
   
 ```  
 virtual void OnDrawInformation(
@@ -408,69 +429,69 @@ virtual void OnDrawInformation(
     CRect rectInfo);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `strInfo`  
- 信息字符串。  
+ The information string.  
   
  [in] `rectInfo`  
- 绑定矩形。  
+ The bounding rectangle.  
   
-### <a name="remarks"></a>备注  
- 如果你想要自定义状态栏上的信息字符串的外观，重写此方法在派生类中。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法以便将状态栏置于信息模式。 在此模式下，状态栏隐藏所有窗格，并显示由指定的信息字符串`strInfo`。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want to customize the appearance of the information string on the status bar. Use the [CMFCRibbonStatusBar::SetInformation](#setinformation) method to put the status bar in information mode. In this mode, the status bar hides all panes and displays the information string specified by `strInfo`.  
   
-##  <a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
- 从功能区状态栏中移除所有元素。  
+##  <a name="removeall"></a>  CMFCRibbonStatusBar::RemoveAll  
+ Removes all elements from the ribbon status bar.  
   
 ```  
 void RemoveAll();
 ```  
   
-##  <a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
- 移除具有指定的命令 ID 从功能区状态栏的元素。  
+##  <a name="removeelement"></a>  CMFCRibbonStatusBar::RemoveElement  
+ Removes the element that has a specified command ID from the ribbon status bar.  
   
 ```  
 BOOL RemoveElement(UINT uiID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 要从状态栏中删除该元素的 ID。  
+ The ID of the element to remove from the status bar.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果具有指定的元素`uiID`删除。 否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if an element with the specified `uiID` is removed. `FALSE` otherwise.  
   
-##  <a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
- 启用或禁用功能区状态栏的信息模式。  
+##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
+ Enables or disables the information mode for the ribbon status bar.  
   
 ```  
 void SetInformation(LPCTSTR lpszInfo);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszInfo`  
- 信息字符串。  
+ The information string.  
   
-### <a name="remarks"></a>备注  
- 使用此方法将状态栏中的信息模式。 在此模式下，状态栏隐藏所有窗格，并显示由指定的信息字符串`lpszInfo`。  
+### <a name="remarks"></a>Remarks  
+ Use this method to put the status bar in the information mode. In this mode, the status bar hides all panes and displays the information string specified by `lpszInfo`.  
   
- LpszInfo 时`NULL`，状态栏将恢复到常规模式。  
+ When lpszInfo is `NULL`, the status bar reverts to regular mode.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)   
- [CMFCRibbonBaseElement 类](../../mfc/reference/cmfcribbonbaseelement-class.md)   
- [CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)   
+ [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)   
+ [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)
 

@@ -1,101 +1,120 @@
 ---
-title: "演练：使用 MFC 创建功能区应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "创建功能区应用程序 (MFC)"
-  - "功能区应用程序, 创建 (MFC)"
+title: 'Walkthrough: Creating a Ribbon Application By Using MFC | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon application, creating (MFC)
+- creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# 演练：使用 MFC 创建功能区应用程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd9aff0bf52100207e2df0504226c991d0f66614
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本演练说明如何使用**“MFC 应用程序向导”**创建一个默认情况下具有功能区的应用程序。  然后，您可以通过添加一个带有**“收藏夹”**功能区面板的**“自定义”**功能区类别来扩展功能区，并向该面板中添加一些经常使用的命令。  
+---
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Walkthrough: Creating a Ribbon Application By Using MFC
+This walkthrough shows how to use the **MFC Application Wizard** to create an application that has a ribbon by default. You can then expand the ribbon by adding a **Custom** ribbon category that has a **Favorites** ribbon panel, and then adding some frequently used commands to the panel.  
   
-## 系统必备  
- 本演练假定您已将 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 设置为使用**“常规开发设置”**。  如果您使用其他设置，则以下说明中引用的某些用户界面 \(UI\) 元素可能不会显示。  有关如何更改设置的信息，请参阅[How to: Reset Your Settings](http://msdn.microsoft.com/zh-cn/c95c51be-e609-4769-abba-65e6beedec76)。  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using different settings, some of the user interface (UI) elements that are referenced in the following instructions might not be displayed. For information about how to change settings, see [How to: Reset Your Settings](http://msdn.microsoft.com/en-us/c95c51be-e609-4769-abba-65e6beedec76).  
   
-### 创建带功能区的 MFC 应用程序  
+### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>To create an MFC application that has a ribbon  
   
-1.  使用**“MFC 应用程序向导”**创建具有功能区的 MFC 应用程序。  若要运行该向导，请在**“文件”**菜单上，指向**“新建”**，然后单击**“项目”**。  
+1.  Use the **MFC Application Wizard** to create an MFC application that has a ribbon. To run the wizard, on the **File** menu, point to **New**, and then click **Project**.  
   
-2.  在**“新建项目”**对话框中，展开**“已安装的模板”**下的**“Visual C\+\+”**节点，选择**“MFC”**，然后选择**“MFC 应用程序”**。  为项目键入名称，例如，`MFCRibbonApp`，然后单击**“确定”**。  
+2.  In the **New Project** dialog box, expand the **Visual C++** node under **Installed Templates**, select **MFC**, and then select **MFC Application**. Type a name for the project, for example, `MFCRibbonApp`, and then click **OK**.  
   
-3.  在**“MFC 应用程序向导”**的第一页上，单击**“下一步”**。  
+3.  On the first page of the **MFC Application Wizard**, click **Next**.  
   
-4.  在**“应用程序类型”**页上的**“视觉样式和颜色”**下，选择**“Office 2007 \(蓝色主题\)”**。  将其他设置保留不变。  单击**“下一步”**。  
+4.  On the **Application Type** page, under **Visual style and colors**, select **Office 2007 (Blue theme)**. Leave the other settings as they are. Click **Next**.  
   
-5.  在**“复合文档支持”**页上，确保选中**“无”**，然后单击**“下一步”**。  
+5.  On the **Compound Document Support** page, make sure that **None** is selected and then click **Next**.  
   
-6.  在**“文档模板属性”**页上的**“文件扩展名”**框中，键入此应用程序创建的文档的文件扩展名，例如 `mfcrbnapp`。  单击**“下一步”**。  
+6.  On the **Document Template Properties** page, in the **File extension** box, type a file name extension for documents that this application creates, for example, `mfcrbnapp`. Click **Next**.  
   
-7.  在**“数据库支持”**页上，确保选中**“无”**，然后单击**“下一步”**。  
+7.  On the **Database Support** page, make sure that **None** is selected and then click **Next**.  
   
-8.  在**“用户界面功能”**页上，确保选中**“使用功能区”**。  单击**“下一步”**。  
+8.  On the **User Interface Features** page, make sure that **Use a ribbon** is selected. Click **Next**.  
   
-9. 默认情况下，**“MFC 应用程序向导”**添加了对多个停靠窗格的支持。  由于本演练仅介绍功能区，因此您可以从应用程序中删除这些选项。  在**“高级功能”**页上，清除所有选项。  单击**“下一步”**。  
+9. By default, the **MFC Application Wizard** adds support for several docking panes. Because this walkthrough just teaches about the ribbon, you can remove these options from the application. On the **Advanced Features** page, clear all options. Click **Next**.  
   
-10. 在**“生成的类”**页上，单击**“完成”**以创建 MFC 应用程序。  
+10. On the **Generated Classes** page, click **Finish** to create the MFC application.  
   
-11. 若要验证应用程序是否已成功创建，请生成并运行它。  若要生成应用程序，请在**“生成”**菜单上单击**“生成解决方案”**。  如果成功生成了该应用程序，可通过单击**“调试”**菜单上的**“开始调试”**来运行该应用程序。  
+11. To verify that the application was created successfully, build it and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run it by clicking **Start Debugging** on the **Debug** menu.  
   
-     该向导将自动创建一个功能区，该功能区拥有一个名为**“主页”**的功能区类别。  该功能区包含三个功能区面板，分别名为**“剪贴板”**、**“视图”**和**“窗口”**。  
+     The wizard automatically creates a ribbon that has one ribbon category that is named **Home**. This ribbon contains three ribbon panels, which are named **Clipboard**, **View**, and **Window**.  
   
-### 将类别和面板添加到功能区  
+### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>To add a category and panel to the ribbon  
   
-1.  若要打开该向导创建的功能区资源，请在**“视图”**菜单中，指向**“其他窗口”**，然后单击**“资源视图”**。  在**“资源视图”**中，单击**“功能区”**，然后双击**“IDR\_RIBBON”**。  
+1.  To open the ribbon resource that the wizard created, on the **View** menu, point to **Other Windows** and then click **Resource View**. In **Resource View**, click **Ribbon** and then double-click **IDR_RIBBON**.  
   
-2.  首先，通过双击**“工具箱”**中的**“类别”**将自定义类别添加到功能区。  
+2.  First, add a custom category to the ribbon by double-clicking **Category** in the **Toolbox**.  
   
-     这将创建一个标题为**“Category1”**的类别。  默认情况下，该类别包含一个面板。  
+     A category that has the caption **Category1** is created. By default, the category contains one panel.  
   
-     右键单击**“Category1”**，然后单击**“属性”**。  在**“属性”**窗口中，将**“标题”**更改为 `Custom`。  
+     Right-click **Category1** and then click **Properties**. In the **Properties** window, change **Caption** to `Custom`.  
   
-     **“大型图像”**和 **“小型图像”**属性指定用作此类别中的功能区元素的图标的位图。  由于创建自定义位图超出了本演练的范围，请重新使用该向导创建的位图。  小型位图为 16 x 16 像素。  对于小型图像，请使用通过 IDB\_FILESMALL 资源 ID 访问的位图。  大型位图为 32 x 32 像素。  对于大型图像，请使用通过 IDB\_FILELARGE 资源 ID 访问的位图。  
+     The **Large Images** and **Small Images** properties specify the bitmaps that are used as icons for the ribbon elements in this category. Because creating custom bitmaps is beyond the scope of this walkthrough, just reuse the bitmaps that were created by the wizard. Small bitmaps are 16 pixels by 16 pixels. For small images, use the bitmaps that are accessed by the IDB_FILESMALL resource ID. Large bitmaps are 32 pixels by 32 pixels. For large images, use the bitmaps that are accessed by the IDB_FILELARGE resource ID.  
   
     > [!NOTE]
-    >  在每英寸像素数 \(HDPI\) 显示中，将自动使用图像的 HDPI 版本。  
+    >  On high dots per inch (HDPI) displays, the HDPI versions of the images are automatically used.  
   
-3.  接下来，自定义面板。  面板用于对逻辑上相关的项进行分组。  例如，在该应用程序的**“主页”**选项卡上，**“剪切”**、**“复制”**和**“粘贴”**命令都位于**“剪贴板”**面板上。  若要自定义面板，请右键单击**“Panel1”**，然后单击**“属性”**。  在**“属性”**窗口中，将**“标题”**更改为 `Favorites`。  
+3.  Next, customize the panel. Panels are used to group items that are logically related to one another. For example, on the **Home** tab of this application, the **Cut**, **Copy**, and **Paste** commands are all located on the **Clipboard** panel. To customize the panel, right-click **Panel1** and then click **Properties**. In the **Properties** window, change **Caption** to `Favorites`.  
   
-     可以为面板指定**“图像索引”**。  此数字指定在将功能区面板添加到**“快速访问工具栏”**时显示的图标。  该图标不会显示在功能区面板上。  
+     You can specify the **Image Index** for the panel. This number specifies the icon that is displayed if the ribbon panel is added to the **Quick Access Toolbar**. The icon is not displayed on the ribbon panel itself.  
   
-4.  若要验证功能区类别和面板是否已成功创建，请预览此功能区控件。  在**“功能区编辑器工具栏”**上，单击**“测试功能区”**按钮。  此功能区上应显示**“自定义”**选项卡和**“收藏夹”**面板。  
+4.  To verify that the ribbon category and panel were created successfully, preview the ribbon control. On the **Ribbon Editor Toolbar**, click the **Test Ribbon** button. A **Custom** tab and **Favorites** panel should be displayed on the ribbon.  
   
-### 将元素添加到功能区面板  
+### <a name="to-add-elements-to-the-ribbon-panels"></a>To add elements to the ribbon panels  
   
-1.  若要将元素添加到上一过程中创建的面板，请在设计视图中将控件从**“工具箱”**的**“功能区编辑器”**部分拖动到面板。  
+1.  To add elements to the panel that you created in the previous procedure, drag controls from the **Ribbon Editor** section of the **Toolbox** to the panel in the design view.  
   
-2.  首先，添加一个**“打印”**按钮。  **“打印”**按钮有一个子菜单，其中包含一个使用默认打印机进行打印的**“快速打印”**命令。  已为此应用程序定义所有这些命令。  它们位于应用程序菜单上。  
+2.  First, add a **Print** button. The **Print** button will have a submenu that contains a **Quick Print** command that prints by using the default printer. Both of these commands are already defined for this application. They are located on the application menu.  
   
-     若要创建**“打印”**按钮，请将 Button 工具拖动到面板中。  
+     To create the **Print** button, drag a Button tool to the panel.  
   
-     在**“属性”**窗口中，将**“ID”**属性更改为应已定义的**“ID\_FILE\_PRINT”**。  将**“标题”**更改为 `Print`。  将**“图像索引”**更改为 `4`。  
+     In the **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to `Print`. Change **Image Index** to `4`.  
   
-     若要创建**“快速打印”**按钮，请单击**“菜单项”**旁边的属性值列，然后单击省略号（**“...”**）。  在**“项编辑器”**中，单击未标记的**“添加”**按钮以创建菜单项。  在**“属性”**窗口中，将**“标题”**更改为 `Quick Print`，将**“ID”**更改为 `ID_FILE_PRINT_DIRECT`，并将**“图像”**更改为 `5`。  图像属性指定 IDB\_FILESMALL 位图资源中的“快速打印”图标。  
+     To create the **Quick Print** button, click the property value column next to **Menu Items**, and then click the ellipsis (**...**). In the **Items Editor**, click the unlabeled **Add** button to create a menu item. In the **Properties** window, change **Caption** to `Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, and **Image** to `5`. The image property specifies the Quick Print icon in the IDB_FILESMALL bitmap resource.  
   
-3.  若要验证是否已将这些按钮添加到功能区面板，请生成并运行应用程序。  若要生成应用程序，请在**“生成”**菜单上单击**“生成解决方案”**。  如果成功生成了该应用程序，请单击**“调试”**菜单上的**“开始调试”**来运行该应用程序。  功能区上的**“自定义”**选项卡上的**“收藏夹”**面板上应显示**“打印”**按钮和组合框。  
+3.  To verify that the buttons were added to the ribbon panel, build the application and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run the application by clicking **Start Debugging** on the **Debug** menu. The **Print** button and the combo box on the **Favorites** panel on the **Custom** tab on the ribbon should be displayed.  
   
-## 后续步骤  
- [如何：自定义快速访问工具栏](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+## <a name="next-steps"></a>Next Steps  
+ [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [如何：自定义应用程序按钮](../mfc/how-to-customize-the-application-button.md)  
+ [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
- 有关端到端示例，请参阅[示例（MFC 功能包）](../top/visual-cpp-samples.md)。  
+ For end-to-end samples, see [Samples (MFC Feature Pack)](../visual-cpp-samples.md).  
   
-## 请参阅  
- [演练](../mfc/walkthroughs-mfc.md)   
- [示例（MFC 功能包）](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Samples (MFC Feature Pack)](../visual-cpp-samples.md)
+
+

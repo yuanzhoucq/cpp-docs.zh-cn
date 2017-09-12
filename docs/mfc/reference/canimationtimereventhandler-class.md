@@ -1,5 +1,5 @@
 ---
-title: "CAnimationTimerEventHandler 类 |Microsoft 文档"
+title: CAnimationTimerEventHandler Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationTimerEventHandler class
+- CAnimationTimerEventHandler [MFC], CreateInstance
+- CAnimationTimerEventHandler [MFC], OnPostUpdate
+- CAnimationTimerEventHandler [MFC], OnPreUpdate
+- CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
+- CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
 caps.latest.revision: 18
 author: mikeblome
@@ -39,49 +43,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 5412c215caf85440e923e8a083ed310f8960849a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d224da2d20d3a321c89e5db1f61895ca19507704
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 类
-实现回调，它在计时事件发生时由动画 API 调用。  
+# <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler Class
+Implements a callback, which is called by the Animation API when timing events occur.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAnimationTimerEventHandler>;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationTimerEventHandler::CreateInstance](#createinstance)|创建的一个实例`CAnimationTimerEventHandler`回调。|  
-|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|处理动画更新完成之后发生的事件。 （重写 `CUIAnimationTimerEventHandlerBase::OnPostUpdate`。）|  
-|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|处理动画更新开始之前发生的事件。 （重写 `CUIAnimationTimerEventHandlerBase::OnPreUpdate`。）|  
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|处理一个动画的呈现帧速率低于最小的理想帧速率时发生的事件。 （重写 `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`。）|  
-|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|存储事件路由的动画控制器的指针。|  
+|[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Creates an instance of `CAnimationTimerEventHandler` callback.|  
+|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Handles events that occur after an animation update is finished. (Overrides `CUIAnimationTimerEventHandlerBase::OnPostUpdate`.)|  
+|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Handles events that occur before an animation update begins. (Overrides `CUIAnimationTimerEventHandlerBase::OnPreUpdate`.)|  
+|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Handles events that occur when the rendering frame rate for an animation falls below the minimum desirable frame rate. (Overrides `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.)|  
+|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Stores a pointer to animation controller to route events.|  
   
-## <a name="remarks"></a>备注  
- 此事件处理程序被创建并传递到 IUIAnimationTimer::SetTimerEventHandler，当您调用 CAnimationController::EnableAnimationTimerEventHandler。  
+## <a name="remarks"></a>Remarks  
+ This event handler is created and passed to IUIAnimationTimer::SetTimerEventHandler when you call CAnimationController::EnableAnimationTimerEventHandler.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CUIAnimationCallbackBase`  
   
  `CUIAnimationTimerEventHandlerBase`  
   
  `CAnimationTimerEventHandler`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
- 创建 CAnimationTimerEventHandler 回调的实例。  
+##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance  
+ Creates an instance of CAnimationTimerEventHandler callback.  
   
 ```  
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -89,59 +93,59 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
     IUIAnimationTimerEventHandler** ppTimerEventHandler);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- 一个指向动画控制器，它将接收此事件。  
+ A pointer to animation controller, which will receive events.  
   
  `ppTimerEventHandler`  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
- 处理动画更新完成之后发生的事件。  
+##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate  
+ Handles events that occur after an animation update is finished.  
   
 ```  
 IFACEMETHOD(OnPostUpdate)();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ S_OK if the method succeeds; otherwise E_FAIL.  
   
-##  <a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
- 处理动画更新开始之前发生的事件。  
+##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate  
+ Handles events that occur before an animation update begins.  
   
 ```  
 IFACEMETHOD(OnPreUpdate)();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ S_OK if the method succeeds; otherwise E_FAIL.  
   
-##  <a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
- 处理一个动画的呈现帧速率低于最小的理想帧速率时发生的事件。  
+##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow  
+ Handles events that occur when the rendering frame rate for an animation falls below the minimum desirable frame rate.  
   
 ```  
 IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `fps`  
   
-### <a name="return-value"></a>返回值  
- 如果方法成功，则为 S_OK否则为 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ S_OK if the method succeeds; otherwise E_FAIL.  
   
-##  <a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
- 存储事件路由的动画控制器的指针。  
+##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController  
+ Stores a pointer to animation controller to route events.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- 一个指向动画控制器，它将接收此事件。  
+ A pointer to animation controller, which will receive events.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

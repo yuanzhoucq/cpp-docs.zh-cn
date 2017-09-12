@@ -1,53 +1,72 @@
 ---
-title: "内存管理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "内存"
-  - "内存分配"
-  - "内存分配, MFC"
-  - "内存, 管理"
-  - "MFC, 内存管理"
+title: Memory Management | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory [MFC]
+- MFC, memory management
+- memory allocation [MFC]
+- memory [MFC], managing
+- memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 内存管理
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cf494a6f394c2a8104365112260e1d86cdedadcd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-文章的此组描述如何使用 Microsoft 基础类库 \(MFC\) 的常规服务与内存管理。  内存分配主要分为两个类别：帧分配和堆分配。  
+---
+# <a name="memory-management"></a>Memory Management
+This group of articles describes how to take advantage of the general-purpose services of the Microsoft Foundation Class Library (MFC) related to memory management. Memory allocation can be divided into two main categories: frame allocations and heap allocations.  
   
- 分配两个方法之间的主要区别是与您通常通过实际存储区的帧分配，而堆分配始终提供指针存储区。  两个方案之间的另一个主要区别是框架自动删除对象，而必须由程序员显式删除堆对象。  
+ One main difference between the two allocation techniques is that with frame allocation you typically work with the actual memory block itself, while with heap allocation you are always given a pointer to the memory block. Another major difference between the two schemes is that frame objects are automatically deleted, while heap objects must be explicitly deleted by the programmer.  
   
- 有关内存管理的非 MFC 在窗口中的程序信息，请参阅《[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]的 [内存管理](http://msdn.microsoft.com/library/windows/desktop/aa366779)。  
+ For non-MFC information about memory management in programs for Windows, see [Memory Management](http://msdn.microsoft.com/library/windows/desktop/aa366779) in the Windows SDK.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [帧分配](../mfc/memory-management-frame-allocation.md)  
+-   [Frame allocation](../mfc/memory-management-frame-allocation.md)  
   
--   [堆分配](../mfc/memory-management-heap-allocation.md)  
+-   [Heap allocation](../mfc/memory-management-heap-allocation.md)  
   
--   [为该数组分配内存](../mfc/memory-management-examples.md)  
+-   [Allocating memory for an array](../mfc/memory-management-examples.md)  
   
--   [解除分配数组的内存堆](../mfc/memory-management-examples.md)  
+-   [Deallocating memory for an array from the heap](../mfc/memory-management-examples.md)  
   
--   [结构的内存分配数据](../mfc/memory-management-examples.md)  
+-   [Allocating memory for a data structure](../mfc/memory-management-examples.md)  
   
--   [分配对象的内存。](../mfc/memory-management-examples.md)  
+-   [Allocating memory for an object](../mfc/memory-management-examples.md)  
   
--   [可调整大小的内存块](../mfc/memory-management-resizable-memory-blocks.md)  
+-   [Resizable memory blocks](../mfc/memory-management-resizable-memory-blocks.md)  
   
-## 请参阅  
- [概念](../mfc/mfc-concepts.md)   
- [常规 MFC 主题](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

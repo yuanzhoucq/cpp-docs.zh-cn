@@ -1,5 +1,5 @@
 ---
-title: "CFontDialog 类 |Microsoft 文档"
+title: CFontDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,10 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CFontDialog class
-- dialog boxes, fonts
-- fonts
-- fonts, selecting
+- CFontDialog [MFC], CFontDialog
+- CFontDialog [MFC], DoModal
+- CFontDialog [MFC], GetCharFormat
+- CFontDialog [MFC], GetColor
+- CFontDialog [MFC], GetCurrentFont
+- CFontDialog [MFC], GetFaceName
+- CFontDialog [MFC], GetSize
+- CFontDialog [MFC], GetStyleName
+- CFontDialog [MFC], GetWeight
+- CFontDialog [MFC], IsBold
+- CFontDialog [MFC], IsItalic
+- CFontDialog [MFC], IsStrikeOut
+- CFontDialog [MFC], IsUnderline
+- CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
 caps.latest.revision: 25
 author: mikeblome
@@ -51,75 +61,75 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6f277ba8fba72106918e03397f57726bd5beb0ff
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fd52e37128e9363085c1825a3aeee2a4a4fa5a70
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfontdialog-class"></a>CFontDialog 类
-可以将字体选择对话框合并到您的应用程序。  
+# <a name="cfontdialog-class"></a>CFontDialog Class
+Allows you to incorporate a font-selection dialog box into your application.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFontDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFontDialog::CFontDialog](#cfontdialog)|构造 `CFontDialog` 对象。|  
+|[CFontDialog::CFontDialog](#cfontdialog)|Constructs a `CFontDialog` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFontDialog::DoModal](#domodal)|显示对话框中，并允许用户进行选择。|  
-|[CFontDialog::GetCharFormat](#getcharformat)|检索所选字体的字符格式。|  
-|[CFontDialog::GetColor](#getcolor)|返回所选字体的颜色。|  
-|[CFontDialog::GetCurrentFont](#getcurrentfont)|将分配到当前选定的字体的特征`LOGFONT`结构。|  
-|[CFontDialog::GetFaceName](#getfacename)|返回所选字体的字体名称。|  
-|[CFontDialog::GetSize](#getsize)|返回所选字体磅值。|  
-|[CFontDialog::GetStyleName](#getstylename)|返回所选字体的样式名称。|  
-|[CFontDialog::GetWeight](#getweight)|返回所选字体的粗细。|  
-|[CFontDialog::IsBold](#isbold)|确定字体为粗体。|  
-|[CFontDialog::IsItalic](#isitalic)|确定字体为斜体。|  
-|[CFontDialog::IsStrikeOut](#isstrikeout)|确定是否具有删除线显示字体。|  
-|[CFontDialog::IsUnderline](#isunderline)|确定字体是否带下划线。|  
+|[CFontDialog::DoModal](#domodal)|Displays the dialog and allows the user to make a selection.|  
+|[CFontDialog::GetCharFormat](#getcharformat)|Retrieves the character formatting of the selected font.|  
+|[CFontDialog::GetColor](#getcolor)|Returns the color of the selected font.|  
+|[CFontDialog::GetCurrentFont](#getcurrentfont)|Assigns the characteristics of the currently selected font to a `LOGFONT` structure.|  
+|[CFontDialog::GetFaceName](#getfacename)|Returns the face name of the selected font.|  
+|[CFontDialog::GetSize](#getsize)|Returns the point size of the selected font.|  
+|[CFontDialog::GetStyleName](#getstylename)|Returns the style name of the selected font.|  
+|[CFontDialog::GetWeight](#getweight)|Returns the weight of the selected font.|  
+|[CFontDialog::IsBold](#isbold)|Determines whether the font is bold.|  
+|[CFontDialog::IsItalic](#isitalic)|Determines whether the font is italic.|  
+|[CFontDialog::IsStrikeOut](#isstrikeout)|Determines whether the font is displayed with strikeout.|  
+|[CFontDialog::IsUnderline](#isunderline)|Determines whether the font is underlined.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFontDialog::m_cf](#m_cf)|用于自定义的结构`CFontDialog`对象。|  
+|[CFontDialog::m_cf](#m_cf)|A structure used to customize a `CFontDialog` object.|  
   
-## <a name="remarks"></a>备注  
- 一个`CFontDialog`对象是一个包含列表的系统中当前安装的字体的对话框。 用户可以从列表中，选择特定字体并选择此选项然后报告回应用程序。  
+## <a name="remarks"></a>Remarks  
+ A `CFontDialog` object is a dialog box with a list of fonts that are currently installed in the system. The user can select a particular font from the list, and this selection is then reported back to the application.  
   
- 若要构造`CFontDialog`对象、 使用提供的构造函数或派生新的子类并使用您自己的自定义构造函数。  
+ To construct a `CFontDialog` object, use the provided constructor or derive a new subclass and use your own custom constructor.  
   
- 一次`CFontDialog`构造对象，则可以使用`m_cf`结构初始化的值或在对话框中的控件的状态。 [M_cf](#m_cf)结构属于类型[CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832)。 此结构的详细信息，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Once a `CFontDialog` object has been constructed, you can use the `m_cf` structure to initialize the values or states of controls in the dialog box. The [m_cf](#m_cf) structure is of type [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). For more information on this structure, see the Windows SDK.  
   
- 初始化对话框对象的控件之后, 调用`DoModal`成员函数以显示对话框中，并让用户能够选择一种字体。 `DoModal`返回用户是否选择了确定 ( **IDOK**) 或取消 ( **IDCANCEL**) 按钮。  
+ After initializing the dialog object's controls, call the `DoModal` member function to display the dialog box and allow the user to select a font. `DoModal` returns whether the user selected the OK ( **IDOK**) or Cancel ( **IDCANCEL**) button.  
   
- 如果`DoModal`返回**IDOK**，您可以使用其中一个`CFontDialog`的成员函数来检索用户输入的信息。  
+ If `DoModal` returns **IDOK**, you can use one of `CFontDialog`'s member functions to retrieve the information input by the user.  
   
- 您可以使用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函数来确定在对话框中的初始化过程中是否发生了错误，以及若要了解有关错误的详细信息。 此函数的详细信息，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ You can use the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred during initialization of the dialog box and to learn more about the error. For more information on this function, see the Windows SDK.  
   
- `CFontDialog`依赖于 COMMDLG。随 Windows 3.1 及更高版本一起提供的 DLL 文件。  
+ `CFontDialog` relies on the COMMDLG.DLL file that ships with Windows versions 3.1 and later.  
   
- 要自定义对话框中，从派生类`CFontDialog`，提供自定义对话框模板上，并添加一个消息映射来处理来自扩展控件的通知消息。 任何未处理的消息应传递给类的基类。  
+ To customize the dialog box, derive a class from `CFontDialog`, provide a custom dialog template, and add a message-map to process the notification messages from the extended controls. Any unprocessed messages should be passed to the base class.  
   
- 不需要自定义挂钩函数。  
+ Customizing the hook function is not required.  
   
- 有关详细信息使用`CFontDialog`，请参阅[通用对话框类](../../mfc/common-dialog-classes.md)。  
+ For more information on using `CFontDialog`, see [Common Dialog Classes](../../mfc/common-dialog-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -132,11 +142,11 @@ class CFontDialog : public CCommonDialog
   
  `CFontDialog`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="cfontdialog"></a>CFontDialog::CFontDialog  
- 构造 `CFontDialog` 对象。  
+##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
+ Constructs a `CFontDialog` object.  
   
 ```  
 CFontDialog(
@@ -152,218 +162,218 @@ CFontDialog(
     CWnd* pParentWnd = NULL);  
 ```  
   
-### <a name="parameters"></a>参数  
- l`plfInitial`  
- 一个指向[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)数据结构，它允许你设置某些字体的特征。  
+### <a name="parameters"></a>Parameters  
+ l `plfInitial`  
+ A pointer to a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) data structure that allows you to set some of the font's characteristics.  
   
  `charFormat`  
- 一个指向[CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)数据结构，它允许你设置某些字体特征在 rich edit 控件。  
+ A pointer to a [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) data structure that allows you to set some of the font's characteristics in a rich edit control.  
   
  `dwFlags`  
- 指定一个或多个用于选择字体的标记。 可以使用按位“OR”运算符对一个或多个预设值进行组合。 如果修改 `m_cf.Flag` 结构成员，请确保在更改中使用按位“OR”运算符以保持默认行为不变。 在每个标记的详细信息，请参阅的说明[CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies one or more choose-font flags. One or more preset values can be combined using the bitwise OR operator. If you modify the `m_cf.Flag`s structure member, be sure to use a bitwise OR operator in your changes to keep the default behavior intact. For details on each of these flags, see the description of the [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) structure in the Windows SDK.  
   
  pdcPrinter  
- 一个指向打印机设备上下文的指针。 如果已提供此参数，它将指向要选择其字体的打印机的打印机设备上下文。  
+ A pointer to a printer-device context. If supplied, this parameter points to a printer-device context for the printer on which the fonts are to be selected.  
   
  `pParentWnd`  
- 一个指向字体对话框的父窗口或所有者窗口的指针。  
+ A pointer to the font dialog box's parent or owner window.  
   
-### <a name="remarks"></a>备注  
- 请注意，构造函数将自动填充 `CHOOSEFONT` 结构的成员。 仅在要让字体对话框不同于默认字体对话框时，才应该更改这些内容。  
+### <a name="remarks"></a>Remarks  
+ Note that the constructor automatically fills in the members of the `CHOOSEFONT` structure. You should only change these if you want a font dialog different than the default.  
   
 > [!NOTE]
->  仅在不支持 Rich Edit 控件时，才存在此函数的第一个版本。  
+>  The first version of this function only exists when there is no rich edit control support.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&78;](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CFontDialog::DoModal  
- 调用此函数可显示 Windows 常见字体对话框中，并让用户能够选择一种字体。  
+##  <a name="domodal"></a>  CFontDialog::DoModal  
+ Call this function to display the Windows common font dialog box and allow the user to choose a font.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>返回值  
- **IDOK**或**IDCANCEL**。 如果**IDCANCEL**是返回，调用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函数来确定是否发生了错误。  
+### <a name="return-value"></a>Return Value  
+ **IDOK** or **IDCANCEL**. If **IDCANCEL** is returned, call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
   
- **IDOK**和**IDCANCEL**是常数，指示用户是否选择了确定或取消按钮。  
+ **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
   
-### <a name="remarks"></a>备注  
- 如果您想要通过设置成员的初始化各种字体对话框控件[m_cf](#m_cf)结构中，应执行此操作，然后再调`DoModal`，但在构造对话框对象之后。  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various font dialog controls by setting members of the [m_cf](#m_cf) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- 如果`DoModal`返回**IDOK**，可调用其他成员函数来检索设置或用户的信息输入到对话框。  
+ If `DoModal` returns **IDOK**, you can call other member functions to retrieve the settings or information input by the user into the dialog box.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CFontDialog::CFontDialog](#cfontdialog)和[CFontDialog::GetColor](#getcolor)。  
+### <a name="example"></a>Example  
+  See the examples for [CFontDialog::CFontDialog](#cfontdialog) and [CFontDialog::GetColor](#getcolor).  
   
-##  <a name="getcharformat"></a>CFontDialog::GetCharFormat  
- 检索所选字体的字符格式。  
+##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat  
+ Retrieves the character formatting of the selected font.  
   
 ```  
 void GetCharFormat(CHARFORMAT& cf) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cf`  
- 一个[CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)结构，它包含有关所选字体的字符格式设置信息。  
+ A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure containing information about the character formatting of the selected font.  
   
-##  <a name="getcolor"></a>CFontDialog::GetColor  
- 调用此函数可检索选定的字体的颜色。  
+##  <a name="getcolor"></a>  CFontDialog::GetColor  
+ Call this function to retrieve the selected font color.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 选定字体的颜色。  
+### <a name="return-value"></a>Return Value  
+ The color of the selected font.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&79;](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
-##  <a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
- 调用此函数可将当前所选字体的特征分配到的成员[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)结构。  
+##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
+ Call this function to assign the characteristics of the currently selected font to the members of a [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
 ```  
 void GetCurrentFont(LPLOGFONT lplf);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lplf*  
- 一个指向`LOGFONT`结构。  
+ A pointer to a `LOGFONT` structure.  
   
-### <a name="remarks"></a>备注  
- 其他`CFontDialog`提供成员函数来访问当前字体的各个特征。  
+### <a name="remarks"></a>Remarks  
+ Other `CFontDialog` member functions are provided to access individual characteristics of the current font.  
   
- 如果在调用过程中调用此函数[DoModal](#domodal)，它将返回当前选定内容时 (用户可以看到或拥有的对话框中更改)。 如果在调用后调用此函数`DoModal`(仅当`DoModal`返回**IDOK**)，它将返回用户所实际选择。  
+ If this function is called during a call to [DoModal](#domodal), it returns the current selection at the time (what the user sees or has changed in the dialog). If this function is called after a call to `DoModal` (only if `DoModal` returns **IDOK**), it returns what the user actually selected.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&80;](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
-##  <a name="getfacename"></a>CFontDialog::GetFaceName  
- 调用此函数可检索所选字体的字体名称。  
+##  <a name="getfacename"></a>  CFontDialog::GetFaceName  
+ Call this function to retrieve the face name of the selected font.  
   
 ```  
 CString GetFaceName() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 在选定的字体的字体名称`CFontDialog`对话框。  
+### <a name="return-value"></a>Return Value  
+ The face name of the font selected in the `CFontDialog` dialog box.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&81;](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
-##  <a name="getsize"></a>CFontDialog::GetSize  
- 调用此函数可检索所选字体的大小。  
+##  <a name="getsize"></a>  CFontDialog::GetSize  
+ Call this function to retrieve the size of the selected font.  
   
 ```  
 int GetSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 字体的大小，以十分之一一个点。  
+### <a name="return-value"></a>Return Value  
+ The font's size, in tenths of a point.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&82;](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
-##  <a name="getstylename"></a>CFontDialog::GetStyleName  
- 调用此函数可检索所选字体的样式名称。  
+##  <a name="getstylename"></a>  CFontDialog::GetStyleName  
+ Call this function to retrieve the style name of the selected font.  
   
 ```  
 CString GetStyleName() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 字体的样式名称。  
+### <a name="return-value"></a>Return Value  
+ The style name of the font.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&83;](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
-##  <a name="getweight"></a>CFontDialog::GetWeight  
- 调用此函数可检索所选字体的粗细。  
+##  <a name="getweight"></a>  CFontDialog::GetWeight  
+ Call this function to retrieve the weight of the selected font.  
   
 ```  
 int GetWeight() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 所选字体的粗细。  
+### <a name="return-value"></a>Return Value  
+ The weight of the selected font.  
   
-### <a name="remarks"></a>备注  
- 权重一种字体的详细信息，请参阅[CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont)。  
+### <a name="remarks"></a>Remarks  
+ For more information on the weight of a font, see [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&84;](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
-##  <a name="isbold"></a>CFontDialog::IsBold  
- 调用此函数可确定所选的字体是否为粗体。  
+##  <a name="isbold"></a>  CFontDialog::IsBold  
+ Call this function to determine if the selected font is bold.  
   
 ```  
 BOOL IsBold() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果所选的字体加粗特征启用，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the selected font has the Bold characteristic enabled; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&85;](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
-##  <a name="isitalic"></a>CFontDialog::IsItalic  
- 调用此函数可确定所选的字体为斜体。  
+##  <a name="isitalic"></a>  CFontDialog::IsItalic  
+ Call this function to determine if the selected font is italic.  
   
 ```  
 BOOL IsItalic() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果所选的字体具有倾斜的特征启用，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the selected font has the Italic characteristic enabled; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&86;](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
-##  <a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
- 调用此函数可确定所选的字体是否显示带有删除线。  
+##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut  
+ Call this function to determine if the selected font is displayed with strikeout.  
   
 ```  
 BOOL IsStrikeOut() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果所选的字体已启用，则删除线特征否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the selected font has the Strikeout characteristic enabled; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&87;](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
-##  <a name="isunderline"></a>CFontDialog::IsUnderline  
- 调用此函数可确定所选的字体带有下划线。  
+##  <a name="isunderline"></a>  CFontDialog::IsUnderline  
+ Call this function to determine if the selected font is underlined.  
   
 ```  
 BOOL IsUnderline() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果所选的字体已启用，则下划线特征否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the selected font has the Underline characteristic enabled; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&88;](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
-##  <a name="m_cf"></a>CFontDialog::m_cf  
- 一种结构，其成员存储对话框对象的特征。  
+##  <a name="m_cf"></a>  CFontDialog::m_cf  
+ A structure whose members store the characteristics of the dialog object.  
   
 ```  
 CHOOSEFONT m_cf;  
 ```  
   
-### <a name="remarks"></a>备注  
- 在构造之后`CFontDialog`对象，可以使用`m_cf`修改之前，先调用对话框中的各个方面`DoModal`成员函数。 此结构的详细信息，请参阅[CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ After constructing a `CFontDialog` object, you can use `m_cf` to modify various aspects of the dialog box before calling the `DoModal` member function. For more information on this structure, see [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&89;](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   
- [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

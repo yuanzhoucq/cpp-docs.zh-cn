@@ -1,5 +1,5 @@
 ---
-title: "工具栏控件样式 |Microsoft 文档"
+title: ToolBar Control Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,7 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- ToolBar control styles
+- ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
 caps.latest.revision: 16
 author: mikeblome
@@ -31,65 +31,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c50009a50c5b80e007add9de679315df6aecea9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 383120b1eecd7db663ef878c386f51ad6a2a92f8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="toolbar-control-styles"></a>工具栏控件样式
-[CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)都有一组样式标志，用于确定外观和行为按钮。 可以通过调用设置这些标志的组合[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。 本主题列出了样式标志值及其含义。  
+# <a name="toolbar-control-styles"></a>ToolBar Control Styles
+[CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) has a set of style flags that determine the appearance and behavior of the button. You can set a combination of these flags by calling             [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). This topic lists the style flag values and their meanings.  
   
-## <a name="property-values"></a>属性值  
- 下列值确定控件表示的按钮的类型：  
+## <a name="property-values"></a>Property Values  
+ The following values determine the type of button that the control represents:  
   
  TBBS_BUTTON  
- 标准按键（默认）。  
+ Standard pushbutton (default).  
   
  TBBS_CHECKBOX  
- 复选框  
+ Check box.  
   
  TBBS_CHECKGROUP  
- 复选框组的开始。  
+ The start of a group of checkboxes.  
   
  TBBS_GROUP  
- 按钮组的开始。  
+ The start of a group of buttons.  
   
  TBBS_SEPARATOR  
- 分隔符。  
+ Separator.  
   
- 下列值表示控件的当前状态：  
+ The following values represent the current status of the control:  
   
  TBBS_CHECKED  
- 复选框处于选中状态。  
+ Check box is checked.  
   
  TBBS_DISABLED  
- 控件已禁用。  
+ Control is disabled.  
   
  TBBS_INDETERMINATE  
- 复选框处于不确定状态。  
+ Check box is in an indeterminate state.  
   
  TBBS_PRESSED  
- 按钮处于按下状态。  
+ Button is pressed.  
   
- 下列值将更改按钮在工具栏中的布局：  
+ The following value changes the layout of the button in the toolbar:  
   
  TBBS_BREAK  
- 将项放置在新行或新列上，无需分隔列。  
+ Places the item on a new line or in a new column without separating columns.  
   
-## <a name="remarks"></a>备注  
- 当前样式存储在[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)。 未设置的新值`m_nStyle`直接，因为一些派生的类执行其他处理，当您调用`SetStyles`。  
+## <a name="remarks"></a>Remarks  
+ The current style is stored in                 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Do not set a new value in                 `m_nStyle` directly, because some derived classes perform additional processing when you call                 `SetStyles`.  
   
- 视觉管理器将确定按钮在每种状态下的外观。 请参阅[可视化管理器](../../mfc/visualization-manager.md)有关详细信息。  
+ The visual manager determines the appearance of buttons in each state. See                 [Visualization Manager](../../mfc/visualization-manager.md) for more information.  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxtoolbarbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarbutton.h  
   
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)   
- [CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [可视化管理器](../../mfc/visualization-manager.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Visualization Manager](../../mfc/visualization-manager.md)
 
 
 

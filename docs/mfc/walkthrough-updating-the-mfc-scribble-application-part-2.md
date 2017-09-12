@@ -1,339 +1,350 @@
 ---
-title: "演练：更新 MFC 随意画图应用程序（第 2 部分） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "演练 [C++]"
+title: 'Walkthrough: Updating the MFC Scribble Application (Part 2) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
 caps.latest.revision: 36
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# 演练：更新 MFC 随意画图应用程序（第 2 部分）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 68a0cd9d36d869db9945b3921c7837b3d1410535
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在本演练的[Part 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)中，展示了如何添加Office Fluent 功能区到经典的Scribble应用程序  这部分演示如何添加用户可以使用代替菜单命令的和功能区面板和控件。  
+---
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Walkthrough: Updating the MFC Scribble Application (Part 2)
+[Part 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) of this walkthrough showed how to add an Office Fluent Ribbon to the classic Scribble application. This part shows how to add ribbon panels and controls that users can use instead of menus and commands.  
   
-## 系统必备  
- [Visual C\+\+ 示例](../top/visual-cpp-samples.md)  
+## <a name="prerequisites"></a>Prerequisites  
+ [Visual C++ Samples](../visual-cpp-samples.md)  
   
-##  <a name="top"></a> 各节内容  
- 此演练部分包含以下部分：  
+##  <a name="top"></a> Sections  
+ This part of the walkthrough has the following sections:  
   
--   [将新功能区面板。](#addNewPanel)  
+- [Adding New Panels to the Ribbon](#addnewpanel)  
   
--   [将帮助添加到功能区面板](#addHelpPanel)  
+- [Adding a Help Panel to the Ribbon](#addhelppanel)  
   
--   [将钢笔添加到功能区面板](#addPenPanel)  
+- [Adding a Pen Panel to the Ribbon](#addpenpanel)  
   
--   [向功能区中添加一个颜色按钮。](#addColorButton)  
+- [Adding a Color Button to the Ribbon](#addcolorbutton)  
   
--   [添加颜色文档成员添加到类](#addColorMember)  
+- [Adding a Color Member to the Document Class](#addcolormember)  
   
--   [初始化钢笔和保存首选项](#initPenSave)  
+- [Initializing Pens and Saving Preferences](#initpensave)  
   
-##  <a name="addNewPanel"></a> 将新功能区面板。  
- 以下步骤显示如何添加 **视图** 面板中控制工具栏和状态栏的可见性的两个复选框，然后垂直拆分按钮控件包含面向的多文档界面 \(MDI\) \(MDI\) 窗口中创建和排列方式的一 **窗口** 面板。  
+##  <a name="addnewpanel"></a> Adding New Panels to the Ribbon  
+ These steps show how to add a **View** panel that contains two check boxes that control the visibility of the toolbar and the status bar, and also a **Window** panel that contains a vertically oriented split button that controls the creation and arrangement of multiple-document interface (MDI) windows.  
   
-#### 添加视图面板和面板功能区栏窗口。  
+#### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>To add a View panel and Window panel to the ribbon bar  
   
-1.  创建一个名为 `视图`的面板，具有两个复选框切换状态栏和工具栏。  
+1.  Create a panel named `View`, which has two check boxes that toggle the status bar and toolbar.  
   
-    1.  从 **工具箱**中，将 **面板** 拖到 **主页** 类别。  然后拖动两到面板的 **复选框**。  
+    1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag two **Check Boxes** to the panel.  
   
-    2.  单击面板改变它的属性。  将**“标题”**更改为 `View`。  
+    2.  Click the panel to modify its properties. Change **Caption** to `View`.  
   
-    3.  单击第一个复选框修改其属性。  更改 **ID** 设置为 `ID_VIEW_TOOLBAR` 并将 **标题** 设置为 `工具栏`。  
+    3.  Click the first check box to modify its properties. Change **ID** to `ID_VIEW_TOOLBAR` and **Caption** to `Toolbar`.  
   
-    4.  单击第二个复选框修改其属性。  更改 **ID** 设置为 `ID_VIEW_STATUS_BAR` 并将 **标题** 设置为 `状态栏 (S)`。  
+    4.  Click the second check box to modify its properties. Change **ID** to `ID_VIEW_STATUS_BAR` and **Caption** to `Status Bar`.  
   
-2.  创建具有拆分按钮和名为 `窗口` 的面板。  当用户单击按钮拆分，快捷菜单显示 Scribble 应用程序已定义的三个命令。  
+2.  Create a panel named `Window` that has a split button. When a user clicks the split button, a shortcut menu displays three commands that are already defined in the Scribble application.  
   
-    1.  从 **工具箱**中，将 **面板** 拖到 **主页** 类别。  然后将 **按钮** 拖到面板中。  
+    1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag a **Button** to the panel.  
   
-    2.  单击面板改变它的属性。  将**“标题”**更改为 `Window`。  
+    2.  Click the panel to modify its properties. Change **Caption** to `Window`.  
   
-    3.  单击按钮。  **标题** 更改为 `窗口`，将 **键** 设置为 `w`，将 **索引大图像** 设置为 `1`并将 **拆分模式** 设置为 `False`。  然后单击 **菜单项** 旁边的省略号 \(**...**\) 打开 **项编辑器** 对话框。  
+    3.  Click the button. Change **Caption** to `Windows`, **Keys** to `w`, **Large Image Index** to `1`, and **Split Mode** to `False`. Then click the ellipsis (**...**) next to **Menu Items** to open the **Items Editor** dialog box.  
   
-    4.  单击**“添加”**三次以添加三个按钮。  
+    4.  Click **Add** three times to add three buttons.  
   
-    5.  单击第一个按钮将 **标题** 更改为 `新建窗口`并将 **ID** 设置为 `ID_WINDOW_NEW`。  
+    5.  Click the first button and then change **Caption** to `New Window`, and **ID** to `ID_WINDOW_NEW`.  
   
-    6.  单击第二个按钮将 **标题** 更改为 `层叠`并将 **ID** 设置为 `ID_WINDOW_CASCADE`。  
+    6.  Click the second button and then change **Caption** to `Cascade`, and **ID** to `ID_WINDOW_CASCADE`.  
   
-    7.  单击第三个按钮将 **标题** 更改为 `平铺 (T)`并将 **ID** 设置为 `ID_WINDOW_TILE_HORZ`。  
+    7.  Click the third button and then change **Caption** to `Tile`, and **ID** to `ID_WINDOW_TILE_HORZ`.  
   
-3.  保存改变的，然后生成并运行应用程序。  应显示 **视图** 和 **窗口** 面板。  单击按钮提交这些工作正常。  
+3.  Save the changes, and then build and run the application. The **View** and **Window** panels should be displayed. Click the buttons to confirm that they function correctly.  
   
- \[[各节内容](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addHelpPanel"></a> 将帮助添加到功能区面板  
- 现在，可以将该功能区按钮的 Scribble 应用程序中定义名为 **帮助主题** 和 **关于 Scribble**的两个菜单项。  按钮添加到名为的 **帮助**新面板。  
+##  <a name="addhelppanel"></a> Adding a Help Panel to the Ribbon  
+ Now, you can assign two menu items that are defined in the Scribble application to ribbon buttons that are named **Help Topics** and **About Scribble**. The buttons are added to a new panel named **Help**.  
   
-#### 添加帮助窗口  
+#### <a name="to-add-a-help-panel"></a>To add a Help panel  
   
-1.  从 **工具箱**中，将 **面板** 拖到 **主页** 类别。  然后拖动两到面板的 **按钮**。  
+1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag two **Buttons** to the panel.  
   
-2.  单击面板改变它的属性。  将**“标题”**更改为 `Help`。  
+2.  Click the panel to modify its properties. Change **Caption** to `Help`.  
   
-3.  单击第一个按钮。  `帮助主题`于 `ID_HELP_FINDER`更改的 **标题** 和 **ID**。  
+3.  Click the first button. Change **Caption** to `Help Topics`, and **ID** to `ID_HELP_FINDER`.  
   
-4.  单击第二个按钮。  `关于 Scribble…`于 `ID_APP_ABOUT`更改的 **标题** 和 **ID**。  
+4.  Click the second button. Change **Caption** to `About Scribble...`, and **ID** to `ID_APP_ABOUT`.  
   
-5.  保存改变的，然后生成并运行应用程序。  应显示一 **帮助** 面板包含两个功能区按钮。  
+5.  Save the changes, and then build and run the application. A **Help** panel that contains two ribbon buttons should be displayed.  
   
     > [!IMPORTANT]
-    >  当单击按钮时，**帮助主题** Scribble 应用程序中打开压缩 HTML \(.htm\) .chm 帮助文件名为 *your\_project\_name*。  因此，项目，则未命名组，必须将帮助文件重命名为项目名称。  
+    >  When you click the **Help Topics** button, the Scribble application opens a compressed HTML (.chm) help file named *your_project_name*.chm. Consequently, if your project is not named Scribble, you must rename the help file to your project name.  
   
- \[[各节内容](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addPenPanel"></a> 将钢笔添加到功能区面板  
- 现在，请添加一个面板到控制粗细和钢笔的颜色显示的按钮。  此面板中切换之间和粗出错的 Pen 的复选框。  其功能类似 Scribble 应用程序的 **重行** 菜单项。  
+##  <a name="addpenpanel"></a> Adding a Pen Panel to the Ribbon  
+ Now, add a panel to display buttons that control the thickness and the color of the pen. This panel contains a check box that toggles between thick and thin pens. Its functionality resembles that of the **Thick Line** menu item in the Scribble application.  
   
- 原始 Scribble 应用程序允许从出现的对话框中的用户选择钢笔的宽度在用户菜单上单击 **钢笔的宽度**。  由于功能区栏有放置新控件的充足的空间，使用功能区上，的这两个组合框可以替换"对话框。  一个框组合调整出错的钢笔的宽度，并且另一个组合框的大小。钢笔的宽度。  
+ The original Scribble application lets the user select pen widths from a dialog box that appears when the user clicks **Pen Widths** on the menu. Because the ribbon bar has ample room for new controls, you can replace the dialog box by using two combo boxes on the ribbon. One combo box adjusts the width of the thin pen and the other combo box adjusts the width of the thick pen.  
   
-#### 将钢笔工具和组合框添加到功能区  
+#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>To add a Pen panel and combo boxes to the ribbon  
   
-1.  从 **工具箱**中，将 **面板** 拖到 **主页** 类别。  然后将 **复选框** 和 **组合框** 两到面板中。  
+1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag a **Check Box** and two **Combo Boxes** to the panel.  
   
-2.  单击面板改变它的属性。  将**“标题”**更改为 `Pen`。  
+2.  Click the panel to modify its properties. Change **Caption** to `Pen`.  
   
-3.  单击复选框。  `浓厚使用`于 `ID_PEN_THICK_OR_THIN`更改的 **标题** 和 **ID**。  
+3.  Click the check box. Change **Caption** to `Use Thick`, and **ID** to `ID_PEN_THICK_OR_THIN`.  
   
-4.  单击第一组合框。  `细钢笔`的 **标题** 更改为 `ID_PEN_THIN_WIDTH`，**ID** 的，**文本** `2`的 `Drop List`，**类型** 的和 **数据** `1; 2; 3; 4; 5; 6; 7; 8; 9;`的。  
+4.  Click the first combo box. Change **Caption** to `Thin Pen`, **ID** to `ID_PEN_THIN_WIDTH`, **Text** to `2`, **Type** to `Drop List`, and **Data** to `1;2;3;4;5;6;7;8;9;`.  
   
-5.  单击第二组合框。  `粗钢笔`的 **标题** 更改为 `ID_PEN_THICK_WIDTH`，**ID** 的，**文本** `2`的 `Drop List`，**类型** 的和 **数据** `5; 6; 7; 8; 9;10;11;12;13;14;15;16;17;18;19;20;`的。  
+5.  Click the second combo box. Change **Caption** to `Thick Pen`, **ID** to `ID_PEN_THICK_WIDTH`, **Text** to `5`, **Type** to `Drop List`, and **Data** to `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
   
-6.  新的组合框不对应任何现有的菜单项。  因此，必须创建钢笔每个选项的菜单项。  
+6.  The new combo boxes do not correspond to any existing menu items. Therefore, you must create a menu item for every pen option.  
   
-    1.  在 **资源视图** 窗口，请打开 IDR\_SCRIBBTYPE 菜单资源。  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  单击 **笔** 打开菜单**en** 的减速。  然后单击 **请在此处键入** 并键入 `Thi&n 钢笔`。  
+    2.  Click **Pen** to open the p**en** menu. Then click **Type Here** and type `Thi&n Pen`.  
   
-    3.  右击刚键入的文本 **属性** 打开窗口，然后将 ID 属性设置为 `ID_PEN_THIN_WIDTH`。  
+    3.  Right-click the text that you just typed to open the **Properties** window, and then change the ID property to `ID_PEN_THIN_WIDTH`.  
   
-    4.  您还必须创建钢笔菜单项的事件处理程序。  右击 **Thi&n 钢笔** 菜单项创建 **添加事件处理程序**然后单击。  **事件处理程序向导** 中显示。  
+    4.  You must also create an event handler for every pen menu item. Right-click the **Thi&n Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
-    5.  在 **类列表** 框在向导中，选择 **CScribbleDoc** 然后单击 **添加编辑 \(A\)**。  这将创建一个名为 `CScribbleDoc::OnPenThinWidth`的事件处理程序。  
+    5.  In the **Class list** box in the wizard, select **CScribbleDoc** and then click **Add and Edit**. This creates an event handler named `CScribbleDoc::OnPenThinWidth`.  
   
-    6.  将下列代码添加到 `CScribbleDoc::OnPenThinWidth`。  
+    6.  Add the following code to `CScribbleDoc::OnPenThinWidth`.  
   
-        ```  
-        // Get a pointer to the ribbon bar  
-        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-        ASSERT_VALID(pRibbon);  
-        // Get a pointer to the Thin Width combo box  
-        CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(  
-           CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH));  
-        //Get the selected value  
-        int nCurSel = pThinComboBox->GetCurSel();  
-        if (nCurSel >= 0)  
-        {  
-           m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));  
-        }  
-        // Create a new pen using the selected width  
-        ReplacePen();    
-        ```  
+ ``` *// Get a pointer to the ribbon bar CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar(); ASSERT_VALID(pRibbon); *// Get a pointer to the Thin Width combo box CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH)); *//Get the selected value  
+    int nCurSel = pThinComboBox->GetCurSel(); if (nCurSel>= 0)  
+{  
+m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));
+
+ } *// Create a new pen using the selected width  
+    ReplacePen();
+
+ ```  
   
-7.  接下来，创建一菜单项与事件处理程序。的 Pen。  
+7.  Next, create a menu item and event handlers for the thick pen.  
   
-    1.  在 **资源视图** 窗口，请打开 IDR\_SCRIBBTYPE 菜单资源。  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  单击 **笔** 打开菜单钢笔菜单。  然后单击 **请在此处键入** 并键入 `Thic&k 钢笔`。  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
   
-    3.  右击您键入 **属性** 窗口显示的文本。  将 ID 属性设置为 `ID_PEN_THICK_WIDTH`。  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
   
-    4.  右击 **粗钢笔 菜单项创建** 添加事件处理程序然后单击。  **事件处理程序向导** 中显示。  
+    4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
-    5.  在 **类列表** 框在向导中，选择 **CScribbleDoc** 然后单击 **添加编辑 \(A\)**。  这将创建一个名为 `CScribbleDoc::OnPenThickWidth`的事件处理程序。  
+    5.  In the **Class list** box of the wizard, select **CScribbleDoc** and then click **Add and Edit**. This creates an event handler named `CScribbleDoc::OnPenThickWidth`.  
   
-    6.  将下列代码添加到 `CScribbleDoc::OnPenThickWidth`。  
+    6.  Add the following code to `CScribbleDoc::OnPenThickWidth`.  
   
-        ```  
-        // Get a pointer to the ribbon bar  
-        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();  
-        ASSERT_VALID(pRibbon);  
-        CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(  
-           CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));  
-        // Get the selected value  
-        int nCurSel = pThickComboBox->GetCurSel();  
-        if (nCurSel >= 0)  
-        {  
-           m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));  
-        }  
-        // Create a new pen using the selected width  
-        ReplacePen();  
-        ```  
+ ``` *// Get a pointer to the ribbon bar  
+    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();
+ASSERT_VALID(pRibbon);
+
+ CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(
+    CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));
+*// Get the selected value  
+    int nCurSel = pThickComboBox->GetCurSel();
+if (nCurSel>= 0)  
+ {  
+    m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));
+
+ } *// Create a new pen using the selected width  
+    ReplacePen();
+
+ ```  
   
-8.  保存改变的，然后生成并运行应用程序。  应显示新按钮和组合框。  使用图形不同的 Pen 宽度的尝试。  
+8.  Save the changes, and then build and run the application. New buttons and combo boxes should be displayed. Try using different pen widths to scribble.  
   
- \[[各节内容](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addColorButton"></a> 添加颜色钢笔按钮添加到面板  
- 接下来，请将颜色允许用户是一个对象。[CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md)  
+##  <a name="addcolorbutton"></a> Adding a Color Button to the Pen Panel  
+ Next, add a [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) object that lets the user scribble in color.  
   
-#### 添加颜色按钮添加到钢笔面板  
+#### <a name="to-add-a-color-button-to-the-pen-panel"></a>To add a color button to the Pen panel  
   
-1.  将颜色按钮之前，请创建它的一个菜单项。  在 **资源视图** 窗口，请打开 IDR\_SCRIBBTYPE 菜单资源。  单击**钢笔**菜单项以打开该菜单。  然后单击 **请在此处键入** 并键入 `&Color`。  右击您键入 **属性** 窗口显示的文本。  更改ID到`ID_PEN_COLOR`。  
+1.  Before you add the color button, create a menu item for it. In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource. Click the **Pen** menu item to open the pen menu. Then click **Type Here** and type `&Color`. Right-click the text that you just typed to display the **Properties** window. Change the ID to `ID_PEN_COLOR`.  
   
-2.  现在添加颜色按钮。  从 **工具箱**中，将 **颜色按钮** 拖到 **笔** 面板。  
+2.  Now add the color button. From the **Toolbox**, drag a **Color Button** to the **Pen** panel.  
   
-3.  单击颜色按钮。  **标题** 更改为 `Color`，将设置为 `ID_PEN_COLOR`，将 `True`的 **简单 查找**，**索引大图像** 为 `1`和 **拆分模式** 的 **ID** 设置为 `False`。  
+3.  Click the color button. Change **Caption** to `Color`, **ID** to `ID_PEN_COLOR`, **SimpleLook** to `True`, **Large Image Index** to `1`, and **Split Mode** to `False`.  
   
-4.  保存改变的，然后生成并运行应用程序。  在 **笔** "面板应显示新颜色按钮。  但是，它，因为它没有，事件处理程序无法使用。  以下步骤显示如何添加颜色按钮的事件处理程序。  
+4.  Save the changes, and then build and run the application. The new color button should be displayed on the **Pen** panel. However, it cannot be used because it does not yet have an event handler. The next steps show how to add an event handler for the color button.  
   
- \[[各节内容](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addColorMember"></a> 添加颜色文档成员添加到类  
- 由于原始 Scribble 应用程序没有颜色钢笔，您必须编写自己实现的。  若要将文档存储更改笔的颜色，请添加新成员添加到文档，则 `CscribbleDoc.`类  
+##  <a name="addcolormember"></a> Adding a Color Member to the Document Class  
+ Because the original Scribble application does not have color pens, you must write an implementation for them. To store the pen color of the document, add a new member to the document class, `CscribbleDoc.`  
   
-#### 添加颜色成员添加到文档类  
+#### <a name="to-add-a-color-member-to-the-document-class"></a>To add a color member to the document class  
   
-1.  在 scribdoc.h，`CScribbleDoc` 类，找到 `// Attributes` 节。  在 `m_nThickWidth` 数据成员的定义之后添加以下代码行。  
+1.  In scribdoc.h, in the `CScribbleDoc` class, find the `// Attributes` section. Add the following lines of code after the definition of the `m_nThickWidth` data member.  
   
-    ```  
-    // Current pen color  
-    COLORREF   m_penColor;  
-    ```  
+ ``` *// Current pen color  
+    COLORREF m_penColor;  
+ ```  
   
-2.  每个文档包含一个列表升火用户已绘制。  每个笔画由 `CStroke` 对象定义。  `CStroke` 类包含有关钢笔颜色的信息。  因此，必须修改该类。  在 scribdoc.h，在 `CStroke` 类中，在 `m_nPenWidth` 数据成员的定义之后添加以下代码行。  
+2.  Every document contains a list of stokes that the user has already drawn. Every stroke is defined by a `CStroke` object. The `CStroke` class does not include information about pen color. Therefore, you must modify the class. In scribdoc.h, in the `CStroke` class, add the following lines of code after the definition of the `m_nPenWidth` data member.  
   
-    ```  
-    // Pen color for the stroke  
-    COLORREF   m_penColor;  
-    ```  
+ ``` *// Pen color for the stroke  
+    COLORREF m_penColor;  
+ ```  
   
-3.  在 scribdoc.h，将参数指定宽度和颜色新的 `CStroke` 构造函数。  在 `CStroke(UINT nPenWidth);` 报表之后添加以下代码。  
+3.  In scribdoc.h, add a new `CStroke` constructor whose parameters specify a width and color. Add the following line of code after the `CStroke(UINT nPenWidth);` statement.  
   
-    ```  
-    CStroke(UINT nPenWidth, COLORREF penColor);  
-    ```  
+ ```  
+    CStroke(UINT nPenWidth, COLORREF penColor);
+
+ ```  
   
-4.  在 scribdoc.cpp，请将新的 `CStroke` 添加构造函数的实现。  在 `CStroke::CStroke(UINT nPenWidth)` 的构造函数实现的末尾，添加以下代码。  
+4.  In scribdoc.cpp, add the implementation of the new `CStroke` constructor. Add the following code after the implementation of the `CStroke::CStroke(UINT nPenWidth)` constructor.  
   
-    ```  
-    // Constructor that uses the document's current width and color  
+ ``` *// Constructor that uses the document's current width and color  
     CStroke::CStroke(UINT nPenWidth, COLORREF penColor)  
-    {  
-       m_nPenWidth = nPenWidth;  
-       m_penColor = penColor;  
-       m_rectBounding.SetRectEmpty();  
-    }  
-    ```  
+ {  
+    m_nPenWidth = nPenWidth;  
+    m_penColor = penColor;  
+    m_rectBounding.SetRectEmpty();
+
+ }  
+ ```  
   
-5.  如下更改 `CStroke::DrawStroke` 方法的第二行。  
+5.  Change the second line of the `CStroke::DrawStroke` method as follows.  
   
-    ```  
+ ```  
     if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))  
-    ```  
+ ```  
   
-6.  设置钢笔类文档的默认颜色。  在 scribdoc.cpp，将下面一行添加到 `CScribbleDoc::InitDocument`中，在 `m_nThickWidth = 5;` 语句之后。  
+6.  Set the default pen color for the document class. In scribdoc.cpp, add the following lines to `CScribbleDoc::InitDocument`, after the `m_nThickWidth = 5;` statement.  
   
-    ```  
-    // default pen color is black  
-    m_penColor = RGB(0,0,0);   
-    ```  
+ ``` *// default pen color is black  
+    m_penColor = RGB(0,
+    0,
+    0);
+
+ ```  
   
-7.  在 scribdoc.cpp 中，更改 `CScribbleDoc::NewStroke` 方法中的第一行。下面。  
+7.  In scribdoc.cpp, change the first line of the `CScribbleDoc::NewStroke` method to the following.  
   
-    ```  
-    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);  
-    ```  
+ ```  
+    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
+
+ ```  
   
-8.  更改 `CScribbleDoc::ReplacePen` 方法中的最后一行。下面。  
+8.  Change the last line of the `CScribbleDoc::ReplacePen` method to the following.  
   
-    ```  
-    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);  
-    ```  
+ ```  
+    m_penCur.CreatePen(PS_SOLID,
+    m_nPenWidth,
+    m_penColor);
+
+ ```  
   
-9. 已添加一步中的 `m_penColor` 成员。  现在，创建将成员的颜色按钮的事件处理程序。  
+9. You added the `m_penColor` member in a previous step. Now, create an event handler for the color button that sets the member.  
   
-    1.  在 **资源视图** 窗口，请打开 IDR\_SCRIBBTYPE 菜单资源。  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  右击 **Color** 菜单项并单击 **添加事件处理程序。**。  出现 **事件处理程序向导**。  
+    2.  Right-click the **Color** menu item and click **Add Event Handler**. The **Event Handler Wizard** appears.  
   
-    3.  在 **类列表** 框在向导中，选择 **CScribbleDoc** 然后单击 **添加编辑 \(A\)**按钮。  此操作将创建 `CScribbleDoc::OnPenColor` 事件处理程序。  
+    3.  In the **Class list** box in the wizard, select **CScribbleDoc** and then click the **Add and Edit** button. This creates the `CScribbleDoc::OnPenColor` event handler stub.  
   
-10. 使用下面的代码替换 `CScribbleDoc::OnPenColor` 事件处理程序中的注释：  
+10. Replace the stub for the `CScribbleDoc::OnPenColor` event handler with the following code.  
   
-    ```  
+ ```  
     void CScribbleDoc::OnPenColor()  
-    {  
-    // Change pen color to reflect color button's current selection  
-    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-    ASSERT_VALID(pRibbon);  
-    CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(  
-       CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR));  
-    m_penColor = pColorBtn->GetColor();  
-    // Create new pen using the selected color  
-    ReplacePen();  
-    }  
-    ```  
+ { *// Change pen color to reflect color button's current selection  
+    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();
+ASSERT_VALID(pRibbon);
+
+ CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(
+    CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR));
+
+    m_penColor = pColorBtn->GetColor();
+*// Create new pen using the selected color  
+    ReplacePen();
+
+ }  
+ ```  
   
-11. 保存改变的，然后生成并运行应用程序。  您应该能按颜色按钮和更改钢笔的颜色。  
+11. Save the changes and then build and run the application. You should be able to press the color button and change the pen's color.  
   
- \[[各节内容](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="initPenSave"></a> 初始化钢笔和保存首选项  
- 接下来，请初始化钢笔的颜色和宽度。  最后，和保存从文件中加载一颜色绘制。  
+##  <a name="initpensave"></a> Initializing Pens and Saving Preferences  
+ Next, initialize the color and width of the pens. Finally, save and load a color drawing from a file.  
   
-#### 初始化功能区栏上的控件  
+#### <a name="to-initialize-controls-on-the-ribbon-bar"></a>To initialize controls on the ribbon bar  
   
-1.  初始化在功能区栏的 Pen。  
+1.  Initialize the pens on the ribbon bar.  
   
-     将以下代码添加到 scribdoc.cpp，`CScribbleDoc::InitDocument` 方法，在 `m_sizeDoc = CSize(200,200)` 语句之后。  
+     Add the following code to scribdoc.cpp, in the `CScribbleDoc::InitDocument` method, after the `m_sizeDoc = CSize(200,200)` statement.  
   
-    ```  
-    // Reset the ribbon UI to its initial values  
-    CMFCRibbonBar* pRibbon =   
-       ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-    ASSERT_VALID(pRibbon);  
-    CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(  
-       CMFCRibbonColorButton,   
-       pRibbon->FindByID(ID_PEN_COLOR));  
-    // Set ColorButton to black  
-    pColorBtn->SetColor(RGB(0,0,0));    
-    CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(  
-       CMFCRibbonComboBox,   
-       pRibbon->FindByID(ID_PEN_THIN_WIDTH));  
-    // Set Thin pen combobox to 2  
-    pThinComboBox->SelectItem(1);   
-    CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(  
-       CMFCRibbonComboBox,   
-       pRibbon->FindByID(ID_PEN_THICK_WIDTH));  
-    // Set Thick pen combobox to 5  
-    pThickComboBox->SelectItem(0);  
-    ```  
+ ``` *// Reset the ribbon UI to its initial values CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar(); ASSERT_VALID(pRibbon);
+
+ CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST( CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR)); *// Set ColorButton to black  
+    pColorBtn->SetColor(RGB(0, 0, 0));
+
+ CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH)); *// Set Thin pen combobox to 2  
+    pThinComboBox->SelectItem(1);
+
+ CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH)); *// Set Thick pen combobox to 5  
+    pThickComboBox->SelectItem(0);
+
+ ```  
   
-2.  保存绘制到文件中的一种颜色。  将以下代码添加到 scribdoc.cpp，`CStroke::Serialize` 方法，在 `ar << (WORD)m_nPenWidth;` 语句之后。  
+2.  Save a color drawing to a file. Add the following statement to scribdoc.cpp, in the `CStroke::Serialize` method, after the `ar << (WORD)m_nPenWidth;` statement.  
   
-    ```  
-    ar << (COLORREF)m_penColor;  
-    ```  
+ ```  
+    ar <<(COLORREF)m_penColor;  
+ ```  
   
-3.  最后，从文件中加载一颜色绘制。  在 `CStroke::Serialize` 方法中，添加以下代码行，在 `m_nPenWidth = w;` 报表之后。  
+3.  Finally, load a color drawing from a file. Add the following line of code, in the `CStroke::Serialize` method, after the `m_nPenWidth = w;` statement.  
   
-    ```  
-    ar >> m_penColor;  
-    ```  
+ ```  
+    ar>> m_penColor;  
+ ```  
   
-4.  现在请图形在颜色并保存绘制到文件。  
+4.  Now scribble in color and save your drawing to a file.  
   
- \[[各节内容](#top)\]  
+ [[Sections](#top)]  
   
-## 结束语  
- 在更新应用 MFC 随意画图程序。  当修改现有应用程序中时，请使用本演练作为指南。  
+## Conclusion  
+ You have updated the MFC Scribble application. Use this walkthrough as a guide when you modify your existing applications.  
   
-## 请参阅  
- [演练](../mfc/walkthroughs-mfc.md)   
- [演练：更新 MFC 随意画图应用程序（第 1 部分）](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+## See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+
+

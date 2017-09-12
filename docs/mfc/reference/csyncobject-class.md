@@ -1,5 +1,5 @@
 ---
-title: "CSyncObject 类 |Microsoft 文档"
+title: CSyncObject Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,8 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSyncObject class
-- synchronization classes, CSyncObject
+- CSyncObject [MFC], CSyncObject
+- CSyncObject [MFC], Lock
+- CSyncObject [MFC], Unlock
+- CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
 caps.latest.revision: 21
 author: mikeblome
@@ -39,113 +41,113 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a1f0c8ddfbfaf129bb18c14d36b998dd37d35899
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e73fe4c85e6614a4e1901b02cbfd4917e016503c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csyncobject-class"></a>CSyncObject 类
-一个纯虚拟类，提供 Win32 中的同步对象所共有的功能。  
+# <a name="csyncobject-class"></a>CSyncObject Class
+A pure virtual class that provides functionality common to the synchronization objects in Win32.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSyncObject : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSyncObject::CSyncObject](#csyncobject)|构造 `CSyncObject` 对象。|  
+|[CSyncObject::CSyncObject](#csyncobject)|Constructs a `CSyncObject` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSyncObject::Lock](#lock)|提高对同步对象的访问。|  
-|[CSyncObject::Unlock](#unlock)|提高对同步对象的访问。|  
+|[CSyncObject::Lock](#lock)|Gains access to the synchronization object.|  
+|[CSyncObject::Unlock](#unlock)|Gains access to the synchronization object.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSyncObject::operator 句柄](#operator_handle)|提供对同步对象的访问。|  
+|[CSyncObject::operator HANDLE](#operator_handle)|Provides access to the synchronization object.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSyncObject::m_hObject](#m_hobject)|基础同步对象的句柄。|  
+|[CSyncObject::m_hObject](#m_hobject)|The handle to the underlying synchronization object.|  
   
-## <a name="remarks"></a>备注  
- Microsoft 基础类库提供了几个类派生自`CSyncObject`。 这些是[CEvent](../../mfc/reference/cevent-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)， [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)，和[CSemaphore](../../mfc/reference/csemaphore-class.md)。  
+## <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library provides several classes derived from `CSyncObject`. These are [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), and [CSemaphore](../../mfc/reference/csemaphore-class.md).  
   
- 有关如何使用同步对象的信息，请参阅文章[多线程处理︰ 如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。  
+ For information on how to use the synchronization objects, see the article [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CSyncObject`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
- 构造使用提供的名称的同步对象。  
+##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
+ Constructs a synchronization object with the supplied name.  
   
 ```  
 explicit CSyncObject(LPCTSTR pstrName);  
 virtual ~CSyncObject();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrName`  
- 对象的名称。 如果**NULL**， *pstrName*将为 null。  
+ The name of the object. If **NULL**, *pstrName* will be null.  
   
-##  <a name="lock"></a>CSyncObject::Lock  
- 调用此函数可获取对同步对象控制的资源访问权限。  
+##  <a name="lock"></a>  CSyncObject::Lock  
+ Call this function to gain access to the resource controlled by the synchronization object.  
   
 ```  
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwTimeout`  
- 指定的时间量 （毫秒） 等待同步对象可用 （终止）。 如果**无限**，`Lock`将等待，直到在返回之前，该对象处于终止状态。  
+ Specifies the amount of time in milliseconds to wait for the synchronization object to be available (signaled). If **INFINITE**, `Lock` will wait until the object is signaled before returning.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果同步对象发出信号，`Lock`将立即成功返回，并在线程现在拥有对象。 如果同步对象是非终止状态 （不可用）`Lock`将等待要接收信号最中指定的毫秒数的同步对象*dwTimeOut*参数。 如果没有未在指定的时间量，接收信号的同步对象`Lock`返回失败。  
+### <a name="remarks"></a>Remarks  
+ If the synchronization object is signaled, `Lock` will return successfully and the thread now owns the object. If the synchronization object is nonsignaled (unavailable), `Lock` will wait for the synchronization object to become signaled up to the number of milliseconds specified in the *dwTimeOut* parameter. If the synchronization object did not become signaled in the specified amount of time, `Lock` returns failure.  
   
-##  <a name="m_hobject"></a>CSyncObject::m_hObject  
- 基础同步对象的句柄。  
+##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
+ The handle to the underlying synchronization object.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="operator_handle"></a>CSyncObject::operator 句柄  
- 使用此运算符将获取的句柄`CSyncObject`对象。  
+##  <a name="operator_handle"></a>  CSyncObject::operator HANDLE  
+ Use this operator to get the handle of the `CSyncObject` object.  
   
 ```  
 operator HANDLE() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，同步对象中; 的句柄否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the synchronization object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>备注  
- 该句柄可用于直接调用 Windows Api。  
+### <a name="remarks"></a>Remarks  
+ You can use the handle to call Windows APIs directly.  
   
-##  <a name="unlock"></a>CSyncObject::Unlock  
- 声明`Unlock`不带任何参数是一个纯虚拟函数，并且必须由派生自的所有类重写`CSyncObject`。  
+##  <a name="unlock"></a>  CSyncObject::Unlock  
+ The declaration of `Unlock` with no parameters is a pure virtual function, and must be overridden by all classes deriving from `CSyncObject`.  
   
 ```  
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -153,22 +155,22 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
     LPLONG lpPrevCount = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lCount`  
- 不使用默认实现。  
+ Not used by default implementation.  
   
  `lpPrevCount`  
- 不使用默认实现。  
+ Not used by default implementation.  
   
-### <a name="return-value"></a>返回值  
- 默认实现始终返回**TRUE**。  
+### <a name="return-value"></a>Return Value  
+ Default implementation always returns **TRUE**.  
   
-### <a name="remarks"></a>备注  
- 始终用两个参数声明的默认实现返回**TRUE**。 调用此函数来释放给调用线程所拥有的同步对象的访问。 第二个声明用于如允许多个受控资源的访问的信号量同步对象。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of the declaration with two parameters always returns **TRUE**. This function is called to release access to the synchronization object owned by the calling thread. The second declaration is provided for synchronization objects such as semaphores that allow more than one access of a controlled resource.  
   
-## <a name="see-also"></a>另请参阅  
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

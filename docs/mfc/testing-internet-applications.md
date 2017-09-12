@@ -1,37 +1,56 @@
 ---
-title: "测试 Internet 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "调试 [MFC], Web 应用程序"
-  - "调试 Web 应用程序, 测试应用程序"
-  - "Internet 调试和测试"
-  - "测试, Internet 应用程序"
-  - "Web 应用程序, 测试"
+title: Testing Internet Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Web applications [MFC], testing
+- debugging Web applications [MFC], testing applications
+- testing [MFC], Internet applications
+- debugging [MFC], Web applications
+- Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 测试 Internet 应用程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1bdf3922311d334eecece5fefbd7573f6dffab26
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在 Internet 的一些特殊的难题测试，特别是在 Web 服务器上运行应用程序。  初始测试可能完成使用连接到测试服务器的单个用户的帐户。  这对调试很有用。  
+---
+# <a name="testing-internet-applications"></a>Testing Internet Applications
+There are some unique testing challenges on the Internet, especially for applications running on a Web server. Your initial testing will probably be done using a single-user client connecting to a test server. This will be useful for debugging your code.  
   
- 还需要在实际条件下测试：而多个客户端连接。缓存以及连接低速串行的行，包括解调器连接。  模拟实际情况很难的，但是，它必须是值得所设计可能的方案和它们执行的时间。  如果可能，则还需要使用此工具执行容量和压力测试。  Bug 一些类，例如计时很难重现查找Bug。  
+ You will also want to test under real conditions: with multiple clients connected over high-speed connections as well as low-speed serial lines, including modem connections. It can be difficult to simulate real conditions, but it is certainly worth spending time designing possible scenarios and executing them. If possible, you will also want to use tools to do capacity and stress testing. Certain classes of bugs, such as timing bugs, are difficult to find and to reproduce.  
   
- 一个 Internet 进行编程时遇到的挑战是其可见性。  对站点中访问许多可能降低服务器。  您希望服务器完全降低级别。  要防止可能破坏性于用户计算机的任何应用程序，则失败 \(例如，数据损坏，在写入注册表，或者在编写时 Cookie 保存在客户端\)。  
+ One of the challenges of Internet programming is its visibility. Many accesses to your site may slow down your server. You want your server to degrade gracefully. You want to prevent anything that could be destructive to a user's computer if your application fails (for example, corruption of data while writing to the registry or while writing cookies on the client).  
   
-## 请参阅  
- [MFC Internet 编程任务](../mfc/mfc-internet-programming-tasks.md)   
- [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

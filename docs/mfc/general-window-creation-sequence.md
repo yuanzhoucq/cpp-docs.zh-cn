@@ -1,50 +1,69 @@
 ---
-title: "常用窗口创建序列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架窗口 [C++], 创建"
-  - "序列 [C++]"
-  - "序列 [C++], 窗口创建"
-  - "窗口 [C++], 创建"
+title: General Window Creation Sequence | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sequence [MFC], window creation
+- frame windows [MFC], creating
+- windows [MFC], creating
+- sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 常用窗口创建序列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48eabbb2bfd7ca90c8dbe9f82207f8770018b0e2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当创建时一个窗口拥有，如子窗口，框架使用进程并在 [文档\/视图创建](../mfc/document-view-creation.md)描述的相同。  
+---
+# <a name="general-window-creation-sequence"></a>General Window Creation Sequence
+When you create a window of your own, such as a child window, the framework uses much the same process as that described in [Document/View Creation](../mfc/document-view-creation.md).  
   
- MFC 提供的所有类使用 Windows [构造两个阶段](../mfc/one-stage-and-two-stage-construction-of-objects.md)。  即在 C\+\+ **new** 运算符的调用时，构造函数将分配并初始化 C.C\+\+ 对象，但不会创建相应的 Windows 窗口。  该窗口对象的成员函数。之后立即调用 [创建](../Topic/CWnd::Create.md)  
+ All the window classes provided by MFC employ [two-stage construction](../mfc/one-stage-and-two-stage-construction-of-objects.md). That is, during an invocation of the C++ **new** operator, the constructor allocates and initializes a C++ object but does not create a corresponding Windows window. That is done afterward by calling the [Create](../mfc/reference/cwnd-class.md#create) member function of the window object.  
   
- **创建** 成员函数使 Windows 窗口并存储其在 C\+\+ 对象的公共数据成员 [m\_hWnd](../Topic/CWnd::m_hWnd.md)的 `HWND`。  **创建** 提供在创建参数的完整灵活性。  在调用 **创建**前，可能需要注册与全局函数 [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) 的窗口类才能将框架的图标以及类样式。  
+ The **Create** member function makes the Windows window and stores its `HWND` in the C++ object's public data member [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). **Create** gives complete flexibility over the creation parameters. Before calling **Create**, you may want to register a window class with the global function [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) in order to set the icon and class styles for the frame.  
   
- 对于框架窗口，则可以使用 [LoadFrame](../Topic/CFrameWnd::LoadFrame.md) 成员函数而不是 **创建**。  使用较少形参`LoadFrame`，使 Windows 窗口。  从资源获取其许多默认值，其中包括标题、图标、帧的快捷键对应表和菜单。  
+ For frame windows, you can use the [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) member function instead of **Create**. `LoadFrame` makes the Windows window using fewer parameters. It gets many default values from resources, including the frame's caption, icon, accelerator table, and menu.  
   
 > [!NOTE]
->  图标和菜单、快捷键表资源必须具有公共资源 ID，如。**IDR\_MAINFRAME**，LoadFrame 要加载的方法。  
+>  Your icon, accelerator table, and menu resources must have a common resource ID, such as **IDR_MAINFRAME**, for them to be loaded by LoadFrame.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [窗口对象](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [注册窗口类](../mfc/registering-window-classes.md)  
+-   [Registering window "classes"](../mfc/registering-window-classes.md)  
   
--   [销毁窗口对象](../mfc/destroying-window-objects.md)  
+-   [Destroying window objects](../mfc/destroying-window-objects.md)  
   
--   [创建文档框架窗口](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
-## 请参阅  
- [创建窗口](../mfc/creating-windows.md)
+## <a name="see-also"></a>See Also  
+ [Creating Windows](../mfc/creating-windows.md)
+
+

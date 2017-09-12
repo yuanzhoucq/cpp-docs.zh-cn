@@ -1,5 +1,5 @@
 ---
-title: "CMFCSpinButtonCtrl 类 |Microsoft 文档"
+title: CMFCSpinButtonCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCSpinButtonCtrl class
+- CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
 caps.latest.revision: 25
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: c1832062461f2ed53df07a72428089179ed493ab
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 11b76a4a73bb505182a3c380566dd9b392617f08
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl 类
-`CMFCSpinButtonCtrl`类支持绘制数值调节钮控件的可视管理器。  
+# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl Class
+The `CMFCSpinButtonCtrl` class supports a visual manager that draws a spin button control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCSpinButtonCtrl : public CSpinButtonCtrl  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|默认构造函数。|  
-|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|析构函数。|  
+|`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Default constructor.|  
+|`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|重新绘制当前数值调节钮控件。|  
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Repaints the current spin button control.|  
   
-## <a name="remarks"></a>备注  
- 若要使用的可视管理器在您的应用程序中绘制数值调节钮控件，替换的全部实例`CSpinButtonCtrl`类`CMFCSpinButtonCtrl`类。  
+## <a name="remarks"></a>Remarks  
+ To use a visual manager to draw a spin button control in your application, replace all instances of the `CSpinButtonCtrl` class with the `CMFCSpinButtonCtrl` class.  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何创建的对象`CMFCSpinButtonCtrl`类并使用其`Create`方法。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to create an object of the `CMFCSpinButtonCtrl` class and use its `Create` method.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&25;](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -85,25 +85,25 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
   
  [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxspinbuttonctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxspinbuttonctrl.h  
   
-##  <a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
- 重新绘制当前数值调节钮控件。  
+##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw  
+ Repaints the current spin button control.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>备注  
- 框架将调用`CMFCSpinButtonCtrl::OnPaint`方法以处理[CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint)消息和方法又调用这`CMFCSpinButtonCtrl::OnDraw`方法。 重写此方法以自定义框架绘制数值调节钮控件的方式。  
+### <a name="remarks"></a>Remarks  
+ The framework calls the `CMFCSpinButtonCtrl::OnPaint` method to handle the [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) message, and that method in turn calls this `CMFCSpinButtonCtrl::OnDraw` method. Override this method to customize the way the framework draws the spin button control.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)
 

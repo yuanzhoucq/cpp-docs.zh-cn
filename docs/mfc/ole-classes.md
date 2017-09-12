@@ -1,63 +1,82 @@
 ---
-title: "OLE 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 类 [C++]"
-  - "类 [C++], OLE"
-  - "OLE [C++], 类"
-  - "OLE 类 [C++]"
+title: OLE Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- classes [MFC], OLE
+- OLE classes [MFC]
+- OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eab656859bbba98ec2605c9cc95e26565494cbbb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-OLE 类与其他应用程序框架类一起使用提供 对 ActiveX API 的方便访问，为程序实现一种简易的提供给用户 ActiveX 功能的方式。  使用 ActiveX，可以：  
+---
+# <a name="ole-classes"></a>OLE Classes
+The OLE classes work with the other application framework classes to provide easy access to the ActiveX API, giving your programs an easy way to provide the power of ActiveX to your users. Using ActiveX, you can:  
   
--   创建复合文档，它允许用户创建和编辑包含各种应用程序创建的数据的文档，其中包括文本、图形、电子表格、声音，或者其他类型的数据。  
+-   Create compound documents, which allow users to create and edit documents containing data created by multiple applications, including text, graphics, spreadsheets, sound, or other types of data.  
   
--   在复合文档中可以创建嵌入的 OLE 对象。  
+-   Create OLE objects that can be embedded in compound documents.  
   
--   使用 OLE 拖放在应用程序之间复制数据。  
+-   Use OLE drag and drop to copy data between applications.  
   
--   使用自动化控制另一程序。  
+-   Use Automation to control one program with another.  
   
--   创建 ActiveX 控件和 ActiveX 控件容器 \(以前分别称为 OLE 控件和 OLE 控件容器\)。  
+-   Create ActiveX controls and ActiveX control containers (formerly called OLE controls and OLE control containers, respectively).  
   
- 以下列类别支持 ActiveX:  
+ The following categories of classes support ActiveX:  
   
--   [OLE 容器类](../mfc/ole-container-classes.md)  
+-   [OLE Container Classes](../mfc/ole-container-classes.md)  
   
--   [OLE 服务器类](../mfc/ole-server-classes.md)  
+-   [OLE Server Classes](../mfc/ole-server-classes.md)  
   
--   [OLE 拖放和数据传输类](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
+-   [OLE Drag-and-Drop and Data Transfer Classes](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
   
--   [OLE 通用对话框类](../mfc/ole-common-dialog-classes.md)  
+-   [OLE Common Dialog Classes](../mfc/ole-common-dialog-classes.md)  
   
--   [OLE 自动化类](../mfc/ole-automation-classes.md)  
+-   [OLE Automation Classes](../mfc/ole-automation-classes.md)  
   
--   [OLE 控件类](../mfc/ole-control-classes.md)  
+-   [OLE Control Classes](../mfc/ole-control-classes.md)  
   
--   [活动文档类](../mfc/active-document-classes.md)  
+-   [Active Document Classes](../mfc/active-document-classes.md)  
   
--   [与 OLE 相关的类](../mfc/ole-related-classes.md)  
+-   [OLE-Related Classes](../mfc/ole-related-classes.md)  
   
- 若要查看类的继承，请使用[类层次结构表图](../mfc/hierarchy-chart.md)。  
+ To see the inheritance of a class, use the [Class Hierarchy Chart](../mfc/hierarchy-chart.md).  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -1,85 +1,102 @@
 ---
-title: "集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组模板"
-  - "数组 [C++], 类"
-  - "集合类, 关于集合类"
-  - "集合类, 数组"
-  - "集合类, 列表"
-  - "集合类, 映射"
-  - "集合类, MFC"
-  - "集合类, 形状"
-  - "集合类, 基于模板的"
-  - "集合, 关于集合"
-  - "MFC 集合类"
-  - "MFC, 集合"
-  - "形状"
-  - "形状, 集合"
+title: Collections | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, collections
+- arrays [MFC], classes
+- MFC collection classes
+- shapes, collection
+- collection classes [MFC], MFC
+- collections, about collections
+- array templates [MFC]
+- collection classes [MFC], template-based
+- collection classes [MFC], about collection classes
+- collection classes [MFC], maps
+- collection classes [MFC], arrays
+- shapes
+- collection classes [MFC], lists
+- collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 集合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4ae4981412a7cf494b551de7f5bb26c74512244
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-Microsoft 基础类 \(MFC\) 库提供集合类管理对象组成的组。  这些类包括两种类型：  
+---
+# <a name="collections"></a>Collections
+The Microsoft Foundation Class Library provides collection classes to manage groups of objects. These classes are of two types:  
   
--   [从 C\+\+ 模板的集合类创建](#_core_the_template.2d.based_collection_classes)  
+-   [Collection classes created from C++ templates](#_core_the_template_based_collection_classes)  
   
--   [集合类不从模板创建](#_core_the_collection_classes_not_based_on_templates)  
+-   [Collection classes not created from templates](#_core_the_collection_classes_not_based_on_templates)  
   
 > [!NOTE]
->  如果代码已使用个集合类，则可以继续使用它们。  如果在编写新类型安全"的集合类提供自己的数据类型，但我们推荐使用较新的基于模板的类。  
+>  If your code already uses nontemplate collection classes, you can continue to use them. If you write new type-safe collection classes for your own data types, we recommend that you use the newer template-based classes.  
   
-##  <a name="_core_collection_shapes"></a> 集合形状  
- 集合类加上其“shape”和通过其元素类型。  形状引用对象由集合组织并存储的情况下。  MFC 提供三个简单的集合形态：列表、数组以及映射字典 \(也称为\)。  可以选取最适合于特定编程问题的集合形态。  
+##  <a name="_core_collection_shapes"></a> Collection Shapes  
+ A collection class is characterized by its "shape" and by the types of its elements. The shape refers to the way the objects are organized and stored by the collection. MFC provides three basic collection shapes: lists, arrays, and maps (also known as dictionaries). You can pick the collection shape that is most suited to your particular programming problem.  
   
- 三提供的集合形态每个本主题后面简要介绍。  若要比较形状的功能帮助您确定要对程序是最好，请参见 [关于选择集合类的建议](../mfc/recommendations-for-choosing-a-collection-class.md)。  
+ Each of the three provided collection shapes is described briefly later in this topic. To compare the features of the shapes to help you decide which is best for your program, see [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md).  
   
 -   List  
   
-     列表类提供元素的排序，为列表，实现为双向链接列表。  列表具有“头”，而且“尾”，并添加或移除元素。开头或末尾或插入或删除元素在中间，非常快。  
+     The list class provides an ordered, nonindexed list of elements, implemented as a doubly linked list. A list has a "head" and a "tail," and adding or removing elements from the head or tail, or inserting or deleting elements in the middle, is very fast.  
   
--   数组  
+-   Array  
   
-     数组类提供动态调整大小中，排序和整数索引的数组对象。  
+     The array class provides a dynamically sized, ordered, and integer-indexed array of objects.  
   
--   映射 \(也是一个字典\)  
+-   Map (also known as a dictionary)  
   
-     映射是与的主要对象的值对象的集合。  
+     A map is a collection that associates a key object with a value object.  
   
-##  <a name="_core_the_template.2d.based_collection_classes"></a> 基于模板的集合类  
- 简单的方法实现包含任何类型的对象类型安全的集合将使用某个基于 MFC 模板的类。  有关这些类的示例，请参见 MFC 示例 [收集](../top/visual-cpp-samples.md)。  
+##  <a name="_core_the_template_based_collection_classes"></a> The Template-Based Collection Classes  
+ The easiest way to implement a type-safe collection that contains objects of any type is to use one of the MFC template-based classes. For examples of these classes, see the MFC sample [COLLECT](../visual-cpp-samples.md).  
   
- 下表列出了基于 MFC 模板的集合类。  
+ The following table lists the MFC template-based collection classes.  
   
-### 模板集合类  
+### <a name="collection-template-classes"></a>Collection Template Classes  
   
-|集合内容|数组|列表|映射|  
-|----------|--------|--------|--------|  
-|任何类型的对象的集合。|`CArray`|`CList`|`CMap`|  
-|指针的任何对象的类型化集合|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
+|Collection contents|Arrays|Lists|Maps|  
+|-------------------------|------------|-----------|----------|  
+|Collections of objects of any type|`CArray`|`CList`|`CMap`|  
+|Collections of pointers to objects of any type|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a> 没有基于模板的集合类  
- 如果应用已经使用MFC非模板类，则可以继续使用它们。  但是，对新的集合，建议使用基于模板的类。  下表列出了 MFC 不基于模板的集合类。  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> The Collection Classes Not Based on Templates  
+ If your application already uses MFC nontemplate classes, you can continue to use them. However, for new collections, we recommend that you use the template-based classes. The following table lists the MFC collection classes that are not based on templates.  
   
-### 非模板和集合类  
+### <a name="nontemplate-collection-classes"></a>Nontemplate Collection Classes  
   
-|数组|列表|映射|  
-|--------|--------|--------|  
+|Arrays|Lists|Maps|  
+|------------|-----------|----------|  
 |`CObArray`|`CObList`|`CMapPtrToWord`|  
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|  
 |`CDWordArray`|`CStringList`|`CMapStringToOb`|  
@@ -88,38 +105,40 @@ Microsoft 基础类 \(MFC\) 库提供集合类管理对象组成的组。  这�
 |`CWordArray`||`CMapWordToOb`|  
 |`CUIntArray`||`CMapWordToPtr`|  
   
- MFC 集合在 [关于选择集合类的建议](../mfc/recommendations-for-choosing-a-collection-class.md) 的类特性的表介绍 MFC 集合类。这些特性 \(除外\) 形状：  
+ The Characteristics of MFC Collection Classes table in [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md) describes the MFC collection classes in terms of these characteristics (other than shape):  
   
--   类是使用 C\+\+ 模板  
+-   Whether the class uses C++ templates  
   
--   在集合中的元素是可序列化  
+-   Whether the elements stored in the collection can be serialized  
   
--   集合中存储的元素是否可以为诊断转储  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   集合是否是类型安全  
+-   Whether the collection is type-safe  
   
-### 你希望做什么？  
+### <a name="what-do-you-want-to-do"></a>What do you want to do  
   
-#### 泛型集合类任务  
+#### <a name="general-collection-class-tasks"></a>General Collection-Class Tasks  
   
--   [关于选择集合类的建议](../mfc/recommendations-for-choosing-a-collection-class.md)  
+-   [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md)  
   
--   [如何：创建类型安全集合](../mfc/how-to-make-a-type-safe-collection.md)  
+-   [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)  
   
--   [创建堆栈和队列集合](../mfc/creating-stack-and-queue-collections.md)  
+-   [Creating Stack and Queue Collections](../mfc/creating-stack-and-queue-collections.md)  
   
--   [CArray::Add](../Topic/CArray::Add.md)  
+-   [CArray::Add](../mfc/reference/carray-class.md#add)  
   
-#### 基于模板的集合类任务  
+#### <a name="template-based-collection-class-tasks"></a>Template-Based Collection-Class Tasks  
   
--   [基于模板的类](../mfc/template-based-classes.md)  
+-   [Template-Based Classes](../mfc/template-based-classes.md)  
   
-#### 访问集合的成员 \(基于模板\)  
+#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Accessing the Members of a Collection (Template-Based or Not)  
   
--   [访问集合的所有成员](../mfc/accessing-all-members-of-a-collection.md)  
+-   [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)  
   
--   [删除 CObject 集合中的所有对象](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
+-   [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   
-## 请参阅  
- [概念](../mfc/mfc-concepts.md)   
- [常规 MFC 主题](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

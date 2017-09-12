@@ -1,120 +1,139 @@
 ---
-title: "MFC ActiveX 控件：添加另一自定义属性页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件 [C++], 属性页"
-  - "自定义属性页"
-  - "MFC ActiveX 控件 [C++], 属性页"
-  - "属性页 [C++], MFC ActiveX 控件"
+title: 'MFC ActiveX Controls: Adding Another Custom Property Page | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages [MFC], MFC ActiveX controls
+- custom property pages [MFC]
+- ActiveX controls [MFC], property pages
+- MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC ActiveX 控件：添加另一自定义属性页
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c05175fa0a10ed2679b40d4fb3780286224d9b5d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-偶尔，ActiveX 控件比在一个属性页会有更多属性可以合理的。  在这种情况下，您可以将属性添加页到 ActiveX 控件显示这些属性。  
+---
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX Controls: Adding Another Custom Property Page
+Occasionally, an ActiveX control will have more properties than can reasonably fit on one property page. In this case, you can add property pages to the ActiveX control to display these properties.  
   
- 已至少有一个属性页的本文讨论添加新的属性页。ActiveX 控件。  有关添加常用属性页的更多信息 \(字体、图片或颜色\)，请参见 [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)文章。  
+ This article discusses adding new property pages to an ActiveX control that already has at least one property page. For more information on adding stock property pages (font, picture, or color), see the article [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md).  
   
- 以下过程使用 ActiveX 控件向导"创建 ActiveX 的示例控件框架。  因此，类名和标识符。此示例是唯一的。  
+ The following procedures use a sample ActiveX control framework created by the ActiveX Control Wizard. Therefore, the class names and identifiers are unique to this example.  
   
- 有关使用属性页的更多信息，请参见下列文章：在 ActiveX 控件  
+ For more information on using property pages in an ActiveX control, see the following articles:  
   
--   [MFC ActiveX 控件：属性页](../mfc/mfc-activex-controls-property-pages.md)  
+-   [MFC ActiveX Controls: Property Pages](../mfc/mfc-activex-controls-property-pages.md)  
   
--   [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+-   [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
     > [!NOTE]
-    >  强烈建议新的页属性遵循 ActiveX 控件属性页的范围标准。  将图片和颜色属性页对话框 250x62 度量单位 \(控件\)。  标准字体属性页是 250x110 DLU。  ActiveX 控件向导创建的默认属性页使用 250x62 DLU 标准。  
+    >  It is strongly recommended that new property pages adhere to the size standard for ActiveX control property pages. The stock picture and color property pages measure 250x62 dialog units (DLU). The standard font property page is 250x110 DLUs. The default property page created by the ActiveX Control Wizard uses the 250x62 DLU standard.  
   
-### 插入新的"属性页模板到项目  
+### <a name="to-insert-a-new-property-page-template-into-your-project"></a>To insert a new property page template into your project  
   
-1.  打开控件的项目，则在项目工作区中打开资源视图。  
+1.  With your control project open, open Resource View in the project workspace.  
   
-2.  右击在"资源视图打开快捷菜单并单击 **添加资源**。  
+2.  Right-click in Resource View to open the shortcut menu and click **Add Resource**.  
   
-3.  展开 **对话框** 节点，然后选择 **IDD\_OLE\_PROPPAGE\_SMALL**。  
+3.  Expand the **Dialog** node, and select **IDD_OLE_PROPPAGE_SMALL**.  
   
-4.  单击 `New` 将资源添加到此项目。  
+4.  Click `New` to add the resource to your project.  
   
-5.  选择新的属性页刷新模板属性窗口。  
+5.  Select the new property page template to refresh the Properties window.  
   
-6.  输入 **ID** 属性的新值。  此示例使用 **IDD\_PROPPAGE\_NEWPAGE**。  
+6.  Enter a new value for the **ID** property. This example uses **IDD_PROPPAGE_NEWPAGE**.  
   
-7.  在工具栏上单击**“保存”**。  
+7.  Click **Save** on the toolbar.  
   
-### 相关新的模板类。  
+### <a name="to-associate-the-new-template-with-a-class"></a>To associate the new template with a class  
   
-1.  打开类视图。  
+1.  Open Class View.  
   
-2.  右击类视图打开快捷菜单。  
+2.  Right-click in Class View to open the shortcut menu.  
   
-3.  从快捷菜单中单击“添加”，然后单击“添加类”。  
+3.  From the shortcut menu, click **Add** and then click **Add Class**.  
   
-     这会打开 [添加类](../ide/add-class-dialog-box.md) 对话框。  
+     This opens the [Add Class](../ide/add-class-dialog-box.md) dialog box.  
   
-4.  双击 **MFC 类** 模板。  
+4.  Double-click the **MFC Class** template.  
   
-5.  在 **类名** 框在 [MFC 类向导](../mfc/reference/mfc-add-class-wizard.md)中，键入项目名称。新的对话框类。\(在此示例中，即 `CAddtlPropPage`。\)  
+5.  In the **Class Name** box in the [MFC Class Wizard](../mfc/reference/mfc-add-class-wizard.md), type a name for the new dialog class. (In this example, `CAddtlPropPage`.)  
   
-6.  如果要更改文件的名称，单击 **更改**。  输入名称。实现和头文件或接受默认名称。  
+6.  If you want to change file names, click **Change**. Type in the names for your implementation and header files, or accept the default names.  
   
-7.  在 **基类** 框中，选择 `COlePropertyPage`。  
+7.  In the **Base Class** box, select `COlePropertyPage`.  
   
-8.  在 **对话框 ID** 框中，选择 **IDD\_PROPPAGE\_NEWPAGE**。  
+8.  In the **Dialog ID** box, select **IDD_PROPPAGE_NEWPAGE**.  
   
-9. 单击以创建类的 **完成** 。  
+9. Click **Finish** to create the class.  
   
- 若要允许设置为此新的属性页中的用户控件访问，请对控件的 ID 属性页的节进行以下更改 \(位于控件实现文件\):  
+ To allow the control's users access to this new property page, make the following changes to the control's property page IDs macro section (located in the control implementation file):  
   
- [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/CPP/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- 注意必须增加 `BEGIN_PROPPAGEIDS` 宏 \(计数\) 属性页从 1 至 2. 中的第二个参数。  
+ Note that you must increase the second parameter of the `BEGIN_PROPPAGEIDS` macro (the property page count) from 1 to 2.  
   
- 还必须修改控件实现文件 \(.cpp\) 中的文件标题 \(。H\) 新的属性页的类文件。  
+ You must also modify the control implementation file (.CPP) file to include the header (.H) file of the new property page class.  
   
- 下一步是创建已为新的"属性页"将提供一类型名称和标题的两个字符串资源。  
+ The next step involves creating two new string resources that will provide a type name and a caption for the new property page.  
   
-#### 添加新的字符串资源。属性页  
+#### <a name="to-add-new-string-resources-to-a-property-page"></a>To add new string resources to a property page  
   
-1.  打开控件的项目，请打开资源视图。  
+1.  With your control project open, open Resource View.  
   
-2.  双击 **字符串表** 文件夹然后双击要将字符串中现有的字符串表资源。  
+2.  Double-click the **String Table** folder and then double-click the existing string table resource to which you want to add a string.  
   
-     这将打开 Windows 中的字符串表。  
+     This opens the string table in a window.  
   
-3.  选择空白行在字符串表结尾时键入文本、标题，字符串：例如，添加“附加属性页”。  
+3.  Select the blank line at the end of the string table and type the text, or caption, of the string: for example, "Additional Property Page."  
   
-     这显示打开 **标题** 和 **ID** 对话框的 **String Properties** 页。  **标题** 框包含您键入的字符串。  
+     This opens a **String Properties** page showing **Caption** and **ID** boxes. The **Caption** box contains the string you typed.  
   
-4.  在 **ID** 框中，选中或键入字符串的 ID。  完成后，按 Enter。  
+4.  In the **ID** box, select or type an ID for the string. Press Enter when you finish.  
   
-     此示例适用于新的属性页的类型名使用 **IDS\_SAMPLE\_ADDPAGE**。  
+     This example uses **IDS_SAMPLE_ADDPAGE** for the type name of the new property page.  
   
-5.  重复使用 **IDS\_SAMPLE\_ADDPPG\_CAPTION** 的步骤 3 和 4“ID 和其他属性页的”标题的。  
+5.  Repeat steps 3 and 4 using **IDS_SAMPLE_ADDPPG_CAPTION** for the ID and "Additional Property Page" for the caption.  
   
-6.  在新的"属性页类的 .cpp 文件 \(在此示例中，`CAddtlPropPage`\) 修改 `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry`，以便 IDS\_SAMPLE\_ADDPAGE 将 [AfxOleRegisterPropertyPageClass](../Topic/AfxOleRegisterPropertyPageClass.md)，如下面的示例所示：  
+6.  In the .CPP file of your new property page class (in this example, `CAddtlPropPage`) modify the `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` so that IDS_SAMPLE_ADDPAGE is passed by [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), as in the following example:  
   
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/CPP/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
+     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  如下修改 `CAddtlPropPage` 构造函数，以便 **IDS\_SAMPLE\_ADDPPG\_CAPTION** 传递给 `COlePropertyPage` 构造函数，例如：  
+7.  Modify the constructor of `CAddtlPropPage` so that **IDS_SAMPLE_ADDPPG_CAPTION** is passed to the `COlePropertyPage` constructor, as follows:  
   
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/CPP/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
+     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   
- 在进行必要的更改重新生成项目并使用测试容器测试新的属性页。  有关如何访问测试容器的信息，请参见[用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md)。  
+ After you have made the necessary modifications rebuild your project and use Test Container to test the new property page. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

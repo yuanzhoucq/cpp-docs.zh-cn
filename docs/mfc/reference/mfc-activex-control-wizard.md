@@ -1,73 +1,92 @@
 ---
-title: "MFC ActiveX 控件向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件 [C++], MFC"
-  - "MFC ActiveX 控件向导"
-  - "MFC ActiveX 控件 [C++], 向导"
-  - "OLE 控件 [C++]"
-  - "OLE 控件 [C++], 创建"
+title: MFC ActiveX Control Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [MFC], MFC
+- MFC ActiveX controls [MFC], wizards
+- OLE controls [MFC], creating
+- MFC ActiveX Control Wizard
+- OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MFC ActiveX 控件向导
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d911f96791e4bb7880c86a0571bfbbabf8a7eafb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-ActiveX 控件是特定的[自动化服务器](../../mfc/automation-servers.md)类型；它是可重用的组件。  承载 ActiveX 控件的应用程序是该控件的[自动化客户端](../../mfc/automation-clients.md)。  如果目标是创建这种可重用的组件，则使用该向导创建控件。  有关更多信息，请参见 [MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)。  
+---
+# <a name="mfc-activex-control-wizard"></a>MFC ActiveX Control Wizard
+An ActiveX control is a specific type of [automation server](../../mfc/automation-servers.md); it is a reusable component. The application hosting the ActiveX control is the [automation client](../../mfc/automation-clients.md) of that control. If your goal is to create such a reusable component, then use this wizard to create your control. See [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md) for more information.  
   
- 或者，可以使用 [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)创建自动化服务器 MFC 应用程序。  
+ Alternately, you can create an automation server MFC application using the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md).  
   
- 用该向导创建的 ActiveX 控件可以有用户界面或是不可见的。  可以在向导的[控件设置](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)页中指示此选项。  计时器 \(Timer\) 控件是希望其不可见的 ActiveX 控件的示例。  
+ An ActiveX control created with this wizard can have a user interface, or it can be invisible. You can indicate this option in the [Control Settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) page in the wizard. A timer control is an example of an ActiveX control that you would want to be invisible.  
   
- ActiveX 控件可以有复杂的用户界面。  一些控件可以像封装窗体：一个控件包含许多字段，而每个字段本身就是一个 Windows 控件。  例如，作为 MFC ActiveX 控件实现的自动部件对象可能呈现类似窗体的用户界面，通过该界面用户可以读取和编辑部件编号、部件名称和其他信息。  有关更多信息，请参见 [MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)。  
+ ActiveX controls can have a complex user interface. Some controls might be like encapsulated forms: a single control containing many fields, each a Windows control in its own right. For example, an auto parts object implemented as an MFC ActiveX control might present a form-like user interface through which users could read and edit the part number, part name, and other information. See [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md) for more information.  
   
- 如果需要创建 ActiveX 对象容器，请参见[创建 ActiveX 控件容器](../../mfc/reference/creating-an-mfc-activex-control-container.md)。  
+ If you need to create a container for your ActiveX objects, see [Create an ActiveX Control Container](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
   
- MFC 起始程序包括 C\+\+ 源文件 \(.cpp\)、资源文件 \(.rc\) 和一个项目文件 \(.vcxproj\)。  这些起始文件中生成的代码基于 MFC。  
+ The MFC starter program includes C++ source (.cpp) files, resource (.rc) files, and a project (.vcxproj) file. The code generated in these starter files is based on MFC.  
   
- 下面的示例列表显示 ActiveX 控件的增强任务和类型：  
+ The following sample list shows tasks and types of enhancements for your ActiveX control:  
   
--   [优化 ActiveX 控件](../../mfc/mfc-activex-controls-optimization.md)  
+-   [Optimizing an ActiveX Control](../../mfc/mfc-activex-controls-optimization.md)  
   
--   [向 ActiveX 控件添加常用事件](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
+-   [Adding Stock Events to an ActiveX Control](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
   
--   [添加自定义事件](../../mfc/mfc-activex-controls-adding-custom-events.md)  
+-   [Adding Custom Events](../../mfc/mfc-activex-controls-adding-custom-events.md)  
   
--   [添加常用方法](../../mfc/mfc-activex-controls-adding-stock-methods.md)  
+-   [Adding Stock Methods](../../mfc/mfc-activex-controls-adding-stock-methods.md)  
   
--   [添加自定义方法](../../mfc/mfc-activex-controls-adding-custom-methods.md)  
+-   [Adding Custom Methods](../../mfc/mfc-activex-controls-adding-custom-methods.md)  
   
--   [添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)  
+-   [Adding Stock Properties](../../mfc/mfc-activex-controls-adding-stock-properties.md)  
   
--   [添加自定义属性](../../mfc/mfc-activex-controls-adding-custom-properties.md)  
+-   [Adding Custom Properties](../../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [ActiveX 控件容器中的 ActiveX 控件编程](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [Programming ActiveX Controls in an ActiveX Control Container](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
-## 概述  
- 此向导页描述正在创建的 MFC ActiveX 控件项目的当前应用程序设置。  默认情况下，该向导按如下方式创建项目：  
+## <a name="overview"></a>Overview  
+ This wizard page describes the current application settings for the MFC ActiveX control project you are creating. By default, the wizard creates a project as follows:  
   
--   默认项目不生成运行时许可证和帮助文件。  可以在[应用程序设置](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)页中更改这些默认设置。  只有在该 ActiveX 控件向导页中所做的选择才反映在“概述”页中。  
+-   The default project generates no run-time license or help files. You can change these default settings on the [Application Settings](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) page. Only the selections you make on this page of the ActiveX Control Wizard are reflected on the **Overview** page.  
   
--   项目包括基于项目名称的控件类和属性页类。  可以在[控件名称](../../mfc/reference/control-names-mfc-activex-control-wizard.md)页中编辑项目名称和文件名。  
+-   The project includes a control class and a property page class, based on the name of the project. You can edit the names of your project and file names on the [Control Names](../../mfc/reference/control-names-mfc-activex-control-wizard.md) page.  
   
--   控件不基于现有的 Windows 控件，当变为可见时激活，有用户界面并且包括**“关于”**对话框。  可以在[控件设置](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)页中更改这些默认设置。  
+-   The control is based on no existing Windows control, activates when it becomes visible, has a user interface, and includes an **About** dialog box. You can change these default settings on the [Control Settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) page.  
   
-## 请参阅  
- [创建和管理 Visual C\+\+ 项目](../../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual C\+\+ 项目类型](../../ide/visual-cpp-project-types.md)   
- [概念](../../atl/active-template-library-atl-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Creating and Managing Visual C++ Projects](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Visual C++ Project Types](../../ide/visual-cpp-project-types.md)   
+ [Concepts](../../atl/active-template-library-atl-concepts.md)
+
+

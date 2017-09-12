@@ -1,46 +1,65 @@
 ---
-title: "CWinApp 和 MFC 应用程序向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CWinApp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序向导 [C++], 和 CWinApp"
-  - "CWinApp 类, 和 MFC 应用程序向导"
-  - "MFC [C++], 向导"
+title: CWinApp and the MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CWinApp
+dev_langs:
+- C++
+helpviewer_keywords:
+- application wizards [MFC], and CWinApp
+- CWinApp class [MFC], and MFC Application Wizard
+- MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# CWinApp 和 MFC 应用程序向导
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1f58774c6a7d3ed608847b72e22e042bb9bf61e8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在创建主干应用程序时，MFC 应用程序向导声明应用程序类从派生。[CWinApp](../mfc/reference/cwinapp-class.md) MFC 应用程序向导还生成包含以下项实现的文件：  
+---
+# <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp and the MFC Application Wizard
+When it creates a skeleton application, the MFC Application Wizard declares an application class derived from [CWinApp](../mfc/reference/cwinapp-class.md). The MFC Application Wizard also generates an implementation file that contains the following items:  
   
--   应用程序的消息类映射。  
+-   A message map for the application class.  
   
--   空的类构造函数。  
+-   An empty class constructor.  
   
--   声明类的唯一对象的变量。  
+-   A variable that declares the one and only object of the class.  
   
--   `InitInstance` 成员函数的标准实现。  
+-   A standard implementation of your `InitInstance` member function.  
   
- 应用程序项目类在页眉和主源文件中。  创建的类和文件的名称基于您在 MFC 应用程序向导提供的项目名称。  简单的方法显示这些类的代码是通过 [类视图](http://msdn.microsoft.com/zh-cn/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
+ The application class is placed in the project header and main source files. The names of the class and files created are based on the project name you supply in the MFC Application Wizard. The easiest way to view the code for these classes is through [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
- 提供的标准实现和消息映射用于多种目的是不够的，但您可以修改它们根据需要。  最值得关注这些实现是 `InitInstance` 成员函数。  通常，将代码添加到 `InitInstance`的骨骼实现。  
+ The standard implementations and message map supplied are adequate for many purposes, but you can modify them as needed. The most interesting of these implementations is the `InitInstance` member function. Typically, you will add code to the skeletal implementation of `InitInstance`.  
   
-## 请参阅  
- [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)   
- [可重写 CWinApp 成员函数](../mfc/overridable-cwinapp-member-functions.md)   
- [特殊 CWinApp 服务](../mfc/special-cwinapp-services.md)
+## <a name="see-also"></a>See Also  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)   
+ [Overridable CWinApp Member Functions](../mfc/overridable-cwinapp-member-functions.md)   
+ [Special CWinApp Services](../mfc/special-cwinapp-services.md)
+
+

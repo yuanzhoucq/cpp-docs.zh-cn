@@ -1,5 +1,5 @@
 ---
-title: "灰色和抖色位图函数 |Microsoft 文档"
+title: Gray and Dithered Bitmap Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- gray and dithered bitmap functions
+- gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
 caps.latest.revision: 13
 author: mikeblome
@@ -36,38 +36,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: b8b6f43917dfe211f477b3dde0c94323015d18b2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8263f93b440be22916dd3597c4093005255455a1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="gray-and-dithered-bitmap-functions"></a>灰色和抖色位图函数
-**灰色位图函数**  
+# <a name="gray-and-dithered-bitmap-functions"></a>Gray and Dithered Bitmap Functions
+**Gray Bitmap Functions**  
   
- MFC 提供了两个函数为位图提供已禁用控件的外观。  
+ MFC provides two functions for giving a bitmap the appearance of a disabled control.  
   
- ![版本灰色与原始图标版本之比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
-  
-|||  
-|-|-|  
-|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|绘制灰色版本的位图。|  
-|[AfxGetGrayBitmap](#afxgetgraybitmap)|复制灰色版本的位图。|  
-  
- **抖色的位图函数**  
-  
- MFC 还提供了两个函数以将位图背景替换为抖色样式。  
-  
- ![抖色与原始图标版本比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Comparison of gray and original icon versions](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 |||  
 |-|-|  
-|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|绘制抖色背景位图。|  
-|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|复制抖色背景位图。|  
+|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Draws a gray version of a bitmap.|  
+|[AfxGetGrayBitmap](#afxgetgraybitmap)|Copies a gray version of a bitmap.|  
   
-##  <a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
- 绘制灰色版本的位图。  
+ **Dithered Bitmap Functions**  
+  
+ MFC also provides two functions for replacing a bitmap's background with a dithered pattern.  
+  
+ ![Comparison of dithered and original icon versions](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+  
+|||  
+|-|-|  
+|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Draws a bitmap with a dithered background.|  
+|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copies a bitmap with a dithered background.|  
+  
+##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap  
+ Draws a gray version of a bitmap.  
   
 ```   
 void AFXAPI AfxDrawGrayBitmap(
@@ -78,35 +78,35 @@ void AFXAPI AfxDrawGrayBitmap(
     COLORREF crBackground); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向目标值 DC 的指针。  
+ Points to the destination DC.  
   
  *x*  
- 目标 x 坐标。  
+ The destination x-coordinate.  
   
  *y*  
- 目标 y 坐标。  
+ The destination y-coordinate.  
   
  `rSrc`  
- 源位图。  
+ The source bitmap.  
   
  `crBackground`  
- 新背景色（通常为灰色，如 COLOR_MENU）。  
+ The new background color (typically gray, such as COLOR_MENU).  
   
-### <a name="remarks"></a>备注  
- 使用 `AfxDrawGrayBitmap` 绘制的位图将具有禁用控件的外观。  
+### <a name="remarks"></a>Remarks  
+ A bitmap drawn with `AfxDrawGrayBitmap` will have the appearance of a disabled control.  
   
- ![版本灰色与原始图标版本之比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Comparison of gray and original icon versions](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&191;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
-##  <a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
- 复制灰色版本的位图。  
+##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap  
+ Copies a gray version of a bitmap.  
   
 ```   
 void AFXAPI AfxGetGrayBitmap(
@@ -115,29 +115,29 @@ void AFXAPI AfxGetGrayBitmap(
     COLORREF crBackground); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rSrc`  
- 源位图。  
+ The source bitmap.  
   
  `pDest`  
- 目标位图。  
+ The destination bitmap.  
   
  `crBackground`  
- 新背景色（通常为灰色，如 COLOR_MENU）。  
+ The new background color (typically gray, such as COLOR_MENU).  
   
-### <a name="remarks"></a>备注  
- 使用 `AfxGetGrayBitmap` 复制的位图将具有禁用控件的外观。  
+### <a name="remarks"></a>Remarks  
+ A bitmap copied with `AfxGetGrayBitmap` will have the appearance of a disabled control.  
   
- ![版本灰色与原始图标版本之比较](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Comparison of gray and original icon versions](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&193;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
- 绘制位图，并将其背景替换为递色 （棋盘格） 图案。  
+##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
+ Draws a bitmap, replacing its background with a dithered (checker) pattern.  
   
 ```   
 void AFXAPI AfxDrawDitheredBitmap(
@@ -149,39 +149,39 @@ void AFXAPI AfxDrawDitheredBitmap(
     COLORREF cr2); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向目标值 DC 的指针。  
+ Points to the destination DC.  
   
  *x*  
- 目标 x 坐标。  
+ The destination x-coordinate.  
   
  *y*  
- 目标 y 坐标。  
+ The destination y-coordinate.  
   
  `rSrc`  
- 源位图。  
+ The source bitmap.  
   
  `cr1`  
- 两种递色中的一种，通常为白色。  
+ One of the two dither colors, typically white.  
   
  `cr2`  
- 另一种递色，通常为浅灰色 (COLOR_MENU)。  
+ The other dither color, typically light gray (COLOR_MENU).  
   
-### <a name="remarks"></a>备注  
- 在具有两种颜色的目的地 DC 上绘制的源位图 (`cr1`和`cr2`) 棋盘格的图案替换位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。  
+### <a name="remarks"></a>Remarks  
+ The source bitmap is drawn on the destination DC with a two-color ( `cr1` and `cr2`) checkered pattern replacing the bitmap's background. The background of the source bitmap is defined as its white pixels and all pixels matching the color of the pixel in the upper-left corner of the bitmap.  
   
- ![抖色与原始图标版本比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Comparison of dithered and original icon versions](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&190;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
 
-##  <a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
- 复制位图，并将其背景替换为递色（棋盘格）图案。  
+##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap  
+ Copies a bitmap, replacing its background with a dithered (checker) pattern.  
   
 ```   
 void AFXAPI AfxGetDitheredBitmap(
@@ -191,30 +191,30 @@ void AFXAPI AfxGetDitheredBitmap(
     COLORREF cr2); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rSrc`  
- 源位图。  
+ The source bitmap.  
   
  `pDest`  
- 目标位图。  
+ The destination bitmap.  
   
  `cr1`  
- 两种递色中的一种，通常为白色。  
+ One of the two dither colors, typically white.  
   
  `cr2`  
- 另一种递色，通常为浅灰色 (COLOR_MENU)。  
+ The other dither color, typically light gray (COLOR_MENU).  
   
-### <a name="remarks"></a>备注  
- 源位图复制到目标位图，并使用两种颜色 (`cr1`和`cr2`) 棋盘格的图案替换源位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。  
+### <a name="remarks"></a>Remarks  
+ The source bitmap is copied to the destination bitmap with a two-color ( `cr1` and `cr2`) checkered pattern replacing the source bitmap's background. The background of the source bitmap is defined as its white pixels and all pixels matching the color of the pixel in the upper-left corner of the bitmap.  
   
- ![抖色与原始图标版本比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Comparison of dithered and original icon versions](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&192;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

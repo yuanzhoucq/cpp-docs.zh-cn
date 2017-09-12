@@ -1,42 +1,61 @@
 ---
-title: "向选项卡控件添加选项卡 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl 类, 添加选项卡"
-  - "在 CTabCtrls 上放置选项卡"
-  - "选项卡控件, 添加选项卡"
-  - "选项卡, 添加到 CTabCtrl 类"
+title: Adding Tabs to a Tab Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tab controls [MFC], adding tabs
+- putting tabs on CTabCtrls [MFC]
+- CTabCtrl class [MFC], adding tabs
+- tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 向选项卡控件添加选项卡
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9da423b56c254bc58bcbe940ebcd366e83c8f385
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在创建选项卡控件之后 \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\)，添加许多选项卡，则需要。  
+---
+# <a name="adding-tabs-to-a-tab-control"></a>Adding Tabs to a Tab Control
+After creating the tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), add as many tabs as you need.  
   
-### 添加选项卡  
+### <a name="to-add-a-tab-item"></a>To add a tab item  
   
-1.  可以 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) 结构。  
+1.  Prepare a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure.  
   
-2.  调用 [CTabCtrl::InsertItem](../Topic/CTabCtrl::InsertItem.md)，传递此结构。  
+2.  Call [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), passing the structure.  
   
-3.  重复步骤1，2可以得到额外选项。  
+3.  Repeat steps 1 and 2 for additional tab items.  
   
- 有关详细信息，请参阅[创建选项卡控件](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+ For more information, see [Creating a Tab Control](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the Windows SDK.  
   
-## 请参阅  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

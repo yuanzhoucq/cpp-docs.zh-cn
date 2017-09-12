@@ -1,5 +1,5 @@
 ---
-title: "LOGBRUSH 结构 |Microsoft 文档"
+title: LOGBRUSH Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LOGBRUSH structure
+- LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: eea7caf6139fd43dd77163271701d170c7a744e2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd4d96a7f7c858f8b3cf2e39bdc98233224a1e7a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="logbrush-structure"></a>LOGBRUSH 结构
-`LOGBRUSH`结构定义样式、 颜色和模式的物理画笔。 它由 Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487)和[ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)函数。  
+# <a name="logbrush-structure"></a>LOGBRUSH Structure
+The `LOGBRUSH` structure defines the style, color, and pattern of a physical brush. It is used by the Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) and [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) functions.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tag LOGBRUSH { /* lb */  
@@ -53,56 +53,56 @@ typedef struct tag LOGBRUSH { /* lb */
 } LOGBRUSH;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `lbStyle`  
- 指定画笔样式。 `lbStyle`成员必须为下列样式之一︰  
+ Specifies the brush style. The `lbStyle` member must be one of the following styles:  
   
-- **BS_DIBPATTERN**图案画笔与设备无关位图 (DIB) 规范所定义的。 如果`lbStyle`是**BS_DIBPATTERN**、 **lbHatch**成员将包含打包 DIB 的句柄。  
+- **BS_DIBPATTERN** A pattern brush defined by a device-independent bitmap (DIB) specification. If `lbStyle` is **BS_DIBPATTERN**, the **lbHatch** member contains a handle to a packed DIB.  
   
-- **BS_DIBPATTERNPT**图案画笔与设备无关位图 (DIB) 规范所定义的。 如果`lbStyle`是**BS_DIBPATTERNPT**、 **lbHatch**成员包含一个已打包 DIB 的指针。  
+- **BS_DIBPATTERNPT** A pattern brush defined by a device-independent bitmap (DIB) specification. If `lbStyle` is **BS_DIBPATTERNPT**, the **lbHatch** member contains a pointer to a packed DIB.  
   
-- **BS_HATCHED**影线画笔。  
+- **BS_HATCHED** Hatched brush.  
   
-- **BS_HOLLOW**空心画笔。  
+- **BS_HOLLOW** Hollow brush.  
   
-- **BS_NULL**相同**BS_HOLLOW**。  
+- **BS_NULL** Same as **BS_HOLLOW**.  
   
-- **BS_PATTERN**模式由内存位图定义画笔。  
+- **BS_PATTERN** Pattern brush defined by a memory bitmap.  
   
-- **BS_SOLID**实心画笔。  
+- **BS_SOLID** Solid brush.  
   
  `lbColor`  
- 指定是用来绘制画笔的颜色。 如果`lbStyle`是**BS_HOLLOW**或**BS_PATTERN**样式， **lbColor**将被忽略。 如果`lbStyle`是**BS_DIBPATTERN**或**BS_DIBPATTERNBT**的低位字**lbColor**指定是否**bmiColors**成员[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)结构包含显式 red、 green、 蓝 (RGB) 值或索引当前已实现的逻辑调色板。 **LbColor**成员必须为下列值之一︰  
+ Specifies the color in which the brush is to be drawn. If `lbStyle` is the **BS_HOLLOW** or **BS_PATTERN** style, **lbColor** is ignored. If `lbStyle` is **BS_DIBPATTERN** or **BS_DIBPATTERNBT**, the low-order word of **lbColor** specifies whether the **bmiColors** members of the [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) structure contain explicit red, green, blue (RGB) values or indices into the currently realized logical palette. The **lbColor** member must be one of the following values:  
   
-- **DIB_PAL_COLORS**颜色表由 16 位索引的数组构成当前已实现的逻辑调色板。  
+- **DIB_PAL_COLORS** The color table consists of an array of 16-bit indices into the currently realized logical palette.  
   
-- **DIB_RGB_COLORS**颜色表包含文本的 RGB 值。  
+- **DIB_RGB_COLORS** The color table contains literal RGB values.  
   
  *lbHatch*  
- 指定阴影样式。 其含义取决于所定义的画笔样式`lbStyle`。 如果`lbStyle`是**BS_DIBPATTERN**、 **lbHatch**成员将包含打包 DIB 的句柄。 如果`lbStyle`是**BS_DIBPATTERNPT**、 **lbHatch**成员包含一个已打包 DIB 的指针。 如果`lbStyle`是**BS_HATCHED**、 **lbHatch**成员指定用于创建阴影的行的方向。 它可以是下列值之一︰  
+ Specifies a hatch style. The meaning depends on the brush style defined by `lbStyle`. If `lbStyle` is **BS_DIBPATTERN**, the **lbHatch** member contains a handle to a packed DIB. If `lbStyle` is **BS_DIBPATTERNPT**, the **lbHatch** member contains a pointer to a packed DIB. If `lbStyle` is **BS_HATCHED**, the **lbHatch** member specifies the orientation of the lines used to create the hatch. It can be one of the following values:  
   
-- `HS_BDIAGONAL`45 度呈上升趋势、 从左到右阴影  
+- `HS_BDIAGONAL` A 45-degree upward, left-to-right hatch  
   
-- `HS_CROSS`水平和垂直交叉影线  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`45 度交叉影线  
+- `HS_DIAGCROSS` 45-degree crosshatch  
   
-- `HS_FDIAGONAL`45 度向下、 从左到右阴影  
+- `HS_FDIAGONAL` A 45-degree downward, left-to-right hatch  
   
-- `HS_HORIZONTAL`水平阴影  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`垂直阴影  
+- `HS_VERTICAL` Vertical hatch  
   
- 如果`lbStyle`是**BS_PATTERN**， **lbHatch**是定义的模式的位图的句柄。 如果`lbStyle`是**BS_SOLID**或**BS_HOLLOW**， **lbHatch**将被忽略。  
+ If `lbStyle` is **BS_PATTERN**, **lbHatch** is a handle to the bitmap that defines the pattern. If `lbStyle` is **BS_SOLID** or **BS_HOLLOW**, **lbHatch** is ignored.  
   
-## <a name="remarks"></a>备注  
- 尽管**lbColor**控制阴影画笔的前景色[CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode)和[CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor)函数控制的背景色。  
+## <a name="remarks"></a>Remarks  
+ Although **lbColor** controls the foreground color of a hatch brush, the [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) and [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) functions control the background color.  
   
-## <a name="requirements"></a>要求  
- **标头︰** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 
 

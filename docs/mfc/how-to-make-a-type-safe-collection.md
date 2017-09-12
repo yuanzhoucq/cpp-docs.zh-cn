@@ -1,107 +1,126 @@
 ---
-title: "如何：创建类型安全集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "集合类, 派生自非模板"
-  - "集合类, 基于模板的"
-  - "集合类, 类型安全"
-  - "序列化 [C++], 集合类"
-  - "SerializeElements 函数"
-  - "序列化集合类元素"
-  - "类型安全集合"
+title: 'How to: Make a Type-Safe Collection | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type-safe collections [MFC]
+- serializing collection-class elements [MFC]
+- collection classes [MFC], type safety
+- SerializeElements function [MFC]
+- collection classes [MFC], template-based
+- serialization [MFC], collection classes
+- collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 如何：创建类型安全集合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2d36dc3511c083f64b6a37e79fc01fb1dbd99cab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文演示如何进行类型安全"的集合自己的数据类型。  主题包括：  
+---
+# <a name="how-to-make-a-type-safe-collection"></a>How to: Make a Type-Safe Collection
+This article explains how to make type-safe collections for your own data types. Topics include:  
   
--   [使用安全类型的基于模板的类](#_core_using_template.2d.based_classes_for_type_safety)  
+-   [Using template-based classes for type safety](#_core_using_template.2d.based_classes_for_type_safety)  
   
--   [实现帮助程序函数](#_core_implementing_helper_functions)  
+-   [Implementing helper functions](#_core_implementing_helper_functions)  
   
--   [使用非模板集合类](#_core_using_nontemplate_collection_classes)  
+-   [Using nontemplate collection classes](#_core_using_nontemplate_collection_classes)  
   
- Microsoft 基础类 \(MFC\) 库的基于 C\+\+ 模板的预定义类型安全的集合。  由于它们是模板，这些类有助于提供中为此使用非模板类和易用性，而模型模拟和其他额外操作中涉及的类型安全性。  MFC 示例使用 [收集](../top/visual-cpp-samples.md) 演示在 MFC 应用程序的基于模板的集合类。  通常，在这种情况下，在编写新代码的集合后，请使用这些类。  
+ The Microsoft Foundation Class Library provides predefined type-safe collections based on C++ templates. Because they are templates, these classes help provide type safety and ease of use without the type-casting and other extra work involved in using a nontemplate class for this purpose. The MFC sample [COLLECT](../visual-cpp-samples.md) demonstrates the use of template-based collection classes in an MFC application. In general, use these classes any time you write new collections code.  
   
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> 使用安全类型的基于模板的类  
+##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Using Template-Based Classes for Type Safety  
   
-#### 若要使用模板基于类  
+#### <a name="to-use-template-based-classes"></a>To use template-based classes  
   
-1.  声明集合类的类型的变量。  例如：  
+1.  Declare a variable of the collection class type. For example:  
   
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_1.cpp)]  
+     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]  
   
-2.  调用集合对象的成员函数。  例如：  
+2.  Call the member functions of the collection object. For example:  
   
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_2.cpp)]  
+     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]  
   
-3.  如有必要，请实现和 [Helper 函数](../mfc/reference/collection-class-helpers.md) [SerializeElements](../Topic/SerializeElements.md)。  有关实现这些功能的信息，请参见 [实现 Helper 函数](#_core_implementing_helper_functions)。  
+3.  If necessary, implement the [helper functions](../mfc/reference/collection-class-helpers.md) and [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements). For information on implementing these functions, see [Implementing Helper Functions](#_core_implementing_helper_functions).  
   
- 此示例显示整数列表的声明。  在步骤 1 中的第一个参数是作为列表的元素存储的数据类型。  第二个参数指定这些数据如何将传递到并从集合类中的成员函数返回，如 **添加** 和 `GetAt`。  
+ This example shows the declaration of a list of integers. The first parameter in step 1 is the type of data stored as elements of the list. The second parameter specifies how the data is to be passed to and returned from member functions of the collection class, such as **Add** and `GetAt`.  
   
-##  <a name="_core_implementing_helper_functions"></a> 实现帮助程序函数  
- 基于模板的集合类 `CArray`、`CList`和可自定义。需要对派生的类的 `CMap` 集合使用五全局 Helper 函数。  有关这些帮助程序函数的信息，请参见在 *MFC 参考"中的*[集合类帮助器](../mfc/reference/collection-class-helpers.md)。  序列化函数的实现需要为使用基于模板的集合类的大多数使用。  
+##  <a name="_core_implementing_helper_functions"></a> Implementing Helper Functions  
+ The template-based collection classes `CArray`, `CList`, and `CMap` use five global helper functions that you can customize as needed for your derived collection class. For information on these helper functions, see [Collection Class Helpers](../mfc/reference/collection-class-helpers.md) in the *MFC Reference*. Implementation of the serialization function is necessary for most uses of the template-based collection classes.  
   
-###  <a name="_core_serializing_elements"></a> 序列化元素  
- `CArray`、`CList`和 `CMap` 类从存档调用 `SerializeElements` 来存储集合元素为或读取它们。  
+###  <a name="_core_serializing_elements"></a> Serializing Elements  
+ The `CArray`, `CList`, and `CMap` classes call `SerializeElements` to store collection elements to or read them from an archive.  
   
- `SerializeElements` 帮助程序函数的默认实现位执行按位从对象的写入、存档或从存档的读取到对象，根据对象是否存储或从存档检索。  则此操作不合适，请重写 `SerializeElements`。  
+ The default implementation of the `SerializeElements` helper function does a bitwise write from the objects to the archive, or a bitwise read from the archive to the objects, depending on whether the objects are being stored in or retrieved from the archive. Override `SerializeElements` if this action is not appropriate.  
   
- 如果集合存储从 `CObject` 派生的对象，可以在集合元素类的实现使用 `IMPLEMENT_SERIAL` 宏，可以使用序列化功能内置于 `CArchive` 和 `CObject`:  
+ If your collection stores objects derived from `CObject` and you use the `IMPLEMENT_SERIAL` macro in the implementation of the collection element class, you can take advantage of the serialization functionality built into `CArchive` and `CObject`:  
   
- [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_3.cpp)]  
+ [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- `CArchive` 重载的运算符插入调用 `CObject::Serialize` \(或该函数\) 重写每个 **CPerson** 对象。  
+ The overloaded insertion operators for `CArchive` call `CObject::Serialize` (or an override of that function) for each **CPerson** object.  
   
-##  <a name="_core_using_nontemplate_collection_classes"></a> 使用非模板集合类  
- MFC 还支持集合类引入与 MFC 版本 1.0。  这些类都不是基于模板的。  它们只用于包含支持的类型 `CObject*`、**UINT**、`DWORD`和 `CString`的数据。  可以使用这些预定义的集合 \(例如 `CObList`\) 包含所有从 `CObject`派生的对象的集合。  MFC 还提供其他预定义集合存储基元类型 \(如 **UINT** 和无效指针 \(`void`\*\)。  但一般来说，定义自己保存安全集合类型更具体的类及其派生列表的对象往往很有用的。  请注意使用基于模板的类，这样做不使用基于模板的集合类。更多工作比。  
+##  <a name="_core_using_nontemplate_collection_classes"></a> Using Nontemplate Collection Classes  
+ MFC also supports the collection classes introduced with MFC version 1.0. These classes are not based on templates. They can be used to contain data of the supported types `CObject*`, **UINT**, `DWORD`, and `CString`. You can use these predefined collections (such as `CObList`) to hold collections of any objects derived from `CObject`. MFC also provides other predefined collections to hold primitive types such as **UINT** and void pointers (`void`*). In general, however, it is often useful to define your own type-safe collections to hold objects of a more specific class and its derivatives. Note that doing so with the collection classes not based on templates is more work than using the template-based classes.  
   
- 有两种创建一个集合类型安全"的集合：  
+ There are two ways to create type-safe collections with the nontemplate collections:  
   
-1.  使用个集合，而且类型如果需要，转换。  这是最容易的方法。  
+1.  Use the nontemplate collections, with type casting if necessary. This is the easier approach.  
   
-2.  派生自并且扩展个类型安全的集合。  
+2.  Derive from and extend a nontemplate type-safe collection.  
   
-#### 使用类型强制转换的非模板集合  
+#### <a name="to-use-the-nontemplate-collections-with-type-casting"></a>To use the nontemplate collections with type casting  
   
-1.  使用某一个类，例如 `CWordArray`，直接。  
+1.  Use one of the nontemplate classes, such as `CWordArray`, directly.  
   
-     例如，可以创建 `CWordArray` 并将所有 32 位值。它，然后检索。  无。  使用预定义功能。  
+     For example, you can create a `CWordArray` and add any 32-bit values to it, then retrieve them. There is nothing more to do. You just use the predefined functionality.  
   
-     也可以使用预定义集合，例如 `CObList`，不保存任何对象从 `CObject`派生。  `CObList` 集合中定义保存指向 `CObject`的指针。  当从列表中检索对象，则可能必须将结果强制转换为适当的类型，因为 `CObList` 函数返回指向 `CObject`。  例如，在中，如果存储在 `CObList` 集合中的 `CPerson` 对象，则必须将一检索元素的是指向 `CPerson` 对象。  下面的示例使用 `CObList` 集合都存储 `CPerson` 对象：  
+     You can also use a predefined collection, such as `CObList`, to hold any objects derived from `CObject`. A `CObList` collection is defined to hold pointers to `CObject`. When you retrieve an object from the list, you may have to cast the result to the proper type since the `CObList` functions return pointers to `CObject`. For example, if you store `CPerson` objects in a `CObList` collection, you have to cast a retrieved element to be a pointer to a `CPerson` object. The following example uses a `CObList` collection to hold `CPerson` objects:  
   
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_4.cpp)]  
+     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]  
   
-     此方法根据需要使用预定义的和集合类型转换可能满足许多集合需要。  如果您需要的功能或多种类型安全，请使用基于模板的类或者按照下一个过程。  
+     This technique of using a predefined collection type and casting as necessary may be adequate for many of your collection needs. If you need further functionality or more type safety, use a template-based class, or follow the next procedure.  
   
-#### 要派生自并且扩展个类型安全的集合。  
+#### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>To derive and extend a nontemplate type-safe collection  
   
-1.  派生自己的从一个集合类预定义的非模板类。  
+1.  Derive your own collection class from one of the predefined nontemplate classes.  
   
-     当派生类时，可以添加类型安全包装函数提供一个类型安全接口以现有函数。  
+     When you derive your class, you can add type-safe wrapper functions to provide a type-safe interface to existing functions.  
   
-     例如，在中，如果要从 `CObList` 派生一列表保存 `CPerson` 对象，可能将包装函数 `AddHeadPerson` 和 `GetHeadPerson`，如下所示。  
+     For example, if you derived a list from `CObList` to hold `CPerson` objects, you might add the wrapper functions `AddHeadPerson` and `GetHeadPerson`, as shown below.  
   
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/CPP/how-to-make-a-type-safe-collection_5.h)]  
+     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]  
   
-     这些包装函数提供一个类型安全方法派生的列表添加和检索 `CPerson` 对象。  您可以查看已为 `GetHeadPerson` 函数，您密封了类型强制。  
+     These wrapper functions provide a type-safe way to add and retrieve `CPerson` objects from the derived list. You can see that for the `GetHeadPerson` function, you are simply encapsulating the type casting.  
   
-     可以通过定义带有集合功能扩展而不是包装在类型安全包装中的现有功能中的新功能或添加新功能。  例如，[删除在 CObject 集合的所有对象](../mfc/deleting-all-objects-in-a-cobject-collection.md) 文章介绍的函数删除列表中包含的所有对象。  此功能无法添加到派生类的成员函数。  
+     You can also add new functionality by defining new functions that extend the capabilities of the collection rather than just wrapping existing functionality in type-safe wrappers. For example, the article [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md) describes a function to delete all the objects contained in a list. This function could be added to the derived class as a member function.  
   
-## 请参阅  
- [集合](../mfc/collections.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)
+
+

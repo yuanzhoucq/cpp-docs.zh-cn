@@ -1,5 +1,5 @@
 ---
-title: "CHttpFile 类 |Microsoft 文档"
+title: CHttpFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,9 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HTTP files
-- HTTP requests, requesting and reading files
-- CHttpFile class
+- CHttpFile [MFC], CHttpFile
+- CHttpFile [MFC], AddRequestHeaders
+- CHttpFile [MFC], EndRequest
+- CHttpFile [MFC], GetFileURL
+- CHttpFile [MFC], GetObject
+- CHttpFile [MFC], GetVerb
+- CHttpFile [MFC], QueryInfo
+- CHttpFile [MFC], QueryInfoStatusCode
+- CHttpFile [MFC], SendRequest
+- CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
 caps.latest.revision: 23
 author: mikeblome
@@ -46,50 +53,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: b99e87f1cbf8a181cbe1208f3b4008625f82af63
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4f5c22b375b12d1619a3324d5fbb1d2bd050963
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chttpfile-class"></a>CHttpFile 类
-提供请求和读取 HTTP 服务器上文件的功能。  
+# <a name="chttpfile-class"></a>CHttpFile Class
+Provides the functionality to request and read files on an HTTP server.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHttpFile : public CInternetFile  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保护的构造函数  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpFile::CHttpFile](#chttpfile)|创建一个 `CHttpFile` 对象。|  
+|[CHttpFile::CHttpFile](#chttpfile)|Creates a `CHttpFile` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpFile::AddRequestHeaders](#addrequestheaders)|将标头添加到与 HTTP 服务器发送的请求。|  
-|[CHttpFile::EndRequest](#endrequest)|结束请求发送到的 HTTP 服务器与[SendRequestEx](#sendrequestex)成员函数。|  
-|[CHttpFile::GetFileURL](#getfileurl)|对指定文件中获取的 URL。|  
-|[CHttpFile::GetObject](#getobject)|与 HTTP 服务器在请求中获取该谓词的目标对象。|  
-|[CHttpFile::GetVerb](#getverb)|获取与 HTTP 服务器的请求中使用的谓词。|  
-|[CHttpFile::QueryInfo](#queryinfo)|从 HTTP 服务器返回响应或请求标头。|  
-|[CHttpFile::QueryInfoStatusCode](#queryinfostatuscode)|检索与 HTTP 请求关联的状态代码并将其放在所提供`dwStatusCode`参数。|  
-|[CHttpFile::SendRequest](#sendrequest)|与 HTTP 服务器发送请求。|  
-|[CHttpFile::SendRequestEx](#sendrequestex)|将请求发送到 HTTP 服务器使用[编写](../../mfc/reference/cinternetfile-class.md#write)或[WriteString](../../mfc/reference/cinternetfile-class.md#writestring)方法`CInternetFile`。|  
+|[CHttpFile::AddRequestHeaders](#addrequestheaders)|Adds headers to the request sent to an HTTP server.|  
+|[CHttpFile::EndRequest](#endrequest)|Ends a request sent to an HTTP server with the [SendRequestEx](#sendrequestex) member function.|  
+|[CHttpFile::GetFileURL](#getfileurl)|Gets the URL for the specified file.|  
+|[CHttpFile::GetObject](#getobject)|Gets the target object of the verb in a request to an HTTP server.|  
+|[CHttpFile::GetVerb](#getverb)|Gets the verb that was used in a request to an HTTP server.|  
+|[CHttpFile::QueryInfo](#queryinfo)|Returns the response or request headers from the HTTP server.|  
+|[CHttpFile::QueryInfoStatusCode](#queryinfostatuscode)|Retrieves the status code associated with an HTTP request and places it in the supplied `dwStatusCode` parameter.|  
+|[CHttpFile::SendRequest](#sendrequest)|Sends a request to an HTTP server.|  
+|[CHttpFile::SendRequestEx](#sendrequestex)|Sends a request to an HTTP server using the [Write](../../mfc/reference/cinternetfile-class.md#write) or [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) methods of `CInternetFile`.|  
   
-## <a name="remarks"></a>备注  
- 如果 Internet 会话读取 HTTP 服务器中的数据，则必须创建的实例`CHttpFile`。  
+## <a name="remarks"></a>Remarks  
+ If your Internet session reads data from an HTTP server, you must create an instance of `CHttpFile`.  
   
- 若要了解有关如何`CHttpFile`工作与其他 MFC Internet 类，请参阅文章[使用 WinInet Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。  
+ To learn more about how `CHttpFile` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -100,11 +107,11 @@ class CHttpFile : public CInternetFile
   
  `CHttpFile`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
- 调用此成员函数添加一个或多个新的 HTTP 请求标头可对 HTTP 请求处理。  
+##  <a name="addrequestheaders"></a>  CHttpFile::AddRequestHeaders  
+ Call this member function to add one or more HTTP request headers to the HTTP request handle.  
   
 ```  
 BOOL AddRequestHeaders(
@@ -118,38 +125,38 @@ BOOL AddRequestHeaders(
     DWORD dwFlags = HTTP_ADDREQ_FLAG_ADD_IF_NEW);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrHeaders`  
- 指向包含标头或标头，以便将附加到请求的字符串的指针。 必须由 CR/LF 对终止每个标头。  
+ A pointer to a string containing the header or headers to append to the request. Each header must be terminated by a CR/LF pair.  
   
  `dwFlags`  
- 修改新的头文件的语义。 可以是以下各项之一：  
+ Modifies the semantics of the new headers. Can be one of the following:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE`将合并具有相同的名称，使用标志添加到后续的标头中找到的第一个标头的标头。 例如，"接受︰ 文本 / *"后跟"接受︰ 音频 /\*"结果中的单个标头形成"接受︰ 文本 /\*、 音频 /\*"。 它是由调用应用程序中，以确保与已接收数据的请求都发送合并或单独标头凝聚力方案。  
+- `HTTP_ADDREQ_FLAG_COALESCE` Merges headers of the same name, using the flag to add the first header found to the subsequent header. For example, "Accept: text/*" followed by "Accept: audio/\*" results in the formation of the single header "Accept: text/\*, audio/\*". It is up to the calling application to ensure a cohesive scheme with respect to data received by requests sent with coalesced or separate headers.  
   
-- `HTTP_ADDREQ_FLAG_REPLACE`执行删除并添加要替换当前标头。 标头名称将用于删除当前的标头，而将使用完整的值来添加新的标头。 如果标头值为空并且找到标头，则会删除。 如果不为空，则将替换标头值。  
+- `HTTP_ADDREQ_FLAG_REPLACE` Performs a remove and add to replace the current header. The header name will be used to remove the current header, and the full value will be used to add the new header. If the header-value is empty and the header is found, it is removed. If not empty, the header-value is replaced.  
   
-- `HTTP_ADDREQ_FLAG_ADD_IF_NEW`如果不存在，请仅添加标头。 如果存在，则返回错误。  
+- `HTTP_ADDREQ_FLAG_ADD_IF_NEW` Only adds the header if it does not already exist. If one exists, an error is returned.  
   
-- `HTTP_ADDREQ_FLAG_ADD`用于替换。 如果不存在，请添加标头。  
+- `HTTP_ADDREQ_FLAG_ADD` Used with REPLACE. Adds the header if it doesn't exist.  
   
  `dwHeadersLen`  
- 长度，以字符为单位的`pstrHeaders`。 如果这是-1l，然后`pstrHeaders`被假定为零终止和计算长度。  
+ The length, in characters, of `pstrHeaders`. If this is -1L, then `pstrHeaders` is assumed to be zero-terminated and the length is computed.  
   
  `str`  
- 对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)包含请求标头或标头要添加的对象。  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing the request header or headers to be added.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
   
-### <a name="remarks"></a>备注  
- `AddRequestHeaders`将其他，自由格式的标头追加到 HTTP 请求句柄。 它被旨在使用由复杂的客户端都需要对发送到 HTTP 服务器的确切请求的详细的控制。  
+### <a name="remarks"></a>Remarks  
+ `AddRequestHeaders` appends additional, free-format headers to the HTTP request handle. It is intended for use by sophisticated clients who need detailed control over the exact request sent to the HTTP server.  
   
 > [!NOTE]
->  应用程序可以将多个标头中的传递`pstrHeaders`或`str`为`AddRequestHeaders`调用使用`HTTP_ADDREQ_FLAG_ADD`或`HTTP_ADDREQ_FLAG_ADD_IF_NEW`。 如果应用程序将尝试删除或替换标头使用**HTTP_ADDREQ_FLAG_REMOVE**或`HTTP_ADDREQ_FLAG_REPLACE`，只有一个标头可以提供在`lpszHeaders`。  
+>  The application can pass multiple headers in `pstrHeaders` or `str` for an `AddRequestHeaders` call using `HTTP_ADDREQ_FLAG_ADD` or `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. If the application tries to remove or replace a header using **HTTP_ADDREQ_FLAG_REMOVE** or `HTTP_ADDREQ_FLAG_REPLACE`, only one header can be supplied in `lpszHeaders`.  
   
-##  <a name="chttpfile"></a>CHttpFile::CHttpFile  
- 此成员函数调用以构造`CHttpFile`对象。  
+##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
+ This member function is called to construct a `CHttpFile` object.  
   
 ```  
 CHttpFile(
@@ -168,35 +175,35 @@ CHttpFile(
     CHttpConnection* pConnection);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hFile`  
- Internet 文件的句柄。  
+ A handle to an Internet file.  
   
  `hSession`  
- Internet 会话句柄。  
+ A handle to an Internet session.  
   
  *pstrObject*  
- 指向一个字符串，包含`CHttpFile`对象。  
+ A pointer to a string containing the `CHttpFile` object.  
   
  `pstrServer`  
- 指向包含的服务器名称的字符串的指针。  
+ A pointer to a string containing the name of the server.  
   
  `pstrVerb`  
- 指向包含要发送请求时使用的方法的字符串的指针。 Can be **POST**, **HEAD**, or `GET`.  
+ A pointer to a string containing the method to be used when sending the request. Can be **POST**, **HEAD**, or `GET`.  
   
  dwContext  
- 上下文标识符`CHttpFile`对象。 请参阅**备注**有关此参数的详细信息。  
+ The context identifier for the `CHttpFile` object. See **Remarks** for more information about this parameter.  
   
  `pConnection`  
- 指向的指针[CHttpConnection](../../mfc/reference/chttpconnection-class.md)对象。  
+ A pointer to a [CHttpConnection](../../mfc/reference/chttpconnection-class.md) object.  
   
-### <a name="remarks"></a>备注  
- 永远不会构造`CHttpFile`直接对象; 而是调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)相反。  
+### <a name="remarks"></a>Remarks  
+ You never construct a `CHttpFile` object directly; rather call [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) or [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) instead.  
   
- 默认值为`dwContext`发送到 mfc`CHttpFile`对象[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当调用`CInternetSession::OpenURL`或`CHttpConnection`构造`CHttpFile`对象，您可以重写默认设置，以便为你选择的值设置的上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ The default value for `dwContext` is sent by MFC to the `CHttpFile` object from the [CInternetSession](../../mfc/reference/cinternetsession-class.md) object that created the `CHttpFile` object. When you call `CInternetSession::OpenURL` or `CHttpConnection` to construct a `CHttpFile` object, you can override the default to set the context identifier to a value of your choosing. The context identifier is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the object with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
-##  <a name="endrequest"></a>CHttpFile::EndRequest  
- 调用此成员函数以结束与 HTTP 服务器与发送的请求[SendRequestEx](#sendrequestex)成员函数。  
+##  <a name="endrequest"></a>  CHttpFile::EndRequest  
+ Call this member function to end a request sent to an HTTP server with the [SendRequestEx](#sendrequestex) member function.  
   
 ```  
 BOOL EndRequest(
@@ -205,63 +212,63 @@ BOOL EndRequest(
     DWORD_PTR dwContext = 1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- 描述该操作的标志。 有关相应标志的列表，请参阅[HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Flags describing the operation. For a list of the appropriate flags, see [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) in the Windows SDK.  
   
  `lpBuffIn`  
- 指向已初始化[INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132)描述用于该操作的输入的缓冲区。  
+ Pointer to an initialized [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) that describes the input buffer used for the operation.  
   
  `dwContext`  
- 上下文标识符`CHttpFile`操作。 有关此参数的详细信息，请参阅备注。  
+ The context identifier for the `CHttpFile` operation. See Remarks for more information about this parameter.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，则通过检查引发确定失败的原因[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>备注  
- 默认值为`dwContext`发送到 mfc`CHttpFile`对象[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[CHttpConnection](../../mfc/reference/chttpconnection-class.md)构造`CHttpFile`对象，您可以重写默认设置，以便为你选择的值设置的上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+### <a name="remarks"></a>Remarks  
+ The default value for `dwContext` is sent by MFC to the `CHttpFile` object from the [CInternetSession](../../mfc/reference/cinternetsession-class.md) object that created the `CHttpFile` object. When you call [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) or [CHttpConnection](../../mfc/reference/chttpconnection-class.md) to construct a `CHttpFile` object, you can override the default to set the context identifier to a value of your choosing. The context identifier is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the object with which it is identified. See article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
-##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
- 调用此成员函数可获取作为 URL 的 HTTP 文件的名称。  
+##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
+ Call this member function to get the name of the HTTP file as a URL.  
   
 ```  
 virtual CString GetFileURL() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含引用与此文件关联的资源的 URL。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing a URL referencing the resource associated with this file.  
   
-### <a name="remarks"></a>备注  
- 只有在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`成功创建对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
+### <a name="remarks"></a>Remarks  
+ Use this member function only after a successful call to [SendRequest](#sendrequest) or on a `CHttpFile` object successfully created by [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="getobject"></a>CHttpFile::GetObject  
- 调用此成员函数可获取与此关联的对象的名称`CHttpFile`。  
+##  <a name="getobject"></a>  CHttpFile::GetObject  
+ Call this member function to get the name of the object associated with this `CHttpFile`.  
   
 ```  
 CString GetObject() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含对象的名称。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing the name of the object.  
   
-### <a name="remarks"></a>备注  
- 只有在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`成功创建对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
+### <a name="remarks"></a>Remarks  
+ Use this member function only after a successful call to [SendRequest](#sendrequest) or on a `CHttpFile` object successfully created by [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="getverb"></a>CHttpFile::GetVerb  
- 调用此成员函数可获取与此关联的 HTTP 谓词 （或方法） `CHttpFile`。  
+##  <a name="getverb"></a>  CHttpFile::GetVerb  
+ Call this member function to get the HTTP verb (or method) associated with this `CHttpFile`.  
   
 ```  
 CString GetVerb() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含的 HTTP 谓词 （或方法） 的名称。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing the name of the HTTP verb (or method).  
   
-### <a name="remarks"></a>备注  
- 只有在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`成功创建对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
+### <a name="remarks"></a>Remarks  
+ Use this member function only after a successful call to [SendRequest](#sendrequest) or on a `CHttpFile` object successfully created by [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="queryinfo"></a>CHttpFile::QueryInfo  
- 调用此成员函数以返回响应或请求通过 HTTP 请求标头。  
+##  <a name="queryinfo"></a>  CHttpFile::QueryInfo  
+ Call this member function to return response or request headers from an HTTP request.  
   
 ```  
 BOOL QueryInfo(
@@ -281,55 +288,55 @@ BOOL QueryInfo(
     LPDWORD dwIndex = NULL) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwInfoLevel`  
- 特性查询和指定的请求信息的类型的以下标志的组合︰  
+ A combination of the attribute to query and the following flags that specify the type of information requested:  
   
-- **HTTP_QUERY_CUSTOM**查找标头名称并返回中的此值`lpvBuffer`输出。 **HTTP_QUERY_CUSTOM**引发断言，如果没有找到标头。  
+- **HTTP_QUERY_CUSTOM** Finds the header name and returns this value in `lpvBuffer` on output. **HTTP_QUERY_CUSTOM** throws an assertion if the header isn't found.  
   
-- **HTTP_QUERY_FLAG_REQUEST_HEADERS**通常，应用程序查询响应标头，但应用程序还可以使用此标志查询请求标头。  
+- **HTTP_QUERY_FLAG_REQUEST_HEADERS** Typically, the application queries the response headers, but an application can also query request headers by using this flag.  
   
-- **HTTP_QUERY_FLAG_SYSTEMTIME**对于这些标头，其值为日期/时间字符串，如"上次修改时间，"此标志返回的标头值与标准 Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)不需要应用程序分析的数据的结构。 如果你使用此标志，你可能想要使用`SYSTEMTIME`重写的函数。  
+- **HTTP_QUERY_FLAG_SYSTEMTIME** For those headers whose value is a date/time string, such as "Last-Modified-Time," this flag returns the header value as a standard Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that does not require the application to parse the data. If you use this flag, you may want to use the `SYSTEMTIME` override of the function.  
   
-- **HTTP_QUERY_FLAG_NUMBER**此标志将数据作为 32 位数字返回有关其值是一个数字，例如状态代码，这些标头。  
+- **HTTP_QUERY_FLAG_NUMBER** For those headers whose value is a number, such as the status code, this flag returns the data as a 32-bit number.  
   
- 请参阅**备注**有关列表的可能值的部分。  
+ See the **Remarks** section for a list of the possible values.  
   
  `lpvBuffer`  
- 指向接收信息的缓冲区的指针。  
+ A pointer to the buffer that receives the information.  
   
  `lpdwBufferLength`  
- 在进入时，这指向包含数据缓冲区中的字符数或字节的长度的值。 请参阅**备注**部分更多详细信息，有关此参数。  
+ On entry, this points to a value containing the length of the data buffer, in number of characters or bytes. See the **Remarks** section for more detailed information about this parameter.  
   
  `lpdwIndex`  
- 指向从零开始的标头索引的指针。 可以是**NULL**。 使用此标志枚举具有相同名称的多个标头。 在输入时，`lpdwIndex`指示指定的标头返回的索引。 在输出时，`lpdwIndex`指示下一步的标头的索引。 如果找不到下一步的索引， **ERROR_HTTP_HEADER_NOT_FOUND**返回。  
+ A pointer to a zero-based header index. Can be **NULL**. Use this flag to enumerate multiple headers with the same name. On input, `lpdwIndex` indicates the index of the specified header to return. On output, `lpdwIndex` indicates the index of the next header. If the next index cannot be found, **ERROR_HTTP_HEADER_NOT_FOUND** is returned.  
   
  `str`  
- 对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收返回的信息的对象。  
+ A reference to the [CString](../../atl-mfc-shared/reference/cstringt-class.md) object receiving the returned information.  
   
  `dwIndex`  
- 一个索引值。 请参阅`lpdwIndex`。  
+ An index value. See `lpdwIndex`.  
   
  *pSysTime*  
- 一个指向 Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构。  
+ A pointer to a Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
   
-### <a name="remarks"></a>备注  
- 只有在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`成功创建对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
+### <a name="remarks"></a>Remarks  
+ Use this member function only after a successful call to [SendRequest](#sendrequest) or on a `CHttpFile` object successfully created by [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
- 你可以检索以下类型的数据从`QueryInfo`:  
+ You can retrieve the following types of data from `QueryInfo`:  
   
--   字符串 （默认值）  
+-   strings (default)  
   
-- `SYSTEMTIME`(对于"数据:""Expires:"等等，标头)  
+- `SYSTEMTIME` (for "Data:" "Expires:" etc, headers)  
   
-- `DWORD`(有关**STATUS_CODE**， **CONTENT_LENGTH**等。)  
+- `DWORD` (for **STATUS_CODE**, **CONTENT_LENGTH**, etc.)  
   
- 当字符串写入缓冲区，并且成员函数成功，`lpdwBufferLength`包含以字符为单位减 1 的终止的字符串的长度**NULL**字符。  
+ When a string is written to the buffer, and the member function succeeds, `lpdwBufferLength` contains the length of the string in characters minus 1 for the terminating **NULL** character.  
   
- 可能`dwInfoLevel`值包括︰  
+ The possible `dwInfoLevel` values include:  
   
 - **HTTP_QUERY_MIME_VERSION**  
   
@@ -377,45 +384,45 @@ BOOL QueryInfo(
   
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
-##  <a name="queryinfostatuscode"></a>CHttpFile::QueryInfoStatusCode  
- 调用此成员函数可获取 HTTP 请求与关联的状态代码并将其置于提供`dwStatusCode`参数。  
+##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode  
+ Call this member function to get the status code associated with an HTTP request and place it in the supplied `dwStatusCode` parameter.  
   
 ```  
 BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwStatusCode`  
- 对状态代码的引用。 状态代码指示成功或失败的请求的事件。 请参阅**备注**针对选择的状态代码说明。  
+ A reference to a status code. Status codes indicate the success or failure of the requested event. See **Remarks** for a selection of status code descriptions.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
   
-### <a name="remarks"></a>备注  
- 只有在成功调用后才使用此成员函数[SendRequest](#sendrequest)或在`CHttpFile`成功创建对象[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
+### <a name="remarks"></a>Remarks  
+ Use this member function only after a successful call to [SendRequest](#sendrequest) or on a `CHttpFile` object successfully created by [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
- HTTP 状态代码划分为组，该值指示是成功还是失败的请求。 下表概述了状态代码组和最常见的 HTTP 状态代码。  
+ HTTP status codes fall into groups indicating the success or failure of the request. The following tables outline the status code groups and the most common HTTP status codes.  
   
-|Group|含义|  
+|Group|Meaning|  
 |-----------|-------------|  
-|200-299|成功|  
-|300-399|信息|  
-|400-499|请求错误|  
-|500-599|服务器错误|  
+|200-299|Success|  
+|300-399|Information|  
+|400-499|Request error|  
+|500-599|Server error|  
   
- 常见的 HTTP 状态代码︰  
+ Common HTTP Status Codes:  
   
-|状态代码|含义|  
+|Status code|Meaning|  
 |-----------------|-------------|  
-|200|找到了 URL，接下来进行传输|  
-|400|无法理解的请求|  
-|404|找不到请求的 URL|  
-|405|服务器不支持请求的方法|  
-|500|未知的服务器错误|  
-|503|已达到服务器容量|  
+|200|URL located, transmission follows|  
+|400|Unintelligible request|  
+|404|Requested URL not found|  
+|405|Server does not support requested method|  
+|500|Unknown server error|  
+|503|Server capacity reached|  
   
-##  <a name="sendrequest"></a>CHttpFile::SendRequest  
- 调用此成员函数以将请求发送到 HTTP 服务器。  
+##  <a name="sendrequest"></a>  CHttpFile::SendRequest  
+ Call this member function to send a request to an HTTP server.  
   
 ```  
 BOOL SendRequest(
@@ -431,27 +438,27 @@ BOOL SendRequest(
     DWORD dwOptionalLen = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstrHeaders`  
- 指向包含要发送的标头的名称的字符串的指针。  
+ A pointer to a string containing the name of the headers to send.  
   
  `dwHeadersLen`  
- 由标识标头的长度`pstrHeaders`。  
+ The length of the headers identified by `pstrHeaders`.  
   
  `lpOptional`  
- 要发送的请求标头后立即任何可选数据。 这通常适用于**POST**和**放**操作。 这可以是**NULL**如果没有要发送的可选数据。  
+ Any optional data to send immediately after the request headers. This is generally used for **POST** and **PUT** operations. This can be **NULL** if there is no optional data to send.  
   
  *dwOptionalLen*  
- `lpOptional` 的长度。  
+ The length of `lpOptional`.  
   
  `strHeaders`  
- 包含正在发送的请求标头的名称的字符串。  
+ A string containing the name of the headers for the request being sent.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，则通过检查引发确定失败的原因[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-##  <a name="sendrequestex"></a>CHttpFile::SendRequestEx  
- 调用此成员函数以将请求发送到 HTTP 服务器。  
+##  <a name="sendrequestex"></a>  CHttpFile::SendRequestEx  
+ Call this member function to send a request to an HTTP server.  
   
 ```  
 BOOL SendRequestEx(
@@ -467,41 +474,41 @@ BOOL SendRequestEx(
     DWORD_PTR dwContext = 1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *dwTotalLen*  
- 要在请求中发送的字节数。  
+ Number of bytes to be sent in the request.  
   
  `dwFlags`  
- 描述该操作的标志。 有关相应标志的列表，请参阅[HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Flags describing the operation. For a list of appropriate flags, see [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) in the Windows SDK.  
   
  `dwContext`  
- 上下文标识符`CHttpFile`操作。 有关此参数的详细信息，请参阅备注。  
+ The context identifier for the `CHttpFile` operation. See Remarks for more information about this parameter.  
   
  `lpBuffIn`  
- 指向已初始化[INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132)描述用于该操作的输入的缓冲区。  
+ Pointer to an initialized [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) that describes the input buffer used for the operation.  
   
  *lpBuffOut*  
- 指向已初始化**INTERNET_BUFFERS**描述用于该操作的输出缓冲区。  
+ Pointer to an initialized **INTERNET_BUFFERS** that describes the output buffer used for the operation.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为非 0。 如果调用失败，则通过检查引发确定失败的原因[CInternetException](../../mfc/reference/cinternetexception-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful. If the call fails, determine the cause of the failure by examining the thrown [CInternetException](../../mfc/reference/cinternetexception-class.md) object.  
   
-### <a name="remarks"></a>备注  
- 此函数允许你的应用程序将使用的数据发送[编写](../../mfc/reference/cinternetfile-class.md#write)和[WriteString](../../mfc/reference/cinternetfile-class.md#writestring)方法`CInternetFile`。 你必须知道要在调用此函数的任一重写之前发送的数据的长度。 第一个替代，可指定你想要发送的数据的长度。 第二个替代接受指向**INTERNET_BUFFERS**结构，可用于描述十分详尽地缓冲区。  
+### <a name="remarks"></a>Remarks  
+ This function allows your application to send data using the [Write](../../mfc/reference/cinternetfile-class.md#write) and [WriteString](../../mfc/reference/cinternetfile-class.md#writestring) methods of `CInternetFile`. You must know the length of the data to send before calling either override of this function. The first override allows you to specify the length of data you'd like to send. The second override accepts pointers to **INTERNET_BUFFERS** structures, which can be used to describe the buffer in great detail.  
   
- 内容写入到文件后，调用[EndRequest](#endrequest)来取消操作。  
+ After content is written to the file, call [EndRequest](#endrequest) to end the operation.  
   
- 默认值为`dwContext`发送到 mfc`CHttpFile`对象[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象创建`CHttpFile`对象。 当调用[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[CHttpConnection](../../mfc/reference/chttpconnection-class.md)构造`CHttpFile`对象，您可以重写默认设置，以便为你选择的值设置的上下文标识符。 上下文标识符返回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)以提供用于标识对象上的状态。 请参阅文章[Internet 前几个步骤︰ WinInet](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ The default value for `dwContext` is sent by MFC to the `CHttpFile` object from the [CInternetSession](../../mfc/reference/cinternetsession-class.md) object that created the `CHttpFile` object. When you call [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) or [CHttpConnection](../../mfc/reference/chttpconnection-class.md) to construct a `CHttpFile` object, you can override the default to set the context identifier to a value of your choosing. The context identifier is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the object with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
-### <a name="example"></a>示例  
- 此代码段将字符串的内容发送到名为 MFCISAPI DLL。本地主机服务器上的 DLL。 此示例使用仅一次调用时`WriteString`，使用多个调用将数据发送在块中是可以接受。  
+### <a name="example"></a>Example  
+ This code fragment sends the content of a string to a DLL named MFCISAPI.DLL on the LOCALHOST server. While this example uses only one call to `WriteString`, using multiple calls to send data in blocks is acceptable.  
   
- [!code-cpp[NVC_MFCWinInet # 9](../../mfc/codesnippet/cpp/chttpfile-class_1.cpp)]  
+ [!code-cpp[NVC_MFCWinInet#9](../../mfc/codesnippet/cpp/chttpfile-class_1.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   
- [CGopherFile 类](../../mfc/reference/cgopherfile-class.md)   
- [CHttpConnection 类](../../mfc/reference/chttpconnection-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [CGopherFile Class](../../mfc/reference/cgopherfile-class.md)   
+ [CHttpConnection Class](../../mfc/reference/chttpconnection-class.md)
 

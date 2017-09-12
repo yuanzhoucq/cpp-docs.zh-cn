@@ -1,5 +1,5 @@
 ---
-title: "CMFCPropertyGridToolTipCtrl 类 |Microsoft 文档"
+title: CMFCPropertyGridToolTipCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,10 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertyGridToolTipCtrl class
-- CMFCPropertyGridToolTipCtrl class, destructor
-- PreTranslateMessage method
-- ~CMFCPropertyGridToolTipCtrl destructor
+- CMFCPropertyGridToolTipCtrl [MFC], CMFCPropertyGridToolTipCtrl
+- CMFCPropertyGridToolTipCtrl [MFC], Create
+- CMFCPropertyGridToolTipCtrl [MFC], Deactivate
+- CMFCPropertyGridToolTipCtrl [MFC], GetLastRect
+- CMFCPropertyGridToolTipCtrl [MFC], Hide
+- CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
+- CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
 caps.latest.revision: 24
 author: mikeblome
@@ -44,56 +47,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e5290706799dcd253205ac74dad72cd7783d19dd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bdc742b8713252d57dbf58888f51b37d7042623f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 类
-实现的工具提示控件的[CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)用于显示工具提示。  
+# <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl Class
+Implements a tooltip control that the [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) uses to display tooltips.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPropertyGridToolTipCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
-  
-|||  
-|-|-|  
-|名称|说明|  
-|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|构造 `CMFCPropertyGridToolTipCtrl` 对象。|  
-|`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|析构函数。|  
-  
-### <a name="public-methods"></a>公共方法  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名称|描述|  
-|[CMFCPropertyGridToolTipCtrl::Create](#create)|创建工具提示控件的窗口。|  
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|停用并隐藏的工具提示控件。|  
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|返回的工具提示控件的最后一个位置的坐标。|  
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|隐藏的工具提示控件。|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)将窗口消息转换之前调度到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 (重写[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|设置工具提示文本和工具提示窗口的边框之间的间距。|  
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|显示工具提示控件。|  
+|Name|Description|  
+|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Constructs a `CMFCPropertyGridToolTipCtrl` object.|  
+|`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Destructor.|  
   
-## <a name="remarks"></a>备注  
- 当指针停留在属性名称，将显示工具提示。 [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)类显示工具提示，以便用户可以轻松地读取。 通常情况下，由指针的位置确定的工具提示的位置。 通过使用此类，工具提示将显示上面的属性名称和类似于自然属性扩展中，因此属性名称完全可见。  
+### <a name="public-methods"></a>Public Methods  
   
- MFC 自动创建此控件，并使用它在[CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)。  
+|||  
+|-|-|  
+|Name|Description|  
+|[CMFCPropertyGridToolTipCtrl::Create](#create)|Creates a window for the tooltip control.|  
+|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Deactivates and hides the tooltip control.|  
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Returns the coordinates of the last position of the tooltip control.|  
+|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Hides the tooltip control.|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Sets the spacing between the tooltip text and the border of the tooltip window.|  
+|[CMFCPropertyGridToolTipCtrl::Track](#track)|Displays the tooltip control.|  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何构造的对象`CMFCPropertyGridToolTipCtrl`类，以及如何显示工具提示控件。  
+## <a name="remarks"></a>Remarks  
+ Tooltips are displayed when the pointer rests on a property name. The [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) class displays a tooltip so that it is easily readable by the user. Usually, the position of a tooltip is determined by the position of the pointer. By using this class, the tooltip appears over the property name and resembles the natural property extension, so that the property name is fully visible.  
   
- [!code-cpp[NVC_MFC_RibbonApp 第&23;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
+ MFC automatically creates this control and uses it in the [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCPropertyGridToolTipCtrl` class, and how to display the tooltip control.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,71 +105,71 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
  [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxpropertygridtooltipctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpropertygridtooltipctrl.h  
   
-##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
- 构造 `CMFCPropertyGridToolTipCtrl` 对象。  
+##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+ Constructs a `CMFCPropertyGridToolTipCtrl` object.  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
- 创建工具提示控件的窗口。  
+##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
+ Creates a window for the tooltip control.  
   
 ```  
 BOOL Create(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 指向父窗口的指针。  
+ A pointer to the parent window.  
   
-### <a name="return-value"></a>返回值  
- 如果该窗口已成功创建; 则为 TRUE否则为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if the window was successfully created; otherwise, FALSE.  
   
-##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
- 停用并隐藏的工具提示控件。  
+##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
+ Deactivates and hides the tooltip control.  
   
 ```  
 void Deactivate();
 ```  
   
-### <a name="remarks"></a>备注  
- 此方法设置的最后一个位置和文本为空值，以便以后调用[CMFCPropertyGridToolTipCtrl::Track](#track)显示工具提示。  
+### <a name="remarks"></a>Remarks  
+ This method sets the last position and text to empty values, so that future calls to [CMFCPropertyGridToolTipCtrl::Track](#track) display the tooltip.  
   
-##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
- 返回的工具提示控件的最后一个位置的坐标。  
+##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
+ Returns the coordinates of the last position of the tooltip control.  
   
 ```  
 void GetLastRect(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `rect`  
- 包含的工具提示控件的最后一个位置。  
+ Contains the last position of the tooltip control.  
   
-##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
- 隐藏的工具提示控件。  
+##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
+ Hides the tooltip control.  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
- 设置工具提示文本和工具提示窗口的边框之间的间距。  
+##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
+ Sets the spacing between the tooltip text and the border of the tooltip window.  
   
 ```  
 void SetTextMargin(int nTextMargin);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nTextMargin`  
- 指定工具提示控件文本和工具提示窗口的边框之间的间距。 默认值为 10 个像素。  
+ Specifies the spacing between the tooltip control text and the border of the tooltip window. The default value is 10 pixels.  
   
-##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
- 显示工具提示控件。  
+##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
+ Displays the tooltip control.  
   
 ```  
 void Track(
@@ -174,17 +177,17 @@ void Track(
     const CString& strText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- 指定的位置和工具提示控件的大小。  
+ Specifies the position and size of the tooltip control.  
   
  [in] `strText`  
- 指定要在工具提示中显示的文本。  
+ Specifies the text to be shown in the tooltip.  
   
-### <a name="remarks"></a>备注  
- 此方法显示工具提示控件的位置和大小由指定`rect`。 如果自上次调用此方法没有更改位置、 大小和文本，则此方法无效。  
+### <a name="remarks"></a>Remarks  
+ This method displays the tooltip control at the position and size specified by `rect`. If the position, size, and text have not changed since the last time this method was called, this method has no effect.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

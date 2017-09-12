@@ -1,29 +1,46 @@
 ---
-title: "针对 MFC 模块状态中的激活上下文的支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "激活上下文 [C++]"
-  - "激活上下文 [C++], MFC 支持"
+title: Support for Activation Contexts in the MFC Module State | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- activation contexts [MFC]
+- activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 针对 MFC 模块状态中的激活上下文的支持
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a269fcc1100df489ffc4c3eaf84c4950cc293f9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 创建活动上下文使用用户模块提供的不同资源。  有关上下文如何激活创建的更多信息，请参见以下主题：  
+---
+# <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Support for Activation Contexts in the MFC Module State
+MFC creates an activation context using a manifest resource provided by the user module. For more information on how activation contexts are created, see the following topics:  
   
 -   [Activation Contexts](http://msdn.microsoft.com/library/aa374153)  
   
@@ -31,27 +48,29 @@ MFC 创建活动上下文使用用户模块提供的不同资源。  有关上�
   
 -   [Assembly Manifests](http://msdn.microsoft.com/library/aa374219)  
   
-## 备注  
- 在读取这些 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 主题时请注意，MFC 活动上下文机制与 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 激活上下文以外，MFC 不使用 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 激活上下文 API。  
+## <a name="remarks"></a>Remarks  
+ When reading these Windows SDK topics, note that the MFC activation context mechanism resembles the Windows SDK activation context except that MFC does not use the Windows SDK Activation Context API.  
   
- 激活上下文在 MFC 应用程序、用户 DLL 和扩展 DLL 以下方式工作：  
+ Activation context works in MFC applications, user DLLs, and MFC extension DLLs in the following ways:  
   
--   MFC 应用程序用于为清单资源使用资源 ID 1。  在这种情况下，MFC 不创建自己的激活上下文，使用，但是默认应用程序上下文。  
+-   MFC applications use resource ID 1 for their manifest resource. In this case, the MFC does not create its own activation context, but uses the default application context.  
   
--   MFC 用户 DLL 其清单资源的使用资源 ID 2。  在这里，MFC 创建每用户 DLL 中的激活上下文，这样，其他用户可使用同一 DLL 库 \(例如，公共控件库\) 的不同版本。  
+-   MFC user DLLs use resource ID 2 for their manifest resource. Here, MFC creates an activation context for each User DLL, so different user DLLs can use different versions of the same libraries (for example, the Common Controls library).  
   
--   MFC 扩展依赖这些 DLL 的承载应用程序或 DLL 用户建立这些的激活上下文。  
+-   MFC extension DLLs rely on their hosting applications or user DLLs to establish their activation context.  
   
- 尽管上下文状态激活可以修改使用过程所述。[Using the Activation Context API](http://msdn.microsoft.com/library/aa376620)下，MFC 使用激活上下文机制非常有用，在开发不是简单的基于 DLL 的插件体系结构 \(或无法\) 手动切换状态激活在单个外部调用前后插件。  
+ Although the activation context state can be modified using the processes described under [Using the Activation Context API](http://msdn.microsoft.com/library/aa376620), using the MFC activation context mechanism can be useful when developing DLL-based plug-in architectures where it is not easy (or not possible) to manually switch activation state before and after individual calls to external plug-ins.  
   
- 激活上下文中创建 [AfxWinInit](../Topic/AfxWinInit.md)。  在 `AFX_MODULE_STATE` 析构函数被销毁。  激活上下文句柄在 `AFX_MODULE_STATE`中使用。`AFX_MODULE_STATE`中对此[AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md)进行了介绍。  
+ The activation context is created in [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). It is destroyed in the `AFX_MODULE_STATE` destructor. An activation context handle is kept in `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` is described in [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate).)  
   
- [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md) 宏激活和停用激活上下文。  `AFX_MANAGE_STATE` 为静态 MFC 库，以及 MFC DLL，DLL 启用，使 MFC 代码在 DLL 用户选择的正确激活上下文执行。  
+ The [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro activates and deactivates the activation context. `AFX_MANAGE_STATE` is enabled for static MFC libraries, as well as MFC DLLs, to allow MFC code to execute in the proper activation context selected by the User DLL.  
   
-## 请参阅  
+## <a name="see-also"></a>See Also  
  [Activation Contexts](http://msdn.microsoft.com/library/aa374153)   
  [Application Manifests](http://msdn.microsoft.com/library/aa374191)   
  [Assembly Manifests](http://msdn.microsoft.com/library/aa374219)   
- [AfxWinInit](../Topic/AfxWinInit.md)   
- [AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md)   
- [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md)
+ [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)   
+ [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)   
+ [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)
+
+

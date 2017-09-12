@@ -1,77 +1,96 @@
 ---
-title: "连接点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IConnectionPoint"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCmdTarget 类, 和连接点"
-  - "COM, 连接点"
-  - "连接点 [C++]"
-  - "连接, 连接点"
-  - "IConnectionPoint 接口"
-  - "接口, IConnectionPoint"
-  - "MFC [C++], COM 支持"
-  - "MFC COM, 连接点"
-  - "OLE COM 连接点"
-  - "接收器, 连接点"
+title: Connection Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IConnectionPoint
+dev_langs:
+- C++
+helpviewer_keywords:
+- IConnectionPoint interface
+- connections, connection points
+- OLE COM connection points
+- MFC COM, connection points
+- COM, connection points
+- interfaces, IConnectionPoint
+- MFC, COM support
+- connection points [MFC]
+- CCmdTarget class [MFC], and connection points
+- sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 连接点
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f2474c1533040128f2a7b805db4e6f15dc85bb5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文说明如何实现连接点 \(原来称作 OLE 连接点\) 使用 MFC 类，`CCmdTarget` 和 `CConnectionPoint`。  
+---
+# <a name="connection-points"></a>Connection Points
+This article explains how to implement connection points (formerly known as OLE connection points) using the MFC classes `CCmdTarget` and `CConnectionPoint`.  
   
- 以前，组件对象模型 \(COM\) 允许 \(COM\) 定义对象实现和接口公开了功能的常规机制 \(**IUnknown::QueryInterface**\)。  不过，允许对象公开其功能调用特定接口对应的机制未定义。  也就是说 COM 定义为对象 \(该对象的接口指针的传入的指针\) 如何处理了，但没有输出接口显式的模型 \(指向对象持有对其他对象的接口\)。  COM 具有模型现在调用，连接点，则支持此功能。  
+ In the past, the Component Object Model (COM) defined a general mechanism (**IUnknown::QueryInterface**) that allowed objects to implement and expose functionality in interfaces. However, a corresponding mechanism that allowed objects to expose their capability to call specific interfaces was not defined. That is, COM defined how incoming pointers to objects (pointers to that object's interfaces) were handled, but it did not have an explicit model for outgoing interfaces (pointers the object holds to other objects' interfaces). COM now has a model, called connection points, that supports this functionality.  
   
- 连接由两部分组成：调用接口的对象，称作源和实现接口的对象，调用接收器。  连接点为源公开的接口。  通过公开连接点，源接收生成允许自身的连接 \(源\)。  通过连接点机制 \(即 **IConnectionPoint** 接口\)，到接收接口的指针传递到源对象。  该指针的源提供对一组的接收器实现的成员函数访问。  例如，接收器实现激发的事件调用的接收器，源可以实现相应的方法。  下图演示中描述的连接点。  
+ A connection has two parts: the object calling the interface, called the source, and the object implementing the interface, called the sink. A connection point is the interface exposed by the source. By exposing a connection point, a source allows sinks to establish connections to itself (the source). Through the connection point mechanism (the **IConnectionPoint** interface), a pointer to the sink interface is passed to the source object. This pointer provides the source with access to the sink's implementation of a set of member functions. For example, to fire an event implemented by the sink, the source can call the appropriate method of the sink's implementation. The following figure demonstrates the connection point just described.  
   
- ![已实现的连接点](../mfc/media/vc37lh1.png "vc37LH1")  
-已实现的连接点  
+ ![Implemented connection point](../mfc/media/vc37lh1.gif "vc37lh1")  
+An Implemented Connection Point  
   
- MFC 实现并在 [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)[CCmdTarget](../mfc/reference/ccmdtarget-class.md) 此类模型。  从 **CConnectionPoint** 派生的类实现 **IConnectionPoint** 接口，用于向其他对象的连接点。  从 `CCmdTarget` 派生的类实现 **IConnectionPointContainer** 接口，则可以枚举所有对象的可用或连接点查找特定连接点。  
+ MFC implements this model in the [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) and [CCmdTarget](../mfc/reference/ccmdtarget-class.md) classes. Classes derived from **CConnectionPoint** implement the **IConnectionPoint** interface, used to expose connection points to other objects. Classes derived from `CCmdTarget` implement the **IConnectionPointContainer** interface, which can enumerate all of an object's available connection points or find a specific connection point.  
   
- 为类实现的每个连接点，必须"声明"实现连接点的连接部分。  如果实现一个或多个连接点，必须还在类中声明单个串联映射。  连接映射是 ActiveX 控件支持连接点的表。  
+ For each connection point implemented in your class, you must declare a connection part that implements the connection point. If you implement one or more connection points, you must also declare a single connection map in your class. A connection map is a table of connection points supported by the ActiveX control.  
   
- 下面的示例演示简单的连接映射和使用连接点。  第一个示例声明连接映射和点；第二个示例实现映射和点。  注意 `CMyClass` 必须是 `CCmdTarget`派生类。  在第一个示例中，插入代码位于类声明，在 **protected** 部分下：  
+ The following examples demonstrate a simple connection map and one connection point. The first example declares the connection map and point; the second example implements the map and point. Note that `CMyClass` must be a `CCmdTarget`-derived class. In the first example, code is inserted in the class declaration, under the **protected** section:  
   
- [!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/CPP/connection-points_1.h)]  
+ [!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/cpp/connection-points_1.h)]  
   
- `BEGIN_CONNECTION_PART` 和 **END\_CONNECTION\_PART** 宏声明嵌入的类中，`XSampleConnPt` \(从 `CConnectionPoint`派生\) 中实现，此特定连接点。  如果要重写任何 `CConnectionPoint` 成员函数或添加成员函数的声明，它们在这个宏。  例如，`CONNECTION_IID` 宏重写 `CConnectionPoint::GetIID` 成员函数，则将在这个宏。  
+ The `BEGIN_CONNECTION_PART` and **END_CONNECTION_PART** macros declare an embedded class, `XSampleConnPt` (derived from `CConnectionPoint`), that implements this particular connection point. If you want to override any `CConnectionPoint` member functions or add member functions of your own, declare them between these two macros. For example, the `CONNECTION_IID` macro overrides the `CConnectionPoint::GetIID` member function when placed between these two macros.  
   
- 在第二个示例中，代码在控件的实现文件 \(.cpp 文件\) 插入。  此代码实现一连接映射，包括，连接点 `SampleConnPt`:  
+ In the second example, code is inserted in the control's implementation file (.cpp file). This code implements the connection map, which includes the connection point, `SampleConnPt`:  
   
- [!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/CPP/connection-points_2.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/cpp/connection-points_2.cpp)]  
   
- 如果类具有多个连接点，请插入到 `BEGIN_CONNECTION_MAP` 和 `END_CONNECTION_MAP` 宏之间的附加 `CONNECTION_PART` 宏。  
+ If your class has more than one connection point, insert additional `CONNECTION_PART` macros between the `BEGIN_CONNECTION_MAP` and `END_CONNECTION_MAP` macros.  
   
- 最后，添加一个调用到类的构造函数的 `EnableConnections`。  例如：  
+ Finally, add a call to `EnableConnections` in the class's constructor. For example:  
   
- [!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/CPP/connection-points_3.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]  
   
- 在此代码粘贴，`CCmdTarget`派生类公开 **ISampleSink** 接口的连接点。  下图演示此示例。  
+ Once this code has been inserted, your `CCmdTarget`-derived class exposes a connection point for the **ISampleSink** interface. The following figure illustrates this example.  
   
- ![使用 MFC 实现的连接点](../mfc/media/vc37lh2.png "vc37LH2")  
-连接点实现使用 MFC  
+ ![Connection point implemented by using MFC](../mfc/media/vc37lh2.gif "vc37lh2")  
+A Connection Point Implemented with MFC  
   
- 通常，支持连接点“多点发送”\- 功能广播到多个接收器连接到相同的接口。  下面的示例演示如何循环段通过访问多路广播在连接点的每接收：  
+ Usually, connection points support "multicasting" — the ability to broadcast to multiple sinks connected to the same interface. The following example fragment demonstrates how to multicast by iterating through each sink on a connection point:  
   
- [!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/CPP/connection-points_4.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/cpp/connection-points_4.cpp)]  
   
- 此示例检索当前设置 `SampleConnPt` 连接点的连接通过调用 `CConnectionPoint::GetConnections`。  它通过连接然后循环访问的并调用每个有效连接上的 **ISampleSink::SinkFunc**。  
+ This example retrieves the current set of connections on the `SampleConnPt` connection point with a call to `CConnectionPoint::GetConnections`. It then iterates through the connections and calls **ISampleSink::SinkFunc** on every active connection.  
   
-## 请参阅  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)
+
+

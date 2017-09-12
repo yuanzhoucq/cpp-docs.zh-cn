@@ -1,48 +1,66 @@
 ---
-title: "CReBar 与 CReBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CReBar"
-  - "CReBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReBar 类, 与 CReBarCtrl"
-  - "GetReBarCtrl 类"
-  - "rebar 控件, CReBarCtrl 类"
+title: CReBar vs. CReBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CReBar
+- CReBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CReBar class [MFC], vs. CReBarCtrl
+- rebar controls [MFC], CReBarCtrl class [MFC]
+- GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CReBar 与 CReBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65b809ff977182ff3ef4248d9794f4ae002529c1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 提供了两类创建 rebar:\(打包 Windows 公共控件 API\) 的 [CReBar](../mfc/reference/crebar-class.md) 和 [CReBarCtrl](../mfc/reference/crebarctrl-class.md)。  **CReBar** 提供所有 rebar 公共控件的功能，因此，在处理很多必需的公共控件设置和结构中的。  
+---
+# <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
+MFC provides two classes to create rebars: [CReBar](../mfc/reference/crebar-class.md) and [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (which wraps the Windows common control API). **CReBar** provides all of the functionality of the rebar common control, and it handles many of the required common control settings and structures for you.  
   
- 如果不打算将 MFC rebar 结构，`CReBarCtrl` 是 Win32 rebar 控件的包装类，并可能较为容易实现。  如果计划使用 `CReBarCtrl` 和集成 MFC rebar结构，必须小心注意其他的传达rebar控件处理到 MFC。  此通信不非常困难；但是，它是不必要的额外工作，使用 **CReBar**。  
+ `CReBarCtrl` is a wrapper class for the Win32 rebar control, and therefore may be easier to implement if you do not intend to integrate the rebar into the MFC architecture. If you plan to use `CReBarCtrl` and integrate the rebar into the MFC architecture, you must take additional care to communicate rebar control manipulations to MFC. This communication is not difficult; however, it is additional work that is unneeded when you use **CReBar**.  
   
- Visual C\+\+ 提供两种rebar使用公共控件。  
+ Visual C++ provides two ways to take advantage of the rebar common control.  
   
--   使用 **CReBar**，rebar 创建，然后调用 [CReBar::GetReBarCtrl](../Topic/CReBar::GetReBarCtrl.md) 获取对 `CReBarCtrl` 成员函数的访问权限。  
+-   Create the rebar using **CReBar**, and then call [CReBar::GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl) to get access to the `CReBarCtrl` member functions.  
   
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl` 是要转换 rebar 对象的 **this** 指针成员函数的内联。  这意味着，在运行时，将调用函数没有开销。  
+    >  `CReBar::GetReBarCtrl` is an inline member function that casts the **this** pointer of the rebar object. This means that, at run time, the function call has no overhead.  
   
--   使用 [CReBarCtrl](../mfc/reference/crebarctrl-class.md)，rebar 构造函数创建。  
+-   Create the rebar using [CReBarCtrl](../mfc/reference/crebarctrl-class.md)'s constructor.  
   
- 任一方法允许您为rebar控件的成员函数的访问。  当您调用 `CReBar::GetReBarCtrl`时，它返回对 `CReBarCtrl` 对象的引用，以便可以使用为设置成员函数。  使用 **CReBar**，请参见 [CReBar](../mfc/reference/crebar-class.md) 有关构造和 rebar 创建的信息。  
+ Either method will give you access to the member functions of the rebar control. When you call `CReBar::GetReBarCtrl`, it returns a reference to a `CReBarCtrl` object so you can use either set of member functions. See [CReBar](../mfc/reference/crebar-class.md) for information on constructing and creating a rebar using **CReBar**.  
   
-## 请参阅  
- [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

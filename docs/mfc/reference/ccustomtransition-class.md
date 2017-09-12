@@ -1,5 +1,5 @@
 ---
-title: "CCustomTransition 类 |Microsoft 文档"
+title: CCustomTransition Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCustomTransition class
+- CCustomTransition [MFC], CCustomTransition
+- CCustomTransition [MFC], Create
+- CCustomTransition [MFC], SetInitialValue
+- CCustomTransition [MFC], SetInitialVelocity
+- CCustomTransition [MFC], m_bInitialValueSpecified
+- CCustomTransition [MFC], m_bInitialVelocitySpecified
+- CCustomTransition [MFC], m_initialValue
+- CCustomTransition [MFC], m_initialVelocity
+- CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
 caps.latest.revision: 17
 author: mikeblome
@@ -43,74 +51,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 483fb2ab84d2c41fe4666a4ea333c0be8b07caee
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 79f70e6666c79ccf3fa0e857a7350ab22357148e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccustomtransition-class"></a>CCustomTransition 类
-实现自定义转换。  
+# <a name="ccustomtransition-class"></a>CCustomTransition Class
+Implements a custom transition.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCustomTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomTransition::CCustomTransition](#ccustomtransition)|构造一个自定义转换对象。|  
+|[CCustomTransition::CCustomTransition](#ccustomtransition)|Constructs a custom transition object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomTransition::Create](#create)|调用转换库来创建封装的转换 COM 对象。 (重写[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
-|[CCustomTransition::SetInitialValue](#setinitialvalue)|设置将应用于与此转换关联的动画变量的初始值。|  
-|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|设置初始速度，将应用于与此转换关联的动画变量。|  
+|[CCustomTransition::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CCustomTransition::SetInitialValue](#setinitialvalue)|Sets an initial value, which will be applied to an animation variable associated with this transition.|  
+|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|Sets an initial velocity, which will be applied to an animation variable associated with this transition.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|指定与 SetInitialValue 是否指定了初始的值。|  
-|[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|指定是否使用 setinitialvelocity 方法指定了初始速度。|  
-|[CCustomTransition::m_initialValue](#m_initialvalue)|将存储的初始值。|  
-|[CCustomTransition::m_initialVelocity](#m_initialvelocity)|将存储的初始速度。|  
-|[CCustomTransition::m_pInterpolator](#m_pinterpolator)|存储自定义内插器的指针。|  
+|[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Specifies whether the initial value was specified with SetInitialValue.|  
+|[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Specifies whether the initial velocity was specified with SetInitialVelocity.|  
+|[CCustomTransition::m_initialValue](#m_initialvalue)|Stores the initial value.|  
+|[CCustomTransition::m_initialVelocity](#m_initialvelocity)|Stores the initial velocity.|  
+|[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Stores a pointer to a custom interpolator.|  
   
-## <a name="remarks"></a>备注  
- CCustomTransitions 类允许开发人员实现自定义转换。 其创建和使用作为标准的转换，但其构造函数将作为参数接受指向自定义内插器的指针。 执行以下步骤以使用自定义的转换︰ 1。 从 CCustomInterpolator 派生一个类并实现至少 InterpolateValue 方法。 2. 确保必须长于动画的持续时间中仍在使用自定义内插器对象的生存期。 3. 实例化 （使用 new 运算符） CCustomTransition 对象，并将指针传递到构造函数中的自定义内插器。 4. 如果这些参数所需的自定义内插，调用 CCustomTransition::SetInitialValue 和 CCustomTransition::SetInitialVelocity。 5. 将指针传递给自定义转换到 AddTransition 方法的动画对象，其值应使用自定义算法进行动画处理。 6. 当动画对象的值应更改 Windows 动画 API 将在 CCustomInterpolator 调用 InterpolateValue （和其他相关的方法）。  
+## <a name="remarks"></a>Remarks  
+ The CCustomTransitions class allows developers to implement custom transitions. It's created and used as a standard transition, but its constructor accepts as parameter a pointer to a custom interpolator. Perform the following steps to use custom transitions: 1. Derive a class from CCustomInterpolator and implement at least InterpolateValue method. 2. Ensure that the lifetime of custom interpolator object must be longer than duration of animation where it's used. 3. Instantiate (using operator new) a CCustomTransition object and pass a pointer to custom interpolator in the constructor. 4. Call CCustomTransition::SetInitialValue and CCustomTransition::SetInitialVelocity if these parameters are required for custom interpolation. 5. Pass the pointer to custom transition to AddTransition method of animation object, whose value should be animated with the custom algorithm. 6. When the value of animation object should change Windows Animation API will call InterpolateValue (and other relevant methods) in CCustomInterpolator.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  `CCustomTransition`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
- 构造一个自定义转换对象。  
+##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition  
+ Constructs a custom transition object.  
   
 ```  
 CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pInterpolator`  
- 自定义内插器指向的指针。  
+ A pointer to custom interpolator.  
   
-##  <a name="create"></a>CCustomTransition::Create  
- 调用转换库来创建封装的转换 COM 对象。  
+##  <a name="create"></a>  CCustomTransition::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -118,70 +126,70 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* pFactory);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pFactory`  
- 负责创建的自定义转换的转换工厂指向的指针。  
+ A pointer to transition factory, which is responsible for creation of custom transitions.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
- 此方法还可以设置初始值和初始速度要应用于与此转换相关联的动画变量。 实现此目的，您需要调用 SetInitialValue 和 setinitialvelocity 方法之前在框架创建 （它会在发生调用 CAnimationController::AnimateGroup） 的封装的转换 COM 对象。  
+### <a name="remarks"></a>Remarks  
+ This method also can set initial value and initial velocity to be applied to an animation variable, which is associated with this transition. For this purpose you have to call SetInitialValue and SetInitialVelocity before the framework creates the encapsulated transition COM object (it happens when you call CAnimationController::AnimateGroup).  
   
-##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
- 指定与 SetInitialValue 是否指定了初始的值。  
+##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified  
+ Specifies whether the initial value was specified with SetInitialValue.  
   
 ```  
 BOOL m_bInitialValueSpecified;  
 ```  
   
-##  <a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
- 指定是否使用 setinitialvelocity 方法指定了初始速度。  
+##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified  
+ Specifies whether the initial velocity was specified with SetInitialVelocity.  
   
 ```  
 BOOL m_bInitialVelocitySpecified;  
 ```  
   
-##  <a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
- 将存储的初始值。  
+##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue  
+ Stores the initial value.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
- 将存储的初始速度。  
+##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity  
+ Stores the initial velocity.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
- 存储自定义内插器的指针。  
+##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator  
+ Stores a pointer to a custom interpolator.  
   
 ```  
 CCustomInterpolator* m_pInterpolator;  
 ```  
   
-##  <a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
- 设置将应用于与此转换关联的动画变量的初始值。  
+##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue  
+ Sets an initial value, which will be applied to an animation variable associated with this transition.  
   
 ```  
 void SetInitialValue(DOUBLE initialValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `initialValue`  
   
-##  <a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
- 设置初始速度，将应用于与此转换关联的动画变量。  
+##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
+ Sets an initial velocity, which will be applied to an animation variable associated with this transition.  
   
 ```  
 void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `initialVelocity`  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

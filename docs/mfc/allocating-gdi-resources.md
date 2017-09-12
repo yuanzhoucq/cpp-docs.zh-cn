@@ -1,42 +1,61 @@
 ---
-title: "分配 GDI 资源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GDI 对象, 打印期间分配"
-  - "打印 [MFC], 分配 GDI 资源"
-  - "资源 [MFC], 打印"
+title: Allocating GDI Resources | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- resources [MFC], printing
+- GDI objects [MFC], allocating during printing
+- printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 分配 GDI 资源
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 00f4d9e1eee45c7684d7e8f58806449f35f3bf84
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-此文章介绍了如何分配和解除分配打印所需的 Windows 图形设备接口 \(GDI\) 对象。  
+---
+# <a name="allocating-gdi-resources"></a>Allocating GDI Resources
+This article explains how to allocate and deallocate the Windows graphics device interface (GDI) objects needed for printing.  
   
 > [!NOTE]
->  GDI\+ 随 Windows XP 附带，可用作 Windows NT 4.0 SP6、Windows 2000、Windows 98 和 Windows Me 的可再发行组件。  若要下载最新可再发行组件，请参阅 [http:\/\/www.microsoft.com\/msdownload\/platformsdk\/sdkupdate\/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm)。  有关详细信息，请参阅 MSDN 中的 GDI\+ SDK 文档：[http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/gdicpp\/GDIPlus\/GDIPlus.asp](http://msdn.microsoft.com/library/default.asp?url=/library/gdicpp/GDIPlus/GDIPlus.asp)。  
+>  GDI+ is included with Windows XP and is available as a redistributable for Windows NT 4.0  SP6, Windows 2000, Windows 98, and Windows Me. To download the latest redistributable, see  [http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm). For more information, see the GDI+ SDK documentation at: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
- 假设你需要使用某些字体、画笔或其他 GDI 对象进行打印，而不是用于屏幕显示。  由于它们需要的内存，因此当应用程序启动时，分配这些对象的效率将比较低。  当应用程序没有打印文档时，该内存可能需要用于其他目的。  更好的做法是：开始打印时，将它们分配；打印结束时，将它们删除。  
+ Suppose you need to use certain fonts, pens, or other GDI objects for printing, but not for screen display. Because of the memory they require, it's inefficient to allocate these objects when the application starts up. When the application isn't printing a document, that memory might be needed for other purposes. It's better to allocate them when printing begins, and then delete them when printing ends.  
   
- 若要分配这些 GDI 对象，请重写 [OnBeginPrinting](../Topic/CView::OnBeginPrinting.md) 成员函数。  此函数很适合于此目的，有两个原因：在每个打印作业开始时，框架调用此函数一次，并且与 [OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) 不同，此函数有权访问表示打印机设备驱动程序的 [CDC](../mfc/reference/cdc-class.md) 对象。  可在打印作业期间通过在指向 GDI 对象（例如，**CFont \*** 成员等等）的视图类中定义成员变量来存储这些对象以备使用。  
+ To allocate these GDI objects, override the [OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting) member function. This function is well suited to this purpose for two reasons: the framework calls this function once at the beginning of each print job and, unlike [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting), this function has access to the [CDC](../mfc/reference/cdc-class.md) object representing the printer device driver. You can store these objects for use during the print job by defining member variables in your view class that point to GDI objects (for example, **CFont \*** members, and so on).  
   
- 若要使用已创建的 GDI 对象，在 [OnPrint](../Topic/CView::OnPrint.md) 成员函数中将它们选入打印机设备上下文中。  如果你需要不同的 GDI 对象用于文档的不同页面，你可以检查 [CPrintInfo](../mfc/reference/cprintinfo-structure.md) 结构的 `m_nCurPage` 成员，并相应地选择 GDI 对象。  如果你需要一个 GDI 对象用于几个连续的页面，Windows 要求每次调用 `OnPrint` 时，将它选入设备上下文中。  
+ To use the GDI objects you've created, select them into the printer device context in the [OnPrint](../mfc/reference/cview-class.md#onprint) member function. If you need different GDI objects for different pages of the document, you can examine the `m_nCurPage` member of the [CPrintInfo](../mfc/reference/cprintinfo-structure.md) structure and select the GDI object accordingly. If you need a GDI object for several consecutive pages, Windows requires that you select it into the device context each time `OnPrint` is called.  
   
- 若要释放这些 GDI 对象，请重写 [OnEndPrinting](../Topic/CView::OnEndPrinting.md) 成员函数。  在每个打印作业结束时，框架会调用此函数，为你提供机会在应用程序返回到其他任务之前，释放特定于打印的 GDI 对象。  
+ To deallocate these GDI objects, override the [OnEndPrinting](../mfc/reference/cview-class.md#onendprinting) member function. The framework calls this function at the end of each print job, giving you the opportunity to deallocate printing-specific GDI objects before the application returns to other tasks.  
   
-## 请参阅  
- [打印](../mfc/printing.md)   
- [如何执行默认打印](../mfc/how-default-printing-is-done.md)
+## <a name="see-also"></a>See Also  
+ [Printing](../mfc/printing.md)   
+ [How Default Printing Is Done](../mfc/how-default-printing-is-done.md)
+
+

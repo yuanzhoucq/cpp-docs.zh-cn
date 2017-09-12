@@ -1,71 +1,90 @@
 ---
-title: "服务器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "完全服务器"
-  - "袖珍服务器"
-  - "OLE 服务器应用程序"
-  - "OLE 服务器应用程序, 激活"
-  - "OLE 服务器应用程序, 服务器类型"
-  - "服务器应用程序"
-  - "服务器"
+title: Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC]
+- OLE server applications [MFC], activation
+- full-server
+- servers
+- mini-server
+- OLE server applications [MFC], server types
+- server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 服务器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 47c6019418107070d1982c7cc55a1e303ff30536
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-服务器应用程序 \(或组件\) 创建 OLE 项应用程序 \(或组件\) 给容器应用程序。  可视化编辑服务器应用还支持可视编辑或就地激活。  OLE 服务器另一个窗体是 [自动化服务器](../mfc/automation-servers.md)。  一些服务器应用支持嵌入项的仅创建；其他支持嵌入的资源和链接项的创建。  某些支持仅链接，但这很少见。  当用户想要编辑项时，所有服务器必须由应用容器应用程序支持激活。  应用程序可以是容器和服务器。  换句话说，它能将数据放入其文档中，并创建可将作为项到其他应用程序中的文档中的数据。  
+---
+# <a name="servers"></a>Servers
+A server application (or component application) creates OLE items (or components) for use by container applications. A visual editing server application also supports visual editing or in-place activation. Another form of OLE server is an [automation server](../mfc/automation-servers.md). Some server applications support only the creation of embedded items; others support the creation of both embedded and linked items. Some support linking only, although this is rare. All server applications must support activation by container applications when the user wants to edit an item. An application can be both a container and a server. In other words, it can both incorporate data into its documents, and create data that can be incorporated as items into other applications' documents.  
   
- miniserver 可以只由容器中启动服务器应用程序的一个特定类型。  Microsoft Draw 和 Microsoft 的是 miniservers 的示例。  不 miniserver 文档作为存储在磁盘上的文件。  相反，它会读取其文档自并编写自己为容器属于文档的项。  因此，miniserver 只支持嵌入，而链接。  
+ A miniserver is a special type of server application that can only be launched by a container. Microsoft Draw and Microsoft Graph are examples of miniservers. A miniserver does not store documents as files on disk. Instead, it reads its documents from and writes them to items in documents belonging to containers. As a result, a miniserver supports embedding only, not linking.  
   
- 完整服务器中运行作为独立的应用程序或由容器应用程序开始。  完整服务器可以存储文档用作磁盘上的文件。  它可以只支持嵌入，并嵌入或链接仅链接。  容器应用程序的用户可以通过选择服务器中或复制和剪切命令在容器的粘贴命令创建嵌入的项。  的链接项通过在服务器上复制命令和容器中粘贴链接命令创建。  或者，使用插入对话框，用户可创建的链接的或嵌入项。  
+ A full server can be run either as a stand-alone application or launched by a container application. A full server can store documents as files on disk. It can support embedding only, both embedding and linking, or linking only. The user of a container application can create an embedded item by choosing the Cut or Copy command in the server and the Paste command in the container. A linked item is created by choosing the Copy command in the server and the Paste Link command in the container. Alternatively, the user can create an embedded or linked item using the Insert Object dialog box.  
   
- 下表总结服务器不同类型的特性：  
+ The following table summarizes characteristics of different types of servers:  
   
-### 服务器特性  
+### <a name="server-characteristics"></a>Server Characteristics  
   
-|服务器的类型|支持多个实例|每个文档项|文档的每个实例|  
-|------------|------------|-----------|-------------|  
-|Miniserver|是|1|1|  
-|SDI 完整服务器|是|1 \(如果支持链接，1 个或多个\)|1|  
-|MDI 完整服务器|非 \(不要求\)|1 \(如果支持链接，1 个或多个\)|0 或更多|  
+|Type of server|Supports multiple instances|Items per document|Documents per instance|  
+|--------------------|---------------------------------|------------------------|----------------------------|  
+|Miniserver|Yes|1|1|  
+|SDI full server|Yes|1 (if linking is supported, 1 or more)|1|  
+|MDI full server|No (not required)|1 (if linking is supported, 1 or more)|0 or more|  
   
- 在超过容器将使用编辑嵌入式或链接的项情况下，服务器应用应同时支持多个容器。  如果服务器是 SDI 应用程序 \(或使用对话框接口的 miniserver\)，服务器的多个实例必须能够同时运行。  这允许应用程序一个单独的实例处理每个容器请求。  
+ A server application should support multiple containers simultaneously, in the event that more than one container will be used to edit an embedded or linked item. If the server is an SDI application (or a miniserver with a dialog box interface), multiple instances of the server must be able to run simultaneously. This allows a separate instance of the application to handle each container request.  
   
- 如果服务器是 MDI 应用程序，则可创建新的 MDI 子窗口时，容器需要编辑这些项。  这样，应用程序的单个实例用作支持多个容器。  
+ If the server is an MDI application, it can create a new MDI child window each time a container needs to edit an item. In this way, a single instance of the application can support multiple containers.  
   
- 服务器应用必须通知 OLE 系统 DLL，该怎么办如果服务器的一个实例已经在运行，在其他容器在请求其服务：是否应启动服务器的新实例或处理所有容器的服务器请求的实例。  
+ Your server application must tell the OLE system DLLs what to do if one instance of the server is already running when another container requests its services: whether it should launch a new instance of the server or direct all containers' requests to one instance of the server.  
   
- 有关更多详细信息在服务器，请参见：  
+ For more details on servers, see:  
   
--   [服务器：实现服务器](../mfc/servers-implementing-a-server.md)  
+-   [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)  
   
--   [服务器：实现服务器文档。](../mfc/servers-implementing-server-documents.md)  
+-   [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md)  
   
--   [服务器：实现就地框架窗口](../mfc/servers-implementing-in-place-frame-windows.md)  
+-   [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md)  
   
--   [服务器：服务器项目](../mfc/servers-server-items.md)  
+-   [Servers: Server Items](../mfc/servers-server-items.md)  
   
--   [服务器：用户界面问题](../mfc/servers-user-interface-issues.md)  
+-   [Servers: User-Interface Issues](../mfc/servers-user-interface-issues.md)  
   
-## 请参阅  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [容器](../mfc/containers.md)   
- [容器：高级功能](../mfc/containers-advanced-features.md)   
- [菜单和资源 \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [注册](../mfc/registration.md)   
- [自动化服务器](../mfc/automation-servers.md)
+ [Containers](../mfc/containers.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Registration](../mfc/registration.md)   
+ [Automation Servers](../mfc/automation-servers.md)
+
+

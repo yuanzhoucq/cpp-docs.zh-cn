@@ -1,40 +1,59 @@
 ---
-title: "使用标题控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "标题控件"
-  - "标题控件, 处理"
+title: Working with a Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], working with
+- header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用标题控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9504196cddd69effb45300a1130051e2b8a1c184
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-简单方法使用在控件 \([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\) 是与列表控件结合；之后参见 [使用 CListCtrl](../mfc/using-clistctrl.md) 本主题系列。  可以单独或使用控制标题。  您的 MFC 调用 **InitCommonControls**。  关键任务如下所示：  
+---
+# <a name="working-with-a-header-control"></a>Working with a Header Control
+The easy way to use a header control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) is in conjunction with a list control; see [Using CListCtrl](../mfc/using-clistctrl.md) later in this topic family. You can also use a header control by itself. MFC calls **InitCommonControls** for you. The key tasks are as follows:  
   
--   [创建标题控件](../mfc/creating-the-header-control.md)  
+-   [Creating the header control](../mfc/creating-the-header-control.md)  
   
--   [向标题控件添加项](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding items to the header control](../mfc/adding-items-to-the-header-control.md)  
   
--   [对标题控件中的项排序](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering items in the header control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [处理标题控件通知](../mfc/processing-header-control-notifications.md)  
+-   [Processing header-control notifications](../mfc/processing-header-control-notifications.md)  
   
- 如果可以对标题控件对象在父视图或在对话框类嵌入，破坏控件，则销毁时父。  
+ If the header control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.  
   
-## 请参阅  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

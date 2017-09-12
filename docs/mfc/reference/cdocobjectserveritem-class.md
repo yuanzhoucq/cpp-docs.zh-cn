@@ -1,5 +1,5 @@
 ---
-title: "CDocObjectServerItem 类 |Microsoft 文档"
+title: CDocObjectServerItem Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,12 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- document object server
-- CDocObjectServerItem class
-- servers [C++], ActiveX documents
-- docobject server
-- servers [C++], doc objects
-- ActiveX documents [C++], document server
+- CDocObjectServerItem [MFC], CDocObjectServerItem
+- CDocObjectServerItem [MFC], GetDocument
+- CDocObjectServerItem [MFC], OnHide
+- CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
 caps.latest.revision: 22
 author: mikeblome
@@ -43,51 +41,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 06cf873512fbf43b729d9a70f185582a4e48cafc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7076a90ba5af3a4d3b15f798bd8e4ba8f74d5d1f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
-实现特别针对 DocObject 服务器的 OLE 服务器谓词。  
+# <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem Class
+Implements OLE server verbs specifically for DocObject servers.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocObjectServerItem : public COleServerItem  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保护的构造函数  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|构造 `CDocObjectServerItem` 对象。|  
+|[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Constructs a `CDocObjectServerItem` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServerItem::GetDocument](#getdocument)|检索指向包含该项目的文档。|  
+|[CDocObjectServerItem::GetDocument](#getdocument)|Retrieves a pointer to the document that contains the item.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServerItem::OnHide](#onhide)|如果框架试图隐藏 DocObject 项，将引发异常。|  
-|[CDocObjectServerItem::OnShow](#onshow)|由框架调用以使 DocObject 项处于就地活动状态。 如果此项不是 DocObject，调用[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|  
+|[CDocObjectServerItem::OnHide](#onhide)|Throws an exception if the framework tries to hide a DocObject item.|  
+|[CDocObjectServerItem::OnShow](#onshow)|Called by the framework to make the DocObject item in-place active. If the item is not a DocObject, calls [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
-## <a name="remarks"></a>备注  
- `CDocObjectServerItem`定义可重写成员函数︰ [į](#onhide)， [OnOpen](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd)，和[OnShow](#onshow)。  
+## <a name="remarks"></a>Remarks  
+ `CDocObjectServerItem` defines overridable member functions: [OnHide](#onhide), [OnOpen](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd), and [OnShow](#onshow).  
   
- 若要使用`CDocObjectServerItem`，确保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)中重写您`COleServerDoc`的派生的类返回一个新`CDocObjectServerItem`对象。 如果需要更改您的项目中的任何功能，您可以创建您自己的新实例`CDocObjectServerItem`的派生类。  
+ To use `CDocObjectServerItem`, assure that the [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) override in your `COleServerDoc`-derived class returns a new `CDocObjectServerItem` object. If you need to change any functionality in your item, you can create a new instance of your own `CDocObjectServerItem`-derived class.  
   
- DocObjects 的进一步信息，请参阅[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)和[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 参考*。 另请参阅[Internet 前几个步骤︰ 活动文档](../../mfc/active-documents-on-the-internet.md)和[活动文档](../../mfc/active-documents-on-the-internet.md)。  
+ For further information on DocObjects, see [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) and [COleCmdUI](../../mfc/reference/colecmdui-class.md) in the *MFC Reference*. Also see [Internet First Steps: Active Documents](../../mfc/active-documents-on-the-internet.md) and [Active Documents](../../mfc/active-documents-on-the-internet.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -98,59 +96,59 @@ class CDocObjectServerItem : public COleServerItem
   
  `CDocObjectServerItem`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdocob.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdocob.h  
   
-##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
- 构造 `CDocObjectServerItem` 对象。  
+##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem  
+ Constructs a `CDocObjectServerItem` object.  
   
 ```  
 CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pServerDoc`  
- 指向将包含新的 DocObject 项目的文档的指针。  
+ A pointer to the document that will contain the new DocObject item.  
   
  `bAutoDelete`  
- 指示链接到该发布时是否可以删除该对象。 将参数设置为**FALSE**如果`CDocObjectServerItem`对象是文档的数据的组成部分。 将其设置为**TRUE**如果对象是用来标识在可以删除由框架的文档的数据中的范围的辅助结构。  
+ Indicates whether the object can be deleted when a link to it is released. Set the argument to **FALSE** if the `CDocObjectServerItem` object is an integral part of your document's data. Set it to **TRUE** if the object is a secondary structure used to identify a range in your document's data that can be deleted by the framework.  
   
-##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
- 检索指向包含该项目的文档。  
+##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  
+ Retrieves a pointer to the document that contains the item.  
   
 ```  
 COleServerDoc* GetDocument() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向包含的项; 文档的指针**NULL**如果该项不是文档的一部分。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document that contains the item; **NULL** if the item is not part of a document.  
   
-### <a name="remarks"></a>备注  
- 这将允许访问服务器文档作为参数传递到[CDocObjectServerItem](#cdocobjectserveritem)构造函数。  
+### <a name="remarks"></a>Remarks  
+ This allows access to the server document that you passed as an argument to the [CDocObjectServerItem](#cdocobjectserveritem) constructor.  
   
-##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
- 由框架表示隐藏该项调用。  
+##  <a name="onhide"></a>  CDocObjectServerItem::OnHide  
+ Called by the framework to hide the item.  
   
 ```  
 virtual void OnHide();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果该项是 DocObject，默认实现将引发异常。 不能隐藏活动 DocObject 项，因为它采用整个视图。 您必须先停用 DocObject 项以使其消失。 如果此项不是 DocObject，默认实现调用[COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide)。  
+### <a name="remarks"></a>Remarks  
+ The default implementation throws an exception if the item is a DocObject. You cannot hide an active DocObject item because it takes the whole view. You must deactivate the DocObject item to make it disappear. If the item is not a DocObject, the default implementation calls [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
   
-##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
- 由框架调用以指示服务器应用程序，以便 DocObject 项处于就地活动状态。  
+##  <a name="onshow"></a>  CDocObjectServerItem::OnShow  
+ Called by the framework to instruct the server application to make the DocObject item in-place active.  
   
 ```  
 virtual void OnShow();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果此项不是 DocObject，默认实现调用[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen)。 如果您想要执行特殊处理打开 DocObject 项时，重写此函数。  
+### <a name="remarks"></a>Remarks  
+ If the item is not a DocObject, the default implementation calls [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Override this function if you want to perform special processing when opening a DocObject item.  
   
-## <a name="see-also"></a>另请参阅  
- [COleServerItem 类](../../mfc/reference/coleserveritem-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CDocObjectServer 类](../../mfc/reference/cdocobjectserver-class.md)   
- [COleDocObjectItem 类](../../mfc/reference/coledocobjectitem-class.md)
+## <a name="see-also"></a>See Also  
+ [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocObjectServer Class](../../mfc/reference/cdocobjectserver-class.md)   
+ [COleDocObjectItem Class](../../mfc/reference/coledocobjectitem-class.md)
 

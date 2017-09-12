@@ -1,37 +1,56 @@
 ---
-title: "重写标准命令传送 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令处理, 传送命令"
-  - "命令传送, 重写"
-  - "MFC, 命令传送"
-  - "重写, 标准命令传送"
+title: Overriding the Standard Command Routing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command routing [MFC], overriding
+- command handling [MFC], routing commands
+- overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 重写标准命令传送
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3e3ec91173fb783709d9ca2e32f6faefe2e792bd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-有时，当必须实现标准框架的一些变体路由时，可以重写该成员。  目的是将一个或多个类的路由通过重写这些类的 `OnCmdMsg`。  所示：  
+---
+# <a name="overriding-the-standard-command-routing"></a>Overriding the Standard Command Routing
+In rare cases when you must implement some variation of the standard framework routing, you can override it. The idea is to change the routing in one or more classes by overriding `OnCmdMsg` in those classes. Do so:  
   
--   在中断顺序传递到非默认对象的类。  
+-   In the class that breaks the order to pass to a nondefault object.  
   
--   在新的非默认的对象或在命令目标可能会传递命令。  
+-   In the new nondefault object or in command targets it might in turn pass commands to.  
   
- 如果插入某些新的路由到对象，则类必须是命令目标类。  在 `OnCmdMsg`的重写版本，请确保调用重写的版本。  参见 `CCmdTarget` 类。这些类与 `CView` 和 **CDocument** 的 [OnCmdMsg](../Topic/CCmdTarget::OnCmdMsg.md) 成员函数" *MFC 参考* 和生成中提供的源代码的示例。  
+ If you insert some new object into the routing, its class must be a command-target class. In your overriding versions of `OnCmdMsg`, be sure to call the version that you're overriding. See the [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) member function of class `CCmdTarget` in the *MFC Reference* and the versions in such classes as `CView` and **CDocument** in the supplied source code for examples.  
   
-## 请参阅  
- [框架如何调用处理程序](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

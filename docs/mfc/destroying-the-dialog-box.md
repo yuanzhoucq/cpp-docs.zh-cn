@@ -1,36 +1,55 @@
 ---
-title: "销毁对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "析构, 对话框"
-  - "对话框, 删除"
-  - "对话框, 销毁"
-  - "对话框, 移除"
-  - "MFC 对话框, 销毁"
-  - "有模式对话框, 销毁"
-  - "无模式对话框, 销毁"
+title: Destroying the Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], deleting
+- destruction, dialog box
+- dialog boxes [MFC], destroying
+- dialog boxes [MFC], removing
+- modeless dialog boxes [MFC], destroying
+- MFC dialog boxes [MFC], destroying
+- modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 销毁对话框
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f076adca6c694d6f0a1656ce554238a80c4e7b9d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-模式对话框时堆栈上帧通常创建和销毁创建其末尾的函数。  当对象超出范围时，对话框对象的析构函数调用。  
+---
+# <a name="destroying-the-dialog-box"></a>Destroying the Dialog Box
+Modal dialog boxes are normally created on the stack frame and destroyed when the function that created them ends. The dialog object's destructor is called when the object goes out of scope.  
   
- 无模式对话框是父视图通常创建并拥有或框架窗口 \(应用程序的主框架窗口或文档框架窗口。  默认程序 [DestroyWindow](../Topic/CWnd::DestroyWindow.md)[OnClose](../Topic/CWnd::OnClose.md) 处理调用，也就销毁对话框窗口。  如果对话框仅突出，没有到对象或其他特殊所有权语义的指针，则应该重写 [PostNcDestroy](../Topic/CWnd::PostNcDestroy.md) 销毁 C\+\+ 对话框对象。  还应重写并调用 `DestroyWindow`。它的内部。[OnCancel](../Topic/CDialog::OnCancel.md) 当不再需要时，否则，对话框的所有者应销毁 C\+\+ 对象。  
+ Modeless dialog boxes are normally created and owned by a parent view or frame window — the application's main frame window or a document frame window. The default [OnClose](../mfc/reference/cwnd-class.md#onclose) handler calls [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), which destroys the dialog-box window. If the dialog box stands alone, with no pointers to it or other special ownership semantics, you should override [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) to destroy the C++ dialog object. You should also override [OnCancel](../mfc/reference/cdialog-class.md#oncancel) and call `DestroyWindow` from within it. If not, the owner of the dialog box should destroy the C++ object when it is no longer necessary.  
   
-## 请参阅  
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

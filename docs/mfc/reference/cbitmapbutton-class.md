@@ -1,5 +1,5 @@
 ---
-title: "CBitmapButton 类 |Microsoft 文档"
+title: CBitmapButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,9 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- buttons, bitmap
-- CBitmapButton class
-- bitmaps, button controls
+- CBitmapButton [MFC], CBitmapButton
+- CBitmapButton [MFC], AutoLoad
+- CBitmapButton [MFC], LoadBitmaps
+- CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
 caps.latest.revision: 22
 author: mikeblome
@@ -40,87 +41,87 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0b07f6b12e178d8e324313ea3b0f6de9ae7420c9
-ms.openlocfilehash: 16d39cb380b75e6dcef71dda01626f120d5c12fb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fee359237607174805f39c54c4d79299ebbafaed
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbitmapbutton-class"></a>CBitmapButton 类
-创建使用位图图像而非文本进行标记的按钮控件。  
+# <a name="cbitmapbutton-class"></a>CBitmapButton Class
+Creates pushbutton controls labeled with bitmapped images instead of text.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBitmapButton : public CButton  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapButton::CBitmapButton](#cbitmapbutton)|构造 `CBitmapButton` 对象。|  
+|[CBitmapButton::CBitmapButton](#cbitmapbutton)|Constructs a `CBitmapButton` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapButton::AutoLoad](#autoload)|将在对话框中的按钮相关联的对象与`CBitmapButton`类中，按名称加载 bitmap(s) 和大小以适合该位图的按钮。|  
-|[CBitmapButton::LoadBitmaps](#loadbitmaps)|通过从应用程序的资源文件加载一个或多个命名的位图资源并将位图附加到对象来初始化对象。|  
-|[CBitmapButton::SizeToContent](#sizetocontent)|调整大小以容纳该位图的按钮。|  
+|[CBitmapButton::AutoLoad](#autoload)|Associates a button in a dialog box with an object of the `CBitmapButton` class, loads the bitmap(s) by name, and sizes the button to fit the bitmap.|  
+|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Initializes the object by loading one or more named bitmap resources from the application's resource file and attaching the bitmaps to the object.|  
+|[CBitmapButton::SizeToContent](#sizetocontent)|Sizes the button to accommodate the bitmap.|  
   
-## <a name="remarks"></a>备注  
- `CBitmapButton`对象包含最多四个包含一个按钮可以承担的不同状态的图像的位图︰ 向上 （或普通），向下 （或所选），中心，且禁用。 只有第一个位图是必需的;有些则是可选的。  
+## <a name="remarks"></a>Remarks  
+ `CBitmapButton` objects contain up to four bitmaps, which contain images for the different states a button can assume: up (or normal), down (or selected), focused, and disabled. Only the first bitmap is required; the others are optional.  
   
- 位图按钮的图像包括为图像本身或图像周围的边框。 边框通常在发挥作用显示按钮的状态。 例如，具有焦点的状态的位图通常是类似的松开状态但从边框或边界的粗实线虚线的矩形嵌入了。 位图为禁用状态通常类似于一个松开状态但具有较低的对比度 （像灰显或灰色菜单选择）。  
+ Bitmap-button images include the border around the image as well as the image itself. The border typically plays a part in showing the state of the button. For example, the bitmap for the focused state usually is like the one for the up state but with a dashed rectangle inset from the border or a thick solid line at the border. The bitmap for the disabled state usually resembles the one for the up state but has lower contrast (like a dimmed or grayed menu selection).  
   
- 这些位图可以是任意大小的但所有看做就好像它们是与松开状态的位图的大小相同。  
+ These bitmaps can be of any size, but all are treated as if they were the same size as the bitmap for the up state.  
   
- 各种应用程序需要不同的位图图像的组合︰  
+ Various applications demand different combinations of bitmap images:  
   
-|向上|向下|已设定焦点|已禁用|应用程序|  
+|Up|Down|Focused|Disabled|Application|  
 |--------|----------|-------------|--------------|-----------------|  
 |×||||Bitmap|  
-|×|×|||按钮而无需**WS_TABSTOP**样式|  
-|×|×|×|×|与所有状态对话框按钮|  
-|×|×|×||使用对话框按钮**WS_TABSTOP**样式|  
+|×|×|||Button without **WS_TABSTOP** style|  
+|×|×|×|×|Dialog button with all states|  
+|×|×|×||Dialog button with **WS_TABSTOP** style|  
   
- 创建位图按钮控件时，设置**BS_OWNERDRAW**指定按钮为所有者描述的样式。 这会导致 Windows 向发送`WM_MEASUREITEM`和`WM_DRAWITEM`的按钮，则消息框架如何处理这些消息，并管理您按钮的外观。  
+ When creating a bitmap-button control, set the **BS_OWNERDRAW** style to specify that the button is owner-drawn. This causes Windows to send the `WM_MEASUREITEM` and `WM_DRAWITEM` messages for the button; the framework handles these messages and manages the appearance of the button for you.  
   
-### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>在窗口的工作区中创建的位图按钮控件  
+### <a name="to-create-a-bitmap-button-control-in-a-windows-client-area"></a>To create a bitmap-button control in a window's client area  
   
-1.  创建一至四个位图图像的按钮。  
+1.  Create one to four bitmap images for the button.  
   
-2.  构造[CBitmapButton](#cbitmapbutton)对象。  
+2.  Construct the [CBitmapButton](#cbitmapbutton) object.  
   
-3.  调用[创建](../../mfc/reference/cbutton-class.md#create)函数创建的 Windows 按钮控件并将其附加到`CBitmapButton`对象。  
+3.  Call the [Create](../../mfc/reference/cbutton-class.md#create) function to create the Windows button control and attach it to the `CBitmapButton` object.  
   
-4.  调用[LoadBitmaps](#loadbitmaps)成员函数以在构造位图按钮之后加载位图资源。  
+4.  Call the [LoadBitmaps](#loadbitmaps) member function to load the bitmap resources after the bitmap button is constructed.  
   
-### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>若要在对话框中包含的位图按钮控件  
+### <a name="to-include-a-bitmap-button-control-in-a-dialog-box"></a>To include a bitmap-button control in a dialog box  
   
-1.  创建一至四个位图图像的按钮。  
+1.  Create one to four bitmap images for the button.  
   
-2.  使用一个所有者绘制按钮放置需位图按钮的位置创建对话框模板。 在模板中按钮的大小并不重要。  
+2.  Create a dialog template with an owner-draw button positioned where you want the bitmap button. The size of the button in the template does not matter.  
   
-3.  设置按钮的标题为一个值，如" **MYIMAGE**"和定义按钮的符号，如**IDC_MYIMAGE**。  
+3.  Set the button's caption to a value such as " **MYIMAGE**" and define a symbol for the button such as **IDC_MYIMAGE**.  
   
-4.  在应用程序的资源脚本中，为每个构造通过附加的一个字母"U，""D"、"F"、 ID 为按钮创建的映像或者"X"（对于向上、 下、 已设定焦点，并禁用） 用于在按钮标题的字符串到步骤 3。 按钮标题为" **MYIMAGE**，"例如，Id 将" **MYIMAGEU**，"" **MYIMAGED**，"" **MYIMAGEF**，"和" **MYIMAGEX**。" 您**必须**指定在双引号内位图的 ID。 否则为资源编辑器将分配给资源的一个整数，并在加载图像时，MFC 将会失败。  
+4.  In your application's resource script, give each of the images created for the button an ID constructed by appending one of the letters "U," "D," "F," or "X" (for up, down, focused, and disabled) to the string used for the button caption in step 3. For the button caption " **MYIMAGE**," for example, the IDs would be " **MYIMAGEU**," " **MYIMAGED**," " **MYIMAGEF**," and " **MYIMAGEX**." You **must** specify the ID of your bitmaps within double quotes. Otherwise the resource editor will assign an integer to the resource and MFC will fail when loading the image.  
   
-5.  在您的应用程序的对话框类 (派生自`CDialog`)，添加`CBitmapButton`成员对象。  
+5.  In your application's dialog class (derived from `CDialog`), add a `CBitmapButton` member object.  
   
-6.  在`CDialog`对象的[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)例程，调用`CBitmapButton`对象的[AutoLoad](#autoload)函数，请使用作为参数的按钮控件 ID 和`CDialog`对象的**这**指针。  
+6.  In the `CDialog` object's [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) routine, call the `CBitmapButton` object's [AutoLoad](#autoload) function, using as parameters the button's control ID and the `CDialog` object's **this** pointer.  
   
- 如果想要处理 Windows 通知消息，如**BN_CLICKED**、 已发送到其父级的位图按钮控件 (通常派生自该类**CDialog)**，将添加到`CDialog`-派生对象消息映射条目和消息处理程序成员函数，为每个消息。 发送的通知`CBitmapButton`对象是否不同于由发送[CButton](../../mfc/reference/cbutton-class.md)对象。  
+ If you want to handle Windows notification messages, such as **BN_CLICKED**, sent by a bitmap-button control to its parent (usually a class derived from **CDialog)**, add to the `CDialog`-derived object a message-map entry and message-handler member function for each message. The notifications sent by a `CBitmapButton` object are the same as those sent by a [CButton](../../mfc/reference/cbutton-class.md) object.  
   
- 此类[CToolBar](../../mfc/reference/ctoolbar-class.md)位图按钮到采用不同的方法。  
+ The class [CToolBar](../../mfc/reference/ctoolbar-class.md) takes a different approach to bitmap buttons.  
   
- 有关详细信息`CBitmapButton`，请参阅[控件](../../mfc/controls-mfc.md)。  
+ For more information on `CBitmapButton`, see [Controls](../../mfc/controls-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -131,11 +132,11 @@ class CBitmapButton : public CButton
   
  `CBitmapButton`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton::AutoLoad  
- 将在对话框中的按钮相关联的对象与`CBitmapButton`类中，按名称加载 bitmap(s) 和大小以适合该位图的按钮。  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
+ Associates a button in a dialog box with an object of the `CBitmapButton` class, loads the bitmap(s) by name, and sizes the button to fit the bitmap.  
   
 ```  
 BOOL AutoLoad(
@@ -143,37 +144,37 @@ BOOL AutoLoad(
     CWnd* pParent);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nID`  
- 该按钮的控件 id。  
+ The button's control ID.  
   
  `pParent`  
- 指向拥有按钮的对象的指针。  
+ Pointer to the object that owns the button.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 使用`AutoLoad`函数以便初始化为位图按钮的对话框中的一个所有者绘制按钮。 中的备注的说明使用此函数`CBitmapButton`类。  
+### <a name="remarks"></a>Remarks  
+ Use the `AutoLoad` function to initialize an owner-draw button in a dialog box as a bitmap button. Instructions for using this function are in the remarks for the `CBitmapButton` class.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCControlLadenDialog #&75;](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
- 创建一个 `CBitmapButton` 对象。  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
+ Creates a `CBitmapButton` object.  
   
 ```  
 CBitmapButton();
 ```  
   
-### <a name="remarks"></a>备注  
- 创建 c + + 后`CBitmapButton`对象，请调用[CButton::Create](../../mfc/reference/cbutton-class.md#create)创建 Windows 按钮控件并将其附加到`CBitmapButton`对象。  
+### <a name="remarks"></a>Remarks  
+ After creating the C++ `CBitmapButton` object, call [CButton::Create](../../mfc/reference/cbutton-class.md#create) to create the Windows button control and attach it to the `CBitmapButton` object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCControlLadenDialog #&57;](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
- 如果你想要加载位图图像按其资源名称或 ID 号或不能使用应用程序识别使用此函数`AutoLoad`正常，因为; 例如，将创建一个不属于对话框中的位图按钮。  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
+ Use this function when you want to load bitmap images identified by their resource names or ID numbers, or when you cannot use the `AutoLoad` function because, for example, you are creating a bitmap button that is not part of a dialog box.  
   
 ```  
 BOOL LoadBitmaps(
@@ -190,50 +191,50 @@ BOOL LoadBitmaps(
     UINT nIDBitmapResourceDisabled = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpszBitmapResource*  
- 指向以 null 结尾的字符串，其中包含为位图按钮正常或"向上"状态的位图名称。 必需。  
+ Points to the null-terminated string that contains the name of the bitmap for a bitmap button's normal or "up" state. Required.  
   
  *lpszBitmapResourceSel*  
- 指向包含位图的名称，为选定的位图按钮的 null 终止的字符串或"关闭"状态。 可能是**NULL**。  
+ Points to the null-terminated string that contains the name of the bitmap for a bitmap button's selected or "down" state. May be **NULL**.  
   
  *lpszBitmapResourceFocus*  
- 指向以 null 结尾的字符串，其中包含位图的名称，位图按钮的有针对性的状态。 可能是**NULL**。  
+ Points to the null-terminated string that contains the name of the bitmap for a bitmap button's focused state. May be **NULL**.  
   
  *lpszBitmapResourceDisabled*  
- 指向以 null 结尾的字符串，其中包含一个位图按钮已禁用状态的位图的名称。 可能是**NULL**。  
+ Points to the null-terminated string that contains the name of the bitmap for a bitmap button's disabled state. May be **NULL**.  
   
  *nIDBitmapResource*  
- 指定用于正常情况的位图按钮或"向上"状态的位图资源的资源 ID 号。 必需。  
+ Specifies the resource ID number of the bitmap resource for a bitmap button's normal or "up" state. Required.  
   
  *nIDBitmapResourceSel*  
- 指定位图资源的资源 ID 号，为选定的位图按钮或"关闭"状态。 可能为 0。  
+ Specifies the resource ID number of the bitmap resource for a bitmap button's selected or "down" state. May be 0.  
   
  *nIDBitmapResourceFocus*  
- 指定位图按钮具有焦点的状态的位图资源的资源 ID 号。 可能为 0。  
+ Specifies the resource ID number of the bitmap resource for a bitmap button's focused state. May be 0.  
   
  *nIDBitmapResourceDisabled*  
- 指定位图按钮的禁用状态的位图资源的资源 ID 号。 可能为 0。  
+ Specifies the resource ID number of the bitmap resource for a bitmap button's disabled state. May be 0.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCControlLadenDialog #&58; 页](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
- 调用此函数可调整大小为位图的大小的位图按钮。  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
+ Call this function to resize a bitmap button to the size of the bitmap.  
   
 ```  
 void SizeToContent();
 ```  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCControlLadenDialog #&59;](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 CTRLTEST](../../visual-cpp-samples.md)   
- [CButton 类](../../mfc/reference/cbutton-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLTEST](../../visual-cpp-samples.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

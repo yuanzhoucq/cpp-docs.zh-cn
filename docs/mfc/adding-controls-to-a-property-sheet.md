@@ -1,33 +1,51 @@
 ---
-title: "将控件添加到属性表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控件 [MFC], 添加到属性表"
-  - "属性表, 添加控件"
+title: Adding Controls to a Property Sheet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], adding to property sheets
+- property sheets, adding controls
 ms.assetid: 24ad4c0b-c1db-4850-b9f0-34aae8d74571
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 将控件添加到属性表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7174b205c6eeb11d55e3ca2bd5fbc3df6f653414
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-默认情况下，属性表将为属性页、选项卡索引和OK，取消，应用按钮分配窗口区域。\(处于非模式属性表没有OK,取消，和应用按钮。\)您可以添加其他控件到属性表。  例如，您可以在属性页区域右侧添加该预览窗口显示用户当前设置将会是什么样子，如果应用到外部对象。  
+---
+# <a name="adding-controls-to-a-property-sheet"></a>Adding Controls to a Property Sheet
+By default, a property sheet allocates window area for the property pages, the tab index, and the OK, Cancel, and Apply buttons. (A modeless property sheet does not have the OK, Cancel, and Apply buttons.) You can add other controls to the property sheet. For example, you can add a preview window to the right of the property page area to show the user what the current settings would look like if applied to an external object.  
   
- 可以将控件添加到在 `OnCreate` 处理程序的属性表对话框。  包容的附加控件通常需要扩展属性表对话框的大小。  在调用基类**CPropertySheet::OnCreate**之后,调用 [GetWindowRect](../Topic/CWnd::GetWindowRect.md) 获取当前分配的属性表窗口的宽度和高度，展开矩形的尺寸，同时调用 [MoveWindow](../Topic/CWnd::MoveWindow.md) 更改属性表窗口的大小。  
+ You can add controls to the property sheet dialog in the `OnCreate` handler. Accommodating additional controls usually requires expanding the size of the property sheet dialog. After calling the base class **CPropertySheet::OnCreate**, call [GetWindowRect](../mfc/reference/cwnd-class.md#getwindowrect) to get the width and height of the currently allocated property sheet window, expand the rectangle's dimensions, and call [MoveWindow](../mfc/reference/cwnd-class.md#movewindow) to change the size of the property sheet window.  
   
-## 请参阅  
- [属性表](../mfc/property-sheets-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)   
  [CPropertyPage Class](../mfc/reference/cpropertypage-class.md)   
  [CPropertySheet Class](../mfc/reference/cpropertysheet-class.md)
+

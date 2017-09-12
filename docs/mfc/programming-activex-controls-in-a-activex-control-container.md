@@ -1,101 +1,119 @@
 ---
-title: "ActiveX 控件容器：对 ActiveX 控件容器中的 ActiveX 控件编程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件容器 [C++], 访问 ActiveX 控件"
-  - "ActiveX 控件容器 [C++], 包装类"
-  - "ActiveX 控件 [C++], 访问"
-  - "ActiveX 控件 [C++], 包装类"
-  - "“确认类”对话框"
-  - "头文件 [C++], 对于 ActiveX 控件包装类"
-  - "MFC ActiveX 控件 [C++], 在容器中访问"
-  - "包装类 [C++], ActiveX 控件"
-  - "包装类 [C++], using"
+title: 'ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], accessing ActiveX controls
+- Confirm Classes dialog box
+- wrapper classes [MFC], ActiveX controls
+- ActiveX control containers [MFC], wrapper classes
+- ActiveX controls [MFC], accessing
+- MFC ActiveX controls [MFC], accessing in containers
+- header files [MFC], for ActiveX control wrapper class
+- wrapper classes [MFC], using
+- ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
 caps.latest.revision: 8
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# ActiveX 控件容器：对 ActiveX 控件容器中的 ActiveX 控件编程
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2cc45529721bb7b55511a5447ecd947d955cf4e2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文描述的访问公开的 ActiveX 控件嵌入的 [方法](../mfc/mfc-activex-controls-methods.md)[属性](../mfc/mfc-activex-controls-properties.md) 和过程。  基本上，您将执行以下步骤：  
+---
+# <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container
+This article describes the process for accessing the exposed [methods](../mfc/mfc-activex-controls-methods.md) and [properties](../mfc/mfc-activex-controls-properties.md) of embedded ActiveX controls. Basically, you will follow these steps:  
   
-1.  使用 库的[插入到 ActiveX 容器 ActiveX 控件项目](../mfc/inserting-a-control-into-a-control-container-application.md)。  
+1.  [Insert an ActiveX control into the ActiveX container project](../mfc/inserting-a-control-into-a-control-container-application.md) using Gallery.  
   
-2.  [定义的成员变量](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) \(或访问其他窗体\) 相同类型作为 ActiveX 控件包装类。  
+2.  [Define a member variable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) (or other form of access) of the same type as the ActiveX control wrapper class.  
   
-3.  使用包装类中的预定义的成员函数上的[编程 ActiveX 控件](#_core_programming_the_activex_control)。  
+3.  [Program the ActiveX control](#_core_programming_the_activex_control) using predefined member functions of the wrapper class.  
   
- 对于本讨论中，假设您创建了基于对话框的项目 \(名为\) 的容器 ActiveX 控件。  Circ 示例控件，Circ，将添加到生成的项目。  
+ For this discussion, assume you've created a dialog-based project (named Container) with ActiveX control support. The Circ sample control, Circ, will be added to the resulting project.  
   
- 一旦 Circ 控件插入到项目 \(步骤 1\)，Circ 插入控件的实例放置到应用程序的主对话框。  
+ Once the Circ control is inserted into the project (step 1), insert an instance of the Circ control into the application's main dialog box.  
   
-## 过程  
+## <a name="procedures"></a>Procedures  
   
-#### 添加 Circ 控件添加到对话框模板  
+#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>To add the Circ control to the dialog template  
   
-1.  ActiveX 控件容器加载项目。  对于此例，请使用 `Container` 项目。  
+1.  Load the ActiveX control container project. For this example, use the `Container` project.  
   
-2.  单击“资源视图”选项卡。  
+2.  Click the Resource View tab.  
   
-3.  打开 **对话框** 文件夹。  
+3.  Open the **Dialog** folder.  
   
-4.  双击主对话框模板。  对于此例，请使用 **IDD\_CONTAINER\_DIALOG**。  
+4.  Double-click the main dialog box template. For this example, use **IDD_CONTAINER_DIALOG**.  
   
-5.  单击工具箱上的 Circ 控件图标。  
+5.  Click the Circ control icon on the Toolbox.  
   
-6.  单击对话框中的一个、Circ 插入控件。  
+6.  Click a spot within the dialog box to insert the Circ control.  
   
-7.  从 **文件** 菜单中，选择 **全部保存** 保存到对话框模板的所有修改。  
+7.  From the **File** menu, choose **Save All** to save all modifications to the dialog box template.  
   
-## 为修改项目  
- 若要启用容器应用程序访问 Circ 控件，Visual C\+\+ 会自动将包装类 \(`CCirc`\) 实现文件 \(.cpp\) 到容器项目和包装类 \(标题。H 到对话框\) 头文件的文件：  
+## <a name="modifications-to-the-project"></a>Modifications to the Project  
+ To enable the Container application to access the Circ control, Visual C++ automatically adds the wrapper class (`CCirc`) implementation file (.CPP) to the Container project and the wrapper class header (.H) file to the dialog box header file:  
   
- [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_1.h)]  
+ [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a> 包装类 \(标题。H\) 文件  
- 若要获取和设置属性 \(并调用方法\) Circ 控件，`CCirc` 包装类提供所有公开的方法和属性的声明。  在该示例中，以下声明在 CIRC.H. 找到。  下面的示例为定义 ActiveX 控件的公开接口类的 `CCirc` 部分：  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> The Wrapper Class Header (.H) File  
+ To get and set properties (and invoke methods) for the Circ control, the `CCirc` wrapper class provides a declaration of all exposed methods and properties. In the example, these declarations are found in CIRC.H. The following sample is the portion of class `CCirc` that defines the exposed interfaces of the ActiveX control:  
   
- [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_2.h)]  
-[!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_3.h)]  
+ [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
+[!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_3.h)]  
   
- 使用常规 C\+\+ 语法，这些函数可以从其他应用程序的过程然后调用。  有关使用此成员函数集的更多信息，请参见 [编程 ActiveX 控件](#_core_programming_the_activex_control)节控制访问方法和属性。  
+ These functions can then be called from other of the application's procedures using normal C++ syntax. For more information on using this member function set to access the control's methods and properties, see the section [Programming the ActiveX control](#_core_programming_the_activex_control).  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a> 为项目成员变量的修改  
- 在 ActiveX 控件在容器被添加到项目，并嵌入其可以由项目的其他部分访问。  简单的访问方法控件是对类的对话框，[创建成员变量](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)`CContainerDlg` \(步骤 2\)，是类型相同的和包装类添加到项目。Visual C\+\+。  可以使用成员变量随时访问嵌入的控件。  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> Member Variable Modifications to the Project  
+ Once the ActiveX control has been added to the project and embedded in a dialog box container, it can be accessed by other parts of the project. The easiest way to access the control is to [create a member variable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) of the dialog class, `CContainerDlg` (step 2), that is of the same type as the wrapper class added to the project by Visual C++. You can then use the member variable to access the embedded control at any time.  
   
- 在 **添加成员变量** 对话框将 `m_circctl` 成员变量添加到项目时，它还添加下面一行代码添加到头文件中 \(。`CContainerDlg` 类的 H\):  
+ When the **Add Member Variable** dialog box adds the `m_circctl` member variable to the project, it also adds the following lines to the header file (.H) of the `CContainerDlg` class:  
   
- [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_4.h)]  
-[!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_5.h)]  
+ [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
+[!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
   
- 此外，对 **DDX\_Control** 的调用会自动添加到 `DoDataExchange`的 `CContainerDlg` 实现：  
+ In addition, a call to **DDX_Control** is automatically added to the `CContainerDlg`'s implementation of `DoDataExchange`:  
   
- [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a> 编程 ActiveX 控件  
- 此时，您将插入 ActiveX 控件添加到对话框模板并为其创建的成员变量。  现在可以使用"一般 C\+\+ 语法访问嵌入式控件的属性和方法。  
+##  <a name="_core_programming_the_activex_control"></a> Programming the ActiveX Control  
+ At this point, you have inserted the ActiveX control into your dialog template and created a member variable for it. You can now use common C++ syntax to access the properties and methods of the embedded control.  
   
- 作为在头文件注释 \( [包装类 \(标题。H\) 文件](#_core_the_wrapper_class_header_28h29_file)\)，\(。`CCirc` 包装类的 H\)，在这种情况下，CIRC.H 包含列表成员函数可以使用获取并设置所有公开的属性值。  公开的方法成员函数也可用。  
+ As noted (in [The Wrapper Class Header (.H) File](#_core_the_wrapper_class_header_28h29_file)), the header file (.H) for the `CCirc` wrapper class, in this case CIRC.H, contains a list of member functions that you can use to get and set any exposed property value. Member functions for exposed methods are also available.  
   
- 修改控件属性的公共可在主对话框类的 `OnInitDialog` 成员函数。  调用该函数时，在对话框中显示并使用初始化之前，其内容包括任何控件。  
+ A common place to modify the control's properties is in the `OnInitDialog` member function of the main dialog class. This function is called just before the dialog box appears and is used to initialize its contents, including any of its controls.  
   
- 下面的代码示例使用 `m_circctl` 成员变量来修改 Circ 嵌入的控件的标题和 CircleShape 属性：  
+ The following code example uses the `m_circctl` member variable to modify the Caption and CircleShape properties of the embedded Circ control:  
   
- [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   
-## 请参阅  
- [ActiveX 控件容器](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

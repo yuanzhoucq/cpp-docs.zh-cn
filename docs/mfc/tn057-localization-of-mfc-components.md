@@ -1,84 +1,104 @@
 ---
-title: "TN057：MFC 组件的本地化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.components"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "组件 [MFC], 本地化"
-  - "DLL [C++], 本地化 MFC"
-  - "本地化 [C++], MFC 组件"
-  - "本地化 [C++], MFC 资源"
-  - "本地化 [C++], 资源"
-  - "MFC DLL [C++], 本地化"
-  - "资源 [MFC], 本地化"
-  - "TN057"
+title: 'TN057: Localization of MFC Components | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.components
+dev_langs:
+- C++
+helpviewer_keywords:
+- components [MFC], localizing
+- TN057
+- resources [MFC], localization
+- localization [MFC], MFC resources
+- localization [MFC], MFC components
+- MFC DLLs [MFC], localizing
+- DLLs [MFC], localizing MFC
+- localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN057：MFC 组件的本地化
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 976e4f5154191262498cd5adb1c850c681d6e985
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn057-localization-of-mfc-components"></a>TN057: Localization of MFC Components
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此注释说明某些可以使用本地化组件的设计和过程，因此，如果应用程序或如何使用 MFC 的 OLE 控件或 DLL。  
+ This note describes some of the designs and procedures you can use to localize your component, if it an application or an OLE control or a DLL that uses MFC.  
   
-## 概述  
- 真正理解两个解决的问题，当本地化使用 MFC 的组件。  首先，必须本地化的资源字符串、对话框和特定于组件的其他资源。  大多数组件生成也使用 MFC 中并且使用被 MFC 定义的资源。  必须提供本地化的 MFC 资源。  所幸，MFC 还提供多种语言。  
+## <a name="overview"></a>Overview  
+ There are really two issues to resolve when localizing a component that uses MFC. First, you must localize your own resources — strings, dialogs, and other resources that are specific to your component. Most components built using MFC also include and use a number of resources that are defined by MFC. You must provide localized MFC resources as well. Fortunately, several languages are already provided by MFC itself.  
   
- 此外，在其目标环境 \(或 DBCS 欧洲启用的环境\) 应准备组件运行。  在很大程度上，这取决于被视为字符的高位正确设置和处理具有双字节字符字符串的应用程序。  MFC 为这两个环境启用，默认情况下，此类使用与的，具有对不同资源的所有平台在将时间的唯一是全球性二进制是可能的。  
+ In addition, your component should be prepared to run in its target environment (European or DBCS-enabled environment). For the most part, this depends on your application treating characters with the high bit set correctly and handling strings with double byte characters. MFC is enabled, by default, for both of these environments, such that it is possible to have a single worldwide binary that is used on all platforms with just different resources plugged in at setup time.  
   
-## 本地化组件中的资源  
- 本地化应用程序或 DLL 应涉及替换资源与匹配区域性的资源。  对于的资源，这是相对简单：在资源编辑器编辑的资源并生成应用程序。  如果代码未正确编写将字符串文本或要本地化硬编码到 C\+\+ 源代码 \- 所有本地化可供修改资源完成。  事实上，您可以实现组件的所有本地化版本提供根本不涉及原始代码的版本。  这更复杂，但很值并用于选择 MFC 的机制。  通过直接加载 EXE 或 DLL 文件导入和资源编辑器编辑资源本地化应用程序也是可能的。  在可能时，它要求那些更改的 reapplication，每次生成应用程序的新版本。  
+## <a name="localizing-your-components-resources"></a>Localizing your Component's Resources  
+ Localizing your application or DLL should involve simply replacing the resources with resources that match the target language. For your own resources, this is relatively simple: edit the resources in the resource editor and build your application. If your code is written properly there will be no strings or text that you wish to localize hard-coded into your C++ source code - all localization can be done by simply modifying resources. In fact, you can implement your component such that all providing a localized version does not even involve a build of the original code. This is more complex, but is well worth it and is the mechanism chosen for MFC itself. It is also possible to localize an application by loading the EXE or DLL file into the resource editor and editing the resources directly. While possible, it requires reapplication of those changes each time you build a new version of your application.  
   
- 查找是在一个单独的 DLL 的所有资源的一种避免，有时称为附属 DLL。  此 DLL 动态然后在运行时加载资源，则该 DLL 加载而不是从主模块使用任何代码。  MFC 直接支持此方法。  考虑一应用程序调用 MYAPP.EXE;它可能在 DLL 中的所有调用 MYRES.DLL 其资源。  在应用程序 `InitInstance` 将执行下加载该 DLL 和使 MFC 该位置加载资源：  
+ One way to avoid that is to locate all resources in a separate DLL, sometimes called a satellite DLL. This DLL is then loaded dynamically at runtime and the resources are loaded from that DLL instead of from the main module with all your code. MFC directly supports this approach. Consider an application called MYAPP.EXE; it could have all of its resources located in a DLL called MYRES.DLL. In the application's `InitInstance` it would perform the following to load that DLL and cause MFC to load resources from that location:  
   
 ```  
 CMyApp::InitInstance()  
-{  
-   // one of the first things in the init code  
-   HINSTANCE hInst = LoadLibrary("myres.dll");  
-   if (hInst != NULL)  
-      AfxSetResourceHandle(hInst);  
-  
-   // other initialization code would follow  
-   .  
-   .  
-   .  
+{ *// one of the first things in the init code  
+    HINSTANCE hInst = LoadLibrary("myres.dll");
+
+    if (hInst != NULL)  
+    AfxSetResourceHandle(hInst);
+
+ *// other initialization code would follow  
+ .  
+ .  
+ .  
 }  
 ```  
   
- 从该字符，MFC 将该 DLL 加载资源而非从 myapp.exe。  所有资源，但是，必须存在该 DLL;MFC 不搜索应用程序实例寻找特定资源。  此技术同样正常适用于常规 DLL 以及 OLE 控件。  安装程序将资源复制设置用户区域需要选择 MYRES.DLL 的正确版本。  
+ From then on, MFC will load resources from that DLL instead of from myapp.exe. All resources, however, must be present in that DLL; MFC will not search the application's instance in search of a given resource. This technique applies equally well to regular MFC DLLs as well as OLE Controls. Your setup program would copy the appropriate version of MYRES.DLL depending upon which resource locale the user would like.  
   
- 仅创建资源 DLL 是相对简单。  您创建 DLL 项目，.rc 文件添加到，并将所需的资源。  如果有未使用此技术的一个现有项目，可以复制该项目的资源。  在将资源文件之后添加到项目，则几乎准备生成项目。  必须进行的唯一操作设置为包括 **\/NOENTRY**的链接器选项。  此通知链接器 DLL 没有入口点\)，因为它没有代码，但没有 EntryPoint。  
+ It is relatively easy to create a resource only DLL. You create a DLL project, add your .RC file to it, and add the necessary resources. If you have an existing project that does not use this technique, you can copy the resources from that project. After adding the resource file to the project, you are almost ready to build the project. The only thing you must do is set the linker options to include **/NOENTRY**. This tells the linker that the DLL has no entry point - since it has no code, it has no entry point.  
   
 > [!NOTE]
->  在 Visual C\+\+ 4.0 和更高的资源编辑器支持多种语言为 .rc 文件。  这使得很容易管理在单个项目的本地化。  每种语言的资源由资源编辑器生成的预处理器指令的控制。  
+>  The resource editor in Visual C++ 4.0 and later supports multiple languages per .RC file. This can make it very easy to manage your localization in a single project. The resources for each language are controlled by preprocessor directives generated by the resource editor.  
   
-## 使用 MFC 提供的本地化资源  
- 您生成重新使用从 MFC 的两点的所有 MFC 应用程序：代码和资源。  也就是说 MFC 有多种错误消息、内置对话框的 MFC 类使用的其他资源。  完全本地化应用程序，不仅需要本地化应用程序的资源，而且还，来自直接 MFC 的资源。  MFC 自动提供许多不同语言的资源文件，因此，如果面向的语言已是一语言 MFC 支持，需要确定所使用某些本地化资源。  
+## <a name="using-the-provided-mfc-localized-resources"></a>Using the Provided MFC Localized Resources  
+ Any MFC application that you build reuses two things from MFC: code and resources. That is, MFC has various error messages, built-in dialogs, and other resources that are used by the MFC classes. In order to completely localize your application, you need to localize not only your application's resources, but also the resources that come directly from MFC. MFC provides a number of different language resource files automatically, so that if the language you are targeting is one of the languages MFC already supports, you just need to make sure you use those localized resources.  
   
- 中文到此文本、MFC 支持，用于德语、西班牙语、法语、意大利语、日语和朝鲜语\)。  包含这些本地化版本的文件采用本地化的 MFC\) 目录的\\INCLUDE\\L.\* \(the 'L "位置）。  例如，德语 MFC 在文件\\INCLUDE\\L.DEU。  若要生成应用程序使用这些 RC 文件代替中的文件在 MFC \\INCLUDE，请将 `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` 添加到 RC 命令行 \(这是一个示例；您需要重写您安装 Visual C\+\+\) 选择以及目录的区域设置。  
+ As of this writing, MFC supports Chinese, German, Spanish, French, Italian, Japanese, and Korean. The files which contain these localized versions are in the MFC\INCLUDE\L.* (the 'L' stands for localized) directories. The German files are in MFC\INCLUDE\L.DEU, for example. To cause your application to use these RC files instead of the files located in MFC\INCLUDE, add a `/IC:\PROGRAM FILES\MICROSOFT VISUAL STUDIO .NET 2003\VC7\MFC\INCLUDE\L.DEU` to your RC command line (this is just an example; you would need to substitute your locale of choice as well as the directory into which you installed Visual C++).  
   
- 以上指令仍有效，如果应用程序静态链接使用 MFC。  大多数应用程序动态链接 \(因为这是 AppWizard 默认\)。  在这种情况下，不仅代码动态链接 \-，因此是资源。  因此，您可以在应用程序中的本地化资源，MFC 实现，但资源将被加载来自 MF C7 x.DLL \(或更高版本\) 或从 xLOC.DLL MF C7，如果该文件存在。  可以处理这两个不同的角度。  
+ The above instructions will work if your application links statically with MFC. Most applications link dynamically (because that is the AppWizard default). In this scenario, not only the code is dynamically linked - so are the resources. As a result, you can localize your resources in your application, but the MFC implementation resources will still be loaded from the MFC7x.DLL (or a later version) or from MFC7xLOC.DLL if it exists. You can approach this from two different angles.  
   
- 复杂的方法是提供了本地化的 MF C7 xLOC.DLLs \(如 MF C7 xDEU，德语、西班牙语 MF C7 的 xESP.DLL 的等\)，或更高版本，再安装相应的 xLOC.DLL MF C7 到系统目录，在用户安装应用程序时。  这非常复杂的开发人员，而作为不建议这样最终用户。  参见 [技术说明 56](../mfc/tn056-installation-of-localized-mfc-components.md) 有关此技术及其警告的更多信息。  
+ The more complex approach is to ship one of the localized MFC7xLOC.DLLs (such as MFC7xDEU, for German, MFC7xESP.DLL for Spanish, etc.), or a later version, and install the appropriate MFC7xLOC.DLL into the system directory when the user installs your application. This can be very complex for both the developer and the end user and as such is not recommended. See [Technical Note 56](../mfc/tn056-installation-of-localized-mfc-components.md) for more information on this technique and its caveats.  
   
- 最简单且最安全的方法是对包含在应用程序的本地化资源或 MFC DLL \(或附属 DLL，则它使用了\)。  这避免相应安装问题 xLOC.DLL MF C7。  为此，请遵循为的静态情况相同的指令前面 \(适当设置 RC 命令行到本地化资源的点\)，除此之外，由添加的 AppWizard 还必须移除 `/D_AFXDLL` 定义。  在 `/D_AFXDLL` 后，AFXRES.H \(和其他 MFC " RC 文件\) 实际上不定义任何资源 \(因为它们从 MFC DLL 将请求\)。  
+ The simplest and safest approach is to include the localized MFC resources in your application or DLL itself (or its satellite DLL if you are using one). This avoids the problems of installing MFC7xLOC.DLL properly. To do so, you follow the same instructions for the static case given above (setting the RC command line properly to point to the localized resources), except that you must also remove the `/D_AFXDLL` define that was added by AppWizard. When `/D_AFXDLL` is defined, AFXRES.H (and the other MFC RC files) do not actually define any resources (because they will be pulled from the MFC DLLs instead).  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

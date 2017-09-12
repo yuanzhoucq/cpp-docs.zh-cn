@@ -1,5 +1,5 @@
 ---
-title: "CCachedDataPathProperty 类 |Microsoft 文档"
+title: CCachedDataPathProperty Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,11 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ActiveX controls [C++], asynchronous
-- CCachedDataPathProperty class
-- OLE controls [C++], asynchronous
-- asynchronous controls [C++]
-- memory files [C++]
+- CCachedDataPathProperty [MFC], CCachedDataPathProperty
+- CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
 caps.latest.revision: 22
 author: mikeblome
@@ -40,50 +37,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6e3f54e6429456be24cbe18471abd1705bbe0034
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 46b1b6b61441c9a3a886d3dbc48232e9afdd1f56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 类
-实现异步传输并在内存文件中缓冲的 OLE 控件属性。  
+# <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty Class
+Implements an OLE control property transferred asynchronously and cached in a memory file.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCachedDataPathProperty : public CDataPathProperty  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::CCachedDataPathProperty](#ccacheddatapathproperty)|构造 `CCachedDataPathProperty` 对象。|  
+|[CCachedDataPathProperty::CCachedDataPathProperty](#ccacheddatapathproperty)|Constructs a `CCachedDataPathProperty` object.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`在其中缓存数据的对象。|  
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` object in which to cache data.|  
   
-## <a name="remarks"></a>备注  
- 内存文件存储在 RAM 中，而不是在磁盘上，可用于快速临时传输。  
+## <a name="remarks"></a>Remarks  
+ A memory file is stored in RAM rather than on disk and is useful for fast temporary transfers.  
   
- 连同**CAysncMonikerFile**和`CDataPathProperty`， `CCachedDataPathProperty` OLE 控件中的异步名字对象用于提供功能。 与`CCachedDataPathProperty`对象时，可以从 URL 或文件的源以异步方式传输数据，并将其存储在内存文件通过`m_Cache`公共变量。 所有数据都存储在内存文件中，并且没有无需重写[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)除非您想要监视通知并做出响应。 例如，如果要传输较大。GIF 文件且想要更多的数据已到达，则应重绘自己，通知您的控件重写`OnDataAvailable`使通知。  
+ Along with **CAysncMonikerFile** and `CDataPathProperty`, `CCachedDataPathProperty` provides functionality for the use of asynchronous monikers in OLE controls. With `CCachedDataPathProperty` objects, you are able to transfer data asynchronously from a URL or file source and store it in a memory file via the `m_Cache` public variable. All the data is stored in the memory file, and there is no need to override [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) unless you want to watch for notifications and respond. For example, if you are transferring a large .GIF file and want to notify your control that more data has arrived and it should redraw itself, override `OnDataAvailable` to make the notification.  
   
- 此类`CCachedDataPathProperty`派生自`CDataPathProperty`。  
+ The class `CCachedDataPathProperty` is derived from `CDataPathProperty`.  
   
- 有关如何在 Internet 应用程序中使用异步名字对象和 ActiveX 控件的详细信息，请参阅下列主题︰  
+ For more information about how to use asynchronous monikers and ActiveX controls in Internet applications, see the following topics:  
   
-- [Internet 前几个步骤︰ ActiveX 控件](../../mfc/activex-controls-on-the-internet.md)  
+- [Internet First Steps: ActiveX Controls](../../mfc/activex-controls-on-the-internet.md)  
   
-- [Internet 前几个步骤︰ 异步名字对象](../../mfc/asynchronous-monikers-on-the-internet.md)  
+- [Internet First Steps: Asynchronous Monikers](../../mfc/asynchronous-monikers-on-the-internet.md)  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -98,11 +95,11 @@ class CCachedDataPathProperty : public CDataPathProperty
   
  `CCachedDataPathProperty`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxctl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
   
-##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
- 构造 `CCachedDataPathProperty` 对象。  
+##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty  
+ Constructs a `CCachedDataPathProperty` object.  
   
 ```  
 CCachedDataPathProperty(COleControl* pControl = NULL);
@@ -113,28 +110,28 @@ CCachedDataPathProperty(
     COleControl* pControl = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pControl`  
- 指向要与此关联的 ActiveX 控件对象的指针`CCachedDataPathProperty`对象。  
+ A pointer to the ActiveX control object to be associated with this `CCachedDataPathProperty` object.  
   
  `lpszPath`  
- 路径，这可能是绝对值或相对值，用来创建异步名字对象引用的属性的实际绝对位置。 `CCachedDataPathProperty`使用 Url，不是文件名。 如果您希望`CCachedDataPathProperty`对象的文件，请在前面添加到路径的 file://。  
+ The path, which may be absolute or relative, used to create an asynchronous moniker that references the actual absolute location of the property. `CCachedDataPathProperty` uses URLs, not filenames. If you want a `CCachedDataPathProperty` object for a file, prepend file:// to the path.  
   
-### <a name="remarks"></a>备注  
- `COleControl`指向对象`pControl`由[打开](../../mfc/reference/cdatapathproperty-class.md#open)并检索由派生类。 如果`pControl`是**NULL**，与所使用的控件**打开**应与设置[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)。 如果`lpszPath`是**NULL**，可以在路径中，通过传递**打开**或其设置了[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)。  
+### <a name="remarks"></a>Remarks  
+ The `COleControl` object pointed to by `pControl` is used by [Open](../../mfc/reference/cdatapathproperty-class.md#open) and retrieved by derived classes. If `pControl` is **NULL**, the control used with **Open** should be set with [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). If `lpszPath` is **NULL**, you can pass in the path through **Open** or set it with [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
-##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
- 包含在其中缓存数据的内存文件的类名称。  
+##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
+ Contains the class name of the memory file into which data is cached.  
   
 ```  
 CMemFile m_Cache;  
 ```  
   
-### <a name="remarks"></a>备注  
- 内存文件存储在 RAM 中，而不是在磁盘上。  
+### <a name="remarks"></a>Remarks  
+ A memory file is stored in RAM rather than on disk.  
   
-## <a name="see-also"></a>另请参阅  
- [CDataPathProperty 类](../../mfc/reference/cdatapathproperty-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CDataPathProperty 类](../../mfc/reference/cdatapathproperty-class.md)
+## <a name="see-also"></a>See Also  
+ [CDataPathProperty Class](../../mfc/reference/cdatapathproperty-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDataPathProperty Class](../../mfc/reference/cdatapathproperty-class.md)
 

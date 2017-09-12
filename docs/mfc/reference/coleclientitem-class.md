@@ -1,5 +1,5 @@
 ---
-title: "COleClientItem 类 |Microsoft 文档"
+title: COleClientItem Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -93,12 +93,85 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE containers, client items
-- COleClientItem class
-- OLE client item class
-- container interface class
-- OLE containers, interface class
-- client items and OLE containers
+- COleClientItem [MFC], COleClientItem
+- COleClientItem [MFC], Activate
+- COleClientItem [MFC], ActivateAs
+- COleClientItem [MFC], AttachDataObject
+- COleClientItem [MFC], CanCreateFromData
+- COleClientItem [MFC], CanCreateLinkFromData
+- COleClientItem [MFC], CanPaste
+- COleClientItem [MFC], CanPasteLink
+- COleClientItem [MFC], Close
+- COleClientItem [MFC], ConvertTo
+- COleClientItem [MFC], CopyToClipboard
+- COleClientItem [MFC], CreateCloneFrom
+- COleClientItem [MFC], CreateFromClipboard
+- COleClientItem [MFC], CreateFromData
+- COleClientItem [MFC], CreateFromFile
+- COleClientItem [MFC], CreateLinkFromClipboard
+- COleClientItem [MFC], CreateLinkFromData
+- COleClientItem [MFC], CreateLinkFromFile
+- COleClientItem [MFC], CreateNewItem
+- COleClientItem [MFC], CreateStaticFromClipboard
+- COleClientItem [MFC], CreateStaticFromData
+- COleClientItem [MFC], Deactivate
+- COleClientItem [MFC], DeactivateUI
+- COleClientItem [MFC], Delete
+- COleClientItem [MFC], DoDragDrop
+- COleClientItem [MFC], DoVerb
+- COleClientItem [MFC], Draw
+- COleClientItem [MFC], GetActiveView
+- COleClientItem [MFC], GetCachedExtent
+- COleClientItem [MFC], GetClassID
+- COleClientItem [MFC], GetClipboardData
+- COleClientItem [MFC], GetDocument
+- COleClientItem [MFC], GetDrawAspect
+- COleClientItem [MFC], GetExtent
+- COleClientItem [MFC], GetIconFromRegistry
+- COleClientItem [MFC], GetIconicMetafile
+- COleClientItem [MFC], GetInPlaceWindow
+- COleClientItem [MFC], GetItemState
+- COleClientItem [MFC], GetLastStatus
+- COleClientItem [MFC], GetLinkUpdateOptions
+- COleClientItem [MFC], GetType
+- COleClientItem [MFC], GetUserType
+- COleClientItem [MFC], IsInPlaceActive
+- COleClientItem [MFC], IsLinkUpToDate
+- COleClientItem [MFC], IsModified
+- COleClientItem [MFC], IsOpen
+- COleClientItem [MFC], IsRunning
+- COleClientItem [MFC], OnActivate
+- COleClientItem [MFC], OnActivateUI
+- COleClientItem [MFC], OnChange
+- COleClientItem [MFC], OnDeactivate
+- COleClientItem [MFC], OnDeactivateUI
+- COleClientItem [MFC], OnGetClipboardData
+- COleClientItem [MFC], OnInsertMenus
+- COleClientItem [MFC], OnRemoveMenus
+- COleClientItem [MFC], OnSetMenu
+- COleClientItem [MFC], OnShowControlBars
+- COleClientItem [MFC], OnUpdateFrameTitle
+- COleClientItem [MFC], ReactivateAndUndo
+- COleClientItem [MFC], Release
+- COleClientItem [MFC], Reload
+- COleClientItem [MFC], Run
+- COleClientItem [MFC], SetDrawAspect
+- COleClientItem [MFC], SetExtent
+- COleClientItem [MFC], SetHostNames
+- COleClientItem [MFC], SetIconicMetafile
+- COleClientItem [MFC], SetItemRects
+- COleClientItem [MFC], SetLinkUpdateOptions
+- COleClientItem [MFC], SetPrintDevice
+- COleClientItem [MFC], UpdateLink
+- COleClientItem [MFC], CanActivate
+- COleClientItem [MFC], OnChangeItemPosition
+- COleClientItem [MFC], OnDeactivateAndUndo
+- COleClientItem [MFC], OnDiscardUndoState
+- COleClientItem [MFC], OnGetClipRect
+- COleClientItem [MFC], OnGetItemPosition
+- COleClientItem [MFC], OnGetWindowContext
+- COleClientItem [MFC], OnScrollBy
+- COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 caps.latest.revision: 24
 author: mikeblome
@@ -118,133 +191,133 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f9fec495e65a4ae6733aa0a402121da1942f4385
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e0ed47a9ea30f98b3db4439b4d637eb670c792a5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleclientitem-class"></a>COleClientItem 类
-定义 OLE 项的容器接口。  
+# <a name="coleclientitem-class"></a>COleClientItem Class
+Defines the container interface to OLE items.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleClientItem : public CDocItem  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleClientItem::COleClientItem](#coleclientitem)|构造 `COleClientItem` 对象。|  
+|[COleClientItem::COleClientItem](#coleclientitem)|Constructs a `COleClientItem` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleClientItem::Activate](#activate)|打开操作的 OLE 项，然后执行指定的谓词。|  
-|[COleClientItem::ActivateAs](#activateas)|激活为其他类型的项。|  
-|[COleClientItem::AttachDataObject](#attachdataobject)|访问 OLE 对象中的数据。|  
-|[COleClientItem::CanCreateFromData](#cancreatefromdata)|指示容器应用程序是否可以创建嵌入的对象。|  
-|[COleClientItem::CanCreateLinkFromData](#cancreatelinkfromdata)|指示容器应用程序是否可以创建链接的对象。|  
-|[COleClientItem::CanPaste](#canpaste)|指示是否剪贴板包含可嵌入或静态 OLE 项。|  
-|[COleClientItem::CanPasteLink](#canpastelink)|指示是否剪贴板包含可链接的 OLE 项。|  
-|[COleClientItem::Close](#close)|关闭到服务器的链接，但不会销毁 OLE 项。|  
-|[COleClientItem::ConvertTo](#convertto)|将项转换为另一种类型。|  
-|[COleClientItem::CopyToClipboard](#copytoclipboard)|将 OLE 项复制到剪贴板。|  
-|[COleClientItem::CreateCloneFrom](#createclonefrom)|创建现有项的副本。|  
-|[COleClientItem::CreateFromClipboard](#createfromclipboard)|从剪贴板中创建嵌入的项。|  
-|[COleClientItem::CreateFromData](#createfromdata)|数据对象中创建嵌入的项。|  
-|[COleClientItem::CreateFromFile](#createfromfile)|从文件创建嵌入的项。|  
-|[COleClientItem::CreateLinkFromClipboard](#createlinkfromclipboard)|从剪贴板中创建链接的项。|  
-|[COleClientItem::CreateLinkFromData](#createlinkfromdata)|数据对象创建链接的项。|  
-|[COleClientItem::CreateLinkFromFile](#createlinkfromfile)|从文件创建链接的项。|  
-|[COleClientItem::CreateNewItem](#createnewitem)|通过启动服务器应用程序中创建新的嵌入的项。|  
-|[COleClientItem::CreateStaticFromClipboard](#createstaticfromclipboard)|从剪贴板中创建静态项。|  
-|[COleClientItem::CreateStaticFromData](#createstaticfromdata)|创建数据对象的静态项。|  
-|[COleClientItem::Deactivate](#deactivate)|停用项。|  
-|[COleClientItem::DeactivateUI](#deactivateui)|将容器应用程序的用户界面还原到其原始状态。|  
-|[COleClientItem::Delete](#delete)|删除或关闭 OLE 项，如果它是链接的项。|  
-|[COleClientItem::DoDragDrop](#dodragdrop)|执行拖放操作。|  
-|[COleClientItem::DoVerb](#doverb)|执行指定的谓词。|  
-|[COleClientItem::Draw](#draw)|绘制 OLE 项。|  
-|[COleClientItem::GetActiveView](#getactiveview)|获取在其就地激活项的视图。|  
-|[COleClientItem::GetCachedExtent](#getcachedextent)|返回的 OLE 项的矩形的边界。|  
-|[COleClientItem::GetClassID](#getclassid)|获取存在项的类 id。|  
-|[COleClientItem::GetClipboardData](#getclipboarddata)|获取通过调用将被放到剪贴板的数据`CopyToClipboard`成员函数。|  
-|[COleClientItem::GetDocument](#getdocument)|返回`COleDocument`包含存在的项的对象。|  
-|[COleClientItem::GetDrawAspect](#getdrawaspect)|获取项的当前视图呈现。|  
-|[COleClientItem::GetExtent](#getextent)|返回的 OLE 项的矩形的边界。|  
-|[COleClientItem::GetIconFromRegistry](#geticonfromregistry)|检索与特定 CLSID 服务器关联的图标的句柄。|  
-|[COleClientItem::GetIconicMetafile](#geticonicmetafile)|获取用于绘制项的图标的图元文件。|  
-|[COleClientItem::GetInPlaceWindow](#getinplacewindow)|返回指向该项的就地编辑窗口的指针。|  
-|[COleClientItem::GetItemState](#getitemstate)|获取项的当前状态。|  
-|[COleClientItem::GetLastStatus](#getlaststatus)|返回最后一个 OLE 操作的状态。|  
-|[COleClientItem::GetLinkUpdateOptions](#getlinkupdateoptions)|返回某个链接的项 （高级功能） 的更新模式。|  
-|[COleClientItem::GetType](#gettype)|返回的 OLE 项的类型 （嵌入、 链接或静态）。|  
-|[COleClientItem::GetUserType](#getusertype)|获取描述项的类型的字符串。|  
-|[COleClientItem::IsInPlaceActive](#isinplaceactive)|返回`TRUE`该项是否处于就地活动状态。|  
-|[COleClientItem::IsLinkUpToDate](#islinkuptodate)|返回**TRUE**链接的项是否包含其源文档的最新更新。|  
-|[COleClientItem::IsModified](#ismodified)|返回`TRUE`如果自上次保存后经过修改的项。|  
-|[COleClientItem::IsOpen](#isopen)|返回`TRUE`如果该项是当前在服务器应用程序中打开。|  
-|[COleClientItem::IsRunning](#isrunning)|返回`TRUE`如果项的服务器应用程序正在运行。|  
-|[COleClientItem::OnActivate](#onactivate)|由框架调用以通知激活它的项。|  
-|[COleClientItem::OnActivateUI](#onactivateui)|由框架调用以通知项，它已激活，并应显示其用户界面。|  
-|[COleClientItem::OnChange](#onchange)|服务器更改 OLE 项时调用。 所需的实现。|  
-|[COleClientItem::OnDeactivate](#ondeactivate)|停用某个项时，由框架调用。|  
-|[COleClientItem::OnDeactivateUI](#ondeactivateui)|服务器已移除其就地用户界面时，由框架调用。|  
-|[COleClientItem::OnGetClipboardData](#ongetclipboarddata)|由框架调用以获取要复制到剪贴板的数据。|  
-|[COleClientItem::OnInsertMenus](#oninsertmenus)|由框架调用以创建复合菜单。|  
-|[COleClientItem::OnRemoveMenus](#onremovemenus)|由框架调用以从复合菜单中删除容器的菜单。|  
-|[COleClientItem::OnSetMenu](#onsetmenu)|由框架调用以安装和删除复合菜单。|  
-|[COleClientItem::OnShowControlBars](#onshowcontrolbars)|由框架调用以显示和隐藏控件条。|  
-|[COleClientItem::OnUpdateFrameTitle](#onupdateframetitle)|由框架调用以更新框架窗口的标题栏。|  
-|[COleClientItem::ReactivateAndUndo](#reactivateandundo)|重新激活项和撤消上一个就地编辑操作。|  
-|[COleClientItem::Release](#release)|释放的 OLE 项链接到的连接，并将其关闭，如果它处于打开状态。 不会销毁客户端项。|  
-|[COleClientItem::Reload](#reload)|将项重新加载到调用后`ActivateAs`。|  
-|[COleClientItem::Run](#run)|运行与项关联的应用程序。|  
-|[COleClientItem::SetDrawAspect](#setdrawaspect)|设置用于呈现的项的当前视图。|  
-|[COleClientItem::SetExtent](#setextent)|设置 OLE 项的边框。|  
-|[COleClientItem::SetHostNames](#sethostnames)|设置服务器将在编辑 OLE 项时显示的名称。|  
-|[COleClientItem::SetIconicMetafile](#seticonicmetafile)|缓存用于绘制项的图标的图元文件。|  
-|[COleClientItem::SetItemRects](#setitemrects)|设置项的边框。|  
-|[COleClientItem::SetLinkUpdateOptions](#setlinkupdateoptions)|设置链接的项 （高级功能） 的更新模式。|  
-|[COleClientItem::SetPrintDevice](#setprintdevice)|设置用于此客户端项目的打印目标设备。|  
-|[COleClientItem::UpdateLink](#updatelink)|更新项的演示文稿缓存。|  
+|[COleClientItem::Activate](#activate)|Opens the OLE item for an operation and then executes the specified verb.|  
+|[COleClientItem::ActivateAs](#activateas)|Activates the item as another type.|  
+|[COleClientItem::AttachDataObject](#attachdataobject)|Accesses the data in the OLE object.|  
+|[COleClientItem::CanCreateFromData](#cancreatefromdata)|Indicates whether a container application can create an embedded object.|  
+|[COleClientItem::CanCreateLinkFromData](#cancreatelinkfromdata)|Indicates whether a container application can create a linked object.|  
+|[COleClientItem::CanPaste](#canpaste)|Indicates whether the Clipboard contains an embeddable or static OLE item.|  
+|[COleClientItem::CanPasteLink](#canpastelink)|Indicates whether the Clipboard contains a linkable OLE item.|  
+|[COleClientItem::Close](#close)|Closes a link to a server but does not destroy the OLE item.|  
+|[COleClientItem::ConvertTo](#convertto)|Converts the item to another type.|  
+|[COleClientItem::CopyToClipboard](#copytoclipboard)|Copies the OLE item to the Clipboard.|  
+|[COleClientItem::CreateCloneFrom](#createclonefrom)|Creates a duplicate of an existing item.|  
+|[COleClientItem::CreateFromClipboard](#createfromclipboard)|Creates an embedded item from the Clipboard.|  
+|[COleClientItem::CreateFromData](#createfromdata)|Creates an embedded item from a data object.|  
+|[COleClientItem::CreateFromFile](#createfromfile)|Creates an embedded item from a file.|  
+|[COleClientItem::CreateLinkFromClipboard](#createlinkfromclipboard)|Creates a linked item from the Clipboard.|  
+|[COleClientItem::CreateLinkFromData](#createlinkfromdata)|Creates a linked item from a data object.|  
+|[COleClientItem::CreateLinkFromFile](#createlinkfromfile)|Creates a linked item from a file.|  
+|[COleClientItem::CreateNewItem](#createnewitem)|Creates a new embedded item by launching the server application.|  
+|[COleClientItem::CreateStaticFromClipboard](#createstaticfromclipboard)|Creates a static item from the Clipboard.|  
+|[COleClientItem::CreateStaticFromData](#createstaticfromdata)|Creates a static item from a data object.|  
+|[COleClientItem::Deactivate](#deactivate)|Deactivates the item.|  
+|[COleClientItem::DeactivateUI](#deactivateui)|Restores the container application's user interface to its original state.|  
+|[COleClientItem::Delete](#delete)|Deletes or closes the OLE item if it was a linked item.|  
+|[COleClientItem::DoDragDrop](#dodragdrop)|Performs a drag-and-drop operation.|  
+|[COleClientItem::DoVerb](#doverb)|Executes the specified verb.|  
+|[COleClientItem::Draw](#draw)|Draws the OLE item.|  
+|[COleClientItem::GetActiveView](#getactiveview)|Gets the view on which the item is activated in place.|  
+|[COleClientItem::GetCachedExtent](#getcachedextent)|Returns the bounds of the OLE item's rectangle.|  
+|[COleClientItem::GetClassID](#getclassid)|Gets the present item's class ID.|  
+|[COleClientItem::GetClipboardData](#getclipboarddata)|Gets the data that would be placed on the Clipboard by calling the `CopyToClipboard` member function.|  
+|[COleClientItem::GetDocument](#getdocument)|Returns the `COleDocument` object that contains the present item.|  
+|[COleClientItem::GetDrawAspect](#getdrawaspect)|Gets the item's current view for rendering.|  
+|[COleClientItem::GetExtent](#getextent)|Returns the bounds of the OLE item's rectangle.|  
+|[COleClientItem::GetIconFromRegistry](#geticonfromregistry)|Retrives a handle to an icon associated with the server of a particular CLSID.|  
+|[COleClientItem::GetIconicMetafile](#geticonicmetafile)|Gets the metafile used for drawing the item's icon.|  
+|[COleClientItem::GetInPlaceWindow](#getinplacewindow)|Returns a pointer to the item's in-place editing window.|  
+|[COleClientItem::GetItemState](#getitemstate)|Gets the item's current state.|  
+|[COleClientItem::GetLastStatus](#getlaststatus)|Returns the status of the last OLE operation.|  
+|[COleClientItem::GetLinkUpdateOptions](#getlinkupdateoptions)|Returns the update mode for a linked item (advanced feature).|  
+|[COleClientItem::GetType](#gettype)|Returns the type (embedded, linked, or static) of the OLE item.|  
+|[COleClientItem::GetUserType](#getusertype)|Gets a string describing the item's type.|  
+|[COleClientItem::IsInPlaceActive](#isinplaceactive)|Returns `TRUE` if the item is in-place active.|  
+|[COleClientItem::IsLinkUpToDate](#islinkuptodate)|Returns **TRUE** if a linked item is up to date with its source document.|  
+|[COleClientItem::IsModified](#ismodified)|Returns `TRUE` if the item has been modified since it was last saved.|  
+|[COleClientItem::IsOpen](#isopen)|Returns `TRUE` if the item is currently open in the server application.|  
+|[COleClientItem::IsRunning](#isrunning)|Returns `TRUE` if the item's server application is running.|  
+|[COleClientItem::OnActivate](#onactivate)|Called by the framework to notify the item that it is activated.|  
+|[COleClientItem::OnActivateUI](#onactivateui)|Called by the framework to notify the item that it is activated and should show its user interface.|  
+|[COleClientItem::OnChange](#onchange)|Called when the server changes the OLE item. Implementation required.|  
+|[COleClientItem::OnDeactivate](#ondeactivate)|Called by the framework when an item is deactivated.|  
+|[COleClientItem::OnDeactivateUI](#ondeactivateui)|Called by the framework when the server has removed its in-place user interface.|  
+|[COleClientItem::OnGetClipboardData](#ongetclipboarddata)|Called by the framework to get the data to be copied to the Clipboard.|  
+|[COleClientItem::OnInsertMenus](#oninsertmenus)|Called by the framework to create a composite menu.|  
+|[COleClientItem::OnRemoveMenus](#onremovemenus)|Called by the framework to remove the container's menus from a composite menu.|  
+|[COleClientItem::OnSetMenu](#onsetmenu)|Called by the framework to install and remove a composite menu.|  
+|[COleClientItem::OnShowControlBars](#onshowcontrolbars)|Called by the framework to show and hide control bars.|  
+|[COleClientItem::OnUpdateFrameTitle](#onupdateframetitle)|Called by the framework to update the frame window's title bar.|  
+|[COleClientItem::ReactivateAndUndo](#reactivateandundo)|Reactivates the item and undoes the last in-place editing operation.|  
+|[COleClientItem::Release](#release)|Releases the connection to an OLE linked item and closes it if it was open. Does not destroy the client item.|  
+|[COleClientItem::Reload](#reload)|Reloads the item after a call to `ActivateAs`.|  
+|[COleClientItem::Run](#run)|Runs the application associated with the item.|  
+|[COleClientItem::SetDrawAspect](#setdrawaspect)|Sets the item's current view for rendering.|  
+|[COleClientItem::SetExtent](#setextent)|Sets the bounding rectangle of the OLE item.|  
+|[COleClientItem::SetHostNames](#sethostnames)|Sets the names the server displays when editing the OLE item.|  
+|[COleClientItem::SetIconicMetafile](#seticonicmetafile)|Caches the metafile used for drawing the item's icon.|  
+|[COleClientItem::SetItemRects](#setitemrects)|Sets the item's bounding rectangle.|  
+|[COleClientItem::SetLinkUpdateOptions](#setlinkupdateoptions)|Sets the update mode for a linked item (advanced feature).|  
+|[COleClientItem::SetPrintDevice](#setprintdevice)|Sets the print-target device for this client item.|  
+|[COleClientItem::UpdateLink](#updatelink)|Updates the presentation cache of an item.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleClientItem::CanActivate](#canactivate)|由框架调用以确定是否允许就地激活。|  
-|[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|某一项的位置更改时由框架调用。|  
-|[COleClientItem::OnDeactivateAndUndo](#ondeactivateandundo)|由框架调用以在激活后撤消。|  
-|[COleClientItem::OnDiscardUndoState](#ondiscardundostate)|由框架调用以放弃项的撤消状态信息。|  
-|[COleClientItem::OnGetClipRect](#ongetcliprect)|由框架调用以获取项的剪辑矩形坐标。|  
-|[COleClientItem::OnGetItemPosition](#ongetitemposition)|由框架调用以获取相对于该视图的项的位置。|  
-|[COleClientItem::OnGetWindowContext](#ongetwindowcontext)|就地激活项时，由框架调用。|  
-|[COleClientItem::OnScrollBy](#onscrollby)|由框架调用以将项滚动到视图。|  
-|[COleClientItem::OnShowItem](#onshowitem)|由框架调用以显示 OLE 项。|  
+|[COleClientItem::CanActivate](#canactivate)|Called by the framework to determine whether in-place activation is allowed.|  
+|[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Called by the framework when an item's position changes.|  
+|[COleClientItem::OnDeactivateAndUndo](#ondeactivateandundo)|Called by the framework to undo after activation.|  
+|[COleClientItem::OnDiscardUndoState](#ondiscardundostate)|Called by the framework to discard the item's undo state information.|  
+|[COleClientItem::OnGetClipRect](#ongetcliprect)|Called by the framework to get the item's clipping-rectangle coordinates.|  
+|[COleClientItem::OnGetItemPosition](#ongetitemposition)|Called by the framework to get the item's position relative to the view.|  
+|[COleClientItem::OnGetWindowContext](#ongetwindowcontext)|Called by the framework when an item is activated in place.|  
+|[COleClientItem::OnScrollBy](#onscrollby)|Called by the framework to scroll the item into view.|  
+|[COleClientItem::OnShowItem](#onshowitem)|Called by the framework to display the OLE item.|  
   
-## <a name="remarks"></a>备注  
- OLE 项表示的数据，由服务器应用程序，可以将"无缝"并入文档，以便显示给用户以单个文档创建和维护。 结果是一个"复合文档"的 OLE 项和包含文档组成。  
+## <a name="remarks"></a>Remarks  
+ An OLE item represents data, created and maintained by a server application, which can be "seamlessly" incorporated into a document so that it appears to the user to be a single document. The result is a "compound document" made up of the OLE item and a containing document.  
   
- 可嵌入或链接 OLE 项。 如果嵌入，它的数据存储复合文档的一部分。 如果链接，其数据存储为单独的文件服务器应用程序，创建数据的一部分，并仅该文件的链接存储在复合文档。 所有 OLE 项都包含指定的服务器应用程序应调用以对其进行编辑的信息。  
+ An OLE item can be either embedded or linked. If it is embedded, its data is stored as part of the compound document. If it is linked, its data is stored as part of a separate file created by the server application, and only a link to that file is stored in the compound document. All OLE items contain information specifying the server application that should be called to edit them.  
   
- `COleClientItem`定义在响应请求从服务器应用程序; 中的多个调用的可重写函数这些可重写通常充当通知。 这允许服务器应用程序来通知用户在编辑 OLE 项时所做的更改的容器或检索编辑过程所需信息。  
+ `COleClientItem` defines several overridable functions that are called in response to requests from the server application; these overridables usually act as notifications. This allows the server application to inform the container of changes the user makes when editing the OLE item, or to retrieve information needed during editing.  
   
- `COleClientItem`可使用[COleDocument](../../mfc/reference/coledocument-class.md)， [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)类。 若要使用`COleClientItem`、 从其派生一个类和实现[OnChange](#onchange)成员函数，其定义容器如何响应的对项目进行的更改。 若要支持就地激活，重写[OnGetItemPosition](#ongetitemposition)成员函数。 此函数提供了有关 OLE 项的显示位置的信息。  
+ `COleClientItem` can be used with either the [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), or [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) class. To use `COleClientItem`, derive a class from it and implement the [OnChange](#onchange) member function, which defines how the container responds to changes made to the item. To support in-place activation, override the [OnGetItemPosition](#ongetitemposition) member function. This function provides information about the displayed position of the OLE item.  
   
- 有关使用容器接口的详细信息，请参阅文章[容器︰ 实现容器](../../mfc/containers-implementing-a-container.md)和[激活](../../mfc/activation-cpp.md)。  
+ For more information about using the container interface, see the articles [Containers: Implementing a Container](../../mfc/containers-implementing-a-container.md) and [Activation](../../mfc/activation-cpp.md).  
   
 > [!NOTE]
->  [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]嵌入的和链接的项称为"对象"引用和引用类型的项作为"类"。 此引用使用术语"项"来区分 OLE 实体从相应的 c + + 对象和术语"类型"可以将 OLE 类别与 c + + 类区分开来。  
+>  The Windows SDK refers to embedded and linked items as "objects" and refers to types of items as "classes." This reference uses the term "item" to distinguish the OLE entity from the corresponding C++ object and the term "type" to distinguish the OLE category from the C++ class.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -253,11 +326,11 @@ class COleClientItem : public CDocItem
   
  `COleClientItem`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="activate"></a>COleClientItem::Activate  
- 调用此函数可执行而不是指定的动词[DoVerb](#doverb) ，你可以执行你自己处理时将引发异常。  
+##  <a name="activate"></a>  COleClientItem::Activate  
+ Call this function to execute the specified verb instead of [DoVerb](#doverb) so that you can do your own processing when an exception is thrown.  
   
 ```  
 void Activate(
@@ -266,35 +339,35 @@ void Activate(
     LPMSG lpMsg = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nVerb`  
- 指定要执行的谓词。 它可以是以下项之一︰  
+ Specifies the verb to execute. It can be one of the following:  
   
-|值|含义|符号|  
+|Value|Meaning|Symbol|  
 |-----------|-------------|------------|  
-|- 0|主谓词|`OLEIVERB_PRIMARY`|  
-|- 1|辅助谓词|（无）|  
-|- 1|显示用于编辑的项|`OLEIVERB_SHOW`|  
-|- 2|在单独的窗口中编辑项目|`OLEIVERB_OPEN`|  
-|- 3|隐藏项|`OLEIVERB_HIDE`|  
+|- 0|Primary verb|`OLEIVERB_PRIMARY`|  
+|- 1|Secondary verb|(None)|  
+|- 1|Display item for editing|`OLEIVERB_SHOW`|  
+|- 2|Edit item in separate window|`OLEIVERB_OPEN`|  
+|- 3|Hide item|`OLEIVERB_HIDE`|  
   
- 为-1 值通常是另一个谓词的别名。 如果不支持打开编辑，-2 将具有相同的效果-1。 其他值，请参阅[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ The -1 value is typically an alias for another verb. If open editing is not supported, -2 has the same effect as -1. For additional values, see [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) in the Windows SDK.  
   
  `pView`  
- 指向包含 OLE 项; 容器视图窗口这用于服务器应用程序的就地激活。 此参数应为**NULL**如果容器不支持就地激活。  
+ Pointer to the container view window that contains the OLE item; this is used by the server application for in-place activation. This parameter should be **NULL** if the container does not support in-place activation.  
   
  `lpMsg`  
- 指向导致要激活的项的消息。  
+ Pointer to the message that caused the item to be activated.  
   
-### <a name="remarks"></a>备注  
- 如果使用 Microsoft 基础类库编写服务器应用程序，此函数将导致[OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)相应的成员函数`COleServerItem`要执行对象。  
+### <a name="remarks"></a>Remarks  
+ If the server application was written using the Microsoft Foundation Class Library, this function causes the [OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb) member function of the corresponding `COleServerItem` object to be executed.  
   
- 如果为编辑主谓词和中指定零`nVerb`参数，服务器应用程序启动以允许要编辑的 OLE 项。 如果容器应用程序支持就地激活，则可以就地完成编辑。 如果容器不支持就地激活 （或如果指定的动词 Open），服务器将在单独的窗口中启动，并且可以那里完成编辑。 通常情况下，当容器应用程序的用户双击 OLE 项，主谓词中的值时，才`nVerb`参数确定用户可以执行的操作。 但是，如果服务器支持只有一项操作，它不执行该操作，无论其值指定在`nVerb`参数。  
+ If the primary verb is Edit and zero is specified in the `nVerb` parameter, the server application is launched to allow the OLE item to be edited. If the container application supports in-place activation, editing can be done in place. If the container does not support in-place activation (or if the Open verb is specified), the server is launched in a separate window and editing can be done there. Typically, when the user of the container application double-clicks the OLE item, the value for the primary verb in the `nVerb` parameter determines which action the user can take. However, if the server supports only one action, it takes that action, no matter which value is specified in the `nVerb` parameter.  
   
- 有关详细信息，请参阅[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) in the Windows SDK.  
   
-##  <a name="activateas"></a>COleClientItem::ActivateAs  
- 使用 OLE 的对象转换工具，就好像它是由指定的类型的项激活选项`clsidNew`。  
+##  <a name="activateas"></a>  COleClientItem::ActivateAs  
+ Uses OLE's object conversion facilities to activate the item as though it were an item of the type specified by `clsidNew`.  
   
 ```  
 virtual BOOL ActivateAs(
@@ -303,153 +376,153 @@ virtual BOOL ActivateAs(
     REFCLSID clsidNew);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpszUserType*  
- 指向的字符串表示的目标用户类型，如"Word 文档"。  
+ Pointer to a string representing the target user type, such as "Word Document."  
   
  *clsidOld*  
- 对项的当前类的引用 id。 随着存储，除非它是一个链接的类 ID 应表示的实际对象的类型。 在这种情况下，它应链接引用的项的 CLSID。 [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)自动为项提供正确的类 ID。  
+ A reference to the item's current class ID. The class ID should represent the type of the actual object, as stored, unless it is a link. In that case, it should be the CLSID of the item to which the link refers. The [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md) automatically provides the correct class ID for the item.  
   
  `clsidNew`  
- 对目标类 ID 的引用  
+ A reference to the target class ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 这称为自动[COleConvertDialog::DoConvert](../../mfc/reference/coleconvertdialog-class.md#doconvert)。 它不通常直接调用。  
+### <a name="remarks"></a>Remarks  
+ This is called automatically by [COleConvertDialog::DoConvert](../../mfc/reference/coleconvertdialog-class.md#doconvert). It is not usually called directly.  
   
-##  <a name="attachdataobject"></a>COleClientItem::AttachDataObject  
- 调用此函数可初始化[COleDataObject](../../mfc/reference/coledataobject-class.md)用于访问 OLE 项中的数据。  
+##  <a name="attachdataobject"></a>  COleClientItem::AttachDataObject  
+ Call this function to initialize a [COleDataObject](../../mfc/reference/coledataobject-class.md) for accessing the data in the OLE item.  
   
 ```  
 void AttachDataObject(COleDataObject& rDataObject) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *rDataObject*  
- 引用`COleDataObject`将初始化 OLE 项中允许对数据的访问的对象。  
+ Reference to a `COleDataObject` object that will be initialized to allow access to the data in the OLE item.  
   
-##  <a name="canactivate"></a>COleClientItem::CanActivate  
- 由框架调用，当用户请求的 OLE 项; 就地激活此函数的返回值确定是否允许就地激活。  
+##  <a name="canactivate"></a>  COleClientItem::CanActivate  
+ Called by the framework when the user requests in-place activation of the OLE item; this function's return value determines whether in-place activation is allowed.  
   
 ```  
 virtual BOOL CanActivate();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果允许就地激活; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if in-place activation is allowed; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 默认实现允许就地激活，如果容器具有有效的窗口。 重写此函数可实现特殊逻辑接受或拒绝激活请求。 例如，如果 OLE 项因太小或不是当前可见，则可以拒绝的激活请求。  
+### <a name="remarks"></a>Remarks  
+ The default implementation allows in-place activation if the container has a valid window. Override this function to implement special logic for accepting or refusing the activation request. For example, an activation request can be refused if the OLE item is too small or not currently visible.  
   
- 有关详细信息，请参阅[IOleInPlaceSite::CanInPlaceActivate](http://msdn.microsoft.com/library/windows/desktop/ms691236)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceSite::CanInPlaceActivate](http://msdn.microsoft.com/library/windows/desktop/ms691236) in the Windows SDK.  
   
-##  <a name="cancreatefromdata"></a>COleClientItem::CanCreateFromData  
- 检查容器应用程序是否可以创建从嵌入的对象给定`COleDataObject`对象。  
+##  <a name="cancreatefromdata"></a>  COleClientItem::CanCreateFromData  
+ Checks whether a container application can create an embedded object from the given `COleDataObject` object.  
   
 ```  
 static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建 OLE 项的对象。  
+ Pointer to the [COleDataObject](../../mfc/reference/coledataobject-class.md) object from which the OLE item is to be created.  
   
-### <a name="return-value"></a>返回值  
- 如果该容器可以创建从嵌入的对象则不为`COleDataObject`对象; 否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the container can create an embedded object from the `COleDataObject` object; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- `COleDataObject`类是数据在传输中用于从剪贴板、 通过拖放，或从嵌入 OLE 项检索各种格式的数据。  
+### <a name="remarks"></a>Remarks  
+ The `COleDataObject` class is used in data transfers for retrieving data in various formats from the Clipboard, through drag and drop, or from an embedded OLE item.  
   
- 容器可以使用此函数来决定启用或禁用其编辑粘贴和编辑选择性粘贴命令。  
+ Containers can use this function to decide to enable or disable their Edit Paste and Edit Paste Special commands.  
   
- 有关详细信息，请参阅文章[数据对象和数据源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)。  
+ For more information, see the article [Data Objects and Data Sources (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
-##  <a name="cancreatelinkfromdata"></a>COleClientItem::CanCreateLinkFromData  
- 检查容器应用程序是否可以创建链接的对象从给定`COleDataObject`对象。  
+##  <a name="cancreatelinkfromdata"></a>  COleClientItem::CanCreateLinkFromData  
+ Checks whether a container application can create a linked object from the given `COleDataObject` object.  
   
 ```  
 static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建 OLE 项的对象。  
+ Pointer to the [COleDataObject](../../mfc/reference/coledataobject-class.md) object from which the OLE item is to be created.  
   
-### <a name="return-value"></a>返回值  
- 如果该容器可以创建中的链接的对象则不为`COleDataObject`对象。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the container can create a linked object from the `COleDataObject` object.  
   
-### <a name="remarks"></a>备注  
- `COleDataObject`类是数据在传输中用于从剪贴板、 通过拖放，或从嵌入 OLE 项检索各种格式的数据。  
+### <a name="remarks"></a>Remarks  
+ The `COleDataObject` class is used in data transfers for retrieving data in various formats from the Clipboard, through drag and drop, or from an embedded OLE item.  
   
- 容器可以使用此函数来决定启用或禁用其编辑选择性粘贴和编辑粘贴链接命令。  
+ Containers can use this function to decide to enable or disable their Edit Paste Special and Edit Paste Link commands.  
   
- 有关详细信息，请参阅文章[数据对象和数据源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)。  
+ For more information, see the article [Data Objects and Data Sources (OLE)](../../mfc/data-objects-and-data-sources-ole.md).  
   
-##  <a name="canpaste"></a>COleClientItem::CanPaste  
- 调用此函数，以查看是否可以从剪贴板粘贴嵌入的 OLE 项。  
+##  <a name="canpaste"></a>  COleClientItem::CanPaste  
+ Call this function to see whether an embedded OLE item can be pasted from the Clipboard.  
   
 ```  
 static BOOL PASCAL CanPaste();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果可以将其嵌入的 OLE 项粘贴从剪贴板; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if an embedded OLE item can be pasted from the Clipboard; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778)和[OleQueryCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms683739)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778) and [OleQueryCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms683739) in the Windows SDK.  
   
-##  <a name="canpastelink"></a>COleClientItem::CanPasteLink  
- 调用此函数，以查看是否可以从剪贴板粘贴链接的 OLE 项。  
+##  <a name="canpastelink"></a>  COleClientItem::CanPasteLink  
+ Call this function to see whether a linked OLE item can be pasted from the Clipboard.  
   
 ```  
 static BOOL PASCAL CanPasteLink();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果可以从剪贴板; 粘贴链接的 OLE 项则不为否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a linked OLE item can be pasted from the Clipboard; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778)和[OleQueryLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms690244)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778) and [OleQueryLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms690244) in the Windows SDK.  
   
-##  <a name="close"></a>COleClientItem::Close  
- 调用此函数可从加载它与在内存中其处理程序但不是运行的服务器的运行状态向加载状态，即，更改一个 OLE 项的状态。  
+##  <a name="close"></a>  COleClientItem::Close  
+ Call this function to change the state of an OLE item from the running state to the loaded state, that is, loaded with its handler in memory but with the server not running.  
   
 ```  
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwCloseOption`  
- 指定在什么情况下，当它返回时向加载状态已保存该 OLE 项的标志。 它可以具有以下值之一︰  
+ Flag specifying under what circumstances the OLE item is saved when it returns to the loaded state. It can have one of the following values:  
   
-- `OLECLOSE_SAVEIFDIRTY`保存 OLE 项。  
+- `OLECLOSE_SAVEIFDIRTY` Save the OLE item.  
   
-- `OLECLOSE_NOSAVE`不保存 OLE 项。  
+- `OLECLOSE_NOSAVE` Do not save the OLE item.  
   
-- `OLECLOSE_PROMPTSAVE`提示是否保存 OLE 项上的用户。  
+- `OLECLOSE_PROMPTSAVE` Prompt the user on whether to save the OLE item.  
   
-### <a name="remarks"></a>备注  
- OLE 项未运行时，则此函数无效。  
+### <a name="remarks"></a>Remarks  
+ This function has no effect when the OLE item is not running.  
   
- 有关详细信息，请参阅[IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) in the Windows SDK.  
   
-##  <a name="coleclientitem"></a>COleClientItem::COleClientItem  
- 构造`COleClientItem`对象，并将其添加到的文档项的容器文档的集合，这构造仅 c + + 对象并不执行任何 OLE 初始化。  
+##  <a name="coleclientitem"></a>  COleClientItem::COleClientItem  
+ Constructs a `COleClientItem` object and adds it to the container document's collection of document items, which constructs only the C++ object and does not perform any OLE initialization.  
   
 ```  
 COleClientItem(COleDocument* pContainerDoc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pContainerDoc`  
- 指向将包含该项的容器文档的指针。 这可以是任何[COleDocument](../../mfc/reference/coledocument-class.md)派生。  
+ Pointer to the container document that will contain this item. This can be any [COleDocument](../../mfc/reference/coledocument-class.md) derivative.  
   
-### <a name="remarks"></a>备注  
- 如果你通过**NULL**指针，没有添加对容器文档进行。 你必须明确地调用[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)。  
+### <a name="remarks"></a>Remarks  
+ If you pass a **NULL** pointer, no addition is made to the container document. You must explicitly call [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem).  
   
- 使用 OLE 项之前，必须调用以下创建成员函数之一︰  
+ You must call one of the following creation member functions before you use the OLE item:  
   
 - [CreateFromClipboard](#createfromclipboard)  
   
@@ -471,58 +544,58 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
   
 - [CreateCloneFrom](#createclonefrom)  
   
-##  <a name="convertto"></a>COleClientItem::ConvertTo  
- 调用此成员函数可将项转换为指定的类型`clsidNew`。  
+##  <a name="convertto"></a>  COleClientItem::ConvertTo  
+ Call this member function to convert the item to the type specified by `clsidNew`.  
   
 ```  
 virtual BOOL ConvertTo(REFCLSID clsidNew);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `clsidNew`  
- 目标类型的类 ID。  
+ The class ID of the target type.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 这称为自动[COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)。 不需要直接调用它。  
+### <a name="remarks"></a>Remarks  
+ This is called automatically by [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md). It is not necessary to call it directly.  
   
-##  <a name="copytoclipboard"></a>COleClientItem::CopyToClipboard  
- 调用此函数可将 OLE 项复制到剪贴板。  
+##  <a name="copytoclipboard"></a>  COleClientItem::CopyToClipboard  
+ Call this function to copy the OLE item to the Clipboard.  
   
 ```  
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bIncludeLink`  
- **TRUE**链接信息应复制到剪贴板，如果允许链接的项粘贴; 否则为**FALSE**。  
+ **TRUE** if link information should be copied to the Clipboard, allowing a linked item to be pasted; otherwise **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 通常情况下，从编辑菜单编写消息处理程序的复制或剪切命令时调用此函数。 如果你想要实现的复制或剪切命令，则必须在容器应用程序中实现项选择。  
+### <a name="remarks"></a>Remarks  
+ Typically, you call this function when writing message handlers for the Copy or Cut commands from the Edit menu. You must implement item selection in your container application if you want to implement the Copy or Cut commands.  
   
- 有关详细信息，请参阅[OleSetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms686623)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OleSetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms686623) in the Windows SDK.  
   
-##  <a name="createclonefrom"></a>COleClientItem::CreateCloneFrom  
- 调用此函数可创建指定的 OLE 项的副本。  
+##  <a name="createclonefrom"></a>  COleClientItem::CreateCloneFrom  
+ Call this function to create a copy of the specified OLE item.  
   
 ```  
 BOOL CreateCloneFrom(const COleClientItem* pSrcItem);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pSrcItem*  
- 指向要复制的 OLE 项的指针。  
+ Pointer to the OLE item to be duplicated.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 副本是相同的源项。 此函数可用于支持撤消操作。  
+### <a name="remarks"></a>Remarks  
+ The copy is identical to the source item. You can use this function to support undo operations.  
   
-##  <a name="createfromclipboard"></a>COleClientItem::CreateFromClipboard  
- 调用此函数可从剪贴板中的内容创建嵌入的项。  
+##  <a name="createfromclipboard"></a>  COleClientItem::CreateFromClipboard  
+ Call this function to create an embedded item from the contents of the Clipboard.  
   
 ```  
 BOOL CreateFromClipboard(
@@ -531,26 +604,26 @@ BOOL CreateFromClipboard(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="parameters"></a>Parameters  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 你通常从调用此函数的消息处理程序的编辑菜单上的粘贴命令。 (粘贴命令通过 framework，如果[CanPaste](#canpaste)成员函数返回非零值。)  
+### <a name="remarks"></a>Remarks  
+ You typically call this function from the message handler for the Paste command on the Edit menu. (The Paste command is enabled by the framework if the [CanPaste](#canpaste) member function returns nonzero.)  
   
- 有关详细信息，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="createfromdata"></a>COleClientItem::CreateFromData  
- 调用此函数可创建嵌入的项从`COleDataObject`对象。  
+##  <a name="createfromdata"></a>  COleClientItem::CreateFromData  
+ Call this function to create an embedded item from a `COleDataObject` object.  
   
 ```  
 BOOL CreateFromData(
@@ -560,29 +633,29 @@ BOOL CreateFromData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建 OLE 项的对象。  
+ Pointer to the [COleDataObject](../../mfc/reference/coledataobject-class.md) object from which the OLE item is to be created.  
   
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 数据传输操作，如粘贴从剪贴板或拖放操作，提供`COleDataObject`对象包含的信息提供的服务器应用程序。 它通常用于的重写中[CView::OnDrop](../../mfc/reference/cview-class.md#ondrop)。  
+### <a name="remarks"></a>Remarks  
+ Data transfer operations, such as pasting from the Clipboard or drag-and-drop operations, provide `COleDataObject` objects containing the information offered by a server application. It is usually used in your override of [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop).  
   
- 有关详细信息，请参阅[OleCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms691211)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OleCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms691211), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="createfromfile"></a>COleClientItem::CreateFromFile  
- 调用此函数可从文件创建嵌入的 OLE 项。  
+##  <a name="createfromfile"></a>  COleClientItem::CreateFromFile  
+ Call this function to create an embedded OLE item from a file.  
   
 ```  
 BOOL CreateFromFile(
@@ -593,32 +666,32 @@ BOOL CreateFromFile(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- 一个指针，指向要创建 OLE 项的文件的名称。  
+ Pointer to the name of the file from which the OLE item is to be created.  
   
  `clsid`  
- 留待将来使用。  
+ Reserved for future use.  
   
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 框架调用此函数从[COleInsertDialog::CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem)如果用户在选择文件按钮从创建时从插入对象对话框中选择确定。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function from [COleInsertDialog::CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem) if the user chooses OK from the Insert Object dialog box when the Create from File button is selected.  
   
- 有关详细信息，请参阅[OleCreateFromFile](http://msdn.microsoft.com/library/windows/desktop/ms690116)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OleCreateFromFile](http://msdn.microsoft.com/library/windows/desktop/ms690116), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="createlinkfromclipboard"></a>COleClientItem::CreateLinkFromClipboard  
- 调用此函数可创建链接的项从剪贴板中的内容。  
+##  <a name="createlinkfromclipboard"></a>  COleClientItem::CreateLinkFromClipboard  
+ Call this function to create a linked item from the contents of the Clipboard.  
   
 ```  
 BOOL CreateLinkFromClipboard(
@@ -627,26 +700,26 @@ BOOL CreateLinkFromClipboard(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="parameters"></a>Parameters  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 你通常从调用此函数的消息处理程序的编辑菜单上的粘贴链接命令。 (在的默认实现中启用粘贴链接命令[COleDocument](../../mfc/reference/coledocument-class.md)如果剪贴板包含可以链接到的 OLE 项。)  
+### <a name="remarks"></a>Remarks  
+ You typically call this function from the message handler for the Paste Link command on the Edit menu. (The Paste Link command is enabled in the default implementation of [COleDocument](../../mfc/reference/coledocument-class.md) if the Clipboard contains an OLE item that can be linked to.)  
   
- 有关详细信息，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="createlinkfromdata"></a>COleClientItem::CreateLinkFromData  
- 调用此函数可创建链接的项从`COleDataObject`对象。  
+##  <a name="createlinkfromdata"></a>  COleClientItem::CreateLinkFromData  
+ Call this function to create a linked item from a `COleDataObject` object.  
   
 ```  
 BOOL CreateLinkFromData(
@@ -656,29 +729,29 @@ BOOL CreateLinkFromData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建 OLE 项的对象。  
+ Pointer to the [COleDataObject](../../mfc/reference/coledataobject-class.md) object from which the OLE item is to be created.  
   
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 这在过程中调用放操作时用户可以指示应创建的链接。 此外可以用于处理编辑粘贴命令。 调用中的框架`COleClientItem::CreateLinkFromClipboard`并在[COlePasteSpecialDialog::CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem)已选中链接选项。  
+### <a name="remarks"></a>Remarks  
+ Call this during a drop operation when the user indicates a link should be created. It can also be used to handle the Edit Paste command. It is called by the framework in `COleClientItem::CreateLinkFromClipboard` and in [COlePasteSpecialDialog::CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem) when the Link option has been selected.  
   
- 有关详细信息，请参阅[OleCreateLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms680731)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OleCreateLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms680731), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="createlinkfromfile"></a>COleClientItem::CreateLinkFromFile  
- 调用此函数可从文件创建链接的 OLE 项。  
+##  <a name="createlinkfromfile"></a>  COleClientItem::CreateLinkFromFile  
+ Call this function to create a linked OLE item from a file.  
   
 ```  
 BOOL CreateLinkFromFile(
@@ -688,29 +761,29 @@ BOOL CreateLinkFromFile(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- 一个指针，指向要创建 OLE 项的文件的名称。  
+ Pointer to the name of the file from which the OLE item is to be created.  
   
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果用户在选择文件按钮从创建和链接复选框被选中时从插入对象对话框中选择确定，框架会调用此函数。 从调用[COleInsertDialog::CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem)。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function if the user chooses OK from the Insert Object dialog box when the Create from File button is selected and the Link check box is checked. It is called from [COleInsertDialog::CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem).  
   
- 有关详细信息，请参阅[OleCreateLinkToFile](http://msdn.microsoft.com/library/windows/desktop/ms678434)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OleCreateLinkToFile](http://msdn.microsoft.com/library/windows/desktop/ms678434), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="createnewitem"></a>COleClientItem::CreateNewItem  
- 调用此函数可创建嵌入的项;此函数将启动服务器应用程序，用户可以创建 OLE 项。  
+##  <a name="createnewitem"></a>  COleClientItem::CreateNewItem  
+ Call this function to create an embedded item; this function launches the server application that allows the user to create the OLE item.  
   
 ```  
 BOOL CreateNewItem(
@@ -720,29 +793,29 @@ BOOL CreateNewItem(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- 唯一标识要创建的 OLE 项类型的 ID。  
+ ID that uniquely identifies the type of OLE item to create.  
   
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果用户在选择新建按钮时从插入对象对话框中选择确定，框架会调用此函数。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function if the user chooses OK from the Insert Object dialog box when the Create New button is selected.  
   
- 有关详细信息，请参阅[OleCreate](http://msdn.microsoft.com/library/windows/desktop/ms678409)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OleCreate](http://msdn.microsoft.com/library/windows/desktop/ms678409), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="createstaticfromclipboard"></a>COleClientItem::CreateStaticFromClipboard  
- 调用此函数可从剪贴板中的内容创建静态项。  
+##  <a name="createstaticfromclipboard"></a>  COleClientItem::CreateStaticFromClipboard  
+ Call this function to create a static item from the contents of the Clipboard.  
   
 ```  
 BOOL CreateStaticFromClipboard(
@@ -751,26 +824,26 @@ BOOL CreateStaticFromClipboard(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="parameters"></a>Parameters  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 静态项包含呈现数据，但不是本机的数据;因此无法编辑它。 如果通常调用此函数[CreateFromClipboard](#createfromclipboard)成员函数将失败。  
+### <a name="remarks"></a>Remarks  
+ A static item contains the presentation data but not the native data; consequently it cannot be edited. You typically call this function if the [CreateFromClipboard](#createfromclipboard) member function fails.  
   
- 有关详细信息，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="createstaticfromdata"></a>COleClientItem::CreateStaticFromData  
- 调用此函数可创建静态项目从`COleDataObject`对象。  
+##  <a name="createstaticfromdata"></a>  COleClientItem::CreateStaticFromData  
+ Call this function to create a static item from a `COleDataObject` object.  
   
 ```  
 BOOL CreateStaticFromData(
@@ -780,73 +853,73 @@ BOOL CreateStaticFromData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)是要创建 OLE 项的对象。  
+ Pointer to the [COleDataObject](../../mfc/reference/coledataobject-class.md) object from which the OLE item is to be created.  
   
- *呈现器*  
- 指定服务器的 OLE 项呈现方式的标志。 有关可能的值，请参阅[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ *render*  
+ Flag specifying how the server will render the OLE item. For the possible values, see [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) in the Windows SDK.  
   
  `cfFormat`  
- 指定要创建 OLE 项时缓存的剪贴板数据格式。  
+ Specifies the Clipboard data format to be cached when creating the OLE item.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的结构*呈现*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 为此参数提供一个值，仅当你想要指定超出指定的剪贴板格式的格式的其他信息`cfFormat`。 如果省略此参数，默认值用于中的其他字段中**FORMATETC**结构。  
+ Pointer to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure used if *render* is **OLERENDER_FORMAT** or **OLERENDER_DRAW**. Provide a value for this parameter only if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If you omit this parameter, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 静态项包含呈现数据，但不是本机的数据;因此，无法编辑它。 这是实质上是相同[CreateStaticFromClipboard](#createstaticfromclipboard)只不过可以从任意创建一个静态项`COleDataObject`，而不仅仅是从剪贴板。  
+### <a name="remarks"></a>Remarks  
+ A static item contains the presentation data but not the native data; consequently, it cannot be edited. This is essentially the same as [CreateStaticFromClipboard](#createstaticfromclipboard) except that a static item can be created from an arbitrary `COleDataObject`, not just from the Clipboard.  
   
- 在中使用[COlePasteSpecialDialog::CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem)选中静态。  
+ Used in [COlePasteSpecialDialog::CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem) when Static is selected.  
   
- 有关详细信息，请参阅[OleCreateStaticFromData](http://msdn.microsoft.com/library/windows/desktop/ms687290)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OleCreateStaticFromData](http://msdn.microsoft.com/library/windows/desktop/ms687290), [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507), and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) in the Windows SDK.  
   
-##  <a name="deactivate"></a>COleClientItem::Deactivate  
- 调用此函数可停用 OLE 项并释放任何关联的资源。  
+##  <a name="deactivate"></a>  COleClientItem::Deactivate  
+ Call this function to deactivate the OLE item and free any associated resources.  
   
 ```  
 void Deactivate();
 ```  
   
-### <a name="remarks"></a>备注  
- 你通常在用户单击鼠标在客户端区域中的项边界之外时停用的就地活动 OLE 项。 请注意停用 OLE 项将放弃其撤消状态，从而导致无法调用[ReactivateAndUndo](#reactivateandundo)成员函数。  
+### <a name="remarks"></a>Remarks  
+ You typically deactivate an in-place active OLE item when the user clicks the mouse on the client area outside the bounds of the item. Note that deactivating the OLE item will discard its undo state, making it impossible to call the [ReactivateAndUndo](#reactivateandundo) member function.  
   
- 如果你的应用程序支持撤消，请勿调用`Deactivate`; 相反，调用[DeactivateUI](#deactivateui)。  
+ If your application supports undo, do not call `Deactivate`; instead, call [DeactivateUI](#deactivateui).  
   
- 有关详细信息，请参阅[IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) in the Windows SDK.  
   
-##  <a name="deactivateui"></a>COleClientItem::DeactivateUI  
- 当用户停用在就地激活项时，请调用此函数。  
+##  <a name="deactivateui"></a>  COleClientItem::DeactivateUI  
+ Call this function when the user deactivates an item that was activated in place.  
   
 ```  
 void DeactivateUI();
 ```  
   
-### <a name="remarks"></a>备注  
- 此函数还原到其原始状态，隐藏任何菜单和其他控件，创建就地激活的容器应用程序的用户界面。  
+### <a name="remarks"></a>Remarks  
+ This function restores the container application's user interface to its original state, hiding any menus and other controls that were created for in-place activation.  
   
- 此函数不会刷新撤消状态信息项。 信息将保留以便[ReactivateAndUndo](#reactivateandundo)可以以后可用于执行撤消命令在服务器应用程序，以防停用项后立即选择容器的撤消命令。  
+ This function does not flush the undo state information for the item. That information is retained so that [ReactivateAndUndo](#reactivateandundo) can later be used to execute an undo command in the server application, in case the container's undo command is chosen immediately after deactivating the item.  
   
- 有关详细信息，请参阅[IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) in the Windows SDK.  
   
-##  <a name="delete"></a>COleClientItem::Delete  
- 调用此函数可从容器文档中删除的 OLE 项。  
+##  <a name="delete"></a>  COleClientItem::Delete  
+ Call this function to delete the OLE item from the container document.  
   
 ```  
 void Delete(BOOL bAutoDelete = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bAutoDelete`  
- 指定是否要从文档中移除项。  
+ Specifies whether the item is to be removed from the document.  
   
-### <a name="remarks"></a>备注  
- 此函数将调用[版本](#release)反过来删除项，并永久删除 OLE 项从文档的 c + + 对象的成员函数。 如果嵌入 OLE 项时，项的本机数据被删除。 它将始终关闭正在运行的服务器;因此，如果该项是打开的链接，此函数将其关闭。  
+### <a name="remarks"></a>Remarks  
+ This function calls the [Release](#release) member function, which in turn deletes the C++ object for the item, permanently removing the OLE item from the document. If the OLE item is embedded, the native data for the item is deleted. It always closes a running server; therefore, if the item is an open link, this function closes it.  
   
-##  <a name="dodragdrop"></a>COleClientItem::DoDragDrop  
- 调用`DoDragDrop`成员函数执行拖放操作。  
+##  <a name="dodragdrop"></a>  COleClientItem::DoDragDrop  
+ Call the `DoDragDrop` member function to perform a drag-and-drop operation.  
   
 ```  
 DROPEFFECT DoDragDrop(
@@ -857,40 +930,40 @@ DROPEFFECT DoDragDrop(
     LPCRECT lpRectStartDrag = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpItemRect`  
- 在工作区坐标 （像素） 的屏幕上的项的矩形。  
+ The item's rectangle on screen in client coordinates (pixels).  
   
  `ptOffset`  
- 从的偏移量`lpItemRect`在拖动时所在的鼠标位置。  
+ The offset from `lpItemRect` where the mouse position was at the time of the drag.  
   
  `bIncludeLink`  
- 将其设置为**TRUE**如果链接数据应复制到剪贴板。 将其设置为**FALSE**如果服务器应用程序不支持链接。  
+ Set this to **TRUE** if the link data should be copied to the Clipboard. Set it to **FALSE** if your server application does not support links.  
   
  `dwEffects`  
- 确定在拖动操作中将允许拖动源的效果。  
+ Determines the effects that the drag source will allow in the drag operation.  
   
  `lpRectStartDrag`  
- 指向定义拖动实际开始的矩形的指针。 有关更多信息，请参见下面的“备注”部分。  
+ Pointer to the rectangle that defines where the drag actually starts. For more information, see the following Remarks section.  
   
-### <a name="return-value"></a>返回值  
- 一个 `DROPEFFECT` 值。 如果它是`DROPEFFECT_MOVE`，则应删除原始数据。  
+### <a name="return-value"></a>Return Value  
+ A `DROPEFFECT` value. If it is `DROPEFFECT_MOVE`, the original data should be removed.  
   
-### <a name="remarks"></a>备注  
- 拖放操作不会立即开始。 它等待，直到鼠标光标离开由指定的矩形`lpRectStartDrag`或之前已通过指定的毫秒数。 如果`lpRectStartDrag`是**NULL**，矩形的大小是一个像素。  
+### <a name="remarks"></a>Remarks  
+ The drag-and-drop operation does not start immediately. It waits until the mouse cursor leaves the rectangle specified by `lpRectStartDrag` or until a specified number of milliseconds have passed. If `lpRectStartDrag` is **NULL**, the size of the rectangle is one pixel.  
   
- 注册表项设置由指定的延迟时间。 你可以通过调用来更改的延迟时间[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)或[cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)。 如果未指定的延迟时间，使用默认值为 200 毫秒。 拖动延迟时间存储中，如下所示︰  
+ The delay time is specified by a registry key setting. You can change the delay time by calling [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) or [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). If you do not specify the delay time, a default value of 200 milliseconds is used. Drag delay time is stored as follows:  
   
--   Windows NT 拖延迟时间将存储在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay。  
+-   Windows NT   Drag delay time is stored in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.  
   
--   Windows 3.x 拖延迟时间将存储在 WIN。INI 文件，[Windows} 部分。  
+-   Windows 3.x   Drag delay time is stored in the WIN.INI file, under the [Windows} section.  
   
--   Windows 95/98 拖延迟时间将存储在 WIN 的缓存版本。INI。  
+-   Windows 95/98   Drag delay time is stored in a cached version of WIN.INI.  
   
- 有关深入了解如何拖动延迟信息存储在任一注册表或。INI 文件，请参阅[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about how drag delay information is stored in either the registry or the .INI file, see [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) in the Windows SDK.  
   
-##  <a name="doverb"></a>COleClientItem::DoVerb  
- 调用`DoVerb`执行指定的动词。  
+##  <a name="doverb"></a>  COleClientItem::DoVerb  
+ Call `DoVerb` to execute the specified verb.  
   
 ```  
 virtual BOOL DoVerb(
@@ -899,36 +972,36 @@ virtual BOOL DoVerb(
     LPMSG lpMsg = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nVerb`  
- 指定要执行的谓词。 它可以包括以下项之一︰  
+ Specifies the verb to execute. It can include one of the following:  
   
-|值|含义|符号|  
+|Value|Meaning|Symbol|  
 |-----------|-------------|------------|  
-|- 0|主谓词|`OLEIVERB_PRIMARY`|  
-|- 1|辅助谓词|（无）|  
-|- 1|显示用于编辑的项|`OLEIVERB_SHOW`|  
-|- 2|在单独的窗口中编辑项目|`OLEIVERB_OPEN`|  
-|- 3|隐藏项|`OLEIVERB_HIDE`|  
+|- 0|Primary verb|`OLEIVERB_PRIMARY`|  
+|- 1|Secondary verb|(None)|  
+|- 1|Display item for editing|`OLEIVERB_SHOW`|  
+|- 2|Edit item in separate window|`OLEIVERB_OPEN`|  
+|- 3|Hide item|`OLEIVERB_HIDE`|  
   
- 为-1 值通常是另一个谓词的别名。 如果不支持打开编辑，-2 将具有相同的效果-1。 其他值，请参阅[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ The -1 value is typically an alias for another verb. If open editing is not supported, -2 has the same effect as -1. For additional values, see [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) in the Windows SDK.  
   
  `pView`  
- 指向视图窗口中;这用于服务器的就地激活。 此参数应为**NULL**如果容器应用程序不允许就地激活。  
+ Pointer to the view window; this is used by the server for in-place activation. This parameter should be **NULL** if the container application does not allow in-place activation.  
   
  `lpMsg`  
- 指向导致要激活的项的消息。  
+ Pointer to the message that caused the item to be activated.  
   
-### <a name="return-value"></a>返回值  
- 如果已成功执行谓词; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the verb was successfully executed; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此函数将调用[激活](#activate)成员函数以执行谓词。 它还捕获异常，并为用户显示一个消息框，如果引发一。  
+### <a name="remarks"></a>Remarks  
+ This function calls the [Activate](#activate) member function to execute the verb. It also catches exceptions and displays a message box to the user if one is thrown.  
   
- 如果为编辑主谓词和中指定零`nVerb`参数，服务器应用程序启动以允许要编辑的 OLE 项。 如果容器应用程序支持就地激活，则可以就地完成编辑。 如果容器不支持就地激活 （或如果指定的动词 Open），服务器将在单独的窗口中启动，并且可以那里完成编辑。 通常情况下，当容器应用程序的用户双击 OLE 项，主谓词中的值时，才`nVerb`参数确定用户可以执行的操作。 但是，如果服务器支持只有一项操作，它不执行该操作，无论其值指定在`nVerb`参数。  
+ If the primary verb is Edit and zero is specified in the `nVerb` parameter, the server application is launched to allow the OLE item to be edited. If the container application supports in-place activation, editing can be done in place. If the container does not support in-place activation (or if the Open verb is specified), the server is launched in a separate window and editing can be done there. Typically, when the user of the container application double-clicks the OLE item, the value for the primary verb in the `nVerb` parameter determines which action the user can take. However, if the server supports only one action, it takes that action, no matter which value is specified in the `nVerb` parameter.  
   
-##  <a name="draw"></a>COleClientItem::Draw  
- 调用此函数可到使用指定的设备上下文的指定边界矩形中绘制 OLE 项。  
+##  <a name="draw"></a>  COleClientItem::Draw  
+ Call this function to draw the OLE item into the specified bounding rectangle using the specified device context.  
   
 ```  
 BOOL Draw(
@@ -937,40 +1010,40 @@ BOOL Draw(
     DVASPECT nDrawAspect = (DVASPECT)-1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向[CDC](../../mfc/reference/cdc-class.md)用于绘制 OLE 项的对象。  
+ Pointer to a [CDC](../../mfc/reference/cdc-class.md) object used for drawing the OLE item.  
   
  `lpBounds`  
- 指向[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或`RECT`结构，它定义要在其中绘制 （在由设备上下文的逻辑单位） 的 OLE 项的边框。  
+ Pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or `RECT` structure that defines the bounding rectangle in which to draw the OLE item (in logical units determined by the device context).  
   
  `nDrawAspect`  
- 指定的方面的 OLE 项，即，它的显示方式。 如果`nDrawAspect`为-1，通过使用设置的最后一个方面[SetDrawAspect](#setdrawaspect)使用。 有关此标志的可能值的详细信息，请参阅[SetDrawAspect](#setdrawaspect)。  
+ Specifies the aspect of the OLE item, that is, how it should be displayed. If `nDrawAspect` is -1, the last aspect set by using [SetDrawAspect](#setdrawaspect) is used. For more information about possible values for this flag, see [SetDrawAspect](#setdrawaspect).  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 函数可能使用的图元文件表示形式创建的 OLE 项[OnDraw](../../mfc/reference/coleserveritem-class.md#ondraw)成员函数`COleServerItem`。  
+### <a name="remarks"></a>Remarks  
+ The function may use the metafile representation of the OLE item created by the [OnDraw](../../mfc/reference/coleserveritem-class.md#ondraw) member function of `COleServerItem`.  
   
- 通常使用**绘制**屏幕显示，将传递作为屏幕设备上下文`pDC`。 在这种情况下，你需要指定只有前两个参数。  
+ Typically you use **Draw** for screen display, passing the screen device context as `pDC`. In this case, you need to specify only the first two parameters.  
   
- `lpBounds`参数标识 （相对于其当前的映射模式） 的目标设备上下文中的矩形。 呈现可能涉及到缩放图和容器应用程序可以用于在施加在显示的视图和最终打印的图像之间进行缩放的视图。  
+ The `lpBounds` parameter identifies the rectangle in the target device context (relative to its current mapping mode). Rendering may involve scaling the picture and can be used by container applications to impose a view that scales between the displayed view and the final printed image.  
   
- 有关详细信息，请参阅[iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) in the Windows SDK.  
   
-##  <a name="getactiveview"></a>COleClientItem::GetActiveView  
- 返回在其的项是就地激活的视图。  
+##  <a name="getactiveview"></a>  COleClientItem::GetActiveView  
+ Returns the view on which the item is in-place activated.  
   
 ```  
 CView* GetActiveView() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向视图;否则为**NULL**如果该项不是就地激活。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the view; otherwise **NULL** if the item is not in-place activated.  
   
-##  <a name="getcachedextent"></a>COleClientItem::GetCachedExtent  
- 调用此函数可检索 OLE 项的大小。  
+##  <a name="getcachedextent"></a>  COleClientItem::GetCachedExtent  
+ Call this function to retrieve the OLE item's size.  
   
 ```  
 BOOL GetCachedExtent(
@@ -978,41 +1051,41 @@ BOOL GetCachedExtent(
     DVASPECT nDrawAspect = (DVASPECT)-1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpSize`  
- 指向**大小**结构或[CSize](../../atl-mfc-shared/reference/csize-class.md)将接收大小信息的对象。  
+ Pointer to a **SIZE** structure or a [CSize](../../atl-mfc-shared/reference/csize-class.md) object that will receive the size information.  
   
  `nDrawAspect`  
- 指定要检索其边界的 OLE 项的方面。 有关可能的值，请参阅[SetDrawAspect](#setdrawaspect)。  
+ Specifies the aspect of the OLE item whose bounds are to be retrieved. For possible values, see [SetDrawAspect](#setdrawaspect).  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零如果 OLE 项为空，则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 if the OLE item is blank.  
   
-### <a name="remarks"></a>备注  
- 此函数提供了相同的信息[GetExtent](#getextent)。 但是，你可以调用`GetCachedExtent`以获取扩展盘区信息处理过程中的其他 OLE 处理程序，如[OnChange](#onchange)。 维度处于`MM_HIMETRIC`单位。  
+### <a name="remarks"></a>Remarks  
+ This function provides the same information as [GetExtent](#getextent). However, you can call `GetCachedExtent` to get extent information during the processing of other OLE handlers, such as [OnChange](#onchange). The dimensions are in `MM_HIMETRIC` units.  
   
- 这是可能因为`GetCachedExtent`使用[IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)接口，而不是使用[IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709)接口来获取此项的范围。 **IViewObject2** COM 对象缓存到以前的调用中使用的扩展盘区信息[iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)。  
+ This is possible because `GetCachedExtent` uses the [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318) interface rather than use the [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709) interface to get the extent of this item. The **IViewObject2** COM object caches the extent information used in the previous call to [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655).  
   
- 有关详细信息，请参阅[IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) in the Windows SDK.  
   
-##  <a name="getclassid"></a>COleClientItem::GetClassID  
- 返回项的类 ID 为指向的内存`pClassID`。  
+##  <a name="getclassid"></a>  COleClientItem::GetClassID  
+ Returns the class ID of the item into the memory pointed to by `pClassID`.  
   
 ```  
 void GetClassID(CLSID* pClassID) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pClassID`  
- 对类型的标识符的指针[CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)来检索类 id。 有关信息**CLSID**，请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Pointer to an identifier of type [CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) to retrieve the class ID. For information on **CLSID**, see the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 类 ID 是一个唯一标识的应用程序编辑项的 128 位数字。  
+### <a name="remarks"></a>Remarks  
+ The class ID is a 128-bit number that uniquely identifies the application that edits the item.  
   
- 有关详细信息，请参阅[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) in the Windows SDK.  
   
-##  <a name="getclipboarddata"></a>COleClientItem::GetClipboardData  
- 调用此函数可获取`COleDataSource`对象，其中包含通过调用将可放置在剪贴板的所有数据[CopyToClipboard](#copytoclipboard)成员函数。  
+##  <a name="getclipboarddata"></a>  COleClientItem::GetClipboardData  
+ Call this function to get a `COleDataSource` object containing all the data that would be placed on the Clipboard by a call to the [CopyToClipboard](#copytoclipboard) member function.  
   
 ```  
 void GetClipboardData(
@@ -1022,50 +1095,50 @@ void GetClipboardData(
     LPSIZE lpSize = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDataSource`  
- 指向[COleDataSource](../../mfc/reference/coledatasource-class.md)将 OLE 项中收到包含的数据的对象。  
+ Pointer to a [COleDataSource](../../mfc/reference/coledatasource-class.md) object that will receive the data contained in the OLE item.  
   
  `bIncludeLink`  
- **TRUE**链接数据应包括; 否则为如果**FALSE**。  
+ **TRUE** if link data should be included; otherwise **FALSE**.  
   
  `lpOffset`  
- 以像素为单位的对象从源鼠标光标的偏移量。  
+ The offset of the mouse cursor from the origin of the object in pixels.  
   
  `lpSize`  
- 以像素为单位的对象的大小。  
+ The size of the object in pixels.  
   
-### <a name="remarks"></a>备注  
- `GetClipboardData`作为的默认实现调用[OnGetClipboardData](#ongetclipboarddata)。 重写`OnGetClipboardData`仅当你想要提供除提供的数据格式`CopyToClipboard`。 将放置在这些格式`COleDataSource`对象之前或之后调用`CopyToClipboard`，然后将传递`COleDataSource`对象传递给[COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard)函数。 例如，如果你想在其容器文档随附在剪贴板中的 OLE 项的位置，你将定义你自己的格式传递该信息并将它置于`COleDataSource`之前调用`CopyToClipboard`。  
+### <a name="remarks"></a>Remarks  
+ `GetClipboardData` is called as the default implementation of [OnGetClipboardData](#ongetclipboarddata). Override `OnGetClipboardData` only if you want to offer data formats in addition to those offered by `CopyToClipboard`. Place those formats in the `COleDataSource` object before or after calling `CopyToClipboard`, and then pass the `COleDataSource` object to the [COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) function. For example, if you want the OLE item's position in its container document to accompany it on the Clipboard, you would define your own format for passing that information and place it in the `COleDataSource` before calling `CopyToClipboard`.  
   
-##  <a name="getdocument"></a>COleClientItem::GetDocument  
- 调用此函数可获取指向包含 OLE 项的文档的指针。  
+##  <a name="getdocument"></a>  COleClientItem::GetDocument  
+ Call this function to get a pointer to the document that contains the OLE item.  
   
 ```  
 COleDocument* GetDocument() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向包含 OLE 项的文档的指针。 **NULL**如果该项不是文档的一部分。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document that contains the OLE item. **NULL** if the item is not part of a document.  
   
-### <a name="remarks"></a>备注  
- 此指针允许访问`COleDocument`作为的自变量传递的对象`COleClientItem`构造函数。  
+### <a name="remarks"></a>Remarks  
+ This pointer allows access to the `COleDocument` object that you passed as an argument to the `COleClientItem` constructor.  
   
-##  <a name="getdrawaspect"></a>COleClientItem::GetDrawAspect  
- 调用`GetDrawAspect`成员函数来确定的当前"方面，"视图中的项。  
+##  <a name="getdrawaspect"></a>  COleClientItem::GetDrawAspect  
+ Call the `GetDrawAspect` member function to determine the current "aspect," or view, of the item.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 取值范围为`DVASPECT`枚举，其值的引用中列出[SetDrawAspect](#setdrawaspect)。  
+### <a name="return-value"></a>Return Value  
+ A value from the `DVASPECT` enumeration, whose values are listed in the reference for [SetDrawAspect](#setdrawaspect).  
   
-### <a name="remarks"></a>备注  
- 方面指定如何对项目进行呈现。  
+### <a name="remarks"></a>Remarks  
+ The aspect specifies how the item is to be rendered.  
   
-##  <a name="getextent"></a>COleClientItem::GetExtent  
- 调用此函数可检索 OLE 项的大小。  
+##  <a name="getextent"></a>  COleClientItem::GetExtent  
+ Call this function to retrieve the OLE item's size.  
   
 ```  
 BOOL GetExtent(
@@ -1073,26 +1146,26 @@ BOOL GetExtent(
     DVASPECT nDrawAspect = (DVASPECT)- 1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpSize`  
- 指向**大小**结构或`CSize`将接收大小信息的对象。  
+ Pointer to a **SIZE** structure or a `CSize` object that will receive the size information.  
   
  `nDrawAspect`  
- 指定要检索其边界的 OLE 项的方面。 有关可能的值，请参阅[SetDrawAspect](#setdrawaspect)。  
+ Specifies the aspect of the OLE item whose bounds are to be retrieved. For possible values, see [SetDrawAspect](#setdrawaspect).  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零如果 OLE 项为空，则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 if the OLE item is blank.  
   
-### <a name="remarks"></a>备注  
- 如果使用 Microsoft 基础类库编写服务器应用程序，此函数将导致[OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)相应的成员函数`COleServerItem`要调用的对象。 请注意，检索到的大小可能不同于上次设置的大小[SetExtent](#setextent)成员函数; 指定的大小`SetExtent`视为建议。 维度处于`MM_HIMETRIC`单位。  
+### <a name="remarks"></a>Remarks  
+ If the server application was written using the Microsoft Foundation Class Library, this function causes the [OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent) member function of the corresponding `COleServerItem` object to be called. Note that the retrieved size may differ from the size last set by the [SetExtent](#setextent) member function; the size specified by `SetExtent` is treated as a suggestion. The dimensions are in `MM_HIMETRIC` units.  
   
 > [!NOTE]
->  不要调用`GetExtent`处理过程中的 OLE 处理程序，如[OnChange](#onchange)。 调用[GetCachedExtent](#getcachedextent)相反。  
+>  Do not call `GetExtent` during the processing of an OLE handler, such as [OnChange](#onchange). Call [GetCachedExtent](#getcachedextent) instead.  
   
- 有关详细信息，请参阅[IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) in the Windows SDK.  
   
-##  <a name="geticonfromregistry"></a>COleClientItem::GetIconFromRegistry  
- 调用此成员函数可检索与特定 CLSID 服务器关联的图标资源的句柄。  
+##  <a name="geticonfromregistry"></a>  COleClientItem::GetIconFromRegistry  
+ Call this member function to retrieve a handle to an icon resource associated with the server of a particular CLSID.  
   
 ```  
 HICON GetIconFromRegistry() const;  
@@ -1100,113 +1173,113 @@ HICON GetIconFromRegistry() const;
 static HICON GetIconFromRegistry(CLSID& clsid);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- 对与图标关联的服务器的 CLSID 的引用。  
+ A reference to the CLSID for the server associated with the icon.  
   
-### <a name="return-value"></a>返回值  
- 图标资源的有效句柄或**NULL**如果无法找到服务器的图标或默认图标。  
+### <a name="return-value"></a>Return Value  
+ A valid handle to the icon resource, or **NULL** if the server's icon, or a default icon, can't be found.  
   
-### <a name="remarks"></a>备注  
- 此成员函数将不启动服务器或动态，获取一个图标，即使服务器已在运行。 相反，此成员函数打开服务器的可执行映像，然后检索与服务器关联，因为它已注册的静态图标。  
+### <a name="remarks"></a>Remarks  
+ This member function will not start the server or obtain an icon dynamically, even if the server is already running. Instead, this member function opens the server's executable image and retrieves the static icon associated with the server as it was registered.  
   
-##  <a name="geticonicmetafile"></a>COleClientItem::GetIconicMetafile  
- 检索用于绘制项的图标的图元文件。  
+##  <a name="geticonicmetafile"></a>  COleClientItem::GetIconicMetafile  
+ Retrieves the metafile used for drawing the item's icon.  
   
 ```  
 HGLOBAL GetIconicMetafile();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则图元文件句柄否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A handle to the metafile if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 如果没有当前的图标，则返回默认图标。 这由 MFC/OLE 对话框自动调用，并且通常不直接调用。  
+### <a name="remarks"></a>Remarks  
+ If there is no current icon, a default icon is returned. This is called automatically by the MFC/OLE dialogs and is usually not called directly.  
   
- 此函数还调用[SetIconicMetafile](#seticonicmetafile)缓存供以后使用图元文件。  
+ This function also calls [SetIconicMetafile](#seticonicmetafile) to cache the metafile for later use.  
   
-##  <a name="getinplacewindow"></a>COleClientItem::GetInPlaceWindow  
- 调用`GetInPlaceWindow`成员函数以获取指向在其中打开项目的窗口的指针，用于就地编辑。  
+##  <a name="getinplacewindow"></a>  COleClientItem::GetInPlaceWindow  
+ Call the `GetInPlaceWindow` member function to get a pointer to the window in which the item has been opened for in-place editing.  
   
 ```  
 CWnd* GetInPlaceWindow();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向在就地编辑窗口中的项;**NULL**如果项处于非活动状态或其服务器不可用。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the item's in-place editing window; **NULL** if the item is not active or if its server is unavailable.  
   
-### <a name="remarks"></a>备注  
- 仅为是处于就地活动状态的项，应调用此函数。  
+### <a name="remarks"></a>Remarks  
+ This function should be called only for items that are in-place active.  
   
-##  <a name="getitemstate"></a>COleClientItem::GetItemState  
- 调用此函数可获取 OLE 项的当前状态。  
+##  <a name="getitemstate"></a>  COleClientItem::GetItemState  
+ Call this function to get the OLE item's current state.  
   
 ```  
 UINT GetItemState() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- A **COleClientItem::ItemState**枚举值，该值可以是以下之一︰ `emptyState`， **loadedState**， `openState`， `activeState`， `activeUIState`。 有关这些状态信息，请参阅文章[容器︰ 客户端项状态](../../mfc/containers-client-item-states.md)。  
+### <a name="return-value"></a>Return Value  
+ A **COleClientItem::ItemState** enumerated value, which can be one of the following: `emptyState`, **loadedState**, `openState`, `activeState`, `activeUIState`. For information about these states, see the article [Containers: Client-Item States](../../mfc/containers-client-item-states.md).  
   
-### <a name="remarks"></a>备注  
- 若要要得到通知 OLE 项的状态更改时，使用[OnChange](#onchange)成员函数。  
+### <a name="remarks"></a>Remarks  
+ To be notified when the OLE item's state changes, use the [OnChange](#onchange) member function.  
   
- 有关详细信息，请参阅文章[容器︰ 客户端项状态](../../mfc/containers-client-item-states.md)。  
+ For more information, see the article [Containers: Client-Item States](../../mfc/containers-client-item-states.md).  
   
-##  <a name="getlaststatus"></a>COleClientItem::GetLastStatus  
- 返回最后一个 OLE 操作的状态代码。  
+##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus  
+ Returns the status code of the last OLE operation.  
   
 ```  
 SCODE GetLastStatus() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个 `SCODE` 值。  
+### <a name="return-value"></a>Return Value  
+ An `SCODE` value.  
   
-### <a name="remarks"></a>备注  
- 成员函数将该返回**BOOL**值**FALSE**，或其他成员函数，可返回**NULL**，`GetLastStatus`返回更详细的失败信息。 请注意，大多数 OLE 成员函数引发异常的更严重的错误。 上的解释的特定信息`SCODE`依赖于上一次返回的基础 OLE 调用`SCODE`值。  
+### <a name="remarks"></a>Remarks  
+ For member functions that return a **BOOL** value of **FALSE**, or other member functions that return **NULL**, `GetLastStatus` returns more detailed failure information. Be aware that most OLE member functions throw exceptions for more serious errors. The specific information on the interpretation of the `SCODE` depends on the underlying OLE call that last returned an `SCODE` value.  
   
- 有关详细信息`SCODE`，请参阅[COM 错误代码的结构](http://msdn.microsoft.com/library/windows/desktop/ms690088)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]文档。  
+ For more information on `SCODE`, see [Structure of COM Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) in the Windows SDK documentation.  
   
-##  <a name="getlinkupdateoptions"></a>COleClientItem::GetLinkUpdateOptions  
- 调用此函数可获取 OLE 项的链接更新选项的当前值。  
+##  <a name="getlinkupdateoptions"></a>  COleClientItem::GetLinkUpdateOptions  
+ Call this function to get the current value of the link-update option for the OLE item.  
   
 ```  
 OLEUPDATE GetLinkUpdateOptions();
 ```  
   
-### <a name="return-value"></a>返回值  
- 以下值之一：  
+### <a name="return-value"></a>Return Value  
+ One of the following values:  
   
-- `OLEUPDATE_ALWAYS`更新链接的项，只要有可能。 在链接对话框中，此选项支持自动的链接更新单选按钮。  
+- `OLEUPDATE_ALWAYS` Update the linked item whenever possible. This option supports the Automatic link-update radio button in the Links dialog box.  
   
-- `OLEUPDATE_ONCALL`更新链接的项仅在从容器应用程序的请求上 (当[UpdateLink](#updatelink)调用成员函数)。 在链接对话框中，此选项支持手动链接更新单选按钮。  
+- `OLEUPDATE_ONCALL` Update the linked item only on request from the container application (when the [UpdateLink](#updatelink) member function is called). This option supports the Manual link-update radio button in the Links dialog box.  
   
-### <a name="remarks"></a>备注  
- 这是一项高级的操作。  
+### <a name="remarks"></a>Remarks  
+ This is an advanced operation.  
   
- 自动调用此函数[COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)类。  
+ This function is called automatically by the [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md) class.  
   
- 有关详细信息，请参阅[IOleLink::GetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680100)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleLink::GetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680100) in the Windows SDK.  
   
-##  <a name="gettype"></a>COleClientItem::GetType  
- 调用此函数可确定是否嵌入 OLE 项或链接，或静态。  
+##  <a name="gettype"></a>  COleClientItem::GetType  
+ Call this function to determine whether the OLE item is embedded or linked, or static.  
   
 ```  
 OLE_OBJTYPE GetType() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 使用以下值之一一个无符号的整数︰  
+### <a name="return-value"></a>Return Value  
+ An unsigned integer with one of the following values:  
   
-- `OT_LINK`OLE 项是的链接。  
+- `OT_LINK` The OLE item is a link.  
   
-- `OT_EMBEDDED`嵌入 OLE 项。  
+- `OT_EMBEDDED` The OLE item is embedded.  
   
-- `OT_STATIC`OLE 项是静态的也就是说，它包含仅演示文稿数据，不是本机数据，并且因此无法编辑。  
+- `OT_STATIC` The OLE item is static, that is, it contains only presentation data, not native data, and thus cannot be edited.  
   
-##  <a name="getusertype"></a>COleClientItem::GetUserType  
- 调用此函数可获取用户可见的字符串，描述 OLE 项的类型，如"Word 文档"。  
+##  <a name="getusertype"></a>  COleClientItem::GetUserType  
+ Call this function to get the user-visible string describing the OLE item's type, such as "Word document."  
   
 ```  
 void GetUserType(
@@ -1214,121 +1287,121 @@ void GetUserType(
     CString& rString);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nUserClassType*  
- 指示的所需的变体字符串，描述 OLE 项的类型的值。 这可以具有以下值之一︰  
+ A value indicating the desired variant of the string describing the OLE item's type. This can have one of the following values:  
   
-- `USERCLASSTYPE_FULL`向用户显示的完整类型名称。  
+- `USERCLASSTYPE_FULL` The full type name displayed to the user.  
   
-- `USERCLASSTYPE_SHORT`在弹出菜单和编辑链接对话框中使用短名称 （最多 15 个字符）。  
+- `USERCLASSTYPE_SHORT` A short name (15 characters maximum) for use in pop-up menus and the Edit Links dialog box.  
   
-- `USERCLASSTYPE_APPNAME`应用程序服务类的名称。  
+- `USERCLASSTYPE_APPNAME` Name of the application servicing the class.  
   
  `rString`  
- 对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)字符串，描述 OLE 项的类型是要返回的对象。  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object to which the string describing the OLE item's type is to be returned.  
   
-### <a name="remarks"></a>备注  
- 这通常是系统注册数据库中的条目。  
+### <a name="remarks"></a>Remarks  
+ This is often the entry in the system registration database.  
   
- 如果完整类型名称为请求，但不可用，则改用短名称。 如果在注册数据库中，找到的 OLE 项的类型没有项，或如果没有用户类型注册针对的 OLE 项的类型，然后用户类型当前存储在则使用 OLE 项。 如果该用户类型名称为空字符串，则使用"未知对象"。  
+ If the full type name is requested but not available, the short name is used instead. If no entry for the type of OLE item is found in the registration database, or if there are no user types registered for the type of OLE item, then the user type currently stored in the OLE item is used. If that user type name is an empty string, "Unknown Object" is used.  
   
- 有关详细信息，请参阅[IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) in the Windows SDK.  
   
-##  <a name="isinplaceactive"></a>COleClientItem::IsInPlaceActive  
- 调用此函数的 OLE 项是否未处于就地活动状态。  
+##  <a name="isinplaceactive"></a>  COleClientItem::IsInPlaceActive  
+ Call this function to see whether the OLE item is in-place active.  
   
 ```  
 BOOL IsInPlaceActive() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果 OLE 项处于就地活动状态; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the OLE item is in-place active; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 常见执行不同的逻辑，具体取决于在位置中编辑项是否是。 该函数检查当前的项状态是否为相等`activeState`或`activeUIState`。  
+### <a name="remarks"></a>Remarks  
+ It is common to execute different logic depending on whether the item is being edited in place. The function checks whether the current item state is equal to either the `activeState` or the `activeUIState`.  
   
-##  <a name="islinkuptodate"></a>COleClientItem::IsLinkUpToDate  
- 调用此函数是否为最新的 OLE 项。  
+##  <a name="islinkuptodate"></a>  COleClientItem::IsLinkUpToDate  
+ Call this function to see whether the OLE item is up to date.  
   
 ```  
 BOOL IsLinkUpToDate() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果 OLE 项是最新的; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the OLE item is up to date; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 链接的项可以是过期如果已更新其源文档。 嵌入的项包含在其中的链接可以同样会过期。 函数行为的递归检查的 OLE 项。 请注意，确定一个 OLE 项是否过期的开销可能会为作为实际执行更新。  
+### <a name="remarks"></a>Remarks  
+ A linked item can be out of date if its source document has been updated. An embedded item that contains links within it can similarly become out of date. The function does a recursive check of the OLE item. Note that determining whether an OLE item is out of date can be as expensive as actually performing an update.  
   
- 这称为自动[COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)实现。  
+ This is called automatically by the [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md) implementation.  
   
- 有关详细信息，请参阅[IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) in the Windows SDK.  
   
-##  <a name="ismodified"></a>COleClientItem::IsModified  
- 调用此函数可看到的 OLE 项是脏的 （自上次保存后修改）。  
+##  <a name="ismodified"></a>  COleClientItem::IsModified  
+ Call this function to see whether the OLE item is dirty (modified since it was last saved).  
   
 ```  
 BOOL IsModified() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果 OLE 项已更新; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the OLE item is dirty; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) in the Windows SDK.  
   
-##  <a name="isopen"></a>COleClientItem::IsOpen  
- 调用此函数，以查看是否 OLE 项处于打开状态;也就是说，在单独的窗口中运行的服务器应用程序实例中打开。  
+##  <a name="isopen"></a>  COleClientItem::IsOpen  
+ Call this function to see whether the OLE item is open; that is, opened in an instance of the server application running in a separate window.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果 OLE 项处于打开状态; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the OLE item is open; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 它用于确定何时要绘制阴影模式的对象。 打开对象应具有基于对象绘制阴影图案。 你可以使用[CRectTracker](../../mfc/reference/crecttracker-class.md)对象来实现此目的。  
+### <a name="remarks"></a>Remarks  
+ It is used to determine when to draw the object with a hatching pattern. An open object should have a hatch pattern drawn on top of the object. You can use a [CRectTracker](../../mfc/reference/crecttracker-class.md) object to accomplish this.  
   
-##  <a name="isrunning"></a>COleClientItem::IsRunning  
- 调用此函数，以查看是否正在运行的 OLE 项;项，即从是否已加载并运行服务器应用程序中。  
+##  <a name="isrunning"></a>  COleClientItem::IsRunning  
+ Call this function to see whether the OLE item is running; that is, whether the item is loaded and running in the server application.  
   
 ```  
 BOOL IsRunning() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果正在运行的 OLE 项; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the OLE item is running; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[OleIsRunning](http://msdn.microsoft.com/library/windows/desktop/ms688705)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [OleIsRunning](http://msdn.microsoft.com/library/windows/desktop/ms688705) in the Windows SDK.  
   
-##  <a name="onactivate"></a>COleClientItem::OnActivate  
- 由框架调用以通知，只需激活就地项。  
+##  <a name="onactivate"></a>  COleClientItem::OnActivate  
+ Called by the framework to notify the item that it has just been activated in place.  
   
 ```  
 virtual void OnActivate();
 ```  
   
-### <a name="remarks"></a>备注  
- 请注意，此函数调用以指示服务器正在运行，不是为了反映其用户界面已安装程序在容器应用程序中。 此时，该对象不具有活动用户界面 (不是`activeUIState`)。 还未安装其菜单或工具栏。 [OnActivateUI](#onactivateui)调用成员函数时，在这种情况。  
+### <a name="remarks"></a>Remarks  
+ Note that this function is called to indicate that the server is running, not to indicate that its user interface has been installed in the container application. At this point, the object does not have an active user interface (is not `activeUIState`). It has not installed its menus or toolbar. The [OnActivateUI](#onactivateui) member function is called when that happens.  
   
- 默认实现调用[OnChange](#onchange)成员函数时**OLE_CHANGEDSTATE**作为参数。 重写此函数可执行自定义处理项时处于就地活动状态。  
+ The default implementation calls the [OnChange](#onchange) member function with **OLE_CHANGEDSTATE** as a parameter. Override this function to perform custom processing when an item becomes in-place active.  
   
-##  <a name="onactivateui"></a>COleClientItem::OnActivateUI  
- 框架调用`OnActivateUI`对象时进入活动状态的 UI 状态。  
+##  <a name="onactivateui"></a>  COleClientItem::OnActivateUI  
+ The framework calls `OnActivateUI` when the object has entered the active UI state.  
   
 ```  
 virtual void OnActivateUI();
 ```  
   
-### <a name="remarks"></a>备注  
- 其工具栏和菜单，现在已安装的对象。  
+### <a name="remarks"></a>Remarks  
+ The object has now installed its tool bar and menus.  
   
- 默认实现会记住服务器的`HWND`以后**GetServerWindow**调用。  
+ The default implementation remembers the server's `HWND` for later **GetServerWindow** calls.  
   
-##  <a name="onchange"></a>COleClientItem::OnChange  
- 当用户修改、 保存，或关闭 OLE 项时，由框架调用。  
+##  <a name="onchange"></a>  COleClientItem::OnChange  
+ Called by the framework when the user modifies, saves, or closes the OLE item.  
   
 ```  
 virtual void OnChange(
@@ -1336,103 +1409,103 @@ virtual void OnChange(
     DWORD dwParam);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nCode`  
- 服务器的原因更改此项目。 它可以具有以下值之一︰  
+ The reason the server changed this item. It can have one of the following values:  
   
-- `OLE_CHANGED`OLE 项的外观已更改。  
+- `OLE_CHANGED` The OLE item's appearance has changed.  
   
-- `OLE_SAVED`已保存的 OLE 项。  
+- `OLE_SAVED` The OLE item has been saved.  
   
-- `OLE_CLOSED`OLE 项已关闭。  
+- `OLE_CLOSED` The OLE item has been closed.  
   
-- `OLE_CHANGED_STATE`OLE 项已从一个状态更改为另一个。  
+- `OLE_CHANGED_STATE` The OLE item has changed from one state to another.  
   
  `dwParam`  
- 如果`nCode`是`OLE_SAVED`或`OLE_CLOSED`，未使用此参数。 如果`nCode`是`OLE_CHANGED`，此参数指定已更改的 OLE 项的方面。 有关可能的值，请参阅`dwParam`参数[COleClientItem::Draw](#draw)。 如果`nCode`是`OLE_CHANGED_STATE`，此参数是**COleClientItem::ItemState**枚举值，并描述输入的状态。 它可以具有以下值之一︰ `emptyState`， **loadedState**， `openState`， `activeState`，或`activeUIState`。  
+ If `nCode` is `OLE_SAVED` or `OLE_CLOSED`, this parameter is not used. If `nCode` is `OLE_CHANGED`, this parameter specifies the aspect of the OLE item that has changed. For possible values, see the `dwParam` parameter of [COleClientItem::Draw](#draw). If `nCode` is `OLE_CHANGED_STATE`, this parameter is a **COleClientItem::ItemState** enumerated value and describes the state being entered. It can have one of the following values: `emptyState`, **loadedState**, `openState`, `activeState`, or `activeUIState`.  
   
-### <a name="remarks"></a>备注  
- (如果服务器应用程序使用 Microsoft 基础类库编写的此函数调用以响应`Notify`的成员函数`COleServerDoc`或`COleServerItem`。)默认实现将容器文档标记为已修改如果`nCode`是`OLE_CHANGED`或`OLE_SAVED`。  
+### <a name="remarks"></a>Remarks  
+ (If the server application is written using the Microsoft Foundation Class Library, this function is called in response to the `Notify` member functions of `COleServerDoc` or `COleServerItem`.) The default implementation marks the container document as modified if `nCode` is `OLE_CHANGED` or `OLE_SAVED`.  
   
- 有关`OLE_CHANGED_STATE`，从返回的当前状态[GetItemState](#getitemstate)将仍是旧的状态，这意味着所当前在此状态更改之前的状态。  
+ For `OLE_CHANGED_STATE`, the current state returned from [GetItemState](#getitemstate) will still be the old state, meaning the state that was current prior to this state change.  
   
- 重写此函数可响应的 OLE 项的状态更改。 通常通过失效显示该项的区域更新项的外观。 开头的重写调用基类实现。  
+ Override this function to respond to changes in the OLE item's state. Typically you update the item's appearance by invalidating the area in which the item is displayed. Call the base class implementation at the beginning of your override.  
   
-##  <a name="onchangeitemposition"></a>COleClientItem::OnChangeItemPosition  
- 由框架调用以通知 OLE 项的作用域在就地激活已更改的容器。  
+##  <a name="onchangeitemposition"></a>  COleClientItem::OnChangeItemPosition  
+ Called by the framework to notify the container that the OLE item's extent has changed during in-place activation.  
   
 ```  
 virtual BOOL OnChangeItemPosition(const CRect& rectPos);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *rectPos*  
- 指示相对于容器应用程序的客户端区域的项的位置。  
+ Indicates the item's position relative to the container application's client area.  
   
-### <a name="return-value"></a>返回值  
- 已成功更改项的位置; 如果非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item's position is successfully changed; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 默认实现确定的 OLE 项和调用的新可见矩形[SetItemRects](#setitemrects)使用新值。 默认实现计算项的可见矩形，并将该信息传递到服务器。  
+### <a name="remarks"></a>Remarks  
+ The default implementation determines the new visible rectangle of the OLE item and calls [SetItemRects](#setitemrects) with the new values. The default implementation calculates the visible rectangle for the item and passes that information to the server.  
   
- 重写此函数可将特殊的规则应用于调整大小/移动操作。 如果应用程序在 MFC 中编写的此调用会因为服务器调用[COleServerDoc::RequestPositionChange](../../mfc/reference/coleserverdoc-class.md#requestpositionchange)。  
+ Override this function to apply special rules to the resize/move operation. If the application is written in MFC, this call results because the server called [COleServerDoc::RequestPositionChange](../../mfc/reference/coleserverdoc-class.md#requestpositionchange).  
   
-##  <a name="ondeactivate"></a>COleClientItem::OnDeactivate  
- 由框架调用，当从处于就地活动状态转换的 OLE 项 ( `activeState`) 向加载状态，这意味着它将停在就地激活后用。  
+##  <a name="ondeactivate"></a>  COleClientItem::OnDeactivate  
+ Called by the framework when the OLE item transitions from the in-place active state ( `activeState`) to the loaded state, meaning that it is deactivated after an in-place activation.  
   
 ```  
 virtual void OnDeactivate();
 ```  
   
-### <a name="remarks"></a>备注  
- 请注意调用此函数可指示 OLE 项已关闭，不从容器应用程序中其用户界面已被移走。 在这种情况， [OnDeactivateUI](#ondeactivateui)调用成员函数。  
+### <a name="remarks"></a>Remarks  
+ Note that this function is called to indicate that the OLE item is closed, not that its user interface has been removed from the container application. When that happens, the [OnDeactivateUI](#ondeactivateui) member function is called.  
   
- 默认实现调用[OnChange](#onchange)成员函数时**OLE_CHANGEDSTATE**作为参数。 重写此函数可执行自定义处理时停用的就地活动项。 例如，如果容器应用程序中支持撤销命令，你可以重写此函数可放弃还原状态，，该值指示，项已停用后，执行的 OLE 项的最后一个操作不能撤消。  
+ The default implementation calls the [OnChange](#onchange) member function with **OLE_CHANGEDSTATE** as a parameter. Override this function to perform custom processing when an in-place active item is deactivated. For example, if you support the undo command in your container application, you can override this function to discard the undo state, indicating that the last operation performed on the OLE item cannot be undone once the item is deactivated.  
   
-##  <a name="ondeactivateandundo"></a>COleClientItem::OnDeactivateAndUndo  
- 当用户激活就地 OLE 项后调用撤销命令时，由框架调用。  
+##  <a name="ondeactivateandundo"></a>  COleClientItem::OnDeactivateAndUndo  
+ Called by the framework when the user invokes the undo command after activating the OLE item in place.  
   
 ```  
 virtual void OnDeactivateAndUndo();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认实现调用[DeactivateUI](#deactivateui)停用服务器的用户界面。 如果你要实现撤销命令在容器应用程序中，重写此函数。 在替代中，调用该函数的基类版本，然后撤消你的应用程序中执行的最后一个命令。  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls [DeactivateUI](#deactivateui) to deactivate the server's user interface. Override this function if you are implementing the undo command in your container application. In your override, call the base class version of the function and then undo the last command executed in your application.  
   
- 有关详细信息，请参阅[IOleInPlaceSite::DeactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms683743)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceSite::DeactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms683743) in the Windows SDK.  
   
-##  <a name="ondeactivateui"></a>COleClientItem::OnDeactivateUI  
- 当用户停用在就地激活项时调用。  
+##  <a name="ondeactivateui"></a>  COleClientItem::OnDeactivateUI  
+ Called when the user deactivates an item that was activated in place.  
   
 ```  
 virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bUndoable`  
- 指定是否可撤消编辑的更改。  
+ Specifies whether the editing changes are undoable.  
   
-### <a name="remarks"></a>备注  
- 此函数还原到其原始状态，隐藏任何菜单和其他控件，创建就地激活的容器应用程序的用户界面。  
+### <a name="remarks"></a>Remarks  
+ This function restores the container application's user interface to its original state, hiding any menus and other controls that were created for in-place activation.  
   
- 如果`bUndoable`是**FALSE**、 容器应禁用撤销命令、 实际上放弃的容器的撤消状态，因为它指示由服务器执行的最后一个操作是不可撤消。  
+ If `bUndoable` is **FALSE**, the container should disable the undo command, in effect discarding the undo state of the container, because it indicates that the last operation performed by the server is not undoable.  
   
-##  <a name="ondiscardundostate"></a>COleClientItem::OnDiscardUndoState  
- 当用户执行编辑 OLE 项时放弃的撤消状态的操作时，由框架调用。  
+##  <a name="ondiscardundostate"></a>  COleClientItem::OnDiscardUndoState  
+ Called by the framework when the user performs an action that discards the undo state while editing the OLE item.  
   
 ```  
 virtual void OnDiscardUndoState();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认实现不执行任何操作。 如果你要实现撤销命令在容器应用程序中，重写此函数。 在替代中，放弃容器应用程序的还原状态。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing. Override this function if you are implementing the undo command in your container application. In your override, discard the container application's undo state.  
   
- 如果服务器已使用 Microsoft 基础类库编写的服务器可能会导致调用通过调用此函数[COleServerDoc::DiscardUndoState](../../mfc/reference/coleserverdoc-class.md#discardundostate)。  
+ If the server was written with the Microsoft Foundation Class Library, the server can cause this function to be called by calling [COleServerDoc::DiscardUndoState](../../mfc/reference/coleserverdoc-class.md#discardundostate).  
   
- 有关详细信息，请参阅[IOleInPlaceSite::DiscardUndoState](http://msdn.microsoft.com/library/windows/desktop/ms688642)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceSite::DiscardUndoState](http://msdn.microsoft.com/library/windows/desktop/ms688642) in the Windows SDK.  
   
-##  <a name="ongetclipboarddata"></a>COleClientItem::OnGetClipboardData  
- 由框架来获取调用`COleDataSource`对象，其中包含通过调用将可放置在剪贴板的所有数据[CopyToClipboard](#copytoclipboard)或[DoDragDrop](#dodragdrop)成员函数。  
+##  <a name="ongetclipboarddata"></a>  COleClientItem::OnGetClipboardData  
+ Called by the framework to get a `COleDataSource` object containing all the data that would be placed on the Clipboard by a call to either the [CopyToClipboard](#copytoclipboard) or the [DoDragDrop](#dodragdrop) member function.  
   
 ```  
 virtual COleDataSource* OnGetClipboardData(
@@ -1441,56 +1514,56 @@ virtual COleDataSource* OnGetClipboardData(
     LPSIZE lpSize);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bIncludeLink`  
- 将其设置为**TRUE**如果链接数据应复制到剪贴板。 将其设置为**FALSE**如果服务器应用程序不支持链接。  
+ Set this to **TRUE** if link data should be copied to the Clipboard. Set this to **FALSE** if your server application does not support links.  
   
  `lpOffset`  
- 指向鼠标光标的偏移量从原点以像素为单位的对象的指针。  
+ Pointer to the offset of the mouse cursor from the origin of the object in pixels.  
   
  `lpSize`  
- 以像素为单位的对象的大小的指针。  
+ Pointer to the size of the object in pixels.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针[COleDataSource](../../mfc/reference/coledatasource-class.md)包含剪贴板数据对象。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [COleDataSource](../../mfc/reference/coledatasource-class.md) object containing the Clipboard data.  
   
-### <a name="remarks"></a>备注  
- 此函数的默认实现调用[GetClipboardData](#getclipboarddata)。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function calls [GetClipboardData](#getclipboarddata).  
   
-##  <a name="ongetcliprect"></a>COleClientItem::OnGetClipRect  
- 框架调用`OnGetClipRect`成员函数以就地获取正在编辑的项的剪辑矩形坐标。  
+##  <a name="ongetcliprect"></a>  COleClientItem::OnGetClipRect  
+ The framework calls the `OnGetClipRect` member function to get the clipping-rectangle coordinates of the item that is being edited in place.  
   
 ```  
 virtual void OnGetClipRect(CRect& rClipRect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *rClipRect*  
- 指针指向类的对象[CRect](../../atl-mfc-shared/reference/crect-class.md) ，将存放项的剪辑矩形坐标。  
+ Pointer to an object of class [CRect](../../atl-mfc-shared/reference/crect-class.md) that will hold the clipping-rectangle coordinates of the item.  
   
-### <a name="remarks"></a>备注  
- 坐标是以相对于容器应用程序窗口的工作区的像素为单位。  
+### <a name="remarks"></a>Remarks  
+ Coordinates are in pixels relative to the container application window's client area.  
   
- 默认实现只需返回项在其处于就地活动状态的视图的客户端的矩形。  
+ The default implementation simply returns the client rectangle of the view on which the item is in-place active.  
   
-##  <a name="ongetitemposition"></a>COleClientItem::OnGetItemPosition  
- 框架调用`OnGetItemPosition`成员函数以就地获取正在编辑的项的坐标。  
+##  <a name="ongetitemposition"></a>  COleClientItem::OnGetItemPosition  
+ The framework calls the `OnGetItemPosition` member function to get the coordinates of the item that is being edited in place.  
   
 ```  
 virtual void OnGetItemPosition(CRect& rPosition);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rPosition`  
- 引用[CRect](../../atl-mfc-shared/reference/crect-class.md)将包含该项的位置坐标的对象。  
+ Reference to the [CRect](../../atl-mfc-shared/reference/crect-class.md) object that will contain the item's position coordinates.  
   
-### <a name="remarks"></a>备注  
- 坐标是以相对于容器应用程序窗口的工作区的像素为单位。  
+### <a name="remarks"></a>Remarks  
+ Coordinates are in pixels relative to the container application window's client area.  
   
- 此函数的默认实现不执行任何操作。 支持就地编辑的应用程序需要它的实现。  
+ The default implementation of this function does nothing. Applications that support in-place editing require its implementation.  
   
-##  <a name="ongetwindowcontext"></a>COleClientItem::OnGetWindowContext  
- 就地激活项时，由框架调用。  
+##  <a name="ongetwindowcontext"></a>  COleClientItem::OnGetWindowContext  
+ Called by the framework when an item is activated in place.  
   
 ```  
 virtual BOOL OnGetWindowContext(
@@ -1499,30 +1572,30 @@ virtual BOOL OnGetWindowContext(
     LPOLEINPLACEFRAMEINFO lpFrameInfo);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ppMainFrame`  
- 指向指向主框架窗口的指针的指针。  
+ Pointer to a pointer to the main frame window.  
   
  `ppDocFrame`  
- 为指向文档框架窗口的指针。  
+ Pointer to a pointer to the document frame window.  
   
  `lpFrameInfo`  
- 指向[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737)结构，它将接收帧窗口信息。  
+ Pointer to an [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) structure that will receive frame window information.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此函数用于检索有关 OLE 项的父窗口的信息。  
+### <a name="remarks"></a>Remarks  
+ This function is used to retrieve information about the OLE item's parent window.  
   
- 如果容器是 MDI 应用程序，默认实现返回一个指向[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)对象在`ppMainFrame`和指向活动[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)对象在`ppDocFrame`。 如果容器是 SDI 应用程序，默认实现返回一个指向[CFrameWnd](../../mfc/reference/cframewnd-class.md)对象在`ppMainFrame`并返回**NULL**中`ppDocFrame`。 默认实现中的成员也填充`lpFrameInfo`。  
+ If the container is an MDI application, the default implementation returns a pointer to the [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md) object in `ppMainFrame` and a pointer to the active [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) object in `ppDocFrame`. If the container is an SDI application, the default implementation returns a pointer to the [CFrameWnd](../../mfc/reference/cframewnd-class.md) object in `ppMainFrame` and returns **NULL** in `ppDocFrame`. The default implementation also fills in the members of `lpFrameInfo`.  
   
- 默认实现不能满足你的应用程序; 如果仅重写此函数例如，如果你的应用程序具有不同于 SDI 或 MDI 用户界面范例。 这是一个高级可重写。  
+ Override this function only if the default implementation does not suit your application; for example, if your application has a user-interface paradigm that differs from SDI or MDI. This is an advanced overridable.  
   
- 有关详细信息，请参阅[IOleInPlaceSite::GetWindowContext](http://msdn.microsoft.com/library/windows/desktop/ms694366)和[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737)结构[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceSite::GetWindowContext](http://msdn.microsoft.com/library/windows/desktop/ms694366) and the [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) structure in the Windows SDK.  
   
-##  <a name="oninsertmenus"></a>COleClientItem::OnInsertMenus  
- 由框架调用期间将容器应用程序的菜单插入空的菜单上的就地激活。  
+##  <a name="oninsertmenus"></a>  COleClientItem::OnInsertMenus  
+ Called by the framework during in-place activation to insert the container application's menus into an empty menu.  
   
 ```  
 virtual void OnInsertMenus(
@@ -1530,59 +1603,59 @@ virtual void OnInsertMenus(
     LPOLEMENUGROUPWIDTHS lpMenuWidths);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pMenuShared`  
- 指向一个空的菜单。  
+ Points to an empty menu.  
   
  `lpMenuWidths`  
- 指向数组的六个**长**值，该值指示菜单数每个以下的菜单组中︰ 文件、 编辑或容器，对象，窗口中，帮助。 容器应用程序负责文件、 容器和窗口菜单组，对应于 0、 2 和 4 此数组的元素。  
+ Points to an array of six **LONG** values indicating how many menus are in each of the following menu groups: File, Edit, Container, Object, Window, Help. The container application is responsible for the File, Container, and Window menu groups, corresponding to elements 0, 2, and 4 of this array.  
   
-### <a name="remarks"></a>备注  
- 此菜单然后传递到服务器，它插入其自己的菜单，创建一个复合菜单。 为了生成几个复合菜单，可以反复调用此函数。  
+### <a name="remarks"></a>Remarks  
+ This menu is then passed to the server, which inserts its own menus, creating a composite menu. This function can be called repeatedly to build several composite menus.  
   
- 默认实现将插入到`pMenuShared`就地容器菜单; 即，文件、 容器和窗口菜单组。 [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo)用于设置此菜单资源。 默认实现还将适当的值分配给 0、 2 和 4 中的元素`lpMenuWidths`，取决于该菜单资源。 默认实现不适合于你的应用程序; 如果重写此函数例如，如果你的应用程序不使用将资源与文档类型相关联的文档模板。 如果重写此函数，则还应重写[OnSetMenu](#onsetmenu)和[OnRemoveMenus](#onremovemenus)。 这是一个高级可重写。  
+ The default implementation inserts into `pMenuShared` the in-place container menus; that is, the File, Container, and Window menu groups. [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo) is used to set this menu resource. The default implementation also assigns the appropriate values to elements 0, 2, and 4 in `lpMenuWidths`, depending on the menu resource. Override this function if the default implementation is not appropriate for your application; for example, if your application does not use document templates for associating resources with document types. If you override this function, you should also override [OnSetMenu](#onsetmenu) and [OnRemoveMenus](#onremovemenus). This is an advanced overridable.  
   
- 有关详细信息，请参阅[ioleinplaceframe:: Insertmenus](http://msdn.microsoft.com/library/windows/desktop/ms683987)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceFrame::InsertMenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) in the Windows SDK.  
   
-##  <a name="onremovemenus"></a>COleClientItem::OnRemoveMenus  
- 由框架调用以从指定的复合菜单删除容器的菜单，在就地激活结束时。  
+##  <a name="onremovemenus"></a>  COleClientItem::OnRemoveMenus  
+ Called by the framework to remove the container's menus from the specified composite menu when in-place activation ends.  
   
 ```  
 virtual void OnRemoveMenus(CMenu* pMenuShared);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pMenuShared`  
- 指向由调用构造的复合菜单[OnInsertMenus](#oninsertmenus)成员函数。  
+ Points to the composite menu constructed by calls to the [OnInsertMenus](#oninsertmenus) member function.  
   
-### <a name="remarks"></a>备注  
- 默认实现，则删除`pMenuShared`就地容器菜单，即、 文件、 容器和窗口菜单组。 默认实现不适合于你的应用程序; 如果重写此函数例如，如果你的应用程序不使用将资源与文档类型相关联的文档模板。 如果重写此函数，则可能应重写[OnInsertMenus](#oninsertmenus)和[OnSetMenu](#onsetmenu)以及。 这是一个高级可重写。  
+### <a name="remarks"></a>Remarks  
+ The default implementation removes from `pMenuShared` the in-place container menus, that is, the File, Container, and Window menu groups. Override this function if the default implementation is not appropriate for your application; for example, if your application does not use document templates for associating resources with document types. If you override this function, you should probably override [OnInsertMenus](#oninsertmenus) and [OnSetMenu](#onsetmenu) as well. This is an advanced overridable.  
   
- 在子菜单`pMenuShared`可能共享由多个复合菜单中，如果在服务器重复调用`OnInsertMenus`。 因此，你不应在的重写中删除任何子菜单`OnRemoveMenus`; 应仅分离。  
+ The submenus on `pMenuShared` may be shared by more than one composite menu if the server has repeatedly called `OnInsertMenus`. Therefore you should not delete any submenus in your override of `OnRemoveMenus`; you should only detach them.  
   
- 有关详细信息，请参阅[IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) in the Windows SDK.  
   
-##  <a name="onscrollby"></a>COleClientItem::OnScrollBy  
- 由框架调用以向下滚动以响应从服务器请求的 OLE 项。  
+##  <a name="onscrollby"></a>  COleClientItem::OnScrollBy  
+ Called by the framework to scroll the OLE item in response to requests from the server.  
   
 ```  
 virtual BOOL OnScrollBy(CSize sizeExtent);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *sizeExtent*  
- 指定距离，以像素为单位，若要在 x 和 y 方向上滚动。  
+ Specifies the distances, in pixels, to scroll in the x and y directions.  
   
-### <a name="return-value"></a>返回值  
- 如果项滚动; 则为非 0如果不滚动项，则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item was scrolled; 0 if the item could not be scrolled.  
   
-### <a name="remarks"></a>备注  
- 例如，如果 OLE 项是部分可见，并且用户之外的可见区域将在执行就地编辑时，此函数调用以保持光标可见。 默认实现不执行任何操作。 重写此函数可将项滚动指定的量。 请注意由于滚动，可以更改 OLE 项的可见部分。 调用[SetItemRects](#setitemrects)更新项的可见矩形。  
+### <a name="remarks"></a>Remarks  
+ For example, if the OLE item is partially visible and the user moves outside the visible region while performing in-place editing, this function is called to keep the cursor visible. The default implementation does nothing. Override this function to scroll the item by the specified amount. Note that as a result of scrolling, the visible portion of the OLE item can change. Call [SetItemRects](#setitemrects) to update the item's visible rectangle.  
   
- 有关详细信息，请参阅[IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) in the Windows SDK.  
   
-##  <a name="onsetmenu"></a>COleClientItem::OnSetMenu  
- 由框架调用两次时就地激活的开始和结束;首次安装复合菜单和第二个时间 (与`holemenu`等于**NULL**)，将其删除。  
+##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
+ Called by the framework two times when in-place activation begins and ends; the first time to install the composite menu and the second time (with `holemenu` equal to **NULL**) to remove it.  
   
 ```  
 virtual void OnSetMenu(
@@ -1591,23 +1664,23 @@ virtual void OnSetMenu(
     HWND hwndActiveObject);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pMenuShared`  
- 通过调用构造复合菜单上的指向[OnInsertMenus](#oninsertmenus)成员函数和`InsertMenu`函数。  
+ Pointer to the composite menu constructed by calls to the [OnInsertMenus](#oninsertmenus) member function and the `InsertMenu` function.  
   
  `holemenu`  
- 返回的菜单描述符的句柄**OleCreateMenuDescriptor**函数，或**NULL**调度代码是否要删除。  
+ Handle to the menu descriptor returned by the **OleCreateMenuDescriptor** function, or **NULL** if the dispatching code is to be removed.  
   
  *hwndActiveObject*  
- OLE 项的编辑窗口的句柄。 这是将接收来自 OLE 的编辑命令窗口。  
+ Handle to the editing window for the OLE item. This is the window that will receive editing commands from OLE.  
   
-### <a name="remarks"></a>备注  
- 默认实现安装或删除复合菜单上，然后调用[OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831)函数来安装或删除调度代码。 如果默认实现不适合于你的应用程序，重写此函数。 如果重写此函数，则可能应重写[OnInsertMenus](#oninsertmenus)和[OnRemoveMenus](#onremovemenus)以及。 这是一个高级可重写。  
+### <a name="remarks"></a>Remarks  
+ The default implementation installs or removes the composite menu and then calls the [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831) function to install or remove the dispatching code. Override this function if the default implementation is not appropriate for your application. If you override this function, you should probably override [OnInsertMenus](#oninsertmenus) and [OnRemoveMenus](#onremovemenus) as well. This is an advanced overridable.  
   
- 有关详细信息，请参阅[OleCreateMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms691415)， [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831)，和[ioleinplaceframe:: Setmenu](http://msdn.microsoft.com/library/windows/desktop/ms693713)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [OleCreateMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms691415), [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831), and [IOleInPlaceFrame::SetMenu](http://msdn.microsoft.com/library/windows/desktop/ms693713) in the Windows SDK.  
   
-##  <a name="onshowcontrolbars"></a>COleClientItem::OnShowControlBars  
- 由框架调用以显示和隐藏容器应用程序的控件条。  
+##  <a name="onshowcontrolbars"></a>  COleClientItem::OnShowControlBars  
+ Called by the framework to show and hide the container application's control bars.  
   
 ```  
 virtual BOOL OnShowControlBars(
@@ -1615,126 +1688,126 @@ virtual BOOL OnShowControlBars(
     BOOL bShow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pFrameWnd`  
- 到容器应用程序的框架窗口的指针。 这可以是主框架窗口或 MDI 子窗口。  
+ Pointer to the container application's frame window. This can be either a main frame window or an MDI child window.  
   
  `bShow`  
- 指定控件条是显示还是隐藏。  
+ Specifies whether control bars are to be shown or hidden.  
   
-### <a name="return-value"></a>返回值  
- 如果函数调用将导致控件条的状态; 中的更改则不为0 如果调用会导致不改变，或如果`pFrameWnd`未指向容器的框架窗口。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function call causes a change in the control bars' state; 0 if the call causes no change, or if `pFrameWnd` does not point to the container's frame window.  
   
-### <a name="remarks"></a>备注  
- 如果控件条已处于指定的状态，此函数将返回 0 *bShow。* 这可能会发生例如，如果控件条处于隐藏状态和`bShow`是**FALSE**。  
+### <a name="remarks"></a>Remarks  
+ This function returns 0 if the control bars are already in the state specified by *bShow.* This would occur, for example, if the control bars are hidden and `bShow` is **FALSE**.  
   
- 默认实现从顶级框架窗口中移除工具栏。  
+ The default implementation removes the toolbar from the top-level frame window.  
   
-##  <a name="onshowitem"></a>COleClientItem::OnShowItem  
- 由框架调用以显示 OLE 项，编辑过程中使完全可见。  
+##  <a name="onshowitem"></a>  COleClientItem::OnShowItem  
+ Called by the framework to display the OLE item, making it totally visible during editing.  
   
 ```  
 virtual void OnShowItem();
 ```  
   
-### <a name="remarks"></a>备注  
- 它用时容器应用程序支持指向嵌入项 (即，如果你有派生您的文档类从[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md))。 在就地激活或 OLE 项的链接源且用户想要对其进行编辑的过程中调用此函数。 默认实现激活容器文档的第一个视图。 重写此函数可将文档滚动，以便 OLE 项可见。  
+### <a name="remarks"></a>Remarks  
+ It is used when your container application supports links to embedded items (that is, if you have derived your document class from [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)). This function is called during in-place activation or when the OLE item is a link source and the user wants to edit it. The default implementation activates the first view on the container document. Override this function to scroll the document so that the OLE item is visible.  
   
-##  <a name="onupdateframetitle"></a>COleClientItem::OnUpdateFrameTitle  
- 由框架调用以更新框架窗口的标题栏的就地激活期间。  
+##  <a name="onupdateframetitle"></a>  COleClientItem::OnUpdateFrameTitle  
+ Called by the framework during in-place activation to update the frame window's title bar.  
   
 ```  
 virtual BOOL OnUpdateFrameTitle();
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果此函数已成功更新框架标题，否则为零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this function successfully updated the frame title, otherwise zero.  
   
-### <a name="remarks"></a>备注  
- 默认实现不会更改的框架窗口标题。 重写此函数，如果你需要不同的帧标题你的应用程序，例如" *server 应用* - *项*中*docname*"（如下所示，"Microsoft Excel 的报表中的电子表格。DOC")。 这是一个高级可重写。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does not change the frame window title. Override this function if you want a different frame title for your application, for example " *server app* - *item* in *docname*" (as in, "Microsoft Excel - spreadsheet in REPORT.DOC"). This is an advanced overridable.  
   
-##  <a name="reactivateandundo"></a>COleClientItem::ReactivateAndUndo  
- 调用此函数可重新激活的 OLE 项和撤消的就地编辑过程由用户执行的最后一个操作。  
+##  <a name="reactivateandundo"></a>  COleClientItem::ReactivateAndUndo  
+ Call this function to reactivate the OLE item and undo the last operation performed by the user during in-place editing.  
   
 ```  
 BOOL ReactivateAndUndo();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果容器应用程序支持撤销命令，调用此函数，如果用户停用 OLE 项后立即选择撤消命令。  
+### <a name="remarks"></a>Remarks  
+ If your container application supports the undo command, call this function if the user chooses the undo command immediately after deactivating the OLE item.  
   
- 如果服务器应用程序使用 Microsoft 基础类库编写的此函数会导致服务器调用[COleServerDoc::OnReactivateAndUndo](../../mfc/reference/coleserverdoc-class.md#onreactivateandundo)。  
+ If the server application is written with the Microsoft Foundation Class Libraries, this function causes the server to call [COleServerDoc::OnReactivateAndUndo](../../mfc/reference/coleserverdoc-class.md#onreactivateandundo).  
   
- 有关详细信息，请参阅[IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) in the Windows SDK.  
   
-##  <a name="release"></a>COleClientItem::Release  
- 调用此函数来清理资源使用的 OLE 项。  
+##  <a name="release"></a>  COleClientItem::Release  
+ Call this function to clean up resources used by the OLE item.  
   
 ```  
 virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwCloseOption`  
- 指定在什么情况下，当它返回时向加载状态已保存该 OLE 项的标志。 有关可能的值的列表，请参阅[COleClientItem::Close](#close)。  
+ Flag specifying under what circumstances the OLE item is saved when it returns to the loaded state. For a list of possible values, see [COleClientItem::Close](#close).  
   
-### <a name="remarks"></a>备注  
- **版本**由调用`COleClientItem`析构函数。  
+### <a name="remarks"></a>Remarks  
+ **Release** is called by the `COleClientItem` destructor.  
   
- 有关详细信息，请参阅[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) in the Windows SDK.  
   
-##  <a name="reload"></a>COleClientItem::Reload  
- 关闭并重新加载项。  
+##  <a name="reload"></a>  COleClientItem::Reload  
+ Closes and reloads the item.  
   
 ```  
 BOOL Reload();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 调用`Reload`后激活作为另一种类型的项的项，通过调用的函数[ActivateAs](#activateas)。  
+### <a name="remarks"></a>Remarks  
+ Call the `Reload` function after activating the item as an item of another type by a call to [ActivateAs](#activateas).  
   
-##  <a name="run"></a>COleClientItem::Run  
- 运行与此项关联的应用程序。  
+##  <a name="run"></a>  COleClientItem::Run  
+ Runs the application associated with this item.  
   
 ```  
 void Run();
 ```  
   
-### <a name="remarks"></a>备注  
- 调用**运行**成员函数，以启动服务器应用程序，然后激活项。 这就会自动完成[激活](#activate)和[DoVerb](#doverb)，因此它通常是不需要调用此函数。 调用此函数，如有必要以为了设置项属性，如运行服务器[SetExtent](#setextent)，在执行之前[DoVerb](#doverb)。  
+### <a name="remarks"></a>Remarks  
+ Call the **Run** member function to launch the server application before activating the item. This is done automatically by [Activate](#activate) and [DoVerb](#doverb), so it is usually not necessary to call this function. Call this function if it is necessary to run the server in order to set an item attribute, such as [SetExtent](#setextent), before executing [DoVerb](#doverb).  
   
-##  <a name="setdrawaspect"></a>COleClientItem::SetDrawAspect  
- 调用`SetDrawAspect`成员函数以设置的"方面"或视图的项。  
+##  <a name="setdrawaspect"></a>  COleClientItem::SetDrawAspect  
+ Call the `SetDrawAspect` member function to set the "aspect," or view, of the item.  
   
 ```  
 virtual void SetDrawAspect(DVASPECT nDrawAspect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nDrawAspect`  
- `DVASPECT` 枚举中的一个值。 此参数可以具有下列值之一：  
+ A value from the `DVASPECT` enumeration. This parameter can have one of the following values:  
   
-- `DVASPECT_CONTENT`项可以显示作为嵌入到其容器内的对象的方式表示。  
+- `DVASPECT_CONTENT` Item is represented in such a way that it can be displayed as an embedded object inside its container.  
   
-- `DVASPECT_THUMBNAIL`项将呈现在"缩略图"表示形式，以便它可以在浏览工具中显示。  
+- `DVASPECT_THUMBNAIL` Item is rendered in a "thumbnail" representation so that it can be displayed in a browsing tool.  
   
-- `DVASPECT_ICON`项由一个图标表示。  
+- `DVASPECT_ICON` Item is represented by an icon.  
   
-- `DVASPECT_DOCPRINT`就像它已使用文件菜单中的打印命令来打印表示项。  
+- `DVASPECT_DOCPRINT` Item is represented as if it were printed using the Print command from the File menu.  
   
-### <a name="remarks"></a>备注  
- 方面指定如何对项目进行来呈现[绘制](#draw)时的默认值为该函数`nDrawAspect`使用参数。  
+### <a name="remarks"></a>Remarks  
+ The aspect specifies how the item is to be rendered by [Draw](#draw) when the default value for that function's `nDrawAspect` argument is used.  
   
- 通过更改图标 （和其他直接调用更改图标对话框的对话框） 自动调用此函数以启用请求的用户时的图标显示方面。  
+ This function is called automatically by the Change Icon (and other dialogs that call the Change Icon dialog directly) to enable the iconic display aspect when requested by the user.  
   
-##  <a name="setextent"></a>COleClientItem::SetExtent  
- 调用此函数可指定的空间量是可用于 OLE 项。  
+##  <a name="setextent"></a>  COleClientItem::SetExtent  
+ Call this function to specify how much space is available to the OLE item.  
   
 ```  
 void SetExtent(
@@ -1742,20 +1815,20 @@ void SetExtent(
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `size`  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)包含大小信息的对象。  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object that contains the size information.  
   
  `nDrawAspect`  
- 指定要设置其边界的 OLE 项的方面。 有关可能的值，请参阅[SetDrawAspect](#setdrawaspect)。  
+ Specifies the aspect of the OLE item whose bounds are to be set. For possible values, see [SetDrawAspect](#setdrawaspect).  
   
-### <a name="remarks"></a>备注  
- 如果使用 Microsoft 基础类库编写服务器应用程序，这将导致[OnSetExtent](../../mfc/reference/coleserveritem-class.md#onsetextent)相应的成员函数`COleServerItem`要调用的对象。 OLE 项然后可以相应地调整其显示。 维度都必须是在`MM_HIMETRIC`单位。 当用户调整大小时 OLE 项或支持某种形式的布局协商，则调用此函数。  
+### <a name="remarks"></a>Remarks  
+ If the server application was written using the Microsoft Foundation Class Library, this causes the [OnSetExtent](../../mfc/reference/coleserveritem-class.md#onsetextent) member function of the corresponding `COleServerItem` object to be called. The OLE item can then adjust its display accordingly. The dimensions must be in `MM_HIMETRIC` units. Call this function when the user resizes the OLE item or if you support some form of layout negotiation.  
   
- 有关详细信息，请参阅[IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) in the Windows SDK.  
   
-##  <a name="sethostnames"></a>COleClientItem::SetHostNames  
- 调用此函数可指定容器应用程序的名称和嵌入 OLE 项的容器的名称。  
+##  <a name="sethostnames"></a>  COleClientItem::SetHostNames  
+ Call this function to specify the name of the container application and the container's name for an embedded OLE item.  
   
 ```  
 void SetHostNames(
@@ -1763,41 +1836,41 @@ void SetHostNames(
     LPCTSTR lpszHostObj);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszHost`  
- 为容器应用程序的用户可见名称的指针。  
+ Pointer to the user-visible name of the container application.  
   
  `lpszHostObj`  
- 为包含 OLE 项的容器的标识字符串的指针。  
+ Pointer to an identifying string of the container that contains the OLE item.  
   
-### <a name="remarks"></a>备注  
- 如果使用 Microsoft 基础类库编写服务器应用程序，此函数将调用[OnSetHostNames](../../mfc/reference/coleserverdoc-class.md#onsethostnames)成员函数`COleServerDoc`包含 OLE 项的文档。 在编辑 OLE 项时，窗口标题中使用此信息。 每次加载容器文档时，框架的文档中的所有 OLE 项中调用此函数。 `SetHostNames`是仅适用于嵌入项。 不需要调用此函数每次激活嵌入的 OLE 项以进行编辑。  
+### <a name="remarks"></a>Remarks  
+ If the server application was written using the Microsoft Foundation Class Library, this function calls the [OnSetHostNames](../../mfc/reference/coleserverdoc-class.md#onsethostnames) member function of the `COleServerDoc` document that contains the OLE item. This information is used in window titles when the OLE item is being edited. Each time a container document is loaded, the framework calls this function for all the OLE items in the document. `SetHostNames` is applicable only to embedded items. It is not necessary to call this function each time an embedded OLE item is activated for editing.  
   
- 这也称为自动具有应用程序名称和文档名称加载一个对象时，或使用其他名称保存文件。 相应地，它通常没有必要直接调用此函数。  
+ This is also called automatically with the application name and document name when an object is loaded or when a file is saved under a different name. Accordingly, it is not usually necessary to call this function directly.  
   
- 有关详细信息，请参阅[IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) in the Windows SDK.  
   
-##  <a name="seticonicmetafile"></a>COleClientItem::SetIconicMetafile  
- 缓存用于绘制项的图标的图元文件。  
+##  <a name="seticonicmetafile"></a>  COleClientItem::SetIconicMetafile  
+ Caches the metafile used for drawing the item's icon.  
   
 ```  
 BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hMetaPict`  
- 用于绘制项的图标的图元文件句柄。  
+ A handle to the metafile used for drawing the item's icon.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 使用[GetIconicMetafile](#geticonicmetafile)检索图元文件。  
+### <a name="remarks"></a>Remarks  
+ Use [GetIconicMetafile](#geticonicmetafile) to retrieve the metafile.  
   
- `hMetaPict`参数复制到项目中; 因此，`hMetaPict`必须由调用方释放。  
+ The `hMetaPict` parameter is copied into the item; therefore, `hMetaPict` must be freed by the caller.  
   
-##  <a name="setitemrects"></a>COleClientItem::SetItemRects  
- 调用此函数可设置的边框或 OLE 项的可见矩形。  
+##  <a name="setitemrects"></a>  COleClientItem::SetItemRects  
+ Call this function to set the bounding rectangle or the visible rectangle of the OLE item.  
   
 ```  
 BOOL SetItemRects(
@@ -1805,87 +1878,87 @@ BOOL SetItemRects(
     LPCRECT lpClipRect = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lprcPosRect*  
- 指向包含相对于其父窗口，在客户端坐标中的 OLE 项的边界的矩形的指针。  
+ Pointer to the rectangle containing the bounds of the OLE item relative to its parent window, in client coordinates.  
   
  *lprcClipRect*  
- 指向包含相对于其父窗口，在客户端坐标中的 OLE 项的可见部分的边界的矩形的指针。  
+ Pointer to the rectangle containing the bounds of the visible portion of the OLE item relative to its parent window, in client coordinates.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零否则为为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise, 0.  
   
-### <a name="remarks"></a>备注  
- 默认实现调用此函数[OnChangeItemPosition](#onchangeitemposition)成员函数。 每当位置或可见部分 OLE 项的更改，则应调用此函数。 通常，这意味着从视图的调用它[OnSize](../../mfc/reference/cwnd-class.md#onsize)和[OnScrollBy](../../mfc/reference/cview-class.md#onscrollby)成员函数。  
+### <a name="remarks"></a>Remarks  
+ This function is called by the default implementation of the [OnChangeItemPosition](#onchangeitemposition) member function. You should call this function whenever the position or visible portion of the OLE item changes. Usually this means that you call it from your view's [OnSize](../../mfc/reference/cwnd-class.md#onsize) and [OnScrollBy](../../mfc/reference/cview-class.md#onscrollby) member functions.  
   
- 有关详细信息，请参阅[IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) in the Windows SDK.  
   
-##  <a name="setlinkupdateoptions"></a>COleClientItem::SetLinkUpdateOptions  
- 调用此函数可设置表示法指定链接的项的链接更新选项。  
+##  <a name="setlinkupdateoptions"></a>  COleClientItem::SetLinkUpdateOptions  
+ Call this function to set the link-update option for the presentation of the specified linked item.  
   
 ```  
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *dwUpdateOpt*  
- 此项的链接更新选项的值。 此值必须是以下项之一︰  
+ The value of the link-update option for this item. This value must be one of the following:  
   
-- `OLEUPDATE_ALWAYS`更新链接的项，只要有可能。 在链接对话框中，此选项支持自动的链接更新单选按钮。  
+- `OLEUPDATE_ALWAYS` Update the linked item whenever possible. This option supports the Automatic link-update radio button in the Links dialog box.  
   
-- `OLEUPDATE_ONCALL`更新链接的项仅在从容器应用程序的请求上 (当[UpdateLink](#updatelink)调用成员函数)。 在链接对话框中，此选项支持手动链接更新单选按钮。  
+- `OLEUPDATE_ONCALL` Update the linked item only on request from the container application (when the [UpdateLink](#updatelink) member function is called). This option supports the Manual link-update radio button in the Links dialog box.  
   
-### <a name="remarks"></a>备注  
- 通常情况下，不应更改用户在链接对话框中选择的更新选项。  
+### <a name="remarks"></a>Remarks  
+ Typically, you should not change the update options chosen by the user in the Links dialog box.  
   
- 有关详细信息，请参阅[IOleLink::SetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680120)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleLink::SetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680120) in the Windows SDK.  
   
-##  <a name="setprintdevice"></a>COleClientItem::SetPrintDevice  
- 调用此函数可更改用于此项目的打印目标设备。  
+##  <a name="setprintdevice"></a>  COleClientItem::SetPrintDevice  
+ Call this function to change the print-target device for this item.  
   
 ```  
 BOOL SetPrintDevice(const DVTARGETDEVICE* ptd);  
 BOOL SetPrintDevice(const PRINTDLG* ppd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptd`  
- 指向[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613)数据结构，其中包含有关新的打印目标设备的信息。 可以是**NULL**。  
+ Pointer to a [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) data structure, which contains information about the new print-target device. Can be **NULL**.  
   
  `ppd`  
- 指向[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940)数据结构，其中包含有关新的打印目标设备的信息。 可以是**NULL**。  
+ Pointer to a [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940) data structure, which contains information about the new print-target device. Can be **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此函数不刷新演示文稿缓存，但更新项的打印目标设备。 若要更新项的演示文稿缓存，调用[UpdateLink](#updatelink)。  
+### <a name="remarks"></a>Remarks  
+ This function updates the print-target device for the item but does not refresh the presentation cache. To update the presentation cache for an item, call [UpdateLink](#updatelink).  
   
- 此函数的自变量包含 OLE 系统使用来标识目标设备的信息。 **PRINTDLG**结构包含 Windows 用来初始化通用的打印对话框的信息。 用户关闭对话框后，Windows 将返回此结构中的信息的用户的选择。 `m_pd`的成员[CPrintDialog](../../mfc/reference/cprintdialog-class.md)对象是**PRINTDLG**结构。  
+ The arguments to this function contain information that the OLE system uses to identify the target device. The **PRINTDLG** structure contains information that Windows uses to initialize the common Print dialog box. After the user closes the dialog box, Windows returns information about the user's selections in this structure. The `m_pd` member of a [CPrintDialog](../../mfc/reference/cprintdialog-class.md) object is a **PRINTDLG** structure.  
   
- 有关此结构的详细信息，请参阅[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about this structure, see [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) in the Windows SDK.  
   
- 有关详细信息，请参阅[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) in the Windows SDK.  
   
-##  <a name="updatelink"></a>COleClientItem::UpdateLink  
- 调用此函数可立即更新 OLE 项的演示文稿数据。  
+##  <a name="updatelink"></a>  COleClientItem::UpdateLink  
+ Call this function to update the presentation data of the OLE item immediately.  
   
 ```  
 BOOL UpdateLink();
 ```  
   
-### <a name="return-value"></a>返回值  
- 若成功，则为非零；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero on success; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 对于链接的项，该函数查找链接源以获取新演示文稿的 OLE 项。 此过程可能涉及运行一个或多个服务器应用程序，这可能需要很长时间。 对于嵌入项，该函数进行操作以递归方式，检查嵌入的项是否包含可能已过期的链接和对它们进行更新。 用户可以手动更新使用链接对话框中的单个链接。  
+### <a name="remarks"></a>Remarks  
+ For linked items, the function finds the link source to obtain a new presentation for the OLE item. This process may involve running one or more server applications, which could be time-consuming. For embedded items, the function operates recursively, checking whether the embedded item contains links that might be out of date and updating them. The user can also manually update individual links using the Links dialog box.  
   
- 有关详细信息，请参阅[IOleLink::Update](http://msdn.microsoft.com/library/windows/desktop/ms692660)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleLink::Update](http://msdn.microsoft.com/library/windows/desktop/ms692660) in the Windows SDK.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 MFCBIND](../../visual-cpp-samples.md)   
- [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   
- [CDocItem 类](../../mfc/reference/cdocitem-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleServerItem 类](../../mfc/reference/coleserveritem-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MFCBIND](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [CDocItem Class](../../mfc/reference/cdocitem-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)
 

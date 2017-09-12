@@ -1,34 +1,52 @@
 ---
-title: "应用程序框架 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序框架 [C++]"
-  - "应用程序框架 [C++], 生成应用程序"
-  - "应用程序 [MFC]"
+title: Application Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- application framework [MFC], building applications
+- applications [MFC]
+- application framework [MFC]
 ms.assetid: 912684e6-4418-49dc-9877-a4cd19d69d20
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 应用程序框架
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5db72a6ee99f739f93daa1502084df864abe1a09
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-Microsoft 基础类 \(MFC\) \(MFC\) 库的核心是 Windows API 的一个主要组件的封装C\+\+ 窗体。  库类表示窗口、对话框、设备上下文、公用 GDI 对象 \(如画笔、钢笔，标准 Windows 控件和其他项。  这些类提供了一项便利 C\+\+ 函数接口来封装这些成员的窗口结构。  有关更多有关使用这些类，请参见 [窗口主题对象](../mfc/window-objects.md)。  
+---
+# <a name="application-framework"></a>Application Framework
+The core of the Microsoft Foundation Class (MFC) Library is an encapsulation of a large portion of the Windows API in C++ form. Library classes represent windows, dialog boxes, device contexts, common GDI objects such as brushes and pens, controls, and other standard Windows items. These classes provide a convenient C++ member function interface to the structures in Windows that they encapsulate. For more about using these classes, see [Window Object Topics](../mfc/window-objects.md).  
   
- 但是，MFC 库还提供有关 Windows API 的 C\+\+ 生成封装附加的应用程序功能层。  此层是提供大多数常见用户界面的 Windows 程序，包括工具栏、状态栏、打印、打印预览、数据库支持 ActiveX 和支持 Windows 的工作应用程序框架。  [使用类编写 Windows 的应用程序](../mfc/using-the-classes-to-write-applications-for-windows.md) 详细解释框架。  
+ But the MFC Library also supplies a layer of additional application functionality built on the C++ encapsulation of the Windows API. This layer is a working application framework for Windows that provides most of the common user interface expected of programs for Windows, including toolbars, status bars, printing, print preview, database support, and ActiveX support. [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md) explains the framework in detail.  
   
-## 请参阅  
- [常规类设计理念](../mfc/general-class-design-philosophy.md)
+## <a name="see-also"></a>See Also  
+ [General Class Design Philosophy](../mfc/general-class-design-philosophy.md)
+

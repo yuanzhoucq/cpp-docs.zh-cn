@@ -1,200 +1,236 @@
 ---
-title: "TN053：DAO 数据库类的自定义 DFX 例程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.dfx"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自定义 DFX 例程 [C++]"
-  - "DAO [C++], 类"
-  - "DAO [C++], MFC"
-  - "数据库类 [C++], DAO"
-  - "DFX（DAO 记录字段交换）[C++]"
-  - "DFX（DAO 记录字段交换）[C++], 自定义例程"
-  - "MFC [C++], DAO 和"
-  - "TN053"
+title: 'TN053: Custom DFX Routines for DAO Database Classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.dfx
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, DAO and
+- database classes [MFC], DAO
+- DAO [MFC], MFC
+- DFX (DAO record field exchange) [MFC], custom routines
+- TN053
+- DAO [MFC], classes
+- DFX (DAO record field exchange) [MFC]
+- custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN053：DAO 数据库类的自定义 DFX 例程
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 673f49b1588721eb42b33af035cc932cdd383c6a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Custom DFX Routines for DAO Database Classes
 > [!NOTE]
->  从 Visual C\+\+ .NET 起，Visual C\+\+ 环境和向导不再支持 DAO（不过提供了 DAO 类，仍可供您使用）。  Microsoft 建议对新项目使用 [OLE DB 模板](../data/oledb/ole-db-templates.md) 或 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。  DAO 只应用于维护现有的应用程序。  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use [OLE DB Templates](../data/oledb/ole-db-templates.md) or [ODBC and MFC](../data/odbc/odbc-and-mfc.md) for new projects. You should only use DAO in maintaining existing applications.  
   
- 此技术说明描述 DAO 记录字段交换 \(DFX\) 机制。  若要帮助了解 DFX 在例程时，`DFX_Text` 函数将详细说明作为示例。  作为附加的信息源。此方法声明，可以检查代码的其他各个 DFX 函数。  与您通常可能不需要自定义例程 DFX，如可能需要自定义例程 RFX \(使用 ODBC 数据库类\)。  
+ This technical note describes the DAO record field exchange (DFX) mechanism. To help understand what is happening in the DFX routines, the `DFX_Text` function will be explained in detail as an example. As an additional source of information to this technical note, you can examine the code for the other the individual DFX functions. You probably will not need a custom DFX routine as often as you might need a custom RFX routine (used with ODBC database classes).  
   
- 此技术声明一：  
+ This technical note contains:  
   
--   DFX 概述  
+-   DFX Overview  
   
--   使用 DAO 记录字段交换和动态绑定的[示例](#_mfcnotes_tn053_examples)  
+- [Examples](#_mfcnotes_tn053_examples) using DAO Record Field Exchange and Dynamic Binding  
   
--   [DFX 如何工作](#_mfcnotes_tn053_how_dfx_works)  
+- [How DFX Works](#_mfcnotes_tn053_how_dfx_works)  
   
--   [哪些自定义例程 DFX](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)  
+- [What Your Custom DFX Routine Does](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)  
   
--   [DFX\_Text 详细信息](#_mfcnotes_tn053_details_of_dfx_text)  
+- [Details of DFX_Text](#_mfcnotes_tn053_details_of_dfx_text)  
   
- **DFX 概述**  
+ **DFX Overview**  
   
- DAO 记录字段交换机制 \(DFX\) 用于简化过程检索并更新数据，当使用 `CDaoRecordset` 类时。  使用 `CDaoRecordset` 类的数据成员，但简化。  通过从 `CDaoRecordset`派生，您可以添加数据成员为表示表或查询的派生类的每个字段。  此“静态”绑定机制是简单的，但是，它可能不是数据获取\/更新选项方式的所有应用程序。  每当当前记录发生更改，DFX 检索每个绑定字段。  如果开发不需要提取每个性能敏感的应用程序，则更改货币时，“动态绑定”通过 `CDaoRecordset::GetFieldValue` 和 `CDaoRecordset::SetFieldValue` 可以是数据访问选定方法。  
+ The DAO record field exchange mechanism (DFX) is used to simplify the procedure of retrieving and updating data when using the `CDaoRecordset` class. The process is simplified using data members of the `CDaoRecordset` class. By deriving from `CDaoRecordset`, you can add data members to the derived class representing each field in a table or query. This "static binding" mechanism is simple, but it may not be the data fetch/update method of choice for all applications. DFX retrieves every bound field each time the current record is changed. If you are developing a performance-sensitive application that does not require fetching every field when currency is changed, "dynamic binding" via `CDaoRecordset::GetFieldValue` and `CDaoRecordset::SetFieldValue` may be the data access method of choice.  
   
 > [!NOTE]
->  DFX 和动态绑定不互相排斥，因此，可以使用静态和动态绑定的混合使用。  
+>  DFX and dynamic binding are not mutually exclusive, so a hybrid use of static and dynamic binding can be used.  
   
- **示例 \- 对 DAO 只用于的记录字段交换**  
+## <a name="_mfcnotes_tn053_examples"></a> Example 1 — Use of DAO Record Field Exchange only  
   
- \(假定 `CDaoRecordset` 派生类已经打开的 `CMySet` \)  
+ (assumes `CDaoRecordset` — derived class `CMySet` already open)  
   
 ```  
 // Add a new record to the customers table  
-myset.AddNew();  
-myset.m_strCustID = _T("MSFT");  
-myset.m_strCustName = _T("Microsoft");  
-myset.Update();  
+myset.AddNew();
+
+myset.m_strCustID = _T("MSFT");
+
+myset.m_strCustName = _T("Microsoft");
+
+myset.Update();
 ```  
   
- **示例 2 \- 对仅动态绑定的使用**  
+ **Example 2 — Use of dynamic binding only**  
   
- 使用 `CDaoRecordset` 类，`rs`\(，假设，并已打开\)  
+ (assumes using `CDaoRecordset` class, `rs`, and it is already open)  
   
 ```  
 // Add a new record to the customers table  
-COleVariant  varFieldValue1 ( _T("MSFT"), VT_BSTRT );  
-//Note: VT_BSTRT flags string type as ANSI, instead of UNICODE default  
-COleVariant  varFieldValue2  (_T("Microsoft"), VT_BSTRT );  
-rs.AddNew();  
-rs.SetFieldValue(_T("Customer_ID"), varFieldValue1);  
-rs.SetFieldValue(_T("Customer_Name"), varFieldValue2);  
-rs.Update();  
+COleVariant  varFieldValue1 (_T("MSFT"),
+    VT_BSTRT);
+
+//Note: VT_BSTRT flags string type as ANSI,
+    instead of UNICODE default  
+COleVariant  varFieldValue2  (_T("Microsoft"),
+    VT_BSTRT);
+
+rs.AddNew();
+
+rs.SetFieldValue(_T("Customer_ID"),
+    varFieldValue1);
+
+rs.SetFieldValue(_T("Customer_Name"),
+    varFieldValue2);
+
+rs.Update();
 ```  
   
- **示例 3 \- 对 DAO 记录字段交换和动态绑定的使用**  
+ **Example 3 — Use of DAO Record Field Exchange and dynamic binding**  
   
- \(假定具有浏览 `CDaoRecordset`的雇员数据派生类 `emp`\)  
+ (assumes browsing employee data with `CDaoRecordset`-derived class `emp`)  
   
 ```  
 // Get the employee's data so that it can be displayed  
-emp.MoveNext();  
-  
+emp.MoveNext();
+
+ 
 // If user wants to see employee's photograph,  
 // fetch it  
 COleVariant varPhoto;  
 if (bSeePicture)  
-   emp.GetFieldValue(_T("photo"), varPhoto);  
-  
+    emp.GetFieldValue(_T("photo"),
+    varPhoto);
+
+ 
 // Display the data  
 PopUpEmployeeData(emp.m_strFirstName,  
-    emp.m_strLastName, varPhoto);  
+    emp.m_strLastName,
+    varPhoto);
 ```  
   
- **DFX 如何工作**  
+## <a name="_mfcnotes_tn053_how_dfx_works"></a> How DFX Works  
   
- DFX 机制工作到 MFC ODBC 使用的记录字段交换 \(RFX\) 机制相似的类。  RFX 和 DFX 原则是相同的，但有许多内部差异。  DFX 的函数在此设计所有代码实际上由单个的 DFX 例程共享。  在最上层的 DFX 只执行一些事件。  
+ The DFX mechanism works in a similar fashion to the record field exchange (RFX) mechanism used by the MFC ODBC classes. The principles of DFX and RFX are the same but there are numerous internal differences. The design of the DFX functions was such that virtually all the code is shared by the individual DFX routines. At the highest level DFX only does a few things.  
   
--   DFX 如有必要，构造 SQL **SELECT** 子句和 SQL **参数** 子句。  
+-   DFX constructs the SQL **SELECT** clause and SQL **PARAMETERS** clause if necessary.  
   
--   DAO 的 DFX 构造函数使用 `GetRows` 的约束结构 \(更多在之后\)。  
+-   DFX constructs the binding structure used by DAO's `GetRows` function (more on this later).  
   
--   DFX 管理使用的数据缓冲区检测错误的字段 \(如果使用双缓冲。\)  
+-   DFX manages the data buffer used to detect dirty fields (if double-buffering is being used)  
   
--   DFX 如果需要管理状态和设置数组，**NULL** 和 **DIRTY** 值。更新。  
+-   DFX manages the **NULL** and **DIRTY** status arrays and sets values if necessary on updates.  
   
- 核心 DFX 机制中心为 `CDaoRecordset` 派生类的 `DoFieldExchange` 函数。  此函数将调用相应的操作类型的单个的 DFX 函数。  在调用 `DoFieldExchange` 之前设置内部 MFC 函数操作类型。  下表显示各种操作类型和简要说明。  
+ At the heart of the DFX mechanism is the `CDaoRecordset` derived class's `DoFieldExchange` function. This function dispatches calls to the individual DFX functions of an appropriate operation type. Before calling `DoFieldExchange` the internal MFC functions set the operation type. The following list shows the various operation types and a brief description.  
   
-|Operation|说明|  
-|---------------|--------|  
-|**AddToParameterList**|子句生成参数|  
-|**AddToSelectList**|生成选定子句|  
-|**BindField**|设置绑定结构|  
-|**BindParam**|设置参数值|  
-|**链接地址信息**|集使状态无效|  
-|**AllocCache**|分配错误的检查的缓存|  
-|**StoreField**|保存当前记录到缓存中|  
-|**LoadField**|还原缓存为成员值|  
-|**FreeCache**|版本缓存|  
-|`SetFieldNull`|字段设置 NULL 的状态 & 值|  
-|**MarkForAddNew**|标记已更新字段，即使不是假空|  
-|**MarkForEdit**|如果不与缓存，标记已更新字段|  
-|**SetDirtyField**|设置标记为坏标记的字段|  
+|Operation|Description|  
+|---------------|-----------------|  
+|**AddToParameterList**|Builds PARAMETERS clause|  
+|**AddToSelectList**|Builds SELECT clause|  
+|**BindField**|Sets up binding structure|  
+|**BindParam**|Sets parameter values|  
+|**Fixup**|Sets NULL status|  
+|**AllocCache**|Allocates cache for dirty check|  
+|**StoreField**|Saves current record to cache|  
+|**LoadField**|Restores cache to member values|  
+|**FreeCache**|Frees cache|  
+|`SetFieldNull`|Sets field status & value to NULL|  
+|**MarkForAddNew**|Marks fields dirty if not PSEUDO NULL|  
+|**MarkForEdit**|Marks fields dirty if don't match cache|  
+|**SetDirtyField**|Sets field values marked as dirty|  
   
- 在下一部分，各个操作为 `DFX_Text`是更详细说明。  
+ In the next section, each operation will be explained in more detail for `DFX_Text`.  
   
- 若要了解有关的最重要的功能 DAO 记录字段交换过程是使用 `CDaoRecordset` 对象的 `GetRows` 函数。  DAO `GetRows` 工作函数可以有多种方式。  此技术声明简单仅描述 `GetRows`，它不在范围此技术声明外部。  
+ The most important feature to understand about the DAO record field exchange process is that it uses the `GetRows` function of the `CDaoRecordset` object. The DAO `GetRows` function can work in several ways. This technical note will only briefly describe `GetRows` as it is outside of the scope of this technical note.  
   
- DAO `GetRows` 可以使用了几种方法。  
+ DAO `GetRows` can work in several ways.  
   
--   可以一次获取多个日志和数据多个字段。  这样操作的问题的更快的数据访问大型数据结构并相应的偏移量。的每个字段和数据记录每个结构中。  MFC 不利用此多个记录以提取的机制。  
+-   It can fetch multiple records and multiple fields of data at one time. This allows for faster data access with the complication of dealing with a large data structure and the appropriate offsets to each field and for each record of data in the structure. MFC does not take advantage of this multiple record fetching mechanism.  
   
--   `GetRows` 可以起作用的另一种方式是使程序员为每个字段的数据检索的记录的指定绑定地址。  
+-   Another way `GetRows` can work is to allow programmers to specify binding addresses for the retrieved data of each field for one record of data.  
   
--   DAO 也将“调用”调用方为可变长度的列以授予调用方分配内存。  第二个函数具有最小化次数、复制数据以及允许直接优点到数据存储类 \(派生自 `CDaoRecordset` 类\) 的成员。  第二种机制是 MFC 使用方法绑定到 `CDaoRecordset` 派生类的数据成员。  
+-   DAO will also "call back" into the caller for variable length columns in order to allow the caller to allocate memory. This second feature has the benefit of minimizing the number of copies of data as well as allowing direct storage of data into members of a class (the `CDaoRecordset` derived class). This second mechanism is the method MFC uses to bind to data members in `CDaoRecordset` derived classes.  
   
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> 哪些自定义例程 DFX  
- 它从本讨论不同的 DFX 在所有函数实现的最重要的操作必须是具备设置必需数据结构成功调用 `GetRows`。  有很多其他操作 DFX 函数必须支持，但无同样关键或复杂性。正确对 `GetRows` 调用做准备。  
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> What Your Custom DFX Routine Does  
+ It is apparent from this discussion that the most important operation implemented in any DFX function must be the ability to set up the required data structures to successfully call `GetRows`. There are a number of other operations that a DFX function must support as well, but none as important or complex as correctly preparing for the `GetRows` call.  
   
- 使用 DFX 在联机文档中描述。  实质上，有两个要求。  首先，成员必须添加到每个绑定字段和参数的 `CDaoRecordset` 派生类。  此 `CDaoRecordset::DoFieldExchange` 后应重写。  注意成员的数据类型是非常重要的。  应该从匹配字段的数据的数据库中或至少可转换为该类型。  例如在数据库的数值范围，例如长时间的整数，始终可以将文本和限制为 `CString` 成员，即，但数据库的文本字段可以无需转换为数值表示形式，如长整数和边界为长整数成员。  DAO 和 Microsoft Jet 数据库引擎负责将运行 MFC \(而不是\)。  
+ The use of DFX is described in the online documentation. Essentially, there are two requirements. First, members must be added to the `CDaoRecordset` derived class for each bound field and parameter. Following this `CDaoRecordset::DoFieldExchange` should be overridden. Note that the data type of the member is important. It should match the data from the field in the database or at least be convertible to that type. For example a numeric field in database, such as a long integer, can always be converted to text and bound to a `CString` member, but a text field in a database may not necessarily be converted to a numeric representation, such as long integer and bound to a long integer member. DAO and the Microsoft Jet database engine are responsible for the conversion (rather than MFC).  
   
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX\_Text 详细信息  
- 如上所述，最佳方式解释 DFX 如何工作是通过工作示例。  因此查看 `DFX_Text` internals 应非常好工作提供帮助使用 DFX 的有基本的了解。  
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> Details of DFX_Text  
+ As mentioned previously, the best way to explain how DFX works is to work through an example. For this purpose going through the internals of `DFX_Text` should work quite well to help provide at least a basic understanding of DFX.  
   
  **AddToParameterList**  
- 此运算生成 Jet \("`Parameters <param name>, <param type> ... ;`"\) 需要的 SQL **参数** 子句。  每个参数被命名和类型化 \(外接 RFX 调用中指定\)。  参见函数 **CDaoFieldExchange::AppendParamType** 函数以查看各个类型的名称。  对于 `DFX_Text`，使用的类型为 `text`。  
+ This operation builds the SQL **PARAMETERS** clause ("`Parameters <param name>, <param type> ... ;`") required by Jet. Each parameter is named and typed (as specified in the RFX call). See the function **CDaoFieldExchange::AppendParamType** function to see the names of the individual types. In the case of `DFX_Text`, the type used is `text`.  
   
  **AddToSelectList**  
- 生成 SQL **SELECT** 子句。  这相当简单的，因为调用 DFX 指定列名追加"`SELECT <column name>, ...`"\)。  
+ Builds the SQL **SELECT** clause. This is pretty straight forward as the column name specified by the DFX call is simply appended ("`SELECT <column name>, ...`").  
   
  **BindField**  
- 最复杂操作。  如上所述这是绑定结构的 DAO 使用由 `GetRows` 设置的。  您可以从 `DFX_Text` 的代码查看信息类型结构中包括 DAO 类型使用了 \(**DAO\_CHAR** 或 **DAO\_WCHAR** \(对于 `DFX_Text`\)。  此外，使用的绑定类型。  在早期的 `GetRows` 节仅简要介绍了，但说明就足够了 MFC 使用的绑定类型总是直接地址的绑定 \(**DAOBINDING\_DIRECT**\)。  附加为可变长度的列绑定 \(如 `DFX_Text`\) 绑定回调使用，使 MFC 能够控制内存分配正确和指定长度的地址。  这意味着是该 MFC 能够始终调用 DAO“一”，从而允许将数据直接绑定到中的成员变量。  绑定结构的其余部分填充与内存分配回调函数和绑定列类型地址的内容 \(由绑定列名\)。  
+ The most complex of the operations. As mentioned previously this is where the DAO binding structure used by `GetRows` is set up. As you can see from the code in `DFX_Text` the types of information in the structure include the DAO type used (**DAO_CHAR** or **DAO_WCHAR** in the case of `DFX_Text`). Additionally, the type of binding used is also set up. In an earlier section `GetRows` was described only briefly, but it was sufficient to explain that the type of binding used by MFC is always direct address binding (**DAOBINDING_DIRECT**). In addition for variable-length column binding (like `DFX_Text`) callback binding is used so that MFC can control the memory allocation and specify an address of the correct length. What this means is that MFC can always tell DAO "where" to put the data, thus allowing binding directly to member variables. The rest of the binding structure is filled in with things like the address of the memory allocation callback function and the type of column binding (binding by column name).  
   
  **BindParam**  
- 这是调用具有参数中成员指定的参数值 `SetParamValue` 的简单操作。  
+ This is a simple operation that calls `SetParamValue` with the parameter value specified in your parameter member.  
   
  **Fixup**  
- 填充每个字段的 **NULL** 状态。  
+ Fills in the **NULL** status for each field.  
   
  `SetFieldNull`  
- 此操作只指示每个字段状态并将成员变量为 **NULL** 值为 **PSEUDO\_NULL**。  
+ This operation only marks each field status as **NULL** and sets the member variable's value to **PSEUDO_NULL**.  
   
  **SetDirtyField**  
- 调用每字段标记的错误的 `SetFieldValue`。  
+ Calls `SetFieldValue` for each field marked dirty.  
   
- 所有剩余的操作只处理数据缓存。  数据缓存是的额外数据的缓冲区。用于确定功能更为简单的当前记录的。  例如，“能自动检测错误”的字段。  如联机文档所述它能被关闭在完全或优先级别。  缓冲区实现使用的映射。  此映射用于进行数据的动态分配的副本“绑定”字段 \(或 `CDaoRecordset` 派生的数据成员的地址。\)  
+ All the remaining operations only deal with using the data cache. The data cache is an extra buffer of the data in the current record that is used to make certain things simpler. For instance, "dirty" fields can be automatically detected. As described in the online documentation it can be turned off completely or at the field level. The implementation of the buffer utilizes a map. This map is used to match up dynamically allocated copies of the data with the address of the "bound" field (or `CDaoRecordset` derived data member).  
   
  **AllocCache**  
- 动态分配缓存值的并将其添加到映射。  
+ Dynamically allocates the cached field value and adds it to the map.  
   
  **FreeCache**  
- 缓存删除的字段并映射从移除。  
+ Deletes the cached field value and removes it from the map.  
   
  **StoreField**  
- 复制当前字段值到数据缓存。  
+ Copies the current field value into the data cache.  
   
  **LoadField**  
- 缓存的值复制到字段成员。  
+ Copies the cached value into the field member.  
   
  **MarkForAddNew**  
- 如果当前字段值，如果需要，非**NULL** 并将其标记为错误检查。  
+ Checks if current field value is non-**NULL** and marks it dirty if necessary.  
   
  **MarkForEdit**  
- 如有必要，对与数据缓存的当前和错误值的标记。  
+ Compares current field value with data cache and marks dirty if necessary.  
   
 > [!TIP]
->  模型对现有的 DFX 例程的 DFX 自定义例程标准数据类型。  
+>  Model your custom DFX routines on the existing DFX routines for standard data types.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -1,39 +1,58 @@
 ---
-title: "活动文档类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.document"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "活动文档类"
+title: Active Document Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.document
+dev_langs:
+- C++
+helpviewer_keywords:
+- Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 活动文档类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6de937e1e23757bd42fb14a5f5d7dd0fcb7c923c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-活动文档中显示 Web 浏览器的完整客户端窗口，例如 Internet Explorer 5.5，或在活动容器，例如 Microsoft Office 活页夹，支持活动文档。  
+---
+# <a name="active-document-classes"></a>Active Document Classes
+Active documents can be displayed either in the entire client window of a Web browser, such as Internet Explorer 5.5, or in an Active container, such as the Microsoft Office Binder, that supports Active documents.  
   
  [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)  
- 映射活动文档界面 \(MDI\)，并和激活活动文档对象。  
+ Maps the Active document interfaces, and initializes and activates an Active document object.  
   
  [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)  
- 特定实现 OLE 服务器谓词活动文档服务器。  
+ Implements OLE server verbs specifically for Active document servers.  
   
  [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- 实现活动文档包容。  
+ Implements Active document containment.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

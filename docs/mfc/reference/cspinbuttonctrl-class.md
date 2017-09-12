@@ -1,5 +1,5 @@
 ---
-title: "CSpinButtonCtrl 类 |Microsoft 文档"
+title: CSpinButtonCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,11 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Windows common controls [C++], CSpinButtonCtrl
-- CSpinButtonCtrl class
-- CSpinButtonCtrl class, common controls
-- up-down controls, spin button control
-- spin button control
+- CSpinButtonCtrl [MFC], CSpinButtonCtrl
+- CSpinButtonCtrl [MFC], Create
+- CSpinButtonCtrl [MFC], CreateEx
+- CSpinButtonCtrl [MFC], GetAccel
+- CSpinButtonCtrl [MFC], GetBase
+- CSpinButtonCtrl [MFC], GetBuddy
+- CSpinButtonCtrl [MFC], GetPos
+- CSpinButtonCtrl [MFC], GetRange
+- CSpinButtonCtrl [MFC], SetAccel
+- CSpinButtonCtrl [MFC], SetBase
+- CSpinButtonCtrl [MFC], SetBuddy
+- CSpinButtonCtrl [MFC], SetPos
+- CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
 caps.latest.revision: 23
 author: mikeblome
@@ -51,61 +59,61 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae174d059e23d93cec902cc4c5946052e73e8b41
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 类
-提供 Windows 公共数值调节钮控件的功能。  
+# <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl Class
+Provides the functionality of the Windows common spin button control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSpinButtonCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|构造 `CSpinButtonCtrl` 对象。|  
+|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Constructs a `CSpinButtonCtrl` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::Create](#create)|创建数值调节钮控件，并将其附加到`CSpinButtonCtrl`对象。|  
-|[CSpinButtonCtrl::CreateEx](#createex)|指定的 Windows 扩展样式创建数值调节钮控件，并将其附加到`CSpinButtonCtrl`对象。|  
-|[CSpinButtonCtrl::GetAccel](#getaccel)|检索加速数值调节钮控件的信息。|  
-|[CSpinButtonCtrl::GetBase](#getbase)|检索数值调节钮控件的当前基。|  
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|检索指向当前合作者窗口的指针。|  
-|[CSpinButtonCtrl::GetPos](#getpos)|检索数值调节钮控件的当前位置。|  
-|[CSpinButtonCtrl::GetRange](#getrange)|检索的上限和下限限制 （范围） 数值调节钮控件。|  
-|[CSpinButtonCtrl::SetAccel](#setaccel)|设置数值调节钮控件的加速。|  
-|[CSpinButtonCtrl::SetBase](#setbase)|设置数值调节钮控件的基。|  
-|[CSpinButtonCtrl::SetBuddy](#setbuddy)|设置数值调节钮控件合作者窗口。|  
-|[CSpinButtonCtrl::SetPos](#setpos)|设置控件的当前位置。|  
-|[Cspinbuttonctrl:: Setrange](#setrange)|设置的上限和下限限制 （范围） 数值调节钮控件。|  
+|[CSpinButtonCtrl::Create](#create)|Creates a spin button control and attaches it to a `CSpinButtonCtrl` object.|  
+|[CSpinButtonCtrl::CreateEx](#createex)|Creates a spin button control with the specified Windows extended styles and attaches it to a `CSpinButtonCtrl` object.|  
+|[CSpinButtonCtrl::GetAccel](#getaccel)|Retrieves acceleration information for a spin button control.|  
+|[CSpinButtonCtrl::GetBase](#getbase)|Retrieves the current base for a spin button control.|  
+|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Retrieves a pointer to the current buddy window.|  
+|[CSpinButtonCtrl::GetPos](#getpos)|Retrieves the current position of a spin button control.|  
+|[CSpinButtonCtrl::GetRange](#getrange)|Retrieves the upper and lower limits (range) for a spin button control.|  
+|[CSpinButtonCtrl::SetAccel](#setaccel)|Sets the acceleration for a spin button control.|  
+|[CSpinButtonCtrl::SetBase](#setbase)|Sets the base for a spin button control.|  
+|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Sets the buddy window for a spin button control.|  
+|[CSpinButtonCtrl::SetPos](#setpos)|Sets the current position for the control.|  
+|[CSpinButtonCtrl::SetRange](#setrange)|Sets the upper and lower limits (range) for a spin button control.|  
   
-## <a name="remarks"></a>备注  
- "数值调节钮控件"（也称为 up-down 控件） 是一个对的用户可以单击递增或递减值，如滚动位置或在附带控件中显示一个行号的箭头按钮。 数值调节钮控件与关联的值调用其当前位置。 数值调节钮控件通常用于附带控件，调用"合作者窗口"。  
+## <a name="remarks"></a>Remarks  
+ A "spin button control" (also known as an up-down control) is a pair of arrow buttons that the user can click to increment or decrement a value, such as a scroll position or a number displayed in a companion control. The value associated with a spin button control is called its current position. A spin button control is most often used with a companion control, called a "buddy window."  
   
- 此控件 (因此`CSpinButtonCtrl`类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。  
+ This control (and therefore the `CSpinButtonCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- 对用户来说，数值调节钮控件和其合作者窗口通常看起来的单个控件。 你可以指定，数值调节钮控件自动将自身置于其合作者窗口，并确保它自动设置合作者窗口的标题为当前位置。 可以使用数值调节钮控件与编辑控件，以提示用户输入数字输入。  
+ To the user, a spin button control and its buddy window often look like a single control. You can specify that a spin button control automatically position itself next to its buddy window, and that it automatically set the caption of the buddy window to its current position. You can use a spin button control with an edit control to prompt the user for numeric input.  
   
- 单击向上箭头将朝着最大值，当前位置移动，并单击向下箭头将当前位置朝着最小值。 默认情况下，最小值为 100 和最大值为 0。 任何时间的最小设置大于最大值设置 （例如，当使用默认设置），单击向上箭头降低位置值并单击向下箭头会增加它。  
+ Clicking the up arrow moves the current position toward the maximum, and clicking the down arrow moves the current position toward the minimum. By default, the minimum is 100 and the maximum is 0. Any time the minimum setting is greater than the maximum setting (for example, when the default settings are used), clicking the up arrow decreases the position value and clicking the down arrow increases it.  
   
- 数值调节按钮控件，而无需合作者窗口函数用作一种简化的滚动条。 例如，选项卡控件有时显示数值调节按钮控件，使用户能够滚动到视图的其他选项卡。  
+ A spin button control without a buddy window functions as a sort of simplified scroll bar. For example, a tab control sometimes displays a spin button control to enable the user to scroll additional tabs into view.  
   
- 有关详细信息使用`CSpinButtonCtrl`，请参阅[控件](../../mfc/controls-mfc.md)和[使用 CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md)。  
+ For more information on using `CSpinButtonCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -114,11 +122,11 @@ class CSpinButtonCtrl : public CWnd
   
  `CSpinButtonCtrl`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
- 创建数值调节钮控件，并将其附加到`CSpinButtonCtrl`对象...  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
+ Creates a spin button control and attaches it to a `CSpinButtonCtrl` object..  
   
 ```  
 virtual BOOL Create(
@@ -128,29 +136,29 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定数值调节钮控件的样式。 应用于控件的数值调节按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb759885)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the spin button control's style. Apply any combination of spin button control styles to the control. These styles are described in [Up-Down Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb759885) in the Windows SDK.  
   
  `rect`  
- 指定数值调节钮控件的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构  
+ Specifies the spin button control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure  
   
  `pParentWnd`  
- 数值调节钮控件的父窗口，通常一个指向`CDialog`。 它不能**NULL。**  
+ A pointer to the spin button control's parent window, usually a `CDialog`. It must not be **NULL.**  
   
  `nID`  
- 指定数值调节钮控件的 id。  
+ Specifies the spin button control's ID.  
   
-### <a name="return-value"></a>返回值  
- 如果初始化成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 构造`CSpinButtonCtrl`首先对象在两个步骤中，调用的构造函数，然后调用**创建**，它创建数值调节钮控件并将其附加到`CSpinButtonCtrl`对象。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CSpinButtonCtrl` object in two steps First, call the constructor, and then call **Create**, which creates the spin button control and attaches it to the `CSpinButtonCtrl` object.  
   
- 若要使用扩展的窗口样式创建数值调节钮控件，调用[CSpinButtonCtrl::CreateEx](#createex)而不是**创建**。  
+ To create a spin button control with extended window styles, call [CSpinButtonCtrl::CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
- 创建控件 （子窗口），并将其与关联`CSpinButtonCtrl`对象。  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CSpinButtonCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -161,37 +169,37 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 指定要创建的控件的扩展的样式。 扩展的窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the extended style of the control being created. For a list of extended windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 指定数值调节钮控件的样式。 应用于控件的数值调节按钮控件样式的任意组合。 这些样式中所述[Up-down 控件样式](http://msdn.microsoft.com/library/windows/desktop/bb759885)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the spin button control's style. Apply any combination of spin button control styles to the control. These styles are described in [Up-Down Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb759885) in the Windows SDK.  
   
  `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构描述的大小和窗口在客户端坐标中创建的位置`pParentWnd`。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 指向控件的父级的窗口的指针。  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 控件的子窗口 id。  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是[创建](#create)将扩展的窗口样式，指定的 Windows 扩展的样式加**WS_EX_**。  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
- 构造 `CSpinButtonCtrl` 对象。  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
+ Constructs a `CSpinButtonCtrl` object.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
- 检索加速数值调节钮控件的信息。  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
+ Retrieves acceleration information for a spin button control.  
   
 ```  
 UINT GetAccel(
@@ -199,57 +207,57 @@ UINT GetAccel(
     UDACCEL* pAccel) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nAccel`  
- 指定的数组中的元素数`pAccel`。  
+ Number of elements in the array specified by `pAccel`.  
   
  `pAccel`  
- 指向数组的指针[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)接收加速信息的结构。  
+ Pointer to an array of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures that receives acceleration information.  
   
-### <a name="return-value"></a>返回值  
- 检索的快捷键结构。  
+### <a name="return-value"></a>Return Value  
+ Number of accelerator structures retrieved.  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
- 检索数值调节钮控件的当前基。  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
+ Retrieves the current base for a spin button control.  
   
 ```  
 UINT GetBase() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前的基础值。  
+### <a name="return-value"></a>Return Value  
+ The current base value.  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
- 检索指向当前合作者窗口的指针。  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
+ Retrieves a pointer to the current buddy window.  
   
 ```  
 CWnd* GetBuddy() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向当前合作者窗口的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current buddy window.  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
- 检索数值调节钮控件的当前位置。  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
+ Retrieves the current position of a spin button control.  
   
 ```  
 int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpbError*  
- 指向一个布尔值，值设置为零的指针是已成功检索到或非零如果发生错误。 如果此参数设置为**NULL**，不会报告错误。  
+ A pointer to a boolean value that is set to zero if the value is successfully retrieved or non-zero if an error occurs. If this parameter is set to **NULL**, errors are not reported.  
   
-### <a name="return-value"></a>返回值  
- 第一个版本返回低序位字中的 16 位当前位置。 高序位字不为零，如果出现错误。  
+### <a name="return-value"></a>Return Value  
+ The first version returns the 16-bit current position in the low-order word. The high-order word is nonzero if an error occurred.  
   
- 第二个版本返回的 32 位位置。  
+ The second version returns the 32-bit position.  
   
-### <a name="remarks"></a>备注  
- 当它处理返回的值时，控件将更新其基于在合作者窗口的标题的当前位置。 如果未合作者窗口或标题指定了一个无效或超出范围的值，该控件将返回错误。  
+### <a name="remarks"></a>Remarks  
+ When it processes the value returned, the control updates its current position based on the caption of the buddy window. The control returns an error if there is no buddy window or if the caption specifies an invalid or out-of-range value.  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
- 检索的上限和下限限制 （范围） 数值调节钮控件。  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
+ Retrieves the upper and lower limits (range) for a spin button control.  
   
 ```  
 DWORD GetRange() const;  
@@ -263,21 +271,21 @@ void GetRange32(
     int &upper) const;  
 ```  
   
-### <a name="parameters"></a>参数  
- *较低*  
- 对接收控件的下限的整数的引用。  
+### <a name="parameters"></a>Parameters  
+ *lower*  
+ Reference to an integer that receives the lower limit for the control.  
   
- *上限*  
- 对一个整数，它接收的上限为该控件的引用。  
+ *upper*  
+ Reference to an integer that receives the upper limit for the control.  
   
-### <a name="return-value"></a>返回值  
- 第一个版本返回包含上限和下限的 32 位值。 低序位字是该控件的上限，高序位字的下限。  
+### <a name="return-value"></a>Return Value  
+ The first version returns a 32-bit value containing the upper and lower limits. The low-order word is the upper limit for the control, and the high-order word is the lower limit.  
   
-### <a name="remarks"></a>备注  
- 成员函数`GetRange32`检索作为 32 位整数的数值调节钮控件的范围。  
+### <a name="remarks"></a>Remarks  
+ The member function `GetRange32` retrieves the spin button control's range as a 32-bit integer.  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
- 设置数值调节钮控件的加速。  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
+ Sets the acceleration for a spin button control.  
   
 ```  
 BOOL SetAccel(
@@ -285,70 +293,70 @@ BOOL SetAccel(
     UDACCEL* pAccel);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nAccel`  
- 数[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)结构指定`pAccel`。  
+ Number of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures specified by `pAccel`.  
   
  `pAccel`  
- 指向数组的指针`UDACCEL`结构，其中包含加速信息。 元素应按升序排序基于**nSec**成员。  
+ Pointer to an array of `UDACCEL` structures, which contain acceleration information. Elements should be sorted in ascending order based on the **nSec** member.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
- 设置数值调节钮控件的基。  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
+ Sets the base for a spin button control.  
   
 ```  
 int SetBase(int nBase);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nBase`  
- 控件的新基值。 它可以是表示小数点 10 或 16 个十六进制。  
+ New base value for the control. It can be 10 for decimal or 16 for hexadecimal.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，以前的基值或零，如果未提供的 base 无效。  
+### <a name="return-value"></a>Return Value  
+ The previous base value if successful, or zero if an invalid base is given.  
   
-### <a name="remarks"></a>备注  
- 基础值确定合作者窗口是否以十进制或十六进制数字显示数字。 十六进制数字始终是无符号;十进制数字进行签名。  
+### <a name="remarks"></a>Remarks  
+ The base value determines whether the buddy window displays numbers in decimal or hexadecimal digits. Hexadecimal numbers are always unsigned; decimal numbers are signed.  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
- 设置数值调节钮控件合作者窗口。  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
+ Sets the buddy window for a spin button control.  
   
 ```  
 CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pWndBuddy`  
- 指向新的合作者窗口的指针。  
+ Pointer to the new buddy window.  
   
-### <a name="return-value"></a>返回值  
- 指向上一个合作者窗口的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the previous buddy window.  
   
-### <a name="remarks"></a>备注  
- 数值调节钮控件对于几乎始终与另一个窗口，如编辑控件，显示一些内容。 此其他窗口称为"好友"的数值调节钮控件。  
+### <a name="remarks"></a>Remarks  
+ A spin control is almost always associated with another window, such as an edit control, that displays some content. This other window is called the "buddy" of the spin control.  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
- 设置数值调节钮控件的当前位置。  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
+ Sets the current position for a spin button control.  
   
 ```  
 int SetPos(int nPos);  
 int SetPos32(int nPos);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 控件的新位置。 此值必须为指定控件的上限和下限限制的范围。  
+ New position for the control. This value must be in the range specified by the upper and lower limits for the control.  
   
-### <a name="return-value"></a>返回值  
- 前一个位置 (16 位精度`SetPos`、 32 位精度的`SetPos32`)。  
+### <a name="return-value"></a>Return Value  
+ The previous position (16-bit precision for `SetPos`, 32-bit precision for `SetPos32`).  
   
-### <a name="remarks"></a>备注  
- `SetPos32`设置的 32 位位置。  
+### <a name="remarks"></a>Remarks  
+ `SetPos32` sets the 32-bit position.  
   
-##  <a name="setrange"></a>Cspinbuttonctrl:: Setrange  
- 设置的上限和下限限制 （范围） 数值调节钮控件。  
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
+ Sets the upper and lower limits (range) for a spin button control.  
   
 ```  
 void SetRange(
@@ -361,19 +369,19 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>参数  
- `nLower` 和 `nUpper`  
- 控件的上限和下限限制。 有关`SetRange`，既不限制可以大于**UD_MAXVAL**或小于**UD_MINVAL**; 此外，不能超过两个限制之间的差异**UD_MAXVAL**。 `SetRange32`无限制将限制;使用任何整数。  
+### <a name="parameters"></a>Parameters  
+ `nLower` and `nUpper`  
+ Upper and lower limits for the control. For `SetRange`, neither limit can be greater than **UD_MAXVAL** or less than **UD_MINVAL**; in addition, the difference between the two limits cannot exceed **UD_MAXVAL**. `SetRange32` places no restrictions on the limits; use any integers.  
   
-### <a name="remarks"></a>备注  
- 成员函数`SetRange32`设置数值调节钮控件的 32 位范围。  
+### <a name="remarks"></a>Remarks  
+ The member function `SetRange32` sets the 32-bit range for the spin button control.  
   
 > [!NOTE]
->  数值调节钮的默认范围具有设置为零 (0) 的最大和最小设置为 100。 因为最大值小于最小值，单击向上箭头将降低位置，单击向下箭头将增加它。 使用`CSpinButtonCtrl::SetRange`来调整这些值。  
+>  The default range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow will decrease the position and clicking the down arrow will increase it. Use `CSpinButtonCtrl::SetRange` to adjust these values.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CSliderCtrl 类](../../mfc/reference/csliderctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSliderCtrl Class](../../mfc/reference/csliderctrl-class.md)
 

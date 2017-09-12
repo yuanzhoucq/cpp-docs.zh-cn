@@ -1,90 +1,116 @@
 ---
-title: "TN059：使用 MFC MBCS/Unicode 转换宏 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.mbcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "转换宏 [C++]"
-  - "转换 Unicode"
-  - "宏 [C++], MBCS 转换宏"
-  - "MBCS [C++], 转换宏"
-  - "MFCANS32.DLL"
-  - "TN059"
-  - "Unicode [C++], 转换宏"
-  - "Unicode [C++], OLE 接口"
+title: 'TN059: Using MFC MBCS-Unicode Conversion Macros | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.mbcs
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFCANS32.DLL
+- Unicode [MFC], conversion macros
+- Unicode [MFC], OLE interfaces
+- conversion macros [MFC]
+- converting Unicode
+- MBCS [MFC], conversion macros
+- macros [MFC], MBCS conversion macros
+- TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN059：使用 MFC MBCS/Unicode 转换宏
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e52b3133566cb0a65861ad556fc4df2a8efe4f5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: Using MFC MBCS/Unicode Conversion Macros
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此注释说明如何为 MBCS\/Unicode 转换使用宏，在 AFXPRIV.H. 定义。  这些宏是最有用，如果应用程序直接与 OLE API 或由于某种原因，通常需要转换。Unicode 和 MBCS。  
+ This note describes how to use the macros for MBCS/Unicode conversion, which are defined in AFXPRIV.H. These macros are most useful if your application deals directly with the OLE API or for some reason, often needs to convert between Unicode and MBCS.  
   
-## 概述  
- 在 MFC 中，特定用于 3.x DLL \(MF CANS32 .DLL\) 自动转换。Unicode 和 MBCS 之间，当 OLE 接口名为。  此 DLL 允许是 OLE 应用程序编写的几乎透明层，则 API 和 OLE 接口，MBCS，但它们始终是 Unicode \(在 Macintosh\)。  将此层是方便以及允许的应用程序快速从 Win16 移植到 Win32 \(MFC、Microsoft Word、Microsoft Excel 和 VBA，是使用此技术\) 的某些 Microsoft 应用程序时，其一有时重要的性能造成的影响。  为此，MFC 4.x 不使用此 DLL 以及直接与 Unicode OLE 接口不可用。  为此，MFC 需要转换为 Unicode 到 MBCS，当调用一个 OLE 接口且经常时需要转换为 Unicode 的 MBCS，当 OLE 接口实现时。  若要处理这有效且轻松，很多此转换使宏创建更为容易。  
+## <a name="overview"></a>Overview  
+ In MFC 3.x, a special DLL was used (MFCANS32.DLL) to automatically convert between Unicode and MBCS when OLE interfaces were called. This DLL was an almost transparent layer that allowed OLE applications to be written as if the OLE APIs and interfaces were MBCS, even though they are always Unicode (except on the Macintosh). While this layer was convenient and allowed applications to be quickly ported from Win16 to Win32 (MFC, Microsoft Word, Microsoft Excel, and VBA, are just some of the Microsoft applications that used this technology), it had a sometimes significant performance hit. For this reason, MFC 4.x does not use this DLL and instead talks directly to the Unicode OLE interfaces. To do this, MFC needs to convert to Unicode to MBCS when making a call to an OLE interface, and often needs to convert to MBCS from Unicode when implementing an OLE interface. In order to handle this efficiently and easily, a number of macros were created to make this conversion easier.  
   
- 创建一个这样一组最大的障碍宏是内存分配。  由于字符串不能转换的就地，必须留有保持转换的结果的新内存。  可以通过使用类似于以下所示的代码：  
+ One of the biggest hurdles of creating such a set of macros is memory allocation. Because the strings cannot be converted in place, new memory to hold the converted results must be allocated. This could have been done with code similar to the following:  
   
 ```  
 // we want to convert an MBCS string in lpszA  
-int nLen = MultiByteToWideChar(CP_ACP, 0,lpszA, -1, NULL, NULL);  
+int nLen = MultiByteToWideChar(CP_ACP,
+    0,
+    lpszA, -1,
+    NULL,
+    NULL);
+
 LPWSTR lpszW = new WCHAR[nLen];  
-MultiByteToWideChar(CP_ACP, 0,   
-   lpszA, -1, lpszW, nLen);  
+MultiByteToWideChar(CP_ACP,
+    0,   
+    lpszA, -1,
+    lpszW,
+    nLen);
+
 // use it to call OLE here  
-pI->SomeFunctionThatNeedsUnicode(lpszW);  
+pI->SomeFunctionThatNeedsUnicode(lpszW);
+
 // free the string  
 delete[] lpszW;  
 ```  
   
- 用作许多问题的此方法。  主要问题是它的调试的代码编写，测试。  是一个简单的函数调用的内容，现在更复杂。  此外，此类使具有大量运行时系统开销。  每次转换完成，堆内存在必须分配和释放。  最后，以上代码将需要为不要求此转换发生\) 的 Unicode 和 Macintosh 版本中添加适当的 \( `#ifdefs`。  
+ This approach as a number of problems. The main problem is that it is a lot of code to write, test, and debug. Something that was a simple function call, is now much more complex. In addition, there is a significant runtime overhead in doing so. Memory has to be allocated on the heap and freed each time a conversion is done. Finally, the code above would need to have appropriate `#ifdefs` added for Unicode and Macintosh builds (which don't require this conversion to take place).  
   
- 我们以的解决方案中创建各掩码 1\) 平台之间的差异\) 和 2 使用一个高效的内存分配方案和 3\) 对于容易插入现有源代码的某些宏。  这是一个示例定义之一：  
+ The solution we came up with is to create some macros which 1) mask the difference between the various platforms, and 2) use an efficient memory allocation scheme, and 3) are easy to insert into the existing source code. Here is an example of one of the definitions:  
   
 ```  
 #define A2W(lpa) (\  
-    ((LPCSTR)lpa == NULL) ? NULL : (\  
-          _convert = (strnlen(lpa)+1),\  
-        AfxA2WHelper((LPWSTR) alloca(_convert*2),   
-      lpa, _convert)\  
-    )\  
-)  
+ ((LPCSTR)lpa == NULL) NULL : (\  
+    _convert = (strnlen(lpa)+1),\  
+    AfxA2WHelper((LPWSTR) alloca(_convert*2),   
+    lpa,
+    _convert)\)\)  
 ```  
   
- 使用而不是以上代码的此宏和内容为更简单：  
+ Using this macro instead of the code above and things are much simpler:  
   
 ```  
 // use it to call OLE here  
 USES_CONVERSION;  
-pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));  
+pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
 ```  
   
- 具有转换所需的额外调用，但是，使用宏简单而有效。  
+ There are extra calls where conversion is necessary, but using the macros is simple and effective.  
   
- 每个宏的实现使用 \_alloca\(\) 函数从堆栈分配内存而不是。堆  从堆栈中分配内存要比分配堆上的内存更快，并且，内存将自动释放，该函数退出时。  此外，宏避免调用 **MultiByteToWideChar** \(或 **WideCharToMultiByte**\) 超过一次。  这通过分配更多一点的内存比需要完成的。  我们知道 MBC 将转换为最多一个 **WCHAR**，用于各 **WCHAR** 我们最多具有两 MBC 字节。  通过指派有多于必要，但足以始终处理转换第二次调用第二次调用避免转换函数。  为帮助程序函数调用 **AfxA2Whelper** 收缩推送参数的数量必须完成才能执行转换 \(这导致较小的代码，而且比，则直接调用 **MultiByteToWideChar** \)。  
+ The implementation of each macro uses the _alloca() function to allocate memory from the stack instead of the heap. Allocating memory from the stack is much faster than allocating memory on the heap, and the memory is automatically freed when the function is exited. In addition, the macros avoid calling **MultiByteToWideChar** (or **WideCharToMultiByte**) more than one time. This is done by allocating a little bit more memory than is necessary. We know that an MBC will convert into at most one **WCHAR** and that for each **WCHAR** we will have a maximum of two MBC bytes. By allocating a little more than necessary, but always enough to handle the conversion the second call second call to the conversion function is avoided. The call to the helper function **AfxA2Whelper** reduces the number of argument pushes that must be done in order to perform the conversion (this results in smaller code, than if it called **MultiByteToWideChar** directly).  
   
- 若要为包含的宏中的空间存储临时长度，声明局部变量在每调用执行此函数使用宏转换的\_convert 是必需的。  这是调用 **USES\_CONVERSION** 宏。完成上所见示例中。  
+ In order to for the macros to have space to store the a temporary length, it is necessary to declare a local variable called _convert that does this in each function that uses the conversion macros. This is done by invoking the **USES_CONVERSION** macro as seen above in the example.  
   
- 具有两个泛翻译宏和 OLE 特定宏。  这两个不同的原因设置如下所述。  任何宏位于 AFXPRIV.H。  
+ There are both generic conversion macros and OLE specific macros. These two different macro sets are discussed below. All of the macros reside in AFXPRIV.H.  
   
-## 泛翻译宏  
- 泛翻译宏窗体基础机制。  在前面的部分以及实现显示的宏示例，A2W，是一个这样“常规”宏。  它专门与 OLE。  常规组宏所示：  
+## <a name="generic-conversion-macros"></a>Generic Conversion Macros  
+ The generic conversion macros form the underlying mechanism. The macro example and implementation shown in the previous section, A2W, is one such "generic" macro. It is not related to OLE specifically. The set of generic macros is listed below:  
   
 ```  
 A2CW      (LPCSTR) -> (LPCWSTR)  
@@ -93,12 +119,12 @@ W2CA      (LPCWSTR) -> (LPCSTR)
 W2A      (LPCWSTR) -> (LPSTR)  
 ```  
   
- 除执行文本转换外，还具有宏，并且帮助器用于转换 `TEXTMETRIC`、`DEVMODE`、`BSTR`与 OLE 分配的字符串函数。  这些宏已超出本讨论的范围之外。请参见 AFXPRIV.H 这些宏有关的更多信息。  
+ Besides doing text conversions, there are also macros and helper functions for converting `TEXTMETRIC`, `DEVMODE`, `BSTR`, and OLE allocated strings. These macros are beyond the scope of this discussion - refer to AFXPRIV.H for more information on those macros.  
   
-## OLE 转换宏  
- OLE 转换宏来处理需要 **OLESTR** 字符的函数而专门设计。  如果检查 OLE 标题，您将看到对 **LPCOLESTR** 和 **OLECHAR**的引用太多。  这些类型在非特定于平台的方法来引用在 OLE 接口的字符类型。  对在 Win16 Macintosh 平台和 **WCHAR** 的 `char` 和**OLECHAR** 映射在 Win32。  
+## <a name="ole-conversion-macros"></a>OLE Conversion Macros  
+ The OLE conversion macros are designed specifically for handling functions that expect **OLESTR** characters. If you examine the OLE headers, you will see many references to **LPCOLESTR** and **OLECHAR**. These types are used to refer to the type of characters used in OLE interfaces in a way that is not specific to the platform. **OLECHAR** maps to `char` in Win16 and Macintosh platforms and **WCHAR** in Win32.  
   
- 要使 **\#ifdef** 指令的个数。MFC 代码到最低有位置 OLE 字符串是包含的每个经过转换的相似宏。  下列宏最常使用：  
+ In order to keep the number of **#ifdef** directives in the MFC code to a minimum we have a similar macro for each conversion that where OLE strings are involved. The following macros are the most commonly used:  
   
 ```  
 T2COLE   (LPCTSTR) -> (LPCOLESTR)  
@@ -107,78 +133,91 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- 再次，则执行 `TEXTMETRIC`、`DEVMODE`、`BSTR`与 OLE 分配的字符串一样的宏。  参考 AFXPRIV.H 已获得更多信息。  
+ Again, there are similar macros for doing `TEXTMETRIC`, `DEVMODE`, `BSTR`, and OLE allocated strings. Refer to AFXPRIV.H for more information.  
   
-## 其他注意事项  
- 请勿使用宏在紧凑循环。  例如，不要编写以下代码：  
+## <a name="other-considerations"></a>Other Considerations  
+ Do not use the macros in a tight loop. For example, you do not want to write the following kind of code:  
   
 ```  
 void BadIterateCode(LPCTSTR lpsz)  
 {  
-   USES_CONVERSION;  
-   for (int ii = 0; ii < 10000; ii++)  
-      pI->SomeMethod(ii, T2COLE(lpsz));  
+    USES_CONVERSION; 
+    for (int ii = 0; ii <10000; ii++)  
+    pI->SomeMethod(ii, T2COLE(lpsz));
+
 }  
 ```  
   
- 上面的代码可能导致堆栈上分配 MB 的内存根据字符串 `lpsz` 的内容为！  还需要时间转换循环的每个迭代的字符串。  另外，请将这种常量转换从外部循环：  
+ The code above could result in allocating megabytes of memory on the stack depending on what the contents of the string `lpsz` is! It also takes time to convert the string for each iteration of the loop. Instead, move such constant conversions out of the loop:  
   
 ```  
 void MuchBetterIterateCode(LPCTSTR lpsz)  
 {  
-   USES_CONVERSION;  
-   LPCOLESTR lpszT = T2COLE(lpsz);  
-   for (int ii = 0; ii < 10000; ii++)  
-      pI->SomeMethod(ii, lpszT);  
+    USES_CONVERSION; 
+    LPCOLESTR lpszT = T2COLE(lpsz);
+
+    for (int ii = 0; ii <10000; ii++)  
+    pI->SomeMethod(ii, lpszT);
+
 }  
 ```  
   
- 如果字符串不是一成不变的，然后封装方法调用函数。  这将允许将缓冲区都已释放。  例如：  
+ If the string is not constant, then encapsulate the method call into a function. This will allow the conversion buffer to be freed each time. For example:  
   
 ```  
 void CallSomeMethod(int ii, LPCTSTR lpsz)  
 {  
-   USES_CONVERSION;  
-   pI->SomeMethod(ii, T2COLE(lpsz));  
+    USES_CONVERSION; 
+    pI->SomeMethod(ii, T2COLE(lpsz));
+
 }  
-  
+ 
 void MuchBetterIterateCode2(LPCTSTR* lpszArray)  
 {  
-   for (int ii = 0; ii < 10000; ii++)  
-      CallSomeMethod(ii, lpszArray[ii]);  
+    for (int ii = 0; ii <10000; ii++)  
+    CallSomeMethod(ii, lpszArray[ii]);
+
 }  
 ```  
   
- 除非返回值。方法返回之前，这意味着数据副本不返回结果的一个宏。  例如，以下代码是不好的：  
+ Never return the result of one of the macros, unless the return value implies making a copy of the data before the return. For example, this code is bad:  
   
 ```  
 LPTSTR BadConvert(ISomeInterface* pI)  
 {  
-   USES_CONVERSION;  
-   LPOLESTR lpsz = NULL;  
-   pI->GetFileName(&lpsz);  
-   LPTSTR lpszT = OLE2T(lpsz);  
-   CoMemFree(lpsz);  
-   return lpszT; // bad! returning alloca memory  
+    USES_CONVERSION; 
+    LPOLESTR lpsz = NULL;  
+    pI->GetFileName(&lpsz);
+
+ LPTSTR lpszT = OLE2T(lpsz);
+
+    CoMemFree(lpsz);
+
+ return lpszT; // bad! returning alloca memory  
 }  
 ```  
   
- 以上代码可以通过更改为复制值的内容的返回值进行修复：  
+ The code above could be fixed by changing the return value to something that copies the value:  
   
 ```  
 CString BetterConvert(ISomeInterface* pI)  
 {  
-   USES_CONVERSION;  
-   LPOLESTR lpsz = NULL;  
-   pI->GetFileName(&lpsz);  
-   LPTSTR lpszT = OLE2T(lpsz);  
-   CoMemFree(lpsz);  
-   return lpszT; // CString makes copy  
+    USES_CONVERSION; 
+    LPOLESTR lpsz = NULL;  
+    pI->GetFileName(&lpsz);
+
+ LPTSTR lpszT = OLE2T(lpsz);
+
+    CoMemFree(lpsz);
+
+ return lpszT; // CString makes copy  
 }  
 ```  
   
- 宏是轻松轻松插入代码，但是，当上述警告，可以调用，需要小心，在使用它们。  
+ The macros are easy to use and easy to insert into your code, but as you can tell from the caveats above, you need to be careful when using them.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

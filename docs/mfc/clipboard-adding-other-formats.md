@@ -1,57 +1,76 @@
 ---
-title: "剪贴板：添加其他格式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "剪贴板, 格式"
-  - "自定义剪贴板数据格式"
-  - "自定义格式"
-  - "自定义格式, 放置于剪贴板上"
-  - "格式 [C++], 剪贴板"
-  - "注册自定义剪贴板数据格式"
+title: 'Clipboard: Adding Other Formats | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- formats [MFC], Clipboard
+- Clipboard, formats
+- custom formats, placing on Clipboard
+- custom formats
+- registering custom Clipboard data formats
+- custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 剪贴板：添加其他格式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0df2fcfdc762b7e47ffc051a257b9406ba2cc48a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本主题说明如何扩展支持的格式列表，具体而言 OLE 支持的。  主题 [剪贴板：复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md) 描述需要最小实现支持从剪贴板复制和粘贴。  如果这是所有您实现，放置在剪贴板上的格式为 `CF_METAFILEPICT`、**CF\_EMBEDSOURCE**、**CF\_OBJECTDESCRIPTOR**及可以 `CF_LINKSOURCE`。  大多数应用程序的这三需要剪贴板上的多格式。  
+---
+# <a name="clipboard-adding-other-formats"></a>Clipboard: Adding Other Formats
+This topic explains how to expand the list of supported formats, particularly for OLE support. The topic [Clipboard: Copying and Pasting Data](../mfc/clipboard-copying-and-pasting-data.md) describes the minimum implementation necessary to support copying and pasting from the Clipboard. If this is all you implement, the only formats placed on the Clipboard are `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, and possibly `CF_LINKSOURCE`. Most applications will need more formats on the Clipboard than these three.  
   
-##  <a name="_core_registering_custom_formats"></a> 注册自定义格式  
- 要创建自己的自定义格式，请按照您使用的同一个过程时注册任何自定义格式剪贴板：传递的格式化名称为 **RegisterClipboardFormat** 函数并使用它的返回值用作格式 . ID  
+##  <a name="_core_registering_custom_formats"></a> Registering Custom Formats  
+ To create your own custom formats, follow the same procedure you would use when registering any custom Clipboard format: pass the name of the format to the **RegisterClipboardFormat** function and use its return value as the format ID.  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a> 放置格式剪贴板上  
- 若要添加多格式添加到剪贴板上放置的控件，您必须在重写从 `COleClientItem` 或 `COleServerItem` 派生的类的函数 `OnGetClipboardData` \(根据复制的数据是否本机\)。  在此函数，应使用下面的过程。  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Placing Formats on the Clipboard  
+ To add more formats to those placed on the Clipboard, you must override the `OnGetClipboardData` function in the class you derived from either `COleClientItem` or `COleServerItem` (depending on whether the data to be copied is native). In this function, you should use the following procedure.  
   
-#### 放置格式剪贴板上  
+#### <a name="to-place-formats-on-the-clipboard"></a>To place formats on the Clipboard  
   
-1.  创建 `COleDataSource` 对象。  
+1.  Create a `COleDataSource` object.  
   
-2.  将此数据源将本机数据格式到支持的格式列表通过调用 `COleDataSource::CacheGlobalData`的函数。  
+2.  Pass this data source to a function that adds your native data formats to the list of supported formats by calling `COleDataSource::CacheGlobalData`.  
   
-3.  添加标准格式通过调用每种要支持的标准格式的 `COleDataSource::CacheGlobalData`。  
+3.  Add standard formats by calling `COleDataSource::CacheGlobalData` for each standard format you want to support.  
   
- 此技术在 MFC OLE 示例程序 [HIERSVR](../top/visual-cpp-samples.md) \(请选中 **CServerItem** 类的 `OnGetClipboardData` 成员函数。\)  本示例中的唯一不同之处是第三不实现，因为文本支持没有其他标准格式。  
+ This technique is used in the MFC OLE sample program [HIERSVR](../visual-cpp-samples.md) (examine the `OnGetClipboardData` member function of the **CServerItem** class). The only difference in this sample is that step three is not implemented because HIERSVR supports no other standard formats.  
   
-### 您想进一步了解什么？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [OLE 数据对象与数据源和统一传输数据](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
--   [OLE 拖放](../mfc/drag-and-drop-ole.md)  
+-   [OLE drag and drop](../mfc/drag-and-drop-ole.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
-## 请参阅  
- [剪贴板：使用 OLE 剪贴板机制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+

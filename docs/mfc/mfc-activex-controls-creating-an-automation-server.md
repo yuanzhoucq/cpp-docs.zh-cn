@@ -1,60 +1,79 @@
 ---
-title: "MFC ActiveX 控件：创建自动化服务器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件 [C++], 自动化服务器"
-  - "自动化服务器 [C++], MFC ActiveX 控件"
-  - "MFC ActiveX 控件 [C++], 自动化服务器"
+title: 'MFC ActiveX Controls: Creating an Automation Server | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], Automation server
+- MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC ActiveX 控件：创建自动化服务器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 725d452e56a0729b76eed7889018cc21149596f8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-可以开发 MFC ActiveX 控件用作自动化服务器用于嵌入程序设计应用程序中的控件中调用控件的方法的用途从应用程序。  此类控件中可用承载 ActiveX 控件容器。  
+---
+# <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX Controls: Creating an Automation Server
+You can develop an MFC ActiveX control as an Automation server for the purpose of programmatically embedding that control in another application and calling methods in the control from the application. Such a control would still be available to be hosted in an ActiveX control container.  
   
-### 创建用作自动化服务器控件  
+### <a name="to-create-a-control-as-an-automation-server"></a>To create a control as an Automation server  
   
-1.  [创建](../mfc/reference/mfc-activex-control-wizard.md) 控件。  
+1.  [Create](../mfc/reference/mfc-activex-control-wizard.md) the control.  
   
-2.  [添加方法](../mfc/mfc-activex-controls-methods.md)。  
+2.  [Add methods](../mfc/mfc-activex-controls-methods.md).  
   
-3.  重写 [IsInvokeAllowed](../Topic/COleControl::IsInvokeAllowed.md)。  有关更多信息，请参见知识库文章 Q146120。  
+3.  Override [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). For more information, see Knowledge Base article Q146120.  
   
-4.  生成控件。  
+4.  Build the control.  
   
-### 以编程方式访问在自动化服务器的方法  
+### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>To programmatically access the methods in an Automation server  
   
-1.  创建应用程序，例如，[MFC exe](../mfc/reference/mfc-application-wizard.md)。  
+1.  Create an application, for example, an [MFC exe](../mfc/reference/mfc-application-wizard.md).  
   
-2.  在 `InitInstance` 函数开头，添加下面的代码行：  
+2.  At the beginning of the `InitInstance` function, add the following line:  
   
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/CPP/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
   
-3.  在"类视图"中，右击项目节点并选择 **Add class from typelib** 导入类型库。  
+3.  In Class View, right-click the project node and select **Add class from typelib** to import the type library.  
   
-     这将添加 .h 和 .cpp 具有文件扩展名的文件添加到项目中。  
+     This will add files with the file name extensions .h and .cpp to the project.  
   
-4.  在将在 ActiveX 控件的一个或多个方法，添加下列行类的头文件：，其中 `#include filename.h`为文件名创建头文件的名称，在导入类型库。  
+4.  In the header file of the class where you will call one or more methods in the ActiveX control, add the following line: `#include filename.h`, where file name is the name of the header file that was created when you imported the type library.  
   
-5.  在电话将对在 ActiveX 控件中的方法相关的函数中，添加创建控件的包装类对象的代码并创建 ActiveX 对象。  例如，在按钮，在对话框后，单击下列 MFC 代码实例化 `CCirc` 控件，则获取标题属性，并显示结果：  
+5.  In the function where a call will be made to a method in the ActiveX control, add code that creates an object of the control's wrapper class and create the ActiveX object. For example, the following MFC code instantiates a `CCirc` control, gets the Caption property, and displays the result when the OK button is clicked in a dialog box:  
   
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/CPP/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
   
- 如果添加方法到 ActiveX 控件，才能在应用程序中使用它，您可以开始使用控件的最新版本应用程序中通过删除创建的文件，当您导入类型库。  然后再次导入类型库。  
+ If you add methods to the ActiveX control after you use it in an application, you can begin using the latest version of the control in the application by deleting the files that were created when you imported the type library. Then import the type library again.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

@@ -1,11 +1,11 @@
 ---
-title: "CMFCBaseTabCtrl 类 |Microsoft 文档"
+title: CMFCBaseTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -130,7 +130,122 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCBaseTabCtrl class
+- CMFCBaseTabCtrl [MFC], AddIcon
+- CMFCBaseTabCtrl [MFC], AddTab
+- CMFCBaseTabCtrl [MFC], ApplyRestoredTabInfo
+- CMFCBaseTabCtrl [MFC], AutoDestroyWindow
+- CMFCBaseTabCtrl [MFC], CalcRectEdit
+- CMFCBaseTabCtrl [MFC], CleanUp
+- CMFCBaseTabCtrl [MFC], ClearImageList
+- CMFCBaseTabCtrl [MFC], DetachTab
+- CMFCBaseTabCtrl [MFC], EnableActivateLastActive
+- CMFCBaseTabCtrl [MFC], EnableAutoColor
+- CMFCBaseTabCtrl [MFC], EnableCustomToolTips
+- CMFCBaseTabCtrl [MFC], EnableInPlaceEdit
+- CMFCBaseTabCtrl [MFC], EnableTabDetach
+- CMFCBaseTabCtrl [MFC], EnableTabSwap
+- CMFCBaseTabCtrl [MFC], EnsureVisible
+- CMFCBaseTabCtrl [MFC], EnterDragMode
+- CMFCBaseTabCtrl [MFC], FindTargetWnd
+- CMFCBaseTabCtrl [MFC], FireChangeActiveTab
+- CMFCBaseTabCtrl [MFC], FireChangingActiveTab
+- CMFCBaseTabCtrl [MFC], GetActiveTab
+- CMFCBaseTabCtrl [MFC], GetActiveTabColor
+- CMFCBaseTabCtrl [MFC], GetActiveTabTextColor
+- CMFCBaseTabCtrl [MFC], GetActiveWnd
+- CMFCBaseTabCtrl [MFC], GetAutoColors
+- CMFCBaseTabCtrl [MFC], GetFirstVisibleTab
+- CMFCBaseTabCtrl [MFC], GetFirstVisibleTabNum
+- CMFCBaseTabCtrl [MFC], GetHighlightedTab
+- CMFCBaseTabCtrl [MFC], GetImageList
+- CMFCBaseTabCtrl [MFC], GetImageSize
+- CMFCBaseTabCtrl [MFC], GetLastVisibleTab
+- CMFCBaseTabCtrl [MFC], GetLocation
+- CMFCBaseTabCtrl [MFC], GetMaxWindowSize
+- CMFCBaseTabCtrl [MFC], GetTabArea
+- CMFCBaseTabCtrl [MFC], GetTabBkColor
+- CMFCBaseTabCtrl [MFC], GetTabBorderSize
+- CMFCBaseTabCtrl [MFC], GetTabByID
+- CMFCBaseTabCtrl [MFC], GetTabCloseButton
+- CMFCBaseTabCtrl [MFC], GetTabFromHwnd
+- CMFCBaseTabCtrl [MFC], GetTabFromPoint
+- CMFCBaseTabCtrl [MFC], GetTabFullWidth
+- CMFCBaseTabCtrl [MFC], GetTabHicon
+- CMFCBaseTabCtrl [MFC], GetTabID
+- CMFCBaseTabCtrl [MFC], GetTabIcon
+- CMFCBaseTabCtrl [MFC], GetTabLabel
+- CMFCBaseTabCtrl [MFC], GetTabRect
+- CMFCBaseTabCtrl [MFC], GetTabsHeight
+- CMFCBaseTabCtrl [MFC], GetTabsRect
+- CMFCBaseTabCtrl [MFC], GetTabTextColor
+- CMFCBaseTabCtrl [MFC], GetTabWnd
+- CMFCBaseTabCtrl [MFC], GetTabWndNoWrapper
+- CMFCBaseTabCtrl [MFC], GetTabsNum
+- CMFCBaseTabCtrl [MFC], GetToolTipCtrl
+- CMFCBaseTabCtrl [MFC], GetVisibleTabsNum
+- CMFCBaseTabCtrl [MFC], HasImage
+- CMFCBaseTabCtrl [MFC], HideSingleTab
+- CMFCBaseTabCtrl [MFC], InsertTab
+- CMFCBaseTabCtrl [MFC], InvalidateTab
+- CMFCBaseTabCtrl [MFC], IsActiveTabCloseButton
+- CMFCBaseTabCtrl [MFC], IsAutoColor
+- CMFCBaseTabCtrl [MFC], IsAutoDestroyWindow
+- CMFCBaseTabCtrl [MFC], IsColored
+- CMFCBaseTabCtrl [MFC], IsDialogControl
+- CMFCBaseTabCtrl [MFC], IsDrawNoPrefix
+- CMFCBaseTabCtrl [MFC], IsFlatFrame
+- CMFCBaseTabCtrl [MFC], IsFlatTab
+- CMFCBaseTabCtrl [MFC], IsHideSingleTab
+- CMFCBaseTabCtrl [MFC], IsIconAdded
+- CMFCBaseTabCtrl [MFC], IsInPlaceEdit
+- CMFCBaseTabCtrl [MFC], IsLeftRightRounded
+- CMFCBaseTabCtrl [MFC], IsMDITab
+- CMFCBaseTabCtrl [MFC], IsOneNoteStyle
+- CMFCBaseTabCtrl [MFC], IsPtInTabArea
+- CMFCBaseTabCtrl [MFC], IsTabCloseButtonHighlighted
+- CMFCBaseTabCtrl [MFC], IsTabCloseButtonPressed
+- CMFCBaseTabCtrl [MFC], IsTabDetachable
+- CMFCBaseTabCtrl [MFC], IsTabIconOnly
+- CMFCBaseTabCtrl [MFC], IsTabSwapEnabled
+- CMFCBaseTabCtrl [MFC], IsTabVisible
+- CMFCBaseTabCtrl [MFC], IsVS2005Style
+- CMFCBaseTabCtrl [MFC], MoveTab
+- CMFCBaseTabCtrl [MFC], OnChangeTabs
+- CMFCBaseTabCtrl [MFC], OnDragEnter
+- CMFCBaseTabCtrl [MFC], OnDragLeave
+- CMFCBaseTabCtrl [MFC], OnDragOver
+- CMFCBaseTabCtrl [MFC], OnDrop
+- CMFCBaseTabCtrl [MFC], OnRenameTab
+- CMFCBaseTabCtrl [MFC], PreTranslateMessage
+- CMFCBaseTabCtrl [MFC], RecalcLayout
+- CMFCBaseTabCtrl [MFC], RemoveAllTabs
+- CMFCBaseTabCtrl [MFC], RemoveTab
+- CMFCBaseTabCtrl [MFC], RenameTab
+- CMFCBaseTabCtrl [MFC], ResetImageList
+- CMFCBaseTabCtrl [MFC], Serialize
+- CMFCBaseTabCtrl [MFC], SetActiveTab
+- CMFCBaseTabCtrl [MFC], SetActiveTabColor
+- CMFCBaseTabCtrl [MFC], SetActiveTabTextColor
+- CMFCBaseTabCtrl [MFC], SetAutoColors
+- CMFCBaseTabCtrl [MFC], SetDockingBarWrapperRTC
+- CMFCBaseTabCtrl [MFC], SetDrawNoPrefix
+- CMFCBaseTabCtrl [MFC], SetImageList
+- CMFCBaseTabCtrl [MFC], SetLocation
+- CMFCBaseTabCtrl [MFC], SetTabBkColor
+- CMFCBaseTabCtrl [MFC], SetTabBorderSize
+- CMFCBaseTabCtrl [MFC], SetTabHicon
+- CMFCBaseTabCtrl [MFC], SetTabIcon
+- CMFCBaseTabCtrl [MFC], SetTabIconOnly
+- CMFCBaseTabCtrl [MFC], SetTabLabel
+- CMFCBaseTabCtrl [MFC], SetTabsHeight
+- CMFCBaseTabCtrl [MFC], SetTabTextColor
+- CMFCBaseTabCtrl [MFC], SetTabsOrder
+- CMFCBaseTabCtrl [MFC], ShowTab
+- CMFCBaseTabCtrl [MFC], StartRenameTab
+- CMFCBaseTabCtrl [MFC], SwapTabs
+- CMFCBaseTabCtrl [MFC], CreateWrapper
+- CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
+- CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
 caps.latest.revision: 41
 author: mikeblome
@@ -151,171 +266,173 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d82cde70595bf6d7a4629f54cc48e2b422cd5e8c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a38fa6376a8ecdc1ef60fcc195448389d13df798
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl 类
-实现选项卡式窗口的基本功能。  
+# <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
+Implements the base functionality for tabbed windows.  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCBaseTabCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||  
-|[Cmfcbasetabctrl:: Addtab](#addtab)|向选项卡式窗口添加新选项卡。|  
+|[CMFCBaseTabCtrl::AddTab](#addtab)|Adds a new tab to the tabbed window.|  
 |[CMFCBaseTabCtrl::ApplyRestoredTabInfo](#applyrestoredtabinfo)||  
 |[CMFCBaseTabCtrl::AutoDestroyWindow](#autodestroywindow)||  
 |[CMFCBaseTabCtrl::CalcRectEdit](#calcrectedit)||  
 |[CMFCBaseTabCtrl::CleanUp](#cleanup)||  
 |[CMFCBaseTabCtrl::ClearImageList](#clearimagelist)||  
-|[CMFCBaseTabCtrl::DetachTab](#detachtab)|从选项卡式窗口分离选项卡。|  
+|[CMFCBaseTabCtrl::DetachTab](#detachtab)|Detaches a tab from a tabbed window.|  
 |[CMFCBaseTabCtrl::EnableActivateLastActive](#enableactivatelastactive)||  
-|[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)|启用或禁用自动选项卡着色。|  
-|[CMFCBaseTabCtrl::EnableCustomToolTips](#enablecustomtooltips)|启用或禁用选项卡的自定义工具提示。|  
-|[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|启用或禁用直接编辑选项卡标签。|  
-|[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)|启用可拆分选项卡。|  
-|[Cmfcbasetabctrl:: Enabletabswap](#enabletabswap)|启用或禁用用户是否可以使用鼠标更改选项卡顺序。|  
-|[CMFCBaseTabCtrl::EnsureVisible](#ensurevisible)|滚动选项卡，直到指定选项卡可见。 如果指定选项卡已经可见，则此方法无效。|  
+|[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)|Enables or disables automatic tab coloring.|  
+|[CMFCBaseTabCtrl::EnableCustomToolTips](#enablecustomtooltips)|Enables or disables custom tooltips for tabs.|  
+|[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Enables or disables direct editing of tab labels.|  
+|[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)|Enables detachable tabs.|  
+|[CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap)|Enables or disables whether the user can change the tab order by using a mouse.|  
+|[CMFCBaseTabCtrl::EnsureVisible](#ensurevisible)|Scrolls the tabs until the specified tab is visible. This method has no effect if the specified tab is already visible.|  
 |[CMFCBaseTabCtrl::EnterDragMode](#enterdragmode)||  
-|[CMFCBaseTabCtrl::FindTargetWnd](#findtargetwnd)|返回包含指定点的窗格。|  
+|[CMFCBaseTabCtrl::FindTargetWnd](#findtargetwnd)|Returns a pane that contains a specified point.|  
 |[CMFCBaseTabCtrl::FireChangeActiveTab](#firechangeactivetab)||  
 |[CMFCBaseTabCtrl::FireChangingActiveTab](#firechangingactivetab)||  
-|[CMFCBaseTabCtrl::GetActiveTab](#getactivetab)|返回活动选项卡的索引。|  
-|[CMFCBaseTabCtrl::GetActiveTabColor](#getactivetabcolor)|返回活动选项卡的背景色。|  
-|[CMFCBaseTabCtrl::GetActiveTabTextColor](#getactivetabtextcolor)|返回活动选项卡的文本颜色。|  
-|[CMFCBaseTabCtrl::GetActiveWnd](#getactivewnd)|返回指向选项卡控件的活动页面的指针。|  
-|[CMFCBaseTabCtrl::GetAutoColors](#getautocolors)|返回对用于自动着色的颜色数组的引用。|  
-|[CMFCBaseTabCtrl::GetFirstVisibleTab](#getfirstvisibletab)|返回指向第一个可见选项卡的指针。|  
+|[CMFCBaseTabCtrl::GetActiveTab](#getactivetab)|Returns the index of the active tab.|  
+|[CMFCBaseTabCtrl::GetActiveTabColor](#getactivetabcolor)|Returns the background color of the active tab.|  
+|[CMFCBaseTabCtrl::GetActiveTabTextColor](#getactivetabtextcolor)|Returns the text color of the active tab.|  
+|[CMFCBaseTabCtrl::GetActiveWnd](#getactivewnd)|Returns a pointer the active page of the tab control.|  
+|[CMFCBaseTabCtrl::GetAutoColors](#getautocolors)|Returns a reference to the array of colors that are used for automatic coloring.|  
+|[CMFCBaseTabCtrl::GetFirstVisibleTab](#getfirstvisibletab)|Returns a pointer to the first visible tab.|  
 |[CMFCBaseTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)||  
-|[CMFCBaseTabCtrl::GetHighlightedTab](#gethighlightedtab)|返回当前突出显示的选项卡的索引。|  
+|[CMFCBaseTabCtrl::GetHighlightedTab](#gethighlightedtab)|Returns the index of the currently highlighted tab.|  
 |[CMFCBaseTabCtrl::GetImageList](#getimagelist)||  
 |[CMFCBaseTabCtrl::GetImageSize](#getimagesize)||  
 |[CMFCBaseTabCtrl::GetLastVisibleTab](#getlastvisibletab)||  
-|[CMFCBaseTabCtrl::GetLocation](#getlocation)|返回指示相对于选项卡控件定位的选项卡区域的 LOCATION 数据类型的变量。 例如位于顶部或底部。|  
+|[CMFCBaseTabCtrl::GetLocation](#getlocation)|Returns a variable of the LOCATION data type that indicates where the tab area is positioned relative to the tab control. For example, on the top or on the bottom.|  
 |[CMFCBaseTabCtrl::GetMaxWindowSize](#getmaxwindowsize)||  
-|[CMFCBaseTabCtrl::GetTabArea](#gettabarea)|返回选项卡区域在选项卡式窗口中的大小和位置。 使用坐标定义选项卡区域的位置。|  
-|[CMFCBaseTabCtrl::GetTabBkColor](#gettabbkcolor)|返回指定选项卡的背景色。|  
-|[CMFCBaseTabCtrl::GetTabBorderSize](#gettabbordersize)|返回选项卡控件中选项卡边框的大小。|  
-|[CMFCBaseTabCtrl::GetTabByID](#gettabbyid)|返回由指定 ID 标识的选项卡的索引。|  
+|[CMFCBaseTabCtrl::GetTabArea](#gettabarea)|Returns the size and the position of the tab area in the tabbed window. The position of the tab area is defined by using coordinates.|  
+|[CMFCBaseTabCtrl::GetTabBkColor](#gettabbkcolor)|Returns the background color of the specified tab.|  
+|[CMFCBaseTabCtrl::GetTabBorderSize](#gettabbordersize)|Returns the size of the tab borders in the tab control.|  
+|[CMFCBaseTabCtrl::GetTabByID](#gettabbyid)|Returns the index of the tab that is identified by a specified ID.|  
 |[CMFCBaseTabCtrl::GetTabCloseButton](#gettabclosebutton)||  
-|[CMFCBaseTabCtrl::GetTabFromHwnd](#gettabfromhwnd)|返回包含指定 HWND 对象的选项卡的索引。|  
-|[CMFCBaseTabCtrl::GetTabFromPoint](#gettabfrompoint)|返回包含指定点的选项卡。|  
+|[CMFCBaseTabCtrl::GetTabFromHwnd](#gettabfromhwnd)|Returns the index of a tab that contains a specified HWND object.|  
+|[CMFCBaseTabCtrl::GetTabFromPoint](#gettabfrompoint)|Returns the tab that contains a specified point.|  
 |[CMFCBaseTabCtrl::GetTabFullWidth](#gettabfullwidth)||  
-|[CMFCBaseTabCtrl::GetTabHicon](#gettabhicon)|返回与指定选项卡关联的图标。|  
-|[CMFCBaseTabCtrl::GetTabID](#gettabid)|使用选项卡索引返回选项卡 ID。|  
-|[CMFCBaseTabCtrl::GetTabIcon](#gettabicon)|返回指定选项卡的图标 ID。|  
-|[CMFCBaseTabCtrl::GetTabLabel](#gettablabel)|返回指定选项卡的文本。|  
-|[CMFCBaseTabCtrl::GetTabRect](#gettabrect)|检索指定选项卡的大小和位置。|  
+|[CMFCBaseTabCtrl::GetTabHicon](#gettabhicon)|Returns the icon associated with the specified tab.|  
+|[CMFCBaseTabCtrl::GetTabID](#gettabid)|Returns the ID of a tab by using the index of the tab.|  
+|[CMFCBaseTabCtrl::GetTabIcon](#gettabicon)|Returns the icon ID for a specified tab.|  
+|[CMFCBaseTabCtrl::GetTabLabel](#gettablabel)|Returns the text of a specified tab.|  
+|[CMFCBaseTabCtrl::GetTabRect](#gettabrect)|Retrieves the size and position of a specified tab.|  
 |[CMFCBaseTabCtrl::GetTabsHeight](#gettabsheight)||  
 |[CMFCBaseTabCtrl::GetTabsRect](#gettabsrect)||  
-|[CMFCBaseTabCtrl::GetTabTextColor](#gettabtextcolor)|返回指定选项卡的文本颜色。|  
-|[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)|返回指向驻留在指定选项卡页上的窗格的指针。|  
-|[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)|返回指向驻留在指定选项卡页上的控件的直接指针，即使该控件具有包装。|  
-|[CMFCBaseTabCtrl::GetTabsNum](#gettabsnum)|返回选项卡控件中包含的选项卡的数目。|  
-|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|返回对与 `CMFCBaseTabCtrl` 对象关联的工具提示控件的引用。|  
-|[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|返回可见选项卡的数目。|  
+|[CMFCBaseTabCtrl::GetTabTextColor](#gettabtextcolor)|Returns the text color of a specified tab.|  
+|[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)|Returns the pointer to a pane that resides on a specified tab page.|  
+|[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)|Returns the direct pointer to a control that resides on a specified tab page, even if the control has a wrapper.|  
+|[CMFCBaseTabCtrl::GetTabsNum](#gettabsnum)|Returns the number of tabs that are contained in the tab control.|  
+|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|Returns a reference to the tooltip control associated with the `CMFCBaseTabCtrl` object.|  
+|[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Returns the number of visible tabs.|  
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||  
-|[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|设置隐藏窗口选项卡的选项，但仅当选项卡式窗口只显示一个可见选项卡时设置。|  
-|[Cmfcbasetabctrl:: Inserttab](#inserttab)|插入新选项卡。|  
+|[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Sets an option that hides a window tab, but only if the tabbed window displays a just one visible tab.|  
+|[CMFCBaseTabCtrl::InsertTab](#inserttab)|Inserts a new tab.|  
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||  
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||  
-|[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|返回一个值，用于指示选项卡式窗口是否处于自动配色模式。|  
+|[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|Returns a value that indicates whether a tabbed window is in automatic-color mode.|  
 |[CMFCBaseTabCtrl::IsAutoDestroyWindow](#isautodestroywindow)||  
 |[CMFCBaseTabCtrl::IsColored](#iscolored)||  
 |[CMFCBaseTabCtrl::IsDialogControl](#isdialogcontrol)||  
 |[CMFCBaseTabCtrl::IsDrawNoPrefix](#isdrawnoprefix)||  
-|[CMFCBaseTabCtrl::IsFlatFrame](#isflatframe)|返回一个值，用于指示选项卡区域的框架是平面的还是 3D 的。|  
+|[CMFCBaseTabCtrl::IsFlatFrame](#isflatframe)|Returns a value that indicates whether the frame for the tab area is flat or 3D.|  
 |[CMFCBaseTabCtrl::IsFlatTab](#isflattab)||  
-|[CMFCBaseTabCtrl::IsHideSingleTab](#ishidesingletab)|返回一个值，用于指示选项卡控件是否配置为隐藏选项卡，但仅当选项卡式窗口只具有一个可见选项卡时设置。|  
+|[CMFCBaseTabCtrl::IsHideSingleTab](#ishidesingletab)|Returns a value that indicates whether the tab control is configured to hide a tab, but only if a tabbed window has just one visible tab.|  
 |[CMFCBaseTabCtrl::IsIconAdded](#isiconadded)||  
-|[CMFCBaseTabCtrl::IsInPlaceEdit](#isinplaceedit)|指示用户是否可以修改选项卡上的标签。|  
+|[CMFCBaseTabCtrl::IsInPlaceEdit](#isinplaceedit)|Indicates whether users can modify the label on a tab.|  
 |[CMFCBaseTabCtrl::IsLeftRightRounded](#isleftrightrounded)||  
 |[CMFCBaseTabCtrl::IsMDITab](#ismditab)||  
-|[CMFCBaseTabCtrl::IsOneNoteStyle](#isonenotestyle)|指示选项卡式窗口是否以 Microsoft OneNote 样式显示选项卡。|  
-|[CMFCBaseTabCtrl::IsPtInTabArea](#isptintabarea)|检查选项卡区域中是否存在指定的点。|  
+|[CMFCBaseTabCtrl::IsOneNoteStyle](#isonenotestyle)|Indicates whether a tabbed window displays tabs in Microsoft OneNote style.|  
+|[CMFCBaseTabCtrl::IsPtInTabArea](#isptintabarea)|Checks whether a specified point exists in the tab area.|  
 |[CMFCBaseTabCtrl::IsTabCloseButtonHighlighted](#istabclosebuttonhighlighted)||  
 |[CMFCBaseTabCtrl::IsTabCloseButtonPressed](#istabclosebuttonpressed)||  
-|[CMFCBaseTabCtrl::IsTabDetachable](#istabdetachable)|指示选项卡是否可拆分。|  
-|[CMFCBaseTabCtrl::IsTabIconOnly](#istabicononly)|指示选项卡是否显示图标而不显示标签。|  
-|[CMFCBaseTabCtrl::IsTabSwapEnabled](#istabswapenabled)|指示用户是否可以通过拖动选项卡来更改选项卡位置。|  
-|[CMFCBaseTabCtrl::IsTabVisible](#istabvisible)|指示指定选项卡是否可见。|  
+|[CMFCBaseTabCtrl::IsTabDetachable](#istabdetachable)|Indicates whether a tab is detachable.|  
+|[CMFCBaseTabCtrl::IsTabIconOnly](#istabicononly)|Indicates whether tabs display icons but not labels.|  
+|[CMFCBaseTabCtrl::IsTabSwapEnabled](#istabswapenabled)|Indicates whether the user can change tab positions by dragging tabs.|  
+|[CMFCBaseTabCtrl::IsTabVisible](#istabvisible)|Indicates whether a specified tab is visible.|  
 |[CMFCBaseTabCtrl::IsVS2005Style](#isvs2005style)||  
 |[CMFCBaseTabCtrl::MoveTab](#movetab)||  
-|[CMFCBaseTabCtrl::OnChangeTabs](#onchangetabs)|选项卡数量更改时由框架调用。|  
+|[CMFCBaseTabCtrl::OnChangeTabs](#onchangetabs)|Called by the framework when the number of tabs changes.|  
 |[CMFCBaseTabCtrl::OnDragEnter](#ondragenter)||  
 |[CMFCBaseTabCtrl::OnDragLeave](#ondragleave)||  
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|类使用[CWinApp](../../mfc/reference/cwinapp-class.md)将窗口消息转换之前调度到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 (重写[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
-|[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|重新计算选项卡式窗口的内部布局。|  
-|[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|从选项卡式窗口中移除所有选项卡。|  
-|[CMFCBaseTabCtrl::RemoveTab](#removetab)|从选项卡式窗口中移除一个选项卡。|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Recalculates the internal layout of a tabbed window.|  
+|[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Removes all tabs from the tabbed window.|  
+|[CMFCBaseTabCtrl::RemoveTab](#removetab)|Removes a tab from a tabbed window.|  
 |[CMFCBaseTabCtrl::RenameTab](#renametab)||  
-|[CMFCBaseTabCtrl::ResetImageList](#resetimagelist)|重置附加到选项卡式窗口的图像列表。|  
-|[CMFCBaseTabCtrl::Serialize](#serialize)|从存档读取该对象或将该对象写入存档。 (重写[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)。)|  
-|[CMFCBaseTabCtrl::SetActiveTab](#setactivetab)|激活选项卡。|  
-|[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)|设置当前活动选项卡的背景色。|  
-|[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)|设置活动选项卡的文本颜色。|  
-|[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)|设置应用到自动配色模式中的选项卡控件颜色。|  
-|[:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc)|设置用于不从派生的任何对象的包装类[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)。|  
-|[CMFCBaseTabCtrl::SetDrawNoPrefix](#setdrawnoprefix)|启用和禁用绘制选项卡标签时前缀字符的处理。|  
-|[CMFCBaseTabCtrl::SetImageList](#setimagelist)|设置图标图像列表。|  
+|[CMFCBaseTabCtrl::ResetImageList](#resetimagelist)|Resets the image list that is attached to a tabbed window.|  
+|[CMFCBaseTabCtrl::Serialize](#serialize)|Reads or writes this object from or to an archive. (Overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CMFCBaseTabCtrl::SetActiveTab](#setactivetab)|Activates a tab.|  
+|[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)|Sets the background color for the currently active tab.|  
+|[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)|Sets the text color for active tabs.|  
+|[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)|Sets the tab control colors that are applied in automatic color mode.|  
+|[CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)|Sets the wrapper class that is used for any objects that are not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).|  
+|[CMFCBaseTabCtrl::SetDrawNoPrefix](#setdrawnoprefix)|Enables and disables the processing of prefix characters when tab labels are drawn.|  
+|[CMFCBaseTabCtrl::SetImageList](#setimagelist)|Sets the icon image list.|  
 |[CMFCBaseTabCtrl::SetLocation](#setlocation)||  
-|[CMFCBaseTabCtrl::SetTabBkColor](#settabbkcolor)|设置指定选项卡的背景色。|  
-|[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)|设置新的选项卡边框大小。|  
-|[CMFCBaseTabCtrl::SetTabHicon](#settabhicon)|设置选项卡图标。|  
-|[CMFCBaseTabCtrl::SetTabIcon](#settabicon)|设置选项卡图标 ID。|  
-|[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)|为指定选项卡启用和禁用“仅图标”模式。|  
-|[CMFCBaseTabCtrl::SetTabLabel](#settablabel)|将选项卡标签设置为等于指定的字符串值。|  
+|[CMFCBaseTabCtrl::SetTabBkColor](#settabbkcolor)|Sets the background color for a specified tab.|  
+|[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)|Sets a new tab border size.|  
+|[CMFCBaseTabCtrl::SetTabHicon](#settabhicon)|Sets a tab icon.|  
+|[CMFCBaseTabCtrl::SetTabIcon](#settabicon)|Sets a tab icon ID.|  
+|[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)|Enables and disables the "icon only" mode for a specified tab.|  
+|[CMFCBaseTabCtrl::SetTabLabel](#settablabel)|Sets a tab label equal to a specified string value.|  
 |[CMFCBaseTabCtrl::SetTabsHeight](#settabsheight)||  
-|[CMFCBaseTabCtrl::SetTabTextColor](#settabtextcolor)|为指定选项卡设置文本颜色。|  
-|[CMFCBaseTabCtrl::SetTabsOrder](#settabsorder)|按照指定的顺序排列选项卡。|  
-|[CMFCBaseTabCtrl::ShowTab](#showtab)|显示或隐藏指定的选项卡。|  
+|[CMFCBaseTabCtrl::SetTabTextColor](#settabtextcolor)|Sets the text color for a specified tab.|  
+|[CMFCBaseTabCtrl::SetTabsOrder](#settabsorder)|Arranges tabs in the specified order.|  
+|[CMFCBaseTabCtrl::ShowTab](#showtab)|Shows or hides the specified tab.|  
 |[CMFCBaseTabCtrl::StartRenameTab](#startrenametab)||  
 |[CMFCBaseTabCtrl::SwapTabs](#swaptabs)||  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|创建一个派生自包装[CWnd](../../mfc/reference/cwnd-class.md)不源自`CDockablePane`。 若要停靠 `CMFCBaseTabCtrl` 对象，则每个嵌入的控件必须具有停靠包装或派生自 `CDockablePane`。<br /><br /> 通过使用 `SetDockingBayWrapperRTC`设置包装的类。|  
+|[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Creates a wrapper for an object derived from [CWnd](../../mfc/reference/cwnd-class.md) that is not derived from `CDockablePane`. To dock a `CMFCBaseTabCtrl` object, every embedded control must either have a docking wrapper or be derived from `CDockablePane`.<br /><br /> You set the class of the wrapper by using `SetDockingBayWrapperRTC`.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|指定是通过单击鼠标左键还是单击鼠标右键来选择选项卡。|  
-|[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|指定是否自动销毁选项卡中包含的窗格。|  
+|[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Specifies whether tabs are selected by using a left mouse click or a right mouse click.|  
+|[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Specifies whether the panes that are contained in the tabs are destroyed automatically.|  
   
-## <a name="remarks"></a>备注  
- `CMFCBaseTabCtrl` 类是抽象类。 因此，不能将它实例化。 若要创建选项卡式窗口，则必须从 `CMFCBaseTabCtrl`派生类。 MFC 库包含一些派生的类的示例，其中两个是[CMFCTabCtrl 类](../../mfc/reference/cmfctabctrl-class.md)和[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)。  
+## <a name="remarks"></a>Remarks  
+ The `CMFCBaseTabCtrl` class is an abstract class. Therefore, it cannot be instantiated. To create a tabbed window, you must derive a class from `CMFCBaseTabCtrl`. The MFC library contains some derived class examples, two of which are [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) and [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md).  
   
- 从 [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)] 开始，此类支持 Microsoft Active Accessibility。  
+ Starting with [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)], this class supports Microsoft Active Accessibility.  
   
-## <a name="customization-tips"></a>自定义提示  
- 以下提示适用于`CMFCBaseTabCtrl Class`和从其继承的任何类︰  
+## <a name="customization-tips"></a>Customization Tips  
+ The following tips pertain to the `CMFCBaseTabCtrl Class` and any classes that inherit from it:  
   
--   如果启用可拆分选项卡，请勿保留指向选项卡式窗口的指针。 这些可拆分选项卡可以动态创建和销毁。 因此，指针可能会变为无效。  
+-   If you enable detachable tabs, do not keep pointers to the tabbed windows. These detachable tabs can be created and destroyed dynamically. Therefore, pointers can become invalid.  
   
--   可以配置选项卡控件，使用户可以通过使用鼠标动态移动选项卡控件上的选项卡。 此功能已内置于 `CMFCBaseTabCtrl` 类。 若要启用它，请调用[cmfcbasetabctrl:: Enabletabswap](#enabletabswap)。  
+-   You can configure the tab control so that users can move tabs dynamically on a tab control by using the mouse. This functionality is built into the `CMFCBaseTabCtrl` class. To enable it, call [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap).  
   
--   默认情况下，将选项卡添加到选项卡控件时，选项卡是可拆分的。 此外可以通过使用添加非可拆分的选项卡[cmfcbasetabctrl:: Addtab](#addtab)。 如果将 `bDetachable` 参数设置为 `FALSE`，则选项卡将不可拆分。 您还可以更改选项卡是否可拆分，通过调用方法[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)。  
+-   By default, tabs are detachable when you add them to a tab control. You can also add non-detachable tabs by using [CMFCBaseTabCtrl::AddTab](#addtab). If you set the parameter `bDetachable` to `FALSE`, the tab will not be detachable. You can also change whether tabs are detachable by calling the method [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).  
   
--   派生自的对象[CWnd 类](../../mfc/reference/cwnd-class.md)可以置于可停靠控件条或可停靠选项卡。 要停靠整个控件，则必须使 `CWnd` 对象可停靠。 MFC 使用一个包装类实现此目的。 此包装类是[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 添加到可停靠控件条或可停靠选项卡上的任何 `CWnd` 对象将被包装到 `CDockablePaneAdapter` 对象中。 可以通过将 `m_bEnableWrapping` 对象的 `CMFCBaseTablCtrl` 参数设置为 `FALSE`来禁用自动包装。 您还可以更改您的应用程序使用的方法将用作包装器类[:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc)。  
+-   Objects that are derived from the [CWnd Class](../../mfc/reference/cwnd-class.md) can be put on a dockable control bar or dockable tab. For the whole control to be docked, you must make the `CWnd` object dockable. To accomplish this, MFC uses a wrapper class. This wrapper class is the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Any `CWnd` objects that are added to a dockable control bar or dockable tab will be wrapped inside a `CDockablePaneAdapter` object. You can disable the automatic wrapping by setting the parameter `m_bEnableWrapping` of your `CMFCBaseTablCtrl` object to `FALSE`. You can also change the class that your application will use as a wrapper by using the method [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -324,11 +441,11 @@ class CMFCBaseTabCtrl : public CWnd
   
  [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头：** afxbasetabctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbasetabctrl.h  
   
-##  <a name="addicon"></a>CMFCBaseTabCtrl::AddIcon  
- 将图标添加到列表中的受保护的图标`CMap``m_mapAddedIcons`成员。  
+##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon  
+ Adds an icon to the list of icons in the protected `CMap m_mapAddedIcons` member.  
   
 ```  
 void AddIcon(
@@ -336,17 +453,17 @@ void AddIcon(
     int iIcon);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `hIcon`  
- 指向要添加的图标的句柄。  
+ A handle to the icon to be added.  
   
  [in] `iIcon`  
- 在受保护的图标的从零开始索引`CImageList``m_Images`成员。  
+ Zero-based index of the icon in the protected `CImageList m_Images` member.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addtab"></a>Cmfcbasetabctrl:: Addtab  
- 将一个新选项卡添加到选项卡控件。  
+##  <a name="addtab"></a>  CMFCBaseTabCtrl::AddTab  
+ Adds a new tab to the tab control.  
   
 ```  
 virtual void AddTab(
@@ -363,81 +480,81 @@ virtual void AddTab(
     BOOL bDetachable = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pTabWnd`  
- 指向此方法表示为一个新选项卡的窗口的指针。  
+ A pointer to the window that this method represents as a new tab.  
   
  [in] `lpszTabLabel`  
- 一个字符串，包含用于新选项卡的标签。  
+ A string that contains the label for the new tab.  
   
  [in] `uiImageId`  
- 从图像列表的图像 ID。 选项卡控件用作此图像图标的新选项卡。  
+ An image ID from the image list. The tab control uses this image as the icon for the new tab.  
   
  [in] `uiResTabLabel`  
- 标签的资源 ID。  
+ The resource ID for the label.  
   
  [in] `bDetachable`  
- 一个布尔型参数，用于确定新选项卡是否可拆分。  
+ A Boolean parameter that determines whether the new tab is detachable.  
   
-### <a name="remarks"></a>备注  
- 如果`pTabWnd`指向一个对象，不源自[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)并且如果`bDetachable`是`TRUE`，框架会自动创建的包装`pTabWnd`对象。 使用包装，可以`pTabWnd`可拆分的对象。 默认情况下，此包装属于实例[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 如果提供的默认包装功能不可接受，请使用[:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc)方法，以指定不同的包装器。  
+### <a name="remarks"></a>Remarks  
+ If `pTabWnd` points to an object that is not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) and if `bDetachable` is `TRUE`, the framework automatically creates a wrapper for the `pTabWnd` object. The wrapper makes the `pTabWnd` object detachable. By default, the wrapper is an instance of the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). If the functionality offered by the default wrapper is unacceptable, use the [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) method to specify a different wrapper.  
   
-##  <a name="applyrestoredtabinfo"></a>CMFCBaseTabCtrl::ApplyRestoredTabInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
+
   
 ```  
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bUseTabIndexes`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow  
+
   
 ```  
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoDestroy`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="calcrectedit"></a>CMFCBaseTabCtrl::CalcRectEdit  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit  
+
   
 ```  
 virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rectEdit`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cleanup"></a>CMFCBaseTabCtrl::CleanUp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp  
+
   
 ```  
 virtual void CleanUp();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="clearimagelist"></a>CMFCBaseTabCtrl::ClearImageList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList  
+
   
 ```  
 virtual void ClearImageList();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="createwrapper"></a>CMFCBaseTabCtrl::CreateWrapper  
- 创建派生自的框架窗口的包装[CWnd 类](../../mfc/reference/cwnd-class.md)但不源自[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)。  
+##  <a name="createwrapper"></a>  CMFCBaseTabCtrl::CreateWrapper  
+ Creates a wrapper for a frame window that is derived from the [CWnd Class](../../mfc/reference/cwnd-class.md) but is not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
 virtual CWnd* CreateWrapper(
@@ -446,28 +563,28 @@ virtual CWnd* CreateWrapper(
     BOOL bDetachable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pWndToWrap`  
- 指向包装的框架窗口的指针。  
+ A pointer to the frame window that is wrapped.  
   
  [in] `lpszTabLabel`  
- 一个字符串，包含窗口中的标签。  
+ A string that contains the label for the window.  
   
  [in] `bDetachable`  
- 一个布尔型参数，该值指示窗口是否可拆分。  
+ A Boolean parameter that indicates whether the window is detachable.  
   
-### <a name="return-value"></a>返回值  
- 指向包装派生自`CDockablePane`类如果`CreateWrapper`成功创建了一个包装类`pWndToWrap`。 如果此方法失败，其形式返回`pWndToWrap`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to wrapper derived from the `CDockablePane` class if `CreateWrapper` successfully creates a wrapper class for `pWndToWrap`. If the method fails, it retruns `pWndToWrap`.  
   
-### <a name="remarks"></a>备注  
- 选项卡式的窗口可以将任何对象，派生自停靠`CWnd`。 但是，在使`CMFCBaseTabCtrl Class`对象可停靠，每个对象上的`CMFCBaseTabCtrl`必须是可拆分。 因此，`CMFCBaseTabCtrl`自动换行不从派生的任何对象`CDockablePane`。  
+### <a name="remarks"></a>Remarks  
+ A tabbed window can dock any object derived from `CWnd`. However, in order for a `CMFCBaseTabCtrl Class` object to be dockable, each object on the `CMFCBaseTabCtrl` must be detachable. Therefore, `CMFCBaseTabCtrl` automatically wraps any objects that are not derived from `CDockablePane`.  
   
- 默认情况下，`CMFCBaseTabCtrl`创建的实例[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 若要更改包装器的默认类，请调用[:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc)。  
+ By default, the `CMFCBaseTabCtrl` creates instances of the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). To change the wrapper's default class, call [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).  
   
- 如果`pWndToWrap`派生自`CDockablePane`，此方法不会创建一个包装。 相反，它将失败并返回`pWndToWrap`。  
+ If `pWndToWrap` is derived from `CDockablePane`, this method will not create a wrapper. Instead, it will fail and return `pWndToWrap`.  
   
-##  <a name="detachtab"></a>CMFCBaseTabCtrl::DetachTab  
- 框架调用此方法以分离从选项卡控件的选项卡。  
+##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
+ The framework calls this method to detach a tab from the tab control.  
   
 ```  
 virtual BOOL DetachTab(
@@ -476,87 +593,87 @@ virtual BOOL DetachTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `dockMethod`  
- 枚举的数据类型提供的[CBasePane 类](../../mfc/reference/cbasepane-class.md)。 此数据类型指定用于拆分选项卡的方法。  
+ An enumerated data type provided by the [CBasePane Class](../../mfc/reference/cbasepane-class.md). This data type specifies the method that was used to detach the tab.  
   
  [in] `nTabNum`  
- 选项卡要分离的从零开始索引。  
+ The zero-based index of the tab to be detached.  
   
  [in] `bHide`  
- 一个布尔型参数，该值指示框架是否应隐藏分离选项卡。  
+ A Boolean parameter that indicates whether the framework should hide the detached tab.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果选项卡指定`nTabNum`是可拆分，此函数将失败并返回`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ If the tab specified by `nTabNum` is non-detachable, this function fails and returns `FALSE`.  
   
-##  <a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
+
   
 ```  
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bLastActive`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enableautocolor"></a>CMFCBaseTabCtrl::EnableAutoColor  
- 控制在绘制一个选项卡时，框架是否使用自动背景色。  
+##  <a name="enableautocolor"></a>  CMFCBaseTabCtrl::EnableAutoColor  
+ Controls whether the framework uses the automatic background colors when drawing a tab.  
   
 ```  
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 一个布尔型参数，用于确定框架是否使用自动颜色。  
+ A Boolean parameter that determines whether the framework uses automatic colors.  
   
-### <a name="remarks"></a>备注  
- 选项卡控件有几个预定义颜色的一个数组。 当框架使用自动颜色时，在一系列选项卡中的每个选项卡从此数组分配下一步的颜色。  
+### <a name="remarks"></a>Remarks  
+ A tab control has an array of several predefined colors. When the framework uses automatic colors, each tab in a series of tabs is assigned the next color from this array.  
   
- 默认情况下，库定义的颜色由确定自动颜色。 您可以通过调用提供一个自定义的颜色数组[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)。  
+ By default, the automatic colors are determined by the library-defined colors. You can provide a custom array of colors by calling [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
   
-##  <a name="enablecustomtooltips"></a>CMFCBaseTabCtrl::EnableCustomToolTips  
- 使选项卡控件的自定义工具提示。  
+##  <a name="enablecustomtooltips"></a>  CMFCBaseTabCtrl::EnableCustomToolTips  
+ Enables custom tooltips for the tab control.  
   
 ```  
 BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 一个布尔值，确定是否使用自定义工具提示。  
+ A Boolean that determines whether to use custom tooltips.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 如果启用了自定义工具提示，选项卡控件将发送`AFX_WM_ON_GET_TAB_TOOLTIP`到主框架的消息。 如果您想要在您的应用程序中支持自定义工具提示，主框架窗口必须处理此方法，并提供自定义工具提示文本。 有关提供自定义工具提示文本的详细信息，请参阅[CMFCTabToolTipInfo 结构](../../mfc/reference/cmfctabtooltipinfo-structure.md)。  
+### <a name="remarks"></a>Remarks  
+ If custom tooltips are enabled, the tab control sends the `AFX_WM_ON_GET_TAB_TOOLTIP` message to the main frame. If you want to support custom tooltips in your application, the main frame window must handle this method and provide the custom tooltip text. For more information about providing custom tooltip text, see [CMFCTabToolTipInfo Structure](../../mfc/reference/cmfctabtooltipinfo-structure.md).  
   
-##  <a name="enableinplaceedit"></a>CMFCBaseTabCtrl::EnableInPlaceEdit  
- 使你能够直接编辑用户选项卡标签。  
+##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit  
+ Enables direct editing of the tab labels by the user.  
   
 ```  
 virtual void EnableInPlaceEdit(BOOL bEnable) = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 一个布尔型参数，用于指定是否启用直接编辑选项卡标签。  
+ A Boolean parameter that specifies whether to enable direct editing of the tab labels.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，为选项卡控件禁用直接编辑选项卡标签。  
+### <a name="remarks"></a>Remarks  
+ By default, direct editing of the tab labels is disabled for tab controls.  
   
- 您可以启用直接编辑选项卡上选项卡控件的子集。 若要执行此操作，重写该方法`CMFCBaseTabCtrl::StartRenameTab`。 `StartRenameTab`应返回一个非零值支持直接编辑选项卡标签的所有选项卡。  
+ You can enable direct editing for a subset of the tabs on the tab control. To do this, override the method `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab` should return a nonzero value for all tabs that support direct editing of tab labels.  
   
- 在`CMFCBaseTabCtrl Class`，此方法是纯虚函数，没有实现。 如果您从派生类`CMFCBaseTabCtrl`，您必须实现此函数。  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function and has no implementation. If you derive a class from `CMFCBaseTabCtrl`, you must implement this function.  
   
-##  <a name="enabletabdetach"></a>CMFCBaseTabCtrl::EnableTabDetach  
- 启用可拆分选项卡。  
+##  <a name="enabletabdetach"></a>  CMFCBaseTabCtrl::EnableTabDetach  
+ Enables detachable tabs.  
   
 ```  
 virtual BOOL EnableTabDetach(
@@ -564,162 +681,162 @@ virtual BOOL EnableTabDetach(
     BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of a tab.  
   
  [in] `bEnable`  
- 一个布尔值，该值指示是否使可拆分的选项卡。  
+ A Boolean that indicates whether to make the tab detachable.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-##  <a name="enabletabswap"></a>Cmfcbasetabctrl:: Enabletabswap  
- 使用户能够更改使用鼠标的 tab 键顺序。  
+##  <a name="enabletabswap"></a>  CMFCBaseTabCtrl::EnableTabSwap  
+ Enables the user to change the tab order using a mouse.  
   
 ```  
 void EnableTabSwap(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 一个布尔值，该值指示是否启用选项卡上交换。  
+ A Boolean that indicates whether to enable tab swapping.  
   
-### <a name="remarks"></a>备注  
- 启用选项卡上交换后，用户可以拖动选项卡并更改其选项卡控件中的相对位置。  
+### <a name="remarks"></a>Remarks  
+ When tab swapping is enabled, the user can drag a tab and change its relative position in the tab control.  
   
-##  <a name="ensurevisible"></a>CMFCBaseTabCtrl::EnsureVisible  
- 滚动选项卡，直到指定选项卡可见。  
+##  <a name="ensurevisible"></a>  CMFCBaseTabCtrl::EnsureVisible  
+ Scrolls the tabs until the specified tab is visible.  
   
 ```  
 virtual BOOL EnsureVisible(int iTab);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此方法如果不起作用选项卡由`iTab`已经可见。  
+### <a name="remarks"></a>Remarks  
+ This method has no effect if the tab indicated by `iTab` is already visible.  
   
- 默认情况下，此方法不支持通过`CMFCBaseTabCtrl Class`。 您应在从派生的自定义类中实现此函数`CMFCBaseTabCtrl`如果该自定义选项卡控件支持选项卡上滚动。 此方法支持通过[CMFCTabCtrl 类](../../mfc/reference/cmfctabctrl-class.md)。  
+ By default, this method is not supported by the `CMFCBaseTabCtrl Class`. You should implement this function in a custom class derived from `CMFCBaseTabCtrl` if that custom tab control supports tab scrolling. This method is supported by the [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md).  
   
-##  <a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode  
+
   
 ```  
 void EnterDragMode();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findtargetwnd"></a>CMFCBaseTabCtrl::FindTargetWnd  
- 标识包含指定的点的窗格。  
+##  <a name="findtargetwnd"></a>  CMFCBaseTabCtrl::FindTargetWnd  
+ Identifies the pane that contains a specified point.  
   
 ```  
 virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pt`  
- 使用客户端区域的定义了一个点坐标[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)对象。  
+ A point that is defined by using client-area coordinates of the [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) object.  
   
-### <a name="return-value"></a>返回值  
- 一个指向[CWnd](../../mfc/reference/cwnd-class.md)对象成功，否则为如果`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object if successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>备注  
- 在`CMFCBaseTabCtrl`类，此方法是纯虚函数︰ 如果您从派生类必须实现它`CMFCBaseTabCtrl`。  
+### <a name="remarks"></a>Remarks  
+ In the `CMFCBaseTabCtrl` class, this method is a pure virtual function: you must implement it if you derive a class from `CMFCBaseTabCtrl`.  
   
-##  <a name="firechangeactivetab"></a>CMFCBaseTabCtrl::FireChangeActiveTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab  
+
   
 ```  
 virtual void FireChangeActiveTab(int nNewTab);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nNewTab`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="firechangingactivetab"></a>CMFCBaseTabCtrl::FireChangingActiveTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab  
+
   
 ```  
 virtual BOOL FireChangingActiveTab(int nNewTab);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nNewTab`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getactivetab"></a>CMFCBaseTabCtrl::GetActiveTab  
- 检索当前处于活动状态的选项卡的索引。  
+##  <a name="getactivetab"></a>  CMFCBaseTabCtrl::GetActiveTab  
+ Retrieves the index of the currently active tab.  
   
 ```  
 virtual int GetActiveTab() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 活动选项卡; 的从零开始的索引如果没有活动的选项卡，则为-1。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the active tab; -1 if there is no active tab.  
   
-##  <a name="getactivetabcolor"></a>CMFCBaseTabCtrl::GetActiveTabColor  
- 检索当前处于活动状态选项卡的背景色。  
+##  <a name="getactivetabcolor"></a>  CMFCBaseTabCtrl::GetActiveTabColor  
+ Retrieves the background color of the currently active tab.  
   
 ```  
 virtual COLORREF GetActiveTabColor() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定活动选项卡的背景色。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that specifies the background color of the active tab.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，活动选项卡的背景色是`COLOR_WINDOW`。 可以使用该方法来更改活动选项卡的背景色[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)。  
+### <a name="remarks"></a>Remarks  
+ By default, the background color of the active tab is `COLOR_WINDOW`. You can change the background color for the active tab by using the method [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
   
-##  <a name="getactivetabtextcolor"></a>CMFCBaseTabCtrl::GetActiveTabTextColor  
- 检索活动选项卡的文本颜色。  
+##  <a name="getactivetabtextcolor"></a>  CMFCBaseTabCtrl::GetActiveTabTextColor  
+ Retrieves the text color for the active tab.  
   
 ```  
 virtual COLORREF GetActiveTabTextColor() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指定活动选项卡的文本颜色。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that specifies the text color of the active tab.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，活动选项卡的文本颜色为`COLOR_WINDOWTEXT`。 您可以使用该方法更改文本颜色[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)。  
+### <a name="remarks"></a>Remarks  
+ By default, the text color for active tabs is `COLOR_WINDOWTEXT`. You can change the text color with the method [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
   
-##  <a name="getactivewnd"></a>CMFCBaseTabCtrl::GetActiveWnd  
- 检索指向当前处于活动状态的选项卡窗口的指针。  
+##  <a name="getactivewnd"></a>  CMFCBaseTabCtrl::GetActiveWnd  
+ Retrieves a pointer to the currently active tab window.  
   
 ```  
 virtual CWnd* GetActiveWnd() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向窗口的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a window.  
   
-##  <a name="getautocolors"></a>CMFCBaseTabCtrl::GetAutoColors  
- 检索用于自动着色的颜色的数组。  
+##  <a name="getautocolors"></a>  CMFCBaseTabCtrl::GetAutoColors  
+ Retrieves the array of colors used for automatic coloring.  
   
 ```  
 const CArray<COLORREF,COLORREF>& GetAutoColors() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向数组的引用[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)对象将用于自动选项卡着色。  
+### <a name="return-value"></a>Return Value  
+ A reference to an array of [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) values that the [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) object uses for automatic tab coloring.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，框架将初始化为库定义的颜色的颜色的数组。 您可以通过调用方法提供一个自定义的颜色数组[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework initializes the array of colors to library-defined colors. You can provide a custom array of colors by calling the method [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
   
-##  <a name="getfirstvisibletab"></a>CMFCBaseTabCtrl::GetFirstVisibleTab  
- 检索指向第一个可见选项卡。  
+##  <a name="getfirstvisibletab"></a>  CMFCBaseTabCtrl::GetFirstVisibleTab  
+ Retrieves a pointer to the first visible tab.  
   
 ```  
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
@@ -730,104 +847,104 @@ virtual CWnd* GetFirstVisibleTab(
     int& iTabNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `iTabNum`  
- 对整数的引用。 此方法将写入此参数的第一个可见选项卡的从零开始索引。  
+ A reference to an integer. This method writes the zero-based index of the first visible tab to this parameter.  
   
  [in] `iStartFrom`  
- 第一个选项卡中，若要检查的从零开始的索引。  
+ The zero-based index of the first tab to check.  
   
-### <a name="return-value"></a>返回值  
- 第一个可见选项卡如果成功，则指向的指针否则为`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first visible tab if successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>备注  
- 如果此方法将失败，则它写入到的值为-1 `iStartFrom`。  
+### <a name="remarks"></a>Remarks  
+ If this method fails, it writes the value -1 to `iStartFrom`.  
   
- 如果`iStartFrom`大于或等于在选项卡控件中，选项卡的数目`GetFirstVisibleTab`自动失败。  
+ If `iStartFrom` is larger than or equal to the number of tabs in the tab control, `GetFirstVisibleTab` automatically fails.  
   
-##  <a name="getfirstvisibletabnum"></a>CMFCBaseTabCtrl::GetFirstVisibleTabNum  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
+
   
 ```  
 virtual int GetFirstVisibleTabNum() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethighlightedtab"></a>CMFCBaseTabCtrl::GetHighlightedTab  
- 检索当前突出显示的选项卡的索引。  
+##  <a name="gethighlightedtab"></a>  CMFCBaseTabCtrl::GetHighlightedTab  
+ Retrieves the index of the currently highlighted tab.  
   
 ```  
 int GetHighlightedTab() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 突出显示的选项卡的从零开始索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the highlighted tab.  
   
-##  <a name="getimagelist"></a>CMFCBaseTabCtrl::GetImageList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList  
+
   
 ```  
 virtual const CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getimagesize"></a>CMFCBaseTabCtrl::GetImageSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize  
+
   
 ```  
 virtual CSize GetImageSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlastvisibletab"></a>CMFCBaseTabCtrl::GetLastVisibleTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab  
+
   
 ```  
 virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTabNum`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlocation"></a>CMFCBaseTabCtrl::GetLocation  
- 检索的选项卡控件的选项卡区域部分的位置。  
+##  <a name="getlocation"></a>  CMFCBaseTabCtrl::GetLocation  
+ Retrieves the location of the tab area portion of the tab control.  
   
 ```  
 Location GetLocation() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 选项卡区域的位置。  
+### <a name="return-value"></a>Return Value  
+ The location of the tab area.  
   
-### <a name="remarks"></a>备注  
- 可能的选项卡区域位置值为`LOCATION_BOTTOM`和`LOCATION_TOP`。  
+### <a name="remarks"></a>Remarks  
+ Possible tab area location values are `LOCATION_BOTTOM` and `LOCATION_TOP`.  
   
-##  <a name="getmaxwindowsize"></a>CMFCBaseTabCtrl::GetMaxWindowSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize  
+
   
 ```  
 virtual CSize GetMaxWindowSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabarea"></a>CMFCBaseTabCtrl::GetTabArea  
- 检索的大小和选项卡控件的选项卡区域的位置。  
+##  <a name="gettabarea"></a>  CMFCBaseTabCtrl::GetTabArea  
+ Retrieves the size and position of the tab area of the tab control.  
   
 ```  
 virtual void GetTabArea(
@@ -835,162 +952,162 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rectTabAreaTop`  
- 对 `CRect` 对象的引用。 `GetTabArea`使用此对象存储大小和顶部的选项卡区域的位置。  
+ A reference to a `CRect` object. `GetTabArea` uses this object to store the size and position of the top tab area.  
   
  [in] `rectTabAreaBottom`  
- 对 `CRect` 对象的引用。 `GetTabArea`使用此对象存储大小和底部的选项卡区域的位置。  
+ A reference to a `CRect` object. `GetTabArea` uses this object to store the size and position of the bottom tab area.  
   
-### <a name="remarks"></a>备注  
- 之后`GetTabArea`返回时，`CRect`参数包含的大小和位置的选项卡区域在选项卡控件的工作区坐标。 在顶部或底部的选项卡控件没有选项卡区域是否`rectTabAreaTop`或`rectTabAreaBottom`为空。  
+### <a name="remarks"></a>Remarks  
+ After `GetTabArea` returns, the `CRect` parameters contain the size and position of the tab area in client coordinates of the tab control. If there is no tab area at the top or bottom of the tab control, `rectTabAreaTop` or `rectTabAreaBottom` are empty.  
   
- 在`CMFCBaseTabCtrl Class`，此方法是纯虚函数，没有实现。 如果您从派生类`CMFCBaseTabCtrl`，您必须实现此函数。  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function and has no implementation. If you derive a class from `CMFCBaseTabCtrl`, you have to implement this function.  
   
-##  <a name="gettabbkcolor"></a>CMFCBaseTabCtrl::GetTabBkColor  
- 检索指定的选项卡的背景色。  
+##  <a name="gettabbkcolor"></a>  CMFCBaseTabCtrl::GetTabBkColor  
+ Retrieves the background color of the specified tab.  
   
 ```  
 virtual COLORREF GetTabBkColor(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，该值指示指定的选项卡的背景色; 则为-1`iTab`超出范围。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that indicates the background color of the specified tab; -1 if `iTab` is out of range.  
   
-##  <a name="gettabbordersize"></a>CMFCBaseTabCtrl::GetTabBorderSize  
- 检索选项卡控件中的选项卡边框的大小。  
+##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
+ Retrieves the size of the tab borders in the tab control.  
   
 ```  
 virtual int GetTabBorderSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 选项卡边框，以像素为单位的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of the tab border, in pixels.  
   
-### <a name="remarks"></a>备注  
- 选项卡边框的默认大小为三个像素。 您可以使用该方法更改此边框大小[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)。  
+### <a name="remarks"></a>Remarks  
+ The default size for the tab border is three pixels. You can change this border size with the method [CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize).  
   
-##  <a name="gettabbyid"></a>CMFCBaseTabCtrl::GetTabByID  
- 检索基于选项卡 ID 的选项卡的索引  
+##  <a name="gettabbyid"></a>  CMFCBaseTabCtrl::GetTabByID  
+ Retrieves the index of a tab based on a tab ID.  
   
 ```  
 virtual int GetTabByID(int id) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `id`  
- 一个选项卡上的 id。  
+ A tab ID.  
   
-### <a name="return-value"></a>返回值  
- 如果它找到，则选项卡的从零开始的索引如果没有找到该选项卡 ID，则为-1。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of a tab if it is found; -1 if the tab ID is not found.  
   
-### <a name="remarks"></a>备注  
- 选项卡 Id 时自动分配到选项卡控件添加选项卡。  
+### <a name="remarks"></a>Remarks  
+ The tab IDs are assigned automatically when tabs are added to a tab control.  
   
-##  <a name="gettabclosebutton"></a>CMFCBaseTabCtrl::GetTabCloseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton  
+
   
 ```  
 CRect GetTabCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabfromhwnd"></a>CMFCBaseTabCtrl::GetTabFromHwnd  
- 检索包含指定的 HWND 对象的选项卡的索引。  
+##  <a name="gettabfromhwnd"></a>  CMFCBaseTabCtrl::GetTabFromHwnd  
+ Retrieves the index of the tab that contains the specified HWND object.  
   
 ```  
 virtual int GetTabFromHwnd(HWND hwnd) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `hwnd`  
- 窗口的句柄。  
+ A handle to a window.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则该选项卡的从零开始的索引如果没有选项卡包含-1 `hwnd`。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the tab if successful; -1 if no tab contains `hwnd`.  
   
-##  <a name="gettabfrompoint"></a>CMFCBaseTabCtrl::GetTabFromPoint  
- 检索包含指定的点的选项卡。  
+##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
+ Retrieves the tab that contains a specified point.  
   
 ```  
 virtual int GetTabFromPoint(CPoint& pt) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pt`  
- 选项卡控件的工作区坐标中的点。  
+ A point in client coordinates of the tab control.  
   
-### <a name="return-value"></a>返回值  
- 包含的选项卡的索引`pt`;-1，如果没有选项卡包含`pt`。  
+### <a name="return-value"></a>Return Value  
+ The index of the tab that contains `pt`; -1 if no tab contains `pt`.  
   
-##  <a name="gettabfullwidth"></a>CMFCBaseTabCtrl::GetTabFullWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
+
   
 ```  
 virtual int GetTabFullWidth(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabhicon"></a>CMFCBaseTabCtrl::GetTabHicon  
- 返回与指定的选项卡关联 HICON。  
+##  <a name="gettabhicon"></a>  CMFCBaseTabCtrl::GetTabHicon  
+ Returns the HICON associated with the specified tab.  
   
 ```  
 virtual HICON GetTabHicon(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的的从零开始索引。  
+ The zero-based index for the tab.  
   
-### <a name="return-value"></a>返回值  
- 与选项卡标签，如果成功，则关联 HICON`NULL`没有 HICON 是否，或者该方法将失败。  
+### <a name="return-value"></a>Return Value  
+ The HICON associated with a tab label if successful; `NULL` if there is no HICON or if the method fails.  
   
-##  <a name="gettabicon"></a>CMFCBaseTabCtrl::GetTabIcon  
- 检索与指定的选项卡关联的图标。  
+##  <a name="gettabicon"></a>  CMFCBaseTabCtrl::GetTabIcon  
+ Retrieves the icon associated with the specified tab.  
   
 ```  
 virtual UINT GetTabIcon(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则指定的选项卡图标 ID如果该索引无效，则为-1。  
+### <a name="return-value"></a>Return Value  
+ The icon ID for the specified tab if successful; -1 if the index is invalid.  
   
-### <a name="remarks"></a>备注  
- [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)对象存储在内部图标[CImageList](../../mfc/reference/cimagelist-class.md)对象。  
+### <a name="remarks"></a>Remarks  
+ The [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) object stores the icons in the internal [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
-##  <a name="gettabid"></a>CMFCBaseTabCtrl::GetTabID  
- 检索指定的选项卡索引的选项卡的 ID。  
+##  <a name="gettabid"></a>  CMFCBaseTabCtrl::GetTabID  
+ Retrieves the ID for a tab specified by the tab index.  
   
 ```  
 int GetTabID(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>返回值  
- ID 为选项卡或则为-1`iTab`超出范围。  
+### <a name="return-value"></a>Return Value  
+ An ID of the tab or -1 if `iTab` is out of range.  
   
-##  <a name="gettablabel"></a>CMFCBaseTabCtrl::GetTabLabel  
- 检索的选项卡标签的文本。  
+##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
+ Retrieves the text of a tab label.  
   
 ```  
 virtual BOOL GetTabLabel(
@@ -998,23 +1115,23 @@ virtual BOOL GetTabLabel(
     CString& strLabel) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
  [out] `strLabel`  
- 对 `CString` 对象的引用。 此方法将存储在此参数中的选项卡的标签。  
+ A reference to a `CString` object. This method stores the label of the tab in this parameter.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则，`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 如果该方法无效索引`iTab`无效。  
+### <a name="remarks"></a>Remarks  
+ This method fails if the index `iTab` is invalid.  
   
- 当通过使用创建选项卡上设置的选项卡标签[cmfcbasetabctrl:: Addtab](#addtab)。 您还可以更改该标签在创建后使用方法[CMFCBaseTabCtrl::SetTabLabel](#settablabel)。  
+ You set the label for a tab when you create the tab by using [CMFCBaseTabCtrl::AddTab](#addtab). You can also change the label after creation with the method [CMFCBaseTabCtrl::SetTabLabel](#settablabel).  
   
-##  <a name="gettabrect"></a>CMFCBaseTabCtrl::GetTabRect  
- 检索的大小和位置指定选项卡。  
+##  <a name="gettabrect"></a>  CMFCBaseTabCtrl::GetTabRect  
+ Retrieves the size and position of the specified tab.  
   
 ```  
 virtual BOOL GetTabRect(
@@ -1022,151 +1139,151 @@ virtual BOOL GetTabRect(
     CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
  [out] `rect`  
- 对 `CRect` 对象的引用。 此方法在此参数中存储的大小和位置选项卡。  
+ A reference to a `CRect` object. This method stores the size and position of the tab in this parameter.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则，`FALSE`如果 tab 键索引无效。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` if the tab index is invalid.  
   
-##  <a name="gettabsheight"></a>CMFCBaseTabCtrl::GetTabsHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight  
+
   
 ```  
 virtual int GetTabsHeight() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabsnum"></a>CMFCBaseTabCtrl::GetTabsNum  
- 检索选项卡控件中的选项卡的数目。  
+##  <a name="gettabsnum"></a>  CMFCBaseTabCtrl::GetTabsNum  
+ Retrieves the number of tabs in the tab control.  
   
 ```  
 virtual int GetTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 选项卡控件中的选项卡的数目。  
+### <a name="return-value"></a>Return Value  
+ The number of tabs in the tab control.  
   
-##  <a name="gettabsrect"></a>CMFCBaseTabCtrl::GetTabsRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect  
+
   
 ```  
 virtual void GetTabsRect(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabtextcolor"></a>CMFCBaseTabCtrl::GetTabTextColor  
- 检索指定的选项卡的文本颜色。  
+##  <a name="gettabtextcolor"></a>  CMFCBaseTabCtrl::GetTabTextColor  
+ Retrieves the text color for the specified tab.  
   
 ```  
 virtual COLORREF GetTabTextColor(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>返回值  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，该值指示指定的选项卡的文本颜色; 则为-1`iTab`超出范围。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter that indicates the text color of the specified tab; -1 if `iTab` is out of range.  
   
-##  <a name="gettabwnd"></a>CMFCBaseTabCtrl::GetTabWnd  
- 返回指向驻留在指定的选项卡窗格中的指针。  
+##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
+ Returns the pointer to the pane that resides on the specified tab.  
   
 ```  
 virtual CWnd* GetTabWnd(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>返回值  
- 一个指向[CWnd](../../mfc/reference/cwnd-class.md)驻留在选项卡的对象，`iTab`指定。 `NULL`如果`iTab`是无效的。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CWnd](../../mfc/reference/cwnd-class.md) object that resides on the tab that `iTab` specifies. `NULL` if `iTab` is invalid.  
   
-### <a name="remarks"></a>备注  
- 返回的对象是指应用程序添加调用任何一个时[cmfcbasetabctrl:: Addtab](#addtab)或[cmfcbasetabctrl:: Inserttab](#inserttab)。  
+### <a name="remarks"></a>Remarks  
+ The returned object is the one that the application added when it called either [CMFCBaseTabCtrl::AddTab](#addtab) or [CMFCBaseTabCtrl::InsertTab](#inserttab).  
   
- 选项卡上的对象都具有一个包装，如果此方法将返回该对象的包装器。 包装有关详细信息，请参阅[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)。 如果你想要访问而无需包装的直接对象的指针，使用方法[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)。  
+ If the object on a tab has a wrapper, this method will return the wrapper for the object. For more information about wrappers, see [CMFCBaseTabCtrl::CreateWrapper](#createwrapper). If you want to access a pointer to the direct object without the wrapper, use the method [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper).  
   
-##  <a name="gettabwndnowrapper"></a>CMFCBaseTabCtrl::GetTabWndNoWrapper  
- 返回指向驻留在一个选项卡的控件的指针，即使在控件有一个包装。  
+##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper  
+ Returns a pointer to the control that resides on a tab, even if the control has a wrapper.  
   
 ```  
 virtual CWnd* GetTabWndNoWrapper(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>返回值  
- 一个指向[CWnd](../../mfc/reference/cwnd-class.md)驻留在指定的选项卡; 的对象`NULL`如果`iTab`是无效的。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CWnd](../../mfc/reference/cwnd-class.md) object that resides on the specified tab; `NULL` if `iTab` is invalid.  
   
-### <a name="remarks"></a>备注  
- 此方法检索到的直接指针`CWnd`对象通过使用上述任一方法添加[cmfcbasetabctrl:: Addtab](#addtab)或[cmfcbasetabctrl:: Inserttab](#inserttab)。 `GetTabWndNoWrapper`将检索指向所添加的`CWnd`，即使该框架添加对象的包装器。 包装有关详细信息和[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)，请参阅[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)。  
+### <a name="remarks"></a>Remarks  
+ This method retrieves a direct pointer to the `CWnd` object that you added by using either the method [CMFCBaseTabCtrl::AddTab](#addtab) or [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper` will retrieve a pointer to the added `CWnd`, even if the framework added a wrapper for the object. For more information about wrappers and the [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md), see [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
   
- 使用方法[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)如果不希望忽略包装类。  
+ Use the method [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd) if you do not want to ignore the wrapper class.  
   
-##  <a name="gettooltipctrl"></a>CMFCBaseTabCtrl::GetToolTipCtrl  
- 检索向工具提示 contorl 的引用。  
+##  <a name="gettooltipctrl"></a>  CMFCBaseTabCtrl::GetToolTipCtrl  
+ Retrieves a reference to the tooltip contorl.  
   
 ```  
 CToolTipCtrl& GetToolTipCtrl() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对工具提示控件的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the tooltip control.  
   
-##  <a name="getvisibletabsnum"></a>CMFCBaseTabCtrl::GetVisibleTabsNum  
- 检索当前可见的选项卡的数目。  
+##  <a name="getvisibletabsnum"></a>  CMFCBaseTabCtrl::GetVisibleTabsNum  
+ Retrieves the number of currently visible tabs.  
   
 ```  
 virtual int GetVisibleTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 可见选项卡的数目。  
+### <a name="return-value"></a>Return Value  
+ The number of visible tabs.  
   
-##  <a name="hasimage"></a>CMFCBaseTabCtrl::HasImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage  
+
   
 ```  
 virtual BOOL HasImage(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hidesingletab"></a>CMFCBaseTabCtrl::HideSingleTab  
- 设置一个可见选项卡时隐藏选项卡控件的选项卡的选项。  
+##  <a name="hidesingletab"></a>  CMFCBaseTabCtrl::HideSingleTab  
+ Sets the option to hide the tabs for the tab control when there is one visible tab.  
   
 ```  
 virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- 一个布尔值，指定是否启用隐藏单个选项卡。  
+ A Boolean that specifies whether to enable hiding single tabs.  
   
-### <a name="remarks"></a>备注  
- 您的应用程序配置为隐藏单个选项卡，框架将自动显示选项卡，在第二个选项卡将添加到选项卡控件时。  
+### <a name="remarks"></a>Remarks  
+ When your application is configured to hide single tabs, the framework automatically displays tabs when a second tab is added to the tab control.  
   
-##  <a name="inserttab"></a>Cmfcbasetabctrl:: Inserttab  
- 选项卡控件中插入一个选项卡。  
+##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab  
+ Inserts a tab into the tab control.  
   
 ```  
 Virtual void InsertTab(
@@ -1185,149 +1302,149 @@ virtual void InsertTab(
     BOOL bDetachable = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pNewWnd`  
- 指向此方法将添加一个新选项卡为窗口的指针。  
+ A pointer to the window that this method adds as a new tab.  
   
  [in] `lpszTabLabel`  
- 一个字符串，包含用于新选项卡的标签。  
+ A string that contains the label for the new tab.  
   
  [in] `nInsertAt`  
- 新选项卡的从零开始的索引。  
+ The zero-based index of the new tab.  
   
  [in] `uiImageId`  
- 从图像列表的图像 ID。 选项卡控件用作此图像图标的新选项卡。  
+ An image ID from the image list. The tab control uses this image as the icon for the new tab.  
   
  [in] `bDetachable`  
- 一个布尔型参数，用于确定新选项卡是否可拆分。  
+ A Boolean parameter that determines whether the new tab is detachable.  
   
  [in] `uiResTabLabel`  
- 标签的资源 ID。  
+ The resource ID for the label.  
   
-### <a name="remarks"></a>备注  
- 如果该对象由`pNewWnd`不源自[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)并且如果`bDetachable`参数是`TRUE`，框架会创建新选项卡上的特殊包装器。 默认情况下，此包装属于实例[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 使用[:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc)方法来创建不同的包装类。 任何自定义包装类必须派生自`CDockablePaneAdapter`。  
+### <a name="remarks"></a>Remarks  
+ If the object indicated by `pNewWnd` is not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) and if the `bDetachable` parameter is `TRUE`, the framework creates a special wrapper for the new tab. By default, the wrapper is an instance of the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Use the [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) method to create a different wrapper class. Any custom wrapper class needs to be derived from `CDockablePaneAdapter`.  
   
-##  <a name="invalidatetab"></a>CMFCBaseTabCtrl::InvalidateTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
+
   
 ```  
 void InvalidateTab(int iTab);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isactivetabclosebutton"></a>CMFCBaseTabCtrl::IsActiveTabCloseButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton  
+
   
 ```  
 virtual BOOL IsActiveTabCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isautocolor"></a>CMFCBaseTabCtrl::IsAutoColor  
- 确定选项卡控件是否处于 autocolor 模式。  
+##  <a name="isautocolor"></a>  CMFCBaseTabCtrl::IsAutoColor  
+ Determines whether the tab control is in autocolor mode.  
   
 ```  
 BOOL IsAutoColor() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果选项卡控件在 autocolor 模式;`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control is in autocolor mode; `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 您可以通过启用或禁用 autocolor 模式使用[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)方法。  
+### <a name="remarks"></a>Remarks  
+ You can enable or disable the autocolor mode by using the [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) method.  
   
-##  <a name="isautodestroywindow"></a>CMFCBaseTabCtrl::IsAutoDestroyWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow  
+
   
 ```  
 BOOL IsAutoDestroyWindow() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iscolored"></a>CMFCBaseTabCtrl::IsColored  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored  
+
   
 ```  
 virtual BOOL IsColored() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdialogcontrol"></a>CMFCBaseTabCtrl::IsDialogControl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl  
+
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdrawnoprefix"></a>CMFCBaseTabCtrl::IsDrawNoPrefix  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix  
+
   
 ```  
 BOOL IsDrawNoPrefix() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isflatframe"></a>CMFCBaseTabCtrl::IsFlatFrame  
- 指示在平面样式或 3D 样式是否呈现的帧的选项卡控件。  
+##  <a name="isflatframe"></a>  CMFCBaseTabCtrl::IsFlatFrame  
+ Indicates whether the frame of the tab control is rendered in a flat style or in a 3D style.  
   
 ```  
 virtual BOOL IsFlatFrame() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果在平面样式; 中呈现的帧的选项卡控件`FALSE`如果了三维样式中呈现的帧。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame of the tab control is rendered in a flat style; `FALSE` if the frame is rendered in a 3D style.  
   
-### <a name="remarks"></a>备注  
- 使用[CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe)若要更改选项卡控件的框架的样式。  
+### <a name="remarks"></a>Remarks  
+ Use [CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) to change the style for the frame of the tab control.  
   
- 无法使用平面帧呈现，请使用 Outlook 样式的选项卡控件。 这包括[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)和从该类派生的任何类。  
+ Tab controls that use the Outlook style cannot be rendered with flat frames. This includes the [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) and any classes derived from that class.  
   
-##  <a name="isflattab"></a>CMFCBaseTabCtrl::IsFlatTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab  
+
   
 ```  
 virtual BOOL IsFlatTab() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ishidesingletab"></a>CMFCBaseTabCtrl::IsHideSingleTab  
- 确定是否只有一个选项卡选项卡控件是否隐藏选项卡标签。  
+##  <a name="ishidesingletab"></a>  CMFCBaseTabCtrl::IsHideSingleTab  
+ Determines whether the tab control hides the tab label if there is only one tab.  
   
 ```  
 virtual BOOL IsHideSingleTab() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果它包含一个选项卡; 时，选项卡控件隐藏选项卡标签否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control hides the tab label when it has one tab; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 使用方法[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)以便只有一个选项卡时隐藏选项卡标签。  
+### <a name="remarks"></a>Remarks  
+ Use the method [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) to enable hiding the tab label when there is only one tab.  
   
-##  <a name="isiconadded"></a>CMFCBaseTabCtrl::IsIconAdded  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded  
+
   
 ```  
 BOOL IsIconAdded(
@@ -1335,197 +1452,197 @@ BOOL IsIconAdded(
     int& iIcon);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `hIcon`  
  [in] `iIcon`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isinplaceedit"></a>CMFCBaseTabCtrl::IsInPlaceEdit  
- 指示是否配置选项卡控件以使用户能够动态修改选项卡标签。  
+##  <a name="isinplaceedit"></a>  CMFCBaseTabCtrl::IsInPlaceEdit  
+ Indicates whether the tab control is configured to enable the user to dynamically modify the tab labels.  
   
 ```  
 virtual BOOL IsInPlaceEdit() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果在就地编辑已启用否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if in-place editing is enabled; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 您可以启用或禁用就地编辑通过调用方法[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)。  
+### <a name="remarks"></a>Remarks  
+ You can enable or disable in-place editing by calling the method [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit).  
   
-##  <a name="isleftrightrounded"></a>CMFCBaseTabCtrl::IsLeftRightRounded  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded  
+
   
 ```  
 virtual BOOL IsLeftRightRounded() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ismditab"></a>CMFCBaseTabCtrl::IsMDITab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab  
+
   
 ```  
 BOOL IsMDITab() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isonenotestyle"></a>CMFCBaseTabCtrl::IsOneNoteStyle  
- 确定是否在 Microsoft OneNote 的样式显示选项卡。  
+##  <a name="isonenotestyle"></a>  CMFCBaseTabCtrl::IsOneNoteStyle  
+ Determines whether tabs are displayed in the style of Microsoft OneNote.  
   
 ```  
 virtual BOOL IsOneNoteStyle() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果在样式中的 Microsoft OneNote; 显示选项卡否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabs are displayed in the style of Microsoft OneNote; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 调用方法[CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs)若要启用 Microsoft OneNote 样式。 您还可以启用这种样式，当您实例化[CMFCTabCtrl 类](../../mfc/reference/cmfctabctrl-class.md)︰ 只需向方法传递样式 STYLE_3D_ONENOTE [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create)。  
+### <a name="remarks"></a>Remarks  
+ Call the method [CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) to enable the Microsoft OneNote style. You can also enable this style when you instantiate the [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md): simply pass the style STYLE_3D_ONENOTE to the method [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create).  
   
- 默认情况下，Microsoft OneNote 样式不支持在自定义类派生自`CMFCBaseTabCtrl Class`。 但是，支持在`CMFCTabCtrl`类。  
+ By default, the Microsoft OneNote style is not supported in a custom class derived from the `CMFCBaseTabCtrl Class`. However, it is supported in the `CMFCTabCtrl` class.  
   
-##  <a name="isptintabarea"></a>CMFCBaseTabCtrl::IsPtInTabArea  
- 确定某个点是否在选项卡区域内。  
+##  <a name="isptintabarea"></a>  CMFCBaseTabCtrl::IsPtInTabArea  
+ Determines if a point is inside the tab area.  
   
 ```  
 virtual BOOL IsPtInTabArea(CPoint point) const = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 要测试的点。  
+ The point to test.  
   
-### <a name="return-value"></a>返回值  
- 非零，如果点在选项卡区域;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the point is in the tab area; 0 otherwise.  
   
-### <a name="remarks"></a>备注  
- 在`CMFCBaseTabCtrl Class`，此方法是纯虚函数，没有实现。 如果您从派生类`CMFCBaseTabCtrl`，您必须实现此函数。  
+### <a name="remarks"></a>Remarks  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function and has no implementation. If you derive a class from `CMFCBaseTabCtrl`, you have to implement this function.  
   
-##  <a name="istabclosebuttonhighlighted"></a>CMFCBaseTabCtrl::IsTabCloseButtonHighlighted  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted  
+
   
 ```  
 BOOL IsTabCloseButtonHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istabclosebuttonpressed"></a>CMFCBaseTabCtrl::IsTabCloseButtonPressed  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed  
+
   
 ```  
 BOOL IsTabCloseButtonPressed() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istabdetachable"></a>CMFCBaseTabCtrl::IsTabDetachable  
- 确定一个选项卡是否可拆分。  
+##  <a name="istabdetachable"></a>  CMFCBaseTabCtrl::IsTabDetachable  
+ Determines whether a tab is detachable.  
   
 ```  
 virtual BOOL IsTabDetachable(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 要检查的选项卡从零开始的索引。  
+ The zero-based index of the tab to check.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果选项卡是可拆分。`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab is detachable; `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 若要使可拆分选项卡上，使用[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)。  
+### <a name="remarks"></a>Remarks  
+ To make a tab detachable, use the method [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).  
   
-##  <a name="istabicononly"></a>CMFCBaseTabCtrl::IsTabIconOnly  
- 确定选项卡标签是否包含只图标且没有文本。  
+##  <a name="istabicononly"></a>  CMFCBaseTabCtrl::IsTabIconOnly  
+ Determines whether a tab label contains only icons and no text.  
   
 ```  
 virtual BOOL IsTabIconOnly(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果选项卡标签具有只图标;`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a tab label has only icons; `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 若要在应用程序中显示仅图标设置选项卡，调用该方法[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)。  
+### <a name="remarks"></a>Remarks  
+ To set the tabs in your application to display only icons, call the method [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly).  
   
-##  <a name="istabswapenabled"></a>CMFCBaseTabCtrl::IsTabSwapEnabled  
- 确定选项卡控件是否允许用户使用鼠标更改选项卡上的位置。  
+##  <a name="istabswapenabled"></a>  CMFCBaseTabCtrl::IsTabSwapEnabled  
+ Determines whether the tab control allows the user to change tab positions by using the mouse.  
   
 ```  
 BOOL IsTabSwapEnabled() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果可以通过用户; 更改选项卡上的位置，则为非否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if tab positions can be changed by the user; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，用户无法更改选项卡控件中的选项卡的顺序。 使用[cmfcbasetabctrl:: Enabletabswap](#enabletabswap)方法，以启用此功能。  
+### <a name="remarks"></a>Remarks  
+ By default, users cannot change the order of tabs in a tab control. Use the [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap) method to enable this functionality.  
   
-##  <a name="istabvisible"></a>CMFCBaseTabCtrl::IsTabVisible  
- 指示指定的选项卡是否可见。  
+##  <a name="istabvisible"></a>  CMFCBaseTabCtrl::IsTabVisible  
+ Indicates whether the specified tab is visible.  
   
 ```  
 virtual BOOL IsTabVisible(int iTab) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 要检查的选项卡从零开始的索引。  
+ The zero-based index of the tab to check.  
   
-### <a name="return-value"></a>返回值  
- 如果指定的选项卡可见，则为非否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified tab is visible; otherwise 0.  
   
-##  <a name="isvs2005style"></a>CMFCBaseTabCtrl::IsVS2005Style  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style  
+
   
 ```  
 virtual BOOL IsVS2005Style() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bactivatetabonrightclick"></a>CMFCBaseTabCtrl::m_bActivateTabOnRightClick  
- `m_bActivateTabOnRightClick`确定指示选项卡具有焦点时是否在用户通过使用鼠标右键单击选项卡标签。  
+##  <a name="m_bactivatetabonrightclick"></a>  CMFCBaseTabCtrl::m_bActivateTabOnRightClick  
+ `m_bActivateTabOnRightClick` determines whether tabs are in focus when the user clicks on a tab label by using the right mouse button.  
   
 ```  
 BOOL m_bActivateTabOnRightClick;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此数据成员的默认值是`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ The default value for this data member is `FALSE`.  
   
-##  <a name="m_bautodestroywindow"></a>CMFCBaseTabCtrl::m_bAutoDestroyWindow  
- `m_bAutoDestroyWindow`确定是否该框架自动销毁选项卡上的对象中删除选项卡时。  
+##  <a name="m_bautodestroywindow"></a>  CMFCBaseTabCtrl::m_bAutoDestroyWindow  
+ `m_bAutoDestroyWindow` determines whether the framework automatically destroys the objects on tabs when the tabs are removed.  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此成员是`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ By default, this member is `FALSE`.  
   
-##  <a name="movetab"></a>CMFCBaseTabCtrl::MoveTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab  
+
   
 ```  
 virtual void MoveTab(
@@ -1533,24 +1650,24 @@ virtual void MoveTab(
     int nDest);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nSource`  
  [in] `nDest`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onchangetabs"></a>CMFCBaseTabCtrl::OnChangeTabs  
- 在控件的选项卡上的选项卡的数量的更改时，框架将调用此方法。  
+##  <a name="onchangetabs"></a>  CMFCBaseTabCtrl::OnChangeTabs  
+ The framework calls this method when the number of tabs on a tab control changes.  
   
 ```  
 virtual void OnChangeTabs();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。 重写此方法以在控件的选项卡上的选项卡的数量的更改时执行自定义代码。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing. Override this method to execute custom code when the number of tabs on the tab control changes.  
   
-##  <a name="ondrop"></a>CMFCBaseTabCtrl::OnDrop  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop  
+
   
 ```  
 virtual BOOL OnDrop(
@@ -1559,17 +1676,17 @@ virtual BOOL OnDrop(
     CPoint);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `COleDataObject*`  
  [in] `DROPEFFECT`  
  [in] `CPoint`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondragover"></a>CMFCBaseTabCtrl::OnDragOver  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver  
+
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -1578,26 +1695,26 @@ virtual DROPEFFECT OnDragOver(
     CPoint);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `COleDataObject*`  
  [in] `DWORD`  
  [in] `CPoint`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondragleave"></a>CMFCBaseTabCtrl::OnDragLeave  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave  
+
   
 ```  
 virtual void OnDragLeave();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondragenter"></a>CMFCBaseTabCtrl::OnDragEnter  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter  
+
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -1606,66 +1723,66 @@ virtual DROPEFFECT OnDragEnter(
     CPoint);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `COleDataObject*`  
  [in] `DWORD`  
  [in] `CPoint`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onrenametab"></a>CMFCBaseTabCtrl::OnRenameTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab  
+
   
 ```  
 virtual BOOL OnRenameTab(int, CString&);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `int`  
  [in] `CString&`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="pretranslatemessage"></a>CMFCBaseTabCtrl::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pMsg`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="recalclayout"></a>CMFCBaseTabCtrl::RecalcLayout  
- 重新计算选项卡控件的内部布局。  
+##  <a name="recalclayout"></a>  CMFCBaseTabCtrl::RecalcLayout  
+ Recalculates the internal layout of the tab control.  
   
 ```  
 virtual void RecalcLayout() = 0;  
 ```  
   
-### <a name="remarks"></a>备注  
- 在`CMFCBaseTabCtrl Class`，此方法是纯虚函数。 如果您从派生类`CMFCBaseTabCtrl`，您必须实现此函数。  
+### <a name="remarks"></a>Remarks  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function. If you derive a class from `CMFCBaseTabCtrl`, you have to implement this function.  
   
-##  <a name="removealltabs"></a>CMFCBaseTabCtrl::RemoveAllTabs  
- 从选项卡控件中移除所有选项卡。  
+##  <a name="removealltabs"></a>  CMFCBaseTabCtrl::RemoveAllTabs  
+ Removes all the tabs from the tab control.  
   
 ```  
 virtual void RemoveAllTabs();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)是`TRUE`，该框架将删除所有[CWnd](../../mfc/reference/cwnd-class.md)对象附加到删除选项卡。  
+### <a name="remarks"></a>Remarks  
+ If [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) is `TRUE`, the framework deletes all the [CWnd](../../mfc/reference/cwnd-class.md) objects attached to the removed tabs.  
   
-##  <a name="removetab"></a>CMFCBaseTabCtrl::RemoveTab  
- 从选项卡控件中移除一个选项卡。  
+##  <a name="removetab"></a>  CMFCBaseTabCtrl::RemoveTab  
+ Removes a tab from the tab control.  
   
 ```  
 virtual BOOL RemoveTab(
@@ -1673,126 +1790,126 @@ virtual BOOL RemoveTab(
     BOOL bRecalcLayout = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of a tab.  
   
  [in] `bRecalcLayout`  
- 一个布尔型参数，用于指定是否重新计算选项卡的布局。  
+ A Boolean parameter that specifies whether to recalculate the layout of the tab.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果方法成功，则移除选项卡否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method removes the tab successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 如果[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)是`TRUE`，`RemoveTab`销毁[CWnd](../../mfc/reference/cwnd-class.md)与指定的选项卡相关联的对象。  
+### <a name="remarks"></a>Remarks  
+ If [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) is `TRUE`, `RemoveTab` destroys the [CWnd](../../mfc/reference/cwnd-class.md) object associated with the specified tab.  
   
-##  <a name="renametab"></a>CMFCBaseTabCtrl::RenameTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab  
+
   
 ```  
 virtual BOOL RenameTab();
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="resetimagelist"></a>CMFCBaseTabCtrl::ResetImageList  
- 实例的映像列表重置[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)。  
+##  <a name="resetimagelist"></a>  CMFCBaseTabCtrl::ResetImageList  
+ Resets the image list for an instance of the [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ```  
 void ResetImageList();
 ```  
   
-##  <a name="serialize"></a>CMFCBaseTabCtrl::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactivetab"></a>CMFCBaseTabCtrl::SetActiveTab  
- 激活指定的选项卡。  
+##  <a name="setactivetab"></a>  CMFCBaseTabCtrl::SetActiveTab  
+ Activates the specified tab.  
   
 ```  
 virtual BOOL SetActiveTab(int iTab) = 0;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。 `SetActiveTab`使具有此索引的选项卡处于活动状态。  
+ The zero-based index of a tab. `SetActiveTab` makes the tab with this index active.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 在`CMFCBaseTabCtrl Class`，此方法是纯虚函数。 如果您从派生类`CMFCBaseTabCtrl`，您必须实现此函数。  
+### <a name="remarks"></a>Remarks  
+ In the `CMFCBaseTabCtrl Class`, this method is a pure virtual function. If you derive a class from `CMFCBaseTabCtrl`, you have to implement this function.  
   
-##  <a name="setactivetabcolor"></a>CMFCBaseTabCtrl::SetActiveTabColor  
- 设置为活动选项卡的背景色。  
+##  <a name="setactivetabcolor"></a>  CMFCBaseTabCtrl::SetActiveTabColor  
+ Sets the background color for the active tab.  
   
 ```  
 virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `clr`  
- 指定新的背景色。  
+ Specifies the new background color.  
   
-### <a name="remarks"></a>备注  
- 该框架获得从活动选项卡的默认背景色[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+### <a name="remarks"></a>Remarks  
+ The framework obtains the default background color for active tabs from the [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)method.  
   
-##  <a name="setactivetabtextcolor"></a>CMFCBaseTabCtrl::SetActiveTabTextColor  
- 设置活动选项卡的文本颜色。  
+##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
+ Sets the text color for active tabs.  
   
 ```  
 virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `clr`  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，用于指定新的文本颜色。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter that specifies the new text color.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，该框架获得的文本颜色从[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)。 通过使用重写此默认颜色`SetActiveTabTextColor`方法。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework obtains the text color from [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Override this default color by using the `SetActiveTabTextColor` method.  
   
-##  <a name="setautocolors"></a>CMFCBaseTabCtrl::SetAutoColors  
- 设置自动配色模式中的框架将使用该选项卡控件的颜色。  
+##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
+ Sets the colors of the tab control that the framework uses in automatic color mode.  
   
 ```  
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `arColors`  
- RGB 颜色的数组。  
+ An array of RGB colors.  
   
-### <a name="remarks"></a>备注  
- 如果你提供一个自定义的颜色数组，则忽略颜色的默认值数组。 如果该参数`arColors`是空的框架将恢复为默认数组的颜色。  
+### <a name="remarks"></a>Remarks  
+ If you provide a custom array of colors, the default array of colors is ignored. If the parameter `arColors` is empty, the framework reverts to the default array of colors.  
   
- 若要启用 autocolor 模式，请使用[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)方法。  
+ To enable autocolor mode, use the [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) method.  
   
-##  <a name="setdockingbarwrapperrtc"></a>:: Setdockingbarwrapperrtc  
- 设置用于不从派生的任何对象的包装类[CDockablePane 类](../../mfc/reference/cdockablepane-class.md)。  
+##  <a name="setdockingbarwrapperrtc"></a>  CMFCBaseTabCtrl::SetDockingBarWrapperRTC  
+ Sets the wrapper class that is used for any objects that are not derived from the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pRTC`  
- 新的包装器类的运行时类信息。  
+ The runtime class information for the new wrapper class.  
   
-### <a name="remarks"></a>备注  
- 您使用的方法向选项卡控件添加选项卡[cmfcbasetabctrl:: Addtab](#addtab)和[cmfcbasetabctrl:: Inserttab](#inserttab)。 当您添加一个选项卡时，该选项卡上的每个控件必须是可停靠。 不从派生的任何对象`CDockablePane`必须包装。 `AddTab`和`InsertTab`创建这些对象的包装器。 默认包装类是[CDockablePaneAdapter 类](../../mfc/reference/cdockablepaneadapter-class.md)。 该方法`SetDockingBarWrapperRTC`，您可以更改用作包装器类的类。 您提供的包装器类必须派生自`CDockablePaneAdapter`。  
+### <a name="remarks"></a>Remarks  
+ You add tabs to a tab control by using the methods [CMFCBaseTabCtrl::AddTab](#addtab) and [CMFCBaseTabCtrl::InsertTab](#inserttab). When you add a tab, each control on that tab must be dockable. Any objects that are not derived from `CDockablePane` must be wrapped. `AddTab` and `InsertTab` create a wrapper for these objects. The default wrapper class is the [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). The method `SetDockingBarWrapperRTC` enables you to change the class that is used as a wrapper class. The wrapper class that you provide must be derived from `CDockablePaneAdapter`.  
   
-##  <a name="setdrawnoprefix"></a>CMFCBaseTabCtrl::SetDrawNoPrefix  
- 启用和禁用选项卡标签中的前缀字符的处理。  
+##  <a name="setdrawnoprefix"></a>  CMFCBaseTabCtrl::SetDrawNoPrefix  
+ Enables and disables the processing of prefix characters in tab labels.  
   
 ```  
 void SetDrawNoPrefix(
@@ -1800,18 +1917,18 @@ void SetDrawNoPrefix(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bNoPrefix`  
- `TRUE`如果您想要处理前缀字符;否则为`FALSE`。  
+ `TRUE` if you want to process prefix characters; otherwise `FALSE`.  
   
  [in] `bRedraw`  
- `TRUE`如果您想要重绘选项卡式的窗口;否则为`FALSE`。  
+ `TRUE` if you want to redraw the tabbed window; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 前缀字符是 and 符 （&） 前面的助记键字符。  
+### <a name="remarks"></a>Remarks  
+ A prefix character is a mnemonic character that is preceded by an ampersand (&).  
   
-##  <a name="setimagelist"></a>CMFCBaseTabCtrl::SetImageList  
- 设置选项卡控件的图标图像列表。  
+##  <a name="setimagelist"></a>  CMFCBaseTabCtrl::SetImageList  
+ Sets the icon image list for the tab control.  
   
 ```  
 virtual BOOL SetImageList(
@@ -1822,43 +1939,43 @@ virtual BOOL SetImageList(
 virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 位图的资源 id。 `SetImageList`从此资源中加载的图像列表。  
+ A bitmap resource ID. `SetImageList` loads the image list from this resource.  
   
  [in] `cx`  
- 以像素为单位的每个图像的宽度。  
+ The width of each image in pixels.  
   
  [in] `clrTransp`  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数可指示该图像的透明色。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter that indicates the transparent color of the image.  
   
  [in] `hImageList`  
- 指向一个预加载的图像列表的句柄。  
+ A handle to a preloaded image list.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法已成功，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method was successful; 0 otherwise.  
   
-### <a name="remarks"></a>备注  
- 选项卡的标签旁边显示图标图像列表中的图像。 若要显示一个图标，必须指定的索引，当您调用[cmfcbasetabctrl:: Addtab](#addtab)。  
+### <a name="remarks"></a>Remarks  
+ The images from the icon image list are displayed alongside the labels for the tab. To display an icon, you must specify its index when you call [CMFCBaseTabCtrl::AddTab](#addtab).  
   
- `SetImageList`如果选项卡控件使用平面样式创建将失败。 如果框架无法加载所指示的图像则也会失败`uiID`。  
+ `SetImageList` will fail if the tab control was created with a flat style. It will also fail if the framework cannot load the image indicated by `uiID`.  
   
- 此方法将重新计算选项卡，根据图像和文本大小的高度。  
+ This method recalculates the height of the tab according to the image and text sizes.  
   
-##  <a name="setlocation"></a>CMFCBaseTabCtrl::SetLocation  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation  
+
   
 ```  
 virtual void SetLocation(Location location);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `location`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settabbkcolor"></a>CMFCBaseTabCtrl::SetTabBkColor  
- 设置指定的选项卡的背景色。  
+##  <a name="settabbkcolor"></a>  CMFCBaseTabCtrl::SetTabBkColor  
+ Sets the background color for the specified tab.  
   
 ```  
 virtual BOOL SetTabBkColor(
@@ -1866,18 +1983,18 @@ virtual BOOL SetTabBkColor(
     COLORREF color = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
  [in] `color`  
- 要设置的颜色。  
+ The color to set.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则，`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` otherwise.  
   
-##  <a name="settabbordersize"></a>CMFCBaseTabCtrl::SetTabBorderSize  
- 设置选项卡控件的新边框大小。  
+##  <a name="settabbordersize"></a>  CMFCBaseTabCtrl::SetTabBorderSize  
+ Sets a new border size for the tab control.  
   
 ```  
 virtual void SetTabBorderSize(
@@ -1885,15 +2002,15 @@ virtual void SetTabBorderSize(
     BOOL bRepaint = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nTabBorderSize`  
- 新的边框大小，以像素为单位。  
+ The new border size, in pixels.  
   
  [in] `bRepaint`  
- 一个布尔型参数，该值指示框架是否重绘控件。  
+ A Boolean parameter that indicates whether the framework redraws the control.  
   
-##  <a name="settabhicon"></a>CMFCBaseTabCtrl::SetTabHicon  
- 设置选项卡标签的图标。  
+##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
+ Sets the icon for a tab label.  
   
 ```  
 virtual BOOL SetTabHicon(
@@ -1901,18 +2018,18 @@ virtual BOOL SetTabHicon(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。 此方法更改此选项卡上的图标。  
+ The zero-based index of a tab. This method changes the icon for this tab.  
   
  [in] `hIcon`  
- 指向一个图标的句柄。  
+ A handle to an icon.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-##  <a name="settabicon"></a>CMFCBaseTabCtrl::SetTabIcon  
- 设置选项卡上的图标。  
+##  <a name="settabicon"></a>  CMFCBaseTabCtrl::SetTabIcon  
+ Sets the icon for a tab.  
   
 ```  
 virtual BOOL SetTabIcon(
@@ -1920,18 +2037,18 @@ virtual BOOL SetTabIcon(
     UINT uiIcon);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 要更新的选项卡从零开始的索引。  
+ The zero-based index of the tab to update.  
   
  [in] `uiIcon`  
- 新建图标图标 ID。 此 ID 引用的内部[CImageList](../../mfc/reference/cimagelist-class.md)对象。  
+ The icon ID for the new icon. This ID references the internal [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-##  <a name="settabicononly"></a>CMFCBaseTabCtrl::SetTabIconOnly  
- 启用特定的选项卡上显示的只是一个图标 （和没有文本标签）。  
+##  <a name="settabicononly"></a>  CMFCBaseTabCtrl::SetTabIconOnly  
+ Enables displaying only an icon (and no text label) on a specific tab.  
   
 ```  
 virtual BOOL SetTabIconOnly(
@@ -1940,24 +2057,24 @@ virtual BOOL SetTabIconOnly(
     BOOL bShowTooltipAlways = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 若要更改选项卡的从零开始的索引。  
+ The zero-based index of the tab to change.  
   
  [in] `bIconOnly`  
- 一个布尔型参数，用于确定是否显示仅图标。  
+ A Boolean parameter that determines whether to display only icons.  
   
  [in] `bShowTooltipAlways`  
- 一个布尔型参数，用于确定框架是否显示工具提示显示仅图标的选项卡标签。  
+ A Boolean parameter that determines whether the framework shows tooltips for a tab label that displays only icons.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，选项卡控件显示每个选项卡的图标和文本标签。  
+### <a name="remarks"></a>Remarks  
+ By default, a tab control displays the icon and text label for each tab.  
   
-##  <a name="settablabel"></a>CMFCBaseTabCtrl::SetTabLabel  
- 设置选项卡标签的文本。  
+##  <a name="settablabel"></a>  CMFCBaseTabCtrl::SetTabLabel  
+ Sets the text for a tab label.  
   
 ```  
 virtual BOOL SetTabLabel(
@@ -1965,44 +2082,44 @@ virtual BOOL SetTabLabel(
     const CString& strLabel);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 要更新的选项卡从零开始的索引。  
+ The zero-based index of the tab to update.  
   
  [in] `strLabel`  
- 对一个包含新选项卡标签的文字字符串的引用。  
+ A reference to a string that contains the new text for the tab label.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 otherwise.  
   
-##  <a name="settabsheight"></a>CMFCBaseTabCtrl::SetTabsHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight  
+
   
 ```  
 virtual void SetTabsHeight();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settabsorder"></a>CMFCBaseTabCtrl::SetTabsOrder  
- 排列指定的顺序中的选项卡。  
+##  <a name="settabsorder"></a>  CMFCBaseTabCtrl::SetTabsOrder  
+ Arranges the tabs in the specified order.  
   
 ```  
 BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `arOrder`  
- 定义新的 tab 键顺序的从零开始的索引数组。  
+ An array of zero-based indexes that defines the new tab order.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则，`FAIL`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FAIL` otherwise.  
   
-### <a name="remarks"></a>备注  
- 大小`arOrder`数组必须等于选项卡控件中选项卡的数目。  
+### <a name="remarks"></a>Remarks  
+ The size of the `arOrder` array must be equal to the number of tabs in the tab control.  
   
-##  <a name="settabtextcolor"></a>CMFCBaseTabCtrl::SetTabTextColor  
- 设置特定的选项卡的文本颜色。  
+##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
+ Sets the text color for a specific tab.  
   
 ```  
 virtual BOOL SetTabTextColor(
@@ -2010,18 +2127,18 @@ virtual BOOL SetTabTextColor(
     COLORREF color = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的从零开始索引。  
+ The zero-based index of the tab.  
   
  [in] `color`  
- 一个[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)参数，指示新的文本颜色。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter that indicates the new text color.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 otherwise.  
   
-##  <a name="showtab"></a>CMFCBaseTabCtrl::ShowTab  
- 显示或隐藏指定的选项卡。  
+##  <a name="showtab"></a>  CMFCBaseTabCtrl::ShowTab  
+ Shows or hides the specified tab.  
   
 ```  
 virtual BOOL ShowTab(
@@ -2031,41 +2148,41 @@ virtual BOOL ShowTab(
     BOOL bActivate = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 选项卡的索引，`ShowTab`将显示或隐藏。  
+ The index of the tab that `ShowTab` will show or hide.  
   
  [in] `bShow`  
- 一个布尔型参数，该值指示是否显示选项卡。  
+ A Boolean parameter that indicates whether to show the tab.  
   
  [in] `bRecalcLayout`  
- 一个布尔型参数，该值指示是否立即重新计算的窗口布局。  
+ A Boolean parameter that indicates whether to immediately recalculate the window layout.  
   
  [in] `bActivate`  
- 一个布尔型参数，该值指示是否选中选项卡指定`iTab`。  
+ A Boolean parameter that indicates whether to select the tab specified by `iTab`.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 该参数`bActivate`只适用于`bShow`是`TRUE`。 如果`bActivate`是`TRUE`并且如果`ShowTab`是成功的`ShowTab`将 AFX_WM_CHANGE_ACTIVE_TAB 将消息发送到选项卡窗口的父级。  
+### <a name="remarks"></a>Remarks  
+ The parameter `bActivate` only applies if `bShow` is `TRUE`. If `bActivate` is `TRUE` and if `ShowTab` is successful, `ShowTab` will send the message AFX_WM_CHANGE_ACTIVE_TAB to the parent of the tab window.  
   
-##  <a name="startrenametab"></a>CMFCBaseTabCtrl::StartRenameTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
+
   
 ```  
 virtual BOOL StartRenameTab(int iTab);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="swaptabs"></a>CMFCBaseTabCtrl::SwapTabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs  
+
   
 ```  
 virtual void SwapTabs(
@@ -2073,15 +2190,15 @@ virtual void SwapTabs(
     int nSecondTabID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nFisrtTabID`  
  [in] `nSecondTabID`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCTabCtrl 类](../../mfc/reference/cmfctabctrl-class.md)   
- [CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md)   
+ [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
 

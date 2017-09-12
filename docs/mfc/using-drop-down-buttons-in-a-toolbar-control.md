@@ -1,61 +1,80 @@
 ---
-title: "使用工具栏控件中的下拉按钮 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TBN_DROPDOWN"
-  - "TBSTYLE_EX_DRAWDDARROWS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl 类, 下拉按钮"
-  - "工具栏中的下拉按钮"
-  - "TBN_DROPDOWN 通知"
-  - "TBSTYLE_EX_DRAWDDARROWS"
-  - "工具栏 [C++], 下拉按钮"
+title: Using Drop-Down Buttons in a Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TBN_DROPDOWN
+- TBSTYLE_EX_DRAWDDARROWS
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolBarCtrl class [MFC], drop-down buttons
+- toolbars [MFC], drop-down buttons
+- drop-down buttons in toolbars
+- TBSTYLE_EX_DRAWDDARROWS
+- TBN_DROPDOWN notification [MFC]
 ms.assetid: b859f758-d2f6-40d9-9c26-0ff61993b9b2
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 使用工具栏控件中的下拉按钮
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4b97ed19c57e16b22699d14da0438d39587d1e8f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-除了标准按钮之外，工具栏也有下拉按钮。  一个下拉按钮将按出现通常表示附加向下箭头下方。  
+---
+# <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Using Drop-Down Buttons in a Toolbar Control
+In addition to standard push buttons, a toolbar can also have drop-down buttons. A drop-down button is usually indicated by the presence of an attached down arrow.  
   
 > [!NOTE]
->  只有当 `TBSTYLE_EX_DRAWDDARROWS` 扩展样式设置，附加向下箭头下方将出现。  
+>  The attached down arrow will appear only if the `TBSTYLE_EX_DRAWDDARROWS` extended style has been set.  
   
- 当用户单击此箭头 \(或按钮，则箭头，不存在\)，`TBN_DROPDOWN` 通知消息路由到工具栏控件的父级。  然后可以处理此通知并查看弹出菜单；类似于 Internet Explorer 行为。  
+ When the user clicks on this arrow (or the button itself, if no arrow is present), a `TBN_DROPDOWN` notification message is sent to the parent of the toolbar control. You can then handle this notification and display a pop-up menu; similar to the behavior of Internet Explorer.  
   
- 以下过程说明如何实现使用弹出菜单的下拉工具栏按钮：  
+ The following procedure illustrates how to implement a drop-down toolbar button with a pop-up menu:  
   
-### 实现一下拉按钮  
+### <a name="to-implement-a-drop-down-button"></a>To implement a drop-down button  
   
-1.  一旦 `CToolBarCtrl` 对象创建，使用以下代码，将 `TBSTYLE_EX_DRAWDDARROWS` 样式，例如：  
+1.  Once your `CToolBarCtrl` object has been created, set the `TBSTYLE_EX_DRAWDDARROWS` style, using the following code:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/CPP/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]  
   
-2.  设置将为下拉按钮的所有新的 \(\) 或[InsertButton](../Topic/CToolBarCtrl::InsertButton.md)[AddButtons](../Topic/CToolBarCtrl::AddButtons.md)或现有 \([SetButtonInfo](../Topic/CToolBarCtrl::SetButtonInfo.md)\) 按钮的 `TBSTYLE_DROPDOWN` 样式。  下面的示例演示在 `CToolBarCtrl` 修改对象的现有中的按钮：  
+2.  Set the `TBSTYLE_DROPDOWN` style for any new ([InsertButton](../mfc/reference/ctoolbarctrl-class.md#insertbutton) or [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons)) or existing ([SetButtonInfo](../mfc/reference/ctoolbarctrl-class.md#setbuttoninfo)) buttons that will be drop-down buttons. The following example demonstrates modifying an existing button in a `CToolBarCtrl` object:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/CPP/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]  
   
-3.  向 `TBN_DROPDOWN` 处理程序为工具栏对象的父类。  
+3.  Add a `TBN_DROPDOWN` handler to the parent class of the toolbar object.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/CPP/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]  
   
-4.  在新的处理程序中，显示相应的弹出菜单。  下面的代码演示一方法：  
+4.  In the new handler, display the appropriate popup menu. The following code demonstrates one method:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/CPP/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]  
   
-## 请参阅  
- [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

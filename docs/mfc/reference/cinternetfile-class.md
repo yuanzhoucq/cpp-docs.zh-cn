@@ -1,5 +1,5 @@
 ---
-title: "CInternetFile 类 |Microsoft 文档"
+title: CInternetFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,9 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CInternetFile class
-- Internet files
-- Internet files, CInternetFile class
+- CInternetFile [MFC], CInternetFile
+- CInternetFile [MFC], Abort
+- CInternetFile [MFC], Close
+- CInternetFile [MFC], Flush
+- CInternetFile [MFC], GetLength
+- CInternetFile [MFC], Read
+- CInternetFile [MFC], ReadString
+- CInternetFile [MFC], Seek
+- CInternetFile [MFC], SetReadBufferSize
+- CInternetFile [MFC], SetWriteBufferSize
+- CInternetFile [MFC], Write
+- CInternetFile [MFC], WriteString
+- CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
 caps.latest.revision: 23
 author: mikeblome
@@ -49,66 +59,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6e1d6227ebd642025e6b00019518d29080cf0454
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 714aa0d61692c07068253ad0d942b9a52d4df83d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cinternetfile-class"></a>CInternetFile 类
-允许使用 Internet 协议的远程系统上的文件的访问。  
+# <a name="cinternetfile-class"></a>CInternetFile Class
+Allows access to files on remote systems that use Internet protocols.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CInternetFile : public CStdioFile  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保护的构造函数  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetFile::CInternetFile](#cinternetfile)|构造 `CInternetFile` 对象。|  
+|[CInternetFile::CInternetFile](#cinternetfile)|Constructs a `CInternetFile` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetFile::Abort](#abort)|关闭文件并忽略所有警告和错误。|  
-|[CInternetFile::Close](#close)|关闭`CInternetFile`并释放其资源。|  
-|[CInternetFile::Flush](#flush)|写入缓冲区的内容刷新，并确保内存中的数据写入到目标计算机。|  
-|[CInternetFile::GetLength](#getlength)|返回文件的大小。|  
-|[CInternetFile::Read](#read)|读取指定的字节数。|  
-|[CInternetFile::ReadString](#readstring)|读取的字符的流。|  
-|[CInternetFile::Seek](#seek)|在打开的文件指针重新定位。|  
-|[CInternetFile::SetReadBufferSize](#setreadbuffersize)|设置要从中读取数据的缓冲区的大小。|  
-|[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|设置缓冲区的大小将在其中写入数据。|  
-|[CInternetFile::Write](#write)|将写入指定的字节数。|  
-|[CInternetFile::WriteString](#writestring)|以 null 结尾的字符串写入文件。|  
+|[CInternetFile::Abort](#abort)|Closes the file, ignoring all warnings and errors.|  
+|[CInternetFile::Close](#close)|Closes a `CInternetFile` and frees its resources.|  
+|[CInternetFile::Flush](#flush)|Flushes the contents of the write buffer and makes sure the data in memory is written to the target machine.|  
+|[CInternetFile::GetLength](#getlength)|Returns the size of the file.|  
+|[CInternetFile::Read](#read)|Reads the number of specified bytes.|  
+|[CInternetFile::ReadString](#readstring)|Reads a stream of characters.|  
+|[CInternetFile::Seek](#seek)|Repositions the pointer in an open file.|  
+|[CInternetFile::SetReadBufferSize](#setreadbuffersize)|Sets the size of the buffer where data will be read.|  
+|[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|Sets the size of the buffer where data will be written.|  
+|[CInternetFile::Write](#write)|Writes the number of specified bytes.|  
+|[CInternetFile::WriteString](#writestring)|Writes a null-terminated string to a file.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetFile::operator HINTERNET](#operator_hinternet)|Internet 句柄的强制转换运算符。|  
+|[CInternetFile::operator HINTERNET](#operator_hinternet)|A casting operator for an Internet handle.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetFile::m_hFile](#m_hfile)|文件的句柄。|  
+|[CInternetFile::m_hFile](#m_hfile)|A handle to a file.|  
   
-## <a name="remarks"></a>备注  
- 提供类的基类[CHttpFile](../../mfc/reference/chttpfile-class.md)和[CGopherFile](../../mfc/reference/cgopherfile-class.md)文件类。 切勿创建`CInternetFile`直接对象。 相反，通过调用创建的对象及其派生类之一[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)。 您还可以创建`CInternetFile`对象通过调用[CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)。  
+## <a name="remarks"></a>Remarks  
+ Provides a base class for the [CHttpFile](../../mfc/reference/chttpfile-class.md) and [CGopherFile](../../mfc/reference/cgopherfile-class.md) file classes. You never create a `CInternetFile` object directly. Instead, create an object of one of its derived classes by calling [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) or [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). You also can create a `CInternetFile` object by calling [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
- `CInternetFile`成员函数**打开**， `LockRange`， `UnlockRange`，和`Duplicate`未向实施`CInternetFile`。 如果在调用这些函数`CInternetFile`对象时，您将获得[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ The `CInternetFile` member functions **Open**, `LockRange`, `UnlockRange`, and `Duplicate` are not implemented for `CInternetFile`. If you call these functions on a `CInternetFile` object, you will get a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- 若要了解有关如何`CInternetFile`工作与其他 MFC Internet 类，请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
+ To learn more about how `CInternetFile` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -117,23 +127,23 @@ class CInternetFile : public CStdioFile
   
  `CInternetFile`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="abort"></a>CInternetFile::Abort  
- 关闭与此对象关联的文件并使该文件进行读取或写入不可用。  
+##  <a name="abort"></a>  CInternetFile::Abort  
+ Closes the file associated with this object and makes the file unavailable for reading or writing.  
   
 ```  
 virtual void Abort();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果您没有在销毁对象之前关闭该文件，析构函数为您将其关闭。  
+### <a name="remarks"></a>Remarks  
+ If you have not closed the file before destroying the object, the destructor closes it for you.  
   
- 当处理异常、**中止**区别[关闭](#close)在两个重要方面。 首先，**中止**函数因为它会忽略失败不会引发异常失败。 第二个，**中止**不**ASSERT**如果文件尚未打开或在以前已关闭。  
+ When handling exceptions, **Abort** differs from [Close](#close) in two important ways. First, the **Abort** function does not throw an exception on failures because it ignores failures. Second, **Abort** does not **ASSERT** if the file has not been opened or was closed previously.  
   
-##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
- 当调用此成员函数`CInternetFile`创建对象。  
+##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
+ This member function is called when a `CInternetFile` object is created.  
   
 ```  
 CInternetFile(
@@ -152,74 +162,74 @@ CInternetFile(
     BOOL bReadMode);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hFile`  
- Internet 文件的句柄。  
+ A handle to an Internet file.  
   
  `pstrFileName`  
- 指向包含文件名称的字符串的指针。  
+ A pointer to a string containing the file name.  
   
  `pConnection`  
- 一个指向[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)对象。  
+ A pointer to a [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) object.  
   
  *bReadMode*  
- 指示该文件是只读的。  
+ Indicates whether the file is read-only.  
   
  `hSession`  
- 一个 Internet 会话句柄。  
+ A handle to an Internet session.  
   
  `pstrServer`  
- 指向一个包含服务器的名称的字符串的指针。  
+ A pointer to a string containing the name of the server.  
   
  `dwContext`  
- 上下文标识符`CInternetFile`对象。 请参阅[WinInet 基础知识](../../mfc/wininet-basics.md)有关的上下文标识符的详细信息。  
+ The context identifier for the `CInternetFile` object. See [WinInet Basics](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
-### <a name="remarks"></a>备注  
- 切勿创建`CInternetFile`直接对象。 相反，通过调用创建的对象及其派生类之一[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)。 您还可以创建`CInternetFile`对象通过调用[CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)。  
+### <a name="remarks"></a>Remarks  
+ You never create a `CInternetFile` object directly. Instead, create an object of one of its derived classes by calling [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) or [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). You also can create a `CInternetFile` object by calling [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
-##  <a name="close"></a>CInternetFile::Close  
- 关闭`CInternetFile`并释放任何资源。  
+##  <a name="close"></a>  CInternetFile::Close  
+ Closes a `CInternetFile` and frees any of its resources.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果文件已打开以进行写入，则隐式调用[刷新](#flush)以确保所有缓冲数据写入到该主机。 应调用**关闭**在完成使用文件时。  
+### <a name="remarks"></a>Remarks  
+ If the file was opened for writing, there is an implicit call to [Flush](#flush) to assure that all buffered data is written to the host. You should call **Close** when you are finished using a file.  
   
-##  <a name="flush"></a>CInternetFile::Flush  
- 调用该成员函数以刷新写入缓冲区的内容。  
+##  <a name="flush"></a>  CInternetFile::Flush  
+ Call this member function to flush the contents of the write buffer.  
   
 ```  
 virtual void Flush();
 ```  
   
-### <a name="remarks"></a>备注  
- 使用`Flush`以确保内存中的所有数据实际上已都写入到目标计算机，并确保您与主机计算机的事务已完成。 `Flush`仅对有效`CInternetFile`对象打开以进行写入。  
+### <a name="remarks"></a>Remarks  
+ Use `Flush` to assure that all data in memory has actually been written to the target machine and to assure your transaction with the host machine has been completed. `Flush` is only effective on `CInternetFile` objects opened for writing.  
   
-##  <a name="getlength"></a>CInternetFile::GetLength  
- 返回文件的大小。  
+##  <a name="getlength"></a>  CInternetFile::GetLength  
+ Returns the size of the file.  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="m_hfile"></a>CInternetFile::m_hFile  
- 与此对象关联的文件句柄。  
+##  <a name="m_hfile"></a>  CInternetFile::m_hFile  
+ A handle to the file associated with this object.  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
- 使用此运算符将获取当前的 Internet 会话的 Windows 句柄。  
+##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET  
+ Use this operator to get the Windows handle for the current Internet session.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="read"></a>CInternetFile::Read  
- 调用此成员函数以将指定字节数 `nCount` 读入给定内存（从 `lpvBuf` 开始）。  
+##  <a name="read"></a>  CInternetFile::Read  
+ Call this member function to read into the given memory, starting at `lpvBuf`, the specified number of bytes, `nCount`.  
   
 ```  
 virtual UINT Read(
@@ -227,23 +237,23 @@ virtual UINT Read(
     UINT nCount);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 指向将文件数据读取到的内存地址的指针。  
+ A pointer to a memory address to which file data is read.  
   
  `nCount`  
- 要写入的字节数。  
+ The number of bytes to be written.  
   
-### <a name="return-value"></a>返回值  
- 传输到缓冲区的字节数。 如果已到达文件末尾，则返回值可能小于 `nCount`。  
+### <a name="return-value"></a>Return Value  
+ The number of bytes transferred to the buffer. The return value may be less than `nCount` if the end of file was reached.  
   
-### <a name="remarks"></a>备注  
- 函数返回实际读取的字节数（一个数字，在文件结束时可能小于 `nCount`）。 如果读取的文件时出错，该函数将引发[CInternetException](../../mfc/reference/cinternetexception-class.md)描述错误的对象。 请注意，不会将越过文件末尾的读取视为错误，不会引发异常。  
+### <a name="remarks"></a>Remarks  
+ The function returns the number of bytes actually read — a number that may be less than `nCount` if the file ends. If an error occurs while reading the file, the function throws a [CInternetException](../../mfc/reference/cinternetexception-class.md) object that describes the error. Note that reading past the end of the file is not considered an error and no exception will be thrown.  
   
- 若要确保检索所有数据，应用程序必须继续调用**CInternetFile::Read**方法，直到此方法返回零。  
+ To ensure all data is retrieved, an application must continue to call the **CInternetFile::Read** method until the method returns zero.  
   
-##  <a name="readstring"></a>CInternetFile::ReadString  
- 调用此成员函数来读取字符流，直到它找到换行字符。  
+##  <a name="readstring"></a>  CInternetFile::ReadString  
+ Call this member function to read a stream of characters until it finds a newline character.  
   
 ```  
 virtual BOOL ReadString(CString& rString);
@@ -254,28 +264,28 @@ virtual LPTSTR ReadString(
     UINT nMax);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstr`  
- 指向一个字符串，它将接收所读取的行的指针。  
+ A pointer to a string which will receive the line being read.  
   
  `nMax`  
- 最大字符可供读取数。  
+ The maximum number of characters to be read.  
   
  `rString`  
- 对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收读取的行的对象。  
+ A reference to the [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that receives the read line.  
   
-### <a name="return-value"></a>返回值  
- 指向包含从检索到的纯数据的缓冲区的指针[CInternetFile](../../mfc/reference/cinternetfile-class.md)对象。 无论传递给此方法的缓冲区的数据类型，它不执行任何操作的数据 （例如，转换为 Unicode），因此您必须返回的数据映射到的结构料，就像**void\* **返回的类型。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the buffer containing plain data retrieved from the [CInternetFile](../../mfc/reference/cinternetfile-class.md) object. Regardless of the data type of the buffer passed to this method, it does not perform any manipulations on the data (for example, conversion to Unicode), so you must map the returned data to the structure you expect, as if the **void\*** type were returned.  
   
- **NULL**如果文件结尾已达到而无需读取任何数据; 或者，如果布尔值、 **FALSE**如果而无需读取任何数据已到达文件结尾。  
+ **NULL** if end-of-file was reached without reading any data; or, if boolean, **FALSE** if end-of-file was reached without reading any data.  
   
-### <a name="remarks"></a>备注  
- 该函数将最终得到的行放入所引用的内存`pstr`参数。 它将停止读取字符时达到的最大指定的字符数`nMax`。 缓冲区始终接收终止 null 字符。  
+### <a name="remarks"></a>Remarks  
+ The function places the resulting line into the memory referenced by the `pstr` parameter. It stops reading characters when it reaches the maximum number of characters, specified by `nMax`. The buffer always receives a terminating null character.  
   
- 如果调用`ReadString`没有首先调用[SetReadBufferSize](#setreadbuffersize)，您将获得 4096 个字节的缓冲区。  
+ If you call `ReadString` without first calling [SetReadBufferSize](#setreadbuffersize), you will get a buffer of 4096 bytes.  
   
-##  <a name="seek"></a>CInternetFile::Seek  
- 调用此成员函数可将指针重新定位在以前打开的文件中。  
+##  <a name="seek"></a>  CInternetFile::Seek  
+ Call this member function to reposition the pointer in a previously opened file.  
   
 ```  
 virtual ULONGLONG Seek(
@@ -283,77 +293,77 @@ virtual ULONGLONG Seek(
     UINT nFrom);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lOffset`  
- 以字节为单位来移动文件中的读/写指针的偏移量。  
+ Offset in bytes to move the read/write pointer in the file.  
   
  `nFrom`  
- 偏移量的相对引用。 必须是下列值之一︰  
+ Relative reference for the offset. Must be one of the following values:  
   
-- **CFile::begin**将文件指针移`lOff`字节转发从文件的开头。  
+- **CFile::begin** Move the file pointer `lOff` bytes forward from the beginning of the file.  
   
-- **CFile::current**将文件指针移`lOff`个字节从该文件中的当前位置。  
+- **CFile::current** Move the file pointer `lOff` bytes from the current position in the file.  
   
-- **CFile::end**将文件指针移`lOff`从文件末尾的字节数。 `lOff`必须是负数，以查找到现有文件;正值将查找该文件的末尾。  
+- **CFile::end** Move the file pointer `lOff` bytes from the end of the file. `lOff` must be negative to seek into the existing file; positive values will seek past the end of the file.  
   
-### <a name="return-value"></a>返回值  
- 新字节偏移量从文件的开头，如果所请求的位置是合法的;否则，未定义的值和一个[CInternetException](../../mfc/reference/cinternetexception-class.md)抛出对象。  
+### <a name="return-value"></a>Return Value  
+ The new byte offset from the beginning of the file if the requested position is legal; otherwise, the value is undefined and a [CInternetException](../../mfc/reference/cinternetexception-class.md) object is thrown.  
   
-### <a name="remarks"></a>备注  
- `Seek`函数允许随机访问的文件的内容通过移动指针指定的量，绝对或相对。 在搜索实际不读取任何数据。  
+### <a name="remarks"></a>Remarks  
+ The `Seek` function permits random access to a file's contents by moving the pointer a specified amount, absolutely or relatively. No data is actually read during the seek.  
   
- 此时，对此成员函数的调用只支持与关联的数据`CHttpFile`对象。 不支持 FTP 或 gopher 请求。 如果调用`Seek`这些不受支持的服务之一，它会传递回您的 Win32 错误代码为**ERROR_INTERNET_INVALID_OPERATION**。  
+ At this time, a call to this member function is only supported for data associated with `CHttpFile` objects. It is not supported for FTP or gopher requests. If you call `Seek` for one of these unsupported services, it will pass back you to the Win32 error code **ERROR_INTERNET_INVALID_OPERATION**.  
   
- 打开文件，文件指针时，按偏移量 0，文件的开头。  
+ When a file is opened, the file pointer is at offset 0, the beginning of the file.  
   
 > [!NOTE]
->  使用`Seek`可能会导致隐式调用[刷新](#flush)。  
+>  Using `Seek` may cause an implicit call to [Flush](#flush).  
   
-### <a name="example"></a>示例  
-  请参见基类实现的示例 ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek))。  
+### <a name="example"></a>Example  
+  See the example for the base class implementation ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
-##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
- 调用此成员函数以设置使用的临时读取缓冲区的大小`CInternetFile`-派生的对象。  
+##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
+ Call this member function to set the size of the temporary read buffer used by a `CInternetFile`-derived object.  
   
 ```  
 BOOL SetReadBufferSize(UINT nReadSize);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nReadSize*  
- 所需的缓冲区大小（以字节为单位）。  
+ The desired buffer size in bytes.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
   
-### <a name="remarks"></a>备注  
- 底层 WinInet Api 不要执行缓冲，因此请选择允许应用程序而不考虑要读取的数据量高效，读取数据的缓冲区大小。 如果每个调用[读取](#read)通常涉及大型 aount 的数据 （例如，四天或以上千字节为单位），则应该无需缓冲区。 但是，如果调用**读取**获取小文本块形式的数据，或者，如果您使用[ReadString](#readstring)来一次读取单独的行，则读取的缓冲区可提高应用程序性能。  
+### <a name="remarks"></a>Remarks  
+ The underlying WinInet APIs do not perform buffering, so choose a buffer size that allows your application to read data efficiently, regardless of the amount of data to be read. If each call to [Read](#read) normally involves a large aount of data (for example, four or more kilobytes), you should not need a buffer. However, if you call **Read** to get small chunks of data, or if you use [ReadString](#readstring) to read individual lines at a time, then a read buffer improves application performance.  
   
- 默认情况下，`CInternetFile`对象未提供以进行读取的任何缓冲。 如果调用此成员函数，您必须确保已打开该文件来读取访问权限。  
+ By default, a `CInternetFile` object does not provide any buffering for reading. If you call this member function, you must be sure that the file has been opened for read access.  
   
- 你可以在任何时候，增加缓冲区大小，但收缩缓冲区会产生任何效果。 如果调用[ReadString](#readstring)没有首先调用`SetReadBufferSize`，您将获得 4096 个字节的缓冲区。  
+ You can increase the buffer size at any time, but shrinking the buffer will have no effect. If you call [ReadString](#readstring) without first calling `SetReadBufferSize`, you will get a buffer of 4096 bytes.  
   
-##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
- 调用此成员函数以设置使用的临时写入缓冲区的大小`CInternetFile`-派生的对象。  
+##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize  
+ Call this member function to set the size of the temporary write buffer used by a `CInternetFile`-derived object.  
   
 ```  
 BOOL SetWriteBufferSize(UINT nWriteSize);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nWriteSize*  
- 缓冲区的大小（以字节为单位）。  
+ The size of the buffer in bytes.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能调用以确定错误的原因。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0. If the call fails, the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) may be called to determine the cause of the error.  
   
-### <a name="remarks"></a>备注  
- 基础 WinInet Api 不进行缓冲，因此，选择使应用程序将有效地无论要写入的数据量的数据写入的缓冲区大小。 如果每个调用[编写](#write)通常涉及大量的数据 （例如，四天或以上千字节一次），则应该无需缓冲区。 但是，如果调用[编写](#write)编写小的数据块，写入缓冲区可以改进应用程序的性能。  
+### <a name="remarks"></a>Remarks  
+ The underlying WinInet APIs don't perform buffering, so choose a buffer size that allows your application to write data efficiently regardless of the amount of data to be written. If each call to [Write](#write) normally involves a large amount of data (for example, four or more kilobytes at a time), you should not need a buffer. However, if you call [Write](#write) to write small chunks of data, a write buffer improves your application's performance.  
   
- 默认情况下，`CInternetFile`对象未提供以进行写入的任何缓冲。 如果调用此成员函数，您必须确保该文件已打开以供写入。 您可以在任何时候，更改写入缓冲区的大小，但这样会导致隐式调用[刷新](#flush)。  
+ By default, a `CInternetFile` object does not provide any buffering for writing. If you call this member function, you must be sure that the file has been opened for write access. You can change the size of the write buffer at any time, but doing so causes an implicit call to [Flush](#flush).  
   
-##  <a name="write"></a>CInternetFile::Write  
- 调用此成员函数以写入给定的内存， `lpvBuf`，则指定字节数， `nCount`。  
+##  <a name="write"></a>  CInternetFile::Write  
+ Call this member function to write into the given memory, `lpvBuf`, the specified number of bytes, `nCount`.  
   
 ```  
 virtual void Write(
@@ -361,32 +371,32 @@ virtual void Write(
     UINT nCount);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 指向要写入的第一个字节的指针。  
+ A pointer to the first byte to be written.  
   
  `nCount`  
- 指定要写入字节数。  
+ Specifies the number of bytes to be written.  
   
-### <a name="remarks"></a>备注  
- 如果在写入数据时出现任何错误，该函数将引发[CInternetException](../../mfc/reference/cinternetexception-class.md)描述该错误的对象。  
+### <a name="remarks"></a>Remarks  
+ If any error occurs while writing the data, the function throws a [CInternetException](../../mfc/reference/cinternetexception-class.md) object describing the error.  
   
-##  <a name="writestring"></a>CInternetFile::WriteString  
- 此函数将以 null 结尾的字符串写入关联的文件。  
+##  <a name="writestring"></a>  CInternetFile::WriteString  
+ This function writes a null-terminated string to the associated file.  
   
 ```  
 virtual void WriteString(LPCTSTR pstr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pstr`  
- 指向包含要写入的内容的字符串的指针。  
+ A pointer to a string containing the contents to be written.  
   
-### <a name="remarks"></a>备注  
- 如果在写入数据时出现任何错误，该函数将引发[CInternetException](../../mfc/reference/cinternetexception-class.md)描述该错误的对象。  
+### <a name="remarks"></a>Remarks  
+ If any error occurs while writing the data, the function throws a [CInternetException](../../mfc/reference/cinternetexception-class.md) object describing the error.  
   
-## <a name="see-also"></a>另请参阅  
- [CStdioFile 类](../../mfc/reference/cstdiofile-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)
+## <a name="see-also"></a>See Also  
+ [CStdioFile Class](../../mfc/reference/cstdiofile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)
 

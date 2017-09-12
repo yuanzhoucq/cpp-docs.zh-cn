@@ -1,52 +1,71 @@
 ---
-title: "HTTP 基础 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HTTP 请求, 返回代码"
-  - "HTTP, 返回代码"
-  - "返回代码"
+title: HTTP Basics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HTTP [MFC], return codes
+- return codes [MFC]
+- HTTP requests [MFC], return codes
 ms.assetid: 5b7421bf-42c8-4f3a-8566-8ff5957f58cc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# HTTP 基础
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb737fbca0bccb35ea6038d6279dadb064ca2328
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-编写在 Internet 应用程序时，您经常检查并添加到将在 HTTP 头的信息。  返回代码指示请求事件的成功或失败。  若干常用返回代码在下表中列出。  
+---
+# <a name="http-basics"></a>HTTP Basics
+When writing an internet application, you often examine and add to the information in HTTP header. Return codes indicate the success or failure of the requested event. Several common return codes are listed in the following table.  
   
-|返回代码|含义|  
-|----------|--------|  
-|200|定位的 URL，在传输|  
-|400|难以理解的请求|  
-|404|Requests Not Found（未找到的请求数）|  
-|405|服务器不支持请求的方法|  
-|500|未知的服务器错误。|  
-|503|服务不可用|  
+|Return Code|Meaning|  
+|-----------------|-------------|  
+|200|URL located, transmission follows|  
+|400|Unintelligible request|  
+|404|Requested URL not found|  
+|405|Server does not support requested method|  
+|500|Unknown server error|  
+|503|Service unavailable|  
   
- 下表显示了如下选项  
+ The HTTP responses are grouped as shown in the following table.  
   
-|Group|含义|  
-|-----------|--------|  
-|200–299|成功|  
-|300–399|信息|  
-|400–499|请求错误|  
-|500–599|Server error|  
+|Group|Meaning|  
+|-----------|-------------|  
+|200-299|Success|  
+|300-399|Information|  
+|400-499|Request error|  
+|500-599|Server error|  
   
- 超文本传输协议 \(HTTP\) 是超媒体信息系统的应用程序级别协议。  有关 HTTP 的更多信息，以及 Web 浏览器和服务器之间如何通信，请参见超文本传输协议 \(HTTP\) 规范：  
+ The Hypertext Transfer Protocol (HTTP) is an application-level protocol for hypermedia information systems. For more information about HTTP, and how Web browsers and servers communicate, see the Hypertext Transfer Protocol (HTTP) specification:  
   
- [http:\/\/www.w3.org\/pub\/WWW\/Protocols\/](http://www.w3.org/pub/WWW/Protocols/)  
+ [http://www.w3.org/pub/WWW/Protocols/](http://www.w3.org/pub/www/protocols/)  
   
-## 请参阅  
- [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+
